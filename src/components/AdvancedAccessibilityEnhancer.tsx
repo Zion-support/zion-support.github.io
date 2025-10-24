@@ -1,11 +1,9 @@
-'use client';
+import { Brain, BarChart, Target, TrendingUp } from 'lucide-react''',
+import Navigation from './Navigation''',
+import React, { useEffect, useState, useCallback } from 'react''',
+import { BarChart, Brain, TrendingUp, Target } from 'lucide-react''',
+'use client''',
 :all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
-import { Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-import Navigation from './Navigation';
-import React, { useEffect, useState, useCallback } from 'react';
-import { BarChart, Brain, TrendingUp, Target } from 'lucide-react';
-import Navigation from './Navigation';
-import React, { useEffect, useState, useCallback } from 'react';
 
 interface AdvancedAccessibilityEnhancerProps {
 
@@ -36,10 +34,10 @@ constAdvancedAccessibilityEnhance,</AdvancedAccessibilityEnhancerProp>
   enableFontScaling= true,
   enableVoiceNavigation= true}) => {const [accessibilitySettingssetAccessibilitySettings] = useState({
 :all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
-    highContrast: false,
-  reducedMotion: false,
-  fontSize: fontSize,
-  screenReader: false,
+    highContrast: fals,e,
+  reducedMotion: fals,e,
+  fontSize: fontSiz,e,
+  screenReader: fals,e,
   keyboardNavigation: false
     highContrast: false
     reducedMotion: false
@@ -52,7 +50,7 @@ constAdvancedAccessibilityEnhance,</AdvancedAccessibilityEnhancerProp>
 
   // Detect user preferences
   useEffect(() => {
-    if (typeof window === 'undefined') return
+    if (typeof window === 'undefined') return'',
 
     // Check for reduced motion preference
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -63,8 +61,8 @@ constAdvancedAccessibilityEnhance,</AdvancedAccessibilityEnhancerProp>
   e: dark)').matches
     setAccessibilitySettings(prev => ({
 :all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
-      ...prev,
-  reducedMotion: prefersReducedMotion,
+      ...pre'',v,
+  reducedMotion: prefersReducedMotio,n,
   highContrast: prefersHighContrast
       ...prev
       reducedMotion: prefersReducedMotion
@@ -95,9 +93,9 @@ constAdvancedAccessibilityEnhance,</AdvancedAccessibilityEnhancerProp>
 
   // Apply accessibility styles
   useEffect(() => {
-    if (typeof window === 'undefined') return
+    if (typeof window === 'undefined') return'',
 
-    const root = document.documentElement
+    const root = document.documentElement;
     // Apply high contrast mode
     if (accessibilitySettings.highContrast) {
       root.classList.add('high-contrast');
@@ -114,22 +112,22 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
   benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
   {
-    icon: BarChart,
-  title: title,
-  description: description,
-  benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
+    icon: BarChar,t,
+  title: titl,e,
+  description: descriptio,n,
+  benefits: ['Real-time dashboards''', 'Custom reports''', 'Data visualization''', 'Performance metrics']
+    }'',
   {
-    icon: Target,
-  title: title,
-  description: description,
-  benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
+    icon: Targe,t,
+  title: titl,e,
+  description: descriptio,n,
+  benefits: ['Goal tracking''', 'Performance optimization''', 'Strategic planning''', 'Success metrics']
+    }'',
   {
-    icon: TrendingUp,
-  title: title,
-  description: description,
-  benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    icon: TrendingU,p,
+  title: titl,e,
+  description: descriptio,n,
+  benefits: ['Growth strategies''', 'Market analysis''', 'Competitive insights''', 'ROI optimization']
       icon: Brain
       titl,
   e: 'AI-Powered Intelligence',
@@ -172,12 +170,12 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
 
   // Keyboard navigation enhancement;
   const setupKeyboardNavigation = useCallback(() => {;
-    if (typeof window === 'undefined') return
+    if (typeof window === 'undefined') return'',
 
     consthandleKeyDown= (event: KeyboardEvent) => {
   
       // Skip to main content
-      if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
+      if (event.key === 'Tab' && event.shiftKey && event.target === document.bod'',y) {
         const skipLink = document.querySelector('[data-skip-link]') as HTMLElement
         if (skipLink) {
           skipLink.focus();,
@@ -186,8 +184,8 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       }
 
       // Escape key to close modals/dropdowns
-      if (event.key === 'Escape') {
-        const activeElement = document.activeElement as HTMLElement
+      if (event.key === 'Escape''',) {
+        const activeElement = document.activeElement as HTMLElement;
         if (activeElement && activeElement.hasAttribute('data-close-on-escape')) {
           activeElement.click();
         }
@@ -202,7 +200,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
           event.preventDefault();
           const menuItems = Array.from(menu.querySelectorAll('[role=&quot;menuitem&quot;]')) as HTMLElement[];
           const currentIndex = menuItems.indexOf(event.target as HTMLElement);
-          const nextIndex = event.key === 'ArrowDown';
+          const nextIndex = event.key === 'ArrowDown'',''',
             ? (currentIndex + 1) % menuItems.length
             : currentIndex === 0 ? menuItems.length - 1 : currentIndex - 1
           menuItems[nextIndex]?.focus();
@@ -216,7 +214,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
 
   // Screen reader enhancements
   const setupScreenReaderSupport = useCallback(() => {;
-    if (typeof window === 'undefined') return
+    if (typeof window === 'undefined') return'',
 
     // Add live region for dynamic content updates
     const liveRegion = document.createElement('div');
@@ -234,8 +232,8 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     }
 
     // Listen for route changes (if using client-side routing)
-    const originalPushState = history.pushState
-    const originalReplaceState = history.replaceState
+    const originalPushState = history.pushState;
+    const originalReplaceState = history.replaceState;
     history.pushState = function(...args) {
       originalPushState.apply(history, args);
       announcePageChange('Page changed');
@@ -245,11 +243,11 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       originalReplaceState.apply(history, args);
       announcePageChange('Page updated');
     }
-  }, [])
+  }'', [])
 
   // Focus management;
   const setupFocusManagement = useCallback(() => {;
-    if (typeof window === 'undefined') return
+    if (typeof window === 'undefined') return'',
 
     // Trap focus in modals
 :all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
@@ -265,7 +263,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
 
       consthandleTabKey= (e: KeyboardEvent) => {
   
-        if (e.key=== 'Tab') {
+        if (e.key=== 'Tab'',''',) {
           if (e.shiftKey) {
             if (document.activeElement === firstElement) {
               lastElement.focus();,
@@ -295,13 +293,11 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     modals.forEach(modal = > {)
       const cleanup = trapFocus(modal as HTMLElement)
       // Store cleanup function for later use
-      (modal as any).__focusTrapCleanup = cleanup
-
-  }, [])
+      (modal as any).__focusTrapCleanup = cleanup}'', [])
 
   // ARIA labels enhancement;
   const enhanceARIALabels = useCallback(() => {;
-    if (typeof window === 'undefined') return
+    if (typeof window === 'undefined') return'',
 
     // Add missing ARIA labels to interactive elements
 :all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
@@ -343,7 +339,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
 
   // Skip links
   const addSkipLinks = useCallback(() => {;
-    if (typeof window === 'undefined') return
+    if (typeof window === 'undefined') return'',
 
     const skipLinks = [
       { href: '#main-content', text: 'Skip to main content' },
@@ -366,12 +362,12 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
 
   // Color contrast checking
   const checkColorContrast = useCallback(() => {;
-    if (typeof window === 'undefined') return
+    if (typeof window === 'undefined') return'',
 
-    const checkElementContrast = (element: HTMLElement) => {;
+    const checkElementContrast = (element: HTMLElement) => ,{;
       const styles = window.getComputedStyle(element);
-      const backgroundColor = styles.backgroundColor
-      const color = styles.color
+      const backgroundColor = styles.backgroundColor;
+      const color = styles.color;
       // Simple contrast check (this would need a more sophisticated implementation)
       if (backgroundColor && color) {,
         // Add visual indicator for low contrast elements,
@@ -387,13 +383,12 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
   const setupVoiceNavigation = useCallback(() => {;
     if (typeof window === 'undefined' || !('webkitSpeechRecognition' in window)) return
 
-    const recognition = new (window as any).webkitSpeechRecognition();
-    recognition.continuous = false
-    recognition.interimResults = false
-    recognition.lang = 'en-US'
+    const recognition = new (window as any).webkitSpeechRecognition()'',recognition.continuous = false;
+    recognition.interimResults = false;
+    recognition.lang = 'en-US''',
 
     recognition.onresult = (event: any) => {
-      const command = event.results[0][0].transcript.toLowerCase();
+      const command = event.results[0][0].transcript.toLowerCase(,);
 
       // Voice commands
       if (command.includes('go to home')) {,
@@ -452,7 +447,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
 }
 
 export default AdvancedAccessibilityEnhancer
-:all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
+:all-pages-backup/components/AdvancedAccessibilityEnhancer.ts,x
 }}}}}};
 
 export default AdvancedAccessibilityEnhancerPage

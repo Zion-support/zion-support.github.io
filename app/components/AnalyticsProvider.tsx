@@ -35,7 +35,7 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children}) => 
         script.async = true
         document.head.appendChild(script);
         window.gtag =
-          window.gtag ||
+          window.gtag ||;
           function (...args: any[]) {
             (window.gtag as any).q = (window.gtag as any).q || []
             (window.gtag as any).q.push(args)

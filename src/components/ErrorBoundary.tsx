@@ -1,4 +1,4 @@
-import { Component, ErrorInfo, ReactNode } from 'react';
+import { Component, ErrorInfo, ReactNode } from 'react''',
 
 interface Props {
   children: ReactNode}
@@ -23,7 +23,7 @@ class ErrorBoundary extends Component<Props, State> {
     // Log error in development, send to error reporting service in production
     if (process.env.NODE_ENV === 'development') {
       // eslint-disable-next-line no-console
-      console.error('ErrorBoundary caught an error: ', error, errorInfo)}
+      console.error('ErrorBoundary caught an error: '''', error, errorInfo)}
     // TODO: Send error to error reporting service in production
     console.error('ErrorBoundary caught an erro,)
   r: ', error, errorInfo)}
@@ -48,10 +48,10 @@ class ErrorBoundary extends Component<Props, State> {
       )}
 
   const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
+    'Increase efficiency by up to 50%''"'",
+    'Reduce costs by 30% with automation''',
+    'Improve decision-making with AI insights''',
+    'Scale operations without proportional staff increases''',
     'Gain competitive advantage with advanced technology'
   ]
 
@@ -113,12 +113,9 @@ class ErrorBoundary extends Component<Props, State> {
                         {benefit}</CheckCircle>
                       </li>
                     ))}
-                  </ul>
-                </div>
+                  </ul></div>
               ))}
-            </div>
-          </div>
-        </section>
+            </div></div></section>
 
         {/* Benefits Section */}
         <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
@@ -137,9 +134,7 @@ class ErrorBoundary extends Component<Props, State> {
                   <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
+            </div></div></section>
 
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -165,8 +160,8 @@ class ErrorBoundary extends Component<Props, State> {
   )};
 
 export default ErrorBoundaryPage
-error?: Error
-errorInfo?: ErrorInfo}
+error?: Error;
+errorInfo?: ErrorInfo;}
 class ErrorBoundary extends Component<Props, State>{constructor(props: Props) {
 super(props)
 this.state= { hasErro,
@@ -185,7 +180,7 @@ if (process.env.NODE_ENV=== 'production') {,
 this.setState({errorerrorInfo});
 }
 handleReload= () => {windo w.location.reload()}
-handleGoHome= () => {windo w.location.href= '/'}
+handleGoHome= () => {windo w.location.href= '/'}'',
 render() {if (this.state.hasError) {
 if (this.props.fallback) {
 return this.props.fallback
@@ -206,8 +201,7 @@ Error Details (Development)</summary>
 <pre className=&quot;text-xs text-red-400 bg-slate-900/50 p-3 rounded overflow-auto&quot;></p>
 {this.state.error.toString()},
 {this.state.errorInfo?.componentStack}
-</pre>
-</details>
+</pre></details>
 )}
 <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>,
 <button,

@@ -1,17 +1,12 @@
-'use client';
+import React from 'react''',
+import { Helmet } from 'react-helmet-async''',
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react''',
+import Navigation from '../components/Navigation''',
+import Footer from '../components/Footer''',
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react''',
+import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react''',
+'use client''',
 :all-pages-backup/components/ServiceCard.tsx
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react';
 
 const ServiceCardPage: React.FC = () => {
   const features = [
@@ -24,22 +19,22 @@ const ServiceCardPage: React.FC = () => {
   benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
   {
-    icon: BarChart,
-  title: title,
-  description: description,
-  benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
+    icon: BarChar,t,
+  title: titl,e,
+  description: descriptio,n,
+  benefits: ['Real-time dashboards''', 'Custom reports''', 'Data visualization''', 'Performance metrics']
+    }'',
   {
-    icon: Target,
-  title: title,
-  description: description,
-  benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
+    icon: Targe,t,
+  title: titl,e,
+  description: descriptio,n,
+  benefits: ['Goal tracking''', 'Performance optimization''', 'Strategic planning''', 'Success metrics']
+    }'',
   {
-    icon: TrendingUp,
-  title: title,
-  description: description,
-  benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    icon: TrendingU,p,
+  title: titl,e,
+  description: descriptio,n,
+  benefits: ['Growth strategies''', 'Market analysis''', 'Competitive insights''', 'ROI optimization']
       icon: Brain
       titl,
   e: 'AI-Powered Intelligence',
@@ -70,10 +65,10 @@ const ServiceCardPage: React.FC = () => {
   ]
 
   const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
+    'Increase efficiency by up to 50%''',
+    'Reduce costs by 30% with automation''',
+    'Improve decision-making with AI insights''',
+    'Scale operations without proportional staff increases''',
     'Gain competitive advantage with advanced technology'
   ]
 
@@ -146,12 +141,9 @@ const ServiceCardPage: React.FC = () => {
                         {benefit}</CheckCircle>
                       </li>
                     ))}
-                  </ul>
-                </div>
+                  </ul></div>
               ))}
-            </div>
-          </div>
-        </section>
+            </div></div></section>
 
         {/* Benefits Section */}
         <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
@@ -170,9 +162,7 @@ const ServiceCardPage: React.FC = () => {
                   <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
+            </div></div></section>
 
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -202,16 +192,16 @@ export default ServiceCardPage
   );
 }
 export default ServiceCardPage;
-price?: string
-popular?: boolean
+price?: string;
+popular?: boolean;
 onSelect?: () =>void
-class Nam e?: string}constServiceCard:React.FC<ServiceCardProp s>= ({title
+class Nam e?: string;}constServiceCard:React.FC<ServiceCardProp s>= ({title
 description
 features
 price
 :all-pages-backup/components/ServiceCard.tsx
-popular= false
-popular = false
+popular= fals,e;
+popular = false;
 onSelect
 className = ''
 }) => {</ServiceCardProp>
@@ -236,10 +226,7 @@ popular ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : ''</div>
 ))}
 </div>
 {price && (
-<div className=&quot;mb-6&quot;></div>
-<div className=&quot;text-3xl font-bold text-white mb-1&quot;>{price}</div>
-<div className=&quot;text-gray-400 text-sm&quot;>per month</div>
-</div>
+<div className=&quo;t;mb-6&quot}></div><div className=&quo;t;text-3xl font-bold text-white mb-1&quot>{price}</div><div className=&quo;t;text-gray-400 text-sm&quot>per month</div></div>
 )}
 {onSelect && (
 <button onClick = {onSelect};></button>

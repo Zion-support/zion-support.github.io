@@ -1,11 +1,12 @@
-'use client';
+import React from 'react''',
+import { Helmet } from 'react-helmet-async''',
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react''',
+import Navigation from '../components/Navigation''',
+import Footer from '../components/Footer''',
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react''',
+import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react''',
+'use client''',
 :all-pages-backup/components/Header.tsx
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
 
 interface HeaderProps {;
   className?: string
@@ -84,12 +85,9 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {;</HeaderProps>
                         {benefit}</CheckCircle>
                       </li>
                     ))}
-                  </ul>
-                </div>
+                  </ul></div>
               ))}
-            </div>
-          </div>
-        </section>
+            </div></div></section>
 
         {/* Benefits Section */}
         <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
@@ -108,9 +106,7 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {;</HeaderProps>
                   <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
+            </div></div></section>
 
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -143,7 +139,6 @@ export default HeaderPage
 export default Header
   );
 }
-export default HeaderPage;
-  )
+export default HeaderPage)
 }
 export default Header

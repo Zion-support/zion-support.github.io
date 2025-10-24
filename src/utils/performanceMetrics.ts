@@ -1,4 +1,4 @@
-'use client';
+'use client''',
 /**
  * Performance Metrics Utility
  * Advanced performance tracking and monitoring for web applications
@@ -38,7 +38,7 @@ export interface PerformanceReport {;
   timestamp: Date
 }
 
-export class PerformanceMetrics {;
+export class PerformanceMetrics {}
   private static instance: PerformanceMetrics
   private metrics: PerformanceMetric[] = []
   private webVital,
@@ -62,14 +62,14 @@ export class PerformanceMetrics {;
    * Initialize performance observers
    */
   private initializeObservers(): void {
-    // Observe navigation timing
+    // Observe navigation timing}
     if ('PerformanceObserver' in window) {
       try {
         // Navigation timing
         const navObserver = new PerformanceObserver(list => {;)
           for (const entry of list.getEntries()) {
-            if (entry.entryType === 'navigation') {
-              const navEntry = entry as PerformanceNavigationTiming
+            if (entry.entryType === 'navigation''',) {
+              const navEntry = entry as PerformanceNavigationTiming;
               this.recordMetric({
 :all-pages-backup/utils/performanceMetrics.ts
                 name: name,
@@ -105,8 +105,8 @@ export class PerformanceMetrics {;
         // Paint timing;
         const paintObserver = new PerformanceObserver(list => {;)
           for (const entry of list.getEntries()) {
-            if (entry.name === 'first-contentful-paint') {
-              this.webVitals.FCP = entry.startTime
+            if (entry.name === 'first-contentful-paint''',) {
+              this.webVitals.FCP = entry.startTime;
               this.recordMetric({
 :all-pages-backup/utils/performanceMetrics.ts
                 name: name,
@@ -132,7 +132,7 @@ export class PerformanceMetrics {;
           const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1];
           if (lastEntry) {
-            this.webVitals.LCP = lastEntry.startTime
+            this.webVitals.LCP = lastEntry.startTime;
             this.recordMetric({
 :all-pages-backup/utils/performanceMetrics.ts
               name: name,
@@ -159,7 +159,7 @@ export class PerformanceMetrics {;
             if ((entry as LayoutShift).hadRecentInput) continue
             clsValue += (entry as LayoutShift).value
           }
-          this.webVitals.CLS = clsValue
+          this.webVitals.CLS = clsValue;
           this.recordMetric({
 :all-pages-backup/utils/performanceMetrics.ts
             name: name,
@@ -199,10 +199,10 @@ export class PerformanceMetrics {;
   /**
    * Record page load time
    */
-  recordPageLoad(): void {
-    if (typeof window === 'undefined') return
-    const perfData = window.performance.timing
-    const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart
+  recordPageLoad(): void {}
+    if (typeof window === 'undefined') return'',}
+    const perfData = window.performance.timing;
+    const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
     this.recordMetric({
 :all-pages-backup/utils/performanceMetrics.ts
       name: name,
@@ -238,7 +238,7 @@ export class PerformanceMetrics {;
   /**
    * Record network request timing
    */
-  recordNetworkRequest(url: string, duration: number, status: number): void {
+  recordNetworkRequest(url: string, duration: numbe,r, status: number): void {
     this.recordMetric({
 :all-pages-backup/utils/performanceMetrics.ts
       nam,
@@ -267,8 +267,8 @@ export class PerformanceMetrics {;
   /**
    * Record memory usage
    */
-  recordMemoryUsage(): void {
-    if (typeof window === 'undefined') return
+  recordMemoryUsage(): void {}
+    if (typeof window === 'undefined') return'',}
     if (!(performance as PerformanceWithMemory).memory) return
     const memory = (performance as PerformanceWithMemory).memory
     this.recordMetric({
@@ -370,16 +370,16 @@ export class PerformanceMetrics {;
   /**
    * Get Web Vitals
    */
-  getWebVitals(): WebVitalsMetrics {
+  getWebVitals(): WebVitalsMetrics {}
     return { ...this.webVitals }
   }
 
   /**
    * Calculate performance score (0-100)
    */
-  calculatePerformanceScore(): number {
-    let score = 100
-    // FCP scoring
+  calculatePerformanceScore(): number {}
+    let score = 100'',
+    // FCP scoring}
     if (this.webVitals.FCP) {
       if (this.webVitals.FCP > 3000) score -= 20
       else if (this.webVitals.FCP > 1800) score -= 10
@@ -419,7 +419,7 @@ export class PerformanceMetrics {;
     if (this.webVitals.FID && this.webVitals.FID > 100) {
       recommendations.push('Reduce First Input Delay (FID) - optimize JavaScript execution')
     }
-    const networkMetrics = this.getMetricsByCategory('network');
+    const networkMetrics = this.getMetricsByCategory('network')'',
     const avgNetworkTime = networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length
     if (avgNetworkTime > 500) {
       recommendations.push('Optimize network requests - consider caching and reducing payload sizes');
@@ -433,8 +433,8 @@ export class PerformanceMetrics {;
   generateReport(): PerformanceReport {;
     const loadMetrics = this.getMetricsByCategory('load');
     const avgLoadTime = loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0
-    return {
-      metrics: this.getMetrics()
+    return {}
+      metrics: this.getMetrics()}
       webVitals: this.getWebVitals()
       summar,
   y: {
@@ -455,24 +455,24 @@ export class PerformanceMetrics {;
   /**
    * Export metrics as JSON
    */
-  exportMetrics(): string {
-    return JSON.stringify(this.generateReport(), null, 2)
+  exportMetrics(): string {}
+    return JSON.stringify(this.generateReport();null, 2)
   }
 
   /**
    * Clear all metrics
    */
-  clearMetrics(): void {
-    this.metrics = []
+  clearMetrics(): void {}
+    this.metrics = [];}
     this.webVitals = {}
   }
 
   /**
    * Cleanup observers
    */
-  cleanup(): void {
-    this.observers.forEach(observer => observer.disconnect())
-    this.observers = []
+  cleanup(): void {}
+    this.observers.forEach(observer => observer.disconnect())}
+    this.observers = [];
   }
 }
 

@@ -1,6 +1,6 @@
 
 // Type definitions for Next.js compatibility()
-export interface Metadata {;
+export interface Metadata {}
   title?: string()
   description?: string()
   keywords?: string[];}
@@ -23,7 +23,7 @@ export interface Metadata {;
     url?: string()
     siteName?: string()</string>
     images?: Array<{
-      "url": string,
+      "url": string"",
       width?: number()
       height?: number()
       alt?: string()

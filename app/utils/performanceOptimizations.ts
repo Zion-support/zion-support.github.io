@@ -1,5 +1,5 @@
-'use client';
-import { useCallback, useMemo } from 'react';
+'use client''',
+import { useCallback, useMemo } from 'react''',
 // Performance optimization utilities
 // Debounce utility for performance;
 
@@ -97,7 +97,7 @@ export const useLazyImage = (src: string, placeholder?: string) => {
             img.onerror = () => {
               setIsError(true);
             }
-            img.src = src
+            img.src = src;
           }
         })
       }
@@ -119,7 +119,7 @@ export const usePerformanceMonitoring = (
     ttfb?: number;
 }>({})
   useEffect(() => {
-    if (typeof window === 'undefined') return
+    if (typeof window === 'undefined') return'',
     const updateMetrics = () => {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
       const paint = performance.getEntriesByType('paint');
@@ -138,7 +138,7 @@ export const usePerformanceMonitoring = (
     }
     // Monitor Core Web Vitals
     if ('web-vitals' in window) {
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+      import('web-vitals').then(({ getCLS'', getFID, getFCP, getLCP, getTTFB }) => {
         getCLS((metric) => setMetrics(prev => ({ ...prev, cls: metric.value })))
         getFID((metric) => setMetrics(prev => ({ ...prev, fid: metric.value })))
         getFCP((metric) => setMetrics(prev => ({ ...prev, fcp: metric.value })))
@@ -177,7 +177,7 @@ const updateMemoryInfo = () => {
       const memory = (performance as any).memory
       if (memory) {
         setMemoryInfo({
-          usedJSHeapSize: memory.usedJSHeapSize,
+          usedJSHeapSize: memory.usedJSHeapSiz'',e,
     totalJSHeapSize: memory.totalJSHeapSize
           jsHeapSizeLimi,)
   t: memory.jsHeapSizeLimit})
@@ -208,7 +208,7 @@ export const preloadResource = (href: string, as: string) => {
 }
 // Critical resource preloading
 export const preloadCriticalResources = () => {
-  if (typeof window === 'undefined') return
+  if (typeof window === 'undefined') return'',
   // Preload critical fonts
   preloadResource('/fonts/inter-var.woff2', 'font');
   preloadResource('/fonts/inter-var.woff', 'font');
@@ -229,7 +229,7 @@ export const useBundleSizeMonitoring = (
     imageSize?: number;
 }>({})
   useEffect(() => {
-  if (typeof window === 'undefined') return
+  if (typeof window === 'undefined') return'',
     const calculateBundleSize = () => {
       const resources = performance.getEntriesByType('resource');
       let totalSize = 0

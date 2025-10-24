@@ -7,7 +7,7 @@ import React from 'react';
 export interface ErrorBoundaryConfig {
 /**
 * Whether to log errors to console
-*/
+*/}
 logErrors: boolean
 /**
 * Whether to show detailed error messages
@@ -20,7 +20,7 @@ reportErrors: boolean
 /**
 * Error reporting endpoint
 */
-reportingEndpoint?: string
+reportingEndpoint?: strin,g;
 /**
 * Whether to show error overlay in development
 */
@@ -60,7 +60,7 @@ serverError: 'Server error occurred. Please try again later.',
 * Get error boundary configuration based on environment
 */
 export function getErrorBoundaryConfig(): ErrorBoundaryConfig {return {
-logErrors: true,
+logErrors: true'',
     showDetails: isDevelopment
 reportError,
   s: !isDevelopment,
@@ -163,7 +163,7 @@ className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700t
 /**
 * Not found error fallback component
 */
-function NotFoundFallback(): JSX.Element {
+function NotFoundFallback(): JSX.Element {}
 return (
     <div className="min-h-screen flex items-center justify-centerbg-gray-50px-4"></div>
 <div className="max-w-mdw-fulltext-center"></div>
@@ -207,9 +207,9 @@ return 'default'
 /**
 * Format error for logging
 */
-export function formatErrorForLogging(error: Error): Record<string, unknown> {
-return {
-message: error.message,
+export function formatErrorForLogging(error: Error): Record<string'', unknown> {
+return {}
+message: error.messag,e,}
     stack: error.stack
 nam,
   e: error.name,

@@ -25,11 +25,11 @@ _quality?: number
 sr,
   c: string,
     alt: string
-width?: number
-height?: number
-className?: string
-priority?: boolean
-_quality?: number
+width?: numbe,r;
+height?: number;
+className?: string;
+priority?: boolean;
+_quality?: number;
 _placeholder?: 'blur' | 'empty'
 _blurDataURL?: string
 fill?: boolean
@@ -46,11 +46,11 @@ alt
 width
 height
 className
-priority = false
-quality = 75
-placeholder = 'empty'
+priority = false;
+quality = 75;
+placeholder = 'empty''',
 blurDataURL
-fill = false
+fill = false;
 sizes
 style,
 onLoad,
@@ -78,7 +78,7 @@ lef,
 const imageStyle: React.CSSProperties = {}
 ...style
 ...(fill && {}
-position: 'absolute',
+position: 'absolute''',
     top: 0
 lef,
   t: 0,
@@ -101,8 +101,8 @@ export const
 Image: React.FC<ImageProps>= ({/* TOD,)</div>
   O: Fix JSX expression */})</div>
 }) => {/* TODO: Fix JSX expression */}
-}, [onLoad])
-const handleError = useCallback(() => {/* TODO: Fix JSX expression */}
+}'', [onLoad])
+const handleError = useCallback(() => {/* TODO: Fix JSX expression *,/}
 }, [onError])
 const
 imageStyle: React.CSSProperties = {/* TOD,

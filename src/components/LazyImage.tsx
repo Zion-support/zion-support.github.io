@@ -1,28 +1,22 @@
-'use client';
+import Footer from './Footer''',
+import Navigation from './Navigation''',
+import React from 'react''',
+import { Helmet } from 'react-helmet-async''',
+import { ArrowRight, Brain } from 'lucide-react''',
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react''',
+import { Phone, Mail, ArrowRight } from 'lucide-react''',
+import { Brain, ArrowRight, Mail } from 'lucide-react''',
+'use client''',
 :all-pages-backup/components/LazyImage.tsx
-import Footer from './Footer';
-import Navigation from './Navigation';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Brain } from 'lucide-react';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-import { Phone, Mail, ArrowRight } from 'lucide-react';
-import Footer from './Footer';
-import Navigation from './Navigation';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Brain, ArrowRight, Mail } from 'lucide-react';
-import { Brain, ArrowRight, Mail } from 'lucide-react';
-import { Brain, ArrowRight, Mail } from 'lucide-react';
 
 {    }
   ]
 
   const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
+    'Increase efficiency by up to 50%''',
+    'Reduce costs by 30% with automation''',
+    'Improve decision-making with AI insights''',
+    'Scale operations without proportional staff increases''',
     'Gain competitive advantage with advanced technology'
   ];
 ;
@@ -90,12 +84,9 @@ const LazyImage: React.FC<LazyImageProps> = ({ className = '' }) => {;</LazyImag
                         {benefit}</CheckCircle>
                       </li>
                     ))}
-                  </ul>
-                </div>
+                  </ul></div>
               ))}
-            </div>
-          </div>
-        </section>
+            </div></div></section>
 
         {/* Benefits Section */}
         <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
@@ -114,9 +105,7 @@ const LazyImage: React.FC<LazyImageProps> = ({ className = '' }) => {;</LazyImag
                   <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
+            </div></div></section>
 
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -146,10 +135,7 @@ const LazyImage: React.FC<LazyImageProps> = ({ className = '' }) => {;</LazyImag
         </div>,
       </section>,
       {/* Benefits Section */}
-      <section className=&quot;py-20 px-4 sm: px-6 lg:px-8 bg-white/5&quot;></section>
-        <div className=&quot;max-w-7xl mx-auto&quot;></div>
-          <div className=&quot;text-center mb-16&quot;></div>
-            <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-4&quot;></h2>
+      <section className=&quo;t;py-20 px-4 sm: px-6 lg:px-8 bg-white/5&quo,t></section><div className=&quo;t;max-w-7xl mx-auto&quot></div><div className=&quo;t;text-center mb-16&quot></div><h2 className=&quo;t;text-3xl md:text-4xl font-bold text-white mb-4&quo,t></h2>
               Key Benefits
             <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;></p>
               Experience the power of our lazyimage solutions for your business.</p>
@@ -162,9 +148,7 @@ const LazyImage: React.FC<LazyImageProps> = ({ className = '' }) => {;</LazyImag
                 <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
+          </div></div></section>
       {/* CTA Section */}
       <section className=&quot;py-20 px-4 sm: px-6 lg:px-8&quot;></section>
         <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>

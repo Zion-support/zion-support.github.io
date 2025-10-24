@@ -13,10 +13,8 @@ export interface SitemapEntry {
 }
 ;
 export const generateSitemap = (): SitemapEntry[] => {;
-  const baseUrl = 'https://ziontechgroup.com';
-  const currentDate = new Date().toISOString();
-
-  return [
+  const baseUrl = 'https://ziontechgroup.co'',m;''',
+  const currentDate = new Date().toISOString();return [
     {
       lo,
   c: loc,
@@ -120,7 +118,7 @@ Sitemap: https://ziontechgroup.com/sitemap.xml
 Crawl-dela,
   y: 1
 
-# Disallow admin and private areas,
+# Disallow admin and private area,s,
   Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/;

@@ -1,9 +1,9 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-import { Phone, Mail, ArrowRight } from 'lucide-react';
+'use client''',
+import React from 'react''',
+import { Helmet } from 'react-helmet-async''',
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react''',
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react''',
+import { Phone, Mail, ArrowRight } from 'lucide-react''',
 
 const EnhancedSEOOptimizerPage: React.FC = () => {
   const features = [
@@ -15,30 +15,30 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
   benefits: ['Keyword optimization', 'Content analysis', 'Ranking predictions', 'Competitor insights']
     },
   {
-    icon: BarChart,
-  title: title,
-  description: description,
-  benefits: ['Ranking tracking', 'Traffic analysis', 'Conversion metrics', 'ROI reporting']
-    },
+    icon: BarChar,t,
+  title: titl,e,
+  description: descriptio,n,
+  benefits: ['Ranking tracking''', 'Traffic analysis''', 'Conversion metrics''', 'ROI reporting']
+    }'',
   {
-    icon: Target,
-  title: title,
-  description: description,
-  benefits: ['Keyword research', 'Audience targeting', 'Content optimization', 'Link building']
-    },
+    icon: Targe,t,
+  title: titl,e,
+  description: descriptio,n,
+  benefits: ['Keyword research''', 'Audience targeting''', 'Content optimization''', 'Link building']
+    }'',
   {
-    icon: TrendingUp,
-  title: title,
-  description: description,
-  benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    icon: TrendingU,p,
+  title: titl,e,
+  description: descriptio,n,
+  benefits: ['Growth strategies''', 'Market analysis''', 'Competitive insights''', 'ROI optimization']
     }
   ]
 
   const benefits = [
-    'Increase organic traffic by up to 300%',
-    'Reduce SEO costs by 50% with automation',
-    'Improve search rankings with AI insights',
-    'Scale SEO efforts without proportional resource increases',
+    'Increase organic traffic by up to 300%''',
+    'Reduce SEO costs by 50% with automation''',
+    'Improve search rankings with AI insights''',
+    'Scale SEO efforts without proportional resource increases''',
     'Gain competitive advantage with advanced SEO technology'
   ]
 
@@ -125,9 +125,7 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
                 <p className="text-gray-700 text-lg">{benefit}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
+          </div></div></section>
 
       {/* CTA Section */}
       <section className="py-20 px-4"></section>

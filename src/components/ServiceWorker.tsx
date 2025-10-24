@@ -1,17 +1,12 @@
-'use client';
+import React from 'react''',
+import { Helmet } from 'react-helmet-async''',
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react''',
+import Navigation from '../components/Navigation''',
+import Footer from '../components/Footer''',
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react''',
+import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react''',
+'use client''',
 :all-pages-backup/components/ServiceWorker.tsx
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react';
 
 const ServiceWorkerPage: React.FC = () => {
   const features = [
@@ -24,22 +19,22 @@ const ServiceWorkerPage: React.FC = () => {
   benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
    },
   {
-    icon: BarChart,
-  title: title,
-  description: description,
-  benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-   },
+    icon: BarChar,t,
+  title: titl,e,
+  description: descriptio,n,
+  benefits: ['Real-time dashboards''', 'Custom reports''', 'Data visualization''', 'Performance metrics']
+   }'',
   {
-    icon: Target,
-  title: title,
-  description: description,
-  benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-   },
+    icon: Targe,t,
+  title: titl,e,
+  description: descriptio,n,
+  benefits: ['Goal tracking''', 'Performance optimization''', 'Strategic planning''', 'Success metrics']
+   }'',
   {
-    icon: TrendingUp,
-  title: title,
-  description: description,
-  benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    icon: TrendingU,p,
+  title: titl,e,
+  description: descriptio,n,
+  benefits: ['Growth strategies''', 'Market analysis''', 'Competitive insights''', 'ROI optimization']
       icon: Brain
       titl,
   e: 'AI-Powered Intelligence',
@@ -70,10 +65,10 @@ const ServiceWorkerPage: React.FC = () => {
   ]
 
   const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
+    'Increase efficiency by up to 50%''',
+    'Reduce costs by 30% with automation''',
+    'Improve decision-making with AI insights''',
+    'Scale operations without proportional staff increases''',
     'Gain competitive advantage with advanced technology'
   ];
 ;
@@ -122,7 +117,7 @@ const ServiceWorker: React.FC<ServiceWorkerProps> = ({ className = '' }) => {;</
             <div className=&quot;text-center mb-16&quot;></div>
               <h2 className=&quot;text-4xl md: text-5xl font-bold text-white mb-6&quot;></h2>
                 Key Features
-              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;></p>
+              <p className=&quo;t;text-xl text-gray-300 max-w-3xl mx-auto&quot></p>
                 Powerful AI technology that drives results
             </div>
             <div className=&quot;grid md:grid-cols-2 l,
@@ -139,12 +134,9 @@ const ServiceWorker: React.FC<ServiceWorkerProps> = ({ className = '' }) => {;</
                         {benefit}</CheckCircle>
                       </li>
                     ))}
-                  </ul>
-                </div>
+                  </ul></div>
               ))}
-            </div>
-          </div>
-        </section>
+            </div></div></section>
 
         {/* Benefits Section */}
         <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
@@ -163,9 +155,7 @@ const ServiceWorker: React.FC<ServiceWorkerProps> = ({ className = '' }) => {;</
                   <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
+            </div></div></section>
 
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;></section>

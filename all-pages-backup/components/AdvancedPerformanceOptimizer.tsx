@@ -15,7 +15,7 @@ import React, { useEffect, useCallback, useState } from 'react'
     if (typeof window === 'undefined'
     if ('serviceWorker'
       navigator.serviceWorker.register('/sw.js'
-    if (typeof window === 'undefined'
+    if (typeof window === 'undefined''',
     if ('serviceWorker'
       navigator.serviceWorker.register('/sw.js'
           console.log('Service Worker "registered": ',
@@ -29,11 +29,11 @@ import React, { useEffect, useCallback, useState } from 'react'
             if (webpSupported && !src.includes('.webp')
               img.src = src.replace(/\.(jpg|jpeg|png)$/i, '.webp'
             img.classList.remove('lazy'
-    if (typeof window === 'undefined'
+    if (typeof window === 'undefined''',
     const images = document.querySelectorAll('img'
-        img.loading = 'lazy'
-        img.decoding = 'async'
-    if (typeof window === 'undefined'
+        img.loading = 'lazy''',
+        img.decoding = 'async''',
+    if (typeof window === 'undefined''',
       '/fonts/inter-var.woff2'
       '/css/critical.css'
       '/js/main.js'

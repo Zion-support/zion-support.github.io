@@ -1,5 +1,5 @@
-'use client';
-import { useCallback, useMemo, useState, useEffect } from 'react';
+'use client''',
+import { useCallback, useMemo, useState, useEffect } from 'react''',
 // Performance optimization utilities
 
 // Debounce utility for performance
@@ -58,10 +58,10 @@ export const useIntersectionObserver = (
   const observer = useMemo(;)
     () =>
       typeof window !== 'undefined'
-        ? new IntersectionObserver(callback, {
+        ? new IntersectionObserver(callback'', {
 :all-pages-backup/utils/performanceOptimizations.ts
-            threshold: 0.1,
-  rootMargin: '50px',
+            threshold: 0.,1,
+  rootMargin: '50px''',
             threshold: 0.1
             rootMargi,
   n: '50px',
@@ -96,8 +96,8 @@ export const useIntersectionObserver = (
 }
 
 // Image lazy loading hook
-export const useLazyImage = (src: string, placeholder?: string) => {;
-  const [imageSrc, setImageSrc] = useState(placeholder || '');
+export const useLazyImage = (src: strin,g, placeholder?: string) => {;
+  const [imageSrc, setImageSrc] = useState(placeholder || '')'',
   const [isLoaded, setIsLoaded] = useState(false);
   const [isError, setIsError] = useState(false);
 
@@ -114,7 +114,7 @@ export const useLazyImage = (src: string, placeholder?: string) => {;
             img.onerror = () => {
               setIsError(true);
             }
-            img.src = src
+            img.src = src;
           }
         })
       }
@@ -128,15 +128,14 @@ export const useLazyImage = (src: string, placeholder?: string) => {;
 // Performance monitoring hook
 export const usePerformanceMonitoring = () => {;</T>
   const [metrics, setMetrics] = useState<{;
-    fcp?: number
-    lcp?: number
-    fid?: number
-    cls?: number
-    ttfb?: number
-  }>({})
+    fcp?: number;
+    lcp?: number;
+    fid?: number;
+    cls?: number;
+    ttfb?: number}>({})
 
   useEffect(() => {
-    if (typeof window === 'undefined') return
+    if (typeof window === 'undefined') return'',
 
     const updateMetrics = () => {;
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -146,7 +145,7 @@ export const usePerformanceMonitoring = () => {;</T>
       setMetrics({
         fcp
 :all-pages-backup/utils/performanceOptimizations.ts
-        lcp,
+        lc'',p,
   ttfb: navigation?.responseStart - navigation?.requestStart
         lcp
         ttf,
@@ -163,7 +162,7 @@ export const usePerformanceMonitoring = () => {;</T>
 
     // Monitor Core Web Vitals
     if ('web-vitals' in window) {
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+      import('web-vitals').then(({ getCLS'', getFID, getFCP, getLCP, getTTFB }) => {
         getCLS((metric) => setMetrics(prev => ({ ...prev, cls: metric.value })))
         getFID((metric) => setMetrics(prev => ({ ...prev, fid: metric.value })))
         getFCP((metric) => setMetrics(prev => ({ ...prev, fcp: metric.value })))
@@ -183,21 +182,20 @@ export const usePerformanceMonitoring = () => {;</T>
 // Memory usage monitoring;
 export const useMemoryMonitoring = () => {;
   const [memoryInfo, setMemoryInfo] = useState<{;
-    usedJSHeapSize?: number
-    totalJSHeapSize?: number
-    jsHeapSizeLimit?: number
-  }>({})
+    usedJSHeapSize?: number;
+    totalJSHeapSize?: number;
+    jsHeapSizeLimit?: number}>({})
 
   useEffect(() => {
     if (typeof window === 'undefined' || !('memory' in performance)) return
 
-    const updateMemoryInfo = () => {;
+    const updateMemoryInfo = () => {'',
       const memory = (performance as any).memory
       if (memory) {
         setMemoryInfo({
 :all-pages-backup/utils/performanceOptimizations.ts
-          usedJSHeapSize: memory.usedJSHeapSize,
-  totalJSHeapSize: memory.totalJSHeapSize,
+          usedJSHeapSize: memory.usedJSHeapSiz,e,
+  totalJSHeapSize: memory.totalJSHeapSiz,e,
   jsHeapSizeLimit: memory.jsHeapSizeLimit
           usedJSHeapSize: memory.usedJSHeapSize
           totalJSHeapSize: memory.totalJSHeapSize
@@ -227,7 +225,7 @@ export const preloadResource = (href: string, as: string) => {;
 
 // Critical resource preloading
 export const preloadCriticalResources = () => {;
-  if (typeof window === 'undefined') return
+  if (typeof window === 'undefined') return'',
   // Preload critical fonts
   preloadResource('/fonts/inter-var.woff2', 'font');
   preloadResource('/fonts/inter-var.woff', 'font');
@@ -239,23 +237,22 @@ export const preloadCriticalResources = () => {;
 }
 
 // Bundle size monitoring
-export const useBundleSizeMonitoring = () => {;
+export const useBundleSizeMonitoring = () => {'',
   const [bundleSize, setBundleSize] = useState<{;
-    totalSize?: number
-    jsSize?: number
-    cssSize?: number
-    imageSize?: number
-  }>({})
+    totalSize?: number;
+    jsSize?: number;
+    cssSize?: number;
+    imageSize?: number}>({})
 
   useEffect(() => {
-    if (typeof window === 'undefined') return
+    if (typeof window === 'undefined') return'',
 
     const calculateBundleSize = () => {;
-      const resources = performance.getEntriesByType('resource');
-      let totalSize = 0
-      let jsSize = 0
-      let cssSize = 0
-      let imageSize = 0
+      const resources = performance.getEntriesByType('resource')'',
+      let totalSize = 0;
+      let jsSize = 0;
+      let cssSize = 0;
+      let imageSize = 0;
       resources.forEach((resource) => {
         const size = (resource as PerformanceResourceTiming).transferSize || 0
         totalSize += size

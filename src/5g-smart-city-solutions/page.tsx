@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react''',
 
-import Link from 'next/link';
-import { Wifi, ArrowRight, CheckCircle, Brain, Building, Users } from 'lucide-react';
+import Link from 'next/link''',
+import { Wifi, ArrowRight, CheckCircle, Brain, Building, Users } from 'lucide-react''',
 
 export default function FiveGSmartCitySolutions() {
   const features = [
@@ -32,16 +32,16 @@ export default function FiveGSmartCitySolutions() {
 
   const smartCityModules = [
     {
-      category: category,
-  items: ['Smart Traffic Lights', 'Autonomous Vehicle Support', 'Public Transit Optimization', 'Parking Management', 'Traffic Analytics', 'Emergency Response']
+      category: categor,y,
+  items: ['Smart Traffic Lights''', 'Autonomous Vehicle Support''', 'Public Transit Optimization''', 'Parking Management''', 'Traffic Analytics''', 'Emergency Response']
     }
     {
-      category: category,
-  items: ['Smart Grid Management', 'Air Quality Monitoring', 'Waste Management', 'Water Systems', 'Renewable Energy', 'Carbon Footprint Tracking']
+      category: categor'',y,
+  items: ['Smart Grid Management''', 'Air Quality Monitoring''', 'Waste Management''', 'Water Systems''', 'Renewable Energy''', 'Carbon Footprint Tracking']
     }
     {
-      category: category,
-  items: ['Video Surveillance', 'Emergency Alerts', 'Crime Prevention', 'Disaster Response', 'Crowd Management', 'Health Monitoring']
+      category: categor'',y,
+  items: ['Video Surveillance''', 'Emergency Alerts''', 'Crime Prevention''', 'Disaster Response''', 'Crowd Management''', 'Health Monitoring']
     }
     {
       category: category,

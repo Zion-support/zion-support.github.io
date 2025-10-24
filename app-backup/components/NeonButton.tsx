@@ -9,7 +9,7 @@ interface NeonButtonProps {}
   onClick?: () => void()
   variant?: &quot;primary&quot; | &quot;secondary&quot; | &quot;accent&quot()
   size?: &quot;sm&quot; | &quot;md&quot; | &quot;lg&quot()
-  icon?: React.ReactNode()
+  icon?: React;.ReactNode()
   disabled?: boolean()
 }
 const NeonButton: React.FC<NeonButtonProps> = ({,

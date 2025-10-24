@@ -1,15 +1,11 @@
-'use client';
+import Navigation from './Navigation''',
+import { Helmet } from 'react-helmet-async''',
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react''',
+import React from 'react''',
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react''',
+import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react''',
+'use client''',
 :all-pages-backup/components/ContentPromotionBanner.tsx
-import Navigation from './Navigation';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-import React from 'react';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
-import Navigation from './Navigation';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react';
-import React from 'react';
-import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react';
 
 const ContentPromotionBanner: React.FC = () => {,
   const benefits = [,
@@ -95,11 +91,7 @@ const ContentPromotionBanner: React.FC = () => {,
                     <span className=&quot;text-purple-100&quot;>{benefit}</span>
                   </li>
                 ))}
-              </ul>
-            </div>
-          </div>
-          <div className=&quot;text-center mt-8&quot;></div>
-            <button className=&quot;bg-white text-purple-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold&quot;></button>
+              </ul></div></div><div className=&quo;t;text-center mt-8&quot></div><button className=&quo;t;bg-white text-purple-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold&quo,t></button>
               Get Started Today
           </div>,
         </div>,
@@ -143,8 +135,7 @@ const ContentPromotionBanner: React.FC = () => {,
                 <span className=&quot;text-gray-300&quot;>{benefit}</span>
               </div>
             ))}
-          </div>
-        </div>
+          </div></div>
         {/* CTA Section */}
         <div className=&quot;text-center&quot;></div>
           <div className=&quot;bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-12&quot;></div>
@@ -186,12 +177,9 @@ const ContentPromotionBanner: React.FC = () => {,
                         {benefit}</CheckCircle>
                       </li>
                     ))}
-                  </ul>
-                </div>
+                  </ul></div>
               ))}
-            </div>
-          </div>
-        </section>
+            </div></div></section>
 
         {/* Benefits Section */}
         <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
@@ -210,9 +198,7 @@ const ContentPromotionBanner: React.FC = () => {,
                   <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
+            </div></div></section>
 
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;></section>

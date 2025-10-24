@@ -1,19 +1,13 @@
-'use client';
+import {Phone, Mail, Brain} from 'lucide-react''',
+import React from 'react''',
+import { Helmet } from 'react-helmet-async''',
+import { ArrowRight, X, Brain, BarChart, Target, TrendingUp } from 'lucide-react''',
+import Navigation from '../components/Navigation''',
+import Footer from '../components/Footer''',
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react''',
+import { Phone, Target, Mail, Users, Brain } from 'lucide-react''',
+'use client''',
 :all-pages-backup/components/Sidebar.tsx
-import {Phone, Mail, Brain} from 'lucide-react';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, X, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
-import { Phone, Target, Mail, Users, Brain } from 'lucide-react';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Phone, Target, Mail, Users, Brain } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { Phone, Target, Mail, Users, Brain } from 'lucide-react';
 
 const SidebarPage: React.FC = () => {
   const features = [
@@ -26,22 +20,22 @@ const SidebarPage: React.FC = () => {
   benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
   {
-    icon: BarChart,
-  title: title,
-  description: description,
-  benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
+    icon: BarChar,t,
+  title: titl,e,
+  description: descriptio,n,
+  benefits: ['Real-time dashboards''', 'Custom reports''', 'Data visualization''', 'Performance metrics']
+    }'',
   {
-    icon: Target,
-  title: title,
-  description: description,
-  benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
+    icon: Targe,t,
+  title: titl,e,
+  description: descriptio,n,
+  benefits: ['Goal tracking''', 'Performance optimization''', 'Strategic planning''', 'Success metrics']
+    }'',
   {
-    icon: TrendingUp,
-  title: title,
-  description: description,
-  benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    icon: TrendingU,p,
+  title: titl,e,
+  description: descriptio,n,
+  benefits: ['Growth strategies''', 'Market analysis''', 'Competitive insights''', 'ROI optimization']
       icon: Brain
       titl,
   e: 'AI-Powered Intelligence',
@@ -72,10 +66,10 @@ const SidebarPage: React.FC = () => {
   ]
 
   const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
+    'Increase efficiency by up to 50%''',
+    'Reduce costs by 30% with automation''',
+    'Improve decision-making with AI insights''',
+    'Scale operations without proportional staff increases''',
     'Gain competitive advantage with advanced technology'
   ]
 
@@ -148,12 +142,9 @@ const SidebarPage: React.FC = () => {
                         {benefit}</CheckCircle>
                       </li>
                     ))}
-                  </ul>
-                </div>
+                  </ul></div>
               ))}
-            </div>
-          </div>
-        </section>
+            </div></div></section>
 
         {/* Benefits Section */}
         <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
@@ -172,9 +163,7 @@ const SidebarPage: React.FC = () => {
                   <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
+            </div></div></section>
 
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -218,7 +207,7 @@ ChevronRight
 Phone
 Mail
 :all-pages-backup/components/Sidebar.tsx
-{MapPin,Clock}
+{MapPi,n,Clock}
 {} from 'lucide-react'
 constSidebar: React.FC= () =>{const [isOpensetIsOpen] = useState(false);,
 const [expandedSectionssetExpandedSections]=useState<Set<strin g>>(new Set(['ai-services', 'micro-saas', 'it-services']));
@@ -253,7 +242,7 @@ constnavigationSections= [
 {title: title,
   items: [,
 }
-constnavigationSections = [
+constnavigationSections = ;[
 {title: 'Main'
 items: [
 { nam,
@@ -266,8 +255,8 @@ items: [
 ]
 }
 :all-pages-backup/components/Sidebar.tsx
-{title: title,
-  key: key,
+{title: title}
+  key: ke,y,
   items: [
 {title: 'AI Services'
 ke,
@@ -290,8 +279,8 @@ items: [
 ]
 }
 :all-pages-backup/components/Sidebar.tsx
-{title: title,
-  key: key,
+{title: title}
+  key: ke,y,
   items: [
 {title: 'Micro SaaS'
 ke,
@@ -314,8 +303,8 @@ items: [
 ]
 }
 :all-pages-backup/components/Sidebar.tsx
-{title: title,
-  key: key,
+{title: title}
+  key: ke,y,
   items: [
 {title: 'IT Services'
 ke,
@@ -334,7 +323,7 @@ items: [
 ]
 }
 :all-pages-backup/components/Sidebar.tsx
-{title: title,
+{title: title}
   items: [
 {title: 'Company'
 items: [
@@ -346,7 +335,7 @@ items: [
 ]
 }
 :all-pages-backup/components/Sidebar.tsx
-{title: title,
+{title: title}
   items: [
 {title: 'Resources'
 items: [

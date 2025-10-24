@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react'
-    if ('web-vitals'
       import('web-vitals'
-          if (process.env.NODE_ENV === 'development'
     if ('web-vitals'
-      import('web-vitals'
+          if (process.env.NODE_ENV === 'development''',
+    if ('web-vitals'
     if ('performance'
       window.addEventListener('load'
           const navigation = performance.getEntriesByType('navigation'

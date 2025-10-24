@@ -31,7 +31,7 @@ const Analytics: React.FC = () => {
 
 export default Analytics
 :all-pages-backup/components/Analytics.tsx
-{};
+,{};
 
 export default AnalyticsPage
 }

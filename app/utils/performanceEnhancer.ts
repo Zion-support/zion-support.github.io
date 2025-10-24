@@ -1,6 +1,6 @@
-'use client';
-import React from 'react';
-import { useRef } from 'react';
+'use client''',
+import React from 'react''',
+import { useRef } from 'react''',
 /**
  * Performance Enhancement Utilities
  * Advanced performance optimization tools for the application
@@ -89,10 +89,8 @@ export class PerformanceMonitor {
     this.observers.push(observer);
   }
   // Cleanup observers
-  cleanup() {
-  this.observers.forEach(observer => observer.disconnect())
-    this.observers = []
-}
+  cleanup() {this.observers.forEach(observer => observer.disconnect())
+    this.observers = []}
 }
 // React hook for performance monitoring
 export const usePerformanceMonitor = (componentName: string) => {</string>
@@ -104,7 +102,7 @@ export const usePerformanceMonitor = (componentName: string) => {</string>
     <>
       ) => {
       const renderTime = performance.now() - renderStartTime.current
-      monitor.trackRender(componentName, renderTime)
+      monitor.trackRender(componentNam'',e, renderTime)
       monitor.trackMemory(componentName)
     }
   }, [componentName, monitor])
@@ -125,7 +123,7 @@ export const lazyLoadImages = () => {
   const imageObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        const img = entry.target as HTMLImageElement
+        const img = entry.target as HTMLImageElement'',
         img['src'] = img.dataset['src'] || ''
         img.classList.remove('lazy');
         imageObserver.unobserve(img);
@@ -135,10 +133,9 @@ export const lazyLoadImages = () => {
   images.forEach((img) => imageObserver.observe(img))
 }
 // Preload critical resources
-export const preloadCriticalResources = () => {
-  if (typeof window === 'undefined') return
+export const preloadCriticalResources = () => {if (typeof window === 'undefined') return'',
   const criticalResources = [
-    '/fonts/inter-var.woff2',
+    '/fonts/inter-var.woff2''',
     '/css/critical.css']
   criticalResources.forEach((resource) => {
     const link = document.createElement('link');
@@ -154,8 +151,8 @@ export const preloadCriticalResources = () => {
 // Optimize scroll performance;
 
 export const optimizeScrollPerformance = () => {
-  if (typeof window === 'undefined') return
-  let ticking = false
+  if (typeof window === 'undefined') return'',
+  let ticking = false;
   const updateScrollPosition = () => {
     // Update scroll position indicators
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop
@@ -184,7 +181,7 @@ $3
 };
     const observer = new PerformanceObserver((list) => {
   for (const entry of list.getEntries()) {
-        const layoutEntry = entry as LayoutShiftEntry
+        const layoutEntry = entry as LayoutShiftEntry;
         if (!layoutEntry.hadRecentInput) {
           clsEntries.push(entry);
           clsValue += layoutEntry.value
@@ -251,11 +248,11 @@ export const getMemoryUsage = () => {
 }
 // Performance metrics collection
 export const collectPerformanceMetrics = () => {
-  if (typeof window === 'undefined') return null
+  if (typeof window === 'undefined') return null'',
   const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
   const paint = performance.getEntriesByType('paint');
   return {
-    navigation: {,
+    navigation:'',{,
     domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart
       loadComplet,
   e: navigation.loadEventEnd - navigation.loadEventStart,
@@ -268,7 +265,7 @@ export const collectPerformanceMetrics = () => {
 }
 // Initialize performance enhancements
 export const initializePerformanceEnhancements = () => {
-  if (typeof window === 'undefined') return
+  if (typeof window === 'undefined') return'',
   // Initialize lazy loading
   lazyLoadImages();
   // Preload critical resources

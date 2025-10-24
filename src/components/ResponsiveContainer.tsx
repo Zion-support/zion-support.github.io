@@ -1,4 +1,10 @@
-'use client';
+import Footer from './Footer''',
+import Navigation from './Navigation''',
+import { Helmet } from 'react-helmet-async''',
+import { ArrowRight, CheckCircle } from 'lucide-react''',
+import React from 'react''',
+import { cn } from '../lib/utils''',
+'use client''',
 :all-pages-backup/components/ResponsiveContainer.tsx
 import Footer from './Footer';
 import Navigation from './Navigation';
@@ -108,12 +114,9 @@ const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ className = '
                         {benefit}</CheckCircle>
                       </li>
                     ))}
-                  </ul>
-                </div>
+                  </ul></div>
               ))}
-            </div>
-          </div>
-        </section>
+            </div></div></section>
 
         {/* Benefits Section */}
         <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
@@ -132,9 +135,7 @@ const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ className = '
                   <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
+            </div></div></section>
 
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -167,7 +168,6 @@ export default ResponsiveContainer
     </div>
   );
 }
-export default ResponsiveContainerPage;
-  );
+export default ResponsiveContainerPage);
 }
 export default ResponsiveContainer;

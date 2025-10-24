@@ -1,25 +1,21 @@
-'use client';
+import React from 'react''',
+import { Helmet } from 'react-helmet-async''',
+import { Brain } from 'lucide-react''',
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react''',
+import { ArrowRight } from 'lucide-react''',
+import { Brain, Mail } from 'lucide-react''',
+'use client''',
 :all-pages-backup/components/PerformanceEnhancer.tsx
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Brain } from 'lucide-react';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-import { ArrowRight } from 'lucide-react';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Brain, Mail } from 'lucide-react';
-import { Brain, Mail } from 'lucide-react';
-import { Brain, Mail } from 'lucide-react';
 
 {    }
   ]
 
   const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology',
+    'Increase efficiency by up to 50%''',
+    'Reduce costs by 30% with automation''',
+    'Improve decision-making with AI insights''',
+    'Scale operations without proportional staff increases''',
+    'Gain competitive advantage with advanced technology''',
                 </div>
 {              ))}
             </div>
@@ -33,8 +29,6 @@ import { Brain, Mail } from 'lucide-react';
                 <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
+          </div></div></section>
 {}
 export default PerformanceEnhancerPage

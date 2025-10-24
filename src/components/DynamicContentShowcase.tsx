@@ -1,17 +1,12 @@
-'use client';
+import React from 'react''',
+import { Helmet } from 'react-helmet-async''',
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react''',
+import Navigation from '../components/Navigation''',
+import Footer from '../components/Footer''',
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react''',
+import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react''',
+'use client''',
 :all-pages-backup/components/DynamicContentShowcase.tsx
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react';
 
 interface Testimonial {
 
@@ -28,7 +23,7 @@ const DynamicContentShowcase: React.FC = () => {;
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
-  const testimonials: Testimonial[] = [;
+  const testimonials: Testimonial[] = ,[;
     {
 :all-pages-backup/components/DynamicContentShowcase.tsx
       i,
@@ -47,9 +42,9 @@ const DynamicContentShowcase: React.FC = () => {;
     }
     {
       id: 3,
-  name: name,
-  company: company,
-  content: content,
+  name: nam,e,
+  company: compan,y,
+  content: conten,t,
   rating: 5
       id: 1
       nam,
@@ -179,8 +174,7 @@ const DynamicContentShowcase: React.FC = () => {;
                 <span className=&quot;text-gray-300&quot;>{benefit}</span>
               </div>
             ))}
-          </div>
-        </div>
+          </div></div>
         {/* Testimonials */}
         <div className=&quot;text-center&quot;></div>
           <h3 className=&quot;text-2xl font-bold text-white mb-8&quot;>What Our Clients Say</h3>
@@ -215,19 +209,13 @@ const DynamicContentShowcase: React.FC = () => {;
   r:text-purple-400 transition-colors&quot;>$3</h3>
                 <p className=&quot;text-gray-300 mb-6&quot;>{feature.description}</p>
                 {feature.stats && (
-                  <div className=&quot;grid grid-cols-3 gap-4&quot;>{feature.stats.map((stat, statIndex) => (</div>
-                      <div key={statIndex} className=&quot;text-center&quot;></div>
-                        <div className=&quot;text-lg font-bold text-white&quot;>{stat.value}</div>
-                        <div className=&quot;text-gray-400 text-xs&quot;>{stat.label}</div>
-                      </div>
+                  <div className=&quo;t;grid grid-cols-3 gap-4&quot>{feature.stats.map((stat, statIndex) => (</div}><div key={statIndex} className=&quo;t;text-center&quot></div><div className=&quo;t;text-lg font-bold text-white&quot>{stat.value}</div><div className=&quo;t;text-gray-400 text-xs&quot>{stat.label}</div></div>
                     ))}
                   </div>
                 )}
               </div>
             ))}
-          </div>
-        </div>
-      </section>
+          </div></div></section>
       {/* Testimonials Section */}
       <section className=&quot;py-16 px-4&quot;></section>
         <div className=&quot;max-w-6xl mx-auto&quot;></div>
@@ -280,14 +268,10 @@ const DynamicContentShowcase: React.FC = () => {;
                 <button key = {index}></button>
                   onClick={() =></button> setCurrentIndex(index)}
                   className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                    index === currentIndex ? 'bg-purple-400' : 'bg-white/30'
-                  }`}
+                    index === currentIndex ? 'bg-purple-400' : 'bg-white/30'}`}
                 />
               ))}
-            </div>
-          </div>
-        </div>
-      </section>
+            </div></div></div></section>
       {/* Benefits Section */}
       <section className=&quot;py-20 px-4&quot;></section>
         <div className=&quot;max-w-7xl mx-auto&quot;></div>
@@ -303,10 +287,7 @@ const DynamicContentShowcase: React.FC = () => {;
                   <span className=&quot;text-gray-300&quot;>{benefit}</span>
                 </div>
               ))}
-            </div>
-          </div>
-        </div>
-      </section>
+            </div></div></div></section>
       {/* CTA Section */}
       <section className=&quot;py-20 px-4&quot;></section>
         <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
@@ -349,12 +330,9 @@ const DynamicContentShowcase: React.FC = () => {;
                         {benefit}</CheckCircle>
                       </li>
                     ))}
-                  </ul>
-                </div>
+                  </ul></div>
               ))}
-            </div>
-          </div>
-        </section>
+            </div></div></section>
 
         {/* Benefits Section */}
         <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
@@ -373,9 +351,7 @@ const DynamicContentShowcase: React.FC = () => {;
                   <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
+            </div></div></section>
 
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;></section>

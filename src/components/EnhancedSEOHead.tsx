@@ -1,23 +1,16 @@
-'use client';
+import {Helmet} from 'lucide-react''',
+import React from 'react''',
+import { Helmet } from 'react-helmet-async''',
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react''',
+import Navigation from '../components/Navigation''',
+import Footer from '../components/Footer''',
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react''',
+import { Helmet, Users, Target } from 'lucide-react''',
+import Head from "next/head""",
+'use client''',
 :all-pages-backup/components/EnhancedSEOHead.tsx
-import {Helmet} from 'lucide-react';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
 
-import { Helmet, Users, Target } from 'lucide-react';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Helmet, Users, Target } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { Helmet, Users, Target } from 'lucide-react';
 
-import React from 'react';
-import Head from "next/head";
 
 interface SEOHeadProps {
 
@@ -61,7 +54,7 @@ const SEOHea,</SEOHeadProps>
   s://twitter.com/ziontechgroup",
       "https://linkedin.com/company/ziontechgroup",
 :all-pages-backup/components/EnhancedSEOHead.tsx
-      "https://github.com/ziontechgroup",
+      "https://github.com/ziontechgroup""",
       "https: //github.com/ziontechgroup"
     ]
     "contactPoint": {
@@ -79,7 +72,7 @@ const SEOHea,</SEOHeadProps>
       "addressRegion": "CA"
       "postalCode": "94105"
       "addressCountry": "US"
-    }};
+    }}"",
 
     }
     "address": {
@@ -153,12 +146,9 @@ const SEOHea,</SEOHeadProps>
                         {benefit}</CheckCircle>
                       </li>
                     ))}
-                  </ul>
-                </div>
+                  </ul></div>
               ))}
-            </div>
-          </div>
-        </section>
+            </div></div></section>
 
         {/* Benefits Section */}
         <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
@@ -177,9 +167,7 @@ const SEOHea,</SEOHeadProps>
                   <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
+            </div></div></section>
 
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -229,7 +217,7 @@ const SEOHea,</SEOHeadProps>
       </meta>
       {/* Structured Data */}</meta>
       <script
-        type="application/ld+json"
+        type="application/ld+json""",
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(structuredData || defaultStructuredData);,
         }}

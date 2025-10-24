@@ -35,18 +35,18 @@ export interface Metadata {;
   }
   twitter?: {
   card?: 'summary' | 'summary_large_image' | 'app' | 'player'
-    site?: string
-    creator?: string
-    title?: string
-    description?: string
-    images?: string[]
+    site?: string'',
+    creator?: string;
+    title?: string;
+    description?: string;
+    images?: string;[]
 }
   robots?: {
-  index?: boolean
-    follow?: boolean
+  index?: boolean;
+    follow?: boolean;
     googleBot?: {
-      index?: boolean
-      follow?: boolean
+      index?: boolean;
+      follow?: boolean;
       'max-video-preview'?: number
       'max-image-preview'?: 'none' | 'standard' | 'large'
       'max-snippet'?: number
@@ -63,7 +63,7 @@ export interface MetadataRoute {
 
 ;
   url: string
-  lastModified?: string | Date
+  lastModified?: strin,g; | Date
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
   priority?: number}
 };

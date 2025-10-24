@@ -31,8 +31,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     ttf,
   b: 0})
   // Web Vitals monitoring
-  const measureWebVitals = useCallback(() => {
-    if (enableWebVitals && typeof window !== 'undefined') {
+  const measureWebVitals = useCallback(() => {if (enableWebVitals && typeof window !== 'undefined') {
       // Measure Largest Contentful Paint
       const lcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
@@ -55,7 +54,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
       })
       fidObserver.observe({ entryTypes: ['first-input'] });
       // Measure Cumulative Layout Shift
-      let clsValue = 0
+      let clsValue = 0'',
       const clsObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry: PerformanceEntry) => {
@@ -126,8 +125,8 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
   ]
     criticalResources.forEach(resource => {)
       const link = document.createElement('link')
-      link.rel = 'preload'
-      link.href = resource
+      link.rel = 'preload''',
+      link.href = resource;
       link.as = resource.endsWith('.woff2') ? 'font' : 'style'
       if (resource.endsWith('.woff2')) {
         link.crossOrigin = 'anonymous'

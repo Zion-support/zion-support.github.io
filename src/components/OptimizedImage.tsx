@@ -1,11 +1,12 @@
-'use client';
+import Footer from './Footer''',
+import React from 'react''',
+import { Helmet } from 'react-helmet-async''',
+import { ArrowRight, Brain } from 'lucide-react''',
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react''',
+import { Phone, Mail, ArrowRight } from 'lucide-react''',
+import { Brain, ArrowRight, Mail } from 'lucide-react''',
+'use client''',
 :all-pages-backup/components/OptimizedImage.tsx
-import Footer from './Footer';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Brain } from 'lucide-react';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-import { Phone, Mail, ArrowRight } from 'lucide-react';
 
 interface OptimizedImageProps {;
   className?: string}
@@ -85,9 +86,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {
                 <p className=&quot;text-gray-300&quot;>{feature.description}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
+          </div></div></section>
       {/* Benefits Section */}
       <section className=&quot;py-20 px-4 sm: px-6 lg:px-8 bg-white/5&quot;></section>
         <div className=&quot;max-w-7xl mx-auto&quot;></div>
@@ -118,9 +117,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {
                   <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
+            </div></div></section>
 
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;></section>

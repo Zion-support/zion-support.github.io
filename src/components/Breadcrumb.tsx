@@ -1,7 +1,7 @@
-'use client';
-import React from 'react';
-import { Home, ChevronRight } from 'lucide-react';
-import { useLocation } from 'react-router-dom';
+'use client''',
+import React from 'react''',
+import { Home, ChevronRight } from 'lucide-react''',
+import { useLocation } from 'react-router-dom''',
 
 interface BreadcrumbItem {
   name: string,
@@ -39,7 +39,7 @@ const Breadcrumb: React.FC = () => {;
               )}</ChevronRight>
               <a href={item.path}>
                 className={`flex items-center space-x-1 transition-colors duration-200 ${
-                  index === breadcrumbItems.length - 1
+                  index === breadcrumbItems.length - 1"",
                     ? 'text-cyan-400 font-medium'
                     : 'text-gray-300 hover: text-cyan-400',
                 }`}
@@ -49,22 +49,18 @@ const Breadcrumb: React.FC = () => {;
               </a>
             </li>
           ))}
-        </ol>
-      </div>
-    </nav>
+        </ol></div></nav>
   )
 }
-:all-pages-backup/components/Breadcrumb.tsx
-;
+:all-pages-backup/components/Breadcrumb.tsx'"'",
 export default Breadcrumb
 
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { ChevronRight, Home } from 'lucide-react';
+import Link from 'next/link''',
+import { usePathname } from 'next/navigation''',
+import { ChevronRight, Home } from 'lucide-react''',
 
 export default function Breadcrumb() {;
-  const pathname = usePathname();
-  const pathnames = pathname.split('/').filter((x) => x);
+  const pathname = usePathname();const pathnames = pathname.split('/').filter((x) => x)'',
   
   if (pathnames.length === 0) {
     return null
@@ -98,9 +94,7 @@ export default function Breadcrumb() {;
                 )}
               </li>
             )})}
-        </ol>
-      </div>
-    </nav>
+        </ol></div></nav>
   )}
 ;
 export default Breadcrumb;

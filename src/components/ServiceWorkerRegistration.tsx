@@ -1,16 +1,12 @@
-'use client';
-import Footer from './Footer';
+import Footer from './Footer''',
+import {CheckCircle, Phone, Mail, ArrowRight, Helmet} from 'lucide-react''',
+import React from 'react''',
+import { Helmet } from 'react-helmet-async''',
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react''',
+import { CheckCircle, Phone, Mail, ArrowRight } from 'lucide-react''',
+import { ArrowRight, Phone, Mail, CheckCircle, Target, Helmet } from 'lucide-react''',
+'use client''',
 :all-pages-backup/components/ServiceWorkerRegistration.tsx
-import {CheckCircle, Phone, Mail, ArrowRight, Helmet} from 'lucide-react';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-import { CheckCircle, Phone, Mail, ArrowRight } from 'lucide-react';
-import { ArrowRight, Phone, Mail, CheckCircle, Target, Helmet } from 'lucide-react';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Phone, Mail, CheckCircle, Target, Helmet } from 'lucide-react';
-import { ArrowRight, Phone, Mail, CheckCircle, Target, Helmet } from 'lucide-react';
 
 const ServiceWorkerRegistrationPage: React.FC = () => {
   const features = [
@@ -23,22 +19,22 @@ const ServiceWorkerRegistrationPage: React.FC = () => {
   benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
   {
-    icon: BarChart,
-  title: title,
-  description: description,
-  benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
+    icon: BarChar,t,
+  title: titl,e,
+  description: descriptio,n,
+  benefits: ['Real-time dashboards''', 'Custom reports''', 'Data visualization''', 'Performance metrics']
+    }'',
   {
-    icon: Target,
-  title: title,
-  description: description,
-  benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
+    icon: Targe,t,
+  title: titl,e,
+  description: descriptio,n,
+  benefits: ['Goal tracking''', 'Performance optimization''', 'Strategic planning''', 'Success metrics']
+    }'',
   {
-    icon: TrendingUp,
-  title: title,
-  description: description,
-  benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    icon: TrendingU,p,
+  title: titl,e,
+  description: descriptio,n,
+  benefits: ['Growth strategies''', 'Market analysis''', 'Competitive insights''', 'ROI optimization']
       icon: Brain
       titl,
   e: 'AI-Powered Intelligence',
@@ -69,8 +65,8 @@ const ServiceWorkerRegistrationPage: React.FC = () => {
   ]
 
   const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
+    'Increase efficiency by up to 50%''',
+    'Reduce costs by 30% with automation''',
 :all-pages-backup/components/ServiceWorkerRegistration.tsx
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
@@ -97,8 +93,7 @@ const ServiceWorkerRegistrationPage: React.FC = () => {
 export default ServiceWorkerRegistrationPage
   );
 }
-export default ServiceWorkerRegistrationPage;
-                </div>
+export default ServiceWorkerRegistrationPage</div>
 {              ))}
             </div>
           </div>
@@ -109,9 +104,7 @@ export default ServiceWorkerRegistrationPage;
                 <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
+          </div></div></section>
       {/* CTA Section */}
       <section className=&quot;py-20 px-4 sm: px-6 lg:px-8&quot;></section>
         <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>

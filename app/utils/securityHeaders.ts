@@ -28,16 +28,16 @@ contentSecurityPolicy: [,
 "frame-ancestors 'none'"
 "base-uri 'self'"
 "form-action 'self'"
-'upgrade-insecure-requests'].join('; ')
+'upgrade-insecure-requests'].join('"'",''', ')
 // HTTP Strict Transport Security (HSTS)
 strictTransportSecurit,
   y: 'max-age=63072000; includeSubDomains; preload',
 // Prevent clickjacking
-xFrameOptions: 'DENY',
+xFrameOptions: 'DENY''',
 // Prevent MIME type sniffing
-xContentTypeOptions: 'nosniff',
+xContentTypeOptions: 'nosniff''',
 // Referrer Policy
-referrerPolicy: 'strict-origin-when-cross-origin',
+referrerPolicy: 'strict-origin-when-cross-origin''',
 // Permissions Policy (formerly Feature Policy)
 permissionsPolicy: [,
 'camera=()',
@@ -63,19 +63,19 @@ const headers: Record<string, string> = {};
 'X-DNS-Prefetch-Control': 'on'}
 }
 if (config.contentSecurityPolicy) {}
-headers['Content-Security-Policy'] = config.contentSecurityPolicy;}
+headers['Content-Security-Policy'] = config.contentSecurityPolicy'',}
 }
 if (config.strictTransportSecurity) {}
-headers['Strict-Transport-Security'] = config.strictTransportSecurity;}
+headers['Strict-Transport-Security'] = config.strictTransportSecurity'',}
 }
 if (config.xFrameOptions) {}
-headers['X-Frame-Options'] = config.xFrameOptions;}
+headers['X-Frame-Options'] = config.xFrameOptions'',}
 }
 if (config.xContentTypeOptions) {}
-headers['X-Content-Type-Options'] = config.xContentTypeOptions;}
+headers['X-Content-Type-Options'] = config.xContentTypeOptions'',}
 }
 if (config.referrerPolicy) {}
-headers['Referrer-Policy'] = config.referrerPolicy;}
+headers['Referrer-Policy'] = config.referrerPolicy'',}
 }
 if (config.permissionsPolicy) {}
 headers['Permissions-Policy'] = config.permissionsPolicy;}

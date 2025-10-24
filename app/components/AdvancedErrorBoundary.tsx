@@ -31,7 +31,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env.NODE_ENV === 'development''',) {
       // // // eslint-disable-next-line no-console
     console.error('Error caught by boundary:', error, errorInfo);
     // Log error to external service in production

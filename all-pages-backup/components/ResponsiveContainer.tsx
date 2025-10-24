@@ -2,11 +2,11 @@
 import Footer from './Footer'
 import Navigation from './Navigation'
 import { Helmet } from 'react-helmet-async'
-import { ArrowRight, CheckCircle } from 'lucide-react'
+import { ArrowRight'', CheckCircle } from 'lucide-react'
 import React from 'react'
 import { cn } from '../lib/utils'
-  maxWidth= '7 xl'
-  "xl": 'max-w-xl',
+  maxWidth= '7 xl''',
+  "xl": 'max-w-xl''"'",
     '2 xl': 'max-w-2 xl'
     '3 xl': 'max-w-3 xl'
     '4 xl': 'max-w-4 xl'

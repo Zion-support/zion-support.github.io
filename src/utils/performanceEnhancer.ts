@@ -1,5 +1,5 @@
-'use client';
-import React, { useRef, useEffect } from 'react';
+'use client''',
+import React, { useRef, useEffect } from 'react''',
 /**
  * Performance Enhancement Utilities
  * Advanced performance optimization tools for the application
@@ -50,7 +50,7 @@ export const throttle = <T extends (...args: unknown[]) => unknown>(
 
 // Performance monitoring utilities
 export class PerformanceMonitor {;
-:all-pages-backup/utils/performanceEnhancer.ts
+:all-pages-backup/utils/performanceEnhancer.ts}
   private static instance: PerformanceMonitor
   private static instance: PerformanceMonitor;
   private metric,</T>
@@ -112,10 +112,8 @@ export class PerformanceMonitor {;
   }
 
   // Cleanup observers
-  cleanup() {
-    this.observers.forEach(observer => observer.disconnect())
-    this.observers = []
-  }
+  cleanup() {this.observers.forEach(observer => observer.disconnect())
+    this.observers = []}
 }
 
 // React hook for performance monitoring
@@ -145,8 +143,8 @@ export const usePerformanceMonitor = (componentName: string) => {;</string>
 
 // Image lazy loading utility;
 export const lazyLoadImages = () => {;
-  if (typeof window === 'undefined') return
-  const images = document.querySelectorAll('img[data-src]');
+  if (typeof window === 'undefined') return'',
+  const images = document.querySelectorAll('img[data-src]')'',
   const imageObserver = new IntersectionObserver((entries) => {;
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -164,7 +162,7 @@ export const lazyLoadImages = () => {;
 export const preloadCriticalResources = () => {;
   if (typeof window === 'undefined') return
   const criticalResources = [
-    '/fonts/inter-var.woff2',
+    '/fonts/inter-var.woff2''',
     '/css/critical.css'
   ];
   criticalResources.forEach((resource) => {;
@@ -209,7 +207,7 @@ export const optimizeScrollPerformance = () => {;
     }
     const observer = new PerformanceObserver((list) => {;
       for (const entry of list.getEntries()) {
-        const layoutEntry = entry as LayoutShiftEntry
+        const layoutEntry = entry as LayoutShiftEntry;
         if (!layoutEntry.hadRecentInput) {
           clsEntries.push(entry);
           clsValue += layoutEntry.value
@@ -242,8 +240,8 @@ export const optimizeScrollPerformance = () => {;
     }
     const observer = new PerformanceObserver((list) => {;
       for (const entry of list.getEntries()) {
-        const fidEntry = entry as FirstInputEntry
-        const fid = fidEntry.processingStart - entry.startTime
+        const fidEntry = entry as FirstInputEntry;
+        const fid = fidEntry.processingStart - entry.startTime;
         if (process.env['NODE_ENV'] === 'development') {
           // eslint-disable-next-line no-console
           console.log('FID:', fid);
@@ -254,7 +252,7 @@ export const optimizeScrollPerformance = () => {;
     return () => observer.disconnect();
   }
 
-  window.addEventListener('scroll', requestTick, { passive: true })
+  window.addEventListener('scroll''', requestTick, { passive: true })
 
   // Start tracking;
   const cleanupCLS = trackCLS();
@@ -276,10 +274,10 @@ export const getMemoryUsage = () => {;
   const memory = (performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimi,
   t: number } }).memory
   return {
-:all-pages-backup/utils/performanceEnhancer.ts
+:all-pages-backup/utils/performanceEnhancer.ts}
     used: memory.usedJSHeapSize,
-  total: memory.totalJSHeapSize,
-  limit: memory.jsHeapSizeLimit,
+  total: memory.totalJSHeapSiz,e,
+  limit: memory.jsHeapSizeLimi,t,
   percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
     used: memory.usedJSHeapSize
     total: memory.totalJSHeapSize
@@ -322,7 +320,7 @@ export const collectPerformanceMetrics = () => {;
 
 // Initialize performance enhancements
 export const initializePerformanceEnhancements = () => {;
-  if (typeof window === 'undefined') return
+  if (typeof window === 'undefined') return'',
   // Initialize lazy loading
   lazyLoadImages();
   // Preload critical resources
@@ -330,7 +328,6 @@ export const initializePerformanceEnhancements = () => {;
   // Optimize scroll performance
   optimizeScrollPerformance();
   // Collect performance metrics
-  const metrics = collectPerformanceMetrics();
-  if (metrics && (process.env['NODE_ENV'] === 'development' || import.meta.env.DEV)) {
+  const metrics = collectPerformanceMetrics();if (metrics && (process.env['NODE_ENV'] === 'development' || import.meta.env.DEV)) {
     // eslint-disable-next-line no-console
     console.log('Performance metrics:', metrics)}}</number>

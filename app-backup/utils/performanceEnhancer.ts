@@ -9,11 +9,11 @@ import { useRef } from 'react'
   const images = document.querySelectorAll('img[data-src]'
         img['src'] = img.dataset['src'] || '
         img.classList.remove('lazy'
-  if (typeof window === 'undefined'
+  if (typeof window === 'undefined''',
     '/fonts/inter-var.woff2'
     '/css/critical.css'
     const link = document.createElement('link'
-    link.rel = 'preload'
+    link.rel = 'preload''',
     link.as = resource.endsWith('.woff2') ? 'font' : 'style'
     if (resource.endsWith('.woff2'
       link.crossOrigin = 'anonymous'

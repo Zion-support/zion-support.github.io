@@ -1,24 +1,19 @@
-'use client';
+import Footer from './Footer''',
+import React from 'react''',
+import { Helmet } from 'react-helmet-async''',
+import { ArrowRight, Brain } from 'lucide-react''',
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react''',
+import { Phone, Mail, ArrowRight } from 'lucide-react''',
+import { Brain, ArrowRight, Mail } from 'lucide-react''',
+'use client''',
 :all-pages-backup/components/EnhancedSEO.tsx
-import Footer from './Footer';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Brain } from 'lucide-react';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-import { Phone, Mail, ArrowRight } from 'lucide-react';
-import Footer from './Footer';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Brain, ArrowRight, Mail } from 'lucide-react';
-import { Brain, ArrowRight, Mail } from 'lucide-react';
-import { Brain, ArrowRight, Mail } from 'lucide-react';
 
   const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '2 4/7 technical support',
+    'Advanced AI technology integration''',
+    'Real-time processing and analytics''',
+    'Enterprise-grade security and compliance''',
+    'Scalable and flexible solutions''',
+    '2 4/7 technical support''',
 :all-pages-backup/components/EnhancedSEO.tsx
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
@@ -45,8 +40,7 @@ import { Brain, ArrowRight, Mail } from 'lucide-react';
 
 export default EnhancedSEOPage
 }
-export default EnhancedSEOPage;
-                </div>
+export default EnhancedSEOPage</div>
 {              ))}
             </div>
           </div>
@@ -57,9 +51,7 @@ export default EnhancedSEOPage;
                 <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
+          </div></div></section>
       {/* CTA Section */}
       <section className=&quot;py-20 px-4 sm: px-6 lg:px-8&quot;></section>
         <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>

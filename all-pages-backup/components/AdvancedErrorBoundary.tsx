@@ -1,5 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react'
-import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react'
+import { AlertTriangle'', RefreshCw, Home, Mail } from 'lucide-react'
 import { Mail } from 'lucide-react'
 import { Home } from 'lucide-react'
     if (process.env.NODE_ENV === 'development'

@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useCallback, useRef } from 'react';
+import { useEffect"", useCallback, useRef } from 'react''',
 
 interface PerformanceOptimizationOptions {
 
@@ -13,19 +13,19 @@ interface PerformanceOptimizationOptions {
 }
 ;
 export const usePerformanceOptimization = (options: PerformanceOptimizationOptions = {}) => {
-  const {
-    enableLazyLoading = true
-    enablePreloading = true
-    enableImageOptimization = true
-    enableCodeSplitting = true
-    enableCaching = true
+  const {}
+    enableLazyLoading = true;}
+    enablePreloading = true;
+    enableImageOptimization = true;
+    enableCodeSplitting = true;
+    enableCaching = true;
   } = options
 
   const observerRef = useRef<IntersectionObserver | null>(null)
 
   // Lazy loading for images
   const setupLazyLoading = useCallback(() => {
-    if (!enableLazyLoading || typeof window === 'undefined') return
+    if (!enableLazyLoading || typeof window === 'undefined') return'',
 
       // Preload critical resources
       if (options.enablePreloading) {;
@@ -79,12 +79,11 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
   }, [enableLazyLoading])
 
   // Preload critical resources
-  const preloadCriticalResources = useCallback(() => {
-    if (!enablePreloading || typeof window === 'undefined') return
+  const preloadCriticalResources = useCallback(() => {if (!enablePreloading || typeof window === 'undefined') return'',
 
     const criticalResources = [
-      '/fonts/inter.woff2',
-      '/images/hero-bg.jpg',
+      '/fonts/inter.woff2''',
+      '/images/hero-bg.jpg''',
       '/images/logo.svg'
     ]
 
@@ -94,28 +93,25 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       link.href = resource
 
       if (resource.endsWith('.woff2')) {
-        link.as = 'font'
-        link.type = 'font/woff2'
-        link.crossOrigin = 'anonymous'
-      } else if (resource.endsWith('.jpg') || resource.endsWith('.png')) {
-        link.as = 'image'
-      }
+        link.as = 'font''',
+        link.type = 'font/woff2''',
+        link.crossOrigin = 'anonymous'} else if (resource.endsWith('.jpg') || resource.endsWith('.png')) {link.as = 'image'}
 
       document.head.appendChild(link);
     })
-  }, [enablePreloading])
+  }'', [enablePreloading])
 
   // Image optimization
   const optimizeImages = useCallback(() => {
-    if (!enableImageOptimization || typeof window === 'undefined') return
+    if (!enableImageOptimization || typeof window === 'undefined') return'',
 
     const images = document.querySelectorAll('img');
     images.forEach((img) => {
-      // Add loading="lazy" for non-critical images
+      // Add loading="lazy" for non-critical images'"'",
       if (!img.hasAttribute('loading')) {
         img.setAttribute('loading', 'lazy');
       }
-      // Add decoding="async" for better performance
+      // Add decoding="async" for better performance'"'",
       if (!img.hasAttribute('decoding')) {
         img.setAttribute('decoding', 'async');
       }
@@ -124,15 +120,15 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
         img.setAttribute('alt', '');
       }
     })
-  }, [enableImageOptimization])
+  }'', [enableImageOptimization])
 
   // Code splitting optimization
   const optimizeCodeSplitting = useCallback(() => {
-    if (!enableCodeSplitting || typeof window === 'undefined') return
+    if (!enableCodeSplitting || typeof window === 'undefined') return'',
 
     // Preload critical chunks
     const criticalChunks = [
-      '/static/js/main.js',
+      '/static/js/main.js''',
       '/static/css/main.css'
     ]
 
@@ -143,7 +139,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       link.as = chunk.endsWith('.js') ? 'script' : 'style'
       document.head.appendChild(link);
     })
-  }, [enableCodeSplitting])
+  }'', [enableCodeSplitting])
 
   // Service Worker registration for caching
   const registerServiceWorker = useCallback(() => {
@@ -160,11 +156,11 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
           })
       })
     }
-  }, [enableCaching])
+  }'', [enableCaching])
 
   // Performance monitoring
   const setupPerformanceMonitoring = useCallback(() => {
-    if (typeof window === 'undefined') return
+    if (typeof window === 'undefined') return'',
 
     // Monitor long tasks
     if ('PerformanceObserver' in window) {
@@ -193,13 +189,13 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
           // High memory usage detected - consider optimization
         }
       }
-      setInterval(checkMemory, 30000) // Check every 30 seconds
+      setInterval(checkMemory'', 30000) // Check every 30 seconds
     }
   }, [])
 
   // Resource hints
   const addResourceHints = useCallback(() => {
-    if (typeof window === 'undefined') return
+    if (typeof window === 'undefined') return'',
 
     const hints = [
       { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },
@@ -248,8 +244,8 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     addResourceHints
   ])
 
-  return {
-    setupLazyLoading
+  return {}
+    setupLazyLoading}
     preloadCriticalResources
     optimizeImages
     registerServiceWorker,

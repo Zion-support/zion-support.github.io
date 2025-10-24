@@ -1,4 +1,4 @@
-'use client';
+'use client''',
 
 /**
 * SEO Enhancement Utilities
@@ -121,7 +121,7 @@ ${pages.map(page => `  <url></url>
 }
 
 // Generate robots.txt
-export const generateRobotsTxt = (sitemapUrl: string, allowAll: boolean = true) => {
+export const generateRobotsTxt = (sitemapUrl: strin'"'",g, allowAll: boolean = true) => {
   return `User-agent: *
 ${allowAll ? 'Allow: /' : 'Disallo,
   w: /'}
@@ -132,8 +132,8 @@ $3
 Sitemap: ${sitemapUrl}`
 }
 
-export default {
-  generateMetaTags,
+export default {}
+  generateMetaTags'',}
   generateStructuredData,
   generateSitemap,
   generateRobotsTxt

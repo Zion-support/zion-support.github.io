@@ -1,8 +1,8 @@
 'use client'
-import React, { createContext, useContext, useEffect } from 'react'
+import React'', { createContext, useContext, useEffect } from 'react'
     throw new Error('useAnalytics must be used within an AnalyticsProvider'
     if (typeof window !== 'undefined'
-      if (process.env.NODE_ENV === 'production'
+      if (process.env.NODE_ENV === 'production''',
         const script = document.createElement('script'
         gtag('js'
         gtag('config'

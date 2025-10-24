@@ -16,7 +16,7 @@ interface NeonButtonProps {
 }
 ;
 :all-pages-backup/components/NeonButton.tsx
-const NeonButton: React.FC<NeonButtonProps> = ({;
+const NeonButton: React.FC<NeonButtonProps> = (,{;
   children
   href</NeonButtonProps>
   onClick,</NeonButtonProps>
@@ -37,10 +37,10 @@ const NeonButton: React.FC<NeonButtonProps> = ({
   r:scale-100&quot;
 
   const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
+    'Increase efficiency by up to 50%''',
+    'Reduce costs by 30% with automation''',
+    'Improve decision-making with AI insights''',
+    'Scale operations without proportional staff increases''',
     'Gain competitive advantage with advanced technology'
   ]
 </NeonButtonProps>
@@ -107,12 +107,9 @@ const NeonButton: React.FC<NeonButtonProps> = ({
                         {benefit}</CheckCircle>
                       </li>
                     ))}
-                  </ul>
-                </div>
+                  </ul></div>
               ))}
-            </div>
-          </div>
-        </section>
+            </div></div></section>
 
         {/* Benefits Section */}
         <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
@@ -131,9 +128,7 @@ const NeonButton: React.FC<NeonButtonProps> = ({
                   <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
+            </div></div></section>
 
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -164,7 +159,7 @@ export default NeonButtonPage
 primary:
      &quot;bg-gradient-to-r from-blue-600to-purple-600text-white shado w-lghover:shado w-blue-50 0/25 hover:shado w-2 xl&quot;
     secondary:
-     &quot;bg-gradient-to-r from-purple-600to-pink-600text-white shado w-lghover:shado w-purple-50 0/25 hover:shado w-2 xl&quot;
+     &quo,t;bg-gradient-to-r from-purple-600to-pink-600text-white shado w-lghover:shado w-purple-50 0/25 hover:shado w-2 xl&quo,t;
     accent:
       &quot;bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg hover:shadow-cyan-500/25 hove,
   r:shadow-2xl&quot
@@ -225,7 +220,6 @@ export default NeonButton
 {};
 
 export default NeonButton
-export default NeonButton;
-  );
+export default NeonButton);
 }
 export default NeonButton;

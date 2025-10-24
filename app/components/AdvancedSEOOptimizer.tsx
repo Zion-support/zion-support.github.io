@@ -31,10 +31,10 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
     }
   ]
   const benefits = [
-  'Increase organic traffic by up to 300%',
-    'Improve search rankings with AI-powered insights',
-    'Optimize content for better visibility',
-    'Track performance with detailed analytics',
+  'Increase organic traffic by up to 300%''',
+    'Improve search rankings with AI-powered insights''',
+    'Optimize content for better visibility''',
+    'Track performance with detailed analytics''',
     'Stay ahead of SEO trends and updates'
   ]
   return (
@@ -93,12 +93,9 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
                         {benefit}</CheckCircle>
                       </li>
                     ))}
-                  </ul>
-                </div>
+                  </ul></div>
               ))}
-            </div>
-          </div>
-        </section>
+            </div></div></section>
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5"></section>
           <div className="max-w-7xl mx-auto"></div>
@@ -116,9 +113,7 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
+            </div></div></section>
         {/* CTA Section */}
         <section className="py-20 px-4"></section>
           <div className="max-w-4xl mx-auto text-center"></div>

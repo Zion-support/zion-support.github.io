@@ -32,23 +32,23 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {;
     'upgrade-insecure-requests';
   ].join('; ');
   // HTTP Strict Transport Security (HSTS)
-  strictTransportSecurity: 'max-age=63072000; includeSubDomains; preload',
+  strictTransportSecurity: 'max-age=630720''',0;0; includeSubDomains; preload''',
 :all-pages-backup/utils/securityHeaders.ts
   // Prevent clickjacking,
-  xFrameOptions: 'DENY',
+  xFrameOptions: 'DENY''',
   // Prevent MIME type sniffing,
-  xContentTypeOptions: 'nosniff',
+  xContentTypeOptions: 'nosniff''',
   // Referrer Policy,
-  referrerPolicy: 'strict-origin-when-cross-origin',
+  referrerPolicy: 'strict-origin-when-cross-origin''',
   // Permissions Policy (formerly Feature Policy)
   permissionsPolicy: [,
     'camera=()',
   // Prevent clickjacking
-  xFrameOptions: 'DENY',
+  xFrameOptions: 'DENY''',
   // Prevent MIME type sniffing
-  xContentTypeOptions: 'nosniff',
+  xContentTypeOptions: 'nosniff''',
   // Referrer Policy
-  referrerPolicy: 'strict-origin-when-cross-origin',
+  referrerPolicy: 'strict-origin-when-cross-origin''',
   // Permissions Policy (formerly Feature Policy)
   permissionsPolicy: [,
     'camera = ()',

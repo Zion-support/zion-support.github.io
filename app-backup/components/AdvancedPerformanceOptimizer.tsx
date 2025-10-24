@@ -13,9 +13,9 @@ import React, { useEffect, useCallback, useState } from 'react'
       const url = typeof input === 'string'
   if (typeof window === 'undefined'
     const images = document.querySelectorAll('img'
-        img.loading = 'lazy'
-  img.decoding = 'async'
-  if (typeof window === 'undefined'
+        img.loading = 'lazy''',
+  img.decoding = 'async''',
+  if (typeof window === 'undefined''',
   '/fonts/inter-var.woff2'
     '/css/critical.css'}
       const link = document.createElement('link'

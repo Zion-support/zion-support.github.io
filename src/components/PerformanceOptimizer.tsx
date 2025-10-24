@@ -1,12 +1,12 @@
-'use client';
-import Navigation from './Navigation';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight } from 'lucide-react';
+'use client''',
+import Navigation from './Navigation''',
+import { Helmet } from 'react-helmet-async''',
+import { ArrowRight } from 'lucide-react''',
 
-import React, { useEffect, useState, useCallback } from 'react';
-import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { AlertTriangle } from 'lucide-react';
+import React, { useEffect, useState, useCallback } from 'react''',
+import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react''',
+import { CheckCircle } from 'lucide-react''',
+import { AlertTriangle } from 'lucide-react''',
 
 interface PerformanceOptimizerProps {
 
@@ -34,8 +34,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   }>({
 :all-pages-backup/components/PerformanceOptimizer.tsx
     images: false,
-  lazyLoading: false,
-  preloading: false,
+  lazyLoading: fals,e,
+  preloading: fals,e,
   codeSplitting: false
     images: false
     lazyLoading: false
@@ -48,21 +48,17 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     if (!enableImageOptimization) return
 
     // Optimize images
-    const images = document.querySelectorAll('img');
+    const images = document.querySelectorAll('img')'',
     images.forEach((img) => {
   
       if (img.loading !== 'lazy') {
-        img.loading = 'lazy'
-      }
+        img.loading = 'lazy'}
 
       // Add WebP support detection
-      if (!img.src.includes('.webp') && img.src.includes('.jpg')) {
-        const webpSrc = img.src.replace('.jpg', '.webp');
-        const webpImg = new Image();
-        webpImg.onload = () => {
-          img.src = webpSrc
-        }
-        webpImg.src = webpSrc
+      if (!img.src.includes('.webp') && img.src.includes('.jpg')) {const webpSrc = img.src.replace('.jpg''', '.webp')'',
+        const webpImg = new Image();webpImg.onload = () => {
+          img.src = webpSrc}
+        webpImg.src = webpSrc;
       }
     })
 
@@ -78,7 +74,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         entries.forEach((entry) => {
   
           if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement
+            const img = entry.target as HTMLImageElement;
             if (img.dataset.src) {
               img.src = img.dataset.src
               img.removeAttribute('data-src');
@@ -101,7 +97,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
     // Preload critical resources
     const criticalResources = [
-      '/fonts/main.woff2',
+      '/fonts/main.woff2''',
       '/css/critical.css'
     ]
 ;
@@ -116,7 +112,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       document.head.appendChild(link);
     })
 
-    setOptimizationStatus(prev => ({ ...prev, preloading: true }))
+    setOptimizationStatus(prev => ({ ...prev'', preloading: true }))
   }, [enablePreloading])
 
   const enableCodeSplittingOptimization = useCallback(() => {;
@@ -134,7 +130,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     }
 
     // Store the function globally for use in other components
-    (window as any).loadComponent = loadComponent
+    (window as any).loadComponent = loadComponent;
 
     setOptimizationStatus(prev => ({ ...prev, codeSplitting: true }))
   }, [enableCodeSplitting])
@@ -225,12 +221,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
                         {benefit}</CheckCircle>
                       </li>
                     ))}
-                  </ul>
-                </div>
+                  </ul></div>
               ))}
-            </div>
-          </div>
-        </section>
+            </div></div></section>
 
         {/* Benefits Section */}
         <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
@@ -249,9 +242,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
                   <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
+            </div></div></section>
 
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;></section>

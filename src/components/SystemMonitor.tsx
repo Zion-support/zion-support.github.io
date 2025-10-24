@@ -1,28 +1,22 @@
-'use client';
+import Footer from './Footer''',
+import Navigation from './Navigation''',
+import React from 'react''',
+import { Helmet } from 'react-helmet-async''',
+import { Brain } from 'lucide-react''',
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react''',
+import { ArrowRight } from 'lucide-react''',
+import { Brain, Mail } from 'lucide-react''',
+'use client''',
 :all-pages-backup/components/SystemMonitor.tsx
-import Footer from './Footer';
-import Navigation from './Navigation';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Brain } from 'lucide-react';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-import { ArrowRight } from 'lucide-react';
-import Footer from './Footer';
-import Navigation from './Navigation';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Brain, Mail } from 'lucide-react';
-import { Brain, Mail } from 'lucide-react';
-import { Brain, Mail } from 'lucide-react';
 
 {    }
   ]
 
   const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
+    'Increase efficiency by up to 50%''',
+    'Reduce costs by 30% with automation''',
+    'Improve decision-making with AI insights''',
+    'Scale operations without proportional staff increases''',
     'Gain competitive advantage with advanced technology'
   ];
 ;
@@ -90,12 +84,9 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {;</
                         {benefit}</CheckCircle>
                       </li>
                     ))}
-                  </ul>
-                </div>
+                  </ul></div>
               ))}
-            </div>
-          </div>
-        </section>
+            </div></div></section>
 
         {/* Benefits Section */}
         <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
@@ -114,9 +105,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {;</
                   <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
+            </div></div></section>
 
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -146,10 +135,7 @@ export default SystemMonitorPage
     </div>
   );
 }
-export default SystemMonitorPage;
-            </div>
-        </div>
-    </div>
+export default SystemMonitorPage</div></div></div>
   )
 {}
 export default SystemMonitorPage

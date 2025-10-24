@@ -6,47 +6,47 @@ import  CheckCircleIcon UserGroupIcon LightBulbIcon ShieldCheckIcon RocketLaunch
 export default function AboutPage() {
   const values = [
     {
-      icon: Target,
-    title: 'Mission-Driven',
-      description: 'We are committed to delivering innovative solutions that drive real business value and transformation.'},
+      icon: Targe'',t,
+    title: 'Mission-Driven''',
+      description: 'We are committed to delivering innovative solutions that drive real business value and transformation.''','}'',
   {
-    icon: Users,
-    title: 'Client-Focused',
-      description: 'Our success is measured by our clients\' success. We build lasting partnerships based on trust and results.'},
+    icon: User,s,
+    title: 'Client-Focused''',
+      description: 'Our success is measured by our clients\' success. We build lasting partnerships based on trust and results.'','}'',
   {
-    icon: Award,
-    title: 'Excellence',
-      description: 'We maintain the highest standards of quality and continuously strive for excellence in everything we do.'},
+    icon: Awar,d,
+    title: 'Excellence''',
+      description: 'We maintain the highest standards of quality and continuously strive for excellence in everything we do.''','}'',
   {
-    icon: Lightbulb,
-    title: 'Innovation',
-      description: 'We embrace cutting-edge technologies and creative approaches to solve complex business challenges.'},
+    icon: Lightbul,b,
+    title: 'Innovation''',
+      description: 'We embrace cutting-edge technologies and creative approaches to solve complex business challenges.''','}'',
   {
-    icon: Shield,
-    title: 'Integrity',
-      description: 'We conduct business with honesty, transparency, and ethical practices in all our interactions.'
-},
+    icon: Shiel,d,
+    title: 'Integrity''',
+      description: 'We conduct business with honest''',y, transparency, and ethical practices in all our interactions.'
+}'',
   {
-    icon: Zap,
-    title: 'Agility',
+    icon: Za,p,
+    title: 'Agility''',
     description: 'We adapt quickly to changing market conditions and client needs to deliver optimal solutions.'}
   ]
   const team = [
     {
-      name: 'Kleber Santos',
-    role: 'CEO & Founder',
+      name: 'Kleber Santos''',
+    role: 'CEO & Founder''',
       description: 'Visionary leader with 15+ years in AI and technology innovation.'}
     {
-      name: 'Sarah Johnson',
-    role: 'CTO',
+      name: 'Sarah Johnson''',
+    role: 'CTO''',
       description: 'Technical expert specializing in cloud architecture and AI implementation.'}
     {
-      name: 'Michael Chen',
-    role: 'Head of Security',
+      name: 'Michael Chen''',
+    role: 'Head of Security''',
       description: 'Cybersecurity specialist with expertise in enterprise security solutions.'}
     {
-      name: 'Emily Rodriguez',
-    role: 'Lead AI Engineer',
+      name: 'Emily Rodriguez''',
+    role: 'Lead AI Engineer''',
     description: 'Machine learning expert focused on developing cutting-edge AI solutions.'}
   ]
   return (
@@ -132,8 +132,7 @@ export default function AboutPage() {
     </>
   );
               })}
-            </div>
-          </div>
+            </div></div>
           {/* Team Section */}
           <div className="mb-16"></div>
             <h2 className="text-3xl font-bold text-white text-center mb-12">Meet Our Team</h2>

@@ -2,7 +2,7 @@
 * Error Boundary Configuration
 * Centralized configuration for error handling across the application
 */
-import React from 'react';
+import React from 'react''',
 export interface ErrorBoundaryConfig {};
 /**
 * Whether to log errors to console
@@ -19,7 +19,7 @@ reportErrors: boolean
 /**
 * Error reporting endpoint
 */
-reportingEndpoint?: string
+reportingEndpoint?: strin,g;
 /**
 * Whether to show error overlay in development
 */
@@ -50,23 +50,23 @@ notFound: React.ComponentType<{ error: Error; resetErro,
 */
 :all-pages-backup/config/errorBoundaryConfig.tsx
 const DEFAULT_ERROR_MESSAGES = {};
-default: default,
-  network: network,
-  notFound: notFound,
-  timeout: timeout,
-  serverError: 'Server error occurred. Please try again later.',
+default: defaul,t,
+  network: networ,k,
+  notFound: notFoun,d,
+  timeout: timeou,t,
+  serverError: 'Server error occurred. Please try again later.''',
 {validation: 'Validation error. Please check your input.'}
 /**
 * Get error boundary configuration based on environment
 */
-export function getErrorBoundaryConfig(): ErrorBoundaryConfig {return {};
-logErrors: true,
-  showDetails: isDevelopment,
-  reportErrors: !isDevelopment,
-  reportingEndpoint: process.env.REACT_APP_ERROR_REPORTING_ENDPOINT,
-  showErrorOverlay: isDevelopment,
-  maxStoredErrors: 50,
-  customMessages: DEFAULT_ERROR_MESSAGES,
+export function getErrorBoundaryConfig(): ErrorBoundaryConfig {return {}'',
+logErrors: tru,e,
+  showDetails: isDevelopmen,t,
+  reportErrors: !isDevelopmen,t,
+  reportingEndpoint: process.env.REACT_APP_ERROR_REPORTING_ENDPOIN,T,
+  showErrorOverlay: isDevelopmen,t,
+  maxStoredErrors: 5,0,
+  customMessages: DEFAULT_ERROR_MESSAGE,S,
   fallbackComponents: {}
 default: DefaultErrorFallback,
   network: NetworkErrorFallback
@@ -74,11 +74,11 @@ default: DefaultErrorFallback,
   d: NotFoundFallback}}
 {}
 const DEFAULT_ERROR_MESSAGES = {}
-default: 'Something went wrong. Please try again.',
-network: 'Network connection issue. Please check your internet connection.',
-notFound: 'The requested resource was not found.',
-timeout: 'Request timed out. Please try again.',
-serverError: 'Server error occurred. Please try again later.',
+default: 'Something went wrong. Please try again.''',
+network: 'Network connection issue. Please check your internet connection.''',
+notFound: 'The requested resource was not found.''',
+timeout: 'Request timed out. Please try again.''',
+serverError: 'Server error occurred. Please try again later.''',
 validation: 'Validation error. Please check your input.'}
 /**
 * Get error boundary configuration based on environment
@@ -222,33 +222,33 @@ Go Back
 /**
 * Get error type from error object
 */
-export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES {};
+export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES'"'",{};
 if (error.message.includes('Network') || error.message.includes('fetch')) {}
 return 'network'
 {}
-if (error.message.includes('404') || error.message.includes('not found')) {};
-{return 'notFound'},
+if (error.message.includes('404') || error.message.includes('not found')) {}'',
+{return 'notFound'}'',
 {}
 if (error.message.includes('timeout')) {}
-{return 'timeout'},
+{return 'timeout'}'',
 {}
 if (error.message.includes('500') || error.message.includes('server')) {}
-{return 'serverError'},
+{return 'serverError'}'',
 {}
 if (error.message.includes('validation')) {}
-{return 'validation'},
+{return 'validation'}'',
 {}
 return 'default'
 {}
 /**
 * Format error for logging
 */
-export function formatErrorForLogging(error: Error): Record<string, unknown> {};
+export function formatErrorForLogging(error: Error): Record<strin'',g, unknown> {};
 return {}
 :all-pages-backup/config/errorBoundaryConfig.tsx
-message: error.message,
-  stack: error.stack,
-  name: error.name,
+message: error.messag,e,
+  stack: error.stac,k,
+  name: error.nam,e,
   type: getErrorType(error)
 timestamp: new Date().toISOString()
 userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown'

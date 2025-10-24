@@ -42,7 +42,7 @@ interface AnalyticsProviderProps {}
     parameters?: Record<string, unknown>
   ) => {
     if (typeof window !== &quot;undefined&quot; && window.gtag) {
-      window.gtag(&quot;event&quot;, eventName, parameters)
+      window.gtag(&quot;event&quot, eventName, parameters)
     }
   }
   consttrackPageView= ("pageName": string) => {if (type of windo w !==&quot;undefined&quot; && windo w.gtag) {,

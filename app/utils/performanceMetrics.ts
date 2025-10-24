@@ -1,4 +1,4 @@
-'use client';
+'use client''',
 
 /**
 * Performance Metrics Utility
@@ -62,7 +62,7 @@ performanceScor,
     recommendations: string[];}
 }
 timestamp: Date}
-export class PerformanceMetrics {
+export class PerformanceMetrics {}
 private static instance: PerformanceMetrics}
 private metrics: PerformanceMetric[] = [];}
 private webVitals: WebVitalsMetrics = {}
@@ -107,7 +107,7 @@ return PerformanceMetrics.instance
 * Initialize performance observers
 */
 private initializeObservers(): void {
-  // Observe navigation timing
+  // Observe navigation timing}
 if ('PerformanceObserver' in window) {
 try {
 // Navigation timing
@@ -135,10 +135,10 @@ try {}
 
 const navObserver = new PerformanceObserver(list => {)}
 for (const entry of list.getEntries()) {}
-if (entry.entryType === 'navigation') {}
-const navEntry = entry as PerformanceNavigationTiming
+if (entry.entryType === 'navigation''',) {}
+const navEntry = entry as PerformanceNavigationTiming;
 this.recordMetric({)}
-name: 'pageLoadTime',
+name: 'pageLoadTime''',
     value: navEntry.loadEventEnd - navEntry.fetchStart
 uni,
   t: 'ms',
@@ -171,10 +171,10 @@ uni,
 }
 const paintObserver = new PerformanceObserver(list => {)}
 for (const entry of list.getEntries()) {}
-if (entry.name === 'first-contentful-paint') {}
-this.webVitals.FCP = entry.startTime
+if (entry.name === 'first-contentful-paint''',) {}
+this.webVitals.FCP = entry.startTime;
 this.recordMetric({)}
-name: 'FCP',
+name: 'FCP''',
     value: entry.startTime
 uni,
   t: 'ms',
@@ -191,7 +191,7 @@ this.observers.push(paintObserver);
 const lcpObserver = new PerformanceObserver(list => {)
   )
 const entries = list.getEntries()
-const lastEntry = entries[entries.length - 1]
+const lastEntry = entries[entries.length - 1]'',
 if (lastEntry) {
 this.webVitals.LCP = lastEntry.startTime
 this.recordMetric({);
@@ -205,9 +205,9 @@ const lcpObserver = new PerformanceObserver(list => {)}
 const entries = list.getEntries();
 const lastEntry = entries[entries.length - 1]
 if (lastEntry) {}
-this.webVitals.LCP = lastEntry.startTime
+this.webVitals.LCP = lastEntry.startTime;
 this.recordMetric({)}
-name: 'LCP',
+name: 'LCP''',
     value: lastEntry.startTime
 uni,
   t: 'ms',
@@ -231,21 +231,21 @@ clsValue += (entry as LayoutShift).value;}
 this.webVitals.CLS = clsValue
 this.recordMetric({)
   )
-name: 'CLS'),
+name: 'CLS''',),
     value: clsValue)
 uni,
   t: 'score')
 // Layout Shift
 }
 const clsObserver = new PerformanceObserver(list => {)}
-let clsValue = 0
+let clsValue = 0'',
 for (const entry of list.getEntries()) {}
 if ((entry as LayoutShift).hadRecentInput) continue;
 clsValue += (entry as LayoutShift).value;}
 }
-this.webVitals.CLS = clsValue
+this.webVitals.CLS = clsValue;
 this.recordMetric({)}
-name: 'CLS',
+name: 'CLS''',
     value: clsValue
 uni,
   t: 'score',
@@ -340,7 +340,7 @@ const perfData = window.performance.timing;
 
 const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart
 this.recordMetric({)}
-name: 'pageLoad',
+name: 'pageLoad''',
     value: pageLoadTime
 uni,
   t: 'ms',
@@ -373,9 +373,9 @@ categor,
     metadata: {
 url
 }
-recordNetworkRequest(url: string, duration: number, status: number): void {}
+recordNetworkRequest(url: string, duration: numbe,r, status: number): void {}
 this.recordMetric({)}
-name: 'networkRequest',
+name: 'networkRequest''',
     value: duration
 uni,
   t: 'ms',
@@ -420,7 +420,7 @@ if (!(performance as PerformanceWithMemory).memory) return;
 
 const memory = (performance as PerformanceWithMemory).memory
 this.recordMetric({)}
-name: 'memoryUsage',
+name: 'memoryUsage''',
     value: memory.usedJSHeapSize
 uni,
   t: 'bytes',
@@ -546,9 +546,9 @@ return { ...this.webVitals }
 /**
 * Calculate performance score (0-100)
 */
-calculatePerformanceScore(): number {
-  let score = 100
-// FCP scoring
+calculatePerformanceScore(): number {}
+  let score = 100'',
+// FCP scoring}
 if (this.webVitals.FCP) {
 if (this.webVitals.FCP > 3000) score -= 20
 };
@@ -571,7 +571,7 @@ if (this.webVitals.FID) {
   if (this.webVitals.FID > 300) score -= 15
 }
 calculatePerformanceScore(): number {}
-let score = 100
+let score = 100;
 // FCP scoring
 if (this.webVitals.FCP) {}
 if (this.webVitals.FCP > 3000) score -= 20;
@@ -641,7 +641,7 @@ if (this.webVitals.FID && this.webVitals.FID > 100) {/* TODO: Fix JSX expression
 }
 const networkMetrics = this.getMetricsByCategory('network');
 const avgNetworkTime =
-networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length
+networkMetrics.reduce((sum'', m) => sum + m.value, 0) / networkMetrics.length
 if (avgNetworkTime > 500) {
   recommendations.push('Optimize network requests - consider caching and reducing payload sizes');
 networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length
@@ -670,7 +670,7 @@ totalMetric,
 const avgLoadTime = loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0
 }
 return {}
-metrics: this.getMetrics(),
+metrics: this.getMetrics(,),
     webVitals: this.getWebVitals()
 summar,
   y: {}
@@ -690,7 +690,7 @@ p: new Date()}
 * Export metrics as JSON
 */
 exportMetrics(): string {}
-return JSON.stringify(this.generateReport(), null, 2)}
+return JSON.stringify(this.generateReport();null, 2)}
 exportMetrics(): string {/* TODO: Fix JSX expression */}
 }
 /**
@@ -707,7 +707,7 @@ this.webVitals = {}
 */
 cleanup(): void {}
 this.observers.forEach(observer => observer.disconnect())
-this.observers = [];}
+this.observers = [;];}
 }
 }
 // Type for performance.memory
@@ -729,7 +729,7 @@ interface LayoutShift extends PerformanceEntry {
 }
 interface LayoutShift extends PerformanceEntry {}
 value: number,
-    hadRecentInput: boolean;}
+    hadRecentInput: boolea,n;}
 }
 // Export singleton instance
 export const performanceMetrics = PerformanceMetrics.getInstance();

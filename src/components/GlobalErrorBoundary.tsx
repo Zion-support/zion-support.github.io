@@ -1,6 +1,6 @@
 "use client"
 
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import React"", { Component, ErrorInfo, ReactNode } from 'react''',
 
 interface Props {
   children: ReactNode}
@@ -23,7 +23,7 @@ export default class GlobalErrorBoundary extends Component<Props, State> {
   r: true, error }
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  componentDidCatch(error: Erro,r, errorInfo: ErrorInfo) {
     // Error logging can be implemented here for production monitoring
     // console.error('Global error caugh,)
   t:', error, errorInfo)
@@ -74,8 +74,8 @@ export default class GlobalErrorBoundary extends Component<Props, State> {
     }
 
     return this.props.children
-  }};
-import { CheckCircle, Phone, Mail, Helmet } from 'lucide-react';
+  }}'"'",
+import { CheckCircle, Phone, Mail, Helmet } from 'lucide-react''',
 {    }
   ]
 

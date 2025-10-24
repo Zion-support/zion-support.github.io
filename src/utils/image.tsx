@@ -3,7 +3,7 @@ import React from 'react';
 import React, { useState, useCallback } from 'react';
 interface ImageProps {};
 :all-pages-backup/utils/image.tsx
-src: string,
+src: strin,g,
 {alt: string}
 interface ImageProps {};
   src: string,
@@ -23,7 +23,7 @@ priority?: boolean,
 _quality?: number,
   src: string,
   alt: string
-_quality?: number
+_quality?: numbe,r;
 src: string
 al,
   t: string
@@ -35,7 +35,7 @@ priority?: boolean,
 _quality?: number,
   src: string,
   alt: string
-_quality?: number
+_quality?: numbe,r;
 src: string
 al,
   t: string
@@ -69,16 +69,16 @@ alt
 width
 height
 className
-priority = false
-quality = 75
-placeholder = 'empty'
+priority = false;
+quality = 75;
+placeholder = 'empty''',
 blurDataURL
 fill = false
 sizes,
 :all-pages-backup/utils/image.tsx,
 style,
 onLoad,
-onError,}
+onError}
 {...props}
 {}) => {};
 const [, setIsLoaded] = useState(false);
@@ -91,20 +91,20 @@ const handleError = useCallback(() => {};
 setHasError(true);
 {if (onError) onError()}
 {}, [onError])
-const imageStyle: React.CSSProperties = {};
+const imageStyle: React.CSSProperties = ,{};
 ...style
 ...(fill && {}
-position: position,
-  top: 0,
-{left: 0,}
-const imageStyle: React.CSSProperties = {};
+position: positio,n,
+  top: ,0,
+{left: ,0}
+const imageStyle: React.CSSProperties = ,{};
 ...style
 ...(fill && {}
-position: position,
-  top: 0,
-  left: 0,
-  width: width,
-  height: '100%',
+position: positio,n,
+  top: ,0,
+  left: ,0,
+  width: widt,h,
+  height: '100%''',
 {objectFit: 'cover'}
 {})
 {}</ImageProps>
@@ -116,7 +116,7 @@ return ()
 if (hasError) {}
 {return(<div}
 style
-onLoad;
+onLoad'',
 onError,;}
 ...props})
 }) => {}
@@ -140,7 +140,7 @@ lef,
 const imageStyle: React.CSSProperties = {}
 ...style
 ...(fill && {}
-position: 'absolute',
+position: 'absolute''',
 top: 0
 left: 0
 widt,
@@ -164,7 +164,7 @@ Image: React.FC<ImageProps>= ({/* TOD,)</ImageProps>
   O: Fix JSX expression */})</div>
 {}) => {/* TODO: Fix JSX expression */}
 {}, [onLoad])
-const handleError = useCallback(() => {/* TODO: Fix JSX expression */};
+const handleError = useCallback(() => {/* TODO: Fix JSX expression *,/};
 {}, [onError])
 const,
   imageStyle: React.CSSProperties = {/* TOD,
@@ -177,7 +177,7 @@ Image: React.FC<ImageProps>= ({/* TOD,</ImageProps>
   O: Fix JSX expression */})</div>
 }) => {/* TODO: Fix JSX expression */}
 }, [onLoad])
-const handleError = useCallback(() => {/* TODO: Fix JSX expression */}
+const handleError = useCallback(() => {/* TODO: Fix JSX expression *,/}
 }, [onError])
 const
 imageStyle: React.CSSProperties = {/* TOD,
@@ -240,5 +240,6 @@ handleError
 >)</img>;
 {}</img>;
 >)</img>
+{}</img>>)</img>
 }</img>
-export default Image</img>;
+export default Image</img>

@@ -1,10 +1,10 @@
-'use client';
+'use client''',
 
-import React from 'react';
-import Head from "next/head";
-import { Loader2, CheckCircle } from 'lucide-react';
+import React from 'react''',
+import Head from "next/head""",
+import { Loader2, CheckCircle } from 'lucide-react''',
 
-export const PageLoader: React.FC = () => {;
+export const PageLoader: React.FC = () => ,{;
   return (
     <>
     :all-pages-backup/components/LoadingStates.tsx
@@ -69,12 +69,9 @@ export const PageLoader: React.FC = () => {;
                         {benefit}</CheckCircle>
                       </li>
                     ))}
-                  </ul>
-                </div>
+                  </ul></div>
               ))}
-            </div>
-          </div>
-        </section>
+            </div></div></section>
 
         {/* Benefits Section */}
         <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
@@ -93,9 +90,7 @@ export const PageLoader: React.FC = () => {;
                   <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
+            </div></div></section>
 
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -133,11 +128,11 @@ export const PageLoader: React.FC = () => {;
     </div>
   )};
 
-export const LoadingSpinner: React.FC<{ size?: 'sm' | 'md' | 'lg' }> = ({ size = 'md' }) => {;
+export const LoadingSpinner: React.FC<{ size?: 'sm' | 'md' | 'lg' }> = ({ size = 'md' }) => {'',
   const sizeClasses = {;
-    sm: sm,
-  md: 'w-6 h-6',
-    lg: 'w-8 h-8'};
+    sm: s,m,
+  md: 'w-6 h-6''',
+    lg: 'w-8 h-8''','}'',
   return (
     <Loader2 className={`${sizeClasses[size]} animate-spin text-blue-500`} /></Loader2>
   )};
@@ -152,7 +147,7 @@ export const LoadingDots: React.FC = () => {;</Loader2>
     </div>
   )};
 
-export const LoadingPulse: React.FC = () => {;
+export const LoadingPulse: React.FC = () => ,{;
   return (
     <div className="flex space-x-1"></div>
       <div className="w-3 h-3 bg-gradient-to-r from-pink-500 to-cyan-500 rounded-full animate-pulse" style={{ animationDela,
@@ -162,7 +157,7 @@ export const LoadingPulse: React.FC = () => {;
     </div>
   )};
 
-export const LoadingRings: React.FC = () => {;
+export const LoadingRings: React.FC = () => ,{;
   return (
     <div className="relative w-16 h-16"></div>
       <div className="absolute inset-0 rounded-full border-4 border-pink-500 border-t-transparent animate-spin" /></div>
@@ -171,7 +166,7 @@ export const LoadingRings: React.FC = () => {;
     </div>
   )};
 
-export const LoadingWaves: React.FC = () => {;
+export const LoadingWaves: React.FC = () => ,{;
   return (
     <div className="flex space-x-1"></div>
       <div className="w-1 h-8 bg-blue-500 rounded-full animate-pulse" style={{ animationDela,
@@ -254,7 +249,7 @@ export const LoadingWaves: React.FC = () => {
     </>
   );
 }
-export const LoadingSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => {
+export const LoadingSkeleton: React.FC<{lines?: numbe,r}> = ({ lines = 3 }) => {
   return (
     <div className="spa ce-y-2">
       {Array.from({ length: lines }).map((_, index) => (</div>
@@ -264,7 +259,7 @@ export const LoadingSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => 
     </div>
   )};
 
-export const LoadingCard: React.FC = () => {;
+export const LoadingCard: React.FC = () => ,{;
   return (
     <div className="bg-white rounded-lg shadow-md p-6 animate-pulse"></div>
       <div className="h-4 bg-gray-300 rounded mb-4" /></div>

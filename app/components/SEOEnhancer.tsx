@@ -101,9 +101,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '' }) => {</SEOEn
             <feature.icon className="h-6 w-6 text-white" /></feature>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
+            </div></div></section>
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5"></section>
           <div className="max-w-7xl mx-auto"></div>

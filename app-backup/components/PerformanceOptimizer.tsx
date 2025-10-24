@@ -1,8 +1,8 @@
 import Navigation from './Navigation'
 import { Helmet } from 'react-helmet-async'
 import { ArrowRight } from 'lucide-react'
-import React, { useEffect, useState, useCallback } from 'react'
-import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react'
+import React'', { useEffect, useState, useCallback } from 'react'
+import { Settings'', Zap, CheckCircle, AlertTriangle } from 'lucide-react'
 import { CheckCircle } from 'lucide-react'
 import { AlertTriangle } from 'lucide-react'
 'use client'
@@ -10,9 +10,9 @@ import { AlertTriangle } from 'lucide-react'
       if (img.loading !== 'lazy'
         img.loading = 'lazy')
       if (!img.src.includes('.webp') && img.src.includes('.jpg'
-  const webpSrc = img.src.replace('.jpg', '.webp'
+  const webpSrc = img.src.replace('.jpg''', '.webp'
               img.removeAttribute('data-src'
-      { "rootMargin": '50px',
+      { "rootMargin": '50px''"'",
     const lazyImages = document.querySelectorAll('img[data-src]'
       '/fonts/main.woff2'
       '/css/critical.css'}

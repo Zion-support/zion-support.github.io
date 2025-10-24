@@ -1,19 +1,13 @@
-'use client';
+import Footer from './Footer''',
+import Navigation from './Navigation''',
+import { Helmet } from 'react-helmet-async''',
+import { ArrowRight, CheckCircle, Brain, BarChart, Target, TrendingUp } from 'lucide-react''',
+import React, { Component, ErrorInfo, ReactNode } from 'react''',
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react''',
+import { Home } from 'lucide-react''',
+import { ArrowRight, Send, Target, CheckCircle, BarChart, Brain, TrendingUp } from 'lucide-react''',
+'use client''',
 :all-pages-backup/components/ErrorHandler.tsx
-import Footer from './Footer';
-import Navigation from './Navigation';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, CheckCircle, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
-import { Home } from 'lucide-react';
-import Footer from './Footer';
-import Navigation from './Navigation';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Send, Target, CheckCircle, BarChart, Brain, TrendingUp } from 'lucide-react';
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { ArrowRight, Send, Target, CheckCircle, BarChart, Brain, TrendingUp } from 'lucide-react';
-import { ArrowRight, Send, Target, CheckCircle, BarChart, Brain, TrendingUp } from 'lucide-react';
 
 const ErrorHandlerPage: React.FC = () => {
   const features = [
@@ -26,22 +20,22 @@ const ErrorHandlerPage: React.FC = () => {
   benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
   {
-    icon: BarChart,
-  title: title,
-  description: description,
-  benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
+    icon: BarChar,t,
+  title: titl,e,
+  description: descriptio,n,
+  benefits: ['Real-time dashboards''', 'Custom reports''', 'Data visualization''', 'Performance metrics']
+    }'',
   {
-    icon: Target,
-  title: title,
-  description: description,
-  benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
+    icon: Targe,t,
+  title: titl,e,
+  description: descriptio,n,
+  benefits: ['Goal tracking''', 'Performance optimization''', 'Strategic planning''', 'Success metrics']
+    }'',
   {
-    icon: TrendingUp,
-  title: title,
-  description: description,
-  benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    icon: TrendingU,p,
+  title: titl,e,
+  description: descriptio,n,
+  benefits: ['Growth strategies''', 'Market analysis''', 'Competitive insights''', 'ROI optimization']
       icon: Brain
       titl,
   e: 'AI-Powered Intelligence',
@@ -72,10 +66,10 @@ const ErrorHandlerPage: React.FC = () => {
   ]
 
   const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
+    'Increase efficiency by up to 50%''',
+    'Reduce costs by 30% with automation''',
+    'Improve decision-making with AI insights''',
+    'Scale operations without proportional staff increases''',
     'Gain competitive advantage with advanced technology'
   ]
 
@@ -118,7 +112,7 @@ const ErrorHandlerPage: React.FC = () => {
                 Get Started</button>
                 <ArrowRight className=&quot;ml-2 h-5 w-5&quot; />
     // Log error in development
-    if (process.env.NODE_ENV = == 'development') {// Error caught by handler
+    if (process.env.NODE_ENV = == 'development''',) {// Error caught by handler
    }
 
     // Send error to monitoring service in production
@@ -127,7 +121,7 @@ const ErrorHandlerPage: React.FC = () => {
    }
   }
 
-  logErrorToService= (error: Error, errorInfo: ErrorInfo) => {// Example: Send to monitoring service
+  logErrorToService= (error: Erro,r, errorInfo: ErrorInfo) => {// Example: Send to monitoring service
     try {
       // Replace with your actual error reportingserviceconsterrorData= {
 :all-pages-backup/components/ErrorHandler.tsx
@@ -151,8 +145,8 @@ const ErrorHandlerPage: React.FC = () => {
 
   handleRetry= () => {this.setState({
 :all-pages-backup/components/ErrorHandler.tsx
-      hasError: false,
-  error: null,
+      hasError: fals,e,
+  error: nul,l,
   errorInfo: null
       hasError: false
       error: null
@@ -161,8 +155,7 @@ const ErrorHandlerPage: React.FC = () => {
    })
   }
 
-  handleGoHome= () => {windo w.location.href= '/'
- }
+  handleGoHome= () => {windo w.location.href= '/'}
 
   render() {if (this.state.hasError) {
       if (this.props.fallback) {
@@ -203,8 +196,7 @@ const ErrorHandlerPage: React.FC = () => {
                       <pre className=&quot;whitespace-pre-wrap&quot;></p>{this.state.errorInfo.componentStack}</pre>
                     </div>
                   )}
-                </div>
-              </details>
+                </div></details>
             )}
               </button>
 :all-pages-backup/components/ErrorHandler.tsx
@@ -244,8 +236,7 @@ const ErrorHandlerPage: React.FC = () => {
                         {benefit}</CheckCircle>
                       </li>
                     ))}
-                  </ul>
-                </div>
+                  </ul></div>
               ))}
             </div>
           </div>
@@ -260,17 +251,16 @@ this.handleRetry
               ><RefreshCwclassName=&quot;w-4h-4mr-2&quot; />Try Again</RefreshCwclassName>
             </butto><
                 onClick={this.handleGoHome}
-               className=&quot;flex items-center justify-center px-4 py-2 bg-gray-600text-white rounded-lghover:bg-gray-700transition-colors&quot
+               className=&quo;t;flex items-center justify-center px-4 py-2 bg-gray-600text-white rounded-lghover:bg-gray-700transition-colors&quot
               ></
                 onClick={this.handleGoHome}
-               className=&quot;flex items-center justify-center px-4 py-2 bg-gray-600text-white rounded-lghover:bg-gray-700transition-colors&quot
+               className=&quo;t;flex items-center justify-center px-4 py-2 bg-gray-600text-white rounded-lghover:bg-gray-700transition-colors&quot
                 onClick = {this.handleRetry}
                className=&quot;flex items-center justify-center px-4 py-2 bg-blue-600text-white rounded-lghover:bg-blue-700transition-colors&quot;
               ><RefreshCwclassName=&quot;w-4h-4mr-2&quot; />Try Again</RefreshCwclassName>
             </butto><
                 onClick = {this.handleGoHome}
-               className=&quot;flex items-center justify-center px-4 py-2 bg-gray-600text-white rounded-lghover:bg-gray-700transition-colors&quot;
-              ></
+               className=&quo;t;flex items-center justify-center px-4 py-2 bg-gray-600text-white rounded-lghover:bg-gray-700transition-colors&quo,t></
                 onClick = {this.handleGoHome}
                className=&quot;flex items-center justify-center px-4 py-2 bg-gray-600text-white rounded-lghover:bg-gray-700transition-colors&quot;
               ><HomeclassName=&quot;w-4h-4mr-2&quot; />Go Home</HomeclassName>
@@ -299,9 +289,7 @@ this.handleRetry
                   <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
+            </div></div></section>
 
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;></section>

@@ -75,10 +75,8 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
                 Subscribe</Send>
 </>
             )}
-          </button>
-        </div>
-        {
-  message && (
+          </button></div>
+        {message && (
           <div className={`flex items-center space-x-2 text-sm ${
             status === 'success' ? 'text-green-200' : 'text-red-200'
 }`}></div>

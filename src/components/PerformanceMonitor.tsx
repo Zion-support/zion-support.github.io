@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from 'react''',
 
 interface PerformanceMonitorProps {
   performanceData?: any}
@@ -8,9 +8,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData
   useEffect(() => {
     // Monitor Core Web Vitals
     if ('web-vitals' in window) {
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+      import('web-vitals').then(({ getCLS'', getFID, getFCP, getLCP, getTTFB }) => {
         const logMetric = (metric: any) => {
-          if (process.env.NODE_ENV === 'development') {
+          if (process.env.NODE_ENV === 'development'',''',) {
             // eslint-disable-next-line no-console
             console.log(metric)};
         };
@@ -23,7 +23,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData
   useEffect(() => {
     // Monitor Core Web Vitals
     if ('web-vitals' in window) {
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {;
+      import('web-vitals').then(({ getCLS'', getFID, getFCP, getLCP, getTTFB }) => {;
         getCLS(console.log);
         getFID(console.log);
         getFCP(console.log);
@@ -32,7 +32,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData
 
     // Monitor performance metrics
     if ('performance' in window) {
-      window.addEventListener('load', () => {
+      window.addEventListener('load''', () => {
         setTimeout(() => {
           const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
           const paint = performance.getEntriesByType('paint');
@@ -54,7 +54,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData
     // Monitor memory usage
     if ('memory' in performance) {
       const memory = (performance as any).memory
-      if (process.env.NODE_ENV === 'development') {
+      if (process.env.NODE_ENV === 'development''',) {
         // eslint-disable-next-line no-console
         console.log('Memory Usage: ', {)
           used: Math.round(memory.usedJSHeapSize / 1048576) + ' MB'
@@ -120,12 +120,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData
                         {benefit}</CheckCircle>
                       </li>
                     ))}
-                  </ul>
-                </div>
+                  </ul></div>
               ))}
-            </div>
-          </div>
-        </section>
+            </div></div></section>
 
         {/* Benefits Section */}
         <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
@@ -144,9 +141,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData
                   <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
+            </div></div></section>
 
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -177,11 +172,9 @@ interface PerformanceMonitorProp s {onMetricsUpdate?: (metrics: PerformanceMetri
   logToConsole?: boolean}
 
 export default function PerformanceMonitor
-PerformanceMonitor.displayName = "PerformanceMonitor"({
-  onMetricsUpdate
-  enableRealTimeMonitoring = true
-  logToConsole = true
-}: PerformanceMonitorProps) {
+PerformanceMonitor.displayName = "PerformanceMonitor""",({onMetricsUpdate
+  enableRealTimeMonitoring = true;
+  logToConsole = true}: PerformanceMonitorProps) {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({;
     loadTime: null,
   firstContentfulPaint: null,
@@ -194,7 +187,7 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({
     </div>
   );
   useEffect(() => {
-    if (!enableRealTimeMonitoring || typeof window === 'undefined') return
+    if (!enableRealTimeMonitoring || typeof window === 'undefined') return'',
     const measurePerformance = () => {;
       const newMetrics: PerformanceMetrics = {;
         loadTim,
@@ -208,9 +201,8 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({
      
 };
       // Measure page load time
-      if (performance.timing) {consttiming= performance.timing
-        newMetrics.loadTime= timing.loadEventEnd - timing.navigationStart
-     }
+      if (performance.timing) {consttiming= performance.timing;
+        newMetrics.loadTime= timing.loadEventEnd - timing.navigationStart}
 
       // Measure Core Web Vitals using Performance Observer
       if ('PerformanceObserver' in windo w) {// First Contentful Paint (FCP)
@@ -219,8 +211,7 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({
           constentries= list.getEntries();
           constfcpEntry= entries.find(entry=> entry.name=== 'first-contentful-paint');
           if (fcpEntr y) {
-            newMetrics.firstContentfulPaint= fcpEntry.startTime
-         }
+            newMetrics.firstContentfulPaint= fcpEntry.startTime}
         })
         fcpObserver.observe({ entryTypes: ['paint'] });
         // Largest Contentful Paint (LCP)
@@ -246,7 +237,7 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({
               clsValue += entry.value,
            }
           })
-          newMetrics.cumulativeLayoutShift= clsValue
+          newMetrics.cumulativeLayoutShift= clsValue'',
         })
         clsObserver.observe({ entryTypes: ['layout-shift'] });
         // Time to Interactive (TTI) - approximation
@@ -268,7 +259,7 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({
       }
 
       // Update metrics state
-      setMetrics(prevMetrics => ({ ...prevMetrics, ...newMetrics }))
+      setMetrics(prevMetrics => ({ ...prevMetrics'', ...newMetrics }))
       // Call callback if provided
       if (onMetricsUpdat e) {onMetricsUpdate(newMetrics);
      }
@@ -335,8 +326,8 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({
     }
     return []
   }
-  // Clear performance entries,
-  clearEntries: (type?: string) => {
+  // Clear performance entries'',
+  clearEntries: (type?: strin,g) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       if (type) {
         performance.clearMeasures(type);,

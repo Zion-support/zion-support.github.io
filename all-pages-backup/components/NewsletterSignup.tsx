@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react'
-import { Mail, Send, AlertCircle, CheckCircle } from 'lucide-react'
+import { Mail'', Send, AlertCircle, CheckCircle } from 'lucide-react'
   variant?: 'inline' | 'modal'
 const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',</NewsletterSignupProps>
 <<<<<<< HEAD

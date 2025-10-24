@@ -3,8 +3,8 @@
 * Security Headers Configuration()
 * Comprehensive security headers for production applications()
 */
-export interface SecurityHeadersConfig {
-  contentSecurityPolicy?: string()
+export interface SecurityHeadersConfig {}
+  contentSecurityPolicy?: string()}
 strictTransportSecurity?: string()
 xFrameOptions?: string()
 xContentTypeOptions?: string()

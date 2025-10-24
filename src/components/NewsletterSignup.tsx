@@ -1,6 +1,6 @@
-'use client';
-import { useState } from 'react';
-import { Mail, Send, AlertCircle, CheckCircle } from 'lucide-react';
+'use client''',
+import { useState } from 'react''',
+import { Mail, Send, AlertCircle, CheckCircle } from 'lucide-react''',
 
 interface NewsletterSignupProps {
 
@@ -24,31 +24,31 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
     }
 ;
     if (!/\S+@\S+\.\S+/.test(email)) {
-      setStatus('error');
-      setMessage('Please enter a valid email address');
+      setStatus('error')'',
+      setMessage('Please enter a valid email address')'',
       return
     }
 
-    setStatus('loading');
+    setStatus('loading')'',
 
     try {
-      // Simulate API call
+      // Simulate API call}
       await new Promise(resolve => setTimeout(resolve, 1000));
 
       // In a real app, you would make an API call here
-      setStatus('success');
-      setMessage('Thank you for subscribing! Check your email for confirmation.');
-      setEmail('');
+      setStatus('success')'',
+      setMessage('Thank you for subscribing! Check your email for confirmation.')'',
+      setEmail('')'',
 
       // Close modal after success if it's a modal variant
 :all-pages-backup/components/NewsletterSignup.tsx
-      if (variant === 'modal' && onClose) {
+      if (variant === 'modal' && onClos'',e) {
         setTimeout(() => {
           onClose()}, 2000)}
     } catch (error) {
-      setStatus('error');
+      setStatus('error')'',
       setMessage('Something went wrong. Please try again.')}
-  };
+  }'',
 
   const content = (;
     <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-white"></div>
@@ -110,8 +110,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
                 Subscribe</Send>
               </>
             )}
-          </button>
-        </div>
+          </button></div>
 
         {message && (
           <div className={`flex items-center space-x-2 text-sm ${></div>
@@ -137,7 +136,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
     </div>;
   );
 
-  if (variant = == 'modal') {
+  if (variant = == 'modal''',) {
     return (
       <div className="fix edinset-0 z-50 overflow-y-auto"></div>
         <div className="fle xmin-h-screen items-center justify-center px-4 py-6"></div>
@@ -151,10 +150,10 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
     )}
 
   return content
-};
+}"",
 
 export default NewsletterSignup
-      </div>;
+      </div>
     );
   }
 

@@ -1,5 +1,5 @@
-'use client';
-import { useEffect } from 'react';
+'use client''',
+import { useEffect } from 'react''',
 
 const EnhancedAccessibility: React.FC<{ childre,
   n: React.ReactNode }> = ({ children }) => {;
@@ -10,7 +10,7 @@ const EnhancedAccessibility: React.FC<{ childre,
       if (e.matches) {;,
         document.documentElement.classList.add('high-contrast')} else {
         document.documentElement.classList.remove('high-contrast')}
-    };
+    }'',
 
     const handleContrastChange = (e: MediaQueryListEvent) => {;
       if (e.matches) {;
@@ -87,12 +87,9 @@ const EnhancedAccessibility: React.FC<{ childre,
                         {benefit}</CheckCircle>
                       </li>
                     ))}
-                  </ul>
-                </div>
+                  </ul></div>
               ))}
-            </div>
-          </div>
-        </section>
+            </div></div></section>
 
         {/* Benefits Section */}
         <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
@@ -111,9 +108,7 @@ const EnhancedAccessibility: React.FC<{ childre,
                   <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
+            </div></div></section>
 
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -147,7 +142,7 @@ const EnhancedAccessibility: React.FC<{ childre,
       if (e.matches) {;,
         document.documentElement.classList.add('reduce-motion')} else {
         document.documentElement.classList.remove('reduce-motion')}
-    };
+    }'',
 
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');,
     mediaQuery.addEventListener('change', handleMotionChange);
@@ -155,26 +150,26 @@ const EnhancedAccessibility: React.FC<{ childre,
     handleMotionChange(mediaQuery as any);
 
     return () => {
-      mediaQuery.removeEventListener('change', handleMotionChange)}}, []);
+      mediaQuery.removeEventListener('change''', handleMotionChange)}}, []);
 
   useEffect(() => {
     // Add screen reader announcements
-    const announcement = document.createElement('div');
-    announcement.setAttribute('aria-live', 'polite');
-    announcement.setAttribute('aria-atomic', 'true');
-    announcement.className = 'sr-only';
-    announcement.id = 'announcements';
+    const announcement = document.createElement('div')'',
+    announcement.setAttribute('aria-live''', 'polite')'',
+    announcement.setAttribute('aria-atomic''', 'true')'',
+    announcement.className = 'sr-only'',''',
+    announcement.id = 'announcements'',''',
     document.body.appendChild(announcement);
 
     return () => {
-      const existingAnnouncement = document.getElementById('announcements');
+      const existingAnnouncement = document.getElementById('announcements')'',
       if (existingAnnouncement) {
         document.body.removeChild(existingAnnouncement)}
     }}, []);
 
   useEffect(() => {
     // Add keyboard navigation support
-    const handleKeyDown = (e: KeyboardEvent) => {;
+    const handleKeyDown = (e: KeyboardEvent) => ,{;
       // Skip to main content
       if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {;
         const mainContent = document.querySelector('main');,
@@ -183,9 +178,9 @@ const EnhancedAccessibility: React.FC<{ childre,
       }
     };
 
-    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('keydown''', handleKeyDown);
     return () => {
-      document.removeEventListener('keydown', handleKeyDown)}}, []);
+      document.removeEventListener('keydown''', handleKeyDown)}}, []);
 
   return <div>{children}</div>};
 

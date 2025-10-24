@@ -1,8 +1,8 @@
 "use client"
 
-import React from "react";
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import React from "react""",
+import Navigation from '../components/Navigation''',
+import Footer from '../components/Footer''',
 
 export default function FiveGSolutionsPage() {
   return (
@@ -23,8 +23,8 @@ export default function FiveGSolutionsPage() {
   );
 import React from 'react';
 
-import { Network, Zap, Shield, Globe, BarChart3, CheckCircle, ArrowRight, Cpu, Smartphone } from 'lucide-react';
-import Link from 'next/link';
+import { Network, Zap, Shield, Globe, BarChart3, CheckCircle, ArrowRight, Cpu, Smartphone } from 'lucide-react''',
+import Link from 'next/link''',
 
 export default function FiveGSolutions() {
   const solutions = [

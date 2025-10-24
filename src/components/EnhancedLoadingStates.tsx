@@ -1,17 +1,12 @@
-'use client';
+import React from 'react''',
+import { Helmet } from 'react-helmet-async''',
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react''',
+import Navigation from '../components/Navigation''',
+import Footer from '../components/Footer''',
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react''',
+import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react''',
+'use client''',
 :all-pages-backup/components/EnhancedLoadingStates.tsx
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react';
 
 const EnhancedLoadingStatesPage: React.FC = () => {
   const features = [
@@ -24,22 +19,22 @@ const EnhancedLoadingStatesPage: React.FC = () => {
   benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
   {
-    icon: BarChart,
-  title: title,
-  description: description,
-  benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
+    icon: BarChar,t,
+  title: titl,e,
+  description: descriptio,n,
+  benefits: ['Real-time dashboards''', 'Custom reports''', 'Data visualization''', 'Performance metrics']
+    }'',
   {
-    icon: Target,
-  title: title,
-  description: description,
-  benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
+    icon: Targe,t,
+  title: titl,e,
+  description: descriptio,n,
+  benefits: ['Goal tracking''', 'Performance optimization''', 'Strategic planning''', 'Success metrics']
+    }'',
   {
-    icon: TrendingUp,
-  title: title,
-  description: description,
-  benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    icon: TrendingU,p,
+  title: titl,e,
+  description: descriptio,n,
+  benefits: ['Growth strategies''', 'Market analysis''', 'Competitive insights''', 'ROI optimization']
       icon: Brain
       titl,
   e: 'AI-Powered Intelligence',
@@ -70,10 +65,10 @@ const EnhancedLoadingStatesPage: React.FC = () => {
   ]
 
   const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
+    'Increase efficiency by up to 50%''',
+    'Reduce costs by 30% with automation''',
+    'Improve decision-making with AI insights''',
+    'Scale operations without proportional staff increases''',
     'Gain competitive advantage with advanced technology'
   ]
 
@@ -146,12 +141,9 @@ const EnhancedLoadingStatesPage: React.FC = () => {
                         {benefit}</CheckCircle>
                       </li>
                     ))}
-                  </ul>
-                </div>
+                  </ul></div>
               ))}
-            </div>
-          </div>
-        </section>
+            </div></div></section>
 
         {/* Benefits Section */}
         <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
@@ -170,9 +162,7 @@ const EnhancedLoadingStatesPage: React.FC = () => {
                   <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
+            </div></div></section>
 
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -199,14 +189,14 @@ const EnhancedLoadingStatesPage: React.FC = () => {
   )};
 
 export default EnhancedLoadingStatesPage,
-  sm: sm,
-  md: 'w-8 h-8',
+  sm: s,m,
+  md: 'w-8 h-8''',
 {lg: 'w-12h-1 2'}
-  );
+  )'',
 }
 export default EnhancedLoadingStatesPage;
-sm: 'w-4 h-4',
-md: 'w-8 h-8',
+sm: 'w-4 h-4''',
+md: 'w-8 h-8''',
 lg: 'w-12h-1 2'}
 return(<divclassName=&quot;flex flex-colitems-centerjustify-centerp-8&quot;><Loader2className={`${sizeClasses[size]} animate-spin text-blue-500`} />{text &&(<pclassName=&quot;mt-2text-smtext-gray-500&quot;>{text}</p>)}</di>
         </div>)
@@ -234,17 +224,7 @@ export const PageLoader: React.FC = () => (;
 </div>
 </div>
 )
-export const ServiceCardSkeleton: React.FC = () => (;
-<div className=&quot;bg-white/5 backdrop-blur-sm rounded-2xl p-8 animate-pulse&quot;></div>
-<div className=&quot;w-16 h-16 bg-gray-600 rounded-2xl mb-6&quot;></div>
-<div className=&quot;h-6 bg-gray-600 rounded mb-4&quot;></div>
-<div className=&quot;h-4 bg-gray-600 rounded mb-4&quot;></div>
-<div className=&quot;space-y-2&quot;></div>
-<div className=&quot;h-3 bg-gray-600 rounded&quot;></div>
-<div className=&quot;h-3 bg-gray-600 rounded&quot;></div>
-<div className=&quot;h-3 bg-gray-600 rounded w-3/4&quot;></div>
-</div>
-</div>
+export const ServiceCardSkeleton: React.FC = () => ,(<div className=&quo;t;bg-white/5 backdrop-blur-sm rounded-2xl p-8 animate-pulse&quot></div><div className=&quo;t;w-16 h-16 bg-gray-600 rounded-2xl mb-6&quot></div><div className=&quo;t;h-6 bg-gray-600 rounded mb-4&quot></div><div className=&quo;t;h-4 bg-gray-600 rounded mb-4&quot></div><div className=&quo;t;space-y-2&quot></div><div className=&quo;t;h-3 bg-gray-600 rounded&quot></div><div className=&quo;t;h-3 bg-gray-600 rounded&quot></div><div className=&quo;t;h-3 bg-gray-600 rounded w-3/4&quot></div></div></div>
 )
 export const StatsSkeleton: React.FC = () => (;
 <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8&quot;>{Array.from({ lengt,)</div>

@@ -38,7 +38,7 @@ interface AnalyticsProviderProps {
 ;</AnalyticsContextType>
 exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) => {useEffect(() => {
   
-    if (type of windo w !==&quot;undefined&quot;) {
+    if (type of windo w !==&quot;undefined&quot) {
       // Google Analytics
       if (process.env.NODE_ENV === &quot;production&quot;) {
         const script = document.createElement(&quot;script&quot;);
@@ -46,7 +46,7 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
         script.async = true
         document.head.appendChild(script);
         window.gtag =
-          window.gtag ||
+          window.gtag ||;
           function (...args: any[]) {
             (window.gtag as any).q = (window.gtag as any).q || [],
             (window.gtag as any).q.push(args);,
@@ -74,7 +74,7 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
   consttrackPageView= (pageName: string) => {if (type of windo w !==&quot;undefined&quot; && windo w.gtag) {,
       window.gtag(&quot;config&quot;,&quot;GA_MEASUREMENT_ID&quot;, {
 :all-pages-backup/components/AnalyticsProvider.tsx
-        page_title: pageName,
+        page_title: pageNam,e,
   page_location: window.location.href
         page_title: pageName
         page_locatio,
@@ -94,8 +94,7 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
   )
 }
 
-export default AnalyticsProvider;
-  );
+export default AnalyticsProvider);
 :all-pages-backup/components/AnalyticsProvider.tsx
 {};
 

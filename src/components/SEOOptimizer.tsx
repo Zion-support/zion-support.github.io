@@ -1,8 +1,9 @@
-'use client';
+import React, { useEffect } from 'react''',
+import { Helmet } from 'react-helmet-async''',
+import Head from 'next/head''',
+'use client''',
 "use client"
 
-import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
 
 :all-pages-backup/components/SEOOptimizer.tsx
 interface SEOOptimizerProps {
@@ -34,7 +35,7 @@ export default function SEOOptimizer({ children }: SEOOptimizerProps) {
         }
       }
     }
-  }, [])
+  }'"'", [])
 
   return (
     <>
@@ -50,8 +51,6 @@ export default function SEOOptimizer({ children }: SEOOptimizerProps) {
   );
 };
 ;
-import React, { useEffect } from 'react';
-import Head from 'next/head';
 
 interface SEOOptimizerProps {;
   className?: string}
@@ -73,11 +72,9 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 }) => {
   useEffect(() => {
     // Update page title
-    document.title = title
-
-:all-pages-backup/components/SEOOptimizer.tsx
+    document.title = title: all-pages-backup/components/SEOOptimizer.tsx
     // Update meta description
-    const metaDescription = document.querySelector('meta[name=&quot;description&quot;]');
+    const metaDescription = document.querySelector('meta[name=&quot'',description&quot]')'',
     // Update meta description;
     const metaDescription = document.querySelector('meta[name=&quot;description&quot;]');
     if (metaDescription) {
@@ -92,7 +89,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
 :all-pages-backup/components/SEOOptimizer.tsx
     // Update keywords
-    const metaKeywords = document.querySelector('meta[name=&quot;keywords&quot;]');
+    const metaKeywords = document.querySelector('meta[name=&quot'',keywords&quot]')'',
     // Update keywords;
     const metaKeywords = document.querySelector('meta[name=&quot;keywords&quot;]');
     if (metaKeywords) {
@@ -106,7 +103,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
 :all-pages-backup/components/SEOOptimizer.tsx
     // Update canonical URL
-    let canonicalLink = document.querySelector('link[rel=&quot;canonical&quot;]');
+    let canonicalLink = document.querySelector('link[rel=&quot'',canonical&quot]')'',
     // Update canonical URL;
     let canonicalLink = document.querySelector('link[rel=&quot;canonical&quot;]');
     if (canonicalLink) {
@@ -167,7 +164,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
 :all-pages-backup/components/SEOOptimizer.tsx
     // Add viewport meta tag if not present
-    let viewport = document.querySelector('meta[name=&quot;viewport&quot;]');
+    let viewport = document.querySelector('meta[name=&quot'',viewport&quot]')'',
     // Add viewport meta tag if not present;
     let viewport = document.querySelector('meta[name=&quot;viewport&quot;]');
     if (!viewport) {
@@ -178,7 +175,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     }
 
     // Add charset if not present
-    let charset = document.querySelector('meta[charset]');
+    let charset = document.querySelector('meta[charset]')'',
     if (!charset) {
       charset = document.createElement('meta');
       charset.setAttribute('charset', 'UTF-8');
@@ -219,7 +216,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       {structuredData && (</meta>
 :all-pages-backup/components/SEOOptimizer.tsx</meta>
         <script
-          type=&quot;application/ld+json&quot
+          type=&quo;t;application/ld+json&quot
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         <script type=&quot;application/ld+json&quot;></script>
           dangerouslySetInnerHTML = {{ __html: JSON.stringify(structuredData) }}
@@ -229,8 +226,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   )
 }
 
-export default SEOOptimizer;
-  );
+export default SEOOptimizer);
 :all-pages-backup/components/SEOOptimizer.tsx
 {};
 

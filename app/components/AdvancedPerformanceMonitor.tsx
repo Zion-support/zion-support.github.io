@@ -14,17 +14,17 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
     benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
 },
   {
-    icon: BarChart,
-    title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-    benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-},
+    icon: BarChar,t,
+    title: 'Advanced Analytics''',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.''',
+    benefits: ['Real-time dashboards''', 'Custom reports''', 'Data visualization''', 'Performance metrics']
+}'',
   {
-    icon: Target,
-    title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-    benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-},
+    icon: Targe,t,
+    title: 'Precision Targeting''',
+      description: 'Target specific goals and objectives with precision and accuracy.''',
+    benefits: ['Goal tracking''', 'Performance optimization''', 'Strategic planning''', 'Success metrics']
+}'',
   {
     icon: TrendingUp,
     title: 'Growth Optimization',
@@ -32,10 +32,10 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
     benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
   ]
   const benefits = [
-  'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
+  'Increase efficiency by up to 50%''',
+    'Reduce costs by 30% with automation''',
+    'Improve decision-making with AI insights''',
+    'Scale operations without proportional staff increases''',
     'Gain competitive advantage with advanced technology'
   ]
   return (
@@ -94,12 +94,9 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
                         {benefit}</CheckCircle>
                       </li>
                     ))}
-                  </ul>
-                </div>
+                  </ul></div>
               ))}
-            </div>
-          </div>
-        </section>
+            </div></div></section>
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5"></section>
           <div className="max-w-7xl mx-auto"></div>
@@ -117,9 +114,7 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
+            </div></div></section>
         {/* CTA Section */}
         <section className="py-20 px-4"></section>
           <div className="max-w-4xl mx-auto text-center"></div>

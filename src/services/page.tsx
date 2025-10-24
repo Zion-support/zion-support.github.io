@@ -1,8 +1,8 @@
 "use client"
 
-import React from "react";
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import React from "react""",
+import Navigation from '../components/Navigation''',
+import Footer from '../components/Footer''',
 
 export default function ServicesPage() {
   return (
@@ -24,8 +24,8 @@ export default function ServicesPage() {
 import React from 'react';
 import Head from "next/head";
 
-import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import Link from 'next/link''',
+import { ArrowRight } from 'lucide-react''',
 
 export default function ServicesPage() {
   return (
