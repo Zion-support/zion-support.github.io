@@ -1,9 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 =======
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 import { Helmet } from 'react-helmet-async';
 import { Code } from 'lucide-react';
 import { ArrowRight } from "lucide-react";

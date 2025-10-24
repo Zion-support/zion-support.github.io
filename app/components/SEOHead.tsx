@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -7,6 +8,12 @@ interface SeoheadProps {
   children?: React.ReactNode;
 }
 export default function Seohead({ className = '', children, ...props }: SeoheadProps) {
+=======
+'use client';
+import React from "react";
+
+const SEOHead: React.FC = () => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
   return (
     <div className={`seohead-component ${className}`} {...props}>
       {children}

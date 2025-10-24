@@ -1,7 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
+=======
+'use client';
+import React from "react";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 
 const PerformanceDashboard: React.FC = () => {
   return (

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 const Component: React.FC = () => {
 'use client';
@@ -7,6 +8,10 @@ const Component: React.FC = () => {
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+'use client';
+import React from "react";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 
 <<<<<<< HEAD
 const OptimizedImage: React.FC = () => {

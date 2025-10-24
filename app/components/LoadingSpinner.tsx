@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -16,6 +17,10 @@ export default function Loadingspinner({ className = '', children, ...props }: L
 =======
 'use client'
 import React from 'react'
+=======
+'use client';
+import React from "react";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg'

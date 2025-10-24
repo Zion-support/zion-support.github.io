@@ -110,10 +110,54 @@ function App() {
   };
 
   useEffect(() => {
+<<<<<<< HEAD
     
     // Initialize performance monitoring
     if (typeof window !== 'undefined') {
       console.log('Zion Tech Group App initialized');
+=======
+    // Register service worker
+    if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
+      navigator.serviceWorker.register('/sw.js')
+        .then(() => {
+          // Service worker registered successfully
+        })
+        .catch(() => {
+          // Service worker registration failed
+        });
+    }
+
+    // Preload critical resources
+    const preloadCriticalResources = () => {
+      // Preload critical CSS
+      const criticalCSS = document.createElement('link');
+      criticalCSS.rel = 'preload';
+      criticalCSS.href = '/app/styles/futuristic.css';
+      criticalCSS.as = 'style';
+      document.head.appendChild(criticalCSS);
+
+      // Preload critical fonts
+      const fontPreload = document.createElement('link');
+      fontPreload.rel = 'preload';
+      fontPreload.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap';
+      fontPreload.as = 'style';
+      fontPreload.crossOrigin = 'anonymous';
+      document.head.appendChild(fontPreload);
+
+      // Preload critical pages
+      const criticalPages = ['/about', '/contact', '/services'];
+      criticalPages.forEach(page => {
+        const link = document.createElement('link');
+        link.rel = 'prefetch';
+        link.href = page;
+        document.head.appendChild(link);
+      });
+    };
+
+    // Only preload in production
+    if (process.env.NODE_ENV === 'production') {
+      preloadCriticalResources();
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
     }
   }, []);
 

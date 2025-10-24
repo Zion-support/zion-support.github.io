@@ -4,6 +4,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+'use client';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 import React from "react";
 import { Helmet } from 'react-helmet-async';
 export default function BlogPage() {

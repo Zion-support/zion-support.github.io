@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 'use client';
 import React from 'react';
@@ -13,6 +14,25 @@ import React from 'react';
           <section className="text-center mb-16"></section>
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text"></h1>
               AI Data Visualization;
+=======
+'use client';
+import React from "react";
+import { Helmet } from 'react-helmet-async';
+
+
+const AiDataVisualizationPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>AI Data Visualization - Zion Tech Group</title>
+        <meta name="description" content="Transform complex data into actionable insights with AI-powered visualization tools and interactive dashboards." />
+      </Helmet>
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              AI Data Visualization
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
             </h1>
             <p className="text-xl text-cyan-400 mb-8 font-medium">)
               Transform data into actionable insights;)

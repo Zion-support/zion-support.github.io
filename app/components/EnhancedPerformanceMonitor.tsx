@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { Star } from 'lucide-react';
 import { Monitor } from 'lucide-react';
@@ -15,6 +16,10 @@ export default function Enhancedperformancemonitor({ className = '', children, .
     <div className={`enhancedperformancemonitor-component ${className}`} {...props}>
       {children}
 =======
+=======
+'use client';
+import React from "react";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 
 const EnhancedPerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({

@@ -2,6 +2,7 @@
 
 declare global {
   interface Window {
+<<<<<<< HEAD
     gtag?: (...args: any[]) => void;
     dataLayer?: any[];
   }
@@ -13,6 +14,10 @@ declare namespace NodeJS {
     NODE_ENV: 'development' | 'production' | 'test';
     NEXT_PUBLIC_GA_ID?: string;
     NEXT_PUBLIC_SITE_URL?: string;
+=======
+    gtag?: (...args: unknown[]) => void
+    dataLayer?: unknown[]
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
   }
 }
 
@@ -28,6 +33,7 @@ export interface PageProps {
 }
 
 // API response types
+<<<<<<< HEAD
 export interface ApiResponse<T = any> {
   success: boolean;
   data?: T;
@@ -47,6 +53,13 @@ export interface ContactFormData {
 export interface NewsletterFormData {
   email: string;
   name?: string;
+=======
+export interface ApiResponse<T = unknown> {
+  success: boolean
+  data?: T
+  error?: string
+  message?: string
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 }
 
 // Service types

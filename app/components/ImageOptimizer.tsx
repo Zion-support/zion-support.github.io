@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 interface ImageOptimizerProps {
   src: string;
   alt: string;

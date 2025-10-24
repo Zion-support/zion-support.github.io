@@ -26,9 +26,26 @@ export function usePerformanceMonitor() {
 
   const [state, setState] = useState<string | null>(null);
   
+<<<<<<< HEAD
   useEffect(() => {
     // Implementation here
     setState('initialized');
+=======
+  const [isMonitoringFPS, setIsMonitoringFPS] = useState(false);
+  const frameCountRef = useRef(0);
+  const lastTimeRef = useRef(performance.now());
+
+  const measureMemoryUsage = useCallback(() => {
+    if (typeof window !== 'undefined' && 'memory' in performance) {
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
+      if (memory) {
+        setMetrics(prev => ({
+          ...prev,
+          memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
+        }));
+      }
+    }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
   }, []);
   
   return state;

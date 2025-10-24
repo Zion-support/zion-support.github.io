@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 =======
 import React from 'react';
@@ -74,6 +75,9 @@ const SupportPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ];
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
+=======
+import { Helmet } from 'react-helmet-async';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 
   return (
 <<<<<<< HEAD

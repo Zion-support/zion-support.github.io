@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+// Polyfill for TextEncoder/TextDecoder
+/* eslint-disable @typescript-eslint/no-explicit-any */
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 import { TextEncoder, TextDecoder } from 'util';
 import '@testing-library/jest-dom';
 

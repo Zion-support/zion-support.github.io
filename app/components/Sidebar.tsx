@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
@@ -26,6 +27,10 @@ import { X, ChevronDown, ChevronRight, Home, Users, Settings, BarChart3, Shield,
 =======
 import { X, Home, Shield, Zap, Brain, Globe } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-04df
+=======
+'use client';
+import React from "react";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 
 interface SidebarProps {
   isOpen: boolean;

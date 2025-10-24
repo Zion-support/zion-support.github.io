@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "use client";
 
 <<<<<<< HEAD
@@ -35,7 +36,10 @@ export default function AccessibilityEnhancer() {
 =======
 
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 'use client';
+import React from "react";
 
 const AccessibilityEnhancer: React.FC = () => {useEffect(() => {
     // Add keyboard navigation support;

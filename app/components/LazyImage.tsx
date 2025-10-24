@@ -3,10 +3,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useRef, useEffect } from 'react';
 import { lazy } from 'react';
 import React from 'react';
 =======
+=======
+'use client';
+import React from "react";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 
 import {useState, useRef, useEffect} from 'react';
 import {Loader2} from 'lucide-react';

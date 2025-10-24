@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Code } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 import React from 'react';
@@ -420,6 +421,10 @@ export default SEOOptimizer
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
 =======
 import React from 'react';
+=======
+'use client';
+import React from "react";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 
 const SEOOptimizer: React.FC = () => {
   return (

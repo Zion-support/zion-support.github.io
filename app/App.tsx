@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "use client";
 import React from 'react';
 
@@ -92,6 +93,8 @@ export default function App() {
             <Suspense fallback={<LoadingSpinner />}>
               <Routes>
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 'use client';
 
 import React, { Suspense, memo } from 'react';

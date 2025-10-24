@@ -4,10 +4,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 const Component: React.FC = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 'use client';
+import React from "react";
 
 =======
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';

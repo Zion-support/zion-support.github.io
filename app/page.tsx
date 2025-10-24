@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 "use client";
 
 import React from 'react';
@@ -1479,6 +1480,11 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0314
 }
 =======
+=======
+'use client';
+import React from "react";
+import { Brain, Zap, Shield, Globe } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 import { Helmet } from 'react-helmet-async';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';

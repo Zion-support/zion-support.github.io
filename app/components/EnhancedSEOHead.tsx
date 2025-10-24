@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10,7 +11,10 @@ interface SEOHeadProps {
 =======
 export default SEOHead;
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 'use client';
+import React from "react";
 
 import React from 'react';
 import {Helmet} from 'react-helmet-async';

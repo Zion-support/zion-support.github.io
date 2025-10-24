@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -105,6 +106,10 @@ const ConsultationPage: React.FC = () => {
 const Component: React.FC = () => {
 'use client';
 import React from 'react';
+=======
+'use client';
+import React from "react";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 import { Helmet } from 'react-helmet-async';
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function Page() {
 =======
 import React from 'react';
@@ -161,6 +162,11 @@ import { Brain, Shield, Globe, ArrowRight, CheckCircle, Star, Users, Award, Cloc
 
 export default function MicroSaasPage() {
 =======
+=======
+'use client';
+import React from "react";
+import { Helmet } from 'react-helmet-async';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
