@@ -4,7 +4,6 @@ import Footer from './Footer';
 import Navigation from './Navigation';
 import { Helmet     ;} from 'react-helmet-async';
 import { ArrowRight, CheckCircle     ;} from 'lucide-react';
-=======
 'use client';
 import Navigation from './Navigation';
 import { Helmet     ;} from 'react-helmet-async';

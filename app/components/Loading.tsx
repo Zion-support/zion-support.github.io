@@ -1,13 +1,8 @@
-<<<<<<< HEAD
 const Loading: React.FC = () => {
 return(<div>
-=======
-'use client';
->>>>>>> 25500927562937ed05befe3bb53e25b2bd9a2d81
 
 import React from 'react';
 
-<<<<<<< HEAD
         <title>Loading</title>
         <meta name="description" content="Advanced Loading solution for modern businesses." / />
         <meta name="keywords" content="AI,artificial, intelligence, Loading, AI, solutions, intelligent automation" / />
@@ -78,11 +73,6 @@ Start Your Free Trial</button>
   );
 ,}  )};
 export default Loading;
-=======
-interface LoadingProps {
-  size?: 'sm' | 'md' | 'lg';
-  className?: string;
->>>>>>> 25500927562937ed05befe3bb53e25b2bd9a2d81
 }
 
 const Loading: React.FC<LoadingProps> = ({ size = 'md', className = '' }) => {

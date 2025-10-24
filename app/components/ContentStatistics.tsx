@@ -8,7 +8,6 @@ import { ArrowRight, Brain, BarChart, Target, TrendingUp     ;} from 'lucide-rea
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings     ;} from 'lucide-react';
-const ContentStatistics: "React.FC = () => {",=======;
 import React from 'react';
 import Helmet  from 'react-helmet-async';
 import ArrowRight Brain BarChart Target TrendingUp  from 'lucide-react';
@@ -255,7 +254,6 @@ View Case Studies
   </div>
   </div>
 )
-=======
   )
 ,;}
         <><divclassName="mt-16 text-center" / />,

@@ -54,7 +54,6 @@ page_title: "pageName",page_location: "window.location.href",})
     </AnalyticsContext></AnalyticsContext.Provider>)
   )
 }
-=======
 consttrackEvent= (
 eventName: "string",parameters?: Record<string, unknown />
   ) => {

@@ -118,7 +118,6 @@ onLoad = {handleLoad,}
 onError = {handleError,}
 {...props})
 >)</img></img>
-=======
 >),
     <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: "</span>Failed to load image</span>)
 

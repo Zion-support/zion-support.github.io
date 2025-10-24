@@ -1,14 +1,11 @@
-<<<<<<< HEAD
 'use client';
 
-=======
->>>>>>> 25500927562937ed05befe3bb53e25b2bd9a2d81
 import React from 'react';
 import Link from 'next/link';
+import { Home, ArrowLeft, RefreshCw } from 'lucide-react';
 
 export default function NotFound() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
         <span className="text-8xl font-bold text-white mb-4">404</span>
@@ -38,16 +35,6 @@ export default function NotFound() {
             <RefreshCw className="w-5 h-5 mr-2" />
             Refresh
           </button>
-=======
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
-      <div className="max-w-md w-full text-center">
-        <div className="mb-8">
-          <h1 className="text-9xl font-bold text-gray-300">404</h1>
-          <h2 className="text-2xl font-semibold text-gray-700 mb-4">Page Not Found</h2>
-          <p className="text-gray-600 mb-8">
-            Sorry, we couldn't find the page you're looking for.
-          </p>
->>>>>>> 25500927562937ed05befe3bb53e25b2bd9a2d81
         </div>
         <Link
           href="/"

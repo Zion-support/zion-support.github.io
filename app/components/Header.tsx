@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 import React from 'react';
 import Navigation from './Navigation';
 import { ArrowRight, CheckCircle     ;} from 'lucide-react';
@@ -69,13 +68,6 @@ Powerful AI-driven features designed to transform your business operations
                         <CheckCircleclassName="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" / />
                         {benefit,}
                       </li>
-=======
-import React, { useState } from 'react';
-import Link from 'next/link';
-
-export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
->>>>>>> 25500927562937ed05befe3bb53e25b2bd9a2d81
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
@@ -151,7 +143,6 @@ export default function Header() {
               </Link>
             </nav>
           </div>
-<<<<<<< HEAD
         </section>
         {/* Benefits Section */}
 <section className="py-20 px-4 bg-white/5">,
@@ -202,12 +193,6 @@ export default HeaderPage;
 }
 ;
 export default Header;
-=======
-
-=======
-        )}
-      </div>
->>>>>>> 25500927562937ed05befe3bb53e25b2bd9a2d81
     </header>
   );
 }
