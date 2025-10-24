@@ -55,14 +55,14 @@ const DemoPage: React.FC = () => {
                         : 'bg-white/10 hover: bg-white/20 border-2 border-transparent'}`}
                   >
                     <div className="flex items-center mb-4">
-                      {demo.icon}
+                      <demo.icon className="w-6 h-6 text-cyan-400" />
                       <h3 className="text-xl font-bold text-white ml-3">{demo.title}</h3>
                     </div>
                     <p className="text-gray-300 mb-4">{demo.description}</p>
                     <ul className="space-y-2">
                       {demo.features.map((feature, index) => (
                         <li key={index} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-8 h-8" />
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                           {feature}
                         </li>
                       ))}
@@ -83,7 +83,7 @@ const DemoPage: React.FC = () => {
                 <div className="bg-black/50 rounded-lg p-8 mb-8">
                   <div className="flex items-center justify-center h-64 bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg">
                     <div className="text-center">
-                      <Play className="w-8 h-8" />
+                      <Play className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                       <h3 className="text-xl font-bold text-white mb-2">Demo Coming Soon</h3>
                       <p className="text-gray-400">
                         This interactive demo is currently under development. Contact us to schedule a live demonstration.
@@ -92,9 +92,9 @@ const DemoPage: React.FC = () => {
                   </div>
                 </div>
                 <div className="text-center">
-                  <button className="bg-gradient-to-r from-cyan-500 to-purple-500 hover: from-cyan-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center mx-auto">
+                  <button className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center mx-auto">
                     Schedule Live Demo
-                    <ArrowRight className="w-8 h-8" />
+                    <ArrowRight className="w-5 h-5 ml-2" />
                   </button>
                 </div>
               </div>
@@ -110,9 +110,9 @@ const DemoPage: React.FC = () => {
                 Contact our team to schedule a personalized demonstration of our AI and IT solutions.
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-cyan-500 to-purple-500 hover: from-cyan-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+                <button className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
                   Contact Us
-                  <ArrowRight className="w-8 h-8" />
+                  <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
                 <button className="border-2 border-white text-white hover: bg-white hover:text-gray-900 font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center">
                   Learn More
