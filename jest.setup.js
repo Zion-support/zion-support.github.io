@@ -1,49 +1,8 @@
 
 // Polyfills for Node.js environment
+const { TextEncoder, TextDecoder } = require('util');
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
-
-// Mock files that use import.meta.env
-jest.mock('./src/utils/logger.ts', () => ({
-  logger: {
-    debug: jest.fn(),
-    info: jest.fn(),
-    warn: jest.fn(),
-    error: jest.fn(),
-    log: jest.fn(),
-  },
-}));
-
-jest.mock('./src/utils/analytics.ts', () => ({
-  trackEvent: jest.fn(),
-  trackPageView: jest.fn(),
-  initAnalytics: jest.fn(),
-}));
-
-jest.mock('./src/utils/errorTracking.ts', () => ({
-  reportError: jest.fn(),
-  initErrorReporting: jest.fn(),
-}));
-
-jest.mock('./src/hooks/usePerformance.ts', () => ({
-  usePerformance: jest.fn(() => ({
-    metrics: {},
-    optimize: jest.fn(),
-  })),
-}));
-
-jest.mock('./src/hooks/usePerformanceMonitoring.ts', () => ({
-  usePerformanceMonitoring: jest.fn(() => ({
-    metrics: {},
-    report: {},
-  })),
-}));
-
-jest.mock('./app/utils/seoData.ts', () => ({
-  getSEOData: jest.fn(),
-  generateStructuredData: jest.fn(),
-  initSEO: jest.fn(),
-}));
 
 // Mock Next.js router
 jest.mock('next/router', () => ({
