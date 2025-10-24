@@ -3,76 +3,7 @@ import fs from 'fs';'import path from 'path';'export {fixFileContent, processFil
 // Function to fix common parsing errors;
 function fixFileContent(content) {let fixed = content;
 
-<<<<<<< HEAD
-  // Fix invalid escape sequences in import statements;
-  fixed = fixed.replace(/import\s+([^']+)from\s+\\'([^']+)\\'/g, "import $1 from '$2'");"'  // Fix className spacing issues (missing spaces, between, classes)
-    // Only fix if it looks like a className issue (contains common, Tailwind, patterns)
-    if (match.includes('from-') || match.includes('to-') || match.includes('bg-') ||'        match.includes('text-') || match.includes('border-') || match.includes('px-') ||'        match.includes('py-') || match.includes('mb-') || match.includes('mt-') ||'        match.includes('ml-') || match.includes('mr-') || match.includes('mx-') ||'        match.includes('pt-') || match.includes('pb-') || match.includes('pl-') ||'        match.includes('pr-') || match.includes('gap-') || match.includes('col-') ||'        match.includes('md:') || match.includes('lg:') || match.includes('sm:') ||'        match.includes('xl:') || match.includes('2xl:')) {'      return p1 + ' ' + p2 + p3;'    return match;});
-=======
-import fs from 'fs'
-import path from 'path'
-import { glob } from 'glob'
-// Function to fix emoji characters in JSX
-function fixEmojis(content) {
-  const emojiMap = {
-    '🎧': 'headphones',
-    '📈': 'trending-up',
-    '💰': 'dollar-sign',
-    '👥': 'users',
-    '📧': 'Email:',
-    '📍': 'Address:',
-    '🚀': 'rocket',
-    '⚡': 'zap',
-    '🔒': 'lock',
-    '💡': 'lightbulb',
-    '🎯': 'target',
-    '📊': 'bar-chart',
-    '🔧': 'settings',
-    '🌟': 'star',
-    '💼': 'briefcase',
-    '🎨': 'palette',
-    '📱': 'smartphone',
-    '💻': 'laptop',
-    '🌐': 'globe',
-    '🔍': 'search',
-    '📝': 'edit',
-    '✅': 'check',
-    '❌': 'x',
-    '⚠️': 'alert-triangle',
-    'ℹ️': 'info',
-    '🎉': 'party-popper',
-    '🔥': 'flame',
-    '💪': 'muscle',
-    '🎪': 'circus-tent',
-    '🎭': 'theater-masks',
-    '🎨': 'art-palette',
-    '🎵': 'music',
-    '🎬': 'film',
-    '🎮': 'gamepad',
-    '🎲': 'dice',
-    '🎯': 'bullseye',
-    '🎪': 'circus-tent',
-    '🎨': 'palette',
-    '🎵': 'music',
-    '🎬': 'film',
-    '🎮': 'gamepad',
-    '🎲': 'dice',
-    '🎯': 'target',
-    '🎪': 'circus-tent',
-    '🎨': 'palette',
-    '🎵': 'music',
-    '🎬': 'film',
-    '🎮': 'gamepad',
-    '🎲': 'dice',
-    '🎯': 'target'
-  };
-  let fixed = content
-  for (const [emoji, replacement] of Object.entries(emojiMap)) {
-    fixed = fixed.replace(new RegExp(emoji, 'g'), replacement)
-  }
-  return fixed
-}
->>>>>>> cursor/delete-records-30ea
+
 
   // Fix specific common patterns;
   fixed = fixed.replace(/from-slate-900pt-20/g, 'from-slate-900 pt-20');'  fixed = fixed.replace(/text-whitemb-6/g, 'text-white mb-6');'  fixed = fixed.replace(/text-gray-300mb-8/g, 'text-gray-300 mb-8');'  fixed = fixed.replace(/mx-autow-fit/g, 'mx-auto w-fit');'  fixed = fixed.replace(/w-5 h-5ml-2/g, 'w-5 h-5 ml-2');'  fixed = fixed.replace(/border-tborder-slate-800/g, 'border-t border-slate-800');'  fixed = fixed.replace(/px-4 sm: px-6 lg:px-8py-12/g, 'px-4 sm: px-6 lg:px-8 py-12');'  fixed = fixed.replace(/grid-cols-1 md:grid-cols-4gap-8/g, 'grid-cols-1 md: grid-cols-4 gap-8');'  fixed = fixed.replace(/col-span-1md:col-span-2/g, 'col-span-1 md: col-span-2');'

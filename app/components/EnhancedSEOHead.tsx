@@ -1,13 +1,5 @@
 'use client';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d028
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -19,326 +11,35 @@ interface EnhancedSEOHeadProps {
 }
 
 const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({ 
-<<<<<<< HEAD
-  title = 'Zion Tech Group',
-  description = 'Advanced AI and IT solutions for modern businesses',
-  keywords = 'AI, artificial intelligence, IT solutions, technology',
-  className: _className = '' 
-=======
-  title = "Zion Tech Group - AI Solutions",
-  description = "Leading provider of AI solutions and intelligent automation for modern businesses",
-  keywords = "AI, artificial intelligence, automation, business solutions, technology",
-  _className = '' 
->>>>>>> cursor/fix-errors-and-merge-to-main-d028
+
 }) => {
-=======
-=======
->>>>>>> cursor/delete-records-30ea
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+
 
 interface SEOHeadProps {
-<<<<<<< HEAD
-  title: string;
-  description: string;
-  keywords?: string[];
-  canonicalUrl?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  noIndex?: boolean;
-  structuredData?: object;
-}
 
-const SEOHead: React.FC<SEOHeadProps> = ({
-  title,
-  description,
-  keywords = [],
-  canonicalUrl,
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  noIndex = false,
-  structuredData
-}) => {
-  const keywordsString = keywords.join(', ');
-  
->>>>>>> cursor/delete-records-bf70
-  return (
-    <Helmet>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-<<<<<<< HEAD
-      <meta name="keywords" content={keywords} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content="website" />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-=======
-      {keywordsString && <meta name="keywords" content={keywordsString} />}
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-      
-      {/* Open Graph */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:image" content={ogImage} />
-      {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
-      
-      {/* Twitter */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
-      
-      {/* Robots */}
-      {noIndex && <meta name="robots" content="noindex, nofollow" />}
-      
-      {/* Structured Data */}
-      {structuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-      )}
->>>>>>> cursor/delete-records-bf70
-=======
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
-  siteName?: string;
-  structuredData?: object;
-}
 
-const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Achieve 300% ROI with our cutting-edge AI technology.',
-  keywords = 'AI solutions, artificial intelligence, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, IT consulting',
-  image = 'https://ziontechgroup.com/og-image.jpg',
-  url = 'https://ziontechgroup.com',
-  type = 'website',
-  siteName = 'Zion Tech Group',
-  structuredData
-}) => {
-  const defaultStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.png",
-    "description": "Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services.",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "364 E Main St STE 1008",
-      "addressLocality": "Middletown",
-      "addressRegion": "DE",
-      "postalCode": "19709",
-      "addressCountry": "US"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
-    },
-    "sameAs": [
-      "https://linkedin.com/company/zion-tech-group",
-      "https://twitter.com/ziontechgroup",
-      "https://github.com/zion-tech-group"
-    ]
-  };
-
-  return (
-    <Helmet>
-      {/* Basic Meta Tags */}
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="robots" content="index, follow" />
-      <meta name="googlebot" content="index, follow" />
-      <meta name="bingbot" content="index, follow" />
-      
-      {/* Canonical URL */}
-      <link rel="canonical" href={url} />
-      
-      {/* Open Graph / Facebook */}
-      <meta property="og:type" content={type} />
-      <meta property="og:url" content={url} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content={title} />
-      <meta property="og:site_name" content={siteName} />
-      <meta property="og:locale" content="en_US" />
-      
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:url" content={url} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-      <meta name="twitter:image:alt" content={title} />
-      <meta name="twitter:creator" content="@ziontechgroup" />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      
-      {/* Additional SEO Meta Tags */}
-      <meta name="theme-color" content="#00ffff" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-      
-      {/* Business Information */}
-      <meta name="contact" content="kleber@ziontechgroup.com" />
-      <meta name="phone" content="+1-302-464-0950" />
-      <meta name="address" content="364 E Main St STE 1008, Middletown, DE 19709" />
-      
-      {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(structuredData || defaultStructuredData)}
-      </script>
->>>>>>> cursor/delete-records-30ea
     </Helmet>
   );
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default EnhancedSEOHead;
-=======
-export default EnhancedSEOHead;
->>>>>>> cursor/fix-errors-and-merge-to-main-d028
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle } from 'lucide-react';
-import Navigation from './Navigation';
-import Footer from './Footer';
 
-interface EnhancedSEOHeadProps {
-  className?: string;
-  title?: string;
-  description?: string;
-  keywords?: string;
-}
 
-const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({ 
-  title = 'Enhanced SEO Head - Zion Tech Group',
-  description = 'Advanced SEO optimization solutions powered by AI',
-  keywords = 'SEO, search engine optimization, AI, digital marketing'
-}) => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Analysis',
-      description: 'Advanced algorithms analyze your content and suggest optimizations',
-      benefits: ['Keyword optimization', 'Content analysis', 'Performance tracking']
-    },
-    {
-      icon: BarChart,
-      title: 'Analytics Dashboard',
-      description: 'Comprehensive insights into your SEO performance',
-      benefits: ['Real-time metrics', 'Competitor analysis', 'Trend monitoring']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target the right keywords and audiences for maximum impact',
-      benefits: ['Keyword research', 'Audience targeting', 'Conversion optimization']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Tracking',
-      description: 'Monitor your progress and see measurable results',
-      benefits: ['Performance metrics', 'ROI tracking', 'Growth analytics']
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, CheckCircle } from 'lucide-react';
-import Navigation from './Navigation';
-import Footer from './Footer';
-
-interface EnhancedSEOHeadProps {
-  className?: string;
-  title?: string;
-}
-
-const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({ 
-  className = '', 
-  title = 'Zion Tech Group - AI & IT Solutions' 
-}) => {
-  const features = [
-    {
-      icon: ArrowRight,
-      title: 'AI Analytics',
-      description: 'Advanced analytics powered by artificial intelligence',
-      benefits: ['Real-time insights', 'Predictive modeling', 'Data visualization']
-    },
-    {
-      icon: CheckCircle,
-      title: 'Automation',
-      description: 'Streamline your business processes',
-      benefits: ['Workflow automation', 'Task optimization', 'Efficiency gains']
->>>>>>> cursor/fix-errors-and-merge-to-main-6d59
-    }
   ];
 
   const benefits = [
-<<<<<<< HEAD
-    'Increase organic traffic by up to 300%',
-    'Improve search engine rankings',
-    'Boost conversion rates',
-    'Save time with automated optimization',
-    'Get detailed performance insights',
-    'Stay ahead of algorithm changes'
-=======
-    'Increase productivity by 300%',
-    'Reduce operational costs by 50%',
-    'Improve decision making with AI insights',
-    'Scale your business effortlessly',
-    '24/7 automated support',
-    'Enterprise-grade security'
->>>>>>> cursor/fix-errors-and-merge-to-main-6d59
-  ];
+
 
   return (
     <>
       <Helmet>
         <title>{title}</title>
-<<<<<<< HEAD
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
-      </Helmet>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-=======
-        <meta name="description" content="Zion Tech Group - Leading provider of AI and IT solutions for modern businesses" />
-        <meta name="keywords" content="AI, artificial intelligence, IT solutions, automation, analytics, business intelligence" />
-      </Helmet>
-      <Navigation />
-      <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900 ${className}`}>
->>>>>>> cursor/fix-errors-and-merge-to-main-6d59
+
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-<<<<<<< HEAD
-              Enhanced SEO Head
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced SEO optimization solutions powered by AI technology
-=======
-              AI-Powered Solutions
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Transform your business with cutting-edge AI and IT solutions
->>>>>>> cursor/fix-errors-and-merge-to-main-6d59
+
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
@@ -347,9 +48,7 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Learn More
-              </button>
             </div>
-          </div>
         </section>
 
         {/* Features Section */}
@@ -359,8 +58,6 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Powerful AI-driven features designed to transform your SEO strategy
-              </p>
-            </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
@@ -375,127 +72,29 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
                       </li>
                     ))}
                   </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience the benefits of cutting-edge AI technology
-              </p>
-            </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-4">
                   <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
-<<<<<<< HEAD
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your SEO?</h2>
-=======
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
->>>>>>> cursor/fix-errors-and-merge-to-main-6d59
+
             <p className="text-xl text-gray-300 mb-8">
               Join thousands of businesses already using our AI-powered SEO solutions
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Start Free Trial
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Contact Sales
-              </button>
-            </div>
-          </div>
-        </section>
-      </div>
       <Footer />
     </>
-  );
-};
 
-<<<<<<< HEAD
-export default EnhancedSEOHead;
->>>>>>> cursor/fix-errors-and-merge-to-main-ac10
-=======
-export default EnhancedSEOHead;
->>>>>>> cursor/fix-errors-and-merge-to-main-6d59
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
-interface SEOHeadProps {
-  title: string;
-  description: string;
-  keywords?: string[];
-  canonicalUrl?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: object;
-}
 
-const SEOHead: React.FC<SEOHeadProps> = ({
-  title,
-  description,
-  keywords = [],
-  canonicalUrl,
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  structuredData
-}) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  
-  return (
-    <Helmet>
-      <title>{fullTitle}</title>
-      <meta name="description" content={description} />
-      {keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-      
-      {/* Open Graph */}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:image" content={ogImage} />
-      {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
-      
-      {/* Twitter */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
-      
-      {/* Structured Data */}
-      {structuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-      )}
-    </Helmet>
-  );
-};
 
-export default SEOHead;
->>>>>>> cursor/delete-records-acd8
-=======
-export default SEOHead;
->>>>>>> cursor/delete-records-bf70
-=======
-export default EnhancedSEOHead;
->>>>>>> cursor/delete-records-30ea
+

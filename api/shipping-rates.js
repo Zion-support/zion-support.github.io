@@ -14,44 +14,7 @@ export default async function handler(req, res) {
       serviceType = 'standard' 
     } = req.body || {};
 
-<<<<<<< HEAD
-    if (!destination || !weight) {
-      res.statusCode = 400;
-      res.setHeader('Content-Type', 'application/json');
-      res.end(JSON.stringify({ 
-        error: 'Destination and weight are required' 
-      }));
-      return;
-=======
-  // Calculate shipping rates based on destination and weight
-  const baseRate = 10
-  const weightMultiplier = weight * 0.5
-  const distanceMultiplier = destination === 'US' ? 1 : 1.5
-  const totalRate = Math.round((baseRate + weightMultiplier) * distanceMultiplier * 100) / 100
-  const newRate = {
-    id: Date.now().toString(),
-    destination,
-    weight,
-    dimensions,
-    rate: totalRate,
-    timestamp: new Date().toISOString()
-  };
-  existing.push(newRate)
-  try {
-    fs.writeFileSync(file, JSON.stringify(existing, null, 2))
-    res.statusCode = 200
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ 
-      success: true, 
-      rate: totalRate,
-      id: newRate.id
-    }))
-  } catch (error) {
-    // Log error for debugging in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error saving shipping rate:', error)
->>>>>>> cursor/delete-records-30ea
-    }
+
 
     // Mock shipping rates calculation
     // In a real application, you would integrate with shipping providers like UPS, FedEx, etc.
@@ -65,20 +28,15 @@ export default async function handler(req, res) {
         cost: Math.round((baseRate + weightMultiplier) * distanceMultiplier * 100) / 100,
         estimatedDays: destination === 'US' ? '3-5' : '7-14'
       },
-      {
         service: 'Express',
         cost: Math.round((baseRate + weightMultiplier) * distanceMultiplier * 1.5 * 100) / 100,
         estimatedDays: destination === 'US' ? '1-2' : '3-7'
-      },
-      {
         service: 'Overnight',
         cost: Math.round((baseRate + weightMultiplier) * distanceMultiplier * 2 * 100) / 100,
         estimatedDays: destination === 'US' ? '1' : '2-3'
-      }
     ];
 
     res.statusCode = 200;
-    res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({
       success: true,
       rates: shippingRates
@@ -87,7 +45,4 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error('Shipping rates error:', error);
     res.statusCode = 500;
-    res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Internal server error' }));
-  }
-}

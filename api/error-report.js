@@ -19,25 +19,4 @@ export default function handler(req, res) {
     
     res.status(200).json({ 
       success: true, 
-<<<<<<< HEAD
-      message: 'Error reported successfully' 
-    });
-  } catch (err) {
-    console.error('Error processing error report:', err);
-    res.status(500).json({ error: 'Failed to process error report' });
-=======
-      message: 'Error report received',
-      timestamp: new Date().toISOString()
-    }));
 
-  } catch (error) {
-    console.error('Error in error reporting handler:', error);
-    res.statusCode = 500;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      error: 'Failed to process error report',
-      details: process.env.NODE_ENV === 'development' ? error.message : undefined
-    }));
->>>>>>> cursor/delete-records-30ea
-  }
-}

@@ -19,35 +19,7 @@ const problematicPages = [
 
 function fixPage(filePath) {
   try {
-<<<<<<< HEAD
-    if (!fs.existsSync(filePath)) {
-      console.log(`File not found: ${filePath}`);
-      return false;
-=======
-    // Remove any broken metadata lines
-    for (let i = 0; i < lines.length; i++) {
 
-      // Skip lines that look like broken metadata
-      if (
-        line.includes('const metadata: Metadata = {') ||
-        line.includes('const metadata = {') ||
-        (line.includes('title:') && !line.includes('<title>') && !line.includes('//')) ||
-        (line.includes('description:') && !line.includes('<meta') && !line.includes('//')) ||
-        (line.includes('type:') && !line.includes('<meta') && !line.includes('//')) ||
-        (line.includes('url:') && !line.includes('<meta') && !line.includes('//')) ||
-        (line.includes('keywords:') && !line.includes('<meta') && !line.includes('//')) ||,
-        (line.includes('openGraph:') && !line.includes('//')) ||,
-        (line.includes('twitter:') && !line.includes('<meta') && !line.includes('//')) ||,
-        (line.includes('images:') && !line.includes('<meta') && !line.includes('//')) ||,
-        (line.trim() === '{' && i > 0 && lines[i - 1].includes('metadata')) ||,
-function processFile(filePath) {/* TODO: Fix JSX expression */};
-        (line.trim() === '},' && i > 0 && lines[i - 1].includes('metadata')) ||
-        (line.trim() === '};' && i > 0 && lines[i - 1].includes('metadata'))
-      ) {/* TODO: Fix JSX expression */}
-      }
-
-      filteredLines.push(line)
->>>>>>> cursor/delete-records-30ea
     }
 
     let content = fs.readFileSync(filePath, 'utf8');
@@ -56,7 +28,6 @@ function processFile(filePath) {/* TODO: Fix JSX expression */};
     if (content.includes('iconMap') || !content.includes('icon:')) {
       console.log(`Skipping ${filePath} - already fixed or no icons`);
       return false;
-    }
     
     console.log(`Fixing ${filePath}`);
     
@@ -64,8 +35,6 @@ function processFile(filePath) {/* TODO: Fix JSX expression */};
     const iconMatch = content.match(/import\s*\{([^}]+)\}\s*from\s*['"]lucide-react['"];?/);
     if (!iconMatch) {
       console.log(`No lucide-react imports found in ${filePath}`);
-      return false;
-    }
     
     const icons = iconMatch[1]
       .split(',')
@@ -74,8 +43,6 @@ function processFile(filePath) {/* TODO: Fix JSX expression */};
     
     if (icons.length === 0) {
       console.log(`No icons found in ${filePath}`);
-      return false;
-    }
     
     // Create icon map
     const iconMapCode = `// Icon mapping for serialization
@@ -96,9 +63,6 @@ const iconMap = {
     return true;
   } catch (error) {
     console.error(`❌ Error fixing ${filePath}:`, error.message);
-    return false;
-  }
-}
 
 // Main execution
 console.log('Starting to fix remaining pages...');
@@ -107,7 +71,5 @@ let fixedCount = 0;
 for (const page of problematicPages) {
   if (fixPage(page)) {
     fixedCount++;
-  }
-}
 
 console.log(`\nFixed ${fixedCount} pages`);
