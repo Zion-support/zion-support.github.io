@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 export default function APIDocsPage() {
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, _setSearchQuery] = useState('');
 
   const apiEndpoints = [
     {
