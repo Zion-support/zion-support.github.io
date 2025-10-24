@@ -1,41 +1,36 @@
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import Navigation from './components/Navigation'
-import Footer from './components/Footer'
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 
 const EnhancedLoadingSkeletonPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>EnhancedLoadingSkeleton - Zion Tech Group</title>
-        <meta name="description" content="Advanced enhancedloadingskeleton solution for modern businesses." />
-        <meta name="keywords" content="enhancedloadingskeleton, artificial intelligence, AI solutions, intelligent automation" />
-      </Helmet>
-      <Navigation />
-      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              EnhancedLoadingSkeleton
-            </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Advanced enhancedloadingskeleton solution powered by cutting-edge AI technology.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors">
-                Get Started
-              </button>
-              <button className="border border-blue-600 text-blue-600 hover:bg-blue-50 font-bold py-3 px-8 rounded-lg transition-colors">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </section>
-      </main>
-      <Footer />
-    </>
-  )
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    }
+  ]
 }
-
-export default EnhancedLoadingSkeletonPage

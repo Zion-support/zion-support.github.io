@@ -1,41 +1,68 @@
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Navigation from './components/Navigation'
-import Footer from './components/Footer'
+import React, { useEffect, useState, useRef } from 'react'
+import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
 
-const AnimatedCounterPage: React.FC = () => {
+interface AnimatedCounterProps {
+  className?: string;
+}
+
+const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
+  end,
+  duration = 2000,
+  suffix = '',
+  prefix = '',
+  className = '',
+}) => {
+  const [count, setCount] = useState(0)
+  const [isVisible, setIsVisible] = useState(false)
+  const [setNode, entry] = useIntersectionObserver({
+    threshold: 0.5
+  })
+
+  useEffect(() => {
+    if (entry?.isIntersecting && !isVisible) {
+      setIsVisible(true)
+    }
+  }, [entry, isVisible])
+
+  useEffect(() => {
+    if (!isVisible) return
+
+    let startTime: number
+    let animationFrame: number
+
+    const animate = (currentTime: number) => {
+      if (!startTime) startTime = currentTime
+      const progress = Math.min((currentTime - startTime) / duration, 1)
+
+      // Easing function for smooth animation
+      const easeOutQuart = 1 - Math.pow(1 - progress, 4)
+      const currentCount = Math.floor(easeOutQuart * end)
+
+      setCount(currentCount)
+
+      if (progress < 1) {
+        animationFrame = requestAnimationFrame(animate)
+      }
+    }
+
+    animationFrame = requestAnimationFrame(animate)
+
+    return () => {
+      if (animationFrame) {
+        cancelAnimationFrame(animationFrame)
+      }
+    }
+  }, [isVisible, end, duration])
+
   return (
-    <>
-      <Helmet>
-        <title>AnimatedCounter - Zion Tech Group</title>
-        <meta name="description" content="Advanced animatedcounter solution for modern businesses." />
-        <meta name="keywords" content="animatedcounter, artificial intelligence, AI solutions, intelligent automation" />
-      </Helmet>
-      <Navigation />
-      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              AnimatedCounter
-            </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Advanced animatedcounter solution powered by cutting-edge AI technology.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors">
-                Get Started
-              </button>
-              <button className="border border-blue-600 text-blue-600 hover:bg-blue-50 font-bold py-3 px-8 rounded-lg transition-colors">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </section>
-      </main>
-      <Footer />
-    </>
+    <span ref={setNode} className={className}>
+      {prefix}{count.toLocaleString()}{suffix}
+    </span>
   )
 }
 
-export default AnimatedCounterPage
+export default AnimatedCounter
+  );
+};
+
+export default AnimatedCounterPage;

@@ -1,41 +1,82 @@
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Navigation from './components/Navigation'
-import Footer from './components/Footer'
+import React, { createContext, useContext, useEffect, ReactNode } from "react"
 
-const AnalyticsProviderPage: React.FC = () => {
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void
+  }
+}
+
+interface AnalyticsContextType {
+  trackEvent: (eventName: string, parameters?: Record<string, unknown>) => void
+  trackPageView: (pageName: string) => void
+}
+
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
+  undefined,
+)
+
+export const useAnalytics = () => {
+  const context = useContext(AnalyticsContext)
+  if (!context) {
+    throw new Error("useAnalytics must be used within an AnalyticsProvider")
+  }
+  return context
+}
+
+interface AnalyticsProviderProps {
+  children: ReactNode
+}
+
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      // Google Analytics
+      if (process.env.NODE_ENV === "production") {
+        const script = document.createElement("script")
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_MEASUREMENT_ID}`
+        script.async = true
+        document.head.appendChild(script)
+
+        window.gtag =
+          window.gtag ||
+          function (...args: any[]) {
+            (window.gtag as any).q = (window.gtag as any).q || []
+            (window.gtag as any).q.push(args)
+          }
+        window.gtag("js", new Date())
+        window.gtag("config", process.env.REACT_APP_GA_MEASUREMENT_ID || "")
+      }
+    }
+  }, [])
+
+  const trackEvent = (
+    eventName: string,
+    parameters?: Record<string, unknown>,
+  ) => {
+    if (typeof window !== "undefined" && window.gtag) {
+      window.gtag("event", eventName, parameters)
+    }
+  }
+
+  const trackPageView = (pageName: string) => {
+    if (typeof window !== "undefined" && window.gtag) {
+      window.gtag("config", "GA_MEASUREMENT_ID", {
+        page_title: pageName,
+        page_location: window.location.href,
+      })
+    }
+  }
+
+  const value: AnalyticsContextType = {
+    trackEvent,
+    trackPageView,
+  }
+
   return (
-    <>
-      <Helmet>
-        <title>AnalyticsProvider - Zion Tech Group</title>
-        <meta name="description" content="Advanced analyticsprovider solution for modern businesses." />
-        <meta name="keywords" content="analyticsprovider, artificial intelligence, AI solutions, intelligent automation" />
-      </Helmet>
-      <Navigation />
-      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              AnalyticsProvider
-            </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Advanced analyticsprovider solution powered by cutting-edge AI technology.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors">
-                Get Started
-              </button>
-              <button className="border border-blue-600 text-blue-600 hover:bg-blue-50 font-bold py-3 px-8 rounded-lg transition-colors">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </section>
-      </main>
-      <Footer />
-    </>
+    <AnalyticsContext.Provider value={value}>
+      {children}
+    </AnalyticsContext.Provider>
   )
 }
 
-export default AnalyticsProviderPage
+export default AnalyticsProvider

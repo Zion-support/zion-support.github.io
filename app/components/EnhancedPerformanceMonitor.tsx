@@ -1,41 +1,19 @@
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import Navigation from './components/Navigation'
-import Footer from './components/Footer'
+import { ArrowRight, Brain } from 'lucide-react'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+import { Phone, Mail } from 'lucide-react'
 
-const EnhancedPerformanceMonitorPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>EnhancedPerformanceMonitor - Zion Tech Group</title>
-        <meta name="description" content="Advanced enhancedperformancemonitor solution for modern businesses." />
-        <meta name="keywords" content="enhancedperformancemonitor, artificial intelligence, AI solutions, intelligent automation" />
-      </Helmet>
-      <Navigation />
-      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              EnhancedPerformanceMonitor
-            </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Advanced enhancedperformancemonitor solution powered by cutting-edge AI technology.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors">
-                Get Started
-              </button>
-              <button className="border border-blue-600 text-blue-600 hover:bg-blue-50 font-bold py-3 px-8 rounded-lg transition-colors">
-                Learn More
-              </button>
+    }
+  ]
+
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             </div>
           </div>
-        </section>
-      </main>
-      <Footer />
-    </>
-  )
-}
-
-export default EnhancedPerformanceMonitorPage

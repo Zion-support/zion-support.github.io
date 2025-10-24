@@ -37,5 +37,3 @@ const pagePage: React.FC = () => {
     </>
   )
 }
-
-export default pagePage

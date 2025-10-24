@@ -10,33 +10,6 @@ function fixMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
-    if (!content.includes('<<<<<<< HEAD') && !content.includes('=======') && !content.includes('>>>>>>>')) {
-      return false; // No conflicts to fix
-    }
-    
-    console.log(`Fixing merge conflicts in: ${filePath}`);
-    
-    // Remove merge conflict markers and keep the HEAD version
-    const lines = content.split('\n');
-    const fixedLines = [];
-    let inConflict = false;
-    let keepHead = false;
-    
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      
-      if (line.includes('<<<<<<< HEAD')) {
-        inConflict = true;
-        keepHead = true;
-        continue;
-      }
-      
-      if (line.includes('=======')) {
-        keepHead = false;
-        continue;
-      }
-      
-      if (line.includes('>>>>>>>')) {
         inConflict = false;
         keepHead = false;
         continue;
