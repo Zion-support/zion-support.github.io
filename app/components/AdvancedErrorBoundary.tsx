@@ -19,20 +19,21 @@ interface State {
   errorId?: string
 }
 
-class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State> {
-  constructor(props: AdvancedErrorBoundaryProps) {
+interface ErrorReport {
+  errorId: string
+  error: Error
+}
+class AdvancedErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
     super(props)
     this.state = { hasError: false }
-  }
-
-  private generateErrorId = (): string => {
-    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
   }
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     const errorReport: ErrorReport = {
       errorId: this.state.errorId || this.generateErrorId(),
       error,
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     }
     // You can send this to your error reporting service
     console.error('Error Report:', errorReport)
@@ -56,7 +57,7 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
     
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo)
+      // // console.error('Error caught by boundary:', error, errorInfo)
     }
     
     // Log error to external service in production
@@ -71,83 +72,50 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
       error: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,
-      timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent,
-      url: window.location.href
+      timestamp: new Date().toISOString()
     }
     
-    // Example: Send to your error reporting service
-    // fetch('/api/error-report', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify(errorData)
-    // })
-  }
-
-  handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined })
-  }
-
-  handleGoHome = () => {
-    window.location.href = '/'
-  }
-
-  handleReportError = () => {
-    if (this.state.error) {
-      this.reportError(this.state.error, this.state.errorInfo!)
-    }
+    console.error('Error logged:', errorData)
   }
 
   render() {
     if (this.state.hasError) {
       return (
-        <div className={`min-h-screen bg-gradient-to-br from-red-900 via-gray-900 to-red-900 flex items-center justify-center p-4 ${this.props.className || ''}`}>
-          <div className="max-w-2xl w-full text-center">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-red-500/30">
-              <div className="flex items-center justify-center mb-6">
-                <AlertTriangle className="w-16 h-16 text-red-400" />
-              </div>
-              
-              <h1 className="text-3xl font-bold text-white mb-4">Something went wrong</h1>
-              <p className="text-gray-300 mb-6">
-                We&apos;re sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
-              </p>
-              
-              {process.env.NODE_ENV === 'development' && this.state.error && (
-                <div className="bg-red-900/50 rounded-lg p-4 mb-6 text-left">
-                  <h3 className="text-red-300 font-semibold mb-2">Error Details:</h3>
-                  <pre className="text-red-200 text-sm overflow-auto">
-                    {this.state.error.message}
-                    {this.state.error.stack}
-                  </pre>
-                </div>
-              )}
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button
-                  onClick={this.handleRetry}
-                  className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"
-                >
-                  <RefreshCw className="w-5 h-5 mr-2" />
-                  Try Again
-                </button>
-                
-                <button
-                  onClick={this.handleGoHome}
-                  className="border border-white text-white hover:bg-white hover:text-gray-900 px-6 py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"
-                >
-                  <Home className="w-5 h-5 mr-2" />
-                  Go Home
-                </button>
-                
-                <button
-                  onClick={this.handleReportError}
-                  className="border border-red-400 text-red-400 hover:bg-red-400 hover:text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"
-                >
-                  <Mail className="w-5 h-5 mr-2" />
-                  Report Issue
-                </button>
-              </div>
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
+            <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full mb-4">
+              <AlertTriangle className="w-6 h-6 text-red-600" />
+            </div>
+            <h1 className="text-xl font-semibold text-gray-900 text-center mb-2">
+              Something went wrong
+            </h1>
+            <p className="text-gray-600 text-center mb-6">
+              We&apos;re sorry, but something unexpected happened. Please try refreshing the page.
+            </p>
+            <div className="flex space-x-3">
+              <button
+                onClick={() => window.location.reload()}
+                className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors flex items-center justify-center"
+              >
+                <RefreshCw className="w-4 h-4 mr-2" />
+                Refresh Page
+              </button>
+              <button
+                onClick={() => window.location.href = '/'}
+                className="flex-1 bg-gray-600 text-white px-4 py-2 rounded-md hover:bg-gray-700 transition-colors flex items-center justify-center"
+              >
+                <Home className="w-4 h-4 mr-2" />
+                Go Home
+              </button>
+            </div>
+            <div className="mt-4 text-center">
+              <button
+                onClick={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
+                className="text-sm text-blue-600 hover:text-blue-800 flex items-center justify-center mx-auto"
+              >
+                <Mail className="w-4 h-4 mr-1" />
+                Report Issue
+              </button>
             </div>
           </div>
         </div>
@@ -157,5 +125,3 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
     return this.props.children
   }
 }
-
-export default AdvancedErrorBoundary

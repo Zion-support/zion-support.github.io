@@ -62,3 +62,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
 }
 
 export default AnimatedCounter
+  );
+};
+
+export default AnimatedCounterPage;

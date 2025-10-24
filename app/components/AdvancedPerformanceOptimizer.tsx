@@ -1,5 +1,4 @@
 'use client'
-<<<<<<< HEAD
 import React, { useEffect, useState, useCallback } from 'react'
 
 interface AdvancedPerformanceOptimizerProps {
@@ -34,8 +33,9 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
   })
 
   // Web Vitals monitoring
-  useEffect(() => {if (enableWebVitals && type of windo w !== 'undefined') {
-      constmeasureWebVitals= () => {
+  useEffect(() => {
+    if (enableWebVitals && typeof window !== 'undefined') {
+      const measureWebVitals = () => {
   
         // First Contentful Paint
         new PerformanceObserver((list) => {
@@ -248,6 +248,3 @@ export default AdvancedPerformanceOptimizer
 };
 
 export default AdvancedPerformanceOptimizerPage;
-=======
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
->>>>>>> cursor/fix-errors-and-merge-to-main-b7a8

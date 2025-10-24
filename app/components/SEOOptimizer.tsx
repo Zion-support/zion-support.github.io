@@ -1,5 +1,4 @@
 'use client'
-<<<<<<< HEAD
 
 import React, { useEffect } from 'react'
 import Head from 'next/head'
@@ -156,9 +155,3 @@ export default SEOOptimizer
 };
 
 export default SEOOptimizerPage;
-=======
-    }
-  ]
-
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
->>>>>>> cursor/fix-errors-and-merge-to-main-b7a8

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, ReactNode } from "react"
 
 declare global {
@@ -50,7 +49,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     }
   }, [])
 
-  consttrackEvent= (
+  const trackEvent = (
     eventName: string,
     parameters?: Record<string, unknown>,
   ) => {
@@ -59,15 +58,17 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     }
   }
 
-  consttrackPageView= (pageName: string) => {if (type of windo w !=="undefined" && windo w.gtag) {
-      window.gtag("config","GA_MEASUREMENT_ID", {
+  const trackPageView = (pageName: string) => {
+    if (typeof window !== "undefined" && window.gtag) {
+      window.gtag("config", "GA_MEASUREMENT_ID", {
         page_title: pageName,
         page_location: window.location.href,
       })
     }
   }
 
-  constvalue: AnalyticsContextType = {trackEvent,
+  const value: AnalyticsContextType = {
+    trackEvent,
     trackPageView,
   }
 
@@ -79,9 +80,3 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
 }
 
 export default AnalyticsProvider
-  );
-};
-
-export default AnalyticsProviderPage;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b7a8

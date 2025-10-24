@@ -1,7 +1,8 @@
 import { Phone } from 'lucide-react'
 import { Home } from 'lucide-react'
 
-export default function NotFound() {constpopularPages= [
+export default function NotFound
+NotFound.displayName = "NotFound"() {constpopularPages= [
     {
       title: 'Home',
       description: 'Return to our homepage',
@@ -50,17 +51,17 @@ export default function NotFound() {constpopularPages= [
     },
   ]
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
-      <div className="max-w-2xl w-full text-center">
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4"></div>
+      <div className="max-w-2xl w-full text-center"></div>
         {/* Error Code */}
-        <div className="mb-8">
+        <div className="mb-8"></div>
           <h1 className="text-9xl font-bold text-white/20 mb-4">
             404
           </h1>
           <div className="text-6xl mb-4">🔍</div>
         </div>
         {/* Error Message */}
-        <div className="mb-12">
+        <div className="mb-12"></div>
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             Page Not Found
           </h2>
@@ -84,7 +85,7 @@ export default function NotFound() {constpopularPages= [
           ))}
         </div>
         {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
           <a href="/"
             className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300"
           >
