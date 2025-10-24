@@ -1,5 +1,3 @@
-'use client';
-
 import React, { useEffect } from 'react';
 
 const PerformanceOptimizer: React.FC = () => {
@@ -58,6 +56,10 @@ const PerformanceOptimizer: React.FC = () => {
   }, []);
 
   return null;
+};
+
+const PerformanceOptimizer = () => {
+  return (<></>);
 };
 
 export default PerformanceOptimizer;

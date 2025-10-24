@@ -1,4 +1,3 @@
-'use client';
 import { useEffect, useCallback } from 'react';
 export const usePerformanceMonitoring = () => {
   const reportWebVitals = useCallback((metric: unknown) => {

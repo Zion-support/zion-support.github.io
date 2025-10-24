@@ -1,28 +1,44 @@
 'use client';
-import React from 'react';
-import { ArrowRight } from 'lucide-react';
-import Link from 'next/link';
 
-export default function service-template() {
+import React from 'react';
+
+interface ServiceTemplateProps {
+  title: string;
+  description: string;
+  features: string[];
+}
+
+const ServiceTemplate: React.FC<ServiceTemplateProps> = ({
+  title,
+  description,
+  features
+}) => {
   return (
-    <>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">
-            Service
-          </h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Professional service services coming soon.
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-4xl mx-auto px-4">
+        <h1 className="text-3xl font-bold text-gray-900 mb-8">
+          {title}
+        </h1>
+        
+        <div className="bg-white rounded-lg shadow p-6">
+          <p className="text-gray-600 mb-6">
+            {description}
           </p>
-          <Link 
-            href="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
+          
+          <div className="grid md:grid-cols-2 gap-4">
+            {features.map((feature, index) => (
+              <div key={index} className="flex items-center space-x-2">
+                <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
+                <span className="text-gray-700">{feature}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </>
+    </div>
   );
-}
+};
+
+export default ServiceTemplate;
