@@ -47,9 +47,9 @@ const PerformanceMonitor: React.FC = () => {
       ).memory;
 
       if (navigation) {
-        currentMetrics.renderTime = navigation.domContentLoadedEventEnd - navigation.navigationStart;
-        currentMetrics.loadTime = navigation.loadEventEnd - navigation.navigationStart;
-        currentMetrics.ttfb = navigation.responseStart - navigation.navigationStart;
+        currentMetrics.renderTime = navigation.domContentLoadedEventEnd - navigation.fetchStart;
+        currentMetrics.loadTime = navigation.loadEventEnd - navigation.fetchStart;
+        currentMetrics.ttfb = navigation.responseStart - navigation.fetchStart;
       }
 
       if (memory) {
