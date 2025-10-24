@@ -3,46 +3,101 @@ const nextConfig = {
   // Use standalone output for better compatibility
   output: 'standalone',
   trailingSlash: true,
+  
+  // Image optimization
   images: {
-    unoptimized: true
+    unoptimized: true,
+    formats: ['image/webp', 'image/avif'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
+  
+  // Build optimizations
   eslint: {
-    // Warning: This allows production builds to successfully complete even if
-    // your project has ESLint errors.
     ignoreDuringBuilds: true,
   },
   typescript: {
-    // Warning: This allows production builds to successfully complete even if
-    // your project has type errors.
     ignoreBuildErrors: true,
   },
-  // Skip problematic pages for now
-  experimental: {
-    missingSuspenseWithCSRBailout: false,
-  },
-  // Optimize static generation
+  
+  // Performance optimizations
   staticPageGenerationTimeout: 60,
-  // Enable SWC minification for better performance
   swcMinify: true,
+  compress: true,
+  
   // Generate build ID for better caching
   generateBuildId: async () => {
     return 'build-' + Date.now()
   },
-  // Enable compression
-  compress: true,
-  // Enable experimental features for better performance
+  
+  // Headers for better caching and security
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'X-XSS-Protection',
+            value: '1; mode=block',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'origin-when-cross-origin',
+          },
+        ],
+      },
+      {
+        source: '/static/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+    ];
+  },
+  
+  // Experimental features for better performance
   experimental: {
     missingSuspenseWithCSRBailout: false,
-    optimizePackageImports: ['@heroicons/react', 'lucide-react'],
+    optimizePackageImports: ['@heroicons/react', 'lucide-react', 'framer-motion'],
+    webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB'],
   },
-  // Exclude problematic files temporarily
-  webpack: (config, { isServer }) => {
+  
+  // Webpack optimizations
+  webpack: (config, { isServer, dev }) => {
+    // Optimize for production
+    if (!dev) {
+      config.optimization.splitChunks = {
+        chunks: 'all',
+        cacheGroups: {
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            name: 'vendors',
+            chunks: 'all',
+          },
+        },
+      };
+    }
+    
     if (!isServer) {
       config.resolve.fallback = {
         ...config.resolve.fallback,
         fs: false,
+        net: false,
+        tls: false,
       };
     }
+    
     return config;
   },
 }
