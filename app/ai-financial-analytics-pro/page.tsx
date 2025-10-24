@@ -220,59 +220,6 @@ export default function AiFinancialAnalyticsProPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-      <div>
-        <title>AI Financial Analytics Pro - Zion Tech Group | Advanced Financial Intelligence Platform</title>
-        <meta name="description" content="Transform your financial analysis with AI Financial Analytics Pro. Advanced machine learning, real-time insights, and predictive analytics for smarter financial decisions. Start your free trial today." />
-        <meta name="keywords" content="AI financial analytics, financial intelligence, predictive analytics, financial reporting, business intelligence, Zion Tech Group" />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="Zion Tech Group" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="theme-color" content="#8b5cf6" />
-        
-        {/* Open Graph Meta Tags */}
-        <meta property="og:title" content="AI Financial Analytics Pro - Advanced Financial Intelligence Platform" />
-        <meta property="og:description" content="Transform your financial analysis with AI-powered insights, real-time analytics, and predictive modeling. Make smarter financial decisions with advanced intelligence." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-financial-analytics-pro" />
-        <meta property="og:image" content="https://ziontechgroup.com/og-ai-financial-analytics.jpg" />
-        <meta property="og:site_name" content="Zion Tech Group" />
-        
-        {/* Twitter Card Meta Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="AI Financial Analytics Pro - Advanced Financial Intelligence Platform" />
-        <meta name="twitter:description" content="Transform your financial analysis with AI-powered insights, real-time analytics, and predictive modeling." />
-        <meta name="twitter:image" content="https://ziontechgroup.com/twitter-ai-financial-analytics.jpg" />
-        <meta name="twitter:site" content="@ziontechgroup" />
-        
-        {/* Structured Data */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            "name": "AI Financial Analytics Pro",
-            "description": "Advanced AI-powered financial analytics platform with machine learning insights, real-time reporting, and predictive modeling for smarter financial decisions.",
-            "url": "https://ziontechgroup.com/ai-financial-analytics-pro",
-            "applicationCategory": "BusinessApplication",
-            "operatingSystem": "Web, iOS, Android",
-            "offers": {
-              "@type": "Offer",
-              "price": "199",
-              "priceCurrency": "USD",
-              "priceSpecification": {
-                "@type": "PriceSpecification",
-                "price": "199",
-                "priceCurrency": "USD",
-                "unitText": "MONTH"
-              }
-            },
-            "provider": {
-              "@type": "Organization",
-              "name": "Zion Tech Group",
-              "url": "https://ziontechgroup.com"
-            }
-          })}
-        </script>
-      </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Hero Section */}

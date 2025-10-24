@@ -2,13 +2,8 @@ import React from 'react'
 import Link from 'next/link'
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud, Shield, Globe, Database, Smartphone, Zap, Sparkles, Star } from 'lucide-react'
 
-<<<<<<< HEAD
-const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear()
-=======
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
->>>>>>> cursor/fix-errors-and-merge-to-main-f852
+  const currentYear = new Date().getFullYear()
   
   const aiServices = [
     { name: 'AI Analytics & BI', url: '/ai-analytics', description: 'Business intelligence' },
@@ -47,16 +42,10 @@ export default function Footer() {
     { name: 'Support Center', url: '/support' },
     { name: 'Status Page', url: '/status' },
     { name: 'Privacy Policy', url: '/privacy' },
-<<<<<<< HEAD
-    { name: 'Terms of Service', url: '/terms' }
-  ]
-
-=======
     { name: 'Terms of Service', url: '/terms' },
     { name: 'Cookie Policy', url: '/cookies' },
     { name: 'GDPR Compliance', url: '/gdpr' }
-  ];
->>>>>>> cursor/fix-errors-and-merge-to-main-f852
+  ]
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 py-12">
@@ -157,8 +146,3 @@ export default function Footer() {
     </footer>
   )
 }
-<<<<<<< HEAD
-
-export default Footer
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-f852
