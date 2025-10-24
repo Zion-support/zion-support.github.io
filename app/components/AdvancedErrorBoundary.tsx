@@ -81,7 +81,7 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
             <AlertTriangle className="h-16 w-16 text-red-500 mx-auto mb-4" />
             <h1 className="text-2xl font-bold text-gray-900 mb-2">Something went wrong</h1>
             <p className="text-gray-600 mb-6">
-              We're sorry, but something unexpected happened. Please try again.
+              We&apos;re sorry, but something unexpected happened. Please try again.
             </p>
             <div className="space-y-3">
               <button
