@@ -128,24 +128,24 @@ const TestRunner: React.FC<TestRunnerProps> = ({
     // Check for heading structure
     const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6')
     tests.push({
-      name: 'Proper heading structure'
-      status: headings.length > 0 ? 'passed' : 'failed'
+      name: 'Proper heading structure',
+      status: headings.length > 0 ? 'passed' : 'failed',
       duration: 0,
       error: headings.length === 0 ? 'No headings found' : undefined
     })
     // Check for keyboard navigation
     const focusableElements = document.querySelectorAll('button, input, select, textarea, a[href]')
     tests.push({
-      name: 'Focusable elements present'
-      status: focusableElements.length > 0 ? 'passed' : 'failed'
+      name: 'Focusable elements present',
+      status: focusableElements.length > 0 ? 'passed' : 'failed',
       duration: 0,
       error: focusableElements.length === 0 ? 'No focusable elements found' : undefined
     })
     const passedTests = tests.filter(test => test.status === 'passed').length
     const totalTests = tests.length
     return {
-      name: 'Accessibility Tests'
-      tests
+      name: 'Accessibility Tests',
+      tests,
       duration: 0,
       status: passedTests === totalTests ? 'passed' : passedTests > 0 ? 'partial' : 'failed',
     };
@@ -153,7 +153,7 @@ const TestRunner: React.FC<TestRunnerProps> = ({
 
   React.useEffect(() => {
     if (config.enablePerformance || config.enableCoverage || config.enableAccessibility) {
-      runTests()
+      runTests();
     }
   }, [runTests, config])
   return null
