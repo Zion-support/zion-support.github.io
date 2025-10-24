@@ -1,102 +1,57 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix common JSX syntax errors
-function fixJsxSyntax(content) {
-  let fixed = content;
-  
-  // Fix malformed return statements
-  fixed = fixed.replace(/return\(\)\s*\n\s*<>/g, 'return (\n    <>');
-  
-  // Fix malformed JSX text content patterns like </>text<>
-  fixed = fixed.replace(/<\/>([^<]+)<>/g, '$1');
-  
-  // Fix malformed title tags
-  fixed = fixed.replace(/<title>\s*<\/>([^<]+)<>/g, '<title>$1</title>');
-  
-  // Fix malformed meta tags
-  fixed = fixed.replace(/<meta name="([^"]+)", content="([^"]+)" \/>/g, '<meta name="$1" content="$2" />');
-  
-  // Fix malformed Link components
-  fixed = fixed.replace(/<Link;<\/Link>\s*<\/><\/Link>\s*to="([^"]+)"/g, '<Link to="$1"');
-  fixed = fixed.replace(/className="([^"]+)"\s*><\/Link>\s*([^<]+);/g, 'className="$1">$2</Link>');
-  
-  // Fix malformed ArrowRight components
-  fixed = fixed.replace(/<ArrowRight className="([^"]+)" \/>/g, '<ArrowRight className="$1" />');
-  
-  // Fix malformed Helmet structure
-  fixed = fixed.replace(/<Helmet>\s*<\/Helmet>\s*<title>([^<]+)<>/g, '<Helmet>\n        <title>$1</title>');
-  fixed = fixed.replace(/<\/title>\s*<meta name="([^"]+)" content="([^"]+)" \/>\s*<\/><>\s*<\/meta>\s*<\/Helmet>/g, '</title>\n        <meta name="$1" content="$2" />\n      </Helmet>');
-  
-  // Fix malformed div structures
-  fixed = fixed.replace(/<div className="([^"]+)"\s*><>\s*<\/div>/g, '<div className="$1">\n        $2\n      </div>');
-  
-  // Fix malformed closing tags
-  fixed = fixed.replace(/<\/>\s*\)\s*<\/div>\s*\);/g, '</>\n    </div>\n  );');
-  
-  // Fix malformed function declarations
-  fixed = fixed.replace(/export default ([^;]+);\s*const ([^:]+): React\.FC = \(\) => {/g, 'const $2: React.FC = () => {\n  return (');
-  
-  // Fix malformed closing braces
-  fixed = fixed.replace(/}\s*;\s*$/g, '};\n\nexport default $1;');
-  
-  return fixed;
-}
-
-// Function to add missing imports
-function addMissingImports(content) {
-  let fixed = content;
-  
-  // Check if Navigation is used but not imported
-  if (fixed.includes('<Navigation') && !fixed.includes('import { Navigation }')) {
-    fixed = fixed.replace(/import React from 'react';/, `import React from 'react';\nimport { Navigation } from '@/components/Navigation';`);
-  }
-  
-  // Check if ArrowRight is used but not imported
-  if (fixed.includes('<ArrowRight') && !fixed.includes('import { ArrowRight }')) {
-    fixed = fixed.replace(/import React from 'react';/, `import React from 'react';\nimport { ArrowRight } from 'lucide-react';`);
-  }
-  
-  // Check if CheckCircle is used but not imported
-  if (fixed.includes('<CheckCircle') && !fixed.includes('import { CheckCircle }')) {
-    fixed = fixed.replace(/import React from 'react';/, `import React from 'react';\nimport { CheckCircle } from 'lucide-react';`);
-  }
-  
-  // Check if Footer is used but not imported
-  if (fixed.includes('<Footer') && !fixed.includes('import { Footer }')) {
-    fixed = fixed.replace(/import React from 'react';/, `import React from 'react';\nimport { Footer } from '@/components/Footer';`);
-  }
-  
-  // Check if Link is used but not imported
-  if (fixed.includes('<Link') && !fixed.includes('import { Link }')) {
-    fixed = fixed.replace(/import React from 'react';/, `import React from 'react';\nimport { Link } from 'react-router-dom';`);
-  }
-  
-  // Check if Helmet is used but not imported
-  if (fixed.includes('<Helmet') && !fixed.includes('import { Helmet }')) {
-    fixed = fixed.replace(/import React from 'react';/, `import React from 'react';\nimport { Helmet } from 'react-helmet-async';`);
-  }
-  
-  return fixed;
-}
-
-// Function to process a single file
-function processFile(filePath) {
+// Function to fix JSX syntax errors in a file
+function fixJSXSyntax(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    let fixed = fixJsxSyntax(content);
-    fixed = addMissingImports(fixed);
-    
-    // Write the fixed content back
-    fs.writeFileSync(filePath, fixed, 'utf8');
-    console.log(`Fixed: ${filePath}`);
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+
+    // Fix LinkContact Us pattern
+    if (content.includes('LinkContact Us')) {
+      content = content.replace(/<LinkContact Us\s*>/g, '<Link href="/contact" className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200">Contact Us');
+      modified = true;
+    }
+
+    // Fix $2 pattern (remove it)
+    if (content.includes('$2')) {
+      content = content.replace(/\s*\$2\s*/g, '');
+      modified = true;
+    }
+
+    // Fix ArrowRight$3 pattern
+    if (content.includes('ArrowRight$3')) {
+      content = content.replace(/<ArrowRight\$3\s*\/>/g, '<ArrowRight className="ml-2 h-4 w-4" />');
+      modified = true;
+    }
+
+    // Fix extra closing div tags (look for patterns like </div>\n    </div>)
+    const extraDivPattern = /(\s*<\/div>\s*\n\s*<\/div>\s*)(?=\s*\);\s*})/g;
+    if (extraDivPattern.test(content)) {
+      content = content.replace(extraDivPattern, '\n    </div>');
+      modified = true;
+    }
+
+    // Fix any remaining malformed Link tags
+    if (content.includes('</Link>') && !content.includes('href=')) {
+      content = content.replace(/<Link([^>]*)>/g, '<Link href="/contact"$1>');
+      modified = true;
+    }
+
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
 }
 
 // Function to recursively find all .tsx files
-function findTsxFiles(dir) {
+function findTSXFiles(dir) {
   const files = [];
   const items = fs.readdirSync(dir);
   
@@ -105,7 +60,7 @@ function findTsxFiles(dir) {
     const stat = fs.statSync(fullPath);
     
     if (stat.isDirectory()) {
-      files.push(...findTsxFiles(fullPath));
+      files.push(...findTSXFiles(fullPath));
     } else if (item.endsWith('.tsx')) {
       files.push(fullPath);
     }
@@ -115,11 +70,26 @@ function findTsxFiles(dir) {
 }
 
 // Main execution
+console.log('Starting JSX syntax fix...');
 const appDir = path.join(__dirname, 'app');
-const tsxFiles = findTsxFiles(appDir);
+const tsxFiles = findTSXFiles(appDir);
 
-console.log(`Found ${tsxFiles.length} .tsx files to process`);
+console.log(`Found ${tsxFiles.length} .tsx files`);
 
-tsxFiles.forEach(processFile);
+let fixedCount = 0;
+let errorCount = 0;
 
-console.log('JSX syntax fixing completed!');
+for (const file of tsxFiles) {
+  try {
+    if (fixJSXSyntax(file)) {
+      fixedCount++;
+    }
+  } catch (error) {
+    console.error(`Error processing ${file}:`, error.message);
+    errorCount++;
+  }
+}
+
+console.log(`\nFix complete!`);
+console.log(`Files fixed: ${fixedCount}`);
+console.log(`Errors: ${errorCount}`);

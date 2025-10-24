@@ -26,7 +26,5 @@ export default function LazyWrapper() {
           </Link>
         </div>
       </div>
-    </div>
-    </div>
-  );
+    </div>);
 }

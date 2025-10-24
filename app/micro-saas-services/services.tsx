@@ -26,7 +26,5 @@ export default function services() {
           </Link>
         </div>
       </div>
-    </div>
-    </div>
-  );
+    </div>);
 }

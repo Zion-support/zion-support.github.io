@@ -26,7 +26,5 @@ export default function LoadingOptimizer() {
           </Link>
         </div>
       </div>
-    </div>
-    </div>
-  );
+    </div>);
 }

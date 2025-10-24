@@ -26,7 +26,5 @@ export default function AnimatedText() {
           </Link>
         </div>
       </div>
-    </div>
-    </div>
-  );
+    </div>);
 }

@@ -95,9 +95,7 @@ interface ContentNewsletterSignupProps {
             </div>
           ))}
         </div>
-      </div>
-    </div>
-  );
+    </div>);
 };
 
 export default ContentNewsletterSignup
