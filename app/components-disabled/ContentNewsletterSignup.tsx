@@ -1,8 +1,9 @@
+'use client';
+import { Zap, Globe, Users, Star, ArrowRight, CheckCircle } from 'lucide-react';
 'use client'
 import Footer from './Footer'
 import Navigation from './Navigation'
 import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Mail, CheckCircle, Star, Users, Globe, Zap } from 'lucide-react'
 import React, { useState } from 'react'
 
 interface ContentNewsletterSignupProps {

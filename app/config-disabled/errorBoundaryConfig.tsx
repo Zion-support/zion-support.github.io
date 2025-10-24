@@ -1,4 +1,5 @@
 'use client';
+import { Server } from 'lucide-react';
 import React from 'react';
 /**
 * Error Boundary Configuration

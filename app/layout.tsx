@@ -81,10 +81,11 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} antialiased`}>
         <Analytics />
-        <PerformanceOptimizer />
-        <AccessibilityEnhancer>
-          {children}
-        </AccessibilityEnhancer>
+        <PerformanceOptimizer>
+          <AccessibilityEnhancer>
+            {children}
+          </AccessibilityEnhancer>
+        </PerformanceOptimizer>
         <PerformanceMonitor />
       </body>
     </html>

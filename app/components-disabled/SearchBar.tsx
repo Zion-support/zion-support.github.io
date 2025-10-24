@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { Search, X } from "lucide-react";
+import { Search, X, ArrowRight } from 'lucide-react';
 
 export default function SearchBar() {
   const [query, setQuery] = useState('');

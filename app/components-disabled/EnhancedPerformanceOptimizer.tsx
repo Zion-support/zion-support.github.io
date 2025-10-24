@@ -1,7 +1,6 @@
 'use client';
+import { Zap, Clock, CheckCircle } from 'lucide-react';
 import React, { useState, useEffect } from 'react';
-import { Zap, CheckCircle, AlertTriangle, Clock } from 'lucide-react';
-
 interface PerformanceMetrics {
   loadTime: number;
   firstContentfulPaint: number;

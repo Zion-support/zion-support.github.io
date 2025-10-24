@@ -1,11 +1,10 @@
+'use client';
+import { BarChart, Shield, ArrowRight, CheckCircle, Cloud } from 'lucide-react';
 'use client'
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
-import { ArrowRight, X, Brain, BarChart, Target, TrendingUp, Cloud, Shield } from 'lucide-react'
 import Navigation from './Navigation'
 import Footer from './Footer'
-import { CheckCircle, Star, Clock, Zap, Globe, Database, Users, Settings } from 'lucide-react'
-
 interface Slide {
   id: number
   title: string

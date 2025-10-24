@@ -1,5 +1,5 @@
 import React from 'react'
-import { CheckCircle, ArrowRight } from 'lucide-react'
+import { CheckCircle, ArrowRight, } from 'lucide-react';
 
 interface FuturisticServiceCardProps {
   title: string;
