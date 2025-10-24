@@ -2,6 +2,30 @@
 import React from 'react';
 import Link from 'next/link';
 import { Brain, Globe, Shield, Zap, Send, BarChart3, Target, DollarSign, Clock, Star, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart, CheckCircle } from 'lucide-react';
+
+// Icon mapping for serialization
+const iconMap = {
+  Brain,
+  Globe,
+  Shield,
+  Zap,
+  Send,
+  BarChart3,
+  Target,
+  DollarSign,
+  Clock,
+  Star,
+  Activity,
+  Lock,
+  FileText,
+  CreditCard,
+  Database,
+  Building2,
+  Sparkles,
+  PieChart,
+  CheckCircle
+};
+
 const teamMembers = [
   {
     id: 1,
@@ -54,19 +78,19 @@ const teamMembers = [
 ]
 const values = [
   {
-    icon: Brain,
+    icon: 'Brain',
     title: "Innovation",
       description: "We constantly push the boundaries of what's possible with AI and technology."},
   {
-    icon: Globe,
+    icon: 'Globe',
     title: "Global Impact",
       description: "Our solutions create positive change for businesses and communities worldwide."},
   {
-    icon: Shield,
+    icon: 'Shield',
     title: "Trust & Security",
       description: "We prioritize data security and ethical AI practices in everything we do."},
   {
-    icon: Zap,
+    icon: 'Zap',
     title: "Excellence",
     description: "We deliver exceptional results through meticulous attention to detail."}
   ]

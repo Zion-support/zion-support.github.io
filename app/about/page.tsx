@@ -3,6 +3,33 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import { ArrowRight, Users, Shield, Globe, Brain, CheckCircle, Award, Star, Send, BarChart3, Target, Zap, DollarSign, Clock, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react';
 
+// Icon mapping for serialization
+const iconMap = {
+  ArrowRight,
+  Users,
+  Shield,
+  Globe,
+  Brain,
+  CheckCircle,
+  Award,
+  Star,
+  Send,
+  BarChart3,
+  Target,
+  Zap,
+  DollarSign,
+  Clock,
+  Activity,
+  Lock,
+  FileText,
+  CreditCard,
+  Database,
+  Building2,
+  Sparkles,
+  PieChart
+};
+
+
 export const metadata: Metadata = {
   title: 'About Us - Zion Tech Group | AI & IT Solutions',
   description: 'Learn about Zion Tech Group\'s mission, values, and team. We\'re dedicated to delivering cutting-edge AI and IT solutions that transform businesses.',
@@ -18,22 +45,22 @@ export const metadata: Metadata = {
 const AboutPage: React.FC = () => {
   const values = [
     {
-      icon: Brain,
+      icon: 'Brain',
       title: 'Innovation',
       description: 'We constantly push the boundaries of technology to deliver cutting-edge solutions.'
     },
     {
-      icon: Shield,
+      icon: 'Shield',
       title: 'Security',
       description: 'Your data and systems are protected with enterprise-grade security measures.'
     },
     {
-      icon: Globe,
+      icon: 'Globe',
       title: 'Global Reach',
       description: 'Serving clients worldwide with localized support and expertise.'
     },
     {
-      icon: Users,
+      icon: 'Users',
       title: 'Collaboration',
       description: 'We work closely with our clients to understand their unique needs.'
     }
