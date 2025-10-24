@@ -51,7 +51,7 @@ const ContentStatistics: React.FC = () => {
     }, stepDuration);
 
     return () => clearInterval(interval);
-  }, [targetCounters]);
+  }, []);
 
   const statistics = [
     {
