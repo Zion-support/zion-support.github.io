@@ -1,18 +1,15 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 import { BarChart, TrendingUp, FileText, Zap, Brain, CheckCircle, ArrowRight, Star, Users, Clock, Shield, Target } from 'lucide-react';
 
 const AIAutomatedReportingPage: React.FC = () => {
   return (
     <>
-      <Helmet>
-        <title>AI Automated Reporting | Zion Tech Group</title>
-        <meta name="description" content="Transform your business intelligence with AI-powered automated reporting. Generate insights, analytics, and reports automatically with our advanced AI reporting solutions." />
-        <meta name="keywords" content="AI reporting, automated reports, business intelligence, data analytics, smart reporting, AI insights" />
-      
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -20,7 +17,7 @@ const AIAutomatedReportingPage: React.FC = () => {
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 mb-8">
                 <Brain className="w-5 h-5 text-cyan-400 mr-2" />
                 <span className="text-cyan-400 font-medium">AI-Powered Intelligence</span>
-              </Helmet></div>
+              </div>
               
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 AI Automated
@@ -45,8 +42,8 @@ const AIAutomatedReportingPage: React.FC = () => {
                 </button>
               </div>
             </div>
-        </div>
-      </section>
+          </div>
+        </section>
 
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -212,8 +209,8 @@ const AIAutomatedReportingPage: React.FC = () => {
                 </ul>
               </div>
             </div>
-        </div>
-      </section>
+          </div>
+        </section>
 
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
@@ -294,8 +291,8 @@ const AIAutomatedReportingPage: React.FC = () => {
                 </div>
               </div>
             </div>
-        </div>
-      </section>
+          </div>
+        </section>
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -316,8 +313,10 @@ const AIAutomatedReportingPage: React.FC = () => {
                 Schedule Demo
               </button>
             </div>
-        </div>
-      </section>
+          </div>
+        </section>
+        
+        <Footer />
       </div>
     </>
   );

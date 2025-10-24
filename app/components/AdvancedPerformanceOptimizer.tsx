@@ -1,12 +1,9 @@
 'use client';
-
 import React, { useEffect, useState, useCallback } from 'react';
-
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
   enableOptimizations?: boolean;
 }
-
 const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   children,
   enableOptimizations = true,
@@ -18,36 +15,28 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     cssOptimized: 0,
     totalSavings: 0,
   });
-
   const optimizeImages = useCallback(() => {
     if (typeof window === 'undefined') return;
-
     const images = document.querySelectorAll('img');
     let optimizedCount = 0;
-
     images.forEach((img) => {
       // Add lazy loading if not already present
       if (!img.hasAttribute('loading')) {
         img.setAttribute('loading', 'lazy');
         optimizedCount++;
       }
-
       // Add decoding attribute for better performance
       if (!img.hasAttribute('decoding')) {
         img.setAttribute('decoding', 'async');
         optimizedCount++;
       }
     });
-
     return optimizedCount;
   }, []);
-
   const optimizeScripts = useCallback(() => {
     if (typeof window === 'undefined') return;
-
     const scripts = document.querySelectorAll('script[src]');
     let optimizedCount = 0;
-
     scripts.forEach((script) => {
       // Add defer attribute if not already present
       if (!script.hasAttribute('defer') && !script.hasAttribute('async')) {
@@ -55,16 +44,12 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         optimizedCount++;
       }
     });
-
     return optimizedCount;
   }, []);
-
   const optimizeCSS = useCallback(() => {
     if (typeof window === 'undefined') return;
-
     const stylesheets = document.querySelectorAll('link[rel="stylesheet"]');
     let optimizedCount = 0;
-
     stylesheets.forEach((link) => {
       // Add media attribute for non-critical CSS
       if (!link.hasAttribute('media') && !link.hasAttribute('data-critical')) {
@@ -73,37 +58,29 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         optimizedCount++;
       }
     });
-
     return optimizedCount;
   }, []);
-
   const runOptimizations = useCallback(() => {
     if (!enableOptimizations) return;
-
     const imagesOptimized = optimizeImages();
     const scriptsOptimized = optimizeScripts();
     const cssOptimized = optimizeCSS();
-
     setOptimizationMetrics({
       imagesOptimized,
       scriptsOptimized,
       cssOptimized,
       totalSavings: imagesOptimized + scriptsOptimized + cssOptimized,
     });
-
     setIsOptimized(true);
   }, [enableOptimizations, optimizeImages, optimizeScripts, optimizeCSS]);
-
   useEffect(() => {
     // Run optimizations after component mount
     const timer = setTimeout(runOptimizations, 100);
     return () => clearTimeout(timer);
   }, [runOptimizations]);
-
   // Add performance monitoring
   useEffect(() => {
     if (typeof window === 'undefined') return;
-
     const observer = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
@@ -115,12 +92,9 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         }
       });
     });
-
     observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] });
-
     return () => observer.disconnect();
   }, []);
-
   return (
     <div className="performance-optimized" data-optimized={isOptimized}>
       {children}
@@ -148,18 +122,14 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     </div>
   );
 };
-
 export default AdvancedPerformanceOptimizer;
->>>>>>> cursor/fix-errors-and-merge-to-main-21fe
+ursor/fix-errors-and-merge-to-main-21fe
 'use client';
-
 import React, { useEffect, useState, useCallback } from 'react';
-
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
   enableOptimizations?: boolean;
 }
-
 const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   children,
   enableOptimizations = true,
@@ -171,36 +141,28 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     cssOptimized: 0,
     totalSavings: 0,
   });
-
   const optimizeImages = useCallback(() => {
     if (typeof window === 'undefined') return;
-
     const images = document.querySelectorAll('img');
     let optimizedCount = 0;
-
     images.forEach((img) => {
       // Add lazy loading if not already present
       if (!img.hasAttribute('loading')) {
         img.setAttribute('loading', 'lazy');
         optimizedCount++;
       }
-
       // Add decoding attribute for better performance
       if (!img.hasAttribute('decoding')) {
         img.setAttribute('decoding', 'async');
         optimizedCount++;
       }
     });
-
     return optimizedCount;
   }, []);
-
   const optimizeScripts = useCallback(() => {
     if (typeof window === 'undefined') return;
-
     const scripts = document.querySelectorAll('script[src]');
     let optimizedCount = 0;
-
     scripts.forEach((script) => {
       // Add defer attribute if not already present
       if (!script.hasAttribute('defer') && !script.hasAttribute('async')) {
@@ -208,16 +170,12 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         optimizedCount++;
       }
     });
-
     return optimizedCount;
   }, []);
-
   const optimizeCSS = useCallback(() => {
     if (typeof window === 'undefined') return;
-
     const stylesheets = document.querySelectorAll('link[rel="stylesheet"]');
     let optimizedCount = 0;
-
     stylesheets.forEach((link) => {
       // Add media attribute for non-critical CSS
       if (!link.hasAttribute('media') && !link.hasAttribute('data-critical')) {
@@ -226,37 +184,29 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         optimizedCount++;
       }
     });
-
     return optimizedCount;
   }, []);
-
   const runOptimizations = useCallback(() => {
     if (!enableOptimizations) return;
-
     const imagesOptimized = optimizeImages();
     const scriptsOptimized = optimizeScripts();
     const cssOptimized = optimizeCSS();
-
     setOptimizationMetrics({
       imagesOptimized,
       scriptsOptimized,
       cssOptimized,
       totalSavings: imagesOptimized + scriptsOptimized + cssOptimized,
     });
-
     setIsOptimized(true);
   }, [enableOptimizations, optimizeImages, optimizeScripts, optimizeCSS]);
-
   useEffect(() => {
     // Run optimizations after component mount
     const timer = setTimeout(runOptimizations, 100);
     return () => clearTimeout(timer);
   }, [runOptimizations]);
-
   // Add performance monitoring
   useEffect(() => {
     if (typeof window === 'undefined') return;
-
     const observer = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
@@ -268,12 +218,9 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         }
       });
     });
-
     observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] });
-
     return () => observer.disconnect();
   }, []);
-
   return (
     <div className="performance-optimized" data-optimized={isOptimized}>
       {children}
@@ -301,6 +248,4 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     </div>
   );
 };
-
 export default AdvancedPerformanceOptimizer;
->>>>>>> cursor/fix-errors-and-merge-to-main-21fe

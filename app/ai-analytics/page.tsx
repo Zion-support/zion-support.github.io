@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Brain, BarChart, Target, TrendingUp, Zap, Eye, Users } from 'lucide-react';
@@ -17,18 +16,36 @@ const AIAnalyticsPage: React.FC = () => {
       icon: Brain,
       title: 'AI-Powered Insights',
       description: 'Leverage machine learning to uncover hidden patterns and predictions.',
-  
+      benefits: ['Predictive modeling', 'Pattern recognition', 'Automated insights', 'Smart recommendations']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    },
+    {
+      icon: Zap,
+      title: 'Automated Reporting',
+      description: 'Generate comprehensive reports automatically with AI assistance.',
+      benefits: ['Scheduled reports', 'Custom templates', 'Data visualization', 'Export options']
+    },
+    {
+      icon: Eye,
+      title: 'Visual Analytics',
+      description: 'Beautiful, interactive dashboards that make data easy to understand.',
+      benefits: ['Interactive charts', 'Custom dashboards', 'Data exploration', 'Visual storytelling']
     }
   ];
 
   return (
     <>
-      <Helmet>
-        <title>AI Analytics - Zion Tech Group | Advanced Data Intelligence</title>
-        <meta name="description" content="Transform your data into actionable insights with our AI-powered analytics platform. Real-time dashboards, predictive analytics, and automated reporting." />
-        <meta name="keywords" content="AI analytics, data intelligence, business intelligence, predictive analytics, data visualization, real-time dashboards" />
-      
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
@@ -54,7 +71,7 @@ const AIAnalyticsPage: React.FC = () => {
               <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                 View Demo
               </button>
-            </Helmet></div>
+            </div>
           </div>
         </section>
 

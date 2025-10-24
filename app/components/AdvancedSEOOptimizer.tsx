@@ -1,8 +1,5 @@
 'use client';
-
 import React, { useEffect, useState, useCallback } from 'react';
-import { Helmet } from 'react-helmet-async';
-
 interface SEOOptimizerProps {
   title?: string;
   description?: string;
@@ -13,7 +10,6 @@ interface SEOOptimizerProps {
   structuredData?: object;
   children: React.ReactNode;
 }
-
 const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.',
@@ -26,41 +22,34 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
 }) => {
   const [seoScore, setSeoScore] = useState(0);
   const [recommendations, setRecommendations] = useState<string[]>([]);
-
   const analyzeSEO = useCallback(() => {
     if (typeof window === 'undefined') return;
-
     let score = 0;
     const newRecommendations: string[] = [];
-
     // Check title length
     if (title.length >= 30 && title.length <= 60) {
       score += 20;
     } else {
       newRecommendations.push('Title should be between 30-60 characters');
     }
-
     // Check description length
     if (description.length >= 120 && description.length <= 160) {
       score += 20;
     } else {
       newRecommendations.push('Description should be between 120-160 characters');
     }
-
     // Check for keywords in title
     if (keywords && title.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {
       score += 15;
     } else {
       newRecommendations.push('Include primary keyword in title');
     }
-
     // Check for keywords in description
     if (keywords && description.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {
       score += 15;
     } else {
       newRecommendations.push('Include primary keyword in description');
     }
-
     // Check for heading structure
     const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
     if (headings.length > 0) {
@@ -68,7 +57,6 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
     } else {
       newRecommendations.push('Add proper heading structure');
     }
-
     // Check for images with alt text
     const images = document.querySelectorAll('img');
     const imagesWithAlt = document.querySelectorAll('img[alt]');
@@ -77,7 +65,6 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
     } else {
       newRecommendations.push('Add alt text to all images');
     }
-
     // Check for internal links
     const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="./"]');
     if (internalLinks.length > 0) {
@@ -85,15 +72,12 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
     } else {
       newRecommendations.push('Add internal links for better SEO');
     }
-
     setSeoScore(score);
     setRecommendations(newRecommendations);
   }, [title, description, keywords]);
-
   useEffect(() => {
     analyzeSEO();
   }, [analyzeSEO]);
-
   const generateStructuredData = () => {
     const defaultStructuredData = {
       "@context": "https://schema.org",
@@ -109,52 +93,9 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
     };
     return structuredData || defaultStructuredData;
   };
-
   return (
-      <Helmet>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
-        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-        
-        {/* Open Graph */}
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={ogImage} />
-        <meta property="og:type" content="website" />
-        {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
-        
-        {/* Twitter Card */}
-        <meta name="twitter:card" content={twitterCard} />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={ogImage} />
-        <meta name="twitter:site" content="@ziontechgroup" />
-        <meta name="twitter:creator" content="@ziontechgroup" />
-
-        {/* Additional SEO Meta Tags */}
-        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-        <meta name="googlebot" content="index, follow" />
-        <meta name="bingbot" content="index, follow" />
-        <meta name="author" content="Zion Tech Group" />
-        <meta name="publisher" content="Zion Tech Group" />
-        <meta name="copyright" content="Zion Tech Group" />
-        <meta name="language" content="en" />
-        <meta name="revisit-after" content="7 days" />
-        <meta name="distribution" content="global" />
-        <meta name="rating" content="general" />
-        <meta name="theme-color" content="#1a1a2e" />
-        <meta name="msapplication-TileColor" content="#1a1a2e" />
-        <meta name="msapplication-config" content="/browserconfig.xml" />
-
-        {/* Structured Data */}
-        <script type="application/ld+json">
-          {JSON.stringify(generateStructuredData())}
-        </script>
-      </Helmet>
-
+      
       {children}
-
       {process.env.NODE_ENV === 'development' && (
         <div
           className="seo-debug"
@@ -186,14 +127,10 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
       )}
   );
 };
-
 export default AdvancedSEOOptimizer;
->>>>>>> cursor/fix-errors-and-merge-to-main-21fe
+ursor/fix-errors-and-merge-to-main-21fe
 'use client';
-
 import React, { useEffect, useState, useCallback } from 'react';
-import { Helmet } from 'react-helmet-async';
-
 interface SEOOptimizerProps {
   title?: string;
   description?: string;
@@ -204,7 +141,6 @@ interface SEOOptimizerProps {
   structuredData?: object;
   children: React.ReactNode;
 }
-
 const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.',
@@ -217,41 +153,34 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
 }) => {
   const [seoScore, setSeoScore] = useState(0);
   const [recommendations, setRecommendations] = useState<string[]>([]);
-
   const analyzeSEO = useCallback(() => {
     if (typeof window === 'undefined') return;
-
     let score = 0;
     const newRecommendations: string[] = [];
-
     // Check title length
     if (title.length >= 30 && title.length <= 60) {
       score += 20;
     } else {
       newRecommendations.push('Title should be between 30-60 characters');
     }
-
     // Check description length
     if (description.length >= 120 && description.length <= 160) {
       score += 20;
     } else {
       newRecommendations.push('Description should be between 120-160 characters');
     }
-
     // Check for keywords in title
     if (keywords && title.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {
       score += 15;
     } else {
       newRecommendations.push('Include primary keyword in title');
     }
-
     // Check for keywords in description
     if (keywords && description.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {
       score += 15;
     } else {
       newRecommendations.push('Include primary keyword in description');
     }
-
     // Check for heading structure
     const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
     if (headings.length > 0) {
@@ -259,7 +188,6 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
     } else {
       newRecommendations.push('Add proper heading structure');
     }
-
     // Check for images with alt text
     const images = document.querySelectorAll('img');
     const imagesWithAlt = document.querySelectorAll('img[alt]');
@@ -268,7 +196,6 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
     } else {
       newRecommendations.push('Add alt text to all images');
     }
-
     // Check for internal links
     const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="./"]');
     if (internalLinks.length > 0) {
@@ -276,15 +203,12 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
     } else {
       newRecommendations.push('Add internal links for better SEO');
     }
-
     setSeoScore(score);
     setRecommendations(newRecommendations);
   }, [title, description, keywords]);
-
   useEffect(() => {
     analyzeSEO();
   }, [analyzeSEO]);
-
   const generateStructuredData = () => {
     const defaultStructuredData = {
       "@context": "https://schema.org",
@@ -300,52 +224,9 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
     };
     return structuredData || defaultStructuredData;
   };
-
   return (
-      <Helmet>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
-        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-        
-        {/* Open Graph */}
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={ogImage} />
-        <meta property="og:type" content="website" />
-        {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
-        
-        {/* Twitter Card */}
-        <meta name="twitter:card" content={twitterCard} />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={ogImage} />
-        <meta name="twitter:site" content="@ziontechgroup" />
-        <meta name="twitter:creator" content="@ziontechgroup" />
-
-        {/* Additional SEO Meta Tags */}
-        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-        <meta name="googlebot" content="index, follow" />
-        <meta name="bingbot" content="index, follow" />
-        <meta name="author" content="Zion Tech Group" />
-        <meta name="publisher" content="Zion Tech Group" />
-        <meta name="copyright" content="Zion Tech Group" />
-        <meta name="language" content="en" />
-        <meta name="revisit-after" content="7 days" />
-        <meta name="distribution" content="global" />
-        <meta name="rating" content="general" />
-        <meta name="theme-color" content="#1a1a2e" />
-        <meta name="msapplication-TileColor" content="#1a1a2e" />
-        <meta name="msapplication-config" content="/browserconfig.xml" />
-
-        {/* Structured Data */}
-        <script type="application/ld+json">
-          {JSON.stringify(generateStructuredData())}
-        </script>
-      </Helmet>
-
+      
       {children}
-
       {process.env.NODE_ENV === 'development' && (
         <div
           className="seo-debug"
@@ -377,6 +258,4 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
       )}
   );
 };
-
 export default AdvancedSEOOptimizer;
->>>>>>> cursor/fix-errors-and-merge-to-main-21fe
