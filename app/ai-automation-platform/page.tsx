@@ -10,11 +10,6 @@ const AiAutomationPlatformPage: React.FC = () => {
         <title>AI Automation Platform - Intelligent Process Automation | Zion Tech Group</title>
         <meta name="description" content="Transform your business with AI-powered automation solutions" />
       </Helmet>
-      <SEOHead
-        title="AI Automation Platform - Zion Tech Group"
-        description="Intelligent process automation solutions powered by AI"
-        keywords="AI automation, process automation, intelligent automation, business automation"
-      />
       <div className="min-h-screen bg-gray-50">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
