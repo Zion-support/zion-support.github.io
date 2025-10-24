@@ -2,19 +2,56 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
-import Footer from '@/components/Footer';
+import { ArrowRight, Brain, Cloud, Shield, Code } from 'lucide-react';
+import Footer from './components/Footer';
 
+const features = [
+  {
+    title: 'AI Solutions',
+    description: 'Cutting-edge artificial intelligence solutions to automate and optimize your business processes.',
+    icon: Brain,
+    href: '/ai-solutions'
+  },
+  {
+    title: 'Cloud Architecture',
+    description: 'Scalable and secure cloud infrastructure designed for modern applications.',
+    icon: Cloud,
+    href: '/cloud-architecture'
+  },
+  {
+    title: 'Cybersecurity',
+    description: 'Comprehensive security solutions to protect your digital assets and data.',
+    icon: Shield,
+    href: '/cybersecurity'
+  },
+  {
+    title: 'Web Development',
+    description: 'Custom web applications built with the latest technologies and best practices.',
+    icon: Code,
+    href: '/web-development'
+  }
+];
+
+const stats = [
+  { number: '500+', label: 'Projects Completed' },
+  { number: '50+', label: 'Happy Clients' },
+  { number: '5+', label: 'Years Experience' },
+  { number: '24/7', label: 'Support Available' }
+];
+
+export default function HomePage() {
   return (
     <>
       <Head>
         <title>Zion Tech Group - AI & IT Solutions</title>
         <meta name="description" content="Professional services by Zion Tech Group." />
       </Head>
+      
+      {/* Hero Section */}
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1>Zion Tech Group - AI & IT Solutions</h1>
-          <p>Professional zion tech group - ai & it solutions services coming soon.</p>
+          <h1 className="text-5xl font-bold text-white mb-6">Zion Tech Group - AI & IT Solutions</h1>
+          <p className="text-xl text-gray-300 mb-8">Professional zion tech group - ai & it solutions services coming soon.</p>
           <Link href="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
           >
@@ -22,7 +59,7 @@ import Footer from '@/components/Footer';
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </section>
+      </div>
 
       {/* Features Section */}
       <section className="py-20 px-4">

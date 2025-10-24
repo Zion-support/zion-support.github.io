@@ -1,17 +1,16 @@
 'use client';
-
-<<<<<<< HEAD
+;}
 import React from 'react';
 import  Helmet  from 'react-helmet-async';
 import  Brain  CheckCircle ArrowRight Phone Mail MapPin Zap Shield Brain Globe          } from 'lucide-react';
-import { { ArrowRight         } from "lucide-react";
-  const benefits="'Increase" efficiency by up to 50'
+import { { ArrowRight         } from "lucide-react"
+const benefits="'Increase" efficiency by up to 50'
     'Reduce costs by 30 with automation'
     'Improve decision-making with AI insights'
     'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
   ]
-const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {
+const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {,
   return (
     <>
       
@@ -19,7 +18,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {
       <Helmet> </Helmet><title>SystemMonitor</title>
         <meta name="description" content="Advanced SystemMonitor solution for modern businesses." /> </meta><meta name="keywords" content="AI, artificial intelligence, SystemMonitor, AI solutions, intelligent automation" /> </meta></Helmet>
       <Navigation /> </Navigation><div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">{/* Hero Section */}
-        </div><section className="relative py-20 px-4 overflow-hidden"> </section><div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20">
+        </div><section className="relative py-20 px-4 overflow-hidden"> </section><div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
         <div className="relative max-w-7xl mx-auto text-center"> </div><h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">,
               SystemMonitor
             </h1>
@@ -32,14 +31,10 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {
               <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">,
                 Learn More
               </button>
-=======
-import React, { useState, useEffect } from 'react';
-import { Cpu, HardDrive, Wifi, Battery } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-8836
 
         </section>,
         {/* Features Section */}
-        <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto">
+        <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto"></div>
         <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p>Powerful AI-driven features designed to transform your business operations</p>
             </div>
@@ -55,7 +50,7 @@ import { Cpu, HardDrive, Wifi, Battery } from 'lucide-react';
 
         </section>
         {/* Benefits Section */}
-        <section className="py-20 px-4 bg-white/5"> </section><div className="max-w-7xl mx-auto">
+        <section className="py-20 px-4 bg-white/5"> </section><div className="max-w-7xl mx-auto"></div>
         <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <p>Experience the benefits of cutting-edge AI technology</p>
             </div>
@@ -87,70 +82,65 @@ import { Cpu, HardDrive, Wifi, Battery } from 'lucide-react';
 
 </Footer></>
   )
-}
-
-interface SystemStats {
-  cpu: number,
-      memory: number,
-      disk: number,
-      network: number
-  battery?: number
-}
-
-const SystemMonitor: React.FC<SystemMonitorProps> = ({
-  _showDetails = true,
-  refreshInterval = 1000,
-  className = '',
-}) => {
-  const [stats, setStats] = useState<SystemStats>({
-    cpu: 0,
-      memory: 0,
-      disk: 0,
-      network: 0
+,
+interface SystemStats {,
+  cpu: number
+      memory: number;
+      disk: number;
+      network: number;
+  battery?: number;
+const SystemMonitor: React.FC<SystemMonitorProps> = ({,;
+  _showDetails = true;
+  refreshInterval = 1000,;
+  className = '',;
+}) => {;}
+  const [stats, setStats] = useState<SystemStats>({,
+    cpu: 0;
+      memory: 0;
+      disk: 0;
+      network: 0;
   })
   useEffect(() => {
-    const updateStats = () => {
+const updateStats = () => {
       // Simulate system stats (in a real app, you'd get these from an API)
-      setStats({
-        cpu: Math.random() * 100,
-        memory: Math.random() * 100,
-        disk: Math.random() * 100,
-        network: Math.random() * 100,
-        battery: Math.random() * 100,
+      setStats({,
+        cpu: Math.random() * 100
+        memory: Math.random() * 100;
+        disk: Math.random() * 100;
+        network: Math.random() * 100;
+        battery: Math.random() * 100,;
       });
     };
 
-    updateStats();
+    updateStats();}
     const interval = setInterval(updateStats, refreshInterval);
-
-    return () => clearInterval(interval);
+return () => clearInterval(interval);
   }, [refreshInterval]);
-
-  const _getStatusColor = (value: number) => {
+;}
+  const _getStatusColor = (value: number) => {,;
     if (value < 50) return 'text-green-500';
     if (value < 80) return 'text-yellow-500';
-    return 'text-red-500';
+return 'text-red-500';
   };
-
-  const getStatusBgColor = (value: number) => {
+;}
+  const getStatusBgColor = (value: number) => {,
     if (value < 50) return 'bg-green-500'
     if (value < 80) return 'bg-yellow-500'
     return 'bg-red-500'
-  }
   return (
-    <div className={`p-4 bg-white rounded-lg shadow-lg ${className}`}>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div className={`p-4 bg-white rounded-lg shadow-lg ${className}`}></div>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4"></div>
         {/* CPU */}
-        <div className="...">
-          <div className="...">
+        <div className="..."></div>
+          <div className="..."></div>
             <Cpu className="w-5 h-5 text-blue-500 mr-1" />
             <span className="text-sm font-medium text-gray-700">CPU</span>
           </div>
-          <div className="...">
-            {stats.cpu.toFixed(0)}%
-          </div>
-          <div className="...">
-            <div
+          <div className="..."></div>;
+            {stats.cpu.toFixed(0)}%;
+          </div>;
+< className="..."></div>;
+<;
               className={`h-2 rounded-full ${getStatusBgColor(stats.cpu)}`}
               style={{ width: `${stats.cpu}%` }}
             ></div>
@@ -158,16 +148,16 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
         </div>
 
         {/* Memory */}
-        <div className="...">
-          <div className="...">
+        <div className="..."></div>
+          <div className="..."></div>
             <HardDrive className="w-5 h-5 text-green-500 mr-1" />
             <span className="text-sm font-medium text-gray-700">Memory</span>
           </div>
-          <div className="...">
+          <div className="..."></div>
             {stats.memory.toFixed(0)}%
           </div>
-          <div className="...">
-            <div
+          <div className="..."></div>
+            <div;}
               className={`h-2 rounded-full ${getStatusBgColor(stats.memory)}`}
               style={{ width: `${stats.memory}%` }}
             ></div>
@@ -175,16 +165,16 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
         </div>
 
         {/* Disk */}
-        <div className="...">
-          <div className="...">
+        <div className="..."></div>
+          <div className="..."></div>
             <HardDrive className="w-5 h-5 text-purple-500 mr-1" />
             <span className="text-sm font-medium text-gray-700">Disk</span>
           </div>
-          <div className="...">
+          <div className="..."></div>
             {stats.disk.toFixed(0)}%
           </div>
-          <div className="...">
-            <div
+          <div className="..."></div>
+            <div;}
               className={`h-2 rounded-full ${getStatusBgColor(stats.disk)}`}
               style={{ width: `${stats.disk}%` }}
             ></div>
@@ -192,16 +182,16 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
         </div>
 
         {/* Network */}
-        <div className="...">
-          <div className="...">
+        <div className="..."></div>
+          <div className="..."></div>
             <Wifi className="w-5 h-5 text-orange-500 mr-1" />
             <span className="text-sm font-medium text-gray-700">Network</span>
           </div>
-          <div className="...">
+          <div className="..."></div>
             {stats.network.toFixed(0)}%
           </div>
-          <div className="...">
-            <div
+          <div className="..."></div>
+            <div;}
               className={`h-2 rounded-full ${getStatusBgColor(stats.network)}`}
               style={{ width: `${stats.network}%` }}
             ></div>
@@ -211,18 +201,18 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
 
       {/* Battery (if available) */}
       {stats.battery !== undefined && (
-        <div className="...">
-          <div className="...">
-            <div className="...">
+        <div className="..."></div>
+          <div className="..."></div>
+            <div className="..."></div>
               <Battery className="w-5 h-5 text-gray-500 mr-2" />
               <span className="text-sm font-medium text-gray-700">Battery</span>
             </div>
-            <div className="...">
+            <div className="..."></div>
               <span className="...">
                 {stats.battery.toFixed(0)}%
               </span>
-              <div className="...">
-                <div
+              <div className="..."></div>
+                <div;}
                   className={`h-2 rounded-full ${getStatusBgColor(stats.battery)}`}
                   style={{ width: `${stats.battery}%` }}
                 ></div>
@@ -233,4 +223,3 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       )}
     </div>
   )
-}

@@ -1,8 +1,8 @@
 import React from 'react';
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Navigation from '../components/Navigation'
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
 import Footer from '../components/Footer'
               </button>
             
@@ -10,7 +10,7 @@ import Footer from '../components/Footer'
         </section>,
 ,
         {/* Features Section */}
-        <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto">
+        <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto"></div>
         <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p>Discover the powerful features that make SEOHead the perfect solution for your business.</p>
             </div>
@@ -42,16 +42,12 @@ import Footer from '../components/Footer'
         </div>
       </Footer>
       </div>
-<<<<<<< HEAD
 
       <Footer /> </Footer></>
   )
-}
 
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
   );
 }  )}
-export default SEOHead
-}
+
+export;
+export default SEOHead;

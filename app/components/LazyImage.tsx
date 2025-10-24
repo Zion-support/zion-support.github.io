@@ -1,14 +1,12 @@
 import React from 'react';
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-
-const LazyImage: React.FC = ($2) => {
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+const LazyImage: React.FC = ($2) => {,;
 $3
-};
-        <section className="relative py-20 px-4 overflow-hidden"> </section><div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20">
+< className="relative py-20 px-4 overflow-hidden"> </section><div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
         <div className="relative max-w-7xl mx-auto text-center"> </div><h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">,
               LazyImage
             </h1>
@@ -25,7 +23,7 @@ $3
         </section>,
 ,
         {/* Features Section */}
-        <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto">
+        <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto"></div>
         <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p>Discover the powerful features that make LazyImage the perfect solution for your business.</p>
             </div>
@@ -57,67 +55,53 @@ $3
         </div>
       </Footer>
       </div>
-<<<<<<< HEAD
 
       <Footer /> </Footer></>
   )
-}
+;}
+const LazyImage: React.FC<LazyImageProps> = ({,;
+  src;
+  alt,;
+  className = ''
+  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PC9zdmc+'
+  onLoad
+  onError;
+}) => {;}
+  const [isLoaded, setIsLoaded] = useState(false)
+const [isInView, setIsInView] = useState(false);
+const [hasError, setHasError] = useState(false);
+const imgRef = useRef<HTMLImageElement>(null);
 
-const LazyImage: React.FC<LazyImageProps> = ({
-  src,
-  alt,
-  className = '',
-  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PC9zdmc+',
-  onLoad,
-  onError
-}) => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(false);
-  const [hasError, setHasError] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
+  useEffect(() => {;}
+    const observer = new IntersectionObserver(;
+      ([entry]) => {,;
+        if (entry.isIntersecting) {,;
           setIsInView(true);
-          observer.disconnect();
-        }
+          observer.disconnect()
 <<<<<<< HEAD
-          }
-=======
-      },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
       { threshold: 0.1 }
     );
 
-    if (imgRef.current) {
-      observer.observe(imgRef.current);
-    }
-
+    if (imgRef.current) {,
+      observer.observe(imgRef.current)
+,
     return () => observer.disconnect();
-<<<<<<< HEAD
   }, []);
-=======
-  }, [])
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
-
-  const handleLoad = () => {
+;}
+  const handleLoad = () => {,;
     setIsLoaded(true);
     onLoad?.();
   };
-
-  const handleError = () => {
+;}
+  const handleError = () => {,;
     setHasError(true);
-    onError?.();
-  };
-
-  return (
-    <div ref={imgRef} className={`relative overflow-hidden ${className}`}>
-      {!isLoaded && !hasError && (
-        <img
-          src={placeholder}
-          alt=""
+    onError?.()
+return (
+    <div ref={imgRef} className={`relative overflow-hidden ${className}`}></div>
+      {!isLoaded && !hasError && (;
+        <img;
+          src={placeholder};
+          alt="";
           className="absolute inset-0 w-full h-full object-cover blur-sm"
         />
       )}
@@ -127,19 +111,21 @@ const LazyImage: React.FC<LazyImageProps> = ({
           alt={alt}
           onLoad={handleLoad}
           onError={handleError}
-          className={`w-full h-full object-cover transition-opacity duration-300 ${
-            isLoaded ? 'opacity-100' : 'opacity-0'
+          className={`w-full h-full object-cover transition-opacity duration-300 ${,
+            isLoaded ? 'opacity-100' : 'opacity-0';
           }`}
           loading="lazy"
         />
       )}
       {hasError && (
-        <div className="...">
+        <div className="..."></div>,
           Failed to load
         </div>
       )}
     </div>
   );
 };
+;}
 
+export;
 export default LazyImage;

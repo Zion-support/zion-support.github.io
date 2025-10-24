@@ -1,18 +1,8 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import Analytics from './components/Analytics';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import PerformanceMonitor from './components/PerformanceMonitor';
 
-<<<<<<< HEAD
-const inter = Inter({ subsets: ['latin'] })
-=======
 const inter = Inter({ subsets: ['latin'] });
->>>>>>> cursor/fix-errors-and-merge-to-main-8836
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Leading AI & Technology Solutions Provider',
@@ -74,10 +64,6 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-<<<<<<< HEAD
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-=======
     <html lang="en" className="scroll-smooth">
       <head>
         <link rel="icon" href="/favicon.ico" />
@@ -89,14 +75,8 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body className={`${inter.className} antialiased`}>
-        <Analytics />
-        <PerformanceOptimizer />
-        <AccessibilityEnhancer>
-          {children}
-        </AccessibilityEnhancer>
-        <PerformanceMonitor />
+        {children}
       </body>
->>>>>>> cursor/fix-errors-and-merge-to-main-8836
     </html>
   );
 }

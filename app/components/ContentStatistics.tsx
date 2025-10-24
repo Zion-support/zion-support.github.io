@@ -1,73 +1,73 @@
 'use client';
-
+;}
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 const ContentStatistics: React.FC = () => {,
-  const [counters, setCounters] = useState({
-    clients: 0,
-    projects: 0,
-    satisfaction: 0,
-    years: 0
+const [counters, setCounters] = useState({,;
+    clients: 0;
+    projects: 0;
+    satisfaction: 0;
+    years: 0;
   })
-
-    clients: 1000,
+,
+    clients: 1000
     projects: 500;
-    satisfactio,
-  n: 99,
+    satisfactio
+  n: 99
     years: 10;
-    countrie,
-  s: 25,
-    uptime: 99.9};useEffect(() => {
+    countrie
+  s: 25
+    uptime: 99.9};useEffect(() => {;}
     const duration = 2000;
-
-    const duration = 2000; // 2 seconds
-    const steps = 60
-    const stepDuration = duration / steps
-
-const steps = 60;
-
+;}
+    const duration = 2000; // 2 seconds;}
+    const steps = 60;
 const stepDuration = duration / steps;
-
-const interval = setInterval(() => {
-      setCounters(prev => {
-        const newCounters={ ...prev };let allComplete = true)
+const steps = 60;
+;}
+const stepDuration = duration / steps;
+;}
+const interval = setInterval(() => {,;
+      setCounters(prev => {;
+const newCounters={ ...prev };let allComplete = true)
         Object.keys(targetCounters).forEach(key => {
-  const target = targetCounters[key as keyof typeof targetCounters]
-          const current = prev[key as keyof typeof prev]
-          const increment = target / steps)
-          if(current < target) {
-            newCounters[key as keyof typeof newCounters] = Math.min(
-              current + increment,
-              target
-            allComplete = false)
+const target = targetCounters[key as keyof typeof targetCounters]
+const current = prev[key as keyof typeof prev]
+const increment = target / steps)
+          if(current < target) {,
+            newCounters[key as keyof typeof newCounters] = Math.min(,;
+              current + increment;
+              target;
+            allComplete = false);
         })
-        if(allComplete) {
-          clearInterval(interval);
-        }
+        if(allComplete) {,
+          clearInterval(interval)
 };
 
-        <><div className="mt-16 text-center" />
-        <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-2xl p-8 border border-cyan-500/20" /><h3 className="text-2xl font-bold text-white mb-4">
+        <><div className="mt-16 text-center" /></div>
+        <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-2xl p-8 border border-cyan-500/20" /><h3 className="text-2xl font-bold text-white mb-4">,
               Ready to Join Our Success Stories</h3>
-            <p className="text-gray-300 mb-6">
+            <p className="text-gray-300 mb-6">,
               Let us help you achieve similar results with our proven expertise and innovative solutions</p>
-            <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hoverfrom-cyan-600 hoverto-purple-600 transition-all duration-300">
+            <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hoverfrom-cyan-600 hoverto-purple-600 transition-all duration-300">,
               Get Started Today  <ArrowRight className="w-5 h-5 ml-2" />
             </button>            </div>
         </section>
         / CTA Section /
         <section className="py-20 px-4" /><div className="max-w-4xl mx-auto text-center" /><h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business</h2>
-            <pJoin thousands of businesses already using our AI solutions</p /><div className="flex flex-col sm flex-row gap-4 justify-center" /><button className="bg-emerald-600 hover bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+            <pJoin thousands of businesses already using our AI solutions</p /><div className="flex flex-col sm flex-row gap-4 justify-center" /><button className="bg-emerald-600 hover bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">,
                 Start Free Trial</button>
-              <button className="border border-emerald-400 text-emerald-400 hover bg-emerald-400 hovertext-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              <button className="border border-emerald-400 text-emerald-400 hover bg-emerald-400 hovertext-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">,
                 Contact Sales</button>
-              </div>
-export default ContentStatistics</>
-export default ContentStatisticsPage clients 0 projects 0 satisfaction 0 years 0 countries 0 uptime 0 consttargetCounters= clients 1000 0 projects 500 0 satisfaction 9 9 years 1 5 countries 5 0 uptime99 conststatistics= 
+              </div>;
+export default ContentStatistics</>;}
+
+export;
+export default ContentStatisticsPage clients 0 projects 0 satisfaction 0 years 0 countries 0 uptime 0 consttargetCounters= clients 1000 0 projects 500 0 satisfaction 9 9 years 1 5 countries 5 0 uptime99 conststatistics= ,
 icon Users value countersclients label 'Happy Clients'
     suffix ''
 color 'text-blue-40 0'
@@ -97,9 +97,9 @@ color 'text-cyan-40 0'
     suffix ''
 color 'text-red-40 0'
     description 'Service reliability'
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
-
-constachievements= 
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a;}
+,
+constachievements= ,
 icon Brain title 'AI Innovation'
       description 'Leading the industry in AI-powered solutions'
   
@@ -108,8 +108,8 @@ icon Brain title 'AI Innovation'
   
     icon Globe title 'Global Reach'
       description 'Worldwide deployment and support for international businesses'
-    stats '5 0 Countries' '1 5 Languages' '2 4/7 Support'
-
+    stats '5 0 Countries' '1 5 Languages' '2 4/7 Support';}
+,
 constbenefits= 
   'Advanced AI technology integration'
 'Real-time processing and analytics'
@@ -118,9 +118,9 @@ constbenefits=
 '2 4/7 technical support'
 'Easy integration with existing systems'
 'Cost-effective pricing plans'
-    'Proven track record of success'
-  
-constachievements= 
+    'Proven track record of success';}
+  ,
+constachievements= ,
 icon Star title 'Industry Recognition'
       description 'Awarded Best AI Solutions Provider2024'
     value '2 5'
@@ -131,30 +131,30 @@ icon Star title 'Industry Recognition'
   
     icon Rocket title 'Growth Rate'
       description 'Year-over-year business growth'
-    value '30 0'
-
-consttimers= Object.keys(targetCounters).map((key) => {
-consttarget= targetCounters[key as keyof type of targetCounters]
+    value '30 0';}
+,
+consttimers= Object.keys(targetCounters).map((key) => {;}
+consttarget= targetCounters[key as keyof type of targetCounters];}
 constduration=2000; // 2secondsconstincrement= target / (duration /16) //60fps
-return setInterva l(() => {
-setCounters(prev=> {
+return setInterva l(() => {,;
+setCounters(prev=> {;
 constcurrent= prev[key as keyof type of prev]
-if(current< target) {
+if(current< target) {,
 return {
 ...prev
-[key]: Math.min(current + increment, target)}
-}
-return pre v
-})
-}, 1 6)
+[key]: Math.min(current + increment, target)};
+};
+return pre v;
+});
+}, 1 6);
 })
 return (
 <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4 sm: px-6 lg:px-8">,
-            <div className="max-w-7xl mx-auto">
+            <div className="max-w-7xl mx-auto"></div>
         <div className="text-center mb-16"> </div><h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,
 Our Impact in Numbers
 </h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">See how we've transformed businesses and delivered exceptional results.
-</p><div{/* Header */}</div>
+</p><div{/* Header */}</div></div>
 <div className="text-center mb-16"> </div><h2 className="text-3xl md: text-4xl font-bold text-white mb-6">,
 Our </h2><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Impact</span> in Numbers
 </h2>
@@ -162,8 +162,8 @@ Our </h2><span className="text-transparent bg-clip-text bg-gradient-to-r from-bl
 </div>
 {/* Statistics Grid */}
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">{statistics.map((stat, index) => (</div>
-<div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 text-center">
-        <div className="flex justify-center mb-4"> </div><div className="bg-gradient-to-r from-purple-600 to-cyan-600 w-16 h-16 rounded-full flex items-center justify-center">
+<div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 text-center"></div>
+        <div className="flex justify-center mb-4"> </div><div className="bg-gradient-to-r from-purple-600 to-cyan-600 w-16 h-16 rounded-full flex items-center justify-center"></div>
 </div><stat.icon className="h-8 w-8 text-white" />
 </stat></div>
 </div>
@@ -192,8 +192,8 @@ Our </h2><span className="text-transparent bg-clip-text bg-gradient-to-r from-bl
 ))}
 </div>
 {/* Features Section */}
-<div className="mb-16">
-        <div className="text-center mb-12">
+<div className="mb-16"></div>
+        <div className="text-center mb-12"></div>
 </div><h3 className="text-2xl font-bold text-white mb-4">Key Features</h3>
 <p className="text-gray-300 max-w-2xl mx-auto">Discover the powerful features that make our solutions stand out.</p>p>
 </div>
@@ -204,7 +204,7 @@ Our </h2><span className="text-transparent bg-clip-text bg-gradient-to-r from-bl
 <h4 className="text-lg font-semibold text-white mb-3">{feature.title}</h4>
 <p className="text-gray-300 text-sm mb-4">{feature.description}</p>
 <div className="space-y-2">{feature.stats.map((stat, statIndex) => (</div>
-<div key={statIndex} className="flex items-center text-gray-300 text-sm">
+<div key={statIndex} className="flex items-center text-gray-300 text-sm"></div>
 </div><CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
 </CheckCircle><span>{stat}</span>
 </div>
@@ -215,8 +215,8 @@ Our </h2><span className="text-transparent bg-clip-text bg-gradient-to-r from-bl
 </div>
 </div>
 {/* Achievements Section */}
-<div className="mb-16">
-        <div className="text-center mb-12">
+<div className="mb-16"></div>
+        <div className="text-center mb-12"></div>
 </div><h3 className="text-2xl font-bold text-white mb-4">Our Achievements</h3>
 <p className="text-gray-300 max-w-2xl mx-auto">Recognition and milestones that showcase our commitment to excellence.</p>p>
 </div>
@@ -232,8 +232,8 @@ Our </h2><span className="text-transparent bg-clip-text bg-gradient-to-r from-bl
 </div>
 </div>
 {/* Benefits Section */}
-<div className="mb-16">
-        <div className="text-center mb-12">
+<div className="mb-16"></div>
+        <div className="text-center mb-12"></div>
 </div><h3 className="text-2xl font-bold text-white mb-4">Why Choose Us?</h3>
 <p className="text-gray-300 max-w-2xl mx-auto">Discover the advantages that make our solutions the preferred choice.</p>p>
 </div>
@@ -246,8 +246,8 @@ Our </h2><span className="text-transparent bg-clip-text bg-gradient-to-r from-bl
 </div>
 </div>
 {/* CTA Section */}
-<div className="text-center">
-        <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-12">
+<div className="text-center"></div>
+        <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-12"></div>
 </div><h3 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h3>
 <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join thousands of satisfied customers and transform your business today.</p>p>
 <div className="flex flex-col sm: flex-row gap-4 justify-center">,
@@ -259,9 +259,7 @@ View Case Studies
 </button></div>
 </div>
 </div>
-</div>
-</div>
-)
-}
-
+</div>;
+</div>;
+);
 export default ContentStatistics

@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 import React from 'react';
-
-const EnhancedSEOHead: React.FC = ($2) => {
+;}
+const EnhancedSEOHead: React.FC = ($2) => {,;
 $3
-};
-        <section className="relative py-20 px-4 overflow-hidden"> </section><div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20">
+< className="relative py-20 px-4 overflow-hidden"> </section><div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
         <div className="relative max-w-7xl mx-auto text-center"> </div><h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">,
               EnhancedSEOHead
             </h1>
@@ -21,7 +19,7 @@ $3
         </section>,
 ,
         {/* Features Section */}
-        <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto">
+        <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto"></div>
         <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p>Discover the powerful features that make EnhancedSEOHead the perfect solution for your business.</p>
             </div>
@@ -57,23 +55,15 @@ $3
 
       <Footer /> </Footer></>
   )
-=======
-'use client';
-import React from 'react';
-
-interface EnhancedSEOHeadProps {
-  title?: string;
-  description?: string;
-  keywords?: string[];
->>>>>>> cursor/fix-errors-and-merge-to-main-8836
-}
-
-const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = (_props) => {
-  return (
-    <div>
-      {/* Component content */}
-    </div>
+;}
+const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = (_props) => {,;
+  return (;
+    <div></div>;
+      {/* Component content */};
+    </div>;
   );
 };
+;}
 
+export;
 export default EnhancedSEOHead;

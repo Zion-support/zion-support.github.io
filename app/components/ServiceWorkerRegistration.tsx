@@ -1,42 +1,38 @@
-<<<<<<< HEAD
 'use client';
 import { CheckCircle, Phone, Mail, ArrowRight, Helmet } from "lucide-react";
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Brain, BarChart, Target, TrendingUp , CheckCircle, Phone, Mail, ArrowRight  } from 'lucide-react';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp , CheckCircle, Phone, Mail, ArrowRight  } from 'lucide-react'
 const ServiceWorkerRegistrationPage: React.FC = () => {,
-  const features = [
-    {
-      icon: Brain,
-    title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+const features = [
+    {,
+      icon: Brain
+    title: 'AI-Powered Intelligence'
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.'
     benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-},
-  {
-    icon: BarChart,
-    title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+  {,
+    icon: BarChart
+    title: 'Advanced Analytics'
+      description: 'Comprehensive analytics dashboard with real-time data visualization.'
     benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-},
-  {
-    icon: Target,
-    title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
+  {,
+    icon: Target
+    title: 'Precision Targeting'
+      description: 'Target specific goals and objectives with precision and accuracy.'
     benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-},
-  {
-    icon: TrendingUp,
-    title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
+  {,
+    icon: TrendingUp
+    title: 'Growth Optimization'
+      description: 'Optimize your business growth with data-driven strategies.'
     benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
   ]
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology',
-            <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;>,
+const benefits = [
+    'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
+    'Improve decision-making with AI insights';
+    'Scale operations without proportional staff increases';
+    'Gain competitive advantage with advanced technology';
+< className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;>,
               </div><button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover: from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;>,
                 </button><Phone className=&quot;mr-2 h-5 w-5&quot; />Call Now
               </Phone><button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover: from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;>,
@@ -49,8 +45,9 @@ const ServiceWorkerRegistrationPage: React.FC = () => {,
 
 </Footer></>
   )
-}
+;}
 
+export;
 export default ServiceWorkerRegistrationPage
                 
               ))}
@@ -65,9 +62,8 @@ export default ServiceWorkerRegistrationPage
           </div>
       </section>
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className=&quot;py-20 px-4 sm: px-6 lg:px-8&quot;>,
-        </section><div className=&quot;max-w-4xl mx-auto text-center&quot;>
+        </section><div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
         <div className=&quot;bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md: p-12&quot;>,
             </div><h2 className=&quot;text-3xl md: text-4xl font-bold text-white mb-4&quot;>Ready to Get Started?</h2>h2>,
             <p className=&quot;text-xl text-purple-100 mb-8&quot;>Contact our experts to discuss your serviceworkerregistration needs and get a customized solution.</p>p>
@@ -76,62 +72,5 @@ export default ServiceWorkerRegistrationPage
           </div>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>h2>
             <p className="text-xl text-purple-100 mb-8">Contact our experts to discuss your serviceworkerregistration needs and get a customized solution.</p>p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center" / />
+            <div className="flex flex-col sm: flex-row gap-4 justify-center" / /></div>
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-607a
-=======
-'use client'
-import React, { useEffect } from 'react'
-interface ServiceWorkerRegistrationProps {
-  onUpdateAvailable?: () => void;
-  onUpdateInstalled?: () => void;
-  onError?: (_error: Error) => void;
-}
-
-const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
-  onUpdateAvailable,
-  onUpdateInstalled,
-  onError: _onError = () => {},
-}) => {
-  useEffect(() => {
-    if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {
-      return
-    }
-
-    const registerServiceWorker = async () => {
-      try {
-        const registration = await navigator.serviceWorker.register('/sw.js')
-        // Check for updates
-        registration.addEventListener('updatefound', () => {
-          const newWorker = registration.installing
-          if (newWorker) {
-            newWorker.addEventListener('statechange', () => {
-              if (newWorker.state === 'installed') {
-                if (navigator.serviceWorker.controller) {
-                  // New content is available
-                  onUpdateAvailable?.()
-                } else {
-                  // Content is cached for the first time
-                  onUpdateInstalled?.()
-                }
-              }
-            })
-          }
-        })
-        // Handle controller change
-        navigator.serviceWorker.addEventListener('controllerchange', () => {
-          window.location.reload()
-        })
-      } catch (error) {
-        _onError?.(error as Error);
-      }
-    };
-
-    registerServiceWorker();
-  }, [onUpdateAvailable, onUpdateInstalled, _onError]);
-
-  return null;
-};
-
-export default ServiceWorkerRegistration;
->>>>>>> cursor/fix-errors-and-merge-to-main-8836

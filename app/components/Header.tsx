@@ -1,48 +1,43 @@
 'use client';
 import React from 'react';
 import Navigation from './Navigation';
-import { ArrowRight, CheckCircle  } from "lucide-react";
+import { ArrowRight, CheckCircle  } from "lucide-react"
 const features = [
-  {
-    icon: CheckCircle,
-    title: "Advanced AI",
-    description: "Cutting-edge artificial intelligence solutions",
+  {,
+    icon: CheckCircle
+    title: "Advanced AI"
+    description: "Cutting-edge artificial intelligence solutions"
     benefits: ["Machine Learning", "Natural Language Processing", "Computer Vision"]
-  },
-  {
-    icon: CheckCircle,
-    title: "Cloud Infrastructure",
-    description: "Scalable and secure cloud solutions",
+  {,
+    icon: CheckCircle
+    title: "Cloud Infrastructure"
+    description: "Scalable and secure cloud solutions"
     benefits: ["Auto-scaling", "High Availability", "Security"]
-  },
-  {
-    icon: CheckCircle,
-    title: "Data Analytics",
-    description: "Powerful data analysis and visualization",
+  {,
+    icon: CheckCircle
+    title: "Data Analytics"
+    description: "Powerful data analysis and visualization"
     benefits: ["Real-time Analytics", "Predictive Modeling", "Business Intelligence"]
-  },
-  {
-    icon: CheckCircle,
-    title: "Automation",
-    description: "Streamline your business processes",
-    benefits: ["Workflow Automation", "Process Optimization", "Efficiency Gains"]
-  }
+  {,
+    icon: CheckCircle;
+    title: "Automation";
+    description: "Streamline your business processes";
+    benefits: ["Workflow Automation", "Process Optimization", "Efficiency Gains"];
 ];
-
+;}
 const benefits = [
-  "Reduce operational costs by up to 40%",
-  "Increase productivity with AI automation",
-  "Scale your business with cloud solutions",
-  "Make data-driven decisions with analytics",
-  "Enhance security with advanced monitoring",
+  "Reduce operational costs by up to 40%"
+  "Increase productivity with AI automation"
+  "Scale your business with cloud solutions";
+  "Make data-driven decisions with analytics";
+  "Enhance security with advanced monitoring";
   "Improve customer experience with AI";
 ];
-
-
-import Footer from '@/components/Footer';const Header: React.FC = ($2) => {
+;}
+,
+import Footer from '../components/Footer';const Header: React.FC = ($2) => {,;
 $3
-};
-        <section className="relative py-20 px-4 overflow-hidden"> </section><div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20">
+< className="relative py-20 px-4 overflow-hidden"> </section><div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
         <div className="relative max-w-7xl mx-auto text-center"> </div><h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">,
               Header
             </h1>
@@ -59,7 +54,7 @@ $3
           </div>,
         </section>,
         {/* Features Section */}
-        <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto">
+        <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto"></div>
         <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p>Powerful AI-driven features designed to transform your business operations</p>
             </div>
@@ -78,7 +73,7 @@ $3
           </div>
         </section>
         {/* Benefits Section */}
-        <section className="py-20 px-4 bg-white/5"> </section><div className="max-w-7xl mx-auto">
+        <section className="py-20 px-4 bg-white/5"> </section><div className="max-w-7xl mx-auto"></div>
         <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <p>Experience the benefits of cutting-edge AI technology</p>
             </div>
@@ -110,4 +105,3 @@ $3
 
   );
 
-}

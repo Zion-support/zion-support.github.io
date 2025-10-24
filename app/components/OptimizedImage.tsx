@@ -1,11 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
-
-<<<<<<< HEAD
-const OptimizedImage: React.FC = ($2) => {
+;}
+const OptimizedImage: React.FC = ($2) => {,;
 $3
-};
-        <section className="relative py-20 px-4 overflow-hidden"> </section><div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20">
+< className="relative py-20 px-4 overflow-hidden"> </section><div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
         <div className="relative max-w-7xl mx-auto text-center"> </div><h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">,
               OptimizedImage
             </h1>
@@ -22,7 +20,7 @@ $3
         </section>,
 ,
         {/* Features Section */}
-        <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto">
+        <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto"></div>
         <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p>Discover the powerful features that make OptimizedImage the perfect solution for your business.</p>
             </div>
@@ -58,33 +56,20 @@ $3
 
       <Footer /> </Footer></>
   )
-=======
-interface OptimizedImageProps {
-  src: string,
-      alt: string
-  width?: number
-  height?: number
-  className?: string
-  priority?: boolean
-  quality?: number
-  placeholder?: 'empty' | 'blur'
-  blurDataURL?: string
->>>>>>> cursor/fix-errors-and-merge-to-main-8836
-}
-
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src
-  alt
-  width = 800
-  height = 600
+;}
+const OptimizedImage: React.FC<OptimizedImageProps> = ({,
+  src;
+  alt;
+  width = 800;
+  height = 600;
   className = ''
   priority = false
   quality = 75
   placeholder = 'empty'
-  blurDataURL
-}) => {
+  blurDataURL;
+}) => {,
   return (
-    <div className={`relative overflow-hidden ${className}`}>
+    <div className={`relative overflow-hidden ${className}`}></div>
       <Image
         src={src}
         alt={alt}
@@ -95,10 +80,12 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         placeholder={placeholder}
         blurDataURL={blurDataURL}
         className="w-full h-auto object-cover transition-transform duration-300 hover:scale-105"
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-      />
-    </div>
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw";
+      />;
+    </div>;
   );
 };
+;}
 
+export;
 export default OptimizedImage;

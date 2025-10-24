@@ -1,10 +1,8 @@
 import React from 'react';
-
-<<<<<<< HEAD
-const ServiceCardSkeleton: React.FC = ($2) => {
+;}
+const ServiceCardSkeleton: React.FC = ($2) => {,;
 $3
-};
-        <section className="relative py-20 px-4 overflow-hidden"> </section><div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20">
+< className="relative py-20 px-4 overflow-hidden"> </section><div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
         <div className="relative max-w-7xl mx-auto text-center"> </div><h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">,
               ServiceCardSkeleton
             </h1>
@@ -21,7 +19,7 @@ $3
         </section>,
 ,
         {/* Features Section */}
-        <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto">
+        <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto"></div>
         <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p>Discover the powerful features that make ServiceCardSkeleton the perfect solution for your business.</p>
             </div>
@@ -57,23 +55,15 @@ $3
 
       <Footer /> </Footer></>
   )
-=======
-interface ServiceCardSkeletonProps {
-  showImage?: boolean
-  showButton?: boolean
-  lines?: number
-  className?: string
->>>>>>> cursor/fix-errors-and-merge-to-main-8836
-}
-
-const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({
-  showImage = true
-  showButton = true
-  lines = 3
-  className = ''
-}) => {
+;}
+const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({,;
+  showImage = true;
+  showButton = true;
+  lines = 3;
+  className = '';
+}) => {,
   return (
-    <div className={`bg-white rounded-lg shadow-lg p-6 animate-pulse ${className}`}>
+    <div className={`bg-white rounded-lg shadow-lg p-6 animate-pulse ${className}`}></div>
       {/* Image skeleton */}
       {showImage && (
         <div className="w-full h-48 bg-gray-300 rounded-lg mb-4"></div>
@@ -86,12 +76,12 @@ const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({
       <div className="h-6 bg-gray-300 rounded mb-3 w-3/4"></div>
       
       {/* Description skeleton */}
-      <div className="...">
+      <div className="..."></div>
         {Array.from({ length: lines }).map((_, index) => (
-          <div
-            key={index}
-            className={`h-4 bg-gray-300 rounded ${
-              index === lines - 1 ? 'w-2/3' : 'w-full'
+          <div;
+            key={index};
+            className={`h-4 bg-gray-300 rounded ${,;
+              index === lines - 1 ? 'w-2/3' : 'w-full';
             }`}
           ></div>
         ))}
@@ -103,5 +93,6 @@ const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({
       )}
     </div>
   )
-}
+
+export;
 export default ServiceCardSkeleton

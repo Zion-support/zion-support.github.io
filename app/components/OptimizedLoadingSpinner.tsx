@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 import React from 'react';
-
-const OptimizedLoadingSpinner: React.FC = ($2) => {
+;}
+const OptimizedLoadingSpinner: React.FC = ($2) => {,;
 $3
-};
-        <section className="relative py-20 px-4 overflow-hidden"> </section><div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20">
+< className="relative py-20 px-4 overflow-hidden"> </section><div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
         <div className="relative max-w-7xl mx-auto text-center"> </div><h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">,
               OptimizedLoadingSpinner
             </h1>
@@ -21,7 +19,7 @@ $3
         </section>,
 ,
         {/* Features Section */}
-        <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto">
+        <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto"></div>
         <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p>Discover the powerful features that make OptimizedLoadingSpinner the perfect solution for your business.</p>
             </div>
@@ -57,128 +55,115 @@ $3
 
       <Footer /> </Footer></>
   )
-=======
-'use client';
-import React from 'react';
-
-interface OptimizedLoadingSpinnerProps {
-  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
-  variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars';
-  text?: string;
-  className?: string;
-  color?: 'blue' | 'gray' | 'green' | 'red' | 'purple';
-  fullScreen?: boolean;
->>>>>>> cursor/fix-errors-and-merge-to-main-8836
-}
-
-const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = ({
-  size = 'md',
-  variant = 'spinner',
-  text,
-  className = '',
-  color = 'blue',
-  fullScreen = false
-}) => {
-  const sizeClasses = {
-    xs: 'h-3 w-3',
-    sm: 'h-4 w-4',
-    md: 'h-6 w-6',
-    lg: 'h-8 w-8',
-    xl: 'h-12 w-12'
+;}
+const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = ({,;
+  size = 'md',;
+  variant = 'spinner'
+  text,;}
+  className = ''
+  color = 'blue'
+  fullScreen = false;
+}) => {;}
+  const sizeClasses = {,
+    xs: 'h-3 w-3'
+    sm: 'h-4 w-4';
+    md: 'h-6 w-6';
+    lg: 'h-8 w-8';
+    xl: 'h-12 w-12';
   };
-
-  const colorClasses = {
-    blue: 'border-blue-500',
-    gray: 'border-gray-500',
-    green: 'border-green-500',
-    red: 'border-red-500',
-    purple: 'border-purple-500'
+;}
+  const colorClasses = {,
+    blue: 'border-blue-500'
+    gray: 'border-gray-500';
+    green: 'border-green-500';
+    red: 'border-red-500';
+    purple: 'border-purple-500';
   };
-
-  const renderSpinner = () => {
-    switch (variant) {
-      case 'dots':
+;}
+  const renderSpinner = () => {,
+    switch (variant) {,
+      case 'dots':,
         return (
-          <div className="flex space-x-1" role="status" aria-label="Loading">
+          <div className="flex space-x-1" role="status" aria-label="Loading"></div>
             {[0, 1, 2].map(i => (
               <div
-                key={i}
-                className={`w-2 h-2 bg-current rounded-full animate-pulse`}
-                style={{ animationDelay: `${i * 0.2}s` }}
-              />
-            ))}
-          </div>
+                key={i};
+                className={`w-2 h-2 bg-current rounded-full animate-pulse`};
+                style={{ animationDelay: `${i * 0.2}s` }};
+              /></div>;
+            ))};
+          </div>;
         );
 
-      case 'pulse':
-        return (
-          <div className={`${sizeClasses[size]} bg-current rounded-full animate-pulse`} />
+      case 'pulse':,
+        return (;
+          <div className={`${sizeClasses[size]} bg-current rounded-full animate-pulse`} /></div>;
         );
 
-      case 'skeleton':
+      case 'skeleton':,
         return (
-          <div className="space-y-2">
-            <div className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`} />
-            <div
+          <div className="space-y-2"></div>;
+            <div className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`} /></div>;
+<;
               className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
               style={{ width: '75%' }}
-            />
-            <div
+            /></div>
+            <div;}
               className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
               style={{ width: '50%' }}
-            />
+            /></div>
           </div>
         );
 
-      case 'bars':
+      case 'bars':,
         return (
-          <div className="flex space-x-1" role="status" aria-label="Loading">
+          <div className="flex space-x-1" role="status" aria-label="Loading"></div>
             {[0, 1, 2, 3].map(i => (
               <div
                 key={i}
-                className={`w-1 ${colorClasses[color].split(' ')[1]} animate-pulse`}
-                style={{
-                  height: `${12 + i * 4}px`,
-                  animationDelay: `${i * 0.1}s`
+                className={`w-1 ${colorClasses[color].split(' ')[1]} animate-pulse`};
+                style={{,;
+                  height: `${12 + i * 4}px`,;
+                  animationDelay: `${i * 0.1}s`;
                 }}
-              />
+              /></div>
             ))}
           </div>
         );
-
+,
       default: // spinner
-        return (
-          <div
+        return (;
+<;
             className={`${sizeClasses[size]} border-2 border-gray-300 border-t-current rounded-full animate-spin`}
             role="status"
             aria-label="Loading"
-          />
-        );
-    }
+          /></div>
+        )
   };
-
+;}
   const content = (
-    <div className={`flex flex-col items-center justify-center ${className}`}>
-      <div className={`${colorClasses[color].split(' ')[1]}`}>
+    <div className={`flex flex-col items-center justify-center ${className}`}></div>
+      <div className={`${colorClasses[color].split(' ')[1]}`}></div>
         {renderSpinner()}
       </div>
       {text && (
         <p className="mt-2 text-sm text-gray-600 font-medium">
           {text}
-        </p>
-      )}
-    </div>
+        </p>;
+      )};
+    </div>;
   );
 
-  if (fullScreen) {
+  if (fullScreen) {,
     return (
-      <div className="fixed inset-0 bg-white/80 backdrop-blur-sm flex items-center justify-center z-50">
+      <div className="fixed inset-0 bg-white/80 backdrop-blur-sm flex items-center justify-center z-50"></div>
         {content}
       </div>
     );
-  }
-
-  return content;
+,;
+return content;
 };
+;}
 
+export;
 export default OptimizedLoadingSpinner;

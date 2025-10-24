@@ -1,14 +1,12 @@
 import React from 'react';
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-
-const Sidebar: React.FC = ($2) => {
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+const Sidebar: React.FC = ($2) => {,;
 $3
-};
-        <section className="relative py-20 px-4 overflow-hidden"> </section><div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20">
+< className="relative py-20 px-4 overflow-hidden"> </section><div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
         <div className="relative max-w-7xl mx-auto text-center"> </div><h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">,
               Sidebar
             </h1>
@@ -25,7 +23,7 @@ $3
         </section>,
 ,
         {/* Features Section */}
-        <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto">
+        <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto"></div>
         <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p>Discover the powerful features that make Sidebar the perfect solution for your business.</p>
             </div>
@@ -59,54 +57,51 @@ $3
       </div>
 <<<<<<< HEAD
 
-interface SidebarProps {
-  isOpen: boolean,
+interface SidebarProps {,
+  isOpen: boolean
       onClose: () => void
-  menuItems?: Array<{
-    label: string,
+  menuItems?: Array<{,
+    label: string
       href: string
     icon?: React.ReactNode
-    submenu?: Array<{
-      label: string,
-      href: string
-    }>
-  }>
-  user?: {
-    name: string,
+    submenu?: Array<{,
+      label: string
+      href: string;
+    }>;
+  }>,
+  user?: {,
+    name: string
       email: string
     avatar?: string
-  }
   onLogout?: () => void
-}
-
-const Sidebar: React.FC<SidebarProps> = ({
+;}
+const Sidebar: React.FC<SidebarProps> = ({,
   isOpen
   onClose
   menuItems = [
-    { label: 'Dashboard', href: '/dashboard', icon: <Home className="w-5 h-5" /> },
-    { label: 'Profile', href: '/profile', icon: <User className="w-5 h-5" /> },
-    { label: 'Settings', href: '/settings', icon: <Settings className="w-5 h-5" /> }
-  ],
-  user,
-  onLogout,
+    { label: 'Dashboard', href: '/dashboard', icon: <Home className="w-5 h-5" /> }
+    { label: 'Profile', href: '/profile', icon: <User className="w-5 h-5" /> }
+    { label: 'Settings', href: '/settings', icon: <Settings className="w-5 h-5" /> };
+  ];
+  user;
+  onLogout,;
 }) => {
-  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null)
-  const toggleSubmenu = (label: string) => {
-    setActiveSubmenu(activeSubmenu === label ? null : label)
-  }
-  if (!isOpen) return null
-    return (
-    <>
+const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null)
+const toggleSubmenu = (label: string) => {,
+    setActiveSubmenu(activeSubmenu === label ? null : label);
+  if (!isOpen) return null;
+    return (;
+    <>;
       {/* Overlay */}
-      <div
+<;
         className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
         onClick={onClose}
-      />
+      /></div>
       {/* Sidebar */}
-      <div className="...">
-        <div className="...">
+      <div className="..."></div>
+        <div className="..."></div>
           {/* Header */}
-          <div className="...">
+          <div className="..."></div>
             <h2 className="text-lg font-semibold text-gray-900">Menu</h2>
             <button
               onClick={onClose}
@@ -117,8 +112,8 @@ const Sidebar: React.FC<SidebarProps> = ({
 
           {/* User Info */}
           {user && (
-            <div className="...">
-              <div className="...">
+            <div className="..."></div>
+              <div className="..."></div>
                 {user.avatar ? (
                   <img
                     src={user.avatar}
@@ -126,11 +121,11 @@ const Sidebar: React.FC<SidebarProps> = ({
                     className="w-10 h-10 rounded-full"
                   />
                 ) : (
-                  <div className="...">
+                  <div className="..."></div>
                     <User className="w-5 h-5 text-gray-600" />
                   </div>
                 )}
-                <div>
+                <div></div>
                   <p className="text-sm font-medium text-gray-900">{user.name}</p>
                   <p className="text-xs text-gray-500">{user.email}</p>
                 </div>
@@ -141,11 +136,11 @@ const Sidebar: React.FC<SidebarProps> = ({
           {/* Menu Items */}
           <nav className="...">
             {menuItems.map((item, index) => (
-              <div key={index}>
+              <div key={index}></div>
                 <a
                   href={item.href}
                   className="...">
-                  <div className="...">
+                  <div className="..."></div>
                     {item.icon && <span className="mr-3">{item.icon}</span>}
                     {item.label}
                   </div>
@@ -153,16 +148,16 @@ const Sidebar: React.FC<SidebarProps> = ({
                     <button
                       onClick={() => toggleSubmenu(item.label)}
                       className="...">
-                      <ChevronRight
-                        className={`w-4 h-4 transition-transform ${
-                          activeSubmenu === item.label ? 'rotate-90' : ''
+                      <ChevronRight;}
+                        className={`w-4 h-4 transition-transform ${,
+                          activeSubmenu === item.label ? 'rotate-90' : '';
                         }`}
                       />
                     </button>
                   )}
                 </a>
                 {item.submenu && activeSubmenu === item.label && (
-                  <div className="...">
+                  <div className="..."></div>
                     {item.submenu.map((subItem, subIndex) => (
                       <a
                         key={subIndex}
@@ -179,12 +174,12 @@ const Sidebar: React.FC<SidebarProps> = ({
 
           {/* Logout Button */}
           {onLogout && (
-            <div className="...">
+            <div className="..."></div>
               <button
                 onClick={onLogout}
                 className="flex items-center w-full px-3 py-2 text-sm font-medium text-red-600 rounded-md hover:bg-red-50"
               >
-                <LogOut className="w-4 h-4 mr-3" />
+                <LogOut className="w-4 h-4 mr-3" />,
                 Logout
               </button>
             </div>
@@ -192,5 +187,6 @@ const Sidebar: React.FC<SidebarProps> = ({
         </div>
       </div>
       )
-}
+
+export;
 export default Sidebar

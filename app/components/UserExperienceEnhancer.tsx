@@ -1,148 +1,108 @@
 "use client";
-
+;}
 import React, { useState, useEffect } from 'react';
 
-interface UserExperienceEnhancerProps {
+interface UserExperienceEnhancerProps {,
   children: React.ReactNode
   enableAnimations?: boolean
   enableHoverEffects?: boolean
   enableFocusManagement?: boolean
   enableKeyboardNavigation?: boolean
   enableAccessibility?: boolean
-}
-
-const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
+;}
+const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({,
   children
   enableAnimations = true
-  enableHoverEffects = true
-  enableFocusManagement = true
-  enableKeyboardNavigation = true
-  enableAccessibility = true
+  enableHoverEffects = true;
+  enableFocusManagement = true;
+  enableKeyboardNavigation = true;
+  enableAccessibility = true;
 }) => {
-  const [isReducedMotion, setIsReducedMotion] = useState(false)
-  const [isHighContrast, setIsHighContrast] = useState(false)
+const [isReducedMotion, setIsReducedMotion] = useState(false)
+const [isHighContrast, setIsHighContrast] = useState(false)
   useEffect(() => {
     // Check for user's motion preferences
-    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
+const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
     setIsReducedMotion(mediaQuery.matches)
     // Check for high contrast preference
-    const highContrastQuery = window.matchMedia('(prefers-contrast: high)')
+const highContrastQuery = window.matchMedia('(prefers-contrast: high)')
     setIsHighContrast(highContrastQuery.matches)
     // Apply accessibility enhancements
-    if (enableAccessibility) {
+    if (enableAccessibility) {,
       document.documentElement.setAttribute('data-accessibility-enhanced', 'true')
-      if (isHighContrast) {
+      if (isHighContrast) {,
         document.documentElement.classList.add('high-contrast')
-      }
-      
-      if (isReducedMotion) {
+      ,
+      if (isReducedMotion) {,
         document.documentElement.classList.add('reduced-motion')
-      }
-    }
 
-<<<<<<< HEAD
-const enhanceUserExperience = () => {
-      // Add smooth scrolling
-      if (typeof document !== 'undefined') {
+const enhanceUserExperience = () => {;
+      // Add smooth scrolling;
+      if (typeof document !== 'undefined') {,;
         document.documentElement.style.scrollBehavior = 'smooth';
 
         // Add loading states for interactive elements;
-
+;}
 const buttons = document.querySelectorAll('button');
-        buttons.forEach((button) => {
-          button.addEventListener('click', () => {
+        buttons.forEach((button) => {,
+          button.addEventListener('click', () => {,
             button.classList.add('opacity-75', 'cursor-not-allowed');
-            setTimeout(() => {
+            setTimeout(() => {,
               button.classList.remove('opacity-75', 'cursor-not-allowed');
             }, 1000);
           });
         });}
     enhanceUserExperience();
   }, []);
-
-const enhanceUserExperience = () => {
-  return (
-
-    <div className={className}>{children}
-    </div></div>
+;}
+const enhanceUserExperience = () => {,;
+  return (;
+    <div className={className}>{children};
+    </div></div>;
   );
 };
+;}
+,
 
-
+export;
 export default UserExperienceEnhancer;
-=======
-    // Add keyboard navigation support
-    if (enableKeyboardNavigation) {
-      const handleKeyDown = (event: KeyboardEvent) => {
-        if (event.key === 'Tab') {
-          document.body.classList.add('keyboard-navigation')
-        }
-      }
-      const handleMouseDown = () => {
-        document.body.classList.remove('keyboard-navigation')
-      }
-      document.addEventListener('keydown', handleKeyDown)
-      document.addEventListener('mousedown', handleMouseDown)
-      return () => {
-<<<<<<< HEAD
-        document.removeEventListener('keydown', handleKeyDown)
-        document.removeEventListener('mousedown', handleMouseDown)
-      }
-    }
-  }, [enableAccessibility, enableKeyboardNavigation, isHighContrast, isReducedMotion])
-=======
-        document.removeEventListener('keydown', handleKeyDown);
-        document.removeEventListener('mousedown', handleMouseDown);
-      };
-    }
-  }, [enableAccessibility, enableKeyboardNavigation, isHighContrast, isReducedMotion]);
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
   // Add CSS classes for enhanced UX
-  useEffect(() => {
-    const style = document.createElement('style')
-    style.textContent = `
-      .ux-enhanced {
+  useEffect(() => {;}
+    const style = document.createElement('style');
+    style.textContent = `;
+      .ux-enhanced {,;
         ${enableAnimations && !isReducedMotion ? 'transition: all 0.3s ease;' : ''}
-      }
-      
-      .ux-enhanced button:hover {
+
+      .ux-enhanced button:hover {,
         ${enableHoverEffects ? 'transform: translateY(-2px);' : ''}
         ${enableHoverEffects ? 'box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);' : ''}
-      }
-      
+
       .ux-enhanced input:focus
       .ux-enhanced textarea:focus
-      .ux-enhanced select:focus {
+      .ux-enhanced select:focus {,
         ${enableFocusManagement ? 'outline: 2px solid #3b82f6;' : ''}
         ${enableFocusManagement ? 'outline-offset: 2px;' : ''}
-      }
-      
-      .keyboard-navigation *:focus {
+
+      .keyboard-navigation *:focus {,
         ${enableKeyboardNavigation ? 'outline: 2px solid #3b82f6;' : ''}
         ${enableKeyboardNavigation ? 'outline-offset: 2px;' : ''}
-      }
-      
-      .high-contrast {
+
+      .high-contrast {,
         filter: contrast(150%)
-      }
       
-      .reduced-motion * {
+      .reduced-motion * {,
         animation-duration: 0.01ms !important
         animation-iteration-count: 1 !important
         transition-duration: 0.01ms !important
-      }
-    `
+    `,
     document.head.appendChild(style)
-    return () => {
+    return () => {,
       document.head.removeChild(style)
-    }
   }, [enableAnimations, enableHoverEffects, enableFocusManagement, enableKeyboardNavigation, isReducedMotion])
   return (
-    <div className="...">
+    <div className="..."></div>
       {children}
-    </div>
+    </div>;
   )
-}
 export default UserExperienceEnhancer
 >>>>>>> cursor/fix-errors-and-merge-to-main-8836

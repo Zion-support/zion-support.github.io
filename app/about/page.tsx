@@ -16,185 +16,73 @@ export const metadata: Metadata = {
   },
 };
 
-const AboutPage = () => {
-  const values = [
-    {
-      icon: Target,
-      title: 'Innovation',
-      description: 'We constantly push the boundaries of technology to deliver cutting-edge solutions.'
-    },
-    {
-      icon: Users,
-      title: 'Collaboration',
-      description: 'We work closely with our clients to understand their unique needs and challenges.'
-    },
-    {
-      icon: Award,
-      title: 'Excellence',
-      description: 'We are committed to delivering the highest quality solutions and exceptional service.'
-    }
-  ];
-
-  const team = [
-    {
-      name: 'John Smith',
-      role: 'CEO & Founder',
-      image: '/team/john-smith.jpg',
-      bio: 'Visionary leader with 15+ years in technology and business strategy.'
-    },
-    {
-      name: 'Sarah Johnson',
-      role: 'CTO',
-      image: '/team/sarah-johnson.jpg',
-      bio: 'Technical expert specializing in AI, cloud architecture, and scalable systems.'
-    },
-    {
-      name: 'Mike Chen',
-      role: 'Lead Developer',
-      image: '/team/mike-chen.jpg',
-      bio: 'Full-stack developer passionate about creating innovative solutions.'
-    },
-    {
-      name: 'Emily Davis',
-      role: 'UX Designer',
-      image: '/team/emily-davis.jpg',
-      bio: 'Creative designer focused on user experience and interface design.'
-    }
-  ];
-
-  const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '100+', label: 'Happy Clients' },
-    { number: '50+', label: 'Team Members' },
-    { number: '5+', label: 'Years Experience' }
-  ];
-
+export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-20 pb-16 bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              About <span className="text-blue-600">Zion Tech Group</span>
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We are a leading technology company specializing in AI solutions, 
-              cloud infrastructure, and innovative software development services.
+      <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-5xl font-bold mb-6">About Zion Tech Group</h1>
+            <p className="text-xl mb-8">
+              Leading the future of technology with innovative AI and IT solutions that transform businesses and drive digital transformation.
             </p>
           </div>
         </div>
       </section>
 
       {/* Mission Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Our Mission
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              To empower businesses with cutting-edge AI and technology solutions 
-              that drive growth, efficiency, and innovation in the digital age.
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-gray-900 mb-8">Our Mission</h2>
+            <p className="text-xl text-gray-600 mb-12">
+              To empower businesses with cutting-edge AI and technology solutions that drive innovation, efficiency, and growth in the digital age.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Values Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Our Values
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {values.map((value, index) => (
-              <div key={index} className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-6">
-                  <value.icon className="h-8 w-8 text-blue-600" />
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="h-8 w-8 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                  {value.title}
-                </h3>
-                <p className="text-gray-600">
-                  {value.description}
-                </p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Innovation</h3>
+                <p className="text-gray-600">Pioneering the latest in AI and technology</p>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-16 bg-blue-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-white mb-2">
-                  {stat.number}
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="h-8 w-8 text-green-600" />
                 </div>
-                <div className="text-blue-100">
-                  {stat.label}
-                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Excellence</h3>
+                <p className="text-gray-600">Delivering exceptional results for our clients</p>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Team Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Meet Our Team
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our diverse team of experts brings together decades of experience 
-              in AI, cloud computing, and software development.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member, index) => (
-              <div key={index} className="text-center">
-                <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-2xl font-bold text-gray-600">
-                    {member.name.split(' ').map(n => n[0]).join('')}
-                  </span>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Target className="h-8 w-8 text-purple-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  {member.name}
-                </h3>
-                <p className="text-blue-600 mb-4">
-                  {member.role}
-                </p>
-                <p className="text-gray-600 text-sm">
-                  {member.bio}
-                </p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Impact</h3>
+                <p className="text-gray-600">Creating meaningful change through technology</p>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+      <section className="py-20 bg-blue-600">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold text-white mb-4">
             Ready to Work With Us?
           </h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Let's discuss how we can help transform your business with our 
-            innovative AI and technology solutions.
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            Let's discuss how our innovative solutions can help transform your business.
           </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+          <Link 
+            href="/contact" 
+            className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
           >
             Get Started
             <ArrowRight className="ml-2 h-5 w-5" />
@@ -205,6 +93,4 @@ const AboutPage = () => {
       <Footer />
     </div>
   );
-};
-
-export default AboutPage;
+}
