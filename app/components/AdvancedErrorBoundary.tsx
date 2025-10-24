@@ -5,18 +5,20 @@ interface AdvancedErrorBoundaryProps {
   children: ReactNode
   className?: string
   onError?: (_error: Error, _errorInfo: ErrorInfo) => void
-
+}
 
 interface State {
   hasError: boolean
   error?: Error
   errorInfo?: ErrorInfo
   errorId?: string
+}
 
 class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State> {
   constructor(props: AdvancedErrorBoundaryProps) {
     super(props)
     this.state = { hasError: false }
+  }
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     // Log to console in development

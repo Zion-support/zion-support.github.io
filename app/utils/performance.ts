@@ -8,12 +8,15 @@ export class PerformanceMonitor {
   static getInstance(): PerformanceMonitor {
     if (!PerformanceMonitor.instance) {
       PerformanceMonitor.instance = new PerformanceMonitor()
+    }
     return PerformanceMonitor.instance
+  }
 
   startTiming(label: string): void {
     if (typeof window !== "undefined" && "performance" in window) {
       performance.mark(`${label}-start`)
-  
+    }
+  }
 
   endTiming(label: string): number {
     if (typeof window !== "undefined" && "performance" in window) {
