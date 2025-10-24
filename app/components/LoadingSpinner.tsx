@@ -1,85 +1,72 @@
+import React, { memo } from 'react';
 
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  className?: string;
+  text?: string;
+  variant?: 'spinner' | 'dots' | 'pulse';
+  color?: 'blue' | 'gray' | 'white';
+}
 
-const LoadingSpinner: React.FC = () => {
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = memo(({ 
+  size = 'md', 
+  className = '', 
+  text,
+  variant = 'spinner',
+  color = 'blue'
+}) => {
+  const sizeClasses = {
+    sm: 'h-4 w-4',
+    md: 'h-8 w-8',
+    lg: 'h-12 w-12',
+    xl: 'h-16 w-16',
+  };
+
+  const colorClasses = {
+    blue: 'border-blue-600',
+    gray: 'border-gray-600',
+    white: 'border-white'
+  };
+
+  const renderSpinner = () => {
+    switch (variant) {
+      case 'dots':
+        return (
+          <div className="flex space-x-1">
+            {[0, 1, 2].map((i) => (
+              <div
+                key={i}
+                className={`${sizeClasses[size]} bg-${color}-600 rounded-full animate-bounce`}
+                style={{ animationDelay: `${i * 0.1}s` }}
+              />
+            ))}
+          </div>
+        );
+      case 'pulse':
+        return (
+          <div className={`${sizeClasses[size]} bg-${color}-600 rounded-full animate-pulse`} />
+        );
+      default:
+        return (
+          <div
+            className={`animate-spin rounded-full border-b-2 ${colorClasses[color]} ${sizeClasses[size]}`}
+          />
+        );
+    }
+  };
+
   return (
-    <div></div>
-      <Helmet></Helmet>
-        <title>LoadingSpinner</title>
-        <meta name="description" content="Advanced LoadingSpinner solution for modern businesses." /></meta>
-        <meta name="keywords" content="AI, artificial intelligence, LoadingSpinner, AI solutions, intelligent automation" /></meta>
-      </Helmet>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden"></section>
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center"></div>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>
-              LoadingSpinner</h1>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"></p>
-              Advanced LoadingSpinner solution for modern businesses.</p>
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"></button>
-                Get Started</button>
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove
-  r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
-                Learn More</button>
-              </button>
-            
-          
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
-                Discover the powerful features that make LoadingSpinner the perfect solution for your business.</p>
-              </p>
-            
-            <div className="grid md:grid-cols-2 l
-  g:grid-cols-4 gap-8"></div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"></div>
-                <h3 className="text-xl font-semibold text-white mb-3">AI-Powered</h3>
-                <p className="text-gray-300">Advanced AI algorithms for intelligent automation.</p>
-              
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"></div>
-                <h3 className="text-xl font-semibold text-white mb-3">Scalable</h3>
-                <p className="text-gray-300">Grows with your business needs and requirements.</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"></div>
-                <h3 className="text-xl font-semibold text-white mb-3">Secure</h3>
-                <p className="text-gray-300">Enterprise-grade security and data protection.</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"></div>
-                <h3 className="text-xl font-semibold text-white mb-3">Efficient</h3>
-                <p className="text-gray-300">Optimized performance for maximum productivity.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4"></section>
-          <div className="max-w-4xl mx-auto text-center"></div>
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
-            <p className="text-xl text-gray-300 mb-8"></p>
-              Join thousands of businesses already using LoadingSpinner to transform their operations.</p>
-            </p>
-            <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
-              Start Your Free Trial</button>
-            </button>
-          </div>
-        </section>
+    <div className={`flex items-center justify-center ${className}`} role="status" aria-label={text || 'Loading'}>
+      <div className="flex flex-col items-center space-y-2">
+        {renderSpinner()}
+        {text && (
+          <p className="text-sm text-gray-600 animate-pulse">{text}</p>
+        )}
       </div>
-      </Footer>
     </div>
-
   );
-}  )}
-export default LoadingSpinner,
-;
+});
+
+LoadingSpinner.displayName = 'LoadingSpinner';
+
+export default LoadingSpinner;

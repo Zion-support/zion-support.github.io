@@ -1,97 +1,89 @@
-
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 interface SEOHeadProps {
-  title?: string
-  description?: string
-  keywords?: string
-const SEOHead: React.FC<SEOHeadProps> = ({ 
-  title = "Zion Tech Group - AI Solutions"
-  description = "Advanced AI solutions for modern businesses"
-  keywords = "AI, artificial intelligence, technology solutions, business automation" }
-}) => {</SEOHeadProps>
-  return (</SEOHeadProps>
-    <>
-      <Helmet></Helmet>
-        <title>{title}</title>
-        <meta name="description" content={description} /></meta>
-        <meta name="keywords" content={keywords} /></meta>
-        <meta property="og:title" content={title} /></meta>
-        <meta property="og:description" content={description} /></meta>
-        <meta name="twitter:title" content={title} /></meta>
-        <meta name="twitter:description" content={description} /></meta>
-      </Helmet>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden"></section>
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center"></div>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>
-              {title.replace(' - Zion Tech Group', '')}</h1>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"></p>
-              {description}</p>
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"></button>
-                Get Started</button>
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove
-  r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
-                Learn More</button>
-              </button>
-            
-          
-        </section>
+  title: string;
+  description: string;
+  keywords?: string;
+  canonicalUrl?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
+  structuredData?: object;
+  noIndex?: boolean;
+}
 
-        {/* Features Section */}
-        <section className="py-20 px-4"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
-                Discover the powerful features that make SEOHead the perfect solution for your business.</p>
-              </p>
-            
-            <div className="grid md:grid-cols-2 l
-  g:grid-cols-4 gap-8"></div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"></div>
-                <h3 className="text-xl font-semibold text-white mb-3">AI-Powered</h3>
-                <p className="text-gray-300">Advanced AI algorithms for intelligent automation.</p>
-              
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"></div>
-                <h3 className="text-xl font-semibold text-white mb-3">Scalable</h3>
-                <p className="text-gray-300">Grows with your business needs and requirements.</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"></div>
-                <h3 className="text-xl font-semibold text-white mb-3">Secure</h3>
-                <p className="text-gray-300">Enterprise-grade security and data protection.</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"></div>
-                <h3 className="text-xl font-semibold text-white mb-3">Efficient</h3>
-                <p className="text-gray-300">Optimized performance for maximum productivity.</p>
-              </div>
-            </div>
-          </div>
-        </section>
+const SEOHead: React.FC<SEOHeadProps> = ({
+  title,
+  description,
+  keywords,
+  canonicalUrl,
+  ogImage = 'https://ziontechgroup.com/og-image.jpg',
+  ogType = 'website',
+  twitterCard = 'summary_large_image',
+  structuredData,
+  noIndex = false,
+}) => {
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} - Zion Tech Group`;
+  const fullDescription = description || 'Leading provider of AI and IT solutions for modern businesses. Expert services in artificial intelligence, cloud infrastructure, and digital transformation.';
+  const fullKeywords = keywords || 'AI solutions, IT services, artificial intelligence, cloud infrastructure, digital transformation, machine learning, data analytics, business automation';
 
-        {/* CTA Section */}
-        <section className="py-20 px-4"></section>
-          <div className="max-w-4xl mx-auto text-center"></div>
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
-            <p className="text-xl text-gray-300 mb-8"></p>
-              Join thousands of businesses already using SEOHead to transform their operations.</p>
-            </p>
-            <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
-              Start Your Free Trial</button>
-            </button>
-          </div>
-        </section>
-      </div>
-      </Footer>
-    </div>
-
+  return (
+    <Helmet>
+      <title>{fullTitle}</title>
+      <meta name="description" content={fullDescription} />
+      <meta name="keywords" content={fullKeywords} />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="robots" content={noIndex ? 'noindex, nofollow' : 'index, follow'} />
+      <link rel="canonical" href={canonicalUrl || 'https://ziontechgroup.com'} />
+      
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content={ogType} />
+      <meta property="og:url" content={canonicalUrl || 'https://ziontechgroup.com'} />
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={fullDescription} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      
+      {/* Twitter */}
+      <meta property="twitter:card" content={twitterCard} />
+      <meta property="twitter:url" content={canonicalUrl || 'https://ziontechgroup.com'} />
+      <meta property="twitter:title" content={fullTitle} />
+      <meta property="twitter:description" content={fullDescription} />
+      <meta property="twitter:image" content={ogImage} />
+      
+      {/* Additional SEO meta tags */}
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="language" content="English" />
+      <meta name="revisit-after" content="7 days" />
+      <meta name="distribution" content="global" />
+      <meta name="rating" content="general" />
+      
+      {/* Performance and Security */}
+      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+      <meta httpEquiv="X-Frame-Options" content="DENY" />
+      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
+      <meta name="referrer" content="strict-origin-when-cross-origin" />
+      
+      {/* Theme and App */}
+      <meta name="theme-color" content="#3b82f6" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+      
+      {/* Preconnect to external domains */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      
+      {/* Structured Data */}
+      {structuredData && (
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+      )}
+    </Helmet>
   );
-}  )}
-export default SEOHead,
-;
+};
+
+export default SEOHead;
