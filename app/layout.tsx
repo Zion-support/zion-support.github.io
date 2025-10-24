@@ -2,13 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import './globals.css'
 
-<<<<<<< HEAD
-// export const dynamic = 'force-dynamic'
-
-const inter = Inter({ subsets: ['latin'] })
-=======
-export const inter = Inter({ subsets: ['latin'], })
->>>>>>> cursor/fix-errors-and-merge-to-main-f852
+export const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - AI & IT Solutions',
