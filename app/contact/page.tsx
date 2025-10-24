@@ -9,7 +9,6 @@ interface FormData {
   message: string
 }
 
-<<<<<<< HEAD
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     name: '',
@@ -28,29 +27,6 @@ const ContactPage: React.FC = () => {
       [e.target.name]: e.target.value
     })
   }
-=======
-const ContactPage = () => {;
-  const contactInfo = [
-    {
-      icon: Mail,
-      title: 'Email',
-      details: 'info@ziontechgroup.com',
-      description: 'Send us an email anytime'
-    },
-    {
-      icon: Phone,
-      title: 'Phone',
-      details: '+1 (555) 123-4567',
-      description: 'Call us during business hours'
-    },
-    {
-      icon: MapPin,
-      title: 'Address',
-      details: '123 Tech Street, Innovation City, IC 12345',
-      description: 'Visit our headquarters'
-    }
-  ];
->>>>>>> cursor/fix-errors-and-merge-to-main-596a
 
   return (
     <div>

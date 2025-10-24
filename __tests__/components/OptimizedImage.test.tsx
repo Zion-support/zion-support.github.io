@@ -9,7 +9,7 @@ describe('OptimizedImage', () => {
         src="/test-image.jpg" 
         alt="Test image" 
         data-testid="optimized-image"
-      />;
+      />
     );
     
     const image = screen.getByTestId('optimized-image');
@@ -48,11 +48,11 @@ describe('OptimizedImage', () => {
   });
 
   it('renders with different image sources', () => {
-    const testSources = [;
+    const testSources = [
       '/image1.jpg',
       '/image2.png',
       'https://example.com/image3.webp'
-    ]
+    ];
     testSources.forEach((src, index) => {
       const { unmount } = render(
         <OptimizedImage
@@ -65,6 +65,6 @@ describe('OptimizedImage', () => {
       expect(image).toHaveAttribute('src', expect.stringContaining(encodeURIComponent(src)))
       expect(image).toHaveAttribute('alt', `Test image ${index + 1}`)
       unmount();
-    })
-  })
+    });
+  });
 })

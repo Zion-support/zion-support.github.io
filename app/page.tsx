@@ -1,51 +1,44 @@
-<<<<<<< HEAD
-import React from 'react'
-import Link from 'next/link'
-import { ArrowRight } from 'lucide-react'
-import Footer from './components/Footer'
-=======
 "use client";
 
 import React from 'react';
 import Link from 'next/link';
 import { Brain, Shield, Zap, Star } from 'lucide-react';
+import Footer from './components/Footer';
 
-const HomePage = () => {;
-  const features = [
-    {
-      title: "AI-Powered Solutions",
-      description: "Cutting-edge artificial intelligence to transform your business operations",
-      icon: <Brain className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500",
-      stats: "40% efficiency boost",
-      link: "/ai-services"
-    },
-    {
-      title: "IT Services",
-      description: "Comprehensive technology solutions including cloud infrastructure and cybersecurity",
-      icon: <Shield className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500",
-      stats: "99.9% uptime",
-      link: "/it-services"
-    },
-    {
-      title: "Performance Optimization",
-      description: "Advanced performance monitoring and optimization for maximum efficiency",
-      icon: <Zap className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500",
-      stats: "3x faster",
-      link: "/performance"
-    },
-    {
-      title: "Quality Assurance",
-      description: "Rigorous testing and quality assurance to ensure reliable solutions",
-      icon: <Star className="w-8 h-8" />,
-      color: "from-yellow-500 to-orange-500",
-      stats: "100% tested",
-      link: "/quality"
-    }
-  ];
->>>>>>> cursor/fix-errors-and-merge-to-main-596a
+const features = [
+  {
+    title: "AI-Powered Solutions",
+    description: "Cutting-edge artificial intelligence to transform your business operations",
+    icon: <Brain className="w-8 h-8" />,
+    color: "from-blue-500 to-cyan-500",
+    stats: "40% efficiency boost",
+    link: "/ai-services"
+  },
+  {
+    title: "IT Services",
+    description: "Comprehensive technology solutions including cloud infrastructure and cybersecurity",
+    icon: <Shield className="w-8 h-8" />,
+    color: "from-green-500 to-emerald-500",
+    stats: "99.9% uptime",
+    link: "/it-services"
+  },
+  {
+    title: "Performance Optimization",
+    description: "Advanced performance monitoring and optimization for maximum efficiency",
+    icon: <Zap className="w-8 h-8" />,
+    color: "from-purple-500 to-pink-500",
+    stats: "3x faster",
+    link: "/performance"
+  },
+  {
+    title: "Quality Assurance",
+    description: "Rigorous testing and quality assurance to ensure reliable solutions",
+    icon: <Star className="w-8 h-8" />,
+    color: "from-yellow-500 to-orange-500",
+    stats: "100% tested",
+    link: "/quality"
+  }
+];
 
 export default function HomePage() {
   return (
@@ -205,14 +198,9 @@ export default function HomePage() {
                 </a>
               </div>
             </div>
-            </div>
           </div>
-<<<<<<< HEAD
         </div>
-        <Footer />
       </div>
-=======
-      </section>
 
       <section className="py-20 bg-gray-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -249,13 +237,14 @@ export default function HomePage() {
                       Learn more →
                     </Link>
                   </div>
-            </div>
-          </div>
+                </div>
+              </div>
             ))}
           </div>
         </div>
       </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-596a
+      
+      <Footer />
     </div>
   )
 }
