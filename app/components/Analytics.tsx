@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect } from "react"
 
 interface AnalyticsProps {
@@ -21,3 +22,5 @@ const Analytics: React.FC = () => {
 }
 
 export default Analytics
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-4da8

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -118,3 +119,5 @@ export default HeaderPage;
   )
 }
 export default Header
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-4da8

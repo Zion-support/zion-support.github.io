@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -344,3 +345,5 @@ export default ContentCarouselPage;
 }
 
 export default ContentCarousel
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-4da8

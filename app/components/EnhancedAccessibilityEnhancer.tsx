@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -48,10 +49,10 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
               <div key={index} className="flex items-start space-x-3"></div>
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-4da8
               </div>
             ))}
           </div>
         </div>
       </section>
-}
-export default EnhancedAccessibilityEnhancerPage

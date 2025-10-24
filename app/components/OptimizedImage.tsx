@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 import Footer from './Footer'
 import React from 'react'
@@ -37,6 +38,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-4da8
                 Learn More
               </button>
             </div>
@@ -44,6 +47,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {
         </div>
       </section>
       {/* Features Section */}
+<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
@@ -62,12 +66,15 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-4da8
               </div>
             ))}
           </div>
         </div>
       </section>
       {/* Benefits Section */}
+<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
@@ -123,3 +130,5 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {
 };
 
 export default OptimizedImagePage;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-4da8

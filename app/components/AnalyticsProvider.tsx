@@ -1,16 +1,17 @@
+<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, ReactNode } from "react"
 
 declare global {
   interface Window {
     gtag: (...args: any[]) => void
   }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-4da8
 }
 
-interface AnalyticsContextType {
-  trackEvent: (eventName: string, parameters?: Record<string, unknown>) => void
-  trackPageView: (pageName: string) => void
-}
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
+<<<<<<< HEAD
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
   undefined,
 )
@@ -46,9 +47,13 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
         window.gtag("js", new Date())
         window.gtag("config", process.env.REACT_APP_GA_MEASUREMENT_ID || "")
       }
+=======
+      });
+>>>>>>> cursor/fix-errors-and-merge-to-main-4da8
     }
-  }, [])
+  };
 
+<<<<<<< HEAD
   const trackEvent = (
     eventName: string,
     parameters?: Record<string, unknown>,
@@ -71,12 +76,19 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     trackEvent,
     trackPageView,
   }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-4da8
 
+>>>>>>> origin/main
   return (
     <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
+<<<<<<< HEAD
   )
 }
 
 export default AnalyticsProvider
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/fix-errors-and-merge-to-main-4da8
