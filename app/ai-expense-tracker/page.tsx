@@ -3,6 +3,8 @@ import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Calculator, Receipt, BarChart, Target, CheckCircle, Zap, Brain, Settings, Globe, Clock, Shield, TrendingUp, Star, DollarSign, PieChart, Activity, FileText, Database, Building2, CreditCard, Wallet, Lock, Sparkles, Smartphone, Camera, Upload } from 'lucide-react';
 
+export const dynamic = 'force-dynamic';
+
 const AiExpenseTrackerPage: React.FC = () => {
   const features = [
     {

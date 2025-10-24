@@ -3,6 +3,8 @@ import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Shield, Zap, CheckCircle, Brain, Settings, Target, Users, Calendar, BarChart, Lock } from 'lucide-react';
 
+export const dynamic = 'force-dynamic';
+
 const BlockchainPage: React.FC = () => {
   const features = [
     {

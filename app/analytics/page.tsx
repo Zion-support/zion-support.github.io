@@ -3,6 +3,8 @@ import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, BarChart, TrendingUp, CheckCircle, Brain, Settings, Target, Users, Calendar, Zap } from 'lucide-react';
 
+export const dynamic = 'force-dynamic';
+
 const AnalyticsPage: React.FC = () => {
   const features = [
     {

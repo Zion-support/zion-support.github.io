@@ -3,42 +3,44 @@ import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Zap, Brain, CheckCircle, Users, BarChart, MessageCircle, Target, Settings, Workflow, Globe, Server, Clock, ShoppingCart } from 'lucide-react';
 
+export const dynamic = 'force-dynamic';
+
 const AiChatbotBuilderPage: React.FC = () => {
   const features = [
     {
       title: 'No-Code Builder',
       description: 'Create sophisticated chatbots without any programming knowledge using our visual interface',
-      icon: <Zap className="w-8 h-8 text-cyan-400" />,
+      iconType: 'Zap',
       color: 'from-cyan-500 to-blue-500'
     },
     {
       title: 'Multi-Language Support',
       description: 'Deploy chatbots in 50+ languages with automatic translation and localization',
-      icon: <Globe className="w-8 h-8 text-green-400" />,
+      iconType: 'Globe',
       color: 'from-green-500 to-emerald-500'
     },
     {
       title: 'Advanced Analytics',
       description: 'Track performance with detailed analytics, conversation insights, and user behavior data',
-      icon: <BarChart className="w-8 h-8 text-purple-400" />,
+      iconType: 'BarChart',
       color: 'from-purple-500 to-pink-500'
     },
     {
       title: 'AI-Powered Responses',
       description: 'Leverage advanced NLP and machine learning for intelligent, context-aware conversations',
-      icon: <Brain className="w-8 h-8 text-orange-400" />,
+      iconType: 'Brain',
       color: 'from-orange-500 to-red-500'
     },
     {
       title: 'Easy Integration',
       description: 'Seamlessly integrate with your existing systems, websites, and messaging platforms',
-      icon: <Workflow className="w-8 h-8 text-blue-400" />,
+      iconType: 'Workflow',
       color: 'from-blue-500 to-cyan-500'
     },
     {
       title: 'Custom Branding',
       description: 'Customize the chatbot appearance to match your brand identity and design guidelines',
-      icon: <Settings className="w-8 h-8 text-indigo-400" />,
+      iconType: 'Settings',
       color: 'from-indigo-500 to-purple-500'
     }
   ];
@@ -163,7 +165,7 @@ const AiChatbotBuilderPage: React.FC = () => {
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mb-4">
-                  <stat.icon className="w-8 h-8 text-white" />
+                  {stat.icon}
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-gray-300">{stat.label}</div>
@@ -188,7 +190,7 @@ const AiChatbotBuilderPage: React.FC = () => {
             {features.map((feature, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300 group">
                 <div className="mb-6">
-                  <feature.icon className="w-8 h-8 text-cyan-400" />
+                  {feature.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -213,7 +215,7 @@ const AiChatbotBuilderPage: React.FC = () => {
             {useCases.map((useCase, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-purple-400/50 transition-all duration-300 group">
                 <div className="mb-6">
-                  <useCase.icon className="w-8 h-8 text-purple-400" />
+                  {useCase.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{useCase.title}</h3>
                 <p className="text-gray-300 mb-4">{useCase.description}</p>

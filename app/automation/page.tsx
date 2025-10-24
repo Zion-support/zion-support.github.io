@@ -3,6 +3,8 @@ import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Zap, Settings, CheckCircle, Brain, Target, Users, Calendar, BarChart, Workflow } from 'lucide-react';
 
+export const dynamic = 'force-dynamic';
+
 const AutomationPage: React.FC = () => {
   const features = [
     {

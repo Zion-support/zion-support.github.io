@@ -3,6 +3,8 @@ import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, CheckCircle, Zap, Shield, BarChart3, Users, BarChart } from 'lucide-react';
 
+export const dynamic = 'force-dynamic';
+
 const AiEcommerceOptimizerProPage: React.FC = () => {
   const features = [
     {
@@ -116,7 +118,7 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
             {features.map((feature, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300 group text-center">
                 <div className="mb-6">
-                  <feature.icon className="w-8 h-8 text-cyan-400" />
+                  {feature.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>

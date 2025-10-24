@@ -2,6 +2,8 @@ import React from 'react'
 import { ArrowRight, Brain, Mail, CheckCircle, Zap, TrendingUp, Send, BarChart3, Shield, DollarSign, Clock, Star } from 'lucide-react'
 import Link from 'next/link'
 
+export const dynamic = 'force-dynamic';
+
 const AIEmailAutomationPage: React.FC = () => {
   const features = [
     {

@@ -3,6 +3,8 @@ import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Mail, Target, BarChart, Users, CheckCircle, Zap, Brain, Settings, Globe, Clock, Shield, TrendingUp, Star, MessageCircle, Send, PieChart, Activity, DollarSign, FileText, Database, Building2, CreditCard, Wallet, Lock, Sparkles, ShoppingCart } from 'lucide-react';
 
+export const dynamic = 'force-dynamic';
+
 const AiEmailMarketingAutomationPage: React.FC = () => {
   const features = [
     {

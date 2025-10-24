@@ -3,6 +3,8 @@
 import Link from 'next/link';
 import { ArrowRight, Calculator, Building2, Wallet, PiggyBank, BarChart, TrendingUp, CheckCircle, Brain, Settings, BarChart3, Shield, Target, Zap, Globe, DollarSign, Activity, Lock, Database, FileText, CreditCard, Star, Sparkles, PieChart } from 'lucide-react';
 
+export const dynamic = 'force-dynamic';
+
 export default function AiFinancialAnalyticsProPage() {
 
   const features = [
@@ -312,7 +314,7 @@ export default function AiFinancialAnalyticsProPage() {
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full mx-auto mb-4">
-                    <stat.icon className="w-8 h-8 text-white" />
+                    {stat.icon}
                   </div>
                   <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
                   <div className="text-gray-300">{stat.label}</div>
@@ -337,7 +339,7 @@ export default function AiFinancialAnalyticsProPage() {
               <div key={index} className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300 group">
                 <div className="mb-6">
                   <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl mx-auto mb-4 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
+                    {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3 text-center">{feature.title}</h3>
                   <p className="text-gray-300 mb-4 text-center">{feature.description}</p>
@@ -368,7 +370,7 @@ export default function AiFinancialAnalyticsProPage() {
             {analyticsTypes.map((type, index) => (
               <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300">
                 <div className="flex items-center mb-4">
-                  <type.icon className="w-6 h-6 text-cyan-400" />
+                  {type.icon}
                   <h3 className="text-lg font-semibold text-white ml-3">{type.category}</h3>
                 </div>
                 <ul className="space-y-2">
@@ -397,7 +399,7 @@ export default function AiFinancialAnalyticsProPage() {
             {integrations.map((integration, index) => (
               <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300 text-center group">
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mx-auto mb-3 group-hover:scale-110 transition-transform">
-                  <integration.icon className="w-6 h-6 text-white" />
+                  {integration.icon}
                 </div>
                 <h3 className="text-white font-semibold mb-1">{integration.name}</h3>
                 <p className="text-gray-400 text-sm">{integration.category}</p>
