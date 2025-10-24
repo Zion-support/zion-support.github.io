@@ -38,7 +38,8 @@ export default function HomePage() {  return (
         </div>,
         {/* Floating Elements */}
         <div className="absolute top-20 left-10 w-20 h-20 bg-purple-500 rounded-full opacity-20 animate-pulse">
-        <div className="absolute bottom-20 right-10 w-32 h-32 bg-cyan-500 rounded-full opacity-20 animate-pulse delay-1000"> </div><div className="absolute top-1/2 left-20 w-16 h-16 bg-pink-500 rounded-full opacity-20 animate-pulse delay-500"> </div></section>
+        <div className="absolute bottom-20 right-10 w-32 h-32 bg-cyan-500 rounded-full opacity-20 animate-pulse delay-1000">
+        <div className="absolute top-1/2 left-20 w-16 h-16 bg-pink-500 rounded-full opacity-20 animate-pulse delay-500"> </div></section>
       {/* Services Section */}
       <section className="py-20 bg-slate-900"> </section><div className="container mx-auto px-4">
         <div className="text-center mb-16"> </div><h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,

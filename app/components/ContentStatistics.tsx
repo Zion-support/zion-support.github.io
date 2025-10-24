@@ -317,7 +317,8 @@ Our </h2><span className="text-transparent bg-clip-text bg-gradient-to-r from-bl
 {/* Statistics Grid */}
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">{statistics.map((stat, index) => (</div>
 <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 text-center">
-        <div className="flex justify-center mb-4"> </div><div className="bg-gradient-to-r from-purple-600 to-cyan-600 w-16 h-16 rounded-full flex items-center justify-center">
+        <div className="flex justify-center mb-4">
+        <div className="bg-gradient-to-r from-purple-600 to-cyan-600 w-16 h-16 rounded-full flex items-center justify-center">
 </div><stat.icon className="h-8 w-8 text-white" />
 </stat></div>
 </div>

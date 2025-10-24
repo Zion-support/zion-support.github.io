@@ -46,8 +46,7 @@ const Header: React.FC = () => {
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
         <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Header
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">Header
           </h1>
           <p>Advanced Header solution for modern businesses.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -111,7 +111,7 @@ const updateTwitterTag = (name: string, content: string) => {,
       </meta><meta name=&quot;robots&quot; content=&quot;index, follow&quot; /> </meta><meta name=&quot;author&quot; content=&quot;Zion Tech Group&quot; /> </meta><meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; /> </meta><meta charSet=&quot;UTF-8&quot; />{/* Structured Data */}
       {structuredData && (
         </meta><script
-          type=&quot;application/ld+json&quot
+          type=&quot;application/ld+json&quot;
 
 export default SEOOptimizer
 

@@ -44,8 +44,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '' }) => {
                   </ul>
               <br /> </br><span className="text-white">Solutions</span>
             </h1>
-            <p className="text-xl text-gray-300mb-8max-w-3xlmx-auto">
-            Transform your business with our advanced seoenhancer solutions.
+            <p className="text-xl text-gray-300mb-8max-w-3xlmx-auto">Transform your business with our advanced seoenhancer solutions.
           </p>
               Powered by cutting-edge AI technology and industry expertise.
             </p>

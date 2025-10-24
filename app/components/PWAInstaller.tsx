@@ -61,7 +61,8 @@ $3
   return (
     <div className=&quot;fixed bottom-4 right-4 z-50 max-w-sm&quot;>
         <div className=&quot;bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4&quot;> </div><div className=&quot;flex items-start justify-between mb-3&quot;>
-        <div className=&quot;flex items-center space-x-2&quot;> </div><div className=&quot;w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center&quot;> </div><Download className=&quot;w-4 h-4 text-white&quot; /> </Download></div>
+        <div className=&quot;flex items-center space-x-2&quot;>
+        <div className=&quot;w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center&quot;> </div><Download className=&quot;w-4 h-4 text-white&quot; /> </Download></div>
             <div> </div><h3 className=&quot;text-white text-sm font-medium&quot;>Install App</h3>
               <p className=&quot;text-gray-300 text-xs&quot;>Get quick access to Zion Tech Group</p>
             </div>

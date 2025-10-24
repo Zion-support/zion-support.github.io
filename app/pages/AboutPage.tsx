@@ -107,11 +107,9 @@ export default function AboutPage() {
                     </span></span>
                   </div>
                   <h3 className="text-lgfont-semiboldtext-whitemb-2">{member.name}</h3>
-                  <p className="text-cyan-400text-smmb-3">
-            {member.role}
+                  <p className="text-cyan-400text-smmb-3">{member.role}
           </p>
-                  <p className="text-gray-300text-sm">
-            {member.description}
+                  <p className="text-gray-300text-sm">{member.description}
           </p>
                 </div>
               ))}

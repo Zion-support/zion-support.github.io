@@ -130,7 +130,8 @@ $3
         <div className=&quot;relative&quot;>
         <div className=&quot;bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 md: p-12 overflow-hidden&quot;>,
             </div><div className=&quot;flex items-center justify-between mb-8&quot;>
-        <div className=&quot;flex items-center gap-4&quot;> </div><div className=&quot;w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-xl flex items-center justify-center&quot;> </div><currentSlideData.icon className=&quot;w-8 h-8 text-slate-900&quot; /> </currentSlideData></div>
+        <div className=&quot;flex items-center gap-4&quot;>
+        <div className=&quot;w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-xl flex items-center justify-center&quot;> </div><currentSlideData.icon className=&quot;w-8 h-8 text-slate-900&quot; /> </currentSlideData></div>
                 {/* Features */}
                 <div className=&quot;space-y-4&quot;> </div><h4 className=&quot;text-lg font-semibold text-white mb-4&quot;>Key Features: </h4>,
                   <div className=&quot;grid grid-cols-1 sm:grid-cols-2 gap-3&quot;>{currentSlideData.features.map((feature, index) => (</div>

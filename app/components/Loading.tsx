@@ -19,15 +19,13 @@ const Loading: React.FC = () => {
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>
               Loading</h1>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Advanced Loading solution for modern businesses.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Advanced Loading solution for modern businesses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"></button>
                 Get Started</button>
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove,
-  r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
                 Learn More</button>
               </button>
             </div>
