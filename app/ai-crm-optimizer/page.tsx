@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Aicrmoptimizer = () => {
+const Aicrmoptimizer: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Aicrmoptimizer = () => {
   );
 };
 
-export default Aicrmoptimizer;
 
-export default AiCrmOptimizer;
+
+
+export default Aicrmoptimizer;

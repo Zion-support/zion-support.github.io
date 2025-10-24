@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Innovationlabs = () => {
+const Innovationlabs: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -108,6 +107,7 @@ const Innovationlabs = () => {
   );
 };
 
-export default Innovationlabs;
 
-export default PagePage;
+
+
+export default Innovationlabs;

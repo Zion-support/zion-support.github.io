@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Aisolutions = () => {
+const Aisolutions: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,8 @@ const Aisolutions = () => {
   );
 };
 
-export default Aisolutions;
 
-export default AiSolutions;
+
+
+
+export default Aisolutions;

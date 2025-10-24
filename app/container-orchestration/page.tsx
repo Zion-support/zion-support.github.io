@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Containerorchestration = () => {
+const Containerorchestration: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Containerorchestration = () => {
   );
 };
 
-export default Containerorchestration;
 
-export default ContainerOrchestration;
+
+
+export default Containerorchestration;

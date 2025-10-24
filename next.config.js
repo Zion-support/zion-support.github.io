@@ -2,21 +2,18 @@
 const nextConfig = {
   output: 'standalone',
   trailingSlash: true,
-      images: {
+  images: {
     unoptimized: true
   },
   experimental: {
-    esmExternals: false
+    esmExternals: false,
+    missingSuspenseWithCSRBailout: false,
   },
   eslint: {
     ignoreDuringBuilds: true,
   },
   typescript: {
     ignoreBuildErrors: true,
-  },
-  generateStaticParams: false,
-  experimental: {
-    missingSuspenseWithCSRBailout: false,
   }
 }
 

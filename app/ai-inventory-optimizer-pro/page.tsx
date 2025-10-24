@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Aiinventoryoptimizerpro = () => {
+const Aiinventoryoptimizerpro: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,8 @@ const Aiinventoryoptimizerpro = () => {
   );
 };
 
-export default Aiinventoryoptimizerpro;
 
-export default AiInventoryOptimizerPro;
+
+
+
+export default Aiinventoryoptimizerpro;

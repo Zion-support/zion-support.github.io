@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Ittraining = () => {
+const Ittraining: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,8 +106,9 @@ const Ittraining = () => {
   );
 };
 
+
+
+
+
+
 export default Ittraining;
-
-export default ItTraining;
-
-export default PagePage;

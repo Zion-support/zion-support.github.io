@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Intelligentdatabasemigration = () => {
+const Intelligentdatabasemigration: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,8 +106,9 @@ const Intelligentdatabasemigration = () => {
   );
 };
 
+
+
+
+
+
 export default Intelligentdatabasemigration;
-
-export default IntelligentDatabaseMigration;
-
-export default PagePage;

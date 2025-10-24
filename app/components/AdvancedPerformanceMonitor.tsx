@@ -335,8 +335,8 @@ if (metrics.ttfb && metrics.ttfb >600) {recommendations.push('Time to First Byte
 return recommendation s
 }, [metrics]);"
 const_recommendations="getPerformanceRecommendations()";"
-if (process.env.NODE_ENV="==" 'development') {return(<divclassName="'fixed" bottom-4 right-4 bg-white p-4 rounded-lg shado w-lg border max-w-sm z-5 0'><h3className='font-semibold text-sm mb-2'>PerformanceMonitor</h><divclassName='text-xs space-y-1'><di v>FCP: {metrics.fcp ?`${metrics.fcp.toFixed(0)}ms`:'N/A'}</di><di v>LCP: {metrics.lcp?`${metrics.lcp.toFixed(0)}ms`:'N/A'}</di><di v>FID: {metrics.fid?`${metrics.fid.toFixed(0)}ms`:'N/A'}</di><di v>CLS: {metrics.cls ?metrics.cls.toFixed(3):'N/A'}</di><di v>TTFB: {metrics.ttfb?`${metrics.ttfb.toFixed(0)}ms`:'N/A'}</di><di v>Memory:{''}
-{metrics.memory</di>
+if (process.env.NODE_ENV="==" 'development') {return(<divclassName="'fixed" bottom-4 right-4 bg-white p-4 rounded-lg shado w-lg border max-w-sm z-5 0'><h3className='font-semibold text-sm mb-2'>PerformanceMonitor</h><divclassName='text-xs space-y-1'><di v>FCP: {metrics.fcp ?`${metrics.fcp.toFixed(0)}ms`:'N/A'}</di><di v>LCP: {metrics.lcp?`${metrics.lcp.toFixed(0)}ms`:'N/A'}</di><di v>FID: {metrics.fid?`${metrics.fid.toFixed(0)}ms`:'N/A'}</di><di v>CLS: {metrics.cls ?metrics.cls.toFixed(3):'N/A'}</di><di v>TTFB: {metrics.ttfb?`${metrics.ttfb.toFixed(0)}ms`:'N/A'}</di><di v>Memory:{''},
+    {metrics.memory</di>
 ?`${(metrics.memory /1024/1024).toFixed(1)}MB`</di>"
 :'N/A'}</di></di>{_recommendations.length >0&&(<divclassName="'mt-2'"><h4className='font-semibold text-xs text-red-60 0'>Recommendations:</h><ulclassName="'text-xs" text-red-60 0'>{_recommendations.map((recindex)=>(<likey="{index}">•{rec}</l>))}</u></di>)}</di>)
 }

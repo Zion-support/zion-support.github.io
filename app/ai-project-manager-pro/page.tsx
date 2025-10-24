@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Aiprojectmanagerpro = () => {
+const Aiprojectmanagerpro: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,8 @@ const Aiprojectmanagerpro = () => {
   );
 };
 
-export default Aiprojectmanagerpro;
 
-export default AiProjectManagerPro;
+
+
+
+export default Aiprojectmanagerpro;

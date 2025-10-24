@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Edgecomputingsolutions = () => {
+const Edgecomputingsolutions: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Edgecomputingsolutions = () => {
   );
 };
 
-export default Edgecomputingsolutions;
 
-export default EdgeComputingSolutions;
+
+
+export default Edgecomputingsolutions;

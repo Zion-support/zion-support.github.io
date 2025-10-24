@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Aiaudioprocessor = () => {
+const Aiaudioprocessor: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Aiaudioprocessor = () => {
   );
 };
 
-export default Aiaudioprocessor;
 
-export default AiAudioProcessor;
+
+
+export default Aiaudioprocessor;

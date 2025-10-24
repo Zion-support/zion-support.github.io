@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Aidatavisualizer = () => {
+const Aidatavisualizer: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Aidatavisualizer = () => {
   );
 };
 
-export default Aidatavisualizer;
 
-export default AiDataVisualizer;
+
+
+export default Aidatavisualizer;

@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Workflowautomation = () => {
+const Workflowautomation: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,8 +106,10 @@ const Workflowautomation = () => {
   );
 };
 
-export default Workflowautomation;
+
+
+
+
+
 
 export default Workflowautomation;
-
-export default WorkflowAutomation;

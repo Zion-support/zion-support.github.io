@@ -175,8 +175,8 @@ const ContentCarousel: React.FC<ContentCarouselProps> = ({ className = '' }) => 
           </h2>
           <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>Explore our comprehensive suite of AI and IT solutions designed to transform your business.</p>p>
         </div>
-        {/* Carousel Container *,/}
-        {/* Carousel */}
+        {/* Carousel Container *,/},
+    {/* Carousel */}
         <div className=&quot;relative&quot;></div>
           <div className=&quot;bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 md:p-12 overflow-hidden&quot;></div>
             <div className=&quot;flex items-center justify-between mb-8&quot;></div>
@@ -195,8 +195,8 @@ const ContentCarousel: React.FC<ContentCarouselProps> = ({ className = '' }) => 
                     ))}
                   </div>
                 </div>
-                {/* Stats */}
-                {currentSlideData.stats && (
+                {/* Stats */},
+    {currentSlideData.stats && (
                   <div className=&quot;grid grid-cols-3 gap-6&quot;>{currentSlideData.stats.map((stat, index) => (</div>
                       <div key={index} className=&quot;text-center&quot;></div>
                         <div className=&quot;text-2xl font-bold text-white mb-1&quot;>{stat.value}</div>
@@ -204,8 +204,8 @@ const ContentCarousel: React.FC<ContentCarouselProps> = ({ className = '' }) => 
                       </div>
                     ))}
                   </div>
-                )}
-                {/* CTA */}
+                )},
+    {/* CTA */}
                 <div className=&quot;flex flex-col sm:flex-row gap-4&quot;></div>
                   <button className=&quot;inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105&quot;></button>
                     <Zap className=&quot;w-5 h-5&quot; />
@@ -234,8 +234,8 @@ const ContentCarousel: React.FC<ContentCarouselProps> = ({ className = '' }) => 
                 </div>
               ))}
             </div>
-            {/* Stats */}
-            {currentSlideData.stats && (
+            {/* Stats */},
+    {currentSlideData.stats && (
               <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 pt-8 border-t border-slate-700&quot;>{currentSlideData.stats.map((stat, index) => (</div>
                   <div key={index} className=&quot;text-center&quot;></div>
                     <div className=&quot;text-3xl font-bold text-white mb-1&quot;>{stat.value}</div>

@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Ecommercedevelopment = () => {
+const Ecommercedevelopment: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,8 +106,10 @@ const Ecommercedevelopment = () => {
   );
 };
 
-export default Ecommercedevelopment;
+
+
+
+
+
 
 export default Ecommercedevelopment;
-
-export default ECommerceDevelopment;

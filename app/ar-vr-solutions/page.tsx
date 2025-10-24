@@ -30,10 +30,9 @@ const PagePage: React.FC = () => {
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ];
-"use client";
 import React from "react";
 
-const Arvrsolutions = () => {
+const Arvrsolutions: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -140,6 +139,8 @@ const Arvrsolutions = () => {
   );
 };
 
-export default Arvrsolutions;
 
-export default PagePage;
+
+
+export default Arvrsolutions;
+}

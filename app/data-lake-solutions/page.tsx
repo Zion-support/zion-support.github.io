@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Datalakesolutions = () => {
+const Datalakesolutions: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Datalakesolutions = () => {
   );
 };
 
-export default Datalakesolutions;
 
-export default DataLakeSolutions;
+
+
+export default Datalakesolutions;

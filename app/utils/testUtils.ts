@@ -1,5 +1,4 @@
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
-"use client";
 import React from 'react';
 
 const testUtils.ts = () => {
@@ -7,8 +6,8 @@ const testUtils.ts = () => {
 };
 
 <<<<<<< HEAD:app-broken/app/utils/testUtils.ts
-export default testUtils.ts;
-export default testUtils.ts;
+
+
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b73a
 'use client'
 /**
@@ -327,3 +326,5 @@ export default {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b73a
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9ef9
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e7ea
+
+export default testUtils.ts;

@@ -1,4 +1,4 @@
-export const generateSitemap = () => {
+export const generateSitemap: React.FC = () => {
   const baseUrl = 'https://ziontechgroup.com';
   const staticPages = [
     '',

@@ -29,7 +29,7 @@ const ContentStatistics: React.FC = () => {
   }
 
   useEffect(() => {
-    const animateCounters = () => {
+    const animateCounters: React.FC = () => {
       Object.keys(targetCounters).forEach(key => {
         const target = targetCounters[key as keyof typeof targetCounters]
         const duration = 2000
@@ -252,7 +252,8 @@ Our <span className=&quot;text-transparent bg-clip-text bg-gradient-to-r from-bl
 <stat.icon className=&quot;h-8 w-8 text-white&quot; />
 </div>
 </div>
-<div className={`text-3xl font-bold ${stat.color} mb-2`}>{Math.floor(stat.value)}{stat.suffix}</div>div>
+<div className={`text-3xl font-bold ${stat.color} mb-2`}>{Math.floor(stat.value)},
+    {stat.suffix}</div>div>
 <div className=&quot;text-gray-300&quot;>{stat.label}</div>
 </div>
 ))}
@@ -274,7 +275,8 @@ Our <span className=&quot;text-transparent bg-clip-text bg-gradient-to-r from-bl
 <div className=&quot;w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full flex items-center justify-center mx-auto mb-4&quot;></div>
 <stat.icon className=&quot;w-8 h-8 text-slate-900&quot; />
 </div>
-<div className={`text-4xl font-bold ${stat.color} mb-2`}>{stat.value}{stat.suffix}</div>div>
+<div className={`text-4xl font-bold ${stat.color} mb-2`}>{stat.value},
+    {stat.suffix}</div>div>
 <div className=&quot;text-lg font-semibold text-white mb-2&quot;>{stat.label}</div>
 <div className=&quot;text-gray-400 text-sm&quot;>{stat.description}</div>
 </div>

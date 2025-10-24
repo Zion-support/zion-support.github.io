@@ -25,10 +25,9 @@ const PagePage: React.FC = () => {
       benefits: ['End-to-end encryption', 'GDPR compliance', 'SOC 2 certified', 'Regular audits']
     }
   ];
-"use client";
 import React from "react";
 
-const Inventorymanagement = () => {
+const Inventorymanagement: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -134,8 +133,10 @@ const Inventorymanagement = () => {
   );
 };
 
+
+
+
+
+
 export default Inventorymanagement;
-
-export default InventoryManagement;
-
-export default PagePage;
+}

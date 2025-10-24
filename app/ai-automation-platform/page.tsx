@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Aiautomationplatform = () => {
+const Aiautomationplatform: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Aiautomationplatform = () => {
   );
 };
 
-export default Aiautomationplatform;
 
-export default AiAutomationPlatform;
+
+
+export default Aiautomationplatform;

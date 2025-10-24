@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Machinelearning = () => {
+const Machinelearning: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,10 +106,11 @@ const Machinelearning = () => {
   );
 };
 
+
+
+
+
+
+
+
 export default Machinelearning;
-
-export default MachineLearning;
-
-export default Machinelearning;
-
-export default MachineLearning;

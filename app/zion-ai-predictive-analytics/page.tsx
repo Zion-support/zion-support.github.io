@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Zionaipredictiveanalytics = () => {
+const Zionaipredictiveanalytics: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,8 @@ const Zionaipredictiveanalytics = () => {
   );
 };
 
-export default Zionaipredictiveanalytics;
 
-export default ZionAiPredictiveAnalytics;
+
+
+
+export default Zionaipredictiveanalytics;

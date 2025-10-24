@@ -10,7 +10,7 @@ declare global {
   }
 }
 
-export const useErrorMonitoring = () => {
+export const useErrorMonitoring: React.FC = () => {
   const { trackError } = useAnalytics();
 
   const reportError = useCallback(

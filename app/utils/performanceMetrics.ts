@@ -101,7 +101,7 @@ private initializeObservers(): void {// Observe navigation timing;
 if ('PerformanceObserver' in window) {
 try {
 // Navigation timing;"
-const navObserver = () => {"
+const navObserver: React.FC = () => {"
 if (entry.entryType="==" 'navigation') {"
 export const navEntry=";";
 name: 'pageLoadTime');

@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Cloudinfrastructuremanager = () => {
+const Cloudinfrastructuremanager: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,8 @@ const Cloudinfrastructuremanager = () => {
   );
 };
 
-export default Cloudinfrastructuremanager;
 
-export default CloudInfrastructureManager;
+
+
+
+export default Cloudinfrastructuremanager;

@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Zionaiaccountingassistant = () => {
+const Zionaiaccountingassistant: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,8 +106,10 @@ const Zionaiaccountingassistant = () => {
   );
 };
 
-export default Zionaiaccountingassistant;
+
+
+
+
+
 
 export default Zionaiaccountingassistant;
-
-export default ZionAiAccountingAssistant;

@@ -27,10 +27,8 @@
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
-    "app/page.tsx",
-    "app/layout.tsx",
-    "app/team/page.tsx",
-    "app/_not-found.tsx"
+    "app/**/*.tsx",
+    "app/**/*.ts"
   ],
   "exclude": [
     "node_modules",
@@ -42,8 +40,6 @@
     "jest.setup.ts",
     "vite.config.ts",
     "vite.config.optimized.ts",
-    "src/**/*",
-    "app/components/**/*",
-    "app/utils/**/*"
+    "src/**/*"
   ]
 }

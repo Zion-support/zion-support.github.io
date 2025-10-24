@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud, Shield, Globe, Database, Smartphone, Zap, Sparkles, Star } from 'lucide-react';
 
-const Footer: React.FC = () => {
+export default function Footer() {
   const currentYear = new Date().getFullYear();
   
   const aiServices = [
@@ -57,8 +57,6 @@ const Footer: React.FC = () => {
     { name: 'Cookie Policy', url: '/cookies' },
     { name: 'GDPR Compliance', url: '/gdpr' }
   ];
-
-export default function Footer() {
   return (
     <footer className="bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -175,6 +173,7 @@ export default function Footer() {
               </ul>
             </div>
           </div>
+        </div>
 
         {/* Contact Info */}
         <div className="border-t border-slate-800 mt-12 pt-8">
@@ -232,4 +231,3 @@ export default function Footer() {
   )
 }
 
-export default Footer

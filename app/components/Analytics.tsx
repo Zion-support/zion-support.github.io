@@ -9,7 +9,7 @@ interface AnalyticsProps {
 
 const Analytics: React.FC = () => {
   useEffect(() => {
-    const initAnalytics = () => {
+    const initAnalytics: React.FC = () => {
       if (typeof window !== &quot;undefined&quot; && window.gtag) {
         window.gtag(&quot;config&quot;, &quot;GA_MEASUREMENT_ID&quot;, {
           page_title: document.title,
@@ -34,7 +34,7 @@ declare global {
   }
 }
 
-export default Analytics;
+
     }
     initAnalytics()
   }, []);
@@ -42,16 +42,17 @@ export default Analytics;
   return null; // Analytics component doesn&apos;t render anything
 }
 ;
-export default Analytics
-};
 
-export default AnalyticsPage;
+
+
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
 };
 
-export default AnalyticsPage;
+
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 };
 
-export default AnalyticsPage;
+
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
+
+export default Analytics;

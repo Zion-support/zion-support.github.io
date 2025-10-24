@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Penetrationtesting = () => {
+const Penetrationtesting: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,8 @@ const Penetrationtesting = () => {
   );
 };
 
-export default Penetrationtesting;
 
-export default PenetrationTesting;
+
+
+
+export default Penetrationtesting;

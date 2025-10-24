@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Cloudsolutions = () => {
+const Cloudsolutions: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Cloudsolutions = () => {
   );
 };
 
-export default Cloudsolutions;
 
-export default CloudSolutions;
+
+
+export default Cloudsolutions;

@@ -43,12 +43,12 @@ const LazyImage: React.FC<LazyImageProps> = ({
     return () => observer.disconnect();
   }, []);
 
-  const handleLoad = () => {
+  const handleLoad: React.FC = () => {
     setIsLoaded(true);
     onLoad?.();
   };
 
-  const handleError = () => {
+  const handleError: React.FC = () => {
     setHasError(true);
     onError?.();
   };

@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Aicustomerfeedbackanalyzer = () => {
+const Aicustomerfeedbackanalyzer: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,8 @@ const Aicustomerfeedbackanalyzer = () => {
   );
 };
 
-export default Aicustomerfeedbackanalyzer;
 
-export default AiCustomerFeedbackAnalyzer;
+
+
+
+export default Aicustomerfeedbackanalyzer;

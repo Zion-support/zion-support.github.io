@@ -1,9 +1,8 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
-"use client";
 import React from "react";
 
-const Aihealthcarediagnostics = () => {
+const Aihealthcarediagnostics: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -109,6 +108,8 @@ const Aihealthcarediagnostics = () => {
   );
 };
 
-export default Aihealthcarediagnostics;
 
-export default AiHealthcareDiagnostics;
+
+
+
+export default Aihealthcarediagnostics;

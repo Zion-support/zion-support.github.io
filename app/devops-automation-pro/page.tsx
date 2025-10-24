@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Devopsautomationpro = () => {
+const Devopsautomationpro: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Devopsautomationpro = () => {
   );
 };
 
-export default Devopsautomationpro;
 
-export default DevopsAutomationPro;
+
+
+export default Devopsautomationpro;

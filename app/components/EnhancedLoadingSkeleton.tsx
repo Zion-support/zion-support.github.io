@@ -10,7 +10,7 @@ const EnhancedLoadingSkeletonPage: React.FC = () => {
       title: 'AI-Powered Intelligence,',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-}
+},
     {
       icon: BarChar,
       title: 'Advanced Analytics,',
@@ -33,3 +33,5 @@ const EnhancedLoadingSkeletonPage: React.FC = () => {
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
+
+}

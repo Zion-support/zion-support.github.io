@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Iotintegration = () => {
+const Iotintegration: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,8 +106,10 @@ const Iotintegration = () => {
   );
 };
 
-export default Iotintegration;
+
+
+
+
+
 
 export default Iotintegration;
-
-export default IotIntegration;

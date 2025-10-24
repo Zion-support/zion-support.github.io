@@ -34,10 +34,9 @@ const benefits = [
 'Cost-effective pricing plans',
 'Proven track record of success'
 ];
-"use client";
 import React from "react";
 
-const Analyticstools = () => {
+const Analyticstools: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -143,8 +142,10 @@ const Analyticstools = () => {
   );
 };
 
+
+
+
+
+
 export default Analyticstools;
-
-export default AnalyticsTools;
-
-export default AnalyticsToolsPage;
+}

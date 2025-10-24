@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Cybersecurityaudit = () => {
+const Cybersecurityaudit: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Cybersecurityaudit = () => {
   );
 };
 
-export default Cybersecurityaudit;
 
-export default CybersecurityAudit;
+
+
+export default Cybersecurityaudit;

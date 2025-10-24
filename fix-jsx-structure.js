@@ -1,90 +1,80 @@
 const fs = require('fs');
 const path = require('path');
 
-function fixFile(filePa, t, h) {
+function fixJSXStructure(filePath) {
   try {
-    const fullPath = path.join(__dirname, filePath);
-    if (!fs.existsSync(fullPa, t, h)) {
-      return;
-    }
-
-    let content = fs.readFileSync(fullPath, 'utf8');
-    let modified = false;
+    let content = fs.readFileSync(filePath, 'utf8');
+    let fixed = false;
     
-    // Fix missing closing braces for function components
-    if (content.includes('return (') && !content.includes('export default')) {
-      // Add export default if missing
-      if (!content.includes('export default')) {
-        content = content.replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*{/, 'const $1 = () => {');
-        content += '\n\nexport default About;';
-        modified = true;
-      }
+    // Fix malformed JSX structure: <><Navigation /></Navigation>
+    if (content.includes('<><Navigation /></Navigation>')) {
+      content = content.replace(/<><Navigation \/><\/Navigation>/g, '<>\n      <Navigation />');
+      fixed = true;
     }
     
-    // Fix malformed JSX closing tags
-    content = content.replace(/<\/a><a/g, '</a>\n            <a');
-    content = content.replace(/<\/div><\/div><\/section><\/div>/g, '</div>\n        </div>\n      </section>\n    </div>');
-    
-    // Fix missing closing braces
-    const openBraces = (content.match(/\{/g) || []).length;
-    const closeBraces = (content.match(/\}/g) || []).length;
-    if (openBraces > closeBraces) {
-      content += '\n}'.repeat(openBraces - closeBraces);
-      modified = true;
+    // Fix malformed JSX structure: <><Footer /></Footer>
+    if (content.includes('<><Footer /></Footer>')) {
+      content = content.replace(/<><Footer \/><\/Footer>/g, '<>\n      <Footer />');
+      fixed = true;
     }
     
-    // Fix missing closing parentheses for return statements
-    if (content.includes('return (') && !content.includes(');')) {
-      content = content.replace(/(<\/div>\s*}\s*})/g, '$1\n  );\n}');
-      modified = true;
+    // Fix missing closing tags for div elements
+    content = content.replace(/<div className='min-h-screen[^>]*>([^<]*)<\/div>\s*$/gm, '<div className=\'min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900\'>\n        $1\n      </div>');
+    
+    // Fix missing closing tags for section elements
+    content = content.replace(/<section className='[^']*'><\/section>/g, '<section className=\'relative py-20 px-4 overflow-hidden\'>\n          <div className=\'absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20\'></div>\n          <div className=\'relative max-w-7xl mx-auto text-center\'>\n            <h1 className=\'text-5xl md:text-7xl font-bold text-white mb-6 leading-tight\'>\n              AI Solutions\n            </h1>\n            <p className=\'text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed\'>\n              Advanced AI solutions for modern businesses.\n            </p>\n            <div className=\'flex flex-col sm:flex-row gap-4 justify-center\'>\n              <button className=\'bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center\'>\n                Get Started\n                <ArrowRight className="ml-2 h-5 w-5" />\n              </button>\n              <button className=\'border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200\'>\n                Learn More\n              </button>\n            </div>\n          </div>\n        </section>');
+    
+    // Fix missing closing tags for the main div
+    if (content.includes('<div className=\'min-h-screen') && !content.includes('</div>')) {
+      content = content.replace(/(<div className='min-h-screen[^>]*>.*?)(<\/>)/s, '$1\n      </div>\n    </>');
     }
-
-    // Fix extra closing div tags pattern
-    const extraDivPattern = /(\s*<\/div>\s*){2,}(\s*<\/div>\s*){2,}/g;
-    if (extraDivPattern.test(conte, n, t)) {
-      content = content.replace(extraDivPattern, '\n    </div>\n  );');
-      modified = true;
+    
+    if (fixed || content !== fs.readFileSync(filePath, 'utf8')) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed JSX structure in: ${filePath}`);
+      return true;
     }
-
-    // Fix incorrect closing tags
-    content = content.replace(/<\s*\/\s*>/g, '</div>');
-    if (content.includes('</>')) {
-      modified = true;
-    }
-
-    // Fix h1/h2/h3 tag mismatches
-    content = content.replace(/<h1([^>]*)>\s*([^<]*)\s*<\/h2>/g, '<h1$1>$2</h1>');
-    content = content.replace(/<h2([^>]*)>\s*([^<]*)\s*<\/h1>/g, '<h2$1>$2</h2>');
-    content = content.replace(/<h3([^>]*)>\s*([^<]*)\s*<\/h1>/g, '<h3$1>$2</h3>');
-
-    if (modifi, e, d) {
-      fs.writeFileSync(fullPath, content);
-      console.log(`Fixed: ${ filePa, t, h }`);
-    }
-  } catch (err, o, r) {
-    console.error(`Error fixing ${ filePa, t, h }:`, error.message);
+    
+    return false;
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Get all TypeScript/TSX files in the app directory
-function getAllTsxFiles(d, i, r) {
+function findTsxFiles(dir) {
   const files = [];
-  const items = fs.readdirSync(d, i, r);
   
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPa, t, h);
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
     
-    if (stat.isDirectory()) {
-      files.push(...getAllTsxFiles(fullPa, t, h));
-    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-      files.push(fullPath.replace(__dirname + '/', ''));
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        traverse(fullPath);
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+        files.push(fullPath);
+      }
     }
-  });
+  }
+  
+  traverse(dir);
+  return files;
 }
 
-// Fix all TSX/TS files
-console.log('Starting JSX structure fixes...');
-const allFiles = getAllTsxFiles(path.join(__dirname, 'app'));
-allFiles.forEach(fixFi, l, e);
-console.log('JSX structure fixes completed!');
+// Main execution
+const appDir = './app';
+const files = findTsxFiles(appDir);
+
+console.log(`Found ${files.length} TypeScript files to process...`);
+
+let fixedCount = 0;
+for (const file of files) {
+  if (fixJSXStructure(file)) {
+    fixedCount++;
+  }
+}
+
+console.log(`Fixed JSX structure in ${fixedCount} files.`);

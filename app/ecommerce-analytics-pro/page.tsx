@@ -34,10 +34,9 @@ title: 'Conversion Tracking',
 description: 'Monitor and optimize conversion funnels to increase sales and reduce cart abandonment.'
 }
 ];
-"use client";
 import React from "react";
 
-const Ecommerceanalyticspro = () => {
+const Ecommerceanalyticspro: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -143,6 +142,9 @@ const Ecommerceanalyticspro = () => {
   );
 };
 
-export default Ecommerceanalyticspro;
 
-export default EcommerceAnalyticsPro;
+
+
+
+export default Ecommerceanalyticspro;
+}

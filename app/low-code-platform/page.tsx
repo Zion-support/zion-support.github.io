@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Lowcodeplatform = () => {
+const Lowcodeplatform: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Lowcodeplatform = () => {
   );
 };
 
-export default Lowcodeplatform;
 
-export default LowCodePlatform;
+
+
+export default Lowcodeplatform;

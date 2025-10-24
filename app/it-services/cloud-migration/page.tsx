@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Cloudmigration = () => {
+const Cloudmigration: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Cloudmigration = () => {
   );
 };
 
-export default Cloudmigration;
 
-export default CloudMigration;
+
+
+export default Cloudmigration;

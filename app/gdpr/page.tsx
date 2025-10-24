@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Gdpr = () => {
+const Gdpr: React.FC = () => {
   const features = [
     {
       icon: "🚀",

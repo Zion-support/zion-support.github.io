@@ -29,13 +29,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({className="''" }) => {}</S
               <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;>
 =======
 'use client'
-import Footer from './Footer'
-import Navigation from './Navigation'
-import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { Brain } from 'lucide-react'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
-import { ArrowRight } from 'lucide-react'
 
     }
   ]

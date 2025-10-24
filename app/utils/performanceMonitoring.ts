@@ -331,7 +331,8 @@ score: number;
 webVitals: WebVitals;
 customMetrics: CustomMetric[],
 recommendations: string[];}
-} {}
+},
+    {}
 export const score=";";
 if (this.webVitals.FCP && this.webVitals.FCP.rating !== 'good') {,}
 const recommendations: string[] = []
@@ -429,7 +430,8 @@ logger.error('Failed to measure performance', error as Error);}
 getSummary(): {
   /* TODO: Fix JSX expression */
 }
-} {
+},
+    {
   /* TODO: Fix JSX expression */
 }
 }

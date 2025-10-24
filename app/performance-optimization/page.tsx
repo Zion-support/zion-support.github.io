@@ -23,10 +23,9 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-"use client";
 import React from "react";
 
-const PerformanceOptimization = () => {
+const PerformanceOptimization: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -132,8 +131,10 @@ const PerformanceOptimization = () => {
   );
 };
 
-export default PerformanceOptimization;
 
-export default Performanceoptimization;
+
+
+
+
 
 export default PerformanceOptimization;

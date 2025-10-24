@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Zionaicontractanalyzer = () => {
+const Zionaicontractanalyzer: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,8 +106,10 @@ const Zionaicontractanalyzer = () => {
   );
 };
 
-export default Zionaicontractanalyzer;
+
+
+
+
+
 
 export default Zionaicontractanalyzer;
-
-export default ZionAiContractAnalyzer;

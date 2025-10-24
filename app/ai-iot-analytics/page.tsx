@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Aiiotanalytics = () => {
+const Aiiotanalytics: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,8 +106,10 @@ const Aiiotanalytics = () => {
   );
 };
 
-export default Aiiotanalytics;
+
+
+
+
+
 
 export default Aiiotanalytics;
-
-export default AiIotAnalytics;

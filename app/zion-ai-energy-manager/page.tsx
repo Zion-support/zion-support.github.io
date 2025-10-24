@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Zionaienergymanager = () => {
+const Zionaienergymanager: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,8 +106,10 @@ const Zionaienergymanager = () => {
   );
 };
 
-export default Zionaienergymanager;
+
+
+
+
+
 
 export default Zionaienergymanager;
-
-export default ZionAiEnergyManager;

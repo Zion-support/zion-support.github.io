@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Cybersecurityadvanced = () => {
+const Cybersecurityadvanced: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,8 +106,10 @@ const Cybersecurityadvanced = () => {
   );
 };
 
-export default Cybersecurityadvanced;
+
+
+
+
+
 
 export default Cybersecurityadvanced;
-
-export default CybersecurityAdvanced;

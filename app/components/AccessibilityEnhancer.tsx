@@ -9,10 +9,7 @@ const AccessibilityEnhancer: React.FC = () => {
   return null // Placeholder component
 }
 
-export default AccessibilityEnhancer
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
-      const nav = document.querySelector('nav');
       if (nav && !nav.getAttribute('role')) {
         nav.setAttribute('role', 'navigation');
       }
@@ -78,5 +75,10 @@ export default AccessibilityEnhancer
   return null;
 };
 
-export default AccessibilityEnhancer;
+
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
+
+export default AccessibilityEnhancer
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
+
+      const nav = document.querySelector('nav');

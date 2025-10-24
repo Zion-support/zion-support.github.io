@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Aisentimentanalysis = () => {
+const Aisentimentanalysis: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,8 +106,10 @@ const Aisentimentanalysis = () => {
   );
 };
 
-export default Aisentimentanalysis;
+
+
+
+
+
 
 export default Aisentimentanalysis;
-
-export default AiSentimentAnalysis;

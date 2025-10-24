@@ -1,7 +1,4 @@
 import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
 'use client';
 import React from 'react';
 import Link from 'next/link';
@@ -162,8 +159,9 @@ const BlockchainPage: React.FC = () => {
   );
 };
 
-export default BlockchainPage;
 
-export default Blockchain;
+
+
+
 
 export default BlockchainPage;

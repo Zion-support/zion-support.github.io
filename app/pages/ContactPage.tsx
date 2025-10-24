@@ -6,7 +6,7 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
 >>>>>>> cursor/fix-errors-and-merge-to-main-280f
 import React from 'react';
 
-const ContactPage = () => {
+const ContactPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-100 py-8">
       <div className="max-w-4xl mx-auto px-4">

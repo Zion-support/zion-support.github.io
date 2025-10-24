@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Aifinancialforecasting = () => {
+const Aifinancialforecasting: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,8 +106,10 @@ const Aifinancialforecasting = () => {
   );
 };
 
-export default Aifinancialforecasting;
+
+
+
+
+
 
 export default Aifinancialforecasting;
-
-export default AiFinancialForecasting;

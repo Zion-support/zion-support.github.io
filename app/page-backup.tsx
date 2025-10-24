@@ -26,7 +26,6 @@ const PageBackupPage: React.FC = () => {
     }
 <<<<<<< HEAD:app/page-backup.tsx
 'use client'
-import React from 'react'
 'use client'
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf

@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Inventorymanager = () => {
+const Inventorymanager: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Inventorymanager = () => {
   );
 };
 
-export default Inventorymanager;
 
-export default InventoryManager;
+
+
+export default Inventorymanager;

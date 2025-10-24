@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Aiconversationanalytics = () => {
+const Aiconversationanalytics: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,8 +106,10 @@ const Aiconversationanalytics = () => {
   );
 };
 
-export default Aiconversationanalytics;
+
+
+
+
+
 
 export default Aiconversationanalytics;
-
-export default AiConversationAnalytics;

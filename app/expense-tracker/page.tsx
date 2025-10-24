@@ -30,10 +30,9 @@ const PagePage: React.FC = () => {
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ];
-"use client";
 import React from "react";
 
-const Expensetracker = () => {
+const Expensetracker: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -140,6 +139,8 @@ const Expensetracker = () => {
   );
 };
 
-export default Expensetracker;
 
-export default PagePage;
+
+
+export default Expensetracker;
+}

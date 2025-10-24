@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Zionaileadscoring = () => {
+const Zionaileadscoring: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Zionaileadscoring = () => {
   );
 };
 
-export default Zionaileadscoring;
 
-export default ZionAiLeadScoring;
+
+
+export default Zionaileadscoring;

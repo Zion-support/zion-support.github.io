@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Documentprocessing = () => {
+const Documentprocessing: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,8 @@ const Documentprocessing = () => {
   );
 };
 
-export default Documentprocessing;
 
-export default DocumentProcessing;
+
+
+
+export default Documentprocessing;

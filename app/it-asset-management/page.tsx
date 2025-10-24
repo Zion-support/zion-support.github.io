@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Itassetmanagement = () => {
+const Itassetmanagement: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -108,6 +107,7 @@ const Itassetmanagement = () => {
   );
 };
 
-export default Itassetmanagement;
 
-export default PagePage;
+
+
+export default Itassetmanagement;

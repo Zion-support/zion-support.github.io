@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Aispeechsynthesis = () => {
+const Aispeechsynthesis: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,8 +106,10 @@ const Aispeechsynthesis = () => {
   );
 };
 
-export default Aispeechsynthesis;
+
+
+
+
+
 
 export default Aispeechsynthesis;
-
-export default AiSpeechSynthesis;

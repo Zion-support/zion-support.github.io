@@ -16,10 +16,9 @@ const PagePage: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-"use client";
 import React from "react";
 
-const Crmlite = () => {
+const Crmlite: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -125,6 +124,9 @@ const Crmlite = () => {
   );
 };
 
-export default Crmlite;
 
-export default CrmLite;
+
+
+
+export default Crmlite;
+}

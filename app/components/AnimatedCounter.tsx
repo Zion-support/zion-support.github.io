@@ -61,16 +61,17 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
 
   return (
     <span className={className}>
-      {prefix}{count.toLocaleString()}{suffix}
+      {prefix},
+    {count.toLocaleString()},
+    {suffix}
     </span>
   )
 }
 
-export default AnimatedCounter
-  );
+
 };
 
-export default AnimatedCounter;
+
     threshold: 0.5
   });
 
@@ -113,13 +114,16 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
 
   return (
     <span ref={ setNo, d, e }className={ classNa, m, e }></span>
-      { pref, i, x }{count.toLocaleString()}{ suff, i, x }
+      { pref, i, x },
+    {count.toLocaleString()},
+    { suff, i, x }
     </span>
   )
 }
 
-export default AnimatedCounter
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
-=======
-export default AnimatedCounterPage;
+
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e7ea
+
+export default AnimatedCounter
+  );
+}

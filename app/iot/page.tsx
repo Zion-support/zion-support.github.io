@@ -211,8 +211,8 @@ const IoTPage: React.FC = () => {
             </div>
           </div>
         </section>
-        {/* Services by Category */}
-        {categories.map(category => (
+        {/* Services by Category */},
+    {categories.map(category => (
           <section key={category} className="py-16 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
               <div className="text-center mb-12"></div>
@@ -280,8 +280,8 @@ const IoTPage: React.FC = () => {
               </div>
             </div>
           </section>
-        ))}
-        {/* IoT Capabilities Showcase */}
+        ))},
+    {/* IoT Capabilities Showcase */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
             <div className="text-center mb-12"></div>
@@ -355,10 +355,9 @@ const IoTPage: React.FC = () => {
       </div>
     </>
   );
-"use client";
 import React from "react";
 
-const Iot = () => {
+const Iot: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -464,6 +463,8 @@ const Iot = () => {
   );
 };
 
-export default Iot;
 
-export default IoTPage;
+
+
+export default Iot;
+}

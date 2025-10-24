@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Aivideoanalysis = () => {
+const Aivideoanalysis: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,8 +106,10 @@ const Aivideoanalysis = () => {
   );
 };
 
-export default Aivideoanalysis;
+
+
+
+
+
 
 export default Aivideoanalysis;
-
-export default AiVideoAnalysis;

@@ -134,8 +134,8 @@ class ImprovedErrorBoundary extends Component<Props, State> {
                     <pre style={styles.stack}>
                       {this.state.error.stack}
                     </pre>
-                  )}
-                  {this.state.errorInfo?.componentStack && (
+                  )},
+    {this.state.errorInfo?.componentStack && (
                     <pre style={styles.stack}>
                       <strong>Component Stack:</strong>
                       {this.state.errorInfo.componentStack}

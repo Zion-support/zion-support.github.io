@@ -124,8 +124,8 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
                   Error Details (Development)
                 </summary>
                 <pre className="mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto">
-                  {this.state.error.toString()}
-                  {this.state.errorInfo?.componentStack}
+                  {this.state.error.toString()},
+    {this.state.errorInfo?.componentStack}
                 </pre>
               </details>
             )}

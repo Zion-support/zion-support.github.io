@@ -15,10 +15,9 @@ const PagePage: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-"use client";
 import React from "react";
 
-const Seooptimizer = () => {
+const Seooptimizer: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -124,8 +123,10 @@ const Seooptimizer = () => {
   );
 };
 
+
+
+
+
+
 export default Seooptimizer;
-
-export default SeoOptimizer;
-
-export default PagePage;
+}

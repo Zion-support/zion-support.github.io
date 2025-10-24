@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Zionaicustomersentimenttracker = () => {
+const Zionaicustomersentimenttracker: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Zionaicustomersentimenttracker = () => {
   );
 };
 
-export default Zionaicustomersentimenttracker;
 
-export default ZionAiCustomerSentimentTracker;
+
+
+export default Zionaicustomersentimenttracker;

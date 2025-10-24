@@ -13,10 +13,9 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-"use client";
 import React from "react";
 
-const Servicesadvertising = () => {
+const Servicesadvertising: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -122,8 +121,9 @@ const Servicesadvertising = () => {
   );
 };
 
+
+
+
+
+
 export default Servicesadvertising;
-
-export default ServicesAdvertising;
-
-export default PagePage;

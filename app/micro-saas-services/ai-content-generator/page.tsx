@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Aicontentgenerator = () => {
+const Aicontentgenerator: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,8 @@ const Aicontentgenerator = () => {
   );
 };
 
-export default Aicontentgenerator;
 
-export default AiContentGenerator;
+
+
+
+export default Aicontentgenerator;

@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Aieducationtutor = () => {
+const Aieducationtutor: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Aieducationtutor = () => {
   );
 };
 
-export default Aieducationtutor;
 
-export default AiEducationTutor;
+
+
+export default Aieducationtutor;

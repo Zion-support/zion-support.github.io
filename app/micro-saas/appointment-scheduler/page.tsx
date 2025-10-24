@@ -25,10 +25,9 @@ const PagePage: React.FC = () => {
       benefits: ['End-to-end encryption', 'GDPR compliance', 'SOC 2 certified', 'Regular audits']
     }
   ];
-"use client";
 import React from "react";
 
-const Appointmentscheduler = () => {
+const Appointmentscheduler: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -134,8 +133,10 @@ const Appointmentscheduler = () => {
   );
 };
 
+
+
+
+
+
 export default Appointmentscheduler;
-
-export default AppointmentScheduler;
-
-export default PagePage;
+}

@@ -30,10 +30,9 @@ description: 'Optimize your business growth with data-driven strategies.',
 benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
 }
 ];
-"use client";
 import React from "react";
 
-const Aicrmassistant = () => {
+const Aicrmassistant: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -139,6 +138,9 @@ const Aicrmassistant = () => {
   );
 };
 
-export default Aicrmassistant;
 
-export default AiCrmAssistant;
+
+
+
+export default Aicrmassistant;
+}

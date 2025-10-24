@@ -10,10 +10,9 @@ const features = [
 { icon: CheckCircle, title: 'Quality Control', description: 'Automated quality control and compliance monitoring.' },
 { icon: Target, title: 'Performance Analytics', description: 'Real-time performance tracking and optimization recommendations.' }
 ];
-"use client";
 import React from "react";
 
-const Supplychainoptimizer = () => {
+const Supplychainoptimizer: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -119,8 +118,10 @@ const Supplychainoptimizer = () => {
   );
 };
 
+
+
+
+
+
 export default Supplychainoptimizer;
-
-export default SupplyChainOptimizer;
-
-export default PagePage;
+}

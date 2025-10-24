@@ -57,8 +57,8 @@ const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({className=
                 <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
               </div>
 
-              {/* Error Details (if enabled) */}
-              {this.props.showErrorDetails && error && (
+              {/* Error Details (if enabled) */},
+    {this.props.showErrorDetails && error && (
                 <div className="mb-6 p-4 bg-gray-50 rounded-lg">
                   <h3 className="text-sm font-semibold text-gray-700 mb-2 flex items-center">
                     <AlertTriangle className="w-4 h-4 mr-2" />
@@ -78,9 +78,8 @@ const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({className=
                     )}
                   </div>
                 </div>
-              )}
-
-              {/* Actions */}
+              )},
+    {/* Actions */}
               <div className="space-y-3">
                 {canRetry ? (
                   <button
@@ -122,8 +121,8 @@ const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({className=
                 </div>
               </div>
 
-              {/* Retry Count */}
-              {retryCount > 0 && (
+              {/* Retry Count */},
+    {retryCount > 0 && (
                 <div className="mt-4 text-center">
                   <p className="text-sm text-gray-500">
                     Retry attempts: {retryCount}/{this.maxRetries}

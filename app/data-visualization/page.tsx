@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Datavisualization = () => {
+const Datavisualization: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,8 +106,10 @@ const Datavisualization = () => {
   );
 };
 
-export default Datavisualization;
+
+
+
+
+
 
 export default Datavisualization;
-
-export default DataVisualization;

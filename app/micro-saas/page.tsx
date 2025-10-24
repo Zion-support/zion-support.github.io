@@ -2,7 +2,6 @@ import React from "react"
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { Zap, Target, Layers, Rocket, CheckCircle, ArrowRight  } from "lucide-react";
-"use client";
 import React from "react";
 import { Zap, Layers, Users, TrendingUp, CheckCircle, ArrowRight } from "lucide-react";
 
@@ -73,7 +72,7 @@ const MicroSaasPage: React.FC = () => {
     "Stripe", "Auth0", "SendGrid", "Twilio", "WebSocket", "GraphQL"
   ];
 
-const MicroSaas = () => {
+const MicroSaas: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       {/* Hero Section */}
@@ -266,3 +265,5 @@ const MicroSaas = () => {
 };
 
 export default MicroSaasPage;
+
+}

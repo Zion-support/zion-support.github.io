@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Computervision = () => {
+const Computervision: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,10 +106,11 @@ const Computervision = () => {
   );
 };
 
+
+
+
+
+
+
+
 export default Computervision;
-
-export default ComputerVision;
-
-export default Computervision;
-
-export default ComputerVision;

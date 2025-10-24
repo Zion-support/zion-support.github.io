@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Customersupporthub = () => {
+const Customersupporthub: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Customersupporthub = () => {
   );
 };
 
-export default Customersupporthub;
 
-export default CustomerSupportHub;
+
+
+export default Customersupporthub;

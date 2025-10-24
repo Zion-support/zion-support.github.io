@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Networkinfrastructure = () => {
+const Networkinfrastructure: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,8 +106,9 @@ const Networkinfrastructure = () => {
   );
 };
 
+
+
+
+
+
 export default Networkinfrastructure;
-
-export default NetworkInfrastructure;
-
-export default PagePage;

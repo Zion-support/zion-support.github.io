@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Systemstatus = () => {
+const Systemstatus: React.FC = () => {
   const features = [
     {
       icon: "🚀",

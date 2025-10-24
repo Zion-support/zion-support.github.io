@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Zionaimeetingassistant = () => {
+const Zionaimeetingassistant: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,8 +106,10 @@ const Zionaimeetingassistant = () => {
   );
 };
 
-export default Zionaimeetingassistant;
+
+
+
+
+
 
 export default Zionaimeetingassistant;
-
-export default ZionAiMeetingAssistant;

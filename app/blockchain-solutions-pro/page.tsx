@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Blockchainsolutionspro = () => {
+const Blockchainsolutionspro: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Blockchainsolutionspro = () => {
   );
 };
 
-export default Blockchainsolutionspro;
 
-export default BlockchainSolutionsPro;
+
+
+export default Blockchainsolutionspro;

@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-const UltimateBusinessIntelligence2025Banner = () => {
+const UltimateBusinessIntelligence2025Banner: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
 
@@ -60,7 +60,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
     return () => clearInterval(timer);
   }, [content.length]);
 
-  const handleClose = () => {
+  const handleClose: React.FC = () => {
     setIsVisible(false);
   };
 

@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Help = () => {
+const Help: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Help = () => {
   );
 };
 
-export default Help;
 
-export default PagePage;
+
+
+export default Help;

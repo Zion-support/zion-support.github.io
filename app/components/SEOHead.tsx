@@ -135,7 +135,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({ className = '' }) => {
     </>
   );,
 };
-export default SEOHeadPage;
+
 description?: string;
 keywords?: string;
 canonical?: string;
@@ -168,9 +168,10 @@ constcanonicalUrl= canonical || (type of windo w !== 'undefined' ? windo w.locat
 const defaultStructuredData= {&quot;@context&quot;:&quot;https:// schema.org&quot;,&quot;@type&quot;:&quot;Organization&quot;,&quot;name&quot;:&quot;Zion Tech Group&quot;,&quot;url&quot;:&quot;https:// ziontechgroup.com&quot;,&quot;logo&quot;:&quot;https:// ziontechgroup.com/logo.png&quot;,&quot;description&quot;:&quot;Advanced AI and IT Solutions company providing cutting-edge technology services&quot;,&quot;address&quot;: {&quot;@type&quot;:&quot;PostalAddress&quot;,&quot;streetAddress&quot;:&quot;364E Main St STE1008&quot;,&quot;addressLocality&quot;:&quot;Middletown&quot;,&quot;addressRegion&quot;:&quot;DE&quot;,&quot;postalCode&quot;:&quot;1970 9&quot;,&quot;addressCountry&quot;:&quot;US&quot;},&quot;contactPoint&quot;: {&quot;@type&quot;:&quot;ContactPoint&quot;,&quot;telephone&quot;:&quot;+1-30 2-46 4-095 0&quot;,&quot;contactType&quot;:&quot;customer service&quot;,&quot;email&quot;:&quot;kleber@ziontechgroup.com&quot;},&quot;sameAs&quot;: [&quot;https:// www.linkedin.com/$1/zion-tech-group&quot;,&quot;https:// twitter.com/ziontechgroup&quot;
 ]
 }
-return(<Helme t>{/* Basic MetaTags*/}<titl e>{fullTitle}</titl><metaname=&quot;description&quot; content={description} /><metaname=&quot;keywords&quot; content={keywords} /><metaname=&quot;author&quot;content=&quot;Zion TechGroup&quot; /><metaname=&quot;robots&quot;content=&quot;index,follow&quot; /><metaname=&quot;viewport&quot;content=&quot;width=device-width,initial-scale=1.0&quot; />{/* CanonicalURL */}
-{canonicalUrl&&<linkrel=&quot;canonical&quot;href={canonicalUrl} />}
-{/* Open GraphMetaTags*/}<metaproperty=&quot;og:title&quot; content={fullTitle} /><metaproperty=&quot;og:description&quot; content={description} /><metaproperty=&quot;og:type&quot; content={ogType} /><metaproperty=&quot;og:url&quot; content={canonicalUrl} /><metaproperty=&quot;og:image&quot; content={ogImage} /><metaproperty=&quot;og:site_name&quot;content=&quot;Zion TechGroup&quot; /><metaproperty=&quot;og:locale&quot;content=&quot;en_US&quot; />{/* Twitter CardMetaTags*/}<metaname=&quot;twitter:card&quot; content={twitterCard} /><metaname=&quot;twitter:title&quot; content={fullTitle} /><metaname=&quot;twitter:description&quot; content={description} /><metaname=&quot;twitter:image&quot; content={ogImage} />{/* Additional SEOMetaTags*/}<metaname=&quot;theme-color&quot;content=&quot;#0f172a&quot; /><metaname=&quot;msapplication-TileColor&quot;content=&quot;#0f172a&quot; /><metaname=&quot;apple-mobile-web-app-capable&quot;content=&quot;yes&quot; /><metaname=&quot;apple-mobile-web-app-status-bar-style&quot;content=&quot;black-translucent&quot; />{/* StructuredData*/}<scripttype=&quot;application/ld+json&quot;>{JSON.stringify(structuredData ||defaultStructuredData)}</scrip></Helme>)
+return(<Helme t>{/* Basic MetaTags*/}<titl e>{fullTitle}</titl><metaname=&quot;description&quot; content={description} /><metaname=&quot;keywords&quot; content={keywords} /><metaname=&quot;author&quot;content=&quot;Zion TechGroup&quot; /><metaname=&quot;robots&quot;content=&quot;index,follow&quot; /><metaname=&quot;viewport&quot;content=&quot;width=device-width,initial-scale=1.0&quot; />{/* CanonicalURL */},
+    {canonicalUrl&&<linkrel=&quot;canonical&quot;href={canonicalUrl} />},
+    {/* Open GraphMetaTags*/}<metaproperty=&quot;og:title&quot; content={fullTitle} /><metaproperty=&quot;og:description&quot; content={description} /><metaproperty=&quot;og:type&quot; content={ogType} /><metaproperty=&quot;og:url&quot; content={canonicalUrl} /><metaproperty=&quot;og:image&quot; content={ogImage} /><metaproperty=&quot;og:site_name&quot;content=&quot;Zion TechGroup&quot; /><metaproperty=&quot;og:locale&quot;content=&quot;en_US&quot; />{/* Twitter CardMetaTags*/}<metaname=&quot;twitter:card&quot; content={twitterCard} /><metaname=&quot;twitter:title&quot; content={fullTitle} /><metaname=&quot;twitter:description&quot; content={description} /><metaname=&quot;twitter:image&quot; content={ogImage} />{/* Additional SEOMetaTags*/}<metaname=&quot;theme-color&quot;content=&quot;#0f172a&quot; /><metaname=&quot;msapplication-TileColor&quot;content=&quot;#0f172a&quot; /><metaname=&quot;apple-mobile-web-app-capable&quot;content=&quot;yes&quot; /><metaname=&quot;apple-mobile-web-app-status-bar-style&quot;content=&quot;black-translucent&quot; />{/* StructuredData*/}<scripttype=&quot;application/ld+json&quot;>{JSON.stringify(structuredData ||defaultStructuredData)}</scrip></Helme>)
 }
-export default SEOHead
-export defaultSEOHead</SEOHeadProp>;
+
+
+export default SEOHeadPage;

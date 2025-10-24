@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Zionaicodereviewer = () => {
+const Zionaicodereviewer: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,8 +106,10 @@ const Zionaicodereviewer = () => {
   );
 };
 
-export default Zionaicodereviewer;
+
+
+
+
+
 
 export default Zionaicodereviewer;
-
-export default ZionAiCodeReviewer;

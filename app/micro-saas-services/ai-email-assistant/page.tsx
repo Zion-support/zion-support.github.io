@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Aiemailassistant = () => {
+const Aiemailassistant: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,8 @@ const Aiemailassistant = () => {
   );
 };
 
-export default Aiemailassistant;
 
-export default AiEmailAssistant;
+
+
+
+export default Aiemailassistant;

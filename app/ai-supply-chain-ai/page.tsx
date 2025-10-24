@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Aisupplychainai = () => {
+const Aisupplychainai: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,8 +106,10 @@ const Aisupplychainai = () => {
   );
 };
 
-export default Aisupplychainai;
+
+
+
+
+
 
 export default Aisupplychainai;
-
-export default AiSupplyChainAi;

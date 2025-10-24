@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Aidocumentintelligence = () => {
+const Aidocumentintelligence: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,8 +106,10 @@ const Aidocumentintelligence = () => {
   );
 };
 
-export default Aidocumentintelligence;
+
+
+
+
+
 
 export default Aidocumentintelligence;
-
-export default AiDocumentIntelligence;

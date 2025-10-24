@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Zionaifrauddetection = () => {
+const Zionaifrauddetection: React.FC = () => {
   const features = [
     {
       icon: "🚀",

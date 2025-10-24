@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Iotedge = () => {
+const Iotedge: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Iotedge = () => {
   );
 };
 
-export default Iotedge;
 
-export default PagePage;
+
+
+export default Iotedge;

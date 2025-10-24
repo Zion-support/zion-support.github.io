@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Airealestateanalyzer = () => {
+const Airealestateanalyzer: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Airealestateanalyzer = () => {
   );
 };
 
-export default Airealestateanalyzer;
 
-export default AiRealEstateAnalyzer;
+
+
+export default Airealestateanalyzer;

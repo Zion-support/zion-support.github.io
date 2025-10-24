@@ -25,10 +25,9 @@ const PagePage: React.FC = () => {
       benefits: ['End-to-end encryption', 'GDPR compliance', 'SOC 2 certified', 'Regular audits']
     }
   ];
-"use client";
 import React from "react";
 
-const News = () => {
+const News: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -135,6 +134,8 @@ const News = () => {
   );
 };
 
-export default News;
 
-export default PagePage;
+
+
+export default News;
+}

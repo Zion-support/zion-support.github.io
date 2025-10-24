@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Dataengineering = () => {
+const Dataengineering: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Dataengineering = () => {
   );
 };
 
-export default Dataengineering;
 
-export default DataEngineering;
+
+
+export default Dataengineering;

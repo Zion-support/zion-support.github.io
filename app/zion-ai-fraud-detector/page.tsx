@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Zionaifrauddetector = () => {
+const Zionaifrauddetector: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,8 +106,10 @@ const Zionaifrauddetector = () => {
   );
 };
 
-export default Zionaifrauddetector;
+
+
+
+
+
 
 export default Zionaifrauddetector;
-
-export default ZionAiFraudDetector;

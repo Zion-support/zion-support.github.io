@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Aipredictivemodeling = () => {
+const Aipredictivemodeling: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,8 +106,10 @@ const Aipredictivemodeling = () => {
   );
 };
 
-export default Aipredictivemodeling;
+
+
+
+
+
 
 export default Aipredictivemodeling;
-
-export default AiPredictiveModeling;

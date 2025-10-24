@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Aiintegrationservices = () => {
+const Aiintegrationservices: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,8 +106,10 @@ const Aiintegrationservices = () => {
   );
 };
 
-export default Aiintegrationservices;
+
+
+
+
+
 
 export default Aiintegrationservices;
-
-export default AiIntegrationServices;

@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Aitranslator = () => {
+const Aitranslator: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Aitranslator = () => {
   );
 };
 
-export default Aitranslator;
 
-export default AiTranslator;
+
+
+export default Aitranslator;

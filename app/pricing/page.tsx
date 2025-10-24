@@ -25,10 +25,9 @@ const PagePage: React.FC = () => {
       benefits: ['End-to-end encryption', 'GDPR compliance', 'SOC 2 certified', 'Regular audits']
     }
   ];
-"use client";
 import React from "react";
 
-const Pricing = () => {
+const Pricing: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -134,6 +133,8 @@ const Pricing = () => {
   );
 };
 
-export default Pricing;
 
-export default PagePage;
+
+
+export default Pricing;
+}

@@ -88,7 +88,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     </div>)
   )
-}
+},
     {
       icon: BarChart
       title: 'Advanced Analytics'
@@ -149,13 +149,13 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
-    }
+    },
     {
       icon: Target
       title: 'Precision Targeting'
       description: 'Target specific goals and objectives with precision and accuracy.'
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    }
+    },
     {
   icon: TrendingUp
       title: 'Growth Optimization'
@@ -341,9 +341,9 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
   const addSkipLinks = useCallback(() => {
     if (typeof window === 'undefined') return;
     const skipLinks = [
-      { href: '#main-content', text: 'Skip to main content' }
-      { href: '#navigation', text: 'Skip to navigation' }
-      {
+      { href: '#main-content', text: 'Skip to main content' },
+    { href: '#navigation', text: 'Skip to navigation' },
+    {
   href: '#footer', text: 'Skip to footer'
 }
     ]
@@ -463,7 +463,9 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
   }, [enableKeyboardNavigation, enableScreenReader, enableFocusManagement, enableARIALabels, enableSkipLinks, enableColorContrast, enableVoiceNavigation, setupKeyboardNavigation, setupScreenReaderSupport, setupFocusManagement, enhanceARIALabels, addSkipLinks, checkColorContrast, setupVoiceNavigation])
   return null;
 }
-export default AdvancedAccessibilityEnhancer;
+
 }}}}}
 };
-export default AdvancedAccessibilityEnhancerPage;
+
+
+export default AdvancedAccessibilityEnhancer;

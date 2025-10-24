@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Aisupplychainoptimizer = () => {
+const Aisupplychainoptimizer: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Aisupplychainoptimizer = () => {
   );
 };
 
-export default Aisupplychainoptimizer;
 
-export default AiSupplyChainOptimizer;
+
+
+export default Aisupplychainoptimizer;

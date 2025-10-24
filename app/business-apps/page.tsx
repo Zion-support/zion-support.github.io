@@ -49,10 +49,9 @@ const benefits = [
 'Cost-effective pricing plans',
 'Proven track record of success'
 ];
-"use client";
 import React from "react";
 
-const Businessapps = () => {
+const Businessapps: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -158,8 +157,10 @@ const Businessapps = () => {
   );
 };
 
+
+
+
+
+
 export default Businessapps;
-
-export default BusinessApps;
-
-export default BusinessAppsPage;
+}

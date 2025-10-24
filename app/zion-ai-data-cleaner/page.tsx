@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Zionaidatacleaner = () => {
+const Zionaidatacleaner: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,8 +106,10 @@ const Zionaidatacleaner = () => {
   );
 };
 
-export default Zionaidatacleaner;
+
+
+
+
+
 
 export default Zionaidatacleaner;
-
-export default ZionAiDataCleaner;

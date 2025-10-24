@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Intelligentemailinfrastructure = () => {
+const Intelligentemailinfrastructure: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,8 +106,9 @@ const Intelligentemailinfrastructure = () => {
   );
 };
 
+
+
+
+
+
 export default Intelligentemailinfrastructure;
-
-export default IntelligentEmailInfrastructure;
-
-export default PagePage;

@@ -26,7 +26,6 @@ const MicroSaasServicesPage: React.FC = () => {
     }
 <<<<<<< HEAD:app/micro-saas-services/microSaasServices.tsx
 'use client'
-import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
@@ -147,6 +146,17 @@ const MicroSaasServicesPage: React.FC = () => {
 <<<<<<< HEAD:app/micro-saas-services/microSaasServices.tsx
   )
 }
+
+};
+
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6f1b
+=======
+  )
+}
+export default MicroSaasServicesPage
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
+
 export default MicroSaasServicesPage
 =======
     <React.Fragment>
@@ -182,12 +192,3 @@ export default MicroSaasServicesPage
       <Footer />
     </React.Fragment>
   );
-};
-
-export default MicroSaasServicesPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6f1b
-=======
-  )
-}
-export default MicroSaasServicesPage
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf

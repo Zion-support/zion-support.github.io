@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Aipowereddevops = () => {
+const Aipowereddevops: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Aipowereddevops = () => {
   );
 };
 
-export default Aipowereddevops;
 
-export default AiPoweredDevops;
+
+
+export default Aipowereddevops;

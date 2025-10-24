@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Iotdevelopment = () => {
+const Iotdevelopment: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,8 +106,10 @@ const Iotdevelopment = () => {
   );
 };
 
-export default Iotdevelopment;
+
+
+
+
+
 
 export default Iotdevelopment;
-
-export default IotDevelopment;

@@ -25,10 +25,9 @@ const PagePage: React.FC = () => {
       benefits: ['End-to-end encryption', 'GDPR compliance', 'SOC 2 certified', 'Regular audits']
     }
   ];
-"use client";
 import React from "react";
 
-const Enterprisesecurity = () => {
+const Enterprisesecurity: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -134,8 +133,10 @@ const Enterprisesecurity = () => {
   );
 };
 
+
+
+
+
+
 export default Enterprisesecurity;
-
-export default EnterpriseSecurity;
-
-export default PagePage;
+}

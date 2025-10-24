@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Aiimagerecognitionpro = () => {
+const Aiimagerecognitionpro: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Aiimagerecognitionpro = () => {
   );
 };
 
-export default Aiimagerecognitionpro;
 
-export default AiImageRecognitionPro;
+
+
+export default Aiimagerecognitionpro;

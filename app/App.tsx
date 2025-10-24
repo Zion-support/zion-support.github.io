@@ -1,10 +1,10 @@
 import React from 'react';
-import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
-import React from 'react';
 const App = (): JSX.Element => {
   return (
-    <div className='min-h-screen bg-gray-100 py-8'></div>
+    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900'>
+        
+      </div>
       <div className='max-w-4xl mx-auto px-4'></div>
         <h1 className='text-3xl font-bold text-gray-900 mb-6'></h1>
     <div className="min-h-screen bg-gray-100 py-8">

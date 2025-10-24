@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Health = () => {
+const Health: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Health = () => {
   );
 };
 
-export default Health;
 
-export default PagePage;
+
+
+export default Health;

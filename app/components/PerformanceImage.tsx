@@ -1,3 +1,4 @@
+"use client";
 import React  from "react";
 "use client"
 import { Helmet }  from "react-helmet-async";
@@ -61,6 +62,8 @@ const PerformanceImagePage: React.FC = () => {
   )
 }
 ;
-export default PerformanceImagePage;
 
-export default PerformanceImagePage;"
+
+"
+
+export default PerformanceImagePage;

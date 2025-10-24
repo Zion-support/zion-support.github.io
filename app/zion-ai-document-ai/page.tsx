@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Zionaidocumentai = () => {
+const Zionaidocumentai: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,8 +106,10 @@ const Zionaidocumentai = () => {
   );
 };
 
-export default Zionaidocumentai;
+
+
+
+
+
 
 export default Zionaidocumentai;
-
-export default ZionAiDocumentAi;

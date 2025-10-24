@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Projectmanagementpro = () => {
+const Projectmanagementpro: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,8 @@ const Projectmanagementpro = () => {
   );
 };
 
-export default Projectmanagementpro;
 
-export default ProjectManagementPro;
+
+
+
+export default Projectmanagementpro;

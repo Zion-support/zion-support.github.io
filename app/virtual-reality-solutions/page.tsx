@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Virtualrealitysolutions = () => {
+const Virtualrealitysolutions: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Virtualrealitysolutions = () => {
   );
 };
 
-export default Virtualrealitysolutions;
 
-export default VirtualRealitySolutions;
+
+
+export default Virtualrealitysolutions;

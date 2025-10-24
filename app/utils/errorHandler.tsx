@@ -1,3 +1,4 @@
+"use client";
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -138,13 +139,14 @@ const ErrorHandlerPage: React.FC = () => {
   );
 };
 
-export default ErrorHandlerPage;
+
 >>>>>>> cursor/fix-errors-and-merge-to-main-280f
-"use client";
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 import React from 'react';
 const errorHandler = (): JSX.Element => {
   return null;
 };
 
-export default errorHandler;
+
+
+export default ErrorHandlerPage;

@@ -44,10 +44,9 @@ question: "What industries do you serve?",
 answer: "We serve a wide range of industries including healthcare, finance, e-commerce, manufacturing, education, real estate, legal, and more. Our solutions are tailored to meet industry-specific requirements and compliance standards."
 }
 ];
-"use client";
 import React from "react";
 
-const Faq = () => {
+const Faq: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -153,6 +152,8 @@ const Faq = () => {
   );
 };
 
-export default Faq;
 
-export default PagePage;
+
+
+export default Faq;
+}

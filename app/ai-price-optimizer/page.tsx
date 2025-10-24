@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Aipriceoptimizer = () => {
+const Aipriceoptimizer: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,8 @@ const Aipriceoptimizer = () => {
   );
 };
 
-export default Aipriceoptimizer;
 
-export default AiPriceOptimizer;
+
+
+
+export default Aipriceoptimizer;

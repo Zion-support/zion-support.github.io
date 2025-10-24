@@ -15,7 +15,7 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({
   className = '', 
   onClick 
 }) => {
-  const getVariantStyles = () => {
+  const getVariantStyles: React.FC = () => {
     switch (variant) {
       case 'service':
         return 'bg-gradient-to-br from-slate-800/60 via-slate-700/40 to-slate-800/60 backdrop-blur-xl border border-cyan-500/30 hover:border-cyan-400/50 shadow-2xl hover:shadow-cyan-500/20';

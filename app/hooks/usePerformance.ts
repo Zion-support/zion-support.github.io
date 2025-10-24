@@ -10,14 +10,14 @@ interface PerformanceMetrics {
   firstInputDelay: number;
 }
 
-export const usePerformance = () => {
+export const usePerformance: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isMonitoring, setIsMonitoring] = useState(false);
 
   useEffect(() => {
     if (typeof window === 'undefined' || !('performance' in window)) return;
 
-    const measurePerformance = () => {
+    const measurePerformance: React.FC = () => {
       const navigation = performance.getEntriesByType(
         'navigation'
       )[0] as PerformanceNavigationTiming;

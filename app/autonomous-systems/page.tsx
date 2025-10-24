@@ -21,10 +21,9 @@ const AutonomousSystemsPage: React.FC = () => {
       </div>
         </React.Fragment>
   );
-"use client";
 import React from "react";
 
-const Autonomoussystems = () => {
+const Autonomoussystems: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -130,8 +129,10 @@ const Autonomoussystems = () => {
   );
 };
 
+
+
+
+
+
 export default Autonomoussystems;
-
-export default AutonomousSystems;
-
-export default PagePage;
+}

@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Aiknowledgemanagement = () => {
+const Aiknowledgemanagement: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,8 +106,10 @@ const Aiknowledgemanagement = () => {
   );
 };
 
-export default Aiknowledgemanagement;
+
+
+
+
+
 
 export default Aiknowledgemanagement;
-
-export default AiKnowledgeManagement;

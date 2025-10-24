@@ -15,10 +15,9 @@ const PagePage: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-"use client";
 import React from "react";
 
-const Landingpagebuilder = () => {
+const Landingpagebuilder: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -124,8 +123,10 @@ const Landingpagebuilder = () => {
   );
 };
 
+
+
+
+
+
 export default Landingpagebuilder;
-
-export default LandingPageBuilder;
-
-export default PagePage;
+}

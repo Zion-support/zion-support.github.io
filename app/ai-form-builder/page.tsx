@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Aiformbuilder = () => {
+const Aiformbuilder: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,8 @@ const Aiformbuilder = () => {
   );
 };
 
-export default Aiformbuilder;
 
-export default AiFormBuilder;
+
+
+
+export default Aiformbuilder;

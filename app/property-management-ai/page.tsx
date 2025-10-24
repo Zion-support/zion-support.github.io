@@ -10,10 +10,9 @@ const features = [
 { icon: Shield, title: 'Maintenance Tracking', description: 'Predictive maintenance and automated work order management.' },
 { icon: Zap, title: 'Automation', description: 'Automated rent collection, lease renewals, and property operations.' }
 ];
-"use client";
 import React from "react";
 
-const Propertymanagementai = () => {
+const Propertymanagementai: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -119,8 +118,10 @@ const Propertymanagementai = () => {
   );
 };
 
+
+
+
+
+
 export default Propertymanagementai;
-
-export default PropertyManagementAi;
-
-export default PagePage;
+}

@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Ailegaldocumentanalyzer = () => {
+const Ailegaldocumentanalyzer: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,8 @@ const Ailegaldocumentanalyzer = () => {
   );
 };
 
-export default Ailegaldocumentanalyzer;
 
-export default AiLegalDocumentAnalyzer;
+
+
+
+export default Ailegaldocumentanalyzer;

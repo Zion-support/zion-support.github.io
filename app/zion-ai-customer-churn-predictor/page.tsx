@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Zionaicustomerchurnpredictor = () => {
+const Zionaicustomerchurnpredictor: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -108,6 +107,7 @@ const Zionaicustomerchurnpredictor = () => {
   );
 };
 
-export default Zionaicustomerchurnpredictor;
 
-export default ZionAiCustomerChurnPredictor;
+
+
+export default Zionaicustomerchurnpredictor;

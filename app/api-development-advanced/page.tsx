@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Apidevelopmentadvanced = () => {
+const Apidevelopmentadvanced: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,8 +106,10 @@ const Apidevelopmentadvanced = () => {
   );
 };
 
-export default Apidevelopmentadvanced;
+
+
+
+
+
 
 export default Apidevelopmentadvanced;
-
-export default ApiDevelopmentAdvanced;

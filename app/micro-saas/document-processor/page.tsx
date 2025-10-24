@@ -25,10 +25,9 @@ const PagePage: React.FC = () => {
       benefits: ['End-to-end encryption', 'GDPR compliance', 'SOC 2 certified', 'Regular audits']
     }
   ];
-"use client";
 import React from "react";
 
-const Documentprocessor = () => {
+const Documentprocessor: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -134,8 +133,10 @@ const Documentprocessor = () => {
   );
 };
 
+
+
+
+
+
 export default Documentprocessor;
-
-export default DocumentProcessor;
-
-export default PagePage;
+}

@@ -30,10 +30,9 @@ const PagePage: React.FC = () => {
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ];
-"use client";
 import React from "react";
 
-const Cybersecuritysuite = () => {
+const Cybersecuritysuite: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -140,6 +139,8 @@ const Cybersecuritysuite = () => {
   );
 };
 
-export default Cybersecuritysuite;
 
-export default PagePage;
+
+
+export default Cybersecuritysuite;
+}

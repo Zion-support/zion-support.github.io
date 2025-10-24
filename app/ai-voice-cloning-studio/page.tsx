@@ -11,7 +11,7 @@ const AiVoiceCloningStudioPage: React.FC = () => {
       title: 'AI-Powered Intelligence,',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-}
+},
     {
       icon: BarChar,
       title: 'Advanced Analytics,',
@@ -39,12 +39,34 @@ const AiVoiceCloningStudioPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
 
-const AiVoiceCloningStudio = () => {
+const AiVoiceCloningStudio: React.FC = () => {
   return (
-    <><Navigation /></Navigation>
-      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900'></div>
+    <>
+      <Navigation />
+      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900'>
+        
+      </div>
         {/* Hero Section */}
-        <section className='relative py-20 px-4 overflow-hidden'></section>
+        <section className='relative py-20 px-4 overflow-hidden'>
+          <div className='absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20'></div>
+          <div className='relative max-w-7xl mx-auto text-center'>
+            <h1 className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight'>
+              AI Solutions
+            </h1>
+            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed'>
+              Advanced AI solutions for modern businesses.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <button className='bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center'>
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className='border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200'>
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
           <div className='absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20'></div>
           <div className='relative max-w-7xl mx-auto text-center'></div>
             <h1 className='text-5xl md: text-7xl font-bold text-white mb-6 leading-tight'></h1>
@@ -67,7 +89,26 @@ const AiVoiceCloningStudio = () => {
     </>
 
         {/* Features Section *,/}
-        <section className='py-20 px-4'></section>
+        <section className='relative py-20 px-4 overflow-hidden'>
+          <div className='absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20'></div>
+          <div className='relative max-w-7xl mx-auto text-center'>
+            <h1 className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight'>
+              AI Solutions
+            </h1>
+            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed'>
+              Advanced AI solutions for modern businesses.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <button className='bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center'>
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className='border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200'>
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
           <div className='max-w-7xl mx-auto'></div>
             <div className='text-center mb-16'></div>
               <h2 className='text-4xl font-bold text-white mb-4'>Key Features</h2>
@@ -96,7 +137,26 @@ const AiVoiceCloningStudio = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className='py-20 px-4 bg-white/5'></section>
+        <section className='relative py-20 px-4 overflow-hidden'>
+          <div className='absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20'></div>
+          <div className='relative max-w-7xl mx-auto text-center'>
+            <h1 className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight'>
+              AI Solutions
+            </h1>
+            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed'>
+              Advanced AI solutions for modern businesses.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <button className='bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center'>
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className='border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200'>
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
           <div className='max-w-7xl mx-auto'></div>
             <div className='text-center mb-16'></div>
               <h2 className='text-4xl font-bold text-white mb-4'>Why Choose Our Solution</h2>
@@ -116,7 +176,26 @@ const AiVoiceCloningStudio = () => {
         </section>
 
         {/* CTA Section */}
-        <section className='py-20 px-4'></section>
+        <section className='relative py-20 px-4 overflow-hidden'>
+          <div className='absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20'></div>
+          <div className='relative max-w-7xl mx-auto text-center'>
+            <h1 className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight'>
+              AI Solutions
+            </h1>
+            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed'>
+              Advanced AI solutions for modern businesses.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <button className='bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center'>
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className='border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200'>
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
           <div className='max-w-4xl mx-auto text-center'></div>
             <h2 className='text-4xl font-bold text-white mb-6'>Ready to Transform Your Business?</h2>
             <p className='text-xl text-gray-300 mb-8'></p>
@@ -138,10 +217,12 @@ const AiVoiceCloningStudio = () => {
   );,
 };
 
+
+
+
+
+
+
+
 export default AiVoiceCloningStudioPage;
-
-export default PagePage;
-
-export default PagePage;
-
-export default PagePage;
+}

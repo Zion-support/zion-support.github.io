@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Cybersecurity = () => {
+const Cybersecurity: React.FC = () => {
   const features = [
     {
       icon: "🚀",

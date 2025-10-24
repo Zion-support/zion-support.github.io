@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Zionaiformbuilder = () => {
+const Zionaiformbuilder: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Zionaiformbuilder = () => {
   );
 };
 
-export default Zionaiformbuilder;
 
-export default ZionAiFormBuilder;
+
+
+export default Zionaiformbuilder;

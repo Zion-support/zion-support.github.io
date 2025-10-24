@@ -317,7 +317,7 @@ const NeonButton: React.FC<NeonButtonProps> = ({
   );
 };
 ;
-export default NeonButtonPage;
+
   constvariantClasses= {
   primary: "bg-gradient-to-r from-blue-600to-purple-600text-white shado w-lghover:shado w-blue-50 0/25 hover:shado w-2 xl"
     secondary: "bg-gradient-to-r from-purple-600to-pink-600text-white shado w-lghover:shado w-purple-50 0/25 hover:shado w-2 xl"
@@ -328,11 +328,11 @@ export default NeonButtonPage;
     "before: absolute before:inset-0 before:rounded-lg before:bg-gradient-to-r before:from-blue-400 before:to-purple-400 before:opacity-0 before:blur-sm before:transition-opacity before:duration-300 hover:before:opacity-70 before:-z-10"
   const buttonClasses = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${neonEffect} ${className}`
   constcontent= (
-  <di v>{icon&&<spanclassName="mr-2">{icon}</spa>}
-      {
+  <di v>{icon&&<spanclassName="mr-2">{icon}</spa>},
+    {
   children
-}
-      {
+},
+    {
   !icon && <ArrowRight className="w-5 h-5 ml-2" />
         </ArrowRight>
         </ArrowRight>
@@ -360,7 +360,8 @@ export default NeonButtonPage;
   )
 }
 ;
-export default NeonButton
-  );
+
 };
-export default NeonButton;"
+"
+
+export default NeonButtonPage;

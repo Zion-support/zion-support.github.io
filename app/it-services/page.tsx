@@ -1,8 +1,6 @@
-"use client";
 import React from "react";
 import { Cloud, Shield, Server, Database, CheckCircle, ArrowRight } from "lucide-react";
 import React from 'react';
-import { Cloud, Shield, Server, Database, CheckCircle, ArrowRight  } from "lucide-react";
 const ITServicesPage: React.FC = () => {
   const services = [
     {
@@ -15,7 +13,7 @@ const ITServicesPage: React.FC = () => {
         "24/7 Monitoring"
       ],
       price: 'Starting at $,2,000'
-}
+},
     {
       icon: Shiel,
       title: 'Cybersecurity,',
@@ -57,11 +55,32 @@ const ITServicesPage: React.FC = () => {
     "Python", "Go", "Rust", "TypeScript"
   ];
 
-const ItServices = () => {
+const ItServices: React.FC = () => {
   return (
-    <div className='min-h-screen bg-gradient-to-br from-gray-50 to-blue-50'></div>
+    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900'>
+        
+      </div>
       {/* Hero Section */}
-      <section className='relative py-20 px-4 overflow-hidden'></section>
+      <section className='relative py-20 px-4 overflow-hidden'>
+          <div className='absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20'></div>
+          <div className='relative max-w-7xl mx-auto text-center'>
+            <h1 className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight'>
+              AI Solutions
+            </h1>
+            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed'>
+              Advanced AI solutions for modern businesses.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <button className='bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center'>
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className='border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200'>
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
         <div className='absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20'></div>
         <div className='relative max-w-7xl mx-auto text-center'></div>
           <h1 className='text-4xl md: text-6xl font-bold text-gray-900 mb-6'></h1>
@@ -83,7 +102,26 @@ const ItServices = () => {
       </section>
 
       {/* Services Grid *,/}
-      <section className='py-20 px-4'></section>
+      <section className='relative py-20 px-4 overflow-hidden'>
+          <div className='absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20'></div>
+          <div className='relative max-w-7xl mx-auto text-center'>
+            <h1 className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight'>
+              AI Solutions
+            </h1>
+            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed'>
+              Advanced AI solutions for modern businesses.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <button className='bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center'>
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className='border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200'>
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
         <div className='max-w-7xl mx-auto'></div>
           <div className='text-center mb-16'></div>
             <h2 className='text-3xl md: text-4xl font-bold text-gray-900 mb-4'></h2>
@@ -120,7 +158,26 @@ const ItServices = () => {
       </section>
 
       {/* Technologies Section */}
-      <section className='py-20 px-4 bg-white/5'></section>
+      <section className='relative py-20 px-4 overflow-hidden'>
+          <div className='absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20'></div>
+          <div className='relative max-w-7xl mx-auto text-center'>
+            <h1 className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight'>
+              AI Solutions
+            </h1>
+            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed'>
+              Advanced AI solutions for modern businesses.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <button className='bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center'>
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className='border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200'>
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
         <div className='max-w-7xl mx-auto'></div>
           <div className='text-center mb-16'></div>
             <h2 className='text-3xl md: text-4xl font-bold text-gray-900 mb-4'></h2>
@@ -141,7 +198,26 @@ const ItServices = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className='py-20 px-4'></section>
+      <section className='relative py-20 px-4 overflow-hidden'>
+          <div className='absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20'></div>
+          <div className='relative max-w-7xl mx-auto text-center'>
+            <h1 className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight'>
+              AI Solutions
+            </h1>
+            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed'>
+              Advanced AI solutions for modern businesses.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <button className='bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center'>
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className='border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200'>
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
         <div className='max-w-7xl mx-auto'></div>
           <div className='grid grid-cols-1 lg: grid-cols-2 gap-12 items-center'></div>
             <div></div>
@@ -203,7 +279,26 @@ const ItServices = () => {
       </section>
 
       {/* CTA Section *,/}
-      <section className='py-20 px-4 bg-gradient-to-r from-emerald-600 to-blue-600'></section>
+      <section className='relative py-20 px-4 overflow-hidden'>
+          <div className='absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20'></div>
+          <div className='relative max-w-7xl mx-auto text-center'>
+            <h1 className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight'>
+              AI Solutions
+            </h1>
+            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed'>
+              Advanced AI solutions for modern businesses.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <button className='bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center'>
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className='border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200'>
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
         <div className='max-w-4xl mx-auto text-center'></div>
           <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'></h2>
             Transform Your IT Infrastructure Today
@@ -229,3 +324,5 @@ const ItServices = () => {
 };
 
 export default ITServicesPage;
+
+}

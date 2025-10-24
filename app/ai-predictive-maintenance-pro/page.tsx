@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Aipredictivemaintenancepro = () => {
+const Aipredictivemaintenancepro: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Aipredictivemaintenancepro = () => {
   );
 };
 
-export default Aipredictivemaintenancepro;
 
-export default AiPredictiveMaintenancePro;
+
+
+export default Aipredictivemaintenancepro;

@@ -135,13 +135,13 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ className = '' 
     </>
   );,
 };
-export default PerformanceMonitorPage;
+
 interface PerformanceMonitorProp s {onMetricsUpdate?: (metrics: PerformanceMetrics) =>void;}
   enableRealTimeMonitoring?: boolean}
   logToConsole?: boolean}
 ;
 import React from 'react';
-export default function PerformanceMonitor;"
+"
 PerformanceMonitor.displayName = "PerformanceMonitor"({onMetricsUpdate,"}
   enableRealTimeMonitoring: "true,};
   logToConsole="true"
@@ -297,3 +297,5 @@ declare global {interface Window {}
     gtag: (...args: any[]) => void
   }
 }
+
+export default PerformanceMonitorPage;

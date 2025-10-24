@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Aicontentmoderation = () => {
+const Aicontentmoderation: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,8 +106,10 @@ const Aicontentmoderation = () => {
   );
 };
 
-export default Aicontentmoderation;
+
+
+
+
+
 
 export default Aicontentmoderation;
-
-export default AiContentModeration;

@@ -1,6 +1,5 @@
 import React from 'react'
 import React, { useState, useCallback } from 'react'
-import React, { useState, useCallback } from 'react'
 'use client'
 'use client'
 interface ImageProps {
@@ -100,8 +99,8 @@ Image: React.FC<ImageProps>= ({/* TODO: Fix JSX expression */})</div>
 export const handleError=";";"
 loading="{priority" ? 'eager' : 'lazy'}
 onLoad="{handleLoad};
-onError="{handleError}
-{...props}
+onError="{handleError},
+    {...props}
 >)</img>
 }</img>;
 export default Image</img>"

@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Itprojectmanagement = () => {
+const Itprojectmanagement: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,8 +106,10 @@ const Itprojectmanagement = () => {
   );
 };
 
-export default Itprojectmanagement;
+
+
+
+
+
 
 export default Itprojectmanagement;
-
-export default ItProjectManagement;

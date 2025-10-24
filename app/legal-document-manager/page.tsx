@@ -10,10 +10,9 @@ const features = [
 { icon: BarChart, title: 'Legal Analytics', description: 'Comprehensive analytics on legal matters and case outcomes.' },
 { icon: CheckCircle, title: 'Version Control', description: 'Complete version control and audit trail for all legal documents.' }
 ];
-"use client";
 import React from "react";
 
-const Legaldocumentmanager = () => {
+const Legaldocumentmanager: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -119,8 +118,10 @@ const Legaldocumentmanager = () => {
   );
 };
 
+
+
+
+
+
 export default Legaldocumentmanager;
-
-export default LegalDocumentManager;
-
-export default PagePage;
+}

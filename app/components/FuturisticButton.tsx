@@ -26,7 +26,7 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
-  const getVariantClasses = () => {
+  const getVariantClasses: React.FC = () => {
     switch (variant) {
       case 'primary':
         return 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40';
@@ -41,7 +41,7 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
     }
   };
 
-  const getSizeClasses = () => {
+  const getSizeClasses: React.FC = () => {
     switch (size) {
       case 'sm':
         return 'px-4 py-2 text-sm';
@@ -83,8 +83,8 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
         transition={{ duration: 0.3 }}
       />
       
-      {/* Loading spinner */}
-      {loading && (
+      {/* Loading spinner */},
+    {loading && (
         <motion.div
           className="absolute inset-0 flex items-center justify-center"
           initial={{ opacity: 0 }}
@@ -93,9 +93,8 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
         >
           <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
         </motion.div>
-      )}
-      
-      {/* Button content */}
+      )},
+    {/* Button content */}
       <motion.span
         className="relative z-10 flex items-center justify-center"
         animate={{ opacity: loading ? 0 : 1 }}

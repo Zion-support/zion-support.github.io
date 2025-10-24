@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Specializedservices = () => {
+const Specializedservices: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Specializedservices = () => {
   );
 };
 
-export default Specializedservices;
 
-export default SpecializedServices;
+
+
+export default Specializedservices;

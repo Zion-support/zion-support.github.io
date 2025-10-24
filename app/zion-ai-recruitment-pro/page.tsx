@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Zionairecruitmentpro = () => {
+const Zionairecruitmentpro: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,8 +106,10 @@ const Zionairecruitmentpro = () => {
   );
 };
 
-export default Zionairecruitmentpro;
+
+
+
+
+
 
 export default Zionairecruitmentpro;
-
-export default ZionAiRecruitmentPro;

@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Zionaipriceoptimizer = () => {
+const Zionaipriceoptimizer: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Zionaipriceoptimizer = () => {
   );
 };
 
-export default Zionaipriceoptimizer;
 
-export default ZionAiPriceOptimizer;
+
+
+export default Zionaipriceoptimizer;

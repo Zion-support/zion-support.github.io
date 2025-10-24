@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Aischedulingassistant = () => {
+const Aischedulingassistant: React.FC = () => {
   const features = [
     {
       icon: "🚀",

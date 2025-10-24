@@ -16,10 +16,9 @@ const PagePage: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-"use client";
 import React from "react";
 
-const Digitaltransformation = () => {
+const Digitaltransformation: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -125,6 +124,9 @@ const Digitaltransformation = () => {
   );
 };
 
-export default Digitaltransformation;
 
-export default DigitalTransformation;
+
+
+
+export default Digitaltransformation;
+}

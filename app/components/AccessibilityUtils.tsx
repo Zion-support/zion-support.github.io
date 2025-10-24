@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
@@ -8,13 +7,15 @@ interface AccessibilityUtilsProps {
   className?: string;
 }
 
+
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
+
 export default function AccessibilityUtils({ className }: AccessibilityUtilsProps) {
   return (
     <div className={className}>
       <h1>Accessibility Utils</h1>
     </div>
   );
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
-export default AccessibilityUtils;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c

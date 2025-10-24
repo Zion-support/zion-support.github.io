@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Itperformance = () => {
+const Itperformance: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Itperformance = () => {
   );
 };
 
-export default Itperformance;
 
-export default PagePage;
+
+
+export default Itperformance;

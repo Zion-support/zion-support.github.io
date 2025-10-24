@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Ailegal = () => {
+const Ailegal: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,8 @@ const Ailegal = () => {
   );
 };
 
-export default Ailegal;
 
-export default AiLegal;
+
+
+
+export default Ailegal;

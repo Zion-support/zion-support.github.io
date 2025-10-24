@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Processautomation = () => {
+const Processautomation: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,8 @@ const Processautomation = () => {
   );
 };
 
-export default Processautomation;
 
-export default ProcessAutomation;
+
+
+
+export default Processautomation;

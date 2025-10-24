@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Zionaicustomerservicepro = () => {
+const Zionaicustomerservicepro: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,8 +106,10 @@ const Zionaicustomerservicepro = () => {
   );
 };
 
-export default Zionaicustomerservicepro;
+
+
+
+
+
 
 export default Zionaicustomerservicepro;
-
-export default ZionAiCustomerServicePro;

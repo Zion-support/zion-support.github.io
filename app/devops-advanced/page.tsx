@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Devopsadvanced = () => {
+const Devopsadvanced: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,8 +106,10 @@ const Devopsadvanced = () => {
   );
 };
 
-export default Devopsadvanced;
+
+
+
+
+
 
 export default Devopsadvanced;
-
-export default DevopsAdvanced;

@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Partnerships = () => {
+const Partnerships: React.FC = () => {
   const features = [
     {
       icon: "🚀",

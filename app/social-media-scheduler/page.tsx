@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Socialmediascheduler = () => {
+const Socialmediascheduler: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Socialmediascheduler = () => {
   );
 };
 
-export default Socialmediascheduler;
 
-export default SocialMediaScheduler;
+
+
+export default Socialmediascheduler;

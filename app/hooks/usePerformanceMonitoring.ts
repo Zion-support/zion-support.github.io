@@ -3,7 +3,7 @@ import { useAnalytics } from '../components/AnalyticsProvider';
 
 // PerformanceMetrics interface removed as it's not used in this hook
 
-export const usePerformanceMonitoring = () => {
+export const usePerformanceMonitoring: React.FC = () => {
   const { trackPerformance } = useAnalytics();
 
   const reportMetric = useCallback(
@@ -117,7 +117,7 @@ export const usePerformanceMonitoring = () => {
 
   // Monitor page load performance
   useEffect(() => {
-    const handleLoad = () => {
+    const handleLoad: React.FC = () => {
       if (typeof window === 'undefined') return;
 
       const navigation = performance.getEntriesByType(

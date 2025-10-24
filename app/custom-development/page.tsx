@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Customdevelopment = () => {
+const Customdevelopment: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Customdevelopment = () => {
   );
 };
 
-export default Customdevelopment;
 
-export default PagePage;
+
+
+export default Customdevelopment;

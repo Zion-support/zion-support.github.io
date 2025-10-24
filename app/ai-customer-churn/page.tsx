@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Aicustomerchurn = () => {
+const Aicustomerchurn: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,8 +106,10 @@ const Aicustomerchurn = () => {
   );
 };
 
-export default Aicustomerchurn;
+
+
+
+
+
 
 export default Aicustomerchurn;
-
-export default AiCustomerChurn;

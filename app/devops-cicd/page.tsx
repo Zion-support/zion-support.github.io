@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Devopscicd = () => {
+const Devopscicd: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Devopscicd = () => {
   );
 };
 
-export default Devopscicd;
 
-export default PagePage;
+
+
+export default Devopscicd;

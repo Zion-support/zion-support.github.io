@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Cloudnativedevelopment = () => {
+const Cloudnativedevelopment: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,8 +106,10 @@ const Cloudnativedevelopment = () => {
   );
 };
 
-export default Cloudnativedevelopment;
+
+
+
+
+
 
 export default Cloudnativedevelopment;
-
-export default CloudNativeDevelopment;

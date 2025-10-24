@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Expensetrackerpro = () => {
+const Expensetrackerpro: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Expensetrackerpro = () => {
   );
 };
 
-export default Expensetrackerpro;
 
-export default ExpenseTrackerPro;
+
+
+export default Expensetrackerpro;

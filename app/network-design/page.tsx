@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Networkdesign = () => {
+const Networkdesign: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,8 +106,9 @@ const Networkdesign = () => {
   );
 };
 
+
+
+
+
+
 export default Networkdesign;
-
-export default NetworkDesign;
-
-export default PagePage;

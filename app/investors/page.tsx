@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Investors = () => {
+const Investors: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Investors = () => {
   );
 };
 
-export default Investors;
 
-export default PagePage;
+
+
+export default Investors;

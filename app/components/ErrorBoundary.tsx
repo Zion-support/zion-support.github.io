@@ -98,9 +98,8 @@ const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ className = '' }) => {
           </div>
         </div>
       );
-    }
-
-        {/* Benefits Section */}
+    },
+    {/* Benefits Section */}
         <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
           <div className=&quot;max-w-7xl mx-auto&quot;></div>
             <div className=&quot;text-center mb-16&quot;></div>
@@ -177,8 +176,8 @@ return (
 Error Details (Development)
 </summary>
 <pre className=&quot;text-xs text-red-400 bg-slate-900/50 p-3 rounded overflow-auto&quot;></p>
-{this.state.error.toString()}
-{this.state.errorInfo?.componentStack
+{this.state.error.toString()},
+    {this.state.errorInfo?.componentStack
     }
 </pre>
 </details>

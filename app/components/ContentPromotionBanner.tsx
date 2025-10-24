@@ -5,7 +5,6 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 >>>>>>> cursor/fix-errors-and-merge-to-main-280f
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 
 const ContentPromotionBanner: React.FC = () => {const benefits: ";"
     'Increase efficiency by up to 50%',
@@ -178,9 +177,8 @@ const ContentPromotionBanner: React.FC = () => {const benefits: ";"
                   <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
                   <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
                 </div>
-              )}
-
-        {/* CTA Section */}
+              )},
+    {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;></section>
           <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
             <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>

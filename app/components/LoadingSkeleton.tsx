@@ -11,7 +11,7 @@ const LoadingSkeletonPage: React.FC = () => {
       title: 'AI-Powered Intelligence,',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-}
+},
     {
       icon: BarChar,
       title: 'Advanced Analytics,',
@@ -81,7 +81,7 @@ const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
   );
 };
 
-export default LoadingSkeleton;
+
               </button>
             </div>
           </div>
@@ -160,5 +160,8 @@ export default LoadingSkeleton;
   );,
 };
 
-export default LoadingSkeletonPage;
+
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
+
+export default LoadingSkeleton;
+}

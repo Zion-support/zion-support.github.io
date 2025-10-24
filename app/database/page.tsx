@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Database = () => {
+const Database: React.FC = () => {
   const features = [
     {
       icon: "🚀",

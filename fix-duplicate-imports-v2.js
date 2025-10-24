@@ -1,75 +1,49 @@
 const fs = require('fs');
 const path = require('path');
 
-function fixFile(filePath) {
+function fixDuplicateImports(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let fixed = false;
-    
-    // Fix duplicate imports
-    const lines = content.split('\n');
-    const seenImports = new Set();
-    const fixedLines = [];
+    let lines = content.split('\n');
+    let fixedLines = [];
+    let seenImports = new Set();
     let inImportBlock = false;
     
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       
+      // Check if this is an import line
       if (line.trim().startsWith('import ')) {
         if (!inImportBlock) {
           inImportBlock = true;
         }
         
+        // Normalize the import statement for comparison
         const normalizedImport = line.trim().replace(/\s+/g, ' ');
         
         if (!seenImports.has(normalizedImport)) {
           seenImports.add(normalizedImport);
           fixedLines.push(line);
         }
+        // Skip duplicate imports
       } else if (inImportBlock && line.trim() === '') {
+        // Empty line in import block - keep it
         fixedLines.push(line);
       } else if (inImportBlock && !line.trim().startsWith('import ') && line.trim() !== '') {
+        // Non-import line - end of import block
         inImportBlock = false;
         fixedLines.push(line);
       } else {
+        // Regular line
         fixedLines.push(line);
       }
     }
     
-    content = fixedLines.join('\n');
+    const fixedContent = fixedLines.join('\n');
     
-    // Fix duplicate exports
-    const exportMatches = content.match(/export default [^;]+;/g);
-    if (exportMatches && exportMatches.length > 1) {
-      const firstExport = exportMatches[0];
-      content = content.replace(/export default [^;]+;/g, '');
-      content += '\n' + firstExport;
-      fixed = true;
-    }
-    
-    // Fix missing commas in arrays
-    content = content.replace(/\}\s*\{/g, '},\n    {');
-    
-    // Fix "use client" placement
-    content = content.replace(/"use client";\s*import/g, 'import');
-    if (content.includes('"use client"') && !content.startsWith('"use client"')) {
-      content = '"use client";\n' + content.replace(/"use client";\s*/, '');
-    }
-    
-    // Fix function declarations
-    content = content.replace(/const (\w+) = \(\) => \{/g, 'const $1: React.FC = () => {');
-    
-    // Fix missing closing braces
-    const openBraces = (content.match(/\{/g) || []).length;
-    const closeBraces = (content.match(/\}/g) || []).length;
-    if (openBraces > closeBraces) {
-      content += '\n}';
-      fixed = true;
-    }
-    
-    if (fixed || content !== fs.readFileSync(filePath, 'utf8')) {
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${filePath}`);
+    if (fixedContent !== content) {
+      fs.writeFileSync(filePath, fixedContent);
+      console.log(`Fixed duplicate imports in: ${filePath}`);
       return true;
     }
     
@@ -110,9 +84,9 @@ console.log(`Found ${files.length} TypeScript files to process...`);
 
 let fixedCount = 0;
 for (const file of files) {
-  if (fixFile(file)) {
+  if (fixDuplicateImports(file)) {
     fixedCount++;
   }
 }
 
-console.log(`Fixed ${fixedCount} files.`);
+console.log(`Fixed duplicate imports in ${fixedCount} files.`);

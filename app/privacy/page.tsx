@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Privacy = () => {
+const Privacy: React.FC = () => {
   const features = [
     {
       icon: "🚀",

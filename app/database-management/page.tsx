@@ -30,10 +30,9 @@ const PagePage: React.FC = () => {
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ];
-"use client";
 import React from "react";
 
-const Databasemanagement = () => {
+const Databasemanagement: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -140,6 +139,8 @@ const Databasemanagement = () => {
   );
 };
 
-export default Databasemanagement;
 
-export default PagePage;
+
+
+export default Databasemanagement;
+}

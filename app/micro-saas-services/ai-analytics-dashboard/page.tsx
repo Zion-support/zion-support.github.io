@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Aianalyticsdashboard = () => {
+const Aianalyticsdashboard: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,8 @@ const Aianalyticsdashboard = () => {
   );
 };
 
-export default Aianalyticsdashboard;
 
-export default AiAnalyticsDashboard;
+
+
+
+export default Aianalyticsdashboard;

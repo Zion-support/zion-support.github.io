@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Nlp = () => {
+const Nlp: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,8 +106,9 @@ const Nlp = () => {
   );
 };
 
-export default Nlp;
 
-export default NLP;
+
+
+
 
 export default Nlp;

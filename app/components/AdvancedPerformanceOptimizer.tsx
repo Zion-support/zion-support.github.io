@@ -47,7 +47,7 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
   // Web Vitals monitoring,
 useEffect(() => {
     if (enableWebVitals && typeof window !== 'undefined') {
-      const measureWebVitals = () => {
+      const measureWebVitals: React.FC = () => {
 <<<<<<< HEAD:app-broken/app/components/AdvancedPerformanceOptimizer.tsx
   return (
     // First Contentful Paint,
@@ -384,8 +384,10 @@ if ('gtag' in window) {
   return null;
 }
 ;
+</AdvancedPerformanceOptimizerProp>
+</AdvancedPerformanceOptimizerProp>"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6928
+
 export default AdvancedPerformanceOptimizer
 }}}}}
-};</AdvancedPerformanceOptimizerProp>
-export default AdvancedPerformanceOptimizerPage;</AdvancedPerformanceOptimizerProp>"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6928
+};

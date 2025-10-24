@@ -183,8 +183,8 @@ const ErrorHandlerPage: React.FC = () => {const features = [
                     </div>
 
                     <//div>
-                  )}
-                  {this.state.errorInfo?.componentStack && (
+                  )},
+    {this.state.errorInfo?.componentStack && (
                     <div></div>
 <//div>
                       <strong>Component Stack:</strong>
@@ -339,9 +339,8 @@ const ErrorHandlerPage: React.FC = () => {const features = [
 ;
     return thi s.props.children
   }
-}
-
-        {
+},
+    {
   /* Benefits Section */
 }
         <section className="py-20 px-4 bg-white/5"></section>

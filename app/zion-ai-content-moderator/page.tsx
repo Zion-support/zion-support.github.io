@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Zionaicontentmoderator = () => {
+const Zionaicontentmoderator: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -108,6 +107,7 @@ const Zionaicontentmoderator = () => {
   );
 };
 
-export default Zionaicontentmoderator;
 
-export default ZionAiContentModerator;
+
+
+export default Zionaicontentmoderator;

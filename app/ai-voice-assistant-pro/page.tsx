@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Aivoiceassistantpro = () => {
+const Aivoiceassistantpro: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Aivoiceassistantpro = () => {
   );
 };
 
-export default Aivoiceassistantpro;
 
-export default AiVoiceAssistantPro;
+
+
+export default Aivoiceassistantpro;

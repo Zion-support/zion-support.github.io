@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Dataprotection = () => {
+const Dataprotection: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,8 +106,9 @@ const Dataprotection = () => {
   );
 };
 
+
+
+
+
+
 export default Dataprotection;
-
-export default DataProtection;
-
-export default PagePage;

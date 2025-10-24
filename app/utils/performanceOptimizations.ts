@@ -90,7 +90,7 @@ export const useLazyImage = (src: string, placeholder?: string) => {
   return { imageSrc, isLoaded, isError, observe };
 };
 // Performance monitoring hook
-export const usePerformanceMonitoring = () => {
+export const usePerformanceMonitoring: React.FC = () => {
   const [metrics, setMetrics] = useState<{
     fcp?: number;
     lcp?: number;
@@ -100,7 +100,7 @@ export const usePerformanceMonitoring = () => {
   }>({});
   useEffect(() => {
     if (typeof window === 'undefined') return;
-    const updateMetrics = () => {
+    const updateMetrics: React.FC = () => {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paint = performance.getEntriesByType('paint');
       const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime;
@@ -134,7 +134,7 @@ export const usePerformanceMonitoring = () => {
   return metrics;
 };
 // Memory usage monitoring
-export const useMemoryMonitoring = () => {
+export const useMemoryMonitoring: React.FC = () => {
   const [memoryInfo, setMemoryInfo] = useState<{
     usedJSHeapSize?: number;
     totalJSHeapSize?: number;
@@ -142,7 +142,7 @@ export const useMemoryMonitoring = () => {
   }>({});
   useEffect(() => {
     if (typeof window === 'undefined' || !('memory' in performance)) return;
-    const updateMemoryInfo = () => {
+    const updateMemoryInfo: React.FC = () => {
       const memory = (performance as any).memory;
       if (memory) {
         setMemoryInfo({
@@ -168,7 +168,7 @@ export const preloadResource = (href: string, as: string) => {
   document.head.appendChild(link);
 };
 // Critical resource preloading
-export const preloadCriticalResources = () => {
+export const preloadCriticalResources: React.FC = () => {
   if (typeof window === 'undefined') return;
   // Preload critical fonts
   preloadResource('/fonts/inter-var.woff2', 'font');
@@ -180,7 +180,7 @@ export const preloadCriticalResources = () => {
   preloadResource('/styles/critical.css', 'style');
 };
 // Bundle size monitoring
-export const useBundleSizeMonitoring = () => {
+export const useBundleSizeMonitoring: React.FC = () => {
   const [bundleSize, setBundleSize] = useState<{
     totalSize?: number;
     jsSize?: number;
@@ -189,7 +189,7 @@ export const useBundleSizeMonitoring = () => {
   }>({});
   useEffect(() => {
     if (typeof window === 'undefined') return;
-    const calculateBundleSize = () => {
+    const calculateBundleSize: React.FC = () => {
       const resources = performance.getEntriesByType('resource');
       let totalSize = 0;
       let jsSize = 0;

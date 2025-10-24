@@ -137,7 +137,7 @@ const LinkPage: React.FC = () => {
   );
 };
 
-export default LinkPage;
+
 >>>>>>> cursor/fix-errors-and-merge-to-main-280f
 // link utility
 export const link = (): JSX.Element => {
@@ -145,4 +145,6 @@ export const link = (): JSX.Element => {
   return null;
 };
 
-export default link;
+
+
+export default LinkPage;

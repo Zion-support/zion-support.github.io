@@ -239,3 +239,5 @@ const PageFixedPage: React.FC = () => {
 };
 
 export default CompliancePageFixed;
+
+}

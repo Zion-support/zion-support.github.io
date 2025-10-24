@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Aimedicaldiagnosisassistant = () => {
+const Aimedicaldiagnosisassistant: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,8 @@ const Aimedicaldiagnosisassistant = () => {
   );
 };
 
-export default Aimedicaldiagnosisassistant;
 
-export default AiMedicalDiagnosisAssistant;
+
+
+
+export default Aimedicaldiagnosisassistant;

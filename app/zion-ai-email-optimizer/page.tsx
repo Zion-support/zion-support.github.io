@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Zionaiemailoptimizer = () => {
+const Zionaiemailoptimizer: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Zionaiemailoptimizer = () => {
   );
 };
 
-export default Zionaiemailoptimizer;
 
-export default ZionAiEmailOptimizer;
+
+
+export default Zionaiemailoptimizer;

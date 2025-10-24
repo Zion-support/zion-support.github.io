@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Augmentedrealitysolutions = () => {
+const Augmentedrealitysolutions: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Augmentedrealitysolutions = () => {
   );
 };
 
-export default Augmentedrealitysolutions;
 
-export default AugmentedRealitySolutions;
+
+
+export default Augmentedrealitysolutions;

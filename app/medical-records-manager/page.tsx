@@ -34,10 +34,9 @@ title: 'Advanced Security',
 description: 'End-to-end encryption, secure backups, and multi-factor authentication to protect sensitive medical data.'
 }
 ];
-"use client";
 import React from "react";
 
-const Medicalrecordsmanager = () => {
+const Medicalrecordsmanager: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -143,6 +142,9 @@ const Medicalrecordsmanager = () => {
   );
 };
 
-export default Medicalrecordsmanager;
 
-export default MedicalRecordsManager;
+
+
+
+export default Medicalrecordsmanager;
+}

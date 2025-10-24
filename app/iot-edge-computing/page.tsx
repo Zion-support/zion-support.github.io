@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Iotedgecomputing = () => {
+const Iotedgecomputing: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Iotedgecomputing = () => {
   );
 };
 
-export default Iotedgecomputing;
 
-export default PagePage;
+
+
+export default Iotedgecomputing;

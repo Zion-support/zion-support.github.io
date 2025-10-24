@@ -42,7 +42,8 @@ export class RateLimiter {
    * @param identifier - Unique identifier (e.g., IP address)
    * @returns Whether the request is allowed
    */
-  check(identifier: string): { allowed: boolean; remaining: number; resetTime: number } {
+  check(identifier: string): { allowed: boolean; remaining: number; resetTime: number },
+    {
     const _now = Date.now();
     const _record = this.requests.get(identifier);
 
@@ -91,7 +92,8 @@ export class RateLimiter {
   /**
    * Get current stats
    */
-  getStats(): { totalTracked: number } {
+  getStats(): { totalTracked: number },
+    {
     return { totalTracked: this.requests.size };
   }
 }

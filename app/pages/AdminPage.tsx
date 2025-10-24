@@ -1,7 +1,9 @@
 import React from 'react';
 const AdminPage = (): JSX.Element => {
   return (
-    <div className='min-h-screen bg-gray-50 py-12'></div>
+    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900'>
+        
+      </div>
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'></div>
         <div className='text-center'></div>
           <h1 className='text-4xl font-bold text-gray-900 mb-8'>Admin Dashboard</h1>
@@ -11,7 +13,7 @@ const AdminPage = (): JSX.Element => {
             <p className='text-gray-600'>Admin functionality will be available in a future update.</p>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
-const AdminPage = () => {
+const AdminPage: React.FC = () => {
   return (
     <>
       
@@ -114,3 +116,5 @@ const AdminPage = () => {
 };
 
 export default AdminPage;
+
+}

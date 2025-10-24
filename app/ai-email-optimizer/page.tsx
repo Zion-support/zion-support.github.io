@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Aiemailoptimizer = () => {
+const Aiemailoptimizer: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Aiemailoptimizer = () => {
   );
 };
 
-export default Aiemailoptimizer;
 
-export default AiEmailOptimizer;
+
+
+export default Aiemailoptimizer;

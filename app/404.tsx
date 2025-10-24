@@ -2,13 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Search, Home, Info, Briefcase, Mail, ArrowLeft } from 'lucide-react';
 
-export default function NotFound() {
-  const popularPages = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Services", path: "/services" },
-    { name: "Contact", path: "/contact" }
-  ];
+
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
@@ -21,13 +15,11 @@ export default function NotFound() {
           <h2 className="text-3xl font-bold text-white mb-4">
             Page Not Found
           </h2>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b820
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2b3c
-            </div>
-          </div>
+        </div>
+      </div>
 
-          {/* Error Message */}
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Page Not Found</h1>
+      {/* Error Message */}
+      <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Page Not Found</h1>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
             Oops! The page you're looking for seems to have vanished into the digital void. Don't worry, even our AI can't predict everything!
@@ -42,18 +34,20 @@ export default function NotFound() {
           </div>
 
           {/* Action Buttons */}
-          <div className='flex flex-col sm: flex-row gap-4 justify-center mb-8'></div>
+          <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
             <Link
-              href='/' className='bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center'></Link>
-              <Home className='w-5 h-5 mr-2' /></Home>
+              href='/' className='bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center'
+            >
+              <Home className='w-5 h-5 mr-2' />
               Go Home
             </Link>
             <button
-              onClick={() => window.history.back(,)}className='border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center'
+              onClick={() => window.history.back()} className='border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center'
             >
-              <ArrowLeft className='w-5 h-5 mr-2' /></ArrowLeft>
+              <ArrowLeft className='w-5 h-5 mr-2' />
               Go Back
             </button>
+          </div>
 
           {/* Help Section */}
           <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-lg p-6">
@@ -61,16 +55,19 @@ export default function NotFound() {
             <p className="text-gray-300 text-sm mb-4">
               Our support team is here to help you navigate our services and find exactly what you're looking for.
             </p>
-            <div className='flex flex-col sm: flex-row gap-3 justify-center'></div>
-              <Link
-                key={index}
-                href={page.path}
-                className="bg-purple-600/20 hover:bg-purple-600/30 text-purple-300 hover:text-white px-4 py-2 rounded-lg text-sm transition-colors duration-300 border border-purple-500/30"
-              >
-                {page.name}
-              </Link>
+            <div className='flex flex-col sm:flex-row gap-3 justify-center'>
+              {popularPages.map((page, index) => (
+                <Link
+                  key={index}
+                  href={page.path}
+                  className="bg-purple-600/20 hover:bg-purple-600/30 text-purple-300 hover:text-white px-4 py-2 rounded-lg text-sm transition-colors duration-300 border border-purple-500/30"
+                >
+                  {page.name}
+                </Link>
+              ))}
               <a
-                href='mailto:support@ziontechgroup.com' className='border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center'></a>
+                href='mailto:support@ziontechgroup.com' className='border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center'
+              >
                 Send Email
               </a>
             </div>
@@ -121,5 +118,13 @@ export default function NotFound() {
     </div>
   );
 }
-export default NotFound;
+
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
+
+export default function NotFound() {
+  const popularPages = [
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Services", path: "/services" },
+    { name: "Contact", path: "/contact" }
+  ];

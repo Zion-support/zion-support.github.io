@@ -266,14 +266,14 @@ aria-label=&quot;Open sidebar&quot;
 >
 <Menu className=&quot;w-6 h-6&quot; />
 </button>
-{/* Sidebar Overlay *,/}
-{isOpen && (
+{/* Sidebar Overlay *,/},
+    {isOpen && (
 <div
 className=&quot;fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden&quot;;}
 onClick={() =>setIsOpen(false)}</div>
 />
-)}
-{/* Sidebar */}</div>"
+)},
+    {/* Sidebar */}</div>"
 <aside className="{`fixed" top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400/20 z-50 transform transition-transform duration-300 ${}
 isOpen ? 'translate-x-0' : '-translate-x-full'
 } lg:translate-x-0 lg:static lg:z-auto`}>

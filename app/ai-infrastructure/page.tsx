@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Aiinfrastructure = () => {
+const Aiinfrastructure: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Aiinfrastructure = () => {
   );
 };
 
-export default Aiinfrastructure;
 
-export default AiInfrastructure;
+
+
+export default Aiinfrastructure;

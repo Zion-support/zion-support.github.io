@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Itsecurityservices = () => {
+const Itsecurityservices: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,8 +106,10 @@ const Itsecurityservices = () => {
   );
 };
 
-export default Itsecurityservices;
+
+
+
+
+
 
 export default Itsecurityservices;
-
-export default ItSecurityServices;

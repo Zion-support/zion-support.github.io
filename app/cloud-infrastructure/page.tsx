@@ -34,10 +34,9 @@ const benefits = [
 'Cost-effective pricing plans',
 'Proven track record of success'
 ];
-"use client";
 import React from "react";
 
-const Cloudinfrastructure = () => {
+const Cloudinfrastructure: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -143,8 +142,10 @@ const Cloudinfrastructure = () => {
   );
 };
 
+
+
+
+
+
 export default Cloudinfrastructure;
-
-export default CloudInfrastructure;
-
-export default CloudInfrastructurePage;
+}

@@ -187,8 +187,8 @@ return structuredData || defaultStructuredData
 return (
     <>
       
-{children}
-{process.env.NODE_ENV === 'development' && (
+{children},
+    {process.env.NODE_ENV === 'development' && (
 <div className=&quot;seo-debug&quot; style={{
 position: 'fixed',
 top: '10 px',

@@ -34,10 +34,9 @@ const benefits = [
 'Cost-effective pricing plans',
 'Proven track record of success'
 ];
-"use client";
 import React from "react";
 
-const Blockchainintegrationservices = () => {
+const Blockchainintegrationservices: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -143,8 +142,10 @@ const Blockchainintegrationservices = () => {
   );
 };
 
+
+
+
+
+
 export default Blockchainintegrationservices;
-
-export default BlockchainIntegrationServices;
-
-export default BlockchainIntegrationServicesPage;
+}

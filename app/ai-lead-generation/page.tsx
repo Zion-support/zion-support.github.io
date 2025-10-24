@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Aileadgeneration = () => {
+const Aileadgeneration: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,8 @@ const Aileadgeneration = () => {
   );
 };
 
-export default Aileadgeneration;
 
-export default AiLeadGeneration;
+
+
+
+export default Aileadgeneration;

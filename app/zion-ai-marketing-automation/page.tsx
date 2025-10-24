@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Zionaimarketingautomation = () => {
+const Zionaimarketingautomation: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,8 +106,10 @@ const Zionaimarketingautomation = () => {
   );
 };
 
-export default Zionaimarketingautomation;
+
+
+
+
+
 
 export default Zionaimarketingautomation;
-
-export default ZionAiMarketingAutomation;

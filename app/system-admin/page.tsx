@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Systemadmin = () => {
+const Systemadmin: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,10 +106,11 @@ const Systemadmin = () => {
   );
 };
 
+
+
+
+
+
+
+
 export default Systemadmin;
-
-export default SystemAdmin;
-
-export default Systemadmin;
-
-export default SystemAdmin;

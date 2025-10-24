@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Aileadscoring = () => {
+const Aileadscoring: React.FC = () => {
   const features = [
     {
       icon: "🚀",

@@ -1,6 +1,6 @@
 <<<<<<< HEAD:src/utils/monitoring.ts
 // monitoring utility
-export const monitoring = () => {
+export const monitoring: React.FC = () => {
   // Utility implementation
   return null;
 };

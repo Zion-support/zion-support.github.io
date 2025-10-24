@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Status = () => {
+const Status: React.FC = () => {
   const features = [
     {
       icon: "🚀",

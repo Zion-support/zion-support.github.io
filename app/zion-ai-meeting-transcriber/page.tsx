@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Zionaimeetingtranscriber = () => {
+const Zionaimeetingtranscriber: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -108,6 +107,7 @@ const Zionaimeetingtranscriber = () => {
   );
 };
 
-export default Zionaimeetingtranscriber;
 
-export default ZionAiMeetingTranscriber;
+
+
+export default Zionaimeetingtranscriber;

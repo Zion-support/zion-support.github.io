@@ -5,9 +5,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle  } from "lucide-react";
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Mail, Phone, MapPin, Send, CheckCircle, Clock, MessageCircle } from 'lucide-react';
-"use client";
 import React, { useState } from "react";
-import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
 
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -33,14 +31,7 @@ const ContactPage: React.FC = () => {
     // Form submitted successfully
     setIsSubmitted(true);
 
-export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    service: '',
-    message: ''
-  });
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -388,8 +379,18 @@ export default function ContactPage() {
   );
 };
 
-export default ContactPage;
 
-export default ContactPage;>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
 
-export default ContactPage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
+
+
+
+export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    service: '',
+    message: ''
+  });
+}

@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Webdevelopment = () => {
+const Webdevelopment: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,8 +106,9 @@ const Webdevelopment = () => {
   );
 };
 
+
+
+
+
+
 export default Webdevelopment;
-
-export default WebDevelopment;
-
-export default WebDevelopmentPage;

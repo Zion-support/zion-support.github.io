@@ -54,7 +54,7 @@ const SupportPage: React.FC = () => {
     }
   ];
 
-const Support = () => {
+const Support: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -157,10 +157,12 @@ const Support = () => {
   );,
 };
 
+
+
+
+
+
+
+
 export default SupportPage;
-
-export default PagePage;
-
-export default PagePage;
-
-export default PagePage;
+}

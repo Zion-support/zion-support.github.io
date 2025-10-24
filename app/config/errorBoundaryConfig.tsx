@@ -3,7 +3,6 @@ import React from 'react'
 * Error Boundary Configuration
 * Centralized configuration for error handling across the application
 */;
-import React from 'react'
 export interface ErrorBoundaryConfig {/**
 * Whether to log errors to console
 */;

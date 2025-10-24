@@ -10,10 +10,9 @@ const features = [
 { icon: Shield, title: 'Secure Platform', description: 'Secure, scalable platform with role-based access and data protection.' },
 { icon: CheckCircle, title: 'Certification', description: 'Automated certification and credential management system.' }
 ];
-"use client";
 import React from "react";
 
-const Onlinelearningplatform = () => {
+const Onlinelearningplatform: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -119,8 +118,10 @@ const Onlinelearningplatform = () => {
   );
 };
 
+
+
+
+
+
 export default Onlinelearningplatform;
-
-export default OnlineLearningPlatform;
-
-export default PagePage;
+}

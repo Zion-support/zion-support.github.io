@@ -34,10 +34,9 @@ const benefits = [
 'Cost-effective pricing plans',
 'Proven track record of success'
 ];
-"use client";
 import React from "react";
 
-const Businessintelligence = () => {
+const Businessintelligence: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -143,8 +142,10 @@ const Businessintelligence = () => {
   );
 };
 
+
+
+
+
+
 export default Businessintelligence;
-
-export default BusinessIntelligence;
-
-export default BusinessIntelligencePage;
+}

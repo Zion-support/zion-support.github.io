@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Developertools = () => {
+const Developertools: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Developertools = () => {
   );
 };
 
-export default Developertools;
 
-export default PagePage;
+
+
+export default Developertools;

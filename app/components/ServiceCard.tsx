@@ -171,8 +171,8 @@ popular ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : ''
 <div className=&quot;text-3xl font-bold text-white mb-1&quot;>{price}</div>
 <div className=&quot;text-gray-400 text-sm&quot;>per month</div>
 </div>
-)}
-{onSelect && (
+)},
+    {onSelect && (
 <button;
 onClick={onSelect}
 className=&quot;w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center gap-2 group&quot;></button>

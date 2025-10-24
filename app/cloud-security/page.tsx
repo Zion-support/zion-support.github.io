@@ -34,10 +34,9 @@ const benefits = [
 'Cost-effective pricing plans',
 'Proven track record of success'
 ];
-"use client";
 import React from "react";
 
-const Cloudsecurity = () => {
+const Cloudsecurity: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -143,8 +142,10 @@ const Cloudsecurity = () => {
   );
 };
 
+
+
+
+
+
 export default Cloudsecurity;
-
-export default CloudSecurity;
-
-export default CloudSecurityPage;
+}

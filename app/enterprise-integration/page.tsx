@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Enterpriseintegration = () => {
+const Enterpriseintegration: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,8 +106,10 @@ const Enterpriseintegration = () => {
   );
 };
 
-export default Enterpriseintegration;
+
+
+
+
+
 
 export default Enterpriseintegration;
-
-export default EnterpriseIntegration;

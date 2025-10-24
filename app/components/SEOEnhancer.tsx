@@ -257,3 +257,5 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '' }) => {
 
 export default SEOEnhancerPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
+
+}

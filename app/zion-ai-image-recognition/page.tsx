@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Zionaiimagerecognition = () => {
+const Zionaiimagerecognition: React.FC = () => {
   const features = [
     {
       icon: "🚀",

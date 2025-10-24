@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Dataanalytics = () => {
+const Dataanalytics: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,8 @@ const Dataanalytics = () => {
   );
 };
 
-export default Dataanalytics;
 
-export default DataAnalytics;
+
+
+
+export default Dataanalytics;

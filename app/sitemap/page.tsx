@@ -27,10 +27,9 @@ const SitemapPage: React.FC = () => {
     { path: '/privacy', title: 'Privacy Policy', description: 'Our privacy policy and data protection practices' },
     { path: '/terms', title: 'Terms of Service', description: 'Terms and conditions for our services' },
   ];
-"use client";
 import React from "react";
 
-const Sitemap = () => {
+const Sitemap: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -136,6 +135,8 @@ const Sitemap = () => {
   );
 };
 
-export default Sitemap;
 
-export default SitemapPage;
+
+
+export default Sitemap;
+}

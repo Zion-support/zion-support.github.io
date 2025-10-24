@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Zionaichatbotbuilder = () => {
+const Zionaichatbotbuilder: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Zionaichatbotbuilder = () => {
   );
 };
 
-export default Zionaichatbotbuilder;
 
-export default ZionAiChatbotBuilder;
+
+
+export default Zionaichatbotbuilder;

@@ -41,10 +41,9 @@ const CookiesPage: React.FC = () => {
       </div>
         </React.Fragment>
   );
-"use client";
 import React from "react";
 
-const Cookies = () => {
+const Cookies: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -150,6 +149,8 @@ const Cookies = () => {
   );
 };
 
-export default Cookies;
 
-export default PagePage;
+
+
+export default Cookies;
+}

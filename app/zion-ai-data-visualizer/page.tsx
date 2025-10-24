@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Zionaidatavisualizer = () => {
+const Zionaidatavisualizer: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Zionaidatavisualizer = () => {
   );
 };
 
-export default Zionaidatavisualizer;
 
-export default ZionAiDataVisualizer;
+
+
+export default Zionaidatavisualizer;

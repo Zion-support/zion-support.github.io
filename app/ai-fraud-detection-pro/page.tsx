@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Aifrauddetectionpro = () => {
+const Aifrauddetectionpro: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Aifrauddetectionpro = () => {
   );
 };
 
-export default Aifrauddetectionpro;
 
-export default AiFraudDetectionPro;
+
+
+export default Aifrauddetectionpro;

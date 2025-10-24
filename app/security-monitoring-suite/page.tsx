@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Securitymonitoringsuite = () => {
+const Securitymonitoringsuite: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,8 @@ const Securitymonitoringsuite = () => {
   );
 };
 
-export default Securitymonitoringsuite;
 
-export default SecurityMonitoringSuite;
+
+
+
+export default Securitymonitoringsuite;

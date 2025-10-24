@@ -34,10 +34,9 @@ const benefits = [
 'Cost-effective pricing plans',
 'Proven track record of success'
 ];
-"use client";
 import React from "react";
 
-const Backuprecovery = () => {
+const Backuprecovery: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -143,8 +142,10 @@ const Backuprecovery = () => {
   );
 };
 
+
+
+
+
+
 export default Backuprecovery;
-
-export default BackupRecovery;
-
-export default BackupRecoveryPage;
+}

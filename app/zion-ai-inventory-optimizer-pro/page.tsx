@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Zionaiinventoryoptimizerpro = () => {
+const Zionaiinventoryoptimizerpro: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Zionaiinventoryoptimizerpro = () => {
   );
 };
 
-export default Zionaiinventoryoptimizerpro;
 
-export default ZionAiInventoryOptimizerPro;
+
+
+export default Zionaiinventoryoptimizerpro;

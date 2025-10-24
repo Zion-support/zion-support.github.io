@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Zionaicrmoptimizer = () => {
+const Zionaicrmoptimizer: React.FC = () => {
   const features = [
     {
       icon: "🚀",

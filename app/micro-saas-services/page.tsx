@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const MicroSaasServices = () => {
+const MicroSaasServices: React.FC = () => {
   const features = [
     {
       icon: "🚀",

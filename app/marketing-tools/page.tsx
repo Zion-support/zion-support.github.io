@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Marketingtools = () => {
+const Marketingtools: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,8 +106,9 @@ const Marketingtools = () => {
   );
 };
 
+
+
+
+
+
 export default Marketingtools;
-
-export default MarketingTools;
-
-export default PagePage;

@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Devopsautomation = () => {
+const Devopsautomation: React.FC = () => {
   const features = [
     {
       icon: "🚀",

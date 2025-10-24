@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Securityautomation = () => {
+const Securityautomation: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,8 +106,10 @@ const Securityautomation = () => {
   );
 };
 
-export default Securityautomation;
+
+
+
+
+
 
 export default Securityautomation;
-
-export default SecurityAutomation;

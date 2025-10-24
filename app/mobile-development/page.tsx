@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Mobiledevelopment = () => {
+const Mobiledevelopment: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,7 @@ const Mobiledevelopment = () => {
   );
 };
 
-export default Mobiledevelopment;
 
-export default MobileDevelopment;
+
+
+export default Mobiledevelopment;

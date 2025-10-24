@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Itinfrastructure = () => {
+const Itinfrastructure: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -108,8 +107,9 @@ const Itinfrastructure = () => {
   );
 };
 
+
+
+
+
+
 export default Itinfrastructure;
-
-export default ItInfrastructure;
-
-export default PagePage;

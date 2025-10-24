@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Blockchainweb3 = () => {
+const Blockchainweb3: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,6 +106,8 @@ const Blockchainweb3 = () => {
   );
 };
 
-export default Blockchainweb3;
 
-export default BlockchainWeb3;
+
+
+
+export default Blockchainweb3;

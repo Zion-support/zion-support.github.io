@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const Disasterrecoveryadvanced = () => {
+const Disasterrecoveryadvanced: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -107,8 +106,10 @@ const Disasterrecoveryadvanced = () => {
   );
 };
 
-export default Disasterrecoveryadvanced;
+
+
+
+
+
 
 export default Disasterrecoveryadvanced;
-
-export default DisasterRecoveryAdvanced;

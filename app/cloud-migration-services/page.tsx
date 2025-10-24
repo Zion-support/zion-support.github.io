@@ -34,10 +34,9 @@ const benefits = [
 'Cost-effective pricing plans',
 'Proven track record of success'
 ];
-"use client";
 import React from "react";
 
-const Cloudmigrationservices = () => {
+const Cloudmigrationservices: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -143,8 +142,10 @@ const Cloudmigrationservices = () => {
   );
 };
 
+
+
+
+
+
 export default Cloudmigrationservices;
-
-export default CloudMigrationServices;
-
-export default CloudMigrationServicesPage;
+}

@@ -15,10 +15,9 @@ const PagePage: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-"use client";
 import React from "react";
 
-const Emailoptimizer = () => {
+const Emailoptimizer: React.FC = () => {
   const features = [
     {
       icon: "🚀",
@@ -124,8 +123,10 @@ const Emailoptimizer = () => {
   );
 };
 
+
+
+
+
+
 export default Emailoptimizer;
-
-export default EmailOptimizer;
-
-export default PagePage;
+}
