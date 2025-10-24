@@ -1,8 +1,10 @@
-import React from 'react'
-import Link from 'next/link'
-import { Menu, X, Brain } from 'lucide-react'
+'use client';
 
-const Navigation = () => {
+import React from 'react';
+import Link from 'next/link';
+import { Menu, X, Brain } from 'lucide-react';
+
+const Navigation: React.FC = () => {
   return (
     <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-800 fixed w-full top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -38,7 +40,7 @@ const Navigation = () => {
         </div>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navigation
+export default Navigation;
