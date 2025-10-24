@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface EnhancedSEOOptimizerProps {
@@ -14,3 +15,19 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({ className =
 };
 
 export default EnhancedSEOOptimizer;
+=======
+'use client'
+
+import React, { useEffect } from 'react'
+
+const EnhancedSEOOptimizer: React.FC = () => {
+  useEffect(() => {
+    // SEO optimization logic
+    console.log('SEO optimizer initialized')
+  }, [])
+
+  return null
+}
+
+export default EnhancedSEOOptimizer
+>>>>>>> cursor/fix-errors-and-merge-to-main-2503

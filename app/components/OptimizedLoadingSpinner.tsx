@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface OptimizedLoadingSpinnerProps {
@@ -14,3 +15,18 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = ({ class
 };
 
 export default OptimizedLoadingSpinner;
+=======
+'use client'
+
+import React from 'react'
+
+const OptimizedLoadingSpinner: React.FC = () => {
+  return (
+    <div className="optimized-loading-spinner">
+      <div className="spinner"></div>
+    </div>
+  )
+}
+
+export default OptimizedLoadingSpinner
+>>>>>>> cursor/fix-errors-and-merge-to-main-2503

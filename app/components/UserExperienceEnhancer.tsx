@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface UserExperienceEnhancerProps {
@@ -14,3 +15,19 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ classNa
 };
 
 export default UserExperienceEnhancer;
+=======
+'use client'
+
+import React, { useEffect } from 'react'
+
+const UserExperienceEnhancer: React.FC = () => {
+  useEffect(() => {
+    // UX enhancement logic
+    console.log('UX enhancer initialized')
+  }, [])
+
+  return null
+}
+
+export default UserExperienceEnhancer
+>>>>>>> cursor/fix-errors-and-merge-to-main-2503

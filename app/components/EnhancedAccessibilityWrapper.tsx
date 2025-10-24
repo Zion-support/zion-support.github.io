@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 interface EnhancedAccessibilityWrapperProps {
   className?: string;
@@ -12,3 +13,22 @@ const EnhancedAccessibilityWrapper: React.FC<EnhancedAccessibilityWrapperProps> 
   );
 };
 export default EnhancedAccessibilityWrapper;
+=======
+'use client'
+
+import React from 'react'
+
+interface EnhancedAccessibilityWrapperProps {
+  children: React.ReactNode
+}
+
+const EnhancedAccessibilityWrapper: React.FC<EnhancedAccessibilityWrapperProps> = ({ children }) => {
+  return (
+    <div className="accessibility-wrapper">
+      {children}
+    </div>
+  )
+}
+
+export default EnhancedAccessibilityWrapper
+>>>>>>> cursor/fix-errors-and-merge-to-main-2503

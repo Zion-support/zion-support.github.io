@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 
@@ -34,3 +35,25 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {
 };
 
 export default Header;
+=======
+'use client'
+
+import React from 'react'
+
+const Header: React.FC = () => {
+  return (
+    <header className="header">
+      <div className="container">
+        <h1>Zion Tech Group</h1>
+        <nav>
+          <a href="/">Home</a>
+          <a href="/services">Services</a>
+          <a href="/about">About</a>
+        </nav>
+      </div>
+    </header>
+  )
+}
+
+export default Header
+>>>>>>> cursor/fix-errors-and-merge-to-main-2503

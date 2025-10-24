@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface LoadingOptimizerProps {
@@ -14,3 +15,18 @@ const LoadingOptimizer: React.FC<LoadingOptimizerProps> = ({ className = '', chi
 };
 
 export default LoadingOptimizer;
+=======
+'use client'
+
+import React from 'react'
+
+const LoadingOptimizer: React.FC = () => {
+  return (
+    <div className="loading-optimizer">
+      <div className="optimized-spinner"></div>
+    </div>
+  )
+}
+
+export default LoadingOptimizer
+>>>>>>> cursor/fix-errors-and-merge-to-main-2503

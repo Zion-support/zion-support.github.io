@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface PerformanceOptimizationsProps {
@@ -14,3 +15,19 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = ({ cla
 };
 
 export default PerformanceOptimizations;
+=======
+'use client'
+
+import React, { useEffect } from 'react'
+
+const PerformanceOptimizations: React.FC = () => {
+  useEffect(() => {
+    // Performance optimization logic
+    console.log('Performance optimizations initialized')
+  }, [])
+
+  return null
+}
+
+export default PerformanceOptimizations
+>>>>>>> cursor/fix-errors-and-merge-to-main-2503
