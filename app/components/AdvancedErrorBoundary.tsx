@@ -1,154 +1,114 @@
-<<<<<<< HEAD
-'use client";"
+'use client""
 import, React, { Component, ErrorInfo, ReactNode } from "react'
-import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react";
-"
+import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react"
 interface AdvancedErrorBoundaryProps {"
-className?: string;"
-  children: "ReactNode;"
-  onError?: (error: Error", errorInfo: "ErrorInfo) => void;"
-",}
+className?: string"
+  children: "ReactNode"
+  onError?: (error: Error", errorInfo: "ErrorInfo) => void",}
 ,}"
-"
-=======
 'use client'
 import, React, { Component, ErrorInfo, ReactNode } from 'react'
 import { AlertTriangle, RefreshCw, Home, Mail } from from 'lucide-react'
-;
-interface AdvancedErrorBoundaryProps {;
-className?: string;
-  children: "ReactNode;"
+
+interface AdvancedErrorBoundaryProps {
+className?: string
+  children: "ReactNode"
   onError?: (error: Error", errorInfo: "ErrorInfo) => void"}
 }"
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
 interface State {"
-hasError: "boolean;
-  error?: Error;"
-  errorInfo?: ErrorInfo;"
-<<<<<<< HEAD
-  errorId?: string;"
-",}
+hasError: "boolean
+  error?: Error"
+  errorInfo?: ErrorInfo;  errorId?: string",}
 ,}"
-"
 class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State> {"
   constructor(props: "AdvancedErrorBoundaryProps) {"
-    super(props);"
-    this.state = { hasError: false ",;};"
+    super(props)"
+    this.state = { hasError: false ",}
   }"
-"
   private reportError = (error: "Error", errorInfo: "ErrorInfo) => {"
     const errorReport = {"
       errorId: this.state.errorId || this.generateErrorId()","
       error,"
       errorInfo,"
       timestamp: "new Date().toISOString()","
-      userAgent: "navigator.userAgent",;"
-      url: "window.location.href",;
-    };"
-"
-    // Log to console in development"
-    if(process.env.NODE_ENV = == 'development") {  ;"
-      console.error('Error Boundary caught an error: '", error, errorInfo);
-    , , }"
-  };"
-"
+      userAgent: "navigator.userAgent","
+      url: "window.location.href",
+    }
+    // Log to console in development
+    if(process.env.NODE_ENV = == 'development") {"
+      console.error('Error Boundary caught an error: ', error, errorInfo)
+    , , }
+  }"
   componentDidCatch(error: "Error", errorInfo: "ErrorInfo) {"
     this.setState({"
       hasError: true",
       error,
       errorInfo,)
-=======
   errorId?: string"}
 }"
 class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State> {"
-  constructor(props: "AdvancedErrorBoundaryProps) {;"
-    super(props);"
+  constructor(props: "AdvancedErrorBoundaryProps) {"
+    super(props)"
     this.state = { hasError: false "}
   }"
-"
-  private reportError = (error: "Error", errorInfo: "ErrorInfo) => {;"
+  private reportError = (error: "Error", errorInfo: "ErrorInfo) => {"
     const errorReport = {"
-      errorId: this.state.errorId || this.generateErrorId()",;
-      error,;"
+      errorId: this.state.errorId || this.generateErrorId()",
+      error,"
       errorInfo,"
       timestamp: "new Date().toISOString()","
-      userAgent: "navigator.userAgent",;"
+      userAgent: "navigator.userAgent","
       url: "window.location.href"}
-    // Log to console in development;'"
-    if(process.env.NODE_ENV = == 'development') {  ;";'"
-      console.error('Error Boundary caught an error: ", error, errorInfo)}"
+    // Log to console in development
+    if(process.env.NODE_ENV = == 'development') {  "
+      console.error('Error Boundary caught an error: ", error, errorInfo)}
   }"
-  componentDidCatch(error: "Error", errorInfo: "ErrorInfo) {;"
+  componentDidCatch(error: "Error", errorInfo: "ErrorInfo) {"
     this.setState({"
-      hasError: true",;
-      error,);
-      errorInfo,);
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
-    });
-
-    // Call custom error handler if provided;
-    if (this.props.onError) {;
+      hasError: true",
+      error,)
+      errorInfo,)
+    })
+    // Call custom error handler if provided
+    if (this.props.onError) {
       this.props.onError(error, errorInfo)}
-    // Report error;
+    // Report error
     this.reportError(error, errorInfo)}
-  private generateErrorId = (): string => {;
-
-<<<<<<< HEAD
+  private generateErrorId = (): string => {
     return `error_${Date.now()
-,}_${Math.random().toString(36).substr(2, 9);}`;
-  };
-
+,}_${Math.random().toString(36).substr(2, 9)}`
+  }
   render() {"
     if (this.state.hasError) {"
-      return(<div className = {this.props.className,}>"
-          <div className="error-boundary">"
-            <AlertTriangle className="error-icon" />"
-            <h2>Something went wrong</h2>"
-            <p>We"re, sorry, but something unexpected happened.</p>"
-            <div className = "error-actions">)"
-              <button onClick={() => window.location.reload(),} >"
-                <RefreshCw className = "icon" />"
-                Try Again"
-              </button>"
-              <button onClick={() => window.location.href = '/",} >"
-                <Home className = "icon" />
+      return(<div className = {this.props.className,}><div className="error-boundary"><AlertTriangle className="error-icon" /><h2>Something went wrong</h2><p>We"re, sorry, but something unexpected happened.</p><div className = "error-actions">)<button onClick={() => window.location.reload(),} ><RefreshCw className = "icon" />
+                Try Again</button><button onClick={() => window.location.href = '/",} ><Home className = "icon" />
                 Go Home
               </button>
             </div>
-          </div>;
-        </div>;
-      );
+          </div>
+        </div>
+      )
     ,}
 
-    return this.props.children;
+    return this.props.children
   }
 }"
-"
-export default AdvancedErrorBoundary;"
-=======
+export default AdvancedErrorBoundary"
     return `error_${Date.now();`
 }_${Math.random().toString(36).substr(2, 9)}`}
-  render() {;
-    if (this.state.hasError) {;"
-      return(<div className={this.props.className}>"
-          <div className="error-boundary">
-            <AlertTriangle className="error-icon"  />;
-            <h2>Something went wrong</h2>'"
-            <p>We're, sorry, but something unexpected happened.</p>");"
-            <div className="error-actions">);"
-              <button onClick={() => window.location.reload()} >"
-                <RefreshCw className="icon"  />;
-                Try Again;
-              </button>'"
-              <button onClick={() => window.location.href = '/'} >"
-                <Home className="icon"  />;
-                Go Home;
+  render() {
+    if (this.state.hasError) {"
+      return(<div className={this.props.className}><div className="error-boundary">
+            <AlertTriangle className="error-icon"  />
+            <h2>Something went wrong</h2>'<p>We're, sorry, but something unexpected happened.</p>);<div className="error-actions">);<button onClick={() => window.location.reload()} ><RefreshCw className="icon"  />
+                Try Again
+              </button>'<button onClick={() => window.location.href = '/'} ><Home className="icon"  />
+                Go Home
               </button>
             </div>
-          </>;
-        </>;
+          </>
+        </>
       )}
     return this.props.children}
 }"
-export default AdvancedErrorBoundary;";`'"
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
+export default AdvancedErrorBoundary";`'

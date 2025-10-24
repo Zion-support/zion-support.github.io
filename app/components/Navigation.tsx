@@ -1,9 +1,7 @@
-'use client';
-
-import React from 'react';
-import Link from 'next/link';
-import { Search } from 'lucide-react';
-
+'use client'
+import React from 'react'
+import Link from 'next/link'
+import { Search } from 'lucide-react'
 const Navigation = () => {
   return (
     <div>
@@ -30,7 +28,6 @@ const Navigation = () => {
         </button>
       </div>
     </div>
-  );
-};
-
-export default Navigation;
+  )
+}
+export default Navigation

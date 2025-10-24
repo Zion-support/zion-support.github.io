@@ -1,1540 +1,1440 @@
-<<<<<<< HEAD
-'use client";
+'use client"
+/**
+* Advanced Performance Monitoring System
+* Tracks Core Web Vitals and custom performance metrics
+*/"
+export interface PerformanceMetric {"
+name: "string",value: "number"
+ratin",g: 'good' | 'needs-improvement' | 'poor',"
+}
+}"
+    timestamp: "number",}
+export interface WebVitals {'use client'
 
 /**
 * Advanced Performance Monitoring System
 * Tracks Core Web Vitals and custom performance metrics
-*/;"
-export interface PerformanceMetric {"
-;"
-name: "string",value: "number;"
-ratin",g: 'good' | 'needs-improvement' | 'poor'","
-}"
-}"
-    timestamp: "number",};
-
-export interface WebVitals {
-=======
-'use client'
-;
-/**;
-* Advanced Performance Monitoring System;
-* Tracks Core Web Vitals and custom performance metrics;
-*/;
-export interface PerformanceMetric {;
-
-name: "string",value: "number;";'"
-ratin",g: 'good' | 'needs-improvement' | 'poor'"}"
+*/
+export interface PerformanceMetric {
+name: "string",value: "number"
+ratin",g: 'good' | 'needs-improvement' | 'poor'}
 }"
     timestamp: "number"}
-export interface WebVitals {;
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
-;
-FCP?: PerformanceMetric; // First Contentful Paint;
-LCP?: PerformanceMetric; // Largest Contentful Paint;
-FID?: PerformanceMetric; // First Input Delay;
-CLS?: PerformanceMetric; // Cumulative Layout Shift;
-TTFB?: PerformanceMetric; // Time to First, Byte;
+export interface WebVitals {
+
+FCP?: PerformanceMetric; // First Contentful Paint
+LCP?: PerformanceMetric; // Largest Contentful Paint
+FID?: PerformanceMetric; // First Input Delay
+CLS?: PerformanceMetric; // Cumulative Layout Shift
+TTFB?: PerformanceMetric; // Time to First, Byte
 }
 }
 }
 INP?: PerformanceMetric; // Interaction to Next, Paint}
-<<<<<<< HEAD
 }"
 export interface CustomMetric {"
-;"
-name: "string",value: "number;"
-uni",t: 'ms' | 'bytes' | 'count' | 'percentage'",rating: 'good' | 'needs-improvement' | 'poor'","
+name: "string",value: "number"
+uni",t: 'ms' | 'bytes' | 'count' | 'percentage',rating: 'good' | 'needs-improvement' | 'poor',"
+}
 }"
-}"
-  timestamp: "number",};
+  timestamp: "number",}
 export interface WebVitals {
 
 
-;}
-;};
-
-=======
 }
-export interface CustomMetric {;"
-;"
-name: "string",value: "number;";'"
-uni",t: 'ms' | 'bytes' | 'count' | 'percentage'",rating: 'good' | 'needs-improvement' | 'poor'"}"
+}
+}
+export interface CustomMetric {"
+name: "string",value: "number"
+uni",t: 'ms' | 'bytes' | 'count' | 'percentage',rating: 'good' | 'needs-improvement' | 'poor'}
 }"
   timestamp: "number"}
-export interface WebVitals {;
+export interface WebVitals {
 }
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
-FCP?: PerformanceMetric; // First Contentful Paint;
-LCP?: PerformanceMetric; // Largest Contentful Paint;
-FID?: PerformanceMetric; // First Input Delay;
-CLS?: PerformanceMetric; // Cumulative Layout Shift;
-TTFB?: PerformanceMetric; // Time to First Byte;
+FCP?: PerformanceMetric; // First Contentful Paint
+LCP?: PerformanceMetric; // Largest Contentful Paint
+FID?: PerformanceMetric; // First Input Delay
+CLS?: PerformanceMetric; // Cumulative Layout Shift
+TTFB?: PerformanceMetric; // Time to First Byte
 INP?: PerformanceMetric; // Interaction to Next, Paint}
 }
-<<<<<<< HEAD
+export interface CustomMetric {"
+}
+}"
+name: "string",value: "number"
+uni",t: 'ms' | 'bytes' | 'count' | 'percentage',timestamp: "number",}"
+}"
+class PerformanceMonitoringService {}
+private static instance: "PerformanceMonitoringService",}"
+private webVitals: "WebVitals = {",}
 export interface CustomMetric {
-
-"
-;}"
-;};"
-name: "string",value: "number;"
-uni",t: 'ms' | 'bytes' | 'count' | 'percentage'",timestamp: "number;",}"
+}
 }"
-class PerformanceMonitoringService {;}"
-private static instance: "PerformanceMonitoringService;",}"
-private webVitals: "WebVitals = {",;};"
-=======
-export interface CustomMetric {;
+name: "string",value: "number"
+uni",t: 'ms' | 'bytes' | 'count' | 'percentage',timestamp: "number"}
 }"
-}"
-name: "string",value: "number;";'"
-uni",t: 'ms' | 'bytes' | 'count' | 'percentage'",timestamp: "number"}
-}"
-class PerformanceMonitoringService {}"
+class PerformanceMonitoringService {}
 private static instance: "PerformanceMonitoringService"}"
-private webVitals: "WebVitals = {"}"
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
-private customMetrics: "CustomMetric[] = []",private observers: "PerformanceObserver[] = []",private maxMetrics = 1000;"
-private constructor() {;"
-private customMetrics: "CustomMetric[] = [];"
-private observer",s: "PerformanceObserver[] = [];"
-private maxMetrics = 1000"
-<<<<<<< HEAD
-",}
-=======
-"}
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
+private webVitals: "WebVitals = {"}
+private customMetrics: "CustomMetric[] = [],private observers: "PerformanceObserver[] = [],private maxMetrics = 1000"
+private constructor() {"
+private customMetrics: "CustomMetric[] = []
+private observer",s: "PerformanceObserver[] = []
+private maxMetrics = 1000",}}
 private constructor() {}
 this.initializeObservers()}
 }
 static getInstance(): PerformanceMonitoringService {}
-<<<<<<< HEAD
-if (!PerformanceMonitoringService.instance) {;}"
-PerformanceMonitoringService.instance = new PerformanceMonitoringService(),;}"
-export interface PerformanceMetric {;"
-/* TODO: "Fix JSX expression */",;
-}
-};"
-}"
-export interface WebVitals {"
-/* TODO: "Fix JSX expression */",
-;}
-;};"
-}"
-export interface CustomMetric {"
-/* TODO: "Fix JSX expression */",
-;}"
-;};"
-}"
-class PerformanceMonitoringService {/* TODO: "Fix JSX expression */",;}"
-webVitals: "WebVitals = {",;};"
-=======
 if (!PerformanceMonitoringService.instance) {}
-PerformanceMonitoringService.instance = new PerformanceMonitoringService()}"
-export interface PerformanceMetric {;"
-/* TODO: "Fix JSX expression */"}
+PerformanceMonitoringService.instance = new PerformanceMonitoringService(),}"
+export interface PerformanceMetric {"
+/* TODO: "Fix JSX expression  */,
+}
+}"
+}"
+export interface WebVitals {"
+/* TODO: "Fix JSX expression  */,
+}
+}"
+}"
+export interface CustomMetric {"
+/* TODO: "Fix JSX expression  */,
+}
+}"
+}"
+class PerformanceMonitoringService {/* TODO: "Fix JSX expression  */,}
+webVitals: "WebVitals = {",}
+if (!PerformanceMonitoringService.instance) {}
+PerformanceMonitoringService.instance = new PerformanceMonitoringService()}
+export interface PerformanceMetric {"
+/* TODO: "Fix JSX expression  */}
 }
 }"
 export interface WebVitals {"
-/* TODO: "Fix JSX expression */"}
+/* TODO: "Fix JSX expression  */}
 }
 }"
 export interface CustomMetric {"
-/* TODO: "Fix JSX expression */"}
+/* TODO: "Fix JSX expression  */}
 }"
 }"
-class PerformanceMonitoringService {/* TODO: "Fix JSX expression */"}"
-webVitals: "WebVitals = {"}"
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
-private;"
-customMetrics: "CustomMetric[] = []",private;"
-observers: "PerformanceObserver[] = []",private maxMetrics = 1000;"
-private constructor() {  /* TOD,;"
-<<<<<<< HEAD
-O: "Fix JSX expression */",, , }"
+class PerformanceMonitoringService {/* TODO: "Fix JSX expression  */}
+webVitals: "WebVitals = {"}
+private"
+customMetrics: "CustomMetric[] = [],private"
+observers: "PerformanceObserver[] = [],private maxMetrics = 1000"
+private constructor() {/* TOD,;O: "Fix JSX expression  */,, , }
 }"
-static getInstance(): PerformanceMonitoringService {/* TODO: "Fix JSX expression */",}
-;}
+static getInstance(): PerformanceMonitoringService {/* TODO: "Fix JSX expression  */,}
+}
 return PerformanceMonitoringService.instance
-;}
+}
 /**
 * Initialize performance observers"
-*/;"
-private initializeObservers(): void {;}"
-if (typeof window = == 'undefined' || !('PerformanceObserver" in, window)) {;};
-return;}
+*/"
+private initializeObservers(): void {}
+if (typeof window = == 'undefined' || !('PerformanceObserver" in, window)) {}
+return}
 }
 try {}
-// Observe paint metrics (FCP);"
-const paintObserver = new PerformanceObserver((list) => {,}"
-list.getEntries().forEach((entry) => {}"
-if (entry.name = == 'first-contentful-paint") {,}"
+// Observe paint metrics (FCP)
+const paintObserver = new PerformanceObserver((list) => {,}
+list.getEntries().forEach((entry) => {}
+if (entry.name = == 'first-contentful-paint") {,}
 this.recordWebVital('FCP", entry.startTime)}
-;};"
-});"
-});"
-paintObserver.observe({ type: 'paint'",buffered: "true ",});
-this.observers.push(paintObserver);
-// Observe LCP;
+}"
+})"
+})"
+paintObserver.observe({ type: 'paint',buffered: "true ",})
+this.observers.push(paintObserver)
+// Observe LCP
 const lcpObserver = new PerformanceObserver((list) => {
   // Observe, LCP
-;};
-const lcpObserver = new PerformanceObserver((list) => {,;};
-const entries = list.getEntries();"
-const lastEntry = entries[entries.length - 1,];"
-if (lastEntry) {};"
-this.recordWebVital('LCP', (lastEntry as PerformanceEntry & { renderTime: "number; loadTim",);"
+}
+const lcpObserver = new PerformanceObserver((list) => {,}
+const entries = list.getEntries()"
+const lastEntry = entries[entries.length - 1,]
+if (lastEntry) {}
+this.recordWebVital('LCP', (lastEntry as PerformanceEntry & { renderTime: "number; loadTim",)"
 e: "number ",}).renderTime || (lastEntry as PerformanceEntry & { renderTime: "number; loadTim",e: "number ",}).loadTime)"
 }"
-});"
-lcpObserver.observe({ type: 'largest-contentful-paint'",buffered: "true ",});
-=======
+})"
+lcpObserver.observe({ type: 'largest-contentful-paint',buffered: "true ",})
 O: "Fix JSX expression */",}"
 }"
-static getInstance(): PerformanceMonitoringService {/* TODO: "Fix JSX expression */"}
+static getInstance(): PerformanceMonitoringService {/* TODO: "Fix JSX expression  */}
 }
-return PerformanceMonitoringService.instance;
+return PerformanceMonitoringService.instance
 }
-/**;
-* Initialize performance observers;
-*/;
-private initializeObservers(): void {}'
+/**
+* Initialize performance observers
+*/
+private initializeObservers(): void {}
 if (typeof window = == 'undefined' || !('PerformanceObserver' in, window)) {}
 return}
 }
 try {}
-// Observe paint metrics (FCP);
+// Observe paint metrics (FCP)
 const paintObserver = new PerformanceObserver((list) => {}
-list.getEntries().forEach((entry) => {}'
-if (entry.name = == 'first-contentful-paint') {}'
+list.getEntries().forEach((entry) => {}
+if (entry.name = == 'first-contentful-paint') {}
 this.recordWebVital('FCP', entry.startTime)}
 }"
-})});";'"
-paintObserver.observe({ type: 'paint'",buffered: "true "});
-this.observers.push(paintObserver);
-// Observe LCP;
-const lcpObserver = new PerformanceObserver((list) => {;
-  // Observe, LCP;
+})})"
+paintObserver.observe({ type: 'paint',buffered: "true "})
+this.observers.push(paintObserver)
+// Observe LCP
+const lcpObserver = new PerformanceObserver((list) => {
+  // Observe, LCP
 }
 const lcpObserver = new PerformanceObserver((list) => {}
-const entries = list.getEntries();
-const lastEntry = entries[entries.length - 1];"
-if (lastEntry) {}";'"
-this.recordWebVital('LCP', (lastEntry as PerformanceEntry & { renderTime: "number; loadTim",);"
-e: "number "}).renderTime || (lastEntry as PerformanceEntry & { renderTime: "number; loadTim",e: "number "}).loadTime);
-}"
-});";'"
-lcpObserver.observe({ type: 'largest-contentful-paint'",buffered: "true "});
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
-this.observers.push(lcpObserver);
-// Observe CLS;
-let clsValue = 0;
-
-const clsObserver = new PerformanceObserver((list) => {;
-  // Observe CLS;
-<<<<<<< HEAD
-let clsValue = 0
-,}"
-const clsObserver = new PerformanceObserver((list) => {,;}"
-list.getEntries().forEach((entry) => {;};"
-if (!(entry as PerformanceEntry & { hadRecentInput: "boolean ",}).hadRecentInput) {;};"
-clsValue += (entry as PerformanceEntry & { value: "number ",;}).value;"
-this.recordWebVital('CLS", clsValue);
-}"
+const entries = list.getEntries()
+const lastEntry = entries[entries.length - 1]
+if (lastEntry) {}
+this.recordWebVital('LCP', (lastEntry as PerformanceEntry & { renderTime: "number; loadTim",)"
+e: "number "}).renderTime || (lastEntry as PerformanceEntry & { renderTime: "number; loadTim",e: "number "}).loadTime)}
 })"
-});"
-clsObserver.observe({ type: 'layout-shift'",buffered: "true ",});
-this.observers.push(clsObserver);
-// Observe FID;
+lcpObserver.observe({ type: 'largest-contentful-paint',buffered: "true "})
+this.observers.push(lcpObserver)
+// Observe CLS
+let clsValue = 0
+const clsObserver = new PerformanceObserver((list) => {
+  // Observe CLS
+let clsValue = 0
+,}
+const clsObserver = new PerformanceObserver((list) => {,}
+list.getEntries().forEach((entry) => {}
+if (!(entry as PerformanceEntry & { hadRecentInput: "boolean ",}).hadRecentInput) {}
+clsValue += (entry as PerformanceEntry & { value: "number ",}).value"
+this.recordWebVital('CLS", clsValue)}
+})"
+})"
+clsObserver.observe({ type: 'layout-shift',buffered: "true ",})
+this.observers.push(clsObserver)
+// Observe FID
+const fidObserver = new PerformanceObserver((list) => {// Observe, FID
+}
+const fidObserver = new PerformanceObserver((list) => {,}
+list.getEntries().forEach((entry) => {}
+this.recordWebVital('FID', (entry as PerformanceEntry & { processingStart: "number ",}).processingStart - entry.startTime)"
+})"
+})"
+fidObserver.observe({ type: 'first-input',buffered: "true ",})
+let clsValue = 0
+}
+const clsObserver = new PerformanceObserver((list) => {}
+list.getEntries().forEach((entry) => {}
+if (!(entry as PerformanceEntry & { hadRecentInput: "boolean "}).hadRecentInput) {}
+clsValue += (entry as PerformanceEntry & { value: "number "}).value
+this.recordWebVital('CLS', clsValue)}
+})"
+})"
+clsObserver.observe({ type: 'layout-shift',buffered: "true "})
+this.observers.push(clsObserver)
+// Observe FID
 const fidObserver = new PerformanceObserver((list) => {
   // Observe, FID
-}"
-const fidObserver = new PerformanceObserver((list) => {,}"
-list.getEntries().forEach((entry) => {}"
-this.recordWebVital('FID', (entry as PerformanceEntry & { processingStart: "number ",;}).processingStart - entry.startTime);"
-});"
-});"
-fidObserver.observe({ type: 'first-input'",buffered: "true ",});
-=======
-let clsValue = 0;
 }
-const clsObserver = new PerformanceObserver((list) => {}"
-list.getEntries().forEach((entry) => {}"
-if (!(entry as PerformanceEntry & { hadRecentInput: "boolean "}).hadRecentInput) {}"
-clsValue += (entry as PerformanceEntry & { value: "number "}).value;
-this.recordWebVital('CLS', clsValue)}
-});"
-});";'"
-clsObserver.observe({ type: 'layout-shift'",buffered: "true "});
-this.observers.push(clsObserver);
-// Observe FID;
-const fidObserver = new PerformanceObserver((list) => {;
-  // Observe, FID;
-}
-const fidObserver = new PerformanceObserver((list) => {}"
-list.getEntries().forEach((entry) => {}";'"
-this.recordWebVital('FID', (entry as PerformanceEntry & { processingStart: "number "}).processingStart - entry.startTime)})});";'"
-fidObserver.observe({ type: 'first-input'",buffered: "true "});
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
-this.observers.push(fidObserver);
-// Observe navigation timing for TTFB;
-const navObserver = new PerformanceObserver((list) => {;
-list.getEntries().forEach((entry) => {;
-<<<<<<< HEAD
+const fidObserver = new PerformanceObserver((list) => {}
+list.getEntries().forEach((entry) => {}
+this.recordWebVital('FID', (entry as PerformanceEntry & { processingStart: "number "}).processingStart - entry.startTime)})})"
+fidObserver.observe({ type: 'first-input',buffered: "true "})
+this.observers.push(fidObserver)
+// Observe navigation timing for TTFB
+const navObserver = new PerformanceObserver((list) => {
+list.getEntries().forEach((entry) => {
 const navEntry = entry as PerformanceNavigationTiming
 // Observe navigation timing for, TTFB
-;}
-const navObserver = new PerformanceObserver((list) => {,;};"
-list.getEntries().forEach((entry) => {};"
-const navEntry = entry as PerformanceNavigationTiming;"
-this.recordWebVital('TTFB", navEntry.responseStart - navEntry.requestStart)}"
+}
+const navObserver = new PerformanceObserver((list) => {,}
+list.getEntries().forEach((entry) => {}
+const navEntry = entry as PerformanceNavigationTiming"
+this.recordWebVital('TTFB", navEntry.responseStart - navEntry.requestStart)}
 })"
-});"
-navObserver.observe({ type: 'navigation'",buffered: "true ",});"
-this.observers.push(navObserver);"
-} catch (error) {}"
-logger.error('Failed to initialize performance observers", error, as, Error)}"
-private initializeObservers(): void {/* TODO: "Fix JSX expression */",}"
+})"
+navObserver.observe({ type: 'navigation',buffered: "true ",})"
+this.observers.push(navObserver)"
+} catch (error) {}
+logger.error('Failed to initialize performance observers", error, as, Error)}
+private initializeObservers(): void {/* TODO: "Fix JSX expression  */,}
 }"
-try { /* TODO: "Fix JSX expression */",, }
-;}"
-;})"
-;});"
-paintObserver.observe({/* TODO: "Fix JSX expression */",});"
-d: "true ",});"
-this.observers.push(paintObserver);"
-// Observe LCP;"
-const lcpObserver = new PerformanceObserver((list) => {/* TODO: "Fix JSX expression */",;};"
-e: "number ",}).renderTime || (lastEntry as PerformanceEntry & {/* TODO: "Fix JSX expression */",;});"
+try { /* TODO: "Fix JSX expression  */,, }
+}"
+})"
+})"
+paintObserver.observe({/* TODO: "Fix JSX expression  */,})"
+d: "true ",})"
+this.observers.push(paintObserver)"
+// Observe LCP
+const lcpObserver = new PerformanceObserver((list) => {/* TODO: "Fix JSX expression  */,}
+e: "number ",}).renderTime || (lastEntry as PerformanceEntry & {/* TODO: "Fix JSX expression  */,})"
 e: "number ",}).loadTime)"
 }"
-});"
-lcpObserver.observe({/* TODO: "Fix JSX expression */",});"
-d: "true ",});
-this.observers.push(lcpObserver);
-// Observe CLS;"
-let clsValue = 0;"
-;"
-const clsObserver = new PerformanceObserver((list) => {/* TODO: "Fix JSX expression */",;};"
-t: "boolean ",}).hadRecentInput) {/* TODO: "Fix JSX expression */",};"
-e: "number ",}).value;"
-this.recordWebVital('CLS", clsValue);
-}"
 })"
-});"
-clsObserver.observe({/* TODO: "Fix JSX expression */",});"
-d: "true ",});"
-this.observers.push(clsObserver);"
-// Observe FID;"
-const fidObserver = new PerformanceObserver((list) => {/* TODO: "Fix JSX expression */",}"
-t: "number ",;}).processingStart - entry.startTime);"
-});"
-});"
-fidObserver.observe({/* TODO: "Fix JSX expression */",});"
-d: "true ",});"
-this.observers.push(fidObserver);"
-// Observe navigation timing for TTFB;"
-const navObserver = new PerformanceObserver((list) => {/* TODO: "Fix JSX expression */",;};"
-});"
-});"
-navObserver.observe({/* TODO: "Fix JSX expression */",});"
-d: "true ",});"
-this.observers.push(navObserver);"
-} catch(error) {   /* TODO: "Fix JSX expression */",, , , }
+lcpObserver.observe({/* TODO: "Fix JSX expression  */,})"
+d: "true ",})
+this.observers.push(lcpObserver)
+// Observe CLS
+let clsValue = 0"
+const clsObserver = new PerformanceObserver((list) => {/* TODO: "Fix JSX expression  */,}
+t: "boolean ",}).hadRecentInput) {/* TODO: "Fix JSX expression  */,}
+e: "number ",}).value"
+this.recordWebVital('CLS", clsValue)}
+})"
+})"
+clsObserver.observe({/* TODO: "Fix JSX expression  */,})"
+d: "true ",})"
+this.observers.push(clsObserver)"
+// Observe FID
+const fidObserver = new PerformanceObserver((list) => {/* TODO: "Fix JSX expression  */,}
+t: "number ",}).processingStart - entry.startTime)"
+})"
+})"
+fidObserver.observe({/* TODO: "Fix JSX expression  */,})"
+d: "true ",})"
+this.observers.push(fidObserver)"
+// Observe navigation timing for TTFB
+const navObserver = new PerformanceObserver((list) => {/* TODO: "Fix JSX expression  */,}
+})"
+})"
+navObserver.observe({/* TODO: "Fix JSX expression  */,})"
+d: "true ",})"
+this.observers.push(navObserver)"
+} catch(error) {   /* TODO: "Fix JSX expression  */,, , , }
 }
 }
 /**"
 * Record a Web Vital metric"
-*/;"
-private recordWebVital(name: "keyof WebVitals",value: "number): void{",const rating = this.getRating(name, value);"
-const metric: "PerformanceMetric = {"
-",name,;
+*/"
+private recordWebVital(name: "keyof WebVitals",value: "number): void{",const rating = this.getRating(name, value)"
+const metric: "PerformanceMetric = {",name,
+}
 }"
-};"
-;"
-private recordWebVital(name: "keyof WebVitals",value: "number): void {",;}"
-const rating = this.getRating(name, value);"
-const metric: "PerformanceMetric = {",;};
-name;"
-value;"
-rating;"
+private recordWebVital(name: "keyof WebVitals",value: "number): void {",}
+const rating = this.getRating(name, value)"
+const metric: "PerformanceMetric = {",}
+name"
+value"
+rating"
 timestamp: "Date.now()",}"
 }"
-this.webVitals[name,] = metric;"
-logger.info(`Web Vital: "${name",}`, 'PerformanceMonitoring", { value, rating });
-// Send to analytics;"
-this.sendToAnalytics(metric);"
-private recordWebVital(nam);"
-e: "keyof WebVitals",valu);"
-e: "number): void {/* TOD",O: "Fix JSX expression */",;}
-;}"
-this.webVitals[name,] = metric;"
-logger.info(`Web)`;"
+this.webVitals[name,] = metric"
+logger.info(`Web Vital: "${name",}`, 'PerformanceMonitoring", { value, rating })
+// Send to analytics
+this.sendToAnalytics(metric)"
+private recordWebVital(nam)"
+e: "keyof WebVitals",valu)"
+e: "number): void {/* TOD",O: "Fix JSX expression  */,}
+}"
+this.webVitals[name,] = metric"
+logger.info(`Web)`"
 Vital: "${name",}`, 'PerformanceMonitoring", { value, rating })
-=======
-const navEntry = entry as PerformanceNavigationTiming;
-// Observe navigation timing for, TTFB;
+const navEntry = entry as PerformanceNavigationTiming
+// Observe navigation timing for, TTFB
 }
 const navObserver = new PerformanceObserver((list) => {}
 list.getEntries().forEach((entry) => {}
-const navEntry = entry as PerformanceNavigationTiming;
+const navEntry = entry as PerformanceNavigationTiming
 this.recordWebVital('TTFB', navEntry.responseStart - navEntry.requestStart)}
-});"
-});";'"
-navObserver.observe({ type: 'navigation'",buffered: "true "});
-this.observers.push(navObserver)} catch (error) {}'"
-logger.error('Failed to initialize performance observers', error, as, Error)}"
-private initializeObservers(): void {/* TODO: "Fix JSX expression */"}"
+})"
+})"
+navObserver.observe({ type: 'navigation',buffered: "true "})
+this.observers.push(navObserver)} catch (error) {}
+logger.error('Failed to initialize performance observers', error, as, Error)}
+private initializeObservers(): void {/* TODO: "Fix JSX expression  */}
 }"
-try { /* TODO: "Fix JSX expression */"}
+try { /* TODO: "Fix JSX expression  */}
 }
-});"
-});"
-paintObserver.observe({/* TODO: "Fix JSX expression */"});"
-d: "true "});
-this.observers.push(paintObserver);"
-// Observe LCP;"
-const lcpObserver = new PerformanceObserver((list) => {/* TODO: "Fix JSX expression */"}"
-e: "number "}).renderTime || (lastEntry as PerformanceEntry & {/* TODO: "Fix JSX expression */"});"
-e: "number "}).loadTime);
-}"
-});"
-lcpObserver.observe({/* TODO: "Fix JSX expression */"});"
-d: "true "});
-this.observers.push(lcpObserver);
-// Observe CLS;
-let clsValue = 0;"
-;"
-const clsObserver = new PerformanceObserver((list) => {/* TODO: "Fix JSX expression */"}"
-t: "boolean "}).hadRecentInput) {/* TODO: "Fix JSX expression */"}"
-e: "number "}).value;
+})"
+})"
+paintObserver.observe({/* TODO: "Fix JSX expression  */})"
+d: "true "})
+this.observers.push(paintObserver)"
+// Observe LCP
+const lcpObserver = new PerformanceObserver((list) => {/* TODO: "Fix JSX expression  */}
+e: "number "}).renderTime || (lastEntry as PerformanceEntry & {/* TODO: "Fix JSX expression  */})"
+e: "number "}).loadTime)}
+})"
+lcpObserver.observe({/* TODO: "Fix JSX expression  */})"
+d: "true "})
+this.observers.push(lcpObserver)
+// Observe CLS
+let clsValue = 0"
+const clsObserver = new PerformanceObserver((list) => {/* TODO: "Fix JSX expression  */}
+t: "boolean "}).hadRecentInput) {/* TODO: "Fix JSX expression  */}
+e: "number "}).value
 this.recordWebVital('CLS', clsValue)}
-});"
-});"
-clsObserver.observe({/* TODO: "Fix JSX expression */"});"
-d: "true "});
-this.observers.push(clsObserver);"
-// Observe FID;"
-const fidObserver = new PerformanceObserver((list) => {/* TODO: "Fix JSX expression */"}"
-t: "number "}).processingStart - entry.startTime)})});"
-fidObserver.observe({/* TODO: "Fix JSX expression */"});"
-d: "true "});
-this.observers.push(fidObserver);"
-// Observe navigation timing for TTFB;"
-const navObserver = new PerformanceObserver((list) => {/* TODO: "Fix JSX expression */"}"
-})});"
-navObserver.observe({/* TODO: "Fix JSX expression */"});"
-d: "true "});"
-this.observers.push(navObserver)} catch(error) {   /* TODO: "Fix JSX expression */",, }
+})"
+})"
+clsObserver.observe({/* TODO: "Fix JSX expression  */})"
+d: "true "})
+this.observers.push(clsObserver)"
+// Observe FID
+const fidObserver = new PerformanceObserver((list) => {/* TODO: "Fix JSX expression  */}
+t: "number "}).processingStart - entry.startTime)})})"
+fidObserver.observe({/* TODO: "Fix JSX expression  */})"
+d: "true "})
+this.observers.push(fidObserver)"
+// Observe navigation timing for TTFB
+const navObserver = new PerformanceObserver((list) => {/* TODO: "Fix JSX expression  */}
+})})"
+navObserver.observe({/* TODO: "Fix JSX expression  */})"
+d: "true "})"
+this.observers.push(navObserver)} catch(error) {   /* TODO: "Fix JSX expression  */,, }
 }
 }
-/**;
-* Record a Web Vital metric;"
-*/;"
-private recordWebVital(name: "keyof WebVitals",value: "number): void{",const rating = this.getRating(name, value);"
-const metric: "PerformanceMetric = {"
-",name,}"
+/**
+* Record a Web Vital metric"
+*/"
+private recordWebVital(name: "keyof WebVitals",value: "number): void{",const rating = this.getRating(name, value)"
+const metric: "PerformanceMetric = {",name,}
 }"
-private recordWebVital(name: "keyof WebVitals",value: "number): void {"}"
-const rating = this.getRating(name, value);"
+private recordWebVital(name: "keyof WebVitals",value: "number): void {"}
+const rating = this.getRating(name, value)"
 const metric: "PerformanceMetric = {"}
-name;
-value;"
-rating;"
+name
+value"
+rating"
 timestamp: "Date.now()"}
 }"
-this.webVitals[name] = metric;";'"
-logger.info(`Web Vital: "${name"}`, 'PerformanceMonitoring', { value, rating });
-// Send to analytics;
-this.sendToAnalytics(metric);"
-private recordWebVital(nam);"
-e: "keyof WebVitals",valu);"
-e: "number): void {/* TOD",O: "Fix JSX expression */"}
+this.webVitals[name] = metric"
+logger.info(`Web Vital: "${name"}`, 'PerformanceMonitoring', { value, rating })
+// Send to analytics
+this.sendToAnalytics(metric)"
+private recordWebVital(nam)"
+e: "keyof WebVitals",valu)"
+e: "number): void {/* TOD",O: "Fix JSX expression  */}
 }
 this.webVitals[name] = metric;`"
-logger.info(`Web)`;";`'"
-Vital: "${name"}`, 'PerformanceMonitoring', { value, rating });
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
-// Send to analytics;
+logger.info(`Web)`";`'
+Vital: "${name"}`, 'PerformanceMonitoring', { value, rating })
+// Send to analytics
 this.sendToAnalytics(metric)}
-/**;
-* Get rating for a Web Vital metric;"
-*/;";'"
-private getRating(name: "keyof WebVitals",value: "number): 'good' | 'needs-improvement' | 'poor' {"}"
-const thresholds: "Record<keyof WebVitals",{ good: "number; poo",r: "number "}> = {}</keyof></<<<keyof>FCP</keyof></keyof>: { good: "1800",poor: "3000 "}"
-LCP: "{ goo",d: "2500",poor: "4000 "}"
-FID: "{ goo",d: "100",poor: "300 "}"
-CLS: "{ goo",d: "0.1",poor: "0.25 "}"
-TTFB: "{ goo",d: "800",poor: "1800 "}"
+/**
+* Get rating for a Web Vital metric"
+*/"
+private getRating(name: "keyof WebVitals",value: "number): 'good' | 'needs-improvement' | 'poor' {"}
+const thresholds: "Record<keyof WebVitals",{ good: "number; poo",r: "number "}> = {}</keyof></<<<keyof>FCP</keyof></keyof>: {good: "1800",poor: "3000 "}
+LCP: "{goo",d: "2500",poor: "4000 "}
+FID: "{goo",d: "100",poor: "300 "}
+CLS: "{goo",d: "0.1",poor: "0.25 "}
+TTFB: "{goo",d: "800",poor: "1800 "}
 INP: "{ goo",d: "200",poor: "500 "}
 }
-<<<<<<< HEAD
 /**"
 * Get rating for a Web Vital metric"
-*/;"
-private getRating(name: "keyof WebVitals",value: "number): 'good' | 'needs-improvement' | 'poor' {",;};"
-const thresholds: "Record<keyof WebVitals",{ good: "number; poo",r: "number ",}> = {}</keyof></<<<keyof>FCP</keyof></keyof>: { good: "1800",poor: "3000 ",}"
-LCP: "{ goo",d: "2500",poor: "4000 ",}"
-FID: "{ goo",d: "100",poor: "300 ",}"
-CLS: "{ goo",d: "0.1",poor: "0.25 ",}"
-TTFB: "{ goo",d: "800",poor: "1800 ",}"
-INP: "{ goo",d: "200",poor: "500 ",}"
+*/"
+private getRating(name: "keyof WebVitals",value: "number): 'good' | 'needs-improvement' | 'poor' {",}
+const thresholds: "Record<keyof WebVitals",{ good: "number; poo",r: "number ",}> = {}</keyof></<<<keyof>FCP</keyof></keyof>: {good: "1800",poor: "3000 ",}
+LCP: "{goo",d: "2500",poor: "4000 ",}
+FID: "{goo",d: "100",poor: "300 ",}
+CLS: "{goo",d: "0.1",poor: "0.25 ",}
+TTFB: "{goo",d: "800",poor: "1800 ",}
+INP: "{goo",d: "200",poor: "500 ",}
 }"
-const threshold = thresholds[name,];"
-if (!threshold) return 'good''"
-if (value <= threshold.good) return 'good''"
-if (value <= threshold.poor) return 'needs-improvement''"
+const threshold = thresholds[name,]
+if (!threshold) return 'good''
+if (value <= threshold.good) return 'good''
+if (value <= threshold.poor) return 'needs-improvement''
 return 'poor'
-private getRating(nam);"
-e: "keyof WebVitals",valu);"
-e: "number): 'good' | 'needs-improvement' | 'poor' {/* TOD",O: "Fix JSX expression */",}"
-r: "number ",}> = {/* TODO: "Fix JSX expression */",}"
+private getRating(nam)"
+e: "keyof WebVitals",valu)"
+e: "number): 'good' | 'needs-improvement' | 'poor' {/* TOD",O: "Fix JSX expression  */,}
+r: "number ",}> = {/* TODO: "Fix JSX expression  */,}
 r: "3000 ",}"
-LC;"
-P: "{/* TOD",O: "Fix JSX expression */",}"
+LC"
+P: "{/* TOD",O: "Fix JSX expression  */,}
 r: "4000 ",}"
-FI;"
-D: "{/* TOD",O: "Fix JSX expression */",}"
+FI"
+D: "{/* TOD",O: "Fix JSX expression  */,}
 r: "300 ",}"
-CL;"
-S: "{/* TOD",O: "Fix JSX expression */",}"
+CL"
+S: "{/* TOD",O: "Fix JSX expression  */,}
 r: "0.25 ",}"
-TTF;"
-B: "{/* TOD",O: "Fix JSX expression */",}"
+TTF"
+B: "{/* TOD",O: "Fix JSX expression  */,}
 r: "1800 ",}"
-IN;"
-P: "{/* TOD",O: "Fix JSX expression */",}"
+IN"
+P: "{/* TOD",O: "Fix JSX expression  */,}
 r: "500 ",}"
 }"
-const threshold = thresholds[name,];"
-if (!threshold) return 'good''"
-if (value <= threshold.good) return 'good''"
-if (value <= threshold.poor) return 'needs-improvement''"
+const threshold = thresholds[name,]
+if (!threshold) return 'good''
+if (value <= threshold.good) return 'good''
+if (value <= threshold.poor) return 'needs-improvement''
 return 'poor"
-;}
+}
 /**"
 * Record a custom metric"
-*/;"
-recordCustomMetric(name: "string",value: "number",unit: "CustomMetric['unit"]): void{;"
-const metri",c: "CustomMetric = {;"
-name",}"
+*/"
+recordCustomMetric(name: "string",value: "number",unit: "CustomMetric['unit"]): void{"
+const metri",c: "CustomMetric = {"
+name",}
 ,}"
-recordCustomMetric(name: "string",value: "number",unit: "CustomMetric['unit']): void {",;}"
-const metric: "CustomMetric = {",;};
-name;"
-value;"
-unit;"
+recordCustomMetric(name: "string",value: "number",unit: "CustomMetric['unit']): void {",}
+const metric: "CustomMetric = {",}
+name"
+value"
+unit"
 timestamp: "Date.now()",}
-=======
-const threshold = thresholds[name];
+const threshold = thresholds[name]
 if (!threshold) return 'good'
 if (value <= threshold.good) return 'good'
 if (value <= threshold.poor) return 'needs-improvement'
 return 'poor'
-private getRating(nam);"
-e: "keyof WebVitals",valu);";'"
-e: "number): 'good' | 'needs-improvement' | 'poor' {/* TOD",O: "Fix JSX expression */"}"
-r: "number "}> = {/* TODO: "Fix JSX expression */"}"
+private getRating(nam)"
+e: "keyof WebVitals",valu)"
+e: "number): 'good' | 'needs-improvement' | 'poor' {/* TOD",O: "Fix JSX expression  */}
+r: "number "}> = {/* TODO: "Fix JSX expression  */}
 r: "3000 "}"
-LC;"
-P: "{/* TOD",O: "Fix JSX expression */"}"
+LC"
+P: "{/* TOD",O: "Fix JSX expression  */}
 r: "4000 "}"
-FI;"
-D: "{/* TOD",O: "Fix JSX expression */"}"
+FI"
+D: "{/* TOD",O: "Fix JSX expression  */}
 r: "300 "}"
-CL;"
-S: "{/* TOD",O: "Fix JSX expression */"}"
+CL"
+S: "{/* TOD",O: "Fix JSX expression  */}
 r: "0.25 "}"
-TTF;"
-B: "{/* TOD",O: "Fix JSX expression */"}"
+TTF"
+B: "{/* TOD",O: "Fix JSX expression  */}
 r: "1800 "}"
-IN;"
-P: "{/* TOD",O: "Fix JSX expression */"}"
+IN"
+P: "{/* TOD",O: "Fix JSX expression  */}
 r: "500 "}
 }
-const threshold = thresholds[name];
+const threshold = thresholds[name]
 if (!threshold) return 'good'
 if (value <= threshold.good) return 'good'
 if (value <= threshold.poor) return 'needs-improvement'
 return 'poor'
 }
-/**;
-* Record a custom metric;"
-*/;";'"
-recordCustomMetric(name: "string",value: "number",unit: "CustomMetric['unit']): void{;"
-const metri",c: "CustomMetric = {;"
-name"}"
-}";'"
-recordCustomMetric(name: "string",value: "number",unit: "CustomMetric['unit']): void {"}"
-const metric: "CustomMetric = {"}
-name;
-value;"
-unit;"
-timestamp: "Date.now()"}
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
-}
-this.customMetrics.push(metric);
-// Maintain max metrics limit;
-if (this.customMetrics.length > this.maxMetrics) {;
-  // Maintain max metrics, limit;
-}
-<<<<<<< HEAD
-if (this.customMetrics.length > this.maxMetrics) {}"
-this.customMetrics.shift();}"
+/**
+* Record a custom metric"
+*/"
+recordCustomMetric(name: "string",value: "number",unit: "CustomMetric['unit']): void{"
+const metri",c: "CustomMetric = {"
+name"}
 }"
-logger.debug(`Custom Metric: "${name",}`, 'PerformanceMonitoring", { value, unit });"
-recordCustomMetric(nam;)"
-e: "string",valu);"
-e: "number",uni);"
-t: "CustomMetric['unit']): void {/* TOD",O: "Fix JSX expression */",;}
-;}"
-this.customMetrics.push(metric);"
-// Maintain max metrics limit;"
-if(this.customMetrics.length > this.maxMetrics) {  /* TODO: "Fix JSX expression */",, , }"
-}`;"
-logger.debug(`Custom)`;"
+recordCustomMetric(name: "string",value: "number",unit: "CustomMetric['unit']): void {"}
+const metric: "CustomMetric = {"}
+name
+value"
+unit"
+timestamp: "Date.now()"}
+}
+this.customMetrics.push(metric)
+// Maintain max metrics limit
+if (this.customMetrics.length > this.maxMetrics) {
+  // Maintain max metrics, limit
+}
+if (this.customMetrics.length > this.maxMetrics) {}
+this.customMetrics.shift()}
+}"
+logger.debug(`Custom Metric: "${name",}`, 'PerformanceMonitoring", { value, unit })"
+recordCustomMetric(nam)"
+e: "string",valu)"
+e: "number",uni)"
+t: "CustomMetric['unit']): void {/* TOD",O: "Fix JSX expression  */,}
+}"
+this.customMetrics.push(metric)"
+// Maintain max metrics limit
+if(this.customMetrics.length > this.maxMetrics) {/* TODO: "Fix JSX expression  */,, , }
+}`"
+logger.debug(`Custom)`"
 Metric: "${name",}`, 'PerformanceMonitoring", { value, unit })
 }
 /**"
 * Send metric to analytics service"
-*/;"
-private async sendToAnalytics(metric: "PerformanceMetric): Promise<void> {;"
-try{",if (typeof window !== 'undefined' && 'fetch" in, window) {,;}"
-await fetch('/api/analytics/performance", {)}"
-method: 'POST'",;});"
-headers: "{ 'Content-Type': 'application/json' ",});"
-body: "JSON.stringify(metric);"
-private async sendToAnalytics(metri",)</void>;"
-c: "PerformanceMetric): Promise<void> {",}"
-;"
-try {}"
-if (typeof window !== 'undefined' && 'fetch" in, window) {}"
-await fetch('/api/analytics/performance", {)}"
-method: 'POST'",}"
-headers: "{ 'Content-Type': 'application/json' ",}"
+*/"
+private async sendToAnalytics(metric: "PerformanceMetric): Promise<void> {"
+try{",if (typeof window !== 'undefined' && 'fetch" in, window) {,}
+await fetch('/api/analytics/performance", {)}
+method: 'POST',})"
+headers: "{ 'Content-Type': 'application/json',})"
+body: "JSON.stringify(metric)"
+private async sendToAnalytics(metri",)</void>
+c: "PerformanceMetric): Promise<void> {",}
+try {}
+if (typeof window !== 'undefined' && 'fetch" in, window) {}
+await fetch('/api/analytics/performance", {)}
+method: 'POST',}"
+headers: "{'Content-Type': 'application/json',}
 body: "JSON.stringify(metric)",})"
 }"
-;} catch (error) {;}"
-logger.error('Failed to send metric to analytics", error, as, Error);}"
-private async sendToAnalytics(metri)</void>;"
-c: "PerformanceMetric): Promise<void> {/* TOD",O: "Fix JSX expression */",}"
-s: "{ 'Content-Type': 'application/json' ",}"
-bod;"
+} catch (error) {}
+logger.error('Failed to send metric to analytics", error, as, Error)}
+private async sendToAnalytics(metri)</void>
+c: "PerformanceMetric): Promise<void> {/* TOD",O: "Fix JSX expression  */,}
+s: "{'Content-Type': 'application/json',}
+bod"
 y: "JSON.stringify(metric)",})"
 }"
-} catch(error) {   /* TODO: "Fix JSX expression */",, , , }
+} catch(error) {   /* TODO: "Fix JSX expression  */,, , , }
 }
 }
 /**
 * Get all Web Vitals
-*/;"
-getWebVitals(): WebVitals {}"
-return { ...this.webVitals }"
-getWebVitals(): WebVitals {/* TODO: "Fix JSX expression */",}
+*/"
+getWebVitals(): WebVitals {}
+return {...this.webVitals }
+getWebVitals(): WebVitals {/* TODO: "Fix JSX expression  */,}
 return { ...this.webVitals }
-;}
+}
 /**
 * Get custom metrics
-*/;"
-getCustomMetrics(): CustomMetric[] {};"
-return [...this.customMetrics,];}"
-getCustomMetrics(): CustomMetric[] {/* TODO: "Fix JSX expression */",}
-=======
+*/"
+getCustomMetrics(): CustomMetric[] {}
+return [...this.customMetrics,]}"
+getCustomMetrics(): CustomMetric[] {/* TODO: "Fix JSX expression  */,}
 if (this.customMetrics.length > this.maxMetrics) {}
-this.customMetrics.shift()}"
-}";`'"
-logger.debug(`Custom Metric: "${name"}`, 'PerformanceMonitoring', { value, unit });"
+this.customMetrics.shift()}
+}";`'
+logger.debug(`Custom Metric: "${name"}`, 'PerformanceMonitoring', { value, unit })"
 recordCustomMetric(nam)"
-e: "string",valu);"
-e: "number",uni);";'"
-t: "CustomMetric['unit']): void {/* TOD",O: "Fix JSX expression */"}
+e: "string",valu)"
+e: "number",uni)"
+t: "CustomMetric['unit']): void {/* TOD",O: "Fix JSX expression  */}
 }
-this.customMetrics.push(metric);"
-// Maintain max metrics limit;"
-if(this.customMetrics.length > this.maxMetrics) {  /* TODO: "Fix JSX expression */",}`
+this.customMetrics.push(metric)"
+// Maintain max metrics limit
+if(this.customMetrics.length > this.maxMetrics) {  /* TODO: "Fix JSX expression  */,}`
 }`;`"
-logger.debug(`Custom)`;";`'"
-Metric: "${name"}`, 'PerformanceMonitoring', { value, unit });
+logger.debug(`Custom)`";`'
+Metric: "${name"}`, 'PerformanceMonitoring', { value, unit })
 }
-/**;
-* Send metric to analytics service;"
-*/;"
-private async sendToAnalytics(metric: "PerformanceMetric): Promise<void> {;";'"
-try{",if (typeof window !== 'undefined' && 'fetch' in, window) {}'"
-await fetch('/api/analytics/performance', {)}";'"
-method: 'POST'"});";'"
-headers: "{ 'Content-Type': 'application/json' "});"
-body: "JSON.stringify(metric);"
-private async sendToAnalytics(metri",)</>"
+/**
+* Send metric to analytics service"
+*/"
+private async sendToAnalytics(metric: "PerformanceMetric): Promise<void> {"
+try{",if (typeof window !== 'undefined' && 'fetch' in, window) {}
+await fetch('/api/analytics/performance', {)}
+method: 'POST'})"
+headers: "{ 'Content-Type': 'application/json'})"
+body: "JSON.stringify(metric)"
+private async sendToAnalytics(metri",)</>
 c: "PerformanceMetric): Promise<void> {"}
-try {}'
-if (typeof window !== 'undefined' && 'fetch' in, window) {}'"
-await fetch('/api/analytics/performance', {)}";'"
-method: 'POST'"}";'"
-headers: "{ 'Content-Type': 'application/json' "}"
-body: "JSON.stringify(metric)"});
+try {}
+if (typeof window !== 'undefined' && 'fetch' in, window) {}
+await fetch('/api/analytics/performance', {)}
+method: 'POST'}"
+headers: "{'Content-Type': 'application/json'}
+body: "JSON.stringify(metric)"})
 }
-} catch (error) {}'
-logger.error('Failed to send metric to analytics', error, as, Error)}"
-private async sendToAnalytics(metri)</>"
-c: "PerformanceMetric): Promise<void> {/* TOD",O: "Fix JSX expression */"}";'"
-s: "{ 'Content-Type': 'application/json' "}"
-bod;"
-y: "JSON.stringify(metric)"});"
+} catch (error) {}
+logger.error('Failed to send metric to analytics', error, as, Error)}
+private async sendToAnalytics(metri)</>
+c: "PerformanceMetric): Promise<void> {/* TOD",O: "Fix JSX expression  */}
+s: "{'Content-Type': 'application/json'}
+bod"
+y: "JSON.stringify(metric)"})"
 }"
-} catch(error) {   /* TODO: "Fix JSX expression */",, }
+} catch(error) {   /* TODO: "Fix JSX expression  */,, }
 }
 }
-/**;
-* Get all Web Vitals;
-*/;
-getWebVitals(): WebVitals {}"
-return { ...this.webVitals }"
-getWebVitals(): WebVitals {/* TODO: "Fix JSX expression */"}
+/**
+* Get all Web Vitals
+*/
+getWebVitals(): WebVitals {}
+return {...this.webVitals }
+getWebVitals(): WebVitals {/* TODO: "Fix JSX expression  */}
 return { ...this.webVitals }
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
 }
-/**;
-* Get custom metrics;
-*/;
-getCustomMetrics(): CustomMetric[] {}"
+/**
+* Get custom metrics
+*/
+getCustomMetrics(): CustomMetric[] {}
 return [...this.customMetrics]}"
-getCustomMetrics(): CustomMetric[] {/* TODO: "Fix JSX expression */"}
+getCustomMetrics(): CustomMetric[] {/* TODO: "Fix JSX expression  */}
 }
-/**;
-* Get performance score (0-100);
-*/;
+/**
+* Get performance score (0-100)
+*/
 getPerformanceScore(): number {}
-const vitals = Object.values(this.webVitals);
-if (vitals.length === 0) return 0;
-<<<<<<< HEAD
+const vitals = Object.values(this.webVitals)
+if (vitals.length === 0) return 0
 const scores = vitals.map(metric => {
-);
+)
 "
-  );"
-switch (metric.rating) {;"
-case 'good": return 100;"
-case 'needs-improvement": return 50;"
-case 'poor": return 0;
+  )"
+switch (metric.rating) {"
+case 'good": return 100"
+case 'needs-improvement": return 50"
+case 'poor": return 0
 if (vitals.length = == 0) return, 0
 
 ,}
-const scores = vitals.map(metric => {
-)"
-,;};"
-switch (metric.rating) {};"
-case 'good": return 100;"
-case 'needs-improvement": return 50;"
-case 'poor": return 0;"
-default: "return 0;",,}"
-getPerformanceScore(): number {/* TODO: "Fix JSX expression */",}"
+const scores = vitals.map(metric => {)"
+,}
+switch (metric.rating) {}
+case 'good": return 100"
+case 'needs-improvement": return 50"
+case 'poor": return 0"
+default: "return 0",,}"
+getPerformanceScore(): number {/* TODO: "Fix JSX expression  */,}
 }"
-});"
+})"
 return Math.round(scores.reduce((a: "number",b: "number) => a + b",0) / scores.length)
-;}
+}
 /**
 * Get performance summary"
-*/;"
-getSummary(): {;"
-score: "number",webVitals: "WebVitals;"
-customMetric",s: "CustomMetric[]",}"
-getSummary(): {}"
-score: "number",webVitals: "WebVitals;"
-customMetric",s: "CustomMetric[]",recommendations: "string[];",}"
-} {}"
-const score = this.getPerformanceScore();"
-const recommendations: "string[] = []"
-// Generate recommendations based on metrics;"
-if (this.webVitals.FCP && this.webVitals.FCP.rating !== 'good") {;"
-const recommendation",s: "string[] = []"
-"
-// Generate recommendations based on metrics"
-",}"
-if (this.webVitals.FCP && this.webVitals.FCP.rating !== 'good") {}"
-recommendations.push('Improve First Contentful Paint by optimizing critical rendering path")}"
-}"
-if (this.webVitals.LCP && this.webVitals.LCP.rating !== 'good") {}"
-recommendations.push('Improve Largest Contentful Paint by optimizing images and server response")}"
-}"
-if (this.webVitals.CLS && this.webVitals.CLS.rating !== 'good") {}"
-recommendations.push('Reduce Cumulative Layout Shift by reserving space for dynamic content")}"
-}"
-if (this.webVitals.FID && this.webVitals.FID.rating !== 'good") {}"
-recommendations.push('Improve First Input Delay by reducing JavaScript execution time")}"
-}"
-if (this.webVitals.TTFB && this.webVitals.TTFB.rating !== 'good") {}"
-recommendations.push('Improve Time to First Byte by optimizing server response time")}
-;}"
-return {;}"
-=======
-const scores = vitals.map(metric => {);
-));
-switch (metric.rating) {;
-case 'good': return 100;
-case 'needs-improvement': return 50;
-case 'poor': return 0;
-if (vitals.length = == 0) return, 0;
-}
-const scores = vitals.map(metric => {);
-);
-}
-switch (metric.rating) {}'
-case 'good': return 100;
-case 'needs-improvement': return 50;'"
-case 'poor': return 0;"
-default: "return 0"}"
-getPerformanceScore(): number {/* TODO: "Fix JSX expression */"}
-}"
-});"
-return Math.round(scores.reduce((a: "number",b: "number) => a + b",0) / scores.length);
-}
-/**;
-* Get performance summary;
-*/;"
-getSummary(): {;"
-score: "number",webVitals: "WebVitals;"
-customMetric",s: "CustomMetric[]"}"
-getSummary(): {}"
-score: "number",webVitals: "WebVitals;"
-customMetric",s: "CustomMetric[]",recommendations: "string[]"}
-} {}"
+*/"
+getSummary(): {"
+score: "number",webVitals: "WebVitals"
+customMetric",s: "CustomMetric[],}
+getSummary(): {}
+score: "number",webVitals: "WebVitals"
+customMetric",s: "CustomMetric[],recommendations: "string[];,}"
+} {}
 const score = this.getPerformanceScore()"
-const recommendations: "string[] = [];
-// Generate recommendations based on metrics;'"
-if (this.webVitals.FCP && this.webVitals.FCP.rating !== 'good') {;"
-const recommendation",s: "string[] = [];"
-// Generate recommendations based on metrics"
-"}'
-if (this.webVitals.FCP && this.webVitals.FCP.rating !== 'good') {}'
+const recommendations: "string[] = []
+// Generate recommendations based on metrics
+if (this.webVitals.FCP && this.webVitals.FCP.rating !== 'good") {"
+const recommendation",s: "string[] = []
+// Generate recommendations based on metrics,}
+if (this.webVitals.FCP && this.webVitals.FCP.rating !== 'good") {}
+recommendations.push('Improve First Contentful Paint by optimizing critical rendering path")}
+}"
+if (this.webVitals.LCP && this.webVitals.LCP.rating !== 'good") {}
+recommendations.push('Improve Largest Contentful Paint by optimizing images and server response")}
+}"
+if (this.webVitals.CLS && this.webVitals.CLS.rating !== 'good") {}
+recommendations.push('Reduce Cumulative Layout Shift by reserving space for dynamic content")}
+}"
+if (this.webVitals.FID && this.webVitals.FID.rating !== 'good") {}
+recommendations.push('Improve First Input Delay by reducing JavaScript execution time")}
+}"
+if (this.webVitals.TTFB && this.webVitals.TTFB.rating !== 'good") {}
+recommendations.push('Improve Time to First Byte by optimizing server response time")}
+}"
+return {}
+const scores = vitals.map(metric => {)
+))
+switch (metric.rating) {
+case 'good': return 100
+case 'needs-improvement': return 50
+case 'poor': return 0
+if (vitals.length = == 0) return, 0
+}
+const scores = vitals.map(metric => {)
+)
+}
+switch (metric.rating) {}
+case 'good': return 100
+case 'needs-improvement': return 50
+case 'poor': return 0"
+default: "return 0"}"
+getPerformanceScore(): number {/* TODO: "Fix JSX expression  */}
+}"
+})"
+return Math.round(scores.reduce((a: "number",b: "number) => a + b",0) / scores.length)
+}
+/**
+* Get performance summary
+*/"
+getSummary(): {"
+score: "number",webVitals: "WebVitals"
+customMetric",s: "CustomMetric[]}
+getSummary(): {}
+score: "number",webVitals: "WebVitals"
+customMetric",s: "CustomMetric[],recommendations: "string[]}
+} {}
+const score = this.getPerformanceScore()"
+const recommendations: "string[] = []
+// Generate recommendations based on metrics
+if (this.webVitals.FCP && this.webVitals.FCP.rating !== 'good') {"
+const recommendation",s: "string[] = []
+// Generate recommendations based on metrics}
+if (this.webVitals.FCP && this.webVitals.FCP.rating !== 'good') {}
 recommendations.push('Improve First Contentful Paint by optimizing critical rendering path')}
-}'
-if (this.webVitals.LCP && this.webVitals.LCP.rating !== 'good') {}'
+}
+if (this.webVitals.LCP && this.webVitals.LCP.rating !== 'good') {}
 recommendations.push('Improve Largest Contentful Paint by optimizing images and server response')}
-}'
-if (this.webVitals.CLS && this.webVitals.CLS.rating !== 'good') {}'
+}
+if (this.webVitals.CLS && this.webVitals.CLS.rating !== 'good') {}
 recommendations.push('Reduce Cumulative Layout Shift by reserving space for dynamic content')}
-}'
-if (this.webVitals.FID && this.webVitals.FID.rating !== 'good') {}'
+}
+if (this.webVitals.FID && this.webVitals.FID.rating !== 'good') {}
 recommendations.push('Improve First Input Delay by reducing JavaScript execution time')}
-}'
-if (this.webVitals.TTFB && this.webVitals.TTFB.rating !== 'good') {}'
+}
+if (this.webVitals.TTFB && this.webVitals.TTFB.rating !== 'good') {}
 recommendations.push('Improve Time to First Byte by optimizing server response time')}
 }
-return {}"
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
-score;"
+return {}
+score"
 webVitals: "this.webVitals",customMetrics: "this.customMetrics",recommendations}
 }
 }
-<<<<<<< HEAD
 /**"
 * Measure function execution time"
-*/</void>;"
-measureFunction<T>(name: "string",fn: "() => T): T{;"
-const start = performance.now();",}"
-const result = fn(),;}</T>;"
+*/</void>
+measureFunction<T>(name: "string",fn: "() => T): T{"
+const start = performance.now()",}
+const result = fn(),}</T>
 measureFunction<T>(name: "string",fn: "() => T): T {",}
-const start = performance.now();"
-const result = fn();"
+const start = performance.now()"
+const result = fn()"
 const duration = performance.now() - start;`,}"
-this.recordCustomMetric(`fn_${name}`, duration, 'ms");
+this.recordCustomMetric(`fn_${name}`, duration, 'ms")
 return, result
 }
 /**"
 * Measure async function execution time"
-*/</T>;"
-async measureAsyncFunction<T>(name: "string",fn: "() => Promise<T>): Promise<T> {;"
-const start = performance.now();"
-const result = await fn()",;}</T>;"
-async measureAsyncFunction<T>(name: "string",fn: "() => Promise<T>): Promise<T> {",;}
-const start = performance.now();"
-const result = await fn();"
+*/</T>
+async measureAsyncFunction<T>(name: "string",fn: "() => Promise<T>): Promise<T> {"
+const start = performance.now()"
+const result = await fn()",}</T>
+async measureAsyncFunction<T>(name: "string",fn: "() => Promise<T>): Promise<T> {",}
+const start = performance.now()"
+const result = await fn()"
 const duration = performance.now() - start;`,}"
-this.recordCustomMetric(`async_fn_${name}`, duration, 'ms");
+this.recordCustomMetric(`async_fn_${name}`, duration, 'ms")
 return, result
 }
 /**"
 * Mark a custom performance mark"
-*/;"
-mark(name: "string): void {",if (typeof performance !== 'undefined' && 'mark" in, performance) {}"
-mark(name: "string): void {",}"
-if (typeof performance !== 'undefined' && 'mark" in, performance) {;}
-performance.mark(name);}
-;}
-;}
+*/"
+mark(name: "string): void {",if (typeof performance !== 'undefined' && 'mark" in, performance) {}
+mark(name: "string): void {",}
+if (typeof performance !== 'undefined' && 'mark" in, performance) {}
+performance.mark(name)}
+}
+}
 /**"
 * Measure between two marks"
-*/;"
-measure(name: "string",startMark: "string",endMark: "string): number | null{",if (typeof performance !== 'undefined' && 'measure" in, performance) {,;}"
-try {}"
-measure(name: "string",startMark: "string",endMark: "string): number | null {",}"
-if (typeof performance !== 'undefined' && 'measure" in, performance) {;}"
-try {;}"
-performance.measure(name, startMark, endMark);"
-const measure = performance.getEntriesByName(name, 'measure")[0,];"
-if (measure) {}"
-this.recordCustomMetric(name, measure.duration, 'ms");
-return measure.duration;}"
+*/"
+measure(name: "string",startMark: "string",endMark: "string): number | null{",if (typeof performance !== 'undefined' && 'measure" in, performance) {,}
+try {}
+measure(name: "string",startMark: "string",endMark: "string): number | null {",}
+if (typeof performance !== 'undefined' && 'measure" in, performance) {}
+try {}
+performance.measure(name, startMark, endMark)"
+const measure = performance.getEntriesByName(name, 'measure")[0,]
+if (measure) {}
+this.recordCustomMetric(name, measure.duration, 'ms")
+return measure.duration}"
 }"
-} catch (error) {}"
-logger.error('Failed to measure performance", error, as, Error)}"
-getSummary(): {/* TODO: "Fix JSX expression */",}"
-} {/* TODO: "Fix JSX expression */",}"
+} catch (error) {}
+logger.error('Failed to measure performance", error, as, Error)}
+getSummary(): {/* TODO: "Fix JSX expression  */,}
+} {/* TODO: "Fix JSX expression  */,}
 }"
-if(this.webVitals.LCP && this.webVitals.LCP.rating !== 'good') {  /* TODO: "Fix JSX expression */",, , }"
+if(this.webVitals.LCP && this.webVitals.LCP.rating !== 'good') {/* TODO: "Fix JSX expression  */,, , }
 }"
-if(this.webVitals.CLS && this.webVitals.CLS.rating !== 'good') {  /* TODO: "Fix JSX expression */",, , }"
+if(this.webVitals.CLS && this.webVitals.CLS.rating !== 'good') {/* TODO: "Fix JSX expression  */,, , }
 }"
-if(this.webVitals.FID && this.webVitals.FID.rating !== 'good') {  /* TODO: "Fix JSX expression */",, , }"
+if(this.webVitals.FID && this.webVitals.FID.rating !== 'good') {/* TODO: "Fix JSX expression  */,, , }
 }"
-if(this.webVitals.TTFB && this.webVitals.TTFB.rating !== 'good') {  /* TODO: "Fix JSX expression */",, , }"
+if(this.webVitals.TTFB && this.webVitals.TTFB.rating !== 'good') {/* TODO: "Fix JSX expression  */,, , }
 }"
-return {/* TODO: "Fix JSX expression */",}
+return {/* TODO: "Fix JSX expression  */,}
 }
-;}
+}
 /**
 * Measure function execution time"
-*/</T>;"
-measureFunction<T>(nam;"
-e: "string",f);"
-n: "() => T): T {/* TOD",O: "Fix JSX expression */",}`;"
-this.recordCustomMetric(`fn_${name}`, duration, 'ms");
+*/</T>
+measureFunction<T>(nam"
+e: "string",f)"
+n: "() => T): T {/* TOD",O: "Fix JSX expression  */,}`"
+this.recordCustomMetric(`fn_${name}`, duration, 'ms")
 return, result
 }
 /**
 * Measure async function execution time"
-*/</T>;"
-async measureAsyncFunction<T>(nam;"
-e: "string",f)</T>;"
-n: "() => Promise<T>): Promise<T> {/* TOD",O: "Fix JSX expression */",}`;"
-this.recordCustomMetric(`async_fn_${name}`, duration, 'ms");
+*/</T>
+async measureAsyncFunction<T>(nam"
+e: "string",f)</T>
+n: "() => Promise<T>): Promise<T> {/* TOD",O: "Fix JSX expression  */,}`"
+this.recordCustomMetric(`async_fn_${name}`, duration, 'ms")
 return, result
 }
 /**
 * Mark a custom performance mark"
-*/;"
-mark(nam);"
-e: "string): void {/* TOD",O: "Fix JSX expression */",}
-;}
-;}
+*/"
+mark(nam)"
+e: "string): void {/* TOD",O: "Fix JSX expression  */,}
+}
+}
 /**
 * Measure between two marks"
-*/;"
-measure(nam;)"
-e: "string",startMar);"
-k: "string",endMar);"
-k: "string): number | null {/* TOD",O: "Fix JSX expression */",}"
+*/"
+measure(nam)"
+e: "string",startMar)"
+k: "string",endMar)"
+k: "string): number | null {/* TOD",O: "Fix JSX expression  */,}
 }"
-} catch(error) {   /* TODO: "Fix JSX expression */",, , , }
+} catch(error) {   /* TODO: "Fix JSX expression  */,, , , }
 }
 }
-return, null;
+return, null
 }
 /**
 * Clear all metrics
-*/;
-clearMetrics(): void {;}"
-this.webVitals = {,;};"
-this.customMetrics = [];"
-clearMetrics(): void {/* TODO: "Fix JSX expression */",;}
-this.webVitals = {,;}
+*/
+clearMetrics(): void {}
+this.webVitals = {,}
 this.customMetrics = []
-,;}
-/**;
-* Disconnect all observers;
-*/;
-disconnect(): void {;}"
-this.observers.forEach(observer = > observer.disconnect());"
+clearMetrics(): void {/* TODO: "Fix JSX expression  */,}
+this.webVitals = {,}
+this.customMetrics = []
+,}
+/**
+* Disconnect all observers
+*/
+disconnect(): void {}
+this.observers.forEach(observer = > observer.disconnect())"
 this.observers = [];,}"
-disconnect(): void {/* TODO: "Fix JSX expression */",}
-;}
-;}
-=======
-/**;
-* Measure function execution time;"
-*/</>"
-measureFunction<T>(name: "string",fn: "() => T): T{;"
-const start = performance.now()"}"
-const result = fn()}</>"
+disconnect(): void {/* TODO: "Fix JSX expression  */,}
+}
+}
+/**
+* Measure function execution time"
+*/</>
+measureFunction<T>(name: "string",fn: "() => T): T{"
+const start = performance.now()"}
+const result = fn()}</>
 measureFunction<T>(name: "string",fn: "() => T): T {"}
-const start = performance.now();
+const start = performance.now()
 const result = fn();`
 const duration = performance.now() - start;`}`'
-this.recordCustomMetric(`fn_${name}`, duration, 'ms');
-return, result;
+this.recordCustomMetric(`fn_${name}`, duration, 'ms')
+return, result
 }
-/**;
-* Measure async function execution time;"
-*/</>"
-async measureAsyncFunction<T>(name: "string",fn: "() => Promise<T>): Promise<T> {;"
+/**
+* Measure async function execution time"
+*/</>
+async measureAsyncFunction<T>(name: "string",fn: "() => Promise<T>): Promise<T> {"
 const start = performance.now()"
-const result = await fn()"}</>"
+const result = await fn()"}</>
 async measureAsyncFunction<T>(name: "string",fn: "() => Promise<T>): Promise<T> {"}
-const start = performance.now();
+const start = performance.now()
 const result = await fn();`
 const duration = performance.now() - start;`}`'
-this.recordCustomMetric(`async_fn_${name}`, duration, 'ms');
-return, result;
+this.recordCustomMetric(`async_fn_${name}`, duration, 'ms')
+return, result
 }
-/**;
-* Mark a custom performance mark;"
-*/;";'"
-mark(name: "string): void {",if (typeof performance !== 'undefined' && 'mark' in, performance) {}"
-mark(name: "string): void {"}'
+/**
+* Mark a custom performance mark"
+*/"
+mark(name: "string): void {",if (typeof performance !== 'undefined' && 'mark' in, performance) {}
+mark(name: "string): void {"}
 if (typeof performance !== 'undefined' && 'mark' in, performance) {}
 performance.mark(name)}
 }
 }
-/**;
-* Measure between two marks;"
-*/;";'"
-measure(name: "string",startMark: "string",endMark: "string): number | null{",if (typeof performance !== 'undefined' && 'measure' in, performance) {}"
-try {}"
-measure(name: "string",startMark: "string",endMark: "string): number | null {"}'
+/**
+* Measure between two marks"
+*/"
+measure(name: "string",startMark: "string",endMark: "string): number | null{",if (typeof performance !== 'undefined' && 'measure' in, performance) {}
+try {}
+measure(name: "string",startMark: "string",endMark: "string): number | null {"}
 if (typeof performance !== 'undefined' && 'measure' in, performance) {}
 try {}
-performance.measure(name, startMark, endMark);
-const measure = performance.getEntriesByName(name, 'measure')[0];
-if (measure) {}'
-this.recordCustomMetric(name, measure.duration, 'ms');
+performance.measure(name, startMark, endMark)
+const measure = performance.getEntriesByName(name, 'measure')[0]
+if (measure) {}
+this.recordCustomMetric(name, measure.duration, 'ms')
 return measure.duration}
 }
-} catch (error) {}'"
-logger.error('Failed to measure performance', error, as, Error)}"
-getSummary(): {/* TODO: "Fix JSX expression */"}"
-} {/* TODO: "Fix JSX expression */"}"
-}";'"
-if(this.webVitals.LCP && this.webVitals.LCP.rating !== 'good') {  /* TODO: "Fix JSX expression */",}"
-}";'"
-if(this.webVitals.CLS && this.webVitals.CLS.rating !== 'good') {  /* TODO: "Fix JSX expression */",}"
-}";'"
-if(this.webVitals.FID && this.webVitals.FID.rating !== 'good') {  /* TODO: "Fix JSX expression */",}"
-}";'"
-if(this.webVitals.TTFB && this.webVitals.TTFB.rating !== 'good') {  /* TODO: "Fix JSX expression */",}"
+} catch (error) {}
+logger.error('Failed to measure performance', error, as, Error)}
+getSummary(): {/* TODO: "Fix JSX expression  */}
+} {/* TODO: "Fix JSX expression  */}
 }"
-return {/* TODO: "Fix JSX expression */"}
+if(this.webVitals.LCP && this.webVitals.LCP.rating !== 'good') {/* TODO: "Fix JSX expression  */,}
+}"
+if(this.webVitals.CLS && this.webVitals.CLS.rating !== 'good') {/* TODO: "Fix JSX expression  */,}
+}"
+if(this.webVitals.FID && this.webVitals.FID.rating !== 'good') {/* TODO: "Fix JSX expression  */,}
+}"
+if(this.webVitals.TTFB && this.webVitals.TTFB.rating !== 'good') {/* TODO: "Fix JSX expression  */,}
+}"
+return {/* TODO: "Fix JSX expression  */}
 }
 }
-/**;
-* Measure function execution time;
-*/</>;"
-measureFunction<T>(nam;");"
-e: "string",f);";`"
-n: "() => T): T {/* TOD",O: "Fix JSX expression */"}`;`'
-this.recordCustomMetric(`fn_${name}`, duration, 'ms');
-return, result;
+/**
+* Measure function execution time
+*/</>
+measureFunction<T>(nam")"
+e: "string",f)";`"
+n: "() => T): T {/* TOD",O: "Fix JSX expression  */}`;`'
+this.recordCustomMetric(`fn_${name}`, duration, 'ms')
+return, result
 }
-/**;
-* Measure async function execution time;
-*/</>;"
-async measureAsyncFunction<T>(nam;");"
-e: "string",f)</>";`"
-n: "() => Promise<T>): Promise<T> {/* TOD",O: "Fix JSX expression */"}`;`'
-this.recordCustomMetric(`async_fn_${name}`, duration, 'ms');
-return, result;
+/**
+* Measure async function execution time
+*/</>
+async measureAsyncFunction<T>(nam")"
+e: "string",f)</>;`"
+n: "() => Promise<T>): Promise<T> {/* TOD",O: "Fix JSX expression  */}`;`'
+this.recordCustomMetric(`async_fn_${name}`, duration, 'ms')
+return, result
 }
-/**;
-* Mark a custom performance mark;
-*/;"
-mark(nam);"
-e: "string): void {/* TOD",O: "Fix JSX expression */"}
+/**
+* Mark a custom performance mark
+*/"
+mark(nam)"
+e: "string): void {/* TOD",O: "Fix JSX expression  */}
 }
 }
-/**;
-* Measure between two marks;
-*/;"
+/**
+* Measure between two marks
+*/"
 measure(nam)"
-e: "string",startMar);"
-k: "string",endMar);"
-k: "string): number | null {/* TOD",O: "Fix JSX expression */"}"
+e: "string",startMar)"
+k: "string",endMar)"
+k: "string): number | null {/* TOD",O: "Fix JSX expression  */}
 }"
-} catch(error) {   /* TODO: "Fix JSX expression */",, }
+} catch(error) {   /* TODO: "Fix JSX expression  */,, }
 }
 }
 return, null}
-/**;
-* Clear all metrics;
-*/;
+/**
+* Clear all metrics
+*/
 clearMetrics(): void {}
-this.webVitals = {}"
-this.customMetrics = [];"
-clearMetrics(): void {/* TODO: "Fix JSX expression */"}
 this.webVitals = {}
-this.customMetrics = [];
+this.customMetrics = []
+clearMetrics(): void {/* TODO: "Fix JSX expression  */}
+this.webVitals = {}
+this.customMetrics = []
 }
-/**;
-* Disconnect all observers;
-*/;
+/**
+* Disconnect all observers
+*/
 disconnect(): void {}
-this.observers.forEach(observer = > observer.disconnect());"
+this.observers.forEach(observer = > observer.disconnect())"
 this.observers = []}"
-disconnect(): void {/* TODO: "Fix JSX expression */"}
+disconnect(): void {/* TODO: "Fix JSX expression  */}
 }
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
-export const performanceMonitoring = PerformanceMonitoringService.getInstance();
-export default PerformanceMonitoringService;
-// Export convenience enums and functions;
-
-<<<<<<< HEAD
-export enum MetricUnit{// Export convenience enums and, functions;}"
-;}"
-export enum MetricUnit {;}"
-Milliseconds = 'ms''"
-Bytes = 'bytes''"
-Count = 'count''"
-Percentage = 'percentage",};
-};
-// Simple metrics structure for testing;
+export const performanceMonitoring = PerformanceMonitoringService.getInstance()
+export default PerformanceMonitoringService
+// Export convenience enums and functions
+export enum MetricUnit{// Export convenience enums and, functions}
+}"
+export enum MetricUnit {}
+Milliseconds = 'ms''
+Bytes = 'bytes''
+Count = 'count''
+Percentage = 'percentage",}
+}
+// Simple metrics structure for testing
 interface MetricData {
 // Simple metrics structure for, testing
-;}
-;};
-};
-interface MetricData {
-
-"
-;}"
-;};"
-values: "number[]",count: "number;"
-averag",e: "number",min: "number;"
-ma",x: "number",unit: "string;"
-rating?: 'good' | 'needs-improvement' | 'poor';",}
-}</T>;
-=======
+}
+}
+}
+interface MetricData {"
+}
+}"
+values: "number[],count: "number"
+averag",e: "number",min: "number"
+ma",x: "number",unit: "string"
+rating?: 'good' | 'needs-improvement' | 'poor',}
+}</T>
 export enum MetricUnit{// Export convenience enums and, functions}
 }
-export enum MetricUnit {}'
+export enum MetricUnit {}
 Milliseconds = 'ms'
 Bytes = 'bytes'
 Count = 'count'
 Percentage = 'percentage'}
 }
-// Simple metrics structure for testing;
-interface MetricData {;
-// Simple metrics structure for, testing;
+// Simple metrics structure for testing
+interface MetricData {
+// Simple metrics structure for, testing
 }
 }
 }
-interface MetricData {;
+interface MetricData {
+}
 }"
-}"
-values: "number[]",count: "number;"
-averag",e: "number",min: "number;"
-ma",x: "number",unit: "string;";'"
-rating?: 'good' | 'needs-improvement' | 'poor'"}
-}</>;
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
-const simpleMetrics = new Map<string, MetricData>();
-export const recordMetric = useCallback((...args) => {;
-  // Record in our simple metrics store for, testing;
+values: "number[],count: "number"
+averag",e: "number",min: "number"
+ma",x: "number",unit: "string"
+rating?: 'good' | 'needs-improvement' | 'poor'}
+}</>
+const simpleMetrics = new Map<string, MetricData>()
+export const recordMetric = useCallback((...args) => {
+  // Record in our simple metrics store for, testing
 }
 export const recordMetric = useCallback((...args) => {}
-// Record in our simple metrics store for testing;
-const existing = simpleMetrics.get(name);
-
+// Record in our simple metrics store for testing
+const existing = simpleMetrics.get(name)
 if (existing) {}
-existing.values.push(value);
-existing.count++;
-existing.average = existing.values.reduce((a, b) => a + b, 0) / existing.count;
-existing.min = Math.min(existing.min, value);
-<<<<<<< HEAD
-existing.max = Math.max(existing.max, value)};"
-} else{;"
-simpleMetrics.set(name, {;)"
-values: "[value,]",);"
-    count: "1;);"
-averag",e: "value;)",min: "value;);",}"
-ma,x: "value)",}"
-unit)} else {}"
-simpleMetrics.set(name, {)}"
-values: "[value,]",count: "1;"
-averag",e: "value",min: "value;"
-=======
+existing.values.push(value)
+existing.count++
+existing.average = existing.values.reduce((a, b) => a + b, 0) / existing.count
+existing.min = Math.min(existing.min, value)
 existing.max = Math.max(existing.max, value)}
-} else{;"
+} else{"
 simpleMetrics.set(name, {)"
-values: "[value]",);"
-    count: "1);"
-averag",e: "value)",min: "value)"}"
+values: "[value,],)"
+    count: "1)"
+averag",e: "value)",min: "value)",}
+ma,x: "value)",}"
+unit)} else {}
+simpleMetrics.set(name, {)}
+values: "[value,],count: "1"
+averag",e: "value",min: "value"
+existing.max = Math.max(existing.max, value)}
+} else{"
+simpleMetrics.set(name, {)"
+values: "[value],)"
+    count: "1)"
+averag",e: "value)",min: "value)"}
 ma,x: "value)"}
-unit)} else {}"
-simpleMetrics.set(name, {)}"
-values: "[value]",count: "1;"
-averag",e: "value",min: "value;
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
-max: value;"
-unit;"
+unit)} else {}
+simpleMetrics.set(name, {)}
+values: "[value],count: "1"
+averag",e: "value",min: "value
+max: value"
+unit"
 ratin",g: "getRating(name",value)}
-});
+})
 }
-// Also record in the main performance monitoring service;"
-<<<<<<< HEAD
-performanceMonitoring.recordCustomMetric(name, value, unit);"
+// Also record in the main performance monitoring service;performanceMonitoring.recordCustomMetric(name, value, unit)
 }"
-function getRating(name: "string",value: "number): 'good' | 'needs-improvement' | 'poor' {",;}</string>;"
-const thresholds: "Record<string",{ good: "number; poo",r: "number ",}> = {}</strin>"
-'FCP': { good: "1800",poor: "3000 ",}"
-'LCP': { good: "2500",poor: "4000 ",}"
-'FID': { good: "100",poor: "300 ",}"
-'CLS': { good: "0.1",poor: "0.25 ",}"
-'TTFB': { good: "800",poor: "1800 ",}"
-'INP': { good: "200",poor: "500 ",}"
+function getRating(name: "string",value: "number): 'good' | 'needs-improvement' | 'poor' {",}</string>
+const thresholds: "Record<string",{ good: "number; poo",r: "number ",}> = {}</strin>
+'FCP': {good: "1800",poor: "3000 ",}
+'LCP': {good: "2500",poor: "4000 ",}
+'FID': {good: "100",poor: "300 ",}
+'CLS': {good: "0.1",poor: "0.25 ",}
+'TTFB': {good: "800",poor: "1800 ",}
+'INP': {good: "200",poor: "500 ",}
 }"
-const threshold = thresholds[name,];"
-if (!threshold) return 'good''"
-if (value <= threshold.good) return 'good''"
-if (value <= threshold.poor) return 'needs-improvement''"
+const threshold = thresholds[name,]
+if (!threshold) return 'good''
+if (value <= threshold.good) return 'good''
+if (value <= threshold.poor) return 'needs-improvement''
 return 'poor"
-=======
-performanceMonitoring.recordCustomMetric(name, value, unit)}";'"
-function getRating(name: "string",value: "number): 'good' | 'needs-improvement' | 'poor' {"}</>"
-const thresholds: "Record<string",{ good: "number; poo",r: "number "}> = {}</strin>";'"
-'FCP': { good: "1800",poor: "3000 "}";'"
-'LCP': { good: "2500",poor: "4000 "}";'"
-'FID': { good: "100",poor: "300 "}";'"
-'CLS': { good: "0.1",poor: "0.25 "}";'"
-'TTFB': { good: "800",poor: "1800 "}";'"
+performanceMonitoring.recordCustomMetric(name, value, unit)}
+function getRating(name: "string",value: "number): 'good' | 'needs-improvement' | 'poor' {"}</>
+const thresholds: "Record<string",{ good: "number; poo",r: "number "}> = {}</strin>
+'FCP': {good: "1800",poor: "3000 "}
+'LCP': {good: "2500",poor: "4000 "}
+'FID': {good: "100",poor: "300 "}
+'CLS': {good: "0.1",poor: "0.25 "}
+'TTFB': {good: "800",poor: "1800 "}
 'INP': { good: "200",poor: "500 "}
 }
-const threshold = thresholds[name];
+const threshold = thresholds[name]
 if (!threshold) return 'good'
 if (value <= threshold.good) return 'good'
 if (value <= threshold.poor) return 'needs-improvement'
 return 'poor'
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
 }
 export const getMetrics = (): Record<string, MetricData> => {}</string></<<<string>const</string></<<string>result</string>: Record<string, MetricData> = {}</string></<<<string>simpleMetrics</string></string>.forEach((value, key) => {}
 result[key] = { ...value }
-});
-return, result;
+})
+return, result
 }
-<<<<<<< HEAD
-export const clearMetrics = useCallback((...args) => {,;};
-simpleMetrics.clear();"
-performanceMonitoring.clearMetrics();}"
+export const clearMetrics = useCallback((...args) => {,}
+simpleMetrics.clear()"
+performanceMonitoring.clearMetrics()}
 }"
-export const measureFunction = <T>(name: "string",fn: "() => T): T => {;"
-",const start = performance.now();
-const result = fn();
-const duration = performance.now() - start;
-recordMetric(name, duration, MetricUnit.Milliseconds)
-};"
-return result;}"
-}</T>;"
-export const measureAsyncFunction = async <T>(name: "string",fn: "() => Promise<T>): Promise<T> => {;
-const start = performance.now();"
-const result = await fn();"
-const duration = performance.now() - start;"
-",}</T>;"
-export const measureFunction = <T>(name: "string",fn: "() => T): T => {"
-",;
-};
-const start = performance.now();
-const result = fn();
-const duration = performance.now() - start;
-recordMetric(name, duration, MetricUnit.Milliseconds);"
-return result;}"
-}</T>;"
-export const measureAsyncFunction = async <T>(name: "string",fn: "() => Promise<T>): Promise<T> => {",;};
-=======
-export const clearMetrics = useCallback((...args) => {}
-simpleMetrics.clear();
-performanceMonitoring.clearMetrics()}"
-}"
-export const measureFunction = <T>(name: "string",fn: "() => T): T => {",const start = performance.now();
-const result = fn();
-const duration = performance.now() - start;
-recordMetric(name, duration, MetricUnit.Milliseconds);
-}
+export const measureFunction = <T>(name: "string",fn: "() => T): T => {",const start = performance.now()
+const result = fn()
+const duration = performance.now() - start
+recordMetric(name, duration, MetricUnit.Milliseconds)}
 return result}"
-}</>"
-export const measureAsyncFunction = async <T>(name: "string",fn: "() => Promise<T>): Promise<T> => {;
-const start = performance.now();"
+}</T>
+export const measureAsyncFunction = async <T>(name: "string",fn: "() => Promise<T>): Promise<T> => {
+const start = performance.now()"
 const result = await fn()"
-const duration = performance.now() - start"}</>"
-export const measureFunction = <T>(name: "string",fn: "() => T): T => {"
-"}
-const start = performance.now();
-const result = fn();
-const duration = performance.now() - start;
-recordMetric(name, duration, MetricUnit.Milliseconds);
+const duration = performance.now() - start",}</T>
+export const measureFunction = <T>(name: "string",fn: "() => T): T => {",
+}
+const start = performance.now()
+const result = fn()
+const duration = performance.now() - start
+recordMetric(name, duration, MetricUnit.Milliseconds)"
 return result}"
-}</>"
-export const measureAsyncFunction = async <T>(name: "string",fn: "() => Promise<T>): Promise<T> => {"}
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
-const start = performance.now();
-const result = await fn();
-const duration = performance.now() - start;
-recordMetric(name, duration, MetricUnit.Milliseconds);
-<<<<<<< HEAD
-return result;}
+}</T>
+export const measureAsyncFunction = async <T>(name: "string",fn: "() => Promise<T>): Promise<T> => {",}
+export const clearMetrics = useCallback((...args) => {}
+simpleMetrics.clear()
+performanceMonitoring.clearMetrics()}
 }"
-export const getPerformanceScore = (): number => {,;};"
-const metrics = getMetrics();"
-const webVitalNames = ['FCP', 'LCP', 'FID', 'CLS', 'TTFB"];
-=======
+export const measureFunction = <T>(name: "string",fn: "() => T): T => {",const start = performance.now()
+const result = fn()
+const duration = performance.now() - start
+recordMetric(name, duration, MetricUnit.Milliseconds)
+}
+return result}"
+}</>
+export const measureAsyncFunction = async <T>(name: "string",fn: "() => Promise<T>): Promise<T> => {
+const start = performance.now()"
+const result = await fn()"
+const duration = performance.now() - start"}</>
+export const measureFunction = <T>(name: "string",fn: "() => T): T => {"}
+const start = performance.now()
+const result = fn()
+const duration = performance.now() - start
+recordMetric(name, duration, MetricUnit.Milliseconds)
+return result}"
+}</>
+export const measureAsyncFunction = async <T>(name: "string",fn: "() => Promise<T>): Promise<T> => {"}
+const start = performance.now()
+const result = await fn()
+const duration = performance.now() - start
+recordMetric(name, duration, MetricUnit.Milliseconds)
+return result}
+}"
+export const getPerformanceScore = (): number => {,}
+const metrics = getMetrics()"
+const webVitalNames = ['FCP', 'LCP', 'FID', 'CLS', 'TTFB"]
 return result}
 }
 export const getPerformanceScore = (): number => {}
-const metrics = getMetrics();
-const webVitalNames = ['FCP', 'LCP', 'FID', 'CLS', 'TTFB'];
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
-const webVitals = webVitalNames;
-.map(name => metrics[name]);
-.filter(Boolean);
-if (webVitals.length === 0) return 0;
-<<<<<<< HEAD
+const metrics = getMetrics()
+const webVitalNames = ['FCP', 'LCP', 'FID', 'CLS', 'TTFB']
+const webVitals = webVitalNames
+.map(name => metrics[name])
+.filter(Boolean)
+if (webVitals.length === 0) return 0
 const scores = webVitals.map(metric => {
-);
+)
 "
-  );"
-switch (metric.rating) {;"
-case 'good": return 100;"
-case 'needs-improvement": return 50;"
-case 'poor": return 0;
+  )"
+switch (metric.rating) {"
+case 'good": return 100"
+case 'needs-improvement": return 50"
+case 'poor": return 0
 if (webVitals.length = == 0) return, 0
 
 ,}
-const scores = webVitals.map(metric => {
-)"
-,;};"
-switch (metric.rating) {};"
-case 'good": return 100;"
-case 'needs-improvement": return 50;"
-case 'poor": return 0;"
-default: "return 0;",,}"
+const scores = webVitals.map(metric => {)"
+,}
+switch (metric.rating) {}
+case 'good": return 100"
+case 'needs-improvement": return 50"
+case 'poor": return 0"
+default: "return 0",,}"
 }"
-});"
-const sum = scores.reduce((a: "number",b: "number) => a + b",0);
-return Math.round(sum / scores.length);
+})"
+const sum = scores.reduce((a: "number",b: "number) => a + b",0)
+return Math.round(sum / scores.length)}
+export const getRecommendations = (): string[] => {,}
+const metrics = getMetrics()"
+const recommendations: "string[] = []
+if (metrics.FCP && metrics.FCP.rating !== 'good") {"
+const recommendation",s: "string[] = [],}
+if (metrics.FCP && metrics.FCP.rating !== 'good") {}
+recommendations.push('Improve FCP by optimizing critical CSS and reducing render-blocking resources")}
 }"
-export const getRecommendations = (): string[] => {,;};"
-const metrics = getMetrics();"
-const recommendations: "string[] = [];"
-if (metrics.FCP && metrics.FCP.rating !== 'good") {;"
-const recommendation",s: "string[] = []"
-"
-  ",}"
-if (metrics.FCP && metrics.FCP.rating !== 'good") {}"
-recommendations.push('Improve FCP by optimizing critical CSS and reducing render-blocking resources")}"
+if (metrics.LCP && metrics.LCP.rating !== 'good") {}
+recommendations.push('Improve LCP by optimizing largest images and server response time")}
 }"
-if (metrics.LCP && metrics.LCP.rating !== 'good") {}"
-recommendations.push('Improve LCP by optimizing largest images and server response time")}"
+if (metrics.FID && metrics.FID.rating !== 'good") {}
+recommendations.push('Improve FID by reducing JavaScript execution time")}
 }"
-if (metrics.FID && metrics.FID.rating !== 'good") {}"
-recommendations.push('Improve FID by reducing JavaScript execution time")}"
+if (metrics.CLS && metrics.CLS.rating !== 'good") {}
+recommendations.push('Improve CLS by reserving space for dynamic content and avoiding layout shifts")}
 }"
-if (metrics.CLS && metrics.CLS.rating !== 'good") {}"
-recommendations.push('Improve CLS by reserving space for dynamic content and avoiding layout shifts")}"
-}"
-if (metrics.TTFB && metrics.TTFB.rating !== 'good") {}"
+if (metrics.TTFB && metrics.TTFB.rating !== 'good") {}
 recommendations.push('Improve TTFB by optimizing server response time and using CDN")}
 }"
 return, recommendations"
 }"
-export enum MetricUnit {/* TODO: "Fix JSX expression */",;}
-;}"
-// Simple metrics structure for testing;"
-interface MetricData {"
-/* TODO: "Fix JSX expression */",
-;}
-;};
-}</T>;"
-const simpleMetrics = new Map<string, MetricData>();"
-export const recordMetric = (nam;"
-e: "string",valu;"
-e: "number",uni);"
-t: "MetricUnit = MetricUnit.Milliseconds) => {/* TOD",O: "Fix JSX expression */",}"
-} else { /* TODO: "Fix JSX expression */",, }
-});
-};
-// Also record in the main performance monitoring service;
-performanceMonitoring.recordCustomMetric(name, value, unit);"
+export enum MetricUnit {/* TODO: "Fix JSX expression  */,}
 }"
-function getRating(nam);"
-e: "string",valu);"
-e: "number): 'good' | 'needs-improvement' | 'poor' {/* TOD",O: "Fix JSX expression */",}"
-r: "number ",}> = {/* TODO: "Fix JSX expression */",}"
+// Simple metrics structure for testing
+interface MetricData {"
+/* TODO: "Fix JSX expression  */,
+}
+}
+}</T>
+const simpleMetrics = new Map<string, MetricData>()"
+export const recordMetric = (nam"
+e: "string",valu"
+e: "number",uni)"
+t: "MetricUnit = MetricUnit.Milliseconds) => {/* TOD",O: "Fix JSX expression  */,}
+} else { /* TODO: "Fix JSX expression  */,, }
+})
+}
+// Also record in the main performance monitoring service
+performanceMonitoring.recordCustomMetric(name, value, unit)"
+}"
+function getRating(nam)"
+e: "string",valu)"
+e: "number): 'good' | 'needs-improvement' | 'poor' {/* TOD",O: "Fix JSX expression  */,}
+r: "number ",}> = {/* TODO: "Fix JSX expression  */,}
 r: "3000 ",}"
-'LCP': {/* TODO: "Fix JSX expression */",}"
+'LCP': {/* TODO: "Fix JSX expression  */,}
 r: "4000 ",}"
-'FID': {/* TODO: "Fix JSX expression */",}"
+'FID': {/* TODO: "Fix JSX expression  */,}
 r: "300 ",}"
-'CLS': {/* TODO: "Fix JSX expression */",}"
+'CLS': {/* TODO: "Fix JSX expression  */,}
 r: "0.25 ",}"
-'TTFB': {/* TODO: "Fix JSX expression */",}"
+'TTFB': {/* TODO: "Fix JSX expression  */,}
 r: "1800 ",}"
-'INP': {/* TODO: "Fix JSX expression */",}"
+'INP': {/* TODO: "Fix JSX expression  */,}
 r: "500 ",}"
 }"
-const threshold = thresholds[name,];"
-if (!threshold) return 'good"</string>;"
-if (value <= threshold.good) return 'good''"
-if (value <= threshold.poor) return 'needs-improvement''"
+const threshold = thresholds[name,]
+if (!threshold) return 'good</string>
+if (value <= threshold.good) return 'good''
+if (value <= threshold.poor) return 'needs-improvement''
 return 'poor"
 }"
-export const getMetrics = (): Record<string, MetricData> => {/* TODO: "Fix JSX expression */",;}</string>;"
-result: "Record<string",MetricData> = {}"
-simpleMetrics.forEach((value, key) => {/* TODO: "Fix JSX expression */",}
+export const getMetrics = (): Record<string, MetricData> => {/* TODO: "Fix JSX expression  */,}</string>
+result: "Record<string",MetricData> = {}
+simpleMetrics.forEach((value, key) => {/* TODO: "Fix JSX expression  */,}
 result[key,] = { ...value }
-});"
+})"
 return, result"
 }"
-export const clearMetrics = (/* TODO: "Fix JSX expression */",) => {
-$3;
-};"
-}</string>;"
-export const measureFunction = <T>(nam;"
-e: "string",f);"
-n: "() => T): T = > {/* TOD",O: "Fix JSX expression */",};"
-}</T>;"
-export const measureAsyncFunction = async <T>(nam;"
-e: "string",f)</T>;"
-n: "() => Promise<T>): Promise<T> => {/* TOD",O: "Fix JSX expression */",}"
+export const clearMetrics = (/* TODO: "Fix JSX expression  */,) => {$3
+}
+}</string>
+export const measureFunction = <T>(nam"
+e: "string",f)"
+n: "() => T): T = > {/* TOD",O: "Fix JSX expression  */,}
+}</T>
+export const measureAsyncFunction = async <T>(nam"
+e: "string",f)</T>
+n: "() => Promise<T>): Promise<T> => {/* TOD",O: "Fix JSX expression  */,}
 }"
 export const getPerformanceScore = (): number => {"
-/* TODO: "Fix JSX expression */",
-;};"
-};"
-});"
-const sum = scores.reduce((a: "number",b: "number) => a + b",0);"
-return Math.round(sum / scores.length);"
-}"
-export const getRecommendations = (): string[] => {/* TODO: "Fix JSX expression */",}"
-}"
-if(metrics.LCP && metrics.LCP.rating !== 'good') {  /* TODO: "Fix JSX expression */",, , }"
-}"
-if(metrics.FID && metrics.FID.rating !== 'good') {  /* TODO: "Fix JSX expression */",, , }"
-}"
-if(metrics.CLS && metrics.CLS.rating !== 'good') {  /* TODO: "Fix JSX expression */",, , }"
-}"
-if(metrics.TTFB && metrics.TTFB.rating !== 'good') {  /* TODO: "Fix JSX expression */",, , ;}
-;}
-return recommendations;
-};"
-`</T>;"
-}"
-=======
-const scores = webVitals.map(metric => {);
-));
-switch (metric.rating) {;
-case 'good': return 100;
-case 'needs-improvement': return 50;
-case 'poor': return 0;
-if (webVitals.length = == 0) return, 0;
+/* TODO: "Fix JSX expression  */,
 }
-const scores = webVitals.map(metric => {);
-);
+}"
+})"
+const sum = scores.reduce((a: "number",b: "number) => a + b",0)"
+return Math.round(sum / scores.length)"
+}"
+export const getRecommendations = (): string[] => {/* TODO: "Fix JSX expression  */,}
+}"
+if(metrics.LCP && metrics.LCP.rating !== 'good') {/* TODO: "Fix JSX expression  */,, , }
+}"
+if(metrics.FID && metrics.FID.rating !== 'good') {/* TODO: "Fix JSX expression  */,, , }
+}"
+if(metrics.CLS && metrics.CLS.rating !== 'good') {/* TODO: "Fix JSX expression  */,, , }
+}"
+if(metrics.TTFB && metrics.TTFB.rating !== 'good') {  /* TODO: "Fix JSX expression  */,, , }
 }
-switch (metric.rating) {}'
-case 'good': return 100;
-case 'needs-improvement': return 50;'"
-case 'poor': return 0;"
+return recommendations
+}"
+`</T>
+}"
+const scores = webVitals.map(metric => {)
+))
+switch (metric.rating) {
+case 'good': return 100
+case 'needs-improvement': return 50
+case 'poor': return 0
+if (webVitals.length = == 0) return, 0
+}
+const scores = webVitals.map(metric => {)
+)
+}
+switch (metric.rating) {}
+case 'good': return 100
+case 'needs-improvement': return 50
+case 'poor': return 0"
 default: "return 0"}
 }"
-});"
-const sum = scores.reduce((a: "number",b: "number) => a + b",0);
+})"
+const sum = scores.reduce((a: "number",b: "number) => a + b",0)
 return Math.round(sum / scores.length)}
-export const getRecommendations = (): string[] => {}"
+export const getRecommendations = (): string[] => {}
 const metrics = getMetrics()"
-const recommendations: "string[] = [];'"
-if (metrics.FCP && metrics.FCP.rating !== 'good') {;"
-const recommendation",s: "string[] = [];"
-"
-  "}'
-if (metrics.FCP && metrics.FCP.rating !== 'good') {}'
+const recommendations: "string[] = []
+if (metrics.FCP && metrics.FCP.rating !== 'good') {"
+const recommendation",s: "string[] = []}
+if (metrics.FCP && metrics.FCP.rating !== 'good') {}
 recommendations.push('Improve FCP by optimizing critical CSS and reducing render-blocking resources')}
-}'
-if (metrics.LCP && metrics.LCP.rating !== 'good') {}'
+}
+if (metrics.LCP && metrics.LCP.rating !== 'good') {}
 recommendations.push('Improve LCP by optimizing largest images and server response time')}
-}'
-if (metrics.FID && metrics.FID.rating !== 'good') {}'
+}
+if (metrics.FID && metrics.FID.rating !== 'good') {}
 recommendations.push('Improve FID by reducing JavaScript execution time')}
-}'
-if (metrics.CLS && metrics.CLS.rating !== 'good') {}'
+}
+if (metrics.CLS && metrics.CLS.rating !== 'good') {}
 recommendations.push('Improve CLS by reserving space for dynamic content and avoiding layout shifts')}
-}'
-if (metrics.TTFB && metrics.TTFB.rating !== 'good') {}'
+}
+if (metrics.TTFB && metrics.TTFB.rating !== 'good') {}
 recommendations.push('Improve TTFB by optimizing server response time and using CDN')}
 }
-return, recommendations;"
+return, recommendations"
 }"
-export enum MetricUnit {/* TODO: "Fix JSX expression */"}
+export enum MetricUnit {/* TODO: "Fix JSX expression  */}
 }
-// Simple metrics structure for testing;"
+// Simple metrics structure for testing
 interface MetricData {"
-/* TODO: "Fix JSX expression */"}
+/* TODO: "Fix JSX expression  */}
 }
-}</>;
-const simpleMetrics = new Map<string, MetricData>();"
-export const recordMetric = (nam;"
-e: "string",valu;");"
-e: "number",uni);"
-t: "MetricUnit = MetricUnit.Milliseconds) => {/* TOD",O: "Fix JSX expression */"}"
-} else { /* TODO: "Fix JSX expression */"}
+}</>
+const simpleMetrics = new Map<string, MetricData>()"
+export const recordMetric = (nam"
+e: "string",valu")"
+e: "number",uni)"
+t: "MetricUnit = MetricUnit.Milliseconds) => {/* TOD",O: "Fix JSX expression  */}
+} else { /* TODO: "Fix JSX expression  */}
 })}
-// Also record in the main performance monitoring service;
-performanceMonitoring.recordCustomMetric(name, value, unit)}"
-function getRating(nam);"
-e: "string",valu);";'"
-e: "number): 'good' | 'needs-improvement' | 'poor' {/* TOD",O: "Fix JSX expression */"}"
-r: "number "}> = {/* TODO: "Fix JSX expression */"}"
-r: "3000 "}";'"
-'LCP': {/* TODO: "Fix JSX expression */"}"
-r: "4000 "}";'"
-'FID': {/* TODO: "Fix JSX expression */"}"
-r: "300 "}";'"
-'CLS': {/* TODO: "Fix JSX expression */"}"
-r: "0.25 "}";'"
-'TTFB': {/* TODO: "Fix JSX expression */"}"
-r: "1800 "}";'"
-'INP': {/* TODO: "Fix JSX expression */"}"
+// Also record in the main performance monitoring service
+performanceMonitoring.recordCustomMetric(name, value, unit)}
+function getRating(nam)"
+e: "string",valu)"
+e: "number): 'good' | 'needs-improvement' | 'poor' {/* TOD",O: "Fix JSX expression  */}
+r: "number "}> = {/* TODO: "Fix JSX expression  */}
+r: "3000 "}"
+'LCP': {/* TODO: "Fix JSX expression  */}
+r: "4000 "}"
+'FID': {/* TODO: "Fix JSX expression  */}
+r: "300 "}"
+'CLS': {/* TODO: "Fix JSX expression  */}
+r: "0.25 "}"
+'TTFB': {/* TODO: "Fix JSX expression  */}
+r: "1800 "}"
+'INP': {/* TODO: "Fix JSX expression  */}
 r: "500 "}
 }
-const threshold = thresholds[name];
-if (!threshold) return 'good'</>;
+const threshold = thresholds[name]
+if (!threshold) return 'good'</>
 if (value <= threshold.good) return 'good'
 if (value <= threshold.poor) return 'needs-improvement'
 return 'poor'
 }"
-export const getMetrics = (): Record<string, MetricData> => {/* TODO: "Fix JSX expression */"}</>"
-result: "Record<string",MetricData> = {}"
-simpleMetrics.forEach((value, key) => {/* TODO: "Fix JSX expression */"}
+export const getMetrics = (): Record<string, MetricData> => {/* TODO: "Fix JSX expression  */}</>
+result: "Record<string",MetricData> = {}
+simpleMetrics.forEach((value, key) => {/* TODO: "Fix JSX expression  */}
 result[key] = { ...value }
-});
-return, result;"
+})
+return, result"
 }"
-export const clearMetrics = (/* TODO: "Fix JSX expression */",) => {;
+export const clearMetrics = (/* TODO: "Fix JSX expression  */,) => {
 $3}
-}</>;"
-export const measureFunction = <T>(nam;");"
-e: "string",f);"
-n: "() => T): T = > {/* TOD",O: "Fix JSX expression */"}
-}</>;"
-export const measureAsyncFunction = async <T>(nam;");"
-e: "string",f)</>"
-n: "() => Promise<T>): Promise<T> => {/* TOD",O: "Fix JSX expression */"}
+}</>
+export const measureFunction = <T>(nam")"
+e: "string",f)"
+n: "() => T): T = > {/* TOD",O: "Fix JSX expression  */}
+}</>
+export const measureAsyncFunction = async <T>(nam")"
+e: "string",f)</>
+n: "() => Promise<T>): Promise<T> => {/* TOD",O: "Fix JSX expression  */}
 }"
 export const getPerformanceScore = (): number => {"
-/* TODO: "Fix JSX expression */"}
+/* TODO: "Fix JSX expression  */}
 }"
-});"
-const sum = scores.reduce((a: "number",b: "number) => a + b",0);"
-return Math.round(sum / scores.length)}"
-export const getRecommendations = (): string[] => {/* TODO: "Fix JSX expression */"}"
-}";'"
-if(metrics.LCP && metrics.LCP.rating !== 'good') {  /* TODO: "Fix JSX expression */",}"
-}";'"
-if(metrics.FID && metrics.FID.rating !== 'good') {  /* TODO: "Fix JSX expression */",}"
-}";'"
-if(metrics.CLS && metrics.CLS.rating !== 'good') {  /* TODO: "Fix JSX expression */",}"
-}";'"
-if(metrics.TTFB && metrics.TTFB.rating !== 'good') {  /* TODO: "Fix JSX expression */",, }
+})"
+const sum = scores.reduce((a: "number",b: "number) => a + b",0)"
+return Math.round(sum / scores.length)}
+export const getRecommendations = (): string[] => {/* TODO: "Fix JSX expression  */}
+}"
+if(metrics.LCP && metrics.LCP.rating !== 'good') {/* TODO: "Fix JSX expression  */,}
+}"
+if(metrics.FID && metrics.FID.rating !== 'good') {/* TODO: "Fix JSX expression  */,}
+}"
+if(metrics.CLS && metrics.CLS.rating !== 'good') {/* TODO: "Fix JSX expression  */,}
+}"
+if(metrics.TTFB && metrics.TTFB.rating !== 'good') {  /* TODO: "Fix JSX expression  */,, }
 }
 return recommendations}`
-`</>;"
-}";`'"
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
+`</>
+}";`'

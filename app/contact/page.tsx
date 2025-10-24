@@ -1,6 +1,19 @@
 'use client';
-import React from 'react';
+import React, { useState, useCallback } from 'react';
 import ContactForm from '../components/ContactForm';
+import SEOHead from '../components/SEOHead';
+
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
+}
+
+interface FormErrors {
+  name?: string;
+  email?: string;
+  message?: string;
+}
 
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
@@ -14,7 +27,6 @@ const ContactPage: React.FC = () => {
 
   const validateForm = useCallback((data: FormData): FormErrors => {
     const newErrors: FormErrors = {};
-    
     if (!data.name.trim()) {
       newErrors.name = 'Name is required';
     } else if (data.name.trim().length < 2) {
@@ -38,67 +50,60 @@ const ContactPage: React.FC = () => {
 
   const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+    setFormData(prev => ({ ...prev, [name]: value }));
     
     // Clear error when user starts typing
     if (errors[name as keyof FormErrors]) {
-      setErrors(prev => ({
-        ...prev,
-        [name]: undefined
-      }));
+      setErrors(prev => ({ ...prev, [name]: undefined }));
     }
   }, [errors]);
 
   const handleSubmit = useCallback(async (e: React.FormEvent) => {
     e.preventDefault();
     
-    const formErrors = validateForm(formData);
-    if (Object.keys(formErrors).length > 0) {
-      setErrors(formErrors);
+    const newErrors = validateForm(formData);
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
       return;
     }
     
     setIsSubmitting(true);
     setSubmitStatus('idle');
-    setErrors({});
-
+    
     try {
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      // Here you would typically send the data to your backend
-      console.log('Form submitted:', formData);
-      
+      await new Promise(resolve => setTimeout(resolve, 2000));
       setSubmitStatus('success');
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
-      console.error('Error submitting form:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
     }
   }, [formData, validateForm]);
 
-  const structuredData = useMemo(() => generateStructuredData({
-    '@type': 'LocalBusiness',
-    name: 'Zion Tech Group',
-    description: 'Leading provider of AI and IT solutions for modern businesses',
-    url: 'https://ziontechgroup.com/contact',
-    telephone: '+1-555-ZION-TECH',
-    email: 'contact@ziontechgroup.com',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: '123 Tech Street',
-      addressLocality: 'Innovation City',
-      addressRegion: 'IC',
-      postalCode: '12345',
-      addressCountry: 'US',
+  const structuredData = React.useMemo(() => ({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "description": "Leading provider of AI-powered solutions, cybersecurity, and digital transformation services",
+    "url": "https://ziontechgroup.com",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-555-ZION-TECH",
+      "contactType": "customer service",
+      "email": "contact@ziontechgroup.com"
     },
-    openingHours: ['Mo-Fr 09:00-17:00'],
-    priceRange: '$$',
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Tech Street",
+      "addressLocality": "Innovation City",
+      "addressRegion": "IC",
+      "postalCode": "12345",
+      "addressCountry": "US"
+    },
+    "openingHours": ["Mo-Fr 09:00-17:00"],
+    "priceRange": "$$"
   }), []);
 
   return (
@@ -110,7 +115,6 @@ const ContactPage: React.FC = () => {
         url="https://ziontechgroup.com/contact"
         structuredData={structuredData}
       />
-      
       <div className="min-h-screen bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center mb-12">
@@ -122,134 +126,62 @@ const ContactPage: React.FC = () => {
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-6">Get in Touch</h2>
-              <div className="space-y-4">
-                <div>
-                  <h3 className="text-lg font-medium text-gray-900">Email</h3>
-                  <p className="text-gray-600">contact@ziontechgroup.com</p>
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h2>
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                      <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900">Email</h3>
+                    <p className="text-gray-600">contact@ziontechgroup.com</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-lg font-medium text-gray-900">Phone</h3>
-                  <p className="text-gray-600">+1 (555) 123-4567</p>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                      <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900">Phone</h3>
+                    <p className="text-gray-600">+1-555-ZION-TECH</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-lg font-medium text-gray-900">Address</h3>
-                  <p className="text-gray-600">123 Tech Street, Innovation City, IC 12345</p>
-                </div>
-                <div>
-                  <h3 className="text-lg font-medium text-gray-900">Website</h3>
-                  <p className="text-gray-600">https://ziontechgroup.com</p>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                      <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900">Address</h3>
+                    <p className="text-gray-600">123 Tech Street, Innovation City, IC 12345</p>
+                  </div>
                 </div>
               </div>
             </div>
             
             <div>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-6">Send us a Message</h2>
-              
-              {submitStatus === 'success' && (
-                <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-md">
-                  <p className="text-green-800">Thank you for your message! We'll get back to you soon.</p>
-                </div>
-              )}
-              
-              {submitStatus === 'error' && (
-                <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-md">
-                  <p className="text-red-800">Sorry, there was an error sending your message. Please try again.</p>
-                </div>
-              )}
-              
-              <form onSubmit={handleSubmit} className="space-y-4" noValidate>
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                    Name *
-                  </label>
-                  <input
-                    id="name"
-                    name="name"
-                    type="text"
-                    required
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
-                      errors.name ? 'border-red-300 bg-red-50' : 'border-gray-300'
-                    }`}
-                    placeholder="Your full name"
-                    aria-invalid={!!errors.name}
-                    aria-describedby={errors.name ? 'name-error' : undefined}
-                  />
-                  {errors.name && (
-                    <p id="name-error" className="mt-1 text-sm text-red-600" role="alert">
-                      {errors.name}
-                    </p>
-                  )}
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email *
-                  </label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    required
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
-                      errors.email ? 'border-red-300 bg-red-50' : 'border-gray-300'
-                    }`}
-                    placeholder="your.email@example.com"
-                    aria-invalid={!!errors.email}
-                    aria-describedby={errors.email ? 'email-error' : undefined}
-                  />
-                  {errors.email && (
-                    <p id="email-error" className="mt-1 text-sm text-red-600" role="alert">
-                      {errors.email}
-                    </p>
-                  )}
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Message *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    required
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
-                      errors.message ? 'border-red-300 bg-red-50' : 'border-gray-300'
-                    }`}
-                    placeholder="Tell us about your project or how we can help..."
-                    aria-invalid={!!errors.message}
-                    aria-describedby={errors.message ? 'message-error' : undefined}
-                  ></textarea>
-                  {errors.message && (
-                    <p id="message-error" className="mt-1 text-sm text-red-600" role="alert">
-                      {errors.message}
-                    </p>
-                  )}
-                </div>
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors font-medium"
-                  aria-describedby={submitStatus === 'error' ? 'submit-error' : undefined}
-                >
-                  {isSubmitting ? (
-                    <>
-                      <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                      </svg>
-                      Sending...
-                    </>
-                  ) : (
-                    'Send Message'
-                  )}
-                </button>
-              </form>
+              <ContactForm
+                formData={formData}
+                errors={errors}
+                isSubmitting={isSubmitting}
+                submitStatus={submitStatus}
+                onInputChange={handleInputChange}
+                onSubmit={handleSubmit}
+              />
             </div>
           </div>
         </div>

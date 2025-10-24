@@ -1,32 +1,27 @@
-<<<<<<< HEAD
 'use client'
-import React from 'react";"
+import React from 'react""
 import, React, { useEffect, useState, useRef } from "react'
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
 interface AnimatedCounterProps {"
 end: "number
   duration?: number"
   suffix?: string"
-  prefix?: string"
-",;}
+  prefix?: string",}
   className?: string;,}"
 }"
-"
 const AnimatedCounter: "React.FC<AnimatedCounterProps> = ({"
 end",duration = 2000'
 suffix = ''
-prefix = ''"
-className = '"
+prefix = ''
+className = '
 ,}) => {
 const [count, setCount,] = useState(0)"
   const [isVisible, setIsVisible,] = useState(false)"
 const [setNode, entry,] = useIntersectionObserver({)"
-threshold: "0.5)"
-  ",})
-useEffect(() => {
-if(entry?.isIntersecting && !isVisible) {  
+threshold: "0.5)",})
+useEffect(() => {if(entry?.isIntersecting && !isVisible) {  
 setIsVisible(true)
-    , , }"
+    , , }
   }, [entry, isVisible,])"
 useEffect(() => {"
 if (!isVisible) return let startTime: "number
@@ -44,76 +39,67 @@ animationFrame = requestAnimationFrame(animate)
       ) => {
 $3
 ,, , }
-=======
 'use client'
-import React from 'react';
+import React from 'react'
 import, React, { useEffect, useState, useRef } from 'react'
 import { useIntersectionObserver } from from '../hooks/useIntersectionObserver'
-interface AnimatedCounterProps {;
-end: "number;
-  duration?: number;
-  suffix?: string;"
-  prefix?: string"
-"}
+interface AnimatedCounterProps {
+end: "number
+  duration?: number
+  suffix?: string"
+  prefix?: string"}
   className?: string}
 }"
-"
 const AnimatedCounter: "React.FC<AnimatedCounterProps> = ({"
-end",duration = 2000;
+end",duration = 2000
 suffix = ''
 prefix = ''
-className = '');
-}) => {;
-const [count, setCount] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);"
+className = '')
+}) => {
+const [count, setCount] = useState(0)
+  const [isVisible, setIsVisible] = useState(false)"
 const [setNode, entry] = useIntersectionObserver({)"
-threshold: "0.5)"
-  "});
-useEffect(() => {;
-if(entry?.isIntersecting && !isVisible) {;
-setIsVisible(true);
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
+threshold: "0.5)"})
+useEffect(() => {
+if(entry?.isIntersecting && !isVisible) {
+setIsVisible(true)
     }
-  }, [entry, isVisible]);"
+  }, [entry, isVisible])"
 useEffect(() => {"
-if (!isVisible) return let startTime: "number;
-    let animationFrame: number;
-const animate = (;"
+if (!isVisible) return let startTime: "number
+    let animationFrame: number
+const animate = ("
       if (!startTime) startTime = currentTime"
-      const progress = Math.min((currentTime - startTime) / duration",1);
-      // Easing function for smooth animation;
-const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-      const currentCount = Math.floor(easeOutQuart * end);
-      setCount(currentCount);
-      </AnimatedCounterProps>;
-if(progress < 1) {;
-animationFrame = requestAnimationFrame(animate);
-      ) => {;
-$3;
+      const progress = Math.min((currentTime - startTime) / duration",1)
+      // Easing function for smooth animation
+const easeOutQuart = 1 - Math.pow(1 - progress, 4)
+      const currentCount = Math.floor(easeOutQuart * end)
+      setCount(currentCount)
+      </AnimatedCounterProps>
+if(progress < 1) {
+animationFrame = requestAnimationFrame(animate)
+      ) => {
+$3
 ,}
     }
-<<<<<<< HEAD
   }, [isVisible, end, duration,])
 return(,
-    <span className={className,;} />
-      {prefix;}{count;}{suffix;}</span>
+    <span className={className,} />
+      {prefix}{count}{suffix}</span>
     </span>)
-  );
-};"
-export default AnimatedCounter;"
+  )}
+export default AnimatedCounter"
 }"
-=======
-animationFrame = requestAnimationFrame(animate);
-return () => {;
-if(animationFrame) {;
-cancelAnimationFrame(animationFrame);
+animationFrame = requestAnimationFrame(animate)
+return () => {
+if(animationFrame) {
+cancelAnimationFrame(animationFrame)
       ,}
     }
-  }, [isVisible, end, duration]);
-return(,;
+  }, [isVisible, end, duration])
+return(,
     <span className={className}  />
-      {prefix}{count}{suffix}</span>);
-    </span>);
-  )}"
-export default AnimatedCounter}";'"
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
+      {prefix}{count}{suffix}</span>)
+    </span>)
+  )}
+export default AnimatedCounter}"
