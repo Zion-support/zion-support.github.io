@@ -58,8 +58,4 @@ const PerformanceOptimizer: React.FC = () => {
   return null;
 };
 
-const PerformanceOptimizer = () => {
-  return (<></>);
-};
-
 export default PerformanceOptimizer;
