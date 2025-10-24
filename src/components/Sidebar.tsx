@@ -47,7 +47,10 @@ const benefits = ["Increase efficiency by up to 50%"
   ]
 return(:all-pages-backup/components/Sidebar.tsx <>
 
-  </>
+interface SidebarProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
       <Helmet>;</Helmet> <>
 

@@ -80,3 +80,13 @@ go wrong! 🤖
   ) "}
 export default resizeCanvas
 }
+
+export const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ className = '', children }) => {
+  return (
+    <div className={`futuristicbackground ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default FuturisticBackground;

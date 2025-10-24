@@ -80,3 +80,13 @@ go wrong! 🤖
   ) "}
 export default preloadCriticalResources
 }
+
+export const EnhancedPerformanceOptimizer: React.FC<EnhancedPerformanceOptimizerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`enhancedperformanceoptimizer ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default EnhancedPerformanceOptimizer;

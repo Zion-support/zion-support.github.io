@@ -24,7 +24,17 @@ This page is under development. Please check back soon for more information abou
   )
   )
 
+interface PageOptimizedProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export default Page
-}
+export const PageOptimized: React.FC<PageOptimizedProps> = ({ className = '', children }) => {
+  return (
+    <div className={`pageoptimized ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default PageOptimized;

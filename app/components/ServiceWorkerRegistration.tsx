@@ -42,3 +42,4 @@ export default ServiceWorkerRegistrationPage
             </div>
 }
 
+export default ServiceWorkerRegistration;

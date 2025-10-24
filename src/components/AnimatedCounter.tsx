@@ -1,10 +1,8 @@
 import, React, { useEffect, useState, useRef } from "react"
 import { useIntersectionObserver  } from "../hooks/useIntersectionObserver";
 interface AnimatedCounterProps {
-:all-pages-backup/components/AnimatedCounter.tsx
-className?: string
-}
-}
+  className?: string;
+  children?: React.ReactNode;
 }
 
 const AnimatedCounter: "React.FC<AnimatedCounterProps> = ({

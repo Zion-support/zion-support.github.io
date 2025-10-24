@@ -162,5 +162,13 @@ Contact Sales</button>
 export default ServiceCardSkeletonPage
   )
 }
-export default ServiceCardSkeletonPage
-}
+
+export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ className = '', children }) => {
+  return (
+    <div className={`servicecardskeleton ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default ServiceCardSkeleton;

@@ -39,6 +39,12 @@ return (<Helmet>;</Helmet>
   )
 }
 
-export default PerformanceImagePage
-export default PerformanceImagePage
-}
+export const PerformanceImage: React.FC<PerformanceImageProps> = ({ className = '', children }) => {
+  return (
+    <div className={`PerformanceImage ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default PerformanceImage;

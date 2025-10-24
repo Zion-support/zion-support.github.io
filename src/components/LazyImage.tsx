@@ -177,5 +177,13 @@ export default LazyImagePage
     </>
   )
 }
-export default LazyImagePage
-}
+
+export const LazyImage: React.FC<LazyImageProps> = ({ className = '', children }) => {
+  return (
+    <div className={`lazyimage ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default LazyImage;

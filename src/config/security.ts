@@ -1,4 +1,4 @@
-interface SecurityConfig {
+// Configuration for security
 
 enableCSP: "boolean
   enableHSTS: boolean

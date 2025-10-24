@@ -84,3 +84,4 @@ export default getVariantStyles
     </div>
 }
 
+export default FuturisticCard;

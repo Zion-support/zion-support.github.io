@@ -126,7 +126,4 @@ export default NewsletterSignup
 }
   }
 
-return, content
-}
-export default NewsletterSignup
-}
+export default NewsletterSignup;

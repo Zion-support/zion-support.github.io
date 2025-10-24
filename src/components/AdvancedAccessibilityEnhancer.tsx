@@ -7,18 +7,8 @@ import { BarChart, Brain, TrendingUp, Target   } from "lucide-react";
 import { Navigation  } from "./Navigation";
 import, React, { useEffect, useState, useCallback } from "react"
 interface AdvancedAccessibilityEnhancerProps {
-enableKeyboardNavigation?: boolean
-enableScreenReader?: boolean
-enableHighContrast?: boolean
-enableFocusManagement?: boolean
-enableARIALabels?: boolean
-enableSkipLinks?: boolean
-enableColorContrast?: boolean
-enableMotionReduction?: boolean
-enableFontScaling?: boolean
-enableVoiceNavigation?: boolean
-}
-}
+  className?: string;
+  children?: React.ReactNode;
 }
 
 :all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx

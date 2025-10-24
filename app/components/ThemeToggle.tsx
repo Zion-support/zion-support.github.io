@@ -20,3 +20,13 @@ Contact Us</Link> <ArrowRight className="w-5 h-5 ml-2" />
     </div>
     </div>
 }
+
+export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '', children }) => {
+  return (
+    <div className={`themetoggle ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default ThemeToggle;

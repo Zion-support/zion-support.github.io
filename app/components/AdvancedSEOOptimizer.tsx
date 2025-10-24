@@ -1,8 +1,8 @@
 "use client"
 import React from "react";
 interface AdvancedSEOOptimizerProps {
-className?: string
-}
+  className?: string;
+  children?: React.ReactNode;
 }
 
 const AdvancedSEOOptimizer: "React.FC<AdvancedSEOOptimizerProps> = ({ className "}) => {
@@ -15,4 +15,4 @@ const AdvancedSEOOptimizer: "React.FC<AdvancedSEOOptimizerProps> = ({ className 
   )
 }
 
-export default AdvancedSEOOptimizer
+export default AdvancedSEOOptimizer;

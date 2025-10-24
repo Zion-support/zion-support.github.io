@@ -1,15 +1,14 @@
 export interface Service {
-  id: string
-  title: string
-  description: string
-  features: string[]
-  benefits: string[]
+  id: string;
+  title: string;
+  description: string;
+  features: string[];
+  benefits: string[];
   pricing: {
-    basic: string
-    pro: string
-    enterprise: string
-  }
-
+    basic: string;
+    pro: string;
+    enterprise: string;
+  };
   contactInfo: {
     website: string
     email: string
@@ -57,6 +56,7 @@ export const aiServices: Service[] = [{
     popular: true
     category: "ai"
   }
+];
 
   {
     id: "ai-automation"
@@ -158,6 +158,7 @@ export const itServices: Service[] = [{
     popular: true
     category: "it"
   }
+];
 
   {
     id: "cloud-infrastructure"
@@ -233,7 +234,7 @@ export const servicesData = {
   itServices
   itSolutions: itServices, //Add alias for itSolutions
   allServices
-}
+};
 
 export const getServiceById = (id: string): Service|undefined => {
   return allServices.find(service => service.id === id)
@@ -244,5 +245,5 @@ export const getServicesByCategory = (category: Service["category"]): Service[] 
 }
 
 export const getPopularServices = (): Service[] => {
-  return allServices.filter(service => service.popular)
-}
+  return allServices.filter(service => service.popular);
+};

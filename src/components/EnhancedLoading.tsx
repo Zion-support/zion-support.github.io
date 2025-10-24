@@ -160,11 +160,13 @@ Contact Sales</button>
   )"}
   )
 }
-export default EnhancedLoadingPage
-  )
-}
-export default EnhancedLoadingPage
-  )
-{}
-export default EnhancedLoadingPage
-}
+
+export const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({ className = '', children }) => {
+  return (
+    <div className={`enhancedloading ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default EnhancedLoading;

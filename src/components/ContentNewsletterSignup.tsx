@@ -16,5 +16,12 @@ return (</ContentNewsletterSignupProps>
   )
 }
 
-export default ContentNewsletterSignup
-}
+export const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ className = '', children }) => {
+  return (
+    <div className={`contentnewslettersignup ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default ContentNewsletterSignup;

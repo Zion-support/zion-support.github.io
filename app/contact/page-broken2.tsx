@@ -33,4 +33,12 @@ const WorkingPage = () => {
     </>)
   )
 
-export default WorkingPage
+export const PageBroken2: React.FC<PageBroken2Props> = ({ className = '', children }) => {
+  return (
+    <div className={`pagebroken2 ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default PageBroken2;

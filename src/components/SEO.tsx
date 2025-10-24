@@ -16,5 +16,12 @@ return (</SEOProps>
   )
 }
 
-export default SEO
-}
+export const SEO: React.FC<SEOProps> = ({ className = '', children }) => {
+  return (
+    <div className={`seo ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default SEO;

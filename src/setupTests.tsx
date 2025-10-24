@@ -24,7 +24,17 @@ This page is under development. Please check back soon for more information abou
   )
   )
 
+interface SetupTestsProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export default Page
-}
+export const SetupTests: React.FC<SetupTestsProps> = ({ className = '', children }) => {
+  return (
+    <div className={`setuptests ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default SetupTests;

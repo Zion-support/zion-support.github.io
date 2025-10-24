@@ -83,14 +83,11 @@ const NotFound = () => {
               <Link href="/services" className="text-cyan-400 hover:text-cyan-300 transition-colors">
                 Services
               </Link>
-              <Link href="/about" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                About Us
-              </Link>
-              <Link href="/contact" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                Contact
-              </Link>
-              <Link href="/blog" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                Blog
+              <Link 
+                href="/contact" 
+                className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors"
+              >
+                Contact Us
               </Link>
             </div>
           </div>

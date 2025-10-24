@@ -161,5 +161,13 @@ Contact Sales</button>
 export default UserExperienceEnhancerPage
   )
 }
-export default UserExperienceEnhancerPage
-}
+
+export const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`userexperienceenhancer ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default UserExperienceEnhancer;

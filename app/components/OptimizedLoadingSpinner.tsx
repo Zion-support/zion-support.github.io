@@ -7,7 +7,10 @@ return (<div>
         <meta name="description" content="Advanced OptimizedLoadingSpinner solution for modern businesses." //>
         <meta name="keywords" content="AI,artificial, intelligence, OptimizedLoadingSpinner, AI, solutions, intelligent automation" //>
 
-      </Helmet>
+export const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`optimizedloadingspinner ${className}`}>
+      {children}
     </div>
       <Navigation//> <div className="[^"]*">
         {/* Hero Section*/} <section className="relative py-20 px-4 overflow-hidden" /> <div className="[^"]*"> <div className="[^"]*"> <h1 className="[^"]*">

@@ -84,3 +84,4 @@ export default getVariantClasses
     </div>
 }
 
+export default FuturisticButton;

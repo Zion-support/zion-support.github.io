@@ -29,5 +29,12 @@ return (</PerformanceDashboardProps>
   )
 }
 
-export default PerformanceDashboard
-}
+export const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({ className = '', children }) => {
+  return (
+    <div className={`performancedashboard ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default PerformanceDashboard;

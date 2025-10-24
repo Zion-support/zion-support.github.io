@@ -252,5 +252,4 @@ return(<>",<div className="bg-wh iterounded-lg shadow-md p-6 animate-pulse" />
     </>)
   )
 
-export default PageLoader
-}
+export default LoadingStates;

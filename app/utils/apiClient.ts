@@ -1,6 +1,4 @@
-interface ApiResponse<T = any> {
-data: "T
-  statu",s: "number
+// Utility functions for apiClient
 
 message?: string "}
 

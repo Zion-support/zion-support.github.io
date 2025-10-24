@@ -2,14 +2,21 @@
 import React from "react";
 import, React, { useState, useCallback } from "react"
 interface ImageProps {
-
-
+  className?: string;
+  children?: React.ReactNode;
 }
 }
 :all-pages-backup/utils/image.tsx
 src: "string",{alt: "string"}
 interface ImageProps {
 
+export const Image: React.FC<ImageProps> = ({ className = '', children }) => {
+  return (
+    <div className={`image ${className}`}>
+      {children}
+    </div>
+  );
+};
 
 }
 }

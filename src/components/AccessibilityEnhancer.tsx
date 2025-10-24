@@ -3,7 +3,17 @@
 "use client"
 import, React, { useEffect } from "react"
 interface AccessibilityEnhancerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
+export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`accessibilityenhancer ${className}`}>
+      {children}
+    </div>
+  );
+};
 
 }
 children: "React.ReactNode"}

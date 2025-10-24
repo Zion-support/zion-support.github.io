@@ -147,10 +147,12 @@ Contact Us</Link> <ArrowRight className="ml-2 h-4 w-4" />
   )
 }
 
-:all-pages-backup/components/AdvancedPerformanceMonitor.tsx
-export default AdvancedPerformanceMonitorPage
-  )}
+export const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({ className = '', children }) => {
+  return (
+    <div className={`advancedperformancemonitor ${className}`}>
+      {children}
+    </div>
+  );
+};
 
-export default Ai3; dGenerationPage
-export default AdvancedPerformanceMonitorPage
-}
+export default AdvancedPerformanceMonitor;

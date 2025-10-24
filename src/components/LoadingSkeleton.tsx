@@ -161,5 +161,13 @@ Contact Sales</button>
 export default LoadingSkeletonPage
   )
 }
-export default LoadingSkeletonPage
-}
+
+export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({ className = '', children }) => {
+  return (
+    <div className={`loadingskeleton ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default LoadingSkeleton;

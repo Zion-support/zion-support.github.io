@@ -229,7 +229,6 @@ Get In Touch
 r: text-white transition-all duration-300 flex items-center justify-center gap-2" />
 View Our Services</Link> <ArrowRightIcon className="w-5 h-5" />
               </Link>
-
             </div>
           </div>
         </div>

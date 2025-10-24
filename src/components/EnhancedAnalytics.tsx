@@ -80,3 +80,13 @@ go wrong! 🤖
   ) "}
 export default useAnalytics
 }
+
+export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({ className = '', children }) => {
+  return (
+    <div className={`enhancedanalytics ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default EnhancedAnalytics;

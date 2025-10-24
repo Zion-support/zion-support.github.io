@@ -7,7 +7,10 @@ return (<div>
         <meta name="description" content="Advanced ErrorHandler solution for modern businesses." //>
         <meta name="keywords" content="AI,artificial, intelligence, ErrorHandler, AI, solutions, intelligent automation" //>
 
-      </Helmet>
+export const ErrorHandler: React.FC<ErrorHandlerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`errorhandler ${className}`}>
+      {children}
     </div>
       <Navigation//> <div className="[^"]*">
         {/* Hero Section*/} <section className="relative py-20 px-4 overflow-hidden" /> <div className="[^"]*"> <div className="[^"]*"> <h1 className="[^"]*">

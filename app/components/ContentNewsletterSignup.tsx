@@ -10,11 +10,8 @@ import { ArrowRight  } from "lucide-react";
 import React, { useState } from "react"
 import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap   } from "lucide-react";
 interface ContentNewsletterSignupProps {
-title?: string
-subtitle?: string
-placeholder?: string
-buttonText?: string
-features?: Array<{
+  className?: string;
+  children?: React.ReactNode;
 }
 }
     icon: "React.ComponentType<{ className?: string "}>

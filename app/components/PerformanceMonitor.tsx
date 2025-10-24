@@ -83,3 +83,13 @@ go wrong! 🤖
 export default monitorCoreWebVitals
     </div>
 }
+
+export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ className = '', children }) => {
+  return (
+    <div className={`performancemonitor ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default PerformanceMonitor;

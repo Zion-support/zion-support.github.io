@@ -84,3 +84,4 @@ export default checkInstalled
     </div>
 }
 
+export default PWAInstaller;

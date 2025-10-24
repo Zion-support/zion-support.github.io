@@ -20,3 +20,13 @@ Contact Us</Link> <ArrowRight className="w-5 h-5 ml-2" />
     </div>
     </div>
 }
+
+export const LoadingOptimizer: React.FC<LoadingOptimizerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`loadingoptimizer ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default LoadingOptimizer;

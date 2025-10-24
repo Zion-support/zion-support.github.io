@@ -211,4 +211,12 @@ Error Details (Development)</summary>
                 <pre className=&quot;text-xs text-red-300 bg-black/20 p-3 rounded overflow-auto&quot; //>
                   {this.state.error.toString()
 
-}}}
+export const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className = '', children }) => {
+  return (
+    <div className={`enhancederrorboundary ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default EnhancedErrorBoundary;

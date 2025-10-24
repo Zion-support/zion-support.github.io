@@ -1,18 +1,8 @@
 "use client"
 import React, { useState, useEffect } from "react"
 interface AdvancedAccessibilityEnhancerProps {
-className?: string
-  enableKeyboardNavigation?: boolean
-  enableScreenReader?: boolean
-  enableHighContrast?: boolean
-  enableFocusManagement?: boolean
-  enableARIALabels?: boolean
-  enableSkipLinks?: boolean
-  enableColorContrast?: boolean
-  enableMotionReduction?: boolean
-  enableFontScaling?: boolean
-  enableVoiceNavigation?: boolean
-}
+  className?: string;
+  children?: React.ReactNode;
 }
 
 const AdvancedAccessibilityEnhancer: "React.FC<AdvancedAccessibilityEnhancerProps> = ({
@@ -81,4 +71,4 @@ const AdvancedAccessibilityEnhancer: "React.FC<AdvancedAccessibilityEnhancerProp
   )
 }
 
-export default AdvancedAccessibilityEnhancer
+export default AdvancedAccessibilityEnhancer;

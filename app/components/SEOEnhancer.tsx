@@ -26,7 +26,13 @@ Get Started</button> <ArrowRight className="ml-2 h-5 w-5" />
 r: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" />
 Learn More</button>
 
-              </button>
+export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`seoenhancer ${className}`}>
+      {children}
+    </div>
+  );
+};
 
         </section>,{/* Features Section*/} <section className="py-20 px-4" /> <div className="[^"]*"> <div className="[^"]*">
     <h1 className="text-4 xl font-bold text-white mb-4">Key Features</h2> <p className="[^"]*">

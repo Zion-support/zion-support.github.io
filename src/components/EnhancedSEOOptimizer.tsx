@@ -99,6 +99,12 @@ Start Your Journey</button> <ArrowRight className="w-8 h-8" />
   )
 }
 
+export const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`enhancedseooptimizer ${className}`}>
+      {children}
+    </div>
+  );
+};
 
-export default EnhancedSEOOptimizerPage
-}
+export default EnhancedSEOOptimizer;

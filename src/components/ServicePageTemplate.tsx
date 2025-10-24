@@ -39,6 +39,12 @@ return (<Helmet>;</Helmet>
   )
 }
 
-export default ServicePageTemplatePage
-export default ServicePageTemplatePage
-}
+export const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({ className = '', children }) => {
+  return (
+    <div className={`ServicePageTemplate ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default ServicePageTemplate;

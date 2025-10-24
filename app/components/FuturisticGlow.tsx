@@ -83,3 +83,13 @@ go wrong! 🤖
 export default getIntensityValue
     </div>
 }
+
+export const FuturisticGlow: React.FC<FuturisticGlowProps> = ({ className = '', children }) => {
+  return (
+    <div className={`futuristicglow ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default FuturisticGlow;

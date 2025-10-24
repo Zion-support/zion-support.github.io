@@ -174,5 +174,5 @@ export default function ServicePage() {
         <Footer />
       </div>
     </>
-  )
+  );
 }

@@ -161,5 +161,13 @@ Contact Sales</button>
 export default LoadingPage
   )
 }
-export default LoadingPage
-}
+
+export const Loading: React.FC<LoadingProps> = ({ className = '', children }) => {
+  return (
+    <div className={`loading ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default Loading;

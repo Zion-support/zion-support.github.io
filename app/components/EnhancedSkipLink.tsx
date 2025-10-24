@@ -7,7 +7,10 @@ return (<div>
         <meta name="description" content="Advanced EnhancedSkipLink solution for modern businesses." //>
         <meta name="keywords" content="AI,artificial, intelligence, EnhancedSkipLink, AI, solutions, intelligent automation" //>
 
-      </Helmet>
+export const EnhancedSkipLink: React.FC<EnhancedSkipLinkProps> = ({ className = '', children }) => {
+  return (
+    <div className={`enhancedskiplink ${className}`}>
+      {children}
     </div>
       <Navigation//> <div className="[^"]*">
         {/* Hero Section*/} <section className="relative py-20 px-4 overflow-hidden" /> <div className="[^"]*"> <div className="[^"]*"> <h1 className="[^"]*">

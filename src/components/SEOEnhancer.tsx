@@ -19,5 +19,12 @@ return (</SEOEnhancerProps>
   )
 }
 
-export default SEOEnhancer
-}
+export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`seoenhancer ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default SEOEnhancer;

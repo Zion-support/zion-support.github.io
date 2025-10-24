@@ -1,4 +1,5 @@
-import, React, { useEffect } from &quot;react&quot
+import React from 'react';
+
 interface AnalyticsProps {
 className?: string
 }

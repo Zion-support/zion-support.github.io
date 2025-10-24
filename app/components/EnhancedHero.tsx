@@ -41,3 +41,12 @@ export default EnhancedHero;    "Gain competitive advantage with advanced techno
 }
 }
 
+export const EnhancedHero: React.FC<EnhancedHeroProps> = ({ className = '', children }) => {
+  return (
+    <div className={`enhancedhero ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default EnhancedHero;

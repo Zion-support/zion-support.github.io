@@ -20,3 +20,13 @@ Contact Us</Link> <ArrowRight className="w-5 h-5 ml-2" />
     </div>
     </div>
 }
+
+export const GenericServicePage: React.FC<GenericServicePageProps> = ({ className = '', children }) => {
+  return (
+    <div className={`genericservicepage ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default GenericServicePage;

@@ -86,12 +86,12 @@ return (</string>
   )
 }
 
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ className = '', children }) => {
+  return (
+    <div className={`analyticsprovider ${className}`}>
+      {children}
+    </div>
+  );
+};
 
-export default AnalyticsProvider
-  )
-:all-pages-backup/components/AnalyticsProvider.tsx
-{}
-export default AnalyticsProviderPage
-}
-export default AnalyticsProviderPage
-}
+export default AnalyticsProvider;

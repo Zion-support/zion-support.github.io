@@ -16,5 +16,12 @@ return (</StructuredDataProps>
   )
 }
 
+export const StructuredData: React.FC<StructuredDataProps> = ({ className = '', children }) => {
+  return (
+    <div className={`structureddata ${className}`}>
+      {children}
+    </div>
+  );
+};
 
-export default StructuredData
+export default StructuredData;

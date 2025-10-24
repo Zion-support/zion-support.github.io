@@ -7,7 +7,10 @@ return (<div>
         <meta name="description" content="Advanced DynamicContentShowcase solution for modern businesses." //>
         <meta name="keywords" content="AI,artificial, intelligence, DynamicContentShowcase, AI, solutions, intelligent automation" //>
 
-      </Helmet>
+export const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({ className = '', children }) => {
+  return (
+    <div className={`dynamiccontentshowcase ${className}`}>
+      {children}
     </div>
       <Navigation//> <div className="[^"]*">
         {/* Hero Section*/} <section className="relative py-20 px-4 overflow-hidden" /> <div className="[^"]*"> <div className="[^"]*"> <h1 className="[^"]*">

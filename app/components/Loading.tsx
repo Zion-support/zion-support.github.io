@@ -71,4 +71,4 @@ const Loading: React.FC<LoadingProps> = ({ size = "md", className="" }) => {
   )
 }
 
-export default Loading
+export default Loading;

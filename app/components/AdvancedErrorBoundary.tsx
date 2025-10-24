@@ -81,4 +81,12 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
   }
 }
 
-export default AdvancedErrorBoundary
+export const AdvancedErrorBoundary: React.FC<AdvancedErrorBoundaryProps> = ({ className = '', children }) => {
+  return (
+    <div className={`advancederrorboundary ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default AdvancedErrorBoundary;
