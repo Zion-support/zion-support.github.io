@@ -30,15 +30,6 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
   }
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
-    const errorReport: ErrorReport = {
-      errorId: this.state.errorId || this.generateErrorId(),
-      error,
-      errorInfo,
-      timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent,
-      url: window.location.href
-    };
-
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
       console.error('Error Boundary caught an error:', error, errorInfo);
