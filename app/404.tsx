@@ -3,10 +3,11 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw ;} from 'lucide-react';
+import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from 'lucide-react';
 
-const NotFound = (
-  return(<>
+const NotFound = () => {
+  return (
+    <>
       <Head>
         <title>404 - Page Not Found | Zion Tech Group</title>
         <meta name="robots" content="noindex, nofollow" />

@@ -1,29 +1,57 @@
 'use client';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowRight     ;} from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+
 export default function CookieConsent() {
+  const [showConsent, setShowConsent] = useState(false);
 
-return(<div />,
-    <divclassName = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20" />,
-    <divclassName="max-w-7 xl mx-auto px-4 sm: px-6 lg:px-8 py-16 text-center" />,<h1className="text-4 xl font-bold text-white mb-6" / />
-Service</h1>
-          </h1>
-          <pclassName="text-lg text-gray-300 mb-8" / />
-Professional service services coming soon.</p>
+  useEffect(() => {
+    const consent = localStorage.getItem('cookie-consent');
+    if (!consent) {
+      setShowConsent(true);
+    }
+  }, []);
+
+  const handleAccept = () => {
+    localStorage.setItem('cookie-consent', 'accepted');
+    setShowConsent(false);
+  };
+
+  const handleDecline = () => {
+    localStorage.setItem('cookie-consent', 'declined');
+    setShowConsent(false);
+  };
+
+  if (!showConsent) return null;
+
+  return (
+    <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 z-50">
+      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="text-sm text-gray-600">
+          <p>
+            We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.{' '}
+            <Link href="/privacy" className="text-blue-600 hover:text-blue-800 underline">
+              Learn more
+            </Link>
           </p>
-          <Linkhref="/contact"
-className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover: "from-cyan-600 hove","
-r: to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit" />
-Contact Us</Link>
-            <ArrowRightclassName="w-5 h-5 ml-2" / />
-
-          </Link>
-)
-  )
-,
-;}
+        </div>
+        <div className="flex gap-2">
+          <button
+            onClick={handleDecline}
+            className="px-4 py-2 text-sm text-gray-600 hover:text-gray-800 border border-gray-300 rounded-md hover:bg-gray-50"
+          >
+            Decline
+          </button>
+          <button
+            onClick={handleAccept}
+            className="px-4 py-2 text-sm bg-blue-600 text-white rounded-md hover:bg-blue-700 flex items-center"
+          >
+            Accept
+            <ArrowRight className="w-4 h-4 ml-1" />
+          </button>
+        </div>
+      </div>
     </div>
-    </div>
-    </div>;
-};
+  );
+}

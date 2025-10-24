@@ -2,9 +2,9 @@
 import React from 'react';
 import { useRouter } from 'next/navigation';
 
-import, React, { Suspense, lazy } from 'react';
-import { BrowserRouter, Routes, Route ;} from 'react-router-dom';
-import { HelmetProvider ;} from 'react-helmet-async';
+import React, { Suspense, lazy } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';

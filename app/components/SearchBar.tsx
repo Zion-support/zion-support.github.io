@@ -1,29 +1,53 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight     ;} from 'lucide-react';
+import { ArrowRight, Search } from 'lucide-react';
+
 export default function SearchBar() {
+  const [query, setQuery] = useState('');
+  const [isOpen, setIsOpen] = useState(false);
 
-return(<div />,
-    <divclassName = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20" />,
-    <divclassName="max-w-7 xl mx-auto px-4 sm: px-6 lg:px-8 py-16 text-center" />,<h1className="text-4 xl font-bold text-white mb-6" / />
-Service</h1>
-          </h1>
-          <pclassName="text-lg text-gray-300 mb-8" / />
-Professional service services coming soon.</p>
-          </p>
-          <Linkhref="/contact"
-className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover: "from-cyan-600 hove","
-r: to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit" />
-Contact Us</Link>
-            <ArrowRightclassName="w-5 h-5 ml-2" / />
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (query.trim()) {
+      // Handle search logic here
+      console.log('Searching for:', query);
+    }
+  };
 
-          </Link>
-)
-  )
-,
-;}
+  return (
+    <div className="relative">
+      <form onSubmit={handleSubmit} className="flex items-center">
+        <div className="relative">
+          <input
+            type="text"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Search services..."
+            className="w-full px-4 py-2 pl-10 pr-4 text-gray-700 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            onFocus={() => setIsOpen(true)}
+            onBlur={() => setTimeout(() => setIsOpen(false), 200)}
+          />
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+        </div>
+        <button
+          type="submit"
+          className="ml-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 flex items-center"
+        >
+          Search
+          <ArrowRight className="w-4 h-4 ml-1" />
+        </button>
+      </form>
+
+      {isOpen && query && (
+        <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-300 rounded-lg shadow-lg z-50">
+          <div className="p-4">
+            <p className="text-sm text-gray-600">
+              Search results for "{query}" will appear here
+            </p>
+          </div>
+        </div>
+      )}
     </div>
-    </div>
-    </div>;
-};
+  );
+}
