@@ -1,4 +1,8 @@
 // Accessibility utility functions
+<<<<<<< HEAD
+export const accessibilityUtils = {
+  // Add accessibility utility functions here
+=======
 
 export const checkAriaLabels = (element: HTMLElement): boolean => {
   const hasAriaLabel = element.hasAttribute('aria-label')
@@ -20,4 +24,5 @@ export const checkKeyboardNavigation = (element: HTMLElement): boolean => {
 
 export const checkFocusManagement = (element: HTMLElement): boolean => {
   return element.hasAttribute('tabindex') || element.tagName === 'BUTTON' || element.tagName === 'A'
+>>>>>>> cursor/fix-errors-and-merge-to-main-f44d
 }

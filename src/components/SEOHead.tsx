@@ -77,7 +77,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({};
               '@id': url
            }
 {          })
-{        })}
+{{        })}
       </script>
     </Helmet>
   )

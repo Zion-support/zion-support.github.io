@@ -1,4 +1,8 @@
 // SEO utility functions
+<<<<<<< HEAD
+export const seoUtils = {
+  // Add SEO utility functions here
+=======
 
 import { SEO_DEFAULTS, SOCIAL_MEDIA, OPEN_GRAPH, STRUCTURED_DATA } from './seoConstants'
 
@@ -82,4 +86,5 @@ export const validateSEO = (props: SEOProps): string[] => {
   }
 
   return errors
+>>>>>>> cursor/fix-errors-and-merge-to-main-f44d
 }

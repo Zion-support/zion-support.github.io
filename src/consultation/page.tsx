@@ -20,7 +20,7 @@ constConsultationPage: React.FC= () =>{const [formDatasetFormData] = useState({}
     budget: '',
     message: ''
   })
-
+;
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {};
     const { name, value } = e.target;
     setFormData(prev => ({}

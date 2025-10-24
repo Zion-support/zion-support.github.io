@@ -1,4 +1,8 @@
 // Performance utility functions
+<<<<<<< HEAD
+export const performanceUtils = {
+  // Add performance utility functions here
+=======
 
 export const measurePerformance = (name: string, fn: () => void): void => {
   const start = performance.now()
@@ -58,4 +62,5 @@ export const measurePerformanceBetween = (startMark: string, endMark: string, na
       console.warn(`Failed to measure performance between ${startMark} and ${endMark}:`, error)
     }
   }
+>>>>>>> cursor/fix-errors-and-merge-to-main-f44d
 }

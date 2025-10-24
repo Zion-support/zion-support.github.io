@@ -1,43 +1,20 @@
 import React from 'react'
 import { render, screen, waitFor, act } from '@testing-library/react'
 import '@testing-library/jest-dom'
-
-// Mock OptimizedImage component
-const OptimizedImage = ({
-  src,
-  alt,
-  width,
-  height
-}: {
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
-}) => {
-  return (
-    <img
-      src={src}
-      alt={alt}
-      width={width}
-      height={height}
-      data-testid="optimized-image"
-      loading="lazy"
-    />
-  )
-}
-
+import OptimizedImage from '../../components/OptimizedImage'
 describe('OptimizedImage', () => {
   it('renders with required props', () => {
     render(
       <OptimizedImage 
         src="/test-image.jpg" 
         alt="Test image" 
+        data-testid="optimized-image"
       />
     );
     
     const image = screen.getByTestId('optimized-image');
     expect(image).toBeInTheDocument();
-    expect(image).toHaveAttribute('src', '/test-image.jpg');
+    expect(image).toHaveAttribute('src', expect.stringContaining('test-image.jpg'));
     expect(image).toHaveAttribute('alt', 'Test image');
   });
 
@@ -48,6 +25,7 @@ describe('OptimizedImage', () => {
         alt="Test image"
         width={300}
         height={200}
+        data-testid="optimized-image"
       />
     );
     
@@ -61,6 +39,7 @@ describe('OptimizedImage', () => {
       <OptimizedImage 
         src="/test-image.jpg" 
         alt="" 
+        data-testid="optimized-image"
       />
     );
     
@@ -79,10 +58,11 @@ describe('OptimizedImage', () => {
         <OptimizedImage
           src={src}
           alt={`Test image ${index + 1}`}
+          data-testid="optimized-image"
         />
       )
       const image = screen.getByTestId('optimized-image')
-      expect(image).toHaveAttribute('src', src)
+      expect(image).toHaveAttribute('src', expect.stringContaining(encodeURIComponent(src)))
       expect(image).toHaveAttribute('alt', `Test image ${index + 1}`)
       unmount()
     })
