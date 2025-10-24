@@ -2,7 +2,9 @@
 import React from 'react';
 
 interface EnhancedSEOOptimizerProps {
-  // Add props here
+  title?: string;
+  description?: string;
+  keywords?: string[];
 }
 
 const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = (_props) => {

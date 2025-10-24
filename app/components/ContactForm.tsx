@@ -2,32 +2,32 @@ import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 
 interface FormData {
-  name: string,
-      email: string,
-      company: string,
-      phone: string,
-      service: string,
-      message: string
+  name: string;
+  email: string;
+  company: string;
+  phone: string;
+  service: string;
+  message: string;
 }
 
 interface FormStatus {
-  type: 'idle' | 'loading' | 'success' | 'error'
-  message: string
+  type: 'idle' | 'loading' | 'success' | 'error';
+  message: string;
 }
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
-    name: ''
-    email: ''
-    company: ''
-    phone: ''
-    service: ''
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    service: '',
     message: ''
   })
   const [status, setStatus] = useState<FormStatus>({
-    type: 'idle'
+    type: 'idle',
     message: ''
-  })
+  });
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
     setFormData(prev => ({

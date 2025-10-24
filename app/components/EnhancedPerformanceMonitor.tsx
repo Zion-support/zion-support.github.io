@@ -2,7 +2,8 @@
 import React from 'react';
 
 interface EnhancedPerformanceMonitorProps {
-  // Add props here
+  enableRealTimeMonitoring?: boolean;
+  onMetricsUpdate?: (metrics: any) => void;
 }
 
 const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = (_props) => {

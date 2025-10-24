@@ -1,4 +1,5 @@
 'use client';
+
 /**
  * Testing Utilities
  * Provides helper functions and utilities for testing
@@ -49,19 +50,14 @@ export const mockFetch = (
   headers: Record<string, string> = {}
 ): void => {
   if (typeof global !== 'undefined') {
-<<<<<<< HEAD
-    // Mock fetch for testing
-    (global as { fetch?: typeof fetch }).fetch = () =>
-=======
     (global as typeof global & { fetch: typeof fetch }).fetch = (() =>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
       Promise.resolve({
         ok: status >= 200 && status < 300,
         status,
         headers: new Headers(headers),
         json: async () => response,
         text: async () => JSON.stringify(response)
-      } as Response);
+      } as Response));
   }
 };
 
@@ -168,42 +164,6 @@ export const createMockPerformance = (): Performance => {
  * Generate random test data
  */
 export const generateTestData = {
-<<<<<<< HEAD
-=======
-  string: (length = 10) => {
-    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    let result = '';
-    for (let i = 0; i < length; i++) {
-      result += chars.charAt(Math.floor(Math.random() * chars.length));
-    }
-    return result;
-  },
-  
-  number: (min = 0, max = 100) => {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  },
-  
-  email: () => {
-    return `${generateTestData.string(8)}@example.com`;
-  },
-  
-  url: () => {
-    return `https://example.com/${generateTestData.string(8)}`;
-  }
-};
-
-/**
- * Clean up after tests
- */
-export const cleanup = (): void => {
-  // Clear all timers
-  if (typeof global !== 'undefined') {
-    const timers = (global as typeof global & { timers: Set<number> }).timers;
-    if (timers) {
-      timers.forEach(timer => clearTimeout(timer));
-      timers.clear();
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
   string: (length = 10): string => {
     return Math.random()
       .toString(36)

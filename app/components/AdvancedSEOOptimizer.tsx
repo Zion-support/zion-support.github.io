@@ -15,13 +15,13 @@ interface SEOOptimizerProps {
 }
 
 const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions'
-  description = 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.'
-  keywords = 'AI solutions, IT services, technology, business solutions, Zion Tech Group'
-  canonicalUrl
-  ogImage = '/images/og-image.jpg'
-  twitterCard = 'summary_large_image'
-  structuredData
+  title = 'Zion Tech Group - Advanced AI and IT Solutions',
+  description = 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.',
+  keywords = 'AI solutions, IT services, technology, business solutions, Zion Tech Group',
+  canonicalUrl,
+  ogImage = '/images/og-image.jpg',
+  twitterCard = 'summary_large_image',
+  structuredData,
   children
 }) => {
   const [seoScore, setSeoScore] = useState(0)
@@ -91,11 +91,11 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
   }, [analyzeSEO])
   const generateStructuredData = () => {
     const defaultStructuredData = {
-      "@context": "https://schema.org"
-      "@type": "Organization"
-      "name": "Zion Tech Group"
-      "description": description
-      "url": canonicalUrl || (typeof window !== 'undefined' ? window.location.origin : '')
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "description": description,
+      "url": canonicalUrl || (typeof window !== 'undefined' ? window.location.origin : ''),
       "logo": ogImage
       "sameAs": [
         "https://twitter.com/ziontechgroup"

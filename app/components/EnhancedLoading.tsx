@@ -1,7 +1,8 @@
 import React from 'react';
 
 interface EnhancedLoadingProps {
-  // Add props here
+  size?: 'sm' | 'md' | 'lg';
+  text?: string;
 }
 
 const EnhancedLoading: React.FC<EnhancedLoadingProps> = (_props) => {
@@ -9,13 +10,7 @@ const EnhancedLoading: React.FC<EnhancedLoadingProps> = (_props) => {
     <div>
       {/* Component content */}
     </div>
-<<<<<<< HEAD
-  )
-}
-export default EnhancedLoading
-=======
   );
 };
 
 export default EnhancedLoading;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
