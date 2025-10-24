@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -9,11 +8,6 @@ import Footer from '../components/Footer';
 export default function PagePage() {
   return (
     <>
-      <Helmet>
-        <title>Pricing - Zion Tech Group - Zion Tech Group</title>
-        <meta name="description" content="Transparent pricing for AI services, IT solutions, and micro SAAS tools. Choose the plan that fits your business needs with 14-day free trials." />
-      </Helmet>
-      
       <Navigation />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">

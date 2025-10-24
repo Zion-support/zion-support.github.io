@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import Navigation from './Navigation';
@@ -9,11 +8,6 @@ import Footer from './Footer';
 export default function FuturisticHeroPage() {
   return (
     <>
-      <Helmet>
-        <title>Futuristic Hero Solutions | Zion Tech Group - Zion Tech Group</title>
-        <meta name="description" content="Professional futuristic hero services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-      </Helmet>
-      
       <Navigation />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">

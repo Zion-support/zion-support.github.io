@@ -106,8 +106,4 @@ const FuturisticBackground: React.FC = () => {
   );
 };
 
-
-
-
-
 export default FuturisticBackground;

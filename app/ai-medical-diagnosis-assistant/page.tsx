@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Zap, Shield, Brain, Globe } from 'lucide-react';
 
 const AiMedicalDiagnosisAssistantPage: React.FC = () => {
@@ -31,11 +30,6 @@ const AiMedicalDiagnosisAssistantPage: React.FC = () => {
 
   return (
     <React.Fragment>
-      <Helmet>
-        <title>Ai Medical Diagnosis Assistant - Zion Tech Group | Advanced AI and IT Solutions</title>
-        <meta name="description" content="Professional aimedicaldiagnosisassistant solutions powered by advanced AI and cutting-edge technology." />
-        <meta name="keywords" content="aimedicaldiagnosisassistant, AI solutions, IT services, automation, technology, business solutions" />
-      </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -114,9 +108,5 @@ const AiMedicalDiagnosisAssistantPage: React.FC = () => {
     </React.Fragment>
   );
 };
-
-
-
-
 
 export default AiMedicalDiagnosisAssistantPage;

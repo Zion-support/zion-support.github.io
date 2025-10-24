@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -9,11 +8,6 @@ import Footer from '../components/Footer';
 export default function PagePage() {
   return (
     <>
-      <Helmet>
-        <title>AI Content Generator - Zion Tech Group - Zion Tech Group</title>
-        <meta name="description" content="Transform your content creation with our AI Content Generator. Generate high-quality, SEO-optimized content in 50+ languages. Starting at $29/month. Free trial available." />
-      </Helmet>
-      
       <Navigation />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">

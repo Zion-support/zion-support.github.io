@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Zap, Shield, Brain, Globe } from 'lucide-react';
 
 const AiInventoryOptimizerProPage: React.FC = () => {
@@ -31,11 +30,6 @@ const AiInventoryOptimizerProPage: React.FC = () => {
 
   return (
     <React.Fragment>
-      <Helmet>
-        <title>Ai Inventory Optimizer Pro - Zion Tech Group | Advanced AI and IT Solutions</title>
-        <meta name="description" content="Professional aiinventoryoptimizerpro solutions powered by advanced AI and cutting-edge technology." />
-        <meta name="keywords" content="aiinventoryoptimizerpro, AI solutions, IT services, automation, technology, business solutions" />
-      </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -114,9 +108,5 @@ const AiInventoryOptimizerProPage: React.FC = () => {
     </React.Fragment>
   );
 };
-
-
-
-
 
 export default AiInventoryOptimizerProPage;

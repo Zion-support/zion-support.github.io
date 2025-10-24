@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import Navigation from './Navigation';
@@ -9,11 +8,6 @@ import Footer from './Footer';
 export default function SearchBarPage() {
   return (
     <>
-      <Helmet>
-        <title>SearchBarPage - Zion Tech Group</title>
-        <meta name="description" content="Professional searchbarpage services by Zion Tech Group." />
-      </Helmet>
-      
       <Navigation />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
