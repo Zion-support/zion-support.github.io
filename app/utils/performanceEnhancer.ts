@@ -10,7 +10,7 @@ export const debounce = <T extends (...args: unknown[]) => unknown>(
   func: T,
   wait: number
 ): ((...args: Parameters<T>) => void) => {
-  let timeout: NodeJS.Timeout;
+  let timeout: ReturnType<typeof setTimeout>;
   return (...args: Parameters<T>) => {
     clearTimeout(timeout)
     timeout = setTimeout(() => func(...args), wait)
@@ -49,7 +49,6 @@ export class PerformanceMonitor {
   trackRender(componentName: string, renderTime: number) {
     this.metrics.set(`${componentName}_render`, renderTime)
     if (process.env['NODE_ENV'] === 'development') {
-       
       console.log(`${componentName} rendered in ${renderTime}ms`)
     }
   }
@@ -82,7 +81,6 @@ export class PerformanceMonitor {
     const observer = new PerformanceObserver((list) => {
       list.getEntries().forEach((entry) => {
         if (entry.duration > 50) { // Tasks longer than 50ms
-           
           console.log(`Long task detected: ${entry.name} took ${entry.duration}ms`)
         }
       })
@@ -203,7 +201,6 @@ export const optimizeScrollPerformance = () => {
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         if (process.env['NODE_ENV'] === 'development') {
-           
           console.log('LCP:', entry.startTime)
         }
       }
@@ -221,7 +218,6 @@ export const optimizeScrollPerformance = () => {
         const fidEntry = entry as FirstInputEntry
         const fid = fidEntry.processingStart - entry.startTime
         if (process.env['NODE_ENV'] === 'development') {
-           
           console.log('FID:', fid)
         }
       }
@@ -289,7 +285,6 @@ export const initializePerformanceEnhancements = () => {
   // Collect performance metrics
   const metrics = collectPerformanceMetrics()
   if (metrics && (process.env['NODE_ENV'] === 'development' || import.meta.env.DEV)) {
-     
     console.log('Performance metrics:', metrics)
   }
 }

@@ -8,11 +8,7 @@ const ContentStatistics: React.FC = () => {
     projects: 0,
     satisfaction: 0,
     years: 0
-<<<<<<< HEAD
-  })
-=======
   });
->>>>>>> 98218686378212b6baf73ef26cac59271bb18de7
 
   useEffect(() => {
     const targetCounters = {
@@ -20,12 +16,7 @@ const ContentStatistics: React.FC = () => {
       projects: 1000,
       satisfaction: 99,
       years: 10
-<<<<<<< HEAD
-    }
-
-=======
     };
->>>>>>> 98218686378212b6baf73ef26cac59271bb18de7
     const duration = 2000; // 2 seconds
     const steps = 60;
     const stepDuration = duration / steps;
@@ -115,4 +106,4 @@ const ContentStatistics: React.FC = () => {
   );
 };
 
-export default ContentStatistics
+export default ContentStatistics;
