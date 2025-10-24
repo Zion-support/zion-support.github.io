@@ -18,20 +18,29 @@ function fixMergeConflicts(filePath) {
       }
       
       if (line.includes('        inConflict = true;'        foundEquals = false;
+        continue;
+      }
       
       if (line.includes('        foundEquals = true;'        continue;
+      }
       
       if (line.includes('        inConflict = false;'        foundEquals = false;
+        continue;
+      }
       
       if (inConflict && foundEquals) {
         // Keep content after         fixedLines.push(line);
       } else if (!inConflict) {
         // Keep content outside conflicts
         fixedLines.push(line);
+      }
+    }
     
     const fixedContent = fixedLines.join('\n');'    fs.writeFileSync(filePath, fixedContent, 'utf8');'    return true;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);`    return false;
+  }
+}
 
 function findFilesWithConflicts(dir) {
   const files = [];
@@ -45,9 +54,13 @@ function findFilesWithConflicts(dir) {
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {'        traverse(fullPath);
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js'))) {'        const content = fs.readFileSync(fullPath, 'utf8');'        if (content.includes('          files.push(fullPath);'        }
+      }
+    }
+  }
   
   traverse(dir);
   return files;
+}
 
 // Find and fix all files with merge conflicts
 const filesWithConflicts = findFilesWithConflicts('./app');'console.log(`Found ${filesWithConflicts.length} files with merge conflicts`);`
@@ -55,5 +68,7 @@ let fixedCount = 0;
 for (const file of filesWithConflicts) {
   if (fixMergeConflicts(file)) {
     fixedCount++;
+  }
+}
 
-
+console.log(`Fixed ${fixedCount} files`);

@@ -1,16 +1,24 @@
+// API Client for making HTTP requests
+import logger from './logger';
 
-
-
+// Extend RequestInit to include our custom options
+interface ExtendedRequestInit extends RequestInit {
+  timeout?: number;
+  retries?: number;
+}
 
 export interface ApiResponse<T = unknown> {
-
   data: T;
   status: number;
   statusText: string;
   headers: Record<string, string>;
 }
 
-
+export interface RequestOptions {
+  timeout?: number;
+  retries?: number;
+  headers?: Record<string, string>;
+}
 
 class ApiClient {
   private baseURL: string;
@@ -23,13 +31,22 @@ class ApiClient {
       retries: 3,
       ...options,
     };
+  }
 
-
+  private async makeRequest<T>(
+    url: string,
+    options: ExtendedRequestInit & RequestOptions = {}
+  ): Promise<ApiResponse<T>> {
+    const {
+      timeout = this.defaultOptions.timeout,
+      retries = this.defaultOptions.retries,
+      ...fetchOptions
+    } = options;
 
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), timeout);
 
-
+    try {
       const response = await fetch(url, {
         ...fetchOptions,
         signal: controller.signal,
@@ -39,6 +56,7 @@ class ApiClient {
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
+      }
 
       const data = await response.json();
       return {
@@ -46,12 +64,28 @@ class ApiClient {
         status: response.status,
         statusText: response.statusText,
         headers: Object.fromEntries(response.headers.entries()),
-
+      };
     } catch (error) {
-
+      clearTimeout(timeoutId);
+      
+      if (retries > 0 && error instanceof Error && error.name === 'AbortError') {
+        logger.warn(`Request failed, retrying... (${retries} retries left)`, {
+          url,
+          error: error.message,
+        });
+        return this.makeRequest<T>(url, { ...options, retries: retries - 1 });
+      }
 
       throw error;
+    }
+  }
 
+  async get<T>(url: string, options: RequestOptions = {}): Promise<ApiResponse<T>> {
+    return this.makeRequest<T>(`${this.baseURL}${url}`, {
+      method: 'GET',
+      ...options,
+    });
+  }
 
   async post<T>(url: string, data?: unknown, options: RequestOptions = {}): Promise<ApiResponse<T>> {
     return this.makeRequest<T>(`${this.baseURL}${url}`, {
@@ -61,14 +95,41 @@ class ApiClient {
         ...options.headers,
       },
       body: data ? JSON.stringify(data) : undefined,
+      ...options,
+    });
+  }
 
   async put<T>(url: string, data?: unknown, options: RequestOptions = {}): Promise<ApiResponse<T>> {
+    return this.makeRequest<T>(`${this.baseURL}${url}`, {
       method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        ...options.headers,
+      },
+      body: data ? JSON.stringify(data) : undefined,
+      ...options,
+    });
+  }
 
   async patch<T>(url: string, data?: unknown, options: RequestOptions = {}): Promise<ApiResponse<T>> {
+    return this.makeRequest<T>(`${this.baseURL}${url}`, {
       method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+        ...options.headers,
+      },
+      body: data ? JSON.stringify(data) : undefined,
+      ...options,
+    });
+  }
 
   async delete<T>(url: string, options: RequestOptions = {}): Promise<ApiResponse<T>> {
+    return this.makeRequest<T>(`${this.baseURL}${url}`, {
       method: 'DELETE',
+      ...options,
+    });
+  }
+}
 
-
+export const apiClient = new ApiClient();
+export default apiClient;

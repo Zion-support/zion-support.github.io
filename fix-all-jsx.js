@@ -31,7 +31,8 @@ function fixAllJSX(content) {let fixed = content;
 // Function to process a single file;
 function processFile(filePath) {
   try {
-
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixed = fixAllJSX(content);
 
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed, 'utf8');
@@ -39,6 +40,7 @@ function processFile(filePath) {
       return true;
     return false;
   } catch (error) {console.error(`Error processing ${filePath}:`, error.message);
+    return false;
 
 // Main function;
 async function main() {console.log('Starting to fix all remaining JSX issues...');

@@ -7,7 +7,6 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 <<<<<<< HEAD
-<<<<<<< HEAD
 // Find files with syntax errors
 function findFilesWithSyntaxErrors() {
   try {
@@ -40,17 +39,11 @@ function fixSyntaxErrors(filePath) {
         return match + '\n  return null;\n}';
 =======
 // Function to fix common syntax errors
-=======
-console.log('🔧 Starting syntax error fixes...');
-
-// Function to fix common syntax errors in a file
->>>>>>> cursor/delete-records-30ea
 function fixSyntaxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
-<<<<<<< HEAD
     // Remove any remaining merge conflict markers
     if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>')) {
       console.log(`Removing remaining merge conflict markers from: ${filePath}`);
@@ -107,80 +100,12 @@ function fixSyntaxErrors(filePath) {
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
     
     if (content !== originalContent) {
-=======
-    // Fix common issues
-    const fixes = [
-      // Fix duplicate className attributes
-      {
-        pattern: /className="[^"]*"\s+className="[^"]*"/g,
-        replacement: (match) => {
-          const classes = match.match(/className="([^"]*)"/g);
-          if (classes && classes.length > 1) {
-            const allClasses = classes.map(c => c.replace('className="', '').replace('"', '')).join(' ');
-            return `className="${allClasses}"`;
-          }
-          return match;
-        }
-      },
-      
-      // Fix missing semicolons in JSX
-      {
-        pattern: /(\w+)\s*=\s*\{[^}]*\}\s*$/gm,
-        replacement: (match) => {
-          if (!match.endsWith(';') && !match.includes('return') && !match.includes('if') && !match.includes('for')) {
-            return match + ';';
-          }
-          return match;
-        }
-      },
-      
-      // Fix malformed JSX closing tags
-      {
-        pattern: /<\/div>\s*<\/div>\s*<\/section>/g,
-        replacement: '</div>\n        </div>\n      </section>'
-      },
-      
-      // Fix missing closing braces in object literals
-      {
-        pattern: /(\w+):\s*'[^']*'\s*$/gm,
-        replacement: (match) => {
-          if (!match.endsWith(',') && !match.endsWith('}')) {
-            return match + ',';
-          }
-          return match;
-        }
-      },
-      
-      // Fix duplicate closing tags
-      {
-        pattern: /<\/li>\s*<\/li>/g,
-        replacement: '</li>'
-      },
-      
-      // Fix malformed interface definitions
-      {
-        pattern: /}\s*children:\s*ReactNode;/g,
-        replacement: '}\n\ninterface Props {\n  children: ReactNode;'
-      }
-    ];
-    
-    fixes.forEach(fix => {
-      const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-        content = newContent;
-        modified = true;
-      }
-    });
-    
-    if (modified) {
->>>>>>> cursor/delete-records-30ea
       fs.writeFileSync(filePath, content);
       console.log(`✅ Fixed syntax errors in: ${filePath}`);
       return true;
     }
     
     return false;
-<<<<<<< HEAD
   } catch (error) {
     console.error(`❌ Error fixing ${filePath}:`, error.message);
 =======
@@ -286,16 +211,10 @@ function processFile(filePath) {
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-=======
-    
-  } catch (error) {
-    console.error(`❌ Error fixing ${filePath}:`, error.message);
->>>>>>> cursor/delete-records-30ea
     return false;
   }
 }
 
-<<<<<<< HEAD
 <<<<<<< HEAD
 // Main function
 function main() {
@@ -437,31 +356,10 @@ function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
         }
       } else if (extensions.some(ext => item.endsWith(ext))) {
         files.push(fullPath);
-=======
-// Function to find all TypeScript/JavaScript files
-function findSourceFiles(dir) {
-  const sourceFiles = [];
-  
-  function scanDirectory(currentDir) {
-    const files = fs.readdirSync(currentDir);
-    
-    for (const file of files) {
-      const filePath = path.join(currentDir, file);
-      const stat = fs.statSync(filePath);
-      
-      if (stat.isDirectory()) {
-        // Skip node_modules and other common directories
-        if (!['node_modules', '.git', '.next', 'dist', 'out'].includes(file)) {
-          scanDirectory(filePath);
-        }
-      } else if (stat.isFile() && (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js'))) {
-        sourceFiles.push(filePath);
->>>>>>> cursor/delete-records-30ea
       }
     }
   }
   
-<<<<<<< HEAD
   traverse(dir);
   return files;
 }
@@ -587,44 +485,3 @@ for (const filePath of sourceFiles) {
 
 console.log(`Fixed syntax errors in ${fixedCount} files`);
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
-=======
-  scanDirectory('.');
-  return sourceFiles;
-}
-
-// Main execution
-try {
-  const sourceFiles = findSourceFiles('.');
-  console.log(`🔍 Found ${sourceFiles.length} source files`);
-  
-  let fixedCount = 0;
-  let errorCount = 0;
-  
-  for (const file of sourceFiles) {
-    if (fixSyntaxErrors(file)) {
-      fixedCount++;
-    } else {
-      errorCount++;
-    }
-  }
-  
-  console.log(`✅ Successfully fixed syntax errors in ${fixedCount} files`);
-  if (errorCount > 0) {
-    console.log(`❌ Failed to fix syntax errors in ${errorCount} files`);
-  }
-  
-  // Try to build the project to check if errors are resolved
-  console.log('🔨 Testing build after syntax fixes...');
-  try {
-    const { execSync } = require('child_process');
-    execSync('npm run build', { stdio: 'inherit' });
-    console.log('✅ Build successful! All syntax errors resolved.');
-  } catch (buildError) {
-    console.log('❌ Build still has issues. Some syntax errors may remain.');
-  }
-  
-} catch (error) {
-  console.error('❌ Error during syntax error fixing:', error.message);
-  process.exit(1);
-}
->>>>>>> cursor/delete-records-30ea

@@ -1,5 +1,4 @@
 'use client';
-
 import React, { useState, useEffect } from 'react';
 
 interface PerformanceMetrics {
@@ -18,19 +17,11 @@ interface PerformanceMonitorProps {
   logToConsole?: boolean;
 }
 
-interface _LayoutShift extends PerformanceEntry {
-  value: number;
-  hadRecentInput: boolean;
-}
-
-interface _PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
-}
-export default function PerformanceMonitor({
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   onMetricsUpdate,
   enableRealTimeMonitoring = true,
   logToConsole = true
-}: PerformanceMonitorProps) {
+}) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: null,
     firstContentfulPaint: null,
@@ -84,9 +75,8 @@ export default function PerformanceMonitor({
         // First Input Delay (FID)
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: PerformanceEntry) => {
-            const fidEntry = entry as PerformanceEntry & { processingStart: number };
-            newMetrics.firstInputDelay = fidEntry.processingStart - fidEntry.startTime;
+          entries.forEach((entry: any) => {
+            newMetrics.firstInputDelay = entry.processingStart - entry.startTime;
           });
         });
         fidObserver.observe({ entryTypes: ['first-input'] });
@@ -95,10 +85,9 @@ export default function PerformanceMonitor({
         let clsValue = 0;
         const clsObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: PerformanceEntry) => {
-            const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number };
-            if (!clsEntry.hadRecentInput) {
-              clsValue += clsEntry.value;
+          entries.forEach((entry: any) => {
+            if (!entry.hadRecentInput) {
+              clsValue += entry.value;
             }
           });
           newMetrics.cumulativeLayoutShift = clsValue;
@@ -108,7 +97,7 @@ export default function PerformanceMonitor({
         // Time to Interactive (TTI) - approximation
         const ttiObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          const longTasks = entries.filter((entry: PerformanceEntry) => (entry as PerformanceEntry & { duration: number }).duration > 50);
+          const longTasks = entries.filter((entry: any) => entry.duration > 50);
           if (longTasks.length === 0) {
             newMetrics.timeToInteractive = performance.now();
           }
@@ -119,8 +108,8 @@ export default function PerformanceMonitor({
         const tbtObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           const blockingTime = entries
-            .filter((entry: PerformanceEntry) => (entry as PerformanceEntry & { duration: number }).duration > 50)
-            .reduce((total, entry: PerformanceEntry) => total + ((entry as PerformanceEntry & { duration: number }).duration - 50), 0);
+            .filter((entry: any) => entry.duration > 50)
+            .reduce((total, entry: any) => total + (entry.duration - 50), 0);
           newMetrics.totalBlockingTime = blockingTime;
         });
         tbtObserver.observe({ entryTypes: ['longtask'] });
@@ -185,4 +174,70 @@ export default function PerformanceMonitor({
   }
 
   return null;
+};
+
+// Global performance monitoring utilities
+export const performanceUtils = {
+  // Measure custom performance marks
+  mark: (name: string) => {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      performance.mark(name);
+    }
+  },
+  // Measure time between marks
+  measure: (name: string, startMark: string, endMark?: string) => {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      if (endMark) {
+        performance.measure(name, startMark, endMark);
+      } else {
+        performance.measure(name, startMark);
+      }
+    }
+  },
+  // Get performance entries
+  getEntries: (type?: string) => {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      return type ? performance.getEntriesByType(type) : performance.getEntries();
+    }
+    return [];
+  },
+  // Clear performance entries
+  clearEntries: (type?: string) => {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      if (type) {
+        performance.clearMeasures(type);
+        performance.clearMarks(type);
+      } else {
+        performance.clearMeasures();
+        performance.clearMarks();
+      }
+    }
+  }
+};
+
+// Google Analytics integration for performance tracking
+export const trackPerformanceToGA = (_metrics: PerformanceMetrics) => {
+  if (typeof window !== 'undefined' && 'gtag' in window) {
+    (window as any).gtag('event', 'performance_metrics', {
+      event_category: 'Performance',
+      event_label: 'Core Web Vitals',
+      custom_map: {
+        load_time: _metrics.loadTime,
+        first_contentful_paint: _metrics.firstContentfulPaint,
+        largest_contentful_paint: _metrics.largestContentfulPaint,
+        first_input_delay: _metrics.firstInputDelay,
+        cumulative_layout_shift: _metrics.cumulativeLayoutShift,
+        time_to_interactive: _metrics.timeToInteractive,
+        total_blocking_time: _metrics.totalBlockingTime
+      }
+    });
+  }
+};
+
+declare global {
+  interface Window {
+    gtag: (..._args: unknown[]) => void;
+  }
 }
+
+export default PerformanceMonitor;

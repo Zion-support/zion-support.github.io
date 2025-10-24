@@ -27,23 +27,33 @@ function fixFile(filePath) {
       // Check if we're starting an import block
       if (line.trim().startsWith('import ') || line.trim().startsWith('"use client"')) {
         inImportBlock = true;
+      }
       
       // Check if we're ending the import block
       if (inImportBlock && !line.trim().startsWith('import ') && !line.trim().startsWith('"use client"') && line.trim() !== '') {
         inImportBlock = false;
+      }
 
       if (inImportBlock && line.trim().startsWith('import ')) {
         const importKey = line.trim();
         if (!seenImports.has(importKey)) {
           seenImports.add(importKey);
           cleanedLines.push(line);
+        }
       } else if (inImportBlock && line.trim().startsWith('"use client"')) {
         if (!seenImports.has('"use client"')) {
           seenImports.add('"use client"');
+          cleanedLines.push(line);
+        }
       } else {
+        cleanedLines.push(line);
+      }
+    }
 
     if (cleanedLines.length !== lines.length) {
       content = cleanedLines.join('\n');
+      modified = true;
+    }
 
     // Fix common syntax errors
     const fixes = [
@@ -71,15 +81,20 @@ function fixFile(filePath) {
       const newContent = content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
         content = newContent;
+        modified = true;
+      }
     });
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
+    }
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
+  }
   return false;
+}
 
 // Function to recursively find all .tsx and .ts files
 function findFiles(dir, extensions = ['.tsx', '.ts']) {
@@ -96,8 +111,13 @@ function findFiles(dir, extensions = ['.tsx', '.ts']) {
         traverse(fullPath);
       } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
         files.push(fullPath);
+      }
+    }
+  }
   
-
+  traverse(dir);
+  return files;
+}
 
 // Main execution
 console.log('Starting comprehensive syntax fix...');
@@ -109,5 +129,7 @@ let fixedCount = 0;
 for (const file of files) {
   if (fixFile(file)) {
     fixedCount++;
+  }
+}
 
 console.log(`Fixed ${fixedCount} files out of ${files.length} total files.`);

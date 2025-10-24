@@ -28,26 +28,26 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
     }
   };
 
-  componentDidCatch(_error: Error, _errorInfo: ErrorInfo) {
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       hasError: true,
-      error: _error,
-      errorInfo: _errorInfo
+      error,
+      errorInfo
     });
     
     // Call custom error handler if provided
     if (this.props.onError) {
-      this.props.onError(_error, _errorInfo);
+      this.props.onError(error, errorInfo);
     }
     
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', _error, _errorInfo);
+      console.error('Error caught by boundary:', error, errorInfo);
     }
     
     // Log error to external service in production
     if (process.env.NODE_ENV === 'production') {
-      this.logErrorToService(_error, _errorInfo);
+      this.logErrorToService(error, errorInfo);
     }
   }
 
