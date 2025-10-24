@@ -4,13 +4,23 @@ import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
-const SEOHead: React.FC = () => {
+interface SEOHeadProps {
+  title: string;
+  description: string;
+  keywords: string;
+}
+
+const SEOHead: React.FC<SEOHeadProps> = ({ title, description, keywords }) => {
   return (
     <>
       <Helmet>
-        <title>SEOHead</title>
-        <meta name="description" content="Advanced SEOHead solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial intelligence, SEOHead, AI solutions, intelligent automation" />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
       </Helmet>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
