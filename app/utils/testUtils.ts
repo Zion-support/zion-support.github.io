@@ -98,7 +98,7 @@ export const mockWindow = (overrides: Partial<Window> = {}): void => {
         ...global.window,
         ...overrides
       },
-      writable: true,
+      writable: true
     })
   }
 }
@@ -144,7 +144,7 @@ export const createMockPerformance = (): Performance => {
     removeEventListener: () => {},
     dispatchEvent: () => true,
     onresourcetimingbufferfull: null,
-    timeOrigin: Date.now(),
+    timeOrigin: Date.now()
   } as unknown as Performance
 }
 
@@ -206,12 +206,15 @@ export class ConsoleSpy {
   }
 
   private mock(): void {
+    // eslint-disable-next-line no-console
     console.log = (...args: unknown[]) => {
       this.logs.push(args.map(String).join(' '))
     }
+    // eslint-disable-next-line no-console
     console.error = (...args: unknown[]) => {
       this.errors.push(args.map(String).join(' '))
     }
+    // eslint-disable-next-line no-console
     console.warn = (...args: unknown[]) => {
       this.warnings.push(args.map(String).join(' '))
     }
@@ -293,7 +296,7 @@ export const measureExecutionTime = async <T>(
   return { result, duration }
 }
 
-export default {
+const testUtils = {
   wait,
   waitFor,
   mockFetch,
@@ -308,3 +311,5 @@ export default {
   retryWithBackoff,
   measureExecutionTime
 }
+
+export default testUtils
