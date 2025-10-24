@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build --no-lint",
+    "build": "next build --no-lint --experimental-build-mode=compile",
     "start": "next start",
     "lint": "next lint --fix",
     "type-check": "tsc --noEmit",
@@ -30,10 +30,6 @@
     "web-vitals": "^3.5.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.28.5",
-    "@babel/preset-env": "^7.28.5",
-    "@babel/preset-react": "^7.28.5",
-    "@babel/preset-typescript": "^7.28.5",
     "@jest/globals": "^29.0.0",
     "@tailwindcss/postcss": "^4.1.16",
     "@testing-library/jest-dom": "^6.0.0",
@@ -45,7 +41,6 @@
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "autoprefixer": "^10.4.0",
-    "babel-jest": "^30.2.0",
     "eslint": "^8.0.0",
     "eslint-config-next": "^14.0.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",

@@ -34,7 +34,7 @@ class ErrorBoundary extends Component<
     return { hasError: true, error, retryCount: 0 };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  componentDidCatch(error: Error, _errorInfo: ErrorInfo) {
     this.props.onError?.(error);
   }
 
@@ -252,7 +252,7 @@ describe('AdvancedSEOOptimizer', () => {
   });
 
   it('renders meta tags', () => {
-    const helmetContext = {};
+    const _helmetContext = {};
     const { container } = render(
       <AdvancedSEOOptimizer seoData={mockSEOData} />
     );
