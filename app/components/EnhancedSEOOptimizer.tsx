@@ -4,7 +4,7 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'EnhancedSEOOptimizer - Zion Tech Group',
   description: 'Comprehensive enhancedseooptimizer solutions for modern businesses.',
-  keywords: 'enhancedseooptimizer, AI solutions, technology services',
+  keywords: ['enhancedseooptimizer', 'AI solutions', 'technology services'],
   openGraph: {
     title: 'EnhancedSEOOptimizer - Zion Tech Group',
     description: 'Comprehensive enhancedseooptimizer solutions for modern businesses.',

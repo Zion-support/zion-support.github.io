@@ -1,18 +1,20 @@
 import React from 'react';
 import { Metadata } from 'next';
-
 export const metadata: Metadata = {
-  title: '404 - Zion Tech Group',
-  description: 'Comprehensive 404 solutions for modern businesses.',
-  keywords: '404, AI solutions, technology services',
+  title: '404 - Page Not Found - Zion Tech Group',
+  description: 'The page you are looking for could not be found.',
+  keywords: '404, page not found, Zion Tech Group',
   openGraph: {
-    title: '404 - Zion Tech Group',
-    description: 'Comprehensive 404 solutions for modern businesses.',
+    title: '404 - Page Not Found - Zion Tech Group',
+    description: 'The page you are looking for could not be found.',
     type: 'website',
     url: 'https://ziontechgroup.com/',
   },
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/main
 const NotFoundPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -37,5 +39,8 @@ const NotFoundPage = () => {
     </div>
   );
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/main
 export default NotFoundPage;

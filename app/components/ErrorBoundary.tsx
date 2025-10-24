@@ -1,22 +1,32 @@
 'use client';
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/main
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/main
 interface State {
   hasError: boolean;
   error?: Error;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/main
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
   }
+<<<<<<< HEAD
 
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
@@ -26,6 +36,14 @@ class ErrorBoundary extends Component<Props, State> {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
   }
 
+=======
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+  }
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
+  }
+>>>>>>> origin/main
   render() {
     if (this.state.hasError) {
       return this.props.fallback || (
@@ -43,9 +61,15 @@ class ErrorBoundary extends Component<Props, State> {
         </div>
       );
     }
+<<<<<<< HEAD
 
     return this.props.children;
   }
 }
 
+=======
+    return this.props.children;
+  }
+}
+>>>>>>> origin/main
 export default ErrorBoundary;

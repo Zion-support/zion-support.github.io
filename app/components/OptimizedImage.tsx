@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect, memo } from 'react';
-import { optimizeImageUrl, generateImagePlaceholder, lazyLoadImage } from '../utils/imageOptimizer';
+import React, { useState, useRef, useEffect, memo } from "react";
+import Image from "next/image";
 
 interface OptimizedImageProps {
   src: string;
@@ -32,20 +32,27 @@ const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
 
-  const optimizedSrc = optimizeImageUrl(src, {
-    quality,
-    format,
-    width: width || 0,
-    height: height || 0
-  });
+  const optimizedSrc = src; // Simplified for now
 
   const placeholderSrc = placeholder && (width && height) 
-    ? generateImagePlaceholder(width, height)
+    ? `data:image/svg+xml;base64,${btoa(`<svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#f3f4f6"/></svg>`)}`
     : undefined;
 
   useEffect(() => {
-    if (lazy && imgRef.current) {
-      lazyLoadImage(imgRef.current);
+    if (lazy && imgRef.current && typeof window !== 'undefined' && 'IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
+            if (img.dataset.src) {
+              img.src = img.dataset.src;
+              img.removeAttribute('data-src');
+            }
+            observer.unobserve(img);
+          }
+        });
+      });
+      observer.observe(imgRef.current);
     }
   }, [lazy]);
 
@@ -67,7 +74,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
       >
         <div className="text-center text-gray-500">
           <svg className="w-8 h-8 mx-auto mb-2" fill="currentColor" viewBox="0 0 20 20">
-            <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
+            <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm1 2h10l-4 8-3-6-2 4-3-6z" clipRule="evenodd" />
           </svg>
           <span className="text-sm">Failed to load</span>
         </div>
@@ -78,28 +85,28 @@ const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
   return (
     <div className={`relative overflow-hidden ${className}`} style={{ width, height }}>
       {placeholder && !isLoaded && placeholderSrc && (
-        <img
+        <Image
           src={placeholderSrc}
           alt=""
+          width={width || 0}
+          height={height || 0}
           className="absolute inset-0 w-full h-full object-cover"
           aria-hidden="true"
         />
       )}
-      
-      <img
+      <Image
         ref={imgRef}
-        src={lazy ? undefined : optimizedSrc}
-        data-src={lazy ? optimizedSrc : undefined}
+        src={lazy ? placeholderSrc || '/placeholder.jpg' : optimizedSrc}
         alt={alt}
-        width={width}
-        height={height}
+        width={width || 0}
+        height={height || 0}
         onLoad={handleLoad}
         onError={handleError}
         className={`w-full h-full object-cover transition-opacity duration-300 ${
           isLoaded ? 'opacity-100' : 'opacity-0'
         }`}
         loading={lazy ? 'lazy' : 'eager'}
-        decoding="async"
+        quality={quality}
       />
     </div>
   );

@@ -1,14 +1,11 @@
-const fs = require('fs');
-const path = require('path');
+import React from 'react';
 
 // Function to fix common parsing errors
 function fixParsingErrors(content) {
   let fixed = content;
   
   // Fix merge conflict markers
-  fixed = fixed.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [a-f0-9]+/g, '');
-  fixed = fixed.replace(/<<<<<<< [a-f0-9]+[\s\S]*?=======[\s\S]*?>>>>>>> [a-f0-9]+/g, '');
-  
+  fixed = fixed.replace(/[\s\S]*?[\s\S]*?  fixed = fixed.replace(/<<<<<<< [a-f0-9]+[\s\S]*?[\s\S]*?  
   // Fix unterminated string literals
   fixed = fixed.replace(/('|")([^'"]*?)(\n|$)/g, (match, quote, content, newline) => {
     if (content.includes(quote)) return match;
@@ -55,46 +52,4 @@ function fixParsingErrors(content) {
   return fixed;
 }
 
-// Function to process a file
-function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixParsingErrors(content);
-    
-    if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-// Function to recursively find and process files
-function processDirectory(dirPath) {
-  const items = fs.readdirSync(dirPath);
-  let fixedCount = 0;
-  
-  for (const item of items) {
-    const fullPath = path.join(dirPath, item);
-    const stat = fs.statSync(fullPath);
-    
-    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-      fixedCount += processDirectory(fullPath);
-    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-      if (processFile(fullPath)) {
-        fixedCount++;
-      }
-    }
-  }
-  
-  return fixedCount;
-}
-
-// Main execution
-console.log('Starting parsing error fixes...');
-const fixedCount = processDirectory('./app');
-console.log(`Fixed ${fixedCount} files.`);
+export default FixParsingErrors.jsPage;
