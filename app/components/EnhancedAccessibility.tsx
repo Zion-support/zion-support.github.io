@@ -1,9 +1,10 @@
-export default EnhancedAccessibility;
 'use client';
+
+import React, { useEffect } from 'react';
 
 const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
-    // Add high contrast mode support;
+    // Add high contrast mode support
     const addHighContrastSupport = () => {
       const mediaQuery = window.matchMedia('(prefers-contrast: high)');
       const handleContrastChange = (e: MediaQueryListEvent) => {
@@ -15,51 +16,61 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       };
 
       mediaQuery.addEventListener('change', handleContrastChange);
-      handleContrastChange(mediaQuery);
+      handleContrastChange(mediaQuery as any);
 
       return () => mediaQuery.removeEventListener('change', handleContrastChange);
     };
 
-    // Add reduced motion support;
+    // Add reduced motion support
     const addReducedMotionSupport = () => {
       const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
       const handleMotionChange = (e: MediaQueryListEvent) => {
         if (e.matches) {
-          document.documentElement.classList.add('reduce-motion');
+          document.documentElement.classList.add('reduced-motion');
         } else {
-          document.documentElement.classList.remove('reduce-motion');
+          document.documentElement.classList.remove('reduced-motion');
         }
       };
 
       mediaQuery.addEventListener('change', handleMotionChange);
-      handleMotionChange(mediaQuery);
+      handleMotionChange(mediaQuery as any);
 
       return () => mediaQuery.removeEventListener('change', handleMotionChange);
     };
 
-    // Add screen reader announcements;
-    const addScreenReaderAnnouncements = () => {
-      const announcement = document.createElement('div');
-      announcement.setAttribute('aria-live', 'polite');
-      announcement.setAttribute('aria-atomic', 'true');
-      announcement.className = 'sr-only';
-      announcement.id = 'announcements';
-      document.body.appendChild(announcement);
+    // Add keyboard navigation support
+    const addKeyboardNavigation = () => {
+      const handleKeyDown = (e: KeyboardEvent) => {
+        if (e.key === 'Tab') {
+          document.documentElement.classList.add('keyboard-navigation');
+        }
+      };
+
+      const handleMouseDown = () => {
+        document.documentElement.classList.remove('keyboard-navigation');
+      };
+
+      document.addEventListener('keydown', handleKeyDown);
+      document.addEventListener('mousedown', handleMouseDown);
+
+      return () => {
+        document.removeEventListener('keydown', handleKeyDown);
+        document.removeEventListener('mousedown', handleMouseDown);
+      };
     };
 
-    // Initialize accessibility features;
-    const cleanupContrast = addHighContrastSupport();
-    const cleanupMotion = addReducedMotionSupport();
-    addScreenReaderAnnouncements();
+    const cleanupHighContrast = addHighContrastSupport();
+    const cleanupReducedMotion = addReducedMotionSupport();
+    const cleanupKeyboard = addKeyboardNavigation();
 
-    // Cleanup;
     return () => {
-      cleanupContrast?.();
-      cleanupMotion?.();
+      cleanupHighContrast();
+      cleanupReducedMotion();
+      cleanupKeyboard();
     };
   }, []);
 
-  return <React.Fragment>{children}</React.Fragment>;
+  return <>{children}</>;
 };
 
-export default $1;
+export default EnhancedAccessibility;

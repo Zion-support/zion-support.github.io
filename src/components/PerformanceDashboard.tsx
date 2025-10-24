@@ -1,66 +1,84 @@
-export default PerformanceDashboard;
+'use client';
+
+import React, { useState, useEffect } from 'react';
+
+interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
   fps: number;
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  fps: number;
-  [key: string]: number;
-    fps: 0;
+}
+
+const PerformanceDashboard = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    fps: 60
   });
-  const [isVisible, setIsVisible] = useState(false);
-    
-      )[0] as PerformanceNavigationTiming;
+
+  useEffect(() => {
+    const measurePerformance = () => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
       
-        : 0;
-      // Measure render time;
-      const renderStart = performance.now();
-      const renderTime = performance.now() - renderStart;
-      // Measure memory usage;
-      let memoryUsage = 0;
-        const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
-        memoryUsage = memory?.usedJSHeapSize || 0;
-      // Measure FPS (simplified)
-      let fps = 0;
-        let lastTime = performance.now();
-        let frameCount = 0;
-        
-          frameCount++;
-            fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
-            frameCount = 0;
-            lastTime = currentTime;
-          requestAnimationFrame(measureFPS);
-        };
-        requestAnimationFrame(measureFPS);
-        fps;
+      const renderTime = performance.now();
+      
+      const memoryUsage = (performance as any).memory?.usedJSHeapSize || 0;
+      
+      // Simple FPS calculation
+      let fps = 60;
+      let lastTime = performance.now();
+      const calculateFPS = () => {
+        const currentTime = performance.now();
+        fps = 1000 / (currentTime - lastTime);
+        lastTime = currentTime;
+      };
+      
+      calculateFPS();
+
+      setMetrics({
+        loadTime,
+        renderTime,
+        memoryUsage,
+        fps
       });
     };
-    updateMetrics();
-    // Update metrics every 5 seconds;
-    const interval = setInterval(updateMetrics, 5000);
- clearInterval(interval);
+
+    measurePerformance();
+    
+    const interval = setInterval(measurePerformance, 1000);
+    
+    return () => clearInterval(interval);
   }, []);
+
+  return (
+    <div className="bg-white rounded-lg shadow p-6">
+      <h2 className="text-xl font-semibold text-gray-900 mb-4">Performance Dashboard</h2>
       
- setIsVisible(true)}
-        className="fixed bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors"
-        Show Performance;
-    );
-        <h3 className="text-lg font-semibold text-gray-800">Performance Dashboard</h3>
- setIsVisible(false)}
-          className="text-gray-500 hover:text-gray-700"
-          ×
-          <span className="text-sm text-gray-600">Load Time:</span>
-            {metrics.loadTime.toFixed(2)}ms;
-          <span className="text-sm text-gray-600">Render Time:</span>
-            {metrics.renderTime.toFixed(2)}ms;
-          <span className="text-sm text-gray-600">Memory Usage:</span>
-            {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB;
-          <span className="text-sm text-gray-600">FPS:<>
-    </span>
-    <span className="text-sm font-mono">
-</>{metrics.fps}</span>
-            Last updated: {new Date().toLocaleTimeString()}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="bg-blue-50 p-4 rounded-lg">
+          <h3 className="text-sm font-medium text-blue-900">Load Time</h3>
+          <p className="text-2xl font-bold text-blue-600">{metrics.loadTime.toFixed(2)}ms</p>
+        </div>
+        
+        <div className="bg-green-50 p-4 rounded-lg">
+          <h3 className="text-sm font-medium text-green-900">Render Time</h3>
+          <p className="text-2xl font-bold text-green-600">{metrics.renderTime.toFixed(2)}ms</p>
+        </div>
+        
+        <div className="bg-yellow-50 p-4 rounded-lg">
+          <h3 className="text-sm font-medium text-yellow-900">Memory Usage</h3>
+          <p className="text-2xl font-bold text-yellow-600">{(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB</p>
+        </div>
+        
+        <div className="bg-purple-50 p-4 rounded-lg">
+          <h3 className="text-sm font-medium text-purple-900">FPS</h3>
+          <p className="text-2xl font-bold text-purple-600">{metrics.fps.toFixed(1)}</p>
+        </div>
+      </div>
+    </div>
   );
 };
+
+export default PerformanceDashboard;

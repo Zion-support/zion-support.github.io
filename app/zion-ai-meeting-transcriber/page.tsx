@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import Head from 'next/head';
+import Link from 'next/link';
 import { Zap, Shield, Brain, Globe } from 'lucide-react';
 
 const ZionAiMeetingTranscriberPage: React.FC = () => {
@@ -31,12 +31,6 @@ const ZionAiMeetingTranscriberPage: React.FC = () => {
 
   return (
     <React.Fragment>
-      <Head>
-        <title>Zion Ai Meeting Transcriber - Zion Tech Group | Advanced AI and IT Solutions</title>
-        <meta name="description" content="Professional zionaimeetingtranscriber solutions powered by advanced AI and cutting-edge technology." />
-        <meta name="keywords" content="zionaimeetingtranscriber, AI solutions, IT services, automation, technology, business solutions" />
-      </Head>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">

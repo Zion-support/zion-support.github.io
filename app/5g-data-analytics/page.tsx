@@ -1,8 +1,7 @@
 'use client';
 import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 // Force dynamic rendering
 export const dynamic = 'force-dynamic';
@@ -10,11 +9,6 @@ export const dynamic = 'force-dynamic';
 export default function Page() {
   return (
     <>
-      <Head>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5g data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Head>
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">

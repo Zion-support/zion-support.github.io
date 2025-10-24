@@ -1,34 +1,23 @@
 'use client';
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
 
-export default function Page-fixed() {
+import React from 'react';
+
+const CompliancePageFixed = () => {
   return (
-    <>
-      <Head>
-        <title>Page Fixed - Zion Tech Group</title>
-        <meta name="description" content="Professional page fixed services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Head>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">
-            Page Fixed
-          </h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Professional page fixed services coming soon.
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-4xl mx-auto px-4">
+        <h1 className="text-3xl font-bold text-gray-900 mb-8">
+          Compliance & Regulatory Information
+        </h1>
+        
+        <div className="bg-white rounded-lg shadow p-6">
+          <p className="text-gray-600">
+            This is a fixed compliance page with updated information.
           </p>
-          <Link 
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
         </div>
       </div>
-    </>
+    </div>
   );
-}
+};
+
+export default CompliancePageFixed;

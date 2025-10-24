@@ -1,169 +1,100 @@
-export const apiClient = new APIClient(process.env.NEXT_PUBLIC_API_URL || '/api');
-export type { RequestConfig, APIResponse };
-export { APIError };
-/**
- * API Client Utility;
- * Provides a centralized API client with error handling and caching;
- */
-
-  method?: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
-  headers?: Record<string, string>;
-  body?: unknown;
-  cache?: boolean;
-  cacheTTL?: number;
-}
-
+interface ApiResponse<T = any> {
   data: T;
   status: number;
-  statusText: string;
-  headers: Record<string, string>;
+  message?: string;
 }
 
-  status?: number;
-  code?: string;
-
-    super(message);
-    this.name = 'APIError';
-    this.status = status;
-    this.code = code;
-  }
+interface ApiError {
+  message: string;
+  status: number;
 }
 
+class ApiClient {
   private baseURL: string;
   private defaultHeaders: Record<string, string>;
-  private cache: Map<string, { data: unknown; timestamp: number; ttl: number }> = new Map();
-    <>
-    <>
-    </>
-</>
-  private defaultHeaders: Record<string, string />;
-  private cache: Map<string, { data: unknown; timestamp: number; ttl: number } /> = new Map();
 
+  constructor(baseURL: string = '/api') {
     this.baseURL = baseURL;
-      ...defaultHeaders;
+    this.defaultHeaders = {
+      'Content-Type': 'application/json',
     };
   }
 
-  /**
-   * Make an API request;
-   */
-    config: RequestConfig = {}
-      cacheTTL = 300000 // 5 minutes default;
-    } = config;
-
+  private async request<T>(
+    endpoint: string,
+    options: RequestInit = {}
+  ): Promise<ApiResponse<T>> {
     const url = `${this.baseURL}${endpoint}`;
-    const cacheKey = `${method}:${url}:${JSON.stringify(body || {})}`;
+    
+    const config: RequestInit = {
+      ...options,
+      headers: {
+        ...this.defaultHeaders,
+        ...options.headers,
+      },
+    };
 
-    // Check cache first;
-      const cached = this.getFromCache(cacheKey);
-        return cached;
+    try {
+      const response = await fetch(url, config);
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
       }
-    }
-
-      });
 
       const data = await response.json();
-
-        headers: this.parseHeaders(response.headers)
+      
+      return {
+        data,
+        status: response.status,
       };
-
-      // Cache successful GET requests;
-        this.setCache(cacheKey, apiResponse, cacheTTL);
-      }
-
-          code: data.code;
-        });
-      }
-
-      return apiResponse;
-        throw error;
-      }
-        code: 'NETWORK_ERROR'
-      });
+    } catch (error) {
+      throw {
+        message: error instanceof Error ? error.message : 'Unknown error',
+        status: 500,
+      } as ApiError;
     }
   }
 
-  /**
-   * GET request;
-   */
-    return this.request<T>(endpoint, { ...config, method: 'GET' });
-  }
-
-  /**
-   * POST request;
-   */
-    return this.request<T>(endpoint, { ...config, method: 'POST', body });
-  }
-
-  /**
-   * PUT request;
-   */
-    return this.request<T>(endpoint, { ...config, method: 'PUT', body });
-  }
-
-  /**
-   * DELETE request;
-   */
-    return this.request<T>(endpoint, { ...config, method: 'DELETE' });
-  }
-
-  /**
-   * PATCH request;
-   */
-    return this.request<T>(endpoint, { ...config, method: 'PATCH', body });
-  }
-
-  /**
-   * Get data from cache;
-   */
-    const cached = this.cache.get(key);
-    if (!cached) return null;
-
-    const now = Date.now();
-      this.cache.delete(key);
-      return null;
-    }
-
-    return cached.data;
-  }
-
-  /**
-   * Set data in cache;
-   */
-      ttl;
+  async get<T>(endpoint: string, headers?: Record<string, string>): Promise<ApiResponse<T>> {
+    return this.request<T>(endpoint, {
+      method: 'GET',
+      headers,
     });
   }
 
-  /**
-   * Parse response headers;
-   */
-    const result: Record<string, string> = {};
-      result[key] = value;
+  async post<T>(
+    endpoint: string,
+    data?: any,
+    headers?: Record<string, string>
+  ): Promise<ApiResponse<T>> {
+    return this.request<T>(endpoint, {
+      method: 'POST',
+      body: data ? JSON.stringify(data) : undefined,
+      headers,
     });
-    return result;
   }
 
-  /**
-   * Clear cache;
-   */
-    this.cache.clear();
+  async put<T>(
+    endpoint: string,
+    data?: any,
+    headers?: Record<string, string>
+  ): Promise<ApiResponse<T>> {
+    return this.request<T>(endpoint, {
+      method: 'PUT',
+      body: data ? JSON.stringify(data) : undefined,
+      headers,
+    });
   }
 
-  /**
-   * Clear cache for specific endpoint;
-   */
-    const keysToDelete: string[] = [];
-        keysToDelete.push(key);
-      }
+  async delete<T>(endpoint: string, headers?: Record<string, string>): Promise<ApiResponse<T>> {
+    return this.request<T>(endpoint, {
+      method: 'DELETE',
+      headers,
     });
-    keysToDelete.forEach(key => this.cache.delete(key));
   }
 }
 
-// Export utility functions;
-  new APIClient(baseURL, headers);
+const apiClient = new ApiClient();
 
-// Default API client instance;
-
-// Export types and classes;
-    </>
+export default apiClient;
+export { ApiClient, type ApiResponse, type ApiError };

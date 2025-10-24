@@ -82,7 +82,7 @@ const Navigation: React.FC = () => {
               Contact
             </Link>
             <Link 
-              to="/demo" 
+              href="/demo" 
               className="bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded-md transition-colors"
             >
               Get Demo

@@ -1,120 +1,71 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { ChevronDown, Phone, Mail, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, ShoppingCart, CreditCard, Heart, Stethoscope, Briefcase, Calculator, Calendar, Smartphone } from 'lucide-react';
+'use client';
 
-const Navigation: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+import React, { useState } from 'react';
+import Link from 'next/link';
 
- 50);
-    };
-
-    window.addEventListener('scroll', handleScroll);
- window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-    setIsMenuOpen(false);
-    setIsServicesOpen(false);
-  };
-
-    setIsMenuOpen(!isMenuOpen);
-      closeAllMenus();
-  };
-
-    setIsServicesOpen(!isServicesOpen);
-  };
-
-
-  const microSAASServices = [
-    { name: 'AI Project Manager', href: '/ai-project-manager', icon: BarChart },
-    { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: MessageSquare },
-    { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard', icon: BarChart3 },
-    { name: 'AI Email Marketing', href: '/ai-email-marketing', icon: Mail },
-    { name: 'AI Customer Support Bot', href: '/ai-customer-support-bot', icon: Bot },
-    { name: 'AI Code Review Assistant', href: '/ai-code-generation', icon: Code },
-    { name: 'AI Content Generator', href: '/ai-content-generation', icon: FileText },
-    { name: 'AI Lead Generation', href: '/ai-lead-generation', icon: Target },
-    { name: 'AI Document Processor', href: '/ai-document-processing', icon: FileText },
-    { name: 'AI SEO Optimizer', href: '/ai-seo-optimizer', icon: Search },
-    { name: 'AI E-commerce Assistant', href: '/ai-ecommerce-solutions', icon: ShoppingCart },
-    { name: 'AI Financial Analyzer', href: '/ai-financial-analyzer', icon: Calculator },
-    { name: 'AI Video Generator Pro', href: '/ai-video-generation', icon: Video },
-    { name: 'AI Voice Cloning Studio', href: '/ai-voice-cloning', icon: Music },
-    { name: 'AI Music Composer', href: '/ai-music-composition', icon: Music },
-    { name: 'AI Fashion Designer', href: '/ai-fashion-design', icon: Palette },
-    { name: 'AI Fitness Coach', href: '/ai-fitness-coach', icon: Heart },
-    { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Settings },
-    { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: Target },
-    { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart },
-    { name: 'AI 3D Generation Studio', href: '/ai-3d-generation', icon: Camera }
-  ];
-
-  ];
-
-  ];
-
+const Navigation = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20' : 'bg-transparent'
-    }`}>
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-            <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
-          {/* Desktop Navigation */}
-                <span>Services</span>
-                        Micro SAAS;
-                            <span>{service.name}</span>
-                        ))}
-                        AI Services;
-                            <span>{service.name}</span>
-                        ))}
-                        IT Services;
-                            <span>{service.name}</span>
-                        ))}
-                        <span>View All Services<>
-    </span>
-    <span>
-</>Specialized Solutions</span>
-              )}
-
-              About;
-              Blog;
-              Case Studies;
-              Pricing;
-              Contact;
-                <span className="hidden sm:inline">+1 302 464 0950</span>
-                Get Started;
-          {/* Mobile Menu Button */}
+    <nav className="bg-white shadow-sm">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="flex justify-between items-center h-16">
+          <div className="flex items-center">
+            <Link href="/" className="text-xl font-bold text-gray-900">
+              Zion Tech Group
+            </Link>
+          </div>
           
-            {isMenuOpen ? <>
-    <X className="w-6 h-6" /&gt; : <Menu className="w-6 h-6" /&gt;}</X>
-    </X>
-</>
-        {/* Mobile Menu */}
-                  <span>Services<>
-    </span>
-    <h4 className="text-cyan-400 font-semibold mb-2">
-</>Micro SAAS</h4>
-                            {service.name}
-                        ))}
-                      <h4 className="text-cyan-400 font-semibold mb-2">AI Services</h4>
-                            {service.name}
-                        ))}
-                    
-                      View All Services →
-                )}
-
-                About;
-                Blog;
-                Case Studies;
-                Pricing;
-                Contact;
-                  <span>+1 302 464 0950</span>
-                  Get Started;
+          <div className="hidden md:block">
+            <div className="ml-10 flex items-baseline space-x-4">
+              <Link href="/" className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+                Home
+              </Link>
+              <Link href="/about" className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+                About
+              </Link>
+              <Link href="/services" className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+                Services
+              </Link>
+              <Link href="/contact" className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+                Contact
+              </Link>
+            </div>
+          </div>
+          
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-gray-900 hover:text-blue-600 focus:outline-none focus:text-blue-600"
+            >
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        
+        {isOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+              <Link href="/" className="text-gray-900 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
+                Home
+              </Link>
+              <Link href="/about" className="text-gray-900 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
+                About
+              </Link>
+              <Link href="/services" className="text-gray-900 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
+                Services
+              </Link>
+              <Link href="/contact" className="text-gray-900 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
+                Contact
+              </Link>
+            </div>
+          </div>
         )}
+      </div>
+    </nav>
   );
 };
 
+export default Navigation;
