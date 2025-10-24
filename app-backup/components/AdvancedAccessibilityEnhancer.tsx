@@ -14,17 +14,6 @@ interface AdvancedAccessibilityEnhancerProps {
   enableFontScaling?: boolean
   enableVoiceNavigation?: boolean
 }
-<<<<<<< HEAD:app-backup/components/AdvancedAccessibilityEnhancer.tsx
-constAdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProp s>= ({enableKeyboardNavigation= true
-  enableScreenReader= true
-  enableHighContrast= true
-  enableFocusManagement= true
-  enableARIALabels= true
-  enableSkipLinks= true
-  enableColorContrast= true
-  enableMotionReduction= true
-  enableFontScaling= true
-=======
 
 const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({enableKeyboardNavigation= true,
   enableScreenReader= true,
@@ -35,7 +24,6 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
   enableColorContrast= true,
   enableMotionReduction= true,
   enableFontScaling= true,
->>>>>>> cursor/fix-errors-and-merge-to-main-50f0:app/components/AdvancedAccessibilityEnhancer.tsx
   enableVoiceNavigation= true}) => {const [accessibilitySettingssetAccessibilitySettings] = useState({
     highContrast: false,
     reducedMotion: false

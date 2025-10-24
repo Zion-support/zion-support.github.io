@@ -45,12 +45,12 @@ const AIEmailAutomationPage: React.FC = () => {
       name: 'Starter',
       price: '$59',
       period: '/month',
-      description: 'Perfect for small businesses and startups',
+      description: 'Perfect for small businesses getting started with AI email automation',
       features: [
-        'Up to 5,000 contacts',
-        '10,000 emails/month',
-        'Basic AI features',
-        'Email templates',
+        'Up to 10,000 emails/month',
+        'AI email generation',
+        'Basic automation',
+        'Email analytics',
         'Email support'
       ],
       popular: false
@@ -59,14 +59,14 @@ const AIEmailAutomationPage: React.FC = () => {
       name: 'Professional',
       price: '$149',
       period: '/month',
-      description: 'Ideal for growing businesses and agencies',
+      description: 'Advanced features for growing businesses',
       features: [
-        'Up to 25,000 contacts',
-        '50,000 emails/month',
+        'Up to 50,000 emails/month',
         'Advanced AI features',
+        'Complex automation workflows',
+        'Advanced analytics',
         'A/B testing',
-        'Priority support',
-        'API access'
+        'Priority support'
       ],
       popular: true
     },
@@ -74,14 +74,14 @@ const AIEmailAutomationPage: React.FC = () => {
       name: 'Enterprise',
       price: '$399',
       period: '/month',
-      description: 'For large organizations with high volume needs',
+      description: 'Full-featured solution for large organizations',
       features: [
-        'Unlimited contacts',
         'Unlimited emails',
-        'Full AI suite',
-        'Custom integrations',
-        'Dedicated support',
-        'White-label options'
+        'All AI features',
+        'Custom automation',
+        'Advanced reporting',
+        'Dedicated account manager',
+        '24/7 phone support'
       ],
       popular: false
     }
@@ -176,66 +176,54 @@ const AIEmailAutomationPage: React.FC = () => {
         </div>
       </section>
       {/* Features Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-slate-800/50 to-blue-900/50">
+      <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Advanced <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Features</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Powerful AI Email Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-              Our AI-powered email automation platform uses machine learning to create, 
-              send, and optimize email campaigns that drive real business results.
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Everything you need to create, automate, and optimize your email marketing campaigns.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg mb-4">
                   {feature.icon}
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  {feature.description}
-                </p>
-                <div className="space-y-2">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
+                <p className="text-gray-600 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
-                    <div key={benefitIndex} className="flex items-center space-x-2 text-gray-400 text-sm">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
-                      <span>{benefit}</span>
-                    </div>
+                    <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
+                      <CheckCircle className="w-4 h-4 mr-2 text-cyan-500" />
+                      {benefit}
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
             ))}
           </div>
         </div>
       </section>
       {/* Pricing Section */}
-      <section className="py-20 px-4 bg-gray-900">
+      <section className="py-20 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Transparent <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Pricing</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Simple, Transparent Pricing
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-              Choose the perfect plan for your email marketing needs. All plans include our core AI features 
-              with scalable options for businesses of all sizes.
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Choose the plan that fits your business needs. All plans include our core AI features.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
-              <div key={index} className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border transition-all duration-300 hover:scale-105 ${
-                plan.popular 
-                  ? 'border-blue-400/50 shadow-2xl shadow-blue-500/20' 
-                  : 'border-white/20 hover:border-white/40'
-              }`}>
+              <div key={index} className={`bg-white p-8 rounded-xl shadow-lg ${plan.popular ? 'ring-2 ring-cyan-500' : ''}`}>
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-6 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </div>
+                  <div className="bg-cyan-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
+                    Most Popular
                   </div>
                 )}
                 <div className="text-center mb-8">
@@ -248,10 +236,10 @@ const AIEmailAutomationPage: React.FC = () => {
                 </div>
                 <div className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
-                    </div>
+                    <li key={featureIndex} className="flex items-center text-gray-600">
+                      <CheckCircle className="w-5 h-5 mr-3 text-cyan-500" />
+                      {feature}
+                    </li>
                   ))}
                 </div>
                 <Link 
@@ -263,7 +251,7 @@ const AIEmailAutomationPage: React.FC = () => {
                   }`}
                 >
                   Get Started
-                </Link>
+                </button>
               </div>
             ))}
           </div>
@@ -273,11 +261,11 @@ const AIEmailAutomationPage: React.FC = () => {
       <section className="py-20 px-4 bg-gradient-to-br from-blue-900/50 to-purple-900/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Trusted by <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Marketers</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Why Choose Our AI Email Automation?
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-              See how AI Email Automation is transforming email marketing for businesses worldwide.
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Our proven track record and innovative approach deliver measurable results.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -304,38 +292,21 @@ const AIEmailAutomationPage: React.FC = () => {
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-blue-600 via-cyan-600 to-purple-600">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            Ready to Revolutionize Your
-            <br />
-            <span className="bg-gradient-to-r from-blue-300 to-cyan-300 bg-clip-text text-transparent">
-              Email Marketing?
-            </span>
+      <section className="py-20 px-4 bg-gradient-to-r from-cyan-600 to-purple-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Ready to Transform Your Email Marketing?
           </h2>
-          <p className="text-xl sm:text-2xl text-white/90 mb-8 max-w-4xl mx-auto">
-            Join thousands of marketers already increasing revenue and saving time with AI Email Automation. 
-            Start your free trial today - no credit card required.
+          <p className="text-xl text-cyan-100 mb-8">
+            Start your free trial today and see the power of AI email automation.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Link 
-              href="/contact" 
-              className="group bg-white text-blue-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transform hover:scale-105"
-            >
-              <span>Start Free Trial</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link 
-              href="/pricing" 
-              className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-center space-x-2 backdrop-blur-sm"
-            >
-              <span>View All Plans</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </div>
+          <button className="bg-white hover:bg-gray-100 text-cyan-600 px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center mx-auto">
+            Start Free Trial
+            <ArrowRight className="w-8 h-8" />
+          </button>
         </div>
       </section>
-    </>
+    </div>
   )
 }
 export default AIEmailAutomationPage

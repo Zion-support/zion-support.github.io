@@ -14,7 +14,7 @@ describe('OptimizedImage', () => {
     
     const image = screen.getByTestId('optimized-image');
     expect(image).toBeInTheDocument();
-    expect(image).toHaveAttribute('src', '/test-image.jpg');
+    expect(image).toHaveAttribute('src', expect.stringContaining('test-image.jpg'));
     expect(image).toHaveAttribute('alt', 'Test image');
   });
 
@@ -62,7 +62,7 @@ describe('OptimizedImage', () => {
         />
       )
       const image = screen.getByTestId('optimized-image')
-      expect(image).toHaveAttribute('src', src)
+      expect(image).toHaveAttribute('src', expect.stringContaining(encodeURIComponent(src)))
       expect(image).toHaveAttribute('alt', `Test image ${index + 1}`)
       unmount()
     })

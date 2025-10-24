@@ -37,31 +37,18 @@ export default function HomePage() {  return (
               Empowering businesses with cutting-edge artificial intelligence, cybersecurity solutions
               cloud infrastructure, and digital transformation services to drive innovation and growth.
             </p>
-<<<<<<< HEAD:app-backup/pages/HomePage.tsx
-            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
-              <Link
-                to="/contact"
-                className="group bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
-=======
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link 
                 href="/contact" 
                 className="group bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
->>>>>>> cursor/fix-errors-and-merge-to-main-50f0:app/pages/HomePage.tsx
               >
                 Get Started Today
                 <ArrowRightIcon className="w-5 h-5 group-hover: translate-x-1 transition-transform" />
               </Link>
-<<<<<<< HEAD:app-backup/pages/HomePage.tsx
-              <Link
-                to="/services"
-                className="group border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-purple-400 hover:text-white transition-all duration-300 flex items-center gap-2"
-=======
               <Link 
                 href="/services" 
                 className="group border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300 flex items-center gap-2"
->>>>>>> cursor/fix-errors-and-merge-to-main-50f0:app/pages/HomePage.tsx
               >
                 Explore Services
                 <ArrowRightIcon className="w-5 h-5 group-hover: translate-x-1 transition-transform" />
@@ -95,11 +82,7 @@ export default function HomePage() {  return (
                 Advanced artificial intelligence services including machine learning
                 natural language processing, and predictive analytics.
               </p>
-<<<<<<< HEAD:app-backup/pages/HomePage.tsx
-              <Link to="/ai-solutions" className="text-purple-400 hover: text-purple-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
-=======
               <Link href="/ai-solutions" className="text-purple-400 hover:text-purple-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
->>>>>>> cursor/fix-errors-and-merge-to-main-50f0:app/pages/HomePage.tsx
                 Learn More <ArrowRightIcon className="w-4 h-4" />
               </Link>
             </div>
@@ -113,11 +96,7 @@ export default function HomePage() {  return (
                 Comprehensive security solutions to protect your digital assets
                 data, and infrastructure from evolving threats.
               </p>
-<<<<<<< HEAD:app-backup/pages/HomePage.tsx
-              <Link to="/cybersecurity" className="text-cyan-400 hover: text-cyan-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
-=======
               <Link href="/cybersecurity" className="text-cyan-400 hover:text-cyan-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
->>>>>>> cursor/fix-errors-and-merge-to-main-50f0:app/pages/HomePage.tsx
                 Learn More <ArrowRightIcon className="w-4 h-4" />
               </Link>
             </div>
@@ -131,11 +110,7 @@ export default function HomePage() {  return (
                 Scalable cloud solutions and infrastructure management to optimize
                 performance and reduce operational costs.
               </p>
-<<<<<<< HEAD:app-backup/pages/HomePage.tsx
-              <Link to="/cloud-solutions" className="text-green-400 hover: text-green-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
-=======
               <Link href="/cloud-solutions" className="text-green-400 hover:text-green-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
->>>>>>> cursor/fix-errors-and-merge-to-main-50f0:app/pages/HomePage.tsx
                 Learn More <ArrowRightIcon className="w-4 h-4" />
               </Link>
             </div>
@@ -149,11 +124,7 @@ export default function HomePage() {  return (
                 Strategic digital transformation services to modernize your business
                 processes and enhance customer experiences.
               </p>
-<<<<<<< HEAD:app-backup/pages/HomePage.tsx
-              <Link to="/digital-transformation" className="text-yellow-400 hover: text-yellow-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
-=======
               <Link href="/digital-transformation" className="text-yellow-400 hover:text-yellow-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
->>>>>>> cursor/fix-errors-and-merge-to-main-50f0:app/pages/HomePage.tsx
                 Learn More <ArrowRightIcon className="w-4 h-4" />
               </Link>
             </div>
@@ -167,11 +138,7 @@ export default function HomePage() {  return (
                 Custom micro SaaS solutions designed to solve specific business
                 challenges with scalable, cost-effective applications.
               </p>
-<<<<<<< HEAD:app-backup/pages/HomePage.tsx
-              <Link to="/micro-saas" className="text-pink-400 hover: text-pink-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
-=======
               <Link href="/micro-saas" className="text-pink-400 hover:text-pink-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
->>>>>>> cursor/fix-errors-and-merge-to-main-50f0:app/pages/HomePage.tsx
                 Learn More <ArrowRightIcon className="w-4 h-4" />
               </Link>
             </div>
@@ -185,11 +152,7 @@ export default function HomePage() {  return (
                 Next-generation 5G technology solutions for enhanced connectivity
                 IoT applications, and ultra-low latency services.
               </p>
-<<<<<<< HEAD:app-backup/pages/HomePage.tsx
-              <Link to="/5g-solutions" className="text-indigo-400 hover: text-indigo-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
-=======
               <Link href="/5g-solutions" className="text-indigo-400 hover:text-indigo-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
->>>>>>> cursor/fix-errors-and-merge-to-main-50f0:app/pages/HomePage.tsx
                 Learn More <ArrowRightIcon className="w-4 h-4" />
               </Link>
             </div>
@@ -204,13 +167,8 @@ export default function HomePage() {  return (
               Why Choose Zion Tech Group?
             </h2>
             <p className="text-xl text-gray-300 mb-12 leading-relaxed">
-<<<<<<< HEAD:app-backup/pages/HomePage.tsx
-              With over 4 years of experience in cutting-edge technology solutions
-              we've helped businesses across various industries transform their operations
-=======
               With over 4 years of experience in cutting-edge technology solutions, 
               we&apos;ve helped businesses across various industries transform their operations 
->>>>>>> cursor/fix-errors-and-merge-to-main-50f0:app/pages/HomePage.tsx
               and achieve unprecedented growth.
             </p>
             <div className="grid md: grid-cols-3 gap-8 mb-12">
@@ -227,16 +185,10 @@ export default function HomePage() {  return (
                 <div className="text-gray-300">Success Rate</div>
               </div>
             </div>
-<<<<<<< HEAD:app-backup/pages/HomePage.tsx
-            <Link
-              to="/about"
-              className="inline-flex items-center gap-2 bg-white text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-gray-100 transition-colors"
-=======
             
             <Link 
               href="/about" 
               className="inline-flex items-center gap-2 bg-white text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
->>>>>>> cursor/fix-errors-and-merge-to-main-50f0:app/pages/HomePage.tsx
             >
               Learn More About Us <ArrowRightIcon className="w-5 h-5" />
             </Link>
@@ -267,18 +219,6 @@ export default function HomePage() {  return (
                 <span>Middletown, DE</span>
               </div>
             </div>
-<<<<<<< HEAD:app-backup/pages/HomePage.tsx
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: from-purple-700 hover:to-cyan-700 transition-all duration-300"
-              >
-                Get In Touch
-              </Link>
-              <Link
-                to="/demo"
-                className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-purple-400 hover:text-white transition-all duration-300"
-=======
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
@@ -290,7 +230,6 @@ export default function HomePage() {  return (
               <Link 
                 href="/demo" 
                 className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
->>>>>>> cursor/fix-errors-and-merge-to-main-50f0:app/pages/HomePage.tsx
               >
                 Schedule Demo
               </Link>

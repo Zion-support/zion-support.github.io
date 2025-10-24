@@ -14,6 +14,7 @@ import 'whatwg-fetch'
 process.env['VITE_REOWN_PROJECT_ID'] = 'test_project_id_from_jest_setup'
 process.env['NEXT_PUBLIC_SUPABASE_URL'] = 'http://localhost:54321'
 process.env['NEXT_PUBLIC_SUPABASE_ANON_KEY'] = 'test_anon_key'
+
 // Mock window.matchMedia for Jest
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
@@ -28,6 +29,7 @@ Object.defineProperty(window, 'matchMedia', {
     dispatchEvent: jest.fn()
   }))
 })
+
 // Mock ResizeObserver for Radix UI components and other libraries that might use it
 global.ResizeObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(),
@@ -38,10 +40,12 @@ global.ResizeObserver = jest.fn().mockImplementation(() => ({
 if (typeof URL.revokeObjectURL === 'undefined') {
   URL.revokeObjectURL = jest.fn()
 }
+
 // Polyfill for window.scrollTo
 if (typeof window.scrollTo === 'undefined') {
   window.scrollTo = jest.fn()
 }
+
 // Polyfill IntersectionObserver for components that use it (e.g., embla-carousel)
 if (typeof window.IntersectionObserver === 'undefined') {
   class MockIntersectionObserver {
@@ -58,9 +62,11 @@ if (typeof window.IntersectionObserver === 'undefined') {
   // @ts-expect-error - Mock implementation for testing
   global.IntersectionObserver = MockIntersectionObserver
 }
+
 // Polyfill performance.getEntriesByType for JSDOM (used in productionLogger)
 if (typeof performance.getEntriesByType !== 'function') {
   (performance as Performance & { getEntriesByType: () => PerformanceEntry[] }).getEntriesByType = () => []
 }
+
 // Ensure all code paths use the mock implementation
 // global.fetch = fetchMock

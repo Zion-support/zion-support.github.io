@@ -121,10 +121,13 @@ const Footer: React.FC = () => {
                 </li>
               ))}
             </ul>
-            
-            <h3 className="text-lg font-semibold text-white mt-6">Legal</h3>
+          </div>
+
+          {/* Support */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Support</h3>
             <ul className="space-y-2">
-              {legalLinks.map((link, index) => (
+              {supportLinks.map((link, index) => (
                 <li key={index}>
                   <Link 
                     href={link.url} 
