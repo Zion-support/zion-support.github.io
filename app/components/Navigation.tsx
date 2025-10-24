@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw     ;} from 'lucide-react';
+import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from 'lucide-react';
 const Navigation = (
 
   return(<div>

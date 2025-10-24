@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import Navigation from './Navigation';
-import { ArrowRight, CheckCircle     ;} from 'lucide-react';
+import { ArrowRight, CheckCircle } from 'lucide-react';
 const features = [
   {
 icon: "CheckCircle",title: "Advanced AI",description: "Cutting-edge artificial intelligence solutions",benefits: ["Machine Learning","Natural Language Processing", "Computer Vision"]
