@@ -1,4 +1,4 @@
-'use client';
+'use client'
 import React from 'react'
 interface ServiceTemplateProps {
 title: string;, description: string
@@ -22,6 +22,6 @@ return (</ServiceTemplateProps>,
     <span className="text-gray-700">{feature}</span>/div>
             ))}
             </div>/div>/div>}
-export default ServiceTemplate;
+export default ServiceTemplate
   </div>"
 }"

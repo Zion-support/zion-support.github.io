@@ -36,4 +36,13 @@ Join thousands of businesses already using EnhancedSEOHead to transform their op
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}
-export default EnhancedSEOHead;
+export default EnhancedSEOHead
+
+  </section>
+  </section>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>

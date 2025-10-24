@@ -1,19 +1,18 @@
-'use client';
-import React from 'react';
-import  Helmet  from 'react-helmet-async';
-import  ArrowRight Brain  CheckCircle ArrowRight Phone Mail MapPin Zap Shield Brain Globe        } from 'lucide-react';
-import { { Phone Mail     } from 'lucide-react';
+'use client'
+import React from 'react'
+import  Helmet  from 'react-helmet-async'
+import  ArrowRight Brain  CheckCircle ArrowRight Phone Mail MapPin Zap Shield Brain Globe        } from 'lucide-react'
+import { { Phone Mail     } from 'lucide-react'
     'use client'
       'Gain competitive advantage with advanced technology'
-
-const EnhancedHero: React.FC = () =;>; ;{;
+const EnhancedHero: React.FC = () =;>; ;{
   const benefits = [
     'Increase efficiency by up to 50%'
     'Reduce costs by 30% with automation'
     'Improve decision-making with AI insights'
     'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></d;i;v;>;
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></di;v;>
         </section>
 
         / Benefits Section /
@@ -38,10 +37,11 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({ className = '', children })
     <div className={`${className}`}>
       {children}
     </div>
-  );
-,};
+  )
+,}
 export default EnhancedHero;    'Gain competitive advantage with advanced technology",
     <divclassName = quotflex flex-col sm flex-row gap-4 justify-centerquot / / / />
 ,}"
-};
-;
+}
+
+    </div>

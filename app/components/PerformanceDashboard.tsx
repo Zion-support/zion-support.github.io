@@ -36,4 +36,13 @@ Join thousands of businesses already using PerformanceDashboard to transform the
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}  )}
-export default PerformanceDashboard;
+export default PerformanceDashboard
+
+  </section>
+  </section>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>

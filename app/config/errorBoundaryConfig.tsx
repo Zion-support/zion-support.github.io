@@ -1,22 +1,22 @@
-'use client';
+'use client'
 import React from "react
 /**
 * Error Boundary Configuration
-* Centralized configuration for error handling across the application;
-*/;
+* Centralized configuration for error handling across the application
+*/
 export interface ErrorBoundaryConfig {
   /**
 * Whether to log errors to console
 */
-logErrors:  ;b;o;o;l;e;a;n;
+logErrors:  ;b;o;o;l;e;a;n
 /**
 * Whether to show detailed error messages
 */
-showDetails:  ;b;o;o;l;e;a;n;
+showDetails:  ;b;o;o;l;e;a;n
 /**
 * Whether to send errors to external service
 */
-reportErrors:  ;b;o;o;l;e;a;n;
+reportErrors:  ;b;o;o;l;e;a;n
 /**
 * Error reporting endpoint
 */
@@ -24,67 +24,65 @@ reportingEndpoint?: string
 /**
 * Whether to show error overlay in development
 */
-showErrorOverlay:  ;b;o;o;l;e;a;n;
+showErrorOverlay:  ;b;o;o;l;e;a;n
 /**
 * Maximum number of errors to store
 */
-maxStoredErrors:  ; ;n;u;m;b;e;r;
+maxStoredErrors:  ; ;n;u;m;b;e;r
 /**
 * Custom error messages by error type
 */
 customMessage
-  s: Recor;d;<;s;t;r;i;n;g, string>
+  s: Recor;d;<s;t;r;i;n;g, string>
 /**
 * Fallback UI components
 */
-fallbackComponents:  ; ; ; ; ; ; ;{;
-
+fallbackComponents:  ; ; ; ; ; ; ;{
 
 
 }</string>
     default: React.ComponentType<{ error: E;r;r;o;r; resetErro
-  r: () => void; ;};>;
+  r: () => void; ;};>
 network: React.ComponentType<{ error: E;r;r;o;r; resetErro
-  r: () => void; ;};>;
+  r: () => void; ;};>
 notFound: React.ComponentType<{ error: E;r;r;o;r; resetErro
-  r: () => void ;};>;};
+  r: () => void ;};>;}
 /**
 * Default error messages
 */
 const DEFAULT_ERROR_MESSAGES = {
-
-default: 'Something went wrong. Please try agai;n;.;';
-    network: 'Network connection issue. Please check your internet connectio;n;.;';
-notFound: 'The requested resource was not foun;d;.;';
-    timeout: 'Request timed out. Please try agai;n;.;';
-serverError: 'Server error occurred. Please try again late;r;.;';
-    validation: 'Validation error. Please check your inpu;t;.;';
-};
+default: 'Something went wrong. Please try agai;n;.;'
+    network: 'Network connection issue. Please check your internet connectio;n;.;'
+notFound: 'The requested resource was not foun;d;.;'
+    timeout: 'Request timed out. Please try agai;n;.;'
+serverError: 'Server error occurred. Please try again late;r;.;'
+    validation: 'Validation error. Please check your inpu;t;.;'
+}
 /**
 * Get error boundary configuration based on environment
 */
 export function getErrorBoundaryConfig(): ErrorBoundaryConfig {return {
-logErrors: t;r;u;e;
-    showDetails: isDevelopm;e;n;t;
+logErrors: t;r;u;e
+    showDetails: isDevelopm;e;n;t
 reportError
-  s: !isDevelopm;e;n;t;
-    reportingEndpoint: process.env.REACT_APP_ERROR_REPORTING_ENDPO;I;N;T;
+  s: !isDevelopm;e;n;t
+    reportingEndpoint: process.env.REACT_APP_ERROR_REPORTING_ENDPO;I;N;T
 showErrorOverla
-  y: isDevelopm;e;n;t;
-    maxStoredErrors:  ; ;5;0;
+  y: isDevelopm;e;n;t
+    maxStoredErrors:  ; ;5;0
 customMessage
-  s: DEFAULT_ERROR_MESSA;G;E;S;
-    fallbackComponents:  ; ; ;{;
+  s: DEFAULT_ERROR_MESSA;G;E;S
+    fallbackComponents:  ; ; ;{
 defaul
-  t: DefaultErrorFallb;a;c;k;
-    network: NetworkErrorFallb;a;c;k;
+  t: DefaultErrorFallb;a;c;k
+    network: NetworkErrorFallb;a;c;k
 notFoun
-  d: NotFoundFallba;c;k;};
+  d: NotFoundFallba;c;k;}
 /**
 * Default error fallback component
-*/;
+*/
 function DefaultErrorFallback({ error, resetError }: { error: E;r;r;o;r; resetErro)
-  r: () => void };); ;{;
+  r: () => void };); ;{
 return (
     <>
       <div className="flex items-center justify-center w-12 h-12 mx-autobg-red-100rounded-full"></div>
@@ -114,21 +112,19 @@ d="M6 18 L18 6 M6 6 l12 12"
 <button
 onClick = {
 resetError
-};
-className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover: bg-blue-700transition-colors">Try Again</butt;o;n;>;
+}
+className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover: bg-blue-700transition-colors">Try Again</butto;n;>
 <button
 onClick={() =>(window.location.href = '/')}</button>
-className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover: bg-gray-300transition-colors";>;
+className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover: bg-gray-300transition-colors";>
 Go Home
 </
-
-
 
 /**
 * Network error fallback component
 */
 function NetworkErrorFallback({ resetError }: { error: E;r;r;o;r; resetErro)
-  r: () => void };); ;{;
+  r: () => void };); ;{
 return (
     <>
       <div className="flex items-center justify-center w-12 h-12 mx-autobg-yellow-100rounded-full"></div>
@@ -156,8 +152,8 @@ Unable to connect to the server. Please check your internet connection and try a
 <button
 onClick = {
 resetError
-};
-className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover: bg-blue-700transition-colors">Retry Connection</butt;o;n;>;
+}
+className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover: bg-blue-700transition-colors">Retry Connection</butto;n;>
 </div>
 </div>
 </div>
@@ -176,12 +172,12 @@ return (
 <div className="mt-6 flexgap-4justify-center"></div>
 <button
 onClick={() =>(window.location.href = '/')}</button>
-className="bg-blue-600 text-white px-6 py-2 rounded-lg hover: bg-blue-700transition-colors";>;
+className="bg-blue-600 text-white px-6 py-2 rounded-lg hover: bg-blue-700transition-colors";>
 Go Home
 </
 <button
 onClick={() =>window.history.back()}</button>
-className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover: bg-gray-300transition-colors";>;
+className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover: bg-gray-300transition-colors";>
 Go Back
 </
 </div>
@@ -191,7 +187,7 @@ Go Back
 * Get error type from error object
 */
 export function getErrorType(erro)
-  r: Error): keyof typeof DEFAULT_ERROR_MESSAGE;S; ;{;
+  r: Error): keyof typeof DEFAULT_ERROR_MESSAGE;S; ;{
   if (error.message.includes('Network') || error.message.includes('fetch')) {
 return 'network'
 if (error.message.includes('404') || error.message.includes('not found')) {
@@ -214,3 +210,7 @@ timestam,p: new Date().toISOString(),userAgent: typeof navigator !== 'undefined'
 ur,l: typeof window !== 'undefined' ? window.location.href : 'unknown',}
 export default getErrorBoundaryConfig</string>
 }}}}}}}
+
+  </st>
+  </h1>
+  </h1>

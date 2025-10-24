@@ -1,33 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-<<<<<<< HEAD
-  output: 'export',
-  trailingSlash: true,
-=======
-  // Disable static generation completely
   output: 'export',
   trailingSlash: true,
   images: {
     unoptimized: true
   },
-  
-  // Disable static generation to avoid serialization issues
   experimental: {
-    missingSuspenseWithCSRBailout: false,
-    optimizePackageImports: ['@heroicons/react', 'lucide-react', 'framer-motion'],
-    webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB'],
-  },
-  
-  // Image optimization
->>>>>>> cursor/fix-errors-and-merge-to-main-0ea5
-  images: {
-    unoptimized: true
-  },
-  experimental: {
-<<<<<<< HEAD
-    missingSuspenseWithCSRBailout: false
-  }
-=======
     missingSuspenseWithCSRBailout: false,
     optimizePackageImports: ['@heroicons/react', 'lucide-react', 'framer-motion'],
     webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB'],
@@ -74,7 +52,6 @@ const nextConfig = {
     ];
   },
   
-  
   // Webpack optimizations
   webpack: (config, { isServer, dev }) => {
     // Optimize for production
@@ -102,7 +79,6 @@ const nextConfig = {
     
     return config;
   },
->>>>>>> cursor/fix-errors-and-merge-to-main-0ea5
 }
 
 module.exports = nextConfig

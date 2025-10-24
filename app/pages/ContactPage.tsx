@@ -1,9 +1,10 @@
-'use client';
-import React from 'react';
-const ContactPage = () => {
+'use client'
+import React from 'react'
+const $1 = () => {
   return (
     <div>h1>Contact Page</h1>p>Contact information coming soon.</p>/div>
-  );
-};
+  )
+}
 
-export default ContactPage;
+export default ContactPage
+    </div>

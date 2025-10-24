@@ -36,4 +36,13 @@ Join thousands of businesses already using PerformanceOptimizer to transform the
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}  )}
-export default PerformanceOptimizer;
+export default PerformanceOptimizer
+
+  </section>
+  </section>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>

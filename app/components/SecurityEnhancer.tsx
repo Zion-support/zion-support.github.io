@@ -36,5 +36,13 @@ Join thousands of businesses already using SecurityEnhancer to transform their o
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}  )}
-export default SecurityEnhancer;
+export default SecurityEnhancer
 }
+  </section>
+  </section>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>

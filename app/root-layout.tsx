@@ -1,5 +1,5 @@
-'use client';
-import React from 'react';
+'use client'
+import React from 'react'
 export default function RootLayout({
 children
 }: {
@@ -14,16 +14,17 @@ return (
 }
 
 
+}
 
-
-};
-
-const rootlayout: React.FC<rootlayoutProps> = ({ className }) =;>; ;{;
+const rootlayout: React.FC<rootlayoutProps> = ({ className }) =;>; ;{
   return (
     <html lang="en">
       <body className={inter.className}>
         {children}
-      </body>);
-    </html>);
-  );
+      </body>)
+    </html>)
+  )
 }";'"
+
+  </rootlayoutProps>
+  </html>

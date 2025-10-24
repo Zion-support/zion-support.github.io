@@ -36,5 +36,13 @@ Join thousands of businesses already using SkipLink to transform their operation
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}  )}
-export default SkipLink;
+export default SkipLink
 }
+  </section>
+  </section>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>

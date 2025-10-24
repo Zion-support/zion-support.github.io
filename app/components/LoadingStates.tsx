@@ -36,5 +36,13 @@ Join thousands of businesses already using LoadingStates to transform their oper
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}  )}
-export default LoadingStates;
+export default LoadingStates
 }
+  </section>
+  </section>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>

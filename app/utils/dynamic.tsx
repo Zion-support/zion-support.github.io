@@ -1,5 +1,5 @@
-'use client';
-import React from 'react';
-export const dynamic = () => {
-  return null;
-};
+'use client'
+import React from 'react'
+export const $1 = () => {
+  return null
+}

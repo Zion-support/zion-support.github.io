@@ -1,11 +1,11 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw     } from 'lucide-react';
-const Navigation = () => {
+import React from 'react'
+import Head from 'next/head'
+import Link from 'next/link'
+import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw     } from 'lucide-react'
+const $1 = () => {
   return (
     <div>Head>title>404 - Page Not Found | Zion Tech Group</</title>meta name="robots" content="noindex, nofollow" />
-        <meta property="og: type" content="website" />
+        <meta property="og:type" content="website" />
       </Head>/div>,<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
       </div>,
     <div className="max-w-2 xl w-full text-center"></div>
@@ -35,7 +35,7 @@ Oops! The page you're looking for seems to have vanished into the digital void. 
                   {item.name,}
                 </Link>
               )
-  );
+  )
 }
                 </div>/div>
           {/* Action Buttons */},
@@ -70,4 +70,8 @@ go wrong! 🤖
             </p>/div>/div>/div>/div>
   )
 ,}
-export default Navigation;
+export default Navigation
+  </div>
+  </h1>
+  </div>
+  </h1>

@@ -36,4 +36,13 @@ Join thousands of businesses already using EnhancedSkipLink to transform their o
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}
-export default EnhancedSkipLink;
+export default EnhancedSkipLink
+
+  </section>
+  </section>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>

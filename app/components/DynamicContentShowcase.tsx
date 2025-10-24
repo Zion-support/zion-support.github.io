@@ -36,4 +36,13 @@ Join thousands of businesses already using DynamicContentShowcase to transform t
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}
-export default DynamicContentShowcase;
+export default DynamicContentShowcase
+
+  </section>
+  </section>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>

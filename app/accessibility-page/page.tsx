@@ -1,9 +1,9 @@
-'use client';
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
-import Footer from '../components/Footer';
+'use client'
+import React from 'react'
+import Head from 'next/head'
+import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
+import Footer from '../components/Footer'
 
 export default function Page() {
   return (
@@ -18,16 +18,16 @@ export default function Page() {
             Page
           </h1>
           <p className="text-xl text-gray-300 mb-8">
-            Professional accessibility page services and solutions.
+            Professional accessibility services and solutions.
           </p>
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
             <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
             <p className="text-gray-300">
-              Our accessibility page services are currently under development. Contact us to learn more about our upcoming services.
+              Our accessibility services are currently under development. Contact us to learn more about our upcoming services.
             </p>
           </div>
         </div>
-      </main>
+      </div>
     </div>
   )
 }

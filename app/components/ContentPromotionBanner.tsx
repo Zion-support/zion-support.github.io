@@ -36,4 +36,13 @@ Join thousands of businesses already using ContentPromotionBanner to transform t
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}
-export default ContentPromotionBanner;
+export default ContentPromotionBanner
+
+  </section>
+  </section>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>

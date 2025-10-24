@@ -36,5 +36,13 @@ Join thousands of businesses already using ServiceCardSkeleton to transform thei
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}  )}
-export default ServiceCardSkeleton;
+export default ServiceCardSkeleton
 }
+  </section>
+  </section>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>

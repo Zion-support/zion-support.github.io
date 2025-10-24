@@ -36,5 +36,13 @@ Join thousands of businesses already using ResponsiveContainer to transform thei
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}  )}
-export default ResponsiveContainer;
+export default ResponsiveContainer
 }
+  </section>
+  </section>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>

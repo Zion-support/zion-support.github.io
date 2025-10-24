@@ -1,6 +1,6 @@
-'use client';
-import { Link from 'next/link';
-import { usePathname     } from 'next/navigation';
+'use client'
+import { Link from 'next/link'
+import { usePathname     } from 'next/navigation'
 import React   } from 'react'
 const Breadcrumb: React.FC = () => {
 const pathname = usePathname()
@@ -37,11 +37,14 @@ const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`
                 ) : (
                   <Link
                     href={routeTo}
-                    className="text-gray-400 hover: text-white transition-colors";
+                    className="text-gray-400 hover: text-white transition-colors"
                   >
                     {name.charAt(0).toUpperCase() + name.slice(1).replace(/-/g, ' ')}
                   </Link>
                 )}
-              </li>/ol>/div>/nav>;
+              </li>/ol>/div>/nav>
 export default Breadcrumb; }
 }}
+
+  </li>
+  </nav>

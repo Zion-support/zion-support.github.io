@@ -1,7 +1,7 @@
-'use client';
+'use client'
 
-import React from 'react';
-import Head from 'next/head';
+import React from 'react'
+import Head from 'next/head'
 
 interface SEOHeadProps {
 title?: string
@@ -15,11 +15,11 @@ return (
     <>
 <Helmet />
         <title>{title}</</title>meta name="description" content={description};/ />
-        <meta name="keywords" content={keywords};/ />
-        <meta property="og: title" content={title,};/ />
-        <meta property="og: description" content={description,};/ />
-        <meta name="twitter: title" content={title,};/ />
-        <meta name="twitter: description" content={description,};/ />
+        <meta name="keywords" content={keywords}/ />
+        <meta property="og: title" content={title,}/ />
+        <meta property="og: description" content={description,}/ />
+        <meta name="twitter: title" content={title,}/ />
+        <meta name="twitter: description" content={description,}/ />
       </Helmet>Navigation/ />,
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
         {/* Hero Section */}
@@ -54,4 +54,13 @@ Join thousands of businesses already using SEOHead to transform their operations
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}  )}
-export default SEOHead;
+export default SEOHead
+
+  </section>
+  </section>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>

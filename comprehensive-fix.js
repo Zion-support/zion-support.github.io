@@ -1,185 +1,132 @@
 const fs = require('fs');
-const path = require('path');
+const glob = require('glob');
 
-// Function to create a clean, working component template
-function createCleanComponent(fileName, content) {
-  const baseName = fileName.replace('.tsx', '').replace('.ts', '');
+// Function to fix JSX structure issues
+function fixJSXStructure(content) {
+  // Remove extra closing tags at the end
+  content = content.replace(/\n\s*<\/div>\s*$/g, '');
+  content = content.replace(/\n\s*<\/main>\s*$/g, '');
+  content = content.replace(/\n\s*<\/section>\s*$/g, '');
   
-  // Check if it's a page component
-  if (fileName.includes('page.tsx')) {
-    return `'use client';
-import React from 'react';
-
-export default function ${baseName.charAt(0).toUpperCase() + baseName.slice(1)}() {
-  return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">
-            ${baseName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Professional ${baseName.replace(/-/g, ' ')} services and solutions.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}`;
+  // Fix missing opening tags
+  if (content.includes('</main>') && !content.includes('<main')) {
+    content = content.replace(/(<div[^>]*>[\s\S]*?)(<\/div>)/g, '$1<main>$2</main>');
   }
   
-  // Check if it's a component
-  if (fileName.includes('Component') || fileName.includes('components/')) {
-    return `'use client';
-import React from 'react';
-
-interface ${baseName}Props {
-  className?: string;
-}
-
-const ${baseName}: React.FC<${baseName}Props> = ({ className }) => {
-  return (
-    <div className={className}>
-      <h2>${baseName}</h2>
-      <p>${baseName} component for enhanced functionality.</p>
-    </div>
-  );
-};
-
-export default ${baseName};`;
+  // Fix the specific pattern where we have </main> but no <main>
+  if (content.includes('</main>') && !content.includes('<main')) {
+    content = content.replace(/(<div[^>]*>[\s\S]*?)(<\/div>)/g, (match, p1, p2) => {
+      if (p1.includes('</main>')) {
+        return p1.replace('</main>', '') + '<main>' + p2 + '</main>';
+      }
+      return match;
+    });
   }
   
-  // Default template
-  return `'use client';
-import React from 'react';
-
-export default function ${baseName}() {
-  return (
-    <div>
-      <h1>${baseName}</h1>
-      <p>${baseName} content.</p>
-    </div>
-  );
-}`;
-}
-
-// Function to clean up specific error patterns
-function cleanContent(content, fileName) {
-  // Remove merge conflict markers
-  content = content.replace(/^<<<<<<<.*$/gm, '');
+  // Fix merge conflicts
+  if (content.includes('=======')) {
+    content = content.replace(/=======.*?>>>>>>> [^\n]+/gs, '');
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======/g, '');
+  }
   
-  // Fix unterminated regular expressions
-  content = content.replace(/\/[^\/\n]*$/gm, '');
+  // Fix identifier expected errors
+  content = content.replace(/const\s+\w+\s*=\s*\(\)\s*=>\s*\{;\s*\n/g, 'const $1 = () => {\n');
   
-  // Fix malformed imports
-  content = content.replace(/import\s+[^;]+$/gm, (match) => {
-    if (!match.endsWith(';')) {
-      return match + ';';
-    }
-    return match;
-  });
-  
-  // Fix malformed JSX
-  content = content.replace(/<[^>]*$/gm, '');
-  content = content.replace(/[^<]*$/gm, '');
-  
-  // Remove broken syntax
-  content = content.replace(/[{}]{2,}/g, '');
-  content = content.replace(/[()]{2,}/g, '');
-  content = content.replace(/[\[\]]{2,}/g, '');
-  
-  // Clean up extra characters
-  content = content.replace(/[;]{2,}/g, ';');
-  content = content.replace(/[,]{2,}/g, ',');
+  // Fix property assignment errors
+  content = content.replace(/property="og:\s*type"/g, 'property="og:type"');
+  content = content.replace(/content="website";\s*;\/;>/g, 'content="website" />');
   
   return content;
 }
 
-// Function to determine if file should be completely rewritten
-function shouldRewriteFile(fileName, content) {
-  // Check for severe corruption
-  const corruptionPatterns = [
-    /Error: Parsing error/,
-    /Declaration or statement expected/,
-    /Property or signature expected/,
-    /Expression expected/,
-    /Unterminated regular expression/,
-    /Expected corresponding/,
-    /Identifier expected/,
-    /[{}]{3,}/,
-    /[()]{3,}/,
-    /[\[\]]{3,}/
-  ];
+// Function to validate and fix JSX structure
+function validateJSXStructure(content) {
+  const lines = content.split('\n');
+  const stack = [];
+  let inJSX = false;
+  let braceCount = 0;
   
-  return corruptionPatterns.some(pattern => pattern.test(content)) || 
-         content.length < 100 || 
-         content.split('\n').length < 5;
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    
+    // Track when we're in JSX
+    if (line.includes('return (') || line.includes('return(')) {
+      inJSX = true;
+    }
+    
+    if (inJSX) {
+      // Count braces
+      braceCount += (line.match(/\{/g) || []).length;
+      braceCount -= (line.match(/\}/g) || []).length;
+      
+      // Track opening tags
+      const openTags = line.match(/<([a-zA-Z][a-zA-Z0-9]*)[^>]*>/g) || [];
+      const closeTags = line.match(/<\/([a-zA-Z][a-zA-Z0-9]*)>/g) || [];
+      
+      openTags.forEach(tag => {
+        const tagName = tag.match(/<([a-zA-Z][a-zA-Z0-9]*)/)[1];
+        if (tagName !== 'Head' && tagName !== 'Link' && !tag.includes('/>')) {
+          stack.push(tagName);
+        }
+      });
+      
+      closeTags.forEach(tag => {
+        const tagName = tag.match(/<\/([a-zA-Z][a-zA-Z0-9]*)>/)[1];
+        const lastOpen = stack.pop();
+        if (lastOpen !== tagName) {
+          // Mismatch - try to fix
+          if (lastOpen) {
+            stack.push(lastOpen); // Put it back
+          }
+        }
+      });
+    }
+  }
+  
+  // Add missing closing tags
+  while (stack.length > 0) {
+    const tag = stack.pop();
+    content += `\n  </${tag}>`;
+  }
+  
+  // Add missing closing brace
+  if (braceCount > 0) {
+    for (let i = 0; i < braceCount; i++) {
+      content += '\n}';
+    }
+  }
+  
+  return content;
 }
 
-// Main processing function
+// Main function to process all files
 function processFiles() {
-  const directories = [
-    path.join(__dirname, 'app'),
-    path.join(__dirname, 'src'),
-    path.join(__dirname, 'components')
-  ];
+  const files = glob.sync('app/**/*.tsx');
+  let processedCount = 0;
+  let errorCount = 0;
   
-  let fixedCount = 0;
-  let rewrittenCount = 0;
-  
-  directories.forEach(dir => {
-    if (fs.existsSync(dir)) {
-      processDirectory(dir);
+  files.forEach(file => {
+    try {
+      let content = fs.readFileSync(file, 'utf8');
+      const originalContent = content;
+      
+      // Apply fixes
+      content = fixJSXStructure(content);
+      content = validateJSXStructure(content);
+      
+      // Only write if content changed
+      if (content !== originalContent) {
+        fs.writeFileSync(file, content, 'utf8');
+        processedCount++;
+        console.log(`Fixed: ${file}`);
+      }
+    } catch (error) {
+      errorCount++;
+      console.error(`Error processing ${file}:`, error.message);
     }
   });
   
-  function processDirectory(dir) {
-    const files = fs.readdirSync(dir);
-    
-    files.forEach(file => {
-      const filePath = path.join(dir, file);
-      const stat = fs.statSync(filePath);
-      
-      if (stat.isDirectory()) {
-        processDirectory(filePath);
-      } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
-        try {
-          let content = fs.readFileSync(filePath, 'utf8');
-          const originalContent = content;
-          
-          if (shouldRewriteFile(file, content)) {
-            content = createCleanComponent(file, content);
-            fs.writeFileSync(filePath, content, 'utf8');
-            console.log('Rewritten: ' + filePath);
-            rewrittenCount++;
-          } else {
-            content = cleanContent(content, file);
-            if (content !== originalContent) {
-              fs.writeFileSync(filePath, content, 'utf8');
-              console.log('Fixed: ' + filePath);
-              fixedCount++;
-            }
-          }
-        } catch (error) {
-          console.error('Error processing ' + filePath + ':', error.message);
-          // If there's an error, rewrite the file
-          try {
-            const content = createCleanComponent(file, '');
-            fs.writeFileSync(filePath, content, 'utf8');
-            console.log('Rewritten after error: ' + filePath);
-            rewrittenCount++;
-          } catch (rewriteError) {
-            console.error('Failed to rewrite ' + filePath + ':', rewriteError.message);
-          }
-        }
-      }
-    });
-  }
-  
-  console.log('Processing complete!');
-  console.log('Fixed files: ' + fixedCount);
-  console.log('Rewritten files: ' + rewrittenCount);
+  console.log(`\nProcessed ${processedCount} files with ${errorCount} errors`);
 }
 
-// Run the script
 processFiles();

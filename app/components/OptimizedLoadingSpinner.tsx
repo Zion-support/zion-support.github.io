@@ -36,5 +36,13 @@ Join thousands of businesses already using OptimizedLoadingSpinner to transform 
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}  )}
-export default OptimizedLoadingSpinner;
+export default OptimizedLoadingSpinner
 }
+  </section>
+  </section>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>

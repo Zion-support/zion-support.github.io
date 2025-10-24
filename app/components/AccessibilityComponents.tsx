@@ -1,9 +1,7 @@
-'use client';
-import React from 'react';
+'use client'
+import React from 'react'
 interface AccessibilityComponentsProps {
-  className?: string;
-
-
+  className?: string
 
 
 }
@@ -12,6 +10,6 @@ const AccessibilityComponents: React.FC<AccessibilityComponentsProps> = ({ class
     <div className={className}>
       {children}
     </div>
-  );
-};
-export default AccessibilityComponents;
+  )
+}
+export default AccessibilityComponents

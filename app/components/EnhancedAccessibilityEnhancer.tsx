@@ -1,30 +1,30 @@
-'use client';
-import React from 'react';
-import { Helmet     } from 'react-helmet-async';
-import { Brain, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Globe     } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet     } from 'react-helmet-async'
+import { Brain, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Globe     } from 'lucide-react'
 const EnhancedAccessibilityEnhancerPage: React.FC = () => {
 const features = [,{
 icon: Brain, title: 'AI-Powered Intelligence', description: 'Advanced AI algorithms that provide intelligent insights and recommendations.', benefits: ['Smart recommendations','Predictive analytics', 'Automated insights', 'Real-time analysis']
     }
     {
-      icon: BarCh;a;r;t;
-      title: 'Advanced Analyti;c;s;';
-      description: 'Comprehensive analytics dashboard with real-time data visualizatio;n;.;';
+      icon: BarCh;a;r;t
+      title: 'Advanced Analyti;c;s;'
+      description: 'Comprehensive analytics dashboard with real-time data visualizatio;n;.;'
       benefits: ['Real-time dashboa;r;d;s;', 'Custom reports', 'Data visualization', 'Performance metrics']
     }
     {
-      icon: Tar;g;e;t;
-      title: 'Precision Targeti;n;g;';
-      description: 'Target specific goals and objectives with precision and accurac;y;.;';
+      icon: Tar;g;e;t
+      title: 'Precision Targeti;n;g;'
+      description: 'Target specific goals and objectives with precision and accurac;y;.;'
       benefits: ['Goal track;i;n;g;', 'Performance optimization', 'Strategic planning', 'Success metrics']
     }
     {
-      icon: Trendin;g;U;p;
-      title: 'Growth Optimizati;o;n;';
-      description: 'Optimize your business growth with data-driven strategie;s;.;';
+      icon: Trendin;g;U;p
+      title: 'Growth Optimizati;o;n;'
+      description: 'Optimize your business growth with data-driven strategie;s;.;'
       benefits: ['Growth strateg;i;e;s;', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ];
+  ]
 
   const benefits = [
     'Increase efficiency by up to 50%'
@@ -85,7 +85,15 @@ export default EnhancedAccessibilityEnhancerPage;        <section className="py-
     <div className="text-center mb-16" / /></div>h2 className="text-4 xl font-bold text-white mb-4">Why Choose Our Solution</h2>pExperience the benefits of cutting-edge AI technology</p /></p>/div>,
     <div className="grid grid-cols-1 mdgrid-cols-2 gap-6"></div>benefitsmapbenefit index => 
       <div key=index className=quotflex items-start space-x-3 quot / />
-      </div>/div>CheckCircleclassNam e=quoth-6 w-6 text-purple-400 mt-1 flex-shrink-0 quot / /><p className=quottext-gray-300 text-lgquot>benefit</p>/p>/div>/div>/div>/section>/>;
+      </div>/div>CheckCircleclassNam e=quoth-6 w-6 text-purple-400 mt-1 flex-shrink-0 quot / /><p className=quottext-gray-300 text-lgquot>benefit</p>/p>/div>/div>/div>/section>/>
 export default EnhancedAccessibilityEnhancerPage; }
 </ul>
 }
+
+  </section>
+  </section>
+  </section>
+  </li>
+  </h1>
+  </h1>
+  </section>

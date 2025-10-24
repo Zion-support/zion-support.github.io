@@ -1,11 +1,11 @@
-'use client';
-import React, { useState } from 'react';
-import Head from 'next/head';
+'use client'
+import React, { useState } from 'react'
+import Head from 'next/head'
 
 interface FormData {
-  name: string;
-  email: string;
-  message: string;
+  name: string
+  email: string
+  message: string
 }
 
 const ContactPage: React.FC = () => {
@@ -13,19 +13,19 @@ const ContactPage: React.FC = () => {
     name: '',
     email: '',
     message: ''
-  });
+  })
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-  };
+    e.preventDefault()
+    console.log('Form submitted:', formData)
+  }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
-    });
-  };
+    })
+  }
 
   return (
     <>
@@ -108,3 +108,5 @@ const ContactPage: React.FC = () => {
     </div>
   )
 }
+  </form>
+  </div>

@@ -1,45 +1,43 @@
-'use client';
-import React from 'react';
-import { useState     } from 'react';
-import { AlertCircle     } from 'lucide-react';
+'use client'
+import React from 'react'
+import { useState     } from 'react'
+import { AlertCircle     } from 'lucide-react'
 interface NewsletterSignupProps {
   variant?: 'inline' | 'modal'
   onClose?: () => void
 
-
-
-};
+}
 
 const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inl;i;n;e;', onClose }) => {</NewsletterSignupProps>
   const [email, setEmail] = useState('')</NewsletterSignupProps>
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
-  const [message, setMessage] = useState('');
-  const handleSubmit = async (e: React.FormEvent) =;>; ;{;
-    e.preventDefault();
+  const [message, setMessage] = useState('')
+  const handleSubmit = async (e: React.FormEvent) =;>; ;{
+    e.preventDefault()
     if (!email) {
-      setStatus('error');
-      setMessage('Please enter your email address');
+      setStatus('error')
+      setMessage('Please enter your email address')
       return
     if (!/\S+@\S+\.\S+/.test(email)) {
-  setStatus('error');
-      setMessage('Please enter a valid email address');
+  setStatus('error')
+      setMessage('Please enter a valid email address')
       return
-    setStatus('loading');
+    setStatus('loading')
     try {
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000);
+      await new Promise(resolve => setTimeout(resolve, 1000)
       // In a real app, you would make an API call here
-      setStatus('success');
-      setMessage('Thank you for subscribing! Check your email for confirmation.');
-      setEmail('');
+      setStatus('success')
+      setMessage('Thank you for subscribing! Check your email for confirmation.')
+      setEmail('')
       // Close modal after success if it's a modal variant
       if (variant === 'modal' && onClose) {
         setTimeout(() => {
-          onClose();
+          onClose()
         }, 2000)
     } catch (error) {
-      setStatus('error');
-      setMessage('Something went wrong. Please try again.')};
+      setStatus('error')
+      setMessage('Something went wrong. Please try again.')}
 
 const content = (
     <div className="text-center mb-6"></div>
@@ -50,27 +48,26 @@ const content = (
         </p>
       
       <form onSubmit={handleSubmit} className="space-y-4"></form>
-        <div className="flex flex-col sm: flex-row gap-3"></d;i;v;>;
+        <div className="flex flex-col sm: flex-row gap-3"></di;v;>
           <input
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter your email address"
-            className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70 focus: outline-none focus:ring-2 focus:ring-white/50 f;o;c;u;
-  s: border-transparent";
+            className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70 focus: outline-none focus:ring-2 focus:ring-white/50 f;o;c;u
+  s: border-transparent"
             disabled={status === 'loading'}</input>
           /></input>
           <button
             type="submit"
             disabled={status === 'loading'}
-            className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover: bg-white/90 transition-colors disabled:opacity-50 disa;b;l;e;
-  d: cursor-not-allowed flex items-center justify-center";
+            className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover: bg-white/90 transition-colors disabled:opacity-50 disa;b;l;e
+  d: cursor-not-allowed flex items-center justify-center"
           ></button>
             {status === 'loading' ? (</button>
               <>
                 <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-purple-600 mr-2"></div>
                 Subscribing...
-
             ) : (
               <>
                 <SendclassNam e="w-4 h-4 mr-2" / />
@@ -100,18 +97,17 @@ return (,
 return content
 }
     </div>
-  );
-export default NewsletterSignup;
+  )
+export default NewsletterSignup
 })))
 
 
+}
 
 
 }
 
-
-
 }
 
-
+}
 }

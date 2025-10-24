@@ -36,5 +36,13 @@ Join thousands of businesses already using ServiceCard to transform their operat
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}  )}
-export default ServiceCard;
+export default ServiceCard
 }
+  </section>
+  </section>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>

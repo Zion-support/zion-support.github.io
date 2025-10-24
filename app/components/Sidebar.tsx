@@ -36,5 +36,13 @@ Join thousands of businesses already using Sidebar to transform their operations
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}  )}
-export default Sidebar;
+export default Sidebar
 }
+  </section>
+  </section>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>

@@ -1,9 +1,9 @@
-'use client';
-import React from 'react';
-import React, { useEffect, useState, useRef } from "react";
-import { useIntersectionObserver     } from '../hooks/useIntersectionObserver';
+'use client'
+import React from 'react'
+import React, { useEffect, useState, useRef } from "react"
+import { useIntersectionObserver     } from '../hooks/useIntersectionObserver'
 interface AnimatedCounterProps {
-  end:  ; ;n;u;m;b;e;r;
+  end:  ; ;n;u;m;b;e;r
   duration?: number
   suffix?: string
   prefix?: string
@@ -53,5 +53,5 @@ return (,
       {prefix}{count}{suffix}</span>/span>
   )
 }
-export default AnimatedCounter;
+export default AnimatedCounter
 }

@@ -36,4 +36,13 @@ Join thousands of businesses already using EnhancedLoading to transform their op
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}
-export default EnhancedLoading;
+export default EnhancedLoading
+
+  </section>
+  </section>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>

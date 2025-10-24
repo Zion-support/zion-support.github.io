@@ -1,34 +1,34 @@
-'use client';
-import React from 'react';
-import { Helmet     } from 'react-helmet-async';
-import { ArrowRight, Brain, BarChart, Target, TrendingUp     } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
-const LoadingSkeletonPage: React.FC = () =;>; ;{;
+'use client'
+import React from 'react'
+import { Helmet     } from 'react-helmet-async'
+import { ArrowRight, Brain, BarChart, Target, TrendingUp     } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+const LoadingSkeletonPage: React.FC = () =;>; ;{
   const features = [
     {
       ico
-  n: Br;a;i;n;
-    title: 'AI-Powered Intelligen;c;e;';
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendation;s;.;';
+  n: Br;a;i;n
+    title: 'AI-Powered Intelligen;c;e;'
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendation;s;.;'
     benefits: ['Smart recommendati;o;n;s;', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
 }
   {
-    icon: BarCh;a;r;t;
-    title: 'Advanced Analyti;c;s;';
-      description: 'Comprehensive analytics dashboard with real-time data visualizatio;n;.;';
+    icon: BarCh;a;r;t
+    title: 'Advanced Analyti;c;s;'
+      description: 'Comprehensive analytics dashboard with real-time data visualizatio;n;.;'
     benefits: ['Real-time dashboa;r;d;s;', 'Custom reports', 'Data visualization', 'Performance metrics']
 }
   {
-    icon: Tar;g;e;t;
-    title: 'Precision Targeti;n;g;';
-      description: 'Target specific goals and objectives with precision and accurac;y;.;';
+    icon: Tar;g;e;t
+    title: 'Precision Targeti;n;g;'
+      description: 'Target specific goals and objectives with precision and accurac;y;.;'
     benefits: ['Goal track;i;n;g;', 'Performance optimization', 'Strategic planning', 'Success metrics']
 }
   {
-    icon: Trendin;g;U;p;
-    title: 'Growth Optimizati;o;n;';
-      description: 'Optimize your business growth with data-driven strategie;s;.;';
+    icon: Trendin;g;U;p
+    title: 'Growth Optimizati;o;n;'
+      description: 'Optimize your business growth with data-driven strategie;s;.;'
     benefits: ['Growth strateg;i;e;s;', 'Market analysis', 'Competitive insights', 'ROI optimization']
   ]
   const benefits = [
@@ -80,9 +80,9 @@ Experience the benefits of cutting-edge AI technology</p>/p>/div>,
     <div className="grid md: grid-cols-2 l,"
 g: grid-cols-3 gap-8" /></div>
             {benefits.map((benefit,index) => (
-      <div key={index};className="flex items-start space-x-4" />
+      <div key={index}className="flex items-start space-x-4" />
       </div>/div>CheckCircleclassNam e="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" / />
-                  <p className="text-gray-300 text-lg">{benefit}</p>;
+                  <p className="text-gray-300 text-lg">{benefit}</p>
       <div key=index className="flex items-start space-x-4" />
       </div>/div>CheckCircleclassNam e="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" / /><p className="text-gray-300 text-lg">benefit</p>/div>/div>/div>/section>
         {/* CTA Section */}
@@ -96,5 +96,13 @@ r: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"
 Contact Sales</button>/button>/div>/div>/section>/div>/Footer>/div>/>
   )
 ,}
-export default LoadingSkeletonPage;
+export default LoadingSkeletonPage
 }}}
+
+  </section>
+  </section>
+  </section>
+  </h1>
+  </h1>
+  </h1>
+  </h1>

@@ -1,9 +1,9 @@
-'use client';
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+'use client'
+import React from 'react'
+import Head from 'next/head'
+import Link from 'next/link'
 
-const HomePage = () => {
+const $1 = () => {
   return (
     <>
       <Head>
@@ -11,20 +11,17 @@ const HomePage = () => {
         <meta name="description" content="Leading provider of AI services, IT solutions, and 5G technology implementations." />
         <meta name="keywords" content="AI services, IT solutions, 5G technology, cloud computing, cybersecurity" />
       </Head>
-
 import React, { useState, useEffect, useCallback, memo, Suspense, lazy } from 'react'
 import { Phone, Mail, MapPin, CheckCircle, TrendingUp, Brain, MessageSquare, Eye, Zap, Cloud, Shield, Settings, Database } from 'lucide-react'
 import Footer from './components/Footer'
-
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'))
 const ContentCarousel = lazy(() => import('./components/ContentCarousel'))
 const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'))
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'))
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'))
-
 // Preload critical components
-const preloadComponents = () => {
+const $1 = () => {
   if (typeof window !== 'undefined') {
     // Preload critical components after initial render
     setTimeout(() => {
@@ -43,11 +40,9 @@ const ServiceCardSkeleton: React.FC = memo(() => (
   </div>
 ))
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton'
-
 const HomePage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
-
   useEffect(() => {
     setIsLoaded(true)
     // Trigger visibility animation
@@ -56,7 +51,6 @@ const HomePage: React.FC = () => {
     preloadComponents()
     return () => clearTimeout(timer)
   }, [])
-
   // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
@@ -66,7 +60,6 @@ const HomePage: React.FC = () => {
       })
     }
   }, [])
-
   const microSAASServices = [
     {
       title: 'AI Project Manager',
@@ -129,7 +122,6 @@ const HomePage: React.FC = () => {
       popular: false
     }
   ]
-
   const aiServices = [
     {
       title: 'Machine Learning Solutions',
@@ -164,7 +156,6 @@ const HomePage: React.FC = () => {
       color: 'text-cyan-400'
     }
   ]
-
   const itServices = [
     {
       title: 'Cloud Services',
@@ -199,7 +190,6 @@ const HomePage: React.FC = () => {
       color: 'text-purple-400'
     }
   ]
-
   return (
     <>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -459,8 +449,8 @@ export default HomePage
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default HomePage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-687c
+export default HomePage
+

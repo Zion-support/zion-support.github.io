@@ -36,5 +36,13 @@ Join thousands of businesses already using LazyImage to transform their operatio
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}  )}
-export default LazyImage;
+export default LazyImage
 }
+  </section>
+  </section>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>

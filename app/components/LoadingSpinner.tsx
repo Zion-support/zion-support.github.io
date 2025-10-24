@@ -36,4 +36,13 @@ Join thousands of businesses already using LoadingSpinner to transform their ope
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}  )}
-export default LoadingSpinner;
+export default LoadingSpinner
+
+  </section>
+  </section>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>

@@ -36,4 +36,13 @@ Join thousands of businesses already using EnhancedErrorBoundary to transform th
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}
-export default EnhancedErrorBoundary;
+export default EnhancedErrorBoundary
+
+  </section>
+  </section>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>

@@ -1,29 +1,29 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Search, Target, TrendingUp, CheckCircle } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, Search, Target, TrendingUp, CheckCircle } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
-const AdvancedSEOOptimizerPage: React.FC = () =;>; ;{;
+const AdvancedSEOOptimizerPage: React.FC = () =;>; ;{
   const features = [
     {
       ico
-  n: Sea;r;c;h;
-    title: 'Advanced SEO Analys;i;s;';
-      description: 'Comprehensive SEO analysis and optimization recommendation;s;.;';
+  n: Sea;r;c;h
+    title: 'Advanced SEO Analys;i;s;'
+      description: 'Comprehensive SEO analysis and optimization recommendation;s;.;'
       benefits: ['Keyword resea;r;c;h;', 'Content optimization', 'Technical SEO', 'Performance insights']
     }
     {
-      icon: Tar;g;e;t;
-      title: 'Precision Targeti;n;g;';
-      description: 'Target specific keywords and audiences with precisio;n;.;';
+      icon: Tar;g;e;t
+      title: 'Precision Targeti;n;g;'
+      description: 'Target specific keywords and audiences with precisio;n;.;'
       benefits: ['Keyword target;i;n;g;', 'Audience analysis', 'Competitor research', 'Market insights']
     }
     {
-      icon: Trendin;g;U;p;
-      title: 'Growth Optimizati;o;n;';
-      description: 'Optimize your website for maximum growth and visibilit;y;.;';
+      icon: Trendin;g;U;p
+      title: 'Growth Optimizati;o;n;'
+      description: 'Optimize your website for maximum growth and visibilit;y;.;'
       benefits: ['Growth strateg;i;e;s;', 'Traffic optimization', 'Conversion tracking', 'ROI analysis']
     }
   ]
@@ -45,19 +45,19 @@ const AdvancedSEOOptimizerPage: React.FC = () =;>; ;{;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden"></section>
-          <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight"></;h;1;>;
+          <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight"></h;1;>
               Advanced SEO Optimizer</h1>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"></p>
               Advanced SEO Optimizer solution for modern businesses.</p>
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></d;i;v;>;
-              <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"></butt;o;n;>;
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></di;v;>
+              <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"></butto;n;>
                 Get Started</button>
                 <ArrowRight className="ml-2 h-5 w-5" /></ArrowRight>
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 h;o;v;e;
-  r: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></butt;o;n;>;
+              <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 h;o;v;e
+  r: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></butto;n;>
                 Learn More</button>
               </button>
             
@@ -70,8 +70,8 @@ const AdvancedSEOOptimizerPage: React.FC = () =;>; ;{;
                 Powerful AI-driven SEO features designed to transform your online presence</p>
               </p>
             
-            <div className="grid md: grid-cols-;2; ;l;
-  g: grid-cols-3 gap-8"></d;i;v;>;
+            <div className="grid md: grid-cols-;2; ;l
+  g: grid-cols-3 gap-8"></di;v;>
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"></div>
                   <feature.icon className="h-12 w-12 text-emerald-400 mb-4" /></feature>
@@ -97,8 +97,8 @@ const AdvancedSEOOptimizerPage: React.FC = () =;>; ;{;
                 Experience the power of AI-driven SEO optimization</p>
               </p>
             </div>
-            <div className="grid md: grid-cols-;2; ;l;
-  g: grid-cols-3 gap-8"></d;i;v;>;
+            <div className="grid md: grid-cols-;2; ;l
+  g: grid-cols-3 gap-8"></di;v;>
               {benefits.map((benefit, index) => (</div>
                 <div key={index} className="flex items-start space-x-3"></div>
                   <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /></CheckCircle>
@@ -122,7 +122,7 @@ Contact Sales</button>/button>/div>/div>/section>/div>/Footer>/div>
   )
 ,}
 }
-export default AdvancedSEOOptimizerPage;
+export default AdvancedSEOOptimizerPage
 }
 
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({ className = '', children }) => {
@@ -130,7 +130,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({ className =
     <div className={`${className}`}>
       {children}
     </div>
-  );
-};
+  )
+}
 
-export default AdvancedSEOOptimizerPage;
+export default AdvancedSEOOptimizerPage
+
+  </AdvancedSEOOptimizerProps>

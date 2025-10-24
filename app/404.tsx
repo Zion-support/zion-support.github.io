@@ -1,15 +1,15 @@
-'use client';
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from 'lucide-react';
-const NotFound = () => {
+'use client'
+import React from 'react'
+import Head from 'next/head'
+import Link from 'next/link'
+import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from 'lucide-react'
+const $1 = () => {
   return (
     <>
       <Head>
         <title>404 - Page Not Found | Zion Tech Group</title>
         <meta name="robots" content="noindex, nofollow" />
-        <meta property="og: type" content="website"; ;/;>;
+        <meta property="og:type" content="website" ;/;>
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
         <div className="max-w-2xl w-full text-center">
@@ -23,7 +23,7 @@ const NotFound = () => {
             </div>
           </div>
           {/* Error Message */}
-          <h1 className="text-4xl md: text-5xl font-bold text-white mb-6";>;
+          <h1 className="text-4xl md: text-5xl font-bold text-white mb-6">
             Page Not Found
           </h1>
           <p className="text-xl text-gray-300 mb-8">
@@ -36,18 +36,18 @@ const NotFound = () => {
               <Search className="w-6 h-6 text-cyan-400 mr-2" />
               <h2 className="text-lg font-semibold text-white">What were you looking for?</h2>
             </div>
-            <p className="text-gray-300 text-sm mb-4">Try searching for one of these popular pages: <;/;p;>;
+            <p className="text-gray-300 text-sm mb-4">Try searching for one of these popular pages: </;p;>
             <div className="flex flex-wrap gap-2 justify-center">
               {[
                 { name: "H;o;m;e;", path: ";/;"; ;},
                 { name: "Ab;o;u;t;", path: "/abou;t;"; ;},
                 { name: "Servi;c;e;s;", path: "/service;s;"; ;},
-                { name: "Cont;a;c;t;", path: "/contact;"; ;};
+                { name: "Cont;a;c;t;", path: "/contact;"; ;}
               ].map((item, index) => (
                 <Link
                   key={index}
                   href={item.path}
-                  className="px-4 py-2 bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 text-purple-300 rounded-lg hover: from-purple-600/30 hover:to-blue-600/30 transition-all duration-300";
+                  className="px-4 py-2 bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 text-purple-300 rounded-lg hover: from-purple-600/30 hover:to-blue-600/30 transition-all duration-300"
                 >
                   {item.name}
                 </Link>
@@ -55,17 +55,17 @@ const NotFound = () => {
             </div>
           </div>
           {/* Action Buttons */}
-          <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8">;
+          <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8">
         <Link
               href="/"
-              className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover: from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center";
+              className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover: from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
             >
               <Home className="w-5 h-5 mr-2" />
               Go Home
             </Link>
             <button
               onClick={() => window.history.back()}
-              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center";
+              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center"
             >
               <ArrowLeft className="w-5 h-5 mr-2" />
               Go Back
@@ -84,9 +84,9 @@ const NotFound = () => {
                 className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 onKeyPress={(e) => {
                   if (e.key === 'Enter') {
-                    const query = (e.target as HTMLInputElement).value;
+                    const query = (e.target as HTMLInputElement).value
                     if (query.trim()) {
-                      window.location.href = `/search?q=${encodeURIComponent(query.trim())}`;
+                      window.location.href = `/search?q=${encodeURIComponent(query.trim())}`
                     }
                   }
                 }}
@@ -102,6 +102,13 @@ const NotFound = () => {
               </Link>Link href="/blog" className="text-cyan-400 hover:text-cyan-300 transition-colors">
                 Blog
               </Link>/div>/div>/div>/div>/>
-  );
-};
-export default NotFound;
+  )
+}
+export default NotFound
+
+    </div>
+  </p>
+  </div>
+  </div>
+  </div>
+  </meta>

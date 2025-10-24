@@ -36,4 +36,13 @@ Join thousands of businesses already using EnhancedLoadingStates to transform th
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}
-export default EnhancedLoadingStates;
+export default EnhancedLoadingStates
+
+  </section>
+  </section>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>

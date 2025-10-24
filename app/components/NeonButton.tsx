@@ -36,5 +36,13 @@ Join thousands of businesses already using NeonButton to transform their operati
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}  )}
-export default NeonButton;
+export default NeonButton
 }
+  </section>
+  </section>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>

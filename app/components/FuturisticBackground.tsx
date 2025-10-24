@@ -36,4 +36,13 @@ Join thousands of businesses already using FuturisticBackground to transform the
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}
-export default FuturisticBackground;
+export default FuturisticBackground
+
+  </section>
+  </section>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>

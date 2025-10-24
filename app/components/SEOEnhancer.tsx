@@ -1,10 +1,10 @@
-'use client';
-import Navigation from './Navigation;
-import React from 'react';
-import { Helmet     } from 'react-helmet-async';
-import { ArrowRight, Brain     } from 'lucide-react';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe     } from 'lucide-react';
-import { Phone, Mail, ArrowRight     } from 'lucide-react';
+'use client'
+import Navigation from './Navigation
+import React from 'react'
+import { Helmet     } from 'react-helmet-async'
+import { ArrowRight, Brain     } from 'lucide-react'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe     } from 'lucide-react'
+import { Phone, Mail, ArrowRight     } from 'lucide-react'
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '' ,}) => {</SEOEnhancerProps>
 return (</SEOEnhancerProps>>
       <Helmet />
@@ -47,12 +47,12 @@ g: grid-cols-4 gap-8"></div>
           </p>
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></d;i;v;>;
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover: from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">Get Started</butt;o;n;>;
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></di;v;>
+            <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover: from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">Get Started</butto;n;>
                 <ArrowRight className="ml-2 h-5 w-5" /></ArrowRight>
               </button>
-              <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover: from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform h;o;v;e;
-  r: scale-105"></butt;o;n;>;
+              <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover: from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform h;o;v;e
+  r: scale-105"></butto;n;>
                 Learn More</button>
               </button>
             
@@ -60,12 +60,12 @@ g: grid-cols-4 gap-8"></div>
         
       </section>
       {/* Features Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8"></secti;o;n;>;
+      <section className="py-20 px-4 sm: px-6 lg:px-8"></sectio;n;>
           <h2 className="text-3xl m
-  d: text-4xl font-bold text-white mb-4">Why Choose Our SEOEnhancer?</;h;2;>;
+  d: text-4xl font-bold text-white mb-4">Why Choose Our SEOEnhancer?</h;2;>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our seoenhancer solutions deliver unmatched performance, security, and scalability.</p>p>
           
-          <div className="grid grid-cols-1 md: grid-cols-;2; ;l;
+          <div className="grid grid-cols-1 md: grid-cols-;2; ;l
   g: grid-cols-4 gap-8">{features.map((fea;t;u;r;e, index) => (
               <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
             <feature.icon className="h-6 w-6 text-white" /></feature>
@@ -81,8 +81,8 @@ g: grid-cols-4 gap-8"></div>
                 Experience the benefits of cutting-edge AI technology</p>
               </p>
             </div>
-            <div className="grid md: grid-cols-;2; ;l;
-  g: grid-cols-3 gap-8"></d;i;v;>;
+            <div className="grid md: grid-cols-;2; ;l
+  g: grid-cols-3 gap-8"></di;v;>
             {benefits.map((benefit, index) => (</div>
                 <div key={index} className="flex items-start space-x-4"></div>
                   <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /></CheckCircle>
@@ -116,8 +116,10 @@ r: scale-105" />
 Email Us</Mail>/div>/div>/section>/div>/Footer>/div>
   )
 ,}
-export default SEOEnhancer;
+export default SEOEnhancer
 }))))))
+}
+}
 
-}
-}
+  </h1>
+  </h1>

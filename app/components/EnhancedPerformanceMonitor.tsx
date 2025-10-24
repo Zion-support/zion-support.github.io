@@ -1,7 +1,7 @@
-'use client';
-import React from 'react';
-import { Helmet     } from 'react-helmet-async';
-import { ArrowRight, Brain, CheckCircle, Phone, Mail, MapPin, Zap, Shield, Globe     } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet     } from 'react-helmet-async'
+import { ArrowRight, Brain, CheckCircle, Phone, Mail, MapPin, Zap, Shield, Globe     } from 'lucide-react'
 import Navigation from '../components/Navigation'
 const EnhancedPerformanceMonitorPage: React.FC = () => {
 const benefits = [
@@ -9,21 +9,21 @@ const benefits = [
     'Improve decision-making with AI insights'
     'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></d;i;v;>;
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></di;v;>
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm: px-6 lg:px-8"></secti;o;n;>;
-          <h2 className="text-3xl md: text-4xl font-bold text-white mb-4";>;
+        <section className="py-20 px-4 sm: px-6 lg:px-8"></sectio;n;>
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
                 Key Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our enhanced performance monitoring system provides comprehensive insights and optimization.
               </p>
             
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></d;i;v;>;
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></di;v;>
               {features.map((feature, index) => (
-                <div key={index} className="bg-gray-800 rounded-lg p-6 hover: bg-gray-700 transition-colors"></d;i;v;>;
+                <div key={index} className="bg-gray-800 rounded-lg p-6 hover: bg-gray-700 transition-colors"></di;v;>
                   <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -42,15 +42,15 @@ const benefits = [
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gray-800"></secti;o;n;>;
-          <h2 className="text-3xl md: text-4xl font-bold text-white mb-4";>;
+        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gray-800"></sectio;n;>
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
                 Why Choose Our Performance Monitor?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience the benefits of advanced performance monitoring with our comprehensive solution.
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></d;i;v;>;
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></di;v;>
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3"></div>
                   <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
@@ -76,7 +76,7 @@ Email Us
                 </button>/div>/div>/div>/section>/div>/div>
   )
 ,}
-export default EnhancedPerformanceMonitorPage;
+export default EnhancedPerformanceMonitorPage
 }
         <section className="py-20 px-4 sm: px-6 lg:px-8">,<div className="max-w-4 xl mx-auto text-center" />,"
     <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2 xl p-8 md: p-12" />,<h1 className="text-3 xl md: text-4 xl font-bold text-white mb-4"></h2>"
@@ -99,8 +99,8 @@ Email Us
         </section>
         </div>
       </div>
-  );
-,};
-export default EnhancedPerformanceMonitorPage;
+  )
+,}
+export default EnhancedPerformanceMonitorPage
 }
 "'"

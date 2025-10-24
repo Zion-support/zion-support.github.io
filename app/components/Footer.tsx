@@ -1,8 +1,8 @@
-import React from 'react';
-import Link from 'next/link';
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud     } from 'lucide-react';
+import React from 'react'
+import Link from 'next/link'
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud     } from 'lucide-react'
 const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear()
   
   const aiServices = [
     { name: 'AI Analytics & BI', url: '/ai-analytics', description: 'Business intelligence' },
@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
     { name: 'Computer Vision', url: '/computer-vision', description: 'Image recognition' },
     { name: 'Predictive Analytics', url: '/predictive-analytics', description: 'Forecasting' },
     { name: 'Speech & Voice AI', url: '/ai-voice-assistant', description: 'Voice technology' }
-  ];
+  ]
 
   const itServices = [
     { name: 'Web Development', url: '/web-development', description: 'Modern web apps' },
@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
     { name: 'DevOps', url: '/devops', description: 'Development operations' },
     { name: 'API Development', url: '/api-development', description: 'RESTful APIs' },
     { name: 'Database Management', url: '/database-management', description: 'Data management' }
-  ];
+  ]
 
   return (
     <footer className="bg-slate-900 border-t border-slate-800">
@@ -96,7 +96,7 @@ const Footer: React.FC = () => {
                       {item.name,}
                     </Link>/li>
                 ))}
-              </ul>;
+              </ul>
       <div>/div>/div>,
     <h1 className="text-lg font-semibold mb-4">Resources</h3>ul className="space-y-2">
                 {resources.map((item, index) => (
@@ -124,4 +124,20 @@ const Footer: React.FC = () => {
             </div>/div>/div>/footer>
   )
 }
-export default Footer;
+export default Footer
+
+    </div>
+    </div>
+    </div>
+    </div>
+  </li>
+  </h1>
+  </div>
+  </li>
+  </h1>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </footer>

@@ -36,5 +36,13 @@ Join thousands of businesses already using PerformanceOptimizations to transform
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}  )}
-export default PerformanceOptimizations;
+export default PerformanceOptimizations
 }
+  </section>
+  </section>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>

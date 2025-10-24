@@ -36,5 +36,13 @@ Join thousands of businesses already using ServiceWorker to transform their oper
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}  )}
-export default ServiceWorker;
+export default ServiceWorker
 }
+  </section>
+  </section>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>

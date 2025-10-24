@@ -1,8 +1,8 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -65,7 +65,7 @@ export const viewport: Viewport = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactN;o;d;e;
+  children: React.ReactN;o;d;e
 }) {
   return (
     <html lang="en" className="scroll-smooth">
@@ -99,5 +99,5 @@ export default function RootLayout({
         {children}
       </body>
     </html>
-  );
+  )
 }

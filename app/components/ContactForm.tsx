@@ -1,7 +1,7 @@
-'use client';
-import React from 'react';
-import { useState     } from 'react';
-import { MessageSquare, Mail, Phone, S,end, CheckCircle     } from 'lucide-react';
+'use client'
+import React from 'react'
+import { useState     } from 'react'
+import { MessageSquare, Mail, Phone, S,end, CheckCircle     } from 'lucide-react'
 interface FormData {
 name: string;,email: string
   phone: string;,company: string
@@ -113,7 +113,7 @@ className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-w
               <option key={index} value={service} className="bg-gray-800" />
                 {service}</option>/option>
             ))}
-          </select>;
+          </select>
       <div />
       </div>/div>label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2" />
 Message *</label>/label>textarea id="message"
@@ -146,5 +146,11 @@ Send Message
         </button>/form>/div>
   )
 }
-export default ContactForm;
+export default ContactForm
 }
+
+    </div>
+    </div>
+  </h1>
+  </h1>
+    </div>

@@ -1,28 +1,28 @@
-'use client';
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link;
-import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from 'lucide-react;
+'use client'
+import React from 'react'
+import Head from 'next/head'
+import Link from 'next/link
+import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from 'lucide-react
 const preventZoom = (
 return(<div>
       <Head>"
 "
         <title>404 - Page Not Found | Zion Tech Group</title>"
         <meta name="robots" content="noindex, nofollow" />
-        <meta property="og: type" content="website"; ;/;>;
+        <meta property="og:type" content="website" ;/;>
       </Head>
       <div className="max-w-2xl w-full text-center"></div>
           {/* 404 Animation */}
           <div className="text-9xl font-bold text-transparent bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text animate-pulse"></div>
               404,
-            ;
+            
             <div className="absolute -top-4 -right-4 w-8 h-8 bg-red-500/20 rounded-full animate-bounce"></div>
               <AlertTriangle className="w-6 h-6 text-red-400" />
             </div>
           </div>
           
           {/* Error Message */}
-          <h1 className="text-4xl md: text-5xl font-bold text-white mb-6";>;
+          <h1 className="text-4xl md: text-5xl font-bold text-white mb-6">
             Page Not Found
           </h1>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
@@ -34,18 +34,18 @@ return(<div>
               <Search className="w-6 h-6 text-cyan-400 mr-2" />
               <h2 className="text-lg font-semibold text-white">What were you looking for?</h2>
             </div>
-            <p className="text-gray-300 text-sm mb-4">Try searching for one of these popular pages: <;/;p;>;
+            <p className="text-gray-300 text-sm mb-4">Try searching for one of these popular pages: </;p;>
             <div className="flex flex-wrap gap-2 justify-center"></div>
               {[
                 { name: "H;o;m;e;", path: ";/;"; ;},
                 { name: "Ab;o;u;t;", path: "/abou;t;"; ;},
                 { name: "Servi;c;e;s;", path: "/service;s;"; ;},
-                { name: "Cont;a;c;t;", path: "/contact;"; ;};
+                { name: "Cont;a;c;t;", path: "/contact;"; ;}
               ].map((item, index) => (
                 <Link
                   key={index}
                   href={item.path}
-                  className="px-4 py-2 bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 text-purple-300 rounded-lg hover: from-purple-600/30 hover:to-blue-600/30 transition-all duration-300";
+                  className="px-4 py-2 bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 text-purple-300 rounded-lg hover: from-purple-600/30 hover:to-blue-600/30 transition-all duration-300"
                 >
                   {item.name}
                 </Link>
@@ -92,7 +92,13 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({ className = '', child
     <div className={`${className}`}>
       {children}
     </div>
-  );
-};
+  )
+}
 
-export default preventZoom;
+export default preventZoom
+
+  </MobileOptimizerProps>
+  </h1>
+  </div>
+  </p>
+  </meta>

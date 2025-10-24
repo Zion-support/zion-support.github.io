@@ -1,16 +1,16 @@
-'use client';
+'use client'
 
-export const dynamic = 'force-dynamic';
+export const dynamic = 'force-dynamic'
 
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
 const Page: React.FC = () => {
   // Set document title for SEO
   React.useEffect(() => {
-    document.title = 'Supply Chain Optimizer - Zion Tech Group';
-  }, []);
+    document.title = 'Supply Chain Optimizer - Zion Tech Group'
+  }, [])
 
 export default function Page() {
   return (
@@ -111,7 +111,7 @@ export default function Page() {
             <Link 
               href="/contact" 
               className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
-            >
+            ></Link>
               Get Started
               <span className="ml-2">→</span>
             </a>
@@ -120,14 +120,13 @@ export default function Page() {
       </div>
       <Footer />
     </>
-  );
-};
+  )
+}
 
-export default Page;
+export default Page
 =======
 'use client'
 import React from 'react'
-
 export default function SupplyChainOptimizerPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -161,4 +160,5 @@ export default function SupplyChainOptimizerPage() {
     </div>
   )
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-18b5
+
+}

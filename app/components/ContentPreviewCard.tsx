@@ -36,4 +36,13 @@ Join thousands of businesses already using ContentPreviewCard to transform their
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}
-export default ContentPreviewCard;
+export default ContentPreviewCard
+
+  </section>
+  </section>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>

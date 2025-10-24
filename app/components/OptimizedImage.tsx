@@ -36,5 +36,13 @@ Join thousands of businesses already using OptimizedImage to transform their ope
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}  )}
-export default OptimizedImage;
+export default OptimizedImage
 }
+  </section>
+  </section>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
+  </h1>
