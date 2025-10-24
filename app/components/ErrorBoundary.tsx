@@ -42,7 +42,11 @@ class ErrorBoundary extends Component<Props, State> {
       );
     }
 
-<<<<<<< HEAD
+    return this.props.children;
+  }
+}
+
+export default ErrorBoundary;
   const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
