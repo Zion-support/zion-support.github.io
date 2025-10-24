@@ -6,7 +6,12 @@ import '@testing-library/jest-dom';
 // Mock LoadingSpinner component
 const LoadingSpinner = ({ isLoading }: { isLoading: boolean }) => {
   if (!isLoading) return null;
-  return <div data-testid="loading-spinner">Loading...</div><LoadingSpinner isLoading={true} />);
+  return <div data-testid=&quot;loading-spinner&quot;>Loading...</div>;
+};
+
+describe('LoadingSpinner', () => {
+  it('renders when loading is true', () => {
+    render(<LoadingSpinner isLoading={true} />);
     expect(screen.getByTestId('loading-spinner')).toBeInTheDocument();
   });
 

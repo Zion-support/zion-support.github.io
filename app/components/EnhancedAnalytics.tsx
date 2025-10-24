@@ -138,19 +138,6 @@ declare global {
     dataLayer: unknown[]
     gtag: (...args: any[]) => void;
   }
- };
-
-  return (
-  <AnalyticsContext.Providervalue={value}>{children}
-  </AnalyticsContext.Provider>
-  );
-};
-
-// Extend Windo w interface for TypeScript
-declare global {interface Windo w {
-    dataLayer: unknown[];
-    gtag: (...args: any[]) => void;
- }
 }
 'use client'
 import React from 'react'

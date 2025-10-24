@@ -65,13 +65,14 @@ const MachineLearningPage: React.FC = () => {constfeatures= [
     }
   ]
 
+const Page = () => {
   return (
     <>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
-          <section className="text-center mb-16">
+          <section className="text-center mb-16"></section>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
               Machine Learning Solutions</h1>
             <p className="text-xl text-cyan-400 mb-8">
@@ -80,8 +81,8 @@ const MachineLearningPage: React.FC = () => {constfeatures= [
               Transform your business with our advanced machine learning solutions that provide;
               intelligent insights, predictions, and automation to drive growth and efficiency.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a;
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <a
                 href="/contact"
                 className="cyber-button px-8 py-4 text-lg font-semibold"
               >
@@ -95,12 +96,13 @@ const MachineLearningPage: React.FC = () => {constfeatures= [
             </div>
           </section>
           {/* Features Section */}
-          <section className="mb-16">
+          <section className="mb-16"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
-              ML Capabilities</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              ML Capabilities
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
               {features.map((feature, index) => (
-                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300"></div>
                   <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
                   <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
                 </div>
@@ -108,12 +110,13 @@ const MachineLearningPage: React.FC = () => {constfeatures= [
             </div>
           </section>
           {/* Use Cases Section */}
-          <section className="mb-16">
+          <section className="mb-16"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
-              Common Use Cases</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              Common Use Cases
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
               {useCases.map((useCase, index) => (
-                <div key={index} className="quantum-card p-6 hover:scale-105 transition-all duration-300">
+                <div key={index} className="quantum-card p-6 hover:scale-105 transition-all duration-300"></div>
                   <div className="text-4xl mb-4">{useCase.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
                   <p className="text-gray-300">{useCase.description}</p>
@@ -122,12 +125,13 @@ const MachineLearningPage: React.FC = () => {constfeatures= [
             </div>
           </section>
           {/* Benefits Section */}
-          <section className="mb-16">
+          <section className="mb-16"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
-              Business Impact</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              Business Impact
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
               {benefits.map((benefit, index) => (
-                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"></div>
                   <TrendingUp className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                   <p className="text-lg text-white font-semibold">{benefit}</p>
                 </div>
@@ -135,15 +139,15 @@ const MachineLearningPage: React.FC = () => {constfeatures= [
             </div>
           </section>
           {/* Contact Section */}
-          <section className="text-center">
+          <section className="text-center"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 neon-text">
               Ready to Implement ML?
             </h2>
             <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
               Let our experts help you build and deploy machine learning solutions that drive real business value.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a;
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <a
                 href="/contact"
                 className="cyber-button px-8 py-4 text-lg font-semibold"
               >
@@ -158,6 +162,7 @@ const MachineLearningPage: React.FC = () => {constfeatures= [
           </section>
         </main>
         <Footer />
+>>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
       </div>
     </>
   )
@@ -165,32 +170,4 @@ const MachineLearningPage: React.FC = () => {constfeatures= [
    }
   ];
 
-  return (
-  <><Navigation /><divclassName="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900"><mainclassName="container mx-autopx-4py-16pt-24">{/* HeroSection */}
-        <sectionclassName="text-centermb-16"><spanclassName="text-5 xlmd:text-6 xl font-bold text-whitemb-6neon-text"></spa></className="text-5 xlmd:text-6 xl font-bold text-whitemb-6neon-text">Machine Learning Solutions</h><spanclassName="text-xl text-cyan-400mb-8"></spa></className="text-xl text-cyan-400mb-8">Custom ML models for predictive analytics and decision-making</p><spanclassName="text-lg text-gray-300max-w-4 xlmx-automb-8"></spa></className="text-lg text-gray-300max-w-4 xlmx-automb-8">Transform your business with our advanced machine learning solutions that provide;
-              intelligent insights, predictions, and automation to drive growth and efficiency.
-          </p><divclassName="flex flex-colsm:flex-rowgap-4justify-center"><ahref="/contact"
-               className="cyber-button px-8 py-4text-lgfont-semibold"
-              >Get Started</a><ahref="tel:+13024640950"
-               className="flex items-center gap-2 border-2 border-cyan-400text-cyan-400px-8 py-4 rounded-lg font-semiboldhover:bg-cyan-400 hover:text-slate-900transition-allduration-300"
-              ><PhoneclassName="w-5h-5" />+1 3024640950</a></di></sectio>{/* FeaturesSection */}
-        <sectionclassName="mb-16"><spanclassName="text-3 xlmd:text-4 xl font-bold text-white mb-8text-centerneon-text"></spa></className="text-3 xlmd:text-4 xl font-bold text-white mb-8text-centerneon-text">ML Capabilities</h><divclassName="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-6">{features.map((featureindex) => (
-             <divkey={index}className="cyber-card p-6 hover:scale-105transition-allduration-300"><CheckCircleclassName="w-8 h-8 text-green-400mb-4" /><h3className="text-lg font-semiboldtext-whitemb-2">{feature}</h></di>))}
-          </di></sectio>{/* Use CasesSection */}
-        <sectionclassName="mb-16"><spanclassName="text-3 xlmd:text-4 xl font-bold text-white mb-8text-centerneon-text"></spa></className="text-3 xlmd:text-4 xl font-bold text-white mb-8text-centerneon-text">Common Use Cases</h><divclassName="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-6">{useCases.map((useCaseindex) => (
-             <divkey={index}className="quantum-card p-6 hover:scale-105transition-allduration-300"><divclassName="text-4xlmb-4">{useCase.icon}</di><h3className="text-xl font-semiboldtext-whitemb-3">{useCase.title}</h><pclassName="text-gray-300">{useCase.description}</p></di>))}
-          </di></sectio>{/* BenefitsSection */}
-        <sectionclassName="mb-16"><spanclassName="text-3 xlmd:text-4 xl font-bold text-white mb-8text-centerneon-text"></spa></className="text-3 xlmd:text-4 xl font-bold text-white mb-8text-centerneon-text">Business Impact</h><divclassName="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-6">{benefits.map((benefitindex) => (
-             <divkey={index}className="cyber-card p-6 text-centerhover:scale-105transition-allduration-300"><TrendingUpclassName="w-12h-1 2text-cyan-400mx-automb-4" /><pclassName="text-lgtext-whitefont-semibold">{benefit}</p></di>))}
-          </di></sectio>{/* ContactSection */}
-        <sectionclassName="text-center"><spanclassName="text-3 xlmd:text-4 xl font-bold text-whitemb-8neon-text"></spa></className="text-3 xlmd:text-4 xl font-bold text-whitemb-8neon-text">Ready to Implement ML?
-          </h><spanclassName="text-lg text-gray-300mb-8 max-w-2xlmx-auto"></spa></className="text-lg text-gray-300mb-8 max-w-2xlmx-auto">Let our experts help you build and deploy machine learning solutions that drive real business value.
-          </p><divclassName="flex flex-colsm:flex-rowgap-4justify-center"><ahref="/contact"
-               className="cyber-button px-8 py-4text-lgfont-semibold"
-              >Contact Us</a><ahref="tel:+13024640950"
-               className="flex items-center gap-2 border-2 border-cyan-400text-cyan-400px-8 py-4 rounded-lg font-semiboldhover:bg-cyan-400 hover:text-slate-900transition-allduration-300"
-              ><PhoneclassName="w-5h-5" />+1 30 24640950</a></di></sectio></mai><Footer /></di></>
-  );
-};
-
-export default MachineLearningPage;
+export default Page;

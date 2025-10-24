@@ -2,6 +2,7 @@
 import {Phone, Mail, Brain} from 'lucide-react';
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
+import { ArrowRight, X, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
@@ -50,17 +51,18 @@ const SidebarPage: React.FC  = () => {
         <meta name="keywords" content="AI, artificial intelligence, Sidebar, AI solutions, intelligent automation" />
       </Helmet>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
+        <section className="relative py-20 px-4 overflow-hidden"></section>
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">;
-              Sidebar</h1>
+          <div className="relative max-w-7xl mx-auto text-center"></div>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Sidebar
+            </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced Sidebar solution for modern businesses.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
                 Get Started;
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -72,16 +74,16 @@ const SidebarPage: React.FC  = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Powerful AI-driven features designed to transform your business operations</p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"></div>
                   <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -100,16 +102,16 @@ const SidebarPage: React.FC  = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4 bg-white/5"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience the benefits of cutting-edge AI technology</p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-4">
+                <div key={index} className="flex items-start space-x-4"></div>
                   <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
@@ -119,12 +121,13 @@ const SidebarPage: React.FC  = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-4xl mx-auto text-center"></div>
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI solutions</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              Join thousands of businesses already using our AI solutions
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Start Free Trial</button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
@@ -164,7 +167,7 @@ Phone,
 Mail,;
 MapPin,Clock;}
 } from 'lucide-react'
-const Sidebar: React.FC = () => {const [isOpensetIsOpen] = useState(false)
+constSidebar: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
 const [expandedSectionssetExpandedSections]=useState<Set<strin g>>(new Set(['ai-services', 'micro-saas', 'it-services']))
 constlocation= useLocation()
 useEffect(() => {
@@ -274,16 +277,16 @@ hours: 'Mon-Fri 9AM-6PM EST'
 return (
 <>
 {/* Mobile Menu Button */}
-<button;
+<button
 onClick={() =></button> setIsOpen(true)}
-onClick={() =>setIsOpen(true)}</button>
-className="lg:hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all" aria-label="Open sidebar"
+className="lg:hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all"
+aria-label="Open sidebar"
 >
 <Menu className="w-6 h-6" />
 </button>
 {/* Sidebar Overlay */}
 {isOpen && (
-<div;
+<div
 className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden";}
 onClick={() =>setIsOpen(false)}</div>
 />
@@ -292,11 +295,11 @@ onClick={() =>setIsOpen(false)}</div>
 <aside className={`fixed top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400/20 z-50 transform transition-transform duration-300 ${
 isOpen ? 'translate-x-0' : '-translate-x-full'
 } lg:translate-x-0 lg:static lg:z-auto`}>
-<div className="flex flex-col h-full">
+<div className="flex flex-col h-full"></div>
 {/* Header */}</div>
-<div className="flex items-center justify-between p-6 border-b border-slate-700/50">
+<div className="flex items-center justify-between p-6 border-b border-slate-700/50"></div>
 <Link to="/" className="flex items-center space-x-3" onClick={() => setIsOpen(false)}>
-<div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center">
+<div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center"></div>
 <Brain className="w-6 h-6 text-white" />
 </div>
 <div></div>
@@ -304,10 +307,10 @@ isOpen ? 'translate-x-0' : '-translate-x-full'
 <p className="text-xs text-cyan-400">AI & IT Solutions</p>
 </div>
 </Link>
-<button;
+<button
 onClick={() =></button> setIsOpen(false)}
-onClick={() =>setIsOpen(false)}</button>
-className="lg:hidden text-gray-400 hover:text-white transition-colors" aria-label="Close sidebar"
+className="lg:hidden text-gray-400 hover:text-white transition-colors"
+aria-label="Close sidebar"
 >
 <X className="w-6 h-6" />
 </button>
@@ -317,9 +320,8 @@ className="lg:hidden text-gray-400 hover:text-white transition-colors" aria-labe
 <nav className="space-y-2 px-4">
 {navigationSections.map((section, sectionIndex) => (;}
 <div key={sectionIndex} className="space-y-1"></div>
-<button;
+<button
 onClick={() =></button> section.key && toggleSection(section.key)}
-onClick={() =>section.key && toggleSection(section.key)}</button>
 className="flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">
 <span>{section.title}</span>
 {section.key && (
@@ -329,34 +331,7 @@ expandedSections.has(section.key) ?
 )}
 </button>
 {(!section.key || expandedSections.has(section.key)) && (
-<div className="ml-4 space-y-1">
+<div className="ml-4 space-y-1"></div>
 {section.items.map((item, itemIndex) => (</div>
 <Link;
 key={itemIndex}
-address: '36 4 E Main St STE 1008Middletown, DE19709',
-hours: 'Mon-Fri9AM-6 PM EST'}
-return(<>{/* Mobile MenuButton*/}<
-onClick={() =></
-onClick={() =>setIsOpen(true)}
-className="lg:hidden fixed top-4 left-4 z-50bg-slate-80 0/90backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-40 0/20 hover:bg-slate-700/90transition-all" aria-label="Opensidebar"><MenuclassName="w-6h-6" /></butto>{/* SidebarOverlay */}
-{isOpen &&(<divclassName="fixed inset-0bg-black/50backdrop-blur-smz-40lg:hidden";}
-onClick={() =>setIsOpen(false)}
-/>
-)}
-{/*Sidebar*/}</di><asideclassName={`fixed top-0 left-0 h-full w-8 0 bg-slate-90 0/9 5 backdrop-blur-lg border-r border-cyan-40 0/20z-50transform transition-transform duration-300${
-isOpen ? 'translate-x-0'  : '-translate-x-full'} lg:translate-x-0 lg:staticlg:z-auto`}><divclassName="flexflex-colh-full">{/*Header*/}</di><divclassName="flex items-center justify-between p-6 border-b border-slate-700/50"><Linkto="/"className="flexitems-centerspace-x-3" onClick={() =>setIsOpen(false)}><divclassName="w-1 0 h-10bg-gradient-to-r from-cyan-400to-purple-400rounded-lg flexitems-centerjustify-center"><BrainclassName="w-6h-6text-white" /></di><di v></di><h2className="text-xl font-boldtext-whitecyber-text">ZionTechGroup</h><pclassName="text-xstext-cyan-400">AI &ITSolutions</p></di></Lin><
-onClick={() =></
-onClick={() =>setIsOpen(false)}className="lg:hidden text-gray-400hover:text-whitetransition-colors" aria-label="Closesidebar"><XclassName="w-6h-6" /></butto></di>{/* Navigation*/}<divclassName="flex-1overflow-y-autopy-6"></di><navclassName="space-y-2px-4">{navigationSections.map((sectionsectionIndex)=>(;}<divkey={sectionIndex}className="space-y-1"></di><
-onClick={() =></
-onClick={() =>section.key &&toggleSection(section.key)}className="flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400hover:text-cyan-300transition-colors"><spa n>{section.title}</spa>{section.key && (
-expandedSections.has(section.key)?<ChevronDownclassName="w-4h-4" />:<ChevronRightclassName="w-4h-4" />)}</butto>{(!section.key || expandedSections.has(section.key)) &&(<divclassName="ml-4space-y-1">{section.items.map((itemitemIndex)=>(</di><Linkkey={itemIndex}
-to={item.path}
-onClick={() =>setIsOpen(false)}
-className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-all ${
-location.pathname=== item.path ? 'bg-cyan-50 0/20text-cyan-400border border-cyan-40 0/3 0'
- : 'text-gray-300 hover:text-whitehover:bg-slate-800/50';}}`}><item.iconclassName="w-4h-4flex-shrink-0" /><spa n>{item.name}</spa></Lin>))}</di>)}</di>))}</na></di>{/* ContactInfo*/}<divclassName="border-t border-slate-70 0/50p-6"><h3className="text-sm font-semibold text-cyan-400mb-4">ContactInformation</h><divclassName="space-y-3 text-smtext-gray-300"><divclassName="flexitems-centerspace-x-3"><PhoneclassName="w-4 h-4 text-cyan-400flex-shrink-0" /><spa n>{contactInfo.phone}</spa></di><divclassName="flexitems-centerspace-x-3"><MailclassName="w-4 h-4 text-cyan-400flex-shrink-0" /><spanclassName="truncate">{contactInfo.email}</spa></di><divclassName="flexitems-centerspace-x-3"><MapPinclassName="w-4 h-4 text-cyan-400flex-shrink-0" /><spanclassName="text-xs">{contactInfo.address}</spa></di><divclassName="flexitems-centerspace-x-3"><ClockclassName="w-4 h-4 text-cyan-400flex-shrink-0" /><spanclassName="text-xs">{contactInfo.hours}</spa></di></di></asid></>)
-}
-Sidebar.displayName = 'Sidebar'
-export default Sidebar;
-Sidebar.displayName= 'Sidebar'
-export defaultSidebar</di></strin>;

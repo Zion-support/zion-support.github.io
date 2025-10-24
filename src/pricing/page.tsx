@@ -3,17 +3,7 @@ import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
-import { CheckCircle, Phone, Mail } from 'lucide-react';
-import { CheckCircle, Phone, Mail, Check } from 'lucide-react';
-'use client';
-import {CheckCircle, Phone, Mail} from 'lucide-react';
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import Navigation from '../$1/Navigation';
-import Footer from '../$1/Footer';
-import SEOOptimizer from '../$1/SEOOptimizer';
+import { CheckCircle, Phone, Mail } from 'lucide-react'
 
 const PricingPage: React.FC = () => {constpricingPlans= [
     {
@@ -113,18 +103,19 @@ const PricingPage: React.FC = () => {constpricingPlans= [
    }
   ];
 
+const Page = () => {
   return (
   <><SEOOptimizertitle="Pricing Plans - ZionTechGroup"
         description="Transparent pricing for AI and IT services. Choose the perfect plan for your business needs. Starting at$299/month."
         keywords={['pricing', 'AI services pricing', 'IT services pricing', 'business plans', 'enterprisepricing']}
         canonicalUrl="https://ziontechgroup.com/pricing"
       />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <Navigation />
         <main className="pt-16">
           {/* Hero Section */}
-          <section className="container mx-auto px-4 py-16 text-center">
-            <div className="max-w-4xl mx-auto">
+          <section className="container mx-auto px-4 py-16 text-center"></section>
+            <div className="max-w-4xl mx-auto"></div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
                 Simple, Transparent Pricing</h1>
               <p className="text-xl md:text-2xl text-cyan-400 mb-8">
@@ -136,8 +127,8 @@ const PricingPage: React.FC = () => {constpricingPlans= [
             </div>
           </section>
           {/* Pricing Plans */}
-          <section className="container mx-auto px-4 py-16">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <section className="container mx-auto px-4 py-16"></section>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto"></div>
               {pricingPlans.map((plan, index) => (
                 <div
                   key={index}
@@ -170,12 +161,13 @@ const PricingPage: React.FC = () => {constpricingPlans= [
             </div>
           </section>
           {/* Add-ons Section */}
-          <section className="container mx-auto px-4 py-16">
+          <section className="container mx-auto px-4 py-16"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Additional Services</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+              Additional Services
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto"></div>
               {addOns.map((addon, index) => (
-                <div key={index} className="cyber-card p-6 text-center">
+                <div key={index} className="cyber-card p-6 text-center"></div>
                   <h3 className="text-xl font-bold text-white mb-2">{addon.name}</h3>
                   <div className="text-2xl font-bold text-cyan-400 mb-2">{addon.price}</div>
                   <p className="text-gray-300 text-sm">{addon.description}</p>
@@ -184,12 +176,13 @@ const PricingPage: React.FC = () => {constpricingPlans= [
             </div>
           </section>
           {/* FAQ Section */}
-          <section className="container mx-auto px-4 py-16">
+          <section className="container mx-auto px-4 py-16"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Frequently Asked Questions</h2>
-            <div className="max-w-4xl mx-auto space-y-6">
+              Frequently Asked Questions
+            </h2>
+            <div className="max-w-4xl mx-auto space-y-6"></div>
               {faqs.map((faq, index) => (
-                <div key={index} className="cyber-card p-6">
+                <div key={index} className="cyber-card p-6"></div>
                   <h3 className="text-xl font-bold text-white mb-3">{faq.question}</h3>
                   <p className="text-gray-300">{faq.answer}</p>
                 </div>
@@ -197,15 +190,16 @@ const PricingPage: React.FC = () => {constpricingPlans= [
             </div>
           </section>
           {/* CTA Section */}
-          <section className="container mx-auto px-4 py-16 text-center">
-            <div className="cyber-card p-12 max-w-4xl mx-auto">
+          <section className="container mx-auto px-4 py-16 text-center"></section>
+            <div className="cyber-card p-12 max-w-4xl mx-auto"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
                 Ready to Get Started?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Contact us today to discuss your needs and find the perfect plan</p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a;
+                Contact us today to discuss your needs and find the perfect plan
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+                <a
                   href="tel:+13024640950"
                   className="cyber-button flex items-center justify-center space-x-2"
                 >
@@ -248,4 +242,4 @@ const PricingPage: React.FC = () => {constpricingPlans= [
   );
 };
 
-export default PricingPage;
+export default Page;

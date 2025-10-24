@@ -5,8 +5,14 @@ import '@testing-library/jest-dom';
 
 // Mock the App component to avoid PerformanceObserver issues
 const MockApp = () => (
-  <div role="main">
-    <h1>Test App</h1></div><MockApp />);
+  <div role=&quot;main&quot;></div>
+    <h1>Test App</h1>
+  </div>
+);
+
+describe('App Component', () => {
+  it('renders without crashing', () => {
+    render(<MockApp />);
     expect(screen.getByRole('main')).toBeInTheDocument();
   });
 

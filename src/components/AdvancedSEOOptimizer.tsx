@@ -1,9 +1,7 @@
 'use client'
+import Navigation from './Navigation'
 import React, { useEffect, useCallback, useRef } from 'react'
-import { Helmet } from 'lucide-react';
-import { Helmet } from 'lucide-react';
-'use client';
-import React, { useEffect, useCallback, useRef } from 'react';
+import { Helmet } from 'lucide-react'
 
 interface SEOData {
   title: string;

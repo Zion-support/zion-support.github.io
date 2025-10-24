@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
@@ -49,17 +50,18 @@ const LoadingStatesPage: React.FC  = () => {
         <meta name="keywords" content="AI, artificial intelligence, LoadingStates, AI solutions, intelligent automation" />
       </Helmet>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
+        <section className="relative py-20 px-4 overflow-hidden"></section>
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">;
-              LoadingStates</h1>
+          <div className="relative max-w-7xl mx-auto text-center"></div>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              LoadingStates
+            </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced LoadingStates solution for modern businesses.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
                 Get Started;
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -71,16 +73,16 @@ const LoadingStatesPage: React.FC  = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Powerful AI-driven features designed to transform your business operations</p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"></div>
                   <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -99,16 +101,16 @@ const LoadingStatesPage: React.FC  = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4 bg-white/5"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience the benefits of cutting-edge AI technology</p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-4">
+                <div key={index} className="flex items-start space-x-4"></div>
                   <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
@@ -118,12 +120,13 @@ const LoadingStatesPage: React.FC  = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-4xl mx-auto text-center"></div>
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI solutions</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              Join thousands of businesses already using our AI solutions
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Start Free Trial</button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
@@ -138,60 +141,3 @@ const LoadingStatesPage: React.FC  = () => {
 };
 
 export default LoadingStatesPage;
-import { Loader2 } from 'lucide-react'
-export const PageLoader: React.FC  = () => {
-return (
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-<div className="text-center">
-<div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full flex items-center justify-center mx-auto mb-4">
-<Loader2 className="w-8 h-8 text-slate-900 animate-spin" />
-</div>
-<h2 className="text-xl font-semibold text-white mb-2">Loading...</h2>
-<p className="text-gray-300">Please wait while we load the page</p>
-</div>
-</div>
-)
-}
-export const ComponentLoader: React.FC  = () => {
-return (
-<div className="flex items-center justify-center p-8">
-<div className="flex items-center space-x-2 text-cyan-400">
-<Loader2 className="w-5 h-5 animate-spin" />
-<span>Loading component...</span>
-</div>
-</div>
-)
-}
-export const ServiceCardSkeleton: React.FC  = () => {
-return (
-<div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 animate-pulse">
-<div className="w-12 h-12 bg-slate-700 rounded-lg mb-4"></div>
-<div className="h-6 bg-slate-700 rounded mb-3 w-3/4"></div>
-<div className="h-4 bg-slate-700 rounded mb-2"></div>
-<div className="h-4 bg-slate-700 rounded w-5/6 mb-4"></div>
-<div className="h-8 bg-slate-700 rounded w-1/2 mx-auto"></div>
-</div>
-)
-}
-export const ContentSkeleton: React.FC  = () => {
-return (
-<div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 animate-pulse">
-<div className="h-8 bg-slate-700 rounded mb-4 w-1/2"></div>
-<div className="h-4 bg-slate-700 rounded mb-2"></div>
-<div className="h-4 bg-slate-700 rounded mb-2"></div>
-<div className="h-4 bg-slate-700 rounded w-3/4"></div>
-</div>
-)
-}
-export const LoadingSpinner: React.FC = () => (
-<div className="flex items-center justify-center p-8">
-<div className="w-8 h-8 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
-</div>
-)
-import {Loader2} from 'lucide-react'
-export const PageLoader: React.FC = () => {return(<divclassName="min-h-screen bg-gradient-to-br from-slate-90 0via-purple-900to-slate-900flexitems-centerjustify-center"><divclassName="text-center"><divclassName="w-16h-16bg-gradient-to-r from-cyan-400to-purple-400rounded-full flex items-center justify-centermx-automb-4"><Loader2className="w-8 h-8 text-slate-900animate-spin" /></di><h2className="text-xl font-semiboldtext-whitemb-2">Loading...</h><pclassName="text-gray-300">Please wait while we loadthepage</p></di></di>)}
-export const ComponentLoader: React.FC = () => {return(<divclassName="flex items-centerjustify-centerp-8"><divclassName="flex items-center space-x-2text-cyan-400"><Loader2className="w-5h-5animate-spin" /><spa n>Loadingcomponent...</spa></di></di>)}
-export const ServiceCardSkeleton: React.FC = () => {return(<divclassName="bg-slate-80 0/50backdrop-blur-sm border border-slate-700rounded-xlp-6animate-pulse"><divclassName="w-12h-1 2bg-slate-700rounded-lgmb-4"></di><divclassName="h-6 bg-slate-700roundedmb-3w-3/4"></di><divclassName="h-4bg-slate-700roundedmb-2"></di><divclassName="h-4 bg-slate-700roundedw-5/6mb-4"></di><divclassName="h-8 bg-slate-700roundedw-1/2mx-auto"></di></di>)}
-export const ContentSkeleton: React.FC = () => {return(<divclassName="bg-slate-80 0/50backdrop-blur-sm border border-slate-700rounded-xlp-8animate-pulse"><divclassName="h-8 bg-slate-700roundedmb-4w-1/2"></di><divclassName="h-4bg-slate-700roundedmb-2"></di><divclassName="h-4bg-slate-700roundedmb-2"></di><divclassName="h-4bg-slate-700roundedw-3/4"></di></di>)}
-export const LoadingSpinner: React.FC= () =>(<divclassName="flex items-centerjustify-centerp-8"><divclassName="w-8 h-8 border-4 border-cyan-400border-t-transparentrounded-fullanimate-spin"></di></di>;
-);

@@ -15,25 +15,18 @@ interface AdvancedPerformanceOptimizerProps {
 'use client';
 import React, {useEffect, useState, useCallback} from 'react';
 
-interface AdvancedPerformanceOptimizerProp s {enableAdvancedCaching?: boolean;
-  enableImageOptimization?: boolean;
-  enableLazyLoading?: boolean;
-  enablePreloading?: boolean;
-  enableCodeSplitting?: boolean;
-  enableResourceHints?: boolean;
-  enableServiceWorker?: boolean;
-  enableCriticalCSS?: boolean;
-  enableWebVitals?: boolean;}
-
-const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> = ({enableAdvancedCaching= true,
-  enableImageOptimization= true,
-  enableLazyLoading= true,
-  enablePreloading= true,
-  enableCodeSplitting= true,
-  enableResourceHints= true,
-  enableServiceWorker= true,
-  enableCriticalCSS= true,
-  enableWebVitals= true}) => {const [performanceMetricssetPerformanceMetrics] = useState({
+const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({
+  enableAdvancedCaching = true,
+  enableImageOptimization = true,
+  enableLazyLoading = true,
+  enablePreloading = true,
+  enableCodeSplitting = true,
+  enableResourceHints = true,
+  enableServiceWorker = true,
+  enableCriticalCSS = true,
+  enableWebVitals = true
+}) => {
+  const [performanceMetrics, setPerformanceMetrics] = useState({
     fcp: 0,
     lcp: 0,
     fid: 0,
@@ -43,8 +36,9 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s>
     ttfb:0});
 
   // Web Vitals monitoring
-  useEffect(() => {if (enableWebVitals && type of windo w !== 'undefined') {
-      constmeasureWebVitals = () => {
+  useEffect(() => {
+    if (enableWebVitals && typeof window !== 'undefined') {
+      const measureWebVitals = () => {
   
         // First Contentful Paint
         new PerformanceObserver((list) => {
@@ -518,4 +512,3 @@ const AdvancedPerformanceOptimizerPage: React.FC  = () => {
 };
 
 export default AdvancedPerformanceOptimizerPage;
-export default AdvancedPerformanceOptimizer;

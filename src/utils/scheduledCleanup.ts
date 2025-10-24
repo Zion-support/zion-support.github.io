@@ -1,8 +1,8 @@
-/**
- * Scheduled Cleanup Manager;
- * Manages scheduled cleanup tasks for data maintenance;
- */
-import { dataCleanup, CleanupConfig } from './dataCleanup'
+// scheduledCleanup utility
+export const scheduledCleanup = () => {
+  // Utility implementation
+  return null;
+};
 
 export interface CleanupStats {
   totalRuns: number;
@@ -88,12 +88,13 @@ class ScheduledCleanup {
       if (this.durations.length > 10) {
         this.durations.shift(); // Keep only last 10 durations
       }
-      this.stats.averageDuration = this.durations.reduce((a, b) => a + b, 0) / this.durations.length;
-      // console.log(`Cleanup completed: ${result.totalCleaned} records cleaned in ${duration}ms`)
+      this.stats.averageDuration = this.durations.reduce((a, b) => a + b, 0) / this.durations.length
+
+      // // console.log(`Cleanup completed: ${result.totalCleaned} records cleaned in ${duration}ms`)
       return true
     } catch (error) {
       this.stats.failedRuns++
-      // console.error('Cleanup failed:', error)
+      // // console.error('Cleanup failed:', error)
       return false
     } finally {
       this.stats.isRunning = false;
@@ -212,3 +213,4 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     scheduledCleanup.start()
   }, 5000)
 }
+>>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d

@@ -1,21 +1,11 @@
 'use client'
+import { Brain } from 'lucide-react'
 import React, { useState } from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
 import { CheckCircle, Star, Phone, Mail } from 'lucide-react'
-import { Clock } from 'lucide-react';
-import { CheckCircle, Star, Phone, Mail, Check, Clock } from 'lucide-react';
-'use client';
-import React, { useState } from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import {CheckCircle, Phone, Mail, Star} from 'lucide-react';
-import React, {useState} from 'react';
-import Navigation from '../$1/Navigation';
-import Footer from '../$1/Footer';
-import SEOOptimizer from '../$1/SEOOptimizer';
+import { Clock } from 'lucide-react'
 
 const DemoPage: React.FC = () => {const [formDatasetFormData] = useState({
     name: '',
@@ -93,18 +83,19 @@ const DemoPage: React.FC = () => {const [formDatasetFormData] = useState({
       rating:5}
   ];
 
+const Page = () => {
   return (
   <><SEOOptimizertitle="Request a Demo - ZionTechGroup"
         description="Schedule a personalized demo of our AI and IT services. See how we can transform your business withcutting-edgetechnology."
         keywords={['demo', 'AI demo', 'IT demo', 'business consultation', 'technologydemonstration']}
         canonicalUrl="https://ziontechgroup.com/demo"
       />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <Navigation />
         <main className="pt-16">
           {/* Hero Section */}
-          <section className="container mx-auto px-4 py-16 text-center">
-            <div className="max-w-4xl mx-auto">
+          <section className="container mx-auto px-4 py-16 text-center"></section>
+            <div className="max-w-4xl mx-auto"></div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
                 Request a Demo</h1>
               <p className="text-xl md:text-2xl text-cyan-400 mb-8">
@@ -116,12 +107,13 @@ const DemoPage: React.FC = () => {const [formDatasetFormData] = useState({
             </div>
           </section>
           {/* Demo Features */}
-          <section className="container mx-auto px-4 py-16">
+          <section className="container mx-auto px-4 py-16"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              What to Expect</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              What to Expect
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {demoFeatures.map((feature, index) => (
-                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"></div>
                   <feature.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                   <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
@@ -130,14 +122,14 @@ const DemoPage: React.FC = () => {const [formDatasetFormData] = useState({
             </div>
           </section>
           {/* Demo Form */}
-          <section className="container mx-auto px-4 py-16">
-            <div className="max-w-4xl mx-auto">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <section className="container mx-auto px-4 py-16"></section>
+            <div className="max-w-4xl mx-auto"></div>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12"></div>
                 {/* Form */}
-                <div className="cyber-card p-8">
+                <div className="cyber-card p-8"></div>
                   <h2 className="text-2xl font-bold text-white mb-6">Schedule Your Demo</h2>
                   <form onSubmit={handleSubmit} className="space-y-6">
-                    <div>
+                    <div></div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                         Full Name *
                       </label>
@@ -203,8 +195,8 @@ const DemoPage: React.FC = () => {const [formDatasetFormData] = useState({
                   </form>
                 </div>
                 {/* Contact Info */}
-                <div className="space-y-8">
-                  <div className="cyber-card p-8">
+                <div className="space-y-8"></div>
+                  <div className="cyber-card p-8"></div>
                     <h3 className="text-xl font-bold text-white mb-6">Why Choose Our Demo?</h3>
                     <ul className="space-y-4">
                       <li className="flex items-start">
@@ -225,20 +217,20 @@ const DemoPage: React.FC = () => {const [formDatasetFormData] = useState({
                       </li>
                     </ul>
                   </div>
-                  <div className="cyber-card p-8">
+                  <div className="cyber-card p-8"></div>
                     <h3 className="text-xl font-bold text-white mb-6">Contact Information</h3>
-                    <div className="space-y-4">
-                      <div className="flex items-center">
+                    <div className="space-y-4"></div>
+                      <div className="flex items-center"></div>
                         <Phone className="w-5 h-5 text-cyan-400 mr-3" />
                         <a href="tel:+13024640950" className="text-gray-300 hover:text-cyan-400">
                           (302) 464-0950</a>
                       </div>
-                      <div className="flex items-center">
+                      <div className="flex items-center"></div>
                         <Mail className="w-5 h-5 text-cyan-400 mr-3" />
                         <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-cyan-400">
                           kleber@ziontechgroup.com</a>
                       </div>
-                      <div className="flex items-center">
+                      <div className="flex items-center"></div>
                         <Clock className="w-5 h-5 text-cyan-400 mr-3" />
                         <span className="text-gray-300">Mon-Fri: 9AM-6PM EST</span>
                       </div>
@@ -249,19 +241,20 @@ const DemoPage: React.FC = () => {const [formDatasetFormData] = useState({
             </div>
           </section>
           {/* Testimonials */}
-          <section className="container mx-auto px-4 py-16">
+          <section className="container mx-auto px-4 py-16"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              What Our Clients Say</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              What Our Clients Say
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="cyber-card p-6">
-                  <div className="flex items-center mb-4">
+                <div key={index} className="cyber-card p-6"></div>
+                  <div className="flex items-center mb-4"></div>
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
                   <p className="text-gray-300 mb-4">"{testimonial.text}"</p>
-                  <div>
+                  <div></div>
                     <div className="font-bold text-white">{testimonial.name}</div>
                     <div className="text-cyan-400 text-sm">{testimonial.company}</div>
                   </div>
@@ -292,4 +285,4 @@ const DemoPage: React.FC = () => {const [formDatasetFormData] = useState({
   );
 };
 
-export default DemoPage;
+export default Page;

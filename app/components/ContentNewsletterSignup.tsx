@@ -1,6 +1,11 @@
 'use client'
+import Footer from './Footer'
+import Navigation from './Navigation'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight } from 'lucide-react'
 import React, { useState } from 'react'
 import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-react'
+import { CheckCircle, ArrowRight } from 'lucide-react'
 
 interface ContentNewsletterSignupProps {
   title?: string
@@ -26,19 +31,14 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
     { icon: Zap, text: "Early access" }
   ],
   onSubscribe
-}) => {
-  const [email, setEmail] = useState('')
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubscribed, setIsSubscribed] = useState(false)
-  const [isLoading, setIsLoading] = useState(false)
-
-  const handleSubmit = async (e: React.FormEvent) => {
+}) => {const [emailsetEmail] = useState('')
+  const [isSubmittingsetIsSubmitting] = useState(false)
+  const [isSubscribedsetIsSubscribed] = useState(false)
+  const [isLoadingsetIsLoading] = useState(false)
+  consthandleSubmit= async (e: React.FormEvent) => {
+  
     e.preventDefault()
-    if (!email || isSubmitting) return
-
-    setIsSubmitting(true)
-    setIsLoading(true)
-
+    if (!email) return setIsLoadin g(true)
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000))
@@ -50,86 +50,147 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
       setIsSubscribed(true)
       setEmail('')
     } catch (error) {
-      console.error('Subscription error:', error)
+      // // console.error('Subscription error:', error)
     } finally {
       setIsSubmitting(false)
       setIsLoading(false)
     }
   }
 
-  if (isSubscribed) {
-    return (
-      <div className="bg-gradient-to-br from-green-500/10 to-emerald-500/10 border border-green-500/20 rounded-2xl p-8 text-center">
-        <div className="inline-flex items-center justify-center w-16 h-16 bg-green-500/20 rounded-full mb-6">
-          <CheckCircle className="w-8 h-8 text-green-400" />
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ]
+
+const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ className = '' }) => {
+  return (
+    <>
+      <Helmet>
+        <title>ContentNewsletterSignup</title>
+        <meta name="description" content="Advanced ContentNewsletterSignup solution for modern businesses." />
+        <meta name="keywords" content="AI, artificial intelligence, ContentNewsletterSignup, AI solutions, intelligent automation" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden"></section>
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center"></div>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              ContentNewsletterSignup
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Advanced ContentNewsletterSignup solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Learn More
+              </button>
         </div>
-        <h3 className="text-2xl font-bold text-white mb-4">Successfully Subscribed!</h3>
-        <p className="text-gray-300 mb-6">
-          Thank you for subscribing! You'll receive our latest updates and insights.
-        </p>
-        <button
-          onClick={() => setIsSubscribed(false)}
-          className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
-        >
-          Subscribe another email
-        </button>
+      </div>
+    );
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Powerful AI-driven features designed to transform your business operations
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"></div>
+                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+          {/* Newsletter Form */}
+          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8"></div>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div></div>
+                <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
+                  Email Address
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) =>setEmail(e.target.value)}
+                  placeholder={placeholder}
+                 requiredclassName="w-full pl-10pr-4 py-4 bg-white/10border border-white/20rounded-lg text-white placeholder-gray-400 focus:outline-nonefocus:ring-2focus:ring-blue-500focus:border-transparent"
+                />
+              </div>
+              <button
+                type="submit"
+                disabled={isLoading || !email}
+                className="w-full bg-white text-purple-600 font-bold py-3 px-6 rounded-lg hover:bg-blue-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center"></button>
+                {isLoading ? (
+                  <>
+                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-purple-600 mr-2"></div>
+                    Subscribing...
+                  </>
+                ) : (
+                  <>
+                    {buttonText}
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </>
+                )}
+              </button>
+              <p className="text-sm text-blue-200 text-center">
+                We respect your privacy. Unsubscribe at any time.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start space-x-4"></div>
+                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
+                  <p className="text-gray-300 text-lg">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4"></section>
+          <div className="max-w-4xl mx-auto text-center"></div>
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of businesses already using our AI solutions
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Start Free Trial
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
       </div>
     )
   }
 
-  return (
-    <div className="bg-gradient-to-br from-slate-900/50 to-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8">
-      <div className="text-center mb-8">
-        <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full mb-6">
-          <Mail className="w-8 h-8 text-cyan-400" />
-        </div>
-        <h2 className="text-3xl font-bold text-white mb-4">{title}</h2>
-        <p className="text-lg text-gray-300 max-w-2xl mx-auto">{subtitle}</p>
-      </div>
-
-      <form onSubmit={handleSubmit} className="max-w-md mx-auto mb-8">
-        <div className="flex flex-col sm:flex-row gap-4">
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder={placeholder}
-            required
-            className="flex-1 px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-          />
-          <button
-            type="submit"
-            disabled={isSubmitting || !email}
-            className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center min-w-[120px]"
-          >
-            {isLoading ? (
-              <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
-            ) : (
-              <>
-                {buttonText}
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </>
-            )}
-          </button>
-        </div>
-      </form>
-
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
-        {features.map((feature, index) => (
-          <div key={index} className="flex items-center space-x-2 text-sm text-gray-300">
-            <feature.icon className="w-4 h-4 text-cyan-400" />
-            <span>{feature.text}</span>
-          </div>
-        ))}
-      </div>
-
-      <div className="mt-6 text-center">
-        <p className="text-xs text-gray-500">
-          We respect your privacy. Unsubscribe at any time.
-        </p>
-      </div>
-    </div>
-  )
-}
-
-export default ContentNewsletterSignup
+export default ContentNewsletterSignupPage;

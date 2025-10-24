@@ -4,7 +4,11 @@ export default function Page() {
 import '@testing-library/jest-dom';
 
 // Mock components for testing
-const MockComponent = () => <div data-testid="mock-component">Mock Component</div><MockComponent />);
+const MockComponent = () => <div data-testid=&quot;mock-component&quot;>Mock Component</div>;
+
+describe('Components', () => {
+  it('renders mock component', () => {
+    render(<MockComponent />);
     expect(screen.getByTestId('mock-component')).toBeInTheDocument();
   });
 

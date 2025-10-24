@@ -86,7 +86,7 @@ if (hasError) {</ImageProps>
 return (</ImageProps>;}
 if (hasError) {}
 return (
-<div}
+    <div}
 if (hasError) {;}
 return(<div}
 'use client'
@@ -131,4 +131,4 @@ onError={handleError}
 {...props}
 >)</img>
 }</img>
-export default Image</img>;
+export default Image</img>

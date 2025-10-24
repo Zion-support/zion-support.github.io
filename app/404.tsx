@@ -1,22 +1,15 @@
 "use client";
-import React from "react";
-import Head from "next/head";
-import Link from "next/link";
-import {
-  Home,
-  ArrowLeft,
-  Search,
-  AlertTriangle,
-  RefreshCw
-} from "lucide-react";
-const NotFoundPage: React.FC  = () => {
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from 'lucide-react';
+
+const NotFound = () => {
   return (
     <>
       <Head>
         <title>404 - Page Not Found | Zion Tech Group</title>
-
         <meta name="robots" content="noindex, nofollow" />
-
         <meta property="og:type" content="website" />
       </Head>
 
@@ -32,7 +25,6 @@ const NotFoundPage: React.FC  = () => {
 
           {/* Error Message */}
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Page Not Found</h1>
-
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
             Oops! The page you&apos;re looking for seems to have vanished into the
             digital void. Don&apos;t worry, even our AI can&apos;t predict everything!
@@ -83,7 +75,7 @@ const NotFoundPage: React.FC  = () => {
 
           {/* Help Section */}
           <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-lg p-6">
-            <h3 className="text-lg font-semibold text-white mb-3">Still can&apos;t find what you need?</h3>
+            <h3 className="text-lg font-semibold text-white mb-3">Need Help?</h3>
             <p className="text-gray-300 text-sm mb-4">
               Our support team is here to help you navigate our services and
               find exactly what you&apos;re looking for.
@@ -119,4 +111,4 @@ const NotFoundPage: React.FC  = () => {
   );
 };
 
-export default NotFoundPage;
+export default NotFound;
