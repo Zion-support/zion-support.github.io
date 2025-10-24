@@ -1,10 +1,11 @@
-'use client'
-import React from 'react'
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+'use client';
+
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+
 const ServicesPage: React.FC = () => {
   const features = [
     {
@@ -28,117 +29,93 @@ const ServicesPage: React.FC = () => {
   ];
 
   const benefits = [
-    'Increase productivity by 40%',
-    'Reduce operational costs by 30%',
-    'Improve decision making with data insights',
-    'Gain competitive advantage with advanced technology'
+    {
+      icon: Zap,
+      title: 'Lightning Fast',
+      description: 'Optimized for speed and performance'
+    },
+    {
+      icon: Globe,
+      title: 'Global Scale',
+      description: 'Built to handle millions of users'
+    },
+    {
+      icon: Database,
+      title: 'Reliable Data',
+      description: '99.9% uptime guarantee'
+    },
+    {
+      icon: Users,
+      title: 'User Friendly',
+      description: 'Intuitive and easy to use'
+    }
   ];
 
   return (
     <>
       <Helmet>
-        <title>ServicesPage - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions, technology" />
+        <title>Micro SaaS Services - Zion Tech Group</title>
+        <meta name="description" content="Professional micro SaaS services and solutions from Zion Tech Group." />
       </Helmet>
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Services</span>
-              <br />
-              <span className="text-white">Solutions</span>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Micro SaaS Services
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced services solutions. Powered by cutting-edge AI technology and industry expertise.
+            <p className="text-xl text-purple-400 max-w-3xl mx-auto">
+              Professional micro SaaS services and solutions from Zion Tech Group.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">Learn More</button>
-            </div>
           </div>
-        </div>
-      </section>
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our Services?</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our services solutions deliver unmatched performance, security, and scalability.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
+              <div key={index} className="bg-slate-800 p-6 rounded-lg">
+                <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-purple-400 mr-2" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
-        </div>
-      </section>
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Benefits</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the power of our services solutions for your business.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
-            <p className="text-xl text-purple-100 mb-8">Contact our experts to discuss your services needs and get a customized solution.</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
-              </button>
+
+          <div className="bg-slate-800 p-8 rounded-lg mb-16">
+            <h2 className="text-3xl font-bold text-white mb-6 text-center">Why Choose Our Micro SaaS Services?</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <benefit.icon className="w-8 h-8 text-purple-400" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
+                  <p className="text-gray-300 text-sm">{benefit.description}</p>
+                </div>
+              ))}
             </div>
           </div>
+          
+          <div className="mt-12 text-center">
+            <a 
+              href="/contact" 
+              className="bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition-colors inline-flex items-center"
+            >
+              Get Started
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </a>
+          </div>
         </div>
-      </section>
-    </div>
+      </div>
+      <Footer />
     </>
   );
-=======
-import Link from 'next/link'
-import { ArrowRight } from 'lucide-react'
+};
 
-export default function services() {
-return (
-        <div>/div>,
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>,
-    <div className="max-w-7 xl mx-auto px-4 sm: px-6 lg:px-8 py-16 text-center"></div>,<h1 className="text-4 xl font-bold text-white mb-6" /></h1>
-Services | Zion Tech Group</h1>/h1>p className="text-lg text-gray-300 mb-8" /></p>
-Professional services | zion tech group services coming soon.</p>/p>Linkhre f="/contact"
-className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-600 hove,"
-r: to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit" />
-Contact Us</Link>ArrowRightclassNam e="w-5 h-5 ml-2" / />
-          </Link>
-  )
-,}
-    </div>/div>/div>
->>>>>>> 79ff074aca88cbd43268c9359877c6302df704f0
-}
+export default ServicesPage;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 
 import React from 'react';
@@ -75,15 +74,9 @@ const AdvancedSEOOptimizer_new: React.FC<AdvancedSEOOptimizer_newProps> = ({ cla
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
                 Get Started
-<<<<<<< HEAD
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-=======
-                <ArrowRight className='ml-2 h-5 w-5' />
-              </button>
-              <button className='border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200'>
->>>>>>> 79ff074aca88cbd43268c9359877c6302df704f0
                 Learn More
               </button>
             </div>
@@ -107,13 +100,8 @@ const AdvancedSEOOptimizer_new: React.FC<AdvancedSEOOptimizer_newProps> = ({ cla
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, idx) => (
-<<<<<<< HEAD
                       <li key={idx} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
-=======
-                      <li key={idx} className='flex items-center text-sm text-gray-300'>
-                        <CheckCircle className='h-4 w-4 text-emerald-400 mr-2 flex-shrink-0' />
->>>>>>> 79ff074aca88cbd43268c9359877c6302df704f0
                         {benefit}
                       </li>
                     ))}
@@ -155,11 +143,7 @@ const AdvancedSEOOptimizer_new: React.FC<AdvancedSEOOptimizer_newProps> = ({ cla
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Start Free Trial
               </button>
-<<<<<<< HEAD
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-=======
-              <button className='border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200'>
->>>>>>> 79ff074aca88cbd43268c9359877c6302df704f0
                 Contact Sales
               </button>
             </div>
@@ -171,8 +155,4 @@ const AdvancedSEOOptimizer_new: React.FC<AdvancedSEOOptimizer_newProps> = ({ cla
   );
 };
 
-<<<<<<< HEAD
 export default AdvancedSEOOptimizerNewPage;
-=======
-export default AdvancedSEOOptimizer_new;
->>>>>>> 79ff074aca88cbd43268c9359877c6302df704f0

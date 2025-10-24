@@ -1,4 +1,3 @@
-
 'use client';
 
 export const dynamic = 'force-dynamic';
@@ -7,46 +6,45 @@ import React from 'react';
 import Link from 'next/link';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
+import { Brain, BarChart, Target, CheckCircle, Shield, Lock, Eye, AlertTriangle } from 'lucide-react';
 
 const Page: React.FC = () => {
-<<<<<<< HEAD
-  const features = [
-    {
-      icon: 'brain',
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: 'bar-chart',
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time monitoring', 'Custom dashboards', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: 'target',
-      title: 'Precision Targeting',
-      description: 'Target the right audience with AI-driven precision and accuracy.',
-      benefits: ['Audience segmentation', 'Behavioral analysis', 'Conversion optimization', 'ROI tracking']
-    }
-  ];
-=======
   // Set document title for SEO
   React.useEffect(() => {
     document.title = 'Cybersecurity Audit - Zion Tech Group';
   }, []);
->>>>>>> 79ff074aca88cbd43268c9359877c6302df704f0
+
+  const features = [
+    {
+      icon: 'shield',
+      title: 'Comprehensive Security Assessment',
+      description: 'Thorough evaluation of your current security posture and vulnerabilities.',
+      benefits: ['Vulnerability scanning', 'Penetration testing', 'Risk assessment', 'Compliance review']
+    },
+    {
+      icon: 'lock',
+      title: 'Advanced Threat Detection',
+      description: 'AI-powered threat detection and monitoring systems.',
+      benefits: ['Real-time monitoring', 'Anomaly detection', 'Threat intelligence', 'Incident response']
+    },
+    {
+      icon: 'eye',
+      title: 'Security Compliance',
+      description: 'Ensure compliance with industry standards and regulations.',
+      benefits: ['GDPR compliance', 'HIPAA compliance', 'SOC 2 audit', 'ISO 27001']
+    }
+  ];
 
   const renderIcon = (iconName: string) => {
     switch (iconName) {
-      case 'brain':
-        return <Brain className="w-12 h-12 text-emerald-400 mb-4" />;
-      case 'bar-chart':
-        return <BarChart className="w-12 h-12 text-emerald-400 mb-4" />;
-      case 'target':
-        return <Target className="w-12 h-12 text-emerald-400 mb-4" />;
+      case 'shield':
+        return <Shield className="w-12 h-12 text-emerald-400 mb-4" />;
+      case 'lock':
+        return <Lock className="w-12 h-12 text-emerald-400 mb-4" />;
+      case 'eye':
+        return <Eye className="w-12 h-12 text-emerald-400 mb-4" />;
       default:
-        return <Brain className="w-12 h-12 text-emerald-400 mb-4" />;
+        return <Shield className="w-12 h-12 text-emerald-400 mb-4" />;
     }
   };
 
@@ -65,7 +63,6 @@ const Page: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-<<<<<<< HEAD
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800 p-6 rounded-lg">
                 {renderIcon(feature.icon)}
@@ -79,91 +76,48 @@ const Page: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-=======
-            <div className="bg-slate-800 p-6 rounded-lg">
-              <div className="w-12 h-12 text-emerald-400 mb-4 flex items-center justify-center bg-emerald-500/20 rounded-lg">
-                <span className="text-2xl">🚀</span>
->>>>>>> 79ff074aca88cbd43268c9359877c6302df704f0
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Advanced Solutions</h3>
-              <p className="text-gray-300 mb-4">Cutting-edge technology solutions for modern businesses.</p>
-              <ul className="space-y-2">
-                <li className="flex items-center text-gray-300">
-                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
-                  AI-powered features
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
-                  Real-time processing
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
-                  Scalable architecture
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
-                  Enterprise security
-                </li>
-              </ul>
-            </div>
+            ))}
+          </div>
 
-            <div className="bg-slate-800 p-6 rounded-lg">
-              <div className="w-12 h-12 text-emerald-400 mb-4 flex items-center justify-center bg-emerald-500/20 rounded-lg">
-                <span className="text-2xl">📊</span>
+          <div className="bg-slate-800 p-8 rounded-lg mb-16">
+            <h2 className="text-3xl font-bold text-white mb-6 text-center">Our Audit Process</h2>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">1</span>
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Discovery</h3>
+                <p className="text-gray-300 text-sm">Identify all systems and assets</p>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Analytics & Insights</h3>
-              <p className="text-gray-300 mb-4">Comprehensive analytics and reporting capabilities.</p>
-              <ul className="space-y-2">
-                <li className="flex items-center text-gray-300">
-                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
-                  Real-time monitoring
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
-                  Custom dashboards
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
-                  Data visualization
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
-                  Performance metrics
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-slate-800 p-6 rounded-lg">
-              <div className="w-12 h-12 text-emerald-400 mb-4 flex items-center justify-center bg-emerald-500/20 rounded-lg">
-                <span className="text-2xl">🎯</span>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">2</span>
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Assessment</h3>
+                <p className="text-gray-300 text-sm">Evaluate security controls and vulnerabilities</p>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Smart Optimization</h3>
-              <p className="text-gray-300 mb-4">AI-driven optimization for maximum efficiency and performance.</p>
-              <ul className="space-y-2">
-                <li className="flex items-center text-gray-300">
-                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
-                  Automated optimization
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
-                  Predictive analytics
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
-                  Smart recommendations
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
-                  Continuous improvement
-                </li>
-              </ul>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">3</span>
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Analysis</h3>
+                <p className="text-gray-300 text-sm">Analyze findings and prioritize risks</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">4</span>
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Recommendations</h3>
+                <p className="text-gray-300 text-sm">Provide actionable security improvements</p>
+              </div>
             </div>
           </div>
           
           <div className="mt-12 text-center">
             <Link 
               href="/contact" 
-              className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+              className="bg-emerald-600 text-white px-8 py-3 rounded-lg hover:bg-emerald-700 transition-colors inline-flex items-center"
             >
               Get Started
               <span className="ml-2">→</span>

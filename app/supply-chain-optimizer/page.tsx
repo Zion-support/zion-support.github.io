@@ -1,4 +1,3 @@
-
 'use client';
 
 export const dynamic = 'force-dynamic';
@@ -7,46 +6,45 @@ import React from 'react';
 import Link from 'next/link';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import { Brain, BarChart, Target, CheckCircle, Truck, Package, TrendingUp, Zap } from 'lucide-react';
 
 const Page: React.FC = () => {
-<<<<<<< HEAD
-  const features = [
-    {
-      icon: 'brain',
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: 'bar-chart',
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time monitoring', 'Custom dashboards', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: 'target',
-      title: 'Precision Targeting',
-      description: 'Target the right audience with AI-driven precision and accuracy.',
-      benefits: ['Audience segmentation', 'Behavioral analysis', 'Conversion optimization', 'ROI tracking']
-    }
-  ];
-=======
   // Set document title for SEO
   React.useEffect(() => {
     document.title = 'Supply Chain Optimizer - Zion Tech Group';
   }, []);
->>>>>>> 79ff074aca88cbd43268c9359877c6302df704f0
+
+  const features = [
+    {
+      icon: 'truck',
+      title: 'Logistics Optimization',
+      description: 'AI-powered logistics optimization for efficient supply chain management.',
+      benefits: ['Route optimization', 'Inventory management', 'Demand forecasting', 'Cost reduction']
+    },
+    {
+      icon: 'package',
+      title: 'Inventory Intelligence',
+      description: 'Smart inventory management with predictive analytics and automation.',
+      benefits: ['Stock optimization', 'Reorder automation', 'Waste reduction', 'Quality control']
+    },
+    {
+      icon: 'trending-up',
+      title: 'Performance Analytics',
+      description: 'Comprehensive analytics to track and improve supply chain performance.',
+      benefits: ['Real-time monitoring', 'KPI tracking', 'Performance insights', 'ROI analysis']
+    }
+  ];
 
   const renderIcon = (iconName: string) => {
     switch (iconName) {
-      case 'brain':
-        return <Brain className="w-12 h-12 text-emerald-400 mb-4" />;
-      case 'bar-chart':
-        return <BarChart className="w-12 h-12 text-emerald-400 mb-4" />;
-      case 'target':
-        return <Target className="w-12 h-12 text-emerald-400 mb-4" />;
+      case 'truck':
+        return <Truck className="w-12 h-12 text-emerald-400 mb-4" />;
+      case 'package':
+        return <Package className="w-12 h-12 text-emerald-400 mb-4" />;
+      case 'trending-up':
+        return <TrendingUp className="w-12 h-12 text-emerald-400 mb-4" />;
       default:
-        return <Brain className="w-12 h-12 text-emerald-400 mb-4" />;
+        return <Truck className="w-12 h-12 text-emerald-400 mb-4" />;
     }
   };
 
@@ -60,12 +58,11 @@ const Page: React.FC = () => {
               Supply Chain Optimizer
             </h1>
             <p className="text-xl text-emerald-400 max-w-3xl mx-auto">
-              Professional supply chain optimizer services and solutions from Zion Tech Group.
+              AI-powered supply chain optimization solutions for maximum efficiency and cost savings.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-<<<<<<< HEAD
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800 p-6 rounded-lg">
                 {renderIcon(feature.icon)}
@@ -79,91 +76,48 @@ const Page: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-=======
-            <div className="bg-slate-800 p-6 rounded-lg">
-              <div className="w-12 h-12 text-emerald-400 mb-4 flex items-center justify-center bg-emerald-500/20 rounded-lg">
-                <span className="text-2xl">🚀</span>
->>>>>>> 79ff074aca88cbd43268c9359877c6302df704f0
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Advanced Solutions</h3>
-              <p className="text-gray-300 mb-4">Cutting-edge technology solutions for modern businesses.</p>
-              <ul className="space-y-2">
-                <li className="flex items-center text-gray-300">
-                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
-                  AI-powered features
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
-                  Real-time processing
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
-                  Scalable architecture
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
-                  Enterprise security
-                </li>
-              </ul>
-            </div>
+            ))}
+          </div>
 
-            <div className="bg-slate-800 p-6 rounded-lg">
-              <div className="w-12 h-12 text-emerald-400 mb-4 flex items-center justify-center bg-emerald-500/20 rounded-lg">
-                <span className="text-2xl">📊</span>
+          <div className="bg-slate-800 p-8 rounded-lg mb-16">
+            <h2 className="text-3xl font-bold text-white mb-6 text-center">Optimization Benefits</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Zap className="w-8 h-8 text-emerald-400" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Efficiency</h3>
+                <p className="text-gray-300 text-sm">Streamline operations and reduce waste</p>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Analytics & Insights</h3>
-              <p className="text-gray-300 mb-4">Comprehensive analytics and reporting capabilities.</p>
-              <ul className="space-y-2">
-                <li className="flex items-center text-gray-300">
-                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
-                  Real-time monitoring
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
-                  Custom dashboards
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
-                  Data visualization
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
-                  Performance metrics
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-slate-800 p-6 rounded-lg">
-              <div className="w-12 h-12 text-emerald-400 mb-4 flex items-center justify-center bg-emerald-500/20 rounded-lg">
-                <span className="text-2xl">🎯</span>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <BarChart className="w-8 h-8 text-emerald-400" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Analytics</h3>
+                <p className="text-gray-300 text-sm">Data-driven insights and reporting</p>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Smart Optimization</h3>
-              <p className="text-gray-300 mb-4">AI-driven optimization for maximum efficiency and performance.</p>
-              <ul className="space-y-2">
-                <li className="flex items-center text-gray-300">
-                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
-                  Automated optimization
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
-                  Predictive analytics
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
-                  Smart recommendations
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
-                  Continuous improvement
-                </li>
-              </ul>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Brain className="w-8 h-8 text-emerald-400" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">AI-Powered</h3>
+                <p className="text-gray-300 text-sm">Machine learning optimization</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Target className="w-8 h-8 text-emerald-400" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Precision</h3>
+                <p className="text-gray-300 text-sm">Accurate demand and supply matching</p>
+              </div>
             </div>
           </div>
           
           <div className="mt-12 text-center">
             <Link 
               href="/contact" 
-              className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+              className="bg-emerald-600 text-white px-8 py-3 rounded-lg hover:bg-emerald-700 transition-colors inline-flex items-center"
             >
               Get Started
               <span className="ml-2">→</span>
