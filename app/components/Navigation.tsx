@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-'use client'
-=======
 'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-737c
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';

@@ -1,13 +1,13 @@
 'use client'
 import React from 'react'
 import { Home, ChevronRight } from 'lucide-react'
-import { useLocation } from 'react-router-dom'
+import { usePathname } from 'next/navigation'
 
 interface BreadcrumbItem {name: string;
   path: string;
   icon?: React.ComponentType<{ className?: string }></{ className?: string }>}
 
-const Breadcrumb: React.FC = () => {const location = useLocation()
+const Breadcrumb: React.FC = () => {const location = usePathname()
 
   if (location.pathname === '/') {
     return null;

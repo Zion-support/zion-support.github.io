@@ -1,9 +1,9 @@
+'use client';
 import { 
   UserGroupIcon,SparklesIcon, 
   CheckCircleIcon, 
   StarIcon
 } from '@heroicons/react/24/outline';
-'use client';
 import SEOHead from '../components/SEOHead';
 
 const AIDataVisualizerPage: React.FC = () => {
