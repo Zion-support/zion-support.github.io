@@ -5,7 +5,7 @@ const path = require('path');
 function fixSemicolonIssues(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+    const modified = false;
 
     // Fix semicolons in object properties (should be commas)
     content = content.replace(/benefits: \[[^\]]*\]\s*;/g, (match) => {

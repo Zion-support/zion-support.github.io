@@ -21,7 +21,7 @@ const filesToFix = [
 
 function removeUnusedImports(filePath) {
   try {
-    let content = fs.readFileSync(filePath, "utf8");
+    const content = fs.readFileSync(filePath, "utf8");
     let modified = false;
 
     // Common unused imports to remove

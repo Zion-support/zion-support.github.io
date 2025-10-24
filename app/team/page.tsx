@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import { Brain, Shield, Zap } from 'lucide-react';
 
 
 const teamMembers = [
@@ -56,19 +55,19 @@ const teamMembers = [
 ]
 const values = [
   {
-    icon: Brain,
+    icon: '🧠',
     title: "Innovation",
       description: "We constantly push the boundaries of what's possible with AI and technology."},
   {
-    icon: 'Globe',
+    icon: '🌍',
     title: "Global Impact",
       description: "Our solutions create positive change for businesses and communities worldwide."},
   {
-    icon: Shield,
+    icon: '🛡️',
     title: "Trust & Security",
       description: "We prioritize data security and ethical AI practices in everything we do."},
   {
-    icon: Zap,
+    icon: '⚡',
     title: "Excellence",
     description: "We deliver exceptional results through meticulous attention to detail."}
   ]
@@ -146,10 +145,7 @@ const TeamPage: React.FC = () => {
               {values.map((value, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    {(() => {
-        const IconComponent = value.icon;
-        return <IconComponent className="w-8 h-8 text-white" />;
-      })()}
+                    <span className="text-2xl">{value.icon}</span>
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">
                     {value.title}

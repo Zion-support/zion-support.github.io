@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import Image from 'next/image';
 
 interface OptimizedImageProps {
   src: string;
@@ -24,6 +23,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   quality = 75,
   placeholder = 'empty',
   blurDataURL
+
+
 }) => {
   return (
     <div className={`relative overflow-hidden ${className}`}>
@@ -39,8 +40,12 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         className="w-full h-auto object-cover transition-transform duration-300 hover:scale-105"
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
       />
+
     </div>
   );
 };
 
 export default OptimizedImage;
+
+
+

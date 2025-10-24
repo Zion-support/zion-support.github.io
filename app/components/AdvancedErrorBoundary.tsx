@@ -28,26 +28,26 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
     }
   };
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  componentDidCatch(_error: Error, _errorInfo: ErrorInfo) {
     this.setState({
       hasError: true,
-      error,
-      errorInfo
+      error: _error,
+      errorInfo: _errorInfo
     });
     
     // Call custom error handler if provided
     if (this.props.onError) {
-      this.props.onError(error, errorInfo);
+      this.props.onError(_error, _errorInfo);
     }
     
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
+      console.error('Error caught by boundary:', _error, _errorInfo);
     }
     
     // Log error to external service in production
     if (process.env.NODE_ENV === 'production') {
-      this.logErrorToService(error, errorInfo);
+      this.logErrorToService(_error, _errorInfo);
     }
   }
 
@@ -81,7 +81,7 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
             <AlertTriangle className="h-16 w-16 text-red-500 mx-auto mb-4" />
             <h1 className="text-2xl font-bold text-gray-900 mb-2">Something went wrong</h1>
             <p className="text-gray-600 mb-6">
-              We're sorry, but something unexpected happened. Please try again.
+              We&apos;re sorry, but something unexpected happened. Please try again.
             </p>
             <div className="space-y-3">
               <button
