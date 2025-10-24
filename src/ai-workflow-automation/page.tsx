@@ -1,248 +1,567 @@
-'use client'
-import { Brain, BarChart } from 'lucide-react'
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import SEOOptimizer from '../components/SEOOptimizer'
-import { Workflow } from 'lucide-react'
-import { CheckCircle, Phone, Mail } from 'lucide-react'
-
+import { Brain, BarChart }  from "lucide-react";
+import React  from "react";import Navigation  from "../components/Navigation";
+import Footer  from "../components/Footer";import SEOOptimizer  from "../components/SEOOptimizer";
+import { Workflow }  from "lucide-react";import { CheckCircle, Phone, Mail }  from "lucide-react";'use client'
 const AIWorkflowAutomationPage: React.FC = () => {
-  const features = [
+  return (
+    <div>
+        </div>
+        </div>
+    </div>
+  );
+      const features = [
     {
-      icon: Workflow,
-      title: 'Process Automation',
-      description: 'Automate complex business processes with intelligent workflow engines that adapt and learn.',
+      icon: Workflow
+      title: 'Process Automation'
+      description: 'Automate complex business processes with intelligent workflow engines that adapt and learn.'
       benefits: ['Visual Workflow Builder', 'Conditional Logic', 'Error Handling', 'Process Optimization']
-   },
-    {icon: Brain,
-      title: 'AI Decision Making',
-      description: 'Let AI make intelligent decisions based on data patterns and business rules.',
+    </div>)
+  )
+}
+    {icon: Brain
+      title: 'AI Decision Making'
+      description: 'Let AI make intelligent decisions based on data patterns and business rules.'
       benefits: ['Smart Routing', 'Risk Assessment', 'Quality Control', 'Predictive Actions']
-   },
-    {icon: BarChart,
-      title: 'Performance Analytics',
-      description: 'Monitor and analyze workflow performance with real-time dashboards and insights.',
+   }
+    {icon: BarChart
+      title: 'Performance Analytics'
+      description: 'Monitor and analyze workflow performance with real-time dashboards and insights.'
       benefits: ['Real-time Monitoring', 'Performance Metrics', 'Bottleneck Detection', 'Optimization Suggestions']
-   },
-    {icon: Settings,
-      title: 'Custom Integrations',
-      description: 'Connect with any system or application through our extensive integration library.',
+   }
+    {
+  icon: Settings
+      title: 'Custom Integrations'
+      description: 'Connect with any system or application through our extensive integration library.'
       benefits: ['API Integrations', 'Database Connections', 'Cloud Services', 'Legacy Systems']
-    }
+}
   ]
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$299/month',
-      description: 'Perfect for small teams',
+      name: 'Starter'
+      price: '$299/month'
+      description: 'Perfect for small teams'
       features: ['Up to5workflows', 'Basic automation', 'Email notifications', 'Standard integrations']
-   },
-    {name: 'Professional',
-      price: '$59 9/month',
-      description: 'Ideal for growing businesses',
+   }
+    {name: 'Professional'
+      price: '$59 9/month'
+      description: 'Ideal for growing businesses'
       features: ['Up to 25workflows', 'Advanced AI features', 'Custom integrations', 'Analytics dashboard', 'Priority support']
-   },
-    {name: 'Enterprise',
-      price: '$1,29 9/month',
-      description: 'For large organizations',
+   }
+    {
+  name: 'Enterprise'
+      price: '$1,29 9/month'
+      description: 'For large organizations'
       features: ['Unlimited workflows', 'Custom AI models', 'Advanced analytics', 'Dedicated support', 'On-premise deployment']
-    }
+}
   ]
   const stats = [
-    { number: '70%', label: 'Process Efficiency' },
-    { number: '90%', label: 'Error Reduction' },
-    { number: '50%', label: 'Time Savings' },
-    { number: '99.9%', label: 'Reliability' }
+    { number: '70%', label: 'Process Efficiency' }
+    { number: '90%', label: 'Error Reduction' }
+    { number: '50%', label: 'Time Savings' }
+    {
+  number: '99.9%', label: 'Reliability'
+}
   ]
-
   constuseCases= [
-    {title: 'HR Onboarding',
-      description: 'Automate employee onboarding processes from application to first day.',
-      icon: Users
-   },
-    {title: 'Invoice Processing',
-      description: 'Automatically process invoices, validate data, and route for approval.',
-      icon: Database
-   },
-    {title: 'Customer Support',
-      description: 'Route tickets, escalate issues, and provide automated responses.',
-      icon: Globe
-   },
-    {title: 'Data Migration',
-      description: 'Safely migrate data between systems with automated validation.',
-      icon: Settings
-    }
+    {title: 'HR Onboarding'
+      description: 'Automate employee onboarding processes from application to first day.'
+      icon: Users;
+   }
+    {title: 'Invoice Processing'
+      description: 'Automatically process invoices, validate data, and route for approval.'
+      icon: Database;
+   }
+    {title: 'Customer Support'
+      description: 'Route tickets, escalate issues, and provide automated responses.'
+      icon: Globe;
+   }
+    {
+  title: 'Data Migration'
+      description: 'Safely migrate data between systems with automated validation.'
+      icon: Settings;
+}
   ]
-
-  const pricing = pricingPlans
-
-  return (
-    <>
-      <SEOOptimizer
-        title=&quot;AI Workflow Automation Solutions - Zion Tech Group&quot;
-        description=&quot;Automate complex business processes with AI-powered workflow automation. Increase efficiency by 70% and reduce errors by 90%.&quot;
-        keywords={['AI workflow automation', 'business process automation', 'workflow optimization', 'process intelligence', 'automation platform']}
-        canonicalUrl=&quot;https://ziontechgroup.com/ai-workflow-automation&quot;
+  const pricing = pricingPlans;
+  return(<>
+         
+      </>
+      <SEOOptimizer ;
+        title="AI Workflow Automation Solutions - Zion Tech Group"
+        description="Automate complex business processes with AI-powered workflow automation. Increase efficiency by 70% and reduce errors by 90%."
+        keywords={
+  ['AI workflow automation', 'business process automation', 'workflow optimization', 'process intelligence', 'automation platform']
+}
+        canonicalUrl="https://ziontechgroup.com/ai-workflow-automation"
       />
-      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
+        </SEOOptimizer>
+        </SEOOptimizer>
+        </SEOOptimizer>
+      </SEOOptimizer;
+        title="AI Workflow Automation Solutions - Zion Tech Group"
+        description="Automate complex business processes with AI-powered workflow automation. Increase efficiency by 70% and reduce errors by 90%."
+        keywords={
+  ['AI workflow automation', 'business process automation', 'workflow optimization', 'process intelligence', 'automation platform']
+}
+        canonicalUrl="https://ziontechgroup.com/ai-workflow-automation"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+<//div>
         <Navigation />
-        <main className=&quot;pt-16&quot;>
-          {/* Hero Section */}
-          <section className=&quot;container mx-auto px-4 py-16 text-center&quot;></section>
-            <div className=&quot;max-w-4xl mx-auto&quot;></div>
-              <h1 className=&quot;text-4xl md:text-6xl font-bold text-white mb-6 neon-text&quot;>
-                AI Workflow Automation Solutions
+        </Navigation>
+        </Navigation>
+        </Navigation>
+        </Navigation />
+        <main className="pt-16">
+        </main>
+        </main>
+        </main>
+        </div>
+        </main>
+        </main className="pt-16">
+        </div>
+          {
+  /* Hero Section */
+}
+          <section className="container mx-auto px-4 py-16 text-center"></section>
+<//section>
+            <div className="max-w-4xl mx-auto"></div>
+<//div>
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
+        </h1>
+        </h1>
+        </h1>
+        </div>
+        </h1>
+              </h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">
+                AI Workflow Automation Solutions;
               </h1>
-              <p className=&quot;text-xl md:text-2xl text-cyan-400 mb-8&quot;>
-                Automate complex business processes with intelligent AI
+
+              <//h1>
+              <p className="text-xl md:text-2xl text-cyan-400 mb-8">
+        </p>
+        </p>
+        </p>
+        </div>
+        </p>
+              </p className="text-xl md: text-2xl text-cyan-400 mb-8">
+                Automate complex business processes with intelligent AI;
               </p>
-              <p className=&quot;text-lg text-gray-300 mb-12 max-w-3xl mx-auto&quot;>
-                Our AI-powered workflow automation platform helps you streamline operations,
+
+              <//p>
+              <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
+        </p>
+        </p>
+        </p>
+        </div>
+        </p>
+              </p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
+        </div>
+                Our AI-powered workflow automation platform helps you streamline operations
                 reduce errors, and increase efficiency across your entire organization.
               </p>
-              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center mb-16&quot;></div>
-                <a
-                  href=&quot;tel:+13024640950&quot;
-                  className=&quot;cyber-button flex items-center space-x-2&quot;
-                >
-                  <Phone className=&quot;w-5 h-5&quot; />
+
+              <//p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"></div>
+<//div>
+                <a ;
+                  href="tel: +13024640950"
+                  className="cyber-button flex items-center space-x-2">
+        </a>
+        </a>
+        </a>
+        </div>
+                </a;
+                  href="tel: +13024640950"
+                  className="cyber-button flex items-center space-x-2">
+        </div>
+                  <Phone className="w-5 h-5" />
+        </Phone>
+        </Phone>
+        </Phone>
+                  </Phone className="w-5 h-5" />)
                   <span>Call (302) 464-0950</span>
+<//span>
                 </a>
-                <a
-                  href=&quot;mailto:kleber@ziontechgroup.com&quot;
-                  className=&quot;cyber-button flex items-center space-x-2&quot;
+
+                <//a>
+                <a ;
+                  href="mailto: kleber@ziontechgroup.com"
+                  className="cyber-button flex items-center space-x-2"
                   style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
                 >
-                  <Mail className=&quot;w-5 h-5&quot; />
+        </a>
+        </a>
+        </a>
+                </a;
+                  href="mailto: kleber@ziontechgroup.com"
+                  className="cyber-button flex items-center space-x-2"
+                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+                >
+                  <Mail className="w-5 h-5" />
+        </Mail>
+        </Mail>
+        </Mail>
+                  </Mail className="w-5 h-5" />
                   <span>Get Free Demo</span>
+<//span>
                 </a>
+
+                <//a>
               </div>
-              {/* Stats */}
-              <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8 mb-16&quot;></div>
+
+              <//div>
+              {
+  /* Stats */
+}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"></div>
+<//div>
                 {stats.map((stat, index) => (
-                  <div key={index} className=&quot;cyber-card p-6 text-center&quot;></div>
-                    <div className=&quot;text-3xl md:text-4xl font-bold text-cyan-400 mb-2 neon-text&quot;></div>
-                      {stat.number}
+                  <div key={index} className="cyber-card p-6 text-center"></div>
+<//div>
+                    <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2 neon-text"></div>
+<//div>
+                      {
+  stat.number
+}
                     </div>
-                    <div className=&quot;text-gray-300 font-medium&quot;>{stat.label}</div>
+
+                    <//div>
+                    <div className="text-gray-300 font-medium">{stat.label}</div>
+<//div>
                   </div>
+
+                  <//div>
                 ))}
               </div>
+
+              <//div>
             </div>
+
+            <//div>
           </section>
-          {/* Features Section */}
-          <section className=&quot;mb-16&quot;></section>
-            <h2 className=&quot;text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text&quot;>
-              Key Features
+
+          <//section>
+          {
+  /* Features Section */
+}
+          <section className="mb-16"></section>
+<//section>
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+        </h2>
+        </h2>
+        </h2>
+        </div>
+        </h2>
+            </h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">
+              Key Features;
             </h2>
-            <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
+
+            <//h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+<//div>
               {features.map((feature, index) => (
-                <div key={index} className=&quot;cyber-card p-6 text-center hover:scale-105 transition-all duration-300&quot;></div>
-                  <feature.icon className=&quot;w-12 h-12 text-cyan-400 mx-auto mb-4&quot; />
-                  <h3 className=&quot;text-xl font-bold text-white mb-3&quot;>{feature.title}</h3>
-                  <p className=&quot;text-gray-300 mb-4&quot;>{feature.description}</p>
-                  <ul className=&quot;space-y-2&quot;>
+                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"></div>
+<//div>
+                  <feature .icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+        </feature>
+        </feature>
+        </feature>
+                  </feature.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                  <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+<//h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+<//p>
+                  <ul className="space-y-2">
+        </ul>
+        </ul>
+        </ul>
+        </div>
+        </ul>
+                  </ul className="space-y-2">
+        </div>
                     {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className=&quot;flex items-center text-sm text-gray-300&quot;>
-                        <CheckCircle className=&quot;w-4 h-4 text-green-400 mr-2 flex-shrink-0&quot; />
-                        {benefit}
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+        </li>
+        </li>
+        </li>
+        </div>
+                      </li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+        </div>
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+        </CheckCircle>
+        </CheckCircle>
+        </CheckCircle>
+                        </CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        {
+  benefit
+}
                       </li>
+
+                      <//li>
                     ))}
                   </ul>
+
+                  <//ul>
                 </div>
+
+                <//div>
               ))}
             </div>
+
+            <//div>
           </section>
-          {/* Use Cases Section */}
-          <section className=&quot;container mx-auto px-4 py-16&quot;></section>
-            <h2 className=&quot;text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text&quot;>
-              Automate Any Business Process
+
+          <//section>
+          {
+  /* Use Cases Section */
+}
+          <section className="container mx-auto px-4 py-16"></section>
+<//section>
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+        </h2>
+        </h2>
+        </h2>
+        </div>
+        </h2>
+            </h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">
+              Automate Any Business Process;
             </h2>
-            <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;></div>
+
+            <//h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+<//div>
               {useCases.map((useCase, index) => (
-                <div key={index} className=&quot;cyber-card p-6 hover:scale-105 transition-all duration-300&quot;></div>
-                  <useCase.icon className=&quot;w-12 h-12 text-cyan-400 mb-4&quot; />
-                  <h3 className=&quot;text-xl font-bold text-white mb-3&quot;>{useCase.title}</h3>
-                  <p className=&quot;text-gray-300&quot;>{useCase.description}</p>
+                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300"></div>
+<//div>
+                  <useCase .icon className="w-12 h-12 text-cyan-400 mb-4" />
+        </useCase>
+        </useCase>
+        </useCase>
+                  </useCase.icon className="w-12 h-12 text-cyan-400 mb-4" />
+                  <h3 className="text-xl font-bold text-white mb-3">{useCase.title}</h3>
+<//h3>
+                  <p className="text-gray-300">{useCase.description}</p>
+<//p>
                 </div>
+
+                <//div>
               ))}
             </div>
+
+            <//div>
           </section>
-          {/* Pricing Section */}
-          <section className=&quot;mb-16&quot;></section>
-            <h2 className=&quot;text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text&quot;>
-              Pricing Plans
+
+          <//section>
+          {
+  /* Pricing Section */
+}
+          <section className="mb-16"></section>
+<//section>
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+        </h2>
+        </h2>
+        </h2>
+        </div>
+        </h2>
+            </h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">
+              Pricing Plans;
             </h2>
-            <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto&quot;></div>
-              {pricing.map((plan, index) => (
-                <div
-                  key={index}
+
+            <//h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>
+<//div>
+              {
+  pricing.map((plan, index) => (
+                <div;
+                  key={index
+}
                   className={`cyber-card p-8 relative ${
                     index === 1 ? 'ring-2 ring-cyan-400 scale-105' : ''
                   }`}
                 ></div>
-                  {index === 1 && (
-                    <div className=&quot;absolute -top-4 left-1/2 transform -translate-x-1/2&quot;></div>
-                      <span className=&quot;bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold&quot;>
-                        Most Popular
+<//div>
+                  {
+  index === 1 && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
+<//div>
+                      <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold">
+        </span>
+        </span>
+        </span>
+        </div>
+        </span>
+                      </span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold">
+        </div>
+                        Most Popular;
                       </span>
+
+                      <//span>
                     </div>
-                  )}
-                  <h3 className=&quot;text-2xl font-bold text-white mb-2&quot;>{plan.name}</h3>
-                  <p className=&quot;text-gray-300 mb-4&quot;>{plan.description}</p>
-                  <div className=&quot;text-4xl font-bold text-cyan-400 mb-6&quot;>{plan.price}</div>
-                  <ul className=&quot;space-y-3 mb-8&quot;>
+
+                    <//div>
+                  )
+}
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+<//h3>
+                  <p className="text-gray-300 mb-4">{plan.description}</p>
+<//p>
+                  <div className="text-4xl font-bold text-cyan-400 mb-6">{plan.price}</div>
+<//div>
+                  <ul className="space-y-3 mb-8">
+        </ul>
+        </ul>
+        </ul>
+        </div>
+        </ul>
+                  </ul className="space-y-3 mb-8">
+        </div>
                     {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className=&quot;flex items-center text-gray-300&quot;>
-                        <CheckCircle className=&quot;w-5 h-5 text-green-400 mr-3 flex-shrink-0&quot; />
-                        {feature}
+                      <li key={featureIndex} className="flex items-center text-gray-300">
+        </li>
+        </li>
+        </li>
+        </div>
+                      </li key={featureIndex} className="flex items-center text-gray-300">
+        </div>
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+        </CheckCircle>
+        </CheckCircle>
+        </CheckCircle>
+                        </CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                        {
+  feature
+}
                       </li>
+
+                      <//li>
                     ))}
                   </ul>
-                  <a
+
+                  <//ul>
+                  <a ;
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${plan.name} Plan`}
-                    className=&quot;cyber-button w-full text-center block&quot;
-                  >
-                    Get Started
+                    className="cyber-button w-full text-center block">
+        </a>
+        </a>
+        </a>
+        </div>
+                  </a;
+                    href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${plan.name} Plan`}
+                    className="cyber-button w-full text-center block">
+        </div>
+                    Get Started;
                   </a>
+
+                  <//a>
                 </div>
+
+                <//div>
               ))}
             </div>
+
+            <//div>
           </section>
-          {/* CTA Section */}
-          <section className=&quot;container mx-auto px-4 py-16 text-center&quot;></section>
-            <div className=&quot;cyber-card p-12 max-w-4xl mx-auto&quot;></div>
-              <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-6 neon-text&quot;>
+
+          <//section>
+          {
+  /* CTA Section */
+}
+          <section className="container mx-auto px-4 py-16 text-center"></section>
+<//section>
+            <div className="cyber-card p-12 max-w-4xl mx-auto"></div>
+<//div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
+        </h2>
+        </h2>
+        </h2>
+        </div>
+        </h2>
+              </h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">
                 Ready to Automate Your Workflows?
               </h2>
-              <p className=&quot;text-xl text-gray-300 mb-8&quot;>
-                Join 200+ companies already using our AI workflow automation solutions
+
+              <//h2>
+              <p className="text-xl text-gray-300 mb-8">
+        </p>
+        </p>
+        </p>
+        </div>
+        </p>
+              </p className="text-xl text-gray-300 mb-8">
+        </div>
+                Join 200+ companies already using our AI workflow automation solutions;
               </p>
-              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-                <a
-                  href=&quot;tel:+13024640950&quot;
-                  className=&quot;cyber-button flex items-center justify-center space-x-2&quot;
-                >
-                  <Phone className=&quot;w-5 h-5&quot; />
+
+              <//p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+<//div>
+                <a ;
+                  href="tel: +13024640950"
+                  className="cyber-button flex items-center justify-center space-x-2">
+        </a>
+        </a>
+        </a>
+        </div>
+                </a;
+                  href="tel: +13024640950"
+                  className="cyber-button flex items-center justify-center space-x-2">
+        </div>
+                  <Phone className="w-5 h-5" />
+        </Phone>
+        </Phone>
+        </Phone>
+                  </Phone className="w-5 h-5" />
                   <span>Call (302) 464-0950</span>
+<//span>
                 </a>
-                <a
-                  href=&quot;mailto:kleber@ziontechgroup.com&quot;
-                  className=&quot;cyber-button flex items-center justify-center space-x-2&quot;
+
+                <//a>
+                <a ;
+                  href="mailto: kleber@ziontechgroup.com"
+                  className="cyber-button flex items-center justify-center space-x-2"
                   style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
                 >
-                  <Mail className=&quot;w-5 h-5&quot; />
+        </a>
+        </a>
+        </a>
+                </a;
+                  href="mailto: kleber@ziontechgroup.com"
+                  className="cyber-button flex items-center justify-center space-x-2"
+                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+                >
+                  <Mail className="w-5 h-5" />
+        </Mail>
+        </Mail>
+        </Mail>
+                  </Mail className="w-5 h-5" />
                   <span>Schedule Demo</span>
+<//span>
                 </a>
+
+                <//a>
               </div>
+
+              <//div>
             </div>
+
+            <//div>
           </section>
+
+          <//section>
         </main>
+
+        <//main>
         <Footer />
+        </Footer>
+        </Footer>
+        </Footer>
+        </Footer />
       </div>
+
+      <//div>
     </>
+
+    <//>
   )
 }
-
-export default AIWorkflowAutomationPage
+export default AIWorkflowAutomationPage;

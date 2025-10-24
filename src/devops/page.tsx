@@ -1,67 +1,143 @@
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { GitBranch } from 'lucide-react'
-import { CheckCircle } from 'lucide-react'
-
-const DevOpsPage: React.FC = () => {
-  const services = [
-    {
-      icon: Code,
-      title: 'CI/CD Pipeline',
-      description: 'Automated continuous integration and deployment pipelines',
-      features: ['Automated Testing', 'Code Quality Checks', 'Deployment Automation', 'Rollback Capabilities']
-   },
-    {icon: GitBranch,
-      title: 'Version Control',
-      description: 'Git-based version control and collaboration workflows',
-      features: ['Git Workflows', 'Code Review', 'Branch Management', 'Merge Strategies']
-   },
-    {icon: Zap,
-      title: 'Infrastructure as Code',
-      description: 'Automated infrastructure provisioning and management',
-      features: ['Terraform', 'Ansible', 'CloudFormation', 'Kubernetes']
-   },
-    {icon: Shield,
-      title: 'Security Integration',
-      description: 'Security-first DevOps practices and tools',
-      features: ['SAST/DAST', 'Dependency Scanning', 'Secrets Management', 'Compliance']
-    }
-  ]
+import React  from "react";
+import Navigation  from "../components/Navigation";import Footer  from "../components/Footer";
+import { GitBranch }  from "lucide-react";import { CheckCircle }  from "lucide-react";const DevOpsPage: React.FC = () => {
   return (
-    <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
+    <div>
+        </div>
+        </div>
+    </div>
+  );
+      const services = [
+    {
+      icon: Code
+      title: 'CI/CD Pipeline'
+      description: 'Automated continuous integration and deployment pipelines'
+      features: ['Automated Testing', 'Code Quality Checks', 'Deployment Automation', 'Rollback Capabilities']
+    </div>)
+  )
+}
+    {icon: GitBranch
+      title: 'Version Control'
+      description: 'Git-based version control and collaboration workflows'
+      features: ['Git Workflows', 'Code Review', 'Branch Management', 'Merge Strategies']
+   }
+    {icon: Zap
+      title: 'Infrastructure as Code'
+      description: 'Automated infrastructure provisioning and management'
+      features: ['Terraform', 'Ansible', 'CloudFormation', 'Kubernetes']
+   }
+    {
+  icon: Shield
+      title: 'Security Integration'
+      description: 'Security-first DevOps practices and tools'
+      features: ['SAST/DAST', 'Dependency Scanning', 'Secrets Management', 'Compliance']
+}
+  ]
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+<//div>
       <Navigation />
-      <main className=&quot;container mx-auto px-4 py-16 pt-24&quot;>
-        <section className=&quot;text-center mb-16&quot;></section>
-          <h1 className=&quot;text-4xl md:text-6xl font-bold text-white mb-6&quot;>DevOps Services</h1>
-          <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto&quot;>
+        </Navigation>
+        </Navigation>
+        </Navigation>
+      </Navigation />
+      <main className="container mx-auto px-4 py-16 pt-24">
+        </main>
+        </main>
+        </main>
+        </div>
+        </main>
+      </main className="container mx-auto px-4 py-16 pt-24">
+        </div>
+        <section className="text-center mb-16"></section>
+<//section>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">DevOps Services</h1>
+<//h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+        </p>
+        </p>
+        </p>
+        </div>
+        </p>
+          </p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+        </div>
             Accelerate your development lifecycle with our comprehensive DevOps solutions.
             From CI/CD to infrastructure automation, we help you deliver faster and more reliably.
           </p>
+
+          <//p>
         </section>
-        <section className=&quot;mb-16&quot;></section>
-          <h2 className=&quot;text-3xl font-bold text-white mb-12 text-center&quot;>Our DevOps Services</h2>
-          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
+
+        <//section>
+        <section className="mb-16"></section>
+<//section>
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">Our DevOps Services</h2>
+<//h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+<//div>)
             {services.map((service, index) => (
-              <div key={index} className=&quot;bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20&quot;></div>
-                <service.icon className=&quot;w-12 h-12 text-cyan-400 mb-4&quot; />
-                <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{service.title}</h3>
-                <p className=&quot;text-gray-300 mb-4&quot;>{service.description}</p>
-                <ul className=&quot;space-y-2&quot;>
+              <div key={index} className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20"></div>
+<//div>
+                <service .icon className="w-12 h-12 text-cyan-400 mb-4" />
+        </service>
+        </service>
+        </service>
+                </service.icon className="w-12 h-12 text-cyan-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+<//h3>
+                <p className="text-gray-300 mb-4">{service.description}</p>
+<//p>
+                <ul className="space-y-2">
+        </ul>
+        </ul>
+        </ul>
+        </div>
+        </ul>
+                </ul className="space-y-2">
+        </div>
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className=&quot;flex items-center text-sm text-gray-300&quot;>
-                      <CheckCircle className=&quot;w-4 h-4 text-green-400 mr-2&quot; />
-                      {feature}
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+        </li>
+        </li>
+        </li>
+        </div>
+                    </li key={featureIndex} className="flex items-center text-sm text-gray-300">
+        </div>
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+        </CheckCircle>
+        </CheckCircle>
+        </CheckCircle>
+                      </CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                      {
+  feature
+}
                     </li>
+
+                    <//li>
                   ))}
                 </ul>
+
+                <//ul>
               </div>
+
+              <//div>
             ))}
           </div>
+
+          <//div>
         </section>
+
+        <//section>
       </main>
+
+      <//main>
       <Footer />
+        </Footer>
+        </Footer>
+        </Footer>
+      </Footer />
     </div>
+
+    <//div>
   )
 }
-export default DevOpsPage
+export default DevOpsPage;
