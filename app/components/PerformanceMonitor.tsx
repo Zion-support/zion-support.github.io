@@ -43,8 +43,8 @@ const PerformanceMonitorPage: React.FC = () => {
     <>
       <Helmet>
         <title>PerformanceMonitor</title>
-        <meta name=&quot;description&quot; content=&quot;Advanced PerformanceMonitor solution for modern businesses.&quot; />
-        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, PerformanceMonitor, AI solutions, intelligent automation&quot; />
+        <meta name="description" content="Advanced PerformanceMonitor solution for modern businesses." />
+        <meta name="keywords" content="AI, artificial intelligence, PerformanceMonitor, AI solutions, intelligent automation" />
       </Helmet>
       <Navigation />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
