@@ -19,7 +19,6 @@ const InnovationLabsPage: React.FC = () => {
   // TODO: Add content;
  ,
     }
-}
   icon: FlaskConica,;
       title: &apos;Research & Development,&apos;,;
       description: 'value',;

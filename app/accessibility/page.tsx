@@ -78,7 +78,7 @@ const PagePage: React.FC = () => {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-emerald-500/20 hover:border-emerald-400/40 transition-all duration-300">
+                <div key={ ind, e, x } className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-emerald-500/20 hover:border-emerald-400/40 transition-all duration-300">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full mb-4">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
@@ -86,9 +86,9 @@ const PagePage: React.FC = () => {
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-emerald-400">
+                      <li key={ i, d, x } className="flex items-center text-sm text-emerald-400">
                         <CheckCircle className="w-4 h-4 mr-2" />
-                        {benefit}
+                        { benef, i, t }
                       </li>
                     ))}
                   </ul>
@@ -111,13 +111,13 @@ const PagePage: React.FC = () => {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-4">
+                <div key={ ind, e, x } className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
                     <div className="w-8 h-8 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full flex items-center justify-center">
                       <Check className="w-5 h-5 text-white" />
                     </div>
                   </div>
-                  <p className="text-gray-300 text-lg">{benefit}</p>
+                  <p className="text-gray-300 text-lg">{ benef, i, t }</p>
                 </div>
               ))}
             </div>

@@ -72,6 +72,7 @@ export class AccessibilityChecker {
 
   clearIssues(): void {
   this.issues = []
+    
     }
 
 export default AccessibilityChecker

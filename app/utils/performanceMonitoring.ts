@@ -43,6 +43,7 @@ class PerformanceMonitoringService {}
 private static instance: PerformanceMonitoringService;
     }
 private webVitals: WebVitals = {
+    
     }
 private customMetrics: CustomMetric[] = []
 private observers: PerformanceObserver[] = [],
@@ -68,6 +69,7 @@ export interface CustomMetric {/* TODO: Fix JSX expression */}
 }
 class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
 webVitals: WebVitals = {
+    
     }
 private
 customMetrics: CustomMetric[] = []
@@ -246,6 +248,7 @@ private recordWebVital(name: keyof WebVitals, value: number): void {
 }
 const rating = this.getRating(name, value)
 const metric: PerformanceMetric = {
+    
     }
 name
 value,
@@ -328,6 +331,7 @@ recordCustomMetric(name: string,
   
 }
 const metric: CustomMetric = {
+    
     }
 name
 value,
@@ -433,8 +437,7 @@ case 'poor': return 0
 default: return 0;}
 getPerformanceScore(): number {
   /* TODO: Fix JSX expression */
-    }
-})
+    })
 return Math.round(scores.reduce((a: number,
       b: number) => a + b, 0) / scores.length)
 }
@@ -623,7 +626,6 @@ this.observers = [];}
 disconnect(): void {
   /* TODO: Fix JSX expression */
     }
-}
 export const performanceMonitoring = PerformanceMonitoringService.getInstance()
 export default PerformanceMonitoringService
 // Export convenience enums and functions
@@ -810,6 +812,7 @@ t: MetricUnit = MetricUnit.Milliseconds) => {/* TODO: Fix JSX expression */}
 } else {/* TODO: Fix JSX expression */}
 })
 
+    
     }
 // Also record in the main performance monitoring service
 performanceMonitoring.recordCustomMetric(name value, unit)

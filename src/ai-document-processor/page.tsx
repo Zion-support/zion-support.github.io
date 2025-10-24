@@ -19,7 +19,6 @@ const AIDocumentProcessorPage: React.FC = () => {
   // TODO: Add content;
  ,
     }
-}
   icon: FileTex,;
       title: 'Document Processing,',;
       description: 'value',;

@@ -185,7 +185,6 @@ export const optimizeScrollPerformance = () => {
         if (!layoutEntry.hadRecentInput) {
           clsEntries.push(ent, r, y);
           clsValue += layoutEntry.value;
-    }
     });
     observer.observe({ entryTypes: ['layout-shift'] });
     return () => {
@@ -199,7 +198,6 @@ export const optimizeScrollPerformance = () => {
       for (const entry of list.getEntries()) {
         if (process.env['NODE_ENV'] === 'development') {
           // LCP tracking
-    }
     });
     observer.observe({ entryTypes: ['largest-contentful-paint'] });
     return () => observer.disconnect();
@@ -215,7 +213,6 @@ export const optimizeScrollPerformance = () => {
         const fid = fidEntry.processingStart - entry.startTime;
         if (process.env['NODE_ENV'] === 'development') {
           // FID tracking
-    }
     });
     observer.observe({ entryTypes: ['first-input'] });
     return () => observer.disconnect();

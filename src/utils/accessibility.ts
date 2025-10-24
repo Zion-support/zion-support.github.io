@@ -97,7 +97,6 @@ class AccessibilityService {;
   ;
     // TODO: Add content;
     }
-}
     const [r, g, b] = [rgb.r, rgb.g, rgb.b].map(val => {;
     // TODO: Add content;
   }
@@ -114,7 +113,6 @@ class AccessibilityService {;
   ;
     // TODO: Add content;
     }
-}
     const errors: A11yError[] = [];
     const warnings: A11yWarning[] = [];
     // Check for missing alt text on images,;
@@ -326,7 +324,6 @@ const html = document.documentElement,;
   ;
     // TODO: Add content;
     }
-}
     // Add focus visible class for keyboard navigation,;
     document.addEventListener('keydown', e => {;
     // TODO: Add content;
@@ -345,7 +342,6 @@ const html = document.documentElement,;
   ;
     // TODO: Add content;
     }
-}
       document.body.classList.remove('keyboard-nav');
     });
     // Add keyboard shortcuts,;
@@ -407,7 +403,6 @@ const html = document.documentElement,;
   ;
     // TODO: Add content;
     }
-}
     const announcer = document.getElementById('a11y-announcer') || this.createAnnouncer();
     announcer.setAttribute('aria-live', priority);
     announcer.textContent = message;
@@ -416,7 +411,6 @@ const html = document.documentElement,;
   ;
     // TODO: Add content;
     }
-}
       announcer.textContent = '';
     }, 1000);
   }
@@ -424,7 +418,6 @@ const html = document.documentElement,;
   ;
     // TODO: Add content;
     }
-}
     const announcer = document.createElement('div');
     announcer.id = 'a11y-announcer';
     announcer.className = 'sr-only';
@@ -449,7 +442,6 @@ const html = document.documentElement,;
   ;
     // TODO: Add content;
     }
-}
       if (e.key === 'Tab') {;
     // TODO: Add content;
   }
@@ -485,7 +477,6 @@ const html = document.documentElement,;
   ;
     // TODO: Add content;
     }
-}
       element.removeEventListener('keydown', handleTabKey);
     }
   }
@@ -494,7 +485,6 @@ const html = document.documentElement,;
   ;
     // TODO: Add content;
     }
-}
     const style = window.getComputedStyle(eleme, n, t);
     return !();
       style.display === 'none' ||;

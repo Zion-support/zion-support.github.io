@@ -73,8 +73,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
               img.src = img.dataset.src
               img.removeAttribute('data-src')
               observer.unobserve(i, m, g)
-    }
-        })
+    })
       },
       { rootMargin: '50px', }
     )

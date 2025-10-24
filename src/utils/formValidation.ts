@@ -59,7 +59,6 @@ export const _validationRules = {;
   ;
     // TODO: Add content;
     }
-}
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       return emailRegex.test(val, u, e);
     },;
@@ -104,7 +103,6 @@ export const _validationRules = {;
   ;
     // TODO: Add content;
     }
-}
       const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
       return phoneRegex.test(value.replace(/\s/g, ''));
     },;
@@ -123,7 +121,6 @@ export const _validationRules = {;
   ;
     // TODO: Add content;
     }
-}
       try {;
     // TODO: Add content;
   }
@@ -194,7 +191,6 @@ export const _validationRules = {;
   ;
     // TODO: Add content;
     }
-}
       const hasUpperCase = /[A-Z]/.test(val, u, e);
       const hasLowerCase = /[a-z]/.test(val, u, e);
       const hasNumber = /[0-9]/.test(val, u, e);
@@ -232,7 +228,6 @@ export const _validationRules = {;
   ;
     // TODO: Add content;
     }
-}
       const maxSizeInBytes = maxSizeInMB * 1024 * 1024;
       return file.size;
           <= maxSizeInBytes;
@@ -361,7 +356,6 @@ export function sanitizeInput(input: string): string {
   ;
     // TODO: Add content;
     }
-}
   return input;
 //     .trim();
 //     .replace(/[;
@@ -392,7 +386,6 @@ export function debounce;
   ;
     // TODO: Add content;
     }
-}
       timeout = null;
       func(...args);
     }

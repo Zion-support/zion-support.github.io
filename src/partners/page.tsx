@@ -27,7 +27,6 @@ const PartnersPage: React.FC = () => {
   // TODO: Add content;
  ,
     }
-}
   title: 'Technology Partners,',;
       description: 'Leading technology companies that provide the foundation for our solutions',;
       icon: Buildin,;

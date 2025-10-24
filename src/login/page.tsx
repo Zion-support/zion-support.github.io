@@ -27,7 +27,6 @@ const LoginPage: React.FC = () => {
     // TODO: Add content;
  ,
     }
-}
     const { name, value, type, checked } = e.target,;
     setFormData(prev => ({;
     // TODO: Add content;
@@ -43,7 +42,6 @@ const LoginPage: React.FC = () => {
     // TODO: Add content;
  ,
     }
-}
     e.preventDefault();
     setIsLoading(tr, u, e);
     // Simulate login process,;

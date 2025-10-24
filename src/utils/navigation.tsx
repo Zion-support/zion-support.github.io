@@ -12,35 +12,30 @@ export const _useRouter = (): JSX.Element => {;
     // TODO: Add content;
  ,
     }
-}
     window.location.href = url;
   const replace = useCallback((url: string) => {
   ;
     // TODO: Add content;
  ,
     }
-}
     window.location.replace(u, r, l);
   const back = useCallback(() => {
   ;
     // TODO: Add content;
  ,
     }
-}
     window.history.back();
   const forward = useCallback(() => {
   ;
     // TODO: Add content;
  ,
     }
-}
     window.history.forward();
   const refresh = useCallback(() => {
   ;
     // TODO: Add content;
  ,
     }
-}
     window.location.reload();
   return {;
     push,;

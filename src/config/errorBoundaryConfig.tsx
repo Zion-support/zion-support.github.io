@@ -69,7 +69,6 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {
     // TODO: Add content;
  ,
     }
-}
   const isDevelopment = process.env['NODE_ENV'] === 'development';
   return {;
     // TODO: Add content;

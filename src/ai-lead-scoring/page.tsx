@@ -19,7 +19,6 @@ const AILeadScoringPage: React.FC = () => {
   // TODO: Add content;
  ,
     }
-}
   icon: Targe,;
       title: 'Intelligent Scoring,',;
       description: 'value',;

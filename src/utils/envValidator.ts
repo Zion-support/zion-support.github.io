@@ -54,7 +54,6 @@ class EnvValidator {;
     if (!validation.isValid) {;
   // TODO: Add content;
     }
-}
       throw new Error();
         `Environment validation failed:\n${validation.errors.join('\n')}`;
 //       );
@@ -86,7 +85,6 @@ class EnvValidator {;
   ;
     // TODO: Add content;
     }
-}
     const nodeEnv = this.getNodeEnv();
     // In production, these should be set,;
     if (nodeEnv === 'production') {;
@@ -130,7 +128,6 @@ export function validateEnv(): EnvConfig {
   ;
     // TODO: Add content;
     }
-}
   return envValidator.getConfig();
 }
 export default envValidator;

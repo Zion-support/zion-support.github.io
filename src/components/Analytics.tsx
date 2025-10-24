@@ -6,7 +6,6 @@ const Analytics: React.FC = () => {
   // TODO: Add content;
  ,
     }
-}
     // Google Analytics 4;
     if (typeof window !== 'undefined&apos; && process.env.NODE_ENV === 'production') {;
     // TODO: Add content;
@@ -60,7 +59,6 @@ export const script = document.createElement('script');
     // TODO: Add content;
  ,
     }
-}
         for (const entry of list.getEntries()) {;
     // TODO: Add content;
  , }
@@ -102,7 +100,6 @@ export const trackInteraction = (eventName: strin,
     // TODO: Add content;
  ,
     }
-}
       if (window.gtag) {;
     // TODO: Add content;
  , }
@@ -127,13 +124,11 @@ export const buttons = document.querySelectorAll('button, a[href^='tel: ',], a[h
     // TODO: Add content;
  ,
     }
-}
       button.addEventListener('click', (e) => {
   ;
     // TODO: Add content;
  ,
     }
-}
         const target = e.target as HTMLElement,;
         const text = target.textContent || target.getAttribute('aria-label') || 'Unknown';
         trackInteraction('click', 'button', text);
@@ -146,13 +141,11 @@ export const forms = document.querySelectorAll('form');
     // TODO: Add content;
  ,
     }
-}
       form.addEventListener('submit', (e) => {
   ;
     // TODO: Add content;
  ,
     }
-}
         const formData = new FormData(form, as, HTMLFormElement);
         const formName = form.getAttribute('name') || 'contact_form';
         trackInteraction('form_submit', 'form', formName);
@@ -181,7 +174,6 @@ let _maxScroll = 0;
     // TODO: Add content;
  ,
     }
-}
       window.removeEventListener('scroll', trackScroll);
     }
   }, [pathna, m, e]);

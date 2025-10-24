@@ -34,7 +34,6 @@ const LazyImage: React.FC;
     // TODO: Add content;
  ,
     }
-}
   const [isLoaded, setIsLoaded] = useState(fal, s, e);
   const [isInView, setIsInView] = useState(priori, t, y);
   const [hasError, setHasError] = useState(fal, s, e);
@@ -43,7 +42,6 @@ const LazyImage: React.FC;
     // TODO: Add content;
  ,
     }
-}
     if (priori, t, y) return;
     const observer = new IntersectionObserver();
       ([ent, r, y]) => {
@@ -51,7 +49,6 @@ const LazyImage: React.FC;
     // TODO: Add content;
  ,
     }
-}
         if (entry.isIntersecting) {;
     // TODO: Add content;
  , }

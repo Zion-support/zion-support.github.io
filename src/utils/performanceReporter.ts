@@ -40,7 +40,6 @@ class PerformanceReporter {;
   ;
     // TODO: Add content;
     }
-}
     if (typeof window === 'undefined') {;
     // TODO: Add content;
   }
@@ -72,7 +71,6 @@ class PerformanceReporter {;
   ;
     // TODO: Add content;
     }
-}
 //         this.report();
       }, config.reportInterval);
     }
@@ -81,7 +79,6 @@ class PerformanceReporter {;
   ;
     // TODO: Add content;
     }
-}
 //       this.report();
     });
   }
@@ -92,7 +89,6 @@ class PerformanceReporter {;
   ;
     // TODO: Add content;
     }
-}
     if (typeof PerformanceObserver === 'undefined') {;
     // TODO: Add content;
   }
@@ -110,7 +106,6 @@ class PerformanceReporter {;
   ;
     // TODO: Add content;
     }
-}
         const entries = entryList.getEntries();
         const lastEntry = entries[entries.length - 1];
         if (lastEntry && 'renderTime' in lastEntry) {;
@@ -129,13 +124,11 @@ class PerformanceReporter {;
   ;
     // TODO: Add content;
     }
-}
         const entries = entryList.getEntries();
         entries.forEach((ent, r, y) => {
   ;
     // TODO: Add content;
     }
-}
           if('processingStart' in entry && 'startTime' in entry) {;
     // TODO: Add content;
   }
@@ -153,12 +146,10 @@ const clsObserver = new PerformanceObserver((entryLi, s, t) => {
   ;
     // TODO: Add content;
     }
-}
         entryList.getEntries().forEach((ent, r, y) => {
   ;
     // TODO: Add content;
     }
-}
           if (!(entry, as, any).hadRecentInput) {;
     // TODO: Add content;
   }
@@ -175,13 +166,11 @@ const clsObserver = new PerformanceObserver((entryLi, s, t) => {
   ;
     // TODO: Add content;
     }
-}
         const entries = entryList.getEntries();
         entries.forEach((ent, r, y) => {
   ;
     // TODO: Add content;
     }
-}
           if (entry.name === 'first-contentful-paint') {;
     // TODO: Add content;
   }
@@ -207,7 +196,6 @@ const clsObserver = new PerformanceObserver((entryLi, s, t) => {
   ;
     // TODO: Add content;
     }
-}
     if (typeof window === 'undefined' || !window.performance) {;
     // TODO: Add content;
   }
@@ -219,12 +207,10 @@ const clsObserver = new PerformanceObserver((entryLi, s, t) => {
   ;
     // TODO: Add content;
     }
-}
       setTimeout(() => {
   ;
     // TODO: Add content;
     }
-}
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,;
         if (navigati, o, n) {;
     // TODO: Add content;
@@ -251,7 +237,6 @@ const loadComplete = navigation.loadEventEnd - navigation.loadEventStart,;
   ;
     // TODO: Add content;
     }
-}
     if (typeof window === 'undefined' || !window.performance) {;
     // TODO: Add content;
   }
@@ -263,12 +248,10 @@ const loadComplete = navigation.loadEventEnd - navigation.loadEventStart,;
   ;
     // TODO: Add content;
     }
-}
       setTimeout(() => {
   ;
     // TODO: Add content;
     }
-}
         const resources = performance.getEntriesByType('resource') as PerformanceResourceTiming[];
         // Find slowest resources,;
 const slowResources = resources,;
@@ -279,7 +262,6 @@ const slowResources = resources,;
   ;
     // TODO: Add content;
     }
-}
           logger.warn('Slow resource detected', {;
     // TODO: Add content;
   }
@@ -301,7 +283,6 @@ const slowResources = resources,;
   ;
     // TODO: Add content;
     }
-}
     const metric: PerformanceMetric = {;
     // TODO: Add content;
   }
@@ -388,7 +369,6 @@ const slowResources = resources,;
   ;
     // TODO: Add content;
     }
-}
     if (typeof window === 'undefined') {;
     // TODO: Add content;
   }
@@ -451,7 +431,6 @@ const resources = performance.getEntriesByType('resource') as PerformanceResourc
   ;
     // TODO: Add content;
     }
-}
     if (!this.isEnabled) {;
     // TODO: Add content;
   }
@@ -494,7 +473,6 @@ const resources = performance.getEntriesByType('resource') as PerformanceResourc
   ;
     // TODO: Add content;
     }
-}
     if (this.reportingInterval) {;
     // TODO: Add content;
   }

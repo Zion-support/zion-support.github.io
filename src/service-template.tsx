@@ -28,7 +28,6 @@ const ServicePage: React.FC<ServicePageProps> = ({ titl,e, description, services
     // TODO: Add content;
  ,
     }
-}
   return (;
           <div>Coming Soon</div>
   );

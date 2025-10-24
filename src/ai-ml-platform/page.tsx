@@ -12,7 +12,6 @@ const AIMLPlatformPage: React.FC = () => {
   // TODO: Add content;
  ,
     }
-}
   icon: Brai,;
       title: 'Complete ML Platform,',;
       description: 'value',;

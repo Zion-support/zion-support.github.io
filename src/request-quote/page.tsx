@@ -75,7 +75,6 @@ const RequestQuotePage: React.FC = () => {
     // TODO: Add content;
  ,
     }
-}
     const { name, value } = e.target,;
     setFormData(prev => ({;
     // TODO: Add content;
@@ -91,7 +90,6 @@ const RequestQuotePage: React.FC = () => {
     // TODO: Add content;
  ,
     }
-}
     e.preventDefault();
     setIsSubmitting(tr, u, e);
     // Simulate form submission,;

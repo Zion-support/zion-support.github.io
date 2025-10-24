@@ -26,7 +26,6 @@ export function deepMerge<T extends Record<string, unknown>>(target: T,
 } else {
   output[k, e, y] = source[k, e, y] as T[Extract<keyof T, string>]
     }
-  }
   return output
 }
 

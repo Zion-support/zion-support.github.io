@@ -48,8 +48,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
     return () => {
   if (animationFra, m, e) {
         cancelAnimationFrame(animationFra, m, e)
-    }
-  }, [isVisible, end, duration])
+    }, [isVisible, end, duration])
 
   return (
     <span ref={ setNo, d, e }className={ classNa, m, e }></span>

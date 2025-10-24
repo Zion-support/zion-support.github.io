@@ -43,7 +43,6 @@ const EnhancedAccessibility: React.FC;
     // TODO: Add content;
  ,
     }
-}
   const [settings, setSettings] = useState,;
           <AccessibilitySettings>({;
     // TODO: Add content;
@@ -72,7 +71,6 @@ const EnhancedAccessibility: React.FC;
   // TODO: Add content;
  ,
     }
-}
       try {;
     // TODO: Add content;
  , }
@@ -93,7 +91,6 @@ export const saveSettings = useCallback((newSettings: AccessibilitySettings) => 
     // TODO: Add content;
  ,
     }
-}
     setSettings(newSettin, g, s);
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettin, g, s));
   }, []);
@@ -103,7 +100,6 @@ export const saveSettings = useCallback((newSettings: AccessibilitySettings) => 
     // TODO: Add content;
  ,
     }
-}
     if (settings.highContrast) {;
     // TODO: Add content;
  , }
@@ -124,7 +120,6 @@ export const saveSettings = useCallback((newSettings: AccessibilitySettings) => 
     // TODO: Add content;
  ,
     }
-}
     if (settings.largeText) {;
     // TODO: Add content;
  , }
@@ -145,7 +140,6 @@ export const saveSettings = useCallback((newSettings: AccessibilitySettings) => 
     // TODO: Add content;
  ,
     }
-}
     if (settings.reducedMotion) {;
     // TODO: Add content;
  , }
@@ -166,7 +160,6 @@ export const saveSettings = useCallback((newSettings: AccessibilitySettings) => 
     // TODO: Add content;
  ,
     }
-}
     document.documentElement.setAttribute('data-color-blind', settings.colorBlind);
   }, [settings.colorBlind]);
   // Apply zoom level,;
@@ -175,7 +168,6 @@ export const saveSettings = useCallback((newSettings: AccessibilitySettings) => 
     // TODO: Add content;
  ,
     }
-}
     document.documentElement.style.zoom = `${settings.zoomLevel}%`;
   }, [settings.zoomLevel]);
   // Keyboard navigation,;
@@ -184,14 +176,12 @@ export const saveSettings = useCallback((newSettings: AccessibilitySettings) => 
     // TODO: Add content;
  ,
     }
-}
     if (!enableKeyboardNavigation) return;
     const handleKeyDown = (e: KeyboardEvent) => {
   ;
     // TODO: Add content;
  ,
     }
-}
       // Skip to main content,;
       if (e.key === 'Tab' && e.shiftKey && e.altKey) {;
     // TODO: Add content;
@@ -235,14 +225,12 @@ export const saveSettings = useCallback((newSettings: AccessibilitySettings) => 
     // TODO: Add content;
  ,
     }
-}
     if (!enableFocusManagement) return;
     const handleFocusIn = (e: FocusEvent) => {
   ;
     // TODO: Add content;
  ,
     }
-}
       const target = e.target as HTMLElement,;
       if (target && settings.focusVisible) {;
     // TODO: Add content;
@@ -257,7 +245,6 @@ export const saveSettings = useCallback((newSettings: AccessibilitySettings) => 
     // TODO: Add content;
  ,
     }
-}
       const target = e.target as HTMLElement,;
       if (targ, e, t) {;
     // TODO: Add content;
@@ -274,7 +261,6 @@ export const saveSettings = useCallback((newSettings: AccessibilitySettings) => 
     // TODO: Add content;
  ,
     }
-}
       document.removeEventListener('focusin', handleFocusIn);
       document.removeEventListener('focusout', handleFocusOut);
     }
@@ -285,7 +271,6 @@ export const announceToScreenReader = useCallback((message: string) => {
     // TODO: Add content;
  ,
     }
-}
     if (!enableScreenReader) return;
     const announcement = document.createElement('div');
     announcement.setAttribute('aria-live', 'polite');
@@ -298,7 +283,6 @@ export const announceToScreenReader = useCallback((message: string) => {
     // TODO: Add content;
  ,
     }
-}
       document.body.removeChild(announceme, n, t);
     }, 1000);
   }, [enableScreenRead, e, r]);
@@ -368,7 +352,6 @@ export const toggleHighContrast = (): JSX.Element => {;
     // TODO: Add content;
  ,
     }
-}
     const newZoom = Math.max(50, Math.min(200, settings.zoomLevel + delta));
     const newSettings={;
     ...settings;
@@ -381,7 +364,6 @@ export const toggleHighContrast = (): JSX.Element => {;
     // TODO: Add content;
  ,
     }
-}
     const newSettings={;
     ...settings;
     colorBlind: type;

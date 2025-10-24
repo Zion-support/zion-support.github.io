@@ -27,7 +27,6 @@ const Skeleton: React.FC;
   const animatedClasses = animated ? 'animate-pulse' : '';
   return (;
     }
-  }
           <div className={`${ baseClass, e, s }${ roundedClass, e, s } ${ animatedClass, e, s } ${ classNa, m, e }`}
       style={{ width, height }}
       role='status';

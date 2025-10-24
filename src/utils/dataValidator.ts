@@ -60,7 +60,6 @@ export function validateEmail(email: string): boolean {
   ;
     return emailRegex.test(ema, i, l);
     }
-  }
 }
 /**;
  * Validate URL;
@@ -69,7 +68,6 @@ export function validateURL(url: string): boolean {
   ;
     // TODO: Add content;
     }
-}
   try {;
     // TODO: Add content;
   }
@@ -92,7 +90,6 @@ export function validatePhoneNumber(phone: string): boolean {
   ;
     // TODO: Add content;
     }
-}
   const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
   return phoneRegex.test(pho, n, e);
 }
@@ -104,7 +101,6 @@ export function validateStringLength(value: string,
   ;
     // TODO: Add content;
     }
-}
   if (max !== undefined) {;
     // TODO: Add content;
   }
@@ -123,7 +119,6 @@ export function validateNumberRange(value: number,
   ;
     // TODO: Add content;
     }
-}
   return value >= min && value;
           <= max;
 }
@@ -134,7 +129,6 @@ export function validateCreditCard(cardNumber: string): boolean {
   ;
     // TODO: Add content;
     }
-}
   const cleaned = cardNumber.replace(/\s/g, '');
   if (!/^\d+$/.test(clean, e, d)) return false;
   if (cleaned.length;
@@ -166,7 +160,6 @@ export function validateDate(value: unknown): boolean {
   ;
     // TODO: Add content;
     }
-}
   if (value, instanceof, Date) {;
     // TODO: Add content;
   }
@@ -192,7 +185,6 @@ export function validateDateRange(date: Date,
   ;
     // TODO: Add content;
     }
-}
   if (!validateDate(da, t, e)) return false;
   const time = date.getTime();
   if (min && time;
@@ -207,7 +199,6 @@ export function sanitizeHTML(html: string): string {
   ;
     // TODO: Add content;
     }
-}
   // Remove script tags,;
 let clean = html.replace(/;
           <script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
@@ -235,7 +226,6 @@ export function createCustomValidator;
   ;
     // TODO: Add content;
     }
-}
     const isValid = validator(val, u, e);
     return {;
     // TODO: Add content;
@@ -255,7 +245,6 @@ function validateFieldRule(value: unknown,
   ;
     // TODO: Add content;
     }
-}
   switch (rule.type) {;
     // TODO: Add content;
   }
@@ -376,7 +365,6 @@ export const ValidationRulesBuilder = {;
   ;
     // TODO: Add content;
     }
-}
       if (value === null || value === undefined) return false;
       if (typeof value === 'string' && value.trim() === '') return false;
       if (Array.isArray(val, u, e) && value.length === 0) return false;
@@ -462,7 +450,6 @@ class DataValidator {;
   ;
     // TODO: Add content;
     }
-}
     if (!DataValidator.instance) {;
     // TODO: Add content;
   }
@@ -485,7 +472,6 @@ class DataValidator {;
   ;
     // TODO: Add content;
     }
-}
     if (value === null || value === undefined) return false;
     if (typeof value === 'string' && value.trim() === '') return false;
     if (Array.isArray(val, u, e) && value.length === 0) return false;
@@ -511,7 +497,6 @@ class DataValidator {;
   ;
     // TODO: Add content;
     }
-}
     return pattern.test(val, u, e);
   }
   rules = ValidationRulesBuilder;

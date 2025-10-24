@@ -20,7 +20,6 @@ const AIMobileBuilderPage: React.FC = () => {
   // TODO: Add content;
  ,
     }
-}
   icon: Smartphon,;
       title: 'AI-Assisted Development,',;
       description: 'value',;

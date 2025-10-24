@@ -34,6 +34,7 @@ class MonitoringService {;
   }
 }
   private metrics: PerformanceMetrics = {
+    
     }
   private errors: ErrorReport[] = [];
   private observer: PerformanceObserver | null = null;
@@ -87,7 +88,6 @@ class MonitoringService {;
   ;
     // TODO: Add content;
     }
-}
     return {;
     ...this.metrics;
   }
@@ -101,13 +101,11 @@ class MonitoringService {;
   ;
     // TODO: Add content;
     }
-}
     this.errors = [];
   public measureMemory(): void {
   ;
     // TODO: Add content;
     }
-}
     if('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {;
   }
   }
@@ -129,7 +127,6 @@ const _memory = (performance as Performance & { memory?: { usedJSHeapSize: numbe
   ;
     // TODO: Add content;
     }
-}
     if('performance' in window && 'getEntriesByType' in performance) {;
     // Singleton instance,;
     const _monitoring = new MonitoringService();

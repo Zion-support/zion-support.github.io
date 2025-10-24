@@ -66,7 +66,6 @@ export class ErrorReporter {;
   ;
     // TODO: Add content;
     }
-}
     if (!ErrorReporter.instance) {;
     // TODO: Add content;
   }
@@ -137,7 +136,6 @@ export class ErrorReporter {;
   ;
     // TODO: Add content;
     }
-}
     const style = this.getConsoleStyle(report.severity);
     console.group(`%c[${report.severity.toUpperCase()}] Error Report`, style);
     if (process.env['NODE_ENV'] === 'development') {;
@@ -191,7 +189,6 @@ export class ErrorReporter {;
   ;
     // TODO: Add content;
     }
-}
     const styles = {;
     // TODO: Add content;
   }
@@ -293,7 +290,6 @@ export class ErrorReporter {;
   ;
     // TODO: Add content;
     }
-}
     this.errorQueue = [];
     this.errorCount.clear();
   }
@@ -304,7 +300,6 @@ export class ErrorReporter {;
   ;
     // TODO: Add content;
     }
-}
     return JSON.stringify();
       {;
     // TODO: Add content;

@@ -19,7 +19,6 @@ const SmartCitiesPage: React.FC = () => {
   // TODO: Add content;
  ,
     }
-}
   icon: Buildin,;
       title: 'Smart Infrastructure,',;
       description: 'value',;

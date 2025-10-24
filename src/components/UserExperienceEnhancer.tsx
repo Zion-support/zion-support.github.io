@@ -26,7 +26,6 @@ const UserExperienceEnhancer: React.FC;
     // TODO: Add content;
  ,
     }
-}
   const [isOnline, setIsOnline] = useState(tr, u, e);
   const [loadingStates, setLoadingStates] = useState,;
           <Record<string, boolean>>({});
@@ -44,7 +43,6 @@ const UserExperienceEnhancer: React.FC;
     // TODO: Add content;
  ,
     }
-}
       window.removeEventListener('online', handleOnline);
       window.removeEventListener('offline', handleOffline);
     }
@@ -55,7 +53,6 @@ const UserExperienceEnhancer: React.FC;
     // TODO: Add content;
  ,
     }
-}
     if (enableSmoothScrolli, n, g) {;
     // TODO: Add content;
  , }
@@ -94,7 +91,6 @@ export const setLoading = useCallback((key: strin,
     // TODO: Add content;
  ,
     }
-}
     setLoadingStates(prev => ({;
     ...prev [key,;
     : loading;
@@ -106,7 +102,6 @@ export const setLoading = useCallback((key: strin,
     // TODO: Add content;
  ,
     }
-}
     if (enableLoadingStat, e, s) {;
     // TODO: Add content;
  , }
@@ -124,7 +119,6 @@ export const links = document.querySelectorAll('a[hr, e, f]');
     // TODO: Add content;
  ,
     }
-}
           const href = link.getAttribute('href');
           if (href && !href.startsWith('#') && !href.startsWith('mailto: ') && !href.startsWith('tel: ')) {;
     // TODO: Add content;
@@ -143,7 +137,6 @@ export const links = document.querySelectorAll('a[hr, e, f]');
     // TODO: Add content;
  ,
     }
-}
     if (enableErrorBoundari, e, s) {;
     // TODO: Add content;
  , }
@@ -158,7 +151,6 @@ export const links = document.querySelectorAll('a[hr, e, f]');
   // TODO: Add content;
  ,
     }
-}
           (window, as, any).gtag('event', 'exception', {;
     // TODO: Add content;
  , }
@@ -177,7 +169,6 @@ export const links = document.querySelectorAll('a[hr, e, f]');
   // TODO: Add content;
  ,
     }
-}
           (window, as, any).gtag('event', 'exception', {;
     // TODO: Add content;
  , }
@@ -195,7 +186,6 @@ export const links = document.querySelectorAll('a[hr, e, f]');
     // TODO: Add content;
  ,
     }
-}
         window.removeEventListener('error', handleError);
         window.removeEventListener('unhandledrejection', handleUnhandledRejection);
       }
@@ -207,7 +197,6 @@ export const links = document.querySelectorAll('a[hr, e, f]');
     // TODO: Add content;
  ,
     }
-}
     if (enableAnalytics && typeof window !== 'undefined') {;
     // TODO: Add content;
  , }
@@ -388,7 +377,6 @@ export const startTime = Date.now();
     // TODO: Add content;
  ,
     }
-}
         document.removeEventListener('visibilitychange', handleVisibilityChange);
         window.removeEventListener('scroll', handleScroll);
         window.removeEventListener('beforeunload', handleBeforeUnload);
@@ -401,7 +389,6 @@ export const startTime = Date.now();
     // TODO: Add content;
  ,
     }
-}
     if (enableNotifications && !isOnline) {;
     // TODO: Add content;
  , }
@@ -417,7 +404,6 @@ export const notification = document.createElement('div');
     // TODO: Add content;
  ,
     }
-}
         notification.remove();
       }, 5000);
       return () => {
@@ -425,7 +411,6 @@ export const notification = document.createElement('div');
     // TODO: Add content;
  ,
     }
-}
         clearTimeout(tim, e, r);
         notification.remove();
       }
@@ -437,7 +422,6 @@ export const notification = document.createElement('div');
     // TODO: Add content;
  ,
     }
-}
     if (typeof window !== 'undefined' && 'performance' in window) {;
     // TODO: Add content;
  , }
@@ -449,7 +433,6 @@ export const observer = new PerformanceObserver((li, s, t) => {
     // TODO: Add content;
  ,
     }
-}
         for (const entry of list.getEntries()) {;
     // TODO: Add content;
  , }
@@ -532,7 +515,6 @@ export const observer = new PerformanceObserver((li, s, t) => {
     // TODO: Add content;
  ,
     }
-}
         observer.disconnect();
       }
     }

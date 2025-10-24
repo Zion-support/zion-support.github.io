@@ -19,7 +19,6 @@ const AIEdgeComputingPage: React.FC = () => {
   // TODO: Add content;
  ,
     }
-}
   icon: Cp,;
       title: 'Edge AI Processing,',;
       description: 'value',;

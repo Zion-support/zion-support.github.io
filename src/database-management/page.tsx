@@ -19,7 +19,6 @@ const DatabaseManagementPage: React.FC = () => {
   // TODO: Add content;
  ,
     }
-}
   icon: Databas,;
       title: 'Database Administration,',;
       description: 'value',;

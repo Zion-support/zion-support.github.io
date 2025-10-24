@@ -33,6 +33,7 @@ class APIClient {
     const {
       method = 'GET'
       headers = {
+    
     },
       body,
       cache = false,
@@ -98,7 +99,6 @@ class APIClient {
   setDefaultHeaders(headers: Record<string, string>): void {
   this.defaultHeaders = { ...this.defaultHeaders, ...headers
     }
-}
 
 // Create singleton instance
 export const apiClient = new APIClient()

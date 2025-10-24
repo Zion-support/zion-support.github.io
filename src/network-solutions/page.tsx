@@ -19,7 +19,6 @@ const NetworkSolutionsPage: React.FC = () => {
   // TODO: Add content;
  ,
     }
-}
   icon: Glob,;
       title: 'Network Design,',;
       description: 'value',;

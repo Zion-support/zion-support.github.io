@@ -19,7 +19,6 @@ const AIHRAssistantPage: React.FC = () => {
   // TODO: Add content;
  ,
     }
-}
   icon: User,;
       title: 'HR Automation,',;
       description: 'value',;

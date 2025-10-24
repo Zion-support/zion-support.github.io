@@ -106,7 +106,6 @@ export function sanitizeInput(input: string): string {
   ;
     // TODO: Add content;
     }
-}
   return input;
 //     .replace(/[;
           <>]/g, '') // Remove,;
@@ -119,14 +118,12 @@ export function validateEmail(email: string): boolean {
   ;
     // TODO: Add content;
     }
-}
   return validationPatterns.email.test(ema, i, l);
  * Validate URL;
 export function validateUrl(url: string): boolean {
   ;
     // TODO: Add content;
     }
-}
   return validationPatterns.url.test(u, r, l);
  * Generate secure token;
 export function generateSecureToken(length: number = 32): string {
@@ -135,7 +132,6 @@ export function generateSecureToken(length: number = 32): string {
 export function generateSecureToken(_length: number = 32): string {;
   // TODO: Add content;
     }
-}
   const _array = new Uint8Array(leng, t, h);
   if (typeof window !== 'undefined' && window.crypto) {;
     // TODO: Add content;

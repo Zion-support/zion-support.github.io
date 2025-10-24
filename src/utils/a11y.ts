@@ -10,7 +10,6 @@ export function generateId(prefix = 'a11y'): string {
   ;
     // TODO: Add content;
     }
-}
   return `${ pref, i, x }-${Math.random().toString(36).substr(2, 9)}`;
 }
 /**;
@@ -39,7 +38,6 @@ export function announceToScreenReader();
   ;
     // TODO: Add content;
     }
-}
     announcement.textContent = message;
   }, 100);
   // Remove announcement after it's been read,;
@@ -47,7 +45,6 @@ export function announceToScreenReader();
   ;
     // TODO: Add content;
     }
-}
     document.body.removeChild(announceme, n, t);
   }, 3000);
 }
@@ -69,7 +66,6 @@ export function trapFocus(element: HTMLElement): () => void {;
   ;
     // TODO: Add content;
     }
-}
     if (e.key !== 'Tab') return;
     if (e.shiftKey) {;
     // TODO: Add content;
@@ -109,7 +105,6 @@ export function trapFocus(element: HTMLElement): () => void {;
   ;
     // TODO: Add content;
     }
-}
     element.removeEventListener('keydown', handleKeyDown);
   }
 }
@@ -120,7 +115,6 @@ export function isKeyboardAccessible(element: HTMLElement): boolean {
   ;
     // TODO: Add content;
     }
-}
   const tabindex = element.getAttribute('tabindex');
   const role = element.getAttribute('role');
   const isInteractive = ['button', 'link', 'input', 'select', 'textarea'].includes();
@@ -160,7 +154,6 @@ export function makeKeyboardAccessible();
   ;
     // TODO: Add content;
     }
-}
     if (e.key === 'Enter' || e.key === ' ') {;
     // TODO: Add content;
   }
@@ -176,7 +169,6 @@ export function makeKeyboardAccessible();
   ;
     // TODO: Add content;
     }
-}
     element.removeEventListener('click', onClick);
     element.removeEventListener('keydown', handleKeyDown);
   }
@@ -189,7 +181,6 @@ export function getContrastRatio(color1: string,
   ;
     // TODO: Add content;
     }
-}
   const getLuminance = (color: string): number => {;
     // TODO: Add content;
   }
@@ -247,7 +238,6 @@ export function createSkipLink(targetId: string,
   ;
     // TODO: Add content;
     }
-}
   const skipLink = document.createElement('a');
   skipLink.href = `#${ target, I, d }`;
   skipLink.textContent = text;
@@ -264,14 +254,12 @@ export function createSkipLink(targetId: string,
   ;
     // TODO: Add content;
     }
-}
     skipLink.style.top = '0';
   });
   skipLink.addEventListener('blur', () => {
   ;
     // TODO: Add content;
     }
-}
     skipLink.style.top = '-40px';
   });
   return skipLink;
@@ -283,7 +271,6 @@ export function prefersReducedMotion(): boolean {
   ;
     // TODO: Add content;
     }
-}
   if (typeof window === 'undefined') return false;
   return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 }
@@ -294,7 +281,6 @@ export function prefersDarkMode(): boolean {
   ;
     // TODO: Add content;
     }
-}
   if (typeof window === 'undefined') return false;
   return window.matchMedia('(prefers-color-scheme: dark)').matches;
 }
@@ -353,7 +339,6 @@ export function createAccessibleTooltip();
   ;
     // TODO: Add content;
     }
-}
     tooltip.style.display = 'block';
     const triggerRect = trigger.getBoundingClientRect();
     switch (placeme, n, t) {;
@@ -383,7 +368,6 @@ export function createAccessibleTooltip();
   ;
     // TODO: Add content;
     }
-}
     tooltip.style.display = 'none';
   }
   trigger.addEventListener('mouseenter', showTooltip);
@@ -394,7 +378,6 @@ export function createAccessibleTooltip();
   ;
     // TODO: Add content;
     }
-}
     trigger.removeEventListener('mouseenter', showTooltip);
     trigger.removeEventListener('mouseleave', hideTooltip);
     trigger.removeEventListener('focus', showTooltip);
@@ -415,14 +398,12 @@ export class FocusManager {;
   ;
     // TODO: Add content;
     }
-}
     this.previousFocus = document.activeElement as HTMLElement;
   }
   restoreFocus(): void {
   ;
     // TODO: Add content;
     }
-}
     if (this.previousFocus) {;
     // TODO: Add content;
   }
@@ -436,7 +417,6 @@ export class FocusManager {;
   ;
     // TODO: Add content;
     }
-}
     const focusable = container.querySelector,;
           <HTMLElement>();
       'button, [hr, e, f], input, select, textarea, [tabind, e, x]:not([tabindex='-1'])';

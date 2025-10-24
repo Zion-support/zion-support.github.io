@@ -32,6 +32,7 @@ class EnhancedAnalytics {;
 }
   private queue: AnalyticsEvent[] = [];
   private _userProperties: UserProperties = {
+    
     }
   private sessionId: string;
   private isInitialized = false;
@@ -51,14 +52,12 @@ class EnhancedAnalytics {;
   ;
     // TODO: Add content;
     }
-}
     return `session-${Date.now()}-${Math.random().toString(36).substring(7)}`;
   }
   private setupOfflineHandling(): void {
   ;
     // TODO: Add content;
     }
-}
     if (typeof window !== 'undefined') {;
     // TODO: Add content;
   }
@@ -68,14 +67,12 @@ class EnhancedAnalytics {;
   ;
     // TODO: Add content;
     }
-}
         this.flushOfflineQueue();
       });
       window.addEventListener('beforeunload', () => {
   ;
     // TODO: Add content;
     }
-}
         this.flush();
       });
     }
@@ -84,7 +81,6 @@ class EnhancedAnalytics {;
   ;
     // TODO: Add content;
     }
-}
     if (typeof window !== 'undefined') {;
     // TODO: Add content;
   }
@@ -94,7 +90,6 @@ class EnhancedAnalytics {;
   ;
     // TODO: Add content;
     }
-}
         this.flush();
       }, this.flushInterval);
     }
@@ -103,7 +98,6 @@ class EnhancedAnalytics {;
   ;
     // TODO: Add content;
     }
-}
     if (this.isInitialized) return;
     this.isInitialized = true;
     this.userProperties = {;
@@ -137,7 +131,6 @@ class EnhancedAnalytics {;
   ;
     // TODO: Add content;
     }
-}
     this.userProperties = {;
     // TODO: Add content;
   }
@@ -151,7 +144,6 @@ class EnhancedAnalytics {;
   ;
     // TODO: Add content;
     }
-}
     const enrichedEvent: AnalyticsEvent = {;
     // TODO: Add content;
   }
@@ -186,7 +178,6 @@ class EnhancedAnalytics {;
   ;
     // TODO: Add content;
     }
-}
     if ();
       typeof window !== 'undefined' &&;
 //       ();
@@ -232,7 +223,6 @@ class EnhancedAnalytics {;
   ;
     // TODO: Add content;
     }
-}
     this.trackEvent({;
     // TODO: Add content;
   }
@@ -256,7 +246,6 @@ class EnhancedAnalytics {;
   ;
     // TODO: Add content;
     }
-}
     this.trackEvent({;
     // TODO: Add content;
   }
@@ -274,7 +263,6 @@ class EnhancedAnalytics {;
   ;
     // TODO: Add content;
     }
-}
     this.trackEvent({;
     // TODO: Add content;
   }
@@ -298,7 +286,6 @@ class EnhancedAnalytics {;
   ;
     // TODO: Add content;
     }
-}
     this.trackEvent({;
     // TODO: Add content;
   }
@@ -321,7 +308,6 @@ class EnhancedAnalytics {;
   ;
     // TODO: Add content;
     }
-}
     this.trackEvent({;
     // TODO: Add content;
   }
@@ -367,7 +353,6 @@ class EnhancedAnalytics {;
   ;
     // TODO: Add content;
     }
-}
     if (this.queue.length === 0) return;
     // Check if online,;
     if (typeof navigator !== 'undefined' && !navigator.onLine) {;
@@ -393,7 +378,6 @@ class EnhancedAnalytics {;
   ;
     // TODO: Add content;
     }
-}
     if (this.offlineQueue.length === 0) return;
     // Merge offline queue into main queue,;
     this.queue.push(...this.offlineQueue);
@@ -405,21 +389,18 @@ class EnhancedAnalytics {;
   ;
     // TODO: Add content;
     }
-}
     return this.queue.length;
   }
   public getSessionId(): string {
   ;
     // TODO: Add content;
     }
-}
     return this.sessionId;
   }
   public getUserProperties(): UserProperties {
   ;
     // TODO: Add content;
     }
-}
     return {;
     ...this.userProperties;
   }

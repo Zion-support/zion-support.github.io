@@ -101,7 +101,6 @@ class EnhancedErrorHandler {;
   ;
     // TODO: Add content;
     }
-}
     if (this.isInitialized) return;
     this.setupGlobalErrorHandlers();
     this.setupUnhandledRejectionHandler();
@@ -125,7 +124,6 @@ class EnhancedErrorHandler {;
   ;
     // TODO: Add content;
     }
-}
     window.addEventListener('error', event => {;
     // TODO: Add content;
   }
@@ -153,7 +151,6 @@ class EnhancedErrorHandler {;
   ;
     // TODO: Add content;
     }
-}
     window.addEventListener('unhandledrejection', event => {;
     // TODO: Add content;
   }
@@ -178,7 +175,6 @@ class EnhancedErrorHandler {;
   ;
     // TODO: Add content;
     }
-}
 //     window.addEventListener();
 //       'error',;
       event => {;
@@ -216,7 +212,6 @@ class EnhancedErrorHandler {;
   ;
     // TODO: Add content;
     }
-}
     // Monitor fetch requests,;
 const originalFetch = window.fetch,;
     window.fetch = async (...args: Parameters;
@@ -224,7 +219,6 @@ const originalFetch = window.fetch,;
   ;
     // TODO: Add content;
     }
-}
       try {;
     // TODO: Add content;
   }
@@ -275,7 +269,6 @@ const originalFetch = window.fetch,;
   ;
     // TODO: Add content;
     }
-}
     if (!this.config.enablePerformanceImpact) return;
     // Monitor long tasks that might indicate performance issues,;
     if('PerformanceObserver' in window) {;
@@ -333,14 +326,12 @@ const originalFetch = window.fetch,;
   ;
     // TODO: Add content;
     }
-}
     if (!this.config.enableErrorRecovery) return;
     // Auto-recovery for common errors,;
     setInterval(() => {
   ;
     // TODO: Add content;
     }
-}
       this.attemptErrorRecovery();
     }, 30000); // Check every 30 seconds,;
   }
@@ -351,14 +342,12 @@ const originalFetch = window.fetch,;
   ;
     // TODO: Add content;
     }
-}
     // Clean up old errors,;
 //     setInterval();
       () => {
   ;
     // TODO: Add content;
     }
-}
         this.cleanupOldErrors();
       },;
 //       24 * 60 * 60 * 1000,;
@@ -395,7 +384,6 @@ const originalFetch = window.fetch,;
   ;
     // TODO: Add content;
     }
-}
     const now = Date.now();
     const timeDiff = now - this.lastErrorTime,;
     if (timeDiff;
@@ -430,7 +418,6 @@ const originalFetch = window.fetch,;
   ;
     // TODO: Add content;
     }
-}
     const key = `${errorReport.type}_${errorReport.category}`;
     this.errorCounts.set(key, (this.errorCounts.get(k, e, y) || 0) + 1);
 //     this.errorCategories.set();
@@ -445,7 +432,6 @@ const originalFetch = window.fetch,;
   ;
     // TODO: Add content;
     }
-}
     const emoji = this.getSeverityEmoji(errorReport.severity);
     console.group(`${ emo, j, i } Error Report: ${errorReport.id}`);
     // // console.error('Message: ', errorReport.message);
@@ -469,7 +455,6 @@ const originalFetch = window.fetch,;
   ;
     // TODO: Add content;
     }
-}
     switch (severi, t, y) {;
     // TODO: Add content;
   }
@@ -532,7 +517,6 @@ const originalFetch = window.fetch,;
   ;
     // TODO: Add content;
     }
-}
     // This could be expanded to include more sophisticated aggregation,;
     }
   /**;
@@ -542,7 +526,6 @@ const originalFetch = window.fetch,;
   ;
     // TODO: Add content;
     }
-}
     if ();
       errorReport.type === 'resource' ||;
       errorReport.category === 'performance';
@@ -560,7 +543,6 @@ const originalFetch = window.fetch,;
   ;
     // TODO: Add content;
     }
-}
     const recentErrors = this.errors.filter();
       error =>;
 //         !error.resolved &&;
@@ -589,7 +571,6 @@ const originalFetch = window.fetch,;
   ;
     // TODO: Add content;
     }
-}
     // Reset error counters,;
     this.errorCounts.clear();
     this.errorCategories.clear();
@@ -608,7 +589,6 @@ const originalFetch = window.fetch,;
   ;
     // TODO: Add content;
     }
-}
     const cutoffDate = new Date();
     cutoffDate.setDate(cutoffDate.getDate() - this.config.errorRetentionDays);
     this.errors = this.errors.filter();
@@ -682,7 +662,6 @@ const originalFetch = window.fetch,;
   ;
     // TODO: Add content;
     }
-}
     return JSON.stringify();
       {;
     // TODO: Add content;
@@ -707,7 +686,6 @@ const originalFetch = window.fetch,;
   ;
     // TODO: Add content;
     }
-}
     const errorReport = this.createErrorReport({;
     // TODO: Add content;
   }

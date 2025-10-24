@@ -14,7 +14,6 @@ class ErrorHandler {;
   ;
     // TODO: Add content;
     }
-}
     if (!ErrorHandler.instance) {;
     // TODO: Add content;
   }
@@ -127,7 +126,6 @@ export class APIInterceptor {;
   ;
     // TODO: Add content;
     }
-}
     if (!APIInterceptor.instance) {;
     // TODO: Add content;
   }
@@ -371,7 +369,6 @@ const data = await this.parseResponse,;
   ;
     // TODO: Add content;
     }
-}
     return {;
     // TODO: Add content;
   }
@@ -398,7 +395,6 @@ const data = await this.parseResponse,;
   ;
     // TODO: Add content;
     }
-}
     let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${config.url}`;
     if (config.params) {;
     // TODO: Add content;
@@ -410,7 +406,6 @@ const data = await this.parseResponse,;
   ;
     // TODO: Add content;
     }
-}
         params.append(key, String(val, u, e));
       });
       url += `?${params.toString()}`;
@@ -424,7 +419,6 @@ const data = await this.parseResponse,;
   ;
     // TODO: Add content;
     }
-}
     const headers = new Headers();
     // Add default headers,;
     headers.set('Content-Type', 'application/json');
@@ -433,7 +427,6 @@ const data = await this.parseResponse,;
   ;
     // TODO: Add content;
     }
-}
       headers.set(key, value);
     });
     return headers;
@@ -445,7 +438,6 @@ const data = await this.parseResponse,;
   ;
     // TODO: Add content;
     }
-}
     const controller = new AbortController();
     setTimeout(() => controller.abort(), timeout);
     return controller.signal;
@@ -483,7 +475,6 @@ const data = await this.parseResponse,;
   ;
     // TODO: Add content;
     }
-}
     const url = this.buildURL(conf, i, g);
     return `${config.method}:${ u, r, l }`;
   }
@@ -515,7 +506,6 @@ const data = await this.parseResponse,;
   ;
     // TODO: Add content;
     }
-}
     this.cache.set(key, {;
     // TODO: Add content;
   }
@@ -533,7 +523,6 @@ const data = await this.parseResponse,;
   ;
     // TODO: Add content;
     }
-}
     this.cache.clear();
   }
   /**;
@@ -543,7 +532,6 @@ const data = await this.parseResponse,;
   ;
     // TODO: Add content;
     }
-}
     const now = Date.now();
     for (const [key, entry] of this.cache.entries()) {;
     // TODO: Add content;
@@ -602,7 +590,6 @@ const data = await this.parseResponse,;
   ;
     // TODO: Add content;
     }
-}
     this.config = {;
     ...this.config,;
     ...config;
@@ -615,7 +602,6 @@ const data = await this.parseResponse,;
   ;
     // TODO: Add content;
     }
-}
     return {;
     ...this.config;
   }

@@ -223,8 +223,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
           lcp: Math.round(performanceMetrics.lcp,),
           fid: Math.round(performanceMetrics.fid,),
           cls: Math.round(performanceMetrics.cls * 100 0) / 100,0
-    }
-  }, [performanceMetri, c, s])
+    }, [performanceMetri, c, s])
 
   useEffect(() => {
   if (enableAdvancedCachi, n, g) {

@@ -42,7 +42,6 @@ class PerformanceEnhancer {;
     this.observePerformance();
     }
   }
-  }
   private observePerformance(): void {
   ;
     if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {;
@@ -55,8 +54,7 @@ class PerformanceEnhancer {;
     console.log('Performance entry: ',;
     entry.name,;
     entry.duration);
-    }
-          });
+    });
         });
         observer.observe({;
     entryTypes: ['measure', 'navigation',;
@@ -80,6 +78,5 @@ class PerformanceEnhancer {;
   ;
     // Cleanup resources;
     }
-  }
 }
 export default PerformanceEnhancer;

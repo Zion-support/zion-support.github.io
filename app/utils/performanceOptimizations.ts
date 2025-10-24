@@ -29,6 +29,7 @@ export const throttle = <T extends (...args: any[]) => any>(
 export const useIntersectionObserver = (
   callback: (entries: IntersectionObserverEntry[]) => void,
   options: IntersectionObserverInit = {
+    
     }
 ) => {
   const observer = useMemo(

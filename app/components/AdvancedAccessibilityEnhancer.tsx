@@ -120,7 +120,6 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
           mainContent.focus()
        ,
     }
-    }
 
     document.addEventListener('keydown', handleKeyDown)
     return () => document.removeEventListener('keydown', handleKeyDown)
@@ -180,7 +179,6 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
               firstElement.focus()
               e.preventDefault()
     }
-        }
       }
 
       element.addEventListener('keydown', handleTabKey)

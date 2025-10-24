@@ -163,7 +163,6 @@ class OptimizedErrorBoundary extends Component;
     // TODO: Add content;
  ,
     }
-}
     // Report to error monitoring service,;
     if (typeof window !== 'undefined' && 'gtag' in window) {;
     // TODO: Add content;
@@ -210,7 +209,6 @@ class OptimizedErrorBoundary extends Component;
     // TODO: Add content;
  ,
     }
-}
     if (this.resetTimeoutId) {;
     // TODO: Add content;
  , }
@@ -223,7 +221,6 @@ class OptimizedErrorBoundary extends Component;
     // TODO: Add content;
  ,
     }
-}
       this.setState({;
     // TODO: Add content;
  , }
@@ -244,7 +241,6 @@ class OptimizedErrorBoundary extends Component;
     // TODO: Add content;
  ,
     }
-}
     this.resetErrorBoundary();
   }
   render() {;

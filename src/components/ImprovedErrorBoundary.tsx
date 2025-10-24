@@ -72,7 +72,6 @@ class ImprovedErrorBoundary extends Component;
     // TODO: Add content;
  ,
     }
-}
     // Log error to console for debugging,;
     console.error('Error caught by ImprovedErrorBoundary: ', {;
     // TODO: Add content;
@@ -149,7 +148,6 @@ class ImprovedErrorBoundary extends Component;
     // TODO: Add content;
  ,
     }
-}
     // Reset error state if resetKeys changed,;
     if (this.props.resetKeys && prevProps.resetKeys) {;
     (key,;
@@ -201,7 +199,6 @@ class ImprovedErrorBoundary extends Component;
     // TODO: Add content;
  ,
     }
-}
     if (this.state.hasError) {;
     // TODO: Add content;
  , }

@@ -34,6 +34,7 @@ class DataRecordManager {
       options: RecordOptions = {}): DataRecord {
   const id = `${this.prefix
 }${Date.now()}_${Math.random().toString(36).substr(2 9)
+    
     }`
     const record: DataRecord = {
       id
@@ -132,6 +133,7 @@ class DataRecordManager {
       byCategory: {
 }
       byType: {
+    
     },
       byAge: {
         recent: 0,

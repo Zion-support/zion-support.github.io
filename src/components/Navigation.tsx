@@ -19,7 +19,6 @@ const Navigation: React.FC = () => {
     // TODO: Add content;
  ,
     }
-}
     const _handleScroll = (): JSX.Element => {;
     // TODO: Add content;
  , }

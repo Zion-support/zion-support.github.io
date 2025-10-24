@@ -117,7 +117,6 @@ export class ErrorHandler {;
     // TODO: Add content;
  ,
     }
-}
     if (!ErrorHandler.instance) {;
     // TODO: Add content;
  , }
@@ -135,7 +134,6 @@ export class ErrorHandler {;
     // TODO: Add content;
  ,
     }
-}
     const appError: AppError = {;
     // TODO: Add content;
  , }}
@@ -193,7 +191,6 @@ export class ErrorHandler {;
     // TODO: Add content;
  ,
     }
-}
     const appError: AppError =  ;{;
     // TODO: Add content;
  , }
@@ -238,7 +235,6 @@ export class ErrorHandler {;
     // TODO: Add content;
  ,
     }
-}
     const appError: AppError =  ;{;
     // TODO: Add content;
  , }
@@ -271,7 +267,6 @@ export class ErrorHandler {;
     // TODO: Add content;
  ,
     }
-}
     return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
   // Determine error type,;
@@ -282,7 +277,6 @@ export class ErrorHandler {;
   // TODO: Add content;
  ,
     }
-}
       return ErrorType.NETWORK;
     }
     if (message.includes('validation') || message.includes('invalid')) {;
@@ -335,7 +329,6 @@ export class ErrorHandler {;
     // TODO: Add content;
  ,
     }
-}
     const message = error.message.toLowerCase();
     if (message.includes('critical') || message.includes('fatal')) {;
     // TODO: Add content;
@@ -366,7 +359,6 @@ export class ErrorHandler {;
     // TODO: Add content;
  ,
     }
-}
     if (!status) return ErrorSeverity.MEDIUM;
     if (status >= 500) return ErrorSeverity.HIGH;
     if (status >= 400) return ErrorSeverity.MEDIUM;
@@ -542,7 +534,6 @@ export class ErrorHandler {;
     // TODO: Add content;
  ,
     }
-}
         if (notification.parentElement) {;
     // TODO: Add content;
  , }
@@ -559,7 +550,6 @@ export class ErrorHandler {;
     // TODO: Add content;
  ,
     }
-}
     switch (severi, t, y) {;
     // TODO: Add content;
  , }
@@ -581,7 +571,6 @@ export class ErrorHandler {;
     // TODO: Add content;
  ,
     }
-}
     return (;
           <div>Coming Soon</div>
   );
@@ -606,7 +595,6 @@ export class ErrorHandler {;
     // TODO: Add content;
  ,
     }
-}
       this.retryError(retryIt, e, m);
     }, this.config.retryDelay * retryItem.retryCount);
   }
@@ -696,7 +684,6 @@ private async retryError(retryItem: {// error: AppError; retryCount: numbe,
     // TODO: Add content;
  ,
     }
-}
     const error = this.errors.find(e => e.id === errorId);
     if (err, o, r) {;
     // TODO: Add content;
@@ -714,7 +701,6 @@ private async retryError(retryItem: {// error: AppError; retryCount: numbe,
     // TODO: Add content;
  ,
     }
-}
     this.errors = this.errors.filter(error => !error.resolved);
   }
   // Clear all errors,;
@@ -723,7 +709,6 @@ private async retryError(retryItem: {// error: AppError; retryCount: numbe,
     // TODO: Add content;
  ,
     }
-}
     this.errors = [];
     this.retryQueue = [];
   }
@@ -740,7 +725,6 @@ private async retryError(retryItem: {// error: AppError; retryCount: numbe,
     // TODO: Add content;
  ,
     }
-}
         acc[error.type] = (acc[error.type] || 0) + 1;
         return acc;
       },;
@@ -753,7 +737,6 @@ private async retryError(retryItem: {// error: AppError; retryCount: numbe,
     // TODO: Add content;
  ,
     }
-}
         acc[error.severity] = (acc[error.severity] || 0) + 1;
         return acc;
       },;
@@ -782,7 +765,6 @@ private async retryError(retryItem: {// error: AppError; retryCount: numbe,
     // TODO: Add content;
  ,
     }
-}
     if (typeof window !== 'undefined') {;
     // TODO: Add content;
  , }
@@ -908,7 +890,6 @@ export const useErrorHandler = (): JSX.Element => {;
     // TODO: Add content;
  ,
     }
-}
       return errorHandler.handleError(error, undefined, context);
     },;
 //     [errorHandl, e, r];
@@ -921,7 +902,6 @@ export const useErrorHandler = (): JSX.Element => {;
     // TODO: Add content;
  ,
     }
-}
       return errorHandler.handleNetworkError(error, url, status);
     },;
 //     [errorHandl, e, r];
@@ -934,7 +914,6 @@ export const useErrorHandler = (): JSX.Element => {;
     // TODO: Add content;
  ,
     }
-}
       return errorHandler.handleValidationError(field, message, value);
     },;
 //     [errorHandl, e, r];

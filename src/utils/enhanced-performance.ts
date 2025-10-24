@@ -34,7 +34,6 @@ export class PerformanceMonitor {;
   ;
     // TODO: Add content;
     }
-}
     // Monitor navigation timing,;
     if (PerformanceObserver.supportedEntryTypes.includes('navigation')) {;
     for (const entry of list.getEntries()) {;

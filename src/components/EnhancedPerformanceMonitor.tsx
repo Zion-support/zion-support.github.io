@@ -36,7 +36,6 @@ const EnhancedPerformanceMonitor: React.FC;
     // TODO: Add content;
  ,
     }
-}
   const [metrics, setMetrics] = useState,;
           <PerformanceMetrics>({;
     // TODO: Add content;
@@ -69,7 +68,6 @@ const EnhancedPerformanceMonitor: React.FC;
     // TODO: Add content;
  ,
     }
-}
       for (const entry of list.getEntries()) {;
     // TODO: Add content;
  , }
@@ -93,7 +91,6 @@ const EnhancedPerformanceMonitor: React.FC;
     // TODO: Add content;
  ,
     }
-}
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
       setMetrics(prev => ({ ...prev lcp: lastEntry.startTime, }));
@@ -107,7 +104,6 @@ const EnhancedPerformanceMonitor: React.FC;
     // TODO: Add content;
  ,
     }
-}
       for (const entry of list.getEntries()) {;
     // TODO: Add content;
  , }
@@ -125,7 +121,6 @@ const EnhancedPerformanceMonitor: React.FC;
     // TODO: Add content;
  ,
     }
-}
       for (const entry of list.getEntries()) {;
     // TODO: Add content;
  , }
@@ -159,7 +154,6 @@ export const fmpObserver = new PerformanceObserver((li, s, t) => {
     // TODO: Add content;
  ,
     }
-}
       for (const entry of list.getEntries()) {;
     // TODO: Add content;
  , }
@@ -183,7 +177,6 @@ export const tbtObserver = new PerformanceObserver((li, s, t) => {
     // TODO: Add content;
  ,
     }
-}
       let totalBlockingTime = 0;
       for (const entry of list.getEntries()) {;
     // TODO: Add content;
@@ -209,7 +202,6 @@ export const siObserver = new PerformanceObserver((li, s, t) => {
     // TODO: Add content;
  ,
     }
-}
       for (const entry of list.getEntries()) {;
     // TODO: Add content;
  , }
@@ -232,7 +224,6 @@ export const siObserver = new PerformanceObserver((li, s, t) => {
     // TODO: Add content;
  ,
     }
-}
       fcpObserver.disconnect();
       lcpObserver.disconnect();
       fidObserver.disconnect();
@@ -248,7 +239,6 @@ export const analyzeResourceTiming = useCallback(() => {
     // TODO: Add content;
  ,
     }
-}
     if (typeof window === 'undefined' || !('performance' in window)) return;
     const resources = performance.getEntriesByType('resource');
     const resourceMetrics={;
@@ -265,7 +255,6 @@ export const analyzeResourceTiming = useCallback(() => {
     // TODO: Add content;
  ,
     }
-}
       resourceMetrics.totalSize += resource.transferSize || 0;
       if (resource.duration > 1000) resourceMetrics.slowResources++;
       if (resource.transferSize === 0) resourceMetrics.cachedResources++;
@@ -278,7 +267,6 @@ export const getMemoryUsage = useCallback(() => {
     // TODO: Add content;
  ,
     }
-}
     if (typeof window === 'undefined' || !('memory' in performance)) return null;
     const memory = (performance, as, any).memory,;
     return {;
@@ -297,7 +285,6 @@ export const getNetworkInfo = useCallback(() => {
     // TODO: Add content;
  ,
     }
-}
     if (typeof window === 'undefined' || !('connection' in navigator)) return null;
     const connection = (navigator, as, any).connection,;
     return {;
@@ -317,7 +304,6 @@ export const calculatePerformanceScore = useCallback((metrics: PerformanceMetric
     // TODO: Add content;
  ,
     }
-}
     let score = 100;
     // FCP scoring (0-100);
     if (metrics.fcp !== null) {;
@@ -365,7 +351,6 @@ export const reportMetrics = useCallback(() => {
     // TODO: Add content;
  ,
     }
-}
     if (!enableReporting) return;
     const performanceScore = calculatePerformanceScore(metri, c, s);
     const resourceMetrics = analyzeResourceTiming();
@@ -420,7 +405,6 @@ export const reportMetrics = useCallback(() => {
     // TODO: Add content;
  ,
     }
-}
     const cleanup = measureWebVitals();
 // Report metrics periodically,;
     const interval = setInterval(reportMetrics, reportInterval);
@@ -435,7 +419,6 @@ export const reportMetrics = useCallback(() => {
     // TODO: Add content;
  ,
     }
-}
       cleanup?.();
       clearInterval(interv, a, l);
       window.removeEventListener('beforeunload', handleBeforeUnload);
@@ -447,13 +430,11 @@ export const reportMetrics = useCallback(() => {
     // TODO: Add content;
  ,
     }
-}
     const handleKeyPress = (e: KeyboardEvent) => {
   ;
     // TODO: Add content;
  ,
     }
-}
       if (e.ctrlKey && e.shiftKey && e.key === 'P') {;
     // TODO: Add content;
  , }

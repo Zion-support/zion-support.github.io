@@ -17,7 +17,6 @@ const ServiceCard: React.FC;
     // TODO: Add content;
  ,
     }
-}
   return (;
           <div>Coming Soon</div>
   );

@@ -47,14 +47,12 @@ class EnhancedErrorTracker {;
   ;
     // TODO: Add content;
     }
-}
     return `${Date.now()}-${Math.random().toString(36).substring(7)}`;
   }
   private setupGlobalErrorHandler(): void {
   ;
     // TODO: Add content;
     }
-}
     if (typeof window !== 'undefined') {;
     // TODO: Add content;
   }
@@ -92,11 +90,11 @@ class EnhancedErrorTracker {;
   }
   public trackError(error: Error,
       _context: ErrorContext = {
+    
     }): void {
   ;
     // TODO: Add content;
     }
-}
     if (typeof window === 'undefined') return;
     const trackedError: TrackedError = {;
     // TODO: Add content;
@@ -140,7 +138,6 @@ class EnhancedErrorTracker {;
   ;
     // TODO: Add content;
     }
-}
     if ();
       typeof window !== 'undefined' &&;
 //       ();
@@ -191,7 +188,6 @@ class EnhancedErrorTracker {;
   ;
     // TODO: Add content;
     }
-}
     this.errors = [];
   }
   public getErrorStats(): {;

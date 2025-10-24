@@ -15,6 +15,7 @@ export interface ServiceWorkerConfig {;
  */;
 export async function registerServiceWorker();
   _config: ServiceWorkerConfig = {
+    
     }
 ): Promise;
           <ServiceWorkerRegistration | undefined> {;
@@ -53,7 +54,6 @@ export async function registerServiceWorker();
   ;
     // TODO: Add content;
     }
-}
       if (document.readyState === 'complete') {;
   }
   }
@@ -77,14 +77,12 @@ export async function registerServiceWorker();
   ;
     // TODO: Add content;
     }
-}
       const installingWorker = registration.installing,;
       if (!installingWorker) return;
       installingWorker.addEventListener('statechange', () => {
   ;
     // TODO: Add content;
     }
-}
         if (installingWorker.state === 'installed') {;
     // TODO: Add content;
   }
@@ -206,7 +204,6 @@ export function skipWaiting(): void {
   ;
     // TODO: Add content;
     }
-}
   if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {;
     // TODO: Add content;
   }
@@ -223,7 +220,6 @@ export function clearCaches(): void {
   ;
     // TODO: Add content;
     }
-}
   if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {;
     // TODO: Add content;
   }

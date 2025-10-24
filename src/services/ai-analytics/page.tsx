@@ -29,7 +29,6 @@ const AIAnalyticsPage: React.FC = () => {
   // TODO: Add content;
  ,
     }
-}
   icon: Brai,;
       title: 'Predictive Analytics,',;
       description: 'value',;

@@ -25,7 +25,6 @@ export const toggleItem = (index: number) => {
     );
     }
   }
-  }
   const faqData = [;
   // TODO: Add item,s,;
 ];
@@ -164,7 +163,6 @@ type='text';
   // TODO: Add content;
  ,
     }
-}
                     const globalIndex = categoryIndex * 100 + itemIndex,;
                     const isOpen = openItems.includes(globalInd, e, x);
           <div key={ itemInd, e, x }className='bg-slate-800/50 rounded-lg border border-gray-700/50'></div>

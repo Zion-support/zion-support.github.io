@@ -19,7 +19,6 @@ const ARVRSolutionsPage: React.FC = () => {
   // TODO: Add content;
  ,
     }
-}
   icon: Ey,;
       title: 'AR Development,',;
       description: 'value',;

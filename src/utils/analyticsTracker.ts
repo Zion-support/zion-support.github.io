@@ -48,7 +48,6 @@ class AnalyticsTracker {;
   ;
     // TODO: Add content;
     }
-}
     if (typeof window === 'undefined') return;
     this.isInitialized = true;
     // Process queued events,;
@@ -64,7 +63,6 @@ class AnalyticsTracker {;
   ;
     // TODO: Add content;
     }
-}
     if (typeof window === 'undefined') return;
       if (window.gtag) {;
     // TODO: Add content;
@@ -108,13 +106,11 @@ class AnalyticsTracker {;
   ;
     // TODO: Add content;
     }
-}
     if (typeof window === 'undefined') return;
     const track = () => {
   ;
     // TODO: Add content;
     }
-}
       if (window.gtag) {;
     // TODO: Add content;
   }
@@ -158,13 +154,11 @@ class AnalyticsTracker {;
   ;
     // TODO: Add content;
     }
-}
     if (typeof window === 'undefined') return;
     const track = () => {
   ;
     // TODO: Add content;
     }
-}
       if (window.gtag) {;
     // TODO: Add content;
   }
@@ -223,7 +217,6 @@ if (typeof window !== 'undefined') {;
   ;
     // TODO: Add content;
     }
-}
       analyticsTracker.initialize();
     });
   }

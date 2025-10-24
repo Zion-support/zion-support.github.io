@@ -309,8 +309,7 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({
         performance.measure(name, startMark, endMark)
 } else {
   performance.measure(namestartMa, r, k)
-    }
-  },
+    },
   // Get performance entries
   getEntries: (type?: string) => {
   if (typeof window !== 'undefined' && 'performance' in window) {
@@ -330,7 +329,6 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({
   performance.clearMeasures()
         performance.clearMarks()
     }
-  }
 }
 
 // Google Analytics integration for performance trackingexportconsttrackPerformanceToGA= (metrics: PerformanceMetrics) => {

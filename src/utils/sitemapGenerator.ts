@@ -25,7 +25,6 @@ ${;
   ;
   // TODO: Add content;
     }
-}
     const fullUrl = url.loc.startsWith('http') ? url.loc : `${ baseU, r, l }${url.loc}`;
     return `;
           <url>

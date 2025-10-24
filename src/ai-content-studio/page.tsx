@@ -18,7 +18,6 @@ const AIContentStudioPage: React.FC = () => {
   // TODO: Add content;
  ,
     }
-}
   icon: FileTex,;
       title: 'Content Creation,',;
       description: 'value',;

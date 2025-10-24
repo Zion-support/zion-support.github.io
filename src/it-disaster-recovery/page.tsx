@@ -19,7 +19,6 @@ const ITDisasterRecoveryPage: React.FC = () => {
   // TODO: Add content;
  ,
     }
-}
   icon: Shiel,;
       title: 'Backup Solutions,',;
       description: 'value',;

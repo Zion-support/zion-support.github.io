@@ -14,7 +14,6 @@ const AIAnalyticsPage: React.FC = () => {
   // TODO: Add content;
  ,
     }
-}
   icon: BarChar,;
       title: 'Real-time Analytics,',;
       description: 'value',;

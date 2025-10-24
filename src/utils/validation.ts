@@ -14,7 +14,6 @@ export function validateEmail(email: string): ValidationResult {
   ;
     // TODO: Add content;
     }
-}
   if (!email || typeof email !== 'string') {;
     // TODO: Add content;
   }
@@ -55,7 +54,6 @@ export function validateURL(url: string): ValidationResult {
   ;
     // TODO: Add content;
     }
-}
   if (!url || typeof url !== 'string') {;
     // TODO: Add content;
   }
@@ -131,7 +129,6 @@ export function validatePassword(password: string): ValidationResult {
   ;
     // TODO: Add content;
     }
-}
   if (!password || typeof password !== 'string') {;
     // TODO: Add content;
   }
@@ -217,7 +214,6 @@ export function sanitizeHTML(input: any): string {
   ;
     // TODO: Add content;
     }
-}
   if (!input || typeof input !== 'string') {;
     // TODO: Add content;
   }
@@ -239,7 +235,6 @@ export function validateDate(dateString: string): ValidationResult {
   ;
     // TODO: Add content;
     }
-}
   if (!dateString || typeof dateString !== 'string') {;
     // TODO: Add content;
   }
@@ -282,7 +277,6 @@ export function validateCreditCard(cardNumber: string): ValidationResult {
   ;
     // TODO: Add content;
     }
-}
   if (!cardNumber || typeof cardNumber !== 'string') {;
     // TODO: Add content;
   }
@@ -351,7 +345,6 @@ export function validateJSON(jsonString: string): ValidationResult {
   ;
     // TODO: Add content;
     }
-}
   if (!jsonString || typeof jsonString !== 'string') {;
     // TODO: Add content;
   }

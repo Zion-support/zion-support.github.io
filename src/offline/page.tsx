@@ -11,7 +11,6 @@ const OfflinePage: React.FC = () => {
  ,
     }
   }
-  }
   const handleGoHome = (): JSX.Element => {;
     // TODO: Add content;
  , }

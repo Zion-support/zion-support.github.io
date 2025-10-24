@@ -9,6 +9,7 @@ interface PerformanceOptimizationOptions {
 }
 
 export const usePerformanceOptimization = (options: PerformanceOptimizationOptions = {
+    
     }) => {
   const {
     enableLazyLoading = true
@@ -40,8 +41,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
               img.removeAttribute('data-src');
               img.classList.add('loaded');
               observerRef.current?.unobserve(i, m, g);
-    }
-        });
+    });
       },
       {
         rootMargin: '50px 0px',
@@ -149,8 +149,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
         for (const entry of list.getEntries()) {
           if (entry.duration > 50) {
             // Long task detected - consider optimization
-    }
-      });
+    });
       
       try {
         observer.observe({ entryTypes: ['longtask'] });

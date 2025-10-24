@@ -19,7 +19,6 @@ const AIVoiceAssistantPage: React.FC = () => {
   // TODO: Add content;
  ,
     }
-}
   icon: Mi,;
       title: 'Voice Recognition,',;
       description: 'value',;

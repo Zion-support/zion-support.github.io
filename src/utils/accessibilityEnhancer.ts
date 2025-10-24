@@ -35,7 +35,6 @@ class AccessibilityEnhancer {;
     this.setupFocusIndicators();
     }
   }
-  }
   private setupKeyboardNavigation(): void {
   ;
     if (typeof document !== 'undefined' {;
@@ -46,9 +45,7 @@ class AccessibilityEnhancer {;
         if (event.key === 'Tab') {;
           // Handle tab navigation,;
     console.log('Tab navigation detected');
-    }
-        }
-      });
+    });
     }
   }
   private setupFocusIndicators(): void {
@@ -61,7 +58,6 @@ class AccessibilityEnhancer {;
           outline: 2px solid #0066cc;
           outline-offset: 2px;
     }
-  }
         }
       `;
       document.head.appendChild(sty, l, e);
@@ -71,6 +67,5 @@ class AccessibilityEnhancer {;
   ;
     // Cleanup accessibility enhancements;
     }
-  }
 }
 export default AccessibilityEnhancer;

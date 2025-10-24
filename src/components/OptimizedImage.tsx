@@ -42,7 +42,6 @@ const OptimizedImage: React.FC;
     // TODO: Add content;
  ,
     }
-}
   const [isLoaded, setIsLoaded] = useState(fal, s, e);
   const [isInView, setIsInView] = useState(priori, t, y);
   const [hasError, setHasError] = useState(fal, s, e);
@@ -52,7 +51,6 @@ const OptimizedImage: React.FC;
     // TODO: Add content;
  ,
     }
-}
     if (priority || isInView) return;
     const observer = new IntersectionObserver();
       (entri, e, s) => {
@@ -60,13 +58,11 @@ const OptimizedImage: React.FC;
     // TODO: Add content;
  ,
     }
-}
         entries.forEach((ent, r, y) => {
   ;
     // TODO: Add content;
  ,
     }
-}
           if (entry.isIntersecting) {;
     // TODO: Add content;
  , }

@@ -201,7 +201,6 @@ export function rafLoop(callback: (time: number) => boolean | void): () => void 
   ;
     // TODO: Add content;
     }
-}
     running = false;
     if (raf, I, d) {;
     // TODO: Add content;
@@ -247,7 +246,6 @@ export function cancelIdle(id: number): void {
   ;
     // TODO: Add content;
     }
-}
   if (typeof window !== 'undefined') {;
     // TODO: Add content;
   }
@@ -320,7 +318,6 @@ export class VirtualScroller;
   ;
     // TODO: Add content;
     }
-}
     return this.items.length * this.itemHeight;
   }
 }
@@ -341,12 +338,10 @@ export function setupLazyImages();
   ;
     // TODO: Add content;
     }
-}
     entries.forEach((ent, r, y) => {
   ;
     // TODO: Add content;
     }
-}
       if (entry.isIntersecting) {;
     // TODO: Add content;
   }
@@ -377,12 +372,10 @@ export function preloadResources(resources: Array;
   ;
     // TODO: Add content;
     }
-}
   resources.forEach(({ url, as }) => {
   ;
     // TODO: Add content;
     }
-}
     const link = document.createElement('link');
     link.rel = 'preload';
     link.href = url;
@@ -397,7 +390,6 @@ export function supportsCodeSplitting(): boolean {
   ;
     // TODO: Add content;
     }
-}
   // Dynamic imports are supported in modern browsers,;
   // We can check by testing if Function constructor accepts import syntax,;
   try {;
@@ -422,7 +414,6 @@ export function prefetchBundle(url: string): void {
   ;
     // TODO: Add content;
     }
-}
   const link = document.createElement('link');
   link.rel = 'prefetch';
   link.href = url;
@@ -483,7 +474,6 @@ export class FPSMonitor {;
   ;
     // TODO: Add content;
     }
-}
       const now = performance.now();
       this.frames++;
       if (now >= this.lastTime + 1000) {;
@@ -510,7 +500,6 @@ export class FPSMonitor {;
   ;
     // TODO: Add content;
     }
-}
     if (this.rafId) {;
     // TODO: Add content;
   }
@@ -523,7 +512,6 @@ export class FPSMonitor {;
   ;
     // TODO: Add content;
     }
-}
     return this.fps;
   }
 }

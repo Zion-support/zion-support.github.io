@@ -36,6 +36,7 @@ class Logger {
   getLogLevel(): LogLevel {
   return this.logLevel
 
+    
     }
 
   debug(message: string

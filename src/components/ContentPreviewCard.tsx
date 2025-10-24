@@ -45,7 +45,6 @@ const ContentPreviewCard: React.FC;
   // TODO: Add content;
  ,
     }
-}
       return (num / 1000).toFixed(1) + 'k';
     }
   }

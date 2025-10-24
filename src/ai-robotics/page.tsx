@@ -19,7 +19,6 @@ const AIRoboticsPage: React.FC = () => {
   // TODO: Add content;
  ,
     }
-}
   icon: Bo,;
       title: 'Intelligent Robotics,',;
       description: 'value',;

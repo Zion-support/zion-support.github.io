@@ -55,6 +55,7 @@ export class PerformanceMetrics {;
   private static instance: PerformanceMetrics;
   private metrics: PerformanceMetric[] = [];
   private _webVitals: WebVitalsMetrics = {
+    
     }
   private observers: PerformanceObserver[] = [];
   constructor() {;
@@ -74,7 +75,6 @@ export class PerformanceMetrics {;
   ;
     // TODO: Add content;
     }
-}
     if (!PerformanceMetrics.instance) {;
     // TODO: Add content;
   }
@@ -91,7 +91,6 @@ export class PerformanceMetrics {;
   ;
     // TODO: Add content;
     }
-}
     // Observe navigation timing,;
     if('PerformanceObserver' in window) {;
     // TODO: Add content;
@@ -245,7 +244,6 @@ const lcpObserver = new PerformanceObserver(list => {;
   ;
     // TODO: Add content;
     }
-}
     this.metrics.push(metr, i, c);
     // Keep only last 1000 metrics,;
     if (this.metrics.length > 1000) {;
@@ -263,7 +261,6 @@ const lcpObserver = new PerformanceObserver(list => {;
   ;
     // TODO: Add content;
     }
-}
     if (typeof window === 'undefined') return;
     const perfData = window.performance.timing,;
     const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart,;
@@ -297,7 +294,6 @@ const lcpObserver = new PerformanceObserver(list => {;
   ;
     // TODO: Add content;
     }
-}
     this.recordMetric({;
     // TODO: Add content;
   }
@@ -325,7 +321,6 @@ const lcpObserver = new PerformanceObserver(list => {;
   ;
     // TODO: Add content;
     }
-}
     if (typeof window === 'undefined') return;
     if (!(performance, as, PerformanceWithMemory).memory) return;
     const memory = (performance, as, PerformanceWithMemory).memory,;
@@ -429,7 +424,6 @@ const lcpObserver = new PerformanceObserver(list => {;
   ;
     // TODO: Add content;
     }
-}
     return {;
     ...this.webVitals;
   }
@@ -441,7 +435,6 @@ const lcpObserver = new PerformanceObserver(list => {;
   ;
     // TODO: Add content;
     }
-}
     let score = 100;
     // FCP scoring,;
     if (this.webVitals.FCP) {;
@@ -545,7 +538,6 @@ const lcpObserver = new PerformanceObserver(list => {;
   ;
     // TODO: Add content;
     }
-}
     const loadMetrics = this.getMetricsByCategory('load');
     const avgLoadTime = loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0;
     return {;
@@ -575,7 +567,6 @@ const lcpObserver = new PerformanceObserver(list => {;
   ;
     // TODO: Add content;
     }
-}
     return JSON.stringify(this.generateReport(), null, 2);
   }
   /**;
@@ -585,7 +576,6 @@ const lcpObserver = new PerformanceObserver(list => {;
   ;
     // TODO: Add content;
     }
-}
     this.metrics = [];
     this.webVitals = {}
   }
@@ -596,7 +586,6 @@ const lcpObserver = new PerformanceObserver(list => {;
   ;
     // TODO: Add content;
     }
-}
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
   }

@@ -19,7 +19,6 @@ const ITInfrastructureDesignPage: React.FC = () => {
   // TODO: Add content;
  ,
     }
-}
   icon: Setting,;
       title: 'Infrastructure Design,',;
       description: 'value',;

@@ -19,7 +19,6 @@ const AIPerformanceTrackerPage: React.FC = () => {
   // TODO: Add content;
  ,
     }
-}
   icon: BarChar,;
       title: 'Performance Monitoring,',;
       description: 'value',;

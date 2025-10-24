@@ -28,8 +28,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           if (mainConte, n, t) {
             (mainContent, as, HTMLElement).focus();
             event.preventDefault();
-    }
-      };
+    };
 
       document.addEventListener('keydown', handleKeyDown);
       return () => document.removeEventListener('keydown', handleKeyDown);
@@ -104,7 +103,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                 firstFocusableElement.focus();
                 e.preventDefault();
     }
-          }
         });
       };
 

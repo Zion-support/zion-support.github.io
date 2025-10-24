@@ -15,7 +15,6 @@ export const generateSitemap = (pages: Array,;
   ;
     // TODO: Add content;
     }
-}
   const baseUrl = 'https://ziontechgroup.com';
   let sitemap = ';
           <?xml version='1.0' encoding='UTF-8'?>\n';
@@ -40,6 +39,5 @@ export const generateStaticSitemap = () => {
   ;
     // TODO: Add content;
     }
-}
   return generateSitemap(getAllPages());
 }

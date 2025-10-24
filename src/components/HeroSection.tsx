@@ -14,7 +14,6 @@ const HeroSection: React.FC;
     // TODO: Add content;
  ,
     }
-}
   return (;
           <div>Coming Soon</div>
   );

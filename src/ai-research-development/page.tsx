@@ -19,7 +19,6 @@ const AIResearchDevelopmentPage: React.FC = () => {
   // TODO: Add content;
  ,
     }
-}
   icon: Brai,;
       title: 'Custom AI Research,',;
       description: 'value',;

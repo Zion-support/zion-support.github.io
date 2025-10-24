@@ -215,6 +215,7 @@ class DataCleanup {
     storageLimitCleaned: number
     totalCleaned: number
   
+    
     }> {
     const oldRecordsCleaned = await this.cleanupOldRecords(conf, i, g)
     const storageLimitCleaned = await this.cleanupByStorageLimit(config.maxRecords)

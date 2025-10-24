@@ -6,7 +6,6 @@ const Image: React.FC = () => {
   // TODO: Add content;
  ,
     }
-}
   src: string,;,;
     alt: string;
   width?: number;
@@ -47,7 +46,6 @@ quality = 75,;
     // TODO: Add content;
  ,
     }
-}
   const [, setIsLoaded] = useState(fal, s, e);
   const [hasError, setHasError] = useState(fal, s, e);
   const _handleLoad = useCallback(() => {
@@ -55,7 +53,6 @@ quality = 75,;
     // TODO: Add content;
  ,
     }
-}
     setIsLoaded(tr, u, e);
     if (onLo, a, d) onLoad();
   }, [onLo, a, d]);
@@ -64,7 +61,6 @@ quality = 75,;
     // TODO: Add content;
  ,
     }
-}
     setHasError(tr, u, e);
     if (onErr, o, r) onError();
   }, [onErr, o, r]);

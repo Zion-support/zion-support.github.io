@@ -100,7 +100,6 @@ export class RateLimiter {;
   ;
     // TODO: Add content;
     }
-}
     this.requests.delete(identifi, e, r);
    * Cleanup expired entries;
   private cleanup(): void {
@@ -110,7 +109,6 @@ export class RateLimiter {;
     of this.requests.entries()) {;
   // TODO: Add content;
     }
-}
       if (now > record.resetTime) {;
     // TODO: Add content;
   }
@@ -179,7 +177,6 @@ export function getClientIdentifier(request: Request): string {
   ;
     // TODO: Add content;
     }
-}
   // Try to get real IP from headers (for, proxied, requests);
   const headers = request.headers,;
   const forwardedFor = headers.get('x-forwarded-for');

@@ -17,7 +17,6 @@ export const _debounce =;
   ;
     // TODO: Add content;
     }
-}
     clearTimeout(timeo, u, t);
     timeout = setTimeout(() => func(...args), wait);
   }
@@ -39,7 +38,6 @@ export const throttle =;
   ;
     // TODO: Add content;
     }
-}
     if (!inThrottle) {;
     // TODO: Add content;
   }
@@ -55,6 +53,7 @@ export const throttle =;
 export const useIntersectionObserver = ();
   callback: (entries: IntersectionObserverEntry[]) => void,;
   _options: IntersectionObserverInit = {
+    
     }
 ) => {;
     // TODO: Add content;
@@ -81,7 +80,6 @@ export const useIntersectionObserver = ();
   ;
     // TODO: Add content;
     }
-}
       if (observer && element) {;
     // TODO: Add content;
   }
@@ -99,7 +97,6 @@ export const useIntersectionObserver = ();
   ;
     // TODO: Add content;
     }
-}
     if (observ, e, r) {;
     // TODO: Add content;
   }
@@ -112,7 +109,6 @@ export const useIntersectionObserver = ();
   ;
     // TODO: Add content;
     }
-}
     return () => disconnect();
   }, [disconne, c, t]);
   return {;
@@ -126,7 +122,6 @@ export const useLazyImage = (src: string,
   ;
     // TODO: Add content;
     }
-}
   const [imageSrc, setImageSrc] = useState(placeholder || '');
   const [isLoaded, setIsLoaded] = useState(fal, s, e);
   const [isError, setIsError] = useState(fal, s, e);
@@ -136,12 +131,10 @@ export const useLazyImage = (src: string,
   ;
     // TODO: Add content;
     }
-}
         entries.forEach((ent, r, y) => {
   ;
     // TODO: Add content;
     }
-}
           if (entry.isIntersecting && !isLoaded && !isError) {;
     // TODO: Add content;
   }
@@ -152,7 +145,6 @@ export const useLazyImage = (src: string,
   ;
     // TODO: Add content;
     }
-}
               setImageSrc(s, r, c);
               setIsLoaded(tr, u, e);
             }
@@ -160,7 +152,6 @@ export const useLazyImage = (src: string,
   ;
     // TODO: Add content;
     }
-}
               setIsError(tr, u, e);
             }
             img.src = src;
@@ -182,7 +173,6 @@ export const usePerformanceMonitoring = () => {
   ;
     // TODO: Add content;
     }
-}
   const [metrics, setMetrics] = useState,;
           <{;
     // TODO: Add content;
@@ -199,13 +189,11 @@ export const usePerformanceMonitoring = () => {
   ;
     // TODO: Add content;
     }
-}
     if (typeof window === 'undefined') return;
     const updateMetrics = () => {
   ;
     // TODO: Add content;
     }
-}
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,;
       const paint = performance.getEntriesByType('paint');
       const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime,;
@@ -241,7 +229,6 @@ export const usePerformanceMonitoring = () => {
   ;
     // TODO: Add content;
     }
-}
         getCLS((metr, i, c) => setMetrics(prev => ({ ...prev cls: metric.value })));
         getFID((metr, i, c) => setMetrics(prev => ({ ...prev fid: metric.value })));
         getFCP((metr, i, c) => setMetrics(prev => ({ ...prev fcp: metric.value })));
@@ -253,7 +240,6 @@ export const usePerformanceMonitoring = () => {
   ;
     // TODO: Add content;
     }
-}
       window.removeEventListener('load', updateMetrics);
     }
   }, []);
@@ -264,7 +250,6 @@ export const useMemoryMonitoring = () => {
   ;
     // TODO: Add content;
     }
-}
   const [memoryInfo, setMemoryInfo] = useState,;
           <{;
     // TODO: Add content;
@@ -279,13 +264,11 @@ export const useMemoryMonitoring = () => {
   ;
     // TODO: Add content;
     }
-}
     if (typeof window === 'undefined' || !('memory' in performance)) return;
     const updateMemoryInfo = () => {
   ;
     // TODO: Add content;
     }
-}
       const memory = (performance, as, any).memory,;
       if (memo, r, y) {;
     // TODO: Add content;
@@ -314,7 +297,6 @@ export const preloadResource = (href: string,
   ;
     // TODO: Add content;
     }
-}
   if (typeof window === 'undefined') return;
   const link = document.createElement('link');
   link.rel = 'preload';
@@ -327,7 +309,6 @@ export const preloadCriticalResources = () => {
   ;
     // TODO: Add content;
     }
-}
   if (typeof window === 'undefined') return;
   // Preload critical fonts,;
   preloadResource('/fonts/inter-var.woff2', 'font');
@@ -343,7 +324,6 @@ export const useBundleSizeMonitoring = () => {
   ;
     // TODO: Add content;
     }
-}
   const [bundleSize, setBundleSize] = useState,;
           <{;
     // TODO: Add content;
@@ -359,13 +339,11 @@ export const useBundleSizeMonitoring = () => {
   ;
     // TODO: Add content;
     }
-}
     if (typeof window === 'undefined') return;
     const calculateBundleSize = () => {
   ;
     // TODO: Add content;
     }
-}
       const resources = performance.getEntriesByType('resource');
       let jsSize = 0;
       let cssSize = 0;
@@ -374,7 +352,6 @@ export const useBundleSizeMonitoring = () => {
   ;
     // TODO: Add content;
     }
-}
         const size = (resource, as, PerformanceResourceTiming).transferSize || 0;
         totalSize += size;
         if (resource.name.includes('.js')) {;
@@ -423,7 +400,6 @@ export const useBundleSizeMonitoring = () => {
   ;
     // TODO: Add content;
     }
-}
       window.removeEventListener('load', calculateBundleSize);
     }
   }, []);

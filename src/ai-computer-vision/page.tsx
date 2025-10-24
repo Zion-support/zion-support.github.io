@@ -17,7 +17,6 @@ const AIComputerVisionPage: React.FC = () => {
   // TODO: Add content;
  ,
     }
-}
   icon: Ey,;
       title: 'Object Detection,',;
       description: 'value',;

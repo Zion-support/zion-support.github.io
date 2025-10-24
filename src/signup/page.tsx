@@ -68,7 +68,6 @@ export const handleInputChange = (e: React.ChangeEven,t,;
     // TODO: Add content;
  ,
     }
-}
     e.preventDefault();
     if (formData.password !== formData.confirmPassword) {;
     // TODO: Add content;

@@ -35,7 +35,6 @@ class PerformanceMonitor {;
   ;
     // TODO: Add content;
     }
-}
     if (this.isInitialized || typeof window === 'undefined') return;
     this.isInitialized = true;
     this.setupWebVitals();
@@ -49,7 +48,6 @@ class PerformanceMonitor {;
   ;
     // TODO: Add content;
     }
-}
     try {;
     // TODO: Add content;
   }
@@ -66,12 +64,10 @@ class PerformanceMonitor {;
   ;
     // TODO: Add content;
     }
-}
           entries.forEach((ent, r, y) => {
   ;
     // TODO: Add content;
     }
-}
             if (entry.name === 'first-contentful-paint') {;
     // TODO: Add content;
   }
@@ -116,7 +112,6 @@ class PerformanceMonitor {;
     entries.forEach((entry: PerformanceEntry) => {;
   // TODO: Add content;
     }
-}
             if (!(entry, as, any).hadRecentInput) {;
     // TODO: Add content;
   }
@@ -147,7 +142,6 @@ class PerformanceMonitor {;
   ;
     // TODO: Add content;
     }
-}
     try {;
     // TODO: Add content;
   }
@@ -157,7 +151,6 @@ class PerformanceMonitor {;
   ;
     // TODO: Add content;
     }
-}
         for (const entry of list.getEntries()) {;
     // TODO: Add content;
   }
@@ -189,7 +182,6 @@ class PerformanceMonitor {;
   ;
     // TODO: Add content;
     }
-}
     try {;
     // TODO: Add content;
   }
@@ -199,7 +191,6 @@ class PerformanceMonitor {;
   ;
     // TODO: Add content;
     }
-}
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
         this.metrics.lcp = lastEntry.startTime;
@@ -221,7 +212,6 @@ class PerformanceMonitor {;
   ;
     // TODO: Add content;
     }
-}
     try {;
     // TODO: Add content;
   }
@@ -231,7 +221,6 @@ class PerformanceMonitor {;
   ;
     // TODO: Add content;
     }
-}
         for (const entry of list.getEntries()) {;
     // TODO: Add content;
   }
@@ -257,7 +246,6 @@ class PerformanceMonitor {;
   ;
     // TODO: Add content;
     }
-}
     try {;
     // TODO: Add content;
   }
@@ -268,7 +256,6 @@ class PerformanceMonitor {;
   ;
     // TODO: Add content;
     }
-}
         for (const entry of list.getEntries()) {;
     // TODO: Add content;
   }
@@ -301,7 +288,6 @@ class PerformanceMonitor {;
   ;
     // TODO: Add content;
     }
-}
     // Time to First Byte,;
     if (performance.timing) {;
     // TODO: Add content;
@@ -334,7 +320,6 @@ class PerformanceMonitor {;
   ;
     // TODO: Add content;
     }
-}
     try {;
     // TODO: Add content;
   }
@@ -344,7 +329,6 @@ class PerformanceMonitor {;
   ;
     // TODO: Add content;
     }
-}
         for (const entry of list.getEntries()) {;
     // TODO: Add content;
   }
@@ -376,7 +360,6 @@ class PerformanceMonitor {;
   ;
     // TODO: Add content;
     }
-}
     const duration = entry.responseEnd - entry.startTime,;
     const size = entry.transferSize || 0;
     // Track slow resources,;
@@ -400,7 +383,6 @@ class PerformanceMonitor {;
   ;
     // TODO: Add content;
     }
-}
     this.metrics.customMetrics[na, m, e] = value;
     this.logMetric(name, value);
   }
@@ -409,7 +391,6 @@ class PerformanceMonitor {;
   ;
     // TODO: Add content;
     }
-}
     if (process.env.NODE_ENV === 'development') {;
     // TODO: Add content;
   }
@@ -438,7 +419,6 @@ class PerformanceMonitor {;
   ;
     // TODO: Add content;
     }
-}
     return {;
     ...this.metrics;
   }
@@ -447,7 +427,6 @@ class PerformanceMonitor {;
   ;
     // TODO: Add content;
     }
-}
     const scores = [];
     // FCP scoring (0-100);
     if (this.metrics.fcp) {;
@@ -502,7 +481,6 @@ class PerformanceMonitor {;
   ;
     // TODO: Add content;
     }
-}
     const score = this.getScore();
     const metrics = this.getMetrics();
     return `;

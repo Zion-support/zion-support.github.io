@@ -36,7 +36,6 @@ class GlobalErrorBoundary extends Component;
     // TODO: Add content;
  ,
     }
-}
     return {;
     hasError: tru,
       e,;
@@ -72,7 +71,6 @@ class GlobalErrorBoundary extends Component;
     // TODO: Add content;
  ,
     }
-}
     this.setState({ hasError: fals,
       e, error: undefine,
       d, errorInfo: undefined, });

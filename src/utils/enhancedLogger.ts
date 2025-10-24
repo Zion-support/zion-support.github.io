@@ -132,7 +132,6 @@ export class EnhancedLogger {;
   ;
     // TODO: Add content;
     }
-}
     if (!EnhancedLogger.instance) {;
     // TODO: Add content;
   }
@@ -158,7 +157,6 @@ export class EnhancedLogger {;
   ;
     // TODO: Add content;
     }
-}
     EnhancedLogger.instance = undefined as unknown as EnhancedLogger;
   }
   /**;
@@ -178,7 +176,6 @@ export class EnhancedLogger {;
   ;
     // TODO: Add content;
     }
-}
     this.log(LogLevel.DEBUG, message, data, source);
   }
   /**;
@@ -198,7 +195,6 @@ export class EnhancedLogger {;
   ;
     // TODO: Add content;
     }
-}
     this.log(LogLevel.INFO, message, data, source);
   }
   /**;
@@ -218,7 +214,6 @@ export class EnhancedLogger {;
   ;
     // TODO: Add content;
     }
-}
     this.log(LogLevel.WARN, message, data, source);
   }
   /**;
@@ -330,7 +325,6 @@ export class EnhancedLogger {;
   ;
     // TODO: Add content;
     }
-}
     if (!this.config.enablePerformance) return;
     this.performanceMarks.set(markName, performance.now());
   }
@@ -452,7 +446,6 @@ export class EnhancedLogger {;
   ;
     // TODO: Add content;
     }
-}
     return this.config.environment === 'development' || process.env['NODE_ENV'] === 'development';
   }
   /**;
@@ -465,7 +458,6 @@ export class EnhancedLogger {;
   ;
     // TODO: Add content;
     }
-}
     const levelName = LogLevel[entry.level];
     const timestamp = entry.timestamp.toISOString();
     const source = entry.source ? ` [${entry.source}]` : '';
@@ -626,7 +618,6 @@ export class EnhancedLogger {;
   ;
     // TODO: Add content;
     }
-}
     return `log_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
   /**;
@@ -772,7 +763,6 @@ export class EnhancedLogger {;
   ;
     // TODO: Add content;
     }
-}
     this.logs = [];
   }
   /**;
@@ -785,7 +775,6 @@ export class EnhancedLogger {;
   ;
     // TODO: Add content;
     }
-}
     this.config = {;
     ...this.config,;
     ...config;
@@ -800,7 +789,6 @@ export class EnhancedLogger {;
   ;
     // TODO: Add content;
     }
-}
     return JSON.stringify();
       this.logs.map(log => ({;
     // TODO: Add content;

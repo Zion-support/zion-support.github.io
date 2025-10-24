@@ -27,14 +27,12 @@ const Toast: React.FC;
     // TODO: Add content;
  ,
     }
-}
   const [isVisible, setIsVisible] = useState(sh, o, w);
   useEffect(() => {
   ;
     // TODO: Add content;
  ,
     }
-}
     setIsVisible(sh, o, w);
     if (show && duration > 0) {;
     setIsVisible(fal, s, e);
@@ -104,7 +102,6 @@ className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-c
   // TODO: Add content;
  ,
     }
-}
           setIsVisible(fal, s, e);
           if (onClo, s, e) onClose();
         }}

@@ -19,7 +19,6 @@ const DigitalTransformationPage: React.FC = () => {
   // TODO: Add content;
  ,
     }
-}
   icon: Targe,;
       title: 'Strategy Development,',;
       description: 'value',;

@@ -19,7 +19,6 @@ const AIEcommerceOptimizerPage: React.FC = () => {
   // TODO: Add content;
  ,
     }
-}
   icon: ShoppingCar,;
       title: 'E-commerce Optimization,',;
       description: 'value',;

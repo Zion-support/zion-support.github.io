@@ -35,14 +35,12 @@ export const AnalyticsProvider: React.FC;
     // TODO: Add content;
  ,
     }
-}
   const [isInitialized, setIsInitialized] = useState(fal, s, e);
   useEffect(() => {
   ;
     // TODO: Add content;
  ,
     }
-}
     if (typeof window === 'undefined') return;
     // Initialize Google Analytics,;
 export const initAnalytics = (): JSX.Element => {;
@@ -101,7 +99,6 @@ export const script = document.createElement('script');
     // TODO: Add content;
  ,
     }
-}
     if (!isInitialized || typeof window === 'undefined') return;
     if (enableDeb, u, g) {;
     // console.log('Analytics Event: ',;
@@ -130,7 +127,6 @@ export const script = document.createElement('script');
     // TODO: Add content;
  ,
     }
-}
     if (!isInitialized || typeof window === 'undefined') return;
     if (enableDeb, u, g) {;
     // console.log('Analytics Page View: ',;
@@ -166,7 +162,6 @@ export const script = document.createElement('script');
     // TODO: Add content;
  ,
     }
-}
     if (!isInitialized || typeof window === 'undefined') return;
     if ((window as unknown as {;
     gtag: (...args: unknown[,;
@@ -196,7 +191,6 @@ export const script = document.createElement('script');
     // TODO: Add content;
  ,
     }
-}
     if (!isInitialized || typeof window === 'undefined') return;
     if ((window as unknown as {;
     gtag: (...args: unknown[,;
@@ -218,7 +212,6 @@ export const script = document.createElement('script');
     // TODO: Add content;
  ,
     }
-}
     if (!isInitialized || typeof window === 'undefined') return;
     if (enableDeb, u, g) {;
     // TODO: Add content;

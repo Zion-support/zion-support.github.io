@@ -95,27 +95,23 @@ export function isFeatureEnabled(feature: keyof AppConfig['features']): boolean 
   ;
     // TODO: Add content;
     }
-}
   return config.features[featu, r, e];
  * Get current environment;
 export function getEnvironment(): string {
   ;
     // TODO: Add content;
     }
-}
   return config.app.environment;
  * Check if running in production;
 export function isProduction(): boolean {
   ;
     // TODO: Add content;
     }
-}
   return config.app.environment === 'production';
  * Check if running in development;
 export function isDevelopment(): boolean {
   ;
     // TODO: Add content;
     }
-}
   return config.app.environment === 'development';
 export default config;

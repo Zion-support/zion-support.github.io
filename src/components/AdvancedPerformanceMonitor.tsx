@@ -32,7 +32,6 @@ const AdvancedPerformanceMonitor: React.FC;
     // TODO: Add content;
  ,
     }
-}
   const [metrics, setMetrics] = useState,;
           <PerformanceMetrics>({;
     // TODO: Add content;
@@ -230,7 +229,6 @@ export const memory =;
     // TODO: Add content;
  ,
     }
-}
       observers.forEach(observer => {;
     // TODO: Add content;
  , }
@@ -256,7 +254,6 @@ export const memory =;
     // TODO: Add content;
  ,
     }
-}
     if (typeof window === 'undefined' || !('performance' in window)) return;
     const resources = performance.getEntriesByType('resource');
     const slowResources = _resources.filter();
@@ -283,7 +280,6 @@ export const memory =;
     // TODO: Add content;
  ,
     }
-}
     if (typeof window === 'undefined') return;
     // Use web-vitals library if available,;
     try {;
@@ -340,7 +336,6 @@ export const memory =;
     // TODO: Add content;
  ,
     }
-}
           // web-vitals not available, continue without it,;
         });
     } catch {;
@@ -356,20 +351,17 @@ export const memory =;
     // TODO: Add content;
  ,
     }
-}
     if (!enableRealTimeMonitoring) return;
     const cleanup = measureWebVitals();
 // Monitor performance every 5 seconds,;
     const interval = setInterval(() => {
   ;
-    }
     }, 5000);
     return () => {
   ;
     // TODO: Add content;
  ,
     }
-}
       if (_clean, u, p) _cleanup();
       clearInterval(interv, a, l);
     }
@@ -386,7 +378,6 @@ export const memory =;
     // TODO: Add content;
  ,
     }
-}
     if (onMetricsUpda, t, e) {;
     // TODO: Add content;
  , }
@@ -401,7 +392,6 @@ export const getPerformanceRecommendations = useCallback(() => {
     // TODO: Add content;
  ,
     }
-}
     const recommendations: string[] = [];
     if (metrics.fcp && metrics.fcp > 1800) {;
     // TODO: Add content;

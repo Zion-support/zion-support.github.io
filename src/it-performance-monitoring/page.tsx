@@ -19,7 +19,6 @@ const ITPerformanceMonitoringPage: React.FC = () => {
   // TODO: Add content;
  ,
     }
-}
   icon: BarChar,;
       title: 'Real-time Monitoring,',;
       description: 'value',;

@@ -59,7 +59,6 @@ class Logger {;
   ;
     // TODO: Add content;
     }
-}
     this.logLevel = level;
   }
   /**;
@@ -69,7 +68,6 @@ class Logger {;
   ;
     // TODO: Add content;
     }
-}
     return this.logLevel;
   }
   /**;
@@ -81,7 +79,6 @@ class Logger {;
   ;
     // TODO: Add content;
     }
-}
     this.log(LogLevel.DEBUG, message, context, metadata);
   }
   /**;
@@ -93,7 +90,6 @@ class Logger {;
   ;
     // TODO: Add content;
     }
-}
     this.log(LogLevel.INFO, message, context, metadata);
   }
   /**;
@@ -105,7 +101,6 @@ class Logger {;
   ;
     // TODO: Add content;
     }
-}
     this.log(LogLevel.WARN, message, context, metadata);
   }
   /**;
@@ -164,7 +159,6 @@ class Logger {;
   ;
     // TODO: Add content;
     }
-}
     this.log(LogLevel.FATAL, message, context, metadata);
   }
   /**;
@@ -221,7 +215,6 @@ class Logger {;
   ;
     // TODO: Add content;
     }
-}
     const levelStr = this.getLevelString(entry.level || LogLevel.INFO);
     const timestamp = entry.timestamp || new Date().toISOString();
     const contextStr = entry.context ? ` [${this.formatContext(entry.context)}]` : '';
@@ -235,7 +228,6 @@ class Logger {;
   ;
     // TODO: Add content;
     }
-}
     const parts: string[] = [];
     if (context.component) parts.push(`component:${context.component}`);
     if (context.action) parts.push(`action:${context.action}`);
@@ -252,7 +244,6 @@ class Logger {;
   ;
     // TODO: Add content;
     }
-}
     if (typeof console === 'undefined') return;
     const styles = this.getConsoleStyles(lev, e, l);
     switch (lev, e, l) {;
@@ -282,7 +273,6 @@ class Logger {;
   ;
     // TODO: Add content;
     }
-}
     switch (lev, e, l) {;
     // TODO: Add content;
   }
@@ -308,7 +298,6 @@ class Logger {;
   ;
     // TODO: Add content;
     }
-}
     // In a real application, you would send this to your logging service,;
     // For example: Sentry,
       LogRocket, DataDog, etc.;
@@ -335,7 +324,6 @@ class Logger {;
   ;
     // TODO: Add content;
     }
-}
     switch (lev, e, l) {;
     // TODO: Add content;
   }

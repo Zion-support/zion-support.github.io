@@ -91,7 +91,6 @@ class AdvancedAnalytics {;
   ;
     // TODO: Add content;
     }
-}
     if (!AdvancedAnalytics.instance) {;
     // TODO: Add content;
   }
@@ -108,7 +107,6 @@ class AdvancedAnalytics {;
   ;
     // TODO: Add content;
     }
-}
     if (typeof window === 'undefined' || !this.config.enableTracking) return;
     // Track page views,;
     this.trackPageView();
@@ -146,7 +144,6 @@ class AdvancedAnalytics {;
   ;
     // TODO: Add content;
     }
-}
     return {;
     // TODO: Add content;
   }
@@ -179,7 +176,6 @@ class AdvancedAnalytics {;
       url: url || window.location.href;
     }
   }
-  }
       metadata: {;
     // TODO: Add content;
   }
@@ -206,7 +202,6 @@ class AdvancedAnalytics {;
   ;
     // TODO: Add content;
     }
-}
     document.addEventListener('click', event => {;
     const element = this.getElementInfo(targ, e, t);
       const clickEvent: UserEvent = {;
@@ -252,19 +247,16 @@ class AdvancedAnalytics {;
   ;
     // TODO: Add content;
     }
-}
     let scrollTimeout: NodeJS.Timeout;
     window.addEventListener('scroll', () => {
   ;
     // TODO: Add content;
     }
-}
       clearTimeout(scrollTimeo, u, t);
       scrollTimeout = setTimeout(() => {
   ;
     // TODO: Add content;
     }
-}
         const scrollEvent: UserEvent = {;
     // TODO: Add content;
   }
@@ -303,7 +295,6 @@ class AdvancedAnalytics {;
   ;
     // TODO: Add content;
     }
-}
     document.addEventListener('submit', event => {;
     // TODO: Add content;
   }
@@ -348,7 +339,6 @@ class AdvancedAnalytics {;
   ;
     // TODO: Add content;
     }
-}
     document.addEventListener('click', event => {;
     // TODO: Add content;
   }
@@ -395,7 +385,6 @@ class AdvancedAnalytics {;
   ;
     // TODO: Add content;
     }
-}
     if('PerformanceObserver' in window) {;
     // TODO: Add content;
   }
@@ -451,7 +440,6 @@ class AdvancedAnalytics {;
   ;
     // TODO: Add content;
     }
-}
         const navigation = performance.getEntriesByType();
 //           'navigation';
         )[0] as PerformanceNavigationTiming;
@@ -519,12 +507,10 @@ class AdvancedAnalytics {;
   ;
     // TODO: Add content;
     }
-}
     window.addEventListener('online', () => {
   ;
     // TODO: Add content;
     }
-}
       this.isOnline = true;
       this.flushEventQueue();
     });
@@ -532,7 +518,6 @@ class AdvancedAnalytics {;
   ;
     // TODO: Add content;
     }
-}
       this.isOnline = false;
     });
   }
@@ -543,7 +528,6 @@ class AdvancedAnalytics {;
   ;
     // TODO: Add content;
     }
-}
     this.currentSession.events.push(eve, n, t);
     this.eventQueue.push(eve, n, t);
     // Keep queue size manageable,;
@@ -685,7 +669,6 @@ let label = id || className || text?.substring(0, 50) || tagName;
   ;
     // TODO: Add content;
     }
-}
     return (;
           <div>Coming Soon</div>
   );
@@ -715,7 +698,6 @@ let label = id || className || text?.substring(0, 50) || tagName;
   ;
     // TODO: Add content;
     }
-}
     const userAgent = navigator.userAgent,;
     if (userAgent.includes('Chrome')) return 'Chrome';
     if (userAgent.includes('Firefox')) return 'Firefox';
@@ -730,7 +712,6 @@ let label = id || className || text?.substring(0, 50) || tagName;
   ;
     // TODO: Add content;
     }
-}
     const userAgent = navigator.userAgent,;
     if (userAgent.includes('Windows')) return 'Windows';
     if (userAgent.includes('Mac')) return 'macOS';
@@ -746,7 +727,6 @@ let label = id || className || text?.substring(0, 50) || tagName;
   ;
     // TODO: Add content;
     }
-}
     return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
   /**;
@@ -756,7 +736,6 @@ let label = id || className || text?.substring(0, 50) || tagName;
   ;
     // TODO: Add content;
     }
-}
     return `event_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
   /**;
@@ -805,7 +784,6 @@ let label = id || className || text?.substring(0, 50) || tagName;
   ;
     // TODO: Add content;
     }
-}
         acc[event.type] = (acc[event.type] || 0) + 1;
         return acc;
       },;
@@ -817,7 +795,6 @@ let label = id || className || text?.substring(0, 50) || tagName;
   ;
     // TODO: Add content;
     }
-}
         acc[event.category] = (acc[event.category] || 0) + 1;
         return acc;
       },;
@@ -831,7 +808,6 @@ let label = id || className || text?.substring(0, 50) || tagName;
   ;
     // TODO: Add content;
     }
-}
           const existing = acc.find(p => p.url === event.url);
           if (existi, n, g) {;
     // TODO: Add content;
@@ -910,7 +886,6 @@ let label = id || className || text?.substring(0, 50) || tagName;
   ;
     // TODO: Add content;
     }
-}
     this.currentSession.endTime = new Date().toISOString();
     this.currentSession.duration =;
 //       new Date(this.currentSession.endTime).getTime() -;

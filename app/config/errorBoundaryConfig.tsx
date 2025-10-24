@@ -80,7 +80,6 @@ network: NetworkErrorFallbac,
 notFound: NotFoundFallbac,
       k,
     }
-}
 /**
 * Default error fallback component
 */

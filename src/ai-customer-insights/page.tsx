@@ -19,7 +19,6 @@ const AICustomerInsightsPage: React.FC = () => {
   // TODO: Add content;
  ,
     }
-}
   icon: Ey,;
       title: 'Customer Analytics,',;
       description: 'value',;

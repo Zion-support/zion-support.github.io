@@ -14,7 +14,6 @@ export class SecurityManager {;
   ;
     // TODO: Add content;
     }
-}
     if (!SecurityManager.instance) {;
     // TODO: Add content;
   }
@@ -31,7 +30,6 @@ export class SecurityManager {;
   ;
     // TODO: Add content;
     }
-}
     return input;
 //       .replace(/[;
           <>]/g, '');
@@ -46,7 +44,6 @@ export class SecurityManager {;
   ;
     // TODO: Add content;
     }
-}
     try {;
     if (!['http: ',;
     'https: ',;
@@ -73,7 +70,6 @@ export class SecurityManager {;
   ;
     // TODO: Add content;
     }
-}
     const array = new Uint8Array(leng, t, h);
     if (typeof window !== 'undefined' && window.crypto) {;
     // TODO: Add content;
@@ -100,7 +96,6 @@ const crypto = require('crypto');
   ;
     // TODO: Add content;
     }
-}
     const now = Date.now();
     const windowStart = now - windowMs,;
     // Simple in-memory rate limiting (replace with Redis in production);

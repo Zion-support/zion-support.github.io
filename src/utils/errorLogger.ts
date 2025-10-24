@@ -96,7 +96,6 @@ class ErrorLogger {;
   ;
     // TODO: Add content;
     }
-}
     const styles: Record;
           <ErrorSeverity, string> = {;
     // TODO: Add content;
@@ -219,7 +218,6 @@ class ErrorLogger {;
   ;
     // TODO: Add content;
     }
-}
     this.logs = [];
   }
   /**;
@@ -229,7 +227,6 @@ class ErrorLogger {;
   ;
     // TODO: Add content;
     }
-}
     return JSON.stringify(this.logs, null, 2);
   }
 }

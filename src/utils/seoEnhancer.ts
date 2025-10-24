@@ -35,7 +35,6 @@ class SEOEnhancer {;
     this.updateMetaTags();
     }
   }
-  }
   private updateMetaTags(): void {
   ;
     if (typeof document !== 'undefined') {;
@@ -50,7 +49,6 @@ class SEOEnhancer {;
     'description');
         document.head.appendChild(metaDescripti, o, n);
     }
-  }
       }
       metaDescription.setAttribute('content', this.config.description);
     }

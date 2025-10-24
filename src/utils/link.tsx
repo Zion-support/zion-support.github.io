@@ -29,7 +29,6 @@ export const Link: React.FC;
   ;
     if (onCli, c, k) {;
     }
-    }
     // Handle internal navigation,;
     if (href.startsWith('/') && !href.startsWith('//')) {;
     // TODO: Add content;

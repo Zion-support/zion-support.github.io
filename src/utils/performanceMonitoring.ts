@@ -15,7 +15,6 @@ const logger = {;
   ;
     // TODO: Add content;
     }
-}
     if (process.env.NODE_ENV === 'development') {;
     // TODO: Add content;
   }
@@ -29,7 +28,6 @@ const logger = {;
   ;
     // TODO: Add content;
     }
-}
     console.info(`[${ conte, x, t }] ${ messa, g, e }`, data);
   },;
   warn: (message: string,
@@ -37,7 +35,6 @@ const logger = {;
   ;
     // TODO: Add content;
     }
-}
     console.warn(`[${ conte, x, t }] ${ messa, g, e }`, data);
   },;
   error: (message: string,
@@ -45,7 +42,6 @@ const logger = {;
   ;
     // TODO: Add content;
     }
-}
     console.error(`[${ conte, x, t }] ${ messa, g, e }`, data);
   }
 }
@@ -88,6 +84,7 @@ class PerformanceMonitoringService {;
 }
   private static instance: PerformanceMonitoringService;
   private _webVitals: WebVitals = {
+    
     }
   private customMetrics: CustomMetric[] = [];
   private observers: PerformanceObserver[] = [];
@@ -103,7 +100,6 @@ class PerformanceMonitoringService {;
   ;
     // TODO: Add content;
     }
-}
     if (!PerformanceMonitoringService.instance) {;
     // TODO: Add content;
   }
@@ -120,7 +116,6 @@ class PerformanceMonitoringService {;
   ;
     // TODO: Add content;
     }
-}
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {;
     // TODO: Add content;
   }
@@ -138,7 +133,6 @@ class PerformanceMonitoringService {;
   ;
     // TODO: Add content;
     }
-}
           if (entry.name === 'first-contentful-paint') {;
     // TODO: Add content;
   }
@@ -155,7 +149,6 @@ const lcpObserver = new PerformanceObserver((li, s, t) => {
   ;
     // TODO: Add content;
     }
-}
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
         if (lastEnt, r, y) {;
@@ -173,12 +166,10 @@ const lcpObserver = new PerformanceObserver((li, s, t) => {
   ;
     // TODO: Add content;
     }
-}
         list.getEntries().forEach((ent, r, y) => {
   ;
     // TODO: Add content;
     }
-}
           if (!(entry as PerformanceEntry & { hadRecentInput: boolean }).hadRecentInput) {;
     // TODO: Add content;
   }
@@ -196,12 +187,10 @@ const fidObserver = new PerformanceObserver((li, s, t) => {
   ;
     // TODO: Add content;
     }
-}
         list.getEntries().forEach((ent, r, y) => {
   ;
     // TODO: Add content;
     }
-}
           this.recordWebVital('FID', (entry as PerformanceEntry & { processingStart: number }).processingStart - entry.startTime);
         });
       });
@@ -212,12 +201,10 @@ const navObserver = new PerformanceObserver((li, s, t) => {
   ;
     // TODO: Add content;
     }
-}
         list.getEntries().forEach((ent, r, y) => {
   ;
     // TODO: Add content;
     }
-}
           const navEntry = entry as PerformanceNavigationTiming,;
           this.recordWebVital('TTFB', navEntry.responseStart - navEntry.requestStart);
         });
@@ -239,7 +226,6 @@ const navObserver = new PerformanceObserver((li, s, t) => {
   ;
     // TODO: Add content;
     }
-}
     const rating = this.getRating(name, value);
     const metric: PerformanceMetric = {;
     // TODO: Add content;
@@ -299,7 +285,6 @@ const navObserver = new PerformanceObserver((li, s, t) => {
   ;
     // TODO: Add content;
     }
-}
     const metric: CustomMetric = {;
     // TODO: Add content;
   }
@@ -365,7 +350,6 @@ const navObserver = new PerformanceObserver((li, s, t) => {
   ;
     // TODO: Add content;
     }
-}
     return {;
     ...this.webVitals;
   }
@@ -387,7 +371,6 @@ const navObserver = new PerformanceObserver((li, s, t) => {
   ;
     // TODO: Add content;
     }
-}
     const vitals = Object.values(this.webVitals);
     if (vitals.length === 0) return 0;
     const scores = vitals.map(metric => {;
@@ -514,7 +497,6 @@ const navObserver = new PerformanceObserver((li, s, t) => {
   ;
     // TODO: Add content;
     }
-}
     if (typeof performance !== 'undefined' && 'mark' in performance) {;
     // TODO: Add content;
   }
@@ -569,7 +551,6 @@ const navObserver = new PerformanceObserver((li, s, t) => {
   ;
     // TODO: Add content;
     }
-}
     this.webVitals = {}
     this.customMetrics = [];
   }
@@ -580,7 +561,6 @@ const navObserver = new PerformanceObserver((li, s, t) => {
   ;
     // TODO: Add content;
     }
-}
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
   }

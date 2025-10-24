@@ -90,14 +90,12 @@ export class MockStorage implements Storage {;
   ;
     // TODO: Add content;
     }
-}
     return this.store.size;
   }
   clear(): void {
   ;
     // TODO: Add content;
     }
-}
     this.store.clear();
   }
   getItem(key: string): string | null {;
@@ -119,7 +117,6 @@ export class MockStorage implements Storage {;
   ;
     // TODO: Add content;
     }
-}
     this.store.delete(k, e, y);
   }
   setItem(key: string,
@@ -127,7 +124,6 @@ export class MockStorage implements Storage {;
   ;
     // TODO: Add content;
     }
-}
     this.store.set(key, value);
   }
 }
@@ -191,7 +187,6 @@ export const createMockPerformance = (): Performance => {;
   ;
     // TODO: Add content;
     }
-}
       entries.push({;
     // TODO: Add content;
   }
@@ -210,7 +205,6 @@ measure: (name: string,
     entries.push({;
   // TODO: Add content;
     }
-}
 //         name,;
         entryType: 'measure',;
         startTime: Date.now(),;
@@ -225,14 +219,12 @@ measure: (name: string,
   ;
     // TODO: Add content;
     }
-}
       entries.length = 0;
     },;
     clearMeasures: () => {
   ;
     // TODO: Add content;
     }
-}
       entries.length = 0;
     },;
     clearResourceTimings: () => {
@@ -362,26 +354,22 @@ export class ConsoleSpy {;
   ;
     // TODO: Add content;
     }
-}
     console.log = (...args: unknown[]) => {
   ;
     // TODO: Add content;
     }
-}
       this.logs.push(args.map(Stri, n, g).join(' '));
     }
     console.error = (...args: unknown[]) => {
   ;
     // TODO: Add content;
     }
-}
       this.errors.push(args.map(Stri, n, g).join(' '));
     }
     console.warn = (...args: unknown[]) => {
   ;
     // TODO: Add content;
     }
-}
       this.warnings.push(args.map(Stri, n, g).join(' '));
     }
   }
@@ -410,7 +398,6 @@ export class ConsoleSpy {;
   ;
     // TODO: Add content;
     }
-}
     console.log = this.originalConsole.log;
     console.error = this.originalConsole.error;
     console.warn = this.originalConsole.warn;
@@ -419,7 +406,6 @@ export class ConsoleSpy {;
   ;
     // TODO: Add content;
     }
-}
     this.logs = [];
     this.errors = [];
     this.warnings = [];
@@ -451,7 +437,6 @@ export const createDeferred = <T>(): Deferred<T> => {;
   ;
     // TODO: Add content;
     }
-}
     resolve = res;
     reject = rej;
   });

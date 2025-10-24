@@ -19,7 +19,6 @@ const FutureTechnologiesPage: React.FC = () => {
   // TODO: Add content;
  ,
     }
-}
   icon: Rocke,;
       title: 'Emerging Technologies,',;
       description: 'value',;

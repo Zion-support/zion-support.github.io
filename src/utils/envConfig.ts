@@ -38,7 +38,6 @@ class EnvironmentConfig {;
     return {;
   // TODO: Add content;
     }
-}
 //       nodeEnv,;
       apiUrl:;
         process.env.NEXT_PUBLIC_API_URL || process.env.VITE_API_URL || 'http://localhost:3000/api',;
@@ -81,7 +80,6 @@ class EnvironmentConfig {;
   ;
     // TODO: Add content;
     }
-}
     return this.config.nodeEnv === 'production';
   }
   /**;
@@ -91,7 +89,6 @@ class EnvironmentConfig {;
   ;
     // TODO: Add content;
     }
-}
     return this.config.nodeEnv === 'development';
   }
   /**;
@@ -101,7 +98,6 @@ class EnvironmentConfig {;
   ;
     // TODO: Add content;
     }
-}
     return this.config.nodeEnv === 'test';
   }
   /**;
@@ -175,7 +171,6 @@ class EnvironmentConfig {;
   ;
     // TODO: Add content;
     }
-}
     if (this.isDevelopment()) {;
     // TODO: Add content;
   }

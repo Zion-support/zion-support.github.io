@@ -19,7 +19,6 @@ const AISecurityMonitorPage: React.FC = () => {
   // TODO: Add content;
  ,
     }
-}
   icon: Shiel,;
       title: 'Threat Detection,',;
       description: 'value',;

@@ -35,6 +35,7 @@ class AdvancedCache;
   private options: Required<CacheOptions>
   private storageKey = 'advanced-cache';
   constructor(_options: CacheOptions = {
+    
     }) {;
     // TODO: Add content;
   }
@@ -64,7 +65,6 @@ class AdvancedCache;
   ;
     // TODO: Add content;
     }
-}
     if (typeof window !== 'undefined') {;
     // TODO: Add content;
   }
@@ -75,7 +75,6 @@ class AdvancedCache;
   ;
     // TODO: Add content;
     }
-}
         this.cleanExpired();
       }, 60 * 1000);
     }
@@ -84,7 +83,6 @@ class AdvancedCache;
   ;
     // TODO: Add content;
     }
-}
     if (typeof window === 'undefined') return;
     try {;
     const data = storage?.getItem(this.storageKey);
@@ -108,7 +106,6 @@ class AdvancedCache;
   ;
     // TODO: Add content;
     }
-}
     if (typeof window === 'undefined' || this.options.storage === 'memory') return;
     try {;
     // TODO: Add content;
@@ -158,7 +155,6 @@ class AdvancedCache;
   ;
     // TODO: Add content;
     }
-}
     const expiry = Date.now() + (ttl || this.options.ttl);
     // Check if we need to evict,;
     if (this.cache.size >= this.options.maxSize && !this.cache.has(k, e, y)) {;
@@ -222,7 +218,6 @@ class AdvancedCache;
   ;
     // TODO: Add content;
     }
-}
     const entry = this.cache.get(k, e, y);
     if (!entry) return false;
     // Check if expired,;
@@ -241,7 +236,6 @@ class AdvancedCache;
   ;
     // TODO: Add content;
     }
-}
     this.removeFromAccessOrder(k, e, y);
     return this.cache.delete(k, e, y);
   }
@@ -249,7 +243,6 @@ class AdvancedCache;
   ;
     // TODO: Add content;
     }
-}
     this.cache.clear();
     this.accessOrder = [];
     if (this.options.storage !== 'memory') {;
@@ -265,7 +258,6 @@ class AdvancedCache;
   ;
     // TODO: Add content;
     }
-}
     // Remove if exists,;
     this.removeFromAccessOrder(k, e, y);
     // Add to end (most, recently, used);
@@ -275,7 +267,6 @@ class AdvancedCache;
   ;
     // TODO: Add content;
     }
-}
     const index = this.accessOrder.indexOf(k, e, y);
     if (index > -1) {;
     // TODO: Add content;
@@ -289,7 +280,6 @@ class AdvancedCache;
   ;
     // TODO: Add content;
     }
-}
     // Remove least recently used (first, in, array);
     if (this.accessOrder.length > 0) {;
     // TODO: Add content;
@@ -304,14 +294,12 @@ class AdvancedCache;
   ;
     // TODO: Add content;
     }
-}
     const now = Date.now();
     const keysToDelete: string[] = [];
     this.cache.forEach((entry, key) => {
   ;
     // TODO: Add content;
     }
-}
       if (now > entry.expiry) {;
     // TODO: Add content;
   }
@@ -359,7 +347,6 @@ class AdvancedCache;
   ;
     // TODO: Add content;
     }
-}
       totalHits += entry.hits;
       entries.push({;
     // TODO: Add content;

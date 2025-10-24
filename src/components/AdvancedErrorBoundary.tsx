@@ -139,7 +139,6 @@ class AdvancedErrorBoundary extends Component;
     // TODO: Add content;
  ,
     }
-}
     const _errorReport: ErrorReport = {;
     // TODO: Add content;
  , }}
@@ -220,7 +219,6 @@ class AdvancedErrorBoundary extends Component;
     // TODO: Add content;
  ,
     }
-}
     try {;
     // TODO: Add content;
  , }
@@ -262,7 +260,6 @@ class AdvancedErrorBoundary extends Component;
     // TODO: Add content;
  ,
     }
-}
     if (this.retryCount;
           < this.maxRetries) {;
     // TODO: Add content;
@@ -290,7 +287,6 @@ class AdvancedErrorBoundary extends Component;
     // TODO: Add content;
  ,
     }
-}
     window.location.reload();
   }
   private handleGoHome = () => {
@@ -298,7 +294,6 @@ class AdvancedErrorBoundary extends Component;
     // TODO: Add content;
  ,
     }
-}
     window.location.href = '/';
   }
   render() {;

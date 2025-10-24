@@ -20,7 +20,6 @@ const DevOpsCICDPage: React.FC = () => {
   // TODO: Add content;
  ,
     }
-}
   icon: Setting,;
       title: 'CI/CD Pipelines,',;
       description: 'value',;

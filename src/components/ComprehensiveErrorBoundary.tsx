@@ -113,7 +113,6 @@ class ComprehensiveErrorBoundary extends Component;
  ,
     }
   }
-  }
       retryCount: this.state.retryCount;
    , }
     // Send to error reporting service,;
@@ -153,7 +152,6 @@ class ComprehensiveErrorBoundary extends Component;
     // TODO: Add content;
  ,
     }
-}
     if (this.state.retryCount;
           < this.maxRetries) {;
     // TODO: Add content;
@@ -184,7 +182,6 @@ class ComprehensiveErrorBoundary extends Component;
     // TODO: Add content;
  ,
     }
-}
     window.location.reload();
   }
   render() {;

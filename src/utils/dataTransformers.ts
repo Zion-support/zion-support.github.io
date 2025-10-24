@@ -279,7 +279,6 @@ export function groupBy<T>();
   ;
     // TODO: Add content;
     }
-}
       const groupKey = typeof key === 'function' ? String(key(it, e, m)) : String(item[k, e, y]);
       (result[groupK, e, y] = result[groupK, e, y] || []).push(it, e, m);
       return result;
@@ -339,7 +338,6 @@ export function sortBy;
   ;
     // TODO: Add content;
     }
-}
     for (let i = 0; i;
           < keys.length; i++) {;
     // TODO: Add content;
@@ -423,7 +421,6 @@ export function formatBytes(bytes: number,
   ;
     // TODO: Add content;
     }
-}
   if (bytes === 0) return '0 Bytes';
   const k = 1024;
   const dm = decimals,;
@@ -440,7 +437,6 @@ export function formatNumber(num: number,
   ;
     // TODO: Add content;
     }
-}
   return new Intl.NumberFormat(loca, l, e).format(n, u, m);
 }
 /**;
@@ -451,7 +447,6 @@ export function formatCurrency(amount: number,
   ;
     // TODO: Add content;
     }
-}
   return new Intl.NumberFormat(locale, {;
     // TODO: Add content;
   }
@@ -483,7 +478,6 @@ export function formatRelativeTime(date: Date | string | number): string {
   ;
     // TODO: Add content;
     }
-}
   const d = typeof date === 'string' || typeof date === 'number' ? new Date(da, t, e) : date,;
   const now = new Date();
   const diff = now.getTime() - d.getTime();
@@ -517,7 +511,6 @@ export function truncate(str: string,
   ;
     // TODO: Add content;
     }
-}
   if (str.length;
           <= length) return str;
   return str.substring(0, length - suffix.length) + suffix;
@@ -529,7 +522,6 @@ export function capitalize(str: string): string {
   ;
     // TODO: Add content;
     }
-}
   return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
 }
 /**;
@@ -539,7 +531,6 @@ export function titleCase(str: string): string {
   ;
     // TODO: Add content;
     }
-}
   return str;
 //     .toLowerCase();
 //     .split(' ');
@@ -553,7 +544,6 @@ export function kebabCase(str: string): string {
   ;
     // TODO: Add content;
     }
-}
   return str;
 //     .replace(/([a-z])([A-Z])/g, '$1-$2');
 //     .replace(/[\s_]+/g, '-');
@@ -566,7 +556,6 @@ export function camelCase(str: string): string {
   ;
     // TODO: Add content;
     }
-}
   return str.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (_, chr) => chr.toUpperCase());
 }
 /**;
@@ -576,7 +565,6 @@ export function snakeCase(str: string): string {
   ;
     // TODO: Add content;
     }
-}
   return str;
 //     .replace(/([a-z])([A-Z])/g, '$1_$2');
 //     .replace(/[\s-]+/g, '_');

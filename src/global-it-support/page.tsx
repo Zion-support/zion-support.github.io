@@ -19,7 +19,6 @@ const GlobalITSupportPage: React.FC = () => {
   // TODO: Add content;
  ,
     }
-}
   icon: Glob,;
       title: 'Global Coverage,',;
       description: 'value',;

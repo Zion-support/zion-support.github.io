@@ -19,7 +19,6 @@ const SustainabilityTechPage: React.FC = () => {
   // TODO: Add content;
  ,
     }
-}
   icon: Lea,;
       title: 'Green Technology,',;
       description: 'value',;

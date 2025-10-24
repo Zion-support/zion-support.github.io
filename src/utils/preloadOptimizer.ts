@@ -6,7 +6,6 @@ export const _preloadCriticalResources = () => {
   ;
     // TODO: Add content;
     }
-}
   if (typeof window === 'undefined') return;
   // Preload critical fonts,;
 const fontPreloads = [;
@@ -51,7 +50,6 @@ export const preloadRoute = (route: string) => {
   ;
     // TODO: Add content;
     }
-}
   if (typeof window === 'undefined') return;
   // Preload route-specific resources,;
 const routeResources = {;
@@ -85,7 +83,6 @@ export const optimizeImages = () => {
   ;
     // TODO: Add content;
     }
-}
   if (typeof window === 'undefined') return;
   // Add loading='lazy' to images below the fold,;
 const images = document.querySelectorAll('img[data-lazy]');
@@ -106,7 +103,6 @@ const images = document.querySelectorAll('img[data-lazy]');
   ;
     // TODO: Add content;
     }
-}
       entries.forEach(entry => {;
     // TODO: Add content;
   }
@@ -138,7 +134,6 @@ export const optimizeThirdPartyScripts = () => {
   ;
     // TODO: Add content;
     }
-}
   if (typeof window === 'undefined') return;
   // Defer non-critical scripts,;
 const scripts = document.querySelectorAll('script[data-defer]');
@@ -157,8 +152,7 @@ const scripts = document.querySelectorAll('script[data-defer]');
 }
     document.addEventListener('DOMContentLoaded', () => {
   ;
-    }
-});
+    });
   } else {;
   }
   }
@@ -168,7 +162,6 @@ const loadAnalytics = () => {
   ;
     // TODO: Add content;
     }
-}
   // Load Google Analytics after page load,;
 const gaScript = document.createElement('script');
   gaScript.async = true;

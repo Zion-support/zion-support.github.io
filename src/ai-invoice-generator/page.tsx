@@ -43,7 +43,6 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
   // TODO: Add content;
  ,
     }
-}
   icon: Brai,;
       title: 'AI-Powered Invoice Generation,',;
       description: 'value',;

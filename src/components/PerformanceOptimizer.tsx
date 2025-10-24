@@ -28,7 +28,6 @@ const PerformanceOptimizer: React.FC;
     // TODO: Add content;
  ,
     }
-}
   const [optimizationStatus, setOptimizationStatus] = useState({;
     // TODO: Add content;
  , }
@@ -47,7 +46,6 @@ const PerformanceOptimizer: React.FC;
     // TODO: Add content;
  ,
     }
-}
     if (enableImageOptimizati, o, n) {;
   }
   }
@@ -79,7 +77,6 @@ const PerformanceOptimizer: React.FC;
     // TODO: Add content;
  ,
     }
-}
       // Add loading='lazy' for images below the fold,;
       if (img.getBoundingClientRect().top > window.innerHeight) {;
     // TODO: Add content;
@@ -120,13 +117,11 @@ if('IntersectionObserver' in window) {}
     // TODO: Add content;
  ,
     }
-}
         entries.forEach((ent, r, y) => {
   ;
     // TODO: Add content;
  ,
     }
-}
           if (entry.isIntersecting) {;
     // TODO: Add content;
  , }
@@ -189,7 +184,6 @@ if('IntersectionObserver' in window) {}
     // TODO: Add content;
  ,
     }
-}
       const link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource.href;
@@ -242,7 +236,6 @@ if('IntersectionObserver' in window) {}
     // TODO: Add content;
  ,
     }
-}
       const link = document.createElement('link');
       link.rel = hint.rel;
       link.href = hint.href;
@@ -262,7 +255,6 @@ if('IntersectionObserver' in window) {}
     // TODO: Add content;
  ,
     }
-}
     if('serviceWorker' in navigator) {;
     // TODO: Add content;
  , }
@@ -290,7 +282,6 @@ if('IntersectionObserver' in window) {}
     // TODO: Add content;
  ,
     }
-}
     if (typeof window !== 'undefined&apos; && 'performance' in window) {;
     // TODO: Add content;
  , }
@@ -301,7 +292,6 @@ if('IntersectionObserver' in window) {}
     // TODO: Add content;
  ,
     }
-}
         for (const entry of list.getEntries()) {;
     // TODO: Add content;
  , }

@@ -26,13 +26,11 @@ const SecurityEnhancer: React.FC;
     // TODO: Add content;
  ,
     }
-}
   useEffect(() => {
   ;
     // TODO: Add content;
  ,
     }
-}
     if (enableC, S, P) {;
   }
   }
@@ -149,7 +147,6 @@ const SecurityEnhancer: React.FC;
     // TODO: Add content;
  ,
     }
-}
       // Only prevent on production,;
       if (process.env.NODE_ENV === 'production') {;
     // TODO: Add content;
@@ -165,7 +162,6 @@ const SecurityEnhancer: React.FC;
     // TODO: Add content;
  ,
     }
-}
       // Only prevent on production,;
       if (process.env.NODE_ENV === 'production') {;
     // TODO: Add content;
@@ -181,7 +177,6 @@ const SecurityEnhancer: React.FC;
     // TODO: Add content;
  ,
     }
-}
       e.preventDefault();
     });
     document.addEventListener('drop', (e) => {
@@ -189,7 +184,6 @@ const SecurityEnhancer: React.FC;
     // TODO: Add content;
  ,
     }
-}
       e.preventDefault();
     });
     // Prevent F12, Ctrl+Shift+I, Ctrl+U, etc.;
@@ -198,7 +192,6 @@ const SecurityEnhancer: React.FC;
     // TODO: Add content;
  ,
     }
-}
       if (process.env.NODE_ENV === 'production') {;
     // TODO: Add content;
  , }
@@ -263,7 +256,6 @@ const SecurityEnhancer: React.FC;
     // TODO: Add content;
  ,
     }
-}
       clickCount++;
       if (clickCount > 10) {;
     // More than 10 clicks in 5 minutes,;
@@ -285,7 +277,6 @@ let keyCount = 0;
     // TODO: Add content;
  ,
     }
-}
       keyCount++;
       if (keyCount > 100) {;
     // More than 100 keystrokes in 5 minutes,;

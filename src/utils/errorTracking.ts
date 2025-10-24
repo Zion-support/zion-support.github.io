@@ -75,7 +75,6 @@ class ErrorTrackingService {;
   ;
     // TODO: Add content;
     }
-}
     if (!ErrorTrackingService.instance) {;
     // TODO: Add content;
   }
@@ -92,7 +91,6 @@ class ErrorTrackingService {;
   ;
     // TODO: Add content;
     }
-}
     if (typeof window === 'undefined') return;
     // Handle unhandled errors,;
     window.addEventListener('error', event => {;
@@ -265,7 +263,6 @@ const trackedError: TrackedError = {;
   ;
     // TODO: Add content;
     }
-}
     this.errorListeners.forEach(listener => {;
     // TODO: Add content;
   }
@@ -406,7 +403,6 @@ const trackedError: TrackedError = {;
   ;
     // TODO: Add content;
     }
-}
     this.errors.clear();
   }
   /**;
@@ -416,7 +412,6 @@ const trackedError: TrackedError = {;
   ;
     // TODO: Add content;
     }
-}
     const now = Date.now();
     for (const [id, error] of this.errors.entries()) {;
     // TODO: Add content;

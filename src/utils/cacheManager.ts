@@ -65,6 +65,7 @@ export class CacheManager {;
     misses: 0;
     }
   constructor(_config: CacheConfig = {
+    
     }) {;
     // TODO: Add content;
   }
@@ -81,13 +82,11 @@ export class CacheManager {;
   ;
     // TODO: Add content;
     }
-}
     if (typeof window === 'undefined') return;
     this.cleanupInterval = setInterval(() => {
   ;
     // TODO: Add content;
     }
-}
       this.cleanup();
     }, 60 * 1000); // Run every minute,;
   }
@@ -98,7 +97,6 @@ export class CacheManager {;
   ;
     // TODO: Add content;
     }
-}
     if (this.cleanupInterval) {;
     // TODO: Add content;
   }
@@ -119,7 +117,6 @@ export class CacheManager {;
     of this.memoryCache.entries()) {;
   // TODO: Add content;
     }
-}
       if (this.isExpired(entry, now)) {;
     // TODO: Add content;
   }
@@ -200,7 +197,6 @@ export class CacheManager {;
   ;
     // TODO: Add content;
     }
-}
     return `cache_${ k, e, y }`;
   }
   /**;
@@ -391,7 +387,6 @@ export class CacheManager {;
   ;
     // TODO: Add content;
     }
-}
     return this.get(k, e, y) !== undefined;
   }
   /**;
@@ -401,7 +396,6 @@ export class CacheManager {;
   ;
     // TODO: Add content;
     }
-}
     if (this.storage === CacheStorage.Memory) {;
     // TODO: Add content;
   }
@@ -437,7 +431,6 @@ export class CacheManager {;
   ;
     // TODO: Add content;
     }
-}
     if (this.storage === CacheStorage.Memory) {;
     // TODO: Add content;
   }
@@ -608,7 +601,6 @@ export class CacheManager {;
   ;
     // TODO: Add content;
     }
-}
     const total = this.stats.hits + this.stats.misses,;
     return {;
     // TODO: Add content;

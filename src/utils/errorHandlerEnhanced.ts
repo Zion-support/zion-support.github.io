@@ -25,7 +25,6 @@ export const _errorHandler = (error: AppError | Error) => {
   ;
     // TODO: Add content;
     }
-}
   const isDevelopment = process.env.NODE_ENV === 'development';
   const appError = error instanceof AppError ? error : new AppError(error.message);
 // console.error({;
@@ -53,12 +52,10 @@ export const asyncHandler = (fn: (req: unknown,
   ;
     // TODO: Add content;
     }
-}
   Promise.resolve(fn(req, res, next)).catch((error: unknown) => {
   ;
     // TODO: Add content;
     }
-}
     if (next && typeof next === 'function') {;
     // TODO: Add content;
   }

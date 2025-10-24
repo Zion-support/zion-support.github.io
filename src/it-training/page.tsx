@@ -19,7 +19,6 @@ const ITTrainingPage: React.FC = () => {
   // TODO: Add content;
  ,
     }
-}
   icon: GraduationCa,;
       title: 'Certification Programs,',;
       description: 'value',;

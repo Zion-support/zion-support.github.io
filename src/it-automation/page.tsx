@@ -19,7 +19,6 @@ const ITAutomationPage: React.FC = () => {
   // TODO: Add content;
  ,
     }
-}
   icon: Setting,;
       title: 'Process Automation,',;
       description: 'value',;

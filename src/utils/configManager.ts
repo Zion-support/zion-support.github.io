@@ -321,7 +321,6 @@ export class ConfigManager {;
   ;
     // TODO: Add content;
     }
-}
     if (!ConfigManager.instance) {;
     // TODO: Add content;
   }
@@ -338,7 +337,6 @@ export class ConfigManager {;
   ;
     // TODO: Add content;
     }
-}
     if (typeof process !== 'undefined') {;
     switch (this.environment) {;
   // TODO: Add content;
@@ -371,7 +369,6 @@ export class ConfigManager {;
   ;
     // TODO: Add content;
     }
-}
     const result = { ...base
     } as AppConfig,;
 //     (Object.keys(overri, d, e) as Array,;
@@ -380,7 +377,6 @@ export class ConfigManager {;
   ;
     // TODO: Add content;
     }
-}
         const value = override[k, e, y];
         if (value !== undefined) {;
     // TODO: Add content;
@@ -593,7 +589,6 @@ const defaultValue = this.getDefaultForKey(k, e, y);
   ;
     // TODO: Add content;
     }
-}
     return {;
     ...this.config;
   }
@@ -605,7 +600,6 @@ const defaultValue = this.getDefaultForKey(k, e, y);
   ;
     // TODO: Add content;
     }
-}
     return this.environment;
   }
   /**;
@@ -615,7 +609,6 @@ const defaultValue = this.getDefaultForKey(k, e, y);
   ;
     // TODO: Add content;
     }
-}
     return this.config.features[featu, r, e];
   }
   /**;
@@ -625,7 +618,6 @@ const defaultValue = this.getDefaultForKey(k, e, y);
   ;
     // TODO: Add content;
     }
-}
     this.config.features[featu, r, e] = true;
   }
   /**;
@@ -635,7 +627,6 @@ const defaultValue = this.getDefaultForKey(k, e, y);
   ;
     // TODO: Add content;
     }
-}
     this.config.features[featu, r, e] = false;
   }
   /**;
@@ -658,7 +649,6 @@ const defaultValue = this.getDefaultForKey(k, e, y);
   ;
     // TODO: Add content;
     }
-}
     this.config.api = {;
     ...this.config.api,;
     ...config;
@@ -671,7 +661,6 @@ const defaultValue = this.getDefaultForKey(k, e, y);
   ;
     // TODO: Add content;
     }
-}
     return this.environment === 'production';
   }
   /**;
@@ -681,7 +670,6 @@ const defaultValue = this.getDefaultForKey(k, e, y);
   ;
     // TODO: Add content;
     }
-}
     return this.environment === 'development';
   }
   /**;
@@ -691,7 +679,6 @@ const defaultValue = this.getDefaultForKey(k, e, y);
   ;
     // TODO: Add content;
     }
-}
     return this.environment === 'test';
   }
   /**;
@@ -701,7 +688,6 @@ const defaultValue = this.getDefaultForKey(k, e, y);
   ;
     // TODO: Add content;
     }
-}
     return this.environment === 'staging';
   }
   /**;
@@ -712,7 +698,6 @@ const defaultValue = this.getDefaultForKey(k, e, y);
   ;
     // TODO: Add content;
     }
-}
     this.overrides = config;
     this.config = this.loadConfig();
   }
@@ -723,7 +708,6 @@ const defaultValue = this.getDefaultForKey(k, e, y);
   ;
     // TODO: Add content;
     }
-}
     this.overrides = {}
     this.config = this.loadConfig();
   }
@@ -734,7 +718,6 @@ const defaultValue = this.getDefaultForKey(k, e, y);
   ;
     // TODO: Add content;
     }
-}
     return JSON.stringify(this.config, null, 2);
   }
   /**;

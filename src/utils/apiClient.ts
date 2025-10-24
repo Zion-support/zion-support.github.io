@@ -72,6 +72,7 @@ class ApiClient {;
   private abortControllers: Map;
           <string, AbortController> = new Map();
   constructor(_config: ApiClientConfig = {
+    
     }) {;
     // TODO: Add content;
   }
@@ -278,7 +279,6 @@ const controller = new AbortController();
   ;
     // TODO: Add content;
     }
-}
       controller.abort();
     }, timeout);
     let lastError: Error | null = null;
@@ -287,7 +287,6 @@ const controller = new AbortController();
   ;
     // TODO: Add content;
     }
-}
       try {;
     // TODO: Add content;
   }
@@ -431,7 +430,6 @@ const controller = new AbortController();
   ;
     // TODO: Add content;
     }
-}
     const cacheKey = `${ meth, o, d }:${ u, r, l }`;
     const controller = this.abortControllers.get(cacheK, e, y);
     if (controll, e, r) {;
@@ -450,7 +448,6 @@ const controller = new AbortController();
   ;
     // TODO: Add content;
     }
-}
     this.abortControllers.forEach(controller => {;
     // TODO: Add content;
   }
@@ -468,7 +465,6 @@ const controller = new AbortController();
   ;
     // TODO: Add content;
     }
-}
     this.config = {;
     // TODO: Add content;
   }
@@ -493,7 +489,6 @@ const controller = new AbortController();
   ;
     // TODO: Add content;
     }
-}
     this.config.headers['Authorization'] = `Bearer ${ tok, e, n }`;
   }
   /**;
@@ -503,7 +498,6 @@ const controller = new AbortController();
   ;
     // TODO: Add content;
     }
-}
     delete this.config.headers['Authorization'];
   }
   /**;

@@ -46,7 +46,6 @@ const LazyComponent: React.FC;
     // TODO: Add content;
  ,
     }
-}
   const [isVisible, setIsVisible] = React.useState(fal, s, e);
   const [isLoaded, setIsLoaded] = React.useState(fal, s, e);
   const elementRef = React.useRef,;
@@ -56,14 +55,12 @@ const LazyComponent: React.FC;
     // TODO: Add content;
  ,
     }
-}
     const observer = new IntersectionObserver();
       ([ent, r, y]) => {
   ;
     // TODO: Add content;
  ,
     }
-}
         if (entry.isIntersecting) {;
     // TODO: Add content;
  , }
@@ -74,7 +71,6 @@ const LazyComponent: React.FC;
     // TODO: Add content;
  ,
     }
-}
             setIsVisible(tr, u, e);
             setIsLoaded(tr, u, e);
           }, delay);
@@ -130,7 +126,6 @@ export const preloadComponent = (importFunction: () => Promis,e,;
     // TODO: Add content;
  ,
     }
-}
     const component = lazy(importFuncti, o, n);
     return component;
   }
@@ -173,7 +168,6 @@ export const fontPreloads = [;
     // TODO: Add content;
  ,
     }
-}
     const link = document.createElement('link');
     link.rel = 'preload';
     link.as = 'style';
@@ -192,7 +186,6 @@ export const imagePreloads = [;
     // TODO: Add content;
  ,
     }
-}
     const link = document.createElement('link');
     link.rel = 'preload';
     link.as = 'image';

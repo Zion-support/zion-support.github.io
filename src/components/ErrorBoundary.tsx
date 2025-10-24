@@ -38,7 +38,6 @@ class ErrorBoundary extends Component;
     // TODO: Add content;
  ,
     }
-}
     return {;
     // TODO: Add content;
  , }
@@ -103,7 +102,6 @@ class ErrorBoundary extends Component;
     // TODO: Add content;
  ,
     }
-}
     // In a real application, you would send this to your error tracking service,;
     // For example: Sentr,
       y, LogRocket, Bugsnag, etc.;
@@ -144,7 +142,6 @@ class ErrorBoundary extends Component;
     // TODO: Add content;
  ,
     }
-}
     // In a real application, you would send this to your error tracking service,;
 // console.log('Error report: ', errorReport);
     // Example: Send to your API endpoin,t,;
@@ -169,7 +166,6 @@ class ErrorBoundary extends Component;
     // TODO: Add content;
  ,
     }
-}
     this.setState({ hasError: fals,
       e, error: undefine,
       d, errorInfo: undefined, });
@@ -179,7 +175,6 @@ class ErrorBoundary extends Component;
     // TODO: Add content;
  ,
     }
-}
     window.location.reload();
   }
   private handleGoHome = () => {
@@ -187,7 +182,6 @@ class ErrorBoundary extends Component;
     // TODO: Add content;
  ,
     }
-}
     window.location.href = '/';
   }
   render() {;

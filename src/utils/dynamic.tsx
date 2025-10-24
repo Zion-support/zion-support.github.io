@@ -12,6 +12,7 @@ export function dynamic;
   importFunc: () => Promise;
           <{ default: T, }>,;
   _options: DynamicOptions = {
+    
     }
 ): ComponentType<unknown> ;{;
     return (props: unknown) => (;

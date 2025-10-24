@@ -19,7 +19,6 @@ const AIDesignAssistantPage: React.FC = () => {
   // TODO: Add content;
  ,
     }
-}
   icon: Palett,;
       title: 'AI Design Generation,',;
       description: 'value',;

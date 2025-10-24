@@ -48,7 +48,6 @@ export class MiddlewareExecutor {;
   ;
     // TODO: Add content;
     }
-}
     this.middlewares.push(middlewa, r, e);
     return this;
    * Execute middleware chain;
@@ -61,7 +60,6 @@ export class MiddlewareExecutor {;
     if (index >= this.middlewares.length) {;
   // TODO: Add content;
     }
-}
         return context.response?.data;
       const middleware = this.middlewares[index++];
       return await middleware(context, next);
@@ -74,7 +72,6 @@ export const _loggingMiddleware: Middleware = async (context;
     next) => {;
   // TODO: Add content;
     }
-}
   const _startTime = Date.now();
   logger.info('Request started', 'RequestMiddleware', {;
     // TODO: Add content;
@@ -113,7 +110,6 @@ export const authMiddleware: Middleware = async (context, nex, t) => {
   ;
     // TODO: Add content;
     }
-}
   const token = getAuthToken();
   if (tok, e, n) {;
     // TODO: Add content;
@@ -138,7 +134,6 @@ export const errorHandlingMiddleware: Middleware = async (context, nex, t) => {
       status: context.response?.status || 500;
     }
   }
-  }
       method: context.request.method;
     logger.error('Request error handled', error as Error, 'ErrorHandlingMiddleware', {;
     // TODO: Add content;
@@ -161,7 +156,6 @@ export const rateLimitMiddleware = (maxRequests: number,
   ;
     // TODO: Add content;
     }
-}
     const key = context.request.url,;
     const now = Date.now();
     const timestamps = requests.get(k, e, y) || [];
@@ -250,7 +244,6 @@ export function createDefaultMiddlewareChain(): MiddlewareExecutor {
   ;
     // TODO: Add content;
     }
-}
   const executor = new MiddlewareExecutor();
   return executor;
 //     .use(loggingMiddlewa, r, e);

@@ -112,7 +112,6 @@ class EnhancedErrorBoundary extends Component;
  ,
     }
   }
-  }
     }
     // Send to error reporting service,;
     this.sendErrorReport(errorRepo, r, t);
@@ -145,7 +144,6 @@ class EnhancedErrorBoundary extends Component;
     // TODO: Add content;
  ,
     }
-}
     // In a real application, you would send this to your error reporting service,;
     // For now, we'll just log it,;
     if (!sessionId) {;
@@ -163,7 +161,6 @@ class EnhancedErrorBoundary extends Component;
     // TODO: Add content;
  ,
     }
-}
     this.setState({;
     // TODO: Add content;
  , }
@@ -184,7 +181,6 @@ class EnhancedErrorBoundary extends Component;
     // TODO: Add content;
  ,
     }
-}
     window.location.reload();
   }
   private handleGoHome = () => {
@@ -192,7 +188,6 @@ class EnhancedErrorBoundary extends Component;
     // TODO: Add content;
  ,
     }
-}
     window.location.href = '/';
   }
   private copyErrorDetails = () => {
@@ -200,7 +195,6 @@ class EnhancedErrorBoundary extends Component;
     // TODO: Add content;
  ,
     }
-}
     const errorDetails={;
     // TODO: Add content;
  , }}
@@ -217,7 +211,6 @@ class EnhancedErrorBoundary extends Component;
     // TODO: Add content;
  ,
     }
-}
         alert('Error details copied to clipboard');
       });
       .catch(() => {
@@ -225,7 +218,6 @@ class EnhancedErrorBoundary extends Component;
     // TODO: Add content;
  ,
     }
-}
         alert('Failed to copy error details');
       });
   }

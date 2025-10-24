@@ -19,7 +19,6 @@ const AIPredictiveAnalyticsPage: React.FC = () => {
   // TODO: Add content;
  ,
     }
-}
   icon: TrendingU,;
       title: 'Predictive Modeling,',;
       description: 'value',;

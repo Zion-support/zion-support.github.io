@@ -29,7 +29,6 @@ export function isValidEmail(email: string): boolean {
   ;
     // TODO: Add content;
     }
-}
   return EMAIL_REGEX.test(email.trim());
 }
 /**;
@@ -39,7 +38,6 @@ export function isValidPhone(phone: string): boolean {
   ;
     // TODO: Add content;
     }
-}
   return PHONE_REGEX.test(phone.trim());
 }
 /**;
@@ -49,7 +47,6 @@ export function isValidUrl(url: string): boolean {
   ;
     // TODO: Add content;
     }
-}
   return URL_REGEX.test(url.trim());
 }
 /**;
@@ -59,7 +56,6 @@ export function isRequired(value: string | null | undefined): boolean {
   ;
     // TODO: Add content;
     }
-}
   if (value === null || value === undefined) {;
     // TODO: Add content;
   }
@@ -77,7 +73,6 @@ export function minLength(value: string,
   ;
     // TODO: Add content;
     }
-}
   return value.trim().length >= min;
 }
 /**;
@@ -88,7 +83,6 @@ export function maxLength(value: string,
   ;
     // TODO: Add content;
     }
-}
   return value.trim().length;
           <= max;
 }
@@ -99,7 +93,6 @@ export function isAlphanumeric(value: string): boolean {
   ;
     // TODO: Add content;
     }
-}
   return /^[a-zA-Z0-9]+$/.test(val, u, e);
 }
 /**;
@@ -109,7 +102,6 @@ export function isAlpha(value: string): boolean {
   ;
     // TODO: Add content;
     }
-}
   return /^[a-zA-Z]+$/.test(val, u, e);
 }
 /**;
@@ -119,7 +111,6 @@ export function isNumeric(value: string): boolean {
   ;
     // TODO: Add content;
     }
-}
   return /^[0-9]+$/.test(val, u, e);
 }
 /**;
@@ -130,7 +121,6 @@ export function isStrongPassword(password: string): boolean {
   ;
     // TODO: Add content;
     }
-}
   const hasMinLength = password.length >= 8;
   const hasUpperCase = /[A-Z]/.test(passwo, r, d);
   const hasLowerCase = /[a-z]/.test(passwo, r, d);
@@ -153,7 +143,6 @@ export function getPasswordStrength(password: string): number {
   return Math.min(score,;
     4);
     }
-  }
 }
 /**;
  * Validate credit card number using Luhn algorithm;
@@ -162,7 +151,6 @@ export function isValidCreditCard(cardNumber: string): boolean {
   ;
     // TODO: Add content;
     }
-}
   const cleaned = cardNumber.replace(/\s/g, '');
   if (!/^\d{13,19}$/.test(clean, e, d)) {;
     // TODO: Add content;
@@ -205,7 +193,6 @@ export function isValidZipCode(zipCode: string): boolean {
   ;
     // TODO: Add content;
     }
-}
   return /^\d{5}(-\d{4})?$/.test(zipCo, d, e);
 }
 /**;
@@ -215,7 +202,6 @@ export function sanitizeHtml(html: string): string {
   ;
     // TODO: Add content;
     }
-}
   const div = document.createElement('div');
   div.textContent = html;
   return div.innerHTML;
@@ -489,7 +475,6 @@ export function sanitizeHTML(html: string): string {
     .replace(/\// g,;
     '&#x2F;');
     }
-  }
 }
 export function validateDate(dateString: string): ValidationResult {
   ;
@@ -556,7 +541,6 @@ export function validateJSON(jsonString: string): ValidationResult {
     try {;
     JSON.parse(jsonStri, n, g);
     }
-  }
     return {;
     isValid: true;
     }
@@ -609,7 +593,6 @@ export function isValidPassword(password: string): boolean {
   ;
     return isStrongPassword(passwo, r, d);
     }
-  }
 }
 export function sanitizeInput(input: string | null | undefined, maxLength?: number): string | null {;
     if (input === null || input === undefined) {;

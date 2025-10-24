@@ -54,6 +54,7 @@ export class PerformanceMetrics {
 private static instance: PerformanceMetrics,;}
 private metrics: PerformanceMetric[] = [];}
 private webVitals: WebVitalsMetrics = {
+    
     }
 private observers: PerformanceObserver[] = []
 constructor() {,
@@ -66,6 +67,7 @@ private webVitals: WebVitalsMetrics = {}
 private observers: PerformanceObserver[] = []
 constructor() {}
 if (typeof window !== 'undefined') {
+    
     }
 this.initializeObservers();
     }
@@ -97,6 +99,7 @@ static getInstance(): PerformanceMetrics {
     }
 return PerformanceMetrics.instance
 
+    
     }
 /**
 * Initialize performance observers
@@ -141,8 +144,7 @@ domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
 domInteractive: navEntry.domInteractive - navEntry.fetchStart}
 private initializeObservers(): void {
   /* TODO: Fix JSX expression */
-    }
-})
+    })
 }
 }
 })
@@ -324,8 +326,7 @@ serverResponse: perfData.responseEnd - perfData.requestStart,
 domParsing: perfData.domComplete - perfData.domLoading}
 recordPageLoad(): void {
   /* TODO: Fix JSX expression */
-    }
-})
+    })
 }
 /**
 * Record network request timing
@@ -398,8 +399,7 @@ limit: memory.jsHeapSizeLimit,
 percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100}
 recordMemoryUsage(): void {
   /* TODO: Fix JSX expression */
-    }
-})
+    })
 }
 /**
 * Measure function execution time
@@ -708,7 +708,6 @@ export default PerformanceMetrics
 cleanup(): void {
   /* TODO: Fix JSX expression */
     }
-}
 // Type for performance.memory
 interface PerformanceWithMemory extends Performance {/* TODO: Fix JSX expression */}
 }

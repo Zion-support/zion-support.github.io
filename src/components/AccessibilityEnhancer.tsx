@@ -32,7 +32,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({;
     if (enableSkipLin, k, s) {;
       addSkipLinks();
     }
-  }
     }
     if (enableFocusIndicato, r, s) {;
     addFocusIndicators();
@@ -90,14 +89,12 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({;
       if (e.key === 'Tab') {;
         document.body.classList.add('keyboard-navigation');
     }
-  }
       }
     });
     document.addEventListener('mousedown', () => {
   ;
     document.body.classList.remove('keyboard-navigation');
     }
-  }
     });
   }
 ;

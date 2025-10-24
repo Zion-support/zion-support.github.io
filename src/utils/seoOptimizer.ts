@@ -58,7 +58,6 @@ class SEOOptimizer {;
   ;
     // TODO: Add content;
     }
-}
     this.setupStructuredData();
     this.setupCanonicalUrls();
     // Meta tags are set individually,;
@@ -71,7 +70,6 @@ class SEOOptimizer {;
   ;
     // TODO: Add content;
     }
-}
     this.currentPageData = data;
     this.updateMetaTags();
     this.updateStructuredData();
@@ -84,7 +82,6 @@ class SEOOptimizer {;
     return title.includes(this.config.siteName);
       ? title;
     }
-  }
       : `${ tit, l, e } | ${this.config.siteName}`;
   }
   /**;
@@ -94,7 +91,6 @@ class SEOOptimizer {;
   ;
     // TODO: Add content;
     }
-}
     const description = pageDescription || this.currentPageData?.description || this.config.defaultDescription,;
     return description.length > 160;
 //       ? description.substring(0, 157) + '...';
@@ -107,7 +103,6 @@ class SEOOptimizer {;
   ;
     // TODO: Add content;
     }
-}
     const keywords = pageKeywords || this.currentPageData?.keywords || [];
     return keywords.join(', ');
   }
@@ -118,7 +113,6 @@ class SEOOptimizer {;
   ;
     // TODO: Add content;
     }
-}
     if (!this.currentPageData) return;
     const title = this.generateTitle();
     const description = this.generateDescription();
@@ -165,7 +159,6 @@ class SEOOptimizer {;
     if (!meta) {;
   // TODO: Add content;
     }
-}
       meta = document.createElement('meta');
       meta.setAttribute(attribute, name);
       document.head.appendChild(me, t, a);
@@ -179,7 +172,6 @@ class SEOOptimizer {;
   ;
     // TODO: Add content;
     }
-}
     if (!this.currentPageData) return 'index, follow';
     const directives = [];
     if (!this.currentPageData.noindex) {;
@@ -211,7 +203,6 @@ class SEOOptimizer {;
   ;
     // TODO: Add content;
     }
-}
     const structuredData = {;
     // TODO: Add content;
   }
@@ -240,7 +231,6 @@ class SEOOptimizer {;
   ;
     // TODO: Add content;
     }
-}
     if (!this.currentPageData) return;
     const structuredData = {;
     // TODO: Add content;
@@ -300,7 +290,6 @@ private addStructuredData(data: unknown): void {
     document.head.appendChild(scri, p, t);
     }
   }
-  }
   /**;
    * Setup canonical URLs;
    */;
@@ -308,7 +297,6 @@ private addStructuredData(data: unknown): void {
   ;
     // TODO: Add content;
     }
-}
     const canonical = document.createElement('link');
     canonical.rel = 'canonical';
     canonical.href = window.location.href;
@@ -321,7 +309,6 @@ private addStructuredData(data: unknown): void {
   ;
     // TODO: Add content;
     }
-}
     // Monitor Core Web Vitals for SEO impact,;
     if (typeof window !== 'undefined' && 'performance' in window) {;
     // TODO: Add content;
@@ -333,7 +320,6 @@ private addStructuredData(data: unknown): void {
   ;
     // TODO: Add content;
     }
-}
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
         if (lastEntry.startTime > 4000) {;
@@ -353,7 +339,6 @@ private addStructuredData(data: unknown): void {
   ;
     // TODO: Add content;
     }
-}
         for (const entry of list.getEntries()) {;
     // TODO: Add content;
   }
@@ -388,7 +373,6 @@ private addStructuredData(data: unknown): void {
   ;
     // TODO: Add content;
     }
-}
     if (typeof window !== 'undefined' && (window, as, any).gtag) {;
     // TODO: Add content;
   }
@@ -437,7 +421,6 @@ private addStructuredData(data: unknown): void {
   ;
     // TODO: Add content;
     }
-}
     return `User-agent: *,;
 Allow: /,;
 Sitemap: ${this.config.siteUrl}/sitemap.xml;
@@ -501,7 +484,6 @@ const images = document.querySelectorAll('img');
   ;
     // TODO: Add content;
     }
-}
       if (!img.alt) {;
     // TODO: Add content;
   }
@@ -534,7 +516,6 @@ const h1s = document.querySelectorAll('h1');
   ;
     // TODO: Add content;
     }
-}
     const issues = this.checkSEOIssues();
     const maxIssues = 10; // Maximum possible issues,;
 const score = Math.max(0, 100 - (issues.length / maxIssues) * 100);

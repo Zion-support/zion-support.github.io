@@ -19,7 +19,6 @@ const SystemAdministrationPage: React.FC = () => {
   // TODO: Add content;
  ,
     }
-}
   icon: Setting,;
       title: 'System Management,',;
       description: 'value',;

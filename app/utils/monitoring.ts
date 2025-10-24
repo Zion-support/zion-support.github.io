@@ -25,6 +25,7 @@ export interface ErrorReport {
 
 class MonitoringService {
   private metrics: PerformanceMetrics = {
+    
     };
   private errors: ErrorReport[] = [];
   private observer: PerformanceObserver | null = null;
@@ -208,7 +209,6 @@ class MonitoringService {
       if (navigati, o, n) {
         // Navigation timing logged
     }
-  }
 }
 
 // Singleton instance

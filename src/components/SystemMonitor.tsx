@@ -138,7 +138,6 @@ const SystemMonitor: React.FC;
     // TODO: Add content;
  ,
     }
-}
   const [metrics, setMetrics] = useState,;
           <SystemMetrics | null>(nu, l, l);
   const [isMonitoring, setIsMonitoring] = useState(fal, s, e);
@@ -149,7 +148,6 @@ export const updateMetrics = useCallback(() => {
     // TODO: Add content;
  ,
     }
-}
     try {;
     // TODO: Add content;
  , }

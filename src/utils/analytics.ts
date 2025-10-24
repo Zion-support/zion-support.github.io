@@ -181,7 +181,6 @@ class AnalyticsService {
       if (eve, n, t) {
         this.trackEvent(eve, n, t)
     }
-}
 // Export singleton instance
 export const analytics = new AnalyticsService()
 // Export convenience functions

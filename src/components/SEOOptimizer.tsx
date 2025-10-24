@@ -31,7 +31,6 @@ const SEOOptimizer: React.FC;
   // TODO: Add content;
  ,
     }
-}
     // Update document title,;
     document.title = fullTitle;
     // Update meta description,;
@@ -95,7 +94,6 @@ export const updateMetaProperty = (property: strin,
     // TODO: Add content;
  ,
     }
-}
       let meta = document.querySelector(`meta[property='${ proper, t, y }']`);
       if (me, t, a) {;
     // TODO: Add content;
@@ -126,7 +124,6 @@ export const updateMetaName = (name: strin,
     // TODO: Add content;
  ,
     }
-}
       let meta = document.querySelector(`meta[name='${ na, m, e }']`);
       if (me, t, a) {;
     // TODO: Add content;

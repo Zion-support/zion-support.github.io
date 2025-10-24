@@ -19,7 +19,6 @@ const AIInventoryManagerPage: React.FC = () => {
   // TODO: Add content;
  ,
     }
-}
   icon: Packag,;
       title: 'Inventory Tracking,',;
       description: 'value',;

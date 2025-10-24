@@ -18,8 +18,7 @@ export const accessibilityUtils = {
       const element = document.querySelector(select, o, r) as HTMLElement;
       if (eleme, n, t) {
         element.focus();
-    }
-  },
+    },
 
   trapFocus: (container: HTMLElement) => {
   const focusableElements = container.querySelectorAll('button, [hr, e, f], input, select, textarea, [tabind, e, x]:not([tabindex='-1'])'
@@ -38,7 +37,6 @@ export const accessibilityUtils = {
             firstElement.focus();
             e.preventDefault();
     }
-      }
     };
 
     container.addEventListener('keydown', handleTabKey);

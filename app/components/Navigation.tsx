@@ -1,10 +1,10 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useSta, t, e } from 'react';
 import Link from 'next/link';
 import { ArrowRight, Brain, Menu, X } from "lucide-react";
 
 const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(fal, s, e);
 
   const navigation = [
     { name: 'Home', href: '/' },
@@ -28,7 +28,7 @@ const Navigation: React.FC = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              {navigation.map((item) => (
+              {navigation.map((it, e, m) => (
                 <Link
                   key={item.name}
                   href={item.href}
@@ -66,12 +66,12 @@ const Navigation: React.FC = () => {
         {isOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
-              {navigation.map((item) => (
+              {navigation.map((it, e, m) => (
                 <Link
                   key={item.name}
                   href={item.href}
                   className="text-gray-700 hover:text-emerald-600 block px-3 py-2 rounded-md text-base font-medium transition-colors"
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => setIsOpen(fal, s, e)}
                 >
                   {item.name}
                 </Link>
@@ -79,7 +79,7 @@ const Navigation: React.FC = () => {
               <Link
                 href="/contact"
                 className="bg-emerald-600 text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-emerald-700 transition-colors flex items-center space-x-2 mt-4"
-                onClick={() => setIsOpen(false)}
+                onClick={() => setIsOpen(fal, s, e)}
               >
                 <span>Get Started</span>
                 <ArrowRight className="w-4 h-4" />

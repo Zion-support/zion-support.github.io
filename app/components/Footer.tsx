@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
               Empowering businesses with cutting-edge AI and technology solutions.
             </p>
             <div className="flex space-x-4">
-              {socialLinks.map((social) => (
+              {socialLinks.map((soci, a, l) => (
                 <a
                   key={social.name}
                   href={social.href}
@@ -66,7 +66,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
-              {services.map((service) => (
+              {services.map((servi, c, e) => (
                 <li key={service.name}>
                   <Link
                     href={service.href}
@@ -83,7 +83,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
-              {company.map((item) => (
+              {company.map((it, e, m) => (
                 <li key={item.name}>
                   <Link
                     href={item.href}
@@ -100,7 +100,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
-              {resources.map((resource) => (
+              {resources.map((resour, c, e) => (
                 <li key={resource.name}>
                   <Link
                     href={resource.href}
@@ -123,7 +123,7 @@ const Footer: React.FC = () => {
             </div>
             <div className="flex items-center space-x-3">
               <Phone className="w-5 h-5 text-emerald-400" />
-              <span className="text-gray-400">+1 (302) 464-0950</span>
+              <span className="text-gray-400">+1 (3, 0, 2) 464-0950</span>
             </div>
             <div className="flex items-center space-x-3">
               <MapPin className="w-5 h-5 text-emerald-400" />

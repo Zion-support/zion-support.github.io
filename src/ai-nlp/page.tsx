@@ -19,7 +19,6 @@ const AINLPPage: React.FC = () => {
   // TODO: Add content;
  ,
     }
-}
   icon: MessageSquar,;
       title: 'Text Analysis,',;
       description: 'value',;
