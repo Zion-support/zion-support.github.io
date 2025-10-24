@@ -1,136 +1,137 @@
-const fs = require('fs');
-const path = require('path');
+#!/usr/bin/env node
 
-// Function to fix specific JSX syntax issues
-function fixJSXSyntax(content) {
-  let fixed = content;
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
+import { fileURLToPath } from 'url';
 
-  // Fix the specific issue: Expected ',', got 'className'
-  // This happens when there's a missing comma or semicolon before className
-  fixed = fixed.replace(/([^,;])\s*\n\s*<div className/g, '$1,\n    <div className');
-  fixed = fixed.replace(/([^,;])\s*\n\s*<span className/g, '$1,\n    <span className');
-  fixed = fixed.replace(/([^,;])\s*\n\s*<h[1-6] className/g, '$1,\n    <h$2 className');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-  // Fix JSX element structure - ensure proper nesting
-  fixed = fixed.replace(/<div([^>]*)>([\s\S]*?)<\/div>\s*<div([^>]*)>([\s\S]*?)<\/div>/g, (match, div1Attrs, div1Content, div2Attrs, div2Content) => {
-    return `<div${div1Attrs}>\n      ${div1Content}\n      <div${div2Attrs}>\n        ${div2Content}\n      </div>\n    </div>`;
-  });
+console.log('🔧 Starting final JSX fix...');
 
-  // Fix JSX element structure - wrap multiple elements in fragments
-  fixed = fixed.replace(/return\s*\(\s*<div([^>]*)>[\s\S]*?<\/div>\s*<div([^>]*)>[\s\S]*?<\/div>\s*\)/g, (match) => {
-    return match.replace(/return\s*\(\s*/, 'return (\n    <>\n      ').replace(/\s*\)$/, '\n    </>\n  )');
-  });
-
-  // Fix missing semicolons and commas
-  fixed = fixed.replace(/([^,;])\s*\n\s*<\/div>\s*<div/g, '$1;\n    </div>\n    <div');
-  fixed = fixed.replace(/([^,;])\s*\n\s*<\/div>\s*<span/g, '$1;\n    </div>\n    <span');
-  fixed = fixed.replace(/([^,;])\s*\n\s*<\/div>\s*<h[1-6]/g, '$1;\n    </div>\n    <h$2');
-
-  // Fix JSX attribute syntax
-  fixed = fixed.replace(/([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*{([^}]+)}/g, '$1={$2}');
-  fixed = fixed.replace(/([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*"([^"]*)"/g, '$1="$2"');
-
-  // Fix className syntax
-  fixed = fixed.replace(/className\s*=\s*"([^"]*)"\s*>/g, 'className="$1">');
-  fixed = fixed.replace(/className\s*=\s*{([^}]+)}\s*>/g, 'className={$1}>');
-
-  // Fix JSX element spacing
-  fixed = fixed.replace(/<([A-Z][a-zA-Z0-9]*)\s+([^>]*?)\s*>/g, (match, tag, attrs) => {
-    const cleanAttrs = attrs.replace(/\s+/g, ' ').trim();
-    return `<${tag} ${cleanAttrs}>`;
-  });
-
-  // Fix missing closing tags
-  fixed = fixed.replace(/<div([^>]*)>(?!.*<\/div>)([\s\S]*?)<\/div>/g, '<div$1>$2</div>');
-  fixed = fixed.replace(/<span([^>]*)>(?!.*<\/span>)([\s\S]*?)<\/span>/g, '<span$1>$2</span>');
-  fixed = fixed.replace(/<p([^>]*)>(?!.*<\/p>)([\s\S]*?)<\/p>/g, '<p$1>$2</p>');
-  fixed = fixed.replace(/<h[1-6]([^>]*)>(?!.*<\/h[1-6]>)([\s\S]*?)<\/h[1-6]>/g, (match, attrs, content) => {
-    const level = match.match(/<h([1-6])/)[1];
-    return `<h${level}${attrs}>${content}</h${level}>`;
-  });
-
-  // Fix React component structure
-  fixed = fixed.replace(/const\s+([A-Z][a-zA-Z0-9]*)\s*=\s*\(\s*\)\s*=>\s*{([\s\S]*?)return\s*\(([\s\S]*?)\);?\s*}/g, (match, componentName, body, returnContent) => {
-    return `const ${componentName} = () => {\n${body}\n  return (\n    ${returnContent.trim()}\n  );\n}`;
-  });
-
-  // Fix export default statements
-  fixed = fixed.replace(/export\s+default\s+([A-Z][a-zA-Z0-9]*);?/g, 'export default $1;');
-
-  // Fix import statements
-  fixed = fixed.replace(/import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"];?/g, 'import { $1 } from \'$2\';');
-
-  // Fix JSX fragment syntax
-  fixed = fixed.replace(/<>\s*<div([^>]*)>[\s\S]*?<\/div>\s*<div([^>]*)>[\s\S]*?<\/div>\s*<\/>/g, (match) => {
-    return match.replace(/<>\s*/, '<>\n      ').replace(/\s*<\/>/, '\n    </>');
-  });
-
-  // Fix missing semicolons in JSX
-  fixed = fixed.replace(/([^;}])\s*\n\s*export/g, '$1;\nexport');
-  fixed = fixed.replace(/([^;}])\s*\n\s*import/g, '$1;\nimport');
-
-  // Fix object property syntax in JSX props
-  fixed = fixed.replace(/([a-zA-Z_$][a-zA-Z0-9_$]*)\s*:\s*([^,}]+),?\s*/g, '$1: $2,');
-
-  // Clean up extra whitespace
-  fixed = fixed.replace(/\n\s*\n\s*\n/g, '\n\n');
-  fixed = fixed.replace(/^\s+$/gm, '');
-
-  return fixed;
+// Function to find all TypeScript/JavaScript files
+function findFiles(dir, extensions = ['.tsx', '.ts', '.js', '.jsx']) {
+  let files = [];
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory() && !item.startsWith('.') && !item.includes('node_modules')) {
+      files = files.concat(findFiles(fullPath, extensions));
+    } else if (extensions.some(ext => item.endsWith(ext))) {
+      files.push(fullPath);
+    }
+  }
+  
+  return files;
 }
 
-// Function to process a single file
+// Function to fix JSX structure issues
+function fixJSXStructure(content) {
+  // Fix broken JSX structure - ensure proper opening and closing tags
+  content = content.replace(/return\s*\(\s*<div className="([^"]+)"><\/div>\s*<Navigation \/>/g, 
+    'return (\n    <div className="$1">\n      <Navigation />');
+  
+  content = content.replace(/<div className="([^"]+)"><\/div>\s*<Head>/g, 
+    '<div className="$1">\n      <Head>');
+  
+  content = content.replace(/<Head>\s*<title>([^<]+)<\/title>\s*<meta name="description" content="([^"]+)" \/>\s*<\/Head>\s*<div className="([^"]+)">/g, 
+    '<Head>\n        <title>$1</title>\n        <meta name="description" content="$2" />\n      </Head>\n      <div className="$3">');
+  
+  // Fix missing opening tags
+  content = content.replace(/<div className="([^"]+)">\s*<div className="([^"]+)">/g, 
+    '<div className="$1">\n        <div className="$2">');
+  
+  // Fix missing closing tags
+  content = content.replace(/<button className="([^"]+)">\s*([^<]+)\s*<\/button><\/div>/g, 
+    '<button className="$1">\n              $2\n            </button>\n          </div>');
+  
+  // Fix section structure
+  content = content.replace(/<section className="([^"]+)"><\/section>\s*<div className="([^"]+)"><\/div>,/g, 
+    '<section className="$1">\n        <div className="$2">');
+  
+  // Fix CSS class syntax
+  content = content.replace(/md:\s*text-6xl/g, 'md:text-6xl');
+  content = content.replace(/sm:\s*px-6/g, 'sm:px-6');
+  content = content.replace(/hover:\s*bg-white/g, 'hover:bg-white');
+  
+  // Fix object syntax
+  content = content.replace(/,;/g, ',');
+  content = content.replace(/,\s*}/g, '}');
+  content = content.replace(/{\s*,/g, '{');
+  
+  // Fix array syntax
+  content = content.replace(/{\s*;/g, '{');
+  content = content.replace(/,\s*;/g, ',');
+  content = content.replace(/;\s*}/g, '}');
+  
+  // Fix function declarations
+  content = content.replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*{\s*$/gm, 'const $1 = () => {\n');
+  
+  // Fix return statements
+  content = content.replace(/return\s*\(\s*$/gm, 'return (\n    ');
+  
+  // Fix JSX fragments
+  content = content.replace(/<>\s*<div([^>]*)>\s*<\/div>\s*<\/>/g, '<div$1></div>');
+  
+  // Fix missing semicolons
+  content = content.replace(/([^;}])\n(\s*[a-zA-Z_$][a-zA-Z0-9_$]*\s*[=:])/g, '$1;\n$2');
+  
+  // Fix destructuring
+  content = content.replace(/const\s*{\s*([^}]+)\s*}\s*=\s*([^;]+);/g, 'const { $1 } = $2;');
+  
+  // Fix empty interfaces
+  content = content.replace(/interface\s+(\w+)\s*{\s*}\s*/g, 'interface $1 {\n  [key: string]: any;\n}');
+  
+  return content;
+}
+
+// Main function to process files
 function processFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixJSXSyntax(content);
+    let content = fs.readFileSync(filePath, 'utf8');
+    const originalContent = content;
     
-    if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed);
-      console.log(`Fixed JSX syntax: ${filePath}`);
+    // Apply fixes
+    content = fixJSXStructure(content);
+    
+    // Only write if content changed
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`✅ Fixed: ${filePath}`);
       return true;
     }
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-// Function to recursively find and process files
-function processDirectory(dirPath) {
-  let fixedCount = 0;
-  
-  try {
-    const items = fs.readdirSync(dirPath);
     
-    for (const item of items) {
-      const fullPath = path.join(dirPath, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        // Skip node_modules and other common directories
-        if (!['node_modules', '.git', '.next', 'dist', 'build'].includes(item)) {
-          fixedCount += processDirectory(fullPath);
-        }
-      } else if (item.endsWith('.tsx') || item.endsWith('.jsx')) {
-        if (processFile(fullPath)) {
-          fixedCount++;
-        }
-      }
-    }
+    return false;
   } catch (error) {
-    console.error(`Error processing directory ${dirPath}:`, error.message);
+    console.error(`❌ Error processing ${filePath}:`, error.message);
+    return false;
   }
-  
-  return fixedCount;
 }
 
-// Main execution
-console.log('Starting final JSX syntax fix...');
-const startTime = Date.now();
+// Find all files to process
+const appDir = path.join(__dirname, 'app');
+const files = findFiles(appDir);
 
-const fixedCount = processDirectory('/workspace');
+console.log(`📁 Found ${files.length} files to process...`);
 
-const endTime = Date.now();
-console.log(`\nCompleted! Fixed ${fixedCount} files in ${endTime - startTime}ms`);
+let fixedCount = 0;
+for (const file of files) {
+  if (processFile(file)) {
+    fixedCount++;
+  }
+}
+
+console.log(`🎉 Fixed ${fixedCount} files`);
+
+// Try to build after fixes
+console.log('🔨 Attempting build...');
+try {
+  execSync('npm run build', { stdio: 'inherit' });
+  console.log('✅ Build successful!');
+} catch (error) {
+  console.log('⚠️ Build still has issues, continuing with fixes...');
+}

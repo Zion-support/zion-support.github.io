@@ -1,114 +1,124 @@
-const fs = require('fs');
-const path = require('path');
+#!/usr/bin/env node
 
-// Function to completely rewrite malformed files;
-function fixMalformedFile(filePath) {;
-try {;
-let content = fs.readFileSync(filePath, 'utf8');
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
+import { fileURLToPath } from 'url';
 
-    // Extract the function name and basic structure;
-const functionMatch = content.match(/export default function (\w+)\(\)/);
-    if (!functionMatch) return false;
-;
-const functionName = functionMatch[1];
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-    // Extract title from the content;
-const titleMatch = content.match(/<title>([^<]+)<\/title>/);
-    const title = titleMatch ? titleMatch[1] : 'Page';
+console.log('🔧 Starting final syntax fix...');
 
-    // Extract description;
-const descMatch = content.match(/content="([^"]+)"/);
-    const description = descMatch ? descMatch[1] : 'Professional services by Zion Tech Group';
+// Function to find all TypeScript/JavaScript files
+function findFiles(dir, extensions = ['.tsx', '.ts', '.js', '.jsx']) {
+  let files = [];
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory() && !item.startsWith('.') && !item.includes('node_modules')) {
+      files = files.concat(findFiles(fullPath, extensions));
+    } else if (extensions.some(ext => item.endsWith(ext))) {
+      files.push(fullPath);
+    }
+  }
+  
+  return files;
+}
 
-    // Extract the main heading;
-const headingMatch = content.match(/<h1[^></h1>]*>([^<]+)<\/h1>/);
-    const heading = headingMatch ? headingMatch[1] : title;
+// Function to fix specific syntax issues
+function fixSyntaxIssues(content) {
+  // Fix metadata object syntax - remove semicolons after properties
+  content = content.replace(/export const metadata: Metadata = {;/g, 'export const metadata: Metadata = {');
+  content = content.replace(/title: '([^']+)',;/g, "title: '$1',");
+  content = content.replace(/description: '([^']+)',;/g, "description: '$1',");
+  content = content.replace(/keywords: '([^']+)',;/g, "keywords: '$1',");
+  content = content.replace(/openGraph: {;/g, 'openGraph: {');
+  content = content.replace(/type: '([^']+)'}};/g, "type: '$1'}}");
+  
+  // Fix JSX structure issues
+  content = content.replace(/<Head>\s*<title>([^<]+)<\/title>\s*<meta name="description" content="([^"]+)" \/>\s*<\/Head>\s*<div className="([^"]+)"><\/div>\s*<div className="([^"]+)"><\/div>,/g, 
+    '<Head>\n        <title>$1</title>\n        <meta name="description" content="$2" />\n      </Head>\n      <div className="$3">\n        <div className="$4">');
+  
+  // Fix button syntax
+  content = content.replace(/<button className="([^"]+)">,\s*([^<]+)\s*<\/button><\/div>/g, '<button className="$1">\n              $2\n            </button>\n          </div>');
+  
+  // Fix array syntax
+  content = content.replace(/{\s*;/g, '{');
+  content = content.replace(/,\s*;/g, ',');
+  content = content.replace(/;\s*}/g, '}');
+  
+  // Fix object property syntax
+  content = content.replace(/(\w+):\s*([^,;]+),;/g, '$1: $2,');
+  
+  // Fix JSX closing tags
+  content = content.replace(/<\/div>\s*<\/div>\s*<\/section>/g, '</div>\n        </div>\n      </section>');
+  
+  // Fix missing closing tags
+  content = content.replace(/<div className="([^"]+)">\s*$/gm, '<div className="$1">\n        ');
+  
+  // Fix CSS class syntax
+  content = content.replace(/sm:px-6/g, 'sm:px-6');
+  content = content.replace(/hover:bg-white/g, 'hover:bg-white');
+  
+  // Fix function declarations
+  content = content.replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*{\s*$/gm, 'const $1 = () => {\n');
+  
+  // Fix return statements
+  content = content.replace(/return\s*\(\s*$/gm, 'return (\n    ');
+  
+  // Fix JSX fragments
+  content = content.replace(/<>\s*<div([^>]*)>\s*<\/div>\s*<\/>/g, '<div$1></div>');
+  
+  return content;
+}
 
-    // Extract the paragraph content;
-const paragraphMatch = content.match(/<p[^></p>]*>([^<]+)<\/p>/);
-    const paragraph = paragraphMatch ? paragraphMatch[1] : `${title} services. Transform your business with our expert solutions.`;
-
-    // Create a clean, properly formatted file;
-const cleanContent = `'use client';
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
-import Footer from '../components/Footer';
-;
-export default function ${functionName}() {;
-return (
-    <div>
-      </div>
-      <Head>
-        <title>${title}</title>
-        <meta name="description" content="${description}" />
-      </Head>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16 text-center"></div>
-          <h1 className="text-4xl font-bold text-white mb-6"></h1>;
-${heading,}
-          </h1>
-          <p className="text-lg text-gray-300 mb-8"></p>;
-${paragraph}
-          </p>
-          <Link href="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit">;
-Contact Us
-            <ArrowRightclassName="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
-      <Footer />
-    </div>
-  );
-,}`;
-;
-fs.writeFileSync(filePath, cleanContent, 'utf8');
-    console.log(`Fixed malformed file: ${filePath,}`);
-    return true;
-  } catch (error) {;
-console.error(`Error processing ${filePath}:`, error.message);
+// Main function to process files
+function processFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    const originalContent = content;
+    
+    // Apply fixes
+    content = fixSyntaxIssues(content);
+    
+    // Only write if content changed
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`✅ Fixed: ${filePath}`);
+      return true;
+    }
+    
+    return false;
+  } catch (error) {
+    console.error(`❌ Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Function to find and fix all malformed page files;
-function fixAllPageFiles() {;
-const appDir = './app';
-  const files = fs.readdirSync(appDir);
-  let fixedCount = 0;
-;
-files.forEach(file => {;
-if (file.startsWith('5g-') || file.startsWith('ai-') || file.startsWith('src/')) {;
-const filePath = path.join(appDir, file, 'page.tsx');
-      if (fs.existsSync(filePath)) {;
-if (fixMalformedFile(filePath)) {;
-fixedCount++;
-        }
-      }
-    }
-  });
+// Find all files to process
+const appDir = path.join(__dirname, 'app');
+const files = findFiles(appDir);
 
-  // Also check src directory;
-if (fs.existsSync('./src')) {;
-const srcFiles = fs.readdirSync('./src');
-    srcFiles.forEach(file => {;
-if (file.startsWith('5g-') || file.startsWith('ai-')) {;
-const filePath = path.join('./src', file, 'page.tsx');
-        if (fs.existsSync(filePath)) {;
-if (fixMalformedFile(filePath)) {;
-fixedCount++;
-          }
-        }
-      }
-    });
+console.log(`📁 Found ${files.length} files to process...`);
+
+let fixedCount = 0;
+for (const file of files) {
+  if (processFile(file)) {
+    fixedCount++;
   }
-;
-return fixedCount;
 }
 
-// Main execution;
-console.log('Starting final syntax fix...');
-const fixedCount = fixAllPageFiles();
-console.log(`Fixed ${fixedCount} malformed page files.`);
-console.log('Final syntax fix completed.');
+console.log(`🎉 Fixed ${fixedCount} files`);
+
+// Try to build after fixes
+console.log('🔨 Attempting build...');
+try {
+  execSync('npm run build', { stdio: 'inherit' });
+  console.log('✅ Build successful!');
+} catch (error) {
+  console.log('⚠️ Build still has issues, continuing with fixes...');
+}

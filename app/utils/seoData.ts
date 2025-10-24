@@ -6,59 +6,63 @@ export interface StructuredData {
   url: string;
   logo?: string;
   sameAs?: string[];
-  telephone?: string;
-  email?: string;
-  openingHours?: string[];
-  priceRange?: string;
-  contactPoint?: {
-    '@type': string;
-    telephone: string;
-    contactType: string;
-  };
-  address?: {
-    '@type': string;
-    streetAddress: string;
-    addressLocality: string;
-    addressRegion: string;
-    postalCode: string;
-    addressCountry: string;
-  };
 }
 
-export const generateStructuredData = (data: Partial<StructuredData>): StructuredData => {
-  return {
+export interface SEOData {
+  title: string;
+  description: string;
+  keywords: string[];
+  canonical?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  ogUrl?: string;
+  twitterCard?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string;
+  structuredData?: StructuredData;
+}
+
+export const defaultSEOData: SEOData = {
+  title: 'Zion Tech Group - AI & Technology Solutions',
+  description: 'Leading provider of AI-powered solutions, 5G technology, and innovative software development services.',
+  keywords: ['AI', 'Artificial Intelligence', '5G', 'Technology', 'Software Development', 'Machine Learning'],
+  canonical: 'https://ziontechgroup.com',
+  ogTitle: 'Zion Tech Group - AI & Technology Solutions',
+  ogDescription: 'Leading provider of AI-powered solutions, 5G technology, and innovative software development services.',
+  ogImage: 'https://ziontechgroup.com/og-image.jpg',
+  ogUrl: 'https://ziontechgroup.com',
+  twitterCard: 'summary_large_image',
+  twitterTitle: 'Zion Tech Group - AI & Technology Solutions',
+  twitterDescription: 'Leading provider of AI-powered solutions, 5G technology, and innovative software development services.',
+  twitterImage: 'https://ziontechgroup.com/twitter-image.jpg',
+  structuredData: {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
-    description: 'Leading provider of AI and IT solutions for modern businesses',
+    description: 'Leading provider of AI-powered solutions, 5G technology, and innovative software development services.',
     url: 'https://ziontechgroup.com',
     logo: 'https://ziontechgroup.com/logo.png',
     sameAs: [
-      'https://twitter.com/ziontechgroup',
       'https://linkedin.com/company/ziontechgroup',
+      'https://twitter.com/ziontechgroup',
       'https://github.com/ziontechgroup'
-    ],
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+1-555-123-4567',
-      contactType: 'customer service'
-    },
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: '123 Tech Street',
-      addressLocality: 'San Francisco',
-      addressRegion: 'CA',
-      postalCode: '94105',
-      addressCountry: 'US'
-    },
-    ...data
+    ]
+  }
+};
+
+export const generatePageSEO = (pageData: Partial<SEOData>): SEOData => {
+  return {
+    ...defaultSEOData,
+    ...pageData,
+    keywords: [...defaultSEOData.keywords, ...(pageData.keywords || [])]
   };
 };
 
-export const defaultSEOData = {
-  title: 'Zion Tech Group - AI Solutions',
-  description: 'Leading provider of AI and IT solutions for modern businesses. Transform your operations with cutting-edge technology.',
-  keywords: 'AI, artificial intelligence, technology solutions, business automation, IT services, cloud computing, cybersecurity',
-  ogImage: '/og-image.jpg',
-  canonical: 'https://ziontechgroup.com'
+export const generateStructuredData = (data: Partial<StructuredData>): StructuredData => {
+  return {
+    ...defaultSEOData.structuredData!,
+    ...data
+  };
 };

@@ -1,35 +1,41 @@
-'use client';
 import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import { Metadata} from 'next';
+import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-export default function pagePage() {
+export const metadata: Metadata = {
+  title: 'Page - Zion Tech Group',
+  description: 'Professional page services by Zion Tech Group.',
+  keywords: 'page, services, technology, AI, IT solutions'
+};
+
+const PagePage = () => {
   return (
-    <div>
-      <Head>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional services by Zion Tech Group." />
-      </Head>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    <div className="min-h-screen bg-white">
+      <Navigation />
+      
+      <section className="pt-20 pb-16 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Page
           </h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Professional services by Zion Tech Group.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Professional page services by Zion Tech Group.
           </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
-          >
-            Get Started
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
-      </div>
+          <div className="space-y-4">
+            <p className="text-gray-400">
+              Our page solutions are designed to help your business grow and succeed.
+            </p>
+            <p className="text-gray-400">
+              Contact us to learn more about how we can help you achieve your goals.
+            </p>
+          </div>
+                </div>
+      </section>
+
       <Footer />
     </div>
   );
-}
+};
+
+export default PagePage;

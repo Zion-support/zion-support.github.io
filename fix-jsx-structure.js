@@ -1,89 +1,35 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';'#!/usr/bin/env node;
+// Function to fix JSX structure issues;
+function fixJSXStructure(content) {let fixed = content;
 
-function fixJSXStructure(filePath) {
+  // Fix remaining className spacing issues;
+  fixed = fixed.replace(/text-whitemb-/g, 'text-white mb-');'  fixed = fixed.replace(/text-gray-300mb-/g, 'text-gray-300 mb-');'  fixed = fixed.replace(/flexspace-/g, 'flex space-');'  fixed = fixed.replace(/flexitems-/g, 'flex items-');'  fixed = fixed.replace(/w-4 h-4ml-/g, 'w-4 h-4 ml-');'  fixed = fixed.replace(/w-5 h-5ml-/g, 'w-5 h-5 ml-');'  fixed = fixed.replace(/text-whitemb-/g, 'text-white mb-');'  fixed = fixed.replace(/hover: text-cyan-400transition-colors/g, 'hover: text-cyan-400 transition-colors');'  fixed = fixed.replace(/items-centertext-gray-300/g, 'items-center text-gray-300');'  fixed = fixed.replace(/w-4 h-4mr-/g, 'w-4 h-4 mr-');'  fixed = fixed.replace(/pt-8text-center/g, 'pt-8 text-center');'  fixed = fixed.replace(/from-slate-900pt-20/g, 'from-slate-900 pt-20');'  fixed = fixed.replace(/py-16text-center/g, 'py-16 text-center');'
+  // Fix self-closing divs that should be opening tags;
+  fixed = fixed.replace(/<div className="([^"]*)"\  />\s*<([^>]+)>/g, '<div className="$1">\n        <$2>');"  fixed = fixed.replace(/<footer className="([^"]*)" \  />\s*<div/g, '<footer className="$1">\n      <div');"  fixed = fixed.replace(/<ul className="([^"]*)"\  />\s*<li/g, '<ul className="$1">\n              <li');"  fixed = fixed.replace(/<p className="([^"]*)" \  />\s*([^<]+)/g, '<p className="$1">\n              $2');"'  // Fix missing closing tags;
+  fixed = fixed.replace(/<div \  />\s*<h4/g, '<div>\n            <h4');'  fixed = fixed.replace(/<div \  />\s*<h4/g, '<div>\n            <h4');'
+  // Fix Link components that should be self-closing;
+  fixed = fixed.replace(/<Link\s+([^>]+)\s*\/>\s*([^<]+)\s*<([^>]+)\s*\/>/g, '<Link $1>\n          $2\n          <$3   />\n        </Link>');'
+  // Fix specific patterns;
+  fixed = fixed.replace(/<Link\s+to="\/contact"\s+className="[^"]*"\s*\  />\s*Contact Us\s*<ArrowRight[^>]*\/>/g,"    '<Link\n          to="/contact"\n          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"\n        >\n          Contact Us\n          <ArrowRight className="w-5 h-5 ml-2"/>\n        </Link>');"'  // Fix malformed p tags;
+  fixed = fixed.replace(/<p className="([^"]*)" \  />\s*([^<]+)\s*<\/p>/g, '<p className="$1">\n              $2\n            </p>');"'  return fixed;
+
+// Function to process a single file;
+function processFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
-    
-    // Fix malformed JSX structure
-    content = content.replace(/<div><\/div>\s*<Head>/g, '<div>\n      <Head>');
-    content = content.replace(/<div><\/div>\s*<div/g, '<div>\n      <div');
-    content = content.replace(/<div><\/div>\s*<section/g, '<div>\n      <section');
-    content = content.replace(/<div><\/div>\s*<main/g, '<div>\n      <main');
-    content = content.replace(/<div><\/div>\s*<header/g, '<div>\n      <header');
-    content = content.replace(/<div><\/div>\s*<footer/g, '<div>\n      <footer');
-    
-    // Fix missing closing tags
-    content = content.replace(/<div([^>]*)>\s*$/gm, '<div$1>');
-    content = content.replace(/<section([^>]*)>\s*$/gm, '<section$1>');
-    content = content.replace(/<main([^>]*)>\s*$/gm, '<main$1>');
-    content = content.replace(/<article([^>]*)>\s*$/gm, '<article$1>');
-    content = content.replace(/<header([^>]*)>\s*$/gm, '<header$1>');
-    content = content.replace(/<footer([^>]*)>\s*$/gm, '<footer$1>');
-    content = content.replace(/<nav([^>]*)>\s*$/gm, '<nav$1>');
-    content = content.replace(/<aside([^>]*)>\s*$/gm, '<aside$1>');
-    
-    // Fix JSX fragments
-    content = content.replace(/<>\s*$/gm, '<>');
-    content = content.replace(/^\s*<\/>/gm, '</>');
-    
-    // Fix missing semicolons in JSX
-    content = content.replace(/(\w+);\s*$/gm, '$1');
-    
-    // Fix missing closing braces
-    const openBraces = (content.match(/\{/g) || []).length;
-    const closeBraces = (content.match(/\}/g) || []).length;
-    if (openBraces > closeBraces) {
-      content += '\n'.repeat(openBraces - closeBraces) + '}';
-    }
-    
-    // Fix missing closing parentheses
-    const openParens = (content.match(/\(/g) || []).length;
-    const closeParens = (content.match(/\)/g) || []).length;
-    if (openParens > closeParens) {
-      content += ')'.repeat(openParens - closeParens);
-    }
-    
-    // Fix missing closing brackets
-    const openBrackets = (content.match(/\[/g) || []).length;
-    const closeBrackets = (content.match(/\]/g) || []).length;
-    if (openBrackets > closeBrackets) {
-      content += ']'.repeat(openBrackets - closeBrackets);
-    }
-    
-    // Only write if content changed
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    
+    const content = fs.readFileSync(filePath, 'utf8');'    const fixed = fixJSXStructure(content);
+
+    if (content !== fixed) {
+      fs.writeFileSync(filePath, fixed, 'utf8');'      console.log(`Fixed JSX structure: ${filePath}`);`      return true;
     return false;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
-}
+  } catch (error) {console.error(`Error processing ${filePath}:`, error.message);`    return false;
 
-function findAndFixFiles(dir) {
-  const files = fs.readdirSync(dir);
-  
-  for (const file of files) {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-      findAndFixFiles(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js')) {
-      fixJSXStructure(filePath);
-    }
-  }
-}
+// Main function;
+async function main() {console.log('Starting to fix JSX structure issues...');'
+  // Get all TypeScript/TSX files;
+  const files = await glob('**/*.{ts,tsx}', {ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**']});'
+  let fixedCount = 0;
 
-// Start fixing from the app directory
-findAndFixFiles('./app');
-findAndFixFiles('./components');
-findAndFixFiles('./src');
+    if (processFile(file)) {fixedCount++;});
 
-console.log('JSX structure fixing completed!');
+  console.log(`\nFixed JSX structure in ${fixedCount} files out of ${files.length} total files.`);`
+main().catch(console.error);</div></div></div></div></div></div></div></div>
