@@ -165,7 +165,6 @@ const ContentCarousel: React.FC = () => {const [currentSlide, setCurrentSlide] =
                       </div>
                     </div>
                   </div>
-                </div>
               ))}
     <div className=&quot;bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4&quot;></div>
       <div className=&quot;max-w-7xl mx-auto&quot;>{/* Header */}</div>
@@ -214,7 +213,6 @@ const ContentCarousel: React.FC = () => {const [currentSlide, setCurrentSlide] =
                     <ArrowRight className=&quot;w-5 h-5&quot; />
                     Learn More
                 </div>
-              </div>
               {/* Visual Element */}
               <div className=&quot;relative&quot;></div>
                 <div className=&quot;aspect-square bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center&quot;></div>
@@ -257,7 +255,6 @@ const ContentCarousel: React.FC = () => {const [currentSlide, setCurrentSlide] =
             className=&quot;absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20&quot;></button>
             <ChevronRight className=&quot;h-6 w-6&quot; />
           </button>
-        </div>
 {/* Slide Indicators */}
             className=&quot;absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20&quot;
           >
@@ -270,7 +267,6 @@ const ContentCarousel: React.FC = () => {const [currentSlide, setCurrentSlide] =
           ></button>
             <ChevronRight className=&quot;w-6 h-6&quot; />
           </button>
-        </div>
         {/* Slide Indicators */}
         <div className=&quot;flex justify-center mt-8 space-x-2&quot;>{slides.map((_, index) => (</div>
             <button
@@ -329,9 +325,8 @@ const ContentCarousel: React.FC = () => {const [currentSlide, setCurrentSlide] =
 export default ContentCarouselPage;
             <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
           </button>
-        </div>
       </div>
-    </div>
+    </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
   )
 }
 ;"

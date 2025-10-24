@@ -265,6 +265,8 @@ Our <span className=&quot;text-transparent bg-clip-text bg-gradient-to-r from-bl
 <h3 className=&quot;text-xl font-semibold text-white mb-2&quot;>{achievement.title}</h3>
 <p className=&quot;text-gray-300 text-sm&quot;>{achievement.description}</p>
 </div>
+<h3 className="text-xl font-semibold text-white mb-2" >{achievement.title}</h3>
+<p className="text-gray-300 text-sm" >{achievement.description}</p>
 ))}
 <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16&quot;>{statistics.map((stat, index) => (</div>
 <div key={index} className=&quot;bg-white/5 backdrop-blur-sm rounded-xl p-8 text-center hover:bg-white/10 transition-all duration-300&quot;></div>
@@ -294,11 +296,8 @@ Our <span className=&quot;text-transparent bg-clip-text bg-gradient-to-r from-bl
 <div key={statIndex} className=&quot;flex items-center text-gray-300 text-sm&quot;></div>
 <CheckCircle className=&quot;w-4 h-4 text-green-400 mr-2 flex-shrink-0&quot; />
 <span>{stat}</span>
-</div>
 ))}
 </div>
-</div>
-))}
 </div>
 </div>
 {/* Achievements Section */}
@@ -316,6 +315,9 @@ Our <span className=&quot;text-transparent bg-clip-text bg-gradient-to-r from-bl
 <h4 className=&quot;text-lg font-semibold text-white mb-2&quot;>{achievement.title}</h4>
 <p className=&quot;text-gray-300 text-sm&quot;>{achievement.description}</p>
 </div>
+<div className="text-3xl font-bold text-white mb-2" >{achievement.value}</div>
+<h4 className="text-lg font-semibold text-white mb-2" >{achievement.title}</h4>
+<p className="text-gray-300 text-sm" >{achievement.description}</p>
 ))}
 </div>
 </div>

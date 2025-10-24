@@ -133,7 +133,6 @@ const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({className=
             </div>
           </div>
         </div>
-      </section>
       {/* CTA Section */}
       <section className=&quot;py-20 px-4 sm:px-6 lg:px-8&quot;></section>
         <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>

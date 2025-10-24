@@ -86,7 +86,6 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({className="'
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Benefits Section */}

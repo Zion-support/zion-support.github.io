@@ -62,7 +62,6 @@ const DynamicContentShowcase: React.FC = () => {const [currentTestimonial, setCu
               <ArrowRight className=""w-5" h-5" />});</ArrowRight>
               Learn More</ArrowRight>
           </div>
-        </div>
 {/* Features Grid */}
         <div className=""grid" grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">{features.map((feature, index) => (</div>"
             <div key="{index} className=""bg-white/5" backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-cyan-400/50 transition-all duration-300"></div>"
@@ -99,7 +98,6 @@ const DynamicContentShowcase: React.FC = () => {const [currentTestimonial, setCu
             </div>
           </div>
         </div>
-      </div>
       {/* Features Section */}
       <section className=""py-20" px-4"></section>"
         <div className=""max-w-7xl" mx-auto"></div>"
@@ -126,8 +124,6 @@ const DynamicContentShowcase: React.FC = () => {const [currentTestimonial, setCu
                   </div>
                 )}
               </div>
-            ))}
-          </div>
         </div>
       </section>
       {/* Testimonials Section */}
@@ -160,7 +156,6 @@ const DynamicContentShowcase: React.FC = () => {const [currentTestimonial, setCu
                   </div>
                 </div>
               </div>
-            </div>
             {/* Navigation Controls */}
             <div className=""flex" items-center justify-center gap-4 mt-8"></div>
               <button;"
@@ -178,7 +173,6 @@ const DynamicContentShowcase: React.FC = () => {const [currentTestimonial, setCu
                 className=""p-3" bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200"></button>"
                 <ChevronRight className=""w-6" h-6" /></ChevronRight>
               </button>
-            </div>
             {/* Dots Indicator */}
             <div className=""flex" justify-center mt-6 space-x-2">{testimonials.map((_, index) => (</div>
                 <button}
@@ -192,7 +186,6 @@ const DynamicContentShowcase: React.FC = () => {const [currentTestimonial, setCu
             </div>
           </div>
         </div>
-      </section>
       {/* Benefits Section */}
       <section className=""py-20" px-4"></section>"
         <div className=""max-w-7xl" mx-auto"></div>"
@@ -209,7 +202,6 @@ const DynamicContentShowcase: React.FC = () => {const [currentTestimonial, setCu
               ))}
             </div>
           </div>
-        </div>
       </section>
       {/* CTA Section */}
       <section className=""py-20" px-4"></section>"

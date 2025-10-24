@@ -296,7 +296,6 @@ aria-label=&quot;Close sidebar&quot;
 >
 <X className=&quot;w-6 h-6&quot; />
 </button>
-</div>
 {/* Navigation */}
 <div className=&quot;flex-1 overflow-y-auto py-6&quot;></div>
 <nav className=&quot;space-y-2 px-4&quot;>

@@ -80,7 +80,6 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({classN
                 Learn More
               </button>
         </div>
-      </div>
     );
             </div>
           </div>

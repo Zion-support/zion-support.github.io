@@ -86,7 +86,6 @@ const ServiceWorker: React.FC<ServiceWorkerProps> = ({className="''" }) => {retu
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Benefits Section */}

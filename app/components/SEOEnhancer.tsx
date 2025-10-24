@@ -74,7 +74,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({className="''" }) => {}</SEOEn
             </div>
           </div>
         </div>
-      </section>
       {/* Features Section */}
       <section className=&quot;py-20 px-4 sm:px-6 lg:px-8&quot;></section>
         <div className=&quot;max-w-7xl mx-auto&quot;></div>
@@ -128,7 +127,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({className="''" }) => {}</SEOEn
             ))}
           </div>
         </div>
-      </section>
       {/* CTA Section */}
       <section className=&quot;py-20 px-4 sm:px-6 lg:px-8&quot;></section>
         <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>

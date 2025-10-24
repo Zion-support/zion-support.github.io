@@ -66,7 +66,6 @@ const Navigation: React.FC = () => {
               <span>Get Started</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
-          </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
@@ -90,8 +89,7 @@ const Navigation: React.FC = () => {
                   className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
                   onClick={() => setIsOpen(false)}
                 >
-                  {item.name}
-                </Link>
+                  {item.name}}</Link>
               ))}
               <Link
                 href="/contact"
@@ -101,7 +99,6 @@ const Navigation: React.FC = () => {
                 <span>Get Started</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
-            </div>
           </div>
         )}
       </div>

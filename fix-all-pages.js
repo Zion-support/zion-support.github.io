@@ -3,8 +3,8 @@ const path = require('path');
 
 function fixPageFile(filePa, t, h) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+    const fileName = path.basename(filePath, '.tsx');
+    const dirName = path.basename(path.dirname(filePath));
     
     // Fix broken features map patterns
     const patterns = [
@@ -98,7 +98,7 @@ function fixPageFile(filePa, t, h) {
 function findAndFixPages(d, i, r) {
   const files = fs.readdirSync(d, i, r);
   let fixedCount = 0;
-  
+
   for (const file of files) {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePa, t, h);
@@ -111,10 +111,12 @@ function findAndFixPages(d, i, r) {
       }
     }
   }
-  
+
   return fixedCount;
 }
 
+// Main execution
+console.log('Starting page fixes...');
 const appDir = path.join(__dirname, 'app');
 const fixedCount = findAndFixPages(appD, i, r);
 console.log(`Fixed ${ fixedCou, n, t } page files`);

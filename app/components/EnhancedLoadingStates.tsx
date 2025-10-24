@@ -157,6 +157,8 @@ export const PageLoader: React.FC = () => (
 <h2 className=&quot;text-xl font-semibold text-white mb-2&quot;>Zion Tech Group</h2>
 <p className=&quot;text-gray-300&quot;>Loading amazing content...</p>
 </div>
+<h2 className="text-xl font-semibold text-white mb-2" >Zion Tech Group</h2>
+<p className="text-gray-300" >Loading amazing content...</p>
 </div>
 )
 export const ServiceCardSkeleton: React.FC = () => (

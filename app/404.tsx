@@ -47,7 +47,6 @@ export default function NotFound() {
               <ArrowLeft className='w-5 h-5 mr-2' /></ArrowLeft>
               Go Back
             </button>
-          </div>
 
           {/* Help Section */}
           <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-lg p-6">

@@ -59,8 +59,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children, 
     }
   };
 
-  const trackPageView = (pageName: string) => {
-    if (typeof window !== "undefined" && window.gtag) {
+  const trackPageView = (pageName: string) => {if (typeof window !== "undefined" && window.gtag) {
       window.gtag("config", "GA_MEASUREMENT_ID", {
         page_title: pageName,
         page_location: window.location.href,
