@@ -1,25 +1,21 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
+import React from "react";
 
-const inter = Inter({ subsets: ['latin'] });
-
-export const metadata: Metadata = {
-  title: 'Zion Tech Group - AI Solutions & IT Services',
-  description: 'Leading provider of AI solutions, IT services, quantum computing, and autonomous systems for enterprise technology transformation.',
-  keywords: 'AI solutions, IT services, quantum computing, autonomous systems, enterprise technology',
-};
-
-export default function RootLayout({
-  children,
-}: {
+interface RootLayoutProps {
   children: React.ReactNode;
-}) {
+}
+
+const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <head>
+        <title>Zion Tech Group</title>
+        <meta name="description" content="Leading provider of AI and IT solutions" />
+      </head>
+      <body>
         {children}
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;

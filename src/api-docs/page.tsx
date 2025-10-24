@@ -1,19 +1,24 @@
-'use client''
-import { X } from 'lucide-react''
-import React, { useState } from 'react''
-import Navigation from '../components/Navigation''
-import Footer from '../components/Footer''
-import { Key, Copy } from 'lucide-react''
-import { Code } from 'lucide-react''
-import { Check } from 'lucide-react''
-  -d ''
-}''
-    {"id": 'ai-analysis'',
-      "title": 'AI Data Analysis'',
-      "method": 'POST'',
-      "endpoint": '/$1/v1/$1/analyze'',
-      "description": 'Analyze data using our AI models for insights and predictions.'',
-  -d ''
-}''
-                        endpoint.method === 'POST' ? 'bg-green-600 text-white' : 'bg-blue-600 text-white'';
-  return ({copiedCode = == endpoint.id ? 'Copied!' : 'Copy''
+import React from "react";
+
+interface PagePageProps {
+  // Add props here
+}
+
+const PagePage: React.FC<PagePageProps> = () => {
+  return (
+    <div className="min-h-screen bg-white">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold text-gray-900 mb-6">
+          
+        </h1>
+        <div className="prose max-w-none">
+          <p className="text-lg text-gray-600">
+            This is a placeholder for the  page.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default PagePage;

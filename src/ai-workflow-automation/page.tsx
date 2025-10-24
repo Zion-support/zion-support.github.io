@@ -1,17 +1,24 @@
-'use client''
-import { Brain, BarChart } from 'lucide-react''
-import React from 'react''
-import Navigation from '../components/Navigation''
-import Footer from '../components/Footer''
-import SEOOptimizer from '../components/SEOOptimizer''
-import { Workflow } from 'lucide-react''
-import { CheckCircle, Phone, Mail } from 'lucide-react''
-    { "number": '99.9%', "label": 'Reliability'',
-    {"title": 'HR Onboarding'',
-      "n": 'Automate employee onboarding processes from application to first day.''
-    {"title": 'Invoice Processing'',
-      "n": 'Automatically process invoices, validate data, and route for approval.''
-    {"title": 'Customer Support'',
-      "n": 'Route tickets, escalate issues, and provide automated responses.''
-    {"title": 'Data Migration'';,
-      "n": 'Safely migrate data between systems with automated validation.''
+import React from "react";
+
+interface PagePageProps {
+  // Add props here
+}
+
+const PagePage: React.FC<PagePageProps> = () => {
+  return (
+    <div className="min-h-screen bg-white">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold text-gray-900 mb-6">
+          
+        </h1>
+        <div className="prose max-w-none">
+          <p className="text-lg text-gray-600">
+            This is a placeholder for the  page.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default PagePage;

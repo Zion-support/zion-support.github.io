@@ -1,18 +1,24 @@
-'use client''
-import { X, Brain, Target, TrendingUp } from 'lucide-react''
-import React from 'react''
-import { Receipt } from 'lucide-react''
-import { CheckCircle, Star, Phone } from 'lucide-react''
-    { "name": 'Google Workspace', "icon": '📧', "description": 'Productivity suite'',
-    {"name": 'Michael Johnson'',
-      "company": 'Small Business Owner'',
-      "role": 'CEO'',
-      "t": 'Expense Tracker saved me 1 0 hours per month on bookkeeping. The AI categorization is incredibly accurate.''
-    {"name": 'Sarah Williams'',
-      "company": 'Marketing Agency'',
-      "role": 'Finance Manager'',
-      "t": 'Our expense processing time dropped from2days to2hours. The automated workflows are game-changing.''
-    {"name": 'David Chen'',
-      "company": 'Consulting Firm'',
-      "role": 'Operations Director'';,
-      "t": 'The compliance features ensure we never miss a tax deduction. Our accountant loves the detailed reports.''
+import React from "react";
+
+interface PagePageProps {
+  // Add props here
+}
+
+const PagePage: React.FC<PagePageProps> = () => {
+  return (
+    <div className="min-h-screen bg-white">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold text-gray-900 mb-6">
+          
+        </h1>
+        <div className="prose max-w-none">
+          <p className="text-lg text-gray-600">
+            This is a placeholder for the  page.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default PagePage;

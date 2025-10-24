@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-
 export default function ZionaicustomersentimenttrackerPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -13,7 +12,6 @@ export default function ZionaicustomersentimenttrackerPage() {
             Advanced AI-powered customer sentiment analysis for modern businesses.
           </p>
         </div>
-        
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Features</h2>
@@ -32,7 +30,6 @@ export default function ZionaicustomersentimenttrackerPage() {
               </li>
             </ul>
           </div>
-          
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Get Started</h2>
             <p className="text-gray-600 mb-6">

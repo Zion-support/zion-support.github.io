@@ -1,17 +1,24 @@
-'use client''
-import { Brain, Target } from 'lucide-react''
-import React from 'react''
-import { CheckCircle, Star, Phone, Calendar } from 'lucide-react''
-    { "name": 'HubSpot', "icon": '🎯', "description": 'Marketing automation'',
-    {"name": 'Jennifer Lee'',
-      "company": 'TechStart'',
-      "role": 'Operations Manager'',
-      "t": 'AI Scheduler eliminated all our scheduling headaches. We save6hours per week and never have conflicts anymore.''
-    {"name": 'Robert Martinez'',
-      "company": 'Consulting Group'',
-      "role": 'Senior Partner'',
-      "t": 'The AI predictions are incredibly accurate. It knows our team\'s patterns better than we do.''
-    {"name": 'Amanda Chen'',
-      "company": 'Digital Agency'',
-      "role": 'Project Manager'';,
-      "t": 'Client meetings are now perfectly coordinated. Our client satisfaction scores improved by 35%.''
+import React from "react";
+
+interface PagePageProps {
+  // Add props here
+}
+
+const PagePage: React.FC<PagePageProps> = () => {
+  return (
+    <div className="min-h-screen bg-white">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold text-gray-900 mb-6">
+          
+        </h1>
+        <div className="prose max-w-none">
+          <p className="text-lg text-gray-600">
+            This is a placeholder for the  page.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default PagePage;

@@ -1,19 +1,16 @@
 'use client';
 import { useState, useCallback } from 'react';
-
 interface FormState<T> {
   data: T;
   isSubmitting: boolean;
   submitStatus: 'idle' | 'success' | 'error';
   errors: Partial<Record<keyof T, string>>;
 }
-
 interface UseFormOptions<T> {
   initialData: T;
   onSubmit: (data: T) => Promise<void>;
   validate?: (data: T) => Partial<Record<keyof T, string>>;
 }
-
 export function useForm<T extends Record<string, any>>({
   initialData,
   onSubmit,
@@ -25,7 +22,6 @@ export function useForm<T extends Record<string, any>>({
     submitStatus: 'idle',
     errors: {},
   });
-
   const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormState(prev => ({
@@ -40,10 +36,8 @@ export function useForm<T extends Record<string, any>>({
       },
     }));
   }, []);
-
   const handleSubmit = useCallback(async (e: React.FormEvent) => {
     e.preventDefault();
-    
     // Validate form
     const validationErrors = validate ? validate(formState.data) : {};
     if (Object.keys(validationErrors).length > 0) {
@@ -53,14 +47,12 @@ export function useForm<T extends Record<string, any>>({
       }));
       return;
     }
-
     setFormState(prev => ({
       ...prev,
       isSubmitting: true,
       submitStatus: 'idle',
       errors: {},
     }));
-
     try {
       await onSubmit(formState.data);
       setFormState(prev => ({
@@ -75,7 +67,6 @@ export function useForm<T extends Record<string, any>>({
       }
       // In production, you would send this to your error monitoring service
       // Example: sendToErrorService(error, 'FormSubmission');
-      
       setFormState(prev => ({
         ...prev,
         submitStatus: 'error',
@@ -87,7 +78,6 @@ export function useForm<T extends Record<string, any>>({
       }));
     }
   }, [formState.data, onSubmit, validate, initialData]);
-
   const resetForm = useCallback(() => {
     setFormState({
       data: initialData,
@@ -96,7 +86,6 @@ export function useForm<T extends Record<string, any>>({
       errors: {},
     });
   }, [initialData]);
-
   return {
     ...formState,
     handleInputChange,

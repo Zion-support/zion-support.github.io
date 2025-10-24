@@ -1,21 +1,20 @@
-import React from 'react';
+import React from "react";
 
-const PagePage: React.FC = () => {
+interface PagePageProps {
+  // Add props here
+}
+
+const PagePage: React.FC<PagePageProps> = () => {
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Page
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            This page is under construction and will be available soon.
+    <div className="min-h-screen bg-white">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold text-gray-900 mb-6">
+          
+        </h1>
+        <div className="prose max-w-none">
+          <p className="text-lg text-gray-600">
+            This is a placeholder for the  page.
           </p>
-          <div className="bg-white rounded-lg shadow-md p-8">
-            <p className="text-gray-700">
-              We are working hard to bring you the best experience. Please check back later.
-            </p>
-          </div>
         </div>
       </div>
     </div>
