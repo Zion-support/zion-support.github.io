@@ -2,7 +2,7 @@
 
 
 import React from "react";
-import { CheckCircle, ArrowRight, Brain, Zap, Target, BarChart, TrendingUp, Shield } from "lucide-react";
+import { CheckCircle, ArrowRight, Brain, Zap, Target, BarChart } from "lucide-react";
 const AIServicesPage: React.FC = () => {
   const services = [
   {
