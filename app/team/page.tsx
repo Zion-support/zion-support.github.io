@@ -3,11 +3,14 @@ import React from 'react';
 import Link from 'next/link';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Brain, Shield, Zap } from 'lucide-react';
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-d028
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-ac10
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b81
 
 
 const teamMembers = [
@@ -62,6 +65,7 @@ const teamMembers = [
 ]
 const values = [
   {
+<<<<<<< HEAD
     icon: Brain,
     title: "Innovation",
       description: "We constantly push the boundaries of what's possible with AI and technology."},
@@ -75,6 +79,21 @@ const values = [
       description: "We prioritize data security and ethical AI practices in everything we do."},
   {
     icon: Zap,
+=======
+    icon: '🧠',
+    title: "Innovation",
+      description: "We constantly push the boundaries of what's possible with AI and technology."},
+  {
+    icon: '🌍',
+    title: "Global Impact",
+      description: "Our solutions create positive change for businesses and communities worldwide."},
+  {
+    icon: '🛡️',
+    title: "Trust & Security",
+      description: "We prioritize data security and ethical AI practices in everything we do."},
+  {
+    icon: '⚡',
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b81
     title: "Excellence",
     description: "We deliver exceptional results through meticulous attention to detail."}
   ]
@@ -152,10 +171,14 @@ const TeamPage: React.FC = () => {
               {values.map((value, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+<<<<<<< HEAD
                     {(() => {
         const IconComponent = value.icon;
         return <IconComponent className="w-8 h-8 text-white" />;
       })()}
+=======
+                    <span className="text-2xl">{value.icon}</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b81
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">
                     {value.title}

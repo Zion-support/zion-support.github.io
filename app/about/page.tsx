@@ -2,11 +2,15 @@ import React from 'react';
 import { Metadata } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { Users, Shield, Globe, Brain } from 'lucide-react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-d028
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-ac10
+=======
+import { Users, Shield, Globe, Brain } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b81
 
 export const metadata: Metadata = {
   title: 'About Us - Zion Tech Group | AI & IT Solutions',
@@ -24,8 +28,11 @@ export const metadata: Metadata = {
 <<<<<<< HEAD
 
 export default function AboutPage() {
+<<<<<<< HEAD
 =======
 export default function AboutPage() {
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b81
   const _values = [
     {
       icon: Brain,

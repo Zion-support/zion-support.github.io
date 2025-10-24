@@ -4,7 +4,10 @@ import Link from 'next/link';
 const Footer: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b81
   const _currentYear = new Date().getFullYear()
   const _aiServices = [
     { name: 'AI Analytics & BI', url: '/ai-analytics', description: 'Business intelligence' },

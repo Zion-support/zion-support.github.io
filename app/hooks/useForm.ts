@@ -14,6 +14,7 @@ export const useForm = (initialValues = {}) => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const handleSubmit = (onSubmit: (_values: unknown) => void) => (e: React.FormEvent) => {
 =======
   const handleSubmit = (onSubmit: (_values: any) => void) => (e: React.FormEvent) => {
@@ -21,6 +22,9 @@ export const useForm = (initialValues = {}) => {
 =======
   const handleSubmit = (onSubmit: (_values: any) => void) => (e: React.FormEvent) => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-ac10
+=======
+  const handleSubmit = (onSubmit: (_values: any) => void) => (e: React.FormEvent) => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b81
     e.preventDefault();
     onSubmit(values);
   };

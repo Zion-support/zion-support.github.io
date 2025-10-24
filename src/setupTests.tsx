@@ -5,6 +5,7 @@
 import '@testing-library/jest-dom';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Jest globals are already available in test environment
 
 // Polyfill for TextEncoder/TextDecoder
@@ -32,6 +33,18 @@ const jest = global.jest;
 import { TextEncoder, TextDecoder } from 'util';
 global.TextEncoder = TextEncoder as unknown as typeof globalThis.TextEncoder;
 global.TextDecoder = TextDecoder as unknown as typeof globalThis.TextDecoder;
+=======
+// Jest globals
+declare global {
+  const jest: any;
+  const PerformanceObserverCallback: any;
+}
+
+// Polyfill for TextEncoder/TextDecoder
+import { TextEncoder, TextDecoder } from 'util';
+global.TextEncoder = TextEncoder as any;
+global.TextDecoder = TextDecoder as any;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b81
 
 // Suppress jsdom navigation warnings
 const originalConsoleError = console.error;
@@ -105,7 +118,13 @@ const localStorageMock = {
   removeItem: jest.fn(),
   clear: jest.fn(),
 };
+<<<<<<< HEAD
 global.localStorage = localStorageMock as unknown as Storage;
+=======
+Object.defineProperty(window, 'localStorage', {
+  value: localStorageMock
+});
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b81
 
 // Mock sessionStorage
 const sessionStorageMock = {
@@ -114,11 +133,18 @@ const sessionStorageMock = {
   removeItem: jest.fn(),
   clear: jest.fn(),
 };
+<<<<<<< HEAD
 global.sessionStorage = sessionStorageMock as unknown as Storage;
+=======
+Object.defineProperty(window, 'sessionStorage', {
+  value: sessionStorageMock
+});
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b81
 
 // Mock fetch
 global.fetch = jest.fn();
 
+<<<<<<< HEAD
 // Mock IntersectionObserver
 global.IntersectionObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(),
@@ -141,13 +167,18 @@ global.PerformanceObserver = jest.fn().mockImplementation((_callback) => ({
 })) as any;
 >>>>>>> cursor/fix-errors-and-merge-to-main-ac10
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b81
 // Mock console methods for cleaner test output
 const originalConsoleWarn = console.warn;
 const originalConsoleInfo = console.info;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 console.warn = (...args: unknown[]) => {
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b81
 console.warn = (...args) => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-ac10
   const message = args[0]?.toString?.() || '';
@@ -158,8 +189,11 @@ console.warn = (...args) => {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 console.info = (...args: unknown[]) => {
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b81
 console.info = (...args) => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-ac10
   const message = args[0]?.toString?.() || '';
@@ -169,17 +203,25 @@ console.info = (...args) => {
   originalConsoleInfo(...args);
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b81
 
 // Mock PerformanceObserver
 global.PerformanceObserver = class MockPerformanceObserver {
   static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'];
+<<<<<<< HEAD
   constructor(public _callback: any) {}
+=======
+  constructor(public _callback: PerformanceObserverCallback) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b81
   observe() {}
   disconnect() {}
   takeRecords() {
     return [];
   }
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 // Suppress JSDOM navigation warnings
@@ -190,6 +232,8 @@ console.error = (...args: unknown[]) => {
   originalConsoleError(...args);
 };
 >>>>>>> cursor/fix-errors-and-merge-to-main-d028
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b81
 
 // Mock window.location
 delete (window as unknown as Record<string, unknown>).location;
