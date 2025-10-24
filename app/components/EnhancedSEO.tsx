@@ -1,16 +1,17 @@
 'use client';
-import Footer from 'Footer';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Brain } from 'lucide-react';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-import { Phone, Mail, ArrowRight } from 'lucide-react';
-const benefits = [
+import { ArrowRight, Brain, CheckCircle, Phone, Mail, MapPin, Zap, Shield, Globe } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
+const EnhancedSEOPage: React.FC = () => {
+  const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
     'Scalable and flexible solutions',
-    '2 4/7 technical support',
+    '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success',
@@ -26,8 +27,9 @@ const benefits = [
         </section>
       </div>
       <Footer />
-</>
-}  );
+    </div>
+  );
+};
 
 export default EnhancedSEOPage
                 </div>

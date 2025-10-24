@@ -10,6 +10,6 @@ import { useEffect } from 'react'
             img.src = img.dataset.src || '''
 =======
             img.src = img.dataset.src || ''
->>>>>>> cursor/fix-errors-and-merge-to-main-d1ed
+>>>>>>> cursor/fix-errors-and-merge-to-main-d1ed;
             img.classList.remove('lazy';
-      const preloadLinks = document.querySelectorAll(''
+      const preloadLinks = document.querySelectorAll('');

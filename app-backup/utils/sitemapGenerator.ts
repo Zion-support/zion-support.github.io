@@ -38,4 +38,4 @@ export const generateSitemap = useCallback((...args) => {}
 '/compliance''
 '/developer-tools''
 '/marketing-tools''
-    '/productivity''
+    '/productivity'';

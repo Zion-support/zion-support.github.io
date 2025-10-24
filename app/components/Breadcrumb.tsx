@@ -28,7 +28,7 @@ const Breadcrumb: React.FC = () => {
             return (
               <li key={name} className="flex items-center">
                 <svg
-                  className="flex-shrink-0 h-4 w-4 text-gray-400 mx-2"
+                  className="flex-shrink-0 h-4 w-4text-gray-400mx-2"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >

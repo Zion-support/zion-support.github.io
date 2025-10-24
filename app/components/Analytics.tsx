@@ -1,10 +1,13 @@
-import React, { useEffect } from "react";
-
+'use client';
+import React, { useEffect } from &quot;react&quot;
 interface AnalyticsProps {
-  className?: string;
-}
 
-const Analytics: React.FC = () => {
+
+  className?: string;
+
+
+}
+const Analytics: React.FC<AnalyticsProps> = ({ children }) => {
   useEffect(() => {
     // Initialize analytics tracking
     const initAnalytics = () => {
@@ -12,21 +15,17 @@ const Analytics: React.FC = () => {
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('config', 'GA_MEASUREMENT_ID', {
           page_title: document.title,
-          page_location: window.location.href
-        });
-      }
-    };
+          page_location: window.location.href});
+        });}
     initAnalytics();
   }, []);
 
-  return <React.Fragment></React.Fragment>;
-};
-
+  return (
+    <React.Fragment>{children}</React.Fragment>
+  );}
 // Extend Window interface for gtag
 declare global {
-  interface Window {
-    gtag: (...args: any[]) => void;
-  }
-}
-
+  interface Window {}
+    gtag: (...arg,
+  s: any[]) => void;};
 export default Analytics;

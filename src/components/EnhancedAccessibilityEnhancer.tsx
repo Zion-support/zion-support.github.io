@@ -8,7 +8,8 @@ import { ArrowRight } from 'lucide-react';
 const EnhancedAccessibilityEnhancerPage: React.FC = () => {
   const features = [
     {
-      icon: Brain,
+      ico,
+  n: Brain,
   title: title,
   description: description,
   benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
@@ -42,11 +43,11 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </div>;
           </div>;
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-6&quot;>{benefits.map((benefit, index) => (</div>
               <div key={index} className=&quot;flex items-start space-x-3&quot;></div>
-                <CheckCircle className=&quot;h-6 w-6 text-purple-400 mt-1 flex-shrink-0&quot; />
+                <CheckCircle className=&quot;h-6 w-6 text-purple-400 mt-1 flex-shrink-0&quot; /></CheckCircle>
                 <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
               </div>
             ))}

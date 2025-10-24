@@ -16,6 +16,10 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
     'Gain competitive advantage with advanced technology';
 <<<<<<< HEAD
 const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className = '''
-=======
-const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className = ''
->>>>>>> cursor/fix-errors-and-merge-to-main-d1ed
+=======</EnhancedErrorBoundaryProps>
+const EnhancedErrorBoundar,</EnhancedErrorBoundaryProps>
+  y: React.FC<EnhancedErrorBoundaryProps> = ({ className = ''
+>>>>>>> cursor/fix-errors-and-merge-to-main-d1ed</EnhancedErrorBoundaryProps>
+</EnhancedErrorBoundaryProps>
+
+export default EnhancedErrorBoundary;

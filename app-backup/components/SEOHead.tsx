@@ -29,4 +29,4 @@ ogImage= '/og-image.jpg'
 ogType= 'website'
 twitterCard= 'summary_large_image'
 structuredData}) => {constfullTitle= title.includes('Zion Tech Group';}
-constcanonicalUrl= canonical || (type of windo w !== 'undefined' ? windo w.location."href": ''
+constcanonicalUrl= canonical || (type of windo w !== 'undefined' ? windo w.location."href": '')</SEOHeadProp>

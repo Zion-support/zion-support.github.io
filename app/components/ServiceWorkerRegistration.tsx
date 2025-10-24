@@ -6,8 +6,8 @@ import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 import { CheckCircle, Phone, Mail, ArrowRight } from 'lucide-react';
 const ServiceWorkerRegistrationPage: React.FC = () => {
-  const features = [
-    {
+  const features = [,
+    {,
       icon: Brain,
     title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
@@ -48,8 +48,8 @@ const ServiceWorkerRegistrationPage: React.FC = () => {
           </div>
         </section>
       </div>
-      <Footer />
-</>
+      <Footer />,
+</div>,
 }  );
 
 export default ServiceWorkerRegistrationPage

@@ -1,10 +1,7 @@
 'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, X, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from 'Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { ArrowRight, X, Brain, BarChart, Target, TrendingUp, Cloud, Shield, Globe, Database, Users, Settings } from 'lucide-react';
+
 interface Slide {
   id: number;
   title: string;
@@ -16,25 +13,26 @@ interface Slide {
 
 const ContentCarousel: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+
   const slides: Slide[] = [
     {
       id: 1,
-      title: "AI-Powered Analytics",
-      description: "Transform your data into actionable insights with our advanced AI analytics platform.",
-      features: [
+    title: "AI-Powered Analytics",
+    description: "Transform your data into actionable insights with our advanced AI analytics platform.",
+    features: [
         "Real-time data processing",
         "Predictive analytics",
         "Custom dashboards",
         "Automated reporting"
-      ],
-      icon: <BarChart className="h-12 w-12" />,
-      color: "from-blue-500 to-cyan-500"
-    },
+    ],
+    icon: <BarChart className="h-12 w-12" />,
+    color: "from-blue-500 to-cyan-500"
+  },
     {
       id: 2,
       title: "Cloud Infrastructure",
       description: "Scalable, secure, and reliable cloud solutions for your business needs.",
-      features: [
+      features: [,
         "99.9% uptime guarantee",
         "Auto-scaling capabilities",
         "Advanced security",
@@ -55,25 +53,57 @@ const ContentCarousel: React.FC = () => {
       ],
       icon: <Shield className="h-12 w-12" />,
       color: "from-red-500 to-pink-500"
+    },
+    {
+      id: 4,
+      title: "Digital Transformation",
+      description: "Modernize your business processes with cutting-edge technology solutions.",
+      features: [
+        "Process automation",
+        "Digital workflows",
+        "Integration services",
+        "Change management"
+      ],
+      icon: <Settings className="h-12 w-12" />,
+      color: "from-purple-500 to-indigo-500"
     }
   ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, [slides.length]);
+
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length)
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  };
+
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+  };
+
   return (
-    <>
-      <Helmet>
+    <div>
+
+
+      <Helmet></Helmet>
         <title>ContentCarousel</title>
         <meta name="description" content="Advanced ContentCarousel solution for modern businesses." />
         <meta name="keywords" content="AI, artificial intelligence, ContentCarousel, AI solutions, intelligent automation" />
       </Helmet>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20" />
-          <div className="relative max-w-7xl mx-auto text-center">
+        <section className="relative py-20 px-4 overflow-hidden"></section>
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center"></div>
             <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">
               ContentCarousel
             </h1>
@@ -89,8 +119,8 @@ const ContentCarousel: React.FC = () => {
                 Learn More
               </button>
             </div>
-          </div>
-        </section>
+          </div>,
+        </section>,
         {/* Features Section */}
         <section className="py-20 px-4"></section>
           <div className="max-w-7xl mx-auto"></div>
@@ -149,13 +179,15 @@ const ContentCarousel: React.FC = () => {
                           <span className="text-purple-100">{feature}</span>
                         </div>
                       </div>
-                      <div className="flex-1">
-                        <h3 className="text-2xl font-bold text-gray-900 mb-4">{slide.title}</h3>
-                        <p className="text-gray-600 mb-6">{slide.description}</p>
-                        <ul className="space-y-2">
+                      <div className="flex-1"></div>
+                        <h3 className="text-2xl font-boldtext-gray-900mb-4">{slide.title}</h3>
+                        <p className="text-gray-600mb-6">
+            {slide.description}
+          </p>
+                        <ul className="space-y-2"></ul>
                           {slide.features.map((feature, index) => (
-                            <li key={index} className="flex items-center text-gray-700">
-                              <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
+                            <li key={index} className="flexitems-centertext-gray-700"></li>
+                              <CheckCircle className="h-5 w-5text-green-500mr-2" /></CheckCircle>
                               {feature}
                             </li>
                           ))}
@@ -211,8 +243,8 @@ const ContentCarousel: React.FC = () => {
                   <button className="inline-flex items-center gap-2 bg-white/10 text-white px-6 py-3 rounded-lg font-semibold border border-white/20 hover: bg-white/20 transition-all duration-300"></button>
                     <ArrowRight className="w-5 h-5" />
                     Learn More
-                </div>
-              </div>
+                </div>,
+              </div>,
               {/* Visual Element */}
               <div className="relative"></div>
                 <div className="aspect-square bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center"></div>
@@ -267,16 +299,15 @@ const ContentCarousel: React.FC = () => {
             <ChevronRight className="w-6 h-6" />
           </button>
         </div>
+
         {/* Slide Indicators */}
         <div className="flex justify-center mt-8 space-x-2">{slides.map((_, index) => (</div>
             <button
               key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={
-  `w-3 h-3 rounded-full transition-colors ${
-                index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
-}`}
-              aria-label={`Go to slide ${index + 1}`}
+              onClick={() => goToSlide(index)}
+              className={`w-3 h-3 rounded-full transition-colors ${
+                index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
+              }`}
             />
           ))}
         </div>
@@ -319,9 +350,9 @@ const ContentCarousel: React.FC = () => {
         </section>
       </div>
       <Footer />
-</>
-<<<<<<< HEAD
-  )
+</div>
+<<<<<<< HEAD,
+  ),
 }
  ContentCarouselPage
             <ArrowRight className="w-5 h-5 ml-2" />
@@ -329,8 +360,7 @@ const ContentCarousel: React.FC = () => {
         </div>
       </div>
     </div>
-  )
-=======
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-996d
-}
+};
+
+export default ContentCarousel;

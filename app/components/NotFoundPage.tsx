@@ -1,9 +1,10 @@
-import React from "react"
-import { Helmet } from "react-helmet-async"
-"use client&quot
+'use client';
+import React from &quot;react&quot;
+import { Helmet } from &quot;react-helmet-async&quot;
+&quot;use client&quot
 const NotFoundPagePage: React.FC = () => {
-  const features = [
-    {
+  const features = [,
+    {,
       icon: Brain,
     title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
@@ -35,8 +36,8 @@ const NotFoundPagePage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
   return (
-    <>
-      <Helmet>
+    <div>
+      <Helmet></Helmet>
         <title>NotFoundPage | Zion Tech Group</title>
         <meta name="description" content="Professional NotFoundPage services by Zion Tech Group." />
         <meta name="keywords" content="AI, artificial intelligence, NotFoundPage, AI solutions, intelligent automation" />
@@ -51,9 +52,9 @@ const NotFoundPagePage: React.FC = () => {
       </section>
     </div>
 <<<<<<< HEAD
-    </>
-  );
-  )
+    </div>
+  );,
+  ),
 }
  NotFoundPagePage
 =======

@@ -1,83 +1,101 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
+const glob = require('glob');
 
-// Function to fix specific JSX issues
-function fixJsxIssues(content) {
-  let fixed = content;
-  
-  // Fix malformed JSX structure with title tags outside of Helmet
-  fixed = fixed.replace(/<>\s*<title>([^<]+)\s*<\/title>/g, '<>\n      <Helmet>\n        <title>$1</title>');
-  
-  // Fix malformed JSX structure with h1 tags
-  fixed = fixed.replace(/<title>([^<]+)\s*<\/title>\s*<h1([^>]*)>/g, '<title>$1</title>\n        <meta name="description" content="Professional services by Zion Tech Group." />\n      </Helmet>\n      \n      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">\n        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">\n          <h1$2>');
-  
-  // Fix malformed JSX structure with p tags
-  fixed = fixed.replace(/<h1([^>]*)>([^<]+)\s*<\/h1>\s*<p([^>]*)>/g, '<h1$1>$2</h1>\n          <p$3>');
-  
-  // Fix malformed JSX structure with Link tags
-  fixed = fixed.replace(/<p([^>]*)>([^<]+)\s*<\/p>\s*<Link([^>]*)>/g, '<p$1>$2</p>\n          <Link$3>');
-  
-  // Fix malformed JSX structure with ArrowRight
-  fixed = fixed.replace(/<Link([^>]*)>([^<]+)<\/Link>\s*<>\s*<ArrowRight([^>]*)\s*\/>\s*<\/ArrowRight>/g, '<Link$1>$2<ArrowRight$3 /></Link>');
-  
-  // Fix malformed closing tags
-  fixed = fixed.replace(/<\/Link>\s*<\/>\s*<\/div>\s*<\/>\s*<\/div>\s*<\/>\s*\);/g, '</Link>\n        </div>\n      </div>\n    </>');
-  
-  // Fix malformed Layout components
-  fixed = fixed.replace(/<Layout\s*title="([^"]+)"\s*description="([^"]+)"\s*keywords="([^"]+)"\s*>/g, '<Layout\n      title="$1"\n      description="$2"\n      keywords="$3"\n    >');
-  
-  // Fix malformed closing tags
-  fixed = fixed.replace(/<\/>\s*<\/div>\s*<\/>\s*\);/g, '</>\n    </div>\n  );');
-  
-  // Fix malformed function declarations
-  fixed = fixed.replace(/export default ([^;]+);\s*const ([^:]+): React\.FC = \(\) => {/g, 'const $2: React.FC = () => {');
-  
-  // Fix malformed closing braces
-  fixed = fixed.replace(/}\s*;\s*$/g, '};\n\nexport default $1;');
-  
-  return fixed;
-}
-
-// Function to process a single file
-function processFile(filePath) {
+// Function to fix all JSX issues
+function fixAllJSXIssues(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixJsxIssues(content);
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
     
-    if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+    // Remove any BOM or hidden characters
+    content = content.replace(/^\uFEFF/, '');
+    
+    // Ensure proper line endings
+    content = content.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+    
+    // Fix the file structure completely
+    if (content.includes('export default function')) {
+      let newContent = '';
+      
+      // Add 'use client' if not present
+      if (!content.includes("'use client';")) {
+        newContent += "'use client';\n";
+      } else {
+        newContent += "'use client';\n";
+      }
+      
+      // Add React import
+      newContent += "import React from 'react';\n";
+      
+      // Add other necessary imports
+      if (content.includes('<Head>') && !content.includes("import Head from 'next/head'")) {
+        newContent += "import Head from 'next/head';\n";
+      }
+      if (content.includes('<Link') && !content.includes("import Link from 'next/link'")) {
+        newContent += "import Link from 'next/link';\n";
+      }
+      if (content.includes('ArrowRight') && !content.includes("import { ArrowRight }")) {
+        newContent += "import { ArrowRight } from 'lucide-react';\n";
+      }
+      if (content.includes('Footer') && !content.includes("import Footer from")) {
+        newContent += "import Footer from '../components/Footer';\n";
+      }
+      
+      newContent += "\n";
+      
+      // Extract the function body
+      const functionStart = content.indexOf('export default function');
+      const functionBody = content.substring(functionStart);
+      
+      // Clean up the function body
+      let cleanFunctionBody = functionBody
+        .replace(/export default function \w+\(\)\s*{/, 'export default function ' + functionBody.match(/export default function (\w+)/)[1] + '() {')
+        .replace(/\s*return\s*\(\s*/, '\n  return (\n    ')
+        .replace(/\s*\);\s*}\s*$/, '\n  );\n}');
+      
+      // Fix JSX structure
+      cleanFunctionBody = cleanFunctionBody
+        .replace(/<div>\s*<\/>/g, '<div></div>')
+        .replace(/<\/div>\s*<\/>/g, '</div>')
+        .replace(/<>(\s*<div[^>]*>)/g, '$1')
+        .replace(/(<\/div>)\s*<\/>/g, '$1');
+      
+      newContent += cleanFunctionBody;
+      
+      // Only replace if there are actual changes
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
+      }
     }
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      return true;
+    }
+    
+    return false;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Function to recursively find all .tsx files
-function findTsxFiles(dir) {
-  const files = [];
-  const items = fs.readdirSync(dir);
-  
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-    
-    if (stat.isDirectory()) {
-      files.push(...findTsxFiles(fullPath));
-    } else if (item.endsWith('.tsx')) {
-      files.push(fullPath);
-    }
+// Find all TSX files in the app directory
+const pattern = 'app/**/*.tsx';
+const files = glob.sync(pattern);
+
+console.log(`Found ${files.length} TSX files to process`);
+
+let fixedCount = 0;
+files.forEach(file => {
+  if (fixAllJSXIssues(file)) {
+    fixedCount++;
+    console.log(`Fixed: ${file}`);
   }
-  
-  return files;
-}
+});
 
-// Main execution
-const appDir = path.join(__dirname, 'app');
-const tsxFiles = findTsxFiles(appDir);
-
-console.log(`Found ${tsxFiles.length} .tsx files to process`);
-
-tsxFiles.forEach(processFile);
-
-console.log('Final JSX fixing completed!');
+console.log(`Fixed ${fixedCount} files`);

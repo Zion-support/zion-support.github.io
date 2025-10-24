@@ -25,4 +25,4 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
 if (process.env.NODE_ENV=== 'production'
 handleGoHome= () => {windo w.location.href= '/';
 <p className=&quot;text-gray-300 mb-6&quot;>We''
-{process.env.NODE_ENV === 'development'
+{process.env.NODE_ENV === 'development'</p>
