@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Users } from 'lucide-react';
@@ -11,6 +12,23 @@ import { Mail } from 'lucide-react';
 import { MessageSquare } from 'lucide-react';
 import { Hand } from 'lucide-react';
 "use client";
+=======
+"use client";
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import {
+  MessageSquare,
+  Brain,
+  Shield,
+  Zap,
+  Star,
+  Mail,
+  BarChart3,
+  Settings,
+  Users,
+} from "lucide-react";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0458
 
 <<<<<<< HEAD
 export default function AIEmailAssistant() {

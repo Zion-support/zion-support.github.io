@@ -1,6 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+=======
+"use client";
+import React from "react";
+import { ArrowRight } from "lucide-react";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0458
 export default function AiSocialMediaManagerZionTechGroup() {
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';export default function AiSocialMediaManagerZionTechGroup() {

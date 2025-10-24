@@ -19,6 +19,7 @@ import { Smartphone } from 'lucide-react';
 'use client';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0234
@@ -28,6 +29,9 @@ import { Calendar, Clock, CheckCircle, Brain, Shield, Zap, Globe, Mail, Smartpho
 export default function ConsultationPage() {
 
 <<<<<<< HEAD
+=======
+export default function ConsultationPage() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0458
   const benefits = [
     "Benefit 1",
     "Benefit 2"

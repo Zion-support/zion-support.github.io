@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+=======
+"use client";
+import React from "react";
+import {
+  Brain,
+  Zap,
+  CheckCircle,
+  Star,
+  BarChart3,
+  TrendingUp,
+} from "lucide-react";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0458
 export default function AIEcommerceOptimizerPro() {
   const features = [
     {
