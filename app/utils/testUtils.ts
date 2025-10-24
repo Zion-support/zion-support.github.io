@@ -37,7 +37,11 @@ export const mockFetch = (
   headers: Record<string, string> = {}
 ): void => {
   if (typeof global !== 'undefined') {
+<<<<<<< HEAD
     (global as typeof global & { fetch: typeof fetch }).fetch = (() =>
+=======
+    (global as typeof global & { fetch: typeof fetch }).fetch = (global as { jest?: { fn: typeof jest.fn } }).jest?.fn(() =>
+>>>>>>> 25adb2f5c6bac8e2e9c4ea63f8e65ad0a7ecbbec
       Promise.resolve({
         ok: status >= 200 && status < 300,
         status,
@@ -298,6 +302,7 @@ export const createRejectedPromise = (
  * Generate random test data
  */
 export const generateTestData = {
+<<<<<<< HEAD
   string: (length = 10) => {
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let result = '';
@@ -330,6 +335,70 @@ export const cleanup = (): void => {
     if (timers) {
       timers.forEach(timer => clearTimeout(timer));
       timers.clear();
+=======
+  string: (length = 10): string => {
+    return Math.random()
+      .toString(36)
+      .substring(2, length + 2)
+  },
+  number: (min = 0, max = 100): number => {
+    return Math.floor(Math.random() * (max - min + 1)) + min
+  },
+  boolean: (): boolean => {
+    return Math.random() > 0.5
+  },
+  email: (): string => {
+    return `test${generateTestData.string(5)}@example.com`
+  },
+  url: (): string => {
+    return `https://example.com/${generateTestData.string(10)}`
+  },
+  date: (): Date => {
+    return new Date(Date.now() - Math.random() * 365 * 24 * 60 * 60 * 1000)
+  },
+  array: <T>(generator: () => T, length = 5): T[] => {
+    return Array.from({ length }, generator)
+  }
+}
+
+/**
+ * Deep clone an object
+ */
+export const deepClone = <T>(obj: T): T => {
+  return JSON.parse(JSON.stringify(obj))
+}
+
+/**
+ * Compare objects for equality
+ */
+export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {
+  return JSON.stringify(obj1) === JSON.stringify(obj2)
+}
+
+/**
+ * Spy on console methods
+ */
+export class ConsoleSpy {
+  private originalConsole: Console
+  private logs: string[] = []
+  private errors: string[] = []
+  private warnings: string[] = []
+
+  constructor() {
+    this.originalConsole = { ...console }
+    this.mock()
+  }
+
+  private mock(): void {
+    console.log = (...args: unknown[]) => {
+      this.logs.push(args.map(String).join(' '))
+    }
+    console.error = (...args: unknown[]) => {
+      this.errors.push(args.map(String).join(' '))
+    }
+    console.warn = (...args: unknown[]) => {
+      this.warnings.push(args.map(String).join(' '))
+>>>>>>> 25adb2f5c6bac8e2e9c4ea63f8e65ad0a7ecbbec
     }
   }
   

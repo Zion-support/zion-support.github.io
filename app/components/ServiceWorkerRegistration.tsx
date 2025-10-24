@@ -45,8 +45,8 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
           window.location.reload();
         });
 
-      } catch (_error) {
-        onError?.(_error as Error);
+      } catch (error) {
+        onError?.(error as Error);
       }
     };
 

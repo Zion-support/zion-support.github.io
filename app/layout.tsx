@@ -4,6 +4,8 @@ import React from 'react'
 import './globals.css'
 import Analytics from './components/Analytics'
 import PerformanceMonitor from './components/PerformanceMonitor'
+import PerformanceOptimizer from './components/PerformanceOptimizer'
+import AccessibilityEnhancer from './components/AccessibilityEnhancer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -79,6 +81,8 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} antialiased`}>
         <Analytics />
+        <PerformanceOptimizer />
+        <AccessibilityEnhancer />
         {children}
         <PerformanceMonitor />
       </body>
