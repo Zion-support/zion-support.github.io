@@ -83,7 +83,11 @@ const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
           src={placeholderSrc}
           alt=""
           fill
+<<<<<<< HEAD
           className="object-cover"
+=======
+          className="absolute inset-0 w-full h-full object-cover"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0331
           aria-hidden="true"
         />
       )}

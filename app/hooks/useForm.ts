@@ -70,8 +70,13 @@ export function useForm<T extends Record<string, any>>({
     } catch (error) {
       // Log error in development, send to error service in production
       if (process.env.NODE_ENV === 'development') {
+<<<<<<< HEAD
         // eslint-disable-next-line no-console
         console.error('Form submission error:', error);
+=======
+        // Log to monitoring service instead of console
+        // This could be replaced with a proper logging service
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0331
       }
       // In production, you would send this to your error monitoring service
       // Example: sendToErrorService(error, 'FormSubmission');

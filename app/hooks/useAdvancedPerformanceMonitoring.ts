@@ -151,8 +151,13 @@ export const useAdvancedPerformanceMonitoring = (options: PerformanceMonitoringO
     };
 
     if (process.env.NODE_ENV === 'development') {
+<<<<<<< HEAD
       // eslint-disable-next-line no-console
       console.log('Memory Usage:', memoryMetrics);
+=======
+      // Log to monitoring service instead of console
+      // This could be replaced with a proper logging service
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0331
     }
   }, [enableMemoryMonitoring]);
 
