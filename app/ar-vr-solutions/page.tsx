@@ -3,16 +3,9 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Helmet } from 'react-helmet-async';
-
 const ARVRSolutionsPage: React.FC = () => {
   return (
     <>
-      <Helmet>
-        <title>AR VR Solutions - Zion Tech Group</title>
-        <meta name="description" content="Professional AR VR Solutions services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="AR VR Solutions, AI solutions, IT services, Zion Tech Group" />
-      </Helmet>
 
       <Navigation />
       

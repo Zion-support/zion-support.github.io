@@ -3,16 +3,9 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Helmet } from 'react-helmet-async';
-
 const PageBackupPage: React.FC = () => {
   return (
     <>
-      <Helmet>
-        <title>Page Backup - Zion Tech Group</title>
-        <meta name="description" content="Professional Page Backup services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="Page Backup, AI solutions, IT services, Zion Tech Group" />
-      </Helmet>
 
       <Navigation />
       

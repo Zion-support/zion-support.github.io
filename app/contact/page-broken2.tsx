@@ -3,16 +3,9 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Helmet } from 'react-helmet-async';
-
 const PageBroken2Page: React.FC = () => {
   return (
     <>
-      <Helmet>
-        <title>Page Broken2 - Zion Tech Group</title>
-        <meta name="description" content="Professional Page Broken2 services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="Page Broken2, AI solutions, IT services, Zion Tech Group" />
-      </Helmet>
 
       <Navigation />
       

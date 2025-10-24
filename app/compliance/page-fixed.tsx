@@ -3,16 +3,9 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Helmet } from 'react-helmet-async';
-
 const PageFixedPage: React.FC = () => {
   return (
     <>
-      <Helmet>
-        <title>Page Fixed - Zion Tech Group</title>
-        <meta name="description" content="Professional Page Fixed services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="Page Fixed, AI solutions, IT services, Zion Tech Group" />
-      </Helmet>
 
       <Navigation />
       
