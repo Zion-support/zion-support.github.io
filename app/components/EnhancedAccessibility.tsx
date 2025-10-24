@@ -1,20 +1,6 @@
 'use client';
 import React, { useEffect, useState, createContext, useContext } from 'react';
-
-interface AccessibilitySettings {
-  highContrast: boolean;
-  reducedMotion: boolean;
-  fontSize: 'small' | 'medium' | 'large';
-  focusVisible: boolean;
-  screenReaderMode: boolean;
-  keyboardNavigation: boolean;
-}
-
-interface AccessibilityContextType {
-  settings: AccessibilitySettings;
-  updateSetting: (key: keyof AccessibilitySettings, value: unknown) => void;
-  announceToScreenReader: (message: string) => void;
-}
+import { AccessibilitySettings, AccessibilityContextType } from '../types/accessibility';
 
 const AccessibilityContext = createContext<AccessibilityContextType | null>(null);
 
