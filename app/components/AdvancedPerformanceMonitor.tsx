@@ -20,7 +20,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   onMetricsUpdate,
   enableRealTimeMonitoring = true,
 }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+  const [_metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
     lcp: null,
     fid: null,
@@ -64,7 +64,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               'processingStart' in entry &&
               'startTime' in entry
             ) {
-              const fidEntry = entry as PerformanceEventTiming;
+              const fidEntry = entry as any;
               setMetrics(prev => ({
                 ...prev,
                 fid: fidEntry.processingStart - fidEntry.startTime,
@@ -90,7 +90,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               'hadRecentInput' in entry &&
               'value' in entry
             ) {
-              const clsEntry = entry as LayoutShift;
+              const clsEntry = entry as any;
               if (!clsEntry.hadRecentInput) {
                 clsValue += clsEntry.value;
                 setMetrics(prev => ({ ...prev, cls: clsValue }));

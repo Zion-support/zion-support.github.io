@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-
-import React from 'react';
-
-interface AdvancedSEOOptimizerProps {
-  // Add props here
-}
-
-const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = (_props) => {
-  return (
-    <div>
-      {/* Component content */}
-    </div>
-  )};
-
-export default AdvancedSEOOptimizer;
-=======
 'use client';
 
 import React, { useEffect, useState, useCallback } from 'react';
@@ -207,4 +190,3 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
 };
 
 export default AdvancedSEOOptimizer;
->>>>>>> cursor/fix-errors-and-merge-to-main-21fe

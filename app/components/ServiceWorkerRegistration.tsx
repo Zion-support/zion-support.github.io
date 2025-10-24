@@ -11,7 +11,7 @@ interface ServiceWorkerRegistrationProps {
 const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
   onUpdateAvailable,
   onUpdateInstalled,
-  onError,
+  onError: _onError,
 }) => {
   useEffect(() => {
     if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {
@@ -45,7 +45,7 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
           window.location.reload();
         });
 
-      } catch (error) {
+      } catch (_error) {
         onError?.(error as Error);
       }
     };

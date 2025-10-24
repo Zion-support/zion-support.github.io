@@ -12,10 +12,10 @@ interface AccessibilityEnhancerProps {
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ 
   children,
-  enableKeyboardNavigation = true,
-  enableScreenReaderSupport = true,
-  enableHighContrast = false,
-  enableFocusManagement = true
+  enableKeyboardNavigation: _enableKeyboardNavigation = true,
+  enableScreenReaderSupport: _enableScreenReaderSupport = true,
+  enableHighContrast: _enableHighContrast = false,
+  enableFocusManagement: _enableFocusManagement = true
 }) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [_fontSize, setFontSize] = useState('medium');

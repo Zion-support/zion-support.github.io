@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Download, X, CheckCircle } from 'lucide-react';
+import { Download, X } from 'lucide-react';
 
 interface PWAInstallerProps {
   onInstall?: () => void;
@@ -14,7 +14,7 @@ const PWAInstaller: React.FC<PWAInstallerProps> = ({
   onDismiss,
   showInstallPrompt = true,
 }) => {
-  const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
+  const [deferredPrompt, setDeferredPrompt] = useState<unknown>(null);
   const [isInstalled, setIsInstalled] = useState(false);
   const [showPrompt, setShowPrompt] = useState(false);
 

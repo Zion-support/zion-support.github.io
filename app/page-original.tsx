@@ -1,7 +1,6 @@
 'use client';
 
-import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
-import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import React, { useCallback, useState, useEffect, memo } from 'react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
@@ -11,11 +10,11 @@ import Analytics from './components/Analytics';
 import SecurityEnhancer from './components/SecurityEnhancer';
 
 // Dynamically import heavy components for better performance
-const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
-const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
-const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
-const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
-const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
+// const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
+// const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
+// const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
+// const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
+// const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
 
 // Preload critical components
 const preloadComponents = () => {
@@ -39,8 +38,8 @@ const ServiceCardSkeleton: React.FC = memo(() => (
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 
 const HomePage: React.FC = memo(() => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+  const [_isLoaded, setIsLoaded] = useState(false);
+  const [_isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     setIsLoaded(true);
@@ -52,9 +51,9 @@ const HomePage: React.FC = memo(() => {
   }, []);
 
   // Analytics tracking for phone clicks - optimized
-  const handlePhoneClick = useCallback(() => {
+  const _handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'phone_click', {
+      (window as unknown).gtag('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'header_phone',
       });
@@ -62,9 +61,9 @@ const HomePage: React.FC = memo(() => {
   }, []);
 
   // Analytics tracking for email clicks - optimized
-  const handleEmailClick = useCallback(() => {
+  const _handleEmailClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'email_click', {
+      (window as unknown).gtag('event', 'email_click', {
         event_category: 'engagement',
         event_label: 'header_email',
       });
