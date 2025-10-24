@@ -28,7 +28,9 @@ const PerformanceOptimizer: React.FC = () => {
       const memoryUsage = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize || 0
 
       // Check connection speed
-      const connection = (navigator as Navigator & { connection?: { effectiveType: string }, mozConnection?: { effectiveType: string }, webkitConnection?: { effectiveType: string } }).connection || (navigator as Navigator & { mozConnection?: { effectiveType: string } }).mozConnection || (navigator as Navigator & { webkitConnection?: { effectiveType: string } }).webkitConnection
+      const connection = (navigator as Navigator & { connection?: { effectiveType: string }; mozConnection?: { effectiveType: string }; webkitConnection?: { effectiveType: string } }).connection || 
+                        (navigator as Navigator & { mozConnection?: { effectiveType: string } }).mozConnection || 
+                        (navigator as Navigator & { webkitConnection?: { effectiveType: string } }).webkitConnection
       const isSlowConnection = connection ? connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g' : false
 
       setMetrics({
