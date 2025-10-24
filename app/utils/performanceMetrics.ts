@@ -1,11 +1,11 @@
-'use client';
-import React from 'react';
+import { useState, useEffect } from 'react';
 
-export default function performanceMetrics() {
-  return (
-    <div>
-      <h1>performanceMetrics</h1>
-      <p>performanceMetrics content.</p>
-    </div>
-  );
-}
+export const useperformanceMetrics = () => {
+  const [state, setState] = useState(null);
+  
+  useEffect(() => {
+    // Hook implementation
+  }, []);
+  
+  return { state, setState };
+};

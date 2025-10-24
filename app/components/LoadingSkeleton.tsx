@@ -1,28 +1,19 @@
+import React from 'react';
 
-    <
-      <
-        <
-    <
-    <
-    <
-    <
-            <
-            </p>,<
-        <
-    <
-    <
-    <
-              <
-                <
-    <
-                  <
-    <
-    <
-    <
-              <
-                  <
-    </div><CheckCircleclassName="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" / /><
-    <
-    <
-            <
-    <
+interface LoadingSkeletonProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'loadingskeleton ' + className}>
+      {children || <p>LoadingSkeleton component</p>}
+    </div>
+  );
+};
+
+export default LoadingSkeleton;

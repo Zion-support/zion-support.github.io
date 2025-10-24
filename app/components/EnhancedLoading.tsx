@@ -1,30 +1,19 @@
+import React from 'react';
 
-    <
-        <
-    <
-    <
-    <
-    <
-            <
-            </p>,<
-        <
-    <
-    <
-    <
-              <
-g: grid-cols-4 gap-8"></div>,<
-    <
-                <
-    <
-    <
-                <
-    <
-    <
-                <
-    <
-    <
-                <
-        <
-    <
-    <
-            <
+interface EnhancedLoadingProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'enhancedloading ' + className}>
+      {children || <p>EnhancedLoading component</p>}
+    </div>
+  );
+};
+
+export default EnhancedLoading;

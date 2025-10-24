@@ -1,11 +1,19 @@
-'use client';
 import React from 'react';
 
-export default function App() {
+interface AppProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const App: React.FC<AppProps> = ({ 
+  className = '', 
+  children 
+}) => {
   return (
-    <div>
-      <h1>App</h1>
-      <p>App content.</p>
+    <div className={'app ' + className}>
+      {children || <p>App component</p>}
     </div>
   );
-}
+};
+
+export default App;

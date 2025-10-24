@@ -1,11 +1,19 @@
-'use client';
 import React from 'react';
 
-export default function NewsletterSignup() {
+interface NewsletterSignupProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ 
+  className = '', 
+  children 
+}) => {
   return (
-    <div>
-      <h1>NewsletterSignup</h1>
-      <p>NewsletterSignup content.</p>
+    <div className={'newslettersignup ' + className}>
+      {children || <p>NewsletterSignup component</p>}
     </div>
   );
-}
+};
+
+export default NewsletterSignup;

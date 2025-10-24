@@ -1,11 +1,19 @@
-'use client';
 import React from 'react';
 
-export default function image() {
+interface imageProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const image: React.FC<imageProps> = ({ 
+  className = '', 
+  children 
+}) => {
   return (
-    <div>
-      <h1>image</h1>
-      <p>image content.</p>
+    <div className={'image ' + className}>
+      {children || <p>image component</p>}
     </div>
   );
-}
+};
+
+export default image;

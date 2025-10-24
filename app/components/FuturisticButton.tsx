@@ -1,21 +1,19 @@
+import React from 'react';
 
-    <
-      <
-        <
-    <
-    <
-    <
-    <
-    <
-          <
-    <
-    <
-    <
-            <p className="text-gray-300 text-sm mb-4">Try searching for one of these popular pages: </p>,<
-    <
-    <
-            <
-    <
-    <
-            <
-    <
+interface FuturisticButtonProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const FuturisticButton: React.FC<FuturisticButtonProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'futuristicbutton ' + className}>
+      {children || <p>FuturisticButton component</p>}
+    </div>
+  );
+};
+
+export default FuturisticButton;

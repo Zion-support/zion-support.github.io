@@ -1,30 +1,19 @@
+import React from 'react';
 
-    <
-        <
-    <
-    <
-    <
-    <
-            <
-            </p>,<
-        <
-    <
-    <
-    <
-              <
-g: grid-cols-4 gap-8"></div>,<
-    <
-                <
-    <
-    <
-                <
-    <
-    <
-                <
-    <
-    <
-                <
-        <
-    <
-    <
-            <
+interface EnhancedSEOHeadProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'enhancedseohead ' + className}>
+      {children || <p>EnhancedSEOHead component</p>}
+    </div>
+  );
+};
+
+export default EnhancedSEOHead;

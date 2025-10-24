@@ -1,11 +1,19 @@
-'use client';
 import React from 'react';
 
-export default function ContentCarousel() {
+interface ContentCarouselProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const ContentCarousel: React.FC<ContentCarouselProps> = ({ 
+  className = '', 
+  children 
+}) => {
   return (
-    <div>
-      <h1>ContentCarousel</h1>
-      <p>ContentCarousel content.</p>
+    <div className={'contentcarousel ' + className}>
+      {children || <p>ContentCarousel component</p>}
     </div>
   );
-}
+};
+
+export default ContentCarousel;

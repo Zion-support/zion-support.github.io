@@ -1,5 +1,19 @@
+import React from 'react';
 
-        <
-    <
-    <div className="max-w-7 xl mx-auto px-4 sm: px-6 lg:px-8 py-16 text-center"></div>,<
-          <
+interface servicesProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const services: React.FC<servicesProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'services ' + className}>
+      {children || <p>services component</p>}
+    </div>
+  );
+};
+
+export default services;

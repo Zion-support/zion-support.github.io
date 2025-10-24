@@ -1,11 +1,19 @@
-'use client';
 import React from 'react';
 
-export default function testRunner() {
+interface testRunnerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const testRunner: React.FC<testRunnerProps> = ({ 
+  className = '', 
+  children 
+}) => {
   return (
-    <div>
-      <h1>testRunner</h1>
-      <p>testRunner content.</p>
+    <div className={'testrunner ' + className}>
+      {children || <p>testRunner component</p>}
     </div>
   );
-}
+};
+
+export default testRunner;

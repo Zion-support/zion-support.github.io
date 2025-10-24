@@ -1,11 +1,19 @@
-'use client';
 import React from 'react';
 
-export default function ContentStatistics() {
+interface ContentStatisticsProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const ContentStatistics: React.FC<ContentStatisticsProps> = ({ 
+  className = '', 
+  children 
+}) => {
   return (
-    <div>
-      <h1>ContentStatistics</h1>
-      <p>ContentStatistics content.</p>
+    <div className={'contentstatistics ' + className}>
+      {children || <p>ContentStatistics component</p>}
     </div>
   );
-}
+};
+
+export default ContentStatistics;

@@ -1,5 +1,19 @@
+import React from 'react';
 
-const AccessibilityComponents: React.FC<
-    <
-      <
-      <
+interface AccessibilityComponentsProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const AccessibilityComponents: React.FC<AccessibilityComponentsProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'accessibilitycomponents ' + className}>
+      {children || <p>AccessibilityComponents component</p>}
+    </div>
+  );
+};
+
+export default AccessibilityComponents;

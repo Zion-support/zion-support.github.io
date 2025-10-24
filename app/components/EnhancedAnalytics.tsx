@@ -1,21 +1,19 @@
+import React from 'react';
 
-    <
-      <
-        <
-    <
-    <
-    <
-    <
-    <
-          <
-    <
-    <
-    <
-            <p className="text-gray-300 text-sm mb-4">Try searching for one of these popular pages: </p>,<
-    <
-    <
-            <
-    <
-    <
-            <
-    <
+interface EnhancedAnalyticsProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'enhancedanalytics ' + className}>
+      {children || <p>EnhancedAnalytics component</p>}
+    </div>
+  );
+};
+
+export default EnhancedAnalytics;

@@ -1,125 +1,19 @@
+import React from 'react';
 
-<
-        <
-    <
-    <
-    <
-            <
-            <
-    <
-    <
-    <
-      <
-                <
-                <
-              <
-                <
-                <
-    <
-    <
-    <
-    <
-    <
-                    <
-    <
-    <
-                <
-    <
-    <
-    <
-                  <
-                  <
-    <
-    <
-    <div className="grid md: grid-cols-4 gap-8"></div>,<
-    <
-    <
-    <
-    <
-    <
-    <
-    <
-    <
-    <
-    <
-    <
-    <
-    <div className="grid md: grid-cols-2 gap-12 max-w-6 xl mx-auto"></div>,<
-    <
-    <h1 className="text-3 xlfont-boldtext-whitemb-4">Our Mission</h2>,<
-    <
-    <
-    <
-              <
-    <
-    <
-    <
-            <
-g: grid-cols-3 gap-8 max-w-6 xl mx-auto" /></div>,<
-    <
-    <
-              <
-    <
-    <
-    <
-              <
-    <
-    <
-    <
-              <
-    <
-    <
-    <
-              <
-    <
-    <
-    <
-              <
-    <
-    <
-    <
-              <
-    <
-    <
-    <
-            <
-g: grid-cols-3 gap-8 max-w-6 xl mx-auto" /></div>,<
-    <
-    <
-    <
-              <
-              <
-    <
-    <
-    <
-    <
-              <
-          </p>,<
-    <
-    <
-    <
-    <
-              <
-              <
-    <
-    <
-    <
-            <
-g: grid-cols-4 gap-8 max-w-6 xl mx-auto" /></div>,<
-    <
-    <
-    <
-    <
-    <
-    <
-    <
-    <
-    <
-    <
-    <
-        <
-    <
-    <
-    <
-            <
-            <
+interface AboutPageProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const AboutPage: React.FC<AboutPageProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'aboutpage ' + className}>
+      {children || <p>AboutPage component</p>}
+    </div>
+  );
+};
+
+export default AboutPage;

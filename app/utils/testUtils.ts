@@ -1,11 +1,11 @@
-'use client';
-import React from 'react';
+import { useState, useEffect } from 'react';
 
-export default function testUtils() {
-  return (
-    <div>
-      <h1>testUtils</h1>
-      <p>testUtils content.</p>
-    </div>
-  );
-}
+export const usetestUtils = () => {
+  const [state, setState] = useState(null);
+  
+  useEffect(() => {
+    // Hook implementation
+  }, []);
+  
+  return { state, setState };
+};

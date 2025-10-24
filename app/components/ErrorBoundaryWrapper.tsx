@@ -1,15 +1,17 @@
-'use client';
 import React from 'react';
 
 interface ErrorBoundaryWrapperProps {
   className?: string;
+  children?: React.ReactNode;
 }
 
-const ErrorBoundaryWrapper: React.FC<ErrorBoundaryWrapperProps> = ({ className }) => {
+const ErrorBoundaryWrapper: React.FC<ErrorBoundaryWrapperProps> = ({ 
+  className = '', 
+  children 
+}) => {
   return (
-    <div className={className}>
-      <h2>ErrorBoundaryWrapper</h2>
-      <p>ErrorBoundaryWrapper component for enhanced functionality.</p>
+    <div className={'errorboundarywrapper ' + className}>
+      {children || <p>ErrorBoundaryWrapper component</p>}
     </div>
   );
 };

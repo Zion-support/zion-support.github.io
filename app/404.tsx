@@ -1,16 +1,19 @@
-'use client';
 import React from 'react';
 
-export default function NotFound() {
+interface NotFound404Props {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const NotFound404: React.FC<NotFound404Props> = ({ 
+  className = '', 
+  children 
+}) => {
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-6xl font-bold text-gray-900 mb-4">404</h1>
-        <p className="text-xl text-gray-600 mb-8">Page not found</p>
-        <a href="/" className="text-blue-600 hover:text-blue-800">
-          Go back home
-        </a>
-      </div>
+    <div className={'not-found-404 ' + className}>
+      {children || <p>404 - Page Not Found</p>}
     </div>
   );
-}
+};
+
+export default NotFound404;

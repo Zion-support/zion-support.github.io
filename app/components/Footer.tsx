@@ -1,44 +1,19 @@
+import React from 'react';
 
-    <
-    <
-      </div>,<
-    <
-    <
-    <
-    <
-    <
-            <
-    <
-              <
-              <
-              <
-    <
-    <
-            <
-                <
-                  <
-    <
-    <
-            <
-                <
-                  <
-    <
-      <
-    <
-              <
-                  <
-                    <
-      <
-    <
-              <
-                  <
-                    <
-    <
-    <div className="grid grid-cols-1 md: grid-cols-3 gap-6"></div>,<
-    <
-    <
-    <
-    <
-    <
-    <div className="border-t border-slate-800 mt-8 pt-6 flex flex-col md: flex-row justify-between items-center"></div>,<
-              <
+interface FooterProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const Footer: React.FC<FooterProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'footer ' + className}>
+      {children || <p>Footer component</p>}
+    </div>
+  );
+};
+
+export default Footer;

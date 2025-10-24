@@ -1,15 +1,17 @@
-'use client';
 import React from 'react';
 
 interface EnhancedLoadingSkeletonProps {
   className?: string;
+  children?: React.ReactNode;
 }
 
-const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({ className }) => {
+const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({ 
+  className = '', 
+  children 
+}) => {
   return (
-    <div className={className}>
-      <h2>EnhancedLoadingSkeleton</h2>
-      <p>EnhancedLoadingSkeleton component for enhanced functionality.</p>
+    <div className={'enhancedloadingskeleton ' + className}>
+      {children || <p>EnhancedLoadingSkeleton component</p>}
     </div>
   );
 };

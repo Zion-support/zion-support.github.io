@@ -1,30 +1,19 @@
+import React from 'react';
 
-    <
-        <
-    <
-    <
-    <
-    <
-            <
-            </p>,<
-        <
-    <
-    <
-    <
-              <
-g: grid-cols-4 gap-8"></div>,<
-    <
-                <
-    <
-    <
-                <
-    <
-    <
-                <
-    <
-    <
-                <
-        <
-    <
-    <
-            <
+interface OptimizedImageProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const OptimizedImage: React.FC<OptimizedImageProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'optimizedimage ' + className}>
+      {children || <p>OptimizedImage component</p>}
+    </div>
+  );
+};
+
+export default OptimizedImage;

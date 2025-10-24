@@ -1,11 +1,19 @@
-'use client';
 import React from 'react';
 
-export default function dynamic() {
+interface dynamicProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const dynamic: React.FC<dynamicProps> = ({ 
+  className = '', 
+  children 
+}) => {
   return (
-    <div>
-      <h1>dynamic</h1>
-      <p>dynamic content.</p>
+    <div className={'dynamic ' + className}>
+      {children || <p>dynamic component</p>}
     </div>
   );
-}
+};
+
+export default dynamic;

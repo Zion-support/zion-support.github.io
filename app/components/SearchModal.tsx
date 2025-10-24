@@ -1,5 +1,19 @@
+import React from 'react';
 
-<
-    <
-    <div className="max-w-7 xl mx-auto px-4 sm: px-6 lg:px-8 py-16 text-center"></div>,<
-          <
+interface SearchModalProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const SearchModal: React.FC<SearchModalProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'searchmodal ' + className}>
+      {children || <p>SearchModal component</p>}
+    </div>
+  );
+};
+
+export default SearchModal;

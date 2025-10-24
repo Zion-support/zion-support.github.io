@@ -1,15 +1,17 @@
-'use client';
 import React from 'react';
 
 interface SEOHeadWrapperProps {
   className?: string;
+  children?: React.ReactNode;
 }
 
-const SEOHeadWrapper: React.FC<SEOHeadWrapperProps> = ({ className }) => {
+const SEOHeadWrapper: React.FC<SEOHeadWrapperProps> = ({ 
+  className = '', 
+  children 
+}) => {
   return (
-    <div className={className}>
-      <h2>SEOHeadWrapper</h2>
-      <p>SEOHeadWrapper component for enhanced functionality.</p>
+    <div className={'seoheadwrapper ' + className}>
+      {children || <p>SEOHeadWrapper component</p>}
     </div>
   );
 };

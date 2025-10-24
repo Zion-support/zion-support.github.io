@@ -1,30 +1,19 @@
+import React from 'react';
 
-    <
-        <
-    <
-    <
-    <
-    <
-            <
-            </p>,<
-        <
-    <
-    <
-    <
-              <
-g: grid-cols-4 gap-8"></div>,<
-    <
-                <
-    <
-    <
-                <
-    <
-    <
-                <
-    <
-    <
-                <
-        <
-    <
-    <
-            <
+interface DynamicContentShowcaseProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'dynamiccontentshowcase ' + className}>
+      {children || <p>DynamicContentShowcase component</p>}
+    </div>
+  );
+};
+
+export default DynamicContentShowcase;

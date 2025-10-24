@@ -1,11 +1,7 @@
-'use client';
-import React from 'react';
+// Global type definitions
 
-export default function global.d() {
-  return (
-    <div>
-      <h1>global.d</h1>
-      <p>global.d content.</p>
-    </div>
-  );
+declare global {
+  // Add global type definitions here
 }
+
+export {};

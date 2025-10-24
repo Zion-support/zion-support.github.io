@@ -1,5 +1,19 @@
+import React from 'react';
 
-<
-    <
-    <div className="max-w-7 xl mx-auto px-4 sm: px-6 lg:px-8 py-16 text-center"></div>,<
-          <
+interface ThemeToggleProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const ThemeToggle: React.FC<ThemeToggleProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'themetoggle ' + className}>
+      {children || <p>ThemeToggle component</p>}
+    </div>
+  );
+};
+
+export default ThemeToggle;

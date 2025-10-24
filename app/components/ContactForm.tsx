@@ -1,11 +1,19 @@
-'use client';
 import React from 'react';
 
-export default function ContactForm() {
+interface ContactFormProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const ContactForm: React.FC<ContactFormProps> = ({ 
+  className = '', 
+  children 
+}) => {
   return (
-    <div>
-      <h1>ContactForm</h1>
-      <p>ContactForm content.</p>
+    <div className={'contactform ' + className}>
+      {children || <p>ContactForm component</p>}
     </div>
   );
-}
+};
+
+export default ContactForm;

@@ -1,21 +1,19 @@
+import React from 'react';
 
-    <
-      <
-        <
-    <
-    <
-    <
-    <
-    <
-          <
-    <
-    <
-    <
-            <p className="text-gray-300 text-sm mb-4">Try searching for one of these popular pages: </p>,<
-    <
-    <
-            <
-    <
-    <
-            <
-    <
+interface PerformanceMonitorProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'performancemonitor ' + className}>
+      {children || <p>PerformanceMonitor component</p>}
+    </div>
+  );
+};
+
+export default PerformanceMonitor;

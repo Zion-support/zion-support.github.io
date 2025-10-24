@@ -1,11 +1,19 @@
-'use client';
 import React from 'react';
 
-export default function link() {
+interface linkProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const link: React.FC<linkProps> = ({ 
+  className = '', 
+  children 
+}) => {
   return (
-    <div>
-      <h1>link</h1>
-      <p>link content.</p>
+    <div className={'link ' + className}>
+      {children || <p>link component</p>}
     </div>
   );
-}
+};
+
+export default link;

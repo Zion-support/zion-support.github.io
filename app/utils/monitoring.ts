@@ -1,11 +1,11 @@
-'use client';
-import React from 'react';
+import { useState, useEffect } from 'react';
 
-export default function monitoring() {
-  return (
-    <div>
-      <h1>monitoring</h1>
-      <p>monitoring content.</p>
-    </div>
-  );
-}
+export const usemonitoring = () => {
+  const [state, setState] = useState(null);
+  
+  useEffect(() => {
+    // Hook implementation
+  }, []);
+  
+  return { state, setState };
+};

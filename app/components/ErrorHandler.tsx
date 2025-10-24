@@ -1,30 +1,19 @@
+import React from 'react';
 
-    <
-        <
-    <
-    <
-    <
-    <
-            <
-            </p>,<
-        <
-    <
-    <
-    <
-              <
-g: grid-cols-4 gap-8"></div>,<
-    <
-                <
-    <
-    <
-                <
-    <
-    <
-                <
-    <
-    <
-                <
-        <
-    <
-    <
-            <
+interface ErrorHandlerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const ErrorHandler: React.FC<ErrorHandlerProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'errorhandler ' + className}>
+      {children || <p>ErrorHandler component</p>}
+    </div>
+  );
+};
+
+export default ErrorHandler;

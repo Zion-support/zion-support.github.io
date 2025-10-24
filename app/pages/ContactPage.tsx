@@ -1,15 +1,17 @@
-'use client';
 import React from 'react';
 
 interface ContactPageProps {
   className?: string;
+  children?: React.ReactNode;
 }
 
-const ContactPage: React.FC<ContactPageProps> = ({ className }) => {
+const ContactPage: React.FC<ContactPageProps> = ({ 
+  className = '', 
+  children 
+}) => {
   return (
-    <div className={className}>
-      <h2>ContactPage</h2>
-      <p>ContactPage component for enhanced functionality.</p>
+    <div className={'contactpage ' + className}>
+      {children || <p>ContactPage component</p>}
     </div>
   );
 };

@@ -1,11 +1,11 @@
-'use client';
-import React from 'react';
+import { useState, useEffect } from 'react';
 
-export default function useIntersectionObserver() {
-  return (
-    <div>
-      <h1>useIntersectionObserver</h1>
-      <p>useIntersectionObserver content.</p>
-    </div>
-  );
-}
+export const useuseIntersectionObserver = () => {
+  const [state, setState] = useState(null);
+  
+  useEffect(() => {
+    // Hook implementation
+  }, []);
+  
+  return { state, setState };
+};

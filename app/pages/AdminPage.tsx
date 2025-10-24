@@ -1,15 +1,17 @@
-'use client';
 import React from 'react';
 
 interface AdminPageProps {
   className?: string;
+  children?: React.ReactNode;
 }
 
-const AdminPage: React.FC<AdminPageProps> = ({ className }) => {
+const AdminPage: React.FC<AdminPageProps> = ({ 
+  className = '', 
+  children 
+}) => {
   return (
-    <div className={className}>
-      <h2>AdminPage</h2>
-      <p>AdminPage component for enhanced functionality.</p>
+    <div className={'adminpage ' + className}>
+      {children || <p>AdminPage component</p>}
     </div>
   );
 };

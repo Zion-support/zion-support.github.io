@@ -1,15 +1,17 @@
-'use client';
 import React from 'react';
 
 interface EnhancedServicesShowcaseProps {
   className?: string;
+  children?: React.ReactNode;
 }
 
-const EnhancedServicesShowcase: React.FC<EnhancedServicesShowcaseProps> = ({ className }) => {
+const EnhancedServicesShowcase: React.FC<EnhancedServicesShowcaseProps> = ({ 
+  className = '', 
+  children 
+}) => {
   return (
-    <div className={className}>
-      <h2>EnhancedServicesShowcase</h2>
-      <p>EnhancedServicesShowcase component for enhanced functionality.</p>
+    <div className={'enhancedservicesshowcase ' + className}>
+      {children || <p>EnhancedServicesShowcase component</p>}
     </div>
   );
 };

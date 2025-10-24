@@ -1,15 +1,17 @@
-'use client';
 import React from 'react';
 
 interface FuturisticHeroProps {
   className?: string;
+  children?: React.ReactNode;
 }
 
-const FuturisticHero: React.FC<FuturisticHeroProps> = ({ className }) => {
+const FuturisticHero: React.FC<FuturisticHeroProps> = ({ 
+  className = '', 
+  children 
+}) => {
   return (
-    <div className={className}>
-      <h2>FuturisticHero</h2>
-      <p>FuturisticHero component for enhanced functionality.</p>
+    <div className={'futuristichero ' + className}>
+      {children || <p>FuturisticHero component</p>}
     </div>
   );
 };

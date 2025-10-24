@@ -1,30 +1,19 @@
+import React from 'react';
 
-    <
-        <
-    <
-    <
-    <
-    <
-            <
-            </p>,<
-        <
-    <
-    <
-    <
-              <
-g: grid-cols-4 gap-8"></div>,<
-    <
-                <
-    <
-    <
-                <
-    <
-    <
-                <
-    <
-    <
-                <
-        <
-    <
-    <
-            <
+interface ServiceWorkerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const ServiceWorker: React.FC<ServiceWorkerProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'serviceworker ' + className}>
+      {children || <p>ServiceWorker component</p>}
+    </div>
+  );
+};
+
+export default ServiceWorker;

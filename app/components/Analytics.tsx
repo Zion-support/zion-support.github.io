@@ -1,11 +1,19 @@
-'use client';
 import React from 'react';
 
-export default function Analytics() {
+interface AnalyticsProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const Analytics: React.FC<AnalyticsProps> = ({ 
+  className = '', 
+  children 
+}) => {
   return (
-    <div>
-      <h1>Analytics</h1>
-      <p>Analytics content.</p>
+    <div className={'analytics ' + className}>
+      {children || <p>Analytics component</p>}
     </div>
   );
-}
+};
+
+export default Analytics;

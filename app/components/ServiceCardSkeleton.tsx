@@ -1,30 +1,19 @@
+import React from 'react';
 
-    <
-        <
-    <
-    <
-    <
-    <
-            <
-            </p>,<
-        <
-    <
-    <
-    <
-              <
-g: grid-cols-4 gap-8"></div>,<
-    <
-                <
-    <
-    <
-                <
-    <
-    <
-                <
-    <
-    <
-                <
-        <
-    <
-    <
-            <
+interface ServiceCardSkeletonProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'servicecardskeleton ' + className}>
+      {children || <p>ServiceCardSkeleton component</p>}
+    </div>
+  );
+};
+
+export default ServiceCardSkeleton;

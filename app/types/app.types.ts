@@ -1,5 +1,5 @@
 // app.types type definitions
 
-export interface app.types {
+export interface AppTypes {
   // Add type definitions here
 }
