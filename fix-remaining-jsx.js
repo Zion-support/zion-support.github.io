@@ -1,85 +1,87 @@
-import fs from 'fs';
-#!/usr/bin/env node;
-// Function to fix remaining JSX issues;
-function fixRemainingJSX(content) {
-  let fixed = content;
-  
-  // Fix remaining className spacing issues;
-  fixed = fixed.replace(/from-slate-900pt-20/g, 'from-slate-900 pt-20');
-  fixed = fixed.replace(/py-16text-center/g, 'py-16 text-center');
-  fixed = fixed.replace(/text-whitemb-/g, 'text-white mb-');
-  fixed = fixed.replace(/text-gray-300mb-/g, 'text-gray-300 mb-');
-  fixed = fixed.replace(/flexspace-/g, 'flex space-');
-  fixed = fixed.replace(/flexitems-/g, 'flex items-');
-  fixed = fixed.replace(/w-4 h-4ml-/g, 'w-4 h-4 ml-');
-  fixed = fixed.replace(/w-5 h-5ml-/g, 'w-5 h-5 ml-');
-  fixed = fixed.replace(/hover:text-cyan-400transition-colors/g, 'hover:text-cyan-400 transition-colors');
-  fixed = fixed.replace(/items-centertext-gray-300/g, 'items-center text-gray-300');
-  fixed = fixed.replace(/w-4 h-4mr-/g, 'w-4 h-4 mr-');
-  fixed = fixed.replace(/pt-8text-center/g, 'pt-8 text-center');
-  
-  // Fix duplicate closing tags;
-  fixed = fixed.replace(/<\/Link>\s*<\/Link>/g, '</Link>');
-  fixed = fixed.replace(/<\/div>\s*<\/div>/g, '</div>');
-  
-  // Fix malformed Link components - single line format;
-  fixed = fixed.replace(/<Link\s+to="([^"]+)"\s+className="([^"]+)"\s*\/>\s*([^<]+)\s*<([^>]+)\s*\/>/g, 
-    '<Link to="$1", className="$2">\n          $3\n          <$4 />\n        </Link>');
-  
-  // Fix malformed Link components - multi-line format;
-  fixed = fixed.replace(/<Link\s+to="([^"]+)"\s+className="([^"]+)"\s*>\s*([^<]+)\s*<([^>]+)\s*\/>\s*<\/Link>\s*<\/Link>/g,
-    '<Link to="$1", className="$2">\n          $3\n          <$4 />\n        </Link>');
-  
-  // Fix Link components with extra spaces and malformed structure;
-  fixed = fixed.replace(/<Link\s+to="([^"]+)"\s+className="([^"]+)"\s*>\s*([^<]+)\s*<([^>]+)\s*\/>\s*<\/Link>\s*<\/Link>/g,
-    '<Link to="$1", className="$2">\n          $3\n          <$4 />\n        </Link>');
-  
-  // Fix specific patterns for 5G pages;
-  fixed = fixed.replace(/<Link\s+to="\/contact"\s+className="([^"]+)"\s*\/>\s*Contact Us\s*<ArrowRight[^>]*\/>/g,
-    '<Link to="/contact", className="$1">\n          Contact Us\n          <ArrowRight className="w-5 h-5 ml-2" />\n        </Link>');
-  
-  // Fix malformed p tags;
-  fixed = fixed.replace(/<p className="([^"]*)" \/>\s*([^<]+)\s*<\/p>/g, '<p className="$1">\n              $2\n            </p>');
-  
-  // Fix self-closing divs that should be opening tags;
-  fixed = fixed.replace(/<div \/>\s*<h4/g, '<div>\n            <h4');
-  fixed = fixed.replace(/<div \/>\s*<h3/g, '<div>\n            <h3');
-  
-  // Fix ul tags;
-  fixed = fixed.replace(/<ul className="([^"]*)" \/>\s*<li/g, '<ul className="$1">\n              <li');
-  
-  return fixed;
+const fs = require('fs');
+const path = require('path');
 
-// Function to process a single file;
-function processFile(filePath) {
+function fixRemainingJSX(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixRemainingJSX(content);
+    let content = fs.readFileSync(filePath, 'utf8');
+    let originalContent = content;
     
-    if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
+    // Fix specific JSX structure issues
+    content = content
+      // Fix self-closing divs that should contain content
+      .replace(/<div([^>]*)\s*>\s*<\/div>\s*<div([^>]*)\s*>\s*([^<]+)\s*<\/div>/g, '<div$1>$3</div>')
+      
+      // Fix broken JSX structure where content is outside divs
+      .replace(/<div([^>]*)\s*>\s*<\/div>\s*([^<]+)\s*<div([^>]*)\s*>\s*([^<]+)\s*<\/div>/g, '<div$1>$2$4</div>')
+      
+      // Fix missing closing tags for fragments
+      .replace(/<>\s*([^<]*(?:<[^>]*>[^<]*)*?)\s*$/gm, (match, content) => {
+        if (!content.includes('</>')) {
+          return `<>${content}</>`;
+        }
+        return match;
+      })
+      
+      // Fix trailing spaces in className attributes
+      .replace(/className="([^"]*)\s+"/g, 'className="$1"')
+      
+      // Fix missing commas in arrays
+      .replace(/(\w+)\s*\n\s*\]/g, '$1,\n  ]')
+      
+      // Fix missing closing brackets in arrays
+      .replace(/(\w+)\s*\}\s*<\/div>\s*\]/g, '$1}\n              ]')
+      
+      // Fix broken array structure
+      .replace(/(\w+)\s*\}\s*<\/div>\s*\]\.map/g, '$1}\n              ].map')
+      
+      // Fix missing closing parentheses in function calls
+      .replace(/(\w+)\s*\(\s*([^)]*)\s*\n/g, '$1($2)\n')
+      
+      // Fix missing semicolons in JSX
+      .replace(/(\w+)\s*\(\s*\)\s*=>\s*\{([^}]+)\}\s*$/gm, (match, funcName, body) => {
+        if (!body.trim().includes('return')) {
+          return `${funcName} = () => {\n  return ${body.trim()};\n}`;
+        }
+        return match;
+      });
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed remaining JSX: ${filePath}`);
       return true;
+    }
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error fixing remaining JSX in ${filePath}:`, error.message);
     return false;
+  }
+}
 
-// Main function;
-async function main() {
-  console.log('Starting to fix remaining JSX issues...');
-  
-  // Get all TypeScript/TSX files;
-  const files = await glob('**/*.{ts,tsx}', {
-    ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**'])
-  });
-  
+function walkDirectory(dir) {
+  const files = fs.readdirSync(dir);
   let fixedCount = 0;
   
-    if (processFile(file)) {
-      fixedCount++;
+  files.forEach(file => {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      fixedCount += walkDirectory(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.jsx')) {
+      if (fixRemainingJSX(filePath)) {
+        fixedCount++;
+      }
+    }
   });
   
-  console.log(`\nFixed remaining JSX issues in ${fixedCount} files out of ${files.length} total files.`);
+  return fixedCount;
+}
 
-main().catch(console.error);
+console.log('Starting remaining JSX fixes...');
+const fixedCount = walkDirectory('./app');
+console.log(`Fixed remaining JSX in ${fixedCount} files in app directory`);
+
+const srcFixedCount = walkDirectory('./src');
+console.log(`Fixed remaining JSX in ${srcFixedCount} files in src directory`);
+
+console.log('Remaining JSX fixes completed!');

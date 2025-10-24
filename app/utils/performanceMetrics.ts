@@ -6,9 +6,9 @@
 */
 export interface PerformanceMetric {
   name: string,
-    value: number
+    value: number;
 unit: string,
-    timestamp: Date
+    timestamp: Date;
 category: 'load' | 'runtime' | 'network' | 'memory' | 'custom'
 metadata?: Record<string, unknown>
 }
@@ -20,9 +20,9 @@ CLS?: number; // Cumulative Layout Shift
 TTFB?: number; // Time to First Byte
 export interface PerformanceMetric {}
 name: string,
-    value: number
+    value: number;
 unit: string,
-    timestamp: Date
+    timestamp: Date;
 category: 'load' | 'runtime' | 'network' | 'memory' | 'custom'
 metadata?: Record<string, unknown>;}</strin>
 }
@@ -36,16 +36,16 @@ INP?: number; // Interaction to Next Paint}
 }
 export interface PerformanceReport {}
 metrics: PerformanceMetric[],
-    webVitals: WebVitalsMetrics
+    webVitals: WebVitalsMetrics;
 summary: {,
-    avgLoadTime: number
+    avgLoadTime: number;
 totalMetrics: number,
-    performanceScore: number
-webVitals: WebVitalsMetrics
+    performanceScore: number;
+webVitals: WebVitalsMetrics;
   }
 summary: {}
 avgLoadTime: number,
-    totalMetrics: number
+    totalMetrics: number;
 performanceScore: number,
     recommendations: string[];}
 }
@@ -58,7 +58,7 @@ private observers: PerformanceObserver[] = []
 constructor() {
 if (typeof window !== 'undefined') {}
 export class PerformanceMetrics {}
-private static instance: PerformanceMetrics
+private static instance: PerformanceMetrics;
 private metrics: PerformanceMetric[] = [];}
 private webVitals: WebVitalsMetrics = {}
 private observers: PerformanceObserver[] = []
@@ -219,7 +219,7 @@ clsValue += (entry as LayoutShift).value;}
 this.webVitals.CLS = clsValue
 this.recordMetric({)}
 name: 'CLS',
-    value: clsValue
+    value: clsValue;
 unit: 'score',
     timestamp: new Date()
 category: 'runtime'}
@@ -303,7 +303,7 @@ const perfData = window.performance.timing
 const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart
 this.recordMetric({)}
 name: 'pageLoad',
-    value: pageLoadTime
+    value: pageLoadTime;
 unit: 'ms',
     timestamp: new Date()
 category: 'load',
@@ -332,7 +332,7 @@ url
 recordNetworkRequest(url: string, duration: number, status: number): void {}
 this.recordMetric({)}
 name: 'networkRequest',
-    value: duration
+    value: duration;
 unit: 'ms',
     timestamp: new Date()
 category: 'network',
@@ -646,13 +646,13 @@ interface PerformanceWithMemory extends Performance {
 }
 interface PerformanceWithMemory extends Performance {}
 memory: {}
-// usedJSHeapSize: number
-// totalJSHeapSize: number
+// usedJSHeapSize: number;
+// totalJSHeapSize: number;
 // jsHeapSizeLimit: number}
 }
 // Type for LayoutShift
 interface LayoutShift extends PerformanceEntry {
-  value: number
+  value: number;
 // Type for LayoutShift
 }
 interface LayoutShift extends PerformanceEntry {}

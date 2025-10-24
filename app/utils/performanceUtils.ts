@@ -9,7 +9,6 @@ export interface PerformanceMetric {
 class PerformanceMonitor {
   private metrics: PerformanceMetric[] = [];
   private isEnabled: boolean;
-
   constructor() {
     this.isEnabled = typeof window !== "undefined" && "performance" in window;
   }

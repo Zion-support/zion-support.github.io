@@ -4,8 +4,7 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
 export default function AboutPage() {
-  return (
-    <>
+  return (<>
       <Head>
         <title>About - Zion Tech Group</title>
         <meta name="description" content="Professional about services by Zion Tech Group. Transform your business with our expert solutions." />

@@ -9,11 +9,11 @@ import React, { useRef, useEffect } from 'react';
 :all-pages-backup/utils/performanceEnhancer.ts
 export const debounce = <T extends (...args: unknown[]) => unknown>(;
   func: T,
-  wait: number
+  wait: number;
 ): ((...args: Parameters<T>) => void) => {;
   let timeout: NodeJS.Timeout
 export const debounce = <T extends (...args: unknown[]) => unknown>(
-  func: T
+  func: T;
   wait: number;
 ): ((...args: Parameters<T>) => void) => {;
   let timeout: NodeJS.Timeout;
@@ -27,12 +27,12 @@ export const debounce = <T extends (...args: unknown[]) => unknown>(
 :all-pages-backup/utils/performanceEnhancer.ts
 export const throttle = <T extends (...args: unknown[]) => unknown>(;
   func: T,
-  limit: number
+  limit: number;
 ): ((...args: Parameters<T>) => void) => {;
-  let inThrottle: boolean
+  let inThrottle: boolean;
 export const throttle = <T extends (...args: unknown[]) => unknown>(
-  func: T
-  limit: number
+  func: T;
+  limit: number;
 ): ((...args: Parameters<T>) => void) => {;
   let inThrottle: boolean;
   return (...args: Parameters<T>) => {
@@ -47,7 +47,7 @@ export const throttle = <T extends (...args: unknown[]) => unknown>(
 // Performance monitoring utilities
 export class PerformanceMonitor {;
 :all-pages-backup/utils/performanceEnhancer.ts
-  private static instance: PerformanceMonitor
+  private static instance: PerformanceMonitor;
   private static instance: PerformanceMonitor;
   private metrics: Map<string, number> = new Map()
   private observers: PerformanceObserver[] = [];
@@ -182,24 +182,26 @@ export const optimizeScrollPerformance = () => {;
     document.documentElement.style.setProperty('--scroll-top', `${scrollTop}px`)
     ticking = false
   }
-  const requestTick = () => {;
+  const requestTick = () => {
+  return ;
     if (!ticking) {
       requestAnimationFrame(updateScrollPosition)
-      ticking = true
-    }
+      ticking = true;
+}
   }
 
   // Track Core Web Vitals
 :all-pages-backup/utils/performanceEnhancer.ts
-  const trackCLS = () => {;
+  const trackCLS = () => {
+  return ;
     let clsValue = 0
   const trackCLS = () => {
     let clsValue = 0;
     const clsEntries: PerformanceEntry[] = [];
     interface LayoutShiftEntry extends PerformanceEntry {
       hadRecentInput?: boolean,
-  value: number
-    }
+  value: number;;
+}
     const observer = new PerformanceObserver((list) => {;
       for (const entry of list.getEntries()) {
         const layoutEntry = entry as LayoutShiftEntry
@@ -216,23 +218,25 @@ export const optimizeScrollPerformance = () => {;
     }
   }
 
-  const trackLCP = () => {;
+  const trackLCP = () => {
+  return ;
     const observer = new PerformanceObserver((list) => {;
       for (const entry of list.getEntries()) {
         if (process.env['NODE_ENV'] === 'development') {
           // eslint-disable-next-line no-console
-          console.log('LCP:', entry.startTime)
-        }
+          console.log('LCP:', entry.startTime);
+}
       }
     })
     observer.observe({ entryTypes: ['largest-contentful-paint'] })
     return () => observer.disconnect()
   }
 
-  const trackFID = () => {;
+  const trackFID = () => {
+  return ;
     interface FirstInputEntry extends PerformanceEntry {
-      processingStart: number
-    }
+      processingStart: number;;
+}
     const observer = new PerformanceObserver((list) => {;
       for (const entry of list.getEntries()) {
         const fidEntry = entry as FirstInputEntry

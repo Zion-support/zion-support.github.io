@@ -8,7 +8,7 @@ export interface PerformanceMetric {;
   name: string,
   value: number,
   rating: 'good' | 'needs-improvement' | 'poor'
-  timestamp: number
+  timestamp: number;
 }
 
 export interface WebVitals {;
@@ -25,11 +25,11 @@ export interface CustomMetric {;
   value: number,
   unit: 'ms' | 'bytes' | 'count' | 'percentage'
   rating: 'good' | 'needs-improvement' | 'poor'
-  timestamp: number
+  timestamp: number;
 }
 
 class PerformanceMonitoringService {
-  private static instance: PerformanceMonitoringService
+  private static instance: PerformanceMonitoringService;
   private webVitals: WebVitals = {}
   private customMetrics: CustomMetric[] = []
   private observers: PerformanceObserver[] = []
@@ -378,7 +378,7 @@ interface MetricData {
   average: number,
   min: number,
   max: number,
-  unit: string
+  unit: string;
   rating?: 'good' | 'needs-improvement' | 'poor'
 }
 
@@ -400,14 +400,14 @@ export const recordMetric = (name: string, value: number, unit: MetricUnit = Met
   count: 1,
   average: value,
   min: value,
-  max: value
+  max: value;
       unit,
   rating: getRating(name, value)
       values: [value]
-      count: 1
-      average: value
-      min: value
-      max: value
+      count: 1;
+      average: value;
+      min: value;
+      max: value;
       unit
       rating: getRating(name, value)
     })
@@ -444,11 +444,11 @@ export const getMetrics = (): Record<string, MetricData> => {;
   return result
 }
 
-export const clearMetrics = () => {;
+export const clearMetrics = () => {
+  return ;
   simpleMetrics.clear()
-  performanceMonitoring.clearMetrics()
+  performanceMonitoring.clearMetrics();
 }
-
 export const measureFunction = <T>(name: string, fn: () => T): T => {;
   const start = performance.now();
   const result = fn();

@@ -37,12 +37,12 @@ constAdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProp s
   reducedMotion: false,
   fontSize: fontSize,
   screenReader: false,
-  keyboardNavigation: false
-    highContrast: false
-    reducedMotion: false
+  keyboardNavigation: false;
+    highContrast: false;
+    reducedMotion: false;
     fontSize: 'normal',
-    screenReader: false
-    keyboardNavigation: false
+    screenReader: false;
+    keyboardNavigation: false;)
   })
 
   // Detect user preferences
@@ -59,10 +59,10 @@ constAdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProp s
 :all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
       ...prev,
   reducedMotion: prefersReducedMotion,
-  highContrast: prefersHighContrast
+  highContrast: prefersHighContrast;
       ...prev
-      reducedMotion: prefersReducedMotion
-      highContrast: prefersHighContrast
+      reducedMotion: prefersReducedMotion;
+      highContrast: prefersHighContrast;)
     }))
 
     // Listen for changes in user preferences
@@ -80,10 +80,10 @@ constAdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProp s
     motionQuery.addEventListener('change', handleMotionChange)
     contrastQuery.addEventListener('change', handleContrastChange)
 
-    return () => {
-      motionQuery.removeEventListener('change', handleMotionChange)
-      contrastQuery.removeEventListener('change', handleContrastChange)
-    }
+    return = () => {
+  return motionQuery.removeEventListener('change', handleMotionChange)
+      contrastQuery.removeEventListener('change', handleContrastChange);
+}
   }, [])
 
   // Apply accessibility styles
@@ -123,25 +123,25 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
   title: title,
   description: description,
   benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-      icon: Brain
+      icon: Brain;
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
   {
-    icon: BarChart
+    icon: BarChart;
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
   {
-    icon: Target
+    icon: Target;
       title: 'Precision Targeting',
       description: 'Target specific goals and objectives with precision and accuracy.',
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
   {
-    icon: TrendingUp
+    icon: TrendingUp;
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
@@ -186,10 +186,10 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       // Arrow keys for menu navigation
       // Arrow keys for menu navigation;
       if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {;
-        const menu = document.querySelector('[role=&quot;menu&quot;]') as HTMLElement
+        const menu = document.querySelector('[role="menu"]') as HTMLElement
         if (menu && menu.contains(event.target as Node)) {
           event.preventDefault()
-          const menuItems = Array.from(menu.querySelectorAll('[role=&quot;menuitem&quot;]')) as HTMLElement[];
+          const menuItems = Array.from(menu.querySelectorAll('[role="menuitem"]')) as HTMLElement[];
           const currentIndex = menuItems.indexOf(event.target as HTMLElement);
           const nextIndex = event.key === 'ArrowDown';
             ? (currentIndex + 1) % menuItems.length
@@ -245,8 +245,8 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
 :all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
     const trapFocus = (element: HTMLElement) => {;
     const trapFocus = (element: HTMLElement) => {
-      const focusableElements = element.querySelectorAll(;
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex=&quot;-1&quot;])',
+      const focusableElements = element.querySelectorAll(;)
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
       ) as NodeListOf<HTMLElement>
 
       const firstElement = focusableElements[0];
@@ -277,12 +277,12 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
 
 :all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
     // Apply focus trap to modals
-    const modals = document.querySelectorAll('[role=&quot;dialog&quot;]');
-    modals.forEach(modal => {
+    const modals = document.querySelectorAll('[role="dialog"]');
+    modals.forEach(modal => {)
       const cleanup = trapFocus(modal as HTMLElement);
     // Apply focus trap to modals;
-    const modals = document.querySelectorAll('[role=&quot;dialog&quot;]')
-    modals.forEach(modal = > {
+    const modals = document.querySelectorAll('[role="dialog"]')
+    modals.forEach(modal = > {)
       const cleanup = trapFocus(modal as HTMLElement)
       // Store cleanup function for later use
       (modal as any).__focusTrapCleanup = cleanup

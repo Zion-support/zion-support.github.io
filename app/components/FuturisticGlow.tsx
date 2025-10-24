@@ -13,7 +13,7 @@ export default function FuturisticGlow({
   children, 
   intensity = 'medium',
   color = 'cyan',
-  className = ''
+  className = '')
 }: FuturisticGlowProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   
@@ -48,23 +48,22 @@ export default function FuturisticGlow({
     container.style.setProperty('--glow-color-strong', `rgba(${rgb}, ${parseFloat(opacity) + 0.3})`);
   }, [intensity, color]);
 
-  return (
-    <div
+  return (<div
       ref={containerRef}
       className={`
         relative
-        before:absolute
+        before: absolute;
         before:inset-0 
         before:rounded-inherit
         before:bg-gradient-to-r 
-        before:from-transparent 
+        before:from-transparent )
         before:via-[var(--glow-color)] 
         before:to-transparent
         before:opacity-0 
         before:transition-opacity 
         before:duration-500
         hover:before:opacity-100
-        after:absolute
+        after: absolute;
         after:inset-0 
         after:rounded-inherit
         after:shadow-[0_0_20px_var(--glow-color)]
@@ -74,8 +73,7 @@ export default function FuturisticGlow({
         hover:after:opacity-100
         ${className}
       `}
-    >
-      {children}
+    >{children}</div>
     </div>
   );
 }

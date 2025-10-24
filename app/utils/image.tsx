@@ -3,25 +3,25 @@ import React from 'react';
 import React, { useState, useCallback } from 'react';
 interface ImageProps {
   src: string,
-    alt: string
+    alt: string;
   }
 interface ImageProps {}
 src: string,
-    alt: string
+    alt: string;
 width?: number
 height?: number
 className?: string
 priority?: boolean
 _quality?: number
 src: string,
-    alt: string
+    alt: string;
 width?: number
 height?: number
 className?: string
 priority?: boolean
 _quality?: number
 src: string,
-    alt: string
+    alt: string;
 width?: number
 height?: number
 className?: string
@@ -69,13 +69,13 @@ const imageStyle: React.CSSProperties = {
 ...style
 ...(fill && {
 position: 'absolute',
-    top: 0
+    top: 0;
 left: 0}
 const imageStyle: React.CSSProperties = {}
 ...style
 ...(fill && {}
 position: 'absolute',
-    top: 0
+    top: 0;
 left: 0,
     width: '100%',
 height: '100%',
@@ -84,16 +84,15 @@ height: '100%',
 }
 if (hasError) {
   </ImageProps>
-return (</ImageProps>
-}
+return(</ImageProps>
+})
 if (hasError) {}
-return (
-    <div}
+return (<div})
 if (hasError) {}
-return(<div}
+return (<div}
 interface ImageProps {/* TODO: Fix JSX expression */}
 }
-export const
+export const)
 Image: React.FC<ImageProps>= ({/* TODO: Fix JSX expression */})</div>
 }) => {/* TODO: Fix JSX expression */}
 }, [onLoad])
@@ -129,7 +128,7 @@ sizes={sizes}
 loading={priority ? 'eager' : 'lazy'}
 onLoad={handleLoad}
 onError={handleError}
-{...props}
+{...props})
 >)</img>
 }</img>
 export default Image</img>

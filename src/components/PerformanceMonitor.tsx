@@ -40,13 +40,13 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData
             // eslint-disable-next-line no-console
             console.log('Performance Metrics: ', {
               domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-  loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+  loadComplete: navigation.loadEventEnd - navigation.loadEventStart,)
   firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime,
   firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime
             })}
           console.log('Performance Metrics: ', {
             domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-  loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+  loadComplete: navigation.loadEventEnd - navigation.loadEventStart,)
   firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime,
   firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime
           })}, 0)})}
@@ -56,36 +56,34 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData
       const memory = (performance as any).memory
       if (process.env.NODE_ENV === 'development') {
         // eslint-disable-next-line no-console
-        console.log('Memory Usage: ', {
+        console.log('Memory Usage: ', {)
           used: Math.round(memory.usedJSHeapSize / 1048576) + ' MB'
           total: Math.round(memory.totalJSHeapSize / 1048576) + ' MB'
           limit: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB'
         })}
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>PerformanceMonitor</title>
-        <meta name=&quot;description&quot; content=&quot;Advanced PerformanceMonitor solution for modern businesses.&quot; />
-        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, PerformanceMonitor, AI solutions, intelligent automation&quot; />
+        <meta name="description" content="Advanced PerformanceMonitor solution for modern businesses." />
+        <meta name="keywords" content="AI, artificial intelligence, PerformanceMonitor, AI solutions, intelligent automation" />
       </Helmet>
       <Navigation />
-      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
         {/* Hero Section */}
-        <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
-          <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
-          <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md:text-7xl font-bold text-white mb-6 leading-tight&quot;>
+        <section className="relative py-20 px-4 overflow-hidden"></section>
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               PerformanceMonitor
             </h1>
-            <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced PerformanceMonitor solution for modern businesses.
             </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
                 Get Started
-                <ArrowRight className=&quot;ml-2 h-5 w-5&quot; />
+                <ArrowRight className="ml-2 h-5 w-5" />
               </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Learn More
               </button>
             </div>
@@ -93,24 +91,24 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData
         </section>
 
         {/* Features Section */}
-        <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Key Features</h2>
-              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Powerful AI-driven features designed to transform your business operations
               </p>
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>)
               {features.map((feature, index) => (
-                <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
-                  <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; />
-                  <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{feature.title}</h3>
-                  <p className=&quot;text-gray-300 mb-4&quot;>{feature.description}</p>
-                  <ul className=&quot;space-y-2&quot;>
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"></div>
+                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
                     {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className=&quot;flex items-center text-sm text-gray-300&quot;>
-                        <CheckCircle className=&quot;h-4 w-4 text-emerald-400 mr-2 flex-shrink-0&quot; />
+                      <li key={idx} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
                         {benefit}
                       </li>
                     ))}
@@ -122,19 +120,19 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData
         </section>
 
         {/* Benefits Section */}
-        <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
-              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
+        <section className="py-20 px-4 bg-white/5"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience the benefits of cutting-edge AI technology
               </p>
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {benefits.map((benefit, index) => (
-                <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
-                  <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
-                  <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
+                <div key={index} className="flex items-start space-x-4"></div>
+                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
+                  <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
               ))}
             </div>
@@ -142,17 +140,17 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData
         </section>
 
         {/* CTA Section */}
-        <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
-            <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
-            <p className=&quot;text-xl text-gray-300 mb-8&quot;>
+        <section className="py-20 px-4"></section>
+          <div className="max-w-4xl mx-auto text-center"></div>
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+            <p className="text-xl text-gray-300 mb-8">
               Join thousands of businesses already using our AI solutions
             </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Start Free Trial
               </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Contact Sales
               </button>
             </div>
@@ -181,11 +179,12 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({
   firstInputDelay: null,
   cumulativeLayoutShift: null,
   timeToInteractive: null,
-  totalBlockingTime: null
+  totalBlockingTime: null;
   })
   useEffect(() => {
     if (!enableRealTimeMonitoring || typeof window === 'undefined') return
-    const measurePerformance = () => {;
+    const measurePerformance = () => {
+  return ;
       const newMetrics: PerformanceMetrics = {;
         loadTime: null,
   firstContentfulPaint: null,
@@ -193,9 +192,8 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({
   firstInputDelay: null,
   cumulativeLayoutShift: null,
   timeToInteractive: null,
-  totalBlockingTime: null
-     }
-
+  totalBlockingTime: null;;
+}
       // Measure page load time
       if (performance.timing) {consttiming= performance.timing
         newMetrics.loadTime= timing.loadEventEnd - timing.navigationStart
@@ -274,8 +272,9 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({
    }
 
     // Cleanup
-    return () => {windo w.removeEventListener('load', measurePerformance)
-   }
+    return = () => {
+  return windo w.removeEventListener('load', measurePerformance);
+}
   }, [enableRealTimeMonitoring, onMetricsUpdate, logToConsole])
   // Service Worker registration for performance monitoring
   useEffect(() => {if ('serviceWorker' in navigator) {
@@ -289,8 +288,8 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({
     }
   }, [])
   // Performance monitoring dashboard (only in development);
-  if (process.env.NODE_ENV=== 'development') {return (;
-    <divclassName=&quot;fixed bottom-4 right-4 bg-black/80text-white p-4 rounded-lgtext-xsfont-monomax-w-xs&quot;><h3className=&quot;font-boldmb-2&quot;>PerformanceMetrics</h><divclassName=&quot;space-y-1&quot;><di v>LoadTime: {metrics.loadTime ?`${metrics.loadTime.toFixed(2)}ms`:'N/A'}</di><di v>FCP: {metrics.firstContentfulPaint?`${metrics.firstContentfulPaint.toFixed(2)}ms`:'N/A'}</di><di v>LCP: {metrics.largestContentfulPaint?`${metrics.largestContentfulPaint.toFixed(2)}ms`:'N/A'}</di><di v>FID: {metrics.firstInputDelay?`${metrics.firstInputDelay.toFixed(2)}ms`:'N/A'}</di><di v>CLS: {metrics.cumulativeLayoutShift ?metrics.cumulativeLayoutShift.toFixed(4):'N/A'}</di><di v>TTI: {metrics.timeToInteractive?`${metrics.timeToInteractive.toFixed(2)}ms`:'N/A'}</di><di v>TBT: {metrics.totalBlockingTime?`${metrics.totalBlockingTime.toFixed(2)}ms`:'N/A'}</di></di></di>
+  if (process.env.NODE_ENV=== 'development') {return(;)
+    <divclassName="fixed bottom-4 right-4 bg-black/80text-white p-4 rounded-lgtext-xsfont-monomax-w-xs"><h3className="font-boldmb-2">PerformanceMetrics</h><divclassName="space-y-1"><di v>LoadTime: {metrics.loadTime ?`${metrics.loadTime.toFixed(2)}ms`:'N/A'}</di><di v>FCP: {metrics.firstContentfulPaint?`${metrics.firstContentfulPaint.toFixed(2)}ms`:'N/A'}</di><di v>LCP: {metrics.largestContentfulPaint?`${metrics.largestContentfulPaint.toFixed(2)}ms`:'N/A'}</di><di v>FID: {metrics.firstInputDelay?`${metrics.firstInputDelay.toFixed(2)}ms`:'N/A'}</di><di v>CLS: {metrics.cumulativeLayoutShift ?metrics.cumulativeLayoutShift.toFixed(4):'N/A'}</di><di v>TTI: {metrics.timeToInteractive?`${metrics.timeToInteractive.toFixed(2)}ms`:'N/A'}</di><di v>TBT: {metrics.totalBlockingTime?`${metrics.totalBlockingTime.toFixed(2)}ms`:'N/A'}</di></di></di>
     )
   }
 
@@ -344,7 +343,7 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({
   cumulative_layout_shift: metrics.cumulativeLayoutShift,
   time_to_interactive: metrics.timeToInteractive,
   total_blocking_time: metrics.totalBlockingTime
-     }
+     })
     })
   }
 }
@@ -357,7 +356,7 @@ declare global {
     // Monitor memory usage
     if ('memory' in performance) {
       const memory = (performance as any).memory
-      console.log('Memory Usage: ', {
+      console.log('Memory Usage: ', {)
         used: Math.round(memory.usedJSHeapSize / 1048576) + ' MB'
         total: Math.round(memory.totalJSHeapSize / 1048576) + ' MB'
         limit: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB'

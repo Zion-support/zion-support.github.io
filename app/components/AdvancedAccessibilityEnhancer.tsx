@@ -26,9 +26,9 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
   enableFontScaling= true,
   enableVoiceNavigation= true}) => {const [accessibilitySettingssetAccessibilitySettings] = useState({
     highContrast: false,
-    reducedMotion: false
+    reducedMotion: false;
     fontSize: 'normal',
-    screenReader: false
+    screenReader: false;)
     keyboardNavigation: false})
   // Detect user preferences
   useEffect(() => {
@@ -41,7 +41,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches
     setAccessibilitySettings(prev => ({
       ...prev
-      reducedMotion: prefersReducedMotion,
+      reducedMotion: prefersReducedMotion,)
     highContrast: prefersHighContrast}))
     // Listen for changes in user preferences
     const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
@@ -54,8 +54,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     }
     motionQuery.addEventListener('change', handleMotionChange)
     contrastQuery.addEventListener('change', handleContrastChange)
-    return (
-    <>
+    return (<>)
       ) => {
       motionQuery.removeEventListener('change', handleMotionChange)
       contrastQuery.removeEventListener('change', handleContrastChange)
@@ -127,10 +126,10 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       }
       // Arrow keys for menu navigation
       if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
-        const menu = document.querySelector('[role=&quot;menu&quot;]') as HTMLElement
+        const menu = document.querySelector('[role="menu"]') as HTMLElement
         if (menu && menu.contains(event.target as Node)) {
           event.preventDefault()
-          const menuItems = Array.from(menu.querySelectorAll('[role=&quot;menuitem&quot;]')) as HTMLElement[]
+          const menuItems = Array.from(menu.querySelectorAll('[role="menuitem"]')) as HTMLElement[]
           const currentIndex = menuItems.indexOf(event.target as HTMLElement)
           const nextIndex = event.key === 'ArrowDown'
             ? (currentIndex + 1) % menuItems.length
@@ -176,8 +175,8 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     if (typeof window === 'undefined') return
     // Trap focus in modals
     const trapFocus = (element: HTMLElement) => {
-      const focusableElements = element.querySelectorAll(
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex=&quot;-1&quot;])',
+      const focusableElements = element.querySelectorAll()
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
     </>
   ) as NodeListOf<HTMLElement>
       const firstElement = focusableElements[0]
@@ -199,13 +198,12 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       }
       element.addEventListener('keydown', handleTabKey)
       firstElement?.focus()
-      return (
-    <>
+      return (<>)
       ) => element.removeEventListener('keydown', handleTabKey)
     }
     // Apply focus trap to modals
-    const modals = document.querySelectorAll('[role=&quot;dialog&quot;]')
-    modals.forEach(modal => {
+    const modals = document.querySelectorAll('[role="dialog"]')
+    modals.forEach(modal => {)
   const cleanup = trapFocus(modal as HTMLElement)
       // Store cleanup function for later use
       (modal as any).__focusTrapCleanup = cleanup

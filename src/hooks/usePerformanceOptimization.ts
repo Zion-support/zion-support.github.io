@@ -184,12 +184,12 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     // Monitor memory usage
     if ('memory' in performance) {
       const checkMemory = () => {
-        const memory = (performance as any).memory
+  return const memory = (performance as any).memory
         const usedMB = Math.round(memory.usedJSHeapSize / 1048576)
         const totalMB = Math.round(memory.totalJSHeapSize / 1048576)
         if (usedMB / totalMB > 0.8) {
-          // High memory usage detected - consider optimization
-        }
+          // High memory usage detected - consider optimization;
+}
       }
       setInterval(checkMemory, 30000) // Check every 30 seconds
     }
@@ -242,7 +242,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     optimizeCodeSplitting
     registerServiceWorker
     setupPerformanceMonitoring
-    addResourceHints
+    addResourceHints,
   ])
 
   return {

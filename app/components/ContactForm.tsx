@@ -2,12 +2,12 @@
 import { useState } from 'react';
 import { MessageSquare, Mail, Phone, Send, CheckCircle } from 'lucide-react';
 interface FormData {
-  name: string;,
-    email: string;
-  phone: string;,
-    company: string;
-  message: string;,
-    service: string
+  name: string;
+  email: string;
+  phone: string;
+  company: string;
+  message: string;
+  service: string;
   }
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
@@ -22,7 +22,7 @@ const ContactForm: React.FC = () => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
   setFormData({
       ...formData
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value)
 })
   }
   const handleSubmit = async (e: React.FormEvent) => {
@@ -40,7 +40,7 @@ const ContactForm: React.FC = () => {
     email: '',
         phone: '',
     company: '',
-        message: '',
+        message: '',)
     service: ''})
     }, 3000)
   }
@@ -55,20 +55,18 @@ const ContactForm: React.FC = () => {
     'Consulting'
   ]
   if (isSubmitted) {
-    return (
-      <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 text-center">
+    return (<div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 text-center"></div>
         <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
         <h3 className="text-xl font-semibold text-white mb-2">Message Sent!</h3>
         <p className="text-gray-300">Thank you for reaching out. We&apos;ll get back to you soon.</p>
-      </div>
+      </div>)
     )
   }
-  return (
-    <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+  return (<div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"></div>
       <h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
       <form onSubmit={handleSubmit} className="space-y-6">
-        <div className="grid md: grid-cols-2 gap-6">
-          <div>
+        <div className="grid md: grid-cols-2 gap-6"></div>
+          <div></div>
             <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
               Full Name *
             </label>
@@ -83,7 +81,7 @@ const ContactForm: React.FC = () => {
               placeholder="Your full name"
             />
           </div>
-          <div>
+          <div></div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
               Email Address *
             </label>
@@ -99,8 +97,8 @@ const ContactForm: React.FC = () => {
             />
           </div>
         </div>
-        <div className="grid md: grid-cols-2 gap-6">
-          <div>
+        <div className="grid md: grid-cols-2 gap-6"></div>
+          <div></div>
             <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
               Phone Number
             </label>
@@ -110,11 +108,11 @@ const ContactForm: React.FC = () => {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent")
               placeholder="+1 (555) 123-4567"
             />
           </div>
-          <div>
+          <div></div>
             <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
               Company
             </label>
@@ -129,7 +127,7 @@ const ContactForm: React.FC = () => {
             />
           </div>
         </div>
-        <div>
+        <div></div>
           <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
             Service Interest
           </label>
@@ -148,7 +146,7 @@ const ContactForm: React.FC = () => {
             ))}
           </select>
         </div>
-        <div>
+        <div></div>
           <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
             Message *
           </label>
@@ -181,18 +179,18 @@ const ContactForm: React.FC = () => {
           )}
         </button>
       </form>
-      <div className="mt-8 pt-8 border-t border-white/10">
+      <div className="mt-8 pt-8 border-t border-white/10"></div>
         <h3 className="text-lg font-semibold text-white mb-4">Contact Information</h3>
-        <div className="space-y-3">
-          <div className="flex items-center justify-center">
+        <div className="space-y-3"></div>
+          <div className="flex items-center justify-center"></div>
             <Mail className="w-5 h-5 text-cyan-400 mr-2" />
             <span className="text-gray-300">kleber@ziontechgroup.com</span>
           </div>
-          <div className="flex items-center justify-center">
+          <div className="flex items-center justify-center"></div>
             <Phone className="w-5 h-5 text-purple-400 mr-2" />
             <span className="text-gray-300">+1 (302) 464-0950</span>
           </div>
-          <div className="flex items-center justify-center">
+          <div className="flex items-center justify-center"></div>
             <MessageSquare className="w-5 h-5 text-green-400 mr-2" />
             <span className="text-gray-300">24/7 Support</span>
           </div>

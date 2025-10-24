@@ -6,7 +6,7 @@ import React from 'react';
  */
 const performanceConfig = {
   monitoring: {,
-    enableLongTaskDetection: true
+    enableLongTaskDetection: true;
     enableMemoryMonitoring: true,
     sampleRate: 0.1}
   webVitals: {,
@@ -30,9 +30,9 @@ export interface ErrorReport {
   message: string;
   stack?: string
   component?: string
-  timestamp: number;,
+  timestamp: number;
     userAgent: string;
-  url: string
+  url: string;
   }
 class MonitoringService {
   private metrics: PerformanceMetrics = {}

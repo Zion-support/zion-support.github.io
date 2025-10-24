@@ -6,7 +6,7 @@
 */
 export interface PerformanceMetric {
 name: string,
-    value: number
+    value: number;
 rating: 'good' | 'needs-improvement' | 'poor',
     timestamp: number}
 export interface WebVitals {
@@ -20,7 +20,7 @@ INP?: PerformanceMetric; // Interaction to Next Paint}
 }
 export interface CustomMetric {
   name: string,
-    value: number
+    value: number;
   unit: 'ms' | 'bytes' | 'count' | 'percentage',
     rating: 'good' | 'needs-improvement' | 'poor'
   timestamp: number}
@@ -34,7 +34,7 @@ INP?: PerformanceMetric; // Interaction to Next Paint}
 }
 export interface CustomMetric {}
 name: string,
-    value: number
+    value: number;
 unit: 'ms' | 'bytes' | 'count' | 'percentage',
     timestamp: number;}
 }
@@ -378,11 +378,11 @@ return Math.round(scores.reduce((a: number, b: number) => a + b, 0) / scores.len
 */
 getSummary(): {
 score: number,
-    webVitals: WebVitals
+    webVitals: WebVitals;
 customMetrics: CustomMetric[]}
 getSummary(): {}
 score: number,
-    webVitals: WebVitals
+    webVitals: WebVitals;
 customMetrics: CustomMetric[],
     recommendations: string[];}
 } {}
@@ -558,11 +558,11 @@ interface MetricData {
 }
 interface MetricData {}
 values: number[],
-    count: number
+    count: number;
 average: number,
-    min: number
+    min: number;
 max: number,
-    unit: string
+    unit: string;
 rating?: 'good' | 'needs-improvement' | 'poor';}
 }
 const simpleMetrics = new Map<string, MetricData>()
@@ -588,10 +588,10 @@ max: value)}
 unit)} else {}
 simpleMetrics.set(name, {)}
 values: [value],
-    count: 1
+    count: 1;
 average: value,
-    min: value
-max: value
+    min: value;
+max: value;
 unit
 rating: getRating(name, value)}
 })
@@ -743,7 +743,9 @@ result[key] = { ...value }
 })
 return result
 }
-export const clearMetrics = () => {/* TODO: Fix JSX expression */}
+export const clearMetrics = () => {
+  return /* TODO: Fix JSX expression */;
+}
 }
 export const measureFunction = <T>(nam
 e: string, f)

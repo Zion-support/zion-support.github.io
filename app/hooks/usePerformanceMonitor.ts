@@ -5,10 +5,10 @@ interface UsePerformanceMonitorOptions {
   measureMemoryUsage?: boolean
 }
 interface PerformanceData {
-  fps: number
-  memoryUsage: number
-  loadTime: number
-  renderTime: number
+  fps: number;
+  memoryUsage: number;
+  loadTime: number;
+  renderTime: number;
 }
 export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}) => {
   const [metrics, setMetrics] = useState<PerformanceData>({

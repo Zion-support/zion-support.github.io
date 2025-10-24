@@ -7,12 +7,12 @@ src: string,
 {alt: string}
 interface ImageProps {}
   src: string,
-  alt: string
+  alt: string;
 src: string;
 alt: string;}
 interface ImageProps {}
-  src: string
-alt: string
+  src: string;
+alt: string;
 width?: number
 height?: number
 className?: string
@@ -20,10 +20,10 @@ priority?: boolean
 :all-pages-backup/utils/image.tsx
 _quality?: number,
   src: string,
-  alt: string
+  alt: string;
 _quality?: number
-src: string
-alt: string
+src: string;
+alt: string;
 width?: number
 height?: number
 className?: string
@@ -31,10 +31,10 @@ priority?: boolean
 :all-pages-backup/utils/image.tsx
 _quality?: number,
   src: string,
-  alt: string
+  alt: string;
 _quality?: number
-src: string
-alt: string
+src: string;
+alt: string;
 width?: number
 height?: number
 className?: string
@@ -105,17 +105,17 @@ position: position,
 {})
 {}
 if (hasError) {</ImageProps>;
-return (</ImageProps>}
+return(</ImageProps>})
 if (hasError) {}
 return ()
 {    <div}
 if (hasError) {}
-{return(<div}
+{return (<div}
 style
 onLoad;
 onError,;}
-...props}
-}) => {}
+...props})
+}) =>{}
 const [, setIsLoaded] = useState(false)
 const [hasError, setHasError] = useState(false)
 const handleLoad = useCallback(() => {}
@@ -136,24 +136,22 @@ const imageStyle: React.CSSProperties = {}
 ...style
 ...(fill && {}
 position: 'absolute',
-top: 0
-left: 0
+top: 0;
+left: 0;
 width: '100%',
 height: '100%',
 objectFit: 'cover'}
-})
-}
+})</div>
+}</div>
 if (hasError) {</ImageProps>;
-return (</ImageProps>;}
+return(</ImageProps>;})
 if (hasError) {}
 return ()
-    <div }>
-if (hasError) {;}
-return(<div }>
-interface ImageProps {/* TODO: Fix JSX expression */}
+    <div }>if (hasError) {;}</div>
+return (<div }>interface ImageProps {/* TODO: Fix JSX expression */}
 :all-pages-backup/utils/image.tsx
-{}
-export const,
+{}</div>
+export const,</div>)
 Image: React.FC<ImageProps>= ({/* TODO: Fix JSX expression */})</div>
 {}) => {/* TODO: Fix JSX expression */}
 {}, [onLoad])
@@ -189,7 +187,7 @@ style={imageStyle}
 )
 :all-pages-backup/utils/image.tsx
 {}
-return(<img
+return(<img)
 return ()
 }
 return(<img return ()>

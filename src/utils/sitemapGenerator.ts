@@ -7,7 +7,7 @@ export interface SitemapEntry {;
   loc: string,
   lastmod: string,
   changefreq: string,
-  priority: number
+  priority: number;
 }
 
 export const generateSitemap = (): SitemapEntry[] => {;
@@ -114,8 +114,7 @@ Allow: /
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
 # Crawl-delay for better server performance
-Crawl-delay: 1
-
+Crawl-delay: 1;
 # Disallow admin and private areas,
   Disallow: /admin/
 Disallow: /api/

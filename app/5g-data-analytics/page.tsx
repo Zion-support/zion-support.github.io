@@ -5,8 +5,7 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
 export default function G5gDataAnalyticsPage() {
-  return (
-    <>
+  return (<>
       <Head>
         <title>5g Data Analytics - Zion Tech Group</title>
         <meta name="description" content="Professional 5g data analytics services by Zion Tech Group. Transform your business with our expert solutions." />

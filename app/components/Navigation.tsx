@@ -20,15 +20,15 @@ import {
   ChevronDownIcon
 } from '@heroicons/react/24/outline';
 const Navigation = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  return const [isOpen, setIsOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const pathname = usePathname()
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
+      setIsScrolled(window.scrollY > 50);
+}
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -59,28 +59,24 @@ const Navigation = () => {
   const isActive = (path: string) => {
     return pathname === path
   }
-  return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+  return (<nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
     }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">{/* Logo */}</div>
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center"></div>
               <span className="text-white font-bold text-lg">Z</span>
             </div>
             <span className="text-white font-bold text-xl">Zion Tech Group</span>
           </Link>
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            {navigation.map((item) => {
-              const Icon = item.icon
-              return (
-                <div key={item.name} className="relative group">
+          {/* Desktop Navigation */})
+          <div className="hidden lg:flex items-center space-x-8">{navigation.map((item) => {
+              const Icon = item.icon</div>
+              return(</div>
+                <div key={item.name} className="relative group"></div>
                   <Link
                     href={item.href}
-                    className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                    className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${)
                       isActive(item.href)
                         ? 'bg-purple-600 text-white'
                         : 'text-gray-300 hover:text-white hover:bg-slate-800'}`}
@@ -93,8 +89,7 @@ const Navigation = () => {
                   </Link>
                   {/* Dropdown Menu */}
                   {item.submenu && isServicesOpen && (
-                    <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50">
-                      {item.submenu.map((subItem) => (
+                    <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50">{item.submenu.map((subItem) => (</div>
                         <Link key={subItem.name}
                           href={subItem.href}
                           className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700"
@@ -109,7 +104,7 @@ const Navigation = () => {
             })}
           </div>
           {/* CTA Button */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-4"></div>
             <Link
               href="/contact"
               className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover: from-purple-700 hover:to-cyan-700 transition-all duration-300"
@@ -118,7 +113,7 @@ const Navigation = () => {
             </Link>
           </div>
           {/* Mobile menu button */}
-          <div className="lg:hidden">
+          <div className="lg:hidden"></div>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover:text-white p-2"
@@ -129,14 +124,12 @@ const Navigation = () => {
         </div>
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-800 rounded-lg mt-2">
-              {navigation.map((item) => {
-                const Icon = item.icon
-                return (
-                  <div key={item.name}>
+          <div className="lg:hidden">{navigation.map((item) => {
+                const Icon = item.icon</div>
+                return(</div>
+                  <div key={item.name}></div>
                     <Link
-                      href={item.href}
+                      href={item.href})
                       onClick={() => setIsOpen(false)}
                       className={`flex items-center space-x-3 px-3 py-2 rounded-md text-base font-medium transition-colors ${
                         isActive(item.href)
@@ -147,8 +140,7 @@ const Navigation = () => {
                       <span>{item.name}</span>
                     </Link>
                     {item.submenu && (
-                      <div className="ml-8 space-y-1">
-                        {item.submenu.map((subItem) => (
+                      <div className="ml-8 space-y-1">{item.submenu.map((subItem) => (</div>
                           <Link key={subItem.name}
                             href={subItem.href}
                             className="text-gray-400 hover:text-white block px-3 py-2 rounded-md text-sm"
@@ -162,7 +154,7 @@ const Navigation = () => {
                   </div>
                 )
               })}
-              <div className="pt-4 border-t border-slate-700">
+              <div className="pt-4 border-t border-slate-700"></div>
                 <Link
                   href="/contact"
                   onClick={() => setIsOpen(false)}

@@ -19,19 +19,18 @@ import { Phone, Mail } from 'lucide-react';
     'Gain competitive advantage with advanced technology'
   ]
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-      <div className="max-w-2xl w-full text-center">
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>
+      <div className="max-w-2xl w-full text-center"></div>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
         </div>
       </div>
-    </div>
+    </div>)
   )
 }
 
 export default EnhancedHero
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology';
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             </div>
           </div>

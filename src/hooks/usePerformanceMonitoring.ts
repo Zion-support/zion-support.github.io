@@ -19,7 +19,7 @@ const usePerformanceMonitoring = (): UsePerformanceMonitoringReturn => {
     loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
-    fps: 60
+    fps: 60;
   });
 
   const [isMonitoring, setIsMonitoring] = useState(false);

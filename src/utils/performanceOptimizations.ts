@@ -6,11 +6,11 @@ import { useCallback, useMemo, useState, useEffect } from 'react';
 :all-pages-backup/utils/performanceOptimizations.ts
 export const debounce = <T extends (...args: any[]) => any>(;
   func: T,
-  wait: number
+  wait: number;
 ): ((...args: Parameters<T>) => void) => {;
   let timeout: NodeJS.Timeout
 export const debounce = <T extends (...args: any[]) => any>(
-  func: T
+  func: T;
   wait: number;
 ): ((...args: Parameters<T>) => void) => {;
   let timeout: NodeJS.Timeout;
@@ -24,12 +24,12 @@ export const debounce = <T extends (...args: any[]) => any>(
 :all-pages-backup/utils/performanceOptimizations.ts
 export const throttle = <T extends (...args: any[]) => any>(;
   func: T,
-  limit: number
+  limit: number;
 ): ((...args: Parameters<T>) => void) => {;
-  let inThrottle: boolean
+  let inThrottle: boolean;
 export const throttle = <T extends (...args: any[]) => any>(
-  func: T
-  limit: number
+  func: T;
+  limit: number;
 ): ((...args: Parameters<T>) => void) => {;
   let inThrottle: boolean;
   return (...args: Parameters<T>) => {

@@ -46,14 +46,14 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
 
     // Add screen reader announcements
     const addScreenReaderAnnouncements = () => {
-      if (typeof document !== 'undefined') {
+  return if (typeof document !== 'undefined') {
         const announcement = document.createElement('div');
         announcement.setAttribute('aria-live', 'polite');
         announcement.setAttribute('aria-atomic', 'true');
         announcement.className = 'sr-only';
         announcement.id = 'announcements';
-        document.body.appendChild(announcement);
-      }
+        document.body.appendChild(announcement);;
+}
     };
 
     // Initialize accessibility features

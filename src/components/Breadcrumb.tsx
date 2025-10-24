@@ -5,7 +5,7 @@ import { useLocation } from 'react-router-dom';
 
 interface BreadcrumbItem {
   name: string,
-  path: string
+  path: string;
   icon?: React.ComponentType<{ className?: string }>
 }
 
@@ -27,10 +27,9 @@ const Breadcrumb: React.FC = () => {;
     breadcrumbItems.push({ name, path, icon: null })
   })
 
-  return (
-    <nav aria-label="Breadcrumb" className="bg-sl ate-800/50backdrop-blur-sm border-b border-slate-700">
-      <div className="max-w-7x lmx-auto px-4 py-3">
-        <ol className="fle xitems-center space-x-2 text-sm">
+  return (<nav aria-label="Breadcrumb" className="bg-sl ate-800/50backdrop-blur-sm border-b border-slate-700">
+      <div className="max-w-7x lmx-auto px-4 py-3"></div>
+        <ol className="fle xitems-center space-x-2 text-sm">)
           {breadcrumbItems.map((item, index) => (
             <li key={item.path} className="fle xitems-center">
               {index > 0 && (
@@ -69,23 +68,21 @@ export default function Breadcrumb() {;
     return null
   }
 
-  return (
-    <nav className="bg-gray-800 text-white py-2 px-4">
-      <div className="container mx-auto">
+  return (<nav className="bg-gray-800 text-white py-2 px-4">
+      <div className="container mx-auto"></div>
         <ol className="flex items-center space-x-2 text-sm">
           <li>
             <Link href="/" className="flex items-center hover:text-blue-400 transition-colors">
               <Home className="w-4 h-4 mr-1" />
               Home
             </Link>
-          </li>
+          </li>)
           {pathnames.map((name, index) => {
             const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;
             const isLast = index === pathnames.length - 1
-            return (
-              <li key={name} className="flex items-center">
+            return(<li key={name} className="flex items-center">
                 <ChevronRight className="w-4 h-4 mx-2 text-gray-400" />
-                {isLast ? (
+                {isLast ? ()
                   <span className="text-gray-300 capitalize">{name.replace(/-/g, ' ')}</span>
                 ) : (
                   <Link 

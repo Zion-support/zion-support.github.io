@@ -7,8 +7,8 @@ import { useRef } from 'react';
  */
 // Debounce function for performance optimization
 export const debounce = <T extends (...args: unknown[]) => unknown>(,
-    func: T
-  wait: number
+    func: T;
+  wait: number;
 ): ((...args: Parameters<T>) => void) => {
   let timeout: NodeJS.Timeout;
   return (...args: Parameters<T>) => {
@@ -18,8 +18,8 @@ export const debounce = <T extends (...args: unknown[]) => unknown>(,
 }
 // Throttle function for performance optimization
 export const throttle = <T extends (...args: unknown[]) => unknown>(,
-    func: T
-  limit: number
+    func: T;
+  limit: number;
 ): ((...args: Parameters<T>) => void) => {
   let inThrottle: boolean;
   return (...args: Parameters<T>) => {
@@ -155,19 +155,19 @@ export const optimizeScrollPerformance = () => {
     ticking = false
   }
   const requestTick = () => {
-  if (!ticking) {
+  return if (!ticking) {
       requestAnimationFrame(updateScrollPosition)
-      ticking = true
+      ticking = true;
 }
   }
   // Track Core Web Vitals
   const trackCLS = () => {
-  let clsValue = 0
+  return let clsValue = 0
     const clsEntries: PerformanceEntry[] = [];
     interface LayoutShiftEntry extends PerformanceEntry {
       hadRecentInput?: boolean
-      value: number
-  }
+      value: number;;
+}
     const observer = new PerformanceObserver((list) => {
   for (const entry of list.getEntries()) {
         const layoutEntry = entry as LayoutShiftEntry
@@ -184,19 +184,19 @@ export const optimizeScrollPerformance = () => {
 }
   }
   const trackLCP = () => {
-    const observer = new PerformanceObserver((list) => {
+  return const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
-        if (process.env['NODE_ENV'] === 'development') {
-          }
+        if (process.env['NODE_ENV'] === 'development') {;
+}
       }
     })
     observer.observe({ entryTypes: ['largest-contentful-paint'] })
     return () => observer.disconnect()
   }
   const trackFID = () => {
-  interface FirstInputEntry extends PerformanceEntry {
-      processingStart: number
-  }
+  return interface FirstInputEntry extends PerformanceEntry {
+      processingStart: number;;
+}
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         const fidEntry = entry as FirstInputEntry

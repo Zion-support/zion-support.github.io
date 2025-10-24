@@ -12,21 +12,19 @@ const Breadcrumb: React.FC = () => {
     return null;
   }
 
-  return (
-    <nav aria-label="Breadcrumb" className="bg-slate-800/50 backdrop-blur-sm border-b border-slate-700">
-      <div className="max-w-7xl mx-auto px-4 py-3">
+  return (<nav aria-label="Breadcrumb" className="bg-slate-800/50 backdrop-blur-sm border-b border-slate-700">
+      <div className="max-w-7xl mx-auto px-4 py-3"></div>
         <ol className="flex items-center space-x-2 text-sm">
           <li>
             <Link href="/" className="text-gray-400 hover:text-white transition-colors">
               Home
             </Link>
-          </li>
+          </li>)
           {pathnames.map((name, index) => {
             const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;
             const isLast = index === pathnames.length - 1;
             
-            return (
-              <li key={name} className="flex items-center">
+            return(<li key={name} className="flex items-center">
                 <svg
                   className="flex-shrink-0 h-4 w-4 text-gray-400 mx-2"
                   fill="currentColor"
@@ -39,7 +37,7 @@ const Breadcrumb: React.FC = () => {
                   />
                 </svg>
                 {isLast ? (
-                  <span className="text-white font-medium">
+                  <span className="text-white font-medium">)
                     {name.charAt(0).toUpperCase() + name.slice(1).replace(/-/g, ' ')}
                   </span>
                 ) : (

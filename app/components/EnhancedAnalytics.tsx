@@ -11,10 +11,10 @@ const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
   undefined
 )
 export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext)
+  return const context = useContext(AnalyticsContext)
   if (!context) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider')
-  }
+    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+}
   return context
 }
 interface AnalyticsProviderProps {
@@ -47,10 +47,9 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     if (typeof window !== 'undefined') {
       // Google Analytics
       if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {
-        ;(window as unknown as { gtag: (...args: unknown[]) => void }).gtag(
-          'event',
+        ;(window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event',
           event,
-          properties,
+          properties,)
         )
       }
       // Custom analytics
@@ -62,13 +61,12 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     if (typeof window !== 'undefined') {
       // Google Analytics
       if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {
-        ;(window as unknown as { gtag: (...args: unknown[]) => void }).gtag(
-          'config',
+        ;(window as unknown as { gtag: (...args: unknown[]) => void }).gtag('config',
           process.env.REACT_APP_GA_ID,
           {
             user_id: userId,
             custom_map: traits,
-          },
+          },)
         )
       }
       // Custom analytics
@@ -80,14 +78,13 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     if (typeof window !== 'undefined') {
       // Google Analytics
       if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {
-        ;(window as unknown as { gtag: (...args: unknown[]) => void }).gtag(
-          'config',
+        ;(window as unknown as { gtag: (...args: unknown[]) => void }).gtag('config',
           process.env.REACT_APP_GA_ID,
           {
             page_title: name,
             page_location: window.location.href,
             ...properties,
-          },
+          },)
         )
       }
       // Custom analytics
@@ -101,10 +98,9 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     page,
   }
 
-  return (
-    <AnalyticsContext.Provider value={value}>
+  return(<AnalyticsContext.Provider value={value}>
       {children}
-    </AnalyticsContext.Provider>
+    </AnalyticsContext.Provider>)
   )
 }
 

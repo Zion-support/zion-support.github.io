@@ -31,11 +31,11 @@ export interface PerformanceReport {;
   performanceScore: number,
   recommendations: string[]
   }
-  timestamp: Date
+  timestamp: Date;
 }
 
 export class PerformanceMetrics {;
-  private static instance: PerformanceMetrics
+  private static instance: PerformanceMetrics;
   private metrics: PerformanceMetric[] = []
   private webVitals: WebVitalsMetrics = {}
   private observers: PerformanceObserver[] = []
@@ -152,7 +152,7 @@ export class PerformanceMetrics {;
   unit: unit,
   timestamp: new Date()
             name: 'CLS',
-            value: clsValue
+            value: clsValue;
             unit: 'score',
             timestamp: new Date()
             category: 'runtime'
@@ -198,7 +198,7 @@ export class PerformanceMetrics {;
   serverResponse: perfData.responseEnd - perfData.requestStart,
   domParsing: perfData.domComplete - perfData.domLoading
       name: 'pageLoad',
-      value: pageLoadTime
+      value: pageLoadTime;
       unit: 'ms',
       timestamp: new Date()
       category: 'load',
@@ -224,7 +224,7 @@ export class PerformanceMetrics {;
       category: category,
   metadata: {
       name: 'networkRequest',
-      value: duration
+      value: duration;
       unit: 'ms',
       timestamp: new Date()
       category: 'network',
@@ -436,14 +436,14 @@ interface PerformanceWithMemory extends Performance {
   memory?: {
     usedJSHeapSize: number,
   totalJSHeapSize: number,
-  jsHeapSizeLimit: number
+  jsHeapSizeLimit: number;
   }
 }
 
 // Type for LayoutShift
 interface LayoutShift extends PerformanceEntry {
   value: number,
-  hadRecentInput: boolean
+  hadRecentInput: boolean;
 }
 
 // Export singleton instance

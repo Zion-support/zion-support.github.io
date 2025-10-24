@@ -20,7 +20,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const [setNode, entry] = useIntersectionObserver({;
-    threshold: 0.5
+    threshold: 0.5)
   })
 
   useEffect(() => {
@@ -32,9 +32,8 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   useEffect(() => {
     if (!isVisible) return
 
-    let startTime: number
-    let animationFrame: number
-
+    let startTime: number;
+    let animationFrame: number;
     const animate = (currentTime: number) => {;
       if (!startTime) startTime = currentTime
       const progress = Math.min((currentTime - startTime) / duration, 1);
@@ -52,15 +51,14 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
 
     animationFrame = requestAnimationFrame(animate)
 
-    return () => {
-      if (animationFrame) {
-        cancelAnimationFrame(animationFrame)
-      }
+    return = () => {
+  return if (animationFrame) {
+        cancelAnimationFrame(animationFrame);
+}
     }
   }, [isVisible, end, duration])
 
-  return (
-    <span ref={setNode} className={className}>
+  return(<span ref={setNode} className={className}>)
       {prefix}{count.toLocaleString()}{suffix}
     </span>
   )

@@ -30,8 +30,7 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({
     ${getVariantStyles()}
     ${className}
   `.trim()
-  return (
-    <motion.div
+  return(<motion.div
       className={baseClasses}
       onClick={onClick}
       whileHover={{ scale: 1.05, y: -4 }}
@@ -44,18 +43,17 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({
       <motion.div
         className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-cyan-500/5"
         animate={{
-          background: [
+          background: [)
             'linear-gradient(45deg, rgba(6, 182, 212, 0.05) 0%, rgba(147, 51, 234, 0.05) 50%, rgba(6, 182, 212, 0.05) 100%)',
             'linear-gradient(45deg, rgba(147, 51, 234, 0.05) 0%, rgba(6, 182, 212, 0.05) 50%, rgba(147, 51, 234, 0.05) 100%)',
             'linear-gradient(45deg, rgba(6, 182, 212, 0.05) 0%, rgba(147, 51, 234, 0.05) 50%, rgba(6, 182, 212, 0.05) 100%)']}}
         transition={{
           duration: 3,
-    repeat: Infinity
+    repeat: Infinity;
           ease: 'easeInOut'}}
       />
       {/* Content */}
-      <div className="relative z-10">
-        {children}
+      <div className="relative z-10">{children}</div>
       </div>
       {/* Glow effect */}
       <motion.div

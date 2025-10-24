@@ -30,7 +30,7 @@ export const waitFor = async (
  * Mock fetch for testing
  */
 export const mockFetch = (
-  response: unknown
+  response: unknown;
   status = 200
   headers: Record<string, string> = {}
 ): void => {
@@ -129,7 +129,7 @@ export const createMockPerformance = (): Performance => {
     addEventListener: () => {}
     removeEventListener: () => {}
     dispatchEvent: () => true,
-    onresourcetimingbufferfull: null
+    onresourcetimingbufferfull: null;
     timeOrigin: Date.now()} as unknown as Performance
 }
 /**
@@ -176,7 +176,7 @@ export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {
  * Spy on console methods
  */
 export class ConsoleSpy {
-  private originalConsole: Console
+  private originalConsole: Console;
   private logs: string[] = []
   private errors: string[] = []
   private warnings: string[] = []
@@ -240,7 +240,7 @@ export const retryWithBackoff = async <T>(
   maxRetries = 3
   initialDelay = 1000
 ): Promise<T> => {
-  let lastError: Error
+  let lastError: Error;
   for (let i = 0; i < maxRetries; i++) {
     try {
       return await fn()

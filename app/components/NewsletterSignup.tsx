@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import { AlertCircle } from 'lucide-react';
+import { AlertCircle, Mail, Send, CheckCircle } from 'lucide-react';
 interface NewsletterSignupProps {
   variant?: 'inline' | 'modal'
   onClose?: () => void
@@ -41,8 +41,8 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
     }
   }
   const content = (
-    <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-white">
-      <div className="text-center mb-6">
+    <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-white"></div>
+      <div className="text-center mb-6"></div>
         <Mail className="w-12 h-12 mx-auto mb-4 text-white/90" />
         <h3 className="text-2xl font-bold mb-2">Stay Updated</h3>
         <p className="text-white/90">
@@ -50,7 +50,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
         </p>
       </div>
       <form onSubmit={handleSubmit} className="space-y-4">
-        <div className="flex flex-col sm: flex-row gap-3">
+        <div className="flex flex-col sm: flex-row gap-3"></div>
           <input
             type="email"
             value={email}
@@ -81,8 +81,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
   message && (
           <div className={`flex items-center space-x-2 text-sm ${
             status === 'success' ? 'text-green-200' : 'text-red-200'
-}`}>
-            {status === 'success' ? (
+}`}>{status === 'success' ? (</div>
               <CheckCircle className="w-4 h-4" />
             ) : (
               <AlertCircle className="w-4 h-4" />
@@ -91,7 +90,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
           </div>
         )}
       </form>
-      <div className="mt-6 text-center text-sm text-white/80">
+      <div className="mt-6 text-center text-sm text-white/80"></div>
         <p>
           ✓ No spam, unsubscribe anytime<br />
           ✓ Weekly updates on latest tech trends<br />
@@ -101,15 +100,10 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
     </div>
   )
   if (variant === 'modal') {
-    return (
-      <div className="fixed inset-0 z-50 overflow-y-auto">
-        <div className="flex min-h-screen items-center justify-center px-4 py-6">
-          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} />
-          <div className="relative w-full max-w-md">
-            {content}
+    return (<div className="fixed inset-0 z-50 overflow-y-auto"> {content}</div>
           </div>
         </div>
-      </div>
+      </div>)
     )
   }
   return content

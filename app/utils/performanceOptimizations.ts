@@ -3,8 +3,8 @@ import { useCallback, useMemo } from 'react';
 // Performance optimization utilities
 // Debounce utility for performance
 export const debounce = <T extends (...args: any[]) => any>(,
-    func: T
-  wait: number
+    func: T;
+  wait: number;
 ): ((...args: Parameters<T>) => void) => {
   let timeout: NodeJS.Timeout;
   return (...args: Parameters<T>) => {
@@ -14,8 +14,8 @@ export const debounce = <T extends (...args: any[]) => any>(,
 }
 // Throttle utility for performance
 export const throttle = <T extends (...args: any[]) => any>(,
-    func: T
-  limit: number
+    func: T;
+  limit: number;
 ): ((...args: Parameters<T>) => void) => {
   let inThrottle: boolean;
   return (...args: Parameters<T>) => {

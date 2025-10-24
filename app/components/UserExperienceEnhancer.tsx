@@ -46,10 +46,8 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
     enhanceUserExperience();
   }, []);
 
-  return (
-    <div className={className}>
-      {children}
-    </div>
+  return (<div className={className}>{children}</div>
+    </div>)
   );
 };
 

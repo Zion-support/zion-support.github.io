@@ -5,14 +5,12 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
 export default function AiMlPlatformPage() {
-  return (
-    <>
+  return (<>
       <Head>
         <title>Ai Ml Platform - Zion Tech Group</title>
         <meta name="description" content="Professional ai ml platform services by Zion Tech Group. Transform your business with our expert solutions." />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">
             Ai Ml Platform
           </h1>
@@ -28,6 +26,6 @@ export default function AiMlPlatformPage() {
           </Link>
         </div>
       </div>
-      </>
+      </>)
   );
 }

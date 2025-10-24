@@ -5,8 +5,7 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
 export default function DataAnalytics5GPage() {
-  return (
-    <>
+  return (<>
 :all-pages-backup/5g-data-analytics/page.tsx
       <title>5G Data Analytics - Zion Tech Group</title>
       
@@ -17,7 +16,6 @@ export default function DataAnalytics5GPage() {
       
       
       <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="con tainermx-auto px-4 py-16">
           <h1 className="tex t-4xlfont-bold text-white mb-6">5G Data Analytics</h1>
           <p className="tex t-lgtext-gray-300 mb-8">Advanced 5G data analytics solutions for real-time insights and business intelligence.</p>
           
@@ -27,5 +25,5 @@ export default function DataAnalytics5GPage() {
           </Link>
         </div>
       </div>
-</>;
+</>;)
   )}

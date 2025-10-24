@@ -5,11 +5,10 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 export default function FiveGSolutionsPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+  return (<div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50"></div>
       <Navigation />
       <main className="py-20 px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto"></div>
           <h1 className="text-4xl font-bold text-gray-900 mb-8">5G Solutions</h1>
           <p className="text-xl text-gray-600 mb-8">
             Next-generation 5G solutions for ultra-fast connectivity.
@@ -17,7 +16,7 @@ export default function FiveGSolutionsPage() {
         </div>
       </main>
       <Footer />
-    </div>;
+    </div>;)
   );
 import React from 'react';
 
@@ -99,14 +98,12 @@ export default function FiveGSolutions() {
     { number: '99.9%', label: 'Reliability', icon: <Shield className="w-6 h-6 text-orange-400" /> },
   ];
 
-  return (
-    <>
+  return (<>
       <title>5G Solutions - Zion Tech Group</title>
         <meta name="description" content="Comprehensive 5G solutions by Zion Tech Group. Transform your business with our expert solutions." />
       
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
           <h1 className="text-4xl font-bold text-white mb-6">5G Solutions</h1>
           <p className="text-lg text-gray-300 mb-8">Comprehensive 5G solutions by Zion Tech Group. Transform your business with our expert solutions.</p>
           
@@ -119,5 +116,5 @@ export default function FiveGSolutions() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   )}

@@ -3,17 +3,15 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const AdManagementPage: React.FC = () => {
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>Ad Management - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ad management solutions for digital marketing success" />
         <meta name="keywords" content="ad management, digital marketing, AI advertising, campaign optimization" />
       </Helmet>
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gray-50"></div>
         <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
               AI-Powered Ad Management
             </h1>
             <p className="text-xl text-gray-600 mb-8">
@@ -25,7 +23,7 @@ const AdManagementPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+    </>)
   );
 };
 

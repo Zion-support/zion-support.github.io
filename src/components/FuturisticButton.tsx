@@ -78,12 +78,11 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
     ${className};
   `.trim();
 
-  return (
-    <motion .button>
+  return(<motion .button>
       type = {type}
       onClick={onClick}
       disabled={disabled || loading}
-      className={baseClasses}
+      className={baseClasses})
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
       whileHover={{ scale: 1.05 }}
@@ -105,7 +104,7 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
         >
-          <div className="w-5h-5bo r der-2 border-white/30 border-t-white rounded-full animate-spin" />
+          <div className="w-5h-5bo r der-2 border-white/30 border-t-white rounded-full animate-spin" /></div>
         </motion.div>
       )}
       

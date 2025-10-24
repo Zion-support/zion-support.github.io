@@ -5,8 +5,7 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
 export default function EmailMarketingAutomationPage() {
-  return (
-    <>
+  return (<>
 :all-pages-backup/email-marketing-automation/page.tsx
       <title>EmailMarketingAutomation - Zion Tech Group</title>
         <meta name="description" content="Professional emailmarketingautomation services by Zion Tech Group." />
@@ -18,7 +17,6 @@ export default function EmailMarketingAutomationPage() {
       
       
       <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="con tainermx-auto px-4 py-16">
           <h1 className="tex t-4xlfont-bold text-white mb-6">EmailMarketingAutomation</h1>
           <p className="tex t-lgtext-gray-300 mb-8">Professional emailmarketingautomation services by Zion Tech Group.</p>
           
@@ -28,5 +26,5 @@ export default function EmailMarketingAutomationPage() {
           </Link>
         </div>
       </div>
-</>;
+</>;)
   )}

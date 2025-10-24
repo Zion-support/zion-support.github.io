@@ -18,10 +18,11 @@ const FuturisticBackground: React.FC = () => {;
 
     if (!ctx) return;
 
-    const resizeCanvas = () => {;
+    const resizeCanvas = () => {
+  return ;
       canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    }
+      canvas.height = window.innerHeight;;
+}
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
@@ -32,13 +33,13 @@ const FuturisticBackground: React.FC = () => {;
   vx: number,
   vy: number,
   size: number,
-  opacity: number
+  opacity: number;
     }> = [];
 
     // Create particles
     for (let i = 0; i < 50; i++) {
       particles.push({
-:all-pages-backup/components/FuturisticBackground.tsx
+:all-pages-backup/components/FuturisticBackground.tsx)
         x: Math.random() * canvas.width,
   y: Math.random() * canvas.height,
   vx: (Math.random() - 0.5) * 2,
@@ -100,39 +101,37 @@ const FuturisticBackground: React.FC = () => {;
     }
     animate();
 
-    return () => {
-      window.removeEventListener('resize', resizeCanvas);
-    }
+    return = () => {
+  return window.removeEventListener('resize', resizeCanvas);;
+}
   }, []);
 
-  return (
-    <>
+  return (<>
       <Helmet>
         <Head>
         <title>FuturisticBackground - Zion Tech Group</title>
-        <meta name=&quot;description&quot; content=&quot;Advanced futuristicbackground solutions powered by AI technology.&quot; />
+        <meta name="description" content="Advanced futuristicbackground solutions powered by AI technology." />
 <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
       </Head>
-        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, FuturisticBackground, AI solutions, intelligent automation&quot; />
+        <meta name="keywords" content="AI, artificial intelligence, FuturisticBackground, AI solutions, intelligent automation" />
 <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
       </Head>
       </Helmet>
       <Navigation />
-      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
-        <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
-          <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
-          <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;></h1>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        <section className="relative py-20 px-4 overflow-hidden"></section>
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20">
+          <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight"></h1>
               FuturisticBackground
-            <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced futuristicbackground solutions powered by AI technology.
             </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
                 Get Started
-                <ArrowRight className=&quot;ml-2 h-5 w-5&quot; />
+                <ArrowRight className="ml-2 h-5 w-5" />
               </button>
-              <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;>
+              <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 Learn More
               </button>
             </div>
@@ -140,24 +139,24 @@ const FuturisticBackground: React.FC = () => {;
         </section>
 
         {/* Features Section */}
-        <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl md: text-5xl font-bold text-white mb-6&quot;></h2>
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              <h2 className="text-4xl md: text-5xl font-bold text-white mb-6"></h2>
                 Key Features
-              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;></p>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
                 Powerful AI technology that drives results
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>)
               {features.map((feature, index) => (
-                <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
-                  <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; />
-                  <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{feature.title}</h3>
-                  <p className=&quot;text-gray-300 mb-4&quot;>{feature.description}</p>
-                  <ul className=&quot;space-y-2&quot;>
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"></div>
+                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
                     {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className=&quot;flex items-center text-sm text-gray-300&quot;>
-                        <CheckCircle className=&quot;h-4 w-4 text-emerald-400 mr-2 flex-shrink-0&quot; />
+                      <li key={idx} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
                         {benefit}
                       </li>
                     ))}
@@ -169,19 +168,19 @@ const FuturisticBackground: React.FC = () => {;
         </section>
 
         {/* Benefits Section */}
-        <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
-              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
+        <section className="py-20 px-4 bg-white/5"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience the benefits of cutting-edge AI technology
               </p>
             </div>
-            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {benefits.map((benefit, index) => (
-                <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
-                  <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
-                  <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
+                <div key={index} className="flex items-start space-x-4"></div>
+                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
+                  <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
               ))}
             </div>
@@ -189,17 +188,17 @@ const FuturisticBackground: React.FC = () => {;
         </section>
 
         {/* CTA Section */}
-        <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
-            <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
-            <p className=&quot;text-xl text-gray-300 mb-8&quot;>
+        <section className="py-20 px-4"></section>
+          <div className="max-w-4xl mx-auto text-center"></div>
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+            <p className="text-xl text-gray-300 mb-8">
               Join thousands of businesses already using our AI solutions
             </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Start Free Trial
               </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Contact Sales
               </button>
               </div>

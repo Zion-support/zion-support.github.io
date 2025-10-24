@@ -5,11 +5,10 @@ interface FooterProps {
 }
 
 const Footer: React.FC<FooterProps> = ({ className = '' }) => {
-  return (
-    <div className={className}>
+  return (<div className={className}></div>
       <h2>Footer</h2>
       <p>This component is under construction.</p>
-    </div>
+    </div>)
   );
 };
 

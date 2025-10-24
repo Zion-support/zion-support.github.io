@@ -36,7 +36,7 @@ interface PerformanceMetrics {
   fid: number,
   cls: number,
   fcp: number,
-  ttfb: number
+  ttfb: number;
 }
 
 interface AdvancedPerformanceOptimizerProps {
@@ -52,14 +52,14 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
   enableAdvancedCaching = true
   enableImageOptimization = true
   enablePreloading = true
-  enableServiceWorker = true
+  enableServiceWorker = true)
 }) => {
   const [performanceMetrics, setPerformanceMetrics] = useState<PerformanceMetrics>({;
     lcp: 0,
   fid: 0,
   cls: 0,
   fcp: 0,
-  ttfb: 0
+  ttfb: 0;
   })
 
   // Web Vitals monitoring
@@ -113,7 +113,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
         const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number };
         setPerformanceMetrics(prev => ({
           ...prev,
-  lcp: lastEntry.renderTime || lastEntry.loadTime || 0
+  lcp: lastEntry.renderTime || lastEntry.loadTime || 0)
         }))
       })
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
@@ -125,7 +125,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
           const fid = (entry as any).processingStart - entry.startTime
           setPerformanceMetrics(prev => ({
             ...prev
-            fid
+            fid)
           }))
         })
       })
@@ -140,7 +140,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
             clsValue += entry.value
             setPerformanceMetrics(prev => ({
               ...prev,
-  cls: clsValue
+  cls: clsValue;)
             }))
           }
         })
@@ -153,7 +153,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
         entries.forEach(entry => {
           setPerformanceMetrics(prev => ({
             ...prev,
-  fcp: entry.startTime
+  fcp: entry.startTime)
           }))
         })
       })
@@ -263,7 +263,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     if (typeof window === 'undefined') return
 
     const images = document.querySelectorAll('img');
-    images.forEach(img => {
+    images.forEach(img => {)
       if (!img.loading) {
         img.loading = 'lazy'
       }
@@ -311,7 +311,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
       '/css/critical.css'
     ]
 
-    criticalResources.forEach(resource => {;
+    criticalResources.forEach(resource => {;)
       const link = document.createElement('link');
       link.rel = 'preload'
       link.href = resource
@@ -349,7 +349,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     if ('gtag' in window) {
       (window as any).gtag('event', 'web_vitals', {
         event_category: event_category,
-  event_label: event_label,
+  event_label: event_label,)
   value: Math.round(performanceMetrics.lcp)
         custom_map: {
           fcp: Math.round(performanceMetrics.fcp)

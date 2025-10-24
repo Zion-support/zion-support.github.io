@@ -147,8 +147,7 @@ const TestPage = lazy(() => import('./test/page'));
 
 // Main App Component
 function App() {
-  return (
-    <HelmetProvider>
+  return(<HelmetProvider>
       <ErrorBoundary>
         <BrowserRouter>
           <Suspense fallback={<LoadingSpinner />}>
@@ -280,7 +279,7 @@ function App() {
           </Suspense>
         </BrowserRouter>
       </ErrorBoundary>
-    </HelmetProvider>
+    </HelmetProvider>)
   );
 }
 

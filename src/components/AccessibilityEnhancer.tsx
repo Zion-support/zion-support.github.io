@@ -25,11 +25,11 @@ export default function AccessibilityEnhancer({ children }: AccessibilityEnhance
         main.id = 'main-content'
       }
 
-      return () => {
-        const existingSkipLink = document.querySelector('a[href="#main-content"]')
+      return = () => {
+  return const existingSkipLink = document.querySelector('a[href="#main-content"]')
         if (existingSkipLink) {
-          existingSkipLink.remove()
-        }
+          existingSkipLink.remove();
+}
       }
     }
   }, [])
@@ -64,7 +64,7 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
       const handleKeyDown = (event: KeyboardEvent) => {
         // Skip to main content
         if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {;
-          const mainContent = document.querySelector('main, [role=&quot;main&quot;]');
+          const mainContent = document.querySelector('main, [role="main"]');
           if (mainContent) {
             (mainContent as HTMLElement).focus();
             event.preventDefault();
@@ -127,7 +127,7 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
   useEffect(() => {
     // Add focus management
     if (enableFocusManagement) {
-      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex=&quot;-1&quot;])';
+      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
       
       .sr-only {
         position: absolute,
@@ -138,7 +138,7 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
   overflow: hidden,
   clip: rect(0, 0, 0, 0);
         white-space: nowrap,
-  border: 0
+  border: 0;
       }
       
       .high-contrast {
@@ -160,7 +160,7 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
   }, []);
 
       // Apply focus trapping to modals
-      const modals = document.querySelectorAll('[role=&quot;dialog&quot;]');
+      const modals = document.querySelectorAll('[role="dialog"]');
       modals.forEach(trapFocus);
 :all-pages-backup/components/AccessibilityEnhancer.tsx
   useEffect(() => {

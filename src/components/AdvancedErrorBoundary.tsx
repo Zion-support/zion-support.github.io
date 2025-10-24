@@ -10,7 +10,7 @@ interface AdvancedErrorBoundaryProps {;
 }
 
 interface State {
-  hasError: boolean
+  hasError: boolean;
   error?: Error
   errorInfo?: ErrorInfo
   errorId?: string
@@ -37,7 +37,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error
-      errorInfo
+      errorInfo)
     })
     // Call custom error handler if provided
     if (this.props.onError) {

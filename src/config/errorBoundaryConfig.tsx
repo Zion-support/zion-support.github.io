@@ -7,15 +7,15 @@ export interface ErrorBoundaryConfig {};
 /**
 * Whether to log errors to console
 */
-logErrors: boolean
+logErrors: boolean;
 /**
 * Whether to show detailed error messages
 */
-showDetails: boolean
+showDetails: boolean;
 /**
 * Whether to send errors to external service
 */
-reportErrors: boolean
+reportErrors: boolean;
 /**
 * Error reporting endpoint
 */
@@ -23,11 +23,11 @@ reportingEndpoint?: string
 /**
 * Whether to show error overlay in development
 */
-showErrorOverlay: boolean
+showErrorOverlay: boolean;
 /**
 * Maximum number of errors to store
 */
-maxStoredErrors: number
+maxStoredErrors: number;
 /**
 * Custom error messages by error type
 */
@@ -65,7 +65,7 @@ logErrors: true,
   customMessages: DEFAULT_ERROR_MESSAGES,
   fallbackComponents: {}
 default: DefaultErrorFallback,
-  network: NetworkErrorFallback
+  network: NetworkErrorFallback;
 {notFound: NotFoundFallback}}
 {}
 const DEFAULT_ERROR_MESSAGES = {}
@@ -79,16 +79,16 @@ validation: 'Validation error. Please check your input.'}
 * Get error boundary configuration based on environment
 */
 export function getErrorBoundaryConfig(): ErrorBoundaryConfig {return {}
-logErrors: true
-showDetails: isDevelopment
+logErrors: true;
+showDetails: isDevelopment;
 reportErrors: !isDevelopment
 reportingEndpoint: process.env.REACT_APP_ERROR_REPORTING_ENDPOINT
-showErrorOverlay: isDevelopment
-maxStoredErrors: 50
-customMessages: DEFAULT_ERROR_MESSAGES
+showErrorOverlay: isDevelopment;
+maxStoredErrors: 50;
+customMessages: DEFAULT_ERROR_MESSAGES;
 fallbackComponents: {}
-default: DefaultErrorFallback
-network: NetworkErrorFallback
+default: DefaultErrorFallback;
+network: NetworkErrorFallback;
 notFound: NotFoundFallback}}
 }
 /**
@@ -98,7 +98,7 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
 return ()
     <>
 
-    <div className = "min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
+    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
 <div className="max-w-m dw-full bg-white rounded-lg shadow-lg p-6"></div>
 <div className="fle xitems-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full"></div>
 <svg className="w-6h-6te x t-red-600">
@@ -127,7 +127,7 @@ className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 
 <h2 className="mt-4te xt-2xl font-bold text-center text-gray-900">Oops! Something went wrong</h2>
 <p className="mt-2te xt-center text-gray-600">{error.message || 'An unexpected error occurred'}</p>;
 {process.env['NODE_ENV'] === 'development' && (;}
-<pre className = "mt-4 p-4 bg-gray-100 rounded text-xs overflow-auto">{error.stack}</pre>
+<pre className="mt-4 p-4 bg-gray-100 rounded text-xs overflow-auto">{error.stack}</pre>
 )}
 <div className="mt-6fl ex gap-4"></div>
 <button onClick={resetError}>
@@ -148,7 +148,7 @@ Go Home
 */;
 function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }) {}
 return ()
-    <div className = "min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
+    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
 <div className="max-w-m dw-full bg-white rounded-lg shadow-lg p-6"></div>
 <div className="fle xitems-center justify-center w-12 h-12 mx-auto bg-yellow-100 rounded-full"></div>
 <svg className="w-6h-6te x t-yellow-600">
@@ -178,12 +178,11 @@ className="w-ful lbg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 
 */
 function NotFoundFallback(): JSX.Element {}
 return ()
-    <div className="min-h-s creenflex items-center justify-center bg-gray-50 px-4"></div>
-<div className="max-w-m dw-full text-center"></div>
-<h1 className="tex t-6xlfont-bold text-gray-900">404</h1>
+    <div className="min-h-s creenflex items-center justify-center bg-gray-50 px-4">
+          <h1 className="tex t-6xlfont-bold text-gray-900">404</h1>
 <h2 className="mt-4te xt-2xl font-bold text-gray-900">Page Not Found</h2>;
 <p className="mt-2te xt-gray-600">The page you&apos;re looking for doesn't exist or has been moved.</p>
-<div className = "mt-6 flex gap-4 justify-center"></div>
+<div className="mt-6 flex gap-4 justify-center"></div>
 <button >
 onClick={() =>(window.location.href = '/')}</button>
 className="bg-bl ue-600text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
