@@ -75,7 +75,7 @@ notFound: NotFoundFallback,
 */
 function DefaultErrorFallback({ error, resetError }: { error: Error; resetError: () => void }) {
 return (
-<div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
+    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
 <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6"></div>
 <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full"></div>
 <svg
@@ -116,7 +116,7 @@ Go Home
 */
 function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }) {
 return (
-<div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
+    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
 <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6"></div>
 <div className="flex items-center justify-center w-12 h-12 mx-auto bg-yellow-100 rounded-full"></div>
 <svg
@@ -149,11 +149,11 @@ className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 
 */
 function NotFoundFallback(): JSX.Element {
 return (
-<div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
+    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
 <div className="max-w-md w-full text-center"></div>
 <h1 className="text-6xl font-bold text-gray-900">404</h1>
 <h2 className="mt-4 text-2xl font-bold text-gray-900">Page Not Found</h2>
-<p className="mt-2 text-gray-600">The page you&apos;re looking for doesn't exist or has been moved.</p>
+<p className="mt-2 text-gray-600">The page you're looking for doesn't exist or has been moved.</p>
 <div className="mt-6 flex gap-4 justify-center"></div>
 <button
 onClick={() =>(window.location.href = '/')}</button>

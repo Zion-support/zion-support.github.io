@@ -1,22 +1,15 @@
 "use client";
-import React from "react";
-import Head from "next/head";
-import Link from "next/link";
-import {
-  Home,
-  ArrowLeft,
-  Search,
-  AlertTriangle,
-  RefreshCw,
-} from "lucide-react";
-const NotFoundPage: React.FC = () => {
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from 'lucide-react';
+
+const NotFound = () => {
   return (
     <>
       <Head>
         <title>404 - Page Not Found | Zion Tech Group</title>
-
         <meta name="robots" content="noindex, nofollow" />
-
         <meta property="og:type" content="website" />
       </Head>
 
@@ -29,12 +22,14 @@ const NotFoundPage: React.FC = () => {
               <AlertTriangle className="w-6 h-6 text-red-400" />
             </div>
           </div>
+
           {/* Error Message */}
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Page Not Found</h1>
-
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Oops! The page you&apos;re looking for seems to have vanished into the digital void. Don&apos;t worry, even our AI can&apos;t predict everything!
+            Oops! The page you&apos;re looking for seems to have vanished into the
+            digital void. Don&apos;t worry, even our AI can&apos;t predict everything!
           </p>
+
           {/* Search Suggestion */}
           <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 mb-8">
             <div className="flex items-center justify-center mb-4">
@@ -56,9 +51,10 @@ const NotFoundPage: React.FC = () => {
                 >
                   {item.name}
                 </Link>
-              )}
+              ))}
             </div>
           </div>
+
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Link
@@ -76,10 +72,14 @@ const NotFoundPage: React.FC = () => {
               Go Back
             </button>
           </div>
+
           {/* Help Section */}
           <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-lg p-6">
-            <h3 className="text-lg font-semibold text-white mb-3">Still can&apos;t find what you need?</h3>
-            <p className="text-gray-300 text-sm mb-4">Our support team is here to help you navigate our services and find exactly what you&apos;re looking for.</p>
+            <h3 className="text-lg font-semibold text-white mb-3">Need Help?</h3>
+            <p className="text-gray-300 text-sm mb-4">
+              Our support team is here to help you navigate our services and
+              find exactly what you&apos;re looking for.
+            </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link
                 href="/contact"
@@ -91,9 +91,12 @@ const NotFoundPage: React.FC = () => {
               <a
                 href="mailto:support@ziontechgroup.com"
                 className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center"
-              >Send Email</a>
+              >
+                Send Email
+              </a>
             </div>
           </div>
+
           {/* Fun Fact */}
           <div className="mt-8 p-4 bg-slate-800/30 rounded-lg">
             <p className="text-sm text-gray-400">
@@ -108,4 +111,4 @@ const NotFoundPage: React.FC = () => {
   );
 };
 
-export default NotFoundPage;
+export default NotFound;
