@@ -111,7 +111,6 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
   };
 
   return (
-    <>
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -185,7 +184,6 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
           )}
         </div>
       )}
-    </>
   );
 };
 
@@ -304,7 +302,6 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
   };
 
   return (
-    <>
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -378,7 +375,6 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
           )}
         </div>
       )}
-    </>
   );
 };
 

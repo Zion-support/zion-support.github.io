@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-'use client';;
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-=======
-'use client';
-
-import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> 95f63d1bffe2d416304750c17f0532b44f8a7886
 
 interface SEOEnhancerProps {
   title?: string;
@@ -72,7 +61,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   }, [title, description, keywords, canonicalUrl]);
 
   return (
-    <>
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -100,7 +88,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
         )}
       </Helmet>
       {children}
-    </>
   );
 };
 

@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-'use client';;
-import React, {useState, useEffect}from 'react';
-import {Link}}from 'react-router-dom';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package } from 'lucide-react';
-
-const Navigation: React.FC = () => {
-    const [isOpen, setIsOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
-  const [aiServicesOpen, setAiServicesOpen] = useState(false);
-  const [itServicesOpen, setItServicesOpen] = useState(false);
-  const [microSaasOpen, setMicroSaasOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-=======
-'use client';
-
-import React, { useState } from 'react';
-import { _Menu, X, _ChevronDown } from 'lucide-react';
->>>>>>> 95f63d1bffe2d416304750c17f0532b44f8a7886
 
 interface NavigationBackupProps {
   logo?: string;
