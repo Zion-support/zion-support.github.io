@@ -1,11 +1,10 @@
 'use client';
 
-import { createContext, useContext, useEffect } from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 
 interface AnalyticsContextType {
-  track: (event: string, properties?: Record<string, any>) => void;
-  identify: (userId: string, traits?: Record<string, any>) => void;
-  page: (name: string, properties?: Record<string, any>) => void;
+  trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
+  trackPageView: (page: string) => void;
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
@@ -23,82 +22,47 @@ interface AnalyticsProviderProps {
 }
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
-  // Initialize analytics
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      // Google Analytics
-      if (process.env.NODE_ENV === 'production') {
-        const script = document.createElement('script');
-        script.async = true;
-        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_ID}`;
-        document.head.appendChild(script);
+  const [isLoaded, setIsLoaded] = useState(false);
 
+  useEffect(() => {
+    // Initialize Google Analytics
+    if (typeof window !== 'undefined' && !window.gtag) {
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`;
+      document.head.appendChild(script);
+
+      script.onload = () => {
         window.dataLayer = window.dataLayer || [];
-        function gtag(...args: any[]) {
-          window.dataLayer.push(args);
-        }
-        gtag('js', new Date());
-        gtag('config', process.env.REACT_APP_GA_ID);
-      }
+        window.gtag = function() {
+          window.dataLayer.push(arguments);
+        };
+        window.gtag('js', new Date());
+        window.gtag('config', process.env.NEXT_PUBLIC_GA_ID);
+        setIsLoaded(true);
+      };
+    } else {
+      setIsLoaded(true);
     }
   }, []);
 
-  const track = (event: string, properties?: Record<string, any>) => {
-    if (typeof window !== 'undefined') {
-      // Google Analytics
-      if (window.gtag) {
-        window.gtag('event', event, properties);
-      }
-      
-      // Custom analytics - only log in development
-      if (process.env.NODE_ENV === 'development') {
-        // eslint-disable-next-line no-console
-        console.log('Analytics Event: ', event, properties);
-      }
+  const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
+    if (isLoaded && window.gtag) {
+      window.gtag('event', eventName, parameters);
     }
   };
 
-  const identify = (userId: string, traits?: Record<string, any>) => {
-    if (typeof window !== 'undefined') {
-      // Google Analytics
-      if (window.gtag) {
-        window.gtag('config', process.env.REACT_APP_GA_ID, {
-          user_id: userId,
-          custom_map: traits
-        });
-      }
-      
-      // Custom analytics - only log in development
-      if (process.env.NODE_ENV === 'development') {
-        // eslint-disable-next-line no-console
-        console.log('Analytics Identify: ', userId, traits);
-      }
+  const trackPageView = (page: string) => {
+    if (isLoaded && window.gtag) {
+      window.gtag('config', process.env.NEXT_PUBLIC_GA_ID, {
+        page_path: page
+      });
     }
   };
 
-  const page = (name: string, properties?: Record<string, any>) => {
-    if (typeof window !== 'undefined') {
-      // Google Analytics
-      if (window.gtag) {
-        window.gtag('event', 'page_view', {
-          page_title: name,
-          page_location: window.location.href,
-          ...properties
-        });
-      }
-      
-      // Custom analytics - only log in development
-      if (process.env.NODE_ENV === 'development') {
-        // eslint-disable-next-line no-console
-        console.log('Analytics Page: ', name, properties);
-      }
-    }
-  };
-
-  const value: AnalyticsContextType = {
-    track,
-    identify,
-    page
+  const value = {
+    trackEvent,
+    trackPageView
   };
 
   return (

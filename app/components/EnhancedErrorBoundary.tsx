@@ -44,8 +44,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
     // Log error to monitoring service in development
     if (process.env.NODE_ENV === 'development') {
-      // Use a proper logging mechanism instead of console
-      // This could be replaced with a proper logging service
+      // eslint-disable-next-line no-console
+      console.error('Error caught by boundary:', error, errorInfo);
     }
 
     // Send to error reporting service in production

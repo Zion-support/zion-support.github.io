@@ -5,9 +5,9 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Zion Tech Group - AI Solutions & IT Services',
-  description: 'Leading provider of AI solutions, IT services, quantum computing, and autonomous systems for enterprise technology transformation.',
-  keywords: 'AI solutions, IT services, quantum computing, autonomous systems, enterprise technology'
+  title: 'Zion Tech Group - Advanced AI and IT Solutions',
+  description: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
+  keywords: 'AI solutions, IT services, quantum computing, autonomous systems, enterprise technology',
 };
 
 export default function RootLayout({

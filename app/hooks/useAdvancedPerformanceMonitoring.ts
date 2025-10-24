@@ -78,8 +78,8 @@ export const useAdvancedPerformanceMonitoring = (options: PerformanceMonitoringO
       });
     }).catch((error) => {
       if (process.env.NODE_ENV === 'development') {
-        // Log to monitoring service instead of console
-        // This could be replaced with a proper logging service
+        // eslint-disable-next-line no-console
+        console.warn('Failed to load web-vitals:', error);
       }
     });
   }, [enableWebVitals, updateMetrics]);
@@ -135,8 +135,8 @@ export const useAdvancedPerformanceMonitoring = (options: PerformanceMonitoringO
     });
 
     if (process.env.NODE_ENV === 'development') {
-      // Log to monitoring service instead of console
-      // This could be replaced with a proper logging service
+      // eslint-disable-next-line no-console
+      console.log('Resource Metrics:', resourceMetrics);
     }
   }, [enableResourceTiming]);
 
@@ -151,8 +151,8 @@ export const useAdvancedPerformanceMonitoring = (options: PerformanceMonitoringO
     };
 
     if (process.env.NODE_ENV === 'development') {
-      // Log to monitoring service instead of console
-      // This could be replaced with a proper logging service
+      // eslint-disable-next-line no-console
+      console.log('Memory Usage:', memoryMetrics);
     }
   }, [enableMemoryMonitoring]);
 
@@ -168,8 +168,8 @@ export const useAdvancedPerformanceMonitoring = (options: PerformanceMonitoringO
     };
 
     if (process.env.NODE_ENV === 'development') {
-      // Log to monitoring service instead of console
-      // This could be replaced with a proper logging service
+      // eslint-disable-next-line no-console
+      console.log('Network Info:', networkInfo);
     }
   }, [enableNetworkMonitoring]);
 
@@ -180,8 +180,8 @@ export const useAdvancedPerformanceMonitoring = (options: PerformanceMonitoringO
       const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
           if (process.env.NODE_ENV === 'development') {
-            // Log to monitoring service instead of console
-            // This could be replaced with a proper logging service
+            // eslint-disable-next-line no-console
+            console.log('Performance Entry:', entry);
           }
         });
       });
@@ -190,8 +190,8 @@ export const useAdvancedPerformanceMonitoring = (options: PerformanceMonitoringO
       observerRef.current = observer;
     } catch (error) {
       if (process.env.NODE_ENV === 'development') {
-        // Log to monitoring service instead of console
-        // This could be replaced with a proper logging service
+        // eslint-disable-next-line no-console
+        console.warn('Failed to create PerformanceObserver:', error);
       }
     }
   }, []);

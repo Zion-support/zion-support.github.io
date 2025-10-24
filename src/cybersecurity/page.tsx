@@ -1,14 +1,16 @@
 import React from 'react';
+import { Lock } from 'lucide-react';
+import { CheckCircle, Star, Eye, Shield, Database, Helmet } from 'lucide-react';
+import { Globe, AlertTriangle } from 'lucide-react';
+"use client";
 
-const CybersecurityPage = () => {
+
+const Page: React.FC = () => {
+  const securityService,
+      s = [;
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">Cybersecurity</h1>
-        <p className="text-gray-600">This page is under construction. Please check back later.</p>
-      </div>
-    </div>
-  );
-};
+</>
+  )
 
-export default CybersecurityPage;
+export default Page;
+}

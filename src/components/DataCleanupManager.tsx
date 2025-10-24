@@ -1,12 +1,25 @@
 import React from 'react';
+"use client";
 
-const DataCleanupManager = () => {
+const Page = () => {};
   return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold text-gray-900 mb-2">DataCleanupManager</h2>
-      <p className="text-gray-600">This component is under construction.</p>
-    </div>
+        </div>
+        </div>
+      <div className="max-w-4x lmx-auto px-4"></div>
+        </div>
+        <h1 className="tex t-3xlfont-bold text-gray-900 mb-6">
+        </div>
+          DataCleanupManager
+        </h1>
+        <div className="bg-wh iterounded-lg shadow-md p-6"></div>
+        </div>
+          <p className="tex t-gray-600">
+        </div>
+            This page is under construction. Please check back later.
+          </p>
+        </div>
+      </div>
+    </div>;
   );
-};
 
-export default DataCleanupManager;
+export default Page;

@@ -1,10 +1,12 @@
+'use client'
+
 import React from 'react';
-import Head from "next/head";
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+import { Wifi, Smartphone, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
 
-import Link from 'next/link';
-import { Wifi, ArrowRight, Users, CheckCircle, Brain, Building } from 'lucide-react';
-
-export default function FiveGSmartCitySolutions() {
+const Page: React.FC = () => {
   const features = [
     {
       icon: <Wifi className="w-6 h-6 text-cyan-400" />,
@@ -12,128 +14,96 @@ export default function FiveGSmartCitySolutions() {
       description: '5G networks providing 10x faster speeds and ultra-low latency for smart city applications'
     },
     {
-      icon: <Building className="w-6 h-6 text-purple-400" />,
-      title: 'Smart Infrastructure',
-      description: 'Intelligent traffic management, energy optimization, and environmental monitoring systems'
+      icon: <Smartphone className="w-6 h-6 text-cyan-400" />,
+      title: 'IoT Integration',
+      description: 'Seamless integration of IoT devices for comprehensive city monitoring and management'
     },
     {
-      icon: <Brain className="w-6 h-6 text-yellow-400" />,
-      title: 'AI-Powered Analytics',
-      description: 'Machine learning algorithms analyze city data to optimize services and improve quality of life'
+      icon: <Shield className="w-6 h-6 text-cyan-400" />,
+      title: 'Enhanced Security',
+      description: 'Advanced security protocols ensuring safe and secure smart city operations'
     },
     {
-      icon: <Users className="w-6 h-6 text-green-400" />,
-      title: 'Citizen Engagement',
-      description: 'Digital platforms connecting citizens with city services and enabling participatory governance'
-    }
-  ];
-
-  const smartCityModules = [
-    {
-      category: 'Transportation',
-      items: ['Smart Traffic Lights', 'Autonomous Vehicle Support', 'Public Transit Optimization', 'Parking Management', 'Traffic Analytics', 'Emergency Response']
-    },
-    {
-      category: 'Energy & Environment',
-      items: ['Smart Grid Management', 'Air Quality Monitoring', 'Waste Management', 'Water Systems', 'Renewable Energy', 'Carbon Footprint Tracking']
-    },
-    {
-      category: 'Public Safety',
-      items: ['Video Surveillance', 'Emergency Alerts', 'Crime Prevention', 'Disaster Response', 'Crowd Management', 'Health Monitoring']
-    },
-    {
-      category: 'Digital Services',
-      items: ['Citizen Portal', 'Mobile Apps', 'Digital Payments', 'Service Requests', 'Open Data Platform', 'E-Government']
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      name: 'Pilot Program',
-      price: '$50,000',
-      period: 'one-time',
-      description: 'Perfect for small cities starting their smart city journey',
-      features: [
-        'Basic 5G infrastructure',
-        'Core smart modules',
-        'Citizen engagement platform',
-        '6-month implementation',
-        'Training and support'
-      ],
-      popular: false
-    },
-    {
-      name: 'Smart City Pro',
-      price: '$250,000',
-      period: 'one-time',
-      description: 'Comprehensive solution for medium-sized cities',
-      features: [
-        'Full 5G network deployment',
-        'Complete smart city suite',
-        'Advanced AI analytics',
-        '12-month implementation',
-        'Dedicated support team',
-        'Custom integrations'
-      ],
-      popular: true
-    },
-    {
-      name: 'Mega City',
-      price: 'Custom',
-      period: 'pricing',
-      description: 'Enterprise solution for large metropolitan areas',
-      features: [
-        'City-wide 5G coverage',
-        'Custom smart city modules',
-        'White-label platform',
-        'Multi-year implementation',
-        '24/7 support team',
-        'SLA guarantee'
-      ],
-      popular: false
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: 'Mayor Sarah Johnson',
-      company: 'Tech Valley City',
-      content: '5G Smart City Solutions transformed our city. Traffic congestion reduced by 30% and citizen satisfaction increased significantly.',
-      rating: 5
-    },
-    {
-      name: 'David Chen',
-      company: 'Metro Planning Department',
-      content: 'The AI-powered analytics help us make data-driven decisions. Our energy efficiency improved by 25% in the first year.',
-      rating: 5
-    },
-    {
-      name: 'Lisa Rodriguez',
-      company: 'Urban Development Corp',
-      content: 'Citizen engagement platform is incredible. Residents can now access city services 24/7 through their smartphones.',
-      rating: 5
+      icon: <Zap className="w-6 h-6 text-cyan-400" />,
+      title: 'Real-time Analytics',
+      description: 'Instant data processing and analytics for informed decision making'
     }
   ];
 
   return (
     <>
+      <SEOOptimizer
+        title="5G Smart City Solutions - ZionTechGroup"
+        description="Revolutionary 5G-powered smart city solutions for modern urban development and management."
+        keywords={['5G smart city', 'smart city solutions', 'IoT', 'urban technology']}
+        canonicalUrl="https://ziontechgroup.com/5g-smart-city-solutions"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        <main className="pt-24 pb-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            {/* Hero Section */}
+            <section className="text-center mb-16">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
+                5G Smart City Solutions
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Transform your city with cutting-edge 5G technology and smart infrastructure solutions.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="cyber-button px-8 py-4 text-lg">
+                  Learn More
+                </button>
+                <button className="cyber-button-outline px-8 py-4 text-lg">
+                  Schedule Demo
+                </button>
+              </div>
+            </section>
 
-        <Head>
-        <title>5G Smart City Solutions - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
-      </Head>
+            {/* Features Section */}
+            <section className="mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+                Key Features
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {features.map((feature, index) => (
+                  <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                      {feature.icon}
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
 
-      <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="con tainermx-auto px-4 py-16">
-          <h1 className="tex t-4xlfont-bold text-white mb-6">5G Smart City Solutions</h1>
-          <p className="tex t-lgtext-gray-300 mb-8">Professional 5G smart city solutions by Zion Tech Group. Transform your city with our expert solutions.</p>
-
-          <Link href="/contact" className="inl ine-flexitems-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-            Contact Us
-            <ArrowRight className="ml-2h-4w-4" />
-          </Link>
-        </div>
+            {/* CTA Section */}
+            <section className="text-center">
+              <div className="cyber-card p-12 max-w-4xl mx-auto">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
+                  Ready to Build the Future?
+                </h2>
+                <p className="text-xl text-gray-300 mb-8">
+                  Join the smart city revolution with our 5G-powered solutions.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <button className="cyber-button px-8 py-4 text-lg inline-flex items-center space-x-2">
+                    <span>Get Started</span>
+                    <ArrowRight className="w-5 h-5" />
+                  </button>
+                  <button className="cyber-button-outline px-8 py-4 text-lg">
+                    Contact Us
+                  </button>
+                </div>
+              </div>
+            </section>
+          </div>
+        </main>
+        <Footer />
       </div>
     </>
   );
-}
+};
+
+export default Page;

@@ -1,14 +1,84 @@
 import React from 'react';
+import '@testing-library/jest-dom';
+import { TextEncoder, TextDecoder } from 'util';
+'use client'
+/**
+ * Jest setup file for testing environment
+ */
+// Polyfill for TextEncoder/TextDecoder
+global.TextEncoder = TextEncoder as any
+global.TextDecoder = TextDecoder as any
+// Suppress jsdom navigation warnings
+const originalConsoleError = console.error;
+console.error = (...args) => {};
 
-const SrcPage = () => {
-  return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">Src</h1>
-        <p className="text-gray-600">This page is under construction. Please check back later.</p>
-      </div>
-    </div>
-  );
-};
+  const message = args[
+        0
+      ]?.toString?.() || args[
+        0
+      ]?.message || '';
+  if (message.includes('Not implemented: navigation') ||
+      message.includes('navigation (except hash changes)')) {};
 
-export default SrcPage;
+  return {  }
+  originalConsoleError(...args)
+{}
+// Mock window.matchMedia
+Object.defineProperty(window, 'matchMedia', {}
+  writable: true
+  valu,
+      e: jest.fn().mockImplementation(query => ({}
+    matches: false
+    media: query
+    onchang,
+      e: null
+    addListene,
+      r: jest.fn(), // deprecatedremoveListener: jest.fn(), // deprecatedaddEventListener: jest.fn()
+    removeEventListene,
+      r: jest.fn()
+    dispatchEven,
+      t: jest.fn()
+{  }))
+{})
+// Mock requestAnimationFrame
+global.requestAnimationFrame = jest.fn(cb => setTimeout(cb, 0))
+global.cancelAnimationFrame = jest.fn(id => clearTimeout(id))
+// Mock localStorage
+
+  clear: jest.fn()
+{}
+Object.defineProperty(window, 'localStorage', {}
+  value: localStorageMock
+{})
+// Mock sessionStorage
+
+  clear: jest.fn()
+{}
+Object.defineProperty(window, 'sessionStorage', {}
+  value: sessionStorageMock
+{})
+// Mock fetch
+global.fetch = jest.fn()
+// Mock console methods for cleaner test output
+const originalConsoleWarn = console.warn;
+const originalConsoleInfo = console.info;
+console.warn = (...args) => {};
+
+  return {  }
+  _originalConsoleWarn(...args)
+{}
+console.info = (...args) => {};
+
+  return {  }
+  _originalConsoleInfo(...args)
+{}
+// Mock PerformanceObserver
+global.PerformanceObserver = class MockPerformanceObserver {}
+  static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift']
+  constructor(public callback: PerformanceObserverCallback) {}
+  observe() {}
+  disconnect() {}
+  takeRecords() {};
+
+  return []
+

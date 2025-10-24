@@ -22,17 +22,6 @@ export default defineConfig({
     outDir: 'dist',
     sourcemap: true,
     minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info'],
-        passes: 2,
-      },
-      mangle: {
-        safari10: true,
-      },
-    },
     rollupOptions: {
       output: {
         manualChunks: (id) => {
