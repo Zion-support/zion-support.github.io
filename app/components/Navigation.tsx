@@ -1,25 +1,79 @@
-<<<<<<< HEAD
 "use client";
 
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { ArrowRight, Brain, Menu, X } from "lucide-react";
-
-const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-=======
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-bb9d
 
-  const navigationItems = [
-    { name: "Home", href: "/" },
-    { name: "AI Services", href: "/ai-services" },
-    { name: "IT Services", href: "/it-services" },
-    { name: "Micro SaaS", href: "/micro-saas-solutions" },
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
+  const [isOpen, setIsOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const closeAllMenus = () => {
+    setIsOpen(false);
+    setServicesOpen(false);
+  };
+
+  const serviceCategories = [
+    {
+      title: 'AI Services',
+      icon: Brain,
+      bgColor: 'bg-purple-100',
+      color: 'text-purple-600',
+      services: [
+        { name: 'AI Services', path: '/ai-services' },
+        { name: 'AI Marketing', path: '/ai-marketing' },
+        { name: 'AI Automation', path: '/ai-automation' },
+        { name: 'AI Healthcare', path: '/ai-healthcare' },
+        { name: 'AI Fintech', path: '/ai-fintech' }
+      ]
+    },
+    {
+      title: 'IT Services',
+      icon: Cloud,
+      bgColor: 'bg-blue-100',
+      color: 'text-blue-600',
+      services: [
+        { name: 'IT Services', path: '/it-services' },
+        { name: 'Cloud Services', path: '/cloud-services' },
+        { name: 'Cybersecurity', path: '/cybersecurity' },
+        { name: 'DevOps', path: '/devops' },
+        { name: 'Database Services', path: '/database' }
+      ]
+    },
+    {
+      title: 'Micro SAAS',
+      icon: Code,
+      bgColor: 'bg-green-100',
+      color: 'text-green-600',
+      services: [
+        { name: 'Micro SAAS', path: '/micro-saas' },
+        { name: 'Developer Tools', path: '/developer-tools' },
+        { name: 'Business Apps', path: '/business-apps' },
+        { name: 'Productivity Tools', path: '/productivity' },
+        { name: 'Marketing Tools', path: '/marketing-tools' }
+      ]
+    },
+    {
+      title: 'Specialized',
+      icon: Zap,
+      bgColor: 'bg-orange-100',
+      color: 'text-orange-600',
+      services: [
+        { name: 'Quantum Computing', path: '/quantum-computing' },
+        { name: 'Autonomous Systems', path: '/autonomous-systems' },
+        { name: 'Blockchain & Web3', path: '/blockchain-web3' },
+        { name: 'IoT & Edge Computing', path: '/iot-edge-computing' },
+        { name: 'Business Intelligence', path: '/business-intelligence' }
+      ]
+    }
   ];
 
   return (
