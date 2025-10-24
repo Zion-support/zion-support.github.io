@@ -9,28 +9,24 @@ const withErrorLogging = (handler) => {
     }
   };
 };
-
 export default withErrorLogging(async (req, res) => {
   if (req.method !== 'POST') {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
   }
-
   const { amount, currency = 'usd' } = req.body;
   if (!amount) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Amount is required' }));
     return;
   }
-
   try {
     const paymentIntent = {
-      status: 'requires_payment_method',
-      amount: amount,
-      currency: currency
+      status: 'requires_payment_method'
+      amount: amount
+      currency: currency;
     };
-
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify(paymentIntent));
   } catch (error) {
