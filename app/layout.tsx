@@ -8,24 +8,53 @@ import ErrorBoundary from './components/ErrorBoundary'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Zion Tech Group - Professional Technology Solutions',
-  description: 'Leading provider of professional technology solutions and services for modern businesses.',
-  keywords: 'technology, solutions, services, professional, business',
+  title: 'Zion Tech Group - Advanced AI and IT Solutions',
+  description: 'Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.',
+  keywords: 'AI solutions, machine learning, quantum computing, IT services, digital transformation, enterprise technology',
   authors: [{ name: 'Zion Tech Group' }],
+  creator: 'Zion Tech Group',
+  publisher: 'Zion Tech Group',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://ziontechgroup.com'),
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
-    title: 'Zion Tech Group - Professional Technology Solutions',
-    description: 'Leading provider of professional technology solutions and services for modern businesses.',
-    type: 'website',
+    title: 'Zion Tech Group - Advanced AI and IT Solutions',
+    description: 'Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.',
+    url: 'https://ziontechgroup.com',
+    siteName: 'Zion Tech Group',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Zion Tech Group - Advanced AI and IT Solutions',
+      },
+    ],
     locale: 'en_US',
+    type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Zion Tech Group - Professional Technology Solutions',
-    description: 'Leading provider of professional technology solutions and services for modern businesses.',
+    title: 'Zion Tech Group - Advanced AI and IT Solutions',
+    description: 'Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.',
+    images: ['/og-image.jpg'],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
   verification: {
     google: 'your-google-verification-code',

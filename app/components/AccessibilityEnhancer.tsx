@@ -16,11 +16,16 @@ export default function AccessibilityEnhancer() {
         left: 6px;
         background: #2563eb;
         color: white;
+<<<<<<< HEAD
         padding: 8px;
+=======
+        padding: 8px 16px;
+>>>>>>> 515ec9cbdfd47dd6dfdd38c0ed223b2c17b1851c
         text-decoration: none;
         border-radius: 4px;
         z-index: 1000;
         transition: top 0.3s;
+<<<<<<< HEAD
       `;
       
       skipLink.addEventListener('focus', () => {
@@ -40,10 +45,32 @@ export default function AccessibilityEnhancer() {
       style.textContent = `
         *:focus {
           outline: 2px solid #2563eb !important;
+=======
+      `
+      
+      skipLink.addEventListener('focus', () => {
+        skipLink.style.top = '6px'
+      })
+      
+      skipLink.addEventListener('blur', () => {
+        skipLink.style.top = '-40px'
+      })
+      
+      document.body.insertBefore(skipLink, document.body.firstChild)
+    }
+
+    // Add focus indicators for keyboard navigation
+    const addFocusStyles = () => {
+      const style = document.createElement('style')
+      style.textContent = `
+        *:focus {
+          outline: 2px solid #3b82f6 !important;
+>>>>>>> 515ec9cbdfd47dd6dfdd38c0ed223b2c17b1851c
           outline-offset: 2px !important;
         }
         
         .focus-visible:focus {
+<<<<<<< HEAD
           outline: 2px solid #2563eb !important;
           outline-offset: 2px !important;
         }
@@ -152,4 +179,67 @@ export default function AccessibilityEnhancer() {
   }, []);
 
   return null;
+=======
+          outline: 2px solid #3b82f6 !important;
+          outline-offset: 2px !important;
+        }
+      `
+      document.head.appendChild(style)
+    }
+
+    // Add ARIA landmarks
+    const addAriaLandmarks = () => {
+      const main = document.querySelector('main')
+      if (main && !main.getAttribute('id')) {
+        main.id = 'main-content'
+        main.setAttribute('role', 'main')
+      }
+
+      const header = document.querySelector('header')
+      if (header) {
+        header.setAttribute('role', 'banner')
+      }
+
+      const footer = document.querySelector('footer')
+      if (footer) {
+        footer.setAttribute('role', 'contentinfo')
+      }
+
+      const nav = document.querySelector('nav')
+      if (nav) {
+        nav.setAttribute('role', 'navigation')
+      }
+    }
+
+    // Add keyboard navigation support
+    const addKeyboardNavigation = () => {
+      document.addEventListener('keydown', (e) => {
+        // Skip to main content with Enter key
+        if (e.key === 'Enter' && e.target === document.querySelector('a[href="#main-content"]')) {
+          const main = document.getElementById('main-content')
+          if (main) {
+            main.focus()
+            main.scrollIntoView({ behavior: 'smooth' })
+          }
+        }
+      })
+    }
+
+    // Initialize accessibility enhancements
+    addSkipLink()
+    addFocusStyles()
+    addAriaLandmarks()
+    addKeyboardNavigation()
+
+    // Cleanup
+    return () => {
+      const skipLink = document.querySelector('a[href="#main-content"]')
+      if (skipLink) {
+        skipLink.remove()
+      }
+    }
+  }, [])
+
+  return null
+>>>>>>> 515ec9cbdfd47dd6dfdd38c0ed223b2c17b1851c
 }
