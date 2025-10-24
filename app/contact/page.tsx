@@ -1,146 +1,113 @@
-'use client'
-
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { Phone, Mail, MapPin, Send, Clock } from 'lucide-react';
+import Link from 'next/link';
+import { MessageCircle, ArrowRight, CheckCircle } from 'lucide-react';
 
-const Page: React.FC = () => {
+export default function ContactUsPage() {
+  const features = [
+    {
+      icon: <MessageCircle className="w-8 h-8" />,
+      title: 'Feature 1',
+      description: 'Description of the first key feature.',
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3', 'Benefit 4']
+    },
+    {
+      icon: <MessageCircle className="w-8 h-8" />,
+      title: 'Feature 2',
+      description: 'Description of the second key feature.',
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3', 'Benefit 4']
+    },
+    {
+      icon: <MessageCircle className="w-8 h-8" />,
+      title: 'Feature 3',
+      description: 'Description of the third key feature.',
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3', 'Benefit 4']
+    },
+    {
+      icon: <MessageCircle className="w-8 h-8" />,
+      title: 'Feature 4',
+      description: 'Description of the fourth key feature.',
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3', 'Benefit 4']
+    }
+  ];
+
+  const stats = [
+    { number: '95%', label: 'Success Rate' },
+    { number: '80%', label: 'Efficiency Gain' },
+    { number: '1000+', label: 'Projects Completed' },
+    { number: '99.9%', label: 'Uptime Guarantee' }
+  ];
+
   return (
-    <>
-      <SEOOptimizer
-        title="Contact Us - ZionTechGroup"
-        description="Get in touch with ZionTechGroup for AI solutions, consultations, and support. We're here to help transform your business."
-        keywords={['contact us', 'AI consultation', 'support', 'get in touch']}
-        canonicalUrl="https://ziontechgroup.com/contact"
-      />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        <main className="pt-24 pb-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            {/* Hero Section */}
-            <section className="text-center mb-16">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
-                Contact Us
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Ready to transform your business? Get in touch with our team of experts for personalized AI and IT solutions.
-              </p>
-            </section>
-
-            {/* Contact Information */}
-            <section className="mb-16">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="text-center">
-                  <div className="inline-flex p-4 rounded-full bg-blue-600/20 mb-4">
-                    <Phone className="w-8 h-8 text-blue-400" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
-                  <p className="text-gray-300">+1 (555) 123-4567</p>
-                </div>
-                <div className="text-center">
-                  <div className="inline-flex p-4 rounded-full bg-blue-600/20 mb-4">
-                    <Mail className="w-8 h-8 text-blue-400" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
-                  <p className="text-gray-300">info@ziontechgroup.com</p>
-                </div>
-                <div className="text-center">
-                  <div className="inline-flex p-4 rounded-full bg-blue-600/20 mb-4">
-                    <MapPin className="w-8 h-8 text-blue-400" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
-                  <p className="text-gray-300">123 Tech Street, San Francisco, CA 94105</p>
-                </div>
-              </div>
-            </section>
-
-            {/* Contact Form */}
-            <section className="max-w-4xl mx-auto">
-              <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700">
-                <h2 className="text-3xl font-bold text-white text-center mb-8">
-                  Send us a Message
-                </h2>
-                <form className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="firstName" className="block text-sm font-medium text-gray-300 mb-2">
-                        First Name
-                      </label>
-                      <input
-                        type="text"
-                        id="firstName"
-                        name="firstName"
-                        className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        placeholder="John"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="lastName" className="block text-sm font-medium text-gray-300 mb-2">
-                        Last Name
-                      </label>
-                      <input
-                        type="text"
-                        id="lastName"
-                        name="lastName"
-                        className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        placeholder="Doe"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="john@example.com"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
-                      Company
-                    </label>
-                    <input
-                      type="text"
-                      id="company"
-                      name="company"
-                      className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Your Company"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                      Message
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows={6}
-                      className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Tell us about your project..."
-                    ></textarea>
-                  </div>
-                  <button
-                    type="submit"
-                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
-                  >
-                    Send Message
-                    <Send className="ml-2 w-5 h-5" />
-                  </button>
-                </form>
-              </div>
-            </section>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+            Contact Us
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Get in touch with our team for your technology needs.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center"
+            >
+              Get Started
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
+            <Link
+              href="/demo"
+              className="border border-gray-300 text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors"
+            >
+              View Demo
+            </Link>
           </div>
-        </main>
-        <Footer />
-      </div>
-    </>
-  );
-};
+        </div>
 
-export default Page;
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+          {stats.map((stat, index) => (
+            <div key={index} className="text-center">
+              <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
+              <div className="text-gray-300">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Key Features</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <div className="flex items-center mb-4">
+                  <div className="text-blue-400 mr-4">{feature.icon}</div>
+                  <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
+                </div>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="text-center bg-white/10 backdrop-blur-sm rounded-lg p-8">
+          <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
+          <p className="text-gray-300 mb-6">Contact us today to learn more about our solutions.</p>
+          <Link
+            href="/contact"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center"
+          >
+            Get Started Now
+            <ArrowRight className="ml-2 w-5 h-5" />
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+}

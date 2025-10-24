@@ -1,45 +1,24 @@
-'use client'
-import { Brain, BarChart } from 'lucide-react';
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { Workflow } from 'lucide-react';
-import { CheckCircle, Phone, Mail } from 'lucide-react';
-    { number: '99.9%', label: 'Reliability' }
-  ]
+import React from "react";
 
-  const useCases = []
-    {title: 'HR Onboarding'
-      descriptio,
-      n: 'Automate employee onboarding processes from application to first day.'
-      ico,
-      n: Users
-   }
-    {title: 'Invoice Processing'
-      descriptio,
-      n: 'Automatically process invoices, validate data, and route for approval.'
-      icon: Database
-   }
-    {title: 'Customer Support'
-      descriptio,
-      n: 'Route tickets, escalate issues, and provide automated responses.'
-      icon: Globe
-   }
-    {title: 'Data Migration'
-      descriptio,
-      n: 'Safely migrate data between systems with automated validation.'
-      ico,
-      n: Settings
-    }
-  ]
+interface PagePageProps {
+  // Add props here
+}
 
-  const pricing = pricingPlans;
-
-const Page = () => {};
+const PagePage: React.FC<PagePageProps> = () => {
   return (
-</>
-  )
+    <div className="min-h-screen bg-white">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold text-gray-900 mb-6">
+          
+        </h1>
+        <div className="prose max-w-none">
+          <p className="text-lg text-gray-600">
+            This is a placeholder for the  page.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
 };
-;
-export default Page;
+
+export default PagePage;
