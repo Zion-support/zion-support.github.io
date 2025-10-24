@@ -1,31 +1,7 @@
 import React from 'react'
 import { render, screen, waitFor, act } from '@testing-library/react'
 import '@testing-library/jest-dom'
-
-// Mock OptimizedImage component
-const OptimizedImage = ({
-  src,
-  alt,
-  width,
-  height
-}: {
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
-}) => {
-  return (
-    <img
-      src={src}
-      alt={alt}
-      width={width}
-      height={height}
-      data-testid="optimized-image"
-      loading="lazy"
-    />
-  )
-}
-
+import OptimizedImage from '../../components/OptimizedImage'
 describe('OptimizedImage', () => {
   it('renders with required props', () => {
     render(
@@ -79,6 +55,7 @@ describe('OptimizedImage', () => {
         <OptimizedImage
           src={src}
           alt={`Test image ${index + 1}`}
+          data-testid="optimized-image"
         />
       )
       const image = screen.getByTestId('optimized-image')
