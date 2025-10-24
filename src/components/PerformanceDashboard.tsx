@@ -1,33 +1,24 @@
-"use client";
-import React from 'react';
+import React from "react";
 
-const PerformanceDashboard = () => {};
-  return ()
-    <div className="min-h-s creenbg-gray-100 py-8">
-        </div>
-        </div>
-      <div className="max-w-4x lmx-auto px-4">
-        </div>
-        </div>
-        <h1 className="tex t-3xlfont-bold text-gray-900 mb-6">
-        </div>
+interface PerformanceDashboardProps {
+  // Add props here
+}
+
+const PerformanceDashboard: React.FC<PerformanceDashboardProps> = () => {
+  return (
+    <div className="min-h-screen bg-white">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold text-gray-900 mb-6">
           PerformanceDashboard
         </h1>
-        <div className="bg-wh iterounded-lg shadow-md p-6">
-        </div>
-        </div>
-          <p className="tex t-gray-600">
-        </div>
-            This page is under construction. Please check back later.
+        <div className="prose max-w-none">
+          <p className="text-lg text-gray-600">
+            This is a placeholder for the PerformanceDashboard page.
           </p>
         </div>
       </div>
-    </div>;
+    </div>
   );
-<<<<<<< HEAD
-{};
+};
 
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 export default PerformanceDashboard;

@@ -1,22 +1,27 @@
+<<<<<<< HEAD
 import React from 'react'
-"use client"
+=======
+import React from 'react';
+>>>>>>> origin/main
+
 interface StructuredDataProps {
-  className?: string
+  className?: string;
 }
+
 const StructuredData: React.FC<StructuredDataProps> = ({ className = '' }) => {
   return (
     <div className={className}>
-      <h2>StructuredData</h2>
 <<<<<<< HEAD
-      <p>This component is under construction.</p>;
-    </div>;
+      {/* Structured Data component */}
+=======
+      {/* Structured data component content */}
+>>>>>>> origin/main
+    </div>
   );
 };
-export default StructuredData
-=======
-      <p>This component is under construction.</p>
-    </div>
-  )
-}
+
+<<<<<<< HEAD
 export default StructuredData;
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
+=======
+export default StructuredData;
+>>>>>>> origin/main

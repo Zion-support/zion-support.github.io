@@ -1,46 +1,24 @@
-'use client'
-<<<<<<< HEAD
-import React from 'react';
-import { ArrowLeft, FileText, Lock } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, Shield, Users } from 'lucide-react';
-import { Award } from 'lucide-react';
+import React from "react";
 
-const $1: React.FC = () => {;
-  const certifications = [];
-    { name: 'SOC 2 Type II', status: 'Certified' },
-    { name: 'ISO 27001', status: 'Certified' },
-    { name: 'GDPR', status: 'Compliant' },
-    { name: 'HIPAA', status: 'Compliant' },
-=======
-import React from 'react'
-import { Users, FileText, Lock, ArrowLeft } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { Users, FileText, Lock, ArrowLeft } from 'lucide-react'
-import { Users, FileText, Lock, ArrowLeft } from 'lucide-react'
-
-const $1: React.FC = () => {
-  const certifications = []
-    { name: 'SOC 2 Type II', status: 'Certified' }
-    { name: 'ISO 27001', status: 'Certified' }
-    { name: 'GDPR', status: 'Compliant' }
-    { name: 'HIPAA', status: 'Compliant' }
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
-    { name: 'PCI DSS', status: 'Compliant' }
-  ]
-
-const Page = () => {};
-  return ()
-      </div>
-      <Footer />
-</>
-  )
-<<<<<<< HEAD
-};
-;
-=======
+interface PagePageProps {
+  // Add props here
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
-export default Page;
+
+const PagePage: React.FC<PagePageProps> = () => {
+  return (
+    <div className="min-h-screen bg-white">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold text-gray-900 mb-6">
+          
+        </h1>
+        <div className="prose max-w-none">
+          <p className="text-lg text-gray-600">
+            This is a placeholder for the  page.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default PagePage;

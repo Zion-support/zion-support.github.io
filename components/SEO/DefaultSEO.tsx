@@ -1,22 +1,27 @@
+<<<<<<< HEAD
 import React from 'react'
-"use client"
+=======
+import React from 'react';
+>>>>>>> origin/main
+
 interface DefaultSEOProps {
-  className?: string
+  className?: string;
 }
+
 const DefaultSEO: React.FC<DefaultSEOProps> = ({ className = '' }) => {
   return (
     <div className={className}>
-      <h2>DefaultSEO</h2>
 <<<<<<< HEAD
-      <p>This component is under construction.</p>;
-    </div>;
+      {/* Default SEO component */}
+=======
+      {/* Default SEO component content */}
+>>>>>>> origin/main
+    </div>
   );
 };
-export default DefaultSEO
-=======
-      <p>This component is under construction.</p>
-    </div>
-  )
-}
+
+<<<<<<< HEAD
 export default DefaultSEO;
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
+=======
+export default DefaultSEO;
+>>>>>>> origin/main

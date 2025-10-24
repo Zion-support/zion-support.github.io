@@ -1,22 +1,27 @@
+<<<<<<< HEAD
 import React from 'react'
-"use client"
+=======
+import React from 'react';
+>>>>>>> origin/main
+
 interface MetaTagsProps {
-  className?: string
+  className?: string;
 }
+
 const MetaTags: React.FC<MetaTagsProps> = ({ className = '' }) => {
   return (
     <div className={className}>
-      <h2>MetaTags</h2>
 <<<<<<< HEAD
-      <p>This component is under construction.</p>;
-    </div>;
+      {/* Meta Tags component */}
+=======
+      {/* Meta tags component content */}
+>>>>>>> origin/main
+    </div>
   );
 };
-export default MetaTags
-=======
-      <p>This component is under construction.</p>
-    </div>
-  )
-}
+
+<<<<<<< HEAD
 export default MetaTags;
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
+=======
+export default MetaTags;
+>>>>>>> origin/main
