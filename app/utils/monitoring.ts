@@ -15,6 +15,7 @@ import Navigation from './Navigation'
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f20
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9ef9
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e7ea
 /**
  * Comprehensive Monitoring Utility
  * Real-time application monitoring, performance tracking, and error reporting
@@ -130,6 +131,7 @@ class MonitoringService {
       }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9ef9
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e7ea
     }
   }
 
@@ -147,6 +149,7 @@ class MonitoringService {
           }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9ef9
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e7ea
         })
         longTaskObserver.observe({ entryTypes: ['longtask'] })
       } catch (error) {
@@ -187,6 +190,7 @@ class MonitoringService {
       }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9ef9
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e7ea
     }
   }
 
@@ -231,6 +235,7 @@ class MonitoringService {
     }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9ef9
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e7ea
     // Send to analytics (if configured)
     if (typeof gtag === 'function') {
       gtag('event', name, {
@@ -250,6 +255,7 @@ class MonitoringService {
     // // // console.error('[Error]', error)
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9ef9
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e7ea
     // Send to error tracking service (if configured)
   }
   public getMetrics(): PerformanceMetrics {
@@ -278,6 +284,7 @@ class MonitoringService {
         // })
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9ef9
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e7ea
       }
     }
   }
@@ -307,6 +314,7 @@ class MonitoringService {
         // })
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9ef9
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e7ea
       }
     }
   }

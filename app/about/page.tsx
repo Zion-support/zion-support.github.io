@@ -4,6 +4,8 @@ import React from "react";
 import { Brain, Target, Users, Award, CheckCircle } from "lucide-react";
 import React from "react";
 import { Brain, Target, Users, Award, CheckCircle } from "lucide-react";
+import React from "react";
+import { Brain, Target, Users, Award, CheckCircle } from "lucide-react";
 import React from 'react';
 import { Brain, Target, Users, Award, CheckCircle } from "lucide-react";
 import React, { useState, useEffect } from 'react';

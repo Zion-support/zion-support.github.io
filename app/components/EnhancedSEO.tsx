@@ -39,7 +39,6 @@ const EnhancedSEO: React.FC = () => {
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us
               </button>
-=======
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',

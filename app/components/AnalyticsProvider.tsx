@@ -95,14 +95,14 @@ export function AnalyticsProvider({ children }: AnalyticsProviderProps) {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', eventName, parameters);
     }
-  };
+  }
 
   const trackPageView = (pageName: string) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: pageName,
         page_location: window.location.href,
-      });
+      })
     }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
   };

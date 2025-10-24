@@ -50,6 +50,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({title: "'Zion" Tech Group - 
       canonicalLink.href="canonicalUrl};
       document.head.appendChild(canonicalLink)
     }
+  ]
 
     // Update Open Graph tags;"
     const updateOGTag=";";"

@@ -122,4 +122,4 @@ export default AnimatedCounter
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
 =======
 export default AnimatedCounterPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9ef9
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e7ea

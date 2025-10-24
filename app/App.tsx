@@ -1,4 +1,5 @@
 import React from 'react';
+import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 import React from 'react';
 const App = (): JSX.Element => {

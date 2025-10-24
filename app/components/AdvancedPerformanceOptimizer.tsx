@@ -9,9 +9,6 @@ interface AdvancedPerformanceOptimizerProps {enableAdvancedCaching?: boolean;
   enableResourceHints?: boolean;
   enableServiceWorker?: boolean;}
   enableCriticalCSS?: boolean}
-=======
-'use client'
-import React, { useEffect, useState, useCallback } from 'react'
 
 interface AdvancedPerformanceOptimizerProps {
   enableAdvancedCaching?: boolean
