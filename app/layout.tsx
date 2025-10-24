@@ -1,27 +1,32 @@
-<<<<<<< HEAD
-import type { Metadata, Viewport } from 'next';
+import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import ErrorBoundary from './components/ErrorBoundary';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://zion.app'),
   title: 'Zion Tech Group - Advanced AI & IT Solutions',
   description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services. Transform your business with cutting-edge technology.',
-  keywords: 'AI solutions, IT services, cybersecurity, cloud computing, digital transformation, machine learning, artificial intelligence, data analytics, blockchain, IoT',
+  keywords: 'AI solutions, cybersecurity, cloud computing, digital transformation, blockchain, IT services, machine learning, artificial intelligence',
   authors: [{ name: 'Zion Tech Group' }],
-  robots: 'index, follow',
+  creator: 'Zion Tech Group',
+  publisher: 'Zion Tech Group',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://zion.app'),
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
-    title: 'Zion Tech Group - Advanced AI & IT Solutions',
-    description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services. Transform your business with cutting-edge technology.',
     type: 'website',
     locale: 'en_US',
     url: 'https://zion.app',
     siteName: 'Zion Tech Group',
+    title: 'Zion Tech Group - Advanced AI & IT Solutions',
+    description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
     images: [
       {
         url: '/og-image.jpg',
@@ -33,19 +38,26 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
+    site: '@ziontechgroup',
+    creator: '@ziontechgroup',
     title: 'Zion Tech Group - Advanced AI & IT Solutions',
     description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
     images: ['/og-image.jpg'],
   },
-  alternates: {
-    canonical: 'https://zion.app',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
-  category: 'technology',
-};
-
-export const viewport: Viewport = {
-  width: 'device-width',
-  initialScale: 1,
+  verification: {
+    google: 'your-google-verification-code',
+  },
 };
 
 export default function RootLayout({
@@ -54,66 +66,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              // Performance monitoring
-              if (typeof window !== 'undefined') {
-                window.addEventListener('load', function() {
-                  // Measure page load time
-                  const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
-                  console.log('Page load time:', loadTime + 'ms');
-                  
-                  // Track Core Web Vitals
-                  if ('web-vitals' in window) {
-                    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-                      getCLS(console.log);
-                      getFID(console.log);
-                      getFCP(console.log);
-                      getLCP(console.log);
-                      getTTFB(console.log);
-                    });
-                  }
-                });
-              }
-            `,
-          }}
-        />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="theme-color" content="#7c3aed" />
+        <meta name="msapplication-TileColor" content="#7c3aed" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
       </head>
-      <body className={inter.className}>
-        <ErrorBoundary>
-          <Header />
-          <main className="pt-16">
-            {children}
-          </main>
-          <Footer />
-        </ErrorBoundary>
+      <body className={`${inter.className} antialiased`}>
+        {children}
       </body>
     </html>
   );
 }
-=======
-import type { Metadata } from 'next'
-import { Inter    } from 'next/font/google'
-import './globals.css'
-;
-const inter = Inter({ subsets: ['latin'] });
-;
-export const metadata: Metadata = {;
-  title: 'Zion Tech Group - Advanced AI & IT Solutions',;
-  description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.'}
-export default function RootLayout({;
-  children}: {);
-  children: React.ReactNode}) {;
-  return (<html lang="en">;"
-      <body className={inter.className}>"
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          {children}
-        </div>
-      </body>;
-    </html>);
-  )}"
-";'"
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
