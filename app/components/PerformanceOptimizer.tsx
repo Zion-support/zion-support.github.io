@@ -12,52 +12,10 @@ const PerformanceOptimizer: React.FC = () => {
       fontLink.as = 'style';
       document.head.appendChild(fontLink);
 
-<<<<<<< HEAD
-      // Measure render time
-      const renderTime = performance.now() - startTime;
-
-      // Check memory usage (if available)
-      const memoryUsage = (performance as any).memory?.usedJSHeapSize || 0;
-
-      // Check connection speed
-      const connection = (navigator as any).connection || (navigator as any).mozConnection || (navigator as any).webkitConnection;
-      const isSlowConnection = connection ? connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g' : false;
-
-      setMetrics({
-        loadTime,
-        renderTime,
-        memoryUsage,
-        isSlowConnection
-      });
-
-      // Auto-optimize based on metrics
-      if (loadTime > 3000 || renderTime > 100 || isSlowConnection) {
-        setIsOptimized(true);
-        applyOptimizations();
-      }
-    };
-
-    const applyOptimizations = () => {
-      // Lazy load images
-      const images = document.querySelectorAll('img[data-src]');
-      images.forEach(img => {
-        const imageElement = img as HTMLImageElement;
-        if (imageElement.dataset.src) {
-          imageElement.src = imageElement.dataset.src;
-          imageElement.removeAttribute('data-src');
-        }
-      });
-
-      // Preload critical resources
-      const criticalResources = [
-        '/fonts/inter.woff2',
-        '/css/critical.css'
-=======
       // Preload critical images
       const criticalImages = [
         '/images/hero-bg.jpg',
         '/images/logo.png'
->>>>>>> 883b2f1837ad94df26f75676952a53319ed72f1c
       ];
 
       criticalImages.forEach(src => {

@@ -1,14 +1,12 @@
-<<<<<<< HEAD
-'use client'
-
-import React, { useEffect } from 'react'
+'use client';
+import React, { useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {
-  children: React.ReactNode
-  enableKeyboardNavigation?: boolean
-  enableScreenReaderSupport?: boolean
-  enableHighContrast?: boolean
-  enableFocusManagement?: boolean
+  children?: React.ReactNode;
+  enableKeyboardNavigation?: boolean;
+  enableScreenReaderSupport?: boolean;
+  enableHighContrast?: boolean;
+  enableFocusManagement?: boolean;
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ 
@@ -18,28 +16,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableHighContrast: _enableHighContrast = false,
   enableFocusManagement: _enableFocusManagement = true
 }) => {
-  useEffect(() => {
-    // Add accessibility enhancements here
-    if (_enableHighContrast) {
-      document.body.classList.add('high-contrast')
-    } else {
-      document.body.classList.remove('high-contrast')
-    }
-
-    return () => {
-      document.body.classList.remove('high-contrast')
-    }
-  }, [_enableHighContrast])
-
-  return <>{children}</>
-}
-
-export default AccessibilityEnhancer
-=======
-'use client';
-import React, { useEffect } from 'react';
-
-const AccessibilityEnhancer: React.FC = () => {
   useEffect(() => {
     // Add skip links
     const addSkipLinks = () => {
@@ -57,6 +33,8 @@ const AccessibilityEnhancer: React.FC = () => {
 
     // Enhance focus management
     const enhanceFocusManagement = () => {
+      if (!_enableFocusManagement) return;
+      
       // Add focus indicators
       const style = document.createElement('style');
       style.textContent = `
@@ -112,6 +90,8 @@ const AccessibilityEnhancer: React.FC = () => {
 
     // Add ARIA labels and roles
     const enhanceARIA = () => {
+      if (!_enableScreenReaderSupport) return;
+      
       // Add ARIA labels to buttons without text
       const iconButtons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
       iconButtons.forEach(button => {
@@ -162,6 +142,8 @@ const AccessibilityEnhancer: React.FC = () => {
 
     // Enhance keyboard navigation
     const enhanceKeyboardNavigation = () => {
+      if (!_enableKeyboardNavigation) return;
+      
       // Add keyboard support for dropdowns
       const dropdowns = document.querySelectorAll('[data-dropdown]');
       dropdowns.forEach(dropdown => {
@@ -186,6 +168,8 @@ const AccessibilityEnhancer: React.FC = () => {
 
     // Add high contrast mode support
     const addHighContrastSupport = () => {
+      if (!_enableHighContrast) return;
+      
       const style = document.createElement('style');
       style.textContent = `
         @media (prefers-contrast: high) {
@@ -244,10 +228,9 @@ const AccessibilityEnhancer: React.FC = () => {
     return () => {
       observer.disconnect();
     };
-  }, []);
+  }, [_enableKeyboardNavigation, _enableScreenReaderSupport, _enableHighContrast, _enableFocusManagement]);
 
-  return null; // This component doesn't render anything
+  return <>{children}</>;
 };
 
 export default AccessibilityEnhancer;
->>>>>>> 883b2f1837ad94df26f75676952a53319ed72f1c

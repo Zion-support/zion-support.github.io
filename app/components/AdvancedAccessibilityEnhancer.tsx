@@ -2,8 +2,7 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react';
+import { CheckCircle, ArrowRight, Phone, Mail, Zap, Shield, Brain, Globe } from 'lucide-react';
 
 const features = [
   {
@@ -18,72 +17,31 @@ const features = [
   },
   {
     icon: Shield,
-    title: 'Secure & Reliable',
-    description: 'Enterprise-grade security with 99.9% uptime guarantee',
+    title: 'Enterprise Security',
+    description: 'Bank-level security with encryption and compliance standards',
   },
   {
     icon: Globe,
     title: 'Global Reach',
-    description: 'Connect with customers worldwide with our scalable solutions',
+    description: 'Worldwide deployment and support for international businesses',
   }
 ];
-=======
-import { CheckCircle, ArrowRight, Phone, Mail, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-const AdvancedAccessibilityEnhancerPage: React.FC = () => {
-    const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency',
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results',
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards',
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses',
-    }
-  ];
-
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
->>>>>>> 883b2f1837ad94df26f75676952a53319ed72f1c
+const benefits = [
+  'Advanced AI technology integration',
+  'Real-time processing and analytics',
+  'Enterprise-grade security and compliance',
+  'Scalable and flexible solutions',
+  '24/7 technical support',
+  'Easy integration with existing systems',
+  'Cost-effective pricing plans',
+  'Proven track record of success'
+];
 
 const AdvancedAccessibilityEnhancer: React.FC = () => {
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
-        <title>Advanced Accessibility - Zion Tech Group</title>
-        <meta name="description" content="Advanced accessibility solutions for modern web applications" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Advanced Accessibility Solutions
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Making your applications accessible to everyone with cutting-edge technology and best practices
-=======
         <title>Advanced Accessibility Enhancer | Zion Tech Group</title>
         <meta name="description" content="Professional Advanced Accessibility Enhancer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="Advanced Accessibility Enhancer, AI solutions, IT services, Zion Tech Group, accessibility" />
@@ -126,7 +84,6 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our accessibility solutions deliver unmatched performance, security, and scalability.
->>>>>>> 883b2f1837ad94df26f75676952a53319ed72f1c
             </p>
           </div>
 
@@ -154,14 +111,6 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
             </button>
           </div>
         </div>
-<<<<<<< HEAD
-      </div>
-    </>
-  );
-};
-
-export default AdvancedAccessibilityEnhancer;
-=======
       </section>
 
       {/* Benefits Section */}
@@ -214,5 +163,4 @@ export default AdvancedAccessibilityEnhancer;
   );
 };
 
-export default AdvancedAccessibilityEnhancerPage;
->>>>>>> 883b2f1837ad94df26f75676952a53319ed72f1c
+export default AdvancedAccessibilityEnhancer;
