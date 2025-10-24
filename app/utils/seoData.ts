@@ -6,6 +6,10 @@ export interface StructuredData {
   url: string;
   logo?: string;
   sameAs?: string[];
+  telephone?: string;
+  email?: string;
+  openingHours?: string[];
+  priceRange?: string;
   contactPoint?: {
     '@type': string;
     telephone: string;
