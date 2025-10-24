@@ -6,7 +6,7 @@ if (req.method !== 'POST'';
 res.setHeader('Content-Type', 'application/json'';
 res.end(JSON.stringify({ "error": 'Method not allowed'',;
 res.setHeader('Content-Type', 'application/json'';
-res.end(JSON.stringify({ "error": 'Address and type are required'',}
+res.end(JSON.stringify({ "error": 'Address and type are required'',;}
     const data = fs.readFileSync(file, 'utf8'';
 console.error('"Error": '',;
 res.setHeader('Content-Type', 'application/json'';
@@ -18,4 +18,4 @@ res.setHeader('Content-Type', 'application/json''
     "message": 'Wallet added successfully'',;
 console.error('"Error": '',;
 res.setHeader('Content-Type', 'application/json'';
-    res.end(JSON.stringify({ "error": 'Failed to save wallet''
+    res.end(JSON.stringify({ "error": 'Failed to save wallet'')

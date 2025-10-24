@@ -1,7 +1,7 @@
 // Test if we can import the Footer component;
-try {;
+try { ;
 const Footer = require('./app/components/Footer.tsx');
-  console.log('Footer imported successfully: ',typeof Footer);
+  console.log('Footer imported successfully: "'",typeof, Footer);, }
 } catch (error) {;
-console.error('Error importing Footer: ',error.message);
+console.error('Error importing Footer: "'",error.message);
 }

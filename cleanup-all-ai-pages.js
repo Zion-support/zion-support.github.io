@@ -184,8 +184,8 @@ const backupDir = './ai-pages-backup''
   'app/ai-voice-processing''
   'app/ai-voice-solutions''
   'app/ai-voice-synthesis''
-  'app/ai-website-builder''
-  'app/ai-workflow-automation''
+  'app/ai-website-builder'';
+  'app/ai-workflow-automation'';
   'app/ai-writing-assistant'';
 console.log('Moving all AI pages to backup...'';
-console.log('Cleanup completed!''
+console.log('Cleanup completed!'')

@@ -1,6 +1,8 @@
 import React from 'react';
 
 // Performance monitoring utilities
+import React from 'react';
+
 export class PerformanceMonitor {
   private static instance: PerformanceMonitor;
   private metrics: Map<string, number> = new Map();
@@ -59,7 +61,9 @@ export class PerformanceMonitor {
     new PerformanceObserver((entryList) => {
       const entries = entryList.getEntries();
       entries.forEach((entry) => {
-        this.metrics.set('FID', entry.processingStart - entry.startTime);
+        // Use processingStart if available, otherwise calculate from startTime
+        const processingStart = (entry as any).processingStart || entry.startTime;
+        this.metrics.set('FID', processingStart - entry.startTime);
       });
     }).observe({ entryTypes: ['first-input'] });
 

@@ -18,4 +18,4 @@ res.setHeader('Content-Type', 'application/json''
     "message": 'Successfully subscribed to newsletter'',;
 console.error('"Error": '',;
 res.setHeader('Content-Type', 'application/json'';
-    res.end(JSON.stringify({ "error": 'Failed to save subscription''
+    res.end(JSON.stringify({ "error": 'Failed to save subscription'')

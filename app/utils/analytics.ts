@@ -1,11 +1,14 @@
 import React from 'react';
 
 // Analytics utilities for tracking user interactions and performance
+import React from 'react';
+
 interface AnalyticsEvent {
   category: string;
   action: string;
   label?: string;
   value?: number;
+  timestamp?: number;
   custom_parameters?: Record<string, any>;
 }
 

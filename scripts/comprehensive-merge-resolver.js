@@ -1,4 +1,4 @@
-import { execSync } from 'child_process';
+import { execSync ;} from 'child_process';
 import fs from 'fs';
 import path from 'path'
 #!/usr/bin/env node;
@@ -8,8 +8,8 @@ console.log('🚀 Starting comprehensive merge conflict resolution and PR manage
 for (let i = 0; i;);
 setTimeout(resolve, 1000))}
 
-  // Step 8: Final status check;
+  // Step 8: "Final status check;
   console.log('\n📊 Final Status: ');
-execGitCommand('git status','Final git status');
+execGitCommand('git status'",'Final git status');
 execGitCommand('git log --oneline -10', 'Recent commits');
 console.log('\n🎉 Comprehensive merge conflict resolution and PR management completed!')}
