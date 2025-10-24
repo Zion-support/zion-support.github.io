@@ -139,4 +139,3 @@ const ZionSmartAnalyticsDashboardPage: React.FC = () => {
   );
 };
 
-export default ZionSmartAnalyticsDashboardPage;

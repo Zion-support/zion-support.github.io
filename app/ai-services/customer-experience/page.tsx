@@ -139,4 +139,3 @@ const CustomerExperiencePage: React.FC = () => {
   );
 };
 
-export default CustomerExperiencePage;

@@ -139,4 +139,3 @@ const NetworkSecurityPage: React.FC = () => {
   );
 };
 
-export default NetworkSecurityPage;

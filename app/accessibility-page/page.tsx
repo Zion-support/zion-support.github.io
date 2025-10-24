@@ -139,4 +139,3 @@ const AccessibilityPagePage: React.FC = () => {
   );
 };
 
-export default AccessibilityPagePage;

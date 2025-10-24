@@ -139,4 +139,3 @@ const AiContentDeliveryNetworkPage: React.FC = () => {
   );
 };
 
-export default AiContentDeliveryNetworkPage;

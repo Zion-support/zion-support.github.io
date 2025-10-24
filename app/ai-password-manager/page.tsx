@@ -139,4 +139,3 @@ const AiPasswordManagerPage: React.FC = () => {
   );
 };
 
-export default AiPasswordManagerPage;

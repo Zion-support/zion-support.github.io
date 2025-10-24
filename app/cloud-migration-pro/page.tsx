@@ -164,4 +164,3 @@ const CloudMigrationProPage: React.FC = () => {
   );
 };
 
-export default CloudMigrationProPage;

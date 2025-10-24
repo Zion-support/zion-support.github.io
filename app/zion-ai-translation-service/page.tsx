@@ -139,4 +139,3 @@ const ZionAiTranslationServicePage: React.FC = () => {
   );
 };
 
-export default ZionAiTranslationServicePage;

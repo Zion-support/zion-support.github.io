@@ -139,4 +139,3 @@ const AiFashionDesignPage: React.FC = () => {
   );
 };
 
-export default AiFashionDesignPage;

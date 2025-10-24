@@ -139,4 +139,3 @@ const ItSolutionsPage: React.FC = () => {
   );
 };
 
-export default ItSolutionsPage;

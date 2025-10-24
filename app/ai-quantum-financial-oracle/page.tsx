@@ -139,4 +139,3 @@ const AiQuantumFinancialOraclePage: React.FC = () => {
   );
 };
 
-export default AiQuantumFinancialOraclePage;

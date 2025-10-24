@@ -139,4 +139,3 @@ const ZionCustomerSatisfactionMonitorPage: React.FC = () => {
   );
 };
 
-export default ZionCustomerSatisfactionMonitorPage;

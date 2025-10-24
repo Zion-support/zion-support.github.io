@@ -139,4 +139,3 @@ const ZionCrmIntelligencePage: React.FC = () => {
   );
 };
 
-export default ZionCrmIntelligencePage;

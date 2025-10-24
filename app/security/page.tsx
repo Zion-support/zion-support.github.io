@@ -139,4 +139,3 @@ const SecurityPage: React.FC = () => {
   );
 };
 
-export default SecurityPage;

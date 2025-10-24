@@ -139,4 +139,3 @@ const ZionAiWebsiteAnalyzerPage: React.FC = () => {
   );
 };
 
-export default ZionAiWebsiteAnalyzerPage;

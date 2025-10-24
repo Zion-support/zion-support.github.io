@@ -139,4 +139,3 @@ const MarketingAutomationPage: React.FC = () => {
   );
 };
 
-export default MarketingAutomationPage;

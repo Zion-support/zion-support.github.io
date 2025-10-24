@@ -139,4 +139,3 @@ const AiMlPage: React.FC = () => {
   );
 };
 
-export default AiMlPage;

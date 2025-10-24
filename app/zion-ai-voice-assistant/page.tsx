@@ -139,4 +139,3 @@ const ZionAiVoiceAssistantPage: React.FC = () => {
   );
 };
 
-export default ZionAiVoiceAssistantPage;

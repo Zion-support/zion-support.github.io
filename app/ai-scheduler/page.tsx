@@ -139,4 +139,3 @@ const AiSchedulerPage: React.FC = () => {
   );
 };
 
-export default AiSchedulerPage;

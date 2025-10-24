@@ -139,4 +139,3 @@ const AiRoboticsPage: React.FC = () => {
   );
 };
 
-export default AiRoboticsPage;

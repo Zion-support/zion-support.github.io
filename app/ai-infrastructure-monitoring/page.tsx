@@ -139,4 +139,3 @@ const AiInfrastructureMonitoringPage: React.FC = () => {
   );
 };
 
-export default AiInfrastructureMonitoringPage;

@@ -141,4 +141,3 @@ const Page5gSolutionsPage: React.FC = () => {
   );
 };
 
-export default Page5gSolutionsPage;

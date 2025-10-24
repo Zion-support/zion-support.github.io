@@ -139,4 +139,3 @@ const ZionIotSolutionsPage: React.FC = () => {
   );
 };
 
-export default ZionIotSolutionsPage;

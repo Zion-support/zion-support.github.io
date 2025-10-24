@@ -139,4 +139,3 @@ const ZionAiVideoEditorPage: React.FC = () => {
   );
 };
 
-export default ZionAiVideoEditorPage;

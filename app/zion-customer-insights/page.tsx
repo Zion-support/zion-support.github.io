@@ -139,4 +139,3 @@ const ZionCustomerInsightsPage: React.FC = () => {
   );
 };
 
-export default ZionCustomerInsightsPage;

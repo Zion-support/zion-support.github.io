@@ -139,4 +139,3 @@ const AiMobileAppDevelopmentPage: React.FC = () => {
   );
 };
 
-export default AiMobileAppDevelopmentPage;

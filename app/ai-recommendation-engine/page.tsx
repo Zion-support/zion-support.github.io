@@ -139,4 +139,3 @@ const AiRecommendationEnginePage: React.FC = () => {
   );
 };
 
-export default AiRecommendationEnginePage;

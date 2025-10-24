@@ -139,4 +139,3 @@ const CaseStudiesPage: React.FC = () => {
   );
 };
 
-export default CaseStudiesPage;

@@ -139,4 +139,3 @@ const AiSeoOptimizerPage: React.FC = () => {
   );
 };
 
-export default AiSeoOptimizerPage;

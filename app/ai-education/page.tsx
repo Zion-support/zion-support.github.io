@@ -139,4 +139,3 @@ const AiEducationPage: React.FC = () => {
   );
 };
 
-export default AiEducationPage;

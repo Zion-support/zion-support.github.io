@@ -139,4 +139,3 @@ const SupplyChainPage: React.FC = () => {
   );
 };
 
-export default SupplyChainPage;

@@ -139,4 +139,3 @@ const ZionBlockchainSolutionsPage: React.FC = () => {
   );
 };
 
-export default ZionBlockchainSolutionsPage;

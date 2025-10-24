@@ -139,4 +139,3 @@ const BusinessIntelligencePage: React.FC = () => {
   );
 };
 
-export default BusinessIntelligencePage;

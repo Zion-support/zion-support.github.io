@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { ArrowRight, Calculator, Building2, Wallet, PiggyBank, BarChart, TrendingUp, CheckCircle, Brain, Settings, BarChart3, Shield, Target, Zap, Globe, DollarSign, Activity, Lock, Database, FileText, CreditCard, Star, Sparkles, PieChart } from 'lucide-react';
 
-export default function AiFinancialAnalyticsProPage() {
+function AiFinancialAnalyticsProPage() {
 
   const features = [
     {
@@ -534,4 +534,6 @@ export default function AiFinancialAnalyticsProPage() {
       </div>
     </div>
   );
-}
+};
+
+export default AIFinancialAnalyticsProPage;

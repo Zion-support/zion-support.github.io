@@ -139,4 +139,3 @@ const AiDocumentProcessorPage: React.FC = () => {
   );
 };
 
-export default AiDocumentProcessorPage;

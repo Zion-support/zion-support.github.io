@@ -139,4 +139,3 @@ const AiAudioProcessorImprovedPage: React.FC = () => {
   );
 };
 
-export default AiAudioProcessorImprovedPage;

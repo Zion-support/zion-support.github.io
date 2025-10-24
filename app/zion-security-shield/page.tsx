@@ -139,4 +139,3 @@ const ZionSecurityShieldPage: React.FC = () => {
   );
 };
 
-export default ZionSecurityShieldPage;

@@ -139,4 +139,3 @@ const AiChatbotEnterprisePage: React.FC = () => {
   );
 };
 
-export default AiChatbotEnterprisePage;

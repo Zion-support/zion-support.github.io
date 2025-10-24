@@ -139,4 +139,3 @@ const AiCodeSecurityAuditorPage: React.FC = () => {
   );
 };
 
-export default AiCodeSecurityAuditorPage;

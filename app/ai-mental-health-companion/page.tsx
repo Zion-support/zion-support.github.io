@@ -139,4 +139,3 @@ const AiMentalHealthCompanionPage: React.FC = () => {
   );
 };
 
-export default AiMentalHealthCompanionPage;

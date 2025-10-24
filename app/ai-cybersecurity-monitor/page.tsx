@@ -139,4 +139,3 @@ const AiCybersecurityMonitorPage: React.FC = () => {
   );
 };
 
-export default AiCybersecurityMonitorPage;

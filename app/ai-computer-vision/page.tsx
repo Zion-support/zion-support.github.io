@@ -139,4 +139,3 @@ const AiComputerVisionPage: React.FC = () => {
   );
 };
 
-export default AiComputerVisionPage;

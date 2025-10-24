@@ -251,4 +251,3 @@ const AIProjectManagementProPage: React.FC = () => {
   );
 };
 
-export default AIProjectManagementProPage;

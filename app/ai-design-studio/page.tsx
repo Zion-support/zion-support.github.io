@@ -139,4 +139,3 @@ const AiDesignStudioPage: React.FC = () => {
   );
 };
 
-export default AiDesignStudioPage;

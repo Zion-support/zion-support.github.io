@@ -139,4 +139,3 @@ const AiVoiceCloningPage: React.FC = () => {
   );
 };
 
-export default AiVoiceCloningPage;

@@ -139,4 +139,3 @@ const ZionAiSalesPredictorPage: React.FC = () => {
   );
 };
 
-export default ZionAiSalesPredictorPage;

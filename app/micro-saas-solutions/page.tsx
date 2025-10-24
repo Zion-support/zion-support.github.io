@@ -139,4 +139,3 @@ const MicroSaasSolutionsPage: React.FC = () => {
   );
 };
 
-export default MicroSaasSolutionsPage;

@@ -164,4 +164,3 @@ const BlockchainPage: React.FC = () => {
   );
 };
 
-export default BlockchainPage;

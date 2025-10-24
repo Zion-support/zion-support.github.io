@@ -139,4 +139,3 @@ const ZionCybersecurityAuditPage: React.FC = () => {
   );
 };
 
-export default ZionCybersecurityAuditPage;

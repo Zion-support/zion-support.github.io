@@ -139,4 +139,3 @@ const AiSmartHomeControllerPage: React.FC = () => {
   );
 };
 
-export default AiSmartHomeControllerPage;

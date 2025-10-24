@@ -139,4 +139,3 @@ const ZionDataSyncPage: React.FC = () => {
   );
 };
 
-export default ZionDataSyncPage;

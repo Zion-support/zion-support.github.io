@@ -139,4 +139,3 @@ const AiSupplyChainOptimizationProPage: React.FC = () => {
   );
 };
 
-export default AiSupplyChainOptimizationProPage;

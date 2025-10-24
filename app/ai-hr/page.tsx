@@ -139,4 +139,3 @@ const AiHrPage: React.FC = () => {
   );
 };
 
-export default AiHrPage;

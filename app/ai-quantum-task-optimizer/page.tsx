@@ -139,4 +139,3 @@ const AiQuantumTaskOptimizerPage: React.FC = () => {
   );
 };
 
-export default AiQuantumTaskOptimizerPage;

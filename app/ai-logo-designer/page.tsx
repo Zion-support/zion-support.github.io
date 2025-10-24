@@ -139,4 +139,3 @@ const AiLogoDesignerPage: React.FC = () => {
   );
 };
 
-export default AiLogoDesignerPage;

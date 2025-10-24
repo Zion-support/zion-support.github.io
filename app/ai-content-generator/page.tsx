@@ -2,7 +2,7 @@
 import React from 'react';
 import { ArrowRight, Brain, CheckCircle, FileText, MessageCircle, Target, Globe } from 'lucide-react';
 
-export default function AIContentGeneratorPage() {
+function AIContentGeneratorPage() {
   const features = [
     {
       icon: <Brain className="w-6 h-6 text-cyan-400" />,
@@ -106,4 +106,6 @@ export default function AIContentGeneratorPage() {
       </section>
     </div>
   );
-}
+};
+
+export default AIContentGeneratorPage;

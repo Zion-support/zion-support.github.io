@@ -139,4 +139,3 @@ const AiSpaceTechnologyPage: React.FC = () => {
   );
 };
 
-export default AiSpaceTechnologyPage;

@@ -139,4 +139,3 @@ const AiEmailMarketingPage: React.FC = () => {
   );
 };
 
-export default AiEmailMarketingPage;

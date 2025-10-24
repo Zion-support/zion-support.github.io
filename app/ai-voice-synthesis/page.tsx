@@ -139,4 +139,3 @@ const AiVoiceSynthesisPage: React.FC = () => {
   );
 };
 
-export default AiVoiceSynthesisPage;

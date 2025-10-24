@@ -164,4 +164,3 @@ const APIPage: React.FC = () => {
   );
 };
 
-export default APIPage;

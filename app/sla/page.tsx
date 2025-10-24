@@ -139,4 +139,3 @@ const SlaPage: React.FC = () => {
   );
 };
 
-export default SlaPage;

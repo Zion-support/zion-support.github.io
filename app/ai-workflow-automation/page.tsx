@@ -139,4 +139,3 @@ const AiWorkflowAutomationPage: React.FC = () => {
   );
 };
 
-export default AiWorkflowAutomationPage;

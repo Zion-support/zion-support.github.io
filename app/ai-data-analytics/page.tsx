@@ -139,4 +139,3 @@ const AiDataAnalyticsPage: React.FC = () => {
   );
 };
 
-export default AiDataAnalyticsPage;

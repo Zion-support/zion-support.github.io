@@ -139,4 +139,3 @@ const ContentGenerationPage: React.FC = () => {
   );
 };
 
-export default ContentGenerationPage;

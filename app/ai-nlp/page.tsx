@@ -139,4 +139,3 @@ const AiNlpPage: React.FC = () => {
   );
 };
 
-export default AiNlpPage;

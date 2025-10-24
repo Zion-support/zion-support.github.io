@@ -139,4 +139,3 @@ const AiHealthcarePage: React.FC = () => {
   );
 };
 
-export default AiHealthcarePage;

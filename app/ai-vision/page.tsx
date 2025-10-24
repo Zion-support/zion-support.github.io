@@ -139,4 +139,3 @@ const AiVisionPage: React.FC = () => {
   );
 };
 
-export default AiVisionPage;

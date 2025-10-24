@@ -139,4 +139,3 @@ const AiCustomerSupportPage: React.FC = () => {
   );
 };
 
-export default AiCustomerSupportPage;

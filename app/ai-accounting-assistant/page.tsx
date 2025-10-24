@@ -139,4 +139,3 @@ const AiAccountingAssistantPage: React.FC = () => {
   );
 };
 
-export default AiAccountingAssistantPage;

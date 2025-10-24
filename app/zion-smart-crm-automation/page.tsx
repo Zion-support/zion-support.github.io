@@ -139,4 +139,3 @@ const ZionSmartCrmAutomationPage: React.FC = () => {
   );
 };
 
-export default ZionSmartCrmAutomationPage;

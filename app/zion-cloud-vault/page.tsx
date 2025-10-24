@@ -139,4 +139,3 @@ const ZionCloudVaultPage: React.FC = () => {
   );
 };
 
-export default ZionCloudVaultPage;

@@ -139,4 +139,3 @@ const PredictiveMaintenancePage: React.FC = () => {
   );
 };
 
-export default PredictiveMaintenancePage;

@@ -139,4 +139,3 @@ const ZionAiSocialMediaManagerPage: React.FC = () => {
   );
 };
 
-export default ZionAiSocialMediaManagerPage;

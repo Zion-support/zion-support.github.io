@@ -139,4 +139,3 @@ const AiEnterpriseSolutionsPage: React.FC = () => {
   );
 };
 
-export default AiEnterpriseSolutionsPage;

@@ -139,4 +139,3 @@ const ZionAiSurveyBuilderPage: React.FC = () => {
   );
 };
 
-export default ZionAiSurveyBuilderPage;

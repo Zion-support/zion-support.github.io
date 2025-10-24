@@ -139,4 +139,3 @@ const AiTaskManagerPage: React.FC = () => {
   );
 };
 
-export default AiTaskManagerPage;

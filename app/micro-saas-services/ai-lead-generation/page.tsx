@@ -139,4 +139,3 @@ const AiLeadGenerationPage: React.FC = () => {
   );
 };
 
-export default AiLeadGenerationPage;

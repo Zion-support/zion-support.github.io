@@ -139,4 +139,3 @@ const ZionWorkflowAutomationPage: React.FC = () => {
   );
 };
 
-export default ZionWorkflowAutomationPage;

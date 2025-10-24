@@ -139,4 +139,3 @@ const SmartCitiesPage: React.FC = () => {
   );
 };
 
-export default SmartCitiesPage;

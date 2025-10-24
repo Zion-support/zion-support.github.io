@@ -139,4 +139,3 @@ const AiOpsPage: React.FC = () => {
   );
 };
 
-export default AiOpsPage;
