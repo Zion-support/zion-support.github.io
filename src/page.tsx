@@ -1210,4 +1210,7 @@ const HomePage: React.FC = () => {
 };
 
 export default HomePage;
+<<<<<<< HEAD
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03cc

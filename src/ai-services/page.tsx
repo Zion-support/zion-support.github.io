@@ -1,4 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+import { Helmet } from 'react-helmet-async';
+import { Brain, Zap, Shield, BarChart } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03cc
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 

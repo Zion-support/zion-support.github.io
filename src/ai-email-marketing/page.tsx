@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 
 const AIEmailMarketingPage: React.FC = () => {
   const _features = [
@@ -101,6 +102,14 @@ const AIEmailMarketingPage: React.FC = () => {
   ];
 
 const AiEmailMarketingPage: React.FC = () => {
+=======
+import { Helmet } from 'react-helmet-async';
+import { Mail, Target, Send, BarChart, Users, TrendingUp } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
+const AIEmailMarketingPage: React.FC = () => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03cc
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
