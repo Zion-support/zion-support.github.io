@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Metadata } from 'next';
 
@@ -32,75 +31,6 @@ const NavigationPage = () => {
             <a href="/services" className="border border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors">
               Learn More
             </a>
-=======
-'use client';
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { Menu, X } from 'lucide-react';
-
-const Navigation = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  return (
-    <nav className="bg-white shadow-lg fixed w-full top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link href="/" className="text-2xl font-bold text-blue-600">
-              ZionTechGroup
-            </Link>
-          </div>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
-              <Link
-                href="/"
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
-              >
-                Home
-              </Link>
-              <Link
-                href="/services"
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
-              >
-                Services
-              </Link>
-              <Link
-                href="/about"
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
-              >
-                About
-              </Link>
-              <Link
-                href="/contact"
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
-              >
-                Contact
-              </Link>
-              <Link
-                href="/pricing"
-                className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors"
-              >
-                Pricing
-              </Link>
-            </div>
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button
-              onClick={toggleMenu}
-              className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
-            >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-45ea
           </div>
         </div>
 
@@ -147,16 +77,8 @@ const Navigation = () => {
           </div>
         )}
       </div>
-<<<<<<< HEAD
     </div>
   );
 };
 
 export default NavigationPage;
-=======
-    </nav>
-  );
-};
-
-export default Navigation;
->>>>>>> cursor/fix-errors-and-merge-to-main-45ea

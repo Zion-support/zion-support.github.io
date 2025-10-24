@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { Metadata } from 'next'';import { Inter } from 'next/font/google'';import './globals.css'';const inter = Inter({ subsets: ['latin'] })';export const metadata: Metadata = {title: title,;
 description: description,;
 keywords: 'AI solutions, IT services, quantum computing, autonomous systems, enterprise technology'';}
@@ -10,10 +9,3 @@ export default function RootLayout({children
       </body>
     </html>;
   )};
-=======
-import type { Metadata } from 'next''
-import { Inter } from 'next/font/google''
-import './globals.css''
-const inter = Inter({ "subsets": ['latin'';,
-  "keywords": 'AI solutions, IT services, quantum computing, autonomous systems, enterprise technology''
->>>>>>> cursor/fix-errors-and-merge-to-main-45ea

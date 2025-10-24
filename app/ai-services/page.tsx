@@ -1,6 +1,4 @@
-'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -33,52 +31,6 @@ const PagePage = () => {
             <a href="/services" className="border border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors">
               Learn More
             </a>
-=======
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { Brain, Zap, Target, CheckCircle, ArrowRight } from 'lucide-react';
-
-const aiServices = [
-  {
-    title: 'Machine Learning',
-    description: 'Custom ML models tailored to your business needs and data.',
-    icon: <Brain className="w-8 h-8" />,
-  },
-  {
-    title: 'Natural Language Processing',
-    description: 'Advanced NLP solutions for text analysis and understanding.',
-    icon: <Zap className="w-8 h-8" />,
-  },
-  {
-    title: 'Computer Vision',
-    description: 'Image and video analysis using cutting-edge AI technology.',
-    icon: <Target className="w-8 h-8" />,
-  },
-];
-
-export default function AIServicesPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
-      <SEOOptimizer
-        title="AI Services - ZionTechGroup"
-        description="Comprehensive AI services including machine learning, natural language processing, and computer vision solutions."
-        keywords="AI services, machine learning, NLP, computer vision, artificial intelligence"
-      />
-      <Navigation />
-      
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              AI <span className="text-blue-600">Services</span>
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Transform your business with cutting-edge artificial intelligence solutions 
-              designed to drive innovation and growth.
-            </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-45ea
           </div>
         </div>
       </section>
@@ -132,10 +84,6 @@ export default function AIServicesPage() {
       <Footer />
     </div>
   );
-<<<<<<< HEAD
 };
 
 export default PagePage;
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-45ea

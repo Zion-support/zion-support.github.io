@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 
-<<<<<<< HEAD
 // Function to fix import statements
 function fixImports(content) {
   let fixed = content;
@@ -87,19 +86,3 @@ function processDirectory(dirPath) {
 console.log('Starting import fixes...');
 const fixedCount = processDirectory('./app');
 console.log(`Fixed ${fixedCount} files.`);
-=======
-const fs = require('fs''
-const path = require('path''
-  'Send', 'BarChart3', 'Shield', 'Target', 'Mail', 'Phone', 'MapPin', 'Github', 'Linkedin', 'Twitter''
-  'ArrowRight', 'Brain', 'Cloud', 'Database', 'Smartphone', 'Zap', 'Sparkles', 'Star', 'CheckCircle''
-  'Clock', 'Users', 'Settings', 'Check', 'Globe', 'TrendingUp', 'BarChart', 'Calculator', 'Building2''
-  'Wallet', 'PiggyBank', 'Settings', 'Home', 'Info', 'Briefcase', 'Phone', 'DocumentText', 'AcademicCap''
-  'Play', 'QuestionMarkCircle', 'ShieldCheck', 'CurrencyDollar', 'Cog', 'ChevronDown', 'Bars3Icon''
-  'XMarkIcon', 'HomeIcon', 'InformationCircleIcon', 'BriefcaseIcon', 'PhoneIcon', 'DocumentTextIcon''
-  'AcademicCapIcon', 'PlayIcon', 'QuestionMarkCircleIcon', 'ShieldCheckIcon', 'CurrencyDollarIcon''
-  'CogIcon', 'ChevronDownIcon''
-    const iconRegex = new RegExp(`<${icon}\\s`, 'g''
-    const importRegex = new RegExp(`import.*{.*${icon}.*}.*from.*lucide-react`, 'g''
-    let content = fs.readFileSync(filePath, 'utf8''
-    const importRegex = /import\s*{([^}]+)}\s*from\s*['"]lucide-react[''
->>>>>>> cursor/fix-errors-and-merge-to-main-45ea

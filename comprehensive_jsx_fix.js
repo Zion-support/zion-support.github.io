@@ -4,8 +4,7 @@ function fixJSXErrors(content) {
   let fixed = content;
   
   // Remove merge conflict markers completely()
-  fixed = fixed.replace(/<<<<<<< HEAD\n.*?\n=======\n.*?\n>>>>>>> [^\n]+\n/g, '''
-      fixed += '\n  </>''
+  fixed = fixed.replace(/\n.*?\n\n.*?\n      fixed += '\n  </>''
   fixed = fixed.replace(/<(\w+)\s*>\s*<\/\1>\s*$/gm, '''
   fixed = fixed.replace(/\*\s*100\s+0\)/g, '* 1000)''
   fixed = fixed.replace(/,\s*\)/g, ')''

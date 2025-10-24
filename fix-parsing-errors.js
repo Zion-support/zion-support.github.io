@@ -6,9 +6,7 @@ function fixParsingErrors(content) {
   let fixed = content;
   
   // Fix merge conflict markers
-  fixed = fixed.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [a-f0-9]+/g, '');
-  fixed = fixed.replace(/<<<<<<< [a-f0-9]+[\s\S]*?=======[\s\S]*?>>>>>>> [a-f0-9]+/g, '');
-  
+  fixed = fixed.replace(/[\s\S]*?[\s\S]*?  fixed = fixed.replace(/<<<<<<< [a-f0-9]+[\s\S]*?[\s\S]*?  
   // Fix unterminated string literals
   fixed = fixed.replace(/('|")([^'"]*?)(\n|$)/g, (match, quote, content, newline) => {
     if (content.includes(quote)) return match;

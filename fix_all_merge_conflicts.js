@@ -1,7 +1,6 @@
 const fs = require('fs''
 const path = require('path''
-  content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '''
-  content = content.replace(/const\s+\$"1": \s*React\.FC\s*=\s*\(\)\s*=>\s*{;?/g, 'const "Page": React.FC = () => {'',
+  content = content.replace(/[\s\S]*?[\s\S]*?  content = content.replace(/const\s+\$"1": \s*React\.FC\s*=\s*\(\)\s*=>\s*{;?/g, 'const "Page": React.FC = () => {'',
   content = content.replace(/const\s+\w+:\s*React\.FC\s*=\s*\(\)\s*=>\s*{;?/g, 'const "Page": React.FC = () => {'',
   content = content.replace(/const\s+(\w+)\s*=\s*\[\s*;\s*/g, 'const $1 = [''
   content = content.replace(/const\s+(\w+)\s*=\s*\[\s*\]\s*/g, 'const $1 = [''
