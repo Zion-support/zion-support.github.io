@@ -1,8 +1,8 @@
+"use client";
 import React from "react";
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle, Send, BarChart3, Shield, Zap, Globe, DollarSign, Clock, Star, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react';
-"use client",
 export default function HomePage() {
   const features = [
   {
@@ -14,10 +14,10 @@ export default function HomePage() {
         "Natural Language Processing",
         "Predictive Analytics",
     "Automated Decision Making"
-  ]
-}
+      ]
+    },
     {
-  title: "IT Services",
+      title: "IT Services",
     description: "Comprehensive technology solutions including cloud infrastructure, cybersecurity, and digital transformation for modern businesses",
       icon: BarChart,
     benefits: [
@@ -25,10 +25,10 @@ export default function HomePage() {
         "Cybersecurity Solutions",
         "Digital Transformation",
     "24/7 Technical Support"
-  ]
-}
+      ]
+    },
     {
-  title: "Micro SaaS",
+      title: "Micro SaaS",
     description: "Scalable software-as-a-service solutions designed for rapid deployment and growth, perfect for startups and enterprises",
       icon: Target,
     benefits: [
@@ -36,10 +36,10 @@ export default function HomePage() {
         "Scalable Architecture",
         "Custom Development",
     "Ongoing Maintenance"
-  ]
-}
+      ]
+    },
     {
-  title: "Business Intelligence",
+      title: "Business Intelligence",
     description: "Advanced analytics and reporting tools to help you make data-driven decisions and optimize your business performance",
       icon: TrendingUp,
     benefits: [

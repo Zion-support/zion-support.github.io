@@ -1,6 +1,6 @@
+"use client";
 import React from "react";
 import { Zap, Layers, Users, TrendingUp, CheckCircle, ArrowRight } from "lucide-react";
-"use client",
 const MicroSaasPage: React.FC = () => {
   const services = [
   {
@@ -12,7 +12,7 @@ const MicroSaasPage: React.FC = () => {
         "Rapid Prototyping",
         "Agile Methodology",
     "Quick Iterations"
-  ]
+      ],
       price: "Starting at $8,000"
 },
   {
@@ -24,7 +24,7 @@ const MicroSaasPage: React.FC = () => {
         "Cloud-Native Solutions",
         "Auto-Scaling",
     "Load Balancing"
-  ]
+      ],
       price: "Starting at $12,000"
 },
   {
@@ -36,7 +36,7 @@ const MicroSaasPage: React.FC = () => {
         "Role-Based Access",
         "SSO Integration",
     "User Analytics"
-  ]
+      ],
       price: "Starting at $6,000"
 },
   {
@@ -48,8 +48,8 @@ const MicroSaasPage: React.FC = () => {
         "Performance Metrics",
         "Business Intelligence",
     "Custom Dashboards"
-  ]
-      price: "Starting at $4,000",
+      ],
+      price: "Starting at $4,000"
     }
   ]
   const platforms = [
@@ -61,10 +61,10 @@ const MicroSaasPage: React.FC = () => {
     "Chrome Extensions"
   ]
   const techStack = [
-  "React", "Next.js", "Vue.js", "Angular", "Node.js", "Python", "Go"
-    "PostgreSQL", "MongoDB", "Redis", "AWS", "Docker", "Kubernetes"
+    "React", "Next.js", "Vue.js", "Angular", "Node.js", "Python", "Go",
+    "PostgreSQL", "MongoDB", "Redis", "AWS", "Docker", "Kubernetes",
     "Stripe", "Auth0", "SendGrid", "Twilio", "WebSocket", "GraphQL"
-]
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       {/* Hero Section */}

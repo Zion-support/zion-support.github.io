@@ -8,43 +8,49 @@ const teamMembers = [
     name: "Dr. Sarah Chen",
     role: "Chief Executive Officer",
     bio: "Leading AI research and strategic vision with 15+ years in enterprise technology.",
-    expertise: ["AI Strategy", "Leadership", "Innovation"]
-    image: "/api/placeholder/300/300"}
+    expertise: ["AI Strategy", "Leadership", "Innovation"],
+    image: "/api/placeholder/300/300"
+  },
   {
     id: 2,
     name: "Michael Rodriguez",
     role: "Chief Technology Officer",
     bio: "Expert in scalable architecture and cutting-edge AI implementation.",
-    expertise: ["System Architecture", "AI Development", "Cloud Computing"]
-    image: "/api/placeholder/300/300"}
+    expertise: ["System Architecture", "AI Development", "Cloud Computing"],
+    image: "/api/placeholder/300/300"
+  },
   {
     id: 3,
     name: "Dr. Emily Watson",
     role: "Head of AI Research",
     bio: "Pioneering machine learning algorithms and neural network optimization.",
-    expertise: ["Machine Learning", "Deep Learning", "Research"]
-    image: "/api/placeholder/300/300"}
+    expertise: ["Machine Learning", "Deep Learning", "Research"],
+    image: "/api/placeholder/300/300"
+  },
   {
     id: 4,
     name: "James Thompson",
     role: "VP of Engineering",
     bio: "Building robust, scalable solutions that power the future of business.",
-    expertise: ["Software Engineering", "DevOps", "Team Leadership"]
-    image: "/api/placeholder/300/300"}
+    expertise: ["Software Engineering", "DevOps", "Team Leadership"],
+    image: "/api/placeholder/300/300"
+  },
   {
     id: 5,
     name: "Lisa Park",
     role: "Head of Data Science",
     bio: "Transforming raw data into actionable insights and business intelligence.",
-    expertise: ["Data Analytics", "Business Intelligence", "Statistics"]
-    image: "/api/placeholder/300/300"}
+    expertise: ["Data Analytics", "Business Intelligence", "Statistics"],
+    image: "/api/placeholder/300/300"
+  },
   {
     id: 6,
     name: "David Kumar",
     role: "Lead AI Engineer",
     bio: "Specializing in natural language processing and computer vision applications.",
-    expertise: ["NLP", "Computer Vision", "AI Implementation"]
-    image: "/api/placeholder/300/300"}
+    expertise: ["NLP", "Computer Vision", "AI Implementation"],
+    image: "/api/placeholder/300/300"
+  }
 ]
 const values = [
   {

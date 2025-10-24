@@ -1,6 +1,6 @@
+"use client";
 import React from "react";
 import { Brain, Zap, Target, BarChart, CheckCircle, ArrowRight } from "lucide-react";
-"use client",
 const AIServicesPage: React.FC = () => {
   const services = [
   {
@@ -12,7 +12,7 @@ const AIServicesPage: React.FC = () => {
         "Pattern Recognition",
         "Automated Decision Making",
     "Real-time Processing"
-  ]
+      ],
       price: "Starting at $5,000"
 },
   {
@@ -24,7 +24,7 @@ const AIServicesPage: React.FC = () => {
         "Workflow Optimization",
         "Intelligent Routing",
     "Error Reduction"
-  ]
+      ],
       price: "Starting at $3,000"
 },
   {
@@ -36,7 +36,7 @@ const AIServicesPage: React.FC = () => {
         "Sentiment Analysis",
         "Language Translation",
     "Chatbot Development"
-  ]
+      ],
       price: "Starting at $4,000"
 },
   {
@@ -48,27 +48,31 @@ const AIServicesPage: React.FC = () => {
         "Object Detection",
         "Video Analysis",
     "Quality Control"
-  ]
-      price: "Starting at $6,000",
+      ],
+      price: "Starting at $6,000"
     }
   ]
   const process = [
     {
       step: "1",
-    title: "Discovery & Analysis",
-      description: "We analyze your business needs and data to understand the best AI approach."}
+      title: "Discovery & Analysis",
+      description: "We analyze your business needs and data to understand the best AI approach."
+    },
     {
       step: "2",
-    title: "Solution Design",
-      description: "Our team designs a custom AI solution tailored to your specific requirements."}
+      title: "Solution Design",
+      description: "Our team designs a custom AI solution tailored to your specific requirements."
+    },
     {
       step: "3",
-    title: "Development & Training",
-      description: "We develop and train your AI models using the latest technologies and best practices."}
+      title: "Development & Training",
+      description: "We develop and train your AI models using the latest technologies and best practices."
+    },
     {
       step: "4",
-    title: "Integration & Deployment",
-      description: "We integrate the solution into your existing systems and deploy it securely."}
+      title: "Integration & Deployment",
+      description: "We integrate the solution into your existing systems and deploy it securely."
+    },
     {
       step: "5",
     title: "Monitoring & Optimization",

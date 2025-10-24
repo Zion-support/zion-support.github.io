@@ -52,64 +52,64 @@ export default function AiFinancialAnalyticsProPage() {
 }
   ]
   const analyticsTypes = [
-  {
-  category: 'Revenue Analytics',
-    icon: DollarSign
+    {
+      category: 'Revenue Analytics',
+      icon: DollarSign,
       items: [
         'Revenue forecasting',
         'Sales performance tracking',
         'Customer lifetime value',
         'Revenue optimization',
     'Market share analysis'
-  ]
-}
+      ]
+    },
     {
-  category: 'Expense Management',
-    icon: Calculator
+      category: 'Expense Management',
+      icon: Calculator,
       items: [
         'Cost center analysis',
         'Budget variance tracking',
         'Expense categorization',
         'Spend optimization',
     'Vendor performance'
-  ]
-}
+      ]
+    },
     {
-  category: 'Cash Flow Analysis',
-    icon: Activity
+      category: 'Cash Flow Analysis',
+      icon: Activity,
       items: [
         'Cash flow forecasting',
         'Working capital analysis',
         'Liquidity management',
         'Payment optimization',
     'Credit risk assessment'
-  ]
-}
+      ]
+    },
     {
-  category: 'Investment Analytics',
-    icon: TrendingUp
+      category: 'Investment Analytics',
+      icon: TrendingUp,
       items: [
         'Portfolio performance',
         'Risk-return analysis',
         'Asset allocation',
         'Investment tracking',
     'ROI calculations'
-  ]
-}
+      ]
+    },
     {
-  category: 'Compliance & Audit',
-    icon: Lock
+      category: 'Compliance & Audit',
+      icon: Lock,
       items: [
         'Regulatory compliance',
         'Audit trail management',
         'Financial controls',
         'Risk monitoring',
     'Documentation'
-  ]
-}
+      ]
+    },
     {
-  category: 'Predictive Modeling',
-    icon: Brain
+      category: 'Predictive Modeling',
+      icon: Brain,
       items: [
         'Financial forecasting',
         'Scenario planning',
@@ -132,9 +132,10 @@ export default function AiFinancialAnalyticsProPage() {
         'Email support',
         'Standard integrations',
     '1GB data storage'
-  ]
+      ],
       popular: false,
-    cta: 'Start Free Trial'}
+      cta: 'Start Free Trial'
+    },
     {
       name: 'Professional',
     price: '$499',
@@ -149,9 +150,10 @@ export default function AiFinancialAnalyticsProPage() {
         '10GB data storage',
         'AI-powered insights',
     'Custom reporting'
-  ]
+      ],
       popular: true,
-    cta: 'Get Started'}
+      cta: 'Get Started'
+    },
     {
       name: 'Enterprise',
     price: '$1,299',
@@ -166,9 +168,10 @@ export default function AiFinancialAnalyticsProPage() {
         'API access',
         'On-premise deployment',
     'Custom compliance'
-  ]
+      ],
       popular: false,
-    cta: 'Contact Sales'}
+      cta: 'Contact Sales'
+    }
   ]
   const testimonials = [
     {
@@ -177,16 +180,18 @@ export default function AiFinancialAnalyticsProPage() {
       role: 'CFO',
     content: 'AI Financial Analytics Pro has transformed our financial reporting. The AI insights help us make data-driven decisions and identify opportunities we would have missed.',
       rating: 5,
-    avatar: 'JW',
-      results: '35% faster financial reporting'}
+      avatar: 'JW',
+      results: '35% faster financial reporting'
+    },
     {
       name: 'Robert Kim',
     company: 'Global Investments',
       role: 'Financial Director',
     content: 'The predictive analytics are incredibly accurate. We can now forecast revenue with 95% accuracy, helping us plan better and reduce financial risks.',
       rating: 5,
-    avatar: 'RK',
-      results: '95% forecast accuracy'}
+      avatar: 'RK',
+      results: '95% forecast accuracy'
+    },
     {
       name: 'Lisa Thompson',
     company: 'Enterprise Corp',

@@ -1,6 +1,6 @@
+"use client";
 import React from "react";
 import { Cloud, Shield, Server, Database, CheckCircle, ArrowRight } from "lucide-react";
-"use client",
 const ITServicesPage: React.FC = () => {
   const services = [
   {
@@ -12,7 +12,7 @@ const ITServicesPage: React.FC = () => {
         "Cloud Architecture Design",
         "Cost Optimization",
     "24/7 Monitoring"
-  ]
+      ],
       price: "Starting at $2,000"
 },
   {
@@ -24,7 +24,7 @@ const ITServicesPage: React.FC = () => {
         "Threat Detection",
         "Compliance Management",
     "Incident Response"
-  ]
+      ],
       price: "Starting at $3,500"
 },
   {
@@ -36,7 +36,7 @@ const ITServicesPage: React.FC = () => {
         "Infrastructure as Code",
         "Container Orchestration",
     "Performance Monitoring"
-  ]
+      ],
       price: "Starting at $4,000"
 },
   {
@@ -48,16 +48,16 @@ const ITServicesPage: React.FC = () => {
         "Business Intelligence",
         "Real-time Dashboards",
     "Predictive Analytics"
-  ]
-      price: "Starting at $5,000",
+      ],
+      price: "Starting at $5,000"
     }
   ]
   const technologies = [
-  "AWS", "Azure", "Google Cloud", "Docker", "Kubernetes", "Terraform"
-    "Jenkins", "GitLab CI", "Prometheus", "Grafana", "Elasticsearch"
-    "PostgreSQL", "MongoDB", "Redis", "Apache Kafka", "React", "Node.js"
+    "AWS", "Azure", "Google Cloud", "Docker", "Kubernetes", "Terraform",
+    "Jenkins", "GitLab CI", "Prometheus", "Grafana", "Elasticsearch",
+    "PostgreSQL", "MongoDB", "Redis", "Apache Kafka", "React", "Node.js",
     "Python", "Go", "Rust", "TypeScript"
-]
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       {/* Hero Section */}

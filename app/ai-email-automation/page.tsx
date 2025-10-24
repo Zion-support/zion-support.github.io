@@ -66,51 +66,56 @@ const AIEmailAutomationPage: React.FC = () => {
         '10,000 emails/month',
         'Basic AI features',
         'Email templates',
-    'Email support'
-  ]
-      popular: false}
+        'Email support'
+      ],
+      popular: false
+    },
     {
       name: 'Professional',
-    price: '$149',
+      price: '$149',
       period: '/month',
-    description: 'Ideal for growing businesses and agencies',
+      description: 'Ideal for growing businesses and agencies',
       features: [
         'Up to 25,000 contacts',
         '50,000 emails/month',
         'Advanced AI features',
         'A/B testing',
         'Priority support',
-    'API access'
-  ]
-      popular: true}
+        'API access'
+      ],
+      popular: true
+    },
     {
       name: 'Enterprise',
-    price: '$399',
+      price: '$399',
       period: '/month',
-    description: 'For large organizations with high volume needs',
+      description: 'For large organizations with high volume needs',
       features: [
         'Unlimited contacts',
         'Unlimited emails',
         'Full AI suite',
         'Custom integrations',
         'Dedicated support',
-    'White-label options'
-  ]
-      popular: false}
+        'White-label options'
+      ],
+      popular: false
+    }
   ]
   const testimonials = [
     {
       name: 'Jennifer Lee',
     company: 'E-commerce Store',
       content: 'AI Email Automation increased our email revenue by 300%. The AI-generated content is incredibly effective.',
-    rating: 5
-      avatar: 'JL'}
+    rating: 5,
+    avatar: 'JL'
+  },
     {
       name: 'Mark Thompson',
     company: 'SaaS Company',
       content: 'The lead scoring feature helped us identify high-value prospects and increased our conversion rate by 150%.',
-    rating: 5
-      avatar: 'MT'}
+    rating: 5,
+    avatar: 'MT'
+  },
     {
       name: 'Lisa Chen',
     company: 'Marketing Agency',

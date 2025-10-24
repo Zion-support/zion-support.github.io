@@ -59,33 +59,34 @@ const AiChatbotBuilderPage: React.FC = () => {
       description: 'Help customers find products, answer questions, and guide them through purchases',
       icon: ShoppingCart,
       benefits: ['Boost sales by 25%', 'Reduce cart abandonment', 'Personalized recommendations']
-    }
+    },
     {
-  title: 'Internal HR Bot',
-    description: 'Answer employee questions about policies, benefits, and company information',
+      title: 'Internal HR Bot',
+      description: 'Answer employee questions about policies, benefits, and company information',
       icon: Users,
-    benefits: ['Reduce HR workload', 'Consistent information', 'Employee satisfaction']
-}
+      benefits: ['Reduce HR workload', 'Consistent information', 'Employee satisfaction']
+    }
   ]
   const pricing = [
-  {
+    {
       name: 'Starter',
-    price: '$29',
+      price: '$29',
       period: '/month',
-    description: 'Perfect for small businesses getting started',
+      description: 'Perfect for small businesses getting started',
       features: [
         'Up to 1,000 conversations/month',
         'Basic AI responses',
         'Email support',
         'Standard templates',
-    'Basic analytics'
-  ]
-      popular: false}
+        'Basic analytics'
+      ],
+      popular: false
+    },
     {
       name: 'Professional',
-    price: '$99',
+      price: '$99',
       period: '/month',
-    description: 'Ideal for growing businesses with more needs',
+      description: 'Ideal for growing businesses with more needs',
       features: [
         'Up to 10,000 conversations/month',
         'Advanced AI with custom training',
@@ -93,14 +94,15 @@ const AiChatbotBuilderPage: React.FC = () => {
         'Custom branding',
         'Advanced analytics',
         'Multi-language support',
-    'API access'
-  ]
-      popular: true}
+        'API access'
+      ],
+      popular: true
+    },
     {
       name: 'Enterprise',
-    price: 'Custom',
+      price: 'Custom',
       period: '',
-    description: 'For large organizations with complex requirements',
+      description: 'For large organizations with complex requirements',
       features: [
         'Unlimited conversations',
         'Custom AI models',
@@ -108,9 +110,10 @@ const AiChatbotBuilderPage: React.FC = () => {
         'White-label solution',
         'Advanced integrations',
         'Custom development',
-    'SLA guarantee'
-  ]
-      popular: false}
+        'SLA guarantee'
+      ],
+      popular: false
+    }
   ]
   const stats = [
     { number: '10,000+', label: 'Chatbots Created', icon: MessageCircle },

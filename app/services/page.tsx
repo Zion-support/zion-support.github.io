@@ -5,7 +5,7 @@ const ServicesPage: React.FC = () => {
   const serviceCategories = [
   {
       title: 'AI Solutions',
-    icon: Brain
+      icon: Brain,
       description: 'Cutting-edge artificial intelligence solutions to transform your business operations.',
     services: [
         'AI Chatbots & Virtual Assistants',
@@ -14,11 +14,11 @@ const ServicesPage: React.FC = () => {
         'Computer Vision',
         'Predictive Analytics',
     'AI Automation'
-  ]
-}
+      ]
+    },
     {
-  title: 'IT Services',
-    icon: Cloud
+      title: 'IT Services',
+      icon: Cloud,
       description: 'Comprehensive IT services to modernize your infrastructure and operations.',
     services: [
         'Cloud Migration & Management',
@@ -27,11 +27,11 @@ const ServicesPage: React.FC = () => {
         'Database Management',
         'Network Infrastructure',
     'IT Support & Maintenance'
-  ]
-}
+      ]
+    },
     {
-  title: 'Web Development',
-    icon: Globe
+      title: 'Web Development',
+      icon: Globe,
       description: 'Custom web applications and websites built with modern technologies.',
     services: [
         'React & Next.js Applications',
@@ -40,11 +40,11 @@ const ServicesPage: React.FC = () => {
         'API Development',
         'Mobile-First Design',
     'Performance Optimization'
-  ]
-}
+      ]
+    },
     {
-  title: 'Mobile Development',
-    icon: Smartphone
+      title: 'Mobile Development',
+      icon: Smartphone,
       description: 'Native and cross-platform mobile applications for iOS and Android.',
     services: [
         'iOS App Development',

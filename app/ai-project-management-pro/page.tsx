@@ -44,10 +44,10 @@ const AIProjectManagementProPage: React.FC = () => {
         'Team collaboration',
         'Basic analytics',
     'Email support'
-  ]
-}
+      ]
+    },
     {
-  name: 'Professional',
+      name: 'Professional',
     price: '$79.99',
       period: '/month',
     description: 'Ideal for growing businesses',
@@ -58,10 +58,10 @@ const AIProjectManagementProPage: React.FC = () => {
         'Priority support',
         'API access',
     'Custom integrations'
-  ]
-}
+      ]
+    },
     {
-  name: 'Enterprise',
+      name: 'Enterprise',
     price: 'Custom',
       period: '',
     description: 'For large organizations',
