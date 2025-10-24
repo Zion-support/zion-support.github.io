@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, ReactNode } from &quot;react&quot;
+import React, { createContext, useContext, useEffect, ReactNode } from "react"
 
 declare global {
   interface Window {
@@ -18,7 +18,7 @@ const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
 export const useAnalytics = () => {
   const context = useContext(AnalyticsContext)
   if (!context) {
-    throw new Error(&quot;useAnalytics must be used within an AnalyticsProvider&quot;)
+    throw new Error("useAnalytics must be used within an AnalyticsProvider")
   }
   return context
 }
@@ -27,12 +27,13 @@ interface AnalyticsProviderProps {
   children: ReactNode
 }
 
-exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) => {useEffect(() => {
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
+  useEffect(() => {
   
-    if (type of windo w !==&quot;undefined&quot;) {
+    if (typeof window !== "undefined") {
       // Google Analytics
-      if (process.env.NODE_ENV === &quot;production&quot;) {
-        const script = document.createElement(&quot;script&quot;)
+      if (process.env.NODE_ENV === "production") {
+        const script = document.createElement("script")
         script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_MEASUREMENT_ID}`
         script.async = true
         document.head.appendChild(script)
@@ -43,8 +44,8 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
             (window.gtag as any).q = (window.gtag as any).q || []
             (window.gtag as any).q.push(args)
           }
-        window.gtag(&quot;js&quot;, new Date())
-        window.gtag(&quot;config&quot;, process.env.REACT_APP_GA_MEASUREMENT_ID || &quot;&quot;)
+        window.gtag("js", new Date())
+        window.gtag("config", process.env.REACT_APP_GA_MEASUREMENT_ID || "")
       }
     }
   }, [])
@@ -53,13 +54,14 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
     eventName: string,
     parameters?: Record<string, unknown>,
   ) => {
-    if (typeof window !== &quot;undefined&quot; && window.gtag) {
-      window.gtag(&quot;event&quot;, eventName, parameters)
+    if (typeof window !== "undefined" && window.gtag) {
+      window.gtag("event", eventName, parameters)
     }
   }
 
-  consttrackPageView= (pageName: string) => {if (type of windo w !==&quot;undefined&quot; && windo w.gtag) {
-      window.gtag(&quot;config&quot;,&quot;GA_MEASUREMENT_ID&quot;, {
+  const trackPageView = (pageName: string) => {
+    if (typeof window !== "undefined" && window.gtag) {
+      window.gtag("config","GA_MEASUREMENT_ID", {
         page_title: pageName,
         page_location: window.location.href,
       })
