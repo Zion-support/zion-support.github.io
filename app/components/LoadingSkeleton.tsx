@@ -9,9 +9,9 @@ interface LoadingSkeletonProps {
 }
 
 const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
-  className = '',
-  lines = 1,
-  height = 'h-4',
+  className = ''
+  lines = 1
+  height = 'h-4'
   width = 'w-full'
 }) => {
   return (
@@ -29,7 +29,7 @@ const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
 }
 
 export const CardSkeleton: React.FC = () => (
-  <div className="bg-white p-6 rounded-xl shadow-lg">
+  <div className="...">
     <div className="w-16 h-16 bg-gray-300 rounded-full mb-4 animate-pulse" />
     <LoadingSkeleton lines={2} height="h-4" />
     <LoadingSkeleton lines={1} height="h-3" width="w-3/4" className="mt-2" />
@@ -37,7 +37,7 @@ export const CardSkeleton: React.FC = () => (
 )
 
 export const TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => (
-  <div className="space-y-2">
+  <div className="...">
     <LoadingSkeleton lines={lines} />
   </div>
 )

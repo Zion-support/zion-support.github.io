@@ -1,7 +1,5 @@
-'use client';
-import React from 'react';
-
-
+'use client'
+import React from 'react'
 interface EnhancedHeroProps {
   // Add props here
 }
@@ -11,6 +9,5 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = (_props) => {
     <div>
       {/* Component content */}
     </div>
-  )};
-
-export default EnhancedHero;
+  )}
+export default EnhancedHero

@@ -1,28 +1,25 @@
-'use client';;
-
-import React from 'react';
-import Link from 'next/link';
-
+'use client';
+import React from 'react'
+import Link from 'next/link'
 const SimpleNavigation: React.FC = () => {
   return (
-    <nav className="bg-gray-900text-whitep-4">
-      <div className="max-w-7xl mx-autoflexjustify-between items-center">
-        <Link href="/" className="text-xlfont-bold">
+    <nav className="...">
+      <div className="...">
+        <Link href="/" className="...">
           Zion Tech Group
         </Link>
-        <div className="space-x-4">
-          <Link href="/about" className="hover:text-blue-400">
+        <div className="...">
+          <Link href="/about" className="...">
             About
           </Link>
-          <Link href="/services" className="hover:text-blue-400">
+          <Link href="/services" className="...">
             Services
           </Link>
-          <Link href="/contact" className="hover:text-blue-400">
+          <Link href="/contact" className="...">
             Contact
           </Link>
         </div>
       </div>
     </nav>
-  )};
-
-export default SimpleNavigation;
+  )}
+export default SimpleNavigation

@@ -1,64 +1,55 @@
-'use client';
-
-import React, { useState, useEffect } from 'react';
-
+'use client'
+import React, { useState, useEffect } from 'react'
 interface ContentCarouselProps {
   items: Array<{
-    id: string;
-    title: string;
-    description: string;
-    image?: string;
-    link?: string;
-  }>;
-  autoPlay?: boolean;
-  interval?: number;
+    id: string,
+      title: string,
+      description: string
+    image?: string
+    link?: string
+  }>
+  autoPlay?: boolean
+  interval?: number
 }
 
 const ContentCarousel: React.FC<ContentCarouselProps> = ({
-  items,
-  autoPlay = true,
-  interval = 5000,
+  items
+  autoPlay = true
+  interval = 5000
 }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
+  const [currentIndex, setCurrentIndex] = useState(0)
   useEffect(() => {
-    if (!autoPlay || items.length <= 1) return;
-
+    if (!autoPlay || items.length <= 1) return
     const timer = setInterval(() => {
       setCurrentIndex((prevIndex) => 
         prevIndex === items.length - 1 ? 0 : prevIndex + 1
-      );
-    }, interval);
-
-    return () => clearInterval(timer);
-  }, [autoPlay, interval, items.length]);
-
+      )
+    }, interval)
+    return () => clearInterval(timer)
+  }, [autoPlay, interval, items.length])
   const goToSlide = (index: number) => {
-    setCurrentIndex(index);
-  };
-
+    setCurrentIndex(index)
+  }
   const goToPrevious = () => {
-    setCurrentIndex(currentIndex === 0 ? items.length - 1 : currentIndex - 1);
-  };
-
+    setCurrentIndex(currentIndex === 0 ? items.length - 1 : currentIndex - 1)
+  }
   const goToNext = () => {
-    setCurrentIndex(currentIndex === items.length - 1 ? 0 : currentIndex + 1);
-  };
-
+    setCurrentIndex(currentIndex === items.length - 1 ? 0 : currentIndex + 1)
+  }
   if (!items || items.length === 0) {
-    return <div>No items to display</div>;
+    return <div>No items to display</div>
   }
 
   return (
-    <div className="relative w-full">
-      <div className="overflow-hidden">
+    <div className="...">
+      <div className="...">
         <div 
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
           {items.map((item, index) => (
-            <div key={item.id} className="w-full flex-shrink-0">
-              <div className="bg-white rounded-lg shadow-lg p-6">
+            <div key={item.id} className="...">
+              <div className="...">
                 {item.image && (
                   <img
                     src={item.image}
@@ -66,15 +57,14 @@ const ContentCarousel: React.FC<ContentCarouselProps> = ({
                     className="w-full h-48 object-cover rounded-lg mb-4"
                   />
                 )}
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                <h3 className="...">
                   {item.title}
                 </h3>
                 <p className="text-gray-600 mb-4">{item.description}</p>
                 {item.link && (
                   <a
                     href={item.link}
-                    className="text-blue-600 hover:text-blue-800 font-medium"
-                  >
+                    className="...">
                     Learn More →
                   </a>
                 )}
@@ -101,7 +91,7 @@ const ContentCarousel: React.FC<ContentCarouselProps> = ({
       </button>
 
       {/* Dots indicator */}
-      <div className="flex justify-center mt-4 space-x-2">
+      <div className="...">
         {items.map((_, index) => (
           <button
             key={index}
@@ -114,7 +104,6 @@ const ContentCarousel: React.FC<ContentCarouselProps> = ({
         ))}
       </div>
     </div>
-  );
-};
-
-export default ContentCarousel;
+  )
+}
+export default ContentCarousel

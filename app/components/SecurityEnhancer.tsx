@@ -1,7 +1,6 @@
 
 
-import React from 'react';
-
+import React from 'react'
 interface SecurityEnhancerProps {
   // Add props here
 }
@@ -11,7 +10,6 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = (_props) => {
     <div>
       {/* Component content */}
     </div>
-  );
-};
-
-export default SecurityEnhancer;
+  )
+}
+export default SecurityEnhancer

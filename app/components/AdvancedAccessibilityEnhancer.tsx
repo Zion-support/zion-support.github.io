@@ -1,68 +1,57 @@
-'use client';
+'use client'
 <<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-
+import React, { useEffect, useState } from 'react'
 interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 
 const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
-  const [isHighContrast, setIsHighContrast] = useState(false);
-  const [_fontSize, setFontSize] = useState('medium');
-  const [isReducedMotion, setIsReducedMotion] = useState(false);
-
+  const [isHighContrast, setIsHighContrast] = useState(false)
+  const [_fontSize, setFontSize] = useState('medium')
+  const [isReducedMotion, setIsReducedMotion] = useState(false)
   useEffect(() => {
     // Check for user's motion preferences
-    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    setIsReducedMotion(mediaQuery.matches);
-
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
+    setIsReducedMotion(mediaQuery.matches)
     // Check for high contrast preference
-    const highContrastQuery = window.matchMedia('(prefers-contrast: high)');
-    setIsHighContrast(highContrastQuery.matches);
-
+    const highContrastQuery = window.matchMedia('(prefers-contrast: high)')
+    setIsHighContrast(highContrastQuery.matches)
     // Apply accessibility enhancements
-    document.documentElement.setAttribute('data-accessibility-enhanced', 'true');
-    
+    document.documentElement.setAttribute('data-accessibility-enhanced', 'true')
     if (isHighContrast) {
-      document.documentElement.classList.add('high-contrast');
+      document.documentElement.classList.add('high-contrast')
     }
     
     if (isReducedMotion) {
-      document.documentElement.classList.add('reduced-motion');
+      document.documentElement.classList.add('reduced-motion')
     }
 
     // Add keyboard navigation support
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Tab') {
-        document.body.classList.add('keyboard-navigation');
+        document.body.classList.add('keyboard-navigation')
       }
-    };
-
+    }
     const handleMouseDown = () => {
-      document.body.classList.remove('keyboard-navigation');
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('mousedown', handleMouseDown);
-
+      document.body.classList.remove('keyboard-navigation')
+    }
+    document.addEventListener('keydown', handleKeyDown)
+    document.addEventListener('mousedown', handleMouseDown)
     return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('mousedown', handleMouseDown);
-    };
-  }, [isHighContrast, isReducedMotion]);
-
+      document.removeEventListener('keydown', handleKeyDown)
+      document.removeEventListener('mousedown', handleMouseDown)
+    }
+  }, [isHighContrast, isReducedMotion])
   const toggleHighContrast = () => {
-    setIsHighContrast(!isHighContrast);
-    document.documentElement.classList.toggle('high-contrast');
-  };
-
+    setIsHighContrast(!isHighContrast)
+    document.documentElement.classList.toggle('high-contrast')
+  }
   const changeFontSize = (size: string) => {
-    setFontSize(size);
-    document.documentElement.setAttribute('data-font-size', size);
-  };
-
+    setFontSize(size)
+    document.documentElement.setAttribute('data-font-size', size)
+  }
   return (
-    <div className="accessibility-enhanced">
+    <div className="...">
       <div className="accessibility-controls" style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 }}>
         <button
           onClick={toggleHighContrast}
@@ -71,7 +60,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
         >
           {isHighContrast ? 'Normal Contrast' : 'High Contrast'}
         </button>
-        <div className="font-size-controls">
+        <div className="...">
           <button
             onClick={() => changeFontSize('small')}
             className="accessibility-button"
@@ -98,74 +87,74 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
       {children}
 =======
 
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, Zap, Shield, Brain, Globe } from 'lucide-react';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, Zap, Shield, Brain, Globe } from 'lucide-react'
 const AdvancedAccessibilityEnhancerPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency',
-    },
+      title: 'AI-Powered Solutions'
+      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+        }
     {
       icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results',
-    },
+      title: 'High Performance'
+      description: 'Lightning-fast processing and real-time analytics for optimal results'
+        }
     {
       icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards',
-    },
+      title: 'Enterprise Security'
+      description: 'Bank-level security with encryption and compliance standards'
+        }
     {
       icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses',
+      title: 'Global Reach'
+      description: 'Worldwide deployment and support for international businesses'
     }
-  ];
-
+    ];
   const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
+    'Advanced AI technology integration'
+    'Real-time processing and analytics'
+    'Enterprise-grade security and compliance'
+    'Scalable and flexible solutions'
+    '24/7 technical support'
+    'Easy integration with existing systems'
+    'Cost-effective pricing plans'
     'Proven track record of success'
-  ];
-
+    ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="...">
       <Helmet>
+        <title>Page Title</title>
+        <meta name="description" content="Page description" />
+      </Helmet>
         <title>Advanced Accessibility Enhancer | Zion Tech Group</title>
         <meta name="description" content="Professional Advanced Accessibility Enhancer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="Advanced Accessibility Enhancer, AI solutions, IT services, Zion Tech Group, accessibility" />
       </Helmet>
 
       {/* Hero Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+      <section className="...">
+        <div className="...">
+          <div className="...">
+            <h1 className="...">
+              <span className="...">
                 Advanced Accessibility
               </span>
               <br />
               <span className="text-white">Enhancer</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="...">
               Transform your business with our advanced accessibility solutions. 
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
+            <div className="...">
+              <button className="...">
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+              <button className="...">
                 Learn More
               </button>
             </div>
@@ -174,21 +163,21 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+      <section className="...">
+        <div className="...">
+          <div className="...">
+            <h2 className="...">
               Why Choose Our Accessibility Solutions?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="...">
               Our accessibility solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="...">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+              <div key={index} className="...">
+                <div className="...">
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -200,20 +189,20 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+      <section className="...">
+        <div className="...">
+          <div className="...">
+            <h2 className="...">
               Key Benefits
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="...">
               Experience the power of our accessibility solutions for your business.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="...">
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
+              <div key={index} className="...">
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
@@ -223,21 +212,21 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+      <section className="...">
+        <div className="...">
+          <div className="...">
+            <h2 className="...">
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-purple-100 mb-8">
+            <p className="...">
               Contact our experts to discuss your accessibility needs and get a customized solution.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+            <div className="...">
+              <button className="...">
                 <Phone className="mr-2 h-5 w-5" />
                 Call Now
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+              <button className="...">
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us
               </button>
@@ -247,11 +236,10 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       </section>
 >>>>>>> cursor/fix-errors-and-merge-to-main-21fe
     </div>
-  );
-};
-
+  )
+}
 <<<<<<< HEAD
-export default AdvancedAccessibilityEnhancer;
+export default AdvancedAccessibilityEnhancer
 =======
-export default AdvancedAccessibilityEnhancerPage;
+export default AdvancedAccessibilityEnhancerPage
 >>>>>>> cursor/fix-errors-and-merge-to-main-21fe

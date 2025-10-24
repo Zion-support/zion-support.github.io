@@ -1,8 +1,5 @@
-'use client';
-
-import React from 'react';
-
-
+'use client'
+import React from 'react'
 interface SEOOptimizerProps {
   // Add props here
 }
@@ -12,7 +9,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = (_props) => {
     <div>
       {/* Component content */}
     </div>
-  );
-};
-
-export default SEOOptimizer;
+  )
+}
+export default SEOOptimizer

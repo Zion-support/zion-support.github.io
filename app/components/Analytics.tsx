@@ -1,7 +1,6 @@
 
 
-import React from 'react';
-
+import React from 'react'
 interface AnalyticsProps {
   // Add props here
 }
@@ -11,7 +10,6 @@ const Analytics: React.FC<AnalyticsProps> = (_props) => {
     <div>
       {/* Component content */}
     </div>
-  );
-};
-
-export default Analytics;
+  )
+}
+export default Analytics

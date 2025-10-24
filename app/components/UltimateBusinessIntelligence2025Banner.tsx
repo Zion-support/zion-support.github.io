@@ -1,7 +1,6 @@
 
 
-import React from 'react';
-
+import React from 'react'
 interface UltimateBusinessIntelligence2025BannerProps {
   // Add props here
 }
@@ -11,7 +10,6 @@ const UltimateBusinessIntelligence2025Banner: React.FC<UltimateBusinessIntellige
     <div>
       {/* Component content */}
     </div>
-  );
-};
-
-export default UltimateBusinessIntelligence2025Banner;
+  )
+}
+export default UltimateBusinessIntelligence2025Banner

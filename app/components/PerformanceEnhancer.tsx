@@ -1,6 +1,5 @@
 
-import React from 'react';
-
+import React from 'react'
 interface PerformanceEnhancerProps {
   // Add props here
 }
@@ -10,7 +9,6 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = (_props) => {
     <div>
       {/* Component content */}
     </div>
-  );
-};
-
-export default PerformanceEnhancer;
+  )
+}
+export default PerformanceEnhancer

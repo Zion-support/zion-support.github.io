@@ -1,7 +1,5 @@
-'use client';
-import React from 'react';
-
-
+'use client'
+import React from 'react'
 interface PWAInstallerProps {
   // Add props here
 }
@@ -11,6 +9,5 @@ const PWAInstaller: React.FC<PWAInstallerProps> = (_props) => {
     <div>
       {/* Component content */}
     </div>
-  )};
-
-export default PWAInstaller;
+  )}
+export default PWAInstaller

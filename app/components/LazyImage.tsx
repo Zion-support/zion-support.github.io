@@ -2,8 +2,8 @@
 import React, { useState, useRef, useEffect } from 'react'
 
 interface LazyImageProps {
-  src: string
-  alt: string
+  src: string,
+      alt: string
   className?: string
   placeholder?: string
   onLoad?: () => void
@@ -11,11 +11,11 @@ interface LazyImageProps {
 }
 
 const LazyImage: React.FC<LazyImageProps> = ({
-  src,
-  alt,
-  className = '',
-  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PC9zdmc+',
-  onLoad,
+  src
+  alt
+  className = ''
+  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PC9zdmc+'
+  onLoad
   onError
 }) => {
   const [isLoaded, setIsLoaded] = useState(false)
@@ -30,7 +30,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
           setIsInView(true)
           observer.disconnect()
         }
-      },
+          }
       { threshold: 0.1 }
     )
 
@@ -73,7 +73,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
         />
       )}
       {hasError && (
-        <div className="absolute inset-0 bg-gray-200 flex items-center justify-center text-gray-500">
+        <div className="...">
           Failed to load
         </div>
       )}

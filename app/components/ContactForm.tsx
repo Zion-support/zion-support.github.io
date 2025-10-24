@@ -1,77 +1,70 @@
 
-import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
-
+import React, { useState } from 'react'
+import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react'
 interface FormData {
-  name: string;
-  email: string;
-  company: string;
-  phone: string;
-  service: string;
-  message: string;
+  name: string,
+      email: string,
+      company: string,
+      phone: string,
+      service: string,
+      message: string
 }
 
 interface FormStatus {
-  type: 'idle' | 'loading' | 'success' | 'error';
-  message: string;
+  type: 'idle' | 'loading' | 'success' | 'error'
+  message: string
 }
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
+    name: ''
+    email: ''
+    company: ''
+    phone: ''
+    service: ''
     message: ''
-  });
-
+  })
   const [status, setStatus] = useState<FormStatus>({
-    type: 'idle',
+    type: 'idle'
     message: ''
-  });
-
+  })
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target
     setFormData(prev => ({
-      ...prev,
+      ...prev
       [name]: value
-    }));
-  };
-
+    }))
+  }
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus({ type: 'loading', message: 'Sending message...' });
-
+    e.preventDefault()
+    setStatus({ type: 'loading', message: 'Sending message...' })
     try {
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      setStatus({ type: 'success', message: 'Message sent successfully!' });
+      await new Promise(resolve => setTimeout(resolve, 2000))
+      setStatus({ type: 'success', message: 'Message sent successfully!' })
       setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
+        name: ''
+        email: ''
+        company: ''
+        phone: ''
+        service: ''
         message: ''
-      });
+      })
     } catch (_error) {
-      setStatus({ type: 'error', message: 'Failed to send message. Please try again.' });
+      setStatus({ type: 'error', message: 'Failed to send message. Please try again.' })
     }
-  };
-
+  }
   return (
-    <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-lg p-8">
-      <div className="text-center mb-8">
+    <div className="...">
+      <div className="...">
         <h2 className="text-3xl font-bold text-gray-900 mb-4">Get In Touch</h2>
         <p className="text-gray-600">We&apos;d love to hear from you. Send us a message and we&apos;ll respond as soon as possible.</p>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <form onSubmit={handleSubmit} className="...">
+        <div className="...">
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="name" className="...">
               Full Name *
             </label>
             <input
@@ -87,7 +80,7 @@ const ContactForm: React.FC = () => {
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="email" className="...">
               Email Address *
             </label>
             <input
@@ -103,9 +96,9 @@ const ContactForm: React.FC = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="...">
           <div>
-            <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="company" className="...">
               Company
             </label>
             <input
@@ -120,7 +113,7 @@ const ContactForm: React.FC = () => {
           </div>
 
           <div>
-            <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="phone" className="...">
               Phone Number
             </label>
             <input
@@ -136,7 +129,7 @@ const ContactForm: React.FC = () => {
         </div>
 
         <div>
-          <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+          <label htmlFor="service" className="...">
             Service Interest
           </label>
           <select
@@ -144,8 +137,7 @@ const ContactForm: React.FC = () => {
             name="service"
             value={formData.service}
             onChange={handleInputChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-          >
+            className="...">
             <option value="">Select a service</option>
             <option value="ai-services">AI Services</option>
             <option value="it-services">IT Services</option>
@@ -155,7 +147,7 @@ const ContactForm: React.FC = () => {
         </div>
 
         <div>
-          <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+          <label htmlFor="message" className="...">
             Message *
           </label>
           <textarea
@@ -185,8 +177,7 @@ const ContactForm: React.FC = () => {
         <button
           type="submit"
           disabled={status.type === 'loading'}
-          className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
-        >
+          className="...">
           {status.type === 'loading' ? (
             <>
               <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
@@ -201,19 +192,19 @@ const ContactForm: React.FC = () => {
         </button>
       </form>
 
-      <div className="mt-8 pt-8 border-t border-gray-200">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-          <div className="flex flex-col items-center">
+      <div className="...">
+        <div className="...">
+          <div className="...">
             <Mail className="w-8 h-8 text-blue-600 mb-2" />
             <h3 className="font-semibold text-gray-900">Email</h3>
             <p className="text-gray-600">contact@ziontechgroup.com</p>
           </div>
-          <div className="flex flex-col items-center">
+          <div className="...">
             <Phone className="w-8 h-8 text-blue-600 mb-2" />
             <h3 className="font-semibold text-gray-900">Phone</h3>
             <p className="text-gray-600">+1 (555) 123-4567</p>
           </div>
-          <div className="flex flex-col items-center">
+          <div className="...">
             <MapPin className="w-8 h-8 text-blue-600 mb-2" />
             <h3 className="font-semibold text-gray-900">Office</h3>
             <p className="text-gray-600">San Francisco, CA</p>
@@ -221,7 +212,6 @@ const ContactForm: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
-
-export default ContactForm;
+  )
+}
+export default ContactForm

@@ -1,21 +1,20 @@
-'use client';
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { Mail, Phone, MapPin } from 'lucide-react';
-
+'use client'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { Mail, Phone, MapPin } from 'lucide-react'
 const ContactPage: React.FC = () => {
-  return (
+    return (
     <>
       <Navigation />
       
-      <main className="pt-16">
+      <main className="...">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
+        <section className="...">
+          <div className="...">
+            <div className="...">
               <h1 className="text-5xl font-bold mb-6">Contact Us</h1>
-              <p className="text-xl text-blue-100">
+              <p className="...">
                 Ready to transform your business? Let's discuss your project
               </p>
             </div>
@@ -23,17 +22,17 @@ const ContactPage: React.FC = () => {
         </section>
 
         {/* Contact Form Section */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <section className="...">
+          <div className="...">
+            <div className="...">
+              <div className="...">
                 {/* Contact Form */}
                 <div>
                   <h2 className="text-3xl font-bold text-gray-900 mb-6">Get in Touch</h2>
-                  <form className="space-y-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <form className="...">
+                    <div className="...">
                       <div>
-                        <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
+                        <label htmlFor="firstName" className="...">
                           First Name
                         </label>
                         <input
@@ -45,7 +44,7 @@ const ContactPage: React.FC = () => {
                         />
                       </div>
                       <div>
-                        <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
+                        <label htmlFor="lastName" className="...">
                           Last Name
                         </label>
                         <input
@@ -58,7 +57,7 @@ const ContactPage: React.FC = () => {
                       </div>
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="email" className="...">
                         Email Address
                       </label>
                       <input
@@ -70,7 +69,7 @@ const ContactPage: React.FC = () => {
                       />
                     </div>
                     <div>
-                      <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="company" className="...">
                         Company
                       </label>
                       <input
@@ -81,14 +80,13 @@ const ContactPage: React.FC = () => {
                       />
                     </div>
                     <div>
-                      <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="service" className="...">
                         Service Interest
                       </label>
                       <select
                         id="service"
                         name="service"
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      >
+                        className="...">
                         <option value="">Select a service</option>
                         <option value="ai-solutions">AI Solutions</option>
                         <option value="cloud-architecture">Cloud Architecture</option>
@@ -100,7 +98,7 @@ const ContactPage: React.FC = () => {
                       </select>
                     </div>
                     <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="message" className="...">
                         Message
                       </label>
                       <textarea
@@ -114,8 +112,7 @@ const ContactPage: React.FC = () => {
                     </div>
                     <button
                       type="submit"
-                      className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-                    >
+                      className="...">
                       Send Message
                     </button>
                   </form>
@@ -124,9 +121,9 @@ const ContactPage: React.FC = () => {
                 {/* Contact Information */}
                 <div>
                   <h2 className="text-3xl font-bold text-gray-900 mb-6">Contact Information</h2>
-                  <div className="space-y-6">
-                    <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                  <div className="...">
+                    <div className="...">
+                      <div className="...">
                         <Mail className="w-6 h-6 text-blue-600" />
                       </div>
                       <div>
@@ -135,8 +132,8 @@ const ContactPage: React.FC = () => {
                         <p className="text-gray-600">support@ziontechgroup.com</p>
                       </div>
                     </div>
-                    <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <div className="...">
+                      <div className="...">
                         <Phone className="w-6 h-6 text-blue-600" />
                       </div>
                       <div>
@@ -145,13 +142,13 @@ const ContactPage: React.FC = () => {
                         <p className="text-gray-600">Mon-Fri 9AM-6PM EST</p>
                       </div>
                     </div>
-                    <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <div className="...">
+                      <div className="...">
                         <MapPin className="w-6 h-6 text-blue-600" />
                       </div>
                       <div>
                         <h3 className="text-lg font-semibold text-gray-900">Address</h3>
-                        <p className="text-gray-600">
+                        <p className="...">
                           123 Tech Street<br />
                           Innovation City, IC 12345<br />
                           United States
@@ -160,9 +157,9 @@ const ContactPage: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="mt-8 p-6 bg-gray-50 rounded-lg">
+                  <div className="...">
                     <h3 className="text-lg font-semibold text-gray-900 mb-4">Why Choose Us?</h3>
-                    <ul className="space-y-2 text-gray-600">
+                    <ul className="...">
                       <li>• 24/7 customer support</li>
                       <li>• Free consultation and project assessment</li>
                       <li>• Custom solutions tailored to your needs</li>
@@ -178,8 +175,6 @@ const ContactPage: React.FC = () => {
       </main>
       
       <Footer />
-    </>
-  );
-};
-
-export default ContactPage;
+      )
+}
+export default ContactPage

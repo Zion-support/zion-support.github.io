@@ -1,6 +1,5 @@
 
-import React from 'react';
-
+import React from 'react'
 interface SkipLinkProps {
   // Add props here
 }
@@ -10,7 +9,6 @@ const SkipLink: React.FC<SkipLinkProps> = (_props) => {
     <div>
       {/* Component content */}
     </div>
-  );
-};
-
-export default SkipLink;
+  )
+}
+export default SkipLink

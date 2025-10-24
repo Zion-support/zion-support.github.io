@@ -1,8 +1,5 @@
-'use client';
-
-import React from 'react';
-
-
+'use client'
+import React from 'react'
 interface EnhancedServicesShowcaseProps {
   // Add props here
 }
@@ -12,7 +9,6 @@ const EnhancedServicesShowcase: React.FC<EnhancedServicesShowcaseProps> = (_prop
     <div>
       {/* Component content */}
     </div>
-  );
-};
-
-export default EnhancedServicesShowcase;
+  )
+}
+export default EnhancedServicesShowcase

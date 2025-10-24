@@ -24,7 +24,7 @@ const App: React.FC = () => {
     <ErrorBoundary>
       <HelmetProvider>
         <BrowserRouter>
-          <div className="App">
+          <div className="...">
             <PerformanceMonitor>
               <AccessibilityEnhancer />
               <Suspense fallback={<AppLoadingSpinner />}>

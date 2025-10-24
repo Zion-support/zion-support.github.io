@@ -1,7 +1,5 @@
-'use client';
-
-import React from 'react';
-
+'use client'
+import React from 'react'
 interface AdvancedSEOOptimizer_newProps {
   // Add props here
 }
@@ -11,6 +9,5 @@ const AdvancedSEOOptimizer_new: React.FC<AdvancedSEOOptimizer_newProps> = (_prop
     <div>
       {/* Component content */}
     </div>
-  )};
-
-export default AdvancedSEOOptimizer_new;
+  )}
+export default AdvancedSEOOptimizer_new

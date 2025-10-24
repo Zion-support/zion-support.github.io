@@ -1,15 +1,14 @@
-import React, { memo } from 'react';
-
+import React, { memo } from 'react'
 interface AIToolCardProps {
-  title: string;
-  description: string;
-  link: string}
+  title: string,
+      description: string,
+      link: string}
 
 const AIToolCard: React.FC<AIToolCardProps> = memo(({ title, description, link }) => {
   return (
-    <article className="bg-whitep-4rounded-lgshadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+    <article className="...">
       <h3 className="text-lgfont-semiboldtext-gray-900mb-2">{title}</h3>
-      <p className="text-gray-600text-smmb-3leading-relaxed">
+      <p className="...">
         {description}
       </p>
       <a 
@@ -20,8 +19,6 @@ const AIToolCard: React.FC<AIToolCardProps> = memo(({ title, description, link }
         Try Now →
       </a>
     </article>
-  )});
-
-AIToolCard.displayName = 'AIToolCard';
-
-export default AIToolCard;
+  )})
+AIToolCard.displayName = 'AIToolCard'
+export default AIToolCard

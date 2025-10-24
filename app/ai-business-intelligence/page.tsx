@@ -1,26 +1,26 @@
-'use client';;
+'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, BarChart } from 'lucide-react';
 
-const AiBusinessIntelligencePage: React.FC = () => {
-    const features = [
+const AIBusinessIntelligencePage: React.FC = () => {
+  const features = [
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},
-    {icon: BarChart,
-  },
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
     {
-    icon: BarChart,
+      icon: BarChart,
       title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-    
+      description: 'Comprehensive analytics dashboard with real-time data visualization.'
     }
-  ]
-const benefits = [
+  ];
+
+  const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
@@ -30,205 +30,112 @@ const benefits = [
 
   return (
     <>
-      <title>Ai Business Intelligence - Zion Tech Group</title>
-return (
-    <>
       <Helmet>
-        <title>Ai Business Intelligence - Zion Tech Group</title>
-        <meta name="description" content="AI-powered solution" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+        <title>AI Business Intelligence | Zion Tech Group - Advanced Data Analytics</title>
+        <meta name="description" content="Transform your business with AI-powered business intelligence. Real-time insights, predictive analytics, and intelligent reporting." />
+        <meta name="keywords" content="AI business intelligence, data analytics, business insights, predictive analytics, real-time reporting" />
+      </Helmet>
       
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900"></div>
-        {/* Hero Section */} <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-        <section$1>
-        <div$2>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Ai Business Intelligence
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-        </div>
-      </section>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
-          <div className="relative max-w-7xl mx-auto text-center"></div>
-            <h1>Ai Business Intelligence;</h1>
-            </h1>
-            <p>Advanced AI-powered ai business intelligence solution for modern businesses.</p>
-            </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
-              <button>Get Started;</button>
-              </button>
-              <button>View Demo,</button>
-              </button>
-            </div>
-        </div>
-      </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4">
-        </section>
-        {/* Features Section */} <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-        <section className="relative py-20 px-4 overflow-hidden">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+        <Navigation />
+        
+        {/* Hero Section */}
+        <section className="py-20 px-4 relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">Ai Business Intelligence
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced AI-powered ai business intelligence solution for modern businesses.
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              AI Business Intelligence
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered business intelligence solution for modern businesses.
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Get Started
-              <button className="border border-indigo-400 text-indigo-400 hover:bg-indigo-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">View Demo
+              <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-full font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
+                Get Started
+              </button>
+              <button className="border border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                View Demo
+              </button>
+            </div>
+          </div>
+        </section>
+
         {/* Features Section */}
         <section className="py-20 px-4">
-          </section>< className="$2 />
-            </div><div className="text-center mb-16">
-              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-        </div>
-      </section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2>Key Features;</h2>
-              </h2>
-              <p>Advanced AI technology that drives results;</p>
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-6">Powerful Features</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Unlock the full potential of your data with our advanced AI business intelligence platform.
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>,
-                  <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,
-                    <feature />
+                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mb-6">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description</p>}</p>
-                  {feature.benefits && (;
-                    <ul>
-                      {feature.benefits.map((benefit, idx) => (} <li>
-                          <CheckCircle />
-
-                          {benefit} </li>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-300">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                          {benefit}
+                        </li>
                       ))}
                     </ul>
                   )}
                 </div>
               ))}
-
             </div>
-        </div>
-      </section>
-        {/* Benefits Section */} <section className="py-20 px-4">
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Key Features
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Advanced AI technology that drives results
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}
-                  <p className="text-gray-300 mb-4">{feature.description}
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                      ))}
-                    </ul>
-                  </div>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2>Why Choose Our Solution?</h2>
-              </h2>
-              <p>Proven results that drive business growth and efficiency;</p>
+              <h2 className="text-4xl font-bold text-white mb-6">Why Choose Our AI Business Intelligence?</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the benefits of AI-powered business intelligence that drive real business results.
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>,
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {benefits.map((benefit, index) => (
-                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>,
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,
-                    <CheckCircle />
-                  <p className="text-lg text-white font-medium">{benefit</p>}</p>
+                <div key={index} className="flex items-center p-6 bg-white/5 rounded-xl border border-white/10">
+                  <CheckCircle className="w-6 h-6 text-green-400 mr-4 flex-shrink-0" />
+                  <span className="text-white font-medium">{benefit}</span>
                 </div>
               ))}
             </div>
-        </div>
-      </section>
+          </div>
+        </section>
 
-        {/* Benefits Section */}
-        <section$1>
-        <div$2>
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-          <div className="max-w-7xl mx-auto" / /></div>
-            <div className="text-center mb-16" / /></div>
-              <h2></h2>
-                Why Choose Our Solution?
-              </h2>
-              <p></p>
-                Proven results that drive business growth and efficiency
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" / /></div>
-              {benefits.map((benefit, index) => ()
-              ))}
         {/* CTA Section */}
         <section className="py-20 px-4">
-          </section>< className="$2 />
-            </div><div className="text-center mb-16">
-              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business Intelligence?</h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of businesses already using our AI business intelligence platform to drive growth and efficiency.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-full font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
+                Start Free Trial
+              </button>
+              <button className="border border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                Contact Sales
+              </button>
             </div>
-          ))
+          </div>
         </section>
 
-        {/* CTA Section */}
-        <section$1>
-        <div$2>
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-          <div className="max-w-4xl mx-auto text-center"></div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12"></div>
-              <h2>Ready to Get Started?</h2>
-              </h2>
-              <p>Contact our experts to discuss your requirements and get started today.</p>
-              </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
-                <button>Contact Us;</button>
-                </button>
-                <button>Learn More;</button>
-                Ready to Get Started?
-              </h2>
-              <p></p>
-                Contact our experts to discuss your requirements and get started today.
-              </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center" / /></div>
-                <button></button>
-                  Contact Us
-                </button>
-                <button></button>
-                  Learn More
-                </button>
-              </div>
-            </div>
-          ))
-        </section>
+        <Footer />
       </div>
-      <Footer />
-
+    </>
   );
 };
 
-export default AiBusinessIntelligencePage;
-
-}}
+export default AIBusinessIntelligencePage;
