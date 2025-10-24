@@ -47,11 +47,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
     return () => clearInterval(interval);
   }, [refreshInterval]);
 
-  const _getStatusColor = (value: number) => {
-    if (value < 50) return 'text-green-500';
-    if (value < 80) return 'text-yellow-500';
-    return 'text-red-500';
-  };
 
   const getStatusBgColor = (value: number) => {
     if (value < 50) return 'bg-green-500';

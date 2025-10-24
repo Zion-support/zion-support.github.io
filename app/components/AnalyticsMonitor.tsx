@@ -33,8 +33,8 @@ const AnalyticsMonitor: React.FC<AnalyticsMonitorProps> = ({
   enableRealTimeMonitoring = true,
   gaTrackingId = process.env.NEXT_PUBLIC_GA_TRACKING_ID || '',
 }) => {
-  const [events, setEvents] = useState<AnalyticsEvent[]>([]);
-  const [performanceMetrics, setPerformanceMetrics] = useState<PerformanceMetrics | null>(null);
+  const [, setEvents] = useState<AnalyticsEvent[]>([]);
+  const [, setPerformanceMetrics] = useState<PerformanceMetrics | null>(null);
 
   // Initialize Google Analytics
   const initializeGoogleAnalytics = useCallback(() => {
