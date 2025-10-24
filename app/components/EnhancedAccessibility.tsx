@@ -12,12 +12,17 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
           if (e.matches) {
             document.documentElement.classList.add('high-contrast');
           } else {
-            document.documentElement.classList.remove('high-contrast');}
+            document.documentElement.classList.remove('high-contrast');
+          }
+        };
         mediaQuery.addEventListener('change', handleContrastChange);
         handleContrastChange(mediaQuery as any);
 
         return () => mediaQuery.removeEventListener('change', handleContrastChange);
-      return () => {}
+      }
+      return () => {};
+    };
+
     // Add reduced motion support
     const addReducedMotionSupport = () => {
       if (typeof window !== 'undefined' && typeof document !== 'undefined') {
@@ -26,12 +31,17 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
           if (e.matches) {
             document.documentElement.classList.add('reduce-motion');
           } else {
-            document.documentElement.classList.remove('reduce-motion');}
+            document.documentElement.classList.remove('reduce-motion');
+          }
+        };
         mediaQuery.addEventListener('change', handleMotionChange);
         handleMotionChange(mediaQuery as any);
 
         return () => mediaQuery.removeEventListener('change', handleMotionChange);
-      return () => {}
+      }
+      return () => {};
+    };
+
     // Add screen reader announcements
     const addScreenReaderAnnouncements = () => {
       if (typeof document !== 'undefined') {
@@ -40,7 +50,10 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
         announcement.setAttribute('aria-atomic', 'true');
         announcement.className = 'sr-only';
         announcement.id = 'announcements';
-        document.body.appendChild(announcement);}
+        document.body.appendChild(announcement);
+      }
+    };
+
     // Initialize accessibility features
     const cleanupContrast = addHighContrastSupport();
     const cleanupMotion = addReducedMotionSupport();
@@ -49,8 +62,11 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     // Cleanup
     return () => {
       cleanupContrast?.();
-      cleanupMotion?.();}
+      cleanupMotion?.();
+    };
   }, []);
 
-  return <React.Fragment>{children}</React.Fragment>;}
+  return <React.Fragment>{children}</React.Fragment>;
+};
+
 export default EnhancedAccessibility;

@@ -80,7 +80,7 @@ const ContentPreviewCard: React.FC = () => {
       </div>
       <Footer />
     </>
-
   );
-}  )}
-export default ContentPreviewCard
+};
+
+export default ContentPreviewCard;
