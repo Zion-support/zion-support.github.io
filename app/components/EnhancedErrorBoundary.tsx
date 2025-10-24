@@ -1,5 +1,7 @@
+'use client';
+
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 interface Props {
   children: ReactNode;
@@ -125,7 +127,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                   Try Again
                 </button>
                 <Link
-                  to="/"
+                  href="/"
                   className="border border-gray-300 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-50 transition-colors text-center"
                 >
                   Go Home

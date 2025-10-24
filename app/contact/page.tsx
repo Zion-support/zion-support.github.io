@@ -1,6 +1,10 @@
+'use client';
+
 import React, { memo } from 'react';
 import EnhancedSEOHead from '../components/EnhancedSEOHead';
 import { useForm } from '../hooks/useForm';
+
+export const dynamic = 'force-dynamic';
 
 const ContactPage: React.FC = memo(() => {
   const {

@@ -1,16 +1,13 @@
+'use client';
+
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+
+export const dynamic = 'force-dynamic';
 
 export default function ZionaicustomersupportproPage() {
   return (
-    <>
-      <Helmet>
-        <title>AI Customer Support Pro - Zion Tech Group</title>
-        <meta name="description" content="Revolutionize your customer support with AI-powered automation, intelligent routing, and 24/7 assistance. Reduce response times and improve customer satisfaction." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center mb-12">
             <div className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-blue-100 text-blue-800 mb-4">
@@ -128,16 +125,15 @@ export default function ZionaicustomersupportproPage() {
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">Ready to Transform Your Support?</h2>
             <p className="text-gray-600 mb-6">Implement AI-powered customer support and provide exceptional service 24/7.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              <Link href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                 Contact Enterprise Sales
               </Link>
-              <Link to="/pricing" className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
+              <Link href="/pricing" className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
                 View Enterprise Pricing
               </Link>
             </div>
           </div>
         </div>
       </div>
-    </>
   );
 }
