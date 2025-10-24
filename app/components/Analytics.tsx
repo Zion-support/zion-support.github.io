@@ -1,33 +1,33 @@
-'use client';
+'use client'
 
-import { useEffect } from 'react';
-import Script from 'next/script';
+import React, { useEffect } from 'react'
+import Script from 'next/script'
 
 declare global {
   interface Window {
-    gtag: (...args: any[]) => void;
+    gtag: (..._args: any[]) => void
   }
 }
 
 const Analytics: React.FC = () => {
-  const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID;
+  const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID
 
   useEffect(() => {
-    if (!GA_TRACKING_ID) return;
+    if (!GA_TRACKING_ID) return
 
     // Initialize gtag
     window.gtag = window.gtag || function() {
-      (window.gtag.q = window.gtag.q || []).push(arguments);
-    };
+      (window.gtag.q = window.gtag.q || []).push(arguments)
+    }
 
-    window.gtag('js', new Date());
+    window.gtag('js', new Date())
     window.gtag('config', GA_TRACKING_ID, {
       page_title: document.title,
       page_location: window.location.href,
-    });
-  }, [GA_TRACKING_ID]);
+    })
+  }, [GA_TRACKING_ID])
 
-  if (!GA_TRACKING_ID) return null;
+  if (!GA_TRACKING_ID) return null
 
   return (
     <>
@@ -51,7 +51,7 @@ const Analytics: React.FC = () => {
         }}
       />
     </>
-  );
-};
+  )
+}
 
-export default Analytics;
+export default Analytics
