@@ -1,10 +1,10 @@
 "use client"
 
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Award, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import React, { useState, useEffect, useMemo } from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, Award, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
 const Page: React.FC = () => {
   const [counters, setCounters] = useState({
@@ -14,7 +14,16 @@ const Page: React.FC = () => {
     years: 0,
     countries: 0,
     uptime: 0
-  });
+  })
+
+  const targetCounters = useMemo(() => ({
+    clients: 1000,
+    projects: 500,
+    satisfaction: 99,
+    years: 10,
+    countries: 25,
+    uptime: 99.9
+  }), [])
 
   useEffect(() => {
     const targetCounters = {
@@ -57,8 +66,8 @@ const Page: React.FC = () => {
       });
     }, stepDuration);
 
-    return () => clearInterval(interval);
-  }, []);
+    return () => clearInterval(interval)
+  }, [targetCounters])
 
   const features = [
     {
