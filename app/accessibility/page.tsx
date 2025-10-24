@@ -17,12 +17,10 @@ const AccessibilityPage: React.FC = () => {
     },
     { icon: Volume2
       ,
-      title: 'Audio Accessibility'
-      ,
-      description: 'Audio alternatives and visual indicators for users with hearing impairments.'
+      title: 'Audio Accessibility',
+      description: 'Audio alternatives and visual indicators for users with hearing impairments.',
       benefits: ['Audio descriptions', 'Visual alerts', 'Captions', 'Sign language support']
-    }
-    ,
+    },
     { icon: Keyboard
       ,
       title: 'Motor Accessibility'

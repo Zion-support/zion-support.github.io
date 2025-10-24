@@ -32,11 +32,11 @@ const AnalyticsToolsPage: React.FC = () => {
       description: 'Worldwide deployment and support for international business analytics',}
   ]
   const benefits = [
-    'Advanced AI-powered data analysis'
-    'Real-time processing and insights'
-    'Enterprise-grade security and compliance'
-    'Scalable and flexible analytics solutions'
-    '24/7 technical support'
+    'Advanced AI-powered data analysis',
+    'Real-time processing and insights',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible analytics solutions',
+    '24/7 technical support',
     'Easy integration with existing systems'
     'Cost-effective pricing plans'
     'Proven track record of success'

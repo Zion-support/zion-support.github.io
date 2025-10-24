@@ -54,10 +54,10 @@ const AboutPage: React.FC = () => {
       image: '/team/john-smith.jpg',
       description: 'Visionary leader with 15+ years in tech'
     }
-    ,
-    { name: 'Sarah Johnson'
-      role: 'CTO'
-      image: '/team/sarah-johnson.jpg'
+    {
+      name: 'Sarah Johnson',
+      role: 'CTO',
+      image: '/team/sarah-johnson.jpg',
       description: 'AI and machine learning expert'
     }
     ,
