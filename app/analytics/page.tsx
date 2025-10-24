@@ -29,6 +29,5 @@ export default function AnalyticsPage() {
       </div>
       <Footer />
     </div>
-    </div>
-  );
+  )
 }

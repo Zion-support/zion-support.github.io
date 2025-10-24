@@ -28,7 +28,6 @@ export default function AiqualityassurancePage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

@@ -28,7 +28,6 @@ export default function AichatbotenterprisePage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

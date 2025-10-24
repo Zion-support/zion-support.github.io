@@ -28,7 +28,6 @@ export default function AilegalassistantPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

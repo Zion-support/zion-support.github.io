@@ -28,7 +28,6 @@ export default function AimentalhealthcompanionPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

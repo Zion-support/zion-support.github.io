@@ -28,7 +28,6 @@ export default function ZioncustomerinsightsPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

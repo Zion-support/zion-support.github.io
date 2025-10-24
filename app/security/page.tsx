@@ -28,7 +28,6 @@ export default function SecurityPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

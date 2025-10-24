@@ -29,6 +29,5 @@ export default function AiprojectmanagementproPage() {
       </div>
       <Footer />
     </div>
-    </div>
-  );
+  )
 }

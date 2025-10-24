@@ -28,7 +28,6 @@ export default function AitimetrackerPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

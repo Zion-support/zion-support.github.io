@@ -28,7 +28,6 @@ export default function AiecommerceoptimizerPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

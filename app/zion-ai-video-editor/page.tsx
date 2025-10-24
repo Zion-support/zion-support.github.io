@@ -28,7 +28,6 @@ export default function ZionaivideoeditorPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

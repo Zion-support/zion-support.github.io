@@ -31,4 +31,7 @@ export default function AivoiceassistantPage() {
     </div>
     </div>
   );
-}
+};
+
+
+export default AiVoiceAssistantPage;

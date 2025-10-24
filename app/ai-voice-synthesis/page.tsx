@@ -28,7 +28,6 @@ export default function AivoicesynthesisPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

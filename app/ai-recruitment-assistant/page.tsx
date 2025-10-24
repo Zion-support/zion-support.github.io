@@ -28,7 +28,6 @@ export default function AirecruitmentassistantPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

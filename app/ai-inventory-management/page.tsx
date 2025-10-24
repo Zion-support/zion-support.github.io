@@ -28,7 +28,6 @@ export default function AiinventorymanagementPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

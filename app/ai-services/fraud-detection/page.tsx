@@ -28,7 +28,6 @@ export default function FrauddetectionPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

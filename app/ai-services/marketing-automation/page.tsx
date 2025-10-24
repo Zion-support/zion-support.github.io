@@ -28,7 +28,6 @@ export default function MarketingautomationPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

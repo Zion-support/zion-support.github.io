@@ -28,7 +28,6 @@ export default function ZiondevopsautomationPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

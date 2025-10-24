@@ -28,7 +28,6 @@ export default function ZionapidevelopmentPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

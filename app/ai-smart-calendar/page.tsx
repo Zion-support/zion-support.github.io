@@ -28,7 +28,6 @@ export default function AismartcalendarPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

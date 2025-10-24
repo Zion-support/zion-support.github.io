@@ -28,7 +28,6 @@ export default function AicomputervisionPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

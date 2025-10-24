@@ -28,7 +28,6 @@ export default function AiopsPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

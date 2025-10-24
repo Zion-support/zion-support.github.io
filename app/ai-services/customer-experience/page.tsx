@@ -28,7 +28,6 @@ export default function CustomerexperiencePage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

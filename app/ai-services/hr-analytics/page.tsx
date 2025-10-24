@@ -28,7 +28,6 @@ export default function HranalyticsPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

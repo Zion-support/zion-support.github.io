@@ -28,7 +28,6 @@ export default function ZionaiseooptimizerPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

@@ -28,7 +28,6 @@ export default function GimplementationPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

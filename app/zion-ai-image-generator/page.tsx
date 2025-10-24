@@ -28,7 +28,6 @@ export default function ZionaiimagegeneratorPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

@@ -31,4 +31,7 @@ export default function AiexpensetrackerPage() {
     </div>
     </div>
   );
-}
+};
+
+
+export default AiExpenseTrackerPage;

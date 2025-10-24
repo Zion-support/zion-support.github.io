@@ -28,7 +28,6 @@ export default function AitaskmanagerPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

@@ -28,7 +28,6 @@ export default function AiloadtestingPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

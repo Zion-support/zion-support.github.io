@@ -28,7 +28,6 @@ export default function AiemailmarketingPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

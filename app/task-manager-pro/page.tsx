@@ -28,7 +28,6 @@ export default function TaskmanagerproPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

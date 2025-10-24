@@ -28,7 +28,6 @@ export default function BusinessintelligencePage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

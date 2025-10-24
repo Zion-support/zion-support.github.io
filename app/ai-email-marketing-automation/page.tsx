@@ -31,4 +31,7 @@ export default function AiemailmarketingautomationPage() {
     </div>
     </div>
   );
-}
+};
+
+
+export default AiEmailMarketingAutomationPage;

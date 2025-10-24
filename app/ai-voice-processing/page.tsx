@@ -28,7 +28,6 @@ export default function AivoiceprocessingPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

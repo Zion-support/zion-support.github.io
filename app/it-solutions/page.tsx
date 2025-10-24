@@ -28,7 +28,6 @@ export default function ItsolutionsPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

@@ -28,7 +28,6 @@ export default function AineuralmemoryassistantPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

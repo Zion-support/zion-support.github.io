@@ -31,4 +31,7 @@ export default function AisocialmediamanagerPage() {
     </div>
     </div>
   );
-}
+};
+
+
+export default AiSocialMediaManagerPage;

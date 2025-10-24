@@ -28,7 +28,6 @@ export default function ZionemailautomationPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

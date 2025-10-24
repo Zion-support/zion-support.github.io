@@ -29,6 +29,5 @@ export default function ItservicesPage() {
       </div>
       <Footer />
     </div>
-    </div>
-  );
+  )
 }

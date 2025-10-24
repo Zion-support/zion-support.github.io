@@ -31,4 +31,7 @@ export default function AivideoeditorPage() {
     </div>
     </div>
   );
-}
+};
+
+
+export default AiVideoEditorPage;

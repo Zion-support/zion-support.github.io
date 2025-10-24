@@ -28,7 +28,6 @@ export default function ZionaiworkflowautomatorPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

@@ -28,7 +28,6 @@ export default function AisocialmediaschedulerPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

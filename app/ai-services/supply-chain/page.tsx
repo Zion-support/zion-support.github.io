@@ -28,7 +28,6 @@ export default function SupplychainPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

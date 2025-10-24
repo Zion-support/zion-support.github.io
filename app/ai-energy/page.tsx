@@ -28,7 +28,6 @@ export default function AienergyPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

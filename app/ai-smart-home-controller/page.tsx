@@ -28,7 +28,6 @@ export default function AismarthomecontrollerPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

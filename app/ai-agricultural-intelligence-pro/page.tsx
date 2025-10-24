@@ -28,7 +28,6 @@ export default function AiagriculturalintelligenceproPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
+    </>
   );
 }

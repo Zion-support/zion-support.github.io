@@ -28,7 +28,6 @@ export default function AccessibilitypagePage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
+    </>
   );
 }

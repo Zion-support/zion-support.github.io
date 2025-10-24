@@ -28,7 +28,6 @@ export default function AiquantumoptimizationPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

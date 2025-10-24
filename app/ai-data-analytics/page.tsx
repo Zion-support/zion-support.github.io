@@ -28,7 +28,6 @@ export default function AidataanalyticsPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

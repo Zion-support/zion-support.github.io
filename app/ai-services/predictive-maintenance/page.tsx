@@ -28,7 +28,6 @@ export default function PredictivemaintenancePage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

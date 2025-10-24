@@ -28,7 +28,6 @@ export default function ZionsmartinventorymanagerPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

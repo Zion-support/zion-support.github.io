@@ -28,7 +28,6 @@ export default function AicodegenerationPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

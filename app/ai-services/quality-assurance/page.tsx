@@ -28,7 +28,6 @@ export default function QualityassurancePage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

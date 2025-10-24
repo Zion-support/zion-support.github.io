@@ -28,7 +28,6 @@ export default function ContentgenerationPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

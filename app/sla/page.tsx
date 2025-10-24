@@ -28,7 +28,6 @@ export default function SlaPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

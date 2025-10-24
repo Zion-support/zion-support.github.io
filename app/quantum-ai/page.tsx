@@ -28,7 +28,6 @@ export default function QuantumaiPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

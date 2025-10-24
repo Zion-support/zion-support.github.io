@@ -28,7 +28,6 @@ export default function AiinsurancePage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

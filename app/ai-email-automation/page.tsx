@@ -28,7 +28,6 @@ export default function AiemailautomationPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
+    </>
   );
 }

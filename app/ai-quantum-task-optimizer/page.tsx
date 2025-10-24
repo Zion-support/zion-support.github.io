@@ -28,7 +28,6 @@ export default function AiquantumtaskoptimizerPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

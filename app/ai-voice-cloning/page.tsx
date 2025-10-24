@@ -28,7 +28,6 @@ export default function AivoicecloningPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

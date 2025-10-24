@@ -28,7 +28,6 @@ export default function AibusinessintelligencePage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

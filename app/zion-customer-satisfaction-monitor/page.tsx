@@ -28,7 +28,6 @@ export default function ZioncustomersatisfactionmonitorPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

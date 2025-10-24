@@ -28,7 +28,6 @@ export default function ZionsmartexpensetrackerPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

@@ -28,7 +28,6 @@ export default function OfflinePage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }

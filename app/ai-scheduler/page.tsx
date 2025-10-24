@@ -28,7 +28,6 @@ export default function AischedulerPage() {
         </div>
       </div>
       <Footer />
-    </div>
-    </div>
-  );
+</>
+  )
 }
