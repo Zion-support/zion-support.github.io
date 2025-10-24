@@ -1,6 +1,7 @@
+'use client';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { usePathname } from 'next/navigation';
 import { 
   Bars3Icon, 
   XMarkIcon,
@@ -22,7 +23,7 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const router = useRouter();
+  const pathname = usePathname();
 
   // Handle scroll effect
   useEffect(() => {
@@ -59,7 +60,7 @@ const Navigation = () => {
   ];
 
   const isActive = (path: string) => {
-    return router.pathname === path;
+    return typeof window !== 'undefined' && window.location.pathname === path;
   };
 
   return (

@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import Link from 'next/link';
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud, Shield, Globe, Database, Smartphone, Zap, Sparkles, Star } from 'lucide-react';
@@ -96,7 +97,7 @@ const Footer: React.FC = () => {
               {aiServices.map((service, index) => (
                 <li key={index}>
                   <Link 
-                    to={service.url} 
+                    href={service.url} 
                     className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
                   >
                     <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -117,7 +118,7 @@ const Footer: React.FC = () => {
               {itServices.map((service, index) => (
                 <li key={index}>
                   <Link 
-                    to={service.url} 
+                    href={service.url} 
                     className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
                   >
                     <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -136,7 +137,7 @@ const Footer: React.FC = () => {
                 {company.map((item, index) => (
                   <li key={index}>
                     <Link 
-                      to={item.url} 
+                      href={item.url} 
                       className="text-gray-400 hover:text-white transition-colors text-sm"
                     >
                       {item.name}
@@ -152,7 +153,7 @@ const Footer: React.FC = () => {
                 {resources.map((item, index) => (
                   <li key={index}>
                     <Link 
-                      to={item.url} 
+                      href={item.url} 
                       className="text-gray-400 hover:text-white transition-colors text-sm"
                     >
                       {item.name}
@@ -197,7 +198,7 @@ const Footer: React.FC = () => {
             {legal.map((item, index) => (
               <Link 
                 key={index}
-                to={item.url} 
+                href={item.url} 
                 className="text-gray-400 hover:text-white transition-colors text-sm"
               >
                 {item.name}
