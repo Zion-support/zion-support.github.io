@@ -22,29 +22,3 @@ function fixMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Remove merge conflict markers and keep the HEAD version (first part)
-    content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n    
-    // Clean up any remaining conflict markers
-    content = content.replace(/<<<<<<< HEAD\n/g, '');
-    content = content.replace(/=======\n/g, '');
-    content = content.replace(/    
-    // Clean up extra newlines
-    content = content.replace(/\n{3,}/g, '\n\n');
-    
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed merge conflicts in ${filePath}`);
-    return true;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-// Fix all files
-let fixedCount = 0;
-filesToFix.forEach(file => {
-  if (fixMergeConflicts(file)) {
-    fixedCount++;
-  }
-});
-
-console.log(`\nFixed merge conflicts in ${fixedCount}/${filesToFix.length} files`);
