@@ -35,7 +35,9 @@ value: number;
 unit: 'ms' | 'bytes' | 'count' | 'percentage',;
 timestamp: number;}
 }
-class PerformanceMonitoringService {}
+class PerformanceMonitoringService {
+  
+}
 private static instance: PerformanceMonitoringService;}
 private webVitals: WebVitals="{}";
 private customMetrics: CustomMetric[] = [],;
@@ -53,9 +55,9 @@ if (!PerformanceMonitoringService.instance) {}"
 PerformanceMonitoringService.instance="new" PerformanceMonitoringService();}
 export interface PerformanceMetric {/* TODO: Fix JSX expression */}
 }
-export interface WebVitals {/* TODO: Fix JSX expression */}
 }
-export interface CustomMetric {/* TODO: Fix JSX expression */}
+export interface WebVitals {
+  /* TODO: Fix JSX expression */
 }
 class PerformanceMonitoringService {/* TODO: Fix JSX expression */}"
 webVitals: WebVitals="{}";
@@ -66,9 +68,12 @@ observers: PerformanceObserver[] = [];"
 private maxMetrics="1000";
 private constructor() {/* TODO: Fix JSX expression */}
 }
-static getInstance(): PerformanceMonitoringService {/* TODO: Fix JSX expression */}
 }
-return PerformanceMonitoringService.instance
+static getInstance(): PerformanceMonitoringService {
+  /* TODO: Fix JSX expression */
+}
+}
+return PerformanceMonitoringService.instance;
 }
 /**
 * Initialize performance observers
@@ -124,11 +129,17 @@ this.recordWebVital('TTFB', navEntry.responseStart - navEntry.requestStart);}
 });
 navObserver.observe({type: 'navigation', buffered: true });
 this.observers.push(navObserver)
-} catch (error) {}
-logger.error('Failed to initialize performance observers', error as Error);}
-private initializeObservers(): void {/* TODO: Fix JSX expression */}
+} catch (error) {
+  
 }
-try {/* TODO: Fix JSX expression */}
+logger.error('Failed to initialize performance observers', error as Error);}
+private initializeObservers(): void {
+  /* TODO: Fix JSX expression */
+}
+}
+try {
+  /* TODO: Fix JSX expression */
+}
 }
 })
 });
@@ -265,7 +276,9 @@ bod,;
 y: JSON.stringify(metric)
 })
 }
-} catch (error) {/* TODO: Fix JSX expression */}
+} catch (error) {
+  /* TODO: Fix JSX expression */
+}
 }
 }
 /**
@@ -281,7 +294,9 @@ return {...this.webVitals }
 */;
 getCustomMetrics(): CustomMetric[] {}
 return [...this.customMetrics];}
-getCustomMetrics(): CustomMetric[] {/* TODO: Fix JSX expression */}
+getCustomMetrics(): CustomMetric[] {
+  /* TODO: Fix JSX expression */
+}
 }
 /**
 * Get performance score (0-100)
@@ -297,7 +312,9 @@ case 'good': return 100;
 case 'needs-improvement': return 50;
 case 'poor': return 0;
 default: return 0;}
-getPerformanceScore(): number {/* TODO: Fix JSX expression */}
+getPerformanceScore(): number {
+  /* TODO: Fix JSX expression */
+}
 }
 });
 return Math.round(scores.reduce((a: number, b: number) => a + b, 0) / scores.length)
@@ -317,20 +334,34 @@ recommendations: string[];}
 export const score=";";
 if (this.webVitals.FCP && this.webVitals.FCP.rating !== 'good') {,}
 const recommendations: string[] = []
-// Generate recommendations based on metrics;}
-if (this.webVitals.FCP && this.webVitals.FCP.rating !== 'good') {}
+// Generate recommendations based on metrics;
+if (this.webVitals.FCP && this.webVitals.FCP.rating !== 'good') {
+const recommendations: string[] = []
+// Generate recommendations based on metrics;
+}
+if (this.webVitals.FCP && this.webVitals.FCP.rating !== 'good') {
+  
+}
 recommendations.push('Improve First Contentful Paint by optimizing critical rendering path');}
 }
-if (this.webVitals.LCP && this.webVitals.LCP.rating !== 'good') {}
+if (this.webVitals.LCP && this.webVitals.LCP.rating !== 'good') {
+  
+}
 recommendations.push('Improve Largest Contentful Paint by optimizing images and server response');}
 }
-if (this.webVitals.CLS && this.webVitals.CLS.rating !== 'good') {}
+if (this.webVitals.CLS && this.webVitals.CLS.rating !== 'good') {
+  
+}
 recommendations.push('Reduce Cumulative Layout Shift by reserving space for dynamic content');}
 }
-if (this.webVitals.FID && this.webVitals.FID.rating !== 'good') {}
+if (this.webVitals.FID && this.webVitals.FID.rating !== 'good') {
+  
+}
 recommendations.push('Improve First Input Delay by reducing JavaScript execution time');}
 }
-if (this.webVitals.TTFB && this.webVitals.TTFB.rating !== 'good') {}
+if (this.webVitals.TTFB && this.webVitals.TTFB.rating !== 'good') {
+  
+}
 recommendations.push('Improve Time to First Byte by optimizing server response time');}
 }
 return {}
@@ -389,20 +420,36 @@ if (measure) {}
 this.recordCustomMetric(name, measure.duration, 'ms');
 return measure.duration;}
 }
-} catch (error) {}
+} catch (error) {
+  
+}
 logger.error('Failed to measure performance', error as Error);}
-getSummary(): {/* TODO: Fix JSX expression */}
-} {/* TODO: Fix JSX expression */}
+getSummary(): {
+  /* TODO: Fix JSX expression */
 }
-if (this.webVitals.LCP && this.webVitals.LCP.rating !== 'good') {/* TODO: Fix JSX expression */}
+} {
+  /* TODO: Fix JSX expression */
 }
-if (this.webVitals.CLS && this.webVitals.CLS.rating !== 'good') {/* TODO: Fix JSX expression */}
 }
-if (this.webVitals.FID && this.webVitals.FID.rating !== 'good') {/* TODO: Fix JSX expression */}
+if (this.webVitals.LCP && this.webVitals.LCP.rating !== 'good') {
+  /* TODO: Fix JSX expression */
 }
-if (this.webVitals.TTFB && this.webVitals.TTFB.rating !== 'good') {/* TODO: Fix JSX expression */}
 }
-return {/* TODO: Fix JSX expression */}
+if (this.webVitals.CLS && this.webVitals.CLS.rating !== 'good') {
+  /* TODO: Fix JSX expression */
+}
+}
+if (this.webVitals.FID && this.webVitals.FID.rating !== 'good') {
+  /* TODO: Fix JSX expression */
+}
+}
+if (this.webVitals.TTFB && this.webVitals.TTFB.rating !== 'good') {
+  /* TODO: Fix JSX expression */
+}
+}
+return {
+  /* TODO: Fix JSX expression */
+}
 }
 }
 /**
@@ -441,7 +488,12 @@ k: string): number | null {/* TODO: Fix JSX expression */}
 } catch (error) {/* TODO: Fix JSX expression */}
 }
 }
-return null
+} catch (error) {
+  /* TODO: Fix JSX expression */
+}
+}
+}
+return null;
 }
 /**
 * Clear all metrics
@@ -555,21 +607,35 @@ const recommendations: string[] = [];}
 if (metrics.FCP && metrics.FCP.rating !== 'good') {}
 recommendations.push('Improve FCP by optimizing critical CSS and reducing render-blocking resources');}
 }
-if (metrics.LCP && metrics.LCP.rating !== 'good') {}
+if (metrics.LCP && metrics.LCP.rating !== 'good') {
+  
+}
 recommendations.push('Improve LCP by optimizing largest images and server response time');}
 }
-if (metrics.FID && metrics.FID.rating !== 'good') {}
+if (metrics.FID && metrics.FID.rating !== 'good') {
+  
+}
 recommendations.push('Improve FID by reducing JavaScript execution time');}
 }
-if (metrics.CLS && metrics.CLS.rating !== 'good') {}
+if (metrics.CLS && metrics.CLS.rating !== 'good') {
+  
+}
 recommendations.push('Improve CLS by reserving space for dynamic content and avoiding layout shifts');}
 }
-if (metrics.TTFB && metrics.TTFB.rating !== 'good') {}
+if (metrics.TTFB && metrics.TTFB.rating !== 'good') {
+  
+}
 recommendations.push('Improve TTFB by optimizing server response time and using CDN');}
 }
-return recommendations
+return recommendations;
 }
-export enum MetricUnit {/* TODO: Fix JSX expression */}
+export enum MetricUnit {
+  /* TODO: Fix JSX expression */
+}
+}
+// Simple metrics structure for testing;
+interface MetricData {
+  /* TODO: Fix JSX expression */
 }
 // Simple metrics structure for testing;
 interface MetricData {/* TODO: Fix JSX expression */}
@@ -598,11 +664,12 @@ return 'poor'
 export const getMetrics=";";
 if (metrics.LCP && metrics.LCP.rating !== 'good') {/* TODO: Fix JSX expression */}
 }
-if (metrics.FID && metrics.FID.rating !== 'good') {/* TODO: Fix JSX expression */}
+if (metrics.LCP && metrics.LCP.rating !== 'good') {
+  /* TODO: Fix JSX expression */
 }
-if (metrics.CLS && metrics.CLS.rating !== 'good') {/* TODO: Fix JSX expression */}
 }
-if (metrics.TTFB && metrics.TTFB.rating !== 'good') {/* TODO: Fix JSX expression */}
+if (metrics.FID && metrics.FID.rating !== 'good') {
+  /* TODO: Fix JSX expression */
 }
 return recommendations
 }"

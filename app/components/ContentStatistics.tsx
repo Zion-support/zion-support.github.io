@@ -3,7 +3,6 @@ import React from 'react'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
 const ContentStatistics: React.FC = () => {
   const [counters, setCounters] = useState({
@@ -25,174 +24,94 @@ const ContentStatistics: React.FC = () => {
   }
 
   useEffect(() => {
-    const duration = 2000
-    const steps = 60
-    const stepDuration = duration / steps
+    const animateCounters = () => {
+      Object.keys(targetCounters).forEach(key => {
+        const target = targetCounters[key as keyof typeof targetCounters]
+        const duration = 2000
+        const increment = target / (duration / 16)
+        let current = 0
 
-    const interval = setInterval(() => {
-      setCounters(prev => {
-        const newCounters = { ...prev }
-        let allComplete = true
-
-        Object.keys(targetCounters).forEach(key => {
-          const target = targetCounters[key as keyof typeof targetCounters]
-          const current = prev[key as keyof typeof prev]
-          const increment = target / steps
-
-          if (current < target) {
-            newCounters[key as keyof typeof newCounters] = Math.min(
-              current + increment,
-              target
-            )
-            allComplete = false
+        const timer = setInterval(() => {
+          current += increment
+          if (current >= target) {
+            current = target
+            clearInterval(timer)
           }
-        })
-
-        if (allComplete) {
-          clearInterval(interval)
-        }
-
-        return newCounters
+          setCounters(prev => ({
+            ...prev,
+            [key]: Math.floor(current)
+          }))
+        }, 16)
       })
-    }, stepDuration)
-
-    return () => clearInterval(interval)
-  }, [])
-
-  const stats = [
-    {
-      icon: <Users className="h-8 w-8" />,
-      value: Math.round(counters.clients),
-      label: "Happy Clients",
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      icon: <Target className="h-8 w-8" />,
-      value: Math.round(counters.projects),
-      label: "Projects Completed",
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      icon: <Star className="h-8 w-8" />,
-      value: `${Math.round(counters.satisfaction)}%`,
-      label: "Client Satisfaction",
-      color: "from-yellow-500 to-orange-500"
-    },
-    {
-      icon: <Clock className="h-8 w-8" />,
-      value: Math.round(counters.years),
-      label: "Years Experience",
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      icon: <Globe className="h-8 w-8" />,
-      value: Math.round(counters.countries),
-      label: "Countries Served",
-      color: "from-indigo-500 to-blue-500"
-    },
-    {
-      icon: <Zap className="h-8 w-8" />,
-      value: `${Math.round(counters.uptime * 10) / 10}%`,
-      label: "Uptime Guarantee",
-      color: "from-red-500 to-pink-500"
     }
-  ]
+
+    animateCounters()
+  }, [])
 
   return (
     <>
       
       <Navigation />
-      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
-        {/* Hero Section */}
-        <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
-          <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
-          <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md:text-7xl font-bold text-white mb-6 leading-tight&quot;>
-              ContentStatistics
+      
+      <main className="pt-20">
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Our <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">Impact</span>
             </h1>
-            <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
-              Advanced ContentStatistics solution for modern businesses.
+            <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
+              Numbers that tell the story of our success and growth
             </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;>
-                Get Started
-                <ArrowRight className=&quot;ml-2 h-5 w-5&quot; />
-              </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
-                Learn More
-              </button>
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Key Features</h2>
-              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
-                Powerful AI-driven features designed to transform your business operations
-              </p>
-            </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
-              {features.map((feature, index) => (
-                <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
-                  <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; />
-                  <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{feature.title}</h3>
-                  <p className=&quot;text-gray-300 mb-4&quot;>{feature.description}</p>
-                  <ul className=&quot;space-y-2&quot;>
-                    {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className=&quot;flex items-center text-sm text-gray-300&quot;>
-                        <CheckCircle className=&quot;h-4 w-4 text-emerald-400 mr-2 flex-shrink-0&quot; />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
+            
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
+                <div className="text-4xl md:text-5xl font-bold text-emerald-400 mb-2">
+                  {counters.clients}+
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
-              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
-                Experience the benefits of cutting-edge AI technology
-              </p>
-            </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
-              {benefits.map((benefit, index) => (
-                <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
-                  <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
-                  <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
+                <div className="text-gray-300 text-lg">Happy Clients</div>
+              </div>
+              
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
+                <div className="text-4xl md:text-5xl font-bold text-blue-400 mb-2">
+                  {counters.projects}+
                 </div>
-              ))}
+                <div className="text-gray-300 text-lg">Projects Completed</div>
+              </div>
+              
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
+                <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2">
+                  {counters.satisfaction}%
+                </div>
+                <div className="text-gray-300 text-lg">Client Satisfaction</div>
+              </div>
+              
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
+                <div className="text-4xl md:text-5xl font-bold text-yellow-400 mb-2">
+                  {counters.years}+
+                </div>
+                <div className="text-gray-300 text-lg">Years Experience</div>
+              </div>
+              
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
+                <div className="text-4xl md:text-5xl font-bold text-red-400 mb-2">
+                  {counters.countries}+
+                </div>
+                <div className="text-gray-300 text-lg">Countries Served</div>
+              </div>
+              
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
+                <div className="text-4xl md:text-5xl font-bold text-green-400 mb-2">
+                  {counters.uptime}%
+                </div>
+                <div className="text-gray-300 text-lg">Uptime</div>
+              </div>
             </div>
           </div>
         </section>
-
-        {/* CTA Section */}
-        <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
-            <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
-            <p className=&quot;text-xl text-gray-300 mb-8&quot;>
-              Join thousands of businesses already using our AI solutions
-            </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
-                Start Free Trial
-              </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
-                Contact Sales
-              </button>
-            </div>
-          </div>
-        </section>
-      </div>
-    </section>
+      </main>
+      
+      <Footer />
+    </div>
   )
 }
 ;

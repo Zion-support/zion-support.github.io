@@ -4,19 +4,19 @@
 import React, { createContext, useContext, useEffect } from &quot;react&quot;
 
 interface AnalyticsContextType {
-  track: (event: string, properties?: Record<string, unknown>) => void
-  identify: (userId: string, traits?: Record<string, unknown>) => void
-  page: (name: string, properties?: Record<string, unknown>) => void
+  track: (event: string, properties?: Record<string, unknown>) => void;
+  identify: (userId: string, traits?: Record<string, unknown>) => void;
+  page: (name: string, properties?: Record<string, unknown>) => void;
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
-  undefined,
-)
+  undefined
+);
 
 export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext)
+  const context = useContext(AnalyticsContext);
   if (!context) {
-    throw new Error(&quot;useAnalytics must be used within an AnalyticsProvider&quot;)
+    throw new Error("useAnalytics must be used within an AnalyticsProvider");
   }
   return context
 }
@@ -43,20 +43,21 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
         gtag(&quot;config&quot;, process.env.REACT_APP_GA_ID)
       }
     }
-  }, [])
+  }, []);
 
-  consttrack= (event: string,properties?:Record<string, unknown>) => {if (type of windo w !==&quot;undefined&quot;) {
-      // Google Analytics
-      if ((windo w as unknown as { gtag?: (...args: unknown[]) => void}).gtag) {(windo w as unknown as { gtag: (...args: unknown[]) => void}).gtag(
-         &quot;event&quot;,
-          event,
-          properties,
-        )
-      }
+  const track = (event: string, properties?: Record<string, unknown>) => {
+    if (typeof window !== "undefined") {
+      // Track event
+      console.log("Analytics Event:", event, properties);
+    }
+  };
 
-      // Custom analytics
-      }
-  }
+  const identify = (userId: string, traits?: Record<string, unknown>) => {
+    if (typeof window !== "undefined") {
+      // Identify user
+      console.log("Analytics Identify:", userId, traits);
+    }
+  };
 
   constidentify= (userId: string,traits?:Record<string, unknown>) => {if (type of windo w !==&quot;undefined&quot;) {
       // Google Analytics

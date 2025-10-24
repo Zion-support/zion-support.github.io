@@ -64,7 +64,7 @@ const AIServicesPage: React.FC = () => {
   ];
 
     }
-  ]
+  ];
 
   const categories = [
     { id: 'overview', name: 'Overview', icon: <Globe className="w-5 h-5" /> },
@@ -284,3 +284,5 @@ export default AiServicesPage;          </div>
 export default AIServicesPage;
 
 export default AiServicesPage;>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
+
+export default AIServicesPage;

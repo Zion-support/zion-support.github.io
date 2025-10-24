@@ -1,7 +1,7 @@
 'use client'
 /**
-* SEO Enhancement Utilities
-* Tools to improve search engine optimization
+* SEO Enhancement Utilities;
+* Tools to improve search engine optimization;
 */
 // Generate meta tags;
 export const generateMetaTags=";"
@@ -140,7 +140,12 @@ static getInstance(config?: Partial<SEOConfig>): SEOEnhancer {}
 if (!SEOEnhancer.instance) {}"
 SEOEnhancer.instance="new" SEOEnhancer(config);}
 }
-return SEOEnhancer.instance
+return SEOEnhancer.instance;
+}
+// Update page title;
+updateTitle(title: string) {
+if (typeof document !== 'undefined') {
+  ;
 }
 // Update page title;
 updateTitle(title: string) {,}
@@ -320,7 +325,9 @@ let meta=";";"
 meta="document.createElement('meta')";
 if (nameOrProperty.startsWith('og:') || nameOrProperty.startsWith('twitter:')) {}
 meta.setAttribute('property', nameOrProperty);}
-} else {}
+} else {
+  
+}
 meta.setAttribute('name', nameOrProperty);}
 // Update robots meta tag;
 updateRobots(robot);
@@ -428,14 +435,19 @@ contactType: 'customer service'}
 generateSitemap(page,</SEOConfig>;
 s: Array<{/* TODO: Fix JSX expression */});
 y: string }>)
-) {/* TODO: Fix JSX expression */}
+) {
+  /* TODO: Fix JSX expression */
+}
 <loc>${page.url}</loc>
+<//loc>
 <lastmod>${page.lastmod}</lastmod>
+<//lastmod>
 <changefreq>${page.changefreq}</changefreq>
+<//changefreq>
 <priority>${page.priority}</priority>`
 </url>`
 )
-.join('
+.join(')
 ')}`
 </urlset>`;
 return sitemap
@@ -510,7 +522,7 @@ url: data.logo || '/logo.webp'}
 datePublished: new Date().toISOString(),;
 dateModified: new Date().toISOString()}
 }
-return baseStructure
+return baseStructure;
 }
 // Generate sitemap data;"
 export const generateSitemapData=";"
@@ -552,7 +564,12 @@ dateModifie,;
 d: new Date().toISOString()
 }
 }
-return baseStructure
+return baseStructure;
+}
+// Generate sitemap data;
+export const generateSitemapData = (page
+s: Array<{
+  /* TODO: Fix JSX expression */
 }
 // Generate sitemap data;"
 export const generateSitemapData=";";
@@ -578,14 +595,18 @@ const issues: string[] = []
 // Check title length;
 if (data.title.length < 30) {}
 issues.push('Title is too short (recommended: 30-60 characters)');}
-} else if (data.title.length > 60) {}
+} else if (data.title.length > 60) {
+  
+}
 issues.push('Title is too long (recommended: 30-60 characters)');}
 }
 // Check description length;
 if (data.description.length < 120) {// Check description length;}
 if (data.description.length < 120) {}
 issues.push('Description is too short (recommended: 120-160 characters)');}
-} else if (data.description.length > 160) {}
+} else if (data.description.length > 160) {
+  
+}
 issues.push('Description is too long (recommended: 120-160 characters)');}
 }
 // Check URL format;
@@ -593,7 +614,7 @@ if (!data.url.startsWith('http')) {// Check URL format;}
 if (!data.url.startsWith('http')) {}
 issues.push('URL should start with http:// or https://');}
 }
-return issues
+return issues;
 }
 // Generate breadcrumb data;"
 export const generateBreadcrumbData=";"
@@ -650,7 +671,21 @@ if (data.description.length < 120) {/* TODO: Fix JSX expression */}
 // Check URL format;
 if (!data.url.startsWith('http')) {/* TODO: Fix JSX expression */}
 }
-return issues
+} else if (data.description.length > 160) {
+  /* TODO: Fix JSX expression */
+}
+}
+// Check URL format;
+if (!data.url.startsWith('http')) {
+  /* TODO: Fix JSX expression */
+}
+}
+return issues;
+}
+// Generate breadcrumb data;
+export const generateBreadcrumbData = (breadcrumb
+s: Array<{
+  /* TODO: Fix JSX expression */
 }
 // Generate breadcrumb data;"
 export const generateBreadcrumbData=";";"

@@ -63,7 +63,6 @@ export default function ContactPage() {
     setTimeout(() => {
       setIsSubmitted(false);
       setFormData({
-<<<<<<< HEAD
         name: "",
         email: "",
         company: "",
@@ -200,6 +199,7 @@ export default function ContactPage() {
               Send us a Message
             </h2>
             <p className="text-xl text-gray-600">
+<<<<<<< HEAD
               Fill out the form below and we'll get back to you as soon as possible.
             </p>
           </div>
@@ -389,3 +389,5 @@ export default function ContactPage() {
 export default ContactPage;
 
 export default ContactPage;>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
+
+export default ContactPage;

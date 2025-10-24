@@ -126,8 +126,18 @@ const AdvancedPerformanceMonitorPage: React.FC="()" => {const features: ";",;
                 Contact Sales
               </button>
             </div>
+            {getPerformanceRecommendations.length > 0 && (
+              <div className="mt-2">
+                <h4 className="font-semibold text-xs text-red-600">Recommendations:</h4>
+                <ul className="text-xs text-red-600">
+                  {getPerformanceRecommendations.map((rec, index) => (
+                    <li key={index}>• {rec}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
-        </section>
+        )}
       </div>
       <Footer /></Footer>
     </>

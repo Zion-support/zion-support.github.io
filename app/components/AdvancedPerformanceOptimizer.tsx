@@ -168,11 +168,11 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
         event_label: 'Core Web Vitals',
         value: Math.round(performanceMetrics.lcp),
         custom_map: {
-          fcp: Math.round(performanceMetrics.fcp),
-          lcp: Math.round(performanceMetrics.lcp),
-          fid: Math.round(performanceMetrics.fid),
-          cls: Math.round(performanceMetrics.cls * 100 0) / 1000}
-
+          fcp: Math.round(performanceMetrics.fcp)
+          lcp: Math.round(performanceMetrics.lcp)
+          fid: Math.round(performanceMetrics.fid)
+          cls: Math.round(performanceMetrics.cls * 100 0) / 1000
+}
     }
   }, [performanceMetrics]);
 

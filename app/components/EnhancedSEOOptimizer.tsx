@@ -5,45 +5,58 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 import { Phone, Mail, ArrowRight } from 'lucide-react'
 
 const EnhancedSEOOptimizerPage: React.FC = () => {
-  const features = [
+  return (
+    <div>
+        </div>
+        </div>
+    </div>
+  );
+      const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      icon: Brain
+      title: 'AI-Powered Intelligence'
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.'
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
+    </div>)
+  )
+}
     {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      icon: BarChart
+      title: 'Advanced Analytics'
+      description: 'Comprehensive analytics dashboard with real-time data visualization.'
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
+    {
+      icon: Target
+      title: 'Precision Targeting'
+      description: 'Target specific goals and objectives with precision and accuracy.'
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    }
+    {
+  icon: TrendingUp
+      title: 'Growth Optimization'
+      description: 'Optimize your business growth with data-driven strategies.'
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+}
   ]
-
   const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
+    'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
+    'Improve decision-making with AI insights'
+    'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
                 </div>
+
+                <//div>
               ))}
             </div>
+
+            <//div>
           </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             </div>
+
+            <//div>
           </div>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>

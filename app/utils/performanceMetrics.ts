@@ -45,7 +45,7 @@ totalMetrics: number;
 performanceScore: number,;
 recommendations: string[];}
 }
-timestamp: Date,
+timestamp: Date
 }
 export class PerformanceMetrics {}
 private static instance: PerformanceMetrics,;}
@@ -69,9 +69,9 @@ if (!PerformanceMetrics.instance) {}"
 PerformanceMetrics.instance="new" PerformanceMetrics();}
 export interface PerformanceMetric {/* TODO: Fix JSX expression */}
 }
-export interface WebVitalsMetrics {/* TODO: Fix JSX expression */}
 }
-export interface PerformanceReport {/* TODO: Fix JSX expression */}
+export interface WebVitalsMetrics {
+  /* TODO: Fix JSX expression */
 }
 timestam,;
 p: Date,
@@ -83,9 +83,12 @@ observers: PerformanceObserver[] = [];
 constructor() {/* TODO: Fix JSX expression */}
 }
 }
-static getInstance(): PerformanceMetrics {/* TODO: Fix JSX expression */}
 }
-return PerformanceMetrics.instance
+static getInstance(): PerformanceMetrics {
+  /* TODO: Fix JSX expression */
+}
+}
+return PerformanceMetrics.instance;
 }
 /**
 * Initialize performance observers
@@ -120,7 +123,9 @@ category: 'load',;
 metadata: {}
 domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,;
 domInteractive: navEntry.domInteractive - navEntry.fetchStart}
-private initializeObservers(): void {/* TODO: Fix JSX expression */}
+private initializeObservers(): void {
+  /* TODO: Fix JSX expression */
+}
 }
 })
 }
@@ -212,7 +217,9 @@ this.observers.push(lcpObserver)
 export const clsObserver=";";
 s: ['layout-shift'] });
 this.observers.push(clsObserver)
-} catch (error) {/* TODO: Fix JSX expression */}
+} catch (error) {
+  /* TODO: Fix JSX expression */
+}
 }
 }
 }
@@ -259,7 +266,9 @@ dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart,;
 tcpConnection: perfData.connectEnd - perfData.connectStart,;
 serverResponse: perfData.responseEnd - perfData.requestStart,;
 domParsing: perfData.domComplete - perfData.domLoading}
-recordPageLoad(): void {/* TODO: Fix JSX expression */}
+recordPageLoad(): void {
+  /* TODO: Fix JSX expression */
+}
 }
 })
 }
@@ -318,7 +327,9 @@ metadata: {}
 total: memory.totalJSHeapSize,;
 limit: memory.jsHeapSizeLimit,;
 percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100}
-recordMemoryUsage(): void {/* TODO: Fix JSX expression */}
+recordMemoryUsage(): void {
+  /* TODO: Fix JSX expression */
+}
 }
 })
 }
@@ -387,7 +398,9 @@ return result
 */;
 getMetrics(): PerformanceMetric[] {}
 return [...this.metrics];}
-getMetrics(): PerformanceMetric[] {/* TODO: Fix JSX expression */}
+getMetrics(): PerformanceMetric[] {
+  /* TODO: Fix JSX expression */
+}
 }
 /**
 * Get metrics by category
@@ -429,7 +442,8 @@ if (this.webVitals.FID > 300) score -= 15;}
 calculatePerformanceScore(): number {}"
 let score=";";
 else if (this.webVitals.FCP > 1800) score -= 10;}
-calculatePerformanceScore(): number {/* TODO: Fix JSX expression */}
+calculatePerformanceScore(): number {
+  /* TODO: Fix JSX expression */
 }
 // LCP scoring;
 if (this.webVitals.LCP) {/* TODO: Fix JSX expression */}
@@ -471,23 +485,38 @@ recommendations.push()
 'Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources'
 );}
 }
-if (this.webVitals.LCP && this.webVitals.LCP > 2500) {}
+if (this.webVitals.LCP && this.webVitals.LCP > 2500) {
+  
+}
 recommendations.push()
 'Improve Largest Contentful Paint (LCP) - optimize largest element loading'
 );}
 }
-if (this.webVitals.CLS && this.webVitals.CLS > 0.1) {}
+if (this.webVitals.CLS && this.webVitals.CLS > 0.1) {
+  
+}
 recommendations.push()
 'Reduce Cumulative Layout Shift (CLS) - add size attributes to images and embeds'
 );}
 }
-if (this.webVitals.FID && this.webVitals.FID > 100) {}
+if (this.webVitals.FID && this.webVitals.FID > 100) {
+  
+}
 recommendations.push('Reduce First Input Delay (FID) - optimize JavaScript execution');}
-getRecommendations(): string[] {/* TODO: Fix JSX expression */}
+getRecommendations(): string[] {
+  /* TODO: Fix JSX expression */
 }
-if (this.webVitals.LCP && this.webVitals.LCP > 2500) {/* TODO: Fix JSX expression */}
 }
-if (this.webVitals.CLS && this.webVitals.CLS > 0.1) {/* TODO: Fix JSX expression */}
+if (this.webVitals.LCP && this.webVitals.LCP > 2500) {
+  /* TODO: Fix JSX expression */
+}
+}
+if (this.webVitals.CLS && this.webVitals.CLS > 0.1) {
+  /* TODO: Fix JSX expression */
+}
+}
+if (this.webVitals.FID && this.webVitals.FID > 100) {
+  /* TODO: Fix JSX expression */
 }
 if (this.webVitals.FID && this.webVitals.FID > 100) {/* TODO: Fix JSX expression */}
 }"
@@ -499,9 +528,11 @@ if (avgNetworkTime > 500) {}
 recommendations.push()
 'Optimize network requests - consider caching and reducing payload sizes'
 );}
-if (avgNetworkTime > 500) {/* TODO: Fix JSX expression */}
+if (avgNetworkTime > 500) {
+  /* TODO: Fix JSX expression */
 }
-return recommendations
+}
+return recommendations;
 }
 /**
 * Generate performance report
@@ -531,7 +562,9 @@ p: new Date()
 */;
 exportMetrics(): string {}
 return JSON.stringify(this.generateReport(), null, 2);}
-exportMetrics(): string {/* TODO: Fix JSX expression */}
+exportMetrics(): string {
+  /* TODO: Fix JSX expression */
+}
 }
 /**
 * Clear all metrics

@@ -40,18 +40,30 @@ const ServiceWorkerRegistrationPage: React.FC="()" => {const features: ";",;
                 <Mail className="&quot;mr-2" h-5 w-5&quot; />;</Mail>
                 Email Us</Mail>
             </div>
+
+            <//div>
           </div>
+
+          <//div>
         </section>
+
+        <//section>
       </div>
       <Footer /></Footer>
     </>
+
+    <//>
   );
 };
 ;
 export default ServiceWorkerRegistrationPage;
                 </div>
+
+                <//div>
               ))}
             </div>
+
+            <//div>
           </div>
           </div>"
           <div className="&quot;grid" grid-cols-1 md:grid-cols-2 gap-6&quot;>{benefits.map((benefit, index) => (</div>"
@@ -59,9 +71,15 @@ export default ServiceWorkerRegistrationPage;
                 <CheckCircle className="&quot;h-6" w-6 text-purple-400 mt-1 flex-shrink-0&quot; /></CheckCircle>"
                 <p className="&quot;text-gray-300" text-lg&quot;>{benefit}</p>
               </div>
+
+              <//div>
             ))}
           </div>
+
+          <//div>
         </div>
+
+        <//div>
       </section>
       {/* CTA Section */}"
       <section className="&quot;py-20" px-4 sm:px-6 lg:px-8&quot;></section>"

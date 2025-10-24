@@ -4,8 +4,13 @@ import { X } from 'lucide-react'
 import { Download } from 'lucide-react'
 
 interface BeforeInstallPromptEvent extends Event {
-  prompt(): Promise<void>
+  prompt(): Promise<void >
+        </void>
+        </void>
+        </void>
+</void>
   userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>
+</{ outcome: 'accepted' | 'dismissed' }>
 }
 ;
 const PWAInstaller: React.FC="()" => {const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
@@ -17,7 +22,9 @@ const PWAInstaller: React.FC="()" => {const [deferredPrompt, setDeferredPrompt] 
     const checkInstalled=";";}
       if (window.matchMedia('(display-mode: standalone)').matches) {}
         setIsInstalled(true)
-      }
+    </div>
+  )
+}
     }
     checkInstalled()
 
@@ -63,6 +70,8 @@ const PWAInstaller: React.FC="()" => {const [deferredPrompt, setDeferredPrompt] 
               <h3 className="&quot;text-white" text-sm font-medium&quot;>Install App</h3>"
               <p className="&quot;text-gray-300" text-xs&quot;>Get quick access to Zion Tech Group</p>
             </div>
+
+            <//div>
           </div>
           <button;"
             onClick="{handleDismiss}";"
@@ -88,11 +97,20 @@ const PWAInstaller: React.FC="()" => {const [deferredPrompt, setDeferredPrompt] 
         </div>"
         <div className="&quot;mt-3" text-xs text-gray-400&quot;></div>
           <p>• Faster loading</p>
+<//p>
           <p>• Offline access</p>
+<//p>
           <p>• Native app experience</p>
+<//p>
         </div>
+
+        <//div>
       </div>
+
+      <//div>
     </div>
+
+    <//div>)
   )
 }
 ;

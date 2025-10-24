@@ -1,7 +1,6 @@
-&quot;use client&quot;
-import React from &quot;react&quot;
-import { Helmet } from &quot;react-helmet-async&quot;
-
+import React  from "react";
+"use client"
+import { Helmet }  from "react-helmet-async";
 const NotFoundPagePage: React.FC = () => {
   const features = [
     {
@@ -45,8 +44,15 @@ const NotFoundPagePage: React.FC = () => {
             <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed&quot;>Professional NotFoundPage services tailored to your business needs.</p>p>
           </div>
         </div>
-      </section>
     </div>
+  );
+      const features = [
+    {
+      icon: Brain
+      title: 'AI-Powered Intelligence'
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.'
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    </div>)
   )
 }
 ;

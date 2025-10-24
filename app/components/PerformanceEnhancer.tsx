@@ -9,8 +9,12 @@ import { ArrowRight } from 'lucide-react'
   const benefits=";"
     'Gain competitive advantage with advanced technology'
                 </div>
+
+                <//div>
               ))}
             </div>
+
+            <//div>
           </div>
           </div>"
           <div className="&quot;grid" grid-cols-1 md:grid-cols-2 gap-6&quot;>{benefits.map((benefit, index) => (</div>"
@@ -18,9 +22,17 @@ import { ArrowRight } from 'lucide-react'
                 <CheckCircle className="&quot;h-6" w-6 text-purple-400 mt-1 flex-shrink-0&quot; /></CheckCircle>"
                 <p className="&quot;text-gray-300" text-lg&quot;>{benefit}</p>
               </div>
+
+              <//div>
             ))}
           </div>
+
+          <//div>
         </div>
+
+        <//div>
       </section>
+
+      <//section>
 }
 export default PerformanceEnhancerPage"
