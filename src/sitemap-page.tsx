@@ -1,8 +1,16 @@
 import React from 'react';
-    { url: '/terms', title: 'Terms of Service', priority: '0.3' }]
-  return (
-      </div>
-</>
-  )
+
+interface Sitemap PageProps {
+  className?: string;
 }
-export default Page;
+
+const Sitemap Page: React.FC<Sitemap PageProps> = ({ className = '' }) => {
+  return (
+    <div className={className}>
+      <h2>Sitemap Page</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default Sitemap Page;

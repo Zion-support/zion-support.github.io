@@ -1,76 +1,43 @@
-import React from 'react';
-import { CheckCircle, Phone, Star, TrendingUp, Check } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, Phone, TrendingUp } from 'lucide-react';
+'use client';
 
+import React from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Machine Learning - Zion Tech Group',
+  description: 'Professional Machine Learning solutions for modern businesses.',
+  keywords: 'AI solutions, IT services, technology services',
+  openGraph: {
+    title: 'Machine Learning - Zion Tech Group',
+    description: 'Professional Machine Learning solutions for modern businesses.',
+    type: 'website',
+    url: 'https://ziontechgroup.com/',
+  },
+};
 
 const Page: React.FC = () => {
-  const feature,
-      s = []
-    'Custom ML model development and training'
-    'Predictive analytics and forecasting'
-    'Data preprocessing and feature engineering'
-    'Model optimization and hyperparameter tuning'
-    'Real-time inference and deployment'
-    'A/B testing and performance monitoring'
-    'Integration with existing systems'
-    'Continuous learning and model updates'
-  ]
-
-  const benefits = [];
-    '40% better prediction accuracy',
-    '60% faster insights generation',
-    '50% reduction in manual analysis',
-    '30% improvement in decision making',
-    '95% model reliability',
-    '80% cost savings on analytics'
-  ]
-
-  constuseCase,
-      s = [
-    {
-      title: 'Predictive Analytics'
-      descriptio,
-      n: 'Forecast sales, demand, and market trends with high accuracy'
-      icon: '📈'
-   }
-    {title: 'Customer Segmentation'
-      descriptio,
-      n: 'Identify and target customer groups for personalized marketing'
-      ico,
-      n: '👥'
-   }
-    {title: 'Fraud Detection'
-      descriptio,
-      n: 'Detect and prevent fraudulent activities in real-time'
-      ico,
-      n: '🛡️'
-   }
-    {title: 'Recommendation Systems'
-      descriptio,
-      n: 'Provide personalized recommendations to increase engagement'
-      ico,
-      n: '🎯'
-   }
-    {title: 'Process Optimization'
-      descriptio,
-      n: 'Optimize business processes and reduce operational costs'
-      ico,
-      n: '⚙️'
-   }
-    {title: 'Risk Assessment'
-      descriptio,
-      n: 'Evaluate and mitigate business risks with data-driven insights'
-      ico,
-      n: '⚠️'
-    }
-  ]
-
-const Page = () => {};
   return (
-</>
-  )
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="text-center">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+            Machine Learning
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional Machine Learning solutions for modern businesses.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+              Get Started
+            </a>
+            <a href="/services" className="border border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors">
+              Learn More
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
-;
+
 export default Page;

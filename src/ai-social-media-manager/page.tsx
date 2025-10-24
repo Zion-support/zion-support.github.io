@@ -1,44 +1,43 @@
+'use client';
+
 import React from 'react';
-import { CheckCircle, Phone, Star, TrendingUp, Check } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, Phone, TrendingUp } from 'lucide-react';
+import { Metadata } from 'next';
 
-
-constAISocialMediaManagerPage: React.FC = () => {constfeature,
-      s = []
-    'AI-powered content creation and curation'
-    'Smart scheduling across all platforms'
-    'Advanced analytics and performance insights'
-    'Audience intelligence and targeting'
-    'Hashtag optimization and trend analysis'
-    'Competitor analysis and benchmarking'
-    'Automated engagement and responses'
-    'Multi-platform campaign management'
-  ]
-
-  const benefits = [];
-    '200% increase in engagement rates',
-    '20+ hours saved per week',
-    '40% improvement in reach',
-    '50% better ROI on campaigns',
-    '95% content quality consistency',
-    '60% faster content creation'
-  ]
-
-  const platforms = [];
-    { name: 'Facebook', icon: '📘', users: '2.9B' },
-    { name: 'Instagram', icon: '📷', users: '1.4B' },
-    { name: 'Twitter', icon: '🐦', users: '450M' },
-    { name: 'LinkedIn', icon: '💼', users: '900M' },
-    { name: 'TikTok', icon: '🎵', users: '1B' },
-    { name: 'YouTube', icon: '📺', users: '2.7B' }
-  ]
-
-const Page = () => {};
-  return (
-</>
-  )
+export const metadata: Metadata = {
+  title: 'Ai Social Media Manager - Zion Tech Group',
+  description: 'Professional Ai Social Media Manager solutions for modern businesses.',
+  keywords: 'AI solutions, IT services, technology services',
+  openGraph: {
+    title: 'Ai Social Media Manager - Zion Tech Group',
+    description: 'Professional Ai Social Media Manager solutions for modern businesses.',
+    type: 'website',
+    url: 'https://ziontechgroup.com/',
+  },
 };
-;
+
+const Page: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="text-center">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+            Ai Social Media Manager
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional Ai Social Media Manager solutions for modern businesses.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+              Get Started
+            </a>
+            <a href="/services" className="border border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors">
+              Learn More
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export default Page;
