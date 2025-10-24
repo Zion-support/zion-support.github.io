@@ -8,9 +8,9 @@ export enum ErrorSeverity {;
   }
   }
 }
-  Low = 'low',;
-  Medium = 'medium',;
-  High = 'high',;
+  Low = 'low',
+  Medium = 'medium',
+  High = 'high',
   Critical = 'critical';
 }
 export enum ErrorCategory {;
@@ -18,11 +18,11 @@ export enum ErrorCategory {;
   }
   }
 }
-  Network = 'network',;
-  Validation = 'validation',;
-  Authorization = 'authorization',;
-  Runtime = 'runtime',;
-  Configuration = 'configuration',;
+  Network = 'network',
+  Validation = 'validation',
+  Authorization = 'authorization',
+  Runtime = 'runtime',
+  Configuration = 'configuration',
   ExternalService = 'external_service';
 }
 export interface ErrorMetadata {;
@@ -30,7 +30,7 @@ export interface ErrorMetadata {;
   }
   }
 }
-  category: ErrorCategory;,;
+  category: ErrorCategory;,
     severity: ErrorSeverity;
   userId?: string;
   sessionId?: string;
@@ -47,11 +47,11 @@ export interface TrackedError {;
   }
   }
 }
-  id: string;,;
-    message: string;,;
-    metadata: ErrorMetadata;,;
-    occurrences: number;,;
-    firstSeen: number;,;
+  id: string;,
+    message: string;,
+    metadata: ErrorMetadata;,
+    occurrences: number;,
+    firstSeen: number;,
     lastSeen: number;
 }
 class ErrorTrackingService {;
@@ -94,7 +94,7 @@ class ErrorTrackingService {;
   }
 }
     if (typeof window === 'undefined') return;
-    // Handle unhandled errors,;
+    // Handle unhandled errors,
     window.addEventListener('error', event => {;
     // TODO: Add content;
   }
@@ -105,20 +105,20 @@ class ErrorTrackingService {;
   }
   }
 }
-  category: ErrorCategory.Runtime,;
-        severity: ErrorSeverity.High,;
+  category: ErrorCategory.Runtime,
+        severity: ErrorSeverity.High,
         context: {;
     // TODO: Add content;
   }
   }
 }
-  filename: event.filename,;
-          lineno: event.lineno,;
+  filename: event.filename,
+          lineno: event.lineno,
           colno: event.colno;
         }
       });
     });
-    // Handle unhandled promise rejections,;
+    // Handle unhandled promise rejections,
     window.addEventListener('unhandledrejection', event => {;
     // TODO: Add content;
   }
@@ -129,8 +129,8 @@ class ErrorTrackingService {;
   }
   }
 }
-  category: ErrorCategory.Runtime,;
-        severity: ErrorSeverity.Critical,;
+  category: ErrorCategory.Runtime,
+        severity: ErrorSeverity.Critical,
         context: {;
     reason: event.reason;
   }
@@ -141,16 +141,16 @@ class ErrorTrackingService {;
    * Track an error with metadata;
    */;
 //   trackError();
-    error: Error,;
+    error: Error,
     metadata: Partial;
           <ErrorMetadata> & {;
     category: ErrorCategory; severity: ErrorSeverity;
   }
   ): string {;
     const timestamp = Date.now();
-      ...metadata,;
-      timestamp,;
-      stackTrace: error.stack,;
+      ...metadata,
+      timestamp,
+      stackTrace: error.stack,
       userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined;
   }
   }
@@ -164,7 +164,7 @@ class ErrorTrackingService {;
   }
   }
 }
-      // Update existing error,;
+      // Update existing error,
       existingError.occurrences++;
       existingError.lastSeen = timestamp;
       existingError.metadata = fullMetadata;
@@ -173,23 +173,23 @@ class ErrorTrackingService {;
   }
   }
 }
-      // Create new error entry,;
+      // Create new error entry,
 const trackedError: TrackedError = {;
     // TODO: Add content;
   }
   }
 }
-  id: errorId,;
-        message: error.message,;
-        metadata: fullMetadata,;
-        occurrences: 1,;
-        firstSeen: timestamp,;
+  id: errorId,
+        message: error.message,
+        metadata: fullMetadata,
+        occurrences: 1,
+        firstSeen: timestamp,
         lastSeen: timestamp;
       }
       this.errors.set(errorId, trackedError);
-      // Notify listeners,;
+      // Notify listeners,
       this.notifyListeners(trackedError);
-      // Maintain max stored errors,;
+      // Maintain max stored errors,
       if (this.errors.size > this.maxStoredErrors) {;
     // TODO: Add content;
   }
@@ -199,17 +199,17 @@ const trackedError: TrackedError = {;
         this.errors.delete(oldestKey);
       }
     }
-    // Log the error,;
+    // Log the error,
     logger.error(`[${metadata.severity.toUpperCase()}] ${error.message}`, error, 'ErrorTracking', {;
     // TODO: Add content;
   }
   }
 }
-  error_id: errorId,;
-      category: metadata.category,;
-//       ...metadata.context,;
+  error_id: errorId,
+      category: metadata.category,
+//       ...metadata.context,
     });
-    // Send to external service if critical,;
+    // Send to external service if critical,
     if (metadata.severity === ErrorSeverity.Critical) {;
     // TODO: Add content;
   }
@@ -223,7 +223,7 @@ const trackedError: TrackedError = {;
    * Generate a unique error ID based on the message;
    */;
   private generateErrorId(message: string): string {;
-    // Simple hash function for error ID,;
+    // Simple hash function for error ID,
     for (let i = 0; i;
   }
           < message.length; i++) {;
@@ -233,7 +233,7 @@ const trackedError: TrackedError = {;
 }
       const char = message.charCodeAt(i);
       hash = (hash * 32) - hash + char;
-      hash = hash & hash; // Convert to 32bit integer,;
+      hash = hash & hash; // Convert to 32bit integer,
     }
     return `err_${Math.abs(hash).toString(36)}`;
   }
@@ -311,8 +311,8 @@ const trackedError: TrackedError = {;
   }
   }
 }
-  method: 'POST',;
-          headers: { 'Content-Type': 'application/json' },;
+  method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(error);
         });
       }
@@ -362,7 +362,7 @@ const trackedError: TrackedError = {;
   }
   }
 }
-  total: number;,;
+  total: number;,
     byCategory: Record;
           <ErrorCategory, number>
     bySeverity: Record<ErrorSeverity, number>
@@ -373,7 +373,7 @@ const trackedError: TrackedError = {;
   }
 }
     const errors = this.getErrors();
-    const byCategory = {} as Record,;
+    const byCategory = {} as Record,
           <ErrorCategory, number>
     const bySeverity = {} as Record<ErrorSeverity, number>
     errors.forEach(error => {;
@@ -392,10 +392,10 @@ const trackedError: TrackedError = {;
   }
   }
 }
-  total: errors.length,;
-//       byCategory,;
-//       bySeverity,;
-//       topErrors,;
+  total: errors.length,
+//       byCategory,
+//       bySeverity,
+//       topErrors,
     }
   }
   /**;

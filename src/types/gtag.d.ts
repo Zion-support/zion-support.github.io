@@ -18,8 +18,8 @@ interface Window {;
   }
 }
   gtag?: ();
-  command: GtagCommand,;
-    targetId: string | Date,;
+  command: GtagCommand,
+    targetId: string | Date,
 config?: GtagEvent;
   ) => void;
   dataLayer?: unknown[];

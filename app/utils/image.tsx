@@ -5,22 +5,22 @@ import React, {useState, useCallback } from 'react';
 interface ImageProps {src: string,}
 alt: string;}
 interface ImageProps {}
-src: string,;
+src: string,
 alt: string;
 width?: number;
 height?: number;
 className?: string;
 priority?: boolean
-_quality?: number,;
-src: string,;
-alt: string,;
+_quality?: number,
+src: string,
+alt: string,
 width?: number;
 height?: number;
 className?: string;
 priority?: boolean
 _quality?: number;
-src: string,;
-alt: string,;
+src: string,
+alt: string,
 width?: number;
 height?: number;
 className?: string;
@@ -37,21 +37,21 @@ onError?: () => void;}
 export const Image: React.FC<ImageProps>= ({;}</ImageProps>;
 export const Image: React.FC<ImageProps> = ({}</ImageProps>
 src,</ImageProps>;
-export const Image: React.FC<ImageProps> = ({,;
+export const Image: React.FC<ImageProps> = ({,
 src;
-alt,;
-width,;
-height,;
-className,;
+alt,
+width,
+height,
+className,
 priority: "false,";"
 quality: "75,";"
 placeholder: "'empty',";
-blurDataURL,;"
+blurDataURL,"
 fill: "false,";
-sizes,;
-style,;}
+sizes,
+style,}
 onLoad,}
-onError,;}
+onError,}
 ...props}
 }) => {}
 const [, setIsLoaded] = useState(false);
@@ -65,17 +65,17 @@ if (onError) onError();}
 const imageStyle: React.CSSProperties="{"
 ...style
 ...(fill && {
-position: 'absolute',;}
+position: 'absolute',}
 top: 0,}
-left: 0,;}"
-const imageStyle: React.CSSProperties="{}"
+left: 0,}
+const imageStyle: React.CSSProperties="{}
 ...style,
 ...(fill && {}
-position: 'absolute',;
-top: 0,;
-left: 0,;
-width: '100%',;
-height: '100%',;
+position: 'absolute',
+top: 0,
+left: 0,
+width: '100%',
+height: '100%',
 objectFit: 'cover'}
 })</ImageProps>
 }</ImageProps>;
@@ -95,9 +95,9 @@ Image: React.FC<ImageProps>= ({/* TODO: Fix JSX expression */})</div>
 }) => {/* TODO: Fix JSX expression */}
 }, [onLoad]);"
 export const handleError=";";"
-loading="{priority" ? 'eager' : 'lazy'}"
-onLoad="{handleLoad}";"
-onError="{handleError}"
+loading="{priority" ? 'eager' : 'lazy'}
+onLoad="{handleLoad};
+onError="{handleError}
 {...props}
 >)</img>
 }</img>;

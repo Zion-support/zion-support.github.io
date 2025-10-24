@@ -2,12 +2,12 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import {;
-    Target,;
-    Shield,;
-    Eye,;
-    Camera,;
-    Target,;
-    Shield,;
+    Target,
+    Shield,
+    Eye,
+    Camera,
+    Target,
+    Shield,
     Settings from 'lucide-react';
   }
 const AIComputerVisionPage: React.FC = () => {;
@@ -17,62 +17,62 @@ const AIComputerVisionPage: React.FC = () => {;
   }
   }
 }
-  icon: Eye,;
-      title: 'Object Detection',;
-      description: 'value',;
+  icon: Eye,
+      title: 'Object Detection',
+      description: 'value',
   ];
       benefits: ['Real-time detection', 'Multi-class recognition', 'Custom model training'];
-    },;
-      icon: Camera,;
-      title: 'Image Classification',;
-      description: 'Automated image categorization and content analysis',;
+    },
+      icon: Camera,
+      title: 'Image Classification',
+      description: 'Automated image categorization and content analysis',
       benefits: ['99%+ accuracy', 'Batch processing', 'Custom categories'];
-      icon: Target,;
-      title: 'Facial Recognition',;
-      description: 'Secure and accurate facial recognition technology',;
+      icon: Target,
+      title: 'Facial Recognition',
+      description: 'Secure and accurate facial recognition technology',
       benefits: ['Identity verification', 'Access control', 'Privacy protection'];
     }
   ];
   const applications = [;
-    title: 'Security & Surveillance',;
-      description: 'Intelligent security monitoring and threat detection systems',;
-      icon: Shield,;
+    title: 'Security & Surveillance',
+      description: 'Intelligent security monitoring and threat detection systems',
+      icon: Shield,
   ];
       useCases: ['Intrusion detection', 'Person tracking', 'Anomaly detection'];
-      title: 'Manufacturing',;
-      description: 'Quality control and automated inspection systems',;
-      icon: Settings,;
+      title: 'Manufacturing',
+      description: 'Quality control and automated inspection systems',
+      icon: Settings,
       useCases: ['Defect detection', 'Quality assurance', 'Process monitoring'];
   const pricing = [;
-    name: 'Starter',;
-      price: '$499/month',;
-      description: 'value',;
+    name: 'Starter',
+      price: '$499/month',
+      description: 'value',
   ];
       features: [;
-  // TODO: Add items,;
+  // TODO: Add items,
 ];
-//         'Up to 1,000 images/month',;
-//         'Basic models',;
-//         'Email support',;
+//         'Up to 1,000 images/month',
+//         'Basic models',
+//         'Email support',
 //         'Standard API';
-//       ],;
-      popular: false,;
-      name: 'Professional',;
-      price: '$1,999/month',;
-      description: 'Ideal for growing businesses',;
-        'Up to 10,000 images/month',;
-        'Advanced models',;
-        'Priority support',;
-        'Custom training',;
+//       ],
+      popular: false,
+      name: 'Professional',
+      price: '$1,999/month',
+      description: 'Ideal for growing businesses',
+        'Up to 10,000 images/month',
+        'Advanced models',
+        'Priority support',
+        'Custom training',
         'API access';
-      popular: true,;
-      name: 'Enterprise',;
-      price: 'Custom',;
-      description: 'For large organizations',;
-        'Unlimited images',;
-        'Custom models',;
-        'Dedicated support',;
-        'On-premise deployment',;
+      popular: true,
+      name: 'Enterprise',
+      price: 'Custom',
+      description: 'For large organizations',
+        'Unlimited images',
+        'Custom models',
+        'Dedicated support',
+        'On-premise deployment',
         'White-label solutions';
   return (;
           <div>Coming Soon</div>
@@ -85,20 +85,20 @@ const AIComputerVisionPage: React.FC = () => {;
   }
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
-// AI Computer Vision,;
+// AI Computer Vision,
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse">
-// Advanced Visual Intelligence Solutions,;
+// Advanced Visual Intelligence Solutions,
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-Transform your business with cutting-edge computer vision technology. From object detection to facial recognition,;
+Transform your business with cutting-edge computer vision technology. From object detection to facial recognition,
             our AI-powered visual intelligence solutions help you see and understand the world like never before.;
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a;
               href="/contact";
               className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
 // >
-//               Get Started,;
+//               Get Started,
           </a>
               href="tel:+13024640950";
               className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
@@ -111,11 +111,11 @@ Transform your business with cutting-edge computer vision technology. From objec
   }
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
-// Core Capabilities,;
+// Core Capabilities,
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {;
-    features.map((feature,;
+    features.map((feature,
     index) => ();
   }
   }
@@ -134,7 +134,7 @@ Transform your business with cutting-edge computer vision technology. From objec
   }
                 <ul className="space-y-2">
                   {;
-    feature.benefits.map((benefit,;
+    feature.benefits.map((benefit,
     benefitIndex) => ();
   }
   }
@@ -153,7 +153,7 @@ Transform your business with cutting-edge computer vision technology. From objec
             Industry Applications;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {;
-    applications.map((application,;
+    applications.map((application,
     index) => ();
   }
   }
@@ -173,7 +173,7 @@ Transform your business with cutting-edge computer vision technology. From objec
                 <div className="space-y-2">
                   <h4 className="text-sm font-semibold text-cyan-400 mb-2">Use Cases:</h4>
                   {;
-    application.useCases.map((useCase,;
+    application.useCases.map((useCase,
     useCaseIndex) => ();
   }
   }
@@ -189,7 +189,7 @@ Transform your business with cutting-edge computer vision technology. From objec
             Choose Your Plan;
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {;
-    pricing.map((plan,;
+    pricing.map((plan,
     index) => ();
   }
   }
@@ -210,7 +210,7 @@ Most Popular;
                   <p className="text-gray-400 text-sm">{plan.description}</p>
                 <ul className="space-y-3 mb-8">
                   {;
-    plan.features.map((feature,;
+    plan.features.map((feature,
     featureIndex) => ();
   }
   }
@@ -226,7 +226,7 @@ Most Popular;
   }
   }
 }
-//                     plan.popular,;
+//                     plan.popular,
 //                       ? 'cyber-button';
                       : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900';
                   }`}

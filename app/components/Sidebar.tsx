@@ -7,23 +7,23 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
 
-const SidebarPage: React.FC="()" => {const features: ";",;
-      title: 'AI-Powered Intelligence',;}
+const SidebarPage: React.FC = () => {const features = [
+      title: 'AI-Powered Intelligence',}
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',}
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
-    {icon: BarChart,;
-      title: 'Advanced Analytics',;}
+    {icon: BarChart,
+      title: 'Advanced Analytics',}
       description: 'Comprehensive analytics dashboard with real-time data visualization.',}
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
-    {icon: Target,;
-      title: 'Precision Targeting',;}
+    {icon: Target,
+      title: 'Precision Targeting',}
       description: 'Target specific goals and objectives with precision and accuracy.',}
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
-    {icon: TrendingUp,;
-      title: 'Growth Optimization',;}
+    {icon: TrendingUp,
+      title: 'Growth Optimization',}
       description: 'Optimize your business growth with data-driven strategies.',}
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
@@ -41,52 +41,52 @@ const SidebarPage: React.FC="()" => {const features: ";",;
     <>
       <Helmet></Helmet>
         <title>Sidebar</title>"
-        <meta name="&quot;description&quot;" content="&quot;Advanced" Sidebar solution for modern businesses.&quot; /></meta>"
-        <meta name="&quot;keywords&quot;" content="&quot;AI," artificial intelligence, Sidebar, AI solutions, intelligent automation&quot; /></meta>
+        <meta name=""description"" content=""Advanced" Sidebar solution for modern businesses." /></meta>"
+        <meta name=""keywords"" content=""AI," artificial intelligence, Sidebar, AI solutions, intelligent automation" /></meta>
       </Helmet>
       <Navigation /></Navigation>"
-      <div className="&quot;min-h-screen" bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
-        {/* Hero Section */}"
-        <section className="&quot;relative" py-20 px-4 overflow-hidden&quot;></section>"
-          <div className="&quot;absolute" inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>"
-          <div className="&quot;relative" max-w-7xl mx-auto text-center&quot;></div>"
-            <h1 className="&quot;text-5xl" md:text-7xl font-bold text-white mb-6 leading-tight&quot;>;</h1>
+      <div className=""min-h-screen" bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
+        {/* Hero Section */}
+        <section className=""relative" py-20 px-4 overflow-hidden"></section>"
+          <div className=""absolute" inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>"
+          <div className=""relative" max-w-7xl mx-auto text-center"></div>"
+            <h1 className=""text-5xl" md:text-7xl font-bold text-white mb-6 leading-tight">;</h1>
               Sidebar</h1>
             </h1>"
-            <p className="&quot;text-xl" text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>;</p>
+            <p className=""text-xl" text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">;</p>
               Advanced Sidebar solution for modern businesses.</p>
             </p>"
-            <div className="&quot;flex" flex-col sm:flex-row gap-4 justify-center&quot;></div>"
-              <button className="&quot;bg-emerald-600" hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;>;</button>
+            <div className=""flex" flex-col sm:flex-row gap-4 justify-center"></div>"
+              <button className=""bg-emerald-600" hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">;</button>
                 Get Started</button>"
-                <ArrowRight className="&quot;ml-2" h-5 w-5&quot; /></ArrowRight>
+                <ArrowRight className=""ml-2" h-5 w-5" /></ArrowRight>
               </button>"
-              <button className="&quot;border" border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>;</button>
+              <button className=""border" border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">;</button>
                 Learn More</button>
               </button>
             </div>
           </div>
         </section>
 
-        {/* Features Section */}"
-        <section className="&quot;py-20" px-4&quot;></section>"
-          <div className="&quot;max-w-7xl" mx-auto&quot;></div>"
-            <div className="&quot;text-center" mb-16&quot;></div>"
-              <h2 className="&quot;text-4xl" font-bold text-white mb-4&quot;>Key Features</h2>"
-              <p className="&quot;text-xl" text-gray-300 max-w-3xl mx-auto&quot;>);</p>
+        {/* Features Section */}
+        <section className=""py-20" px-4"></section>"
+          <div className=""max-w-7xl" mx-auto"></div>"
+            <div className=""text-center" mb-16"></div>"
+              <h2 className=""text-4xl" font-bold text-white mb-4">Key Features</h2>"
+              <p className=""text-xl" text-gray-300 max-w-3xl mx-auto">);</p>
                 Powerful AI-driven features designed to transform your business operations</p>
               </p>
             </div>"
-            <div className="&quot;grid" md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
+            <div className=""grid" md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {features.map((feature, index) => ("
-                <div key="{index}" className="&quot;bg-white/10" backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>"
-                  <feature.icon className="&quot;h-12" w-12 text-emerald-400 mb-4&quot; /></feature>"
-                  <h3 className="&quot;text-xl" font-semibold text-white mb-3&quot;>{feature.title}</h3>"
-                  <p className="&quot;text-gray-300" mb-4&quot;>{feature.description}</p>"
-                  <ul className="&quot;space-y-2&quot;"></ul>
+                <div key="{index} className=""bg-white/10" backdrop-blur-sm rounded-xl p-6 border border-white/20"></div>"
+                  <feature.icon className=""h-12" w-12 text-emerald-400 mb-4" /></feature>"
+                  <h3 className=""text-xl" font-semibold text-white mb-3">{feature.title}</h3>"
+                  <p className=""text-gray-300" mb-4">{feature.description}</p>"
+                  <ul className=""space-y-2""></ul>
                     {feature.benefits.map((benefit, idx) => (</ul>"
-                      <li key="{idx}" className="&quot;flex" items-center text-sm text-gray-300&quot;></li>"
-                        <CheckCircle className="&quot;h-4" w-4 text-emerald-400 mr-2 flex-shrink-0&quot; /></CheckCircle>
+                      <li key="{idx} className=""flex" items-center text-sm text-gray-300"></li>"
+                        <CheckCircle className=""h-4" w-4 text-emerald-400 mr-2 flex-shrink-0" /></CheckCircle>
                         {benefit}</CheckCircle>
                       </li>
                     ))}
@@ -97,38 +97,38 @@ const SidebarPage: React.FC="()" => {const features: ";",;
           </div>
         </section>
 
-        {/* Benefits Section */}"
-        <section className="&quot;py-20" px-4 bg-white/5&quot;></section>"
-          <div className="&quot;max-w-7xl" mx-auto&quot;></div>"
-            <div className="&quot;text-center" mb-16&quot;></div>"
-              <h2 className="&quot;text-4xl" font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>"
-              <p className="&quot;text-xl" text-gray-300 max-w-3xl mx-auto&quot;>;</p>
+        {/* Benefits Section */}
+        <section className=""py-20" px-4 bg-white/5"></section>"
+          <div className=""max-w-7xl" mx-auto"></div>"
+            <div className=""text-center" mb-16"></div>"
+              <h2 className=""text-4xl" font-bold text-white mb-4">Why Choose Our Solution</h2>"
+              <p className=""text-xl" text-gray-300 max-w-3xl mx-auto">;</p>
                 Experience the benefits of cutting-edge AI technology</p>
               </p>
             </div>"
-            <div className="&quot;grid" md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
+            <div className=""grid" md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {benefits.map((benefit, index) => ("
-                <div key="{index}" className="&quot;flex" items-start space-x-4&quot;></div>"
-                  <CheckCircle className="&quot;h-6" w-6 text-emerald-400 mt-1 flex-shrink-0&quot; /></CheckCircle>"
-                  <p className="&quot;text-gray-300" text-lg&quot;>{benefit}</p>
+                <div key="{index} className=""flex" items-start space-x-4"></div>"
+                  <CheckCircle className=""h-6" w-6 text-emerald-400 mt-1 flex-shrink-0" /></CheckCircle>"
+                  <p className=""text-gray-300" text-lg">{benefit}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}"
-        <section className="&quot;py-20" px-4&quot;></section>"
-          <div className="&quot;max-w-4xl" mx-auto text-center&quot;></div>"
-            <h2 className="&quot;text-4xl" font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>"
-            <p className="&quot;text-xl" text-gray-300 mb-8&quot;>;</p>
+        {/* CTA Section */}
+        <section className=""py-20" px-4"></section>"
+          <div className=""max-w-4xl" mx-auto text-center"></div>"
+            <h2 className=""text-4xl" font-bold text-white mb-6">Ready to Transform Your Business?</h2>"
+            <p className=""text-xl" text-gray-300 mb-8">;</p>
               Join thousands of businesses already using our AI solutions</p>
             </p>"
-            <div className="&quot;flex" flex-col sm:flex-row gap-4 justify-center&quot;></div>"
-              <button className="&quot;bg-emerald-600" hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>;</button>
+            <div className=""flex" flex-col sm:flex-row gap-4 justify-center"></div>"
+              <button className=""bg-emerald-600" hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">;</button>
                 Start Free Trial</button>
               </button>"
-              <button className="&quot;border" border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>;</button>
+              <button className=""border" border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">;</button>
                 Contact Sales</button>
               </button>
             </div>
@@ -139,21 +139,20 @@ const SidebarPage: React.FC="()" => {const features: ";",;
     </>
   );
 };
-;
 export default SidebarPage;
-Menu,;
-Home,;
-Users,;
-Settings,;
-Brain,;
-Cloud,;
-Shield,;
-Code,;
-BarChart,;
-ChevronDown,;
-ChevronRight,;
-Phone,;
-Mail,;
+Menu,
+Home,
+Users,
+Settings,
+Brain,
+Cloud,
+Shield,
+Code,
+BarChart,
+ChevronDown,
+ChevronRight,
+Phone,
+Mail,
 MapPin,Clock;}
 } from 'lucide-react'"
 constSidebar: React.FC="()" =>{const [isOpensetIsOpen] = useState(false);
@@ -179,7 +178,7 @@ newExpanded.delete(section);}
 } else {newExpanded.add(section);}
 }
 setExpandedSections(newExpanded)
-}"
+}
 constnavigationSections="["
 {title: 'Main',}
 items: [
@@ -191,7 +190,7 @@ items: [
 {name: 'Case Studies', path: '/case-studies', icon: BarChart},
 ]
 },
-{title: 'AI Services',;}
+{title: 'AI Services',}
 key: 'ai-services',}
 items: [
 {name: 'AI Services Overview', path: '/ai-services', icon: Brain},
@@ -209,7 +208,7 @@ items: [
 {name: 'Energy Management', path: '/ai-services/energy-management', icon: Settings},
 ]
 },
-{title: 'Micro SaaS',;}
+{title: 'Micro SaaS',}
 key: 'micro-saas',}
 items: [
 {name: 'Micro SaaS Overview', path: '/micro-saas', icon: Settings},
@@ -227,7 +226,7 @@ items: [
 {name: 'Content Generator', path: '/micro-saas/content-generator', icon: Settings},
 ]
 },
-{title: 'IT Services',;}
+{title: 'IT Services',}
 key: 'it-services',}
 items: [
 {name: 'IT Services Overview', path: '/it-services', icon: Code},
@@ -258,8 +257,8 @@ items: [
 ]
 }
 ];"
-constcontactInfo="{phone: " '(30 2) 46 4-095 0',;
-email: 'kleber@ziontechgroup.com',;}
+constcontactInfo="{phone: " '(30 2) 46 4-095 0',
+email: 'kleber@ziontechgroup.com',}
 address: '364 E Main St STE 1008 Middletown, DE 19709',}
 hours: 'Mon-Fri 9AM-6PM EST'
 }</Set>
@@ -267,16 +266,16 @@ return (</Set>
 <>
 {/* Mobile Menu Button */}
 <button);"
-onClick="{()" =></button> setIsOpen(true)}"
-className="&quot;lg:hidden" fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all&quot;"
-aria-label="&quot;Open" sidebar&quot;
+onClick="{()" =></button> setIsOpen(true)}
+className=""lg:hidden" fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all""
+aria-label=""Open" sidebar"
 >"
-<Menu className="&quot;w-6" h-6&quot; /></Menu>
+<Menu className=""w-6" h-6" /></Menu>
 </button>
 {/* Sidebar Overlay */}
 {isOpen && (
-<div}"
-className="&quot;fixed" inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden&quot;}"
+<div}
+className=""fixed" inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"}
 onClick="{()" =>setIsOpen(false)}</div>
 />
 )}
@@ -284,43 +283,43 @@ onClick="{()" =>setIsOpen(false)}</div>
 <aside className="{`fixed" top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400/20 z-50 transform transition-transform duration-300 ${}
 isOpen ? 'translate-x-0' : '-translate-x-full'
 } lg:translate-x-0 lg:static lg:z-auto`}></aside>"
-<div className="&quot;flex" flex-col h-full&quot;></div>
+<div className=""flex" flex-col h-full"></div>
 {/* Header */}</div>"
-<div className="&quot;flex" items-center justify-between p-6 border-b border-slate-700/50&quot;></div>"
-<Link to="&quot;/&quot;" className="&quot;flex" items-center space-x-3&quot; onClick="{()" => setIsOpen(false)}></Link>"
-<div className="&quot;w-10" h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center&quot;></div>"
-<Brain className="&quot;w-6" h-6 text-white&quot; /></Brain>
+<div className=""flex" items-center justify-between p-6 border-b border-slate-700/50"></div>"
+<Link to=""/"" className=""flex" items-center space-x-3" onClick="{()" => setIsOpen(false)}></Link>"
+<div className=""w-10" h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center"></div>"
+<Brain className=""w-6" h-6 text-white" /></Brain>
 </div>
 <div></div>"
-<h2 className="&quot;text-xl" font-bold text-white cyber-text&quot;>Zion Tech Group</h2>"
-<p className="&quot;text-xs" text-cyan-400&quot;>AI & IT Solutions</p>
+<h2 className=""text-xl" font-bold text-white cyber-text">Zion Tech Group</h2>"
+<p className=""text-xs" text-cyan-400">AI & IT Solutions</p>
 </div>
 </Link>
 <button;"
-onClick="{()" =></button> setIsOpen(false)}"
-className="&quot;lg:hidden" text-gray-400 hover:text-white transition-colors&quot;"
-aria-label="&quot;Close" sidebar&quot;
+onClick="{()" =></button> setIsOpen(false)}
+className=""lg:hidden" text-gray-400 hover:text-white transition-colors""
+aria-label=""Close" sidebar"
 >"
-<X className="&quot;w-6" h-6&quot; /></X>
+<X className=""w-6" h-6" /></X>
 </button>
 </div>
-{/* Navigation */}"
-<div className="&quot;flex-1" overflow-y-auto py-6&quot;></div>"
-<nav className="&quot;space-y-2" px-4&quot;></nav>
+{/* Navigation */}
+<div className=""flex-1" overflow-y-auto py-6"></div>"
+<nav className=""space-y-2" px-4"></nav>
 {navigationSections.map((section, sectionIndex) => (;}</nav>"
-<div key="{sectionIndex}" className="&quot;space-y-1&quot;"></div>
+<div key="{sectionIndex} className=""space-y-1""></div>
 <button;"
-onClick="{()" =></button> section.key && toggleSection(section.key)}"
-className="&quot;flex" items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors&quot;>
+onClick="{()" =></button> section.key && toggleSection(section.key)}
+className=""flex" items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">
 <span>{section.title}</span>
 {section.key && (}
 expandedSections.has(section.key) ?"
-<ChevronDown className="&quot;w-4" h-4&quot; /> :</ChevronDown>"
-<ChevronRight className="&quot;w-4" h-4&quot; /></ChevronRight>
+<ChevronDown className=""w-4" h-4" /> :</ChevronDown>"
+<ChevronRight className=""w-4" h-4" /></ChevronRight>
 )}</ChevronRight>
 </button>
 {(!section.key || expandedSections.has(section.key)) && ("
-<div className: "&quot;ml-4" space-y-1&quot;></div>
+<div className: ""ml-4" space-y-1"></div>
 {section.items.map((item, itemIndex) => (</div>
-<Link}"
-key="{itemIndex}""
+<Link}
+key="{itemIndex}"

@@ -150,7 +150,7 @@ export class AccessibilityChecker {
           wcagLevel: WCAGLevel.A,
           wcagCriterion: '1.1.1',
           message: `Image ${index + 1} is missing alt text`,
-          element: `img[src="${img['src']}"]`,
+          element: `img[src="${img['src']}]`,
           fix: 'Add descriptive alt text to the image',
           codeExample: '<img src="..." alt="Description of image" />'
         })
@@ -163,7 +163,7 @@ export class AccessibilityChecker {
           wcagLevel: WCAGLevel.A,
           wcagCriterion: '1.1.1',
           message: `Image ${index + 1} has empty alt without role="presentation"`,
-          element: `img[src="${img['src']}"]`,
+          element: `img[src="${img['src']}]`,
           fix: 'Add role="presentation" to decorative images',
           codeExample: '<img src="..." alt="" role="presentation" />'
         })
@@ -244,7 +244,7 @@ export class AccessibilityChecker {
           wcagLevel: WCAGLevel.A,
           wcagCriterion: '2.4.4',
           message: `Link ${index + 1} has no accessible text`,
-          element: `a[href="${link.getAttribute('href')}"]`,
+          element: `a[href="${link.getAttribute('href')}]`,
           fix: 'Add descriptive text or aria-label to the link',
           codeExample: '<a href="..." aria-label="Description">...</a>'
         })
@@ -256,8 +256,8 @@ export class AccessibilityChecker {
           severity: A11ySeverity.MODERATE,
           wcagLevel: WCAGLevel.AA,
           wcagCriterion: '2.4.4',
-          message: `Link ${index + 1} has generic text: "${text}"`,
-          element: `a[href="${link.getAttribute('href')}"]`,
+          message: `Link ${index + 1} has generic text: "${text}`,
+          element: `a[href="${link.getAttribute('href')}]`,
           fix: 'Use descriptive link text that explains the destination',
           codeExample: 'Use "Read full article" instead of "Read more"'
         })
@@ -275,7 +275,7 @@ export class AccessibilityChecker {
           wcagLevel: WCAGLevel.AAA,
           wcagCriterion: '3.2.5',
           message: `Link ${index + 1} opens in new window without warning`,
-          element: `a[href="${link.getAttribute('href')}"]`,
+          element: `a[href="${link.getAttribute('href')}]`,
           fix: 'Add indication that link opens in new window',
           codeExample:
             '<a href="..." target="_blank" rel="noopener noreferrer">Link text (opens in new window)</a>'
@@ -322,7 +322,7 @@ export class AccessibilityChecker {
       const id = input.getAttribute('id')
       const ariaLabel = input.getAttribute('aria-label')
       const ariaLabelledBy = input.getAttribute('aria-labelledby')
-      const label = id ? element.querySelector(`label[for="${id}"]`) : null
+      const label = id ? element.querySelector(`label[for="${id}]`) : null
       const type = input.getAttribute('type')
       // Skip hidden and submit inputs
       if (type === 'hidden' || type === 'submit' || type === 'button') return
@@ -334,7 +334,7 @@ export class AccessibilityChecker {
           wcagLevel: WCAGLevel.A,
           wcagCriterion: '1.3.1',
           message: `Form control ${index + 1} (${input.tagName.toLowerCase()}) has no label`,
-          element: `${input.tagName.toLowerCase()}[name="${input.getAttribute('name')}"]`,
+          element: `${input.tagName.toLowerCase()}[name="${input.getAttribute('name')}]`,
           fix: 'Associate a label with the form control',
           codeExample: '<label for="email">Email:</label><input id="email" name="email" />'
         })
@@ -448,7 +448,7 @@ export class AccessibilityChecker {
           severity: A11ySeverity.MODERATE,
           wcagLevel: WCAGLevel.A,
           wcagCriterion: '4.1.2',
-          message: `Invalid ARIA role: "${role}"`,
+          message: `Invalid ARIA role: "${role}`,
           element: el.tagName.toLowerCase(),
           fix: 'Use a valid ARIA role or remove the role attribute'
         })
@@ -463,7 +463,7 @@ export class AccessibilityChecker {
             severity: A11ySeverity.SERIOUS,
             wcagLevel: WCAGLevel.A,
             wcagCriterion: '4.1.2',
-            message: `aria-labelledby references non-existent element: "${labelledBy}"`,
+            message: `aria-labelledby references non-existent element: "${labelledBy}`,
             element: el.tagName.toLowerCase(),
             fix: 'Ensure the referenced element exists'
           })

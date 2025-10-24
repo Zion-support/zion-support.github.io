@@ -1,26 +1,26 @@
 import {;
-    Leaf,;
-    Recycle,;
-    Zap,;
-    Globe,;
-    Target,;
-    CheckCircle,;
-    ArrowRight,;
-    Phone,;
-    Mail,;
-    Award,;
-    Users,;
-    TrendingUp,;
-    Leaf,;
-    Target,;
-    Zap,;
-    Cloud,;
-    Recycle,;
-    Code,;
-    Users,;
-    Globe,;
-    TrendingUp,;
-    Factory,;
+    Leaf,
+    Recycle,
+    Zap,
+    Globe,
+    Target,
+    CheckCircle,
+    ArrowRight,
+    Phone,
+    Mail,
+    Award,
+    Users,
+    TrendingUp,
+    Leaf,
+    Target,
+    Zap,
+    Cloud,
+    Recycle,
+    Code,
+    Users,
+    Globe,
+    TrendingUp,
+    Factory,
     Building from 'lucide-react';
 'use client';
   }
@@ -44,152 +44,152 @@ const tabs = [;
   }
   }
 }
-  id: 'solutions',;
-      name: 'Green Solutions',;
-      icon: Leaf,;
-      color: 'text-green-400',;
-      bgColor: 'bg-green-500/10',;
-    },;
-      id: 'benefits',;
-      name: 'Benefits',;
-      icon: Target,;
-      color: 'text-blue-400',;
-      bgColor: 'bg-blue-500/10',;
-      title: 'Energy-Efficient Data Centers',;
-      description: 'Design and implement energy-efficient data centers with renewable energy integration',;
-      icon: Zap,;
+  id: 'solutions',
+      name: 'Green Solutions',
+      icon: Leaf,
+      color: 'text-green-400',
+      bgColor: 'bg-green-500/10',
+    },
+      id: 'benefits',
+      name: 'Benefits',
+      icon: Target,
+      color: 'text-blue-400',
+      bgColor: 'bg-blue-500/10',
+      title: 'Energy-Efficient Data Centers',
+      description: 'Design and implement energy-efficient data centers with renewable energy integration',
+      icon: Zap,
   ];
       features: [;
-  // TODO: Add items,;
+  // TODO: Add items,
 ];
-//         'PUE (Power Usage Effectiveness) optimization',;
-//         'Renewable energy integration',;
-//         'Cooling system optimization',;
+//         'PUE (Power Usage Effectiveness) optimization',
+//         'Renewable energy integration',
+//         'Cooling system optimization',
 //         'Smart power management';
-//       ],;
-      impact: 'Reduce energy consumption by up to 40%',;
-      pricing: 'Starting at $2,500/month',;
-      title: 'Cloud Carbon Footprint Reduction',;
-      description: 'Optimize cloud infrastructure to minimize carbon emissions and environmental impact',;
-      icon: Cloud,;
-        'Carbon footprint monitoring',;
-        'Green cloud migration',;
-        'Resource optimization',;
+//       ],
+      impact: 'Reduce energy consumption by up to 40%',
+      pricing: 'Starting at $2,500/month',
+      title: 'Cloud Carbon Footprint Reduction',
+      description: 'Optimize cloud infrastructure to minimize carbon emissions and environmental impact',
+      icon: Cloud,
+        'Carbon footprint monitoring',
+        'Green cloud migration',
+        'Resource optimization',
         'Renewable energy sourcing';
-      impact: 'Reduce carbon footprint by up to 60%',;
-      pricing: 'Starting at $1,800/month',;
-      title: 'Sustainable IT Asset Management',;
-      description: 'Implement circular economy principles for IT equipment lifecycle management',;
-      icon: Recycle,;
-        'Equipment refurbishment',;
-        'Responsible disposal',;
-        'Asset tracking and optimization',;
+      impact: 'Reduce carbon footprint by up to 60%',
+      pricing: 'Starting at $1,800/month',
+      title: 'Sustainable IT Asset Management',
+      description: 'Implement circular economy principles for IT equipment lifecycle management',
+      icon: Recycle,
+        'Equipment refurbishment',
+        'Responsible disposal',
+        'Asset tracking and optimization',
         'Circular economy implementation';
-      impact: 'Extend equipment lifecycle by 50%',;
-      pricing: 'Starting at $1,200/month',;
-      title: 'Green Software Development',;
-      description: 'Develop energy-efficient software applications and optimize existing systems',;
-      icon: Code,;
-      color: 'text-purple-400',;
-'Energy-efficient coding practices',;
-        'Performance optimization',;
-        'Resource usage monitoring',;
+      impact: 'Extend equipment lifecycle by 50%',
+      pricing: 'Starting at $1,200/month',
+      title: 'Green Software Development',
+      description: 'Develop energy-efficient software applications and optimize existing systems',
+      icon: Code,
+      color: 'text-purple-400',
+'Energy-efficient coding practices',
+        'Performance optimization',
+        'Resource usage monitoring',
         'Sustainable architecture design';
-      impact: 'Reduce software energy consumption by 30%',;
-      pricing: 'Starting at $1,500/month',;
-      title: 'Remote Work Infrastructure',;
-      description: 'Enable sustainable remote work with optimized digital infrastructure',;
-      icon: Users,;
-      color: 'text-cyan-400',;
-'Virtual desktop infrastructure',;
-        'Collaboration tools optimization',;
-        'Energy-efficient hardware',;
+      impact: 'Reduce software energy consumption by 30%',
+      pricing: 'Starting at $1,500/month',
+      title: 'Remote Work Infrastructure',
+      description: 'Enable sustainable remote work with optimized digital infrastructure',
+      icon: Users,
+      color: 'text-cyan-400',
+'Virtual desktop infrastructure',
+        'Collaboration tools optimization',
+        'Energy-efficient hardware',
         'Digital workspace management';
-      impact: 'Reduce commuting emissions by 80%',;
-      pricing: 'Starting at $800/month',;
-      title: 'Environmental Monitoring',;
-      description: 'Real-time monitoring and reporting of environmental impact metrics',;
-      icon: Globe,;
-      color: 'text-emerald-400',;
-'Carbon footprint tracking',;
-        'Energy consumption monitoring',;
-        'Sustainability reporting',;
+      impact: 'Reduce commuting emissions by 80%',
+      pricing: 'Starting at $800/month',
+      title: 'Environmental Monitoring',
+      description: 'Real-time monitoring and reporting of environmental impact metrics',
+      icon: Globe,
+      color: 'text-emerald-400',
+'Carbon footprint tracking',
+        'Energy consumption monitoring',
+        'Sustainability reporting',
         'Environmental compliance';
-      impact: 'Achieve 100% environmental transparency',;
-      pricing: 'Starting at $600/month',;
+      impact: 'Achieve 100% environmental transparency',
+      pricing: 'Starting at $600/month',
   const benefits = [;
-    ,;
-      icon: TrendingUp,;
-      title: 'Cost Savings',;
-      description: 'Reduce operational costs through energy efficiency and resource optimization',;
+    ,
+      icon: TrendingUp,
+      title: 'Cost Savings',
+      description: 'Reduce operational costs through energy efficiency and resource optimization',
       details: [;
-'Up to 40% reduction in energy costs',;
-        'Lower maintenance and replacement costs',;
-        'Improved resource utilization',;
+'Up to 40% reduction in energy costs',
+        'Lower maintenance and replacement costs',
+        'Improved resource utilization',
         'Reduced waste management costs';
   ];
       ];
-      title: 'Environmental Impact',;
-      description: 'Significantly reduce your organization\'s carbon footprint and environmental impact',;
-        '60% reduction in carbon emissions',;
-        '50% less electronic waste',;
-        '100% renewable energy options',;
+      title: 'Environmental Impact',
+      description: 'Significantly reduce your organization\'s carbon footprint and environmental impact',
+        '60% reduction in carbon emissions',
+        '50% less electronic waste',
+        '100% renewable energy options',
         'Carbon neutral operations';
-      title: 'Compliance & Certification',;
-      description: 'Meet environmental regulations and achieve sustainability certifications',;
-        'ISO 14001 environmental management',;
-        'LEED certification support',;
-        'Carbon Trust certification',;
+      title: 'Compliance & Certification',
+      description: 'Meet environmental regulations and achieve sustainability certifications',
+        'ISO 14001 environmental management',
+        'LEED certification support',
+        'Carbon Trust certification',
         'ESG reporting compliance';
-      title: 'Brand Reputation',;
-      description: 'Enhance your brand image and attract environmentally conscious customers',;
-        'Improved brand perception',;
-        'Customer loyalty increase',;
-        'Investor confidence boost',;
+      title: 'Brand Reputation',
+      description: 'Enhance your brand image and attract environmentally conscious customers',
+        'Improved brand perception',
+        'Customer loyalty increase',
+        'Investor confidence boost',
         'Talent attraction and retention';
   const certifications = [;
-    name: 'ISO 14001:2015',;
-      description: 'Environmental Management Systems',;
-      status: 'Certified',;
-      name: 'LEED Platinum',;
-      description: 'Leadership in Energy and Environmental Design',;
-      name: 'Carbon Trust Standard',;
-      description: 'Carbon Footprint Management',;
-      name: 'Green IT Certification',;
-      description: 'Sustainable IT Practices',;
+    name: 'ISO 14001:2015',
+      description: 'Environmental Management Systems',
+      status: 'Certified',
+      name: 'LEED Platinum',
+      description: 'Leadership in Energy and Environmental Design',
+      name: 'Carbon Trust Standard',
+      description: 'Carbon Footprint Management',
+      name: 'Green IT Certification',
+      description: 'Sustainable IT Practices',
   const stats = [;
-      value: '60%',;
-      label: 'Carbon Footprint Reduction',;
-      color: 'text-green-400',;
-      value: '40%',;
-      label: 'Energy Cost Savings',;
-      color: 'text-yellow-400',;
-      value: '50%',;
-      label: 'Waste Reduction',;
-      color: 'text-blue-400',;
-      value: '100%',;
-      label: 'Renewable Energy Options',;
-      color: 'text-purple-400',;
-  const caseStudies = [,;
-      company: 'TechCorp Manufacturing',;
-      industry: 'Manufacturing',;
-      challenge: 'High energy consumption in data centers',;
-      solution: 'Implemented energy-efficient data center design with renewable energy integration',;
+      value: '60%',
+      label: 'Carbon Footprint Reduction',
+      color: 'text-green-400',
+      value: '40%',
+      label: 'Energy Cost Savings',
+      color: 'text-yellow-400',
+      value: '50%',
+      label: 'Waste Reduction',
+      color: 'text-blue-400',
+      value: '100%',
+      label: 'Renewable Energy Options',
+      color: 'text-purple-400',
+  const caseStudies = [,
+      company: 'TechCorp Manufacturing',
+      industry: 'Manufacturing',
+      challenge: 'High energy consumption in data centers',
+      solution: 'Implemented energy-efficient data center design with renewable energy integration',
       results: [;
-'45% reduction in energy consumption',;
-        '$2.3M annual cost savings',;
-        'Carbon neutral operations achieved',;
+'45% reduction in energy consumption',
+        '$2.3M annual cost savings',
+        'Carbon neutral operations achieved',
         'LEED Platinum certification obtained';
-      icon: Factory,;
-      company: 'FinanceFirst Bank',;
-      industry: 'Financial Services',;
-      challenge: 'Large carbon footprint from IT operations',;
-      solution: 'Green cloud migration and sustainable IT asset management',;
-'55% reduction in carbon emissions',;
-        '60% improvement in energy efficiency',;
-        'ISO 14001 certification achieved',;
+      icon: Factory,
+      company: 'FinanceFirst Bank',
+      industry: 'Financial Services',
+      challenge: 'Large carbon footprint from IT operations',
+      solution: 'Green cloud migration and sustainable IT asset management',
+'55% reduction in carbon emissions',
+        '60% improvement in energy efficiency',
+        'ISO 14001 certification achieved',
         'Enhanced brand reputation';
-      icon: Building,;
+      icon: Building,
   return (;
           <div>Coming Soon</div>
   );
@@ -202,10 +202,10 @@ const tabs = [;
   }
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-// Green IT Solutions,;
+// Green IT Solutions,
           </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-// Transform your IT infrastructure into a sustainable, environmentally friendly system,;
+// Transform your IT infrastructure into a sustainable, environmentally friendly system,
               that reduces costs while protecting our planet.;
           </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -224,7 +224,7 @@ const tabs = [;
   }
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
             {;
-    stats.map((stat,;
+    stats.map((stat,
     index) => ();
   }
   }
@@ -273,10 +273,10 @@ const tabs = [;
     activeTab === 'solutions' && ();
           <div className="mb-16">
               <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-// Our Green IT Solutions,;
+// Our Green IT Solutions,
     </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {greenSolutions.map((solution,;
+                {greenSolutions.map((solution,
     index) => ();
   }
   }
@@ -292,7 +292,7 @@ const tabs = [;
                       <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
                       <ul className="space-y-1">
                         {;
-    solution.features.map((feature,;
+    solution.features.map((feature,
     featureIndex) => ();
   }
   }
@@ -322,7 +322,7 @@ Learn More;
     activeTab === 'benefits' && (;
 Benefits of Green IT;
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {benefits.map((benefit,;
+                {benefits.map((benefit,
     index) => ();
   }
   }
@@ -335,7 +335,7 @@ Benefits of Green IT;
                         <p className="text-gray-300 mb-4">{benefit.description}</p>
                     <ul className="space-y-2">
                       {;
-    benefit.details.map((detail,;
+    benefit.details.map((detail,
     detailIndex) => ();
   }
   }
@@ -348,7 +348,7 @@ Benefits of Green IT;
     activeTab === 'certifications' && (;
                 Our Certifications;
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {certifications.map((cert,;
+                {certifications.map((cert,
     index) => ();
   }
   }
@@ -365,7 +365,7 @@ Benefits of Green IT;
               Success Stories;
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {;
-    caseStudies.map((study,;
+    caseStudies.map((study,
     index) => (;
   }
   }
@@ -379,7 +379,7 @@ Benefits of Green IT;
                     <p className="text-gray-300 text-sm mb-3">{study.solution}</p>
                     <h4 className="text-sm font-semibold text-green-400 mb-2">Results:</h4>
                       {;
-    study.results.map((result,;
+    study.results.map((result,
     resultIndex) => ();
   }
   }
@@ -395,7 +395,7 @@ Benefits of Green IT;
             <h2 className="text-2xl font-bold text-white mb-4">
               Ready to Go Green?;
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-// Start your journey towards sustainable IT operations. Get a free environmental,;
+// Start your journey towards sustainable IT operations. Get a free environmental,
               assessment and discover how much you can save while protecting the planet.;
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
@@ -412,5 +412,5 @@ Get Free Assessment;
     </>
   );
 }
-export default GreenITPage,;
+export default GreenITPage,
   ];

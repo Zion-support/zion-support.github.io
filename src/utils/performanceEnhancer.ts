@@ -37,7 +37,7 @@ class PerformanceEnhancer {;
   }
   }
   private init(): void {;
-    // Initialize performance monitoring,;
+    // Initialize performance monitoring,
     this.observePerformance();
   }
   }
@@ -49,9 +49,9 @@ class PerformanceEnhancer {;
         const observer = new PerformanceObserver((list) => {;
           const entries = list.getEntries();
           entries.forEach((entry) => {;
-            // Process performance entries,;
-    console.log('Performance entry:',;
-    entry.name,;
+            // Process performance entries,
+    console.log('Performance entry:',
+    entry.name,
     entry.duration);
   }
   }
@@ -59,10 +59,10 @@ class PerformanceEnhancer {;
           });
         });
         observer.observe({;
-    entryTypes: ['measure', 'navigation',;
+    entryTypes: ['measure', 'navigation',
   });
       } catch (error) {;
-    console.warn('PerformanceObserver not supported:',;
+    console.warn('PerformanceObserver not supported:',
     error);
   }
   }

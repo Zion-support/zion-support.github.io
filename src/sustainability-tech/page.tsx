@@ -2,14 +2,14 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import {;
-    Leaf,;
-    Target,;
-    Zap,;
-    Settings,;
-    CheckCircle,;
-    Star,;
-    Leaf,;
-    Target,;
+    Leaf,
+    Target,
+    Zap,
+    Settings,
+    CheckCircle,
+    Star,
+    Leaf,
+    Target,
     Settings from 'lucide-react';
   }
 const SustainabilityTechPage: React.FC = () => {;
@@ -19,19 +19,19 @@ const SustainabilityTechPage: React.FC = () => {;
   }
   }
 }
-  icon: Leaf,;
-      title: 'Green Technology',;
-      description: 'value',;
+  icon: Leaf,
+      title: 'Green Technology',
+      description: 'value',
   ];
       benefits: ['Carbon reduction', 'Energy efficiency', 'Waste reduction'];
-    },;
-      icon: Target,;
-      title: 'Sustainability Analytics',;
-      description: 'Data-driven sustainability insights and reporting',;
+    },
+      icon: Target,
+      title: 'Sustainability Analytics',
+      description: 'Data-driven sustainability insights and reporting',
       benefits: ['Environmental metrics', 'Sustainability reporting', 'Impact analysis'];
-      icon: Settings,;
-      title: 'Circular Economy',;
-      description: 'Circular economy solutions and waste management',;
+      icon: Settings,
+      title: 'Circular Economy',
+      description: 'Circular economy solutions and waste management',
       benefits: ['Waste reduction', 'Resource optimization', 'Recycling systems'];
     }
   ];
@@ -43,20 +43,20 @@ const SustainabilityTechPage: React.FC = () => {;
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
-// Sustainability Tech,;
+// Sustainability Tech,
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse">
-// Green Technology Solutions,;
+// Green Technology Solutions,
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-// Build a sustainable future with our green technology solutions. From renewable energy to circular economy,;
+// Build a sustainable future with our green technology solutions. From renewable energy to circular economy,
             we help you reduce environmental impact while driving business growth.;
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a;
               href="/contact";
               className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
 // >
-//               Get Started,;
+//               Get Started,
           </a>
               href="tel:+13024640950";
               className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
@@ -66,11 +66,11 @@ const SustainabilityTechPage: React.FC = () => {;
         </section>
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
-// Sustainability Solutions,;
+// Sustainability Solutions,
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {;
-    features.map((feature,;
+    features.map((feature,
     index) => ();
   }
   }
@@ -89,7 +89,7 @@ const SustainabilityTechPage: React.FC = () => {;
   }
                 <ul className="space-y-2">
                   {;
-    feature.benefits.map((benefit,;
+    feature.benefits.map((benefit,
     benefitIndex) => ();
   }
   }

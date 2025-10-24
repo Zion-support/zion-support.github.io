@@ -6,23 +6,23 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
 
-const PerformanceMonitorPage: React.FC="()" => {const features: ";",;
-      title: 'AI-Powered Intelligence',;}
+const PerformanceMonitorPage: React.FC = () => {const features = [
+      title: 'AI-Powered Intelligence',}
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',}
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
-    {icon: BarChart,;
-      title: 'Advanced Analytics',;}
+    {icon: BarChart,
+      title: 'Advanced Analytics',}
       description: 'Comprehensive analytics dashboard with real-time data visualization.',}
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
-    {icon: Target,;
-      title: 'Precision Targeting',;}
+    {icon: Target,
+      title: 'Precision Targeting',}
       description: 'Target specific goals and objectives with precision and accuracy.',}
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
-    {icon: TrendingUp,;
-      title: 'Growth Optimization',;}
+    {icon: TrendingUp,
+      title: 'Growth Optimization',}
       description: 'Optimize your business growth with data-driven strategies.',}
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
@@ -40,52 +40,52 @@ const PerformanceMonitorPage: React.FC="()" => {const features: ";",;
     <>
       <Helmet></Helmet>
         <title>PerformanceMonitor</title>"
-        <meta name="&quot;description&quot;" content="&quot;Advanced" PerformanceMonitor solution for modern businesses.&quot; /></meta>"
-        <meta name="&quot;keywords&quot;" content="&quot;AI," artificial intelligence, PerformanceMonitor, AI solutions, intelligent automation&quot; /></meta>
+        <meta name=""description"" content=""Advanced" PerformanceMonitor solution for modern businesses." /></meta>"
+        <meta name=""keywords"" content=""AI," artificial intelligence, PerformanceMonitor, AI solutions, intelligent automation" /></meta>
       </Helmet>
       <Navigation /></Navigation>"
-      <div className="&quot;min-h-screen" bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
-        {/* Hero Section */}"
-        <section className="&quot;relative" py-20 px-4 overflow-hidden&quot;></section>"
-          <div className="&quot;absolute" inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>"
-          <div className="&quot;relative" max-w-7xl mx-auto text-center&quot;></div>"
-            <h1 className="&quot;text-5xl" md:text-7xl font-bold text-white mb-6 leading-tight&quot;>;</h1>
+      <div className=""min-h-screen" bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
+        {/* Hero Section */}
+        <section className=""relative" py-20 px-4 overflow-hidden"></section>"
+          <div className=""absolute" inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>"
+          <div className=""relative" max-w-7xl mx-auto text-center"></div>"
+            <h1 className=""text-5xl" md:text-7xl font-bold text-white mb-6 leading-tight">;</h1>
               PerformanceMonitor</h1>
             </h1>"
-            <p className="&quot;text-xl" text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>;</p>
+            <p className=""text-xl" text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">;</p>
               Advanced PerformanceMonitor solution for modern businesses.</p>
             </p>"
-            <div className="&quot;flex" flex-col sm:flex-row gap-4 justify-center&quot;></div>"
-              <button className="&quot;bg-emerald-600" hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;>;</button>
+            <div className=""flex" flex-col sm:flex-row gap-4 justify-center"></div>"
+              <button className=""bg-emerald-600" hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">;</button>
                 Get Started</button>"
-                <ArrowRight className="&quot;ml-2" h-5 w-5&quot; /></ArrowRight>
+                <ArrowRight className=""ml-2" h-5 w-5" /></ArrowRight>
               </button>"
-              <button className="&quot;border" border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>;</button>
+              <button className=""border" border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">;</button>
                 Learn More</button>
               </button>
             </div>
           </div>
         </section>
 
-        {/* Features Section */}"
-        <section className="&quot;py-20" px-4&quot;></section>"
-          <div className="&quot;max-w-7xl" mx-auto&quot;></div>"
-            <div className="&quot;text-center" mb-16&quot;></div>"
-              <h2 className="&quot;text-4xl" font-bold text-white mb-4&quot;>Key Features</h2>"
-              <p className="&quot;text-xl" text-gray-300 max-w-3xl mx-auto&quot;>);</p>
+        {/* Features Section */}
+        <section className=""py-20" px-4"></section>"
+          <div className=""max-w-7xl" mx-auto"></div>"
+            <div className=""text-center" mb-16"></div>"
+              <h2 className=""text-4xl" font-bold text-white mb-4">Key Features</h2>"
+              <p className=""text-xl" text-gray-300 max-w-3xl mx-auto">);</p>
                 Powerful AI-driven features designed to transform your business operations</p>
               </p>
             </div>"
-            <div className="&quot;grid" md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
+            <div className=""grid" md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {features.map((feature, index) => ("
-                <div key="{index}" className="&quot;bg-white/10" backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>"
-                  <feature.icon className="&quot;h-12" w-12 text-emerald-400 mb-4&quot; /></feature>"
-                  <h3 className="&quot;text-xl" font-semibold text-white mb-3&quot;>{feature.title}</h3>"
-                  <p className="&quot;text-gray-300" mb-4&quot;>{feature.description}</p>"
-                  <ul className="&quot;space-y-2&quot;"></ul>
+                <div key="{index} className=""bg-white/10" backdrop-blur-sm rounded-xl p-6 border border-white/20"></div>"
+                  <feature.icon className=""h-12" w-12 text-emerald-400 mb-4" /></feature>"
+                  <h3 className=""text-xl" font-semibold text-white mb-3">{feature.title}</h3>"
+                  <p className=""text-gray-300" mb-4">{feature.description}</p>"
+                  <ul className=""space-y-2""></ul>
                     {feature.benefits.map((benefit, idx) => (</ul>"
-                      <li key="{idx}" className="&quot;flex" items-center text-sm text-gray-300&quot;></li>"
-                        <CheckCircle className="&quot;h-4" w-4 text-emerald-400 mr-2 flex-shrink-0&quot; /></CheckCircle>
+                      <li key="{idx} className=""flex" items-center text-sm text-gray-300"></li>"
+                        <CheckCircle className=""h-4" w-4 text-emerald-400 mr-2 flex-shrink-0" /></CheckCircle>
                         {benefit}</CheckCircle>
                       </li>
                     ))}
@@ -96,38 +96,38 @@ const PerformanceMonitorPage: React.FC="()" => {const features: ";",;
           </div>
         </section>
 
-        {/* Benefits Section */}"
-        <section className="&quot;py-20" px-4 bg-white/5&quot;></section>"
-          <div className="&quot;max-w-7xl" mx-auto&quot;></div>"
-            <div className="&quot;text-center" mb-16&quot;></div>"
-              <h2 className="&quot;text-4xl" font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>"
-              <p className="&quot;text-xl" text-gray-300 max-w-3xl mx-auto&quot;>;</p>
+        {/* Benefits Section */}
+        <section className=""py-20" px-4 bg-white/5"></section>"
+          <div className=""max-w-7xl" mx-auto"></div>"
+            <div className=""text-center" mb-16"></div>"
+              <h2 className=""text-4xl" font-bold text-white mb-4">Why Choose Our Solution</h2>"
+              <p className=""text-xl" text-gray-300 max-w-3xl mx-auto">;</p>
                 Experience the benefits of cutting-edge AI technology</p>
               </p>
             </div>"
-            <div className="&quot;grid" md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
+            <div className=""grid" md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {benefits.map((benefit, index) => ("
-                <div key="{index}" className="&quot;flex" items-start space-x-4&quot;></div>"
-                  <CheckCircle className="&quot;h-6" w-6 text-emerald-400 mt-1 flex-shrink-0&quot; /></CheckCircle>"
-                  <p className="&quot;text-gray-300" text-lg&quot;>{benefit}</p>
+                <div key="{index} className=""flex" items-start space-x-4"></div>"
+                  <CheckCircle className=""h-6" w-6 text-emerald-400 mt-1 flex-shrink-0" /></CheckCircle>"
+                  <p className=""text-gray-300" text-lg">{benefit}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}"
-        <section className="&quot;py-20" px-4&quot;></section>"
-          <div className="&quot;max-w-4xl" mx-auto text-center&quot;></div>"
-            <h2 className="&quot;text-4xl" font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>"
-            <p className="&quot;text-xl" text-gray-300 mb-8&quot;>;</p>
+        {/* CTA Section */}
+        <section className=""py-20" px-4"></section>"
+          <div className=""max-w-4xl" mx-auto text-center"></div>"
+            <h2 className=""text-4xl" font-bold text-white mb-6">Ready to Transform Your Business?</h2>"
+            <p className=""text-xl" text-gray-300 mb-8">;</p>
               Join thousands of businesses already using our AI solutions</p>
             </p>"
-            <div className="&quot;flex" flex-col sm:flex-row gap-4 justify-center&quot;></div>"
-              <button className="&quot;bg-emerald-600" hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>;</button>
+            <div className=""flex" flex-col sm:flex-row gap-4 justify-center"></div>"
+              <button className=""bg-emerald-600" hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">;</button>
                 Start Free Trial</button>
               </button>"
-              <button className="&quot;border" border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>;</button>
+              <button className=""border" border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">;</button>
                 Contact Sales</button>
               </button>
             </div>
@@ -138,24 +138,22 @@ const PerformanceMonitorPage: React.FC="()" => {const features: ";",;
     </>
   );
 };
-;
 export default PerformanceMonitorPage;
-;
 interface PerformanceMonitorProp s {onMetricsUpdate?: (metrics: PerformanceMetrics) =>void;}
   enableRealTimeMonitoring?: boolean}
   logToConsole?: boolean}
 ;
 import React from 'react';
 export default function PerformanceMonitor;"
-PerformanceMonitor.displayName = "PerformanceMonitor"({onMetricsUpdate,;"}
-  enableRealTimeMonitoring: "true,}";"
+PerformanceMonitor.displayName = "PerformanceMonitor"({onMetricsUpdate,"}
+  enableRealTimeMonitoring: "true,};
   logToConsole="true"
 }: PerformanceMonitorProps) {const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: null,;
-    firstContentfulPaint: null,;
-    largestContentfulPaint: null,;
-    firstInputDelay: null,;
-    cumulativeLayoutShift: null,;}
+    loadTime: null,
+    firstContentfulPaint: null,
+    largestContentfulPaint: null,
+    firstInputDelay: null,
+    cumulativeLayoutShift: null,}
     timeToInteractive: null,}
     totalBlockingTime: null
   });"
@@ -166,7 +164,7 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({onMetricsUpdate,;"}
 ;  "
           constentries="list.getEntries()";"
           constfcpEntry="entries.find(entry="> entry.name="==" 'first-contentful-paint');}
-          if (fcpEntr y) {}"
+          if (fcpEntr y) {}
             newMetrics.firstContentfulPaint="fcpEntry.startTime"
          }
         });
@@ -177,7 +175,7 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({onMetricsUpdate,;"}
         // First Input Delay (FID);"
         constfidObserver="new" PerformanceObserver((list) => {constentries="list.getEntries()";}
           entries.forEach((entry: any) => {
-  }"
+  }
             newMetrics.firstInputDelay="entry.processingStart" - entry.startTime
          })
         });
@@ -196,7 +194,7 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({onMetricsUpdate,;"}
         // Time to Interactive (TTI) - approximation;"
         constttiObserver="new" PerformanceObserver((list) => {constentries="list.getEntries()";"
           constlongTasks="entries.filter((entry:" any) => entry.duration >50);"}
-          if (longTasks.length="==" 0) {}"
+          if (longTasks.length="==" 0) {}
             newMetrics.timeToInteractive="performance.now()"
          }
         });
@@ -205,7 +203,7 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({onMetricsUpdate,;"}
         consttbtObserver="new" PerformanceObserver((list) => {constentries: "list.getEntries()";"}
           constblockingTime="entries"
             .filter((entry: any) => entry.duration >50)
-            .reduce((total, entry: any) => total + (entry.duration -50), 0)}"
+            .reduce((total, entry: any) => total + (entry.duration -50), 0)}
           newMetrics.totalBlockingTime="blockingTime"
        });
         tbtObserver.observe({entry Types: ['longtask']})
@@ -242,13 +240,12 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({onMetricsUpdate,;"}
   }, [])
   // Performance monitoring dashboard (only in development);"</PerformanceMetrics>
   if (process.env.NODE_ENV="==" 'development') {return (</PerformanceMetrics>"
-    <divclassName="&quot;fixed" bottom-4 right-4 bg-black/80text-white p-4 rounded-lgtext-xsfont-monomax-w-xs&quot;><h3className="&quot;font-boldmb-2&quot;">PerformanceMetrics</h><divclassName="&quot;space-y-1&quot;"><di v>LoadTime: {metrics.loadTime ?`${metrics.loadTime.toFixed(2)}ms`:'N/A'}</di><di v>FCP: {metrics.firstContentfulPaint?`${metrics.firstContentfulPaint.toFixed(2)}ms`:'N/A'}</di><di v>LCP: {metrics.largestContentfulPaint?`${metrics.largestContentfulPaint.toFixed(2)}ms`:'N/A'}</di><di v>FID: {metrics.firstInputDelay?`${metrics.firstInputDelay.toFixed(2)}ms`:'N/A'}</di><di v>CLS: {metrics.cumulativeLayoutShift ?metrics.cumulativeLayoutShift.toFixed(4):'N/A'}</di><di v>TTI: {metrics.timeToInteractive?`${metrics.timeToInteractive.toFixed(2)}ms`:'N/A'}</di><di v>TBT: {metrics.totalBlockingTime?`${metrics.totalBlockingTime.toFixed(2)}ms`:'N/A'}</di></di></di>
+    <divclassName=""fixed" bottom-4 right-4 bg-black/80text-white p-4 rounded-lgtext-xsfont-monomax-w-xs"><h3className=""font-boldmb-2"">PerformanceMetrics</h><divclassName=""space-y-1""><di v>LoadTime: {metrics.loadTime ?`${metrics.loadTime.toFixed(2)}ms`:'N/A'}</di><di v>FCP: {metrics.firstContentfulPaint?`${metrics.firstContentfulPaint.toFixed(2)}ms`:'N/A'}</di><di v>LCP: {metrics.largestContentfulPaint?`${metrics.largestContentfulPaint.toFixed(2)}ms`:'N/A'}</di><di v>FID: {metrics.firstInputDelay?`${metrics.firstInputDelay.toFixed(2)}ms`:'N/A'}</di><di v>CLS: {metrics.cumulativeLayoutShift ?metrics.cumulativeLayoutShift.toFixed(4):'N/A'}</di><di v>TTI: {metrics.timeToInteractive?`${metrics.timeToInteractive.toFixed(2)}ms`:'N/A'}</di><di v>TBT: {metrics.totalBlockingTime?`${metrics.totalBlockingTime.toFixed(2)}ms`:'N/A'}</di></di></di>
     )
   }
 ;
   return nul l
 }
-"
 // Global performance monitoring utilitiesexportconstperformanceUtils="{//" Measure custom performance marksmark: (name: string) => {
 ;  }
     if (type of windo w !== 'undefined' && 'performance' in windo w) {}
@@ -280,17 +277,16 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({onMetricsUpdate,;"}
     }
   }
 }
-"
 // Google Analytics integration for performance trackingexportconsttrackPerformanceToGA="(metrics:" PerformanceMetrics) => {if (type of windo w !== 'undefined' && 'gtag' in windo w) {
     windo w.gtag('event', 'performance_metrics', {
-      event_category: 'Performance',;
-      event_label: 'Core Web Vitals',;
-      custom_map: {,;
-        load_time: metrics.loadTime,;
-        first_contentful_paint: metrics.firstContentfulPaint,;
-        largest_contentful_paint: metrics.largestContentfulPaint,;
-        first_input_delay: metrics.firstInputDelay,;
-        cumulative_layout_shift: metrics.cumulativeLayoutShift,;}
+      event_category: 'Performance',
+      event_label: 'Core Web Vitals',
+      custom_map: {,
+        load_time: metrics.loadTime,
+        first_contentful_paint: metrics.firstContentfulPaint,
+        largest_contentful_paint: metrics.largestContentfulPaint,
+        first_input_delay: metrics.firstInputDelay,
+        cumulative_layout_shift: metrics.cumulativeLayoutShift,}
         time_to_interactive: metrics.timeToInteractive,});
         total_blocking_time: metrics.totalBlockingTime
      }
@@ -301,4 +297,4 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({onMetricsUpdate,;"}
 declare global {interface Window {}
     gtag: (...args: any[]) => void
   }
-}"
+}

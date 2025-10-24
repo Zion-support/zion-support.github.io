@@ -19,9 +19,9 @@ interface State {;
   }
   }
 }
-  hasError: boolean;,;
-    error: Error | null;,;
-    errorInfo: ErrorInfo | null;,;
+  hasError: boolean;,
+    error: Error | null;,
+    errorInfo: ErrorInfo | null;,
     errorCount: number;
 }
 class ImprovedErrorBoundary extends Component;
@@ -41,9 +41,9 @@ class ImprovedErrorBoundary extends Component;
   }
   }
 }
-  hasError: false,;
-      error: null,;
-      errorInfo: null,;
+  hasError: false,
+      error: null,
+      errorInfo: null,
       errorCount: 0;
     }
   }
@@ -58,8 +58,8 @@ class ImprovedErrorBoundary extends Component;
   }
   }
 }
-  hasError: true,;
-//       error,;
+  hasError: true,
+//       error,
     }
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo): void {;
@@ -67,20 +67,20 @@ class ImprovedErrorBoundary extends Component;
   }
   }
 }
-    // Log error to console for debugging,;
+    // Log error to console for debugging,
     console.error('Error caught by ImprovedErrorBoundary:', {;
     // TODO: Add content;
   }
   }
 }
-  message: error.message,;
-      stack: error.stack,;
-      component: errorInfo.componentStack ?? undefined,;
-      timestamp: Date.now(),;
-      userAgent: navigator.userAgent,;
+  message: error.message,
+      stack: error.stack,
+      component: errorInfo.componentStack ?? undefined,
+      timestamp: Date.now(),
+      userAgent: navigator.userAgent,
       url: window.location.href;
     });
-    // Call custom error handler if provided,;
+    // Call custom error handler if provided,
     if (this.props.onError) {;
     // TODO: Add content;
   }
@@ -88,16 +88,16 @@ class ImprovedErrorBoundary extends Component;
 }
       this.props.onError(error, errorInfo);
     }
-    // Update state with error details,;
+    // Update state with error details,
     this.setState((prevState) => ({;
     // TODO: Add content;
   }
   }
 }
-//       errorInfo,;
+//       errorInfo,
       errorCount: prevState.errorCount + 1;
     }));
-    // Log to console in development,;
+    // Log to console in development,
     if (process.env['NODE_ENV'] === 'development') {;
     // TODO: Add content;
   }
@@ -111,7 +111,7 @@ class ImprovedErrorBoundary extends Component;
   }
 }
       (window as unknown as {;
-    Sentry: { captureException: (error: Error,;
+    Sentry: { captureException: (error: Error,
     context: Record;
   }
   }
@@ -142,10 +142,10 @@ class ImprovedErrorBoundary extends Component;
   }
   }
 }
-    // Reset error state if resetKeys changed,;
+    // Reset error state if resetKeys changed,
     if (this.props.resetKeys && prevProps.resetKeys) {;
-    (key,;
-    index) => key !== prevProps.resetKeys![index,;
+    (key,
+    index) => key !== prevProps.resetKeys![index,
       );
   }
       if (resetKeysChanged && this.state.hasError) {;
@@ -167,8 +167,8 @@ class ImprovedErrorBoundary extends Component;
   }
   }
 }
-  hasError: false,;
-      error: null,;
+  hasError: false,
+      error: null,
       errorInfo: null;
     });
   }
@@ -196,7 +196,7 @@ class ImprovedErrorBoundary extends Component;
   }
   }
 }
-      // Use custom fallback if provided,;
+      // Use custom fallback if provided,
       if (this.props.fallback) {;
     // TODO: Add content;
   }
@@ -204,7 +204,7 @@ class ImprovedErrorBoundary extends Component;
 }
         return this.props.fallback;
       }
-      // Default error UI,;
+      // Default error UI,
       return (;
           <div>Coming Soon</div>
   );
@@ -216,7 +216,7 @@ class ImprovedErrorBoundary extends Component;
               We're sorry for the inconvenience. The application encountered an unexpected error.;
             </p>
             {;
-    process.env['NODE_ENV',;
+    process.env['NODE_ENV',
     === 'development' && this.state.error && ();
   }
   }
@@ -265,7 +265,7 @@ class ImprovedErrorBoundary extends Component;
   }
                 aria-label="Try Again";
 // >
-//                 Try Again,;
+//                 Try Again,
           </button>
               <button;
                 onClick={;
@@ -274,7 +274,7 @@ class ImprovedErrorBoundary extends Component;
                 style={{...styles.button, ...styles.secondaryButton}}
                 aria-label="Reload Page";
 // >
-//                 Reload Page,;
+//                 Reload Page,
           </button>
               <button;
                 onClick={;
@@ -283,7 +283,7 @@ class ImprovedErrorBoundary extends Component;
                 style={{...styles.button, ...styles.secondaryButton}}
                 aria-label="Go to Homepage";
 // >
-//                 Go Home,;
+//                 Go Home,
           </button>
             </div>
             {;
@@ -312,145 +312,145 @@ const styles = {;
   }
   }
 }
-  minHeight: '100vh',;
-    display: 'flex',;
-    alignItems: 'center',;
-    justifyContent: 'center',;
-    padding: '20px',;
-    backgroundColor: '#f5f5f5',;
-    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',;
-  },;
+  minHeight: '100vh',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: '20px',
+    backgroundColor: '#f5f5f5',
+    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+  },
   content: {;
     // TODO: Add content;
   }
   }
 }
-  maxWidth: '600px',;
-    width: '100%',;
-    backgroundColor: 'white',;
-    borderRadius: '8px',;
-    padding: '40px',;
-    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',;
+  maxWidth: '600px',
+    width: '100%',
+    backgroundColor: 'white',
+    borderRadius: '8px',
+    padding: '40px',
+    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
     textAlign: 'center' as const;
-  },;
+  },
   icon: {;
     // TODO: Add content;
   }
   }
 }
-  fontSize: '48px',;
-    marginBottom: '20px',;
-  },;
+  fontSize: '48px',
+    marginBottom: '20px',
+  },
   title: {;
     // TODO: Add content;
   }
   }
 }
-  fontSize: '24px',;
-    fontWeight: 'bold',;
-    color: '#333',;
-    marginBottom: '16px',;
-  },;
+  fontSize: '24px',
+    fontWeight: 'bold',
+    color: '#333',
+    marginBottom: '16px',
+  },
   message: {;
     // TODO: Add content;
   }
   }
 }
-  fontSize: '16px',;
-    color: '#666',;
-    marginBottom: '32px',;
-    lineHeight: '1.6',;
-  },;
+  fontSize: '16px',
+    color: '#666',
+    marginBottom: '32px',
+    lineHeight: '1.6',
+  },
   details: {;
     // TODO: Add content;
   }
   }
 }
-  textAlign: 'left' as const,;
-    marginBottom: '24px',;
-    backgroundColor: '#f9f9f9',;
-    padding: '16px',;
-    borderRadius: '4px',;
-    border: '1px solid #e0e0e0',;
-  },;
+  textAlign: 'left' as const,
+    marginBottom: '24px',
+    backgroundColor: '#f9f9f9',
+    padding: '16px',
+    borderRadius: '4px',
+    border: '1px solid #e0e0e0',
+  },
   summary: {;
     // TODO: Add content;
   }
   }
 }
-  cursor: 'pointer',;
-    fontWeight: 'bold',;
-    marginBottom: '12px',;
+  cursor: 'pointer',
+    fontWeight: 'bold',
+    marginBottom: '12px',
     userSelect: 'none' as const;
-  },;
+  },
   errorDetails: {;
     // TODO: Add content;
   }
   }
 }
-  fontSize: '14px',;
-  },;
+  fontSize: '14px',
+  },
   errorMessage: {;
     // TODO: Add content;
   }
   }
 }
-  marginBottom: '12px',;
-    color: '#d32f2f',;
-  },;
+  marginBottom: '12px',
+    color: '#d32f2f',
+  },
   stack: {;
     // TODO: Add content;
   }
   }
 }
-  backgroundColor: '#f5f5f5',;
-    padding: '12px',;
-    borderRadius: '4px',;
-    fontSize: '12px',;
-    overflowX: 'auto' as const,;
-    fontFamily: 'monospace',;
-    whiteSpace: 'pre-wrap' as const,;
+  backgroundColor: '#f5f5f5',
+    padding: '12px',
+    borderRadius: '4px',
+    fontSize: '12px',
+    overflowX: 'auto' as const,
+    fontFamily: 'monospace',
+    whiteSpace: 'pre-wrap' as const,
     wordBreak: 'break-all' as const;
-  },;
+  },
   actions: {;
     // TODO: Add content;
   }
   }
 }
-  display: 'flex',;
-    gap: '12px',;
-    justifyContent: 'center',;
+  display: 'flex',
+    gap: '12px',
+    justifyContent: 'center',
     flexWrap: 'wrap' as const;
-  },;
+  },
   button: {;
     // TODO: Add content;
   }
   }
 }
-  padding: '12px 24px',;
-    fontSize: '16px',;
-    fontWeight: '500',;
-    color: 'white',;
-    backgroundColor: '#007bff',;
-    border: 'none',;
-    borderRadius: '4px',;
-    cursor: 'pointer',;
-    transition: 'background-color 0.2s',;
-  },;
+  padding: '12px 24px',
+    fontSize: '16px',
+    fontWeight: '500',
+    color: 'white',
+    backgroundColor: '#007bff',
+    border: 'none',
+    borderRadius: '4px',
+    cursor: 'pointer',
+    transition: 'background-color 0.2s',
+  },
   secondaryButton: {;
     // TODO: Add content;
   }
   }
 }
-  backgroundColor: '#6c757d',;
-  },;
+  backgroundColor: '#6c757d',
+  },
   errorCount: {;
     // TODO: Add content;
   }
   }
 }
-  marginTop: '24px',;
-    fontSize: '14px',;
-    color: '#999',;
+  marginTop: '24px',
+    fontSize: '14px',
+    color: '#999',
   }
 }

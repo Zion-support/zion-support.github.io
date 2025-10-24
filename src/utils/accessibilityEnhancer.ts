@@ -16,10 +16,10 @@ class AccessibilityEnhancer {;
     private config: AccessibilityConfig;
   constructor(config?: AccessibilityConfig) {;
     this.config = config || {;
-      enableKeyboardNavigation: true,;
-      enableScreenReaderSupport: true,;
-      enableHighContrast: true,;
-      enableFocusIndicators: true,;
+      enableKeyboardNavigation: true,
+      enableScreenReaderSupport: true,
+      enableHighContrast: true,
+      enableFocusIndicators: true,
       enableAriaLabels: true;
   }
   }
@@ -29,7 +29,7 @@ class AccessibilityEnhancer {;
     this.init();
   }
   private init(): void {;
-    // Initialize accessibility enhancements,;
+    // Initialize accessibility enhancements,
     this.setupKeyboardNavigation();
     this.setupFocusIndicators();
   }
@@ -38,11 +38,11 @@ class AccessibilityEnhancer {;
   }
   private setupKeyboardNavigation(): void {;
     if (typeof document !== 'undefined' {;
-      // Add keyboard navigation support,;
-    document.addEventListener('keydown',;
+      // Add keyboard navigation support,
+    document.addEventListener('keydown',
     (event) => {;
         if (event.key === 'Tab') {;
-          // Handle tab navigation,;
+          // Handle tab navigation,
     console.log('Tab navigation detected');
   }
   }
@@ -53,7 +53,7 @@ class AccessibilityEnhancer {;
   }
   private setupFocusIndicators(): void {;
     if (typeof document !== 'undefined') {;
-      // Add focus indicators,;
+      // Add focus indicators,
     const style = document.createElement('style');
       style.textContent = `;
         *:focus {;

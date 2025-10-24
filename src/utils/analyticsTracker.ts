@@ -8,7 +8,7 @@ interface AnalyticsEvent {;
   }
   }
 }
-  category: string;,;
+  category: string;,
     action: string;
   label?: string;
   value?: number;
@@ -19,7 +19,7 @@ interface PerformanceMetrics {;
   }
   }
 }
-  metric: string;,;
+  metric: string;,
     value: number;
   rating?: 'good' | 'needs-improvement' | 'poor';
 }
@@ -30,7 +30,7 @@ interface ErrorReport {;
 }
   message: string;
   stack?: string;
-  componentStack?: string;,;
+  componentStack?: string;,
     severity: 'low' | 'medium' | 'high' | 'critical';
 }
 class AnalyticsTracker {;
@@ -51,10 +51,10 @@ class AnalyticsTracker {;
 }
     if (typeof window === 'undefined') return;
     this.isInitialized = true;
-    // Process queued events,;
+    // Process queued events,
     this.queue.forEach(fn => fn());
     this.queue = [];
-    // Track initial page view,;
+    // Track initial page view,
     this.trackPageView(window.location.pathname);
   }
   /**;
@@ -76,13 +76,13 @@ class AnalyticsTracker {;
   }
   }
 }
-  event_category: event.category,;
-          event_label: event.label,;
-          value: event.value,;
+  event_category: event.category,
+          event_label: event.label,
+          value: event.value,
           non_interaction: event.nonInteraction;
         });
       }
-      // Also log to console in development,;
+      // Also log to console in development,
       if (process.env.NODE_ENV === 'development') {;
     // TODO: Add content;
   }
@@ -125,9 +125,9 @@ class AnalyticsTracker {;
   }
   }
 }
-  event_category: 'Web Vitals',;
-          event_label: metrics.metric,;
-          value: Math.round(metrics.value),;
+  event_category: 'Web Vitals',
+          event_label: metrics.metric,
+          value: Math.round(metrics.value),
           metric_rating: metrics.rating;
         });
       }
@@ -173,9 +173,9 @@ class AnalyticsTracker {;
   }
   }
 }
-  name: variable,;
-          value: Math.round(value),;
-          event_category: category,;
+  name: variable,
+          value: Math.round(value),
+          event_category: category,
           event_label: label;
         });
       }
@@ -198,9 +198,9 @@ class AnalyticsTracker {;
     }
   }
 }
-// Export singleton instance,;
+// Export singleton instance,
 export const analyticsTracker = new AnalyticsTracker();
-// Auto-initialize when window is available,;
+// Auto-initialize when window is available,
 if (typeof window !== 'undefined') {;
     // TODO: Add content;
   }

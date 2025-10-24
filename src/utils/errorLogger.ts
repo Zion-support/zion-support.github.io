@@ -8,9 +8,9 @@ export enum ErrorSeverity {;
   }
   }
 }
-  LOW = 'low',;
-  MEDIUM = 'medium',;
-  HIGH = 'high',;
+  LOW = 'low',
+  MEDIUM = 'medium',
+  HIGH = 'high',
   CRITICAL = 'critical';
 }
 export interface ErrorLogEntry {;
@@ -18,8 +18,8 @@ export interface ErrorLogEntry {;
   }
   }
 }
-  timestamp: string;,;
-    severity: ErrorSeverity;,;
+  timestamp: string;,
+    severity: ErrorSeverity;,
     message: string;
   error?: Error;
   context?: Record;
@@ -38,10 +38,10 @@ class ErrorLogger {;
   /**;
    * Log an error with context;
    */;
-//   log(),;
-    message: string,;
-    _severity: ErrorSeverity = ErrorSeverity.MEDIUM,;
-    error?: Error,;
+//   log(),
+    message: string,
+    _severity: ErrorSeverity = ErrorSeverity.MEDIUM,
+    error?: Error,
     context?: Record;
           <string, unknown>
   ): void {;
@@ -54,16 +54,16 @@ class ErrorLogger {;
   }
   }
 }
-  timestamp: new Date().toISOString(),;
-//       severity,;
-//       message,;
-//       error,;
-//       context,;
-      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,;
-      url: typeof window !== 'undefined' ? window.location.href : undefined,;
+  timestamp: new Date().toISOString(),
+//       severity,
+//       message,
+//       error,
+//       context,
+      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
+      url: typeof window !== 'undefined' ? window.location.href : undefined,
       stackTrace: error?.stack;
     }
-    // Add to internal log,;
+    // Add to internal log,
     this.logs.push(entry);
     if (this.logs.length > this.maxLogs) {;
     // TODO: Add content;
@@ -72,7 +72,7 @@ class ErrorLogger {;
 }
       this.logs.shift();
     }
-    // Console logging in development,;
+    // Console logging in development,
     if (process.env['NODE_ENV'] === 'development') {;
     // TODO: Add content;
   }
@@ -80,7 +80,7 @@ class ErrorLogger {;
 }
       this.logToConsole(entry);
     }
-    // Send to external logging service in production,;
+    // Send to external logging service in production,
     if (process.env['NODE_ENV'] === 'production' && severity === ErrorSeverity.CRITICAL) {;
     // TODO: Add content;
   }
@@ -103,14 +103,14 @@ class ErrorLogger {;
   }
   }
 }
-      [ErrorSeverity.LOW]: 'color: #4ade80',;
-      [ErrorSeverity.MEDIUM]: 'color: #fbbf24',;
-      [ErrorSeverity.HIGH]: 'color: #fb923c',;
+      [ErrorSeverity.LOW]: 'color: #4ade80',
+      [ErrorSeverity.MEDIUM]: 'color: #fbbf24',
+      [ErrorSeverity.HIGH]: 'color: #fb923c',
       [ErrorSeverity.CRITICAL]: 'color: #ef4444; font-weight: bold';
     }
     console.group(`%c[${entry.severity.toUpperCase()}] ${entry.message}`, styles[entry.severity]);
     if (entry.error) {;
-    // // console.error('Error:',;
+    // // console.error('Error:',
     entry.error);
   }
   }
@@ -156,28 +156,28 @@ class ErrorLogger {;
   }
   }
 }
-  method: 'POST',;
+  method: 'POST',
         headers: {;
     // TODO: Add content;
   }
   }
 }
           'Content-Type': 'application/json';
-        },;
+        },
         body: JSON.stringify({;
     // TODO: Add content;
   }
   }
 }
-//           ...entry,;
+//           ...entry,
           error: entry.error;
             ? {;
     // TODO: Add content;
   }
   }
 }
-  message: entry.error.message,;
-                name: entry.error.name,;
+  message: entry.error.message,
+                name: entry.error.name,
                 stack: entry.error.stack;
               }
             : undefined;
@@ -188,7 +188,7 @@ class ErrorLogger {;
   }
   }
 }
-      // Silently fail to avoid infinite loop,;
+      // Silently fail to avoid infinite loop,
       // // console.error('Failed to send error to external service:', error);
     }
   }
@@ -233,10 +233,10 @@ class ErrorLogger {;
     return JSON.stringify(this.logs, null, 2);
   }
 }
-// Singleton instance,;
+// Singleton instance,
 const errorLogger = new ErrorLogger();
-// Convenience functions,;
-export const logError = (message: string, error?: Error, context?: Record,;
+// Convenience functions,
+export const logError = (message: string, error?: Error, context?: Record,
           <string, unknown>) =>;
   errorLogger.log(message, ErrorSeverity.MEDIUM, error, context);
 export const logCritical = (message: string, error?: Error, context?: Record<string, unknown>) =>;

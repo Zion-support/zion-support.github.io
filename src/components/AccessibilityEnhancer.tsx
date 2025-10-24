@@ -13,13 +13,13 @@ interface AccessibilityEnhancerProps {;
   }
 }
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({;
-    children,;
-  enableKeyboardNavigation = true,;
-  enableScreenReaderSupport = true,;
-  enableHighContrast = true,;
-  enableFocusManagement = true,;
-  enableSkipLinks = true,;
-  enableKeyboardNav = true,;
+    children,
+  enableKeyboardNavigation = true,
+  enableScreenReaderSupport = true,
+  enableHighContrast = true,
+  enableFocusManagement = true,
+  enableSkipLinks = true,
+  enableKeyboardNav = true,
   enableFocusIndicators = true;
   }
   }
@@ -27,7 +27,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({;
   }
 }) => {;
     React.useEffect(() => {;
-    // Initialize accessibility features,;
+    // Initialize accessibility features,
     if (enableSkipLinks) {;
       addSkipLinks();
   }
@@ -53,10 +53,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({;
     skipLink.textContent = 'Skip to main content';
     skipLink.className = 'skip-link';
     skipLink.style.cssText = `;
-      position: absolute;,;
-    top: -40px;,;
-    left: 6px;,;
-    background: #000;,;
+      position: absolute;,
+    top: -40px;,
+    left: 6px;,
+    background: #000;,
     color: #fff;
   }
   }
@@ -84,7 +84,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({;
   }
 ;
   const setupKeyboardNavigation = () => {;
-    document.addEventListener('keydown',;
+    document.addEventListener('keydown',
     (e) => {;
       if (e.key === 'Tab') {;
         document.body.classList.add('keyboard-navigation');

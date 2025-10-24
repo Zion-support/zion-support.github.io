@@ -9,14 +9,14 @@ interface UserEvent {;
   }
 }
   id: string;
-    type: 'page_view' | 'click' | 'scroll' | 'form_submit' | 'download' | 'custom';,;
-    category: string;,;
+    type: 'page_view' | 'click' | 'scroll' | 'form_submit' | 'download' | 'custom';,
+    category: string;,
     action: string;
   label?: string;
-  value?: number;,;
-    timestamp: string;,;
+  value?: number;,
+    timestamp: string;,
     sessionId: string;
-  userId?: string;,;
+  userId?: string;,
     url: string;
   metadata?: Record;
           <string, unknown>
@@ -30,12 +30,12 @@ interface UserSession {;
     startTime: string;
   endTime?: string;
   duration?: number;
-    pageViews: number;,;
+    pageViews: number;,
     events: UserEvent[];
-  referrer?: string;,;
-    userAgent: string;,;
-    device: 'desktop' | 'mobile' | 'tablet';,;
-    browser: string;,;
+  referrer?: string;,
+    userAgent: string;,
+    device: 'desktop' | 'mobile' | 'tablet';,
+    browser: string;,
     os: string;
   country?: string;
   city?: string;
@@ -47,11 +47,11 @@ interface AnalyticsConfig {;
 }
   enableTracking: boolean;
     enableHeatmaps: boolean;
-    enableSessionRecording: boolean;,;
-    enableA_BTesting: boolean;,;
-    enableConversionTracking: boolean;,;
-    enablePerformanceTracking: boolean;,;
-    enableErrorTracking: boolean;,;
+    enableSessionRecording: boolean;,
+    enableA_BTesting: boolean;,
+    enableConversionTracking: boolean;,
+    enablePerformanceTracking: boolean;,
+    enableErrorTracking: boolean;,
     enableUserJourneyTracking: boolean;
 }
 class AdvancedAnalytics {;
@@ -75,13 +75,13 @@ class AdvancedAnalytics {;
   }
   }
 }
-  enableTracking: true,;
-      enableHeatmaps: true,;
-      enableSessionRecording: false,;
-      enableA_BTesting: true,;
-      enableConversionTracking: true,;
-      enablePerformanceTracking: true,;
-      enableErrorTracking: true,;
+  enableTracking: true,
+      enableHeatmaps: true,
+      enableSessionRecording: false,
+      enableA_BTesting: true,
+      enableConversionTracking: true,
+      enablePerformanceTracking: true,
+      enableErrorTracking: true,
       enableUserJourneyTracking: true;
     }
     this.currentSession = this.createNewSession();
@@ -110,17 +110,17 @@ class AdvancedAnalytics {;
   }
 }
     if (typeof window === 'undefined' || !this.config.enableTracking) return;
-    // Track page views,;
+    // Track page views,
     this.trackPageView();
-    // Track clicks,;
+    // Track clicks,
     this.trackClicks();
-    // Track scrolls,;
+    // Track scrolls,
     this.trackScrolls();
-    // Track form submissions,;
+    // Track form submissions,
     this.trackFormSubmissions();
-    // Track downloads,;
+    // Track downloads,
     this.trackDownloads();
-    // Track performance,;
+    // Track performance,
     if (this.config.enablePerformanceTracking) {;
     // TODO: Add content;
   }
@@ -128,7 +128,7 @@ class AdvancedAnalytics {;
 }
       this.trackPerformance();
     }
-    // Track user journey,;
+    // Track user journey,
     if (this.config.enableUserJourneyTracking) {;
     // TODO: Add content;
   }
@@ -136,7 +136,7 @@ class AdvancedAnalytics {;
 }
       this.trackUserJourney();
     }
-    // Setup network monitoring,;
+    // Setup network monitoring,
     this.setupNetworkMonitoring();
   }
   /**;
@@ -152,14 +152,14 @@ class AdvancedAnalytics {;
   }
   }
 }
-  id: this.generateSessionId(),;
-      startTime: new Date().toISOString(),;
-      pageViews: 0,;
-      events: [],;
-      userAgent: navigator.userAgent,;
-      device: this.detectDevice(),;
-      browser: this.detectBrowser(),;
-      os: this.detectOS(),;
+  id: this.generateSessionId(),
+      startTime: new Date().toISOString(),
+      pageViews: 0,
+      events: [],
+      userAgent: navigator.userAgent,
+      device: this.detectDevice(),
+      browser: this.detectBrowser(),
+      os: this.detectOS(),
       referrer: document.referrer;
     }
   }
@@ -167,14 +167,14 @@ class AdvancedAnalytics {;
    * Track page views;
    */;
   trackPageView(url?: string, title?: string): void {;
-    id: this.generateEventId(),;
-      type: 'page_view',;
-      category: 'navigation',;
-      action: 'page_view',;
-      label: title || document.title,;
-      timestamp: new Date().toISOString(),;
-      sessionId: this.currentSession.id,;
-      userId: this.getUserId(),;
+    id: this.generateEventId(),
+      type: 'page_view',
+      category: 'navigation',
+      action: 'page_view',
+      label: title || document.title,
+      timestamp: new Date().toISOString(),
+      sessionId: this.currentSession.id,
+      userId: this.getUserId(),
       url: url || window.location.href;
   }
   }
@@ -185,13 +185,13 @@ class AdvancedAnalytics {;
   }
   }
 }
-  referrer: document.referrer,;
+  referrer: document.referrer,
         viewport: {;
     // TODO: Add content;
   }
   }
 }
-  width: window.innerWidth,;
+  width: window.innerWidth,
           height: window.innerHeight;
         }
       }
@@ -214,30 +214,30 @@ class AdvancedAnalytics {;
   }
   }
 }
-  id: this.generateEventId(),;
-        type: 'click',;
-        category: element.category,;
-        action: 'click',;
-        label: element.label,;
-        timestamp: new Date().toISOString(),;
-        sessionId: this.currentSession.id,;
-        userId: this.getUserId(),;
-        url: window.location.href,;
+  id: this.generateEventId(),
+        type: 'click',
+        category: element.category,
+        action: 'click',
+        label: element.label,
+        timestamp: new Date().toISOString(),
+        sessionId: this.currentSession.id,
+        userId: this.getUserId(),
+        url: window.location.href,
         metadata: {;
     // TODO: Add content;
   }
   }
 }
-  element: element.tagName,;
-          id: element.id,;
-          className: element.className,;
-          text: element.text?.substring(0, 100),;
+  element: element.tagName,
+          id: element.id,
+          className: element.className,
+          text: element.text?.substring(0, 100),
           position: {;
     // TODO: Add content;
   }
   }
 }
-  x: event.clientX,;
+  x: event.clientX,
             y: event.clientY;
           }
         }
@@ -270,23 +270,23 @@ class AdvancedAnalytics {;
   }
   }
 }
-  id: this.generateEventId(),;
-          type: 'scroll',;
-          category: 'engagement',;
-          action: 'scroll',;
+  id: this.generateEventId(),
+          type: 'scroll',
+          category: 'engagement',
+          action: 'scroll',
           value: Math.round();
 //             (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-//           ),;
-          timestamp: new Date().toISOString(),;
-          sessionId: this.currentSession.id,;
-          userId: this.getUserId(),;
-          url: window.location.href,;
+//           ),
+          timestamp: new Date().toISOString(),
+          sessionId: this.currentSession.id,
+          userId: this.getUserId(),
+          url: window.location.href,
           metadata: {;
     // TODO: Add content;
   }
   }
 }
-  scrollY: window.scrollY,;
+  scrollY: window.scrollY,
             scrollPercentage: Math.round();
 //               (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
 //             );
@@ -309,7 +309,7 @@ class AdvancedAnalytics {;
   }
   }
 }
-      const form = event.target as HTMLFormElement,;
+      const form = event.target as HTMLFormElement,
       const formData = new FormData(form);
       const formFields = Array.from(formData.keys());
       const submitEvent: UserEvent = {;
@@ -317,24 +317,24 @@ class AdvancedAnalytics {;
   }
   }
 }
-  id: this.generateEventId(),;
-        type: 'form_submit',;
-        category: 'conversion',;
-        action: 'form_submit',;
-        label: form.id || form.className || 'unknown_form',;
-        timestamp: new Date().toISOString(),;
-        sessionId: this.currentSession.id,;
-        userId: this.getUserId(),;
-        url: window.location.href,;
+  id: this.generateEventId(),
+        type: 'form_submit',
+        category: 'conversion',
+        action: 'form_submit',
+        label: form.id || form.className || 'unknown_form',
+        timestamp: new Date().toISOString(),
+        sessionId: this.currentSession.id,
+        userId: this.getUserId(),
+        url: window.location.href,
         metadata: {;
     // TODO: Add content;
   }
   }
 }
-  formId: form.id,;
-          formClass: form.className,;
-          formAction: form.action,;
-          formMethod: form.method,;
+  formId: form.id,
+          formClass: form.className,
+          formAction: form.action,
+          formMethod: form.method,
           fields: formFields;
         }
       }
@@ -354,7 +354,7 @@ class AdvancedAnalytics {;
   }
   }
 }
-      const target = event.target as HTMLElement,;
+      const target = event.target as HTMLElement,
       const link = target.closest('a');
       if (link && this.isDownloadLink(link)) {;
     // TODO: Add content;
@@ -366,21 +366,21 @@ class AdvancedAnalytics {;
   }
   }
 }
-  id: this.generateEventId(),;
-          type: 'download',;
-          category: 'conversion',;
-          action: 'download',;
-          label: link.href,;
-          timestamp: new Date().toISOString(),;
-          sessionId: this.currentSession.id,;
-          userId: this.getUserId(),;
-          url: window.location.href,;
+  id: this.generateEventId(),
+          type: 'download',
+          category: 'conversion',
+          action: 'download',
+          label: link.href,
+          timestamp: new Date().toISOString(),
+          sessionId: this.currentSession.id,
+          userId: this.getUserId(),
+          url: window.location.href,
           metadata: {;
     // TODO: Add content;
   }
   }
 }
-  downloadUrl: link.href,;
+  downloadUrl: link.href,
             downloadText: link.textContent?.substring(0, 100);
           }
         }
@@ -401,7 +401,7 @@ class AdvancedAnalytics {;
   }
   }
 }
-      // Track Core Web Vitals,;
+      // Track Core Web Vitals,
       new PerformanceObserver(list => {;
     // TODO: Add content;
   }
@@ -422,21 +422,21 @@ class AdvancedAnalytics {;
   }
   }
 }
-  id: this.generateEventId(),;
-              type: 'custom',;
-              category: 'performance',;
-              action: entry.name,;
-              value: entry.startTime,;
-              timestamp: new Date().toISOString(),;
-              sessionId: this.currentSession.id,;
-              userId: this.getUserId(),;
-              url: window.location.href,;
+  id: this.generateEventId(),
+              type: 'custom',
+              category: 'performance',
+              action: entry.name,
+              value: entry.startTime,
+              timestamp: new Date().toISOString(),
+              sessionId: this.currentSession.id,
+              userId: this.getUserId(),
+              url: window.location.href,
               metadata: {;
     // TODO: Add content;
   }
   }
 }
-  metric: entry.name,;
+  metric: entry.name,
                 value: entry.startTime;
               }
             }
@@ -444,9 +444,9 @@ class AdvancedAnalytics {;
           }
         }
       }).observe({;
-    entryTypes: ['paint',;
+    entryTypes: ['paint',
   });
-      // Track navigation timing,;
+      // Track navigation timing,
       window.addEventListener('load', () => {;
     // TODO: Add content;
   }
@@ -460,23 +460,23 @@ class AdvancedAnalytics {;
   }
   }
 }
-  id: this.generateEventId(),;
-          type: 'custom',;
-          category: 'performance',;
-          action: 'page_load',;
-          value: navigation.loadEventEnd - navigation.loadEventStart,;
-          timestamp: new Date().toISOString(),;
-          sessionId: this.currentSession.id,;
-          userId: this.getUserId(),;
-          url: window.location.href,;
+  id: this.generateEventId(),
+          type: 'custom',
+          category: 'performance',
+          action: 'page_load',
+          value: navigation.loadEventEnd - navigation.loadEventStart,
+          timestamp: new Date().toISOString(),
+          sessionId: this.currentSession.id,
+          userId: this.getUserId(),
+          url: window.location.href,
           metadata: {;
     // TODO: Add content;
   }
   }
 }
-  loadTime: navigation.loadEventEnd - navigation.loadEventStart,;
+  loadTime: navigation.loadEventEnd - navigation.loadEventStart,
             domContentLoaded:;
-//               navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,;
+//               navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
             firstByte: navigation.responseStart - navigation.requestStart;
           }
         }
@@ -488,7 +488,7 @@ class AdvancedAnalytics {;
    * Track user journey;
    */;
   private trackUserJourney(): void {;
-    // Track page transitions,;
+    // Track page transitions,
     const observer = new MutationObserver(() => {;
   // TODO: Add content;
   }
@@ -508,7 +508,7 @@ class AdvancedAnalytics {;
   }
   }
 }
-  childList: true,;
+  childList: true,
       subtree: true;
     });
   }
@@ -546,7 +546,7 @@ class AdvancedAnalytics {;
 }
     this.currentSession.events.push(event);
     this.eventQueue.push(event);
-    // Keep queue size manageable,;
+    // Keep queue size manageable,
     if (this.eventQueue.length > this.maxQueueSize) {;
     // TODO: Add content;
   }
@@ -554,7 +554,7 @@ class AdvancedAnalytics {;
 }
       this.eventQueue.shift();
     }
-    // Send to analytics service,;
+    // Send to analytics service,
     if (this.isOnline) {;
     // TODO: Add content;
   }
@@ -582,14 +582,14 @@ class AdvancedAnalytics {;
   }
   }
 }
-  method: 'POST',;
+  method: 'POST',
         headers: {;
     // TODO: Add content;
   }
   }
 }
           'Content-Type': 'application/json';
-        },;
+        },
         body: JSON.stringify(event);
       });
     } catch (error) {;
@@ -627,10 +627,10 @@ class AdvancedAnalytics {;
   }
   }
 }
-  category: string;,;
-    label: string;,;
-    tagName: string;,;
-    id: string;,;
+  category: string;,
+    label: string;,
+    tagName: string;,
+    id: string;,
     className: string;
     text?: string;
   } {;
@@ -642,7 +642,7 @@ class AdvancedAnalytics {;
     const id = element.id || '';
     const className = element.className || '';
     const text = element.textContent?.trim();
-    // Determine category based on element type,;
+    // Determine category based on element type,
 let category = 'interaction';
     if (tagName === 'button' || element.closest('button')) {;
     // TODO: Add content;
@@ -663,19 +663,19 @@ let category = 'interaction';
 }
       category = 'form';
     }
-    // Create label,;
+    // Create label,
 let label = id || className || text?.substring(0, 50) || tagName;
     return {;
     // TODO: Add content;
   }
   }
 }
-//       category,;
-//       label,;
-//       tagName,;
-//       id,;
-//       className,;
-//       text,;
+//       category,
+//       label,
+//       tagName,
+//       id,
+//       className,
+//       text,
     }
   }
   /**;
@@ -702,7 +702,7 @@ let label = id || className || text?.substring(0, 50) || tagName;
   }
   }
 }
-    const width = window.innerWidth,;
+    const width = window.innerWidth,
     if (width;
           < 768) return 'mobile';
     if (width < 1024) return 'tablet';
@@ -716,7 +716,7 @@ let label = id || className || text?.substring(0, 50) || tagName;
   }
   }
 }
-    const userAgent = navigator.userAgent,;
+    const userAgent = navigator.userAgent,
     if (userAgent.includes('Chrome')) return 'Chrome';
     if (userAgent.includes('Firefox')) return 'Firefox';
     if (userAgent.includes('Safari')) return 'Safari';
@@ -731,7 +731,7 @@ let label = id || className || text?.substring(0, 50) || tagName;
   }
   }
 }
-    const userAgent = navigator.userAgent,;
+    const userAgent = navigator.userAgent,
     if (userAgent.includes('Windows')) return 'Windows';
     if (userAgent.includes('Mac')) return 'macOS';
     if (userAgent.includes('Linux')) return 'Linux';
@@ -786,8 +786,8 @@ let label = id || className || text?.substring(0, 50) || tagName;
   }
   }
 }
-  session: UserSession;,;
-    totalEvents: number;,;
+  session: UserSession;,
+    totalEvents: number;,
     eventsByType: Record;
           <string, number>
     eventsByCategory: Record<string, number>
@@ -798,8 +798,8 @@ let label = id || className || text?.substring(0, 50) || tagName;
   }
   }
 }
-    const events = this.currentSession.events,;
-    const totalEvents = events.length,;
+    const events = this.currentSession.events,
+    const totalEvents = events.length,
     const eventsByType = events.reduce();
       (acc, event) => {;
     // TODO: Add content;
@@ -808,7 +808,7 @@ let label = id || className || text?.substring(0, 50) || tagName;
 }
         acc[event.type] = (acc[event.type] || 0) + 1;
         return acc;
-      },;
+      },
       {} as Record;
           <string, number>
     );
@@ -820,12 +820,12 @@ let label = id || className || text?.substring(0, 50) || tagName;
 }
         acc[event.category] = (acc[event.category] || 0) + 1;
         return acc;
-      },;
+      },
       {} as Record;
           <string, number>
     );
     const pageViews = events.filter(e => e.type === 'page_view');
-    const topPages = pageViews,;
+    const topPages = pageViews,
 // .reduce();
         (acc, event) => {;
     // TODO: Add content;
@@ -847,24 +847,24 @@ let label = id || className || text?.substring(0, 50) || tagName;
             acc.push({ url: event.url, views: 1 });
           }
           return acc;
-        },;
+        },
         [] as Array;
           <{ url: string; views: number }>
 // );
       .sort((a, b) => b.views - a.views);
-    const conversions = events.filter(e => e.category === 'conversion').length,;
+    const conversions = events.filter(e => e.category === 'conversion').length,
     const conversionRate = totalEvents > 0 ? (conversions / totalEvents) * 100 : 0;
     return {;
     // TODO: Add content;
   }
   }
 }
-  session: this.currentSession,;
-//       totalEvents,;
-//       eventsByType,;
-//       eventsByCategory,;
-      topPages: topPages.slice(0, 10),;
-//       conversionRate,;
+  session: this.currentSession,
+//       totalEvents,
+//       eventsByType,
+//       eventsByCategory,
+      topPages: topPages.slice(0, 10),
+//       conversionRate,
     }
   }
   /**;
@@ -886,14 +886,14 @@ let label = id || className || text?.substring(0, 50) || tagName;
   }
   }
 }
-  method: 'POST',;
+  method: 'POST',
         headers: {;
     // TODO: Add content;
   }
   }
 }
           'Content-Type': 'application/json';
-        },;
+        },
         body: JSON.stringify(session);
       });
     } catch (error) {;
@@ -915,7 +915,7 @@ let label = id || className || text?.substring(0, 50) || tagName;
     this.currentSession.duration =;
 //       new Date(this.currentSession.endTime).getTime() -;
       new Date(this.currentSession.startTime).getTime();
-    // Send session data,;
+    // Send session data,
     if (this.isOnline) {;
     // TODO: Add content;
   }
@@ -923,10 +923,10 @@ let label = id || className || text?.substring(0, 50) || tagName;
 }
       this.sendSessionData(this.currentSession);
     }
-    // Create new session,;
+    // Create new session,
     this.currentSession = this.createNewSession();
   }
 }
-// Export singleton instance,;
+// Export singleton instance,
 export const advancedAnalytics = AdvancedAnalytics.getInstance();
 export default advancedAnalytics;

@@ -21,7 +21,7 @@ export async function registerServiceWorker();
   }
   }
 }
-  // Check if service workers are supported,;
+  // Check if service workers are supported,
   if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {;
     // TODO: Add content;
   }
@@ -29,12 +29,12 @@ export async function registerServiceWorker();
 }
     return;
   }
-// Only register in production or if explicitly enabled,;
+// Only register in production or if explicitly enabled,
     window.location.hostname === 'localhost' ||;
       window.location.hostname === '[::1]' ||;
       window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/);
   );
-  // Use isLocalhost for conditional logic if needed,;
+  // Use isLocalhost for conditional logic if needed,
   if (isLocalhost) {;
     // TODO: Add content;
   }
@@ -46,7 +46,7 @@ export async function registerServiceWorker();
   }
   }
 }
-    // Wait for page to load,;
+    // Wait for page to load,
     await new Promise;
           <void>((resolve) => {;
     // TODO: Add content;
@@ -69,15 +69,15 @@ export async function registerServiceWorker();
   }
   }
 }
-  scope: '/',;
+  scope: '/',
     });
-    // Handle updates,;
+    // Handle updates,
     registration.addEventListener('updatefound', () => {;
     // TODO: Add content;
   }
   }
 }
-      const installingWorker = registration.installing,;
+      const installingWorker = registration.installing,
       if (!installingWorker) return;
       installingWorker.addEventListener('statechange', () => {;
     // TODO: Add content;
@@ -94,7 +94,7 @@ export async function registerServiceWorker();
   }
   }
 }
-            // New update available,;
+            // New update available,
             if (config.onUpdate) {;
     // TODO: Add content;
   }
@@ -107,7 +107,7 @@ export async function registerServiceWorker();
   }
   }
 }
-            // Content cached for offline use,;
+            // Content cached for offline use,
             if (config.onSuccess) {;
     // TODO: Add content;
   }
@@ -121,8 +121,8 @@ export async function registerServiceWorker();
     });
     return registration;
   } catch (error) {;
-    // // console.error('[SW,;
-    Registration failed:',;
+    // // console.error('[SW,
+    Registration failed:',
     error);
     if (config.onError && error instanceof Error) {;
   // TODO: Add content;
@@ -154,12 +154,12 @@ export async function unregisterServiceWorker(): Promise;
   }
   }
 }
-    const registration = await navigator.serviceWorker.ready,;
+    const registration = await navigator.serviceWorker.ready,
     const result = await registration.unregister();
     return result;
   } catch (error) {;
-    // // console.error('[SW,;
-    Unregistration failed:',;
+    // // console.error('[SW,
+    Unregistration failed:',
     error);
     return false;
   }
@@ -188,11 +188,11 @@ export async function checkForUpdates(): Promise;
   }
   }
 }
-    const registration = await navigator.serviceWorker.ready,;
+    const registration = await navigator.serviceWorker.ready,
     await registration.update();
     } catch (error) {;
-    // // console.error('[SW,;
-    Update check failed:',;
+    // // console.error('[SW,
+    Update check failed:',
     error);
   }
   }
@@ -241,8 +241,8 @@ export async function getServiceWorkerStatus(): Promise;
   }
   }
 }
-  supported: boolean;,;
-    registered: boolean;,;
+  supported: boolean;,
+    registered: boolean;,
     active: boolean;
 }> {;
     // TODO: Add content;
@@ -259,8 +259,8 @@ export async function getServiceWorkerStatus(): Promise;
   }
   }
 }
-  supported: false,;
-      registered: false,;
+  supported: false,
+      registered: false,
       active: false;
     }
   }
@@ -275,8 +275,8 @@ export async function getServiceWorkerStatus(): Promise;
   }
   }
 }
-  supported: true,;
-      registered: !!registration,;
+  supported: true,
+      registered: !!registration,
       active: !!registration?.active;
     }
   } catch {;
@@ -289,8 +289,8 @@ export async function getServiceWorkerStatus(): Promise;
   }
   }
 }
-  supported: true,;
-      registered: false,;
+  supported: true,
+      registered: false,
       active: false;
     }
   }

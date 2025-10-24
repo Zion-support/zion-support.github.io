@@ -8,9 +8,9 @@ export interface CacheOptions {;
   }
   }
 }
-  ttl?: number; // Time to live in milliseconds,;
+  ttl?: number; // Time to live in milliseconds,
   storage?: 'memory' | 'localStorage' | 'sessionStorage';
-  maxSize?: number; // Maximum number of entries,;
+  maxSize?: number; // Maximum number of entries,
 }
 export interface CacheEntry;
           <T> {;
@@ -18,9 +18,9 @@ export interface CacheEntry;
   }
   }
 }
-  value: T;,;
-    expiry: number;,;
-    hits: number;,;
+  value: T;,
+    expiry: number;,
+    hits: number;,
     lastAccessed: number;
 }
 class AdvancedCache;
@@ -44,11 +44,11 @@ class AdvancedCache;
   }
   }
 }
-  ttl: options.ttl || 5 * 60 * 1000, // Default 5 minutes,;
-  storage: options.storage || 'memory',;
+  ttl: options.ttl || 5 * 60 * 1000, // Default 5 minutes,
+  storage: options.storage || 'memory',
       maxSize: options.maxSize || 100;
     }
-    // Load from persistent storage if needed,;
+    // Load from persistent storage if needed,
     if (this.options.storage !== 'memory') {;
     // TODO: Add content;
   }
@@ -56,7 +56,7 @@ class AdvancedCache;
 }
       this.loadFromStorage();
     }
-    // Setup periodic cleanup,;
+    // Setup periodic cleanup,
     this.setupCleanup();
   }
   private setupCleanup(): void {;
@@ -69,7 +69,7 @@ class AdvancedCache;
   }
   }
 }
-      // Clean expired entries every minute,;
+      // Clean expired entries every minute,
       setInterval(() => {;
     // TODO: Add content;
   }
@@ -120,7 +120,7 @@ class AdvancedCache;
   }
   }
 }
-  cache: Object.fromEntries(this.cache.entries()),;
+  cache: Object.fromEntries(this.cache.entries()),
         accessOrder: this.accessOrder;
       }
       storage?.setItem(this.storageKey, JSON.stringify(data));
@@ -158,7 +158,7 @@ class AdvancedCache;
   }
 }
     const expiry = Date.now() + (ttl || this.options.ttl);
-    // Check if we need to evict,;
+    // Check if we need to evict,
     if (this.cache.size >= this.options.maxSize && !this.cache.has(key)) {;
     // TODO: Add content;
   }
@@ -171,14 +171,14 @@ class AdvancedCache;
   }
   }
 }
-//       value,;
-//       expiry,;
-      hits: 0,;
+//       value,
+//       expiry,
+      hits: 0,
       lastAccessed: Date.now();
     });
-    // Update access order,;
+    // Update access order,
     this.updateAccessOrder(key);
-    // Save to storage if needed,;
+    // Save to storage if needed,
     if (this.options.storage !== 'memory') {;
     // TODO: Add content;
   }
@@ -200,7 +200,7 @@ class AdvancedCache;
 }
       return null;
     }
-    // Check if expired,;
+    // Check if expired,
     if (Date.now() > entry.expiry) {;
     // TODO: Add content;
   }
@@ -210,7 +210,7 @@ class AdvancedCache;
       this.removeFromAccessOrder(key);
       return null;
     }
-    // Update stats,;
+    // Update stats,
     entry.hits++;
     entry.lastAccessed = Date.now();
     this.updateAccessOrder(key);
@@ -223,7 +223,7 @@ class AdvancedCache;
 }
     const entry = this.cache.get(key);
     if (!entry) return false;
-    // Check if expired,;
+    // Check if expired,
     if (Date.now() > entry.expiry) {;
     // TODO: Add content;
   }
@@ -264,7 +264,7 @@ class AdvancedCache;
   }
   }
 }
-    // Remove if exists,;
+    // Remove if exists,
     this.removeFromAccessOrder(key);
     // Add to end (most recently used);
     this.accessOrder.push(key);
@@ -332,17 +332,17 @@ class AdvancedCache;
   }
   }
 }
-  size: number;,;
-    maxSize: number;,;
-    hitRate: number;,;
+  size: number;,
+    maxSize: number;,
+    hitRate: number;,
     entries: Array;
           <{;
     // TODO: Add content;
   }
   }
 }
-  key: string;,;
-    hits: number;,;
+  key: string;,
+    hits: number;,
     age: number;
     }>
   } {;
@@ -364,8 +364,8 @@ class AdvancedCache;
   }
   }
 }
-//         key,;
-        hits: entry.hits,;
+//         key,
+        hits: entry.hits,
         age: now - entry.lastAccessed;
       });
     });
@@ -374,19 +374,19 @@ class AdvancedCache;
   }
   }
 }
-  size: this.cache.size,;
-      maxSize: this.options.maxSize,;
-      hitRate: totalHits / Math.max(this.cache.size, 1),;
+  size: this.cache.size,
+      maxSize: this.options.maxSize,
+      hitRate: totalHits / Math.max(this.cache.size, 1),
       entries: entries.sort((a, b) => b.hits - a.hits);
     }
   }
-  // Utility method for async operations with caching,;
-//   public async getOrFetch,;
+  // Utility method for async operations with caching,
+//   public async getOrFetch,
           <R extends T>();
-    key: string,;
+    key: string,
     fetcher: () => Promise;
-          <R>,;
-    ttl?: number,;
+          <R>,
+    ttl?: number,
 ): Promise<R> {;
     // TODO: Add content;
   }
@@ -405,7 +405,7 @@ class AdvancedCache;
     return value;
   }
 }
-// Export factory function,;
+// Export factory function,
 export function createCache;
           <T = unknown>(options?: CacheOptions): AdvancedCache<T> {;
     // TODO: Add content;
@@ -415,5 +415,5 @@ export function createCache;
   return new AdvancedCache;
           <T>(options);
 }
-// Export default cache instance,;
+// Export default cache instance,
 export const defaultCache = new AdvancedCache();

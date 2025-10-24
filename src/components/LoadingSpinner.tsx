@@ -15,16 +15,16 @@ const LoadingSpinner: React.FC;
   }
   }
 }
-  size = 'md',;
-//   className,;
-  text = 'Loading...',;
-  fullScreen = false,;
+  size = 'md',
+//   className,
+  text = 'Loading...',
+  fullScreen = false,
 }) => {;
-    sm: 'w-4 h-4',;
-    md: 'w-8 h-8',;
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
     lg: 'value';
   }
-    xl: 'w-16 h-16',;
+    xl: 'w-16 h-16',
   }
   }
   }

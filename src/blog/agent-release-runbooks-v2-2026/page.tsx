@@ -17,7 +17,7 @@ Page.displayName = "Page"() {
           </h1>
           <p className='text-lg md:text-xl text-white/80 max-w-3xl'>
             Ship autonomous agents with budgeted actions, KPI
-import {ListChecks, FileWarning, RefreshCw, Calendar} from 'lucide-react';;
+import {ListChecks, FileWarning, RefreshCw, Calendar} from 'lucide-react';
 export default function Page
 Page.displayName = "Page"() {return (
     <mainclassName='min-h-screen bg-gradient-to-br from-fuchsia-5 0 via-white to-purple-5 0'><headerclassName='bg-gradient-to-br from-fuchsia-90 0 via-purple-90 0 to-slate-90 0 text-white py-2 0'><divclassName='max-w-5 xl mx-auto px-6'><divclassName='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/1 0 border border-white/2 0 mb-6'><ListChecks /><spanclassName='text-sm font-semibold'>Agent Ops •2026</spa></di>< className='text-5 xlmd:text-6 xl font-extrabold leading-tight mb-4'></ className='text-5 xlmd:text-6 xl font-extrabold leading-tight mb-4'>Agent Release Runbooks v2 (202 6)

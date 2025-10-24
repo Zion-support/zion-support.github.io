@@ -3,7 +3,7 @@ interface ServiceCardProps {;
   }
   }
 }
-  title: string;,;
+  title: string;,
     description: string;
   icon?: React.ReactNode;
   className?: string;

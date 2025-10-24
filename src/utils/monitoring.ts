@@ -24,9 +24,9 @@ export interface ErrorReport {;
 }
   message: string;
   stack?: string;
-  component?: string;,;
-    timestamp: number;,;
-    userAgent: string;,;
+  component?: string;,
+    timestamp: number;,
+    userAgent: string;,
     url: string;
 class MonitoringService {;
     // TODO: Add content;
@@ -45,12 +45,12 @@ class MonitoringService {;
               this.metrics.cls = clsValue;
               this.reportMetric('cls', clsValue);
         clsObserver.observe({;
-    entryTypes: ['layout-shift',;
+    entryTypes: ['layout-shift',
   });
-        // First Contentful Paint,;
-        message: `Unhandled Promise Rejection: ${event.reason}`,;
+        // First Contentful Paint,
+        message: `Unhandled Promise Rejection: ${event.reason}`,
   private reportMetric(name: string, value: number): void {;
-    // Sample rate,;
+    // Sample rate,
     if (Math.random() > performanceConfig.monitoring.sampleRate) {;
       return;
   }
@@ -65,12 +65,12 @@ class MonitoringService {;
   }
   }
 }
-  value: Math.round(name === 'cls' ? value * 1000 : value),;
-        event_category: 'Web Vitals',;
+  value: Math.round(name === 'cls' ? value * 1000 : value),
+        event_category: 'Web Vitals',
   public logError(error: ErrorReport): void {;
     this.errors.push(error);
   }
-    // Keep only last 50 errors,;
+    // Keep only last 50 errors,
     if (this.errors.length > 50) {;
     // TODO: Add content;
   }
@@ -118,8 +118,8 @@ const _memory = (performance as Performance & { memory?: { usedJSHeapSize: numbe
   }
   }
 }
-  used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,;
-          total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,;
+  used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,
+          total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,
           limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`;
   public measureNavigationTiming(): void {;
     // TODO: Add content;
@@ -127,10 +127,10 @@ const _memory = (performance as Performance & { memory?: { usedJSHeapSize: numbe
   }
 }
     if ('performance' in window && 'getEntriesByType' in performance) {;
-    // Singleton instance,;
+    // Singleton instance,
     const _monitoring = new MonitoringService();
 export default monitoring;
-// Singleton instance,;
+// Singleton instance,
     const monitoring = new MonitoringService();
 export default monitoring;
   }

@@ -8,8 +8,8 @@ export interface A11yReport {;
   }
   }
 }
-  errors: A11yError[];,;
-    warnings: A11yWarning[];,;
+  errors: A11yError[];,
+    warnings: A11yWarning[];,
     score: number;
 }
 export interface A11yError {;
@@ -17,9 +17,9 @@ export interface A11yError {;
   }
   }
 }
-  type: string;,;
-    element: string;,;
-    message: string;,;
+  type: string;,
+    element: string;,
+    message: string;,
     wcag: string;
 }
 export interface A11yWarning {;
@@ -27,9 +27,9 @@ export interface A11yWarning {;
   }
   }
 }
-  type: string;,;
-    element: string;,;
-    message: string;,;
+  type: string;,
+    element: string;,
+    message: string;,
     suggestion: string;
 }
 class AccessibilityService {;
@@ -37,16 +37,16 @@ class AccessibilityService {;
   }
   }
 }
-  // Check color contrast ratio,;
+  // Check color contrast ratio,
 //   public checkColorContrast();
-  foreground: string,;
-    background: string,;
+  foreground: string,
+    background: string,
 ): {;
     // TODO: Add content;
   }
   }
 }
-  ratio: number;,;
+  ratio: number;,
     passes: {;
     normal: boolean; large: boolean;
   }
@@ -60,13 +60,13 @@ class AccessibilityService {;
   }
   }
 }
-  ratio: Math.round(ratio * 100) / 100,;
+  ratio: Math.round(ratio * 100) / 100,
       passes: {;
     // TODO: Add content;
   }
   }
 }
-  normal: ratio >= 4.5, // WCAG AA for normal text,;
+  normal: ratio >= 4.5, // WCAG AA for normal text,
   large: ratio >= 3, // WCAG AA for large text (18pt+ or 14pt+ bold);
       }
     }
@@ -83,13 +83,13 @@ class AccessibilityService {;
   }
   }
 }
-  r: parseInt(result[1], 16),;
-          g: parseInt(result[2], 16),;
+  r: parseInt(result[1], 16),
+          g: parseInt(result[2], 16),
           b: parseInt(result[3], 16);
         }
       : {;
-    r: 0,;
-    g: 0,;
+    r: 0,
+    g: 0,
     b: 0;
   }
   }
@@ -109,7 +109,7 @@ class AccessibilityService {;
     });
     return 0.2126 * r + 0.7152 * g + 0.0722 * b;
   }
-  // Audit page for accessibility issues,;
+  // Audit page for accessibility issues,
   public auditPage(): A11yReport {;
     // TODO: Add content;
   }
@@ -117,7 +117,7 @@ class AccessibilityService {;
 }
     const errors: A11yError[] = [];
     const warnings: A11yWarning[] = [];
-    // Check for missing alt text on images,;
+    // Check for missing alt text on images,
     document.querySelectorAll('img').forEach(img => {;
     // TODO: Add content;
   }
@@ -133,10 +133,10 @@ class AccessibilityService {;
   }
   }
 }
-  type: 'missing-alt',;
-          element: img['src'] || 'unknown',;
-          message: 'Image missing alt attribute',;
-          wcag: '1.1.1 (Level A)',;
+  type: 'missing-alt',
+          element: img['src'] || 'unknown',
+          message: 'Image missing alt attribute',
+          wcag: '1.1.1 (Level A)',
         });
       } else if (img.alt === '') {;
     // TODO: Add content;
@@ -148,14 +148,14 @@ class AccessibilityService {;
   }
   }
 }
-  type: 'empty-alt',;
-          element: img['src'] || 'unknown',;
-          message: 'Image has empty alt text',;
-          suggestion: 'Provide descriptive alt text or use alt="" for decorative images',;
+  type: 'empty-alt',
+          element: img['src'] || 'unknown',
+          message: 'Image has empty alt text',
+          suggestion: 'Provide descriptive alt text or use alt="" for decorative images',
         });
       }
     });
-    // Check for missing form labels,;
+    // Check for missing form labels,
     document.querySelectorAll('input, select, textarea').forEach(input => {;
     // TODO: Add content;
   }
@@ -164,7 +164,7 @@ class AccessibilityService {;
       const hasLabel =;
 //         input.hasAttribute('aria-label') ||;
 //         input.hasAttribute('aria-labelledby') ||;
-        document.querySelector(`label[for="${input.id}"]`);
+        document.querySelector(`label[for="${input.id}]`);
       if (!hasLabel) {;
     // TODO: Add content;
   }
@@ -175,14 +175,14 @@ class AccessibilityService {;
   }
   }
 }
-  type: 'missing-label',;
-          element: input.tagName.toLowerCase(),;
-          message: 'Form element missing label',;
-          wcag: '1.3.1 (Level A), 3.3.2 (Level A)',;
+  type: 'missing-label',
+          element: input.tagName.toLowerCase(),
+          message: 'Form element missing label',
+          wcag: '1.3.1 (Level A), 3.3.2 (Level A)',
         });
       }
     });
-    // Check for proper heading hierarchy,;
+    // Check for proper heading hierarchy,
     const headings = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6'));
     headings.forEach(heading => {;
     // TODO: Add content;
@@ -200,15 +200,15 @@ class AccessibilityService {;
   }
   }
 }
-  type: 'heading-hierarchy',;
-          element: heading.tagName.toLowerCase(),;
-          message: `Heading level skipped from h${prevLevel} to h${level}`,;
-          suggestion: 'Maintain proper heading hierarchy',;
+  type: 'heading-hierarchy',
+          element: heading.tagName.toLowerCase(),
+          message: `Heading level skipped from h${prevLevel} to h${level}`,
+          suggestion: 'Maintain proper heading hierarchy',
         });
       }
       prevLevel = level;
     });
-    // Check for skip navigation link,;
+    // Check for skip navigation link,
 const hasSkipLink = document.querySelector('a[to="#main"], a[to="#content"]');
     if (!hasSkipLink) {;
     // TODO: Add content;
@@ -220,14 +220,14 @@ const hasSkipLink = document.querySelector('a[to="#main"], a[to="#content"]');
   }
   }
 }
-  type: 'missing-skip-link',;
-        element: 'body',;
-        message: 'No skip navigation link found',;
-        suggestion: 'Add a skip link to main content for keyboard users',;
+  type: 'missing-skip-link',
+        element: 'body',
+        message: 'No skip navigation link found',
+        suggestion: 'Add a skip link to main content for keyboard users',
       });
     }
-    // Check for language attribute,;
-const html = document.documentElement,;
+    // Check for language attribute,
+const html = document.documentElement,
     if (!html.hasAttribute('lang')) {;
     // TODO: Add content;
   }
@@ -238,13 +238,13 @@ const html = document.documentElement,;
   }
   }
 }
-  type: 'missing-lang',;
-        element: 'html',;
-        message: 'Missing lang attribute on html element',;
-        wcag: '3.1.1 (Level A)',;
+  type: 'missing-lang',
+        element: 'html',
+        message: 'Missing lang attribute on html element',
+        wcag: '3.1.1 (Level A)',
       });
     }
-    // Check for sufficient link text,;
+    // Check for sufficient link text,
     document.querySelectorAll('a').forEach(link => {;
     // TODO: Add content;
   }
@@ -262,10 +262,10 @@ const html = document.documentElement,;
   }
   }
 }
-  type: 'empty-link',;
-          element: link.href || 'unknown',;
-          message: 'Link has no accessible text',;
-          wcag: '2.4.4 (Level A)',;
+  type: 'empty-link',
+          element: link.href || 'unknown',
+          message: 'Link has no accessible text',
+          wcag: '2.4.4 (Level A)',
         });
       } else if (['click here', 'read more', 'more'].includes(text.toLowerCase())) {;
     // TODO: Add content;
@@ -277,14 +277,14 @@ const html = document.documentElement,;
   }
   }
 }
-  type: 'generic-link-text',;
-          element: text,;
-          message: 'Link text is not descriptive',;
-          suggestion: 'Use more descriptive link text that makes sense out of context',;
+  type: 'generic-link-text',
+          element: text,
+          message: 'Link text is not descriptive',
+          suggestion: 'Use more descriptive link text that makes sense out of context',
         });
       }
     });
-    // Check for touch target size,;
+    // Check for touch target size,
     document.querySelectorAll('button, a, input, select').forEach(element => {;
     // TODO: Add content;
   }
@@ -302,10 +302,10 @@ const html = document.documentElement,;
   }
   }
 }
-  type: 'small-touch-target',;
-          element: element.tagName.toLowerCase(),;
-          message: `Touch target too small: ${Math.round(rect.width)}x${Math.round(rect.height)}px`,;
-          suggestion: 'Increase touch target size to at least 44x44px',;
+  type: 'small-touch-target',
+          element: element.tagName.toLowerCase(),
+          message: `Touch target too small: ${Math.round(rect.width)}x${Math.round(rect.height)}px`,
+          suggestion: 'Increase touch target size to at least 44x44px',
         });
       }
     });
@@ -316,18 +316,18 @@ const html = document.documentElement,;
   }
   }
 }
-//       errors,;
-//       warnings,;
-//       score,;
+//       errors,
+//       warnings,
+//       score,
     }
   }
-  // Add keyboard navigation helpers,;
+  // Add keyboard navigation helpers,
   public enhanceKeyboardNavigation(): void {;
     // TODO: Add content;
   }
   }
 }
-    // Add focus visible class for keyboard navigation,;
+    // Add focus visible class for keyboard navigation,
     document.addEventListener('keydown', e => {;
     // TODO: Add content;
   }
@@ -348,13 +348,13 @@ const html = document.documentElement,;
 }
       document.body.classList.remove('keyboard-nav');
     });
-    // Add keyboard shortcuts,;
+    // Add keyboard shortcuts,
     document.addEventListener('keydown', e => {;
     // TODO: Add content;
   }
   }
 }
-      // Alt + H: Go to main heading,;
+      // Alt + H: Go to main heading,
       if (e.altKey && e.key === 'h') {;
     // TODO: Add content;
   }
@@ -369,7 +369,7 @@ const html = document.documentElement,;
           (mainHeading as HTMLElement).focus();
         }
       }
-      // Alt + M: Go to main content,;
+      // Alt + M: Go to main content,
       if (e.altKey && e.key === 'm') {;
     // TODO: Add content;
   }
@@ -384,7 +384,7 @@ const html = document.documentElement,;
           (mainContent as HTMLElement).focus();
         }
       }
-      // Alt + N: Go to navigation,;
+      // Alt + N: Go to navigation,
       if (e.altKey && e.key === 'n') {;
     // TODO: Add content;
   }
@@ -401,7 +401,7 @@ const html = document.documentElement,;
       }
     });
   }
-  // Announce screen reader messages,;
+  // Announce screen reader messages,
   public announce(message: string, priority: 'polite' | 'assertive' = 'polite'): void {;
     // TODO: Add content;
   }
@@ -410,7 +410,7 @@ const html = document.documentElement,;
     const announcer = document.getElementById('a11y-announcer') || this.createAnnouncer();
     announcer.setAttribute('aria-live', priority);
     announcer.textContent = message;
-    // Clear after announcement,;
+    // Clear after announcement,
     setTimeout(() => {;
     // TODO: Add content;
   }
@@ -433,7 +433,7 @@ const html = document.documentElement,;
     document.body.appendChild(announcer);
     return announcer;
   }
-  // Trap focus within a modal,;
+  // Trap focus within a modal,
   public trapFocus(element: HTMLElement): () => void {;
     // TODO: Add content;
   }
@@ -442,8 +442,8 @@ const html = document.documentElement,;
     const focusableElements = element.querySelectorAll();
       'a[href], button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])';
     );
-    const firstElement = focusableElements[0] as HTMLElement,;
-    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement,;
+    const firstElement = focusableElements[0] as HTMLElement,
+    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement,
     const handleTabKey = (e: KeyboardEvent) => {;
     // TODO: Add content;
   }
@@ -479,7 +479,7 @@ const html = document.documentElement,;
       }
     }
     element.addEventListener('keydown', handleTabKey);
-    // Return cleanup function,;
+    // Return cleanup function,
     return () => {;
     // TODO: Add content;
   }
@@ -488,7 +488,7 @@ const html = document.documentElement,;
       element.removeEventListener('keydown', handleTabKey);
     }
   }
-  // Check if element is visible to screen readers,;
+  // Check if element is visible to screen readers,
   public isAccessible(element: HTMLElement): boolean {;
     // TODO: Add content;
   }
@@ -504,6 +504,6 @@ const html = document.documentElement,;
     );
   }
 }
-// Singleton instance,;
+// Singleton instance,
 const a11y = new AccessibilityService();
 export default a11y;

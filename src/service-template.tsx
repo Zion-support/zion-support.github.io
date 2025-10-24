@@ -9,8 +9,8 @@ interface ServicePageProps {;
   }
   }
 }
-  title: string;,;
-    description: string;,;
+  title: string;,
+    description: string;,
     icon: React.ComponentType;
           <{ className?: string }>
   services: Array<{;
@@ -54,7 +54,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, description, services,
               className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg"
 // >
           <Phone className="w-5 h-5 mr-2" />
-// Get Free Consultation,;
+// Get Free Consultation,
           </Link>
             <a;
               href="tel:+13024640950";
@@ -70,7 +70,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, description, services,
         <section className="container mx-auto px-4 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
             {;
-    services.map((service,;
+    services.map((service,
     index) => ();
   }
   }
@@ -82,7 +82,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, description, services,
                 <p className="text-gray-300 mb-6">{service.description}</p>
                 <ul className="space-y-2 mb-6">
                   {;
-    service.features.map((feature,;
+    service.features.map((feature,
     featureIndex) => ();
   }
   }
@@ -106,7 +106,7 @@ Get Started;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {;
-    benefits.map((benefit,;
+    benefits.map((benefit,
     index) => ();
   }
   }

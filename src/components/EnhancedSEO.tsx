@@ -28,28 +28,28 @@ const EnhancedSEO: React.FC;
   }
   }
 }
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',;
-  description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.',;
-  keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services'],;
-//   canonicalUrl,;
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',;
-  ogType = 'website',;
-  twitterCard = 'summary_large_image',;
-  twitterSite = '@ziontechgroup',;
-//   structuredData,;
-  noindex = false,;
-  nofollow = false,;
-  lang = 'en',;
-  author = 'Zion Tech Group',;
-//   publishedTime,;
-//   modifiedTime,;
-//   section,;
-  tags = [],;
+  title = 'Zion Tech Group - Advanced AI and IT Solutions',
+  description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.',
+  keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services'],
+//   canonicalUrl,
+  ogImage = 'https://ziontechgroup.com/og-image.jpg',
+  ogType = 'website',
+  twitterCard = 'summary_large_image',
+  twitterSite = '@ziontechgroup',
+//   structuredData,
+  noindex = false,
+  nofollow = false,
+  lang = 'en',
+  author = 'Zion Tech Group',
+//   publishedTime,
+//   modifiedTime,
+//   section,
+  tags = [],
 }) => {;
-    const fullDescription = description.length > 160 ? description.substring(0,;
-    157) + '...' : description,;
-    const keywordsString = Array.isArray(keywords) ? keywords.join(',;
-    ') : keywords,;
+    const fullDescription = description.length > 160 ? description.substring(0,
+    157) + '...' : description,
+    const keywordsString = Array.isArray(keywords) ? keywords.join(',
+    ') : keywords,
     return (;
   }
           <div>Coming Soon</div>
@@ -80,7 +80,7 @@ const EnhancedSEO: React.FC;
       {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
       {section && <meta property="article:section" content={section} />}
       {;
-    tags.length > 0 && tags.map((tag,;
+    tags.length > 0 && tags.map((tag,
     index) => ();
   }
   }

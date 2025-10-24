@@ -5,11 +5,11 @@ interface AccessibilitySettings {;
   }
 }
   highContrast: boolean;
-    largeText: boolean;,;
-    reducedMotion: boolean;,;
-    screenReader: boolean;,;
-    focusVisible: boolean;,;
-    zoomLevel: number;,;
+    largeText: boolean;,
+    reducedMotion: boolean;,
+    screenReader: boolean;,
+    focusVisible: boolean;,
+    zoomLevel: number;,
     colorBlind: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
 }
 interface AccessibilityProps {;
@@ -31,34 +31,34 @@ const EnhancedAccessibility: React.FC;
   }
   }
 }
-  enableKeyboardNavigation = true,;
-  enableScreenReader = true,;
-  enableHighContrast = true,;
-  enableFocusManagement = true,;
-  enableReducedMotion = true,;
-  enableColorBlindSupport = true,;
-  enableZoomControl = true,;
+  enableKeyboardNavigation = true,
+  enableScreenReader = true,
+  enableHighContrast = true,
+  enableFocusManagement = true,
+  enableReducedMotion = true,
+  enableColorBlindSupport = true,
+  enableZoomControl = true,
 }) => {;
     // TODO: Add content;
   }
   }
 }
-  const [settings, setSettings] = useState,;
+  const [settings, setSettings] = useState,
           <AccessibilitySettings>({;
     // TODO: Add content;
   }
   }
 }
-  highContrast: false,;
-    largeText: false,;
-    reducedMotion: false,;
-    screenReader: false,;
-    focusVisible: true,;
-    zoomLevel: 100,;
-    colorBlind: 'none',;
+  highContrast: false,
+    largeText: false,
+    reducedMotion: false,
+    screenReader: false,
+    focusVisible: true,
+    zoomLevel: 100,
+    colorBlind: 'none',
   });
   const [isVisible, setIsVisible] = useState(false);
-  // Load settings from localStorage,;
+  // Load settings from localStorage,
   useEffect(() => {;
     if (savedSettings) {;
   // TODO: Add content;
@@ -72,14 +72,14 @@ const EnhancedAccessibility: React.FC;
 }
         setSettings(JSON.parse(savedSettings));
       } catch (error) {;
-    // console.error('Failed to load accessibility settings:',;
+    // console.error('Failed to load accessibility settings:',
     error);
   }
   }
       }
     }
   }, []);
-  // Save settings to localStorage,;
+  // Save settings to localStorage,
 const saveSettings = useCallback((newSettings: AccessibilitySettings) => {;
     // TODO: Add content;
   }
@@ -88,7 +88,7 @@ const saveSettings = useCallback((newSettings: AccessibilitySettings) => {;
     setSettings(newSettings);
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
   }, []);
-  // Apply high contrast mode,;
+  // Apply high contrast mode,
   useEffect(() => {;
     // TODO: Add content;
   }
@@ -108,7 +108,7 @@ const saveSettings = useCallback((newSettings: AccessibilitySettings) => {;
       document.documentElement.classList.remove('high-contrast');
     }
   }, [settings.highContrast]);
-  // Apply large text mode,;
+  // Apply large text mode,
   useEffect(() => {;
     // TODO: Add content;
   }
@@ -128,7 +128,7 @@ const saveSettings = useCallback((newSettings: AccessibilitySettings) => {;
       document.documentElement.style.fontSize = '1rem';
     }
   }, [settings.largeText]);
-  // Apply reduced motion,;
+  // Apply reduced motion,
   useEffect(() => {;
     // TODO: Add content;
   }
@@ -148,7 +148,7 @@ const saveSettings = useCallback((newSettings: AccessibilitySettings) => {;
       document.documentElement.classList.remove('reduced-motion');
     }
   }, [settings.reducedMotion]);
-  // Apply color blind support,;
+  // Apply color blind support,
   useEffect(() => {;
     // TODO: Add content;
   }
@@ -156,7 +156,7 @@ const saveSettings = useCallback((newSettings: AccessibilitySettings) => {;
 }
     document.documentElement.setAttribute('data-color-blind', settings.colorBlind);
   }, [settings.colorBlind]);
-  // Apply zoom level,;
+  // Apply zoom level,
   useEffect(() => {;
     // TODO: Add content;
   }
@@ -164,7 +164,7 @@ const saveSettings = useCallback((newSettings: AccessibilitySettings) => {;
 }
     document.documentElement.style.zoom = `${settings.zoomLevel}%`;
   }, [settings.zoomLevel]);
-  // Keyboard navigation,;
+  // Keyboard navigation,
   useEffect(() => {;
     // TODO: Add content;
   }
@@ -176,7 +176,7 @@ const saveSettings = useCallback((newSettings: AccessibilitySettings) => {;
   }
   }
 }
-      // Skip to main content,;
+      // Skip to main content,
       if (e.key === 'Tab' && e.shiftKey && e.altKey) {;
     // TODO: Add content;
   }
@@ -192,7 +192,7 @@ const saveSettings = useCallback((newSettings: AccessibilitySettings) => {;
           (mainContent as HTMLElement).focus();
         }
       }
-      // Toggle accessibility panel,;
+      // Toggle accessibility panel,
       if (e.key === 'Tab' && e.altKey && e.key === 'a') {;
     // TODO: Add content;
   }
@@ -201,7 +201,7 @@ const saveSettings = useCallback((newSettings: AccessibilitySettings) => {;
         e.preventDefault();
         setIsVisible(prev => !prev);
       }
-      // Escape key to close panel,;
+      // Escape key to close panel,
       if (e.key === 'Escape' && isVisible) {;
     // TODO: Add content;
   }
@@ -213,7 +213,7 @@ const saveSettings = useCallback((newSettings: AccessibilitySettings) => {;
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [enableKeyboardNavigation, isVisible]);
-  // Focus management,;
+  // Focus management,
   useEffect(() => {;
     // TODO: Add content;
   }
@@ -225,7 +225,7 @@ const saveSettings = useCallback((newSettings: AccessibilitySettings) => {;
   }
   }
 }
-      const target = e.target as HTMLElement,;
+      const target = e.target as HTMLElement,
       if (target && settings.focusVisible) {;
     // TODO: Add content;
   }
@@ -239,7 +239,7 @@ const saveSettings = useCallback((newSettings: AccessibilitySettings) => {;
   }
   }
 }
-      const target = e.target as HTMLElement,;
+      const target = e.target as HTMLElement,
       if (target) {;
     // TODO: Add content;
   }
@@ -259,7 +259,7 @@ const saveSettings = useCallback((newSettings: AccessibilitySettings) => {;
       document.removeEventListener('focusout', handleFocusOut);
     }
   }, [enableFocusManagement, settings.focusVisible]);
-  // Screen reader announcements,;
+  // Screen reader announcements,
 const announceToScreenReader = useCallback((message: string) => {;
     // TODO: Add content;
   }
@@ -280,14 +280,14 @@ const announceToScreenReader = useCallback((message: string) => {;
       document.body.removeChild(announcement);
     }, 1000);
   }, [enableScreenReader]);
-  // Toggle functions,;
+  // Toggle functions,
 const toggleHighContrast = () => {;
     // TODO: Add content;
   }
   }
 }
     const newSettings = {;
-    ...settings,;
+    ...settings,
     highContrast: !settings.highContrast;
   }
     saveSettings(newSettings);
@@ -299,7 +299,7 @@ const toggleHighContrast = () => {;
   }
 }
     const newSettings = {;
-    ...settings,;
+    ...settings,
     largeText: !settings.largeText;
   }
     saveSettings(newSettings);
@@ -311,7 +311,7 @@ const toggleHighContrast = () => {;
   }
 }
     const newSettings = {;
-    ...settings,;
+    ...settings,
     reducedMotion: !settings.reducedMotion;
   }
     saveSettings(newSettings);
@@ -323,7 +323,7 @@ const toggleHighContrast = () => {;
   }
 }
     const newSettings = {;
-    ...settings,;
+    ...settings,
     screenReader: !settings.screenReader;
   }
     saveSettings(newSettings);
@@ -335,7 +335,7 @@ const toggleHighContrast = () => {;
   }
 }
     const newSettings = {;
-    ...settings,;
+    ...settings,
     focusVisible: !settings.focusVisible;
   }
     saveSettings(newSettings);
@@ -348,7 +348,7 @@ const toggleHighContrast = () => {;
 }
     const newZoom = Math.max(50, Math.min(200, settings.zoomLevel + delta));
     const newSettings = {;
-    ...settings,;
+    ...settings,
     zoomLevel: newZoom;
   }
     saveSettings(newSettings);
@@ -360,22 +360,22 @@ const toggleHighContrast = () => {;
   }
 }
     const newSettings = {;
-    ...settings,;
+    ...settings,
     colorBlind: type;
   }
     saveSettings(newSettings);
     announceToScreenReader(`Color blind support set to ${type === 'none' ? 'none' : type}`);
   }
-// Reset all settings,;
+// Reset all settings,
   const resetSettings = () => {;
-    highContrast: false,;
-      largeText: false,;
-      reducedMotion: false,;
-      screenReader: false,;
-      focusVisible: true,;
+    highContrast: false,
+      largeText: false,
+      reducedMotion: false,
+      screenReader: false,
+      focusVisible: true,
       zoomLevel: 100;
   }
-      colorBlind: 'none',;
+      colorBlind: 'none',
   }
   }
   }
@@ -518,7 +518,7 @@ const toggleHighContrast = () => {;
     settings.colorBlind;
   }
               onChange={;
-    (e) => setColorBlind(e.target.value as AccessibilitySettings['colorBlind',;
+    (e) => setColorBlind(e.target.value as AccessibilitySettings['colorBlind',
     );
   } className="bg-gray-700 text-white text-xs px-2 py-1 rounded"
             ><option value="none">None</option><option value="protanopia">Protanopia</option><option value="deuteranopia">Deuteranopia</option><option value="tritanopia">Tritanopia</option></select></div>

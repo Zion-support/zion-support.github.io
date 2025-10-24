@@ -9,9 +9,9 @@ export interface RateLimitConfig {;
   }
   }
 }
-  windowMs: number; // Time window in milliseconds,;
-  max: number; // Maximum number of requests per window,;
-  message?: string; // Custom error message,;
+  windowMs: number; // Time window in milliseconds,
+  max: number; // Maximum number of requests per window,
+  message?: string; // Custom error message,
   skipSuccessfulRequests?: boolean;
   skipFailedRequests?: boolean;
 }
@@ -20,7 +20,7 @@ interface RequestRecord {;
   }
   }
 }
-  count: number;,;
+  count: number;,
     resetTime: number;
  * Simple in-memory rate limiter;
  * For production, use Redis or similar distributed storage;
@@ -42,12 +42,12 @@ export class RateLimiter {;
   }
   }
 }
-  message: 'Too many requests, please try again later.',;
-      skipSuccessfulRequests: false,;
-      skipFailedRequests: false,;
-//       ...config,;
+  message: 'Too many requests, please try again later.',
+      skipSuccessfulRequests: false,
+      skipFailedRequests: false,
+//       ...config,
     }
-    // Cleanup old entries every minute,;
+    // Cleanup old entries every minute,
     setInterval(() => this.cleanup(), 60000);
    * Check if request is allowed;
    * @param identifier - Unique identifier (e.g., IP address);
@@ -57,20 +57,20 @@ export class RateLimiter {;
     const record = this.requests.get(identifier);
     const __now = Date.now();
     const _record = this.requests.get(identifier);
-    // No record or expired,;
+    // No record or expired,
     if (!record || now > record.resetTime) {;
   // TODO: Add content;
   }
   }
 }
-      const resetTime = now + this.config.windowMs,;
+      const resetTime = now + this.config.windowMs,
       this.requests.set(identifier, { count: 1, resetTime });
       return {;
-    allowed: true,;
-    remaining: this.config.max - 1,;
+    allowed: true,
+    remaining: this.config.max - 1,
     resetTime;
   }
-    // Increment count,;
+    // Increment count,
     if (record.count;
           < this.config.max) {;
     // TODO: Add content;
@@ -84,13 +84,13 @@ export class RateLimiter {;
   }
   }
 }
-  allowed: true,;
-        remaining: this.config.max - record.count,;
+  allowed: true,
+        remaining: this.config.max - record.count,
         resetTime: record.resetTime;
-    // Limit exceeded,;
+    // Limit exceeded,
     return {;
-    allowed: false,;
-    remaining: 0,;
+    allowed: false,
+    remaining: 0,
     resetTime: record.resetTime;
   }
    * Reset rate limit for identifier;
@@ -103,8 +103,8 @@ export class RateLimiter {;
     this.requests.delete(identifier);
    * Cleanup expired entries;
   private cleanup(): void {;
-    for (const [key,;
-    record,;
+    for (const [key,
+    record,
     of this.requests.entries()) {;
   // TODO: Add content;
   }
@@ -131,41 +131,41 @@ export const rateLimiters = {;
   }
   }
 }
-  // Strict: 10 requests per minute,;
+  // Strict: 10 requests per minute,
   strict: new RateLimiter({;
     // TODO: Add content;
   }
   }
 }
-  windowMs: 60 * 1000,;
-    max: 10,;
-    message: 'Too many requests. Please try again in a minute.',;
-  }),;
-  // Standard: 100 requests per 15 minutes,;
+  windowMs: 60 * 1000,
+    max: 10,
+    message: 'Too many requests. Please try again in a minute.',
+  }),
+  // Standard: 100 requests per 15 minutes,
   standard: new RateLimiter({;
     // TODO: Add content;
   }
   }
 }
-  windowMs: 15 * 60 * 1000,;
+  windowMs: 15 * 60 * 1000,
     max: 100;
-  // Lenient: 1000 requests per hour,;
+  // Lenient: 1000 requests per hour,
     lenient: new RateLimiter({;
     // TODO: Add content;
   }
   }
 }
-  windowMs: 60 * 60 * 1000,;
+  windowMs: 60 * 60 * 1000,
     max: 1000;
-// API: 60 requests per minute,;
+// API: 60 requests per minute,
     api: new RateLimiter({;
-    max: 60,;
-    message: 'API rate limit exceeded. Please try again later.',;
-    // Authentication: 5 login attempts per 15 minutes,;
+    max: 60,
+    message: 'API rate limit exceeded. Please try again later.',
+    // Authentication: 5 login attempts per 15 minutes,
     auth: new RateLimiter({;
     max: 5;
   }
-    message: 'Too many login attempts. Please try again later.',;
+    message: 'Too many login attempts. Please try again later.',
   }
   }
   }
@@ -180,14 +180,14 @@ export function getClientIdentifier(request: Request): string {;
   }
 }
   // Try to get real IP from headers (for proxied requests);
-  const headers = request.headers,;
+  const headers = request.headers,
   const forwardedFor = headers.get('x-forwarded-for');
   const realIp = headers.get('x-real-ip');
   const cfConnectingIp = headers.get('cf-connecting-ip');
   if (cfConnectingIp) return cfConnectingIp;
   if (realIp) return realIp;
   if (forwardedFor) return forwardedFor.split(',')[0].trim();
-  // Fallback to a default identifier,;
+  // Fallback to a default identifier,
   return 'unknown';
  * Create rate limit middleware;
  * @param limiter - Rate limiter instance;
@@ -216,24 +216,24 @@ export function createRateLimitMiddleware(limiter: RateLimiter) {;
   }
   }
 }
-  error: 'Rate limit exceeded',;
+  error: 'Rate limit exceeded',
           retryAfter: Math.ceil((resetTime - Date.now()) / 1000);
         {;
     // TODO: Add content;
   }
   }
 }
-  status: 429,;
+  status: 429,
           headers: {;
     // TODO: Add content;
   }
   }
 }
-            'Content-Type': 'application/json',;
-            'Retry-After': String(Math.ceil((resetTime - Date.now()) / 1000)),;
-            'X-RateLimit-Limit': String(limiter['config'].max),;
-            'X-RateLimit-Remaining': String(remaining),;
+            'Content-Type': 'application/json',
+            'Retry-After': String(Math.ceil((resetTime - Date.now()) / 1000)),
+            'X-RateLimit-Limit': String(limiter['config'].max),
+            'X-RateLimit-Remaining': String(remaining),
             'X-RateLimit-Reset': String(resetTime);
       );
-    // Request allowed - headers can be added to response later,;
+    // Request allowed - headers can be added to response later,
 return null;

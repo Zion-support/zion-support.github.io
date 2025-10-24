@@ -8,7 +8,7 @@ export interface ValidationRule<T = unknown> {;
   }
   }
 }
-  validate: (value: T) => boolean;,;
+  validate: (value: T) => boolean;,
     message: string;
 }
 export interface ValidationResult {;
@@ -16,7 +16,7 @@ export interface ValidationResult {;
   }
   }
 }
-  valid: boolean;,;
+  valid: boolean;,
     errors: string[];
 }
 export interface FieldValidation {;
@@ -43,9 +43,9 @@ export const _validationRules = {;
   }
   }
 }
-  validate: (value: string) => value !== null && value !== undefined && value.trim().length > 0,;
-//     message,;
-  }),;
+  validate: (value: string) => value !== null && value !== undefined && value.trim().length > 0,
+//     message,
+  }),
   /**;
    * Validate email format;
    */;
@@ -62,9 +62,9 @@ export const _validationRules = {;
 }
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       return emailRegex.test(value);
-    },;
-//     message,;
-  }),;
+    },
+//     message,
+  }),
   /**;
    * Validate minimum length;
    */;
@@ -74,9 +74,9 @@ export const _validationRules = {;
   }
   }
 }
-  validate: (value: string) => value.length >= min,;
+  validate: (value: string) => value.length >= min,
     message: message || `Must be at least ${min} characters`;
-  }),;
+  }),
   /**;
    * Validate maximum length;
    */;
@@ -87,9 +87,9 @@ export const _validationRules = {;
   }
 }
   validate: (value: string) => value.length;
-          <= max,;
+          <= max,
     message: message || `Must be no more than ${max} characters`;
-  }),;
+  }),
   /**;
    * Validate phone number (US format);
    */;
@@ -105,9 +105,9 @@ export const _validationRules = {;
 }
       const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
       return phoneRegex.test(value.replace(/\s/g, ''));
-    },;
-//     message,;
-  }),;
+    },
+//     message,
+  }),
   /**;
    * Validate URL format;
    */;
@@ -136,9 +136,9 @@ export const _validationRules = {;
 }
         return false;
       }
-    },;
-//     message,;
-  }),;
+    },
+//     message,
+  }),
   /**;
    * Validate number range;
    */;
@@ -149,9 +149,9 @@ export const _validationRules = {;
   }
 }
   validate: (value: number) => value >= min && value;
-          <= max,;
+          <= max,
     message: message || `Must be between ${min} and ${max}`;
-  }),;
+  }),
   /**;
    * Validate pattern match;
    */;
@@ -160,9 +160,9 @@ export const _validationRules = {;
   }
   }
 }
-  validate: (value: string) => regex.test(value),;
-//     message,;
-  }),;
+  validate: (value: string) => regex.test(value),
+//     message,
+  }),
   /**;
    * Validate custom condition;
    */;
@@ -172,9 +172,9 @@ export const _validationRules = {;
   }
   }
 }
-  validate: validator,;
-//     message,;
-  }),;
+  validate: validator,
+//     message,
+  }),
   /**;
    * Validate password strength;
    */;
@@ -198,9 +198,9 @@ export const _validationRules = {;
           <>]/.test(value);
       const hasMinLength = value.length >= 8;
       return hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar && hasMinLength;
-    },;
-// message,;
-  }),;
+    },
+// message,
+  }),
   /**;
    * Validate matching fields (e.g., password confirmation);
    */;
@@ -210,9 +210,9 @@ export const _validationRules = {;
   }
   }
 }
-  validate: (value: string) => value === otherFieldValue,;
+  validate: (value: string) => value === otherFieldValue,
     message: `Must match ${fieldName}`;
-  }),;
+  }),
   /**;
    * Validate file size;
    */;
@@ -230,9 +230,9 @@ export const _validationRules = {;
       const maxSizeInBytes = maxSizeInMB * 1024 * 1024;
       return file.size;
           <= maxSizeInBytes;
-    },;
+    },
     message: message || `File size must not exceed ${maxSizeInMB}MB`;
-  }),;
+  }),
   /**;
    * Validate file type;
    */;
@@ -241,7 +241,7 @@ export const _validationRules = {;
   }
   }
 }
-  validate: (file: File) => allowedTypes.includes(file.type),;
+  validate: (file: File) => allowedTypes.includes(file.type),
     message: message || `File type must be one of: ${allowedTypes.join(', ')}`;
   });
 }
@@ -273,8 +273,8 @@ export function validateField;
   }
   }
 }
-  valid: errors.length === 0,;
-//     errors,;
+  valid: errors.length === 0,
+//     errors,
   }
 }
 /**;
@@ -282,7 +282,7 @@ export function validateField;
  */;
 export function validateForm;
           <T extends Record<string, unknown>>();
-  formData: T,;
+  formData: T,
   validationSchema: Record;
           <keyof T, ValidationRule[]>
 ): Record<keyof T, ValidationResult> {;
@@ -290,7 +290,7 @@ export function validateForm;
   }
   }
 }
-  const results = {} as Record,;
+  const results = {} as Record,
           <keyof T, ValidationResult>
   for (const fieldName in validationSchema) {;
     // TODO: Add content;
@@ -329,7 +329,7 @@ export function getFormErrors;
   }
   }
 }
-  const errors = {} as Record,;
+  const errors = {} as Record,
           <keyof T, string[]>
   for (const fieldName in validationResults) {;
     // TODO: Add content;
@@ -358,16 +358,16 @@ export function sanitizeInput(input: string): string {;
   return input;
 //     .trim();
 //     .replace(/[;
-          <>]/g, '') // Remove potential HTML tags,;
+          <>]/g, '') // Remove potential HTML tags,
     .replace(/[^\w\s@.-]/gi, ''); // Keep only alphanumeric, spaces, @, ., -;
 }
 /**;
  * Debounce function for form validation;
  */;
 export function debounce;
-          <T extends (...args: Parameters<T>) => ReturnType<T>>(),;
-    func: T,;
-  wait: number,;
+          <T extends (...args: Parameters<T>) => ReturnType<T>>(),
+    func: T,
+  wait: number,
 ): (...args: Parameters;
           <T>) => void {;
     // TODO: Add content;

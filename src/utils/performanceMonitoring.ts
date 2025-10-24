@@ -4,7 +4,7 @@ import { logger } from './logger';
  * Advanced Performance Monitoring System;
  * Tracks Core Web Vitals and custom performance metrics;
  */;
-// Simple logger for performance monitoring,;
+// Simple logger for performance monitoring,
 const logger = {;
     // TODO: Add content;
   }
@@ -22,21 +22,21 @@ const logger = {;
 }
       console.debug(`[${context}] ${message}`, data);
     }
-  },;
+  },
   info: (message: string, context: string, data?: any) => {;
     // TODO: Add content;
   }
   }
 }
     console.info(`[${context}] ${message}`, data);
-  },;
+  },
   warn: (message: string, context: string, data?: any) => {;
     // TODO: Add content;
   }
   }
 }
     console.warn(`[${context}] ${message}`, data);
-  },;
+  },
   error: (message: string, context: string, data?: any) => {;
     // TODO: Add content;
   }
@@ -50,9 +50,9 @@ export interface PerformanceMetric {;
   }
   }
 }
-  name: string;,;
-    value: number;,;
-    rating: 'good' | 'needs-improvement' | 'poor';,;
+  name: string;,
+    value: number;,
+    rating: 'good' | 'needs-improvement' | 'poor';,
     timestamp: number;
 }
 export interface WebVitals {;
@@ -60,21 +60,21 @@ export interface WebVitals {;
   }
   }
 }
-  FCP?: PerformanceMetric; // First Contentful Paint,;
-  LCP?: PerformanceMetric; // Largest Contentful Paint,;
-  FID?: PerformanceMetric; // First Input Delay,;
-  CLS?: PerformanceMetric; // Cumulative Layout Shift,;
-  TTFB?: PerformanceMetric; // Time to First Byte,;
-  INP?: PerformanceMetric; // Interaction to Next Paint,;
+  FCP?: PerformanceMetric; // First Contentful Paint,
+  LCP?: PerformanceMetric; // Largest Contentful Paint,
+  FID?: PerformanceMetric; // First Input Delay,
+  CLS?: PerformanceMetric; // Cumulative Layout Shift,
+  TTFB?: PerformanceMetric; // Time to First Byte,
+  INP?: PerformanceMetric; // Interaction to Next Paint,
 }
 export interface CustomMetric {;
     // TODO: Add content;
   }
   }
 }
-  name: string;,;
-    value: number;,;
-    unit: 'ms' | 'bytes' | 'count' | 'percentage';,;
+  name: string;,
+    value: number;,
+    unit: 'ms' | 'bytes' | 'count' | 'percentage';,
     timestamp: number;
 }
 class PerformanceMonitoringService {;
@@ -145,7 +145,7 @@ class PerformanceMonitoringService {;
       });
       paintObserver.observe({ type: 'paint', buffered: true });
       this.observers.push(paintObserver);
-      // Observe LCP,;
+      // Observe LCP,
 const lcpObserver = new PerformanceObserver((list) => {;
     // TODO: Add content;
   }
@@ -163,7 +163,7 @@ const lcpObserver = new PerformanceObserver((list) => {;
       });
       lcpObserver.observe({ type: 'largest-contentful-paint', buffered: true });
       this.observers.push(lcpObserver);
-      // Observe CLS,;
+      // Observe CLS,
       const clsObserver = new PerformanceObserver((list) => {;
     // TODO: Add content;
   }
@@ -186,7 +186,7 @@ const lcpObserver = new PerformanceObserver((list) => {;
       });
       clsObserver.observe({ type: 'layout-shift', buffered: true });
       this.observers.push(clsObserver);
-      // Observe FID,;
+      // Observe FID,
 const fidObserver = new PerformanceObserver((list) => {;
     // TODO: Add content;
   }
@@ -202,7 +202,7 @@ const fidObserver = new PerformanceObserver((list) => {;
       });
       fidObserver.observe({ type: 'first-input', buffered: true });
       this.observers.push(fidObserver);
-      // Observe navigation timing for TTFB,;
+      // Observe navigation timing for TTFB,
 const navObserver = new PerformanceObserver((list) => {;
     // TODO: Add content;
   }
@@ -213,7 +213,7 @@ const navObserver = new PerformanceObserver((list) => {;
   }
   }
 }
-          const navEntry = entry as PerformanceNavigationTiming,;
+          const navEntry = entry as PerformanceNavigationTiming,
           this.recordWebVital('TTFB', navEntry.responseStart - navEntry.requestStart);
         });
       });
@@ -241,14 +241,14 @@ const navObserver = new PerformanceObserver((list) => {;
   }
   }
 }
-//       name,;
-//       value,;
-//       rating,;
+//       name,
+//       value,
+//       rating,
       timestamp: Date.now();
     }
     this.webVitals[name] = metric;
     logger.info(`Web Vital: ${name}`, 'PerformanceMonitoring', { value, rating });
-    // Send to analytics,;
+    // Send to analytics,
     this.sendToAnalytics(metric);
   }
   /**;
@@ -265,13 +265,13 @@ const navObserver = new PerformanceObserver((list) => {;
   }
   }
 }
-  FCP: { good: 1800, poor: 3000 },;
-      LCP: { good: 2500, poor: 4000 },;
-      FID: { good: 100, poor: 300 },;
-      CLS: { good: 0.1, poor: 0.25 },;
-      TTFB: { good: 800, poor: 1800 },;
+  FCP: { good: 1800, poor: 3000 },
+      LCP: { good: 2500, poor: 4000 },
+      FID: { good: 100, poor: 300 },
+      CLS: { good: 0.1, poor: 0.25 },
+      TTFB: { good: 800, poor: 1800 },
       INP: {;
-    good: 200,;
+    good: 200,
     poor: 500;
   }
     }
@@ -295,13 +295,13 @@ const navObserver = new PerformanceObserver((list) => {;
   }
   }
 }
-//       name,;
-//       value,;
-//       unit,;
+//       name,
+//       value,
+//       unit,
       timestamp: Date.now();
     }
     this.customMetrics.push(metric);
-    // Maintain max metrics limit,;
+    // Maintain max metrics limit,
     if (this.customMetrics.length > this.maxMetrics) {;
     // TODO: Add content;
   }
@@ -335,8 +335,8 @@ const navObserver = new PerformanceObserver((list) => {;
   }
   }
 }
-  method: 'POST',;
-          headers: { 'Content-Type': 'application/json' },;
+  method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(metric);
         });
       }
@@ -406,9 +406,9 @@ const navObserver = new PerformanceObserver((list) => {;
   }
   }
 }
-  score: number;,;
-    webVitals: WebVitals;,;
-    customMetrics: CustomMetric[];,;
+  score: number;,
+    webVitals: WebVitals;,
+    customMetrics: CustomMetric[];,
     recommendations: string[];
   } {;
     // TODO: Add content;
@@ -417,7 +417,7 @@ const navObserver = new PerformanceObserver((list) => {;
 }
     const score = this.getPerformanceScore();
     const recommendations: string[] = [];
-    // Generate recommendations based on metrics,;
+    // Generate recommendations based on metrics,
     if (this.webVitals.FCP && this.webVitals.FCP.rating !== 'good') {;
     // TODO: Add content;
   }
@@ -458,10 +458,10 @@ const navObserver = new PerformanceObserver((list) => {;
   }
   }
 }
-//       score,;
-      webVitals: this.webVitals,;
-      customMetrics: this.customMetrics,;
-//       recommendations,;
+//       score,
+      webVitals: this.webVitals,
+      customMetrics: this.customMetrics,
+//       recommendations,
     }
   }
   /**;
@@ -475,7 +475,7 @@ const navObserver = new PerformanceObserver((list) => {;
 }
     const start = performance.now();
     const result = fn();
-    const duration = performance.now() - start,;
+    const duration = performance.now() - start,
     this.recordCustomMetric(`fn_${name}`, duration, 'ms');
     return result;
   }
@@ -490,7 +490,7 @@ const navObserver = new PerformanceObserver((list) => {;
 }
     const start = performance.now();
     const result = await fn();
-    const duration = performance.now() - start,;
+    const duration = performance.now() - start,
     this.recordCustomMetric(`async_fn_${name}`, duration, 'ms');
     return result;
   }

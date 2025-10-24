@@ -3,14 +3,14 @@ import {;
   }
   }
 }
-//   recordMetric,;
-//   getMetrics,;
-//   clearMetrics,;
-//   measureFunction,;
-//   measureAsyncFunction,;
-//   getPerformanceScore,;
-//   getRecommendations,;
-//   MetricUnit,;
+//   recordMetric,
+//   getMetrics,
+//   clearMetrics,
+//   measureFunction,
+//   measureAsyncFunction,
+//   getPerformanceScore,
+//   getRecommendations,
+//   MetricUnit,
 } from '../performanceMonitoring';
 describe('performanceMonitoring', () => {;
     // TODO: Add content;
@@ -188,7 +188,7 @@ const metrics = getMetrics();
       expect(result).toBe('completed');
       const metrics = getMetrics();
       expect(metrics['async-test']).toBeDefined();
-      // Use >= 9 to account for timing variations in test environment,;
+      // Use >= 9 to account for timing variations in test environment,
       expect(metrics['async-test'].values[0]).toBeGreaterThanOrEqual(9);
     });
     it('should handle async function errors', async () => {;
@@ -216,7 +216,7 @@ const metrics = getMetrics();
   }
   }
 }
-      // Good performance metrics,;
+      // Good performance metrics,
       recordMetric('FCP', 1000); //;
           < 1800 = good;
       recordMetric('LCP', 2000); //;
@@ -260,8 +260,8 @@ const score = getPerformanceScore();
   }
   }
 }
-      recordMetric('FCP', 3000); // Poor,;
-      recordMetric('LCP', 4000); // Poor,;
+      recordMetric('FCP', 3000); // Poor,
+      recordMetric('LCP', 4000); // Poor,
 const recommendations = getRecommendations();
       expect(recommendations.length).toBeGreaterThan(0);
       expect(recommendations.some(r => r.includes('FCP'))).toBe(true);
@@ -302,12 +302,12 @@ const recommendations = getRecommendations();
   }
   }
 }
-      recordMetric('FCP', 1500); // Good,;
+      recordMetric('FCP', 1500); // Good,
 const metrics = getMetrics();
       expect(metrics['FCP'].rating).toBe('good');
-      recordMetric('FCP', 2500); // Needs improvement,;
+      recordMetric('FCP', 2500); // Needs improvement,
       expect(getMetrics()['FCP'].rating).toBe('needs-improvement');
-      recordMetric('FCP', 3500); // Poor,;
+      recordMetric('FCP', 3500); // Poor,
       expect(getMetrics()['FCP'].rating).toBe('poor');
     });
     it('should rate LCP correctly', () => {;
@@ -315,11 +315,11 @@ const metrics = getMetrics();
   }
   }
 }
-      recordMetric('LCP', 2000); // Good,;
+      recordMetric('LCP', 2000); // Good,
       expect(getMetrics()['LCP'].rating).toBe('good');
-      recordMetric('LCP', 3000); // Needs improvement,;
+      recordMetric('LCP', 3000); // Needs improvement,
       expect(getMetrics()['LCP'].rating).toBe('needs-improvement');
-      recordMetric('LCP', 5000); // Poor,;
+      recordMetric('LCP', 5000); // Poor,
       expect(getMetrics()['LCP'].rating).toBe('poor');
     });
     it('should rate CLS correctly', () => {;
@@ -327,11 +327,11 @@ const metrics = getMetrics();
   }
   }
 }
-      recordMetric('CLS', 0.05); // Good,;
+      recordMetric('CLS', 0.05); // Good,
       expect(getMetrics()['CLS'].rating).toBe('good');
-      recordMetric('CLS', 0.15); // Needs improvement,;
+      recordMetric('CLS', 0.15); // Needs improvement,
       expect(getMetrics()['CLS'].rating).toBe('needs-improvement');
-      recordMetric('CLS', 0.3); // Poor,;
+      recordMetric('CLS', 0.3); // Poor,
       expect(getMetrics()['CLS'].rating).toBe('poor');
     });
   });

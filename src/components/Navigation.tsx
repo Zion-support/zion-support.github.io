@@ -43,7 +43,7 @@ const Navigation: React.FC = () => {;
   }
   }
 }
-//       isScrolled,;
+//       isScrolled,
 //         ? 'bg-slate-900/95 backdrop-blur-lg border-b border-cyan-400/20';
         : 'bg-transparent';
     }`}>

@@ -16,10 +16,10 @@ const SecurityEnhancer: React.FC;
   }
   }
 }
-  enableCSP = true,;
-  enableHTTPSRedirect = true,;
-  enableXSSProtection = true,;
-  enableClickjackingProtection = true,;
+  enableCSP = true,
+  enableHTTPSRedirect = true,
+  enableXSSProtection = true,
+  enableClickjackingProtection = true,
   enableContentTypeSniffingProtection = true;
 }) => {;
     // TODO: Add content;
@@ -43,25 +43,25 @@ const SecurityEnhancer: React.FC;
   }
   }
     }
-    // Add security headers,;
-    // Add security event listeners,;
+    // Add security headers,
+    // Add security event listeners,
   }, [enableCSP, enableHTTPSRedirect, enableXSSProtection, enableClickjackingProtection, enableContentTypeSniffingProtection]);
     const meta = document.createElement('meta');
     meta.httpEquiv = 'Content-Security-Policy';
     meta.content = [;
-  // TODO: Add items,;
+  // TODO: Add items,
 ];
-//       "default-src 'self'",;
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com",;
-      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",;
-      "img-src 'self' data: https: blob:",;
-      "font-src 'self' https://fonts.gstatic.com",;
-      "connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com",;
-//       "frame-ancestors 'none'",;
-//       "base-uri 'self'",;
-//       "form-action 'self'",;
-//       "object-src 'none'",;
-//       "media-src 'self'",;
+//       "default-src 'self'",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com",
+      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+      "img-src 'self' data: https: blob:",
+      "font-src 'self' https://fonts.gstatic.com",
+      "connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com",
+//       "frame-ancestors 'none'",
+//       "base-uri 'self'",
+//       "form-action 'self'",
+//       "object-src 'none'",
+//       "media-src 'self'",
 //       "worker-src 'self'";
     ].join('; ');
     document.head.appendChild(meta);
@@ -115,12 +115,12 @@ const SecurityEnhancer: React.FC;
   }
 }
     const headers = [;
-  // TODO: Add items,;
+  // TODO: Add items,
 ];
-      { httpEquiv: 'Referrer-Policy', content: 'strict-origin-when-cross-origin' },;
-      { httpEquiv: 'Permissions-Policy', content: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()' },;
+      { httpEquiv: 'Referrer-Policy', content: 'strict-origin-when-cross-origin' },
+      { httpEquiv: 'Permissions-Policy', content: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()' },
       {;
-    httpEquiv: 'Strict-Transport-Security',;
+    httpEquiv: 'Strict-Transport-Security',
     content: 'max-age=63072000; includeSubDomains; preload';
   }
     ];
@@ -146,7 +146,7 @@ const SecurityEnhancer: React.FC;
   }
   }
 }
-      // Only prevent on production,;
+      // Only prevent on production,
       if (process.env.NODE_ENV === 'production') {;
     // TODO: Add content;
   }
@@ -161,7 +161,7 @@ const SecurityEnhancer: React.FC;
   }
   }
 }
-      // Only prevent on production,;
+      // Only prevent on production,
       if (process.env.NODE_ENV === 'production') {;
     // TODO: Add content;
   }
@@ -170,7 +170,7 @@ const SecurityEnhancer: React.FC;
         e.preventDefault();
       }
     });
-    // Prevent drag and drop,;
+    // Prevent drag and drop,
     document.addEventListener('dragover', (e) => {;
     // TODO: Add content;
   }
@@ -196,7 +196,7 @@ const SecurityEnhancer: React.FC;
   }
   }
 }
-        // F12,;
+        // F12,
         if (e.keyCode === 123) {;
     // TODO: Add content;
   }
@@ -204,7 +204,7 @@ const SecurityEnhancer: React.FC;
 }
           e.preventDefault();
         }
-        // Ctrl+Shift+I,;
+        // Ctrl+Shift+I,
         if (e.ctrlKey && e.shiftKey && e.keyCode === 73) {;
     // TODO: Add content;
   }
@@ -212,7 +212,7 @@ const SecurityEnhancer: React.FC;
 }
           e.preventDefault();
         }
-        // Ctrl+U,;
+        // Ctrl+U,
         if (e.ctrlKey && e.keyCode === 85) {;
     // TODO: Add content;
   }
@@ -220,7 +220,7 @@ const SecurityEnhancer: React.FC;
 }
           e.preventDefault();
         }
-        // Ctrl+S,;
+        // Ctrl+S,
         if (e.ctrlKey && e.keyCode === 83) {;
     // TODO: Add content;
   }
@@ -228,7 +228,7 @@ const SecurityEnhancer: React.FC;
 }
           e.preventDefault();
         }
-        // Ctrl+A,;
+        // Ctrl+A,
         if (e.ctrlKey && e.keyCode === 65) {;
     // TODO: Add content;
   }
@@ -238,7 +238,7 @@ const SecurityEnhancer: React.FC;
         }
       }
     });
-// Monitor for suspicious activity,;
+// Monitor for suspicious activity,
     const resetSuspiciousActivity = () => {;
     // TODO: Add content;
   }
@@ -246,7 +246,7 @@ const SecurityEnhancer: React.FC;
 }
       suspiciousActivity = 0;
     }
-    // Reset suspicious activity counter every 5 minutes,;
+    // Reset suspicious activity counter every 5 minutes,
     setInterval(resetSuspiciousActivity, 5 * 60 * 1000);
     // Track rapid clicks (potential bot activity);
     let clickCount = 0;
@@ -257,7 +257,7 @@ const SecurityEnhancer: React.FC;
 }
       clickCount++;
       if (clickCount > 10) {;
-    // More than 10 clicks in 5 minutes,;
+    // More than 10 clicks in 5 minutes,
     suspiciousActivity++;
   }
         if (suspiciousActivity > 3) {;
@@ -265,11 +265,11 @@ const SecurityEnhancer: React.FC;
   }
   }
 }
-          // Could implement additional security measures here,;
+          // Could implement additional security measures here,
         }
       }
     });
-    // Track rapid keyboard input,;
+    // Track rapid keyboard input,
 let keyCount = 0;
     document.addEventListener('keydown', () => {;
     // TODO: Add content;
@@ -278,7 +278,7 @@ let keyCount = 0;
 }
       keyCount++;
       if (keyCount > 100) {;
-    // More than 100 keystrokes in 5 minutes,;
+    // More than 100 keystrokes in 5 minutes,
     suspiciousActivity++;
   }
         if (suspiciousActivity > 3) {;

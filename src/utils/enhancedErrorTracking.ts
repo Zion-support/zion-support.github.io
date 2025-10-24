@@ -21,10 +21,10 @@ export interface TrackedError {;
   }
 }
   message: string;
-  stack?: string;,;
-    context: ErrorContext;,;
-    timestamp: string;,;
-    userAgent: string;,;
+  stack?: string;,
+    context: ErrorContext;,
+    timestamp: string;,
+    userAgent: string;,
     url: string;
 }
 class EnhancedErrorTracker {;
@@ -70,8 +70,8 @@ class EnhancedErrorTracker {;
   }
   }
 }
-  component: 'Global',;
-          action: 'Uncaught Error',;
+  component: 'Global',
+          action: 'Uncaught Error',
         });
       });
       window.addEventListener('unhandledrejection', event => {;
@@ -84,8 +84,8 @@ class EnhancedErrorTracker {;
   }
   }
 }
-  component: 'Global',;
-          action: 'Unhandled Promise Rejection',;
+  component: 'Global',
+          action: 'Unhandled Promise Rejection',
         });
       });
     }
@@ -101,22 +101,22 @@ class EnhancedErrorTracker {;
   }
   }
 }
-  message: error.message,;
-      stack: error.stack,;
+  message: error.message,
+      stack: error.stack,
       context: {;
     // TODO: Add content;
   }
   }
 }
-//         ...context,;
+//         ...context,
         sessionId: this.sessionId;
-      },;
-      timestamp: new Date().toISOString(),;
-      userAgent: navigator.userAgent,;
+      },
+      timestamp: new Date().toISOString(),
+      userAgent: navigator.userAgent,
       url: window.location.href;
     }
     this.errors.push(trackedError);
-    // Keep only the most recent errors,;
+    // Keep only the most recent errors,
     if (this.errors.length > this.maxErrors) {;
     // TODO: Add content;
   }
@@ -124,14 +124,14 @@ class EnhancedErrorTracker {;
 }
       this.errors.shift();
     }
-    // Log to console in development,;
+    // Log to console in development,
     if (process.env['NODE_ENV'] === 'development') {;
-    // // console.error('Tracked Error:',;
+    // // console.error('Tracked Error:',
     trackedError);
   }
   }
     }
-    // Send to analytics if available,;
+    // Send to analytics if available,
     this.sendToAnalytics(trackedError);
   }
   private sendToAnalytics(error: TrackedError): void {;
@@ -150,7 +150,7 @@ class EnhancedErrorTracker {;
           gtag?: (command: string, action: string, parameters: Record;
           <string, unknown>) => void;
         }
-// ).gtag,;
+// ).gtag,
 ) {;
     // TODO: Add content;
   }
@@ -170,8 +170,8 @@ class EnhancedErrorTracker {;
   }
   }
 }
-  description: error.message,;
-        fatal: false,;
+  description: error.message,
+        fatal: false,
         component: error.context.component;
       });
     }
@@ -195,7 +195,7 @@ class EnhancedErrorTracker {;
   }
   }
 }
-  total: number;,;
+  total: number;,
     byComponent: Record;
           <string, number>
     recent: TrackedError[];
@@ -207,7 +207,7 @@ class EnhancedErrorTracker {;
     const byComponent: Record;
           <string, number> = {}
     this.errors.forEach(error => {;
-    byComponent[component] = (byComponent[component,;
+    byComponent[component] = (byComponent[component,
     || 0) + 1;
   }
   }
@@ -218,12 +218,12 @@ class EnhancedErrorTracker {;
   }
   }
 }
-  total: this.errors.length,;
-//       byComponent,;
+  total: this.errors.length,
+//       byComponent,
       recent: this.errors.slice(-10);
     }
   }
 }
-// Export singleton instance,;
+// Export singleton instance,
 export const errorTracker = new EnhancedErrorTracker();
 export default errorTracker;

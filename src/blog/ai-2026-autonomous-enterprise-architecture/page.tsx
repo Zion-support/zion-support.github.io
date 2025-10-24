@@ -1,4 +1,4 @@
-// Metadata removed for Vite compatibility,;
+// Metadata removed for Vite compatibility,
 export default function AI2026AutonomousEnterpriseArchitecture() {;
     // TODO: Add content;
   }
@@ -13,7 +13,7 @@ export default function AI2026AutonomousEnterpriseArchitecture() {;
               Revolutionary autonomous enterprise architecture transforming business operations;
             </p></div><div className="prose max-w-none"><h2 className="text-2xl font-bold text-gray-900 mb-6">🏗️ Architecture Revolution</h2><p className="text-gray-700 mb-6">
               The AI 2026 Autonomous Enterprise Architecture Revolution represents a fundamental shift;
-              in how enterprises design, deploy, and manage their technology infrastructure,;
+              in how enterprises design, deploy, and manage their technology infrastructure,
               delivering <strong>self-healing systems</strong> and <strong>predictive infrastructure</strong>.;
             </p><div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"><div className="bg-purple-50 p-6 rounded-lg text-center"><div className="text-3xl font-bold text-purple-600 mb-2">Self-Healing</div><div className="text-gray-700">Systems</div></div><div className="bg-blue-50 p-6 rounded-lg text-center"><div className="text-3xl font-bold text-blue-600 mb-2">Predictive</div><div className="text-gray-700">Infrastructure</div></div><div className="bg-green-50 p-6 rounded-lg text-center"><div className="text-3xl font-bold text-green-600 mb-2">AI-Driven</div><div className="text-gray-700">Decisions</div></div></div><h2 className="text-2xl font-bold text-gray-900 mb-6">🔬 Technical Innovation</h2><p className="text-gray-700 mb-6">
               Our autonomous enterprise architecture leverages breakthrough technologies:;

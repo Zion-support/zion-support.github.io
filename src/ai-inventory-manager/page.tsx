@@ -2,14 +2,14 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import {;
-    Package,;
-    Target,;
-    Zap,;
-    Settings,;
-    CheckCircle,;
-    Star,;
-    Package,;
-    Target,;
+    Package,
+    Target,
+    Zap,
+    Settings,
+    CheckCircle,
+    Star,
+    Package,
+    Target,
     Settings from 'lucide-react';
   }
 const AIInventoryManagerPage: React.FC = () => {;
@@ -19,19 +19,19 @@ const AIInventoryManagerPage: React.FC = () => {;
   }
   }
 }
-  icon: Package,;
-      title: 'Inventory Tracking',;
-      description: 'value',;
+  icon: Package,
+      title: 'Inventory Tracking',
+      description: 'value',
   ];
       benefits: ['Real-time tracking', 'Stock monitoring', 'Automated alerts'];
-    },;
-      icon: Target,;
-      title: 'Demand Forecasting',;
-      description: 'Intelligent demand prediction and planning',;
+    },
+      icon: Target,
+      title: 'Demand Forecasting',
+      description: 'Intelligent demand prediction and planning',
       benefits: ['Demand prediction', 'Seasonal analysis', 'Trend forecasting'];
-      icon: Settings,;
-      title: 'Inventory Analytics',;
-      description: 'Comprehensive inventory analytics and insights',;
+      icon: Settings,
+      title: 'Inventory Analytics',
+      description: 'Comprehensive inventory analytics and insights',
       benefits: ['Performance metrics', 'Cost analysis', 'Optimization recommendations'];
     }
   ];
@@ -43,10 +43,10 @@ const AIInventoryManagerPage: React.FC = () => {;
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
-// AI Inventory Manager,;
+// AI Inventory Manager,
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse">
-// Smart Inventory Management,;
+// Smart Inventory Management,
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
 // Optimize your inventory with AI-powered management solutions.;
@@ -56,7 +56,7 @@ const AIInventoryManagerPage: React.FC = () => {;
               href="/contact";
               className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
 // >
-//               Get Started,;
+//               Get Started,
           </a>
               href="tel:+13024640950";
               className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
@@ -66,11 +66,11 @@ const AIInventoryManagerPage: React.FC = () => {;
         </section>
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
-// Inventory Management Features,;
+// Inventory Management Features,
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {;
-    features.map((feature,;
+    features.map((feature,
     index) => ();
   }
   }
@@ -89,7 +89,7 @@ const AIInventoryManagerPage: React.FC = () => {;
   }
                 <ul className="space-y-2">
                   {;
-    feature.benefits.map((benefit,;
+    feature.benefits.map((benefit,
     benefitIndex) => ();
   }
   }

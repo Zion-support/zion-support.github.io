@@ -56,7 +56,7 @@ const BusinessAppsPage: React.FC = () => {;
             <div>{;
     businessApps;
                 .filter(app => app.category === category);
-                .map((app,;
+                .map((app,
     index) => (;
   }
   }
@@ -70,8 +70,8 @@ const BusinessAppsPage: React.FC = () => {;
                       <h5 className="font-semibold text-white mb-2 text-sm">Key Features:</h5>
                       <ul className="space-y-1">
                         {;
-    app.features.slice(0,;
-    3).map((feature,;
+    app.features.slice(0,
+    3).map((feature,
     featureIndex) => ();
   }
   }
@@ -93,7 +93,7 @@ const BusinessAppsPage: React.FC = () => {;
                       </ul>
                       <h5 className="font-semibold text-white mb-2 text-sm">Benefits:</h5>
                         {;
-    app.benefits.map((benefit,;
+    app.benefits.map((benefit,
     benefitIndex) => ();
   }
   }

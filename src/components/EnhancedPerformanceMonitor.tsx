@@ -6,11 +6,11 @@ interface PerformanceMetrics {;
 }
   fcp: number | null;
     lcp: number | null;
-    fid: number | null;,;
-    cls: number | null;,;
-    ttfb: number | null;,;
-    fmp: number | null;,;
-    tbt: number | null;,;
+    fid: number | null;,
+    cls: number | null;,
+    ttfb: number | null;,
+    fmp: number | null;,
+    tbt: number | null;,
     si: number | null;
 }
 interface PerformanceMonitorProps {;
@@ -28,31 +28,31 @@ const EnhancedPerformanceMonitor: React.FC;
   }
   }
 }
-//   onMetricsUpdate,;
-  enableReporting = true,;
-  reportInterval = 10000,;
+//   onMetricsUpdate,
+  enableReporting = true,
+  reportInterval = 10000,
 }) => {;
     // TODO: Add content;
   }
   }
 }
-  const [metrics, setMetrics] = useState,;
+  const [metrics, setMetrics] = useState,
           <PerformanceMetrics>({;
     // TODO: Add content;
   }
   }
 }
-  fcp: null,;
-    lcp: null,;
-    fid: null,;
-    cls: null,;
-    ttfb: null,;
-    fmp: null,;
-    tbt: null,;
-    si: null,;
+  fcp: null,
+    lcp: null,
+    fid: null,
+    cls: null,
+    ttfb: null,
+    fmp: null,
+    tbt: null,
+    si: null,
   });
   const [isVisible, setIsVisible] = useState(false);
-// Web Vitals measurement,;
+// Web Vitals measurement,
     if (typeof window === 'undefined' || !('performance' in window)) return;
     // First Contentful Paint (FCP);
     const fcpObserver = new PerformanceObserver((list) => {;
@@ -75,7 +75,7 @@ const EnhancedPerformanceMonitor: React.FC;
       }
     });
     fcpObserver.observe({;
-    entryTypes: ['paint',;
+    entryTypes: ['paint',
   });
     // Largest Contentful Paint (LCP);
     const lcpObserver = new PerformanceObserver((list) => {;
@@ -88,7 +88,7 @@ const EnhancedPerformanceMonitor: React.FC;
       setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
     });
     lcpObserver.observe({;
-    entryTypes: ['largest-contentful-paint',;
+    entryTypes: ['largest-contentful-paint',
   });
     // First Input Delay (FID);
     const fidObserver = new PerformanceObserver((list) => {;
@@ -105,7 +105,7 @@ const EnhancedPerformanceMonitor: React.FC;
       }
     });
     fidObserver.observe({;
-    entryTypes: ['first-input',;
+    entryTypes: ['first-input',
   });
     // Cumulative Layout Shift (CLS);
     const clsObserver = new PerformanceObserver((list) => {;
@@ -123,16 +123,16 @@ const EnhancedPerformanceMonitor: React.FC;
   }
   }
 }
-          clsValue += (entry as any).value,;
+          clsValue += (entry as any).value,
           setMetrics(prev => ({ ...prev, cls: clsValue }));
         }
       }
     });
     clsObserver.observe({;
-    entryTypes: ['layout-shift',;
+    entryTypes: ['layout-shift',
   });
     // Time to First Byte (TTFB);
-    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,;
+    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
     if (navigationEntry) {;
     // TODO: Add content;
   }
@@ -140,7 +140,7 @@ const EnhancedPerformanceMonitor: React.FC;
 }
       setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
     }
-    // First Meaningful Paint (FMP) - approximation,;
+    // First Meaningful Paint (FMP) - approximation,
 const fmpObserver = new PerformanceObserver((list) => {;
     // TODO: Add content;
   }
@@ -161,9 +161,9 @@ const fmpObserver = new PerformanceObserver((list) => {;
       }
     });
     fmpObserver.observe({;
-    entryTypes: ['paint',;
+    entryTypes: ['paint',
   });
-    // Total Blocking Time (TBT) - approximation,;
+    // Total Blocking Time (TBT) - approximation,
 const tbtObserver = new PerformanceObserver((list) => {;
     // TODO: Add content;
   }
@@ -180,15 +180,15 @@ const tbtObserver = new PerformanceObserver((list) => {;
   }
   }
 }
-          totalBlockingTime += entry.duration - 50; // Tasks over 50ms contribute to TBT,;
+          totalBlockingTime += entry.duration - 50; // Tasks over 50ms contribute to TBT,
         }
       }
       setMetrics(prev => ({ ...prev, tbt: totalBlockingTime }));
     });
     tbtObserver.observe({;
-    entryTypes: ['longtask',;
+    entryTypes: ['longtask',
   });
-    // Speed Index (SI) - approximation using LCP,;
+    // Speed Index (SI) - approximation using LCP,
 const siObserver = new PerformanceObserver((list) => {;
     // TODO: Add content;
   }
@@ -209,7 +209,7 @@ const siObserver = new PerformanceObserver((list) => {;
       }
     });
     siObserver.observe({;
-    entryTypes: ['largest-contentful-paint',;
+    entryTypes: ['largest-contentful-paint',
   });
     return () => {;
     // TODO: Add content;
@@ -225,7 +225,7 @@ const siObserver = new PerformanceObserver((list) => {;
       siObserver.disconnect();
     }
   }, []);
-  // Resource timing analysis,;
+  // Resource timing analysis,
 const analyzeResourceTiming = useCallback(() => {;
     // TODO: Add content;
   }
@@ -238,10 +238,10 @@ const analyzeResourceTiming = useCallback(() => {;
   }
   }
 }
-  totalResources: resources.length,;
-      totalSize: 0,;
-      slowResources: 0,;
-      cachedResources: 0,;
+  totalResources: resources.length,
+      totalSize: 0,
+      slowResources: 0,
+      cachedResources: 0,
     }
     resources.forEach((resource: any) => {;
     // TODO: Add content;
@@ -254,44 +254,44 @@ const analyzeResourceTiming = useCallback(() => {;
     });
     return resourceMetrics;
   }, []);
-  // Memory usage monitoring,;
+  // Memory usage monitoring,
 const getMemoryUsage = useCallback(() => {;
     // TODO: Add content;
   }
   }
 }
     if (typeof window === 'undefined' || !('memory' in performance)) return null;
-    const memory = (performance as any).memory,;
+    const memory = (performance as any).memory,
     return {;
     // TODO: Add content;
   }
   }
 }
-  usedJSHeapSize: memory.usedJSHeapSize,;
-      totalJSHeapSize: memory.totalJSHeapSize,;
-      jsHeapSizeLimit: memory.jsHeapSizeLimit,;
+  usedJSHeapSize: memory.usedJSHeapSize,
+      totalJSHeapSize: memory.totalJSHeapSize,
+      jsHeapSizeLimit: memory.jsHeapSizeLimit,
     }
   }, []);
-  // Network information,;
+  // Network information,
 const getNetworkInfo = useCallback(() => {;
     // TODO: Add content;
   }
   }
 }
     if (typeof window === 'undefined' || !('connection' in navigator)) return null;
-    const connection = (navigator as any).connection,;
+    const connection = (navigator as any).connection,
     return {;
     // TODO: Add content;
   }
   }
 }
-  effectiveType: connection.effectiveType,;
-      downlink: connection.downlink,;
-      rtt: connection.rtt,;
-      saveData: connection.saveData,;
+  effectiveType: connection.effectiveType,
+      downlink: connection.downlink,
+      rtt: connection.rtt,
+      saveData: connection.saveData,
     }
   }, []);
-  // Performance score calculation,;
+  // Performance score calculation,
 const calculatePerformanceScore = useCallback((metrics: PerformanceMetrics) => {;
     // TODO: Add content;
   }
@@ -338,7 +338,7 @@ const calculatePerformanceScore = useCallback((metrics: PerformanceMetrics) => {
     }
     return Math.max(0, score);
   }, []);
-  // Report metrics,;
+  // Report metrics,
 const reportMetrics = useCallback(() => {;
     // TODO: Add content;
   }
@@ -354,14 +354,14 @@ const reportMetrics = useCallback(() => {;
   }
   }
 }
-  timestamp: new Date().toISOString(),;
-//       metrics,;
-//       performanceScore,;
-//       resourceMetrics,;
-//       memoryUsage,;
-//       networkInfo,;
-      userAgent: navigator.userAgent,;
-      url: window.location.href,;
+  timestamp: new Date().toISOString(),
+//       metrics,
+//       performanceScore,
+//       resourceMetrics,
+//       memoryUsage,
+//       networkInfo,
+      userAgent: navigator.userAgent,
+      url: window.location.href,
     }
     // Send to analytics (replace with your analytics service);
     if (typeof window !== 'undefined' && 'gtag' in window) {;
@@ -374,22 +374,22 @@ const reportMetrics = useCallback(() => {;
   }
   }
 }
-  event_category: 'performance',;
-        event_label: 'web_vitals',;
-        value: performanceScore,;
+  event_category: 'performance',
+        event_label: 'web_vitals',
+        value: performanceScore,
         custom_map: {;
     // TODO: Add content;
   }
   }
 }
-  fcp: metrics.fcp,;
-          lcp: metrics.lcp,;
-          fid: metrics.fid,;
-          cls: metrics.cls,;
-        },;
+  fcp: metrics.fcp,
+          lcp: metrics.lcp,
+          fid: metrics.fid,
+          cls: metrics.cls,
+        },
       });
     }
-    // Callback for custom handling,;
+    // Callback for custom handling,
     onMetricsUpdate?.(metrics);
 // console.log('Performance Report:', report);
   }, [metrics, enableReporting, calculatePerformanceScore, analyzeResourceTiming, getMemoryUsage, getNetworkInfo, onMetricsUpdate]);
@@ -399,9 +399,9 @@ const reportMetrics = useCallback(() => {;
   }
 }
     const cleanup = measureWebVitals();
-// Report metrics periodically,;
+// Report metrics periodically,
     const interval = setInterval(reportMetrics, reportInterval);
-    // Report metrics on page unload,;
+    // Report metrics on page unload,
     const handleBeforeUnload = () => {;
   }
   }
@@ -417,7 +417,7 @@ const reportMetrics = useCallback(() => {;
       window.removeEventListener('beforeunload', handleBeforeUnload);
     }
   }, [measureWebVitals, reportMetrics, reportInterval]);
-  // Toggle visibility for debugging,;
+  // Toggle visibility for debugging,
   useEffect(() => {;
     // TODO: Add content;
   }
@@ -515,7 +515,7 @@ const reportMetrics = useCallback(() => {;
         )}
       </div>
       <div className="mt-2 text-gray-400 text-xs">
-// Press Ctrl+Shift+P to toggle,;
+// Press Ctrl+Shift+P to toggle,
           </div>
     </div>
   );

@@ -32,7 +32,7 @@ const InteractiveAIROICalculator: React.FC = () => {;
           <section className='bg-white py-16 rounded-2xl shadow-lg'>
       <div className='container mx-auto px-4'>
         <h2 className='text-4xl font-bold text-center text-gray-900 mb-8'>
-// AI ROI Calculator,;
+// AI ROI Calculator,
           </h2>
         <div className='max-w-4xl mx-auto'>
           <div className='grid md:grid-cols-2 gap-8'>
@@ -81,7 +81,7 @@ Expected Efficiency Gain (%);
                 </select>
             <div className='bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl'>
               <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>
-// Your ROI Projection,;
+// Your ROI Projection,
           </h3>
               <div className='text-center'>
                 <div className='text-6xl font-bold text-blue-600 mb-4'>

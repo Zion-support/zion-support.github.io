@@ -4,9 +4,9 @@ interface SEOOptimizerProps {;
   }
   }
 }
-  title: string;,;
-    description: string;,;
-    keywords: string[];,;
+  title: string;,
+    description: string;,
+    keywords: string[];,
     canonicalUrl: string;
   structuredData?: object;
   ogImage?: string;
@@ -18,22 +18,22 @@ const SEOOptimizer: React.FC;
   }
   }
 }
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',;
-  description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',;
-  keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],;
-  canonicalUrl = 'https://ziontechgroup.com',;
-//   structuredData,;
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',;
-  twitterCard = 'summary_large_image',;
+  title = 'Zion Tech Group - Advanced AI and IT Solutions',
+  description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
+  keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
+  canonicalUrl = 'https://ziontechgroup.com',
+//   structuredData,
+  ogImage = 'https://ziontechgroup.com/og-image.jpg',
+  twitterCard = 'summary_large_image',
 }) => {;
     useEffect(() => {;
   // TODO: Add content;
   }
   }
 }
-    // Update document title,;
+    // Update document title,
     document.title = fullTitle;
-    // Update meta description,;
+    // Update meta description,
 const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {;
     // TODO: Add content;
@@ -51,7 +51,7 @@ const metaDescription = document.querySelector('meta[name="description"]');
       meta.content = description;
       document.head.appendChild(meta);
     }
-    // Update meta keywords,;
+    // Update meta keywords,
 const metaKeywords = document.querySelector('meta[name="keywords"]');
     if (metaKeywords) {;
     // TODO: Add content;
@@ -69,7 +69,7 @@ const metaKeywords = document.querySelector('meta[name="keywords"]');
       meta.content = keywords.join(', ');
       document.head.appendChild(meta);
     }
-    // Update canonical URL,;
+    // Update canonical URL,
 let canonical = document.querySelector('link[rel="canonical"]');
     if (canonical) {;
     // TODO: Add content;
@@ -87,13 +87,13 @@ let canonical = document.querySelector('link[rel="canonical"]');
       canonical.href = canonicalUrl;
       document.head.appendChild(canonical);
     }
-    // Update Open Graph tags,;
+    // Update Open Graph tags,
 const updateMetaProperty = (property: string, content: string) => {;
     // TODO: Add content;
   }
   }
 }
-      let meta = document.querySelector(`meta[property="${property}"]`);
+      let meta = document.querySelector(`meta[property="${property}]`);
       if (meta) {;
     // TODO: Add content;
   }
@@ -116,13 +116,13 @@ const updateMetaProperty = (property: string, content: string) => {;
     updateMetaProperty('og:url', canonicalUrl);
     updateMetaProperty('og:image', ogImage);
     updateMetaProperty('og:type', 'website');
-    // Update Twitter Card tags,;
+    // Update Twitter Card tags,
 const updateMetaName = (name: string, content: string) => {;
     // TODO: Add content;
   }
   }
 }
-      let meta = document.querySelector(`meta[name="${name}"]`);
+      let meta = document.querySelector(`meta[name="${name}]`);
       if (meta) {;
     // TODO: Add content;
   }
@@ -144,7 +144,7 @@ const updateMetaName = (name: string, content: string) => {;
     updateMetaName('twitter:title', fullTitle);
     updateMetaName('twitter:description', description);
     updateMetaName('twitter:image', ogImage);
-    // Add structured data,;
+    // Add structured data,
     if (structuredData) {;
     // TODO: Add content;
   }

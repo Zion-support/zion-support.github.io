@@ -9,15 +9,15 @@ export interface AppConfig {;
   }
   }
 }
-  environment: Environment;,;
+  environment: Environment;,
     api: {;
     // TODO: Add content;
   }
   }
 }
-  baseURL: string;,;
-    timeout: number;,;
-    retryAttempts: number;,;
+  baseURL: string;,
+    timeout: number;,
+    retryAttempts: number;,
     enableCaching: boolean;
   }
   features: {;
@@ -25,11 +25,11 @@ export interface AppConfig {;
   }
   }
 }
-  enableAnalytics: boolean;,;
-    enableErrorReporting: boolean;,;
-    enablePerformanceMonitoring: boolean;,;
-    enableAccessibility: boolean;,;
-    enableSEO: boolean;,;
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
     enablePWA: boolean;
   }
   performance: {;
@@ -37,9 +37,9 @@ export interface AppConfig {;
   }
   }
 }
-  enableCodeSplitting: boolean;,;
-    enableLazyLoading: boolean;,;
-    enableImageOptimization: boolean;,;
+  enableCodeSplitting: boolean;,
+    enableLazyLoading: boolean;,
+    enableImageOptimization: boolean;,
     enableCaching: boolean;
   }
   security: {;
@@ -47,9 +47,9 @@ export interface AppConfig {;
   }
   }
 }
-  enableCSP: boolean;,;
-    enableCORS: boolean;,;
-    enableRateLimiting: boolean;,;
+  enableCSP: boolean;,
+    enableCORS: boolean;,
+    enableRateLimiting: boolean;,
     maxRequestsPerMinute: number;
   }
   ui: {;
@@ -57,8 +57,8 @@ export interface AppConfig {;
   }
   }
 }
-  theme: 'light' | 'dark' | 'auto';,;
-    language: string;,;
+  theme: 'light' | 'dark' | 'auto';,
+    language: string;,
     timezone: string;
   }
   logging: {;
@@ -66,70 +66,70 @@ export interface AppConfig {;
   }
   }
 }
-  level: 'debug' | 'info' | 'warn' | 'error';,;
-    enableConsole: boolean;,;
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
     enableNetwork: boolean;
   }
 }
-  environment: 'development',;
+  environment: 'development',
   api: {;
     // TODO: Add content;
   }
   }
 }
-  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',;
-    timeout: 30000,;
-    retryAttempts: 3,;
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
     enableCaching: true;
-  },;
+  },
   features: {;
     // TODO: Add content;
   }
   }
 }
-  enableAnalytics: false,;
-    enableErrorReporting: true,;
-    enablePerformanceMonitoring: true,;
-    enableAccessibility: true,;
-    enableSEO: true,;
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
     enablePWA: true;
-  },;
+  },
   performance: {;
     // TODO: Add content;
   }
   }
 }
-  enableCodeSplitting: true,;
-    enableLazyLoading: true,;
-    enableImageOptimization: true,;
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
     enableCaching: true;
-  },;
+  },
   security: {;
     // TODO: Add content;
   }
   }
 }
-  enableCSP: true,;
-    enableCORS: true,;
-    enableRateLimiting: true,;
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
     maxRequestsPerMinute: 100;
-  },;
+  },
   ui: {;
     // TODO: Add content;
   }
   }
 }
-  theme: 'auto',;
-    language: 'en',;
-    timezone: 'UTC',;
-  },;
+  theme: 'auto',
+    language: 'en',
+    timezone: 'UTC',
+  },
   logging: {;
     // TODO: Add content;
   }
   }
 }
-  level: 'info',;
-    enableConsole: true,;
+  level: 'info',
+    enableConsole: true,
     enableNetwork: false;
   }
 }
@@ -139,36 +139,36 @@ const developmentConfig: Partial;
   }
   }
 }
-  environment: 'development',;
+  environment: 'development',
   api: {;
     // TODO: Add content;
   }
   }
 }
-  baseURL: 'http://localhost:3000/api',;
-    timeout: 30000,;
-    retryAttempts: 1,;
+  baseURL: 'http://localhost:3000/api',
+    timeout: 30000,
+    retryAttempts: 1,
     enableCaching: false;
-  },;
+  },
   features: {;
     // TODO: Add content;
   }
   }
 }
-  enableAnalytics: false,;
-    enableErrorReporting: true,;
-    enablePerformanceMonitoring: true,;
-    enableAccessibility: true,;
-    enableSEO: false,;
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: false,
     enablePWA: false;
-  },;
+  },
   logging: {;
     // TODO: Add content;
   }
   }
 }
-  level: 'debug',;
-    enableConsole: true,;
+  level: 'debug',
+    enableConsole: true,
     enableNetwork: false;
   }
 }
@@ -178,36 +178,36 @@ const stagingConfig: Partial;
   }
   }
 }
-  environment: 'staging',;
+  environment: 'staging',
   api: {;
     // TODO: Add content;
   }
   }
 }
-  baseURL: 'https://staging-api.ziontech.com',;
-    timeout: 30000,;
-    retryAttempts: 3,;
+  baseURL: 'https://staging-api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
     enableCaching: true;
-  },;
+  },
   features: {;
     // TODO: Add content;
   }
   }
 }
-  enableAnalytics: true,;
-    enableErrorReporting: true,;
-    enablePerformanceMonitoring: true,;
-    enableAccessibility: true,;
-    enableSEO: true,;
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
     enablePWA: true;
-  },;
+  },
   logging: {;
     // TODO: Add content;
   }
   }
 }
-  level: 'info',;
-    enableConsole: true,;
+  level: 'info',
+    enableConsole: true,
     enableNetwork: true;
   }
 }
@@ -217,46 +217,46 @@ const productionConfig: Partial;
   }
   }
 }
-  environment: 'production',;
+  environment: 'production',
   api: {;
     // TODO: Add content;
   }
   }
 }
-  baseURL: 'https://api.ziontech.com',;
-    timeout: 30000,;
-    retryAttempts: 3,;
+  baseURL: 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
     enableCaching: true;
-  },;
+  },
   features: {;
     // TODO: Add content;
   }
   }
 }
-  enableAnalytics: true,;
-    enableErrorReporting: true,;
-    enablePerformanceMonitoring: true,;
-    enableAccessibility: true,;
-    enableSEO: true,;
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
     enablePWA: true;
-  },;
+  },
   logging: {;
     // TODO: Add content;
   }
   }
 }
-  level: 'error',;
-    enableConsole: false,;
+  level: 'error',
+    enableConsole: false,
     enableNetwork: true;
-  },;
+  },
   security: {;
     // TODO: Add content;
   }
   }
 }
-  enableCSP: true,;
-    enableCORS: true,;
-    enableRateLimiting: true,;
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
     maxRequestsPerMinute: 60;
   }
 }
@@ -266,36 +266,36 @@ const testConfig: Partial;
   }
   }
 }
-  environment: 'test',;
+  environment: 'test',
   api: {;
     // TODO: Add content;
   }
   }
 }
-  baseURL: 'http://localhost:3000/api',;
-    timeout: 5000,;
-    retryAttempts: 0,;
+  baseURL: 'http://localhost:3000/api',
+    timeout: 5000,
+    retryAttempts: 0,
     enableCaching: false;
-  },;
+  },
   features: {;
     // TODO: Add content;
   }
   }
 }
-  enableAnalytics: false,;
-    enableErrorReporting: false,;
-    enablePerformanceMonitoring: false,;
-    enableAccessibility: true,;
-    enableSEO: false,;
+  enableAnalytics: false,
+    enableErrorReporting: false,
+    enablePerformanceMonitoring: false,
+    enableAccessibility: true,
+    enableSEO: false,
     enablePWA: false;
-  },;
+  },
   logging: {;
     // TODO: Add content;
   }
   }
 }
-  level: 'error',;
-    enableConsole: false,;
+  level: 'error',
+    enableConsole: false,
     enableNetwork: false;
   }
 }
@@ -358,7 +358,7 @@ export class ConfigManager {;
         config = this.mergeConfig(config, testConfig);
         break;
     }
-    // Apply overrides,;
+    // Apply overrides,
     config = this.mergeConfig(config, this.overrides);
     return config;
   }
@@ -371,8 +371,8 @@ export class ConfigManager {;
   }
   }
 }
-    const result = { ...base } as AppConfig,;
-//     (Object.keys(override) as Array,;
+    const result = { ...base } as AppConfig,
+//     (Object.keys(override) as Array,
           <keyof AppConfig>).forEach();
           <K extends keyof AppConfig>(key: K) => {;
     // TODO: Add content;
@@ -392,7 +392,7 @@ export class ConfigManager {;
             value !== null &&;
             typeof baseValue === 'object' &&;
 //             !Array.isArray(baseValue) &&;
-            baseValue !== null,;
+            baseValue !== null,
 ) {;
     // TODO: Add content;
   }
@@ -416,15 +416,15 @@ export class ConfigManager {;
    */;
   get;
           <K extends keyof AppConfig>(key: K): AppConfig[K];
-// get,;
+// get,
           <K extends keyof AppConfig, NK extends keyof AppConfig[K]>();
-    key: K,;
-    nestedKey: NK,;
+    key: K,
+    nestedKey: NK,
 ): AppConfig[K][NK];
-// get,;
+// get,
           <K extends keyof AppConfig, NK extends keyof AppConfig[K]>();
-    key: K,;
-    nestedKey?: NK,;
+    key: K,
+    nestedKey?: NK,
 ): AppConfig[K] | AppConfig[K][NK] {;
     // TODO: Add content;
   }
@@ -444,16 +444,16 @@ export class ConfigManager {;
    */;
   set;
           <K extends keyof AppConfig>(key: K, value: AppConfig[K]): void;
-// set,;
+// set,
           <K extends keyof AppConfig, NK extends keyof AppConfig[K]>();
-    key: K,;
-    nestedKey: NK,;
+    key: K,
+    nestedKey: NK,
     value: AppConfig[K][NK];
   ): void;
-// set,;
+// set,
           <K extends keyof AppConfig, NK extends keyof AppConfig[K]>();
-    key: K,;
-    nestedKeyOrValue: NK | AppConfig[K],;
+    key: K,
+    nestedKeyOrValue: NK | AppConfig[K],
     value?: AppConfig[K][NK];
   ): void {;
     // TODO: Add content;
@@ -469,7 +469,7 @@ export class ConfigManager {;
       if ();
         typeof currentValue === 'object' &&;
 //         !Array.isArray(currentValue) &&;
-        currentValue !== null,;
+        currentValue !== null,
 ) {;
     // TODO: Add content;
   }
@@ -487,7 +487,7 @@ export class ConfigManager {;
   }
   }
 }
-        // If current value is not an object, create a new object by merging with default,;
+        // If current value is not an object, create a new object by merging with default,
 const defaultValue = this.getDefaultForKey(key);
         this.config[key] = Object.assign({}, defaultValue, {;
     // TODO: Add content;
@@ -519,65 +519,65 @@ const defaultValue = this.getDefaultForKey(key);
   }
   }
 }
-  environment: 'development',;
+  environment: 'development',
       api: {;
     // TODO: Add content;
   }
   }
 }
-  baseURL: '',;
-        timeout: 30000,;
-        retryAttempts: 3,;
+  baseURL: '',
+        timeout: 30000,
+        retryAttempts: 3,
         enableCaching: true;
-      },;
+      },
       features: {;
     // TODO: Add content;
   }
   }
 }
-  enableAnalytics: false,;
-        enableErrorReporting: true,;
-        enablePerformanceMonitoring: false,;
-        enableAccessibility: true,;
-        enableSEO: true,;
+  enableAnalytics: false,
+        enableErrorReporting: true,
+        enablePerformanceMonitoring: false,
+        enableAccessibility: true,
+        enableSEO: true,
         enablePWA: false;
-      },;
+      },
       performance: {;
     // TODO: Add content;
   }
   }
 }
-  enableCodeSplitting: true,;
-        enableLazyLoading: true,;
-        enableImageOptimization: true,;
+  enableCodeSplitting: true,
+        enableLazyLoading: true,
+        enableImageOptimization: true,
         enableCaching: true;
-      },;
+      },
       security: {;
     // TODO: Add content;
   }
   }
 }
-  enableCSP: true,;
-        enableCORS: false,;
-        enableRateLimiting: true,;
+  enableCSP: true,
+        enableCORS: false,
+        enableRateLimiting: true,
         maxRequestsPerMinute: 100;
-      },;
+      },
       ui: {;
     // TODO: Add content;
   }
   }
 }
-  theme: 'light',;
-        language: 'en',;
-        timezone: 'UTC',;
-      },;
+  theme: 'light',
+        language: 'en',
+        timezone: 'UTC',
+      },
       logging: {;
     // TODO: Add content;
   }
   }
 }
-  level: 'info',;
-        enableConsole: true,;
+  level: 'info',
+        enableConsole: true,
         enableNetwork: false;
       }
     }
@@ -657,7 +657,7 @@ const defaultValue = this.getDefaultForKey(key);
   }
 }
     this.config.api = {;
-    ...this.config.api,;
+    ...this.config.api,
     ...config;
   }
   }
@@ -738,14 +738,14 @@ const defaultValue = this.getDefaultForKey(key);
    * Validate configuration;
    */;
   validate(): {;
-    valid: boolean; errors: string[,;
+    valid: boolean; errors: string[,
   } {;
     // TODO: Add content;
   }
   }
 }
     const errors: string[] = [];
-    // Validate API configuration,;
+    // Validate API configuration,
     if (!this.config.api.baseURL) {;
     // TODO: Add content;
   }
@@ -769,7 +769,7 @@ const defaultValue = this.getDefaultForKey(key);
 }
       errors.push('API retryAttempts must be non-negative');
     }
-    // Validate security configuration,;
+    // Validate security configuration,
     if (this.config.security.maxRequestsPerMinute;
           < 1) {;
     // TODO: Add content;
@@ -783,10 +783,10 @@ const defaultValue = this.getDefaultForKey(key);
   }
   }
 }
-  valid: errors.length === 0,;
-//       errors,;
+  valid: errors.length === 0,
+//       errors,
     }
   }
 }
-// Export singleton instance,;
+// Export singleton instance,
 export const configManager = ConfigManager.getInstance();

@@ -6,7 +6,7 @@ const Image: React.FC = () => {;
   }
   }
 }
-  src: string;,;
+  src: string;,
     alt: string;
   width?: number;
   height?: number;
@@ -26,21 +26,21 @@ const Image: React.FC = () => {;
   }
   }
 }
-//   src,;
-//   alt,;
-//   width,;
-//   height,;
-//   className,;
-  priority = false,;
-quality = 75,;
-  placeholder = 'empty',;
-  blurDataURL,;
-  fill = false,;
-//   sizes,;
-//   style,;
-//   onLoad,;
-//   onError,;
-//   ...props,;
+//   src,
+//   alt,
+//   width,
+//   height,
+//   className,
+  priority = false,
+quality = 75,
+  placeholder = 'empty',
+  blurDataURL,
+  fill = false,
+//   sizes,
+//   style,
+//   onLoad,
+//   onError,
+//   ...props,
 }) => {;
     // TODO: Add content;
   }
@@ -69,18 +69,18 @@ quality = 75,;
   }
   }
 }
-//     ...style,;
+//     ...style,
     ...(fill && {;
     // TODO: Add content;
   }
   }
 }
-  position: 'absolute',;
-      top: 0,;
-      left: 0,;
-      width: '100%',;
-      height: '100%',;
-      objectFit: 'cover',;
+  position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      objectFit: 'cover',
     });
   }
   if (hasError) {;

@@ -9,6 +9,6 @@ import {Phone, Mail } from 'lucide-react'
 
   const benefits=";"
     'Gain competitive advantage with advanced technology'"
-            <div className="&quot;flex" flex-col sm:flex-row gap-4 justify-center&quot;></div>
+            <div className=""flex" flex-col sm:flex-row gap-4 justify-center"></div>
             </div>
           </div>"

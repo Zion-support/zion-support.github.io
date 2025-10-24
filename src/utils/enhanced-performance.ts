@@ -35,7 +35,7 @@ export class PerformanceMonitor {;
   }
   }
 }
-    // Monitor navigation timing,;
+    // Monitor navigation timing,
     if (PerformanceObserver.supportedEntryTypes.includes('navigation')) {;
     for (const entry of list.getEntries()) {;
   // TODO: Add content;
@@ -45,34 +45,34 @@ export class PerformanceMonitor {;
           this.recordMetric('navigation', entry.duration);
       });
       navObserver.observe({;
-    entryTypes: ['navigation',;
+    entryTypes: ['navigation',
   });
       this.observers.push(navObserver);
           this.recordMetric('resource', entry.duration);
       resourceObserver.observe({;
-    entryTypes: ['resource',;
+    entryTypes: ['resource',
   });
       this.observers.push(resourceObserver);
           this.recordMetric(entry.name, entry.startTime);
       paintObserver.observe({;
-    entryTypes: ['paint',;
+    entryTypes: ['paint',
   });
       this.observers.push(paintObserver);
-          const fidEntry = entry as PerformanceEventTiming,;
-          const fid = fidEntry.processingStart - fidEntry.startTime,;
+          const fidEntry = entry as PerformanceEventTiming,
+          const fid = fidEntry.processingStart - fidEntry.startTime,
           this.recordMetric('fid', fid);
       fidObserver.observe({;
-    entryTypes: ['first-input',;
+    entryTypes: ['first-input',
   });
       this.observers.push(fidObserver);
-// Types,;
-//   PerformanceReport,;
-//   ResourceStats,;
-//   MemoryStats,;
-//   PerformanceWithMemory,;
-//   LayoutShift,;
+// Types,
+//   PerformanceReport,
+//   ResourceStats,
+//   MemoryStats,
+//   PerformanceWithMemory,
+//   LayoutShift,
 } from '../types/app.types';
-// Utility Functions,;
+// Utility Functions,
  * Throttle function;
 export function throttle;
           <T extends (...args: unknown[]) => any>(;

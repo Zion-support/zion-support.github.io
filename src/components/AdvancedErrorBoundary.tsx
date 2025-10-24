@@ -5,9 +5,9 @@ interface ErrorBoundaryState {;
   }
   }
 }
-  hasError: boolean;,;
-    error: Error | null;,;
-    errorInfo: ErrorInfo | null;,;
+  hasError: boolean;,
+    error: Error | null;,
+    errorInfo: ErrorInfo | null;,
     errorId: string | null;
 }
 interface ErrorBoundaryProps {;
@@ -31,17 +31,17 @@ interface ErrorReport {;
     errorInfo: ErrorInfo;
     message: string;
     stack: string | undefined;
-    componentStack: string | null | undefined;,;
-    timestamp: string;,;
-    userAgent: string;,;
-    url: string;,;
-    userId: string | null;,;
+    componentStack: string | null | undefined;,
+    timestamp: string;,
+    userAgent: string;,
+    url: string;,
+    userId: string | null;,
     sessionId: string;
 }
 class AdvancedErrorBoundary extends Component;
           <;
-// ErrorBoundaryProps,;
-//   ErrorBoundaryState,;
+// ErrorBoundaryProps,
+//   ErrorBoundaryState,
 > {;
     // TODO: Add content;
   }
@@ -60,9 +60,9 @@ class AdvancedErrorBoundary extends Component;
   }
   }
 }
-  hasError: false,;
-      error: null,;
-      errorInfo: null,;
+  hasError: false,
+      error: null,
+      errorInfo: null,
       errorId: null;
     }
   }
@@ -77,8 +77,8 @@ class AdvancedErrorBoundary extends Component;
   }
   }
 }
-  hasError: true,;
-//       error,;
+  hasError: true,
+//       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
     }
   }
@@ -92,10 +92,10 @@ class AdvancedErrorBoundary extends Component;
   }
   }
 }
-//       error,;
-//       errorInfo,;
+//       error,
+//       errorInfo,
     });
-    // Log error to console in development,;
+    // Log error to console in development,
     if (process.env.NODE_ENV === 'development') {;
     // TODO: Add content;
   }
@@ -106,12 +106,12 @@ class AdvancedErrorBoundary extends Component;
   }
   }
 }
-  context: 'ErrorBoundary',;
-        error: error.message,;
-//         errorInfo,;
+  context: 'ErrorBoundary',
+        error: error.message,
+//         errorInfo,
       });
     }
-    // Call custom error handler,;
+    // Call custom error handler,
     if (this.props.onError) {;
     // TODO: Add content;
   }
@@ -119,7 +119,7 @@ class AdvancedErrorBoundary extends Component;
 }
       this.props.onError(error, errorInfo);
     }
-    // Report error to external service,;
+    // Report error to external service,
     if (this.props.enableErrorReporting) {;
     // TODO: Add content;
   }
@@ -138,19 +138,19 @@ class AdvancedErrorBoundary extends Component;
   }
   }
 }
-  errorId: this.state.errorId || this.generateErrorId(),;
-//       error,;
-//       errorInfo,;
-      message: error.message,;
-      stack: error.stack,;
-      componentStack: errorInfo.componentStack,;
-      timestamp: new Date().toISOString(),;
-      userAgent: navigator.userAgent,;
-      url: window.location.href,;
-      userId: this.getUserId(),;
+  errorId: this.state.errorId || this.generateErrorId(),
+//       error,
+//       errorInfo,
+      message: error.message,
+      stack: error.stack,
+      componentStack: errorInfo.componentStack,
+      timestamp: new Date().toISOString(),
+      userAgent: navigator.userAgent,
+      url: window.location.href,
+      userId: this.getUserId(),
       sessionId: this.getSessionId();
     }
-    // Send to error reporting service,;
+    // Send to error reporting service,
     this.sendErrorReport(errorReport);
   }
   private getUserId = (): string | null => {;
@@ -158,7 +158,7 @@ class AdvancedErrorBoundary extends Component;
   }
   }
 }
-    // Try to get user ID from localStorage or other sources,;
+    // Try to get user ID from localStorage or other sources,
     try {;
     // TODO: Add content;
   }
@@ -178,7 +178,7 @@ class AdvancedErrorBoundary extends Component;
   }
   }
 }
-    // Generate or retrieve session ID,;
+    // Generate or retrieve session ID,
     try {;
     // TODO: Add content;
   }
@@ -219,20 +219,20 @@ class AdvancedErrorBoundary extends Component;
   }
   }
 }
-      // Send to your error reporting service,;
+      // Send to your error reporting service,
       await fetch('/api/errors', {;
     // TODO: Add content;
   }
   }
 }
-  method: 'POST',;
+  method: 'POST',
         headers: {;
     // TODO: Add content;
   }
   }
 }
           'Content-Type': 'application/json';
-        },;
+        },
         body: JSON.stringify(errorReport);
       });
     } catch (reportError) {;
@@ -245,7 +245,7 @@ class AdvancedErrorBoundary extends Component;
   }
   }
 }
-  context: 'ErrorReporting',;
+  context: 'ErrorReporting',
         error: reportError;
       });
     }
@@ -267,9 +267,9 @@ class AdvancedErrorBoundary extends Component;
   }
   }
 }
-  hasError: false,;
-        error: null,;
-        errorInfo: null,;
+  hasError: false,
+        error: null,
+        errorInfo: null,
         errorId: null;
       });
     }
@@ -298,7 +298,7 @@ class AdvancedErrorBoundary extends Component;
   }
   }
 }
-      // Custom fallback UI,;
+      // Custom fallback UI,
       if (this.props.fallback) {;
     // TODO: Add content;
   }
@@ -306,7 +306,7 @@ class AdvancedErrorBoundary extends Component;
 }
         return this.props.fallback;
       }
-      // Default error UI,;
+      // Default error UI,
       return (;
           <div className='min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8'><div className='sm:mx-auto sm:w-full sm:max-w-md'><div className='bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10'><div className='text-center'><div className='mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100'><svg className='h-6 w-6 text-red-600';
                     fill='none';
@@ -322,7 +322,7 @@ class AdvancedErrorBoundary extends Component;
 /></svg></div><h2 className='mt-6 text-3xl font-extrabold text-gray-900'>
                   Oops! Something went wrong;
                 </h2><p className='mt-2 text-sm text-gray-600'>
-                  We&apos;re sorry, but something unexpected happened. Our team;
+                  We're sorry, but something unexpected happened. Our team;
                   has been notified.;
                 </p></div>
               {;
@@ -355,7 +355,7 @@ class AdvancedErrorBoundary extends Component;
               <div className='mt-6 space-y-3'>
                 {;
     this.props.enableRetry &&;
-// this.retryCount,;
+// this.retryCount,
     < this.maxRetries && ();
           <button;
   }

@@ -26,7 +26,7 @@ const OfflinePage: React.FC = () => {;
           <WifiOff className="w-8 h-8 text-orange-400" />
         </div>
         <h1 className="text-2xl font-bold text-white mb-4">
-// You're Offline,;
+// You're Offline,
           </h1>
         <p className="text-gray-300 mb-6">
           It looks like you're not connected to the internet. Please check your connection and try again.;
@@ -39,7 +39,7 @@ const OfflinePage: React.FC = () => {;
             className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-lg transition-colors duration-200 font-medium"
 // >
           <RefreshCw className="w-4 h-4" />
-// Try Again,;
+// Try Again,
           </button>
 onClick={;
     handleGoHome;

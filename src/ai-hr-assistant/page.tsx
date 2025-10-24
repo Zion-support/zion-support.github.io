@@ -2,14 +2,14 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import {;
-    Users,;
-    Target,;
-    Zap,;
-    Settings,;
-    CheckCircle,;
-    Star,;
-    Users,;
-    Target,;
+    Users,
+    Target,
+    Zap,
+    Settings,
+    CheckCircle,
+    Star,
+    Users,
+    Target,
     Settings from 'lucide-react';
   }
 const AIHRAssistantPage: React.FC = () => {;
@@ -19,19 +19,19 @@ const AIHRAssistantPage: React.FC = () => {;
   }
   }
 }
-  icon: Users,;
-      title: 'HR Automation',;
-      description: 'value',;
+  icon: Users,
+      title: 'HR Automation',
+      description: 'value',
   ];
       benefits: ['Recruitment automation', 'Employee onboarding', 'Performance management'];
-    },;
-      icon: Target,;
-      title: 'Talent Management',;
-      description: 'Intelligent talent acquisition and management',;
+    },
+      icon: Target,
+      title: 'Talent Management',
+      description: 'Intelligent talent acquisition and management',
       benefits: ['Candidate screening', 'Skill matching', 'Career development'];
-      icon: Settings,;
-      title: 'HR Analytics',;
-      description: 'Comprehensive HR analytics and insights',;
+      icon: Settings,
+      title: 'HR Analytics',
+      description: 'Comprehensive HR analytics and insights',
       benefits: ['Workforce analytics', 'Performance metrics', 'Predictive insights'];
     }
   ];
@@ -43,10 +43,10 @@ const AIHRAssistantPage: React.FC = () => {;
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
-// AI HR Assistant,;
+// AI HR Assistant,
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse">
-// Intelligent HR Management,;
+// Intelligent HR Management,
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             Transform your HR operations with AI-powered automation and insights.;
@@ -56,7 +56,7 @@ const AIHRAssistantPage: React.FC = () => {;
               href="/contact";
               className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
 // >
-//               Get Started,;
+//               Get Started,
           </a>
               href="tel:+13024640950";
               className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
@@ -66,11 +66,11 @@ const AIHRAssistantPage: React.FC = () => {;
         </section>
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
-// HR Assistant Features,;
+// HR Assistant Features,
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {;
-    features.map((feature,;
+    features.map((feature,
     index) => ();
   }
   }
@@ -89,7 +89,7 @@ const AIHRAssistantPage: React.FC = () => {;
   }
                 <ul className="space-y-2">
                   {;
-    feature.benefits.map((benefit,;
+    feature.benefits.map((benefit,
     benefitIndex) => ();
   }
   }

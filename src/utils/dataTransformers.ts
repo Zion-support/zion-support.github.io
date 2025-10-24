@@ -87,9 +87,9 @@ export function deepMerge;
   }
 }
         output[key] = deepMerge();
-//           targetValue as Record,;
-          <string, unknown>,;
-// sourceValue as Record,;
+//           targetValue as Record,
+          <string, unknown>,
+// sourceValue as Record,
           <string, unknown>
         ) as T[Extract<keyof T, string>];
       } else {;
@@ -98,7 +98,7 @@ export function deepMerge;
   }
 }
         output[key] = sourceValue as T[;
-    Extract,;
+    Extract,
   ];
           <keyof T, string>];
       }
@@ -111,8 +111,8 @@ export function deepMerge;
  */;
 export function flattenObject();
   obj: Record;
-          <string, unknown>,;
-  prefix = '',;
+          <string, unknown>,
+  prefix = '',
   separator = '.';
 ): Record<string, unknown> {;
     // TODO: Add content;
@@ -132,15 +132,15 @@ export function flattenObject();
   }
 }
       const value = obj[key];
-      const newKey = prefix ? `${prefix}${separator}${key}` : key,;
+      const newKey = prefix ? `${prefix}${separator}${key}` : key,
       if (value && typeof value === 'object' && !Array.isArray(value)) {;
     // TODO: Add content;
   }
   }
 }
 //         Object.assign();
-//           flattened,;
-//           flattenObject(value as Record,;
+//           flattened,
+//           flattenObject(value as Record,
           <string, unknown>, newKey, separator);
         );
       } else {;
@@ -159,7 +159,7 @@ export function flattenObject();
  */;
 export function unflattenObject();
   obj: Record;
-          <string, unknown>,;
+          <string, unknown>,
   separator = '.';
 ): Record<string, unknown> {;
     // TODO: Add content;
@@ -210,7 +210,7 @@ export function unflattenObject();
  * Pick specific keys from an object;
  */;
 export function pick<T extends Record<string, unknown>, K extends keyof T>();
-  obj: T,;
+  obj: T,
   keys: K[];
 ): Pick;
           <T, K> {;
@@ -218,7 +218,7 @@ export function pick<T extends Record<string, unknown>, K extends keyof T>();
   }
   }
 }
-  const result = {} as Pick,;
+  const result = {} as Pick,
           <T, K>
   keys.forEach(key => {;
     // TODO: Add content;
@@ -240,7 +240,7 @@ export function pick<T extends Record<string, unknown>, K extends keyof T>();
  */;
 export function omit;
           <T extends Record<string, unknown>, K extends keyof T>();
-  obj: T,;
+  obj: T,
   keys: K[];
 ): Omit;
           <T, K> {;
@@ -265,7 +265,7 @@ export function omit;
  * Group array items by a key;
  */;
 export function groupBy<T>();
-  array: T[],;
+  array: T[],
   key: keyof T | ((item: T) => string | number);
 ): Record;
           <string, T[]> {;
@@ -282,7 +282,7 @@ export function groupBy<T>();
       const groupKey = typeof key === 'function' ? String(key(item)) : String(item[key]);
       (result[groupKey] = result[groupKey] || []).push(item);
       return result;
-    },;
+    },
     {} as Record;
           <string, T[]>
   );
@@ -325,9 +325,9 @@ export function unique<T>(array: T[], key?: keyof T): T[] {;
  */;
 export function sortBy;
           <T>();
-  array: T[],;
+  array: T[],
   keys: Array;
-          <keyof T | ((item: T) => unknown)>,;
+          <keyof T | ((item: T) => unknown)>,
   orders: Array<'asc' | 'desc'> = [];
 ): T[] {;
     // TODO: Add content;
@@ -349,7 +349,7 @@ export function sortBy;
       const order = orders[i] || 'asc';
       const aVal = typeof key === 'function' ? key(a) : a[key];
       const bVal = typeof key === 'function' ? key(b) : b[key];
-      // Handle comparison with type safety,;
+      // Handle comparison with type safety,
       if (aVal == null || bVal == null) {;
     // TODO: Add content;
   }
@@ -358,14 +358,14 @@ export function sortBy;
         if (aVal == null && bVal == null) continue;
         return aVal == null ? 1 : -1;
       }
-      // Convert to comparable values,;
+      // Convert to comparable values,
 const aComp =;
         typeof aVal === 'string' || typeof aVal === 'number' || typeof aVal === 'boolean';
-//           ? aVal,;
+//           ? aVal,
           : String(aVal);
       const bComp =;
         typeof bVal === 'string' || typeof bVal === 'number' || typeof bVal === 'boolean';
-//           ? bVal,;
+//           ? bVal,
           : String(bVal);
       if (aComp;
           < bComp) return order === 'asc' ? -1 : 1;
@@ -424,7 +424,7 @@ export function formatBytes(bytes: number, decimals = 2): string {;
 }
   if (bytes === 0) return '0 Bytes';
   const k = 1024;
-  const dm = decimals,;
+  const dm = decimals,
           < 0 ? 0 : decimals;
   const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB'];
   const i = Math.floor(Math.log(bytes) / Math.log(k));
@@ -453,23 +453,23 @@ export function formatCurrency(amount: number, currency = 'USD', locale = 'en-US
   }
   }
 }
-  style: 'currency',;
-//     currency,;
+  style: 'currency',
+//     currency,
   }).format(amount);
 }
 /**;
  * Format date;
  */;
 export function formatDate();
-  date: Date | string | number,;
-  options: Intl.DateTimeFormatOptions = {},;
+  date: Date | string | number,
+  options: Intl.DateTimeFormatOptions = {},
   locale = 'en-US';
 ): string {;
     // TODO: Add content;
   }
   }
 }
-  const d = typeof date === 'string' || typeof date === 'number' ? new Date(date) : date,;
+  const d = typeof date === 'string' || typeof date === 'number' ? new Date(date) : date,
   return new Intl.DateTimeFormat(locale, options).format(d);
 }
 /**;
@@ -480,7 +480,7 @@ export function formatRelativeTime(date: Date | string | number): string {;
   }
   }
 }
-  const d = typeof date === 'string' || typeof date === 'number' ? new Date(date) : date,;
+  const d = typeof date === 'string' || typeof date === 'number' ? new Date(date) : date,
   const now = new Date();
   const diff = now.getTime() - d.getTime();
   const seconds = Math.floor(diff / 1000);
@@ -576,26 +576,26 @@ export default {;
   }
   }
 }
-//   deepClone,;
-//   deepMerge,;
-//   flattenObject,;
-//   unflattenObject,;
-//   pick,;
-//   omit,;
-//   groupBy,;
-//   unique,;
-//   sortBy,;
-//   chunk,;
-//   zip,;
-//   formatBytes,;
-//   formatNumber,;
-//   formatCurrency,;
-//   formatDate,;
-//   formatRelativeTime,;
-//   truncate,;
-//   capitalize,;
-//   titleCase,;
-//   kebabCase,;
-//   camelCase,;
-//   snakeCase,;
+//   deepClone,
+//   deepMerge,
+//   flattenObject,
+//   unflattenObject,
+//   pick,
+//   omit,
+//   groupBy,
+//   unique,
+//   sortBy,
+//   chunk,
+//   zip,
+//   formatBytes,
+//   formatNumber,
+//   formatCurrency,
+//   formatDate,
+//   formatRelativeTime,
+//   truncate,
+//   capitalize,
+//   titleCase,
+//   kebabCase,
+//   camelCase,
+//   snakeCase,
 }

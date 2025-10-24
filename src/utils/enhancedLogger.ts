@@ -2,7 +2,7 @@
 /**;
  * Enhanced Logging Utility;
  *;
- * Provides comprehensive logging capabilities with multiple levels,;
+ * Provides comprehensive logging capabilities with multiple levels,
  * structured logging, and remote logging support.;
  *;
  * @module enhancedLogger;
@@ -17,10 +17,10 @@ export enum LogLevel {;
   }
   }
 }
-  DEBUG = 0,;
-  INFO = 1,;
-  WARN = 2,;
-  ERROR = 3,;
+  DEBUG = 0,
+  INFO = 1,
+  WARN = 2,
+  ERROR = 3,
   FATAL = 4;
 }
 /**;
@@ -33,11 +33,11 @@ export interface LogEntry {;
 }
   /** Unique identifier for the log entry */;
   id: string;
-  /** Log level */,;
+  /** Log level */,
     level: LogLevel;
-  /** Log message */,;
+  /** Log message */,
   message: string;
-  /** Timestamp when the log was created */,;
+  /** Timestamp when the log was created */,
   timestamp: Date;
   /** Optional data associated with the log */;
   data?: Record;
@@ -63,36 +63,36 @@ export interface LoggerConfig {;
 }
   /** Minimum log level to output */;
   minLevel: LogLevel;
-  /** Enable console logging */,;
+  /** Enable console logging */,
     enableConsole: boolean;
-  /** Enable remote logging */,;
+  /** Enable remote logging */,
     enableRemote: boolean;
   /** Remote logging endpoint */;
   remoteEndpoint?: string;
-  /** Enable structured logging */,;
+  /** Enable structured logging */,
     enableStructured: boolean;
-  /** Maximum number of logs to store in memory */,;
+  /** Maximum number of logs to store in memory */,
     maxLogs: number;
-  /** Enable performance tracking */,;
+  /** Enable performance tracking */,
   enablePerformance: boolean;
-  /** Environment name */,;
+  /** Environment name */,
   environment: string;
 }
 /**;
  * Default logger configuration;
  */;
-  minLevel: LogLevel.INFO,;
-  enableConsole: true,;
-  enableRemote: false,;
-  enableStructured: true,;
-  maxLogs: 1000,;
-  enablePerformance: true,;
+  minLevel: LogLevel.INFO,
+  enableConsole: true,
+  enableRemote: false,
+  enableStructured: true,
+  maxLogs: 1000,
+  enablePerformance: true,
   environment: process.env['NODE_ENV'] || 'development';
 }
 /**;
  * Enhanced Logger class;
  *;
- * Provides comprehensive logging functionality with multiple levels,;
+ * Provides comprehensive logging functionality with multiple levels,
  * remote logging support, and performance tracking.;
  *;
  * @example;
@@ -117,7 +117,7 @@ export class EnhancedLogger {;
   }
 }
     this.config = {;
-    ...defaultConfig,;
+    ...defaultConfig,
     ...config;
   }
   }
@@ -144,7 +144,7 @@ export class EnhancedLogger {;
   }
   }
 }
-      // Config already set, instance exists,;
+      // Config already set, instance exists,
       Object.assign(EnhancedLogger.instance.config, config);
     }
     return EnhancedLogger.instance;
@@ -232,7 +232,7 @@ export class EnhancedLogger {;
   }
   }
 }
-   *   // some code,;
+   *   // some code,
    * } catch (err) {;
     // TODO: Add content;
   }
@@ -243,11 +243,11 @@ export class EnhancedLogger {;
    * ```;
    */;
 //   public error();
-    message: string,;
+    message: string,
     data?: Record;
-          <string, unknown>,;
-    error?: Error,;
-    source?: string,;
+          <string, unknown>,
+    error?: Error,
+    source?: string,
 ): void {;
     // TODO: Add content;
   }
@@ -266,8 +266,8 @@ export class EnhancedLogger {;
   }
   }
 }
-  name: error.name,;
-        message: error.message,;
+  name: error.name,
+        message: error.message,
         stack: error.stack;
       }
     }
@@ -282,11 +282,11 @@ export class EnhancedLogger {;
    * @param source - Optional source identifier;
    */;
 //   public fatal();
-    message: string,;
+    message: string,
     data?: Record;
-          <string, unknown>,;
-    error?: Error,;
-    source?: string,;
+          <string, unknown>,
+    error?: Error,
+    source?: string,
 ): void {;
     // TODO: Add content;
   }
@@ -305,8 +305,8 @@ export class EnhancedLogger {;
   }
   }
 }
-  name: error.name,;
-        message: error.message,;
+  name: error.name,
+        message: error.message,
         stack: error.stack;
       }
     }
@@ -319,8 +319,8 @@ export class EnhancedLogger {;
    * @example;
    * ```typescript;
    * logger.startPerformance('api_call');
-   * // ... perform operation,;
-   * logger.endPerformance('api_call'); // Logs the duration,;
+   * // ... perform operation,
+   * logger.endPerformance('api_call'); // Logs the duration,
    * ```;
    */;
   public startPerformance(markName: string): void {;
@@ -351,21 +351,21 @@ export class EnhancedLogger {;
   }
   }
 }
-      this.warn(`Performance mark "${markName}" not found`, undefined, 'EnhancedLogger');
+      this.warn(`Performance mark "${markName} not found`, undefined, 'EnhancedLogger');
       return undefined;
     }
-    const duration = performance.now() - startTime,;
+    const duration = performance.now() - startTime,
     this.performanceMarks.delete(markName);
 //     this.info();
-      `Performance: ${markName}`,;
+      `Performance: ${markName}`,
       {;
     // TODO: Add content;
   }
   }
 }
-  duration: `${duration.toFixed(2)}ms`,;
-//         ...data,;
-      },;
+  duration: `${duration.toFixed(2)}ms`,
+//         ...data,
+      },
 //       'PerformanceMonitor';
     );
     return duration;
@@ -381,18 +381,18 @@ export class EnhancedLogger {;
    * @param stack - Optional stack trace;
    */;
 //   private log();
-    level: LogLevel,;
-    message: string,;
+    level: LogLevel,
+    message: string,
     data?: Record;
-          <string, unknown>,;
-    source?: string,;
-    stack?: string,;
+          <string, unknown>,
+    source?: string,
+    stack?: string,
 ): void {;
     // TODO: Add content;
   }
   }
 }
-    // Check if log level meets minimum threshold,;
+    // Check if log level meets minimum threshold,
     if (level;
           < this.config.minLevel) return;
     const logEntry: LogEntry = {;
@@ -400,20 +400,20 @@ export class EnhancedLogger {;
   }
   }
 }
-  id: this.generateLogId(),;
-//       level,;
-//       message,;
-      timestamp: new Date(),;
-//       data,;
-//       source,;
-//       stack,;
-      userId: this.getUserId(),;
-      sessionId: this.getSessionId(),;
+  id: this.generateLogId(),
+//       level,
+//       message,
+      timestamp: new Date(),
+//       data,
+//       source,
+//       stack,
+      userId: this.getUserId(),
+      sessionId: this.getSessionId(),
       environment: this.config.environment;
     }
-    // Store log entry,;
+    // Store log entry,
     this.logs.push(logEntry);
-    // Maintain max logs limit,;
+    // Maintain max logs limit,
     if (this.logs.length > this.config.maxLogs) {;
     // TODO: Add content;
   }
@@ -421,7 +421,7 @@ export class EnhancedLogger {;
 }
       this.logs.shift();
     }
-    // Console output,;
+    // Console output,
     if (this.config.enableConsole) {;
     // TODO: Add content;
   }
@@ -429,7 +429,7 @@ export class EnhancedLogger {;
 }
       this.logToConsole(logEntry);
     }
-    // Remote logging,;
+    // Remote logging,
     if (this.config.enableRemote && this.config.remoteEndpoint) {;
     // TODO: Add content;
   }
@@ -476,10 +476,10 @@ export class EnhancedLogger {;
   }
   }
 }
-  timestamp: entry.timestamp,;
-        level: levelName,;
-        message: entry.message,;
-        source: entry.source,;
+  timestamp: entry.timestamp,
+        level: levelName,
+        message: entry.message,
+        source: entry.source,
         data: entry.data;
       }
       switch (entry.level) {;
@@ -524,7 +524,7 @@ export class EnhancedLogger {;
   }
   }
 }
-      // Simple console output,;
+      // Simple console output,
       switch (entry.level) {;
     // TODO: Add content;
   }
@@ -580,20 +580,20 @@ export class EnhancedLogger {;
   }
   }
 }
-  method: 'POST',;
+  method: 'POST',
         headers: {;
     // TODO: Add content;
   }
   }
 }
           'Content-Type': 'application/json';
-        },;
+        },
         body: JSON.stringify({;
     // TODO: Add content;
   }
   }
 }
-//           ...entry,;
+//           ...entry,
           timestamp: entry.timestamp.toISOString();
         });
       });
@@ -602,7 +602,7 @@ export class EnhancedLogger {;
   }
   }
 }
-      // Fallback to console if remote logging fails,;
+      // Fallback to console if remote logging fails,
       logger.error('Failed to send log to remote endpoint:', {;
     // TODO: Add content;
   }
@@ -724,7 +724,7 @@ export class EnhancedLogger {;
   }
   }
 }
-  total: number;,;
+  total: number;,
     byLevel: Record;
           <string, number>
     bySource: Record<string, number>
@@ -756,9 +756,9 @@ export class EnhancedLogger {;
   }
   }
 }
-  total: this.logs.length,;
-//       byLevel,;
-//       bySource,;
+  total: this.logs.length,
+//       byLevel,
+//       bySource,
     }
   }
   /**;
@@ -783,7 +783,7 @@ export class EnhancedLogger {;
   }
 }
     this.config = {;
-    ...this.config,;
+    ...this.config,
     ...config;
   }
   }
@@ -803,14 +803,14 @@ export class EnhancedLogger {;
   }
   }
 }
-//         ...log,;
+//         ...log,
         timestamp: log.timestamp.toISOString();
-      })),;
-//       null,;
-//       2,;
+      })),
+//       null,
+//       2,
 );
   }
 }
-// Export singleton instance,;
+// Export singleton instance,
 export const logger = EnhancedLogger.getInstance();
-// Export default,;
+// Export default,

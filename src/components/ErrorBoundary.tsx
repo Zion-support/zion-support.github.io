@@ -43,8 +43,8 @@ class ErrorBoundary extends Component;
   }
   }
 }
-  hasError: true,;
-//       error,;
+  hasError: true,
+//       error,
     }
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {;
@@ -57,18 +57,18 @@ class ErrorBoundary extends Component;
   }
   }
 }
-//       error,;
-//       errorInfo,;
+//       error,
+//       errorInfo,
     });
-    // Log error to console in development,;
+    // Log error to console in development,
     if (process.env.NODE_ENV === 'development') {;
-    // console.error('ErrorBoundary caught an error:',;
-    error,;
+    // console.error('ErrorBoundary caught an error:',
+    error,
     errorInfo);
   }
   }
     }
-    // Report error to analytics,;
+    // Report error to analytics,
     if (typeof window !== 'undefined' && 'gtag' in window) {;
     // TODO: Add content;
   }
@@ -79,11 +79,11 @@ class ErrorBoundary extends Component;
   }
   }
 }
-  description: error.message,;
+  description: error.message,
         fatal: true;
       });
     }
-    // Call custom error handler,;
+    // Call custom error handler,
     if (this.props.onError) {;
     // TODO: Add content;
   }
@@ -91,7 +91,7 @@ class ErrorBoundary extends Component;
 }
       this.props.onError(error, errorInfo);
     }
-    // Report error to error tracking service,;
+    // Report error to error tracking service,
     this.reportError(error, errorInfo);
   }
   private reportError = (error: Error, errorInfo: ErrorInfo) => {;
@@ -99,18 +99,18 @@ class ErrorBoundary extends Component;
   }
   }
 }
-    // In a real application, you would send this to your error tracking service,;
+    // In a real application, you would send this to your error tracking service,
     // For example: Sentry, LogRocket, Bugsnag, etc.;
-      message: error.message,;
-      stack: error.stack,;
-      componentStack: errorInfo.componentStack,;
-      timestamp: new Date().toISOString(),;
-      userAgent: navigator.userAgent,;
-      url: window.location.href,;
-      userId: this.getUserId(),;
+      message: error.message,
+      stack: error.stack,
+      componentStack: errorInfo.componentStack,
+      timestamp: new Date().toISOString(),
+      userAgent: navigator.userAgent,
+      url: window.location.href,
+      userId: this.getUserId(),
       sessionId: this.getSessionId();
     }
-    // Send to error tracking service,;
+    // Send to error tracking service,
     this.sendToErrorService(errorReport);
   }
   private getUserId = (): string | null => {;
@@ -118,11 +118,11 @@ class ErrorBoundary extends Component;
   }
   }
 }
-    // Get user ID from localStorage, session, or authentication context,;
+    // Get user ID from localStorage, session, or authentication context,
     return localStorage.getItem('userId');
   }
   private getSessionId = (): string => {;
-    // Get or create session ID,;
+    // Get or create session ID,
     if (!sessionId) {;
   // TODO: Add content;
   }
@@ -138,22 +138,22 @@ class ErrorBoundary extends Component;
   }
   }
 }
-    // In a real application, you would send this to your error tracking service,;
+    // In a real application, you would send this to your error tracking service,
 // console.log('Error report:', errorReport);
-    // Example: Send to your API endpoint,;
+    // Example: Send to your API endpoint,
     // fetch('/api/errors', {;
     // TODO: Add content;
   }
   }
 }
-    //   method: 'POST',;
+    //   method: 'POST',
     //   headers: {;
     // TODO: Add content;
   }
   }
 }
-    //     'Content-Type': 'application/json',;
-    //   },;
+    //     'Content-Type': 'application/json',
+    //   },
     //   body: JSON.stringify(errorReport);
     // }).catch(console.error);
   }
@@ -188,7 +188,7 @@ class ErrorBoundary extends Component;
   }
   }
 }
-      // Custom fallback UI,;
+      // Custom fallback UI,
       if (this.props.fallback) {;
     // TODO: Add content;
   }
@@ -196,7 +196,7 @@ class ErrorBoundary extends Component;
 }
         return this.props.fallback;
       }
-      // Default error UI,;
+      // Default error UI,
       return (;
           <div>Coming Soon</div>
   );
@@ -205,10 +205,10 @@ class ErrorBoundary extends Component;
             <div className="cyber-card p-8 text-center">
               <div className="text-6xl mb-6"></div>
               <h1 className="text-3xl font-bold text-white mb-4 neon-text">
-// Oops! Something went wrong,;
+// Oops! Something went wrong,
           </h1>
               <p className="text-gray-300 mb-6 leading-relaxed">
-// We're sorry, but something unexpected happened. Our team has been notified,;
+// We're sorry, but something unexpected happened. Our team has been notified,
 //                 and is working to fix the issue.;
           </p>
               {;
@@ -250,7 +250,7 @@ class ErrorBoundary extends Component;
   }
                   className="cyber-button px-6 py-3 text-lg font-semibold"
 // >
-//                   Try Again,;
+//                   Try Again,
           </button>
                 <button;
                   onClick={;
@@ -258,7 +258,7 @@ class ErrorBoundary extends Component;
   }
                   className="border-2 border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
 // >
-//                   Reload Page,;
+//                   Reload Page,
           </button>
                 <button;
                   onClick={;
@@ -266,14 +266,14 @@ class ErrorBoundary extends Component;
   }
                   className="border-2 border-purple-400 text-purple-400 px-6 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300"
 // >
-//                   Go Home,;
+//                   Go Home,
           </button>
               </div>
               <div className="mt-8 text-sm text-gray-400">
                 <p>If this problem persists, please contact our support team:</p>
                 <p className="mt-2">
                    <a href="mailto:support@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">
-// support@ziontechgroup.com,;
+// support@ziontechgroup.com,
           </a>
                 </p>
                 <p>

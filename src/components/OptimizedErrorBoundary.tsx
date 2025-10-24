@@ -16,15 +16,15 @@ interface State {;
   }
   }
 }
-  hasError: boolean;,;
-    error: Error | null;,;
-    errorInfo: ErrorInfo | null;,;
+  hasError: boolean;,
+    error: Error | null;,
+    errorInfo: ErrorInfo | null;,
     errorId: string;
 }
 class OptimizedErrorBoundary extends Component;
           <;
-// OptimizedErrorBoundaryProps,;
-//   State,;
+// OptimizedErrorBoundaryProps,
+//   State,
 > {;
     // TODO: Add content;
   }
@@ -42,10 +42,10 @@ class OptimizedErrorBoundary extends Component;
   }
   }
 }
-  hasError: false,;
-      error: null,;
-      errorInfo: null,;
-      errorId: '',;
+  hasError: false,
+      error: null,
+      errorInfo: null,
+      errorId: '',
     }
   }
   static getDerivedStateFromError(error: Error): Partial;
@@ -59,8 +59,8 @@ class OptimizedErrorBoundary extends Component;
   }
   }
 }
-  hasError: true,;
-//       error,;
+  hasError: true,
+//       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
     }
   }
@@ -74,17 +74,17 @@ class OptimizedErrorBoundary extends Component;
   }
   }
 }
-//       error,;
-//       errorInfo,;
+//       error,
+//       errorInfo,
     });
-    // Log error to console in development,;
+    // Log error to console in development,
     if (process.env['NODE_ENV'] === 'development') {;
     // TODO: Add content;
   }
   }
 }
     }
-    // Call custom error handler if provided,;
+    // Call custom error handler if provided,
     if (this.props.onError) {;
     // TODO: Add content;
   }
@@ -92,7 +92,7 @@ class OptimizedErrorBoundary extends Component;
 }
       this.props.onError(error, errorInfo);
     }
-    // Send error to monitoring service in production,;
+    // Send error to monitoring service in production,
     if (process.env['NODE_ENV'] === 'production') {;
     // TODO: Add content;
   }
@@ -106,16 +106,16 @@ class OptimizedErrorBoundary extends Component;
   }
   }
 }
-    const { resetKeys, resetOnPropsChange } = this.props,;
-    const { hasError } = this.state,;
+    const { resetKeys, resetOnPropsChange } = this.props,
+    const { hasError } = this.state,
     if (hasError && prevProps.resetKeys !== resetKeys) {;
     // TODO: Add content;
   }
   }
 }
       if (resetKeys && prevProps.resetKeys) {;
-    (key,;
-    index) => key !== prevProps.resetKeys?.[index,;
+    (key,
+    index) => key !== prevProps.resetKeys?.[index,
         );
   }
         if (hasResetKeyChanged) {;
@@ -130,7 +130,7 @@ class OptimizedErrorBoundary extends Component;
     if ();
 //       hasError &&;
 //       resetOnPropsChange &&;
-      prevProps.children !== this.props.children,;
+      prevProps.children !== this.props.children,
 ) {;
     // TODO: Add content;
   }
@@ -157,7 +157,7 @@ class OptimizedErrorBoundary extends Component;
   }
   }
 }
-    // Report to error monitoring service,;
+    // Report to error monitoring service,
     if (typeof window !== 'undefined' && 'gtag' in window) {;
     // TODO: Add content;
   }
@@ -169,9 +169,9 @@ class OptimizedErrorBoundary extends Component;
   }
   }
 }
-  gtag: (),;
-    command: string,;
-            action: string,;
+  gtag: (),
+    command: string,
+            action: string,
             parameters: Record;
           <string, unknown>
           ) => void;
@@ -182,14 +182,14 @@ class OptimizedErrorBoundary extends Component;
   }
   }
 }
-  description: error.message,;
-        fatal: false,;
+  description: error.message,
+        fatal: false,
         custom_map: {;
     // TODO: Add content;
   }
   }
 }
-  error_id: this.state.errorId,;
+  error_id: this.state.errorId,
           component_stack: errorInfo.componentStack;
         }
       });
@@ -217,10 +217,10 @@ class OptimizedErrorBoundary extends Component;
   }
   }
 }
-  hasError: false,;
-        error: null,;
-        errorInfo: null,;
-        errorId: '',;
+  hasError: false,
+        error: null,
+        errorInfo: null,
+        errorId: '',
       });
     }, 100);
   }
@@ -275,12 +275,12 @@ interface ErrorFallbackProps {;
   }
   }
 }
-  error: Error | null;,;
-    errorInfo: ErrorInfo | null;,;
-    errorId: string;,;
+  error: Error | null;,
+    errorInfo: ErrorInfo | null;,
+    errorId: string;,
     onRetry: () => void;
 }
-const ErrorFallback = memo,;
+const ErrorFallback = memo,
           <ErrorFallbackProps>();
   ({ error, errorInfo, errorId, onRetry }) => ();
           <div className='min-h-screen flex items-center justify-center bg-gray-50 px-4'>
@@ -293,7 +293,7 @@ className='w-6 h-6 text-red-600';
               stroke='currentColor';
               viewBox='0 0 24 24';
 // >
-          <path,;
+          <path,
                 strokeLinecap='round';
                 strokeLinejoin='round';
                 strokeWidth={;
@@ -305,13 +305,13 @@ className='w-6 h-6 text-red-600';
           </div>
         </div>
         <h1 className='text-xl font-semibold text-gray-900 mb-2'>
-// Something went wrong,;
+// Something went wrong,
           </h1>
         <p className='text-gray-600 mb-4'>
-          We&apos;re sorry, but something unexpected happened. Please try again.;
+          We're sorry, but something unexpected happened. Please try again.;
         </p>
         {;
-    process.env['NODE_ENV',;
+    process.env['NODE_ENV',
     === 'development' && error && ();
   }
           <details className='mb-4 text-left'>
@@ -354,7 +354,7 @@ className='w-6 h-6 text-red-600';
   }
             className='px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors';
 // >
-//             Try Again,;
+//             Try Again,
           </button>
           <button;
             onClick={;
@@ -362,7 +362,7 @@ className='w-6 h-6 text-red-600';
   }
             className='px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors';
 // >;
-//             Reload Page,;
+//             Reload Page,
           </button>
         </div>
         {;

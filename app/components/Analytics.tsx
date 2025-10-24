@@ -1,25 +1,24 @@
-import React, {useEffect } from &quot;react&quot;
-;
-interface AnalyticsProps {}
+import React, { useEffect } from "react";
+
+interface AnalyticsProps {
   className?: string;
 }
-;
-const Analytics: React.FC="()" => {useEffect(() => {"
-    const initAnalytics: ";";
-      if (typeof window !== &quot;undefined&quot; && window.gtag) {
-        window.gtag(&quot;config&quot;, &quot;GA_MEASUREMENT_ID&quot;, {}
-          page_title: document.title,});
+
+const Analytics: React.FC<AnalyticsProps> = ({ className }) => {
+  useEffect(() => {
+    const initAnalytics = () => {
+      if (typeof window !== "undefined" && window.gtag) {
+        window.gtag("config", "GA_MEASUREMENT_ID", {
+          page_title: document.title,
           page_location: window.location.href,
-        })
+        });
       }
-    }
-    initAnalytics()
+    };
+
+    initAnalytics();
   }, []);
 
-  return null; // Analytics component doesn't render anything
-}
-;
-export default Analytics
+  return <div className={className}>Analytics Component</div>;
 };
-;
-export default AnalyticsPage;"
+
+export default Analytics;

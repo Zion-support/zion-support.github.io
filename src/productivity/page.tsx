@@ -56,7 +56,7 @@ const ProductivityPage: React.FC = () => {;
             <div>{;
     productivityTools;
                 .filter(tool => tool.category === category);
-                .map((tool,;
+                .map((tool,
     index) => (;
   }
   }
@@ -70,8 +70,8 @@ const ProductivityPage: React.FC = () => {;
                       <h5 className="font-semibold text-white mb-2 text-sm">Key Features:</h5>
                       <ul className="space-y-1">
                         {;
-    tool.features.slice(0,;
-    3).map((feature,;
+    tool.features.slice(0,
+    3).map((feature,
     featureIndex) => ();
   }
   }
@@ -93,7 +93,7 @@ const ProductivityPage: React.FC = () => {;
                       </ul>
                       <h5 className="font-semibold text-white mb-2 text-sm">Benefits:</h5>
                         {;
-    tool.benefits.map((benefit,;
+    tool.benefits.map((benefit,
     benefitIndex) => ();
   }
   }

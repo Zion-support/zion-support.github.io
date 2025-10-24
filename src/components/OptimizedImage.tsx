@@ -4,7 +4,7 @@ interface OptimizedImageProps {;
   }
   }
 }
-  src: string;,;
+  src: string;,
     alt: string;
   width?: number;
   height?: number;
@@ -24,19 +24,19 @@ const OptimizedImage: React.FC;
   }
   }
 }
-//   src,;
-//   alt,;
-//   width,;
-//   height,;
-  className = '',;
-  priority = false,;
-  quality = 75,;
-  placeholder = 'empty',;
-//   blurDataURL,;
-  sizes = '100vw',;
-  loading = 'lazy',;
-//   onLoad,;
-//   onError,;
+//   src,
+//   alt,
+//   width,
+//   height,
+  className = '',
+  priority = false,
+  quality = 75,
+  placeholder = 'empty',
+//   blurDataURL,
+  sizes = '100vw',
+  loading = 'lazy',
+//   onLoad,
+//   onError,
 }) => {;
     // TODO: Add content;
   }
@@ -45,7 +45,7 @@ const OptimizedImage: React.FC;
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
-  // Intersection Observer for lazy loading,;
+  // Intersection Observer for lazy loading,
   useEffect(() => {;
     // TODO: Add content;
   }
@@ -72,14 +72,14 @@ const OptimizedImage: React.FC;
             observer.disconnect();
           }
         });
-      },;
+      },
       {;
     // TODO: Add content;
   }
   }
 }
-  rootMargin: '50px',;
-        threshold: 0.1,;
+  rootMargin: '50px',
+        threshold: 0.1,
       }
     );
     if (imgRef.current) {;
@@ -91,15 +91,15 @@ const OptimizedImage: React.FC;
     }
     return () => observer.disconnect();
   }, [priority, isInView]);
-  // Generate optimized image URL,;
+  // Generate optimized image URL,
 const getOptimizedSrc = () => {;
     // TODO: Add content;
   }
   }
 }
     if (!isInView) return blurDataURL || 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB2aWV3Qm94PSIwIDAgMSAxIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmM2Y0ZjYiLz48L3N2Zz4=';
-    // In a real implementation, you would use an image optimization service,;
-    // like Cloudinary, ImageKit, or Next.js Image Optimization,;
+    // In a real implementation, you would use an image optimization service,
+    // like Cloudinary, ImageKit, or Next.js Image Optimization,
     return src;
   }
   const handleLoad = () => {;
@@ -136,7 +136,7 @@ const getOptimizedSrc = () => {;
   }
   }
 }
-  backgroundImage: `url(${blurDataURL})`,;
+  backgroundImage: `url(${blurDataURL})`,
           }}
 //         />
       )}
@@ -202,9 +202,9 @@ onError={handleError} className={;
   }
   }
 }
-  width: '100%',;
-            height: '100%',;
-            objectFit: 'cover',;
+  width: '100%',
+            height: '100%',
+            objectFit: 'cover',
           }}
 //         />
       )}

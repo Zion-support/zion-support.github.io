@@ -8,7 +8,7 @@ export interface ValidationResult {;
   }
   }
 }
-  isValid: boolean;,;
+  isValid: boolean;,
     errors: string[];
 }
 /**;
@@ -21,7 +21,7 @@ const PHONE_REGEX = /^(\+1\s?)?(\([0-9]{3}\)|[0-9]{3})[-\s]?[0-9]{3}[-\s]?[0-9]{
 /**;
  * URL validation regex;
  */;
-const URL_REGEX = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*(\?[^#]*)?(#.*)?$/i,;
+const URL_REGEX = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*(\?[^#]*)?(#.*)?$/i,
 /**;
  * Validate email address;
  */;
@@ -145,9 +145,9 @@ export function getPasswordStrength(password: string): number {;
   if (password.length >= 12) score++;
   if (/[A-Z]/.test(password) && /[a-z]/.test(password)) score++;
   if (/[0-9]/.test(password)) score++;
-  if (/[^a-zA-Z0-9,;
+  if (/[^a-zA-Z0-9,
     /.test(password)) score++;
-  return Math.min(score,;
+  return Math.min(score,
     4);
   }
   }
@@ -223,7 +223,7 @@ export function sanitizeHtml(html: string): string {;
  */;
 export function validateObject;
           <T extends Record<string, unknown>>();
-  obj: T,;
+  obj: T,
   schema: Record;
           <keyof T, (value: unknown) => boolean>;
 ): ValidationResult {;
@@ -252,8 +252,8 @@ export function validateObject;
   }
   }
 }
-  isValid: errors.length === 0,;
-//     errors,;
+  isValid: errors.length === 0,
+//     errors,
   }
 }
 /**;
@@ -264,14 +264,14 @@ export interface FormField {;
   }
   }
 }
-  value: string;,;
+  value: string;,
     validators: Array;
           <{;
     // TODO: Add content;
   }
   }
 }
-  validate: (value: string) => boolean;,;
+  validate: (value: string) => boolean;,
     message: string;
   }>;
 }
@@ -310,7 +310,7 @@ export function validateForm();
   }
   }
 }
-      errors[fieldName] = fieldErrors,;
+      errors[fieldName] = fieldErrors,
     }
   }
   return errors;
@@ -328,51 +328,51 @@ export const validators = {;
   }
   }
 }
-  validate: isRequired,;
-//     message,;
-  }),;
+  validate: isRequired,
+//     message,
+  }),
   email: (message = 'Please enter a valid email address') => ({;
     // TODO: Add content;
   }
   }
 }
-  validate: isValidEmail,;
-//     message,;
-  }),;
+  validate: isValidEmail,
+//     message,
+  }),
   phone: (message = 'Please enter a valid phone number') => ({;
     // TODO: Add content;
   }
   }
 }
-  validate: isValidPhone,;
-//     message,;
-  }),;
+  validate: isValidPhone,
+//     message,
+  }),
   minLength: (min: number, message = `Minimum length is ${min} characters`) => ({;
     // TODO: Add content;
   }
   }
 }
-  validate: (value: string) => minLength(value, min),;
-//     message,;
-  }),;
+  validate: (value: string) => minLength(value, min),
+//     message,
+  }),
   maxLength: (max: number, message = `Maximum length is ${max} characters`) => ({;
     // TODO: Add content;
   }
   }
 }
-  validate: (value: string) => maxLength(value, max),;
-//     message,;
-  }),;
+  validate: (value: string) => maxLength(value, max),
+//     message,
+  }),
   password: (message = 'Password must be at least 8 characters with uppercase, lowercase, and number') => ({;
     // TODO: Add content;
   }
   }
 }
-  validate: isStrongPassword,;
-//     message,;
+  validate: isStrongPassword,
+//     message,
   });
 }
-// Additional validation functions for tests,;
+// Additional validation functions for tests,
 export interface ValidationResult {;
     isValid: boolean;
   error?: string;
@@ -385,7 +385,7 @@ export function validateEmail(email: string): ValidationResult {;
   }
   }
     return {;
-    isValid: false,;
+    isValid: false,
     error: 'Invalid email format';
   }
   }
@@ -393,7 +393,7 @@ export function validateEmail(email: string): ValidationResult {;
   }
   }
     return {;
-    isValid: false,;
+    isValid: false,
     error: 'Email address is too long';
   }
   }
@@ -406,7 +406,7 @@ export function validateURL(url: string): ValidationResult {;
   }
   }
     return {;
-    isValid: false,;
+    isValid: false,
     error: 'Invalid URL format';
   }
   }
@@ -436,7 +436,7 @@ export function validatePassword(password: string): ValidationResult {;
   }
   }
     return {;
-    isValid: false,;
+    isValid: false,
     error: 'Password must be at least 8 characters long';
   }
   }
@@ -444,7 +444,7 @@ export function validatePassword(password: string): ValidationResult {;
   }
   }
     return {;
-    isValid: false,;
+    isValid: false,
     error: 'Password must be no more than 128 characters long';
   }
   }
@@ -452,10 +452,10 @@ export function validatePassword(password: string): ValidationResult {;
   }
   }
     return {;
-    isValid: false,;
-    error: 'Password must contain uppercase,;
-    lowercase,;
-    number,;
+    isValid: false,
+    error: 'Password must contain uppercase,
+    lowercase,
+    number,
     and special character';
   }
   }
@@ -466,17 +466,17 @@ export function validatePassword(password: string): ValidationResult {;
 export function sanitizeHTML(html: string): string {;
     if (!html) return '';
   return html;
-    .replace(/&/g,;
+    .replace(/&/g,
     '&amp;');
-    .replace(/</g,;
+    .replace(/</g,
     '&lt;');
-    .replace(/>/g,;
+    .replace(/>/g,
     '&gt;');
-    .replace(/"/g,;
-    '&quot;');
-    .replace(/'/g,;
+    .replace(/"/g,
+    '"');
+    .replace(/'/g,
     '&#x27;');
-    .replace(/\// g,;
+    .replace(/\// g,
     '&#x2F;');
   }
   }
@@ -487,17 +487,17 @@ export function validateDate(dateString: string): ValidationResult {;
   }
   }
     return {;
-    isValid: false,;
+    isValid: false,
     error: 'Invalid date format';
   }
   }
-  // Check for YYYY-MM-DD format,;
+  // Check for YYYY-MM-DD format,
   const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
   if (!dateRegex.test(dateString)) {;
   }
   }
     return {;
-    isValid: false,;
+    isValid: false,
     error: 'Invalid date format';
   }
   }
@@ -506,7 +506,7 @@ export function validateDate(dateString: string): ValidationResult {;
   }
   }
     return {;
-    isValid: false,;
+    isValid: false,
     error: 'Invalid date format';
   }
   }
@@ -517,7 +517,7 @@ export function validateDate(dateString: string): ValidationResult {;
   }
   }
     return {;
-    isValid: false,;
+    isValid: false,
     error: 'Invalid date format';
   }
   }
@@ -526,15 +526,15 @@ export function validateDate(dateString: string): ValidationResult {;
   }
 }
 export function validateCreditCard(cardNumber: string): ValidationResult {;
-    // Remove spaces and dashes,;
-    const cleanNumber = cardNumber.replace(/[\s-,;
-    /g,;
+    // Remove spaces and dashes,
+    const cleanNumber = cardNumber.replace(/[\s-,
+    /g,
     '');
   if (!isValidCreditCard(cleanNumber)) {;
   }
   }
     return {;
-    isValid: false,;
+    isValid: false,
     error: 'Invalid credit card number';
   }
   }
@@ -555,7 +555,7 @@ export function validateJSON(jsonString: string): ValidationResult {;
   }
   }
     return {;
-    isValid: false,;
+    isValid: false,
     error: 'Invalid JSON format';
   }
   }
@@ -567,7 +567,7 @@ export function validateComposite(value: string, validators: Array;
   }
   }
       return {;
-    isValid: false,;
+    isValid: false,
     error: validator.message;
   }
     }
@@ -582,19 +582,19 @@ export async function validateAsync(validator: (value: string) => Promise<boolea
   }
   }
     return {;
-    isValid,;
+    isValid,
     error: isValid ? undefined : 'Validation failed';
   }
   } catch {;
   }
   }
     return {;
-    isValid: false,;
+    isValid: false,
     error: 'Validation failed';
   }
   }
 }
-// Additional functions for tests,;
+// Additional functions for tests,
 export function isValidPassword(password: string): boolean {;
     return isStrongPassword(password);
   }
@@ -609,7 +609,7 @@ export function sanitizeInput(input: string | null | undefined, maxLength?: numb
   }
   }
   let sanitized = input.toString().trim();
-  // Remove null bytes and other control characters,;
+  // Remove null bytes and other control characters,
   sanitized = sanitized.replace(/[\x00-\x1F\x7F]/g, '');
   if (sanitized.length === 0) {;
     return null;
@@ -618,7 +618,7 @@ export function sanitizeInput(input: string | null | undefined, maxLength?: numb
   }
   }
   if (maxLength && sanitized.length > maxLength) {;
-    sanitized = sanitized.substring(0,;
+    sanitized = sanitized.substring(0,
     maxLength);
   }
   }

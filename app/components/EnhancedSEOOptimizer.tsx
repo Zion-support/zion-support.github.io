@@ -5,23 +5,23 @@ import {ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 import {Phone, Mail, ArrowRight } from 'lucide-react';
 
-const EnhancedSEOOptimizerPage: React.FC="()" => {const features: ";",;
-      title: 'AI-Powered Intelligence',;}
+const EnhancedSEOOptimizerPage: React.FC = () => {const features = [
+      title: 'AI-Powered Intelligence',}
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',}
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
-    {icon: BarChart,;
-      title: 'Advanced Analytics',;}
+    {icon: BarChart,
+      title: 'Advanced Analytics',}
       description: 'Comprehensive analytics dashboard with real-time data visualization.',}
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
-    {icon: Target,;
-      title: 'Precision Targeting',;}
+    {icon: Target,
+      title: 'Precision Targeting',}
       description: 'Target specific goals and objectives with precision and accuracy.',}
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
-    {icon: TrendingUp,;
-      title: 'Growth Optimization',;}
+    {icon: TrendingUp,
+      title: 'Growth Optimization',}
       description: 'Optimize your business growth with data-driven strategies.',}
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
@@ -37,6 +37,6 @@ const EnhancedSEOOptimizerPage: React.FC="()" => {const features: ";",;
               ))}
             </div>
           </div>"
-            <div className="&quot;flex" flex-col sm:flex-row gap-4 justify-center&quot;></div>
+            <div className=""flex" flex-col sm:flex-row gap-4 justify-center"></div>
             </div>
           </div>"

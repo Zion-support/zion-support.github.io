@@ -1,47 +1,47 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import {;
-    CheckCircle,;
-    Star,;
-    Users,;
-    TrendingUp,;
-    Clock,;
-    Shield,;
-    Zap,;
-    Settings,;
-    Phone,;
-    Users,;
-    TrendingUp,;
+    CheckCircle,
+    Star,
+    Users,
+    TrendingUp,
+    Clock,
+    Shield,
+    Zap,
+    Settings,
+    Phone,
+    Users,
+    TrendingUp,
     Shield from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const Pagetsx: React.FC = () => {;
   const _features = [;
     {;
- icon: Users,;
+ icon: Users,
     title: 'value';
   }
-      description: 'Cutting-edge solutions powered by artificial intelligence and machine learning',;
+      description: 'Cutting-edge solutions powered by artificial intelligence and machine learning',
   }
   }
   }
       benefits: ['Improved efficiency', 'Better results', 'Cost savings'];
-    },;
+    },
     {;
-    icon: TrendingUp,;
+    icon: TrendingUp,
       title: 'value';
   }
-      description: 'Optimized performance and scalability for enterprise-grade applications',;
+      description: 'Optimized performance and scalability for enterprise-grade applications',
   }
   }
   }
       benefits: ['Faster processing', 'Better scalability', 'Enhanced reliability'];
-    },;
+    },
     {;
-    icon: Shield,;
+    icon: Shield,
       title: 'value';
   }
-      description: 'Enterprise-grade security with full compliance and data protection',;
+      description: 'Enterprise-grade security with full compliance and data protection',
   }
   }
   }
@@ -85,7 +85,7 @@ const Pagetsx: React.FC = () => {;
             <h2 className="text-3xl font-bold text-center mb-12">Key Features</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {;
-    _features.map((feature,;
+    _features.map((feature,
     index) => (;
   }
   }
@@ -96,7 +96,7 @@ const Pagetsx: React.FC = () => {;
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="text-sm text-gray-400 space-y-1">
                     {;
-    feature.benefits.map((benefit,;
+    feature.benefits.map((benefit,
     idx) => (;
   }
   }

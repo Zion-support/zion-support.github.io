@@ -4,11 +4,11 @@ interface PerformanceMetrics {;
   }
   }
 }
-  fcp: number | null;,;
-    lcp: number | null;,;
-    fid: number | null;,;
-    cls: number | null;,;
-    ttfb: number | null;,;
+  fcp: number | null;,
+    lcp: number | null;,
+    fid: number | null;,
+    cls: number | null;,
+    ttfb: number | null;,
     memory: number | null;
 }
 interface PerformanceMonitorProps {;
@@ -25,24 +25,24 @@ const AdvancedPerformanceMonitor: React.FC;
   }
   }
 }
-//   onMetricsUpdate,;
+//   onMetricsUpdate,
   enableRealTimeMonitoring = true;
 }) => {;
     // TODO: Add content;
   }
   }
 }
-  const [metrics, setMetrics] = useState,;
+  const [metrics, setMetrics] = useState,
           <PerformanceMetrics>({;
     // TODO: Add content;
   }
   }
 }
-  fcp: null,;
-    lcp: null,;
-    fid: null,;
-    cls: null,;
-    ttfb: null,;
+  fcp: null,
+    lcp: null,
+    fid: null,
+    cls: null,
+    ttfb: null,
     memory: null;
   });
     if (typeof window === 'undefined' || !('performance' in window)) return;
@@ -50,7 +50,7 @@ const AdvancedPerformanceMonitor: React.FC;
     const observers: PerformanceObserver[] = [];
     // Measure First Contentful Paint (FCP);
     const fcpEntries = performance.getEntriesByName('first-contentful-paint') || [];
-    const fcp = _fcpEntries.length > 0 ? _fcpEntries[0].startTime : null,;
+    const fcp = _fcpEntries.length > 0 ? _fcpEntries[0].startTime : null,
     // Measure Largest Contentful Paint (LCP);
     if ('PerformanceObserver' in window) {;
     // TODO: Add content;
@@ -72,7 +72,7 @@ const AdvancedPerformanceMonitor: React.FC;
           setMetrics(prev => ({ ...prev, lcp: _lastEntry.startTime }));
         });
         lcpObserver.observe({;
-    entryTypes: ['largest-contentful-paint',;
+    entryTypes: ['largest-contentful-paint',
   });
         observers.push(lcpObserver);
       } catch (error) {;
@@ -107,26 +107,26 @@ const AdvancedPerformanceMonitor: React.FC;
             if ();
               entry.entryType === 'first-input' &&;
               'processingStart' in entry &&;
-//               'startTime' in entry,;
+//               'startTime' in entry,
 ) {;
     // TODO: Add content;
   }
   }
 }
-              const fidEntry = entry as PerformanceEventTiming,;
+              const fidEntry = entry as PerformanceEventTiming,
               setMetrics(prev => ({;
     // TODO: Add content;
   }
   }
 }
-//                 ...prev,;
+//                 ...prev,
                 fid: _fidEntry.processingStart - _fidEntry.startTime;
               }));
             }
           });
         });
         fidObserver.observe({;
-    entryTypes: ['first-input',;
+    entryTypes: ['first-input',
   });
         observers.push(fidObserver);
       } catch (error) {;
@@ -157,13 +157,13 @@ const AdvancedPerformanceMonitor: React.FC;
             if ();
               entry.entryType === 'layout-shift' &&;
               'hadRecentInput' in entry &&;
-//               'value' in entry,;
+//               'value' in entry,
 ) {;
     // TODO: Add content;
   }
   }
 }
-              const clsEntry = entry as LayoutShift,;
+              const clsEntry = entry as LayoutShift,
               if (!_clsEntry.hadRecentInput) {;
     // TODO: Add content;
   }
@@ -176,7 +176,7 @@ const AdvancedPerformanceMonitor: React.FC;
           });
         });
         clsObserver.observe({;
-    entryTypes: ['layout-shift',;
+    entryTypes: ['layout-shift',
   });
         observers.push(clsObserver);
       } catch (error) {;
@@ -193,11 +193,11 @@ const AdvancedPerformanceMonitor: React.FC;
   }
 }
       const navigationEntries = performance.getEntriesByType?.('navigation') || [];
-      const navigationEntry = _navigationEntries[0] as PerformanceNavigationTiming,;
-      const ttfb = _navigationEntry,;
-//         ? _navigationEntry.responseStart - _navigationEntry.requestStart,;
+      const navigationEntry = _navigationEntries[0] as PerformanceNavigationTiming,
+      const ttfb = _navigationEntry,
+//         ? _navigationEntry.responseStart - _navigationEntry.requestStart,
         : null;
-      // Measure Memory Usage,;
+      // Measure Memory Usage,
 const memory =;
         (performance as Performance & { memory?: { usedJSHeapSize: number } });
           .memory?.usedJSHeapSize || null;
@@ -206,10 +206,10 @@ const memory =;
   }
   }
 }
-//         ...prev,;
-        fcp: _fcp,;
-//         ttfb,;
-//         memory,;
+//         ...prev,
+        fcp: _fcp,
+//         ttfb,
+//         memory,
       }));
     } catch (error) {;
     // TODO: Add content;
@@ -217,7 +217,7 @@ const memory =;
   }
 }
       }
-    // Cleanup observers,;
+    // Cleanup observers,
     return () => {;
     // TODO: Add content;
   }
@@ -251,21 +251,21 @@ const memory =;
     if (typeof window === 'undefined' || !('performance' in window)) return;
     const resources = performance.getEntriesByType('resource');
     const slowResources = _resources.filter();
-      (resource: PerformanceResourceTiming) => resource.duration > 1000,;
+      (resource: PerformanceResourceTiming) => resource.duration > 1000,
 );
     if (slowResources.length > 0) {;
     // TODO: Add content;
   }
   }
 }
-      // eslint-disable-next-line no-console,;
+      // eslint-disable-next-line no-console,
 // console.log('Slow resources:', slowResources.map(r => ({;
-    //   name: r.name,;
+    //   name: r.name,
     //   duration: r.duration;
   }
   }
   }
-      //   size: r.transferSize,;
+      //   size: r.transferSize,
       // })));
     }
   }, []);
@@ -275,7 +275,7 @@ const memory =;
   }
 }
     if (typeof window === 'undefined') return;
-    // Use web-vitals library if available,;
+    // Use web-vitals library if available,
     try {;
     // TODO: Add content;
   }
@@ -287,7 +287,7 @@ const memory =;
   }
   }
 }
-          const { onCLS, onFCP, onLCP, onTTFB } = webVitals,;
+          const { onCLS, onFCP, onLCP, onTTFB } = webVitals,
           if (onCLS) {;
     // TODO: Add content;
   }
@@ -330,14 +330,14 @@ const memory =;
   }
   }
 }
-          // web-vitals not available, continue without it,;
+          // web-vitals not available, continue without it,
         });
     } catch {;
     // TODO: Add content;
   }
   }
 }
-      // web-vitals not available, continue without it,;
+      // web-vitals not available, continue without it,
     }
   }, []);
   useEffect(() => {;
@@ -347,7 +347,7 @@ const memory =;
 }
     if (!enableRealTimeMonitoring) return;
     const cleanup = measureWebVitals();
-// Monitor performance every 5 seconds,;
+// Monitor performance every 5 seconds,
     const interval = setInterval(() => {;
   }
   }
@@ -361,12 +361,12 @@ const memory =;
       clearInterval(interval);
     }
   }, [;
-  // TODO: Add items,;
+  // TODO: Add items,
 ];
-//     enableRealTimeMonitoring,;
-//     measureWebVitals,;
-//     measureResourceTiming,;
-//     measureCoreWebVitals,;
+//     enableRealTimeMonitoring,
+//     measureWebVitals,
+//     measureResourceTiming,
+//     measureCoreWebVitals,
   ]);
   useEffect(() => {;
     // TODO: Add content;
@@ -381,7 +381,7 @@ const memory =;
       onMetricsUpdate(metrics);
     }
   }, [metrics, onMetricsUpdate]);
-  // Performance recommendations,;
+  // Performance recommendations,
 const getPerformanceRecommendations = useCallback(() => {;
     // TODO: Add content;
   }
@@ -474,7 +474,7 @@ const getPerformanceRecommendations = useCallback(() => {;
   Recommendations:;
             </h4>
             <ul className='text-xs text-red-600'>
-{recommendations.map((rec,;
+{recommendations.map((rec,
     index) => (;
   }
   }

@@ -38,9 +38,9 @@ export const _useRouter = () => {;
 }
     window.location.reload();
   return {;
-    push,;
-    replace,;
-    back,;
+    push,
+    replace,
+    back,
     forward;
   }
   }
@@ -49,9 +49,9 @@ export const _useRouter = () => {;
     refresh;
   }
 export }
-export const rateLimitingMiddleware = params,;
+export const rateLimitingMiddleware = params,
 export default {;
-    useRouter,;
-    usePathname,;
+    useRouter,
+    usePathname,
     useSearchParams;
   }

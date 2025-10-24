@@ -8,11 +8,11 @@ export const _preloadCriticalResources = () => {;
   }
 }
   if (typeof window === 'undefined') return;
-  // Preload critical fonts,;
+  // Preload critical fonts,
 const fontPreloads = [;
-  // TODO: Add items,;
+  // TODO: Add items,
 ];
-    'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',;
+    'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
     'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap';
   ];
   fontPreloads.forEach(href => {;
@@ -27,12 +27,12 @@ const fontPreloads = [;
     link.crossOrigin = 'anonymous';
 //     document.head.appendChild(link);
   });
-  // Preload critical images,;
+  // Preload critical images,
 const criticalImages = [;
-  // TODO: Add items,;
+  // TODO: Add items,
 ];
-//     '/images/hero-bg.jpg',;
-//     '/images/logo.png',;
+//     '/images/hero-bg.jpg',
+//     '/images/logo.png',
 //     '/images/favicon.ico';
   ];
   criticalImages.forEach(src => {;
@@ -53,14 +53,14 @@ export const preloadRoute = (route: string) => {;
   }
 }
   if (typeof window === 'undefined') return;
-  // Preload route-specific resources,;
+  // Preload route-specific resources,
 const routeResources = {;
     // TODO: Add content;
   }
   }
 }
-    '/blog': ['/api/blog/posts', '/images/blog-hero.jpg'],;
-    '/services': ['/api/services', '/images/services-hero.jpg'],;
+    '/blog': ['/api/blog/posts', '/images/blog-hero.jpg'],
+    '/services': ['/api/services', '/images/services-hero.jpg'],
     '/contact': ['/api/contact', '/images/contact-hero.jpg'];
   }
   const resources = routeResources[route as keyof typeof routeResources];
@@ -87,7 +87,7 @@ export const optimizeImages = () => {;
   }
 }
   if (typeof window === 'undefined') return;
-  // Add loading="lazy" to images below the fold,;
+  // Add loading="lazy" to images below the fold,
 const images = document.querySelectorAll('img[data-lazy]');
   images.forEach(img => {;
     // TODO: Add content;
@@ -96,7 +96,7 @@ const images = document.querySelectorAll('img[data-lazy]');
 }
 //     img.setAttribute('loading', 'lazy');
   });
-  // Add intersection observer for lazy loading,;
+  // Add intersection observer for lazy loading,
   if ('IntersectionObserver' in window) {;
     // TODO: Add content;
   }
@@ -117,7 +117,7 @@ const images = document.querySelectorAll('img[data-lazy]');
   }
   }
 }
-          const img = entry.target as HTMLImageElement,;
+          const img = entry.target as HTMLImageElement,
           if (img.dataset['src']) {;
     // TODO: Add content;
   }
@@ -140,7 +140,7 @@ export const optimizeThirdPartyScripts = () => {;
   }
 }
   if (typeof window === 'undefined') return;
-  // Defer non-critical scripts,;
+  // Defer non-critical scripts,
 const scripts = document.querySelectorAll('script[data-defer]');
   scripts.forEach(script => {;
     // TODO: Add content;
@@ -149,7 +149,7 @@ const scripts = document.querySelectorAll('script[data-defer]');
 }
 //     script.setAttribute('defer', '');
   });
-  // Load analytics after page load,;
+  // Load analytics after page load,
   if (document.readyState === 'loading') {;
     // TODO: Add content;
   }
@@ -169,7 +169,7 @@ const loadAnalytics = () => {;
   }
   }
 }
-  // Load Google Analytics after page load,;
+  // Load Google Analytics after page load,
 const gaScript = document.createElement('script');
   gaScript.async = true;
   gaScript['src'] = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';

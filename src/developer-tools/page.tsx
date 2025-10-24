@@ -9,79 +9,79 @@ const DeveloperToolsPage: React.FC = () => {;
   }
 }
   const _devTools = [;
-  // TODO: Add items,;
+  // TODO: Add items,
 ];
     {;
     // TODO: Add content;
   }
   }
 }
-  title: 'AI Code Generator',;
-      description: 'Generate high-quality code using advanced AI models',;
-      icon: Code,;
-      features: ['Multi-language Support', 'Code Completion', 'Bug Detection', 'Documentation Generation'],;
-      benefits: ['Increase Productivity by 60%', 'Reduce Coding Time by 50%', 'Improve Code Quality', 'Learn Best Practices'],;
-      price: 'Starting at $99/month',;
-    },;
+  title: 'AI Code Generator',
+      description: 'Generate high-quality code using advanced AI models',
+      icon: Code,
+      features: ['Multi-language Support', 'Code Completion', 'Bug Detection', 'Documentation Generation'],
+      benefits: ['Increase Productivity by 60%', 'Reduce Coding Time by 50%', 'Improve Code Quality', 'Learn Best Practices'],
+      price: 'Starting at $99/month',
+    },
     {;
     // TODO: Add content;
   }
   }
 }
-  title: 'API Testing Suite',;
-      description: 'Comprehensive API testing and monitoring tools',;
-      icon: Zap,;
-      features: ['Automated Testing', 'Performance Monitoring', 'Load Testing', 'API Documentation'],;
-      benefits: ['Ensure API Reliability', 'Reduce Testing Time by 70%', 'Improve Performance', 'Prevent Downtime'],;
-      price: 'Starting at $149/month',;
-    },;
+  title: 'API Testing Suite',
+      description: 'Comprehensive API testing and monitoring tools',
+      icon: Zap,
+      features: ['Automated Testing', 'Performance Monitoring', 'Load Testing', 'API Documentation'],
+      benefits: ['Ensure API Reliability', 'Reduce Testing Time by 70%', 'Improve Performance', 'Prevent Downtime'],
+      price: 'Starting at $149/month',
+    },
     {;
     // TODO: Add content;
   }
   }
 }
-  title: 'Database Management Tool',;
-      description: 'Advanced database administration and optimization',;
-      icon: BarChart,;
-      features: ['Query Optimization', 'Performance Monitoring', 'Backup Management', 'Schema Design'],;
-      benefits: ['Improve Database Performance', 'Reduce Query Time by 80%', 'Automate Backups', 'Prevent Data Loss'],;
-      price: 'Starting at $199/month',;
-    },;
+  title: 'Database Management Tool',
+      description: 'Advanced database administration and optimization',
+      icon: BarChart,
+      features: ['Query Optimization', 'Performance Monitoring', 'Backup Management', 'Schema Design'],
+      benefits: ['Improve Database Performance', 'Reduce Query Time by 80%', 'Automate Backups', 'Prevent Data Loss'],
+      price: 'Starting at $199/month',
+    },
     {;
     // TODO: Add content;
   }
   }
 }
-  title: 'DevOps Automation',;
-      description: 'Streamline development and deployment processes',;
-      icon: Target,;
-      features: ['CI/CD Pipelines', 'Container Management', 'Monitoring', 'Deployment Automation'],;
-      benefits: ['Faster Deployments', 'Reduce Errors by 90%', 'Improve Collaboration', 'Scale Efficiently'],;
-      price: 'Starting at $299/month',;
-    },;
+  title: 'DevOps Automation',
+      description: 'Streamline development and deployment processes',
+      icon: Target,
+      features: ['CI/CD Pipelines', 'Container Management', 'Monitoring', 'Deployment Automation'],
+      benefits: ['Faster Deployments', 'Reduce Errors by 90%', 'Improve Collaboration', 'Scale Efficiently'],
+      price: 'Starting at $299/month',
+    },
     {;
     // TODO: Add content;
   }
   }
 }
-  title: 'Code Review Assistant',;
-      description: 'AI-powered code review and quality assurance',;
-      icon: Users,;
-      features: ['Automated Reviews', 'Security Scanning', 'Code Standards', 'Team Collaboration'],;
-      benefits: ['Improve Code Quality', 'Catch Bugs Early', 'Enforce Standards', 'Reduce Review Time'],;
-      price: 'Starting at $79/month',;
-    },;
+  title: 'Code Review Assistant',
+      description: 'AI-powered code review and quality assurance',
+      icon: Users,
+      features: ['Automated Reviews', 'Security Scanning', 'Code Standards', 'Team Collaboration'],
+      benefits: ['Improve Code Quality', 'Catch Bugs Early', 'Enforce Standards', 'Reduce Review Time'],
+      price: 'Starting at $79/month',
+    },
     {;
     // TODO: Add content;
   }
   }
 }
-  title: 'Performance Profiler',;
-      description: 'Advanced application performance monitoring and optimization',;
-      icon: TrendingUp,;
-      features: ['Real-time Monitoring', 'Performance Analysis', 'Bottleneck Detection', 'Optimization Suggestions'],;
-      benefits: ['Improve App Performance', 'Reduce Load Times', 'Optimize Resources', 'Enhance User Experience'],;
-      price: 'Starting at $179/month',;
+  title: 'Performance Profiler',
+      description: 'Advanced application performance monitoring and optimization',
+      icon: TrendingUp,
+      features: ['Real-time Monitoring', 'Performance Analysis', 'Bottleneck Detection', 'Optimization Suggestions'],
+      benefits: ['Improve App Performance', 'Reduce Load Times', 'Optimize Resources', 'Enhance User Experience'],
+      price: 'Starting at $179/month',
     }
   ];
   return (;
@@ -101,10 +101,10 @@ const DeveloperToolsPage: React.FC = () => {;
         <section className="pt-24 pb-16 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-// Developer Tools,;
+// Developer Tools,
           </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-// AI-powered development tools that accelerate your coding workflow and improve productivity,;
+// AI-powered development tools that accelerate your coding workflow and improve productivity,
           </p>
             {;
     /* Stats */;
@@ -154,11 +154,11 @@ const DeveloperToolsPage: React.FC = () => {;
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white text-center mb-12">
-// Our Developer Tools,;
+// Our Developer Tools,
           </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {;
-    devTools.map((tool,;
+    devTools.map((tool,
     index) => ();
   }
   }
@@ -178,7 +178,7 @@ const DeveloperToolsPage: React.FC = () => {;
                     <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
                     <ul className="space-y-2">
                       {;
-    tool.features.map((feature,;
+    tool.features.map((feature,
     featureIndex) => ();
   }
   }
@@ -196,7 +196,7 @@ const DeveloperToolsPage: React.FC = () => {;
                     <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>
                     <ul className="space-y-1">
                       {;
-    tool.benefits.map((benefit,;
+    tool.benefits.map((benefit,
     benefitIndex) => ();
   }
   }
@@ -215,7 +215,7 @@ const DeveloperToolsPage: React.FC = () => {;
                       href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}
                       className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all inline-block"
 // >
-//                       Get Started Now,;
+//                       Get Started Now,
           </a>
                   </div>
                 </div>
@@ -245,7 +245,7 @@ const DeveloperToolsPage: React.FC = () => {;
                 href="mailto:kleber@ziontechgroup.com";
                 className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
 // >
-//                 Email Us,;
+//                 Email Us,
           </a>
             </div>
           </div>

@@ -1,10 +1,10 @@
 'use client';
-// Performance optimization utilities,;
-// Debounce utility for performance,;
+// Performance optimization utilities,
+// Debounce utility for performance,
 export const _debounce =;
-          <T extends (...args: any[]) => any>(),;
-    func: T,;
-  wait: number,;
+          <T extends (...args: any[]) => any>(),
+    func: T,
+  wait: number,
 ): ((...args: Parameters;
           <T>) => void) => {;
     // TODO: Add content;
@@ -22,11 +22,11 @@ export const _debounce =;
     timeout = setTimeout(() => func(...args), wait);
   }
 }
-// Throttle utility for performance,;
+// Throttle utility for performance,
 export const throttle =;
-          <T extends (...args: any[]) => any>(),;
-    func: T,;
-  limit: number,;
+          <T extends (...args: any[]) => any>(),
+    func: T,
+  limit: number,
 ): ((...args: Parameters;
           <T>) => void) => {;
     // TODO: Add content;
@@ -51,9 +51,9 @@ export const throttle =;
     }
   }
 }
-// Intersection Observer hook for lazy loading,;
+// Intersection Observer hook for lazy loading,
 export const useIntersectionObserver = ();
-  callback: (entries: IntersectionObserverEntry[]) => void,;
+  callback: (entries: IntersectionObserverEntry[]) => void,
   _options: IntersectionObserverInit = {}
 ) => {;
     // TODO: Add content;
@@ -68,11 +68,11 @@ export const useIntersectionObserver = ();
   }
   }
 }
-  threshold: 0.1,;
-            rootMargin: '50px',;
-//             ...options,;
+  threshold: 0.1,
+            rootMargin: '50px',
+//             ...options,
           });
-        : null,;
+        : null,
 //     [callback, options];
   );
   const observe = useCallback();
@@ -90,7 +90,7 @@ export const useIntersectionObserver = ();
         return () => observer.unobserve(element);
       }
       return () => {}
-    },;
+    },
 //     [observer];
   );
   const disconnect = useCallback(() => {;
@@ -114,11 +114,11 @@ export const useIntersectionObserver = ();
     return () => disconnect();
   }, [disconnect]);
   return {;
-    observe,;
+    observe,
     disconnect;
   }
 }
-// Image lazy loading hook,;
+// Image lazy loading hook,
 export const useLazyImage = (src: string, placeholder?: string) => {;
     // TODO: Add content;
   }
@@ -163,24 +163,24 @@ export const useLazyImage = (src: string, placeholder?: string) => {;
             img.src = src;
           }
         });
-      },;
+      },
 //       [src, isLoaded, isError];
 //     );
   );
   return {;
-    imageSrc,;
-    isLoaded,;
-    isError,;
+    imageSrc,
+    isLoaded,
+    isError,
     observe;
   }
 }
-// Performance monitoring hook,;
+// Performance monitoring hook,
 export const usePerformanceMonitoring = () => {;
     // TODO: Add content;
   }
   }
 }
-  const [metrics, setMetrics] = useState,;
+  const [metrics, setMetrics] = useState,
           <{;
     // TODO: Add content;
   }
@@ -203,21 +203,21 @@ export const usePerformanceMonitoring = () => {;
   }
   }
 }
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,;
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
       const paint = performance.getEntriesByType('paint');
-      const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime,;
-      const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime,;
+      const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime,
+      const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime,
       setMetrics({;
     // TODO: Add content;
   }
   }
 }
-//         fcp,;
-//         lcp,;
+//         fcp,
+//         lcp,
         ttfb: navigation?.responseStart - navigation?.requestStart;
       });
     }
-    // Monitor performance after page load,;
+    // Monitor performance after page load,
     if (document.readyState === 'complete') {;
   }
   }
@@ -228,7 +228,7 @@ export const usePerformanceMonitoring = () => {;
 }
       window.addEventListener('load', updateMetrics);
     }
-    // Monitor Core Web Vitals,;
+    // Monitor Core Web Vitals,
     if ('web-vitals' in window) {;
     // TODO: Add content;
   }
@@ -256,13 +256,13 @@ export const usePerformanceMonitoring = () => {;
   }, []);
   return metrics;
 }
-// Memory usage monitoring,;
+// Memory usage monitoring,
 export const useMemoryMonitoring = () => {;
     // TODO: Add content;
   }
   }
 }
-  const [memoryInfo, setMemoryInfo] = useState,;
+  const [memoryInfo, setMemoryInfo] = useState,
           <{;
     // TODO: Add content;
   }
@@ -283,7 +283,7 @@ export const useMemoryMonitoring = () => {;
   }
   }
 }
-      const memory = (performance as any).memory,;
+      const memory = (performance as any).memory,
       if (memory) {;
     // TODO: Add content;
   }
@@ -294,8 +294,8 @@ export const useMemoryMonitoring = () => {;
   }
   }
 }
-  usedJSHeapSize: memory.usedJSHeapSize,;
-          totalJSHeapSize: memory.totalJSHeapSize,;
+  usedJSHeapSize: memory.usedJSHeapSize,
+          totalJSHeapSize: memory.totalJSHeapSize,
           jsHeapSizeLimit: memory.jsHeapSizeLimit;
         });
       }
@@ -305,7 +305,7 @@ export const useMemoryMonitoring = () => {;
   }, []);
   return memoryInfo;
 }
-// Resource preloading utility,;
+// Resource preloading utility,
 export const preloadResource = (href: string, as: string) => {;
     // TODO: Add content;
   }
@@ -318,29 +318,29 @@ export const preloadResource = (href: string, as: string) => {;
   link.as = as;
   document.head.appendChild(link);
 }
-// Critical resource preloading,;
+// Critical resource preloading,
 export const preloadCriticalResources = () => {;
     // TODO: Add content;
   }
   }
 }
   if (typeof window === 'undefined') return;
-  // Preload critical fonts,;
+  // Preload critical fonts,
   preloadResource('/fonts/inter-var.woff2', 'font');
   preloadResource('/fonts/inter-var.woff', 'font');
-  // Preload critical images,;
+  // Preload critical images,
   preloadResource('/images/hero-bg.webp', 'image');
   preloadResource('/images/logo.svg', 'image');
-  // Preload critical CSS,;
+  // Preload critical CSS,
   preloadResource('/styles/critical.css', 'style');
 }
-// Bundle size monitoring,;
+// Bundle size monitoring,
 export const useBundleSizeMonitoring = () => {;
     // TODO: Add content;
   }
   }
 }
-  const [bundleSize, setBundleSize] = useState,;
+  const [bundleSize, setBundleSize] = useState,
           <{;
     // TODO: Add content;
   }
@@ -398,13 +398,13 @@ export const useBundleSizeMonitoring = () => {;
   }
   }
 }
-//         totalSize,;
-//         jsSize,;
-//         cssSize,;
-//         imageSize,;
+//         totalSize,
+//         jsSize,
+//         cssSize,
+//         imageSize,
       });
     }
-    // Calculate after page load,;
+    // Calculate after page load,
     if (document.readyState === 'complete') {;
   }
   }
@@ -430,13 +430,13 @@ export default {;
   }
   }
 }
-//   debounce,;
-//   throttle,;
-//   useIntersectionObserver,;
-//   useLazyImage,;
-//   usePerformanceMonitoring,;
-//   useMemoryMonitoring,;
-//   preloadResource,;
-//   preloadCriticalResources,;
-//   useBundleSizeMonitoring,;
+//   debounce,
+//   throttle,
+//   useIntersectionObserver,
+//   useLazyImage,
+//   usePerformanceMonitoring,
+//   useMemoryMonitoring,
+//   preloadResource,
+//   preloadCriticalResources,
+//   useBundleSizeMonitoring,
 }

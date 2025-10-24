@@ -2,14 +2,14 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import {;
-    Shield,;
-    Zap,;
-    Settings,;
-    BarChart,;
-    CheckCircle,;
-    Star,;
-    Shield,;
-    Zap,;
+    Shield,
+    Zap,
+    Settings,
+    BarChart,
+    CheckCircle,
+    Star,
+    Shield,
+    Zap,
     BarChart from 'lucide-react';
   }
 const ITDisasterRecoveryPage: React.FC = () => {;
@@ -19,19 +19,19 @@ const ITDisasterRecoveryPage: React.FC = () => {;
   }
   }
 }
-  icon: Shield,;
-      title: 'Backup Solutions',;
-      description: 'value',;
+  icon: Shield,
+      title: 'Backup Solutions',
+      description: 'value',
   ];
       benefits: ['Automated backups', 'Data protection', 'Recovery testing'];
-    },;
-      icon: Zap,;
-      title: 'Rapid Recovery',;
-      description: 'Fast disaster recovery and business continuity',;
+    },
+      icon: Zap,
+      title: 'Rapid Recovery',
+      description: 'Fast disaster recovery and business continuity',
       benefits: ['RTO optimization', 'RPO minimization', 'Quick restoration'];
-      icon: BarChart,;
-      title: 'Monitoring & Alerts',;
-      description: 'Real-time monitoring and alerting for disaster recovery',;
+      icon: BarChart,
+      title: 'Monitoring & Alerts',
+      description: 'Real-time monitoring and alerting for disaster recovery',
       benefits: ['Health monitoring', 'Alert systems', 'Status reporting'];
     }
   ];
@@ -43,10 +43,10 @@ const ITDisasterRecoveryPage: React.FC = () => {;
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
-// IT Disaster Recovery,;
+// IT Disaster Recovery,
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse">
-// Comprehensive Disaster Recovery Solutions,;
+// Comprehensive Disaster Recovery Solutions,
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             Protect your business with comprehensive disaster recovery solutions. Ensure business continuity;
@@ -56,7 +56,7 @@ const ITDisasterRecoveryPage: React.FC = () => {;
               href="/contact";
               className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
 // >
-//               Get Started,;
+//               Get Started,
           </a>
               href="tel:+13024640950";
               className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
@@ -66,11 +66,11 @@ const ITDisasterRecoveryPage: React.FC = () => {;
         </section>
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
-// Recovery Services,;
+// Recovery Services,
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {;
-    features.map((feature,;
+    features.map((feature,
     index) => ();
   }
   }
@@ -89,7 +89,7 @@ const ITDisasterRecoveryPage: React.FC = () => {;
   }
                 <ul className="space-y-2">
                   {;
-    feature.benefits.map((benefit,;
+    feature.benefits.map((benefit,
     benefitIndex) => ();
   }
   }

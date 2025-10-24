@@ -15,28 +15,28 @@ const ModernLoadingSpinner: React.FC;
   }
   }
 }
-  size = 'md',;
-  color = 'primary',;
-  text = 'Loading...',;
+  size = 'md',
+  color = 'primary',
+  text = 'Loading...',
   fullScreen = false;
 }) => {;
-    sm: 'w-4 h-4',;
+    sm: 'w-4 h-4',
     md: 'value';
   }
-    lg: 'w-12 h-12',;
+    lg: 'w-12 h-12',
   }
   }
   }
-    xl: 'w-16 h-16',;
+    xl: 'w-16 h-16',
   }
   const colorClasses = {;
     // TODO: Add content;
   }
   }
 }
-  primary: 'text-cyan-400',;
-    secondary: 'text-purple-400',;
-    accent: 'text-pink-400',;
+  primary: 'text-cyan-400',
+    secondary: 'text-purple-400',
+    accent: 'text-pink-400',
   }
   const spinnerClasses = `;
     ${;
@@ -45,13 +45,13 @@ const ModernLoadingSpinner: React.FC;
     ${;
     colorClasses[color];
   }
-//     animate-spin,;
+//     animate-spin,
 //     border-2;
-//     border-current,;
-//     border-t-transparent,;
-//     rounded-full,;
+//     border-current,
+//     border-t-transparent,
+//     rounded-full,
   `;
-  const containerClasses = fullScreen,;
+  const containerClasses = fullScreen,
 //     ? 'fixed inset-0 bg-slate-900 bg-opacity-90 flex items-center justify-center z-50';
     : 'flex items-center justify-center p-4';
   return (;

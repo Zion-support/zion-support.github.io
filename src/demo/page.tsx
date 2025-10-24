@@ -237,7 +237,7 @@ const Page = () => {
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  <p className="text-gray-300 mb-4">"{testimonial.text}"</p>
+                  <p className="text-gray-300 mb-4">"{testimonial.text}</p>
                   <div></div>
                     <div className="font-bold text-white">{testimonial.name}</div>
                     <div className="text-cyan-400 text-sm">{testimonial.company}</div>

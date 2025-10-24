@@ -7,7 +7,7 @@ interface AnalyticsContextType {;
   trackEvent: (eventName: string, parameters?: Record;
           <string, unknown>) => void;
   trackPageView: (pageName: string, pagePath?: string) => void;
-  setUserId: (userId: string) => void;,;
+  setUserId: (userId: string) => void;,
     setUserProperties: (properties: Record<string, unknown>) => void;
 }
 interface AnalyticsProviderProps {;
@@ -25,9 +25,9 @@ export const AnalyticsProvider: React.FC;
   }
   }
 }
-//   children,;
-  trackingId = 'G-XXXXXXXXXX',;
-  enableDebug = false,;
+//   children,
+  trackingId = 'G-XXXXXXXXXX',
+  enableDebug = false,
 }) => {;
     // TODO: Add content;
   }
@@ -40,7 +40,7 @@ export const AnalyticsProvider: React.FC;
   }
 }
     if (typeof window === 'undefined') return;
-    // Initialize Google Analytics,;
+    // Initialize Google Analytics,
 const initAnalytics = () => {;
     // TODO: Add content;
   }
@@ -58,12 +58,12 @@ const initAnalytics = () => {;
         }
         return;
       }
-      // Load Google Analytics script,;
+      // Load Google Analytics script,
 const script = document.createElement('script');
       script.async = true;
       script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
       document.head.appendChild(script);
-      // Initialize gtag,;
+      // Initialize gtag,
       (window as any).dataLayer = (window as any).dataLayer || [];
       (window as any).gtag = function() {;
     // TODO: Add content;
@@ -78,19 +78,19 @@ const script = document.createElement('script');
   }
   }
 }
-  page_title: document.title,;
-        page_location: window.location.href,;
+  page_title: document.title,
+        page_location: window.location.href,
       });
       setIsInitialized(true);
       if (enableDebug) {;
-    // console.log('Analytics initialized with tracking ID:',;
+    // console.log('Analytics initialized with tracking ID:',
     trackingId);
   }
   }
       }
     }
   }, [trackingId, enableDebug]);
-  const trackEvent = (eventName: string, parameters?: Record,;
+  const trackEvent = (eventName: string, parameters?: Record,
           <string, unknown>) => {;
     // TODO: Add content;
   }
@@ -98,14 +98,14 @@ const script = document.createElement('script');
 }
     if (!isInitialized || typeof window === 'undefined') return;
     if (enableDebug) {;
-    // console.log('Analytics Event:',;
-    eventName,;
+    // console.log('Analytics Event:',
+    eventName,
     parameters);
   }
   }
     }
     if ((window as unknown as {;
-    gtag: (...args: unknown[,;
+    gtag: (...args: unknown[,
     ) => void;
   }).gtag) {;
     // TODO: Add content;
@@ -113,7 +113,7 @@ const script = document.createElement('script');
   }
 }
       (window as unknown as {;
-    gtag: (...args: unknown[,;
+    gtag: (...args: unknown[,
     ) => void;
   }).gtag('event', eventName, parameters);
     }
@@ -125,14 +125,14 @@ const script = document.createElement('script');
 }
     if (!isInitialized || typeof window === 'undefined') return;
     if (enableDebug) {;
-    // console.log('Analytics Page View:',;
-    pageName,;
+    // console.log('Analytics Page View:',
+    pageName,
     pagePath);
   }
   }
     }
     if ((window as unknown as {;
-    gtag: (...args: unknown[,;
+    gtag: (...args: unknown[,
     ) => void;
   }).gtag) {;
     // TODO: Add content;
@@ -140,15 +140,15 @@ const script = document.createElement('script');
   }
 }
       (window as unknown as {;
-    gtag: (...args: unknown[,;
+    gtag: (...args: unknown[,
     ) => void;
   }).gtag('event', 'page_view', {;
     // TODO: Add content;
   }
   }
 }
-  page_title: pageName,;
-        page_location: pagePath || window.location.href,;
+  page_title: pageName,
+        page_location: pagePath || window.location.href,
       });
     }
   }
@@ -159,7 +159,7 @@ const script = document.createElement('script');
 }
     if (!isInitialized || typeof window === 'undefined') return;
     if ((window as unknown as {;
-    gtag: (...args: unknown[,;
+    gtag: (...args: unknown[,
     ) => void;
   }).gtag) {;
     // TODO: Add content;
@@ -167,18 +167,18 @@ const script = document.createElement('script');
   }
 }
       (window as unknown as {;
-    gtag: (...args: unknown[,;
+    gtag: (...args: unknown[,
     ) => void;
   }).gtag('config', trackingId, {;
     // TODO: Add content;
   }
   }
 }
-  user_id: userId,;
+  user_id: userId,
       });
     }
   }
-  const setUserProperties = (properties: Record,;
+  const setUserProperties = (properties: Record,
           <string, unknown>) => {;
     // TODO: Add content;
   }
@@ -186,7 +186,7 @@ const script = document.createElement('script');
 }
     if (!isInitialized || typeof window === 'undefined') return;
     if ((window as unknown as {;
-    gtag: (...args: unknown[,;
+    gtag: (...args: unknown[,
     ) => void;
   }).gtag) {;
     // TODO: Add content;
@@ -194,7 +194,7 @@ const script = document.createElement('script');
   }
 }
       (window as unknown as {;
-    gtag: (...args: unknown[,;
+    gtag: (...args: unknown[,
     ) => void;
   }).gtag('set', properties);
     }
@@ -210,11 +210,11 @@ const script = document.createElement('script');
   }
   }
 }
-      // eslint-disable-next-line no-console,;
+      // eslint-disable-next-line no-console,
       // console.error('Analytics Error:', error, context);
     }
     if ((window as unknown as {;
-    gtag: (...args: unknown[,;
+    gtag: (...args: unknown[,
     ) => void;
   }).gtag) {;
     // TODO: Add content;
@@ -222,29 +222,29 @@ const script = document.createElement('script');
   }
 }
       (window as unknown as {;
-    gtag: (...args: unknown[,;
+    gtag: (...args: unknown[,
     ) => void;
   }).gtag('event', 'exception', {;
     // TODO: Add content;
   }
   }
 }
-  description: error.message,;
-        fatal: false,;
+  description: error.message,
+        fatal: false,
         custom_map: {;
     // TODO: Add content;
   }
   }
 }
-  context: context || 'unknown',;
-        },;
+  context: context || 'unknown',
+        },
       });
     }
   }
-trackEvent,;
-    trackPageView,;
-    setUserId,;
-    setUserProperties,;
+trackEvent,
+    trackPageView,
+    setUserId,
+    setUserProperties,
   }
   return (;
           <div>Coming Soon</div>

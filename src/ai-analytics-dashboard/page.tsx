@@ -18,7 +18,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
 import { Brain, TrendingUp } from 'lucide-react';
 import React, {useStateuseEffect} from 'react';
 
-import {BarChart3, CheckCircle, Phone, Star} from 'lucide-react';;
+import {BarChart3, CheckCircle, Phone, Star} from 'lucide-react';
 import Navigation from '../$1/Navigation';
 import Footer from '../$1/Footer';
 import SEOOptimizer from '../$1/SEOOptimizer';
@@ -305,7 +305,7 @@ const Page = () => {
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
+                  <p className="text-gray-300 mb-6 italic">"{testimonial.content}</p>
                   <div></div>
                     <div className="font-semibold text-white">{testimonial.name}</div>
                     <div className="text-blue-400 text-sm">{testimonial.role}</div>

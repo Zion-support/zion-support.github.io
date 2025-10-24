@@ -9,44 +9,44 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {;
 }
   const [selectedCategory, setSelectedCategory] = useState('all');
   const content = [;
-  // TODO: Add items,;
+  // TODO: Add items,
 ];
     {;
     // TODO: Add content;
   }
   }
 }
-  id: 'ultimate-business-intelligence-revolution',;
-      title: 'AI 2025: The Ultimate Business Intelligence Revolution',;
-      description: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',;
-      url: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',;
-      type: 'Blog Post',;
-      category: 'blog',;
+  id: 'ultimate-business-intelligence-revolution',
+      title: 'AI 2025: The Ultimate Business Intelligence Revolution',
+      description: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
+      url: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',
+      type: 'Blog Post',
+      category: 'blog',
       metrics: {;
     // TODO: Add content;
   }
   }
 }
-  roi: '30,000%',;
-        efficiency: '500%',;
-        accuracy: '99.9%',;
-        timeline: '12 months',;
-      },;
-      readingTime: '35 min read',;
-      featured: true,;
+  roi: '30,000%',
+        efficiency: '500%',
+        accuracy: '99.9%',
+        timeline: '12 months',
+      },
+      readingTime: '35 min read',
+      featured: true,
       tags: ['AI Revolution', 'Business Intelligence', 'ROI', 'Fortune 500', '30,000% ROI'];
-      id: 'fortune-500-business-intelligence-success',;
-      title: 'Fortune 500 Ultimate Business Intelligence Success',;
-      description: 'How a $15.2B manufacturing giant achieved unprecedented business intelligence transformation with AI-powered analytics.',;
-      url: '/case-studies/fortune-500-ultimate-business-intelligence-success',;
-      type: 'Case Study',;
-      category: 'case-study',;
-      id: 'business-intelligence-implementation-guide',;
-      title: 'AI 2025 Ultimate Business Intelligence Implementation Guide',;
-      description: 'Complete roadmap to 30,000% ROI through revolutionary AI-powered business intelligence transformation.',;
-      url: '/resources/ai-2025-ultimate-business-intelligence-implementation-guide',;
-      type: 'Implementation Guide',;
-      category: 'resource',;
+      id: 'fortune-500-business-intelligence-success',
+      title: 'Fortune 500 Ultimate Business Intelligence Success',
+      description: 'How a $15.2B manufacturing giant achieved unprecedented business intelligence transformation with AI-powered analytics.',
+      url: '/case-studies/fortune-500-ultimate-business-intelligence-success',
+      type: 'Case Study',
+      category: 'case-study',
+      id: 'business-intelligence-implementation-guide',
+      title: 'AI 2025 Ultimate Business Intelligence Implementation Guide',
+      description: 'Complete roadmap to 30,000% ROI through revolutionary AI-powered business intelligence transformation.',
+      url: '/resources/ai-2025-ultimate-business-intelligence-implementation-guide',
+      type: 'Implementation Guide',
+      category: 'resource',
               {;
     /* Badge */;
   }
@@ -88,8 +88,8 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {;
     /* Tags */;
   }
                 {;
-    item.tags.slice(0,;
-    3).map((tag,;
+    item.tags.slice(0,
+    3).map((tag,
     index) => ();
           <span;
   }

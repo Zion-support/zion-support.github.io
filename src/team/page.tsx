@@ -6,50 +6,50 @@ import { Linkedin, Mail, Phone, Award, Users, Brain, Code, Shield } from 'lucide
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
   const _teamMembers = [;
-  // TODO: Add items,;
+  // TODO: Add items,
 ];
     {;
     // TODO: Add content;
   }
   }
 }
-  name: 'Kleber Santos',;
-      role: 'CEO & Founder',;
-      bio: 'AI and technology visionary with 15+ years of experience in enterprise solutions',;
-      image: '/api/placeholder/300/300',;
-      linkedin: 'https://linkedin.com/in/kleber-santos',;
-      email: 'kleber@ziontechgroup.com',;
+  name: 'Kleber Santos',
+      role: 'CEO & Founder',
+      bio: 'AI and technology visionary with 15+ years of experience in enterprise solutions',
+      image: '/api/placeholder/300/300',
+      linkedin: 'https://linkedin.com/in/kleber-santos',
+      email: 'kleber@ziontechgroup.com',
       expertise: ['AI Strategy', 'Leadership', 'Innovation'];
-    },;
-      name: 'Dr. Sarah Chen',;
-      role: 'Chief AI Officer',;
-      bio: 'PhD in Machine Learning, leading our AI research and development initiatives',;
-      linkedin: 'https://linkedin.com/in/sarah-chen-ai',;
-      email: 'sarah@ziontechgroup.com',;
+    },
+      name: 'Dr. Sarah Chen',
+      role: 'Chief AI Officer',
+      bio: 'PhD in Machine Learning, leading our AI research and development initiatives',
+      linkedin: 'https://linkedin.com/in/sarah-chen-ai',
+      email: 'sarah@ziontechgroup.com',
       expertise: ['Machine Learning', 'Deep Learning', 'Research'];
-      name: 'Dr. Emily Watson',;
-      role: 'Head of Data Science',;
-      bio: 'Data science expert specializing in predictive analytics and business intelligence',;
-      linkedin: 'https://linkedin.com/in/emily-watson-data',;
-      email: 'emily@ziontechgroup.com',;
+      name: 'Dr. Emily Watson',
+      role: 'Head of Data Science',
+      bio: 'Data science expert specializing in predictive analytics and business intelligence',
+      linkedin: 'https://linkedin.com/in/emily-watson-data',
+      email: 'emily@ziontechgroup.com',
       expertise: ['Data Science', 'Analytics', 'Statistics'];
-      name: 'Lisa Thompson',;
-      role: 'Head of Client Success',;
-      bio: 'Client success specialist ensuring exceptional customer experience and satisfaction',;
-      linkedin: 'https://linkedin.com/in/lisa-thompson-success',;
-      email: 'lisa@ziontechgroup.com',;
+      name: 'Lisa Thompson',
+      role: 'Head of Client Success',
+      bio: 'Client success specialist ensuring exceptional customer experience and satisfaction',
+      linkedin: 'https://linkedin.com/in/lisa-thompson-success',
+      email: 'lisa@ziontechgroup.com',
       expertise: ['Client Relations', 'Project Management', 'Customer Success'];
     }
   ];
   const stats = [;
-  // TODO: Add items,;
+  // TODO: Add items,
 ];
-    { number: '50+', label: 'Team Members', icon: Users },;
-    { number: '15+', label: 'Years Experience', icon: Award },;
-    { number: '100+', label: 'AI Projects', icon: Brain },;
+    { number: '50+', label: 'Team Members', icon: Users },
+    { number: '15+', label: 'Years Experience', icon: Award },
+    { number: '100+', label: 'AI Projects', icon: Brain },
     {;
-    number: '99.9%',;
-    label: 'Client Satisfaction',;
+    number: '99.9%',
+    label: 'Client Satisfaction',
     icon: Shield;
   }
   return (;
@@ -60,7 +60,7 @@ import Footer from '../components/Footer';
         <h1 className="text-4xl font-bold text-white mb-4">Team</h1>
         <p className="text-gray-300 mb-8">Coming Soon - Advanced team solutions</p>
         <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-// Contact Us,;
+// Contact Us,
           </a>
       </div>
   );

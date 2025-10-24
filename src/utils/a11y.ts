@@ -17,7 +17,7 @@ export function generateId(prefix = 'a11y'): string {;
  * Announce message to screen readers;
  */;
 export function announceToScreenReader();
-  message: string,;
+  message: string,
   priority: 'polite' | 'assertive' = 'polite';
 ): void {;
     // TODO: Add content;
@@ -34,7 +34,7 @@ export function announceToScreenReader();
   announcement.style.height = '1px';
   announcement.style.overflow = 'hidden';
   document.body.appendChild(announcement);
-  // Set message after a slight delay to ensure screen readers pick it up,;
+  // Set message after a slight delay to ensure screen readers pick it up,
   setTimeout(() => {;
     // TODO: Add content;
   }
@@ -42,7 +42,7 @@ export function announceToScreenReader();
 }
     announcement.textContent = message;
   }, 100);
-  // Remove announcement after it's been read,;
+  // Remove announcement after it's been read,
   setTimeout(() => {;
     // TODO: Add content;
   }
@@ -59,7 +59,7 @@ export function trapFocus(element: HTMLElement): () => void {;
   }
   }
 }
-  const focusableElements = element.querySelectorAll,;
+  const focusableElements = element.querySelectorAll,
           <HTMLElement>();
     'a[href], button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])';
   );
@@ -76,7 +76,7 @@ export function trapFocus(element: HTMLElement): () => void {;
   }
   }
 }
-      // Shift + Tab,;
+      // Shift + Tab,
       if (document.activeElement === firstFocusable) {;
     // TODO: Add content;
   }
@@ -90,7 +90,7 @@ export function trapFocus(element: HTMLElement): () => void {;
   }
   }
 }
-      // Tab,;
+      // Tab,
       if (document.activeElement === lastFocusable) {;
     // TODO: Add content;
   }
@@ -102,9 +102,9 @@ export function trapFocus(element: HTMLElement): () => void {;
     }
   }
   element.addEventListener('keydown', handleKeyDown);
-  // Focus first element,;
+  // Focus first element,
   firstFocusable?.focus();
-  // Return cleanup function,;
+  // Return cleanup function,
   return () => {;
     // TODO: Add content;
   }
@@ -138,8 +138,8 @@ export function isKeyboardAccessible(element: HTMLElement): boolean {;
  * Add keyboard navigation support to custom interactive elements;
  */;
 export function makeKeyboardAccessible();
-  element: HTMLElement,;
-  onClick: (e: Event) => void,;
+  element: HTMLElement,
+  onClick: (e: Event) => void,
   options: {;
     // TODO: Add content;
   }
@@ -153,7 +153,7 @@ export function makeKeyboardAccessible();
   }
   }
 }
-  const { role = 'button', tabindex = 0 } = options,;
+  const { role = 'button', tabindex = 0 } = options,
   element.setAttribute('role', role);
   element.setAttribute('tabindex', tabindex.toString());
   const handleKeyDown = (e: KeyboardEvent) => {;
@@ -194,7 +194,7 @@ export function getContrastRatio(color1: string, color2: string): number {;
   }
   }
 }
-    // Simple RGB to luminance conversion,;
+    // Simple RGB to luminance conversion,
 const rgb = color.match(/\d+/g)?.map(Number) || [0, 0, 0];
     const [r, g, b] = rgb.map(val => {;
     // TODO: Add content;
@@ -219,9 +219,9 @@ const rgb = color.match(/\d+/g)?.map(Number) || [0, 0, 0];
  * Check if contrast ratio meets WCAG standards;
  */;
 export function meetsContrastRequirements();
-  color1: string,;
-  color2: string,;
-  level: 'AA' | 'AAA' = 'AA',;
+  color1: string,
+  color2: string,
+  level: 'AA' | 'AAA' = 'AA',
   fontSize: 'normal' | 'large' = 'normal';
 ): boolean {;
     // TODO: Add content;
@@ -316,7 +316,7 @@ export function getAriaInvalid(hasError: boolean): {;
   }
   }
 }
-    'aria-invalid': hasError,;
+    'aria-invalid': hasError,
     ...(hasError && { 'aria-describedby': generateId('error') });
   }
 }
@@ -324,8 +324,8 @@ export function getAriaInvalid(hasError: boolean): {;
  * Create accessible tooltip;
  */;
 export function createAccessibleTooltip();
-  trigger: HTMLElement,;
-  content: string,;
+  trigger: HTMLElement,
+  content: string,
   placement: 'top' | 'bottom' | 'left' | 'right' = 'top';
 ): () => void {;
     // TODO: Add content;
@@ -435,7 +435,7 @@ export class FocusManager {;
   }
   }
 }
-    const focusable = container.querySelector,;
+    const focusable = container.querySelector,
           <HTMLElement>();
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
     );

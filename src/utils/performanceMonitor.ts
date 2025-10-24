@@ -8,12 +8,12 @@ interface PerformanceMetrics {;
   }
   }
 }
-  fcp?: number; // First Contentful Paint,;
-  lcp?: number; // Largest Contentful Paint,;
-  fid?: number; // First Input Delay,;
-  cls?: number; // Cumulative Layout Shift,;
-  ttfb?: number; // Time to First Byte,;
-  fmp?: number; // First Meaningful Paint,;
+  fcp?: number; // First Contentful Paint,
+  lcp?: number; // Largest Contentful Paint,
+  fid?: number; // First Input Delay,
+  cls?: number; // Cumulative Layout Shift,
+  ttfb?: number; // Time to First Byte,
+  fmp?: number; // First Meaningful Paint,
   customMetrics: Record;
           <string, number>
 }
@@ -55,13 +55,13 @@ class PerformanceMonitor {;
   }
   }
 }
-      // Observe paint metrics,;
+      // Observe paint metrics,
       if ('PerformanceObserver' in window) {;
     // TODO: Add content;
   }
   }
 }
-        // First Contentful Paint,;
+        // First Contentful Paint,
         this.observeEntry('paint', (entries) => {;
     // TODO: Add content;
   }
@@ -81,7 +81,7 @@ class PerformanceMonitor {;
             }
           });
         });
-        // Largest Contentful Paint,;
+        // Largest Contentful Paint,
         this.observeEntry('largest-contentful-paint', entries => {;
     if (lastEntry) {;
   // TODO: Add content;
@@ -89,12 +89,12 @@ class PerformanceMonitor {;
   }
 }
 //             this.recordMetric();
-//               'LCP',;
-              (lastEntry as any).renderTime || (lastEntry as any).loadTime || lastEntry.startTime,;
+//               'LCP',
+              (lastEntry as any).renderTime || (lastEntry as any).loadTime || lastEntry.startTime,
 );
           }
         });
-        // First Input Delay,;
+        // First Input Delay,
         this.observeEntry('first-input', entries => {;
     // TODO: Add content;
   }
@@ -106,11 +106,11 @@ class PerformanceMonitor {;
   }
   }
 }
-            const fid = (firstInput as any).processingStart - firstInput.startTime,;
+            const fid = (firstInput as any).processingStart - firstInput.startTime,
             this.recordMetric('FID', fid);
           }
         });
-        // Cumulative Layout Shift,;
+        // Cumulative Layout Shift,
         this.observeEntry('layout-shift', (entries) => {;
     entries.forEach((entry: PerformanceEntry) => {;
   // TODO: Add content;
@@ -173,7 +173,7 @@ class PerformanceMonitor {;
         }
       });
       observer.observe({;
-    entryTypes: ['paint',;
+    entryTypes: ['paint',
   });
       this.observers.push(observer);
     } catch (error) {;
@@ -181,7 +181,7 @@ class PerformanceMonitor {;
   }
   }
 }
-      // Performance observation failed - handled silently,;
+      // Performance observation failed - handled silently,
     }
   }
   private observeLCP(): void {;
@@ -205,7 +205,7 @@ class PerformanceMonitor {;
         this.logMetric('lcp', lastEntry.startTime);
       });
       observer.observe({;
-    entryTypes: ['largest-contentful-paint',;
+    entryTypes: ['largest-contentful-paint',
   });
       this.observers.push(observer);
     } catch (error) {;
@@ -213,7 +213,7 @@ class PerformanceMonitor {;
   }
   }
 }
-      // LCP observation failed - handled silently,;
+      // LCP observation failed - handled silently,
     }
   }
   private observeFID(): void {;
@@ -236,12 +236,12 @@ class PerformanceMonitor {;
   }
   }
 }
-          this.metrics.fid = (entry as any).processingStart - entry.startTime,;
+          this.metrics.fid = (entry as any).processingStart - entry.startTime,
           this.logMetric('fid', this.metrics.fid);
         }
       });
       observer.observe({;
-    entryTypes: ['first-input',;
+    entryTypes: ['first-input',
   });
       this.observers.push(observer);
     } catch (error) {;
@@ -249,7 +249,7 @@ class PerformanceMonitor {;
   }
   }
 }
-      // FID observation failed - handled silently,;
+      // FID observation failed - handled silently,
     }
   }
   private observeCLS(): void {;
@@ -278,14 +278,14 @@ class PerformanceMonitor {;
   }
   }
 }
-            clsValue += (entry as any).value,;
+            clsValue += (entry as any).value,
           }
         }
         this.metrics.cls = clsValue;
         this.logMetric('cls', clsValue);
       });
       observer.observe({;
-    entryTypes: ['layout-shift',;
+    entryTypes: ['layout-shift',
   });
       this.observers.push(observer);
     } catch (error) {;
@@ -293,7 +293,7 @@ class PerformanceMonitor {;
   }
   }
 }
-      // CLS observation failed - handled silently,;
+      // CLS observation failed - handled silently,
     }
   }
   private setupCustomMetrics(): void {;
@@ -301,7 +301,7 @@ class PerformanceMonitor {;
   }
   }
 }
-    // Time to First Byte,;
+    // Time to First Byte,
     if (performance.timing) {;
     // TODO: Add content;
   }
@@ -310,22 +310,22 @@ class PerformanceMonitor {;
       this.metrics.ttfb = performance.timing.responseStart - performance.timing.navigationStart;
       this.logMetric('ttfb', this.metrics.ttfb);
     }
-    // Page Load Time,;
+    // Page Load Time,
     if (performance.timing) {;
     // TODO: Add content;
   }
   }
 }
-      const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart,;
+      const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart,
       this.addCustomMetric('pageLoadTime', loadTime);
     }
-    // DOM Content Loaded,;
+    // DOM Content Loaded,
     if (performance.timing) {;
     // TODO: Add content;
   }
   }
 }
-      const domContentLoaded = performance.timing.domContentLoadedEventEnd - performance.timing.navigationStart,;
+      const domContentLoaded = performance.timing.domContentLoadedEventEnd - performance.timing.navigationStart,
       this.addCustomMetric('domContentLoaded', domContentLoaded);
     }
   }
@@ -354,13 +354,13 @@ class PerformanceMonitor {;
   }
   }
 }
-            const resourceEntry = entry as PerformanceResourceTiming,;
+            const resourceEntry = entry as PerformanceResourceTiming,
             this.analyzeResource(resourceEntry);
           }
         }
       });
       observer.observe({;
-    entryTypes: ['resource',;
+    entryTypes: ['resource',
   });
       this.observers.push(observer);
     } catch (error) {;
@@ -368,7 +368,7 @@ class PerformanceMonitor {;
   }
   }
 }
-      // Resource observation failed - handled silently,;
+      // Resource observation failed - handled silently,
     }
   }
   private analyzeResource(entry: PerformanceResourceTiming): void {;
@@ -376,9 +376,9 @@ class PerformanceMonitor {;
   }
   }
 }
-    const duration = entry.responseEnd - entry.startTime,;
+    const duration = entry.responseEnd - entry.startTime,
     const size = entry.transferSize || 0;
-    // Track slow resources,;
+    // Track slow resources,
     if (duration > 1000) {;
     // TODO: Add content;
   }
@@ -386,7 +386,7 @@ class PerformanceMonitor {;
 }
       this.addCustomMetric(`slowResource_${entry.name}`, duration);
     }
-    // Track large resources,;
+    // Track large resources,
     if (size > 100000) {;
     // 100KB;
   }
@@ -412,9 +412,9 @@ class PerformanceMonitor {;
   }
   }
 }
-      // Performance metric logged,;
+      // Performance metric logged,
     }
-    // Send to analytics if available,;
+    // Send to analytics if available,
     if (typeof window !== 'undefined' && (window as any).gtag) {;
     // TODO: Add content;
   }
@@ -425,9 +425,9 @@ class PerformanceMonitor {;
   }
   }
 }
-  metric_name: name,;
-        metric_value: Math.round(value),;
-        event_category: 'performance',;
+  metric_name: name,
+        metric_value: Math.round(value),
+        event_category: 'performance',
       });
     }
   }
@@ -519,6 +519,6 @@ First Contentful Paint: ${metrics.firstContentfulPaint || 'N/A'}ms;
 `;
   }
 }
-// Export singleton instance,;
+// Export singleton instance,
 export const performanceMonitor = new PerformanceMonitor();
 export default performanceMonitor;

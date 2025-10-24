@@ -2,14 +2,14 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import {;
-    Globe,;
-    Headphones,;
-    Shield,;
-    Zap,;
-    CheckCircle,;
-    Star,;
-    Globe,;
-    Headphones,;
+    Globe,
+    Headphones,
+    Shield,
+    Zap,
+    CheckCircle,
+    Star,
+    Globe,
+    Headphones,
     Zap from 'lucide-react';
   }
 const GlobalITSupportPage: React.FC = () => {;
@@ -19,19 +19,19 @@ const GlobalITSupportPage: React.FC = () => {;
   }
   }
 }
-  icon: Globe,;
-      title: 'Global Coverage',;
-      description: 'value',;
+  icon: Globe,
+      title: 'Global Coverage',
+      description: 'value',
   ];
       benefits: ['Worldwide coverage', 'Local expertise', 'Multi-language support'];
-    },;
-      icon: Headphones,;
-      title: '24/7 Support',;
-      description: 'Round-the-clock technical support and assistance',;
+    },
+      icon: Headphones,
+      title: '24/7 Support',
+      description: 'Round-the-clock technical support and assistance',
       benefits: ['Always available', 'Fast response', 'Expert technicians'];
-      icon: Zap,;
-      title: 'Rapid Response',;
-      description: 'Quick problem resolution and escalation',;
+      icon: Zap,
+      title: 'Rapid Response',
+      description: 'Quick problem resolution and escalation',
       benefits: ['Fast resolution', 'Escalation procedures', 'SLA guarantees'];
     }
   ];
@@ -43,10 +43,10 @@ const GlobalITSupportPage: React.FC = () => {;
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
-// Global IT Support,;
+// Global IT Support,
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse">
-// Worldwide IT Support Services,;
+// Worldwide IT Support Services,
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             Get comprehensive IT support wherever you are in the world. Our global team of experts provides;
@@ -56,7 +56,7 @@ const GlobalITSupportPage: React.FC = () => {;
               href="/contact";
               className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
 // >
-//               Get Started,;
+//               Get Started,
           </a>
               href="tel:+13024640950";
               className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
@@ -66,11 +66,11 @@ const GlobalITSupportPage: React.FC = () => {;
         </section>
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
-// Global Support Services,;
+// Global Support Services,
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {;
-    features.map((feature,;
+    features.map((feature,
     index) => ();
   }
   }
@@ -89,7 +89,7 @@ const GlobalITSupportPage: React.FC = () => {;
   }
                 <ul className="space-y-2">
                   {;
-    feature.benefits.map((benefit,;
+    feature.benefits.map((benefit,
     benefitIndex) => ();
   }
   }

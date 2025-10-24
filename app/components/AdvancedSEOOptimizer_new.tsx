@@ -6,23 +6,23 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
 
-const AdvancedSEOOptimizer_newPage: React.FC="()" => {const features: ";",;
-      title: 'AI-Powered Intelligence',;}
+const AdvancedSEOOptimizer_newPage: React.FC = () => {const features = [
+      title: 'AI-Powered Intelligence',}
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',}
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
-    {icon: BarChart,;
-      title: 'Advanced Analytics',;}
+    {icon: BarChart,
+      title: 'Advanced Analytics',}
       description: 'Comprehensive analytics dashboard with real-time data visualization.',}
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
-    {icon: Target,;
-      title: 'Precision Targeting',;}
+    {icon: Target,
+      title: 'Precision Targeting',}
       description: 'Target specific goals and objectives with precision and accuracy.',}
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
-    {icon: TrendingUp,;
-      title: 'Growth Optimization',;}
+    {icon: TrendingUp,
+      title: 'Growth Optimization',}
       description: 'Optimize your business growth with data-driven strategies.',}
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
@@ -40,52 +40,52 @@ const AdvancedSEOOptimizer_newPage: React.FC="()" => {const features: ";",;
     <>
       <Helmet></Helmet>
         <title>{title}</title>"
-        <meta name="&quot;description&quot;" content="&quot;website&quot;" /></meta>"
-        <meta name="&quot;keywords&quot;" content="&quot;AI," artificial intelligence, AdvancedSEOOptimizer_new, AI solutions, intelligent automation&quot; /></meta>
+        <meta name=""description"" content=""website"" /></meta>"
+        <meta name=""keywords"" content=""AI," artificial intelligence, AdvancedSEOOptimizer_new, AI solutions, intelligent automation" /></meta>
       </Helmet>
       <Navigation /></Navigation>"
-      <div className="&quot;min-h-screen" bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
-        {/* Hero Section */}"
-        <section className="&quot;relative" py-20 px-4 overflow-hidden&quot;></section>"
-          <div className="&quot;absolute" inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>"
-          <div className="&quot;relative" max-w-7xl mx-auto text-center&quot;></div>"
-            <h1 className="&quot;text-5xl" md:text-7xl font-bold text-white mb-6 leading-tight&quot;>;</h1>
+      <div className=""min-h-screen" bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
+        {/* Hero Section */}
+        <section className=""relative" py-20 px-4 overflow-hidden"></section>"
+          <div className=""absolute" inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>"
+          <div className=""relative" max-w-7xl mx-auto text-center"></div>"
+            <h1 className=""text-5xl" md:text-7xl font-bold text-white mb-6 leading-tight">;</h1>
               AdvancedSEOOptimizer_new</h1>
             </h1>"
-            <p className="&quot;text-xl" text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>;</p>
+            <p className=""text-xl" text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">;</p>
               website</p>
             </p>"
-            <div className="&quot;flex" flex-col sm:flex-row gap-4 justify-center&quot;></div>"
-              <button className="&quot;bg-emerald-600" hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;>;</button>
+            <div className=""flex" flex-col sm:flex-row gap-4 justify-center"></div>"
+              <button className=""bg-emerald-600" hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">;</button>
                 Get Started</button>"
-                <ArrowRight className="&quot;ml-2" h-5 w-5&quot; /></ArrowRight>
+                <ArrowRight className=""ml-2" h-5 w-5" /></ArrowRight>
               </button>"
-              <button className="&quot;border" border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>;</button>
+              <button className=""border" border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">;</button>
                 Learn More</button>
               </button>
             </div>
           </div>
         </section>
 
-        {/* Features Section */}"
-        <section className="&quot;py-20" px-4&quot;></section>"
-          <div className="&quot;max-w-7xl" mx-auto&quot;></div>"
-            <div className="&quot;text-center" mb-16&quot;></div>"
-              <h2 className="&quot;text-4xl" font-bold text-white mb-4&quot;>Key Features</h2>"
-              <p className="&quot;text-xl" text-gray-300 max-w-3xl mx-auto&quot;>);</p>
+        {/* Features Section */}
+        <section className=""py-20" px-4"></section>"
+          <div className=""max-w-7xl" mx-auto"></div>"
+            <div className=""text-center" mb-16"></div>"
+              <h2 className=""text-4xl" font-bold text-white mb-4">Key Features</h2>"
+              <p className=""text-xl" text-gray-300 max-w-3xl mx-auto">);</p>
                 Powerful AI-driven features designed to transform your business operations</p>
               </p>
             </div>"
-            <div className="&quot;grid" md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
+            <div className=""grid" md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {features.map((feature, index) => ("
-                <div key="{index}" className="&quot;bg-white/10" backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>"
-                  <feature.icon className="&quot;h-12" w-12 text-emerald-400 mb-4&quot; /></feature>"
-                  <h3 className="&quot;text-xl" font-semibold text-white mb-3&quot;>{feature.title}</h3>"
-                  <p className="&quot;text-gray-300" mb-4&quot;>{feature.description}</p>"
-                  <ul className="&quot;space-y-2&quot;"></ul>
+                <div key="{index} className=""bg-white/10" backdrop-blur-sm rounded-xl p-6 border border-white/20"></div>"
+                  <feature.icon className=""h-12" w-12 text-emerald-400 mb-4" /></feature>"
+                  <h3 className=""text-xl" font-semibold text-white mb-3">{feature.title}</h3>"
+                  <p className=""text-gray-300" mb-4">{feature.description}</p>"
+                  <ul className=""space-y-2""></ul>
                     {feature.benefits.map((benefit, idx) => (</ul>"
-                      <li key="{idx}" className="&quot;flex" items-center text-sm text-gray-300&quot;></li>"
-                        <CheckCircle className="&quot;h-4" w-4 text-emerald-400 mr-2 flex-shrink-0&quot; /></CheckCircle>
+                      <li key="{idx} className=""flex" items-center text-sm text-gray-300"></li>"
+                        <CheckCircle className=""h-4" w-4 text-emerald-400 mr-2 flex-shrink-0" /></CheckCircle>
                         {benefit}</CheckCircle>
                       </li>
                     ))}
@@ -96,38 +96,38 @@ const AdvancedSEOOptimizer_newPage: React.FC="()" => {const features: ";",;
           </div>
         </section>
 
-        {/* Benefits Section */}"
-        <section className="&quot;py-20" px-4 bg-white/5&quot;></section>"
-          <div className="&quot;max-w-7xl" mx-auto&quot;></div>"
-            <div className="&quot;text-center" mb-16&quot;></div>"
-              <h2 className="&quot;text-4xl" font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>"
-              <p className="&quot;text-xl" text-gray-300 max-w-3xl mx-auto&quot;>;</p>
+        {/* Benefits Section */}
+        <section className=""py-20" px-4 bg-white/5"></section>"
+          <div className=""max-w-7xl" mx-auto"></div>"
+            <div className=""text-center" mb-16"></div>"
+              <h2 className=""text-4xl" font-bold text-white mb-4">Why Choose Our Solution</h2>"
+              <p className=""text-xl" text-gray-300 max-w-3xl mx-auto">;</p>
                 Experience the benefits of cutting-edge AI technology</p>
               </p>
             </div>"
-            <div className="&quot;grid" md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
+            <div className=""grid" md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {benefits.map((benefit, index) => ("
-                <div key="{index}" className="&quot;flex" items-start space-x-4&quot;></div>"
-                  <CheckCircle className="&quot;h-6" w-6 text-emerald-400 mt-1 flex-shrink-0&quot; /></CheckCircle>"
-                  <p className="&quot;text-gray-300" text-lg&quot;>{benefit}</p>
+                <div key="{index} className=""flex" items-start space-x-4"></div>"
+                  <CheckCircle className=""h-6" w-6 text-emerald-400 mt-1 flex-shrink-0" /></CheckCircle>"
+                  <p className=""text-gray-300" text-lg">{benefit}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}"
-        <section className="&quot;py-20" px-4&quot;></section>"
-          <div className="&quot;max-w-4xl" mx-auto text-center&quot;></div>"
-            <h2 className="&quot;text-4xl" font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>"
-            <p className="&quot;text-xl" text-gray-300 mb-8&quot;>;</p>
+        {/* CTA Section */}
+        <section className=""py-20" px-4"></section>"
+          <div className=""max-w-4xl" mx-auto text-center"></div>"
+            <h2 className=""text-4xl" font-bold text-white mb-6">Ready to Transform Your Business?</h2>"
+            <p className=""text-xl" text-gray-300 mb-8">;</p>
               Join thousands of businesses already using our AI solutions</p>
             </p>"
-            <div className="&quot;flex" flex-col sm:flex-row gap-4 justify-center&quot;></div>"
-              <button className="&quot;bg-emerald-600" hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>;</button>
+            <div className=""flex" flex-col sm:flex-row gap-4 justify-center"></div>"
+              <button className=""bg-emerald-600" hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">;</button>
                 Start Free Trial</button>
               </button>"
-              <button className="&quot;border" border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>;</button>
+              <button className=""border" border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">;</button>
                 Contact Sales</button>
               </button>
             </div>
@@ -138,18 +138,17 @@ const AdvancedSEOOptimizer_newPage: React.FC="()" => {const features: ";",;
     </>
   );
 };
-;
 export default AdvancedSEOOptimizer_newPage;
 description?: string;
 keywords?: string;
 canonicalUrl?: string;
 ogImage?: string;
 twitterCard?: string;
-structuredData?: objectchildren: React.ReactNode}"
-constAdvancedSEOOptimizerNew: React.FC<SEOOptimizerProp s>= ({title: "'Zion" Tech Group - Advanced AI and IT Solutions',;"
-description: "'Professional" AI and IT solutions for your business. Advanced technology, expert support, and proven results.',;"
-keywords: "'AI" solutions, IT services, technology, business solutions, Zion Tech Group',;
-canonicalUrl,;"
+structuredData?: objectchildren: React.ReactNode}
+constAdvancedSEOOptimizerNew: React.FC<SEOOptimizerProp s>= ({title: "'Zion" Tech Group - Advanced AI and IT Solutions',"
+description: "'Professional" AI and IT solutions for your business. Advanced technology, expert support, and proven results.',"
+keywords: "'AI" solutions, IT services, technology, business solutions, Zion Tech Group',
+canonicalUrl,"
 ogImage: "'/$1/og-image.jpg',";"
 twitterCard: "'summary_large_image',";}
 structuredData,}</SEOOptimizerProp>
@@ -166,19 +165,19 @@ if (description.length >= 120&&description.length<= 16 0) {score +=20} else {new
 // Check for keywords in title;
 if (keywords && title.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {score +=15} else {newRecommendations.push('Include primary keyword in title')}
 // Check for keywords in description;
-if (keywords && description.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {score +=15} else {newRecommendations.push('Include primary keyword in description')}"
+if (keywords && description.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {score +=15} else {newRecommendations.push('Include primary keyword in description')}
 // Check for headingstructureconstheadings="do" cument.querySelectorAll('h1, h2, h3, h4, h5, h6');
-if (headings.length >0) {score +=10} else {newRecommendations.push('Add proper heading structure')}"
+if (headings.length >0) {score +=10} else {newRecommendations.push('Add proper heading structure')}
 // Check for images with alttextconstimages="do" cument.querySelectorAll('img');"
 constimagesWithAlt="do" cument.querySelectorAll('img[alt]');"
-if (images.length="==" imagesWithAlt.length && images.length > 0) {score +=10} else {newRecommendations.push('Add alt text to all images')}"
-// Check for internallinksconstinternalLinks="do" cument.querySelectorAll('a[href^=&quot;/&quot;],a[href^=&quot;./&quot;]');
+if (images.length="==" imagesWithAlt.length && images.length > 0) {score +=10} else {newRecommendations.push('Add alt text to all images')}
+// Check for internallinksconstinternalLinks="do" cument.querySelectorAll('a[href^="/"],a[href^="./"]');
 if (internalLinks.length > 0) {score +=10} else {newRecommendations.push('Add internal links for better SEO')}
 setSeoScore(score);
 setRecommendations(newRecommendations)
 }, [title, description, keywords]);
 useEffect(() => {analyzeSEO()}, [analyzeSEO]);"
-constgenerateStructuredData="()" => {const defaultStructuredData: "{&quot;@context&quot;:&quot;https://" schema.org&quot;,&quot;@type&quot;:&quot;Organization&quot;,&quot;name&quot;:&quot;Zion Tech Group&quot;,&quot;description&quot;: description,&quot;url&quot;: canonicalUrl || (type of windo w !== 'undefined' ? windo w.location.origin: ''),&quot;logo&quot;: ogImage,&quot;sameAs&quot; : [&quot;https: // twitter.com/ziontechgroup&quot;,&quot;https:// linkedin.com/$1/ziontechgroup&quot;
+constgenerateStructuredData="()" => {const defaultStructuredData: "{"@context":"https://" schema.org","@type":"Organization","name":"Zion Tech Group","description": description,"url": canonicalUrl || (type of windo w !== 'undefined' ? windo w.location.origin: ''),"logo": ogImage,"sameAs" : ["https: // twitter.com/ziontechgroup","https:// linkedin.com/$1/ziontechgroup"
 ]}
 return structuredDat a || default StructuredData
 }
@@ -188,37 +187,37 @@ return (
     <>
       <Helmet></Helmet>
 <title>{title}</title>"
-<meta name="&quot;description&quot;" content="{description}" /></meta>"
-<meta name="&quot;keywords&quot;" content="{keywords}" /></meta>"
-{canonicalUrl && <link rel="&quot;canonical&quot;" href="{canonicalUrl}" />}</link>
+<meta name=""description"" content="{description} /></meta>"
+<meta name=""keywords"" content="{keywords} /></meta>"
+{canonicalUrl && <link rel=""canonical"" href="{canonicalUrl} />}</link>
 {/* Open Graph */}</link>"
-<meta property="&quot;og:title&quot;" content="{title}" /></meta>"
-<meta property="&quot;og:description&quot;" content="{description}" /></meta>"
-<meta property="&quot;og:image&quot;" content="{ogImage}" /></meta>"
-<meta property="&quot;og:type&quot;" content="&quot;website&quot;" /></meta>"
-{canonicalUrl && <meta property="&quot;og:url&quot;" content="{canonicalUrl}" />}</meta>
+<meta property=""og:title"" content="{title} /></meta>"
+<meta property=""og:description"" content="{description} /></meta>"
+<meta property=""og:image"" content="{ogImage} /></meta>"
+<meta property=""og:type"" content=""website"" /></meta>"
+{canonicalUrl && <meta property=""og:url"" content="{canonicalUrl} />}</meta>
 {/* Twitter Card */}</meta>"
-<meta name="&quot;twitter:card&quot;" content="{twitterCard}" /></meta>"
-<meta name="&quot;twitter:title&quot;" content="{title}" /></meta>"
-<meta name="&quot;twitter:description&quot;" content="{description}" /></meta>"
-<meta name="&quot;twitter:image&quot;" content="{ogImage}" /></meta>
+<meta name=""twitter:card"" content="{twitterCard} /></meta>"
+<meta name=""twitter:title"" content="{title} /></meta>"
+<meta name=""twitter:description"" content="{description} /></meta>"
+<meta name=""twitter:image"" content="{ogImage} /></meta>
 {/* Structured Data */}</meta>"
-<script type="&quot;application/ld+json&quot;"></script>
+<script type=""application/ld+json""></script>
 {JSON.stringify(generateStructuredData())}</script>
 </script>
 </Helmet>
-{children}"
+{children}
 {process.env.NODE_ENV: "==" 'development' && ("
-<div className="&quot;seo-debug&quot;" style="{{";
-position: 'fixed',;
-top: '10 px',;
-left: '10 px',;
-background: 'rgba(0,0,0,0.8)',;
-color: 'white',;
-padding: '10 px',;
-borderRadius: '5 px',;
-fontSize: '12 px',;}
-zIndex: 1000,}"
-maxWidth: '300 px'}}><di v>SEOScore:{seoScore}/100</di>{recommendations.length >0&&(<di v><di v>Recommendations: </di><ulstyle: "{{" margin: '5 px 0', paddingLeft: '15 px'}}>{recommendations.map((recindex)=>(<likey="{index}">{rec}</l>))}</u></di>)}</di>)}</>)
+<div className=""seo-debug"" style="{{";
+position: 'fixed',
+top: '10 px',
+left: '10 px',
+background: 'rgba(0,0,0,0.8)',
+color: 'white',
+padding: '10 px',
+borderRadius: '5 px',
+fontSize: '12 px',}
+zIndex: 1000,}
+maxWidth: '300 px'}}><di v>SEOScore:{seoScore}/100</di>{recommendations.length >0&&(<di v><di v>Recommendations: </di><ulstyle: "{{" margin: '5 px 0', paddingLeft: '15 px'}}>{recommendations.map((recindex)=>(<likey="{index}>{rec}</l>))}</u></di>)}</di>)}</>)
 }
 export default AdvancedSEOOptimizerNew"

@@ -5,11 +5,11 @@ interface ContentPreviewCardProps {;
 }
   id: string;
     title: string;
-    description: string;,;
-    category: string;,;
-    readTime: string;,;
-    date: string;,;
-    path: string;,;
+    description: string;,
+    category: string;,
+    readTime: string;,
+    date: string;,
+    path: string;,
     image: string;
   featured?: boolean;
   stats?: {;
@@ -17,7 +17,7 @@ interface ContentPreviewCardProps {;
   }
   }
 }
-  views: number;,;
+  views: number;,
     engagement: number;
   }
   excerpt?: string;
@@ -28,17 +28,17 @@ const ContentPreviewCard: React.FC;
   }
   }
 }
-  // id,;
-//   title,;
-//   description,;
-//   category,;
-//   readTime,;
-//   date,;
-//   path,;
-//   image,;
-  featured = false,;
-//   stats,;
-//   excerpt,;
+  // id,
+//   title,
+//   description,
+//   category,
+//   readTime,
+//   date,
+//   path,
+//   image,
+  featured = false,
+//   stats,
+//   excerpt,
 }) => {;
     if (num >= 1000) {;
   // TODO: Add content;
@@ -54,20 +54,20 @@ const ContentPreviewCard: React.FC;
   }
 }
     const colors: {;
-    [key: string,;
+    [key: string,
     : string;
   } = {;
     // TODO: Add content;
   }
   }
 }
-      'Success Story': 'from-green-500 to-emerald-600',;
-      'Mega Trends': 'from-blue-500 to-cyan-600',;
-      'Architecture': 'from-purple-500 to-pink-600',;
-      'AI Agents': 'from-orange-500 to-red-600',;
-      'Cost Optimization': 'from-yellow-500 to-orange-600',;
-      'Intelligence': 'from-indigo-500 to-purple-600',;
-      'Transformation': 'from-teal-500 to-blue-600',;
+      'Success Story': 'from-green-500 to-emerald-600',
+      'Mega Trends': 'from-blue-500 to-cyan-600',
+      'Architecture': 'from-purple-500 to-pink-600',
+      'AI Agents': 'from-orange-500 to-red-600',
+      'Cost Optimization': 'from-yellow-500 to-orange-600',
+      'Intelligence': 'from-indigo-500 to-purple-600',
+      'Transformation': 'from-teal-500 to-blue-600',
       'default': 'from-gray-500 to-gray-600';
     }
     return colors[category] || colors.default;
@@ -99,7 +99,7 @@ const ContentPreviewCard: React.FC;
   }
           <div className="absolute top-4 left-4">
             <span className="bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-xs font-bold">
-// Featured,;
+// Featured,
           </span>
           </div>
   }
@@ -193,7 +193,7 @@ const ContentPreviewCard: React.FC;
   }
             className="inline-flex items-center text-indigo-600 hover:text-indigo-700 font-medium text-sm"
 // >
-//             Read Article,;
+//             Read Article,
           <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>

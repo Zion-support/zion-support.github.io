@@ -17,11 +17,11 @@ const PerformanceOptimizer: React.FC;
   }
   }
 }
-  enableImageOptimization = true,;
-  enableLazyLoading = true,;
-  enablePreloading = true,;
-  enableCodeSplitting = true,;
-  enableResourceHints = true,;
+  enableImageOptimization = true,
+  enableLazyLoading = true,
+  enablePreloading = true,
+  enableCodeSplitting = true,
+  enableResourceHints = true,
   enableServiceWorker = true;
 }) => {;
     // TODO: Add content;
@@ -33,11 +33,11 @@ const PerformanceOptimizer: React.FC;
   }
   }
 }
-  imagesOptimized: 0,;
-    lazyLoaded: 0,;
-    preloaded: 0,;
-    codeSplit: false,;
-    resourceHints: 0,;
+  imagesOptimized: 0,
+    lazyLoaded: 0,
+    preloaded: 0,
+    codeSplit: false,
+    resourceHints: 0,
     serviceWorker: false;
   });
   useEffect(() => {;
@@ -76,7 +76,7 @@ const PerformanceOptimizer: React.FC;
   }
   }
 }
-      // Add loading="lazy" for images below the fold,;
+      // Add loading="lazy" for images below the fold,
       if (img.getBoundingClientRect().top > window.innerHeight) {;
     // TODO: Add content;
   }
@@ -85,9 +85,9 @@ const PerformanceOptimizer: React.FC;
         img.setAttribute('loading', 'lazy');
         optimized++;
       }
-      // Add decoding="async" for better performance,;
+      // Add decoding="async" for better performance,
       img.setAttribute('decoding', 'async');
-      // Add fetchpriority="high" for above-the-fold images,;
+      // Add fetchpriority="high" for above-the-fold images,
       if (img.getBoundingClientRect().top;
           <= window.innerHeight) {;
     // TODO: Add content;
@@ -96,7 +96,7 @@ const PerformanceOptimizer: React.FC;
 }
         img.setAttribute('fetchpriority', 'high');
       }
-      // Add proper alt text if missing,;
+      // Add proper alt text if missing,
       if (!img.getAttribute('alt')) {;
     // TODO: Add content;
   }
@@ -126,7 +126,7 @@ if ('IntersectionObserver' in window) {}
   }
   }
 }
-            const img = entry.target as HTMLImageElement,;
+            const img = entry.target as HTMLImageElement,
             if (img.dataset.src) {;
     // TODO: Add content;
   }
@@ -143,7 +143,7 @@ if ('IntersectionObserver' in window) {}
   }
   }
 }
-  rootMargin: '50px 0px',;
+  rootMargin: '50px 0px',
         threshold: 0.1;
       });
       const lazyImages = document.querySelectorAll('img[data-src]');
@@ -157,25 +157,25 @@ if ('IntersectionObserver' in window) {}
   }
 }
     const criticalResources = [;
-  // TODO: Add items,;
+  // TODO: Add items,
 ];
       {;
     // TODO: Add content;
   }
   }
 }
-  href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',;
-        as: 'style',;
-        type: 'text/css',;
-      },;
+  href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
+        as: 'style',
+        type: 'text/css',
+      },
       {;
     // TODO: Add content;
   }
   }
 }
-  href: '/styles/critical.css',;
-        as: 'style',;
-        type: 'text/css',;
+  href: '/styles/critical.css',
+        as: 'style',
+        type: 'text/css',
       }
     ];
     criticalResources.forEach((resource) => {;
@@ -203,7 +203,7 @@ if ('IntersectionObserver' in window) {}
   }
   }
 }
-    // This would be handled by Next.js dynamic imports,;
+    // This would be handled by Next.js dynamic imports,
     setOptimizationStatus(prev => ({ ...prev, codeSplit: true }));
   }
   const addResourceHints = () => {;
@@ -212,16 +212,16 @@ if ('IntersectionObserver' in window) {}
   }
 }
     const hints = [;
-  // TODO: Add items,;
+  // TODO: Add items,
 ];
-      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },;
-      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },;
-      { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' },;
-      { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },;
-      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },;
+      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
+      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
+      { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' },
+      { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
+      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
       {;
-    rel: 'preconnect',;
-    href: 'https://fonts.gstatic.com',;
+    rel: 'preconnect',
+    href: 'https://fonts.gstatic.com',
     crossorigin: 'anonymous';
   }
     ];
@@ -266,11 +266,11 @@ if ('IntersectionObserver' in window) {}
   }
   }
 }
-        // Service Worker registration failed - handled silently in production,;
+        // Service Worker registration failed - handled silently in production,
       }
     }
   }
-  // Performance monitoring,;
+  // Performance monitoring,
   useEffect(() => {;
     // TODO: Add content;
   }
@@ -296,7 +296,7 @@ if ('IntersectionObserver' in window) {}
   }
   }
 }
-            // Track LCP,;
+            // Track LCP,
             if (typeof window !== 'undefined' && 'gtag' in window) {;
     // TODO: Add content;
   }
@@ -307,16 +307,16 @@ if ('IntersectionObserver' in window) {}
   }
   }
 }
-  name: 'LCP',;
-                value: Math.round(entry.startTime),;
-                event_category: 'Performance',;
+  name: 'LCP',
+                value: Math.round(entry.startTime),
+                event_category: 'Performance',
               });
             }
           }
         }
       });
       observer.observe({;
-    entryTypes: ['largest-contentful-paint',;
+    entryTypes: ['largest-contentful-paint',
   });
     }
   }, []);

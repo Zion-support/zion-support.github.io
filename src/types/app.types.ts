@@ -7,12 +7,12 @@
  * Defines the structure for performance monitoring data;
  */;
 export interface PerformanceMetrics {;
-    fcp?: number; // First Contentful Paint,;
-    lcp?: number; // Largest Contentful Paint,;
-    fid?: number; // First Input Delay,;
-    cls?: number; // Cumulative Layout Shift,;
-    ttfb?: number; // Time to First Byte,;
-    fmp?: number; // First Meaningful Paint,;
+    fcp?: number; // First Contentful Paint,
+    lcp?: number; // Largest Contentful Paint,
+    fid?: number; // First Input Delay,
+    cls?: number; // Cumulative Layout Shift,
+    ttfb?: number; // Time to First Byte,
+    fmp?: number; // First Meaningful Paint,
     customMetrics?: Record;
   }
           <string, number>
@@ -29,9 +29,9 @@ export interface PerformanceReport {;
   }
 }
   webVitals: Partial;
-          <PerformanceMetrics>;,;
-    resources: ResourceStats;,;
-    memory: MemoryStats | null;,;
+          <PerformanceMetrics>;,
+    resources: ResourceStats;,
+    memory: MemoryStats | null;,
     timestamp: number;
 }
 /**;
@@ -43,10 +43,10 @@ export interface ResourceStats {;
   }
   }
 }
-  total: number;,;
-    scripts: number;,;
-    styles: number;,;
-    images: number;,;
+  total: number;,
+    scripts: number;,
+    styles: number;,
+    images: number;,
     fonts: number;
 }
 /**;
@@ -58,8 +58,8 @@ export interface MemoryStats {;
   }
   }
 }
-  usedJSHeapSize: number;,;
-    totalJSHeapSize: number;,;
+  usedJSHeapSize: number;,
+    totalJSHeapSize: number;,
     jsHeapSizeLimit: number;
 }
 /**;
@@ -71,11 +71,11 @@ export interface PerformanceAlert {;
   }
   }
 }
-  type: 'warning' | 'error' | 'info';,;
-    message: string;,;
-    metric: keyof PerformanceMetrics;,;
-    value: number;,;
-    threshold: number;,;
+  type: 'warning' | 'error' | 'info';,
+    message: string;,
+    metric: keyof PerformanceMetrics;,
+    value: number;,
+    threshold: number;,
     timestamp: number;
 }
 /**;
@@ -87,7 +87,7 @@ export interface LayoutShift extends PerformanceEntry {;
   }
   }
 }
-  value: number;,;
+  value: number;,
     hadRecentInput: boolean;
 }
 /**;
@@ -104,8 +104,8 @@ export interface PerformanceWithMemory extends Performance {;
   }
   }
 }
-  usedJSHeapSize: number;,;
-    totalJSHeapSize: number;,;
+  usedJSHeapSize: number;,
+    totalJSHeapSize: number;,
     jsHeapSizeLimit: number;
   }
 }

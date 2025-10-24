@@ -38,7 +38,7 @@ class GlobalErrorBoundary extends Component;
   }
 }
     return {;
-    hasError: true,;
+    hasError: true,
     error;
   }
   }
@@ -52,17 +52,17 @@ class GlobalErrorBoundary extends Component;
   }
   }
 }
-//       error,;
-//       errorInfo,;
+//       error,
+//       errorInfo,
     });
-    // Log error to console in development,;
+    // Log error to console in development,
     if (process.env.NODE_ENV === 'development') {;
     // TODO: Add content;
   }
   }
 }
       }
-    // In production, you might want to send this to an error reporting service,;
+    // In production, you might want to send this to an error reporting service,
     // Example: errorReportingService.captureException(error, { extra: errorInfo });
   }
   handleRetry = () => {;
@@ -106,7 +106,7 @@ class GlobalErrorBoundary extends Component;
     /* Error Message */;
   }
             <h1 className="text-2xl font-bold text-white mb-4">
-// Something went wrong,;
+// Something went wrong,
           </h1>
             <p className="text-gray-300 mb-6">
               We're sorry, but something unexpected happened. Please try refreshing the page.;
@@ -156,7 +156,7 @@ class GlobalErrorBoundary extends Component;
   }
                 className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 font-medium"
 // >
-//                 Try Again,;
+//                 Try Again,
           </button>
               <button;
                 onClick={;
@@ -164,13 +164,13 @@ class GlobalErrorBoundary extends Component;
   }
                 className="w-full bg-slate-700 text-white px-6 py-3 rounded-lg hover:bg-slate-600 transition-colors duration-300 font-medium"
 // >;
-//                 Refresh Page,;
+//                 Refresh Page,
           </button>
               <a;
                 href="/";
                 className="block w-full bg-transparent border border-gray-600 text-gray-300 px-6 py-3 rounded-lg hover:bg-slate-800 hover:text-white transition-all duration-300 font-medium"
 // >
-//                 Go Home,;
+//                 Go Home,
           </a>
             </div>
             {;

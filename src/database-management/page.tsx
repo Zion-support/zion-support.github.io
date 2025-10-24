@@ -2,14 +2,14 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import {;
-    Database,;
-    Shield,;
-    BarChart,;
-    Settings,;
-    CheckCircle,;
-    Star,;
-    Database,;
-    Shield,;
+    Database,
+    Shield,
+    BarChart,
+    Settings,
+    CheckCircle,
+    Star,
+    Database,
+    Shield,
     Settings from 'lucide-react';
   }
 const DatabaseManagementPage: React.FC = () => {;
@@ -19,19 +19,19 @@ const DatabaseManagementPage: React.FC = () => {;
   }
   }
 }
-  icon: Database,;
-      title: 'Database Administration',;
-      description: 'value',;
+  icon: Database,
+      title: 'Database Administration',
+      description: 'value',
   ];
       benefits: ['Performance tuning', 'Backup & recovery', 'Security hardening'];
-    },;
-      icon: Shield,;
-      title: 'Data Security',;
-      description: 'Enterprise-grade security for your data assets',;
+    },
+      icon: Shield,
+      title: 'Data Security',
+      description: 'Enterprise-grade security for your data assets',
       benefits: ['Encryption', 'Access control', 'Audit logging'];
-      icon: Settings,;
-      title: 'Automated Maintenance',;
-      description: 'Automated database maintenance and updates',;
+      icon: Settings,
+      title: 'Automated Maintenance',
+      description: 'Automated database maintenance and updates',
       benefits: ['Automated backups', 'Patch management', 'Health checks'];
     }
   ];
@@ -43,10 +43,10 @@ const DatabaseManagementPage: React.FC = () => {;
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
-// Database Management,;
+// Database Management,
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse">
-// Comprehensive Database Solutions,;
+// Comprehensive Database Solutions,
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             Optimize your database performance and security with our comprehensive database management services.;
@@ -56,7 +56,7 @@ const DatabaseManagementPage: React.FC = () => {;
               href="/contact";
               className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
 // >
-//               Get Started,;
+//               Get Started,
           </a>
               href="tel:+13024640950";
               className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
@@ -66,11 +66,11 @@ const DatabaseManagementPage: React.FC = () => {;
         </section>
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
-// Database Services,;
+// Database Services,
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {;
-    features.map((feature,;
+    features.map((feature,
     index) => ();
   }
   }
@@ -89,7 +89,7 @@ const DatabaseManagementPage: React.FC = () => {;
   }
                 <ul className="space-y-2">
                   {;
-    feature.benefits.map((benefit,;
+    feature.benefits.map((benefit,
     benefitIndex) => ();
   }
   }

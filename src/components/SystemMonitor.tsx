@@ -4,7 +4,7 @@
  * Real-time monitoring dashboard for performance, errors, and system health;
  */;
 import React, { useState, useEffect, useCallback } from 'react';
-// Collect basic performance metrics,;
+// Collect basic performance metrics,
 const collectPerformanceMetrics = () => {;
   }
   }
@@ -15,17 +15,17 @@ const __collectPerformanceMetrics = () => {;
   }
 }
   if (typeof window === 'undefined' || !window.performance) return null;
-  const navigation = window.performance.timing,;
+  const navigation = window.performance.timing,
   const paint = window.performance.getEntriesByType('paint');
   return {;
     // TODO: Add content;
   }
   }
 }
-  loadTime: navigation.loadEventEnd - navigation.navigationStart,;
+  loadTime: navigation.loadEventEnd - navigation.navigationStart,
     firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
   }
-// Helper functions,;
+// Helper functions,
 const calculatePerformanceScore = () => {;
     // TODO: Add content;
   }
@@ -34,14 +34,14 @@ const calculatePerformanceScore = () => {;
   const metrics = performanceOptimizer.getMetrics();
   if (!metrics) return 0;
   let __score = 100;
-  // Deduct points for slow load times,;
+  // Deduct points for slow load times,
   if (metrics.loadTime > 3000) score -= 20;
   if (metrics.loadTime > 5000) score -= 30;
-  // Deduct points for slow paint times,;
+  // Deduct points for slow paint times,
   if (metrics.firstContentfulPaint && metrics.firstContentfulPaint > 2000) score -= 15;
   if (metrics.firstContentfulPaint && metrics.firstContentfulPaint > 3000) score -= 25;
   return Math.max(0, score);
-// Network connection interface,;
+// Network connection interface,
 interface NetworkConnection {;
     // TODO: Add content;
   }
@@ -71,17 +71,17 @@ interface SystemMetrics {;
   }
 }
   score: number;
-    loadTime: number;,;
-    firstContentfulPaint: number;,;
-    largestContentfulPaint: number;,;
-    firstInputDelay: number;,;
-    cumulativeLayoutShift: number;,;
+    loadTime: number;,
+    firstContentfulPaint: number;,
+    largestContentfulPaint: number;,
+    firstInputDelay: number;,
+    cumulativeLayoutShift: number;,
     errors: {;
     // TODO: Add content;
   }
   }
 }
-  total: number;,;
+  total: number;,
     byType: Record;
           <string, number>
     byCategory: Record<string, number>
@@ -91,10 +91,10 @@ interface SystemMetrics {;
   }
   }
 }
-  id: string;,;
-    message: string;,;
-    type: string;,;
-    severity: string;,;
+  id: string;,
+    message: string;,
+    type: string;,
+    severity: string;,
     timestamp: string;
     }>
   memory: {;
@@ -102,17 +102,17 @@ interface SystemMetrics {;
   }
   }
 }
-  used: number;,;
-    limit: number;,;
-    percentage: number;,;
+  used: number;,
+    limit: number;,
+    percentage: number;,
     network: {;
     // TODO: Add content;
   }
   }
 }
-  effectiveType: string;,;
-    downlink: number;,;
-    rtt: number;,;
+  effectiveType: string;,
+    downlink: number;,
+    rtt: number;,
     saveData: boolean;
 interface SystemMonitorProps {;
     // TODO: Add content;
@@ -129,20 +129,20 @@ const SystemMonitor: React.FC;
   }
   }
 }
-  refreshInterval = 5000,;
-  showDetails = true,;
-  enableExport = true,;
+  refreshInterval = 5000,
+  showDetails = true,
+  enableExport = true,
   className = '';
 }) => {;
     // TODO: Add content;
   }
   }
 }
-  const [metrics, setMetrics] = useState,;
+  const [metrics, setMetrics] = useState,
           <SystemMetrics | null>(null);
   const [isMonitoring, setIsMonitoring] = useState(false);
   const [lastUpdate, setLastUpdate] = useState<Date | null>(null);
-  // Update metrics,;
+  // Update metrics,
 const updateMetrics = useCallback(() => {;
     // TODO: Add content;
   }
@@ -156,55 +156,55 @@ const updateMetrics = useCallback(() => {;
       const performanceMetrics = performanceOptimizer.getMetrics();
       const performanceScore = calculatePerformanceScore();
       const errorStats = errorHandler.getErrorStatistics();
-// Get memory info,;
+// Get memory info,
       const memoryInfo = getMemoryInfo();
-      // Get network info,;
+      // Get network info,
       const networkInfo = getNetworkInfo();
       const newMetrics: SystemMetrics = {;
     const _networkInfo = getNetworkInfo();
       const _newMetrics: SystemMetrics = {;
-    score: performanceScore,;
-          loadTime: performanceMetrics?.loadTime || 0,;
+    score: performanceScore,
+          loadTime: performanceMetrics?.loadTime || 0,
           firstContentfulPaint: performanceMetrics?.firstContentfulPaint || 0;
   }
-          largestContentfulPaint: 0, // Not available in current metrics,;
-  firstInputDelay: 0, // Not available in current metrics,;
+          largestContentfulPaint: 0, // Not available in current metrics,
+  firstInputDelay: 0, // Not available in current metrics,
   }
   }
   }
-  cumulativeLayoutShift: 0, // Not available in current metrics,;
-        },;
-          total: errorStats.totalErrors,;
-          byType: errorStats.errorsByType,;
-          byCategory: errorStats.errorsByCategory,;
-          bySeverity: errorStats.errorsBySeverity,;
+  cumulativeLayoutShift: 0, // Not available in current metrics,
+        },
+          total: errorStats.totalErrors,
+          byType: errorStats.errorsByType,
+          byCategory: errorStats.errorsByCategory,
+          bySeverity: errorStats.errorsBySeverity,
           recent: errorStats.recentErrors.map(error => ({;
     // TODO: Add content;
   }
   }
 }
-  id: error.id,;
-            message: error.message,;
-            type: error.type,;
-            severity: error.severity,;
+  id: error.id,
+            message: error.message,
+            type: error.type,
+            severity: error.severity,
             timestamp: error.context.timestamp;
           }));
-  memory: memoryInfo,;
+  memory: memoryInfo,
         network: networkInfo;
       setMetrics(newMetrics);
       setLastUpdate(new Date());
     } catch (error) {;
     if (!isMonitoring) return;
-    const interval = setInterval(updateMetrics,;
+    const interval = setInterval(updateMetrics,
     refreshInterval);
     return () => clearInterval(interval);
   }
   }
   }
   }, [isMonitoring, refreshInterval, updateMetrics]);
-      effectiveType: 'unknown',;
-      downlink: 0,;
-      rtt: 0,;
+      effectiveType: 'unknown',
+      downlink: 0,
+      rtt: 0,
       saveData: false;
           <div className={`bg-white rounded-lg shadow-lg p-6 ${className}`}>
       <div className="flex items-center justify-between mb-6">
@@ -228,7 +228,7 @@ const updateMetrics = useCallback(() => {;
   }
               className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
 // >
-//               Export Data,;
+//               Export Data,
           </button>
           )}
       {;
@@ -344,8 +344,8 @@ className={;
           <h3 className="text-lg font-semibold text-gray-900 mb-4">Error Distribution</h3>
               <h4 className="text-sm font-medium text-gray-600 mb-2">By Type</h4>
               <div className="space-y-1">
-                {Object.entries(metrics.errors.byType).map(([type,;
-    count,;
+                {Object.entries(metrics.errors.byType).map(([type,
+    count,
     ) => ();
   }
   }
@@ -355,8 +355,8 @@ className={;
                     <span>{count}</span>
               <h4 className="text-sm font-medium text-gray-600 mb-2">By Category</h4>
                 {;
-    Object.entries(metrics.errors.byCategory).map(([category,;
-    count,;
+    Object.entries(metrics.errors.byCategory).map(([category,
+    count,
     ) => ();
   }
   }

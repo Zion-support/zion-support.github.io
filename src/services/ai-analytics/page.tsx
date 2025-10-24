@@ -1,21 +1,21 @@
 import {;
-    BarChart,;
-    TrendingUp,;
-    Target,;
-    Zap,;
-    Brain,;
-    CheckCircle,;
-    Phone,;
-    Mail,;
-    Star,;
-    Users,;
-    Award,;
-    Brain,;
-    BarChart,;
-    Target,;
-    Zap,;
-    TrendingUp,;
-    Star,;
+    BarChart,
+    TrendingUp,
+    Target,
+    Zap,
+    Brain,
+    CheckCircle,
+    Phone,
+    Mail,
+    Star,
+    Users,
+    Award,
+    Brain,
+    BarChart,
+    Target,
+    Zap,
+    TrendingUp,
+    Star,
     Award from 'lucide-react';
 'use client';
 import React from 'react';
@@ -29,86 +29,86 @@ const AIAnalyticsPage: React.FC = () => {;
   }
   }
 }
-  icon: Brain,;
-      title: 'Predictive Analytics',;
-      description: 'value',;
+  icon: Brain,
+      title: 'Predictive Analytics',
+      description: 'value',
   ];
       benefits: [;
-  // TODO: Add items,;
+  // TODO: Add items,
 ];
-//         '95% accuracy in predictions',;
-//         'Real-time data processing',;
-//         'Automated trend detection',;
+//         '95% accuracy in predictions',
+//         'Real-time data processing',
+//         'Automated trend detection',
 //         'Custom prediction models';
 //       ];
-    },;
-icon: BarChart,;
-      title: 'Real-time Dashboards',;
-      description: 'Interactive dashboards that provide instant insights into your business performance',;
-        'Live data visualization',;
-        'Customizable metrics',;
-        'Mobile-responsive design',;
+    },
+icon: BarChart,
+      title: 'Real-time Dashboards',
+      description: 'Interactive dashboards that provide instant insights into your business performance',
+        'Live data visualization',
+        'Customizable metrics',
+        'Mobile-responsive design',
         'Role-based access control';
-      icon: Target,;
-      title: 'Automated Reporting',;
-      description: 'Generate comprehensive reports automatically with AI-powered insights',;
-        'Scheduled report generation',;
-        'Natural language summaries',;
-        'Executive briefings',;
+      icon: Target,
+      title: 'Automated Reporting',
+      description: 'Generate comprehensive reports automatically with AI-powered insights',
+        'Scheduled report generation',
+        'Natural language summaries',
+        'Executive briefings',
         'Custom report templates';
-      icon: Zap,;
-      title: 'Anomaly Detection',;
-      description: 'Identify unusual patterns and potential issues before they impact your business',;
-        'Real-time anomaly alerts',;
-        'Pattern recognition',;
-        'Risk assessment',;
+      icon: Zap,
+      title: 'Anomaly Detection',
+      description: 'Identify unusual patterns and potential issues before they impact your business',
+        'Real-time anomaly alerts',
+        'Pattern recognition',
+        'Risk assessment',
         'Automated responses';
     }
   ];
   const useCases = [;
-    title: 'Sales Performance Analysis',;
-      description: 'Track sales metrics, identify top performers, and optimize sales strategies',;
-      icon: TrendingUp,;
-      color: 'text-green-400',;
-      title: 'Financial Forecasting',;
-      description: 'Predict revenue, expenses, and cash flow with high accuracy',;
-      color: 'text-purple-400',;
-      name: 'Professional',;
-      price: '$3,500',;
-      description: 'Ideal for growing businesses with complex analytics needs',;
-        'Up to 50 data sources',;
-        'Advanced dashboards',;
-        'Real-time reporting',;
-        'Priority support',;
-        'Custom integrations',;
+    title: 'Sales Performance Analysis',
+      description: 'Track sales metrics, identify top performers, and optimize sales strategies',
+      icon: TrendingUp,
+      color: 'text-green-400',
+      title: 'Financial Forecasting',
+      description: 'Predict revenue, expenses, and cash flow with high accuracy',
+      color: 'text-purple-400',
+      name: 'Professional',
+      price: '$3,500',
+      description: 'Ideal for growing businesses with complex analytics needs',
+        'Up to 50 data sources',
+        'Advanced dashboards',
+        'Real-time reporting',
+        'Priority support',
+        'Custom integrations',
         'API access';
-      color: 'text-purple-400',;
-      bgColor: 'bg-purple-500/10',;
-      popular: true,;
-      name: 'Enterprise',;
-      price: 'Custom',;
-      period: '',;
-      description: 'Tailored solutions for large organizations with extensive requirements',;
-'Unlimited data sources',;
-        'Custom dashboards',;
-        'Real-time analytics',;
-        '24/7 dedicated support',;
-        'Custom development',;
-        'On-premise deployment',;
+      color: 'text-purple-400',
+      bgColor: 'bg-purple-500/10',
+      popular: true,
+      name: 'Enterprise',
+      price: 'Custom',
+      period: '',
+      description: 'Tailored solutions for large organizations with extensive requirements',
+'Unlimited data sources',
+        'Custom dashboards',
+        'Real-time analytics',
+        '24/7 dedicated support',
+        'Custom development',
+        'On-premise deployment',
         'SLA guarantees';
-      color: 'text-cyan-400',;
-      bgColor: 'bg-cyan-500/10',;
-  const benefits = [,;
-      icon: Star,;
-      title: '95% Accuracy',;
-      description: 'Industry-leading accuracy in predictions and insights',;
-      title: 'Real-time Processing',;
-      description: 'Instant analysis of data as it comes in',;
-      title: 'Actionable Insights',;
-      description: 'Clear, actionable recommendations for business improvement',;
-      icon: Award,;
-      title: 'Proven Results',;
-      description: '300% average ROI for our analytics clients',;
+      color: 'text-cyan-400',
+      bgColor: 'bg-cyan-500/10',
+  const benefits = [,
+      icon: Star,
+      title: '95% Accuracy',
+      description: 'Industry-leading accuracy in predictions and insights',
+      title: 'Real-time Processing',
+      description: 'Instant analysis of data as it comes in',
+      title: 'Actionable Insights',
+      description: 'Clear, actionable recommendations for business improvement',
+      icon: Award,
+      title: 'Proven Results',
+      description: '300% average ROI for our analytics clients',
   return (;
           <div>Coming Soon</div>
   );
@@ -121,7 +121,7 @@ icon: BarChart,;
   }
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-// AI Analytics Services,;
+// AI Analytics Services,
           </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
 // Transform your data into actionable insights with our advanced AI-powered analytics platform.;
@@ -143,11 +143,11 @@ icon: BarChart,;
   }
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-// Key Features,;
+// Key Features,
           </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {;
-    features.map((feature,;
+    features.map((feature,
     index) => ();
   }
   }
@@ -161,7 +161,7 @@ icon: BarChart,;
                       <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
                     {;
-    feature.benefits.map((benefit,;
+    feature.benefits.map((benefit,
     benefitIndex) => ();
   }
   }
@@ -180,7 +180,7 @@ icon: BarChart,;
               Use Cases;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {;
-    useCases.map((useCase,;
+    useCases.map((useCase,
     index) => ();
   }
   }
@@ -196,7 +196,7 @@ icon: BarChart,;
               Pricing Plans;
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {;
-    pricingTiers.map((tier,;
+    pricingTiers.map((tier,
     index) => ();
   }
   }
@@ -207,7 +207,7 @@ icon: BarChart,;
   }
           <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                       <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-medium">
-// Most Popular,;
+// Most Popular,
           </span>
   }
   }
@@ -220,7 +220,7 @@ icon: BarChart,;
                     <p className="text-gray-300 text-sm mt-2">{tier.description}</p>
                   <ul className="space-y-3 mb-6">
                     {;
-    tier.features.map((feature,;
+    tier.features.map((feature,
     featureIndex) => ();
   }
   }
@@ -237,19 +237,19 @@ icon: BarChart,;
   }
   }
 }
-//                       tier.popular,;
+//                       tier.popular,
                         ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300';
                         : 'bg-slate-700 text-white hover:bg-slate-600';
                     }`}
 //                   >
-//                     Get Started,;
+//                     Get Started,
           </a>
 {;
     /* Benefits */;
   }
               Why Choose Our AI Analytics?;
               {;
-    benefits.map((benefit,;
+    benefits.map((benefit,
     index) => ();
   }
   }
@@ -283,5 +283,5 @@ Get Free Consultation;
     </>
   );
 }
-export default AIAnalyticsPage,;
+export default AIAnalyticsPage,
   ];

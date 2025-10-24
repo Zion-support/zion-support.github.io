@@ -1,32 +1,32 @@
 import {;
-    Phone,;
-    Star,;
-    Zap,;
-    Shield,;
-    Globe,;
-    Brain,;
-    BarChart,;
-    Eye,;
-    CheckCircle,;
-    Smartphone,;
-    Settings,;
-    ShoppingCart,;
-    Building,;
-    Car,;
-    Briefcase,;
-    Calculator,;
-    Zap as Lightning,;
-    Shield as Security,;
-    Star as StarIcon,;
-    CheckCircle as Check,;
-    Phone as PhoneIcon,;
-    Receipt,;
-    Calculator as CalculatorIcon,;
-    Brain,;
-    Zap,;
-    BarChart,;
-    Smartphone,;
-    ShoppingCart,;
+    Phone,
+    Star,
+    Zap,
+    Shield,
+    Globe,
+    Brain,
+    BarChart,
+    Eye,
+    CheckCircle,
+    Smartphone,
+    Settings,
+    ShoppingCart,
+    Building,
+    Car,
+    Briefcase,
+    Calculator,
+    Zap as Lightning,
+    Shield as Security,
+    Star as StarIcon,
+    CheckCircle as Check,
+    Phone as PhoneIcon,
+    Receipt,
+    Calculator as CalculatorIcon,
+    Brain,
+    Zap,
+    BarChart,
+    Smartphone,
+    ShoppingCart,
     Building from 'lucide-react';
 'use client';
   }
@@ -43,38 +43,38 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {;
   }
   }
 }
-  icon: Brain,;
-      title: 'AI-Powered Invoice Generation',;
-      description: 'value',;
+  icon: Brain,
+      title: 'AI-Powered Invoice Generation',
+      description: 'value',
   ];
       benefits: ['Smart template selection', 'Automatic data population', 'Context-aware pricing', 'Brand consistency'];
-    },;
-      icon: Zap,;
-      title: 'Instant Processing',;
-      description: 'Generate invoices in seconds with our advanced AI algorithms that learn from your business patterns.',;
+    },
+      icon: Zap,
+      title: 'Instant Processing',
+      description: 'Generate invoices in seconds with our advanced AI algorithms that learn from your business patterns.',
       benefits: ['Real-time generation', 'Batch processing', 'Template optimization', 'Error reduction'];
-      icon: BarChart,;
-      title: 'Analytics & Insights',;
-      description: 'Track payment patterns, identify trends, and get AI-powered insights to improve your cash flow.',;
+      icon: BarChart,
+      title: 'Analytics & Insights',
+      description: 'Track payment patterns, identify trends, and get AI-powered insights to improve your cash flow.',
       benefits: ['Payment analytics', 'Trend analysis', 'Cash flow predictions', 'Client insights'];
-      icon: Smartphone,;
-      title: 'Mobile Optimized',;
-      description: 'Create, send, and manage invoices on any device with our responsive mobile interface.',;
+      icon: Smartphone,
+      title: 'Mobile Optimized',
+      description: 'Create, send, and manage invoices on any device with our responsive mobile interface.',
       benefits: ['Mobile-first design', 'Offline capability', 'Touch optimization', 'Push notifications'];
     }
   ];
   const pricingPlans = [;
-    name: 'Professional',;
-      price: '$79',;
-      description: 'Ideal for growing businesses',;
-      title: 'E-commerce Businesses',;
-      description: 'Automate invoice generation for online sales with AI-powered order processing.',;
-      icon: ShoppingCart,;
+    name: 'Professional',
+      price: '$79',
+      description: 'Ideal for growing businesses',
+      title: 'E-commerce Businesses',
+      description: 'Automate invoice generation for online sales with AI-powered order processing.',
+      icon: ShoppingCart,
   ];
       benefits: ['Order integration', 'Inventory tracking', 'Tax calculations', 'Customer management'];
-      title: 'Agencies & Studios',;
-      description: 'Manage complex client billing with AI that handles multiple projects and billing structures.',;
-      icon: Building,;
+      title: 'Agencies & Studios',
+      description: 'Manage complex client billing with AI that handles multiple projects and billing structures.',
+      icon: Building,
       benefits: ['Multi-client management', 'Project tracking', 'Team collaboration', 'Advanced reporting'];
   return (;
           <div>Coming Soon</div>
@@ -84,12 +84,12 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {;
         title="AI Invoice Generator - Automated Invoice Creation | Zion Tech Group";
         description="Generate professional invoices instantly with AI-powered automation. Save time, reduce errors, and improve cash flow with our intelligent invoice generation platform.";
         keywords={;
-    ['AI invoice generator',;
-    'automated invoicing',;
-    'invoice automation',;
-    'AI billing',;
-    'smart invoicing',;
-    'invoice management',;
+    ['AI invoice generator',
+    'automated invoicing',
+    'invoice automation',
+    'AI billing',
+    'smart invoicing',
+    'invoice management',
     'business automation'];
   }
         canonicalUrl="https:// ziontechgroup.com/ai-invoice-generator";
@@ -111,11 +111,11 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {;
     ' ';
   }
                 <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-// AI Intelligence,;
+// AI Intelligence,
           </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-// Transform your invoicing process with AI-powered automation. Create, send, and track invoices,;
+// Transform your invoicing process with AI-powered automation. Create, send, and track invoices,
                 effortlessly while gaining valuable insights into your business performance.;
           </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -124,7 +124,7 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {;
                   className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 inline-flex items-center"
 // >
           <Calculator className="w-5 h-5 mr-2" />
-// Start Free Trial,;
+// Start Free Trial,
           </a>
                   href="#demo";
                   className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300 inline-flex items-center"
@@ -149,14 +149,14 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {;
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-// Powerful AI Features,;
+// Powerful AI Features,
           </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
 Our AI invoice generator combines cutting-edge technology with user-friendly design;
                   to revolutionize your billing process.;
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {;
-    features.map((feature,;
+    features.map((feature,
     index) => ();
   }
   }
@@ -168,7 +168,7 @@ Our AI invoice generator combines cutting-edge technology with user-friendly des
                     <p className="text-gray-300 mb-4">{feature.description}</p>
                     <ul className="space-y-2">
                       {;
-    feature.benefits.map((benefit,;
+    feature.benefits.map((benefit,
     benefitIndex) => ();
   }
   }
@@ -190,7 +190,7 @@ Whether you're a freelancer or a large enterprise, our AI invoice generator;
                   adapts to your specific needs and industry requirements.;
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {;
-    useCases.map((useCase,;
+    useCases.map((useCase,
     index) => ();
   }
   }
@@ -202,7 +202,7 @@ Whether you're a freelancer or a large enterprise, our AI invoice generator;
                     <p className="text-gray-300 mb-4">{useCase.description}</p>
                     <ul className="space-y-2 text-left">
                       {;
-    useCase.benefits.map((benefit,;
+    useCase.benefits.map((benefit,
     benefitIndex) => (;
   }
   }
@@ -216,7 +216,7 @@ Whether you're a freelancer or a large enterprise, our AI invoice generator;
                   with no hidden fees or setup costs.;
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 {;
-    pricingPlans.map((plan,;
+    pricingPlans.map((plan,
     index) => ();
   }
   }
@@ -227,7 +227,7 @@ Whether you're a freelancer or a large enterprise, our AI invoice generator;
   }
   }
 }
-//                     plan.popular,;
+//                     plan.popular,
 //                       ? 'bg-gradient-to-br from-purple-500/20 to-pink-500/20 border-2 border-purple-400';
                       : 'bg-slate-800/50 border border-slate-700';
                   }`}>
@@ -248,7 +248,7 @@ Most Popular;
                         <span className="text-gray-400 ml-1">{plan.period}</span>
                     <ul className="space-y-4 mb-8">
                       {;
-    plan.features.map((feature,;
+    plan.features.map((feature,
     featureIndex) => ();
   }
   }
@@ -272,7 +272,7 @@ Most Popular;
                   See how our AI invoice generator is transforming businesses across industries.;
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {;
-    testimonials.map((testimonial,;
+    testimonials.map((testimonial,
     index) => ();
   }
   }
@@ -285,14 +285,14 @@ Most Popular;
                         <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
                     <div className="flex mb-4">
                       {;
-    [...Array(testimonial.rating),;
-    .map((_,;
+    [...Array(testimonial.rating),
+    .map((_,
     i) => ();
   }
   }
   }
           <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                    <p className="text-gray-300 italic">"{testimonial.content}"</p>
+                    <p className="text-gray-300 italic">"{testimonial.content}</p>
 {;
     /* CTA Section */;
   }

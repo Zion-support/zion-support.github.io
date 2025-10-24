@@ -19,42 +19,42 @@ export const _defaultSecurityHeaders: SecurityHeadersConfig = {;
   }
   }
 }
-  // Content Security Policy,;
+  // Content Security Policy,
   contentSecurityPolicy: [;
-  // TODO: Add items,;
+  // TODO: Add items,
 ];
-//     "default-src 'self'",;
-    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com",;
-//     "style-src 'self' 'unsafe-inline'",;
-    "img-src 'self' data: https: blob:",;
-    "font-src 'self' data:",;
-    "connect-src 'self' https://www.google-analytics.com https://analytics.google.com",;
-//     "frame-ancestors 'none'",;
-//     "base-uri 'self'",;
-//     "form-action 'self'",;
-//     'upgrade-insecure-requests',;
-  ].join('; '),;
+//     "default-src 'self'",
+    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com",
+//     "style-src 'self' 'unsafe-inline'",
+    "img-src 'self' data: https: blob:",
+    "font-src 'self' data:",
+    "connect-src 'self' https://www.google-analytics.com https://analytics.google.com",
+//     "frame-ancestors 'none'",
+//     "base-uri 'self'",
+//     "form-action 'self'",
+//     'upgrade-insecure-requests',
+  ].join('; '),
   // HTTP Strict Transport Security (HSTS);
-  strictTransportSecurity: 'max-age=63072000; includeSubDomains; preload',;
-  // Prevent clickjacking,;
-  xFrameOptions: 'DENY',;
-  // Prevent MIME type sniffing,;
-  xContentTypeOptions: 'nosniff',;
-  // Referrer Policy,;
-  referrerPolicy: 'strict-origin-when-cross-origin',;
+  strictTransportSecurity: 'max-age=63072000; includeSubDomains; preload',
+  // Prevent clickjacking,
+  xFrameOptions: 'DENY',
+  // Prevent MIME type sniffing,
+  xContentTypeOptions: 'nosniff',
+  // Referrer Policy,
+  referrerPolicy: 'strict-origin-when-cross-origin',
   // Permissions Policy (formerly Feature Policy);
   permissionsPolicy: [;
-  // TODO: Add items,;
+  // TODO: Add items,
 ];
-    'camera=()',;
-    'microphone=()',;
-    'geolocation=()',;
-    'payment=()',;
-    'usb=()',;
-    'interest-cohort=()',;
-    'accelerometer=()',;
-    'gyroscope=()',;
-    'magnetometer=()',;
+    'camera=()',
+    'microphone=()',
+    'geolocation=()',
+    'payment=()',
+    'usb=()',
+    'interest-cohort=()',
+    'accelerometer=()',
+    'gyroscope=()',
+    'magnetometer=()',
 //   ].join(', ');
 }
 /**;
@@ -64,13 +64,13 @@ export function getSecurityHeaders();
   customConfig?: Partial;
           <SecurityHeadersConfig>
 ): Record<string, string> {;
-    const headers: Record<string,;
+    const headers: Record<string,
     string> = {;
   // TODO: Add content;
   }
   }
 }
-    'X-XSS-Protection': '1; mode=block',;
+    'X-XSS-Protection': '1; mode=block',
     'X-DNS-Prefetch-Control': 'on';
   }
   if (config.contentSecurityPolicy) {;
@@ -134,8 +134,8 @@ export function getNextSecurityHeaders();
   }
   }
 }
-//     key,;
-//     value,;
+//     key,
+//     value,
   }));
 }
 export default defaultSecurityHeaders;

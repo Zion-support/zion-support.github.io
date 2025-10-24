@@ -8,11 +8,11 @@ export interface EnvConfig {;
   }
   }
 }
-  nodeEnv: 'development' | 'production' | 'test';,;
+  nodeEnv: 'development' | 'production' | 'test';,
     apiUrl: string;
-  apiKey?: string;,;
-    enableAnalytics: boolean;,;
-    enableLogging: boolean;,;
+  apiKey?: string;,
+    enableAnalytics: boolean;,
+    enableLogging: boolean;,
     logLevel: 'debug' | 'info' | 'warn' | 'error';
   sentryDsn?: string;
   gaTrackingId?: string;
@@ -33,22 +33,22 @@ class EnvironmentConfig {;
     this.isInitialized = true;
   }
   private loadConfig(): EnvConfig {;
-    // Safely access environment variables with defaults,;
+    // Safely access environment variables with defaults,
     return {;
   // TODO: Add content;
   }
   }
 }
-//       nodeEnv,;
+//       nodeEnv,
       apiUrl:;
-        process.env.NEXT_PUBLIC_API_URL || process.env.VITE_API_URL || 'http://localhost:3000/api',;
-      apiKey: process.env.NEXT_PUBLIC_API_KEY || process.env.VITE_API_KEY,;
+        process.env.NEXT_PUBLIC_API_URL || process.env.VITE_API_URL || 'http://localhost:3000/api',
+      apiKey: process.env.NEXT_PUBLIC_API_KEY || process.env.VITE_API_KEY,
       enableAnalytics:;
-        process.env.NEXT_PUBLIC_ENABLE_ANALYTICS === 'true' || nodeEnv === 'production',;
-      enableLogging: nodeEnv !== 'test',;
+        process.env.NEXT_PUBLIC_ENABLE_ANALYTICS === 'true' || nodeEnv === 'production',
+      enableLogging: nodeEnv !== 'test',
       logLevel: (process.env.NEXT_PUBLIC_LOG_LEVEL ||;
-        (nodeEnv === 'production' ? 'warn' : 'debug')) as EnvConfig['logLevel'],;
-      sentryDsn: process.env.NEXT_PUBLIC_SENTRY_DSN || process.env.VITE_SENTRY_DSN,;
+        (nodeEnv === 'production' ? 'warn' : 'debug')) as EnvConfig['logLevel'],
+      sentryDsn: process.env.NEXT_PUBLIC_SENTRY_DSN || process.env.VITE_SENTRY_DSN,
       gaTrackingId: process.env.NEXT_PUBLIC_GA_TRACKING_ID || process.env.VITE_GA_TRACKING_ID;
     }
   }
@@ -112,7 +112,7 @@ class EnvironmentConfig {;
   }
   }
 }
-  valid: boolean;,;
+  valid: boolean;,
     missing: string[];
   } {;
     // TODO: Add content;
@@ -138,8 +138,8 @@ class EnvironmentConfig {;
   }
   }
 }
-  valid: missing.length === 0,;
-//       missing,;
+  valid: missing.length === 0,
+//       missing,
     }
   }
   /**;
@@ -187,22 +187,22 @@ class EnvironmentConfig {;
   }
   }
 }
-  Environment: this.config.nodeEnv,;
-        'API URL': this.config.apiUrl,;
-        'Analytics Enabled': this.config.enableAnalytics,;
-        'Logging Enabled': this.config.enableLogging,;
-        'Log Level': this.config.logLevel,;
-        'API Key Set': !!this.config.apiKey,;
-        'Sentry DSN Set': !!this.config.sentryDsn,;
+  Environment: this.config.nodeEnv,
+        'API URL': this.config.apiUrl,
+        'Analytics Enabled': this.config.enableAnalytics,
+        'Logging Enabled': this.config.enableLogging,
+        'Log Level': this.config.logLevel,
+        'API Key Set': !!this.config.apiKey,
+        'Sentry DSN Set': !!this.config.sentryDsn,
         'GA Tracking ID Set': !!this.config.gaTrackingId;
       });
       console.groupEnd();
     }
   }
 }
-// Export singleton instance,;
+// Export singleton instance,
 export const envConfig = new EnvironmentConfig();
-// Export convenient helper functions,;
+// Export convenient helper functions,
 export const isProduction = () => envConfig.isProduction();
 export const isDevelopment = () => envConfig.isDevelopment();
 export const isTest = () => envConfig.isTest();

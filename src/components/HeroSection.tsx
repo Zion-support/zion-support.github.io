@@ -4,8 +4,8 @@ interface HeroSectionProps {;
   }
   }
 }
-  isLoaded: boolean;,;
-    isVisible: boolean;,;
+  isLoaded: boolean;,
+    isVisible: boolean;,
     onPhoneClick: () => void;
 }
 const HeroSection: React.FC;
@@ -24,22 +24,22 @@ className={;
   }
   }
 }
-//         isLoaded && isVisible,;
+//         isLoaded && isVisible,
 //           ? 'opacity-100 translate-y-0';
           : 'opacity-0 translate-y-8';
       }`}
       aria-labelledby="hero-heading";
 //     >
           <div className="max-w-6xl mx-auto">
-        <h1,;
+        <h1,
           id="hero-heading";
           className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch"
           data-text="Zion Tech Group";
 // >
-//           Zion Tech Group,;
+//           Zion Tech Group,
           </h1>
         <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow neon-text" role="doc-subtitle">
-// Advanced AI and IT Solutions,;
+// Advanced AI and IT Solutions,
           </p>
         <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
 // Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.;
@@ -81,14 +81,14 @@ className={;
   }
             className="cyber-button w-full sm: w-auto text-center"
             aria-label="Call us at (302) 464-0950";
-// >,;
+// >,
  Call: (302) 464-0950;
           </a>
           <a;
             href="/contact";
             className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
 // >
-//             Get Free Consultation,;
+//             Get Free Consultation,
           </a>
         </div>
       </div>

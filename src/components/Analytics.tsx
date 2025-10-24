@@ -12,12 +12,12 @@ const Analytics: React.FC = () => {;
   }
   }
 }
-      // Load Google Analytics,;
+      // Load Google Analytics,
 const script = document.createElement('script');
       script.async = true;
       script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`;
       document.head.appendChild(script);
-      // Initialize GA,;
+      // Initialize GA,
       window.dataLayer = window.dataLayer || [];
       function gtag(...args: any[]) {;
     // TODO: Add content;
@@ -33,21 +33,21 @@ const script = document.createElement('script');
   }
   }
 }
-  page_title: document.title,;
-        page_location: window.location.href,;
+  page_title: document.title,
+        page_location: window.location.href,
       });
-      // Track page views,;
+      // Track page views,
       gtag('event', 'page_view', {;
     // TODO: Add content;
   }
   }
 }
-  page_title: document.title,;
-        page_location: window.location.href,;
-        page_path: pathname,;
+  page_title: document.title,
+        page_location: window.location.href,
+        page_path: pathname,
       });
     }
-    // Track performance metrics,;
+    // Track performance metrics,
     if (typeof window !== 'undefined' && 'performance' in window) {;
     // TODO: Add content;
   }
@@ -68,8 +68,8 @@ const script = document.createElement('script');
   }
   }
 }
-            const navEntry = entry as PerformanceNavigationTiming,;
-            const loadTime = navEntry.loadEventEnd - navEntry.loadEventStart,;
+            const navEntry = entry as PerformanceNavigationTiming,
+            const loadTime = navEntry.loadEventEnd - navEntry.loadEventStart,
             if (window.gtag) {;
     // TODO: Add content;
   }
@@ -80,18 +80,18 @@ const script = document.createElement('script');
   }
   }
 }
-  name: 'load',;
-                value: Math.round(loadTime),;
+  name: 'load',
+                value: Math.round(loadTime),
               });
             }
           }
         }
       });
       observer.observe({;
-    entryTypes: ['navigation',;
+    entryTypes: ['navigation',
   });
     }
-    // Track user interactions,;
+    // Track user interactions,
 const trackInteraction = (eventName: string, category: string, label?: string) => {;
     // TODO: Add content;
   }
@@ -107,12 +107,12 @@ const trackInteraction = (eventName: string, category: string, label?: string) =
   }
   }
 }
-  event_category: category,;
-          event_label: label,;
+  event_category: category,
+          event_label: label,
         });
       }
     }
-    // Track button clicks,;
+    // Track button clicks,
 const buttons = document.querySelectorAll('button, a[href^="tel:"], a[href^="mailto:"]');
     buttons.forEach((button) => {;
     // TODO: Add content;
@@ -124,12 +124,12 @@ const buttons = document.querySelectorAll('button, a[href^="tel:"], a[href^="mai
   }
   }
 }
-        const target = e.target as HTMLElement,;
+        const target = e.target as HTMLElement,
         const text = target.textContent || target.getAttribute('aria-label') || 'Unknown';
         trackInteraction('click', 'button', text);
       });
     });
-    // Track form submissions,;
+    // Track form submissions,
 const forms = document.querySelectorAll('form');
     forms.forEach((form) => {;
     // TODO: Add content;
@@ -146,7 +146,7 @@ const forms = document.querySelectorAll('form');
         trackInteraction('form_submit', 'form', formName);
       });
     });
-    // Track scroll depth,;
+    // Track scroll depth,
 let _maxScroll = 0;
     const trackScroll = () => {;
     // TODO: Add content;
@@ -174,7 +174,7 @@ let _maxScroll = 0;
   }, [pathname]);
   return null;
 }
-// Extend Window interface for TypeScript,;
+// Extend Window interface for TypeScript,
 declare global {;
     // TODO: Add content;
   }

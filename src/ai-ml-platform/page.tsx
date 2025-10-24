@@ -12,53 +12,53 @@ const AIMLPlatformPage: React.FC = () => {;
   }
   }
 }
-  icon: Brain,;
-      title: 'Complete ML Platform',;
-      description: 'value',;
+  icon: Brain,
+      title: 'Complete ML Platform',
+      description: 'value',
   ];
       benefits: ['Rapid model development', 'Automated training', 'Seamless deployment'];
-    },;
-      icon: TrendingUp,;
-      title: 'Advanced Analytics',;
-      description: 'Comprehensive analytics and monitoring for machine learning models',;
+    },
+      icon: TrendingUp,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics and monitoring for machine learning models',
       benefits: ['Real-time monitoring', 'Performance tracking', 'Model optimization'];
-      icon: Users,;
-      title: 'Team Collaboration',;
-      description: 'Collaborative tools for data scientists and ML engineers',;
+      icon: Users,
+      title: 'Team Collaboration',
+      description: 'Collaborative tools for data scientists and ML engineers',
       benefits: ['Shared workspaces', 'Version control', 'Knowledge sharing'];
     }
   ];
   const pricingPlans = [;
-    name: 'Team',;
-      price: '$2,499',;
-      description: 'Ideal for development teams',;
-        'Up to 25 models',;
-        'Advanced ML tools',;
-        'Priority support',;
-        'High-performance compute',;
-        'Advanced analytics',;
+    name: 'Team',
+      price: '$2,499',
+      description: 'Ideal for development teams',
+        'Up to 25 models',
+        'Advanced ML tools',
+        'Priority support',
+        'High-performance compute',
+        'Advanced analytics',
         'Team collaboration';
-      popular: true,;
-      name: 'Enterprise',;
-      price: '$4,999',;
-      description: 'For large organizations',;
-'Unlimited models',;
-        'Premium ML features',;
-        '24/7 support',;
-        'Custom compute',;
-        'Custom analytics',;
-        'White-label options',;
+      popular: true,
+      name: 'Enterprise',
+      price: '$4,999',
+      description: 'For large organizations',
+'Unlimited models',
+        'Premium ML features',
+        '24/7 support',
+        'Custom compute',
+        'Custom analytics',
+        'White-label options',
         'API access';
   ];
   const stats = [;
-  // TODO: Add items,;
+  // TODO: Add items,
 ];
-    { icon: Users, value: '500+', label: 'Data Scientists' },;
-    { icon: TrendingUp, value: '95%', label: 'Model Accuracy' },;
-    { icon: Clock, value: '70%', label: 'Faster Development' },;
+    { icon: Users, value: '500+', label: 'Data Scientists' },
+    { icon: TrendingUp, value: '95%', label: 'Model Accuracy' },
+    { icon: Clock, value: '70%', label: 'Faster Development' },
     {;
-    icon: Star,;
-    value: '4.9/5',;
+    icon: Star,
+    value: '4.9/5',
     label: 'User Rating';
   }
   return (;
@@ -78,7 +78,7 @@ const AIMLPlatformPage: React.FC = () => {;
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-// Contact Us,;
+// Contact Us,
           </button>
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
 Learn More;

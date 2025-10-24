@@ -1,19 +1,19 @@
 import {;
-    Building,;
-    Handshake,;
-    Award,;
-    Users,;
-    Globe,;
-    Star,;
-    CheckCircle,;
-    Phone,;
-    Mail,;
-    Building,;
-    Handshake,;
-    Award,;
-    Globe,;
-    Users,;
-    Star,;
+    Building,
+    Handshake,
+    Award,
+    Users,
+    Globe,
+    Star,
+    CheckCircle,
+    Phone,
+    Mail,
+    Building,
+    Handshake,
+    Award,
+    Globe,
+    Users,
+    Star,
     CheckCircle from 'lucide-react';
 'use client';
 import React from 'react';
@@ -27,108 +27,108 @@ const PartnersPage: React.FC = () => {;
   }
   }
 }
-  title: 'Technology Partners',;
-      description: 'Leading technology companies that provide the foundation for our solutions',;
-      icon: Building,;
-      color: 'text-blue-400',;
-      bgColor: 'value',;
+  title: 'Technology Partners',
+      description: 'Leading technology companies that provide the foundation for our solutions',
+      icon: Building,
+      color: 'text-blue-400',
+      bgColor: 'value',
   ];
       partners: [;
-  // TODO: Add items,;
+  // TODO: Add items,
 ];
-        { name: 'Microsoft', description: 'Azure Cloud Services & AI Platform', logo: '' },;
-        { name: 'Amazon Web Services', description: 'Cloud Infrastructure & AI Services', logo: '' },;
-        { name: 'Google Cloud', description: 'AI/ML Platform & Analytics', logo: '' },;
-        { name: 'IBM', description: 'Watson AI & Enterprise Solutions', logo: '' },;
-        { name: 'NVIDIA', description: 'GPU Computing & AI Hardware', logo: '' },;
+        { name: 'Microsoft', description: 'Azure Cloud Services & AI Platform', logo: '' },
+        { name: 'Amazon Web Services', description: 'Cloud Infrastructure & AI Services', logo: '' },
+        { name: 'Google Cloud', description: 'AI/ML Platform & Analytics', logo: '' },
+        { name: 'IBM', description: 'Watson AI & Enterprise Solutions', logo: '' },
+        { name: 'NVIDIA', description: 'GPU Computing & AI Hardware', logo: '' },
         {;
-    name: 'Intel',;
-    description: 'AI Processors & Edge Computing',;
+    name: 'Intel',
+    description: 'AI Processors & Edge Computing',
     logo: '';
   }
 //       ];
-    },;
-      title: 'Solution Partners',;
-      description: 'Specialized solution providers that complement our offerings',;
-      icon: Handshake,;
-      color: 'text-green-400',;
-      bgColor: 'bg-green-500/10',;
-        { name: 'Salesforce', description: 'CRM & Customer Experience Platform', logo: '☁️' },;
-        { name: 'ServiceNow', description: 'IT Service Management & Automation', logo: '⚙️' },;
-        { name: 'Splunk', description: 'Data Analytics & Security Monitoring', logo: '📊' },;
-        { name: 'Tableau', description: 'Business Intelligence & Visualization', logo: '📈' },;
-        { name: 'Workday', description: 'HR & Financial Management', logo: '👥' },;
+    },
+      title: 'Solution Partners',
+      description: 'Specialized solution providers that complement our offerings',
+      icon: Handshake,
+      color: 'text-green-400',
+      bgColor: 'bg-green-500/10',
+        { name: 'Salesforce', description: 'CRM & Customer Experience Platform', logo: '☁️' },
+        { name: 'ServiceNow', description: 'IT Service Management & Automation', logo: '⚙️' },
+        { name: 'Splunk', description: 'Data Analytics & Security Monitoring', logo: '📊' },
+        { name: 'Tableau', description: 'Business Intelligence & Visualization', logo: '📈' },
+        { name: 'Workday', description: 'HR & Financial Management', logo: '👥' },
         {;
-    name: 'Zendesk',;
-    description: 'Customer Support & Engagement',;
+    name: 'Zendesk',
+    description: 'Customer Support & Engagement',
     logo: '🎧';
   }
-  title: 'Integration Partners',;
-      description: 'Partners that help us integrate with existing enterprise systems',;
-      icon: Award,;
-      color: 'text-purple-400',;
-      bgColor: 'bg-purple-500/10',;
-{ name: 'Dell Technologies', description: 'Infrastructure & Storage Solutions', logo: '💾' },;
-        { name: 'Cisco', description: 'Networking & Security Infrastructure', logo: '🌐' },;
-        { name: 'VMware', description: 'Virtualization & Cloud Management', logo: '🖥️' },;
-        { name: 'Red Hat', description: 'Open Source Solutions & Support', logo: '🎩' },;
-        { name: 'Oracle', description: 'Database & Enterprise Applications', logo: '🗄️' },;
+  title: 'Integration Partners',
+      description: 'Partners that help us integrate with existing enterprise systems',
+      icon: Award,
+      color: 'text-purple-400',
+      bgColor: 'bg-purple-500/10',
+{ name: 'Dell Technologies', description: 'Infrastructure & Storage Solutions', logo: '💾' },
+        { name: 'Cisco', description: 'Networking & Security Infrastructure', logo: '🌐' },
+        { name: 'VMware', description: 'Virtualization & Cloud Management', logo: '🖥️' },
+        { name: 'Red Hat', description: 'Open Source Solutions & Support', logo: '🎩' },
+        { name: 'Oracle', description: 'Database & Enterprise Applications', logo: '🗄️' },
         {;
-    name: 'SAP',;
-    description: 'Enterprise Resource Planning',;
+    name: 'SAP',
+    description: 'Enterprise Resource Planning',
     logo: '📋';
   }
     }
   ];
   const benefits = [;
-    icon: Globe,;
-      title: 'Global Reach',;
-      description: 'Access to worldwide markets and customers through our partner network',;
-      icon: Users,;
-      title: 'Expertise Sharing',;
-      description: 'Collaborative knowledge sharing and best practices across industries',;
-      icon: Star,;
-      title: 'Innovation',;
-      description: 'Joint innovation initiatives and cutting-edge technology development',;
-      icon: CheckCircle,;
-      title: 'Quality Assurance',;
-      description: 'Rigorous partner certification and quality standards',;
-  const partnershipTiers = [,;
-      name: 'Strategic Partners',;
-      level: 'Platinum',;
-      description: 'value',;
+    icon: Globe,
+      title: 'Global Reach',
+      description: 'Access to worldwide markets and customers through our partner network',
+      icon: Users,
+      title: 'Expertise Sharing',
+      description: 'Collaborative knowledge sharing and best practices across industries',
+      icon: Star,
+      title: 'Innovation',
+      description: 'Joint innovation initiatives and cutting-edge technology development',
+      icon: CheckCircle,
+      title: 'Quality Assurance',
+      description: 'Rigorous partner certification and quality standards',
+  const partnershipTiers = [,
+      name: 'Strategic Partners',
+      level: 'Platinum',
+      description: 'value',
   ];
       benefits: [;
-  // TODO: Add items,;
+  // TODO: Add items,
 ];
-//         'Joint marketing and sales initiatives',;
-//         'Co-development of solutions',;
-//         'Priority support and resources',;
-//         'Executive relationship management',;
+//         'Joint marketing and sales initiatives',
+//         'Co-development of solutions',
+//         'Priority support and resources',
+//         'Executive relationship management',
 //         'Custom pricing and terms';
-//       ],;
-      color: 'text-yellow-400',;
-      bgColor: 'bg-yellow-500/10',;
-      name: 'Solution Partners',;
-      level: 'Gold',;
-      description: 'Technology integration and solution delivery partnerships',;
-        'Technical integration support',;
-        'Joint solution development',;
-        'Marketing support and co-marketing',;
-        'Training and certification',;
+//       ],
+      color: 'text-yellow-400',
+      bgColor: 'bg-yellow-500/10',
+      name: 'Solution Partners',
+      level: 'Gold',
+      description: 'Technology integration and solution delivery partnerships',
+        'Technical integration support',
+        'Joint solution development',
+        'Marketing support and co-marketing',
+        'Training and certification',
         'Preferred pricing';
-      color: 'text-gray-400',;
-      bgColor: 'bg-gray-500/10',;
-      name: 'Channel Partners',;
-      level: 'Silver',;
-      description: 'Reseller and referral partnerships for market expansion',;
-        'Reseller program access',;
-        'Sales training and support',;
-        'Marketing materials and tools',;
-        'Lead sharing and referrals',;
+      color: 'text-gray-400',
+      bgColor: 'bg-gray-500/10',
+      name: 'Channel Partners',
+      level: 'Silver',
+      description: 'Reseller and referral partnerships for market expansion',
+        'Reseller program access',
+        'Sales training and support',
+        'Marketing materials and tools',
+        'Lead sharing and referrals',
         'Competitive margins';
-      color: 'text-orange-400',;
-      bgColor: 'bg-orange-500/10',;
+      color: 'text-orange-400',
+      bgColor: 'bg-orange-500/10',
   return (;
           <div>Coming Soon</div>
   );
@@ -141,10 +141,10 @@ const PartnersPage: React.FC = () => {;
   }
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-// Our Partners,;
+// Our Partners,
           </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-// We work with industry-leading technology partners to deliver comprehensive solutions,;
+// We work with industry-leading technology partners to deliver comprehensive solutions,
 //               that drive innovation and business success.;
           </p>
           </div>
@@ -153,7 +153,7 @@ const PartnersPage: React.FC = () => {;
   }
           <div className="mb-16">
             {;
-    partnerTypes.map((type,;
+    partnerTypes.map((type,
     index) => ();
   }
   }
@@ -167,7 +167,7 @@ const PartnersPage: React.FC = () => {;
                     <p className="text-gray-300">{type.description}</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {;
-    type.partners.map((partner,;
+    type.partners.map((partner,
     partnerIndex) => ();
   }
   }
@@ -185,7 +185,7 @@ const PartnersPage: React.FC = () => {;
           </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {;
-    benefits.map((benefit,;
+    benefits.map((benefit,
     index) => ();
   }
   }
@@ -201,7 +201,7 @@ const PartnersPage: React.FC = () => {;
               Partnership Tiers;
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {;
-    partnershipTiers.map((tier,;
+    partnershipTiers.map((tier,
     index) => ();
   }
   }
@@ -213,7 +213,7 @@ const PartnersPage: React.FC = () => {;
                     <p className="text-gray-300 text-sm">{tier.description}</p>
                   <ul className="space-y-3">
                     {;
-    tier.benefits.map((benefit,;
+    tier.benefits.map((benefit,
     benefitIndex) => ();
   }
   }
@@ -238,7 +238,7 @@ const PartnersPage: React.FC = () => {;
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
 // >
           <Handshake className="w-5 h-5 mr-2" />
-// Become a Partner,;
+// Become a Partner,
           </a>
                 href="tel:+13024640950";
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"

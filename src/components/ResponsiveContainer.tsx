@@ -25,17 +25,17 @@ const ResponsiveContainer: React.FC;
   }
   }
 }
-//   children,;
-  className = '',;
-  breakpoints = {},;
-//   fallback,;
+//   children,
+  className = '',
+  breakpoints = {},
+//   fallback,
 }) => {;
     // TODO: Add content;
   }
   }
 }
   const [isClient, setIsClient] = useState(false);
-  const [screenSize, setScreenSize] = useState,;
+  const [screenSize, setScreenSize] = useState,
           <'sm' | 'md' | 'lg' | 'xl' | '2xl'>('lg');
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1023 });
   const isDesktop = useMediaQuery({ minWidth: 1024 });
@@ -92,7 +92,7 @@ const ResponsiveContainer: React.FC;
   }
   }
 }
-    const baseClasses = className,;
+    const baseClasses = className,
     const responsiveClasses = breakpoints[screenSize] || '';
   }
   return (;
@@ -105,14 +105,14 @@ const ResponsiveContainer: React.FC;
     </div>
   );
 }
-// Hook for responsive values,;
+// Hook for responsive values,
 export const useResponsiveValue =;
           <T,>(values: {;
-    // sm?: T,;
-    // md?: T,;
-    // lg?: T,;
-    // xl?: T,;
-    // '2xl'?: T,;
+    // sm?: T,
+    // md?: T,
+    // lg?: T,
+    // xl?: T,
+    // '2xl'?: T,
     // default?: T;
   }
   }
@@ -155,7 +155,7 @@ export const useResponsiveValue =;
   }
   return values.default || values.lg || values.md || values.sm || ({} as T);
 }
-// Hook for responsive breakpoints,;
+// Hook for responsive breakpoints,
 export const useBreakpoint = () => {;
     // TODO: Add content;
   }
@@ -170,11 +170,11 @@ export const useBreakpoint = () => {;
   }
   }
 }
-//     isMobile,;
-//     isTablet,;
-//     isDesktop,;
-//     isLargeDesktop,;
-    current: isLargeDesktop ? '2xl' : isDesktop ? 'xl' : isTablet ? 'md' : 'sm',;
+//     isMobile,
+//     isTablet,
+//     isDesktop,
+//     isLargeDesktop,
+    current: isLargeDesktop ? '2xl' : isDesktop ? 'xl' : isTablet ? 'md' : 'sm',
   }
 }
 export default ResponsiveContainer;

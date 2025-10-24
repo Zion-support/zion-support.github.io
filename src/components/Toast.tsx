@@ -8,7 +8,7 @@ export interface ToastProps {;
   message: string;
   type?: ToastType;
   duration?: number;
-  onClose?: () => void;,;
+  onClose?: () => void;,
     show: boolean;
 }
 const Toast: React.FC;
@@ -17,11 +17,11 @@ const Toast: React.FC;
   }
   }
 }
-//   message,;
-  type = 'success',;
-  duration = 3000,;
-//   onClose,;
-//   show,;
+//   message,
+  type = 'success',
+  duration = 3000,
+//   onClose,
+//   show,
 }) => {;
     // TODO: Add content;
   }
@@ -95,7 +95,7 @@ className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-c
 // >
           <span className="text-xl font-bold">{getIcon()}</span>
       <span>{message}</span>
-      <button,;
+      <button,
         onClick={;
     () => {;
   // TODO: Add content;

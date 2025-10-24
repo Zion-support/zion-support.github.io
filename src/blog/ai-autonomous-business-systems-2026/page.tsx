@@ -14,7 +14,7 @@ export default function AIAutonomousBusinessSystems2026() {;
             <p className="text-gray-600 text-lg">January 28, 2026 · 40 min read · Autonomous Systems</p>
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🎯 Automation Results</h2>
             <p className="text-gray-700 mb-6">
-              Revolutionary AI autonomous business systems have achieved <strong>95% operational automation</strong>,;
+              Revolutionary AI autonomous business systems have achieved <strong>95% operational automation</strong>,
               transforming how enterprises operate. Discover the breakthrough technologies and strategies that;
               enable self-managing business processes.;
             </p>

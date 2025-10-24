@@ -48,8 +48,8 @@ export class SecurityManager {;
   }
 }
     try {;
-    if (!['http:',;
-    'https:',;
+    if (!['http:',
+    'https:',
     .includes(parsed.protocol)) {;
   // TODO: Add content;
   }
@@ -86,7 +86,7 @@ export class SecurityManager {;
   }
   }
 }
-      // Fallback for Node.js environment,;
+      // Fallback for Node.js environment,
 const crypto = require('crypto');
       crypto.randomFillSync(array);
     }
@@ -101,11 +101,11 @@ const crypto = require('crypto');
   }
 }
     const now = Date.now();
-    const windowStart = now - windowMs,;
+    const windowStart = now - windowMs,
     // Simple in-memory rate limiting (replace with Redis in production);
     const storage = this.getRateLimitStorage();
     const requests = storage.get(key) || [];
-    // Remove old requests,;
+    // Remove old requests,
 const validRequests = requests.filter((time: number) => time > windowStart);
     if (validRequests.length >= limit) {;
     // TODO: Add content;

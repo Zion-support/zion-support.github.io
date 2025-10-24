@@ -12,39 +12,39 @@ const _UltimateBusinessIntelligence2025Banner = () => {;
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
   const content = [;
-  // TODO: Add items,;
+  // TODO: Add items,
 ];
     {;
     // TODO: Add content;
   }
   }
 }
-  id: 'ultimate-business-intelligence-revolution',;
-      title: 'AI 2025: The Ultimate Business Intelligence Revolution',;
-      description: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',;
-      url: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',;
-      type: 'Blog Post',;
+  id: 'ultimate-business-intelligence-revolution',
+      title: 'AI 2025: The Ultimate Business Intelligence Revolution',
+      description: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
+      url: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',
+      type: 'Blog Post',
       metrics: {;
     // TODO: Add content;
   }
   }
 }
-  efficiency: '300%',;
-        accuracy: '99.7%',;
-        timeline: '6 months',;
-        adoption: '95%',;
-      },;
+  efficiency: '300%',
+        accuracy: '99.7%',
+        timeline: '6 months',
+        adoption: '95%',
+      },
       tags: ['AI', 'Business Intelligence', 'Enterprise', 'ROI', '2025'];
-      id: 'fortune-500-case-study',;
-      title: 'Fortune 500 Ultimate Business Intelligence Success',;
-      description: 'Real-world case study: How a Fortune 500 company achieved 30,000% ROI through AI-powered business intelligence transformation.',;
-      url: '/case-studies/fortune-500-ultimate-business-intelligence-30000-roi-success-story',;
-      type: 'Case Study',;
-      id: 'enterprise-automation-2025',;
-      title: 'Enterprise Automation Suite 2025',;
-      description: 'Automate your entire business process with our comprehensive automation suite, reducing manual work by 95% and increasing productivity by 300%.',;
-      url: '/services/automation',;
-      type: 'Service',;
+      id: 'fortune-500-case-study',
+      title: 'Fortune 500 Ultimate Business Intelligence Success',
+      description: 'Real-world case study: How a Fortune 500 company achieved 30,000% ROI through AI-powered business intelligence transformation.',
+      url: '/case-studies/fortune-500-ultimate-business-intelligence-30000-roi-success-story',
+      type: 'Case Study',
+      id: 'enterprise-automation-2025',
+      title: 'Enterprise Automation Suite 2025',
+      description: 'Automate your entire business process with our comprehensive automation suite, reducing manual work by 95% and increasing productivity by 300%.',
+      url: '/services/automation',
+      type: 'Service',
                   {;
     tag;
   }
@@ -67,10 +67,10 @@ const _UltimateBusinessIntelligence2025Banner = () => {;
   }
   }
 ];
-            { value: '500+', label: 'Enterprise Clients' },;
-            { value: '30,000%', label: 'Average ROI' },;
-            { value: '99.9%', label: 'Success Rate' },;
-            { value: '5M+', label: 'Data Points Processed' },;
+            { value: '500+', label: 'Enterprise Clients' },
+            { value: '30,000%', label: 'Average ROI' },
+            { value: '99.9%', label: 'Success Rate' },
+            { value: '5M+', label: 'Data Points Processed' },
           ].map((stat, index) => ();
           <div key={index} className="text-center">
               <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>

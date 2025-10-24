@@ -1,17 +1,17 @@
 import {;
-    Eye,;
-    EyeOff,;
-    Mail,;
-    Lock,;
-    User,;
-    Building,;
-    Phone,;
-    CheckCircle,;
-    Shield,;
-    Award,;
-    Globe,;
-    Shield,;
-    Award,;
+    Eye,
+    EyeOff,
+    Mail,
+    Lock,
+    User,
+    Building,
+    Phone,
+    CheckCircle,
+    Shield,
+    Award,
+    Globe,
+    Shield,
+    Award,
     Globe from 'lucide-react';
 'use client';
   }
@@ -33,30 +33,30 @@ const SignupPage: React.FC = () => {;
   }
   }
 }
-  firstName: '',;
-    lastName: '',;
-    email: '',;
-    company: '',;
-    phone: '',;
-    password: '',;
-    confirmPassword: '',;
-    agreeToTerms: false,;
+  firstName: '',
+    lastName: '',
+    email: '',
+    company: '',
+    phone: '',
+    password: '',
+    confirmPassword: '',
+    agreeToTerms: false,
     subscribeNewsletter: false;
   });
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-const handleInputChange = (e: React.ChangeEvent,;
+const handleInputChange = (e: React.ChangeEvent,
           <HTMLInputElement>) => {;
   }
   }
-    const { name, value, type, checked } = e.target,;
+    const { name, value, type, checked } = e.target,
     setFormData(prev => ({;
     // TODO: Add content;
   }
   }
 }
-//       ...prev,;
+//       ...prev,
       [name]: type === 'checkbox' ? checked : value;
     }));
   }
@@ -81,36 +81,36 @@ const handleInputChange = (e: React.ChangeEvent,;
 }
       alert('Please agree to the terms and conditions');
     setIsLoading(true);
-    // Simulate signup process,;
+    // Simulate signup process,
     await new Promise(resolve => setTimeout(resolve, 2000));
     setIsLoading(false);
-    // Redirect to dashboard or home page,;
+    // Redirect to dashboard or home page,
     window.location.href = '/';
   const features = [;
-  // TODO: Add items,;
+  // TODO: Add items,
 ];
     {;
     // TODO: Add content;
   }
   }
 }
-  icon: Shield,;
-      title: 'Enterprise Security',;
-      description: 'Bank-level security with advanced encryption and compliance',;
-    },;
-icon: Award,;
-      title: 'Proven Results',;
-      description: '300% average ROI and 95% process automation for our clients',;
-      icon: Globe,;
-      title: 'Global Support',;
-      description: '24/7 support and services across multiple time zones',;
+  icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with advanced encryption and compliance',
+    },
+icon: Award,
+      title: 'Proven Results',
+      description: '300% average ROI and 95% process automation for our clients',
+      icon: Globe,
+      title: 'Global Support',
+      description: '24/7 support and services across multiple time zones',
   ];
   const benefits = [;
-    'Free 14-day trial',;
-    'No setup fees',;
-    '24/7 expert support',;
-    'Custom integrations',;
-    'Scalable solutions',;
+    'Free 14-day trial',
+    'No setup fees',
+    '24/7 expert support',
+    'Custom integrations',
+    'Scalable solutions',
     'Regular updates';
   return (;
           <div>Coming Soon</div>
@@ -126,17 +126,17 @@ icon: Award,;
             <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700/50">
               <div className="text-center mb-8">
                 <h1 className="text-3xl font-bold text-white mb-2 neon-text">
-// Create Your Account,;
+// Create Your Account,
           </h1>
                 <p className="text-gray-300">
-// Join thousands of businesses transforming with AI and IT solutions,;
+// Join thousands of businesses transforming with AI and IT solutions,
           </p>
               </div>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-// First Name,;
+// First Name,
           </label>
                     <div className="relative">
                       <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -149,7 +149,7 @@ type="text";
                         onChange={;
     handleInputChange;
   }
-// required,;
+// required,
 className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                         placeholder="Enter your first name";
 />
@@ -235,7 +235,7 @@ Confirm Password;
     ' ';
   }
                       <a href="/terms" className="text-cyan-400 hover:text-cyan-300">
-// Terms of Service,;
+// Terms of Service,
           </a>{;
     ' ';
   }
@@ -243,7 +243,7 @@ Confirm Password;
     ' ';
   }
                       <a href="/privacy" className="text-cyan-400 hover:text-cyan-300">
-// Privacy Policy,;
+// Privacy Policy,
           </a>
                     </span>
 name="subscribeNewsletter";
@@ -281,14 +281,14 @@ Sign in here;
   }
             <div className="space-y-8">
                 <h2 className="text-3xl font-bold text-white mb-4 neon-text">
-// Transform Your Business Today,;
+// Transform Your Business Today,
           </h2>
                 <p className="text-xl text-gray-300 mb-8">
 Join thousands of businesses already using our AI and IT solutions;
                   to achieve unprecedented growth and efficiency.;
               <div className="space-y-6">
                 {;
-    features.map((feature,;
+    features.map((feature,
     index) => ();
   }
   }
@@ -305,7 +305,7 @@ Join thousands of businesses already using our AI and IT solutions;
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                   {;
-    benefits.map((benefit,;
+    benefits.map((benefit,
     index) => ();
   }
   }
@@ -325,5 +325,5 @@ Join thousands of businesses already using our AI and IT solutions;
       <Footer />
     </>
   );
-export default SignupPage,;
+export default SignupPage,
   ];

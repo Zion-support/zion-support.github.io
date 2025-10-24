@@ -2,14 +2,14 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import {;
-    Target,;
-    BarChart,;
-    Zap,;
-    Settings,;
-    CheckCircle,;
-    Star,;
-    Target,;
-    BarChart,;
+    Target,
+    BarChart,
+    Zap,
+    Settings,
+    CheckCircle,
+    Star,
+    Target,
+    BarChart,
     Settings from 'lucide-react';
   }
 const AILeadScoringPage: React.FC = () => {;
@@ -19,19 +19,19 @@ const AILeadScoringPage: React.FC = () => {;
   }
   }
 }
-  icon: Target,;
-      title: 'Intelligent Scoring',;
-      description: 'value',;
+  icon: Target,
+      title: 'Intelligent Scoring',
+      description: 'value',
   ];
       benefits: ['Behavioral analysis', 'Demographic scoring', 'Engagement tracking'];
-    },;
-      icon: BarChart,;
-      title: 'Predictive Analytics',;
-      description: 'Predict lead conversion probability',;
+    },
+      icon: BarChart,
+      title: 'Predictive Analytics',
+      description: 'Predict lead conversion probability',
       benefits: ['Conversion prediction', 'Risk assessment', 'Opportunity scoring'];
-      icon: Settings,;
-      title: 'Performance Analytics',;
-      description: 'Comprehensive lead performance analytics',;
+      icon: Settings,
+      title: 'Performance Analytics',
+      description: 'Comprehensive lead performance analytics',
       benefits: ['Conversion metrics', 'ROI tracking', 'Performance reports'];
     }
   ];
@@ -43,10 +43,10 @@ const AILeadScoringPage: React.FC = () => {;
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
-// AI Lead Scoring,;
+// AI Lead Scoring,
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse">
-// Intelligent Lead Qualification and Scoring,;
+// Intelligent Lead Qualification and Scoring,
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             Qualify and score leads automatically with AI-powered intelligence.;
@@ -56,7 +56,7 @@ const AILeadScoringPage: React.FC = () => {;
               href="/contact";
               className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
 // >
-//               Get Started,;
+//               Get Started,
           </a>
               href="tel:+13024640950";
               className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
@@ -66,11 +66,11 @@ const AILeadScoringPage: React.FC = () => {;
         </section>
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
-// Lead Scoring Features,;
+// Lead Scoring Features,
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {;
-    features.map((feature,;
+    features.map((feature,
     index) => ();
   }
   }
@@ -89,7 +89,7 @@ const AILeadScoringPage: React.FC = () => {;
   }
                 <ul className="space-y-2">
                   {;
-    feature.benefits.map((benefit,;
+    feature.benefits.map((benefit,
     benefitIndex) => ();
   }
   }

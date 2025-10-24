@@ -10,7 +10,7 @@ interface DynamicOptions {;
 export function dynamic;
           <T extends ComponentType<unknown>>();
   importFunc: () => Promise;
-          <{ default: T }>,;
+          <{ default: T }>,
   _options: DynamicOptions = {}
 ): ComponentType<unknown> {;
     return (props: unknown) => (;

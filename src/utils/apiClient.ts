@@ -32,9 +32,9 @@ export interface ApiResponse;
   }
   }
 }
-  data: T;,;
-    status: number;,;
-    statusText: string;,;
+  data: T;,
+    status: number;,
+    statusText: string;,
     headers: Headers;
 }
 export class ApiError extends Error {;
@@ -43,9 +43,9 @@ export class ApiError extends Error {;
   }
 }
 //   constructor();
-  message: string,;
-    public status: number,;
-    public response?: unknown,;
+  message: string,
+    public status: number,
+    public response?: unknown,
 ) {;
     // TODO: Add content;
   }
@@ -81,17 +81,17 @@ class ApiClient {;
   }
   }
 }
-  baseURL: config.baseURL || '',;
-      timeout: config.timeout || 30000,;
-      retries: config.retries || 3,;
-      retryDelay: config.retryDelay || 1000,;
+  baseURL: config.baseURL || '',
+      timeout: config.timeout || 30000,
+      retries: config.retries || 3,
+      retryDelay: config.retryDelay || 1000,
       headers: config.headers || {;
     // TODO: Add content;
   }
   }
 }
         'Content-Type': 'application/json';
-      },;
+      },
       cacheOptions: config.cacheOptions;
     }
   }
@@ -100,7 +100,7 @@ class ApiClient {;
    */;
   async get;
           <T = unknown>();
-    url: string,;
+    url: string,
     config: Omit;
           <RequestConfig, 'url' | 'method' | 'body'> = {}
   ): Promise<ApiResponse<T>> {;
@@ -114,9 +114,9 @@ class ApiClient {;
   }
   }
 }
-//       ...config,;
-//       url,;
-      method: 'GET',;
+//       ...config,
+//       url,
+      method: 'GET',
     });
   }
   /**;
@@ -124,8 +124,8 @@ class ApiClient {;
    */;
   async post;
           <T = unknown>();
-    url: string,;
-    data?: unknown,;
+    url: string,
+    data?: unknown,
     config: Omit;
           <RequestConfig, 'url' | 'method'> = {}
   ): Promise<ApiResponse<T>> {;
@@ -139,9 +139,9 @@ class ApiClient {;
   }
   }
 }
-//       ...config,;
-//       url,;
-      method: 'POST',;
+//       ...config,
+//       url,
+      method: 'POST',
       body: JSON.stringify(data);
     });
   }
@@ -150,8 +150,8 @@ class ApiClient {;
    */;
   async put;
           <T = unknown>();
-    url: string,;
-    data?: unknown,;
+    url: string,
+    data?: unknown,
     config: Omit;
           <RequestConfig, 'url' | 'method'> = {}
   ): Promise<ApiResponse<T>> {;
@@ -165,9 +165,9 @@ class ApiClient {;
   }
   }
 }
-//       ...config,;
-//       url,;
-      method: 'PUT',;
+//       ...config,
+//       url,
+      method: 'PUT',
       body: JSON.stringify(data);
     });
   }
@@ -176,7 +176,7 @@ class ApiClient {;
    */;
   async delete;
           <T = unknown>();
-    url: string,;
+    url: string,
     config: Omit;
           <RequestConfig, 'url' | 'method' | 'body'> = {}
   ): Promise<ApiResponse<T>> {;
@@ -190,9 +190,9 @@ class ApiClient {;
   }
   }
 }
-//       ...config,;
-//       url,;
-      method: 'DELETE',;
+//       ...config,
+//       url,
+      method: 'DELETE',
     });
   }
   /**;
@@ -200,8 +200,8 @@ class ApiClient {;
    */;
   async patch;
           <T = unknown>();
-    url: string,;
-    data?: unknown,;
+    url: string,
+    data?: unknown,
     config: Omit;
           <RequestConfig, 'url' | 'method'> = {}
   ): Promise<ApiResponse<T>> {;
@@ -215,9 +215,9 @@ class ApiClient {;
   }
   }
 }
-//       ...config,;
-//       url,;
-      method: 'PATCH',;
+//       ...config,
+//       url,
+      method: 'PATCH',
       body: JSON.stringify(data);
     });
   }
@@ -235,23 +235,23 @@ class ApiClient {;
   }
   }
 }
-//       url,;
-      method = 'GET',;
-      headers = {},;
-      cacheOptions: cacheConfig,;
-      skipCache = false,;
-      retries = this.config.retries,;
-      timeout = this.config.timeout,;
-//       ...fetchConfig,;
+//       url,
+      method = 'GET',
+      headers = {},
+      cacheOptions: cacheConfig,
+      skipCache = false,
+      retries = this.config.retries,
+      timeout = this.config.timeout,
+//       ...fetchConfig,
     } = config;
     const cacheKey = `${method}:${fullUrl}`;
-    // Check cache for GET requests,;
+    // Check cache for GET requests,
     if (method === 'GET' && !skipCache) {;
     // TODO: Add content;
   }
   }
 }
-      const cached = cacheManager.get,;
+      const cached = cacheManager.get,
           <T>(cacheKey);
       if (cached !== undefined) {;
     // TODO: Add content;
@@ -263,14 +263,14 @@ class ApiClient {;
   }
   }
 }
-  data: cached,;
-          status: 200,;
-          statusText: 'OK (cached)',;
+  data: cached,
+          status: 200,
+          statusText: 'OK (cached)',
           headers: new Headers();
         }
       }
     }
-    // Create abort controller for timeout,;
+    // Create abort controller for timeout,
 const controller = new AbortController();
     this.abortControllers.set(cacheKey, controller);
     const timeoutId = setTimeout(() => {;
@@ -297,16 +297,16 @@ const controller = new AbortController();
   }
   }
 }
-//           ...fetchConfig,;
-//           method,;
+//           ...fetchConfig,
+//           method,
           headers: {;
     // TODO: Add content;
   }
   }
 }
-//             ...this.config.headers,;
-//             ...headers,;
-          },;
+//             ...this.config.headers,
+//             ...headers,
+          },
           signal: controller.signal;
         });
         clearTimeout(timeoutId);
@@ -317,8 +317,8 @@ const controller = new AbortController();
   }
 }
           throw new ApiError();
-            `HTTP ${response.status}: ${response.statusText}`,;
-//             response.status,;
+            `HTTP ${response.status}: ${response.statusText}`,
+//             response.status,
 //             await response.text();
           );
         }
@@ -337,7 +337,7 @@ const controller = new AbortController();
 }
           data = (await response.text()) as T;
         }
-        // Cache successful GET requests,;
+        // Cache successful GET requests,
         if (method === 'GET' && !skipCache) {;
     // TODO: Add content;
   }
@@ -350,9 +350,9 @@ const controller = new AbortController();
   }
   }
 }
-//           data,;
-          status: response.status,;
-          statusText: response.statusText,;
+//           data,
+          status: response.status,
+          statusText: response.statusText,
           headers: response.headers;
         }
       } catch (error) {;
@@ -362,7 +362,7 @@ const controller = new AbortController();
 }
         lastError = error as Error;
         attempt++;
-        // Log error,;
+        // Log error,
         if (attempt === retries) {;
     // TODO: Add content;
   }
@@ -378,9 +378,9 @@ const controller = new AbortController();
   }
   }
 }
-  url: fullUrl,;
-//               method,;
-//               attempt,;
+  url: fullUrl,
+//               method,
+//               attempt,
             });
           } else {;
     // TODO: Add content;
@@ -392,13 +392,13 @@ const controller = new AbortController();
   }
   }
 }
-  url: fullUrl,;
-//               method,;
-//               attempt,;
+  url: fullUrl,
+//               method,
+//               attempt,
             });
           }
         }
-        // Don't retry on certain errors,;
+        // Don't retry on certain errors,
         if (error instanceof ApiError && error.status;
           < 500) {;
     // TODO: Add content;
@@ -407,7 +407,7 @@ const controller = new AbortController();
 }
           throw error;
         }
-        // Wait before retrying,;
+        // Wait before retrying,
         if (attempt;
           < retries) {;
     // TODO: Add content;
@@ -472,14 +472,14 @@ const controller = new AbortController();
   }
   }
 }
-//       ...this.config,;
-//       ...config,;
+//       ...this.config,
+//       ...config,
       headers: {;
     // TODO: Add content;
   }
   }
 }
-//         ...this.config.headers,;
+//         ...this.config.headers,
         ...(config.headers || {});
       }
     }
@@ -540,25 +540,25 @@ const controller = new AbortController();
     }
   }
 }
-// Create default instance,;
+// Create default instance,
 const apiClient = new ApiClient({;
     // TODO: Add content;
   }
   }
 }
-  baseURL: process.env.NEXT_PUBLIC_API_URL || '',;
-  timeout: 30000,;
-  retries: 3,;
-  retryDelay: 1000,;
+  baseURL: process.env.NEXT_PUBLIC_API_URL || '',
+  timeout: 30000,
+  retries: 3,
+  retryDelay: 1000,
   cacheOptions: {;
     // TODO: Add content;
   }
   }
 }
-  ttl: 5 * 60 * 1000, // 5 minutes,;
+  ttl: 5 * 60 * 1000, // 5 minutes,
   }
 });
-// Export both the class and default instance,;
+// Export both the class and default instance,
 export {;
     apiClient;
   }

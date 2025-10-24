@@ -8,7 +8,7 @@ export interface ValidationRule<T = unknown> {;
   }
   }
 }
-  validate: (value: T) => boolean;,;
+  validate: (value: T) => boolean;,
     message: string;
 }
 export interface FieldRule {;
@@ -16,7 +16,7 @@ export interface FieldRule {;
   }
   }
 }
-  type: 'required' | 'email' | 'url' | 'number' | 'string' | 'custom';,;
+  type: 'required' | 'email' | 'url' | 'number' | 'string' | 'custom';,
     message: string;
   min?: number;
   max?: number;
@@ -31,7 +31,7 @@ export interface ValidationResult {;
   }
   }
 }
-  isValid: boolean;,;
+  isValid: boolean;,
     errors: Record;
           <string, string[]>
 }
@@ -41,8 +41,8 @@ export class ValidationError extends Error {;
   }
 }
 //   constructor();
-  message: string,;
-    public field: string,;
+  message: string,
+    public field: string,
     public errors: string[];
   ) {;
     // TODO: Add content;
@@ -205,10 +205,10 @@ export function sanitizeHTML(html: string): string {;
   }
   }
 }
-  // Remove script tags,;
+  // Remove script tags,
 let clean = html.replace(/;
           <script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
-  // Remove event handlers,;
+  // Remove event handlers,
   clean = clean.replace(/on\w+="[^"]*"/gi, '');
   clean = clean.replace(/on\w+='[^']*'/gi, '');
   return clean;
@@ -218,10 +218,10 @@ let clean = html.replace(/;
  */;
 export function createCustomValidator;
           <T>();
-  validator: (value: T) => boolean,;
-  message: string,;
+  validator: (value: T) => boolean,
+  message: string,
 ): (value: T) => {;
-    isValid: boolean; errors: string[,;
+    isValid: boolean; errors: string[,
   } {;
     // TODO: Add content;
   }
@@ -238,7 +238,7 @@ export function createCustomValidator;
   }
   }
 }
-//       isValid,;
+//       isValid,
       errors: isValid ? [] : [message];
     }
   }
@@ -286,8 +286,8 @@ function validateFieldRule(value: unknown, rule: FieldRule): boolean {;
  * Validate form data;
  */;
 export function validateForm<T extends Record<string, unknown>>();
-  data: T,;
-  rules: ValidationRules,;
+  data: T,
+  rules: ValidationRules,
 ): ValidationResult {;
     // TODO: Add content;
   }
@@ -321,23 +321,23 @@ export function validateForm<T extends Record<string, unknown>>();
   }
   }
 }
-      errors[field] = fieldErrors,;
-      // Track validation errors,;
+      errors[field] = fieldErrors,
+      // Track validation errors,
 //       errorTracking.trackError();
-        new ValidationError(`Validation failed for ${field}`, field, fieldErrors),;
+        new ValidationError(`Validation failed for ${field}`, field, fieldErrors),
         {;
     // TODO: Add content;
   }
   }
 }
-  category: ErrorCategory.Validation,;
-          severity: ErrorSeverity.Low,;
+  category: ErrorCategory.Validation,
+          severity: ErrorSeverity.Low,
           context: {;
     // TODO: Add content;
   }
   }
 }
-//             field,;
+//             field,
             errors: fieldErrors;
           }
         }
@@ -349,8 +349,8 @@ export function validateForm<T extends Record<string, unknown>>();
   }
   }
 }
-  isValid: Object.keys(errors).length === 0,;
-//     errors,;
+  isValid: Object.keys(errors).length === 0,
+//     errors,
   }
 }
 /**;
@@ -376,36 +376,36 @@ export const ValidationRulesBuilder = {;
       if (typeof value === 'string' && value.trim() === '') return false;
       if (Array.isArray(value) && value.length === 0) return false;
       return true;
-    },;
-    message: 'This field is required',;
-  }),;
+    },
+    message: 'This field is required',
+  }),
   email: (): ValidationRule;
           <string> => ({;
     // TODO: Add content;
   }
   }
 }
-  validate: (value: string) => validateEmail(value),;
-    message: 'Please enter a valid email address',;
-  }),;
+  validate: (value: string) => validateEmail(value),
+    message: 'Please enter a valid email address',
+  }),
   url: (): ValidationRule;
           <string> => ({;
     // TODO: Add content;
   }
   }
 }
-  validate: (value: string) => validateURL(value),;
-    message: 'Please enter a valid URL',;
-  }),;
+  validate: (value: string) => validateURL(value),
+    message: 'Please enter a valid URL',
+  }),
   minLength: (min: number): ValidationRule;
           <string> => ({;
     // TODO: Add content;
   }
   }
 }
-  validate: (value: string) => value.length >= min,;
+  validate: (value: string) => value.length >= min,
     message: `Must be at least ${min} characters long`;
-  }),;
+  }),
   maxLength: (max: number): ValidationRule;
           <string> => ({;
     // TODO: Add content;
@@ -413,37 +413,37 @@ export const ValidationRulesBuilder = {;
   }
 }
   validate: (value: string) => value.length;
-          <= max,;
+          <= max,
     message: `Must be no more than ${max} characters long`;
-  }),;
+  }),
   pattern: (pattern: RegExp, message: string): ValidationRule<string> => ({;
     // TODO: Add content;
   }
   }
 }
-  validate: (value: string) => pattern.test(value),;
-//     message,;
-  }),;
+  validate: (value: string) => pattern.test(value),
+//     message,
+  }),
   range: (min: number, max: number): ValidationRule;
           <number> => ({;
     // TODO: Add content;
   }
   }
 }
-  validate: (value: number) => validateNumberRange(value, min, max),;
+  validate: (value: number) => validateNumberRange(value, min, max),
     message: `Must be between ${min} and ${max}`;
-  }),;
+  }),
   custom:;
           <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({;
     // TODO: Add content;
   }
   }
 }
-  validate: validator,;
-//     message,;
+  validate: validator,
+//     message,
   });
 }
-// Legacy class-based API for backward compatibility,;
+// Legacy class-based API for backward compatibility,
 class DataValidator {;
     // TODO: Add content;
   }

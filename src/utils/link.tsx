@@ -3,7 +3,7 @@ interface LinkProps {;
   }
   }
 }
-  href: string;,;
+  href: string;,
     children: React.ReactNode;
   className?: string;
   target?: string;
@@ -17,20 +17,20 @@ export const Link: React.FC;
   }
   }
 }
-//   href,;
-//   children,;
-//   className,;
-//   target,;
-//   rel,;
-//   onClick,;
-  'aria-label': ariaLabel,;
-//   ...props,;
+//   href,
+//   children,
+//   className,
+//   target,
+//   rel,
+//   onClick,
+  'aria-label': ariaLabel,
+//   ...props,
 }) => {;
     if (onClick) {;
   }
   }
     }
-    // Handle internal navigation,;
+    // Handle internal navigation,
     if (href.startsWith('/') && !href.startsWith('//')) {;
     // TODO: Add content;
   }

@@ -1,4 +1,4 @@
-// Metadata removed for Vite compatibility,;
+// Metadata removed for Vite compatibility,
 export default function AITrends2026FutureEnterpriseTransformation() {;
     // TODO: Add content;
   }

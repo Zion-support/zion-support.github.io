@@ -33,15 +33,15 @@ class UserExperienceEnhancer {;
   private metrics: UXMetrics;
   constructor(config?: UXConfig) {;
     this.config = config || {;
-      enableSmoothScrolling: true,;
-      enableLoadingStates: true,;
-      enableErrorBoundaries: true,;
-      enableAnalytics: true,;
-      enableNotifications: false,;
-      enableProgressiveWebApp: false,;
-      enableOfflineSupport: false,;
-      enablePushNotifications: false,;
-      enableDarkMode: false,;
+      enableSmoothScrolling: true,
+      enableLoadingStates: true,
+      enableErrorBoundaries: true,
+      enableAnalytics: true,
+      enableNotifications: false,
+      enableProgressiveWebApp: false,
+      enableOfflineSupport: false,
+      enablePushNotifications: false,
+      enableDarkMode: false,
       enableAnimations: true;
   }
   }
@@ -50,11 +50,11 @@ class UserExperienceEnhancer {;
     }
 ;
     this.metrics = {;
-    pageLoadTime: 0,;
-      interactionTime: 0,;
-      bounceRate: 0,;
-      userSatisfaction: 0,;
-      accessibilityScore: 0,;
+    pageLoadTime: 0,
+      interactionTime: 0,
+      bounceRate: 0,
+      userSatisfaction: 0,
+      accessibilityScore: 0,
       performanceScore: 0;
   }
   }
@@ -65,7 +65,7 @@ class UserExperienceEnhancer {;
     this.init();
   }
   private init(): void {;
-    // Initialize UX enhancements,;
+    // Initialize UX enhancements,
     this.setupSmoothScrolling();
     this.setupLoadingStates();
   }
@@ -82,7 +82,7 @@ class UserExperienceEnhancer {;
   }
   private setupLoadingStates(): void {;
     if (typeof document !== 'undefined' && this.config.enableLoadingStates) {;
-      // Add loading state management,;
+      // Add loading state management,
     console.log('Loading states enabled');
   }
   }

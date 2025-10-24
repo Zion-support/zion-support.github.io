@@ -34,7 +34,7 @@ const TermsPage: React.FC = () => {;
                 Payment terms are as follows:;
               </p><ul className="list-disc list-inside text-gray-300 space-y-2"><li>All fees are due in advance unless otherwise agreed</li><li>Refunds are subject to our refund policy</li><li>Late payments may result in service suspension</li><li>Prices are subject to change with 30 days notice</li></ul></section><section><h2 className="text-2xl font-bold text-white mb-4">
                 Limitation of Liability;
-                In no event shall Zion Tech Group or its suppliers be liable for any damages (including, without limitation,;
+                In no event shall Zion Tech Group or its suppliers be liable for any damages (including, without limitation,
                 damages for loss of data or profit, or due to business interruption) arising out of the use or inability;
                 to use our services, even if we have been notified orally or in writing of the possibility of such damage.;
                 Contact Information;

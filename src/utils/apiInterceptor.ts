@@ -3,7 +3,7 @@
  * API Interceptor Utility;
  * Centralized API request handling with error handling, retry logic, and caching;
  */;
-// ErrorHandler class definition,;
+// ErrorHandler class definition,
 class ErrorHandler {;
     // TODO: Add content;
   }
@@ -35,11 +35,11 @@ export interface APIConfig {;
   }
   }
 }
-  baseURL: string;,;
-    timeout: number;,;
-    retryAttempts: number;,;
-    retryDelay: number;,;
-    enableCaching: boolean;,;
+  baseURL: string;,
+    timeout: number;,
+    retryAttempts: number;,
+    retryDelay: number;,
+    enableCaching: boolean;,
     cacheTimeout: number;
   headers?: Record;
           <string, string>
@@ -59,7 +59,7 @@ export interface RequestConfig {;
   }
   }
 }
-  url: string;,;
+  url: string;,
     method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
   headers?: Record;
           <string, string>
@@ -74,10 +74,10 @@ export interface APIResponse<T = unknown> {;
   }
   }
 }
-  data: T;,;
-    status: number;,;
-    statusText: string;,;
-    headers: Headers;,;
+  data: T;,
+    status: number;,
+    statusText: string;,
+    headers: Headers;,
     config: RequestConfig;
 }
 export interface CacheEntry {;
@@ -85,8 +85,8 @@ export interface CacheEntry {;
   }
   }
 }
-  data: unknown,;
-  timestamp: number;,;
+  data: unknown,
+  timestamp: number;,
     expiresAt: number;
 }
 export class APIInterceptor {;
@@ -110,13 +110,13 @@ export class APIInterceptor {;
   }
   }
 }
-  baseURL: config.baseURL || '',;
-      timeout: config.timeout || 30000,;
-      retryAttempts: config.retryAttempts || 3,;
-      retryDelay: config.retryDelay || 1000,;
-      enableCaching: config.enableCaching ?? true,;
-      cacheTimeout: config.cacheTimeout || 300000, // 5 minutes,;
-  headers: config.headers || {},;
+  baseURL: config.baseURL || '',
+      timeout: config.timeout || 30000,
+      retryAttempts: config.retryAttempts || 3,
+      retryDelay: config.retryDelay || 1000,
+      enableCaching: config.enableCaching ?? true,
+      cacheTimeout: config.cacheTimeout || 300000, // 5 minutes,
+  headers: config.headers || {},
       interceptors: config.interceptors || {}
     }
     this.errorHandler = ErrorHandler.getInstance();
@@ -142,7 +142,7 @@ export class APIInterceptor {;
   async request;
           <T = unknown>(config: RequestConfig): Promise<APIResponse<T>> {;
     const cacheKey = this.getCacheKey(fullConfig);
-    // Check cache for GET requests,;
+    // Check cache for GET requests,
     if (fullConfig.method === 'GET' && fullConfig.cache !== false && this.config.enableCaching) {;
   // TODO: Add content;
   }
@@ -158,7 +158,7 @@ export class APIInterceptor {;
           <T>
       }
     }
-    // Check for pending identical requests,;
+    // Check for pending identical requests,
     if (this.pendingRequests.has(cacheKey)) {;
     // TODO: Add content;
   }
@@ -167,8 +167,8 @@ export class APIInterceptor {;
       return this.pendingRequests.get(cacheKey) as Promise;
           <APIResponse<T>>;
     }
-    // Create the request promise,;
-const requestPromise = this.executeRequest,;
+    // Create the request promise,
+const requestPromise = this.executeRequest,
           <T>(fullConfig);
     this.pendingRequests.set(cacheKey, requestPromise as Promise<APIResponse>);
     try {;
@@ -176,8 +176,8 @@ const requestPromise = this.executeRequest,;
   }
   }
 }
-      const response = await requestPromise,;
-      // Cache successful GET requests,;
+      const response = await requestPromise,
+      // Cache successful GET requests,
       if (fullConfig.method === 'GET' && fullConfig.cache !== false && this.config.enableCaching) {;
     // TODO: Add content;
   }
@@ -205,8 +205,8 @@ const requestPromise = this.executeRequest,;
 }
     const startTime = performance.now();
     try {;
-    method: finalConfig.method,;
-        headers: this.buildHeaders(finalConfig),;
+    method: finalConfig.method,
+        headers: this.buildHeaders(finalConfig),
         body: finalConfig.body ? JSON.stringify(finalConfig.body) : undefined;
   }
   }
@@ -215,10 +215,10 @@ const requestPromise = this.executeRequest,;
         signal: this.createAbortSignal(finalConfig.timeout || this.config.timeout);
       }
       const response = await fetch(url, fetchOptions);
-      const duration = performance.now() - startTime,;
-      // Record performance metric,;
+      const duration = performance.now() - startTime,
+      // Record performance metric,
       performanceMetrics.recordNetworkRequest(url, duration, response.status);
-      // Handle non-2xx responses,;
+      // Handle non-2xx responses,
       if (!response.ok) {;
     // TODO: Add content;
   }
@@ -226,7 +226,7 @@ const requestPromise = this.executeRequest,;
 }
         throw new Error(`HTTP ${response.status}: ${response.statusText}`);
       }
-      // Apply response interceptor,;
+      // Apply response interceptor,
 let finalResponse = response;
       if (this.config.interceptors?.response) {;
     // TODO: Add content;
@@ -235,18 +235,18 @@ let finalResponse = response;
 }
         finalResponse = await this.config.interceptors.response(response);
       }
-      // Parse response data,;
-const data = await this.parseResponse,;
+      // Parse response data,
+const data = await this.parseResponse,
           <T>(finalResponse);
       return {;
     // TODO: Add content;
   }
   }
 }
-//         data,;
-        status: finalResponse.status,;
-        statusText: finalResponse.statusText,;
-        headers: finalResponse.headers,;
+//         data,
+        status: finalResponse.status,
+        statusText: finalResponse.statusText,
+        headers: finalResponse.headers,
         config: finalConfig;
       }
     } catch (error) {;
@@ -254,13 +254,13 @@ const data = await this.parseResponse,;
   }
   }
 }
-      const duration = performance.now() - startTime,;
-      const err = error as Error,;
-      // Record error metric,;
+      const duration = performance.now() - startTime,
+      const err = error as Error,
+      // Record error metric,
       performanceMetrics.recordNetworkRequest(this.buildURL(config), duration, 0);
-      // Handle error with error handler,;
+      // Handle error with error handler,
       this.errorHandler.handleNetworkError(err, this.buildURL(config), undefined);
-      // Retry logic,;
+      // Retry logic,
       if (attempt;
           < (config.retryAttempts || this.config.retryAttempts)) {;
     // TODO: Add content;
@@ -271,7 +271,7 @@ const data = await this.parseResponse,;
         return this.executeRequest;
           <T>(config, attempt + 1);
       }
-      // Apply error interceptor,;
+      // Apply error interceptor,
       if (this.config.interceptors?.error) {;
     // TODO: Add content;
   }
@@ -288,7 +288,7 @@ const data = await this.parseResponse,;
    */;
   async get;
           <T = unknown>();
-    url: string,;
+    url: string,
     config: Partial;
           <RequestConfig> = {}
   ): Promise<APIResponse<T>> {;
@@ -303,8 +303,8 @@ const data = await this.parseResponse,;
    * POST request;
    */;
   async post<T = unknown>();
-    url: string,;
-    body?: unknown,;
+    url: string,
+    body?: unknown,
     config: Partial;
           <RequestConfig> = {}
   ): Promise<APIResponse<T>> {;
@@ -319,8 +319,8 @@ const data = await this.parseResponse,;
    * PUT request;
    */;
   async put<T = unknown>();
-    url: string,;
-    body?: unknown,;
+    url: string,
+    body?: unknown,
     config: Partial;
           <RequestConfig> = {}
   ): Promise<APIResponse<T>> {;
@@ -335,7 +335,7 @@ const data = await this.parseResponse,;
    * DELETE request;
    */;
   async delete<T = unknown>();
-    url: string,;
+    url: string,
     config: Partial;
           <RequestConfig> = {}
   ): Promise<APIResponse<T>> {;
@@ -350,8 +350,8 @@ const data = await this.parseResponse,;
    * PATCH request;
    */;
   async patch<T = unknown>();
-    url: string,;
-    body?: unknown,;
+    url: string,
+    body?: unknown,
     config: Partial;
           <RequestConfig> = {}
   ): Promise<APIResponse<T>> {;
@@ -375,17 +375,17 @@ const data = await this.parseResponse,;
   }
   }
 }
-//       ...config,;
+//       ...config,
       headers: {;
     // TODO: Add content;
   }
   }
 }
-//         ...this.config.headers,;
-//         ...config.headers,;
-      },;
-      timeout: config.timeout || this.config.timeout,;
-      retryAttempts: config.retryAttempts ?? this.config.retryAttempts,;
+//         ...this.config.headers,
+//         ...config.headers,
+      },
+      timeout: config.timeout || this.config.timeout,
+      retryAttempts: config.retryAttempts ?? this.config.retryAttempts,
       cache: config.cache ?? this.config.enableCaching;
     }
   }
@@ -424,9 +424,9 @@ const data = await this.parseResponse,;
   }
 }
     const headers = new Headers();
-    // Add default headers,;
+    // Add default headers,
     headers.set('Content-Type', 'application/json');
-    // Add config headers,;
+    // Add config headers,
     Object.entries(config.headers || {}).forEach(([key, value]) => {;
     // TODO: Add content;
   }
@@ -518,8 +518,8 @@ const data = await this.parseResponse,;
   }
   }
 }
-  data: response,;
-      timestamp: Date.now(),;
+  data: response,
+      timestamp: Date.now(),
       expiresAt: Date.now() + this.config.cacheTimeout;
     });
   }
@@ -566,17 +566,17 @@ const data = await this.parseResponse,;
 }
     const entries = Array.from(this.cache.values());
     const now = Date.now();
-    const valid = entries.filter(e => now,;
+    const valid = entries.filter(e => now,
           <= e.expiresAt).length;
-    const expired = entries.length - valid,;
+    const expired = entries.length - valid,
     return {;
     // TODO: Add content;
   }
   }
 }
-  total: entries.length,;
-//       valid,;
-//       expired,;
+  total: entries.length,
+//       valid,
+//       expired,
       size: entries.reduce((sum, e) => sum + JSON.stringify(e.data).length, 0);
     }
   }
@@ -601,7 +601,7 @@ const data = await this.parseResponse,;
   }
 }
     this.config = {;
-    ...this.config,;
+    ...this.config,
     ...config;
   }
   }
@@ -618,5 +618,5 @@ const data = await this.parseResponse,;
   }
   }
 }
-// Export singleton instance,;
+// Export singleton instance,
 export const apiInterceptor = APIInterceptor.getInstance();

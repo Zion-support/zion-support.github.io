@@ -3,15 +3,15 @@ const getAllPages = () => {;
     return [;
   }
   }
-    { url: '/', priority: 1.0, changefreq: 'daily' },;
-    { url: '/services', priority: 0.9, changefreq: 'weekly' },;
-    { url: '/ai-services', priority: 0.9, changefreq: 'weekly' },;
-    { url: '/it-services', priority: 0.9, changefreq: 'weekly' },;
-    { url: '/contact', priority: 0.8, changefreq: 'monthly' },;
-    { url: '/about', priority: 0.7, changefreq: 'monthly' },;
+    { url: '/', priority: 1.0, changefreq: 'daily' },
+    { url: '/services', priority: 0.9, changefreq: 'weekly' },
+    { url: '/ai-services', priority: 0.9, changefreq: 'weekly' },
+    { url: '/it-services', priority: 0.9, changefreq: 'weekly' },
+    { url: '/contact', priority: 0.8, changefreq: 'monthly' },
+    { url: '/about', priority: 0.7, changefreq: 'monthly' },
     {;
-    url: '/blog',;
-    priority: 0.8,;
+    url: '/blog',
+    priority: 0.8,
     changefreq: 'weekly';
   }
   ];
