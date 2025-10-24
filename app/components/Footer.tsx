@@ -1,6 +1,5 @@
 'use client';
-import { Cloud, Facebook, Twitter, Linkedin, Github, Phone, Mail, MapPin } from 'lucide-react';
-import React from 'react';
+import {Facebook, Twitter, Linkedin, Github, Phone, Mail, MapPin} from 'lucide-react';
 import Link from 'next/link';
 const Footer: React.FC = () => {
 

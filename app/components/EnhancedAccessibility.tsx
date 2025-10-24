@@ -1,7 +1,7 @@
 'use client';
-import { Settings } from 'lucide-react';
+
 import React, { useEffect, useState } from 'react';
-import { AccessibilitySettings, AccessibilityContextType } from '../types/accessibility';
+import {AccessibilityContextType} from '../types/accessibility';
 import { AccessibilityContext } from '../contexts/AccessibilityContext';
 import { useAccessibility } from '../hooks/useAccessibility';
 
@@ -10,7 +10,7 @@ interface EnhancedAccessibilityProps {
 }
 
 const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ children }) => {
-  const [settings, setSettings] = useState<AccessibilitySettings>({
+  const [settings, setSettings] = useState<any>({
     highContrast: false,
     reducedMotion: false,
     fontSize: 'medium',
@@ -27,7 +27,7 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ children 
     if (savedSettings) {
       try {
         const parsed = JSON.parse(savedSettings);
-        setSettings(prev => ({ ...prev, ...parsed }));
+        setSettings((prev: any) => ({ ...prev, ...parsed }));
       } catch (error) {
         console.warn('Failed to parse accessibility settings:', error);
       }
@@ -80,13 +80,13 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ children 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Tab') {
-        setSettings(prev => ({ ...prev, keyboardNavigation: true }));
+        setSettings((prev: any) => ({ ...prev, keyboardNavigation: true }));
         document.body.classList.add('keyboard-navigation');
       }
     };
 
     const handleMouseDown = () => {
-      setSettings(prev => ({ ...prev, keyboardNavigation: false }));
+      setSettings((prev: any) => ({ ...prev, keyboardNavigation: false }));
       document.body.classList.remove('keyboard-navigation');
     };
 
@@ -131,8 +131,8 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ children 
     }
   }, [announcements]);
 
-  const updateSetting = (key: keyof AccessibilitySettings, value: any) => {
-    setSettings(prev => ({ ...prev, [key]: value }));
+  const updateSetting = (key: string, value: any) => {
+    setSettings((prev: any) => ({ ...prev, [key]: value }));
   };
 
   const announceToScreenReader = (message: string) => {
