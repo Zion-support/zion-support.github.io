@@ -9,7 +9,7 @@ export default function HomePage() {
     {
       title: "AI-Powered Solutions",
       description: "Cutting-edge artificial intelligence to transform your business operations with machine learning, natural language processing, and predictive analytics",
-      icon: Brain,
+      icon: <Brain className="w-8 h-8 text-cyan-400" />,
       benefits: [
         "Machine Learning Implementation",
         "Natural Language Processing",
@@ -20,7 +20,7 @@ export default function HomePage() {
     {
       title: "IT Services",
       description: "Comprehensive technology solutions including cloud infrastructure, cybersecurity, and digital transformation for modern businesses",
-      icon: BarChart,
+      icon: <BarChart className="w-8 h-8 text-purple-400" />,
       benefits: [
         "Cloud Infrastructure Setup",
         "Cybersecurity Solutions",
@@ -31,7 +31,7 @@ export default function HomePage() {
     {
       title: "Micro SaaS",
       description: "Scalable software-as-a-service solutions designed for rapid deployment and growth, perfect for startups and enterprises",
-      icon: Target,
+      icon: <Target className="w-8 h-8 text-green-400" />,
       benefits: [
         "Rapid Deployment",
         "Scalable Architecture",
@@ -42,7 +42,7 @@ export default function HomePage() {
     {
       title: "Business Intelligence",
       description: "Advanced analytics and reporting tools to help you make data-driven decisions and optimize your business performance",
-      icon: TrendingUp,
+      icon: <TrendingUp className="w-8 h-8 text-orange-400" />,
       benefits: [
         "Data Visualization",
         "Performance Analytics",

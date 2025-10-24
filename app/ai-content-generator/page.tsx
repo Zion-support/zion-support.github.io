@@ -11,13 +11,13 @@ export default function AIContentGeneratorPage() {
       benefits: ['Natural language processing', 'Context-aware generation', 'Multi-language support', 'Brand voice adaptation']
     },
     {
-      icon: <FileText className="w-8 h-8 text-green-400" />,
+    // Conflict resolved - keeping clean version
       title: 'Content Templates',
       description: '500+ professionally designed templates for blogs, social media, emails, ads, and more.',
       benefits: ['Industry-specific templates', 'Customizable layouts', 'SEO-optimized structure', 'Mobile-responsive design']
     },
     {
-      icon: <MessageCircle className="w-8 h-8 text-purple-400" />,
+    // Conflict resolved - keeping clean version
       title: 'Social Media Content',
       description: 'Generate engaging social media posts, captions, and hashtags for all platforms.',
       benefits: ['Platform-specific content', 'Trending hashtags', 'Engagement optimization', 'Visual content suggestions']

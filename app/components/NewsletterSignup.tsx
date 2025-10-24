@@ -1,7 +1,6 @@
 'use client';
-'use client';
 import { useState } from 'react';
-import { AlertCircle, Send, Mail, CheckCircle } from 'lucide-react';
+    // Conflict resolved - keeping clean version
 
 interface NewsletterSignupProps {
   variant?: 'inline' | 'modal';
