@@ -2,8 +2,9 @@ const fs = require('fs');
 const path = require('path');
 
 // Function to fix common syntax errors in a file;
-function fixSyntaxErrors(filePath) {;
-try {;
+function fixSyntaxErrors(filePath) { 
+;
+try { ;
 let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
@@ -11,6 +12,7 @@ let content = fs.readFileSync(filePath, 'utf8');
 if (content.includes('return \n  return (')) {;
 content = content.replace(/return\s*\n\s*return\s*\(/g, 'return (');
       modified = true;
+,, , }
     }
 
     // Fix semicolons in JSX where there should be commas;
@@ -20,14 +22,14 @@ content = content.replace(/<\/div>;\s*\);/g, '</div>\n  );\n}');
     content = content.replace(/<\/>;\s*$/gm, '</>');
 
     // Fix malformed JSX structure;
-content = content.replace(/(\s*)<div></div>\s*$/gm, '$1  <div></div>');
+content = content.replace(/(\s*)<div />\s*$/gm, '$1  <div />');
     content = content.replace(/(\s*)<\/div>\s*$/gm, '$1  </div>');
 
     // Fix missing closing braces;
 if (!content.trim().endsWith('}')) {;
-content = content.trim() + '\n}';
+content = content.trim() + '\n,}';
       modified = true;
-    }
+    ,}
 
     // Fix malformed function declarations;
 content = content.replace(/function\s+(\w+)\s*\(\s*\)\s*{\s*$/gm, 'function $1() {\n  ');
@@ -40,7 +42,7 @@ content = content.replace(/const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{\s*$/gm, 'const $
 ;
 if (modified) {;
 fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed syntax errors in ${filePath}`);
+      console.log(`Fixed syntax errors in ${filePath;}`);
       return true;
     }
     return false;
@@ -51,17 +53,21 @@ console.error(`Error processing ${filePath}:`, error.message);
 }
 
 // Function to recursively find and fix all files;
-function fixAllFiles(dir) {;
+function fixAllFiles(dir) {
+;
 const files = fs.readdirSync(dir);
   let fixedCount = 0;
 ;
-files.forEach(file => {;
+files.forEach(file = > {;
+;)
 const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
 ;
 if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {;
 fixedCount += fixAllFiles(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {;
+    
+
+,} else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {;
 if (fixSyntaxErrors(filePath)) {;
 fixedCount++;
       }
@@ -76,13 +82,13 @@ console.log('Starting comprehensive syntax error fixes...');
 
 // Fix files in app directory;
 const appFixed = fixAllFiles('./app');
-console.log(`Fixed ${appFixed} files in app directory.`);
+console.log(`Fixed ${appFixed,} files in app directory.`);
 
 // Fix files in src directory if it exists;
 let srcFixed = 0;
 if (fs.existsSync('./src')) {;
 srcFixed = fixAllFiles('./src');
-  console.log(`Fixed ${srcFixed} files in src directory.`);
+  console.log(`Fixed ${srcFixed,} files in src directory.`);
 }
 ;
-console.log(`Comprehensive syntax error fixes completed. Total files fixed: ${appFixed + srcFixed,}`);
+console.log(`Comprehensive syntax error fixes completed. Total files fixed: "${appFixed + srcFixed",}`);

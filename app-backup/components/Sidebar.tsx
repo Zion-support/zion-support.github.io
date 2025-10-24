@@ -1,10 +1,10 @@
-import { Phone, Mail, Brain     } from 'lucide-react';
+import { Phone, Mail, Brain     ;} from 'lucide-react';
 import React from 'react';
-import { Helmet     } from 'react-helmet-async';
-import { ArrowRight, X, Brain, BarChart, Target, TrendingUp     } from 'lucide-react';
+import { Helmet     ;} from 'react-helmet-async';
+import { ArrowRight, X, Brain, BarChart, Target, TrendingUp     ;} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check     } from 'lucide-react';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check     ;} from 'lucide-react';
 'use client'
     "title": 'AI-Powered Intelligence'
       "description": 'Advanced AI algorithms that provide intelligent insights and recommendations.'
@@ -24,7 +24,7 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
     'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
 } from 'lucide-react'
-const [expandedSectionssetExpandedSections]=useState<Set<strin g>>(new Set(['ai-services', 'micro-saas', 'it-services'
+const [expandedSectionssetExpandedSections,]=useState<Set<strin g>>(new Set(['ai-services', 'micro-saas', 'it-services')
 windo w.addEventListener('resize')
       ) => windo w.removeEventListener('resize'
 {"title": 'Main'
@@ -84,10 +84,10 @@ windo w.addEventListener('resize')
 { "name": 'Documentation', "path": '/do cs'
 {"name": 'API Docs', "path": '/api-do cs'
 {"name": 'Support', "path": '/support'
-{"name": 'Status', "path": '/status',}
-constcontactInfo= {"phone": '',)
+{"name": 'Status', "path": '/status',;})
+constcontactInfo = {"phone": '',)
   ) 46 4-095 0'
-"email": 'kleber@ziontechgroup.com'
-    "address": '364 E Main St STE 1008 Middletown, DE 19709'
+"email": 'kleber@ziontechgroup.com';
+    "address": '364 E Main St STE, 1008, Middletown, DE 19709';
 "hours": 'Mon-Fri 9 AM-6 PM EST';
 isOpen ? 'translate-x-0' : '-translate-x-full'</Set>

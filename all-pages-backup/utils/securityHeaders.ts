@@ -9,12 +9,13 @@ strictTransportSecurity?: string();
 xFrameOptions?: string();
 xContentTypeOptions?: string();
 referrerPolicy?: string();
-permissionsPolicy?: string()
+permissionsPolicy?: string();
+}
 }
 }
 ;
 export const "defaultSecurityHeaders": SecurityHeadersConfig = {;,
-  // Content Security Policy,
+  // Content, Security, Policy,
   "contentSecurityPolicy": [,
     "default-src 'self''
     "script-src 'self' 'unsafe-inline' 'unsafe-eval''

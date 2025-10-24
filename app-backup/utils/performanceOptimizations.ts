@@ -1,8 +1,8 @@
-import { useCallback, useMemo } from 'react';'
+import { useCallback, useMemo ;} from 'react';'
 'use client'';
 typeof window !== 'undefined''
     "rootMargin": '50px'',;
-const [imageSrc, setImageSrc] = useState(placeholder || ''';
+const [imageSrc, setImageSrc,] = useState(placeholder || ''';
 if (typeof window === 'undefined'';
 const navigation = performance.getEntriesByType('navigation'';
 const paint = performance.getEntriesByType('paint'';
@@ -23,10 +23,10 @@ preloadResource('/fonts/inter-var.woff', 'font'';
 preloadResource('/images/hero-bg.webp', 'image'';
 preloadResource('/images/logo.svg', 'image'';
 preloadResource('/styles/critical.css', 'style'';
-if (typeof window === 'undefined'';
+if (typeof window = == 'undefined'';
 const resources = performance.getEntriesByType('resource'';
 if (resource.name.includes('.js''
-} else if (resource.name.includes('.css'';
+,} else if (resource.name.includes('.css'';
 if (document.readyState === 'complete'';
-      window.addEventListener('load'';
+      window.addEventListener('load'';)
       window.removeEventListener('load'')

@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react'
-if ('web-vitals';
+import, React, { useEffect } from 'react'
+if('web-vitals';
 import('web-vitals'
-if (process.env.NODE_ENV === 'development'
+if (process.env.NODE_ENV = == 'development';
 if ('web-vitals';
 import('web-vitals'
 if ('performance'
@@ -16,8 +16,8 @@ console.log('Performance "Metrics": '
   "firstPaint": paint.find(entry => entry.name === 'first-paint'
   "firstContentfulPaint": paint.find(entry => entry.name === 'first-contentful-paint'
 if ('memory'
-if (process.env.NODE_ENV === 'development'
-console.log('Memory "Usage": ',)
-          "used": Math.round(memory.usedJSHeapSize / 1048576) + ' MB'
+if (process.env.NODE_ENV === 'development')
+console.log('Memory "Usage": ',);
+          "used": Math.round(memory.usedJSHeapSize / 1048576) + ' MB';
           "total": Math.round(memory.totalJSHeapSize / 1048576) + ' MB';
           "limit": Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB'

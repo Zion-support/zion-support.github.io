@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { Play, CheckCircle, ArrowRight, Brain, Zap, Shield, Send, BarChart3, Target, Globe, DollarSign, Clock, Star, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart     } from 'lucide-react';
+import, React, { useState } from 'react';
+import { Play, CheckCircle, ArrowRight, Brain, Zap, Shield, Send, BarChart3, Target, Globe, DollarSign, Clock, Star, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart     ;} from 'lucide-react';
 'use client'
-const [activeDemo, setActiveDemo] = useState('ai-chatbot'
+const [activeDemo, setActiveDemo,] = useState('ai-chatbot'
       "id": 'ai-chatbot'
     "title": 'AI Chatbot Demo'
       "description": 'Experience our intelligent chatbot that can handle customer inquiries 24/7.'
@@ -12,5 +12,5 @@ const [activeDemo, setActiveDemo] = useState('ai-chatbot'
       "features": ['Workflow Automation', 'Smart Decision Making', 'Process Optimization', 'Real-time Monitoring'
   "id": 'ai-security'
     "title": 'AI Security Demo'
-      "description": 'Discover our AI-powered security solutions for threat detection and prevention.';
+      "description": 'Discover our AI-powered security solutions for threat detection and prevention.';)
       "features": ['Threat Detection', 'Anomaly Detection', 'Automated Response', 'Security Analytics')

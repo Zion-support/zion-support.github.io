@@ -1,9 +1,9 @@
 import React from 'react';
-import { Helmet     } from 'react-helmet-async';
-import { ArrowRight, Brain, BarChart, Target, TrendingUp     } from 'lucide-react';
+import { Helmet     ;} from 'react-helmet-async';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp     ;} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check     } from 'lucide-react';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check     ;} from 'lucide-react';
 'use client'
     "title": 'AI-Powered Intelligence'
       "description": 'Advanced AI algorithms that provide intelligent insights and recommendations.'
@@ -22,11 +22,11 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
     'Improve decision-making with AI insights'
     'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
-"constSEOHead": React.FC<SEOHeadProp s>= ({title= 'Zion Tech Group - Advanced AI & IT Solutions'
-description= 'Transform your business with cutting-edge artificial intelligence, cloud infrastructure, and innovative technology solutions. Expert AI and IT consulting services.'
-keywords= 'AI solutions, IT consulting, cloud infrastructure, cybersecurity, automation, machine learning, artificial intelligence, business transformation'
-ogImage= '/og-image.jpg'
-ogType= 'website'
-twitterCard= 'summary_large_image'
-structuredData}) => {constfullTitle= title.includes('Zion Tech Group';}
-constcanonicalUrl= canonical || (type of windo w !== 'undefined' ? windo w.location."href": '')</SEOHeadProp>
+"constSEOHead": React.FC<SEOHeadProp s>= ({title = 'Zion Tech Group - Advanced AI & IT Solutions'
+description= 'Transform your business with cutting-edge, artificial, intelligence, cloud, infrastructure, and innovative technology solutions. Expert AI and IT consulting services.'
+keywords= 'AI, solutions, IT, consulting, cloud, infrastructure, cybersecurity, automation, machine, learning, artificial, intelligence, business transformation'
+ogImage = '/og-image.jpg'
+ogType= 'website';
+twitterCard= 'summary_large_image';
+structuredData,}) => {constfullTitle = title.includes('Zion Tech Group';,})
+constcanonicalUrl = canonical || (type of windo w !== 'undefined' ? windo w.location."href": '')</SEOHeadProp>;

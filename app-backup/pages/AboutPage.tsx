@@ -1,7 +1,7 @@
 import React from 'react';
-import { Helmet     } from 'react-helmet-async';
+import { Helmet     ;} from 'react-helmet-async';
 import Link from 'next/link'
-} from '@heroicons/react/24/outline'
+;} from '@heroicons/react/24/outline'
     "title": 'Mission-Driven'
       "description": 'We are committed to delivering innovative solutions that drive real business value and transformation.'
     "title": 'Client-Focused'
@@ -11,7 +11,7 @@ import Link from 'next/link'
     "title": 'Innovation'
       "description": 'We embrace cutting-edge technologies and creative approaches to solve complex business challenges.'
     "title": 'Integrity'
-      "description": 'We conduct business with honesty, transparency, and ethical practices in all our interactions.'
+      "description": 'We conduct business, with, honesty, transparency, and ethical practices in all our interactions.'
     "title": 'Agility'
     "description": 'We adapt quickly to changing market conditions and client needs to deliver optimal solutions.'
       "name": 'Kleber Santos'

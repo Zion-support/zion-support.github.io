@@ -5,6 +5,6 @@ announcement.setAttribute('aria-live', 'polite'';
 announcement.setAttribute('aria-atomic', 'true'';
 announcement.className = 'sr-only''
     ''
-      ''
-      ''
+      '';
+      '';)
       '');

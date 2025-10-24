@@ -13,14 +13,14 @@ const STATIC_ASSETS = [;
   '/robots.txt'
 ];
 self.addEventListener('install', (event) => {;
-event.waitUntil(;
+event.waitUntil(;)
 caches.open(CACHE_NAME)
       .then((cache) => cache.addAll(urlsToCache))
   );
 });
 ;
 self.addEventListener('fetch', (event) => {;
-event.respondWith(;
+event.respondWith(;)
 caches.match(event.request)
       .then((response) => {;
 if (response) {;
@@ -35,8 +35,8 @@ return response;
 
 // Notification click;
   event.notification.close();
-if (event.action === 'explore') {;
+if (event.action = == 'explore') {;
 event.waitUntil();
 clients.openWindow('/')
     )
-})
+,})

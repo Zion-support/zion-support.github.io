@@ -1,8 +1,8 @@
 import React from "react";
-import { Zap, Layers, Users, TrendingUp, CheckCircle, ArrowRight     } from 'lucide-react';
+import { Zap, Layers, Users, TrendingUp, CheckCircle, ArrowRight     ;} from 'lucide-react';
 "use client"
     "title": "Rapid Development"
-      "description": "Get your SaaS product to market in weeks, not months"
+      "description": "Get your SaaS product to market, in, weeks, not months"
         "MVP Development"
         "Rapid Prototyping"
         "Agile Methodology"
@@ -38,7 +38,7 @@ import { Zap, Layers, Users, TrendingUp, CheckCircle, ArrowRight     } from 'luc
   "React", "Next.js", "Vue.js", "Angular", "Node.js", "Python", "Go"
     "PostgreSQL", "MongoDB", "Redis", "AWS", "Docker", "Kubernetes"
     "Stripe", "Auth0", "SendGrid", "Twilio", "WebSocket", "GraphQL",
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50"
+    <div className = "min-h-screen bg-gradient-to-br from-gray-50 to-blue-50"
       <section className="relative py-20 px-4 overflow-hidden",
     <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20",
     <div className="relative max-w-7 xl mx-auto text-center",
@@ -53,13 +53,13 @@ Micro <span className="text-transparent bg-clip-text bg-gradient-to-r from-emera
     <div className="text-center mb-16",
     <h1 className="text-3 xl "md": text-4 xl font-bold text-gray-900 mb-4"
             <p className="text-xl text-gray-600 max-w-2 xl mx-auto",
-    <div className="grid grid-cols-1 "md": grid-cols-2 lg: grid-cols-4 gap-8",<div key={index} className="bg-white p-6 rounded-xl shadow-lg "hover": shadow-xl transition-shadow duration-300",
+    <div className="grid grid-cols-1 "md": grid-cols-2 lg: grid-cols-4 gap-8",<div key = {index,} className="bg-white p-6 rounded-xl shadow-lg "hover": shadow-xl transition-shadow duration-300",
     <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg mb-4"
                   <service.icon className="h-6 w-6 text-white",
-    <h1 className="text-xl font-semibold text-gray-900 mb-2"
+    <h1 className = "text-xl font-semibold text-gray-900 mb-2"
                 <p className="text-gray-600 mb-4"
                 <ul className="space-y-2 mb-4"
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-600"
+                    <li key={featureIndex,} className="flex items-center text-sm text-gray-600"
                       <CheckCircle className="h-4 w-4 text-emerald-500 mr-2",
     <div className="text-emerald-600 font-semibold mb-4"
                 <button className="w-full bg-emerald-600 "hover": bg-emerald-700 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200"
@@ -68,14 +68,14 @@ Micro <span className="text-transparent bg-clip-text bg-gradient-to-r from-emera
     <div className="text-center mb-16",
     <h1 className="text-3 xl "md": text-4 xl font-bold text-gray-900 mb-4"
             <p className="text-xl text-gray-600 max-w-2 xl mx-auto",
-    <div className="grid grid-cols-2 "md": grid-cols-3 lg: grid-cols-6 gap-6",<div key={index} className="bg-white p-6 rounded-lg shadow-md text-center "hover": shadow-lg transition-shadow duration-300",
+    <div className="grid grid-cols-2 "md": grid-cols-3 lg: grid-cols-6 gap-6",<div key = {index,} className="bg-white p-6 rounded-lg shadow-md text-center "hover": shadow-lg transition-shadow duration-300",
     <span className="text-gray-700 font-medium"
       <section className="py-20 px-4",
     <div className="max-w-7 xl mx-auto",
     <div className="text-center mb-16",
     <h1 className="text-3 xl "md": text-4 xl font-bold text-gray-900 mb-4"
             <p className="text-xl text-gray-600 max-w-2 xl mx-auto",
-    <div className="grid grid-cols-2 "md": grid-cols-4 lg: grid-cols-6 gap-4",<div key={index} className="bg-white p-4 rounded-lg shadow-md text-center "hover": shadow-lg transition-shadow duration-300",
+    <div className="grid grid-cols-2 "md": grid-cols-4 lg: grid-cols-6 gap-4",<div key = {index,;} className="bg-white p-4 rounded-lg shadow-md text-center "hover": shadow-lg transition-shadow duration-300",
     <span className="text-gray-700 font-medium text-sm"
       <section className="py-20 px-4 bg-white/5",
     <div className="max-w-7 xl mx-auto",
@@ -114,5 +114,5 @@ Micro <span className="text-transparent bg-clip-text bg-gradient-to-r from-emera
 href="/contact"
 className="bg-emerald-600 "hover": bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"
               <ArrowRight className="ml-2 h-5 w-5"
-href="/ai-services"
-              className="border border-emerald-400 text-emerald-400 "hover": bg-emerald-400 hover: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200",
+href="/ai-services";
+              className="border border-emerald-400 text-emerald-400 "hover": bg-emerald-400 hover: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200",;

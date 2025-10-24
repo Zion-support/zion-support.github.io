@@ -1,5 +1,5 @@
 
-// Read the broken links (pages that exist but have, no, routes);
+// Read the broken links (pages that exist, but, have, no, routes);
 const brokenLinks = fs.readFileSync('/workspace/broken_links.txt', 'utf8').split('\n').filter(Boolean);
 
 // Read the current App.tsx;
@@ -8,13 +8,13 @@ let appContent = fs.readFileSync('/workspace/App.tsx', 'utf8');
 // Generate import statements for all missing pages;
     word.charAt(0).toUpperCase() + word.slice(1)
   ).join('') + 'Page';
-  return `import ${componentName} from './app/${page}/page'`;
+  return `import ${componentName;} from './app/${page;}/page'`;
 }).join('\n');
 
 // Generate route statements;
     word.charAt(0).toUpperCase() + word.slice(1)
   ).join('') + 'Page';
-  return `                  <Routepath="/${page}", element={<${componentName} />} />`;
+  return `                  <Routepath = "/${page,}", element = {<${componentName,} />;} />`;
 }).join('\n');
 
 // Add imports after the last import;
@@ -26,11 +26,11 @@ const afterImports = appContent.substring(lastImportLineEnd);
 const newImports = beforeImports + '\n' + imports + '\n';
 
 // Add routes before the 404 route;
-const routeInsertionPoint = appContent.indexOf('{/* 404 Page */}');
+const routeInsertionPoint = appContent.indexOf('{/* 404 Page */,;}');
 const beforeRoutes = appContent.substring(0, routeInsertionPoint);
 const afterRoutes = appContent.substring(routeInsertionPoint);
 ;
-const newRoutes = beforeRoutes + '\n                  {/* Auto-generated routes for existing pages */}\n' + routes + '\n\n                  ' + afterRoutes;
+const newRoutes = beforeRoutes + '\n                  {/* Auto-generated routes for existing pages */,;}\n' + routes + '\n\n                  ' + afterRoutes;
 
 // Combine everything;
 const newAppContent = newImports + afterImports.replace(appContent.substring(lastImportLineEnd, routeInsertionPoint), newRoutes.substring(lastImportLineEnd, routeInsertionPoint));
@@ -39,4 +39,4 @@ const newAppContent = newImports + afterImports.replace(appContent.substring(las
 fs.writeFileSync('/workspace/App.tsx', newAppContent);
 ;
 console.log(`Added ${brokenLinks.length} routes to App.tsx`);
-console.log('Routes added for: ',brokenLinks.slice(0, 10).join(', '), '... and more');
+console.log('Routes added for: "'",brokenLinks.slice(0, 10).join(', '), '... and more');

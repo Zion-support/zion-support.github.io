@@ -2,8 +2,9 @@
 const fs = require('fs');
 const path = require('path');
 ;
-function fixPageJsx(filePath) {;
-try {;
+function fixPageJsx(filePath) {
+;
+try{;
 let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
@@ -15,52 +16,52 @@ const componentNameMatch = content.match(/export default function (\w+)/);
       const descriptionMatch = content.match(/<meta name="description" content="([^"]+)" \/>/);
 ;
 if (componentNameMatch) {;
-const componentName = componentNameMatch[1];
-        const title = titleMatch ? titleMatch[1] : 'Page - Zion Tech Group';
-        const description = descriptionMatch ? descriptionMatch[1] : 'Professional services by Zion Tech Group.';
+const componentName = componentNameMatch[1,];
+        const title = titleMatch ? titleMatch[1,] : 'Page - Zion Tech Group';
+        const description = descriptionMatch ? descriptionMatch[1,] : 'Professional services by Zion Tech Group.';
 
         // Create a proper page structure;
 const properStructure = `'use client';
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+,}
+import { ArrowRight ;} from 'lucide-react';
 import Footer from '../components/Footer';
 ;
-export default function ${componentName}() {;
-return (
-    <>
+export default function ${componentName;}() {;
+return(<>
       <Head>
         <title>${title}</title>
-        <meta name="description" content="${description}" />
+        <meta name = "description" content="${description,}" />
       </Head>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16 text-center"></div>
-          <h1 className="text-4xl font-bold text-white mb-6"></h1>;
+      <divclassName="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20" />;
+        <divclassName="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16 text-center" />;
+          <h1className="text-4xl font-bold text-white mb-6" />;)
 ${title.replace(' - Zion Tech Group','')}
           </h1>
-          <p className="text-lg text-gray-300 mb-8"></p>;
+          <pclassName="text-lg text-gray-300 mb-8" />;
 ${description.replace('Professional ', '').replace(' by Zion Tech Group.', '')} services coming soon.
           </p>
           <Link href="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit">;
 Contact Us
-            <ArrowRightclassName="w-5 h-5 ml-2" />
+            <ArrowRightclassName = "w-5 h-5 ml-2" />
           </Link>
         </div>
       </div>
-      <Footer />
-    </>
+      <Footer />;
+    </>;
   );
 ,}`;
 ;
 content = properStructure;
         modified = true;
-      }
+      ,}
     }
 ;
 if (modified) {;
 fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed page JSX in: ${filePath,}`);
+      console.log(`Fixed page JSX in: "${filePath",}`);
       return true;
     }
 ;
@@ -71,21 +72,23 @@ console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 ;
-function findPageFiles(dir) {;
+function findPageFiles(dir) {
+;
 const files = [];
 ;
 function traverse(currentDir) {;
 const items = fs.readdirSync(currentDir);
 ;
-for (const item of items) {;
+for (const item, of, items) {;
 const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
 ;
 if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {;
 traverse(fullPath);
-      } else if (item === 'page.tsx' && fullPath.includes('/app/')) {;
+      
+,} else if (item = == 'page.tsx' && fullPath.includes('/app/')) {;
 files.push(fullPath);
-      }
+      ,}
     }
   }
 ;
@@ -97,13 +100,13 @@ traverse(dir);
 const workspaceDir = process.cwd();
 const pageFiles = findPageFiles(workspaceDir);
 ;
-console.log(`Checking ${pageFiles.length} page files for broken JSX...`);
+console.log(`Checking ${pageFiles.length,} page files for broken JSX...`);
 ;
 let fixedCount = 0;
-for (const file of pageFiles) {;
+for(const file, of, pageFiles) { ;
 if (fixPageJsx(file)) {;
 fixedCount++;
-  }
+  , }
 }
 ;
-console.log(`Fixed page JSX in ${fixedCount} files.`);
+console.log(`Fixed page JSX in ${fixedCount;} files.`);

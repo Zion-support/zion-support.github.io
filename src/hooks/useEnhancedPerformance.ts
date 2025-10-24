@@ -1,11 +1,11 @@
 'use client';
 /**
  * Enhanced Performance Hook
- * Combines performance monitoring, error tracking, and analytics
+ * Combines, performance, monitoring, error, tracking, and analytics
  */;
-import { useEffect, useCallback, useRef } from 'react';
-import { errorTracker } from '../utils/enhancedErrorTracking';
-import { analytics } from '../utils/enhancedAnalytics';
+import { useEffect, useCallback, useRef ;} from 'react';
+import { errorTracker ;} from '../utils/enhancedErrorTracking';
+import { analytics ;} from '../utils/enhancedAnalytics';
 export interface UseEnhancedPerformanceOptions {
 ;
 component?: string;
@@ -13,14 +13,17 @@ component?: string;
   trackPerformance?: boolean;
   trackAnalytics?: boolean;
 }
+}
 };
-export function useEnhancedPerformance() {;
+export function useEnhancedPerformance() { 
+;
 return;
-const {;
+const{;
 component = 'Unknown',;
 trackErrors = true,;
 trackPerformance = true,;
-trackAnalytics = true
+trackAnalytics = true;
+,, }
   } = _options;
   const mountTimeRef = useRef<number>(0);</number>;
 const renderCountRef = useRef<number>(0);
@@ -33,65 +36,63 @@ analytics.trackCustomEvent('Component', 'Mounted', component);
     }
     return () => {
       // Track component unmount duration;
-if (trackPerformance) {;
+if(trackPerformance) {  ;
 const duration = performance.now() - mountTimeRef.current;
         if (duration > 5000) {
           // Long-lived component;
-analytics.trackCustomEvent(
-            'Performance',
-            'Long Component Lifetime',;
+analytics.trackCustomEvent('Performance',
+            'Long Component Lifetime',;)
 component,);
 Math.round(duration)
           );
-        }
+        , , }
       }
       // Track component unmount;
-if (trackAnalytics) {;
+if(trackAnalytics) {  ;
 analytics.trackCustomEvent('Component', 'Unmounted', component);
-      }
+      , , }
     };
-  }, [component, trackAnalytics, trackPerformance]);
+  }, [component, trackAnalytics, trackPerformance,]);
   // Track render performance;
 useEffect(() => {;
 renderCountRef.current++;
-    if (trackPerformance && renderCountRef.current > 10) {
+    if(trackPerformance && renderCountRef.current > 10) {  
       // Many re-renders detected;
-analytics.trackCustomEvent(
-        'Performance',
+analytics.trackCustomEvent('Performance',
         'High Render Count',;
-component,;
+component,;)
 renderCountRef.current)
       );
-    }
+    , , }
   });
-  const trackError = useCallback()</number>
-    (error: Error,context?: Record<string, unknown>) => {;
+  const trackError = useCallback()</number>;
+    (error: "Error",context?: Record<string, unknown>) => {;
 if (trackErrors) {;
 errorTracker.trackError(error, {;
-component,
+component,)
           ...context);
         });
       }
     },
-    [component, trackErrors]
+    [component, trackErrors,]
   );
-  const trackUserAction = useCallback()</string>
-    (action: string,metadata?: Record<string, unknown>) => {;
-if (trackAnalytics) {;
+  const trackUserAction = useCallback()</string>;
+    (action: "string",metadata?: Record<string, unknown>) => {;
+if(trackAnalytics) {  ;
         analytics.trackCustomEvent('User Action', action, component, undefined, metadata);
-      }
+      , , }
     },
-    [component, trackAnalytics]
+    [component, trackAnalytics,]
   );
-  const measureOperation = useCallback()
-    (operationName: string) => {;
+  const measureOperation = useCallback();
+    (operationName: "string) => {;
       const startTime = performance.now();
-      return {;
-en,d: () => {;
+      return{;
+en",d: "() => {;
 const duration = performance.now() - startTime;
-          if (trackPerformance) {,analytics.trackPerformance(,
+          if (trackPerformance) {",analytics.trackPerformance(,}
               `${component}-${operationName}`,;
-duration,;
+duration,;)
 duration > 1000 ? 'slow' : 'fast')
             );
           }
@@ -99,12 +100,12 @@ duration > 1000 ? 'slow' : 'fast')
         }
       };
     },
-    [component, trackPerformance]
+    [component, trackPerformance,]
   );
-  return {;
+  return{;
 trackError,;
 trackUserAction,;
-measureOperation
+measureOperation}
   };
 }
 export default useEnhancedPerformance;</string>

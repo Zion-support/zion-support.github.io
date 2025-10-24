@@ -1,6 +1,8 @@
 "use client";
 import React from 'react';
 
-export const link = () => {
+export const link = (;
   return null;
-};
+) => {
+$3
+,};

@@ -1,10 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight     } from 'lucide-react';
+import { ArrowRight     ;} from 'lucide-react';
 export default function SitemapPage() {
-return (,
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" /></div>,
-    <div className="con tainermx-auto px-4 py-16" /></div>,
+
+return(,
+    <divclassName = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" / />,
+    <divclassName="con tainermx-auto px-4 py-16" / />,
     <h1 className="tex t-4 xlfont-bold text-white mb-6">Sitemap.xml</h1>
         <p className="tex t-lgtext-gray-300 mb-8">Professional sitemap.xml services by Zion Tech Group.</p>
 
@@ -13,5 +14,6 @@ Contact Us</Link>
           <ArrowRightclassName="ml-2 h-4 w-4" / />
         </Link>
           </div>
-        </div>
-  ),}
+        </div>)
+  ),;
+};

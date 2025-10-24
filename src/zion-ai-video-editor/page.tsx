@@ -1,20 +1,20 @@
 import React from 'react';
 import Head from "next/head";
 import Link from 'next/link';
-import { ArrowRight     } from 'lucide-react';
+import { ArrowRight     ;} from 'lucide-react';
 export default function ZionAiVideoEditorPage() {
-return (
-      <>
+
+return(<>
     :all-pages-backup/zion-ai-video-editor/page.tsx
     </>
       <title>ZionAiVideoEditor - Zion Tech Group</title>
-        <meta name="description" content="Professional zionaivideoeditor services by Zion Tech Group." / / />
+        <meta name = "description" content="Professional zionaivideoeditor services by Zion Tech Group." / / />
         <Head />
         <title>ZionAiVideoEditor - Zion Tech Group</title>
         <meta name="description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />
       </Head>,
-    <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" /></div>,
-    <div className="con tainermx-auto px-4 py-16" /></div>,
+    <divclassName="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" / />,
+    <divclassName="con tainermx-auto px-4 py-16" / />,
     <h1 className="tex t-4 xlfont-bold text-white mb-6">ZionAiVideoEditor</h1>
           <p className="tex t-lgtext-gray-300 mb-8">Professional zionaivideoeditor services by Zion Tech Group.</p>
 
@@ -22,7 +22,8 @@ return (
 Contact Us</Link>
             <ArrowRightclassName="ml-2 h-4 w-4" / />
           </Link>
-            </div>
-      </div>
-</div>;
-  ),}
+            </div>;
+      </div>;
+</div>;)
+  ),
+}

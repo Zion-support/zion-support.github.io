@@ -1,4 +1,4 @@
-import { CheckCircle, Phone, Mail, Helmet     } from 'lucide-react';
+import { CheckCircle, Phone, Mail, Helmet     ;} from 'lucide-react';
     'Increase efficiency by up to 50%'
     'Reduce costs by 30% with automation'
     'Improve decision-making with AI insights'

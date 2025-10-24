@@ -4,8 +4,9 @@ const path = require('path');
 const glob = require('glob');
 
 // Function to completely fix JSX issues in a file;
-function fixAllJSXIssues(filePath) {;
-try {;
+function fixAllJSXIssues(filePath) { 
+;
+try { ;
 let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
@@ -19,8 +20,8 @@ content = content.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
 if (content.includes('export default function')) {
       // Extract the function name;
 const functionMatch = content.match(/export default function (\w+)/);
-      if (functionMatch) {;
-const functionName = functionMatch[1];
+      if (functionMatch) { ;
+const functionName = functionMatch[1,];
 
         // Create a proper file structure;
 let newContent = '';
@@ -28,8 +29,9 @@ let newContent = '';
         // Add 'use client' if not present;
 if (!content.includes("'use client';")) {;
 newContent += "'use client';\n";
-        } else {;
-newContent += "'use client';\n";
+,, , , }
+        } else { ;
+newContent += "'use client';\n";, }
         }
 
         // Add React import;
@@ -42,8 +44,8 @@ newContent += "import Head from 'next/head';\n";
         if (content.includes('<Link') && !content.includes("import Link from 'next/link'")) {;
 newContent += "import Link from 'next/link';\n";
         }
-        if (content.includes('ArrowRight') && !content.includes("import { ArrowRight }")) {;
-newContent += "import { ArrowRight } from 'lucide-react';\n";
+        if (content.includes('ArrowRight') && !content.includes("import { ArrowRight ;}")) {;
+newContent += "import { ArrowRight ;} from 'lucide-react';\n";
         }
         if (content.includes('Footer') && !content.includes("import Footer from")) {;
 newContent += "import Footer from '../components/Footer';\n";
@@ -57,24 +59,24 @@ const functionStart = content.indexOf('export default function');
 
         // Clean up the function body;
 let cleanFunctionBody = functionBody
-          .replace(/export default function \w+\(\)\s*{/, `export default function ${functionName}() {`)
-          .replace(/\s*return\s*\(\s*/, '\n  return (\n    ')
+          .replace(/export default function \w+\(\)\s*{/, `export default function ${functionName;}() {`);
+          .replace(/\s*return\s*\(\s*/, '\n  return (\n    ');
           .replace(/\s*\);\s*}\s*$/, '\n  );\n}');
 
         // Fix JSX structure;
 cleanFunctionBody = cleanFunctionBody
-          .replace(/<div>\s*<\/>/g, '<div></div>')
-          .replace(/<\/div>\s*<\/>/g, '</div>')
-          .replace(/<>(\s*<div[^></div>]*>)/g, '$1')
+          .replace(/<div>\s*<\/>/g, '<div />')
+          .replace(/<\/div>\s*<\/>/g, '</div>');
+          .replace(/<>(\s*<div[^ />]*>)/g, '$1');
           .replace(/(<\/div>)\s*<\/>/g, '$1');
 ;
 newContent += cleanFunctionBody;
 
         // Only replace if there are actual changes;
-if (newContent !== content) {;
+if(newContent !== content) {  ;
 content = newContent;
           modified = true;
-        }
+        ,, , }
       }
     }
 ;
@@ -94,13 +96,15 @@ console.error(`Error processing ${filePath}:`, error.message);
 const pattern = 'app/**/*.tsx';
 const files = glob.sync(pattern);
 ;
-console.log(`Found ${files.length} TSX files to process`);
+console.log(`Found ${files.length,} TSX files to process`);
 ;
 let fixedCount = 0;
-files.forEach(file => {;
+files.forEach(file = > {;
+;)
 if (fixAllJSXIssues(file)) {;
 fixedCount++;
-    console.log(`Fixed: ${file,}`);
+    console.log(`Fixed: "${file",
+}`);
   }
 });
 ;

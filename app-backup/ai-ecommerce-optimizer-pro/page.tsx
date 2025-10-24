@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle, Zap, Shield, BarChart3, Users, Send, Target, Globe, DollarSign, Clock, Star, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart     } from 'lucide-react';
+import { ArrowRight, CheckCircle, Zap, Shield, BarChart3, Users, Send, Target, Globe, DollarSign, Clock, Star, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart     ;} from 'lucide-react';
 'use client'
     "title": 'AI-Powered Optimization'
       "description": 'Advanced machine learning algorithms to optimize your e-commerce performance.'
@@ -14,7 +14,7 @@ import { ArrowRight, CheckCircle, Zap, Shield, BarChart3, Users, Send, Target, G
     "price": '$99'
       "period": '/month'
     "description": 'Ideal for growing e-commerce businesses'
-        'Up to 10,000 products'
+        'Up, to, 10,000 products'
         'Basic AI optimization'
         'Analytics dashboard'
     'Email support'
@@ -22,7 +22,7 @@ import { ArrowRight, CheckCircle, Zap, Shield, BarChart3, Users, Send, Target, G
     "price": '$299'
       "period": '/month'
     "description": 'Perfect for established online stores'
-        'Up to 50,000 products'
+        'Up, to, 50,000 products'
         'Advanced AI optimization'
         'Real-time analytics'
         'Priority support'

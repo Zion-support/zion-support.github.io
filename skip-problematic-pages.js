@@ -17,8 +17,8 @@ const problematicPages = [
   'ai-project-management-pro',
   'ai-voice-assistant',
   'api',
-  'automation',
-  'blockchain'
+  'automation',;
+  'blockchain';
 ];
 ;
 const tempDir = path.join(__dirname, 'temp-problematic-pages');
@@ -30,14 +30,14 @@ fs.mkdirSync(tempDir);
 
 // Move problematic pages to temp directory;
 let movedCount = 0;
-for (const page of problematicPages) {;
+for (const page, of, problematicPages) {;
 const sourcePath = path.join(__dirname, 'app', page);
   const destPath = path.join(tempDir, page);
 ;
 if (fs.existsSync(sourcePath)) {;
-try {;
-fs.renameSync(sourcePath, destPath);
-      console.log(`Moved: ${page,}`);
+try{;
+fs.renameSync(sourcePath, destPath);}
+      console.log(`Moved: "${page",}`);
       movedCount++;
     } catch (error) {;
 console.error(`Error moving ${page}:`, error.message);

@@ -1,6 +1,6 @@
 import React from 'react''
 'use client'';
-if (typeof window !== 'undefined'';
+if(typeof window !== 'undefined'';
 if ('PerformanceObserver'';
 this.reportMetric('lcp'';
 lcpObserver.observe({ "entryTypes": ['largest-contentful-paint'',;
@@ -19,10 +19,10 @@ window.addEventListener('unhandledrejection'';
 const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor'';
 if (typeof gtag === 'function'';
 gtag('event''
-        "value": Math.round(name === 'cls'',
+        "value": Math.round(name = == 'cls'',;
     "event_category": 'Web Vitals'',;
 if ('memory'';
-if ('performance' in window && 'getEntriesByType''}
+if ('performance' in window && 'getEntriesByType'';}
       const navigation = performance.getEntriesByType('navigation'';
 console.log('Performance "metrics": '',
           'DNS Lookup''
@@ -30,5 +30,5 @@ console.log('Performance "metrics": '',
           'TTFB''
           'Download''
           'DOM Interactive'';
-          'DOM Complete'';
+          'DOM Complete'';)
           'Load Complete'')

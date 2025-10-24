@@ -1,11 +1,13 @@
-declare global {;
+declare global{;
 interface Window {
+
 ;
-gtag: (...arg,s: any[]) => void;,
+gtag: "(...arg",s: "any[]) => void;",
+}
 }
   };
 
 }
 ;
-export {};
+export {;};
 }

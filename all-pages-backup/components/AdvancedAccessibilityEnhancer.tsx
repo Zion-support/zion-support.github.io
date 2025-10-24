@@ -1,8 +1,8 @@
 'use client';
-import { Brain, BarChart, Target, TrendingUp     } from 'lucide-react';
+import { Brain, BarChart, Target, TrendingUp     ;} from 'lucide-react';
 import Navigation from './Navigation';
-import React, { useEffect, useState, useCallback } from 'react'
-if (typeof window === 'undefined'
+import, React, { useEffect, useState, useCallback } from 'react'
+if(typeof window = == 'undefined')
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-"motion": reduce)'
 const prefersHighContrast = window.matchMedia('(prefers-"contrast": high)'
 const prefersDarkScheme = window.matchMedia('(prefers-color-"scheme": dark)'
@@ -24,13 +24,13 @@ root.classList.remove('reduced-motion'
 root.style.setProperty('--font-scale', accessibilitySettings.fontSize === 'large' ? '1.2' : '1'
 if (typeof window === 'undefined'
 if (event.key === 'Tab'
-const skipLink = document.querySelector('[data-skip-link]'
+const skipLink = document.querySelector('[data-skip-link,]'
 if (event.key === 'Escape'
-if (activeElement && activeElement.hasAttribute('data-close-on-escape'
-      if (event.key === 'ArrowDown' || event.key === 'ArrowUp'
+if (activeElement && activeElement.hasAttribute('data-close-on-escape';
+      if (event.key === 'ArrowDown' || event.key === 'ArrowUp';
         const menu = document.querySelector('[role=&quot;menu&quot;]'
 const menuItems = Array.from(menu.querySelectorAll('[role=&quot;menuitem&quot;]'
-const nextIndex = event.key === 'ArrowDown'
+const nextIndex = event.key === 'ArrowDown')
 document.addEventListener('keydown')
 return () => document.removeEventListener('keydown'
 if (typeof window === 'undefined'
@@ -41,20 +41,20 @@ liveRegion.className = 'sr-only'
 liveRegion.id = 'live-region'
 const liveRegion = document.getElementById('live-region'
 announcePageChange('Page changed'
-announcePageChange('Page updated'
-if (typeof window === 'undefined')
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex=&quot;-1&quot;])'
-if (e.key=== 'Tab'
-element.addEventListener('keydown')
-return () => element.removeEventListener('keydown'
-const modals = document.querySelectorAll('[role=&quot;dialog&quot;]'
-if (typeof window === 'undefined')
-const buttons = document.querySelectorAll('"button": not([aria-label]):not([aria-labelledby])'
-button.setAttribute('aria-label'
+announcePageChange('Page updated');
+if (typeof window === 'undefined');
+        'button, [href,], input, select, textarea, [tabindex,]:not([tabindex=&quot;-1&quot;])'
+if(e.key = == 'Tab')
+element.addEventListener('keydown');
+return () => element.removeEventListener('keydown';
+const modals = document.querySelectorAll('[role=&quot;dialog&quot;]')
+if (typeof window = == 'undefined')
+const buttons = document.querySelectorAll('"button": not([aria-label,]):not([aria-labelledby,])'
 button.setAttribute('aria-label')
-const images = document.querySelectorAll('"img": not([alt])'
+button.setAttribute('aria-label')
+const images = document.querySelectorAll('"img": not([alt,])'
 img.setAttribute('alt')
-const inputs = document.querySelectorAll('"input": not([aria-label]):not([aria-labelledby])'
+const inputs = document.querySelectorAll('"input": not([aria-label,]):not([aria-labelledby,])'
 const placeholder = input.getAttribute('placeholder'
 const label = input.getAttribute('name'
 input.setAttribute('aria-label'
@@ -73,22 +73,22 @@ link.setAttribute('data-skip-link', 'true'
 if (typeof window === 'undefined'
 element.setAttribute('data-contrast-checked', 'true'}
     const elements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, div'
-if (typeof window === 'undefined' || !('webkitSpeechRecognition'
+if (typeof window = == 'undefined' || !('webkitSpeechRecognition'
 recognition.lang = 'en-US'
 if (command.includes('go to home'
 window.location.href = '/'
-      } else if (command.includes('go to about'
+      ,} else if (command.includes('go to about'
 window.location.href = '/about'
-      } else if (command.includes('go to contact'
+      ,} else if (command.includes('go to contact'
 window.location.href = '/contact'
-      } else if (command.includes('go to services'
+      ,;} else if (command.includes('go to services'
 window.location.href = '/services'
-      } else if (command.includes('call phone'
+      ,;} else if (command.includes('call phone'
 window.location.href = '"tel": +13024640950'
-      } else if (command.includes('send email'
+      ,;} else if (command.includes('send email'
 window.location.href = '"mailto": kleber@ziontechgroup.com'
 const voiceButton = document.createElement('button'
 voiceButton.textContent = 'Voice Navigation'
-voiceButton.className = 'voice-navigation-button'
-voiceButton.setAttribute('aria-label', 'Start voice navigation')
-const header = document.querySelector('header') || document.querySelector('nav')
+voiceButton.className = 'voice-navigation-button')
+voiceButton.setAttribute('aria-label', 'Start voice navigation');
+const header = document.querySelector('header') || document.querySelector('nav');

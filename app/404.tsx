@@ -2,11 +2,10 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from 'lucide-react';
+import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw ;} from 'lucide-react';
 
-const NotFound = () => {
-  return (
-    <>
+const NotFound = (
+  return(<>
       <Head>
         <title>404 - Page Not Found | Zion Tech Group</title>
         <meta name="description" content="The page you're looking for doesn't exist. Return to our homepage or explore our services." />
@@ -26,10 +25,10 @@ const NotFound = () => {
           
           <p className="text-lg text-gray-300 mb-8">
             Oops! The page you're looking for seems to have vanished into the digital void. 
-            Don't worry, even our AI can't predict everything!
+            Don't, worry, even our AI can't predict everything!
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <Link
               href="/"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
@@ -38,17 +37,19 @@ const NotFound = () => {
               Go Home
             </Link>
             
-            <button
-              onClick={() => window.history.back()}
-              className="bg-gray-700 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-600 transition-all duration-300 flex items-center justify-center"
+            <button)
+              onClick={() => window.history.back(),) => {
+$3
+}
+              className="bg-gray-700 text-white px-8 py-4 rounded-lg font-semibold hover: bg-gray-600 transition-all duration-300 flex items-center justify-center"
             >
               <ArrowLeft className="w-5 h-5 mr-2" />
               Go Back
             </button>
             
             <button
-              onClick={() => window.location.reload()}
-              className="bg-gray-700 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-600 transition-all duration-300 flex items-center justify-center"
+              onClick={() => window.location.reload(),;}
+              className="bg-gray-700 text-white px-8 py-4 rounded-lg font-semibold hover: bg-gray-600 transition-all duration-300 flex items-center justify-center"
             >
               <RefreshCw className="w-5 h-5 mr-2" />
               Refresh
@@ -63,11 +64,11 @@ const NotFound = () => {
                 type="text"
                 placeholder="Search our services..."
                 className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                onKeyPress={(e) => {
-                  if (e.key === 'Enter') {
-                    const query = (e.target as HTMLInputElement).value;
+                onKeyPress={(e) => {;
+                  if (e.key === 'Enter') {;
+                    const query = (e.target, as, HTMLInputElement).value;
                     if (query.trim()) {
-                      window.location.href = `/search?q=${encodeURIComponent(query.trim())}`;
+                      window.location.href = `/search?q=${encodeURIComponent(query.trim()),}`;
                     }
                   }
                 }}
@@ -75,8 +76,8 @@ const NotFound = () => {
             </div>
           </div>
           
-          <div className="mt-12">
-            <p className="text-gray-400 mb-6">Popular pages:</p>
+          <div className = "mt-12">
+            <p className="text-gray-400 mb-6">Popular pages: </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="/services" className="text-cyan-400 hover:text-cyan-300 transition-colors">
                 Services
@@ -93,9 +94,9 @@ const NotFound = () => {
             </div>
           </div>
         </div>
-      </div>
-    </>
+      </div>;
+    </>;
   );
-};
+,};
 
 export default NotFound;

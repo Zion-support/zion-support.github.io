@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Zap, Brain, Settings, Globe, Users, Star, CheckCircle, Clock, Shield, TrendingUp, BarChart, MessageCircle, FileText, Cpu, Send, BarChart3, Target, DollarSign, Activity, Lock, CreditCard, Database, Building2, Sparkles, PieChart     } from 'lucide-react';
+import { ArrowRight, Zap, Brain, Settings, Globe, Users, Star, CheckCircle, Clock, Shield, TrendingUp, BarChart, MessageCircle, FileText, Cpu, Send, BarChart3, Target, DollarSign, Activity, Lock, CreditCard, Database, Building2, Sparkles, PieChart     ;} from 'lucide-react';
 'use client'
     "title": 'Workflow Automation'
       "description": 'Automate complex business processes with intelligent workflow management.'
@@ -11,13 +11,13 @@ import { ArrowRight, Zap, Brain, Settings, Globe, Users, Star, CheckCircle, Cloc
     "title": 'Scalable Solutions'
     "description": 'Automation solutions that grow with your business and adapt to changing needs.'
       "title": 'Customer Service'
-    "description": 'Automate ticket routing, response generation, and issue resolution.'
+    "description": 'Automate, ticket, routing, response, generation, and issue resolution.'
       "title": 'Data Processing'
-    "description": 'Automate data collection, validation, and analysis workflows.'
+    "description": 'Automate, data, collection, validation, and analysis workflows.'
       "title": 'Marketing Automation'
-    "description": 'Automate email campaigns, lead scoring, and customer segmentation.'
+    "description": 'Automate, email, campaigns, lead, scoring, and customer segmentation.'
       "title": 'Financial Operations'
-    "description": 'Automate invoice processing, expense management, and financial reporting.'
+    "description": 'Automate, invoice, processing, expense, management, and financial reporting.'
   'Reduce operational costs by up to 70%'
     'Increase productivity and efficiency'
     'Eliminate human errors in repetitive tasks'

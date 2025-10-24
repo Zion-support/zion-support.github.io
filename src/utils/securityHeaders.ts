@@ -3,7 +3,6 @@
  * Comprehensive security headers for production applications
  */;
 export interface SecurityHeadersConfig {
-
 ;
   contentSecurityPolicy?: string;
 strictTransportSecurity?: string;
@@ -13,15 +12,16 @@ referrerPolicy?: string;
 permissionsPolicy?: string
 }
 }
+}
 ;
-export const defaultSecurityHeaders: SecurityHeadersConfig = {;
-  // Content Security Policy,contentSecurityPolicy: [
+export const defaultSecurityHeaders: "SecurityHeadersConfig = {;
+  // Content Security Policy",contentSecurityPolicy: [
     "default-src 'self'"
     "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com"
     "style-src 'self' 'unsafe-inline'"
     "img-src 'self' data: https: blob:"
     "font-src 'self' data: "
-    "connect-src 'self' https://www.google-analytics.com http,s: //analytics.google.com"
+    "connect-src 'self' https: "//www.google-analytics.com http",s: //analytics.google.com"
     "frame-ancestors 'none'"
     "base-uri 'self'",:all-pages-backup/utils/securityHeaders.ts,
     "form-action 'self'",
@@ -29,25 +29,25 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {;
     'upgrade-insecure-requests';
   ].join('; ');
   // HTTP Strict Transport Security (HSTS);
-strictTransportSecurity: 'max-age=63072000; includeSubDomains; preload',:all-pages-backup/utils/securityHeaders.ts
-  // Prevent clickjacking,;
-xFrameOptions: 'DENY',// Prevent MIME type sniffing,;
-xContentTypeOptions: 'nosniff',// Referrer Policy,;
-referrerPolicy: 'strict-origin-when-cross-origin',// Permissions Policy (formerly Feature Policy);
-permissionsPolicy: [,'camera=()',
+strictTransportSecurity: "'max-age=63072000; includeSubDomains; preload'",:all-pages-backup/utils/securityHeaders.ts
+  // Prevent, clickjacking,;
+xFrameOptions: "'DENY'",// Prevent MIME, type, sniffing,;
+xContentTypeOptions: "'nosniff'",// Referrer, Policy,;
+referrerPolicy: "'strict-origin-when-cross-origin'",// Permissions Policy (formerly, Feature, Policy);
+permissionsPolicy: "[",'camera = ()',;
   // Prevent clickjacking;
-xFrameOptions: 'DENY',// Prevent MIME type sniffing;
-xContentTypeOptions: 'nosniff',// Referrer Policy;
-referrerPolicy: 'strict-origin-when-cross-origin',// Permissions Policy (formerly Feature Policy);
-permissionsPolicy: [,'camera = ()',
+xFrameOptions: "'DENY'",// Prevent MIME type sniffing;
+xContentTypeOptions: "'nosniff'",// Referrer Policy;
+referrerPolicy: "'strict-origin-when-cross-origin'",// Permissions Policy (formerly, Feature, Policy);
+permissionsPolicy: "[",'camera = ()',
     'microphone=()',
     'geolocation=()',
     'payment=()',
     'usb=()',
     'interest-cohort=()',
     'accelerometer=()',
-    'gyroscope=()',
-    'magnetometer=()'
+    'gyroscope=()',;
+    'magnetometer=()';
   ].join(', ');
 
 };
@@ -56,15 +56,15 @@ permissionsPolicy: [,'camera = ()',
  */
 :all-pages-backup/utils/securityHeaders.ts;
 export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>): Record<string, string> {;
-  const config = { ...defaultSecurityHeaders, ...customConfig };</string>;
-const headers: Record<string,string> = {;
+  const config = { ...defaultSecurityHeaders, ...customConfig ;};</string>;
+const headers: "Record<string",string> = {;
     'X-XSS-Protection': '1; mode=block'</string>;
 export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>): Record<string, string> {;
-const config = { ...defaultSecurityHeaders, ...customConfig }</string>;
-  const headers: Record<string,string> = {;
+const config = { ...defaultSecurityHeaders, ...customConfig ;}</string>;
+  const headers: "Record<string",string> = {;
     'X-XSS-Protection': '1; mode = block'
-    'X-DNS-Prefetch-Control': 'on'
-  }
+    'X-DNS-Prefetch-Control': 'on';
+  ,};
 ;
 if(config.contentSecurityPolicy) {;
 headers['Content-Security-Policy'] = config.contentSecurityPolicy
@@ -85,15 +85,15 @@ headers['Referrer-Policy'] = config.referrerPolicy
 headers['Permissions-Policy'] = config.permissionsPolicy
   }
 ;
-return headers
+return, headers
 }
 
 /**
  * Get security headers in Next.js format
  */;</string>;
-export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>): Array<{ key: string; valu,e: string ,}> {;
+export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>): Array<{ key: "string; valu",e: "string ",}> {;
 const headers = getSecurityHeaders(customConfig);
-  return Object.entries(headers).map(([key, value]) => ({;
+  return Object.entries(headers).map(([key, value,]) => ({;
 key;
 value
   }))

@@ -1,5 +1,5 @@
 export const generateSitemap = useCallback((...args) => {;
-const baseUrl = 'https: //ziontechgroup.com',const staticPages = [,
+const baseUrl = 'https: "//ziontechgroup.com'",const staticPages = [,
 
   '',
 '/services',
@@ -37,142 +37,145 @@ const baseUrl = 'https: //ziontechgroup.com',const staticPages = [,
 '/it-support',
 '/compliance',
 '/developer-tools',
-'/marketing-tools',
-    '/productivity'
+'/marketing-tools',;
+    '/productivity';
   ];
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>;
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">;
-${staticPages.map(page => `</urlset>
-<url />
+${staticPages.map(page = > `</urlset>
+<url />)
 <loc>${baseUrl,}${page}</loc>)
 
-<lastmod>${new Date().toISOString()}</lastmod>
+<lastmod>${new Date().toISOString();}</lastmod>
 <changefreq>weekly</changefreq>
-<priority></p>${page === '' ? '1.0' : '0.8'}</priority>
-</url>`).join('')}
+<priority />${page = == '' ? '1.0' : '0.8',}</priority>;
+</url>`).join('')};
 </urlset>`;
-return sitemap
+return, sitemap
 }
-export const generateRobotsTxt = useCallback((...args) => {}
-return `User-agent: *,Allow: /,Sitemap: https://ziontechgroup.com/sitemap.xml,# Crawl-delay for better server performance;
-Crawl-delay: 1,# Disallow admin and private areas;
+export const generateRobotsTxt = useCallback((...args) => {,;};
+return `User-agent: "*",Allow: "/",Sitemap: "https://ziontechgroup.com/sitemap.xml",# Crawl-delay for better server performance;
+Crawl-delay: "1",# Disallow admin and private areas;
 Disallo,;
-w: /admin/,Disallow: /api/;
-Disallo,w: /_next/,;
+w: "/admin/",Disallow: "/api/;
+Disallo",w: "/_next/",;
 ;
-Disallow: /private/`;,}
+Disallow: "/private/`;",}
 }
-export interface SitemapEntry {
-/* TODO: Fix JSX expression */,
-};
+export interface SitemapEntry { 
+/* TODO: "Fix JSX expression */",
+, ;}
+;};
 }
-export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expression */,}
-l: `${baseUrl,}/`;
+export const generateSitemap = (): SitemapEntry[] => {/* TODO: "Fix JSX expression */",;};
+l: "`${baseUrl",}/`;
 lastmo;
-d: currentDate,changefre
+d: "currentDate",changefre
 ,;
-q: 'daily',priorit;
-y: 1.0,}
-{/* TODO: Fix JSX expression */,}`;
-l: `${baseUrl,}/about`;
+q: "'daily'",priorit;
+y: "1.0",}
+{/* TODO: "Fix JSX expression */",}`;
+l: "`${baseUrl",}/about`;
 lastmo;
-d: currentDate,changefre
+d: "currentDate",changefre
 ,;
-q: 'monthly',priorit;
-y: 0.8,}
-{/* TODO: Fix JSX expression */,}`;
-l: `${baseUrl,}/services`;
+q: "'monthly'",priorit;
+y: "0.8",}
+{/* TODO: "Fix JSX expression */",}`;
+l: "`${baseUrl",}/services`;
 lastmo;
-d: currentDate,changefre
+d: "currentDate",changefre
 ,;
-q: 'weekly',priorit;
-y: 0.9,}
-{/* TODO: Fix JSX expression */,}`;
-l: `${baseUrl,}/ai-services`;
+q: "'weekly'",priorit;
+y: "0.9",}
+{/* TODO: "Fix JSX expression */",}`;
+l: "`${baseUrl",}/ai-services`;
 lastmo;
-d: currentDate,changefre
+d: "currentDate",changefre
 ,;
-q: 'weekly',priorit;
-y: 0.9,}
-{/* TODO: Fix JSX expression */,}`;
-l: `${baseUrl,}/it-services`;
+q: "'weekly'",priorit;
+y: "0.9",}
+{/* TODO: "Fix JSX expression */",}`;
+l: "`${baseUrl",}/it-services`;
 lastmo;
-d: currentDate,changefre
+d: "currentDate",changefre
 ,;
-q: 'weekly',priorit;
-y: 0.9,}
-{/* TODO: Fix JSX expression */,}`;
-l: `${baseUrl,}/quantum-computing`;
+q: "'weekly'",priorit;
+y: "0.9",}
+{/* TODO: "Fix JSX expression */",}`;
+l: "`${baseUrl",}/quantum-computing`;
 lastmo;
-d: currentDate,changefre
+d: "currentDate",changefre
 ,;
-q: 'weekly',priorit;
-y: 0.9,}
-{/* TODO: Fix JSX expression */,}`;
-l: `${baseUrl,}/autonomous-systems`;
+q: "'weekly'",priorit;
+y: "0.9",}
+{/* TODO: "Fix JSX expression */",}`;
+l: "`${baseUrl",}/autonomous-systems`;
 lastmo;
-d: currentDate,changefre
+d: "currentDate",changefre
 ,;
-q: 'weekly',priorit;
-y: 0.9,}
-{/* TODO: Fix JSX expression */,}`;
-l: `${baseUrl,}/micro-saas`;
+q: "'weekly'",priorit;
+y: "0.9",}
+{/* TODO: "Fix JSX expression */",}`;
+l: "`${baseUrl",}/micro-saas`;
 lastmo;
-d: currentDate,changefre
+d: "currentDate",changefre
 ,;
-q: 'weekly',priorit;
-y: 0.8,}
-{/* TODO: Fix JSX expression */,}`;
-l: `${baseUrl,}/enterprise`;
+q: "'weekly'",priorit;
+y: "0.8",}
+{/* TODO: "Fix JSX expression */",}`;
+l: "`${baseUrl",}/enterprise`;
 lastmo;
-d: currentDate,changefre
+d: "currentDate",changefre
 ,;
-q: 'weekly',priorit;
-y: 0.9,}
-{/* TODO: Fix JSX expression */,}`;
-l: `${baseUrl,}/contact`;
+q: "'weekly'",priorit;
+y: "0.9",}
+{/* TODO: "Fix JSX expression */",}`;
+l: "`${baseUrl",}/contact`;
 lastmo;
-d: currentDate,changefre
+d: "currentDate",changefre
 ,;
-q: 'monthly',priorit;
-y: 0.8,}
-{/* TODO: Fix JSX expression */,}`;
-l: `${baseUrl,}/team`;
+q: "'monthly'",priorit;
+y: "0.8",}
+{/* TODO: "Fix JSX expression */",}`;
+l: "`${baseUrl",}/team`;
 lastmo;
-d: currentDate,changefre
+d: "currentDate",changefre
 ,;
-q: 'monthly',priorit;
-y: 0.7,}
-{/* TODO: Fix JSX expression */,}`;
-l: `${baseUrl,}/case-studies`;
+q: "'monthly'",priorit;
+y: "0.7",}
+{/* TODO: "Fix JSX expression */",}`;
+l: "`${baseUrl",}/case-studies`;
 lastmo;
-d: currentDate,changefre
+d: "currentDate",changefre
 ,;
-q: 'weekly',priorit;
-y: 0.8,}
-{/* TODO: Fix JSX expression */,}`;
-l: `${baseUrl,}/blog`;
+q: "'weekly'",priorit;
+y: "0.8",}
+{/* TODO: "Fix JSX expression */",}`;
+l: "`${baseUrl",}/blog`;
 lastmo;
-d: currentDate,changefre
+d: "currentDate",changefre
 ,;
-q: 'daily',priorit;
-y: 0.8,}
-{/* TODO: Fix JSX expression */,}`;
-l: `${baseUrl,}/privacy`;
+q: "'daily'",priorit;
+y: "0.8",}
+{/* TODO: "Fix JSX expression */",}`;
+l: "`${baseUrl",}/privacy`;
 lastmo;
-d: currentDate,changefre
+d: "currentDate",changefre
 ,;
-q: 'yearly',priorit;
-y: 0.3,}
-{/* TODO: Fix JSX expression */,}`;
-l: `${baseUrl,}/terms`;
+q: "'yearly'",priorit;
+y: "0.3",}
+{/* TODO: "Fix JSX expression */",}`;
+l: "`${baseUrl",}/terms`;
 lastmo;
-d: currentDate,changefre
+d: "currentDate",changefre
 ,;
-q: 'yearly',priorit,;
-y: 0.3,}
+q: "'yearly'",priorit,;
+y: "0.3",}
   ]
 }
-export const generateRobotsTxt = (): string => {/* TODO: Fix JSX expression */,}
+export const generateRobotsTxt = (): string => {
+/* TODO: "Fix JSX expression */",;
+};
 }`;
 }

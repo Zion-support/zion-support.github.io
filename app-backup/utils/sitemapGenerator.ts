@@ -1,5 +1,5 @@
 
-export const generateSitemap = useCallback((...args) => {}
+export const generateSitemap = useCallback((...args) => {,;}
   const baseUrl = '"https": //ziontechgroup.com'',
   '''
 '/services''
@@ -36,6 +36,6 @@ export const generateSitemap = useCallback((...args) => {}
 '/network-infrastructure''
 '/it-support''
 '/compliance''
-'/developer-tools''
-'/marketing-tools''
+'/developer-tools'';
+'/marketing-tools'';
     '/productivity'';
