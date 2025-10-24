@@ -92,7 +92,7 @@ class MonitoringService {
         this.metrics.fid = value;
         break;
       case 'layout-shift':
-        if (!entry.hadRecentInput) {
+        if (!(entry as any).hadRecentInput) {
           this.metrics.cls = (this.metrics.cls || 0) + (entry as any).value;
         }
         break;

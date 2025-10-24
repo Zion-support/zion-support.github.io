@@ -124,7 +124,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                   Try Again
                 </button>
                 <Link
-                  to="/"
+                  href="/"
                   className="border border-gray-300 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-50 transition-colors text-center"
                 >
                   Go Home
