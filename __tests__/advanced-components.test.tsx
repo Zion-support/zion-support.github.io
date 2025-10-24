@@ -135,7 +135,7 @@ describe("Advanced Components", () => {
   });
   
   it("should render test content", () => {
-    render(<TestComponent />);
+    render(<ThrowError shouldThrow={false} />);
     expect(screen.getByText("Test content")).toBeInTheDocument();
   });
   

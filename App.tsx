@@ -101,7 +101,7 @@ function App() {
         <Router>
           <div className="min-h-screen bg-gray-50">
             <Navigation />
-            <Sidebar />
+            <Sidebar isOpen={false} onClose={() => {}} />
             
             <main className="flex-1">
               <ErrorBoundary>

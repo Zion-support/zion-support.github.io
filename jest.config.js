@@ -1,10 +1,12 @@
+import { TextEncoder, TextDecoder } from 'util';
+
 export default {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   globals: {
-    TextEncoder: require('util').TextEncoder,
-    TextDecoder: require('util').TextDecoder,
+    TextEncoder,
+    TextDecoder,
   },
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/app/$1',
