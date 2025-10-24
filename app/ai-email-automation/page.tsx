@@ -86,6 +86,7 @@ const AIEmailAutomationPage: React.FC = () => {
       popular: false
     }
   ]
+
   const testimonials = [
     {
       name: 'Jennifer Lee',
@@ -109,12 +110,14 @@ const AIEmailAutomationPage: React.FC = () => {
       avatar: 'LC'
     }
   ]
+
   const stats = [
     { number: '300%', label: 'Revenue Increase', icon: <DollarSign className="w-6 h-6 text-cyan-400" /> },
     { number: '150%', label: 'Conversion Boost', icon: <TrendingUp className="w-6 h-6 text-emerald-400" /> },
     { number: '20hrs', label: 'Time Saved/Week', icon: <Clock className="w-6 h-6 text-purple-400" /> },
     { number: '95%', label: 'Deliverability Rate', icon: <Shield className="w-6 h-6 text-orange-400" /> }
   ]
+
   return (
     <>
       {/* Hero Section */}
@@ -251,7 +254,7 @@ const AIEmailAutomationPage: React.FC = () => {
                   }`}
                 >
                   Get Started
-                </button>
+                </Link>
               </div>
             ))}
           </div>
@@ -306,7 +309,7 @@ const AIEmailAutomationPage: React.FC = () => {
           </button>
         </div>
       </section>
-    </div>
+    </>
   )
 }
 export default AIEmailAutomationPage
