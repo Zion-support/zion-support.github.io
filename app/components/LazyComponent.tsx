@@ -1,10 +1,5 @@
-import React, { Suspense, lazy, ComponentType } from 'react';
-import { Loader2 } from 'lucide-react';
-
-interface LazyComponentProps {
-  fallback?: React.ReactNode;
-  delay?: number;
-}
+import React, { Suspense, lazy, ComponentType } from "react";
+import { Loader2 } from "lucide-react";
 
 const DefaultFallback = () => (
   <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -21,8 +16,8 @@ export function withLazyLoading<P extends object>(
   fallback?: React.ReactNode
 ) {
   const LazyComponent = lazy(importFunc);
-
-  return function WrappedComponent(props: P) {
+  
+  return function LazyWrapper(props: P) {
     return (
       <Suspense fallback={fallback || <DefaultFallback />}>
         <LazyComponent {...props} />
@@ -31,54 +26,35 @@ export function withLazyLoading<P extends object>(
   };
 }
 
-// Hook for lazy loading with intersection observer
-export function useLazyLoad(ref: React.RefObject<HTMLElement>, options?: IntersectionObserverInit) {
-  const [isVisible, setIsVisible] = React.useState(false);
-
-  React.useEffect(() => {
-    if (!ref.current) return; }
-      },
-      {
-        threshold: 0.1,
-        rootMargin: '50px',
-        ...options
-      }
-    );
-
-    observer.observe(ref.current);
-
-    return () => observer.disconnect();
-  }, [ref, options]);
-
-  return isVisible;
+// Generic lazy component wrapper
+interface LazyComponentProps {
+  fallback?: React.ReactNode;
+  delay?: number;
 }
 
-// Component for lazy loading with intersection observer
-export const LazyComponent: React.FC<LazyComponentProps & { children: React.ReactNode }> = ({
-  children,
+export function LazyComponent({ 
+  children, 
   fallback = <DefaultFallback />,
-  delay = 0
-}) => {
-  const [shouldRender, setShouldRender] = React.useState(false);
-  const ref = React.useRef<HTMLDivElement>(null);
-  const isVisible = useLazyLoad(ref);
+  delay = 0 
+}: LazyComponentProps & { children: React.ReactNode }) {
+  const [show, setShow] = React.useState(delay === 0);
 
   React.useEffect(() => {
-    if (isVisible) {
-      if (delay > 0) {
-        const timer = setTimeout(() => setShouldRender(true), delay);
-        return () => clearTimeout(timer);
-      } else {
-        setShouldRender(true);
-      }
+    if (delay > 0) {
+      const timer = setTimeout(() => setShow(true), delay);
+      return () => clearTimeout(timer);
     }
-  }, [isVisible, delay]);
+  }, [delay]);
+
+  if (!show) {
+    return <>{fallback}</>;
+  }
 
   return (
-    <div ref={ref}>
-      {shouldRender ? children : fallback}
-    </div>
+    <Suspense fallback={fallback}>
+      {children}
+    </Suspense>
   );
-};
+}
 
 export default LazyComponent;

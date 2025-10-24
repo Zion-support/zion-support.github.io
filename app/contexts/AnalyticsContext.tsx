@@ -1,5 +1,13 @@
-import React, { ReactNode, useCallback } from 'react';
-import { AnalyticsContext, AnalyticsContextType } from './AnalyticsContextDefinition';
+import React, { createContext, useContext, ReactNode, useCallback } from "react";
+
+export interface AnalyticsContextType {
+  trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
+  trackPageView: (page: string) => void;
+  identifyUser: (userId: string, properties?: Record<string, unknown>) => void;
+  setUser: (userId: string, properties?: Record<string, unknown>) => void;
+}
+
+export const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
 interface AnalyticsProviderProps {
   children: ReactNode;
@@ -7,21 +15,30 @@ interface AnalyticsProviderProps {
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   const trackEvent = useCallback((eventName: string, properties?: Record<string, unknown>) => {
-    if (process.env.NODE_ENV === 'development') { /* empty */ }
+    if (process.env.NODE_ENV === 'development') {
+      console.warn('Event tracked:', eventName, properties);
+    }
     // Add your analytics tracking logic here
   }, []);
 
   const trackPageView = useCallback((page: string) => {
-    if (process.env.NODE_ENV === 'development') { /* empty */ }
+    if (process.env.NODE_ENV === 'development') {
+      console.warn('Page view tracked:', page);
+    }
     // Add your page view tracking logic here
   }, []);
-  
+
   const identifyUser = useCallback((userId: string, properties?: Record<string, unknown>) => {
-        // Add your user identification logic here
+    if (process.env.NODE_ENV === 'development') {
+      console.warn('User identified:', userId, properties);
+    }
+    // Add your user identification logic here
   }, []);
 
   const setUser = useCallback((userId: string, properties?: Record<string, unknown>) => {
-    if (process.env.NODE_ENV === 'development') { /* empty */ }
+    if (process.env.NODE_ENV === 'development') {
+      console.warn('User set:', userId, properties);
+    }
     // Add your user setting logic here
   }, []);
 

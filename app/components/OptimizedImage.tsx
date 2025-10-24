@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { ImageIcon, Loader2 } from 'lucide-react';
+import React, { useState, useRef, useEffect } from "react";
+import { ImageIcon, Loader2 } from "lucide-react";
 
 interface OptimizedImageProps {
   src: string;
@@ -38,12 +38,16 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   const imgRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
-    if (priority) return; }
+    if (priority) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.disconnect();
+        }
       },
-      {
-        threshold: 0.1,
-        rootMargin: '50px'
-      }
+      { threshold: 0.1, rootMargin: '50px' }
     );
 
     if (imgRef.current) {
@@ -69,7 +73,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     if (originalSrc.startsWith('data:') || originalSrc.startsWith('http')) {
       return originalSrc;
     }
-
+    
     // For local images, you could implement image optimization here
     // This is a placeholder for actual optimization logic
     return originalSrc;
@@ -92,11 +96,48 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     );
   }
 
-const OptimizedImage = () => {
   return (
-    <div>
-      <h1>OptimizedImage</h1>
-      <p>This component is under construction.</p>
+    <div
+      className={`relative overflow-hidden ${className}`}
+      style={{ width, height }}
+      ref={imgRef}
+    >
+      {/* Blur placeholder */}
+      {placeholder === 'blur' && blurDataURL && !isLoaded && (
+        <div
+          className="absolute inset-0 bg-cover bg-center filter blur-sm scale-110"
+          style={{ backgroundImage: `url(${blurDataURL})` }}
+        />
+      )}
+
+      {/* Loading spinner */}
+      {!isLoaded && !hasError && (
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-100 dark:bg-gray-800">
+          <Loader2 className="w-6 h-6 animate-spin text-gray-400" />
+        </div>
+      )}
+
+      {/* Actual image */}
+      {isInView && (
+        <img
+          src={optimizedSrc}
+          alt={alt}
+          width={width}
+          height={height}
+          sizes={sizes}
+          loading={loading}
+          onLoad={handleLoad}
+          onError={handleError}
+          className={`transition-opacity duration-300 ${
+            isLoaded ? 'opacity-100' : 'opacity-0'
+          }`}
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover'
+          }}
+        />
+      )}
     </div>
   );
 };
