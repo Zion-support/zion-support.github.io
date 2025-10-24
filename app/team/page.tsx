@@ -1,30 +1,8 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import { Brain, Globe, Shield, Zap, Send, BarChart3, Target, DollarSign, Clock, Star, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart, CheckCircle } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
-// Icon mapping for serialization
-const iconMap = {
-  Brain,
-  Globe,
-  Shield,
-  Zap,
-  Send,
-  BarChart3,
-  Target,
-  DollarSign,
-  Clock,
-  Star,
-  Activity,
-  Lock,
-  FileText,
-  CreditCard,
-  Database,
-  Building2,
-  Sparkles,
-  PieChart,
-  CheckCircle
-};
 
 const teamMembers = [
   {

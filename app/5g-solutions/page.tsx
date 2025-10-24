@@ -2,7 +2,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { ArrowRight, Wifi, Zap, Shield, Globe, CheckCircle } from 'lucide-react';
+import { ArrowRight, Wifi, CheckCircle } from 'lucide-react';
 
 export default function FiveGSolutionsPage() {
   const features = [

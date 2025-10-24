@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud, Shield, Globe, Database, Smartphone, Zap, Sparkles, Star } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud } from 'lucide-react';
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear()
   const aiServices = [
@@ -22,12 +22,6 @@ const Footer: React.FC = () => {
     { name: 'Data Analytics', url: '/data-analytics', description: 'Data insights' },
     { name: 'IoT Solutions', url: '/iot-solutions', description: 'Internet of Things' },
     { name: 'Blockchain', url: '/blockchain', description: 'Blockchain technology' }
-  ]
-  const microSaas = [
-    { name: 'AI Email Marketing', url: '/micro-saas/ai-email-marketing-automation', description: 'Email automation' },
-    { name: 'AI Inventory Manager', url: '/micro-saas/ai-inventory-manager', description: 'Inventory tracking' },
-    { name: 'AI Project Manager', url: '/micro-saas/ai-project-manager', description: 'Project management' },
-    { name: 'AI Social Scheduler', url: '/micro-saas/ai-social-media-scheduler', description: 'Social media' }
   ]
   const company = [
     { name: 'About Us', url: '/about' },

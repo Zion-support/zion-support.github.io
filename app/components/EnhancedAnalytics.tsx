@@ -3,9 +3,9 @@
 import React, { createContext, useContext, useEffect } from 'react';
 
 interface AnalyticsContextType {
-  track: (event: string, properties?: Record<string, unknown>) => void
-  identify: (userId: string, traits?: Record<string, unknown>) => void
-  page: (name: string, properties?: Record<string, unknown>) => void
+  track: (event: string, _properties?: Record<string, unknown>) => void
+  identify: (_userId: string, _traits?: Record<string, unknown>) => void
+  page: (_name: string, _properties?: Record<string, unknown>) => void
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
@@ -46,46 +46,46 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     }
   }, [])
 
-  const track = (event: string, properties?: Record<string, unknown>) => {
+  const track = (event: string, _properties?: Record<string, unknown>) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
-      if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {
-        ;(window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event', event, properties)
+      if ((window as unknown as { gtag?: (..._args: unknown[]) => void }).gtag) {
+        ;(window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('event', event, _properties)
       }
 
       // Custom analytics
-      console.log('Analytics Event:', event, properties)
+      console.log('Analytics Event:', event, _properties)
     }
   }
 
-  const identify = (userId: string, traits?: Record<string, unknown>) => {
+  const identify = (_userId: string, _traits?: Record<string, unknown>) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
-      if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {
-        ;(window as unknown as { gtag: (...args: unknown[]) => void }).gtag('config', process.env.REACT_APP_GA_ID, {
-          user_id: userId,
-          custom_map: traits
+      if ((window as unknown as { gtag?: (..._args: unknown[]) => void }).gtag) {
+        ;(window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('config', process.env.REACT_APP_GA_ID, {
+          user_id: _userId,
+          custom_map: _traits
         })
       }
 
       // Custom analytics
-      console.log('Analytics Identify:', userId, traits)
+      console.log('Analytics Identify:', _userId, _traits)
     }
   }
 
-  const page = (name: string, properties?: Record<string, unknown>) => {
+  const page = (_name: string, _properties?: Record<string, unknown>) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
-      if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {
-        ;(window as unknown as { gtag: (...args: unknown[]) => void }).gtag('config', process.env.REACT_APP_GA_ID, {
-          page_title: name,
+      if ((window as unknown as { gtag?: (..._args: unknown[]) => void }).gtag) {
+        ;(window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('config', process.env.REACT_APP_GA_ID, {
+          page_title: _name,
           page_location: window.location.href,
-          ...properties
+          ..._properties
         })
       }
 
       // Custom analytics
-      console.log('Analytics Page:', name, properties)
+      console.log('Analytics Page:', _name, _properties)
     }
   }
 

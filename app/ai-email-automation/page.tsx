@@ -1,21 +1,6 @@
 import React from 'react';
-import { ArrowRight, Brain, Mail, CheckCircle, Zap, TrendingUp, Send, BarChart3, Shield, DollarSign, Clock, Star } from 'lucide-react';
+import { ArrowRight, Mail, CheckCircle, Star } from 'lucide-react';
 
-// Icon mapping for serialization
-const iconMap = {
-  ArrowRight,
-  Brain,
-  Mail,
-  CheckCircle,
-  Zap,
-  TrendingUp,
-  Send,
-  BarChart3,
-  Shield,
-  DollarSign,
-  Clock,
-  Star
-};
 
 import Link from 'next/link';
 import type { Metadata } from 'next';

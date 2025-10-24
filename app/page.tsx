@@ -2,7 +2,7 @@
 import React from "react";
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle, Send, BarChart3, Shield, Zap, Globe, DollarSign, Clock, Star, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle } from 'lucide-react';
 export default function HomePage() {
   const features = [
   {

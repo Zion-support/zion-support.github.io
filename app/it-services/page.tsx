@@ -1,17 +1,8 @@
 "use client";
 
-// Icon mapping for serialization
-const iconMap = {
-  Cloud,
-  Shield,
-  Server,
-  Database,
-  CheckCircle,
-  ArrowRight
-};
 
 import React from "react";
-import { Cloud, Shield, Server, Database, CheckCircle, ArrowRight } from "lucide-react";
+import { CheckCircle, ArrowRight } from "lucide-react";
 const ITServicesPage: React.FC = () => {
   const services = [
   {

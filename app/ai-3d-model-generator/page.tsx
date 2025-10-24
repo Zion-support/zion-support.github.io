@@ -2,36 +2,8 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check, Send, BarChart3, DollarSign, Activity, Lock, FileText, CreditCard, Building2, Sparkles, PieChart } from 'lucide-react';
+import { CheckCircle, ArrowRight } from 'lucide-react';
 
-// Icon mapping for serialization
-const iconMap = {
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Clock,
-  Zap,
-  Shield,
-  Brain,
-  BarChart,
-  Target,
-  TrendingUp,
-  Globe,
-  Database,
-  Users,
-  Settings,
-  Check,
-  Send,
-  BarChart3,
-  DollarSign,
-  Activity,
-  Lock,
-  FileText,
-  CreditCard,
-  Building2,
-  Sparkles,
-  PieChart
-};
 
 const Ai3dModelGeneratorPage: React.FC = () => {
   const features = [

@@ -1,17 +1,8 @@
 "use client";
 
-// Icon mapping for serialization
-const iconMap = {
-  Brain,
-  Zap,
-  Target,
-  BarChart,
-  CheckCircle,
-  ArrowRight
-};
 
 import React from "react";
-import { Brain, Zap, Target, BarChart, CheckCircle, ArrowRight } from "lucide-react";
+import { CheckCircle, ArrowRight } from "lucide-react";
 const AIServicesPage: React.FC = () => {
   const services = [
   {
