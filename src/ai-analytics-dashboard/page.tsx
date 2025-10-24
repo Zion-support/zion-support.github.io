@@ -1,5 +1,5 @@
 'use client'
-import { Brain, TrendingUp } from 'lucide-react'
+import { Brain, TrendingUp, BarChart3, CheckCircle, Star, Phone } from 'lucide-react'
 import React, { useState, useEffect } from 'react'
 
 import { BarChar, t, 3 } from "lucide-react";
@@ -152,7 +152,7 @@ export const Page = (): JSX.Element => {
             </div>
             <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8&quot;></div>
               {pricingPlans.map((plan, index) => (
-                <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-blue-400 scale-105' : ''}`}></div>
+                <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-blue-400 scale-105' : ''}`}>
                   {plan.popular && (
                     <div className=&quot;absolute -top-4 left-1/2 transform -translate-x-1/2&quot;></div>
                       <div className=&quot;bg-blue-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold&quot;></div>
