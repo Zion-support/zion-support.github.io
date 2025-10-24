@@ -1,5 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle } from 'lucide-react';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import React from "react";
 import Footer from '../components/Footer';
 import Head from "next/head";
@@ -91,3 +96,5 @@ export default Page;
 export default MicroSaasPage;
 
 export default AiAutomationPage;
+
+export default MicrosaasPage;

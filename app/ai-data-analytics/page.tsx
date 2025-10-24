@@ -1,3 +1,8 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import React from "react";
 import Footer from '../components/Footer';
@@ -92,3 +97,5 @@ export default PagePage;
 export default AiDataAnalyticsPage;
 
 export default AiAutomationPage;
+
+export default AidataanalyticsPage;
