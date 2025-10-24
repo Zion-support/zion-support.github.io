@@ -1,9 +1,9 @@
 'use client';
 
 import React from 'react';
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
-const ServicesPage: React.FC = () => {
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+const PageFixedPage: React.FC = () => {
   return (
     <>
 
@@ -13,10 +13,10 @@ const ServicesPage: React.FC = () => {
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
             <h1 className="text-5xl font-bold text-white mb-6">
-              Services
+              Page Fixed
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional Services services by Zion Tech Group. Advanced AI and IT solutions for your business.
+              Professional Page Fixed services by Zion Tech Group. Advanced AI and IT solutions for your business.
             </p>
           </div>
 
@@ -24,7 +24,7 @@ const ServicesPage: React.FC = () => {
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
               <h2 className="text-2xl font-bold text-white mb-4">Our Services</h2>
               <p className="text-gray-300 mb-6">
-                We provide comprehensive Services solutions tailored to your business needs.
+                We provide comprehensive Page Fixed solutions tailored to your business needs.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-white/5 rounded-lg p-4">
@@ -46,4 +46,4 @@ const ServicesPage: React.FC = () => {
   );
 };
 
-export default ServicesPage;
+export default PageFixedPage;

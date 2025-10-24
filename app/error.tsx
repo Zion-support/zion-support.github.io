@@ -22,7 +22,7 @@ const ErrorPage: React.FC = () => {
         </div>
       </main>
 
-      <Footer />
+      <TestComponent />
     </>
   );
 };

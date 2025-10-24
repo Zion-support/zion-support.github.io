@@ -22,7 +22,7 @@ const LoadingPage: React.FC = () => {
         </div>
       </main>
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

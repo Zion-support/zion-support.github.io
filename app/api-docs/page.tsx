@@ -71,7 +71,7 @@ export default function APIDocsPage() {
         </div>
       </main>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

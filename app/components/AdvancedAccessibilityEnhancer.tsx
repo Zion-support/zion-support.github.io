@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Check } from 'lucide-react';;
 
 const AdvancedAccessibilityEnhancerPage: React.FC = () => {
   const features = [
@@ -74,7 +74,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       <section>
         <div>
           <div className="text-center mb-16">
-            <h2 className="text-3xlmd:text-4xl font-boldtext-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our AdvancedAccessibilityEnhancer?
             </h2>
             <p className="text-xltext-gray-300max-w-3xlmx-auto">
@@ -100,7 +100,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       <section>
         <div>
           <div className="text-center mb-16">
-            <h2 className="text-3xlmd:text-4xl font-boldtext-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits
             </h2>
             <p className="text-xltext-gray-300max-w-3xlmx-auto">
@@ -123,7 +123,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       <section>
         <div>
           <div className="bg-gradient-to-rfrom-purple-600to-blue-600rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xlmd:text-4xl font-boldtext-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Get Started?
             </h2>
             <p className="text-xltext-purple-100mb-8">

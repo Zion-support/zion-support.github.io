@@ -43,7 +43,7 @@ const NotFoundPage: React.FC = () => {
         </div>
       </main>
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

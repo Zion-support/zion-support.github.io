@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { Facebook, Github, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react'
+import { Facebook, Github, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear()
@@ -205,4 +205,4 @@ const Footer: React.FC = () => {
   )
 }
 
-export default Footer
+export default Footer;
