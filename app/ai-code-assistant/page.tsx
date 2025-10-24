@@ -1,220 +1,73 @@
 'use client';
-import React, { useState } from 'react';
-import SEOHead from '../components/SEOHead';
-import { 
-  CodeBracketIcon, 
-  CheckCircleIcon, 
-  StarIcon,
-  ArrowRightIcon,
-  SparklesIcon,
-  CpuChipIcon,
-  DocumentTextIcon,
-  ShieldCheckIcon,
-  ClockIcon,
-  UserGroupIcon
-} from '@heroicons/react/24/outline';
+import React from 'react';
+import { CheckCircle } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-const AICodeAssistantPage: React.FC = () => {
-  const [selectedPlan, setSelectedPlan] = useState('pro');
-
+const AiCodeAssistantPage: React.FC = () => {
   const features = [
     {
-      icon: CodeBracketIcon,
-      title: 'Intelligent Code Generation',
-      description: 'Generate high-quality code in multiple programming languages with AI-powered suggestions and completions.',
-      benefits: ['Faster development cycles', 'Reduced coding errors', 'Best practice adherence']
+      title: 'AiCodeAssistant',
+      description: 'Professional aicodeassistant services delivered by experienced professionals.',
+      benefits: ['Quality Assurance', 'Fast Delivery', '24/7 Support', 'Custom Solutions']
     },
     {
-      icon: CpuChipIcon,
-      title: 'Smart Code Analysis',
-      description: 'Analyze your codebase for bugs, performance issues, and security vulnerabilities with advanced AI algorithms.',
-      benefits: ['Proactive bug detection', 'Performance optimization', 'Security enhancement']
+      title: 'Advanced Technology',
+      description: 'Cutting-edge tools and technologies to deliver superior results.',
+      benefits: ['Latest Tools', 'Modern Methods', 'Scalable Solutions', 'Future-Ready']
     },
     {
-      icon: DocumentTextIcon,
-      title: 'Auto Documentation',
-      description: 'Automatically generate comprehensive documentation and comments for your code using natural language processing.',
-      benefits: ['Time-saving documentation', 'Consistent code comments', 'Better team collaboration']
-    },
-    {
-      icon: ShieldCheckIcon,
-      title: 'Security Scanning',
-      description: 'Identify security vulnerabilities and suggest fixes using AI-powered security analysis tools.',
-      benefits: ['Enhanced security posture', 'Compliance assistance', 'Risk mitigation']
-    },
-    {
-      icon: ClockIcon,
-      title: 'Real-time Assistance',
-      description: 'Get instant help and suggestions while coding with our real-time AI code assistant integration.',
-      benefits: ['Immediate problem solving', 'Learning acceleration', 'Productivity boost']
-    },
-    {
-      icon: UserGroupIcon,
-      title: 'Team Collaboration',
-      description: 'Share code snippets, collaborate on projects, and maintain coding standards across your team.',
-      benefits: ['Improved team efficiency', 'Code consistency', 'Knowledge sharing']
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      id: 'starter',
-      name: 'Starter',
-      price: 29,
-      period: 'month',
-      description: 'Perfect for individual developers',
-      features: [
-        'Basic code generation',
-        '5 programming languages',
-        '100 code suggestions/day',
-        'Email support',
-        'Basic documentation',
-        'Git integration'
-      ],
-      popular: false
-    },
-    {
-      id: 'pro',
-      name: 'Professional',
-      price: 79,
-      period: 'month',
-      description: 'Ideal for development teams',
-      features: [
-        'Advanced code generation',
-        '15+ programming languages',
-        'Unlimited code suggestions',
-        'Priority support',
-        'Auto documentation',
-        'Security scanning',
-        'Team collaboration',
-        'API access',
-        'Custom integrations'
-      ],
-      popular: true
-    },
-    {
-      id: 'enterprise',
-      name: 'Enterprise',
-      price: 199,
-      period: 'month',
-      description: 'For large organizations',
-      features: [
-        'Everything in Professional',
-        'Custom AI models',
-        'On-premise deployment',
-        'Dedicated support',
-        'SLA guarantee',
-        'White-label options',
-        'Advanced analytics',
-        'Custom training'
-      ],
-      popular: false
-    }
-  ];
-
-  const useCases = [
-    {
-      title: 'Web Development',
-      description: 'Generate React, Vue, Angular components with AI assistance',
-      icon: '🌐',
-      examples: ['Component generation', 'API integration', 'State management', 'Testing code']
-    },
-    {
-      title: 'Mobile Development',
-      description: 'Create iOS and Android apps with intelligent code suggestions',
-      icon: '📱',
-      examples: ['Native app development', 'Cross-platform solutions', 'UI/UX implementation', 'Performance optimization']
-    },
-    {
-      title: 'Backend Development',
-      description: 'Build robust APIs and server-side applications with AI guidance',
-      icon: '⚙️',
-      examples: ['RESTful APIs', 'Database design', 'Authentication systems', 'Microservices architecture']
-    },
-    {
-      title: 'Data Science',
-      description: 'Develop machine learning models and data analysis scripts',
-      icon: '📊',
-      examples: ['ML model development', 'Data preprocessing', 'Statistical analysis', 'Visualization code']
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      role: 'Senior Developer',
-      company: 'TechCorp Inc.',
-      content: 'Zion AI Code Assistant has revolutionized our development process. We\'ve reduced coding time by 40% and improved code quality significantly.',
-      rating: 5
-    },
-    {
-      name: 'Michael Chen',
-      role: 'CTO',
-      company: 'StartupXYZ',
-      content: 'The AI-powered code suggestions are incredibly accurate and help our team maintain consistent coding standards across all projects.',
-      rating: 5
-    },
-    {
-      name: 'Emily Rodriguez',
-      role: 'Full Stack Developer',
-      company: 'DevStudio',
-      content: 'I love how the assistant learns from our codebase and provides contextually relevant suggestions. It\'s like having a senior developer always available.',
-      rating: 5
+      title: 'Proven Results',
+      description: 'Track record of successful projects and satisfied clients.',
+      benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
     }
   ];
 
   return (
-    <>
-      <SEOHead 
-        title="AI Code Assistant - Zion Tech Group"
-        description="Revolutionary AI-powered code assistant that helps developers write better code faster. Features intelligent code generation, analysis, and documentation."
-        keywords="AI code assistant, code generation, programming AI, developer tools, code analysis, auto documentation, software development"
-        canonicalUrl="https://ziontechgroup.com/ai-code-assistant"
-      />
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative overflow-hidden py-20 lg:py-32">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+      <main className="pt-20 px-4 py-20">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AiCodeAssistant
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional aicodeassistant services to help your business succeed and grow.
+            </p>
+          </div>
           
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 mb-8">
-                <SparklesIcon className="w-5 h-5 text-blue-400 mr-2" />
-                <span className="text-blue-300 text-sm font-medium">AI-Powered Development</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              
-              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6">
-                AI Code Assistant
-              </h1>
-              <p className="text-xl sm:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Revolutionize your development workflow with our intelligent AI code assistant. 
-                Generate, analyze, and optimize code with cutting-edge artificial intelligence.
+            ))}
+          </div>
+          
+          <div className="text-center">
+            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
+              <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
+              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                Contact us today to learn more about our aicodeassistant services.
               </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-blue-500/25">
-                  Start Free Trial
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                  Contact Us
                 </button>
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300">
-                  Watch Demo
+                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+                  Learn More
                 </button>
-              </div>
-              
-              <div className="flex items-center justify-center space-x-8 text-gray-300">
-                <div className="flex items-center">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-2" />
-                  <span>14-day free trial</span>
-                </div>
-                <div className="flex items-center">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-2" />
-                  <span>No credit card required</span>
-                </div>
-                <div className="flex items-center">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-2" />
-                  <span>Cancel anytime</span>
-                </div>
               </div>
             </div>
           </div>
@@ -399,4 +252,4 @@ const AICodeAssistantPage: React.FC = () => {
   );
 };
 
-export default AICodeAssistantPage;
+export default AiCodeAssistantPage;

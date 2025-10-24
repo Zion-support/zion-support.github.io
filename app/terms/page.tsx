@@ -1,60 +1,80 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Shield } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-const PagePage: React.FC = () => {}
+const TermsPage: React.FC = () => {
   const features = [
-    {}
-    title: 'Page',
-      description: 'Professional page services for modern businesses.',
-      benefits: ['Expert Solutions', 'Advanced Technology', 'Proven Results', '24/7 Support']
+    {
+      title: 'Terms',
+      description: 'Professional terms services delivered by experienced professionals.',
+      benefits: ['Quality Assurance', 'Fast Delivery', '24/7 Support', 'Custom Solutions']
     },
-    {}
-    title: 'Advanced Technology',
+    {
+      title: 'Advanced Technology',
       description: 'Cutting-edge tools and technologies to deliver superior results.',
       benefits: ['Latest Tools', 'Modern Methods', 'Scalable Solutions', 'Future-Ready']
     },
-    {}
-    title: 'Proven Results',
+    {
+      title: 'Proven Results',
       description: 'Track record of successful projects and satisfied clients.',
       benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
     }
   ];
 
-  return ()
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet></Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional page services and solutions." /></meta>
-        <meta name="keywords" content="page, services, solutions, technology" /></meta>
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">
-            Terms of Service
-          </h1>
-          <div className="prose prose-lg max-w-none">
-            <p className="text-gray-600 mb-6">
-              These terms of service govern your use of Zion Tech Group's services and website.
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
+      
+      <main className="pt-20 px-4 py-20">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Terms
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional terms services to help your business succeed and grow.
             </p>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Acceptance of Terms</h2>
-            <p className="text-gray-600 mb-6">
-              By accessing and using our services, you accept and agree to be bound by the terms
-              and provision of this agreement.
-            </p>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Use License</h2>
-            <p className="text-gray-600 mb-6">
-              Permission is granted to temporarily download one copy of the materials on our website
-              for personal, non-commercial transitory viewing only.
-            </p>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Contact Information</h2>
-            <p className="text-gray-600 mb-6">
-              If you have any questions about these terms, please contact us at legal@ziontechgroup.com.
-            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+          
+          <div className="text-center">
+            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
+              <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
+              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                Contact us today to learn more about our terms services.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                  Contact Us
+                </button>
+                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+                  Learn More
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default TermsPage;

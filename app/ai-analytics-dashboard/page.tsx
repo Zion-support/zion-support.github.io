@@ -1,23 +1,39 @@
 import React from 'react';
-import { Helmet } from "react-helmet-async";
+import { CheckCircle } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-  return ()
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet></Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional page services and solutions." /></meta>
-        <meta name="keywords" content="page, services, solutions, technology" /></meta>
-      </Helmet>
+const AiAnalyticsDashboardPage: React.FC = () => {
+  const features = [
+    {
+      title: 'AI Analytics Dashboard',
+      description: 'Advanced analytics and insights powered by artificial intelligence.',
+      benefits: ['Real-time Analytics', 'Predictive Insights', 'Custom Dashboards', 'Data Visualization']
+    },
+    {
+      title: 'Advanced Technology',
+      description: 'Cutting-edge tools and technologies to deliver superior results.',
+      benefits: ['Latest Tools', 'Modern Methods', 'Scalable Solutions', 'Future-Ready']
+    },
+    {
+      title: 'Proven Results',
+      description: 'Track record of successful projects and satisfied clients.',
+      benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
       
-      <Navigation /></Navigation>
-      <main className="pt-20 px-4 py-20"></main>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
-              Page
+      <main className="pt-20 px-4 py-20">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI Analytics Dashboard
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
-              Professional page services to help your business succeed and grow.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional AI analytics dashboard services to help your business succeed and grow.
             </p>
           </div>
           
@@ -41,8 +57,8 @@ import { Helmet } from "react-helmet-async";
           <div className="text-center"></div>
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
-              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto"></p>
-                Contact us today to learn more about our page services.
+              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                Contact us today to learn more about our AI analytics dashboard services.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"></button>
@@ -57,9 +73,9 @@ import { Helmet } from "react-helmet-async";
         </div>
       </main>
       
-      <Footer /></Footer>
+      <Footer />
     </div>
   );
 };
 
-export default Page;
+export default AiAnalyticsDashboardPage;

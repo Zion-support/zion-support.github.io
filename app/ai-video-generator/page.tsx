@@ -1,261 +1,73 @@
 'use client';
-import React, { useState } from 'react';
-import SEOHead from '../components/SEOHead';
-import { 
-  VideoCameraIcon, 
-  CheckCircleIcon, 
-  StarIcon,
-  ArrowRightIcon,
-  SparklesIcon,
-  PhotoIcon,
-  MicrophoneIcon,
-  DocumentTextIcon,
-  ClockIcon,
-  ShieldCheckIcon,
-  CpuChipIcon,
-  PlayIcon
-} from '@heroicons/react/24/outline';
+import React from 'react';
+import { CheckCircle } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-const AIVideoGeneratorPage: React.FC = () => {
-  const [selectedTemplate, setSelectedTemplate] = useState('promotional');
-
+const AiVideoGeneratorPage: React.FC = () => {
   const features = [
     {
-      icon: VideoCameraIcon,
-      title: 'AI-Powered Video Creation',
-      description: 'Generate professional videos from text prompts using advanced AI algorithms and machine learning.',
-      benefits: ['Text-to-video generation', 'Smart scene composition', 'Automatic transitions', 'Professional quality']
+      title: 'AiVideoGenerator',
+      description: 'Professional aivideogenerator services delivered by experienced professionals.',
+      benefits: ['Quality Assurance', 'Fast Delivery', '24/7 Support', 'Custom Solutions']
     },
     {
-      icon: PhotoIcon,
-      title: 'Image-to-Video Conversion',
-      description: 'Transform static images into dynamic videos with AI-powered animation and effects.',
-      benefits: ['Static image animation', 'Motion graphics', 'Cinematic effects', 'Smooth transitions']
+      title: 'Advanced Technology',
+      description: 'Cutting-edge tools and technologies to deliver superior results.',
+      benefits: ['Latest Tools', 'Modern Methods', 'Scalable Solutions', 'Future-Ready']
     },
     {
-      icon: MicrophoneIcon,
-      title: 'Voice Synthesis',
-      description: 'Generate natural-sounding voiceovers in multiple languages with AI voice synthesis technology.',
-      benefits: ['Natural voice generation', 'Multiple languages', 'Emotion control', 'Custom voice training']
-    },
-    {
-      icon: DocumentTextIcon,
-      title: 'Script Generation',
-      description: 'Create compelling video scripts and storyboards using AI-powered content generation.',
-      benefits: ['Auto script writing', 'Storyboard creation', 'Content optimization', 'SEO-friendly scripts']
-    },
-    {
-      icon: CpuChipIcon,
-      title: 'Smart Editing',
-      description: 'Automatically edit and optimize videos with AI-powered cutting, transitions, and effects.',
-      benefits: ['Auto editing', 'Smart cuts', 'Effect application', 'Quality optimization']
-    },
-    {
-      icon: ClockIcon,
-      title: 'Rapid Production',
-      description: 'Create professional videos in minutes instead of hours with our streamlined AI workflow.',
-      benefits: ['Fast rendering', 'Batch processing', 'Template library', 'One-click generation']
-    }
-  ];
-
-  const videoTemplates = [
-    {
-      id: 'promotional',
-      name: 'Promotional Videos',
-      description: 'Create engaging promotional content for products and services',
-      duration: '15-60 seconds',
-      price: '$29',
-      features: ['Product showcase', 'Call-to-action', 'Brand integration', 'Social media ready']
-    },
-    {
-      id: 'educational',
-      name: 'Educational Content',
-      description: 'Generate informative and educational video content',
-      duration: '2-10 minutes',
-      price: '$49',
-      features: ['Step-by-step tutorials', 'Infographic animations', 'Knowledge retention', 'Interactive elements']
-    },
-    {
-      id: 'social',
-      name: 'Social Media',
-      description: 'Create viral content for social media platforms',
-      duration: '15-30 seconds',
-      price: '$19',
-      features: ['Platform optimization', 'Trending formats', 'Engagement hooks', 'Mobile-first design']
-    },
-    {
-      id: 'corporate',
-      name: 'Corporate Videos',
-      description: 'Professional corporate communications and presentations',
-      duration: '1-5 minutes',
-      price: '$79',
-      features: ['Professional tone', 'Brand consistency', 'Executive presence', 'Meeting integration']
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      id: 'starter',
-      name: 'Starter',
-      price: 29,
-      period: 'month',
-      description: 'Perfect for content creators',
-      features: [
-        '10 videos/month',
-        'HD quality (1080p)',
-        'Basic templates',
-        '5 minutes max length',
-        'Watermark included',
-        'Email support',
-        'Standard voice synthesis'
-      ],
-      popular: false
-    },
-    {
-      id: 'pro',
-      name: 'Professional',
-      price: 79,
-      period: 'month',
-      description: 'Ideal for businesses',
-      features: [
-        '50 videos/month',
-        '4K quality (2160p)',
-        'Premium templates',
-        '15 minutes max length',
-        'No watermark',
-        'Priority support',
-        'Advanced voice synthesis',
-        'Custom branding',
-        'API access',
-        'Batch processing'
-      ],
-      popular: true
-    },
-    {
-      id: 'enterprise',
-      name: 'Enterprise',
-      price: 199,
-      period: 'month',
-      description: 'For large organizations',
-      features: [
-        'Unlimited videos',
-        '8K quality (4320p)',
-        'All templates',
-        'Unlimited length',
-        'White-label options',
-        '24/7 support',
-        'Custom voice training',
-        'Dedicated account manager',
-        'Advanced analytics',
-        'SLA guarantee'
-      ],
-      popular: false
-    }
-  ];
-
-  const useCases = [
-    {
-      title: 'Marketing & Advertising',
-      description: 'Create compelling ads and promotional content that converts',
-      icon: '📢',
-      examples: ['Product demos', 'Brand stories', 'Social media ads', 'Email campaigns']
-    },
-    {
-      title: 'Education & Training',
-      description: 'Develop engaging educational content and training materials',
-      icon: '🎓',
-      examples: ['Online courses', 'Tutorial videos', 'Training modules', 'Knowledge sharing']
-    },
-    {
-      title: 'E-commerce',
-      description: 'Showcase products and drive sales with dynamic video content',
-      icon: '🛒',
-      examples: ['Product showcases', 'How-to guides', 'Customer testimonials', 'Unboxing videos']
-    },
-    {
-      title: 'Corporate Communications',
-      description: 'Enhance internal and external communications with video',
-      icon: '🏢',
-      examples: ['Company updates', 'Team announcements', 'Client presentations', 'Recruitment videos']
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: 'Jessica Martinez',
-      role: 'Marketing Director',
-      company: 'BrandBoost Agency',
-      content: 'Zion AI Video Generator has revolutionized our content creation process. We can now produce high-quality videos 10x faster than before.',
-      rating: 5
-    },
-    {
-      name: 'Robert Chen',
-      role: 'E-learning Manager',
-      company: 'EduTech Solutions',
-      content: 'The AI-generated educational videos are incredibly engaging. Our students love the interactive content and completion rates have increased by 40%.',
-      rating: 5
-    },
-    {
-      name: 'Amanda Wilson',
-      role: 'Content Creator',
-      company: 'Social Media Pro',
-      content: 'As a solo content creator, this tool has been a game-changer. I can now compete with larger agencies by producing professional videos quickly.',
-      rating: 5
+      title: 'Proven Results',
+      description: 'Track record of successful projects and satisfied clients.',
+      benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
     }
   ];
 
   return (
-    <>
-      <SEOHead 
-        title="AI Video Generator - Zion Tech Group"
-        description="Create professional videos with AI-powered video generation. Features text-to-video, image animation, voice synthesis, and smart editing capabilities."
-        keywords="AI video generator, video creation, text to video, video AI, automated video, video marketing, content creation, video production"
-        canonicalUrl="https://ziontechgroup.com/ai-video-generator"
-      />
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative overflow-hidden py-20 lg:py-32">
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20"></div>
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+      <main className="pt-20 px-4 py-20">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AiVideoGenerator
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional aivideogenerator services to help your business succeed and grow.
+            </p>
+          </div>
           
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 mb-8">
-                <SparklesIcon className="w-5 h-5 text-purple-400 mr-2" />
-                <span className="text-purple-300 text-sm font-medium">AI-Powered Video Creation</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              
-              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6">
-                AI Video Generator
-              </h1>
-              <p className="text-xl sm:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Create professional videos in minutes with our advanced AI video generator. 
-                Transform text, images, and ideas into stunning video content automatically.
+            ))}
+          </div>
+          
+          <div className="text-center">
+            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
+              <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
+              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                Contact us today to learn more about our aivideogenerator services.
               </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-purple-500/25">
-                  Start Free Trial
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                  Contact Us
                 </button>
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300">
-                  Watch Demo
+                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+                  Learn More
                 </button>
-              </div>
-              
-              <div className="flex items-center justify-center space-x-8 text-gray-300">
-                <div className="flex items-center">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-2" />
-                  <span>10 free videos</span>
-                </div>
-                <div className="flex items-center">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-2" />
-                  <span>4K quality</span>
-                </div>
-                <div className="flex items-center">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-2" />
-                  <span>No watermark</span>
-                </div>
               </div>
             </div>
           </div>
@@ -489,4 +301,4 @@ const AIVideoGeneratorPage: React.FC = () => {
   );
 };
 
-export default AIVideoGeneratorPage;
+export default AiVideoGeneratorPage;
