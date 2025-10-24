@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { ArrowRight, Mail, Phone, MapPin } from 'lucide-react';
 
 const EnhancedFooter: React.FC = () => {
@@ -13,7 +13,7 @@ const EnhancedFooter: React.FC = () => {
               Leading provider of AI and IT solutions for businesses worldwide.
             </p>
             <Link
-              to="/contact"
+              href="/contact"
               className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
             >
               Get Started
@@ -25,22 +25,22 @@ const EnhancedFooter: React.FC = () => {
             <h4 className="text-lg font-semibold text-white mb-4">Services</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/ai-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                <Link href="/ai-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors">
                   AI Solutions
                 </Link>
               </li>
               <li>
-                <Link to="/it-services" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                <Link href="/it-services" className="text-gray-300 hover:text-cyan-400 transition-colors">
                   IT Services
                 </Link>
               </li>
               <li>
-                <Link to="/cloud-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                <Link href="/cloud-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors">
                   Cloud Solutions
                 </Link>
               </li>
               <li>
-                <Link to="/cybersecurity" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                <Link href="/cybersecurity" className="text-gray-300 hover:text-cyan-400 transition-colors">
                   Cybersecurity
                 </Link>
               </li>
@@ -51,22 +51,22 @@ const EnhancedFooter: React.FC = () => {
             <h4 className="text-lg font-semibold text-white mb-4">Company</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                <Link href="/about" className="text-gray-300 hover:text-cyan-400 transition-colors">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/team" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                <Link href="/team" className="text-gray-300 hover:text-cyan-400 transition-colors">
                   Our Team
                 </Link>
               </li>
               <li>
-                <Link to="/careers" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                <Link href="/careers" className="text-gray-300 hover:text-cyan-400 transition-colors">
                   Careers
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                <Link href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors">
                   Contact
                 </Link>
               </li>
