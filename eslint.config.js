@@ -107,7 +107,10 @@ export default [
       'react-hooks/exhaustive-deps': 'warn',
       'react-refresh/only-export-components': [
         'warn',
-        { allowConstantExport: true }
+        { 
+          allowConstantExport: true,
+          allowExportNames: ['metadata', 'generateMetadata', 'generateStaticParams', 'useAnalytics', 'AnalyticsContext', 'createMock', 'mockFunction']
+        }
       ],
       '@typescript-eslint/no-unused-vars': 'off',
       '@typescript-eslint/no-explicit-any': 'off',
