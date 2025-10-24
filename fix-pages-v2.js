@@ -1,6 +1,28 @@
 const fs = require('fs');
 const path = require('path');
 
+// Function to create a valid component name from a page name
+function createValidComponentName(pageName) {
+  // Handle special cases for numbers at the start
+  if (pageName.startsWith('5g')) {
+    return 'FiveG' + pageName.substring(2).split('-').map(word => 
+      word.charAt(0).toUpperCase() + word.slice(1)
+    ).join('') + 'Page';
+  }
+  
+  // Handle other number prefixes
+  if (/^\d/.test(pageName)) {
+    return 'Page' + pageName.split('-').map(word => 
+      word.charAt(0).toUpperCase() + word.slice(1)
+    ).join('') + 'Page';
+  }
+  
+  // Normal case
+  return pageName.split('-').map(word => 
+    word.charAt(0).toUpperCase() + word.slice(1)
+  ).join('') + 'Page';
+}
+
 // Function to fix a single page file
 function fixPageFile(filePath) {
   try {
@@ -10,9 +32,7 @@ function fixPageFile(filePath) {
     // Fix component names
     if (content.includes('const PagePage: React.FC = () => {')) {
       const pageName = path.basename(path.dirname(filePath));
-      const componentName = pageName.split('-').map(word => 
-        word.charAt(0).toUpperCase() + word.slice(1)
-      ).join('') + 'Page';
+      const componentName = createValidComponentName(pageName);
       
       content = content.replace('const PagePage: React.FC = () => {', `const ${componentName}: React.FC = () => {`);
       content = content.replace(`export default PagePage;`, `export default ${componentName};`);
@@ -75,6 +95,6 @@ function fixAllPages(dir) {
 
 // Start fixing from the app directory
 const appDir = path.join(__dirname, 'app');
-console.log('Starting to fix pages...');
+console.log('Starting to fix pages with valid component names...');
 const totalFixed = fixAllPages(appDir);
 console.log(`Fixed ${totalFixed} page files.`);

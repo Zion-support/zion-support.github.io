@@ -3,7 +3,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 
-const PagePage: React.FC = () => {
+const AiFraudDetectionPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -138,4 +138,4 @@ const PagePage: React.FC = () => {
   );
 };
 
-export default PagePage;
+export default AiFraudDetectionPage;

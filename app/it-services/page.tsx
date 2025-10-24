@@ -193,7 +193,7 @@ const ITServicesPage: React.FC = () => {
             <div className="bg-gradient-to-r from-emerald-500 to-blue-500 rounded-2xl p-8 text-white">
               <h3 className="text-2xl font-bold mb-4">Ready to Get Started?</h3>
               <p className="text-lg mb-6">
-                Let&apos;s discuss your IT needs and create a customized solution that drives your business forward.
+                Let's discuss your IT needs and create a customized solution that drives your business forward.
               </p>
               <a
                 href="/contact"
