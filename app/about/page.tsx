@@ -33,7 +33,6 @@ const AboutPage: React.FC = () => {
     description: 'We work closely with our clients to understand their unique needs.'}
   ]
   const stats = [
-<<<<<<< HEAD
     { number: '500+', label: 'Projects Completed' },
     { number: '50+', label: 'Happy Clients' },
     { number: '5+', label: 'Years Experience' },

@@ -28,13 +28,11 @@ const Navigation = () => {
       setIsScrolled(window.scrollY > 50)
     }
     window.addEventListener('scroll', handleScroll)
-    return (
-    <>
-      ) => window.removeEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
   const navigation = [
     { name: 'Home', href: '/', icon: HomeIcon },
-    { name: 'About', href: '/about', icon: InformationCircleIcon }
+    { name: 'About', href: '/about', icon: InformationCircleIcon },
     {
       name: 'Services',
     href: '/services',
@@ -47,7 +45,7 @@ const Navigation = () => {
         { name: '5G Solutions', href: '/5g-solutions' },
         { name: 'Micro SaaS', href: '/micro-saas' }
       ]
-    }
+    },
     { name: 'Solutions', href: '/solutions', icon: CogIcon },
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
     { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
@@ -56,11 +54,9 @@ const Navigation = () => {
     { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },
     { name: 'Contact', href: '/contact', icon: PhoneIcon }
   ]
-  const isActive = (path: string
-    </>
-  ) => {
-  return pathname === path
-}
+  const isActive = (path: string) => {
+    return pathname === path
+  }
   return (
     <nav className={
   `fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -181,8 +177,5 @@ const Navigation = () => {
     </nav>
   )
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-f713
 export default Navigation

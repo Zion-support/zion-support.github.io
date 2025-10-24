@@ -1,64 +1,65 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-=======
-import Head from "next/head";
-
->>>>>>> cursor/fix-errors-and-merge-to-main-f713
 import Link from 'next/link';
 import { ArrowRight, Zap, Brain, CheckCircle, Users, BarChart, MessageCircle, Target, Settings, Workflow, Globe, Server, Clock, ShoppingCart, Send, BarChart3, Shield, DollarSign, Star, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react';
 const AiChatbotBuilderPage: React.FC = () => {
   const features = [
     {
       title: 'No-Code Builder',
-    description: 'Create sophisticated chatbots without any programming knowledge using our visual interface',
+      description: 'Create sophisticated chatbots without any programming knowledge using our visual interface',
       icon: Zap,
-    color: 'from-cyan-500 to-blue-500'}
+      color: 'from-cyan-500 to-blue-500'
+    },
     {
       title: 'Multi-Language Support',
-    description: 'Deploy chatbots in 50+ languages with automatic translation and localization',
+      description: 'Deploy chatbots in 50+ languages with automatic translation and localization',
       icon: Globe,
-    color: 'from-green-500 to-emerald-500'}
+      color: 'from-green-500 to-emerald-500'
+    },
     {
       title: 'Advanced Analytics',
-    description: 'Track performance with detailed analytics, conversation insights, and user behavior data',
+      description: 'Track performance with detailed analytics, conversation insights, and user behavior data',
       icon: BarChart,
-    color: 'from-purple-500 to-pink-500'}
+      color: 'from-purple-500 to-pink-500'
+    },
     {
       title: 'AI-Powered Responses',
-    description: 'Leverage advanced NLP and machine learning for intelligent, context-aware conversations',
+      description: 'Leverage advanced NLP and machine learning for intelligent, context-aware conversations',
       icon: Brain,
-    color: 'from-orange-500 to-red-500'}
+      color: 'from-orange-500 to-red-500'
+    },
     {
       title: 'Easy Integration',
-    description: 'Seamlessly integrate with your existing systems, websites, and messaging platforms',
+      description: 'Seamlessly integrate with your existing systems, websites, and messaging platforms',
       icon: Workflow,
-    color: 'from-blue-500 to-cyan-500'}
+      color: 'from-blue-500 to-cyan-500'
+    },
     {
       title: 'Custom Branding',
-    description: 'Customize the chatbot appearance to match your brand identity and design guidelines',
+      description: 'Customize the chatbot appearance to match your brand identity and design guidelines',
       icon: Settings,
-    color: 'from-indigo-500 to-purple-500'}
+      color: 'from-indigo-500 to-purple-500'
+    }
   ]
   const useCases = [
     {
-  title: 'Customer Support',
-    description: 'Provide 24/7 customer support with instant responses to common queries',
+      title: 'Customer Support',
+      description: 'Provide 24/7 customer support with instant responses to common queries',
       icon: MessageCircle,
-    benefits: ['Reduce support tickets by 60%', '24/7 availability', 'Instant responses']
-}
+      benefits: ['Reduce support tickets by 60%', '24/7 availability', 'Instant responses']
+    },
     {
-  title: 'Lead Generation',
-    description: 'Qualify leads and capture contact information through engaging conversations',
+      title: 'Lead Generation',
+      description: 'Qualify leads and capture contact information through engaging conversations',
       icon: Target,
-    benefits: ['Increase lead quality by 40%', 'Automated qualification', 'Higher conversion rates']
-}
+      benefits: ['Increase lead quality by 40%', 'Automated qualification', 'Higher conversion rates']
+    },
     {
-  title: 'E-commerce Assistant',
-    description: 'Help customers find products, answer questions, and guide them through purchases',
+      title: 'E-commerce Assistant',
+      description: 'Help customers find products, answer questions, and guide them through purchases',
       icon: ShoppingCart,
-    benefits: ['Boost sales by 25%', 'Reduce cart abandonment', 'Personalized recommendations']
-}
+      benefits: ['Boost sales by 25%', 'Reduce cart abandonment', 'Personalized recommendations']
+    }
     {
   title: 'Internal HR Bot',
     description: 'Answer employee questions about policies, benefits, and company information',
