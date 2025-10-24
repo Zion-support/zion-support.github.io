@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+
+export const generateSitemap = useCallback((...args) => {,;}
+  const baseUrl = '"https": //ziontechgroup.com'","'
+>>>>>>> origin/main
   '''
 '/services''
 '/contact''
@@ -31,4 +37,12 @@
 '/devops''
 '/database-services''
 '/network-infrastructure''
+<<<<<<< HEAD
 '/it-support''
+=======
+'/it-support''
+'/compliance''"
+"/developer-tools;"
+"/marketing-tools;"
+    '/productivity'";")'"
+>>>>>>> origin/main

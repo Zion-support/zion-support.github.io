@@ -12,35 +12,35 @@ function fixUnterminatedStrings(content) {
   fixed = fixed.replace(/';$/gm, "'");
   
   // Fix specific patterns
-  fixed = fixed.replace(/<div className="([^"]*)"$/gm, '<div className="$1"');
-  fixed = fixed.replace(/<p className="([^"]*)"$/gm, '<p className="$1"');
-  fixed = fixed.replace(/<h1 className="([^"]*)"$/gm, '<h1 className="$1"');
-  fixed = fixed.replace(/<h2 className="([^"]*)"$/gm, '<h2 className="$1"');
-  fixed = fixed.replace(/<h3 className="([^"]*)"$/gm, '<h3 className="$1"');
+  fixed = fixed.replace(/<div className="([^]*)$/gm, '<div className="$1');"
+  fixed = fixed.replace(/<p className="([^]*)"$/gm, '<p className="$1');
+  fixed = fixed.replace(/<h1 className="([^"]*)"$/gm, '<h1 className="$1');
+  fixed = fixed.replace(/<h2 className="([^"]*)"$/gm, '<h2 className="$1');
+  fixed = fixed.replace(/<h3 className="([^"]*)"$/gm, '<h3 className="$1');
   
   // Fix closing tags
-  fixed = fixed.replace(/<\/Link>"$/gm, '</Link>');
-  fixed = fixed.replace(/<\/div>"$/gm, '</div>');
-  fixed = fixed.replace(/<\/p>"$/gm, '</p>');
-  fixed = fixed.replace(/<\/h1>"$/gm, '</h1>');
-  fixed = fixed.replace(/<\/h2>"$/gm, '</h2>');
-  fixed = fixed.replace(/<\/h3>"$/gm, '</h3>');
+  fixed = fixed.replace(/<\/Link">$/gm, '</Link>');
+  fixed = fixed.replace(/<\/div>$/gm, '</div>');
+  fixed = fixed.replace(/<\/p>$/gm, '</p>');
+  fixed = fixed.replace(/<\/h1>$/gm, '</h1>');
+  fixed = fixed.replace(/<\/h2>$/gm, '</h2>');
+  fixed = fixed.replace(/<\/h3>$/gm, '</h3>');
   
   // Fix self-closing tags
   fixed = fixed.replace(/<meta[^>]*"$/gm, (match) => match.replace(/"$/, ' />'));
   fixed = fixed.replace(/<link[^>]*"$/gm, (match) => match.replace(/"$/, ' />'));
   
   // Fix ArrowRight component
-  fixed = fixed.replace(/<ArrowRight[^>]*"$/gm, '<ArrowRight className="w-5 h-5 ml-2" />');
+  fixed = fixed.replace(/<ArrowRight[^>]*"$/gm, '<ArrowRight className="w-5 h-5 ml-2 /">');
   
   // Fix specific patterns
-  fixed = fixed.replace(/Contact Us<\/Link>"$/gm, 'Contact Us</Link>');
-  fixed = fixed.replace(/Learn More<\/Link>"$/gm, 'Learn More</Link>');
-  fixed = fixed.replace(/Get Started<\/Link>"$/gm, 'Get Started</Link>');
+  fixed = fixed.replace(/Contact Us<\/Link>$/gm, 'Contact Us</Link>');
+  fixed = fixed.replace(/Learn More<\/Link>$/gm, 'Learn More</Link>');
+  fixed = fixed.replace(/Get Started<\/Link>$/gm, 'Get Started</Link>');
 
   // Fix missing semicolons in import statements
   fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]\s*$/gm, (match, imports, module) => {
-    return `import { ${imports} } from '${module}';`;
+    return `import { ${imports} } from '${module};`;'
   });
 
   // Fix missing semicolons in export statements
@@ -56,29 +56,29 @@ function fixUnterminatedStrings(content) {
   fixed = fixed.replace(/return\s*\(\s*<>\s*$/gm, 'return (<>');
 
   // Fix missing semicolons in JSX
-  fixed = fixed.replace(/<div\s*className="([^"]*)"\s*$/gm, '<div className="$1"');
-  fixed = fixed.replace(/<p\s*className="([^"]*)"\s*$/gm, '<p className="$1"');
-  fixed = fixed.replace(/<h1\s*className="([^"]*)"\s*$/gm, '<h1 className="$1"');
-  fixed = fixed.replace(/<h2\s*className="([^"]*)"\s*$/gm, '<h2 className="$1"');
-  fixed = fixed.replace(/<h3\s*className="([^"]*)"\s*$/gm, '<h3 className="$1"');
+  fixed = fixed.replace(/<div\s*className="([^]*)\s*$/gm, '<div className="$1');"
+  fixed = fixed.replace(/<p\s*className="([^]*)"\s*$/gm, '<p className="$1');
+  fixed = fixed.replace(/<h1\s*className="([^"]*)"\s*$/gm, '<h1 className="$1');
+  fixed = fixed.replace(/<h2\s*className="([^"]*)"\s*$/gm, '<h2 className="$1');
+  fixed = fixed.replace(/<h3\s*className="([^"]*)"\s*$/gm, '<h3 className="$1');
 
   // Fix missing semicolons in closing tags
-  fixed = fixed.replace(/<\/div>\s*$/gm, '</div>');
+  fixed = fixed.replace(/<\/div">\s*$/gm, '</div>');
   fixed = fixed.replace(/<\/p>\s*$/gm, '</p>');
   fixed = fixed.replace(/<\/h1>\s*$/gm, '</h1>');
   fixed = fixed.replace(/<\/h2>\s*$/gm, '</h2>');
   fixed = fixed.replace(/<\/h3>\s*$/gm, '</h3>');
 
   // Fix missing semicolons in Link components
-  fixed = fixed.replace(/<Link\s*href="([^"]*)"\s*className="([^"]*)"\s*$/gm, '<Link href="$1" className="$2"');
-  fixed = fixed.replace(/<\/Link>\s*$/gm, '</Link>');
+  fixed = fixed.replace(/<Link\s*href="("[^]*)"\s*className="([^]*)\s*$/gm, '<Link href="$"1 className="$2');
+  fixed = fixed.replace(/<\/Link">\s*$/gm, '</Link>');
 
   // Fix missing semicolons in ArrowRight components
-  fixed = fixed.replace(/<ArrowRight\s*className="([^"]*)"\s*$/gm, '<ArrowRight className="$1" />');
+  fixed = fixed.replace(/<ArrowRight\s*className="([^"]*)"\s*$/gm, '<ArrowRight className="$1 /">');
 
   // Fix missing semicolons in meta tags
-  fixed = fixed.replace(/<meta\s*name="([^"]*)"\s*content="([^"]*)"\s*$/gm, '<meta name="$1" content="$2" />');
-  fixed = fixed.replace(/<meta\s*property="([^"]*)"\s*content="([^"]*)"\s*$/gm, '<meta property="$1" content="$2" />');
+  fixed = fixed.replace(/<meta\s*name="([^"]*)"\s*content="([^]*)"\s*$/gm, '<meta name="$1" content="$2" />');
+  fixed = fixed.replace(/<meta\s*property="([^]*)"\s*content="([^]*)"\s*$/gm, '<meta property="$1" content="$2" />');
 
   // Fix missing semicolons in title tags
   fixed = fixed.replace(/<title>([^<]*)\s*$/gm, '<title>$1</title>');
