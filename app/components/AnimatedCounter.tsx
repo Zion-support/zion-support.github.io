@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react'
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
+<<<<<<< HEAD:app/components/AnimatedCounter.tsx
 
 interface AnimatedCounterProps {
   end: number;
@@ -66,3 +67,8 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
 }
 
 export default AnimatedCounter
+=======
+  suffix = ''
+  prefix = '';
+  className = ''
+>>>>>>> origin/main:app-backup/components/AnimatedCounter.tsx

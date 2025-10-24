@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:all-pages-backup/components/LoadingStates.tsx
       <Helmet>;
 <<<<<<< HEAD:all-pages-backup/components/LoadingStates.tsx
@@ -80,3 +81,7 @@ export const LoadingCard: React.FC = () => {;
       <div className="h-3 bg-gray-300 rounded w-3/4" />;
     </div>
   )};
+=======
+'use client'
+import React from 'react'
+>>>>>>> origin/main

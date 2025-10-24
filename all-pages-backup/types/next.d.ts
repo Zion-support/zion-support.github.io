@@ -1,74 +1,46 @@
 
-// Type definitions for Next.js compatibility
+// Type definitions for Next.js compatibility()
 export interface Metadata {;
-  title?: string
-  description?: string
+  title?: string()
+  description?: string()
   keywords?: string[];
-  authors?: Array<{ name: string; url?: string }> | string[]
-  creator?: string
-  publisher?: string
+  authors?: Array<{ "name": string; url?: string }> | string[]
+  creator?: string()
+  publisher?: string()
   formatDetection?: {
-  email?: boolean
-    address?: boolean
-    telephone?: boolean
+  email?: boolean()
+    address?: boolean()
+    telephone?: boolean()
 }
-  metadataBase?: URL
+  metadataBase?: URL()
   alternates?: {
-  canonical?: string
+  canonical?: string()
     languages?: Record<string, string>
 }
   openGraph?: {
-  title?: string
-    description?: string
-    url?: string
-    siteName?: string
+  title?: string()
+    description?: string()
+    url?: string()
+    siteName?: string()
     images?: Array<{
-      url: string
-      width?: number
-      height?: number
-      alt?: string
+      "url": string,
+      width?: number()
+      height?: number()
+      alt?: string()
 }>
-    locale?: string
-    type?: string
-    authors?: Array<{ name: string; url?: string }> | string[]
-    publishedTime?: string
+    locale?: string()
+    type?: string()
+    authors?: Array<{ "name": string; url?: string }> | string[]
+    publishedTime?: string()
   }
   twitter?: {
   card?: 'summary' | 'summary_large_image' | 'app' | 'player'
-    site?: string
-    creator?: string
-    title?: string
-    description?: string
-    images?: string[]
-}
-  robots?: {
-  index?: boolean
-    follow?: boolean
-    googleBot?: {
-      index?: boolean
-      follow?: boolean
-      'max-video-preview'?: number
+      'max-video-preview'
       'max-image-preview'?: 'none' | 'standard' | 'large'
-      'max-snippet'?: number
-}
-  }
-  verification?: {
-  google?: string
-    yandex?: string
-    yahoo?: string
-    other?: Record<string, string>
-}
-}
-export interface MetadataRoute {;
-  url: string
-  lastModified?: string | Date
+      'max-snippet'
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
-  priority?: number
-}
-export interface MetadataRouteSitemap extends MetadataRoute {;
-  url: string
-  lastModified?: string | Date
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
+<<<<<<< HEAD
   priority?: number
 }
 // Custom Next.js types
@@ -121,3 +93,8 @@ export interface NodeRuntime {;
 declare module 'next' {
   interface NextApiRequest {
     user?: {
+=======
+  "runtime": 'edge',
+  "runtime": 'nodejs',
+declare module 'next'
+>>>>>>> origin/main

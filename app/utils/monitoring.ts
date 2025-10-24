@@ -1,14 +1,16 @@
-'use client'
+'use client';
 /**
  * Comprehensive Monitoring Utility
  * Real-time application monitoring, performance tracking, and error reporting
  */
-
 // Declare gtag function for Google Analytics
 declare global {
   function gtag(...args: any[]): void;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/main
 const performanceConfig = {
   monitoring: {
     enableLongTaskDetection: true,
@@ -23,47 +25,56 @@ const performanceConfig = {
     ttfb: { good: 800, needsImprovement: 1800 },
     inp: { good: 200, needsImprovement: 500 }
   }
-}
-
+};
 export interface PerformanceMetrics {
-  lcp?: number
-  fid?: number
-  cls?: number
-  fcp?: number
-  ttfb?: number
-  inp?: number
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  fcp?: number;
+  ttfb?: number;
+  inp?: number;
 }
-
 export interface ErrorReport {
+<<<<<<< HEAD
   message: string
   stack?: string
   component?: string
   timestamp: number
   userAgent: string
   url: string
+=======
+  message: string;
+  stack?: string;
+  component?: string;
+  timestamp: number;
+  userAgent: string;
+  url: string;
+>>>>>>> origin/main
 }
-
 class MonitoringService {
+<<<<<<< HEAD
   private metrics: PerformanceMetrics = {}
   private errors: ErrorReport[] = []
   private observer: PerformanceObserver | null = null
 
+=======
+  private metrics: PerformanceMetrics = {};
+  private errors: ErrorReport[] = [];
+  private isInitialized = false;
+>>>>>>> origin/main
   constructor() {
     if (typeof window !== 'undefined') {
-      this.initializeMonitoring()
+      this.initializeMonitoring();
     }
   }
-
-  private initializeMonitoring(): void {
-    // Monitor Web Vitals
-    this.monitorWebVitals()
-    // Monitor Long Tasks
-    this.monitorLongTasks()
-    // Monitor Resource Loading
-    this.monitorResourceTiming()
-    // Global Error Handler
-    this.setupErrorHandling()
+  private initializeMonitoring() {
+    if (this.isInitialized) return;
+    this.isInitialized = true;
+    this.setupPerformanceObserver();
+    this.setupErrorHandling();
+    this.setupLongTaskDetection();
   }
+<<<<<<< HEAD
 
   private monitorWebVitals(): void {
     if ('PerformanceObserver' in window) {
@@ -132,8 +143,46 @@ class MonitoringService {
         // eslint-disable-next-line no-console
         console.warn('Long task monitoring not available:', error)
       }
+=======
+  private setupPerformanceObserver() {
+    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
+    try {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          this.handlePerformanceEntry(entry);
+        }
+      });
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'first-contentful-paint', 'navigation'] });
+    } catch (error) {
+      console.warn('Performance Observer not supported:', error);
     }
   }
+  private handlePerformanceEntry(entry: PerformanceEntry) {
+    const name = entry.name;
+    const value = entry.startTime;
+    switch (entry.entryType) {
+      case 'largest-contentful-paint':
+        this.metrics.lcp = value;
+        break;
+      case 'first-input':
+        this.metrics.fid = value;
+        break;
+      case 'layout-shift':
+        if (!(entry as any).hadRecentInput) {
+          this.metrics.cls = (this.metrics.cls || 0) + (entry as any).value;
+        }
+        break;
+      case 'first-contentful-paint':
+        this.metrics.fcp = value;
+        break;
+      case 'navigation':
+        this.metrics.ttfb = value;
+        break;
+>>>>>>> origin/main
+    }
+    this.reportMetric(entry.entryType, value);
+  }
+<<<<<<< HEAD
 
   private monitorResourceTiming(): void {
     if ('PerformanceObserver' in window) {
@@ -157,26 +206,37 @@ class MonitoringService {
 
   private setupErrorHandling(): void {
     // Global error handler
+=======
+  private setupErrorHandling() {
+    if (typeof window === 'undefined') return;
+>>>>>>> origin/main
     window.addEventListener('error', (event) => {
-      this.logError({
+      this.reportError({
         message: event.message,
         stack: event.error?.stack,
+        component: 'Global',
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
         url: window.location.href
-      })
-    })
-
-    // Unhandled promise rejection handler
+      });
+    });
     window.addEventListener('unhandledrejection', (event) => {
+<<<<<<< HEAD
       this.logError({
         message: `Unhandled Promise Rejection: ${event.reason}`,
+=======
+      this.reportError({
+        message: `Unhandled Promise Rejection: ${event.reason}`,
+        stack: event.reason?.stack,
+        component: 'Promise',
+>>>>>>> origin/main
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
         url: window.location.href
-      })
-    })
+      });
+    });
   }
+<<<<<<< HEAD
 
   private reportMetric(name: string, value: number): void {
     // Sample rate
@@ -197,35 +257,78 @@ class MonitoringService {
         value: Math.round(name === 'cls' ? value * 100 : value),
         event_category: 'Web Vitals'
       })
+=======
+  private setupLongTaskDetection() {
+    if (typeof window === 'undefined' || !performanceConfig.monitoring.enableLongTaskDetection) return;
+    if ('PerformanceObserver' in window) {
+      try {
+        const observer = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.duration > 50) {
+              this.reportMetric('long-task', entry.duration);
+            }
+          }
+        });
+        observer.observe({ entryTypes: ['longtask'] });
+      } catch (error) {
+        console.warn('Long task detection not supported:', error);
+      }
+>>>>>>> origin/main
     }
   }
-
-  public logError(error: ErrorReport): void {
-    this.errors.push(error)
-    // Keep only last 50 errors
-    if (this.errors.length > 50) {
-      this.errors = this.errors.slice(-50)
-    }
-
-    // eslint-disable-next-line no-console
-    console.error('Error logged:', error)
-
-    // Send to error tracking service (if configured)
-    if (typeof gtag === 'function') {
-      gtag('event', 'exception', {
-        description: error.message,
-        fatal: false
-      })
+  private reportMetric(type: string, value: number) {
+    if (typeof window === 'undefined' || !window.gtag) return;
+    try {
+      window.gtag('event', 'performance_metric', {
+        metric_type: type,
+        metric_value: value,
+        page_path: window.location.pathname
+      });
+    } catch (error) {
+      console.warn('Failed to report metric:', error);
     }
   }
-
+  public reportError(error: ErrorReport) {
+    this.errors.push(error);
+    if (typeof window !== 'undefined' && window.gtag) {
+      try {
+        window.gtag('event', 'exception', {
+          description: error.message,
+          fatal: false,
+          custom_map: {
+            component: error.component,
+            stack: error.stack
+          }
+        });
+      } catch (e) {
+        console.warn('Failed to report error to analytics:', e);
+      }
+    }
+    // Send to external monitoring service if configured
+    if (process.env.NEXT_PUBLIC_MONITORING_ENDPOINT) {
+      this.sendToMonitoringService(error);
+    }
+  }
+  private async sendToMonitoringService(error: ErrorReport) {
+    try {
+      await fetch(process.env.NEXT_PUBLIC_MONITORING_ENDPOINT!, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(error)
+      });
+    } catch (e) {
+      console.warn('Failed to send error to monitoring service:', e);
+    }
+  }
   public getMetrics(): PerformanceMetrics {
-    return { ...this.metrics }
+    return { ...this.metrics };
   }
-
   public getErrors(): ErrorReport[] {
-    return [...this.errors]
+    return [...this.errors];
   }
+<<<<<<< HEAD
 
   public clearErrors(): void {
     this.errors = []
@@ -267,3 +370,11 @@ class MonitoringService {
 // Singleton instance
 const monitoring = new MonitoringService()
 export default monitoring
+=======
+  public clearErrors() {
+    this.errors = [];
+  }
+}
+export const monitoringService = new MonitoringService();
+export default monitoringService;
+>>>>>>> origin/main
