@@ -29,4 +29,5 @@ export default function pagesPage() {
         </div>
       </div>
     </>
+  );
 }
