@@ -1,49 +1,21 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 
-interface Props {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: object;
-}
-
-const SEOHead: React.FC<Props> = ({
-  title = 'Zion Tech Group',
-  description = 'Professional AI and IT solutions',
-  keywords = 'AI, IT, technology, solutions',
-  canonical,
-  ogImage,
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  structuredData
-}) => {
+export default function SEOHead() {
   return (
     <Helmet>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      {canonical && <link rel="canonical" href={canonical} />}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content={ogType} />
-      {ogImage && <meta property="og:image" content={ogImage} />}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      {ogImage && <meta name="twitter:image" content={ogImage} />}
-      {structuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-      )}
+      <title>Zion Tech Group - Advanced AI and IT Solutions</title>
+      <meta name="description" content="Leading provider of AI-powered solutions, cloud migration, cybersecurity, and IT services. Transform your business with cutting-edge technology." />
+      <meta name="keywords" content="AI solutions, cloud migration, cybersecurity, IT services, data analytics, DevOps, digital transformation" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
+      <meta property="og:description" content="Leading provider of AI-powered solutions, cloud migration, cybersecurity, and IT services." />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://ziontechgroup.com" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
+      <meta name="twitter:description" content="Leading provider of AI-powered solutions, cloud migration, cybersecurity, and IT services." />
+      <link rel="canonical" href="https://ziontechgroup.com" />
     </Helmet>
-  );
-};
-
-export default SEOHead;
+  )
+}

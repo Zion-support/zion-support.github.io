@@ -2,81 +2,83 @@ import { ArrowRight, Code, Smartphone, Globe, Database, Zap, BarChart3, Mail, Sm
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function CustomDevelopment() {
-  const services = [
-    {
-      title: "Custom Software Development",
-      description: "Tailored software solutions built to meet your specific business requirements. From concept to deployment, we create applications that drive your business forward.",
-      icon: <Code className="w-8 h-8" />,
-      path: "/custom-software",
-      color: "from-blue-500 to-cyan-500",
-      price: "Starting at $5,000",
-      features: ["Custom Applications", "API Development", "Database Design", "Quality Assurance"]
+const PagePage: React.FC = () => {}
+  const features = [
+    {}
+    title: 'Page',
+      description: 'Professional page services for modern businesses.',
+      benefits: ['Expert Solutions', 'Advanced Technology', 'Proven Results', '24/7 Support']
     },
-    {
-      title: "Web Development",
-      description: "Modern, responsive web applications built with cutting-edge technologies. From simple websites to complex web platforms, we deliver exceptional user experiences.",
-      icon: <Globe className="w-8 h-8" />,
-      path: "/web-development",
-      color: "from-green-500 to-emerald-500",
-      price: "Starting at $2,500",
-      features: ["Responsive Design", "SEO Optimization", "Performance Tuning", "Security Hardening"]
+    {}
+    title: 'Advanced Technology',
+      description: 'Cutting-edge tools and technologies to deliver superior results.',
+      benefits: ['Latest Tools', 'Modern Methods', 'Scalable Solutions', 'Future-Ready']
     },
-    {
-      title: "Mobile App Development",
-      description: "Native and cross-platform mobile applications for iOS and Android. User-friendly interfaces with seamless performance across all devices.",
-      icon: <Smartphone className="w-8 h-8" />,
-      path: "/mobile-development",
-      color: "from-purple-500 to-pink-500",
-      price: "Starting at $8,000",
-      features: ["iOS & Android", "Cross-platform", "App Store Optimization", "Push Notifications"]
-    },
-    {
-      title: "E-commerce Development",
-      description: "Complete e-commerce solutions with payment integration, inventory management, and customer relationship management features.",
-      icon: <Zap className="w-8 h-8" />,
-      path: "/e-commerce-development",
-      color: "from-orange-500 to-red-500",
-      price: "Starting at $4,000",
-      features: ["Payment Integration", "Inventory Management", "Order Processing", "Customer Portal"]
-    },
-    {
-      title: "Database Development",
-      description: "Custom database solutions with optimized performance, data integrity, and scalability. From design to implementation and maintenance.",
-      icon: <Database className="w-8 h-8" />,
-      path: "/database-management",
-      color: "from-indigo-500 to-purple-500",
-      price: "Starting at $3,000",
-      features: ["Database Design", "Performance Optimization", "Data Migration", "Backup & Recovery"]
-    },
-    {
-      title: "API Development",
-      description: "RESTful and GraphQL APIs for seamless integration between systems. Scalable, secure, and well-documented API solutions.",
-      icon: <BarChart3 className="w-8 h-8" />,
-      path: "/api-development",
-      color: "from-teal-500 to-cyan-500",
-      price: "Starting at $2,000",
-      features: ["RESTful APIs", "GraphQL", "API Documentation", "Rate Limiting"]
+    {}
+    title: 'Proven Results',
+      description: 'Track record of successful projects and satisfied clients.',
+      benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
     }
   ];
 
-const Page: React.FC = () => {
-  return (
-    <React.Fragment>
-      <Helmet>
-        <title> - Zion Tech Group</title>
-        <meta name="description" content="Professional  services by Zion Tech Group" />
+  return ()
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Helmet></Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Professional page services and solutions." /></meta>
+        <meta name="keywords" content="page, services, solutions, technology" /></meta>
       </Helmet>
       
-      <div className="min-h-screen bg-gray-900 text-white">
-        <div className="container mx-auto px-4 py-8">
-          <h1 className="text-4xl font-bold mb-6"></h1>
-          <p className="text-lg text-gray-300">
-            This page is currently under development. Please check back soon for more information.
-          </p>
+      <Navigation /></Navigation>
+      <main className="pt-20 px-4 py-20"></main>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
+              Page
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+              Professional page services to help your business succeed and grow.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20"></div>
+            {features.map((feature, index) => ()
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20"></div>
+                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2"></ul>
+                  {feature.benefits.map((benefit, benefitIndex) => ()
+                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300"></li>
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+          
+          <div className="text-center"></div>
+            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12"></div>
+              <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
+              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto"></p>
+                Contact us today to learn more about our page services.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+                <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"></button>
+                  Contact Us
+                </button>
+                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"></button>
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </React.Fragment>
+      </main>
+      
+      <Footer /></Footer>
+    </div>
   );
 };
 

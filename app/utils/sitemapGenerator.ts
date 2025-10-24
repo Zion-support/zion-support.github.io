@@ -1,4 +1,4 @@
-// sitemapGenerator utility
-// Add utility functions here
-
-export {};
+// Utility file: sitemapGenerator
+export const sitemapGenerator = {}
+  // Utility functions will be implemented here
+};

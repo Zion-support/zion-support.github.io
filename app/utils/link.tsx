@@ -1,20 +1,30 @@
-  children: React.ReactNode;
-  className?: string;
-  target?: string;
-  rel?: string;
-  onClick?: () => void;
-  'aria-label'?: string;}
+interface LinkProps {
+    href: string,
+    children: React.ReactNode
+interface LinkProps {
+    href: string,
+    children: React.ReactNode
+  className?: string
+  target?: string
+  rel?: string
+  onClick?: () => void
+  'aria-label'?: string}
 }
-export const Link: React.FC<LinkProps>= ({;}
+export const Link: React.FC<LinkProps>= ({}
 export const Link: React.FC<LinkProps> = ({}
-  href,;
-  href: string,;
-  children: React.ReactNode;
-  className?: string;
-  target?: string;
-  rel?: string;
-  onClick?: () => void;
-  'aria-label'?: string;}
+  href,
+  href: string,
+
+interface LinkProps {href: string,
+    children: React.ReactNode}
+interface LinkProps {
+    href: string,
+  children: React.ReactNode
+  className?: string
+  target?: string
+  rel?: string
+  onClick?: () => void
+  'aria-label'?: string}
 }
 export const Link: React.FC<LinkProps> = ({,;
   href;
@@ -37,10 +47,9 @@ export const Link: React.FC<LinkProps> = ({,;
       e.preventDefault();
       window.location.href = href;}
     }
-  }</LinkProps>;
-  return (<a;
-  }
-  return(<a;
+  }</LinkProps>
+  return (<a}
+  return(<a
 import React from 'react';
 interface LinkProps {/* TODO: Fix JSX expression */}
 }

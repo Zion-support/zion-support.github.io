@@ -1,25 +1,165 @@
-'use client';
+'use client'
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { memo, useMemo } from 'react';
+interface OptimizedLoadingSpinnerProps {interface OptimizedLoadingSpinnerProps {size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+  variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars'
+  text?: string
+  className?: string
+  color?: 'blue' | 'gray' | 'green' | 'red' | 'purple'
+  fullScreen?: boolean}
+}
+const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo()
+  ({}
+    size = 'md',
+    variant = 'spinner',
+    text = 'Loading...',
+    className = '',
+    color = 'blue',
+    fullScreen = false,
+  }) => {}
+    const sizeClasses = useMemo()
+      () => ({
+    xs: 'h-3 w-3',
+        sm: 'h-4 w-4',
+        md: 'h-8 w-8',
+        lg: 'h-12 w-12',
+        xl: 'h-16 w-16',
+      }),
+      []
+    )
+    const textSizeClasses = useMemo()
+      () => ({
+    xs: 'text-xs',
+        sm: 'text-sm',
+        md: 'text-base',
+        lg: 'text-lg',
+        xl: 'text-xl',
+      }),
+      []
+    )
+    const colorClasses = useMemo()
+      () => ({
+    blue: 'border-blue-600 bg-blue-600',
+        gray: 'border-gray-600 bg-gray-600',
+        green: 'border-green-600 bg-green-600',
+        red: 'border-red-600 bg-red-600',
+        purple: 'border-purple-600 bg-purple-600',
+      }),
+      []
+    )
+    const renderSpinner = useMemo(() => {switch (variant) {}
+        case 'dots':
+          return ()
+            <div className='flex space-x-1' role='status' aria-label='Loading'></div>
+              {[0, 1, 2].map(i => (</div>
+                <div
 
-const OptimizedLoadingSpinnerPage: React.FC = () => {
-  return (
-    <React.Fragment>
-      <Helmet>
-        <title>OptimizedLoadingSpinner - Zion Tech Group</title>
-        <meta name="description" content="Professional OptimizedLoadingSpinner services by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gray-900 text-white">
-        <div className="container mx-auto px-4 py-8">
-          <h1 className="text-4xl font-bold mb-6">OptimizedLoadingSpinner</h1>
-          <p className="text-lg text-gray-300">
-            This page is currently under development. Please check back soon for more information.
-          </p>
-        </div>
-      </div>
-    </React.Fragment>
-  );
-};
+const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(({size = 'md',
+    variant = 'spinner',
+    text = 'Loading...',
+    className = '',
+    color = 'blue',
+    fullScreen = false,}
+  }) => {const sizeClasses = useMemo(() => ({xs: 'h-3 w-3',
+        sm: 'h-4 w-4',
+        md: 'h-8 w-8',
+        lg: 'h-12 w-12',
+        xl: 'h-16 w-16',}
+      }),
+      []);const textSizeClasses = useMemo(() => ({xs: 'text-xs',
+        sm: 'text-sm',
+        md: 'text-base',
+        lg: 'text-lg',
+        xl: 'text-xl',}
+      }),
+      []);const colorClasses = useMemo(() => ({blue: 'border-blue-600 bg-blue-600',
+        gray: 'border-gray-600 bg-gray-600',
+        green: 'border-green-600 bg-green-600',
+        red: 'border-red-600 bg-red-600',
+        purple: 'border-purple-600 bg-purple-600',}
+      }),
+      []);const renderSpinner = useMemo(() => {switch (variant) {case 'dots':
+          return (<div className='flex space-x-1' role='status' aria-label='Loading'></div>
+              {[0, 1, 2].map(i => (</div>
+                <div}
+                  key={i}
+                  className={`w-2 h-2 rounded-full animate-bounce ${colorClasses[color].split(' ')[1]}`}
+                  style={{ animationDelay: `${i * 0.1}s` }}
+                /></div>))}</div>)
+        case 'pulse':
+          return ()
+            <div
 
-export default OptimizedLoadingSpinnerPage;
+        case 'pulse':
+          return (<div
+              className={`${baseClasses} rounded-full animate-pulse`}
+              role='status'
+              aria-label='Loading'
+            /></div>)
+        case 'skeleton':
+          return (</div>
+            <div className='space-y-2' role='status' aria-label='Loading'></div>
+              <div
+
+        case 'skeleton':
+          return (</div></div>
+            <div className='space-y-2' role='status' aria-label='Loading'></div>
+              <div
+                className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
+              /></div>
+              <div
+                className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
+                style={{ width: '75%' }}
+              /></div>
+              <div
+                className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
+                style={{ width: '50%' }}
+              /></div>)
+        case 'bars':
+          return ()
+            <div className='flex space-x-1' role='status' aria-label='Loading'></div>
+              {[0, 1, 2, 3].map(i => (</div>
+                <div
+
+        case 'bars':
+          return (<div className='flex space-x-1' role='status' aria-label='Loading'></div>
+              {[0, 1, 2, 3].map(i => (</div>
+                <div}
+                  key={i}
+                  className={`w-1 ${colorClasses[color].split(' ')[1]} animate-pulse`}
+                  style={{
+    height: `${12 + i * 4}px`,
+                    animationDelay: `${i * 0.1}s`,}}
+                /></div>))}</div>)
+        case 'spinner':
+        default:
+          return ()
+            <div
+
+        case 'spinner':
+        default:
+          return (<div
+              className={`${baseClasses} rounded-full border-2 border-t-transparent animate-spin`}
+              role='status'
+              aria-label='Loading'
+            /></div>)}
+    }, [size, variant, color, sizeClasses, colorClasses])
+    const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`}, [fullScreen, className])
+    return (</div>
+      <div className={containerClasses}></div>
+        <div className='text-center'></div>
+    const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`}, [fullScreen, className]);return (</div>
+      <div className={containerClasses}></div>
+        <div className='text-center'></div>
+          {renderSpinner}
+          {text && (</div>}
+            <p className={`mt-2 text-gray-600 ${textSizeClasses[size]}`}></p>
+              {text}
+            </p>)}
+        </div>)}
+)
+OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner'
+export default OptimizedLoadingSpinner
+  </OptimizedLoadingSpinnerProps>
+
+OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';export default OptimizedLoadingSpinner

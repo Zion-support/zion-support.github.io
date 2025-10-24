@@ -1,4 +1,4 @@
-// formValidation utility
-// Add utility functions here
-
-export {};
+// Utility file: formValidation
+export const formValidation = {}
+  // Utility functions will be implemented here
+};

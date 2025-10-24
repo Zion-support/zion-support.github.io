@@ -1,103 +1,154 @@
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight, Globe } from 'lucide-react'
+import { Menu, X, ChevronDown } from 'lucide-react'
 
 const Navigation = React.memo(() => {
   const [isOpen, setIsOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
-  const [isMicroSaasOpen, setIsMicroSaasOpen] = useState(false)
-  
-  const toggleMenu = useCallback(() => {
-    setIsOpen(!isOpen)
-  }, [isOpen])
 
-  const toggleServices = useCallback(() => {
-    setIsServicesOpen(!isServicesOpen)
-  }, [isServicesOpen])
-
-  const toggleMicroSaas = useCallback(() => {
-    setIsMicroSaasOpen(!isMicroSaasOpen)
-  }, [isMicroSaasOpen])
-
-
-  const microSaasServices = useMemo(() => [
-    { name: 'Zion Analytics Pro', path: '/zion-analytics-pro', icon: <BarChart3 className="w-4 h-4" />, featured: true },
-    { name: 'Zion Security Shield', path: '/zion-security-shield', icon: <Shield className="w-4 h-4" />, featured: true },
-    { name: 'Zion Cloud Vault', path: '/zion-cloud-vault', icon: <Cloud className="w-4 h-4" />, featured: true },
-    { name: 'Zion Content Studio', path: '/zion-content-studio', icon: <Brain className="w-4 h-4" /> },
-    { name: 'Zion Data Sync', path: '/zion-data-sync', icon: <Database className="w-4 h-4" /> },
-    { name: 'Zion Lead Magnet', path: '/zion-lead-magnet', icon: <Zap className="w-4 h-4" /> },
-    { name: 'Zion Project Master', path: '/zion-project-master', icon: <Code className="w-4 h-4" /> },
-    { name: 'Zion Email Automation', path: '/zion-email-automation', icon: <Zap className="w-4 h-4" /> }
-  ], [])
-
-  const mainNavItems = useMemo(() => [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Services', path: '/services' },
-    { name: 'Pricing', path: '/pricing' },
-    { name: 'Case Studies', path: '/case-studies' },
-    { name: 'Blog', path: '/blog' },
-    { name: 'Contact', path: '/contact' }
-  ], [])
-
-  const serviceCategories = useMemo(() => [
-    {
-      name: 'AI Services',
-      path: '/ai-services',
-      icon: <Brain className="w-4 h-4" />,
-      services: [
-        { name: 'AI Analytics', path: '/ai-analytics' },
-        { name: 'AI Automation', path: '/ai-automation' },
-        { name: 'AI Content Generation', path: '/ai-content-generation' },
-        { name: 'AI Customer Support', path: '/ai-customer-support' },
-        { name: 'AI Marketing Automation', path: '/ai-marketing-automation' },
-        { name: 'AI Cybersecurity', path: '/ai-cybersecurity' }
+  const navigation = [
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { 
+      name: 'Services', 
+      href: '#',
+      children: [
+        { name: 'AI Services', href: '/ai-services' },
+        { name: 'IT Services', href: '/it-services' },
+        { name: 'Micro SaaS', href: '/micro-saas-services' },
+        { name: 'Cloud Services', href: '/cloud-services' },
+        { name: 'Cybersecurity', href: '/cybersecurity' }
       ]
     },
-    {
-      name: 'IT Services',
-      path: '/it-services',
-      icon: <Shield className="w-4 h-4" />,
-      services: [
-        { name: 'Cloud Services', path: '/cloud-services' },
-        { name: 'Cybersecurity', path: '/cybersecurity' },
-        { name: 'Custom Development', path: '/custom-development' },
-        { name: 'Web Development', path: '/web-development' },
-        { name: 'Mobile Development', path: '/mobile-development' },
-        { name: 'Database Management', path: '/database-management' }
-      ]
-    },
-    {
-      name: '5G Solutions',
-      path: '/5g-solutions',
-      icon: <Globe className="w-4 h-4" />,
-      services: [
-        { name: '5G Implementation', path: '/5g-implementation' },
-        { name: '5G Edge Computing', path: '/5g-edge-computing' },
-        { name: '5G IoT Solutions', path: '/5g-iot-solutions' },
-        { name: '5G Smart Cities', path: '/5g-smart-city-solutions' },
-        { name: '5G Private Networks', path: '/5g-private-networks' },
-        { name: '5G Data Analytics', path: '/5g-data-analytics' }
-      ]
-    }
-  ], [])
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Contact', href: '/contact' }
+  ]
 
 const NavigationPage: React.FC = () => {
   return (
-    <React.Fragment>
-      <Helmet>
-        <title>Navigation - Zion Tech Group</title>
-        <meta name="description" content="Professional Navigation services by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gray-900 text-white">
-        <div className="container mx-auto px-4 py-8">
-          <h1 className="text-4xl font-bold mb-6">Navigation</h1>
-          <p className="text-lg text-gray-300">
-            This page is currently under development. Please check back soon for more information.
-          </p>
+    <nav className="bg-white shadow-lg sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-16">
+          <div className="flex items-center">
+            <Link to="/" className="flex-shrink-0 flex items-center">
+              <span className="text-2xl font-bold text-gray-900">Zion Tech Group</span>
+            </Link>
+          </div>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            {navigation.map((item) => (
+              <div key={item.name} className="relative">
+                {item.children ? (
+                  <div className="relative group">
+                    <button
+                      className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium flex items-center"
+                      onMouseEnter={() => setIsServicesOpen(true)}
+                      onMouseLeave={() => setIsServicesOpen(false)}
+                    >
+                      {item.name}
+                      <ChevronDown className="ml-1 h-4 w-4" />
+                    </button>
+                    {isServicesOpen && (
+                      <div
+                        className="absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg py-1 z-50"
+                        onMouseEnter={() => setIsServicesOpen(true)}
+                        onMouseLeave={() => setIsServicesOpen(false)}
+                      >
+                        {item.children.map((child) => (
+                          <Link
+                            key={child.name}
+                            to={child.href}
+                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                          >
+                            {child.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <Link
+                    to={item.href}
+                    className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium"
+                  >
+                    {item.name}
+                  </Link>
+                )}
+              </div>
+            ))}
+            <Link
+              to="/contact"
+              className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors"
+            >
+              Get Started
+            </Link>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden flex items-center">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-gray-700 hover:text-blue-600 p-2"
+            >
+              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
         </div>
+
+        {/* Mobile Navigation */}
+        {isOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50">
+              {navigation.map((item) => (
+                <div key={item.name}>
+                  {item.children ? (
+                    <div>
+                      <button
+                        onClick={() => setIsServicesOpen(!isServicesOpen)}
+                        className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium w-full text-left flex items-center justify-between"
+                      >
+                        {item.name}
+                        <ChevronDown className={`h-4 w-4 transform transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
+                      </button>
+                      {isServicesOpen && (
+                        <div className="pl-4 space-y-1">
+                          {item.children.map((child) => (
+                            <Link
+                              key={child.name}
+                              to={child.href}
+                              className="text-gray-600 hover:text-blue-600 block px-3 py-2 text-sm"
+                              onClick={() => setIsOpen(false)}
+                            >
+                              {child.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <Link
+                      to={item.href}
+                      className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  )}
+                </div>
+              ))}
+              <Link
+                to="/contact"
+                className="bg-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-blue-700 transition-colors mt-4"
+                onClick={() => setIsOpen(false)}
+              >
+                Get Started
+              </Link>
+            </div>
+          </div>
+        )}
       </div>
     </React.Fragment>
   );

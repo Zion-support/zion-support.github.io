@@ -2,22 +2,22 @@
 
 import React, { useEffect } from 'react';
 
-interface PerformanceOptimizerProps {
-  children: React.ReactNode;
+interface PerformanceOptimizerProps {}
+  enableImageOptimization?: boolean;
   enableLazyLoading?: boolean;
   enablePreloading?: boolean;
   enableCodeSplitting?: boolean;
 }
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ 
-  children, 
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({}
+  enableImageOptimization = true,
   enableLazyLoading = true,
   enablePreloading = true,
-  enableCodeSplitting = true 
-}) => {
-  // Preload critical resources
-  useEffect(() => {
-    if (enablePreloading) {
+  enableCodeSplitting = true
+}) => {}
+  useEffect(() => {}
+    // Preload critical resources
+    if (enablePreloading && typeof window !== 'undefined') {}
       // Preload critical fonts
       const fontPreload = document.createElement('link');
       fontPreload.rel = 'preload';
@@ -28,52 +28,77 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({
       document.head.appendChild(fontPreload);
 
       // Preload critical images
-      const imagePreload = document.createElement('link');
-      imagePreload.rel = 'preload';
-      imagePreload.href = '/images/hero-bg.webp';
-      imagePreload.as = 'image';
-      document.head.appendChild(imagePreload);
+      const criticalImages = [
+        '/images/hero-bg.jpg',
+        '/images/logo.png'
+      ];
+
+      criticalImages.forEach(src => {}
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.href = src;
+        link.as = 'image';
+        document.head.appendChild(link);
+      });
     }
   }, [enablePreloading]);
 
-  // Optimize scroll performance
-  const handleScroll = useCallback(() => {
-    // Throttle scroll events for better performance
-    let ticking = false;
-    
-    const updateScroll = () => {
-      // Add scroll-based optimizations here
-      ticking = false;
-    };
+    // Optimize images
+    if (enableImageOptimization && typeof window !== 'undefined') {}
+      const images = document.querySelectorAll('img');
+      images.forEach(img => {}
+        // Add loading="lazy" for non-critical images
+        if (enableLazyLoading && !img.hasAttribute('loading')) {}
+          img.loading = 'lazy';
+        }
 
-    if (!ticking) {
-      requestAnimationFrame(updateScroll);
-      ticking = true;
+        // Add decoding="async" for better performance
+        if (!img.hasAttribute('decoding')) {}
+          img.decoding = 'async';
+        }
+      });
     }
   }, []);
 
-  useEffect(() => {
-    if (enableLazyLoading) {
-      window.addEventListener('scroll', handleScroll, { passive: true });
-      return () => window.removeEventListener('scroll', handleScroll);
+    // Intersection Observer for lazy loading
+    if (enableLazyLoading && typeof window !== 'undefined' && 'IntersectionObserver' in window) {}
+      const imageObserver = new IntersectionObserver((entries, observer) => {}
+        entries.forEach(entry => {}
+          if (entry.isIntersecting) {}
+            const img = entry.target as HTMLImageElement;
+            if (img.dataset.src) {}
+              img.src = img.dataset.src;
+              img.removeAttribute('data-src');
+              observer.unobserve(img);
+            }
+          }
+        });
+      });
+
+      const lazyImages = document.querySelectorAll('img[data-src]');
+      lazyImages.forEach(img => imageObserver.observe(img));
     }
   }, [handleScroll, enableLazyLoading]);
 
-  // Resource hints for better performance
-  useEffect(() => {
-    if (enablePreloading) {
-      // Add DNS prefetch for external resources
-      const dnsPrefetch = document.createElement('link');
-      dnsPrefetch.rel = 'dns-prefetch';
-      dnsPrefetch.href = '//fonts.googleapis.com';
-      document.head.appendChild(dnsPrefetch);
+    // Performance monitoring
+    if (typeof window !== 'undefined' && 'performance' in window) {}
+      const observer = new PerformanceObserver((list) => {}
+        list.getEntries().forEach((entry) => {}
+          if (entry.entryType === 'largest-contentful-paint') {}
+            console.log('LCP:', entry.startTime);
+          }
+          if (entry.entryType === 'first-input') {}
+            const fidEntry = entry as PerformanceEventTiming;
+            console.log('FID:', fidEntry.processingStart - fidEntry.startTime);
+          }
+        });
+      });
 
-      // Add preconnect for critical external resources
-      const preconnect = document.createElement('link');
-      preconnect.rel = 'preconnect';
-      preconnect.href = 'https://fonts.gstatic.com';
-      preconnect.crossOrigin = 'anonymous';
-      document.head.appendChild(preconnect);
+      try {}
+        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
+      } catch (e) {}
+        // Fallback for browsers that don't support these entry types
+      }
     }
   }, [enablePreloading]);
 

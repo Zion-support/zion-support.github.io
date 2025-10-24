@@ -1,25 +1,97 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Brain, Zap, Shield, ArrowRight } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
-const Page: React.FC = () => {
+export default function AIServicesPage() {
+  const services = [
+    {
+      icon: <Brain className="w-8 h-8 text-blue-500" />,
+      title: 'AI Content Generation',
+      description: 'Generate high-quality content for blogs, social media, marketing materials, and more using advanced AI models.',
+      features: ['Multi-language support', 'SEO optimization', 'Brand voice customization', 'Content templates'],
+      pricing: 'Starting at $29/month'
+    },
+    {
+      icon: <Zap className="w-8 h-8 text-purple-500" />,
+      title: 'AI Automation',
+      description: 'Automate repetitive tasks and workflows with intelligent AI-powered automation solutions.',
+      features: ['Workflow automation', 'Process optimization', 'Custom integrations', 'Real-time monitoring'],
+      pricing: 'Starting at $49/month'
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-red-500" />,
+      title: 'AI Cybersecurity',
+      description: 'Advanced AI-powered security solutions to protect your digital assets and detect threats.',
+      features: ['Threat detection', 'Anomaly monitoring', 'Automated response', 'Compliance reporting'],
+      pricing: 'Starting at $99/month'
+    }
+  ]
+
   return (
-    <React.Fragment>
+    <>
       <Helmet>
-        <title> - Zion Tech Group</title>
-        <meta name="description" content="Professional  services by Zion Tech Group" />
+        <title>AI Services - Zion Tech Group</title>
+        <meta name="description" content="Discover our comprehensive AI services including content generation, automation, cybersecurity, and more. Transform your business with artificial intelligence." />
       </Helmet>
       
-      <div className="min-h-screen bg-gray-900 text-white">
-        <div className="container mx-auto px-4 py-8">
-          <h1 className="text-4xl font-bold mb-6"></h1>
-          <p className="text-lg text-gray-300">
-            This page is currently under development. Please check back soon for more information.
-          </p>
-        </div>
-      </div>
-    </React.Fragment>
-  );
-};
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="pt-20 pb-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Services</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your business with our comprehensive AI solutions designed to automate, optimize, and enhance your operations.
+            </p>
+          </div>
+        </section>
 
-export default Page;
+        {/* Services Section */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our AI Services</h2>
+              <p className="text-xl text-gray-600">Choose from our range of AI-powered solutions</p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {services.map((service, index) => (
+                <div key={index} className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300">
+                  <div className="mb-4">
+                    {service.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4">
+                    {service.description}
+                  </p>
+                  <div className="mb-4">
+                    <h4 className="font-semibold text-gray-900 mb-2">Features:</h4>
+                    <ul className="text-sm text-gray-600 space-y-1">
+                      {service.features.map((feature, idx) => (
+                        <li key={idx}>• {feature}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="mb-4">
+                    <span className="text-lg font-semibold text-blue-600">{service.pricing}</span>
+                  </div>
+                  <Link
+                    to="/contact"
+                    className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
+                  >
+                    Get Started
+                    <ArrowRight className="ml-1 w-4 h-4" />
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+  )
+}

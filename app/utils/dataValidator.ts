@@ -1,4 +1,4 @@
-// dataValidator utility
-// Add utility functions here
-
-export {};
+// Utility file: dataValidator
+export const dataValidator = {}
+  // Utility functions will be implemented here
+};

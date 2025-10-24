@@ -1,4 +1,4 @@
-// logger utility
-// Add utility functions here
-
-export {};
+// Utility file: logger
+export const logger = {}
+  // Utility functions will be implemented here
+};

@@ -1,25 +1,30 @@
-'use client';;
+'use client'
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const ServiceCardSkeletonPage: React.FC = () => {
-  return (
-    <React.Fragment>
-      <Helmet>
-        <title>ServiceCardSkeleton - Zion Tech Group</title>
-        <meta name="description" content="Professional ServiceCardSkeleton services by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gray-900 text-white">
-        <div className="container mx-auto px-4 py-8">
-          <h1 className="text-4xl font-bold mb-6">ServiceCardSkeleton</h1>
-          <p className="text-lg text-gray-300">
-            This page is currently under development. Please check back soon for more information.
-          </p>
-        </div>
+;
+const ServiceCardSkeleton: React.FC = () => {}
+  return ()
+    <div className="cyber-card p-6 animate-pulse"></div>
+      <div className="flex items-center mb-4"></div>
+        <div className="w-8 h-8 bg-slate-700 rounded mr-3"></div>
+        <div className="h-4 bg-slate-700 rounded w-20"></div>
       </div>
-    </React.Fragment>
-  );
-};
+      
+      <div className="h-6 bg-slate-700 rounded mb-3"></div>
+      <div className="h-4 bg-slate-700 rounded mb-4"></div>
+      <div className="h-4 bg-slate-700 rounded mb-4 w-3/4"></div>
+      
+      <div className="space-y-2 mb-6"></div>
+        <div className="h-4 bg-slate-700 rounded"></div>
+        <div className="h-4 bg-slate-700 rounded"></div>
+        <div className="h-4 bg-slate-700 rounded w-2/3"></div>
+      </div>
+      
+      <div className="flex items-center justify-between"></div>
+        <div className="h-6 bg-slate-700 rounded w-24"></div>
+        <div className="h-8 bg-slate-700 rounded w-20"></div>
+      </div>
+    </div>
+  )
+}
 
 export default ServiceCardSkeletonPage;
