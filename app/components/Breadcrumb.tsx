@@ -1,8 +1,8 @@
-'use client';
+'use client'
 
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import React from 'react';
+import { Link from 'next/link';
+import { usePathname   } from 'next/navigation';
+import React   } from 'react';
 
 const Breadcrumb: React.FC = () => {
   const pathname = usePathname();
@@ -51,12 +51,9 @@ const Breadcrumb: React.FC = () => {
                   </Link>
                 )}
               </li>
-            );
-          })}
+
         </ol>
       </div>
     </nav>
-  );
-};
 
-export default Breadcrumb;
+export default Breadcrumb }

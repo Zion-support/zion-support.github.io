@@ -100,7 +100,6 @@ interface ContentNewsletterSignupProps {
           ))}
         </div>
       </div>
-    </div>
   );
 };
 

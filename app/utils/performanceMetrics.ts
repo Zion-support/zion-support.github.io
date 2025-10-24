@@ -131,7 +131,8 @@ private initializeObservers(): void {}
 // Observe navigation timing
 if ('PerformanceObserver' in window) {}
 try {}
-// Navigation timing
+// Navigation timing;
+
 const navObserver = new PerformanceObserver(list => {)}
 for (const entry of list.getEntries()) {}
 if (entry.entryType === 'navigation') {}
@@ -312,8 +313,10 @@ c: PerformanceMetric): void {/* TOD,
 * Record page load time
 */
 recordPageLoad(): void {
-  if (typeof window === 'undefined') return
-const perfData = window.performance.timing
+  if (typeof window === 'undefined') return;
+
+const perfData = window.performance.timing;
+
 const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart
 this.recordMetric({);
 name: 'pageLoad'),
@@ -331,8 +334,10 @@ serverRespons,
   e: perfData.responseEnd - perfData.requestStart
   }
 recordPageLoad(): void {}
-if (typeof window === 'undefined') return
-const perfData = window.performance.timing
+if (typeof window === 'undefined') return;
+
+const perfData = window.performance.timing;
+
 const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart
 this.recordMetric({)}
 name: 'pageLoad',
@@ -355,7 +360,7 @@ recordPageLoad(): void {/* TODO: Fix JSX expression */}
 /**
 * Record network request timing
 */
-recordNetworkRequest(url: string, duration: number, status: number): void {
+recordNetworkRequest(url: string, duration: number, status: number): void {,
   this.recordMetric({)
 nam,
   e: 'networkRequest'),
@@ -393,7 +398,8 @@ s: number): void {/* TOD,
 */
 recordMemoryUsage(): void {
   if (typeof window === 'undefined') return
-if (!(performance as PerformanceWithMemory).memory) return
+if (!(performance as PerformanceWithMemory).memory) return;
+
 const memory = (performance as PerformanceWithMemory).memory
 this.recordMetric({);
 name: 'memoryUsage'),
@@ -410,7 +416,8 @@ tota,
   }
 recordMemoryUsage(): void {}
 if (typeof window === 'undefined') return
-if (!(performance as PerformanceWithMemory).memory) return
+if (!(performance as PerformanceWithMemory).memory) return;
+
 const memory = (performance as PerformanceWithMemory).memory
 this.recordMetric({)}
 name: 'memoryUsage',
@@ -459,12 +466,12 @@ n: () => T): T {/* TOD,
   O: Fix JSX expression */}
 n:${name}`
 valu
-e: endTime - startTime
+e: endTime - startTime,
 uni
 ,
   t: 'ms',
 timestam
-p: new Date()
+p: new Date(),
 categor
 ,
   y: 'runtime'})
@@ -500,12 +507,12 @@ n: () => Promise<T>): Promise<T> {/* TOD,
   O: Fix JSX expression */}`
 c:${name}`
 valu
-e: endTime - startTime
+e: endTime - startTime,
 uni
 ,
   t: 'ms',
 timestam
-p: new Date()
+p: new Date(),
 categor
 ,
   y: 'runtime'})
@@ -737,6 +744,7 @@ interface PerformanceWithMemory extends Performance {/* TODO: Fix JSX expression
 // Type for LayoutShift
 interface LayoutShift extends PerformanceEntry {/* TODO: Fix JSX expression */}
 }
-// Export singleton instance
+// Export singleton instance;
+
 export const performanceMetrics = PerformanceMetrics.getInstance()
 `</T>;

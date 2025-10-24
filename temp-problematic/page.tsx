@@ -28,7 +28,11 @@ export default function AiautomatedtestingPage() {
           </Link>
         
       </div>
+<<<<<<< HEAD:temp-problematic/page.tsx
       
 </div>
+=======
+    </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-da11:app/about/page.tsx
   );
 }

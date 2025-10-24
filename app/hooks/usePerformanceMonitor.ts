@@ -41,8 +41,9 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
     }
   }, [options.enabled, measureMemoryUsage])
   useEffect(() => {
-    if (!isMonitoringFPS) return
-    const countFrames = () => {
+    if (!isMonitoringFPS) return;
+
+const countFrames = () => {
       frameCountRef.current++
       const currentTime = performance.now();
       if (currentTime - lastTimeRef.current >= 1000) {

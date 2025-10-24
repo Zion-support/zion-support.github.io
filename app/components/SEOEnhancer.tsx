@@ -36,8 +36,15 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '' }) => {</SEOEn
   r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
                 Learn More</button>
               </button>
+<<<<<<< HEAD
             
           ,
+=======
+              <button className="border border-emerald-400 text-emerald-400 hover bg-emerald-400 hovertext-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Learn More</button>
+            </div>
+          </div>,
+>>>>>>> cursor/fix-errors-and-merge-to-main-da11
         </section>,
         {/* Features Section */}
         <section className="py-20 px-4"></section>
@@ -117,7 +124,9 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '' }) => {</SEOEn
                   <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /></CheckCircle>
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
-              ))}
+        <div key=index className="flex items-start space-x-4"> </div></div><CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /> </CheckCircle><p className="text-gray-300 text-lg">benefit</p></p>
+                </div>
+              
             </div>
           </div>
         </section>
@@ -134,7 +143,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '' }) => {</SEOEn
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" /></CheckCircle>
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
-            ))}
+            
           </div>
         </div>
       </section>

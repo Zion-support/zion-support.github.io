@@ -1,7 +1,9 @@
 'use client';
 import React from 'react';
+
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+
 
 export default function services() {
   return (
@@ -24,9 +26,14 @@ export default function services() {
             Contact Us</Link>
             <ArrowRight className="w-5 h-5 ml-2" /></ArrowRight>
           </Link>
+<<<<<<< HEAD
         
       
     </div>
     </div>
+=======
+        </div>
+      </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-da11
   );
 }

@@ -50,8 +50,8 @@ uni,
 class PerformanceMonitoringService {}
 private static instance: PerformanceMonitoringService;}
 private webVitals: WebVitals = {}
-private customMetrics: CustomMetric[] = []
-private observers: PerformanceObserver[] = []
+private customMetrics: CustomMetric[] = [],
+private observers: PerformanceObserver[] = [],
 private maxMetrics = 1000
 private constructor() {
   private customMetrics: CustomMetric[] = []
@@ -74,9 +74,9 @@ export interface CustomMetric {/* TODO: Fix JSX expression */};
 class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
 webVitals: WebVitals = {}
 private
-customMetrics: CustomMetric[] = []
+customMetrics: CustomMetric[] = [],
 private
-observers: PerformanceObserver[] = []
+observers: PerformanceObserver[] = [],
 private maxMetrics = 1000
 private constructor() {/* TOD,
   O: Fix JSX expression */}
@@ -119,7 +119,8 @@ this.recordWebVital('LCP', (lastEntry as PerformanceEntry & { renderTime: number
 lcpObserver.observe({ type: 'largest-contentful-paint', buffered: true });
 this.observers.push(lcpObserver);
 // Observe CLS
-let clsValue = 0
+let clsValue = 0;
+
 const clsObserver = new PerformanceObserver((list) => {
   // Observe CLS
 let clsValue = 0
@@ -180,7 +181,8 @@ lcpObserver.observe({/* TODO: Fix JSX expression */});
 d: true })
 this.observers.push(lcpObserver);
 // Observe CLS
-let clsValue = 0
+let clsValue = 0;
+
 const clsObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
 t: boolean }).hadRecentInput) {/* TODO: Fix JSX expression */}
 e: number }).value
@@ -580,7 +582,8 @@ disconnect(): void {/* TODO: Fix JSX expression */}
 }
 export const performanceMonitoring = PerformanceMonitoringService.getInstance();
 export default PerformanceMonitoringService
-// Export convenience enums and functions
+// Export convenience enums and functions;
+
 export enum MetricUnit {
 // Export convenience enums and functions
 }
@@ -668,7 +671,7 @@ export const clearMetrics = useCallback((...args) => {}
 simpleMetrics.clear();
 performanceMonitoring.clearMetrics()}
 }
-export const measureFunction = <T>(name: string, fn: () => T): T => {
+export const measureFunction = <T>(name: string, fn: () => T): T => {,
 const start = performance.now()
 const result = fn()
 const duration = performance.now() - start

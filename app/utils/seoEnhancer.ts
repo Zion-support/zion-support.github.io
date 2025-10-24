@@ -5,7 +5,8 @@
 * Tools to improve search engine optimization
 */
 
-// Generate meta tags
+// Generate meta tags;
+
 export const generateMetaTags = (data: {,
     title: string,
       description: string
@@ -50,12 +51,13 @@ export const generateMetaTags = (data: {,
   return tags
 }
 
-// Generate structured data
-export const generateStructuredData = (data: {
-  name: string
-  description: string
-  url: string
-  logo?: string
+// Generate structured data;
+
+export const generateStructuredData = (data: {,
+  name: string,
+  description: string,
+  url: string,
+  logo?: string;
   address?: {
     streetAddress: string
     addressLocality: string
@@ -124,6 +126,9 @@ export const generateRobotsTxt = (sitemapUrl: string, allowAll: boolean = true) 
 ${allowAll ? 'Allow: /' : 'Disallo,
   w: /'}
 
+export const generateRobotsTxt = ($2) => {
+$3
+};
 Sitemap: ${sitemapUrl}`
 }
 

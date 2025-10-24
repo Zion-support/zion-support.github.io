@@ -1,7 +1,15 @@
+<<<<<<< HEAD
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
+=======
+'use client';
+import React from 'react';
+import  Helmet  from 'react-helmet-async';
+import Navigation  } from '/components/Navigation';
+import Footer from '../components/Footer';
+>>>>>>> cursor/fix-errors-and-merge-to-main-da11
 
 const LoadingStates: React.FC = () => {
   return (

@@ -1,4 +1,4 @@
-// Accessibility utilities for improving user experience and compliance
+// Accessibility utilities for improving user experience and compliance;
 
 export const generateId = (prefix: string = 'id'): string => {;
   return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
@@ -50,8 +50,14 @@ export const trapFocus = (element: HTMLElement): (() => void) => {
   element.addEventListener('keydown', handleTabKey);
   firstElement?.focus();
   
-  return () => {
-    element.removeEventListener('keydown', handleTabKey);
+  return (
+    <>
+      ) => {
+    </>
+    </>
+    element.removeEventListener('keydown', handleTabKey
+    </>
+  );
   };
 };
 
@@ -330,8 +336,9 @@ class AccessibilityEnhancer {
   }
 
   private setupHighContrast(): void {
-    // Add high contrast mode support
-    const style = document.createElement('style');
+    // Add high contrast mode support;
+
+const style = document.createElement('style');
     style.textContent = `
       @media (prefers-contrast: high) {,
         .cyber-card, .quantum-card {
@@ -361,8 +368,9 @@ class AccessibilityEnhancer {
       document.body.classList.remove('keyboard-navigation');
     });
 
-    // Add focus styles
-    const focusStyle = document.createElement('style');
+    // Add focus styles;
+
+const focusStyle = document.createElement('style');
     focusStyle.textContent = `
       .keyboard-navigation *:focus {
         outline: 2px solid #00ffff !important;
@@ -374,8 +382,9 @@ class AccessibilityEnhancer {
   }
 
   private setupScreenReaderSupport(): void {
-    // Add screen reader announcements
-    const announcement = document.createElement('div');
+    // Add screen reader announcements;
+
+const announcement = document.createElement('div');
     announcement.setAttribute('aria-live', 'polite');
     announcement.setAttribute('aria-atomic', 'true');
     announcement.className = 'sr-only';
@@ -389,8 +398,9 @@ class AccessibilityEnhancer {
 ,
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Escape') {
-        // Return focus to previous element
-        const previousElement = focusHistory.pop();
+        // Return focus to previous element;
+
+const previousElement = focusHistory.pop();
         if (previousElement) {
           previousElement.focus();
         }
@@ -438,8 +448,9 @@ class AccessibilityEnhancer {
       altText: this.checkAltText(),
     };
 
-    // Calculate overall score
-    const scores = Object.values(metrics).filter(score => typeof score === 'number' && score > 0);
+    // Calculate overall score;
+
+const scores = Object.values(metrics).filter(score => typeof score === 'number' && score > 0);
     metrics.overallScore = scores.length > 0 ? scores.reduce((sum, score) => sum + score, 0) / scores.length : 0;
 
     this.metrics = metrics;
@@ -447,8 +458,9 @@ class AccessibilityEnhancer {
   }
 
   private checkColorContrast(): number {
-    // Simple color contrast check
-    const elements = document.querySelectorAll('*');
+    // Simple color contrast check;
+
+const elements = document.querySelectorAll('*');
     let goodContrast = 0;
     let totalElements = 0;
 
@@ -574,7 +586,7 @@ class AccessibilityEnhancer {
     return images.length > 0 ? (imagesWithAlt / images.length) * 100 : 0;
   }
 
-  announce(message: string): void {
+  announce(message: string): void {,
     const announcement = document.getElementById('screen-reader-announcements');
     if (announcement) {,
       announcement.textContent = message;,
@@ -586,8 +598,9 @@ class AccessibilityEnhancer {
   }
 
   cleanup(): void {
-    // Cleanup accessibility enhancements
-    const announcement = document.getElementById('screen-reader-announcements');
+    // Cleanup accessibility enhancements;
+
+const announcement = document.getElementById('screen-reader-announcements');
     if (announcement) {
       announcement.remove();
     }

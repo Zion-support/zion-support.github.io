@@ -1,6 +1,8 @@
 'use client';
 import React from 'react';
+
 import Link from 'next/link';
+
 
 export default function HomePage() {
   return (
@@ -73,7 +75,13 @@ export default function HomePage() {
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6 group-hove,
   r: scale-110 transition-transform">
                 <CpuChipIcon className="w-8 h-8 text-white" /></CpuChipIcon>
+<<<<<<< HEAD
               
+=======
+              </div>
+        <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6 group-hover scale-110 transition-transform">
+                </div><CpuChipIcon className="w-8 h-8 text-white" /> </CpuChipIcon></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-da11
               <h3 className="text-2xl font-bold text-white mb-4">AI Solutions</h3>
               <p className="text-gray-300 mb-6">
                 Advanced artificial intelligence services including machine learning</p>
@@ -89,7 +97,13 @@ export default function HomePage() {
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-6 group-hove,
   r: scale-110 transition-transform">
                 <ShieldCheckIcon className="w-8 h-8 text-white" /></ShieldCheckIcon>
+<<<<<<< HEAD
               
+=======
+              </div>
+        <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-6 group-hover scale-110 transition-transform">
+                </div><ShieldCheckIcon className="w-8 h-8 text-white" /> </ShieldCheckIcon></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-da11
               <h3 className="text-2xl font-bold text-white mb-4">Cybersecurity</h3>
               <p className="text-gray-300 mb-6">
                 Comprehensive security solutions to protect your digital assets</p>
@@ -104,7 +118,13 @@ export default function HomePage() {
             <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover: border-green-500 transition-all duration-300 hover:transform hover:scale-105">
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-6 group-hover: scale-110 transition-transform">
                 <CloudIcon className="w-8 h-8 text-white" /></CloudIcon>
+<<<<<<< HEAD
               
+=======
+              </div>
+        <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-6 group-hover scale-110 transition-transform">
+                </div><CloudIcon className="w-8 h-8 text-white" /> </CloudIcon></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-da11
               <h3 className="text-2xl font-bold text-white mb-4">Cloud Infrastructure</h3>
               <p className="text-gray-300 mb-6">
                 Scalable cloud solutions and infrastructure management to optimize</p>
@@ -119,7 +139,13 @@ export default function HomePage() {
             <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover: border-yellow-500 transition-all duration-300 hover:transform hover:scale-105">
               <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center mb-6 group-hover: scale-110 transition-transform">
                 <ChartBarIcon className="w-8 h-8 text-white" /></ChartBarIcon>
+<<<<<<< HEAD
               
+=======
+              </div>
+        <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center mb-6 group-hover scale-110 transition-transform">
+                </div><ChartBarIcon className="w-8 h-8 text-white" /> </ChartBarIcon></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-da11
               <h3 className="text-2xl font-bold text-white mb-4">Digital Transformation</h3>
               <p className="text-gray-300 mb-6">
                 Strategic digital transformation services to modernize your business</p>
@@ -136,6 +162,8 @@ export default function HomePage() {
   r: scale-110 transition-transform"></div>
                 <GlobeAltIcon className="w-8 h-8 text-white" /></GlobeAltIcon>
               </div>
+        <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-lg flex items-center justify-center mb-6 group-hover scale-110 transition-transform">
+                </div><GlobeAltIcon className="w-8 h-8 text-white" /> </GlobeAltIcon></div>
               <h3 className="text-2xl font-bold text-white mb-4">Micro SaaS</h3>
               <p className="text-gray-300 mb-6">
                 Custom micro SaaS solutions designed to solve specific business</p>
@@ -152,6 +180,8 @@ export default function HomePage() {
   r: scale-110 transition-transform"></div>
                 <GlobeAltIcon className="w-8 h-8 text-white" /></GlobeAltIcon>
               </div>
+        <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-6 group-hover scale-110 transition-transform">
+                </div><GlobeAltIcon className="w-8 h-8 text-white" /> </GlobeAltIcon></div>
               <h3 className="text-2xl font-bold text-white mb-4">5G Solutions</h3>
               <p className="text-gray-300 mb-6">
                 Next-generation 5G technology solutions for enhanced connectivity</p>

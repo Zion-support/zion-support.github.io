@@ -89,8 +89,13 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
               <AlertCircle className="w-4 h-4" /></AlertCircle>
             )}</AlertCircle>
             <span>{message}</span>
+<<<<<<< HEAD
           
         )}
+=======
+          </div>
+        
+>>>>>>> cursor/fix-errors-and-merge-to-main-da11
       </form>
       <div className="mt-6 text-center text-sm text-white/80">
         <p></p>
@@ -98,8 +103,12 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
           ✓ Weekly updates on latest tech trends<br /></br>
           ✓ Exclusive content and early access</br>
         </p>
+<<<<<<< HEAD
       
     </div>
+=======
+      </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-da11
   if (variant === 'modal') {
     return (
     

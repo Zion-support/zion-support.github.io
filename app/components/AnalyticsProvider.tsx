@@ -1,5 +1,7 @@
+
 'use client';
 import React, { createContext, useContext, useEffect, ReactNode } from &quot;react&quot;
+
 declare global {
   interface Window {
 
@@ -62,11 +64,15 @@ trackEvent,
       {children}
     </AnalyticsContext.Provider>
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 }
  AnalyticsProvider
   );
 }
 =======
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-da11
 export default AnalyticsProvider
->>>>>>> cursor/fix-errors-and-merge-to-main-996d
+
