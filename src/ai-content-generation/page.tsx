@@ -4,7 +4,6 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Zap, Brain, Eye, BarChart } from 'lucide-react';
-
 constAIContentGenerationPage: React.FC = () =>{constcontentServices= [
     {
       title: 'AI Blog Content Generator Pro'
@@ -57,12 +56,12 @@ constAIContentGenerationPage: React.FC = () =>{constcontentServices= [
     }
   ]
   return ()
-    <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+    <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="con tainermx-auto px-4 py-16 pt-24">
         </div>
         {/* Hero Section */}
-        <section className="tex t-centermb-16"></section>
+        <section className="tex t-centermb-16">
           <h1 className="tex t-4xlmd: text-6xl font-bold text-white mb-6">
         </div>
             AI Content Generation
@@ -72,7 +71,7 @@ constAIContentGenerationPage: React.FC = () =>{constcontentServices= [
             Transform your content strategy with our AI-powered content generation services.
             Create blog posts, social media content, and marketing copy 10x faster.
           </p>
-          <div className="fle xflex-col sm:flex-row gap-4 justify-center"></div>
+          <div className="fle xflex-col sm:flex-row gap-4 justify-center">
             <a href="/contact">
               className="cyb er-button"
             >
@@ -88,14 +87,14 @@ constAIContentGenerationPage: React.FC = () =>{constcontentServices= [
           </div>
         </section>
         {/* Services Section */}
-        <section className="mb-16"></section>
+        <section className="mb-16">
           <h2 className="tex t-3xlfont-bold text-white mb-8 text-center">
         </div>
             Content Generation Services
           </h2>
-          <div className="gri dgrid-cols-1 md: grid-cols-2 lg:grid-cols-2 gap-8"></div>
+          <div className="gri dgrid-cols-1 md: grid-cols-2 lg:grid-cols-2 gap-8">
             {contentServices.map((service, index) => ()
-              <div key={index} className="cyb er-cardhologram-card p-6"></div>
+              <div key={index} className="cyb er-cardhologram-card p-6">
                 <div className="tex t-4xlmb-4">{service.icon}</div>
                 <h3 className="tex t-xlfont-bold text-white mb-3">{service.title}</h3>
                 <p className="tex t-gray-300mb-4">{service.description}</p>
@@ -121,15 +120,15 @@ constAIContentGenerationPage: React.FC = () =>{constcontentServices= [
           </div>
         </section>
         {/* Process Section */}
-        <section className="mb-16"></section>
+        <section className="mb-16">
           <h2 className="tex t-3xlfont-bold text-white mb-8 text-center">
         </div>
             How It Works
           </h2>
-          <div className="gri dgrid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>
+          <div className="gri dgrid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step, index) => ()
-              <div key={index} className="tex t-center"></div>
-                <div className="bg-cy an-600text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+              <div key={index} className="tex t-center">
+                <div className="bg-cy an-600text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
                   {step.step}
                 </div>
                 <div className="tex t-cyan-400mb-2">{step.icon}</div>
@@ -140,7 +139,7 @@ constAIContentGenerationPage: React.FC = () =>{constcontentServices= [
           </div>
         </section>
         {/* CTA Section */}
-        <section className="tex t-center"></section>
+        <section className="tex t-center">
           <h2 className="tex t-3xlfont-bold text-white mb-8">
         </div>
             Ready to Transform Your Content?
@@ -150,7 +149,7 @@ constAIContentGenerationPage: React.FC = () =>{constcontentServices= [
             Join thousands of businesses using our AI content generation services to create
             engaging, high-quality content at scale.
           </p>
-          <div className="fle xflex-col sm:flex-row gap-4 justify-center"></div>
+          <div className="fle xflex-col sm:flex-row gap-4 justify-center">
             <a href="/contact">
               className="cyb er-button"
             >
@@ -169,9 +168,6 @@ constAIContentGenerationPage: React.FC = () =>{constcontentServices= [
       <Footer />
     </div>
   )
-<<<<<<< HEAD
 };
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 export default AIContentGenerationPage;

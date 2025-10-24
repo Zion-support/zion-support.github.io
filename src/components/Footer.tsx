@@ -1,12 +1,11 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Lock, BarChart3, FileText } from 'lucide-react';
 import { Phone, Mail, Zap, Brain, ArrowRight } from 'lucide-react';
 import { MapPin } from 'lucide-react';
-
-const $1: React.FC = () => {;
-  const microSaasServices = [];
+const Page: React.FC = () => {
+  const microSaasServices = [
+  ]
     { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning' },
     { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media' },
     { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'Data insights & analytics' },
@@ -20,8 +19,8 @@ const $1: React.FC = () => {;
     { name: 'AI Fitness Coach', url: '/ai-fitness-coach', description: 'Personalized fitness plans' },
     { name: 'AI 3D Generation Studio', url: '/ai-3d-generation', description: 'AI 3D content creation' }
   ]
-
-  const aiServices = [];
+  const aiServices = [
+  ]
     { name: 'Machine Learning', url: '/machine-learning', description: 'Custom ML models' },
     { name: 'Natural Language Processing', url: '/nlp', description: 'Text analysis & understanding' },
     { name: 'Computer Vision', url: '/computer-vision', description: 'Image & video analysis' },
@@ -35,8 +34,8 @@ const $1: React.FC = () => {;
     { name: 'AI Email Assistant', url: '/ai-email-assistant', description: 'Smart email management' },
     { name: 'AI Scheduler Pro', url: '/ai-scheduler', description: 'Intelligent scheduling' }
   ]
-
-  const itServices = [];
+  const itServices = [
+  ]
     { name: 'Cloud Services', url: '/cloud-services', description: 'AWS/Azure/GCP setup' },
     { name: 'Cybersecurity', url: '/cybersecurity', description: 'Advanced security solutions' },
     { name: 'DevOps & CI/CD', url: '/devops', description: 'Automated workflows' },
@@ -50,8 +49,8 @@ const $1: React.FC = () => {;
     { name: 'Marketing Tools', url: '/marketing-tools', description: 'Marketing automation' },
     { name: 'Productivity Solutions', url: '/productivity', description: 'Enterprise productivity' }
   ]
-
-  const specializedServices = [];
+  const specializedServices = [
+  ]
     { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum algorithms' },
     { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Self-managing systems' },
     { name: 'Blockchain & Web3', url: '/blockchain', description: 'Decentralized solutions' },
@@ -65,8 +64,8 @@ const $1: React.FC = () => {;
     { name: 'Task Manager Pro', url: '/task-manager-pro', description: 'AI task management' },
     { name: 'Smart Analytics', url: '/smart-analytics', description: 'Intelligent analytics' }
   ]
-
-  const additionalServices = [];
+  const additionalServices = [
+  ]
     { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning' },
     { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media' },
     { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Smart email campaigns' },
@@ -74,8 +73,8 @@ const $1: React.FC = () => {;
     { name: 'AI SEO Optimizer', url: '/ai-seo-optimizer', description: 'SEO automation' },
     { name: 'AI Financial Analyzer', url: '/ai-financial-analyzer', description: 'Financial insights' }
   ]
-
-  const companyLinks = [];
+  const companyLinks = [
+  ]
     { name: 'About Us', url: '/about' },
     { name: 'Our Team', url: '/team' },
     { name: 'Careers', url: '/careers' },
@@ -85,8 +84,8 @@ const $1: React.FC = () => {;
     { name: 'Pricing', url: '/pricing' },
     { name: 'Demo', url: '/demo' }
   ]
-
-  const supportLinks = [];
+  const supportLinks = [
+  ]
     { name: 'Contact Us', url: '/contact' },
     { name: 'Support Center', url: '/support' },
     { name: 'Documentation', url: '/docs' },
@@ -94,20 +93,18 @@ const $1: React.FC = () => {;
     { name: 'Status Page', url: '/status' },
     { name: 'System Health', url: '/system-status' }
   ]
-
-  const legalLinks = [];
+  const legalLinks = [
+  ]
     { name: 'Privacy Policy', url: '/privacy' },
     { name: 'Terms of Service', url: '/terms' },
     { name: 'Cookie Policy', url: '/cookies' },
     { name: 'GDPR Compliance', url: '/gdpr' },
     { name: 'Security', url: '/security' },
-=======
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { FileText, Lock, Mail, BarChart3 } from 'lucide-react'
 import { FileText, Lock, Mail, BarChart3 } from 'lucide-react'
 import { FileText, Lock, Mail, BarChart3 } from 'lucide-react'
-
 const $1: React.FC = () => {
   const microSaasServices = []
     { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning' }
@@ -123,7 +120,6 @@ const $1: React.FC = () => {
     { name: 'AI Fitness Coach', url: '/ai-fitness-coach', description: 'Personalized fitness plans' }
     { name: 'AI 3D Generation Studio', url: '/ai-3d-generation', description: 'AI 3D content creation' }
   ]
-
   const aiServices = []
     { name: 'Machine Learning', url: '/machine-learning', description: 'Custom ML models' }
     { name: 'Natural Language Processing', url: '/nlp', description: 'Text analysis & understanding' }
@@ -138,7 +134,6 @@ const $1: React.FC = () => {
     { name: 'AI Email Assistant', url: '/ai-email-assistant', description: 'Smart email management' }
     { name: 'AI Scheduler Pro', url: '/ai-scheduler', description: 'Intelligent scheduling' }
   ]
-
   const itServices = []
     { name: 'Cloud Services', url: '/cloud-services', description: 'AWS/Azure/GCP setup' }
     { name: 'Cybersecurity', url: '/cybersecurity', description: 'Advanced security solutions' }
@@ -153,7 +148,6 @@ const $1: React.FC = () => {
     { name: 'Marketing Tools', url: '/marketing-tools', description: 'Marketing automation' }
     { name: 'Productivity Solutions', url: '/productivity', description: 'Enterprise productivity' }
   ]
-
   const specializedServices = []
     { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum algorithms' }
     { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Self-managing systems' }
@@ -168,7 +162,6 @@ const $1: React.FC = () => {
     { name: 'Task Manager Pro', url: '/task-manager-pro', description: 'AI task management' }
     { name: 'Smart Analytics', url: '/smart-analytics', description: 'Intelligent analytics' }
   ]
-
   const additionalServices = []
     { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning' }
     { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media' }
@@ -177,7 +170,6 @@ const $1: React.FC = () => {
     { name: 'AI SEO Optimizer', url: '/ai-seo-optimizer', description: 'SEO automation' }
     { name: 'AI Financial Analyzer', url: '/ai-financial-analyzer', description: 'Financial insights' }
   ]
-
   const companyLinks = []
     { name: 'About Us', url: '/about' }
     { name: 'Our Team', url: '/team' }
@@ -188,7 +180,6 @@ const $1: React.FC = () => {
     { name: 'Pricing', url: '/pricing' }
     { name: 'Demo', url: '/demo' }
   ]
-
   const supportLinks = []
     { name: 'Contact Us', url: '/contact' }
     { name: 'Support Center', url: '/support' }
@@ -197,27 +188,24 @@ const $1: React.FC = () => {
     { name: 'Status Page', url: '/status' }
     { name: 'System Health', url: '/system-status' }
   ]
-
   const legalLinks = []
     { name: 'Privacy Policy', url: '/privacy' }
     { name: 'Terms of Service', url: '/terms' }
     { name: 'Cookie Policy', url: '/cookies' }
     { name: 'GDPR Compliance', url: '/gdpr' }
     { name: 'Security', url: '/security' }
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
     { name: 'Compliance', url: '/compliance' }
   ]
-
 const Footer = () => {};
   return ()
     <footer className="bg-sl ate-900/95backdrop-blur-md border-t border-cyan-400/20">
         </div>
-      <div className="con tainermx-auto px-4 py-12"></div>
-        <div className="gri dgrid-cols-1 lg: grid-cols-5 gap-8"></div>
+      <div className="con tainermx-auto px-4 py-12">
+        <div className="gri dgrid-cols-1 lg: grid-cols-5 gap-8">
           {/* Company Info */}
-          <div className="lg:co l-span-1"></div>
-            <div className="fle xitems-center space-x-2 mb-4"></div>
-              <div className="w-8h-8bg-g r adient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center"></div>
+          <div className="lg:co l-span-1">
+            <div className="fle xitems-center space-x-2 mb-4">
+              <div className="w-8h-8bg-g r adient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
                 <Brain className="w-5h-5te x t-white" />
               </div>
               <span className="tex t-xlfont-bold text-white neon-text">Zion Tech Group</span>
@@ -226,29 +214,28 @@ const Footer = () => {};
         </div>
               Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services.
             </p>
-            <div className="spa ce-y-3"></div>
-              <div className="fle xitems-center space-x-3 text-gray-300"></div>
+            <div className="spa ce-y-3">
+              <div className="fle xitems-center space-x-3 text-gray-300">
                 <Phone className="w-4h-4te x t-cyan-400" />
                 <a href="tel: +13024640950" className="hov er:text-cyan-400transition-colors">
         </div>
                   +1 302 464 0950
                 </a>
               </div>
-              <div className="fle xitems-center space-x-3 text-gray-300"></div>
+              <div className="fle xitems-center space-x-3 text-gray-300">
                 <Mail className="w-4h-4te x t-cyan-400" />
                 <a href="mailto:kleber@ziontechgroup.com" className="hov er:text-cyan-400transition-colors">
         </div>
                   kleber@ziontechgroup.com
                 </a>
               </div>
-              <div className="fle xitems-center space-x-3 text-gray-300"></div>
+              <div className="fle xitems-center space-x-3 text-gray-300">
                 <MapPin className="w-4h-4te x t-cyan-400" />
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>
           </div>
           {/* Micro SAAS Services */}
-          
             <h3 className="tex t-cyan-400font-semibold mb-4 flex items-center"></h3>
               <Zap className="w-4h-4mr-2" />
               Micro SAAS
@@ -275,13 +262,11 @@ const Footer = () => {};
             </a>
           </div>
           {/* AI & IT Services */}
-          
             <h3 className="tex t-cyan-400font-semibold mb-4 flex items-center"></h3>
               <Brain className="w-4h-4mr-2" />
               AI & IT Services
             </h3>
-            <div className="spa ce-y-4"></div>
-              
+            <div className="spa ce-y-4">
                 <h4 className="tex t-whitefont-medium mb-2">AI Services</h4>
                 <ul className="spa ce-y-1">
         </div>
@@ -297,7 +282,6 @@ const Footer = () => {};
                   ))}
                 </ul>
               </div>
-              
                 <h4 className="tex t-whitefont-medium mb-2">IT Services</h4>
                 <ul className="spa ce-y-1">
         </div>
@@ -322,7 +306,6 @@ const Footer = () => {};
             </a>
           </div>
           {/* Additional AI Services */}
-          
             <h3 className="tex t-cyan-400font-semibold mb-4 flex items-center"></h3>
               <Zap className="w-4h-4mr-2" />
               AI Tools
@@ -343,10 +326,8 @@ const Footer = () => {};
             </ul>
           </div>
           {/* Company & Support */}
-          
             <h3 className="tex t-cyan-400font-semibold mb-4">Company</h3>
-            <div className="gri dgrid-cols-2 gap-4"></div>
-              
+            <div className="gri dgrid-cols-2 gap-4">
                 <h4 className="tex t-whitefont-medium mb-2">Company</h4>
                 <ul className="spa ce-y-1">
         </div>
@@ -362,7 +343,6 @@ const Footer = () => {};
                   ))}
                 </ul>
               </div>
-              
                 <h4 className="tex t-whitefont-medium mb-2">Support</h4>
                 <ul className="spa ce-y-1">
         </div>
@@ -382,12 +362,12 @@ const Footer = () => {};
           </div>
         </div>
         {/* Bottom Section */}
-        <div className="bor der-tborder-gray-700 mt-8 pt-8"></div>
-          <div className="fle xflex-col md: flex-row justify-between items-center"></div>
-            <div className="tex t-gray-400text-sm mb-4 md:mb-0"></div>
+        <div className="bor der-tborder-gray-700 mt-8 pt-8">
+          <div className="fle xflex-col md: flex-row justify-between items-center">
+            <div className="tex t-gray-400text-sm mb-4 md:mb-0">
               © 2024 Zion Tech Group. All rights reserved.
             </div>
-            <div className="fle xspace-x-6"></div>
+            <div className="fle xspace-x-6">
               {legalLinks.map((link) => ()
                 <a key={link.name}>
                   href={link.url}
@@ -403,10 +383,7 @@ const Footer = () => {};
       </div>
     </footer>
   )
-<<<<<<< HEAD
 };
 ;
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 export default Footer;

@@ -1,14 +1,10 @@
 'use client'
-<<<<<<< HEAD
 import { BarChart, Target, TrendingUp } from 'lucide-react';
 import React from 'react';
 import { CheckCircle, Star, BarChart, TrendingUp, Target } from 'lucide-react';
-=======
 import { BarChart, TrendingUp, Target } from 'lucide-react'
 import React from 'react'
 import { BarChart, TrendingUp, Target } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
-
 constBusinessIntelligencePage: React.FC = () =>{constbiServices= [
     {
       id: 'data-analytics'
@@ -40,12 +36,12 @@ constBusinessIntelligencePage: React.FC = () =>{constbiServices= [
     }
   ]
   return ()
-    <div className="min-h-s creenbg-gradient-to-br from-slate-50 to-blue-50"></div>
+    <div className="min-h-s creenbg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}
-      <section className="rel ativepy-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white"></section>
-        <div className="abs oluteinset-0 bg-black opacity-20"></div>
-        <div className="rel ativemax-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>
-          <div className="tex t-center"></div>
+      <section className="rel ativepy-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
+        <div className="abs oluteinset-0 bg-black opacity-20">
+        <div className="rel ativemax-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+          <div className="tex t-center">
             <h1 className="tex t-4xlmd:text-6xl font-bold mb-6">
         </div>
               Business Intelligence Services
@@ -54,7 +50,7 @@ constBusinessIntelligencePage: React.FC = () =>{constbiServices= [
         </div>
               Transform your data into strategic insights that drive business growth
             </p>
-            <div className="fle xflex-col sm:flex-row gap-4 justify-center"></div>
+            <div className="fle xflex-col sm:flex-row gap-4 justify-center">
               <button className="bg-wh itetext-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
         </div>
                 Explore BI Solutions
@@ -68,9 +64,9 @@ constBusinessIntelligencePage: React.FC = () =>{constbiServices= [
         </div>
       </section>
       {/* Key Benefits */}
-      <section className="py-16bg-w hite"></section>
-        <div className="max-w-7x lmx-auto px-4 sm: px-6 lg:px-8"></div>
-          <div className="tex t-centermb-12"></div>
+      <section className="py-16bg-w hite">
+        <div className="max-w-7x lmx-auto px-4 sm: px-6 lg:px-8">
+          <div className="tex t-centermb-12">
             <h2 className="tex t-3xlmd:text-4xl font-bold text-gray-900 mb-4">
         </div>
               Why Choose Our BI Solutions?
@@ -80,23 +76,23 @@ constBusinessIntelligencePage: React.FC = () =>{constbiServices= [
               Our business intelligence solutions deliver actionable insights that drive real business value
             </p>
           </div>
-          <div className="gri dgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-            <div className="tex t-centerp-6"></div>
-              <div className="w-16h-16bg-b l ue-100 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+          <div className="gri dgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="tex t-centerp-6">
+              <div className="w-16h-16bg-b l ue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <BarChart className="w-8h-8te x t-blue-600" />
               </div>
               <h3 className="tex t-xlfont-semibold text-gray-900 mb-2">Data-Driven Decisions</h3>
               <p className="tex t-gray-600">Make informed decisions based on real-time data and comprehensive analytics</p>
             </div>
-            <div className="tex t-centerp-6"></div>
-              <div className="w-16h-16bg-b l ue-100 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+            <div className="tex t-centerp-6">
+              <div className="w-16h-16bg-b l ue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <TrendingUp className="w-8h-8te x t-blue-600" />
               </div>
               <h3 className="tex t-xlfont-semibold text-gray-900 mb-2">Performance Optimization</h3>
               <p className="tex t-gray-600">Identify opportunities for improvement and optimize business processes</p>
             </div>
-            <div className="tex t-centerp-6"></div>
-              <div className="w-16h-16bg-b l ue-100 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+            <div className="tex t-centerp-6">
+              <div className="w-16h-16bg-b l ue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Target className="w-8h-8te x t-blue-600" />
               </div>
               <h3 className="tex t-xlfont-semibold text-gray-900 mb-2">Strategic Planning</h3>
@@ -106,9 +102,9 @@ constBusinessIntelligencePage: React.FC = () =>{constbiServices= [
         </div>
       </section>
       {/* Services */}
-      <section className="py-16bg-g ray-50"></section>
-        <div className="max-w-7x lmx-auto px-4 sm: px-6 lg:px-8"></div>
-          <div className="tex t-centermb-12"></div>
+      <section className="py-16bg-g ray-50">
+        <div className="max-w-7x lmx-auto px-4 sm: px-6 lg:px-8">
+          <div className="tex t-centermb-12">
             <h2 className="tex t-3xlmd:text-4xl font-bold text-gray-900 mb-4">
         </div>
               Our BI Solutions
@@ -118,12 +114,12 @@ constBusinessIntelligencePage: React.FC = () =>{constbiServices= [
               Comprehensive business intelligence services designed to unlock the value in your data
             </p>
           </div>
-          <div className="gri dgrid-cols-1 lg:grid-cols-2 gap-8"></div>
+          <div className="gri dgrid-cols-1 lg:grid-cols-2 gap-8">
             {biServices.map((service) => ()
-              <div key={service.id} className="bg-wh iterounded-lg shadow-lg p-8 hover: shadow-xl transition-shadow"></div>
+              <div key={service.id} className="bg-wh iterounded-lg shadow-lg p-8 hover: shadow-xl transition-shadow">
                 <h3 className="tex t-2xlfont-bold text-gray-900 mb-4">{service.title}</h3>
                 <p className="tex t-gray-600mb-6">{service.description}</p>
-                <div className="mb-6"></div>
+                <div className="mb-6">
                   <h4 className="tex t-lgfont-semibold text-gray-900 mb-3">Key Features: </h4>
                   <ul className="spa ce-y-2">
         </div>
@@ -136,7 +132,7 @@ constBusinessIntelligencePage: React.FC = () =>{constbiServices= [
                     ))}
                   </ul>
                 </div>
-                <div className="mb-6"></div>
+                <div className="mb-6">
                   <h4 className="tex t-lgfont-semibold text-gray-900 mb-3">Benefits: </h4>
                   <ul className="spa ce-y-2">
         </div>
@@ -149,8 +145,8 @@ constBusinessIntelligencePage: React.FC = () =>{constbiServices= [
                     ))}
                   </ul>
                 </div>
-                <div className="bor der-tpt-4"></div>
-                  <div className="fle xjustify-between items-center"></div>
+                <div className="bor der-tpt-4">
+                  <div className="fle xjustify-between items-center">
                     <span className="tex t-2xlfont-bold text-blue-600">{service.marketPrice}</span>
                     <span className="tex t-smtext-gray-500">{service.category}</span>
                   </div>
@@ -161,8 +157,8 @@ constBusinessIntelligencePage: React.FC = () =>{constbiServices= [
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-16bg-b lue-600 text-white"></section>
-        <div className="max-w-7x lmx-auto px-4 sm: px-6 lg:px-8 text-center"></div>
+      <section className="py-16bg-b lue-600 text-white">
+        <div className="max-w-7x lmx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="tex t-3xlmd:text-4xl font-bold mb-4">
         </div>
             Ready to Transform Your Data?
@@ -171,7 +167,7 @@ constBusinessIntelligencePage: React.FC = () =>{constbiServices= [
         </div>
             Let our BI experts help you unlock the full potential of your business data
           </p>
-          <div className="fle xflex-col sm:flex-row gap-4 justify-center"></div>
+          <div className="fle xflex-col sm:flex-row gap-4 justify-center">
             <button className="bg-wh itetext-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
         </div>
               Get Started Today

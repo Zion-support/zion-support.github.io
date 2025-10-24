@@ -1,13 +1,9 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
 import React from 'react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 import { Helmet } from 'lucide-react';
 import React from 'react';
 import Head from "next/head";
 import { Code, Helmet } from 'lucide-react';
-
 interface SEOEnhancerProps {}
   title?: string
   description?: string
@@ -15,7 +11,6 @@ interface SEOEnhancerProps {}
   image?: string
   url?: string
   children: React.ReactNode
-<<<<<<< HEAD
 {}
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({};
   title = &quot;Zion Tech Group - Advanced AI and IT Solutions&quot;,
@@ -35,7 +30,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({};
     &quot;foundingDate&quot;: &quot;2020&quot;,
     &quot;numberOfEmployees&quot;: &quot;50-100&quot;,
     &quot;industry&quot;: &quot;Technology&quot;,
-=======
 }
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({}
   title = &quot;Zion Tech Group - Advanced AI and IT Solutions&quot;
@@ -55,7 +49,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({}
     &quot;foundingDate&quot;: &quot;2020&quot;
     &quot;numberOfEmployees&quot;: &quot;50-100&quot;
     &quot;industry&quot;: &quot;Technology&quot;
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
     &quot;services&quot;: []
       &quot;AI Solutions&quot;
       &quot;Quantum Computing&quot;
@@ -71,11 +64,8 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({}
      &quot;contactType&quot;:&quot;Customer Service&quot;
      &quot;areaServed&quot;:&quot;US&quot;
      &quot;availableLanguage&quot;:&quot;en&quot;
-<<<<<<< HEAD
 {   },
-=======
    }
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
    &quot;sameAs&quot;: []
      &quot;https:// twitter.com/ziontechgroup&quot;
      &quot;https: // linkedin.com/$1/ziontechgroup&quot;
@@ -99,15 +89,12 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({}
          &quot;priceCurrency&quot;:&quot;USD&quot;
          &quot;billingIncrement&quot;:&quot;P1 M&quot;
        }
-<<<<<<< HEAD
 {      }
     ],
    &quot;serviceArea&quot;: {&quot;@type&quot;:&quot;GeoCircle&quot;,
-=======
       }
     ]
    &quot;serviceArea&quot;: {&quot;@type&quot;:&quot;GeoCircle&quot;
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
      &quot;geoMidpoint&quot;: {}
        &quot;@type&quot;:&quot;GeoCoordinates&quot;
        &quot;latitude&quot;:&quot;3 9.828 3&quot;

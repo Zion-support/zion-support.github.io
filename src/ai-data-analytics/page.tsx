@@ -1,14 +1,10 @@
-<<<<<<< HEAD
 import React from 'react';
 import { BarChart3 } from 'lucide-react';
 import { CheckCircle, Brain, Target, Database } from 'lucide-react';
-=======
 import React from 'react'
 import { Target, BarChart3 } from 'lucide-react'
 import { Target, BarChart3 } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
-
-const $1: React.FC = () => {;
+const Page: React.FC = () => {
   const analyticsServices = [;
     {
       title: 'Real-Time Business Intelligence Platform'
@@ -179,12 +175,12 @@ const $1: React.FC = () => {;
     }
   ]
   return ()
-    <div className="min-h-s creenbg-gradient-to-br from-slate-50 to-blue-50"></div>
+    <div className="min-h-s creenbg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}
-      <section className="rel ativeoverflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20"></section>
-        <div className="abs oluteinset-0 bg-black opacity-20"></div>
-        <div className="rel ativemax-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>
-          <div className="tex t-center"></div>
+      <section className="rel ativeoverflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
+        <div className="abs oluteinset-0 bg-black opacity-20">
+        <div className="rel ativemax-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+          <div className="tex t-center">
             <h1 className="tex t-4xlmd:text-6xl font-bold mb-6">
         </div>
               AI Data Analytics Services
@@ -193,7 +189,7 @@ const $1: React.FC = () => {;
         </div>
               Transform your data into actionable insights with our advanced AI-powered analytics solutions
             </p>
-            <div className="fle xflex-col sm:flex-row gap-4 justify-center"></div>
+            <div className="fle xflex-col sm:flex-row gap-4 justify-center">
               <a href="tel:+13024640950">
                 className="bg-wh itetext-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
               >
@@ -211,9 +207,9 @@ const $1: React.FC = () => {;
         </div>
       </section>
       {/* Services Grid */}
-      <section className="py-16bg-w hite"></section>
-        <div className="max-w-7x lmx-auto px-4 sm: px-6 lg:px-8"></div>
-          <div className="tex t-centermb-12"></div>
+      <section className="py-16bg-w hite">
+        <div className="max-w-7x lmx-auto px-4 sm: px-6 lg:px-8">
+          <div className="tex t-centermb-12">
             <h2 className="tex t-3xlmd:text-4xl font-bold text-gray-900 mb-4">
         </div>
               Our Analytics Solutions
@@ -223,17 +219,17 @@ const $1: React.FC = () => {;
               Comprehensive AI-powered analytics platforms for every business need
             </p>
           </div>
-          <div className="gri dgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+          <div className="gri dgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {analyticsServices.map((service, index) => ()
-              <div key={index} className="bg-wh iterounded-lg shadow-lg p-6 hover: shadow-xl transition-shadow border border-gray-100"></div>
+              <div key={index} className="bg-wh iterounded-lg shadow-lg p-6 hover: shadow-xl transition-shadow border border-gray-100">
                 <div className="tex t-4xlmb-4">{service.icon}</div>
                 <h3 className="tex t-xlfont-semibold text-gray-900 mb-3">{service.title}</h3>
                 <p className="tex t-gray-600mb-4">{service.description}</p>
-                <div className="mb-4"></div>
+                <div className="mb-4">
                   <span className="tex t-2xlfont-bold text-blue-600">{service.price}</span>
                   <span className="tex t-smtext-gray-500 ml-2">Market: {service.marketPrice}</span>
                 </div>
-                <div className="mb-4"></div>
+                <div className="mb-4">
                   <span className="inl ine-blockbg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded">
         </div>
                     {service.category}
@@ -249,7 +245,7 @@ const $1: React.FC = () => {;
                     </li>
                   ))}
                 </ul>
-                <div className="spa ce-y-2mb-6"></div>
+                <div className="spa ce-y-2mb-6">
                   <h4 className="fon t-semiboldtext-gray-900">Key Benefits: </h4>
                   {service.benefits.slice(0, 2).map((benefit, benefitIndex) => ()
                     <p key={benefitIndex} className="tex t-smtext-green-600">✓ {benefit}</p>
@@ -267,9 +263,9 @@ const $1: React.FC = () => {;
         </div>
       </section>
       {/* Features Section */}
-      <section className="py-16bg-g ray-50"></section>
-        <div className="max-w-7x lmx-auto px-4 sm: px-6 lg:px-8"></div>
-          <div className="tex t-centermb-12"></div>
+      <section className="py-16bg-g ray-50">
+        <div className="max-w-7x lmx-auto px-4 sm: px-6 lg:px-8">
+          <div className="tex t-centermb-12">
             <h2 className="tex t-3xlmd:text-4xl font-bold text-gray-900 mb-4">
         </div>
               Why Choose Our Analytics Solutions?
@@ -279,10 +275,10 @@ const $1: React.FC = () => {;
               Advanced technology and expert implementation for maximum ROI
             </p>
           </div>
-          <div className="gri dgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+          <div className="gri dgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {additionalFeatures.map((feature, index) => ()
-              <div key={index} className="tex t-center"></div>
-                <div className="fle xjustify-center mb-4"></div>
+              <div key={index} className="tex t-center">
+                <div className="fle xjustify-center mb-4">
                   {feature.icon}
                 </div>
                 <h3 className="tex t-lgfont-semibold text-gray-900 mb-2">{feature.title}</h3>
@@ -293,8 +289,8 @@ const $1: React.FC = () => {;
         </div>
       </section>
       {/* Contact Section */}
-      <section className="py-16bg-g radient-to-r from-blue-600 to-indigo-600 text-white"></section>
-        <div className="max-w-7x lmx-auto px-4 sm: px-6 lg:px-8 text-center"></div>
+      <section className="py-16bg-g radient-to-r from-blue-600 to-indigo-600 text-white">
+        <div className="max-w-7x lmx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="tex t-3xlmd:text-4xl font-bold mb-4">
         </div>
             Ready to Transform Your Data into Insights?
@@ -303,7 +299,7 @@ const $1: React.FC = () => {;
         </div>
             Contact us today for a free consultation and custom analytics solution
           </p>
-          <div className="fle xflex-col sm:flex-row gap-4 justify-center"></div>
+          <div className="fle xflex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+13024640950">
               className="bg-wh itetext-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
             >
@@ -317,16 +313,13 @@ const $1: React.FC = () => {;
               ✉️ kleber@ziontechgroup.com
             </a>
           </div>
-          <div className="mt-8te xt-sm text-blue-200"></div>
+          <div className="mt-8te xt-sm text-blue-200">
             <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
           </div>
         </div>
       </div>
     </div>
   )
-<<<<<<< HEAD
 };
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 export default AIDataAnalyticsPage;

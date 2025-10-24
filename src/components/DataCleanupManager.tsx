@@ -1,6 +1,5 @@
 "use client";
 import React from 'react';
-
 const DataCleanupManager = () => {};
   return ()
     <div className="min-h-s creenbg-gray-100 py-8">
@@ -24,10 +23,6 @@ const DataCleanupManager = () => {};
       </div>
     </div>;
   );
-<<<<<<< HEAD
 {};
-
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 export default DataCleanupManager;

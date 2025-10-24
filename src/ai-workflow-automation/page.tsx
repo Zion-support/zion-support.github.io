@@ -1,5 +1,4 @@
 'use client'
-<<<<<<< HEAD
 import { Brain, BarChart } from 'lucide-react';
 import React from 'react';
 import Navigation from '../components/Navigation';
@@ -7,7 +6,6 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Workflow } from 'lucide-react';
 import { CheckCircle, Phone, Mail } from 'lucide-react';
-=======
 import { BarChart, Brain, Users, Mail } from 'lucide-react'
 import React from 'react'
 import Navigation from '../components/Navigation'
@@ -15,33 +13,34 @@ import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
 import { BarChart, Brain, Users, Mail } from 'lucide-react'
 import { BarChart, Brain, Users, Mail } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
-
-const $1: React.FC = () => {;
-  const features = [;
+const Page: React.FC = () => {
+  const features = [
     {
-      icon: Workflow
+      icon: Workflow,
       title: 'Process Automation'
       description: 'Automate complex business processes with intelligent workflow engines that adapt and learn.'
       benefits: ['Visual Workflow Builder', 'Conditional Logic', 'Error Handling', 'Process Optimization']
    }
-    {icon: Brain
+    {
+      icon: Brain,
       title: 'AI Decision Making'
       description: 'Let AI make intelligent decisions based on data patterns and business rules.'
       benefits: ['Smart Routing', 'Risk Assessment', 'Quality Control', 'Predictive Actions']
    }
-    {icon: BarChart
+    {
+      icon: BarChart,
       title: 'Performance Analytics'
       description: 'Monitor and analyze workflow performance with real-time dashboards and insights.'
       benefits: ['Real-time Monitoring', 'Performance Metrics', 'Bottleneck Detection', 'Optimization Suggestions']
    }
-    {icon: Settings
+    {
+      icon: Settings,
       title: 'Custom Integrations'
       description: 'Connect with any system or application through our extensive integration library.'
       benefits: ['API Integrations', 'Database Connections', 'Cloud Services', 'Legacy Systems']
     }
   ]
-  const pricingPlans = [;
+  const pricingPlans = [
     {
       name: 'Starter'
       price: '$299/month'
@@ -59,20 +58,17 @@ const $1: React.FC = () => {;
       features: ['Unlimited workflows', 'Custom AI models', 'Advanced analytics', 'Dedicated support', 'On-premise deployment']
     }
   ]
-<<<<<<< HEAD
-  const stats = [];
+  const stats = [
+  ]
     { number: '70%', label: 'Process Efficiency' },
     { number: '90%', label: 'Error Reduction' },
     { number: '50%', label: 'Time Savings' },
-=======
   const stats = []
     { number: '70%', label: 'Process Efficiency' }
     { number: '90%', label: 'Error Reduction' }
     { number: '50%', label: 'Time Savings' }
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
     { number: '99.9%', label: 'Reliability' }
   ]
-
   constuseCases= []
     {title: 'HR Onboarding'
       description: 'Automate employee onboarding processes from application to first day.'
@@ -91,18 +87,13 @@ const $1: React.FC = () => {;
       icon: Settings
     }
   ]
-
   const pricing = pricingPlans;
-
-const Page = () => {};
-  return ()
+const Page = () => {
+  return (
       </div>
 </>
   )
-<<<<<<< HEAD
 };
 ;
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 export default Page;

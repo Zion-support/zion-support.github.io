@@ -1,16 +1,12 @@
-<<<<<<< HEAD
 import React from 'react';
 import { CheckCircle, Phone, Mail, TrendingUp, Helmet } from 'lucide-react';
 import { MapPin } from 'lucide-react';
-=======
 import React from 'react'
 import { Send, Phone, Mail, CheckCircle, Target, Helmet, TrendingUp } from 'lucide-react'
 import { Send, Phone, Mail, CheckCircle, Target, Helmet, TrendingUp } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 import React from 'react';
 import Head from "next/head";
 import { Send, Phone, Mail, CheckCircle, Target, Helmet, TrendingUp } from 'lucide-react';
-
 constMicroSAASPage: React.FC = () =>{constmicroSAASServices= []
     // AI-Powered Developer Tools
     {}
@@ -3101,8 +3097,8 @@ constMicroSAASPage: React.FC = () =>{constmicroSAASServices= []
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ]
-<<<<<<< HEAD
-  const categories = [];
+  const categories = [
+  ]
     { name: 'All', count: microSAASServices.length },
     { name: 'Developer Tools', count: microSAASServices.filter(s => s.category === 'Developer Tools').length },
     { name: 'Marketing', count: microSAASServices.filter(s => s.category === 'Marketing').length },
@@ -3124,7 +3120,6 @@ constMicroSAASPage: React.FC = () =>{constmicroSAASServices= []
     { name: 'Content Creation', count: microSAASServices.filter(s => s.category === 'Content Creation').length },
     { name: 'Research', count: microSAASServices.filter(s => s.category === 'Research').length },
     { name: 'Personal Finance', count: microSAASServices.filter(s => s.category === 'Personal Finance').length },
-=======
   const categories = []
     { name: 'All', count: microSAASServices.length }
     { name: 'Developer Tools', count: microSAASServices.filter(s => s.category === 'Developer Tools').length }
@@ -3147,11 +3142,10 @@ constMicroSAASPage: React.FC = () =>{constmicroSAASServices= []
     { name: 'Content Creation', count: microSAASServices.filter(s => s.category === 'Content Creation').length }
     { name: 'Research', count: microSAASServices.filter(s => s.category === 'Research').length }
     { name: 'Personal Finance', count: microSAASServices.filter(s => s.category === 'Personal Finance').length }
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
     { name: 'Game Development', count: microSAASServices.filter(s => s.category === 'Game Development').length }
   ]
   return ()
-    <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+    <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <Head>
         <title>Micro SAAS Solutions - Zion Tech Group</title>
@@ -3162,8 +3156,8 @@ constMicroSAASPage: React.FC = () =>{constmicroSAASServices= []
       </Head>
       </Helmet>
       {/* Hero Section */}
-      <section className="pt-24pb-16 p x-4"></section>
-        <div className="max-w-7x lmx-auto text-center"></div>
+      <section className="pt-24pb-16 p x-4">
+        <div className="max-w-7x lmx-auto text-center">
           <h1 className="tex t-4xlsm: text-5xl md:text-6xl font-bold text-white mb-6">
         </div>
             Micro SAAS Solutions
@@ -3173,36 +3167,36 @@ constMicroSAASPage: React.FC = () =>{constmicroSAASServices= []
             50+ AI-powered applications designed for modern businesses. Affordable, powerful tools that scale with your growth.
           </p>
           {/* Stats */}
-          <div className="gri dgrid-cols-2 md: grid-cols-4 gap-6 mb-12"></div>
-            <div className="bg-wh ite/10backdrop-blur-sm rounded-lg p-6"></div>
+          <div className="gri dgrid-cols-2 md: grid-cols-4 gap-6 mb-12">
+            <div className="bg-wh ite/10backdrop-blur-sm rounded-lg p-6">
               <div className="tex t-3xlfont-bold text-cyan-400 mb-2">50+</div>
               <div className="tex t-gray-300">Applications</div>
             </div>
-            <div className="bg-wh ite/10backdrop-blur-sm rounded-lg p-6"></div>
+            <div className="bg-wh ite/10backdrop-blur-sm rounded-lg p-6">
               <div className="tex t-3xlfont-bold text-green-400 mb-2">$49</div>
               <div className="tex t-gray-300">Starting Price</div>
             </div>
-            <div className="bg-wh ite/10backdrop-blur-sm rounded-lg p-6"></div>
+            <div className="bg-wh ite/10backdrop-blur-sm rounded-lg p-6">
               <div className="tex t-3xlfont-bold text-purple-400 mb-2">24/7</div>
               <div className="tex t-gray-300">Support</div>
             </div>
-            <div className="bg-wh ite/10backdrop-blur-sm rounded-lg p-6"></div>
+            <div className="bg-wh ite/10backdrop-blur-sm rounded-lg p-6">
               <div className="tex t-3xlfont-bold text-orange-400 mb-2">99.9%</div>
               <div className="tex t-gray-300">Uptime</div>
             </div>
           </div>
           {/* Contact Info */}
-          <div className="bg-gr adient-to-rfrom-purple-600 to-blue-600 rounded-lg p-6 mb-12"></div>
-            <div className="fle xflex-col md: flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8"></div>
-              <div className="fle xitems-center space-x-2"></div>
+          <div className="bg-gr adient-to-rfrom-purple-600 to-blue-600 rounded-lg p-6 mb-12">
+            <div className="fle xflex-col md: flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
+              <div className="fle xitems-center space-x-2">
                 <Phone className="w-5h-5" />
                 <span className="tex t-whitefont-medium">+1 302 464 0950</span>
               </div>
-              <div className="fle xitems-center space-x-2"></div>
+              <div className="fle xitems-center space-x-2">
                 <Mail className="w-5h-5" />
                 <span className="tex t-whitefont-medium">kleber@ziontechgroup.com</span>
               </div>
-              <div className="fle xitems-center space-x-2"></div>
+              <div className="fle xitems-center space-x-2">
                 <MapPin className="w-5h-5" />
                 <span className="tex t-whitefont-medium">Middletown, DE</span>
               </div>
@@ -3211,30 +3205,30 @@ constMicroSAASPage: React.FC = () =>{constmicroSAASServices= []
         </div>
       </section>
       {/* Services Grid */}
-      <section className="py-16px-4"></section>
-        <div className="max-w-7x lmx-auto"></div>
+      <section className="py-16px-4">
+        <div className="max-w-7x lmx-auto">
           <h2 className="tex t-3xlfont-bold text-white text-center mb-12">
         </div>
             Choose Your Perfect AI Tools
           </h2>
-          <div className="gri dgrid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>
+          <div className="gri dgrid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {microSAASServices.map((service, index) => ()
-              <div key={index} className="bg-wh iterounded-xl shadow-lg p-6 hover: shadow-2xl transition-all duration-300 hover:scale-105"></div>
-                <div className="tex t-centermb-6"></div>
+              <div key={index} className="bg-wh iterounded-xl shadow-lg p-6 hover: shadow-2xl transition-all duration-300 hover:scale-105">
+                <div className="tex t-centermb-6">
                   <div className="tex t-5xlmb-4">{service.icon}</div>
                   <h3 className="tex t-xlfont-bold text-gray-900 mb-2">{service.title}</h3>
                   <p className="tex t-gray-600text-sm">{service.description}</p>
                 </div>
-                <div className="mb-6"></div>
-                  <div className="fle xitems-center justify-between mb-4"></div>
+                <div className="mb-6">
+                  <div className="fle xitems-center justify-between mb-4">
                     <span className="tex t-2xlfont-bold text-green-600">{service.price}</span>
                     <span className="tex t-smtext-gray-500">Market: {service.marketPrice}</span>
                   </div>
-                  <div className="bg-pu rple-100text-purple-800 text-xs px-2 py-1 rounded-full inline-block"></div>
+                  <div className="bg-pu rple-100text-purple-800 text-xs px-2 py-1 rounded-full inline-block">
                     {service.category}
                   </div>
                 </div>
-                <div className="mb-6"></div>
+                <div className="mb-6">
                   <h4 className="fon t-semiboldtext-gray-900 mb-3">Key Features: </h4>
                   <ul className="spa ce-y-2">
         </div>
@@ -3253,7 +3247,7 @@ constMicroSAASPage: React.FC = () =>{constmicroSAASServices= []
                     )}
                   </ul>
                 </div>
-                <div className="mb-6"></div>
+                <div className="mb-6">
                   <h4 className="fon t-semiboldtext-gray-900 mb-3">Benefits: </h4>
                   <ul className="spa ce-y-1">
         </div>
@@ -3266,9 +3260,9 @@ constMicroSAASPage: React.FC = () =>{constmicroSAASServices= []
                     ))}
                   </ul>
                 </div>
-                <div className="mb-6"></div>
+                <div className="mb-6">
                   <h4 className="fon t-semiboldtext-gray-900 mb-3">Technologies: </h4>
-                  <div className="fle xflex-wrap gap-2"></div>
+                  <div className="fle xflex-wrap gap-2">
                     {service.technologies.map((tech, techIndex) => ()
                       <span key={techIndex} className="bg-gr ay-100text-gray-700 text-xs px-2 py-1 rounded">
         </div>
@@ -3277,7 +3271,7 @@ constMicroSAASPage: React.FC = () =>{constmicroSAASServices= []
                     ))}
                   </div>
                 </div>
-                <div className="tex t-center"></div>
+                <div className="tex t-center">
                   <a href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.title}`}>
                     className="w-ful lbg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-purple-700 hover:to-blue-700 transition-all inline-block"
                   >
@@ -3295,8 +3289,8 @@ constMicroSAASPage: React.FC = () =>{constmicroSAASServices= []
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-16px-4 b g-gradient-to-r from-purple-600 to-blue-600"></section>
-        <div className="max-w-4x lmx-auto text-center"></div>
+      <section className="py-16px-4 b g-gradient-to-r from-purple-600 to-blue-600">
+        <div className="max-w-4x lmx-auto text-center">
           <h2 className="tex t-3xlfont-bold text-white mb-6">
         </div>
             Ready to Transform Your Business?
@@ -3305,7 +3299,7 @@ constMicroSAASPage: React.FC = () =>{constmicroSAASServices= []
         </div>
             Get started with our micro SAAS solutions today and see the difference AI can make.
           </p>
-          <div className="fle xflex-col sm:flex-row gap-4 justify-center"></div>
+          <div className="fle xflex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+13024640950">
               className="bg-wh itetext-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
             >

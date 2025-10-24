@@ -1,12 +1,8 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
 import React from 'react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 import { Helmet } from 'lucide-react';
 import React from 'react';
 import { Helmet } from 'lucide-react';
-
 interface SEOHeadProps {}
   title?: string
   description?: string
@@ -22,7 +18,6 @@ interface SEOHeadProps {}
   noindex?: boolean
   nofollow?: boolean
   canonical?: string
-<<<<<<< HEAD
 {}
 const SEOHead: React.FC<SEOHeadProps> = ({};
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -38,7 +33,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({};
   tags = [],
   noindex = false,
   nofollow = false,
-=======
 }
 const SEOHead: React.FC<SEOHeadProps> = ({}
   title = 'Zion Tech Group - Advanced AI and IT Solutions'
@@ -54,20 +48,16 @@ const SEOHead: React.FC<SEOHeadProps> = ({}
   tags = []
   noindex = false
   nofollow = false
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
   canonical
 {}) => {}
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const canonicalUrl = canonical || url;
   const robotsContent = `${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`;
   return ()
-<<<<<<< HEAD
   <Helme t>{/* Basic MetaTags */};
     <titl e>{fullTitle}</titl><metaname=&quot;description&quot; content={description} /><metaname=&quot;keywords&quot; content={keywords} /><metaname=&quot;author&quot; content={author} /><metaname=&quot;robots&quot; content={robotsContent} /><linkrel=&quot;canonical&quot; href={canonicalUrl} />{/* Open Graph MetaTags */}
-=======
   <Helme t>{/* Basic MetaTags */}
     <titl e>{fullTitle}</titl><metaname=&quot;description&quot; content={description} /><metaname=&quot;keywords&quot; content={keywords} /><metaname=&quot;author&quot; content={author} /><metaname=&quot;robots&quot; content={robotsContent} /><linkrel=&quot;canonical&quot; href = {canonicalUrl} />{/* Open Graph MetaTags */}
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
    <metaproperty=&quot;og:type&quot; content={type} /><metaproperty=&quot;og:title&quot; content={fullTitle} /><metaproperty=&quot;og:description&quot; content={description} /><metaproperty=&quot;og:image&quot; content={image} /><metaproperty=&quot;og:url&quot; content={url} /><metaproperty=&quot;og:site_name&quot;content=&quot;Zion TechGroup&quot; /><metaproperty=&quot;og:locale&quot;content=&quot;en_US&quot; />{/* Twitter Card MetaTags */}
    <metaname=&quot;twitter:card&quot;content=&quot;summary_large_image&quot; /><metaname=&quot;twitter:title&quot; content={fullTitle} /><metaname=&quot;twitter:description&quot; content={description} /><metaname=&quot;twitter:image&quot; content={image} /><metaname=&quot;twitter:site&quot;content=&quot;@ziontechgroup&quot; /><metaname=&quot;twitter:creator&quot;content=&quot;@ziontechgroup&quot; />{/* Article specific metatags */}
       {type = == 'article' && ();
@@ -83,8 +73,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({}
     <scripttype=&quot;application/ld+json&quot;>{JSON.stringify({}
           '@context': 'https:// schema.org'
           '@type': type = == 'article' ? 'Article' : 'WebPage'
-          name: fullTitle
-          description: description
+          name: fullTitle,
+      description: description
           url: url
           image: image
           author: {}
@@ -97,13 +87,10 @@ const SEOHead: React.FC<SEOHeadProps> = ({}
               '@type': 'ImageObject'
               url: 'https:// ziontechgroup.com/logo.png'
            }
-<<<<<<< HEAD
 {          },
           ...(type=== 'article' && {datePublished: publishedTime,
-=======
           }
           ...(type=== 'article' && {datePublished: publishedTime
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
             dateModified: modifiedTime || publishedTimemainEntityOfPage: {}
               '@type': 'WebPage'
               '@id': url

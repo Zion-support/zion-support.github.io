@@ -1,16 +1,12 @@
-<<<<<<< HEAD
 import React from 'react';
 import { CheckCircle, Phone, Mail, Helmet } from 'lucide-react';
 import { MapPin } from 'lucide-react';
-=======
 import React from 'react'
 import { Phone, Target, Mail, CheckCircle, Helmet } from 'lucide-react'
 import { Phone, Target, Mail, CheckCircle, Helmet } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 import React from 'react';
 import Head from "next/head";
 import { Phone, Target, Mail, CheckCircle, Helmet } from 'lucide-react';
-
 constMarketingToolsPage: React.FC = () =>{constmarketingTools= [
     {
       title: 'AI Content Generator'
@@ -58,25 +54,28 @@ constMarketingToolsPage: React.FC = () =>{constmarketingTools= [
   ]
   const benefits = [;
     {
-      icon: TrendingUp
+      icon: TrendingUp,
       title: 'Increase ROI'
       description: 'Average250% increase in marketing ROI with AI-powered optimization'
    }
-    {icon: Clock
+    {
+      icon: Clock,
       title: 'Save Time'
       description: 'Reduce marketing tasks by80% with intelligent automation'
    }
-    {icon: Target
+    {
+      icon: Target,
       title: 'Better Targeting'
       description: 'Reach the right audience with AI-powered targeting and personalization'
    }
-    {icon: BarChart
+    {
+      icon: BarChart,
       title: 'Data-Driven'
       description: 'Make informed decisions with comprehensive analytics and insights'
     }
   ]
   return ()
-    <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+    <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <Head>
         <title>Marketing Tools - Zion Tech Group</title>
@@ -87,8 +86,8 @@ constMarketingToolsPage: React.FC = () =>{constmarketingTools= [
       </Head>
       </Helmet>
       {/* Hero Section */}
-      <section className="pt-24pb-16 p x-4"></section>
-        <div className="max-w-7x lmx-auto text-center"></div>
+      <section className="pt-24pb-16 p x-4">
+        <div className="max-w-7x lmx-auto text-center">
           <h1 className="tex t-4xlsm: text-5xl md:text-6xl font-bold text-white mb-6">
         </div>
             AI Marketing Tools
@@ -98,36 +97,36 @@ constMarketingToolsPage: React.FC = () =>{constmarketingTools= [
             Transform your marketing with AI-powered tools for content creation, SEO optimization, social media management, and analytics.
           </p>
           {/* Stats */}
-          <div className="gri dgrid-cols-2 md: grid-cols-4 gap-6 mb-12"></div>
-            <div className="bg-wh ite/10backdrop-blur-sm rounded-lg p-6"></div>
+          <div className="gri dgrid-cols-2 md: grid-cols-4 gap-6 mb-12">
+            <div className="bg-wh ite/10backdrop-blur-sm rounded-lg p-6">
               <div className="tex t-3xlfont-bold text-cyan-400 mb-2">6</div>
               <div className="tex t-gray-300">Marketing Tools</div>
             </div>
-            <div className="bg-wh ite/10backdrop-blur-sm rounded-lg p-6"></div>
+            <div className="bg-wh ite/10backdrop-blur-sm rounded-lg p-6">
               <div className="tex t-3xlfont-bold text-green-400 mb-2">$179</div>
               <div className="tex t-gray-300">Starting Price</div>
             </div>
-            <div className="bg-wh ite/10backdrop-blur-sm rounded-lg p-6"></div>
+            <div className="bg-wh ite/10backdrop-blur-sm rounded-lg p-6">
               <div className="tex t-3xlfont-bold text-purple-400 mb-2">250%</div>
               <div className="tex t-gray-300">Average ROI</div>
             </div>
-            <div className="bg-wh ite/10backdrop-blur-sm rounded-lg p-6"></div>
+            <div className="bg-wh ite/10backdrop-blur-sm rounded-lg p-6">
               <div className="tex t-3xlfont-bold text-orange-400 mb-2">80%</div>
               <div className="tex t-gray-300">Time Saved</div>
             </div>
           </div>
           {/* Contact Info */}
-          <div className="bg-gr adient-to-rfrom-purple-600 to-blue-600 rounded-lg p-6 mb-12"></div>
-            <div className="fle xflex-col md: flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8"></div>
-              <div className="fle xitems-center space-x-2"></div>
+          <div className="bg-gr adient-to-rfrom-purple-600 to-blue-600 rounded-lg p-6 mb-12">
+            <div className="fle xflex-col md: flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
+              <div className="fle xitems-center space-x-2">
                 <Phone className="w-5h-5" />
                 <span className="tex t-whitefont-medium">+1 302 464 0950</span>
               </div>
-              <div className="fle xitems-center space-x-2"></div>
+              <div className="fle xitems-center space-x-2">
                 <Mail className="w-5h-5" />
                 <span className="tex t-whitefont-medium">kleber@ziontechgroup.com</span>
               </div>
-              <div className="fle xitems-center space-x-2"></div>
+              <div className="fle xitems-center space-x-2">
                 <MapPin className="w-5h-5" />
                 <span className="tex t-whitefont-medium">Middletown, DE</span>
               </div>
@@ -136,24 +135,24 @@ constMarketingToolsPage: React.FC = () =>{constmarketingTools= [
         </div>
       </section>
       {/* Marketing Tools Grid */}
-      <section className="py-16px-4"></section>
-        <div className="max-w-7x lmx-auto"></div>
+      <section className="py-16px-4">
+        <div className="max-w-7x lmx-auto">
           <h2 className="tex t-3xlmd: text-4xl font-bold text-white text-center mb-12 neon-text">
         </div>
             Our Marketing Tools
           </h2>
-          <div className="gri dgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+          <div className="gri dgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {marketingTools.map((tool, index) => ()
-              <div key={index} className="bg-wh ite/10backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300"></div>
-                <div className="tex t-centermb-6"></div>
+              <div key={index} className="bg-wh ite/10backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
+                <div className="tex t-centermb-6">
                   <div className="tex t-5xlmb-4">{tool.icon}</div>
                   <h3 className="tex t-xlfont-bold text-white mb-2">{tool.title}</h3>
                   <p className="tex t-gray-300text-sm mb-4">{tool.description}</p>
-                  <div className="bg-pu rple-100text-purple-800 text-xs px-2 py-1 rounded-full inline-block mb-4"></div>
+                  <div className="bg-pu rple-100text-purple-800 text-xs px-2 py-1 rounded-full inline-block mb-4">
                     {tool.category}
                   </div>
                 </div>
-                <div className="mb-6"></div>
+                <div className="mb-6">
                   <h4 className="fon t-semiboldtext-white mb-3">Features: </h4>
                   <ul className="spa ce-y-2">
         </div>
@@ -166,7 +165,7 @@ constMarketingToolsPage: React.FC = () =>{constmarketingTools= [
                     ))}
                   </ul>
                 </div>
-                <div className="tex t-center"></div>
+                <div className="tex t-center">
                   <div className="tex t-2xlfont-bold text-cyan-400 mb-4">{tool.price}</div>
                   <a href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}>
                     className="w-ful lbg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-cyan-600 hover:to-blue-700 transition-all inline-block"
@@ -181,15 +180,15 @@ constMarketingToolsPage: React.FC = () =>{constmarketingTools= [
         </div>
       </section>
       {/* Benefits Section */}
-      <section className="py-16px-4"></section>
-        <div className="max-w-7x lmx-auto"></div>
+      <section className="py-16px-4">
+        <div className="max-w-7x lmx-auto">
           <h2 className="tex t-3xlmd: text-4xl font-bold text-white text-center mb-12 neon-text">
         </div>
             Why Choose Our Marketing Tools?
           </h2>
-          <div className="gri dgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+          <div className="gri dgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => ()
-              <div key={index} className="bg-wh ite/10backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300"></div>
+              <div key={index} className="bg-wh ite/10backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300">
                 <benefit.icon className="w-12h-12te x t-cyan-400 mx-auto mb-4" />
                 <h3 className="tex t-xlfont-bold text-white mb-3">{benefit.title}</h3>
                 <p className="tex t-gray-300text-sm">{benefit.description}</p>
@@ -199,8 +198,8 @@ constMarketingToolsPage: React.FC = () =>{constmarketingTools= [
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-16px-4 b g-gradient-to-r from-purple-600 to-blue-600"></section>
-        <div className="max-w-4x lmx-auto text-center"></div>
+      <section className="py-16px-4 b g-gradient-to-r from-purple-600 to-blue-600">
+        <div className="max-w-4x lmx-auto text-center">
           <h2 className="tex t-3xlmd: text-4xl font-bold text-white mb-6">
         </div>
             Ready to Transform Your Marketing?
@@ -209,7 +208,7 @@ constMarketingToolsPage: React.FC = () =>{constmarketingTools= [
         </div>
             Get started with our AI marketing tools today and see the difference intelligent automation can make.
           </p>
-          <div className="fle xflex-col sm:flex-row gap-4 justify-center"></div>
+          <div className="fle xflex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+13024640950">
               className="bg-wh itetext-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
             >

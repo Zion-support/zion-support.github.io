@@ -1,5 +1,4 @@
 'use client'
-<<<<<<< HEAD
 import { TrendingUp } from 'lucide-react';
 import React, { useState } from 'react';
 import { Send } from 'lucide-react';
@@ -7,7 +6,6 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Phone, Mail } from 'lucide-react';
 import { MapPin, Clock } from 'lucide-react';
-=======
 import { Award, TrendingUp, Users, Mail } from 'lucide-react'
 import React, { useState } from 'react'
 import { Award, TrendingUp, Users, Mail } from 'lucide-react'
@@ -15,8 +13,6 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { Award, TrendingUp, Users, Mail } from 'lucide-react'
 import { Award, TrendingUp, Users, Mail } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
-
 constContactPage: React.FC = () =>{const [formDatasetFormData] = useState({}
     name: ''
     email: ''
@@ -27,7 +23,6 @@ constContactPage: React.FC = () =>{const [formDatasetFormData] = useState({}
   })
 ;
   const [isSubmitted, setIsSubmitted] = useState(false);
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {};
     const { name, value } = e.target;
     setFormData(prev => ({}
@@ -35,7 +30,6 @@ constContactPage: React.FC = () =>{const [formDatasetFormData] = useState({}
       [name]: value
 {    }))
 {  }
-
   const handleSubmit = (e: React.FormEvent) => {};
     e.preventDefault()
     // Here you would typically send the form data to your backend
@@ -54,7 +48,6 @@ constContactPage: React.FC = () =>{const [formDatasetFormData] = useState({}
 {      })
 {    }, 3000)
 {  }
-
   constservices= []
     'AI Services'
     'IT Services'
@@ -67,29 +60,25 @@ constContactPage: React.FC = () =>{const [formDatasetFormData] = useState({}
     'Custom Development'
     'Other'
   ]
-
-<<<<<<< HEAD
-  const achievements = [];
+  const achievements = [
+  ]
     { icon: Users, text: '100+ Happy Clients' },
     { icon: Award, text: '50+ Successful Projects' },
     { icon: TrendingUp, text: '300% Average ROI' },
-=======
   const achievements = []
     { icon: Users, text: '100+ Happy Clients' }
     { icon: Award, text: '50+ Successful Projects' }
     { icon: TrendingUp, text: '300% Average ROI' }
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
     { icon: Shield, text: '99.9% Uptime Guarantee' }
   ]
-
-const Page = () => {};
-  return ()
-    <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+const Page = () => {
+  return (
+    <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="con tainermx-auto px-4 py-16 pt-24">
         </div>
         {/* Hero Section */}
-        <section className="tex t-centermb-16"></section>
+        <section className="tex t-centermb-16">
           <h1 className="tex t-4xlmd: text-6xl font-bold text-white mb-6"></h1>
             <span className="bg-gr adient-to-rfrom-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
         </div>
@@ -102,12 +91,12 @@ const Page = () => {};
             Get in touch with our experts for a free consultation.
           </p>
         </section>
-        <div className="gri dgrid-cols-1 lg:grid-cols-2 gap-12"></div>
+        <div className="gri dgrid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <div className="bg-sl ate-800/50backdrop-blur-sm rounded-xl p-8"></div>
+          <div className="bg-sl ate-800/50backdrop-blur-sm rounded-xl p-8">
             <h2 className="tex t-2xlfont-bold text-white mb-6">Get Your Free Consultation</h2>
             {isSubmitted ? ()
-              <div className="tex t-centerpy-8"></div>
+              <div className="tex t-centerpy-8">
                 <CheckCircle className="w-16h-16te x t-green-400 mx-auto mb-4" />
                 <h3 className="tex t-xlfont-bold text-white mb-2">Thank You!</h3>
                 <p className="tex t-gray-300">We'll get back to you within 24 hours.</p>
@@ -115,8 +104,7 @@ const Page = () => {};
             ) : ()
               <form onSubmit={handleSubmit} className="spa ce-y-6">
         </div>
-                <div className="gri dgrid-cols-1 md: grid-cols-2 gap-6"></div>
-                  
+                <div className="gri dgrid-cols-1 md: grid-cols-2 gap-6">
                     <label htmlFor="name" className="blo cktext-sm font-medium text-gray-300 mb-2">
         </div>
                       Full Name *
@@ -140,8 +128,7 @@ const Page = () => {};
                     />
                   </div>
                 </div>
-                <div className="gri dgrid-cols-1 md:grid-cols-2 gap-6"></div>
-                  
+                <div className="gri dgrid-cols-1 md:grid-cols-2 gap-6">
                     <label htmlFor="company" className="blo cktext-sm font-medium text-gray-300 mb-2">
         </div>
                       Company
@@ -164,7 +151,6 @@ const Page = () => {};
                     />
                   </div>
                 </div>
-                
                   <label htmlFor="service" className="blo cktext-sm font-medium text-gray-300 mb-2">
         </div>
                     Service Interest
@@ -182,7 +168,6 @@ const Page = () => {};
                     ))}
                   </select>
                 </div>
-                
                   <label htmlFor="message" className="blo cktext-sm font-medium text-gray-300 mb-2">
         </div>
                     Message *
@@ -207,16 +192,15 @@ const Page = () => {};
             )}
           </div>
           {/* Contact Information */}
-          <div className="spa ce-y-8"></div>
+          <div className="spa ce-y-8">
             {/* Contact Details */}
-            <div className="bg-sl ate-800/50backdrop-blur-sm rounded-xl p-8"></div>
+            <div className="bg-sl ate-800/50backdrop-blur-sm rounded-xl p-8">
               <h2 className="tex t-2xlfont-bold text-white mb-6">Get In Touch</h2>
-              <div className="spa ce-y-6"></div>
-                <div className="fle xitems-start space-x-4"></div>
-                  <div className="w-12h-12bg-c y an-500/20 rounded-lg flex items-center justify-center flex-shrink-0"></div>
+              <div className="spa ce-y-6">
+                <div className="fle xitems-start space-x-4">
+                  <div className="w-12h-12bg-c y an-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Phone className="w-6h-6te x t-cyan-400" />
                   </div>
-                  
                     <h3 className="tex t-lgfont-semibold text-white mb-1">Phone</h3>
                     <a href="tel: +13024640950" className="tex t-cyan-400hover:text-cyan-300 transition-colors">
         </div>
@@ -225,11 +209,10 @@ const Page = () => {};
                     <p className="tex t-smtext-gray-400 mt-1">Mon-Fri 9AM-6PM EST</p>
                   </div>
                 </div>
-                <div className="fle xitems-start space-x-4"></div>
-                  <div className="w-12h-12bg-c y an-500/20 rounded-lg flex items-center justify-center flex-shrink-0"></div>
+                <div className="fle xitems-start space-x-4">
+                  <div className="w-12h-12bg-c y an-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Mail className="w-6h-6te x t-cyan-400" />
                   </div>
-                  
                     <h3 className="tex t-lgfont-semibold text-white mb-1">Email</h3>
                     <a href="mailto:kleber@ziontechgroup.com" className="tex t-cyan-400hover:text-cyan-300 transition-colors">
         </div>
@@ -238,11 +221,10 @@ const Page = () => {};
                     <p className="tex t-smtext-gray-400 mt-1">We respond within 24 hours</p>
                   </div>
                 </div>
-                <div className="fle xitems-start space-x-4"></div>
-                  <div className="w-12h-12bg-c y an-500/20 rounded-lg flex items-center justify-center flex-shrink-0"></div>
+                <div className="fle xitems-start space-x-4">
+                  <div className="w-12h-12bg-c y an-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-6h-6te x t-cyan-400" />
                   </div>
-                  
                     <h3 className="tex t-lgfont-semibold text-white mb-1">Address</h3>
                     <p className="tex t-gray-300"></p>
                       364 E Main St STE 1008<br />
@@ -251,11 +233,10 @@ const Page = () => {};
                     </p>
                   </div>
                 </div>
-                <div className="fle xitems-start space-x-4"></div>
-                  <div className="w-12h-12bg-c y an-500/20 rounded-lg flex items-center justify-center flex-shrink-0"></div>
+                <div className="fle xitems-start space-x-4">
+                  <div className="w-12h-12bg-c y an-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Clock className="w-6h-6te x t-cyan-400" />
                   </div>
-                  
                     <h3 className="tex t-lgfont-semibold text-white mb-1">Business Hours</h3>
                     <p className="tex t-gray-300"></p>
                       Monday - Friday: 9:00 AM - 6:00 PM EST<br />
@@ -267,12 +248,12 @@ const Page = () => {};
               </div>
             </div>
             {/* Achievements */}
-            <div className="bg-gr adient-to-rfrom-indigo-900/50 to-purple-900/50 rounded-xl p-8"></div>
+            <div className="bg-gr adient-to-rfrom-indigo-900/50 to-purple-900/50 rounded-xl p-8">
               <h3 className="tex t-xlfont-bold text-white mb-6">Why Choose Us?</h3>
-              <div className="gri dgrid-cols-2 gap-4"></div>
+              <div className="gri dgrid-cols-2 gap-4">
                 {achievements.map((achievement, index) => ()
-                  <div key={index} className="tex t-center"></div>
-                    <div className="w-12h-12bg-c y an-500/20 rounded-full flex items-center justify-center mx-auto mb-2"></div>
+                  <div key={index} className="tex t-center">
+                    <div className="w-12h-12bg-c y an-500/20 rounded-full flex items-center justify-center mx-auto mb-2">
                       <achievement.icon className="w-6h-6te x t-cyan-400" />
                     </div>
                     <p className="tex t-smtext-gray-300">{achievement.text}</p>
@@ -281,7 +262,7 @@ const Page = () => {};
               </div>
             </div>
             {/* Quick Contact */}
-            <div className="bg-sl ate-800/50backdrop-blur-sm rounded-xl p-8 text-center"></div>
+            <div className="bg-sl ate-800/50backdrop-blur-sm rounded-xl p-8 text-center">
               <h3 className="tex t-xlfont-bold text-white mb-4">Need Immediate Assistance?</h3>
               <p className="tex t-gray-300mb-6">Call us now for urgent IT support or emergency services.</p>
               <a href="tel: +13024640950">
@@ -297,10 +278,7 @@ const Page = () => {};
       </div>
     </div>
   )
-<<<<<<< HEAD
 {};
 ;
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 export default Page;

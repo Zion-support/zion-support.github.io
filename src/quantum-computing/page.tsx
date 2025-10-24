@@ -3,8 +3,7 @@ import { Brain } from 'lucide-react';
 import React from 'react';
 import { Atom, Lock } from 'lucide-react';
 import { CheckCircle, Star, Brain, Shield } from 'lucide-react';
-
-const $1: React.FC = () => {;
+const Page: React.FC = () => {
   const quantumServices = [;
     {
       id: 'quantum-algorithms'
@@ -36,12 +35,12 @@ const $1: React.FC = () => {;
     }
   ]
   return ()
-    <div className="min-h-s creenbg-gradient-to-br from-slate-50 to-purple-50"></div>
+    <div className="min-h-s creenbg-gradient-to-br from-slate-50 to-purple-50">
       {/* Hero Section */}
-      <section className="rel ativepy-20 bg-gradient-to-r from-purple-600 to-indigo-700 text-white"></section>
-        <div className="abs oluteinset-0 bg-black opacity-20"></div>
-        <div className="rel ativemax-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>
-          <div className="tex t-center"></div>
+      <section className="rel ativepy-20 bg-gradient-to-r from-purple-600 to-indigo-700 text-white">
+        <div className="abs oluteinset-0 bg-black opacity-20">
+        <div className="rel ativemax-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+          <div className="tex t-center">
             <h1 className="tex t-4xlmd:text-6xl font-bold mb-6">
         </div>
               Quantum Computing Services
@@ -50,7 +49,7 @@ const $1: React.FC = () => {;
         </div>
               Harness the power of quantum mechanics to solve the world's most complex computational problems
             </p>
-            <div className="fle xflex-col sm:flex-row gap-4 justify-center"></div>
+            <div className="fle xflex-col sm:flex-row gap-4 justify-center">
               <button className="bg-wh itetext-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
         </div>
                 Explore Quantum Solutions
@@ -60,9 +59,9 @@ const $1: React.FC = () => {;
         </div>
       </section>
       {/* Key Benefits */}
-      <section className="py-16bg-w hite"></section>
-        <div className="max-w-7x lmx-auto px-4 sm: px-6 lg:px-8"></div>
-          <div className="tex t-centermb-12"></div>
+      <section className="py-16bg-w hite">
+        <div className="max-w-7x lmx-auto px-4 sm: px-6 lg:px-8">
+          <div className="tex t-centermb-12">
             <h2 className="tex t-3xlmd:text-4xl font-bold text-gray-900 mb-4">
         </div>
               Why Choose Quantum Computing?
@@ -72,23 +71,23 @@ const $1: React.FC = () => {;
               Quantum computing offers unprecedented computational power for solving complex problems
             </p>
           </div>
-          <div className="gri dgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-            <div className="tex t-centerp-6"></div>
-              <div className="w-16h-16bg-p u rple-100 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+          <div className="gri dgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="tex t-centerp-6">
+              <div className="w-16h-16bg-p u rple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Atom className="w-8h-8te x t-purple-600" />
               </div>
               <h3 className="tex t-xlfont-semibold text-gray-900 mb-2">Exponential Speedup</h3>
               <p className="tex t-gray-600">Solve problems that would take classical computers thousands of years in minutes</p>
             </div>
-            <div className="tex t-centerp-6"></div>
-              <div className="w-16h-16bg-p u rple-100 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+            <div className="tex t-centerp-6">
+              <div className="w-16h-16bg-p u rple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Shield className="w-8h-8te x t-purple-600" />
               </div>
               <h3 className="tex t-xlfont-semibold text-gray-900 mb-2">Ultimate Security</h3>
               <p className="tex t-gray-600">Quantum cryptography provides unbreakable security for your most sensitive data</p>
             </div>
-            <div className="tex t-centerp-6"></div>
-              <div className="w-16h-16bg-p u rple-100 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+            <div className="tex t-centerp-6">
+              <div className="w-16h-16bg-p u rple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Brain className="w-8h-8te x t-purple-600" />
               </div>
               <h3 className="tex t-xlfont-semibold text-gray-900 mb-2">Complex Problem Solving</h3>
@@ -98,9 +97,9 @@ const $1: React.FC = () => {;
         </div>
       </section>
       {/* Services */}
-      <section className="py-16bg-g ray-50"></section>
-        <div className="max-w-7x lmx-auto px-4 sm: px-6 lg:px-8"></div>
-          <div className="tex t-centermb-12"></div>
+      <section className="py-16bg-g ray-50">
+        <div className="max-w-7x lmx-auto px-4 sm: px-6 lg:px-8">
+          <div className="tex t-centermb-12">
             <h2 className="tex t-3xlmd:text-4xl font-bold text-gray-900 mb-4">
         </div>
               Our Quantum Solutions
@@ -110,12 +109,12 @@ const $1: React.FC = () => {;
               Cutting-edge quantum computing services designed to solve your most challenging problems
             </p>
           </div>
-          <div className="gri dgrid-cols-1 lg:grid-cols-2 gap-8"></div>
+          <div className="gri dgrid-cols-1 lg:grid-cols-2 gap-8">
             {quantumServices.map((service) => ()
-              <div key={service.id} className="bg-wh iterounded-lg shadow-lg p-8 hover: shadow-xl transition-shadow"></div>
+              <div key={service.id} className="bg-wh iterounded-lg shadow-lg p-8 hover: shadow-xl transition-shadow">
                 <h3 className="tex t-2xlfont-bold text-gray-900 mb-4">{service.title}</h3>
                 <p className="tex t-gray-600mb-6">{service.description}</p>
-                <div className="mb-6"></div>
+                <div className="mb-6">
                   <h4 className="tex t-lgfont-semibold text-gray-900 mb-3">Key Features: </h4>
                   <ul className="spa ce-y-2">
         </div>
@@ -128,7 +127,7 @@ const $1: React.FC = () => {;
                     ))}
                   </ul>
                 </div>
-                <div className="mb-6"></div>
+                <div className="mb-6">
                   <h4 className="tex t-lgfont-semibold text-gray-900 mb-3">Benefits: </h4>
                   <ul className="spa ce-y-2">
         </div>
@@ -141,8 +140,8 @@ const $1: React.FC = () => {;
                     ))}
                   </ul>
                 </div>
-                <div className="bor der-tpt-4"></div>
-                  <div className="fle xjustify-between items-center"></div>
+                <div className="bor der-tpt-4">
+                  <div className="fle xjustify-between items-center">
                     <span className="tex t-2xlfont-bold text-purple-600">{service.marketPrice}</span>
                     <span className="tex t-smtext-gray-500">{service.category}</span>
                   </div>
@@ -153,8 +152,8 @@ const $1: React.FC = () => {;
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-16bg-p urple-600 text-white"></section>
-        <div className="max-w-7x lmx-auto px-4 sm: px-6 lg:px-8 text-center"></div>
+      <section className="py-16bg-p urple-600 text-white">
+        <div className="max-w-7x lmx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="tex t-3xlmd:text-4xl font-bold mb-4">
         </div>
             Ready to Go Quantum?
@@ -163,7 +162,7 @@ const $1: React.FC = () => {;
         </div>
             Let our quantum experts help you harness the power of quantum computing
           </p>
-          <div className="fle xflex-col sm:flex-row gap-4 justify-center"></div>
+          <div className="fle xflex-col sm:flex-row gap-4 justify-center">
             <button className="bg-wh itetext-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
         </div>
               Get Started Today
@@ -177,9 +176,6 @@ const $1: React.FC = () => {;
       </div>
     </div>
   )
-<<<<<<< HEAD
 };
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 export default QuantumComputingPage;

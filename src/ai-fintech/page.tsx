@@ -1,18 +1,14 @@
 'use client'
-<<<<<<< HEAD
 import { X, Brain, Target, TrendingUp } from 'lucide-react';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Star, Zap, Brain, DollarSign, Shield, TrendingUp, Target } from 'lucide-react';
-=======
 import { Brain, TrendingUp, Target, X } from 'lucide-react'
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { Brain, TrendingUp, Target, X } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
-
 constAIFintechPage: React.FC = () =>{constaiFintechServices= [
     {
       title: 'AI Algorithmic Trading Platform'
@@ -136,16 +132,17 @@ constAIFintechPage: React.FC = () =>{constaiFintechServices= [
       technologies: ['OCR', 'Facial Recognition', 'Document APIs', 'Machine Learning', 'Identity Verification APIs']
     }
   ]
-  const categories = [...new Set(aiFintechServices.map(service => service.category))];
+  const categories = [...new Set(aiFintechServices.map(service => service.category))
+  ]
   return ()
-    <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+    <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main>
         {/* Hero Section */}
-        <section className="rel ativeoverflow-hidden bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20"></section>
-          <div className="abs oluteinset-0 bg-black opacity-20"></div>
-          <div className="rel ativemax-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>
-            <div className="tex t-center"></div>
+        <section className="rel ativeoverflow-hidden bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20">
+          <div className="abs oluteinset-0 bg-black opacity-20">
+          <div className="rel ativemax-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+            <div className="tex t-center">
               <h1 className="tex t-4xlmd:text-6xl font-bold mb-6">
         </div>
                 AI Fintech Solutions
@@ -154,7 +151,7 @@ constAIFintechPage: React.FC = () =>{constaiFintechServices= [
         </div>
                 Revolutionize financial services with cutting-edge AI technology that automates trading, prevents fraud, and optimizes financial decisions
               </p>
-              <div className="fle xflex-col sm:flex-row gap-4 justify-center"></div>
+              <div className="fle xflex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-wh itetext-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors">
         </div>
                   Start Fintech AI
@@ -168,9 +165,9 @@ constAIFintechPage: React.FC = () =>{constaiFintechServices= [
           </div>
         </section>
         {/* Key Benefits */}
-        <section className="py-16bg-w hite"></section>
-          <div className="max-w-7x lmx-auto px-4 sm: px-6 lg:px-8"></div>
-            <div className="tex t-centermb-12"></div>
+        <section className="py-16bg-w hite">
+          <div className="max-w-7x lmx-auto px-4 sm: px-6 lg:px-8">
+            <div className="tex t-centermb-12">
               <h2 className="tex t-3xlmd:text-4xl font-bold text-gray-900 mb-4">
         </div>
                 Why Choose AI Fintech?
@@ -180,30 +177,30 @@ constAIFintechPage: React.FC = () =>{constaiFintechServices= [
                 Revolutionary AI technology that transforms financial services and maximizes returns
               </p>
             </div>
-            <div className="gri dgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-              <div className="tex t-center"></div>
-                <div className="bg-in digo-100w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+            <div className="gri dgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="tex t-center">
+                <div className="bg-in digo-100w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <DollarSign className="w-8h-8te x t-indigo-600" />
                 </div>
                 <h3 className="tex t-xlfont-semibold text-gray-900 mb-2">Maximize Returns</h3>
                 <p className="tex t-gray-600">AI optimizes trading strategies and investment decisions for maximum returns</p>
               </div>
-              <div className="tex t-center"></div>
-                <div className="bg-gr een-100w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+              <div className="tex t-center">
+                <div className="bg-gr een-100w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Shield className="w-8h-8te x t-green-600" />
                 </div>
                 <h3 className="tex t-xlfont-semibold text-gray-900 mb-2">Fraud Prevention</h3>
                 <p className="tex t-gray-600">Advanced AI detects and prevents 99.5% of fraudulent transactions</p>
               </div>
-              <div className="tex t-center"></div>
-                <div className="bg-pu rple-100w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+              <div className="tex t-center">
+                <div className="bg-pu rple-100w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <TrendingUp className="w-8h-8te x t-purple-600" />
                 </div>
                 <h3 className="tex t-xlfont-semibold text-gray-900 mb-2">Risk Management</h3>
                 <p className="tex t-gray-600">Intelligent risk assessment and portfolio optimization</p>
               </div>
-              <div className="tex t-center"></div>
-                <div className="bg-or ange-100w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+              <div className="tex t-center">
+                <div className="bg-or ange-100w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Zap className="w-8h-8te x t-orange-600" />
                 </div>
                 <h3 className="tex t-xlfont-semibold text-gray-900 mb-2">Real-time Processing</h3>
@@ -215,8 +212,8 @@ constAIFintechPage: React.FC = () =>{constaiFintechServices= [
         {/* Services by Category */}
         {categories.map(category => ()
           <section key={category} className="py-16bg-g ray-50"></section>
-            <div className="max-w-7x lmx-auto px-4 sm: px-6 lg:px-8"></div>
-              <div className="tex t-centermb-12"></div>
+            <div className="max-w-7x lmx-auto px-4 sm: px-6 lg:px-8">
+              <div className="tex t-centermb-12">
                 <h2 className="tex t-3xlmd:text-4xl font-bold text-gray-900 mb-4">
         </div>
                   {category} Solutions
@@ -226,24 +223,24 @@ constAIFintechPage: React.FC = () =>{constaiFintechServices= [
                   Advanced {category.toLowerCase()} services powered by state-of-the-art AI technology
                 </p>
               </div>
-              <div className="gri dgrid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>
+              <div className="gri dgrid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
                 {aiFintechServices
                   .filter(service => service.category === category)
                   .map((service, index) => ()
-                    <div key={index} className="bg-wh iterounded-lg shadow-lg p-6 hover: shadow-xl transition-shadow"></div>
+                    <div key={index} className="bg-wh iterounded-lg shadow-lg p-6 hover: shadow-xl transition-shadow">
                       <div className="tex t-4xlmb-4">{service.icon}</div>
                       <h3 className="tex t-xlfont-semibold text-gray-900 mb-3">{service.title}</h3>
                       <p className="tex t-gray-600mb-4">{service.description}</p>
-                      <div className="mb-4"></div>
-                        <div className="fle xitems-center justify-between mb-2"></div>
+                      <div className="mb-4">
+                        <div className="fle xitems-center justify-between mb-2">
                           <span className="tex t-2xlfont-bold text-indigo-600">{service.price}</span>
                           <span className="tex t-smtext-gray-500">Market: {service.marketPrice}</span>
                         </div>
-                        <div className="tex t-smtext-green-600 font-semibold"></div>
+                        <div className="tex t-smtext-green-600 font-semibold">
                           Save up to 60% vs market rates
                         </div>
                       </div>
-                      <div className="mb-4"></div>
+                      <div className="mb-4">
                         <h4 className="fon t-semiboldtext-gray-900 mb-2">Key Features: </h4>
                         <ul className="spa ce-y-1">
         </div>
@@ -256,9 +253,9 @@ constAIFintechPage: React.FC = () =>{constaiFintechServices= [
                           ))}
                         </ul>
                       </div>
-                      <div className="mb-4"></div>
+                      <div className="mb-4">
                         <h4 className="fon t-semiboldtext-gray-900 mb-2">Technologies: </h4>
-                        <div className="fle xflex-wrap gap-2"></div>
+                        <div className="fle xflex-wrap gap-2">
                           {service.technologies.map((tech, techIndex) => ()
                             <span key={techIndex} className="bg-in digo-100text-indigo-800 text-xs px-2 py-1 rounded">
         </div>
@@ -267,7 +264,7 @@ constAIFintechPage: React.FC = () =>{constaiFintechServices= [
                           ))}
                         </div>
                       </div>
-                      <div className="mb-6"></div>
+                      <div className="mb-6">
                         <h4 className="fon t-semiboldtext-gray-900 mb-2">Financial Benefits: </h4>
                         <ul className="spa ce-y-1">
         </div>
@@ -291,9 +288,9 @@ constAIFintechPage: React.FC = () =>{constaiFintechServices= [
           </section>
         ))}
         {/* AI Fintech Capabilities */}
-        <section className="py-16bg-w hite"></section>
-          <div className="max-w-7x lmx-auto px-4 sm: px-6 lg:px-8"></div>
-            <div className="tex t-centermb-12"></div>
+        <section className="py-16bg-w hite">
+          <div className="max-w-7x lmx-auto px-4 sm: px-6 lg:px-8">
+            <div className="tex t-centermb-12">
               <h2 className="tex t-3xlmd:text-4xl font-bold text-gray-900 mb-4">
         </div>
                 AI Fintech Capabilities
@@ -303,33 +300,33 @@ constAIFintechPage: React.FC = () =>{constaiFintechServices= [
                 Cutting-edge AI technologies that power the future of financial services
               </p>
             </div>
-            <div className="gri dgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-              <div className="tex t-centerp-6 bg-gradient-to-br from-indigo-50 to-blue-100 rounded-lg"></div>
+            <div className="gri dgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="tex t-centerp-6 bg-gradient-to-br from-indigo-50 to-blue-100 rounded-lg">
                 <TrendingUp className="w-12h-12te x t-indigo-600 mx-auto mb-4" />
                 <h3 className="tex t-xlfont-semibold text-gray-900 mb-2">Algorithmic Trading</h3>
                 <p className="tex t-gray-600">AI-powered trading algorithms for maximum returns and risk management</p>
               </div>
-              <div className="tex t-centerp-6 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg"></div>
+              <div className="tex t-centerp-6 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg">
                 <Shield className="w-12h-12te x t-green-600 mx-auto mb-4" />
                 <h3 className="tex t-xlfont-semibold text-gray-900 mb-2">Fraud Detection</h3>
                 <p className="tex t-gray-600">Advanced ML models for real-time fraud detection and prevention</p>
               </div>
-              <div className="tex t-centerp-6 bg-gradient-to-br from-purple-50 to-violet-100 rounded-lg"></div>
+              <div className="tex t-centerp-6 bg-gradient-to-br from-purple-50 to-violet-100 rounded-lg">
                 <Target className="w-12h-12te x t-purple-600 mx-auto mb-4" />
                 <h3 className="tex t-xlfont-semibold text-gray-900 mb-2">Risk Assessment</h3>
                 <p className="tex t-gray-600">Intelligent risk modeling and portfolio optimization</p>
               </div>
-              <div className="tex t-centerp-6 bg-gradient-to-br from-orange-50 to-amber-100 rounded-lg"></div>
+              <div className="tex t-centerp-6 bg-gradient-to-br from-orange-50 to-amber-100 rounded-lg">
                 <Brain className="w-12h-12te x t-orange-600 mx-auto mb-4" />
                 <h3 className="tex t-xlfont-semibold text-gray-900 mb-2">Predictive Analytics</h3>
                 <p className="tex t-gray-600">Market prediction and financial forecasting with AI</p>
               </div>
-              <div className="tex t-centerp-6 bg-gradient-to-br from-pink-50 to-rose-100 rounded-lg"></div>
+              <div className="tex t-centerp-6 bg-gradient-to-br from-pink-50 to-rose-100 rounded-lg">
                 <DollarSign className="w-12h-12te x t-pink-600 mx-auto mb-4" />
                 <h3 className="tex t-xlfont-semibold text-gray-900 mb-2">Wealth Management</h3>
                 <p className="tex t-gray-600">AI-powered robo-advisors and portfolio management</p>
               </div>
-              <div className="tex t-centerp-6 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg"></div>
+              <div className="tex t-centerp-6 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg">
                 <Zap className="w-12h-12te x t-blue-600 mx-auto mb-4" />
                 <h3 className="tex t-xlfont-semibold text-gray-900 mb-2">Real-time Processing</h3>
                 <p className="tex t-gray-600">High-frequency processing and real-time decision making</p>
@@ -338,8 +335,8 @@ constAIFintechPage: React.FC = () =>{constaiFintechServices= [
           </div>
         </section>
         {/* Contact Section */}
-        <section className="py-16bg-g radient-to-r from-indigo-600 to-purple-600 text-white"></section>
-          <div className="max-w-7x lmx-auto px-4 sm: px-6 lg:px-8 text-center"></div>
+        <section className="py-16bg-g radient-to-r from-indigo-600 to-purple-600 text-white">
+          <div className="max-w-7x lmx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="tex t-3xlmd:text-4xl font-bold mb-4">
         </div>
               Ready to Transform Financial Services?
@@ -348,7 +345,7 @@ constAIFintechPage: React.FC = () =>{constaiFintechServices= [
         </div>
               Contact our AI fintech experts for a free consultation and custom financial AI strategy
             </p>
-            <div className="fle xflex-col sm:flex-row gap-4 justify-center"></div>
+            <div className="fle xflex-col sm:flex-row gap-4 justify-center">
               <a href="tel:+13024640950">
                 className="bg-wh itetext-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors inline-flex items-center"
               >
@@ -362,7 +359,7 @@ constAIFintechPage: React.FC = () =>{constaiFintechServices= [
                 ✉️ kleber@ziontechgroup.com
               </a>
             </div>
-            <div className="mt-8te xt-sm text-indigo-200"></div>
+            <div className="mt-8te xt-sm text-indigo-200">
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
           </div>
@@ -371,9 +368,6 @@ constAIFintechPage: React.FC = () =>{constaiFintechServices= [
       <Footer />
     </div>
   )
-<<<<<<< HEAD
 };
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 export default AIFintechPage;
