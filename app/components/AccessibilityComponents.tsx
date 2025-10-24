@@ -1,10 +1,13 @@
-&quot;use client&quot;
-import React from &quot;react&quot;
+"use client";
+import React from 'react';
 
-const AccessibilityComponents: React.FC = () => {
-  return null
-}
+const AccessibilityComponents = () => {
+  return (
+    <div>
+      <h1>AccessibilityComponents</h1>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
 
-export default AccessibilityComponents
-
-export default AccessibilityComponentsPage;
+export default AccessibilityComponents;

@@ -1,28 +1,13 @@
-import React, { useEffect } from &quot;react&quot;
+"use client";
+import React from 'react';
 
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void
-  }
-}
-
-const Analytics: React.FC = () => {
-  useEffect(() => {
-    const initAnalytics = () => {
-      if (typeof window !== &quot;undefined&quot; && window.gtag) {
-        window.gtag(&quot;config&quot;, &quot;GA_MEASUREMENT_ID&quot;, {
-          page_title: document.title,
-          page_location: window.location.href,
-        })
-      }
-    }
-    initAnalytics()
-  }, [])
-
-  return null; // Analytics component doesn&apos;t render anything
-}
-
-export default Analytics
+const Analytics = () => {
+  return (
+    <div>
+      <h1>Analytics</h1>
+      <p>This component is under construction.</p>
+    </div>
+  );
 };
 
-export default AnalyticsPage;
+export default Analytics;
