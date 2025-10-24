@@ -47,7 +47,7 @@ function fixMalformedFile(filePath) {
     
     // Ensure proper JSX structure
     if (content.includes('return (') && !content.includes('return (')) {
-      content = content.replace(/return\s*\(/g, 'return (');
+      content = content.replace(/return\s*\(/g, 'return(');
     }
     
     // Fix missing closing tags for fragments
@@ -73,7 +73,7 @@ function fixMalformedFile(filePath) {
 
 // Get all problematic files
 const { execSync } = require('child_process');
-const problematicFiles = execSync('find app -name "*.tsx" -exec grep -l "React.Fragment\\|<>" {} \\;', { encoding: 'utf8' })
+const problematicFiles = execSync('find app -name '*.tsx" -exec grep -l "React.Fragment\\|<>" {} \\;', { encoding: 'utf8' })
   .trim()
   .split('\n')
   .filter(file => file.trim() !== '');

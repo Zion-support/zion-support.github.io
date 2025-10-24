@@ -30,7 +30,7 @@ export interface PerformanceReport {;
 }
   webVitals: Partial;
           <PerformanceMetrics>;,;
-    resources: ResourceStats;,;
+    resources: ResourceStats;;
     memory: MemoryStats | null;,;
     timestamp: number;
 }
@@ -43,10 +43,10 @@ export interface ResourceStats {;
   }
   }
 }
-  total: number;,;
-    scripts: number;,;
-    styles: number;,;
-    images: number;,;
+  total: number;;
+    scripts: number;;
+    styles: number;;
+    images: number;;
     fonts: number;
 }
 /**;
@@ -58,8 +58,8 @@ export interface MemoryStats {;
   }
   }
 }
-  usedJSHeapSize: number;,;
-    totalJSHeapSize: number;,;
+  usedJSHeapSize: number;;
+    totalJSHeapSize: number;;
     jsHeapSizeLimit: number;
 }
 /**;
@@ -72,10 +72,10 @@ export interface PerformanceAlert {;
   }
 }
   type: 'warning' | 'error' | 'info';,;
-    message: string;,;
+    message: string;;
     metric: keyof PerformanceMetrics;,;
-    value: number;,;
-    threshold: number;,;
+    value: number;;
+    threshold: number;;
     timestamp: number;
 }
 /**;
@@ -87,7 +87,7 @@ export interface LayoutShift extends PerformanceEntry {;
   }
   }
 }
-  value: number;,;
+  value: number;;
     hadRecentInput: boolean;
 }
 /**;
@@ -104,8 +104,8 @@ export interface PerformanceWithMemory extends Performance {;
   }
   }
 }
-  usedJSHeapSize: number;,;
-    totalJSHeapSize: number;,;
+  usedJSHeapSize: number;;
+    totalJSHeapSize: number;;
     jsHeapSizeLimit: number;
   }
 }

@@ -1,12 +1,14 @@
 'use client';
 import React, { useState, useCallback } from 'react';
-const Image: React.FC = () => {;
+const Image: React.FC = () => {
+  ;
     interface ImageProps {;
   // TODO: Add content;
-  }
+ ,
+}
   }
 }
-  src: string;,;
+  src: string,;,;
     alt: string;
   width?: number;
   height?: number;
@@ -19,11 +21,11 @@ const Image: React.FC = () => {;
   sizes?: string;
   style?: React.CSSProperties;
   onLoad?: () => void;
-  onError?: () => void;
+  onError?: () => void;,
 }
           <ImageProps> = ({;
     // TODO: Add content;
-  }
+ , }
   }
 }
 //   src,;
@@ -33,59 +35,64 @@ const Image: React.FC = () => {;
 //   className,;
   priority = false,;
 quality = 75,;
-  placeholder = 'empty',;
+  placeholder = 'empty&apos;,;
   blurDataURL,;
   fill = false,;
 //   sizes,;
 //   style,;
 //   onLoad,;
 //   onError,;
-//   ...props,;
-}) => {;
+//   ...props;
+}) => {
+  ;
     // TODO: Add content;
-  }
+ ,
+}
   }
 }
   const [, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
-  const _handleLoad = useCallback(() => {;
+  const _handleLoad = useCallback(() => {
+  ;
     // TODO: Add content;
-  }
+ ,
+}
   }
 }
     setIsLoaded(true);
     if (onLoad) onLoad();
   }, [onLoad]);
-  const handleError = useCallback(() => {;
+  const handleError = useCallback(() => {
+  ;
     // TODO: Add content;
-  }
+ ,
+}
   }
 }
     setHasError(true);
     if (onError) onError();
   }, [onError]);
-  const imageStyle: React.CSSProperties = {;
+  const imageStyle: React.CSSProperties={;
     // TODO: Add content;
-  }
-  }
+ , }}
 }
-//     ...style,;
+//     ...style;
     ...(fill && {;
     // TODO: Add content;
-  }
+ , }
   }
 }
-  position: 'absolute',;
-      top: 0,;
-      left: 0,;
-      width: '100%',;
-      height: '100%',;
-      objectFit: 'cover',;
+  position: 'absolute,',;
+      top:  ,0,;
+      left:  ,0,;
+      width: '100%,',;
+      height: '100%,',;
+      objectFit: 'cover,',;
     });
   }
   if (hasError) {;
     // TODO: Add content;
-  }
+ , }
   }
 }
     return (;
@@ -99,8 +106,8 @@ className={`bg-gray-200 flex items-center justify-center ${className}`}
         {;
     ...props;
   }
-// >
-          <span className="text-gray-500 text-sm">Failed to load image</span>
+// ></div>
+          <span className='text-gray-500 text-sm'>Failed to load image</span>
       </div>
     );
   }
@@ -110,8 +117,7 @@ className={`bg-gray-200 flex items-center justify-center ${className}`}
           <img;
       src={;
     src;
-  }
-      alt={;
+  }alt={;
     alt;
   }
       width={;
@@ -141,7 +147,7 @@ className={`bg-gray-200 flex items-center justify-center ${className}`}
       {;
     ...props;
   }
-//     />
+//     /></img>
   );
 }
 export default Image;

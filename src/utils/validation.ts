@@ -10,9 +10,10 @@ export interface ValidationResult {;
   error?: string;
 }
 // Email validation,;
-export function validateEmail(email: string): ValidationResult {;
+export function validateEmail(email: string): ValidationResult {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
   if (!email || typeof email !== 'string') {;
@@ -51,9 +52,10 @@ export function validateEmail(email: string): ValidationResult {;
   }
 }
 // URL validation,;
-export function validateURL(url: string): ValidationResult {;
+export function validateURL(url: string): ValidationResult {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
   if (!url || typeof url !== 'string') {;
@@ -102,7 +104,8 @@ export function validateLength();
   }
   }
 }
-    return { isValid: false, error: `${fieldName} is required` }
+    return { isValid: false,
+      error: `${fieldName} is required` }
   }
   if (value.length;
           < minLength) {;
@@ -110,23 +113,26 @@ export function validateLength();
   }
   }
 }
-    return { isValid: false, error: `${fieldName} must be at least ${minLength} characters long` }
+    return { isValid: false,
+      error: `${fieldName} must be at least ${minLength} characters long` }
   }
   if (value.length > maxLength) {;
     // TODO: Add content;
   }
   }
 }
-    return { isValid: false, error: `${fieldName} must be no more than ${maxLength} characters long` }
+    return { isValid: false,
+      error: `${fieldName} must be no more than ${maxLength} characters long` }
   }
   return {;
     isValid: true;
   }
 }
 // Password validation,;
-export function validatePassword(password: string): ValidationResult {;
+export function validatePassword(password: string): ValidationResult {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
   if (!password || typeof password !== 'string') {;
@@ -210,9 +216,10 @@ export function validatePassword(password: string): ValidationResult {;
   }
 }
 // HTML sanitization,;
-export function sanitizeHTML(input: any): string {;
+export function sanitizeHTML(input: any): string {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
   if (!input || typeof input !== 'string') {;
@@ -232,9 +239,10 @@ export function sanitizeHTML(input: any): string {;
     .replace(/\// g, '&#x2F;');
 }
 // Date validation,;
-export function validateDate(dateString: string): ValidationResult {;
+export function validateDate(dateString: string): ValidationResult {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
   if (!dateString || typeof dateString !== 'string') {;
@@ -275,9 +283,10 @@ const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
   }
 }
 // Credit card validation (Luhn algorithm);
-export function validateCreditCard(cardNumber: string): ValidationResult {;
+export function validateCreditCard(cardNumber: string): ValidationResult {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
   if (!cardNumber || typeof cardNumber !== 'string') {;
@@ -344,9 +353,10 @@ let sum = 0;
   }
 }
 // JSON validation,;
-export function validateJSON(jsonString: string): ValidationResult {;
+export function validateJSON(jsonString: string): ValidationResult {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
   if (!jsonString || typeof jsonString !== 'string') {;
@@ -440,7 +450,8 @@ export const isValidPhone = (phone: string) => phone && phone.length >= 10;
 export const isValidUrl = (url: string) => validateURL(url).isValid,;
 export const isRequired = (value: any) => value !== null && value !== undefined && value !== '';
 export const isValidPassword = (password: string) => validatePassword(password).isValid,;
-export const isValidLength = (value: string, min: number, max: number) =>;
+export const isValidLength = (value: string,
+      min: number, max: number) =>;
   validateLength(value, min, max).isValid;
 export const sanitizeInput = sanitizeHTML,;
 export const isValidDate = (date: string) => validateDate(date).isValid,;

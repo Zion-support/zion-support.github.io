@@ -1,6 +1,5 @@
 import fs from 'fs';
 import path from 'path';
-
 const dir = path.join(process.cwd(), 'data');
 const file = path.join(dir, 'shipping-rates.json');
 
@@ -18,12 +17,12 @@ export default async function handler(req, res) {
 
   let rates = [];
   try {
-    const data = fs.readFileSync(file, 'utf8');
+  const data = fs.readFileSync(file, 'utf8');
     rates = JSON.parse(data);
-  } catch (error) {
-    console.error('Error:', error);
-    console.error('Error reading existing rates:', error);
-  }
+} catch (error) {
+  console.error('Error: ', error);
+    console.error('Error reading existing rates: ', error);
+}
 
   const distanceMultiplier = destination === 'US' ? 1 : 2;
   const baseRate = 10;
@@ -48,7 +47,7 @@ export default async function handler(req, res) {
       message: 'Shipping rate calculated successfully'
     }));
   } catch (error) {
-    console.error('Error:', error);
+    console.error('Error: ', error);
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to save rate' }));
   }

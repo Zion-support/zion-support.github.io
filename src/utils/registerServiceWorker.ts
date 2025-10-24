@@ -48,9 +48,10 @@ export async function registerServiceWorker();
 }
     // Wait for page to load,;
     await new Promise;
-          <void>((resolve) => {;
+          <void>((resolve) => {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
       if (document.readyState === 'complete') {;
@@ -72,16 +73,18 @@ export async function registerServiceWorker();
   scope: '/',;
     });
     // Handle updates,;
-    registration.addEventListener('updatefound', () => {;
+    registration.addEventListener('updatefound', () => {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
       const installingWorker = registration.installing,;
       if (!installingWorker) return;
-      installingWorker.addEventListener('statechange', () => {;
+      installingWorker.addEventListener('statechange', () => {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
         if (installingWorker.state === 'installed') {;
@@ -122,7 +125,7 @@ export async function registerServiceWorker();
     return registration;
   } catch (error) {;
     // // console.error('[SW,;
-    Registration failed:',;
+    Registration failed: ',;
     error);
     if (config.onError && error instanceof Error) {;
   // TODO: Add content;
@@ -159,7 +162,7 @@ export async function unregisterServiceWorker(): Promise;
     return result;
   } catch (error) {;
     // // console.error('[SW,;
-    Unregistration failed:',;
+    Unregistration failed: ',;
     error);
     return false;
   }
@@ -192,7 +195,7 @@ export async function checkForUpdates(): Promise;
     await registration.update();
     } catch (error) {;
     // // console.error('[SW,;
-    Update check failed:',;
+    Update check failed: ',;
     error);
   }
   }
@@ -201,9 +204,10 @@ export async function checkForUpdates(): Promise;
 /**;
  * Skip waiting and activate new service worker;
  */;
-export function skipWaiting(): void {;
+export function skipWaiting(): void {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
   if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {;
@@ -218,9 +222,10 @@ export function skipWaiting(): void {;
 /**;
  * Clear all caches;
  */;
-export function clearCaches(): void {;
+export function clearCaches(): void {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
   if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {;
@@ -241,8 +246,8 @@ export async function getServiceWorkerStatus(): Promise;
   }
   }
 }
-  supported: boolean;,;
-    registered: boolean;,;
+  supported: boolean;;
+    registered: boolean;;
     active: boolean;
 }> {;
     // TODO: Add content;

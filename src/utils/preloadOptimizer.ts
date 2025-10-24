@@ -2,9 +2,10 @@
  * Preload Optimizer;
  * Optimizes resource loading for better performance;
  */;
-export const _preloadCriticalResources = () => {;
+export const _preloadCriticalResources = () => {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
   if (typeof window === 'undefined') return;
@@ -47,9 +48,10 @@ const criticalImages = [;
 //     document.head.appendChild(link);
   });
 }
-export const preloadRoute = (route: string) => {;
+export const preloadRoute = (route: string) => {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
   if (typeof window === 'undefined') return;
@@ -81,13 +83,14 @@ const routeResources = {;
     });
   }
 }
-export const optimizeImages = () => {;
+export const optimizeImages = () => {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
   if (typeof window === 'undefined') return;
-  // Add loading="lazy" to images below the fold,;
+  // Add loading='lazy' to images below the fold,;
 const images = document.querySelectorAll('img[data-lazy]');
   images.forEach(img => {;
     // TODO: Add content;
@@ -97,14 +100,15 @@ const images = document.querySelectorAll('img[data-lazy]');
 //     img.setAttribute('loading', 'lazy');
   });
   // Add intersection observer for lazy loading,;
-  if ('IntersectionObserver' in window) {;
+  if('IntersectionObserver' in window) {;
     // TODO: Add content;
   }
   }
 }
-    const imageObserver = new IntersectionObserver((entries) => {;
+    const imageObserver = new IntersectionObserver((entries) => {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
       entries.forEach(entry => {;
@@ -134,9 +138,10 @@ const images = document.querySelectorAll('img[data-lazy]');
     lazyImages.forEach(img => imageObserver.observe(img));
   }
 }
-export const optimizeThirdPartyScripts = () => {;
+export const optimizeThirdPartyScripts = () => {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
   if (typeof window === 'undefined') return;
@@ -155,8 +160,9 @@ const scripts = document.querySelectorAll('script[data-defer]');
   }
   }
 }
-    document.addEventListener('DOMContentLoaded', () => {;
-  }
+    document.addEventListener('DOMContentLoaded', () => {
+  ;
+}
   }
 });
   } else {;
@@ -164,9 +170,10 @@ const scripts = document.querySelectorAll('script[data-defer]');
   }
   }
 }
-const loadAnalytics = () => {;
+const loadAnalytics = () => {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
   // Load Google Analytics after page load,;

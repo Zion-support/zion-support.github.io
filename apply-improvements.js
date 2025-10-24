@@ -24,32 +24,33 @@ function applyImprovements(filePath) {
 
     // Add proper TypeScript types
     if (content.includes('const ') && !content.includes(': ')) {
-      content = content.replace(/const features = \[/g, 'const features: Array<{icon: any, title: string, description: string}> = [');
+      content = content.replace(/const features = \[/g, 'const features: Array<{icon: any,: string, description: string}> = [');
       content = content.replace(/const benefits = \[/g, 'const benefits: Array<string> = [');
-      content = content.replace(/const team = \[/g, 'const team: Array<{name: string, role: string, description: string}> = [');
+      content = content.replace(/const team = \[/g, 'const team: Array<{name: string,
+      role: string, description: string}> = [');
       improved = true;
     }
 
     // Add proper accessibility attributes
     if (content.includes('<button') && !content.includes('aria-label')) {
-      content = content.replace(/<button([^>]*)>/g, '<button$1 aria-label="Action button">');
+      content = content.replace(/<button([^>]*)>/g, '<button$1 aria-label='Action button'>');
       improved = true;
     }
 
     // Add proper SEO meta tags
     if (content.includes('<Head>') && !content.includes('og:title')) {
       content = content.replace(
-        /<meta property="og:type" content="website" \/>/g,
-        '<meta property="og:type" content="website" />\n        <meta property="og:title" content="Zion Tech Group - AI & IT Solutions" />\n        <meta property="og:description" content="Advanced AI and IT solutions for modern businesses" />\n        <meta property="og:image" content="/og-image.jpg" />'
+        /<meta property='og:type' content='website' \/>/g,
+        '<meta property='og:type' content='website' />\n        <meta property='og:title' content='Zion Tech Group - AI & IT Solutions' />\n        <meta property='og:description' content='Advanced AI and IT solutions for modern businesses' />\n        <meta property='og:image' content='/og-image.jpg' />'
       );
       improved = true;
     }
 
     // Add proper loading states
-    if (content.includes('className="') && !content.includes('loading')) {
+    if (content.includes('className='') && !content.includes('loading')) {
       content = content.replace(
-        /className="([^"]*)"([^>]*)>/g,
-        'className="$1" loading="lazy"$2>'
+        /className='([^']*)"([^>]*)>/g,
+        'className='$1' loading='lazy'$2>'
       );
       improved = true;
     }

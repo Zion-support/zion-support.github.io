@@ -18,7 +18,7 @@ class APIClient {
   private baseURL: string
   private defaultHeaders: Record<string, string>
 
-  constructor(baseURL: string = '', defaultHeaders: Record<string, string> = {}) {
+  constructor(baseURL: string = '' defaultHeaders: Record<string, string> = {}) {
     this.baseURL = baseURL
     this.defaultHeaders = {
       'Content-Type': 'application/json',
@@ -28,10 +28,10 @@ class APIClient {
 
   private async makeRequest<T>(
     endpoint: string,
-    config: RequestConfig = {}
+      config: RequestConfig = {}
   ): Promise<APIResponse<T>> {
     const {
-      method = 'GET',
+      method = 'GET'
       headers = {},
       body,
       cache = false,
@@ -65,32 +65,38 @@ class APIClient {
     }
   }
 
-  async get<T>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
-    return this.makeRequest<T>(endpoint, { ...config, method: 'GET' })
+  async get<T>(endpoint: string,
+      config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
+    return this.makeRequest<T>(endpoint, { ...config method: 'GET' })
   }
 
-  async post<T>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method'> = {}): Promise<APIResponse<T>> {
-    return this.makeRequest<T>(endpoint, { ...config, method: 'POST', body })
+  async post<T>(endpoint: string,
+      body?: any, config: Omit<RequestConfig, 'method'> = {}): Promise<APIResponse<T>> {
+    return this.makeRequest<T>(endpoint, { ...config method: 'POST', body })
   }
 
-  async put<T>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method'> = {}): Promise<APIResponse<T>> {
-    return this.makeRequest<T>(endpoint, { ...config, method: 'PUT', body })
+  async put<T>(endpoint: string,
+      body?: any, config: Omit<RequestConfig, 'method'> = {}): Promise<APIResponse<T>> {
+    return this.makeRequest<T>(endpoint, { ...config method: 'PUT', body })
   }
 
-  async patch<T>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method'> = {}): Promise<APIResponse<T>> {
-    return this.makeRequest<T>(endpoint, { ...config, method: 'PATCH', body })
+  async patch<T>(endpoint: string,
+      body?: any, config: Omit<RequestConfig, 'method'> = {}): Promise<APIResponse<T>> {
+    return this.makeRequest<T>(endpoint, { ...config method: 'PATCH', body })
   }
 
-  async delete<T>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
-    return this.makeRequest<T>(endpoint, { ...config, method: 'DELETE' })
+  async delete<T>(endpoint: string,
+      config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
+    return this.makeRequest<T>(endpoint, { ...config method: 'DELETE' })
   }
 
   setBaseURL(baseURL: string): void {
-    this.baseURL = baseURL
-  }
+  this.baseURL = baseURL
+}
 
   setDefaultHeaders(headers: Record<string, string>): void {
-    this.defaultHeaders = { ...this.defaultHeaders, ...headers }
+  this.defaultHeaders = { ...this.defaultHeaders, ...headers
+}
   }
 }
 

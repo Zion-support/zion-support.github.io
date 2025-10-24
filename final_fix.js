@@ -3,8 +3,7 @@ const path = require('path');
 
 // Function to fix missing imports
 function fixMissingImports(content) {
-  const missingIcons = [
-    'MapPin', 'Check', 'Bot', 'Cpu', 'Globe', 'Clock', 'Award', 'Download', 
+  const missingIcons = ['MapPin', 'Check', 'Bot', 'Cpu', 'Globe', 'Clock', 'Award', 'Download', 
     'AlertTriangle', 'Settings', 'Home'
   ];
   
@@ -31,11 +30,11 @@ function fixMissingImports(content) {
     }
     
     if (lastImportIndex >= 0) {
-      lines.splice(lastImportIndex + 1, 0, importStatement);
+  lines.splice(lastImportIndex + 1, 0, importStatement);
       return lines.join('\n');
-    } else {
-      return importStatement + content;
-    }
+} else {
+  return importStatement + content;
+}
   }
   
   return content;
@@ -44,8 +43,8 @@ function fixMissingImports(content) {
 // Function to fix unescaped entities
 function fixUnescapedEntities(content) {
   // Fix quotes in JSX text content
-  content = content.replace(/([^\\])'([^']*?)'([^\\])/g, '$1&apos;$2&apos;$3');
-  content = content.replace(/([^\\])"([^"]*?)"([^\\])/g, '$1&quot;$2&quot;$3');
+  content = content.replace(/([^\\])'([^']*?)'([^\\])/g, '$1'$2'$3');
+  content = content.replace(/([^\\])"([^"]*?)"([^\\])/g, '$1"$2"$3');
   
   return content;
 }
@@ -74,7 +73,7 @@ function fixSyntaxErrors(content) {
   
   if (openBraces > closeBraces) {
     const missingBraces = openBraces - closeBraces;
-    content += '\n' + '}'.repeat(missingBraces);
+    content += '\n}'.repeat(missingBraces);
   }
   
   // Fix empty function bodies

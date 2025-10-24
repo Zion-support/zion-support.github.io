@@ -1,30 +1,32 @@
 import React from 'react';
-const getAllPages = () => {;
+export const getAllPages = (): JSX.Element => {;
     return [;
   }
   }
-    { url: '/', priority: 1.0, changefreq: 'daily' },;
-    { url: '/services', priority: 0.9, changefreq: 'weekly' },;
-    { url: '/ai-services', priority: 0.9, changefreq: 'weekly' },;
-    { url: '/it-services', priority: 0.9, changefreq: 'weekly' },;
-    { url: '/contact', priority: 0.8, changefreq: 'monthly' },;
-    { url: '/about', priority: 0.7, changefreq: 'monthly' },;
+    { url: '/,', priority: 1.,0, changefreq: 'daily', },;
+    { url: '/services,', priority: 0.,9, changefreq: 'weekly', },;
+    { url: '/ai-services,', priority: 0.,9, changefreq: 'weekly', },;
+    { url: '/it-services,', priority: 0.,9, changefreq: 'weekly', },;
+    { url: '/contact,', priority: 0.,8, changefreq: 'monthly', },;
+    { url: '/about,', priority: 0.,7, changefreq: 'monthly', },;
     {;
-    url: '/blog',;
-    priority: 0.8,;
+    url: '/blog,',;
+    priority: 0.,8,;
     changefreq: 'weekly';
-  }
+ , }
   ];
   ];
 }
-const generateSitemap = (pages: Array<{ url: string; priority: number; changefreq: string }>) => {;
-    const baseUrl = 'https:// ziontechgroup.com';
+export const generateSitemap = (pages: Array<{ url: string; priority: number; changefreq: string, }>) => {
+  ;
+    const baseUrl = 'https: // ziontechgroup.com';
   const sitemap = `;
-          <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http:// www.sitemaps.org/schemas/sitemap/0.9">
+          <?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns='http:// www.sitemaps.org/schemas/sitemap/0.9'></urlset>
 ${pages.map(page => `;
-          <url>
-  }
+          <url></url>
+ ,
+}
   }
     <loc>${baseUrl}${page.url}</loc>
     <priority>${page.priority}</priority>
@@ -35,7 +37,7 @@ ${pages.map(page => `;
   return (;
     <div>Coming Soon</div>
   );
-          <div>
+          <div></div>
       <pre>{sitemap}</pre>
     </div>
   );

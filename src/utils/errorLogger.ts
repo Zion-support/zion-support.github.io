@@ -18,8 +18,8 @@ export interface ErrorLogEntry {;
   }
   }
 }
-  timestamp: string;,;
-    severity: ErrorSeverity;,;
+  timestamp: string;;
+    severity: ErrorSeverity;;
     message: string;
   error?: Error;
   context?: Record;
@@ -40,7 +40,7 @@ class ErrorLogger {;
    */;
 //   log(),;
     message: string,;
-    _severity: ErrorSeverity = ErrorSeverity.MEDIUM,;
+    _severity: ErrorSeverity = ErrorSeverity.MEDIUM;
     error?: Error,;
     context?: Record;
           <string, unknown>
@@ -92,9 +92,10 @@ class ErrorLogger {;
   /**;
    * Log to console with appropriate styling;
    */;
-  private logToConsole(entry: ErrorLogEntry): void {;
+  private logToConsole(entry: ErrorLogEntry): void {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     const styles: Record;
@@ -110,7 +111,7 @@ class ErrorLogger {;
     }
     console.group(`%c[${entry.severity.toUpperCase()}] ${entry.message}`, styles[entry.severity]);
     if (entry.error) {;
-    // // console.error('Error:',;
+    // // console.error('Error: ',;
     entry.error);
   }
   }
@@ -169,7 +170,7 @@ class ErrorLogger {;
   }
   }
 }
-//           ...entry,;
+//           ...entry;
           error: entry.error;
             ? {;
     // TODO: Add content;
@@ -215,9 +216,10 @@ class ErrorLogger {;
   /**;
    * Clear all logs;
    */;
-  clearLogs(): void {;
+  clearLogs(): void {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     this.logs = [];
@@ -225,9 +227,10 @@ class ErrorLogger {;
   /**;
    * Export logs as JSON;
    */;
-  exportLogs(): string {;
+  exportLogs(): string {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     return JSON.stringify(this.logs, null, 2);
@@ -236,13 +239,17 @@ class ErrorLogger {;
 // Singleton instance,;
 const errorLogger = new ErrorLogger();
 // Convenience functions,;
-export const logError = (message: string, error?: Error, context?: Record,;
+export const logError = (message: string,
+      error?: Error, context?: Record,;
           <string, unknown>) =>;
   errorLogger.log(message, ErrorSeverity.MEDIUM, error, context);
-export const logCritical = (message: string, error?: Error, context?: Record<string, unknown>) =>;
+export const logCritical = (message: string,
+      error?: Error, context?: Record<string, unknown>) =>;
   errorLogger.log(message, ErrorSeverity.CRITICAL, error, context);
-export const logWarning = (message: string, context?: Record<string, unknown>) =>;
+export const logWarning = (message: string,
+      context?: Record<string, unknown>) =>;
   errorLogger.log(message, ErrorSeverity.LOW, undefined, context);
-export const logInfo = (message: string, context?: Record<string, unknown>) =>;
+export const logInfo = (message: string,
+      context?: Record<string, unknown>) =>;
   errorLogger.log(message, ErrorSeverity.LOW, undefined, context);
 export default errorLogger;

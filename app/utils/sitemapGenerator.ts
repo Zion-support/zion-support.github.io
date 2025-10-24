@@ -40,11 +40,12 @@ export const generateSitemap = useCallback((...args) => {
 '/marketing-tools',
 '/productivity'
 ]
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+const sitemap = `<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
 ${staticPages.map(page => `
 <url>
-<loc>${baseUrl}${page}</loc>
+<loc>${baseUrl
+}${page}</loc>
 <lastmod>${new Date().toISOString()}</lastmod>
 <changefreq>weekly</changefreq>
 <priority>${page === '' ? '1.0' : '0.8'}</priority>
@@ -52,7 +53,9 @@ ${staticPages.map(page => `
 </urlset>`
 return sitemap
 }
-export const generateRobotsTxt = useCallback((...args) => {}
+export const generateRobotsTxt = useCallback((...args) => {
+  
+}
 return `User-agent: *
 Allow: /
 Sitemap: https://ziontechgroup.com/sitemap.xml
@@ -70,7 +73,7 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
 l: `${baseUrl}/`,
 lastmo,
 d: currentDate,
-changefre,
+      changefre,
 q: 'daily',
 priorit,
 y: 1.0
@@ -79,7 +82,7 @@ y: 1.0
 l: `${baseUrl}/about`,
 lastmo,
 d: currentDate,
-changefre,
+      changefre,
 q: 'monthly',
 priorit,
 y: 0.8
@@ -88,7 +91,7 @@ y: 0.8
 l: `${baseUrl}/services`,
 lastmo,
 d: currentDate,
-changefre,
+      changefre,
 q: 'weekly',
 priorit,
 y: 0.9
@@ -97,7 +100,7 @@ y: 0.9
 l: `${baseUrl}/ai-services`,
 lastmo,
 d: currentDate,
-changefre,
+      changefre,
 q: 'weekly',
 priorit,
 y: 0.9
@@ -106,7 +109,7 @@ y: 0.9
 l: `${baseUrl}/it-services`,
 lastmo,
 d: currentDate,
-changefre,
+      changefre,
 q: 'weekly',
 priorit,
 y: 0.9
@@ -115,7 +118,7 @@ y: 0.9
 l: `${baseUrl}/quantum-computing`,
 lastmo,
 d: currentDate,
-changefre,
+      changefre,
 q: 'weekly',
 priorit,
 y: 0.9
@@ -124,7 +127,7 @@ y: 0.9
 l: `${baseUrl}/autonomous-systems`,
 lastmo,
 d: currentDate,
-changefre,
+      changefre,
 q: 'weekly',
 priorit,
 y: 0.9
@@ -133,7 +136,7 @@ y: 0.9
 l: `${baseUrl}/micro-saas`,
 lastmo,
 d: currentDate,
-changefre,
+      changefre,
 q: 'weekly',
 priorit,
 y: 0.8
@@ -142,7 +145,7 @@ y: 0.8
 l: `${baseUrl}/enterprise`,
 lastmo,
 d: currentDate,
-changefre,
+      changefre,
 q: 'weekly',
 priorit,
 y: 0.9
@@ -151,7 +154,7 @@ y: 0.9
 l: `${baseUrl}/contact`,
 lastmo,
 d: currentDate,
-changefre,
+      changefre,
 q: 'monthly',
 priorit,
 y: 0.8
@@ -160,7 +163,7 @@ y: 0.8
 l: `${baseUrl}/team`,
 lastmo,
 d: currentDate,
-changefre,
+      changefre,
 q: 'monthly',
 priorit,
 y: 0.7
@@ -169,7 +172,7 @@ y: 0.7
 l: `${baseUrl}/case-studies`,
 lastmo,
 d: currentDate,
-changefre,
+      changefre,
 q: 'weekly',
 priorit,
 y: 0.8
@@ -178,7 +181,7 @@ y: 0.8
 l: `${baseUrl}/blog`,
 lastmo,
 d: currentDate,
-changefre,
+      changefre,
 q: 'daily',
 priorit,
 y: 0.8
@@ -187,7 +190,7 @@ y: 0.8
 l: `${baseUrl}/privacy`,
 lastmo,
 d: currentDate,
-changefre,
+      changefre,
 q: 'yearly',
 priorit,
 y: 0.3
@@ -196,7 +199,7 @@ y: 0.3
 l: `${baseUrl}/terms`,
 lastmo,
 d: currentDate,
-changefre,
+      changefre,
 q: 'yearly',
 priorit,
 y: 0.3

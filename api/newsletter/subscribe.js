@@ -24,14 +24,14 @@ export default async function handler(req, res) {
   }
 
   try {
-    console.log('Newsletter subscription:', email);
+    console.log('Newsletter subscription: ', email);
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
-      success: true, 
+      success: true,
       message: 'Successfully subscribed to newsletter' 
     }));
   } catch (error) {
-    console.error('Newsletter subscription error:', error);
+    console.error('Newsletter subscription error: ', error);
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       error: 'Failed to subscribe to newsletter',

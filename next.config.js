@@ -2,7 +2,7 @@
 const nextConfig = {
   output: 'standalone',
   trailingSlash: true,
-  images: {
+      images: {
     unoptimized: true
   },
   eslint: {

@@ -1,11 +1,12 @@
 const withErrorLogging = (handler) => {
   return async (req, res) => {
     try {
-      await handler(req, res);
-    } catch (error) {
-      console.error('API Error:', error);
+  await handler(req, res);
+} catch (error) {
+  console.error('API Error: ', error);
       res.setHeader('Content-Type', 'application/json');
-      res.end(JSON.stringify({ error: 'Internal server error' }));
+      res.end(JSON.stringify({ error: 'Internal server error'
+}));
     }
   };
 };
@@ -13,7 +14,8 @@ const withErrorLogging = (handler) => {
 export default withErrorLogging(async (req, res) => {
   if (req.method !== 'POST') {
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Method not allowed' }));
+    res.end(JSON.stringify({ error: 'Method not allowed'
+}));
     return;
   }
 
@@ -34,7 +36,7 @@ export default withErrorLogging(async (req, res) => {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify(paymentIntent));
   } catch (error) {
-    console.error('Payment intent creation error:', error);
+    console.error('Payment intent creation error: ', error);
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to create payment intent' }));
   }

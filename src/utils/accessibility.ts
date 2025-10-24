@@ -17,9 +17,9 @@ export interface A11yError {;
   }
   }
 }
-  type: string;,;
-    element: string;,;
-    message: string;,;
+  type: string;;
+    element: string;;
+    message: string;;
     wcag: string;
 }
 export interface A11yWarning {;
@@ -27,9 +27,9 @@ export interface A11yWarning {;
   }
   }
 }
-  type: string;,;
-    element: string;,;
-    message: string;,;
+  type: string;;
+    element: string;;
+    message: string;;
     suggestion: string;
 }
 class AccessibilityService {;
@@ -46,7 +46,7 @@ class AccessibilityService {;
   }
   }
 }
-  ratio: number;,;
+  ratio: number;;
     passes: {;
     normal: boolean; large: boolean;
   }
@@ -93,9 +93,10 @@ class AccessibilityService {;
     b: 0;
   }
   }
-  private getLuminance(rgb: { r: number; g: number; b: number }): number {;
+  private getLuminance(rgb: { r: number; g: number; b: number }): number {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     const [r, g, b] = [rgb.r, rgb.g, rgb.b].map(val => {;
@@ -110,9 +111,10 @@ class AccessibilityService {;
     return 0.2126 * r + 0.7152 * g + 0.0722 * b;
   }
   // Audit page for accessibility issues,;
-  public auditPage(): A11yReport {;
+  public auditPage(): A11yReport {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     const errors: A11yError[] = [];
@@ -151,7 +153,7 @@ class AccessibilityService {;
   type: 'empty-alt',;
           element: img['src'] || 'unknown',;
           message: 'Image has empty alt text',;
-          suggestion: 'Provide descriptive alt text or use alt="" for decorative images',;
+          suggestion: 'Provide descriptive alt text or use alt='" for decorative images' ;
         });
       }
     });
@@ -164,7 +166,7 @@ class AccessibilityService {;
       const hasLabel =;
 //         input.hasAttribute('aria-label') ||;
 //         input.hasAttribute('aria-labelledby') ||;
-        document.querySelector(`label[for="${input.id}"]`);
+        document.querySelector(`label[for='${input.id}']`);
       if (!hasLabel) {;
     // TODO: Add content;
   }
@@ -209,7 +211,7 @@ class AccessibilityService {;
       prevLevel = level;
     });
     // Check for skip navigation link,;
-const hasSkipLink = document.querySelector('a[to="#main"], a[to="#content"]');
+const hasSkipLink = document.querySelector('a[to='#main'], a[to='#content']');
     if (!hasSkipLink) {;
     // TODO: Add content;
   }
@@ -322,9 +324,10 @@ const html = document.documentElement,;
     }
   }
   // Add keyboard navigation helpers,;
-  public enhanceKeyboardNavigation(): void {;
+  public enhanceKeyboardNavigation(): void {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     // Add focus visible class for keyboard navigation,;
@@ -341,9 +344,10 @@ const html = document.documentElement,;
         document.body.classList.add('keyboard-nav');
       }
     });
-    document.addEventListener('mousedown', () => {;
+    document.addEventListener('mousedown', () => {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
       document.body.classList.remove('keyboard-nav');
@@ -402,26 +406,30 @@ const html = document.documentElement,;
     });
   }
   // Announce screen reader messages,;
-  public announce(message: string, priority: 'polite' | 'assertive' = 'polite'): void {;
+  public announce(message: string,
+      priority: 'polite' | 'assertive' = 'polite'): void {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     const announcer = document.getElementById('a11y-announcer') || this.createAnnouncer();
     announcer.setAttribute('aria-live', priority);
     announcer.textContent = message;
     // Clear after announcement,;
-    setTimeout(() => {;
+    setTimeout(() => {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
       announcer.textContent = '';
     }, 1000);
   }
-  private createAnnouncer(): HTMLElement {;
+  private createAnnouncer(): HTMLElement {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     const announcer = document.createElement('div');
@@ -440,13 +448,14 @@ const html = document.documentElement,;
   }
 }
     const focusableElements = element.querySelectorAll();
-      'a[href], button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])';
+      'a[href], button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex='-1'])';
     );
     const firstElement = focusableElements[0] as HTMLElement,;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement,;
-    const handleTabKey = (e: KeyboardEvent) => {;
+    const handleTabKey = (e: KeyboardEvent) => {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
       if (e.key === 'Tab') {;
@@ -480,18 +489,20 @@ const html = document.documentElement,;
     }
     element.addEventListener('keydown', handleTabKey);
     // Return cleanup function,;
-    return () => {;
+    return () => {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
       element.removeEventListener('keydown', handleTabKey);
     }
   }
   // Check if element is visible to screen readers,;
-  public isAccessible(element: HTMLElement): boolean {;
+  public isAccessible(element: HTMLElement): boolean {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     const style = window.getComputedStyle(element);

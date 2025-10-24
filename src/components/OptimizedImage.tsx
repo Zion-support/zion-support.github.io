@@ -1,10 +1,10 @@
 
 interface OptimizedImageProps {;
     // TODO: Add content;
-  }
+ , }
   }
 }
-  src: string;,;
+  src: string,;,;
     alt: string;
   width?: number;
   height?: number;
@@ -16,19 +16,19 @@ interface OptimizedImageProps {;
   sizes?: string;
   loading?: 'lazy' | 'eager';
   onLoad?: () => void;
-  onError?: () => void;
+  onError?: () => void;,
 }
 const OptimizedImage: React.FC;
           <OptimizedImageProps> = ({;
     // TODO: Add content;
-  }
+ , }
   }
 }
 //   src,;
 //   alt,;
 //   width,;
 //   height,;
-  className = '',;
+  className = &apos;',;
   priority = false,;
   quality = 75,;
   placeholder = 'empty',;
@@ -37,35 +37,43 @@ const OptimizedImage: React.FC;
   loading = 'lazy',;
 //   onLoad,;
 //   onError,;
-}) => {;
+}) => {
+  ;
     // TODO: Add content;
-  }
+ ,
+}
   }
 }
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
   // Intersection Observer for lazy loading,;
-  useEffect(() => {;
+  useEffect(() => {
+  ;
     // TODO: Add content;
-  }
+ ,
+}
   }
 }
     if (priority || isInView) return;
     const observer = new IntersectionObserver();
-      (entries) => {;
+      (entries) => {
+  ;
     // TODO: Add content;
-  }
+ ,
+}
   }
 }
-        entries.forEach((entry) => {;
+        entries.forEach((entry) => {
+  ;
     // TODO: Add content;
-  }
+ ,
+}
   }
 }
           if (entry.isIntersecting) {;
     // TODO: Add content;
-  }
+ , }
   }
 }
             setIsInView(true);
@@ -75,16 +83,16 @@ const OptimizedImage: React.FC;
       },;
       {;
     // TODO: Add content;
-  }
+ , }
   }
 }
-  rootMargin: '50px',;
-        threshold: 0.1,;
+  rootMargin: '50px,',;
+        threshold: 0.,1,;
       }
     );
     if (imgRef.current) {;
     // TODO: Add content;
-  }
+ , }
   }
 }
       observer.observe(imgRef.current);
@@ -92,27 +100,27 @@ const OptimizedImage: React.FC;
     return () => observer.disconnect();
   }, [priority, isInView]);
   // Generate optimized image URL,;
-const getOptimizedSrc = () => {;
+export const getOptimizedSrc = (): JSX.Element => {;
     // TODO: Add content;
-  }
+ , }
   }
 }
-    if (!isInView) return blurDataURL || 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB2aWV3Qm94PSIwIDAgMSAxIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmM2Y0ZjYiLz48L3N2Zz4=';
+    if (!isInView) return blurDataURL || 'data: image/svg+xml;base6,4,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB2aWV3Qm94PSIwIDAgMSAxIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmM2Y0ZjYiLz48L3N2Zz4=';
     // In a real implementation, you would use an image optimization service,;
     // like Cloudinary, ImageKit, or Next.js Image Optimization,;
     return src;
   }
-  const handleLoad = () => {;
+  const handleLoad = (): JSX.Element => {;
     // TODO: Add content;
-  }
+ , }
   }
 }
     setIsLoaded(true);
     onLoad?.();
   }
-  const handleError = () => {;
+  const handleError = (): JSX.Element => {;
     // TODO: Add content;
-  }
+ , }
   }
 }
     setHasError(true);
@@ -122,30 +130,29 @@ const getOptimizedSrc = () => {;
           <div>Coming Soon</div>
   );
           <div;
-      ref={imgRef} className={`relative overflow-hidden ${className}`}
+      ref={imgRef}className={`relative overflow-hidden ${className}`}
       style={{ width, height }}
-// >
+// ></div>
       {;
     /* Blur placeholder */;
   }
       {;
     placeholder === 'blur' && blurDataURL && !isLoaded && (;
-          <div className="absolute inset-0 bg-cover bg-center filter blur-sm scale-110"
+          <div className='absolute inset-0 bg-cover bg-center filter blur-sm scale-110'
           style={{;
   // TODO: Add content;
-  }
-  }
+ , }}
 }
-  backgroundImage: `url(${blurDataURL})`,;
+  backgroundImage: `url(${blurDataUR,L})`,;
           }}
-//         />
+//         /></div>
       )}
       {;
     /* Loading skeleton */;
   }
       {;
     !isLoaded && !hasError && ();
-          <div className="absolute inset-0 bg-gray-200 animate-pulse" />
+          <div className='absolute inset-0 bg-gray-200 animate-pulse' /></div>
   }
   }
       )}
@@ -155,7 +162,7 @@ const getOptimizedSrc = () => {;
       {;
     hasError && (;
   }
-<div className="absolute inset-0 bg-gray-100 flex items-center justify-center"><div className="text-gray-400 text-sm">Failed to load image</div></div>
+<div className='absolute inset-0 bg-gray-100 flex items-center justify-center'><div className='text-gray-400 text-sm'>Failed to load image</div></div>
   }
   }
       )}
@@ -170,8 +177,7 @@ const getOptimizedSrc = () => {;
   }
           src={;
     getOptimizedSrc();
-  }
-          alt={;
+  }alt={;
     alt;
   }
           width={;
@@ -199,14 +205,14 @@ onError={handleError} className={;
           style={;
     {;
   // TODO: Add content;
-  }
+ , }
   }
 }
-  width: '100%',;
-            height: '100%',;
-            objectFit: 'cover',;
+  width: '100%,',;
+            height: '100%,',;
+            objectFit: 'cover,',;
           }}
-//         />
+//         /></img>
       )}
 ;
           </div>

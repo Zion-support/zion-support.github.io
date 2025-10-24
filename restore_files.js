@@ -11,14 +11,16 @@ function restoreFile(content) {
   content = content.replace(/&amp;/g, '&');
   
   // Fix broken quotes in strings
-  content = content.replace(/"use client&quot;/g, '"use client"');
-  content = content.replace(/import.*from &quot;([^&]+)&quot;/g, 'import $1 from "$2"');
-  content = content.replace(/import {([^}]+)} from &quot;([^&]+)&quot;/g, 'import {$1} from "$2"');
+  content = content.replace(/"use client"/g, '"use client"');
+  content = content.replace(/import.*from "([^&]+)"/g, 'import $1 from "$2"');
+  content = content.replace(/import {([^}]+)} from "([^&]+)&quot;/g, 'import {$1} from "$2"');
   
   // Fix broken semicolons
   content = content.replace(/;\s*$/gm, '');
-  content = content.replace(/const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{\s*;\s*$/gm, 'const $1 = () => {');
-  content = content.replace(/return\s*null\s*;\s*}\s*;\s*export/g, 'return null;\n};\n\nexport');
+  content = content.replace(/const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{\s*;\s*$/gm, 'const $1 = () => {
+  ');
+  content = content.replace(/return\s*null\s*;\s*
+}\s*;\s*export/g, 'return null;\n};\n\nexport');
   
   // Fix missing closing braces
   const openBraces = (content.match(/{/g) || []).length;
@@ -26,7 +28,7 @@ function restoreFile(content) {
   
   if (openBraces > closeBraces) {
     const missingBraces = openBraces - closeBraces;
-    content += '\n' + '}'.repeat(missingBraces);
+    content += '\n}'.repeat(missingBraces);
   }
   
   return content;

@@ -80,7 +80,8 @@ export const _performanceConfig = {;
   preload: [;
   // TODO: Add items,;
 ];
-    { href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },;
+    { href: '/fonts/inter-var.woff2',
+      as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },;
 //   ],;
   prefetch: [;
   // TODO: Add items,;

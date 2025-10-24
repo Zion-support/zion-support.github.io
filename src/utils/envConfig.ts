@@ -11,8 +11,8 @@ export interface EnvConfig {;
   nodeEnv: 'development' | 'production' | 'test';,;
     apiUrl: string;
   apiKey?: string;,;
-    enableAnalytics: boolean;,;
-    enableLogging: boolean;,;
+    enableAnalytics: boolean;;
+    enableLogging: boolean;;
     logLevel: 'debug' | 'info' | 'warn' | 'error';
   sentryDsn?: string;
   gaTrackingId?: string;
@@ -32,11 +32,12 @@ class EnvironmentConfig {;
     this.config = this.loadConfig();
     this.isInitialized = true;
   }
-  private loadConfig(): EnvConfig {;
+  private loadConfig(): EnvConfig {
+  ;
     // Safely access environment variables with defaults,;
     return {;
   // TODO: Add content;
-  }
+}
   }
 }
 //       nodeEnv,;
@@ -77,9 +78,10 @@ class EnvironmentConfig {;
   /**;
    * Check if running in production;
    */;
-  public isProduction(): boolean {;
+  public isProduction(): boolean {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     return this.config.nodeEnv === 'production';
@@ -87,9 +89,10 @@ class EnvironmentConfig {;
   /**;
    * Check if running in development;
    */;
-  public isDevelopment(): boolean {;
+  public isDevelopment(): boolean {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     return this.config.nodeEnv === 'development';
@@ -97,9 +100,10 @@ class EnvironmentConfig {;
   /**;
    * Check if running in test mode;
    */;
-  public isTest(): boolean {;
+  public isTest(): boolean {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     return this.config.nodeEnv === 'test';
@@ -112,7 +116,7 @@ class EnvironmentConfig {;
   }
   }
 }
-  valid: boolean;,;
+  valid: boolean;;
     missing: string[];
   } {;
     // TODO: Add content;
@@ -171,9 +175,10 @@ class EnvironmentConfig {;
   /**;
    * Log configuration in development mode;
    */;
-  public logConfig(): void {;
+  public logConfig(): void {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     if (this.isDevelopment()) {;

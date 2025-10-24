@@ -24,7 +24,7 @@ function fixSyntax(content) {
   
   if (openBraces > closeBraces) {
     const missingBraces = openBraces - closeBraces;
-    content += '\n' + '}'.repeat(missingBraces);
+    content += '\n}'.repeat(missingBraces);
   }
   
   return content;

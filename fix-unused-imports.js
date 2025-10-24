@@ -15,7 +15,7 @@ const getFiles = (dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) => {
     
     if (stat.isDirectory() && !item.startsWith('.') && !item.includes('node_modules') && !item.includes('dist')) {
       files = files.concat(getFiles(fullPath, extensions));
-    } else if (extensions.some(ext => item.endsWith(ext))) {
+} else if (extensions.some(ext => item.endsWith(ext))) {
       files.push(fullPath);
     }
   }
@@ -30,8 +30,7 @@ const removeUnusedImports = (filePath) => {
     const originalContent = content;
     
     // Common unused imports to remove
-    const unusedImports = [
-      'Download', 'Share', 'Star', 'Clock', 'Users', 'Award', 'ArrowRight', 'Sparkles',
+    const unusedImports = ['Download', 'Share', 'Star', 'Clock', 'Users', 'Award', 'ArrowRight', 'Sparkles',
       'Eye', 'DollarSign', 'Zap', 'Mail', 'MapPin', 'Shield', 'Globe', 'Target',
       'PieChart', 'Activity', 'AlertCircle', 'CheckCircle', 'MessageSquare', 'Phone',
       'TrendingUp', 'Database', 'Settings', 'AlertTriangle', 'Headphones', 'Bot',
@@ -45,7 +44,8 @@ const removeUnusedImports = (filePath) => {
     ];
     
     // Remove unused imports from lucide-react
-    const lucideImports = content.match(/import\s*{\s*[^}]*}\s*from\s*['"]lucide-react['"];?/g);
+    const lucideImports = content.match(/import\s*{\s*[^
+}]*}\s*from\s*['"]lucide-react['"];?/g);
     if (lucideImports) {
       lucideImports.forEach(importLine => {
         const importMatch = importLine.match(/import\s*{\s*([^}]*)\s*}\s*from\s*['"]lucide-react['"];?/);

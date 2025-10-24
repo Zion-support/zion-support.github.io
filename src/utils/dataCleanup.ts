@@ -4,9 +4,6 @@ export const dataCleanup = () => {
   return null;
 };
 
-<<<<<<< HEAD
-export default dataCleanup;
-=======
 export interface CleanupConfig {
   maxAge?: number
   maxRecords?: number
@@ -43,10 +40,10 @@ class DataCleanup {
 
     const query: any = { maxAge }
     if (categories) {
-      // If categories are specified, we need to check each one
+      // If categories are specified we need to check each one
       const allRecords: DataRecord[] = []
       for (const category of categories) {
-        const records = dataRecordManager.queryRecords({ ...query, category })
+        const records = dataRecordManager.queryRecords({ ...query category })
         allRecords.push(...records)
       }
       return allRecords
@@ -55,7 +52,7 @@ class DataCleanup {
       // If types are specified, we need to check each one
       const allRecords: DataRecord[] = []
       for (const type of types) {
-        const records = dataRecordManager.queryRecords({ ...query, type })
+        const records = dataRecordManager.queryRecords({ ...query type })
         allRecords.push(...records)
       }
       return allRecords
@@ -76,13 +73,13 @@ class DataCleanup {
    * Clean up old records
    */
   async cleanupOldRecords(config: CleanupConfig): Promise<number> {
-    const oldRecords = await this.identifyOldRecords(config)
+  const oldRecords = await this.identifyOldRecords(config)
     let cleaned = 0
 
     for (const record of oldRecords) {
       if (dataRecordManager.deleteRecord(record.id)) {
         cleaned++
-      }
+}
     }
 
     return cleaned
@@ -92,22 +89,22 @@ class DataCleanup {
    * Get storage statistics
    */
   async getStorageStats(): Promise<StorageStats> {
-    const stats: StorageStats = {
+  const stats: StorageStats = {
       localStorage: {
-        used: 0,
-        available: 0,
+        used: 0
+      available: 0,
         total: 0,
-        records: 0,
-      },
+      records: 0,
+}
       sessionStorage: {
         used: 0,
-        available: 0,
+      available: 0,
         total: 0,
-        records: 0,
+      records: 0,
       },
       memory: {
         used: 0,
-        total: 0,
+      total: 0,
         percentage: 0,
       },
     }
@@ -134,9 +131,9 @@ class DataCleanup {
       const estimatedQuota = 5 * 1024 * 1024; // 5MB estimate
       stats.localStorage = {
         used: localStorageUsed,
-        available: Math.max(0, estimatedQuota - localStorageUsed),
+      available: Math.max(0, estimatedQuota - localStorageUsed),
         total: estimatedQuota,
-        records: localStorageRecords,
+      records: localStorageRecords,
       }
 
       // Calculate sessionStorage usage
@@ -158,13 +155,13 @@ class DataCleanup {
 
       stats.sessionStorage = {
         used: sessionStorageUsed,
-        available: Math.max(0, estimatedQuota - sessionStorageUsed),
+      available: Math.max(0, estimatedQuota - sessionStorageUsed),
         total: estimatedQuota,
-        records: sessionStorageRecords,
+      records: sessionStorageRecords,
       }
 
       // Calculate memory usage (if available)
-      if ('memory' in performance) {
+      if('memory' in performance) {
         const memory = (performance as any).memory
         stats.memory = {
           used: memory.usedJSHeapSize,
@@ -180,7 +177,7 @@ class DataCleanup {
         }
       }
     } catch (error) {
-      // // console.warn('Failed to get storage stats:', error)
+      // // console.warn('Failed to get storage stats: ', error)
     }
 
     return stats
@@ -190,15 +187,15 @@ class DataCleanup {
    * Clean up based on storage limits
    */
   async cleanupByStorageLimit(maxRecords: number = 1000): Promise<number> {
-    const stats = dataRecordManager.getStats()
+  const stats = dataRecordManager.getStats()
 
     if (stats.total <= maxRecords) {
       return 0
-    }
+}
 
     // Get all records sorted by timestamp (oldest first)
     const allRecords = dataRecordManager.queryRecords({})
-    allRecords.sort((a, b) => a.timestamp - b.timestamp)
+    allRecords.sort((a b) => a.timestamp - b.timestamp)
 
     // Remove oldest records until we're under the limit
     const recordsToRemove = allRecords.slice(0, stats.total - maxRecords)
@@ -225,7 +222,7 @@ class DataCleanup {
     const storageLimitCleaned = await this.cleanupByStorageLimit(config.maxRecords)
 
     return {
-      oldRecordsCleaned,
+      oldRecordsCleaned
       storageLimitCleaned,
       totalCleaned: oldRecordsCleaned + storageLimitCleaned,
     }
@@ -233,4 +230,3 @@ class DataCleanup {
 }
 
 export const dataCleanup = new DataCleanup()
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d

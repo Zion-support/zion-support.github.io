@@ -29,34 +29,37 @@ class SEOEnhancer {;
   }
   }
   }
-  private init(): void {;
+  private init(): void {
+  ;
     // Initialize SEO enhancements,;
     this.updateMetaTags();
+}
   }
   }
   }
-  }
-  private updateMetaTags(): void {;
+  private updateMetaTags(): void {
+  ;
     if (typeof document !== 'undefined') {;
       // Update title,;
     document.title = this.config.title;
       // Update meta description,;
-    let metaDescription = document.querySelector('meta[name="description",;
+    let metaDescription = document.querySelector('meta[name='description' ;
     ');
       if (!metaDescription) {;
         metaDescription = document.createElement('meta');
         metaDescription.setAttribute('name',;
     'description');
         document.head.appendChild(metaDescription);
-  }
+}
   }
   }
       }
       metaDescription.setAttribute('content', this.config.description);
     }
   }
-  public updateConfig(newConfig: Partial<SEOConfig>): void {;
-  }
+  public updateConfig(newConfig: Partial<SEOConfig>): void {
+  ;
+}
   }
     this.config = {;
     ...this.config,;

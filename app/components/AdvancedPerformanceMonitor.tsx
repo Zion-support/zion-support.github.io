@@ -1,41 +1,39 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import { Helmet  } from "react-helmet-async";
+import { ArrowRight, Brain, BarChart, Target, TrendingUp  } from "lucide-react";
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
-
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check  } from "lucide-react";
 const AdvancedPerformanceMonitorPage: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
+      icon: Brai,
+      title: 'AI-Powered Intelligence,',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
+}
     {
-      icon: BarChart,
-      title: 'Advanced Analytics',
+      icon: BarChar,
+      title: 'Advanced Analytics,',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
     {
-      icon: Target,
-      title: 'Precision Targeting',
+      icon: Targe,
+      title: 'Precision Targeting,',
       description: 'Target specific goals and objectives with precision and accuracy.',
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
     {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
+      icon: TrendingU,
+      title: 'Growth Optimization,',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ]
 
-  const benefits = [
-    'Increase efficiency by up to 50%',
+  const benefits = ['Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
@@ -43,55 +41,55 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
   ]
 
   return (
-    <>
-      <Helmet>
+    <><Helmet></Helmet>
         <title>AdvancedPerformanceMonitor</title>
-        <meta name=&quot;description&quot; content=&quot;Advanced AdvancedPerformanceMonitor solution for modern businesses.&quot; />
-        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, AdvancedPerformanceMonitor, AI solutions, intelligent automation&quot; />
+        <meta name='description' content='Advanced AdvancedPerformanceMonitor solution for modern businesses.' /></meta>
+        <meta name='keywords' content='AI, artificial intelligence, AdvancedPerformanceMonitor, AI solutions, intelligent automation' /></meta>
       </Helmet>
-      <Navigation />
-      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
+      <Navigation /></Navigation>
+      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900'></div>
         {/* Hero Section */}
-        <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
-          <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
-          <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md:text-7xl font-bold text-white mb-6 leading-tight&quot;>
+        <section className='relative py-20 px-4 overflow-hidden'></section>
+          <div className='absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20'></div>
+          <div className='relative max-w-7xl mx-auto text-center'></div>
+            <h1 className='text-5xl md: text-7xl font-bold text-white mb-6 leading-tight'></h1>
               AdvancedPerformanceMonitor
             </h1>
-            <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
+            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed'></p>
               Advanced AdvancedPerformanceMonitor solution for modern businesses.
             </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'></div>
+              <button className='bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center'></button>
                 Get Started
-                <ArrowRight className=&quot;ml-2 h-5 w-5&quot; />
+                <ArrowRight className='ml-2 h-5 w-5' /></ArrowRight>
               </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
+              <button className='border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200'></button>
                 Learn More
               </button>
             </div>
           </div>
         </section>
+    </>
 
-        {/* Features Section */}
-        <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Key Features</h2>
-              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
+        {/* Features Section *,/}
+        <section className='py-20 px-4'></section>
+          <div className='max-w-7xl mx-auto'></div>
+            <div className='text-center mb-16'></div>
+              <h2 className='text-4xl font-bold text-white mb-4'>Key Features</h2>
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'></p>
                 Powerful AI-driven features designed to transform your business operations
               </p>
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
-              {features.map((feature, index) => (
-                <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
-                  <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; />
-                  <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{feature.title}</h3>
-                  <p className=&quot;text-gray-300 mb-4&quot;>{feature.description}</p>
-                  <ul className=&quot;space-y-2&quot;>
+            <div className='grid md: grid-cols-2 lg:grid-cols-4 gap-8'></div>
+              {features.map((featur, e, index) => (
+                <div key={index}className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20'></div>
+                  <feature.icon className='h-12 w-12 text-emerald-400 mb-4' /></feature>
+                  <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>
+                  <p className='text-gray-300 mb-4'>{feature.description}</p>
+                  <ul className='space-y-2'></ul>
                     {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className=&quot;flex items-center text-sm text-gray-300&quot;>
-                        <CheckCircle className=&quot;h-4 w-4 text-emerald-400 mr-2 flex-shrink-0&quot; />
+                      <li key={idx}className='flex items-center text-sm text-gray-300'></li>
+                        <CheckCircle className='h-4 w-4 text-emerald-400 mr-2 flex-shrink-0' /></CheckCircle>
                         {benefit}
                       </li>
                     ))}
@@ -103,19 +101,19 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
-              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
+        <section className='py-20 px-4 bg-white/5'></section>
+          <div className='max-w-7xl mx-auto'></div>
+            <div className='text-center mb-16'></div>
+              <h2 className='text-4xl font-bold text-white mb-4'>Why Choose Our Solution</h2>
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'></p>
                 Experience the benefits of cutting-edge AI technology
               </p>
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
-              {benefits.map((benefit, index) => (
-                <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
-                  <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
-                  <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
+            <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'></div>
+              {benefits.map((benefi, t, index) => (
+                <div key={index}className='flex items-start space-x-4'></div>
+                  <CheckCircle className='h-6 w-6 text-emerald-400 mt-1 flex-shrink-0' /></CheckCircle>
+                  <p className='text-gray-300 text-lg'>{benefit}</p>
                 </div>
               ))}
             </div>
@@ -123,54 +121,62 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
-            <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
-            <p className=&quot;text-xl text-gray-300 mb-8&quot;>
+        <section className='py-20 px-4'></section>
+          <div className='max-w-4xl mx-auto text-center'></div>
+            <h2 className='text-4xl font-bold text-white mb-6'>Ready to Transform Your Business?</h2>
+            <p className='text-xl text-gray-300 mb-8'></p>
               Join thousands of businesses already using our AI solutions
             </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
+            <div className='flex flex-col sm: flex-row gap-4 justify-center'></div>
+              <button className='bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200'></button>
                 Start Free Trial
               </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
+              <button className='border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200'></button>
                 Contact Sales
               </button>
             </div>
           </div>
         </section>
       </div>
-      <Footer />
+      <Footer /></Footer>
     </>
-  );
+  );,
 };
 
 export default AdvancedPerformanceMonitorPage;
-fcp: null,
-lcp: null,
-fid: null,
-cls: null,
-ttfb: null,
-memory: null,})
-constmeasureWebVitals= useCallback(() => {if (type ofwindow=== 'undefined' || !('performance' in windo w)) return i f (type ofPerformanceObserver=== 'undefined') return constobserver s: PerformanceObserver[] = []
+fcp: nul,
+      l,
+lcp: nul,
+      l,
+fid: nul,
+      l,
+cls: nul,
+      l,
+ttfb: nul,
+      l,
+memory: nul,
+      l,})
+constmeasureWebVitals= useCallback(() => {
+  if (type ofwindow=== 'undefined' || !('performance' in windo w)) return i f (type ofPerformanceObserver=== 'undefined') return constobserver s: PerformanceObserver[] = []
 // Measure First Contentful Paint (FCP)
 constfcpEntries= performance.getEntriesByName('first-contentful-paint') || []
 constfcp= fcpEntries.length >0? fcpEntries[0].startTime: null
 // Measure Largest Contentful Paint (LCP)
-if ('PerformanceObserver' in windo w) {
+if('PerformanceObserver' in windo w) {
 try {
 constlcpObserver= new PerformanceObserver(list=> {
   
 constentries= list.getEntries()
 constlastEntry= entries[entries.length - 1]
-setMetrics(prev=> ({ ...prev, lcp: lastEntry.startTime}))
+setMetrics(prev=> ({ ...prev, lcp: lastEntry.startTim,e
+}))
 })
-lcpObserver.observe({entry Types: ['largest-contentful-paint']})
+lcpObserver.observe({entry Types: ['largest-contentful-paint',]})
 observers.push(lcpObserver)
 } catch (error) {// eslint-disable-next-line no-console}
 }
 // Measure First Input Delay (FID)
-if ('PerformanceObserver' in windo w) {try {
+if('PerformanceObserver' in windo w) {try {
 constfidObserver= new PerformanceObserver(list=> {
   
 constentries= list.getEntries()
@@ -182,17 +188,17 @@ entry.entryType=== 'first-input' &&
 ) {
 constfidEntry= entry as PerformanceEventTiming
 setMetrics(prev=> ({
-...prev,
-fid: fidEntry.processingStart - fidEntry.startTime,}))
+...prev
+fid: fidEntry.processingStart - fidEntry.startTim,e,}))
 }
 })
 })
-fidObserver.observe({entry Types: ['first-input']})
+fidObserver.observe({entry Types: ['first-input',]})
 observers.push(fidObserver)
 } catch (error) {// eslint-disable-next-line no-console}
 }
 // Measure Cumulative Layout Shift (CLS)
-if ('PerformanceObserver' in windo w) {try {
+if('PerformanceObserver' in windo w) {try {
 letclsValue=0constclsObserver= new PerformanceObserver(list=> {
   
 constentries= list.getEntries()
@@ -205,12 +211,13 @@ entry.entryType=== 'layout-shift' &&
 constclsEntry= entry as LayoutShift
 if (!clsEntry.hadRecentInput) {
 clsValue += clsEntry.value
-setMetrics(prev=> ({ ...prev, cls: clsValue}))
+setMetrics(prev=> ({ ...prev cls: clsValu,
+      e}))
 }
 }
 })
 })
-clsObserver.observe({entry Types: ['layout-shift']})
+clsObserver.observe({entry Types: ['layout-shift',]})
 observers.push(clsObserver)
 } catch (error) {// eslint-disable-next-line no-console}
 }
@@ -218,119 +225,134 @@ observers.push(clsObserver)
 try {constnavigationEntries= performance.getEntriesByType?.('navigation') || []
 constnavigationEntry= navigationEntries[0] asPerformanceNavigationTimingconstttfb= navigationEntry ? navigationEntry.responseStart - navigationEntry.requestStart: null
 // Measure MemoryUsageconstmemory=
-(performance as Performance & { memory?: { usedJSHeapSize : number} })
+(performance as Performance & { memory?: { usedJSHeapSize : numbe,r} })
 .memory?.usedJSHeapSize || null
-setMetrics(prev=> ({...prev,
+setMetrics(prev=> ({...prev
 fcp,
 ttfb,
 memory,}))
 } catch (error) {// eslint-disable-next-line no-console}
 // Cleanup observers
-return () => {observers.forEach(observer=> {
+return () => {
+  observers.forEach(observer=> {
   
 try {
-observer.disconnect()} catch (error) {// eslint-disable-next-line no-console}
+  observer.disconnect()
+} catch (error) {
+  // eslint-disable-next-line no-console
+}
 })
 }
 }, [])
-constmeasureResourceTiming= useCallback(() => {if (type ofwindow=== 'undefined' || !('performance' in windo w)) return constresources= performance.getEntriesByType('resource')
+constmeasureResourceTiming= useCallback(() => {
+  if (type ofwindow=== 'undefined' || !('performance' in windo w)) return constresources= performance.getEntriesByType('resource')
 constslowResources= resources.filter(
 (resource: PerformanceResourceTiming) => resource.duration > 1000)
 if (slowResources.length > 0) {
 // eslint-disable-next-line no-console
-// // console.log(
-'Slow resources detected:',
+// // console.log('Slow resources detected:,',
 slowResources.map((r: PerformanceResourceTiming) => ({
-name: r.name,
-duration: r.duration,
-size: r.transferSize,}))
+name: r.nam,e,
+duration: r.duratio,n,
+size: r.transferSiz,e,
+}))
 )
 }
 }, [])
-constmeasureCoreWebVitals= useCallback(() => {if (type ofwindow=== 'undefined') return
+constmeasureCoreWebVitals= useCallback(() => {
+  if (type ofwindow=== 'undefined') return
 // Use web-vitals library if available
 try {
 import('web-vitals')
 .then(webVitals=> {
   
-const { onCLS, onFCP, onLCP, onTTFB} = webVitals
-if (onCL S) {onCLS((metric: { value: number}) =>
-setMetrics(prev=> ({...prev, cls: metric.value}))
+const { onCLS, onFCP, onLCP, onTTFB
+} = webVitals
+if (onCL S) {onCLS((metric: { value: numbe,
+      r}) =>
+setMetrics(prev=> ({...prev cls: metric.valu,e}))
 )
 }
-if (onFC P) {onFCP((metric: { value: number}) =>
-setMetrics(prev=> ({...prev, fcp: metric.value}))
+if (onFC P) {onFCP((metric: { value: numbe,
+      r}) =>
+setMetrics(prev=> ({...prev fcp: metric.valu,e}))
 )
 }
-if (onLC P) {onLCP((metric: { value: number}) =>
-setMetrics(prev=> ({...prev, lcp: metric.value}))
+if (onLC P) {onLCP((metric: { value: numbe,
+      r}) =>
+setMetrics(prev=> ({...prev lcp: metric.valu,e}))
 )
 }
-if (onTTF B) {onTTFB((metric: { value: number}) =>
-setMetrics(prev=> ({...prev, ttfb: metric.value}))
+if (onTTF B) {onTTFB((metric: { value: numbe,
+      r}) =>
+setMetrics(prev=> ({...prev ttfb: metric.valu,e}))
 )
 }
 })
-.catch(() => {// web-vitals not available, continue without it})
+.catch(() => {
+  // web-vitals not available, continue without it
+})
 } catch {// web-vitals not available, continue without it}
 }, [])
-useEffect(() => {if (!enableRealTimeMonitoring) return constcleanup= measureWebVitals()
+useEffect(() => {
+  if (!enableRealTimeMonitoring) return constcleanup= measureWebVitals()
 measureResourceTiming()
 measureCoreWebVitals()
 // Monitor performanceevery5secondsconstinterval= setInterval(() => {
   
-measureResourceTiming()}, 500 0)
-return () => {if (cleanu p) cleanup()
-clearInterval(interval)}
+measureResourceTiming()
+} 500 0)
+return () => {
+  if (cleanu p) cleanup()
+clearInterval(interval)
+}
 }, [
 enableRealTimeMonitoring,
 measureWebVitals,
 measureResourceTiming,
 measureCoreWebVitals,
 ])
-useEffect(() => {if (onMetricsUpdat e) {
-onMetricsUpdate(metrics)}
+useEffect(() => {
+  if (onMetricsUpdat e) {
+onMetricsUpdate(metrics)
+}
 }, [metricsonMetricsUpdate])
-// PerformancerecommendationsconstgetPerformanceRecommendations= useCallback(() => {constrecommendations: string[] = []
+// PerformancerecommendationsconstgetPerformanceRecommendations= useCallback(() => {
+  constrecommendations: string[] = []
 if (metrics.fcp && metrics.fcp >1800) {
-recommendations.push(
-'First Contentful Paint is slow. Consider optimizing critical rendering path.'
-)
+recommendations.push('First Contentful Paint is slow. Consider optimizing critical rendering path.'
+),
 }
 if (metrics.lcp && metrics.lcp > 2500) {
-recommendations.push(
-'Largest Contentful Paint is slow. Optimize images and reduce render-blocking resources.'
+recommendations.push('Largest Contentful Paint is slow. Optimize images and reduce render-blocking resources.'
 )
 }
 if (metrics.fid && metrics.fid > 100) {
-recommendations.push(
-'First Input Delay is high. Reduce JavaScript execution time.'
+recommendations.push('First Input Delay is high. Reduce JavaScript execution time.'
 )
 }
 if (metrics.cls && metrics.cls > 0.1) {
-recommendations.push(
-'Cumulative Layout Shift is high. Ensure stable layout and avoid dynamic content insertion.'
+recommendations.push('Cumulative Layout Shift is high. Ensure stable layout and avoid dynamic content insertion.'
 )
 }
 if (metrics.ttfb && metrics.ttfb > 600) {
-recommendations.push(
-'Time to First Byte is slow. Optimize server response time.'
+recommendations.push('Time to First Byte is slow. Optimize server response time.'
 )
 }
 return recommendations
 }, [metrics])
-const _recommendations = getPerformanceRecommendations()
+export const _recommendations = getPerformanceRecommendations()
 if (process.env.NODE_ENV === 'development') {
 return (
 <div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'></div>
 <h3 className='font-semibold text-sm mb-2'>Performance Monitor</h3>
 <div className='text-xs space-y-1'></div>
-<div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}</div>
-<div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A'}</div>
-<div>FID: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : 'N/A'}</div>
-<div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
-<div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}</div>
-<div>Memory:{' '}</div>
+<div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0,)}ms` : 'N/A'}</div>
+<div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0,)}ms` : 'N/A'}</div>
+<div>FID: {metrics.fid ? `${metrics.fid.toFixed(0,)}ms` : 'N/A'}</div>
+<div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A,'}</div>
+<div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0,)}ms` : 'N/A'}</div>
+<div>Memory: {' ,'}</div>
 {metrics.memory
 ? `${(metrics.memory / 1024 / 1024).toFixed(1)}MB`
 : 'N/A'}
@@ -338,35 +360,30 @@ return (
 </div>
 {_recommendations.length > 0 && (
 <div className='mt-2'></div>
-<h4 className='font-semibold text-xs text-red-600'>
-Recommendations:
-</h4>
-<ul className='text-xs text-red-600'>
-{_recommendations.map((rec, index) => (
+<h4 className='font-semibold text-xs text-red-600'></h4>
+Recommendations: </h4>
+<ul className='text-xs text-red-600'></ul>
+{_recommendations.map((re, c, index) => (
 <li key={index}>• {rec}</li>
 ))}
 </ul>
 </div>
 )}
-if (metrics.lcp && metrics.lcp > 250 0) {recommendations.push(
-'Largest Contentful Paint is slow. Optimize images and reduce render-blocking resources.'
+if (metrics.lcp && metrics.lcp > 250 0) {recommendations.push('Largest Contentful Paint is slow. Optimize images and reduce render-blocking resources.'
 )}
-if (metrics.fid && metrics.fid >100) {recommendations.push(
-'First Input Delay is high. Reduce JavaScript execution time.'
+if (metrics.fid && metrics.fid >100) {recommendations.push('First Input Delay is high. Reduce JavaScript execution time.'
 )}
-if (metrics.cls && metrics.cls > 0.1) {recommendations.push(
-'Cumulative Layout Shift is high. Ensure stable layout and avoid dynamic content insertion.'
+if (metrics.cls && metrics.cls > 0.1) {recommendations.push('Cumulative Layout Shift is high. Ensure stable layout and avoid dynamic content insertion.'
 )}
-if (metrics.ttfb && metrics.ttfb >600) {recommendations.push(
-'Time to First Byte is slow. Optimize server response time.'
+if (metrics.ttfb && metrics.ttfb >600) {recommendations.push('Time to First Byte is slow. Optimize server response time.'
 )}
 return recommendation s
 }, [metrics])
 const_recommendations= getPerformanceRecommendations()
-if (process.env.NODE_ENV=== 'development') {return(<divclassName='fixed bottom-4 right-4 bg-white p-4 rounded-lg shado w-lg border max-w-sm z-5 0'><h3className='font-semibold text-sm mb-2'>PerformanceMonitor</h><divclassName='text-xs space-y-1'><di v>FCP: {metrics.fcp ?`${metrics.fcp.toFixed(0)}ms`:'N/A'}</di><di v>LCP: {metrics.lcp?`${metrics.lcp.toFixed(0)}ms`:'N/A'}</di><di v>FID: {metrics.fid?`${metrics.fid.toFixed(0)}ms`:'N/A'}</di><di v>CLS: {metrics.cls ?metrics.cls.toFixed(3):'N/A'}</di><di v>TTFB: {metrics.ttfb?`${metrics.ttfb.toFixed(0)}ms`:'N/A'}</di><di v>Memory:{''}
+if (process.env.NODE_ENV=== 'development') {return(<divclassName='fixed bottom-4 right-4 bg-white p-4 rounded-lg shado w-lg border max-w-sm z-5 0'><h3className='font-semibold text-sm mb-2'>PerformanceMonitor</h><divclassName='text-xs space-y-1'><di v>FCP: {metrics.fcp ?`${metrics.fcp.toFixed(0,)}ms`:'N/A'}</di><di v>LCP: {metrics.lcp?`${metrics.lcp.toFixed(0,)}ms`:'N/A'}</di><di v>FID: {metrics.fid?`${metrics.fid.toFixed(0,)}ms`:'N/A'}</di><di v>CLS: {metrics.cls ?metrics.cls.toFixed(3):'N/A,'}</di><di v>TTFB: {metrics.ttfb?`${metrics.ttfb.toFixed(0,)}ms`:'N/A'}</di><di v>Memory: {','}
 {metrics.memory
 ?`${(metrics.memory /1024/1024).toFixed(1)}MB`
-:'N/A'}</di></di>{_recommendations.length >0&&(<divclassName='mt-2'><h4className='font-semibold text-xs text-red-60 0'>Recommendations:</h><ulclassName='text-xs text-red-60 0'>{_recommendations.map((recindex)=>(<likey={index}>•{rec}</l>))}</u></di>)}</di>)
+:'N/A'}</di></di>{_recommendations.length >0&&(<divclassName='mt-2'><h4className='font-semibold text-xs text-red-60 0'>Recommendations: </h><ulclassName='text-xs text-red-60 0'>{_recommendations.map((recindex)=>(<likey={inde,x}>•{rec}</l>))}</u></di>)}</di>)
 }
 return nul l
 }

@@ -47,7 +47,7 @@ function fixComplexSyntax(filePath) {
 
     // Fix malformed JSX structure
     if (content.includes('>{/* Hero Section */}')) {
-      content = content.replace(/<div[^>]*>\{\/\* Hero Section \*\/\}/g, '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">');
+      content = content.replace(/<div[^>]*>\{\/\* Hero Section \*\/\}/g, '<div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>');
       fixed = true;
     }
 

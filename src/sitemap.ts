@@ -34,8 +34,7 @@ sitemap.displayName = "sitemap"(): SitemapEntry[] {
     '/sitemap'
   ]
   // AI Services - Micro SAAS
-  const microSaasServices = [
-    '/ai-project-manager',
+  const microSaasServices = ['/ai-project-manager',
     '/ai-social-media-manager',
     '/ai-analytics-dashboard',
     '/ai-email-marketing',
@@ -62,8 +61,7 @@ sitemap.displayName = "sitemap"(): SitemapEntry[] {
     '/ai-chatbot-builder'
   ]
   // AI Services - Core AI
-  const coreAIServices = [
-    '/ai-services',
+  const coreAIServices = ['/ai-services',
     '/machine-learning',
     '/nlp',
     '/computer-vision',
@@ -79,8 +77,7 @@ sitemap.displayName = "sitemap"(): SitemapEntry[] {
     '/ai-marketing'
   ]
   // IT Services
-  const itServices = [
-    '/it-services',
+  const itServices = ['/it-services',
     '/cloud-services',
     '/cybersecurity',
     '/devops',
@@ -94,8 +91,7 @@ sitemap.displayName = "sitemap"(): SitemapEntry[] {
     '/networking'
   ]
   // Specialized Services
-  const specializedServices = [
-    '/quantum-computing',
+  const specializedServices = ['/quantum-computing',
     '/autonomous-systems',
     '/blockchain',
     '/blockchain-web3',
@@ -114,8 +110,7 @@ sitemap.displayName = "sitemap"(): SitemapEntry[] {
     '/smart-analytics'
   ]
   // Blog posts
-  const blogPosts = [
-    '/blog/agent-release-runbooks-v2-2026',
+  const blogPosts = ['/blog/agent-release-runbooks-v2-2026',
     '/blog/ai-2025-2026-mega-trends-breakthrough',
     '/blog/ai-2025-january-advanced-ai-revolution',
     '/blog/ai-2025-january-cutting-edge-trends-breakthrough',
@@ -146,18 +141,17 @@ sitemap.displayName = "sitemap"(): SitemapEntry[] {
   ]
   // Combine all pages
   const allPages = [
-    ...mainPages,
-    ...microSaasServices,
-    ...coreAIServices,
-    ...itServices,
-    ...specializedServices,
+    ...mainPages
+    ...microSaasServices
+    ...coreAIServices
+    ...itServices
+    ...specializedServices
     ...blogPosts
   ]
   return allPages.map((page) => ({
     url: `${baseUrl}${page}`,
     lastModified: new Date(),
     changeFrequency: page.includes('/blog/') ? 'weekly' : 'monthly',
-    priority: page === '' ? 1.0 : page.includes('/blog/') ? 0.7 : 0.8,
+    priority: page = == '' ? 1.0 : page.includes('/blog/') ? 0.7 : 0.8
   }))
 }
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d

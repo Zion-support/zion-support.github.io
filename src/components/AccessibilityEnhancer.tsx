@@ -8,12 +8,12 @@ interface AccessibilityEnhancerProps {;
   enableSkipLinks?: boolean;
   enableKeyboardNav?: boolean;
   enableFocusIndicators?: boolean;
-  }
+ , }
   }
   }
 }
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({;
-    children,;
+    childre,n,;
   enableKeyboardNavigation = true,;
   enableScreenReaderSupport = true,;
   enableHighContrast = true,;
@@ -25,12 +25,13 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({;
   }
   }
   }
-}) => {;
+}) => {
+  ;
     React.useEffect(() => {;
     // Initialize accessibility features,;
     if (enableSkipLinks) {;
       addSkipLinks();
-  }
+}
   }
   }
     }
@@ -47,18 +48,18 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({;
   }
     }
   }, []);
-  const addSkipLinks = () => {;
+  const addSkipLinks = (): JSX.Element => {;
     const skipLink = document.createElement('a');
     skipLink.href = '#main-content';
     skipLink.textContent = 'Skip to main content';
     skipLink.className = 'skip-link';
     skipLink.style.cssText = `;
-      position: absolute;,;
-    top: -40px;,;
-    left: 6px;,;
-    background: #000;,;
+      position: absolute,;,;
+    top: -40px,;,;
+    left: 6px,;,;
+    background: #000,;,;
     color: #fff;
-  }
+ , }
   }
   }
   }
@@ -66,16 +67,16 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({;
       text-decoration: none;
       z-index: 1000;
     `;
-    document.body.insertBefore(skipLink, document.body.firstChild);
+    document.body.insertBefore(skipLin,k, document.body.firstChild);
   }
 ;
-  const addFocusIndicators = () => {;
+  const addFocusIndicators = (): JSX.Element => {;
     const style = document.createElement('style');
     style.textContent = `;
       *:focus {;
         outline: 2px solid #4F46E5;
         outline-offset: 2px;
-  }
+ , }
   }
   }
       }
@@ -83,19 +84,21 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({;
     document.head.appendChild(style);
   }
 ;
-  const setupKeyboardNavigation = () => {;
+  const setupKeyboardNavigation = (): JSX.Element => {;
     document.addEventListener('keydown',;
-    (e) => {;
+    (e) => {
+  ;
       if (e.key === 'Tab') {;
         document.body.classList.add('keyboard-navigation');
-  }
+}
   }
   }
       }
     });
-    document.addEventListener('mousedown', () => {;
+    document.addEventListener('mousedown', () => {
+  ;
     document.body.classList.remove('keyboard-navigation');
-  }
+}
   }
   }
     });

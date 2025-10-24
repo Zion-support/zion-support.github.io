@@ -1,15 +1,13 @@
-import globals from "globals";
-import js from "@eslint/js";
-import tseslint from "@typescript-eslint/eslint-plugin";
-import tsParser from "@typescript-eslint/parser";
-import reactHooks from "eslint-plugin-react-hooks";
-import reactRefresh from "eslint-plugin-react-refresh";
-
+import globals from 'globals';
+import js from '@eslint/js';
+import tseslint from '@typescript-eslint/eslint-plugin';
+import tsParser from '@typescript-eslint/parser';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
 export default [
   // Global ignores
   {
-    ignores: [
-      "dist/**",
+    ignores: ['dist/**',
       "node_modules/**",
       "*.config.js",
       "*.config.ts"
@@ -23,7 +21,7 @@ export default [
         ...globals.browser,
         ...globals.node,
         ...globals.es2021,
-        PerformanceObserverCallback: "readonly",
+        PerformanceObserverCallback: 'readonly',
       },
     },
     rules: {
@@ -32,12 +30,12 @@ export default [
   },
   // TypeScript configuration
   {
-    files: ["**/*.{ts,tsx}"],
+    files: ['**/*.{ts,tsx}'],
     languageOptions: {
       parser: tsParser,
       parserOptions: {
-        ecmaVersion: "latest",
-        sourceType: "module",
+        ecmaVersion: 'latest',
+      sourceType: 'module',
         ecmaFeatures: {
           jsx: true,
         },
@@ -54,15 +52,14 @@ export default [
   },
   // React configuration
   {
-    files: ["**/*.{jsx,tsx}"],
+    files: ['**/*.{jsx,tsx}'],
     plugins: {
       "react-hooks": reactHooks,
       "react-refresh": reactRefresh,
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
-      "react-refresh/only-export-components": [
-        "warn",
+      "react-refresh/only-export-components": ['warn',
         { allowConstantExport: true },
       ],
       "react/react-in-jsx-scope": "off",
@@ -71,19 +68,19 @@ export default [
   },
   // Test files configuration
   {
-    files: ["**/*.test.{js,jsx,ts,tsx}", "**/__tests__/**/*.{js,jsx,ts,tsx}"],
+    files: ['**/*.test.{js,jsx,ts,tsx}', "**/__tests__/**/*.{js,jsx,ts,tsx}"],
     languageOptions: {
       globals: {
         ...globals.jest,
-        describe: "readonly",
-        it: "readonly",
-        test: "readonly",
-        expect: "readonly",
-        beforeEach: "readonly",
-        afterEach: "readonly",
-        beforeAll: "readonly",
-        afterAll: "readonly",
-        jest: "readonly",
+        describe: 'readonly',
+      it: 'readonly',
+        test: 'readonly',
+      expect: 'readonly',
+        beforeEach: 'readonly',
+      afterEach: 'readonly',
+        beforeAll: 'readonly',
+      afterAll: 'readonly',
+        jest: 'readonly',
       },
     },
     rules: {

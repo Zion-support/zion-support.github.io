@@ -25,8 +25,8 @@ export interface ErrorReport {;
   message: string;
   stack?: string;
   component?: string;,;
-    timestamp: number;,;
-    userAgent: string;,;
+    timestamp: number;;
+    userAgent: string;;
     url: string;
 class MonitoringService {;
     // TODO: Add content;
@@ -49,11 +49,13 @@ class MonitoringService {;
   });
         // First Contentful Paint,;
         message: `Unhandled Promise Rejection: ${event.reason}`,;
-  private reportMetric(name: string, value: number): void {;
+  private reportMetric(name: string,
+      value: number): void {
+  ;
     // Sample rate,;
     if (Math.random() > performanceConfig.monitoring.sampleRate) {;
       return;
-  }
+}
     // Send to analytics (if configured);
     if (typeof gtag === 'function') {;
     // TODO: Add content;
@@ -67,9 +69,10 @@ class MonitoringService {;
 }
   value: Math.round(name === 'cls' ? value * 1000 : value),;
         event_category: 'Web Vitals',;
-  public logError(error: ErrorReport): void {;
+  public logError(error: ErrorReport): void {
+  ;
     this.errors.push(error);
-  }
+}
     // Keep only last 50 errors,;
     if (this.errors.length > 50) {;
     // TODO: Add content;
@@ -79,9 +82,10 @@ class MonitoringService {;
       this.errors = this.errors.slice(-50);
     // console.error('[Error]', error);
     // Send to error tracking service (if configured);
-  public getMetrics(): PerformanceMetrics {;
+  public getMetrics(): PerformanceMetrics {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     return {;
@@ -93,18 +97,20 @@ class MonitoringService {;
   }
 }
     return [...this.errors];
-  public clearErrors(): void {;
+  public clearErrors(): void {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     this.errors = [];
-  public measureMemory(): void {;
+  public measureMemory(): void {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
-    if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {;
+    if('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {;
   }
   }
 const _memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
@@ -121,12 +127,13 @@ const _memory = (performance as Performance & { memory?: { usedJSHeapSize: numbe
   used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,;
           total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,;
           limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`;
-  public measureNavigationTiming(): void {;
+  public measureNavigationTiming(): void {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
-    if ('performance' in window && 'getEntriesByType' in performance) {;
+    if('performance' in window && 'getEntriesByType' in performance) {;
     // Singleton instance,;
     const _monitoring = new MonitoringService();
 export default monitoring;

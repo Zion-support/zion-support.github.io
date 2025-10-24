@@ -36,24 +36,27 @@ class PerformanceEnhancer {;
   }
   }
   }
-  private init(): void {;
+  private init(): void {
+  ;
     // Initialize performance monitoring,;
     this.observePerformance();
+}
   }
   }
   }
-  }
-  private observePerformance(): void {;
+  private observePerformance(): void {
+  ;
     if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {;
       try {;
-        const observer = new PerformanceObserver((list) => {;
+        const observer = new PerformanceObserver((list) => {
+  ;
           const entries = list.getEntries();
           entries.forEach((entry) => {;
             // Process performance entries,;
-    console.log('Performance entry:',;
+    console.log('Performance entry: ',;
     entry.name,;
     entry.duration);
-  }
+}
   }
   }
           });
@@ -76,9 +79,10 @@ class PerformanceEnhancer {;
   }
   }
   }
-  public cleanup(): void {;
+  public cleanup(): void {
+  ;
     // Cleanup resources;
-  }
+}
   }
   }
 }

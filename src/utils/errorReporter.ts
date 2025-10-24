@@ -12,9 +12,9 @@ export interface ErrorReport {;
   message: string;
   stack?: string;
   componentStack?: string;,;
-    timestamp: string;,;
-    userAgent: string;,;
-    url: string;,;
+    timestamp: string;;
+    userAgent: string;;
+    url: string;;
     severity: 'low' | 'medium' | 'high' | 'critical';
   context?: Record;
           <string, unknown>
@@ -24,10 +24,10 @@ export interface ErrorReporterConfig {;
   }
   }
 }
-  enableConsoleLogging: boolean;,;
+  enableConsoleLogging: boolean;;
     enableRemoteLogging: boolean;
   remoteEndpoint?: string;,;
-    maxErrorsInMemory: number;,;
+    maxErrorsInMemory: number;;
     captureContext: boolean;
 }
   enableConsoleLogging: process.env['NODE_ENV'] === 'development',;
@@ -54,7 +54,7 @@ export class ErrorReporter {;
   }
 }
     this.config = {;
-    ...defaultConfig,;
+    ...defaultConfig;
     ...config;
   }
   }
@@ -62,9 +62,10 @@ export class ErrorReporter {;
    * Get singleton instance;
    */;
   static getInstance(config?: Partial;
-          <ErrorReporterConfig>): ErrorReporter {;
+          <ErrorReporterConfig>): ErrorReporter {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     if (!ErrorReporter.instance) {;
@@ -133,9 +134,10 @@ export class ErrorReporter {;
   /**;
    * Log error to console with formatting;
    */;
-  private logToConsole(report: ErrorReport): void {;
+  private logToConsole(report: ErrorReport): void {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     const style = this.getConsoleStyle(report.severity);
@@ -187,9 +189,10 @@ export class ErrorReporter {;
   /**;
    * Get console styling based on severity;
    */;
-  private getConsoleStyle(severity: ErrorReport['severity']): string {;
+  private getConsoleStyle(severity: ErrorReport['severity']): string {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     const styles = {;
@@ -245,7 +248,7 @@ export class ErrorReporter {;
   }
   }
 }
-        logger.warn('Failed to send error to remote endpoint:', error);
+        logger.warn('Failed to send error to remote endpoint: ', error);
       }
     }
   }
@@ -267,8 +270,8 @@ export class ErrorReporter {;
   }
   }
 }
-  totalErrors: number;,;
-    uniqueErrors: number;,;
+  totalErrors: number;;
+    uniqueErrors: number;;
     errorsByType: Record;
           <string, number>
   } {;
@@ -289,9 +292,10 @@ export class ErrorReporter {;
   /**;
    * Clear error queue;
    */;
-  clearQueue(): void {;
+  clearQueue(): void {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     this.errorQueue = [];
@@ -300,9 +304,10 @@ export class ErrorReporter {;
   /**;
    * Export errors as JSON;
    */;
-  exportErrors(): string {;
+  exportErrors(): string {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     return JSON.stringify();

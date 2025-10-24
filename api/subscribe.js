@@ -1,6 +1,5 @@
 import fs from 'fs';
 import path from 'path';
-
 const dir = path.join(process.cwd(), 'data');
 const file = path.join(dir, 'subscribers.json');
 
@@ -20,12 +19,12 @@ export default async function handler(req, res) {
 
   let subscribers = [];
   try {
-    const data = fs.readFileSync(file, 'utf8');
+  const data = fs.readFileSync(file, 'utf8');
     subscribers = JSON.parse(data);
-  } catch (error) {
-    console.error('Error:', error);
-    console.error('Error reading existing subscribers:', error);
-  }
+} catch (error) {
+  console.error('Error: ', error);
+    console.error('Error reading existing subscribers: ', error);
+}
 
   if (subscribers.find(sub => sub.email === email)) {
     res.setHeader('Content-Type', 'application/json');
@@ -51,7 +50,7 @@ export default async function handler(req, res) {
       message: 'Successfully subscribed to newsletter' 
     }));
   } catch (error) {
-    console.error('Error:', error);
+    console.error('Error: ', error);
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to save subscription' }));
   }

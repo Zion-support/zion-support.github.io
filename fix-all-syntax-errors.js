@@ -32,9 +32,9 @@ function fixFile(filePath) {
       }
       
       // Skip duplicate React imports
-      if (line.startsWith('import React from "react"') || line.startsWith("import React from 'react'")) {
+      if (line.startsWith('import React from 'react"') || line.startsWith('import React from 'react'")) {
         if (!hasReactImport) {
-          cleanedLines.push('import React from "react";');
+          cleanedLines.push('import React from 'react";');
           hasReactImport = true;
         }
         modified = true;
@@ -56,7 +56,7 @@ function fixFile(filePath) {
       
       // Add React import
       if (hasReactImport) {
-        newContent.push('import React from "react";');
+        newContent.push('import React from 'react";');
       }
       
       // Add other imports and content

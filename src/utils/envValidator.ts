@@ -49,10 +49,11 @@ class EnvValidator {;
   /**;
    * Get validated environment configuration;
    */;
-  getConfig(): EnvConfig {;
+  getConfig(): EnvConfig {
+  ;
     if (!validation.isValid) {;
   // TODO: Add content;
-  }
+}
   }
 }
       throw new Error();
@@ -82,9 +83,10 @@ class EnvValidator {;
 //       );
     }
   }
-  private validateOptionalVars(): void {;
+  private validateOptionalVars(): void {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     const nodeEnv = this.getNodeEnv();
@@ -126,9 +128,10 @@ class EnvValidator {;
 // Export singleton instance,;
 export const envValidator = new EnvValidator();
 // Export convenience function,;
-export function validateEnv(): EnvConfig {;
+export function validateEnv(): EnvConfig {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
   return envValidator.getConfig();

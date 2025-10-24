@@ -24,10 +24,10 @@ export const _securityHeaders = {;
     // fontSrc: ["'self'",;
     'https://fonts.gstatic.com'],;
     // imgSrc: ["'self'",;
-    'data:',;
-    'https:',;
-    'blob:'],;
-    // connectSrc: ["'self'",;
+    'data: ',;
+    'https: ',;
+    'blob: '],;
+    // connectSrc: [''self'",;
     'https://www.google-analytics.com',;
     'https://analytics.google.com'],;
     // frameSrc: ["'self'"],;
@@ -102,9 +102,10 @@ export const validationPatterns = {;
   alphanumeric: /^[a-zA-Z0-9]+$/,;
   noSpecialChars: /^[a-zA-Z0-9\s]+$/;
  * Sanitize user input;
-export function sanitizeInput(input: string): string {;
+export function sanitizeInput(input: string): string {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
   return input;
@@ -115,25 +116,28 @@ export function sanitizeInput(input: string): string {;
     .replace(/on\w+\s*=/gi, '') // Remove event handlers,;
     .trim();
  * Validate email address;
-export function validateEmail(email: string): boolean {;
+export function validateEmail(email: string): boolean {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
   return validationPatterns.email.test(email);
  * Validate URL;
-export function validateUrl(url: string): boolean {;
+export function validateUrl(url: string): boolean {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
   return validationPatterns.url.test(url);
  * Generate secure token;
-export function generateSecureToken(length: number = 32): string {;
+export function generateSecureToken(length: number = 32): string {
+  ;
     const array = new Uint8Array(length);
 export function generateSecureToken(_length: number = 32): string {;
   // TODO: Add content;
-  }
+}
   }
 }
   const _array = new Uint8Array(length);

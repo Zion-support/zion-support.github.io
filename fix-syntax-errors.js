@@ -25,7 +25,7 @@ function fixSyntaxErrors(filePath) {
       // Fix JSX opening tags that have semicolons
       .replace(/<([^>]+)>;\s*$/gm, '<$1>')
       // Fix JSX attributes that have semicolons
-      .replace(/(\w+)="([^"]*)"\s*;\s*$/gm, '$1="$2"')
+      .replace(/(\w+)="([^"]*)"\s*;\s*$/gm, '$1='$2'')
       // Fix JSX expressions that have semicolons
       .replace(/\{\s*([^}]+)\s*\}\s*;\s*$/gm, '{$1}')
       // Remove standalone semicolons
@@ -45,7 +45,7 @@ function fixSyntaxErrors(filePath) {
       .replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*\(\s*;\s*$/gm, 'const $1 = () => (')
       .replace(/const\s+(\w+)\s*=\s*\(\s*;\s*$/gm, 'const $1 = (')
       // Fix return statements
-      .replace(/return\s*\(\s*;\s*$/gm, 'return (')
+      .replace(/return\s*\(\s*;\s*$/gm, 'return(')
       // Fix JSX elements that are missing closing tags
       .replace(/<(\w+)([^>]*)>\s*;\s*$/gm, '<$1$2>')
       // Clean up extra whitespace

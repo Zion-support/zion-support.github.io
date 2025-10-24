@@ -12,16 +12,16 @@ function createCleanPage(filePath) {
   
   const content = `"use client";
 import React from 'react';
-
 const ${componentName} = () => {
   return (
-    <div className="min-h-screen bg-gray-100 py-8">
-      <div className="max-w-4xl mx-auto px-4">
-        <h1 className="text-3xl font-bold text-gray-900 mb-6">
-          ${componentName}
+    <div className='min-h-screen bg-gray-100 py-8'>
+      <div className='max-w-4xl mx-auto px-4'>
+        <h1 className='text-3xl font-bold text-gray-900 mb-6'>
+          ${componentName
+}
         </h1>
-        <div className="bg-white rounded-lg shadow-md p-6">
-          <p className="text-gray-600">
+        <div className='bg-white rounded-lg shadow-md p-6'>
+          <p className='text-gray-600'>
             This page is under construction. Please check back later.
           </p>
         </div>
@@ -43,18 +43,18 @@ function createCleanComponent(filePath) {
   
   const content = `"use client";
 import React from 'react';
-
 interface ${componentName}Props {
   className?: string;
 }
 
 const ${componentName}: React.FC<${componentName}Props> = ({ className = '' }) => {
   return (
-    <div className={\`p-4 \${className}\`}>
-      <h2 className="text-xl font-semibold text-gray-800">
+    <div className={\`p-4 \${className
+}\`}>
+      <h2 className='text-xl font-semibold text-gray-800'>
         ${componentName}
       </h2>
-      <p className="text-gray-600">
+      <p className='text-gray-600'>
         This component is under construction.
       </p>
     </div>

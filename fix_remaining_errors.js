@@ -19,9 +19,9 @@ function fixParsingErrors(filePath) {
     
     // Fix missing semicolons after imports
     content = content.replace(/import\s+.*from\s+['"][^'"]+['"]\s*(?!;)/g, (match) => {
-      if (!match.endsWith(';')) {
+  if (!match.endsWith(';')) {
         return match + ';';
-      }
+}
       return match;
     });
     
@@ -37,17 +37,22 @@ function fixParsingErrors(filePath) {
     const closeBraces = (content.match(/\}/g) || []).length;
     if (openBraces > closeBraces) {
       const missingBraces = openBraces - closeBraces;
-      content += '\n' + '}'.repeat(missingBraces);
+      content += '\n}'.repeat(missingBraces);
       modified = true;
     }
     
     // Fix malformed function declarations
-    content = content.replace(/const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*\{/g, 'const $1 = () => {');
+    content = content.replace(/const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*\{/g, 'const $1 = () => {
+  ');
     
     // Fix missing return statements in arrow functions
-    content = content.replace(/const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*\{([^}]+)\}/g, (match, name, body) => {
-      if (!body.trim().includes('return')) {
-        return `const ${name} = () => {\n  return (\n    ${body.trim()}\n  );\n}`;
+    content = content.replace(/const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*\{([^
+}]+)\}/g, (match, name, body) => {
+  if (!body.trim().includes('return')) {
+        return `const ${name
+} = () => {
+  \n  return (\n    ${body.trim()
+}\n  );\n}`;
       }
       return match;
     });
@@ -60,11 +65,11 @@ function fixParsingErrors(filePath) {
     
     // Fix enum syntax errors
     content = content.replace(/enum\s+(\w+)\s*\{([^}]+)\}/g, (match, name, body) => {
-      const items = body.split(',').map(item => item.trim()).filter(item => item);
+  const items = body.split(',').map(item => item.trim()).filter(item => item);
       const fixedItems = items.map(item => {
         if (!item.includes('=') && !item.includes(',')) {
           return item + ',';
-        }
+}
         return item;
       });
       return `enum ${name} {\n  ${fixedItems.join('\n  ')}\n}`;
@@ -75,8 +80,9 @@ function fixParsingErrors(filePath) {
     
     // Fix malformed object properties
     content = content.replace(/(\w+):\s*([^,}]+)(?=\s*[,}])/g, (match, key, value) => {
-      if (!value.trim().endsWith(';') && !value.trim().endsWith(',')) {
-        return `${key}: ${value.trim()},`;
+  if (!value.trim().endsWith(';') && !value.trim().endsWith(',')) {
+        return `${key
+}: ${value.trim()}`;
       }
       return match;
     });
@@ -106,11 +112,11 @@ function rewriteProblematicFile(filePath) {
     if (isPage) {
       content = `"use client";
 import React from 'react';
-
 const ${fileName.charAt(0).toUpperCase() + fileName.slice(1)} = () => {
   return (
-    <div className="min-h-screen bg-gray-100">
-      <h1>${fileName.charAt(0).toUpperCase() + fileName.slice(1)}</h1>
+    <div className='min-h-screen bg-gray-100'>
+      <h1>${fileName.charAt(0).toUpperCase() + fileName.slice(1)
+}</h1>
       <p>This page is under construction.</p>
     </div>
   );
@@ -120,14 +126,14 @@ export default ${fileName.charAt(0).toUpperCase() + fileName.slice(1)};`;
     } else if (isComponent) {
       content = `"use client";
 import React from 'react';
-
 interface ${fileName}Props {
   className?: string;
 }
 
 const ${fileName}: React.FC<${fileName}Props> = ({ className = '' }) => {
   return (
-    <div className={className}>
+    <div className={className
+}>
       <h2>${fileName}</h2>
       <p>This component is under construction.</p>
     </div>
@@ -138,7 +144,6 @@ export default ${fileName};`;
     } else {
       content = `"use client";
 import React from 'react';
-
 const ${fileName} = () => {
   return null;
 };
@@ -173,15 +178,15 @@ function fixFilesInDirectory(dirPath) {
       // Try to fix parsing errors first
       const fixed = fixParsingErrors(filePath);
       if (fixed) {
-        totalFixed++;
-      } else {
-        // If still has issues, rewrite with basic structure
+  totalFixed++;
+} else {
+  // If still has issues, rewrite with basic structure
         try {
           const content = fs.readFileSync(filePath, 'utf8');
-          if (content.includes('Error:') || content.length < 100) {
+          if (content.includes('Error: ') || content.length < 100) {
             const rewritten = rewriteProblematicFile(filePath);
             if (rewritten) totalFixed++;
-          }
+}
         } catch (error) {
           const rewritten = rewriteProblematicFile(filePath);
           if (rewritten) totalFixed++;

@@ -20,7 +20,7 @@ interface RequestRecord {;
   }
   }
 }
-  count: number;,;
+  count: number;;
     resetTime: number;
  * Simple in-memory rate limiter;
  * For production, use Redis or similar distributed storage;
@@ -45,7 +45,7 @@ export class RateLimiter {;
   message: 'Too many requests, please try again later.',;
       skipSuccessfulRequests: false,;
       skipFailedRequests: false,;
-//       ...config,;
+//       ...config;
     }
     // Cleanup old entries every minute,;
     setInterval(() => this.cleanup(), 60000);
@@ -64,7 +64,8 @@ export class RateLimiter {;
   }
 }
       const resetTime = now + this.config.windowMs,;
-      this.requests.set(identifier, { count: 1, resetTime });
+      this.requests.set(identifier, { count: 1,
+      resetTime });
       return {;
     allowed: true,;
     remaining: this.config.max - 1,;
@@ -95,19 +96,21 @@ export class RateLimiter {;
   }
    * Reset rate limit for identifier;
    * @param identifier - Unique identifier;
-  reset(identifier: string): void {;
+  reset(identifier: string): void {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     this.requests.delete(identifier);
    * Cleanup expired entries;
-  private cleanup(): void {;
+  private cleanup(): void {
+  ;
     for (const [key,;
     record,;
     of this.requests.entries()) {;
   // TODO: Add content;
-  }
+}
   }
 }
       if (now > record.resetTime) {;
@@ -174,9 +177,10 @@ export const rateLimiters = {;
  * Get client identifier from request;
  * @param request - Request object;
  * @returns Client identifier (IP address or user ID);
-export function getClientIdentifier(request: Request): string {;
+export function getClientIdentifier(request: Request): string {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
   // Try to get real IP from headers (for proxied requests);

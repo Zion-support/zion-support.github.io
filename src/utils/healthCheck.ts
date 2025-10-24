@@ -33,14 +33,14 @@ class HealthCheckService {
    * Register default health checks
    */
   private registerDefaultChecks(): void {
-    // Memory usage check
+  // Memory usage check
     this.register('memory', this.checkMemory.bind(this))
     // Performance check
     this.register('performance', this.checkPerformance.bind(this))
     // Browser API availability check
     if (typeof window !== 'undefined') {
       this.register('browser-apis', this.checkBrowserAPIs.bind(this))
-    }
+}
     // Local storage check
     if (typeof window !== 'undefined') {
       this.register('storage', this.checkStorage.bind(this))
@@ -49,27 +49,28 @@ class HealthCheckService {
   /**
    * Register a custom health check
    */
-  register(name: string, checkFn: HealthCheckFunction): void {
-    this.checks.set(name, checkFn)
-  }
+  register(name: string,
+      checkFn: HealthCheckFunction): void {
+  this.checks.set(name, checkFn)
+}
   /**
    * Unregister a health check
    */
   unregister(name: string): void {
-    this.checks.delete(name)
-  }
+  this.checks.delete(name)
+}
   /**
    * Run all health checks
    */
   async runChecks(): Promise<HealthStatus> {
-    const now = Date.now()
+  const now = Date.now()
     // Return cached status if still valid
     if (
       this.cachedStatus &&
       now - this.lastCheckTime < this.cacheTimeout
     ) {
       return this.cachedStatus
-    }
+}
     const checks: HealthCheck[] = []
     // Run all checks
     for (const [name, checkFn] of this.checks.entries()) {
@@ -78,7 +79,7 @@ class HealthCheckService {
         const check = await checkFn()
         const duration = performance.now() - startTime
         checks.push({
-          ...check,
+          ...check
           name,
           duration
         })
@@ -98,12 +99,12 @@ class HealthCheckService {
     if (hasFailures) {
       status = 'unhealthy'
     } else if (hasWarnings) {
-      status = 'degraded'
-    } else {
-      status = 'healthy'
-    }
+  status = 'degraded'
+} else {
+  status = 'healthy'
+}
     const healthStatus: HealthStatus = {
-      status,
+      status
       timestamp: now,
       uptime: now - this.startTime,
       checks
@@ -123,25 +124,25 @@ class HealthCheckService {
    * Get current health status (may return cached)
    */
   async getStatus(): Promise<HealthStatus> {
-    return this.runChecks()
-  }
+  return this.runChecks()
+}
   /**
    * Check memory usage
    */
   private checkMemory(): HealthCheck {
-    if (typeof performance === 'undefined' || !('memory' in performance)) {
+  if (typeof performance === 'undefined' || !('memory' in performance)) {
       return {
         name: 'memory',
-        status: 'pass',
+      status: 'pass',
         message: 'Memory API not available'
-      }
+}
     }
     try {
       const memoryInfo = (performance as any).memory
       if (!memoryInfo) {
         return {
           name: 'memory',
-          status: 'pass',
+      status: 'pass',
           message: 'Memory API not available'
         }
       }
@@ -169,7 +170,7 @@ class HealthCheckService {
     } catch (error) {
       return {
         name: 'memory',
-        status: 'warn',
+      status: 'warn',
         message: 'Could not check memory usage'
       }
     }
@@ -178,7 +179,7 @@ class HealthCheckService {
    * Check performance metrics
    */
   private checkPerformance(): HealthCheck {
-    try {
+  try {
       const report = performanceMonitor.getReport()
       const reportData = JSON.parse(report)
       let status: 'pass' | 'warn' | 'fail' = 'pass'
@@ -190,7 +191,7 @@ class HealthCheckService {
         const needsImprovementCount = values.filter(v => v > 2500 && v <= 4000).length
         if (poorCount > 0) {
           status = 'warn'
-        }
+}
         if (poorCount > 2) {
           status = 'fail'
           message = `Critical performance issues: ${poorCount} poor metrics`
@@ -198,6 +199,5 @@ class HealthCheckService {
           message = `Performance: ${values.length - poorCount - needsImprovementCount} good, ${needsImprovementCount} needs improvement, ${poorCount} poor`
         }
       }
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
 
 export default healthCheck;

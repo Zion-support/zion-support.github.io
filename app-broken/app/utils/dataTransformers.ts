@@ -15,15 +15,16 @@ export function deepClone<T>(obj: T): T {
   return obj
 }
 
-export function deepMerge<T extends Record<string, unknown>>(target: T, source: Partial<T>): T {
+export function deepMerge<T extends Record<string, unknown>>(target: T,
+      source: Partial<T>): T {
   const output = { ...target }
   for (const key in source) {
     if (source[key] !== undefined) {
-      if (typeof source[key] === 'object' && source[key] !== null && !Array.isArray(source[key])) {
+  if (typeof source[key] === 'object' && source[key] !== null && !Array.isArray(source[key])) {
         output[key] = deepMerge(output[key] as Record<string, unknown>, source[key] as Record<string, unknown>) as T[Extract<keyof T, string>]
-      } else {
-        output[key] = source[key] as T[Extract<keyof T, string>]
-      }
+} else {
+  output[key] = source[key] as T[Extract<keyof T, string>]
+}
     }
   }
   return output
@@ -43,7 +44,8 @@ export function flattenObject(obj: Record<string, unknown>, prefix = '', separat
   return flattened
 }
 
-export function pick<T extends Record<string, unknown>, K extends keyof T>(obj: T, keys: K[]): Pick<T, K> {
+export function pick<T extends Record<string, unknown>, K extends keyof T>(obj: T,
+      keys: K[]): Pick<T, K> {
   const result = {} as Pick<T, K>
   keys.forEach(key => {
     if (key in obj) {
@@ -53,7 +55,8 @@ export function pick<T extends Record<string, unknown>, K extends keyof T>(obj: 
   return result
 }
 
-export function omit<T extends Record<string, unknown>, K extends keyof T>(obj: T, keys: K[]): Omit<T, K> {
+export function omit<T extends Record<string, unknown>, K extends keyof T>(obj: T,
+      keys: K[]): Omit<T, K> {
   const result = { ...obj }
   keys.forEach(key => {
     delete result[key]
@@ -63,11 +66,11 @@ export function omit<T extends Record<string, unknown>, K extends keyof T>(obj: 
 
 export function groupBy<T>(array: T[], key: keyof T | ((item: T) => string | number)): Record<string, T[]> {
   return array.reduce((groups, item) => {
-    const groupKey = typeof key === 'function' ? key(item).toString() : item[key]?.toString() || 'undefined'
+  const groupKey = typeof key === 'function' ? key(item).toString() : item[key]?.toString() || 'undefined'
     groups[groupKey] = groups[groupKey] || []
     groups[groupKey].push(item)
     return groups
-  }, {} as Record<string, T[]>)
+} {} as Record<string, T[]>)
 }
 
 export function unique<T>(array: T[], key?: keyof T): T[] {
@@ -85,31 +88,36 @@ export function unique<T>(array: T[], key?: keyof T): T[] {
   })
 }
 
-export function formatBytes(bytes: number, decimals = 2): string {
+export function formatBytes(bytes: number,
+      decimals = 2): string {
   if (bytes === 0) return '0 Bytes'
   const k = 1024
   const dm = decimals < 0 ? 0 : decimals
   const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB']
   const i = Math.floor(Math.log(bytes) / Math.log(k))
-  return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))} ${sizes[i]}`
+  return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))
+} ${sizes[i]}`
 }
 
-export function formatNumber(num: number, locale = 'en-US'): string {
+export function formatNumber(num: number,
+      locale = 'en-US'): string {
   return new Intl.NumberFormat(locale).format(num)
 }
 
-export function formatCurrency(amount: number, currency = 'USD', locale = 'en-US'): string {
+export function formatCurrency(amount: number,
+      currency = 'USD', locale = 'en-US'): string {
   return new Intl.NumberFormat(locale, {
     style: 'currency',
     currency
-  }).format(amount)
+}).format(amount)
 }
 
 export function formatDate(date: Date | string | number, options: Intl.DateTimeFormatOptions = {}, locale = 'en-US'): string {
   return new Intl.DateTimeFormat(locale, options).format(new Date(date))
 }
 
-export function truncate(str: string, length: number, suffix = '...'): string {
+export function truncate(str: string,
+      length: number, suffix = '...'): string {
   return str.length > length ? str.substring(0, length) + suffix : str
 }
 

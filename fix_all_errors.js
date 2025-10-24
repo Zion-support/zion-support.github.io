@@ -46,7 +46,7 @@ function fixSyntaxErrors(filePath) {
     // Fix unescaped quotes in JSX
     if (content.includes('"') && filePath.endsWith('.tsx')) {
       const originalContent = content;
-      content = content.replace(/([^\\])"/g, '$1&quot;');
+      content = content.replace(/([^\\])"/g, '$1"');
       if (content !== originalContent) {
         modified = true;
         console.log(`Fixed unescaped quotes in: ${filePath}`);

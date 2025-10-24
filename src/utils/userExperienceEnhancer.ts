@@ -64,40 +64,45 @@ class UserExperienceEnhancer {;
 ;
     this.init();
   }
-  private init(): void {;
+  private init(): void {
+  ;
     // Initialize UX enhancements,;
     this.setupSmoothScrolling();
     this.setupLoadingStates();
+}
   }
   }
   }
-  }
-  private setupSmoothScrolling(): void {;
+  private setupSmoothScrolling(): void {
+  ;
     if (typeof document !== 'undefined' && this.config.enableSmoothScrolling) {;
       document.documentElement.style.scrollBehavior = 'smooth';
-  }
+}
   }
   }
     }
   }
-  private setupLoadingStates(): void {;
+  private setupLoadingStates(): void {
+  ;
     if (typeof document !== 'undefined' && this.config.enableLoadingStates) {;
       // Add loading state management,;
     console.log('Loading states enabled');
-  }
+}
   }
   }
     }
   }
-  public getMetrics(): UXMetrics {;
+  public getMetrics(): UXMetrics {
+  ;
     return this.metrics;
+}
   }
   }
   }
-  }
-  public cleanup(): void {;
+  public cleanup(): void {
+  ;
     // Cleanup UX enhancements;
-  }
+}
   }
   }
 }

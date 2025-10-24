@@ -1,7 +1,6 @@
 // Service Worker for Zion Tech Group Website
 const CACHE_NAME = 'zion-tech-group-v1';
-const urlsToCache = [
-  '/',
+const urlsToCache = ['/',
   '/about',
   '/contact',
   '/services',
@@ -18,7 +17,7 @@ self.addEventListener('install', (event) => {
     caches.open(CACHE_NAME)
       .then((cache) => {
         return cache.addAll(urlsToCache);
-      })
+})
   );
 });
 
@@ -29,7 +28,7 @@ self.addEventListener('fetch', (event) => {
       .then((response) => {
         // Return cached version or fetch from network
         return response || fetch(event.request);
-      })
+})
   );
 });
 
@@ -41,7 +40,7 @@ self.addEventListener('activate', (event) => {
         cacheNames.map((cacheName) => {
           if (cacheName !== CACHE_NAME) {
             return caches.delete(cacheName);
-          }
+}
         })
       );
     })

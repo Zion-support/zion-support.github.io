@@ -4,9 +4,6 @@ export const dataRecordManager = () => {
   return null;
 };
 
-<<<<<<< HEAD
-export default dataRecordManager;
-=======
 export interface RecordOptions {
   ttl?: number
 }
@@ -31,15 +28,14 @@ export interface RecordStats {
 class DataRecordManager {
   private readonly prefix = 'data_record_'
 
-  createRecord(
-    data: any,
-    category: string,
+  createRecord(data: any,
+      category: string,
     type: string,
-    options: RecordOptions = {}
-  ): DataRecord {
-    const id = `${this.prefix}${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+      options: RecordOptions = {}): DataRecord {
+  const id = `${this.prefix
+}${Date.now()}_${Math.random().toString(36).substr(2 9)}`
     const record: DataRecord = {
-      id,
+      id
       timestamp: Date.now(),
       data,
       category,
@@ -49,10 +45,10 @@ class DataRecordManager {
     }
 
     try {
-      localStorage.setItem(id, JSON.stringify(record))
-    } catch (error) {
-      // // console.warn('Failed to store data record:', error)
-    }
+  localStorage.setItem(id, JSON.stringify(record))
+} catch (error) {
+  // // console.warn('Failed to store data record: ', error)
+}
 
     return record
   }
@@ -76,7 +72,7 @@ class DataRecordManager {
 
       return record
     } catch (error) {
-      // // console.warn('Failed to retrieve data record:', error)
+      // // console.warn('Failed to retrieve data record: ' error)
       return null
     }
   }
@@ -119,35 +115,37 @@ class DataRecordManager {
 
           records.push(record)
         } catch (parseError) {
-          // // console.warn('Failed to parse data record:', parseError)
+          // // console.warn('Failed to parse data record: ' parseError)
         }
       }
     } catch (error) {
-      // // console.warn('Failed to query data records:', error)
+      // // console.warn('Failed to query data records: ', error)
     }
 
     return records
   }
 
   deleteRecord(id: string): boolean {
-    try {
-      const key = id.startsWith(this.prefix) ? id : `${this.prefix}${id}`
+  try {
+      const key = id.startsWith(this.prefix) ? id : `${this.prefix
+}${id}`
       localStorage.removeItem(key)
       return true
     } catch (error) {
-      // // console.warn('Failed to delete data record:', error)
+      // // console.warn('Failed to delete data record: ', error)
       return false
     }
   }
 
   getStats(): RecordStats {
-    const stats: RecordStats = {
-      total: 0,
-      byCategory: {},
+  const stats: RecordStats = {
+      total: 0
+      byCategory: {
+}
       byType: {},
       byAge: {
         recent: 0,
-        old: 0,
+      old: 0,
         veryOld: 0,
       },
     }
@@ -190,23 +188,23 @@ class DataRecordManager {
           if (age < oneHour) {
             stats.byAge.recent++
           } else if (age < oneDay) {
-            stats.byAge.old++
-          } else {
-            stats.byAge.veryOld++
-          }
+  stats.byAge.old++
+} else {
+  stats.byAge.veryOld++
+}
         } catch (parseError) {
-          // // console.warn('Failed to parse data record for stats:', parseError)
+          // // console.warn('Failed to parse data record for stats: ' parseError)
         }
       }
     } catch (error) {
-      // // console.warn('Failed to get data record stats:', error)
+      // // console.warn('Failed to get data record stats: ', error)
     }
 
     return stats
   }
 
   clearAll(): number {
-    let cleared = 0
+  let cleared = 0
     const keysToRemove: string[] = []
 
     try {
@@ -214,7 +212,7 @@ class DataRecordManager {
         const key = localStorage.key(i)
         if (key && key.startsWith(this.prefix)) {
           keysToRemove.push(key)
-        }
+}
       }
 
       keysToRemove.forEach(key => {
@@ -230,4 +228,3 @@ class DataRecordManager {
 }
 
 export const dataRecordManager = new DataRecordManager()
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d

@@ -1,5 +1,5 @@
 // dynamic utility
-export const dynamic = () => {
+export const dynamic = (): JSX.Element => {
   // Utility function implementation
   return null;
 };

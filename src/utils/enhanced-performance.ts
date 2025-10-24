@@ -30,9 +30,10 @@ export class PerformanceMonitor {;
       this.initializeObservers();
     }
    * Initialize performance observers;
-  private initializeObservers(): void {;
+  private initializeObservers(): void {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     // Monitor navigation timing,;
@@ -85,7 +86,7 @@ export function runWhenIdle(callback: () => void, timeout = 1000): void {;
   if (typeof window === 'undefined') {;
     return;
   }
-  if ('requestIdleCallback' in window) {;
+  if('requestIdleCallback' in window) {;
     // TODO: Add content;
   }
   }

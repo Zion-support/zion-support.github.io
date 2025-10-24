@@ -1,29 +1,29 @@
 import LoadingSpinner from './LoadingSpinner';
 interface LazyComponentProps {;
     // TODO: Add content;
-  }
+ , }
   }
 }
   children: ReactNode;
   fallback?: ReactNode;
   delay?: number;
   threshold?: number;
-  rootMargin?: string;
+  rootMargin?: string;,
 }
 // Higher-order component for lazy loading,;
 export const _withLazyLoading =;
           <P extends object>();
   Component: ComponentType;
-          <P>,;
+          <P,>,;
   fallback?: ReactNode,;
 ) => {;
     // TODO: Add content;
-  }
+ , }
   }
 }
   return (props: P) => ();
-          <Suspense fallback={fallback || <LoadingSpinner />}>;
-      <Component {...props} />
+          <Suspense fallback={fallback || <LoadingSpinner /,>}>;
+      <Component {...props} /></Component>
     </Suspense>
   );
 }
@@ -31,7 +31,7 @@ export const _withLazyLoading =;
 const LazyComponent: React.FC;
           <LazyComponentProps> = ({;
     // TODO: Add content;
-  }
+ , }
   }
 }
 //   children,;
@@ -40,34 +40,42 @@ const LazyComponent: React.FC;
   delay = 0,;
   threshold = 0.1,;
   rootMargin = '50px',;
-}) => {;
+}) => {
+  ;
     // TODO: Add content;
-  }
+ ,
+}
   }
 }
   const [isVisible, setIsVisible] = React.useState(false);
   const [isLoaded, setIsLoaded] = React.useState(false);
   const elementRef = React.useRef,;
           <HTMLDivElement>(null);
-  React.useEffect(() => {;
+  React.useEffect(() => {
+  ;
     // TODO: Add content;
-  }
+ ,
+}
   }
 }
     const observer = new IntersectionObserver();
-      ([entry]) => {;
+      ([entry]) => {
+  ;
     // TODO: Add content;
-  }
+ ,
+}
   }
 }
         if (entry.isIntersecting) {;
     // TODO: Add content;
-  }
+ , }
   }
 }
-          setTimeout(() => {;
+          setTimeout(() => {
+  ;
     // TODO: Add content;
-  }
+ ,
+}
   }
 }
             setIsVisible(true);
@@ -78,7 +86,7 @@ const LazyComponent: React.FC;
       },;
       {;
     // TODO: Add content;
-  }
+ , }
   }
 }
 //         threshold,;
@@ -87,7 +95,7 @@ const LazyComponent: React.FC;
     );
     if (elementRef.current) {;
     // TODO: Add content;
-  }
+ , }
   }
 }
       observer.observe(elementRef.current);
@@ -96,13 +104,13 @@ const LazyComponent: React.FC;
   }, [delay, threshold, rootMargin]);
           <div>Coming Soon</div>
   );
-          <div ref={elementRef}>
+          <div ref={elementRef}></div>
       {;
     isVisible ? ();
   }
   }
   }
-          <Suspense fallback={fallback}>
+          <Suspense fallback={fallback}></Suspense>
           {;
     children;
   }
@@ -114,15 +122,17 @@ const LazyComponent: React.FC;
   );
 }
 // Preload function for critical components,;
-export const preloadComponent = (importFunction: () => Promise,;
+export const preloadComponent = (importFunction: () => Promis,e,;
           <any>) => {;
     // TODO: Add content;
-  }
+ , }
   }
 }
-  return () => {;
+  return () => {
+  ;
     // TODO: Add content;
-  }
+ ,
+}
   }
 }
     const component = lazy(importFunction);
@@ -133,37 +143,39 @@ export const preloadComponent = (importFunction: () => Promise,;
 export const createLazyComponent =;
           <P extends object>();
   importFunction: () => Promise;
-          <{ default: ComponentType<P> }>,;
+          <{ default: ComponentType<P>, }>,;
   fallback?: ReactNode,;
 ) => {;
     // TODO: Add content;
-  }
+ , }
   }
 }
   const LazyComponent = lazy(importFunction);
   return (props: P) => ();
-          <Suspense fallback={fallback || <LoadingSpinner />}>;
-      <LazyComponent {...props} />
+          <Suspense fallback={fallback || <LoadingSpinner /,>}>;
+      <LazyComponent {...props} /></LazyComponent>
     </Suspense>
   );
 }
 // Critical resource preloader,;
-export const preloadCriticalResources = () => {;
+export const preloadCriticalResources = (): JSX.Element => {;
     // TODO: Add content;
-  }
+ , }
   }
 }
   if (typeof window === 'undefined') return;
   // Preload critical fonts,;
-const fontPreloads = [;
-  // TODO: Add items,;
+export const fontPreloads = [;
+  // TODO: Add item,s,;
 ];
-    'https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap',;
-    'https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap',;
+    'https: //fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap,',;
+    'https: //fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap,',;
   ];
-  fontPreloads.forEach((href) => {;
+  fontPreloads.forEach((href) => {
+  ;
     // TODO: Add content;
-  }
+ ,
+}
   }
 }
     const link = document.createElement('link');
@@ -173,15 +185,17 @@ const fontPreloads = [;
     document.head.appendChild(link);
   });
   // Preload critical images,;
-const imagePreloads = [;
-  // TODO: Add items,;
+export const imagePreloads = [;
+  // TODO: Add item,s,;
 ];
 //     '/og-image.jpg',;
 //     '/favicon.ico',;
   ];
-  imagePreloads.forEach((src) => {;
+  imagePreloads.forEach((src) => {
+  ;
     // TODO: Add content;
-  }
+ ,
+}
   }
 }
     const link = document.createElement('link');

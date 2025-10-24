@@ -28,30 +28,34 @@ class AccessibilityEnhancer {;
     }
     this.init();
   }
-  private init(): void {;
+  private init(): void {
+  ;
     // Initialize accessibility enhancements,;
     this.setupKeyboardNavigation();
     this.setupFocusIndicators();
+}
   }
   }
   }
-  }
-  private setupKeyboardNavigation(): void {;
+  private setupKeyboardNavigation(): void {
+  ;
     if (typeof document !== 'undefined' {;
       // Add keyboard navigation support,;
     document.addEventListener('keydown',;
-    (event) => {;
+    (event) => {
+  ;
         if (event.key === 'Tab') {;
           // Handle tab navigation,;
     console.log('Tab navigation detected');
-  }
+}
   }
   }
         }
       });
     }
   }
-  private setupFocusIndicators(): void {;
+  private setupFocusIndicators(): void {
+  ;
     if (typeof document !== 'undefined') {;
       // Add focus indicators,;
     const style = document.createElement('style');
@@ -59,7 +63,7 @@ class AccessibilityEnhancer {;
         *:focus {;
           outline: 2px solid #0066cc;
           outline-offset: 2px;
-  }
+}
   }
   }
         }
@@ -67,9 +71,10 @@ class AccessibilityEnhancer {;
       document.head.appendChild(style);
     }
   }
-  public cleanup(): void {;
+  public cleanup(): void {
+  ;
     // Cleanup accessibility enhancements;
-  }
+}
   }
   }
 }

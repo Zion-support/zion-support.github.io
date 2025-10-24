@@ -15,8 +15,8 @@ function fixJsxFile(filePath) {
     }
 
     // Fix malformed h1 tags
-    if (content.includes('About{" "}')) {
-      content = content.replace(/<h1[^>]*>About\{\s*" "\s*\}\s*<\/h1>/g, '<h1 className="text-4xl md:text-6xl font-bold text-white mb-6">About{" "}<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Zion Tech Group</span></h1>');
+    if (content.includes('About{' "}')) {
+      content = content.replace(/<h1[^>]*>About\{\s*" "\s*\}\s*<\/h1>/g, '<h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>About{" "}<span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400'>Zion Tech Group</span></h1>');
       fixed = true;
     }
 
@@ -34,7 +34,7 @@ function fixJsxFile(filePath) {
 
     // Fix missing closing tags for Helmet
     if (content.includes('<Helmet>') && !content.includes('</Helmet>')) {
-      content = content.replace(/<Helmet>\s*<title>([^<]*)<\/title>\s*<meta[^>]*\/>\s*<div/g, '<Helmet>\n        <title>$1</title>\n        <meta name="description" content="AI solutions by Zion Tech Group" />\n      </Helmet>\n      <div');
+      content = content.replace(/<Helmet>\s*<title>([^<]*)<\/title>\s*<meta[^>]*\/>\s*<div/g, '<Helmet>\n        <title>$1</title>\n        <meta name='description' content='AI solutions by Zion Tech Group' />\n      </Helmet>\n      <div');
       fixed = true;
     }
 

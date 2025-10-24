@@ -61,7 +61,7 @@ export interface Metadata {
 
 export interface MetadataRoute {
   url: string,
-  lastModified?: string | Date
+      lastModified?: string | Date
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
   priority?: number
 }

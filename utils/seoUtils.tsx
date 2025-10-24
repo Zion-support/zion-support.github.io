@@ -1,7 +1,6 @@
 "use client";
 import React from 'react';
-
-const seoUtils = () => {
+const seoUtils = (): JSX.Element => {
   return null;
 };
 

@@ -1,20 +1,20 @@
 interface LinkProps {;
     // TODO: Add content;
-  }
+ , }
   }
 }
-  href: string;,;
+  href: string,;,;
     children: React.ReactNode;
   className?: string;
   target?: string;
   rel?: string;
   onClick?: () => void;
-  'aria-label'?: string;
+  'aria-label'?: string;,
 }
 export const Link: React.FC;
           <LinkProps> = ({;
     // TODO: Add content;
-  }
+ , }
   }
 }
 //   href,;
@@ -24,16 +24,17 @@ export const Link: React.FC;
 //   rel,;
 //   onClick,;
   'aria-label': ariaLabel,;
-//   ...props,;
-}) => {;
+//   ...props;
+}) => {
+  ;
     if (onClick) {;
-  }
+}
   }
     }
     // Handle internal navigation,;
     if (href.startsWith('/') && !href.startsWith('//')) {;
     // TODO: Add content;
-  }
+ , }
   }
 }
       e.preventDefault();
@@ -46,8 +47,7 @@ export const Link: React.FC;
           <a;
       href={;
     href;
-  }
-      className={;
+  }className={;
     className;
   }
       target={;
@@ -65,7 +65,7 @@ export const Link: React.FC;
       {;
     ...props;
   }
-// >
+// ></a>
       {;
     children;
   }

@@ -5,10 +5,11 @@ export class AppError extends Error {;
   }
   }
 }
-  statusCode: number;,;
-    isOperational: boolean;,;
+  statusCode: number;;
+    isOperational: boolean;;
     timestamp: string;
-  constructor(message: string, statusCode = 500, isOperational = true) {;
+  constructor(message: string,
+      statusCode = 500, isOperational = true) {;
     // TODO: Add content;
   }
   }
@@ -20,9 +21,10 @@ export class AppError extends Error {;
 //     Error.captureStackTrace(this, this.constructor);
   }
 }
-export const _errorHandler = (error: AppError | Error) => {;
+export const _errorHandler = (error: AppError | Error) => {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
   const isDevelopment = process.env.NODE_ENV === 'development';
@@ -46,14 +48,18 @@ export const _errorHandler = (error: AppError | Error) => {;
     statusCode: appError.statusCode || 500;
   }
 }
-export const asyncHandler = (fn: (req: unknown, res: unknown, next: unknown) => unknown) => (req: unknown, res: unknown, next: unknown) => {;
+export const asyncHandler = (fn: (req: unknown,
+      res: unknown, next: unknown) => unknown) => (req: unknown,
+      res: unknown, next: unknown) => {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
-  Promise.resolve(fn(req, res, next)).catch((error: unknown) => {;
+  Promise.resolve(fn(req, res, next)).catch((error: unknown) => {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     if (next && typeof next === 'function') {;

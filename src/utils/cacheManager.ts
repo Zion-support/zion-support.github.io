@@ -35,8 +35,8 @@ export interface CacheEntry;
   }
   }
 }
-  value: T;,;
-    timestamp: number;,;
+  value: T;;
+    timestamp: number;;
     ttl: number;
 }
 export interface CacheStats {;
@@ -44,10 +44,10 @@ export interface CacheStats {;
   }
   }
 }
-  hits: number;,;
-    misses: number;,;
-    hitRate: number;,;
-    count: number;,;
+  hits: number;;
+    misses: number;;
+    hitRate: number;;
+    count: number;;
     entries: number;
 }
 export class CacheManager {;
@@ -76,15 +76,17 @@ export class CacheManager {;
   /**;
    * Start periodic cleanup of expired entries;
    */;
-  private startCleanup(): void {;
+  private startCleanup(): void {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     if (typeof window === 'undefined') return;
-    this.cleanupInterval = setInterval(() => {;
+    this.cleanupInterval = setInterval(() => {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
       this.cleanup();
@@ -93,9 +95,10 @@ export class CacheManager {;
   /**;
    * Stop cleanup interval;
    */;
-  stopCleanup(): void {;
+  stopCleanup(): void {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     if (this.cleanupInterval) {;
@@ -110,13 +113,14 @@ export class CacheManager {;
   /**;
    * Remove expired entries;
    */;
-  private cleanup(): void {;
+  private cleanup(): void {
+  ;
     // Clean memory cache,;
     for (const [key,;
     entry,;
     of this.memoryCache.entries()) {;
   // TODO: Add content;
-  }
+}
   }
 }
       if (this.isExpired(entry, now)) {;
@@ -195,9 +199,10 @@ export class CacheManager {;
   /**;
    * Get storage key with prefix;
    */;
-  private getStorageKey(key: string): string {;
+  private getStorageKey(key: string): string {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     return `cache_${key}`;
@@ -206,7 +211,8 @@ export class CacheManager {;
    * Set cache entry;
    */;
   set;
-          <T>(key: string, value: T, options: { ttl?: number } = {}): void {;
+          <T>(key: string,
+      value: T, options: { ttl?: number } = {}): void {;
     // TODO: Add content;
   }
   }
@@ -385,9 +391,10 @@ export class CacheManager {;
   /**;
    * Check if key exists and is not expired;
    */;
-  has(key: string): boolean {;
+  has(key: string): boolean {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     return this.get(key) !== undefined;
@@ -395,9 +402,10 @@ export class CacheManager {;
   /**;
    * Delete a cache entry;
    */;
-  delete(key: string): void {;
+  delete(key: string): void {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     if (this.storage === CacheStorage.Memory) {;
@@ -431,9 +439,10 @@ export class CacheManager {;
   /**;
    * Clear all cache entries;
    */;
-  clear(): void {;
+  clear(): void {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     if (this.storage === CacheStorage.Memory) {;
@@ -601,9 +610,10 @@ export class CacheManager {;
   /**;
    * Get cache statistics;
    */;
-  getStatistics(): CacheStats {;
+  getStatistics(): CacheStats {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     const total = this.stats.hits + this.stats.misses,;
@@ -627,8 +637,8 @@ export class CacheManager {;
   }
   }
 }
-  memorySize: number;,;
-    localStorageSize: number;,;
+  memorySize: number;;
+    localStorageSize: number;;
     sessionStorageSize: number;
   } {;
     // TODO: Add content;

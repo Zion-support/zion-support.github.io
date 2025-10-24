@@ -12,8 +12,8 @@ export interface AppConfig {;
   }
   }
 }
-  name: string;,;
-    version: string;,;
+  name: string;;
+    version: string;;
     environment: 'development' | 'production' | 'test';
   }
   api: {;
@@ -21,34 +21,34 @@ export interface AppConfig {;
   }
   }
 }
-  baseUrl: string;,;
-    timeout: number;,;
-    retryAttempts: number;,;
+  baseUrl: string;;
+    timeout: number;;
+    retryAttempts: number;;
     features: {;
     // TODO: Add content;
   }
   }
 }
-  analytics: boolean;,;
-    monitoring: boolean;,;
-    errorTracking: boolean;,;
-    performanceOptimization: boolean;,;
+  analytics: boolean;;
+    monitoring: boolean;;
+    errorTracking: boolean;;
+    performanceOptimization: boolean;;
     performance: {;
     // TODO: Add content;
   }
   }
 }
-  enableLazyLoading: boolean;,;
-    imageLazyLoadThreshold: number;,;
-    componentLazyLoadThreshold: number;,;
-    cacheMaxAge: number;,;
+  enableLazyLoading: boolean;;
+    imageLazyLoadThreshold: number;;
+    componentLazyLoadThreshold: number;;
+    cacheMaxAge: number;;
     security: {;
     // TODO: Add content;
   }
   }
 }
-  enableCSP: boolean;,;
-    enableHSTS: boolean;,;
+  enableCSP: boolean;;
+    enableHSTS: boolean;;
     enableXSSProtection: boolean;
 }
     name: 'Zion Tech Group',;
@@ -91,30 +91,34 @@ export function getConfig;
       throw new Error(`Configuration key "${keyPath}" not found`);
   return value as T;
  * Check if a feature is enabled;
-export function isFeatureEnabled(feature: keyof AppConfig['features']): boolean {;
+export function isFeatureEnabled(feature: keyof AppConfig['features']): boolean {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
   return config.features[feature];
  * Get current environment;
-export function getEnvironment(): string {;
+export function getEnvironment(): string {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
   return config.app.environment;
  * Check if running in production;
-export function isProduction(): boolean {;
+export function isProduction(): boolean {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
   return config.app.environment === 'production';
  * Check if running in development;
-export function isDevelopment(): boolean {;
+export function isDevelopment(): boolean {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
   return config.app.environment === 'development';

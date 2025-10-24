@@ -1,13 +1,13 @@
 "use client";
 import React from 'react';
-
 interface StructuredDataProps {
   className?: string;
 }
 
-const StructuredData: React.FC<StructuredDataProps> = ({ className = '' }) => {
+const StructuredData: React.FC<StructuredDataProps> = ({ className = &apos;&apos;, }) => {
   return (
-    <div className={className}>
+    <div className={className
+}></div>
       <h2>StructuredData</h2>
       <p>This component is under construction.</p>
     </div>

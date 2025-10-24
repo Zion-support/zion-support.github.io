@@ -47,19 +47,19 @@ function fixFile(filePath) {
         
         // Fix malformed JSX
         if (trimmedLine === '<>' && i > 0) {
-          const prevLine = lines[i - 1].trim();
+  const prevLine = lines[i - 1].trim();
           if (prevLine.endsWith('(') || prevLine.endsWith('return (')) {
             fixedLines.push('    <>');
-          } else {
-            fixedLines.push(line);
-          }
+} else {
+  fixedLines.push(line);
+}
         } else if (trimmedLine === '</>') {
-          if (parenCount === 0) {
+  if (parenCount === 0) {
             fixedLines.push('  </>');
             inJSX = false;
-          } else {
-            fixedLines.push(line);
-          }
+} else {
+  fixedLines.push(line);
+}
         } else if (trimmedLine.startsWith('<') && !trimmedLine.includes('//') && !trimmedLine.includes('/*')) {
           // Fix malformed JSX tags
           if (trimmedLine.includes('  </') && !trimmedLine.includes('</>')) {
@@ -107,7 +107,7 @@ function fixFile(filePath) {
 
 // Get all TypeScript files
 const { execSync } = require('child_process');
-const allFiles = execSync('find app -name "*.tsx" -type f', { encoding: 'utf8' })
+const allFiles = execSync('find app -name '*.tsx" -type f', { encoding: 'utf8' })
   .trim()
   .split('\n')
   .filter(file => file.trim() !== '');

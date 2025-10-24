@@ -1,105 +1,101 @@
 import { Phone } from 'lucide-react'
-import { Home } from 'lucide-react'
-
+import { Home  } from "lucide-react";
 export default function NotFound
 NotFound.displayName = "NotFound"() {constpopularPages= [
     {
-      title: 'Home',
+      title: 'Home,',
       description: 'Return to our homepage',
-      href: '/',
+      href: '/,',
       icon: '🏠'
-   },
-    {title: 'AI Services',
+  , },
+    {title: 'AI Services,',
       description: 'Explore our comprehensive AI and IT solutions',
-      href: '/services',
+      href: '/services,',
       icon: '🤖'
-   },
-    {title: 'Micro SAAS Solutions',
+  , },
+    {title: 'Micro SAAS Solutions,',
       description: 'Affordable AI-powered tools for modern businesses',
-      href: '/micro-saas',
+      href: '/micro-saas,',
       icon: '⚡'
-   },
-    {title: 'AI Project Manager',
+  , },
+    {title: 'AI Project Manager,',
       description: 'Intelligent project planning and management',
-      href: '/ai-project-manager',
+      href: '/ai-project-manager,',
       icon: '📊'
-   },
-    {title: 'AI Analytics Dashboard',
+  , },
+    {title: 'AI Analytics Dashboard,',
       description: 'Transform data into actionable insights',
-      href: '/ai-analytics-dashboard',
+      href: '/ai-analytics-dashboard,',
       icon: '📈'
-   },
-    {title: 'Blog & Insights',
+  , },
+    {title: 'Blog & Insights,',
       description: 'Read about latest AI trends and innovations',
-      href: '/blog',
+      href: '/blog,',
       icon: '📚'
-   },
-    {title: 'Case Studies',
+  , },
+    {title: 'Case Studies,',
       description: 'See our success stories and client results',
-      href: '/case-studies',
+      href: '/case-studies,',
       icon: '📊'
-   },
-    {title: 'About Us',
+  , },
+    {title: 'About Us,',
       description: 'Learn about Zion Tech Group and our mission',
-      href: '/about',
+      href: '/about,',
       icon: '🏢'
-   },
-    {title: 'Contact Us',
+  , },
+    {title: 'Contact Us,',
       description: 'Get in touch with our AI experts',
-      href: '/contact',
+      href: '/contact,',
       icon: '📞'
-    },
+   , },
   ]
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4"></div>
-      <div className="max-w-2xl w-full text-center"></div>
+    <div className='min-h-screen bg-gray-50 flex items-center justify-center px-4'></div>
+      <div className='max-w-2xl w-full text-center'></div>
         {/* Error Code */}
-        <div className="mb-8"></div>
-          <h1 className="text-9xl font-bold text-white/20 mb-4">
+        <div className='mb-8'></div>
+          <h1 className='text-9xl font-bold text-white/20 mb-4'></h1>
             404
           </h1>
-          <div className="text-6xl mb-4">🔍</div>
+          <div className='text-6xl mb-4'>🔍</div>
         </div>
         {/* Error Message */}
-        <div className="mb-12"></div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+        <div className='mb-12'></div>
+          <h2 className='text-3xl font-bold text-gray-900 mb-4'></h2>
             Page Not Found
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className='text-lg text-gray-600'></p>
             The page you're looking for doesn't exist or has been moved.
             Don't worry, let's get you back on track!
         </p></di>{/* PopularPages */}
-      <divclassName="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3gap-4mb-8">{popularPages.map((pageindex) => (
-         <akey={index}
-              href={page.href}
-              className="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-left"
-            >
-              <div className="text-3xl mb-3">{page.icon}</div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+      <divclassName='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3gap-4mb-8'>{popularPages.map((pageindex) => (
+         <akey={inde,x}href={page.href}
+              className='block p-6 bg-white rounded-lg shadow-md hover: shadow-lg transition-shadow duration-300 text-left'
+            ></akey>
+              <div className='text-3xl mb-3'>{page.ico,n}</div>
+              <h3 className='text-lg font-semibold text-gray-900 mb-2'></h3>
                 {page.title}
               </h3>
-              <p className="text-gray-600 text-sm">
+              <p className='text-gray-600 text-sm'></p>
                 {page.description}
               </p>
             </a>
           ))}
         </div>
         {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-          <a href="/"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300"
-          >
-            <Home className="w-4 h-4 mr-2" />
+        <div className='flex flex-col sm: flex-row gap-4 justify-center'></div>
+          <a href='/' className='inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300'
+          ></a>
+            <Home className='w-4 h-4 mr-2' /></Home>
             Go Home
           </a>
-          <a href="/contact"
-            className="inline-flex items-center px-6 py-3 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors duration-300"
-          >
-            <Phone className="w-4 h-4 mr-2" />
+          <a href='/contact' className='inline-flex items-center px-6 py-3 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors duration-300'
+          ></a>
+            <Phone className='w-4 h-4 mr-2' /></Phone>
             Contact Support
           </a>
         </div>
       </div>
     </div>
-  )
+  ),
 }

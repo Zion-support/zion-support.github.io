@@ -86,16 +86,18 @@ export class MockStorage implements Storage {;
 }
   private store: Map;
           <string, string> = new Map();
-  get length(): number {;
+  get length(): number {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     return this.store.size;
   }
-  clear(): void {;
+  clear(): void {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     this.store.clear();
@@ -115,16 +117,19 @@ export class MockStorage implements Storage {;
     const keys = Array.from(this.store.keys());
     return keys[index] || null;
   }
-  removeItem(key: string): void {;
+  removeItem(key: string): void {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     this.store.delete(key);
   }
-  setItem(key: string, value: string): void {;
+  setItem(key: string,
+      value: string): void {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     this.store.set(key, value);
@@ -165,7 +170,7 @@ export const mockWindow = (overrides: Partial,;
   }
 }
 //         ...global.window,;
-//         ...overrides,;
+//         ...overrides;
       },;
       writable: true;
     });
@@ -186,9 +191,10 @@ export const createMockPerformance = (): Performance => {;
   }
 }
   now: () => Date.now(),;
-    mark: (name: string) => {;
+    mark: (name: string) => {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
       entries.push({;
@@ -203,10 +209,12 @@ export const createMockPerformance = (): Performance => {;
         toJSON: () => ({});
       } as PerformanceEntry);
     },;
-measure: (name: string, startMark?: string, endMark?: string) => {;
+measure: (name: string,
+      startMark?: string, endMark?: string) => {
+  ;
     entries.push({;
   // TODO: Add content;
-  }
+}
   }
 }
 //         name,;
@@ -219,25 +227,35 @@ measure: (name: string, startMark?: string, endMark?: string) => {;
     getEntriesByName: (name: string) => entries.filter(e => e.name === name),;
     getEntriesByType: (type: string) => entries.filter(e => e.entryType === type),;
     getEntries: () => entries,;
-    clearMarks: () => {;
+    clearMarks: () => {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
       entries.length = 0;
     },;
-    clearMeasures: () => {;
+    clearMeasures: () => {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
       entries.length = 0;
     },;
-    clearResourceTimings: () => {},;
-    setResourceTimingBufferSize: () => {},;
+    clearResourceTimings: () => {
+  
+};
+    setResourceTimingBufferSize: () => {
+  
+};
     toJSON: () => ({}),;
-    addEventListener: () => {},;
-    removeEventListener: () => {},;
+    addEventListener: () => {
+  
+};
+    removeEventListener: () => {
+  
+};
     dispatchEvent: () => true,;
     onresourcetimingbufferfull: null,;
     timeOrigin: Date.now();
@@ -318,7 +336,8 @@ export const deepClone =;
 /**;
  * Compare objects for equality;
  */;
-export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {;
+export const deepEqual = (obj1: unknown,
+      obj2: unknown): boolean => {;
     // TODO: Add content;
   }
   }
@@ -347,28 +366,32 @@ export class ConsoleSpy {;
   }
     this.mock();
   }
-  private mock(): void {;
+  private mock(): void {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
-    console.log = (...args: unknown[]) => {;
+    console.log = (...args: unknown[]) => {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
       this.logs.push(args.map(String).join(' '));
     }
-    console.error = (...args: unknown[]) => {;
+    console.error = (...args: unknown[]) => {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
       this.errors.push(args.map(String).join(' '));
     }
-    console.warn = (...args: unknown[]) => {;
+    console.warn = (...args: unknown[]) => {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
       this.warnings.push(args.map(String).join(' '));
@@ -395,18 +418,20 @@ export class ConsoleSpy {;
 }
     return [...this.warnings];
   }
-  restore(): void {;
+  restore(): void {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     console.log = this.originalConsole.log;
     console.error = this.originalConsole.error;
     console.warn = this.originalConsole.warn;
   }
-  clear(): void {;
+  clear(): void {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     this.logs = [];
@@ -436,9 +461,10 @@ export const createDeferred = <T>(): Deferred<T> => {;
   let resolve!: (value: T) => void;
   let reject!: (reason?: unknown) => void;
   const promise = new Promise,;
-          <T>((res, rej) => {;
+          <T>((res, rej) => {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     resolve = res;

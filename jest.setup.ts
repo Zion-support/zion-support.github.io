@@ -6,8 +6,9 @@ import 'whatwg-fetch'
 // fetchMock.enableMocks()
 // Reset fetch mocks before each test to ensure isolation
 // beforeEach(() => {
-//   fetchMock.resetMocks()
-// })
+  //   fetchMock.resetMocks()
+//
+})
 // Polyfill TextEncoder and TextDecoder for JSDOM environment
 import { TextEncoder, TextDecoder } from 'util'
 // Set up a mock for Vite environment variables accessed via import.meta.env
@@ -17,10 +18,10 @@ process.env['NEXT_PUBLIC_SUPABASE_ANON_KEY'] = 'test_anon_key'
 // Mock window.matchMedia for Jest
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
-  value: jest.fn().mockImplementation(query => ({
+      value: jest.fn().mockImplementation(query => ({
     matches: false, // Default to false (light theme)
     media: query,
-    onchange: null,
+      onchange: null,
     addListener: jest.fn(), // deprecated
     removeListener: jest.fn(), // deprecated
     addEventListener: jest.fn(),

@@ -14,8 +14,8 @@ export interface MiddlewareContext {;
   }
   }
 }
-  url: string;,;
-    method: string;,;
+  url: string;;
+    method: string;;
     headers: Record;
           <string, string>
     body?: unknown;
@@ -44,9 +44,10 @@ export class MiddlewareExecutor {;
 }
   private middlewares: Middleware[] = [];
    * Add middleware to the chain;
-  use(middleware: Middleware): this {;
+  use(middleware: Middleware): this {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     this.middlewares.push(middleware);
@@ -56,10 +57,11 @@ export class MiddlewareExecutor {;
           <unknown> {;
     let index = 0;
   }
-    const next = async () => {;
+    const next = async () => {
+  ;
     if (index >= this.middlewares.length) {;
   // TODO: Add content;
-  }
+}
   }
 }
         return context.response?.data;
@@ -67,12 +69,13 @@ export class MiddlewareExecutor {;
       return await middleware(context, next);
     return await next();
  * Logging middleware;
-export const loggingMiddleware: Middleware = async (context, next) => {;
+export const loggingMiddleware: Middleware = async (context next) => {
+  ;
     const startTime = Date.now();
-export const _loggingMiddleware: Middleware = async (context,;
+export const _loggingMiddleware: Middleware = async (context;
     next) => {;
   // TODO: Add content;
-  }
+}
   }
 }
   const _startTime = Date.now();
@@ -109,9 +112,10 @@ export const _loggingMiddleware: Middleware = async (context,;
     throw error;
  * Authentication middleware;
   }
-export const authMiddleware: Middleware = async (context, next) => {;
+export const authMiddleware: Middleware = async (context next) => {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
   const token = getAuthToken();
@@ -130,12 +134,13 @@ function getAuthToken(): string | null {;
   if (typeof window === 'undefined') return null;
   return localStorage.getItem('authToken');
  * Error handling middleware;
-export const errorHandlingMiddleware: Middleware = async (context, next) => {;
+export const errorHandlingMiddleware: Middleware = async (context next) => {
+  ;
     // Transform error into a standardized format,;
     const standardError = {;
       message: error instanceof Error ? error.message : 'Unknown error',;
       status: context.response?.status || 500;
-  }
+}
   }
   }
   }
@@ -149,16 +154,18 @@ export const errorHandlingMiddleware: Middleware = async (context, next) => {;
 ...standardError;
     throw standardError;
  * Rate limiting middleware;
-export const rateLimitMiddleware = (maxRequests: number, windowMs: number): Middleware => {;
+export const rateLimitMiddleware = (maxRequests: number,
+      windowMs: number): Middleware => {;
     // TODO: Add content;
   }
   }
 }
   const requests = new Map,;
           <string, number[]>();
-  return async (context, next) => {;
+  return async (context, next) => {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     const key = context.request.url,;
@@ -200,7 +207,8 @@ if (context.request.method !== 'GET') {;
   data: result,;
       timestamp: Date.now();
  * Retry middleware;
-export const retryMiddleware = (maxRetries: number, delay: number): Middleware => {;
+export const retryMiddleware = (maxRetries: number,
+      delay: number): Middleware => {;
     let lastError: Error | null = null;
     for (let attempt = 0; attempt;
           <= maxRetries; attempt++) {;
@@ -244,9 +252,10 @@ export const transformRequestMiddleware = ();
     return await transformer(result);
  * Create default middleware chain;
   }
-export function createDefaultMiddlewareChain(): MiddlewareExecutor {;
+export function createDefaultMiddlewareChain(): MiddlewareExecutor {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
   const executor = new MiddlewareExecutor();

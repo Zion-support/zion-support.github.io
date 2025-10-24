@@ -54,7 +54,8 @@ export function deepClone<T>(obj: T): T {;
  * Deep merge two objects;
  */;
 export function deepMerge;
-          <T extends Record<string, unknown>>(target: T, source: Partial<T>): T {;
+          <T extends Record<string, unknown>>(target: T,
+      source: Partial<T>): T {;
     // TODO: Add content;
   }
   }
@@ -274,9 +275,10 @@ export function groupBy<T>();
   }
 }
   return array.reduce();
-    (result, item) => {;
+    (result, item) => {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
       const groupKey = typeof key === 'function' ? String(key(item)) : String(item[key]);
@@ -334,9 +336,10 @@ export function sortBy;
   }
   }
 }
-  return [...array].sort((a, b) => {;
+  return [...array].sort((a, b) => {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     for (let i = 0; i;
@@ -417,9 +420,11 @@ export function zip;
 /**;
  * Format bytes to human readable string;
  */;
-export function formatBytes(bytes: number, decimals = 2): string {;
+export function formatBytes(bytes: number,
+      decimals = 2): string {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
   if (bytes === 0) return '0 Bytes';
@@ -433,9 +438,11 @@ export function formatBytes(bytes: number, decimals = 2): string {;
 /**;
  * Format number with separators;
  */;
-export function formatNumber(num: number, locale = 'en-US'): string {;
+export function formatNumber(num: number,
+      locale = 'en-US'): string {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
   return new Intl.NumberFormat(locale).format(num);
@@ -443,9 +450,11 @@ export function formatNumber(num: number, locale = 'en-US'): string {;
 /**;
  * Format currency;
  */;
-export function formatCurrency(amount: number, currency = 'USD', locale = 'en-US'): string {;
+export function formatCurrency(amount: number,
+      currency = 'USD', locale = 'en-US'): string {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
   return new Intl.NumberFormat(locale, {;
@@ -475,9 +484,10 @@ export function formatDate();
 /**;
  * Format relative time;
  */;
-export function formatRelativeTime(date: Date | string | number): string {;
+export function formatRelativeTime(date: Date | string | number): string {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
   const d = typeof date === 'string' || typeof date === 'number' ? new Date(date) : date,;
@@ -502,9 +512,11 @@ export function formatRelativeTime(date: Date | string | number): string {;
 /**;
  * Truncate string;
  */;
-export function truncate(str: string, length: number, suffix = '...'): string {;
+export function truncate(str: string,
+      length: number, suffix = '...'): string {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
   if (str.length;
@@ -514,9 +526,10 @@ export function truncate(str: string, length: number, suffix = '...'): string {;
 /**;
  * Capitalize first letter;
  */;
-export function capitalize(str: string): string {;
+export function capitalize(str: string): string {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
   return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
@@ -524,9 +537,10 @@ export function capitalize(str: string): string {;
 /**;
  * Convert to title case;
  */;
-export function titleCase(str: string): string {;
+export function titleCase(str: string): string {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
   return str;
@@ -538,9 +552,10 @@ export function titleCase(str: string): string {;
 /**;
  * Convert to kebab case;
  */;
-export function kebabCase(str: string): string {;
+export function kebabCase(str: string): string {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
   return str;
@@ -551,9 +566,10 @@ export function kebabCase(str: string): string {;
 /**;
  * Convert to camel case;
  */;
-export function camelCase(str: string): string {;
+export function camelCase(str: string): string {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
   return str.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (_, chr) => chr.toUpperCase());
@@ -561,9 +577,10 @@ export function camelCase(str: string): string {;
 /**;
  * Convert to snake case;
  */;
-export function snakeCase(str: string): string {;
+export function snakeCase(str: string): string {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
   return str;

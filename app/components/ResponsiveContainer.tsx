@@ -1,21 +1,21 @@
 'use client'
 import Footer from './Footer'
 import Navigation from './Navigation'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, CheckCircle } from 'lucide-react'
+import { Helmet  } from "react-helmet-async";
+import { ArrowRight, CheckCircle  } from "lucide-react";
 import React from 'react'
-import { cn } from '../lib/utils'
+import { cn  } from "../lib/utils";
 interface ResponsiveContainerProps {
   className?: string;
 }
 
 constResponsiveContainer= ({children,
   class Nam e,
-  maxWidth= '7 xl'}: ResponsiveContainerProps) =>{constmaxWidthClasses= {
-    sm: 'max-w-sm',
-    md: 'max-w-md',
-    lg: 'max-w-lg',
-    xl: 'max-w-xl',
+  maxWidth='7 xl'}: ResponsiveContainerProps) => {
+  constmaxWidthClasses={sm: 'max-w-sm,',
+      md: 'max-w-md,',
+    lg: 'max-w-lg,',
+      xl: 'max-w-xl,',
     '2 xl': 'max-w-2 xl',
     '3 xl': 'max-w-3 xl',
     '4 xl': 'max-w-4 xl',
@@ -23,59 +23,59 @@ constResponsiveContainer= ({children,
     '6 xl': 'max-w-6 xl',
     '7 xl': 'max-w-7 xl',
     full: 'max-w-full'
-  }
-
-const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ className = '' }) => {
+ ,
+}const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ className = '&apos;, }) => {
   return (
-    <>
-      <Helmet>
+    <><Helmet></Helmet>
         <title>ResponsiveContainer</title>
-        <meta name="description" content="Advanced ResponsiveContainer solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial intelligence, ResponsiveContainer, AI solutions, intelligent automation" />
+        <meta name='description' content='Advanced ResponsiveContainer solution for modern businesses.' /></meta>
+        <meta name='keywords' content='AI, artificial intelligence, ResponsiveContainer, AI solutions, intelligent automation' /></meta>
       </Helmet>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden"></section>
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center"></div>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+      <Navigation /></Navigation>
+      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900'></div>
+        {/* Hero Section */
+}
+        <section className='relative py-20 px-4 overflow-hidden'></section>
+          <div className='absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20'></div>
+          <div className='relative max-w-7xl mx-auto text-center'></div>
+            <h1 className='text-5xl md: text-7xl font-bold text-white mb-6 leading-tight'></h1>
               ResponsiveContainer
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed'></p>
               Advanced ResponsiveContainer solution for modern businesses.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'></div>
+              <button className='bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center'></button>
                 Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className='ml-2 h-5 w-5' /></ArrowRight>
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              <button className='border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200'></button>
                 Learn More
               </button>
             </div>
           </div>
         </section>
+    </>
 
-        {/* Features Section */}
-        <section className="py-20 px-4"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+        {/* Features Section *,/}
+        <section className='py-20 px-4'></section>
+          <div className='max-w-7xl mx-auto'></div>
+            <div className='text-center mb-16'></div>
+              <h2 className='text-4xl font-bold text-white mb-4'>Key Features</h2>
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'></p>
                 Powerful AI-driven features designed to transform your business operations
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"></div>
-                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
+            <div className='grid md: grid-cols-2 lg:grid-cols-4 gap-8'></div>
+              {features.map((featur, e, index) => (
+                <div key={index}className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20'></div>
+                  <feature.icon className='h-12 w-12 text-emerald-400 mb-4' /></feature>
+                  <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>
+                  <p className='text-gray-300 mb-4'>{feature.description}</p>
+                  <ul className='space-y-2'></ul>
                     {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
+                      <li key={idx}className='flex items-center text-sm text-gray-300'></li>
+                        <CheckCircle className='h-4 w-4 text-emerald-400 mr-2 flex-shrink-0' /></CheckCircle>
                         {benefit}
                       </li>
                     ))}
@@ -87,19 +87,19 @@ const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ className = '
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 px-4 bg-white/5"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+        <section className='py-20 px-4 bg-white/5'></section>
+          <div className='max-w-7xl mx-auto'></div>
+            <div className='text-center mb-16'></div>
+              <h2 className='text-4xl font-bold text-white mb-4'>Why Choose Our Solution</h2>
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'></p>
                 Experience the benefits of cutting-edge AI technology
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-4"></div>
-                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
-                  <p className="text-gray-300 text-lg">{benefit}</p>
+            <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'></div>
+              {benefits.map((benefi, t, index) => (
+                <div key={index}className='flex items-start space-x-4'></div>
+                  <CheckCircle className='h-6 w-6 text-emerald-400 mt-1 flex-shrink-0' /></CheckCircle>
+                  <p className='text-gray-300 text-lg'>{benefit}</p>
                 </div>
               ))}
             </div>
@@ -107,26 +107,26 @@ const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ className = '
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4"></section>
-          <div className="max-w-4xl mx-auto text-center"></div>
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
-            <p className="text-xl text-gray-300 mb-8">
+        <section className='py-20 px-4'></section>
+          <div className='max-w-4xl mx-auto text-center'></div>
+            <h2 className='text-4xl font-bold text-white mb-6'>Ready to Transform Your Business?</h2>
+            <p className='text-xl text-gray-300 mb-8'></p>
               Join thousands of businesses already using our AI solutions
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+            <div className='flex flex-col sm: flex-row gap-4 justify-center'></div>
+              <button className='bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200'></button>
                 Start Free Trial
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              <button className='border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200'></button>
                 Contact Sales
               </button>
             </div>
           </div>
         </section>
       </div>
-      <Footer />
+      <Footer /></Footer>
     </>
-  );
+  );,
 };
 
 export default ResponsiveContainerPage;

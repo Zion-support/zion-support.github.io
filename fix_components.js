@@ -1,8 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const filesToFix = [
-  'app/components/AccessibilityComponents.tsx',
+const filesToFix = ['app/components/AccessibilityComponents.tsx',
   'app/components/AccessibilityUtils.tsx',
   'app/components/ErrorBoundary.tsx',
   'app/components/GlobalErrorBoundary.tsx',
@@ -18,12 +17,12 @@ const filesToFix = [
 ];
 
 const componentTemplate = (name) => `"use client";
-import React from "react";
-
+import React from 'react';
 const ${name}: React.FC = () => {
   return (
     <div>
-      <h1>${name}</h1>
+      <h1>${name
+}</h1>
     </div>
   );
 };

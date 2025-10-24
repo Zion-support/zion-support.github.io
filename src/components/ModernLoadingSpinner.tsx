@@ -1,7 +1,7 @@
 'use client';
 interface ModernLoadingSpinnerProps {;
     // TODO: Add content;
-  }
+ , }
   }
 }
   size?: 'sm' | 'md' | 'lg' | 'xl';
@@ -12,31 +12,32 @@ interface ModernLoadingSpinnerProps {;
 const ModernLoadingSpinner: React.FC;
           <ModernLoadingSpinnerProps> = ({;
     // TODO: Add content;
-  }
+ , }
   }
 }
   size = 'md',;
   color = 'primary',;
   text = 'Loading...',;
   fullScreen = false;
-}) => {;
-    sm: 'w-4 h-4',;
+}) => {
+  ;
+    sm: 'w-4 h-4,&apos;,;
     md: 'value';
-  }
-    lg: 'w-12 h-12',;
-  }
-  }
-  }
-    xl: 'w-16 h-16',;
-  }
-  const colorClasses = {;
-    // TODO: Add content;
-  }
-  }
+ ,
 }
-  primary: 'text-cyan-400',;
-    secondary: 'text-purple-400',;
-    accent: 'text-pink-400',;
+    lg: 'w-12 h-12,',;
+  }
+  }
+  }
+    xl: 'w-16 h-16,',;
+  }
+  const colorClasses={;
+    // TODO: Add content;
+ , }}
+}
+  primary: 'text-cyan-400,',;
+    secondary: 'text-purple-400,',;
+    accent: 'text-pink-400,',;
   }
   const spinnerClasses = `;
     ${;
@@ -57,21 +58,21 @@ const ModernLoadingSpinner: React.FC;
   return (;
           <div>Coming Soon</div>
   );
-          <div className={containerClasses} role="status" aria-label="Loading">
-      <div className="flex flex-col items-center space-y-4">
-        <div className="relative">
+          <div className={containerClasses}role='status' aria-label='Loading'></div>
+      <div className='flex flex-col items-center space-y-4'></div>
+        <div className='relative'></div>
           <div className={spinnerClasses}></div>
-          <div className="absolute inset-0 rounded-full border-2 border-current border-opacity-20"></div>
+          <div className='absolute inset-0 rounded-full border-2 border-current border-opacity-20'></div>
         </div>
         {;
     text && ();
   }
   }
   }
-          <p className="text-sm text-gray-300 animate-pulse">{text}</p>
+          <p className='text-sm text-gray-300 animate-pulse'>{text}</p>
         )}
       </div>
-      <span className="sr-only">Loading content, please wait...</span>
+      <span className='sr-only'>Loading content, please wait...</span>
     </div>
   );
 }

@@ -32,9 +32,9 @@ export interface ApiResponse;
   }
   }
 }
-  data: T;,;
-    status: number;,;
-    statusText: string;,;
+  data: T;;
+    status: number;;
+    statusText: string;;
     headers: Headers;
 }
 export class ApiError extends Error {;
@@ -114,7 +114,7 @@ class ApiClient {;
   }
   }
 }
-//       ...config,;
+//       ...config;
 //       url,;
       method: 'GET',;
     });
@@ -139,7 +139,7 @@ class ApiClient {;
   }
   }
 }
-//       ...config,;
+//       ...config;
 //       url,;
       method: 'POST',;
       body: JSON.stringify(data);
@@ -165,7 +165,7 @@ class ApiClient {;
   }
   }
 }
-//       ...config,;
+//       ...config;
 //       url,;
       method: 'PUT',;
       body: JSON.stringify(data);
@@ -190,7 +190,7 @@ class ApiClient {;
   }
   }
 }
-//       ...config,;
+//       ...config;
 //       url,;
       method: 'DELETE',;
     });
@@ -215,7 +215,7 @@ class ApiClient {;
   }
   }
 }
-//       ...config,;
+//       ...config;
 //       url,;
       method: 'PATCH',;
       body: JSON.stringify(data);
@@ -242,7 +242,7 @@ class ApiClient {;
       skipCache = false,;
       retries = this.config.retries,;
       timeout = this.config.timeout,;
-//       ...fetchConfig,;
+//       ...fetchConfig;
     } = config;
     const cacheKey = `${method}:${fullUrl}`;
     // Check cache for GET requests,;
@@ -273,18 +273,20 @@ class ApiClient {;
     // Create abort controller for timeout,;
 const controller = new AbortController();
     this.abortControllers.set(cacheKey, controller);
-    const timeoutId = setTimeout(() => {;
+    const timeoutId = setTimeout(() => {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
       controller.abort();
     }, timeout);
     let lastError: Error | null = null;
     while (attempt;
-          < retries) {;
+          < retries) {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
       try {;
@@ -297,7 +299,7 @@ const controller = new AbortController();
   }
   }
 }
-//           ...fetchConfig,;
+//           ...fetchConfig;
 //           method,;
           headers: {;
     // TODO: Add content;
@@ -305,7 +307,7 @@ const controller = new AbortController();
   }
 }
 //             ...this.config.headers,;
-//             ...headers,;
+//             ...headers;
           },;
           signal: controller.signal;
         });
@@ -425,9 +427,11 @@ const controller = new AbortController();
   /**;
    * Cancel a pending request;
    */;
-  cancel(url: string, method: string = 'GET'): void {;
+  cancel(url: string,
+      method: string = 'GET'): void {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     const cacheKey = `${method}:${url}`;
@@ -444,9 +448,10 @@ const controller = new AbortController();
   /**;
    * Cancel all pending requests;
    */;
-  cancelAll(): void {;
+  cancelAll(): void {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     this.abortControllers.forEach(controller => {;
@@ -462,9 +467,10 @@ const controller = new AbortController();
    * Update default config;
    */;
   setConfig(config: Partial;
-          <ApiClientConfig>): void {;
+          <ApiClientConfig>): void {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     this.config = {;
@@ -473,7 +479,7 @@ const controller = new AbortController();
   }
 }
 //       ...this.config,;
-//       ...config,;
+//       ...config;
       headers: {;
     // TODO: Add content;
   }
@@ -487,9 +493,10 @@ const controller = new AbortController();
   /**;
    * Set authorization header;
    */;
-  setAuthToken(token: string): void {;
+  setAuthToken(token: string): void {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     this.config.headers['Authorization'] = `Bearer ${token}`;
@@ -497,9 +504,10 @@ const controller = new AbortController();
   /**;
    * Remove authorization header;
    */;
-  removeAuthToken(): void {;
+  removeAuthToken(): void {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     delete this.config.headers['Authorization'];
@@ -529,7 +537,8 @@ const controller = new AbortController();
   }
   }
 }
-      const response = await this.get(endpoint, { timeout: 5000, retries: 1 });
+      const response = await this.get(endpoint, { timeout: 5000,
+      retries: 1 });
       return response.status === 200;
     } catch {;
     // TODO: Add content;

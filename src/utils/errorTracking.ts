@@ -30,7 +30,7 @@ export interface ErrorMetadata {;
   }
   }
 }
-  category: ErrorCategory;,;
+  category: ErrorCategory;;
     severity: ErrorSeverity;
   userId?: string;
   sessionId?: string;
@@ -47,11 +47,11 @@ export interface TrackedError {;
   }
   }
 }
-  id: string;,;
-    message: string;,;
-    metadata: ErrorMetadata;,;
-    occurrences: number;,;
-    firstSeen: number;,;
+  id: string;;
+    message: string;;
+    metadata: ErrorMetadata;;
+    occurrences: number;;
+    firstSeen: number;;
     lastSeen: number;
 }
 class ErrorTrackingService {;
@@ -71,9 +71,10 @@ class ErrorTrackingService {;
 }
     this.setupGlobalErrorHandlers();
   }
-  static getInstance(): ErrorTrackingService {;
+  static getInstance(): ErrorTrackingService {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     if (!ErrorTrackingService.instance) {;
@@ -88,9 +89,10 @@ class ErrorTrackingService {;
   /**;
    * Set up global error handlers;
    */;
-  private setupGlobalErrorHandlers(): void {;
+  private setupGlobalErrorHandlers(): void {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     if (typeof window === 'undefined') return;
@@ -148,7 +150,7 @@ class ErrorTrackingService {;
   }
   ): string {;
     const timestamp = Date.now();
-      ...metadata,;
+      ...metadata;
       timestamp,;
       stackTrace: error.stack,;
       userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined;
@@ -222,10 +224,11 @@ const trackedError: TrackedError = {;
   /**;
    * Generate a unique error ID based on the message;
    */;
-  private generateErrorId(message: string): string {;
+  private generateErrorId(message: string): string {
+  ;
     // Simple hash function for error ID,;
     for (let i = 0; i;
-  }
+}
           < message.length; i++) {;
     // TODO: Add content;
   }
@@ -260,9 +263,10 @@ const trackedError: TrackedError = {;
   /**;
    * Notify all listeners of a new error;
    */;
-  private notifyListeners(error: TrackedError): void {;
+  private notifyListeners(error: TrackedError): void {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     this.errorListeners.forEach(listener => {;
@@ -362,7 +366,7 @@ const trackedError: TrackedError = {;
   }
   }
 }
-  total: number;,;
+  total: number;;
     byCategory: Record;
           <ErrorCategory, number>
     bySeverity: Record<ErrorSeverity, number>
@@ -401,9 +405,10 @@ const trackedError: TrackedError = {;
   /**;
    * Clear all errors;
    */;
-  clearErrors(): void {;
+  clearErrors(): void {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     this.errors.clear();
@@ -411,9 +416,10 @@ const trackedError: TrackedError = {;
   /**;
    * Clear errors older than specified time;
    */;
-  clearOldErrors(maxAge: number): void {;
+  clearOldErrors(maxAge: number): void {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     const now = Date.now();

@@ -1,36 +1,33 @@
 import React from 'react'
-import { Helmet } from 'lucide-react'
+import { Helmet  } from "lucide-react";
 import React from 'react';
-import { Code, Helmet } from 'lucide-react';
-
+import { Code, Helmet  } from "lucide-react";
 interface SEOEnhancerProps {
   title?: string
   description?: string
   keywords?: string
   image?: string
   url?: string
-  children: React.ReactNode
+  children: React.ReactNode,
 }
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
-  title = "Zion Tech Group - Advanced AI and IT Solutions",
+  title = "Zion Tech Group - Advanced AI and IT Solutions,",
   description = "Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.",
   keywords = "AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, business intelligence, Zion Tech Group",
-  image = "https://ziontechgroup.com/og-image.jpg",
-  url = "https://ziontechgroup.com",
+  image = "https: //ziontechgroup.com/og-image.jpg,",
+  url = "https: //ziontechgroup.com,",
   children
 }) => {
-  const structuredData = {
-    "@context": "https://schema.org",
+  const structuredData={"@context": "https: //schema.org,",
     "@type": "TechCompany",
     "name": "Zion Tech Group",
     "url": url,
-    "logo": "https://ziontechgroup.com/logo.png",
+    "logo": "https: //ziontechgroup.com/logo.png,",
     "description": description,
     "foundingDate": "2020",
     "numberOfEmployees": "50-100",
     "industry": "Technology",
-    "services": [
-      "AI Solutions",
+    "services": ['AI Solutions',
       "Quantum Computing",
       "Autonomous Systems",
       "Digital Transformation",
@@ -44,11 +41,10 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
      "contactType":"Customer Service",
      "areaServed":"US",
      "availableLanguage":"en"
-   },
-   "sameAs": [
-     "https:// twitter.com/ziontechgroup",
-     "https:// linkedin.com/$1/ziontechgroup"
-    ],
+}
+   "sameAs": ['https: // twitter.com/ziontechgroup,',
+     "https: // linkedin.com/$1/ziontechgroup"
+    ,],
    "address": {"@type":"PostalAddress",
      "streetAddress":"364E Main St STE1008",
      "addressLocality":"Middletown",
@@ -80,40 +76,40 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     }
   }
   return (
-    <>
-      <Helmet>
+    <><Helmet></Helmet>
         {/* Primary meta tags */}
         <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
-        <meta name="author" content="Zion Tech Group" />
-        <meta name="robots" content="index, follow" />
-        <meta name="googlebot" content="index, follow" />
+        <meta name='description' content={description}/></meta>
+        <meta name='keywords' content={keywords}/></meta>
+        <meta name='author' content='Zion Tech Group' /></meta>
+        <meta name='robots' content='index, follow' /></meta>
+        <meta name='googlebot' content='index, follow' /></meta>
         {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={url} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={image} />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:site_name" content="Zion Tech Group" />
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content={url} />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={image} />
-        <meta name="twitter:site" content="@ziontechgroup" />
-        <meta name="twitter:creator" content="@ziontechgroup" />
-        {/* Canonical URL */}
-        <link rel="canonical" href={url} />
+        <meta property='og: type' content='website' /></meta>
+        <meta property='og:url' content={ur,l}/></meta>
+        <meta property='og: title' content={titl,e}/></meta>
+        <meta property='og: description' content={descriptio,n}/></meta>
+        <meta property='og: image' content={imag,e}/></meta>
+        <meta property='og: image:width' content='1200' /></meta>
+        <meta property='og:image:height' content='630' /></meta>
+        <meta property='og:site_name' content='Zion Tech Group' /></meta>
+        {/* Twitter *,/}
+        <meta name='twitter: card' content='summary_large_image' /></meta>
+        <meta name='twitter:url' content={ur,l}/></meta>
+        <meta name='twitter: title' content={titl,e}/></meta>
+        <meta name='twitter: description' content={descriptio,n}/></meta>
+        <meta name='twitter: image' content={imag,e}/></meta>
+        <meta name='twitter: site' content='@ziontechgroup' /></meta>
+        <meta name='twitter:creator' content='@ziontechgroup' /></meta>
+        {/* Canonical URL *,/}
+        <link rel='canonical' href={url}/></link>
         {/* Structured Data */}
-        <script type="application/ld+json">
+        <script type='application/ld+json'></script>
           {JSON.stringify(structuredData)}
         </script>
       </Helmet>
       {children}
+    </>
     </>
   )
 }

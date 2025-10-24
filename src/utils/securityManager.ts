@@ -10,9 +10,10 @@ export class SecurityManager {;
 }
   private static instance: SecurityManager;
   private constructor() {}
-  static getInstance(): SecurityManager {;
+  static getInstance(): SecurityManager {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     if (!SecurityManager.instance) {;
@@ -27,9 +28,10 @@ export class SecurityManager {;
   /**;
    * Sanitize user input to prevent XSS attacks;
    */;
-  sanitizeInput(input: string): string {;
+  sanitizeInput(input: string): string {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     return input;
@@ -42,14 +44,15 @@ export class SecurityManager {;
   /**;
    * Validate and sanitize URL;
    */;
-  sanitizeUrl(url: string): string {;
+  sanitizeUrl(url: string): string {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     try {;
-    if (!['http:',;
-    'https:',;
+    if (!['http: ',;
+    'https: ',;
     .includes(parsed.protocol)) {;
   // TODO: Add content;
   }
@@ -69,9 +72,10 @@ export class SecurityManager {;
   /**;
    * Generate secure random token;
    */;
-  generateSecureToken(_length: number = 32): string {;
+  generateSecureToken(_length: number = 32): string {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     const array = new Uint8Array(length);
@@ -95,9 +99,11 @@ const crypto = require('crypto');
   /**;
    * Implement rate limiting;
    */;
-  checkRateLimit(key: string, limit: number, windowMs: number): boolean {;
+  checkRateLimit(key: string,
+      limit: number, windowMs: number): boolean {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     const now = Date.now();

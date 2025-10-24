@@ -1,20 +1,20 @@
 
 interface AccessibilitySettings {;
     // TODO: Add content;
-  }
+ , }
   }
 }
   highContrast: boolean;
-    largeText: boolean;,;
-    reducedMotion: boolean;,;
-    screenReader: boolean;,;
-    focusVisible: boolean;,;
-    zoomLevel: number;,;
-    colorBlind: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
+    largeText: boolean,;,;
+    reducedMotion: boolean,;,;
+    screenReader: boolean,;,;
+    focusVisible: boolean,;,;
+    zoomLevel: number,;,;
+    colorBlind: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';,
 }
 interface AccessibilityProps {;
     // TODO: Add content;
-  }
+ , }
   }
 }
   enableKeyboardNavigation?: boolean;
@@ -28,7 +28,7 @@ interface AccessibilityProps {;
 const EnhancedAccessibility: React.FC;
           <AccessibilityProps> = ({;
     // TODO: Add content;
-  }
+ , }
   }
 }
   enableKeyboardNavigation = true,;
@@ -38,41 +38,51 @@ const EnhancedAccessibility: React.FC;
   enableReducedMotion = true,;
   enableColorBlindSupport = true,;
   enableZoomControl = true,;
-}) => {;
+}) => {
+  ;
     // TODO: Add content;
-  }
+ ,
+}
   }
 }
   const [settings, setSettings] = useState,;
           <AccessibilitySettings>({;
     // TODO: Add content;
-  }
+ , }
   }
 }
-  highContrast: false,;
-    largeText: false,;
-    reducedMotion: false,;
-    screenReader: false,;
-    focusVisible: true,;
-    zoomLevel: 100,;
-    colorBlind: 'none',;
+  highContrast: fals,
+      e,;
+    largeText: fals,
+      e,;
+    reducedMotion: fals,
+      e,;
+    screenReader: fals,
+      e,;
+    focusVisible: tru,
+      e,;
+    zoomLevel: 10,
+      0,;
+    colorBlind: 'none,',;
   });
   const [isVisible, setIsVisible] = useState(false);
   // Load settings from localStorage,;
-  useEffect(() => {;
+  useEffect(() => {
+  ;
     if (savedSettings) {;
   // TODO: Add content;
-  }
+ ,
+}
   }
 }
       try {;
     // TODO: Add content;
-  }
+ , }
   }
 }
         setSettings(JSON.parse(savedSettings));
       } catch (error) {;
-    // console.error('Failed to load accessibility settings:',;
+    // console.error('Failed to load accessibility settings: ',;
     error);
   }
   }
@@ -80,113 +90,129 @@ const EnhancedAccessibility: React.FC;
     }
   }, []);
   // Save settings to localStorage,;
-const saveSettings = useCallback((newSettings: AccessibilitySettings) => {;
+export const saveSettings = useCallback((newSettings: AccessibilitySettings) => {
+  ;
     // TODO: Add content;
-  }
+ ,
+}
   }
 }
     setSettings(newSettings);
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
   }, []);
   // Apply high contrast mode,;
-  useEffect(() => {;
+  useEffect(() => {
+  ;
     // TODO: Add content;
-  }
+ ,
+}
   }
 }
     if (settings.highContrast) {;
     // TODO: Add content;
-  }
+ , }
   }
 }
       document.documentElement.classList.add('high-contrast');
     } else {;
     // TODO: Add content;
-  }
+ , }
   }
 }
       document.documentElement.classList.remove('high-contrast');
     }
   }, [settings.highContrast]);
   // Apply large text mode,;
-  useEffect(() => {;
+  useEffect(() => {
+  ;
     // TODO: Add content;
-  }
+ ,
+}
   }
 }
     if (settings.largeText) {;
     // TODO: Add content;
-  }
+ , }
   }
 }
       document.documentElement.style.fontSize = '1.2rem';
     } else {;
     // TODO: Add content;
-  }
+ , }
   }
 }
       document.documentElement.style.fontSize = '1rem';
     }
   }, [settings.largeText]);
   // Apply reduced motion,;
-  useEffect(() => {;
+  useEffect(() => {
+  ;
     // TODO: Add content;
-  }
+ ,
+}
   }
 }
     if (settings.reducedMotion) {;
     // TODO: Add content;
-  }
+ , }
   }
 }
       document.documentElement.classList.add('reduced-motion');
     } else {;
     // TODO: Add content;
-  }
+ , }
   }
 }
       document.documentElement.classList.remove('reduced-motion');
     }
   }, [settings.reducedMotion]);
   // Apply color blind support,;
-  useEffect(() => {;
+  useEffect(() => {
+  ;
     // TODO: Add content;
-  }
+ ,
+}
   }
 }
     document.documentElement.setAttribute('data-color-blind', settings.colorBlind);
   }, [settings.colorBlind]);
   // Apply zoom level,;
-  useEffect(() => {;
+  useEffect(() => {
+  ;
     // TODO: Add content;
-  }
+ ,
+}
   }
 }
     document.documentElement.style.zoom = `${settings.zoomLevel}%`;
   }, [settings.zoomLevel]);
   // Keyboard navigation,;
-  useEffect(() => {;
+  useEffect(() => {
+  ;
     // TODO: Add content;
-  }
+ ,
+}
   }
 }
     if (!enableKeyboardNavigation) return;
-    const handleKeyDown = (e: KeyboardEvent) => {;
+    const handleKeyDown = (e: KeyboardEvent) => {
+  ;
     // TODO: Add content;
-  }
+ ,
+}
   }
 }
       // Skip to main content,;
       if (e.key === 'Tab' && e.shiftKey && e.altKey) {;
     // TODO: Add content;
-  }
+ , }
   }
 }
         e.preventDefault();
-        const mainContent = document.querySelector('main, [role="main"]');
+        const mainContent = document.querySelector('main, [role='main']');
         if (mainContent) {;
     // TODO: Add content;
-  }
+ , }
   }
 }
           (mainContent as HTMLElement).focus();
@@ -195,7 +221,7 @@ const saveSettings = useCallback((newSettings: AccessibilitySettings) => {;
       // Toggle accessibility panel,;
       if (e.key === 'Tab' && e.altKey && e.key === 'a') {;
     // TODO: Add content;
-  }
+ , }
   }
 }
         e.preventDefault();
@@ -204,7 +230,7 @@ const saveSettings = useCallback((newSettings: AccessibilitySettings) => {;
       // Escape key to close panel,;
       if (e.key === 'Escape' && isVisible) {;
     // TODO: Add content;
-  }
+ , }
   }
 }
         setIsVisible(false);
@@ -214,35 +240,41 @@ const saveSettings = useCallback((newSettings: AccessibilitySettings) => {;
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [enableKeyboardNavigation, isVisible]);
   // Focus management,;
-  useEffect(() => {;
+  useEffect(() => {
+  ;
     // TODO: Add content;
-  }
+ ,
+}
   }
 }
     if (!enableFocusManagement) return;
-    const handleFocusIn = (e: FocusEvent) => {;
+    const handleFocusIn = (e: FocusEvent) => {
+  ;
     // TODO: Add content;
-  }
+ ,
+}
   }
 }
       const target = e.target as HTMLElement,;
       if (target && settings.focusVisible) {;
     // TODO: Add content;
-  }
+ , }
   }
 }
         target.classList.add('focus-visible');
       }
     }
-    const handleFocusOut = (e: FocusEvent) => {;
+    const handleFocusOut = (e: FocusEvent) => {
+  ;
     // TODO: Add content;
-  }
+ ,
+}
   }
 }
       const target = e.target as HTMLElement,;
       if (target) {;
     // TODO: Add content;
-  }
+ , }
   }
 }
         target.classList.remove('focus-visible');
@@ -250,9 +282,11 @@ const saveSettings = useCallback((newSettings: AccessibilitySettings) => {;
     }
     document.addEventListener('focusin', handleFocusIn);
     document.addEventListener('focusout', handleFocusOut);
-    return () => {;
+    return () => {
+  ;
     // TODO: Add content;
-  }
+ ,
+}
   }
 }
       document.removeEventListener('focusin', handleFocusIn);
@@ -260,9 +294,11 @@ const saveSettings = useCallback((newSettings: AccessibilitySettings) => {;
     }
   }, [enableFocusManagement, settings.focusVisible]);
   // Screen reader announcements,;
-const announceToScreenReader = useCallback((message: string) => {;
+export const announceToScreenReader = useCallback((message: string) => {
+  ;
     // TODO: Add content;
-  }
+ ,
+}
   }
 }
     if (!enableScreenReader) return;
@@ -272,110 +308,114 @@ const announceToScreenReader = useCallback((message: string) => {;
     announcement.className = 'sr-only';
     announcement.textContent = message;
     document.body.appendChild(announcement);
-    setTimeout(() => {;
+    setTimeout(() => {
+  ;
     // TODO: Add content;
-  }
+ ,
+}
   }
 }
       document.body.removeChild(announcement);
     }, 1000);
   }, [enableScreenReader]);
   // Toggle functions,;
-const toggleHighContrast = () => {;
+export const toggleHighContrast = (): JSX.Element => {;
     // TODO: Add content;
-  }
+ , }
   }
 }
-    const newSettings = {;
-    ...settings,;
+    const newSettings={;
+    ...settings;
     highContrast: !settings.highContrast;
-  }
-    saveSettings(newSettings);
+ , }saveSettings(newSettings);
     announceToScreenReader(`High contrast ${newSettings.highContrast ? 'enabled' : 'disabled'}`);
   }
-  const toggleLargeText = () => {;
+  const toggleLargeText = (): JSX.Element => {;
     // TODO: Add content;
-  }
+ , }
   }
 }
-    const newSettings = {;
-    ...settings,;
+    const newSettings={;
+    ...settings;
     largeText: !settings.largeText;
-  }
-    saveSettings(newSettings);
+ , }saveSettings(newSettings);
     announceToScreenReader(`Large text ${newSettings.largeText ? 'enabled' : 'disabled'}`);
   }
-  const toggleReducedMotion = () => {;
+  const toggleReducedMotion = (): JSX.Element => {;
     // TODO: Add content;
-  }
+ , }
   }
 }
-    const newSettings = {;
-    ...settings,;
+    const newSettings={;
+    ...settings;
     reducedMotion: !settings.reducedMotion;
-  }
-    saveSettings(newSettings);
+ , }saveSettings(newSettings);
     announceToScreenReader(`Reduced motion ${newSettings.reducedMotion ? 'enabled' : 'disabled'}`);
   }
-  const toggleScreenReader = () => {;
+  const toggleScreenReader = (): JSX.Element => {;
     // TODO: Add content;
-  }
+ , }
   }
 }
-    const newSettings = {;
-    ...settings,;
+    const newSettings={;
+    ...settings;
     screenReader: !settings.screenReader;
-  }
-    saveSettings(newSettings);
+ , }saveSettings(newSettings);
     announceToScreenReader(`Screen reader mode ${newSettings.screenReader ? 'enabled' : 'disabled'}`);
   }
-  const toggleFocusVisible = () => {;
+  const toggleFocusVisible = (): JSX.Element => {;
     // TODO: Add content;
-  }
+ , }
   }
 }
-    const newSettings = {;
-    ...settings,;
+    const newSettings={;
+    ...settings;
     focusVisible: !settings.focusVisible;
-  }
-    saveSettings(newSettings);
+ , }saveSettings(newSettings);
     announceToScreenReader(`Focus indicators ${newSettings.focusVisible ? 'enabled' : 'disabled'}`);
   }
-  const adjustZoom = (delta: number) => {;
+  const adjustZoom = (delta: number) => {
+  ;
     // TODO: Add content;
-  }
+ ,
+}
   }
 }
     const newZoom = Math.max(50, Math.min(200, settings.zoomLevel + delta));
-    const newSettings = {;
-    ...settings,;
+    const newSettings={;
+    ...settings;
     zoomLevel: newZoom;
-  }
-    saveSettings(newSettings);
+ , }saveSettings(newSettings);
     announceToScreenReader(`Zoom level set to ${newZoom}%`);
   }
-  const setColorBlind = (type: AccessibilitySettings['colorBlind']) => {;
+  const setColorBlind = (type: AccessibilitySettings['colorBlind']) => {
+  ;
     // TODO: Add content;
-  }
+ ,
+}
   }
 }
-    const newSettings = {;
-    ...settings,;
+    const newSettings={;
+    ...settings;
     colorBlind: type;
-  }
-    saveSettings(newSettings);
+ , }saveSettings(newSettings);
     announceToScreenReader(`Color blind support set to ${type === 'none' ? 'none' : type}`);
   }
 // Reset all settings,;
-  const resetSettings = () => {;
-    highContrast: false,;
-      largeText: false,;
-      reducedMotion: false,;
-      screenReader: false,;
-      focusVisible: true,;
+  const resetSettings = (): JSX.Element => {;
+    highContrast: fals,
+      e,;
+      largeText: fals,
+      e,;
+      reducedMotion: fals,
+      e,;
+      screenReader: fals,
+      e,;
+      focusVisible: tru,
+      e,;
       zoomLevel: 100;
-  }
-      colorBlind: 'none',;
+ , }
+      colorBlind: 'none,',;
   }
   }
   }
@@ -385,33 +425,33 @@ const toggleHighContrast = () => {;
   }
   if (!isVisible) {;
     // TODO: Add content;
-  }
+ , }
   }
 }
     return (;
           <div>Coming Soon</div>
   );
           <button;
-        onClick={() => setIsVisible(true)} className="fixed bottom-4 left-4 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg p-3 text-white hover:bg-slate-800 transition-colors duration-200 z-50"
-        aria-label="Open accessibility settings";
-        title="Open accessibility settings (Alt + A)";
-><Eye className="w-5 h-5" /></button>
+        onClick={() => setIsVisible(true)}className='fixed bottom-4 left-4 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg p-3 text-white hover: bg-slate-800 transition-colors duration-200 z-50'
+        aria-label='Open accessibility settings';
+        title='Open accessibility settings (Alt + A)';
+><Eye className='w-5 h-5' /></button>
     );
-  }
+ , }
   return (;
-<div className="fixed bottom-4 left-4 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg p-4 text-white z-50 max-w-sm"><div className="flex items-center justify-between mb-4"><h3 className="font-bold text-cyan-400">Accessibility Settings</h3><button;
-          onClick={() => setIsVisible(false)} className="text-gray-400 hover:text-white"
-          aria-label="Close accessibility settings";
+<div className='fixed bottom-4 left-4 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg p-4 text-white z-50 max-w-sm'><div className='flex items-center justify-between mb-4'><h3 className='font-bold text-cyan-400'>Accessibility Settings</h3><button;
+          onClick={() => setIsVisible(false)}className='text-gray-400 hover: text-white'
+          aria-label='Close accessibility settings';
         >;
           ×;
-        </button></div><div className="space-y-3">
+        </button></div><div className='space-y-3'></div>
         {;
     enableHighContrast && (;
-          <div className="flex items-center justify-between"><span className="text-sm">High Contrast</span><button;
+          <div className='flex items-center justify-between'><span className='text-sm'>High Contrast</span><button;
+ , }
   }
   }
-  }
-              onClick={toggleHighContrast} className={;
+              onClick={toggleHighContrast}className={;
     `flex items-center px-3 py-1 rounded ${;
                 settings.highContrast ? 'bg-cyan-600 text-white' : 'bg-gray-700 text-gray-300';
   }
@@ -421,16 +461,16 @@ const toggleHighContrast = () => {;
               aria-pressed={;
     settings.highContrast;
   }
-// >
+// ></button>
               {;
     settings.highContrast ?;
   }
   }
-          <Eye className="w-4 h-4" /> : <EyeOff className="w-4 h-4" />}
+          <Eye className='w-4 h-4' /> : <EyeOff className='w-4 h-4' />}
             </button></div>
         )}
-<div className="flex items-center justify-between"><span className="text-sm">Large Text</span><button;
-            onClick={toggleLargeText} className={;
+<div className='flex items-center justify-between'><span className='text-sm'>Large Text</span><button;
+            onClick={toggleLargeText}className={;
     `flex items-center px-3 py-1 rounded ${;
               settings.largeText ? 'bg-cyan-600 text-white' : 'bg-gray-700 text-gray-300';
   }
@@ -440,14 +480,14 @@ const toggleHighContrast = () => {;
             aria-pressed={;
     settings.largeText;
   }
-          ><Type className="w-4 h-4" /></button></div>
+          ><Type className='w-4 h-4' /></button></div>
         {;
     enableReducedMotion && (;
-          <div className="flex items-center justify-between"><span className="text-sm">Reduced Motion</span><button;
+          <div className='flex items-center justify-between'><span className='text-sm'>Reduced Motion</span><button;
   }
   }
   }
-              onClick={toggleReducedMotion} className={;
+              onClick={toggleReducedMotion}className={;
     `flex items-center px-3 py-1 rounded ${;
                 settings.reducedMotion ? 'bg-cyan-600 text-white' : 'bg-gray-700 text-gray-300';
   }
@@ -457,21 +497,21 @@ const toggleHighContrast = () => {;
               aria-pressed={;
     settings.reducedMotion;
   }
-// >
+// ></button>
               {;
     settings.reducedMotion ?;
   }
   }
-          <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
+          <VolumeX className='w-4 h-4' /> : <Volume2 className='w-4 h-4' />}
             </button></div>
         )}
         {;
     enableScreenReader && (;
-<div className="flex items-center justify-between"><span className="text-sm">Screen Reader</span><button;
+<div className='flex items-center justify-between'><span className='text-sm'>Screen Reader</span><button;
   }
   }
   }
-              onClick={toggleScreenReader} className={;
+              onClick={toggleScreenReader}className={;
     `flex items-center px-3 py-1 rounded ${;
                 settings.screenReader ? 'bg-cyan-600 text-white' : 'bg-gray-700 text-gray-300';
   }
@@ -481,10 +521,10 @@ const toggleHighContrast = () => {;
               aria-pressed={;
     settings.screenReader;
   }
-            ><Eye className="w-4 h-4" /></button></div>
+            ><Eye className='w-4 h-4' /></button></div>
         )}
-        <div className="flex items-center justify-between"><span className="text-sm">Focus Indicators</span><button;
-            onClick={toggleFocusVisible} className={;
+        <div className='flex items-center justify-between'><span className='text-sm'>Focus Indicators</span><button;
+            onClick={toggleFocusVisible}className={;
     `flex items-center px-3 py-1 rounded ${;
               settings.focusVisible ? 'bg-cyan-600 text-white' : 'bg-gray-700 text-gray-300';
   }
@@ -494,40 +534,39 @@ const toggleHighContrast = () => {;
             aria-pressed={;
     settings.focusVisible;
   }
-          ><Contrast className="w-4 h-4" /></button></div>
+          ><Contrast className='w-4 h-4' /></button></div>
         {;
     enableZoomControl && (;
   }
   }
   }
-          <div className="flex items-center justify-between"><span className="text-sm">Zoom: {settings.zoomLevel}%</span><div className="flex space-x-1"><button;
-                onClick={() => adjustZoom(-10)} className="p-1 bg-gray-700 hover:bg-gray-600 rounded"
-                aria-label="Decrease zoom";
-              ><ZoomOut className="w-4 h-4" /></button><button;
-                onClick={() => adjustZoom(10)} className="p-1 bg-gray-700 hover:bg-gray-600 rounded"
-                aria-label="Increase zoom";
-              ><ZoomIn className="w-4 h-4" /></button></div></div>
-        )}
+          <div className='flex items-center justify-between'><span className='text-sm'>Zoom: {settings.zoomLeve,l}%</span><div className='flex space-x-1'><button;
+                onClick={() => adjustZoom(-10)}className='p-1 bg-gray-700 hover: bg-gray-600 rounded'
+                aria-label='Decrease zoom';
+              ><ZoomOut className='w-4 h-4' /></button><button;
+                onClick={() => adjustZoom(10,)}className='p-1 bg-gray-700 hover: bg-gray-600 rounded'
+                aria-label='Increase zoom';
+              ><ZoomIn className='w-4 h-4' /></button></div></div>
+        ,)}
         {;
     enableColorBlindSupport && (;
-<div className="flex items-center justify-between"><span className="text-sm">Color Blind Support</span><select;
+<div className='flex items-center justify-between'><span className='text-sm'>Color Blind Support</span><select;
   }
   }
   }
               value={;
     settings.colorBlind;
-  }
-              onChange={;
+  }onChange={;
     (e) => setColorBlind(e.target.value as AccessibilitySettings['colorBlind',;
     );
-  } className="bg-gray-700 text-white text-xs px-2 py-1 rounded"
-            ><option value="none">None</option><option value="protanopia">Protanopia</option><option value="deuteranopia">Deuteranopia</option><option value="tritanopia">Tritanopia</option></select></div>
+  } className='bg-gray-700 text-white text-xs px-2 py-1 rounded'
+            ><option value='none'>None</option><option value='protanopia'>Protanopia</option><option value='deuteranopia'>Deuteranopia</option><option value='tritanopia'>Tritanopia</option></select></div>
         )}
         <button;
-onClick={resetSettings} className="w-full mt-4 px-3 py-2 bg-red-600 hover:bg-red-700 text-white rounded text-sm"
-        >
+onClick={resetSettings}className='w-full mt-4 px-3 py-2 bg-red-600 hover: bg-red-700 text-white rounded text-sm'
+        ></button>
           Reset Settings;
-        </button></div><div className="mt-4 text-xs text-gray-400"><p>Press Alt + A to toggle this panel</p><p>Press Alt + Shift + Tab to skip to main content</p></div></div>
-  );
+        </button></div><div className='mt-4 text-xs text-gray-400'><p>Press Alt + A to toggle this panel</p><p>Press Alt + Shift + Tab to skip to main content</p></div></div>
+  );,
 }
 export default EnhancedAccessibility;

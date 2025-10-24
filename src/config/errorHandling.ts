@@ -34,10 +34,10 @@ export interface ErrorConfig {;
   }
 }
   enabled: boolean;
-    logToConsole: boolean;,;
-    sendToServer: boolean;,;
-    sampleRate: number;,;
-    maxStackTraceLength: number;,;
+    logToConsole: boolean;;
+    sendToServer: boolean;;
+    sampleRate: number;;
+    maxStackTraceLength: number;;
     ignoreErrors: RegExp[];,;
     severityThreshold: ErrorSeverity;
 }
@@ -108,8 +108,8 @@ export class AppError extends Error {;
 }
 //   constructor();
   message: string,;
-    public category: ErrorCategory = ErrorCategory.UNKNOWN,;
-    public severity: ErrorSeverity = ErrorSeverity.MEDIUM,;
+    public category: ErrorCategory = ErrorCategory.UNKNOWN;
+    public severity: ErrorSeverity = ErrorSeverity.MEDIUM;
     public metadata?: Record;
           <string, unknown>
   ) {;

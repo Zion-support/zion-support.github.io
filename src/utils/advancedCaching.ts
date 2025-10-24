@@ -18,9 +18,9 @@ export interface CacheEntry;
   }
   }
 }
-  value: T;,;
-    expiry: number;,;
-    hits: number;,;
+  value: T;;
+    expiry: number;;
+    hits: number;;
     lastAccessed: number;
 }
 class AdvancedCache;
@@ -59,9 +59,10 @@ class AdvancedCache;
     // Setup periodic cleanup,;
     this.setupCleanup();
   }
-  private setupCleanup(): void {;
+  private setupCleanup(): void {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     if (typeof window !== 'undefined') {;
@@ -70,18 +71,20 @@ class AdvancedCache;
   }
 }
       // Clean expired entries every minute,;
-      setInterval(() => {;
+      setInterval(() => {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
         this.cleanExpired();
       }, 60 * 1000);
     }
   }
-  private loadFromStorage(): void {;
+  private loadFromStorage(): void {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     if (typeof window === 'undefined') return;
@@ -103,9 +106,10 @@ class AdvancedCache;
 }
       }
   }
-  private saveToStorage(): void {;
+  private saveToStorage(): void {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     if (typeof window === 'undefined' || this.options.storage === 'memory') return;
@@ -152,9 +156,11 @@ class AdvancedCache;
     }
     return null;
   }
-  public set(key: string, value: T, ttl?: number): void {;
+  public set(key: string,
+      value: T, ttl?: number): void {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     const expiry = Date.now() + (ttl || this.options.ttl);
@@ -216,9 +222,10 @@ class AdvancedCache;
     this.updateAccessOrder(key);
     return entry.value;
   }
-  public has(key: string): boolean {;
+  public has(key: string): boolean {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     const entry = this.cache.get(key);
@@ -235,17 +242,19 @@ class AdvancedCache;
     }
     return true;
   }
-  public delete(key: string): boolean {;
+  public delete(key: string): boolean {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     this.removeFromAccessOrder(key);
     return this.cache.delete(key);
   }
-  public clear(): void {;
+  public clear(): void {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     this.cache.clear();
@@ -259,9 +268,10 @@ class AdvancedCache;
       storage?.removeItem(this.storageKey);
     }
   }
-  private updateAccessOrder(key: string): void {;
+  private updateAccessOrder(key: string): void {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     // Remove if exists,;
@@ -269,9 +279,10 @@ class AdvancedCache;
     // Add to end (most recently used);
     this.accessOrder.push(key);
   }
-  private removeFromAccessOrder(key: string): void {;
+  private removeFromAccessOrder(key: string): void {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     const index = this.accessOrder.indexOf(key);
@@ -283,9 +294,10 @@ class AdvancedCache;
       this.accessOrder.splice(index, 1);
     }
   }
-  private evictLRU(): void {;
+  private evictLRU(): void {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     // Remove least recently used (first in array);
@@ -298,16 +310,18 @@ class AdvancedCache;
       this.delete(lruKey);
     }
   }
-  private cleanExpired(): void {;
+  private cleanExpired(): void {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     const now = Date.now();
     const keysToDelete: string[] = [];
-    this.cache.forEach((entry, key) => {;
+    this.cache.forEach((entry, key) => {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
       if (now > entry.expiry) {;
@@ -332,17 +346,17 @@ class AdvancedCache;
   }
   }
 }
-  size: number;,;
-    maxSize: number;,;
-    hitRate: number;,;
+  size: number;;
+    maxSize: number;;
+    hitRate: number;;
     entries: Array;
           <{;
     // TODO: Add content;
   }
   }
 }
-  key: string;,;
-    hits: number;,;
+  key: string;;
+    hits: number;;
     age: number;
     }>
   } {;
@@ -353,9 +367,10 @@ class AdvancedCache;
     const entries: Array;
           <{ key: string; hits: number; age: number }> = [];
     const now = Date.now();
-    this.cache.forEach((entry, key) => {;
+    this.cache.forEach((entry, key) => {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
       totalHits += entry.hits;

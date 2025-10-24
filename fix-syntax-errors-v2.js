@@ -2,8 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 // List of files with syntax errors
-const filesToFix = [
-  'app/ai-data-analytics/page.tsx',
+const filesToFix = ['app/ai-data-analytics/page.tsx',
   'app/ai-healthcare/page.tsx',
   'app/ai-marketing/page.tsx',
   'app/ai-sales-automation/page.tsx',

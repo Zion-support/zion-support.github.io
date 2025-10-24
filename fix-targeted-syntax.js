@@ -47,7 +47,7 @@ function fixTargetedSyntax(filePath) {
 
     // Fix malformed JSX structure
     if (content.includes('>{/* Hero Section */}')) {
-      content = content.replace(/<div[^>]*>\{\/\* Hero Section \*\/\}/g, '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">');
+      content = content.replace(/<div[^>]*>\{\/\* Hero Section \*\/\}/g, '<div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>');
       fixed = true;
     }
 
@@ -81,8 +81,7 @@ function fixTargetedSyntax(filePath) {
 }
 
 // Fix specific problematic files
-const problematicFiles = [
-  'app/about/page.tsx',
+const problematicFiles = ['app/about/page.tsx',
   'app/accessibility-page/page.tsx',
   'app/accessibility/page.tsx',
   'app/ai-accounting-assistant/page.tsx',

@@ -8,7 +8,7 @@ interface AnalyticsEvent {;
   }
   }
 }
-  category: string;,;
+  category: string;;
     action: string;
   label?: string;
   value?: number;
@@ -19,7 +19,7 @@ interface PerformanceMetrics {;
   }
   }
 }
-  metric: string;,;
+  metric: string;;
     value: number;
   rating?: 'good' | 'needs-improvement' | 'poor';
 }
@@ -44,9 +44,10 @@ class AnalyticsTracker {;
   /**;
    * Initialize the analytics tracker;
    */;
-  initialize(): void {;
+  initialize(): void {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     if (typeof window === 'undefined') return;
@@ -60,9 +61,10 @@ class AnalyticsTracker {;
   /**;
    * Track a custom event;
    */;
-  trackEvent(event: AnalyticsEvent): void {;
+  trackEvent(event: AnalyticsEvent): void {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     if (typeof window === 'undefined') return;
@@ -104,15 +106,17 @@ class AnalyticsTracker {;
   /**;
    * Track performance metrics;
    */;
-  trackPerformance(metrics: PerformanceMetrics): void {;
+  trackPerformance(metrics: PerformanceMetrics): void {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     if (typeof window === 'undefined') return;
-    const track = () => {;
+    const track = () => {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
       if (window.gtag) {;
@@ -152,15 +156,19 @@ class AnalyticsTracker {;
   /**;
    * Track user timing;
    */;
-  trackTiming(category: string, variable: string, value: number, label?: string): void {;
+  trackTiming(category: string,
+      variable: string, value: number,
+      label?: string): void {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
     if (typeof window === 'undefined') return;
-    const track = () => {;
+    const track = () => {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
       if (window.gtag) {;
@@ -217,9 +225,10 @@ if (typeof window !== 'undefined') {;
   }
   }
 }
-    window.addEventListener('load', () => {;
+    window.addEventListener('load', () => {
+  ;
     // TODO: Add content;
-  }
+}
   }
 }
       analyticsTracker.initialize();
