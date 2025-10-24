@@ -9,7 +9,7 @@ const ContactForm: React.FC = memo(() => {
     isSubmitting,
     submitStatus,
     errors,
-    handleInputChange,
+    handleChange,
     handleSubmit,
   } = useForm({
     initialData: {
@@ -65,7 +65,7 @@ const ContactForm: React.FC = memo(() => {
             type="text"
             required
             value={formData.name}
-            onChange={handleInputChange}
+            onChange={(e) => handleChange('name', e.target.value)}
             className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
               errors.name ? 'border-red-500' : 'border-gray-300'
             }`}
@@ -85,7 +85,7 @@ const ContactForm: React.FC = memo(() => {
             type="email"
             required
             value={formData.email}
-            onChange={handleInputChange}
+            onChange={(e) => handleChange('email', e.target.value)}
             className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
               errors.email ? 'border-red-500' : 'border-gray-300'
             }`}
@@ -105,7 +105,7 @@ const ContactForm: React.FC = memo(() => {
             rows={4}
             required
             value={formData.message}
-            onChange={handleInputChange}
+            onChange={(e) => handleChange('message', e.target.value)}
             className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
               errors.message ? 'border-red-500' : 'border-gray-300'
             }`}
