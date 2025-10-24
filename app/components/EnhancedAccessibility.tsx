@@ -1,37 +1,16 @@
 'use client';
-import React, { useEffect, useState, createContext, useContext } from 'react';
 
-interface AccessibilitySettings {
-  highContrast: boolean;
-  reducedMotion: boolean;
-  fontSize: 'small' | 'medium' | 'large';
-  focusVisible: boolean;
-  screenReaderMode: boolean;
-  keyboardNavigation: boolean;
-}
-
-interface AccessibilityContextType {
-  settings: AccessibilitySettings;
-  updateSetting: (_key: keyof AccessibilitySettings, _value: boolean | string) => void;
-  announceToScreenReader: (_message: string) => void;
-}
-
-const AccessibilityContext = createContext<AccessibilityContextType | null>(null);
-
-export const useAccessibility = () => {
-  const context = useContext(AccessibilityContext);
-  if (!context) {
-    throw new Error('useAccessibility must be used within an AccessibilityProvider');
-  }
-  return context;
-};
+import React, { useEffect, useState } from 'react';
+import { AccessibilityContextType } from '../types/accessibility';
+import { AccessibilityContext } from '../contexts/AccessibilityContext';
+import { useAccessibility } from '../hooks/useAccessibility';
 
 interface EnhancedAccessibilityProps {
   children: React.ReactNode;
 }
 
 const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ children }) => {
-  const [settings, setSettings] = useState<AccessibilitySettings>({
+  const [settings, setSettings] = useState<any>({
     highContrast: false,
     reducedMotion: false,
     fontSize: 'medium',
@@ -48,7 +27,7 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ children 
     if (savedSettings) {
       try {
         const parsed = JSON.parse(savedSettings);
-        setSettings(prev => ({ ...prev, ...parsed }));
+        setSettings((prev: any) => ({ ...prev, ...parsed }));
       } catch (error) {
         console.warn('Failed to parse accessibility settings:', error);
       }
@@ -101,13 +80,13 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ children 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Tab') {
-        setSettings(prev => ({ ...prev, keyboardNavigation: true }));
+        setSettings((prev: any) => ({ ...prev, keyboardNavigation: true }));
         document.body.classList.add('keyboard-navigation');
       }
     };
 
     const handleMouseDown = () => {
-      setSettings(prev => ({ ...prev, keyboardNavigation: false }));
+      setSettings((prev: any) => ({ ...prev, keyboardNavigation: false }));
       document.body.classList.remove('keyboard-navigation');
     };
 
@@ -152,12 +131,12 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ children 
     }
   }, [announcements]);
 
-  const updateSetting = (_key: keyof AccessibilitySettings, _value: boolean | string) => {
-    setSettings(prev => ({ ...prev, [_key]: _value }));
+  const updateSetting = (key: string, value: any) => {
+    setSettings((prev: any) => ({ ...prev, [key]: value }));
   };
 
-  const announceToScreenReader = (_message: string) => {
-    setAnnouncements(prev => [...prev, _message]);
+  const announceToScreenReader = (message: string) => {
+    setAnnouncements(prev => [...prev, message]);
   };
 
   const contextValue: AccessibilityContextType = {
