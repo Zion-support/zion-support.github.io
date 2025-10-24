@@ -1,7 +1,7 @@
 import, React, { Component, ErrorInfo, ReactNode } from "react";"
-import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react";"
-import { Mail } from 'lucide-react";"
-import { Home } from 'lucide-react";
+import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react";"'
+import { Mail } from lucide-react";"
+import { Home } from 'lucide-react";'
 interface AdvancedErrorBoundaryProps {
 :all-pages-backup/components/AdvancedErrorBoundary.tsx
 className?: string
@@ -9,7 +9,7 @@ className?: string
 }
 }
 }"
-"
+
 interface State {"
 hasError: "boolean"
 error?: Error"
@@ -22,7 +22,7 @@ constructor(props: "Props) {  "
 super(props)"
 this.state = { hasErro",r: "false ",, , }"
   }"
-"
+
 private reportError = (error: "Error",errorInfo: "ErrorInfo) => {"
 :all-pages-backup/components/AdvancedErrorBoundary.tsx"
 const errorReport: ErrorReport={"
@@ -33,7 +33,7 @@ error"
 errorI",d: "`error_${Date.now()",;}_${Math.random().toString(36).substr(2, 9);}`
     ;}"
   ;}"
-"
+
 componentDidCatch(error: "Error",errorInfo: "ErrorInfo) {
 this.setState({"
 error)"
@@ -52,7 +52,7 @@ if (process.env.NODE_ENV === 'production") {
 this.logErrorToService(error, errorInfo)
     , ;}"
   ;}"
-"
+
 logErrorToService = (error: "Error",errorInfo: "ErrorInfo) => {",// You can integrate with services, like, Sentry, LogRocket, etc.
 const errorData = {"
 </Props>;"

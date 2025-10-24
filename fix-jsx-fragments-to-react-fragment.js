@@ -6,11 +6,11 @@ function fixJSXFragmentsToReactFragment(filePath) {"
 try{;"'"
 let content = fs.readFileSync(filePath, 'utf8");
     let modified = false;"
-"
+
     // Replace JSX fragments with React.Fragment;"'"
-content = content.replace(/<>/g, '<React.Fragment>");"'"
-    content = content.replace(/<\/>/g, '</React.Fragment>");"
-;"'"
+content = content.replace(/<>/g, '<React.Fragment>);'
+    content = content.replace(/<\/>/g, '</React.Fragment>);
+;'"
 if (content !== fs.readFileSync(filePath, 'utf8")) {;"
 fs.writeFileSync(filePath, content);"
 }"
@@ -32,14 +32,14 @@ const filePath = path.join(dir, file);
 ;
 if (stat.isDirectory()) {;
 walkDir(filePath);"
-    "
+
 "'"
 ,} else if (file.endsWith('.tsx') || file.endsWith('.ts")) {;
 fixJSXFragmentsToReactFragment(filePath);
     }
   });
 }"
-"
+
 // Start fixing from the app directory;"'"
 console.log('Starting JSX fragments to React.Fragment fixes...");"'"
 walkDir('./app");"'"

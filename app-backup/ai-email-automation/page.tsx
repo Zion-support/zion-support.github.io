@@ -1,7 +1,7 @@
-import React from 'react';
-import { ArrowRight, Brain, Mail, CheckCircle, Zap, TrendingUp, Send, BarChart3, Shield, DollarSign, Clock, Star } from 'lucide-react";"
-import Link from 'next/link";"
-import type { Metadata  } from "next";'"
+import React from 'react'
+import { ArrowRight, Brain, Mail, CheckCircle, Zap, TrendingUp, Send, BarChart3, Shield, DollarSign, Clock, Star } from 'lucide-react";"'
+import Link from 'next/link";"'
+import type { Metadata  } from "next";"
   "title": 'AI Email Automation - Smart Email Marketing | Zion Tech Group'"
   "description": 'Revolutionary AI-powered email automation with, content, generation, smart, segmentation, and performance analytics. Increase revenue by 300% and save 20+ hours per week.'"
   "keywords": 'AI, email, automation, email, marketing, email, generation, lead, scoring, email, analytics, marketing, automation, AI content creation'"

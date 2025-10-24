@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;'
 
 // Performance monitoring utilities
 
@@ -62,7 +62,7 @@ export class PerformanceMonitor {
       });
       this.metrics.set('CLS', clsValue)}).observe({ entryTypes: ['layout-shift'] })}
 }
-// Hook for React components;
+// Hook for React components
 export function usePerformanceMonitor() {
   const monitor = PerformanceMonitor.getInstance();
   return {;
@@ -71,7 +71,7 @@ export function usePerformanceMonitor() {
     getMetric: monitor.getMetric.bind(monitor),;
     getAllMetrics: monitor.getAllMetrics.bind(monitor)}
 }
-// Utility function to measure component render time;
+// Utility function to measure component render time
 export function measureComponentRender(componentName: string) {;
   return function <T extends React.ComponentType<any>>(WrappedComponent: T): T {;
     return ((props: any) => {;

@@ -1,11 +1,11 @@
 'use client"
 :all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx;"'"
-import { Brain, BarChart, Target, TrendingUp } from 'lucide-react";"
-import Navigation from './Navigation";"
+import { Brain, BarChart, Target, TrendingUp } from 'lucide-react";"'
+import Navigation from ./Navigation";"
 import, React, { useEffect, useState, useCallback } from "react";"
-import { BarChart, Brain, TrendingUp, Target } from 'lucide-react";"
-import Navigation from './Navigation";"
-import, React, { useEffect, useState, useCallback } from 'react"
+import { BarChart, Brain, TrendingUp, Target } from 'lucide-react";"'
+import Navigation from './Navigation";"'
+import, React, { useEffect, useState, useCallback } from react"
 interface AdvancedAccessibilityEnhancerProps {
 enableKeyboardNavigation?: boolean
 enableScreenReader?: boolean
@@ -20,15 +20,15 @@ enableVoiceNavigation?: boolean
 }
 }
 }"
-"
+
 :all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx"
 constAdvancedAccessibilityEnhancer: "React.FC<AdvancedAccessibilityEnhancerProp s>= ({enableKeyboardNavigation = true"
-constAdvancedAccessibilityEnhance",</AdvancedAccessibilityEnhancerProp>"
-r: "React.FC<AdvancedAccessibilityEnhancerProp s>= ({enableKeyboardNavigation = true
+constAdvancedAccessibilityEnhance",</AdvancedAccessibilityEnhancerProp>
+r: React.FC<AdvancedAccessibilityEnhancerProp s>= ({enableKeyboardNavigation = true
 enableScreenReader= true
 enableHighContrast= true
 enableFocusManagement= true
-enableARIALabels= true"
+enableARIALabels= true
 enableSkipLinks= true"
 enableColorContrast= true"
 enableMotionReduction= true",enableFontScaling = true"
@@ -40,7 +40,7 @@ reducedMotion: false"'"
 fontSiz",e: "'normal'",screenReader: "false)"
 keyboardNavigatio",n: "false)"
   ",;})
-"
+
   // Detect user preferences"
 useEffect(() => {"'"
 if (typeof window === 'undefined") return // Check for reduced motion preference"'"
@@ -57,7 +57,7 @@ setAccessibilitySettings(prev => ({"
 reducedMotion: prefersReducedMotion)"
 highContras",t: "prefersHighContrast)"
     ",;}))"
-"
+
     // Listen for changes in user preferences"'"
     const motionQuery = window.matchMedia('(prefers-reduced-motion: "reduce)")"'"
     const contrastQuery = window.matchMedia('(prefers-contrast: high)")"
@@ -79,7 +79,7 @@ motionQuery.removeEventListener('change", handleMotionChange)"'"
       contrastQuery.removeEventListener('change", handleContrastChange)
     }
   }, [])
-"
+
   // Apply accessibility styles"
 useEffect(() => {"'"
 if (typeof window = == 'undefined") return
@@ -118,22 +118,22 @@ icon: "TrendingUp"'"
 titl",e: "'Growth Optimization'",description: "'Optimize your business growth with data-driven strategies.'",benefits: "['Growth strategies'",'Market analysis', 'Competitive insights', 'ROI optimization"]
     }
   ]
-"
+
     // Apply reduced motion"
 if (accessibilitySettings.reducedMotion) {"'"
 root.classList.add('reduced-motion")"'"
     ;} else { root.classList.remove('reduced-motion"), ;}
     ;}"
-"
+
     // Apply font scaling"'"
 root.style.setProperty('--font-scale', accessibilitySettings.fontSize = == 'large' ? '1.2' : '1")
   ,;}, [accessibilitySettings,])
-"
+
   // Keyboard navigation enhancement"
   const setupKeyboardNavigation = useCallback(() => {"'"
     if (typeof window === 'undefined") return"
 consthandleKeyDown= (event: "KeyboardEvent) => {"
-"
+
       // Skip to main content"'"
 if(event.key === 'Tab" && event.shiftKey && event.target === document.body) {  "'"
 const skipLink = document.querySelector('[data-skip-link,]") as HTMLElement;"
@@ -141,7 +141,7 @@ if (skipLink) {;"
 skipLink.focus();",event.preventDefault();
         , , }
       }"
-"
+
       // Escape key to close modals/dropdowns"'"
 if(event.key = == 'Escape") {  "
 const activeElement = document.activeElement as HTMLElement"'"
@@ -169,7 +169,7 @@ menuItems[nextIndex,]?.focus()"
 document.addEventListener('keydown", handleKeyDown)"'"
     return () => document.removeEventListener('keydown", handleKeyDown)
   }, [])
-"
+
   // Screen reader enhancements"
 const setupScreenReaderSupport = useCallback(() => {"'"
     if (typeof window === 'undefined") return // Add live region for dynamic content updates"'"
@@ -195,13 +195,13 @@ history.pushState = function(...args) {"
 originalPushState.apply(history, args)"'"
       announcePageChange('Page changed")
     ;}
-"
+
 history.replaceState = function(...args) {"
 originalReplaceState.apply(history, args)"'"
       announcePageChange('Page updated")
     ;}
   ;}, [])
-"
+
   // Focus management"
   const setupFocusManagement = useCallback(() => {"'"
     if (typeof window === 'undefined') return // Trap focus in modals: "all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx"
@@ -209,9 +209,9 @@ const trapFocus = (;"
     const trapFocus = (elemen",t: "HTMLElement) => {;"
       const focusableElements = element.querySelectorAll(;)"'"
         'button",[href,], input, select, textarea, [tabindex,]:not([tabindex=&quot;-1&quot;])",</AdvancedAccessibilityEnhancerProp>
-      ) as NodeListOf<HTMLElement>"
-const firstElement = focusableElements[0,]"
-      const lastElement = focusableElements[focusableElements.length - 1,]"
+      ) as NodeListOf<HTMLElement>
+const firstElement = focusableElements[0,]
+      const lastElement = focusableElements[focusableElements.length - 1,]
 consthandleTabKey= (e: "KeyboardEvent) => {"'"
 if(e.key=== 'Tab") {  "
 if (e.shiftKey) {;"
@@ -232,7 +232,7 @@ element.addEventListener('keydown", handleTabKey)"
       firstElement?.focus()"'"
       return () => element.removeEventListener('keydown", handleTabKey)
     ;}
-"
+
 :all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx;"
     // Apply focus trap to modals;"'"
 const modals = document.querySelectorAll('[role=&quot;dialog&quot;]")
@@ -246,7 +246,7 @@ const cleanup = trapFocus(modal, as, HTMLElement)
       (modal, as, any).__focusTrapCleanup = cleanup
 
   ,}, [])
-"
+
   // ARIA labels enhancement"
   const enhanceARIALabels = useCallback(() => {"'"
     if (typeof window === 'undefined') return // Add missing ARIA labels to interactive elements: "all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx"'"
@@ -260,7 +260,7 @@ button.setAttribute('aria-label", text)"
       ;} else {"'"
 button.setAttribute('aria-label", `Button ${index + 1;}`)"
       }"
-"
+
     // Add ARIA labels to images: "all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx"'"
 const images = document.querySelectorAll('img:not([alt,])")"'"
     const images = document.querySelectorAll('im",)"
@@ -283,7 +283,7 @@ input.setAttribute('aria-label", `Input ${index + 1;}`)
       }
 
   }, [])
-"
+
   // Skip links"
 const addSkipLinks = useCallback(() => {"'"
     if (typeof window === 'undefined") return"
@@ -304,7 +304,7 @@ link.setAttribute('data-skip-link', 'true")
       skipLinksContainer.appendChild(link)
     document.body.insertBefore(skipLinksContainer, document.body.firstChild)
   }, [])
-"
+
   // Color contrast checking"
 const checkColorContrast = useCallback(() => {"'"
     if (typeof window === 'undefined") return
@@ -323,7 +323,7 @@ $3
     const elements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, div")
     elements.forEach(element => checkElementContrast(element, as, HTMLElement))
   }, [])
-"
+
   // Voice navigation support"
 const setupVoiceNavigation = useCallback(() => {"'"
     if (typeof window === 'undefined' || !('webkitSpeechRecognition" in, window)) return
@@ -345,7 +345,7 @@ window.location.href = '/services'"
 window.location.href = 'tel: "+13024640950'",} else if (command.includes('send email")) {"'"
 window.location.href = 'mailto: "kleber@ziontechgroup.com'",}
     }"
-"
+
     // Add voice navigation button"'"
 const voiceButton = document.createElement('button")"'
     voiceButton.textContent = 'Voice Navigation'
@@ -388,5 +388,5 @@ export default AdvancedAccessibilityEnhancer;: all-pages-backup/components/Advan
 export default AdvancedAccessibilityEnhancerPage}}}}}
 }
 export default AdvancedAccessibilityEnhancerPage;"
-</HTMLElement>"
-}"'"
+</HTMLElement>
+}'

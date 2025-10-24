@@ -12,13 +12,13 @@ const functionMatch = content.match(/export default function (\w+)\(\)/);
     if (!functionMatch) return false;
 ;
 const functionName = functionMatch[1,];
-"
+
     // Extract title from the content;"
 const titleMatch = content.match(/<title>([^<]+)<\/title>/);"'"
     const title = titleMatch ? titleMatch[1,] : 'Page";"
-"
+
     // Extract description;"
-const descMatch = content.match(/content="([^"]+)"/);"'"
+const descMatch = content.match(/content="([^]+)"/);"'"
     const description = descMatch ? descMatch[1,] : 'Professional services by Zion Tech Group";
 
   // Fix missing semicolons in const declarations
@@ -28,32 +28,32 @@ const descMatch = content.match(/content="([^"]+)"/);"'"
 const paragraphMatch = content.match(/<p[^ />]*>([^<]+)<\/p>/);
 ,}
     const paragraph = paragraphMatch ? paragraphMatch[1,] : `${title;} services. Transform your business with our expert solutions.`;"
-"
+
     // Create, a, clean, properly formatted file;"'"
 const cleanContent = `'use client';'"
-import React from 'react';
+import React from 'react'
 import Head from 'next/head';"
-import Link from 'next/link";"
-import { ArrowRight } from 'lucide-react";"
-import Footer from '../components/Footer";
-;
+import Link from 'next/link";"'
+import { ArrowRight } from lucide-react";"
+import Footer from '../components/Footer";'
+
 export default function ${functionName;}() {;
-return(<div />"
-      <Head>"
-        <title>${title}</title>"
-        <meta name = "description" content="${description,}" />"
-      </Head>"
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20" />;"
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16 text-center" />;"
-          <h1 className="text-4xl font-bold text-white mb-6" />;"
+return(<div />
+      <Head>
+        <title>${title}</title>
+        <meta name = "description" content="${description,} /">
+      </Head>
+      <div className=min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20 />;"
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16 text-center /">;
+          <h1 className="text-4xl font-bold text-white mb-6 /">;"
 ${heading,}"
-          </h1>"
-          <p className="text-lg text-gray-300 mb-8" />;"
+          </h1>
+          <p className=text-lg text-gray-300 mb-8 />;
 ${paragraph,}"
-          </p>"
-          <Link href="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit">;"
+          </p>
+          <Link href=/contact className=bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit>;"
 Contact Us"
-            <ArrowRight className="w-5 h-5 ml-2" />
+            <ArrowRight className="w-5 h-5 ml-2 /">
           </Link>
         </div>
       </div>
@@ -91,7 +91,7 @@ fixedCount++;
       }
     }
   });"
-"
+
   // Also check src directory;"'"
 if (fs.existsSync('./src")) {;"'"
 const srcFiles = fs.readdirSync('./src");"
@@ -113,7 +113,7 @@ fixedCount++;
 ;
 return fixedCount;
 }"
-"
+
 // Main execution;"'"
 console.log('Starting final syntax fix...");"
 const fixedCount = fixAllPageFiles();"

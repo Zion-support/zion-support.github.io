@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useState, useEffect } from 'react';'
+import { useCallback, useMemo, useState, useEffect } from 'react;'
 "use client;"
 typeof window !== 'undefined''"
   "rootMargin": '50px'",;"'"

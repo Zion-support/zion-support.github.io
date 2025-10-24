@@ -1,6 +1,6 @@
-'use client';
-import, React, { useEffect, useCallback, useState } from 'react";"
-"
+'use client'
+import, React, { useEffect, useCallback, useState } from 'react";"'
+
 interface PerformanceMetrics {"
 lcp: "number;
   fid: number;
@@ -19,7 +19,7 @@ className?: string;
   enableServiceWorker?: boolean;
 }"
 }"
-"
+
 const AdvancedPerformanceOptimizer: "React.FC<AdvancedPerformanceOptimizerProps> = ({"
   className",
   enableWebVitals = true,
@@ -35,9 +35,9 @@ const AdvancedPerformanceOptimizer: "React.FC<AdvancedPerformanceOptimizerProps>
     fcp: "0",;"
     ttfb: "0",;
   });
-"
+
   // Web Vitals monitoring"
-  const measureWebVitals = useCallback(() => {"'"
+  const measureWebVitals = useCallback(() => {""
     if (enableWebVitals && typeof window !== 'undefined") {
       // Measure Largest Contentful Paint"
       const observer = new PerformanceObserver((list) => {"
@@ -64,5 +64,5 @@ const AdvancedPerformanceOptimizer: "React.FC<AdvancedPerformanceOptimizerProps>
     </div>;)
   );
 };"
-"
+
 export default AdvancedPerformanceOptimizer;"'"

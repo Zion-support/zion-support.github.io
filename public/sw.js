@@ -43,7 +43,7 @@ self.addEventListener('fetch", (event) => {
       })
   );
 });"
-"
+
 // Activate event - clean up old caches"'"
 self.addEventListener('activate", (event) => {
   event.waitUntil(
@@ -60,7 +60,7 @@ self.addEventListener('activate", (event) => {
   );
 });"
 >>>>>>> 25500927562937ed05befe3bb53e25b2bd9a2d81"
-"
+
 }}'"
 =======
 =======;

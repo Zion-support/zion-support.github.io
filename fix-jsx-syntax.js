@@ -14,16 +14,16 @@ function fixJSXSyntax(content) {
   content = content.replace(/return \(\n    <div>/g, 'return (\n    <div>');
   
   // Fix unterminated strings and malformed JSX
-  content = content.replace(/content="([^"]*)"  \/>"/g, 'content="$1" />');
-  content = content.replace(/\/>"/g, '/>');
-  content = content.replace(/<\/Head>"\n/g, '</Head>\n');
-  content = content.replace(/    <\/>"/g, '    </>');
+  content = content.replace(/content="([^]*)"  \/>/g, 'content=$1 />');
+  content = content.replace(/\/>/g, '/>');
+  content = content.replace(/<\/Head>\n/g, '</Head>\n');
+  content = content.replace(/    <\/>/g, '    </>');
   content = content.replace(/  \);"/g, '  );');
   content = content.replace(/}\"'/g, '}');
   
   // Fix malformed JSX structure - ensure proper wrapping
   content = content.replace(/return \(\n    <div>\n      <Head>/g, 'return (\n    <>\n      <Head>');
-  content = content.replace(/      <\/Head>\n      <div className="min-h-screen/g, '      </Head>\n      <div className="min-h-screen');
+  content = content.replace(/      <\/Head>\n      <div className="min-h-screen/g, '      </Head">\n      <div className=min-h-screen');
   
   // Ensure proper closing tags
   content = content.replace(/        <\/div>\n      <\/div>\n    <\/div>/g, '        </div>\n      </div>\n    </>');

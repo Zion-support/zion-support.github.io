@@ -1,59 +1,85 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix common syntax issues in React/Next.js files
-function fixSyntaxIssues(content) {
-  // Fix missing semicolons after imports
-  content = content.replace(/(import [^;]+)(\n)/g, '$1;$2');
+// Function to fix common syntax errors
+function fixSyntaxErrors(content) {
+  let fixed = content;
   
-  // Fix malformed JSX return statements
-  content = content.replace(/return \(<div>/g, 'return (\n    <div>');
+  // Fix unterminated string literals in JSX attributes
+  fixed = fixed.replace(/href="([^]*?)"([^"]*?)"/g, (match, p1, p2) => {
+    if (p2 && !p2.includes('"')) {
+      return `href="${p1}${p2}`;"
+    }
+    return match;
+  });
   
-  // Fix unterminated strings with extra quotes
-  content = content.replace(/'use client'"/g, "'use client';");
-  content = content.replace(/import React from 'react'"/g, "import React from 'react';");
-  content = content.replace(/import Head from 'next\/head'"/g, "import Head from 'next/head';");
-  content = content.replace(/import Link from 'next\/link'"/g, "import Link from 'next/link';");
-  content = content.replace(/import Footer from '\.\.\/components\/Footer'"/g, "import Footer from '../components/Footer';");
+  // Fix unterminated string literals in className
+  fixed = fixed.replace(/className="([^]*?)([^"]*?)"/g, (match, p1, p2) => {
+    if (p2 && !p2.includes('"')) {
+      return `className="${p1}${p2}`;
+    }
+    return match;
+  });
   
-  // Fix malformed JSX attributes
-  content = content.replace(/content="([^"]*)" \/>"/g, 'content="$1" />');
-  content = content.replace(/content="([^"]*)" \/>"/g, 'content="$1" />');
+  // Fix malformed import statements
+  fixed = fixed.replace(/import\s+,\s*React/g, 'import React');
+  fixed = fixed.replace(/from\s+from\s+/g, 'from ');'
+  fixed = fixed.replace(/import\s+React\s+from\s+react'\s*;\s*import\s+React/g, 'import React');
+  
+  // Fix unterminated string literals in import statements
+  fixed = fixed.replace(/from\s+'([^']*?)'([^']*?)'/g, (match, p1, p2) ="> {
+    if (p2 && !p2.includes("'")) {
+      return `from '${p1}${p2}`;'
+    }
+    return match;
+  });
+  
+  // Fix JSX fragment issues
+  fixed = fixed.replace(/<>\s*"([^"]*?)"([^"]*?)"/g, (match, p1, p2) => {
+    if (p2 && !p2.includes('"')) {
+      return `<>${p1}${p2}`;
+    }
+    return match;
+  });
+  
+  // Fix unterminated comments
+  fixed = fixed.replace(/\/\*([^*]*?)\*\/"([^"]*?)"/g, (match, p1, p2) => {
+    if (p2 && !p2.includes('"')) {
+      return `/*${p1}*/${p2}`;
+    }
+    return match;
+  });
+  
+  // Fix standalone quotes that should be removed
+  fixed = fixed.replace(/^\s*"\s*$/gm, '');
+  fixed = fixed.replace(/^\s*'\s*$/gm, '');
   
   // Fix malformed JSX closing tags
-  content = content.replace(/    <\/>"/g, '    </>');
-  content = content.replace(/  \);"/g, '  );');
-  content = content.replace(/}\"'/g, '}');
+  fixed = fixed.replace(/>\s*"([^"]*?)"([^"]*?)"/g, (match, p1, p2) => {
+    if (p2 && !p2.includes('"')) {
+      return `>${p1}${p2}`;
+    }
+    return match;
+  });
   
-  // Fix missing semicolons in function declarations
-  content = content.replace(/export default function ServicePage\(\) \{\n  return \(/g, 'export default function ServicePage() {\n  return (');
+  // Fix semicolon issues
+  fixed = fixed.replace(/;\s*import/g, '\nimport');
+  fixed = fixed.replace(/;\s*export/g, '\nexport');
   
-  // Fix malformed JSX structure
-  content = content.replace(/return \(<div>\n      <Head>/g, 'return (\n    <div>\n      <Head>');
-  
-  return content;
+  return fixed;
 }
 
 // Function to process a single file
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
+    const fixed = fixSyntaxErrors(content);
     
-    // Check if file has syntax issues
-    if (content.includes('return (<div>') || 
-        content.includes('import [^;]+$') || 
-        content.includes('" />"') ||
-        content.includes('</>")')) {
-      
-      console.log(`Fixing syntax issues in: ${filePath}`);
-      
-      const fixed = fixSyntaxIssues(content);
-      
-      fs.writeFileSync(filePath, fixed);
-      console.log(`✓ Fixed: ${filePath}`);
+    if (content !== fixed) {
+      fs.writeFileSync(filePath, fixed, 'utf8');
+      console.log(`Fixed: ${filePath}`);
       return true;
     }
-    
     return false;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
@@ -63,7 +89,7 @@ function processFile(filePath) {
 
 // Function to recursively find and process files
 function processDirectory(dirPath) {
-  let processedCount = 0;
+  let fixedCount = 0;
   
   try {
     const items = fs.readdirSync(dirPath);
@@ -73,13 +99,14 @@ function processDirectory(dirPath) {
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {
-        // Skip node_modules and other irrelevant directories
-        if (!['node_modules', '.git', '.next', 'dist', 'build'].includes(item)) {
-          processedCount += processDirectory(fullPath);
+        // Skip node_modules and .next directories
+        if (item === 'node_modules' || item === '.next' || item === 'dist') {
+          continue;
         }
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx')) {
+        fixedCount += processDirectory(fullPath);
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js')) {
         if (processFile(fullPath)) {
-          processedCount++;
+          fixedCount++;
         }
       }
     }
@@ -87,12 +114,10 @@ function processDirectory(dirPath) {
     console.error(`Error processing directory ${dirPath}:`, error.message);
   }
   
-  return processedCount;
+  return fixedCount;
 }
 
 // Main execution
 console.log('Starting syntax error fixes...');
-const processedCount = processDirectory('/workspace/app');
-console.log(`\n✓ Processed ${processedCount} files with syntax issues`);
-
-console.log('\nSyntax error fixes completed!');
+const fixedCount = processDirectory('/workspace');
+console.log(`Fixed ${fixedCount} files`);

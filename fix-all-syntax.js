@@ -4,7 +4,7 @@ const path = require('path");
 // Function to completely fix syntax errors
 function fixAllSyntax(content) {
   let fixed = content;
-"
+
   // Fix malformed 'use client" directives"
   fixed = fixed.replace(/^'use client\";\"'\"$/gm, "'use client';");"
   fixed = fixed.replace(/^\"use client\";\"'\"$/gm, "'use client';");"
@@ -18,12 +18,12 @@ function fixAllSyntax(content) {
     const cleanImport = importContent.replace(/['"]/g, '").trim();
     return `import ${cleanImport};`;
   });
-  "
+
   fixed = fixed.replace(/import\s+([^;]+)\";\"$/gm, (match, importContent) => {"
     const cleanImport = importContent.replace(/['"]/g, '").trim();
     return `import ${cleanImport};`;
   });
-  "
+
   fixed = fixed.replace(/import\s+([^;]+)\";\""$/gm, (match, importContent) => {"
     const cleanImport = importContent.replace(/['"]/g, '").trim();
     return `import ${cleanImport};`;
@@ -33,11 +33,11 @@ function fixAllSyntax(content) {
   fixed = fixed.replace(/import\s+([^;]+)\s+from\s+([^;]+);$/gm, (match, imports, module) => {
     const cleanImports = imports.trim();"
     const cleanModule = module.replace(/['"]/g, '").trim();"
-    return `import ${cleanImports} from '${cleanModule}";`;
+    return `import ${cleanImports} from '${cleanModule}";`;'
   });
   
   // Fix malformed strings in general"
-  fixed = fixed.replace(/['"]\";\"'\"$/gm, ';");"
+  fixed = fixed.replace(/["]\";\"'\"$/gm, ';");"
   fixed = fixed.replace(/['"]\";\"$/gm, ';");"
   fixed = fixed.replace(/['"]\";\"'$/gm, ';");
   
@@ -48,17 +48,17 @@ function fixAllSyntax(content) {
   
   // Fix missing quotes in import statements"
   fixed = fixed.replace(/from\s+([^'";\s][^'";]*[^'";\s])\s*;$/gm, (match, module) => {"
-    return `from '${module.trim()}";`;
+    return `from '${module.trim()}";`;'
   });
   
   // Fix malformed JSX"
-  fixed = fixed.replace(/<(\w+)className\s*=\s*['"]([^'"]*)['"]\s*\/\s*>/g, '<$1 className="$2" />");"
-  fixed = fixed.replace(/<(\w+)className\s*=\s*{([^}]+)}\s*\/\s*>/g, '<$1 className={$2} />");"
-  fixed = fixed.replace(/<(\w+)href\s*=\s*['"]([^'"]*)['"]\s*\/\s*>/g, '<$1 href="$2" />");"
-  fixed = fixed.replace(/<(\w+)src\s*=\s*['"]([^'"]*)['"]\s*\/\s*>/g, '<$1 src="$2" />");
+  fixed = fixed.replace(/<(\w+)className\s*=\s*["]([^'"]*)['"]\s*\/\s*>/g, '<$1 className="$2 /">);
+  fixed = fixed.replace(/<(\w+)className\s*=\s*{([^}]+)}\s*\/\s*>/g, '<$1 className={$2} />);"
+  fixed = fixed.replace(/<(\w+)href\s*=\s*['"]([^'"]*)['"]\s*\/\s*>/g, '<$1 href="$2 /">);"
+  fixed = fixed.replace(/<(\w+)src\s*=\s*[']([^'"]*)['"]\s*\/\s*>/g, '<$1 src="$2" />);
   
-  // Fix malformed function declarations"
-  fixed = fixed.replace(/const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{?\s*return\s*\(/g, 'const $1 = () => {\n  return (");"
+  // Fix malformed function declarations
+  fixed = fixed.replace(/const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{?\s*return\s*\(/g, 'const $1 = () => {\n  return ();"
   fixed = fixed.replace(/const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{?\s*return\s*return\s*\(/g, 'const $1 = () => {\n  return (");
   
   // Fix broken return statements"
@@ -103,7 +103,7 @@ function processDirectory(dirPath) {
     for (const item of items) {
       const fullPath = path.join(currentPath, item);
       const stat = fs.statSync(fullPath);
-      "
+
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules") {
         walkDir(fullPath);"
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js"))) {

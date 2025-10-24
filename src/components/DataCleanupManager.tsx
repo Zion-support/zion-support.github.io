@@ -1,10 +1,10 @@
-import React from 'react"
+import React from 'react"'
 interface DataCleanupManagerProps {
 className?: string
 ;}
 ;}"
 ;}"
-"'"
+""
 const DataCleanupManager: "React.FC<DataCleanupManagerProps> = ({ className = '' ",;}) => {
 return(</DataCleanupManagerProps>,
     <div className={className,;} />

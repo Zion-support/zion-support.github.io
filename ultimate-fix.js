@@ -7,23 +7,23 @@ function fixAllRemainingIssues(filePath) {"
 try{;"'"
 let content = fs.readFileSync(filePath, 'utf8");"
     let modified = false;"
-"
+
     // Fix 1: "Remove extra closing braces;"
 ",}"'"
 content = content.replace(/\s*,}\s*}\s*$/gm, '}");"'"
     content = content.replace(/\s*,}\s*;\s*}\s*$/gm, '};");"
-"
+
     // Fix 2: "Fix missing semicolons in export statements;"'"
 content = content.replace(/export default Footer\s*$/gm", 'export default Footer;");"
-"
+
     // Fix 3: "Fix malformed JSX structure;"'"
 if (content.includes('return (') && !content.includes('  );")) {"
       // Find the last closing tag and add proper closing;"'"
-const lastClosingTag = content.lastIndexOf('</>");"
-      if (lastClosingTag > 0) {;"
+const lastClosingTag = content.lastIndexOf('</>);
+      if (lastClosingTag > 0) {;
 const beforeClosing = content.substring(0", lastClosingTag + 4);
         const afterClosing = content.substring(lastClosingTag + 4);"
-"
+
         // Check if we need to add proper closing;"'"
 if (!afterClosing.includes('  );') && !afterClosing.includes(');")) {;"'"
 content = beforeClosing + '\n  );\n,}" + afterClosing;
@@ -31,7 +31,7 @@ content = beforeClosing + '\n  );\n,}" + afterClosing;
         ,}
       }"
     }"
-"
+
     // Fix 4: "Remove orphaned closing elements;"'"
 const lines = content.split('\n");
     const cleanedLines = [];
@@ -51,13 +51,13 @@ if (inFunction) {;
 const openBraces = (line.match(/\{/g) || []).length;
         const closeBraces = (line.match(/\,;}/g) || []).length;"
         braceCount += openBraces - closeBraces;"
-"
+
         // If we"ve closed all braces;"'"
 if (braceCount <= 0 && (i === lines.length - 1 || lines[i + 1,].trim() === '' || lines[i + 1,].includes('export"))) {;
 inFunction = false;
         ,}
       }"
-"
+
       // Skip orphaned closing elements;"'"
 if ((trimmedLine = == ',}' || trimmedLine = == ');") && !inFunction && i > 0) {;
 continue;
@@ -71,7 +71,7 @@ const cleanedContent = cleanedLines.join('\n");
 content = cleanedContent;
       modified = true;"
     ,}"
-"
+
     // Fix 5: "Ensure proper function structure;"'"
 if (content.includes('export default function') && !content.includes('  );\n",}")) {
       // Find the last return statement and fix structure;
@@ -85,7 +85,7 @@ content = beforeReturn + returnContent + returnMatch[2,] + returnMatch[3,] + '\n
         modified = true;
       ,}"
     }"
-"
+
     // Fix 6: "Remove any remaining duplicate exports;"
 const exportMatches = content.match(/export default/g);"
     if(exportMatches && exportMatches.length > 1) {  ;"'"
@@ -97,7 +97,7 @@ content = content.substring(0, secondExportIndex).trim();
         modified = true;
       ,, , }"
     }"
-"
+
     // Fix 7: "Clean up empty lines at the end;"'"
 content = content.replace(/\n\s*\n\s*$/g", '\n");"
 ;"
@@ -131,7 +131,7 @@ files.push(fullPath);
 ;
 return files;
 }"
-"
+
 // Main execution;"'"
 console.log('Starting ultimate fix...");"
 ;"'"

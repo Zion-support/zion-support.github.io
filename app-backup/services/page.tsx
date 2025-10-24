@@ -1,5 +1,5 @@
-import React from 'react';
-import { Circle, Star, ArrowRight, Brain, Zap, Shield, Cloud, Smartphone, Database, Globe, Send, BarChart3, Target, DollarSign, Clock, Activity, Lock, FileText, CreditCard, Building2, Sparkles, PieChart, CheckCircle } from 'lucide-react";"
+import React from 'react'
+import { Circle, Star, ArrowRight, Brain, Zap, Shield, Cloud, Smartphone, Database, Globe, Send, BarChart3, Target, DollarSign, Clock, Activity, Lock, FileText, CreditCard, Building2, Sparkles, PieChart, CheckCircle } from 'lucide-react";"'
 'use client';'"
       "title": 'AI Solutions'"
       "description": 'Cutting-edge artificial intelligence solutions to transform your business operations.'

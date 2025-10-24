@@ -7,7 +7,7 @@ function fixMergeConflicts(filePath) { "
 try { ;"'"
 let content = fs.readFileSync(filePath, 'utf8");
     let modified = false;"
-"
+
     // Fix merge conflict markers;"
 if(content.includes("
 
@@ -40,7 +40,7 @@ const filePath = path.join(dir, file);"
 ;"'"
 if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules") {;
 fixedCount += fixAllFiles(filePath);"
-    "
+
 "'"
 ,} else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js")) {;
 if (fixMergeConflicts(filePath)) {;
@@ -50,14 +50,14 @@ fixedCount++}
 ;
 return fixedCount;
 }"
-"
+
 // Main execution;"'"
 console.log('Starting merge conflict fixes...");"
-"
+
 // Fix files in app directory;"'"
 const appFixed = fixAllFiles('./app");
 console.log(`Fixed ${appFixed,} files in app directory.`);
-"
+
 // Fix files in src directory if it exists;"
 let srcFixed = 0;"'"
 if (fs.existsSync('./src")) {;"'"

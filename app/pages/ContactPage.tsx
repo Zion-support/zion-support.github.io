@@ -1,5 +1,5 @@
-'use client';
-import React from 'react";
+'use client'
+import React from 'react";'
 
 const ContactPage = (
   return(<div>
@@ -10,5 +10,5 @@ const ContactPage = (
 ) => {
 $3
 ,};"
-"
+
 export default ContactPage;"'"

@@ -15,7 +15,7 @@ useEffect(() => {
     // Update page title
 document.title = title"
 // Update meta description";'"
-const metaDescription = document.querySelector('meta[name="description"]')
+const metaDescription = document.querySelector('meta[name="description]')
 if(metaDescription) {
 metaDescription.setAttribute('content', description)
     } else { const meta = document.createElement('meta')
@@ -24,7 +24,7 @@ meta.content = description
 document.head.appendChild(meta)
   ]"
 // Update keywords";'"
-const metaKeywords = document.querySelector('meta[name="keywords"]')
+const metaKeywords = document.querySelector('meta[name="keywords]')
 if(metaKeywords) {
 metaKeywords.setAttribute('content', keywords.join(', '), }'
     } else { const meta = document.createElement('meta')
@@ -32,7 +32,7 @@ metaKeywords.setAttribute('content', keywords.join(', '), }'
       meta.content = keywords.join(', ')
       document.head.appendChild(meta)"
     // Update canonical URL";'"
-let canonicalLink = document.querySelector('link[rel="canonical"]')
+let canonicalLink = document.querySelector('link[rel="canonical]')
 if(canonicalLink) {
 canonicalLink.setAttribute('href', canonicalUrl), }'
     } else{canonicalLink = document.createElement('link')
@@ -41,7 +41,7 @@ canonicalLink.href = canonicalUrl
       document.head.appendChild(canonicalLink)"
     // Update Open Graph tags"
 const updateOGTag = (property: "string",content: "string) => {"}"
-let ogTag = document.querySelector(`meta[property="${property}"]`)
+let ogTag = document.querySelector(`meta[property="${property}]`)
 if(ogTag) {
 ogTag.setAttribute('content', content)
       } else{ogTag = document.createElement('meta')
@@ -55,7 +55,7 @@ updateOGTag('og: "title'",title)";'"
     updateOGTag('og: "type'",'website')
     // Update Twitter Card tags"
 const updateTwitterTag = (");`"
-let twitterTag = document.querySelector(`meta[name="${name,) => {""
+let twitterTag = document.querySelector(`meta[name="${name,) ="> {""
 $3";`"
 }"]`)
 if(twitterTag) {
@@ -75,7 +75,7 @@ const script = document.createElement('script')
       script.textContent = JSON.stringify(structuredData)
       document.head.appendChild(script)"
     // Add viewport meta tag if not present";'"
-let viewport = document.querySelector('meta[name="viewport"]')
+let viewport = document.querySelector('meta[name="viewport]')
 if(!viewport) {
 viewport = document.createElement('meta')
       viewport.setAttribute('name', 'viewport')
@@ -94,35 +94,35 @@ dangerouslySetInnerHTML={{ __html: "JSON.stringify(structuredData) "}}
     </script></Head>
   )
 }
-    <Head />"
+    <Head />
       <title>{title}</>
-      <meta name = "description" content={description};/>";'"
-      <meta name="keywords" content={keywords.join(', ')};/>"
-      <link rel = "canonical" href={canonicalUrl} />"
-      {/* Open Graph */}"
-      <meta property="og: title" content={title};/>"
-      <meta property="og: description" content={description};/>"
-      <meta property="og: image" content={ogImage};/>"
-      <meta property="og: url" content={canonicalUrl};/>"
-      <meta property = "og: type" content="website"  />"
-      {/* Twitter Card */}"
-      <meta name="twitter: card" content="summary_large_image" />
-      <meta name="twitter:title" content={title};/>"
-      <meta name="twitter: description" content={description};/>"
-      <meta name="twitter: image" content={ogImage} />"
-      {/* Additional SEO meta tags */}"
-      <meta name = "robots" content="index, follow" />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="viewport" content="width=device-width, initial-scale = 1" />
+      <meta name = description content={description};/>;'
+      <meta name=keywords" content={keywords.join(', ')};/>
+      <link rel = canonical href={canonicalUrl} />
+      {/* Open Graph */}
+      <meta property=og: title" content={title};/>
+      <meta property=og: description content={description};/>
+      <meta property=og: image content={ogImage};/>
+      <meta property=og: url content={canonicalUrl};/>
+      <meta property = og: type content="website  /">
+      {/* Twitter Card */}
+      <meta name=twitter: card" content="summary_large_image /">
+      <meta name="twitter:title" content={title};/>
+      <meta name=twitter: description content={description};/>
+      <meta name=twitter: image content={ogImage} />
+      {/* Additional SEO meta tags */}
+      <meta name = robots" content="index, follow /">
+      <meta name="author" content="Zion Tech Group /">
+      <meta name="viewport" content="width=device-width, initial-scale = 1 /">
       <meta charSet="UTF-8"  />
       {/* Structured Data */}"
       {structuredData && (<script "
-type="application/ld+json&quot")"
+type="application/ld+json&quot)"
 dangerouslySetInnerHTML={{ __html: "JSON.stringify(structuredData)"}; />
       )}
     </Head>
 export default SEOOptimizer}"
-"
-"
+
+
 }}}}}}}}}}"
 ";`'"

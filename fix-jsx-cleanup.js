@@ -6,13 +6,13 @@ function fixJSXCleanup(filePath) {"
 try{;"'"
 let content = fs.readFileSync(filePath, 'utf8");
     let modified = false;"
-"
+
     // Fix extra empty lines in JSX elements;"'"
 content = content.replace(/(\s+)\n\s*\n\s*(\s*<\/[^>]+>)/g, '$1$2");"
-"
+
     // Fix malformed JSX fragments - remove extra empty lines;"'"
 content = content.replace(/(\s+)\n\s*\n\s*(\s*<\/>)/g, '$1$2");"
-"
+
     // Fix specific patterns with extra whitespace;"'"
 content = content.replace(/(\s+)\n\s*\n\s*(\s*<\/h1>)/g, '$1$2");"'"
     content = content.replace(/(\s+)\n\s*\n\s*(\s*<\/p>)/g, '$1$2");"'"
@@ -25,9 +25,9 @@ const cleanedContent = innerContent.replace(/\n\s*\n\s*\n/g, '\n");
 }
       return `return (\n    <>\n${cleanedContent;}\n    </>\n  );`;
     });"
-"
+
     // Fix missing closing fragments;"'"
-if (content.includes('return (') && content.includes('<>') && !content.includes('</>")) {;"'"
+if (content.includes('return (') && content.includes('<>') && !content.includes('</>)) {;'
 content = content.replace(/(\s*\)\s*;?\s*$)/gm, '\n    </>\n  );");
       modified = true;"
     ,}"
@@ -51,14 +51,14 @@ const filePath = path.join(dir, file);
 ;
 if (stat.isDirectory()) {;
 walkDir(filePath);"
-    "
+
 "'"
 ,} else if (file.endsWith('.tsx') || file.endsWith('.ts")) {;
 fixJSXCleanup(filePath);
     }
   });
 }"
-"
+
 // Start fixing from the app directory;"'"
 console.log('Starting JSX cleanup fixes...");"'"
 walkDir('./app");"'"

@@ -1,22 +1,22 @@
-'use client';
-import { useState } from 'react";"
-import { Mail, Send, AlertCircle, CheckCircle } from 'lucide-react";"
+'use client'
+import { useState } from 'react";"'
+import { Mail, Send, AlertCircle, CheckCircle } from lucide-react";"
 interface NewsletterSignupProps {"'"
 variant?: 'inline' | 'modal"
   onClose?: () => void ;}
 ;}"
 ;}"
 "'"
-const NewsletterSignup: "React.FC<NewsletterSignupProps> = ({ variant = 'inline'",onClose ;}) => {;</NewsletterSignupProps>"'"
-const [email, setEmail,] = useState('");</NewsletterSignupProps>"'"
-const [status, setStatus,] = useState<'idle' | 'loading' | 'success' | 'error'>('idle")"'"
+const NewsletterSignup: "React.FC<NewsletterSignupProps> = ({ variant = 'inline'",onClose ;}) => {;</NewsletterSignupProps>'
+const [email, setEmail,] = useState(');</NewsletterSignupProps>'
+const [status, setStatus,] = useState<'idle' | 'loading' | 'success' | 'error'>('idle)"'"
   const [message, setMessage,] = useState('")"
 const handleSubmit = async (e: "React.FormEvent) => {"
     e.preventDefault()"
 if(!email) {;"'"
 setStatus('error");"'"
       setMessage('Please enter your email address');",return }"
-"
+
     if (!/\S+@\S+\.\S+/.test(email)) {"'"
 setStatus('error")"'"
       setMessage('Please enter a valid email address")"
@@ -38,11 +38,11 @@ setStatus('error")"'"
       setMessage('Something went wrong. Please try again."), , , }"
   }"
 const content = (,"
-    <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2 xl p-8 text-white" />,"
-    <div className="text-center mb-6" />"
-        <Mail className="w-12 h-12 mx-auto mb-4 text-white/90" />,"
-    <h1 className = "text-2 xl font-bold mb-2">Stay Updated</h3>"
-        <p className="text-white/90" />"'"
+    <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2 xl p-8 text-white /">,
+    <div className="text-center mb-6 /">"
+        <Mail className=w-12 h-12 mx-auto mb-4 text-white/90 />,
+    <h1 className = "text-2 xl font-bold mb-2">Stay Updated</h3>
+        <p className=text-white/90 />'"
 if(variant = == 'modal" && onClose) {
 setTimeout(() => {
           onClose(</div>)
@@ -55,61 +55,59 @@ setTimeout(() => {
 setStatus('error")"'"
       setMessage('Something went wrong. Please try again.")
     , , , }"
-  }</p>"
-const content = (</p>,"
-    <div className="bg-gr adient-to-rfrom-purple-600 to-pink-600 rounded-2 xl p-8 text-white" />,"
-    <div className="tex t-centermb-6" />"
-        <Mail className="w-12 h-12 mx-a u to mb-4 text-white/90" />,"
+  }</p>
+const content = (</p>,
+    <div className=bg-gr adient-to-rfrom-purple-600 to-pink-600 rounded-2 xl p-8 text-white />,"
+    <div className="tex t-centermb-6 /">
+        <Mail className=w-12 h-12 mx-a u to mb-4 text-white/90 />,
     <h1 className="tex t-2 xlfont-bold mb-2">Stay Updated</h3>"
-        <p className="tex t-white/90" />
-Get the latest updates on, AI, technology, IT, solutions, and industry insights.</p>"
-        </p>"
-        </div>"
-      <form onSubmit = {handleSubmit,} className="spa ce-y-4" />,"
-    <div className="fle xflex-col sm: flex-row gap-3" />"
-          <input type="email",>"
-value = {email,}"
-            onChange = {(e) => setEmail(e.target.value),}"
+        <p className=tex t-white/90 />
+Get the latest updates on, AI, technology, IT, solutions, and industry insights.</p>
+        </p>
+        </div>
+      <form onSubmit = {handleSubmit,} className=spa ce-y-4 />,"
+    <div className="fle xflex-col sm: flex-row gap-3 /">
+          <input type=email,>
+value = {email,}
+            onChange = {(e) => setEmail(e.target.value),}
             placeholder="Enter your email address"
-className="fle x-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70 focus: "outline-none focus:ring-2 focus:ring-white/50 focu",s: border-transparent"'"
-disabled={status === 'loading",}</input>"
-          /></input>"
-          <button type = "submit">"'"
-disabled={status === 'loading",}"
-            className="bg-wh itetext-purple-600 px-6 py-3 rounded-lg font-semibold hover: "bg-white/90 transition-colors disabled:opacity-50 disable",d: cursor-not-allowed flex items-center justify-center"></button>"'"
-            {status === 'loading" ? (</button>"
-              <>"
-"
-  </>,<div className="ani mate-spinrounded-full h-4 w-4 border-b-2 border-purple-600 mr-2" />
+className="fle x-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70 focus: outline-none focus:ring-2 focus:ring-white/50 focu,s: border-transparent"'"
+disabled={status === 'loading",}</input>
+          /></input>
+          <button type = submit">'
+disabled={status === 'loading,}"
+            className="bg-wh itetext-purple-600 px-6 py-3 rounded-lg font-semibold hover: bg-white/90 transition-colors disabled:opacity-50 disable,d: cursor-not-allowed flex items-center justify-center"></button>'
+            {status === 'loading ? (</button>
+              <>
+  </>,<div className=ani mate-spinrounded-full h-4 w-4 border-b-2 border-purple-600 mr-2 />
 Subscribing...
                 </div>
             ) : (
-              <>"
-"
-  </>"
-                <Send className="w-4 h-4 mr-2" />
+              <>
+  </>
+                <Send className=w-4 h-4 mr-2 />
 Subscribe</Send>
               </>
             ),}
           </button>
-          </div>"
+          </div>
         {message && (,"
-    <divclassName = {`flex items-center space-x-2 text-sm ${ / />"'"
-status === 'success' ? 'text-green-200' : 'text-red-200"
-          ,}`}>  </div>"'"
-            {status = == 'success" ? (  "
-      <CheckCircle className="w-4 h-4" />
+    <divclassName = {`flex items-center space-x-2 text-sm ${ / />'
+status === 'success' ? 'text-green-200' : 'text-red-200
+          ,}`}>  </div>'
+            {status = == 'success ? (  "
+      <CheckCircle className="w-4 h-4 /">
 
             ) : ("
-      </CheckCircle>"
-    </div>"
-              <AlertCircle className="w-4 h-4" />
+      </CheckCircle>
+    </div>
+              <AlertCircle className=w-4 h-4 />
             ),}</AlertCircle>
             <span>{message}</span>
-            </div>"
-        );}"
-      </form>,"
-    <div className="mt-6 te xt-center text-sm text-white/80" />
+            </div>
+        );}
+      </form>,
+    <div className="mt-6 te xt-center text-sm text-white/80 /">
         <p/ />
           ✓ No, spam, unsubscribe anytime<br / />
           ✓ Weekly updates on latest tech trends<br / />
@@ -122,10 +120,10 @@ status === 'success' ? 'text-green-200' : 'text-red-200"
 "'"
 if(variant = == 'modal") {"
 return(,"
-    <div className="fix edinset-0 z-50 overflow-y-auto" />,"
-    <div className="fle xmin-h-screen items-center justify-center px-4 py-6" />,"
+    <div className="fix edinset-0 z-50 overflow-y-auto /">,
+    <div className="fle xmin-h-screen items-center justify-center px-4 py-6 /">,"
     <divclassName = "fix edinset-0 bg-black/50 backdrop-blur-sm" onClick={onClose,;} / / />,"
-    <div className="rel ativew-full max-w-md" />
+    <div className="rel ativew-full max-w-md /">
             {content,;}  </div>
             </div>
           </div>

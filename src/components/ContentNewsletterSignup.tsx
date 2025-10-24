@@ -1,10 +1,10 @@
-import React from 'react"
+import React from 'react"'
 interface ContentNewsletterSignupProps {
 className?: string
 ;}
 ;}"
 ;}"
-"'"
+""
 const ContentNewsletterSignup: "React.FC<ContentNewsletterSignupProps> = ({ className = '' ",;}) => {
 return(</ContentNewsletterSignupProps>,
     <div className={className,;} />

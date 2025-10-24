@@ -1,10 +1,10 @@
-'use client';
-import React from 'react';
-import Navigation from '../components/Navigation";"
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react";"
+'use client'
+import React from 'react'
+import Navigation from '../components/Navigation";"'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react";"'
 const PageFixedPage: "React.FC = () => {"
 const features = ["
-    {"'"
+    {""
 ico",n: "Brain",title: "'AI-Powered Analysis'",description: "'Advanced AI algorithms provide intelligent insights and recommendations.'",benefits: "['Smart recommendations'",'Predictive analytics', 'Automated insights', 'Real-time analysis"]"
 }"
   {"'"
@@ -28,7 +28,7 @@ return(
               </div>
             </div>
           </div>
-        </section>"
-      </div>;"
-;"
+        </section>
+      </div>;
+;
 }'"

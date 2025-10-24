@@ -7,7 +7,7 @@ function fixHeadImports(filePath) {;
     let content = fs.readFileSync(filePath, 'utf8');
 ;
     // Check if file uses <Head> but doesn't import Head;
-    if (content.includes('<Head>') && !content.includes("import Head from 'next/head'")) {;
+    if (content.includes('<Head>') && !content.includes("import Head from 'next/head")) {;'
       console.log(`Fixing Head import in: ${filePath}`);
 ;
       // Find the first import statement and add Head import after it;
@@ -16,10 +16,10 @@ function fixHeadImports(filePath) {;
 ;
       // Find where to insert the import;"
       for (let i = 0; i < lines.length; i++) {";'"
-        if (lines[i].startsWith("import ") && lines[i].includes("from '")) {;
+        if (lines[i].startsWith("import ") && lines[i].includes("from '")) {;'
           insertIndex = i + 1}
       }"
-      // Insert the Head import";'"
+      // Insert the Head import";"
       lines.splice(insertIndex, 0, "import Head from 'next/head'");
 ;
       // Join lines back together;

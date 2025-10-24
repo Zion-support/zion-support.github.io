@@ -1,8 +1,8 @@
-import { defineConfig } from 'vite";"
-import react from '@vitejs/plugin-react";"
-import { resolve } from 'path";"
-"
-// https: "//vitejs.dev/config/;
+import { defineConfig } from 'vite";"'
+import react from @vitejs/plugin-react";"
+import { resolve } from 'path";"'
+
+// https: "//vitejs.dev/config/
 export default defineConfig({;
 plugins: [;"
 react({"
@@ -43,7 +43,7 @@ return 'react-core";"
             }"'"
             return 'vendor";
           }"
-          "
+
           // App chunks"'"
           if (id.includes('servicesData")) {"'"
             return 'services-data";"
@@ -228,7 +228,7 @@ devSourcemap: true"}});
   }
 })"
 >>>>>>> 25500927562937ed05befe3bb53e25b2bd9a2d81"
-"
+
 }}'"
 ";'"
 >>>>>>> cursor/fix-errors-and-merge-to-main-eb70

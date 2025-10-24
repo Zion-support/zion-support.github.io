@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react";
+import { useState, useCallback } from 'react";'
 ;
 interface FormState<T /> {;"
 data: T;"
@@ -14,13 +14,13 @@ onSubmit: (data: T) => Promise<void />;"
 validate?: (dat",</void>;"
 a: "T) => Partial<Record<keyof T",string />>;
 }
-</Record>;
+</Record>
 export function useForm<TextendsRecord<string, any />>({;
 initialData,;
 onSubmit,;
-validate,</T>"
-}: UseFormOptions<T />) {</T>;"
-const [formState, setFormState,] = useState<FormState<T />>({;"
+validate,</T>
+}: UseFormOptions<T />) {</T>;
+const [formState, setFormState,] = useState<FormState<T />>({;
 data: "initialData",isSubmitting: "false",submitStatus: "idle",errors: "{",},"
   });"
 </FormState>;"
@@ -98,6 +98,5 @@ handleInputChange,;
 handleSubmit,;
 resetForm,}
   };
-}</HTMLInputElement>"
-"
-}"'"
+}</HTMLInputElement>
+}'

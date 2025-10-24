@@ -42,7 +42,7 @@ function cleanAllFiles(dir) {;
   for (const item of items) {;
     const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
-    "
+
     if (stat.isDirectory()) {"
       // Skip node_modules and .git directories"'"
       if (item !== 'node_modules' && item !== '.git' && !item.startsWith('.")) {"
@@ -53,7 +53,7 @@ function cleanAllFiles(dir) {;
     }
   }
 }"
-"
+
 // Clean all files in the workspace"'"
 console.log('Starting merge conflict cleanup...");"
 cleanAllFiles(process.cwd());"'"

@@ -6,16 +6,16 @@ function fixJSXFragmentLines(filePath) {"
 try{;"'"
 let content = fs.readFileSync(filePath, 'utf8");"
     let modified = false;"
-"
-    // Fix the specific pattern: "return(<> \n \n <Head>"
-    // This should be: return ( <> <Head>;)"'"
-content = content.replace(/return\s*\(\s*<>\s*\n\s*\n\s*<Head>/g",'return (\n    <>\n      <Head>");"
-"
-    // Fix the specific pattern: "return(<> \n \n <div// This should be: return ( < /> <div;)"'"
+
+    // Fix the specific pattern: "return(<> \n \n <Head>
+    // This should be: return ( <> <Head>;)'
+content = content.replace(/return\s*\(\s*<>\s*\n\s*\n\s*<Head>/g",'return (\n    <>\n      <Head>);
+
+    // Fix the specific pattern: return(<> \n \n <div// This should be: return ( < /> <div;)"'"
 content = content.replace(/return\s*\(\s*< />\s*\n\s*\n\s*<div/g",'return (\n    < />\n      <div");"
-"
+
     // Fix any remaining empty lines after JSX fragment opening;"'"
-content = content.replace(/< />\s*\n\s*\n\s*<Head>/g, '<>\n      <Head>");"'"
+content = content.replace(/< />\s*\n\s*\n\s*<Head>/g, '<>\n      <Head>);'
     content = content.replace(/<>\s*\n\s*\n\s*<div/g, '< />\n      <div");"
 ;"'"
 if (content !== fs.readFileSync(filePath, 'utf8")) {;"
@@ -45,7 +45,7 @@ fixJSXFragmentLines(filePath);
     }
   });
 }"
-"
+
 // Start fixing from the app directory;"'"
 console.log('Starting JSX fragment lines fixes...");"'"
 walkDir('./app");"'"

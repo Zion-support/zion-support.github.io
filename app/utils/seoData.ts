@@ -23,7 +23,7 @@ export interface StructuredData {
     postalCode: string;
     addressCountry: string}
 }
-"
+
 export const generateStructuredData = (data: Partial<StructuredData>): StructuredData => {"
   return {"'"
     '@context': 'https://schema.org","'"
@@ -53,7 +53,7 @@ export const generateStructuredData = (data: Partial<StructuredData>): Structure
     ...data
   };
 };"
-"
+
 export const defaultSEOData = {"'"
   title: 'Zion Tech Group - AI Solutions","'"
   description: 'Leading provider of AI and IT solutions for modern businesses. Transform your operations with cutting-edge technology.","'"

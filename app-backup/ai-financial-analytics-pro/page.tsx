@@ -1,8 +1,8 @@
-import { Helmet } from 'react-helmet-async";"
-import Link from 'next/link";"
-import { ArrowRight, Calculator, Building2, Wallet, PiggyBank, BarChart, TrendingUp, CheckCircle, Brain, Settings, BarChart3, Shield, Target, Zap, Globe, DollarSign, Activity, Lock, FileText, CreditCard, Database, Star, Sparkles, PieChart, Send, Clock } from 'lucide-react";"
-import { Metadata } from 'next";"
-    "title": 'AI Financial Analytics Pro - Zion Tech Group | Advanced Financial Intelligence Platform'"
+import { Helmet } from 'react-helmet-async";"'
+import Link from next/link";"
+import { ArrowRight, Calculator, Building2, Wallet, PiggyBank, BarChart, TrendingUp, CheckCircle, Brain, Settings, BarChart3, Shield, Target, Zap, Globe, DollarSign, Activity, Lock, FileText, CreditCard, Database, Star, Sparkles, PieChart, Send, Clock } from 'lucide-react";"'
+import { Metadata } from 'next";"'
+    "title": AI Financial Analytics Pro - Zion Tech Group | Advanced Financial Intelligence Platform'"
       "description": 'Transform your financial analysis with AI Financial Analytics Pro. Advanced, machine, learning, real-time, insights, and predictive analytics for smarter financial decisions. Start your free trial today.'"
   "keywords": 'AI, financial, analytics, financial, intelligence, predictive, analytics, financial, reporting, business, intelligence, Zion Tech Group'"
     "title": 'AI Financial Analytics Pro - Advanced Financial Intelligence Platform'"

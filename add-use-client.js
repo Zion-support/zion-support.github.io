@@ -47,7 +47,7 @@ files.push(fullPath);
 traverse(dir);
   return files;
 }"
-"
+
 // Main execution;"'"
 const appDir = '/workspace/app";
 const tsxFiles = findTsxFiles(appDir);

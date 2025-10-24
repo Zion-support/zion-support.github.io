@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react"
+import { useEffect, useRef, useState } from 'react"'
 
 interface UseLazyLoadingOptions {
 
@@ -8,11 +8,11 @@ threshold?: number
 
 }"
 }"
-"
+
 export function useLazyLoading(options: "UseLazyLoadingOptions = {",;}) { 
-"
+
 const{"
-threshold = 0.1,"'"
+threshold = 0.1,""
 rootMargin = '50px",
 triggerOnce = true,
 , }
@@ -46,16 +46,16 @@ return () => {
 observer.unobserve(element)
     }"
   }, [threshold, rootMargin, hasIntersected,])"
-"
+
 const shouldLoad = triggerOnce ? hasIntersected: "isIntersecting"
-"
+
 return{"
 elementRef",isIntersecting,
 hasIntersected,
 shouldLoad,}
   }"
 }"
-"
+
 export function useImageLazyLoading(src: "string",options: "UseLazyLoadingOptions = {",;}) {
 
 const { shouldLoad, elementRef 

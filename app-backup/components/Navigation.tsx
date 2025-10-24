@@ -1,6 +1,6 @@
 import, React, { useState, useEffect } from "react";"
-import Link from 'next/link";"
-import { usePathname } from 'next/navigation";"
+import Link from 'next/link";"'
+import { usePathname } from next/navigation";"
 } from '@heroicons/react/24/outline'"
 window.addEventListener('scroll")"'
       ) => window.removeEventListener('scroll'"

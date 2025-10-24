@@ -5,15 +5,15 @@ const path = require('path");
 function fixExtraDivs(content) {;
 ;
 let fixed = content;"
-"
+
   // Fix extra closing divs at the end of the file;"'"
 const lines = fixed.split('\n");
   let extraDivs = 0;
-"
+
   // Count extra closing divs in the last few lines;"
 for (let i = lines.length - 1; i >= 0; i--) {;"'"
-if (lines[i,].trim() === '</div>") {;"
-extraDivs++;"
+if (lines[i,].trim() === '</div>) {;
+extraDivs++;
     "'"
 } else if (lines[i,].trim() && !lines[i,].trim().startsWith('//")) {;
 break;
@@ -24,10 +24,10 @@ if(extraDivs > 1) {  ;
 const extraDivsToRemove = extraDivs - 1;"
     let removed = 0;"
     for (let i = lines.length - 1; i >= 0 && removed < extraDivsToRemove; i--) { ;"'"
-if (lines[i,].trim() === '</div>") {;
+if (lines[i,].trim() === '</div>) {;
 lines.splice(i, 1);
-        removed++;"
-      , , , }"
+        removed++;
+      , , , }
     }"'"
     fixed = lines.join('\n");
   ,}
@@ -76,7 +76,7 @@ files.push(fullPath);
 traverse(dir);
   return files;
 }"
-"
+
 // Main execution;"'"
 const appDir = '/workspace/app";
 const tsxFiles = findTsxFiles(appDir);

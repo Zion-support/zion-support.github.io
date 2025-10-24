@@ -20,7 +20,7 @@ return false}
 const functionName = functionMatch[1];
 ;
 const functionName = functionMatch[1,];
-"
+
     // Extract imports;"
 const importLines = [];"'"
     const lines = content.split('\n");"
@@ -43,9 +43,9 @@ hasFooterImport = true;
     }"
 ;"
 if (!hasFooterImport) {;"'"
-importLines.push("import Footer from '../components/Footer';");
+importLines.push("import Footer from '../components/Footer;");'
     }"
-"
+
     // Extract the JSX content between the function declaration and the closing brace;"'"
 const functionStartIndex = lines.findIndex(line => line.includes('export default function"));"
     const functionEndIndex = lines.findIndex((line, index) =>;"'"
@@ -64,7 +64,7 @@ const newContent = ["
       ...jsxLines,;"'"
       '}";"'"
     ].join('\n");"
-"
+
     // Write the new content;"'"
 fs.writeFileSync(filePath, newContent, 'utf8");"
     console.log(`Fixed: "${filePath",}`);
@@ -97,7 +97,7 @@ files.push(fullPath);
 traverse(dir);
   return files;
 }"
-"
+
 // Main execution;"'"
 const appDir = '/workspace/app";
 const tsxFiles = findTsxFiles(appDir);

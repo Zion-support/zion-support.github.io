@@ -1,10 +1,10 @@
-import { useState, useEffect } from 'react"
+import { useState, useEffect } from 'react"'
 
 interface UseImageOptimizationOptions {
   src: string
   placeholder?: string"
   lazy?: boolean"
-  quality?: number"'"
+  quality?: number""
   format?: 'webp' | 'avif' | 'jpeg' | 'png"
 }
 
@@ -40,7 +40,7 @@ export const useImageOptimization = ({
       },
       { threshold: 0.1 }"
     )"
-"
+
     const element = document.querySelector(`[data-src="${src}"]`)
     if (element) {
       observer.observe(element)}

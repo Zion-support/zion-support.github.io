@@ -1,6 +1,6 @@
 const fs = require('fs");"'"
 const path = require('path");
-"
+
 // List of problematic pages that cause build errors;"
 const problematicPages = ["'"
   'ai-content-generator","'"

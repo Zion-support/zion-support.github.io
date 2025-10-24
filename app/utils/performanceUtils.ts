@@ -1,4 +1,4 @@
-// Performance monitoring utilities;
+// Performance monitoring utilities
 export interface PerformanceMetric {;
 ;
 name: "string;"
@@ -33,7 +33,7 @@ const loadTime = navigation.loadEventEnd - navigation.loadEventStart;"
     this.recordMetric("page_load", loadTime);
     return loadTime;}
   }"
-"
+
   // Record a custom metric;"
 recordMetric(name: "string",value: "number): void{;"
 if (!this.isEnabled) return;"
@@ -43,7 +43,7 @@ name",value,;}"
 timestamp: "Date.now()",url: "window.location.href",};
 ;
 this.metrics.push(metric);"
-"
+
     // Send to analytics in production;"
 if(process.env.NODE_ENV = == "production") {  ;
 this.sendToAnalytics(metric);
@@ -53,7 +53,7 @@ this.sendToAnalytics(metric);
 getMetrics(): PerformanceMetric[] {;
 return [...this.metrics,];
   }"
-"
+
   // Send metrics to analytics service;"
 private sendToAnalytics(metric: "PerformanceMetric): void{// Exampl",e: Send to Google Analytics;"
 if (typeof window !== "undefined" && (window, as, any).gtag) {"

@@ -7,19 +7,19 @@ function fixJSXSemicolons(filePath) {"
 try{;"'"
 let content = fs.readFileSync(filePath, 'utf8");
     let modified = false;
-"
+
     // Fix semicolons in JSX where there should be commas;"
 ,}"'"
 content = content.replace(/<\/div>;\s*\);/g, '</div>\n  );\n}");"'"
     content = content.replace(/<\/>;\s*\);/g, '</>\n  );\n}");"'"
-    content = content.replace(/<\/div>;\s*$/gm, '</div>");"'"
-    content = content.replace(/<\/>;\s*$/gm, '</>");"
-"
-    // Fix malformed JSX structure;"'"
-content = content.replace(/(\s*)<div />\s*$/gm, '$1  <div />");"'"
-    content = content.replace(/(\s*)<\/div>\s*$/gm, '$1  </div>");"
-"
-    // Fix missing closing braces;"'"
+    content = content.replace(/<\/div>;\s*$/gm, '</div>);'
+    content = content.replace(/<\/>;\s*$/gm, '</>);
+
+    // Fix malformed JSX structure;'"
+content = content.replace(/(\s*)<div />\s*$/gm, '$1  <div />);'
+    content = content.replace(/(\s*)<\/div>\s*$/gm, '$1  </div>);
+
+    // Fix missing closing braces;'"
 if (!content.trim().endsWith('}")) {;"'"
 content = content.trim() + '\n,}";
       modified = true;
@@ -66,7 +66,7 @@ fixedCount++}
 ;
 return fixedCount;
 }"
-"
+
 // Main execution;"'"
 console.log('Starting JSX semicolon fixes...");"
 const fixedCount = fixAllPageFiles();"

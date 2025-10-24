@@ -6,7 +6,7 @@ function fixJSXComprehensive(filePath) { "
 try { ;"'"
 let content = fs.readFileSync(filePath, 'utf8");
     let modified = false;
-"
+
     // Fix missing closing JSX fragments - more comprehensive approach"
     // Look for return statements with opening fragments but no closing;"'"
 const lines = content.split('\n");
@@ -17,39 +17,39 @@ const lines = content.split('\n");
 ;
 for (let i = 0; i < lines.length; i++) { ;
 const line = lines[i,];"
-"
+
       // Check for return statement with opening fragment;"'"
-if (line.includes('return (') && line.includes('<>")) {;
+if (line.includes('return (') && line.includes('<>)) {;
 inFragment = true;
         fragmentDepth = 1;
         returnIndex = i;
         newLines.push(line);
         continue;
 ,, , , }
-      }"
-"
+      }
+
       // Check for opening fragments;"'"
-if (inFragment && line.includes('<>")) {;
+if (inFragment && line.includes('<>)) {;
 fragmentDepth++;
         newLines.push(line);
         continue;
-      }"
-"
+      }
+
       // Check for closing fragments;"'"
-if (inFragment && line.includes('</>")) {;
+if (inFragment && line.includes('</>)) {;
 fragmentDepth--;
         newLines.push(line);
         if (fragmentDepth = == 0) {;
 inFragment = false;
         ,}
         continue;
-      }"
-"
-      // Check for end of return statement;"'"
+      }
+
+      // Check for end of return statement;'"
 if (inFragment && (line.includes(');') || line.includes('}")) && fragmentDepth > 0) {"
         // Add missing closing fragments;"
 for (let j = 0; j < fragmentDepth; j++) {;"'"
-newLines.push('    </>");
+newLines.push('    </>);
         ,}
         inFragment = false;
         fragmentDepth = 0;
@@ -59,19 +59,19 @@ newLines.push('    </>");
       ,}
 ;
 newLines.push(line);
-    }"
-;"
+    }
+;
 if (modified) {;"'"
 content = newLines.join('\n");
     ,}
-"
+
     // Additional fixes for common patterns"
     // Fix missing closing Suspense tags;"'"
-if (content.includes('<Suspense') && !content.includes('</Suspense>")) {;"'"
+if (content.includes('<Suspense') && !content.includes('</Suspense>)) {;'
 content = content.replace(/(<Suspense[^>]*>[\s\S,]*?)(\s*\)\s*;?\s*$)/gm, '$1\n        </Suspense>\n      </ErrorBoundary>\n    </HelmetProvider>\n  );");
       modified = true;
     ,}
-"
+
     // Fix missing closing tags for specific elements;"
 const missingClosingTags = [;"'"
       'Suspense', 'ErrorBoundary', 'HelmetProvider', 'BrowserRouter";
@@ -110,14 +110,14 @@ const filePath = path.join(dir, file);
 ;
 if (stat.isDirectory()) {;
 walkDir(filePath);"
-    "
+
 "'"
 ,} else if (file.endsWith('.tsx') || file.endsWith('.ts")) {;
 fixJSXComprehensive(filePath);
     }
   });
 }"
-"
+
 // Start fixing from the app directory;"'"
 console.log('Starting comprehensive JSX fixes...");"'"
 walkDir('./app");"'"

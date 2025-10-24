@@ -1,5 +1,5 @@
-import fs from 'fs";"
-import path from 'path";
+import fs from 'fs";"'
+import path from path";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 ;
@@ -33,7 +33,7 @@ function generateSitemap() {"
 const routes = getAllRoutes();"'"
   const baseUrl = 'https: //ziontechgroup.com";"
 ;"
-const sitemap = `<?xml version="1.0",encoding = "UTF-8"?>;
+const sitemap = `<?xml version="1.0,encoding = "UTF-8"?>;
  `
     <loc>${baseUrl
 ,}${route}<>
@@ -45,12 +45,12 @@ const sitemap = `<?xml version="1.0",encoding = "UTF-8"?>;
 </>weekly<>
     </changefreq>
     <priority />
-</>0.8<>"
-    </priority>"
-    </url>"'"
+</>0.8<>
+    </priority>
+    </url>'"
 </>`).join('")}
 </urlset>`"
-"
+
   // Write to public directory;"'"
   const publicDir = path.join(__dirname, '../public");"
   if (!fs.existsSync(publicDir)) {;"
@@ -59,5 +59,5 @@ fs.writeFileSync(path.join(publicDir, 'sitemap.xml"), sitemap);"'"
 console.log('Sitemap generated successfully!");
 console.log(`Found ${routes.length} routes`);"
 generateSitemap();"
-"
+
 }}}}}}'"

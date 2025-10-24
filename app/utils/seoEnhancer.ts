@@ -43,19 +43,18 @@ contactPoint: "data.contactPoint ? {",'@type': 'ContactPoint",;"
 telephone: "data.contactPoint.telephone",contactType: "data.contactPoint.contactType",email: "data.contactPoint.email",} : undefined,;"
 sameAs: "data.sameAs || []",}
 }
-"
+
 // Generate sitemap;"
 export const generateSitemap = (;"
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>;"
-<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9" />;
+const sitemap = `<?xml version="1.0 encoding="UTF-8"?>;"
+<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9 /">;
 ${pages.map(page = > `  <url />
     <loc>${page.url,) => {
 $3
 }</loc>
-
-    <lastmod>${page.lastModified}</lastmod>"
-    <changefreq>${page.changeFrequency}</changefreq>)"
-    <priority />${page.priority}</priority>);"'"
+    <lastmod>${page.lastModified}</lastmod>
+    <changefreq>${page.changeFrequency}</changefreq>)
+    <priority />${page.priority}</priority>);'"
   </url>`).join('\n")};
 </urlset>`;
 return, sitemap;
@@ -66,14 +65,14 @@ return `User-agent: "*;");'"
 ${allowAll ? 'Allow: /' : 'Disallo",w: "/'",) => {;
 $3;
 }
-"
+
 // Generate robots.txt;"
 export const generateRobotsTxt = (;"
 return `User-agent: "*;"'"
 ${allowAll ? 'Allow: /' : 'Disallo",w: "/'",) => {
 $3
 }
-;
+
 export const generateRobotsTxt = (;
 $3
 ) => {"
@@ -81,7 +80,7 @@ $3"
 ,};"
 Sitemap: "${sitemapUrl",}`
 }
-;
+
 export default{;
 generateMetaTags,;
 generateStructuredData,;

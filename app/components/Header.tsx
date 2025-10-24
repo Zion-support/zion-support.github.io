@@ -1,9 +1,10 @@
-'use client';
-import React, { useState } from 'react';
-import Link from 'next/link';
+'use client'
+
+import React, { useState } from 'react'
+import Link from 'next/link'
 
 const Header: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
@@ -12,8 +13,10 @@ const Header: React.FC = () => {
           <Link href="/" className="text-2xl font-bold text-white hover:text-cyan-400 transition-colors">
             <span>Zion Tech</span>
           </Link>
-          
           <nav className="hidden md:flex space-x-8">
+            <Link href="/" className="text-white hover:text-cyan-400 transition-colors">
+              Home
+            </Link>
             <Link href="/about" className="text-white hover:text-cyan-400 transition-colors">
               About
             </Link>
@@ -24,9 +27,8 @@ const Header: React.FC = () => {
               Contact
             </Link>
           </nav>
-
           <button
-            className="md:hidden text-white"
+            className="md:hidden text-white hover:text-cyan-400 transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -34,10 +36,12 @@ const Header: React.FC = () => {
             </svg>
           </button>
         </div>
-
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-white/10">
+          <div className="md:hidden py-4">
             <nav className="flex flex-col space-y-4">
+              <Link href="/" className="text-white hover:text-cyan-400 transition-colors">
+                Home
+              </Link>
               <Link href="/about" className="text-white hover:text-cyan-400 transition-colors">
                 About
               </Link>
@@ -52,7 +56,7 @@ const Header: React.FC = () => {
         )}
       </div>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

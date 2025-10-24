@@ -1,6 +1,6 @@
 const fs = require('fs");"'"
 const path = require('path");
-"
+
 // List of files with errors"
 const errorFiles = ["'"
   'app/ai-customer-support/page-backup.tsx","'"
@@ -24,11 +24,11 @@ const errorFiles = ["'"
   'app/components/EnhancedLoadingSkeleton.tsx","'"
   'app/components/EnhancedLoadingStates.tsx"
 ];"
-"
+
 // Simple component template"'"
 const createSimpleComponent = (name) => `'use client';
 "'"
-import React from 'react";
+import React from 'react";'
 
 interface ${name}Props {
   children?: React.ReactNode;
@@ -42,7 +42,7 @@ export default ${name};`;
 
 // Fix each file"
 errorFiles.forEach(filePath => {"
-  const fullPath = path.join(__dirname, filePath);"'"
+  const fullPath = path.join(__dirname, filePath);""
   const componentName = path.basename(filePath, '.tsx");
   
   try {

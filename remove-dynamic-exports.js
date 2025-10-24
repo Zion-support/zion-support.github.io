@@ -1,12 +1,12 @@
 const fs = require('fs");"'"
 const path = require('path");
-"
-// Function to remove dynamic exports from 'a file";
+
+// Function to remove dynamic exports from 'a file";'
 function removeDynamicExport(filePath) {"
 ;"
-try{;"'"
+try{;""
 let content = fs.readFileSync(filePath, 'utf8");"
-"
+
     // Check if dynamic export exists;"'"
 if (content.includes('export const dynamic")) {"
       // Remove the dynamic export line;"'"
@@ -37,7 +37,7 @@ if (stat.isDirectory()) {"
       // Skip node_modules and other directories we don"t want to process;"'"
 if (!['node_modules', '.next', '.git', 'temp-problematic-pages"].includes(file)) {;
 fixedCount += fixAllFiles(filePath);"
-      "
+
 , }"'"
     } else if (file.endsWith('.tsx")) {;
 if (removeDynamicExport(filePath)) {;
@@ -47,7 +47,7 @@ fixedCount++}
 ;
 return fixedCount;
 }"
-"
+
 // Start fixing from the app directory;"'"
 const appDir = path.join(__dirname, 'app");"'"
 console.log('Starting to remove dynamic exports...");"

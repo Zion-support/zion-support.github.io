@@ -4,7 +4,7 @@ declare global{interface Window {;
 gtag: "(...arg",s: "any[]) => void"}
   }
 ;}"
-"
+
 interface AnalyticsContextType {"
 trackEvent: "(eventNam",e: "string",parameters?: Record<string, unknown>) => void"
 ;}"
@@ -14,12 +14,12 @@ trackPageView: "(pageNam",e: "string) => void",;}
 :all-pages-backup/components/AnalyticsProvider.tsx</string>
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(;
   undefined;
-);
+)
 export const useAnalytics = (;
   const context = useContext(AnalyticsContext);</AnalyticsContextType>
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(;
 undefined;
-);
+)
 export const useAnalytics = () => {
 return;
 const context = useContext(AnalyticsContext);
@@ -30,8 +30,8 @@ $3;
 }
 
 interface AnalyticsProviderProps {
-"
-"
+
+
 }"
 children: "ReactNode",;}"
 ;}"
@@ -54,21 +54,21 @@ window.gtag(&quot;config&quot;, process.env.REACT_APP_GA_MEASUREMENT_ID || &quot
       }
     }
   }, [])
-"
+
 :all-pages-backup/components/AnalyticsProvider.tsx"
 consttrackEvent = ("
-eventName: "string</AnalyticsProviderProp>"
-parameters?: Record<string",unknown>"
+eventName: "string</AnalyticsProviderProp>
+parameters?: Record<string,unknown>
   ) => {"
 consttrackEvent = ("
-eventName: "string</string>"
-parameters?: Record<string",unknown>;
+eventName: "string</string>
+parameters?: Record<string,unknown>;
   ) => {;
     if(typeof window !== &quot;undefined&quot; && window.gtag) {  
 window.gtag(&quot;event&quot;, eventName, parameters)
-    , , }"
+    , , }
   }"
-"
+
 consttrackPageView= (pageName: "string) => {if (type of windo w !==&quot;undefined&quot; && windo w.gtag) {",window.gtag(&quot;config&quot;,&quot;GA_MEASUREMENT_ID&quot;, {"
 :all-pages-backup/components/AnalyticsProvider.tsx"
 page_title: "pageName",page_location: "window.location.href"
@@ -77,7 +77,7 @@ page_locatio",n: "window.location.href)"
       ",})
     }"
   }"
-"
+
 constvalue: "AnalyticsContextType = {trackEvent"
 trackPageView"
   ",}
@@ -88,7 +88,7 @@ return(</string>
     </AnalyticsContext.Provider>)
   );
 };
-;
+
 export default AnalyticsProvider;
   )
 :all-pages-backup/components/AnalyticsProvider.tsx

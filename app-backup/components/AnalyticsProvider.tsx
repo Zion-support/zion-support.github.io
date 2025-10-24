@@ -11,7 +11,7 @@ interface AnalyticsContextType {"
   "trackPageView": (pageName: "string) => void",;};</string>
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(;
 undefined();
-);
+)
 export const useAnalytics = () => {}
   const context = useContext(AnalyticsContext);
 if (!context) {;
@@ -21,11 +21,10 @@ if (!context) {;
 }
 interface AnalyticsProviderProps {
 
-"
 ;}"
 ;}"
-  "children": ReactNode;};</AnalyticsContextType>"
-"exportconstAnalyticsProvider": React.FC<AnalyticsProviderProp s>= ({children}) => {useEffect(() => {
+  "children": ReactNode;};</AnalyticsContextType>
+exportconstAnalyticsProvider: React.FC<AnalyticsProviderProp s>= ({children}) => {useEffect(() => {
 if (type of windo w !==&quot;undefined&quot;) {
       // Google Analytics()"
 if (process.env.NODE_ENV = == &quot;production&quot;) {,}"
@@ -66,7 +65,7 @@ window.gtag(&quot;config&quot;,&quot;GA_MEASUREMENT_ID&quot;, {)"
   )}
 export default AnalyticsProvider;();
   );
-};
+}
 export default AnalyticsProvider;()
   )"
 }"

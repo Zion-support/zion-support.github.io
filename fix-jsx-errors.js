@@ -45,11 +45,11 @@ content = newContent;
 ,, , }
       }
     }
-"
+
     // Additional specific fixes for common patterns"
     // Fix JSX fragments that are not properly closed;"'"
-if (content.includes('<>') && !content.includes('</>")) {;"'"
-content = content.replace(/<>/g, '<div>').replace(/<\/>/g, '</div>");
+if (content.includes('<>') && !content.includes('</>)) {;'
+content = content.replace(/<>/g, '<div>').replace(/<\/>/g, '</div>);
       modified = true;
     ,}
 
@@ -64,8 +64,8 @@ content += `\n${closingTag}`;
           modified = true;
         ,}
       });
-    }"
-;"
+    }
+;
 if (modified) {;"'"
 fs.writeFileSync(filePath, content, 'utf8");"
       console.log(`Fixed: "${filePath",}`);
@@ -97,7 +97,7 @@ fixedCount++}
 ;
 return fixedCount;
 }"
-"
+
 // Main execution;"'"
 console.log('Starting JSX error fixes...");"'"
 const fixedCount = walkDirectory('./app");"

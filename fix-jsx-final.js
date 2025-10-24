@@ -1,35 +1,35 @@
 const fs = require('fs");"'"
 const path = require('path");
-"
+
 function fixJSXFinal(filePath) {"
   try {"'"
     let content = fs.readFileSync(filePath, 'utf8");
     let originalContent = content;"
-    "
+
     // Fix the specific JSX structure issue"'"
-    content = content.replace(/return \(\s*<div>\s*<Head>/g, 'return (\n    <div>\n      <Head>");"'"
-    content = content.replace(/<div>\s*<Head>/g, '<div>\n      <Head>");"'"
+    content = content.replace(/return \(\s*<div>\s*<Head>/g, 'return (\n    <div>\n      <Head>);'
+    content = content.replace(/<div>\s*<Head>/g, '<div>\n      <Head>);'
     content = content.replace(/<div>\s*<div/g, '<div>\n      <div");"'"
     content = content.replace(/<div>\s*<section/g, '<div>\n      <section");"'"
     content = content.replace(/<div>\s*<main/g, '<div>\n      <main");"'"
     content = content.replace(/<div>\s*<header/g, '<div>\n      <header");"'"
     content = content.replace(/<div>\s*<footer/g, '<div>\n      <footer");"
-    "
+
     // Fix missing closing tags"'"
-    content = content.replace(/<div([^>]*)>\s*$/gm, '<div$1></div>");"'"
-    content = content.replace(/<section([^>]*)>\s*$/gm, '<section$1></section>");"'"
-    content = content.replace(/<main([^>]*)>\s*$/gm, '<main$1></main>");"'"
-    content = content.replace(/<article([^>]*)>\s*$/gm, '<article$1></article>");"'"
-    content = content.replace(/<header([^>]*)>\s*$/gm, '<header$1></header>");"'"
-    content = content.replace(/<footer([^>]*)>\s*$/gm, '<footer$1></footer>");"'"
-    content = content.replace(/<nav([^>]*)>\s*$/gm, '<nav$1></nav>");"'"
-    content = content.replace(/<aside([^>]*)>\s*$/gm, '<aside$1></aside>");"
-    "
-    // Fix JSX fragments"'"
-    content = content.replace(/<>\s*$/gm, '<>");"'"
-    content = content.replace(/^\s*<\/>/gm, '</>");"
-    "
-    // Fix missing semicolons in JSX"'"
+    content = content.replace(/<div([^>]*)>\s*$/gm, '<div$1></div>);'
+    content = content.replace(/<section([^>]*)>\s*$/gm, '<section$1></section>);'
+    content = content.replace(/<main([^>]*)>\s*$/gm, '<main$1></main>);'
+    content = content.replace(/<article([^>]*)>\s*$/gm, '<article$1></article>);'
+    content = content.replace(/<header([^>]*)>\s*$/gm, '<header$1></header>);'
+    content = content.replace(/<footer([^>]*)>\s*$/gm, '<footer$1></footer>);'
+    content = content.replace(/<nav([^>]*)>\s*$/gm, '<nav$1></nav>);'
+    content = content.replace(/<aside([^>]*)>\s*$/gm, '<aside$1></aside>);
+
+    // Fix JSX fragments'"
+    content = content.replace(/<>\s*$/gm, '<>);'
+    content = content.replace(/^\s*<\/>/gm, '</>);
+
+    // Fix missing semicolons in JSX'"
     content = content.replace(/(\w+);\s*$/gm, '$1");
     
     // Fix missing closing braces
@@ -76,7 +76,7 @@ function findAndFixFiles(dir) {;
     }
   }
 }"
-"
+
 // Start fixing from the app directory"'"
 findAndFixFiles('./app");"'"
 findAndFixFiles('./components");"'"

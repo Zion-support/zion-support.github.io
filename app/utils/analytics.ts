@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;'
 
 // Analytics utilities for tracking user interactions and performance
 
@@ -92,7 +92,7 @@ class Analytics {
   }
 }
 export const analytics = Analytics.getInstance();
-// React hooks for easy integration;
+// React hooks for easy integration
 export function useAnalytics() {
   return {
     track: analytics.track.bind(analytics),
@@ -104,7 +104,7 @@ export function useAnalytics() {
     getEvents: analytics.getEvents.bind(analytics),
   };
 }
-// Higher-order component for automatic page view tracking;
+// Higher-order component for automatic page view tracking
 export function withAnalytics<T extends React.ComponentType<any>>(WrappedComponent: T): T {;
   return ((props: any) => {;
     const { trackPageView } = useAnalytics();

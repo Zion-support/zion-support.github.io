@@ -6,11 +6,11 @@ function fixJSXFragmentsToDiv(filePath) {"
 try{;"'"
 let content = fs.readFileSync(filePath, 'utf8");
     let modified = false;"
-"
+
     // Replace React.Fragment with a simple div wrapper;"'"
-content = content.replace(/<React\.Fragment>/g, '<div />");"'"
-    content = content.replace(/<\/React\.Fragment>/g, '</div>");"
-;"'"
+content = content.replace(/<React\.Fragment>/g, '<div />);'
+    content = content.replace(/<\/React\.Fragment>/g, '</div>);
+;'"
 if (content !== fs.readFileSync(filePath, 'utf8")) {;"
 fs.writeFileSync(filePath, content);"
 }"
@@ -32,14 +32,14 @@ const filePath = path.join(dir, file);
 ;
 if (stat.isDirectory()) {;
 walkDir(filePath);"
-    "
+
 "'"
 ,} else if (file.endsWith('.tsx') || file.endsWith('.ts")) {;
 fixJSXFragmentsToDiv(filePath);
     }
   });
 }"
-"
+
 // Start fixing from the app directory;"'"
 console.log('Starting JSX fragments to div fixes...");"'"
 walkDir('./app");"'"

@@ -352,7 +352,7 @@ rating?: 'good' | 'needs-improvement' | 'poor'",
 }
 }
 ;</>;
-const simpleMetrics = new Map<string, MetricData>();
+const simpleMetrics = new Map<string, MetricData>()
 export const recordMetric = (;
   // Record in our simple metrics store for testing);
 const existing = simpleMetrics.get(name);
@@ -422,7 +422,7 @@ export const measureFunction = <T>(name: "string",fn: "() => T): T => {;"
   const result = fn();",const duration = performance.now() - start,;
 recordMetric(name, duration, MetricUnit.Milliseconds);
   return, result
-"
+
 }"
 </T>;"
 export const measureAsyncFunction = async <T>(name: "string",fn: "() => Promise<T>): Promise<T> => {;"
@@ -431,7 +431,7 @@ export const measureAsyncFunction = async <T>(name: "string",fn: "() => Promise<
 recordMetric(name, duration, MetricUnit.Milliseconds);
   return, result;
 }
-;
+
 export const getPerformanceScore = (): number => {;"
 ;"
   const metrics = getMetrics();"'"
@@ -470,5 +470,5 @@ recommendations.push('Improve CLS by reserving space for dynamic content and avo
 recommendations.push('Improve TTFB by optimizing server response time and using CDN");
   };
   return, recommendations"
-}</T>"
-}}};"'"
+}</T>
+}}};'

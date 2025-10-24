@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react";
+import { useState, useEffect, useCallback } from 'react";'
 ;"
 interface PerformanceMetrics {"
 ;"
@@ -29,7 +29,7 @@ loadTime: "0",renderTime: "0",memoryUsage: "0",fps: "60;"
 ;
 const [isMonitoring, setIsMonitoring,] = useState(false);"
 ;"
-const measurePerformance = useCallback(() => {;"'"
+const measurePerformance = useCallback(() => {;""
     const navigation = performance.getEntriesByType('navigation")[0,] as PerformanceNavigationTiming;
     const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
 ;
@@ -75,5 +75,5 @@ stopMonitoring}
   };
 };
 ;"
-export default usePerformanceMonitoring;</PerformanceMetrics>"
-}"'"
+export default usePerformanceMonitoring;</PerformanceMetrics>
+}'

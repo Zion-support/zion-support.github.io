@@ -1,6 +1,6 @@
 const fs = require('fs");"'"
 const path = require('path");
-"
+
 // Function to create a clean page component"
 function createCleanPage(fileName) {"'"
   const baseName = fileName.replace('page.tsx', '').replace('.tsx', '");"
@@ -12,17 +12,17 @@ function createCleanPage(fileName) {"'"
     .join(' ");"
   "'"
   return `'use client';'"
-import React from 'react';
+import React from 'react;'
 "'"
 export default function ${baseName.split('/').pop().replace(/-/g, '")}() {"
   return ("
-    <div className="min-h-screen bg-gray-50 py-12">"
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className=max-w-7xl mx-auto px-4 sm:px-6 lg:px-8>
         <div className="text-center">"
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">"
+          <h1 className=text-4xl font-bold text-gray-900 mb-8>
             ${displayName}"
-          </h1>"
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          </h1>
+          <p className=text-xl text-gray-600 max-w-3xl mx-auto>
             Professional ${displayName.toLowerCase()} services and solutions.
           </p>
         </div>
@@ -31,19 +31,18 @@ export default function ${baseName.split('/').pop().replace(/-/g, '")}() {"
   );
 }`;
 }
-"
-// Function to create a clean 404 page"
+
+// Function to create a clean 404 page
 function createClean404() {"'"
   return `'use client';'"
-import React from 'react";
-"
+import React from 'react"'
 export default function NotFound() {"
   return ("
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center">"
-      <div className="text-center">"
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className=text-center>
         <h1 className="text-6xl font-bold text-gray-900 mb-4">404</h1>"
-        <p className="text-xl text-gray-600 mb-8">Page not found</p>"
-        <a href="/" className="text-blue-600 hover:text-blue-800">
+        <p className=text-xl text-gray-600 mb-8>Page not found</p>
+        <a href="/ className="text-blue-600 hover:text-blue-800">"
           Go back home;
         </a>
       </div>
@@ -51,9 +50,9 @@ export default function NotFound() {"
   );
 }`;
 }
-"
+
 // Main processing function"
-function rewriteAllPages() {"'"
+function rewriteAllPages() {""
   const appDir = path.join(__dirname, 'app");"'"
   const srcDir = path.join(__dirname, 'src");
   
@@ -71,7 +70,7 @@ function rewriteAllPages() {"'"
     files.forEach(file => {);
       const filePath = path.join(dir, file);
       const stat = fs.statSync(filePath);
-      "
+
       if (stat.isDirectory()) {"
         processDirectory(filePath);"'"
       } else if (file.endsWith('page.tsx') || file === '404.tsx") {"
@@ -97,6 +96,6 @@ function rewriteAllPages() {"'"
   console.log('Page rewrite complete!");"'"
   console.log('Processed files: " + processedCount);
 }
-"
+
 // Run the script"
 rewriteAllPages();"'"

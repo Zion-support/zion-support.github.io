@@ -1,7 +1,8 @@
-'use client';
-import React from 'react';
-import Link from 'next/link';
-import { Home, ArrowLeft } from 'lucide-react';
+'use client'
+
+import React from 'react'
+import Link from 'next/link'
+import { Home, ArrowLeft } from 'lucide-react'
 
 export default function NotFound() {
   return (
@@ -15,14 +16,14 @@ export default function NotFound() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             href="/"
-            className="inline-flex items-center px-6 py-3 bg-cyan-600 text-white font-semibold rounded-lg hover:bg-cyan-700 transition-colors"
+            className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
           >
             <Home className="w-5 h-5 mr-2" />
             Go Home
           </Link>
           <button
             onClick={() => window.history.back()}
-            className="inline-flex items-center px-6 py-3 bg-gray-600 text-white font-semibold rounded-lg hover:bg-gray-700 transition-colors"
+            className="bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-600 transition-all duration-300 flex items-center justify-center"
           >
             <ArrowLeft className="w-5 h-5 mr-2" />
             Go Back
@@ -30,5 +31,5 @@ export default function NotFound() {
         </div>
       </div>
     </div>
-  );
+  )
 }

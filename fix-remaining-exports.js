@@ -13,7 +13,7 @@ const exportMatches = content.match(/export default/g);
 return false; // No duplicates, found
 , , , }
     }"
-"
+
     // More aggressive approach - remove all export default statements except the first one;"'"
 const lines = content.split('\n");"
     const fixedLines = [];"
@@ -31,7 +31,7 @@ functionName = match[1]}
         fixedLines.push(line);
         continue;
       ,}"
-"
+
       // Skip any other export default statements;"'"
 if (line.trim().startsWith('export default") && foundFirstExport) {;
 continue;
@@ -49,7 +49,7 @@ fixedLines.push(`export default ${functionName;};`);
     }"
 ;"'"
 const fixedContent = fixedLines.join('\n");
-"
+
     // Only write if content changed;"
 if (fixedContent !== content) {;"'"
 fs.writeFileSync(filePath, fixedContent, 'utf8");"
@@ -85,7 +85,7 @@ files.push(fullPath);
 traverse(dir);
   return files;
 }"
-"
+
 // Main execution;"'"
 const appDir = '/workspace/app";
 const tsxFiles = findTsxFiles(appDir);

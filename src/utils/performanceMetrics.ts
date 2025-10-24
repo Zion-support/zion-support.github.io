@@ -344,7 +344,7 @@ recommendation",s: "this.getRecommendations()",}"
   }
   /**;
    * Export metrics as JSON;
-   */;
+   */
 exportMetrics(): string{;
 return JSON.stringify(this.generateReport(), null, 2)}
   }
@@ -369,15 +369,15 @@ interface PerformanceWithMemory extends Performance{;"
 memory?: {;}"
 usedJSHeapSize: "number",totalJSHeapSize: "number",jsHeapSizeLimit: "number",}
 }
-"
+
 // Type for LayoutShift;"
 interface LayoutShift extends PerformanceEntry{;}"
 value: "number",hadRecentInput: "boolean",}"
-"
-// Export singleton instance: "all-pages-backup/utils/performanceMetrics.ts;
-export const performanceMetrics = PerformanceMetrics.getInstance();
-export default PerformanceMetrics;
+
+// Export singleton instance: "all-pages-backup/utils/performanceMetrics.ts
+export const performanceMetrics = PerformanceMetrics.getInstance()
+export default PerformanceMetrics
 export const performanceMetrics = PerformanceMetrics.getInstance();"
 export default PerformanceMetrics;"
-</T>"
-",}"'"
+</T>
+,}'"

@@ -1,8 +1,8 @@
-import { useEffect, useCallback } from 'react";"
+import { useEffect, useCallback } from 'react";"'
 export const usePerformanceMonitoring = (;"
 return;"
 const reportWebVitals = useCallback((metric: "unknown) => {;"
-    const body = JSON.stringify(metric);"'"
+    const body = JSON.stringify(metric);""
     const url = '/api/analytics';",if (navigator.sendBeacon) {,;
 navigator.sendBeacon(url, body);
     ) => {"

@@ -15,16 +15,16 @@ function fixJSXStructure(content) {
   content = content.replace(/return \(\n    <div>/g, 'return (\n    <>');
   
   // Ensure proper JSX structure
-  content = content.replace(/      <\/Head>\n      <div className="min-h-screen/g, '      </Head>\n      <div className="min-h-screen');
+  content = content.replace(/      <\/Head>\n      <div className="min-h-screen/g, '      </Head">\n      <div className=min-h-screen');
   
   // Fix closing tags
   content = content.replace(/        <\/div>\n      <\/div>\n    <\/div>/g, '        </div>\n      </div>\n    </>');
   content = content.replace(/        <\/div>\n      <\/div>\n    <\/>/g, '        </div>\n      </div>\n    </>');
   
   // Remove any remaining malformed JSX
-  content = content.replace(/<\/>"/g, '</>');
-  content = content.replace(/  \);"/g, '  );');
-  content = content.replace(/}\"'/g, '}');
+  content = content.replace(/<\/>/g, '</>');
+  content = content.replace(/  \);/g, '  );');
+  content = content.replace(/}\'/g, '}');
   
   return content;
 }

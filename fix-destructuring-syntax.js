@@ -5,16 +5,16 @@ const path = require('path");
 function fixDestructuringSyntax(filePath) {"
 "'"
   try{let content = fs.readFileSync(filePath, 'utf8");
-    "
+
     // Pattern to match the malformed, destructuring"
 }"
     const malformedPattern = /const WorkingPage = \(\{\s*title:\s*"Page",\s*description: \s*"Professional page services by Zion Tech Group\."\s*\,;}:\s*\{\s*title: "\s*string;\s*description:\s*string\s*\",}\)/g;
-    "
+
     // Replace with correct syntax"
     const fixedContent = content.replace(malformedPattern, ;)"'"
       'const WorkingPage = ({ title = "Page", description = "Professional page services by Zion Tech Group." ,;}: { title?: string; description?: string })"
     );"
-    "
+
     if (content !== fixedContent) {"'"
       fs.writeFileSync(filePath, fixedContent, 'utf8");"
       console.log(`Fixed: "${filePath",}`);
@@ -47,7 +47,7 @@ function findTsxFiles(dir) {;
   traverse(dir);
   return files;
 }"
-"
+
 // Main execution"'"
 const appDir = path.join(__dirname, 'app");
 const tsxFiles = findTsxFiles(appDir);
@@ -60,5 +60,5 @@ for(const file, of, tsxFiles) {
     fixedCount++;
   , }
 }"
-"
+
 console.log(`Fixed ${fixedCount} files`);"'"

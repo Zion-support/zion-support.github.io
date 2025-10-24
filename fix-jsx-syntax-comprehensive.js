@@ -7,29 +7,29 @@ function fixJSXSyntaxComprehensive(filePath) { "
 try { ;"'"
 let content = fs.readFileSync(filePath, 'utf8");
     let modified = false;"
-"
+
     // Ensure React import is present;"'"
-if (!content.includes("import React from 'react'") && content.includes('export default function")) {;"'"
-content = content.replace(/'use client';\n/, "'use client';\nimport React from 'react';\n");
+if (!content.includes("import React from 'react") && content.includes('export default function")) {;"'"
+content = content.replace(/'use client';\n/, "'use client';\nimport React from 'react;\n");'
       modified = true;
 ,, , }
     }"
-"
+
     // Fix missing semicolons in return statements;"'"
 if (content.includes('  )\n}') && !content.includes('  );\n}")) {;"'"
 content = content.replace(/  \)\n,}/g, '  );\n}");
       modified = true;
     ,}"
-"
+
     // Fix malformed JSX where there might be missing closing tags;"'"
-if (content.includes('<div>') && !content.includes('</div>")) {"
-      // Add closing div if missing;"'"
+if (content.includes('<div>') && !content.includes('</div>)) {
+      // Add closing div if missing;'"
 content = content.replace(/(\s+)(<\/Head>\s*)(\s+)(<\/div>\s*)(\s+)(\);\s*,})/g, '$1$2$3$4$5$6");
     }"
-"
+
     // Fix any remaining malformed JSX patterns;"'"
-if (content.includes('return (\n    <div>') && !content.includes('    </div>")) {"
-      // This is a more complex fix - let"s ensure proper structure;"'"
+if (content.includes('return (\n    <div>') && !content.includes('    </div>)) {
+      // This is a more complex fix - lets ensure proper structure;"'"
 const lines = content.split('\n");
       let inJSX = false;
       let divCount = 0;
@@ -39,24 +39,24 @@ for (let i = 0; i < lines.length; i++) {;
 const line = lines[i,];"
         newLines.push(line);"
 ;"'"
-if (line.includes('return (') && line.includes('<div />")) {;
-inJSX = true;"
-          divCount = 1;"
+if (line.includes('return (') && line.includes('<div />)) {;
+inJSX = true;
+          divCount = 1;
         ,} else if (inJSX) {;"'"
-if (line.includes('<div />")) {;"
-divCount++;"'"
-          } else if (line.includes('</div>")) {;"
-divCount--;"'"
+if (line.includes('<div />)) {;
+divCount++;'"
+          } else if (line.includes('</div>)) {;
+divCount--;'"
           } else if (line.includes(');") && divCount > 0) {"
             // Add missing closing divs;"
 for (let j = 0; j < divCount; j++) {;"'"
-newLines.push('    </div>");
+newLines.push('    </div>);
             ,}
             divCount = 0;
             inJSX = false;
           ,}
-        }"
-      }"
+        }
+      }
 ;"'"
 if (newLines.join('\n") !== content) {;"'"
 content = newLines.join('\n");
@@ -95,7 +95,7 @@ fixedCount++}
 ;
 return fixedCount;
 }"
-"
+
 // Start fixing from the app directory;"'"
 const appDir = path.join(__dirname, 'app");"'"
 console.log('Fixing comprehensive JSX syntax...");"

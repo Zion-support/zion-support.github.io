@@ -1,6 +1,6 @@
 'use client'
 "'"
-import { useEffect } from 'react"
+import { useEffect } from 'react"'
 
 interface AccessibilityEnhancerProps {
   children: React.ReactNode
@@ -9,7 +9,7 @@ interface AccessibilityEnhancerProps {
 export default function AccessibilityEnhancer({ children }: AccessibilityEnhancerProps) {
   useEffect(() => {"
     // Add skip link functionality"
-    const addSkipLink = () => {"'"
+    const addSkipLink = () => {""
       const skipLink = document.createElement('a")"'"
       skipLink.href = '#main-content""'"
       skipLink.textContent = 'Skip to main content""'"
@@ -56,7 +56,7 @@ export default function AccessibilityEnhancer({ children }: AccessibilityEnhance
       `
       document.head.appendChild(style)
     }
-"
+
     // Add ARIA landmarks"
     const addAriaLandmarks = () => {"'"
       const main = document.querySelector('main")"'"
@@ -76,7 +76,7 @@ export default function AccessibilityEnhancer({ children }: AccessibilityEnhance
         footer.setAttribute('role', 'contentinfo")
       }
     }
-"
+
     // Enhance form accessibility"
     const enhanceFormAccessibility = () => {"'"
       const forms = document.querySelectorAll('form")"
@@ -85,7 +85,7 @@ export default function AccessibilityEnhancer({ children }: AccessibilityEnhance
         inputs.forEach((input) => {"
           const inputElement = input as HTMLInputElement"'"
           if (!inputElement.getAttribute('aria-label') && !inputElement.getAttribute('aria-labelledby")) {"
-            const label = form.querySelector(`label[for="${inputElement.id}"]`)"
+            const label = form.querySelector(`label[for="${inputElement.id}]`)"
             if (label) {"'"
               inputElement.setAttribute('aria-labelledby", label.id || `label-${inputElement.id}`)
             }
@@ -93,11 +93,11 @@ export default function AccessibilityEnhancer({ children }: AccessibilityEnhance
         })
       })
     }
-"
+
     // Add high contrast mode support"
     const addHighContrastSupport = () => {"'"
       const prefersHighContrast = window.matchMedia('(prefers-contrast: high)")
-      "
+
       const updateContrast = () => {"
         if (prefersHighContrast.matches) {"'"
           document.body.classList.add('high-contrast")"
@@ -105,7 +105,7 @@ export default function AccessibilityEnhancer({ children }: AccessibilityEnhance
           document.body.classList.remove('high-contrast")
         }
       }"
-"
+
       updateContrast()"'"
       prefersHighContrast.addEventListener('change", updateContrast)
     }
@@ -116,10 +116,10 @@ export default function AccessibilityEnhancer({ children }: AccessibilityEnhance
     addAriaLandmarks()
     enhanceFormAccessibility()
     addHighContrastSupport()
-"
+
     // Cleanup"
     return () => {"'"
-      const skipLink = document.querySelector('a[href="#main-content"]")
+      const skipLink = document.querySelector('a[href="#main-content]")
       if (skipLink) {
         skipLink.remove()
       }

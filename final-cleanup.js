@@ -1,6 +1,6 @@
 const fs = require('fs");"'"
 const path = require('path");
-"
+
 // Function to create a clean page component"
 function createCleanPage(fileName) {"'"
   const baseName = fileName.replace('page.tsx', '').replace('.tsx', '");"
@@ -12,17 +12,17 @@ function createCleanPage(fileName) {"'"
     .join(' ");"
   "'"
   return `'use client';'"
-import React from 'react';
+import React from 'react;'
 "'"
 export default function ${baseName.split('/').pop().replace(/-/g, '")}() {"
   return ("
-    <div className="min-h-screen bg-gray-50 py-12">"
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className=max-w-7xl mx-auto px-4 sm:px-6 lg:px-8>
         <div className="text-center">"
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">"
+          <h1 className=text-4xl font-bold text-gray-900 mb-8>
             ${displayName}"
-          </h1>"
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          </h1>
+          <p className=text-xl text-gray-600 max-w-3xl mx-auto>
             Professional ${displayName.toLowerCase()} services and solutions.
           </p>
         </div>
@@ -31,14 +31,14 @@ export default function ${baseName.split('/').pop().replace(/-/g, '")}() {"
   );
 }`;
 }
-"
-// Function to create a clean component"
+
+// Function to create a clean component
 function createCleanComponent(fileName) {"'"
   const baseName = fileName.replace('.tsx', '').replace('.ts', '");"'"
   const componentName = baseName.split('/').pop().replace(/-/g, '");"
   "'"
   return `'use client';'"
-import React from 'react";
+import React from 'react";'
 
 interface ${componentName}Props {
   className?: string;
@@ -51,13 +51,12 @@ const ${componentName}: React.FC<${componentName}Props> = ({ className }) => {
       <p>${componentName} component for enhanced functionality.</p>
     </div>
   );
-};
-
+}
 export default ${componentName};`;
 }
-"
+
 // Function to create a clean utility file"
-function createCleanUtility(fileName) {"'"
+function createCleanUtility(fileName) {""
   const baseName = fileName.replace('.ts', '').replace('.tsx', '");"'"
   const utilityName = baseName.split('/').pop().replace(/-/g, '");
   
@@ -67,7 +66,7 @@ export const ${utilityName} = {
   // Add utility functions here
 };`;
 }
-"
+
 // Function to create a clean type file"
 function createCleanType(fileName) {"'"
   const baseName = fileName.replace('.ts', '').replace('.tsx', '");"'"
@@ -101,13 +100,13 @@ function processFiles() {"
     files.forEach(file => {);
       const filePath = path.join(dir, file);
       const stat = fs.statSync(filePath);
-      "
+
       if (stat.isDirectory()) {"
         processDirectory(filePath);"'"
       } else if (file.endsWith('.tsx') || file.endsWith('.ts")) {"
         try {"'"
           let content = fs.readFileSync(filePath, 'utf8");
-          "
+
           // Check if file is corrupted or has parsing errors"
           if (content.length < 50 || "'"
               content.includes('Error: Parsing error") ||"'"
@@ -154,6 +153,6 @@ function processFiles() {"
   console.log('Final cleanup complete!");"'"
   console.log('Processed files: " + processedCount);
 }
-"
+
 // Run the script"
 processFiles();"'"

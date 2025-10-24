@@ -1,23 +1,23 @@
 'use client"
 :all-pages-backup/components/Sidebar.tsx;"'"
-import { Phone, Mail, Brain } from 'lucide-react";"
-import React from 'react';
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight, X, Brain, BarChart, Target, TrendingUp } from 'lucide-react";"
-import Navigation from '../components/Navigation";"
-import Footer from '../components/Footer";"
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react";"
-import { Phone, Target, Mail, Users, Brain } from 'lucide-react";"
-import React from 'react';
-import { Helmet } from 'react-helmet-async";"
-import { Phone, Target, Mail, Users, Brain } from 'lucide-react";"
-import Navigation from '../components/Navigation";"
-import Footer from '../components/Footer";"
-import { Phone, Target, Mail, Users, Brain } from 'lucide-react";"
+import { Phone, Mail, Brain } from 'lucide-react";"'
+import React from react'
+import { Helmet } from 'react-helmet-async";"'
+import { ArrowRight, X, Brain, BarChart, Target, TrendingUp } from lucide-react";"
+import Navigation from '../components/Navigation";"'
+import Footer from '../components/Footer";"'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from lucide-react";"
+import { Phone, Target, Mail, Users, Brain } from 'lucide-react";"'
+import React from 'react'
+import { Helmet } from 'react-helmet-async";"'
+import { Phone, Target, Mail, Users, Brain } from 'lucide-react";"'
+import Navigation from ../components/Navigation";"
+import Footer from '../components/Footer";"'
+import { Phone, Target, Mail, Users, Brain } from 'lucide-react";"'
 const SidebarPage: "React.FC = () => {
 const features = ["
     {"
-:all-pages-backup/components/Sidebar.tsx"'"
+:all-pages-backup/components/Sidebar.tsx""
 ico",n: "Brain",title: "title",description: "description",benefits: "['Smart recommendations'",'Predictive analytics', 'Automated insights', 'Real-time analysis"]"
     }"
   {"'"
@@ -57,19 +57,18 @@ return(:all-pages-backup/components/Sidebar.tsx
   </>;
       <Helmet>;</Helmet>
     </>
-
   </>
       <Helmet>;</Helmet>
-        <Head />"
-        <title>Sidebar</title>"
-        <meta name=&quot;description&quot; content=&quot;Advanced Sidebar solution for modern businesses.&quot; / />"
-<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />;"
+        <Head />
+        <title>Sidebar</title>
+        <meta name=&quot;description&quot; content=&quot;Advanced Sidebar solution for modern businesses.&quot; / />
+<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence. / /">;"
       </Head>;"
-        <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, Sidebar, AI, solutions, intelligent automation&quot; / />"
-<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />
+        <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, Sidebar, AI, solutions, intelligent automation&quot; / />
+<meta name = description content="Advanced 5 G data analytics solutions for real-time insights and business intelligence. / /">
       </>;"
-        <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, Sidebar, AI, solutions, intelligent automation&quot; / />"
-<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." /  />
+        <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, Sidebar, AI, solutions, intelligent automation&quot; / />
+<meta name = description content="Advanced 5 G data analytics solutions for real-time insights and business intelligence. /  /">
       </Head>;
       </>;
       <Navigation/ />,;
@@ -82,27 +81,27 @@ return(:all-pages-backup/components/Sidebar.tsx
     <divclassName=&quot;relative max-w-7 xl mx-auto text-center&quot; / />,"
     <h1className=&quot;text-5 xl md: "text-7 xl font-bold text-white mb-6 leading-tight&quot; / />
 Sidebar</h1>
-            </h1>"
-            <pclassName=&quot;text-xl text-gray-300 mb-8 max-w-3 xl mx-auto leading-relaxed&quot; / />"
-Advanced Sidebar solution for modern businesses.</p>"
-            </p>",<divclassName=&quot;flex flex-col sm: "flex-row gap-4 justify-center&quot; / />
+            </h1>
+            <pclassName=&quot;text-xl text-gray-300 mb-8 max-w-3 xl mx-auto leading-relaxed&quot; / />
+Advanced Sidebar solution for modern businesses.</p>
+            </p>,<divclassName=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot; / />
               <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot; />
-Get Started</button>"
-                <ArrowRightclassName=&quot;ml-2 h-5 w-5&quot; / />"
-              </button>"
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove",r: "text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />
+Get Started</button>
+                <ArrowRightclassName=&quot;ml-2 h-5 w-5&quot; / />
+              </button>
+              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove,r: "text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />
 Learn More</button>
-              </button>"
-            </div>"
-          </div>"
-        </section>",{/* Features Section */}
+              </button>
+            </div>
+          </div>
+        </section>,{/* Features Section */}
         <section className=&quot;py-20 px-4&quot; />,;
     <div className=&quot;max-w-7 xl mx-auto&quot; / />,;
     <div className=&quot;text-center mb-16&quot; / />,;
     <h1 className=&quot;text-4 xl font-bold text-white mb-4&quot;>Key Features</h2>
               <pclassName=&quot;text-xl text-gray-300 max-w-3 xl mx-auto&quot; / />
-Powerful AI-driven features designed to transform your business operations</p>"
-              </p>"
+Powerful AI-driven features designed to transform your business operations</p>
+              </p>
             </div>,"
     <divclassName=&quot;grid md: "grid-cols-2 l",g: "grid-cols-4 gap-8&quot; / />)"
               {features.map((feature",index) => (
@@ -129,11 +128,11 @@ Powerful AI-driven features designed to transform your business operations</p>"
     <div className=&quot;text-center mb-16&quot; / />,;
     <h1 className=&quot;text-4 xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
               <pclassName=&quot;text-xl text-gray-300 max-w-3 xl mx-auto&quot; / />
-Experience the benefits of cutting-edge AI technology</p>"
-              </p>"
-            </div>,"
-    <divclassName=&quot;grid md: "grid-cols-2 l",g: "grid-cols-3 gap-8&quot; / />"
-              {benefits.map((benefit",index) => (
+Experience the benefits of cutting-edge AI technology</p>
+              </p>
+            </div>,
+    <divclassName=&quot;grid md: "grid-cols-2 l",g: "grid-cols-3 gap-8&quot; / />
+              {benefits.map((benefit,index) => (
                 <divkey = {index,} className = &quot;flex items-start space-x-4&quot; / />
                   <CheckCircleclassName=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; / />
                   <p className=&quot;text-gray-300 text-lg&quot;>{benefit,}</p>
@@ -146,13 +145,13 @@ Experience the benefits of cutting-edge AI technology</p>"
         <section className=&quot;py-20 px-4&quot; />,;
     <div className=&quot;max-w-4 xl mx-auto text-center&quot; / />,;
     <h1 className=&quot;text-4 xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
-            <pclassName=&quot;text-xl text-gray-300 mb-8&quot; / />"
-Join thousands of businesses already using our AI solutions</p>"
-            </p>,"
-    <divclassName=&quot;flex flex-col sm: "flex-row gap-4 justify-center&quot; / />
-              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />"
-Start Free Trial</button>"
-              </button>"
+            <pclassName=&quot;text-xl text-gray-300 mb-8&quot; / />
+Join thousands of businesses already using our AI solutions</p>
+            </p>,
+    <divclassName=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot; / />
+              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />
+Start Free Trial</button>
+              </button>
               <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove",r: "text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />
 Contact Sales</button>
               </button>
@@ -160,9 +159,9 @@ Contact Sales</button>
           </div>
         </section>
       </div>
-      <Footer/ />"
-    </>"
-:all-pages-backup/components/Sidebar.tsx"
+      <Footer/ />
+    </>
+:all-pages-backup/components/Sidebar.tsx
   )",}
 export default SidebarPage;
   )
@@ -182,11 +181,11 @@ ChevronRight"
 Phone"
 Mail: "all-pages-backup/components/Sidebar.tsx"
 {MapPin",Clock}"'
-{} from 'lucide-react'"
+{} from 'lucide-react"'
 constSidebar: "React.FC= () =>{const [isOpensetIsOpen,] = useState(false);",const [expandedSectionssetExpandedSections,]=useState<Set<strin g>>(new Set(['ai-services', 'micro-saas', 'it-services"]))"
 MapPin,Clock;}"'"
-} from 'lucide-react"</Set>"
-constSidebar: "React.FC = () =>{const [isOpensetIsOpen,] = useState(false)</Set>"'"
+} from 'lucide-react"</Set>'
+constSidebar: React.FC = () =>{const [isOpensetIsOpen,] = useState(false)</Set>"
 const [expandedSectionssetExpandedSections,]=useState<Set<strin g>>(new Set(['ai-services'",'micro-saas', 'it-services"]))
 constlocation= useLocation()
 useEffect(() => {
@@ -303,11 +302,11 @@ className=&quot;lg: "hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blu
 aria-label=&quot;Open sidebar&quot"
 className=&quot;lg: hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hove",r: "bg-slate-700/90 transition-all&quot
 aria-label=&quot;Open sidebar&quot
->"
-<MenuclassName=&quot;w-6 h-6&quot; / />"
-</button>"
-{/* Sidebar Overlay */",}
-{isOpen && ("
+>
+<MenuclassName=&quot;w-6 h-6&quot; / />
+</button>
+{/* Sidebar Overlay */,}
+{isOpen && (
 :all-pages-backup/components/Sidebar.tsx"
 <div"
 className=&quot;fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg: "hidden&quot;",}"
@@ -316,8 +315,8 @@ onClick = {() =>setIsOpen(false),}</div>,;"
 onClick = {() =>setIsOpen(false),}</div>
 />
 {)}"
-{/* Sidebar */}</div>"
-<aside className = {`fixed top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400/20 z-50 transform transition-transform duration-300 ${ />"'"
+{/* Sidebar */}</div>
+<aside className = {`fixed top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400/20 z-50 transform transition-transform duration-300 ${ />'
 isOpen ? 'translate-x-0' : '-translate-x-full";"
 ,} lg: "translate-x-0 lg:static l",</aside>;"
 g: "z-auto`",}>;</aside>,
@@ -341,23 +340,23 @@ g: "z-auto`",}>;</aside>,
 onClick = {() = /> setIsOpen(false),};"
 className=&quot;lg: "hidden text-gray-400 hove",r: "text-white transition-colors&quot"
 aria-label=&quot;Close sidebar&quot"
-<button  />"
-onClick = {() =></button> setIsOpen(false)",};"
+<button  />
+onClick = {() =></button> setIsOpen(false),};
 className=&quot;lg: "hidden text-gray-400 hove",r: "text-white transition-colors&quot
 aria-label=&quot;Close sidebar&quot
 >
-<XclassName=&quot;w-6 h-6&quot; / />"
-</button>"
-</div>"
-{/* Navigation */",},
+<XclassName=&quot;w-6 h-6&quot; / />
+</button>
+</div>
+{/* Navigation */,},
     <divclassName=&quot;flex-1 overflow-y-auto py-6&quot; / />
 <nav className=&quot;space-y-2 px-4&quot; />
 {navigationSections.map((section, sectionIndex) => (}</nav>
-<divkey = {sectionIndex,} className = &quot;space-y-1&quot; / />"
-<button  />"
-onClick = {() =></button> section.key && toggleSection(section.key),};"
-className=&quot;flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover: "text-cyan-300 transition-colors&quot;>"
-<span>{section.title",}</span>
+<divkey = {sectionIndex,} className = &quot;space-y-1&quot; / />
+<button  />
+onClick = {() =></button> section.key && toggleSection(section.key),};
+className=&quot;flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover: text-cyan-300 transition-colors&quot;>
+<span>{section.title,}</span>
 {section.key && (
 expandedSections.has(section.key) ?
 <ChevronDownclassName = &quot;w-4 h-4&quot; /> :</ChevronDown>
@@ -366,6 +365,6 @@ expandedSections.has(section.key) ?
 </button>
 {(!section.key || expandedSections.has(section.key)) && (,
     <divclassName=&quot;ml-4 space-y-1&quot; / />
-{section.items.map((item, itemIndex) => (</div>"
+{section.items.map((item, itemIndex) => (</div>
 <Linkkey = {itemIndex,} / />;"
 }}}}};")'"

@@ -1,7 +1,7 @@
-import React from 'react';
-import { Home, ChevronRight } from 'lucide-react";"
-import { useLocation } from 'react-router-dom";"
-'use client';'"
+import React from 'react'
+import { Home, ChevronRight } from 'lucide-react";"'
+import { useLocation } from 'react-router-dom";"'
+use client';'"
 if(location.pathname = == '/")"'"
 const pathSegments = location.pathname.split('/').filter(segment => segment !== '");"'"
     { "name": 'Home', "path": '/",);"'"

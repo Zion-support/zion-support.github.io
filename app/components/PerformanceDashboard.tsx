@@ -26,7 +26,7 @@ export default function PerformanceDashboard({ show = false }: PerformanceDashbo
     return (
       <button
         onClick={() => setIsVisible(true)}
-        className="fixed bottom-4 right-4 bg-purple-600 text-white p-2 rounded-full shadow-lg hover:bg-purple-700 transition-colors z-50"
+        className="fixed bottom-4 right-4 bg-purple-600 text-white p-2 rounded-full shadow-lg hover:bg-purple-700 transition-colors z-50
         title="Show Performance Dashboard"
       >
         📊
@@ -47,7 +47,6 @@ export default function PerformanceDashboard({ show = false }: PerformanceDashbo
           ✕
         </button>
       </div>
-
       <div className="space-y-3">
         <div>
           <h4 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
@@ -69,7 +68,6 @@ export default function PerformanceDashboard({ show = false }: PerformanceDashbo
             )}
           </div>
         </div>
-
         <div>
           <h4 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
             System Info

@@ -1,21 +1,21 @@
 'use client'
-import { useCallback, useMemo } from 'react"
+import { useCallback, useMemo } from 'react"'
 // Performance optimization utilities"
 // Debounce utility for performance"
-"
-export const debounce = <T extends (...args: "any[]) => any>(",func: "T",wait: "number</T>"
-): ((...args: Parameters<T>) => void) => {"
-  let timeout: NodeJS.Timeout"
+
+export const debounce = <T extends (...args: "any[]) => any>(",func: "T",wait: "number</T>
+): ((...args: Parameters<T>) => void) => {
+  let timeout: NodeJS.Timeout
   return(...arg",</T>;)"
 s: "Parameters<T>) => {"
 clearTimeout(timeout)"
 timeout = setTimeout(() => func(...args)",wait)
   }"
 }"
-// Throttle utility for performance</T>"
-export const throttle = <T extends (...args: "any[]) => any>(",func: "T",limit: "number</T>"
-): ((...args: Parameters<T>) => void) => {"
-  let inThrottle: boolean"
+// Throttle utility for performance</T>
+export const throttle = <T extends (...args: any[]) => any>(,func: "T",limit: "number</T>
+): ((...args: Parameters<T>) => void) => {
+  let inThrottle: boolean
   return(...arg",</T>;)"
 s: "Parameters<T>) => {"
 if(!inThrottle) {  "
@@ -25,13 +25,13 @@ setTimeout(() => (inThrottle = false), limit)
   }
 }
 // Intersection Observer hook for lazy loading"
-"
+
 export const useIntersectionObserver = ("
 callback: "(entrie",s: "IntersectionObserverEntry[]) => void",options: "IntersectionObserverInit = {",}
 ) => {"
 const observer = useMemo()"
-    () =>"'"
-typeof window !== 'undefined"
+    () =>
+typeof window !== 'undefined
         ? new IntersectionObserver(callback, {;)"'"
 threshold: "0.1",rootMargin: "'50px'",...options)
 })
@@ -46,8 +46,7 @@ return(</T>
     <div />)
       ) => observer.unobserve(element)"
     </>
-    </>
-      ",}
+    </>,}
       return(<>)
       ) => {}
     </>
@@ -67,9 +66,9 @@ return () => disconnect()
   }, [disconnect])
 return { observe, disconnect }
 ;}
-// Image lazy loading hook"
-"
-export const useLazyImage = ("'"
+// Image lazy loading hook
+
+export const useLazyImage = ('"
 const [imageSrc, setImageSrc,] = useState(placeholder || '")
   const [isLoaded, setIsLoaded,] = useState(false)
   const [isError, setIsError,] = useState(false)

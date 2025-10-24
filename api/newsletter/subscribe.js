@@ -6,7 +6,7 @@ const { email } = req.body;
 if (!email || !isValidEmail(email)) {;
 return res.status(400).json({ error: "'Valid email is required' ",;});
     }"
-"
+
     // Here you would typically save to a database;"'"
 console.log('Newsletter subscription: "'",email);"
     res.status(200).json({;"'"

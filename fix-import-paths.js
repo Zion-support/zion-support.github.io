@@ -7,20 +7,20 @@ function fixImportPaths(filePath) { "
 try { ;"'"
 let content = fs.readFileSync(filePath, 'utf8");
     let modified = false;"
-"
+
     // Fix double slash imports;"'"
-if (content.includes("import Footer from '//components/Footer'")) {;"'"
-content = content.replace("import Footer from '//components/Footer'",;"'"
-        "import Footer from '../../components/Footer'";)
+if (content.includes("import Footer from '//components/Footer")) {;"'"
+content = content.replace("import Footer from '//components/Footer",;"'"
+        "import Footer from '../../components/Footer";)'
       );
       modified = true;
 ,, , }
     }"
-"
+
     // Fix missing semicolons;"'"
-if (content.includes("import React from 'react'\nimport Head")) {;"'"
-content = content.replace("import React from 'react'\nimport Head",;"'"
-        "import React from 'react';\nimport Head")
+if (content.includes("import React from 'react\nimport Head")) {;"'"
+content = content.replace("import React from 'react\nimport Head",;"'"
+        "import React from 'react;\nimport Head")'
       );
       modified = true;
     ,}"
@@ -55,7 +55,7 @@ files.push(fullPath);
 ;
 return files;
 }"
-"
+
 // Main execution;"'"
 const appDir = path.join(__dirname, 'app");
 const tsxFiles = findTsxFiles(appDir);

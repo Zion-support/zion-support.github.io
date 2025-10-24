@@ -1,9 +1,9 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight, Brain } from 'lucide-react";"
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react";"
-import { Phone, Mail } from 'lucide-react";
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async";"'
+import { ArrowRight, Brain } from 'lucide-react";"'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from lucide-react";"
+import { Phone, Mail } from 'lucide-react";'
 {    }"
   ]"
 const benefits = ["'
@@ -12,5 +12,5 @@ const benefits = ["'
     'Improve decision-making with AI insights'"
     'Scale operations without proportional staff increases";"'"
     'Gain competitive advantage with advanced technology",;"
-    <divclassName=&quot;flex flex-col sm: "flex-row gap-4 justify-center&quot; / / />"
-          </div>",}"'"
+    <divclassName=&quot;flex flex-col sm: "flex-row gap-4 justify-center&quot; / / />
+          </div>,}'"

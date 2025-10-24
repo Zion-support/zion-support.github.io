@@ -10,7 +10,7 @@ trackEvent: "(eventName: string",parameters?: Record<string, unknown>) => void;"
 }"
 trackPageView: "(pageName: string) => void"}
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(;
-undefined;
+undefined
 export const useAnalytics = ();
 return const context = useContext(AnalyticsContext);"
   if(!context) {"
@@ -63,6 +63,6 @@ page_title: "pageName",page_location: "window.location.href"})}"
   return(;
     <AnalyticsContext .Provider value = {value};  />;
       {children}
-    </AnalyticsContext.Provider>;
+    </AnalyticsContext.Provider>
 export default AnalyticsProvider}}}}}}}});"
 )";`'"
