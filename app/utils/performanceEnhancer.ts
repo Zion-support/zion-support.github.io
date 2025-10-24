@@ -1,10 +1,18 @@
+<<<<<<< HEAD
 import { useRef, useEffect } from 'react'
 'use client'
+=======
+import { useRef, useEffect } from 'react';
+
+'use client';
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836
 /**
  * Performance Enhancement Utilities
  * Advanced performance optimization tools for the application
  */
 
+<<<<<<< HEAD
 export const debounce = <T extends (...args: unknown[]) => unknown>(,
     func: T,
   wait: number,
@@ -16,6 +24,19 @@ export const debounce = <T extends (...args: unknown[]) => unknown>(,
   }
 }
 // Throttle function for performance optimization;
+=======
+// Debounce function for performance optimization
+export const debounce = <T extends (..._args: unknown[]) => unknown>(
+  func: T,
+  wait: number
+): ((..._args: Parameters<T>) => void) => {
+  let timeout: ReturnType<typeof setTimeout>;
+  return (..._args: Parameters<T>) => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func(..._args), wait);
+  };
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836
 
 export const throttle = <T extends (...args: unknown[]) => unknown>(,
     func: T,
@@ -24,9 +45,15 @@ export const throttle = <T extends (...args: unknown[]) => unknown>(,
   let inThrottle: boolean;,
   return (...args: Parameters<T>) => {,
     if (!inThrottle) {
+<<<<<<< HEAD
       func(..._args)
       inThrottle = true
       setTimeout(() => (inThrottle = false), limit)
+=======
+      func(..._args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836
     }
   }
 }
@@ -48,10 +75,14 @@ export class PerformanceMonitor {
     this.metrics.set(`${componentName}_render`, renderTime)
     if (process.env['NODE_ENV'] === 'development') {
 <<<<<<< HEAD
+<<<<<<< HEAD
       console.log(`${componentName} rendered in ${renderTime}ms`)
 =======
       console.log(`${componentName} rendered in ${renderTime}ms`);
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
+=======
+      console.log(`${componentName} rendered in ${renderTime}ms`);
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836
     }
   }
 
@@ -84,10 +115,14 @@ export class PerformanceMonitor {
       list.getEntries().forEach((entry) => {
         if (entry.duration > 50) { // Tasks longer than 50ms
 <<<<<<< HEAD
+<<<<<<< HEAD
           console.log(`Long task detected: ${entry.name} took ${entry.duration}ms`)
 =======
           console.log(`Long task detected: ${entry.name} took ${entry.duration}ms`);
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
+=======
+          console.log(`Long task detected: ${entry.name} took ${entry.duration}ms`);
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836
         }
       })
     })
@@ -218,10 +253,14 @@ $3
       for (const entry of list.getEntries()) {
         if (process.env['NODE_ENV'] === 'development') {
 <<<<<<< HEAD
+<<<<<<< HEAD
           console.log('LCP:', entry.startTime)
 =======
           console.log('LCP:', entry.startTime);
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
+=======
+          console.log('LCP:', entry.startTime);
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836
         }
       }
     })
@@ -239,10 +278,14 @@ $3
         const fid = fidEntry.processingStart - entry.startTime
         if (process.env['NODE_ENV'] === 'development') {
 <<<<<<< HEAD
+<<<<<<< HEAD
           console.log('FID:', fid)
 =======
           console.log('FID:', fid);
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
+=======
+          console.log('FID:', fid);
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836
         }
       }
     })
@@ -288,7 +331,25 @@ $3
 }
 // Initialize performance enhancements;
 
+<<<<<<< HEAD
 export const initializePerformanceEnhancements = ($2) => {
 $3
 };
 }
+=======
+// Initialize performance enhancements
+export const initializePerformanceEnhancements = () => {
+  if (typeof window === 'undefined') return;
+  // Initialize lazy loading
+  lazyLoadImages();
+  // Preload critical resources
+  preloadCriticalResources();
+  // Optimize scroll performance
+  optimizeScrollPerformance();
+  // Collect performance metrics
+  const metrics = collectPerformanceMetrics();
+  if (metrics && (process.env['NODE_ENV'] === 'development' || import.meta.env.DEV)) {
+    console.log('Performance metrics:', metrics);
+  }
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836

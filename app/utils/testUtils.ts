@@ -1,4 +1,5 @@
 'use client';
+
 /**
  * Testing Utilities
  * Provides helper functions and utilities for testing
@@ -48,15 +49,26 @@ export const mockFetch = (
   status = 200,
   headers: Record<string, string> = {}
 ): void => {
+<<<<<<< HEAD
   if(typeof, global !== 'undefined') {
     (global as typeof global & { fetch: typeof fetch }).fetch = jest.fn(() =>
+=======
+  if (typeof global !== 'undefined') {
+    (global as typeof global & { fetch: typeof fetch }).fetch = (() =>
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836
       Promise.resolve({
         ok: status >= 200 && status < 300,
         status,
         headers: new Headers(headers),
+<<<<<<< HEAD
     json: async () => response,
         text: async () => JSON.stringify(response)} as Response)
     ) as typeof fetch
+=======
+        json: async () => response,
+        text: async () => JSON.stringify(response)
+      } as Response));
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836
   }
 };
 
@@ -158,7 +170,11 @@ export const createMockPerformance = (): Performance => {
  * Generate random test data
  */
 export const generateTestData = {
+<<<<<<< HEAD
   string: (length = 10): string => {,
+=======
+  string: (length = 10): string => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836
     return Math.random()
       .toString(36)
       .substring(2, length + 2)

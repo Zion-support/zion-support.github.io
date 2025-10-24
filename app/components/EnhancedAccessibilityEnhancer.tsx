@@ -86,6 +86,7 @@ interface EnhancedAccessibilityEnhancerProps {
   }
 
   return (
+<<<<<<< HEAD
     <>
       
     </>
@@ -110,6 +111,44 @@ interface EnhancedAccessibilityEnhancerProps {
         </section>,
 ,
         {/* Features Section */}
+=======
+    <div className="...">
+      <div 
+        className="accessibility-controls" 
+        style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 }}
+      >
+        <button
+          onClick={toggleHighContrast}
+          className="accessibility-button"
+          aria-label="Toggle high contrast"
+        >
+          {isHighContrast ? 'Normal Contrast' : 'High Contrast'}
+        </button>
+        
+        <div className="...">
+          <button
+            onClick={() => changeFontSize('small')}
+            className="accessibility-button"
+            aria-label="Small font size"
+          >
+            A
+          </button>
+          <button
+            onClick={() => changeFontSize('medium')}
+            className="accessibility-button"
+            aria-label="Medium font size"
+          >
+            A
+          </button>
+          <button
+            onClick={() => changeFontSize('large')}
+            className="accessibility-button"
+            aria-label="Large font size"
+          >
+            A
+          </button>
+        </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836
 
         <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto">
         <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>

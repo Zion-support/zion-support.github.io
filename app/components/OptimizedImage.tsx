@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
+<<<<<<< HEAD
 const OptimizedImage: React.FC = ($2) => {
 $3
 };
@@ -57,6 +58,18 @@ $3
 
       <Footer /> </Footer></>
   )
+=======
+interface OptimizedImageProps {
+  src: string,
+      alt: string
+  width?: number
+  height?: number
+  className?: string
+  priority?: boolean
+  quality?: number
+  placeholder?: 'empty' | 'blur'
+  blurDataURL?: string
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({

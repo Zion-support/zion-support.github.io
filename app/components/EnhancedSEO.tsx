@@ -23,8 +23,15 @@ const benefits = [
       </div>
       <Footer />
 
+<<<<<<< HEAD
 </Footer></>
   )
+=======
+interface EnhancedSEOProps {
+  title?: string;
+  description?: string;
+  keywords?: string[];
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836
 }
 
 export default EnhancedSEOPage

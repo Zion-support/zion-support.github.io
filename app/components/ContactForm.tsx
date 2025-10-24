@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 
 interface FormData {
+<<<<<<< HEAD
 
   name: string;,
     email: string;,
@@ -17,11 +18,34 @@ const ContactForm: React.FC = () => {,
     company: ''
     phone: ''
     service: ''
+=======
+  name: string;
+  email: string;
+  company: string;
+  phone: string;
+  service: string;
+  message: string;
+}
+
+interface FormStatus {
+  type: 'idle' | 'loading' | 'success' | 'error';
+  message: string;
+}
+
+const ContactForm: React.FC = () => {
+  const [formData, setFormData] = useState<FormData>({
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    service: '',
+    message: ''
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836
   })
   const [status, setStatus] = useState<FormStatus>({
-    type: 'idle'
+    type: 'idle',
     message: ''
-  })
+  });
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
     setFormData(prev => ({

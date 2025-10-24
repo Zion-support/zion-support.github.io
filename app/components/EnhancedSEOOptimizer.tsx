@@ -31,6 +31,7 @@ const EnhancedSEOOptimizerPage: React.FC = () => {,
     }
   ];
 
+<<<<<<< HEAD
   const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
@@ -38,6 +39,13 @@ const EnhancedSEOOptimizerPage: React.FC = () => {,
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology';
   ];
+=======
+interface EnhancedSEOOptimizerProps {
+  title?: string;
+  description?: string;
+  keywords?: string[];
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836
 
 const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = (_props) => {
   return (

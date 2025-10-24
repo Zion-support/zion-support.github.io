@@ -1,5 +1,6 @@
 import React from 'react';
 
+<<<<<<< HEAD
 const SkipLink: React.FC = ($2) => {
 $3
 };
@@ -56,6 +57,10 @@ $3
 
       <Footer /> </Footer></>
   )
+=======
+interface SkipLinkProps {
+  // Add props here
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836
 }
 
 const SkipLink: React.FC<SkipLinkProps> = (_props) => {

@@ -39,6 +39,7 @@ const ErrorHandler: React.FC = () => {
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               ErrorHandler
             </h1>
+<<<<<<< HEAD
             <p>Advanced ErrorHandler solution for modern businesses.</p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
               <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">,
@@ -59,6 +60,36 @@ const ErrorHandler: React.FC = () => {
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"> </div><h3 className="text-xl font-semibold text-white mb-3">AI-Powered</h3>
                 <p className="text-gray-300">Advanced AI algorithms for intelligent automation.</p>
+=======
+            <p className="text-xl text-emerald-400 max-w-3xl mx-auto">
+              Advanced ErrorHandler solutions powered by artificial intelligence and machine learning.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-slate-800 p-6 rounded-lg">
+                <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
+<<<<<<< HEAD
+                <h2 className="text-2xl font-bold text-white mb-4">{feature.title}</h2>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+=======
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"> </div><h3 className="text-xl font-semibold text-white mb-3">Scalable</h3>
                 <p className="text-gray-300">Grows with your business needs and requirements.</p>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const EnhancedSEOHead: React.FC = ($2) => {
@@ -56,6 +57,15 @@ $3
 
       <Footer /> </Footer></>
   )
+=======
+'use client';
+import React from 'react';
+
+interface EnhancedSEOHeadProps {
+  title?: string;
+  description?: string;
+  keywords?: string[];
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836
 }
 
 const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = (_props) => {

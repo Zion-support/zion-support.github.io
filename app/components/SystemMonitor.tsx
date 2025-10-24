@@ -1,5 +1,6 @@
 'use client';
 
+<<<<<<< HEAD
 import React from 'react';
 import  Helmet  from 'react-helmet-async';
 import  Brain  CheckCircle ArrowRight Phone Mail MapPin Zap Shield Brain Globe          } from 'lucide-react';
@@ -31,6 +32,10 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {
               <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">,
                 Learn More
               </button>
+=======
+import React, { useState, useEffect } from 'react';
+import { Cpu, HardDrive, Wifi, Battery } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836
 
         </section>,
         {/* Features Section */}

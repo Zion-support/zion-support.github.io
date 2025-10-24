@@ -1,9 +1,28 @@
+<<<<<<< HEAD
 import React from 'react';
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
+=======
+'use client'
+import React from 'react'
+interface LoadingProps {
+  size?: 'sm' | 'md' | 'lg';
+  text?: string;
+}
+
+const Loading: React.FC<LoadingProps> = ({
+  size = 'md',
+  text = 'Loading...'
+}) => {
+  const sizeClasses = {
+    sm: 'h-4 w-4',
+    md: 'h-8 w-8',
+    lg: 'h-12 w-12'
+  };
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836
 
 const Loading: React.FC = () => {
   return (

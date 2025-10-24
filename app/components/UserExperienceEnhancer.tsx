@@ -40,6 +40,7 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
       }
     }
 
+<<<<<<< HEAD
 const enhanceUserExperience = () => {
       // Add smooth scrolling
       if (typeof document !== 'undefined') {
@@ -69,3 +70,79 @@ const enhanceUserExperience = () => {
 
 
 export default UserExperienceEnhancer;
+=======
+    // Add keyboard navigation support
+    if (enableKeyboardNavigation) {
+      const handleKeyDown = (event: KeyboardEvent) => {
+        if (event.key === 'Tab') {
+          document.body.classList.add('keyboard-navigation')
+        }
+      }
+      const handleMouseDown = () => {
+        document.body.classList.remove('keyboard-navigation')
+      }
+      document.addEventListener('keydown', handleKeyDown)
+      document.addEventListener('mousedown', handleMouseDown)
+      return () => {
+<<<<<<< HEAD
+        document.removeEventListener('keydown', handleKeyDown)
+        document.removeEventListener('mousedown', handleMouseDown)
+      }
+    }
+  }, [enableAccessibility, enableKeyboardNavigation, isHighContrast, isReducedMotion])
+=======
+        document.removeEventListener('keydown', handleKeyDown);
+        document.removeEventListener('mousedown', handleMouseDown);
+      };
+    }
+  }, [enableAccessibility, enableKeyboardNavigation, isHighContrast, isReducedMotion]);
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
+  // Add CSS classes for enhanced UX
+  useEffect(() => {
+    const style = document.createElement('style')
+    style.textContent = `
+      .ux-enhanced {
+        ${enableAnimations && !isReducedMotion ? 'transition: all 0.3s ease;' : ''}
+      }
+      
+      .ux-enhanced button:hover {
+        ${enableHoverEffects ? 'transform: translateY(-2px);' : ''}
+        ${enableHoverEffects ? 'box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);' : ''}
+      }
+      
+      .ux-enhanced input:focus
+      .ux-enhanced textarea:focus
+      .ux-enhanced select:focus {
+        ${enableFocusManagement ? 'outline: 2px solid #3b82f6;' : ''}
+        ${enableFocusManagement ? 'outline-offset: 2px;' : ''}
+      }
+      
+      .keyboard-navigation *:focus {
+        ${enableKeyboardNavigation ? 'outline: 2px solid #3b82f6;' : ''}
+        ${enableKeyboardNavigation ? 'outline-offset: 2px;' : ''}
+      }
+      
+      .high-contrast {
+        filter: contrast(150%)
+      }
+      
+      .reduced-motion * {
+        animation-duration: 0.01ms !important
+        animation-iteration-count: 1 !important
+        transition-duration: 0.01ms !important
+      }
+    `
+    document.head.appendChild(style)
+    return () => {
+      document.head.removeChild(style)
+    }
+  }, [enableAnimations, enableHoverEffects, enableFocusManagement, enableKeyboardNavigation, isReducedMotion])
+  return (
+    <div className="...">
+      {children}
+    </div>
+  )
+}
+export default UserExperienceEnhancer
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836

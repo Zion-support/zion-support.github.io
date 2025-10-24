@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet   } from "react-helmet-async";
 import { ArrowRight, Brain, BarChart, Target, TrendingUp   } from "lucide-react";
 import Navigation from '../components/Navigation';
@@ -37,6 +38,22 @@ const LoadingSkeletonPage: React.FC = () => {
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ]
+=======
+
+interface LoadingSkeletonProps {
+  className?: string;
+  lines?: number;
+  height?: string;
+  width?: string;
+}
+
+const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
+  className = ''
+  lines = 1
+  height = 'h-4'
+  width = 'w-full'
+}) => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836
   return (
     <>
       
@@ -58,6 +75,7 @@ const LoadingSkeletonPage: React.FC = () => {
                 Learn More
               </button>
 
+<<<<<<< HEAD
         </section>,
         {/* Features Section */}
         <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto">
@@ -111,3 +129,10 @@ const LoadingSkeletonPage: React.FC = () => {
 }
 
 export default LoadingSkeletonPage
+=======
+<<<<<<< HEAD
+export default LoadingSkeleton;
+=======
+export default LoadingSkeleton;
+>>>>>>> 5f2517e6a8f3 (Fix merge conflicts and syntax errors)
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836

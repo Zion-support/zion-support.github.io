@@ -2,8 +2,12 @@
 import React from 'react';
 
 interface SEOOptimizerProps {
+<<<<<<< HEAD
 
   className?: string;
+=======
+  // Add props here
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836
 }
 
   title = 'Zion Tech Group - Advanced AI and IT Solutions'

@@ -4,6 +4,7 @@ import { Helmet   } from "react-helmet-async";
 import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle   } from "lucide-react";
 import Navigation from '../components/Navigation';
 
+<<<<<<< HEAD
 import Footer from '../components/Footer';
 const AdvancedPerformanceMonitorPage: React.FC = () => {,
   const features = [
@@ -30,6 +31,58 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {,
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+=======
+import React, { useState, useCallback, useEffect } from 'react';
+
+interface PerformanceMetrics {
+  fcp: number | null
+  lcp: number | null
+  fid: number | null
+  cls: number | null
+  ttfb: number | null
+  memory: number | null
+}
+
+interface PerformanceMonitorProps {
+  onMetricsUpdate?: (_metrics: PerformanceMetrics) => void;
+  enableRealTimeMonitoring?: boolean;
+}
+
+
+const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
+  onMetricsUpdate,
+  enableRealTimeMonitoring = true
+}) => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    fcp: null,
+    lcp: null,
+    fid: null,
+    cls: null,
+    ttfb: null,
+    memory: null,
+  })
+
+  const measureWebVitals = useCallback(() => {
+    if (typeof window === 'undefined' || !('performance' in window)) return
+    if (typeof PerformanceObserver === 'undefined') return
+
+    const observers: PerformanceObserver[] = []
+
+    // Measure First Contentful Paint (FCP)
+    try {
+      const fcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry: PerformanceEntry) => {
+          if (entry.name === 'first-contentful-paint') {
+            setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+          }
+        });
+      });
+      fcpObserver.observe({ entryTypes: ['paint'] });
+      observers.push(fcpObserver);
+    } catch (error) {
+      console.warn('FCP measurement failed:', error);
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836
     }
 
     // Measure First Input Delay (FID)

@@ -1,5 +1,6 @@
 import React from 'react';
 
+<<<<<<< HEAD
 const EnhancedLoading: React.FC = ($2) => {
 $3
 };
@@ -59,3 +60,19 @@ $3
 
 export default EnhancedLoading;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
+=======
+interface EnhancedLoadingProps {
+  size?: 'sm' | 'md' | 'lg';
+  text?: string;
+}
+
+const EnhancedLoading: React.FC<EnhancedLoadingProps> = (_props) => {
+  return (
+    <div>
+      {/* Component content */}
+    </div>
+  );
+};
+
+export default EnhancedLoading;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const OptimizedLoadingSpinner: React.FC = ($2) => {
@@ -56,6 +57,18 @@ $3
 
       <Footer /> </Footer></>
   )
+=======
+'use client';
+import React from 'react';
+
+interface OptimizedLoadingSpinnerProps {
+  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+  variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars';
+  text?: string;
+  className?: string;
+  color?: 'blue' | 'gray' | 'green' | 'red' | 'purple';
+  fullScreen?: boolean;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836
 }
 
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = ({

@@ -1,5 +1,6 @@
 import React from 'react';
 
+<<<<<<< HEAD
 const ServiceCardSkeleton: React.FC = ($2) => {
 $3
 };
@@ -56,6 +57,13 @@ $3
 
       <Footer /> </Footer></>
   )
+=======
+interface ServiceCardSkeletonProps {
+  showImage?: boolean
+  showButton?: boolean
+  lines?: number
+  className?: string
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836
 }
 
 const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({

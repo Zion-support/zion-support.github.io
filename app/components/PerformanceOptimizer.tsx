@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
+<<<<<<< HEAD
 const PerformanceOptimizer: React.FC = ($2) => {
 $3
 };
@@ -58,6 +59,9 @@ $3
       </Footer>
       </div>
 <<<<<<< HEAD
+=======
+import React, { useState, useEffect } from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836
 
 // Extend interfaces for browser APIs
 declare global {

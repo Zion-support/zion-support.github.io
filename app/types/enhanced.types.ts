@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
 =======
 >>>>>>> 5f2517e6a8f3 (Fix merge conflicts and syntax errors)
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836
 // Enhanced type definitions for better type safety
 export interface PerformanceMetrics {
   loadTime: number;
@@ -24,9 +27,9 @@ export interface ErrorContext {
   userId?: string;
   sessionId?: string;
   component?: string;
-<<<<<<< HEAD
   action?: string;
-  stack?: string;
+  errorBoundary?: string;
+  stackTrace?: string;
 }
 
 export interface ErrorReport {
@@ -101,9 +104,6 @@ export interface AnalyticsEvent {
   properties?: Record<string, string | number | boolean | null>;
   userId?: string;
   sessionId?: string;
-=======
-  errorBoundary?: string;
-  stackTrace?: string;
 }
 
 export interface AccessibilityMetrics {
@@ -118,19 +118,15 @@ export interface AccessibilityIssue {
   message: string;
   element?: string;
   helpUrl?: string;
->>>>>>> 5f2517e6a8f3 (Fix merge conflicts and syntax errors)
 }
 
 export interface SEOData {
   title: string;
   description: string;
   keywords: string[];
-<<<<<<< HEAD
-  canonical?: string;
-  ogTitle?: string;
-  ogDescription?: string;
+  canonicalUrl?: string;
   ogImage?: string;
-  twitterCard?: 'summary' | 'summary_large_image';
+  twitterCard?: string;
   structuredData?: Record<string, unknown>;
 }
 
@@ -233,6 +229,7 @@ export interface InputProps extends BaseComponentProps {
   required?: boolean;
   error?: string;
   label?: string;
+<<<<<<< HEAD
 }
 =======
   canonicalUrl?: string;
@@ -300,3 +297,6 @@ export interface FeatureFlag {
   targetUsers?: string[];
 }
 >>>>>>> 5f2517e6a8f3 (Fix merge conflicts and syntax errors)
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836

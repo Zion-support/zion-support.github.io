@@ -98,6 +98,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {,
     description: 'Lightning-fast processing and real-time analytics for optimal results',
   },
   {
+<<<<<<< HEAD
     icon: TrendingUp,
     title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
@@ -111,6 +112,18 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {,
     // Apply font scaling
     root.style.setProperty('--font-scale', accessibilitySettings.fontSize === 'large' ? '1.2' : '1');
   }, [accessibilitySettings])
+=======
+    icon: Shield,
+    title: 'Enterprise Security',
+    description: 'Bank-level security with encryption and compliance standards',
+  },
+  {
+    icon: Globe,
+    title: 'Global Reach',
+    description: 'Worldwide deployment and support for international businesses',
+  }
+];
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836
 
 const benefits = [
   'Advanced AI technology integration',
@@ -151,9 +164,12 @@ $3
     return (
     <>
       <Helmet>
+<<<<<<< HEAD
         <title>Page Title</title>
         <meta name="description" content="Page description" />
       </Helmet>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836
         <title>Advanced Accessibility Enhancer | Zion Tech Group</title>
         <meta name="description" content="Professional Advanced Accessibility Enhancer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="Advanced Accessibility Enhancer, AI solutions, IT services, Zion Tech Group, accessibility" />

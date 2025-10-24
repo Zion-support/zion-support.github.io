@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Zap, Shield, Brain, Cloud } from 'lucide-react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface ContentCarouselProps {
   items: Array<{
     id: string,
@@ -25,6 +26,38 @@ interface ContentCarouselProps {
 const ContentCarousel: React.FC = ($2) => {
 $3
 };
+=======
+interface Slide {
+  id: number;
+  title: string;
+  description: string;
+  features: string[];
+  icon: React.ComponentType<{ className?: string }>;
+  color: string;
+  stats?: {
+    value: string;
+    label: string;
+  }[];
+}
+
+const ContentCarousel: React.FC = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const slides: Slide[] = [
+    {
+      id: 1,
+      title: 'AI Solutions',
+      description: 'Transform your business with cutting-edge artificial intelligence solutions.',
+      features: [
+        'Machine Learning Models',
+        'Natural Language Processing',
+        'Computer Vision',
+        'Predictive Analytics'
+      ],
+      icon: Zap,
+      color: 'from-purple-500 to-pink-600',
+    },
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836
     {
       id: 2,
       title: 'Cloud Infrastructure',
@@ -129,6 +162,7 @@ $3
                       </div>
                     </div>
                   </div>
+<<<<<<< HEAD
                 </div>
         <div/ Header /</div>
         <div className=quottext-center mb-16quot /><h2 className=quottext-3xl md text-4xl font-bold text-white mb-6quot>
@@ -169,6 +203,24 @@ $3
         <div className=quotw-32 h-32 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-centerquot /><currentSlideDataicon className=quotw-16 h-16 text-whitequot /> </div>
                     <><div className=quottext-4xl font-bold text-white mb-2quot>currentSlideDatatitle</div>div>
                     <div className=quottext-gray-300quot>Slide currentSlide  1 of slideslength</div>div>
+=======
+                  
+                  <div className="text-center">
+                    <h3 className="text-3xl md:text-4xl font-bold mb-4">
+                      {slide.title}
+                    </h3>
+                    <p className="text-lg md:text-xl mb-6 opacity-90">
+                      {slide.description}
+                    </p>
+                    
+                    <div className="grid grid-cols-2 gap-2 mb-6">
+                      {slide.features.map((feature, index) => (
+                        <div key={index} className="text-sm bg-white/20 rounded-lg p-2">
+                          {feature}
+                        </div>
+                      ))}
+                    </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836
                   </div>
                 </div>
               </div>
@@ -219,23 +271,26 @@ $3
             />
           ))}
         </div>
+<<<<<<< HEAD
 
       {/* Navigation buttons */}
       <button
         onClick={goToPrevious}
 =======
+=======
+      </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836
       
       {/* Navigation buttons */}
       <button
         onClick={prevSlide}
->>>>>>> 5f2517e6a8f3 (Fix merge conflicts and syntax errors)
         className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300"
         aria-label="Previous slide"
       >
         <ChevronLeft className="h-6 w-6" />
       </button>
       <button
-        onClick={goToNext}
+        onClick={nextSlide}
         className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300"
         aria-label="Next slide"
       >
@@ -244,22 +299,26 @@ $3
 
       {/* Dots indicator */}
       <div className="flex justify-center mt-4 space-x-2">
-          {items.map((_, _index) => (
+        {slides.map((_, index) => (
           <button
             key={index}
-            onClick={() => goToSlide(index)}
+            onClick={() => setCurrentSlide(index)}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentIndex ? 'bg-blue-600' : 'bg-gray-300'
+              index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
             }`}
-<<<<<<< HEAD
             aria-label={`Go to slide ${index + 1}`}
-=======
->>>>>>> 5f2517e6a8f3 (Fix merge conflicts and syntax errors)
           />
         ))}
       </div>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 }
 export default ContentCarousel
+=======
+  );
+};
+
+export default ContentCarousel;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836

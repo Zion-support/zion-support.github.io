@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 "use client";
 
 import React, { createContext, useContext, useEffect } from 'react';
 
+=======
+'use client'
+import React, { createContext, useContext, useEffect } from 'react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836
 interface AnalyticsContextType {
   track: (_event: string, _properties?: Record<string, unknown>) => void;
   identify: (_userId: string, _traits?: Record<string, unknown>) => void;
@@ -93,15 +98,24 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     }
   }
   const value: AnalyticsContextType = {
-    track
-    identify
+    track,
+    identify,
     page
-  }
+  };
   return (
 
+<<<<<<< HEAD
     <AnalyticsContext.Provider value={value}>{children}
     </AnalyticsContext></AnalyticsContext.Provider>
   )
+=======
+// Extend Window interface for TypeScript
+declare global {
+  interface Window {
+    dataLayer: unknown[];
+    gtag: (..._args: unknown[]) => void;
+  }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836
 }
 
 export default useAnalytics;

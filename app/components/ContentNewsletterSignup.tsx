@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 import Footer from './Footer';
 import Navigation from './Navigation';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle } from 'lucide-react';
+=======
+'use client';
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836
 import React, { useState } from 'react';
 import { CheckCircle, ArrowRight } from 'lucide-react';
 
@@ -35,6 +39,7 @@ interface ContentNewsletterSignupProps {
   ]
   onSubscribe
 }) => {
+<<<<<<< HEAD
   const [email, setEmail] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubscribed, setIsSubscribed] = useState(false)
@@ -43,6 +48,18 @@ interface ContentNewsletterSignupProps {
   const handleSubmit = async (e: React.FormEvent) => {,
     e.preventDefault()
     if (!email) return setIsLoadin g(true)
+=======
+  const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubscribed, setIsSubscribed] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+
+    setIsSubmitting(true);
+    
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836
     try {
       if (onSubscribe) {
         await onSubscribe(email)

@@ -1,5 +1,6 @@
 import React from 'react';
 
+<<<<<<< HEAD
 const PerformanceDashboard: React.FC = ($2) => {
 $3
 };
@@ -56,6 +57,10 @@ $3
 
       <Footer /> </Footer></>
   )
+=======
+interface PerformanceDashboardProps {
+  // Add props here
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836
 }
 
 const PerformanceDashboard: React.FC<PerformanceDashboardProps> = (_props) => {

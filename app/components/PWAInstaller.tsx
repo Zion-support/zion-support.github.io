@@ -12,5 +12,9 @@ const PWAInstaller: React.FC<PWAInstallerProps> = (_props) => {
     </div>
   )
 }
+<<<<<<< HEAD
 
 export default PWAInstaller
+=======
+export default PWAInstaller
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836

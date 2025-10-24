@@ -11,8 +11,11 @@ export interface StructuredData {
 export interface SEOData {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5f2517e6a8f3 (Fix merge conflicts and syntax errors)
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836
   title: string;
   description: string;
   keywords: string[];
@@ -26,6 +29,7 @@ export interface SEOData {
   twitterDescription?: string;
   twitterImage?: string;
   structuredData?: StructuredData;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   title: string
@@ -43,6 +47,8 @@ export interface SEOData {
   structuredData?: StructuredData;
 =======
 >>>>>>> 5f2517e6a8f3 (Fix merge conflicts and syntax errors)
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836
 }
 
 export const defaultSEOData: SEOData = {
@@ -68,50 +74,6 @@ export const defaultSEOData: SEOData = {
     sameAs: [
       'https://linkedin.com/company/ziontechgroup',
       'https://twitter.com/ziontechgroup',
-<<<<<<< HEAD
-      'https://linkedin.com/company/ziontechgroup'
-  ]
-  
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
-}
-
-export const defaultSEOData: SEOData = {
-  title: 'Zion Tech Group - AI & Technology Solutions'
-  description: 'Leading provider of AI-powered solutions, 5G technology, and innovative software development services.'
-  keywords: ['AI', 'Artificial Intelligence', '5G', 'Technology', 'Software Development', 'Machine Learning'  ];
-  canonical: 'https://ziontechgroup.com'
-  ogTitle: 'Zion Tech Group - AI & Technology Solutions'
-  ogDescription: 'Leading provider of AI-powered solutions, 5G technology, and innovative software development services.'
-  ogImage: '/og-image.jpg'
-  ogUrl: 'https://ziontechgroup.com'
-  twitterCard: 'summary_large_image'
-  twitterTitle: 'Zion Tech Group - AI & Technology Solutions'
-  twitterDescription: 'Leading provider of AI-powered solutions, 5G technology, and innovative software development services.'
-  twitterImage: '/twitter-image.jpg'
-  structuredData: {
-    '@context': 'https://schema.org'
-    '@type': 'Organization'
-    name: 'Zion Tech Group'
-    description: 'Leading provider of AI-powered solutions and technology services'
-    url: 'https://ziontechgroup.com'
-    logo: 'https://ziontechgroup.com/logo.png'
-    sameAs: [
-      'https://twitter.com/ziontechgroup'
-      'https://linkedin.com/company/ziontechgroup'
-      ];
-  }
-}
-export const generateSEOData = (customData: Partial<SEOData> = {}): SEOData => {
-  return {
-    ...defaultSEOData
-    ...customData
-    structuredData: {
-      ...defaultSEOData.structuredData
-      ...customData.structuredData
-    }
-  };
-};
-=======
       'https://github.com/ziontechgroup'
     ]
   }
@@ -130,5 +92,9 @@ export const generateStructuredData = (data: Partial<StructuredData>): Structure
     ...defaultSEOData.structuredData!,
     ...data
   };
+<<<<<<< HEAD
 };
 >>>>>>> 5f2517e6a8f3 (Fix merge conflicts and syntax errors)
+=======
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836

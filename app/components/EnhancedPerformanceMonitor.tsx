@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Brain , CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'lucide-react';
 import { Phone, Mail } from 'lucide-react';
@@ -13,3 +14,20 @@ import { Phone, Mail } from 'lucide-react';
             <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;>,
             </div></div>
           </div>
+=======
+
+interface EnhancedPerformanceMonitorProps {
+  enableRealTimeMonitoring?: boolean;
+  onMetricsUpdate?: (metrics: any) => void;
+}
+
+const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = (_props) => {
+  return (
+    <div>
+      {/* Component content */}
+    </div>
+  );
+};
+
+export default EnhancedPerformanceMonitor;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836

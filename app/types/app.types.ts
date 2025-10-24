@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "use client";
 
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
 =======
 >>>>>>> 5f2517e6a8f3 (Fix merge conflicts and syntax errors)
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836
 export interface User {
   id: string;
   email: string;
@@ -14,27 +17,17 @@ export interface User {
 }
 
 export interface Service {
-<<<<<<< HEAD
-  id: string,
-      title: string,
-      description: string,
-      shortDescription: string,
-      icon: string,
-      features: string[  ];
-=======
   id: string;
   title: string;
   description: string;
   shortDescription: string;
   icon: string;
   features: string[];
->>>>>>> 5f2517e6a8f3 (Fix merge conflicts and syntax errors)
   pricing: {
     basic: number;
     pro: number;
     enterprise: number;
   };
-<<<<<<< HEAD
   benefits: string[];
   useCases: string[];
   marketPrice: string;
@@ -52,6 +45,9 @@ export interface ContactFormData {
   company: string;
   message: string;
   service: string;
+  phone?: string;
+  budget?: string;
+  timeline?: string;
 }
 
 export interface AnalyticsEvent {
@@ -88,6 +84,7 @@ export interface ErrorReport {
   createdAt: string;
 }
 
+<<<<<<< HEAD
 export type ErrorSeverity = "low" | "medium" | "high" | "critical";
 =======
 }
@@ -166,3 +163,6 @@ export interface PerformanceMetrics {
   isSlowConnection: boolean;
 }
 >>>>>>> 5f2517e6a8f3 (Fix merge conflicts and syntax errors)
+=======
+export type ErrorSeverity = "low" | "medium" | "high" | "critical";
+>>>>>>> cursor/fix-errors-and-merge-to-main-8836
