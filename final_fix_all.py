@@ -1,51 +1,33 @@
 #!/usr/bin/env python3
 """
-Comprehensive script to fix all syntax errors in TypeScript/JSX files
+Final comprehensive script to fix all remaining issues
 """
 import os
 import re
 import glob
 
-def comprehensive_fix(file_path):
-    """Comprehensive fix for all syntax errors in a file"""
+def final_fix_all(file_path):
+    """Final comprehensive fix for all issues in a file"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         original_content = content
         
-        # Fix 1: Remove all malformed JSX comments and empty braces
-        content = re.sub(r'\{/\*.*?\*/\};\s*', '', content)
-        content = re.sub(r'\{\}\s*', '', content)
-        
-        # Fix 2: Fix malformed return statements
-        content = re.sub(r'return\s*\(\s*\n\s*\n\s*<', 'return (\n    <', content)
-        content = re.sub(r'return\s*\(\s*\n\s*<', 'return (\n    <', content)
-        
-        # Fix 3: Remove duplicate export statements
-        # Find all export default statements and keep only the last one
+        # Fix 1: Remove all duplicate export statements - keep only the first one
         export_matches = list(re.finditer(r'export default \w+;', content))
         if len(export_matches) > 1:
-            # Keep only the last export statement
-            for i, match in enumerate(export_matches[:-1]):
+            # Remove all but the first export
+            for i, match in enumerate(export_matches[1:], 1):
                 content = content.replace(match.group(), '')
         
-        # Fix 4: Fix malformed function declarations
-        # Replace PagePage with proper component names
-        if 'const PagePage = () => {' in content:
-            filename = os.path.basename(file_path)
-            if filename == 'page.tsx':
-                dir_name = os.path.basename(os.path.dirname(file_path))
-                component_name = ''.join(word.capitalize() for word in dir_name.split('-')) + 'Page'
-            else:
-                component_name = filename.replace('.tsx', '').replace('.ts', '')
-                component_name = ''.join(word.capitalize() for word in component_name.split('-'))
-            
-            content = content.replace('const PagePage = () => {', f'const {component_name} = () => {{')
-            content = content.replace('export default PagePage;', f'export default {component_name};')
+        # Fix 2: Remove any PagePage references
+        content = re.sub(r'export default PagePage;', '', content)
         
-        # Fix 5: Fix malformed JSX structure
-        # Remove empty lines and fix indentation
+        # Fix 3: Fix malformed JSX structure
+        content = re.sub(r'return\s*\(\s*\n\s*\n\s*<', 'return (\n    <', content)
+        
+        # Fix 4: Remove empty lines and fix indentation
         lines = content.split('\n')
         fixed_lines = []
         in_jsx = False
@@ -78,18 +60,38 @@ def comprehensive_fix(file_path):
         
         content = '\n'.join(fixed_lines)
         
-        # Fix 6: Remove semicolons after JSX elements
+        # Fix 5: Remove semicolons after JSX elements
         content = re.sub(r';\s*$', '', content, flags=re.MULTILINE)
         
-        # Fix 7: Fix malformed JSX attributes
-        content = re.sub(r'className="([^"]*)"\s*;\s*', r'className="\1" ', content)
+        # Fix 6: Fix malformed JSX comments
+        content = re.sub(r'\{/\*.*?\*/\};\s*', '', content)
         
-        # Fix 8: Fix missing closing braces
-        # Count braces and ensure proper closing
+        # Fix 7: Clean up multiple empty lines
+        content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)
+        
+        # Fix 8: Remove duplicate semicolons
+        content = re.sub(r';\s*;', ';', content)
+        
+        # Fix 9: Fix malformed function declarations
+        if 'const PagePage = () => {' in content:
+            # Extract the file name to create a proper component name
+            filename = os.path.basename(file_path)
+            if filename == 'page.tsx':
+                # Get the directory name for the component
+                dir_name = os.path.basename(os.path.dirname(file_path))
+                component_name = ''.join(word.capitalize() for word in dir_name.split('-')) + 'Page'
+            else:
+                component_name = filename.replace('.tsx', '').replace('.ts', '')
+                component_name = ''.join(word.capitalize() for word in component_name.split('-'))
+            
+            content = content.replace('const PagePage = () => {', f'const {component_name} = () => {{')
+            content = content.replace('export default PagePage;', f'export default {component_name};')
+        
+        # Fix 10: Ensure proper function structure
+        lines = content.split('\n')
         brace_count = 0
         paren_count = 0
         in_function = False
-        lines = content.split('\n')
         fixed_lines = []
         
         for line in lines:
@@ -116,16 +118,11 @@ def comprehensive_fix(file_path):
         
         content = '\n'.join(fixed_lines)
         
-        # Fix 9: Clean up any remaining malformed patterns
-        content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)  # Remove multiple empty lines
-        content = re.sub(r';\s*;', ';', content)  # Remove duplicate semicolons
-        content = re.sub(r'\{\s*\}', '{}', content)  # Clean up empty braces
-        
         # Only write if content changed
         if content != original_content:
             with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(content)
-            print(f"Comprehensively fixed: {file_path}")
+            print(f"Final fix applied to: {file_path}")
             return True
         
         return False
@@ -135,7 +132,7 @@ def comprehensive_fix(file_path):
         return False
 
 def main():
-    """Main function to comprehensively fix all files"""
+    """Main function to apply final fixes to all files"""
     patterns = [
         'app/**/*.tsx',
         'app/**/*.ts',
@@ -150,11 +147,11 @@ def main():
         for file_path in glob.glob(pattern, recursive=True):
             if os.path.isfile(file_path):
                 files_processed += 1
-                if comprehensive_fix(file_path):
+                if final_fix_all(file_path):
                     files_fixed += 1
     
     print(f"\nProcessed {files_processed} files")
-    print(f"Comprehensively fixed {files_fixed} files")
+    print(f"Applied final fixes to {files_fixed} files")
 
 if __name__ == "__main__":
     main()

@@ -1,9 +1,8 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
-
-const inter = Inter({ subsets: ['latin'] });
-
+import React from 'react'
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
+const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'ZionTechGroup - AI Solutions & Technology Services',
   description: 'Leading provider of AI solutions, technology services, and digital transformation for businesses worldwide.',
@@ -46,18 +45,17 @@ export const metadata: Metadata = {
   verification: {
     google: 'your-google-verification-code',
   },
-};
-
+}
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+        <body className={inter.className}>
         {children}
       </body>
     </html>
-  );
+  )
 }
