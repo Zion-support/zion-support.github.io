@@ -30,5 +30,6 @@ export default function IotedgePage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

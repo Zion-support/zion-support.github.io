@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function AimobileappdevelopmentPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Ai Mobile App Development - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

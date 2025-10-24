@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function SolutionsPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Solutions - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function AicloudinfrastructurePage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Ai Cloud Infrastructure - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

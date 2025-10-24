@@ -30,5 +30,6 @@ export default function IntelligentdatabasemigrationPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

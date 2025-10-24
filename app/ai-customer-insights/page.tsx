@@ -30,5 +30,6 @@ export default function AicustomerinsightsPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

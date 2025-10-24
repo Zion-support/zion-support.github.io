@@ -30,5 +30,6 @@ export default function AitranslationservicesPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

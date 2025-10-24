@@ -30,5 +30,6 @@ export default function DatacenterPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

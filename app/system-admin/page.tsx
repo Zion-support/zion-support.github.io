@@ -30,5 +30,6 @@ export default function SystemadminPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

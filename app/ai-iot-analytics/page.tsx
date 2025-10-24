@@ -30,5 +30,6 @@ export default function AiiotanalyticsPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

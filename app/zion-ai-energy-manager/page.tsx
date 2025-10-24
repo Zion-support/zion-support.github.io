@@ -30,5 +30,6 @@ export default function ZionaienergymanagerPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

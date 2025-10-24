@@ -30,5 +30,6 @@ export default function ItprojectmanagementPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

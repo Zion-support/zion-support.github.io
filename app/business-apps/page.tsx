@@ -30,5 +30,6 @@ export default function BusinessappsPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

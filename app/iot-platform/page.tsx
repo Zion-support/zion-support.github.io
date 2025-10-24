@@ -30,5 +30,6 @@ export default function IotplatformPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

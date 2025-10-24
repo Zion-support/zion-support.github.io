@@ -30,5 +30,6 @@ export default function AipriceoptimizerproPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

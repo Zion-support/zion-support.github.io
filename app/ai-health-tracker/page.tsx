@@ -30,5 +30,6 @@ export default function AihealthtrackerPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

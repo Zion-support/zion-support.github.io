@@ -30,5 +30,6 @@ export default function BlogPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

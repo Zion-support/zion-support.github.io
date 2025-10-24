@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function DemoPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Demo - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

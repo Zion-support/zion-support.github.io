@@ -30,5 +30,6 @@ export default function ItperformancePage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

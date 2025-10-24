@@ -30,5 +30,6 @@ export default function AicontentwriterproPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

@@ -30,5 +30,6 @@ export default function StatusPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

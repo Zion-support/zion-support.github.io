@@ -30,5 +30,6 @@ export default function AifinancialplannerPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

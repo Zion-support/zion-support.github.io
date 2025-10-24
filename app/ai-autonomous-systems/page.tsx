@@ -30,5 +30,6 @@ export default function AiautonomoussystemsPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

@@ -30,5 +30,6 @@ export default function ChatanalyticsPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

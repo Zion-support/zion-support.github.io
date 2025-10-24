@@ -30,5 +30,6 @@ export default function SitemapPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

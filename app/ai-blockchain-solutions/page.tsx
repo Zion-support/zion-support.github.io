@@ -30,5 +30,6 @@ export default function AiblockchainsolutionsPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

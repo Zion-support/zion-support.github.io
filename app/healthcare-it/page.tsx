@@ -30,5 +30,6 @@ export default function HealthcareitPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

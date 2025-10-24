@@ -30,5 +30,6 @@ export default function AismartcitysolutionsPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

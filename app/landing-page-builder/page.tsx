@@ -30,5 +30,6 @@ export default function LandingpagebuilderPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

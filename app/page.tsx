@@ -29,5 +29,6 @@ export default function AppPage() {
       </div>
       <Footer />
     </div>
+    </div>
   );
 }

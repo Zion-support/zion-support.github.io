@@ -30,5 +30,6 @@ export default function AismartschedulerPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

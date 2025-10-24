@@ -30,5 +30,6 @@ export default function InnovationlabsPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

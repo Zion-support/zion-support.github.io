@@ -30,6 +30,7 @@ export default function AiinvoicegeneratorPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 };
 

@@ -30,5 +30,6 @@ export default function SupportPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

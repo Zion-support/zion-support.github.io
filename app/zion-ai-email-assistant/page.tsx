@@ -30,5 +30,6 @@ export default function ZionaiemailassistantPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

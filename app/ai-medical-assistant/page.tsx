@@ -30,5 +30,6 @@ export default function AimedicalassistantPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

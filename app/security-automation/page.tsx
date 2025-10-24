@@ -30,5 +30,6 @@ export default function SecurityautomationPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

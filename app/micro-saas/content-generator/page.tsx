@@ -30,5 +30,6 @@ export default function ContentgeneratorPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

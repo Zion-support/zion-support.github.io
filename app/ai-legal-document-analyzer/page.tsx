@@ -30,5 +30,6 @@ export default function AilegaldocumentanalyzerPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

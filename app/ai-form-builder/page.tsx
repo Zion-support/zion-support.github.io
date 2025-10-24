@@ -30,5 +30,6 @@ export default function AiformbuilderPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

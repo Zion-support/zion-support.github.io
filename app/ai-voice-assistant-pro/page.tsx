@@ -30,5 +30,6 @@ export default function AivoiceassistantproPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

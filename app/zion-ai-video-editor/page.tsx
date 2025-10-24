@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function ZionaivideoeditorPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Zion Ai Video Editor - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

@@ -30,5 +30,6 @@ export default function SocialmediaschedulerPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

@@ -30,5 +30,6 @@ export default function AiconversationanalyticsPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

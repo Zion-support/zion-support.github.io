@@ -30,5 +30,6 @@ export default function AihealthcarediagnosticsPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

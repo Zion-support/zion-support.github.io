@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function AipredictivemaintenancePage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Ai Predictive Maintenance - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

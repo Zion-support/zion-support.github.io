@@ -30,5 +30,6 @@ export default function FaqPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

@@ -30,5 +30,6 @@ export default function BlockchainsolutionsPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

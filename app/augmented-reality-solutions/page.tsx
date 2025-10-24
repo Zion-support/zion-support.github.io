@@ -30,5 +30,6 @@ export default function AugmentedrealitysolutionsPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

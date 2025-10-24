@@ -30,5 +30,6 @@ export default function AidocumentintelligencePage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

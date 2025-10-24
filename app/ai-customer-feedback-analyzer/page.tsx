@@ -30,5 +30,6 @@ export default function AicustomerfeedbackanalyzerPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

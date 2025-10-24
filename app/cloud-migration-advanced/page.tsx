@@ -30,5 +30,6 @@ export default function CloudmigrationadvancedPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

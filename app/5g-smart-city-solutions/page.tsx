@@ -30,5 +30,6 @@ export default function GsmartcitysolutionsPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

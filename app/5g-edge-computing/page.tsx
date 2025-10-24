@@ -30,5 +30,6 @@ export default function GedgecomputingPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

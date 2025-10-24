@@ -30,5 +30,6 @@ export default function ApidocsPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

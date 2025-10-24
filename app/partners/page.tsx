@@ -30,5 +30,6 @@ export default function PartnersPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

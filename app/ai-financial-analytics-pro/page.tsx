@@ -30,5 +30,6 @@ export default function AifinancialanalyticsproPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

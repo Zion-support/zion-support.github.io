@@ -30,5 +30,6 @@ export default function GmobileapplicationsPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

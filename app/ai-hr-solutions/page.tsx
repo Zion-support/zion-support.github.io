@@ -30,5 +30,6 @@ export default function AihrsolutionsPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

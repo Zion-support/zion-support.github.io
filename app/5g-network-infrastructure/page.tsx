@@ -30,5 +30,6 @@ export default function GnetworkinfrastructurePage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

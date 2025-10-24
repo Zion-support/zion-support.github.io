@@ -30,5 +30,6 @@ export default function HealthPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

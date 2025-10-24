@@ -30,5 +30,6 @@ export default function AimobilebuilderPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

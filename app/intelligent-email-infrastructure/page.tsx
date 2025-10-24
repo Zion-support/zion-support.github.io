@@ -30,5 +30,6 @@ export default function IntelligentemailinfrastructurePage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

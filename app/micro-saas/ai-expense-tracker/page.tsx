@@ -30,5 +30,6 @@ export default function AiexpensetrackerPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

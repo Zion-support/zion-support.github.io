@@ -30,5 +30,6 @@ export default function AianalyticsdashboardPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

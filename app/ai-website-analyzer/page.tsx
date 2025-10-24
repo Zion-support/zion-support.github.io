@@ -30,5 +30,6 @@ export default function AiwebsiteanalyzerPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

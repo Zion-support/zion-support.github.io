@@ -30,5 +30,6 @@ export default function ApidevelopmentadvancedPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

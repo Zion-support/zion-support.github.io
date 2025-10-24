@@ -30,5 +30,6 @@ export default function CloudinfrastructurePage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

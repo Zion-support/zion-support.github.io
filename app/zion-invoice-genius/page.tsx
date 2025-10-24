@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function ZioninvoicegeniusPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Zion Invoice Genius - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

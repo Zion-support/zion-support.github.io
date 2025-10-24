@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function EnergymanagementPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Energy Management - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

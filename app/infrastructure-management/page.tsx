@@ -30,5 +30,6 @@ export default function InfrastructuremanagementPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

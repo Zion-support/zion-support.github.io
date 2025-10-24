@@ -30,5 +30,6 @@ export default function ZionaifinancialforecasterPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

@@ -30,5 +30,6 @@ export default function SocialmanagerPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

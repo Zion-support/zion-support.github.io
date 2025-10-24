@@ -30,5 +30,6 @@ export default function DevopscicdPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

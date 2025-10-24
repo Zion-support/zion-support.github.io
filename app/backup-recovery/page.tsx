@@ -30,5 +30,6 @@ export default function BackuprecoveryPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

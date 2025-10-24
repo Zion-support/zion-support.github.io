@@ -30,5 +30,6 @@ export default function DatabasemanagementPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

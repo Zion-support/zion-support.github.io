@@ -30,5 +30,6 @@ export default function SystemintegrationPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

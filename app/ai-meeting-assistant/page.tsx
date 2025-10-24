@@ -30,5 +30,6 @@ export default function AimeetingassistantPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

@@ -30,5 +30,6 @@ export default function SmartcityinfrastructurePage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

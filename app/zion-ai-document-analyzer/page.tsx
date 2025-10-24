@@ -30,5 +30,6 @@ export default function ZionaidocumentanalyzerPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

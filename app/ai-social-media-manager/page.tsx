@@ -30,6 +30,7 @@ export default function AisocialmediamanagerPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 };
 

@@ -1,45 +1,65 @@
-import fs from 'fs';
-import path from 'path';
-import React from 'react';
-export default ${componentName};`;
+const fs = require('fs');
+const path = require('path');
 
-// List of pages that need to be fixed;
-const pagesToFix = [;
-  'cookies', 'privacy', 'terms', 'consultation', 'pricing', 'blog', 
-  'case-studies', 'careers', 'ai-services', 'it-services', 'micro-saas'
-];
+// Function to fix a single page file
+function fixPageFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Check if file has the problematic pattern
+    if (content.includes('return (\n    <div>') && content.includes('<Head>')) {
+      // Fix the JSX structure
+      content = content.replace(
+        /return \(\s*<div>\s*<Head>/g,
+        'return (\n    <>\n      <Head>'
+      );
+      
+      // Fix the closing tags
+      content = content.replace(
+        /<\/Head>\s*<div className=/g,
+        '</Head>\n      <div className='
+      );
+      
+      // Fix the final closing
+      content = content.replace(
+        /<\/div>\s*\);\s*}/g,
+        '</div>\n    </>\n  );\n}'
+      );
+      
+      // Write the fixed content back
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+  }
+  return false;
+}
 
- `'use client';
-  return()
-        <title>${title} - Zion Tech Group</title>
-                ${title})
-              Professional ${title.toLowerCase()} services by Zion Tech Group.
-
-            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
-              We're working on bringing you comprehensive ${title.toLowerCase()} solutions. 
-              Contact us to learn more about our services.
-              Contact Us;
-  );
-};
-
-
-// Fix pages;
-    word.charAt(0).toUpperCase() + word.slice(1)
-  ).join(' ');
-
-    word.charAt(0).toUpperCase() + word.slice(1)
-  ).join('') + 'Page';
+// Function to recursively find and fix all page.tsx files
+function fixAllPages(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
   
-  const pageDir = path.join('/workspace/app', pageName);
-  const pageFile = path.join(pageDir, 'page.tsx');
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory()) {
+      fixedCount += fixAllPages(filePath);
+    } else if (file === 'page.tsx') {
+      if (fixPageFile(filePath)) {
+        fixedCount++;
+      }
+    }
+  }
   
-  // Create directory if it doesn't exist;
-  if (!fs.existsSync(pageDir)) {
-    fs.mkdirSync(pageDir, { recursive: true });
-  
-  // Overwrite page file with correct template;
-  fs.writeFileSync(pageFile, pageTemplate(pageName, title, componentName));
-  console.log(`Fixed: ${pageFile}`);
-});
+  return fixedCount;
+}
 
-console.log('Page fixes completed!');
+// Start fixing from the app directory
+const appDir = path.join(__dirname, 'app');
+console.log('Starting to fix page files...');
+const totalFixed = fixAllPages(appDir);
+console.log(`Fixed ${totalFixed} page files.`);

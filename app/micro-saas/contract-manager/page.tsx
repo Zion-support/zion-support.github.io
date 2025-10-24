@@ -30,5 +30,6 @@ export default function ContractmanagerPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

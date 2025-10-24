@@ -30,5 +30,6 @@ export default function AicontentgenerationPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

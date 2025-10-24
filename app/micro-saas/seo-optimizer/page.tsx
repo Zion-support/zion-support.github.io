@@ -30,5 +30,6 @@ export default function SeooptimizerPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

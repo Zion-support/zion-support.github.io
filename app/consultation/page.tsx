@@ -30,5 +30,6 @@ export default function ConsultationPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

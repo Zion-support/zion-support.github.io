@@ -30,5 +30,6 @@ export default function ZionaicodereviewerPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

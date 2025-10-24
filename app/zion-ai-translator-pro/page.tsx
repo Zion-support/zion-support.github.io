@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function ZionaitranslatorproPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Zion Ai Translator Pro - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

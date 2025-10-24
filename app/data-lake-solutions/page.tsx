@@ -30,5 +30,6 @@ export default function DatalakesolutionsPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

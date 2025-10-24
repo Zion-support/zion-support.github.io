@@ -30,5 +30,6 @@ export default function InvestorsPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

@@ -30,5 +30,6 @@ export default function AieducationtutorPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

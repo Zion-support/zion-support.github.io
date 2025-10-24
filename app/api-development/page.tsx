@@ -30,5 +30,6 @@ export default function ApidevelopmentPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

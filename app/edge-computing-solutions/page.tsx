@@ -30,5 +30,6 @@ export default function EdgecomputingsolutionsPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

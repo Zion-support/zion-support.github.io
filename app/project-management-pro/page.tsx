@@ -30,5 +30,6 @@ export default function ProjectmanagementproPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

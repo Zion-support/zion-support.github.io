@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function ZionaivoicesynthesisPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Zion Ai Voice Synthesis - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

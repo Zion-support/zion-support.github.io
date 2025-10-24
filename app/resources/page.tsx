@@ -30,5 +30,6 @@ export default function ResourcesPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

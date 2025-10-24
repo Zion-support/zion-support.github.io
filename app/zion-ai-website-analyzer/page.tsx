@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function ZionaiwebsiteanalyzerPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Zion Ai Website Analyzer - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

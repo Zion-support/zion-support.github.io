@@ -18,12 +18,14 @@ export default function AccessibilityPage() {
             Accessibility
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            accessibility services Transform your business with our expert solutions. services coming soon.
+            Professional services by Zion Tech Group.
           </p>
-          <LinkContact Us
-            >
-            $2
-            <ArrowRight$3 />
+          <Link
+            href="/contact"
+            className="inline-flex items-center bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
       </div>

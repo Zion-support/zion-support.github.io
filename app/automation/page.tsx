@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function AutomationPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Automation - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

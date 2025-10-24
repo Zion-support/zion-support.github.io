@@ -30,5 +30,6 @@ export default function PerformanceoptimizationPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

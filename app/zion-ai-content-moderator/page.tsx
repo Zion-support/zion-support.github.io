@@ -30,5 +30,6 @@ export default function ZionaicontentmoderatorPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

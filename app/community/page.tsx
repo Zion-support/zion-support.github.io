@@ -30,5 +30,6 @@ export default function CommunityPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

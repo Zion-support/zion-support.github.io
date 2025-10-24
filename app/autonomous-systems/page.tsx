@@ -30,5 +30,6 @@ export default function AutonomoussystemsPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

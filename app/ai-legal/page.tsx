@@ -30,5 +30,6 @@ export default function AilegalPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

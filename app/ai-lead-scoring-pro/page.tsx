@@ -30,5 +30,6 @@ export default function AileadscoringproPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

@@ -30,5 +30,6 @@ export default function AiknowledgemanagementPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

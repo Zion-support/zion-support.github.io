@@ -30,5 +30,6 @@ export default function SupportbotPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

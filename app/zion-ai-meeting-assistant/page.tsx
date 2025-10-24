@@ -30,5 +30,6 @@ export default function ZionaimeetingassistantPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

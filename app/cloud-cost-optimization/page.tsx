@@ -30,5 +30,6 @@ export default function CloudcostoptimizationPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

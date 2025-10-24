@@ -30,5 +30,6 @@ export default function ZionaipredictivemaintenancePage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

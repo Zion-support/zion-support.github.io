@@ -30,5 +30,6 @@ export default function TermsPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

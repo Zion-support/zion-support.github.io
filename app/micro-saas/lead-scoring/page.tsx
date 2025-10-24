@@ -30,5 +30,6 @@ export default function LeadscoringPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

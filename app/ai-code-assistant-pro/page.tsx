@@ -30,5 +30,6 @@ export default function AicodeassistantproPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

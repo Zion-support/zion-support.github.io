@@ -30,5 +30,6 @@ export default function DigitaltransformationPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

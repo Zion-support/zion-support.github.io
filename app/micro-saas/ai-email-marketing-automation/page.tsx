@@ -30,5 +30,6 @@ export default function AiemailmarketingautomationPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

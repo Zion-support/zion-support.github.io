@@ -30,5 +30,6 @@ export default function ZionaifrauddetectionPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

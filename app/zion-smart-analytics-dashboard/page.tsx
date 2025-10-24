@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function ZionsmartanalyticsdashboardPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Zion Smart Analytics Dashboard - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

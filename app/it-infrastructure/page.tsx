@@ -30,5 +30,6 @@ export default function ItinfrastructurePage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

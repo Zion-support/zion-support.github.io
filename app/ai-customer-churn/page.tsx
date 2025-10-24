@@ -30,5 +30,6 @@ export default function AicustomerchurnPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

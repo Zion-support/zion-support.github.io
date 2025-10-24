@@ -30,5 +30,6 @@ export default function NetworkdesignPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

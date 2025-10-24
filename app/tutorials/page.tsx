@@ -30,5 +30,6 @@ export default function TutorialsPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }

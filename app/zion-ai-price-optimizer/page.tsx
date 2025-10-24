@@ -30,5 +30,6 @@ export default function ZionaipriceoptimizerPage() {
       <Footer />
     </div>
     </div>
+    </div>
   );
 }
