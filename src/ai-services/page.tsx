@@ -1,4 +1,6 @@
-
+'use client'
+import { ArrowRight, Brain, BarChart, Target } from 'lucide-react'
+import React from 'react'
 
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -69,62 +71,63 @@ constAIServicesPage: React.FC= () =>{constservices= [
     }
   ]
 
+const Page = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
+      <main className=&quot;container mx-auto px-4 py-16 pt-24&quot;>
         {/* Hero Section */}
-        <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
-            <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+        <section className=&quot;text-center mb-16&quot;></section>
+          <h1 className=&quot;text-4xl md:text-6xl font-bold text-white mb-6&quot;></h1>
+            <span className=&quot;bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent&quot;>
               AI Services & Solutions
             </span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+          <p className=&quot;text-xl text-gray-300 mb-8 max-w-4xl mx-auto&quot;>
             Transform your business with cutting-edge artificial intelligence solutions.
             From machine learning to automation, we deliver AI that drives real results.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
             <a
-              href="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105"
+              href=&quot;/contact&quot;
+              className=&quot;bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105&quot;
             >
               Get Free Consultation
             </a>
             <a
-              href="tel:+13024640950"
-              className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+              href=&quot;tel:+13024640950&quot;
+              className=&quot;border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300&quot;
             >
               (302) 464-0950
             </a>
           </div>
         </section>
         {/* Services Grid */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Our AI Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <section className=&quot;mb-16&quot;></section>
+          <h2 className=&quot;text-3xl font-bold text-white text-center mb-12&quot;>Our AI Services</h2>
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
             {services.map((service, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300 hover:scale-105">
-                <div className="flex items-center mb-4">
+              <div key={index} className=&quot;bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300 hover:scale-105&quot;></div>
+                <div className=&quot;flex items-center mb-4&quot;></div>
                   <service.icon className={`w-8 h-8 ${service.color} mr-3`} />
-                  <h3 className="text-xl font-bold text-white">{service.title}</h3>
+                  <h3 className=&quot;text-xl font-bold text-white&quot;>{service.title}</h3>
                 </div>
-                <p className="text-gray-300 mb-4">{service.description}</p>
-                <ul className="space-y-2 mb-6">
+                <p className=&quot;text-gray-300 mb-4&quot;>{service.description}</p>
+                <ul className=&quot;space-y-2 mb-6&quot;>
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                    <li key={featureIndex} className=&quot;flex items-center text-sm text-gray-400&quot;>
+                      <CheckCircle className=&quot;w-4 h-4 text-green-400 mr-2&quot; />
                       {feature}
                     </li>
                   ))}
                 </ul>
-                <div className="text-center">
+                <div className=&quot;text-center&quot;></div>
                   <div className={`text-lg font-bold ${service.color} mb-2`}>{service.price}</div>
                   <a
-                    href="/contact"
+                    href=&quot;/contact&quot;
                     className={`inline-flex items-center text-sm font-medium ${service.color} hover:opacity-80 transition-opacity`}
                   >
-                    Learn More <ArrowRight className="w-4 h-4 ml-1" />
+                    Learn More <ArrowRight className=&quot;w-4 h-4 ml-1&quot; />
                   </a>
                 </div>
               </div>
@@ -132,52 +135,53 @@ constAIServicesPage: React.FC= () =>{constservices= [
           </div>
         </section>
         {/* Benefits Section */}
-        <section className="mb-16">
-          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">Why Choose Our AI Services?</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <section className=&quot;mb-16&quot;></section>
+          <div className=&quot;bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8&quot;></div>
+            <h2 className=&quot;text-3xl font-bold text-white text-center mb-12&quot;>Why Choose Our AI Services?</h2>
+            <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
               {benefits.map((benefit, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <benefit.icon className="w-8 h-8 text-cyan-400" />
+                <div key={index} className=&quot;text-center&quot;></div>
+                  <div className=&quot;w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4&quot;></div>
+                    <benefit.icon className=&quot;w-8 h-8 text-cyan-400&quot; />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">{benefit.title}</h3>
-                  <p className="text-gray-300">{benefit.description}</p>
+                  <h3 className=&quot;text-xl font-bold text-white mb-2&quot;>{benefit.title}</h3>
+                  <p className=&quot;text-gray-300&quot;>{benefit.description}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
         {/* CTA Section */}
-        <section className="text-center">
-          <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 rounded-2xl p-8">
-            <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Business with AI?</h2>
-            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+        <section className=&quot;text-center&quot;></section>
+          <div className=&quot;bg-gradient-to-r from-cyan-900/50 to-purple-900/50 rounded-2xl p-8&quot;></div>
+            <h2 className=&quot;text-3xl font-bold text-white mb-4&quot;>Ready to Transform Your Business with AI?</h2>
+            <p className=&quot;text-gray-300 mb-8 max-w-2xl mx-auto&quot;>
               Get a free consultation and discover how our AI solutions can revolutionize your operations and drive growth.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
               <a
-                href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105"
+                href=&quot;/contact&quot;
+                className=&quot;bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105&quot;
               >
                 Get Free Consultation
               </a>
               <a
-                href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+                href=&quot;tel:+13024640950&quot;
+                className=&quot;border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300&quot;
               >
                 (302) 464-0950
               </a>
             </div>
-            <div className="mt-8 text-sm text-gray-400">
+            <div className=&quot;mt-8 text-sm text-gray-400&quot;></div>
               <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
           </div>
         </section>
       </main>
       <Footer />
+>>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
     </div>
   )
 }
 
-export default AIServicesPage
+export default Page;

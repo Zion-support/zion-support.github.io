@@ -1,4 +1,7 @@
-
+'use client'
+import { ArrowRight } from 'lucide-react'
+import React, { useState } from 'react'
+import { Mail, ArrowRight } from 'lucide-react'
 
 const ContentNewsletterSignup: React.FC = () => {
   const [email, setEmail] = useState('')
@@ -17,8 +20,8 @@ const ContentNewsletterSignup: React.FC = () => {
   }
   if (isSubmitted) {
     return (
-      <section className="mb-16" aria-labelledby="newsletter-heading">
-        <div className="bg-gradient-to-r from-green-600 to-emerald-600 text-white p-8 rounded-xl text-center">
+      <section className="mb-16" aria-labelledby="newsletter-heading"></section>
+        <div className="bg-gradient-to-r from-green-600 to-emerald-600 text-white p-8 rounded-xl text-center"></div>
           <div className="text-4xl mb-4">✅</div>
           <h2 className="text-2xl font-bold mb-2">Thank You!</h2>
           <p className="text-green-100">You've been successfully subscribed to our newsletter.</p>

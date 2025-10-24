@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-function resolveConflicts(content) {
+function resolveMergeConflicts(content) {
   // Remove all merge conflict markers and keep the HEAD version
   return content
     .replace(/    .replace(/=======\n([\s\S]*?)    .replace(/}
@@ -9,39 +9,65 @@ function resolveConflicts(content) {
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    if (content.includes('      console.log(`Resolving conflicts in: ${filePath}`);
-      const resolved = resolveConflicts(content);
-      fs.writeFileSync(filePath, resolved);
+    
+    if (content.includes('<<<<<<< HEAD')) {
+      console.log(`Processing: ${filePath}`);
+      const resolvedContent = resolveMergeConflicts(content);
+      fs.writeFileSync(filePath, resolvedContent, 'utf8');
       return true;
     }
+    return false;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
+    return false;
   }
-  return false;
 }
 
-function walkDirectory(dir) {
-  const files = fs.readdirSync(dir);
-  let resolvedCount = 0;
+function findFilesWithConflicts(dir) {
+  const files = [];
   
-  for (const file of files) {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
     
-    if (stat.isDirectory()) {
-      if (file !== 'node_modules' && file !== '.git') {
-        resolvedCount += walkDirectory(filePath);
-      }
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.jsx') || file.endsWith('.json') || file.endsWith('.xml')) {
-      if (processFile(filePath)) {
-        resolvedCount++;
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        // Skip node_modules and .git directories
+        if (item !== 'node_modules' && item !== '.git' && item !== 'app-broken') {
+          traverse(fullPath);
+        }
+      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
+        files.push(fullPath);
       }
     }
   }
   
-  return resolvedCount;
+  traverse(dir);
+  return files;
 }
 
-console.log('Starting conflict resolution...');
-const resolvedCount = walkDirectory('.');
-console.log(`Resolved conflicts in ${resolvedCount} files`);
+function main() {
+  const workspaceDir = '/workspace';
+  console.log('Starting merge conflict resolution...');
+  
+  const files = findFilesWithConflicts(workspaceDir);
+  console.log(`Found ${files.length} files to check`);
+  
+  let processedCount = 0;
+  let conflictCount = 0;
+  
+  for (const file of files) {
+    if (processFile(file)) {
+      conflictCount++;
+    }
+    processedCount++;
+  }
+  
+  console.log(`\nResolution complete!`);
+  console.log(`Processed ${processedCount} files`);
+  console.log(`Resolved conflicts in ${conflictCount} files`);
+}
+
+main();

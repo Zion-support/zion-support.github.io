@@ -1,36 +1,93 @@
 'use client'
-import React, { useEffect, useState } from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+import { Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from './Navigation'
+import React, { useEffect, useState, useCallback } from 'react'
 
-const AdvancedAccessibilityEnhancerPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+interface AdvancedAccessibilityEnhancerProps {
+  enableKeyboardNavigation?: boolean
+  enableScreenReader?: boolean
+  enableHighContrast?: boolean
+  enableFocusManagement?: boolean
+  enableARIALabels?: boolean
+  enableSkipLinks?: boolean
+  enableColorContrast?: boolean
+  enableMotionReduction?: boolean
+  enableFontScaling?: boolean
+  enableVoiceNavigation?: boolean
+}
+
+const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({
+  enableKeyboardNavigation = true,
+  enableScreenReader = true,
+  enableHighContrast = true,
+  enableFocusManagement = true,
+  enableARIALabels = true,
+  enableSkipLinks = true,
+  enableColorContrast = true,
+  enableMotionReduction = true,
+  enableFontScaling = true,
+  enableVoiceNavigation = true
+}) => {
+  const [accessibilitySettings, setAccessibilitySettings] = useState({
+    highContrast: false,
+    reducedMotion: false,
+    fontSize: 'normal',
+    screenReader: false,
+    keyboardNavigation: false
+  })
+
+  // Detect user preferences
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+
+    // Check for reduced motion preference
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+    // Check for high contrast preference
+    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches
+
+    // Check for color scheme preference
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches
+
+    setAccessibilitySettings(prev => ({
+      ...prev,
+      reducedMotion: prefersReducedMotion,
+      highContrast: prefersHighContrast
+    }))
+
+    // Listen for changes in user preferences
+    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
+    const contrastQuery = window.matchMedia('(prefers-contrast: high)')
+
+    const handleMotionChange = (e: MediaQueryListEvent) => {
+      setAccessibilitySettings(prev => ({ ...prev, reducedMotion: e.matches }))
     }
-  ]
+
+    const handleContrastChange = (e: MediaQueryListEvent) => {
+      setAccessibilitySettings(prev => ({ ...prev, highContrast: e.matches }))
+    }
+
+    motionQuery.addEventListener('change', handleMotionChange)
+    contrastQuery.addEventListener('change', handleContrastChange)
+
+    return () => {
+      motionQuery.removeEventListener('change', handleMotionChange)
+      contrastQuery.removeEventListener('change', handleContrastChange)
+    }
+  }, [])
+
+  // Apply accessibility styles
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+
+    const root = document.documentElement
+
+    // Apply high contrast mode
+    if (accessibilitySettings.highContrast) {
+      root.classList.add('high-contrast')
+    } else {
+      root.classList.remove('high-contrast')
+    }
 
   const benefits = [
     'Increase efficiency by up to 50%',
@@ -95,47 +152,203 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Benefits Section */}
-        <section className="py-20 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of cutting-edge AI technology
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-4">
-                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
-                  <p className="text-gray-300 text-lg">{benefit}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+    const handleKeyDown = (event: KeyboardEvent) => {
+      // Skip to main content
+      if (event.key === 'Tab' && event.shiftKey && event.ctrlKey) {
+        event.preventDefault()
+        const mainContent = document.getElementById('main-content')
+        if (mainContent) {
+          mainContent.focus()
+        }
+      }
+    }
 
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI solutions
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Start Free Trial
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Contact Sales
-              </button>
-            </div>
-          </div>
-        </section>
-      </div>
-      <Footer />
-    </>
-  )
+    document.addEventListener('keydown', handleKeyDown)
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  }, [])
+
+  // Screen reader support
+  const setupScreenReaderSupport = useCallback(() => {
+    if (typeof window === 'undefined') return
+
+    // Add screen reader announcements
+    const announceToScreenReader = (message: string) => {
+      const announcement = document.createElement('div')
+      announcement.setAttribute('aria-live', 'polite')
+      announcement.setAttribute('aria-atomic', 'true')
+      announcement.className = 'sr-only'
+      announcement.textContent = message
+      document.body.appendChild(announcement)
+      
+      setTimeout(() => {
+        document.body.removeChild(announcement)
+      }, 1000)
+    }
+
+    // Announce page changes
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+          announceToScreenReader('Page content updated')
+        }
+      })
+    })
+
+    observer.observe(document.body, { childList: true, subtree: true })
+    return () => observer.disconnect()
+  }, [])
+
+  // Focus management
+  const setupFocusManagement = useCallback(() => {
+    if (typeof window === 'undefined') return
+
+    // Trap focus within modals
+    const trapFocus = (element: HTMLElement) => {
+      const focusableElements = element.querySelectorAll(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      )
+      const firstElement = focusableElements[0] as HTMLElement
+      const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement
+
+      const handleTabKey = (e: KeyboardEvent) => {
+        if (e.key === 'Tab') {
+          if (e.shiftKey) {
+            if (document.activeElement === firstElement) {
+              lastElement.focus()
+              e.preventDefault()
+            }
+          } else {
+            if (document.activeElement === lastElement) {
+              firstElement.focus()
+              e.preventDefault()
+            }
+          }
+        }
+      }
+
+      element.addEventListener('keydown', handleTabKey)
+      return () => element.removeEventListener('keydown', handleTabKey)
+    }
+
+    // Apply to all modals
+    const modals = document.querySelectorAll('[role="dialog"]')
+    modals.forEach(modal => trapFocus(modal as HTMLElement))
+  }, [])
+
+  // Enhanced ARIA labels
+  const enhanceARIALabels = useCallback(() => {
+    if (typeof window === 'undefined') return
+
+    // Add missing ARIA labels
+    const buttons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])')
+    buttons.forEach(button => {
+      if (!button.textContent?.trim()) {
+        button.setAttribute('aria-label', 'Button')
+      }
+    })
+
+    // Add ARIA labels to images
+    const images = document.querySelectorAll('img:not([alt])')
+    images.forEach(img => {
+      img.setAttribute('alt', 'Image')
+    })
+  }, [])
+
+  // Skip links
+  const addSkipLinks = useCallback(() => {
+    if (typeof window === 'undefined') return
+
+    const skipLinks = document.createElement('div')
+    skipLinks.className = 'skip-links'
+    skipLinks.innerHTML = `
+      <a href="#main-content" class="skip-link">Skip to main content</a>
+      <a href="#navigation" class="skip-link">Skip to navigation</a>
+    `
+    document.body.insertBefore(skipLinks, document.body.firstChild)
+  }, [])
+
+  // Color contrast checker
+  const checkColorContrast = useCallback(() => {
+    if (typeof window === 'undefined') return
+
+    const checkElement = (element: Element) => {
+      const styles = window.getComputedStyle(element)
+      const color = styles.color
+      const backgroundColor = styles.backgroundColor
+      
+      // Basic contrast check (simplified)
+      if (color === backgroundColor) {
+        // Low contrast detected - could implement proper contrast checking here
+      }
+    }
+
+    const allElements = document.querySelectorAll('*')
+    allElements.forEach(checkElement)
+  }, [])
+
+  // Voice navigation
+  const setupVoiceNavigation = useCallback(() => {
+    if (typeof window === 'undefined') return
+
+    const recognition = new (window as any).webkitSpeechRecognition()
+    recognition.continuous = false
+    recognition.interimResults = false
+
+    recognition.onresult = (event: any) => {
+      const command = event.results[0][0].transcript.toLowerCase()
+      
+      if (command.includes('go to home')) {
+        window.location.href = '/'
+      } else if (command.includes('go to about')) {
+        window.location.href = '/about'
+      } else if (command.includes('go to services')) {
+        window.location.href = '/services'
+      } else if (command.includes('call phone')) {
+        window.location.href = 'tel:+13024640950'
+      } else if (command.includes('send email')) {
+        window.location.href = 'mailto:kleber@ziontechgroup.com'
+      }
+    }
+
+    // Add voice navigation button
+    const voiceButton = document.createElement('button')
+    voiceButton.textContent = 'Voice Navigation'
+    voiceButton.className = 'voice-navigation-button'
+    voiceButton.setAttribute('aria-label', 'Start voice navigation')
+    voiceButton.onclick = () => recognition.start()
+
+    const header = document.querySelector('header') || document.querySelector('nav')
+    if (header) {
+      header.appendChild(voiceButton)
+    }
+  }, [])
+
+  // Initialize all accessibility features
+  useEffect(() => {
+    if (enableKeyboardNavigation) {
+      setupKeyboardNavigation()
+    }
+    if (enableScreenReader) {
+      setupScreenReaderSupport()
+    }
+    if (enableFocusManagement) {
+      setupFocusManagement()
+    }
+    if (enableARIALabels) {
+      enhanceARIALabels()
+    }
+    if (enableSkipLinks) {
+      addSkipLinks()
+    }
+    if (enableColorContrast) {
+      checkColorContrast()
+    }
+    if (enableVoiceNavigation) {
+      setupVoiceNavigation()
+    }
+  }, [enableKeyboardNavigation, enableScreenReader, enableFocusManagement, enableARIALabels, enableSkipLinks, enableColorContrast, enableVoiceNavigation, setupKeyboardNavigation, setupScreenReaderSupport, setupFocusManagement, enhanceARIALabels, addSkipLinks, checkColorContrast, setupVoiceNavigation])
+
+  return null
 }
 
-export default AdvancedAccessibilityEnhancerPage
+export default AdvancedAccessibilityEnhancer

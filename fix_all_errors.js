@@ -1,102 +1,128 @@
-      skipUntil = null;
-      continue;
-    }
-    
-    if (skipUntil === null) {
-      result.push(line);
-    }
-  }
-  
-  return result.join('\n');
-}
+#!/usr/bin/env node
 
-// Function to fix common JSX issues
-function fixJSXIssues(content) {
-  // Fix unescaped entities
-  content = content.replace(/'/g, '&apos;');
-  content = content.replace(/"/g, '&quot;');
-  
-  return content;
-}
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 
-// Function to add missing imports
-function addMissingImports(content) {
-  const missingImports = [
-    'CheckCircle', 'Star', 'Phone', 'Mail', 'Camera', 'Zap', 'Brain', 'Eye', 'BarChart',
-    'DollarSign', 'Shield', 'TrendingUp', 'Target', 'Users', 'Heart', 'Database',
-    'Code', 'Cloud', 'Palette', 'Music', 'Video', 'Calendar', 'PhoneIcon', 'MailIcon',
-    'ArrowRight', 'Helmet'
-  ];
-  
-  let imports = new Set();
-  
-  // Check which imports are missing
-  missingImports.forEach(importName => {
-    if (content.includes(`<${importName}`) && !content.includes(`import { ${importName}`)) {
-      imports.add(importName);
-    }
-  });
-  
-  if (imports.size > 0) {
-    const importStatement = `import { ${Array.from(imports).join(', ')} } from 'lucide-react';\n`;
-    
-    // Find the last import statement
-    const lines = content.split('\n');
-    let lastImportIndex = -1;
-    
-    for (let i = 0; i < lines.length; i++) {
-      if (lines[i].startsWith('import ')) {
-        lastImportIndex = i;
-      }
-    }
-    
-    if (lastImportIndex >= 0) {
-      lines.splice(lastImportIndex + 1, 0, importStatement);
-      return lines.join('\n');
-    } else {
-      return importStatement + content;
-    }
-  }
-  
-  return content;
-}
+console.log('🔧 Starting comprehensive error fix...');
 
-// Main function to process files
-function processFile(filePath) {
+// Function to fix merge conflicts
+function fixMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Apply fixes
-    content = fixMergeConflicts(content);
-    content = fixJSXIssues(content);
-    content = addMissingImports(content);
+    // Check if file has merge conflict markers
+          inConflict = false;
+          continue;
+        }
+        
+        if (!inConflict) {
+          fixedLines.push(line);
+        }
+      }
+      
+      // If we found conflicts, write the fixed content
+      if (conflictCount > 0) {
+        const fixedContent = fixedLines.join('\n');
+        fs.writeFileSync(filePath, fixedContent, 'utf8');
+        console.log(`✅ Fixed ${conflictCount} merge conflicts in ${filePath}`);
+        return true;
+      }
+    }
     
-    // Write back the fixed content
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);
+    return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`❌ Error fixing merge conflicts in ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Find all TSX files and process them
-function findAndProcessFiles(dir) {
-  const files = fs.readdirSync(dir);
-  
-  files.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
+// Function to fix common syntax errors
+function fixSyntaxErrors(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
     
-    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-      findAndProcessFiles(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
-      processFile(filePath);
+    // Fix unescaped quotes in JSX
+    if (content.includes('"') && filePath.endsWith('.tsx')) {
+      const originalContent = content;
+      content = content.replace(/([^\\])"/g, '$1&quot;');
+      if (content !== originalContent) {
+        modified = true;
+        console.log(`Fixed unescaped quotes in: ${filePath}`);
+      }
     }
-  });
+    
+    // Fix malformed JSX tags
+    content = content.replace(/<div>\s*<\/div>/g, '<div></div>');
+    content = content.replace(/<div>\s*<\/div>/g, '<div></div>');
+    
+    // Fix missing closing tags
+    content = content.replace(/<div([^>]*)>\s*$/gm, '<div$1></div>');
+    
+    // Fix malformed JSX expressions
+    content = content.replace(/\{\s*>\s*\}/g, '{">"}');
+    content = content.replace(/\{\s*<\s*\}/g, '{"<"}');
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`✅ Fixed syntax errors in ${filePath}`);
+      return true;
+    }
+    
+    return false;
+  } catch (error) {
+    console.error(`❌ Error fixing syntax in ${filePath}:`, error.message);
+    return false;
+  }
 }
 
-// Start processing
-console.log('Starting to fix all TSX files...');
-findAndProcessFiles('./app');
-findAndProcessFiles('./src');
-console.log('Finished fixing files!');
+// Function to recursively find and fix files
+function fixFilesInDirectory(dirPath) {
+  const files = fs.readdirSync(dirPath);
+  let totalFixed = 0;
+  
+  for (const file of files) {
+    const filePath = path.join(dirPath, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory()) {
+      // Skip node_modules and other irrelevant directories
+      if (file === 'node_modules' || file === '.git' || file === '.next') {
+        continue;
+      }
+      totalFixed += fixFilesInDirectory(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
+      // Fix merge conflicts first
+      const conflictFixed = fixMergeConflicts(filePath);
+      if (conflictFixed) totalFixed++;
+      
+      // Then fix syntax errors
+      const syntaxFixed = fixSyntaxErrors(filePath);
+      if (syntaxFixed) totalFixed++;
+    }
+  }
+  
+  return totalFixed;
+}
+
+// Main execution
+try {
+  console.log('🔍 Scanning for files to fix...');
+  const totalFixed = fixFilesInDirectory('/workspace');
+  console.log(`✅ Fixed ${totalFixed} files`);
+  
+  // Run linting to check remaining issues
+  console.log('🔍 Running linting check...');
+  try {
+    execSync('npm run lint', { cwd: '/workspace', stdio: 'pipe' });
+    console.log('✅ All linting issues resolved!');
+  } catch (error) {
+    console.log('⚠️  Some linting issues remain, but major conflicts are fixed');
+  }
+  
+  console.log('🎉 Error fixing completed!');
+} catch (error) {
+  console.error('❌ Error during fixing process:', error.message);
+  process.exit(1);
+}

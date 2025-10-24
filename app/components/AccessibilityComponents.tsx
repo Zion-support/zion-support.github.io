@@ -1,9 +1,15 @@
 
 
-const AccessibilityComponents: React.FC = () => {
-  return null
+interface AccessibilityComponentsProps {
+  className?: string;
 }
 
-export default AccessibilityComponents
+const AccessibilityComponents: React.FC<AccessibilityComponentsProps> = ({ className }) => {
+  return (
+    <div className={className}>
+      <h1>Accessibility Components</h1>
+    </div>
+  );
+};
 
-
+export default AccessibilityComponents;

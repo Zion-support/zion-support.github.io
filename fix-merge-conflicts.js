@@ -1,11 +1,37 @@
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+function fixMergeConflicts(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Check if file has merge conflicts
+        inConflict = false;
+        keepHead = false;
+        continue;
+      }
       
-      // Write the cleaned content back
-      fs.writeFileSync(filePath, cleanedContent);
-      console.log(`Fixed: ${filePath}`);
-      return true;
+      if (inConflict && !keepHead) {
+        continue; // Skip lines in the non-HEAD section
+      }
+      
+      fixedLines.push(line);
     }
     
-    return false;
+    const fixedContent = fixedLines.join('\n');
+    
+    // Clean up any remaining syntax issues
+    const cleanedContent = fixedContent
+      .replace(/;\s*$/gm, '') // Remove trailing semicolons
+      .replace(/\s+$/gm, '') // Remove trailing whitespace
+      .replace(/\n\s*\n\s*\n/g, '\n\n'); // Remove multiple empty lines
+    
+    fs.writeFileSync(filePath, cleanedContent);
+    return true;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false;

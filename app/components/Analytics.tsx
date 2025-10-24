@@ -1,9 +1,7 @@
 
 
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void
-  }
+interface AnalyticsProps {
+  className?: string;
 }
 
 const Analytics: React.FC = () => {
@@ -22,7 +20,4 @@ const Analytics: React.FC = () => {
   return null; // Analytics component doesn't render anything
 }
 
-
-};
-
-export default AnalyticsPage;
+export default Analytics

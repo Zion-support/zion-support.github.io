@@ -5,12 +5,7 @@ import React, { useEffect } from 'react'
 import Head from 'next/head'
 
 interface SEOOptimizerProps {
-  title?: string
-  description?: string
-  keywords?: string[]
-  canonicalUrl?: string
-  ogImage?: string
-  structuredData?: Record<string, unknown>
+  className?: string;
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({

@@ -1,5 +1,7 @@
 'use client'
-import React, { useEffect, useState } from 'react'
+import Navigation from './Navigation';
+
+import React, { useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {
   enableKeyboardNav?: boolean
