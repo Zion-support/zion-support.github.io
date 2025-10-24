@@ -2,8 +2,7 @@
 import React from 'react';
 
 interface PerformanceDashboardProps {
-  className?: string;
-  showMetrics?: boolean;
+  // Add props here
 }
 
 const PerformanceDashboard: React.FC<PerformanceDashboardProps> = (_props) => {

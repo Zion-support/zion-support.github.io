@@ -31,9 +31,8 @@ const AIApiManagerPage: React.FC = () => {
       description: 'Comprehensive monitoring and analytics for your APIs.',
       benefits: ['Real-time metrics', 'Performance tracking', 'Error monitoring', 'Usage analytics']
     }
-  ];
-
-  return (
+    ];
+    return (
     <>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
@@ -74,7 +73,7 @@ const AIApiManagerPage: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
+                  <ul className="...">
                     {feature.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center text-sm text-gray-300">
                         <div className="w-2 h-2 bg-blue-400 rounded-full mr-3" />

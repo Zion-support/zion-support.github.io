@@ -1,7 +1,5 @@
-'use client';
-
-import React from 'react';
-
+'use client'
+import React from 'react'
 interface LoadingProps {
   size?: 'sm' | 'md' | 'lg';
   text?: string;
@@ -26,7 +24,6 @@ const Loading: React.FC<LoadingProps> = ({
         </p>
       )}
     </div>
-  );
-};
-
-export default Loading;
+  )
+}
+export default Loading

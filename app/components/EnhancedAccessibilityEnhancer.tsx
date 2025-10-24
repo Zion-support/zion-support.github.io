@@ -92,7 +92,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
   }
 
   return (
-    <div className="accessibility-enhanced">
+    <div className="...">
       <div 
         className="accessibility-controls" 
         style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 }}
@@ -105,7 +105,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
           {isHighContrast ? 'Normal Contrast' : 'High Contrast'}
         </button>
         
-        <div className="font-size-controls">
+        <div className="...">
           <button
             onClick={() => changeFontSize('small')}
             className="accessibility-button"
