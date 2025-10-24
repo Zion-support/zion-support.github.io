@@ -26,10 +26,18 @@
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
-    "**/*.ts",
-    "**/*.tsx"
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    "components/**/*.ts",
+    "components/**/*.tsx"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "**/ai-pages-backup/**",
+    "**/all-pages-backup/**",
+    "**/backup*/**",
+    "**/*.backup.*",
+    "**/*.bak",
+    "**/backup/**"
   ]
 }
