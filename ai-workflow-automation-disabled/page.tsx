@@ -270,9 +270,8 @@ const AIWorkflowAutomationPage: React.FC = () => {
             </div>
           </section>
         </div>
-        </main>
-        <Footer />
-      </div>
+      </main>
+      <Footer />
     </div>
   );
 };

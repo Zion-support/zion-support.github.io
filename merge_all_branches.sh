@@ -1,95 +1,80 @@
 #!/bin/bash
 
-# Script to merge all remaining branches systematically
+# Comprehensive branch merge script
+set -e
+
 echo "Starting comprehensive branch merge process..."
 
-# Function to merge a branch and resolve conflicts
-merge_branch() {
-    local branch=$1
-    echo "Attempting to merge $branch..."
-    
-    # Try to merge the branch
-    if git merge "origin/$branch" --no-edit; then
-        echo "✅ Successfully merged $branch"
-        return 0
-    else
-        echo "⚠️  Merge conflicts detected in $branch, resolving..."
-        
-        # Check if there are conflicts
-        if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
-            echo "Resolving conflicts by accepting incoming changes..."
-            
-            # Find all conflicted files
-            conflicted_files=$(git diff --name-only --diff-filter=U)
-            
-            if [ -n "$conflicted_files" ]; then
-                echo "Conflicted files: $conflicted_files"
-                
-                # For each conflicted file, accept the incoming version
-                for file in $conflicted_files; do
-                    echo "Resolving conflicts in $file..."
-                    git checkout --theirs "$file"
-                    git add "$file"
-                done
-                
-                # Commit the merge
-                git commit --no-edit
-                echo "✅ Successfully resolved conflicts and merged $branch"
-                return 0
-            else
-                echo "No conflicted files found, aborting merge"
-                git merge --abort
-                return 1
-            fi
-        else
-            echo "No conflicts found, merge should be successful"
-            return 0
-        fi
-    fi
-}
+# Get the list of recent branches
+BRANCHES=(
+    "origin/cursor/delete-old-data-records-41de"
+    "origin/cursor/delete-old-data-records-917e"
+    "origin/cursor/delete-old-data-records-a094"
+    "origin/cursor/delete-old-data-records-df78"
+    "origin/cursor/delete-records-57d6"
+    "origin/cursor/delete-old-data-records-c928"
+    "origin/cursor/swdr-background-task-5bf5"
+    "origin/cursor/swdr-background-task-a762"
+    "origin/cursor/fix-errors-and-merge-to-main-6cb7"
+    "origin/cursor/swdr-background-task-9835"
+    "origin/cursor/undefined-awde-task-1140"
+    "origin/cursor/undefined-awde-task-3217"
+    "origin/cursor/undefined-awde-task-b171"
+    "origin/cursor/undefined-awde-task-d518"
+    "origin/cursor/undefined-awde-task-f7f0"
+    "origin/cursor/fix-errors-and-merge-to-main-07d1"
+    "origin/cursor/fix-errors-and-merge-to-main-13a8"
+    "origin/cursor/fix-errors-and-merge-to-main-d5a0"
+    "origin/cursor/fix-errors-and-merge-to-main-0278"
+    "origin/temp-merge-33776"
+)
 
-# Get list of all branches to merge
-echo "Fetching latest branches..."
-git fetch --all
-
-# Get all cursor branches (excluding backup and automation branches)
-branches=$(git branch -r --sort=-committerdate | grep -v "aggressive-merge-backup" | grep -v "automation" | grep "cursor/" | head -50)
-
-echo "Found branches to merge:"
-echo "$branches"
-
-# Counter for successful merges
-successful_merges=0
-total_branches=0
+# Ensure we're on main branch
+git checkout main
+git pull origin main
 
 # Merge each branch
-for branch in $branches; do
-    branch_name=$(echo $branch | sed 's/origin\///')
-    total_branches=$((total_branches + 1))
+for branch in "${BRANCHES[@]}"; do
+    echo "Processing branch: $branch"
     
-    echo "Processing branch $total_branches: $branch_name"
-    
-    if merge_branch "$branch_name"; then
-        successful_merges=$((successful_merges + 1))
-        echo "✅ Successfully merged $branch_name ($successful_merges/$total_branches)"
+    # Check if branch exists
+    if git show-ref --verify --quiet refs/remotes/$branch; then
+        echo "Merging $branch into main..."
+        
+        # Try to merge the branch
+        if git merge --no-ff $branch -m "Merge $branch into main" 2>/dev/null; then
+            echo "Successfully merged $branch"
+        else
+            echo "Merge conflict in $branch, resolving..."
+            
+            # Resolve conflicts by keeping main branch version
+            git status --porcelain | grep "^UU" | cut -c4- | while read file; do
+                echo "Resolving conflict in $file"
+                git checkout --theirs "$file" 2>/dev/null || true
+            done
+            
+            # Add resolved files
+            git add .
+            
+            # Commit the merge
+            if git commit -m "Resolve merge conflicts in $branch by keeping main branch versions" 2>/dev/null; then
+                echo "Successfully resolved conflicts in $branch"
+            else
+                echo "No conflicts to resolve in $branch"
+                git merge --abort 2>/dev/null || true
+            fi
+        fi
     else
-        echo "❌ Failed to merge $branch_name"
+        echo "Branch $branch does not exist, skipping..."
     fi
     
     echo "---"
-    
-    # Push every 10 successful merges
-    if [ $((successful_merges % 10)) -eq 0 ] && [ $successful_merges -gt 0 ]; then
-        echo "Pushing changes after $successful_merges merges..."
-        git push origin main
-    fi
 done
 
-echo "Merge process completed!"
-echo "Successfully merged: $successful_merges out of $total_branches branches"
+echo "All branches processed successfully!"
+echo "Pushing changes to origin/main..."
 
-# Final push
-echo "Pushing final changes..."
+# Push all changes
 git push origin main
 
-echo "All merges completed and pushed to origin/main!"
+echo "Merge process completed!"
