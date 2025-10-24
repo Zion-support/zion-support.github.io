@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect } from 'react";
 
 export const usePerformanceMonitor = (
@@ -40,43 +39,6 @@ $3
         "'"
         observer.observe({ entryTypes: "['resource'] ",});
         
-=======
-import { useEffect } from from 'react'
-;
-export const usePerformanceMonitor = (;
-  useEffect(() => {;
-    // Monitor page load performance;
-    const monitorPageLoad = () => {
-      if ('performance' in, window) {;
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        const paint = performance.getEntriesByType('paint');
-;
-        // Log performance metrics;
-        console.log('Page Load Performance: "'", {"
-          domContentLoaded: "navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart",");"
-          loadComplete: "navigation.loadEventEnd - navigation.loadEventStart",)";'"
-          firstPaint: "paint.find(entry = > entry.name === 'first-paint')?.startTime",;";'"
-          firstContentfulPaint: "paint.find(entry => entry.name === 'first-contentful-paint')?.startTime",) => {;
-$3;
-})}
-    }
-    // Monitor resource loading;
-    const monitorResourceLoading = (;
-      if ('performance' in, window) {;
-        const observer = new PerformanceObserver((list) => {;
-          list.getEntries().forEach((entry) => {;'"
-            if (entry.entryType === 'resource') {";'"
-              console.log('Resource loaded: "'", {"
-                name: "entry.name",");"
-                duration: "entry.duration",);"
-                size: "(entry, as, any).transferSize",) => {;
-$3;
-})}
-          })});"
-        ";'"
-        observer.observe({ entryTypes: "['resource'] "});
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
         return () => observer.disconnect();
       }
     }
@@ -86,11 +48,6 @@ $3;
     // Cleanup;
     return () => {;
       cleanup?.();
-<<<<<<< HEAD
     ,};"
   }, []);"
 };"'"
-=======
-    }"
-  }, [])}";'"
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70

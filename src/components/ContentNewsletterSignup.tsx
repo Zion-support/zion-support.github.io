@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react"
 interface ContentNewsletterSignupProps {
 className?: string
@@ -16,19 +15,3 @@ return(</ContentNewsletterSignupProps>,
 };"
 export default ContentNewsletterSignup;"
 }"'"
-=======
-import React from 'react'
-interface ContentNewsletterSignupProps {;
-className?: string;
-}
-}
-}'
-const ContentNewsletterSignup: "React.FC<ContentNewsletterSignupProps> = ({ className = '' "}) => {;
-return(</>;
-    <div className={className} /  />
-      <h2>ContentNewsletterSignup</h2>
-      <p>This component is under construction.</p>);
-      </div>);
-  )}"
-export default ContentNewsletterSignup}";'"
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70

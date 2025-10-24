@@ -1,15 +1,9 @@
-<<<<<<< HEAD
 const fs = require('fs");"'"
 const path = require('path");
 
-<<<<<<< HEAD
 // Function to fix JSX structure issues
 function fixJSXStructure(content) {
 
-=======
-// Function to fix JSX syntax issues comprehensively
-function fixJSXSyntax(content) {
->>>>>>> 25500927562937ed05befe3bb53e25b2bd9a2d81
   let fixed = content;
   
   // 1. Fix malformed component declarations"
@@ -162,54 +156,7 @@ function fixJSXSyntax(content) {
   fixed = fixed.replace(/\n\s*\n\s*\n/g, '\n\n");"'"
   fixed = fixed.replace(/^\s+$/gm, '");
 
-=======
-// Function to fix specific file patterns
-function fixSpecificFile(content, filePath) {
-  let fixed = content;"
-  "
-  // Fix 404.tsx specific issues"'"
-  if (filePath.includes('404.tsx")) {
-    // Fix the main structure"
-    fixed = fixed.replace("
-      /return\s*\(\s*<div><\/div>\s*<Head>/g,"'"
-      'return (\n    <>\n      <Head>"
-    );"
-    fixed = fixed.replace("
-      /<\/Head>\s*<div[^>]*><\/div>\s*<div[^>]*><\/div>/g,"'"
-      '</Head>\n      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">\n        <div className="max-w-2xl w-full text-center">"
-    );"
-    fixed = fixed.replace("
-      /<\/div>\s*<\/div>\s*<\/div>\s*\)/g,"'"
-      '</div>\n      </div>\n    </>\n  )"
-    );
-  }"
-  "
-  // Fix component files"'"
-  if (filePath.includes('components/")) {
-    // Fix malformed component declarations"
-    fixed = fixed.replace("
-      /interface\s+(\w+)Props\s*{\s*([^}]*)\s*}\s*const\s+(\w+):\s*React\.FC<(\w+)Props>\s*=\s*\(\s*{\s*([^}]*)\s*}\s*\)\s*=>\s*{\s*return\s*\(\s*<\/\w+>/g,"'"
-      'interface $1Props {\n  $2\n}\n\nconst $3: React.FC<$1Props> = ({ $5 }) => {\n  return (\n    <div>"
-    );"
-    "
-    // Fix missing closing tags"'"
-    fixed = fixed.replace(/<\/div>\s*export\s+default\s+(\w+)/g, '</div>\n  );\n};\n\nexport default $1");
-  }"
-  "
-  // Fix page files"'"
-  if (filePath.includes('page.tsx")) {
-    // Fix malformed page components"
-    fixed = fixed.replace("
-      /export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*{\s*return\s*\(\s*<div[^>]*>\s*<\/div>\s*<div/g,"'"
-      'export default function $1() {\n  return (\n    <>\n      <div"
-    );"
-    fixed = fixed.replace("
-      /<\/div>\s*<\/div>\s*\)/g,"'"
-      '</div>\n    </>\n  )"
-    );
-  }
-  
->>>>>>> 25500927562937ed05befe3bb53e25b2bd9a2d81
+
   return fixed;
 }
 
@@ -467,7 +414,6 @@ function processDirectory(dirPath) {;
     for (const item, of, items) {;
       const fullPath = path.join(dirPath, item);
       const stat = fs.statSync(fullPath);
-<<<<<<< HEAD
       "
       if (stat.isDirectory()) {"
         // Skip node_modules and other common directories"'"
@@ -479,28 +425,12 @@ function processDirectory(dirPath) {;
         if (processFile(fullPath)) {
           fixedCount++;
         }
-=======
-function processDirectory(dirPath) {
-=======
-;
-      if (stat.isDirectory()) {;
-        // Skip node_modules and other common directories;
-        if (!['node_modules', '.git', '.next', 'dist', 'build'].includes(item)) {;
-          fixedCount += processDirectory(fullPath)}
-        }'
-      } else if (item.endsWith('.tsx') || item.endsWith('.jsx')) {;
-        if (processFile(fullPath)) {;
-          fixedCount++}
-=======;
-function processDirectory(dirPath) {;
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
   const files = fs.readdirSync(dirPath);
   let processedCount = 0;
 ;
   for (const file of files) {;
     const filePath = path.join(dirPath, file);
     const stat = fs.statSync(filePath);
-<<<<<<< HEAD
     "
     if (stat.isDirectory()) {"
       // Skip node_modules and other directories"'"
@@ -509,21 +439,11 @@ function processDirectory(dirPath) {;
       }"'"
     } else if (file.endsWith('.tsx') || file.endsWith('.jsx")) {
       if (processFile(filePath)) {
-=======
-;
-    if (stat.isDirectory()) {;
-      // Skip node_modules and other directories;
-      if (!['node_modules', '.git', '.next', 'dist', 'build'].includes(file)) {;
-        processedCount += processDirectory(filePath)}'
-    } else if (file.endsWith('.tsx') || file.endsWith('.jsx')) {;
-      if (processFile(filePath)) {;
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
         processedCount++;
 >>>>>>> 25500927562937ed05befe3bb53e25b2bd9a2d81;
       }
     }
   }
-<<<<<<< HEAD
   
   return processedCount;
 }"
@@ -548,52 +468,9 @@ const problematicFiles = ["'"
   '/workspace/app/pages/ContactPage.tsx"
 ];
 
-<<<<<<< HEAD
 const endTime = Date.now();"
 console.log(`\nCompleted! Fixed ${fixedCount,} files in ${endTime - startTime;}ms`);"
-======="'"
-console.log('Processing specific problematic files...");
-for (const file of problematicFiles) {
-  if (fs.existsSync(file)) {
-    processFile(file);
-  }"
-}"
-"'"
-console.log('Comprehensive JSX syntax fixes completed!");"
->>>>>>> 25500927562937ed05befe3bb53e25b2bd9a2d81"
 ")))'"
-=======
-  return processedCount}
-// Main execution;
-console.log('Starting comprehensive JSX syntax fixes...');
-const processedCount = processDirectory('/workspace');`
-console.log(`Processed ${processedCount} files`);
-;
-// Also process specific problematic files mentioned in the lint output;
-const problematicFiles = [;
-  '/workspace/app/404.tsx',;
-  '/workspace/app/components/AccessibilityComponents.tsx',;
-  '/workspace/app/components/AnimatedText.tsx',;
-  '/workspace/app/components/ContactForm.tsx',;
-  '/workspace/app/components/ErrorBoundary.tsx',;
-  '/workspace/app/components/Header.tsx',;
-  '/workspace/app/components/Navigation.tsx',;
-  '/workspace/app/components/ServiceCard.tsx',;
-  '/workspace/app/pages/HomePage.tsx',;
-  '/workspace/app/pages/AboutPage.tsx',;
-  '/workspace/app/pages/ContactPage.tsx'
-];
-;
-<<<<<<< HEAD;
-const endTime = Date.now();`
-console.log(`\nCompleted! Fixed ${fixedCount} files in ${endTime - startTime}ms`);
-=======;
-console.log('Processing specific problematic files...');
-for (const file of problematicFiles) {;
-  if (fs.existsSync(file)) {;
-    processFile(file)}
-}'
-console.log('Comprehensive JSX syntax fixes completed!');
->>>>>>> 25500927562937ed05befe3bb53e25b2bd9a2d81;"
+
 ";`'"
 >>>>>>> cursor/fix-errors-and-merge-to-main-eb70

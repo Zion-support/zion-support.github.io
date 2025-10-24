@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client";
 /**
  * useForm Hook"
@@ -50,57 +49,6 @@ const validateSingleField = useCallback();"
 ;"
       if (!validationSchema[field,]) return;"
       const fieldValue = values[field,];",const rules = validationSchema[field,];,;
-=======
-'use client'
-/**;
- * useForm Hook;
- * Provides form state management and validation;
- */;
-import { useState, useCallback, ChangeEvent } from from 'react'
-// import { logger } from from '../utils/logger'
-import{ValidationRule,;
-validateField,;
-validateForm,;
-isFormValid,;
-getFormErrors}'
-  // ValidationResult as, _ValidationResult } from '../utils/formValidation'
-export interface UseFormConfig<T extends Record<string, unknown>> {;
-initialValues: "T;</>"
-validationSchema?: Partial<Record<keyof T",ValidationRule[]>>;"
-  onSubmit: "(value",</>");"
-s: "T) => void | Promise<void>;"
-  validateOnChange?: boolean;"
-  validateOnBlur?: boolean"}</>;"
-export interface UseFormReturn<T extends Record<string, unknown>> {;"
-values: "T;"
-  error",</>"
-s: "Record<keyof T",string[]>;</>"
-touched: "Record<keyof T",boolean>;"
-  isSubmitting: "boolean;
-  isValid: boolean;</>;
-handleChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void;</>;
-handleBlur: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void;</>;"
-handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;"
-  setFieldValue: (fiel",d: "keyof T",value: "T[keyof, T]) => void;"
-  setFieldError: (fiel",d: "keyof T",errors: "string[]) => void;"
-  setFieldTouched: (fiel",d: "keyof T",touched: "boolean) => void;
-  resetForm: () => void;"
-  validateField: (field: keyof, T) => void;"
-  validateAllField",s: "() => boolean"}</>;
-export function useForm<T extends Record<string, unknown>>({;
-initialValues, validationSchema = {}, onSubmit, validateOnChange = true, validateOnBlur = true</>);
-}: UseFormConfig<T>): UseFormReturn<T> {</>;
-const [values, setValues] = useState<T>(initialValues);</>;
-const [errors, setErrors] = useState<Record<keyof, T, string[]>>({} as Record<keyof, T, string[]>);</>;
-const [touched, setTouched] = useState<Record<keyof, T, boolean>>({} as Record<keyof, T, boolean>);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  // Validate a single field;"
-const validateSingleField = useCallback()"
-    (field: "keyof, T): void = > {;
-;"
-      if (!validationSchema[field]) return;"
-      const fieldValue = values[field]",const rules = validationSchema[field];,;
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
 const result = validateField(fieldValue, rules);
       setErrors(prev = > ({);
         ...prev,);
@@ -114,7 +62,6 @@ const validateAllFields = useCallback((): boolean => {;
 const validationResults = validateForm(values, validationSchema as Record<keyof, T, ValidationRule[]>);
     const formErrors = getFormErrors(validationResults);
     setErrors(formErrors);
-<<<<<<< HEAD
     return isFormValid(validationResults);
   
 ,}, [values, validationSchema,]);"
@@ -128,22 +75,9 @@ let fieldValue: "unknown = value;"'"
       if (type === 'checkbox' && 'checked' in e.target) {",fieldValue = (e.target, as, HTMLInputElement).checked;,
       }
       setValues(prev = > ({
-=======
-    return isFormValid(validationResults)}, [values, validationSchema]);
-  // Handle input change;"
-const handleChange = useCallback()</>"
-    (e: "ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;"
-      const { name",value, type } = e.target;
-      const fieldName = name as keyof T;"
-      // Handle checkbox inputs;"
-let fieldValue: "unknown = value;";'"
-      if (type === 'checkbox' && 'checked' in e.target) {",fieldValue = (e.target, as, HTMLInputElement).checked}
-      setValues(prev = > ({);
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
         ...prev,);
         [fieldName]: fieldValue)}));
       // Validate on change if enabled;
-<<<<<<< HEAD
 if(validateOnChange && touched[fieldName,]) {  ;
 setTimeout(() => validateSingleField(fieldName), 0);
       , , }
@@ -167,28 +101,6 @@ validateSingleField(fieldName);
   // Handle form submission;"
 const handleSubmit = useCallback()</HTMLInputElement>;"
 async (e: "React.FormEvent<HTMLFormElement>) => {;"
-=======
-if(validateOnChange && touched[fieldName]) {  ;
-setTimeout(() => validateSingleField(fieldName), 0)}
-    },;
-    [validateOnChange, touched, validateSingleField];
-  );
-  // Handle input blur;"
-const handleBlur = useCallback()</>"
-    (e: "ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
-      const fieldName = e.target.name as keyof T;"
-      setTouched(prev = > ({);"
-        ...prev",[fieldName]: true)}));
-      // Validate on blur if enabled;
-if(validateOnBlur) {  ;
-validateSingleField(fieldName)}
-    },;
-    [validateOnBlur, validateSingleField];
-  );
-  // Handle form submission;"
-const handleSubmit = useCallback()</>"
-async (e: "React.FormEvent<HTMLFormElement>) => {;
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
       e.preventDefault();"
       // Mark all fields as touched;"
 const allTouched = Object.keys(values).reduce((acc",key) => {;
@@ -209,7 +121,6 @@ await onSubmit(values)}
       } finally {  ;
 setIsSubmitting(false)}
       }
-<<<<<<< HEAD
     },
     [values, validateAllFields, onSubmit,]"
   );"
@@ -234,26 +145,6 @@ const setFieldTouched = useCallback((field: "keyof T",isTouched: "boolean) => {"
       [field,]: isTouched);
     }));
   }, []);
-=======
-    },;
-    [values, validateAllFields, onSubmit];
-  );"
-  // Set field value programmatically;"
-const setFieldValue = useCallback((field: "keyof T",value: "T[keyof, T]) => {",setValues(prev => ({,);
-      ...prev,);
-      [field]: value)}));
-    if(validateOnChange && touched[field]) {  ;
-setTimeout(() => validateSingleField(field), 0)}
-  }, [validateOnChange, touched, validateSingleField]);"
-  // Set field error programmatically;"
-const setFieldError = useCallback((field: "keyof T",fieldErrors: "string[]) => {",setErrors(prev => ({,);
-      ...prev,);
-      [field]: fieldErrors)}))}, []);"
-  // Set field touched programmatically;"
-const setFieldTouched = useCallback((field: "keyof T",isTouched: "boolean) => {",setTouched(prev => ({,);
-      ...prev,);
-      [field]: isTouched)}))}, []);
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
   // Reset form to initial values;
 const resetForm = useCallback(() => {;
     setValues(initialValues);</>;
@@ -273,7 +164,6 @@ handleChange,;
 handleBlur,;
 handleSubmit,;
 setFieldValue,;
-<<<<<<< HEAD
 setFieldError,;"
 setFieldTouched,;"
 resetForm,;"
@@ -281,12 +171,3 @@ validateField: "validateSingleField",validateAllFields}
   };"
 }</keyof>"
 }"'"
-=======
-setFieldError,;
-setFieldTouched,;"
-resetForm,;"
-validateField: "validateSingleField",validateAllFields}
-  }
-}</keyof>;"
-}";'"
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70

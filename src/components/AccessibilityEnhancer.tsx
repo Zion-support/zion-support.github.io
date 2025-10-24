@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 'use client"
 :all-pages-backup/components/AccessibilityEnhancer.tsx"
-'use client";"
+'use client';
 import, React, { useEffect } from 'react"
 interface AccessibilityEnhancerProps {
 "
@@ -166,79 +165,6 @@ const footer = document.querySelector('footer")"'"
     if (footer && !footer.getAttribute('role")) {"'"
 footer.setAttribute('role', 'contentinfo")}
   ;}, [])
-=======
-'use client'
-:all-pages-backup/components/AccessibilityEnhancer.tsx;
-"use client"
-import, React, { useEffect } from 'react'
-interface AccessibilityEnhancerProps {;"
-}"
-children: "React.ReactNode"}
-}
-export default function AccessibilityEnhancer() {
-return useEffect(() => {;
-    // Accessibility enhancements;
-if (typeof window !== 'undefined') {;
-      // Add skip to content link;
-const skipLink = document.createElement('a');
-      skipLink.href = '#main-content';'"
-skipLink.textContent = 'Skip to main content'";'"
-skipLink.className = 'sr-only focus: "not-sr-only focus:absolute focus:top-4 focu",s: "left-4 bg-blue-600 text-white px-4 py-2 rounded z-50'"
-document.body.insertBefore(skipLink",document.body.firstChild);
-      // Add main content ID;
-const main = document.querySelector('main');
-      if (main && !main.id) {;
-main.id = 'main-content'
-}"
-return () => {";'"
-const existingSkipLink = document.querySelector('a[href="#main-content"]');
-        if(existingSkipLink) {;
-existingSkipLink.remove();
-        ,, }
-      }
-    }
-  }, []);
-  return <div>{children}</div>}'
-import { useEffect } from from 'react';'"
-import Navigation from './Navigation'"
-const AccessibilityEnhancer: "React.FC<{ childre",n: "React.ReactNode "}> = ({ children }) => {;"
-useEffect(() => {"
-    // Add keyboard navigation support: "all-pages-backup/components/AccessibilityEnhancer.tsx;
-const handleKeyDown = (// Skip to main content with Alt + M);
-      if (e.altKey && e.key === 'm') {;
-        e.preventDefault();
-        const mainContent = document.getElementById('main-content');
-        if (mainContent) {;"
-mainContent.focus()"
-          mainContent.scrollIntoView({ behavio",)";'"
-r: "'smooth' ",) => {;
-$3;
-})}
-      }
-      // Skip to navigation with Alt + N;
-if (e.altKey && e.key = == 'n') {;
-e.preventDefault();
-        const navigation = document.querySelector('nav');
-        if (navigation) {;
-const firstLink = navigation.querySelector('a') as HTMLElement;
-if (firstLink) {;
-firstLink.focus()}
-    if(enableKeyboardNavigation) {;
-const handleKeyDown = (// Skip to main content);
-        if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {;
-          const mainContent = document.querySelector('main,[role=&quot;main&quot;]');
-          if (mainContent) {;
-            (mainContent, as, HTMLElement).focus();
-            event.preventDefault();
-          ) => {;
-$3;
-}
-        }
-      }
-    }'
-    document.addEventListener('keydown', handleKeyDown);
-return () => {;
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
 :all-pages-backup/components/AccessibilityEnhancer.tsx;
 document.removeEventListener('keydown', handleKeyDown)}}, []);
       document.removeEventListener('keydown', handleKeyDown);
@@ -323,11 +249,6 @@ footer.setAttribute('role', 'contentinfo')}
 return <div>{children}</div>}
 export default AccessibilityEnhancer;
 return <div>{children}  </div>
-<<<<<<< HEAD
 ;}"
 export default AccessibilityEnhancer;"
 }"'"
-=======
-}"
-export default AccessibilityEnhancer}";`'"
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70

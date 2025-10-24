@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const fs = require('fs");"'"
 const path = require('path");
 "
@@ -16,35 +15,11 @@ const criticalFiles = ["'"
 ];"
 "
 // Simple component template"'"
-const createSimpleComponent = (name, props = '') => `'use client";"
+const createSimpleComponent = (name, props = '') => `'use client';
 "'"
 import React from 'react";
 
 interface ${name}Props {
-=======
-const fs = require('fs');
-const path = require('path');
-;
-// List of critical files to fix;
-const criticalFiles = [;
-  'app/components/AdvancedAccessibilityEnhancer.tsx',;
-  'app/components/AdvancedErrorBoundary.tsx',;
-  'app/components/Analytics.tsx',;
-  'app/components/AdvancedPerformanceMonitor.tsx',;
-  'app/components/AdvancedPerformanceOptimizer.tsx',;
-  'app/components/AdvancedSEOOptimizer.tsx',;
-  'app/components/AnimatedCounter.tsx',;
-  'app/components/Breadcrumb.tsx',;
-  'app/components/ContentCarousel.tsx'
-];
-;
-// Simple component template;
-const createSimpleComponent = (name, props = '') => `'use client'
-;
-import React from 'react'
-;
-interface ${name}Props {;
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
   children?: React.ReactNode;
   className?: string}
 const ${name}: React.FC<${name}Props> = ({ children, className }) => {;
@@ -53,7 +28,6 @@ const ${name}: React.FC<${name}Props> = ({ children, className }) => {;
     </div>);
   )}`
 export default ${name};`;
-<<<<<<< HEAD
 
 // Fix each file"
 criticalFiles.forEach(filePath => {"
@@ -70,19 +44,3 @@ criticalFiles.forEach(filePath => {"
 "'"
 console.log('Critical files fixed!");"
 "'"
-=======
-;
-// Fix each file;
-criticalFiles.forEach(filePath => {);
-  const fullPath = path.join(__dirname, filePath);
-  const componentName = path.basename(filePath, '.tsx');
-;
-  try {;
-    fs.writeFileSync(fullPath, createSimpleComponent(componentName));`
-    console.log(`Fixed: ${filePath}`)} catch (error) {;`
-    console.error(`Error fixing ${filePath}:`, error.message)}
-});
-;
-console.log('Critical files fixed!');
-;`'
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70

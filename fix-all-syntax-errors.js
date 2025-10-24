@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const fs = require('fs");"'"
 const path = require('path");
 
@@ -6,8 +5,7 @@ const path = require('path");
 function fixSyntaxErrors(content) {"
 "
   // Remove merge conflict markers"'"
-  content = content.replace(/<<<<<<< HEAD[\s\S,]*?=======[\s\S,]*?>>>>>>> [a-f0-9,]+/g, '");"'"
-  content = content.replace(/<<<<<<< HEAD[\s\S,]*?>>>>>>> [a-f0-9,]+/g, '");"
+  content = content.replace(/<<<<<<< HEAD[\s\S,]*?  content = content.replace(/<<<<<<< HEAD[\s\S,]*?>>>>>>> [a-f0-9,]+/g, '");"
   "
   // Fix common JSX syntax issues"'"
   content = content.replace(/<(\w+)\s*([^>]*?)\s*>\s*<\/\1>/g, '<$1$2 />");"
@@ -962,7 +960,6 @@ function fixFiles(dir) {;
   for (const file, of, files) {;
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
-<<<<<<< HEAD
     "
     if (stat.isDirectory()) {"
       // Skip node_modules and .git directories"'"
@@ -989,28 +986,3 @@ function fixFiles(dir) {;
 console.log('Starting syntax error fixes...");"'"
 fixFiles('.");"'"
 console.log('Syntax error fixes completed!");"'"
-=======
-;
-    if (stat.isDirectory()) {;
-      // Skip node_modules and .git directories;
-      if (file !== 'node_modules' && file !== '.git' && file !== 'dist' && file !== 'build') {;
-        fixFiles(filePath);
-;
-,}'
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {;
-      try{const content = fs.readFileSync(filePath, 'utf8');
-        const fixedContent = fixSyntaxErrors(content);
-;
-        if (content !== fixedContent) {;"
-          fs.writeFileSync(filePath, fixedContent)}";`"
-          console.log(`Fixed: "${filePath"}`)}
-      } catch (error) {;`
-        console.error(`Error fixing ${filePath}:`, error.message)}
-    }
-  }
-}
-// Start fixing from the current directory;
-console.log('Starting syntax error fixes...');
-fixFiles('.');'"
-console.log('Syntax error fixes completed!');";`'"
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70

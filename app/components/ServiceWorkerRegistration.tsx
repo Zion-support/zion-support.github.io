@@ -4,7 +4,7 @@ import React from 'react'
 import { Helmet } from from 'react-helmet-async'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from from 'lucide-react'
 import { CheckCircle, Phone, Mail, ArrowRight } from from 'lucide-react'
-const ServiceWorkerRegistrationPage: "React.FC = () => {"
+const ServiceWorkerRegistrationPage: "React.FC = () => {";
 const features = [",{";'"
 icon: "Brain",title: "'AI-Powered Intelligence'",description: "'Advanced AI algorithms that provide intelligent insights and recommendations.'",benefits: "['Smart recommendations'",'Predictive analytics', 'Automated insights', 'Real-time analysis'];
 }"
@@ -31,7 +31,7 @@ Call Now"
                 <Mail className="mr-2 h-5 w-5"  />;
 Email Us;
         </>;
-}  );"
+}  );
 export default ServiceWorkerRegistrationPage))},"
     <div className="grid grid-cols-1 md: grid-cols-2 gap-6" />{benefits.map((benefit,index) => ("
               <divkey = {index} className="flex items-start space-x-3" />"

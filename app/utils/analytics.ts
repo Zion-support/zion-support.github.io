@@ -1,30 +1,18 @@
-<<<<<<< HEAD
 import React from 'react';
 
 // Analytics utilities for tracking user interactions and performance
 
 interface AnalyticsEvent {
-=======
-// Analytics utilities for tracking user interactions and performance;
-import React from 'react'
-;
-interface AnalyticsEvent {;
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
   category: string;
   action: string;
   label?: string;
   value?: number;
   timestamp?: number;
-<<<<<<< HEAD
   custom_parameters?: Record<string, any>;
   timestamp?: number;
 }
 
 class Analytics {
-=======
-  custom_parameters?: Record<string, any>}
-class Analytics {;
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
   private static instance: Analytics;
   private events: AnalyticsEvent[] = [];
 ;
@@ -106,7 +94,6 @@ class Analytics {;
 export const analytics = Analytics.getInstance();
 // React hooks for easy integration;
 export function useAnalytics() {
-<<<<<<< HEAD
   return {
     track: analytics.track.bind(analytics),
     trackPageView: analytics.trackPageView.bind(analytics),
@@ -116,15 +103,6 @@ export function useAnalytics() {
     trackError: analytics.trackError.bind(analytics),
     getEvents: analytics.getEvents.bind(analytics),
   };
-=======
-  return {;
-    track: analytics.track.bind(analytics),;
-    trackPageView: analytics.trackPageView.bind(analytics),;
-    trackClick: analytics.trackClick.bind(analytics),;
-    trackFormSubmission: analytics.trackFormSubmission.bind(analytics),;
-    trackPerformance: analytics.trackPerformance.bind(analytics),;
-    trackError: analytics.trackError.bind(analytics)}
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
 }
 // Higher-order component for automatic page view tracking;
 export function withAnalytics<T extends React.ComponentType<any>>(WrappedComponent: T): T {;

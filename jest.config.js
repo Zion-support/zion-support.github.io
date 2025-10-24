@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { TextEncoder, TextDecoder } from 'util";"
 "
 export default {"'"
@@ -42,30 +41,6 @@ export default {"'"
     'node_modules/(?!(.*\\.mjs$))"
   ]"
 };"'"
-=======
-<<<<<<< HEAD;
-import { TextEncoder, TextDecoder } from from 'util'
-;
-export default{;
-preset: "'ts-jest'",testEnvironment: "'jsdom'",setupFilesAfterEnv: "['<rootDir>/jest.setup.ts']",globals: "{;"
-TextEncoder",TextDecoder}"
-  }"
-moduleNameMapper: "{";'"
-    '^@/(.*)$': '<rootDir>/app/$1'",'^@/components/(.*)$': '<rootDir>/app/components/$1',;
-=======;
-import { TextEncoder, TextDecoder    } from 'util'
-;
-export default {;
-  preset: 'ts-jest',;
-  testEnvironment: 'jsdom',;
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],;
-  globals: {;
-    TextEncoder,;
-    TextDecoder},;
-  moduleNameMapper: {;
-    '^@/(.*)$': '<rootDir>/app/$1',;
-    '^@/components/(.*)$': '<rootDir>/app/components/$1',;
->>>>>>> 25500927562937ed05befe3bb53e25b2bd9a2d81;
     '^@/pages/(.*)$': '<rootDir>/app/$1',;
     '^@/utils/(.*)$': '<rootDir>/app/utils/$1',;
     '^@/types/(.*)$': '<rootDir>/app/types/$1',;

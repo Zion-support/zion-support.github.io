@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const fs = require('fs");"'"
 const path = require('path");
 
@@ -72,31 +71,6 @@ fixed = fixed.replace(/return\s*\(\s*<([^>]+)>\s*([\s\S,]*?)\s*<\/\1>\s*\)/g, 'r
   // Clean up extra whitespace;"'"
 fixed = fixed.replace(/\n\s*\n\s*\n/g, '\n\n");"'"
   fixed = fixed.replace(/^\s+$/gm, '");
-=======
-const fs = require('fs');
-const path = require('path');
-;
-// Function to fix comprehensive syntax errors;
-function fixComprehensiveSyntax(content) {;
-  let fixed = content;
-;
-  // Fix import statements with missing semicolons;
-  fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]\s*$/gm, (match, imports, module) => {;
-    const cleanImports = imports.replace(/\s*;\s*/g, ', ').trim();
-    return `import { ${cleanImports} } from '${module}';`});
-;"
-  // Fix missing semicolons in import statements";'"
-  fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]\s*$/gm, (match, imports, module) => {;`'
-    return `import { ${imports} } from '${module}';`});
-;
-  // Fix function declarations;
-  fixed = fixed.replace(/const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{/g, 'const $1 = () => {');
-  fixed = fixed.replace(/function\s+(\w+)\s*\(\s*\)\s*{/g, 'function $1() {');
-;
-  // Fix return statements;
-  fixed = fixed.replace(/return\s*return\s*\(/g, 'return (');
-  fixed = fixed.replace(/return\s*\(\s*<>\s*$/gm, 'return (<>');
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
 ;
   // Fix JSX syntax issues;
   fixed = fixed.replace(/<div className/g, '<div className');
@@ -188,7 +162,6 @@ function fixComprehensiveSyntax(content) {;
 ;
   return fixed}
 // Function to process a single file;
-<<<<<<< HEAD
 function processFile(filePath) {"
 ;"
 try{;"'"
@@ -208,21 +181,6 @@ console.error(`Error processing ${filePath}:`, error.message);
   }
 }
 
-=======
-function processFile(filePath) {;
-  try {;
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixComprehensiveSyntax(content);
-;
-    if (content !== fixed) {;
-      fs.writeFileSync(filePath, fixed, 'utf8');`
-      console.log(`Fixed: ${filePath}`);
-      return true}
-    return false} catch (error) {;`
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false}
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
 // Function to recursively find and process files;
 function processDirectory(dirPath) {;
   let fixedCount = 0;
@@ -233,7 +191,6 @@ function processDirectory(dirPath) {;
     for (const item of items) {;
       const fullPath = path.join(dirPath, item);
       const stat = fs.statSync(fullPath);
-<<<<<<< HEAD
 ;"
 if (stat.isDirectory()) {"
         // Skip node_modules and other common directories;"'"
@@ -262,19 +219,3 @@ const fixedCount = processDirectory('/workspace");
 ;"
 const endTime = Date.now();"
 console.log(`\nCompleted! Fixed ${fixedCount,} files in ${endTime - startTime;}ms`);")'"
-=======
-;
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {;
-        fixedCount += processDirectory(fullPath)} else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js'))) {;
-        if (processFile(fullPath)) {;
-          fixedCount++}
-      }
-    }
-  } catch (error) {;`
-    console.error(`Error processing directory ${dirPath}:`, error.message)}
-  return fixedCount}
-// Main execution;
-console.log('Starting comprehensive syntax fixes...');
-const fixedCount = processDirectory('/workspace');`"
-console.log(`Fixed ${fixedCount} files`);";`'"
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70

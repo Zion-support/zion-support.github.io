@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-import React from 'react";"
+import React from 'react';
 import { Helmet } from 'react-helmet-async";"
 import Link from 'next/link'"
  } from "@heroicons/react/24/outline";'"
-=======
-import React from 'react'
-import { Helmet } from from 'react-helmet-async'
-import Link from 'next/link'
-} from '@heroicons/react/24/outline'
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70

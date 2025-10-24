@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-'use client";"
-import React from 'react";"
+'use client';
+import React from 'react';
 import, React, { useEffect, useState, useRef } from "react";"
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver";"
 interface AnimatedCounterProps {"
@@ -44,35 +43,6 @@ animationFrame = requestAnimationFrame(animate)
       ) => {
 $3
 ,, , }
-=======
-'use client'
-import React from 'react'
-import, React, { useEffect, useState, useRef } from 'react'
-import { useIntersectionObserver } from from '../hooks/useIntersectionObserver'
-interface AnimatedCounterProps {;
-end: "number;
-  duration?: number;
-  suffix?: string;"
-  prefix?: string"
-"}
-  className?: string}
-}"
-"
-const AnimatedCounter: "React.FC<AnimatedCounterProps> = ({"
-end",duration = 2000;
-suffix = ''
-prefix = ''
-className = '');
-}) => {;
-const [count, setCount] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);"
-const [setNode, entry] = useIntersectionObserver({)"
-threshold: "0.5)"
-  "});
-useEffect(() => {;
-if(entry?.isIntersecting && !isVisible) {;
-setIsVisible(true);
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
     }
   }, [entry, isVisible]);"
 useEffect(() => {"
@@ -92,7 +62,6 @@ animationFrame = requestAnimationFrame(animate);
 $3;
 ,}
     }
-<<<<<<< HEAD
   }, [isVisible, end, duration,])
 return(,
     <span className={className,;} />
@@ -102,18 +71,3 @@ return(,
 };"
 export default AnimatedCounter;"
 }"'"
-=======
-animationFrame = requestAnimationFrame(animate);
-return () => {;
-if(animationFrame) {;
-cancelAnimationFrame(animationFrame);
-      ,}
-    }
-  }, [isVisible, end, duration]);
-return(,;
-    <span className={className}  />
-      {prefix}{count}{suffix}</span>);
-    </span>);
-  )}"
-export default AnimatedCounter}";'"
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70

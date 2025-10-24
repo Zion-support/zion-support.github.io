@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-'use client";"
+'use client';
 import { useCallback, useMemo, useState, useEffect } from 'react";"
 // Performance optimization utilities"
 "
@@ -59,64 +58,6 @@ const observe = useCallback(;)"
 if(observer && element) {;"
 observer.observe(element);",return () => observer.unobserve(element);,
       }
-=======
-'use client'
-import { useCallback, useMemo, useState, useEffect } from from 'react'
-// Performance optimization utilities;
-// Debounce utility for performance: "all-pages-backup/utils/performanceOptimizations.ts;"
-export const debounce = <T extends (...args: any[]) => any>(;"
-  fun",c: "T",wait: "number</T>);
-): ((...args: Parameters<T>) => void) => {;"
-  let timeout: NodeJS.Timeout</>"
-export const debounce = <T extends (...args: any[]) => any>(",func: "T;
-  wait: number;</T>);
-): ((...args: Parameters<T>) => void) => {;"
-  let timeout: NodeJS.Timeout;"
-  return(...arg",</T>)"
-s: "Parameters<T>) => {;"
-clearTimeout(timeout);"
-timeout = setTimeout(() => func(...args)",wait);
-  }"
-}"
-// Throttle utility for performance: "all-pages-backup/utils/performanceOptimizations.ts</>;"
-export const throttle = <T extends (...args: any[]) => any>(;"
-  fun",c: "T",limit: "number</T>);
-): ((...args: Parameters<T>) => void) => {;"
-  let inThrottle: boolean</>"
-export const throttle = <T extends (...args: any[]) => any>(",func: "T;
-limit: number</>);
-): ((...args: Parameters<T>) => void) => {;"
-  let inThrottle: boolean;"
-  return(...arg",</T>)"
-s: "Parameters<T>) => {;"
-if(!inThrottle) {  ;"
-func(...args)",inThrottle = true,;
-setTimeout(() => (inThrottle = false), limit);
-    }
-  }"
-}"
-// Intersection Observer hook for lazy loading: "all-pages-backup/utils/performanceOptimizations.ts;"
-export const useIntersectionObserver = (;");"
-  callback: (entrie",s: "IntersectionObserverEntry[]) => void",export const useIntersectionObserver = (;");"
-callback: "(entries: IntersectionObserverEntry[]) => void;"
-option",s: "IntersectionObserverInit = {"}
-) => {;
-  const observer = useMemo();
-    () =>;
-typeof window !== 'undefined'
-        ? new IntersectionObserver(callback, {;"
-:all-pages-backup/utils/performanceOptimizations.ts;");'"
-threshold: "0.1",rootMargin: "'50px'",threshold: "0.1)";'"
-rootMargi",n: "'50px'",...options);
-          });
-        : null;
-    [callback, options];
-  );"
-const observe = useCallback()"
-    (element: "Element | null) => {;"
-if(observer && element) {;"
-observer.observe(element)",return () => observer.unobserve(element)}
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
       return () => {}
     }
     [observer];
@@ -130,7 +71,6 @@ useEffect(() => {;
 return () => disconnect();
   }, [disconnect]);
 return { observe, disconnect }
-<<<<<<< HEAD
 ;}
 "
 // Image lazy loading hook;"
@@ -138,14 +78,6 @@ export const useLazyImage = (;"'"
   const [imageSrc, setImageSrc,] = useState(placeholder || '");
   const [isLoaded, setIsLoaded,] = useState(false);
   const [isError, setIsError,] = useState(false);
-=======
-}
-// Image lazy loading hook;
-export const useLazyImage = ();
-  const [imageSrc, setImageSrc] = useState(placeholder || '');
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isError, setIsError] = useState(false);
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
 ;
 const { observe ) => {;
 $3;
@@ -174,7 +106,6 @@ const [metrics, setMetrics] = useState<{;
 lcp?: number;
 fid?: number;
 cls?: number;
-<<<<<<< HEAD
 ttfb?: number
   ) => {
 $3"
@@ -218,46 +149,6 @@ getTTFB((metric) => setMetrics(prev = > ({ ...prev, ttfb: "metric.value ",})))
 return () => {;"'"
 window.removeEventListener('load", updateMetrics);
     }
-=======
-ttfb?: number);
-  ) => {;
-$3;
-}>({});
-useEffect(() => {;
-if (typeof window = == 'undefined') return;
-;
-    const updateMetrics = ();
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paint = performance.getEntriesByType('paint');
-      const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime;
-const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime;"
-setMetrics({;"
-fcp: "all-pages-backup/utils/performanceOptimizations.ts;"
-lcp",ttfb: "navigation?.responseStart - navigation?.requestStart);"
-lcp)"
-ttf",b: "navigation?.responseStart - navigation?.requestStart)"
-      ",) => {;
-$3;
-});
-    }
-    // Monitor performance after page load;
-if(document.readyState = == 'complete') {;
-updateMetrics();
-    } else { ;
-window.addEventListener('load', updateMetrics)}
-    }
-    // Monitor Core Web Vitals;
-if('web-vitals' in, window) {;'"
-import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {;"
-getCLS((metric) => setMetrics(prev => ({ ...prev, cls: "metric.value "})));"
-getFID((metric) => setMetrics(prev => ({ ...prev, fid: "metric.value "})));"
-getFCP((metric) => setMetrics(prev => ({ ...prev, fcp: "metric.value "})));"
-getLCP((metric) => setMetrics(prev => ({ ...prev, lcp: "metric.value "})));"
-getTTFB((metric) => setMetrics(prev = > ({ ...prev, ttfb: "metric.value "})));
-      })}
-return () => {;
-window.removeEventListener('load', updateMetrics)}
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
   }, []);
 return, metrics;
 }
@@ -266,7 +157,6 @@ export const useMemoryMonitoring = (;
   const [memoryInfo, setMemoryInfo] = useState<{;
     usedJSHeapSize?: number;
 totalJSHeapSize?: number;
-<<<<<<< HEAD
 jsHeapSizeLimit?: number
   ) => {
 $3"
@@ -284,25 +174,6 @@ jsHeapSizeLimi",t: "memory.jsHeapSizeLimit)"
         ",) => {
 $3
 })
-=======
-jsHeapSizeLimit?: number);
-  ) => {;
-$3;
-}>({});
-useEffect(() => {;
-if (typeof window === 'undefined' || !('memory' in, performance)) return;
-const updateMemoryInfo = ();
-      const memory = (performance, as, any).memory;
-if(memory) {;
-setMemoryInfo({;"
-:all-pages-backup/utils/performanceOptimizations.ts;"
-usedJSHeapSize: "memory.usedJSHeapSize",totalJSHeapSize: "memory.totalJSHeapSize",jsHeapSizeLimit: "memory.jsHeapSizeLimit",usedJSHeapSize: "memory.usedJSHeapSize);"
-totalJSHeapSize: memory.totalJSHeapSize)"
-jsHeapSizeLimi",t: "memory.jsHeapSizeLimit)"
-        ",) => {;
-$3;
-});
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
       }
     }
 updateMemoryInfo();
@@ -310,27 +181,18 @@ updateMemoryInfo();
     return () => clearInterval(interval)}, []);
 return, memoryInfo;
 }
-<<<<<<< HEAD
 "
 // Resource preloading utility;"
 export const preloadResource = (;"'"
   if (typeof window = == 'undefined") return;"'"
   const link = document.createElement('link");"'"
   link.rel = 'preload";
-=======
-// Resource preloading utility;
-export const preloadResource = ();
-  if (typeof window = == 'undefined') return;
-  const link = document.createElement('link');
-  link.rel = 'preload'
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
 link.href = href;
 link.as = as,;
   document.head.appendChild(link);,;
 ) => {;
 $3;
 }
-<<<<<<< HEAD
 "
 // Critical resource preloading;"
 export const preloadCriticalResources = (;"'"
@@ -344,19 +206,6 @@ preloadResource('/images/hero-bg.webp', 'image");"'"
 preloadResource('/styles/critical.css', 'style");
 ) => {
 $3
-=======
-// Critical resource preloading;
-export const preloadCriticalResources = ();
-  if (typeof window = == 'undefined') return // Preload critical fonts;
-  preloadResource('/fonts/inter-var.woff2', 'font');
-  preloadResource('/fonts/inter-var.woff', 'font');
-  // Preload critical images;
-preloadResource('/images/hero-bg.webp', 'image');
-  preloadResource('/images/logo.svg', 'image');
-  // Preload critical CSS;
-preloadResource('/styles/critical.css', 'style')) => {;
-$3;
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
 }
 // Bundle size monitoring;
 export const useBundleSizeMonitoring = (;
@@ -364,7 +213,6 @@ export const useBundleSizeMonitoring = (;
     totalSize?: number;
 jsSize?: number;
 cssSize?: number;
-<<<<<<< HEAD
 imageSize?: number
   ) => {
 $3"
@@ -374,22 +222,10 @@ if (typeof window = == 'undefined") return;"
 ;"
     const calculateBundleSize = (;"'"
       const resources = performance.getEntriesByType('resource");
-=======
-imageSize?: number);
-  ) => {;
-$3;
-}>({});
-useEffect(() => {;
-if (typeof window = == 'undefined') return;
-;
-    const calculateBundleSize = ();
-      const resources = performance.getEntriesByType('resource');
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
       let totalSize = 0;
 let jsSize = 0;
 let cssSize = 0;
 let imageSize = 0;
-<<<<<<< HEAD
 resources.forEach((resource) => {;"
 const size = (resource, as, PerformanceResourceTiming).transferSize || 0;"
 totalSize += size;"'"
@@ -399,24 +235,12 @@ jsSize += size"
 $3"'"
 } else if (resource.name.includes('.css")) {;
 cssSize += size
-=======
-resources.forEach((resource) => {;
-const size = (resource, as, PerformanceResourceTiming).transferSize || 0;
-totalSize += size;
-if (resource.name.includes('.js')) {;
-jsSize += size;
-        ) => {;
-$3;
-} else if (resource.name.includes('.css')) {;
-cssSize += size;
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
         } else if (resource.name.match(/\.(jpg|jpeg|png|gif|webp|svg)$/)) {;
 imageSize += size;
         }
       });
 setBundleSize({;
 totalSize;
-<<<<<<< HEAD
 jsSize;
 cssSize;)
 imageSize)
@@ -433,21 +257,6 @@ window.addEventListener('load", calculateBundleSize);, }
 return () => {;"'"
 window.removeEventListener('load", calculateBundleSize);
     }
-=======
-jsSize);
-cssSize);
-imageSize);
-      });
-    }
-    // Calculate after page load;
-if(document.readyState = == 'complete') {;
-calculateBundleSize();
-    } else { ;
-window.addEventListener('load', calculateBundleSize)}
-    }
-return () => {;
-window.removeEventListener('load', calculateBundleSize)}
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
   }, []);
 return, bundleSize;
 }
@@ -459,7 +268,6 @@ throttle;
 useIntersectionObserver;
 useLazyImage;
 usePerformanceMonitoring;
-<<<<<<< HEAD
 useMemoryMonitoring;"
 preloadResource;"
 preloadCriticalResources;"
@@ -472,12 +280,3 @@ export default, performanceOptimizations
 export default performanceOptimizations;"
 "
 }}"'"
-=======
-useMemoryMonitoring;
-preloadResource;"
-preloadCriticalResources;"
-useBundleSizeMonitoring: "all-pages-backup/utils/performanceOptimizations.ts"}
-export default, performanceOptimizations;
-}"
-export default performanceOptimizations}}";'"
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70

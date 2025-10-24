@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { defineConfig } from 'vite";"
 import react from '@vitejs/plugin-react";"
 import { resolve } from 'path";"
@@ -33,25 +31,6 @@ return 'react-dom";"
             ",}"'"
             if (id.includes('react/') && !id.includes('react-dom")) {;"'"
 return 'react-core";"
-======="'
-import { defineConfig } from 'vite'"
-import react from "@vitejs/plugin-react
-
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react()],
-  build: {
-    outDir: dist,
-    sourcemap: true,
-    minify: terser,
-    rollupOptions: {
-      output: {
-        manualChunks: (id) => {
-          // Vendor chunks
-          if (id.includes(node_modules)) {
-            if (id.includes(react) || id.includes(react-dom)) {"
-              return react-vendor";"
->>>>>>> 25500927562937ed05befe3bb53e25b2bd9a2d81"
             }"'"
             if (id.includes('react-router")) {"'"
               return 'router-vendor";"
@@ -141,57 +120,7 @@ include: ["'"
 css: "{;"
 devSourcemap: true",},
 });
-=======
-=======
-<<<<<<< HEAD;
-import { defineConfig } from from 'vite'
-import react from '@vitejs/plugin-react'
-import { resolve } from from 'path'
-;
-// https: "//vitejs.dev/config/;
-export default defineConfig({;
-plugins: [;
-react({);"
-      // Optimize JSX runtime)";'"
-jsxRuntime: 'automatic'"});"
-  ],;"
-resolve: "{;"
-alias: {";'"
-      '@': resolve(__dirname",'./app'),;
-      '@components': resolve(__dirname, './app/components'),;
-      '@pages': resolve(__dirname, './app/pages'),;
-      '@utils': resolve(__dirname, './utils'),;'"
-      '@types': resolve(__dirname, './types')}}"
-build: "{;";'"
-outDir: 'dist'",sourcemap: "false",minify: "'esbuild'",target: "'es2020'",cssCodeSplit: "true",cssTarget: "'chrome80'",reportCompressedSize: "true",chunkSizeWarningLimit: "500",emptyOutDir: "true",copyPublicDir: "true",rollupOptions: "{;"
-treeshake: {;"
-moduleSideEffects: false"}"
-output: "{;";'"
-chunkFileNames: 'assets/[name]-[hash].js'",manualChunks: "(id) => {;
-if (id.includes('node_modules')) {;
-            // Split React into smaller chunks;'"
-if (id.includes('react-dom')) {;";'"
-return 'react-dom'"}'
-            if (id.includes('react/') && !id.includes('react-dom')) {;
-return 'react-core'
-=======;
-import { defineConfig    } from 'vite'
-import react from '@vitejs/plugin-react'
-// https://vitejs.dev/config/;
-export default defineConfig({);
-  plugins: [react()],;
-  build: {;
-    outDir: 'dist',;
-    sourcemap: true,;
-    minify: 'terser',;
-    rollupOptions: {;
-      output: {;
-        manualChunks: (id) => {;
-          // Vendor chunks;
-          if (id.includes('node_modules')) {;
-            if (id.includes('react') || id.includes('react-dom')) {;
-              return 'react-vendor'
->>>>>>> 25500927562937ed05befe3bb53e25b2bd9a2d81;
+
             }'
             if (id.includes('react-router')) {;
               return 'router-vendor'}'
@@ -280,7 +209,6 @@ devSourcemap: true"}});
     hmr: {;
       overlay: false;
     }
-<<<<<<< HEAD
   },"
   optimizeDeps: {"
     include: ["'"
@@ -302,23 +230,5 @@ devSourcemap: true"}});
 >>>>>>> 25500927562937ed05befe3bb53e25b2bd9a2d81"
 "
 }}'"
-=======
-  },;
-  optimizeDeps: {;
-    include: [;
-      'react',;
-      'react-dom',;
-      'react-router-dom',;
-      '@heroicons/react',;
-      'framer-motion',;
-      'lucide-react'
-    ];
-  },;
-  esbuild: {;
-    drop: ['console', 'debugger']},;
-  css: {;
-    devSourcemap: true}
-});
->>>>>>> 25500927562937ed05befe3bb53e25b2bd9a2d81;"
 ";'"
 >>>>>>> cursor/fix-errors-and-merge-to-main-eb70

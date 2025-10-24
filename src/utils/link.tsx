@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-'use client";"
+'use client';
 import React from 'react";
 
 export const link = (;
@@ -7,12 +6,3 @@ export const link = (;
 ) => {"
 $3"
 ,};"'"
-=======
-"use client"
-import React from 'react'
-;
-export const link = ();
-  return null) => {;
-$3;"
-}";'"
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70

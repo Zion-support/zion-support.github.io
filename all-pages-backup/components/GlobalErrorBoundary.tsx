@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-'use client";"
+'use client';
               <p className="mt-2 text-sm text-gray-500";"
 className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md "hover": bg-blue-700 focus: "outline-none focus:ring-2 focu",s: ring-blue-500 transition-colors",;"'"
-=======
-"use client","
-    <div className="min-h-screen flex items-center justify-center bg-gray-50","
-    <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6","
-    <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full""
-className="w-6 h-6 text-red-600""
-fill="none""
-stroke="currentColor""
-viewBox="0 0 24 24""
-strokeLinecap="round""
-strokeLinejoin="round""
-d="M12 9 v2m0 4 h.01 m-6.938 4 h13.856 c1.54 0 2.502-1.667 1.732-2.5 L13.732 4 c-.77-.833-1.732-.833-2.5 0 L4.268 19.5 c-.77.833.192 2.5 1.732 2.5 z","
-    <div className="mt-4 text-center","
-    <h1 className="text-lg font-medium text-gray-900""
-              <p className="mt-2 text-sm text-gray-500">
-className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md "hover": bg-blue-700 focus: "outline-none focus:ring-2 focu",s: ring-blue-500 transition-colors",;"
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70

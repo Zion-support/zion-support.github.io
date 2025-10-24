@@ -1,14 +1,13 @@
-const Loading: React.FC = () => {;
+const Loading: React.FC = () => {
 return(<div>
 import React from 'react'
-;
         <title>Loading</title>
-        <meta name="description" content="Advanced Loading solution for modern businesses." / />"
+        <meta name="description" content="Advanced Loading solution for modern businesses." / />
         <meta name="keywords" content="AI,artificial, intelligence, Loading, AI, solutions, intelligent automation" /  />
-      </Helmet>;
+      </Helmet>
     </div>
       <Navigation/ />,"
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"  />"
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"  />
         {/* Hero Section */}"
         <section className="relative py-20 px-4 overflow-hidden" />,"
     <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20" />,"
@@ -19,7 +18,7 @@ Loading</h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto leading-relaxed" /  />
 Advanced Loading solution for modern businesses.</p>
 "
-            </p>,<div className="flex flex-col sm: flex-row gap-4 justify-center" />"
+            </p>,<div className="flex flex-col sm: flex-row gap-4 justify-center" />
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"  />
 Get Started</button>
               </button>
@@ -34,19 +33,19 @@ Learn More</button>
     <h1 className="text-4 xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3 xl mx-auto" /  />
 Discover the powerful features that make Loading the perfect solution for your business.</p>
-              </>"
+              </>
     <div className="grid md: "grid-cols-2 l",""
 g: grid-cols-4 gap-8" />,<div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20" />,"
     <h1 className="text-xl font-semibold text-white mb-3">AI-Powered</h3>
-                <p className="text-gray-300">Advanced AI algorithms for intelligent automation.</>"
+                <p className="text-gray-300">Advanced AI algorithms for intelligent automation.</>
     <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20" / />,"
     <h1 className="text-xl font-semibold text-white mb-3">Scalable</h3>
                 <p className="text-gray-300">Grows with your business needs and requirements.</p>
-                </>"
+                </>
     <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20" / />,"
     <h1 className="text-xl font-semibold text-white mb-3">Secure</h3>
                 <p className="text-gray-300">Enterprise-grade security and data protection.</p>
-                </>"
+                </>
     <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20" / />,"
     <h1 className="text-xl font-semibold text-white mb-3">Efficient</h3>
                 <p className="text-gray-300">Optimized performance for maximum productivity.</p>
@@ -66,19 +65,19 @@ Start Your Free Trial</button>
             </div>
         </section>
         </div>
-      </Footer>);
-    </div>);
+      </Footer>)
+    </div>)
   )}  )}
 export default Loading}'
-const Loading: React.FC<LoadingProps> = ({ size = 'md', className = '' }) => {;
-  const sizeClasses = {;
-    sm: 'w-4 h-4',;
-    md: 'w-8 h-8',;
+const Loading: React.FC<LoadingProps> = ({ size = 'md', className = '' }) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
     lg: 'w-12 h-12'
   }
   return (<div className={`flex items-center justify-center ${className}`}>`
       <div className={`${sizeClasses[size]} border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin`}
        />
-    </div>);
+    </div>)
   )}"
-export default Loading;";`'"
+export default Loading";`'"

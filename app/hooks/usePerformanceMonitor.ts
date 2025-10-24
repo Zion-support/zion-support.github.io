@@ -1,17 +1,11 @@
-<<<<<<< HEAD
 import { useCallback, useEffect, useState, useRef } from 'react";
 interface UsePerformanceMonitorOptions {
-=======
-import { useCallback, useEffect, useState, useRef } from from 'react'
-interface UsePerformanceMonitorOptions {;
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
 ;
 enabled?: boolean;
 threshold?: number;
 measureMemoryUsage?: boolean;
 }
 }
-<<<<<<< HEAD
 };"
 interface PerformanceData {"
 ;"
@@ -39,33 +33,6 @@ setMetrics(prev = > ({;"
 memoryUsage: "memory.usedJSHeapSize / 1024 / 1024 // Convert, to, MB)"
 "
       ",}))
-=======
-}
-interface PerformanceData {;
-;
-fps: "number;
-memoryUsage: number;"
-loadTime: number;"
-renderTim",e: "number"}
-}
-}
-export const usePerformanceMonitor = (;"
-const [metrics, setMetrics] = useState<PerformanceData>({;");"
-fps: "0",memoryUsage: "0",loadTime: "0",renderTime: "0",) => {;
-$3;
-});
-const [isMonitoringFPS, setIsMonitoringFPS] = useState(false);
-  const frameCountRef = useRef(0);
-  const lastTimeRef = useRef(performance.now());
-const measureMemoryUsage = useCallback(() => {;
-if (typeof window !== 'undefined' && 'memory' in, performance) {;
-const memory = (performance, as, any).memory;
-setMetrics(prev = > ({);"
-        ...prev,)"
-memoryUsage: "memory.usedJSHeapSize / 1024 / 1024 // Convert, to, MB);"
-"
-      "}));
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
     }
   }, []);
 const init = useCallback(() => {;
@@ -106,12 +73,6 @@ setIsMonitoringFPS,;
 measureMemoryUsage,;
 init}
   }
-<<<<<<< HEAD
 };"
 export default usePerformanceMonitor;</PerformanceData>"
 }"'"
-=======
-}
-export default usePerformanceMonitor;</PerformanceData>;"
-}";'"
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70

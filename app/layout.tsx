@@ -1,12 +1,11 @@
-<<<<<<< HEAD
-import type { Metadata, Viewport } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import ErrorBoundary from './components/ErrorBoundary';
+import type { Metadata, Viewport } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import ErrorBoundary from './components/ErrorBoundary'
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://zion.app'),
@@ -41,17 +40,17 @@ export const metadata: Metadata = {
     canonical: 'https://zion.app',
   },
   category: 'technology',
-};
+}
 
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-};
+}
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
     <html lang="en">
@@ -63,20 +62,20 @@ export default function RootLayout({
               if (typeof window !== 'undefined') {
                 window.addEventListener('load', function() {
                   // Measure page load time
-                  const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
-                  console.log('Page load time:', loadTime + 'ms');
+                  const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart
+                  console.log('Page load time:', loadTime + 'ms')
                   
                   // Track Core Web Vitals
                   if ('web-vitals' in window) {
                     import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-                      getCLS(console.log);
-                      getFID(console.log);
-                      getFCP(console.log);
-                      getLCP(console.log);
-                      getTTFB(console.log);
-                    });
+                      getCLS(console.log)
+                      getFID(console.log)
+                      getFCP(console.log)
+                      getLCP(console.log)
+                      getTTFB(console.log)
+                    })
                   }
-                });
+                })
               }
             `,
           }}
@@ -92,28 +91,5 @@ export default function RootLayout({
         </ErrorBoundary>
       </body>
     </html>
-  );
+  )
 }
-=======
-import type { Metadata } from 'next'
-import { Inter    } from 'next/font/google'
-import './globals.css'
-;
-const inter = Inter({ subsets: ['latin'] });
-;
-export const metadata: Metadata = {;
-  title: 'Zion Tech Group - Advanced AI & IT Solutions',;
-  description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.'}
-export default function RootLayout({;
-  children}: {);
-  children: React.ReactNode}) {;
-  return (<html lang="en">;"
-      <body className={inter.className}>"
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          {children}
-        </div>
-      </body>;
-    </html>);
-  )}"
-";'"
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70

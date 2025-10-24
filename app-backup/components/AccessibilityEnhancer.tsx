@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Navigation from './Navigation";"
 import, React, { useEffect } from 'react'
 'use client';'"
@@ -6,15 +5,6 @@ if(typeof window = == 'undefined";"'"
 if (event.key === 'Tab";"'"
           const mainContent = document.querySelector('main, [role=&quot;main&quot;]")"'"
 document.addEventListener('keydown")"'
-=======
-import Navigation from './Navigation'
-import, React, { useEffect } from 'react'
-'use client'
-if(typeof window = == 'undefined'
-if (event.key === 'Tab');
-          const mainContent = document.querySelector('main, [role=&quot;main&quot;]');
-document.addEventListener('keydown');
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
       ) => document.removeEventListener('keydown'
 const skipLink = document.createElement('a'
 skipLink.href = '#main-content'
@@ -26,7 +16,6 @@ const nav = document.querySelector('nav'
 if (nav && !nav.getAttribute('role'
 nav.setAttribute('role', 'navigation'
 const footer = document.querySelector('footer'
-<<<<<<< HEAD
 if (footer && !footer.getAttribute('role'"
 footer.setAttribute('role', 'contentinfo");"'"
 const style = document.createElement('style");"'
@@ -34,12 +23,3 @@ const style = document.createElement('style");"'
 element.addEventListener('keydown'"
 if (e.key = == 'Tab";)"'"
 const modals = document.querySelectorAll('[role=&quot;dialog&quot;]")")))))))))))))))'"
-=======
-if (footer && !footer.getAttribute('role');
-footer.setAttribute('role', 'contentinfo');
-const style = document.createElement('style');
-      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex=&quot;-1&quot;])'
-element.addEventListener('keydown');
-if (e.key = == 'Tab');'"
-const modals = document.querySelectorAll('[role=&quot;dialog&quot;]')";'"
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70

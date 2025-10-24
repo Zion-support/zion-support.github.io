@@ -1,15 +1,8 @@
-<<<<<<< HEAD
 import React from 'react';
 
 // Performance monitoring utilities
 
 export class PerformanceMonitor {
-=======
-// Performance monitoring utilities;
-import React from 'react'
-;
-export class PerformanceMonitor {;
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
   private static instance: PerformanceMonitor;
   private metrics: Map<string, number> = new Map();
   static getInstance(): PerformanceMonitor {;
@@ -52,7 +45,6 @@ export class PerformanceMonitor {;
     // First Input Delay;
     new PerformanceObserver((entryList) => {;
       const entries = entryList.getEntries();
-<<<<<<< HEAD
       entries.forEach((entry) => {
         const fidEntry = entry as any;
         const fid = fidEntry.processingStart ? fidEntry.processingStart - fidEntry.startTime : 0;
@@ -61,14 +53,6 @@ export class PerformanceMonitor {;
     }).observe({ entryTypes: ['first-input'] });
 
     // Cumulative Layout Shift
-=======
-      entries.forEach((entry) => {;
-        // Use processingStart if available, otherwise calculate from startTime;
-        const processingStart = (entry as any).processingStart || entry.startTime;
-        this.metrics.set('FID', processingStart - entry.startTime)})}).observe({ entryTypes: ['first-input'] });
-;
-    // Cumulative Layout Shift;
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
     let clsValue = 0;
     new PerformanceObserver((entryList) => {;
       const entries = entryList.getEntries();
