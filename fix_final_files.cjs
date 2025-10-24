@@ -1,29 +1,29 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
 // Fix context files
 const fixContextFiles = () => {
   const contextFiles = [];
-  
+
   const scanDirectory = (dir) => {
     const items = fs.readdirSync(dir);
-    items.forEach(item => {
+    items.forEach((item) => {
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
-      
+
       if (stat.isDirectory()) {
         scanDirectory(fullPath);
-      } else if (item.endsWith('Context.tsx') || item.endsWith('Context.ts')) {
+      } else if (item.endsWith("Context.tsx") || item.endsWith("Context.ts")) {
         contextFiles.push(fullPath);
       }
     });
   };
-  
-  scanDirectory('app');
-  
-  contextFiles.forEach(filePath => {
+
+  scanDirectory("app");
+
+  contextFiles.forEach((filePath) => {
     try {
-      const fileName = path.basename(filePath, '.tsx').replace('.ts', '');
+      const fileName = path.basename(filePath, ".tsx").replace(".ts", "");
       const content = `import React, { createContext, useContext, useState, useEffect } from 'react';
 
 interface ${fileName}State {
@@ -60,7 +60,7 @@ export const ${fileName}Provider: React.FC<{ children: React.ReactNode }> = ({ c
 };
 
 export default ${fileName};`;
-      
+
       fs.writeFileSync(filePath, content);
       console.log(`Fixed context file: ${filePath}`);
     } catch (error) {
@@ -72,24 +72,24 @@ export default ${fileName};`;
 // Fix error files
 const fixErrorFiles = () => {
   const errorFiles = [];
-  
+
   const scanDirectory = (dir) => {
     const items = fs.readdirSync(dir);
-    items.forEach(item => {
+    items.forEach((item) => {
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
-      
+
       if (stat.isDirectory()) {
         scanDirectory(fullPath);
-      } else if (item === 'error.tsx' || item === 'error.ts') {
+      } else if (item === "error.tsx" || item === "error.ts") {
         errorFiles.push(fullPath);
       }
     });
   };
-  
-  scanDirectory('app');
-  
-  errorFiles.forEach(filePath => {
+
+  scanDirectory("app");
+
+  errorFiles.forEach((filePath) => {
     try {
       const content = `import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -129,7 +129,7 @@ const ErrorPage: React.FC<ErrorPageProps> = ({ error, resetError }) => {
 };
 
 export default ErrorPage;`;
-      
+
       fs.writeFileSync(filePath, content);
       console.log(`Fixed error file: ${filePath}`);
     } catch (error) {
@@ -141,24 +141,29 @@ export default ErrorPage;`;
 // Remove any remaining problematic files
 const removeProblematicFiles = () => {
   const problematicFiles = [];
-  
+
   const scanDirectory = (dir) => {
     const items = fs.readdirSync(dir);
-    items.forEach(item => {
+    items.forEach((item) => {
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
-      
+
       if (stat.isDirectory()) {
         scanDirectory(fullPath);
-      } else if (item.includes('broken') || item.includes('corrupted') || item.includes('temp') || item.includes('backup')) {
+      } else if (
+        item.includes("broken") ||
+        item.includes("corrupted") ||
+        item.includes("temp") ||
+        item.includes("backup")
+      ) {
         problematicFiles.push(fullPath);
       }
     });
   };
-  
-  scanDirectory('app');
-  
-  problematicFiles.forEach(filePath => {
+
+  scanDirectory("app");
+
+  problematicFiles.forEach((filePath) => {
     try {
       fs.unlinkSync(filePath);
       console.log(`Removed problematic file: ${filePath}`);
@@ -169,13 +174,13 @@ const removeProblematicFiles = () => {
 };
 
 // Run all fixes
-console.log('Fixing context files...');
+console.log("Fixing context files...");
 fixContextFiles();
 
-console.log('Fixing error files...');
+console.log("Fixing error files...");
 fixErrorFiles();
 
-console.log('Removing problematic files...');
+console.log("Removing problematic files...");
 removeProblematicFiles();
 
-console.log('All final files have been fixed!');
+console.log("All final files have been fixed!");

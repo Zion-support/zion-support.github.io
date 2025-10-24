@@ -1,22 +1,22 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
 // Get all .tsx files in the app directory
 function getAllTsxFiles(dir) {
   let results = [];
   const list = fs.readdirSync(dir);
-  
-  list.forEach(file => {
+
+  list.forEach((file) => {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
-    
+
     if (stat && stat.isDirectory()) {
       results = results.concat(getAllTsxFiles(filePath));
-    } else if (file.endsWith('.tsx')) {
+    } else if (file.endsWith(".tsx")) {
       results.push(filePath);
     }
   });
-  
+
   return results;
 }
 
@@ -26,7 +26,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Globe, Database, Cpu, Target, BarChart, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckSquare, ShoppingCart, Settings, Calendar, TrendingUp, Lock } from 'lucide-react';
 
-const ${title.replace(/[^a-zA-Z0-9]/g, '')}Page: React.FC = () => {
+const ${title.replace(/[^a-zA-Z0-9]/g, "")}Page: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -167,16 +167,16 @@ const ${title.replace(/[^a-zA-Z0-9]/g, '')}Page: React.FC = () => {
   );
 };
 
-export default ${title.replace(/[^a-zA-Z0-9]/g, '')}Page;`;
+export default ${title.replace(/[^a-zA-Z0-9]/g, "")}Page;`;
 
 // Template for a clean component
 const createCleanComponent = (title, description) => `import React from 'react';
 
-interface ${title.replace(/[^a-zA-Z0-9]/g, '')}Props {
+interface ${title.replace(/[^a-zA-Z0-9]/g, "")}Props {
   className?: string;
 }
 
-const ${title.replace(/[^a-zA-Z0-9]/g, '')}: React.FC<${title.replace(/[^a-zA-Z0-9]/g, '')}Props> = ({ className = '' }) => {
+const ${title.replace(/[^a-zA-Z0-9]/g, "")}: React.FC<${title.replace(/[^a-zA-Z0-9]/g, "")}Props> = ({ className = '' }) => {
   return (
     <div className={\`${description} \${className}\`}>
       <h2>${title}</h2>
@@ -185,52 +185,58 @@ const ${title.replace(/[^a-zA-Z0-9]/g, '')}: React.FC<${title.replace(/[^a-zA-Z0
   );
 };
 
-export default ${title.replace(/[^a-zA-Z0-9]/g, '')};`;
+export default ${title.replace(/[^a-zA-Z0-9]/g, "")};`;
 
 // Function to get page info from file path
 function getPageInfo(filePath) {
-  const pathParts = filePath.split('/');
+  const pathParts = filePath.split("/");
   const fileName = pathParts[pathParts.length - 1];
   const pageName = pathParts[pathParts.length - 2];
-  
+
   let title;
-  if (fileName === 'page.tsx') {
-    title = pageName.split('-').map(word => 
-      word.charAt(0).toUpperCase() + word.slice(1)
-    ).join(' ');
+  if (fileName === "page.tsx") {
+    title = pageName
+      .split("-")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
   } else {
-    title = fileName.replace('.tsx', '').split('-').map(word => 
-      word.charAt(0).toUpperCase() + word.slice(1)
-    ).join(' ');
+    title = fileName
+      .replace(".tsx", "")
+      .split("-")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
   }
-  
+
   const description = `Professional ${title.toLowerCase()} solutions powered by advanced AI and cutting-edge technology.`;
   const keywords = `${title.toLowerCase()}, AI solutions, IT services, automation, technology, business solutions`;
-  
+
   return { title, description, keywords };
 }
 
 // Get all .tsx files
-const allTsxFiles = getAllTsxFiles('./app');
+const allTsxFiles = getAllTsxFiles("./app");
 
 console.log(`Found ${allTsxFiles.length} .tsx files`);
 
 let fixedCount = 0;
 
 // Replace ALL files with clean versions
-allTsxFiles.forEach(filePath => {
+allTsxFiles.forEach((filePath) => {
   try {
     const { title, description, keywords } = getPageInfo(filePath);
-    
+
     // Determine if it's a page or component
-    if (filePath.includes('/page.tsx')) {
+    if (filePath.includes("/page.tsx")) {
       const cleanContent = createCleanPage(title, description, keywords);
-      fs.writeFileSync(filePath, cleanContent, 'utf8');
+      fs.writeFileSync(filePath, cleanContent, "utf8");
     } else {
-      const cleanContent = createCleanComponent(title, 'bg-white p-4 rounded-lg');
-      fs.writeFileSync(filePath, cleanContent, 'utf8');
+      const cleanContent = createCleanComponent(
+        title,
+        "bg-white p-4 rounded-lg",
+      );
+      fs.writeFileSync(filePath, cleanContent, "utf8");
     }
-    
+
     console.log(`Replaced: ${filePath}`);
     fixedCount++;
   } catch (error) {

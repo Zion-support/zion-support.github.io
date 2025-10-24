@@ -1,30 +1,38 @@
-const isValidEmail = (email) => {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
-};
 
+const isValidEmail = (email) => {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+  return emailRegex.test(email)
+}
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
+    res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify({ error: 'Method not allowed' }))
+    return
   }
-
+  const { email } = req.body
+  if (!email) {
+    res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify({ error: 'Email is required' }))
+    return
+  }
+  if (!isValidEmail(email)) {
+    res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify({ error: 'Invalid email format' }))
+    return
+  }
   try {
-    const { email } = req.body;
-    
-    if (!email || !isValidEmail(email)) {
-      return res.status(400).json({ error: 'Valid email is required' });
-    }
-
-    // Here you would typically save to a database
-    // For now, we'll just return success
-    console.log('Newsletter subscription:', email);
-    
-    res.status(200).json({ 
-      message: 'Successfully subscribed to newsletter',
-      email: email 
-    });
+    // eslint-disable-next-line no-console
+    console.log('Newsletter subscription:', email)
+    res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify({
+      success: true,
+    message: 'Successfully subscribed to newsletter' }))
   } catch (error) {
-    console.error('Newsletter subscription error:', error);
-    res.status(500).json({ error: 'Internal server error' });
+    // eslint-disable-next-line no-console
+    console.error('Newsletter subscription error:', error)
+    res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify({
+      error: 'Failed to subscribe to newsletter',
+    details: process.env.NODE_ENV === 'development' ? error.message : undefined}))
   }
 }

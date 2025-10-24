@@ -1,9 +1,15 @@
-// Default SEO component for the Zion Tech Group website
+import React from 'react';
 
-import { SEOProps } from '../../utils/seoUtils';
-import { MetaTags } from './MetaTags';
+interface DefaultSEOProps {
+  className?: string;
+}
 
-// Default SEO component
-export const DefaultSEO: React.FC<SEOProps> = (props) => {
-  return <MetaTags {...props} />;
+const DefaultSEO: React.FC<DefaultSEOProps> = ({ className = '' }) => {
+  return (
+    <div className={className}>
+      <h2>DefaultSEO</h2>
+      <p>This component is under construction.</p>;
+    </div>;
+  );
 };
+export default DefaultSEO

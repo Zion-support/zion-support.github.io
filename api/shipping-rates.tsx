@@ -1,9 +1,6 @@
-
-export default function ShippingRates() {
-  return (
-    <div>
-      <h1>Shipping Rates</h1>
-      <p>This component is under construction.</p>
-    </div>
-  );
+import React from 'react'
+"use client"
+const ShippingRates = () => {
+  return null
 }
+export default ShippingRates
