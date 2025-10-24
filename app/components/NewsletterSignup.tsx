@@ -1,43 +1,33 @@
 'use client';
 import { useState } from 'react';
-    // Conflict resolved - keeping clean version
-
 interface NewsletterSignupProps {
   variant?: 'inline' | 'modal';
   onClose?: () => void;
 }
-
 const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline', onClose }) => {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [message, setMessage] = useState('');
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
     if (!email) {
       setStatus('error');
       setMessage('Please enter your email address');
       return;
     }
-
     if (!/\S+@\S+\.\S+/.test(email)) {
       setStatus('error');
       setMessage('Please enter a valid email address');
       return;
     }
-
     setStatus('loading');
-
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
-
       // In a real app, you would make an API call here
       setStatus('success');
       setMessage('Thank you for subscribing! Check your email for confirmation.');
       setEmail('');
-
       // Close modal after success if it&apos;s a modal variant
       if (variant === 'modal' && onClose) {
         setTimeout(() => {
@@ -49,7 +39,6 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
       setMessage('Something went wrong. Please try again.');
     }
   };
-
   const content = (
     <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-white">
       <div className="text-center mb-6">
@@ -59,7 +48,6 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
           Get the latest updates on AI technology, IT solutions, and industry insights.
         </p>
       </div>
-
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="flex flex-col sm:flex-row gap-3">
           <input
@@ -88,7 +76,6 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
             )}
           </button>
         </div>
-
         {message && (
           <div className={`flex items-center space-x-2 text-sm ${
             status === 'success' ? 'text-green-200' : 'text-red-200'
@@ -102,7 +89,6 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
           </div>
         )}
       </form>
-
       <div className="mt-6 text-center text-sm text-white/80">
         <p>
           ✓ No spam, unsubscribe anytime<br />
@@ -112,7 +98,6 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
       </div>
     </div>
   );
-
   if (variant === 'modal') {
     return (
       <div className="fixed inset-0 z-50 overflow-y-auto">
@@ -125,8 +110,6 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
       </div>
     );
   }
-
   return content;
 };
-
 export default NewsletterSignup;

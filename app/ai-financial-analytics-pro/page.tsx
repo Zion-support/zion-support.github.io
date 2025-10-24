@@ -1,10 +1,6 @@
 'use client';
-
 import Link from 'next/link';
-    // Conflict resolved - keeping clean version
-
 export default function AiFinancialAnalyticsProPage() {
-
   const features = [
     {
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
@@ -43,7 +39,6 @@ export default function AiFinancialAnalyticsProPage() {
       benefits: ['Real-time exchange rates', 'Currency conversion', 'Global compliance', 'Tax calculations']
     }
   ];
-
   const analyticsTypes = [
     {
       category: 'Revenue Analytics',
@@ -112,7 +107,6 @@ export default function AiFinancialAnalyticsProPage() {
       ]
     }
   ];
-
   const pricingPlans = [
     {
       name: 'Starter',
@@ -167,7 +161,6 @@ export default function AiFinancialAnalyticsProPage() {
       cta: 'Contact Sales'
     }
   ];
-
   const testimonials = [
     {
       name: 'Jennifer Walsh',
@@ -197,14 +190,12 @@ export default function AiFinancialAnalyticsProPage() {
       results: '20+ hours saved weekly'
     }
   ];
-
   const stats = [
     { number: '500+', label: 'Financial Institutions', icon: <Building2 className="w-6 h-6" /> },
     { number: '1M+', label: 'Transactions Analyzed', icon: <Database className="w-6 h-6" /> },
     { number: '99.9%', label: 'Data Accuracy', icon: <Shield className="w-6 h-6" /> },
     { number: '50%', label: 'Faster Reporting', icon: <Zap className="w-6 h-6" /> }
   ];
-
   const integrations = [
     { name: 'QuickBooks', icon: <Calculator className="w-6 h-6" />, category: 'Accounting' },
     { name: 'Xero', icon: <FileText className="w-6 h-6" />, category: 'Accounting' },
@@ -215,10 +206,8 @@ export default function AiFinancialAnalyticsProPage() {
     { name: 'Stripe', icon: <CreditCard className="w-6 h-6" />, category: 'Payments' },
     { name: 'PayPal', icon: <Wallet className="w-6 h-6" />, category: 'Payments' }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -251,7 +240,6 @@ export default function AiFinancialAnalyticsProPage() {
             ✓ 14-day free trial • ✓ No credit card required • ✓ Bank-grade security
           </div>
         </div>
-
         {/* Stats Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm rounded-2xl mb-16">
           <div className="max-w-7xl mx-auto">
@@ -268,7 +256,6 @@ export default function AiFinancialAnalyticsProPage() {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
@@ -278,7 +265,6 @@ export default function AiFinancialAnalyticsProPage() {
               to provide unprecedented insights into your financial data.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300 group">
@@ -301,7 +287,6 @@ export default function AiFinancialAnalyticsProPage() {
             ))}
           </div>
         </section>
-
         {/* Analytics Types Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
@@ -310,7 +295,6 @@ export default function AiFinancialAnalyticsProPage() {
               Cover every aspect of your financial operations with our comprehensive analytics suite.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {analyticsTypes.map((type, index) => (
               <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300">
@@ -330,7 +314,6 @@ export default function AiFinancialAnalyticsProPage() {
             ))}
           </div>
         </section>
-
         {/* Integrations Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
@@ -339,7 +322,6 @@ export default function AiFinancialAnalyticsProPage() {
               Connect with your existing financial systems and tools for a unified analytics experience.
             </p>
           </div>
-          
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {integrations.map((integration, index) => (
               <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300 text-center group">
@@ -352,7 +334,6 @@ export default function AiFinancialAnalyticsProPage() {
             ))}
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
@@ -361,7 +342,6 @@ export default function AiFinancialAnalyticsProPage() {
               Flexible pricing plans designed to meet your financial analytics needs at any scale.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-slate-800/50 rounded-2xl p-8 border transition-all duration-300 relative ${
@@ -374,7 +354,6 @@ export default function AiFinancialAnalyticsProPage() {
                     </span>
                   </div>
                 )}
-                
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center mb-2">
@@ -383,7 +362,6 @@ export default function AiFinancialAnalyticsProPage() {
                   </div>
                   <p className="text-gray-300">{plan.description}</p>
                 </div>
-                
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
@@ -392,7 +370,6 @@ export default function AiFinancialAnalyticsProPage() {
                     </li>
                   ))}
                 </ul>
-                
                 <Link
                   href="/contact"
                   className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${
@@ -408,7 +385,6 @@ export default function AiFinancialAnalyticsProPage() {
             ))}
           </div>
         </section>
-
         {/* Testimonials */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm rounded-2xl mb-16">
           <div className="max-w-7xl mx-auto">
@@ -418,7 +394,6 @@ export default function AiFinancialAnalyticsProPage() {
                 Join hundreds of finance professionals who trust AI Financial Analytics Pro.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
@@ -446,7 +421,6 @@ export default function AiFinancialAnalyticsProPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="text-center">
           <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-12 border border-cyan-500/30">

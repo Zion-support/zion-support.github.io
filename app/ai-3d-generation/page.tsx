@@ -3,7 +3,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check, Send, BarChart3, DollarSign, Activity, Lock, FileText, CreditCard, Building2, Sparkles, PieChart } from 'lucide-react'
 
-    // Conflict resolved - keeping clean version
+const Ai3dGenerationPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -138,4 +138,4 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
   );
 };
 
-    // Conflict resolved - keeping clean version
+export default Ai3dGenerationPage;

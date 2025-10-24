@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { ArrowRight, Brain, CheckCircle, FileText, MessageCircle, Target, Globe, Send, BarChart3, Shield, Zap, DollarSign, Clock, Star, Activity, Lock, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react';
-
 export default function AIContentGeneratorPage() {
   const features = [
     {
@@ -11,13 +10,11 @@ export default function AIContentGeneratorPage() {
       benefits: ['Natural language processing', 'Context-aware generation', 'Multi-language support', 'Brand voice adaptation']
     },
     {
-    // Conflict resolved - keeping clean version
       title: 'Content Templates',
       description: '500+ professionally designed templates for blogs, social media, emails, ads, and more.',
       benefits: ['Industry-specific templates', 'Customizable layouts', 'SEO-optimized structure', 'Mobile-responsive design']
     },
     {
-    // Conflict resolved - keeping clean version
       title: 'Social Media Content',
       description: 'Generate engaging social media posts, captions, and hashtags for all platforms.',
       benefits: ['Platform-specific content', 'Trending hashtags', 'Engagement optimization', 'Visual content suggestions']
@@ -29,7 +26,6 @@ export default function AIContentGeneratorPage() {
       benefits: ['Keyword research', 'Content optimization', 'Meta descriptions', 'Schema markup']
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 pt-16">
       {/* Hero Section */}
@@ -52,7 +48,6 @@ export default function AIContentGeneratorPage() {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -85,7 +80,6 @@ export default function AIContentGeneratorPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
