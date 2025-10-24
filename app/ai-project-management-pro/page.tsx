@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle, Brain, Users, BarChart, Target, TrendingUp, Zap, Shield } from 'lucide-react';
+import { ArrowRight, CheckCircle, Brain, Users, BarChart, Target } from 'lucide-react';
 
 
 const AIProjectManagementProPage: React.FC = () => {
@@ -120,10 +120,7 @@ const AIProjectManagementProPage: React.FC = () => {
             {features.map((feature, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover: border-cyan-400/50 transition-all duration-300 group">
                 <div className="mb-6">
-                  {(() => {
-        const IconComponent = feature.icon;
-        return <IconComponent className="w-12 h-12 text-cyan-400" />;
-      })()}
+                  <feature.icon className="w-12 h-12 text-cyan-400" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
