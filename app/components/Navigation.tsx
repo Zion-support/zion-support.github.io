@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client"
 
 import React, { useState } from 'react'
@@ -65,10 +66,52 @@ const Navigation: React.FC = () => {
               )}
             </button>
           </div>
+=======
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
+
+export default function Navigation() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <nav className="bg-white/10 backdrop-blur-sm border-b border-white/20">
+      <div className="container mx-auto px-4">
+        <div className="flex justify-between items-center py-4">
+          {/* Logo */}
+          <Link to="/" className="text-2xl font-bold text-white">
+            Zion Tech Group
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex space-x-8">
+            <Link to="/" className="text-white hover:text-blue-400 transition-colors">
+              Home
+            </Link>
+            <Link to="/about" className="text-white hover:text-blue-400 transition-colors">
+              About
+            </Link>
+            <Link to="/services" className="text-white hover:text-blue-400 transition-colors">
+              Services
+            </Link>
+            <Link to="/contact" className="text-white hover:text-blue-400 transition-colors">
+              Contact
+            </Link>
+          </div>
+
+          {/* Mobile menu button */}
+          <button
+            className="md:hidden text-white"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+>>>>>>> 0037f0079afd7c1df869836a2655008c935027f4
         </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
+<<<<<<< HEAD
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 backdrop-blur-sm rounded-lg mt-2">
               {navigation.map((item) => (
@@ -88,13 +131,49 @@ const Navigation: React.FC = () => {
               >
                 <span>Get Started</span>
                 <ArrowRight className="w-4 h-4" />
+=======
+          <div className="md:hidden py-4 border-t border-white/20">
+            <div className="flex flex-col space-y-4">
+              <Link 
+                to="/" 
+                className="text-white hover:text-blue-400 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                Home
+              </Link>
+              <Link 
+                to="/about" 
+                className="text-white hover:text-blue-400 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                About
+              </Link>
+              <Link 
+                to="/services" 
+                className="text-white hover:text-blue-400 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                Services
+              </Link>
+              <Link 
+                to="/contact" 
+                className="text-white hover:text-blue-400 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                Contact
+>>>>>>> 0037f0079afd7c1df869836a2655008c935027f4
               </Link>
             </div>
           </div>
         )}
       </div>
     </nav>
+<<<<<<< HEAD
   )
 }
 
 export default Navigation
+=======
+  );
+}
+>>>>>>> 0037f0079afd7c1df869836a2655008c935027f4
