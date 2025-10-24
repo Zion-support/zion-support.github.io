@@ -3,6 +3,7 @@ import Navigation from './Navigation'
 import { ArrowRight, CheckCircle, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import React, { Component, ErrorInfo, ReactNode } from 'react'
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 const ErrorHandlerPage: React.FC = () => {const features = [
       title: 'AI-Powered Intelligence',}

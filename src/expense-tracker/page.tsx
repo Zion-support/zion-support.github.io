@@ -1,17 +1,21 @@
+import React from 'react';
+import { Receipt, CheckCircle, Phone, Star, Brain, Zap, Shield, Target, TrendingUp, Check } from 'lucide-react';
+import { X, Brain, Target, TrendingUp } from 'lucide-react'
+import React from 'react'
+<<<<<<< HEAD
+import { Recei, p, t } from "lucide-react";
+import { CheckCircle, Star, Phone } from "lucide-react";
+import { X, Brain, Target, TrendingUp } from 'lucide-react'
+import React from 'react'
 import { Receipt } from 'lucide-react'
 import { CheckCircle, Star, Phone } from 'lucide-react'
 =======
 'use client';
 import React from 'react';
 import { Receipt, CheckCircle, Phone, Star, Brain, Zap, Shield, Target, TrendingUp, Check } from 'lucide-react';
-'use client'
-import { X, Brain, Target, TrendingUp } from 'lucide-react'
-import React from 'react'
-<<<<<<< HEAD
-import { Recei, p, t } from "lucide-react";
-import { CheckCircle, Star, Phone } from "lucide-react";
-constExpenseTrackerPage: React.FC= () => {
-  constfeatures= [
+import { Receipt } from 'lucide-react'
+import { CheckCircle, Star, Phone } from 'lucide-react'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 constExpenseTrackerPage: React.FC= () =>{constfeatures= [
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c

@@ -9,6 +9,7 @@ const AdminPage = (): JSX.Element => {
           <div className='bg-white rounded-lg shadow-md p-8'></div>
             <h2 className='text-2xl font-semibold text-gray-800 mb-4'>Coming Soon</h2>
             <p className='text-gray-600'>Admin functionality will be available in a future update.</p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 const AdminPage = () => {
   return (

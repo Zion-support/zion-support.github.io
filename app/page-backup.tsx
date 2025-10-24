@@ -29,6 +29,7 @@ const PageBackupPage: React.FC = () => {
 import React from 'react'
 'use client'
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 const PageBackupPage: React.FC = () => {
   const features = [
     {
@@ -66,6 +67,7 @@ const PageBackupPage: React.FC = () => {
   return (
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your business with our advanced page backup solutions.</p>
               Powered by cutting-edge AI technology and industry expertise.
@@ -106,7 +108,7 @@ const PageBackupPage: React.FC = () => {
   </
             </div>
 =======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6f1b
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
           </div>
         </div>
       </section>
@@ -116,9 +118,7 @@ const PageBackupPage: React.FC = () => {
 }
 export default PageBackupPage
 =======
-  );
-};
-
+  )
 }
-export default PageBackupPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6f1b
+export default PageBackupPage
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf

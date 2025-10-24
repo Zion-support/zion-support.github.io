@@ -1,15 +1,18 @@
+import React from 'react';
+import { CheckCircle, Phone, Star, Brain, Zap, Shield, Target, Users, Video, Calendar, Check } from 'lucide-react';
+import { Brain, Target } from 'lucide-react'
+import React from 'react'
+<<<<<<< HEAD
+import { CheckCircle, Star, Phone, Calendar  } from "lucide-react";
+import { Brain, Target } from 'lucide-react'
+import React from 'react'
 import { CheckCircle, Star, Phone, Calendar } from 'lucide-react'
 =======
 'use client';
 import React from 'react';
 import { CheckCircle, Phone, Star, Brain, Zap, Shield, Target, Users, Video, Calendar, Check } from 'lucide-react';
-'use client'
-import { Brain, Target } from 'lucide-react'
-import React from 'react'
-<<<<<<< HEAD
-import { CheckCircle, Star, Phone, Calendar  } from "lucide-react";
-constAISchedulerPage: React.FC= () => {
-  constfeatures= [
+import { CheckCircle, Star, Phone, Calendar } from 'lucide-react'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 constAISchedulerPage: React.FC= () =>{constfeatures= [
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c

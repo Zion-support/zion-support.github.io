@@ -14,6 +14,7 @@ import Footer from '../components/Footer'
 <<<<<<< HEAD
 import { CheckCircle, Shield, Users } from "lucide-react";
 import { Awa, r, d } from "lucide-react";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 const CompliancePage: React.FC = () => {

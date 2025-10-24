@@ -1,15 +1,18 @@
+import React from 'react';
+import { CheckCircle, Phone, Mail, Star, Brain, Zap, Shield, Target, Users, BarChart, Check } from 'lucide-react';
+import { Brain, BarChart, Target } from 'lucide-react'
+import React from 'react'
+<<<<<<< HEAD
+import { CheckCircle, Star, Phone, BarChart  } from "lucide-react";
+import { Brain, BarChart, Target } from 'lucide-react'
+import React from 'react'
 import { CheckCircle, Star, Phone, BarChart } from 'lucide-react'
 =======
 'use client';
 import React from 'react';
 import { CheckCircle, Phone, Mail, Star, Brain, Zap, Shield, Target, Users, BarChart, Check } from 'lucide-react';
-'use client'
-import { Brain, BarChart, Target } from 'lucide-react'
-import React from 'react'
-<<<<<<< HEAD
-import { CheckCircle, Star, Phone, BarChart  } from "lucide-react";
-constSmartAnalyticsPage: React.FC= () => {
-  constfeatures= [
+import { CheckCircle, Star, Phone, BarChart } from 'lucide-react'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 constSmartAnalyticsPage: React.FC= () =>{constfeatures= [
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c

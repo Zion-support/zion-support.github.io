@@ -1,5 +1,6 @@
 import { Phone }  from "lucide-react";
 import { Home }  from "lucide-react";export default function NotFound;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 export default function NotFound
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c

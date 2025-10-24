@@ -2,6 +2,7 @@
 import React, { createContext, useContext, useEffect, ReactNode } from "react";
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6928
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 declare global {
   interface Window {
@@ -119,9 +120,11 @@ export function AnalyticsProvider({ children }: AnalyticsProviderProps) {
     <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
+<<<<<<< HEAD
   );
 };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 <<<<<<< HEAD
 export default AnalyticsProvider;

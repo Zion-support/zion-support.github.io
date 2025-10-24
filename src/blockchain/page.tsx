@@ -4,6 +4,8 @@ import { CheckCircle, Star, Zap, Brain, BarChart, Shield, Target, Helmet } from 
 import { Cpu } from 'lucide-react'
 
 import { Coins, CheckCircle, Star, Brain, Zap, Shield, Target, Code, Cpu, BarChart, Helmet, Check } from 'lucide-react';
+import { Coins, CheckCircle, Star, Brain, Zap, Shield, Target, Code, Cpu, BarChart, Helmet, Check } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 const BlockchainPage: React.FC = () => {
   const blockchainServices = [
   return (

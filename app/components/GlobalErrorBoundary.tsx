@@ -5,6 +5,7 @@ import ErrorBoundary from './ErrorBoundary'
   const benefits=";"
     'Gain competitive advantage with advanced technology'"
             <div className=""flex" flex-col sm:flex-row gap-4 justify-center"></div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
     }
   ]
 
@@ -39,6 +40,8 @@ import ErrorBoundary from './ErrorBoundary'
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Learn More
               </button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
             </div>
           </div>
         </section>

@@ -1,5 +1,6 @@
 import { ArrowRight }  from "lucide-react";
 import React, { useState }  from "react";import { Mail, ArrowRight }  from "lucide-react";'use client'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 const ContentNewsletterSignup: React.FC = () => {

@@ -1,3 +1,14 @@
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+import { CheckCircle, Star, Phone, Mail } from 'lucide-react'
+import { Clock } from 'lucide-react'
+'use client'
+import { Bra, i, n } from 'lucide-react'
+import React, { useSta, t, e } from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
 import { CheckCircle, Star, Phone, Mail } from 'lucide-react'
 import { Clock } from 'lucide-react'
 =======
@@ -5,12 +16,6 @@ import { Clock } from 'lucide-react'
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-'use client'
-import { Bra, i, n } from 'lucide-react'
-import React, { useSta, t, e } from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import SEOOptimizer from '../components/SEOOptimizer'
 <<<<<<< HEAD
 import { CheckCircle, Star, Phone, Mail  } from "lucide-react";
 import { Clo, c, k } from "lucide-react";
@@ -21,6 +26,7 @@ constDemoPage: React.FC= () => {
       company: ',',
     phone: ',',
       service: ',',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 constDemoPage: React.FC= () =>{const [formDatasetFormData] = useState({
     name: '',

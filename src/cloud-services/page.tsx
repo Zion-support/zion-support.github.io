@@ -13,6 +13,7 @@ import { CheckCirc, l, e } from "lucide-react";
 import React  from "react";
 import Navigation  from "../components/Navigation";import Footer  from "../components/Footer";
 import { CheckCircle }  from "lucide-react";constCloudServicesPage: React.FC= () =>{constservices= [
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 constCloudServicesPage: React.FC= () =>{constservices= [
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c

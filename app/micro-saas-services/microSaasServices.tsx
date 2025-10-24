@@ -30,6 +30,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 const MicroSaasServicesPage: React.FC = () => {
   const features = [
     {
@@ -62,6 +63,7 @@ const MicroSaasServicesPage: React.FC = () => {
   return (
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your business with our advanced microsaasservices solutions.</p>
               Powered by cutting-edge AI technology and industry expertise.
@@ -119,7 +121,6 @@ const MicroSaasServicesPage: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>h2>
-=======
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -138,7 +139,7 @@ const MicroSaasServicesPage: React.FC = () => {
   </
             </div>
 =======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
           </div>
         </div>
       </section>
@@ -147,11 +148,6 @@ const MicroSaasServicesPage: React.FC = () => {
   )
 }
 export default MicroSaasServicesPage
-=======
-  )
-}
-export default MicroSaasServicesPage
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 =======
     <React.Fragment>
       <Helmet>
@@ -190,3 +186,8 @@ export default MicroSaasServicesPage
 
 export default MicroSaasServicesPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6f1b
+=======
+  )
+}
+export default MicroSaasServicesPage
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf

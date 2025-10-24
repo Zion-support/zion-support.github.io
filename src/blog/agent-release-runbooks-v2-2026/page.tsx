@@ -4,6 +4,8 @@ import { Calend, a, r } from "lucide-react";
 import { Clo, c, k } from "lucide-react";
 export default function Page() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
+export default function Page() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 export default function Page
 Page.displayName = "Page"() {
   return (

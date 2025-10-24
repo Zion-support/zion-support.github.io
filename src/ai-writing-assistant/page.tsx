@@ -1,17 +1,21 @@
+import React from 'react';
+import { PenTool, FileText, CheckCircle, Phone, Mail, Star, Brain, Zap, Target, Users, Clock, Check } from 'lucide-react';
+import { Brain, Target } from 'lucide-react'
+import React from 'react'
+<<<<<<< HEAD
+import { PenTool, FileText  } from "lucide-react";
+import { CheckCircle, Star, Phone } from "lucide-react";
+import { Brain, Target } from 'lucide-react'
+import React from 'react'
 import { PenTool, FileText } from 'lucide-react'
 import { CheckCircle, Star, Phone } from 'lucide-react'
 =======
 'use client';
 import React from 'react';
 import { PenTool, FileText, CheckCircle, Phone, Mail, Star, Brain, Zap, Target, Users, Clock, Check } from 'lucide-react';
-'use client'
-import { Brain, Target } from 'lucide-react'
-import React from 'react'
-<<<<<<< HEAD
-import { PenTool, FileText  } from "lucide-react";
-import { CheckCircle, Star, Phone } from "lucide-react";
-constAIWritingAssistantPage: React.FC= () => {
-  constfeatures= [
+import { PenTool, FileText } from 'lucide-react'
+import { CheckCircle, Star, Phone } from 'lucide-react'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 constAIWritingAssistantPage: React.FC= () =>{constfeatures= [
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c

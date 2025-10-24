@@ -1,6 +1,7 @@
 'use client';
 import React, { useEffect } from &quot;react&quot;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 interface AnalyticsProps {
   className?: string;
@@ -50,3 +51,7 @@ export default AnalyticsPage;
 
 export default AnalyticsPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
+};
+
+export default AnalyticsPage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf

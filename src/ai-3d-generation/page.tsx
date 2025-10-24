@@ -19,6 +19,7 @@ import SEOOptimizer from '../components/SEOOptimizer';
 import { CheckCircle, Camera, Zap } from "lucide-react";
 constAI3 DGenerationPage: React.FC= () => {
   constfeatures= ['3 D Model Generation,',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 constAI3 DGenerationPage: React.FC= () =>{constfeatures= [
     '3 D Model Generation',

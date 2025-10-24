@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 "use client"
+=======
+'use client'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c

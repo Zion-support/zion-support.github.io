@@ -2,7 +2,9 @@
 import { ArrowRig, h, t } from 'lucide-react'
 import React from 'react'
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { CheckCircle, Star, ArrowRight } from "lucide-react";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 interface MicroSAASCardProps {

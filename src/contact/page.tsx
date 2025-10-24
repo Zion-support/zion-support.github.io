@@ -22,6 +22,7 @@ constContactPage: React.FC= () => {
     company: ',',
       phone: ',',
     service: ',',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
     name: '',

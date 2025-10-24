@@ -216,6 +216,7 @@ const DynamicContentShowcase: React.FC = () => {const [currentTestimonial, setCu
               </button>"
               <button className=""border" border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">;</button>
                 Learn More</button>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">

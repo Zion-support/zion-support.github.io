@@ -1,6 +1,7 @@
 'use client';
 import React, { useEffect, useState, useRef } from 'react'
 import { useIntersectionObserv, e, r } from "../hooks/useIntersectionObserver";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 interface AnimatedCounterProps {

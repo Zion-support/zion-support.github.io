@@ -1,13 +1,12 @@
-<<<<<<< HEAD
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 'use client'
 import { Brain, BarChart } from 'lucide-react'
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, Zap, Brain, Eye, BarChart } from 'lucide-react'
-=======
-'use client';
-import React from 'react';import { CheckCircle, Star, Brain, Zap, BarChart, Eye, Check } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';

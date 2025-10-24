@@ -4,6 +4,7 @@ import Navigation from './Navigation'
 import { ArrowRight } from 'lucide-react'
 import React, { useState } from 'react'
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 interface ContentNewsletterSignupProps {
   title?: string

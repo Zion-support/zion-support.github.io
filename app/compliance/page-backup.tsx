@@ -87,6 +87,7 @@ const PageBackupPage: React.FC = () => {
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300 group">
                 <div className="mb-6">
                   {feature.icon}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 const PageBackupPage: React.FC = () => {
   const features = [
     {
@@ -121,6 +122,7 @@ const PageBackupPage: React.FC = () => {
         <meta name="description" content="Advanced page backup solutions powered by AI technology." />
       </Helmet>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="relative py-20 px-4 overflow-hidden">

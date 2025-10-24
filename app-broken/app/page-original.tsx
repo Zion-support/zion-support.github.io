@@ -66,6 +66,7 @@ const PageOriginalPage: React.FC = () => {
                 <ArrowRight className=&quot;ml-2 h-5 w-5&quot; />
               </button>
               <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}

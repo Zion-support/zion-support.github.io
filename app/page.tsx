@@ -108,7 +108,12 @@ export default function HomePage() {
                       {benefit}
                     </li>
                   ))}
-                </ul>
+                </div>
+                <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
+                <div>
+                  <div className="text-white font-semibold">{testimonial.name}</div>
+                  <div className="text-cyan-400 text-sm">{testimonial.role}</div>
+                </div>
               </div>
             ))}
           </div>

@@ -1,15 +1,18 @@
+import React from 'react';
+import { CheckCircle, Star, Target, TrendingUp, BarChart, Check } from 'lucide-react';
+import { BarChart, Target, TrendingUp } from 'lucide-react'
+import React from 'react'
+<<<<<<< HEAD
+import { CheckCircle, Star, BarChart, TrendingUp, Target  } from "lucide-react";
+import { BarChart, Target, TrendingUp } from 'lucide-react'
+import React from 'react'
 import { CheckCircle, Star, BarChart, TrendingUp, Target } from 'lucide-react'
 =======
 'use client';
 import React from 'react';
 import { CheckCircle, Star, Target, TrendingUp, BarChart, Check } from 'lucide-react';
-'use client'
-import { BarChart, Target, TrendingUp } from 'lucide-react'
-import React from 'react'
-<<<<<<< HEAD
-import { CheckCircle, Star, BarChart, TrendingUp, Target  } from "lucide-react";
-constBusinessIntelligencePage: React.FC= () => {
-  constbiServices= [
+import { CheckCircle, Star, BarChart, TrendingUp, Target } from 'lucide-react'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 constBusinessIntelligencePage: React.FC= () =>{constbiServices= [
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c

@@ -1,5 +1,6 @@
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
@@ -189,6 +190,7 @@ const HomePage: React.FC = () => {
     <>
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
         {/* Content Promotion Banner */}
         <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>

@@ -1,6 +1,7 @@
 import React  from "react";
 "use client"
 import { Helmet }  from "react-helmet-async";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 const PerformanceImagePage: React.FC = () => {
@@ -45,6 +46,7 @@ const PerformanceImagePage: React.FC = () => {
             <h1 className=&quot;text-5xl md:text-6xl font-bold text-white mb-6&quot;>PerformanceImage</h1>
             <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed&quot;>Professional PerformanceImage services tailored to your business needs.</p>p>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
           </div>
         </div>
     </div>

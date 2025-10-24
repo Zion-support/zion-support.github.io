@@ -1,6 +1,8 @@
 'use client';
 'use client'
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
+'use client'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 import Navigation from './Navigation';
 
 const AccessibilityEnhancer: React.FC = () => {
@@ -8,6 +10,7 @@ const AccessibilityEnhancer: React.FC = () => {
 }
 
 export default AccessibilityEnhancer
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
       const nav = document.querySelector('nav');
       if (nav && !nav.getAttribute('role')) {

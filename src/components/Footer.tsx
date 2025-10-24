@@ -1,9 +1,11 @@
 import React from 'react'
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Li, n, k } from "react-router-dom";
 import { Lock, BarChart3, FileText } from "lucide-react";
 import { Phone, Mail, Zap, Brain, ArrowRight  } from "lucide-react";
 import { MapP, i, n } from "lucide-react";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 const Footer: React.FC = () => {

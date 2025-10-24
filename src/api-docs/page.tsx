@@ -16,6 +16,7 @@ import Footer from '../components/Footer'
 import { Key, Copy  } from "lucide-react";
 import { Co, d, e } from "lucide-react";
 import { Che, c, k } from "lucide-react";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 const ApiDocsPage: React.FC = () => {

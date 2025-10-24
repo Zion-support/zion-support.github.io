@@ -1,5 +1,6 @@
 'use client';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 import React, {useEffect } from 'react';
 import Head from 'next/head';
@@ -141,6 +142,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({title: "'Zion" Tech Group - 
   )
 }
 ;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 export default SEOOptimizer

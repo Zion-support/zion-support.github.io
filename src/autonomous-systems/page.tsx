@@ -12,6 +12,7 @@ import { CheckCircle, Star, BarChart } from "lucide-react";
 import { Bot, Cpu  } from "lucide-react";
 constAutonomousSystemsPage: React.FC= () => {
   constautonomousServices= [
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 constAutonomousSystemsPage: React.FC= () =>{constautonomousServices= [
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c

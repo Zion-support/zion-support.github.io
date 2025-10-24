@@ -1,6 +1,7 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 interface AdvancedErrorBoundaryProps {
   children: ReactNode;
@@ -69,6 +70,7 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
     const errorData = {
       errorId: this.state.errorId,
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
       error: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,

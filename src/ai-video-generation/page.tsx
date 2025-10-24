@@ -1,3 +1,14 @@
+import React from 'react';
+import { Play, CheckCircle, Star, Zap, Video, Check } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+import { CheckCircle, Zap, Video } from 'lucide-react'
+import React from 'react'
+import { Pl, a, y } from "lucide-react";
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
 import { CheckCircle, Zap, Video } from 'lucide-react'
 =======
 import React from 'react';
@@ -5,15 +16,11 @@ import { Play, CheckCircle, Star, Zap, Video, Check } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import React from 'react'
-import { Pl, a, y } from "lucide-react";
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import SEOOptimizer from '../components/SEOOptimizer'
 <<<<<<< HEAD
 import { CheckCircle, Zap, Video } from "lucide-react";
 constAIVideoGenerationPage: React.FC= () => {
   constfeatures= ['AI Video Creation,',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 constAIVideoGenerationPage: React.FC= () =>{constfeatures= [
     'AI Video Creation',

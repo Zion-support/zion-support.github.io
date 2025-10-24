@@ -1,17 +1,21 @@
-import { CheckCircle, Star, Zap, Brain, DollarSign, Shield, TrendingUp, Target } from 'lucide-react'
-=======
-'use client';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import { CheckCircle, Star, Zap, Brain, DollarSign, Shield, TrendingUp, Target } from 'lucide-react'
 'use client'
 import { X, Brain, Target, TrendingUp } from 'lucide-react'
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
+import { CheckCircle, Star, Zap, Brain, DollarSign, Shield, TrendingUp, Target } from 'lucide-react'
+=======
+'use client';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 <<<<<<< HEAD
 import { CheckCircle, Star, Zap, Brain, DollarSign, Shield, TrendingUp, Target  } from "lucide-react";
 constAIFintechPage: React.FC= () => {
   constaiFintechServices= [
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 constAIFintechPage: React.FC= () =>{constaiFintechServices= [
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c

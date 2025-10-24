@@ -1,3 +1,9 @@
+import { Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import React from 'react'
+=======
+'use client';
+import React from 'react';
+import { CheckCircle, Phone, Mail, Star, Brain, Target, TrendingUp, Users, BarChart, Check } from 'lucide-react';
 import React from 'react';
 import { CheckCircle, Phone, Mail, Star, Brain, Target, TrendingUp, Users, BarChart, Check } from 'lucide-react';
 'use client'
@@ -10,6 +16,7 @@ import { CheckCircle, Star } from 'lucide-react';
 import Navigation from '../$1/Navigation';
 import Footer from '../$1/Footer';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'

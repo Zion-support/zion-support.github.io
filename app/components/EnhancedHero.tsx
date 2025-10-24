@@ -2,6 +2,7 @@ import React from 'react'
 import { ArrowRight, Brain } from 'lucide-react'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 import { Phone, Mail } from 'lucide-react'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
   const benefits=";"
     'Gain competitive advantage with advanced technology'"
@@ -40,6 +41,8 @@ import { Phone, Mail } from 'lucide-react'
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Learn More
               </button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
             </div>
           </div>
         </section>
