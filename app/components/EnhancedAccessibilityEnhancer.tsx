@@ -117,4 +117,5 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
         </div>
       </section>
 }
+
 export default EnhancedAccessibilityEnhancerPage

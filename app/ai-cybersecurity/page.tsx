@@ -1,9 +1,11 @@
 'use client';
 import React from 'react';
-import Footer from '../components/Footer';
 import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+
+
+import Footer from '@/components/Footer';
 
 export default function AiCybersecurityPage() {
   return (
@@ -29,6 +31,7 @@ export default function AiCybersecurityPage() {
           </Link>
         </div>
       </div>
-      </>
-  );
+      <Footer />
+</>
+  )
 }

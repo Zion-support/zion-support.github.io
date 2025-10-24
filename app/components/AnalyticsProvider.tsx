@@ -59,7 +59,9 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children}) => 
     </AnalyticsContext.Provider>
   )
 }
+
 export default AnalyticsProvider
   )
 }
+
 export default AnalyticsProviderPage

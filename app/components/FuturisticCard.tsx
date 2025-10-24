@@ -72,4 +72,5 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({
     </motion.div>
   )
 }
+
 export default FuturisticCard

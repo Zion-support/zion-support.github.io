@@ -97,4 +97,5 @@ const PageFixedPage: React.FC = () => {
 </>
   )
 }
+
 export default PageFixedPage

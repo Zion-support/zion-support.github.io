@@ -53,5 +53,6 @@ const PerformanceImagePage: React.FC = () => {
     </div>
   )
 }
+
 export default PerformanceImagePage
 export default PerformanceImagePage

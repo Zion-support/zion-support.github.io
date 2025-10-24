@@ -53,5 +53,6 @@ const NotFoundPagePage: React.FC = () => {
     </div>
   )
 }
+
 export default NotFoundPagePage
 export default NotFoundPagePage

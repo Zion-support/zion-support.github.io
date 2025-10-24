@@ -107,4 +107,5 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
     </motion.button>
   )
 }
+
 export default FuturisticButton

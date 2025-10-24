@@ -115,10 +115,12 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {
 </>
   )
 }
+
 export default SystemMonitorPage
             </div>
         </div>
     </div>
   )
 }
+
 export default SystemMonitorPage
