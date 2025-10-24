@@ -1,4 +1,5 @@
 "use client"
+
 export interface User {
   id: string
   email: string
@@ -35,16 +36,24 @@ export interface ContactFormData {
   company: string
   message: string
   service: string
+}
+
 export interface AnalyticsEvent {
   name: string
   timestamp: number
   properties?: Record<string, string | number | boolean | null>
+}
+
 export interface PerformanceMetrics {
   loadTime: number
   firstContentfulPaint: number
   largestContentfulPaint: number
   cumulativeLayoutShift: number
   firstInputDelay: number
+  timeToInteractive: number
+  totalBlockingTime: number
+}
+
 export interface ErrorContext {
   url?: string
   userAgent?: string
@@ -53,6 +62,9 @@ export interface ErrorContext {
   sessionId?: string
   component?: string
   action?: string
+  stack?: string
+}
+
 export interface ErrorReport {
   id: string
   message: string
@@ -61,5 +73,19 @@ export interface ErrorReport {
   severity: ErrorSeverity
   resolved: boolean
   createdAt: string
-export type ErrorSeverity = "low" | "medium" | "high" | "critical"
+  updatedAt?: string
+}
+
+export type ErrorSeverity = 'low' | 'medium' | 'high' | 'critical'
+
+export interface ApiResponse<T = unknown> {
+  data: T
+  status: number
+  statusText: string
+  headers: Record<string, string>
+}
+
+export interface RequestOptions extends globalThis.RequestInit {
+  timeout?: number
+  retries?: number
 }

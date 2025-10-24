@@ -22,6 +22,7 @@ export interface SEOData {
   twitterDescription?: string
   twitterImage?: string
   structuredData?: StructuredData
+}
 
 export const defaultSEOData: SEOData = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -57,5 +58,6 @@ export const generateSEOData = (customData: Partial<SEOData> = {}): SEOData => {
     structuredData: {
       ...defaultSEOData.structuredData,
       ...customData.structuredData
-    
-  }};}
+    }
+  }
+};}

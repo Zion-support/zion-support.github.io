@@ -7,7 +7,7 @@ import { useRef, useEffect } from 'react';
  */
 
 // Debounce function for performance optimization
-export const debounce = <T extends (...args: unknown[]) => unknown>(
+export const debounce = <T extends (..._args: unknown[]) => unknown>(
   func: T,
   wait: number
 ): ((..._args: Parameters<T>) => void) => {
@@ -19,7 +19,7 @@ export const debounce = <T extends (...args: unknown[]) => unknown>(
 }
 
 // Throttle function for performance optimization
-export const throttle = <T extends (...args: unknown[]) => unknown>(
+export const throttle = <T extends (..._args: unknown[]) => unknown>(
   func: T,
   limit: number
 ): ((..._args: Parameters<T>) => void) => {

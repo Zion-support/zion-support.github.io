@@ -1,18 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 interface NavigationBackupProps {
-  logo?: string
-  logoText?: string
+  logo?: string;
+  logoText?: string;
   menuItems?: Array<{
-    label: string
-    href: string
+    label: string;
+    href: string;
     submenu?: Array<{
-      label: string
-      href: string
-    }>
-  }>
-  ctaText?: string
-  ctaHref?: string
+      label: string;
+      href: string;
+    }>;
+  }>;
+  ctaText?: string;
+  ctaHref?: string;
 }
 
 const NavigationBackup: React.FC<NavigationBackupProps> = ({
@@ -27,123 +27,123 @@ const NavigationBackup: React.FC<NavigationBackupProps> = ({
   ctaText = 'Get Started',
   ctaHref = '/contact',
 }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   const _toggleSubmenu = (label: string) => {
-    setActiveSubmenu(activeSubmenu === label ? null : label)
-  }
+    setActiveSubmenu(activeSubmenu === label ? null : label);
+  };
 
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-        <div className="flex justify-between items-center h-16"></div>
-          {/* Logo */
-          <div className="flex items-center"></div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <div className="flex items-center">
             {logo ? (
               <img src={logo} alt={logoText} className="h-8 w-auto" />
             ) : (
               <span className="text-2xl font-bold text-gray-900">{logoText}</span>
-            )
+            )}
           </div>
 
-          {/* Desktop Menu */
-          <div className="hidden md:flex items-center space-x-8"></div>
+          {/* Desktop Menu */}
+          <div className="hidden md:flex items-center space-x-8">
             {menuItems.map((item, index) => (
-              <div key={index} className="relative group"></div>
+              <div key={index} className="relative group">
                 <a
-                  href={item.href
+                  href={item.href}
                   className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
                 >
-                  {item.label
+                  {item.label}
                 </a>
                 {item.submenu && (
-                  <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"></div>
-                    <div className="py-1"></div>
+                  <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                    <div className="py-1">
                       {item.submenu.map((subItem, subIndex) => (
                         <a
-                          key={subIndex
-                          href={subItem.href
+                          key={subIndex}
+                          href={subItem.href}
                           className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                         >
-                          {subItem.label
+                          {subItem.label}
                         </a>
-                      ))
+                      ))}
                     </div>
                   </div>
-                )
+                )}
               </div>
-            ))
+            ))}
           </div>
 
-          {/* CTA Button */
-          <div className="hidden md:flex items-center"></div>
+          {/* CTA Button */}
+          <div className="hidden md:flex items-center">
             <a
-              href={ctaHref
+              href={ctaHref}
               className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors"
             >
-              {ctaText
+              {ctaText}
             </a>
           </div>
 
-          {/* Mobile menu button */
-          <div className="md:hidden"></div>
+          {/* Mobile menu button */}
+          <div className="md:hidden">
             <button
-              onClick={toggleMenu
+              onClick={toggleMenu}
               className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
             >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <_Menu className="h-6 w-6" />
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
             </button>
           </div>
         </div>
 
-        {/* Mobile Menu */
+        {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden"></div>
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t"></div>
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
               {menuItems.map((item, index) => (
-                <div key={index}></div>
+                <div key={index}>
                   <a
-                    href={item.href
+                    href={item.href}
                     className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium"
                   >
-                    {item.label
+                    {item.label}
                   </a>
                   {item.submenu && (
-                    <div className="pl-4"></div>
+                    <div className="pl-4">
                       {item.submenu.map((subItem, subIndex) => (
                         <a
-                          key={subIndex
-                          href={subItem.href
+                          key={subIndex}
+                          href={subItem.href}
                           className="text-gray-600 hover:text-blue-600 block px-3 py-2 text-sm"
                         >
-                          {subItem.label
+                          {subItem.label}
                         </a>
-                      ))
+                      ))}
                     </div>
-                  )
+                  )}
                 </div>
-              ))
-              <div className="pt-4"></div>
+              ))}
+              <div className="pt-4">
                 <a
-                  href={ctaHref
+                  href={ctaHref}
                   className="bg-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-blue-700"
                 >
-                  {ctaText
+                  {ctaText}
                 </a>
               </div>
             </div>
           </div>
-        )
+        )}
       </div>
     </nav>
-  )
-}
+  );
+};
 
-}
-
-export default NavigationBackup;}
+export default NavigationBackup;
