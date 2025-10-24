@@ -2,8 +2,58 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, CheckCircle } from 'lucide-react';
+import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+
+const stats = [
+  { number: '1B+', label: 'People with disabilities worldwide' },
+  { number: '15%', label: 'Of the global population' },
+  { number: '$13T', label: 'Annual spending power' },
+  { number: '71%', label: 'Leave sites due to accessibility issues' }
+];
+
+const features = [
+  {
+    icon: () => <div className="w-6 h-6 bg-emerald-600 rounded" />,
+    title: 'AI-Powered Audits',
+    description: 'Comprehensive accessibility audits using advanced AI technology to identify issues and provide actionable recommendations.',
+    benefits: ['WCAG 2.1 compliance', 'Automated testing', 'Detailed reports', 'Priority recommendations']
+  },
+  {
+    icon: () => <div className="w-6 h-6 bg-blue-600 rounded" />,
+    title: 'Implementation Support',
+    description: 'Expert guidance and support to implement accessibility improvements across your digital properties.',
+    benefits: ['Code remediation', 'Design updates', 'Testing support', 'Training programs']
+  }
+];
+
+const services = [
+  {
+    icon: () => <div className="w-8 h-8 bg-emerald-600 rounded" />,
+    title: 'Accessibility Audit',
+    description: 'Comprehensive audit of your digital properties',
+    price: 'Starting at $2,500'
+  },
+  {
+    icon: () => <div className="w-8 h-8 bg-blue-600 rounded" />,
+    title: 'Implementation',
+    description: 'Full implementation of accessibility improvements',
+    price: 'Starting at $5,000'
+  },
+  {
+    icon: () => <div className="w-8 h-8 bg-purple-600 rounded" />,
+    title: 'Training',
+    description: 'Team training on accessibility best practices',
+    price: 'Starting at $1,500'
+  },
+  {
+    icon: () => <div className="w-8 h-8 bg-orange-600 rounded" />,
+    title: 'Ongoing Support',
+    description: 'Continuous monitoring and support',
+    price: 'Starting at $500/month'
+  }
+];
 
 export default function AccessibilityPage() {
   return (

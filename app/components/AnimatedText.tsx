@@ -1,32 +1,54 @@
 'use client';
-import React from 'react';
-
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowRight    } from "lucide-react";
-export default function AnimatedText() {
-  
-  return 
+import { ArrowRight } from "lucide-react";
+
+interface AnimatedTextProps {
+  text: string;
+  className?: string;
+  delay?: number;
+  speed?: number;
+}
+
+const AnimatedText: React.FC<AnimatedTextProps> = ({
+  text,
+  className = '',
+  delay = 0,
+  speed = 100
+}) => {
+  const [displayedText, setDisplayedText] = useState('');
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  useEffect(() => {
+    if (!text) return;
+
+    const timer = setTimeout(() => {
+      setIsAnimating(true);
+    }, delay);
+
+    return () => clearTimeout(timer);
+  }, [text, delay]);
+
+  useEffect(() => {
+    if (!isAnimating || currentIndex >= text.length) return;
+
+    const timer = setTimeout(() => {
+      setDisplayedText(prev => prev + text[currentIndex]);
+      setCurrentIndex(prev => prev + 1);
+    }, speed);
+
+    return () => clearTimeout(timer);
+  }, [isAnimating, currentIndex, text, speed]);
+
   return (
-    <>
-      
-    </>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1>Service</h1>
-          <p>Professional service services coming soon.</p>
-          <Link href="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
-            
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
-    </div>
+    <span className={className}>
+      {displayedText}
+      {isAnimating && currentIndex < text.length && (
+        <span className="animate-pulse">|</span>
+      )}
+    </span>
   );
-}
-    </div>
-    </div>
-    </div>
-}
+};
+
+export default AnimatedText;

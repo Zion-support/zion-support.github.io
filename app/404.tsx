@@ -16,12 +16,14 @@ const NotFound = () => {
         <div className="max-w-2xl mx-auto text-center">
           {/* Error Icon */}
           <div className="relative mb-8">
-            <div className="absolute -top-4 -right-4 w-8 h-8 bg-red-500/20 rounded-full animate-bounce">
-              <AlertTriangle className="w-6 h-6 text-red-400" />
-                </div>
-              </div>
+            <div className="w-24 h-24 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+              <AlertTriangle className="w-12 h-12 text-red-400" />
+            </div>
+          </div>
+          
           {/* Error Message */}
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Page Not Found
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Page Not Found
           </h1>
           
           <p className="text-lg text-gray-300 mb-8">Oops! The page you're looking for seems to have vanished into the digital void. 

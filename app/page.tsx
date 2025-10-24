@@ -3,8 +3,43 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
-import Footer from '../components/Footer';
+import Footer from './components/Footer';
 
+const features = [
+  {
+    title: 'AI Solutions',
+    description: 'Cutting-edge artificial intelligence solutions for your business needs.',
+    href: '/services',
+    icon: () => <div className="w-8 h-8 bg-blue-600 rounded" />
+  },
+  {
+    title: 'IT Consulting',
+    description: 'Expert IT consulting to optimize your technology infrastructure.',
+    href: '/services',
+    icon: () => <div className="w-8 h-8 bg-green-600 rounded" />
+  },
+  {
+    title: 'Cloud Services',
+    description: 'Scalable cloud solutions to power your digital transformation.',
+    href: '/services',
+    icon: () => <div className="w-8 h-8 bg-purple-600 rounded" />
+  },
+  {
+    title: 'Data Analytics',
+    description: 'Transform your data into actionable business insights.',
+    href: '/services',
+    icon: () => <div className="w-8 h-8 bg-orange-600 rounded" />
+  }
+];
+
+const stats = [
+  { number: '100+', label: 'Projects Completed' },
+  { number: '50+', label: 'Happy Clients' },
+  { number: '5+', label: 'Years Experience' },
+  { number: '24/7', label: 'Support Available' }
+];
+
+export default function Home() {
   return (
     <>
       <Head>
@@ -13,8 +48,8 @@ import Footer from '../components/Footer';
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1>Zion Tech Group - AI & IT Solutions</h1>
-          <p>Professional zion tech group - ai & it solutions services coming soon.</p>
+          <h1 className="text-5xl font-bold text-white mb-6">Zion Tech Group - AI & IT Solutions</h1>
+          <p className="text-xl text-gray-300 mb-8">Professional AI & IT solutions services coming soon.</p>
           <Link href="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
           >
@@ -22,10 +57,10 @@ import Footer from '../components/Footer';
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </section>
+      </div>
 
       {/* Features Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
@@ -37,7 +72,7 @@ import Footer from '../components/Footer';
             {features.map((feature, index) => (
               <div key={index} className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
                 <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                  <feature.icon className="h-8 w-8 text-blue-600" />
+                  <feature.icon />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
                 <p className="text-gray-600 mb-4">{feature.description}</p>
