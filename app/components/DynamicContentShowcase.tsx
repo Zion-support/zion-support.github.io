@@ -1,7 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react'
-import { Cloud, Zap, Shield, Globe, Brain, Star } from 'lucide-react'
-
+import { Zap, Brain, Globe, Shield } from 'lucide-react'
 const DynamicContentShowcase: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
 
@@ -59,7 +58,6 @@ const DynamicContentShowcase: React.FC = () => {
             <div className="flex items-center justify-center mb-8">
               <div className={`bg-gradient-to-r ${currentFeature.color} p-4 rounded-full`}>
                 <currentFeature.icon className="h-12 w-12 text-white" />
-              </div>
               </div>
             </div>
             
