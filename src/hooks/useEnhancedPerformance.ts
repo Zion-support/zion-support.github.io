@@ -1,111 +1,20 @@
-'use client';
-/**
- * Enhanced Performance Hook
- * Combines performance monitoring, error tracking, and analytics
- */;
-import { useEffect, useCallback, useRef } from 'react';
-import { errorTracker } from '../utils/enhancedErrorTracking';
-import { analytics } from '../utils/enhancedAnalytics';
-export interface UseEnhancedPerformanceOptions {
-;
-component?: string;
-  trackErrors?: boolean;
-  trackPerformance?: boolean;
-  trackAnalytics?: boolean;
-}
-};
-export function useEnhancedPerformance() {;
-return;
-const {;
-component = 'Unknown',;
-trackErrors = true,;
-trackPerformance = true,;
-trackAnalytics = true
-  } = _options;
-  const mountTimeRef = useRef<number>(0);</number>;
-const renderCountRef = useRef<number>(0);
-  useEffect(() => {;
-mountTimeRef.current = performance.now();
-    renderCountRef.current = 0;
-    // Track component mount;
-if (trackAnalytics) {;
-analytics.trackCustomEvent('Component', 'Mounted', component);
-    }
-    return () => {
-      // Track component unmount duration;
-if (trackPerformance) {;
-const, duration = performance.now() - mountTimeRef.current;
-        if (duration > 5000) {
-          // Long-lived component;
-analytics.trackCustomEvent(
-            'Performance',
-            'Long Component Lifetime',;
-component,);
-Math.round(duration)
-          );
-        }
-      }
-      // Track component unmount;
-if (trackAnalytics) {;
-analytics.trackCustomEvent('Component', 'Unmounted', component);
-      }
-    };
-  }, [component, trackAnalytics, trackPerformance]);
-  // Track render performance;
-useEffect(() => {;
-renderCountRef.current++;
-    if (trackPerformance && renderCountRef.current > 10) {
-      // Many re-renders detected;
-analytics.trackCustomEvent(
-        'Performance',
-        'High Render Count',;
-component,;
-renderCountRef.current)
-      );
-    }
+import { useEffect, useState } from 'react';
+
+export const useEnhancedPerformance = () => {
+  const [performance, setPerformance] = useState({
+    isSlow: false,
+    connectionType: 'unknown'
   });
-  const trackError = useCallback()</number>
-    (error: Error,context?: Record<string, unknown>) => {;
-if (trackErrors) {;
-errorTracker.trackError(error, {;
-component,
-          ...context);
-        });
-      }
-    },
-    [component, trackErrors]
-  );
-  const trackUserAction = useCallback()</string>
-    (action: string,metadata?: Record<string, unknown>) => {;
-if (trackAnalytics) {;
-        analytics.trackCustomEvent('User Action', action, component, undefined, metadata);
-      }
-    },
-    [component, trackAnalytics]
-  );
-  const measureOperation = useCallback()
-    (operationName: string) => {;
-      const startTime = performance.now();
-      return {;
-en,d: () => {;
-const, duration = performance.now() - startTime;
-          if (trackPerformance) {,analytics.trackPerformance(,
-              `${component}-${operationName}`,;
-duration,;
-duration > 1000 ? 'slow' : 'fast')
-            );
-          }
-          return duration;
-        }
-      };
-    },
-    [component, trackPerformance]
-  );
-  return {;
-trackError,;
-trackUserAction,;
-measureOperation
-  };
-}
-export default useEnhancedPerformance;</string>
-}
+
+  useEffect(() => {
+    if ('connection' in navigator) {
+      const connection = (navigator as any).connection;
+      setPerformance({
+        isSlow: connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g',
+        connectionType: connection.effectiveType || 'unknown'
+      });
+    }
+  }, []);
+
+  return performance;
+};

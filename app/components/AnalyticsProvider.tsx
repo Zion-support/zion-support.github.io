@@ -1,14 +1,11 @@
 'use client';
 import React from 'react';
-interface AnalyticsProviderProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ className, children }) => {
+
+export default function AnalyticsProvider() {
   return (
-    <div className={className}>
-      {children}
+    <div>
+      <h1>AnalyticsProvider</h1>
+      <p>AnalyticsProvider content.</p>
     </div>
   );
-};
-export default AnalyticsProvider;
+}

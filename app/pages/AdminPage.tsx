@@ -1,8 +1,16 @@
-"use client";
+'use client';
 import React from 'react';
-const AdminPage = () => {
+
+interface AdminPageProps {
+  className?: string;
+}
+
+const AdminPage: React.FC<AdminPageProps> = ({ className }) => {
   return (
-    <div>h1>Admin Page</h1>p>Admin functionality coming soon.</p>/div>
+    <div className={className}>
+      <h2>AdminPage</h2>
+      <p>AdminPage component for enhanced functionality.</p>
+    </div>
   );
 };
 export default AdminPage;

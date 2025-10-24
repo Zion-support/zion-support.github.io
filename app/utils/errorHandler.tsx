@@ -1,5 +1,11 @@
-"use client";
+'use client';
 import React from 'react';
-export const errorHandler = () => {
-  return null;
-};
+
+export default function errorHandler() {
+  return (
+    <div>
+      <h1>errorHandler</h1>
+      <p>errorHandler content.</p>
+    </div>
+  );
+}

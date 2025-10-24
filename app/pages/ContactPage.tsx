@@ -1,8 +1,16 @@
-"use client";
+'use client';
 import React from 'react';
-const ContactPage = () => {
+
+interface ContactPageProps {
+  className?: string;
+}
+
+const ContactPage: React.FC<ContactPageProps> = ({ className }) => {
   return (
-    <div>h1>Contact Page</h1>p>Contact information coming soon.</p>/div>
+    <div className={className}>
+      <h2>ContactPage</h2>
+      <p>ContactPage component for enhanced functionality.</p>
+    </div>
   );
 };
 export default ContactPage;

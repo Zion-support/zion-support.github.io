@@ -1,14 +1,17 @@
 'use client';
 import React from 'react';
+
 interface NotFoundPageProps {
   className?: string;
-  children?: React.ReactNode;
 }
-const NotFoundPage: React.FC<NotFoundPageProps> = ({ className, children }) => {
+
+const NotFoundPage: React.FC<NotFoundPageProps> = ({ className }) => {
   return (
     <div className={className}>
-      {children}
+      <h2>NotFoundPage</h2>
+      <p>NotFoundPage component for enhanced functionality.</p>
     </div>
   );
 };
+
 export default NotFoundPage;

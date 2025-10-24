@@ -1,31 +1,30 @@
-import { useEffect, useCallback } from 'react';
-export const usePerformanceMonitoring = () => {;
-return;
-const reportWebVitals = useCallback((metric: unknown) => {;
-    const body = JSON.stringify(metric);
-    const url = '/api/analytics';,if (navigator.sendBeacon) {,;
-navigator.sendBeacon(url, body);
-    } else {;
-fetch(url, { body, method: 'POST',keepalive: true ,}).catch(() => {
-        // Failed to send analytics - handle silently
+import { useEffect, useState } from 'react';
+
+export const usePerformanceMonitoringEnhanced = () => {
+  const [metrics, setMetrics] = useState({
+    loadTime: 0,
+    firstContentfulPaint: 0,
+    largestContentfulPaint: 0
+  });
+
+  useEffect(() => {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          if (entry.entryType === 'paint') {
+            setMetrics(prev => ({
+              ...prev,
+              [entry.name]: entry.startTime
+            }));
+          }
+        });
       });
-    }
-  }, []);
-  useEffect(() => {;
-if (typeof window !== 'undefined' && 'performance' in window) {
-      // Monitor Core Web Vitals;
-const observer = new PerformanceObserver((list) => {;
-for (const entry of list.getEntries()) {;
-reportWebVitals({;
-name: entry.name,value: entry.startTime,);
-timestamp: Date.now();
-          ,});
-        }
-      });
-      observer.observe({ entryTypes: ['navigation','paint', 'largest-contentful-paint'] });
+
+      observer.observe({ entryTypes: ['paint'] });
       return () => observer.disconnect();
     }
-  }, [reportWebVitals]);
-  return { reportWebVitals };
+  }, []);
+
+  return metrics;
 };
-}

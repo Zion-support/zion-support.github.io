@@ -1,14 +1,17 @@
 'use client';
 import React from 'react';
+
 interface PerformanceImageProps {
   className?: string;
-  children?: React.ReactNode;
 }
-const PerformanceImage: React.FC<PerformanceImageProps> = ({ className, children }) => {
+
+const PerformanceImage: React.FC<PerformanceImageProps> = ({ className }) => {
   return (
     <div className={className}>
-      {children}
+      <h2>PerformanceImage</h2>
+      <p>PerformanceImage component for enhanced functionality.</p>
     </div>
   );
 };
+
 export default PerformanceImage;

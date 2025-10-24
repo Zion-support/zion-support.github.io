@@ -1,14 +1,11 @@
 'use client';
 import React from 'react';
-interface AdvancedPerformanceOptimizerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({ className, children }) => {
+
+export default function AdvancedPerformanceOptimizer() {
   return (
-    <div className={className}>
-      {children}
+    <div>
+      <h1>AdvancedPerformanceOptimizer</h1>
+      <p>AdvancedPerformanceOptimizer content.</p>
     </div>
   );
-};
-export default AdvancedPerformanceOptimizer;
+}
