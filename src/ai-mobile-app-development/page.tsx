@@ -10,5 +10,9 @@ const $1: React.FC = () => {;
       </div>
     </div>
   )
+<<<<<<< HEAD
 };
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 export default AIMobileAppDevelopmentPage;

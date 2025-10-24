@@ -67,9 +67,15 @@ class PerformanceMonitoringService {
       this.observers.push(paintObserver)
 
       // Observe LCP
+<<<<<<< HEAD:all-pages-backup/utils/performanceMonitoring.ts
       const lcpObserver = new PerformanceObserver((list) => {;
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
+=======
+      const lcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries()
+        const lastEntry = entries[entries.length - 1]
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/utils/performanceMonitoring.ts
         if (lastEntry) {;
           this.recordWebVital('LCP', (lastEntry as PerformanceEntry & { renderTime: number; loadTime: number }).renderTime || (lastEntry as PerformanceEntry & { renderTime: number; loadTime: number }).loadTime)
         }
@@ -118,12 +124,21 @@ class PerformanceMonitoringService {
    * Record a Web Vital metric
    */
   private recordWebVital(name: keyof WebVitals, value: number): void {
+<<<<<<< HEAD:all-pages-backup/utils/performanceMonitoring.ts
     const rating = this.getRating(name, value);
     const metric: PerformanceMetric = {;
       name
       value
       rating,
   timestamp: Date.now()
+=======
+    const rating = this.getRating(name, value)
+    const metric: PerformanceMetric = {
+      name
+      value
+      rating
+      timestamp: Date.now()
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/utils/performanceMonitoring.ts
     }
     this.webVitals[name] = metric
     // eslint-disable-next-line no-console
@@ -136,7 +151,11 @@ class PerformanceMonitoringService {
    * Get rating for a Web Vital metric
    */
   private getRating(name: keyof WebVitals, value: number): 'good' | 'needs-improvement' | 'poor' {;
+<<<<<<< HEAD:all-pages-backup/utils/performanceMonitoring.ts
     const thresholds: Record<keyof WebVitals, { good: number; poor: number }> = {;
+=======
+    const thresholds: Record<keyof WebVitals, { good: number; poor: number }> = {
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/utils/performanceMonitoring.ts
       FCP: { good: 1800, poor: 3000 }
       LCP: { good: 2500, poor: 4000 }
       FID: { good: 100, poor: 300 }
@@ -155,11 +174,19 @@ class PerformanceMonitoringService {
    * Record a custom metric
    */
   recordCustomMetric(name: string, value: number, unit: CustomMetric['unit']): void {
+<<<<<<< HEAD:all-pages-backup/utils/performanceMonitoring.ts
     const metric: CustomMetric = {;
       name
       value
       unit,
   rating: this.getCustomRating(value, unit)
+=======
+    const metric: CustomMetric = {
+      name
+      value
+      unit
+      rating: this.getCustomRating(value, unit)
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/utils/performanceMonitoring.ts
       timestamp: Date.now()
     }
     this.customMetrics.push(metric)
@@ -188,8 +215,13 @@ class PerformanceMonitoringService {
     try {
       if (typeof window !== 'undefined' && 'fetch' in window) {
         await fetch('/api/analytics/performance', {
+<<<<<<< HEAD:all-pages-backup/utils/performanceMonitoring.ts
           method: method,
   headers: { 'Content-Type': 'application/json' }
+=======
+          method: 'POST'
+          headers: { 'Content-Type': 'application/json' }
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/utils/performanceMonitoring.ts
           body: JSON.stringify(metric)
         })
       }
@@ -258,9 +290,15 @@ class PerformanceMonitoringService {
       recommendations.push('Improve Time to First Byte by optimizing server response time')
     }
     return {
+<<<<<<< HEAD:all-pages-backup/utils/performanceMonitoring.ts
       score,
   webVitals: this.webVitals,
   customMetrics: this.customMetrics
+=======
+      score
+      webVitals: this.webVitals
+      customMetrics: this.customMetrics
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/utils/performanceMonitoring.ts
       recommendations
     }
   }
@@ -336,7 +374,11 @@ class PerformanceMonitoringService {
 export const performanceMonitoring = PerformanceMonitoringService.getInstance();
 export default PerformanceMonitoringService
 // Export convenience enums and functions
+<<<<<<< HEAD:all-pages-backup/utils/performanceMonitoring.ts
 export enum MetricUnit {;
+=======
+export enum MetricUnit {
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/utils/performanceMonitoring.ts
   Milliseconds = 'ms'
   Bytes = 'bytes'
   Count = 'count'
@@ -367,6 +409,7 @@ export const recordMetric = (name: string, value: number, unit: MetricUnit = Met
     existing.max = Math.max(existing.max, value)
   } else {
     simpleMetrics.set(name, {
+<<<<<<< HEAD:all-pages-backup/utils/performanceMonitoring.ts
       values: values,
   count: 1,
   average: value,
@@ -374,14 +417,29 @@ export const recordMetric = (name: string, value: number, unit: MetricUnit = Met
   max: value
       unit,
   rating: getRating(name, value)
+=======
+      values: [value]
+      count: 1
+      average: value
+      min: value
+      max: value
+      unit
+      rating: getRating(name, value)
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/utils/performanceMonitoring.ts
     })
   }
   // Also record in the main performance monitoring service
   performanceMonitoring.recordCustomMetric(name, value, unit)
 }
+<<<<<<< HEAD:all-pages-backup/utils/performanceMonitoring.ts
 ;
 function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {;
   const thresholds: Record<string, { good: number; poor: number }> = {;
+=======
+
+function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {;
+  const thresholds: Record<string, { good: number; poor: number }> = {
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/utils/performanceMonitoring.ts
     'FCP': { good: 1800, poor: 3000 }
     'LCP': { good: 2500, poor: 4000 }
     'FID': { good: 100, poor: 300 }

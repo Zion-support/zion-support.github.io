@@ -6,11 +6,19 @@ import React, { useRef, useEffect } from 'react';
  */
 
 // Debounce function for performance optimization
+<<<<<<< HEAD:all-pages-backup/utils/performanceEnhancer.ts
 export const debounce = <T extends (...args: unknown[]) => unknown>(;
   func: T,
   wait: number
 ): ((...args: Parameters<T>) => void) => {;
   let timeout: NodeJS.Timeout
+=======
+export const debounce = <T extends (...args: unknown[]) => unknown>(
+  func: T
+  wait: number;
+): ((...args: Parameters<T>) => void) => {;
+  let timeout: NodeJS.Timeout;
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/utils/performanceEnhancer.ts
   return (...args: Parameters<T>) => {
     clearTimeout(timeout)
     timeout = setTimeout(() => func(...args), wait)
@@ -18,11 +26,19 @@ export const debounce = <T extends (...args: unknown[]) => unknown>(;
 }
 
 // Throttle function for performance optimization
+<<<<<<< HEAD:all-pages-backup/utils/performanceEnhancer.ts
 export const throttle = <T extends (...args: unknown[]) => unknown>(;
   func: T,
   limit: number
 ): ((...args: Parameters<T>) => void) => {;
   let inThrottle: boolean
+=======
+export const throttle = <T extends (...args: unknown[]) => unknown>(
+  func: T
+  limit: number
+): ((...args: Parameters<T>) => void) => {;
+  let inThrottle: boolean;
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/utils/performanceEnhancer.ts
   return (...args: Parameters<T>) => {
     if (!inThrottle) {
       func(...args)
@@ -34,7 +50,11 @@ export const throttle = <T extends (...args: unknown[]) => unknown>(;
 
 // Performance monitoring utilities
 export class PerformanceMonitor {;
+<<<<<<< HEAD:all-pages-backup/utils/performanceEnhancer.ts
   private static instance: PerformanceMonitor
+=======
+  private static instance: PerformanceMonitor;
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/utils/performanceEnhancer.ts
   private metrics: Map<string, number> = new Map()
   private observers: PerformanceObserver[] = [];
 
@@ -176,8 +196,13 @@ export const optimizeScrollPerformance = () => {;
   }
 
   // Track Core Web Vitals
+<<<<<<< HEAD:all-pages-backup/utils/performanceEnhancer.ts
   const trackCLS = () => {;
     let clsValue = 0
+=======
+  const trackCLS = () => {
+    let clsValue = 0;
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/utils/performanceEnhancer.ts
     const clsEntries: PerformanceEntry[] = [];
     interface LayoutShiftEntry extends PerformanceEntry {
       hadRecentInput?: boolean,
@@ -251,10 +276,17 @@ export const getMemoryUsage = () => {;
   };
   const memory = (performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory
   return {
+<<<<<<< HEAD:all-pages-backup/utils/performanceEnhancer.ts
     used: memory.usedJSHeapSize,
   total: memory.totalJSHeapSize,
   limit: memory.jsHeapSizeLimit,
   percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
+=======
+    used: memory.usedJSHeapSize
+    total: memory.totalJSHeapSize
+    limit: memory.jsHeapSizeLimit
+    percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/utils/performanceEnhancer.ts
   }
 }
 
@@ -265,6 +297,7 @@ export const collectPerformanceMetrics = () => {;
   const paint = performance.getEntriesByType('paint');
   return {
     navigation: {
+<<<<<<< HEAD:all-pages-backup/utils/performanceEnhancer.ts
       domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
   loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
   totalTime: navigation.loadEventEnd - navigation.fetchStart
@@ -272,6 +305,15 @@ export const collectPerformanceMetrics = () => {;
     paint: {
       firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime || 0,
   firstContentfulPaint: paint.find((entry) => entry.name === 'first-contentful-paint')?.startTime || 0
+=======
+      domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart
+      loadComplete: navigation.loadEventEnd - navigation.loadEventStart
+      totalTime: navigation.loadEventEnd - navigation.fetchStart
+    }
+    paint: {
+      firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime || 0
+      firstContentfulPaint: paint.find((entry) => entry.name === 'first-contentful-paint')?.startTime || 0
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/utils/performanceEnhancer.ts
     }
     memory: getMemoryUsage()
   }

@@ -23,5 +23,10 @@ const ContentShowcase = lazy(() =>;
 )
 
     </div>
+<<<<<<< HEAD
   );
 {};
+=======
+  )
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4

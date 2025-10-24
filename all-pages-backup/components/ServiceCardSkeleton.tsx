@@ -1,14 +1,24 @@
 'use client'
+<<<<<<< HEAD:all-pages-backup/components/ServiceCardSkeleton.tsx
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+=======
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ServiceCardSkeleton.tsx
 
 const ServiceCardSkeletonPage: React.FC = () => {
   const features = [
     {
+<<<<<<< HEAD:all-pages-backup/components/ServiceCardSkeleton.tsx
       icon: Brain,
   title: title,
   description: description,
@@ -31,6 +41,30 @@ const ServiceCardSkeletonPage: React.FC = () => {
   title: title,
   description: description,
   benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+=======
+      icon: Brain
+      title: 'AI-Powered Intelligence'
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.'
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    }
+    {
+      icon: BarChart
+      title: 'Advanced Analytics'
+      description: 'Comprehensive analytics dashboard with real-time data visualization.'
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    }
+    {
+      icon: Target
+      title: 'Precision Targeting'
+      description: 'Target specific goals and objectives with precision and accuracy.'
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    }
+    {
+      icon: TrendingUp
+      title: 'Growth Optimization'
+      description: 'Optimize your business growth with data-driven strategies.'
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ServiceCardSkeleton.tsx
     }
   ]
 
@@ -44,11 +78,21 @@ const ServiceCardSkeletonPage: React.FC = () => {
 
 const ServiceCardSkeleton: React.FC = () => {
   return (
+<<<<<<< HEAD:all-pages-backup/components/ServiceCardSkeleton.tsx
     <>;
       <Helmet>;
+=======
+    <>
+      <Helmet>;
+        <Head>
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ServiceCardSkeleton.tsx
         <title>ServiceCardSkeleton</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced ServiceCardSkeleton solution for modern businesses.&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ServiceCardSkeleton, AI solutions, intelligent automation&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
       </Helmet>
       <Navigation />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
@@ -56,7 +100,7 @@ const ServiceCardSkeleton: React.FC = () => {
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
           <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
           <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md:text-7xl font-bold text-white mb-6 leading-tight&quot;>
+            <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;>
               ServiceCardSkeleton
             </h1>
             <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
@@ -83,7 +127,7 @@ const ServiceCardSkeleton: React.FC = () => {
                 Powerful AI-driven features designed to transform your business operations
               </p>
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
+            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
               {features.map((feature, index) => (
                 <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
                   <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; />
@@ -112,7 +156,7 @@ const ServiceCardSkeleton: React.FC = () => {
                 Experience the benefits of cutting-edge AI technology
               </p>
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
+            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
                   <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
@@ -143,6 +187,12 @@ const ServiceCardSkeleton: React.FC = () => {
       </div>
       <Footer />
     </>
+<<<<<<< HEAD:all-pages-backup/components/ServiceCardSkeleton.tsx
   )};
 
 export default ServiceCardSkeletonPage
+=======
+  );
+}
+export default ServiceCardSkeletonPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ServiceCardSkeleton.tsx
