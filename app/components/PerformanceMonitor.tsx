@@ -189,9 +189,3 @@ export default function PerformanceMonitor({
   return null;
 }
 
-
-declare global {
-  interface Window {
-    gtag: (..._args: unknown[]) => void;
-  }
-}
