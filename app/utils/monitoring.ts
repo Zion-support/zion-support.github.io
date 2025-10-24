@@ -1,9 +1,9 @@
 'use client';
+
 /**
  * Comprehensive Monitoring Utility
  * Real-time application monitoring, performance tracking, and error reporting
  */
-import React from 'react'
 
 const performanceConfig = {
   monitoring: {
@@ -20,6 +20,7 @@ const performanceConfig = {
     inp: { good: 200, needsImprovement: 500 }
   }
 };
+
 export interface PerformanceMetrics {
   lcp?: number;
   fid?: number;
@@ -28,6 +29,7 @@ export interface PerformanceMetrics {
   ttfb?: number;
   inp?: number;
 }
+
 export interface ErrorReport {
   message: string;
   stack?: string;
@@ -36,15 +38,18 @@ export interface ErrorReport {
   userAgent: string;
   url: string;
 }
+
 class MonitoringService {
   private metrics: PerformanceMetrics = {}
   private errors: ErrorReport[] = []
   private observer: PerformanceObserver | null = null
+
   constructor() {
     if (typeof window !== 'undefined') {
       this.initializeMonitoring()
     }
   }
+
   private initializeMonitoring(): void {
     // Monitor Web Vitals
     this.monitorWebVitals()
@@ -55,6 +60,7 @@ class MonitoringService {
     // Global Error Handler
     this.setupErrorHandling()
   }
+
   private monitorWebVitals(): void {
     if ('PerformanceObserver' in window) {
       try {
@@ -66,6 +72,7 @@ class MonitoringService {
           this.reportMetric('lcp', this.metrics.lcp)
         })
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
+
         // First Input Delay
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
@@ -75,6 +82,7 @@ class MonitoringService {
           });
         });
         fidObserver.observe({ entryTypes: ['first-input'] });
+
         // Cumulative Layout Shift
         let clsValue = 0;
         const clsObserver = new PerformanceObserver(list => {
@@ -88,6 +96,7 @@ class MonitoringService {
           })
         })
         clsObserver.observe({ entryTypes: ['layout-shift'] })
+
         // First Contentful Paint
         const fcpObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
@@ -98,43 +107,45 @@ class MonitoringService {
         });
         fcpObserver.observe({ entryTypes: ['paint'] });
       } catch (error) {
-<<<<<<< HEAD:app/utils/monitoring.ts
-        }
-
+        console.warn('Web Vitals monitoring failed:', error);
+      }
     }
   }
+
   private monitorLongTasks(): void {
     if ('PerformanceObserver' in window && performanceConfig.monitoring.enableLongTaskDetection) {
       try {
         const longTaskObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-<<<<<<< HEAD:app/utils/monitoring.ts
-            }
-
+            console.warn('Long task detected:', entry.duration);
+          }
         })
         longTaskObserver.observe({ entryTypes: ['longtask'] })
       } catch (error) {
         // Long task API might not be available
+        console.warn('Long task monitoring not available:', error);
       }
     }
   }
+
   private monitorResourceTiming(): void {
     if ('PerformanceObserver' in window) {
       try {
         const resourceObserver = new PerformanceObserver((list) => {
-<<<<<<< HEAD:app/utils/monitoring.ts
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceResourceTiming) => {
             if (entry.duration > 1000) {
-              }
+              console.warn('Slow resource:', entry.name, entry.duration);
+            }
           });
         });
         resourceObserver.observe({ entryTypes: ['resource'] });
-      } catch (_error) {
-        }
-
+      } catch (error) {
+        console.warn('Resource monitoring failed:', error);
+      }
     }
   }
+
   private setupErrorHandling(): void {
     // Global error handler
     window.addEventListener('error', (event) => {
@@ -146,6 +157,7 @@ class MonitoringService {
         url: window.location.href
       })
     })
+
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {
       this.logError({
@@ -156,16 +168,18 @@ class MonitoringService {
       })
     })
   }
+
   private reportMetric(name: string, value: number): void {
     // Sample rate
     if (Math.random() > performanceConfig.monitoring.sampleRate) {
       return
     }
+
     const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
     if (thresholds) {
       const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor'
-<<<<<<< HEAD:app/utils/monitoring.ts
-      }
+      console.log(`Web Vital ${name}:`, value, `(${rating})`)
+    }
 
     // Send to analytics (if configured)
     if (typeof gtag === 'function') {
@@ -175,44 +189,47 @@ class MonitoringService {
       })
     }
   }
+
   public logError(error: ErrorReport): void {
     this.errors.push(error)
     // Keep only last 50 errors
     if (this.errors.length > 50) {
       this.errors = this.errors.slice(-50)
     }
-<<<<<<< HEAD:app/utils/monitoring.ts
 
+    console.error('Error logged:', error);
     // Send to error tracking service (if configured)
   }
+
   public getMetrics(): PerformanceMetrics {
     return { ...this.metrics }
   }
+
   public getErrors(): ErrorReport[] {
     return [...this.errors]
   }
+
   public clearErrors(): void {
     this.errors = []
   }
+
   public measureMemory(): void {
     if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory
       if (memory) {
-<<<<<<< HEAD:app/utils/monitoring.ts
-        this.metrics.memory = {
+        console.log('Memory usage:', {
           used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,
           total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,
           limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`
-        }
-
+        });
       }
     }
   }
+
   public measureNavigationTiming(): void {
     if ('performance' in window && 'getEntriesByType' in performance) {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
       if (navigation) {
-<<<<<<< HEAD:app/utils/monitoring.ts
         console.log('Performance metrics:', {
           'DNS Lookup': `${Math.round(navigation.domainLookupEnd - navigation.domainLookupStart)}ms`,
           'TCP Connect': `${Math.round(navigation.connectEnd - navigation.connectStart)}ms`,
@@ -222,13 +239,11 @@ class MonitoringService {
           'DOM Complete': `${Math.round(navigation.domComplete - navigation.fetchStart)}ms`,
           'Load Complete': `${Math.round(navigation.loadEventEnd - navigation.fetchStart)}ms`
         });
-        })
-
       }
     }
   }
 }
+
 // Singleton instance
 const monitoring = new MonitoringService()
 export default monitoring
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d:app/utils/monitoring.ts
