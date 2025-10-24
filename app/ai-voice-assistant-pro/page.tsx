@@ -44,7 +44,7 @@ const AiVoiceAssistantProPage: React.FC = () => {
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Ai Voice Assistant Pro
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Professional aivoiceassistantpro solutions powered by advanced AI and cutting-edge technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

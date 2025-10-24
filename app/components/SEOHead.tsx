@@ -46,3 +46,4 @@ export default SEOHead;
   );
 };
 
+export default $1;

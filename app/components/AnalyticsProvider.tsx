@@ -42,7 +42,7 @@ interface AnalyticsProviderProps {
     trackEvent,
     trackPageView,
   };
-  return()
+  return (
     <>
     <AnalyticsContext.Provider const value = {value} />
     </AnalyticsContext>

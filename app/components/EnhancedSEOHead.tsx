@@ -105,4 +105,4 @@ const SEOHead: React.FC<SEOHeadProps /> = ({
   );
 };
 
-
+export default $1;

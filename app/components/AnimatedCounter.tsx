@@ -38,7 +38,7 @@ interface AnimatedCounterProps {
     };
   }, [end, duration]);
 
-  return()
+  return (
     <>
     <>
     </>

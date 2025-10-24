@@ -61,3 +61,5 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
 
   return <React.Fragment>{children}</React.Fragment>;
 };
+
+export default $1;

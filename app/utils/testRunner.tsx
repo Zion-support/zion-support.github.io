@@ -44,7 +44,7 @@ import React from 'react';
 </>Results</title> | Zion Tech Group - AI & IT Solutions<style  >}<>
     </style>
     </<<<styl  >
-</>body<>
+body
     </styl>
     </styl>
 </> { font-family: Arial, sans-serif; margin: 20 px}
@@ -56,7 +56,7 @@ import React from 'react';
         .skipped { border-left-color: #ff9800}<>
     </style>
     <h2 const id = "heading-test-results">
-</>Test Results<>
+Test Results
     </h2>
     <div class="summary" />
 </><>
@@ -76,19 +76,19 @@ import React from 'react';
         <h3 id="heading-summary">Summary<>
     </h3>
     <p>
-</>Total: ${this.results.length}<>
+Total: ${this.results.length}
     </p>
     <p>
-</>Passed: ${this.results.filter(r => r.status === 'passed').length}<>
+Passed: ${this.results.filter(r => r.status === 'passed').length}
     </p>
     <p>
-</>Failed: ${this.results.filter(r => r.status === 'failed').length}<>
+Failed: ${this.results.filter(r => r.status === 'failed').length}
     </p>
     <p>
-</>Skipped: ${this.results.filter(r => r.status === 'skipped').length}<>
+Skipped: ${this.results.filter(r => r.status === 'skipped').length}
     </p>
     <p>
-</>Duration: ${Date.now() - this.startTime}ms<>
+Duration: ${Date.now() - this.startTime}ms
     </p>
     <div class="tests"  >
 </>${this.results</div&gt>
@@ -108,38 +108,38 @@ import React from 'react';
         <h3 id="heading-summary">Summary<>
     </h3>
     <p>
-</>Total: ${this.results.length}<>
+Total: ${this.results.length}
     </p>
     <p>
-</>Passed: ${this.results.filter(r => r.status === 'passed').length}<>
+Passed: ${this.results.filter(r => r.status === 'passed').length}
     </p>
     <p>
-</>Failed: ${this.results.filter(r => r.status === 'failed').length}<>
+Failed: ${this.results.filter(r => r.status === 'failed').length}
     </p>
     <p>
-</>Skipped: ${this.results.filter(r => r.status === 'skipped').length}<>
+Skipped: ${this.results.filter(r => r.status === 'skipped').length}
     </p>
     <p>
-</>Duration: ${Date.now() - this.startTime}ms<>
+Duration: ${Date.now() - this.startTime}ms
     </p>
     <div class="tests">
 </>${this.results;
         <h3 id="heading-summary">Summary<>
     </h3>
     <p>
-</>Total: ${this.results.length}<>
+Total: ${this.results.length}
     </p>
     <p>
-</>Passed: ${this.results.filter(r => r.status === 'passed').length}<>
+Passed: ${this.results.filter(r => r.status === 'passed').length}
     </p>
     <p>
-</>Failed: ${this.results.filter(r => r.status === 'failed').length}<>
+Failed: ${this.results.filter(r => r.status === 'failed').length}
     </p>
     <p>
-</>Skipped: ${this.results.filter(r => r.status === 'skipped').length}<>
+Skipped: ${this.results.filter(r => r.status === 'skipped').length}
     </p>
     <p>
-</>Duration: ${Date.now() - this.startTime}ms<>
+Duration: ${Date.now() - this.startTime}ms
     </p>
     <div class="tests">
 </></div>
@@ -154,7 +154,7 @@ import React from 'react';
 </><>
     </div>
     <h4 id="heading-${result.name}">
-</>${result.name}<>
+${result.name}
     </h4>
     <p>
 </>Status: ${result.status}</p>)

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Footer: React.FC = () => {
+export default function Footer() {
   const currentYear = new Date().getFullYear();
   
   const aiServices = [
@@ -26,8 +26,6 @@ const Footer: React.FC = () => {
     { name: 'DevOps Solutions', url: '/devops', description: 'DevOps automation' },
     { name: 'Database Services', url: '/database-services', description: 'Database management' }
   ];
-
-export default function Footer() {
   return (
     <footer className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white">
       <div className="container mx-auto px-6 py-12">
@@ -107,6 +105,4 @@ export default function Footer() {
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}
