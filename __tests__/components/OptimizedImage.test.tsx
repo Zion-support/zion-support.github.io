@@ -21,20 +21,51 @@ const OptimizedImage = ({
       width={width}
       height={height}
       data-testid="optimized-image"
-      loading="lazy"
+>>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
     />
   );
 };
 
 describe('OptimizedImage Component', () => {
   it('renders with required props', () => {
-    render(<OptimizedImage src="test.jpg" alt="Test image" />);
+    render(
+      <OptimizedImage 
+        src="/test-image.jpg" 
+        alt="Test image" 
+      />
+    );
+>>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
     
-    const img = screen.getByAltText('Test image');
+    const image = screen.getByTestId('optimized-image');
+    expect(image).toBeInTheDocument();
+    expect(image).toHaveAttribute('src', '/test-image.jpg');
+    expect(image).toHaveAttribute('alt', 'Test image');
+  });
+
+  it('renders with optional width and height props', () => {
+    render(
+      <OptimizedImage 
+        src="/test-image.jpg" 
+        alt="Test image"
+        width={300}
+        height={200}
+      />
+    );
+>>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
     
-    await act(async () => {
-      img.dispatchEvent(new Event('error'));
-    });
+    const image = screen.getByTestId('optimized-image');
+    expect(image).toHaveAttribute('width', '300');
+    expect(image).toHaveAttribute('height', '200');
+  });
+
+  it('handles missing alt text gracefully', () => {
+    render(
+      <OptimizedImage 
+        src="/test-image.jpg" 
+        alt="" 
+      />
+    );
+>>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
     
     await waitFor(() => {
       expect(screen.getByText('Failed to load image')).toBeInTheDocument();

@@ -1,5 +1,7 @@
-import { Helmet } from 'lucide-react';
-'use client';
+'use client'
+import Navigation from './Navigation'
+import React, { useEffect, useCallback, useRef } from 'react'
+import { Helmet } from 'lucide-react'
 
 interface SEOData {
   title: string
@@ -41,39 +43,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     if (!enableStructuredData || !seoData.structuredData) return null
     const baseStructuredData = {
       '@context': 'https://schema.org',
-import {Helmet} from 'lucide-react';
-import React, {useEffect, useCallback, useRef} from 'react';
-
-interface SEODat a {title: stringdescription: stringkeywords: string[];
-  canonicalUrl: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  twitterTitle?: string;
-  twitterDescription?: string;
-  twitterImage?: string;
-  structuredData?: Record<string, unknown>;
-  robots?: string;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];}
-interface AdvancedSEOOptimizerProp s {seoData: SEOData;
-  enableStructuredData?: boolean;
-  enableOpenGraph?: boolean;
-  enableTwitterCards?: boolean;
-  enableSchemaMarkup?: boolean;}constAdvancedSEOOptimizer:React.FC<AdvancedSEOOptimizerProp s>= ({seoData,
-  enableStructuredData= true,
-  enableOpenGraph= true,
-  enableTwitterCards= true,
-  enableSchemaMarkup= true}) =>{const_structuredDataRef=useRef<HTMLScriptElement | null>(null);
-  constgenerateStructuredData= useCallback(() => {
-  
-    if (!enableStructuredData || !seoData.structuredData) returnnullconstbaseStructuredData= {
-      '@context': 'https:// schema.org',
       '@type': 'Organization',
       name: 'Zion Tech Group',
       url: 'https:// ziontechgroup.com',
@@ -89,11 +58,13 @@ interface AdvancedSEOOptimizerProp s {seoData: SEOData;
         'https:// github.com/Zion-Holdings',
       ],
       ...seoData.structuredData
-    };
-    return baseStructuredDat a;
-  }, [enableStructuredData, seoData.structuredData]);
-  constgenerateBreadcrumbStructuredData= useCallback(() => {if (!enableSchemaMarkup) returnnullconstbreadcrumbData= {
-      '@context': 'https:// schema.org',
+    }
+    return baseStructuredData
+  }, [enableStructuredData, seoData.structuredData])
+  const generateBreadcrumbStructuredData = useCallback(() => {
+    if (!enableSchemaMarkup) return null
+    const breadcrumbData = {
+      '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
         {
@@ -108,11 +79,13 @@ interface AdvancedSEOOptimizerProp s {seoData: SEOData;
           item: seoData.canonicalUrl
        },
       ]
-    };
-    return breadcrumbDat a;
-  }, [enableSchemaMarkup, seoData.title, seoData.canonicalUrl]);
-  constgenerateFAQStructuredData= useCallback(() => {if (!enableSchemaMarkup) returnnullconstfaqData= {
-      '@context': 'https:// schema.org',
+    }
+    return breadcrumbData
+  }, [enableSchemaMarkup, seoData.title, seoData.canonicalUrl])
+  const generateFAQStructuredData = useCallback(() => {
+    if (!enableSchemaMarkup) return null
+    const faqData = {
+      '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
         {
@@ -131,51 +104,60 @@ interface AdvancedSEOOptimizerProp s {seoData: SEOData;
          }
         },
       ]
-    };
-    return faqDat a;
-  }, [enableSchemaMarkup]);
-  const_structuredData= generateStructuredData();
-  const_breadcrumbData= generateBreadcrumbStructuredData();
-  const_faqData= generateFAQStructuredData();
-  useEffect(() => {// Update metadescriptionconstmetaDescription= do cument.querySelector('meta[name="description"]');
-    if (metaDescriptio n) {
-      metaDescription.setAttribute('content', seoData.description);
-   } else {constnewMetaDescription= do cument.createElement('meta');
-      newMetaDescription.setAttribute('name', 'description');
-      do cument.head.appendChild(newMetaDescription);
-      newMetaDescription.setAttribute('content', seoData.description);
-   }
-    // Update canonicalURLconstcanonicalLink= document.querySelector('link[rel="canonical"]');
-    if (canonicalLin k) {canonicalLink.setAttribute('href', seoData.canonicalUrl);
-   } else {constnewCanonicalLink= do cument.createElement('link');
-      newCanonicalLink.setAttribute('rel', 'canonical');
-      do cument.head.appendChild(newCanonicalLink);
-      newCanonicalLink.setAttribute('href', seoData.canonicalUrl);
-   }
-  }, [seoData]);
-  const_addStructuredData=(data:Record<string, unknown>) => {constscript= do cument.createElement('script');
-    script.type= 'application/ld+json';
-    script.textContent= JSON.stringify(data);
-    script.id= 'structured-data';
-    do cument.head.appendChild(script);
-    _structuredDataRef.current= script;
- };
-  const_trackPageView= (config: SEOData) => {if (type of windo w !== 'undefined' && (windo w as any).gtag) {
-      (windo w as any).gtag('config', 'GA_MEASUREMENT_ID', {
+    }
+    return faqData
+  }, [enableSchemaMarkup])
+  const _structuredData = generateStructuredData()
+  const _breadcrumbData = generateBreadcrumbStructuredData()
+  const _faqData = generateFAQStructuredData()
+  useEffect(() => {
+    // Update meta description
+    const metaDescription = document.querySelector('meta[name="description"]')
+    if (metaDescription) {
+      metaDescription.setAttribute('content', seoData.description)
+    } else {
+      const newMetaDescription = document.createElement('meta')
+      newMetaDescription.setAttribute('name', 'description')
+      document.head.appendChild(newMetaDescription)
+      newMetaDescription.setAttribute('content', seoData.description)
+    }
+    // Update canonical URL
+    const canonicalLink = document.querySelector('link[rel="canonical"]')
+    if (canonicalLink) {
+      canonicalLink.setAttribute('href', seoData.canonicalUrl)
+    } else {
+      const newCanonicalLink = document.createElement('link')
+      newCanonicalLink.setAttribute('rel', 'canonical')
+      document.head.appendChild(newCanonicalLink)
+      newCanonicalLink.setAttribute('href', seoData.canonicalUrl)
+    }
+  }, [seoData])
+  const _addStructuredData = (data: Record<string, unknown>) => {
+    const script = document.createElement('script')
+    script.type = 'application/ld+json'
+    script.textContent = JSON.stringify(data)
+    script.id = 'structured-data'
+    document.head.appendChild(script)
+    _structuredDataRef.current = script
+  }
+  const _trackPageView = (config: SEOData) => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: config.title,
         page_location: config.canonicalUrl
-     });
+      })
     }
-  };
-  const_trackPerformanceMetrics= () => {if (type of windo w !== 'undefined' && (windo w as any).gtag) {
-      windo w.addEventListener('load', () => {
-  
-        const_perfData= performance.getEntriesByType('navigation')[0] as PerformanceNavigationTimingif (_perfDat a) {
-          (windo w as any).gtag('event', 'page_load_performance', {
+  }
+  const _trackPerformanceMetrics = () => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      window.addEventListener('load', () => {
+        const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+        if (_perfData) {
+          (window as any).gtag('event', 'page_load_performance', {
             event_category: 'Performance',
             event_label: 'Page Load',
             value: Math.round(_perfData.loadEventEnd - _perfData.fetchStart)
-         });
+          })
         }
       })
     }
@@ -197,11 +179,20 @@ interface AdvancedSEOOptimizerProp s {seoData: SEOData;
       <scripttype="application/ld+json">{JSON.stringify(_breadcrumbData)}
       </scrip>)}
       {enableSchemaMarkup && _faqData && (
-      <scripttype="application/ld+json">{JSON.stringify(_faqData)}
-      </scrip>)}
-      {/* Preconnect to external do mains forperformance */}
-    <linkrel="preconnect"href="https://fonts.googleapis.com" /><linkrel="preconnect"href="https://fonts.gstatic.com"crossOrigin="anonymous" /><linkrel="preconnect"href="https://www.google-analytics.com" /><linkrel="preconnect"href="https://www.googletagmanager.com" />{/* DNS Prefetch for betterperformance */}
-    <linkrel="dns-prefetch"href="//fonts.googleapis.com" /><linkrel="dns-prefetch"href="//www.google-analytics.com" /><linkrel="dns-prefetch"href="//www.googletagmanager.com" /></Helme>
-  );
-};
-export default AdvancedSEOOptimizer;
+        <script type="application/ld+json">
+          {JSON.stringify(_faqData)}
+        </script>
+      )}
+      {/* Preconnect to external domains for performance */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="https://www.google-analytics.com" />
+      <link rel="preconnect" href="https://www.googletagmanager.com" />
+      {/* DNS Prefetch for better performance */}
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+      <link rel="dns-prefetch" href="//www.google-analytics.com" />
+      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+    </Helmet>
+  )
+}
+export default AdvancedSEOOptimizer

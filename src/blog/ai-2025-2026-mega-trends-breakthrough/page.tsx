@@ -1,6 +1,7 @@
-import { Helmet } from 'lucide-react';
-import {Helmet} from 'lucide-react';
+import React from 'react'
+import { Helmet } from 'lucide-react'
 import React from 'react';
+import { Helmet } from 'lucide-react';
 
 constAIMegaTrends2025202 6: React.FC= () =>{return (
   <><Helme t><titl e>AI2025-2026Mega TrendsBreakthrough: Revolutionary Enterprise Transformation
@@ -19,13 +20,32 @@ constAIMegaTrends2025202 6: React.FC= () =>{return (
             </p><divclassName="grid grid-cols-1 md:grid-cols-3gap-6mb-8"><divclassName="bg-indigo-50p-6rounded-lgtext-center"><divclassName="text-3 xl font-bold text-indigo-600mb-2">$100B+</di><divclassName="text-gray-700">MarketValue</di></di><divclassName="bg-green-50p-6rounded-lgtext-center"><divclassName="text-3 xl font-bold text-green-600mb-2">95%</di><divclassName="text-gray-700">ProcessAutomation</di></di><divclassName="bg-purple-50p-6rounded-lgtext-center"><divclassName="text-3 xl font-bold text-purple-600mb-2">10x</di><divclassName="text-gray-700">EfficiencyGains</di></di></di><h2className="text-2 xl font-bold text-gray-900mb-6">🚀FutureOutlook</h><spanclassName="text-gray-700mb-6"></className="text-gray-700mb-6">The AI revolution of2025-2026represents a fundamental shift in how enterprises
                 operate. Organizations that embrace these mega trends will gain significant
                 competitive advantages and transform their operations for the future.
-            </spa></p><divclassName="bg-indigo-50p-6rounded-lgtext-center"><spanclassName="text-xl font-semibold text-gray-800mb-4"></spa></className="text-xl font-semibold text-gray-800mb-4">Prepare for the AI Revolution
-              </h><spanclassName="text-gray-700mb-4"></className="text-gray-700mb-4">Join leading enterprises embracing the AI megatrendsof2025-2026</spa></p><divclassName="space-x-4"><ahref="/contact"
-                   className="inline-block bg-indigo-600text-white px-6 py-3 rounded-lghover:bg-indigo-700transition-colors"
-                  >Get AI Assessment
-                </a><ahref="/services"
-                   className="inline-block bg-white text-indigo-600px-6 py-3 rounded-lg border-2 border-indigo-600 hover:bg-indigo-50transition-colors"
-                  >Explore AI Services
-                </a></di></di></di></di></di></di></>
-  );};
-export default AIMegaTrends2025202 6;
+              </p>
+              <div className="bg-indigo-50 p-6 rounded-lg text-center"></div>
+                <h3 className="text-xl font-semibold text-gray-800 mb-4">
+                  Prepare for the AI Revolution
+                </h3>
+                <p className="text-gray-700 mb-4">
+                  Join leading enterprises embracing the AI mega trends of 2025-2026
+                </p>
+                <div className="space-x-4"></div>
+                  <a href="/contact"
+                    className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors"
+                  >
+                    Get AI Assessment
+                  </a>
+                  <a href="/services"
+                    className="inline-block bg-white text-indigo-600 px-6 py-3 rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-colors"
+                  >
+                    Explore AI Services
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
+export default AIMegaTrends20252026

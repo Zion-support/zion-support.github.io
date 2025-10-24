@@ -1,36 +1,43 @@
-import { Helmet } from 'lucide-react';
-import {Helmet} from 'lucide-react';
+import React from 'react'
+import { Helmet } from 'lucide-react'
 import React from 'react';
+import { Helmet } from 'lucide-react';
 
-interface SEOHeadProp s {title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
-  noindex?: boolean;
-  nofollow?: boolean;
-  canonical?: string;}
-constSEOHead: React.FC<SEOHeadProp s>= ({title= 'Zion Tech Group - Advanced AI and IT Solutions',
-  description= 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services. Transform your business with cutting-edge technology.',
-  keywords= 'AI solutions, artificial intelligence, enterprise automation, digital transformation, cloud services, machine learning, business intelligence',
-  image= 'https:// ziontechgroup.com/og-image.jpg',
-  url= 'https:// ziontechgroup.com',
-  type= 'website',
-  author= 'Zion Tech Group',
+interface SEOHeadProps {
+  title?: string
+  description?: string
+  keywords?: string
+  image?: string
+  url?: string
+  type?: string
+  author?: string
+  publishedTime?: string
+  modifiedTime?: string
+  section?: string
+  tags?: string[]
+  noindex?: boolean
+  nofollow?: boolean
+  canonical?: string
+}
+const SEOHead: React.FC<SEOHeadProps> = ({
+  title = 'Zion Tech Group - Advanced AI and IT Solutions',
+  description = 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services. Transform your business with cutting-edge technology.',
+  keywords = 'AI solutions, artificial intelligence, enterprise automation, digital transformation, cloud services, machine learning, business intelligence',
+  image = 'https://ziontechgroup.com/og-image.jpg',
+  url = 'https://ziontechgroup.com',
+  type = 'website',
+  author = 'Zion Tech Group',
   publishedTime,
   modifiedTime,
   section,
-  tags= [],
-  noindex= false,
-  nofollow= false,
-  canonical}) => {constfullTitle= title.includes('Zion Tech Group') ? title:`${title} | Zion TechGroup`;
-  constcanonicalUrl= canonical || urlconstrobotsContent= `${noindex ? 'noindex' :'index'}, ${nofollow ? 'nofollow':'follow'}`;
+  tags = [],
+  noindex = false,
+  nofollow = false,
+  canonical
+}) => {
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
+  const canonicalUrl = canonical || url
+  const robotsContent = `${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`
   return (
   <Helme t>{/* Basic MetaTags */}
     <titl e>{fullTitle}</titl><metaname="description" content={description} /><metaname="keywords" content={keywords} /><metaname="author" content={author} /><metaname="robots" content={robotsContent} /><linkrel="canonical" href={canonicalUrl} />{/* Open Graph MetaTags */}
@@ -71,7 +78,8 @@ constSEOHead: React.FC<SEOHeadProp s>= ({title= 'Zion Tech Group - Advanced AI a
            }
           })
         })}
-    </scrip></Helme>
-  );
-};
-export default SEOHead;
+      </script>
+    </Helmet>
+  )
+}
+export default SEOHead
