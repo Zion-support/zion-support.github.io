@@ -82,7 +82,7 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
     <div 
       className={`user-experience-enhancer ${
         isReducedMotion ? 'reduced-motion' : ''
-      } ${isHighContrast ? 'high-contrast' : ''}`}
+      } ${_isHighContrast ? 'high-contrast' : ''}`}
     >
       {children}
     </div>
