@@ -29,10 +29,10 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
     
     try {
       if (onSubscribe) {
-        await onSubscribe(email);
+        await onSubscribe(email)
       } else {
         // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1000));
+        await new Promise(resolve => setTimeout(resolve, 1000))
       }
       
       setIsSubscribed(true);
@@ -126,7 +126,6 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
         </div>
       </div>
     </div>
-  );
-};
-
-export default ContentNewsletterSignup;
+  )
+}
+export default ContentNewsletterSignup

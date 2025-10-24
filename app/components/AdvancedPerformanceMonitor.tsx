@@ -3,12 +3,12 @@
 import React, { useState, useCallback, useEffect } from 'react';
 
 interface PerformanceMetrics {
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
-  memory: number | null;
+  fcp: number | null
+  lcp: number | null
+  fid: number | null
+  cls: number | null
+  ttfb: number | null
+  memory: number | null
 }
 
 interface PerformanceMonitorProps {
@@ -18,8 +18,8 @@ interface PerformanceMonitorProps {
 
 
 const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
-  onMetricsUpdate,
-  enableRealTimeMonitoring = true,
+  onMetricsUpdate
+  enableRealTimeMonitoring = true
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
@@ -57,8 +57,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries()
         entries.forEach((entry: PerformanceEntry) => {
-          if ('processingStart' in entry && entry.startTime) {
-            setMetrics(prev => ({ ...prev, fid: (entry as PerformanceEntry & { processingStart: number }).processingStart - entry.startTime }));
+          if (entry.processingStart && entry.startTime) {
+            setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
           }
         });
       });
@@ -130,7 +130,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
   useEffect(() => {
     if (onMetricsUpdate) {
-      onMetricsUpdate(metrics);
+      onMetricsUpdate(metrics)
     }
   }, [metrics, onMetricsUpdate]);
 

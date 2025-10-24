@@ -23,172 +23,172 @@ export interface Service {
 
 export const aiServices: Service[] = [
   {
-    id: "ai-analytics",
-    title: "AI Analytics & BI",
-    description: "Transform your data into actionable insights with our advanced AI analytics platform.",
+    id: "ai-analytics"
+    title: "AI Analytics & BI"
+    description: "Transform your data into actionable insights with our advanced AI analytics platform."
     features: [
-      "Real-time data processing",
-      "Predictive analytics",
-      "Custom dashboards",
-      "Automated reporting",
+      "Real-time data processing"
+      "Predictive analytics"
+      "Custom dashboards"
+      "Automated reporting"
       "Machine learning models"
-    ],
+      ];
     benefits: [
-      "Improved decision making",
-      "Reduced manual analysis time",
-      "Better business insights",
+      "Improved decision making"
+      "Reduced manual analysis time"
+      "Better business insights"
       "Cost savings"
-    ],
+      ];
     pricing: {
-      basic: "$999/month",
-      pro: "$2,999/month",
+      basic: "/month"
+      pro: ",999/month"
       enterprise: "Custom pricing"
-    },
+        }
     contactInfo: {
-      website: "https://ziontechgroup.com",
-      email: "sales@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+      email: "sales@ziontechgroup.com"
       phone: "+1-555-0123"
-    },
-    price: "Starting at $999/month",
-    icon: "📊",
-    href: "/services/ai-analytics",
+        }
+    price: "Starting at /month"
+    icon: "📊"
+    href: "/services/ai-analytics"
     popular: true,
-    category: "ai"
-  },
+      category: "ai"
+      }
   {
-    id: "ai-automation",
-    title: "AI Process Automation",
-    description: "Automate your business processes with intelligent AI solutions that learn and adapt.",
+    id: "ai-automation"
+    title: "AI Process Automation"
+    description: "Automate your business processes with intelligent AI solutions that learn and adapt."
     features: [
-      "Workflow automation",
-      "Document processing",
-      "Customer service bots",
-      "Data entry automation",
+      "Workflow automation"
+      "Document processing"
+      "Customer service bots"
+      "Data entry automation"
       "Smart scheduling"
-    ],
+      ];
     benefits: [
-      "Increased efficiency",
-      "Reduced human error",
-      "24/7 operation",
+      "Increased efficiency"
+      "Reduced human error"
+      "24/7 operation"
       "Scalable solutions"
-    ],
+      ];
     pricing: {
-      basic: "$1,499/month",
-      pro: "$3,999/month",
+      basic: ",499/month"
+      pro: ",999/month"
       enterprise: "Custom pricing"
-    },
+        }
     contactInfo: {
-      website: "https://ziontechgroup.com",
-      email: "sales@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+      email: "sales@ziontechgroup.com"
       phone: "+1-555-0123"
-    },
-    price: "Starting at $1,499/month",
-    icon: "🤖",
-    href: "/services/ai-automation",
+        }
+    price: "Starting at ,499/month"
+    icon: "🤖"
+    href: "/services/ai-automation"
     popular: true,
-    category: "ai"
-  },
+      category: "ai"
+      }
   {
-    id: "ai-chatbots",
-    title: "AI Chatbots & Virtual Assistants",
-    description: "Deploy intelligent chatbots that provide 24/7 customer support and assistance.",
+    id: "ai-chatbots"
+    title: "AI Chatbots & Virtual Assistants"
+    description: "Deploy intelligent chatbots that provide 24/7 customer support and assistance."
     features: [
-      "Natural language processing",
-      "Multi-language support",
-      "Integration with CRM",
-      "Voice recognition",
+      "Natural language processing"
+      "Multi-language support"
+      "Integration with CRM"
+      "Voice recognition"
       "Custom training"
-    ],
+      ];
     benefits: [
-      "24/7 customer support",
-      "Reduced support costs",
-      "Improved customer satisfaction",
+      "24/7 customer support"
+      "Reduced support costs"
+      "Improved customer satisfaction"
       "Scalable support"
-    ],
+      ];
     pricing: {
-      basic: "$799/month",
-      pro: "$2,499/month",
+      basic: "/month"
+      pro: ",499/month"
       enterprise: "Custom pricing"
-    },
+        }
     contactInfo: {
-      website: "https://ziontechgroup.com",
-      email: "sales@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+      email: "sales@ziontechgroup.com"
       phone: "+1-555-0123"
-    },
-    price: "Starting at $799/month",
-    icon: "💬",
-    href: "/services/ai-chatbots",
+        }
+    price: "Starting at /month"
+    icon: "💬"
+    href: "/services/ai-chatbots"
     popular: false,
-    category: "ai"
+      category: "ai"
   }
 ]
 
 export const itServices: Service[] = [
   {
-    id: "cloud-migration",
-    title: "Cloud Migration Services",
-    description: "Seamlessly migrate your infrastructure to the cloud with our expert team.",
+    id: "cloud-migration"
+    title: "Cloud Migration Services"
+    description: "Seamlessly migrate your infrastructure to the cloud with our expert team."
     features: [
-      "AWS/Azure/GCP migration",
-      "Data migration",
-      "Application modernization",
-      "Security compliance",
+      "AWS/Azure/GCP migration"
+      "Data migration"
+      "Application modernization"
+      "Security compliance"
       "Performance optimization"
-    ],
+      ];
     benefits: [
-      "Reduced infrastructure costs",
-      "Improved scalability",
-      "Enhanced security",
+      "Reduced infrastructure costs"
+      "Improved scalability"
+      "Enhanced security"
       "Better performance"
-    ],
+      ];
     pricing: {
-      basic: "$5,000/project",
-      pro: "$15,000/project",
+      basic: ",000/project"
+      pro: ",000/project"
       enterprise: "Custom pricing"
-    },
+        }
     contactInfo: {
-      website: "https://ziontechgroup.com",
-      email: "sales@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+      email: "sales@ziontechgroup.com"
       phone: "+1-555-0123"
-    },
-    price: "Starting at $5,000",
-    icon: "☁️",
-    href: "/services/cloud-migration",
+        }
+    price: "Starting at ,000"
+    icon: "☁️"
+    href: "/services/cloud-migration"
     popular: true,
-    category: "cloud"
-  },
+      category: "cloud"
+      }
   {
-    id: "cybersecurity",
-    title: "Cybersecurity Solutions",
-    description: "Protect your business with comprehensive cybersecurity services and monitoring.",
+    id: "cybersecurity"
+    title: "Cybersecurity Solutions"
+    description: "Protect your business with comprehensive cybersecurity services and monitoring."
     features: [
-      "Security assessment",
-      "Threat monitoring",
-      "Incident response",
-      "Compliance auditing",
+      "Security assessment"
+      "Threat monitoring"
+      "Incident response"
+      "Compliance auditing"
       "Security training"
-    ],
+      ];
     benefits: [
-      "Enhanced security posture",
-      "Reduced risk of breaches",
-      "Compliance assurance",
+      "Enhanced security posture"
+      "Reduced risk of breaches"
+      "Compliance assurance"
       "Peace of mind"
-    ],
+      ];
     pricing: {
-      basic: "$2,999/month",
-      pro: "$7,999/month",
+      basic: ",999/month"
+      pro: ",999/month"
       enterprise: "Custom pricing"
-    },
+        }
     contactInfo: {
-      website: "https://ziontechgroup.com",
-      email: "sales@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+      email: "sales@ziontechgroup.com"
       phone: "+1-555-0123"
-    },
-    price: "Starting at $2,999/month",
-    icon: "🔒",
-    href: "/services/cybersecurity",
+        }
+    price: "Starting at ,999/month"
+    icon: "🔒"
+    href: "/services/cybersecurity"
     popular: true,
-    category: "security"
+      category: "security"
   }
 ]
 

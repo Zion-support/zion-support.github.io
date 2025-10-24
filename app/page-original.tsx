@@ -48,8 +48,7 @@ const HomePage: React.FC = () => {
         event_label: 'header_phone',
       });
     }
-  }, []);
-
+  }, [])
   // Analytics tracking for email clicks - optimized
   const _handleEmailClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
@@ -58,14 +57,13 @@ const HomePage: React.FC = () => {
         event_label: 'header_email',
       });
     }
-  }, []);
-
+  }, [])
   const features = [
     {
-      icon: '🤖',
-      title: 'AI-Powered Solutions',
-      description: 'Cutting-edge artificial intelligence to transform your business operations and drive innovation.',
-    },
+      icon: '🤖'
+      title: 'AI-Powered Solutions'
+      description: 'Cutting-edge artificial intelligence to transform your business operations and drive innovation.'
+        }
     {
       icon: '☁️',
       title: 'Cloud Architecture',
@@ -91,15 +89,13 @@ const HomePage: React.FC = () => {
       title: 'Expert Team',
       description: 'Experienced developers and consultants dedicated to delivering exceptional results for your projects.'
     }
-  ];
-
+    ];
   const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '50+', label: 'Happy Clients' },
-    { number: '99%', label: 'Client Satisfaction' },
+    { number: '500+', label: 'Projects Completed'     }
+    { number: '50+', label: 'Happy Clients'     }
+    { number: '99%', label: 'Client Satisfaction'     }
     { number: '24/7', label: 'Support Available' }
-  ];
-
+    ];
   return (
     <SEOOptimizer
       title="Zion Tech Group - Leading Technology Solutions Provider"

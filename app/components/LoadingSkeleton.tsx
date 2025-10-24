@@ -1,17 +1,17 @@
 import React from 'react';
 
 interface LoadingSkeletonProps {
+  className?: string;
   lines?: number;
   height?: string;
   width?: string;
-  className?: string;
 }
 
 const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
-  lines = 3,
-  height = 'h-4',
-  width = 'w-full',
   className = ''
+  lines = 1
+  height = 'h-4'
+  width = 'w-full'
 }) => {
   return (
     <div className={`animate-pulse ${className}`}>
@@ -27,4 +27,8 @@ const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
   );
 };
 
+<<<<<<< HEAD
 export default LoadingSkeleton;
+=======
+export default LoadingSkeleton;
+>>>>>>> 5f2517e6a8f3 (Fix merge conflicts and syntax errors)

@@ -53,10 +53,10 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
   logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
     // You can integrate with services like Sentry, LogRocket, etc.
     const errorData = {
-      errorId: this.state.errorId,
-      error: error.message,
-      stack: error.stack,
-      componentStack: errorInfo.componentStack,
+      errorId: this.state.errorId
+      error: error.message
+      stack: error.stack
+      componentStack: errorInfo.componentStack
       timestamp: new Date().toISOString()
     }
     
@@ -82,7 +82,7 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
             <p className="text-gray-600 mb-6">
               We&apos;re sorry, but something unexpected happened. Please try again.
             </p>
-            <div className="space-y-3">
+            <div className="...">
               <button
                 onClick={this.handleRetry}
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200 flex items-center justify-center"

@@ -10,14 +10,14 @@ const SimpleNavigation: React.FC = () => {
         <Link href="/" className="text-xl font-bold">
           Zion Tech Group
         </Link>
-        <div className="space-x-4">
-          <Link href="/about" className="hover:text-blue-400">
+        <div className="...">
+          <Link href="/about" className="...">
             About
           </Link>
-          <Link href="/services" className="hover:text-blue-400">
+          <Link href="/services" className="...">
             Services
           </Link>
-          <Link href="/contact" className="hover:text-blue-400">
+          <Link href="/contact" className="...">
             Contact
           </Link>
         </div>

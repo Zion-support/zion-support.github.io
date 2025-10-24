@@ -1,19 +1,19 @@
-'use client'
-import React from 'react'
-import { ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react'
+'use client';
+import React from 'react';
+import { ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react';
 
 interface FuturisticHeroProps {
-  title?: string
-  subtitle?: string
-  ctaText?: string
-  _ctaLink?: string
+  title?: string;
+  subtitle?: string;
+  ctaText?: string;
+  ctaLink?: string;
 }
 
 const FuturisticHero: React.FC<FuturisticHeroProps> = ({
   title = "Transform Your Business with AI",
   subtitle = "Cutting-edge artificial intelligence solutions that revolutionize how you work, think, and grow.",
   ctaText = "Get Started",
-  _ctaLink = "/contact"
+  ctaLink = "/contact"
 }) => {
   const features = [
     {
@@ -36,7 +36,7 @@ const FuturisticHero: React.FC<FuturisticHeroProps> = ({
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
     }
-  ]
+  ];
 
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
@@ -60,7 +60,7 @@ const FuturisticHero: React.FC<FuturisticHeroProps> = ({
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href={_ctaLink}
+                href={ctaLink}
                 className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center group"
               >
                 {ctaText}
@@ -94,7 +94,6 @@ const FuturisticHero: React.FC<FuturisticHeroProps> = ({
         </div>
       </div>
     </div>
-  );
-};
-
-export default FuturisticHero;
+  )
+}
+export default FuturisticHero

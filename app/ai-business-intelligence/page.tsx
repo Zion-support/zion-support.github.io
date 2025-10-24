@@ -3,6 +3,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, BarChart } from 'lucide-react';
 
 const AiBusinessIntelligencePage: React.FC = () => {
   return (

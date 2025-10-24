@@ -1,17 +1,14 @@
-'use client';
-
-import React, { createContext, useContext, useEffect } from 'react';
-
+'use client'
+import React, { createContext, useContext, useEffect } from 'react'
 interface AnalyticsContextType {
   track: (_event: string, _properties?: Record<string, unknown>) => void;
   identify: (_userId: string, _traits?: Record<string, unknown>) => void;
   page: (_name: string, _properties?: Record<string, unknown>) => void;
 }
 
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined)
 export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext);
+  const context = useContext(AnalyticsContext)
   if (!context) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider');
   }
@@ -29,11 +26,10 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
       // Google Analytics
       if (process.env.NODE_ENV === 'production') {
         // Load Google Analytics script
-        const script = document.createElement('script');
-        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX'}`;
-        script.async = true;
-        document.head.appendChild(script);
-
+        const script = document.createElement('script')
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX'}`
+        script.async = true
+        document.head.appendChild(script)
         // Initialize gtag
         const gtagFunction = function(...args: unknown[]) {
           ((window as unknown as { gtag: { q?: unknown[] } }).gtag.q = (window as unknown as { gtag: { q?: unknown[] } }).gtag.q || []).push(args);
@@ -93,14 +89,12 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
         console.log('Analytics Page:', name, properties);
       }
     }
-  };
-
+  }
   const value: AnalyticsContextType = {
-    track,
-    identify,
+    track
+    identify
     page
-  };
-
+  }
   return (
     <AnalyticsContext.Provider value={value}>
       {children}
@@ -112,7 +106,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
 declare global {
   interface Window {
     dataLayer: unknown[];
-    gtag?: (..._args: unknown[]) => void;
+    gtag: (..._args: unknown[]) => void;
   }
 }
 

@@ -8,7 +8,7 @@
     ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": false,
+    "strict": true,
     "noEmitOnError": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
@@ -18,30 +18,39 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
+    "jsxImportSource": "react",
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
       "@/*": [
         "./*"
       ]
-    }
+    },
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
-    "**/*.ts",
-    "**/*.tsx",
     ".next/types/**/*.ts",
+    "app/**/*.ts",
+    "app/**/*.tsx",
     "next-env.d.ts",
     "dist/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
+    "src",
+    "hooks",
+    "types",
+    "temp-files",
     "corrupted-src-backup",
-    "corrupted-pages-backup",
     "problematic-files-backup",
     "problematic-pages",
     "**/ai-pages-backup/**",
@@ -49,6 +58,7 @@
     "**/api-backup/**",
     "**/app-disabled-all/**",
     "**/app-disabled/**",
+    "**/app-disabled-problematic/**",
     "**/api-disabled/**",
     "**/ai-customer-support-disabled/**",
     "**/ai-workflow-automation-disabled/**",
@@ -59,6 +69,10 @@
     "**/*.backup.*",
     "**/*.bak",
     "**/backup/**",
+    "**/App.tsx",
+    "**/App_minimal.tsx",
+    "**/EnhancedFooter.tsx",
+    "**/SidebarNavigation.tsx",
     "**/AdvancedPerformanceOptimizer.tsx",
     "**/AdvancedSEOOptimizer.tsx",
     "**/Analytics.tsx",

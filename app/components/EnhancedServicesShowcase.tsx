@@ -1,12 +1,13 @@
+'use client';
 import React from 'react';
-import { Brain, Zap, Shield, Globe } from 'lucide-react';
+import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Users } from 'lucide-react';
 
 const EnhancedServicesShowcase: React.FC = () => {
   const services = [
     {
       icon: Brain,
       title: 'AI Solutions',
-      description: 'Transform your business with cutting-edge artificial intelligence',
+      description: 'Cutting-edge artificial intelligence solutions for modern businesses',
       color: 'text-purple-400',
       features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
       stats: '95% Accuracy'
@@ -22,18 +23,18 @@ const EnhancedServicesShowcase: React.FC = () => {
     {
       icon: Shield,
       title: 'Security Services',
-      description: 'Protect your digital assets with enterprise-grade security solutions',
+      description: 'Comprehensive security solutions to protect your digital assets',
       color: 'text-green-400',
       features: ['Penetration Testing', 'Security Audits', 'Compliance', 'Threat Monitoring'],
       stats: '99.9% Uptime'
     },
     {
-      icon: Globe,
+      icon: Cloud,
       title: 'Cloud Solutions',
-      description: 'Scale your infrastructure with our comprehensive cloud services',
+      description: 'Scalable cloud infrastructure and migration services',
       color: 'text-blue-400',
-      features: ['Cloud Migration', 'DevOps', 'Containerization', 'Auto-scaling'],
-      stats: '50% Cost Reduction'
+      features: ['Cloud Migration', 'Infrastructure Setup', 'Auto-scaling', 'Monitoring'],
+      stats: '50% Cost Savings'
     }
   ];
 
@@ -59,7 +60,7 @@ const EnhancedServicesShowcase: React.FC = () => {
                 <service.icon className="h-8 w-8 text-white" />
               </div>
               
-              <h3 className={`text-xl font-semibold ${service.color} text-center mb-3`}>
+              <h3 className="text-xl font-semibold text-white text-center mb-3">
                 {service.title}
               </h3>
               
@@ -67,29 +68,74 @@ const EnhancedServicesShowcase: React.FC = () => {
                 {service.description}
               </p>
               
-              <ul className="space-y-2 mb-4">
+              <div className="space-y-2 mb-4">
                 {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="text-gray-400 text-sm flex items-center">
-                    <div className="w-1.5 h-1.5 bg-purple-400 rounded-full mr-2"></div>
-                    {feature}
-                  </li>
+                  <div key={featureIndex} className="flex items-center text-sm text-gray-300">
+                    <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
+                    <span>{feature}</span>
+                  </div>
                 ))}
-              </ul>
+              </div>
               
               <div className="text-center">
-                <div className="text-2xl font-bold text-white mb-1">
+                <div className={`text-2xl font-bold ${service.color} mb-2`}>
                   {service.stats}
                 </div>
-                <div className="text-gray-400 text-xs">
-                  Average Result
-                </div>
+                <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg text-sm font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
+                  Learn More
+                  <ArrowRight className="ml-1 h-4 w-4" />
+                </button>
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Stats Section */}
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="text-center">
+            <div className="text-4xl font-bold text-white mb-2">500+</div>
+            <div className="text-gray-300">Projects Completed</div>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl font-bold text-white mb-2">99.9%</div>
+            <div className="text-gray-300">Uptime Guarantee</div>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl font-bold text-white mb-2">24/7</div>
+            <div className="text-gray-300">Support Available</div>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl font-bold text-white mb-2">50+</div>
+            <div className="text-gray-300">Expert Team Members</div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="mt-20 text-center">
+          <h3 className="text-2xl font-bold text-white mb-4">
+            Ready to Get Started?
+          </h3>
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            Let's discuss your project and find the perfect solution for your business needs.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
+              Start Your Project
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </button>
+            <button className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300 flex items-center justify-center">
+              <Users className="mr-2 h-5 w-5" />
+              Schedule Consultation
+            </button>
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default EnhancedServicesShowcase;
+=======
+export default EnhancedServicesShowcase;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a

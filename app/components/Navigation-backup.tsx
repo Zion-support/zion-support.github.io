@@ -2,23 +2,23 @@ import React, { useState } from 'react';
 import { X, Menu } from 'lucide-react';
 
 interface NavigationBackupProps {
-  logo?: string;
-  logoText?: string;
+  logo?: string
+  logoText?: string
   menuItems?: Array<{
-    label: string;
-    href: string;
+    label: string,
+      href: string
     submenu?: Array<{
-      label: string;
-      href: string;
-    }>;
-  }>;
-  ctaText?: string;
-  ctaHref?: string;
+      label: string,
+      href: string
+    }>
+  }>
+  ctaText?: string
+  ctaHref?: string
 }
 
 const NavigationBackup: React.FC<NavigationBackupProps> = ({
-  logo,
-  logoText = 'Zion Tech Group',
+  logo
+  logoText = 'Zion Tech Group'
   menuItems = [
     { label: 'Home', href: '/' },
     { label: 'About', href: '/about' },
@@ -28,9 +28,8 @@ const NavigationBackup: React.FC<NavigationBackupProps> = ({
   ctaText = 'Get Started',
   ctaHref = '/contact',
 }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
-
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null)
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -40,11 +39,11 @@ const NavigationBackup: React.FC<NavigationBackupProps> = ({
   };
 
   return (
-    <nav className="bg-white shadow-lg sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+    <nav className="...">
+      <div className="...">
+        <div className="...">
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="...">
             {logo ? (
               <img src={logo} alt={logoText} className="h-8 w-auto" />
             ) : (
@@ -53,24 +52,22 @@ const NavigationBackup: React.FC<NavigationBackupProps> = ({
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="...">
             {menuItems.map((item, index) => (
-              <div key={index} className="relative group">
+              <div key={index} className="...">
                 <a
                   href={item.href}
-                  className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
-                >
+                  className="...">
                   {item.label}
                 </a>
                 {item.submenu && (
-                  <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                    <div className="py-1">
+                  <div className="...">
+                    <div className="...">
                       {item.submenu.map((subItem, subIndex) => (
                         <a
                           key={subIndex}
                           href={subItem.href}
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                        >
+                          className="...">
                           {subItem.label}
                         </a>
                       ))}
@@ -82,21 +79,19 @@ const NavigationBackup: React.FC<NavigationBackupProps> = ({
           </div>
 
           {/* CTA Button */}
-          <div className="hidden md:flex items-center">
+          <div className="...">
             <a
               href={ctaHref}
-              className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors"
-            >
+              className="...">
               {ctaText}
             </a>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="...">
             <button
               onClick={toggleMenu}
-              className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
-            >
+              className="...">
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
@@ -104,24 +99,22 @@ const NavigationBackup: React.FC<NavigationBackupProps> = ({
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+          <div className="...">
+            <div className="...">
               {menuItems.map((item, index) => (
                 <div key={index}>
                   <a
                     href={item.href}
-                    className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium"
-                  >
+                    className="...">
                     {item.label}
                   </a>
                   {item.submenu && (
-                    <div className="pl-4">
+                    <div className="...">
                       {item.submenu.map((subItem, subIndex) => (
                         <a
                           key={subIndex}
                           href={subItem.href}
-                          className="text-gray-600 hover:text-blue-600 block px-3 py-2 text-sm"
-                        >
+                          className="...">
                           {subItem.label}
                         </a>
                       ))}
@@ -129,11 +122,10 @@ const NavigationBackup: React.FC<NavigationBackupProps> = ({
                   )}
                 </div>
               ))}
-              <div className="pt-4">
+              <div className="...">
                 <a
                   href={ctaHref}
-                  className="bg-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-blue-700"
-                >
+                  className="...">
                   {ctaText}
                 </a>
               </div>
@@ -142,7 +134,6 @@ const NavigationBackup: React.FC<NavigationBackupProps> = ({
         )}
       </div>
     </nav>
-  );
-};
-
-export default NavigationBackup;
+  )
+}
+export default NavigationBackup

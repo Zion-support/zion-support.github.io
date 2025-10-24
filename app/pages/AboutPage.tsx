@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import { 
   UserGroupIcon,
@@ -11,7 +10,6 @@ import {
   TagIcon,
   UsersIcon,
   TrophyIcon,
-  LightBulbIcon as LightbulbIcon,
   ShieldCheckIcon as ShieldIcon,
   BoltIcon
 } from '@heroicons/react/24/outline';
@@ -33,7 +31,7 @@ export default function AboutPage() {
       description: 'We maintain the highest standards of quality and continuously strive for excellence in everything we do.'
     },
     {
-      icon: LightbulbIcon,
+      icon: LightBulbIcon,
       title: 'Innovation',
       description: 'We embrace cutting-edge technologies and creative approaches to solve complex business challenges.'
     },

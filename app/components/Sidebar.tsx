@@ -4,28 +4,28 @@ import React, { useState } from 'react';
 import { X, Home, User, Settings, LogOut, ChevronRight } from 'lucide-react';
 
 interface SidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
+  isOpen: boolean,
+      onClose: () => void
   menuItems?: Array<{
-    label: string;
-    href: string;
-    icon?: React.ReactNode;
+    label: string,
+      href: string
+    icon?: React.ReactNode
     submenu?: Array<{
-      label: string;
-      href: string;
-    }>;
-  }>;
+      label: string,
+      href: string
+    }>
+  }>
   user?: {
-    name: string;
-    email: string;
-    avatar?: string;
-  };
-  onLogout?: () => void;
+    name: string,
+      email: string
+    avatar?: string
+  }
+  onLogout?: () => void
 }
 
 const Sidebar: React.FC<SidebarProps> = ({
-  isOpen,
-  onClose,
+  isOpen
+  onClose
   menuItems = [
     { label: 'Dashboard', href: '/dashboard', icon: <Home className="w-5 h-5" /> },
     { label: 'Profile', href: '/profile', icon: <User className="w-5 h-5" /> },
@@ -34,40 +34,35 @@ const Sidebar: React.FC<SidebarProps> = ({
   user,
   onLogout,
 }) => {
-  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
-
+  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null)
   const toggleSubmenu = (label: string) => {
-    setActiveSubmenu(activeSubmenu === label ? null : label);
-  };
-
-  if (!isOpen) return null;
-
-  return (
+    setActiveSubmenu(activeSubmenu === label ? null : label)
+  }
+  if (!isOpen) return null
+    return (
     <>
       {/* Overlay */}
       <div
         className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
         onClick={onClose}
       />
-      
       {/* Sidebar */}
-      <div className="fixed inset-y-0 left-0 w-64 bg-white shadow-lg z-50 transform transition-transform duration-300 ease-in-out">
-        <div className="flex flex-col h-full">
+      <div className="...">
+        <div className="...">
           {/* Header */}
-          <div className="flex items-center justify-between p-4 border-b">
+          <div className="...">
             <h2 className="text-lg font-semibold text-gray-900">Menu</h2>
             <button
               onClick={onClose}
-              className="p-2 rounded-md hover:bg-gray-100"
-            >
+              className="...">
               <X className="w-5 h-5" />
             </button>
           </div>
 
           {/* User Info */}
           {user && (
-            <div className="p-4 border-b">
-              <div className="flex items-center space-x-3">
+            <div className="...">
+              <div className="...">
                 {user.avatar ? (
                   <img
                     src={user.avatar}
@@ -75,7 +70,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                     className="w-10 h-10 rounded-full"
                   />
                 ) : (
-                  <div className="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center">
+                  <div className="...">
                     <User className="w-5 h-5 text-gray-600" />
                   </div>
                 )}
@@ -88,22 +83,20 @@ const Sidebar: React.FC<SidebarProps> = ({
           )}
 
           {/* Menu Items */}
-          <nav className="flex-1 p-4 space-y-2">
+          <nav className="...">
             {menuItems.map((item, index) => (
               <div key={index}>
                 <a
                   href={item.href}
-                  className="flex items-center justify-between px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-100 hover:text-gray-900"
-                >
-                  <div className="flex items-center">
+                  className="...">
+                  <div className="...">
                     {item.icon && <span className="mr-3">{item.icon}</span>}
                     {item.label}
                   </div>
                   {item.submenu && (
                     <button
                       onClick={() => toggleSubmenu(item.label)}
-                      className="p-1 hover:bg-gray-200 rounded"
-                    >
+                      className="...">
                       <ChevronRight
                         className={`w-4 h-4 transition-transform ${
                           activeSubmenu === item.label ? 'rotate-90' : ''
@@ -113,13 +106,12 @@ const Sidebar: React.FC<SidebarProps> = ({
                   )}
                 </a>
                 {item.submenu && activeSubmenu === item.label && (
-                  <div className="ml-6 mt-2 space-y-1">
+                  <div className="...">
                     {item.submenu.map((subItem, subIndex) => (
                       <a
                         key={subIndex}
                         href={subItem.href}
-                        className="block px-3 py-2 text-sm text-gray-600 rounded-md hover:bg-gray-100 hover:text-gray-900"
-                      >
+                        className="...">
                         {subItem.label}
                       </a>
                     ))}
@@ -131,7 +123,7 @@ const Sidebar: React.FC<SidebarProps> = ({
 
           {/* Logout Button */}
           {onLogout && (
-            <div className="p-4 border-t">
+            <div className="...">
               <button
                 onClick={onLogout}
                 className="flex items-center w-full px-3 py-2 text-sm font-medium text-red-600 rounded-md hover:bg-red-50"
@@ -143,8 +135,6 @@ const Sidebar: React.FC<SidebarProps> = ({
           )}
         </div>
       </div>
-    </>
-  );
-};
-
-export default Sidebar;
+      )
+}
+export default Sidebar

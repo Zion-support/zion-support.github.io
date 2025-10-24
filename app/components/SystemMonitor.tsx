@@ -4,30 +4,30 @@ import React, { useState, useEffect } from 'react';
 import { Cpu, HardDrive, Wifi, Battery } from 'lucide-react';
 
 interface SystemMonitorProps {
-  showDetails?: boolean;
-  refreshInterval?: number;
-  className?: string;
+  showDetails?: boolean
+  refreshInterval?: number
+  className?: string
 }
 
 interface SystemStats {
-  cpu: number;
-  memory: number;
-  disk: number;
-  network: number;
-  battery?: number;
+  cpu: number,
+      memory: number,
+      disk: number,
+      network: number
+  battery?: number
 }
 
 const SystemMonitor: React.FC<SystemMonitorProps> = ({
+  _showDetails = true,
   refreshInterval = 1000,
   className = '',
 }) => {
   const [stats, setStats] = useState<SystemStats>({
     cpu: 0,
-    memory: 0,
-    disk: 0,
-    network: 0,
-  });
-
+      memory: 0,
+      disk: 0,
+      network: 0
+  })
   useEffect(() => {
     const updateStats = () => {
       // Simulate system stats (in a real app, you'd get these from an API)
@@ -53,24 +53,23 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   };
 
   const getStatusBgColor = (value: number) => {
-    if (value < 50) return 'bg-green-500';
-    if (value < 80) return 'bg-yellow-500';
-    return 'bg-red-500';
-  };
-
+    if (value < 50) return 'bg-green-500'
+    if (value < 80) return 'bg-yellow-500'
+    return 'bg-red-500'
+  }
   return (
     <div className={`p-4 bg-white rounded-lg shadow-lg ${className}`}>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {/* CPU */}
-        <div className="text-center">
-          <div className="flex items-center justify-center mb-2">
+        <div className="...">
+          <div className="...">
             <Cpu className="w-5 h-5 text-blue-500 mr-1" />
             <span className="text-sm font-medium text-gray-700">CPU</span>
           </div>
-          <div className="text-2xl font-bold text-gray-900">
+          <div className="...">
             {stats.cpu.toFixed(0)}%
           </div>
-          <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
+          <div className="...">
             <div
               className={`h-2 rounded-full ${getStatusBgColor(stats.cpu)}`}
               style={{ width: `${stats.cpu}%` }}
@@ -79,15 +78,15 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
         </div>
 
         {/* Memory */}
-        <div className="text-center">
-          <div className="flex items-center justify-center mb-2">
+        <div className="...">
+          <div className="...">
             <HardDrive className="w-5 h-5 text-green-500 mr-1" />
             <span className="text-sm font-medium text-gray-700">Memory</span>
           </div>
-          <div className="text-2xl font-bold text-gray-900">
+          <div className="...">
             {stats.memory.toFixed(0)}%
           </div>
-          <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
+          <div className="...">
             <div
               className={`h-2 rounded-full ${getStatusBgColor(stats.memory)}`}
               style={{ width: `${stats.memory}%` }}
@@ -96,15 +95,15 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
         </div>
 
         {/* Disk */}
-        <div className="text-center">
-          <div className="flex items-center justify-center mb-2">
+        <div className="...">
+          <div className="...">
             <HardDrive className="w-5 h-5 text-purple-500 mr-1" />
             <span className="text-sm font-medium text-gray-700">Disk</span>
           </div>
-          <div className="text-2xl font-bold text-gray-900">
+          <div className="...">
             {stats.disk.toFixed(0)}%
           </div>
-          <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
+          <div className="...">
             <div
               className={`h-2 rounded-full ${getStatusBgColor(stats.disk)}`}
               style={{ width: `${stats.disk}%` }}
@@ -113,15 +112,15 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
         </div>
 
         {/* Network */}
-        <div className="text-center">
-          <div className="flex items-center justify-center mb-2">
+        <div className="...">
+          <div className="...">
             <Wifi className="w-5 h-5 text-orange-500 mr-1" />
             <span className="text-sm font-medium text-gray-700">Network</span>
           </div>
-          <div className="text-2xl font-bold text-gray-900">
+          <div className="...">
             {stats.network.toFixed(0)}%
           </div>
-          <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
+          <div className="...">
             <div
               className={`h-2 rounded-full ${getStatusBgColor(stats.network)}`}
               style={{ width: `${stats.network}%` }}
@@ -132,17 +131,17 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
 
       {/* Battery (if available) */}
       {stats.battery !== undefined && (
-        <div className="mt-4 pt-4 border-t">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center">
+        <div className="...">
+          <div className="...">
+            <div className="...">
               <Battery className="w-5 h-5 text-gray-500 mr-2" />
               <span className="text-sm font-medium text-gray-700">Battery</span>
             </div>
-            <div className="flex items-center">
-              <span className="text-sm font-medium text-gray-900 mr-2">
+            <div className="...">
+              <span className="...">
                 {stats.battery.toFixed(0)}%
               </span>
-              <div className="w-16 bg-gray-200 rounded-full h-2">
+              <div className="...">
                 <div
                   className={`h-2 rounded-full ${getStatusBgColor(stats.battery)}`}
                   style={{ width: `${stats.battery}%` }}
@@ -153,7 +152,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
         </div>
       )}
     </div>
-  );
-};
-
-export default SystemMonitor;
+  )
+}
+export default SystemMonitor
