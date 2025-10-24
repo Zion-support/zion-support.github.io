@@ -14,10 +14,12 @@ export const metadata: Metadata = {
   formatDetection: {
     email: false,
     address: false,
-    telephone: false},
+    telephone: false,
+  },
   metadataBase: new URL('https://ziontechgroup.com'),
   alternates: {
-    canonical: '/'},
+    canonical: '/',
+  },
   openGraph: {
     title: 'ZionTechGroup - AI Solutions & Technology Services',
     description: 'Leading provider of AI solutions, technology services, and digital transformation for businesses worldwide.',
@@ -28,14 +30,18 @@ export const metadata: Metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'ZionTechGroup - AI Solutions'}],
+        alt: 'ZionTechGroup - AI Solutions',
+      },
+    ],
     locale: 'en_US',
-    type: 'website'},
+    type: 'website',
+  },
   twitter: {
     card: 'summary_large_image',
     title: 'ZionTechGroup - AI Solutions & Technology Services',
     description: 'Leading provider of AI solutions, technology services, and digital transformation for businesses worldwide.',
-    images: ['/og-image.jpg']},
+    images: ['/og-image.jpg'],
+  },
   robots: {
     index: true,
     follow: true,
@@ -44,12 +50,17 @@ export const metadata: Metadata = {
       follow: true,
       'max-video-preview': -1,
       'max-image-preview': 'large',
-      'max-snippet': -1}},
+      'max-snippet': -1,
+    },
+  },
   verification: {
-    google: 'your-google-verification-code'}};
+    google: 'your-google-verification-code',
+  },
+};
 
 export default function RootLayout({
-  children}: {
+  children,
+}: {
   children: React.ReactNode;
 }) {
   return (

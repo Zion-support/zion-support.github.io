@@ -1,9 +1,11 @@
 'use client';
+
 import React, { createContext, useContext, useEffect, useState } from 'react';
 
 interface AnalyticsContextType {
-  trackEvent: (event: string, properties?: Record<string, any>) => void;
-  trackPageView: (page: string) => void;
+  track: (event: string, properties?: Record<string, any>) => void;
+  identify: (userId: string, traits?: Record<string, any>) => void;
+  page: (name: string, properties?: Record<string, any>) => void;
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
@@ -16,41 +18,47 @@ export const useAnalytics = () => {
   return context;
 };
 
-interface AnalyticsProviderProps {
+interface EnhancedAnalyticsProps {
   children: React.ReactNode;
 }
 
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
-  const [isLoaded, setIsLoaded] = useState(false);
+const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({ children }) => {
+  const [isInitialized, setIsInitialized] = useState(false);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setIsLoaded(true);
-    }
+    // Initialize enhanced analytics
+    setIsInitialized(true);
   }, []);
 
-  const trackEvent = (event: string, properties?: Record<string, any>) => {
-    if (isLoaded && typeof window !== 'undefined') {
-      // Track event with analytics service
-      // In production, this would send to analytics service
-      if (process.env.NODE_ENV === 'development') {
-        // eslint-disable-next-line no-console
-        console.log('Analytics Event:', event, properties);
-      }
+  const track = (event: string, properties?: Record<string, any>) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', event, properties);
     }
   };
 
-  const trackPageView = (page: string) => {
-    if (isLoaded && typeof window !== 'undefined') {
-      // Track page view
-      // Track page view
-      // console.log('Page View:', page);
+  const identify = (userId: string, traits?: Record<string, any>) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('config', 'GA_MEASUREMENT_ID', {
+        user_id: userId,
+        custom_map: traits,
+      });
     }
   };
 
-  const value = {
-    trackEvent,
-    trackPageView,
+  const page = (name: string, properties?: Record<string, any>) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'page_view', {
+        page_title: name,
+        page_location: window.location.href,
+        ...properties,
+      });
+    }
+  };
+
+  const value: AnalyticsContextType = {
+    track,
+    identify,
+    page,
   };
 
   return (
@@ -60,4 +68,4 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   );
 };
 
-export default AnalyticsProvider;
+export default EnhancedAnalytics;
