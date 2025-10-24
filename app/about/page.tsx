@@ -1,31 +1,44 @@
-"use client";
-import React from "react";
 
-export default function AboutPage() {
+'use client'
+
+import React from 'react'
+import Footer from '../components/Footer'
+
+const AboutPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-8">About</h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Advanced about solutions by Zion Tech Group
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-            >
-              Get Started
-            </a>
-            <a
-              href="/services"
-              className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
-            >
-              View All Services
-            </a>
+    <div className="min-h-screen bg-slate-900 text-white">
+
+      <main className="container mx-auto px-4 py-16 pt-24">
+        <div className="max-w-4xl mx-auto">
+
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-8">
+            About Zion Tech Group
+          </h1>
+          <div className="prose prose-lg prose-invert max-w-none">
+
+            <p className="text-xl text-gray-300 mb-6">
+              Zion Tech Group is a leading provider of advanced AI solutions, cloud services, and IT consulting for modern businesses.
+            </p>
+            <p className="text-lg text-gray-300 mb-6">
+              We specialize in delivering cutting-edge technology solutions that help businesses transform their operations and achieve unprecedented growth.
+            </p>
+            <h2 className="text-2xl font-bold text-white mb-4">Our Mission</h2>
+            <p className="text-lg text-gray-300 mb-6">
+              To empower businesses with innovative AI and IT solutions that drive efficiency, growth, and competitive advantage.
+            </p>
+            <h2 className="text-2xl font-bold text-white mb-4">Our Services</h2>
+            <ul className="list-disc list-inside text-lg text-gray-300 mb-6 space-y-2">
+              <li>AI-Powered Solutions</li>
+              <li>Cloud Services</li>
+              <li>IT Consulting</li>
+              <li>Digital Transformation</li>
+            </ul>
           </div>
         </div>
-      </div>
+      </main>
+      <Footer />
     </div>
-  );
+  )
 }
+
+export default AboutPage;

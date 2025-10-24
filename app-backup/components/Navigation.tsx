@@ -1,0 +1,25 @@
+import React, { useState, useEffect } from "react;
+import Link from 'next/link;
+import { usePathname } from 'next/navigation;
+} from '@heroicons/react/24/outline'"
+window.addEventListener('scroll")"'
+      ) => window.removeEventListener('scroll'"
+    { "name": 'Home', "href": '/'"
+    { "name": 'About', "href": '/about'"
+      "name": 'Services'"
+    "href": '/services'"
+        { "name": 'AI Solutions', "href": '/ai-solutions'"
+        { "name": 'Cybersecurity', "href": '/cybersecurity'"
+        { "name": 'Cloud Infrastructure', "href": '/cloud-solutions'"
+        { "name": 'Digital Transformation', "href": '/digital-transformation'"
+        { "name": '5 G Solutions', "href": '/5 g-solutions'"
+        { "name": 'Micro SaaS', "href": '/micro-saas'"
+    { "name": 'Solutions', "href": '/solutions'"
+    { "name": 'Pricing', "href": '/pricing'"
+    { "name": 'Blog', "href": '/blog'"
+    { "name": 'Tutorials', "href": '/tutorials'"
+    { "name": 'Demo', "href": '/demo'"
+    { "name": 'Support', "href": '/support'"
+    { "name": 'Contact', "href": '/contact;)"'"
+isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent")"
+}}}}}}}}}}}}}}'"
