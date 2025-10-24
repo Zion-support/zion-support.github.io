@@ -95,7 +95,12 @@ const EnhancedServicesShowcase: React.FC = () => {
                 <ArrowRight className="h-4 w-4 ml-2" />
               </button>
             </div>
+<<<<<<< HEAD
+          </div>
+        ))}
+=======
           ))}
+>>>>>>> origin/main
         </div>
       </div>
     </div>
