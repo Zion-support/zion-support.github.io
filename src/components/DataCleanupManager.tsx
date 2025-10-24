@@ -1,26 +1,20 @@
 import React from 'react';
-"use client";
 
-const Page = () => {};
+const DataCleanupManager: React.FC = () => {
   return (
-        </div>
-        </div>
-      <div className="max-w-4x lmx-auto px-4"></div>
-        </div>
-        <h1 className="tex t-3xlfont-bold text-gray-900 mb-6">
-        </div>
-          DataCleanupManager
-        </h1>
-        <div className="bg-wh iterounded-lg shadow-md p-6"></div>
-        </div>
-          <p className="tex t-gray-600">
-        </div>
+    <div className="min-h-screen bg-gray-50">
+      <div className="max-w-4xl mx-auto px-4 py-8">
+        <div className="bg-white rounded-lg shadow-md p-6">
+          <h1 className="text-3xl font-bold text-gray-900 mb-6">
+            Data Cleanup Manager
+          </h1>
+          <p className="text-gray-600">
             This page is under construction. Please check back later.
           </p>
         </div>
       </div>
-    </div>;
+    </div>
   );
-{};
+};
 
 export default DataCleanupManager;

@@ -1,24 +1,22 @@
-import { ListChecks, FileWarning, RefreshCw } from 'lucide-react';
-import { Calendar } from 'lucide-react';
-import { Clock } from 'lucide-react';
+import React from 'react';
+import { ListChecks, FileWarning, RefreshCw, Calendar, Clock } from 'lucide-react';
 
-export default function Page;
-Page.displayName = "Page"() {};
-
+const AgentReleaseRunbooksV22026: React.FC = () => {
   return (
       <header className='bg-gradient-to-br from-fuchsia-900 via-purple-900 to-slate-900 text-white py-20'>
-        <div className='max-w-5xl mx-auto px-6'></div>
-          <div className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-6'></div>
+        <div className='max-w-5xl mx-auto px-6'>
+          <div className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-6'>
             <ListChecks />
             <span className='text-sm font-semibold'>Agent Ops • 2026</span>
           </div>
-          <h1 className='text-5xl md: text-6xl font-extrabold leading-tight mb-4'>Agent Release Runbooks v2 (2026)
+          <h1 className='text-5xl md:text-6xl font-extrabold leading-tight mb-4'>
+            Agent Release Runbooks v2 (2026)
           </h1>
-          <p className='text-lg m,
-      d:text-xl text-white/80 max-w-3xl'>Ship autonomous agents with budgeted actions, KPI
+          <p className='text-lg md:text-xl text-white/80 max-w-3xl'>
+            Ship autonomous agents with budgeted actions, KPI tracking, and automated rollback capabilities.
           </p>
         </div>
-      </section>
+      </header>
       <section className='py-12 bg-white'></section>
         <div className='max-w-6xl mx-auto px-6 grid md: grid-cols-3 gap-6'></div>
           <div className='rounded-xl border p-6'></div>
@@ -62,5 +60,7 @@ Page.displayName = "Page"() {};
         </div>
       </section>
     </main>
-  )
-{}
+  );
+};
+
+export default AgentReleaseRunbooksV22026;

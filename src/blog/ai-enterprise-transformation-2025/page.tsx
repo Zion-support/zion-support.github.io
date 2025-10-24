@@ -1,16 +1,88 @@
 import React from 'react';
-=======
->>>>>>> 936c9169b8529ba98f1996ac9beac1bb365b75be
-import { Helmet } from 'lucide-react';
-import React from 'react';
-import { Star, Helmet } from 'lucide-react';
+import { Star } from 'lucide-react';
 
-
-const Page: React.FC = () => {};
+const AIEnterpriseTransformation2025: React.FC = () => {
   return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        {/* Hero Section */}
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            AI Enterprise Transformation 2025
+          </h1>
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
+            Revolutionary Business Transformation with Advanced AI Solutions
+          </p>
+          <div className="flex items-center justify-center gap-2 text-yellow-400">
+            <Star className="w-6 h-6 fill-current" />
+            <span className="text-lg font-semibold">Enterprise AI</span>
+          </div>
+        </div>
+
+        {/* Content Sections */}
+        <div className="space-y-8">
+          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
+            <h2 className="text-3xl font-bold text-white mb-6">Transformation Features</h2>
+            <ul className="space-y-4 text-gray-300">
+              <li className="flex items-center gap-3">
+                <Star className="w-5 h-5 text-cyan-400" />
+                Advanced AI Solutions
+              </li>
+              <li className="flex items-center gap-3">
+                <Star className="w-5 h-5 text-cyan-400" />
+                Business Process Automation
+              </li>
+              <li className="flex items-center gap-3">
+                <Star className="w-5 h-5 text-cyan-400" />
+                Enterprise Integration
+              </li>
+              <li className="flex items-center gap-3">
+                <Star className="w-5 h-5 text-cyan-400" />
+                Digital Transformation
+              </li>
+            </ul>
+          </div>
+          
+          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
+            <h2 className="text-3xl font-bold text-white mb-6">Benefits</h2>
+            <ul className="space-y-4 text-gray-300">
+              <li className="flex items-center gap-3">
+                <Star className="w-5 h-5 text-green-400" />
+                Increased Efficiency
+              </li>
+              <li className="flex items-center gap-3">
+                <Star className="w-5 h-5 text-green-400" />
+                Cost Optimization
+              </li>
+              <li className="flex items-center gap-3">
+                <Star className="w-5 h-5 text-green-400" />
+                Enhanced Productivity
+              </li>
+              <li className="flex items-center gap-3">
+                <Star className="w-5 h-5 text-green-400" />
+                Future-Ready Solutions
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="mt-16">
+          <div className="bg-gradient-to-r from-cyan-500/20 to-blue-600/20 border border-cyan-500/30 rounded-2xl p-8 text-center">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Start Your AI Transformation
+            </h2>
+            <p className="text-gray-300 mb-6">
+              Transform your enterprise with AI solutions in 2025.
+            </p>
+            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl">
+              Get Started Today
+            </button>
+          </div>
+        </div>
       </div>
     </div>
-</>
-  )
-{}
-export default Page;
+  );
+};
+
+export default AIEnterpriseTransformation2025;
