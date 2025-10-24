@@ -1,6 +1,5 @@
-'use client'
+'use client';
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -44,11 +43,7 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>AdvancedPerformanceMonitor</title>
-        <meta name="description" content="Advanced Performance Monitor solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial intelligence, performance monitoring, AI solutions, intelligent automation" />
-      </Helmet>
+      
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}

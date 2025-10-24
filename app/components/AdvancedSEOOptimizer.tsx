@@ -1,6 +1,5 @@
-'use client'
+'use client';
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -44,11 +43,7 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>{title}</title>
-        <meta name="description" content="website" />
-        <meta name="keywords" content="AI, artificial intelligence, AdvancedSEOOptimizer, AI solutions, intelligent automation" />
-      </Helmet>
+      
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
         {/* Hero Section */}
@@ -192,27 +187,7 @@ return structuredData || defaultStructuredData
 }
 return (
     <>
-      <Helmet>
-<title>{title}</title>
-<meta name="description" content={description} />
-<meta name="keywords" content={keywords} />
-{canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-{/* Open Graph */}
-<meta property="og:title" content={title} />
-<meta property="og:description" content={description} />
-<meta property="og:image" content={ogImage} />
-<meta property="og:type" content="website" />
-{canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
-{/* Twitter Card */}
-<meta name="twitter:card" content={twitterCard} />
-<meta name="twitter:title" content={title} />
-<meta name="twitter:description" content={description} />
-<meta name="twitter:image" content={ogImage} />
-{/* Structured Data */}
-<script type="application/ld+json">
-{JSON.stringify(generateStructuredData())}
-</script>
-</Helmet>
+      
 {children}
 {process.env.NODE_ENV === 'development' && (
 <div className="seo-debug" style={{

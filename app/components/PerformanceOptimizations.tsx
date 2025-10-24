@@ -38,11 +38,7 @@ const PerformanceOptimizationsPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>PerformanceOptimizations</title>
-        <meta name=&quot;description&quot; content=&quot;Advanced PerformanceOptimizations solution for modern businesses.&quot; />
-        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, PerformanceOptimizations, AI solutions, intelligent automation&quot; />
-      </Helmet>
+      
       <Navigation />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
         {/* Hero Section */}

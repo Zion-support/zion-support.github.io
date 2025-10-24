@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import Link from 'next/link';
 import { ArrowRight, Zap, Settings, CheckCircle, Brain, Target, Users, Calendar, BarChart, Workflow } from 'lucide-react';
 
@@ -39,11 +38,6 @@ const AutomationPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      <Helmet>
-        <title>Automation Services - Zion Tech Group | Business Process Automation</title>
-        <meta name="description" content="Transform your business with intelligent automation solutions. Streamline processes, reduce costs, and increase efficiency with our automation services." />
-        <meta name="keywords" content="business automation, process automation, workflow automation, RPA, intelligent automation" />
-      </Helmet>
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">

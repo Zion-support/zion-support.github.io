@@ -1,4 +1,3 @@
-'use client'
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -32,10 +31,7 @@ const PageFixedPage: React.FC = () => {
   ]
   return (
     <>
-      <Helmet>
-        <title>Page Fixed - Zion Tech Group</title>
-        <meta name="description" content="Advanced page fixed solutions powered by AI technology." />
-      </Helmet>
+      
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="relative py-20 px-4 overflow-hidden">

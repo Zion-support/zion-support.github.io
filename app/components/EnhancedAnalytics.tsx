@@ -1,3 +1,4 @@
+'use client';
 &quot;use client&quot;
 
 import React, { createContext, useContext, useEffect } from &quot;react&quot;

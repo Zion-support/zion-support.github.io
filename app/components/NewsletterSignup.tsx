@@ -1,4 +1,5 @@
 'use client';
+'use client';
 import { useState } from 'react';
 import { AlertCircle } from 'lucide-react';
 

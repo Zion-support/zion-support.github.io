@@ -1,7 +1,6 @@
-'use client'
+'use client';
 import {Phone, Mail, Brain} from 'lucide-react';
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import { ArrowRight, X, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -45,11 +44,7 @@ const SidebarPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Sidebar</title>
-        <meta name=&quot;description&quot; content=&quot;Advanced Sidebar solution for modern businesses.&quot; />
-        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, Sidebar, AI solutions, intelligent automation&quot; />
-      </Helmet>
+      
       <Navigation />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
         {/* Hero Section */}

@@ -1,6 +1,5 @@
 'use client';
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Play, CheckCircle, ArrowRight, Brain, Zap, Shield } from 'lucide-react';
 
 const DemoPage: React.FC = () => {
@@ -31,18 +30,7 @@ const DemoPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
-        <title>Demo - Zion Tech Group | AI & IT Solutions</title>
-        <meta name="description" content="Experience our AI and IT solutions through interactive demos. See how our technology can transform your business." />
-        <meta name="keywords" content="demo, AI solutions, IT services, interactive demo, technology showcase" />
-        <meta property="og:title" content="Demo - Zion Tech Group" />
-        <meta property="og:description" content="Experience our AI and IT solutions through interactive demos. See how our technology can transform your business." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/demo" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 pt-16">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 pt-16">
         {/* Hero Section */}
         <section className="py-20">
           <div className="container mx-auto px-4 text-center">
@@ -142,7 +130,6 @@ const DemoPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
   );
 };
 

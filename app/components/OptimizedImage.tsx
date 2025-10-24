@@ -1,7 +1,5 @@
-'use client'
 import Footer from './Footer'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import { ArrowRight, Brain } from 'lucide-react'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 import { Phone, Mail, ArrowRight } from 'lucide-react'
@@ -13,11 +11,7 @@ interface OptimizedImageProps {
 const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {
   return (
     <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
-      <Helmet>
-        <title>OptimizedImage | Zion Tech Group</title>
-        <meta name=&quot;description&quot; content=&quot;Professional OptimizedImage services by Zion Tech Group. Advanced AI and IT solutions for your business.&quot; />
-        <meta name=&quot;keywords&quot; content=&quot;OptimizedImage, AI solutions, IT services, Zion Tech Group, optimizedimage&quot; />
-      </Helmet>
+      
       {/* Hero Section */}
       <section className=&quot;relative py-20 px-4 sm:px-6 lg:px-8&quot;></section>
         <div className=&quot;max-w-7xl mx-auto&quot;></div>

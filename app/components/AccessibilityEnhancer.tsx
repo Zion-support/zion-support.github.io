@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import Navigation from './Navigation';
 
 import React, { useEffect } from 'react';
