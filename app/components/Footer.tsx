@@ -64,7 +64,8 @@ const Footer: React.FC = () => {
               <Brain className="h-8 w-8 text-blue-400" />
               <span className="text-xl font-bold">Zion Tech Group</span>
             </div>
-            <p className="text-gray-400 mb-4">Advanced AI and IT solutions for modern businesses. We help you</p>
+            <p className="text-gray-400 mb-4">
+              Advanced AI and IT solutions for modern businesses. We help you
               leverage cutting-edge technology to drive growth and innovation.
             </p>
             <div className="flex space-x-4">
