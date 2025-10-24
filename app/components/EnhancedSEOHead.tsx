@@ -13,8 +13,12 @@ interface EnhancedSEOHeadProps {
 const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({ 
   title = 'Zion Tech Group',
   description = 'Advanced AI and IT solutions for modern businesses',
+<<<<<<< HEAD
   keywords = 'AI, artificial intelligence, IT solutions, technology',
   className: _className = '' 
+=======
+  keywords = 'AI, artificial intelligence, IT solutions, technology'
+>>>>>>> cursor/fix-errors-and-merge-to-main-3587
 }) => {
   return (
     <Helmet>
