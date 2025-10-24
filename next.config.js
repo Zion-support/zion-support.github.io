@@ -22,12 +22,11 @@ const nextConfig = {
   },
   // Disable static generation to avoid prerendering errors
   staticPageGenerationTimeout: 1000,
-  webpack: (config) => {
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      '@': require('path').resolve(__dirname),
-    };
-    return config;
+  // Disable static optimization
+  swcMinify: false,
+  // Force all pages to be dynamic
+  generateBuildId: async () => {
+    return 'build-' + Date.now()
   },
 }
 
