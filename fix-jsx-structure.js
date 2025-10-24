@@ -1,107 +1,96 @@
 const fs = require('fs');
 const path = require('path');
 
-function fixJSXStructure(filePath) {
+// Function to fix JSX structure issues
+function fixJSXStructure(content) {
+  let fixed = content;
+  
+  // Fix broken return statements with empty div followed by other elements
+  fixed = fixed.replace(
+    /return\s*\(\s*<div><\/div>\s*([^)]+)\s*\)/gs,
+    (match, jsxContent) => {
+      // Wrap all JSX content in a single parent element
+      return `return (\n    <>\n      ${jsxContent.trim()}\n    </>\n  )`;
+    }
+  );
+  
+  // Fix JSX elements that are not properly nested
+  fixed = fixed.replace(
+    /<div><\/div>\s*<([A-Z][a-zA-Z0-9]*[^>]*)>/g,
+    '<$1>'
+  );
+  
+  // Fix missing closing tags for common patterns
+  fixed = fixed.replace(
+    /<div([^>]*)>\s*<div([^>]*)>\s*<h1([^>]*)>([^<]+);\s*<\/h1>/g,
+    '<div$1>\n        <div$2>\n          <h1$3>$4</h1>'
+  );
+  
+  // Fix semicolons in JSX text content
+  fixed = fixed.replace(/>([^<]+);\s*</g, '>$1<');
+  
+  // Fix broken className attributes
+  fixed = fixed.replace(/className="([^"]*),\s*([^"]*)"/g, 'className="$1 $2"');
+  
+  // Fix missing closing tags for div elements
+  fixed = fixed.replace(/<div([^>]*)>\s*$/gm, '<div$1></div>');
+  
+  // Fix JSX fragments that need proper structure
+  fixed = fixed.replace(
+    /<>\s*<div><\/div>\s*<([A-Z][a-zA-Z0-9]*[^>]*)>/g,
+    '<>\n      <$1>'
+  );
+  
+  return fixed;
+}
+
+// Function to process a file
+function processFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-
-    // Fix malformed JSX fragments - the main issue
-    // Look for patterns like: return ( <> <Head> ... </Head> <div> ... </div> </> );
-    // and fix them to proper JSX structure
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixed = fixJSXStructure(content);
     
-    // Fix the specific pattern where JSX fragments are malformed
-    if (content.includes('return (') && content.includes('<>')) {
-      // Check if the JSX structure is malformed
-      const lines = content.split('\n');
-      let newLines = [];
-      let inJSX = false;
-      let jsxDepth = 0;
-      
-      for (let i = 0; i < lines.length; i++) {
-        const line = lines[i];
-        
-        // Check for return statement
-        if (line.includes('return (') && line.includes('<>')) {
-          inJSX = true;
-          jsxDepth = 1;
-          newLines.push(line);
-          continue;
-        }
-        
-        // Check for opening JSX fragments
-        if (inJSX && line.includes('<>')) {
-          jsxDepth++;
-          newLines.push(line);
-          continue;
-        }
-        
-        // Check for closing JSX fragments
-        if (inJSX && line.includes('</>')) {
-          jsxDepth--;
-          newLines.push(line);
-          if (jsxDepth === 0) {
-            inJSX = false;
-          }
-          continue;
-        }
-        
-        // Check for end of return statement
-        if (inJSX && (line.includes(');') || line.includes('}')) && jsxDepth > 0) {
-          // Add missing closing fragments
-          for (let j = 0; j < jsxDepth; j++) {
-            newLines.push('    </>');
-          }
-          inJSX = false;
-          jsxDepth = 0;
-          newLines.push(line);
-          modified = true;
-          continue;
-        }
-        
-        newLines.push(line);
-      }
-      
-      if (modified) {
-        content = newLines.join('\n');
-      }
-    }
-
-    // Fix specific className issues that might still exist
-    content = content.replace(/bg-slate-900text-white/g, 'bg-slate-900 text-white');
-    content = content.replace(/px-4sm:px-6lg:px-8py-12/g, 'px-4 sm:px-6 lg:px-8 py-12');
-    content = content.replace(/grid-cols-1md:grid-cols-2lg:grid-cols-4gap-8/g, 'grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8');
-
-    // Fix malformed closing tags
-    content = content.replace(/<\/footer>\s*<div/g, '</footer>\n      <div');
-    content = content.replace(/<\/div>,\s*<div/g, '</div>\n        <div');
-
-    if (modified) {
-      fs.writeFileSync(filePath, content);
+    if (content !== fixed) {
+      fs.writeFileSync(filePath, fixed, 'utf8');
       console.log(`Fixed JSX structure in: ${filePath}`);
+      return true;
     }
+    return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-function walkDir(dir) {
-  const files = fs.readdirSync(dir);
+// Function to recursively find and process files
+function processDirectory(dirPath) {
+  let fixedCount = 0;
   
-  files.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
+  try {
+    const items = fs.readdirSync(dirPath);
     
-    if (stat.isDirectory()) {
-      walkDir(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
-      fixJSXStructure(filePath);
+    for (const item of items) {
+      const fullPath = path.join(dirPath, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        if (!['node_modules', '.git', '.next', 'dist', 'build'].includes(item)) {
+          fixedCount += processDirectory(fullPath);
+        }
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js')) {
+        if (processFile(fullPath)) {
+          fixedCount++;
+        }
+      }
     }
-  });
+  } catch (error) {
+    console.error(`Error processing directory ${dirPath}:`, error.message);
+  }
+  
+  return fixedCount;
 }
 
-// Start fixing from the app directory
-console.log('Starting JSX structure fixes...');
-walkDir('./app');
-walkDir('./src');
-console.log('JSX structure fixes completed!');
+// Main execution
+console.log('Starting JSX structure fix...');
+const fixedCount = processDirectory('./app');
+console.log(`Fixed JSX structure in ${fixedCount} files`);

@@ -1,10 +1,10 @@
 // Accessibility utilities for improving user experience and compliance;
 
-export const generateId = (prefix: string = 'id'): string => {;
+export const generateId = (prefix: string = 'id'): string => {;}
   return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
 };
 
-export const createAriaLabel = (text: string, context?: string): string => {;
+export const createAriaLabel = (text: string, context?: string): string => {;}
   return context ? `${text}, ${context}` : text;
 };
 
@@ -17,14 +17,14 @@ export const announceToScreenReader = (message: string): void => {;
   
   document.body.appendChild(announcement);
   
-  // Remove after announcement
+  // Remove after announcement;
   setTimeout(() => {
-    document.body.removeChild(announcement);
+    document.body.removeChild(announcement);}
   }, 1000);
 };
 
 export const trapFocus = (element: HTMLElement): (() => void) => {
-  const focusableElements = element.querySelectorAll()
+  const focusableElements = element.querySelectorAll();
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
   );
   
@@ -36,12 +36,12 @@ export const trapFocus = (element: HTMLElement): (() => void) => {
       if (e.shiftKey) {
         if (document.activeElement === firstElement) {;
           lastElement.focus();
-          e.preventDefault();
+          e.preventDefault();}
         }
       } else {
         if (document.activeElement === lastElement) {
           firstElement.focus();
-          e.preventDefault();
+          e.preventDefault();}
         }
       }
     }
@@ -51,34 +51,35 @@ export const trapFocus = (element: HTMLElement): (() => void) => {
   firstElement?.focus();
   
   return (
-    <>
+    <div></div>
+      ;
       ) => {
-    </>
-    </>
+    </div>;
+    </div>;
     element.removeEventListener('keydown', handleTabKey
-    </>
-  );
+    </div>;
+  );}
   };
 };
 
 export const createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement => {;
-  const skipLink = document.createElement('a');
+  const skipLink = document.createElement('a');}
   skipLink.href = `#${targetId}`;
   skipLink.textContent = text;
-  skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focu,
+  skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focu,;
   s:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50';
   
   return skipLink;
 };
 
 export const validateColorContrast = (foreground: string, background: string): boolean => {
-  // Simple contrast ratio calculation
-  const getLuminance = (colo,
+  // Simple contrast ratio calculation;
+  const getLuminance = (colo,;
   r: string): number => {;
     const rgb = color.match(/\d+/g)?.map(Number) || [0, 0, 0];
     const [r, g, b] = rgb.map(c => {
-      c = c / 255;)
-      return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+      c = c / 255;);
+      return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);}
     });
     return 0.2126 * r + 0.7152 * g + 0.0722 * b;
   };
@@ -88,18 +89,18 @@ export const validateColorContrast = (foreground: string, background: string): b
   
   const contrast = (Math.max(fgLuminance, bgLuminance) + 0.05) / (Math.min(fgLuminance, bgLuminance) + 0.05);
   
-  return contrast >= 4.5; // WCAG AA standard
+  return contrast >= 4.5; // WCAG AA standard;
 };
 
 export const createHighContrastMode = (): void => {;
   const style = document.createElement('style');
   style.id = 'high-contrast-mode';
-  style.textContent = `
+  style.textContent = `;
     .high-contrast {
-      filter: contrast(150%) brightness(120%);,
+      filter: contrast(150%) brightness(120%);,;}
     }
     .high-contrast * {
-      border-color: currentColor !important;,
+      border-color: currentColor !important;,;}
     }
   `;
   document.head.appendChild(style);
@@ -107,34 +108,34 @@ export const createHighContrastMode = (): void => {;
 
 export const enableHighContrastMode = (): void => {;
   document.body.classList.add('high-contrast');
-  createHighContrastMode();
+  createHighContrastMode();}
 };
 
 export const disableHighContrastMode = (): void => {;
   document.body.classList.remove('high-contrast');
   const style = document.getElementById('high-contrast-mode');
   if (style) {
-    style.remove();
+    style.remove();}
   }
 };
 
 export const createFocusIndicator = (): void => {;
   const style = document.createElement('style');
   style.id = 'focus-indicator';
-  style.textContent = `
+  style.textContent = `;
     *:focus {
       outline: 2px solid #3b82f6 !important;
-      outline-offse,
-  t: 2px !important;
+      outline-offse,;
+  t: 2px !important;}
     }
     *:focus:not(:focus-visible) {
-      outlin,
-  e: none !important;
+      outlin,;
+  e: none !important;}
     }
     *:focus-visible {
       outline: 2px solid #3b82f6 !important;
-      outline-offse,
-  t: 2px !important;
+      outline-offse,;
+  t: 2px !important;}
     }
   `;
   document.head.appendChild(style);
@@ -143,16 +144,16 @@ export const createFocusIndicator = (): void => {;
 export const createReducedMotionMode = (): void => {;
   const style = document.createElement('style');
   style.id = 'reduced-motion-mode';
-  style.textContent = `
-    @media (prefers-reduced-motion: reduce) {,
-      *,
-      *::before,
+  style.textContent = `;
+    @media (prefers-reduced-motion: reduce) {,;
+      *,;
+      *::before,;
       *::after {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
-        scroll-behavio,
-  r: auto !important;
+        scroll-behavio,;
+  r: auto !important;}
       }
     }
   `;
@@ -160,20 +161,20 @@ export const createReducedMotionMode = (): void => {;
 };
 
 export const setupKeyboardNavigation = (): void => {
-  // Add keyboard navigation support
+  // Add keyboard navigation support;
   document.addEventListener('keydown', (e) => {
-    // Escape key to close modals/dropdowns
+    // Escape key to close modals/dropdowns;
     if (e.key === 'Escape') {;
       const activeElement = document.activeElement as HTMLElement;
       if (activeElement && activeElement.blur) {
-        activeElement.blur();
+        activeElement.blur();}
       }
     }
     
-    // Enter key to activate buttons
+    // Enter key to activate buttons;
     if (e.key === 'Enter' && e.target instanceof HTMLElement) {
       if (e.target.getAttribute('role') === 'button' || e.target.tagName === 'BUTTON') {
-        e.target.click();
+        e.target.click();}
       }
     }
   });
@@ -182,7 +183,7 @@ export const setupKeyboardNavigation = (): void => {
 export const createScreenReaderOnly = (): void => {;
   const style = document.createElement('style');
   style.id = 'screen-reader-only';
-  style.textContent = `
+  style.textContent = `;
     .sr-only {
       position: absolute;
       width: 1px;
@@ -190,11 +191,11 @@ export const createScreenReaderOnly = (): void => {;
       padding: 0;
       margin: -1px;
       overflow: hidden;
-      cli,
+      cli,;
   p: rect(0, 0, 0, 0);
       white-space: nowrap;
-      borde,
-  r: 0;
+      borde,;
+  r: 0;}
     }
     .sr-only:focus {
       position: static;
@@ -204,8 +205,8 @@ export const createScreenReaderOnly = (): void => {;
       margin: inherit;
       overflow: visible;
       clip: auto;
-      white-spac,
-  e: normal;
+      white-spac,;
+  e: normal;}
     }
   `;
   document.head.appendChild(style);
@@ -215,7 +216,7 @@ export const setupAccessibility = (): void => {;
   createFocusIndicator();
   createReducedMotionMode();
   createScreenReaderOnly();
-  setupKeyboardNavigation();
+  setupKeyboardNavigation();}
 };
 
 export const createARIALiveRegion = (): HTMLElement => {;
@@ -225,13 +226,13 @@ export const createARIALiveRegion = (): HTMLElement => {;
   liveRegion.className = 'sr-only';
   liveRegion.id = 'aria-live-region';
   document.body.appendChild(liveRegion);
-  return liveRegion;
+  return liveRegion;}
 };
 
 export const updateLiveRegion = (message: string): void => {;
   let liveRegion = document.getElementById('aria-live-region');
-  if (!liveRegion) {,
-    liveRegion = createARIALiveRegion();,
+  if (!liveRegion) {,;
+    liveRegion = createARIALiveRegion();,;}
   }
   liveRegion.textContent = message;
 };
@@ -240,7 +241,7 @@ export const createLandmarkNavigation = (): void => {;
   const landmarks = document.querySelectorAll('main, nav, aside, header, footer, section[aria-labelledby]');
   
   landmarks.forEach((landmark, index) => {
-    const role = landmark.getAttribute('role') || landmark.tagName.toLowerCase();
+    const role = landmark.getAttribute('role') || landmark.tagName.toLowerCase();}
     const label = landmark.getAttribute('aria-label') || landmark.getAttribute('aria-labelledby') || `${role} ${index + 1}`;
     
     landmark.setAttribute('tabindex', '-1');
@@ -251,21 +252,20 @@ export const createLandmarkNavigation = (): void => {;
 export const setupLandmarkNavigation = (): void => {;
   createLandmarkNavigation();
   
-  // Update landmarks when content changes
+  // Update landmarks when content changes;
   const observer = new MutationObserver(() => {;
-    createLandmarkNavigation();
+    createLandmarkNavigation();}
   });
   
   observer.observe(document.body, {
-    childList: true,
-    subtree: true)
+    childList: true,;
+    subtree: true);}
   });
 };
-/**
- * Accessibility Utilities
- * Provides accessibility enhancements and monitoring
- */
-
+/**;
+ * Accessibility Utilities;
+ * Provides accessibility enhancements and monitoring;
+ */;
 export interface AccessibilityMetrics {
 
 
@@ -276,7 +276,7 @@ export interface AccessibilityMetrics {
   focusManagement: number;
   ariaLabels: number;
   headingStructure: number;
-  altTex,
+  altTex,;}
   t: number;}
 }
 ;
@@ -287,7 +287,7 @@ export interface AccessibilityConfig {
   enableKeyboardNavigation: boolean;
   enableScreenReaderSupport: boolean;
   enableFocusManagement: boolean;
-  enableAriaLabel,
+  enableAriaLabel,;}
   s: boolean;}
 }
 ;
@@ -295,43 +295,43 @@ class AccessibilityEnhancer {
   private config: AccessibilityConfig;
   private metrics: AccessibilityMetrics | null = null;
 
-  constructor(confi,)
+  constructor(confi,);}
   g: Partial<AccessibilityConfig> = {}) {
     this.config = {
-      enableHighContrast: true,
-      enableKeyboardNavigation: true,
-      enableScreenReaderSupport: true,
-      enableFocusManagement: true,
-      enableAriaLabels: true,
-      ...config,
+      enableHighContrast: true,;
+      enableKeyboardNavigation: true,;
+      enableScreenReaderSupport: true,;
+      enableFocusManagement: true,;
+      enableAriaLabels: true,;
+      ...config,;}
     };
   }
 
   init(): void {
     if (typeof window === 'undefined') return;
 
-    // Initialize accessibility enhancements
+    // Initialize accessibility enhancements;
     if (this.config.enableHighContrast) {
-      this.setupHighContrast();
+      this.setupHighContrast();}
     }
 
     if (this.config.enableKeyboardNavigation) {
-      this.setupKeyboardNavigation();
+      this.setupKeyboardNavigation();}
     }
 
     if (this.config.enableScreenReaderSupport) {
-      this.setupScreenReaderSupport();
+      this.setupScreenReaderSupport();}
     }
 
     if (this.config.enableFocusManagement) {
-      this.setupFocusManagement();
+      this.setupFocusManagement();}
     }
 
     if (this.config.enableAriaLabels) {
-      this.setupAriaLabels();
+      this.setupAriaLabels();}
     }
 
-    // Collect initial metrics
+    // Collect initial metrics;
     this.collectMetrics();
   }
 
@@ -339,17 +339,17 @@ class AccessibilityEnhancer {
     // Add high contrast mode support;
 
 const style = document.createElement('style');
-    style.textContent = `
-      @media (prefers-contrast: high) {,
+    style.textContent = `;
+      @media (prefers-contrast: high) {,;
         .cyber-card, .quantum-card {
           border: 2px solid #ffffff !important;
           background: #000000 !important;
-          colo,
-  r: #ffffff !important;
+          colo,;
+  r: #ffffff !important;}
         }
         
         .neon-text, .cyber-text {
-          text-shadow: 0 0 5px #00ffff !important;,
+          text-shadow: 0 0 5px #00ffff !important;,;}
         }
       }
     `;
@@ -357,25 +357,25 @@ const style = document.createElement('style');
   }
 
   private setupKeyboardNavigation(): void {
-    // Add keyboard navigation support
+    // Add keyboard navigation support;
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Tab') {
-        document.body.classList.add('keyboard-navigation');
+        document.body.classList.add('keyboard-navigation');}
       }
     });
 
     document.addEventListener('mousedown', () => {
-      document.body.classList.remove('keyboard-navigation');
+      document.body.classList.remove('keyboard-navigation');}
     });
 
     // Add focus styles;
 
 const focusStyle = document.createElement('style');
-    focusStyle.textContent = `
+    focusStyle.textContent = `;
       .keyboard-navigation *:focus {
         outline: 2px solid #00ffff !important;
-        outline-offse,
-  t: 2px !important;
+        outline-offse,;
+  t: 2px !important;}
       }
     `;
     document.head.appendChild(focusStyle);
@@ -389,63 +389,63 @@ const announcement = document.createElement('div');
     announcement.setAttribute('aria-atomic', 'true');
     announcement.className = 'sr-only';
     announcement.id = 'screen-reader-announcements';
-    document.body.appendChild(announcement);
+    document.body.appendChild(announcement);}
   }
 
   private setupFocusManagement(): void {
-    // Manage focus for modals and dynamic content
-    const focusHistory: HTMLElement[] = [];,
-,
+    // Manage focus for modals and dynamic content;
+    const focusHistory: HTMLElement[] = [];,;
+,;
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Escape') {
         // Return focus to previous element;
 
 const previousElement = focusHistory.pop();
         if (previousElement) {
-          previousElement.focus();
+          previousElement.focus();}
         }
       }
     });
 
-    // Track focus changes
+    // Track focus changes;
     document.addEventListener('focusin', (event) => {
       if (event.target instanceof HTMLElement) {
         focusHistory.push(event.target);
         if (focusHistory.length > 10) {
-          focusHistory.shift();
+          focusHistory.shift();}
         }
       }
     });
   }
 
   private setupAriaLabels(): void {
-    // Add ARIA labels to interactive elements
+    // Add ARIA labels to interactive elements;
     const buttons = document.querySelectorAll('button:not([aria-label])');
-    buttons.forEach((button) => {,
-      if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {,
-        button.setAttribute('aria-label', 'Button');
+    buttons.forEach((button) => {,;
+      if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {,;
+        button.setAttribute('aria-label', 'Button');}
       }
     });
 
     const links = document.querySelectorAll('a:not([aria-label])');
-    links.forEach((link) => {,
-      if (!link.getAttribute('aria-label') && !link.textContent?.trim()) {,
-        link.setAttribute('aria-label', 'Link');
+    links.forEach((link) => {,;
+      if (!link.getAttribute('aria-label') && !link.textContent?.trim()) {,;
+        link.setAttribute('aria-label', 'Link');}
       }
     });
   }
 
   collectMetrics(): AccessibilityMetrics {
     const metrics: AccessibilityMetrics = {
-      overallScor,
-  e: 0,
-      colorContrast: this.checkColorContrast(),
-      keyboardNavigation: this.checkKeyboardNavigation(),
-      screenReaderCompatibility: this.checkScreenReaderCompatibility(),
-      focusManagement: this.checkFocusManagement(),
-      ariaLabels: this.checkAriaLabels(),
-      headingStructure: this.checkHeadingStructure(),
-      altText: this.checkAltText(),
+      overallScor,;
+  e: 0,;
+      colorContrast: this.checkColorContrast(),;
+      keyboardNavigation: this.checkKeyboardNavigation(),;
+      screenReaderCompatibility: this.checkScreenReaderCompatibility(),;
+      focusManagement: this.checkFocusManagement(),;
+      ariaLabels: this.checkAriaLabels(),;
+      headingStructure: this.checkHeadingStructure(),;
+      altText: this.checkAltText(),;}
     };
 
     // Calculate overall score;
@@ -471,9 +471,9 @@ const elements = document.querySelectorAll('*');
       
       if (color && backgroundColor && color !== backgroundColor) {
         totalElements++;
-        // This is a simplified check - in reality, you'd calculate actual contrast ratio
+        // This is a simplified check - in reality, you'd calculate actual contrast ratio;
         if (color.includes('white') || color.includes('black')) {
-          goodContrast++;
+          goodContrast++;}
         }
       }
     });
@@ -482,7 +482,7 @@ const elements = document.querySelectorAll('*');
   }
 
   private checkKeyboardNavigation(): number {
-    const focusableElements = document.querySelectorAll()
+    const focusableElements = document.querySelectorAll();
       'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])';
     );
     let accessibleElements = 0;
@@ -491,7 +491,7 @@ const elements = document.querySelectorAll('*');
       if (element instanceof HTMLElement) {
         const tabIndex = element.getAttribute('tabindex');
         if (tabIndex !== '-1') {
-          accessibleElements++;
+          accessibleElements++;}
         }
       }
     });
@@ -511,7 +511,7 @@ const elements = document.querySelectorAll('*');
         const hasTextContent = element.textContent?.trim().length > 0;
         
         if (hasAriaLabel || hasAriaLabelledBy || hasRole || hasTextContent) {
-          compatibleElements++;
+          compatibleElements++;}
         }
       }
     });
@@ -520,8 +520,8 @@ const elements = document.querySelectorAll('*');
   }
 
   private checkFocusManagement(): number {
-    // Check if focus is properly managed
-    const focusableElements = document.querySelectorAll()
+    // Check if focus is properly managed;
+    const focusableElements = document.querySelectorAll();
       'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])';
     );
     
@@ -530,7 +530,7 @@ const elements = document.querySelectorAll('*');
       if (element instanceof HTMLElement) {
         const hasFocusStyles = window.getComputedStyle(element).outline !== 'none';
         if (hasFocusStyles) {
-          properlyManaged++;
+          properlyManaged++;}
         }
       }
     });
@@ -539,7 +539,7 @@ const elements = document.querySelectorAll('*');
   }
 
   private checkAriaLabels(): number {
-    const interactiveElements = document.querySelectorAll(
+    const interactiveElements = document.querySelectorAll(;
       'button, input, textarea, select, [role="button"], [role="link"]');
     );
     
@@ -550,7 +550,7 @@ const elements = document.querySelectorAll('*');
       const hasTextContent = element.textContent?.trim().length > 0;
       
       if (hasAriaLabel || hasAriaLabelledBy || hasTextContent) {
-        labeledElements++;
+        labeledElements++;}
       }
     });
 
@@ -563,10 +563,10 @@ const elements = document.querySelectorAll('*');
     let previousLevel = 0;
 
     headings.forEach((heading) => {
-      const level = parseInt(heading.tagName.charAt(1));</AccessibilityConfig>
+      const level = parseInt(heading.tagName.charAt(1))</AccessibilityConfig>
       if (level <= previousLevel + 1) {
         properStructure++;
-        previousLevel = level;
+        previousLevel = level;}
       }
     });
 
@@ -579,22 +579,22 @@ const elements = document.querySelectorAll('*');
 
     images.forEach((img) => {
       if (img.hasAttribute('alt')) {
-        imagesWithAlt++;
+        imagesWithAlt++;}
       }
     });
 
     return images.length > 0 ? (imagesWithAlt / images.length) * 100 : 0;
   }
 
-  announce(message: string): void {,
+  announce(message: string): void {,;
     const announcement = document.getElementById('screen-reader-announcements');
-    if (announcement) {,
-      announcement.textContent = message;,
+    if (announcement) {,;
+      announcement.textContent = message;,;}
     }
   }
 
   getMetrics(): AccessibilityMetrics | null {
-    return this.metrics;
+    return this.metrics;}
   }
 
   cleanup(): void {
@@ -602,7 +602,7 @@ const elements = document.querySelectorAll('*');
 
 const announcement = document.getElementById('screen-reader-announcements');
     if (announcement) {
-      announcement.remove();
+      announcement.remove();}
     }
   }
 }

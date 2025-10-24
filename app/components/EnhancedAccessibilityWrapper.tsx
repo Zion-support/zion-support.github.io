@@ -1,14 +1,13 @@
-'use client'
+'use client';
 import { React  ReactNode     } from 'react';
 
 interface Props {
-  children: ReactNode
+  children: ReactNode;}
 }
 const EnhancedAccessibilityWrapper: React.FC<Props> = ({ children }) => {
   return (</Props>
-    <div className="enhanced-accessibility" role="complementary">
-      {children};
-    </div>
+    <div className="enhanced-accessibility" role="complementary"></div>}
+      {children}</div>
   );
 };
 

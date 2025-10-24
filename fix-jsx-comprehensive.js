@@ -1,120 +1,113 @@
 const fs = require('fs');
 const path = require('path');
 
-function fixJSXComprehensive(filePath) {
+// Function to fix comprehensive JSX issues
+function fixComprehensiveJSX(content) {
+  let fixed = content;
+  
+  // Fix JSX fragments that are not properly closed
+  fixed = fixed.replace(/<>\s*<Head>/g, '<>\n      <Head>');
+  fixed = fixed.replace(/<\/Head>\s*<div/g, '</Head>\n      <div');
+  
+  // Fix broken div nesting
+  fixed = fixed.replace(
+    /<div([^>]*)><\/div>\s*<div([^>]*)>/g,
+    '<div$1>\n        <div$2>'
+  );
+  
+  // Fix JSX elements that are not properly nested
+  fixed = fixed.replace(
+    /<div([^>]*)>\s*<div([^>]*)>\s*<h1([^>]*)>([^<]+)<\/h1>/g,
+    '<div$1>\n        <div$2>\n          <h1$3>$4</h1>'
+  );
+  
+  // Fix paragraph tags that are broken
+  fixed = fixed.replace(
+    /<p([^>]*)><\/p>\s*([^<]+)<\/p>/g,
+    '<p$1>$2</p>'
+  );
+  
+  // Fix Link components that are not properly closed
+  fixed = fixed.replace(
+    /<Link\s+([^>]*)>\s*([^<]+)\s*<ArrowRight([^>]*)\s*\/>\s*<\/Link>/g,
+    '<Link $1>\n            $2\n            <ArrowRight$3 />\n          </Link>'
+  );
+  
+  // Fix Footer components
+  fixed = fixed.replace(/<Footer\s*\/>/g, '<Footer />');
+  
+  // Fix closing tags for fragments
+  fixed = fixed.replace(/<\/div>\s*<\/div>\s*<\/>/g, '</div>\n      </div>\n    </>');
+  
+  // Fix missing closing tags
+  fixed = fixed.replace(/<div([^>]*)>\s*$/gm, '<div$1></div>');
+  
+  // Fix JSX expressions that need proper structure
+  fixed = fixed.replace(
+    /return\s*\(\s*<>\s*([\s\S]*?)\s*<\/>\s*\)/g,
+    (match, content) => {
+      // Ensure proper indentation
+      const lines = content.split('\n');
+      const indentedLines = lines.map(line => {
+        if (line.trim()) {
+          return '      ' + line;
+        }
+        return line;
+      });
+      return `return (\n    <>\n${indentedLines.join('\n')}\n    </>\n  )`;
+    }
+  );
+  
+  return fixed;
+}
+
+// Function to process a file
+function processFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-
-    // Fix missing closing JSX fragments - more comprehensive approach
-    // Look for return statements with opening fragments but no closing
-    const lines = content.split('\n');
-    let newLines = [];
-    let inFragment = false;
-    let fragmentDepth = 0;
-    let returnIndex = -1;
-
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      
-      // Check for return statement with opening fragment
-      if (line.includes('return (') && line.includes('<>')) {
-        inFragment = true;
-        fragmentDepth = 1;
-        returnIndex = i;
-        newLines.push(line);
-        continue;
-      }
-      
-      // Check for opening fragments
-      if (inFragment && line.includes('<>')) {
-        fragmentDepth++;
-        newLines.push(line);
-        continue;
-      }
-      
-      // Check for closing fragments
-      if (inFragment && line.includes('</>')) {
-        fragmentDepth--;
-        newLines.push(line);
-        if (fragmentDepth === 0) {
-          inFragment = false;
-        }
-        continue;
-      }
-      
-      // Check for end of return statement
-      if (inFragment && (line.includes(');') || line.includes('}')) && fragmentDepth > 0) {
-        // Add missing closing fragments
-        for (let j = 0; j < fragmentDepth; j++) {
-          newLines.push('    </>');
-        }
-        inFragment = false;
-        fragmentDepth = 0;
-        newLines.push(line);
-        modified = true;
-        continue;
-      }
-      
-      newLines.push(line);
-    }
-
-    if (modified) {
-      content = newLines.join('\n');
-    }
-
-    // Additional fixes for common patterns
-    // Fix missing closing Suspense tags
-    if (content.includes('<Suspense') && !content.includes('</Suspense>')) {
-      content = content.replace(/(<Suspense[^>]*>[\s\S]*?)(\s*\)\s*;?\s*$)/gm, '$1\n        </Suspense>\n      </ErrorBoundary>\n    </HelmetProvider>\n  );');
-      modified = true;
-    }
-
-    // Fix missing closing tags for specific elements
-    const missingClosingTags = [
-      'Suspense', 'ErrorBoundary', 'HelmetProvider', 'BrowserRouter'
-    ];
-
-    missingClosingTags.forEach(tag => {
-      const openPattern = new RegExp(`<${tag}[^>]*>`, 'g');
-      const closePattern = new RegExp(`</${tag}>`, 'g');
-      
-      const openMatches = content.match(openPattern);
-      const closeMatches = content.match(closePattern);
-      
-      if (openMatches && closeMatches && openMatches.length > closeMatches.length) {
-        // Add missing closing tag
-        content = content.replace(/(\s*\)\s*;?\s*$)/gm, `\n        </${tag}>\n      );`);
-        modified = true;
-      }
-    });
-
-    if (modified) {
-      fs.writeFileSync(filePath, content);
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixed = fixComprehensiveJSX(content);
+    
+    if (content !== fixed) {
+      fs.writeFileSync(filePath, fixed, 'utf8');
       console.log(`Fixed comprehensive JSX in: ${filePath}`);
+      return true;
     }
+    return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-function walkDir(dir) {
-  const files = fs.readdirSync(dir);
+// Function to recursively find and process files
+function processDirectory(dirPath) {
+  let fixedCount = 0;
   
-  files.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
+  try {
+    const items = fs.readdirSync(dirPath);
     
-    if (stat.isDirectory()) {
-      walkDir(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
-      fixJSXComprehensive(filePath);
+    for (const item of items) {
+      const fullPath = path.join(dirPath, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        if (!['node_modules', '.git', '.next', 'dist', 'build'].includes(item)) {
+          fixedCount += processDirectory(fullPath);
+        }
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js')) {
+        if (processFile(fullPath)) {
+          fixedCount++;
+        }
+      }
     }
-  });
+  } catch (error) {
+    console.error(`Error processing directory ${dirPath}:`, error.message);
+  }
+  
+  return fixedCount;
 }
 
-// Start fixing from the app directory
-console.log('Starting comprehensive JSX fixes...');
-walkDir('./app');
-walkDir('./src');
-console.log('Comprehensive JSX fixes completed!');
+// Main execution
+console.log('Starting comprehensive JSX fix...');
+const fixedCount = processDirectory('./app');
+console.log(`Fixed comprehensive JSX in ${fixedCount} files`);
