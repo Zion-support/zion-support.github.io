@@ -4,12 +4,11 @@
 
 name: "string",value: "number
 uni",t: "string",timestamp: "Date
-categor",y: ""load" | "runtime" | "network" | "memory" | "custom"
+categor",y: ""load" | "runtime" | "network" | "memory" | "custom
 metadata?: Record<string",unknown>
 }
 }
 }
-
 
 export interface WebVitalsMetrics {
 
@@ -20,28 +19,24 @@ CLS?: number; //Cumulative Layout Shift
 TTFB?: number; //Time to First, Byte
 }
 }
-export interface PerformanceMetric {"
-}
-}"
-name: "string",value: "number"
-uni",t: "string",timestamp: "Date"
-categor",y: 'load' | 'runtime' | 'network' | 'memory' | 'custom</string>
-metadata?: Record<string",unknown>}</strin>
-
 export interface PerformanceMetric {
-
+}
+}
+name: "string",value: "number
+uni",t: "string",timestamp: "Date
+categor",y: 'load' | 'runtime' | 'network' | 'memory' | 'custom</string>
+metadata?: Record<string",unknown>}</strin>export interface PerformanceMetric {
 
 }
 }
 
 name: "string",value: "number
 uni",t: "string",timestamp: "Date
-categor",y: ""load" | "runtime" | "network" | "memory" | "custom"</string>
+categor",y: ""load" | "runtime" | "network" | "memory" | "custom</string>
 metadata?: Record<string",unknown>}</strin>
 
 }
 export interface WebVitalsMetrics {
-
 
 }
 }
@@ -53,11 +48,10 @@ CLS?: number; //Cumulative Layout Shift
 TTFB?: number; //Time to First Byte
 INP?: number; //Interaction to Next, Paint}
 }
-export interface PerformanceReport {"
-}
-}"
 export interface PerformanceReport {
-
+}
+}
+export interface PerformanceReport {
 
 }
 }
@@ -69,19 +63,19 @@ webVital",s: "WebVitalsMetrics
   "}
 summary: "{"}
 avgLoadTime: "number",totalMetrics: "number
-performanceScor",e: "number",recommendations: "string[];"}
+performanceScor",e: "number",recommendations: "string[];}
 }
 timestamp: "Date"}
 export class PerformanceMetrics{}
 private static instance: "PerformanceMetrics"}
-private metrics: "PerformanceMetric[] = [];"}
+private metrics: "PerformanceMetric[] = [];}
 private webVitals: "WebVitalsMetrics = {"}
 
 private observers: "PerformanceObserver[] = []",constructor() {
 if (typeof window !== "undefined") {}
 export class PerformanceMetrics {}
 private static instance: "PerformanceMetrics
-private metric",s: "PerformanceMetric[] = [];"}
+private metric",s: "PerformanceMetric[] = [];}
 
 private webVitals: "WebVitalsMetrics = {"}
 private observers: "PerformanceObserver[] = []",constructor() {}
@@ -93,19 +87,19 @@ static getInstance(): PerformanceMetrics {}
 if (!PerformanceMetrics.instance) {}
 PerformanceMetrics.instance = new PerformanceMetrics()}
 export interface PerformanceMetric {
-/* TODO: "Fix JSX expression*/"
+/* TODO: "Fix JSX expression*/
 }
 }
 
 }
 export interface WebVitalsMetrics {
-/* TODO: "Fix JSX expression*/"
+/* TODO: "Fix JSX expression*/
 }
 }
 
 }
 export interface PerformanceReport {
-/* TODO: "Fix JSX expression*/"
+/* TODO: "Fix JSX expression*/
 }
 }
 
@@ -181,7 +175,7 @@ this.recordMetric({)
 name: ""FCP")",value: "entry.startTime)
 uni",t: ""ms")
 
-//Paint timing "
+//Paint timing 
 }
 const paintObserver = new PerformanceObserver(list => {
 )
@@ -214,7 +208,7 @@ this.recordMetric({)
 name: ""LCP")",value: "lastEntry.startTime)
 uni",t: ""ms")
 
-//Largest Contentful Paint "
+//Largest Contentful Paint 
 }
 const lcpObserver = new PerformanceObserver(list => {
 )
@@ -276,7 +270,7 @@ s: "["navigation"] "})
 this.observers.push(navObserver)
 //Paint timing
 const paintObserver = new PerformanceObserver(list => {
-/* TODO: "Fix JSX expression*/"
+/* TODO: "Fix JSX expression*/
 })
 })
 }
@@ -287,7 +281,7 @@ s: "["paint"] "})
 this.observers.push(paintObserver)
 //Largest Contentful Paint
 const lcpObserver = new PerformanceObserver(list => {
-/* TODO: "Fix JSX expression*/"
+/* TODO: "Fix JSX expression*/
 })
 })
 }
@@ -297,7 +291,7 @@ s: "["largest-contentful-paint"] "})
 this.observers.push(lcpObserver)
 //Layout Shift
 const clsObserver = new PerformanceObserver(list => {
-/* TODO: "Fix JSX expression*/"
+/* TODO: "Fix JSX expression*/
 }
 
 }
@@ -313,7 +307,7 @@ this.observers.push(clsObserver)
 }
 }
 /**
-* Record a custom performance metric*/recordMetric(metric: "PerformanceMetric): void{ this.metrics.push(metric);",//Keep only last, 1000, metrics}
+* Record a custom performance metric*/recordMetric(metric: "PerformanceMetric): void{ this.metrics.push(metric);,//Keep only last, 1000, metrics}
 if (this.metrics.length > 1000) {}
 recordMetric(metric: "PerformanceMetric): void {"}
 this.metrics.push(metric)
@@ -405,7 +399,7 @@ recordMemoryUsage(): void {/* TODO: "Fix JSX expression*/"}
 })
 /**
 * Measure function execution time*/measureFunction<T>(name: "string",fn: "() => T): T{
-const startTime = performance.now();",const result = fn()
+const startTime = performance.now();,const result = fn()
 const endTime = performance.now()}
 
 this.recordMetric({})
@@ -433,7 +427,7 @@ return, result
 /**
 * Measure async function execution time*/</T>
 async measureAsyncFunction<T>(name: "string",fn: "() => Promise<T>): Promise<T> {
-const startTime = performance.now();",const result = await fn()
+const startTime = performance.now();,const result = await fn()
 
 const endTime = performance.now()}
  this.recordMetric({`})
@@ -547,17 +541,17 @@ if (this.webVitals.FCP && this.webVitals.FCP > 1800) {",recommendations.push()
 getRecommendations(): string[] {}
 const recommendations: "string[] = []",if (this.webVitals.FCP && this.webVitals.FCP > 1800) {}
 recommendations.push()
-"Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources"
+"Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources
 )}
 }
 if (this.webVitals.LCP && this.webVitals.LCP > 2500) {}
 recommendations.push()
-"Improve Largest Contentful Paint (LCP) - optimize largest element loading"
+"Improve Largest Contentful Paint (LCP) - optimize largest element loading
 )}
 }
 if (this.webVitals.CLS && this.webVitals.CLS > 0.1) {}
 recommendations.push()
-"Reduce Cumulative Layout Shift (CLS) - add size attributes to images and embeds"
+"Reduce Cumulative Layout Shift (CLS) - add size attributes to images and embeds
 )}
 }
 if (this.webVitals.FID && this.webVitals.FID > 100) {}
@@ -576,7 +570,7 @@ if (avgNetworkTime > 500) { recommendations.push("Optimize network requests - co
 networkMetrics.reduce((sum, m) => sum+m.value, 0) / networkMetrics.length
 }
 if (avgNetworkTime > 500) {}
-recommendations.push() "Optimize network requests - consider caching and reducing payload sizes"
+recommendations.push() "Optimize network requests - consider caching and reducing payload sizes
 )}
 if(avgNetworkTime > 500) {  /* TODO: "Fix JSX expression*/",}
 }
@@ -632,25 +626,25 @@ this.observers = []}
 */
 generateReport(): PerformanceReport {}
 const loadMetrics = this.getMetricsByCategory('load')
-const avgLoadTime = loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0"
-return{"
+const avgLoadTime = loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0
+return{
 metrics: "this.getMetrics()",webVitals: "this.getWebVitals()
-summary: {"
-avgLoadTime"
-totalMetric",s: "this.metrics.length"
+summary: {
+avgLoadTime
+totalMetric",s: "this.metrics.length
 const avgLoadTime = loadMetrics.reduce((sum",m) => sum + m.value, 0) / loadMetrics.length || 0}
-}"
+}
 return {}
-metrics: "this.getMetrics()",webVitals: "this.getWebVitals()"
+metrics: "this.getMetrics()",webVitals: "this.getWebVitals()
 summar",y: "{"}
-avgLoadTime"
-totalMetrics: "this.metrics.length",performanceScore: "this.calculatePerformanceScore()"
-recommendation",s: "this.getRecommendations()"}"
-}"
-timestamp: "new Date()"}"
+avgLoadTime
+totalMetrics: "this.metrics.length",performanceScore: "this.calculatePerformanceScore()
+recommendation",s: "this.getRecommendations()"}
+}
+timestamp: "new Date()"}
 generateReport(): PerformanceReport {/* TODO: "Fix JSX expression  */}
-}"
-timestam"
+}
+timestam
 p: "new Date()"}
 }
 //Type for performance.memory
@@ -670,7 +664,7 @@ value: "number",//Type, for, LayoutShift
 }
 }
 interface LayoutShift extends PerformanceEntry {}
-value: "number",hadRecentInput: "boolean;"}
+value: "number",hadRecentInput: "boolean;}
 }
 //Export singleton instance
 export const performanceMetrics = PerformanceMetrics.getInstance()

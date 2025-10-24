@@ -6,20 +6,15 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 export default function ServicePage() {
 
-  return (<>
+  return (
+    <>
       <Head>
         <title>Predictive Maintenance|Zion Tech Group</title>
-        
-        <meta name="description" content="Professional predictive maintenance services and solutions for modern businesses." />
-        
+        <meta name="description" content="Professional services and solutions for modern businesses." />
         <meta name="robots" content="index, follow" />
-        
         <meta property="og:type" content="website" />
-        
         <meta property="og:title" content="Predictive Maintenance|Zion Tech Group" />
-        
-        <meta property="og:description" content="Professional predictive maintenance services and solutions for modern businesses." />
-      
+        <meta property="og:description" content="Professional services and solutions for modern businesses." />
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
@@ -33,15 +28,14 @@ export default function ServicePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                href="/contact" 
+                href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-              >
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
+              >"
+                Get Started<ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link 
-                href="/about" 
-                className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors"
+                href="/about"
+                className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors
               >
                 Learn More
               </Link>
@@ -49,7 +43,7 @@ export default function ServicePage() {
           </div>
         </div>
       </div>
-      <Footer />
-    </>
-  )
-}
+      
+      <Footer /></Footer>
+  )"
+}"

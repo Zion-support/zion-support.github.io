@@ -1,18 +1,17 @@
 "use client"
 import React from "react";
 import Head from "next/head";
-import { Head  } from "next/head"
+import { Head  } from "next/head
 import { Link  } from "next/link";
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw   } from "lucide-react";
 const getIntensityValue = () => {
 return (<div>
       <Head>
         <title>404 - Page Not Found|Zion Tech Group</title>
-        
+
         <meta name="robots" content="noindex, nofollow" />
         <meta property="og: type" content="website" />
 
-      
       </Head>
     </div>,<div className="[^"]*"> <div className="[^"]*">
           {/* 404 Animation*/) => {
@@ -30,7 +29,7 @@ Oops! The page you"re looking for seems to have vanished into the digital void. 
           {/* Search Suggestion*/} <div className="[^"]*"> <div className="[^"]*"> <Search className="w-6 h-6 text-cyan-400 mr-2" />
     <h1 className="text-lg font-semibold text-white">What were you looking for?</h2>
                 </div>
-            <p className="text-gray-300 text-sm mb-4">Try searching for one of these popular pages: "</p>",<div className="[^"]*">
+            <p className="text-gray-300 text-sm mb-4">Try searching for one of these popular pages: </p>",<div className="[^"]*">
               {[{ name: "Home",path: "/" }
                 { name: "About",path: "/about" }
                 { name: "Services",path: "/services" }
@@ -38,7 +37,9 @@ Oops! The page you"re looking for seems to have vanished into the digital void. 
               ].map((item, index) => (<Link key = {index} href = {item.path} className="px-4 py-2 bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 text-purple-300 rounded-lg hover:from-purple-600/30 hover:to-blue-600/30 transition-all duration-300">
                   {item.name}
                 </Link>
-              ))}
+              )
+  )
+}
                 </div>
               </div>
           {/* Action Buttons*/}
@@ -67,13 +68,13 @@ Contact Support
 Send Email
               </a>
                 </div></div>
-          {/* Fun Fact */,},<div className="mt-8 p-4 bg-slate-800/30 rounded-lg" /><p className="text-sm text-gray-400" />,<span className="text-cyan-400">Fun Fact: </span> Even our AI gets"
+          {/* Fun Fact */,},<div className="mt-8 p-4 bg-slate-800/30 rounded-lg" /><p className="text-sm text-gray-400" />,<span className="text-cyan-400">Fun Fact: </span> Even our AI gets
 confused sometimes. That"s why we have humans to help when things
 go wrong! 🤖
             </p>
               </div>
           {/* Fun Fact*/} <div className="[^"]*"> <p className="[^"]*">
-    <span className="text-cyan-400">Fun Fact: "</span> Even our AI gets
+    <span className="text-cyan-400">Fun Fact: </span> Even our AI gets
 confused sometimes. That"s why we have humans to help when things
 go wrong! 🤖
             </p>
@@ -83,7 +84,10 @@ go wrong! 🤖
 export default getIntensityValue
 }
 
-export const FuturisticGlow: React.FC<FuturisticGlowProps> = ({ className = '', children }) => {
+export interface FuturisticGlowProps {
+   className = '', children 
+}
+const FuturisticGlow: React.FC<FuturisticGlowProps> = ({  className = '', children  }) => {
   return (
     <div className={`futuristicglow ${className}`}>
       {children}

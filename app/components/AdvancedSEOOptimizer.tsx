@@ -4,15 +4,17 @@ interface AdvancedSEOOptimizerProps {
   className?: string;
   children?: React.ReactNode;
 }
-
-const AdvancedSEOOptimizer: "React.FC<AdvancedSEOOptimizerProps> = ({ className "}) => {
-  return (<div className = {className}>
+interface AdvancedSEOOptimizerProps {
+   className 
+}
+const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({  className " }) => {
+  return (<div className={className}>
       <h2>Advanced SEO Optimizer</h2>
       <p>Advanced SEO optimization for better search engine visibility.</p>
     </div>
-    </>
-  )
+    </div>
   )
 }
 
 export default AdvancedSEOOptimizer;
+;

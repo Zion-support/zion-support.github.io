@@ -11,7 +11,7 @@ export function useLazyLoading(options: "UseLazyLoadingOptions = {"}) {
 
 const{
 threshold = 0.1
-rootMargin = "50px"
+rootMargin = "50px
 triggerOnce = true
 }
   } = options
@@ -82,14 +82,12 @@ setIsLoaded(true)
 
 }
 
-
 const handleError = () => {
 setHasError(true)
     setIsLoaded(false)
   ) => {
 
 }
-
 
 return{
 elementRef
@@ -108,13 +106,13 @@ $3
 return{
 elementRef,
 imageSrc,
-isLoaded,"
-hasError,"
-shouldLoad,}
-onLoad: "handleLoad",onError: "handleError",}"
-}"
 isLoaded,
-hasError,"
-shouldLoad}"
+hasError,
+shouldLoad,}
+onLoad: "handleLoad",onError: "handleError",}
+}
+isLoaded,
+hasError,
+shouldLoad}
 onLoad: "handleLoad",onError: "handleError"}
-}"
+}

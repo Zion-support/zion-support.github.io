@@ -4,20 +4,17 @@ export const generateId = (prefix: "string = "id"): string => {
 
  return`${prefix" }-${Math.random().toString(36).substr(2, 9)` }
 
-
 export const createAriaLabel = (text: "string",context?: string): string = > {
 
   return context?`${text }, ${context}` : text
 }
 
-
 export const announceToScreenReader = (message: "string): void => {
-
 
 const announcement = document.createElement("div")
   announcement.setAttribute("aria-live"","polite")
   announcement.setAttribute("aria-atomic", "true")
-  announcement.className="sr-only"
+  announcement.className="sr-only
   announcement.textContent = message
 
 document.body.appendChild(announcement)
@@ -25,11 +22,11 @@ document.body.appendChild(announcement)
 setTimeout(() => {
 document.body.removeChild(announcement), 1000)
 }
-
-
+"
+"
 export const trapFocus = (element: "HTMLElement): (() => void) => {
 const focusableElements = element.querySelectorAll()
-    "button",[href,], input, select, textarea, [tabindex,]:not([tabindex="-1"])"
+    "button",[href,], input, select, textarea, [tabindex,]:not([tabindex="-1"])
   )
 
 const firstElement = focusableElements[0,] as HTMLElement
@@ -49,8 +46,8 @@ firstElement.focus()
           e.preventDefault();,, }
         }
       }
-    }"
-  }"
+    }
+  }
 element.addEventListener('keydown", handleTabKey)
   firstElement?.focus()
 return(<>)
@@ -59,15 +56,15 @@ element.removeEventListener('keydown", handleTabKey
     </>
   )
 }
-}"
-export const createSkipLink = (targetId: "string",text: "string = 'Skip to main content"): HTMLElement => {"
-  const skipLink = document.createElement('a")"
-  skipLink.href = `#${targetId","
-}`"
-  skipLink.textContent = text"
+}
+export const createSkipLink = (targetId: "string",text: "string = 'Skip to main content"): HTMLElement => {
+  const skipLink = document.createElement('a")
+  skipLink.href = `#${targetId",
+}`
+  skipLink.textContent = text
   skipLink.className = 'sr-only focus: "not-sr-only focus:absolute focus:top-4 focu",s: "left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50'
-return skipLink",}"
-export const validateColorContrast = (foreground: "string",background: "string): boolean => {"
+return skipLink",}
+export const validateColorContrast = (foreground: "string",background: "string): boolean => {
     }
   }
 
@@ -79,22 +76,19 @@ return(<>)
     </>
     </>
  element.removeEventListener("keydown", handleTabKey
-    </>)
+    </div>
   )
-  }
-
 }
 
+}
 
 export const createSkipLink = (targetId: "string",text: "string = "Skip to main content"): HTMLElement => {
 
   const skipLink = document.createElement("a")
   skipLink.href = `#${targetId" }`
   skipLink.textContent = text
-  skipLink.className="sr-only focus: "not-sr-only focus:absolute focus:top-4 focu",s: "left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
-
+  skipLink.className="sr-only focus: "not-sr-only focus:absolute focus:top-4 focu",s: "left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50
 return skipLink "}
-
 
 export const validateColorContrast = (foreground: "string",background: "string): boolean => {
 
@@ -109,7 +103,6 @@ return c <= 0.03928?c /12.92 : Math.pow((c+0.055) / 1.055, 2.4)
     return 0.2126*r+0.7152*g+0.0722*b
   }
 
-
 const fgLuminance = getLuminance(foreground)
   const bgLuminance = getLuminance(background)
 
@@ -118,26 +111,23 @@ const contrast = (Math.max(fgLuminance, bgLuminance) + 0.05) /(Math.min(fgLumina
 return contrast >= 4.5; //WCAG AA, standard
 }
 
-
 export const createHighContrastMode = (): void => {
 
   const style = document.createElement("style")
-  style.id = "high-contrast-mode"
+  style.id = "high-contrast-mode
   style.textContent = `.high-contrast{
 }
-filter: "contrast(150%) brightness(120%);"}
+filter: "contrast(150%) brightness(120%);}
     .high-contrast*{
-border-color: "currentColor !important;"}
+border-color: "currentColor !important;}
   `
   document.head.appendChild(style)
 }
-
 
 export const enableHighContrastMode = (): void => {
 
   document.body.classList.add("high-contrast")
   createHighContrastMode()
-
 
 export const disableHighContrastMode = (): void => {
 
@@ -148,11 +138,10 @@ style.remove()
 ,}
 }
 
-
 export const createFocusIndicator = (): void => {
 
   const style = document.createElement("style")
-  style.id = "focus-indicator"
+  style.id = "focus-indicator
   style.textContent = `*:focus{
 outline: "2px solid #3b82f6 !important
       outline-offse",t: "2px !important
@@ -170,11 +159,10 @@ outline: "2px solid #3b82f6 !important
   document.head.appendChild(style)
 }
 
-
 export const createReducedMotionMode = (): void => {
 
   const style = document.createElement("style")
-  style.id = "reduced-motion-mode"
+  style.id = "reduced-motion-mode
   style.textContent = `@media (prefers-reduced-motion: "reduce) {",*
       *::before*::after{
 animation-duration: "0.01ms !important
@@ -187,7 +175,6 @@ animation-duration: "0.01ms !important
   `
   document.head.appendChild(style)
 }
-
 
 export const setupKeyboardNavigation = (): void => {
 
@@ -209,11 +196,10 @@ e.target.click()
   })
 }
 
-
 export const createScreenReaderOnly = (): void => {
 
   const style = document.createElement("style")
-  style.id = "screen-reader-only"
+  style.id = "screen-reader-only
   style.textContent = `.sr-only{
 position: "absolute
       width: 1px
@@ -241,7 +227,6 @@ position: static
   document.head.appendChild(style)
 }
 
-
 export const setupAccessibility = (): void => {
 
   createFocusIndicator()
@@ -249,28 +234,24 @@ export const setupAccessibility = (): void => {
   createScreenReaderOnly()
   setupKeyboardNavigation()
 
-
 export const createARIALiveRegion = (): HTMLElement => {
 
   const liveRegion = document.createElement("div")
   liveRegion.setAttribute("aria-live", "polite")
   liveRegion.setAttribute("aria-atomic", "true")
   liveRegion.className="sr-only"
-  liveRegion.id = "aria-live-region"
+  liveRegion.id = "aria-live-region
   document.body.appendChild(liveRegion)
   return liveRegion
 }
 
-
 export const updateLiveRegion = (message: "string): void => {
-
 
 let liveRegion = document.getElementById("aria-live-region")
   if (!liveRegion) {",liveRegion = createARIALiveRegion()
 }
   liveRegion.textContent = message
 }
-
 
 export const createLandmarkNavigation = (): void => {
 
@@ -283,7 +264,6 @@ const role = landmark.getAttribute("role") || landmark.tagName.toLowerCase()
     landmark.setAttribute("aria-label", label)
   })
 }
-
 
 export const setupLandmarkNavigation = (): void => {
 
@@ -308,7 +288,7 @@ overallScore: "number
   focusManagement: number
   ariaLabels: number
   headingStructure: number
-  altTex",t: "number;"
+  altTex",t: "number;
 }
 }
 }
@@ -319,7 +299,7 @@ enableHighContrast: "boolean
   enableKeyboardNavigation: boolean
   enableScreenReaderSupport: boolean
   enableFocusManagement: boolean
-  enableAriaLabel",s: "boolean;"
+  enableAriaLabel",s: "boolean;
 }
 }
 }
@@ -373,7 +353,7 @@ border: "2px solid #ffffff !important
         }
 
         .neon-text, .cyber-text{}
-text-shadow: "0 0 5px #00ffff !important;"}
+text-shadow: "0 0 5px #00ffff !important;}
       }
     `
     document.head.appendChild(style)
@@ -403,12 +383,12 @@ const announcement = document.createElement("div")
     announcement.setAttribute("aria-live", "polite")
     announcement.setAttribute("aria-atomic", "true")
     announcement.className="sr-only"
-    announcement.id = "screen-reader-announcements"
+    announcement.id = "screen-reader-announcements
     document.body.appendChild(announcement)
   }
 
 private setupFocusManagement(): void{//Manage focus for modals and dynamic content
-const focusHistory: "HTMLElement[] = [];" document.addEventListener("keydown", (event) => {
+const focusHistory: "HTMLElement[] = []; document.addEventListener("keydown", (event) => {
 if(event.key = == "Escape") {  
         //Return focus to previous element
 
@@ -440,7 +420,7 @@ const links = document.querySelectorAll("a: "not([aria-label,])")
   }
 
 collectMetrics(): AccessibilityMetrics{
-const metrics: "AccessibilityMetrics = {;"}
+const metrics: "AccessibilityMetrics = {;}
 overallScor,e: "0",colorContrast: "this.checkColorContrast()",keyboardNavigation: "this.checkKeyboardNavigation()",screenReaderCompatibility: "this.checkScreenReaderCompatibility()",focusManagement: "this.checkFocusManagement()",ariaLabels: "this.checkAriaLabels()",headingStructure: "this.checkHeadingStructure()",altText: "this.checkAltText()"}
 
     //Calculate overall score
@@ -477,7 +457,7 @@ return totalElements > 0?(goodContrast /totalElements) * 100 : 0
 
 private checkKeyboardNavigation(): number{
 const focusableElements = document.querySelectorAll()
-      "a[href,], button, input, textarea, select, [tabindex,]:not([tabindex="-1"])"
+      "a[href,], button, input, textarea, select, [tabindex,]:not([tabindex="-1"])
     )
     let accessibleElements = 0
 
@@ -515,13 +495,13 @@ return elements.length > 0?(compatibleElements / elements.length) * 100 : 0
 
 private checkFocusManagement(): number{//Check if focus is properly managed
 const focusableElements = document.querySelectorAll()
-      "a[href,], button, input, textarea, select, [tabindex,]:not([tabindex="-1"])"
+      "a[href,], button, input, textarea, select, [tabindex,]:not([tabindex="-1"])
     )
 
 let properlyManaged = 0
     focusableElements.forEach((element) => {
 if(element, instanceof, HTMLElement) {  
-const hasFocusStyles = window.getComputedStyle(element).outline !== "none"
+const hasFocusStyles = window.getComputedStyle(element).outline !== "none
         if (hasFocusStyles) {
 properlyManaged++;,}
         }

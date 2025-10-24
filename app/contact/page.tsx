@@ -1,5 +1,5 @@
 "use client"
-import React, { useState, useCallback, useMemo } from "react";
+import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
@@ -21,7 +21,7 @@ const ContactPage: React.FC = () => {
   const [formData, setFormData ] = useState<FormData>({
     name: "",
     email: "",
-    message: ""
+    message: 
   })
   const [isSubmitting, setIsSubmitting ] = useState(false)
   const [submitStatus, setSubmitStatus ] = useState<"idle" | "success" | "error">("idle")
@@ -30,23 +30,23 @@ const ContactPage: React.FC = () => {
     const newErrors: FormErrors = {}
 
     if (!data.name.trim()) {
-      newErrors.name="Name is required"
-    } else if (data.name.trim().length < 2) {
-      newErrors.name="Name must be at least 2 characters"
+      newErrors.name="Name is required
+    } else if (data.name.trim().length < 2) {"
+      newErrors.name="Name must be at least 2 characters
     }
-    
-    if (!data.email.trim()) {
-      newErrors.email = "Email is required"
+
+    if (!data.email.trim()) {"
+      newErrors.email = "Email is required
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
-      newErrors.email = "Please enter a valid email address"
+      newErrors.email = "Please enter a valid email address
     }
-    
+
     if (!data.message.trim()) {
-      newErrors.message = "Message is required"
+      newErrors.message = "Message is required
     } else if (data.message.trim().length < 10) {
-      newErrors.message = "Message must be at least 10 characters"
+      newErrors.message = "Message must be at least 10 characters
     }
-    
+
     return newErrors
   }, [])
   const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement|HTMLTextAreaElement>) => {
@@ -60,8 +60,9 @@ const ContactPage: React.FC = () => {
       setErrors(prev => ({
         ...prev,
         [name]: undefined
-      }))
-    }
+      })
+  )
+}
   }, [errors])
   const handleSubmit = useCallback(async (e: React.FormEvent) => {
     e.preventDefault()
@@ -70,7 +71,7 @@ const ContactPage: React.FC = () => {
       setErrors(formErrors)
       return
     }
-    
+
     setIsSubmitting(true)
     setSubmitStatus("idle")
     setErrors({})
@@ -101,25 +102,20 @@ const ContactPage: React.FC = () => {
       addressLocality: "Innovation City",
       addressRegion: "IC",
       postalCode: "12345",
-      addressCountry: "US"
+      addressCountry: "US
     },
     openingHours: ["Mo-Fr 09:00-17:00"],
-    priceRange: "$$"
+    priceRange: "$$
   }), [])
-  return (<>
+  return (
+    <>
       <Head>
         <title>Contact|Zion Tech Group</title>
-        
-        <meta name="description" content="Professional contact services and solutions for modern businesses." />
-        
+        <meta name="description" content="Professional services and solutions for modern businesses." />
         <meta name="robots" content="index, follow" />
-        
         <meta property="og:type" content="website" />
-        
         <meta property="og:title" content="Contact|Zion Tech Group" />
-        
-        <meta property="og:description" content="Professional contact services and solutions for modern businesses." />
-      
+        <meta property="og:description" content="Professional services and solutions for modern businesses." />
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
@@ -133,15 +129,14 @@ const ContactPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                href="/contact" 
+                href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-              >
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
+              >"
+                Get Started<ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link 
-                href="/about" 
-                className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors"
+                href="/about"
+                className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors
               >
                 Learn More
               </Link>
@@ -153,4 +148,5 @@ const ContactPage: React.FC = () => {
   )
 }
 
-export default ContactPage
+export default ContactPage"
+"

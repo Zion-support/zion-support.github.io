@@ -4,12 +4,12 @@ export interface PerformanceMetric {
 name: "string
   value: number
   timestamp: number
-  ur",l: "string;"
+  ur",l: "string;
 }
-}"
-class PerformanceMonitor{"
+}
+class PerformanceMonitor{
 private metrics: "PerformanceMetric[] = []
-  private isEnable",d: "boolean"
+  private isEnable",d: "boolean
 constructor() {  ",this.isEnabled = typeof window !== "undefined" && "performance" in window;,
 }
 }
@@ -41,7 +41,6 @@ if (!this.isEnabled) return
 const metri",c: "PerformanceMetric = {
 name",value}
 timestamp: "Date.now()",url: "window.location.href"}
-
 
 this.metrics.push(metric)
     //Send to analytics in production

@@ -13,11 +13,10 @@ interface PerformanceData {
 fps: "number
 memoryUsage: number
 loadTime: number
-renderTim",e: "number"
+renderTim",e: "number
 }
 }
 }
-
 
 export const usePerformanceMonitor = () => {
 const [metrics, setMetrics ] = useState<PerformanceData>({
@@ -34,8 +33,9 @@ setMetrics(prev = > ({
         ...prev)
 memoryUsage: "memory.usedJSHeapSize /1024 /1024 //Convert, to, MB)
 
-      "}))
-    }
+      "})
+  )
+}
   }, [])
 const init = useCallback(() => {
 if(options.enabled !== false) {  
@@ -81,7 +81,7 @@ init}
 }
 
 export default usePerformanceMonitor;</PerformanceData>
-}"
+}
 }
 export default usePerformanceMonitor;</PerformanceData>
-}"
+}

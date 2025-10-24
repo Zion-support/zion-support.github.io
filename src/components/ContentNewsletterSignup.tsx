@@ -5,37 +5,44 @@ className?: string
 }
 }
 
-const ContentNewsletterSignup: "React.FC<ContentNewsletterSignupProps> = ({ className="" "}) => {
+interface ContentNewsletterSignupProps {
+   className=
+}
+const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({  className="" " }) => {
 return (</ContentNewsletterSignupProps>
-    <divclassName = {className} / />
+    <divclassName={className} / />
       <h2>ContentNewsletterSignup</h2>
       <p>This component is under construction.</p>
       </div>
-    </>
-  )
+    </div>
   )
 }
 
-export const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ className = '', children }) => {
+export interface ContentNewsletterSignupProps {
+   className = '', children 
+}
+const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({  className = '', children  }) => {
   return (
     <div className={`contentnewslettersignup ${className}`}>
       {children}
     </div>
   );
-import React from 'react'
-interface ContentNewsletterSignupProps {;
+import React from "react";
 className?: string;
 }
 }
 }'
-const ContentNewsletterSignup: "React.FC<ContentNewsletterSignupProps> = ({ className = '' "}) => {;
+interface ContentNewsletterSignupProps {
+   className = '' 
+}
+const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({  className = '' " }) => {;
 return(</>;
     <div className={className} /  />
       <h2>ContentNewsletterSignup</h2>
       <p>This component is under construction.</p>);
       </div>);
-  )}"
-export default ContentNewsletterSignup}";'"
+  )}
+export default ContentNewsletterSignup}";'
 };
 
 export default ContentNewsletterSignup;

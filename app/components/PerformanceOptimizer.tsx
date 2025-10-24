@@ -2,12 +2,11 @@ import React from 'react'
 'use client'
 '
 import { useEffect, useRef } from 'react'
-import { usePerformanceMonitor } from '../utils/performance"
+import { usePerformanceMonitor } from '../utils/performance
 interface PerformanceOptimizerProps {
   children: React.ReactNode
   componentName: string
 }
-
 export default function PerformanceOptimizer({ children, componentName }: PerformanceOptimizerProps) {
   const { startTiming, endTiming } = usePerformanceMonitor()
   const renderStartTime = useRef<number>(0)
@@ -18,22 +17,22 @@ export default function PerformanceOptimizer({ children, componentName }: Perfor
     // End timing when component unmounts
     return () => {
       const renderTime = performance.now() - renderStartTime.current
-      endTiming(`${componentName}-mount`)"
+      endTiming(`${componentName}-mount`)
       // Log performance metrics in development
       if (process.env.NODE_ENV === 'development") {
         console.log(`${componentName} render time: ${renderTime.toFixed(2)}ms`)
       }
     }
   }, [componentName, startTiming, endTiming])
-"
+
   // Lazy load images when they come into view
-  useEffect(() => {"
+  useEffect(() => {
     const images = document.querySelectorAll('img[data-src])
     const imageObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {"
-        if (entry.isIntersecting) {"
-          const img = entry.target as HTMLImageElement"
-          img.src = img.dataset.src || "
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const img = entry.target as HTMLImageElement
+          img.src = img.dataset.src || 
           img.classList.remove('lazy")
           imageObserver.unobserve(img)
         }
@@ -43,17 +42,20 @@ export default function PerformanceOptimizer({ children, componentName }: Perfor
     return () => imageObserver.disconnect()
   }, [])
   return <>{children}</>
-}"
+}
 const PerformanceOptimizer: React.FC = () => {
 return (<div>
       <Helmet />
 
         <title>PerformanceOptimizer</title>
-        
+
         <meta name="description" content="Advanced PerformanceOptimizer solution for modern businesses." //>
         <meta name="keywords" content="AI,artificial, intelligence, PerformanceOptimizer, AI, solutions, intelligent automation" //>
 
-export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className = '', children }) => {
+export interface PerformanceOptimizerProps {
+   className = '', children 
+}
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({  className = '', children  }) => {
   return (
     <div className={`performanceoptimizer ${className}`}>
       {children}
@@ -66,7 +68,7 @@ Advanced PerformanceOptimizer solution for modern businesses.</p>
             </p>,<div className="[^"]*"> <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center" />
 Get Started</button>
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover: "bg-emerald-400 hove","
+              <button className="border border-emerald-400 text-emerald-400 hover: "bg-emerald-400 hove",
 r: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"  />
 Learn More</button>
               </button>
@@ -75,7 +77,7 @@ Learn More</button>
     <h1 className="text-4 xl font-bold text-white mb-4">Key Features</h2> <p className="[^"]*">
 Discover the powerful features that make PerformanceOptimizer the perfect solution for your business.</p>
               </p>
-    <divclassName="grid md: "grid-cols-2 l","
+    <divclassName="grid md: "grid-cols-2 l",
 g: grid-cols-4 gap-8" />,<div className="[^"]*">
     <h1 className="text-xl font-semibold text-white mb-3">AI-Powered</h3>
                 <p className="text-gray-300">Advanced AI algorithms for intelligent automation.</p> <div className="[^"]*">
@@ -104,7 +106,8 @@ Start Your Free Trial</button>
     </div>
     </>
   )
-  )  )}
-
+  )
+  )
+}
 export default PerformanceOptimizer
 }

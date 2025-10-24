@@ -67,21 +67,20 @@ component,);
           ...context)})}
     },;
     [component, trackErrors];
-  );"
-  const trackUserAction = useCallback()</>"
+  );
+  const trackUserAction = useCallback()</>
     (action: "string",metadata?: Record<string, unknown>) => {;
 if(trackAnalytics) {  ;
         analytics.trackCustomEvent('User Action', action, component, undefined, metadata)}
     },;
     [component, trackAnalytics];
-  );"
-  const measureOperation = useCallback()"
+  );
+  const measureOperation = useCallback()
     (operationName: "string) => {;
-      const startTime = performance.now();"
-      return{;"
-en",d: "() => {;"
-const duration = performance.now() - startTime;"
-"use client"
+      const startTime = performance.now();
+      return{;
+en",d: "() => {;
+const duration = performance.now() - startTime;use client
 /**
  * Enhanced Performance Hook*Combines, performance, monitoring, error, tracking, and analytics*/import { useEffect, useCallback, useRef   } from "react";
 import { errorTracker  } from "../utils/enhancedErrorTracking";
@@ -100,7 +99,7 @@ export function useEnhancedPerformance() {
 
 return
 const{
-component = "Unknown"
+component = "Unknown
 trackErrors = true
 trackPerformance = true
 trackAnalytics = true
@@ -119,12 +118,12 @@ if (trackAnalytics) { analytics.trackCustomEvent("Component", "Mounted", compone
 if(trackPerformance) {  
 const duration = performance.now() - mountTimeRef.current
         if (duration > 5000) {
-          //Long-lived component analytics.trackCustomEvent("Performance"
+          //Long-lived component analytics.trackCustomEvent("Performance
             "Long Component Lifetime")
 component)
 Math.round(duration)
-          )
-      }
+  )
+}
       //Track component unmount
 if(trackAnalytics) {   analytics.trackCustomEvent("Component", "Unmounted", component)
     }
@@ -134,8 +133,8 @@ if(trackAnalytics) {   analytics.trackCustomEvent("Component", "Unmounted", comp
 useEffect(() => {
 renderCountRef.current++
     if(trackPerformance && renderCountRef.current > 10) {  
-      //Many re-renders detected analytics.trackCustomEvent("Performance"
-        "High Render Count"
+      //Many re-renders detected analytics.trackCustomEvent("Performance
+        "High Render Count
 component)
 renderCountRef.current)
       )
@@ -170,8 +169,8 @@ const duration = performance.now() - startTime
               `${component}-${operationName}`
 duration)
 duration > 1000?"slow" : "fast")
-            )
-          }
+  )
+}
           return duration
         }
           if (trackPerformance) {",analytics.trackPerformance(}
@@ -202,5 +201,5 @@ measureOperation}
   }
 
 }
-export default useEnhancedPerformance;</string>;"
-}";`'"
+export default useEnhancedPerformance;</string>;
+}";`'

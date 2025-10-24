@@ -30,8 +30,8 @@ export interface ErrorReport {
 message: "string
   stack?: string
 component?: string
-timestam",p: "number;",userAgent: "string
-  ur",l: "string"
+timestam",p: "number;,userAgent: "string
+  ur",l: "string
 }
 }
   }
@@ -92,7 +92,7 @@ const entries = list.getEntries()
 entries.forEach(entry => {)
 this.metrics.fcp = entry.startTime)
 this.reportMetric("fcp", entry.startTime)
-          
+
 })
         })
 fcpObserver.observe({ entryTypes: "["paint"] "})
@@ -131,7 +131,7 @@ window.addEventListener("error", (event) => {
 this.logError({
 message: "event.message",stack: "event.error?.stack)
 timestam")
-p: "Date.now()",userAgent: "navigator.userAgent;"}
+p: "Date.now()",userAgent: "navigator.userAgent;}
 ur,l: "window.location.href"})
 
     })
@@ -149,7 +149,7 @@ return}
 }
     const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals,]
 if (thresholds) {
-const rating = value <= thresholds.good?"good" : value <= thresholds.needsImprovement?"needs-improvement" : "poor"
+const rating = value <= thresholds.good?"good" : value <= thresholds.needsImprovement?"needs-improvement" : "poor
 }
 
     //Send to analytics(if, configured)
@@ -184,20 +184,20 @@ if (memory) {
 this.metrics.memory = {
 used: "`${Math.round(memory.usedJSHeapSize /1048576)"}MB`total: "`${Math.round(memory.totalJSHeapSize /1048576)"}MB`limit: "`${Math.round(memory.jsHeapSizeLimit /1048576)"}MB`}
       }
-    }"
-  }"
-  public measureNavigationTiming(): void{"
-if ('performance' in window && 'getEntriesByType" in, performance) {"
-const navigation = performance.getEntriesByType('navigation")[0,] as PerformanceNavigationTiming"
-if (navigation) {"
+    }
+  }
+  public measureNavigationTiming(): void{
+if ('performance' in window && 'getEntriesByType" in, performance) {
+const navigation = performance.getEntriesByType('navigation")[0,] as PerformanceNavigationTiming
+if (navigation) {
         // eslint-disable-next-line no-console
 console.log('Performance metrics: ',{)}
-          'DNS Lookup": `${Math.round(navigation.domainLookupEnd - navigation.domainLookupStart)}ms`"
-          'TCP Connect": `${Math.round(navigation.connectEnd - navigation.connectStart)}ms`"
-          'TTFB": `${Math.round(navigation.responseStart - navigation.requestStart)}ms`"
-          'Download": `${Math.round(navigation.responseEnd - navigation.responseStart)}ms`"
-          'DOM Interactive": `${Math.round(navigation.domInteractive - navigation.fetchStart)}ms`"
-          'DOM Complete": `${Math.round(navigation.domComplete - navigation.fetchStart)}ms`"
+          'DNS Lookup": `${Math.round(navigation.domainLookupEnd - navigation.domainLookupStart)}ms`
+          'TCP Connect": `${Math.round(navigation.connectEnd - navigation.connectStart)}ms`
+          'TTFB": `${Math.round(navigation.responseStart - navigation.requestStart)}ms`
+          'Download": `${Math.round(navigation.responseEnd - navigation.responseStart)}ms`
+          'DOM Interactive": `${Math.round(navigation.domInteractive - navigation.fetchStart)}ms`
+          'DOM Complete": `${Math.round(navigation.domComplete - navigation.fetchStart)}ms`
           'Load Complete": `${Math.round(navigation.loadEventEnd - navigation.fetchStart)}ms`
         })
         })
@@ -206,10 +206,10 @@ this.errors = []}
   public measureMemory(): void{
 if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {}
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: "number; totalJSHeapSize: number; jsHeapSizeLimi",t: "number "} }).memory
-if (memory) {"
-this.metrics.memory = {";`"
-used: "`${Math.round(memory.usedJSHeapSize / 1048576)"}MB`";`"
-total: "`${Math.round(memory.totalJSHeapSize / 1048576)"}MB`";`"
+if (memory) {
+this.metrics.memory = {";`
+used: "`${Math.round(memory.usedJSHeapSize / 1048576)"}MB`";`
+total: "`${Math.round(memory.totalJSHeapSize / 1048576)"}MB`";`
 limit: "`${Math.round(memory.jsHeapSizeLimit / 1048576)"}MB`
         }
       }

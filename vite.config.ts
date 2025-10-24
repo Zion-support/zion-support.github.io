@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite'"
+import { defineConfig } from 'vite'
 import react from "@vitejs/plugin-react
 import { defineConfig  } from "vite";
 import { react  } from "@vitejs/plugin-react";
@@ -32,10 +32,10 @@ chunkFileNames: "assets/[name,]-[hash,].js"",manualChunks: "(id) => {
 if (id.includes("node_modules")) {
             //Split React into smaller chunks
 if (id.includes("react-dom")) {
-return "react-dom"
+return "react-dom
             "}
             if (id.includes("react/") && !id.includes("react-dom")) {
-return "react-core"
+return "react-core
 import { react  } from "@vitejs/plugin-react";
 //https://vitejs.dev/config/export default defineConfig({
   plugins: [react()]
@@ -48,63 +48,63 @@ import { react  } from "@vitejs/plugin-react";
         manualChunks: (id) => {
           // Vendor chunks
           if (id.includes(node_modules)) {
-            if (id.includes(react) || id.includes(react-dom)) {"
-              return react-vendor";"
-            }"'"
-            if (id.includes('react-router")) {"'"
-              return 'router-vendor";"
-            }"'"
-            if (id.includes('framer-motion') || id.includes('@heroicons') || id.includes('lucide-react")) {"'"
-              return 'ui-vendor";"
-            }"'"
-            if (id.includes('web-vitals') || id.includes('react-helmet")) {"'"
-              return 'analytics-vendor";"
-            }"'"
+            if (id.includes(react) || id.includes(react-dom)) {
+              return react-vendor";
+            }"'
+            if (id.includes('react-router")) {"'
+              return 'router-vendor";
+            }"'
+            if (id.includes('framer-motion') || id.includes('@heroicons') || id.includes('lucide-react")) {"'
+              return 'ui-vendor";
+            }"'
+            if (id.includes('web-vitals') || id.includes('react-helmet")) {"'
+              return 'analytics-vendor";
+            }"'
             return 'vendor";
-          }"
-          "
-          // App chunks"'"
-          if (id.includes('servicesData")) {"'"
-            return 'services-data";"
-          }"'"
-          if (id.includes('components/SEOHead")) {"'"
-            return 'seo";"
-          }"'"
-          if (id.includes('components/PerformanceMonitor') || id.includes('components/AccessibilityEnhancer")) {"'"
-            return 'monitoring";"
-          }"
-    outDir: "dist"
+          }
+
+          // App chunks"'
+          if (id.includes('servicesData")) {"'
+            return 'services-data";
+          }"'
+          if (id.includes('components/SEOHead")) {"'
+            return 'seo";
+          }"'
+          if (id.includes('components/PerformanceMonitor') || id.includes('components/AccessibilityEnhancer")) {"'
+            return 'monitoring";
+          }
+    outDir: "dist
     sourcemap: true
-    minify: "terser"
+    minify: "terser
     rollupOptions: {
       output: {
         manualChunks: (id) => {
           //Vendor chunks
           if (id.includes("node_modules")) {
             if (id.includes("react") || id.includes("react-dom")) {
-              return "react-vendor"
+              return "react-vendor
             }
             if (id.includes("react-router")) {
-              return "router-vendor"
+              return "router-vendor
             }
             if (id.includes("framer-motion") || id.includes("@heroicons") || id.includes("lucide-react")) {
-              return "ui-vendor"
+              return "ui-vendor
             }
             if (id.includes("web-vitals") || id.includes("react-helmet")) {
-              return "analytics-vendor"
+              return "analytics-vendor
             }
-            return "vendor"
+            return "vendor
           }
-          
+
           //App chunks
           if (id.includes("servicesData")) {
-            return "services-data"
+            return "services-data
           }
           if (id.includes("components/SEOHead")) {
-            return "seo"
+            return "seo
           }
           if (id.includes("components/PerformanceMonitor") || id.includes("components/AccessibilityEnhancer")) {
-            return "monitoring"
+            return "monitoring
           }
 import { defineConfig } from from 'vite'
 import react from '@vitejs/plugin-react'
@@ -113,26 +113,26 @@ import { resolve } from from 'path'
 // https: "//vitejs.dev/config/;
 export default defineConfig({;
 plugins: [;
-react({);"
-      // Optimize JSX runtime)";'"
-jsxRuntime: 'automatic'"});"
-  ],;"
-resolve: "{;"
-alias: {";'"
+react({);
+      // Optimize JSX runtime)";'
+jsxRuntime: 'automatic'"});
+  ],;
+resolve: "{;
+alias: {";'
       '@': resolve(__dirname",'./app'),;
       '@components': resolve(__dirname, './app/components'),;
       '@pages': resolve(__dirname, './app/pages'),;
-      '@utils': resolve(__dirname, './utils'),;'"
-      '@types': resolve(__dirname, './types')}}"
-build: "{;";'"
-outDir: 'dist'",sourcemap: "false",minify: "'esbuild'",target: "'es2020'",cssCodeSplit: "true",cssTarget: "'chrome80'",reportCompressedSize: "true",chunkSizeWarningLimit: "500",emptyOutDir: "true",copyPublicDir: "true",rollupOptions: "{;"
-treeshake: {;"
-moduleSideEffects: false"}"
-output: "{;";'"
+      '@utils': resolve(__dirname, './utils'),;'
+      '@types': resolve(__dirname, './types')}}
+build: "{;;'
+outDir: 'dist'",sourcemap: "false",minify: "'esbuild'",target: "'es2020'",cssCodeSplit: "true",cssTarget: "'chrome80'",reportCompressedSize: "true",chunkSizeWarningLimit: "500",emptyOutDir: "true",copyPublicDir: "true",rollupOptions: "{;
+treeshake: {;
+moduleSideEffects: false"}
+output: "{;;'
 chunkFileNames: 'assets/[name]-[hash].js'",manualChunks: "(id) => {;
 if (id.includes('node_modules')) {;
-            // Split React into smaller chunks;'"
-if (id.includes('react-dom')) {;";'"
+            // Split React into smaller chunks;'
+if (id.includes('react-dom')) {;;'
 return 'react-dom'"}'
             if (id.includes('react/') && !id.includes('react-dom')) {;
 return 'react-core'
@@ -183,12 +183,12 @@ export default defineConfig({);
   }
 
   optimizeDeps: {
-    include: ["react"
-      "react-dom"
-      "react-router-dom"
-      "@heroicons/react"
-      "framer-motion"
-      "lucide-react"
+    include: ["react
+      "react-dom
+      "react-router-dom
+      "@heroicons/react
+      "framer-motion
+      "lucide-react
     ]
   }
 
@@ -199,9 +199,9 @@ export default defineConfig({);
   css: {
     devSourcemap: true
   }
-})"
-"
-}}'"
+})
+
+}}'
   },;
   optimizeDeps: {;
     include: [;
@@ -217,5 +217,4 @@ export default defineConfig({);
     drop: ['console', 'debugger']},;
   css: {;
     devSourcemap: true}
-});
-";'"
+});;'

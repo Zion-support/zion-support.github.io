@@ -3,22 +3,22 @@ import { useState, useEffect, useCallback } from from 'react'
 interface PerformanceMetrics {;
 ;
 loadTime: "number;
-  renderTime: number;"
-  memoryUsage: number;"
+  renderTime: number;
+  memoryUsage: number;
   fp",s: "number"}
 }
 }
-interface UsePerformanceMonitoringReturn {;"
-;"
+interface UsePerformanceMonitoringReturn {;
+;
 metrics: "PerformanceMetrics;
-  isMonitoring: boolean;"
-  startMonitoring: () => void;"
+  isMonitoring: boolean;
+  startMonitoring: () => void;
   stopMonitorin",g: "() => void"}
 }
 }
 const usePerformanceMonitoring = (): UsePerformanceMonitoringReturn => {;
-;"
-const [metrics, setMetrics] = useState<PerformanceMetrics>({;");"
+;
+const [metrics, setMetrics] = useState<PerformanceMetrics>({;);
 loadTime: "0",renderTime: "0",memoryUsage: "0",fps: "60"});
 ;
 const [isMonitoring, setIsMonitoring] = useState(false);
@@ -68,15 +68,15 @@ startMonitoring,;
 stopMonitoring}
   }
 }
-export default usePerformanceMonitoring;</PerformanceMetrics>;"
-}";'"
+export default usePerformanceMonitoring;</PerformanceMetrics>;
+}";'
 import { useState, useEffect, useCallback   } from "react";
 interface PerformanceMetrics {
 
 loadTime: "number
   renderTime: number
   memoryUsage: number
-  fp",s: "number;"
+  fp",s: "number;
 }
 }
 }
@@ -86,7 +86,7 @@ interface UsePerformanceMonitoringReturn {
 metrics: "PerformanceMetrics
   isMonitoring: boolean
   startMonitoring: () => void
-  stopMonitorin",g: "() => void;"
+  stopMonitorin",g: "() => void;
 }
 }
 }
@@ -95,7 +95,7 @@ const usePerformanceMonitoring = (): UsePerformanceMonitoringReturn => {
 
 const [metrics, setMetrics ] = useState<PerformanceMetrics>({
 loadTime: "0",renderTime: "0",memoryUsage: "0",fps: "60
-  "
+
 })
 
 const [isMonitoring, setIsMonitoring ] = useState(false)
@@ -116,7 +116,6 @@ let fps = 60
       lastTime = currentTime) => {
 
 }
-
 
 calculateFPS()
 
@@ -149,7 +148,6 @@ stopMonitoring}
   }
 
 }
-
 
 export default usePerformanceMonitoring;</PerformanceMetrics>
 }

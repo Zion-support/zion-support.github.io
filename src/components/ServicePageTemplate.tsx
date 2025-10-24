@@ -1,16 +1,16 @@
 import { Helmet } from from &quot;react-helmet-async&quot;
 const ServicePageTemplatePage: "React.FC = () => {;
-const features = [;"
-    {"
+const features = [;
+    {
 ico",n: "Brain",title: "title",description: "description",benefits: "['Smart recommendations'",'Predictive analytics', 'Automated insights', 'Real-time analysis'];
-    }"
-  {";'"
+    }
+  {";'
 icon: "BarChart",title: "title",description: "description",benefits: "['Real-time dashboards'",'Custom reports', 'Data visualization', 'Performance metrics'];
-    }"
-  {";'"
+    }
+  {";'
 icon: "Target",title: "title",description: "description",benefits: "['Goal tracking'",'Performance optimization', 'Strategic planning', 'Success metrics'];
-    }"
-  {";'"
+    }
+  {";'
 icon: "TrendingUp",title: "title",description: "description",benefits: "['Growth strategies'",'Market analysis', 'Competitive insights', 'ROI optimization'];
     }
   ];
@@ -29,19 +29,15 @@ return (<>;
         <meta name=&quotkeywords&quot; content=&quot;AI, artificial, intelligence, ServiceTemplatePage, AI, solutions, intelligent automation&quot; /  />;
       </Helmet>;
       <section className=&quot;py-20 px-4&quot; />,;
-    <div className=&quot;container mx-auto max-w-6 xl&quot; / />,;"
-    <div className=&quot;text-center mb-16&quot; / />,"
-    <h1 className=&quot;text-5 xl md: "text-6 xl font-bold text-white mb-6&quot;>ServicePageTemplate</h1>
+    <div className=&quot;container mx-auto max-w-6 xl&quot; / />,;<div className=&quot;text-center mb-16&quot; / />,<h1 className=&quot;text-5 xl md: "text-6 xl font-bold text-white mb-6&quot;>ServicePageTemplate</h1>
             <p className=&quot;text-xl text-gray-300 max-w-3 xl mx-auto leading-relaxed&quot;>Professional ServicePageTemplate services tailored to your business needs.</p>p>;
             </div>
-          </div>);"
-      </section>)"
-    </div>",);
+          </div>);</section>)</div>",);
       </div>
   );
 }
-export default ServicePageTemplatePage;"
-export default ServicePageTemplatePage}";'"
+export default ServicePageTemplatePage;
+export default ServicePageTemplatePage}";'
 &quot;use client&quot
 import React from &quot;react&quot
 import { Helmet } from &quot;react-helmet-async&quot
@@ -58,11 +54,11 @@ icon: "Target",title: "title",description: "description",benefits: "["Goal track
 icon: "TrendingUp",title: "title",description: "description",benefits: "["Growth strategies"","Market analysis", "Competitive insights", "ROI optimization"]
     }
   ]
-const benefits = ["Increase efficiency by up to 50%"
-    "Reduce costs by 30% with automation"
-    "Improve decision-making with AI insights"
-    "Scale operations without proportional staff increases"
-    "Gain competitive advantage with advanced technology"
+const benefits = ["Increase efficiency by up to 50%
+    "Reduce costs by 30% with automation
+    "Improve decision-making with AI insights
+    "Scale operations without proportional staff increases
+    "Gain competitive advantage with advanced technology
   ]
 return (<Helmet>;</Helmet>
         <title>ServicePageTemplate|Zion Tech Group</title>
@@ -83,7 +79,10 @@ return (<Helmet>;</Helmet>
   )
 }
 
-export const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({ className = '', children }) => {
+export interface ServicePageTemplateProps {
+   className = '', children 
+}
+const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({  className = '', children  }) => {
   return (
     <div className={`ServicePageTemplate ${className}`}>
       {children}

@@ -1,18 +1,13 @@
 import Footer from './Footer'
 import Navigation from './Navigation'
-import React from 'react'
-import { Helmet } from from 'react-helmet-async'
-import { ArrowRight, Brain } from from 'lucide-react'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from from 'lucide-react'
-import { Phone, Mail, ArrowRight } from from 'lucide-react''use client'
-</>;
+import React from "react";
 export default SEOEnhancer;
 import { { Footer   } from "./Footer";
-import { Navigation  } from "./Navigation"
+import { Navigation  } from "./Navigation
 import { React  } from "react";
 import { Helmet  } from "react-helmet-async";
 import { ArrowRight, Brain  } from "lucide-react";
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe   } from "lucide-react";
-import { Phone, Mail, ArrowRight   } from "lucide-react"; "use client"
+import { Phone, Mail, ArrowRight   } from "lucide-react";use client
 </SEOEnhancerProps>
 export default SEOEnhancer

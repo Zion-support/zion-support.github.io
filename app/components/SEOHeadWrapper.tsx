@@ -4,14 +4,15 @@ interface SEOHeadWrapperProps {
   className?: string;
   children?: React.ReactNode;
 }
-
-const SEOHeadWrapper: "React.FC<SEOHeadWrapperProps> = ({ className", title, description, keywords, children }) => {
-  return (<div className = {className}>
+interface SEOHeadWrapperProps {
+   className", title, description, keywords, children 
+}
+const SEOHeadWrapper: React.FC<SEOHeadWrapperProps> = ({  className", title, description, keywords, children  }) => {
+  return (<div className={className}>
       {children}
 
     </div>
-    </>
-  )
+    </div>
   )
 }
 

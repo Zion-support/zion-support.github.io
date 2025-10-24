@@ -1,6 +1,5 @@
 "use client"
-import React, { Component, ErrorInfo, ReactNode } from "react"
-import { AlertTriangle, RefreshCw, Home, Mail   } from "lucide-react";
+import React from "react";
 interface AdvancedErrorBoundaryProps {
 className?: string
   children: "ReactNode
@@ -25,12 +24,12 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
 
   private reportError = (error: "Error", errorInfo: "ErrorInfo) => {
     const errorReport = {
-      errorId: this.state.errorId || this.generateErrorId()"
+      errorId: this.state.errorId || this.generateErrorId()
       error
       errorInfo
-      timestamp: "new Date().toISOString()"
-      userAgent: "navigator.userAgent"
-      url: "window.location.href"
+      timestamp: "new Date().toISOString()
+      userAgent: "navigator.userAgent
+      url: "window.location.href
     }
 
     //Log to console in development
@@ -40,7 +39,7 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
 
   componentDidCatch(error: "Error", errorInfo: "ErrorInfo) {
     this.setState({
-      hasError: true"
+      hasError: true
       error
       errorInfo)
     })
@@ -60,7 +59,7 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
 
   render() {
     if (this.state.hasError) {
-      return (<div className = {this.props.className}>
+      return (<div className={this.props.className}>
           <div className="error-boundary"> <AlertTriangle className="error-icon" />
             <h2>Something went wrong</h2>
             <p>We"re, sorry, but something unexpected happened.</p>
@@ -81,7 +80,10 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
   }
 }
 
-export const AdvancedErrorBoundary: React.FC<AdvancedErrorBoundaryProps> = ({ className = '', children }) => {
+export interface AdvancedErrorBoundaryProps {
+   className = '', children 
+}
+const AdvancedErrorBoundary: React.FC<AdvancedErrorBoundaryProps> = ({  className = '', children  }) => {
   return (
     <div className={`advancederrorboundary ${className}`}>
       {children}

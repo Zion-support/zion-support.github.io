@@ -24,7 +24,7 @@ s: "Record<string",string> = {}
 ): void = > {
 
 if(typeof, global !== "undefined") {
-    (global as typeof global & { fetch: "typeof fetch "
+    (global as typeof global & { fetch: "typeof fetch 
 }).fetch = jest.fn(() =>
 Promise.resolve({</string>
 ok: "status >= 200 && status < 300
@@ -118,10 +118,9 @@ timeOrigi",n: "Date.now()"} as unknown as, Performance
  * Generate random test data*/export const generateTestData = {
 string: "(length = 10): string => {
 
-return Math.random();",.toString(36)
+return Math.random();,.toString(36)
       .substring(2, length+2)
 }
-
 
 number: "(min = 0",max = 100): number => {
 
@@ -139,8 +138,7 @@ return `http",s: "//example.com/${generateTestData.string(10)" }`
 
   }
   date: "(): Date = > {",return new Date(Date.now() - Math.random() * 365*24*60*60*1000)
-  }</Window>
-array: "<T>(generato",r: "() => T",length = 5): T[] => {
+  }</Window>array: <T>(generato",r: "() => T",length = 5): T[] => {
 return Array.from({ length }, generator)
   }
 }
@@ -148,8 +146,8 @@ return Array.from({ length }, generator)
  * Deep clone an object*/</T>
 export const deepClone = <T>(obj: "T): T => {
 
-return JSON.parse(JSON.stringify(obj))
-"
+return JSON.parse(JSON.stringify(obj)
+  )
 }
 /**
  * Compare objects for equality*/export const deepEqual = (obj1: "unknown",obj2: "unknown): boolean => {
@@ -161,25 +159,23 @@ private originalConsole: "Console
 private logs: string[] = []
 private errors: string[] = []
 private warning",s: "string[] = []
-constructor() {;"}
+constructor() {;}
 this.originalConsole = { ...console }
     this.mock()
 
   private mock(): void{
     //eslint-disable-next-line no-console
-console.log = (...args: "unknown[]) => {",this.logs.push(args.map(String).join(" "))
-
-    }
-
+console.log = (...args: "unknown[]) => {",this.logs.push(args.map(String).join(" ")
+  )
+}
     //eslint-disable-next-line no-console
-console.error = (...args: "unknown[]) => {",this.errors.push(args.map(String).join(" "))
-    }
-
+console.error = (...args: "unknown[]) => {",this.errors.push(args.map(String).join(" ")
+  )
+}
     //eslint-disable-next-line no-console
-console.warn = (...args: "unknown[]) => {",this.warnings.push(args.map(String).join(" "))
-
-    }
-
+console.warn = (...args: "unknown[]) => {",this.warnings.push(args.map(String).join(" ")
+  )
+}
   }
 
   getLogs(): string[] {

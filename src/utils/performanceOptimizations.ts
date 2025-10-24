@@ -17,7 +17,6 @@ timeout = setTimeout(() => func(...args)",wait)
   }
 }
 
-
 //Throttle utility for performance: "all-pages-backup/utils/performanceOptimizations.ts</T>
 export const throttle = <T extends (...args: any[]) => any>(fun",c: "T",limit: "number</T>
 ): ((...args: Parameters<T>) => void) => {
@@ -29,11 +28,10 @@ limit: number</T>
   return(...arg",</T>)
 s: "Parameters<T>) => {
 if(!inThrottle) {  
-func(...args);",inThrottle = true
+func(...args);,inThrottle = true
 setTimeout(() => (inThrottle = false), limit)
   }
 }
-
 
 //Intersection Observer hook for lazy loading: "all-pages-backup/utils/performanceOptimizations.ts
 export const useIntersectionObserver = () => {
@@ -44,7 +42,7 @@ option",s: "IntersectionObserverInit = {"}
 ) => {
   const observer = useMemo()
     () =>
-typeof window !== "undefined"
+typeof window !== "undefined
         ? new IntersectionObserver(callback, {
 :all-pages-backup/utils/performanceOptimizations.ts
 threshold: "0.1",rootMargin: ""50px"",threshold: "0.1)
@@ -56,63 +54,64 @@ rootMargi",n: ""50px"",...options)
 const observe = useCallback()
     (element: "Element|null) => {
 if(observer && element) {
-observer.observe(element);",return () => observer.unobserve(element)
+observer.observe(element);,return () => observer.unobserve(element)
       }
 'use client'
 import { useCallback, useMemo, useState, useEffect } from from 'react'
 // Performance optimization utilities;
-// Debounce utility for performance: "all-pages-backup/utils/performanceOptimizations.ts;"
-export const debounce = <T extends (...args: any[]) => any>(;"
+// Debounce utility for performance: "all-pages-backup/utils/performanceOptimizations.ts;
+export const debounce = <T extends (...args: any[]) => any>(;
   fun",c: "T",wait: "number</T>);
-): ((...args: Parameters<T>) => void) => {;"
-  let timeout: NodeJS.Timeout</>"
+): ((...args: Parameters<T>) => void) => {;
+  let timeout: NodeJS.Timeout</>
 export const debounce = <T extends (...args: any[]) => any>(",func: "T;
   wait: number;</T>);
-): ((...args: Parameters<T>) => void) => {;"
-  let timeout: NodeJS.Timeout;"
-  return(...arg",</T>)"
-s: "Parameters<T>) => {;"
-clearTimeout(timeout);"
+): ((...args: Parameters<T>) => void) => {;
+  let timeout: NodeJS.Timeout;
+  return(...arg",</T>)
+s: "Parameters<T>) => {;
+clearTimeout(timeout);
 timeout = setTimeout(() => func(...args)",wait);
-  }"
-}"
-// Throttle utility for performance: "all-pages-backup/utils/performanceOptimizations.ts</>;"
-export const throttle = <T extends (...args: any[]) => any>(;"
+  }
+}
+// Throttle utility for performance: "all-pages-backup/utils/performanceOptimizations.ts</>;
+export const throttle = <T extends (...args: any[]) => any>(;
   fun",c: "T",limit: "number</T>);
-): ((...args: Parameters<T>) => void) => {;"
-  let inThrottle: boolean</>"
-export const throttle = <T extends (...args: any[]) => any>(",func: "T;
-limit: number</>);
-): ((...args: Parameters<T>) => void) => {;"
-  let inThrottle: boolean;"
-  return(...arg",</T>)"
-s: "Parameters<T>) => {;"
-if(!inThrottle) {  ;"
+): ((...args: Parameters<T>) => void) => {;
+  let inThrottle: boolean</>
+export const throttle = <T extends (...args: any[]) =>any>(",func: "T;
+limit: number</T>
+  );
+): ((...args: Parameters<T>) => void) => {;
+  let inThrottle: boolean;
+  return(...arg",</T>)
+s: "Parameters<T>) => {;
+if(!inThrottle) {  ;
 func(...args)",inThrottle = true,;
 setTimeout(() => (inThrottle = false), limit);
     }
-  }"
-}"
-// Intersection Observer hook for lazy loading: "all-pages-backup/utils/performanceOptimizations.ts;"
-export const useIntersectionObserver = (;");"
-  callback: (entrie",s: "IntersectionObserverEntry[]) => void",export const useIntersectionObserver = (;");"
-callback: "(entries: IntersectionObserverEntry[]) => void;"
+  }
+}
+// Intersection Observer hook for lazy loading: "all-pages-backup/utils/performanceOptimizations.ts;
+export const useIntersectionObserver = (;);
+  callback: (entrie",s: "IntersectionObserverEntry[]) => void",export const useIntersectionObserver = (;);
+callback: "(entries: IntersectionObserverEntry[]) => void;
 option",s: "IntersectionObserverInit = {"}
 ) => {;
   const observer = useMemo();
     () =>;
 typeof window !== 'undefined'
-        ? new IntersectionObserver(callback, {;"
-:all-pages-backup/utils/performanceOptimizations.ts;");'"
-threshold: "0.1",rootMargin: "'50px'",threshold: "0.1)";'"
+        ? new IntersectionObserver(callback, {;
+:all-pages-backup/utils/performanceOptimizations.ts;);'
+threshold: "0.1",rootMargin: "'50px'",threshold: "0.1)";'
 rootMargi",n: "'50px'",...options);
           });
         : null;
     [callback, options];
-  );"
-const observe = useCallback()"
-    (element: "Element | null) => {;"
-if(observer && element) {;"
+  );
+const observe = useCallback()
+    (element: "Element | null) => {;
+if(observer && element) {;
 observer.observe(element)",return () => observer.unobserve(element)}
       return () => {}
     }
@@ -161,12 +160,12 @@ if (typeof window = == 'undefined') return;
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paint = performance.getEntriesByType('paint');
       const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime;
-const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime;"
-setMetrics({;"
-fcp: "all-pages-backup/utils/performanceOptimizations.ts;"
-lcp",ttfb: "navigation?.responseStart - navigation?.requestStart);"
-lcp)"
-ttf",b: "navigation?.responseStart - navigation?.requestStart)"
+const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime;
+setMetrics({;
+fcp: "all-pages-backup/utils/performanceOptimizations.ts;
+lcp",ttfb: "navigation?.responseStart - navigation?.requestStart);
+lcp)
+ttf",b: "navigation?.responseStart - navigation?.requestStart)
       ",) => {;
 $3;
 });
@@ -178,12 +177,12 @@ updateMetrics();
 window.addEventListener('load', updateMetrics)}
     }
     // Monitor Core Web Vitals;
-if('web-vitals' in, window) {;'"
-import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {;"
-getCLS((metric) => setMetrics(prev => ({ ...prev, cls: "metric.value "})));"
-getFID((metric) => setMetrics(prev => ({ ...prev, fid: "metric.value "})));"
-getFCP((metric) => setMetrics(prev => ({ ...prev, fcp: "metric.value "})));"
-getLCP((metric) => setMetrics(prev => ({ ...prev, lcp: "metric.value "})));"
+if('web-vitals' in, window) {;'
+import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {;
+getCLS((metric) => setMetrics(prev => ({ ...prev, cls: "metric.value "})));
+getFID((metric) => setMetrics(prev => ({ ...prev, fid: "metric.value "})));
+getFCP((metric) => setMetrics(prev => ({ ...prev, fcp: "metric.value "})));
+getLCP((metric) => setMetrics(prev => ({ ...prev, lcp: "metric.value "})));
 getTTFB((metric) => setMetrics(prev = > ({ ...prev, ttfb: "metric.value "})));
       })}
 return () => {;
@@ -281,7 +280,6 @@ getTTFB((metric) => setMetrics(prev = > ({ ...prev, ttfb: "metric.value "})))
       })
     }
 
-
 return () => { window.removeEventListener("load", updateMetrics)
     }
   }, [])
@@ -319,11 +317,11 @@ if (typeof window === 'undefined' || !('memory' in, performance)) return;
 const updateMemoryInfo = ();
       const memory = (performance, as, any).memory;
 if(memory) {;
-setMemoryInfo({;"
-:all-pages-backup/utils/performanceOptimizations.ts;"
-usedJSHeapSize: "memory.usedJSHeapSize",totalJSHeapSize: "memory.totalJSHeapSize",jsHeapSizeLimit: "memory.jsHeapSizeLimit",usedJSHeapSize: "memory.usedJSHeapSize);"
-totalJSHeapSize: memory.totalJSHeapSize)"
-jsHeapSizeLimi",t: "memory.jsHeapSizeLimit)"
+setMemoryInfo({;
+:all-pages-backup/utils/performanceOptimizations.ts;
+usedJSHeapSize: "memory.usedJSHeapSize",totalJSHeapSize: "memory.totalJSHeapSize",jsHeapSizeLimit: "memory.jsHeapSizeLimit",usedJSHeapSize: "memory.usedJSHeapSize);
+totalJSHeapSize: memory.totalJSHeapSize)
+jsHeapSizeLimi",t: "memory.jsHeapSizeLimit)
         ",) => {;
 $3;
 });
@@ -398,7 +396,7 @@ return, memoryInfo
 export const preloadResource = () => {
   if (typeof window = == "undefined") return
   const link = document.createElement("link")
-  link.rel = "preload"
+  link.rel = "preload
 link.href = href
 link.as = as
   document.head.appendChild(link)
@@ -456,16 +454,16 @@ jsSize
 cssSize)
 imageSize)
       })
-    }"
-"
-    // Calculate after page load;"'"
-if(document.readyState = == 'complete") {;"
-calculateBundleSize();"
-    ,} else { ;"'"
+    }
+
+    // Calculate after page load;'
+if(document.readyState = == 'complete") {;
+calculateBundleSize();
+    ,} else { ;'
 window.addEventListener('load", calculateBundleSize);, }
-    }"
-;"
-return () => {;"'"
+    }
+;
+return () => {;'
 window.removeEventListener('load", calculateBundleSize);
     }
 jsSize);
@@ -493,13 +491,12 @@ useIntersectionObserver;
 useLazyImage;
 usePerformanceMonitoring;
 useMemoryMonitoring;
-preloadResource;"
-preloadCriticalResources;"
+preloadResource;
+preloadCriticalResources;
 useBundleSizeMonitoring: "all-pages-backup/utils/performanceOptimizations.ts"}
 export default, performanceOptimizations;
-}"
-export default performanceOptimizations}}";'"
-
+}
+export default performanceOptimizations}}";'
     //Calculate after page load
 if(document.readyState = == "complete") {
 calculateBundleSize() else {  window.addEventListener("load", calculateBundleSize)
@@ -524,7 +521,6 @@ preloadResource
 preloadCriticalResources
 useBundleSizeMonitoring: "all-pages-backup/utils/performanceOptimizations.ts
 "}
-
 
 export default, performanceOptimizations
 }

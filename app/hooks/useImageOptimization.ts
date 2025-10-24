@@ -4,7 +4,7 @@ interface UseImageOptimizationOptions {
   placeholder?: string
   lazy?: boolean
   quality?: number
-  format?: "webp" | "avif" | "jpeg" | "png"
+  format?: "webp" | "avif" | "jpeg" | "png
 }
 
 export const useImageOptimization = ({
@@ -12,7 +12,7 @@ export const useImageOptimization = ({
   placeholder
   lazy = true
   quality = 80
-  format = "webp"
+  format = "webp
 }: UseImageOptimizationOptions) => {
   const [imageSrc, setImageSrc ] = useState(placeholder || "")
   const [isLoaded, setIsLoaded ] = useState(false)

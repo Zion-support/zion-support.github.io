@@ -1,7 +1,6 @@
 "use client"
 import React from "react";
-import React, { useState, useEffect } from "react"
-import { ArrowRight, Brain, BarChart, Target, TrendingUp, Users, Globe, Database, Settings, Shield, Zap   } from "lucide-react";
+import React from "react";
 import React from "react";
 import { Helmet  } from "react-helmet-async";
 import { ArrowRight, Brain, BarChart, Target, TrendingUp   } from "lucide-react";
@@ -11,14 +10,14 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
 import { React from "react";
 import Helmet from "react-helmet-async";
 import ArrowRight Brain BarChart Target TrendingUp  } from "lucide-react";
-import { Navigation  } from "/components/Navigation"
+import { Navigation  } from "/components/Navigation
 import { Footer  } from "../components/Footer";
-import CheckCircle ArrowRight Star Clock Zap Shield Brain BarChart Target TrendingUp Globe Database Users, Settings     } from "lucide-react"
+import CheckCircle ArrowRight Star Clock Zap Shield Brain BarChart Target TrendingUp Globe Database Users, Settings     } from "lucide-react
 const ContentStatistics ReactFC = =>     const steps = 60 const stepDuration = duration /steps const interval = setInterval =>
 const steps = 60 const stepDuration = duration /steps const interval = setInterval =>
-return newCounters stepDuration return  => clearIntervalinterval const statistics="icon" Users label "Happy Clients"
-value Mathroundcountersclients suffix "
-color "from-blue-500 to-cyan-500"
+return newCounters stepDuration return  => clearIntervalinterval const statistics="icon" Users label "Happy Clients
+value Mathroundcountersclients suffix 
+color "from-blue-500 to-cyan-500
 const ContentStatistics: "React.FC = () => {
 const [counters",setCounters,] = useState({
 clients: "0",projects: "0
@@ -84,14 +83,14 @@ icon: "Shield",title: ""Security Excellence"",description: ""Bank-level security
   {
 icon: "Globe",title: ""Global Reach"",description: ""Worldwide deployment and support for international businesses"",stats: "["5 0+Countries"","1 5+Languages", "2 4/7 Support"]}
 ]
-constbenefits= ["Advanced AI technology integration"
-"Real-time processing and analytics"
-"Enterprise-grade security and compliance"
-"Scalable and flexible solutions"
-"2 4/7 technical support"
-"Easy integration with existing systems"
-"Cost-effective pricing plans"
-    "Proven track record of success"
+constbenefits= ["Advanced AI technology integration
+"Real-time processing and analytics
+"Enterprise-grade security and compliance
+"Scalable and flexible solutions
+"2 4/7 technical support
+"Easy integration with existing systems
+"Cost-effective pricing plans
+    "Proven track record of success
   ]
 constachievements= [{icon: "Star",title: ""Industry Recognition"",description: ""Awarded Best AI Solutions Provider2024"",value: ""2 5+""}
   {
@@ -117,7 +116,7 @@ return pre, v
 }, 1, 6)
 })
 return(<div className="[^"]*">,<div className="[^"]*"> <div className="[^"]*">
-    <h1 className="text-3, xl, m,"
+    <h1 className="text-3, xl, m,
 d: text-4 xl font-bold text-white mb-4" /></h2>
 Our Impact in Numbers <p className="[^"]*">
 See how we"ve transformed businesses and delivered exceptional results.,<div className="[^"]*"> <div className="[^"]*">{/* Header*/} <div className="[^"]*"> <h1 className="[^"]*"></h2>
@@ -131,11 +130,13 @@ g: grid-cols-4 gap-8 mb-16" />{statistics.map((stat,index) => (<divkey = {index}
 <stat.icon className="h-8 w-8 text-white" />
     <divclassName = {`text-3 xl font-bold${stat.color};mb-2`} />{Math.floor(stat.value)}{stat.suffix}div> <div className="[^"]*">{stat.label}
 
-))}
+)
+  )
+}
   </div>
 {/* Achievements*/}
 
-    <div className="grid grid-cols-1 md: "grid-cols-2 l","
+    <div className="grid grid-cols-1 md: "grid-cols-2 l",
 g: grid-cols-4 gap-8">{achievements.map((achievement,index) => (<divkey = {index};className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300" />
     </div>,<div className="[^"]*">
             <achievement.icon className="h-6 w-6 text-white" />
@@ -143,10 +144,11 @@ g: grid-cols-4 gap-8">{achievements.map((achievement,index) => (<divkey = {index
     <h1 className="text-xl font-semibold text-white mb-2">{achievement.title}</h3>
 <p className="text-gray-300 text-sm">{achievement.description}</p>
   </div>
-    </>
-  ))}
+    </div>
+  )
+}
 
-    <div className="grid grid-cols-1 md: "grid-cols-2 l","
+    <div className="grid grid-cols-1 md: "grid-cols-2 l",
 g: grid-cols-3 gap-8 mb-16">{statistics.map((stat,index) => (<divkey = {index};className="bg-white/5 backdrop-blur-sm rounded-xl p-8 text-center hover:bg-white/10 transition-all duration-300" />
     </div>,<div className="[^"]*">
             <stat.icon className="w-8 h-8 text-slate-900" />
@@ -155,14 +157,15 @@ g: grid-cols-3 gap-8 mb-16">{statistics.map((stat,index) => (<divkey = {index};c
     <div className="text-lgfont-semiboldtext-whitemb-2">{stat.label}  </div>
     <div className="text-gray-400 text-sm">{stat.description}  </div>
   </div>
-    </>
-  ))}
+    </div>
+  )
+}
   </div>
 {/* Features Section*/} <div className="[^"]*"> <div className="[^"]*">
     <h1 className="text-2 xl font-bold text-white mb-4">Key Features</h3>
 <p className="text-gray-300 max-w-2 xl mx-auto">Discover the powerful features that make our solutions stand out.</p>p>
   </div>
-    <div className="grid grid-cols-1 md: "grid-cols-2 l","
+    <div className="grid grid-cols-1 md: "grid-cols-2 l",
 g: grid-cols-4 gap-8">{features.map((feature,index) => (<divkey = {index};className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300" />
     </div>,<div className="[^"]*">
             <feature.icon className="w-6 h-6 text-white" />
@@ -173,12 +176,14 @@ g: grid-cols-4 gap-8">{features.map((feature,index) => (<divkey = {index};classN
     </div> <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
 <span>{stat}</span>
   </div>
-    </>
-  ))}
+    </div>
+  )
+}
   </div>
   </div>
-    </>
-  ))}
+    </div>
+  )
+}
   </div>
   </div>
 {/* Achievements Section*/} <div className="[^"]*"> <div className="[^"]*">
@@ -193,20 +198,22 @@ g: grid-cols-4 gap-8">{features.map((feature,index) => (<divkey = {index};classN
     <h1 className="text-lg font-semibold text-white mb-2">{achievement.title}</h4>
 <p className="text-gray-300 text-sm">{achievement.description}</p>
   </div>
-    </>
-  ))}
+    </div>
+  )
+}
   </div>
   </div>
 {/* Benefits Section*/} <div className="[^"]*"> <div className="[^"]*">
     <h1 className="text-2 xl font-bold text-white mb-4">Why Choose Us?</h3>
 <p className="text-gray-300 max-w-2 xl mx-auto">Discover the advantages that make our solutions the preferred choice.</p>p>
   </div>
-    <div className="grid grid-cols-1 md: "grid-cols-2 l","
+    <div className="grid grid-cols-1 md: "grid-cols-2 l",
 g: grid-cols-4 gap-6">{benefits.map((benefit,index) => (<divkey = {index};className="flex items-center gap-3 bg-white/5 backdrop-blur-sm rounded-lg p-4 hover:bg-white/10 transition-all duration-300" />
     </div> <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />,<span className="text-gray-300">{benefit}</span>
   </div>
-    </>
-  ))}
+    </div>
+  )
+}
   </div>
   </div>
 {/* CTA Section*/} <div className="[^"]*"> <div className="[^"]*">
@@ -214,7 +221,7 @@ g: grid-cols-4 gap-6">{benefits.map((benefit,index) => (<divkey = {index};classN
 <p className="text-xl text-gray-300 mb-8 max-w-2 xl mx-auto">Join thousands of satisfied customers and transform your business today.</p>p> <div className="[^"]*"> <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2" /> <Zap className="w-5 h-5" />
 Get Started Today</Zap>
 </button>
-<button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold, hove,"
+<button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold, hove,
 r: bg-white/10 transition-colors duration-200"  />
 View Case Studies
   </div>
@@ -222,8 +229,7 @@ View Case Studies
   </div>
   </div>
   </div>
-    </>
-  )
+    </div>
   )
 }
         <><div className="[^"]*"> <div className="[^"]*"><h3 className="text-2 xl font-bold text-white mb-4" />
@@ -241,49 +247,49 @@ Contact Sales</button>
               </div>
 export default ContentStatistics;</>
 
-export default ContentStatisticsPage; clients 0 projects 0 satisfaction 0 years 0 countries 0 uptime 0 consttargetCounters = clients 1000 0 projects 500 0 satisfaction 9 9 years 1 5 countries 5 0 uptime99 conststatistics= icon Users value countersclients label "Happy Clients"
-suffix ""
-color "text-blue-40 0"
-description "Businesses trust our solutions"
-icon Award value countersprojects label "Projects Completed"
-suffix ""
-color "text-purple-40 0"
-description "Successful implementations"
-icon TrendingUp value counterssatisfaction label "Client Satisfaction"
-suffix ""
-color "text-green-40 0"
-description "Customer satisfaction rate"
-icon Clock value countersyears label "Years Experience"
-suffix ""
-color "text-yellow-40 0"
-description "Industry expertise"
-icon Globe value counterscountries label "Countries Served"
-suffix ""
-color "text-cyan-40 0"
-description "Global presence"
-icon BarChart3 value countersuptime label "Uptime Guarantee"
-suffix ""
-color "text-red-40 0"
-description "Service reliability"
-constachievements= icon Brain title "AI Innovation"
-description "Leading the industry in AI-powered solutions"
-icon Shield title "Security Excellence"
-description "Bank-level security for all our solutions"
-icon Globe title "Global Reach"
-description "Worldwide deployment and support for international businesses"
-stats "5 0 Countries" "1 5 Languages" "2 4/7 Support"
+export default ContentStatisticsPage; clients 0 projects 0 satisfaction 0 years 0 countries 0 uptime 0 consttargetCounters = clients 1000 0 projects 500 0 satisfaction 9 9 years 1 5 countries 5 0 uptime99 conststatistics= icon Users value countersclients label "Happy Clients
+suffix 
+color "text-blue-40 0
+description "Businesses trust our solutions
+icon Award value countersprojects label "Projects Completed
+suffix 
+color "text-purple-40 0
+description "Successful implementations
+icon TrendingUp value counterssatisfaction label "Client Satisfaction
+suffix 
+color "text-green-40 0
+description "Customer satisfaction rate
+icon Clock value countersyears label "Years Experience
+suffix 
+color "text-yellow-40 0
+description "Industry expertise
+icon Globe value counterscountries label "Countries Served
+suffix 
+color "text-cyan-40 0
+description "Global presence
+icon BarChart3 value countersuptime label "Uptime Guarantee
+suffix 
+color "text-red-40 0
+description "Service reliability
+constachievements= icon Brain title "AI Innovation
+description "Leading the industry in AI-powered solutions
+icon Shield title "Security Excellence
+description "Bank-level security for all our solutions
+icon Globe title "Global Reach
+description "Worldwide deployment and support for international businesses
+stats "5 0 Countries" "1 5 Languages" "2 4/7 Support
 constbenefits= 
-  "Advanced AI technology integration" "Real-time processing and analytics" "Enterprise-grade security and compliance" "Scalable and flexible solutions" "2 4/7 technical support" "Easy integration with existing systems" "Cost-effective pricing plans"
-    "Proven track record of success"
-constachievements= icon Star title "Industry Recognition"
-description "Awarded Best AI Solutions Provider2024"
-value "2 5"
-icon Target title "Success Rate"
-description "Projects delivered on time and within budget"
-value "9 8"
-icon Rocket title "Growth Rate"
-description "Year-over-year business growth"
-value "30 0"
+  "Advanced AI technology integration" "Real-time processing and analytics" "Enterprise-grade security and compliance" "Scalable and flexible solutions" "2 4/7 technical support" "Easy integration with existing systems" "Cost-effective pricing plans
+    "Proven track record of success
+constachievements= icon Star title "Industry Recognition
+description "Awarded Best AI Solutions Provider2024
+value "2 5
+icon Target title "Success Rate
+description "Projects delivered on time and within budget
+value "9 8
+icon Rocket title "Growth Rate
+description "Year-over-year business growth
+value "30 0
 useEffect => constduration= 300 0 //3 secondsconststeps= 60 conststepDuration= duration /steps consttimers= ObjectkeystargetCountersmapkey =>
 consttarget= targetCounterskey as keyof type of targetCounters constduration= 2000 //2 secondsconstincrement= target /duration /16 //60 fps return setInterva l =>
 setCountersprev=> constcurrent="prevkey" as keyof type of prev ifcurrent< target return(prev key Mathmincurrent  increment target return pre v 1 6 return (<div className="[^"]*"> <div className="[^"]*"> <div className="[^"]*"><h2 className="text-3 xl md text-4 xl font-bold text-white mb-4" />

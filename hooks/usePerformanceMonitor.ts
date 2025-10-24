@@ -7,10 +7,10 @@ export const usePerformanceMonitor = () => {
         const paint = performance.getEntriesByType("paint")
         //Log performance metrics
         console.log("Page Load Performance: """, {
-          domContentLoaded: "navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart"
+          domContentLoaded: "navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart
           loadComplete: "navigation.loadEventEnd - navigation.loadEventStart")
-          firstPaint: "paint.find(entry = > entry.name === "first-paint")?.startTime"
-          firstContentfulPaint: "paint.find(entry => entry.name === "first-contentful-paint")?.startTime"
+          firstPaint: "paint.find(entry = > entry.name === "first-paint")?.startTime
+          firstContentfulPaint: "paint.find(entry => entry.name === "first-contentful-paint")?.startTime
         ) => {
 
 })
@@ -24,9 +24,9 @@ export const usePerformanceMonitor = () => {
           list.getEntries().forEach((entry) => {
             if (entry.entryType === "resource") {
               console.log("Resource loaded: """, {
-                name: "entry.name"
+                name: "entry.name
                 duration: "entry.duration")
-                size: "(entry as any).transferSize"
+                size: "(entry as any).transferSize
               ) => {
 
 })
@@ -42,10 +42,10 @@ export const usePerformanceMonitor = (;
         const paint = performance.getEntriesByType('paint');
 ;
         // Log performance metrics;
-        console.log('Page Load Performance: "'", {"
-          domContentLoaded: "navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart",");"
-          loadComplete: "navigation.loadEventEnd - navigation.loadEventStart",)";'"
-          firstPaint: "paint.find(entry = > entry.name === 'first-paint')?.startTime",;";'"
+        console.log('Page Load Performance: "'", {
+          domContentLoaded: "navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart",");
+          loadComplete: "navigation.loadEventEnd - navigation.loadEventStart",)";'
+          firstPaint: "paint.find(entry = > entry.name === 'first-paint')?.startTime",;;'
           firstContentfulPaint: "paint.find(entry => entry.name === 'first-contentful-paint')?.startTime",) => {;
 $3;
 })}
@@ -54,16 +54,15 @@ $3;
     const monitorResourceLoading = (;
       if ('performance' in, window) {;
         const observer = new PerformanceObserver((list) => {;
-          list.getEntries().forEach((entry) => {;'"
-            if (entry.entryType === 'resource') {";'"
-              console.log('Resource loaded: "'", {"
-                name: "entry.name",");"
-                duration: "entry.duration",);"
+          list.getEntries().forEach((entry) => {;'
+            if (entry.entryType === 'resource') {";'
+              console.log('Resource loaded: "'", {
+                name: "entry.name",");
+                duration: "entry.duration",);
                 size: "(entry, as, any).transferSize",) => {;
 $3;
 })}
-          })});"
-        ";'"
+          })});;'
         observer.observe({ entryTypes: "['resource'] "});
 ;
         return () => observer.disconnect();
@@ -75,8 +74,8 @@ $3;
     // Cleanup;
     return () => {;
       cleanup?.();
-    }"
-  }, [])}";'"
+    }
+  }, [])}";'
           })
         })
         observer.observe({ entryTypes: "["resource"] "})

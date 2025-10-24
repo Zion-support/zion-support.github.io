@@ -37,12 +37,12 @@ export const generateStructuredData = (data: Partial<StructuredData>): Structure
     logo: "https://ziontechgroup.com/logo.png",
     sameAs: ["https://twitter.com/ziontechgroup",
       "https://linkedin.com/company/ziontechgroup",
-      "https://github.com/ziontechgroup"
+      "https://github.com/ziontechgroup
     ],
     contactPoint: {
       "@type": "ContactPoint",
       telephone: "+1-555-123-4567",
-      contactType: "customer service"
+      contactType: "customer service
     },
     address: {
       "@type": "PostalAddress",
@@ -50,7 +50,7 @@ export const generateStructuredData = (data: Partial<StructuredData>): Structure
       addressLocality: "San Francisco",
       addressRegion: "CA",
       postalCode: "94105",
-      addressCountry: "US"
+      addressCountry: "US
     },
     ...data }
 
@@ -61,5 +61,5 @@ export const defaultSEOData = {
   description: "Leading provider of AI and IT solutions for modern businesses. Transform your operations with cutting-edge technology.",
   keywords: "AI, artificial intelligence, technology solutions, business automation, IT services, cloud computing, cybersecurity",
   ogImage: "/og-image.jpg",
-  canonical: "https://ziontechgroup.com"
+  canonical: "https://ziontechgroup.com
 }

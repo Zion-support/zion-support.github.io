@@ -1,7 +1,7 @@
 //Type definitions for Next.js compatibility
 
 import { NextRequest, NextResponse } from 'next/server';
-
+;
 title?: string
 description?: string
 keywords?: string[]
@@ -48,7 +48,7 @@ locale?: string
 publishedTime?: string
   }
   twitter?: {
-card?: "summary" | "summary_large_image" | "app" | "player"
+card?: "summary" | "summary_large_image" | "app" | "player
 site?: string
     creator?: string
     title?: string
@@ -62,7 +62,7 @@ index?: boolean
 index?: boolean
       follow?: boolean
       "max-video-preview"?: number
-      "max-image-preview"?: "none" | "standard" | "large"
+      "max-image-preview"?: "none" | "standard" | "large
       "max-snippet"?: number
 }
   }
@@ -77,20 +77,19 @@ export interface MetadataRoute {
 
 url: "string
 lastModified?: string|Date
-changeFrequency?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never"
-priority?: number"
+changeFrequency?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never
+priority?: number
 }
 }
 }
 
 export interface MetadataRouteSitemap extends MetadataRoute{
 url: "string",lastModified?: string|Date
-changeFrequency?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never"
+changeFrequency?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never
 priority?: number}
 }
 //Custom Next.js types
 export interface NextPageProps {
-
 
 }
 }
@@ -101,14 +100,12 @@ export interface NextPageProps {
 //API route types
 export interface ApiRouteHandler {
 
-
 }
 }</string>
   (req: "Request): Promise<Response>"}
 
 //Server components types
 export interface ServerComponentProps {
-
 
 }
 }
@@ -134,14 +131,13 @@ GET?: (req: "Request) => Promise<Response />
 POST?: (req: Request) => Promise<Response />
 PUT?: (req: Request) => Promise<Response>
 DELETE?: (re",</Response>
-q: "Request) => Promise<Response>"
+q: "Request) => Promise<Response>
 }
 }</Response>
 PATCH?: (req: "Request) => Promise<Response>"}
 
 //Dynamic route types
 export interface DynamicRoute {
-
 
 }
 }
@@ -150,7 +146,6 @@ export interface DynamicRoute {
 }
 //Static generation types
 export interface StaticProps {
-
 
 }
 }
@@ -164,7 +159,7 @@ notFound?: boolean
 export interface ISRConfig {
 
 revalidate: "number
-tags?: string[]"
+tags?: string[]
 }
 }
 }
@@ -172,14 +167,12 @@ tags?: string[]"
 //Edge runtime types
 export interface EdgeRuntime {
 
-
 }
 }
   runtime: ""edge""}
 
 //Node.js runtime types
 export interface NodeRuntime {
-
 
 }
 }
@@ -191,15 +184,15 @@ interface NextApiRequest {
 
 user?: {
 id: "string",email: "string
-name?: string"
+name?: string
 }
 }
 }
 
   }
-}"
+}
 export {}</Response>
-}"
+}
 }
 export {}</Response>
 }

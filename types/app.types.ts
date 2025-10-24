@@ -199,7 +199,6 @@ export interface BaseComponentProps {
   /** Children elements */
   children?: React.ReactNode;
 }
-
 /**
  * Theme Types
  */

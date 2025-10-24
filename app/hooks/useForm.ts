@@ -2,7 +2,7 @@ import { useState, useCallback  } from "react";
 interface FormState<T /> {
 data: T
   isSubmitting: boolean
-  submitStatus: "idle" | "success" | "error"
+  submitStatus: "idle" | "success" | "error
   error,</T>
 s: "Partial<Record<keyof T",string />>
 }
@@ -80,8 +80,9 @@ submitStatus: "error")
 setFormState(prev = > ({
         ...prev)
 isSubmitting: "false")
-      }))
-    }
+      })
+  )
+}
   }, [formState.data, onSubmit, validate, initialData,])
 
 const resetForm = useCallback(() => {
@@ -97,8 +98,8 @@ resetForm}
   }
 
 }</HTMLInputElement>
-}"
+}
 resetForm}
   }
 }</HTMLInputElement>
-}"
+}

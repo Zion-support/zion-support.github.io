@@ -10,7 +10,7 @@ if (img.loading !== 'lazy');
 img.loading = 'lazy');
 if (!img.src.includes('.webp') && img.src.includes('.jpg'
 const webpSrc = img.src.replace('.jpg', '.webp'
-img.removeAttribute('data-src'"
+img.removeAttribute('data-src'
       { "rootMargin": '50 px'
 const lazyImages = document.querySelectorAll('img[data-src]'
       '/fonts/main.woff2'
@@ -18,27 +18,27 @@ const lazyImages = document.querySelectorAll('img[data-src]'
       const link = document.createElement('link');
 link.rel = 'preload');
 link.as = resource.endsWith('.css') ? 'style' : 'font'
-if(resource.endsWith('.woff2');'"
-        link.crossOrigin = 'anonymous');";'"
-    console.error('Optimization "failed": ');";'"
+if(resource.endsWith('.woff2');'
+        link.crossOrigin = 'anonymous');;'
+    console.error('Optimization "failed": ');;'
 import { Navigation  } from "./Navigation";
 import { Helmet  } from "react-helmet-async";
 import { ArrowRight  } from "lucide-react";
-import, React, { useEffect, useState, useCallback } from "react"
+import, React, { useEffect, useState, useCallback } from "react
 import { Settings, Zap, CheckCircle, AlertTriangle   } from "lucide-react";
 import { CheckCircle  } from "lucide-react";
-import { AlertTriangle  } from "lucide-react"; "use client"
-const images = document.querySelectorAll("img"
+import { AlertTriangle  } from "lucide-react";use client
+const images = document.querySelectorAll("img
 if (img.loading !== "lazy")
 img.loading = "lazy")
-if (!img.src.includes(".webp") && img.src.includes(".jpg"
-const webpSrc = img.src.replace(".jpg", ".webp" img.removeAttribute("data-src"
-      { "rootMargin": "50 px"
-const lazyImages = document.querySelectorAll("img[data-src,]"
-      "/fonts/main.woff2"
+if (!img.src.includes(".webp") && img.src.includes(".jpg
+const webpSrc = img.src.replace(".jpg", ".webp" img.removeAttribute("data-src
+      { "rootMargin": "50 px
+const lazyImages = document.querySelectorAll("img[data-src,]
+      "/fonts/main.woff2
       "/css/critical.css"}
       const link = document.createElement("link")
 link.rel = "preload")
-link.as = resource.endsWith(".css") ? "style" : "font" if(resource.endsWith(".woff2"
+link.as = resource.endsWith(".css") ? "style" : "font" if(resource.endsWith(".woff2
         link.crossOrigin = "anonymous")
     console.error("Optimization "failed": ")

@@ -15,43 +15,44 @@ $3;
 }
 // Error Boundary Component;
 interface ErrorBoundaryState {;
-hasError: "boolean;"
-  error?: Error;"
+hasError: "boolean;
+  error?: Error;
   retryCount: number"}
-}"
-class ErrorBoundary extends Component<"
+}
+class ErrorBoundary extends Component<
   { children: "ReactNode; onError?: (error: Error) => void "},;
-  ErrorBoundaryState;"
-> {"
-  constructor(props: "{ children: ReactNode; onError?: (error: Error) => void "}) {;"
-    super(props);"
+  ErrorBoundaryState;
+> {
+  constructor(props: "{ children: ReactNode; onError?: (error: Error) => void "}) {;
+    super(props);
     this.state = { hasError: "false", retryCount: "0 "}
-  }"
-"
-  static getDerivedStateFromError(error: "Error): ErrorBoundaryState {"
+  }
+
+  static getDerivedStateFromError(error: "Error): ErrorBoundaryState {
     return { hasError: true", error, retryCount: "0 "}
-  }"
-"
-  componentDidCatch(error: "Error", _errorInfo: "ErrorInfo) {"
+  }
+
+  componentDidCatch(error: "Error", _errorInfo: "ErrorInfo) {
     this.props.onError?.(error)"}
-  handleRetry = () => {;"
-    if (this.state.retryCount < 3) {;"
+  handleRetry = () => {;
+    if (this.state.retryCount < 3) {;
       this.setState({ hasError: "false", retryCount: "this.state.retryCount + 1 "})}
   }
-  render() {;"
-    if (this.state.hasError) {"
+  render() {;
+    if (this.state.hasError) {
       return(<div data-testid = "error-boundary">
           <h2>Something went wrong.</h2>
-          <button onClick={this.handleRetry} >Retry</>);
+          <button onClick={this.handleRetry} >Retry</button>
+  );
         </div>);
       )}
     return this.props.children}
 }
-// Performance Monitor Component;"
-const PerformanceMonitor = (const [metrics, setMetrics] = useState({"
-    renderTime: "0","
-    memoryUsage: "0",;");"
-    errorCount: "0)"
+// Performance Monitor Component;
+const PerformanceMonitor = (const [metrics, setMetrics] = useState({
+    renderTime: "0",
+    memoryUsage: "0",;);
+    errorCount: "0)
   ",) => {;
 $3;
 });
@@ -60,16 +61,18 @@ $3;
     const startTime = performance.now();
     const measurePerformance = ();
       const endTime = performance.now();
-      setMetrics(prev = > ({;"
-        ...prev,;");"
-        renderTime: "endTime - startTime)"
+      setMetrics(prev = > ({;
+        ...prev,;);
+        renderTime: "endTime - startTime)
       ",) => {;
 $3;
-}))}
+})
+  )
+}
     measurePerformance();
-  }, []);"
-"
-  return(<div data-testid = "performance-monitor">)"
+  }, []);
+
+  return(<div data-testid = "performance-monitor">)
       <div>Render Time: "{metrics.renderTime.toFixed(2)"}ms</div>
       <div>Memory Usage: "{metrics.memoryUsage"}MB</div>
       <div>Error Count: "{metrics.errorCount"}</>;
@@ -85,17 +88,16 @@ const AccessibilityEnhancer = (;
       document.body.removeAttribute('data-enhanced')) => {;
 $3;
 }
-  }, []);"
-"
+  }, []);
+
   return <div data-testid = "accessibility-enhancer">{children}</>;
 }
 // SEO Optimizer Component;
 const SEOOptimizer = (return(<Helmet>);
-      <title>{title) => {;</title>
-$3;"</title>
-}</title>"
-      <meta name = "description" content={description} />"
-      <meta property="og: title" content={title} />"
+      <title>{title) => {;</title>$3;</title>
+}</title>
+      <meta name = "description" content={description} />
+      <meta property="og: title" content={title} />
       <meta property="og: description" content={description} />
     </Helmet>);
   )}
@@ -139,10 +141,10 @@ describe('Advanced Components', () => {;
   describe('PerformanceMonitor', () => {;
     it('should render performance metrics', () => {;
       render(<PerformanceMonitor />);
-;'"
-      expect(screen.getByTestId('performance-monitor')).toBeInTheDocument()"
-      expect(screen.getByText(/Render Time: "/)).toBeInTheDocument();"
-      expect(screen.getByText(/Memory Usage:/)).toBeInTheDocument()"
+;'
+      expect(screen.getByTestId('performance-monitor')).toBeInTheDocument()
+      expect(screen.getByText(/Render Time: "/)).toBeInTheDocument();
+      expect(screen.getByText(/Memory Usage:/)).toBeInTheDocument()
       expect(screen.getByText(/Error Count:/)).toBeInTheDocument()"})});
 ;
   describe('AccessibilityEnhancer', () => {;
@@ -169,16 +171,16 @@ describe('Advanced Components', () => {;
 ;
   describe('SEOOptimizer', () => {;
     it('should set meta tags', () => {;
-      render(<HelmetProvider>;"
-          <SEOOptimizer "
-            title = "Test Title" "
-            description="Test Description"
+      render(<HelmetProvider>;
+          <SEOOptimizer 
+            title = "Test Title
+            description="Test Description
           />);
         </HelmetProvider>);
       );
 ;
-      expect(document.title).toBe('Test Title');"
-      ";'"
+      expect(document.title).toBe('Test Title');
+      ";'
       const metaDescription = document.querySelector('meta[name="description"]');
       expect(metaDescription).toHaveAttribute('content', 'Test Description')})});
 ;
@@ -189,10 +191,10 @@ describe('Advanced Components', () => {;
           <MemoryRouter>;
             <ErrorBoundary onError = {onError}>;
               <AccessibilityEnhancer>;
-                <PerformanceMonitor  />;"
-                <SEOOptimizer "
-                  title = "Integration Test" "
-                  description="Testing all components together"
+                <PerformanceMonitor  />;
+                <SEOOptimizer 
+                  title = "Integration Test
+                  description="Testing all components together
                  />;
                 <TestComponent  />;
               </AccessibilityEnhancer>;
@@ -204,4 +206,4 @@ describe('Advanced Components', () => {;
       expect(screen.getByText('Test content')).toBeInTheDocument();
       expect(screen.getByTestId('performance-monitor')).toBeInTheDocument();
       expect(screen.getByTestId('accessibility-enhancer')).toBeInTheDocument();'"
-      expect(document.title).toBe('Integration Test')})})});";'"
+      expect(document.title).toBe('Integration Test')})})});;'

@@ -3,10 +3,13 @@ import React from "react";
 import { useState  } from "react";
 import { AlertCircle  } from "lucide-react";
 interface NewsletterSignupProps {
-variant?: "inline" | "modal"
+variant?: "inline" | "modal
 onClose?: () => void }
 }
-const NewsletterSignup: "React.FC<NewsletterSignupProps> = ({ variant = "inline"",onClose }) => {</NewsletterSignupProps>
+interface NewsletterSignupProps {
+   variant = "inline"",onClose 
+}
+const NewsletterSignup: React.FC<NewsletterSignupProps> = ({  variant = "inline"",onClose  }) => {</NewsletterSignupProps>
 const [email, setEmail ] = useState("")</NewsletterSignupProps>
 const [status, setStatus ] = useState<"idle" | "loading" | "success" | "error">("idle")
 const [message, setMessage ] = useState("")
@@ -36,15 +39,15 @@ Get the latest updates on, AI, technology, IT, solutions, and industry insights.
         </p>
 
       <form onSubmit = {handleSubmit};className="space-y-4" /> <div className="[^"]*">
-          <input type="email"
-            value={email};onChange = {(e) => setEmail(e.target.value);placeholder = "Enter your email address" className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70 focus: "outline-none focus:ring-2 focus:ring-white/50 focu","
-s: border-transparent"
+          <input type="email
+            value={email};onChange = {(e) => setEmail(e.target.value);placeholder = "Enter your email address" className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70 focus: "outline-none focus:ring-2 focus:ring-white/50 focu",
+s: border-transparent
             disabled={status === "loading"};</input>
           /></input>
           <button
-type = "submit"
-            disabled={status === "loading"};className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover: "bg-white/90 transition-colors disabled:opacity-50 disable","
-d: cursor-not-allowed flex items-center justify-center"
+type = "submit
+            disabled={status === "loading"};className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover: "bg-white/90 transition-colors disabled:opacity-50 disable",
+d: cursor-not-allowed flex items-center justify-center
            />
             {status === "loading" ? (</button>
               <>,<div className="[^"]*">

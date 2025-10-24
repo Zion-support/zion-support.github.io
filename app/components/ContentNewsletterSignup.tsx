@@ -1,14 +1,13 @@
 "use client"
 import React from "react";
-import { Footer  } from "./Footer"
+import { Footer  } from "./Footer
 import { Navigation  } from "./Navigation";
 import { Helmet  } from "react-helmet-async";
-import { ArrowRight, CheckCircle  } from "lucide-react"; "use client"
+import { ArrowRight, CheckCircle  } from "lucide-react";use client
 import { Navigation  } from "./Navigation";
 import { Helmet  } from "react-helmet-async";
 import { ArrowRight  } from "lucide-react";
-import React, { useState } from "react"
-import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap   } from "lucide-react";
+import React from "react";
 interface ContentNewsletterSignupProps {
   className?: string;
   children?: React.ReactNode;
@@ -52,14 +51,14 @@ setIsSubmitting(false)
 
         <form onSubmit = {handleSubmit} className="max-w-md mx-auto mb-8" /> <div className="[^"]*">
 
-            <input type="email"
+            <input type="email
 value={email})
-              onChange = {(e) => setEmail(e.target.value)
-              placeholder = {placeholder} className="flex-1 px-4 py-3 rounded-lg bg-slate-800 border border-slate-600 text-white placeholder-gray-400 focus: "outline-none focus:ring-2 focus:ring-emerald-500 focu",s: border-transparent"
+              onChange = {(e) => setEmail(e.target.value)"
+              placeholder = {placeholder} className="flex-1 px-4 py-3 rounded-lg bg-slate-800 border border-slate-600 text-white placeholder-gray-400 focus: "outline-none focus:ring-2 focus:ring-emerald-500 focu",s: border-transparent
 required
             /></input>
-            <button type="submit"
-disabled={isLoading}
+            <button type="submit
+disabled={isLoading}"
               className="bg-emerald-600 hover: "bg-emerald-700 disable",d: bg-emerald-800 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
               {isLoading?"Subscribing..." : buttonText}</button> <ArrowRight className="ml-2 h-4 w-4" />
             </button>
@@ -86,4 +85,4 @@ Thank you for subscribing!</CheckCircle>
 
 export default ContentNewsletterSignup
 </div>
-}"
+}

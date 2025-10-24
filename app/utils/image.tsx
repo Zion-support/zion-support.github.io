@@ -1,14 +1,15 @@
 "use client"
 import React from "react";
-import React, { useState, useCallback } from "react"
-interface ImageProps {
-  className?: string;
+import React from "react";
   children?: React.ReactNode;
 }
 src: "string",alt: "string"}
 interface ImageProps {
 
-export const Image: React.FC<ImageProps> = ({ className = '', children }) => {
+export interface ImageProps {
+   className = '', children 
+}
+const Image: React.FC<ImageProps> = ({  className = '', children  }) => {
   return (
     <div className={`image ${className}`}>
       {children}
@@ -22,30 +23,30 @@ src: "string",alt: "string
 width?: number
 height?: number
 className?: string
-priority?: boolean"
-_quality?: number"
-sr",c: "string",alt: "string
-width?: number
-height?: number
-className?: string
-priority?: boolean"
-_quality?: number"
+priority?: boolean
+_quality?: number
 sr",c: "string",alt: "string
 width?: number
 height?: number
 className?: string
 priority?: boolean
 _quality?: number
-_placeholder?: "blur" | "empty"
+sr",c: "string",alt: "string
+width?: number
+height?: number
+className?: string
+priority?: boolean
+_quality?: number
+_placeholder?: "blur" | "empty
 _blurDataURL?: string
 fill?: boolean
 sizes?: string
 style?: React.CSSProperties",onLoad?: () => void
 onError?: () => void}
-export const Image: "React.FC<ImageProps>= ({"}</ImageProps>
-export const Image: "React.FC<ImageProps> = ({"}
+export const Image: React.FC<ImageProps> = ({"}</ImageProps>
+export const Image: React.FC<ImageProps> = ({"}
 src</ImageProps>
-export const Image: "React.FC<ImageProps> = ({
+export const Image: React.FC<ImageProps> = ({
 src
 alt
 width
@@ -53,7 +54,7 @@ height
 className
 priority = false
 quality = 75
-placeholder = "empty"
+placeholder = "empty
 blurDataURL
 fill = false
 sizes style",onLoad, onError}
@@ -88,7 +89,7 @@ if (hasError) {}
 return(<div}
 interface ImageProps {
 
-/* TODO: "Fix JSX expression*/"
+/* TODO: "Fix JSX expression*/
 }
 export, const)
 Image: "React.FC<ImageProps />= ({/* TOD")
@@ -106,18 +107,18 @@ imageStyle
 }
 {...props })
 
-    <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: "</span>Failed to load image</span>)",</div>
+    <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>)",</div>
     </>
   )
 
 {...props }
-></div> <span className="text-gray-500 text-sm" /><span className="sr-only">Screen reader: "</span>Failed to load image</span>",</div>
+></div> <span className="text-gray-500 text-sm" /><span className="sr-only">Screen reader: </span>Failed to load image</span>",</div>
 return(<img
 return (<img>src = {src}
 alt = {alt}
 width = {width}
 height = {height}
-className = {className}
+className={className}
 style = {imageStyle}
 sizes = {sizes}
 loading = {priority?"eager" : "lazy"}
@@ -127,12 +128,12 @@ onError = {handleError}
 >)</img></img>
 >)
 
-    <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: "</span>Failed to load image</span>)
+    <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>)
 
 {...props"}
 return(<img
 return (<img />)
-src={src"};alt = {alt};width = {width};height = {height};className = {className};style = {imageStyle};sizes = {sizes};loading = {priority?"eager" : "lazy"};onLoad = {handleLoad};onError = {handleError};{...props })
+src={src"};alt = {alt};width = {width};height = {height};className={className};style = {imageStyle};sizes = {sizes};loading = {priority?"eager" : "lazy"};onLoad = {handleLoad};onError = {handleError};{...props })
 >)</img>
 
 }</img>

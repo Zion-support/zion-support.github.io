@@ -5,7 +5,10 @@ interface AnalyticsProps {
 className?: string
 }
 }
-const Analytics: "React.FC<AnalyticsProps> = ({ children "}) => {
+interface AnalyticsProps {
+   children 
+}
+const Analytics: React.FC<AnalyticsProps> = ({  children " }) => {
 useEffect(() => {
     //Initialize analytics tracking
 const initAnalytics = () => {
@@ -20,21 +23,23 @@ initAnalytics()
   }, [])
 return (<React.Fragment>
     {children}
-    
+
   </React.Fragment>
 )
   )
 //Extend Window interface for gtag
 declare global{interface Window {
 
-
 }
 }
-    gtag: "(...arg",s: "any[]) => void;"}
+    gtag: "(...arg",s: "any[]) => void;}
 export default Analytics
 }
 
-export const Analytics: React.FC<AnalyticsProps> = ({ className = '', children }) => {
+export interface AnalyticsProps {
+   className = '', children 
+}
+const Analytics: React.FC<AnalyticsProps> = ({  className = '', children  }) => {
   return (
     <div className={`analytics ${className}`}>
       {children}

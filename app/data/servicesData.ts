@@ -18,7 +18,7 @@ export interface Service {
   icon?: string
   href: string
   popular?: boolean
-  category: "ai" | "it" | "cloud" | "security" | "data" | "automation"
+  category: "ai" | "it" | "cloud" | "security" | "data" | "automation
 }
 
 export const aiServices: Service[] = [{
@@ -30,27 +30,27 @@ export const aiServices: Service[] = [{
       "Predictive analytics",
       "Custom dashboards",
       "Automated reporting",
-      "Machine learning models"
+      "Machine learning models
     ],
     benefits: [
       "Improved decision making",
       "Reduced manual analysis time",
       "Enhanced business intelligence",
-      "Cost savings through automation"
+      "Cost savings through automation
     ],
     pricing: {
       basic: "$999/month",
       pro: "$2,499/month",
-      enterprise: "Custom pricing"
+      enterprise: "Custom pricing
     },
     contactInfo: {
       website: "https://ziontechgroup.com/ai-analytics",
       email: "ai-analytics@ziontechgroup.com",
-      phone: "+1-555-123-4567"
+      phone: "+1-555-123-4567
     },
     href: "/ai-analytics",
     popular: true,
-    category: "ai"
+    category: "ai
   },
   {
     id: "ai-automation",
@@ -61,30 +61,30 @@ export const aiServices: Service[] = [{
       "Document processing",
       "Task scheduling",
       "Error handling",
-      "Performance monitoring"
+      "Performance monitoring
     ],
     benefits: [
       "Increased efficiency",
       "Reduced human error",
       "24/7 operation",
-      "Scalable solutions"
+      "Scalable solutions
     ],
     pricing: {
       basic: "$1,499/month",
       pro: "$3,999/month",
-      enterprise: "Custom pricing"
+      enterprise: "Custom pricing
     },
     contactInfo: {
       website: "https://ziontechgroup.com/ai-automation",
       email: "ai-automation@ziontechgroup.com",
-      phone: "+1-555-123-4567"
+      phone: "+1-555-123-4567
     },
     href: "/ai-automation",
     popular: true,
-    category: "ai"
+    category: "ai
   }
 ];
-
+;
 export const itServices: Service[] = [{
     id: "cloud-migration",
     title: "Cloud Migration Services",
@@ -94,28 +94,28 @@ export const itServices: Service[] = [{
       "Migration planning",
       "Data transfer",
       "Security implementation",
-      "Performance optimization"
+      "Performance optimization
     ],
     benefits: [
       "Reduced infrastructure costs",
       "Improved scalability",
       "Enhanced security",
-      "Better performance"
+      "Better performance
     ],
     pricing: {
       basic: "$2,999/month",
       pro: "$5,999/month",
-      enterprise: "Custom pricing"
+      enterprise: "Custom pricing
     },
     contactInfo: {
       website: "https://ziontechgroup.com/cloud-migration",
       email: "cloud@ziontechgroup.com",
-      phone: "+1-555-123-4567"
+      phone: "+1-555-123-4567
     },
     href: "/cloud-migration",
     popular: true,
-    category: "cloud"
+    category: "cloud
   }
 ];
-
+;
 export const allServices = [...aiServices, ...itServices];

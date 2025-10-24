@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function AboutPage() {
 
 return const values = [{
-icon: "Target",title: ""Mission-Driven"",description: ""We are committed to delivering innovative solutions that drive real business value and transformation.""
+icon: "Target",title: ""Mission-Driven"",description: ""We are committed to delivering innovative solutions that drive real business value and transformation.
 }
   {
 icon: "Users",title: ""Client-Focused"",description: ""Our success is measured by our clients\" success. We build lasting partnerships based on trust and results.""}
@@ -13,7 +13,7 @@ icon: "Award",title: ""Excellence"",description: ""We maintain the highest stand
   {
 icon: "Lightbulb",title: ""Innovation"",description: ""We embrace cutting-edge technologies and creative approaches to solve complex business challenges.""}
   {
-icon: "Shield",title: ""Integrity"",description: ""We conduct business with honesty",transparency, and ethical practices in all our interactions."
+icon: "Shield",title: ""Integrity"",description: ""We conduct business with honesty",transparency, and ethical practices in all our interactions.
 }
   {
 icon: "Zap",title: ""Agility"",description: ""We adapt quickly to changing market conditions and client needs to deliver optimal solutions.""}
@@ -31,7 +31,7 @@ return (<div>
       <Helmet />
 
         <title>About Us - Zion Tech Group</title>
-        
+
         <meta name="description" content="Learn about Zion Tech Group&apos;s, mission, values, and expertise in AI and IT solutions. Discover our team and company culture." / />
         <meta name="keywords" content="about, us, company, team, mission, values, AI, solutions, IT services" / />
 
@@ -68,7 +68,7 @@ also drives tangible business value.</p>
 
           {/* Values Section*/} <div className="[^"]*">
     <h1 className="text-3 xl font-bold text-white text-center mb-12">Our Values</h2>
-    <divclassName="grid md: "grid-cols-2 l","
+    <divclassName="grid md: "grid-cols-2 l",
 g: grid-cols-3 gap-8" />)
               {values.map((value,index) => {
 const Icon = value.icon
@@ -84,7 +84,7 @@ return (<div>
 
           {/* Team Section*/} <div className="[^"]*">
     <h1 className="text-3 xl font-bold text-white text-center mb-12">Meet Our Team</h2>
-    <divclassName="grid md: "grid-cols-2 l","
+    <divclassName="grid md: "grid-cols-2 l",
 g: grid-cols-4 gap-8" />
               {team.map((member,index) => (<divkey = {index};className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center" /> <div className="[^"]*"> <span className="text-2 xl font-bold text-white" />
                       {member.name.split(" ").map(n => n[0,]).join("")}</span>
@@ -117,7 +117,7 @@ Our Core Values</h2>
             </h2> <p className="[^"]*">
 The principles that guide everything we do and shape our company culture</p>
             </p>
-          </div>,<divclassName="grid md: "grid-cols-2 l","
+          </div>,<divclassName="grid md: "grid-cols-2 l",
 g: grid-cols-3 gap-8 max-w-6 xl mx-auto" / />,<div className="[^"]*"> <div className="[^"]*"> <HeartIcon className="w-10 h-10 text-white" />
               </div>
     <h1 className="text-2 xl font-bold text-white mb-4">Passion</h3>
@@ -154,7 +154,7 @@ We strive for excellence in, every, project,delivering solutions that exceed exp
         </div></section>
       {/* Team Section */,}<section className = "py-20 bg-slate-900" />,<div className="container mx-auto px-4" />,<div className="text-center mb-16" />,<h1 className="text-4 xl md: text-5 xl font-bold text-white mb-6" /></h2>
 Meet Our Team</h2></h2><p className="text-xl text-gray-300 max-w-3 xl mx-auto" />
-A diverse group of talented professionals passionate about technology and innovation</p></p></div>,<divclassName="grid md: "grid-cols-2 l","
+A diverse group of talented professionals passionate about technology and innovation</p></p></div>,<divclassName="grid md: "grid-cols-2 l",
 g: grid-cols-3 gap-8 max-w-6 xl mx-auto" / />,<div className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 text-center" />,<div className="w-24 h-24 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6" />,<span className="text-white font-bold text-2 xl">K</span></div>,<h1 className="text-2 xlfont-boldtext-whitemb-2">Kleber</h3><p className="text-purple-400 font-semiboldmb-4" />
 CEO & Founder</p><p className="text-gray-300" />
 Visionary leader with over 4 years of experience in AI and technology solutions.</p>
@@ -170,7 +170,7 @@ Meet Our Team</h2>
             </h2> <p className="[^"]*">
 A diverse group of talented professionals passionate about technology and innovation</p>
             </p>
-          </div>,<divclassName="grid md: "grid-cols-2 l","
+          </div>,<divclassName="grid md: "grid-cols-2 l",
 g: grid-cols-3 gap-8 max-w-6 xl mx-auto" / />,<div className="[^"]*"> <div className="[^"]*">
     <span className="text-white font-bold text-2 xl">K</span>
               </div>
@@ -203,7 +203,7 @@ ensuring scalable and secure technology solutions.</p>
         </div></section>
       {/* Stats Section */}<section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900" />,<div className="container mx-auto px-4" />,<div className="text-center mb-16" />,<h1 className="text-4 xl md: text-5 xl font-bold text-white mb-6" /></h2>
 Our Impact</h2></h2><p className="text-xl text-gray-300 max-w-3 xl mx-auto" />
-Numbers that reflect our commitment to excellence and client success</p></p></div>,<divclassName="grid md: "grid-cols-2 l","
+Numbers that reflect our commitment to excellence and client success</p></p></div>,<divclassName="grid md: "grid-cols-2 l",
 g: grid-cols-4 gap-8 max-w-6 xl mx-auto" / />,<div className="text-center" />,<div className="text-5 xl font-bold text-purple-400 mb-2">50+</div>,<div className="text-gray-300 text-lg">Projects Completed</div></div>,<div className="text-center" />,<div className="text-5 xl font-bold text-cyan-400 mb-2">25+</div>,<div className="text-gray-300 text-lg">Happy Clients</div></div>,<div className="text-center" />,<div className="text-5 xl font-bold text-green-400 mb-2">99%</div>,<div className="text-gray-300 text-lg">Success Rate</div></div>,<div className="text-center" />,<div className="text-5 xl font-bold text-yellow-400 mb-2">4+</div>,<div className="text-gray-300 text-lg">Years Experience</div>
             </div>
           </div></div>,</section>
@@ -213,7 +213,7 @@ Let&apos;s discuss how we can help transform your business with our technology s
 className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2" />
 
 Get In Touch</Link></div><ArrowRightIcon className="w-5 h-5" /></Link><Linkhref="/services"
-className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover: "bg-purple-400 hove","
+className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover: "bg-purple-400 hove",
 r: text-white transition-all duration-300 flex items-center justify-center gap-2" />
 View Our Services</Link><ArrowRightIcon className="w-5 h-5" />
         </div>
@@ -224,7 +224,7 @@ Our Impact</h2>
             <p className="text-xl text-gray-300 max-w-3 xl mx-auto" /  />
 Numbers that reflect our commitment to excellence and client success</p>
             </p>
-          </div>,<div className="grid md: "grid-cols-2 l","
+          </div>,<div className="grid md: "grid-cols-2 l",
 g: grid-cols-4 gap-8 max-w-6 xl mx-auto" / />,<div className="text-center" / />,<div className="text-5 xl font-bold text-purple-400 mb-2">50+</><div className="text-gray-300 text-lg">Projects Completed</div>
             </><div className="text-center" / />,<div className="text-5 xl font-bold text-cyan-400 mb-2">25+</><div className="text-gray-300 text-lg">Happy Clients</div>
             </><div className="text-center" / />,<div className="text-5 xl font-bold text-green-400 mb-2">99%</><div className="text-gray-300 text-lg">Success Rate</div>
@@ -243,7 +243,7 @@ Get In Touch
     </div>
                 <ArrowRightIcon className="w-5 h-5" /  />;</Link>
               <Link href="/services"
-className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover: "bg-purple-400 hove","
+className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover: "bg-purple-400 hove",
 r: text-white transition-all duration-300 flex items-center justify-center gap-2"  />
 View Our Services</Link>
                 <ArrowRightIcon className="w-5 h-5" /  />
@@ -257,7 +257,7 @@ Our Impact</h2>
             </h2> <p className="[^"]*">
 Numbers that reflect our commitment to excellence and client success</p>
             </p>
-          </div>,<divclassName="grid md: "grid-cols-2 l","
+          </div>,<divclassName="grid md: "grid-cols-2 l",
 g: grid-cols-4 gap-8 max-w-6 xl mx-auto" / />,<div className="[^"]*">
     <div className="text-5 xl font-bold text-purple-400 mb-2">50+</div>
     <div className="text-gray-300 text-lg">Projects Completed</div>
@@ -284,7 +284,7 @@ Get In Touch
       </Link>
     </div> <ArrowRightIcon className="w-5 h-5" />
               </Link>
-              <Linkhref="/services" className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover: "bg-purple-400 hove","
+              <Linkhref="/services" className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover: "bg-purple-400 hove",
 r: text-white transition-all duration-300 flex items-center justify-center gap-2" />
 View Our Services</Link> <ArrowRightIcon className="w-5 h-5" />
               </Link>

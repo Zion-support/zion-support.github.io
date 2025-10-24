@@ -3,7 +3,7 @@ import React from "react";
 import Head from "next/head";
 import Navigation from "./Navigation";
 import { ArrowRight, CheckCircle } from "lucide-react";
-
+;
 const features = [
   {
     icon: "CheckCircle",
@@ -30,14 +30,14 @@ const features = [
     benefits: ["Workflow Automation", "Process Optimization", "Efficiency Gains"]
   }
 ];
-
+;
 const benefits = [
   "Reduce operational costs by up to 40%",
   "Increase productivity with AI automation",
   "Enhance security with advanced protection",
-  "Scale your business with cloud solutions"
+  "Scale your business with cloud solutions
 ];
-
+;
 const Header = () => {
   return (
     <>
@@ -45,7 +45,7 @@ const Header = () => {
         <title>Zion Tech Group - AI & IT Solutions</title>
         <meta name="description" content="Leading provider of AI and IT solutions for modern businesses." />
       </Head>
-      
+
       <header className="bg-slate-900/95 backdrop-blur-sm fixed w-full top-0 z-50 border-b border-gray-800">
         <Navigation />
       </header>

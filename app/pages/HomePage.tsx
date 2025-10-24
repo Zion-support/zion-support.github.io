@@ -7,7 +7,7 @@ return (<div>
       <Helmet />
 
         <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-        
+
         <meta name="description" content="Leading provider of advanced AI and, IT, solutions, cybersecurity, cloud, infrastructure, and digital transformation services for businesses worldwide." / />
         <meta name="keywords" content="AI, solutions, cybersecurity, cloud, computing, digital, transformation, IT, services, micro, SaaS, 5 G solutions" / />
 
@@ -35,45 +35,45 @@ r: translate-x-1 transition-transform" / />
                       ,{/* Floating Elements */},<div className="absolute top-20 left-10 w-20 h-20 bg-purple-500 rounded-fullopacity-20 animate-pulse" />,<div className="absolute bottom-20 right-10 w-32 h-32 bg-cyan-500 rounded-fullopacity-20 animate-pulsedelay-1000" />,<div className="absolute top-1/2 left-20 w-16 h-16 bg-pink-500 rounded-fullopacity-20 animate-pulsedelay-500" /></section>
       {/* Services Section */,}<section className="py-20 bg-slate-900" />,<div className="container mx-auto px-4" />,<div className="text-center mb-16" />,<h1 className="text-4 xl md: text-5 xl font-bold text-white mb-6" /></h2>
 Our Core Services</h2></h2><p className="text-xl text-gray-300 max-w-3 xl mx-auto" />
-Comprehensive technology solutions designed to accelerate your business growth</p></p>,<divclassName="grid md: "grid-cols-2 l","
+Comprehensive technology solutions designed to accelerate your business growth</p></p>,<divclassName="grid md: "grid-cols-2 l",
 g: grid-cols-3 gap-8" />
             {/* AI Solutions */,},<div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover: border-purple-500 transition-all duration-300 hover:transform hover:scale-105" />,<divclassName="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6 group-hove,"
 r: scale-110 transition-transform" /><CpuChipIcon className="w-8 h-8 text-white" />,<h1 className="text-2 xl font-bold text-white mb-4">AI Solutions</h3><p className="text-gray-300 mb-6" />
 Advanced artificial intelligence services including machine learning</p>
-natural, language, processing,and predictive analytics.</p></p><Linkhref="/ai-solutions" className="text-purple-400 hover: "text-purple-300 font-semibold flex items-center gap-2 group-hove","
+natural, language, processing,and predictive analytics.</p></p><Linkhref="/ai-solutions" className="text-purple-400 hover: "text-purple-300 font-semibold flex items-center gap-2 group-hove",
 r: gap-3 transition-all" />
 Learn More <ArrowRightIcon className="w-4 h-4" />
               </Link>
             {/* Cybersecurity */,},<div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover: border-cyan-500 transition-all duration-300 hover:transform hover:scale-105" />,<divclassName="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-6 group-hove,"
 r: scale-110 transition-transform" /><ShieldCheckIcon className="w-8 h-8 text-white" />,<h1 className="text-2 xl font-bold text-white mb-4">Cybersecurity</h3><p className="text-gray-300 mb-6" />
 Comprehensive security solutions to protect your digital assets</p>
-data,and infrastructure from evolving threats.</p></p><Linkhref="/cybersecurity" className="text-cyan-400 hover: "text-cyan-300 font-semibold flex items-center gap-2 group-hove","
+data,and infrastructure from evolving threats.</p></p><Linkhref="/cybersecurity" className="text-cyan-400 hover: "text-cyan-300 font-semibold flex items-center gap-2 group-hove",
 r: gap-3 transition-all" />
 Learn More <ArrowRightIcon className="w-4 h-4" />
               </Link>
             {/* Cloud Infrastructure */,},<div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover: border-green-500 transition-all duration-300 hover:transform hover:scale-105" />,<div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-6 group-hover: scale-110 transition-transform" /><CloudIcon className="w-8 h-8 text-white" />,<h1 className="text-2 xl font-bold text-white mb-4">Cloud Infrastructure</h3><p className="text-gray-300 mb-6" />
 Scalable cloud solutions and infrastructure management to optimize</p>
-performance and reduce operational costs.</p></p><Linkhref="/cloud-solutions" className="text-green-400 hover: "text-green-300 font-semibold flex items-center gap-2 group-hove","
+performance and reduce operational costs.</p></p><Linkhref="/cloud-solutions" className="text-green-400 hover: "text-green-300 font-semibold flex items-center gap-2 group-hove",
 r: gap-3 transition-all" />
 Learn More <ArrowRightIcon className="w-4 h-4" />
               </Link>
             {/* Digital Transformation */,},<div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover: border-yellow-500 transition-all duration-300 hover:transform hover:scale-105" />,<div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center mb-6 group-hover: scale-110 transition-transform" /><ChartBarIcon className="w-8 h-8 text-white" />,<h1 className="text-2 xl font-bold text-white mb-4">Digital Transformation</h3><p className="text-gray-300 mb-6" />
 Strategic digital transformation services to modernize your business</p>
-processes and enhance customer experiences.</p></p><Linkhref="/digital-transformation" className="text-yellow-400 hover: "text-yellow-300 font-semibold flex items-center gap-2 group-hove","
+processes and enhance customer experiences.</p></p><Linkhref="/digital-transformation" className="text-yellow-400 hover: "text-yellow-300 font-semibold flex items-center gap-2 group-hove",
 r: gap-3 transition-all" />
 Learn More <ArrowRightIcon className="w-4 h-4" />
               </Link>
             {/* Micro SaaS */,},<div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover: border-pink-500 transition-all duration-300 hover:transform hover:scale-105" />,<divclassName="w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-lg flex items-center justify-center mb-6 group-hove,"
 r: scale-110 transition-transform" / /><GlobeAltIcon className="w-8 h-8 text-white" /></div>,<div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-lg flex items-center justify-center mb-6 group-hover scale-110 transition-transform" /><GlobeAltIcon className="w-8 h-8 text-white" />     </div>,<h1 className="text-2 xl font-bold text-white mb-4">Micro SaaS</h3><p className="text-gray-300 mb-6" />
 Custom micro SaaS solutions designed to solve specific business</p>
-challenges, with, scalable,cost-effective applications.</p></p><Linkhref="/micro-saas" className="text-pink-400 hover: "text-pink-300 font-semibold flex items-center gap-2 group-hove","
+challenges, with, scalable,cost-effective applications.</p></p><Linkhref="/micro-saas" className="text-pink-400 hover: "text-pink-300 font-semibold flex items-center gap-2 group-hove",
 r: gap-3 transition-all" />
 Learn More <ArrowRightIcon className="w-4 h-4" />
               </Link></div>
             {/* 5 G Solutions */,},<div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover: border-indigo-500 transition-all duration-300 hover:transform hover:scale-105" />,<divclassName="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-6 group-hove,"
 r: scale-110 transition-transform" / /><GlobeAltIcon className="w-8 h-8 text-white" /></div>,<div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-6 group-hover scale-110 transition-transform" /><GlobeAltIcon className="w-8 h-8 text-white" />     </div>,<h1 className="text-2 xl font-bold text-white mb-4">5 G Solutions</h3><p className="text-gray-300 mb-6" />
 Next-generation 5 G technology solutions for enhanced connectivity</p>
-IoT, applications,and ultra-low latency services.</p></p><Linkhref="/5 g-solutions" className="text-indigo-400 hover: "text-indigo-300 font-semibold flex items-center gap-2 group-hove","
+IoT, applications,and ultra-low latency services.</p></p><Linkhref="/5 g-solutions" className="text-indigo-400 hover: "text-indigo-300 font-semibold flex items-center gap-2 group-hove",
 r: gap-3 transition-all" />
 Learn More <ArrowRightIcon className="w-4 h-4" />
               </Link>
@@ -93,14 +93,14 @@ Learn More About Us <ArrowRightIcon className="w-5 h-5" />
               </div></div>,</section>
       {/* Contact Section */}<section className="py-20 bg-slate-900" />,<div className="container mx-auto px-4" />,<div className="max-w-4 xl mx-auto text-center" />,<h1 className="text-4 xl md: text-5 xl font-bold text-white mb-8" /></h2>
 Ready to Transform Your Business?</h2></h2>;<p className="text-xl text-gray-300 mb-12" />
-Let&apos;s discuss how our technology solutions can drive your business forward</p></p>,<divclassName = "grid, m,"
+Let&apos;s discuss how our technology solutions can drive your business forward</p></p>,<divclassName = "grid, m,
 d: grid-cols-3 gap-8 mb-12" / />,<div className="flex items-center justify-center gap-4 text-gray-300" /><PhoneIcon className="w-6 h-6 text-purple-400" /><span>+1-302-464-0950</span></div>,<div className="flex items-center justify-center gap-4 text-gray-300" /><EnvelopeIcon className="w-6 h-6 text-purple-400" /><span>kleber@ziontechgroup.com</span></div>,<div className="flex items-center justify-center gap-4 text-gray-300" /><MapPinIcon className="w-6 h-6 text-purple-400" />
                 <span>Middletown,DE</span></div></div>,<div className="flex flex-col sm: flex-row gap-4 justify-center" /><Linkhref="/contact"
 className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300" />
 
 Get In Touch
       </Link></div></Link><Linkhref="/demo"
-className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover: "bg-purple-400 hove","
+className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover: "bg-purple-400 hove",
 r: text-white transition-all duration-300" />
     <h1 className="text-6 xl md: text-7 xl font-bold mb-6 bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent" /  />
 Zion Tech Group</h1>
@@ -120,25 +120,23 @@ Get Started Today
     </div> <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link 
-                href="/about" 
+                href="/about"
                 className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors"
-              >
-                Learn More
-              </Link>
+              >Learn More</Link>"
                       ,{/* Floating Elements*/} <div className="[^"]*"> <div className="[^"]*"> <div className="[^"]*">
       </section>
       {/* Services Section*/} <section className="py-20 bg-slate-900" /> <div className="[^"]*"> <div className="[^"]*"> <h1 className="[^"]*"></h2>
 Our Core Services</h2>
             </h2> <p className="[^"]*">
 Comprehensive technology solutions designed to accelerate your business growth</p>
-            </p>,<divclassName="grid md: "grid-cols-2 l","
+            </p>,<divclassName="grid md: "grid-cols-2 l",
 g: grid-cols-3 gap-8" />
             {/* AI Solutions*/} <div className="[^"]*">,<divclassName="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6 group-hove,"
 r: scale-110 transition-transform" /> <CpuChipIcon className="w-8 h-8 text-white" />,<h1 className="text-2 xl font-bold text-white mb-4">AI Solutions</h3> <p className="[^"]*">
 Advanced artificial intelligence services including machine learning</p>
 natural, language, processing,and predictive analytics.</p>
               </p>
-              <Link href="/ai-solutions" className="text-purple-400 hover: "text-purple-300 font-semibold flex items-center gap-2 group-hove","
+              <Link href="/ai-solutions" className="text-purple-400 hover: "text-purple-300 font-semibold flex items-center gap-2 group-hove",
 r: gap-3 transition-all" />
 Learn More <ArrowRightIcon className="w-4 h-4" />
               </Link>
@@ -148,7 +146,7 @@ r: scale-110 transition-transform" /> <ShieldCheckIcon className="w-8 h-8 text-w
 Comprehensive security solutions to protect your digital assets</p>
 data,and infrastructure from evolving threats.</p>
               </p>
-              <Link href="/cybersecurity" className="text-cyan-400 hover: "text-cyan-300 font-semibold flex items-center gap-2 group-hove","
+              <Link href="/cybersecurity" className="text-cyan-400 hover: "text-cyan-300 font-semibold flex items-center gap-2 group-hove",
 r: gap-3 transition-all" />
 Learn More <ArrowRightIcon className="w-4 h-4" />
               </Link>
@@ -157,7 +155,7 @@ Learn More <ArrowRightIcon className="w-4 h-4" />
 Scalable cloud solutions and infrastructure management to optimize</p>
 performance and reduce operational costs.</p>
               </p>
-              <Link href="/cloud-solutions" className="text-green-400 hover: "text-green-300 font-semibold flex items-center gap-2 group-hove","
+              <Link href="/cloud-solutions" className="text-green-400 hover: "text-green-300 font-semibold flex items-center gap-2 group-hove",
 r: gap-3 transition-all" />
 Learn More <ArrowRightIcon className="w-4 h-4" />
               </Link>
@@ -166,7 +164,7 @@ Learn More <ArrowRightIcon className="w-4 h-4" />
 Strategic digital transformation services to modernize your business</p>
 processes and enhance customer experiences.</p>
               </p>
-              <Link href="/digital-transformation" className="text-yellow-400 hover: "text-yellow-300 font-semibold flex items-center gap-2 group-hove","
+              <Link href="/digital-transformation" className="text-yellow-400 hover: "text-yellow-300 font-semibold flex items-center gap-2 group-hove",
 r: gap-3 transition-all" />
 Learn More <ArrowRightIcon className="w-4 h-4" />
               </Link>
@@ -178,7 +176,7 @@ r: scale-110 transition-transform" / /> <GlobeAltIcon className="w-8 h-8 text-wh
 Custom micro SaaS solutions designed to solve specific business</p>
 challenges, with, scalable,cost-effective applications.</p>
               </p>
-              <Link href="/micro-saas" className="text-pink-400 hover: "text-pink-300 font-semibold flex items-center gap-2 group-hove","
+              <Link href="/micro-saas" className="text-pink-400 hover: "text-pink-300 font-semibold flex items-center gap-2 group-hove",
 r: gap-3 transition-all" />
 Learn More <ArrowRightIcon className="w-4 h-4" />
               </Link>
@@ -190,7 +188,7 @@ r: scale-110 transition-transform" / /> <GlobeAltIcon className="w-8 h-8 text-wh
 Next-generation 5 G technology solutions for enhanced connectivity</p>
 IoT, applications,and ultra-low latency services.</p>
               </p>
-              <Link href="/5 g-solutions" className="text-indigo-400 hover: "text-indigo-300 font-semibold flex items-center gap-2 group-hove","
+              <Link href="/5 g-solutions" className="text-indigo-400 hover: "text-indigo-300 font-semibold flex items-center gap-2 group-hove",
 r: gap-3 transition-all" />
 Learn More <ArrowRightIcon className="w-4 h-4" />
               </Link>
@@ -241,7 +239,7 @@ Get In Touch
       </Link>
     </div>
               </Link>
-              <Linkhref="/demo" className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover: "bg-purple-400 hove","
+              <Linkhref="/demo" className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover: "bg-purple-400 hove",
 r: text-white transition-all duration-300" />
 Schedule Demo</Link>
               </Link>

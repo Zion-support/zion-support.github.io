@@ -14,7 +14,7 @@ interface PerformanceMetrics {
 loadTime: "number
   renderTime: number
   memoryUsage: number
-  networkLatenc",y: "number;"
+  networkLatenc",y: "number;
 }
 }
 
@@ -40,9 +40,9 @@ const measureLoadTime = () => {
 const loadTime = performance.now()
       setMetrics(prev = > ({ ...prev, loadTime ) => {
 
-}))
-    }
-
+})
+  )
+}
 //Measure render time
 const measureRenderTime = () => {
 const renderStart = performance.now()
@@ -63,8 +63,9 @@ const memory = (performance as any).memory
         const memoryUsage = memory.usedJSHeapSize /1024 /1024; //Convert to MB
 setMetrics(prev = > ({ ...prev, memoryUsage ) => {
 
-}))
-      }
+})
+  )
+}
     }
 
 //Measure network latency
@@ -109,26 +110,26 @@ return(<>)
       ) => clearTimeout(timeoutId
     </>
     </>
-    </>)
+    </div>
   )
-  }, [metrics.loadTime, metrics.renderTime, metrics.memoryUsage, metrics.networkLatency,])
+}, [metrics.loadTime, metrics.renderTime, metrics.memoryUsage, metrics.networkLatency,])
 
 const optimizePerformance = useCallback(() => {
     if (typeof document === "undefined") return
     //Preload critical resources
 
-const criticalResources = ["/fonts/inter.woff2"
-      "/images/hero-bg.jpg"
-      "/images/logo.png"
+const criticalResources = ["/fonts/inter.woff2
+      "/images/hero-bg.jpg
+      "/images/logo.png
     ]
 
 criticalResources.forEach((resource) => {
 const link = document.createElement("link")
-      link.rel = "preload"
+      link.rel = "preload
       link.href = resource
-      link.as = resource.endsWith(".woff2") ? "font" : "image"
+      link.as = resource.endsWith(".woff2") ? "font" : "image
       if (resource.endsWith(".woff2")) {
-link.crossOrigin = "anonymous"
+link.crossOrigin = "anonymous
       }
       document.head.appendChild(link)
     })
@@ -139,7 +140,7 @@ const images = document.querySelectorAll("img[data-src,]")
 entries.forEach((entry) => {
 if(entry.isIntersecting) {  
           const img = entry.target as HTMLImageElement
-          img.src = img.dataset.src || ""
+          img.src = img.dataset.src || 
           img.classList.remove("lazy")
           imageObserver.unobserve(img)
         ,}
@@ -151,9 +152,9 @@ images.forEach((img) => imageObserver.observe(img))
 return(<>)
       ) => imageObserver.disconnect(</>
     </>
-    </>)
+    </div>
   )
-  }, [])
+}, [])
 
 const measurePerformance = useCallback((name: "string",fn: "() => void) => {
 if (trackPerformance) {
@@ -199,10 +200,10 @@ trackError}
 trackAnalytics: "trackAnalyticsEvent",renderCount: "renderCountRef.current",mountTime: "mountTimeRef.current"}
 
 };</string>
-}"
+}
 optimizePerformance,
-measurePerformance,"
-trackError}"
+measurePerformance,
+trackError}
 trackAnalytics: "trackAnalyticsEvent",renderCount: "renderCountRef.current",mountTime: "mountTimeRef.current"}
 };</string>
 }";`'

@@ -1,20 +1,19 @@
 "use client"
-import React, { Suspense } from "react"
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React from "react";
 import { HelmetProvider } from "react-helmet-async";
-import "./app/styles/futuristic.css"
+import "./app/styles/futuristic.css
 //Components
-import Navigation from "./app/components/Navigation"
-import Footer from "./app/components/Footer"
-import ErrorBoundaryWrapper from "./app/components/ErrorBoundaryWrapper"
-import PerformanceMonitor from "./app/components/PerformanceMonitor"
-import FuturisticBackground from "./app/components/FuturisticBackground"
+import Navigation from "./app/components/Navigation
+import Footer from "./app/components/Footer
+import ErrorBoundaryWrapper from "./app/components/ErrorBoundaryWrapper
+import PerformanceMonitor from "./app/components/PerformanceMonitor
+import FuturisticBackground from "./app/components/FuturisticBackground
 import LoadingSpinner from "./app/components/LoadingSpinner";
 import { Breadcrumb  } from "./app/components/Breadcrumb";
 import { HomePage  } from "./app/page";
 import { PerformanceOptimizer  } from "./app/components/EnhancedPerformanceOptimizer";
-import { AccessibilityEnhancer  } from "./app/components/AccessibilityEnhancer"
-import { EnhancedAccessibilityWrapper  } from "./app/components/EnhancedAccessibilityWrapper"
+import { AccessibilityEnhancer  } from "./app/components/AccessibilityEnhancer
+import { EnhancedAccessibilityWrapper  } from "./app/components/EnhancedAccessibilityWrapper
 //Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"))
 const ContactPage = React.lazy(() => import("./app/contact/page"))
@@ -103,7 +102,7 @@ function App() {
                 <Route path = "/terms" element={<TermsPage />} />
                 <Route path = "/cookies" element={<CookiesPage />} />
                 <Route path = "/sitemap" element={<SitemapPage />} />
-                
+
                 {/* AI Service Routes*/}
                 <Route path = "/ai-analytics" element={<AiAnalyticsPage />} />
                 <Route path = "/ai-automation" element={<AiAutomationPage />} />
@@ -132,7 +131,7 @@ function App() {
                 <Route path = "/ai-conversation-analytics" element={<AiConversationAnalyticsPage />} />
                 <Route path = "/ai-supply-chain-ai" element={<AiSupplyChainAiPage />} />
                 <Route path = "/ai-healthcare-diagnostics" element={<AiHealthcareDiagnosticsPage />} />
-                
+
                 {/* 5G Service Routes*/}
                 <Route path = "/5g-data-analytics" element={<FiveGDataAnalyticsPage />} />
                 <Route path = "/5g-edge-computing" element={<FiveGEdgeComputingPage />} />

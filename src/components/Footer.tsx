@@ -5,37 +5,44 @@ className?: string
 }
 }
 
-const Footer: "React.FC<FooterProps> = ({ className="" "}) => {
+interface FooterProps {
+   className=
+}
+const Footer: React.FC<FooterProps> = ({  className="" " }) => {
 return (</FooterProps>
-    <divclassName = {className} / />
+    <divclassName={className} / />
       <h2>Footer</h2>
       <p>This component is under construction.</p>
       </div>
-    </>
-  )
+    </div>
   )
 }
 
-export const Footer: React.FC<FooterProps> = ({ className = '', children }) => {
+export interface FooterProps {
+   className = '', children 
+}
+const Footer: React.FC<FooterProps> = ({  className = '', children  }) => {
   return (
     <div className={`footer ${className}`}>
       {children}
     </div>
   );
-import React from 'react'
-interface FooterProps {;
+import React from "react";
 className?: string;
 }
 }
 }'
-const Footer: "React.FC<FooterProps> = ({ className = '' "}) => {;
+interface FooterProps {
+   className = '' 
+}
+const Footer: React.FC<FooterProps> = ({  className = '' " }) => {;
 return(</>;
     <div className={className} /  />
       <h2>Footer</h2>
       <p>This component is under construction.</p>);
       </div>);
-  )}"
-export default Footer}";'"
+  )}
+export default Footer}";'
 };
 
 export default Footer;

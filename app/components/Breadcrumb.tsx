@@ -2,11 +2,10 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
-
 const Breadcrumb: React.FC = () => {
   const pathname = usePathname();
   const pathnames = pathname.split("/").filter((x) => x);
-  
+  ;
   if (pathnames.length === 0) {
     return null;
   }

@@ -1,7 +1,4 @@
-import React from 'react'
-import Link from 'next/link'
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud    } from 'lucide-react'
-;
+import React from "react";
 const Footer: React.FC = () => {;
   const currentYear = new Date().getFullYear();
   const aiServices = [;
@@ -46,114 +43,107 @@ const Footer: React.FC = () => {;
   return (<footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-          {/* AI Services */}"
-          <div>"
+          {/* AI Services */}
+          <div>
             <h3 className="text-lg font-semibold mb-4 flex items-center">
               <Brain className="w-5 h-5 mr-2 text-purple-400"  />;
-              AI Services;"
+              AI Services;
             </h3>
             <ul className="space-y-2">);
               {aiServices.map((service) => (<li key={service.name}>
-                  <Link"
-                    href={service.url}"
-                    className="text-gray-300 hover:text-white transition-colors duration-200 text-sm"
+                  <Link
+                    href={service.url}
+                    className="text-gray-300 hover:text-white transition-colors duration-200 text-sm
                   >;
                     {service.name}
                   </Link>
                 </li>);
-              ))}
-            </ul>
-          </div>
-          {/* IT Services */}"
-          <div>"
-            <h3 className="text-lg font-semibold mb-4 flex items-center">
+              )
+  )
+}"
+            </ul></div>{/* IT Services */}<div><h3 className="text-lg font-semibold mb-4 flex items-center">
               <Cloud className="w-5 h-5 mr-2 text-blue-400"  />;
-              IT Services;"
+              IT Services;
             </h3>
             <ul className="space-y-2">
               {itServices.map((service) => (<li key={service.name}>
-                  <Link"
-                    href={service.url}"
-                    className="text-gray-300 hover:text-white transition-colors duration-200 text-sm"
+                  <Link
+                    href={service.url}
+                    className="text-gray-300 hover:text-white transition-colors duration-200 text-sm
                   >;
                     {service.name}
                   </Link>
                 </li>);
-              ))}
-            </ul>
-          </div>
-          {/* Micro SaaS */}"
-          <div>"
-            <h3 className="text-lg font-semibold mb-4">Micro SaaS</h3>
+              )
+  )
+}"
+            </ul></div>{/* Micro SaaS */}<div><h3 className="text-lg font-semibold mb-4">Micro SaaS</h3>
             <ul className="space-y-2">
               {microSaas.map((service) => (<li key={service.name}>
-                  <Link"
-                    href={service.url}"
-                    className="text-gray-300 hover:text-white transition-colors duration-200 text-sm"
+                  <Link
+                    href={service.url}
+                    className="text-gray-300 hover:text-white transition-colors duration-200 text-sm
                   >;
                     {service.name}
                   </Link>
                 </li>);
-              ))}
-            </ul>
-          </div>
-          {/* Company */}"
-          <div>"
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
+              )
+  )
+}"
+            </ul></div>{/* Company */}<div><h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
               {company.map((item) => (<li key={item.name}>
-                  <Link"
-                    href={item.url}"
-                    className="text-gray-300 hover:text-white transition-colors duration-200 text-sm"
+                  <Link
+                    href={item.url}
+                    className="text-gray-300 hover:text-white transition-colors duration-200 text-sm
                   >;
                     {item.name}
                   </Link>
                 </li>);
-              ))}
-            </ul>
-          </div>
-          {/* Resources */}"
-          <div>"
-            <h3 className="text-lg font-semibold mb-4">Resources</h3>
+              )
+  )
+}"
+            </ul></div>{/* Resources */}<div><h3 className="text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
               {resources.map((item) => (<li key={item.name}>
-                  <Link"
-                    href={item.url}"
-                    className="text-gray-300 hover:text-white transition-colors duration-200 text-sm"
+                  <Link
+                    href={item.url}
+                    className="text-gray-300 hover:text-white transition-colors duration-200 text-sm
                   >;
                     {item.name}
                   </Link>
                 </li>);
-              ))}
+              )
+  )
+}
             </ul>
-          </div>
-        </div>
-        {/* Contact Info */}"
-        <div className="mt-12 pt-8 border-t border-gray-800">
+          </div>"
+        </div>"
+        {/* Contact Info */}<div className="mt-12 pt-8 border-t border-gray-800">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="flex items-center space-x-3">
-              <Mail className="w-5 h-5 text-purple-400" />"
+              <Mail className="w-5 h-5 text-purple-400" />
               <span className="text-gray-300">contact@ziontechgroup.com</span>
             </div>
             <div className="flex items-center space-x-3">
-              <Phone className="w-5 h-5 text-purple-400" />"
+              <Phone className="w-5 h-5 text-purple-400" />
               <span className="text-gray-300">+1-555-ZION-TECH</span>
             </div>
             <div className="flex items-center space-x-3">
-              <MapPin className="w-5 h-5 text-purple-400" />"
+              <MapPin className="w-5 h-5 text-purple-400" />
               <span className="text-gray-300">123 Tech Street, Innovation City</span>
             </div>
           </div>
         </div>
-        {/* Social Links */}"
+        {/* Social Links */}
         <div className="mt-8 pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex space-x-6 mb-4 md:mb-0">
               <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
-                <Github className="w-6 h-6"  />;"
+                <Github className="w-6 h-6"  />;
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
-                <Linkedin className="w-6 h-6"  />"
+                <Linkedin className="w-6 h-6"  />
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
                 <Twitter className="w-6 h-6"  />;
@@ -166,5 +156,5 @@ const Footer: React.FC = () => {;
         </div>
       </div>
     </footer>
-  )}"
-export default Footer;";'"
+  )}
+export default Footer;;'

@@ -16,17 +16,17 @@ icon: "Target",title: ""Precision Targeting"",description: ""Target specific goa
 icon: "TrendingUp",title: ""Growth Optimization"",description: ""Optimize your business growth with data-driven strategies."",benefits: "["Growth strategies"","Market analysis", "Competitive insights", "ROI optimization"]
     }
   ]
-const benefits = ["Increase efficiency by up to 50%"
-    "Reduce costs by 30% with automation"
-    "Improve decision-making with AI insights"
-    "Scale operations without proportional staff increases"
-    "Gain competitive advantage with advanced technology"
+const benefits = ["Increase efficiency by up to 50%
+    "Reduce costs by 30% with automation
+    "Improve decision-making with AI insights
+    "Scale operations without proportional staff increases
+    "Gain competitive advantage with advanced technology
   ]
 return (<div>
       <Helmet />
 
         <title>Enhanced Accessibility Enhancer - Zion Tech Group</title>
-        
+
         <meta name="description" content="Advanced Enhanced Accessibility Enhancer solution for modern businesses." //>
         <meta name="keywords" content="AI, artificial, intelligence, enhanced, accessibility, enhancer, AI, solutions, intelligent automation" //>
 
@@ -99,7 +99,10 @@ export default EnhancedAccessibilityEnhancerPage}
 </ul>
 }
 
-export const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps> = ({ className = '', children }) => {
+export interface EnhancedAccessibilityEnhancerProps {
+   className = '', children 
+}
+const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps> = ({  className = '', children  }) => {
   return (
     <div className={`enhancedaccessibilityenhancer ${className}`}>
       {children}

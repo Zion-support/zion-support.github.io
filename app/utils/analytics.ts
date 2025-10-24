@@ -37,8 +37,8 @@ class Analytics {
   //Track page views
   trackPageView(page: string, title?: string): void {
     this.track({
-      category: "Page"
-      action: "View"
+      category: "Page
+      action: "View
       label: page
       custom_parameters: {
         page_title: title || document.title
@@ -51,8 +51,8 @@ class Analytics {
   //Track user interactions
   trackClick(element: string, location?: string): void {
     this.track({
-      category: "User Interaction"
-      action: "Click"
+      category: "User Interaction
+      action: "Click
       label: element
       custom_parameters: {
         location
@@ -64,8 +64,8 @@ class Analytics {
   //Track form submissions
   trackFormSubmission(formName: string, success: boolean): void {
     this.track({
-      category: "Form"
-      action: success?"Submit Success" : "Submit Error"
+      category: "Form
+      action: success?"Submit Success" : "Submit Error
       label: formName
     })
   }
@@ -73,8 +73,8 @@ class Analytics {
   //Track performance metrics
   trackPerformance(metric: string, value: number, unit: string = "ms"): void {
     this.track({
-      category: "Performance"
-      action: "Metric"
+      category: "Performance
+      action: "Metric
       label: metric
       value
       custom_parameters: {
@@ -87,8 +87,8 @@ class Analytics {
   //Track errors
   trackError(error: Error, context?: string): void {
     this.track({
-      category: "Error"
-      action: "Occurred"
+      category: "Error
+      action: "Occurred
       label: error.message
       custom_parameters: {
         error_name: error.name

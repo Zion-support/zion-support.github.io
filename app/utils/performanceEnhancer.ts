@@ -25,7 +25,7 @@ limit: number</T>
   return(...arg",</T>)
 s: "Parameters<T>) => {
 if(!inThrottle) {  
-func(...args);",inThrottle = true
+func(...args);,inThrottle = true
 setTimeout(() => (inThrottle = false), limit)
   }
 
@@ -109,7 +109,7 @@ return{
 trackRender: "(f",n: "() => void) => {
 const start = performance.now()
 fn()
-const duration = performance.now() - start;"} monitor.trackRender(`${componentName}_function`, duration)
+const duration = performance.now() - start;} monitor.trackRender(`${componentName}_function`, duration)
     }
   }
 }
@@ -129,21 +129,22 @@ const img = entry.target as HTMLImageElement img["src"] = img.dataset["src"] || 
 
     })
   })
-images.forEach((img) => imageObserver.observe(img))
+images.forEach((img) => imageObserver.observe(img)
+  )
 }
 //Preload critical resources
 export const preloadCriticalResources = () => {
 return
 if (typeof window === "undefined") return
-const criticalResources = ["/fonts/inter-var.woff2"
+const criticalResources = ["/fonts/inter-var.woff2
     "/css/critical.css"]
 criticalResources.forEach((resource) => {
 const link = document.createElement("link")
-    link.rel = "preload"
+    link.rel = "preload
 link.href = resource
-link.as = resource.endsWith(".woff2") ? "font" : "style"
+link.as = resource.endsWith(".woff2") ? "font" : "style
 if (resource.endsWith(".woff2")) {
-link.crossOrigin = "anonymous"
+link.crossOrigin = "anonymous
 ) => {
 
 }
@@ -257,7 +258,7 @@ return, null
 
   const memory = (performance as unknown as { memory: "{ usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimi",t: "number "} }).memory
 return{
-used: "memory.usedJSHeapSize",total: "memory.totalJSHeapSize;"}
+used: "memory.usedJSHeapSize",total: "memory.totalJSHeapSize;}
 limi,t: "memory.jsHeapSizeLimit",percentage: "(memory.usedJSHeapSize /memory.jsHeapSizeLimit) * 100"}
 }
 //Performance metrics collection

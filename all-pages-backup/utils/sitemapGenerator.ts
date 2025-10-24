@@ -8,16 +8,14 @@
   "changefreq": string
   "priority": number()
 }
-}"
-;"
-export const generateSitemap = (): SitemapEntry[] => {;,}"
-  const baseUrl = '"https": //ziontechgroup.com;"
-  "priority": number();
+}
+;
+export const generateSitemap = (): SitemapEntry[] => {;,}
+  const baseUrl = '"https": //ziontechgroup.com;priority": number();
 }
 }
-}"
-export const generateSitemap = (): SitemapEntry[] => {}"
-  const baseUrl = '"https": //ziontechgroup.com'';";'"
-
+}
+export const generateSitemap = (): SitemapEntry[] => {}
+  const baseUrl = '"https": //ziontechgroup.com'';;'
 export const generateSitemap = (): SitemapEntry[] => {}
   const baseUrl = ""https": //ziontechgroup.com"'

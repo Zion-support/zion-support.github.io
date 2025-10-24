@@ -18,8 +18,8 @@ describe('SEOHeadWrapper Component', () => {;
   test('renders without crashing', () => {;
     const { container } = render(<HelmetProvider>;
         <SEOHeadWrapper;
-          title = "Test Title""
-          description="Test Description"
+          title = "Test Title
+          description="Test Description
           keywords={['test', 'keywords']}
         />);
       </HelmetProvider>);
@@ -27,7 +27,7 @@ import { describe, test, expect } from "@jest/globals";
 import { render, screen } from "@testing-library/react";
 import { HelmetProvider } from "react-helmet-async";
 import "@testing-library/jest-dom";
-
+;
 // Mock components since they might not exist
 const Loading = () => <div>Loading</div>;
 const SEOHeadWrapper = ({ title, description, keywords }: any) => (
@@ -37,7 +37,7 @@ const SEOHeadWrapper = ({ title, description, keywords }: any) => (
     <p>{keywords.join(", ")}</p>
   </div>
 );
-
+;
 describe("Loading Component", () => {
   test("renders loading text", () => {
     render(
@@ -60,5 +60,5 @@ describe("SEOHeadWrapper Component", () => {
         />
       </HelmetProvider>
     );
-    expect(container).toBeTruthy();"
-  })});";'"
+    expect(container).toBeTruthy();
+  })});;'

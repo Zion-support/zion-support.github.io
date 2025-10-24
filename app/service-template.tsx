@@ -1,9 +1,9 @@
 "use client"
 import React from "react";
 interface ServiceTemplateProps {
-title: "string;",description: "string
+title: "string;,description: "string
   features: string[]
-const ServiceTemplat",e: "React.FC<ServiceTemplateProps> = ({"
+const ServiceTemplat",e: "React.FC<ServiceTemplateProps> = ({
 title",description, features
 }
 }
@@ -19,8 +19,9 @@ return(</ServiceTemplateProps> <div className="[^"]*"> <div className="[^"]*"> <
                 </svg>
     <span className="text-gray-700">{feature}</span>
                 </div>
-    </>
-  ))}
+    </div>
+  )
+}
             </div>
           </div>
       </div>}
@@ -29,8 +30,10 @@ interface ServiceTemplateProps {
   className?: string;
   children?: React.ReactNode;
 }
-
-export const ServiceTemplate: React.FC<ServiceTemplateProps> = ({ className = '', children }) => {
+export interface ServiceTemplateProps {
+   className = '', children 
+}
+const ServiceTemplate: React.FC<ServiceTemplateProps> = ({  className = '', children  }) => {
   return (
     <div className={`servicetemplate ${className}`}>
       {children}

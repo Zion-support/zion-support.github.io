@@ -17,17 +17,17 @@ icon: "Target",title: ""Precision Targeting"",description: ""Target specific goa
 icon: "TrendingUp",title: ""Growth Optimization"",description: ""Optimize your business growth with data-driven strategies."",benefits: "["Growth strategies"","Market analysis", "Competitive insights", "ROI optimization"]
     }
   ]
-const benefits = ["Increase efficiency by up to 50%"
-    "Reduce costs by 30% with automation"
-    "Improve decision-making with AI insights"
-    "Scale operations without proportional staff increases"
-    "Gain competitive advantage with advanced technology"
+const benefits = ["Increase efficiency by up to 50%
+    "Reduce costs by 30% with automation
+    "Improve decision-making with AI insights
+    "Scale operations without proportional staff increases
+    "Gain competitive advantage with advanced technology
   ]
 return (<div>
       <Helmet>
 
         <title>Enhanced SEO Optimizer - Zion Tech Group</title>
-        
+
         <meta name="description" content="Advanced SEO optimization tools powered by AI for maximum search engine visibility" />
 
       </Helmet>
@@ -61,7 +61,9 @@ Key Features
                     {feature.benefits.map((benefit, idx) => (<li key = {idx} className="flex items-center text-sm text-gray-400"> <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
                         {benefit}
                       </li>
-                    ))}
+                    )
+  )
+}
                   </ul>
                 </div>
 
@@ -101,7 +103,10 @@ export default EnhancedSEOOptimizerPage
 </div>
 }
 
-export const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({ className = '', children }) => {
+export interface EnhancedSEOOptimizerProps {
+   className = '', children 
+}
+const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({  className = '', children  }) => {
   return (
     <div className={`enhancedseooptimizer ${className}`}>
       {children}

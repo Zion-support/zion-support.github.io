@@ -45,18 +45,18 @@ if (options.enableCaching) {;
 setIsOptimized(true)}
 observerRef.current = new IntersectionObserver();
       (entries) => {;
-entries.forEach((entry) => {;"
-if(entry.isIntersecting) {  ;"
-const img = entry.target as HTMLImageElement;"'"
-const src = img.getAttribute('data-src");"
-            if (src) {;"
-img.src = src;"'"
-img.removeAttribute('data-src");"'"
+entries.forEach((entry) => {;
+if(entry.isIntersecting) {  ;
+const img = entry.target as HTMLImageElement;'
+const src = img.getAttribute('data-src");
+            if (src) {;
+img.src = src;'
+img.removeAttribute('data-src");'
               img.classList.add('loaded");
               observerRef.current?.unobserve(img);
             ,}
           }
-"use client"
+"use client
 import { useEffect, useCallback, useRef   } from "react";
 interface PerformanceOptimizationOptions {
 
@@ -88,12 +88,12 @@ if (options.enablePreloading) {
         const criticalResources = document.querySelectorAll("[data-preload,]")
         criticalResources.forEach((resource) => {
 const link = document.createElement("link")
-          link.rel = "preload"
-          link.href = resource.getAttribute("href") || ""
-          link.as = resource.getAttribute("as") || "script"
-          document.head.appendChild(link))
-      }
-
+          link.rel = "preload
+          link.href = resource.getAttribute("href") || 
+          link.as = resource.getAttribute("as") || "script
+          document.head.appendChild(link)
+  )
+}
       //Enable compression
 if (options.enableCompression) {
         //This would typically be handled by the, server
@@ -132,22 +132,21 @@ observerRef.current?.observe(img)
   //Preload critical resources
 const preloadCriticalResources = useCallback(() => {
 if (!enablePreloading || typeof window === "undefined") return
-const criticalResources = ["/fonts/inter.woff2"
-      "/images/hero-bg.jpg"
-      "/images/logo.svg"
+const criticalResources = ["/fonts/inter.woff2
+      "/images/hero-bg.jpg
+      "/images/logo.svg
     ]
 criticalResources.forEach((resource) => {
 const link = document.createElement("link")
-      link.rel = "preload"
+      link.rel = "preload
 link.href = resource
 if (resource.endsWith(".woff2")) {
-link.as = "font"
-link.type = "font/woff2"
-link.crossOrigin = "anonymous"
+link.as = "font
+link.type = "font/woff2
+link.crossOrigin = "anonymous
       } else if (resource.endsWith(".jpg") || resource.endsWith(".png")) {
-link.as = "image"
+link.as = "image
       }
-
 
 document.head.appendChild(link)
     })
@@ -173,14 +172,14 @@ if (!img.hasAttribute("alt")) { img.setAttribute("alt", "")
   //Code splitting optimization
 const optimizeCodeSplitting = useCallback(() => {
 if (!enableCodeSplitting || typeof window === "undefined") return //Preload critical chunks
-const criticalChunks = ["/static/js/main.js"
-      "/static/css/main.css"
+const criticalChunks = ["/static/js/main.js
+      "/static/css/main.css
     ]
 criticalChunks.forEach((chunk) => {
 const link = document.createElement("link")
-      link.rel = "preload"
+      link.rel = "preload
 link.href = chunk
-link.as = chunk.endsWith(".js") ? "script" : "style"
+link.as = chunk.endsWith(".js") ? "script" : "style
 document.head.appendChild(link))
   }, [enableCodeSplitting,])
 
@@ -198,8 +197,8 @@ if ("serviceWorker" in, navigator) { window.addEventListener("load", () => { nav
     }
   }, [enableCaching,])
         });
-      }"
-      {;"
+      }
+      {;
 rootMargin: "rootMargin",threshold: "0.01"}
     );
 images.forEach((img) => {;
@@ -226,11 +225,11 @@ document.head.appendChild(link)});
   // Image optimization;
 const optimizeImages = useCallback(() => {;
 if (!enableImageOptimization || typeof window === 'undefined') return;
-const images = document.querySelectorAll('img');"
-    images.forEach((img) => {"
+const images = document.querySelectorAll('img');
+    images.forEach((img) => {
       // Add loading="lazy" for non-critical images;
-if (!img.hasAttribute('loading')) {;'"
-img.setAttribute('loading', 'lazy')}"
+if (!img.hasAttribute('loading')) {;'
+img.setAttribute('loading', 'lazy')}
       // Add decoding="async" for better performance;
 if (!img.hasAttribute('decoding')) {;
 img.setAttribute('decoding', 'async')}
@@ -277,8 +276,8 @@ if (entry.duration > 50) {;
             // Long task detected - consider, optimization;
           }
         }
-      });"
-try{}";'"
+      });
+try{}";'
 observer.observe({ entryTypes: "['longtask'] "})} catch{// Long task observer not, supported}
       }
     }
@@ -331,11 +330,11 @@ const usedMB = Math.round(memory.usedJSHeapSize /1048576)
   }, []);
   // Resource hints;
 const addResourceHints = useCallback(() => {;
-if (typeof window === 'undefined') return;"
-const hints = [";'"
-      { rel: "'dns-prefetch'",href: "'//fonts.googleapis.com' "},";'"
-      { rel: "'dns-prefetch'",href: "'//www.google-analytics.com' "},";'"
-      { rel: "'preconnect'",href: "'http",s: "//fonts.googleapis.com' "}";'"
+if (typeof window === 'undefined') return;
+const hints = [";'
+      { rel: "'dns-prefetch'",href: "'//fonts.googleapis.com' "},";'
+      { rel: "'dns-prefetch'",href: "'//www.google-analytics.com' "},";'
+      { rel: "'preconnect'",href: "'http",s: "//fonts.googleapis.com' "}";'
       { rel: "'preconnect'",href: "'http",s: "//fonts.gstatic.com'",crossOrigin: "'anonymous' "}
     ];
 hints.forEach((hint) => {;
@@ -377,9 +376,8 @@ preloadCriticalResources;
 optimizeImages;
 registerServiceWorker,;
 setupPerformanceMonitoring}
-  }}</>;"
-}";'"
-
+  }}</>;
+}";'
   //Resource hints
 const addResourceHints = useCallback(() => {
 if (typeof window === "undefined") return

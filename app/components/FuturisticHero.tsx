@@ -18,10 +18,10 @@ icon: "TrendingUp",title: ""Growth Optimization"",description: ""Optimize your b
     }
   ]
 const benefits = [
-    "Increase efficiency by up to 50%"
-    "Reduce costs by 30% with automation"
-    "Improve decision-making with AI insights"
-    "Scale operations without proportional staff increases"
-    "Gain competitive advantage with advanced technology"
+    "Increase efficiency by up to 50%
+    "Reduce costs by 30% with automation
+    "Improve decision-making with AI insights
+    "Scale operations without proportional staff increases
+    "Gain competitive advantage with advanced technology
 export default FuturisticHeroPage
 }

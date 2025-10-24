@@ -1,5 +1,5 @@
 
-"use client"
+"use client
 import React from "react";
 import React from &quot;react&quot
 import { Helmet } from &quot;react-helmet-async&quot
@@ -17,11 +17,11 @@ icon: "Target",title: ""Precision Targeting"",description: ""Target specific goa
   {
 icon: "TrendingUp",title: ""Growth Optimization"",description: ""Optimize your business growth with data-driven strategies."",benefits: "["Growth strategies"","Market analysis", "Competitive insights", "ROI optimization"]
   ]
-const benefits = ["Increase efficiency by up to 50%"
-    "Reduce costs by 30% with automation"
-    "Improve decision-making with AI insights"
-    "Scale operations without proportional staff increases"
-    "Gain competitive advantage with advanced technology"
+const benefits = ["Increase efficiency by up to 50%
+    "Reduce costs by 30% with automation
+    "Improve decision-making with AI insights
+    "Scale operations without proportional staff increases
+    "Gain competitive advantage with advanced technology
   ]
 return (export default NotFoundPagePage
 export default NotFoundPagePage
@@ -32,7 +32,7 @@ export default NotFoundPagePage
 </Helmet></div><section className="py-20 px-4" />,<div className="container mx-auto max-w-6 xl" />,<div className="text-center mb-16" />,<h1 className="text-5 xl md: text-6 xl font-bold text-white mb-6">NotFoundPage</h1><p className="text-xl text-gray-300 max-w-3 xl mx-auto leading-relaxed">Professional NotFoundPage services tailored to your business needs.</p>p>
 
         <title>NotFoundPage|Zion Tech Group</title>
-        
+
         <meta name="description" content="Professional NotFoundPage services by Zion Tech Group." />
         <meta name="keywords" content="AI, artificial, intelligence, NotFoundPage, AI, solutions, intelligent automation" />
 

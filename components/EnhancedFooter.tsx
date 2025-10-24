@@ -15,19 +15,13 @@ Get Started</Link> <ArrowRight className="w-4 h-4 ml-2" />
                 <Link href="/ai-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors">
 AI Solutions</Link>
                 </Link>
-              </li>"
-              <li>"
-                <Link href="/it-services" className="text-gray-300 hover:text-cyan-400 transition-colors">
+              </li><li><Link href="/it-services" className="text-gray-300 hover:text-cyan-400 transition-colors">
                   IT Services;
                 </Link>
-              </li>"
-              <li>"
-                <Link href="/cloud-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors">
+              </li><li><Link href="/cloud-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors">
                   Cloud Solutions;
                 </Link>
-              </li>"
-              <li>"
-                <Link href="/cybersecurity" className="text-gray-300 hover:text-cyan-400 transition-colors">
+              </li><li><Link href="/cybersecurity" className="text-gray-300 hover:text-cyan-400 transition-colors">
                   Cybersecurity;
                 </Link>
               </li>
@@ -38,19 +32,13 @@ AI Solutions</Link>
                 <Link href="/about" className="text-gray-300 hover:text-cyan-400 transition-colors">
 About Us</Link>
                 </Link>
-              </li>"
-              <li>"
-                <Link href="/team" className="text-gray-300 hover:text-cyan-400 transition-colors">
+              </li><li><Link href="/team" className="text-gray-300 hover:text-cyan-400 transition-colors">
                   Our Team;
                 </Link>
-              </li>"
-              <li>"
-                <Link href="/careers" className="text-gray-300 hover:text-cyan-400 transition-colors">
+              </li><li><Link href="/careers" className="text-gray-300 hover:text-cyan-400 transition-colors">
                   Careers;
                 </Link>
-              </li>"
-              <li>"
-                <Link href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors">
+              </li><li><Link href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors">
                   Contact;
                 </Link>
               </li>
@@ -85,7 +73,10 @@ Contact</Link>
     </footer>
   )
 
-export const EnhancedFooter: React.FC<EnhancedFooterProps> = ({ className = '', children }) => {
+export interface EnhancedFooterProps {
+   className = '', children 
+}
+const EnhancedFooter: React.FC<EnhancedFooterProps> = ({  className = '', children  }) => {
   return (
     <div className={`enhancedfooter ${className}`}>
       {children}

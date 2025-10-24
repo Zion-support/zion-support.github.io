@@ -2,7 +2,7 @@
 import React from "react";
 import { Link } from "next/link";
 import { Search, Menu, X } from "lucide-react";
-
+;
 const Navigation = () => {
   return (
     <nav className="bg-slate-900/95 backdrop-blur-sm fixed w-full top-0 z-50 border-b border-gray-800">
@@ -31,14 +31,12 @@ const Navigation = () => {
             </Link>
             <Link
               href="/contact"
-              className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+              className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors
             >
               Get Started
-            </Link>
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden">
+            </Link>"
+          </div>"
+          {/* Mobile menu button */}<div className="md:hidden">
             <button className="text-gray-300 hover:text-white">
               <Menu className="h-6 w-6" />
             </button>

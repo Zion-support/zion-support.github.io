@@ -3,11 +3,14 @@ return (<div>
       <Helmet />
 
         <title>LoadingStates</title>
-        
+
         <meta name="description" content="Advanced LoadingStates solution for modern businesses." //>
         <meta name="keywords" content="AI,artificial, intelligence, LoadingStates, AI, solutions, intelligent automation" //>
 
-export const LoadingStates: React.FC<LoadingStatesProps> = ({ className = '', children }) => {
+export interface LoadingStatesProps {
+   className = '', children 
+}
+const LoadingStates: React.FC<LoadingStatesProps> = ({  className = '', children  }) => {
   return (
     <div className={`loadingstates ${className}`}>
       {children}
@@ -20,7 +23,7 @@ Advanced LoadingStates solution for modern businesses.</p>
             </p>,<div className="[^"]*"> <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center" />
 Get Started</button>
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover: "bg-emerald-400 hove","
+              <button className="border border-emerald-400 text-emerald-400 hover: "bg-emerald-400 hove",
 r: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" />
 Learn More</button>
 
@@ -30,7 +33,7 @@ Learn More</button>
     <h1 className="text-4 xl font-bold text-white mb-4">Key Features</h2> <p className="[^"]*">
 Discover the powerful features that make LoadingStates the perfect solution for your business.</p>
               </p>
-    <divclassName="grid md: "grid-cols-2 l","
+    <divclassName="grid md: "grid-cols-2 l",
 g: grid-cols-4 gap-8" />,<div className="[^"]*">
     <h1 className="text-xl font-semibold text-white mb-3">AI-Powered</h3>
                 <p className="text-gray-300">Advanced AI algorithms for intelligent automation.</p> <div className="[^"]*">
@@ -59,7 +62,8 @@ Start Your Free Trial</button>
     </div>
     </>
   )
-  )  )}
-
+  )
+  )
+}
 export default LoadingStates
 }

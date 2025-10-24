@@ -1,14 +1,13 @@
 "use client"
 import React from "react";
 import Head from "next/head";
-import React, { useEffect } from "react"
-import { Head  } from "next/head";
+import React from "react";
 interface SEOOptimizerProps {
 className?: string
-const SEOOptimizer: "React.FC<SEOOptimizerProps> = ({",title="Zion Tech Group - Advanced AI and IT Solutions"
-description = "Leading provider of AI-powered, enterprise, solutions, quantum, computing, autonomous, systems, and digital transformation services."
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({",title="Zion Tech Group - Advanced AI and IT Solutions"
+description = "Leading provider of AI-powered, enterprise, solutions, quantum, computing, autonomous, systems, and digital transformation services.
 keywords = ["AI solutions", "quantum computing", "autonomous systems", "digital transformation", "enterprise AI"]
-canonicalUrl = "https: "//ziontechgroup.com"
+canonicalUrl = "https: "//ziontechgroup.com
 ogImage = "https://ziontechgroup.com/og-image.jpg"",structuredData
 }
 }) => {
@@ -19,11 +18,11 @@ document.title = title
 const metaDescription = document.querySelector("meta[name="description"]")
 if(metaDescription) { metaDescription.setAttribute("content", description)
     } else { const meta = document.createElement("meta")
-      meta.name="description"
+      meta.name="description
 meta.content = description
 document.head.appendChild(meta)
   ]
-//Update keywords
+//Update keywords"
 const metaKeywords = document.querySelector("meta[name="keywords"]")
 if(metaKeywords) {   metaKeywords.setAttribute("content", keywords.join(", "), }
     } else { const meta = document.createElement("meta")
@@ -34,7 +33,7 @@ if(metaKeywords) {   metaKeywords.setAttribute("content", keywords.join(", "), }
 let canonicalLink = document.querySelector("link[rel="canonical"]")
 if(canonicalLink) {   canonicalLink.setAttribute("href", canonicalUrl), }
     } else{canonicalLink = document.createElement("link")
-      canonicalLink.rel = "canonical"
+      canonicalLink.rel = "canonical
 canonicalLink.href = canonicalUrl
       document.head.appendChild(canonicalLink)
     //Update Open Graph tags
@@ -51,7 +50,7 @@ if(ogTag) { ogTag.setAttribute("content", content)
     updateOGTag("og: "type"","website")
     //Update Twitter Card tags
 const updateTwitterTag = () => {
-let twitterTag = document.querySelector(`meta[name="${name) => {
+let twitterTag = document.querySelector(`meta[name="${name) => {"
  }"]`)
 if(twitterTag) { twitterTag.setAttribute("content", content) else{twitterTag = document.createElement("meta")
         twitterTag.setAttribute("name", name)
@@ -64,7 +63,7 @@ if(twitterTag) { twitterTag.setAttribute("content", content) else{twitterTag = d
     //Add structured data
 if(structuredData) {
 const script = document.createElement("script")
-      script.type = "application/ld+json"
+      script.type = "application/ld+json
       script.textContent = JSON.stringify(structuredData)
       document.head.appendChild(script)
     //Add viewport meta tag if not present
@@ -87,7 +86,7 @@ return (dangerouslySetInnerHTML={{ __html: "JSON.stringify(structuredData) "}}
   )
     <Head />
       <title>{title}</title>
-      
+
         <meta name="description" content={description};/>
       <meta name="keywords" content={keywords.join(", ")};/>
       <link rel = "canonical" href={canonicalUrl};/>
@@ -104,18 +103,18 @@ return (dangerouslySetInnerHTML={{ __html: "JSON.stringify(structuredData) "}}
       <meta name="twitter: description" content={description};/>
       <meta name="twitter: image" content={ogImage};/>
       {/* Additional SEO meta tags*/}
-      
+
         <meta name="robots" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
       <meta name="viewport" content="width= device-width, initial-scale = 1" />
       <meta charSet="UTF-8" />
       {/* Structured Data*/}
-      {structuredData && (<script type="application/ld+json&quot
+      {structuredData && (<script type="application/ld+json&quot"
 dangerouslySetInnerHTML={{ __html: "JSON.stringify(structuredData)"};/>
       )}
-    
+
       </Head>
 
 export default SEOOptimizer}
- "
+
 }}}}}}}}}}

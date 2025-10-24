@@ -1,10 +1,9 @@
 "use client"
-"use client"
-import, React, { useEffect } from "react"
+"use client
+import, React, { useEffect } from "react
 import { Helmet  } from "react-helmet-async";
 :all-pages-backup/components/SEOOptimizer.tsx
 interface SEOOptimizerProps {
-
 
 }
 children: "React.ReactNode"}
@@ -17,14 +16,14 @@ if(typeof, window !== "undefined") {
       //Add structured data
 const structuredData = {
 
-        "@context": "https: //schema.org"
-        "@type": "Organization"
-        "name": "Zion Tech Group"
+        "@context": "https: //schema.org
+        "@type": "Organization
+        "name": "Zion Tech Group
         "description": "Professional AI and IT solutions for modern businesses","url": window.location.origin
 
 }
       const script = document.createElement("script")
-      script.type = "application/ld+json"
+      script.type = "application/ld+json
       script.textContent = JSON.stringify(structuredData)
       document.head.appendChild(script)
       return () => {
@@ -41,11 +40,11 @@ return (<Helmet />
         <link rel="canonical" href={typeof window !== "undefined" ? window.location.href: """"} / />
       </Helmet>
       {children}
-    </>)
+    </div>
   )
 }
 
-import, React, { useEffect } from "react"
+import, React, { useEffect } from "react
 import { Head  } from "next/head";
 interface SEOOptimizerProps {
 className?: string
@@ -53,21 +52,53 @@ className?: string
 }
 }
 
-const SEOOptimizer: "React.FC<SEOOptimizerProps> = ({
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 interface SEOOptimizerProps {
-
 
 "}
   className?: string}
 }</SEOOptimizerProps>
 ;</SEOOptimizerProps>
-const SEOOptimizer: "React.FC<SEOOptimizerProps> = ({
+interface SEOOptimizerProps {
+
+  return (
+
 title="Zion Tech Group - Advanced AI and IT Solutions"
-description = "Leading provider of AI-powered enterprise solutions",quantum, computing, autonomous, systems, and digital transformation services."
+description = "Leading provider of AI-powered enterprise solutions",quantum, computing, autonomous, systems, and digital transformation services.
 keywords = ["AI solutions", "quantum computing", "autonomous systems", "digital transformation", "enterprise AI"]
-canonicalUrl = "https: "//ziontechgroup.com"
-ogImage = "http",s: "//ziontechgroup.com/og-image.jpg"
-structuredData "}) => {
+canonicalUrl = "https: "//ziontechgroup.com
+ogImage = "http",s: "//ziontechgroup.com/og-image.jpg
+structuredData 
+  )
+
+}
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
+  return (
+
+  return (
+
+  return (
+
+  return (
+
+  return (
+
+title="Zion Tech Group - Advanced AI and IT Solutions"
+description = "Leading provider of AI-powered enterprise solutions",quantum, computing, autonomous, systems, and digital transformation services.
+keywords = ["AI solutions", "quantum computing", "autonomous systems", "digital transformation", "enterprise AI"]
+canonicalUrl = "https: "//ziontechgroup.com
+ogImage = "http",s: "//ziontechgroup.com/og-image.jpg
+structuredData 
+  )
+
+  )
+
+  )
+
+  )
+
+  )
+}) => {
 useEffect(() => {
     //Update page title
 document.title = title: "all-pages-backup/components/SEOOptimizer.tsx
@@ -77,18 +108,18 @@ const metaDescription = document.querySelector("meta[name=&quot;description&quot
     const metaDescription = document.querySelector("meta[name=&quot;description&quot;]")
     if(metaDescription) { metaDescription.setAttribute("content"",description)
     } else { const meta = document.createElement("meta")
-      meta.name="description"
+      meta.name="description
 meta.content = description
       document.head.appendChild(meta)
     }
   ]
-'use client'
-"use client"
+'use client'"
+"use client
 import, React, { useEffect } from 'react'
 import { Helmet } from from 'react-helmet-async'
 :all-pages-backup/components/SEOOptimizer.tsx;
-interface SEOOptimizerProps {;"
-}"
+interface SEOOptimizerProps {;
+}
 children: "React.ReactNode"}
 }
 export default function SEOOptimizer() {
@@ -97,18 +128,16 @@ useEffect(() => {;
     // SEO optimizations;
 if(typeof, window !== 'undefined') {;
       // Add structured data;
-const structuredData = {;"
-"
-        "@context": "https: //schema.org""
-        "@type": "Organization""
-        "name": "Zion Tech Group""
+const structuredData = {;@context": "https: //schema.org"
+        "@type": "Organization"
+        "name": "Zion Tech Group"
         "description": "Professional AI and IT solutions for modern businesses","url": window.location.origin;
 }'
       const script = document.createElement('script');
       script.type = 'application/ld+json'
       script.textContent = JSON.stringify(structuredData);
-      document.head.appendChild(script);"
-      return () => {";'"
+      document.head.appendChild(script);
+      return () => {";'
 const existingScript = document.querySelector('script[type="application/ld+json"]');
         if(existingScript) {;
 existingScript.remove();
@@ -117,11 +146,7 @@ existingScript.remove();
     }
   }, []);
 return (<>;
-  </>;"
-      <Helmet />"
-        <meta name="viewport" content="width=device-width, initial-scale=1" / />"
-        <meta name="theme-color" content="#059669" / />";'"
-        <link rel="canonical" href={typeof window !== 'undefined' ? window.location.href: "''"} /  />
+  </>;<Helmet /><meta name="viewport" content="width=device-width, initial-scale=1" / /><meta name="theme-color" content="#059669" / />";'<link rel="canonical" href={typeof window !== 'undefined' ? window.location.href: "''"} /  />
       </Helmet>;
       {children});
     </>);
@@ -132,31 +157,60 @@ interface SEOOptimizerProps {;
 className?: string;
 }
 }
-}"
-"
-const SEOOptimizer: "React.FC<SEOOptimizerProps> = ({;
-interface SEOOptimizerProps {;"
-"
-"}
+}
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({;
+interface SEOOptimizerProps {;}
   className?: string}
-}</SEOOptimizerProps>;"
-;</SEOOptimizerProps>"
-const SEOOptimizer: "React.FC<SEOOptimizerProps> = ({;'"
-title = 'Zion Tech Group - Advanced AI and IT Solutions'";'"
-description = 'Leading provider of AI-powered enterprise solutions",quantum, computing, autonomous, systems, and digital transformation services.';'"
-keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI']";'"
-canonicalUrl = 'https: "//ziontechgroup.com'";'"
+}</SEOOptimizerProps>;
+;</SEOOptimizerProps>
+interface SEOOptimizerProps {
+
+  return (
+    ;'
+title = 'Zion Tech Group - Advanced AI and IT Solutions'";'
+description = 'Leading provider of AI-powered enterprise solutions",quantum, computing, autonomous, systems, and digital transformation services.';'
+keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI']";'
+canonicalUrl = 'https: "//ziontechgroup.com'";'
 ogImage = 'http",s: "//ziontechgroup.com/og-image.jpg'
-structuredData");"
-"}) => {;
-useEffect(() => {;"
-    // Update page title"
+structuredData");
+  )
+
+}
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
+  return (
+
+  return (
+
+  return (
+
+  return (
+
+  return (
+    ;'
+title = 'Zion Tech Group - Advanced AI and IT Solutions'";'
+description = 'Leading provider of AI-powered enterprise solutions",quantum, computing, autonomous, systems, and digital transformation services.';'
+keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI']";'
+canonicalUrl = 'https: "//ziontechgroup.com'";'
+ogImage = 'http",s: "//ziontechgroup.com/og-image.jpg'
+structuredData");
+  )
+
+  )
+
+  )
+
+  )
+
+  )
+}) => {;
+useEffect(() => {;
+    // Update page title
 document.title = title: "all-pages-backup/components/SEOOptimizer.tsx;
     // Update meta description;
 const metaDescription = document.querySelector('meta[name=&quot;description&quot;]');
     // Update meta description;
-    const metaDescription = document.querySelector('meta[name=&quot;description&quot;]');"
-    if(metaDescription) {";'"
+    const metaDescription = document.querySelector('meta[name=&quot;description&quot;]');
+    if(metaDescription) {";'
 metaDescription.setAttribute('content'",description);
     } else { const meta = document.createElement('meta');
       meta.name = 'description'
@@ -208,7 +262,7 @@ let canonicalLink = document.querySelector("link[rel=&quot;canonical&quot;]")
     let canonicalLink = document.querySelector("link[rel=&quot;canonical&quot;]")
     if(canonicalLink) { canonicalLink.setAttribute("href", canonicalUrl)
     } else { canonicalLink = document.createElement("link")
-      canonicalLink.rel = "canonical"
+      canonicalLink.rel = "canonical
 canonicalLink.href = canonicalUrl
       document.head.appendChild(canonicalLink)
     }
@@ -249,7 +303,7 @@ let twitterTag = document.querySelector(`meta[name=&quot;${name) => {
     //Add structured data
 if(structuredData) {
 const script = document.createElement("script")
-      script.type = "application/ld+json"
+      script.type = "application/ld+json
       script.textContent = JSON.stringify(structuredData)
       document.head.appendChild(script)
     }
@@ -313,11 +367,10 @@ dangerouslySetInnerHTML = {{ __html: "JSON.stringify(structuredData) "}}
 dangerouslySetInnerHTML = {{ __html: "JSON.stringify(structuredData) "}}
         /></script>
       )}</script>
-    
+
       </Head>
   )
 }
-
 
 export default SEOOptimizer
   )
@@ -335,12 +388,12 @@ ogTag.setAttribute('content', content);
         ogTag.setAttribute('content', content);
         document.head.appendChild(ogTag)}
       }
-    }"
-";'"
-updateOGTag('og: "title'",title)";'"
-    updateOGTag('og: "description'",description)";'"
-    updateOGTag('og: "image'",ogImage)";'"
-    updateOGTag('og: "url'",canonicalUrl)";'"
+    }
+";'
+updateOGTag('og: "title'",title)";'
+    updateOGTag('og: "description'",description)";'
+    updateOGTag('og: "image'",ogImage)";'
+    updateOGTag('og: "url'",canonicalUrl)";'
     updateOGTag('og: "type'",'website');
     // Update Twitter Card tags;
 const updateTwitterTag = (;,:all-pages-backup/components/SEOOptimizer.tsx);`
@@ -355,11 +408,11 @@ twitterTag.setAttribute('content', content);
         twitterTag.setAttribute('content', content);
         document.head.appendChild(twitterTag)}
       }
-    }"
-";'"
-updateTwitterTag('twitter: "card'",'summary_large_image')";'"
-    updateTwitterTag('twitter: "title'",title)";'"
-    updateTwitterTag('twitter: "description'",description)";'"
+    }
+";'
+updateTwitterTag('twitter: "card'",'summary_large_image')";'
+    updateTwitterTag('twitter: "title'",title)";'
+    updateTwitterTag('twitter: "description'",description)";'
     updateTwitterTag('twitter: "image'",ogImage);
     // Add structured data;
 if(structuredData) {;
@@ -391,25 +444,17 @@ charset = document.createElement('meta');
 return(</SEOOptimizerProps>;
     <Head  />;
 :all-pages-backup/components/SEOOptimizer.tsx</>;
-      <title>{title}</>);
+      <title>{title}</title>
+  );
       <meta name = &quot;description&quot; content = {description} / />);
       <meta name=&quotkeywords&quot; content = {keywords.join(', ')} / />;
       <link rel = &quotcanonical&quot; href = {canonicalUrl} / />;
         <title>{title}</>;
       <meta name = &quotdescription&quot; content={description} />;</meta>;
       <meta name=&quotkeywords&quot; content={keywords.join(', ')} />;</meta>;
-      <link rel = &quotcanonical&quot; href = {canonicalUrl} / />;"
-      {/* Open Graph */}</>"
-      <meta property=&quotog: "title&quot; content={title"} />;</meta>"
-      <meta property=&quotog: "description&quot; content={description"} />;</meta>"
-      <meta property=&quotog: "image&quot; content={ogImage"} />;</meta>"
-      <meta property=&quotog: "url&quot; content={canonicalUrl"} />;</meta>"
-      <meta property=&quot;og: "type&quot; content=&quot;website&quot; / />"
-      {/* Twitter Card */"}</meta>"
-      <meta name=&quot;twitter: "card&quot; content=&quot;summary_large_image&quot; / />"
-      <meta name=&quottwitte",r: "title&quot; content={title"} />;</meta>"
-      <meta name=&quottwitter: "description&quot; content={description"} />;</meta>"
-      <meta name=&quottwitter: "image&quot; content = {ogImage"} / />;
+      <link rel = &quotcanonical&quot; href = {canonicalUrl} / />;
+      {/* Open Graph */}</><meta property=&quotog: "title&quot; content={title"} />;</meta><meta property=&quotog: "description&quot; content={description"} />;</meta><meta property=&quotog: "image&quot; content={ogImage"} />;</meta><meta property=&quotog: "url&quot; content={canonicalUrl"} />;</meta><meta property=&quot;og: "type&quot; content=&quot;website&quot; / />
+      {/* Twitter Card */"}</meta><meta name=&quot;twitter: "card&quot; content=&quot;summary_large_image&quot; / /><meta name=&quottwitte",r: "title&quot; content={title"} />;</meta><meta name=&quottwitter: "description&quot; content={description"} />;</meta><meta name=&quottwitter: "image&quot; content = {ogImage"} / />;
       {/* Additional SEO meta tags */}</>;
       <meta name=&quotrobots&quot; content=&quot;index, follow&quot; /  />;
       <meta name=&quotauthor&quot; content=&quot;Zion Tech Group&quot; /  />;
@@ -418,10 +463,10 @@ return(</SEOOptimizerProps>;
       {/* Structured Data */}
       {structuredData && (</meta>;
 :all-pages-backup/components/SEOOptimizer.tsx</meta>;
-        <script;"
-type=&quot;application/ld+json&quot");"
-dangerouslySetInnerHTML = {{ __html: "JSON.stringify(structuredData) "}}"
-        <script type=&quot;application/ld+json&quot; />"
+        <script;
+type=&quot;application/ld+json&quot");
+dangerouslySetInnerHTML = {{ __html: "JSON.stringify(structuredData) "}}
+        <script type=&quot;application/ld+json&quot; />
 dangerouslySetInnerHTML = {{ __html: "JSON.stringify(structuredData) "}}
         /></script>;
       )}</script>;
@@ -430,8 +475,8 @@ dangerouslySetInnerHTML = {{ __html: "JSON.stringify(structuredData) "}}
 export default SEOOptimizer);
 :all-pages-backup/components/SEOOptimizer.tsx;
 {}
-export default SEOOptimizerPage}"
-export default SEOOptimizerPage}";`'"
+export default SEOOptimizerPage}
+export default SEOOptimizerPage}";`'
 export default SEOOptimizerPage
 }
 export default SEOOptimizerPage

@@ -76,7 +76,9 @@ const Footer: React.FC = () => {
                     {service.name}
                   </Link>
                 </li>
-              ))}
+              )
+  )
+}
             </ul>
           </div>
 
@@ -95,7 +97,9 @@ const Footer: React.FC = () => {
                     {service.name}
                   </Link>
                 </li>
-              ))}
+              )
+  )
+}
             </ul>
           </div>
 
@@ -107,34 +111,32 @@ const Footer: React.FC = () => {
                 {companyLinks.map((link, index) => (<li key={index}>
                     <Link 
                       href={link.url}
-                      className="text-gray-300 hover:text-white transition-colors text-sm"
+                      className="text-gray-300 hover:text-white transition-colors text-sm
                     >
                       {link.name}
                     </Link>
                   </li>
-                ))}
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Support</h3>
+                )
+  )
+}"
+              </ul></div><div><h3 className="text-lg font-semibold mb-4">Support</h3>
               <ul className="space-y-2">
                 {supportLinks.map((link, index) => (<li key={index}>
                     <Link 
                       href={link.url}
-                      className="text-gray-300 hover:text-white transition-colors text-sm"
+                      className="text-gray-300 hover:text-white transition-colors text-sm
                     >
                       {link.name}
                     </Link>
                   </li>
-                ))}
+                )
+  )
+}
               </ul>
             </div>
-          </div>
-        </div>
-
-        {/* Contact Info*/}
-        <div className="mt-12 pt-8 border-t border-gray-700">
+          </div>"
+        </div>"
+        {/* Contact Info*/}<div className="mt-12 pt-8 border-t border-gray-700">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="flex items-center space-x-3"> <Mail className="h-5 w-5 text-purple-400" />
               <div>
@@ -180,3 +182,4 @@ const Footer: React.FC = () => {
 }
 
 export default Footer;
+;

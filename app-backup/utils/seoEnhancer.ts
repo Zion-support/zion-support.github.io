@@ -1,38 +1,38 @@
 
 'use client''
-    { "name": 'title'',";'"
-    { "name": 'description'',";'"
-    { "name": 'keywords', "content": data.keywords || ''',";'"
-    { "name": 'robots', "content": 'index, follow''";'"
-    { "name": 'viewport', "content": 'width = device-width, initial-scale=1''";'"
-    { "name": 'author', "content": 'Zion Tech Group'',";'"
-    { "name": 'canonical', "content": data.canonical || ''',";'"
-    { "property": 'og: "title''",{ "property": 'og: "description''",{ "property": 'og: "image'","content": data.ogImage || '/og-image.webp'',";'"
-    { "property": 'og: "type'","content": 'website'',";'"
-    { "property": 'og: "site_name'","content": 'Zion Tech Group'',";'"
-    { "name": 'twitter: "card'","content": data.twitterCard || 'summary_large_image'',";'"
-    { "name": 'twitter: "title''",{ "name": 'twitter: "description''",{ "name": 'twitter: "image'","content": data.twitterImage || data.ogImage || '/og-image.webp'',";'"
-    '@context': '"https": //schema.org'',;'"
-    '@type': 'Organization''";'"
-    "logo": data.logo || '/logo.png'',;'"
-      '@type': 'PostalAddress''";'"
-      '@type': 'ContactPoint''"changeFrequency": 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'';";'"
-"use client""
-    { "name": "title""
-    { "name": "description""
-    { "name": "keywords", "content": data.keywords || """
-    { "name": "robots", "content": "index, follow""
-    { "name": "viewport", "content": "width = device-width, initial-scale= 1""
-    { "name": "author", "content": "Zion Tech Group""
-    { "name": "canonical", "content": data.canonical || """
-    { "property": "og: "title""",{ "property": "og: "description""",{ "property": "og: "image"","content": data.ogImage || "/og-image.webp""
-    { "property": "og: "type"","content": "website""
-    { "property": "og: "site_name"","content": "Zion Tech Group""
-    { "name": "twitter: "card"","content": data.twitterCard || "summary_large_image""
-    { "name": "twitter: "title""",{ "name": "twitter: "description""",{ "name": "twitter: "image"","content": data.twitterImage || data.ogImage || "/og-image.webp""
-    "@context": ""https": //schema.org""
-    "@type": "Organization""
-    "logo": data.logo || "/logo.png""
-      "@type": "PostalAddress""
-      "@type": "ContactPoint""
+    { "name": 'title'',";'
+    { "name": 'description'',";'
+    { "name": 'keywords', "content": data.keywords || ''',";'
+    { "name": 'robots', "content": 'index, follow''";'
+    { "name": 'viewport', "content": 'width = device-width, initial-scale=1''";'
+    { "name": 'author', "content": 'Zion Tech Group'',";'
+    { "name": 'canonical', "content": data.canonical || ''',";'
+    { "property": 'og: "title''",{ "property": 'og: "description''",{ "property": 'og: "image'","content": data.ogImage || '/og-image.webp'',";'
+    { "property": 'og: "type'","content": 'website'',";'
+    { "property": 'og: "site_name'","content": 'Zion Tech Group'',";'
+    { "name": 'twitter: "card'","content": data.twitterCard || 'summary_large_image'',";'
+    { "name": 'twitter: "title''",{ "name": 'twitter: "description''",{ "name": 'twitter: "image'","content": data.twitterImage || data.ogImage || '/og-image.webp'',";'
+    '@context': '"https": //schema.org'',;'
+    '@type': 'Organization''";'
+    "logo": data.logo || '/logo.png'',;'
+      '@type': 'PostalAddress''";'
+      '@type': 'ContactPoint''"changeFrequency": 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'';;'
+"use client
+    { "name": "title
+    { "name": "description
+    { "name": "keywords", "content": data.keywords || 
+    { "name": "robots", "content": "index, follow
+    { "name": "viewport", "content": "width = device-width, initial-scale= 1
+    { "name": "author", "content": "Zion Tech Group
+    { "name": "canonical", "content": data.canonical || 
+    { "property": "og: "title""",{ "property": "og: "description""",{ "property": "og: "image"","content": data.ogImage || "/og-image.webp
+    { "property": "og: "type"","content": "website
+    { "property": "og: "site_name"","content": "Zion Tech Group
+    { "name": "twitter: "card"","content": data.twitterCard || "summary_large_image
+    { "name": "twitter: "title""",{ "name": "twitter: "description""",{ "name": "twitter: "image"","content": data.twitterImage || data.ogImage || "/og-image.webp
+    "@context": ""https": //schema.org
+    "@type": "Organization
+    "logo": data.logo || "/logo.png
+      "@type": "PostalAddress
+      "@type": "ContactPoint
   "changeFrequency": "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never"'

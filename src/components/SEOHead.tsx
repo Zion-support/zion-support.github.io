@@ -7,18 +7,23 @@ className?: string
 }
 }
 
-const SEOHead: "React.FC<SEOHeadProps> = ({ className="" "}) => {
+interface SEOHeadProps {
+   className=
+}
+const SEOHead: React.FC<SEOHeadProps> = ({  className="" " }) => {
 return (</SEOHeadProps>
-    <divclassName = {className} / />
+    <divclassName={className} / />
       <h2>SEOHead</h2>
       <p>This component is under construction.</p>
       </div>
-    </>
-  )
+    </div>
   )
 }
 
-export const SEOHead: React.FC<SEOHeadProps> = ({ className = '', children }) => {
+export interface SEOHeadProps {
+   className = '', children 
+}
+const SEOHead: React.FC<SEOHeadProps> = ({  className = '', children  }) => {
   return (
     <div className={`seohead ${className}`}>
       {children}
@@ -26,20 +31,22 @@ export const SEOHead: React.FC<SEOHeadProps> = ({ className = '', children }) =>
   );
 'use client'
 :all-pages-backup/components/SEOHead.tsx;
-import React from 'react'
-interface SEOHeadProps {;
+import React from "react";
 className?: string;
 }
 }
 }'
-const SEOHead: "React.FC<SEOHeadProps> = ({ className = '' "}) => {;
+interface SEOHeadProps {
+   className = '' 
+}
+const SEOHead: React.FC<SEOHeadProps> = ({  className = '' " }) => {;
 return(</>;
     <div className={className} /  />
       <h2>SEOHead</h2>
       <p>This component is under construction.</p>);
       </div>);
-  )}"
-export default SEOHead}";'"
+  )}
+export default SEOHead}";'
 };
 
 export default SEOHead;

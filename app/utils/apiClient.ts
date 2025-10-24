@@ -5,7 +5,7 @@ message?: string "}
 interface ApiError {
 
 message: "string
-  statu",s: "number;"
+  statu",s: "number;
 }
 }
 }
@@ -16,7 +16,7 @@ private baseURL: "string
 s: "Record<string",string>
 
 constructor(baseURL: "string = "/api") {  
-this.baseURL = baseURL;",this.defaultHeaders = {
+this.baseURL = baseURL;,this.defaultHeaders = {
 
       "Content-Type": "application/json";
     }
@@ -33,7 +33,6 @@ headers: "{",...this.defaultHeaders
       }
 
     }
-
 
 try{
 const response = await fetch(url, config)
