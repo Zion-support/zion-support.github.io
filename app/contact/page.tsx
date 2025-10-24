@@ -11,12 +11,21 @@ const ContactPage: React.FC = () => {
       
       <main className="pt-16">
         {/* Hero Section */}
+<<<<<<< HEAD
         <section className="bg-gradient-to-rfrom-blue-600to-purple-600text-white py-20">
           <div className="containermx-autopx-4">
             <div className="max-w-4xlmx-autotext-center">
               <h1 className="text-5xlfont-boldmb-6">Contact Us</h1>
               <p className="text-xltext-blue-100">
                 Ready to transform your business? Let's discuss your project
+=======
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-5xl font-bold mb-6">Contact Us</h1>
+              <p className="text-xl text-blue-100">
+                Ready to transform your business? Let&apos;s discuss your project
+>>>>>>> cursor/fix-errors-and-merge-to-main-21fe
               </p>
             </div>
           </div>

@@ -90,18 +90,18 @@ const AIAccountingAssistantPage: React.FC = () => {
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                Powerful AI Features
+                Powerful Features
               </h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Our AI accounting assistant handles complex financial tasks with ease
+                Everything you need to streamline your accounting process
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition-shadow">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                    <feature.icon className="w-6 h-6 text-blue-600" />
+                <div key={index} className="text-center p-6 rounded-xl hover:shadow-lg transition-shadow">
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <feature.icon className="w-8 h-8 text-blue-600" />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">
                     {feature.title}
@@ -122,45 +122,54 @@ const AIAccountingAssistantPage: React.FC = () => {
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
                 Simple Pricing
               </h2>
-              <p className="text-xl text-gray-600">
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                 Choose the plan that fits your business needs
               </p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
               {pricing.map((plan, index) => (
-                <div key={index} className={`bg-white p-8 rounded-xl shadow-lg ${plan.popular ? 'ring-2 ring-blue-500' : ''}`}>
+                <div key={index} className={`bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow ${
+                  plan.popular ? 'ring-2 ring-blue-600 relative' : ''
+                }`}>
                   {plan.popular && (
-                    <div className="bg-blue-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
-                      Most Popular
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium">
+                        Most Popular
+                      </span>
                     </div>
                   )}
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                    {plan.name}
-                  </h3>
-                  <p className="text-gray-600 mb-4">
-                    {plan.description}
-                  </p>
-                  <div className="mb-6">
-                    <span className="text-4xl font-bold text-gray-900">
-                      {plan.price}
-                    </span>
-                    <span className="text-gray-600">
-                      {plan.period}
-                    </span>
+                  
+                  <div className="text-center mb-8">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                      {plan.name}
+                    </h3>
+                    <div className="flex items-baseline justify-center">
+                      <span className="text-4xl font-bold text-gray-900">
+                        {plan.price}
+                      </span>
+                      <span className="text-gray-600 ml-1">
+                        {plan.period}
+                      </span>
+                    </div>
+                    <p className="text-gray-600 mt-2">
+                      {plan.description}
+                    </p>
                   </div>
-                  <ul className="space-y-3 mb-8">
+
+                  <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-600">
+                      <li key={featureIndex} className="flex items-center">
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                        {feature}
+                        <span className="text-gray-700">{feature}</span>
                       </li>
                     ))}
                   </ul>
-                  <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
-                    plan.popular 
-                      ? 'bg-blue-600 text-white hover:bg-blue-700' 
-                      : 'border border-gray-300 text-gray-700 hover:bg-gray-50'
+
+                  <button className={`w-full py-3 rounded-lg font-semibold transition-colors ${
+                    plan.popular
+                      ? 'bg-blue-600 text-white hover:bg-blue-700'
+                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
                   }`}>
                     {plan.cta}
                   </button>
@@ -174,17 +183,17 @@ const AIAccountingAssistantPage: React.FC = () => {
         <section className="py-16 px-4 bg-blue-600">
           <div className="container mx-auto max-w-4xl text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Automate Your Accounting?
+              Ready to Transform Your Accounting?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Join thousands of businesses already using AI to streamline their accounting processes.
+              Join thousands of businesses already using our AI accounting assistant.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors">
                 Start Free Trial
               </button>
               <button className="border border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors">
-                Contact Sales
+                Schedule Demo
               </button>
             </div>
           </div>

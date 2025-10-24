@@ -1,7 +1,15 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import Link from 'next/link';
 import { Facebook, Github, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react';
+=======
+'use client'
+
+import React from 'react'
+import Link from 'next/link'
+import { Facebook, Github, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-21fe
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -34,7 +42,11 @@ const Footer: React.FC = () => {
     { name: 'Careers', url: '/careers' },
     { name: 'News', url: '/news' },
     { name: 'Contact', url: '/contact' }
+<<<<<<< HEAD
   ];
+=======
+  ]
+>>>>>>> cursor/fix-errors-and-merge-to-main-21fe
 
   const resources = [
     { name: 'Documentation', url: '/docs' },
@@ -53,7 +65,7 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-4 py-12">
+        <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
@@ -203,7 +215,14 @@ const Footer: React.FC = () => {
         </div>
       </div>
     </footer>
+<<<<<<< HEAD
   );
 };
 
 export default Footer;
+=======
+  )
+}
+
+export default Footer
+>>>>>>> cursor/fix-errors-and-merge-to-main-21fe
