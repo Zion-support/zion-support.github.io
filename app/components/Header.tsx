@@ -1,18 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-interface HeaderProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-const Header: React.FC<HeaderProps> = ({ className, children }) => {
-  return (
-    <div className={className}>
-      {children}
-    </div>
-  );
-};
-export default Header;
-=======
 import Link from 'next/link';
 
 interface HeaderProps {
@@ -48,4 +34,3 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {
 };
 
 export default Header;
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36

@@ -114,8 +114,6 @@ function processFiles() {
               content.includes('Error: Parsing error') ||
               content.split('\n').length < 3 ||
               content.includes('<<<<<<<') ||
-              content.includes('=======') ||
-              content.includes('>>>>>>>') ||
               content.match(/[{}]{3,}/) ||
               content.match(/[()]{3,}/) ||
               content.match(/[\[\]]{3,}/)) {

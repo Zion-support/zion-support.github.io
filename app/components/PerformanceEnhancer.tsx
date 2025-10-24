@@ -1,9 +1,4 @@
 'use client';
-<<<<<<< HEAD
-import React from 'react'
-</div>/div>/section>;
-export default PerformanceEnhancerPage; }
-=======
 import React from 'react';
 
 interface PerformanceEnhancerProps {
@@ -20,4 +15,3 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({ className }) 
 };
 
 export default PerformanceEnhancer;
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36

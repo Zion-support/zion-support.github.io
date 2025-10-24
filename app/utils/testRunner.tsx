@@ -1,10 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-export const testRunner = () => {
-  return null;
-};
-=======
 
 export default function testRunner() {
   return (
@@ -14,4 +9,3 @@ export default function testRunner() {
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36

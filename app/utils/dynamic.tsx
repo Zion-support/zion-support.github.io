@@ -1,10 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-export const dynamic = () => {
-  return null;
-};
-=======
 
 export default function dynamic() {
   return (
@@ -14,4 +9,3 @@ export default function dynamic() {
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36

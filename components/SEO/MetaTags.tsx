@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-"use client"
-interface MetaTagsProps {
-className?: string
-}
-}
-const MetaTags: React.FC<MetaTagsProps> = ({ className = '' ,}) => {
-return (</MetaTagsProps>,
-    <div className={className}></div>h2>MetaTags</h2>p>This component is under construction.</p>/div>
-  )
-}
-;
-export default MetaTags;
-=======
 import React from 'react';
 import Head from 'next/head';
 
@@ -58,4 +43,3 @@ const MetaTags: React.FC<MetaTagsProps> = ({
 };
 
 export default MetaTags;
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36

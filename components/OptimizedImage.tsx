@@ -2,35 +2,6 @@
 import React from 'react';
 
 interface OptimizedImageProps {
-<<<<<<< HEAD
-src: string
-alt: string
-width?: number
-height?: number
-className?: string
-  "data-testid"?: string
-  [ke,y: string]: any,}
-}
-const OptimizedImage: React.FC<OptimizedImageProps /> = ({
-src,alt
-width = 800
-height = 600
-className=""
-  "data-testid": testId
-  ...props
-}) => {
-return (</OptimizedImageProps>Imagesr c={src}
-      alt={alt}
-      width={width}
-      height={height}
-      className={className}
-      data-testid={testId}
-      {...props} />
-  )
-}
-;
-export default OptimizedImage;</Image>
-=======
   className?: string;
 }
 
@@ -44,4 +15,3 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ className }) => {
 };
 
 export default OptimizedImage;
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36

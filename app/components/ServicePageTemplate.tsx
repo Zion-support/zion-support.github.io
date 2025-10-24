@@ -1,18 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-interface ServicePageTemplateProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({ className, children }) => {
-  return (
-    <div className={className}>
-      {children}
-    </div>
-  );
-};
-=======
 
 interface ServicePageTemplateProps {
   className?: string;
@@ -27,5 +14,4 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({ className }) 
   );
 };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36
 export default ServicePageTemplate;

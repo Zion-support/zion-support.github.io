@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-interface pageProps {
-className?: string
-}
-}
-const page: React.FC<pageProps>/p> = ({ className = '' ,}) => {
-return (</pageProps>,
-    <div className={className} /></div>h2>page</h2>p>This component is under construction.</p>/div>
-  )
-}
-export default page}
-=======
 'use client';
 import React from 'react';
 
@@ -34,4 +21,3 @@ function Pageyg1af3fj4() {
 Pageyg1af3fj4.displayName = '';
 
 export default Pageyg1af3fj4;
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36

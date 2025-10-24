@@ -1,10 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-export const link = () => {
-  return null;
-};
-=======
 
 export default function link() {
   return (
@@ -14,4 +9,3 @@ export default function link() {
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36
