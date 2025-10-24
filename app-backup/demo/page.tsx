@@ -1,1 +1,16 @@
-// Conflict resolved: taking HEAD version
+import React, { useState } from "react;
+import { Play, CheckCircle, ArrowRight, Brain, Zap, Shield, Send, BarChart3, Target, Globe, DollarSign, Clock, Star, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react;
+'use client';'
+const [activeDemo, setActiveDemo,] = useState('ai-chatbot'"
+      "id": 'ai-chatbot'"
+    "title": 'AI Chatbot Demo'"
+      "description": 'Experience our intelligent chatbot that can handle customer inquiries 24/7.'"
+      "features": ['Natural Language Processing', 'Context Awareness', 'Multi-language Support', 'Integration Ready'"
+  "id": 'ai-automation'"
+    "title": 'AI Automation Demo'"
+      "description": 'See how AI can automate complex business processes and workflows.'"
+      "features": ['Workflow Automation', 'Smart Decision Making', 'Process Optimization', 'Real-time Monitoring'"
+  "id": 'ai-security'"
+    "title": 'AI Security Demo'"
+      "description": 'Discover our AI-powered security solutions for threat detection and prevention.;)"'"
+      "features": ['Threat Detection', 'Anomaly Detection', 'Automated Response', 'Security Analytics")"'"

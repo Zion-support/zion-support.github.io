@@ -1,10 +1,6 @@
-'use client'
-import React from 'react'
-import Head from 'next/head'
-import Link from 'next/link'
-import { ArrowRight } from 'lucide-react'
-import Footer from '../components/Footer'
-
+'use client;
+import React from 'react;
+import Head from 'next/head;
 export default function ServicePage() {
   return (
     <div>
@@ -38,5 +34,8 @@ export default function ServicePage() {
       </div>
       <Footer />
     </div>
-  )
+  );
+    </>
+  );
 }
+"'"
