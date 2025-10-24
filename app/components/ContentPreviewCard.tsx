@@ -1,7 +1,7 @@
-import React from 'react'
-import Footer from '../components/Footer'
-import Navigation from '../components/Navigation'
-import { CheckCircle, Brain, BarChart, Target, ArrowRight } from 'lucide-react'
+import React from 'react';
+import Footer from '../components/Footer';
+import Navigation from '../components/Navigation';
+import { CheckCircle, Brain, BarChart, Target, ArrowRight } from 'lucide-react';
 
 const Page: React.FC = () => {
   const features = [
@@ -23,7 +23,7 @@ const Page: React.FC = () => {
       description: 'Target the right audience with AI-driven precision and accuracy.',
       benefits: ['Audience segmentation', 'Behavioral analysis', 'Conversion optimization', 'ROI tracking']
     }
-  ]
+  ];
 
   return (
     <>
@@ -32,10 +32,10 @@ const Page: React.FC = () => {
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              ContentPreviewCard
+              Content Preview Card
             </h1>
             <p className="text-xl text-emerald-400 max-w-3xl mx-auto">
-              Advanced ContentPreviewCard solutions powered by artificial intelligence and machine learning.
+              Advanced Content Preview Card solutions powered by artificial intelligence and machine learning.
             </p>
           </div>
 
@@ -74,7 +74,7 @@ const Page: React.FC = () => {
       </div>
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;
