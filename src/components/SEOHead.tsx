@@ -1,18 +1,41 @@
-'use client';
-:all-pages-backup/components/SEOHead.tsx
-import React from 'react';
 
-interface SEOHeadProps {
-  className?: string;}
+
+'use client';
+interface SEOHeadProps {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-;
-const SEOHead: React.FC<SEOHeadProps> = ({ className = '' }) => {
-  return (</SEOHeadProps>
-    <div className={className}></div>
-      <h2>SEOHead</h2>
-      <p>This component is under construction.</p>
-    </div>
-  );
+  title?: string;
+  description?: string;
+  keywords?: string;
+  image?: string;
+  url?: string;
+  type?: string;
+  structuredData?: object;
+  canonical?: string;
+  noindex?: boolean;
+  nofollow?: boolean;
+}
+
+const SEOHead: React.FC;
+          <SEOHeadProps> = ({// TODO: Add content;}
+}
+
+const SEOHead: React.FC<SEOProps> = ({
+  title = 'Zion Tech Group - Advanced AI and IT Solutions',
+  description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.',
+  keywords = 'AI solutions, quantum computing, autonomous systems, digital transformation, cloud services, cybersecurity, business intelligence, machine learning, automation',
+  image = '/og-image.svg',
+  url = 'https://ziontechgroup.com',
+  type = 'website',
+//   structuredData,
+//   canonical,
+  noindex = false,
+  nofollow = false}) => {const canonicalUrl = canonical || url;}
+  const robotsContent = `${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`;
+  return null;
 };
 
-export default SEOHead;
+export default SEOHead;`
+
+
+

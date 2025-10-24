@@ -1,45 +1,126 @@
+import { Helmet } from 'react-helmet-async';
+import { BarChart, Target, TrendingUp, Users, Clock, Star } from 'lucide-react';
+'use client';
+import React from 'react';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
 
-const Page: React.FC = () => {
+const AIProjectManagerPage: React.FC = () => {
+  const _features = [
+    {
+      icon: BarChart,
+      title: 'AI-Powered Planning',
+      description: 'Intelligent project planning with predictive analytics and resource optimization',
+      benefits: ['40% faster planning', '85% accuracy in timelines', 'Smart resource allocation']
+    },
+    {
+      icon: Target,
+      title: 'Smart Task Management',
+      description: 'Automated task assignment and priority management based on AI insights',
+      benefits: ['60% productivity increase', 'Real-time prioritization', 'Automated workflows']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Predictive Analytics',
+      description: 'Advanced analytics to predict project outcomes and identify potential risks',
+      benefits: ['90% risk reduction', 'Data-driven decisions', 'Proactive problem solving']
+    },
+    {
+      icon: Users,
+      title: 'Team Collaboration',
+      description: 'Enhanced team collaboration with AI-powered communication and coordination',
+      benefits: ['Seamless communication', 'Real-time updates', 'Collaborative planning']
+    }
+  ];
+
+  const pricingPlans = [
+    {
+      name: 'Starter',
+      price: '$99',
+      period: '/month',
+      description: 'Perfect for small teams',
+      features: [
+        'Up to 5 projects',
+        'Basic AI planning',
+        'Team collaboration',
+        'Email support',
+        'Basic analytics'
+      ],
+      popular: false
+    },
+    {
+      name: 'Professional',
+      price: '$199',
+      period: '/month',
+      description: 'Ideal for growing businesses',
+      features: [
+        'Up to 25 projects',
+        'Advanced AI planning',
+        'Full team collaboration',
+        'Priority support',
+        'Advanced analytics',
+        'Custom integrations'
+      ],
+      popular: true
+    },
+    {
+      name: 'Enterprise',
+      price: '$399',
+      period: '/month',
+      description: 'For large organizations',
+      features: [
+        'Unlimited projects',
+        'Premium AI features',
+        'Enterprise collaboration',
+        '24/7 support',
+        'Custom analytics',
+        'White-label options',
+        'API access'
+      ],
+      popular: false
+    }
+  ];
+
+  const stats = [
+    { icon: Users, value: '500+', label: 'Active Teams' },
+    { icon: TrendingUp, value: '40%', label: 'Productivity Increase' },
+    { icon: Clock, value: '70%', label: 'Time Saved' },
+    { icon: Star, value: '4.9/5', label: 'User Rating' }
+  ];
+
+const AiProjectManagerPage: React.FC = () => {
   return (
-    <>
-    
-  </>
-      <SEOOptimizer
-        title="Page",
-        description="Professional page services and solutions for your business needs.",
-        keywords = {
-["page","AI solutions","business automation","technology services"]
-};
-    </div>
-        canonicalUrl="https://ziontechgroup.com/page"
-      /></SEOOptimizer>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        <Navigation /></Navigation>
-        <main className="container mx-auto px-4 py-16 pt-24"></main>
-          <div className="text-center"></div>
-            <h1 className="text-4xl m,
-  d:text-5xl font-bold text-white mb-8 neon-text"></h1>
-              Page</h1>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8"></p>
-              Professional page services and solutions for your business needs.</p>
-            </p>
-            <div className="cyber-card p-8 max-w-4xl mx-auto"></div>
-              <p className="text-gray-300"></p>
-                This page is under development. Please check back soon for more information about our page services.</p>
-              </p>
-            </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Helmet></Helmet>
+        <title>AI Project Manager | Zion Tech Group</title>
+        <meta name="description" content="Advanced AI project management solutions by Zion Tech Group." />
+      </Helmet>
+      
+      <Navigation />
+      
+      <div className="container mx-auto px-4 py-16"></div>
+        <div className="text-center"></div>
+          <h1 className="text-5xl font-bold text-white mb-6">AI Project Manager</h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
+            Coming Soon - Advanced AI project management solutions that will transform your business.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors"></button>
+              Contact Us
+            </button>
+            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors"></button>
+              Learn More
           </div>
-        </main>
-        <Footer /></Footer>
-      </div>
-    </div>
-    </div>
+      
+      <Footer />
   );
 };
 
-export default Page;
+
+export default $1;
+'use client';
+import React, { useState, useEffect } from 'react';
+import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
+
+export default AIProjectManagerPage;

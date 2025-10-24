@@ -1,32 +1,60 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Use standalone output for better compatibility
-  output: 'standalone',
+  // Disable static generation completely
+  output: 'export',
   trailingSlash: true,
   images: {
     unoptimized: true
   },
+  
+  // Disable static generation to avoid serialization issues
+  experimental: {
+    optimizePackageImports: ['@heroicons/react', 'lucide-react', 'framer-motion'],
+    webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB'],
+  },
+  
+  // Disable linting and type checking during build
   eslint: {
-    // Warning: This allows production builds to successfully complete even if
-    // your project has ESLint errors.
     ignoreDuringBuilds: true,
   },
   typescript: {
-    // Warning: This allows production builds to successfully complete even if
-    // your project has type errors.
     ignoreBuildErrors: true,
   },
-  // Skip problematic pages for now
-  experimental: {
-    missingSuspenseWithCSRBailout: false,
-  },
-  // Disable static generation to avoid prerendering errors
-  staticPageGenerationTimeout: 1000,
-  // Disable static optimization
-  swcMinify: false,
-  // Force all pages to be dynamic
+  
+  // Generate build ID for better caching
   generateBuildId: async () => {
-    return 'build-' + Date.now()
+    return 'build-' + Date.now();
+  },
+  
+  // Headers removed for static export compatibility
+  
+  
+  // Webpack optimizations
+  webpack: (config, { isServer, dev }) => {
+    // Optimize for production
+    if (!dev) {
+      config.optimization.splitChunks = {
+        chunks: 'all',
+        cacheGroups: {
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            name: 'vendors',
+            chunks: 'all',
+          },
+        },
+      };
+    }
+    
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+        net: false,
+        tls: false,
+      };
+    }
+    
+    return config;
   },
 }
 

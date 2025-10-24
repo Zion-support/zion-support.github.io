@@ -1,45 +1,14 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
 
-const Page: React.FC = () => {
+const AiMobileAppDevelopmentPage: React.FC = () => {
   return (
-    <>
-    
-  </>
-      <SEOOptimizer
-        title="Page",
-        description="Professional page services and solutions for your business needs.",
-        keywords = {
-["page","AI solutions","business automation","technology services"]
-};
-    </div>
-        canonicalUrl="https://ziontechgroup.com/page"
-      /></SEOOptimizer>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        <Navigation /></Navigation>
-        <main className="container mx-auto px-4 py-16 pt-24"></main>
-          <div className="text-center"></div>
-            <h1 className="text-4xl m,
-  d:text-5xl font-bold text-white mb-8 neon-text"></h1>
-              Page</h1>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8"></p>
-              Professional page services and solutions for your business needs.</p>
-            </p>
-            <div className="cyber-card p-8 max-w-4xl mx-auto"></div>
-              <p className="text-gray-300"></p>
-                This page is under development. Please check back soon for more information about our page services.</p>
-              </p>
-            </div>
-          </div>
-        </main>
-        <Footer /></Footer>
-      </div>
-    </div>
-    </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"><div className="text-center"><h1 className="text-4xl font-bold text-white mb-4">Ai Mobile App Development</h1><p className="text-gray-300 mb-8">Coming Soon - Advanced ai mobile app development solutions</p><a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors"></a>
+
+          Contact Us;
+        </a></div></div>)
   );
 };
 
-export default Page;
+export default AiMobileAppDevelopmentPage;

@@ -1,33 +1,43 @@
-import React from 'react';
-import Head from "next/head";
 
-import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
 
-export default function HelpPage() {
+import { Link } from 'react-router-dom';
+
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
+const HelpPage: React.FC = () => {
   return (
-    <>
-    :all-pages-backup/help/page.tsx
-  </>
-      <title>Help - Zion Tech Group</title>
-        <meta name="description" content="Professional help services by Zion Tech Group." /></meta>
-      </meta>
-        <Head></Head>
-        <title>Help - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." /></meta>
-      </Head>
-      
-      
-      <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        <div className="con tainermx-auto px-4 py-16"></div>
-          <h1 className="tex t-4xlfont-bold text-white mb-6">Help</h1>
-          <p className="tex t-lgtext-gray-300 mb-8">Professional help services by Zion Tech Group.</p>
-          
-          <Link href="/contact" className="inl ine-flexitems-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"></Link>
-            Contact Us</Link>
-            <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
-          </Link>
-        </div>
-      </div>,
-</div>;,
-  )}
+    <div>Coming Soon</div>
+
+  );
+};
+  const [searchTerm, setSearchTerm] = useState('');
+  const [activeCategory, setActiveCategory] = useState('getting-started');
+const categories = [
+    {/* TODO: Fix JSX expression */}
+  O: Add content;}
+};
+  i,
+  d: 'getting-started',
+      nam,
+  e: 'Getting Started',
+      ico,
+  n: BookOpen,
+      colo,
+  r: 'text-blue-400',
+      bgColo,
+  r: 'bg-blue-500/10'
+    },
+      i,
+  d: 'troubleshooting',
+      nam,
+  e: 'Troubleshooting',
+      ico,
+  n: HelpCircle,
+      colo,
+  r: 'text-red-400',
+      bgColo,
+  r: 'bg-red-500/10',
+
+export default HelpPage;
+import React, { useState } from 'react';

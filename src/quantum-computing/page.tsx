@@ -1,45 +1,97 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
 
-const Page: React.FC = () => {
+const QuantumComputingPage: React.FC = () => {
   return (
     <>
-    
-  </>
-      <SEOOptimizer
-        title="Page",
-        description="Professional page services and solutions for your business needs.",
-        keywords = {
-["page","AI solutions","business automation","technology services"]
-};
-    </div>
-        canonicalUrl="https://ziontechgroup.com/page"
-      /></SEOOptimizer>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        <Navigation /></Navigation>
-        <main className="container mx-auto px-4 py-16 pt-24"></main>
-          <div className="text-center"></div>
-            <h1 className="text-4xl m,
-  d:text-5xl font-bold text-white mb-8 neon-text"></h1>
-              Page</h1>
+      <Helmet></Helmet>
+        <title>Quantum Computing Solutions - Zion Tech Group</title>
+        <meta name="description" content="Next-generation quantum computing capabilities for complex problem solving and optimization. Harness the power of quantum mechanics for your business." />
+        <meta name="keywords" content="quantum computing, quantum algorithms, quantum optimization, quantum machine learning" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></main>
+        <div className="container mx-auto px-4 py-16"></div>
+          <div className="text-center mb-16"></div>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 neon-text"></h1>
+              Quantum Computing
             </h1>
-            <p className="text-xl text-gray-300 mb-8"></p>
-              Professional page services and solutions for your business needs.</p>
+            <p className="text-xl text-cyan-400 mb-8"></p>
+              Next-generation computing power for complex problem solving
             </p>
-            <div className="cyber-card p-8 max-w-4xl mx-auto"></div>
-              <p className="text-gray-300"></p>
-                This page is under development. Please check back soon for more information about our page services.</p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16"></div>
+            <div></div>
+              <h2 className="text-3xl font-bold text-white mb-6">Unlock Quantum Potential</h2>
+              <p className="text-gray-300 mb-6 text-lg"></p>
+                Our quantum computing solutions leverage the principles of quantum mechanics to solve 
+                complex optimization problems that are intractable for classical computers.
               </p>
+              <ul className="space-y-4 text-gray-300"></ul>
+                <li className="flex items-center"></li>
+                  <span className="text-cyan-400 mr-3">✓</span>
+                  Quantum optimization algorithms
+                </li>
+                <li className="flex items-center"></li>
+                  <span className="text-cyan-400 mr-3">✓</span>
+                  Quantum machine learning
+                </li>
+                <li className="flex items-center"></li>
+                  <span className="text-cyan-400 mr-3">✓</span>
+                  Cryptography and security
+                </li>
+                <li className="flex items-center"></li>
+                  <span className="text-cyan-400 mr-3">✓</span>
+                  Financial modeling
+                </li>
+              </ul>
+            </div>
+            <div className="bg-gradient-to-r from-purple-500/20 to-cyan-500/20 p-8 rounded-lg"></div>
+              <h3 className="text-2xl font-bold text-white mb-4">Quantum Applications</h3>
+              <div className="space-y-4"></div>
+                <div className="bg-white/10 p-4 rounded-lg"></div>
+                  <h4 className="text-lg font-semibold text-purple-400 mb-2">Portfolio Optimization</h4>
+                  <p className="text-gray-300">Optimize investment portfolios with quantum algorithms</p>
+                </div>
+                <div className="bg-white/10 p-4 rounded-lg"></div>
+                  <h4 className="text-lg font-semibold text-purple-400 mb-2">Drug Discovery</h4>
+                  <p className="text-gray-300">Accelerate pharmaceutical research with quantum simulation</p>
+                </div>
+                <div className="bg-white/10 p-4 rounded-lg"></div>
+                  <h4 className="text-lg font-semibold text-purple-400 mb-2">Supply Chain</h4>
+                  <p className="text-gray-300">Optimize complex logistics and supply chain networks</p>
+                </div>
+              </div>
             </div>
           </div>
-        </main>
-        <Footer /></Footer>
-      </div>
-    </div>
-    </div>
+
+          <div className="text-center"></div>
+            <h2 className="text-3xl font-bold text-white mb-8">Ready for Quantum Computing?</h2>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <a
+                href="/contact"
+                className="bg-gradient-to-r from-purple-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-cyan-700 transition-all duration-300"
+              ></a>
+                Explore Quantum Solutions
+              </a>
+              <a
+                href="/consultation"
+                className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
+              ></a>
+                Schedule Consultation
+              </a>
+            </div>
+          </div>
+        </div>
+      </main>
+      
+      <Footer />
+    </>
   );
 };
 
-export default Page;
+export default QuantumComputingPage;

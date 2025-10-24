@@ -1,245 +1,201 @@
-'use client';
-:all-pages-backup/components/EnhancedSEOHead.tsx
-import {Helmet} from 'lucide-react';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
-
-import { Helmet, Users, Target } from 'lucide-react';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Helmet, Users, Target } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { Helmet, Users, Target } from 'lucide-react';
-
-import React from 'react';
-import Head from "next/head";
 
 interface SEOHeadProps {
-
-
-  title?: string
-  description?: string
-  keywords?: string
-  canonical?: string
-  ogImage?: string
-  ogType?: string
-  twitterCard?: string
-  structuredData?: object}
+  title?: string;
+  description?: string;
+  keywords?: string;
+  image?: string;
+  url?: string;
+  type?: string;
 }
-;
-:all-pages-backup/components/EnhancedSEOHead.tsx
-const SEOHead: React.FC<SEOHeadProps> = ({;</SEOHeadProps>
-const SEOHea,</SEOHeadProps>
-  d: React.FC<SEOHeadProps> = ({
-  title = 'Zion Tech Group - Advanced AI & IT Solutions'
-  description = 'Leading technology company providing cutting-edge AI solutions, cloud infrastructure, cybersecurity, and custom software development services.'
-  keywords = 'AI solutions, cloud computing, cybersecurity, software development, IT services, business automation, data analytics, machine learning, artificial intelligence'
-  canonical = 'https://ziontechgroup.com'
-  ogImage = 'http,
-  s://ziontechgroup.com/og-image.jpg'
-  ogType = 'website'
-  twitterCard = 'summary_large_image',
-  structuredData,
+
+const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadProps> = "Zion Tech Group - AI-Powered Enterprise Solutions",
+  description = "Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.",
+  keywords = "AI solutions, enterprise AI, quantum computing, digital transformation, machine learning, automation, cybersecurity, cloud computing, IT services, Zion Tech Group",
+  image = "https://ziontechgroup.com/og-image.png",
+  url = "https://ziontechgroup.com",
+  type = "website"
 }) => {
-:all-pages-backup/components/EnhancedSEOHead.tsx
-  const defaultStructuredData = {
-;
-  const defaultStructuredData = {
-    "@context": "https://schema.org"
-    "@type": "Organization"
-    "name": "Zion Tech Group"
-    "description": description
-    "url": canonical
-    "logo": "https://ziontechgroup.com/logo.png"
-    "sameAs": [
-      "http,
-  s://twitter.com/ziontechgroup",
-      "https://linkedin.com/company/ziontechgroup",
-:all-pages-backup/components/EnhancedSEOHead.tsx
-      "https://github.com/ziontechgroup",
-      "https: //github.com/ziontechgroup"
-    ]
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/logo.png",
+    "description": description,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "364 E Main St STE 1008",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "postalCode": "19709",
+      "addressCountry": "US"
+    },
     "contactPoint": {
-      "@type": "ContactPoint"
-      "telephone": "+1-555-123-4567"
-      "contactType": "customer service"
-      "areaServed": "US"
-      "availableLanguage": "English"
-:all-pages-backup/components/EnhancedSEOHead.tsx;
-    };
-    "address": {
-      "@type": "PostalAddress"
-      "streetAddress": "123 Tech Street"
-      "addressLocality": "San Francisco"
-      "addressRegion": "CA"
-      "postalCode": "94105"
-      "addressCountry": "US"
-    }};
+      "@type": "ContactPoint",
+      "telephone": "+1-302-464-0950",
+      "contactType": "customer service",
+      "email": "kleber@ziontechgroup.com"
+    },
+    "sameAs": [
+      "https://linkedin.com/company/zion-tech-group",
+      "https://twitter.com/ziontechgroup",
+      "https://github.com/zion-tech-group"
+    ],
+    "foundingDate": "2020",
+    "numberOfEmployees": "50-100",
+    "industry": "Information Technology",
+    "services": [
+      "AI Solutions",
+      "Machine Learning",
+      "Quantum Computing",
+      "Digital Transformation",
+      "IT Services",
+      "Cybersecurity",
+      "Cloud Computing",
+      "Automation"
+    ]
+  };
 
-    }
-    "address": {
-      "@type": "PostalAddress"
-      "streetAddress": "123 Tech Street"
-      "addressLocality": "San Francisco"
-      "addressRegion": "CA"
-      "postalCode": "94105"
-      "addressCountry": "US"
-    }
-  }</SEOHeadProps>
-  return (</SEOHeadProps>
-    <>
-    
-  </>
-      <Helmet></Helmet>
-        <Head></Head>
-        <title>{title}</title>
-        <meta name=&quot;description&quot; content=&quot;Zion Tech Group&quot; /></meta>
-<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." /></meta>
-      </Head>
-        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, EnhancedSEOHead, AI solutions, intelligent automation&quot; /></meta>
-<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." /></meta>
-      </Head>
-      </Helmet>
-      <Navigation /></Navigation>
-      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
-        {/* Hero Section */}
-        <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
-          <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
-          <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;></h1>
-              EnhancedSEOHead</h1>
-            </h1>
-            <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;></p>
-              Zion Tech Group</p>
-            </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;></button>
-                Get Started</button>
-                <ArrowRight className=&quot;ml-2 h-5 w-5&quot; /></ArrowRight>
-              </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove,
-  r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
-                Learn More</button>
-              </button>
-            </div>
-          </div>
-        </section>,
-,
-        {/* Features Section */}
-        <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Key Features</h2>
-              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;></p>
-                Powerful AI-driven features designed to transform your business operations</p>
-              </p>
-            </div>
-            <div className=&quot;grid md: grid-cols-2 l,
-  g:grid-cols-4 gap-8&quot;></div>
-              {features.map((feature, index) => (
-                <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
-                  <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; /></feature>
-                  <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{feature.title}</h3>
-                  <p className=&quot;text-gray-300 mb-4&quot;>{feature.description}</p>
-                  <ul className=&quot;space-y-2&quot;></ul>
-                    {feature.benefits.map((benefit, idx) => (</ul>
-                      <li key={idx} className=&quot;flex items-center text-sm text-gray-300&quot;></li>
-                        <CheckCircle className=&quot;h-4 w-4 text-emerald-400 mr-2 flex-shrink-0&quot; /></CheckCircle>
-                        {benefit}</CheckCircle>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
-              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;></p>
-                Experience the benefits of cutting-edge AI technology</p>
-              </p>
-            </div>
-            <div className=&quot;grid md: grid-cols-2 l,
-  g:grid-cols-3 gap-8&quot;></div>
-              {benefits.map((benefit, index) => (
-                <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
-                  <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; /></CheckCircle>
-                  <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
-            <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
-            <p className=&quot;text-xl text-gray-300 mb-8&quot;></p>
-              Join thousands of businesses already using our AI solutions</p>
-            </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
-                Start Free Trial</button>
-              </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove,
-  r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
-                Contact Sales</button>
-              </button>
-            </div>
-          </div>
-        </section>
-      </div>
-      <Footer />
-:all-pages-backup/components/EnhancedSEOHead.tsx</Footer>
-      {/* Basic Meta Tags */}</Footer>
+  return (
+    <Helmet></Helmet>
+      {/* Basic Meta Tags */}
       <title>{title}</title>
-        <meta name="description" content={description} /></meta>
+      <meta name="description" content={description} /></meta>
       <meta name="keywords" content={keywords} /></meta>
-      <link rel="canonical" href={canonical} />
-      </link>
-      {/* Open Graph Tags */}</link>
+      <meta name="author" content="Zion Tech Group" /></meta>
+      <meta name="robots" content="index, follow" /></meta>
+      <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" /></meta>
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" /></meta>
+      <meta name="format-detection" content="telephone=no,address=no,email=no" /></meta>
+      <meta name="color-scheme" content="dark light" /></meta>
+      
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content={type} /></meta>
+      <meta property="og:url" content={url} /></meta>
       <meta property="og:title" content={title} /></meta>
       <meta property="og:description" content={description} /></meta>
-      <meta property="og:image" content={ogImage} /></meta>
-      <meta property="og:url" content={canonical} /></meta>
-      <meta property="og:type" content={ogType} /></meta>
-      <meta property="og:site_name" content="Zion Tech Group" />
-      </meta>
-      {/* Twitter Card Tags */}</meta>
-      <meta name="twitter:card" content={twitterCard} /></meta>
-      <meta name="twitter:title" content={title} /></meta>
-      <meta name="twitter:description" content={description} /></meta>
-      <meta name="twitter:image" content={ogImage} />
-      </meta>
-      {/* Additional SEO Tags */}</meta>
-      <meta name="robots" content="index, follow" /></meta>
-      <meta name="author" content="Zion Tech Group" /></meta>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </meta>
-      {/* Structured Data */}</meta>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData || defaultStructuredData);,
-        }}
-      /></script>
-    </>
-  )};
-
-export default SEOHead
-    </div>
-    </div>
+      <meta property="og:image" content={image} /></meta>
+      <meta property="og:site_name" content="Zion Tech Group" /></meta>
+      <meta property="og:locale" content="en_US" /></meta>
+      
+      {/* Twitter */}
+      <meta property="twitter:card" content="summary_large_image" /></meta>
+      <meta property="twitter:url" content={url} /></meta>
+      <meta property="twitter:title" content={title} /></meta>
+      <meta property="twitter:description" content={description} /></meta>
+      <meta property="twitter:image" content={image} /></meta>
+      <meta property="twitter:creator" content="@ziontechgroup" /></meta>
+      <meta property="twitter:site" content="@ziontechgroup" /></meta>
+      
+      {/* Canonical URL */}
+      <link rel="canonical" href={url} /></link>
+      
+      {/* Preconnect to external domains */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" /></link>
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" /></link>
+      
+      {/* Fonts */}
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" /></link>
+      
+      {/* Favicon */}
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" /></link>
+      <link rel="apple-touch-icon" href="/logo192.png" /></link>
+      <link rel="manifest" href="/manifest.json" /></link>
+      
+      {/* Theme Color */}
+      <meta name="theme-color" content="#0 f172 a" /></meta>
+      
+      {/* Structured Data */}
+      <script type="application/ld+json"></scrip>
+        {JSON.stringify(structuredData)}
+      </script>
+      
+      {/* Additional SEO Scripts */}
+      <script type="application/ld+json"></scrip>
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Zion Tech Group",
+          "url": "https://ziontechgroup.com/",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://ziontechgroup.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        })}
+      </script>
+      
+      {/* Performance Hints */}
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" /></link>
+      <link rel="dns-prefetch" href="//fonts.gstatic.com" /></link>
+      <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" /></link>
+      
+      {/* Performance Optimizations */}
+      <meta name="mobile-web-app-capable" content="yes" /></meta>
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" /></meta>
+      <meta name="application-name" content="Zion Tech Group" /></meta>
+      <meta name="msapplication-tooltip" content="AI-Powered Enterprise Solutions" /></meta>
+      
+      {/* Security Headers */}
+      <meta httpEquiv="X-Content-Type-Options" content="nosniff" /></meta>
+      <meta httpEquiv="X-Frame-Options" content="DENY" /></meta>
+      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" /></meta>
+      <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" /></meta>
+      <meta httpEquiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" /></meta>
+      
+      {/* Additional SEO Meta Tags */}
+      <meta name="rating" content="general" /></meta>
+      <meta name="distribution" content="global" /></meta>
+      <meta name="target" content="all" /></meta>
+      <meta name="HandheldFriendly" content="true" /></meta>
+      <meta name="MobileOptimized" content="width" /></meta>
+      
+      {/* Enhanced SEO Meta Tags */}
+      <meta name="google-site-verification" content="your-google-verification-code" /></meta>
+      <meta name="msvalidate.01" content="your-bing-verification-code" /></meta>
+      <meta name="yandex-verification" content="your-yandex-verification-code" /></meta>
+      <meta name="pinterest-site-verification" content="your-pinterest-verification-code" /></meta>
+      
+      {/* Additional Performance Hints */}
+      <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" /></link>
+      <link rel="preload" href="/images/hero-bg.webp" as="image" type="image/webp" /></link>
+      
+      {/* Critical Resource Hints */}
+      <link rel="preconnect" href="https://www.google-analytics.com" /></link>
+      <link rel="preconnect" href="https://www.googletagmanager.com" /></link>
+      <link rel="dns-prefetch" href="https://fonts.googleapis.com" /></link>
+      <link rel="dns-prefetch" href="https://fonts.gstatic.com" /></link>
+      
+      {/* Rich Snippets */}
+      <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" /></meta>
+      <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" /></meta>
+      <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" /></meta>
+      
+      {/* Enhanced Open Graph */}
+      <meta property="og:image:width" content="1200" /></meta>
+      <meta property="og:image:height" content="630" /></meta>
+      <meta property="og:image:alt" content="Zion Tech Group - AI-Powered Enterprise Solutions" /></meta>
+      <meta property="og:updated_time" content={new Date().toISOString()} /></meta>
+      
+      {/* Enhanced Twitter Cards */}
+      <meta name="twitter:image:alt" content="Zion Tech Group - AI-Powered Enterprise Solutions" /></meta>
+      <meta name="twitter:domain" content="ziontechgroup.com" /></meta>
+      <meta name="twitter:url" content={url} /></meta>
+      
+      {/* Additional Performance Hints */}
+      <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossOrigin="anonymous" /></link>
+      <link rel="preload" href="/images/hero-bg.webp" as="image" type="image/webp" /></link>
+      
+      {/* Manifest */}
+      <link rel="manifest" href="/manifest.json" /></link>
+      
+      {/* Theme Color Variations */}
+      <meta name="theme-color" content="#00 ffff" media="(prefers-color-scheme: light)" /></meta>
+      <meta name="theme-color" content="#0 f172 a" media="(prefers-color-scheme: dark)" /></meta>
+    </Helmet>
   );
-}
-export default SEOHead;
+};
+
+export default EnhancedSEOHead;

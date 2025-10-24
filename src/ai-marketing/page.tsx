@@ -1,45 +1,35 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
 
-const Page: React.FC = () => {
+const AiMarketingPage: React.FC = () => {
   return (
-    <>
-    
-  </>
-      <SEOOptimizer
-        title="Page",
-        description="Professional page services and solutions for your business needs.",
-        keywords = {
-["page","AI solutions","business automation","technology services"]
-};
-    </div>
-        canonicalUrl="https://ziontechgroup.com/page"
-      /></SEOOptimizer>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        <Navigation /></Navigation>
-        <main className="container mx-auto px-4 py-16 pt-24"></main>
-          <div className="text-center"></div>
-            <h1 className="text-4xl m,
-  d:text-5xl font-bold text-white mb-8 neon-text"></h1>
-              Page</h1>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8"></p>
-              Professional page services and solutions for your business needs.</p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <div className="container mx-auto px-4 py-20"></div>
+        <div className="max-w-4xl mx-auto text-center"></div>
+          <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6"></h1>
+            AI Marketing
+          </h1>
+          <p className="text-xl text-gray-300 mb-8"></p>
+            Revolutionary AI-powered marketing automation, ad optimization, and content generation.
+          </p>
+          <div className="bg-slate-800/50 rounded-lg p-8"></div>
+            <h2 className="text-2xl font-bold text-white mb-4">AI Marketing Solutions</h2>
+            <p className="text-gray-300 mb-6"></p>
+              Boost your marketing ROI with AI-driven campaigns, personalized content, and automated optimization.
             </p>
-            <div className="cyber-card p-8 max-w-4xl mx-auto"></div>
-              <p className="text-gray-300"></p>
-                This page is under development. Please check back soon for more information about our page services.</p>
-              </p>
-            </div>
+            <a
+              href="/contact"
+              className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center"
+            ></a>
+              <ArrowRight className="w-5 h-5 mr-2" />
+              Contact Us
+            </a>
           </div>
-        </main>
-        <Footer /></Footer>
+        </div>
       </div>
-    </div>
     </div>
   );
 };
 
-export default Page;
+export default AiMarketingPage;

@@ -1,332 +1,254 @@
+
+
 'use client';
-:all-pages-backup/components/OptimizedLoadingSpinner.tsx
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react';
-
-const OptimizedLoadingSpinnerPage: React.FC = () => {
-  const features = [
-    {
-:all-pages-backup/components/OptimizedLoadingSpinner.tsx
-      ico,
-  n: Brain,
-  title: title,
-  description: description,
-  benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-  {
-    icon: BarChart,
-  title: title,
-  description: description,
-  benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-  {
-    icon: Target,
-  title: title,
-  description: description,
-  benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-  {
-    icon: TrendingUp,
-  title: title,
-  description: description,
-  benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-      icon: Brain
-      titl,
-  e: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-  {
-    icon: BarChart
-      titl,
-  e: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-  {
-    icon: Target
-      titl,
-  e: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-  {
-    icon: TrendingUp
-      titl,
-  e: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
-  ]
-
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ]
-
-  return (
-:all-pages-backup/components/OptimizedLoadingSpinner.tsx;
-    <>
-    ;
-  </>
-      <Helmet>;</Helmet>
-    <>
-    
-  </>
-      <Helmet>;</Helmet>
-        <Head></Head>
-        <title>OptimizedLoadingSpinner</title>;
-        <meta name=&quot;description&quot; content=&quot;Advanced OptimizedLoadingSpinner solution for modern businesses.&quot; /></meta>
-<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." /></meta>
-      </Head>
-        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, OptimizedLoadingSpinner, AI solutions, intelligent automation&quot; /></meta>
-<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." /></meta>
-      </Head>
-      </Helmet>
-      <Navigation /></Navigation>
-      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
-        {/* Hero Section */}
-    </div>
-    </div>
-        <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
-          <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
-          <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;></h1>
-              OptimizedLoadingSpinner</h1>
-            </h1>
-            <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;></p>
-              Advanced OptimizedLoadingSpinner solution for modern businesses.</p>
-            </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;></button>
-                Get Started</button>
-                <ArrowRight className=&quot;ml-2 h-5 w-5&quot; /></ArrowRight>
-              </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove,
-  r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
-                Learn More</button>
-              </button>
-            </div>
-          </div>
-        </section>,
-,
-        {/* Features Section */}
-        <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Key Features</h2>
-              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;></p>
-                Powerful AI-driven features designed to transform your business operations</p>
-              </p>
-            </div>
-            <div className=&quot;grid md: grid-cols-2 l,
-  g:grid-cols-4 gap-8&quot;></div>
-              {features.map((feature, index) => (
-                <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
-                  <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; /></feature>
-                  <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{feature.title}</h3>
-                  <p className=&quot;text-gray-300 mb-4&quot;>{feature.description}</p>
-                  <ul className=&quot;space-y-2&quot;></ul>
-                    {feature.benefits.map((benefit, idx) => (</ul>
-                      <li key={idx} className=&quot;flex items-center text-sm text-gray-300&quot;></li>
-                        <CheckCircle className=&quot;h-4 w-4 text-emerald-400 mr-2 flex-shrink-0&quot; /></CheckCircle>
-                        {benefit}</CheckCircle>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+interface OptimizedLoadingSpinnerProps {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+  size?: 'sm' | 'md' | 'lg';
+  color?: 'primary' | 'secondary' | 'white';
+  className?: string;
+}
+const,
+  OptimizedLoadingSpinner: React.FC;
+          <OptimizedLoadingSpinnerProps> = memo()
+  ({ size = 'md', color = 'primary', className = '' }) => {/* TODO: Fix JSX expression */}
+  m: 'w-4 h-4'}
+      m,
+  d: 'w-8 h-8',
+      l,
+  g: 'w-12 h-12'
+    };
+    const colorClasses = {/* TODO: Fix JSX expression */}
+  O: Add content;}
+};
+  primar,
+  y: 'text-cyan-400',
+      secondar,
+  y: 'text-purple-400',
+      whit,
+  e: 'text-white'
+    };
+    return (<div>Coming Soon</div>)
+  )
+      
+          <div></div>
+className={`${sizeClasses[size]} ${colorClasses[color]} ${className}`}
+        role="status""
+        aria-label="Loading"
+// >
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          <svg></svg>"
+className="animate-spin""
+          fill="none""
+          viewBox="0 0 24 24""
+          xmlns="htt,"
+  p:// www.w3.org/2000/svg"
+//         >
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <circle></circle>"
+className="opacity-25""
+            cx="12""
+            cy="12""
+            r="10""
+            stroke="currentColor""
+            strokeWidth="4"
+// />
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <path></path>"
+className="opacity-75""
+            fill="currentColor""
+            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+// />
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          </svg>
+const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
+  ({
+    size = 'md',
+    variant = 'spinner',
+    text = 'Loading...',
+    className = '',
+    color = 'blue',
+    fullScreen = false
+  }) => {
+    const sizeClasses = useMemo(
+      () => ({
+        xs: 'h-3 w-3',
+        sm: 'h-4 w-4',
+        md: 'h-8 w-8',
+        lg: 'h-12 w-12',
+        xl: 'h-16 w-16'
+      }),
+      []
+    );
+    const textSizeClasses = useMemo(
+      () => ({
+        xs: 'text-xs',
+        sm: 'text-sm',
+        md: 'text-base',
+        lg: 'text-lg',
+        xl: 'text-xl'
+      }),
+      []
+    );
+    const colorClasses = useMemo(
+      () => ({
+        blue: 'border-blue-600 bg-blue-600',
+        gray: 'border-gray-600 bg-gray-600',
+        green: 'border-green-600 bg-green-600',
+        red: 'border-red-600 bg-red-600',
+        purple: 'border-purple-600 bg-purple-600'
+      }),
+      []
+    );
+    const renderSpinner = useMemo(() => {
+      const baseClasses = `${sizeClasses[size]} ${colorClasses[color]}`;
+      switch (variant) {
+        case 'dots':
+          return (
+            <div className='flex space-x-1' role='status' aria-label='Loading'>
+              {[0, 1, 2].map(i => (
+                <div
+                  key={i}
+                  className={`w-2 h-2 rounded-full animate-bounce ${colorClasses[color].split(' ')[1]}`}
+                  style={{ animationDelay: `${i * 0.1}s` }}
+                />
               ))}
             </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
-              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;></p>
-                Experience the benefits of cutting-edge AI technology</p>
-              </p>
+          );
+        case 'pulse':
+          return (
+            <div
+              className={`${baseClasses} rounded-full animate-pulse`}
+              role='status'
+              aria-label='Loading'
+            />
+          );
+        case 'skeleton':
+          return (
+            <div className='space-y-2' role='status' aria-label='Loading'>
+              <div
+                className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
+              />
+              <div
+                className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
+                style={{ width: '75%' }}
+              />
+              <div
+                className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
+                style={{ width: '50%' }}
+              />
             </div>
-            <div className=&quot;grid md: grid-cols-2 l,
-  g:grid-cols-3 gap-8&quot;></div>
-              {benefits.map((benefit, index) => (
-                <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
-                  <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; /></CheckCircle>
-                  <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
-                </div>
+          );
+        case 'bars':
+          return (
+            <div className='flex space-x-1' role='status' aria-label='Loading'>
+              {[0, 1, 2, 3].map(i => (
+                <div
+                  key={i}
+                  className={`w-1 ${colorClasses[color].split(' ')[1]} animate-pulse`}
+                  style={{
+                    height: `${12 + i * 4}px`,
+                    animationDelay: `${i * 0.1}s`
+                  }}
+                />
               ))}
             </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
-            <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
-            <p className=&quot;text-xl text-gray-300 mb-8&quot;></p>
-              Join thousands of businesses already using our AI solutions</p>
+          );
+        case 'spinner':
+        default:
+          return (
+            <div
+              className={`${baseClasses} rounded-full border-2 border-t-transparent animate-spin`}
+              role='status'
+              aria-label='Loading'
+            />
+          );
+      }
+    }, [size, variant, color, sizeClasses, colorClasses]);
+    const containerClasses = useMemo(() => {
+      const baseClasses = 'flex items-center justify-center';
+      const fullScreenClasses = fullScreen ? 'min-h-screen' : '';
+      return `${baseClasses} ${fullScreenClasses} ${className}`;
+    }, [fullScreen, className]);
+    return (
+      <div className={containerClasses}>
+        <div className='text-center'>
+          {renderSpinner}
+          {text && (
+            <p className={`mt-2 text-gray-600 ${textSizeClasses[size]}`}>
+              {text}
             </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
-                Start Free Trial</button>
-              </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove,
-  r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
-                Contact Sales</button>
-              </button>
-            </div>
-          </div>
-        </section>
+          )}
+        </div>
       </div>
-      <Footer /></Footer>
-    </>
-:all-pages-backup/components/OptimizedLoadingSpinner.tsx
-  )};
+    );
 
-export default OptimizedLoadingSpinnerPage
+    );
+
+    );
+
+    );
+
+    );
+
+          );
+        case 'pulse':
+
+          );
+        case 'skeleton':
+
   );
-}
-export default OptimizedLoadingSpinnerPage;
-text?: string
-class Nam e?: string
-color?: 'blue' | 'gray' | 'green' | 'red' | 'purple'
-{fullScreen?:boolean},
-{}
-constOptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProp s>= memo(
-:all-pages-backup/components/OptimizedLoadingSpinner.tsx
-({size= 'md'
-({size = 'md'
-variant= 'spinner'
-text= 'Loading...'
-className= ''
-color= 'blue')
-fullScreen= false,}) => {constsizeClasses= useMemo()
-() => ({
-:all-pages-backup/components/OptimizedLoadingSpinner.tsx
-xs: xs,
-  sm: sm,
-  md: md,
-  lg: lg,
-  xl: 'h-16w-1 6',})
-[]
-)
-consttextSizeClasses= useMemo()
-() => ({xs: xs,
-  sm: sm,
-  md: md,
-  lg: lg,
-  xl: 'text-xl',})
-[]
-)
-constcolorClasses= useMemo()
-() => ({blue: blue,
-  gray: gray,
-  green: green,
-  red: red,
-  purple: 'border-purple-600bg-purple-60 0',})
-xs: 'h-3 w-3',
-sm: 'h-4 w-4',
-md: 'h-8 w-8',
-lg: 'h-1 2 w-1 2',
-xl: 'h-16w-1 6',})
-[]
-)
-consttextSizeClasses= useMemo()
-() => ({xs: 'text-xs'
-s,
-  m: 'text-sm',
-md: 'text-base',
-lg: 'text-lg',
-xl: 'text-xl',})
-[]
-)
-constcolorClasses= useMemo()
-() => ({blue: 'border-blue-60 0 bg-blue-60 0'
-gra,
-  y: 'border-gray-60 0 bg-gray-60 0',
-green: 'border-green-600bg-green-60 0',
-red: 'border-red-600bg-red-60 0',
-purple: 'border-purple-600bg-purple-60 0',})
-[]
-)
-constrenderSpinner= useMemo(() => {switch (variant) {</OptimizedLoadingSpinnerProp>
-case 'do ts':</OptimizedLoadingSpinnerProp>
-return (
-    <>
-      <divclassName='flex space-x-1' role='status' aria-label='Loading'>{[0, 1, 2].map(i=>(</di><divkey ={i}></divkey>
-    </>
+        case 'bars':
+
+              ))}
   );
-className={`w-2 h-2 rounded-full animate-bounce${colorClasses[color].split('')[1]}`}
-style={{ animationDelay: `${i*0.1}s` }}</divkey>
-/></di>))}</di>)
-case 'pulse':
-return(<divclassName ={`${baseClasses} rounded-fullanimate-pulse`}>
-role='status'</divclassName>
-aria-label='Loading')</divclassName>
-/></di>)
-case 'skeleton':return(</di><divclassName='space-y-2' role='status' aria-label='Loading'></di><divclassName ={`h-4 bg-gray-200roundedanimate-pulse${sizeClasses[size]}`}></divclassName>
-/></di><divclassName ={`h-4 bg-gray-200roundedanimate-pulse${sizeClasses[size]}`}></divclassName>
-style={{ width: '7 5%'}}</divclassName>
-/></di><divclassName ={`h-4 bg-gray-200roundedanimate-pulse${sizeClasses[size]}`}></divclassName>
-style={{ width: '5 0%'}})</divclassName>
-/></di>)
-case 'bars':
-return (
-    <>
-      <divclassName='flex space-x-1' role='status' aria-label='Loading'>{[0, 1, 2, 3].map(i=>(</di><divkey ={i}></divkey>
-    </>
+        case 'spinner':
+        default:
+
+          );
+    }, [size, variant, color, sizeClasses, colorClasses, baseClasses]);
+
+      return `${baseClasses} ${fullScreen ? fullScreenClasses : ''} ${className}`;
+    }, [baseClasses, fullScreen, fullScreenClasses, className]);
+          {renderSpinner}
+              {text}
+          )}
   );
-className={`w-1 ${colorClasses[color].split('')[1]}animate-pulse`}
-:all-pages-backup/components/OptimizedLoadingSpinner.tsx
-style = {
-{
-};
-height: height,
-  animationDelay: `${i*0.1}s`
-style = {
-{;
-};
-height: `${12+ i*4}px`
-animationDelay: `${i*0.1}s`
-}}</divkey>
-/></di>))}</di>)
-case 'spinner':
-default:
-return(<divclassName = {`${baseClasses} rounded-full border-2 border-t-transparentanimate-spin`}>
-role='status'</divclassName>
-aria-label='Loading')</divclassName>
-/></di>)
-}
-}, [size, variant, color, sizeClasses, colorClasses])
-const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`}, [fullScreen, className])
-return (</div>
-<div className={containerClasses}></div>;
-<div className='text-center'>{renderSpinner}</div>;
-:all-pages-backup/components/OptimizedLoadingSpinner.tsx
-{text && (</div>}
-<p className={`mt-2 text-gray-600 ${textSizeClasses[size]}`}>{text}</p>p>
-{)},
-{text && (</div>;}
-<p className = {`mt-2 text-gray-600 ${textSizeClasses[size]}`}>{text}</p>p>
-)}
-</div>
-)
-{}
-)
-OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner'
-export default OptimizedLoadingSpinner
+);
+OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
+
+export default OptimizedLoadingSpinner;
+
+

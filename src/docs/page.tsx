@@ -1,33 +1,82 @@
 import React from 'react';
-import Head from "next/head";
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
-
-export default function DocsPage() {
+const Docs: React.FC = () => {
   return (
-    <>
-    :all-pages-backup/docs/page.tsx
-  </>
-      <title>Docs - Zion Tech Group</title>
-        <meta name="description" content="Professional docs services by Zion Tech Group." /></meta>
-      </meta>
-        <Head></Head>
-        <title>Docs - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." /></meta>
-      </Head>
-      
-      
-      <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        <div className="con tainermx-auto px-4 py-16"></div>
-          <h1 className="tex t-4xlfont-bold text-white mb-6">Docs</h1>
-          <p className="tex t-lgtext-gray-300 mb-8">Professional docs services by Zion Tech Group.</p>
+    <div>Coming Soon</div>
+  )
+    
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Navigation />
+      <main className="pt-20"></main>
+        <section className="container mx-auto px-4 py-16 text-center"></section>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text"></h1>
+// Docs
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
+// Documentation and technical resources;
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <Link
+              to="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg"
+
+// ></Link>
+              
           
-          <Link href="/contact" className="inl ine-flexitems-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"></Link>
-            Contact Us</Link>
-            <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
+          
+          
+          
+          
+          
+          
+          "
+          <Phone className="w-5 h-5 mr-2" /></Phone>
+// Get Free Consultation;
           </Link>
-        </div>
-      </div>,
-</div>;,
-  )}
+
+            <a
+              href="tel:+13024640950"
+              className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+            >
+              <Phone className="w-4 h-4 mr-2" />
+              (302) 464-0950
+            </a>
+          </div>
+        </section>
+
+        <section className="container mx-auto px-4 py-16">
+          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Ready to Get Started?
+            </h2>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              Contact us today for a free consultation and discover how our solutions can help your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg"
+              >
+                <Phone className="w-5 h-5 mr-2" />
+                Get Free Consultation
+              </Link>
+              <a
+                href="tel:+13024640950"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+              >
+                <Phone className="w-4 h-4 mr-2" />
+                (302) 464-0950
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default Docs;
+import React from 'react';

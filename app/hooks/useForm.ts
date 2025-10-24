@@ -1,107 +1,254 @@
-import { useState, useCallback } from "react";
+/**
+ * useForm Hook
+ * Provides form state management and validation
+ */
 
-interface FormState<T /> {
-  data: T;
-  isSubmitting: boolean;
-  submitStatus: "idle" | "success" | "error";
-  error,</T>
-  s: Partial<Record<keyof T, string />>;
+import { useState, useCallback, ChangeEvent } from 'react';
+  
+// import { logger } from '../utils/logger'
+import {
+  ValidationRule,
+  validateField,
+  validateForm,
+  isFormValid,
+  getFormErrors,
+  // ValidationResult as _ValidationResult,
+} from '../utils/formValidation'
+export interface UseFormConfig<T extends Record<string, unknown>> {;
+  initialValues: T;
+  
+  validationSchema?: Partial<Record<keyof T, ValidationRule[]>>
+  );
+  onSubmit: (values: T) => void | Promise<void>
+  );
+  validateOnChange?: boolean
+  );
+  validateOnBlur?: boolean
+  );
 }
-</Record>
-interface UseFormOptions<T /> {
-  initialData: T;</T>
-  onSubmit: (data: T) => Promise<void />
-  validate?: (dat,</void>
-  a: T) => Partial<Record<keyof T, string />>;
+
+export interface UseFormReturn<T extends Record<string, unknown>> {
+  values: T
+  );
+  errors: Record<keyof T, string[]>
+  );
+  touched: Record<keyof T, boolean>
+  );
+  isSubmitting: boolean
+  );
+  isValid: boolean
+  );
+  handleChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void
+  );
+  handleBlur: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void
+  );
+  handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void
+  );
+  setFieldValue: (field: keyof T, value: T[keyof T]) => void
+  );
+  setFieldError: (field: keyof T, errors: string[]) => void
+  );
+  setFieldTouched: (field: keyof T, touched: boolean) => void
+  );
+  resetForm: () => void
+  );
+  validateField: (field: keyof T) => void
+  );
+  validateAllFields: () => boolean
+  );
 }
-</Record>
-export function useForm<T extends Record<string, any />>({
-  initialData,
-  onSubmit,
-  validate,</T>
-}: UseFormOptions<T />) {</T>
-  const [formState, setFormState] = useState<FormState<T />>({
-    data: initialData,
-    isSubmitting: false,
-    submitStatus: "idle",
-    errors: {},
-  });
-</FormState>
-  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement />) => {;
-    const { name, value } = e.target;
-    setFormState(prev => ({
-      ...prev,
-      data: {,
-        ...prev.data,
-        [name]: value,
-      },
-      errors: {,
-        ...prev.errors,
-        [name]: "", // Clear error when user starts typing
-      },)
-    }));
-  }, []);
 
-  const handleSubmit = useCallback(async (e: React.FormEvent) => {;
-    e.preventDefault();
-    ,
-    // Validate form,
-    const validationErrors = validate ? validate(formState.data) : {};
-    if (Object.keys(validationErrors).length > 0) {
-      setFormState(prev => ({
+export function useForm<T extends Record<string, unknown>>({
+  initialValues, validationSchema = {}, onSubmit: _onSubmit, validateOnChange = true, validateOnBlur = true
+}: UseFormConfig<T>): UseFormReturn<T> {
+  const [values, setValues] = useState<T>(initialValues)
+  );
+  const [errors, setErrors] = useState<Record<keyof T, string[]>>({} as Record<keyof T, string[]>)
+  );
+  const [touched, setTouched] = useState<Record<keyof T, boolean>>({} as Record<keyof T, boolean>)
+  );
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  // Validate a single field
+  const validateSingleField = useCallback(
+    (field: keyof T): void => {
+      if (!validationSchema[field]) return
+  );
+      const _fieldValue = values[field];
+      const _rules = validationSchema[field];
+      const _result = validateField(fieldValue, rules)
+  );
+      setErrors(prev => ({
         ...prev,
-        errors: validationErrors,)
-      }));
-      return;
-    }
-
-    setFormState(prev => ({
-      ...prev,
-      isSubmitting: true,
-      submitStatus: "idle",
-      errors: {},)
-    }));
-
-    try {
-      await onSubmit(formState.data);
-      setFormState(prev => ({
-        ...prev,
-        submitStatus: "success",
-        data: initialData, // Reset form)
-      }));
-    } catch (error) {
-      // Log error in development, send to error service in production
-      if (process.env.NODE_ENV === "development") {
-        console.error("Form submission error:", error);
+        [field]: result.errors
+      }))
+  );
+    },
+    [values, validationSchema];
+  )
+  );
+  // Validate all fields
+  const validateAllFields = useCallback((): boolean => {
+    if (Object.keys(validationSchema).length === 0) return true
+  );
+    const _validationResults = validateForm(values, validationSchema as Record<keyof T, ValidationRule[]>)
+  );
+    const _formErrors = getFormErrors(validationResults)
+  );
+    setErrors(formErrors)
+  );
+    return isFormValid(validationResults)
+  );
+  }, [values, validationSchema])
+  );
+  // Handle input change
+  const handleChange = useCallback(
+    (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+      const { name, value, type } = e.target
+  );
+      const _fieldName = name as keyof T
+  );
+      // Handle checkbox inputs
+      let fieldValue: unknown = value
+  );
+      if (type === 'checkbox' && 'checked' in e.target) {
+        fieldValue = (e.target as HTMLInputElement).checked
+  );
       }
-      // In production, you would send this to your error monitoring service
-      // Example: sendToErrorService(error, "FormSubmission");
-      
-      setFormState(prev => ({
+
+      setValues(prev => ({
         ...prev,
-        submitStatus: "error",)
-      }));
-    } finally {
-      setFormState(prev => ({
+        [fieldName]: fieldValue
+      }))
+  );
+      // Validate on change if enabled
+      if (validateOnChange && touched[fieldName]) {
+        setTimeout(() => validateSingleField(fieldName), 0)
+  );
+      }
+    },
+    [validateOnChange, touched, validateSingleField];
+  )
+  );
+  // Handle input blur
+  const handleBlur = useCallback(
+    (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+      const _fieldName = e.target.name as keyof T
+  );
+      setTouched(prev => ({
         ...prev,
-        isSubmitting: false,)
-      }));
+        [fieldName]: true
+      }))
+  );
+      // Validate on blur if enabled
+      if (validateOnBlur) {
+        validateSingleField(fieldName)
+  );
+      }
+    },
+    [validateOnBlur, validateSingleField];
+  )
+  );
+  // Handle form submission
+  const handleSubmit = useCallback(
+    async (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault()
+  );
+      // Mark all fields as touched
+      const allTouched = Object.keys(values).reduce((acc, key) => {
+        acc[key as keyof T] = true
+  );
+        return acc
+  );
+      }, {} as Record<keyof T, boolean>)
+  );
+      setTouched(allTouched)
+  );
+      // Validate all fields
+      const _isValid = validateAllFields()
+  );
+      if (!isValid) {
+        return
+  );
+      }
+
+      setIsSubmitting(true)
+  );
+      try {
+        await onSubmit(values)
+  );
+      } catch (error) {
+
+      } finally {
+        setIsSubmitting(false)
+  );
+      }
+    },
+    [values, validateAllFields];
+  )
+  );
+  // Set field value programmatically
+  const setFieldValue = useCallback((field: keyof T, value: T[keyof T]) => {
+    setValues(prev => ({
+      ...prev,
+      [field]: value
+    }))
+  );
+    if (validateOnChange && touched[field]) {
+      setTimeout(() => validateSingleField(field), 0)
+  );
     }
-  }, [formState.data, onSubmit, validate, initialData]);
-
+  }, [validateOnChange, touched, validateSingleField])
+  );
+  // Set field error programmatically
+  const setFieldError = useCallback((field: keyof T, fieldErrors: string[]) => {
+    setErrors(prev => ({
+      ...prev,
+      [field]: fieldErrors
+    }))
+  );
+  }, [])
+  );
+  // Set field touched programmatically
+  const setFieldTouched = useCallback((field: keyof T, isTouched: boolean) => {
+    setTouched(prev => ({
+      ...prev,
+      [field]: isTouched
+    }))
+  );
+  }, [])
+  );
+  // Reset form to initial values
   const resetForm = useCallback(() => {
-    setFormState({
-      data: initialData,
-      isSubmitting: false,
-      submitStatus: "idle",
-      errors: {},);
-    });
-  }, [initialData]);
-
+    setValues(initialValues)
+  );
+    setErrors({} as Record<keyof T, string[]>)
+  );
+    setTouched({} as Record<keyof T, boolean>)
+  );
+    setIsSubmitting(false)
+  );
+  }, [initialValues])
+  );
+  // Check if form is valid
+  const isValid = Object.keys(errors).length === 0 || 
+    Object.values(errors).every(errorArray => errorArray.length === 0)
+  );
   return {
-    ...formState,
-    handleInputChange,
+    values,
+    errors,
+    touched,
+    isSubmitting,
+    isValid,
+    handleChange,
+    handleBlur,
     handleSubmit,
+    setFieldValue,
+    setFieldError,
+    setFieldTouched,
     resetForm,
-  };
-}</HTMLInputElement>
+    validateField: validateSingleField,
+    validateAllFields
+  }
+  );
+}

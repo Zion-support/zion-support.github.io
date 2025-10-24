@@ -1,118 +1,85 @@
 #!/usr/bin/env python3
 """
-Script to fix common syntax errors in TypeScript/JavaScript files
+Script to fix common syntax errors after merge conflict cleanup.
 """
+
 import os
 import re
 import glob
 
-def fix_duplicate_imports(content):
-    """Remove duplicate imports"""
-    lines = content.split('\n')
-    seen_imports = set()
-    fixed_lines = []
-    
-    for line in lines:
-        # Check if it's an import statement
-        if line.strip().startswith('import '):
-            # Extract the import statement (without semicolon)
-            import_statement = line.strip().rstrip(';')
-            if import_statement not in seen_imports:
-                seen_imports.add(import_statement)
-                # Add semicolon if missing
-                if not line.strip().endswith(';'):
-                    fixed_lines.append(line.rstrip() + ';')
-                else:
-                    fixed_lines.append(line)
-            # Skip duplicate imports
-        else:
-            fixed_lines.append(line)
-    
-    return '\n'.join(fixed_lines)
-
-def fix_missing_semicolons(content):
-    """Add missing semicolons where needed"""
-    lines = content.split('\n')
-    fixed_lines = []
-    
-    for i, line in enumerate(lines):
-        stripped = line.strip()
-        
-        # Skip empty lines, comments, and lines that already end with semicolon
-        if not stripped or stripped.startswith('//') or stripped.startswith('/*') or stripped.startswith('*'):
-            fixed_lines.append(line)
-            continue
-            
-        # Skip lines that already end with semicolon, brace, or are part of multi-line statements
-        if (stripped.endswith(';') or stripped.endswith('{') or stripped.endswith('}') or 
-            stripped.endswith(',') or stripped.endswith('(') or stripped.endswith(')') or
-            stripped.endswith('[') or stripped.endswith(']') or stripped.endswith(':')):
-            fixed_lines.append(line)
-            continue
-            
-        # Skip import/export statements that might be multi-line
-        if stripped.startswith('import ') or stripped.startswith('export '):
-            # Check if next line continues the import/export
-            if i + 1 < len(lines) and lines[i + 1].strip().startswith('from '):
-                fixed_lines.append(line)
-                continue
-        
-        # Add semicolon to statements that need it
-        if (stripped and not stripped.startswith('//') and 
-            not stripped.startswith('/*') and not stripped.startswith('*') and
-            not stripped.startswith('import ') and not stripped.startswith('export ') and
-            not stripped.startswith('function ') and not stripped.startswith('const ') and
-            not stripped.startswith('let ') and not stripped.startswith('var ') and
-            not stripped.startswith('if ') and not stripped.startswith('for ') and
-            not stripped.startswith('while ') and not stripped.startswith('switch ') and
-            not stripped.startswith('try ') and not stripped.startswith('catch ') and
-            not stripped.startswith('return ') and not stripped.startswith('throw ') and
-            not stripped.startswith('break ') and not stripped.startswith('continue ') and
-            not stripped.startswith('case ') and not stripped.startswith('default ') and
-            not stripped.startswith('}') and not stripped.startswith('{') and
-            not stripped.startswith('//') and not stripped.startswith('/*') and
-            not stripped.startswith('*') and not stripped.startswith('*/')):
-            
-            # Add semicolon if the line looks like a statement
-            if ('=' in stripped or 'return' in stripped or 'console.' in stripped or 
-                'throw' in stripped or 'break' in stripped or 'continue' in stripped):
-                fixed_lines.append(line.rstrip() + ';')
-            else:
-                fixed_lines.append(line)
-        else:
-            fixed_lines.append(line)
-    
-    return '\n'.join(fixed_lines)
-
-def fix_quotes_consistency(content):
-    """Fix inconsistent quote usage"""
-    # Convert all single quotes to double quotes for consistency
-    content = re.sub(r"'([^']*)'", r'"\1"', content)
-    return content
-
-def fix_jsx_syntax(content):
-    """Fix common JSX syntax issues"""
-    # Fix missing closing tags
-    content = re.sub(r'<(\w+)([^>]*?)(?<!/)>', r'<\1\2>', content)
-    
-    # Fix self-closing tags
-    content = re.sub(r'<(\w+)([^>]*?)(?<!/)>', r'<\1\2 />', content)
-    
-    return content
-
-def fix_file(file_path):
-    """Fix syntax errors in a single file"""
+def fix_syntax_errors(file_path):
+    """Fix syntax errors in a single file."""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         original_content = content
         
-        # Apply fixes
-        content = fix_duplicate_imports(content)
-        content = fix_missing_semicolons(content)
-        content = fix_quotes_consistency(content)
-        content = fix_jsx_syntax(content)
+        # Fix const className = {className} -> className={className}
+        content = re.sub(r'const className\s*=\s*\{className\}', 'className={className}', content)
+        
+        # Fix const className = `...` -> className={`...`}
+        content = re.sub(r'const className\s*=\s*`([^`]+)`', r'className={`\1`}', content)
+        
+        # Fix onClick="{onClick}" -> onClick={onClick}
+        content = re.sub(r'onClick="\{([^}]+)\}"', r'onClick={\1}', content)
+        
+        # Fix whileHover="{{" -> whileHover={{
+        content = re.sub(r'whileHover="\{\{\s*"', 'whileHover={{', content)
+        content = re.sub(r'whileTap="\{\{\s*"', 'whileTap={{', content)
+        content = re.sub(r'initial="\{\{\s*"', 'initial={{', content)
+        content = re.sub(r'animate="\{\{\s*"', 'animate={{', content)
+        content = re.sub(r'transition="\{\{\s*"', 'transition={{', content)
+        
+        # Fix }} -> }}
+        content = re.sub(r'\s*\}\}\s*"', '}}', content)
+        
+        # Fix standalone <></> fragments
+        content = re.sub(r'\s*<>\s*$', '', content, flags=re.MULTILINE)
+        content = re.sub(r'^\s*</>\s*$', '', content, flags=re.MULTILINE)
+        
+        # Fix missing closing tags
+        content = re.sub(r'<motion\.div\s+([^>]+)\s*/>', r'<motion.div \1>', content)
+        
+        # Fix broken JSX attributes
+        content = re.sub(r'(\w+)\s*=\s*`([^`]+)`', r'\1={`\2`}', content)
+        
+        # Fix broken className patterns
+        content = re.sub(r'className="w-4h-4"', 'className="w-4 h-4"', content)
+        
+        # Fix broken rounded classes
+        content = re.sub(r'rounded-2\s*xl', 'rounded-2xl', content)
+        content = re.sub(r'rounded-2\s*x', 'rounded-2xl', content)
+        
+        # Fix broken shadow classes
+        content = re.sub(r'shadow-2\s*xl', 'shadow-2xl', content)
+        content = re.sub(r'shadow-2\s*x', 'shadow-2xl', content)
+        
+        # Fix broken transition classes
+        content = re.sub(r'transition-opacityduration-500', 'transition-opacity duration-500', content)
+        content = re.sub(r'transition-opacityduration-500blur-sm', 'transition-opacity duration-500 blur-sm', content)
+        
+        # Fix broken gradient classes
+        content = re.sub(r'from-cyan-500/5\s*via-purple-500/5\s*to-cyan-500/5', 'from-cyan-500/5 via-purple-500/5 to-cyan-500/5', content)
+        content = re.sub(r'from-cyan-500/20\s*via-purple-500/20\s*to-cyan-500/20', 'from-cyan-500/20 via-purple-500/20 to-cyan-500/20', content)
+        
+        # Fix broken border classes
+        content = re.sub(r'hover:\s*border-indigo-400/50', 'hover:border-indigo-400/50', content)
+        
+        # Fix broken return statements
+        content = re.sub(r'return\s*\'([^\']+)\';\s*,', r'return \'\1\';', content)
+        
+        # Fix broken function syntax
+        content = re.sub(r'}\s*,\s*default:', '}\n  default:', content)
+        
+        # Fix broken JSX closing tags
+        content = re.sub(r'</>\s*$', '', content, flags=re.MULTILINE)
+        
+        # Fix broken JSX fragments
+        content = re.sub(r'^\s*<>\s*$', '', content, flags=re.MULTILINE)
+        
+        # Clean up extra whitespace
+        content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)
         
         # Only write if content changed
         if content != original_content:
@@ -123,39 +90,39 @@ def fix_file(file_path):
         return False
         
     except Exception as e:
-        print(f"Error fixing {file_path}: {e}")
+        print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
-    """Main function to fix all syntax errors"""
+    """Main function to fix syntax errors in all files."""
     patterns = [
-        './app/**/*.tsx',
-        './app/**/*.ts', 
-        './app/**/*.js',
-        './app/**/*.jsx',
-        './src/**/*.tsx',
-        './src/**/*.ts',
-        './src/**/*.js', 
-        './src/**/*.jsx',
-        './components/**/*.tsx',
-        './components/**/*.ts',
-        './components/**/*.js',
-        './components/**/*.jsx'
+        '**/*.tsx',
+        '**/*.ts', 
+        '**/*.js',
+        '**/*.jsx'
     ]
     
-    files_to_fix = []
+    files_processed = 0
+    files_fixed = 0
+    
     for pattern in patterns:
-        files_to_fix.extend(glob.glob(pattern, recursive=True))
+        for file_path in glob.glob(pattern, recursive=True):
+            # Skip node_modules and other directories
+            if 'node_modules' in file_path or '.git' in file_path:
+                continue
+                
+            try:
+                if fix_syntax_errors(file_path):
+                    files_fixed += 1
+                    print(f"✓ Fixed: {file_path}")
+                files_processed += 1
+                        
+            except Exception as e:
+                print(f"Error reading {file_path}: {e}")
     
-    fixed_count = 0
-    
-    for file_path in files_to_fix:
-        if os.path.isfile(file_path):
-            if fix_file(file_path):
-                print(f"Fixed: {file_path}")
-                fixed_count += 1
-    
-    print(f"\nFixed {fixed_count} files")
+    print(f"\nSummary:")
+    print(f"Files processed: {files_processed}")
+    print(f"Files fixed: {files_fixed}")
 
 if __name__ == "__main__":
     main()

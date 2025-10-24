@@ -1,66 +1,128 @@
-&quot;use client&quot
-import React from &quot;react&quot;
-import { Helmet } from &quot;react-helmet-async&quot;
-const ImageOptimizerPage: React.FC = () => {
-  const features = [
-    {
-      ico,
-  n: Brain,
-  title: title,
-  description: description,
-  benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-  {
-    icon: BarChart,
-  title: title,
-  description: description,
-  benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-  {
-    icon: Target,
-  title: title,
-  description: description,
-  benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-  {
-    icon: TrendingUp,
-  title: title,
-  description: description,
-  benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
-  ]
+import React, { useState, useRef, useEffect } from 'react';
 
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ]
-
-  return (
-    <>
-    ;
-  </>
-      <Helmet>;</Helmet>
-        <title>ImageOptimizer | Zion Tech Group</title>;
-        <meta name=&quot;description&quot; content=&quot;Professional ImageOptimizer services by Zion Tech Group.&quot; /></meta>
-        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ImageOptimizer, AI solutions, intelligent automation&quot; /></meta>
-      </Helmet>
-      <section className=&quot;py-20 px-4&quot;></section>
-        <div className=&quot;container mx-auto max-w-6xl&quot;></div>
-          <div className=&quot;text-center mb-16&quot;></div>
-            <h1 className=&quot;text-5xl md:text-6xl font-bold text-white mb-6&quot;>ImageOptimizer</h1>
-            <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed&quot;>Professional ImageOptimizer services tailored to your business needs.</p>p>
-          </div>
-        </div>
-      </section>
-    </div>,
-  ),
-    </div>
-  );
+interface ImageOptimizerProps {
+  src: string;
+  alt: string;
+  className?: string;
+  width?: number;
+  height?: number;
+  priority?: boolean;
+  placeholder?: string;
+  onLoad?: () => void;
+  onError?: () => void;
 }
 
-export default ImageOptimizerPage
-;
-export default ImageOptimizerPage
+const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
+  src;
+  alt,
+  className = '',
+  width,
+  height,
+  priority = false,
+  placeholder,
+  onLoad,
+  onError;
+}) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isInView, setIsInView] = useState(priority);
+  const [hasError, setHasError] = useState(false);
+  const imgRef = useRef<HTMLImageElement>(null);</HTMLImageElement>useEffect</HTMLImageElement>(() => {
+    if (priority) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.disconnect();
+        }
+      },
+      {
+        rootMargin: '50px 0px',
+        threshold: 0.01;
+      }
+    );
+
+    if (imgRef.current) {
+      observer.observe(imgRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [priority]);
+
+  const handleLoad = () => {
+    setIsLoaded(true);
+    onLoad?.();
+  };
+
+  const handleError = () => {
+    setHasError(true);
+    onError?.();
+  };
+
+  const generatePlaceholder = () => {
+    if (placeholder) return placeholder;
+    
+    const svg = `
+      <svg width="${width || 400}" height="${height || 300}" xmlns="http: //www.w3.org/2000/svg"></svg>
+        <rect width="100%" height="100%" fill="#1e293b"/>
+        <rect x="0" y="0" width="100%" height="2" fill="#00ffff" opacity="0.3"/>
+        <rect x="0" y="0" width="2" height="100%" fill="#00ffff" opacity="0.3"/>
+        <rect x="0" y="98%" width="100%" height="2" fill="#00ffff" opacity="0.3"/>
+        <rect x="98%" y="0" width="2" height="100%" fill="#00ffff" opacity="0.3"/>
+        <text x="50%" y="50%" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="14"></text>
+          Loading...,
+        </text>,
+      </svg>,
+    `;
+    ,
+    return `data:image/svg+xml;base64,${btoa(svg)}`;
+  };
+
+  if (hasError) {
+    return(<div;
+        className={`bg-slate-800 flex items-center justify-center ${className}`}
+        style={{ width, height }}
+      ></div>
+        <div className="text-gray-400 text-center"></div>
+          <div className="text-4xl mb-2">⚠️</div>
+          <div className="text-sm">Image failed to load</div>)
+        </div>)
+      </div>)
+    );
+  }
+
+  return(<div;
+      ref={imgRef}
+      className={`relative overflow-hidden ${className}`}
+      style={{ width, height }}
+    ></div>
+      {/* Placeholder */}
+      {!isLoaded && (</div>
+        <img
+          src={generatePlaceholder()}
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover animate-pulse"
+          style={{ filter: 'blur(1 px)' }}
+        /></img>
+      )}
+      
+      {/* Actual Image */}
+      {isInView && (
+        <img;
+          src={src}
+          alt={alt}
+          className={`w-full h-full object-cover transition-opacity duration-300 ${}
+            isLoaded ? 'opacity-100' : 'opacity-0'}
+          }`}
+          loading={priority ? 'eager' : 'lazy'}
+          decoding="async"
+          onLoad={handleLoad}
+          onError={handleError}
+          style={{ width, height }}
+        /></img>
+      )}
+    </div>
+  );
+};
+
+export default ImageOptimizer;

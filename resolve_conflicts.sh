@@ -1,27 +1,18 @@
 #!/bin/bash
 
-# Script to resolve merge conflicts by accepting incoming changes (from main)
-echo "Resolving merge conflicts by accepting incoming changes..."
+# Script to resolve merge conflicts by removing files that were deleted in main
+echo "Resolving merge conflicts by removing deleted files..."
 
-# Find all files with merge conflicts
-conflicted_files=$(git diff --name-only --diff-filter=U)
-
-if [ -z "$conflicted_files" ]; then
-    echo "No merge conflicts found."
-    exit 0
-fi
-
-echo "Found conflicted files:"
-echo "$conflicted_files"
-
-# Resolve conflicts by accepting incoming changes (from main)
-for file in $conflicted_files; do
-    echo "Resolving conflicts in: $file"
-    git checkout --theirs "$file"
-    git add "$file"
+# Get list of conflicted files
+git status --porcelain | grep "^DU\|^UD" | cut -c4- | while read file; do
+    echo "Removing conflicted file: $file"
+    git rm "$file"
 done
 
-echo "All conflicts resolved. Committing merge..."
-git commit -m "Resolve merge conflicts by accepting incoming changes from main"
+# Add all remaining changes
+git add .
 
-echo "Merge conflicts resolution completed."
+# Commit the resolution
+git commit -m "Resolve merge conflicts by removing deleted files"
+
+echo "Merge conflicts resolved!"

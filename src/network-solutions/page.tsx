@@ -1,33 +1,99 @@
 import React from 'react';
-import Head from "next/head";
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+const NetworkSolutionsPage: React.FC = () => {
+  const _features = [
+    {
+      icon: Globe,
+      title: 'Network Design',
+      description: 'Custom network architecture design and implementation',
+      benefits: ['Scalable design', 'High availability', 'Performance optimization']
+    },
+    {
+      icon: Shield,
+      title: 'Network Security',
+      description: 'Comprehensive network security solutions',
+      benefits: ['Firewall management', 'Intrusion detection', 'VPN solutions']
+    },
+    {
+      icon: Zap,
+      title: 'Performance Optimization',
+      description: 'Network performance monitoring and optimization',
+      benefits: ['Bandwidth management', 'Traffic analysis', 'QoS implementation']
+    },
+    {
+      icon: Settings,
+      title: 'Network Management',
+      description: '24/7 network monitoring and management',
+      benefits: ['Proactive monitoring', 'Issue resolution', 'Performance reporting']
+    }
+  ];
 
-export default function NetworkSolutionsPage() {
   return (
-    <>
-    :all-pages-backup/network-solutions/page.tsx
-  </>
-      <title>NetworkSolutions - Zion Tech Group</title>
-        <meta name="description" content="Professional networksolutions services by Zion Tech Group." /></meta>
-      </meta>
-        <Head></Head>
-        <title>NetworkSolutions - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." /></meta>
-      </Head>
-      
-      
-      <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        <div className="con tainermx-auto px-4 py-16"></div>
-          <h1 className="tex t-4xlfont-bold text-white mb-6">NetworkSolutions</h1>
-          <p className="tex t-lgtext-gray-300 mb-8">Professional networksolutions services by Zion Tech Group.</p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Navigation />
+      <main className="container mx-auto px-4 py-16 pt-24"></main>
+        <section className="text-center mb-16"></section>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse"></h1>
+
+// Network Solutions;
+          </h1>"
+          <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse"></p>
+// Enterprise Network Infrastructure;
+          </p>"
+          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"></p>
+            Build and manage robust network infrastructure with our comprehensive network solutions.
+
+            From design to deployment, we ensure your network is secure, fast, and reliable.
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
+            <a
+              href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
+// ></a>
+//               Get Started;
+          </a>
+              href="tel:+13024640950" className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+<Globe className="w-5 h-5" />
+
+              +1 302 464 0950;
+          </div>
+        </section>
+
+        <section className="mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
+            Network Services
+          </h2>
           
-          <Link href="/contact" className="inl ine-flexitems-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"></Link>
-            Contact Us</Link>
-            <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
-          </Link>
-        </div>
-      </div>,
-</div>;,
-  )}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                  <feature.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4 text-center neon-text">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300 mb-6 text-center text-sm leading-relaxed">
+                  {feature.description}
+                </p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default NetworkSolutionsPage;
+import Footer from '../components/Footer';

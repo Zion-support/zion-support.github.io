@@ -1,34 +1,47 @@
+import React from 'react'
+import {Helmet} from 'react-helmet-async'
+import {ArrowRight} from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+export default AccessibilityenhancerPage;
+'use client'
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-// Note: These components are not available in this context
 
-export default function AccessibilityEnhancerPage() {
+export default function AccessibilityenhancerPage() {
   return (
-    <>
-    
-  </>
-      <Helmet></Helmet>
-        <title>Accessibility Enhancer - Zion Tech Group</title>
-        <meta name="description" content="Enhance accessibility with our AI-powered tools and solutions." /></meta>
+
+export default function Component() {
+  return (
+    <div>
+      <h1>Component</h1>
+      <p>This component is under construction.</p>
+    </div>
+  );
+}
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <Helmet>
+        <title>Accessibilityenhancer - Zion Tech Group</title>
+        <meta name="description" content="Professional accessibility enhancement services by Zion Tech Group." />
+        <meta name="keywords" content="accessibility, enhancement, web accessibility, Zion Tech Group" />
       </Helmet>
-      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white py-20"></main>
-        <div className="max-w-7xl mx-auto px-4"></div>
-          <div className="text-center"></div>
-            <h1 className="text-4xl font-bold text-white mb-4"></h1>
-              Accessibility Enhancer</h1>
-            </h1>
-            <p className="text-gray-300 mb-8"></p>
-              This page is under construction.</p>
-            </p>
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hove,
-  r:to-purple-700 transition-all duration-300 inline-flex items-center"></button>
-              Learn More</button>
-              <ArrowRight className="w-4 h-4 ml-2" /></ArrowRight>
-            </button>
-          </div>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">Accessibilityenhancer</h1>
+          <p className="text-lg text-gray-300 mb-8">This page is under construction.</p>
+          
+          <Link
+            to="/contact"
+            className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+          >
+            Learn More
+            <ArrowRight className="w-4 h-4 ml-2" />
+          </Link>
         </div>
-      </main>
-    </>
+      </div>
+    </div>
   );
 }
