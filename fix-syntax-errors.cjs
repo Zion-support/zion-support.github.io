@@ -1,129 +1,140 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
-const glob = require('glob');
 
-// Function to fix duplicate imports
-function fixDuplicateImports(content) {
-  // Fix patterns like: Brain, Shield, Target, Users ,  Brain,  Shield,  Target,  Users
-  const duplicateImportRegex = /([A-Za-z][A-Za-z0-9]*),\s*([A-Za-z][A-Za-z0-9]*),\s*([A-Za-z][A-Za-z0-9]*),\s*([A-Za-z][A-Za-z0-9]*)\s*,\s*\1,\s*\2,\s*\3,\s*\4/g;
-  content = content.replace(duplicateImportRegex, '$1, $2, $3, $4');
-  
-  // Fix patterns with more complex duplicates
-  const complexDuplicateRegex = /([A-Za-z][A-Za-z0-9]*\s+as\s+[A-Za-z][A-Za-z0-9]*,\s*)+([A-Za-z][A-Za-z0-9]*\s+as\s+[A-Za-z][A-Za-z0-9]*)\s*,\s*\1/g;
-  content = content.replace(complexDuplicateRegex, (match, p1, p2) => {
-    return p1 + p2;
-  });
-  
-  // Fix simple duplicates at the end
-  const simpleDuplicateRegex = /([A-Za-z][A-Za-z0-9]*),\s*\1\s*from/g;
-  content = content.replace(simpleDuplicateRegex, '$1 from');
-  
-  return content;
-}
-
-// Function to fix malformed object syntax
-function fixMalformedObjects(content) {
-  // Fix {, patterns
-  content = content.replace(/{\s*,/g, '{');
-  
-  // Fix missing closing braces in objects
-  content = content.replace(/({\s*[^}]*),\s*$/gm, '$1\n  }');
-  
-  return content;
-}
-
-// Function to fix duplicate function declarations
-function fixDuplicateFunctions(content) {
-  // Remove duplicate function declarations
-  const lines = content.split('\n');
-  const seenFunctions = new Set();
-  const fixedLines = [];
-  
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-    const functionMatch = line.match(/const\s+([A-Za-z][A-Za-z0-9]*):\s*React\.FC/);
-    
-    if (functionMatch) {
-      const functionName = functionMatch[1];
-      if (seenFunctions.has(functionName)) {
-        // Skip duplicate function declarations
-        continue;
-      }
-      seenFunctions.add(functionName);
-    }
-    
-    fixedLines.push(line);
-  }
-  
-  return fixedLines.join('\n');
-}
-
-// Function to fix duplicate return statements
-function fixDuplicateReturns(content) {
-  // Find and fix duplicate return statements
-  const lines = content.split('\n');
-  let inFunction = false;
-  let returnCount = 0;
-  const fixedLines = [];
-  
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-    
-    if (line.includes('const') && line.includes(': React.FC')) {
-      inFunction = true;
-      returnCount = 0;
-    }
-    
-    if (line.includes('};') && inFunction) {
-      inFunction = false;
-      returnCount = 0;
-    }
-    
-    if (line.trim().startsWith('return') && inFunction) {
-      returnCount++;
-      if (returnCount > 1) {
-        // Skip duplicate return statements
-        continue;
-      }
-    }
-    
-    fixedLines.push(line);
-  }
-  
-  return fixedLines.join('\n');
-}
-
-// Function to fix syntax errors
+// Function to fix corrupted syntax
 function fixSyntaxErrors(content) {
-  // Fix missing semicolons
-  content = content.replace(/([^;}])\s*$/gm, '$1;');
+  let fixed = content;
   
-  // Fix missing closing braces
-  content = content.replace(/({\s*[^}]*)\s*$/gm, '$1\n  }');
+  // Fix corrupted variable declarations
+  fixed = fixed.replace(/const;\s*(\w+)\s*=/g, 'const $1 =');
+  fixed = fixed.replace(/let;\s*(\w+)\s*=/g, 'let $1 =');
+  fixed = fixed.replace(/var;\s*(\w+)\s*=/g, 'var $1 =');
   
-  // Fix malformed JSX
-  content = content.replace(/<div([^>]*)>\s*$/gm, '<div$1>');
+  // Fix corrupted object properties
+  fixed = fixed.replace(/(\w+),\s*(\w+)\s*:/g, '$1$2:');
+  fixed = fixed.replace(/(\w+);\s*(\w+)\s*:/g, '$1$2:');
   
-  return content;
+  // Fix corrupted JSX attributes
+  fixed = fixed.replace(/(\w+),\s*(\w+)\s*=/g, '$1$2=');
+  fixed = fixed.replace(/(\w+);\s*(\w+)\s*=/g, '$1$2=');
+  
+  // Fix corrupted JSX elements
+  fixed = fixed.replace(/<(\w+);\s*className\s*=/g, '<$1 className=');
+  fixed = fixed.replace(/<(\w+),\s*className\s*=/g, '<$1 className=');
+  
+  // Fix corrupted function calls
+  fixed = fixed.replace(/(\w+),\s*(\w+)\s*\(/g, '$1$2(');
+  fixed = fixed.replace(/(\w+);\s*(\w+)\s*\(/g, '$1$2(');
+  
+  // Fix corrupted array elements
+  fixed = fixed.replace(/\[\s*(\w+),\s*(\w+)\s*\]/g, '[$1$2]');
+  fixed = fixed.replace(/\[\s*(\w+);\s*(\w+)\s*\]/g, '[$1$2]');
+  
+  // Fix corrupted string concatenation
+  fixed = fixed.replace(/(\w+),\s*(\w+)\s*\+/g, '$1$2 +');
+  fixed = fixed.replace(/(\w+);\s*(\w+)\s*\+/g, '$1$2 +');
+  
+  // Fix corrupted template literals
+  fixed = fixed.replace(/(\w+),\s*(\w+)\s*`/g, '$1$2`');
+  fixed = fixed.replace(/(\w+);\s*(\w+)\s*`/g, '$1$2`');
+  
+  // Fix corrupted return statements
+  fixed = fixed.replace(/return\s*(\w+),\s*(\w+)/g, 'return $1$2');
+  fixed = fixed.replace(/return\s*(\w+);\s*(\w+)/g, 'return $1$2');
+  
+  // Fix corrupted arrow functions
+  fixed = fixed.replace(/=>\s*(\w+),\s*(\w+)/g, '=> $1$2');
+  fixed = fixed.replace(/=>\s*(\w+);\s*(\w+)/g, '=> $1$2');
+  
+  // Fix corrupted destructuring
+  fixed = fixed.replace(/\{\s*(\w+),\s*(\w+)\s*\}/g, '{$1$2}');
+  fixed = fixed.replace(/\{\s*(\w+);\s*(\w+)\s*\}/g, '{$1$2}');
+  
+  // Fix corrupted imports
+  fixed = fixed.replace(/import\s*(\w+),\s*(\w+)\s*from/g, 'import $1$2 from');
+  fixed = fixed.replace(/import\s*(\w+);\s*(\w+)\s*from/g, 'import $1$2 from');
+  
+  // Fix corrupted exports
+  fixed = fixed.replace(/export\s*(\w+),\s*(\w+)/g, 'export $1$2');
+  fixed = fixed.replace(/export\s*(\w+);\s*(\w+)/g, 'export $1$2');
+  
+  // Fix specific patterns that are common
+  fixed = fixed.replace(/titl,\s*e:/g, 'title:');
+  fixed = fixed.replace(/descriptio,\s*n:/g, 'description:');
+  fixed = fixed.replace(/ico,\s*n:/g, 'icon:');
+  fixed = fixed.replace(/colo,\s*r:/g, 'color:');
+  fixed = fixed.replace(/stat,\s*s:/g, 'stats:');
+  fixed = fixed.replace(/lin,\s*k:/g, 'link:');
+  
+  // Fix corrupted JSX closing tags
+  fixed = fixed.replace(/<\/(\w+),\s*(\w+)>/g, '</$1$2>');
+  fixed = fixed.replace(/<\/(\w+);\s*(\w+)>/g, '</$1$2>');
+  
+  // Fix corrupted function parameters
+  fixed = fixed.replace(/\(\s*(\w+),\s*(\w+)\s*\)/g, '($1$2)');
+  fixed = fixed.replace(/\(\s*(\w+);\s*(\w+)\s*\)/g, '($1$2)');
+  
+  // Fix corrupted array destructuring
+  fixed = fixed.replace(/\[\s*(\w+),\s*(\w+)\s*\]/g, '[$1$2]');
+  fixed = fixed.replace(/\[\s*(\w+);\s*(\w+)\s*\]/g, '[$1$2]');
+  
+  // Fix corrupted object destructuring
+  fixed = fixed.replace(/\{\s*(\w+),\s*(\w+)\s*:\s*(\w+)\s*\}/g, '{$1$2: $3}');
+  fixed = fixed.replace(/\{\s*(\w+);\s*(\w+)\s*:\s*(\w+)\s*\}/g, '{$1$2: $3}');
+  
+  // Fix corrupted ternary operators
+  fixed = fixed.replace(/\?\s*(\w+),\s*(\w+)\s*:/g, '? $1$2 :');
+  fixed = fixed.replace(/\?\s*(\w+);\s*(\w+)\s*:/g, '? $1$2 :');
+  
+  // Fix corrupted logical operators
+  fixed = fixed.replace(/&&\s*(\w+),\s*(\w+)/g, '&& $1$2');
+  fixed = fixed.replace(/&&\s*(\w+);\s*(\w+)/g, '&& $1$2');
+  fixed = fixed.replace(/\|\|\s*(\w+),\s*(\w+)/g, '|| $1$2');
+  fixed = fixed.replace(/\|\|\s*(\w+);\s*(\w+)/g, '|| $1$2');
+  
+  return fixed;
 }
 
-// Main function to fix a file
-function fixFile(filePath) {
+// Function to remove console statements
+function removeConsoleStatements(content) {
+  return content.replace(/console\.(log|warn|error|info)\([^)]*\);?\s*/g, '');
+}
+
+// Function to fix prefer-const issues
+function fixPreferConst(content) {
+  return content.replace(/let\s+(\w+)\s*=\s*[^;]+;\s*\/\/\s*never\s+reassigned/g, (match, varName) => {
+    return match.replace(/let/, 'const');
+  });
+}
+
+// Main function to process files
+function processFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    const originalContent = content;
+    let modified = false;
     
-    // Apply all fixes
-    content = fixDuplicateImports(content);
-    content = fixMalformedObjects(content);
-    content = fixDuplicateFunctions(content);
-    content = fixDuplicateReturns(content);
-    content = fixSyntaxErrors(content);
+    // Fix syntax errors
+    const contentWithSyntax = fixSyntaxErrors(content);
+    if (contentWithSyntax !== content) {
+      content = contentWithSyntax;
+      modified = true;
+    }
     
-    // Only write if content changed
-    if (content !== originalContent) {
+    // Remove console statements
+    const contentWithoutConsole = removeConsoleStatements(content);
+    if (contentWithoutConsole !== content) {
+      content = contentWithoutConsole;
+      modified = true;
+    }
+    
+    // Fix prefer-const issues
+    const contentWithConst = fixPreferConst(content);
+    if (contentWithConst !== content) {
+      content = contentWithConst;
+      modified = true;
+    }
+    
+    if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
@@ -131,21 +142,58 @@ function fixFile(filePath) {
     
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Get all TypeScript/TSX files in src directory
-const files = glob.sync('src/**/*.{ts,tsx}', { cwd: process.cwd() });
+// Function to recursively find all .tsx files
+function findTsxFiles(dir) {
+  const files = [];
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+      files.push(...findTsxFiles(fullPath));
+    } else if (item.endsWith('.tsx')) {
+      files.push(fullPath);
+    }
+  }
+  
+  return files;
+}
 
-console.log(`Found ${files.length} files to check...`);
+// Main execution
+const srcDir = path.join(__dirname, 'src');
+const appDir = path.join(__dirname, 'app');
 
-let fixedCount = 0;
-for (const file of files) {
-  if (fixFile(file)) {
-    fixedCount++;
+let totalFixed = 0;
+
+// Process src directory
+if (fs.existsSync(srcDir)) {
+  const srcFiles = findTsxFiles(srcDir);
+  console.log(`Processing ${srcFiles.length} files in src directory...`);
+  
+  for (const file of srcFiles) {
+    if (processFile(file)) {
+      totalFixed++;
+    }
   }
 }
 
-console.log(`Fixed ${fixedCount} files`);
+// Process app directory
+if (fs.existsSync(appDir)) {
+  const appFiles = findTsxFiles(appDir);
+  console.log(`Processing ${appFiles.length} files in app directory...`);
+  
+  for (const file of appFiles) {
+    if (processFile(file)) {
+      totalFixed++;
+    }
+  }
+}
+
+console.log(`\nTotal files fixed: ${totalFixed}`);

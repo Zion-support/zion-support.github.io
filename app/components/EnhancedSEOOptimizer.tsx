@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -43,6 +44,8 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
               ))}
             </div>
           </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
             </div>
           </div>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-4da8

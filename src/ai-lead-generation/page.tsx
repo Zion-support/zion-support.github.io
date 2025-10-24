@@ -115,58 +115,58 @@ const AILeadGenerationPage: React.FC = () => {
     }
   ]
   return (
-  <><SEOOptimizertitle="AI Lead Generation Platform - ZionTechGroup"
-        description="Generate 30 0% more qualified leads with AI-powered prospecting, lead scoring, and automated outreach.85% time savingsand95%accuracy."
+  <><SEOOptimizertitle=&quot;AI Lead Generation Platform - ZionTechGroup&quot;
+        description=&quot;Generate 30 0% more qualified leads with AI-powered prospecting, lead scoring, and automated outreach.85% time savingsand95%accuracy.&quot;
         keywords={['AI lead generation', 'lead scoring', 'prospecting', 'sales automation', 'leadnurturing']}
-        canonicalUrl="https://ziontechgroup.com/ai-lead-generation"
+        canonicalUrl=&quot;https://ziontechgroup.com/ai-lead-generation&quot;
       />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
         <Navigation />
-        <main className="pt-16">
+        <main className=&quot;pt-16&quot;>
           {/* Hero Section */}
-          <section className="container mx-auto px-4 py-16 text-center"></section>
-            <div className="max-w-4xl mx-auto"></div>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
+          <section className=&quot;container mx-auto px-4 py-16 text-center&quot;></section>
+            <div className=&quot;max-w-4xl mx-auto&quot;></div>
+              <h1 className=&quot;text-4xl md:text-6xl font-bold text-white mb-6 neon-text&quot;>
                 AI Lead Generation Platform
               </h1>
-              <p className="text-xl md:text-2xl text-cyan-400 mb-8">
+              <p className=&quot;text-xl md:text-2xl text-cyan-400 mb-8&quot;>
                 Generate 300% more qualified leads with AI
               </p>
-              <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
+              <p className=&quot;text-lg text-gray-300 mb-12 max-w-3xl mx-auto&quot;>
                 Our AI-powered lead generation platform helps businesses find, score, and nurture high-quality leads
                 with intelligent automation and personalized outreach.
-            </p><divclassName="flex flex-colsm:flex-row gap-4 justify-center items-centermb-16"><ahref="tel:+13024640950"
-                 className="cyber-button flexitems-centerspace-x-2"
-                ><PhoneIconclassName="w-5h-5" /><spa n>Call (302)464-0950</spa></a><ahref="mailto:kleber@ziontechgroup.com"
-                 className="cyber-button flexitems-centerspace-x-2"
+            </p><divclassName=&quot;flex flex-colsm:flex-row gap-4 justify-center items-centermb-16&quot;><ahref=&quot;tel:+13024640950&quot;
+                 className=&quot;cyber-button flexitems-centerspace-x-2&quot;
+                ><PhoneIconclassName=&quot;w-5h-5&quot; /><spa n>Call (302)464-0950</spa></a><ahref=&quot;mailto:kleber@ziontechgroup.com&quot;
+                 className=&quot;cyber-button flexitems-centerspace-x-2&quot;
                   style={{background: 'linear-gradient(45 deg, #8 b5cf6, #ec4899)'}}
-                ><MailIconclassName="w-5h-5" /><spa n>GetFreeDemo</spa></a></di>{/* Stats */}
-            <divclassName="grid grid-cols-2 md:grid-cols-4 gap-8mb-16">{stats.map((statindex) => (
-               <divkey={index}className="cyber-cardp-6text-center"><divclassName="text-3 xlmd:text-4 xl font-boldtext-cyan-400mb-2neon-text">{stat.number}
-                  </di><divclassName="text-gray-300font-medium">{stat.label}</di></di>))}
+                ><MailIconclassName=&quot;w-5h-5&quot; /><spa n>GetFreeDemo</spa></a></di>{/* Stats */}
+            <divclassName=&quot;grid grid-cols-2 md:grid-cols-4 gap-8mb-16&quot;>{stats.map((statindex) => (
+               <divkey={index}className=&quot;cyber-cardp-6text-center&quot;><divclassName=&quot;text-3 xlmd:text-4 xl font-boldtext-cyan-400mb-2neon-text&quot;>{stat.number}
+                  </di><divclassName=&quot;text-gray-300font-medium&quot;>{stat.label}</di></di>))}
             </di></di></sectio>{/* FeaturesSection */}
-        <sectionclassName="container mx-auto px-4py-16"><spanclassName="text-3 xlmd:text-4 xl font-bold text-white text-center mb-12neon-text"></className="text-3 xlmd:text-4 xl font-bold text-white text-center mb-12neon-text">Powerful Lead Generation Features
-          </h><divclassName="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">{features.map((featureindex) => (
-             <divkey={index}className="cyber-card p-6 hover:scale-105transition-allduration-300"><feature.iconclassName="w-12h-12text-cyan-400mb-4" /><h3className="text-xl font-boldtext-whitemb-3">{feature.title}</h><pclassName="text-gray-300mb-4">{feature.description}</p><ulclassName="space-y-2">{feature.benefits.map((benefitidx) => (
-                   <likey={idx}className="flex items-center space-x-2 text-smtext-cyan-400"><CheckCircleclassName="w-4h-4" /><spa n>{benefit}</spa></l>))}
+        <sectionclassName=&quot;container mx-auto px-4py-16&quot;><spanclassName=&quot;text-3 xlmd:text-4 xl font-bold text-white text-center mb-12neon-text&quot;></className=&quot;text-3 xlmd:text-4 xl font-bold text-white text-center mb-12neon-text&quot;>Powerful Lead Generation Features
+          </h><divclassName=&quot;grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8&quot;>{features.map((featureindex) => (
+             <divkey={index}className=&quot;cyber-card p-6 hover:scale-105transition-allduration-300&quot;><feature.iconclassName=&quot;w-12h-12text-cyan-400mb-4&quot; /><h3className=&quot;text-xl font-boldtext-whitemb-3&quot;>{feature.title}</h><pclassName=&quot;text-gray-300mb-4&quot;>{feature.description}</p><ulclassName=&quot;space-y-2&quot;>{feature.benefits.map((benefitidx) => (
+                   <likey={idx}className=&quot;flex items-center space-x-2 text-smtext-cyan-400&quot;><CheckCircleclassName=&quot;w-4h-4&quot; /><spa n>{benefit}</spa></l>))}
                 </u></di>))}
           </di></sectio>{/* Use CasesSection */}
-        <sectionclassName="container mx-auto px-4py-16"><spanclassName="text-3 xlmd:text-4 xl font-bold text-white text-center mb-12neon-text"></className="text-3 xlmd:text-4 xl font-bold text-white text-center mb-12neon-text">Perfect for Every Industry
-          </h><divclassName="grid grid-cols-1md:grid-cols-2gap-8">{useCases.map((useCaseindex) => (
-             <divkey={index}className="cyber-card p-6 hover:scale-105transition-allduration-300"><useCase.iconclassName="w-12h-12text-cyan-400mb-4" /><h3className="text-xl font-boldtext-whitemb-3">{useCase.title}</h><pclassName="text-gray-300">{useCase.description}</p></di>))}
+        <sectionclassName=&quot;container mx-auto px-4py-16&quot;><spanclassName=&quot;text-3 xlmd:text-4 xl font-bold text-white text-center mb-12neon-text&quot;></className=&quot;text-3 xlmd:text-4 xl font-bold text-white text-center mb-12neon-text&quot;>Perfect for Every Industry
+          </h><divclassName=&quot;grid grid-cols-1md:grid-cols-2gap-8&quot;>{useCases.map((useCaseindex) => (
+             <divkey={index}className=&quot;cyber-card p-6 hover:scale-105transition-allduration-300&quot;><useCase.iconclassName=&quot;w-12h-12text-cyan-400mb-4&quot; /><h3className=&quot;text-xl font-boldtext-whitemb-3&quot;>{useCase.title}</h><pclassName=&quot;text-gray-300&quot;>{useCase.description}</p></di>))}
           </di></sectio>{/* PricingSection */}
-        <sectionclassName="container mx-auto px-4py-16"><spanclassName="text-3 xlmd:text-4 xl font-bold text-white text-center mb-12neon-text"></className="text-3 xlmd:text-4 xl font-bold text-white text-center mb-12neon-text">Simple, Transparent Pricing
-          </h><divclassName="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xlmx-auto">{pricingPlans.map((planindex) => (
+        <sectionclassName=&quot;container mx-auto px-4py-16&quot;><spanclassName=&quot;text-3 xlmd:text-4 xl font-bold text-white text-center mb-12neon-text&quot;></className=&quot;text-3 xlmd:text-4 xl font-bold text-white text-center mb-12neon-text&quot;>Simple, Transparent Pricing
+          </h><divclassName=&quot;grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xlmx-auto&quot;>{pricingPlans.map((planindex) => (
              <divkey={index}
                   className={`cyber-card p-8 relative ${
                     plan.popular ? 'ring-2 ring-cyan-400scale-10 5'  : ''
                 }`}
                 >{plan.popular && (
-                  <divclassName="absolute -top-4 left-1/2transform-translate-x-1/2"><spanclassName="bg-cyan-400text-slate-900px-4 py-1 rounded-fulltext-smfont-bold"></className="bg-cyan-400text-slate-900px-4 py-1 rounded-fulltext-smfont-bold">Most Popular
+                  <divclassName=&quot;absolute -top-4 left-1/2transform-translate-x-1/2&quot;><spanclassName=&quot;bg-cyan-400text-slate-900px-4 py-1 rounded-fulltext-smfont-bold&quot;></className=&quot;bg-cyan-400text-slate-900px-4 py-1 rounded-fulltext-smfont-bold&quot;>Most Popular
                     </spa></di>)}
-                <divclassName="text-centermb-6"><h3className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h><pclassName="text-gray-400mb-4">{plan.description}</p><divclassName="flexitems-baselinejustify-center"><spanclassName="text-4 xl font-boldtext-cyan-400">{plan.price}</spa><spanclassName="text-gray-400ml-1">{plan.period}</spa></di></di><ulclassName="space-y-3mb-8">{plan.features.map((featureidx) => (
-                   <likey={idx}className="flexitems-centerspace-x-3"><CheckCircleclassName="w-5 h-5 text-cyan-400flex-shrink-0" /><spanclassName="text-gray-300">{feature}</spa></l>))}
-                </u><ahref="tel:+13024640950"
+                <divclassName=&quot;text-centermb-6&quot;><h3className=&quot;text-2 xl font-boldtext-whitemb-2&quot;>{plan.name}</h><pclassName=&quot;text-gray-400mb-4&quot;>{plan.description}</p><divclassName=&quot;flexitems-baselinejustify-center&quot;><spanclassName=&quot;text-4 xl font-boldtext-cyan-400&quot;>{plan.price}</spa><spanclassName=&quot;text-gray-400ml-1&quot;>{plan.period}</spa></di></di><ulclassName=&quot;space-y-3mb-8&quot;>{plan.features.map((featureidx) => (
+                   <likey={idx}className=&quot;flexitems-centerspace-x-3&quot;><CheckCircleclassName=&quot;w-5 h-5 text-cyan-400flex-shrink-0&quot; /><spanclassName=&quot;text-gray-300&quot;>{feature}</spa></l>))}
+                </u><ahref=&quot;tel:+13024640950&quot;
                     className={`w-full block text-center py-3 px-6 rounded-lg font-medium transition-all duration-300${
                       plan.popular
                         ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300'
@@ -180,28 +180,28 @@ const AILeadGenerationPage: React.FC = () => {
             </div>
           </section>
           {/* CTA Section */}
-          <section className="container mx-auto px-4 py-16 text-center"></section>
-            <div className="cyber-card p-12 max-w-4xl mx-auto"></div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
+          <section className=&quot;container mx-auto px-4 py-16 text-center&quot;></section>
+            <div className=&quot;cyber-card p-12 max-w-4xl mx-auto&quot;></div>
+              <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-6 neon-text&quot;>
                 Ready to 3x Your Lead Generation?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className=&quot;text-xl text-gray-300 mb-8&quot;>
                 Join 2,500+ companies already using our AI lead generation platform
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
                 <a
-                  href="tel:+13024640950"
-                  className="cyber-button flex items-center justify-center space-x-2"
+                  href=&quot;tel:+13024640950&quot;
+                  className=&quot;cyber-button flex items-center justify-center space-x-2&quot;
                 >
-                  <PhoneIcon className="w-5 h-5" />
+                  <PhoneIcon className=&quot;w-5 h-5&quot; />
                   <span>Call (302) 464-0950</span>
                 </a>
                 <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="cyber-button flex items-center justify-center space-x-2"
+                  href=&quot;mailto:kleber@ziontechgroup.com&quot;
+                  className=&quot;cyber-button flex items-center justify-center space-x-2&quot;
                   style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
                 >
-                  <MailIcon className="w-5 h-5" />
+                  <MailIcon className=&quot;w-5 h-5&quot; />
                   <span>Schedule Demo</span>
                 </a>
               </div>

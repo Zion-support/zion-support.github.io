@@ -47,27 +47,27 @@ const SidebarPage: React.FC = () => {
     <>
       <Helmet>
         <title>Sidebar</title>
-        <meta name="description" content="Advanced Sidebar solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial intelligence, Sidebar, AI solutions, intelligent automation" />
+        <meta name=&quot;description&quot; content=&quot;Advanced Sidebar solution for modern businesses.&quot; />
+        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, Sidebar, AI solutions, intelligent automation&quot; />
       </Helmet>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
+      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden"></section>
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center"></div>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+        <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
+          <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
+          <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
+            <h1 className=&quot;text-5xl md:text-7xl font-bold text-white mb-6 leading-tight&quot;>
               Sidebar
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
               Advanced Sidebar solution for modern businesses.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
+              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;>
                 Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className=&quot;ml-2 h-5 w-5&quot; />
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
                 Learn More
               </button>
             </div>
@@ -75,24 +75,24 @@ const SidebarPage: React.FC = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+        <section className=&quot;py-20 px-4&quot;></section>
+          <div className=&quot;max-w-7xl mx-auto&quot;></div>
+            <div className=&quot;text-center mb-16&quot;></div>
+              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Key Features</h2>
+              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
                 Powerful AI-driven features designed to transform your business operations
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"></div>
-                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
+                <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
+                  <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; />
+                  <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{feature.title}</h3>
+                  <p className=&quot;text-gray-300 mb-4&quot;>{feature.description}</p>
+                  <ul className=&quot;space-y-2&quot;>
                     {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
+                      <li key={idx} className=&quot;flex items-center text-sm text-gray-300&quot;>
+                        <CheckCircle className=&quot;h-4 w-4 text-emerald-400 mr-2 flex-shrink-0&quot; />
                         {benefit}
                       </li>
                     ))}
@@ -104,19 +104,19 @@ const SidebarPage: React.FC = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 px-4 bg-white/5"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+        <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
+          <div className=&quot;max-w-7xl mx-auto&quot;></div>
+            <div className=&quot;text-center mb-16&quot;></div>
+              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
+              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
                 Experience the benefits of cutting-edge AI technology
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-4"></div>
-                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
-                  <p className="text-gray-300 text-lg">{benefit}</p>
+                <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
+                  <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
+                  <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
                 </div>
               ))}
             </div>
@@ -124,17 +124,17 @@ const SidebarPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4"></section>
-          <div className="max-w-4xl mx-auto text-center"></div>
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
-            <p className="text-xl text-gray-300 mb-8">
+        <section className=&quot;py-20 px-4&quot;></section>
+          <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
+            <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
+            <p className=&quot;text-xl text-gray-300 mb-8&quot;>
               Join thousands of businesses already using our AI solutions
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
+              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
                 Start Free Trial
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
                 Contact Sales
               </button>
             </div>
@@ -274,15 +274,15 @@ return (
 {/* Mobile Menu Button */}
 <button
 onClick={() =></button> setIsOpen(true)}
-className="lg:hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all"
-aria-label="Open sidebar"
+className=&quot;lg:hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all&quot;
+aria-label=&quot;Open sidebar&quot;
 >
-<Menu className="w-6 h-6" />
+<Menu className=&quot;w-6 h-6&quot; />
 </button>
 {/* Sidebar Overlay */}
 {isOpen && (
 <div
-className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden";}
+className=&quot;fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden&quot;;}
 onClick={() =>setIsOpen(false)}</div>
 />
 )}
@@ -290,43 +290,43 @@ onClick={() =>setIsOpen(false)}</div>
 <aside className={`fixed top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400/20 z-50 transform transition-transform duration-300 ${
 isOpen ? 'translate-x-0' : '-translate-x-full'
 } lg:translate-x-0 lg:static lg:z-auto`}>
-<div className="flex flex-col h-full"></div>
+<div className=&quot;flex flex-col h-full&quot;></div>
 {/* Header */}</div>
-<div className="flex items-center justify-between p-6 border-b border-slate-700/50"></div>
-<Link to="/" className="flex items-center space-x-3" onClick={() => setIsOpen(false)}>
-<div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center"></div>
-<Brain className="w-6 h-6 text-white" />
+<div className=&quot;flex items-center justify-between p-6 border-b border-slate-700/50&quot;></div>
+<Link to=&quot;/&quot; className=&quot;flex items-center space-x-3&quot; onClick={() => setIsOpen(false)}>
+<div className=&quot;w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center&quot;></div>
+<Brain className=&quot;w-6 h-6 text-white&quot; />
 </div>
 <div></div>
-<h2 className="text-xl font-bold text-white cyber-text">Zion Tech Group</h2>
-<p className="text-xs text-cyan-400">AI & IT Solutions</p>
+<h2 className=&quot;text-xl font-bold text-white cyber-text&quot;>Zion Tech Group</h2>
+<p className=&quot;text-xs text-cyan-400&quot;>AI & IT Solutions</p>
 </div>
 </Link>
 <button
 onClick={() =></button> setIsOpen(false)}
-className="lg:hidden text-gray-400 hover:text-white transition-colors"
-aria-label="Close sidebar"
+className=&quot;lg:hidden text-gray-400 hover:text-white transition-colors&quot;
+aria-label=&quot;Close sidebar&quot;
 >
-<X className="w-6 h-6" />
+<X className=&quot;w-6 h-6&quot; />
 </button>
 </div>
 {/* Navigation */}
-<div className="flex-1 overflow-y-auto py-6"></div>
-<nav className="space-y-2 px-4">
+<div className=&quot;flex-1 overflow-y-auto py-6&quot;></div>
+<nav className=&quot;space-y-2 px-4&quot;>
 {navigationSections.map((section, sectionIndex) => (;}
-<div key={sectionIndex} className="space-y-1"></div>
+<div key={sectionIndex} className=&quot;space-y-1&quot;></div>
 <button
 onClick={() =></button> section.key && toggleSection(section.key)}
-className="flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">
+className=&quot;flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors&quot;>
 <span>{section.title}</span>
 {section.key && (
 expandedSections.has(section.key) ?
-<ChevronDown className="w-4 h-4" /> :
-<ChevronRight className="w-4 h-4" />
+<ChevronDown className=&quot;w-4 h-4&quot; /> :
+<ChevronRight className=&quot;w-4 h-4&quot; />
 )}
 </button>
 {(!section.key || expandedSections.has(section.key)) && (
-<div className="ml-4 space-y-1"></div>
+<div className=&quot;ml-4 space-y-1&quot;></div>
 {section.items.map((item, itemIndex) => (</div>
 <Link
 key={itemIndex}

@@ -1,4 +1,4 @@
-import { CheckCircle, Phone, Mail, Helmet } from 'lucide-react'
+import { CheckCircle, Phone, Mail } from 'lucide-react'
     }
   ]
 
@@ -8,6 +8,6 @@ import { CheckCircle, Phone, Mail, Helmet } from 'lucide-react'
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
             </div>
           </div>

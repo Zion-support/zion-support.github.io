@@ -26,8 +26,7 @@ const NotFound = () => {
           {/* Error Message */}
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Page Not Found</h1>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Oops! The page you&apos;re looking for seems to have vanished into the
-            digital void. Don&apos;t worry, even our AI can&apos;t predict everything!
+            Oops! The page you&apos;re looking for seems to have vanished into the digital void. Don&apos;t worry, even our AI can&apos;t predict everything!
           </p>
 
           {/* Search Suggestion */}
@@ -77,8 +76,7 @@ const NotFound = () => {
           <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-lg p-6">
             <h3 className="text-lg font-semibold text-white mb-3">Need Help?</h3>
             <p className="text-gray-300 text-sm mb-4">
-              Our support team is here to help you navigate our services and
-              find exactly what you&apos;re looking for.
+              Our support team is here to help you navigate our services and find exactly what you&apos;re looking for.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link
