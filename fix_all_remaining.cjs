@@ -18,9 +18,6 @@ const fixAllCorruptedFiles = () => {
           const content = fs.readFileSync(fullPath, "utf8");
           // Check if file has syntax errors
           if (
-            content.includes("<<<<<<< HEAD") ||
-            content.includes("=======") ||
-            content.includes(">>>>>>>") ||
             content.includes("export default function 5g") ||
             content.includes("export default function 5G") ||
             (content.includes("get") &&

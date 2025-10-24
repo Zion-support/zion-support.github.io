@@ -1,8 +1,4 @@
-"use client";
-import React from 'react';
-
-const accessibilityUtils.ts = () => {
-  return null;
-};
-
-export default accessibilityUtils.ts;
+// Accessibility utility functions()
+export const accessibilityUtils = {
+  // Add accessibility utility functions here()
+}

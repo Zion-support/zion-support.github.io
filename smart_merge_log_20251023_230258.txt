@@ -7,198 +7,154 @@ Checking out main branch...
 
 Progress: 1/62
 
-============================================================
 Processing PR #25947: cursor/fix-errors-and-merge-to-main-3ec6
-============================================================
 Fetching branch cursor/fix-errors-and-merge-to-main-3ec6...
 ✗ Failed to fetch branch: fatal: couldn't find remote ref cursor/fix-errors-and-merge-to-main-3ec6
 
 
 Progress: 2/62
 
-============================================================
 Processing PR #25946: cursor/fix-errors-and-merge-to-main-aebc
-============================================================
 Fetching branch cursor/fix-errors-and-merge-to-main-aebc...
 Attempting merge...
 ✓ Successfully merged PR #25946
 
 Progress: 3/62
 
-============================================================
 Processing PR #25945: cursor/fix-errors-and-merge-to-main-1035
-============================================================
 Fetching branch cursor/fix-errors-and-merge-to-main-1035...
 ✗ Failed to fetch branch: fatal: couldn't find remote ref cursor/fix-errors-and-merge-to-main-1035
 
 
 Progress: 4/62
 
-============================================================
 Processing PR #25944: cursor/fix-errors-and-merge-to-main-a40c
-============================================================
 Fetching branch cursor/fix-errors-and-merge-to-main-a40c...
 ✗ Failed to fetch branch: fatal: couldn't find remote ref cursor/fix-errors-and-merge-to-main-a40c
 
 
 Progress: 5/62
 
-============================================================
 Processing PR #25943: cursor/fix-errors-and-merge-to-main-5b7e
-============================================================
 Fetching branch cursor/fix-errors-and-merge-to-main-5b7e...
 Attempting merge...
 ✓ Successfully merged PR #25943
 
 Progress: 6/62
 
-============================================================
 Processing PR #25942: cursor/fix-errors-and-merge-to-main-7bf5
-============================================================
 Fetching branch cursor/fix-errors-and-merge-to-main-7bf5...
 Attempting merge...
 ✓ Successfully merged PR #25942
 
 Progress: 7/62
 
-============================================================
 Processing PR #25941: cursor/fix-errors-and-merge-to-main-9e08
-============================================================
 Fetching branch cursor/fix-errors-and-merge-to-main-9e08...
 ✗ Failed to fetch branch: fatal: couldn't find remote ref cursor/fix-errors-and-merge-to-main-9e08
 
 
 Progress: 8/62
 
-============================================================
 Processing PR #25940: cursor/fix-errors-and-merge-to-main-694e
-============================================================
 Fetching branch cursor/fix-errors-and-merge-to-main-694e...
 ✗ Failed to fetch branch: fatal: couldn't find remote ref cursor/fix-errors-and-merge-to-main-694e
 
 
 Progress: 9/62
 
-============================================================
 Processing PR #25939: cursor/fix-errors-and-merge-to-main-b434
-============================================================
 Fetching branch cursor/fix-errors-and-merge-to-main-b434...
 ✗ Failed to fetch branch: fatal: couldn't find remote ref cursor/fix-errors-and-merge-to-main-b434
 
 
 Progress: 10/62
 
-============================================================
 Processing PR #25938: cursor/fix-errors-and-merge-to-main-745c
-============================================================
 Fetching branch cursor/fix-errors-and-merge-to-main-745c...
 ✗ Failed to fetch branch: fatal: couldn't find remote ref cursor/fix-errors-and-merge-to-main-745c
 
 
 Progress: 11/62
 
-============================================================
 Processing PR #25937: cursor/fix-errors-and-merge-to-main-bfaf
-============================================================
 Fetching branch cursor/fix-errors-and-merge-to-main-bfaf...
 Attempting merge...
 ✓ Successfully merged PR #25937
 
 Progress: 12/62
 
-============================================================
 Processing PR #25936: cursor/fix-errors-and-merge-to-main-72cd
-============================================================
 Fetching branch cursor/fix-errors-and-merge-to-main-72cd...
 ✗ Failed to fetch branch: fatal: couldn't find remote ref cursor/fix-errors-and-merge-to-main-72cd
 
 
 Progress: 13/62
 
-============================================================
 Processing PR #25935: cursor/fix-errors-and-merge-to-main-7b6d
-============================================================
 Fetching branch cursor/fix-errors-and-merge-to-main-7b6d...
 ✗ Failed to fetch branch: fatal: couldn't find remote ref cursor/fix-errors-and-merge-to-main-7b6d
 
 
 Progress: 14/62
 
-============================================================
 Processing PR #25934: cursor/fix-errors-and-merge-to-main-ee68
-============================================================
 Fetching branch cursor/fix-errors-and-merge-to-main-ee68...
 ✗ Failed to fetch branch: fatal: couldn't find remote ref cursor/fix-errors-and-merge-to-main-ee68
 
 
 Progress: 15/62
 
-============================================================
 Processing PR #25933: cursor/fix-errors-and-merge-to-main-9081
-============================================================
 Fetching branch cursor/fix-errors-and-merge-to-main-9081...
 ✗ Failed to fetch branch: fatal: couldn't find remote ref cursor/fix-errors-and-merge-to-main-9081
 
 
 Progress: 16/62
 
-============================================================
 Processing PR #25932: cursor/fix-errors-and-merge-to-main-ebe4
-============================================================
 Fetching branch cursor/fix-errors-and-merge-to-main-ebe4...
 ✗ Failed to fetch branch: fatal: couldn't find remote ref cursor/fix-errors-and-merge-to-main-ebe4
 
 
 Progress: 17/62
 
-============================================================
 Processing PR #25931: cursor/fix-errors-and-merge-to-main-f836
-============================================================
 Fetching branch cursor/fix-errors-and-merge-to-main-f836...
 ✗ Failed to fetch branch: fatal: couldn't find remote ref cursor/fix-errors-and-merge-to-main-f836
 
 
 Progress: 18/62
 
-============================================================
 Processing PR #25930: cursor/fix-errors-and-merge-to-main-2f05
-============================================================
 Fetching branch cursor/fix-errors-and-merge-to-main-2f05...
 ✗ Failed to fetch branch: fatal: couldn't find remote ref cursor/fix-errors-and-merge-to-main-2f05
 
 
 Progress: 19/62
 
-============================================================
 Processing PR #25929: cursor/fix-errors-and-merge-to-main-b3c7
-============================================================
 Fetching branch cursor/fix-errors-and-merge-to-main-b3c7...
 ✗ Failed to fetch branch: fatal: couldn't find remote ref cursor/fix-errors-and-merge-to-main-b3c7
 
 
 Progress: 20/62
 
-============================================================
 Processing PR #25928: cursor/fix-errors-and-merge-to-main-ab30
-============================================================
 Fetching branch cursor/fix-errors-and-merge-to-main-ab30...
 ✗ Failed to fetch branch: fatal: couldn't find remote ref cursor/fix-errors-and-merge-to-main-ab30
 
 
 Progress: 21/62
 
-============================================================
 Processing PR #25927: cursor/fix-errors-and-merge-to-main-31e3
-============================================================
 Fetching branch cursor/fix-errors-and-merge-to-main-31e3...
 ✗ Failed to fetch branch: fatal: couldn't find remote ref cursor/fix-errors-and-merge-to-main-31e3
 
 
 Progress: 22/62
 
-============================================================
 Processing PR #25926: cursor/fix-errors-and-merge-to-main-b28d
-============================================================
 Fetching branch cursor/fix-errors-and-merge-to-main-b28d...
 Attempting merge...
 ⚠ Merge conflicts detected, attempting auto-resolution...
@@ -207,174 +163,135 @@ Attempting merge...
 
 Progress: 45/62
 
-============================================================
 Processing PR #25901: cursor/fix-errors-and-merge-to-main-6d47
-============================================================
 Fetching branch cursor/fix-errors-and-merge-to-main-6d47...
 ✗ Failed to fetch branch: fatal: couldn't find remote ref cursor/fix-errors-and-merge-to-main-6d47
 
 
 Progress: 46/62
 
-============================================================
 Processing PR #25900: cursor/fix-errors-and-merge-to-main-f440
-============================================================
 Fetching branch cursor/fix-errors-and-merge-to-main-f440...
 ✗ Failed to fetch branch: fatal: couldn't find remote ref cursor/fix-errors-and-merge-to-main-f440
 
 
 Progress: 47/62
 
-============================================================
 Processing PR #25899: cursor/fix-errors-and-merge-to-main-8969
-============================================================
 Fetching branch cursor/fix-errors-and-merge-to-main-8969...
 ✗ Failed to fetch branch: fatal: couldn't find remote ref cursor/fix-errors-and-merge-to-main-8969
 
 
 Progress: 48/62
 
-============================================================
 Processing PR #25898: cursor/fix-errors-and-merge-to-main-6210
-============================================================
 Fetching branch cursor/fix-errors-and-merge-to-main-6210...
 ✗ Failed to fetch branch: fatal: couldn't find remote ref cursor/fix-errors-and-merge-to-main-6210
 
 
 Progress: 49/62
 
-============================================================
 Processing PR #25897: cursor/fix-errors-and-merge-to-main-707f
-============================================================
 Fetching branch cursor/fix-errors-and-merge-to-main-707f...
 ✗ Failed to fetch branch: fatal: couldn't find remote ref cursor/fix-errors-and-merge-to-main-707f
 
 
 Progress: 50/62
 
-============================================================
 Processing PR #25896: cursor/fix-errors-and-merge-to-main-eb73
-============================================================
 Fetching branch cursor/fix-errors-and-merge-to-main-eb73...
 ✗ Failed to fetch branch: fatal: couldn't find remote ref cursor/fix-errors-and-merge-to-main-eb73
 
 
 Progress: 51/62
 
-============================================================
 Processing PR #25895: cursor/fix-errors-and-merge-to-main-f5aa
-============================================================
 Fetching branch cursor/fix-errors-and-merge-to-main-f5aa...
 ✗ Failed to fetch branch: fatal: couldn't find remote ref cursor/fix-errors-and-merge-to-main-f5aa
 
 
 Progress: 52/62
 
-============================================================
 Processing PR #25894: cursor/fix-errors-and-merge-to-main-4678
-============================================================
 Fetching branch cursor/fix-errors-and-merge-to-main-4678...
 ✗ Failed to fetch branch: fatal: couldn't find remote ref cursor/fix-errors-and-merge-to-main-4678
 
 
 Progress: 53/62
 
-============================================================
 Processing PR #25893: cursor/fix-errors-and-merge-to-main-8885
-============================================================
 Fetching branch cursor/fix-errors-and-merge-to-main-8885...
 ✗ Failed to fetch branch: fatal: couldn't find remote ref cursor/fix-errors-and-merge-to-main-8885
 
 
 Progress: 54/62
 
-============================================================
 Processing PR #25892: cursor/fix-errors-and-merge-to-main-1c74
-============================================================
 Fetching branch cursor/fix-errors-and-merge-to-main-1c74...
 Attempting merge...
 ✓ Successfully merged PR #25892
 
 Progress: 55/62
 
-============================================================
 Processing PR #25891: cursor/fix-errors-and-merge-to-main-88df
-============================================================
 Fetching branch cursor/fix-errors-and-merge-to-main-88df...
 ✗ Failed to fetch branch: fatal: couldn't find remote ref cursor/fix-errors-and-merge-to-main-88df
 
 
 Progress: 56/62
 
-============================================================
 Processing PR #25890: cursor/fix-errors-and-merge-to-main-4a70
-============================================================
 Fetching branch cursor/fix-errors-and-merge-to-main-4a70...
 ✗ Failed to fetch branch: fatal: couldn't find remote ref cursor/fix-errors-and-merge-to-main-4a70
 
 
 Progress: 57/62
 
-============================================================
 Processing PR #25889: cursor/fix-errors-and-merge-to-main-f487
-============================================================
 Fetching branch cursor/fix-errors-and-merge-to-main-f487...
 ✗ Failed to fetch branch: fatal: couldn't find remote ref cursor/fix-errors-and-merge-to-main-f487
 
 
 Progress: 58/62
 
-============================================================
 Processing PR #25888: cursor/fix-errors-and-merge-to-main-0127
-============================================================
 Fetching branch cursor/fix-errors-and-merge-to-main-0127...
 ✗ Failed to fetch branch: fatal: couldn't find remote ref cursor/fix-errors-and-merge-to-main-0127
 
 
 Progress: 59/62
 
-============================================================
 Processing PR #25887: cursor/fix-errors-and-merge-to-main-0e8a
-============================================================
 Fetching branch cursor/fix-errors-and-merge-to-main-0e8a...
 ✗ Failed to fetch branch: fatal: couldn't find remote ref cursor/fix-errors-and-merge-to-main-0e8a
 
 
 Progress: 60/62
 
-============================================================
 Processing PR #25886: cursor/fix-errors-and-merge-to-main-d9f5
-============================================================
 Fetching branch cursor/fix-errors-and-merge-to-main-d9f5...
 ✗ Failed to fetch branch: fatal: couldn't find remote ref cursor/fix-errors-and-merge-to-main-d9f5
 
 
 Progress: 61/62
 
-============================================================
 Processing PR #25885: cursor/fix-errors-and-merge-to-main-0bdf
-============================================================
 Fetching branch cursor/fix-errors-and-merge-to-main-0bdf...
 ✗ Failed to fetch branch: fatal: couldn't find remote ref cursor/fix-errors-and-merge-to-main-0bdf
 
 
 Progress: 62/62
 
-============================================================
 Processing PR #25884: cursor/fix-errors-and-merge-to-main-89b2
-============================================================
 Fetching branch cursor/fix-errors-and-merge-to-main-89b2...
 Attempting merge...
 ✓ Successfully merged PR #25884
 
-============================================================
 MERGE SUMMARY
-============================================================
 Successful merges:      6
 Conflicts resolved:     2
 Failed merges:          54
 Skipped:                0
-============================================================
 
 Failed PRs:
   - PR #25947: cursor/fix-errors-and-merge-to-main-3ec6 (Reason: fetch_failed)

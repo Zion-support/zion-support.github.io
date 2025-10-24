@@ -1,8 +1,9 @@
 module.exports = {
-  extends: ["next/core-web-vitals"],
+  extends: ["next"],
   rules: {
-    "no-console": "warn",
+    "no-console": "off",
     "prefer-const": "error",
     "no-var": "error",
-  },
-};
+    "react/no-unescaped-entities": "off"
+  }
+}

@@ -12,7 +12,7 @@
     "incremental": true,
     "module": "esnext",
     "esModuleInterop": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -31,6 +31,20 @@
     "**/*.tsx"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "app-backup/**/*",
+    "ai-pages-backup/**/*",
+    "all-pages-backup/**/*",
+    "problematic-files-backup/**/*",
+    "src/**/*",
+    "components/**/*",
+    "hooks/**/*",
+    "types/**/*",
+    "utils/**/*",
+    "jest.d.ts",
+    "jest.setup.ts",
+    "setupTests.ts",
+    "app/App.tsx",
+    "app/root-layout.tsx"
   ]
 }

@@ -1,64 +1,84 @@
-export const generateSitemap = useCallback((...args) => {
-  const baseUrl = 'https://ziontechgroup.com'
-  const staticPages = [
-'',
-'/services',
-'/contact',
-'/ai-solutions',
-'/it-services',
-'/about',
-'/blog',
-'/case-studies',
-'/pricing',
-'/ai-project-manager',
-'/ai-social-media-manager',
-'/ai-analytics',
-'/ai-email-marketing',
-'/ai-customer-support-bot',
-'/ai-code-generation',
-'/ai-video-generation',
-'/ai-voice-cloning',
-'/ai-workflow-automation',
-'/ai-sales-automation',
-'/ai-content-writer',
-'/ai-financial-advisor',
-'/ai-data-visualization',
-'/ai-3 d-generation',
-'/ai-customer-support',
-'/ai-inventory-manager',
-'/ai-hr-assistant',
-'/ai-legal-assistant',
-'/cloud-migration',
-'/it-consulting',
-'/cybersecurity',
-'/devops',
-'/database-services',
-'/network-infrastructure',
-'/it-support',
-'/compliance',
-'/developer-tools',
-'/marketing-tools',
-'/productivity'
-]
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${staticPages.map(page => `
-<url>
-<loc>${baseUrl}${page}</loc>
-<lastmod>${new Date().toISOString()}</lastmod>
-<changefreq>weekly</changefreq>
-<priority>${page === '' ? '1.0' : '0.8'}</priority>
-</url>`).join('')}
-</urlset>`
-return sitemap
+/**
+ * Sitemap Generator
+ * Generates sitemap and robots.txt for SEO optimization
+ */
+export interface SitemapEntry {
+  loc: string;
+  lastmod: string;
+  changefreq: string;
+  priority: number;
 }
-export const generateRobotsTxt = useCallback((...args) => {}
-return `User-agent: *
+export const generateSitemap = (): SitemapEntry[] => {
+  const baseUrl = 'https://ziontechgroup.com';
+  const currentDate = new Date().toISOString();
+  return [
+    {
+      loc: `${baseUrl}/`,
+      lastmod: currentDate,
+      changefreq: 'daily',
+      priority: 1.0
+    },
+    {
+      loc: `${baseUrl}/about`,
+      lastmod: currentDate,
+      changefreq: 'monthly',
+      priority: 0.8
+    },
+    {
+      loc: `${baseUrl}/services`,
+      lastmod: currentDate,
+      changefreq: 'weekly',
+      priority: 0.9
+    },
+    {
+      loc: `${baseUrl}/ai-services`,
+      lastmod: currentDate,
+      changefreq: 'weekly',
+      priority: 0.9
+    },
+    {
+      loc: `${baseUrl}/it-services`,
+      lastmod: currentDate,
+      changefreq: 'weekly',
+      priority: 0.9
+    },
+    {
+      loc: `${baseUrl}/quantum-computing`,
+      lastmod: currentDate,
+      changefreq: 'weekly',
+      priority: 0.9
+    },
+    {
+      loc: `${baseUrl}/contact`,
+      lastmod: currentDate,
+      changefreq: 'monthly',
+      priority: 0.7
+    },
+    {
+      loc: `${baseUrl}/pricing`,
+      lastmod: currentDate,
+      changefreq: 'monthly',
+      priority: 0.8
+    },
+    {
+      loc: `${baseUrl}/blog`,
+      lastmod: currentDate,
+      changefreq: 'daily',
+      priority: 0.8
+    }
+  ];
+};
+export const generateRobotsTxt = (): string => {
+  const baseUrl = 'https://ziontechgroup.com';
+  return `User-agent: *
 Allow: /
-Sitemap: https://ziontechgroup.com/sitemap.xml
+Sitemap: ${baseUrl}/sitemap.xml
+Sitemap: ${baseUrl}/sitemap-pages.xml
+Sitemap: ${baseUrl}/sitemap-blog.xml
 # Crawl-delay for better server performance
-Crawl-delay: 1,
+Crawl-delay: 1
 # Disallow admin and private areas
+<<<<<<< HEAD
 Disallow: /admin/,
 Disallow: /api/,
 Disallow: /_next/,
@@ -205,3 +225,22 @@ y: 0.3
 }
 export const generateRobotsTxt = (): string => {/* TODO: Fix JSX expression */}
 };`))
+=======
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/`;
+};
+export const generateSitemapXml = (entries: SitemapEntry[]): string => {
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${entries.map(entry => `  <url>
+    <loc>${entry.loc}</loc>
+    <lastmod>${entry.lastmod}</lastmod>
+    <changefreq>${entry.changefreq}</changefreq>
+    <priority>${entry.priority}</priority>
+  </url>`).join('\n')}
+</urlset>`;
+  return xml;
+};
+>>>>>>> origin/main

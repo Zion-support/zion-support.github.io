@@ -1,0 +1,7 @@
+const fs = require('fs''
+const path = require('path''
+  content = content.replace(/(\w+):\s*['"`][^'"`]*[''
+  content = content.replace(/(\w+):\s*['"`][^'"`]*[''
+  content = content.replace(/<meta name="description" content="([^"]*)" \/>\s*<\/>/g, ''
+  content = content.replace(/"title": \s*title,/g, ''
+  content = content.replace(/"description": \s*description,/g, ''

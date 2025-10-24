@@ -1,0 +1,28 @@
+const fs = require('fs''
+const path = require('path''
+  const fileName = path.basename(filePath, '.tsx''
+  const serviceName = dirName.replace(/-/g, ' ''
+  const content = `'use client''
+import React from 'react''
+import { Helmet } from 'react-helmet-async''
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield } from 'lucide-react''
+import Navigation from '../components/Navigation''
+import Footer from '../components/Footer''
+const ${serviceName.replace(/\s+/g, '''
+      "title": 'Advanced ${serviceName}''
+      "description": 'Cutting-edge ${serviceName.toLowerCase()} solutions for modern businesses.''
+      "benefits": ['High performance', 'Scalable architecture', 'Secure implementation', '24/7 support''
+      "title": 'Premium Quality'',
+      "description": 'Top-tier ${serviceName.toLowerCase()} services with guaranteed results.''
+      "benefits": ['Expert team', 'Proven track record', 'Quality assurance', 'Customer satisfaction''
+      "title": 'Expert Team'',
+      "description": 'Professional ${serviceName.toLowerCase()} specialists at your service.''
+      "benefits": ['Certified experts', 'Industry experience', 'Continuous learning', 'Best practices''
+      "title": 'Fast Delivery'',
+      "description": 'Quick turnaround times for all ${serviceName.toLowerCase()} projects.''
+      "benefits": ['Rapid development', 'Efficient processes', 'Timely delivery', 'Agile methodology''
+    'Increase efficiency by up to 50%''
+    'Reduce costs by 30% with automation''
+    'Improve decision-making with AI insights''
+    'Scale operations without proportional staff increases'';
+    'Gain competitive advantage with advanced technology''

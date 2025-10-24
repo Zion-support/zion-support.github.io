@@ -1,4 +1,3 @@
-"use client";
 import React from 'react';
 
 interface DefaultSEOProps {
@@ -8,8 +7,7 @@ interface DefaultSEOProps {
 const DefaultSEO: React.FC<DefaultSEOProps> = ({ className = '' }) => {
   return (
     <div className={className}>
-      <h2>DefaultSEO</h2>
-      <p>This component is under construction.</p>
+      {/* Default SEO component content */}
     </div>
   );
 };
