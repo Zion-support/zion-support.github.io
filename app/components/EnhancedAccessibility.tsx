@@ -1,11 +1,9 @@
 'use client';
 import { Settings } from 'lucide-react';
-import React, { useEffect, useState, createContext, useContext } from 'react';
+import React, { useEffect, useState } from 'react';
 import { AccessibilitySettings, AccessibilityContextType } from '../types/accessibility';
-
-const AccessibilityContext = createContext<AccessibilityContextType | null>(null);
-
-// Context and hook moved to separate files for fast refresh compatibility
+import { AccessibilityContext } from '../contexts/AccessibilityContext';
+import { useAccessibility } from '../hooks/useAccessibility';
 
 interface EnhancedAccessibilityProps {
   children: React.ReactNode;
