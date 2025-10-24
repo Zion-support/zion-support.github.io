@@ -1,20 +1,16 @@
-app/components/AdvancedPerformanceMonitor.tsx'app/components/AdvancedPerformanceMonitor.app/components/AdvancedPerformanceMonitor.tsx;
-app/components/AdvancedPerformanceMonitor.tsx'app/components/AdvancedPerformanceMonitor.tsx;
+import React from 'react';
 
-import React from app/components/AdvancedPerformanceMonitor.tsx'app/components/AdvancedPerformanceMonitor.tsx;
 interface AdvancedPerformanceMonitorProps {
-className?: app/components/AdvancedPerformanceMonitor.tsx;
-}
+  className?: string;
+  children?: React.ReactNode;
 }
 
-const AdvancedPerformanceMonitor: app/components/AdvancedPerformanceMonitor.tsx"app/components/AdvancedPerformanceMonitor.tsx,}) => {
+export const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({ className = '', children }) => {
   return (
-    <div className = {className,;}>
+    <div className={`advancedperformancemonitor ${className}`}>
+      {children}
     </div>
-      <h2>Advanced Performance Monitor</h2>
-      <p>Advanced performance monitoring for optimal application performance.</p>
-    </div>;)
-  )
-}
+  );
+};
 
-export default app/components/AdvancedPerformanceMonitor.tsx;
+export default AdvancedPerformanceMonitor;

@@ -1,9 +1,16 @@
-app/utils/errorHandler.tsx"app/utils/errorHandler.app/utils/errorHandler.tsx;
-app/utils/errorHandler.tsx'app/utils/errorHandler.tsx;
+import React from 'react';
 
-import React from app/utils/errorHandler.tsx'app/utils/errorHandler.tsx;
-export const errorHandler = (
-  return app/utils/errorHandler.tsx;
-) => {
-$app/utils/errorHandler.tsx;
-,}
+interface ErrorHandlerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export const ErrorHandler: React.FC<ErrorHandlerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`errorhandler ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default ErrorHandler;

@@ -1,2 +1,5 @@
-export const dynamic = app/force-dynamic.ts"app/force-dynamic.app/force-dynamic.ts;
-,}
+// force-dynamic implementation
+
+export const forceDynamic = {
+  // Implementation here
+};

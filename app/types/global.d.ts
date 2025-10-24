@@ -1,14 +1,9 @@
-declare global{
-interface Window {
+// Global type definitions
 
-
-gtag: app/types/global.d.ts"app/types/global.d.ts,s: app/types/global.d.ts"app/types/global.d.app/types/global.d.ts;
-}
-}
+declare global {
+  interface Window {
+    // Global window properties
   }
-
 }
 
-export {;}
-
-}
+export {};

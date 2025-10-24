@@ -1,9 +1,16 @@
-app/utils/link.tsx"app/utils/link.app/utils/link.tsx;
-app/utils/link.tsx'app/utils/link.tsx;
+import React from 'react';
 
-import React from app/utils/link.tsx'app/utils/link.tsx;
-export const link = (
-  return app/utils/link.tsx;
-) => {
-$app/utils/link.tsx;
-,}
+interface LinkProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export const Link: React.FC<LinkProps> = ({ className = '', children }) => {
+  return (
+    <div className={`link ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default Link;

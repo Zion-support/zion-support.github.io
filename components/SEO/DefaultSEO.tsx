@@ -1,20 +1,16 @@
 import React from 'react';
-"use client"
-interface DefaultSEOProps {
-className?: string
-;}
-;}
-;}
 
-const DefaultSEO: "React.FC<DefaultSEOProps> = ({ className = '' ",;}) => {
-return (
-    </DefaultSEOProps>
-    <divclassName = {className,;} />
-      <h2>DefaultSEO</h2>
-      <p>This component is under construction.</p>
-    </div>)
-  )
+interface DefaultSEOProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
+export const DefaultSEO: React.FC<DefaultSEOProps> = ({ className = '', children }) => {
+  return (
+    <div className={`defaultseo ${className}`}>
+      {children}
+    </div>
+  );
+};
 
-export default DefaultSEO
+export default DefaultSEO;

@@ -1,21 +1,16 @@
-'use client';
-
 import React from 'react';
-import Link from 'next/link';
 
-export default function NotFound() {
+interface NotFoundProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export const NotFound: React.FC<NotFoundProps> = ({ className = '', children }) => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-6xl font-bold text-white mb-4">404</h1>
-        <p className="text-xl text-gray-300 mb-8">Page not found</p>
-        <Link
-          href="/"
-          className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700"
-        >
-          Go Home
-        </Link>
-      </div>
+    <div className={`notfound ${className}`}>
+      {children}
     </div>
   );
-}
+};
+
+export default NotFound;

@@ -1,21 +1,16 @@
-app/components/EnhancedAccessibilityWrapper.tsx'app/components/EnhancedAccessibilityWrapper.app/components/EnhancedAccessibilityWrapper.tsx;
-app/components/EnhancedAccessibilityWrapper.tsx'app/components/EnhancedAccessibilityWrapper.tsx;
+import React from 'react';
 
-import React from app/components/EnhancedAccessibilityWrapper.tsx'app/components/EnhancedAccessibilityWrapper.tsx;
 interface EnhancedAccessibilityWrapperProps {
-className?: app/components/EnhancedAccessibilityWrapper.tsx;
-  children?: React.app/components/EnhancedAccessibilityWrapper.tsx;
-}
+  className?: string;
+  children?: React.ReactNode;
 }
 
-const EnhancedAccessibilityWrapper: app/components/EnhancedAccessibilityWrapper.tsx"app/components/EnhancedAccessibilityWrapper.tsx, children }) => {
+export const EnhancedAccessibilityWrapper: React.FC<EnhancedAccessibilityWrapperProps> = ({ className = '', children }) => {
   return (
-    <div className = {className,}>
+    <div className={`enhancedaccessibilitywrapper ${className}`}>
+      {children}
     </div>
-      {children;}
+  );
+};
 
-    </div>;)
-  )
-}
-
-export default app/components/EnhancedAccessibilityWrapper.tsx;
+export default EnhancedAccessibilityWrapper;

@@ -1,38 +1,16 @@
-'use client';
-
-import { Head } from 'next/head';
+import React from 'react';
 
 interface SEOHeadProps {
-  title: string;
-  description: string;
-  keywords?: string;
-  url?: string;
-  structuredData?: any;
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export default function SEOHead({
-  title,
-  description,
-  keywords,
-  url,
-  structuredData
-}: SEOHeadProps) {
+export const SEOHead: React.FC<SEOHeadProps> = ({ className = '', children }) => {
   return (
-    <Head>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      {keywords && <meta name="keywords" content={keywords} />}
-      {url && <meta property="og:url" content={url} />}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      {structuredData && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
-      )}
-    </Head>
+    <div className={`seohead ${className}`}>
+      {children}
+    </div>
   );
-}
+};
+
+export default SEOHead;

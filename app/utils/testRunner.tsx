@@ -1,9 +1,16 @@
-app/utils/testRunner.tsx"app/utils/testRunner.app/utils/testRunner.tsx;
-app/utils/testRunner.tsx'app/utils/testRunner.tsx;
+import React from 'react';
 
-import React from app/utils/testRunner.tsx'app/utils/testRunner.tsx;
-export const testRunner = (
-  return app/utils/testRunner.tsx;
-) => {
-$app/utils/testRunner.tsx;
-,}
+interface TestRunnerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export const TestRunner: React.FC<TestRunnerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`testrunner ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default TestRunner;

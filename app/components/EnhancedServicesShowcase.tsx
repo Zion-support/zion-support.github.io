@@ -1,7 +1,16 @@
-app/components/EnhancedServicesShowcase.tsx'app/components/EnhancedServicesShowcase.app/components/EnhancedServicesShowcase.tsx;
-app/components/EnhancedServicesShowcase.tsx'app/components/EnhancedServicesShowcase.tsx;
+import React from 'react';
 
-import React from app/components/EnhancedServicesShowcase.tsx'app/components/EnhancedServicesShowcase.tsx;
-import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe  } from app/components/EnhancedServicesShowcase.tsx'app/components/EnhancedServicesShowcase.tsx;
-import { Navigation  } from app/components/EnhancedServicesShowcase.tsx'app/components/EnhancedServicesShowcase.tsx;
-const EnhancedServicesShowcase: app/components/EnhancedServicesShowcase.tsx"app/components/EnhancedServicesShowcase.tsx,}
+interface EnhancedServicesShowcaseProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export const EnhancedServicesShowcase: React.FC<EnhancedServicesShowcaseProps> = ({ className = '', children }) => {
+  return (
+    <div className={`enhancedservicesshowcase ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default EnhancedServicesShowcase;

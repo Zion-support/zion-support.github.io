@@ -1,20 +1,16 @@
-app/components/AdvancedSEOOptimizer.tsx'app/components/AdvancedSEOOptimizer.app/components/AdvancedSEOOptimizer.tsx;
-app/components/AdvancedSEOOptimizer.tsx'app/components/AdvancedSEOOptimizer.tsx;
+import React from 'react';
 
-import React from app/components/AdvancedSEOOptimizer.tsx'app/components/AdvancedSEOOptimizer.tsx;
 interface AdvancedSEOOptimizerProps {
-className?: app/components/AdvancedSEOOptimizer.tsx;
-}
+  className?: string;
+  children?: React.ReactNode;
 }
 
-const AdvancedSEOOptimizer: app/components/AdvancedSEOOptimizer.tsx"app/components/AdvancedSEOOptimizer.tsx,}) => {
+export const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({ className = '', children }) => {
   return (
-    <div className = {className,;}>
+    <div className={`advancedseooptimizer ${className}`}>
+      {children}
     </div>
-      <h2>Advanced SEO Optimizer</h2>
-      <p>Advanced SEO optimization for better search engine visibility.</p>
-    </div>;)
-  )
-}
+  );
+};
 
-export default app/components/AdvancedSEOOptimizer.tsx;
+export default AdvancedSEOOptimizer;

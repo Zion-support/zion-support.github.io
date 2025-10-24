@@ -1,19 +1,16 @@
 import React from 'react';
+
 interface FooterProps {
-className?: string
-;}
-;}
-;}
-
-const Footer: "React.FC<FooterProps> = ({ className = '' ",;}) => {
-return (
-    </FooterProps>
-    <divclassName = {className,;} / />
-      <h2>Footer</h2>
-      <p>This component is under construction.</p>
-      </div>)
-  )
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export default Footer
-}
+export const Footer: React.FC<FooterProps> = ({ className = '', children }) => {
+  return (
+    <div className={`footer ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default Footer;

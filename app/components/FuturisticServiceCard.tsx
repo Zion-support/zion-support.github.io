@@ -1,5 +1,16 @@
-app/components/FuturisticServiceCard.tsx'app/components/FuturisticServiceCard.app/components/FuturisticServiceCard.tsx;
-app/components/FuturisticServiceCard.tsx'app/components/FuturisticServiceCard.tsx;
+import React from 'react';
 
-import React from app/components/FuturisticServiceCard.tsx'app/components/FuturisticServiceCard.tsx;
-;}
+interface FuturisticServiceCardProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({ className = '', children }) => {
+  return (
+    <div className={`futuristicservicecard ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default FuturisticServiceCard;

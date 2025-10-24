@@ -1,19 +1,16 @@
 import React from 'react';
+
 interface AdvancedSEOOptimizerProps {
-className?: string
-;}
-;}
-;}
-
-const AdvancedSEOOptimizer: "React.FC<AdvancedSEOOptimizerProps> = ({ className = '' ",;}) => {
-return (
-    </AdvancedSEOOptimizerProps>
-    <divclassName = {className,;} / />
-      <h2>AdvancedSEOOptimizer</h2>
-      <p>This component is under construction.</p>
-      </div>)
-  )
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export default AdvancedSEOOptimizer
-}
+export const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`advancedseooptimizer ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default AdvancedSEOOptimizer;

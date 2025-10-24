@@ -1,21 +1,16 @@
-app/components/ErrorBoundaryWrapper.tsx'app/components/ErrorBoundaryWrapper.app/components/ErrorBoundaryWrapper.tsx;
-app/components/ErrorBoundaryWrapper.tsx'app/components/ErrorBoundaryWrapper.tsx;
+import React from 'react';
 
-import React from app/components/ErrorBoundaryWrapper.tsx'app/components/ErrorBoundaryWrapper.tsx;
 interface ErrorBoundaryWrapperProps {
-className?: app/components/ErrorBoundaryWrapper.tsx;
-  children?: React.app/components/ErrorBoundaryWrapper.tsx;
-}
+  className?: string;
+  children?: React.ReactNode;
 }
 
-const ErrorBoundaryWrapper: app/components/ErrorBoundaryWrapper.tsx"app/components/ErrorBoundaryWrapper.tsx, children }) => {
+export const ErrorBoundaryWrapper: React.FC<ErrorBoundaryWrapperProps> = ({ className = '', children }) => {
   return (
-    <div className = {className,}>
+    <div className={`errorboundarywrapper ${className}`}>
+      {children}
     </div>
-      {children;}
+  );
+};
 
-    </div>;)
-  )
-}
-
-export default app/components/ErrorBoundaryWrapper.tsx;
+export default ErrorBoundaryWrapper;

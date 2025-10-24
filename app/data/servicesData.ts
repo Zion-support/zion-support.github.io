@@ -1,260 +1,88 @@
 export interface Service {
-  id: app/data/servicesData.ts;
-  title: app/data/servicesData.ts;
-  description: app/data/servicesData.ts;
-  features: string[]
-  benefits: string[]
+  id: string;
+  title: string;
+  description: string;
+  features: string[];
+  benefits: string[];
   pricing: {
-    basic: app/data/servicesData.ts;
-    pro: app/data/servicesData.ts;
-    enterprise: app/data/servicesData.ts;
-  }
-
+    basic: string;
+    pro: string;
+    enterprise: string;
+  };
   contactInfo: {
-    website: app/data/servicesData.ts;
-    email: app/data/servicesData.ts;
-    phone: app/data/servicesData.ts;
-  }
-
-  price?: app/data/servicesData.ts;
-  icon?: app/data/servicesData.ts;
-  href: app/data/servicesData.ts;
-  popular?: app/data/servicesData.ts;
-  category: app/data/servicesData.ts'app/data/servicesData.ts | app/data/servicesData.ts'app/data/servicesData.ts | app/data/servicesData.ts'app/data/servicesData.ts | app/data/servicesData.ts'app/data/servicesData.ts | app/data/servicesData.ts'app/data/servicesData.ts | app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+    website: string;
+    email: string;
+    phone: string;
+  };
+  price?: string;
+  icon?: string;
+  href: string;
+  popular?: boolean;
+  category?: string;
 }
 
 export const aiServices: Service[] = [
   {
-    id: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    title: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    description: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    features: [
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    ]
-    benefits: [
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    ]
+    id: 'ai-content-generation',
+    title: 'AI Content Generation',
+    description: 'Automated content creation using advanced AI',
+    features: ['Text generation', 'Content optimization', 'SEO integration'],
+    benefits: ['Faster content creation', 'Consistent quality', 'Cost effective'],
     pricing: {
-      basic: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      pro: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      enterprise: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    }
-
+      basic: '$99/month',
+      pro: '$299/month',
+      enterprise: 'Custom'
+    },
     contactInfo: {
-      website: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      email: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      phone: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    }
-
-    price: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    icon: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    href: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    popular: app/data/servicesData.ts;
-    category: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      website: 'https://ziontechgroup.com',
+      email: 'info@ziontechgroup.com',
+      phone: '+1-555-0123'
+    },
+    href: '/ai-content-generation',
+    popular: true,
+    category: 'ai'
   }
+];
 
-  {
-    id: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    title: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    description: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    features: [
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    ]
-    benefits: [
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    ]
-    pricing: {
-      basic: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      pro: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      enterprise: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    }
-
-    contactInfo: {
-      website: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      email: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      phone: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    }
-
-    price: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    icon: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    href: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    category: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-  }
-
-  {
-    id: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    title: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    description: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    features: [
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    ]
-    benefits: [
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    ]
-    pricing: {
-      basic: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      pro: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      enterprise: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    }
-
-    contactInfo: {
-      website: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      email: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      phone: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    }
-
-    price: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    icon: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    href: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    category: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-  }
-]
 export const itServices: Service[] = [
   {
-    id: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    title: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    description: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    features: [
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    ]
-    benefits: [
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    ]
+    id: 'cloud-migration',
+    title: 'Cloud Migration',
+    description: 'Seamless migration to cloud infrastructure',
+    features: ['Data migration', 'Security setup', 'Performance optimization'],
+    benefits: ['Reduced costs', 'Better scalability', 'Enhanced security'],
     pricing: {
-      basic: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      pro: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      enterprise: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    }
-
+      basic: '$199/month',
+      pro: '$599/month',
+      enterprise: 'Custom'
+    },
     contactInfo: {
-      website: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      email: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      phone: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    }
-
-    price: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    icon: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    href: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    popular: app/data/servicesData.ts;
-    category: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      website: 'https://ziontechgroup.com',
+      email: 'info@ziontechgroup.com',
+      phone: '+1-555-0123'
+    },
+    href: '/cloud-migration',
+    popular: true,
+    category: 'it'
   }
+];
 
-  {
-    id: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    title: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    description: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    features: [
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    ]
-    benefits: [
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    ]
-    pricing: {
-      basic: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      pro: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      enterprise: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    }
+export const allServices: Service[] = [...aiServices, ...itServices];
 
-    contactInfo: {
-      website: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      email: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      phone: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    }
-
-    price: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    icon: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    href: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    category: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-  }
-
-  {
-    id: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    title: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    description: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    features: [
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    ]
-    benefits: [
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    ]
-    pricing: {
-      basic: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      pro: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      enterprise: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    }
-
-    contactInfo: {
-      website: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      email: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-      phone: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    }
-
-    price: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    icon: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    href: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-    category: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
-  }
-]
-export const itSolutions = app/data/servicesData.ts;
-export const allServices: Service[] = [...aiServices, ...itServices]
-// Export as servicesData for backward app/data/servicesData.ts;
 export const servicesData = {
-  app/data/servicesData.ts;
-  app/data/servicesData.ts;
-  itSolutions: itServices, // Add alias for app/data/servicesData.ts;
-  app/data/servicesData.ts;
-}
+  aiServices,
+  itServices,
+  allServices
+};
 
 export const getServiceById = (id: string): Service | undefined => {
-  return allServices.find(service => service.id === id)
-}
+  return allServices.find(service => service.id === id);
+};
 
-export const getServicesByCategory = (category: Service[app/data/servicesData.ts'app/data/servicesData.ts]): Service[] => {
-  return allServices.filter(service => service.category === category)
-}
+export const getServicesByCategory = (category: string): Service[] => {
+  return allServices.filter(service => service.category === category);
+};
 
 export const getPopularServices = (): Service[] => {
-  return allServices.filter(service => service.popular)
-}
+  return allServices.filter(service => service.popular);
+};

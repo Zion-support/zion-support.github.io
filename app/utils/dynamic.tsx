@@ -1,9 +1,16 @@
-app/utils/dynamic.tsx"app/utils/dynamic.app/utils/dynamic.tsx;
-app/utils/dynamic.tsx'app/utils/dynamic.tsx;
+import React from 'react';
 
-import React from app/utils/dynamic.tsx'app/utils/dynamic.tsx;
-export const dynamic = (
-  return app/utils/dynamic.tsx;
-) => {
-$app/utils/dynamic.tsx;
-,}
+interface DynamicProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export const Dynamic: React.FC<DynamicProps> = ({ className = '', children }) => {
+  return (
+    <div className={`dynamic ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default Dynamic;

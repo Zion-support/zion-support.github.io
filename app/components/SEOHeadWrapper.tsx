@@ -1,24 +1,16 @@
-app/components/SEOHeadWrapper.tsx'app/components/SEOHeadWrapper.app/components/SEOHeadWrapper.tsx;
-app/components/SEOHeadWrapper.tsx'app/components/SEOHeadWrapper.tsx;
+import React from 'react';
 
-import React from app/components/SEOHeadWrapper.tsx'app/components/SEOHeadWrapper.tsx;
 interface SEOHeadWrapperProps {
-className?: app/components/SEOHeadWrapper.tsx;
-  title?: app/components/SEOHeadWrapper.tsx;
-  description?: app/components/SEOHeadWrapper.tsx;
-  keywords?: string[]
-  children?: React.app/components/SEOHeadWrapper.tsx;
-}
+  className?: string;
+  children?: React.ReactNode;
 }
 
-const SEOHeadWrapper: app/components/SEOHeadWrapper.tsx"app/components/SEOHeadWrapper.tsx, title, description, keywords, children }) => {
+export const SEOHeadWrapper: React.FC<SEOHeadWrapperProps> = ({ className = '', children }) => {
   return (
-    <div className = {className,}>
+    <div className={`seoheadwrapper ${className}`}>
+      {children}
     </div>
-      {children;}
+  );
+};
 
-    </div>;)
-  )
-}
-
-export default app/components/SEOHeadWrapper.tsx;
+export default SEOHeadWrapper;

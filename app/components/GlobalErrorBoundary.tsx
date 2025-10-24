@@ -1,17 +1,16 @@
-app/components/GlobalErrorBoundary.tsx'app/components/GlobalErrorBoundary.app/components/GlobalErrorBoundary.tsx;
-app/components/GlobalErrorBoundary.tsx'app/components/GlobalErrorBoundary.tsx;
+import React from 'react';
 
-import React from app/components/GlobalErrorBoundary.tsx'app/components/GlobalErrorBoundary.tsx;
-import { CheckCircle, Phone, Mail, Helmet  } from app/components/GlobalErrorBoundary.tsx'app/components/GlobalErrorBoundary.tsx;
-  ]
-const benefits = [
-    app/components/GlobalErrorBoundary.tsx'app/components/GlobalErrorBoundary.app/components/GlobalErrorBoundary.tsx;
-    app/components/GlobalErrorBoundary.tsx'app/components/GlobalErrorBoundary.app/components/GlobalErrorBoundary.tsx;
-    app/components/GlobalErrorBoundary.tsx'app/components/GlobalErrorBoundary.app/components/GlobalErrorBoundary.tsx;
-    app/components/GlobalErrorBoundary.tsx'app/components/GlobalErrorBoundary.app/components/GlobalErrorBoundary.tsx;
-    app/components/GlobalErrorBoundary.tsx'app/components/GlobalErrorBoundary.tsx <div className=app/components/GlobalErrorBoundary.tsx"app/components/GlobalErrorBoundary.tsx />
+interface GlobalErrorBoundaryProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export const GlobalErrorBoundary: React.FC<GlobalErrorBoundaryProps> = ({ className = '', children }) => {
+  return (
+    <div className={`globalerrorboundary ${className}`}>
+      {children}
     </div>
-            </div>
+  );
+};
 
-,;}
-
+export default GlobalErrorBoundary;

@@ -1,19 +1,16 @@
-app/components/ErrorBoundary.tsx'app/components/ErrorBoundary.app/components/ErrorBoundary.tsx;
-app/components/ErrorBoundary.tsx'app/components/ErrorBoundary.tsx;
+import React from 'react';
 
-import React from app/components/ErrorBoundary.tsx'app/components/ErrorBoundary.tsx;
 interface ErrorBoundaryProps {
-className?: app/components/ErrorBoundary.tsx;
-  children?: React.app/components/ErrorBoundary.tsx;
-}
+  className?: string;
+  children?: React.ReactNode;
 }
 
-const ErrorBoundary: app/components/ErrorBoundary.tsx"app/components/ErrorBoundary.tsx, children }) => {
+export const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ className = '', children }) => {
   return (
-    <div className = {className,}>
+    <div className={`errorboundary ${className}`}>
+      {children}
     </div>
-      {children;}
+  );
+};
 
-    </div>;)
-  )
-}
+export default ErrorBoundary;

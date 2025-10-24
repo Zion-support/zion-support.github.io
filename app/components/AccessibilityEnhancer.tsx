@@ -1,21 +1,16 @@
-app/components/AccessibilityEnhancer.tsx'app/components/AccessibilityEnhancer.app/components/AccessibilityEnhancer.tsx;
-app/components/AccessibilityEnhancer.tsx'app/components/AccessibilityEnhancer.tsx;
+import React from 'react';
 
-import React from app/components/AccessibilityEnhancer.tsx'app/components/AccessibilityEnhancer.tsx;
 interface AccessibilityEnhancerProps {
-className?: app/components/AccessibilityEnhancer.tsx;
-  children?: React.app/components/AccessibilityEnhancer.tsx;
-}
+  className?: string;
+  children?: React.ReactNode;
 }
 
-const AccessibilityEnhancer: app/components/AccessibilityEnhancer.tsx"app/components/AccessibilityEnhancer.tsx, children }) => {
+export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ className = '', children }) => {
   return (
-    <div className = {className,}>
+    <div className={`accessibilityenhancer ${className}`}>
+      {children}
     </div>
-      {children;}
+  );
+};
 
-    </div>;)
-  )
-}
-
-export default app/components/AccessibilityEnhancer.tsx;
+export default AccessibilityEnhancer;
