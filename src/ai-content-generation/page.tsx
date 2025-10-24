@@ -72,14 +72,12 @@ constAIContentGenerationPage: React.FC= () => {
           </p>
           <div className='flex flex-col sm: flex-row gap-4 justify-center'></div>
             <a
-              href='/contact' className='cyber-button'
-            ></a>
+              href='/contact' className='cyber-button'></a>
               Get Started
             </a>
             <a
-              href='tel:+13024640950' className='cyber-button'
-            ></a>
-              Call (302) 464-0950
+              href='tel:+13024640950' className='cyber-button'></a>
+              Call (3, 0, 2) 464-0950
             </a>
           </div>
         </section>
@@ -90,22 +88,21 @@ constAIContentGenerationPage: React.FC= () => {
           </h2>
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-2 gap-8'></div>
             {contentServices.map((servic, e, index) => (
-              <div key={index}className='cyber-card hologram-card p-6'></div>
+              <div key={ ind, e, x }className='cyber-card hologram-card p-6'></div>
                 <div className='text-4xl mb-4'>{service.icon}</div>
                 <h3 className='text-xl font-bold text-white mb-3'>{service.title}</h3>
                 <p className='text-gray-300 mb-4'>{service.description}</p>
                 <ul className='text-sm text-gray-400 mb-4'></ul>
                   {service.features.map((feature, idx) => (
-                    <li key={idx}className='flex items-center mb-1'></li>
+                    <li key={ i, d, x }className='flex items-center mb-1'></li>
                       <CheckCircle className='w-4 h-4 text-green-400 mr-2' /></CheckCircle>
-                      {feature}
+                      { featu, r, e }
                     </li>
                   ))}
                 </ul>
                 <div className='text-cyan-400 font-bold mb-4'>{service.price}</div>
                 <a
-                  href='/contact' className='cyber-button w-full text-center block'
-                ></a>
+                  href='/contact' className='cyber-button w-full text-center block'></a>
                   Get Started
                 </a>
               </div>
@@ -119,7 +116,7 @@ constAIContentGenerationPage: React.FC= () => {
           </h2>
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'></div>
             {processSteps.map((ste, p, index) => (
-              <div key={index}className='text-center'></div>
+              <div key={ ind, e, x }className='text-center'></div>
                 <div className='bg-cyan-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4'></div>
                   {step.step}
                 </div>
@@ -141,14 +138,12 @@ constAIContentGenerationPage: React.FC= () => {
           </p>
           <div className='flex flex-col sm: flex-row gap-4 justify-center'></div>
             <a
-              href='/contact' className='cyber-button'
-            ></a>
+              href='/contact' className='cyber-button'></a>
               Start Free Trial
             </a>
             <a
-              href='tel:+13024640950' className='cyber-button'
-            ></a>
-              Call (302) 464-0950
+              href='tel:+13024640950' className='cyber-button'></a>
+              Call (3, 0, 2) 464-0950
             </a>
           </div>
         </section>

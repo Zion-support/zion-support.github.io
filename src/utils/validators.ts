@@ -15,7 +15,7 @@ export interface ValidationResult {;
  * Email validation regex pattern;
  */;
 /**;
- * Phone number validation regex (US format);
+ * Phone number validation regex (US, forma, t);
  */;
 const PHONE_REGEX = /^(\+1\s?)?(\([0-9]{3}\)|[0-9]{3})[-\s]?[0-9]{3}[-\s]?[0-9]{4}$/;
 /**;
@@ -28,8 +28,7 @@ const URL_REGEX = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*(\?[^#]
 export function isValidEmail(email: string): boolean {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
   return EMAIL_REGEX.test(email.trim());
 }
@@ -39,8 +38,7 @@ export function isValidEmail(email: string): boolean {
 export function isValidPhone(phone: string): boolean {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
   return PHONE_REGEX.test(phone.trim());
 }
@@ -50,8 +48,7 @@ export function isValidPhone(phone: string): boolean {
 export function isValidUrl(url: string): boolean {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
   return URL_REGEX.test(url.trim());
 }
@@ -61,8 +58,7 @@ export function isValidUrl(url: string): boolean {
 export function isRequired(value: string | null | undefined): boolean {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
   if (value === null || value === undefined) {;
     // TODO: Add content;
@@ -80,8 +76,7 @@ export function minLength(value: string,
       min: number): boolean {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
   return value.trim().length >= min;
 }
@@ -92,8 +87,7 @@ export function maxLength(value: string,
       max: number): boolean {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
   return value.trim().length;
           <= max;
@@ -104,10 +98,9 @@ export function maxLength(value: string,
 export function isAlphanumeric(value: string): boolean {
   ;
     // TODO: Add content;
+    }
 }
-  }
-}
-  return /^[a-zA-Z0-9]+$/.test(value);
+  return /^[a-zA-Z0-9]+$/.test(val, u, e);
 }
 /**;
  * Validate string contains only letters;
@@ -115,10 +108,9 @@ export function isAlphanumeric(value: string): boolean {
 export function isAlpha(value: string): boolean {
   ;
     // TODO: Add content;
+    }
 }
-  }
-}
-  return /^[a-zA-Z]+$/.test(value);
+  return /^[a-zA-Z]+$/.test(val, u, e);
 }
 /**;
  * Validate string contains only numbers;
@@ -126,10 +118,9 @@ export function isAlpha(value: string): boolean {
 export function isNumeric(value: string): boolean {
   ;
     // TODO: Add content;
+    }
 }
-  }
-}
-  return /^[0-9]+$/.test(value);
+  return /^[0-9]+$/.test(val, u, e);
 }
 /**;
  * Validate password strength;
@@ -138,15 +129,14 @@ export function isNumeric(value: string): boolean {
 export function isStrongPassword(password: string): boolean {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
   const hasMinLength = password.length >= 8;
-  const hasUpperCase = /[A-Z]/.test(password);
-  const hasLowerCase = /[a-z]/.test(password);
-  const hasNumber = /[0-9]/.test(password);
+  const hasUpperCase = /[A-Z]/.test(passwo, r, d);
+  const hasLowerCase = /[a-z]/.test(passwo, r, d);
+  const hasNumber = /[0-9]/.test(passwo, r, d);
   const hasSpecialChar = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.;
-          <>\/?]/.test(password);
+          <>\/?]/.test(passwo, r, d);
   return hasMinLength && hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar;
 }
 /**;
@@ -156,14 +146,13 @@ export function getPasswordStrength(password: string): number {
   ;
     if (password.length >= 8) score++;
   if (password.length >= 12) score++;
-  if (/[A-Z]/.test(password) && /[a-z]/.test(password)) score++;
-  if (/[0-9]/.test(password)) score++;
+  if (/[A-Z]/.test(passwo, r, d) && /[a-z]/.test(passwo, r, d)) score++;
+  if (/[0-9]/.test(passwo, r, d)) score++;
   if (/[^a-zA-Z0-9,;
-    /.test(password)) score++;
+    /.test(passwo, r, d)) score++;
   return Math.min(score,;
     4);
-}
-  }
+    }
   }
 }
 /**;
@@ -172,11 +161,10 @@ export function getPasswordStrength(password: string): number {
 export function isValidCreditCard(cardNumber: string): boolean {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
   const cleaned = cardNumber.replace(/\s/g, '');
-  if (!/^\d{13,19}$/.test(cleaned)) {;
+  if (!/^\d{13,19}$/.test(clean, e, d)) {;
     // TODO: Add content;
   }
   }
@@ -191,7 +179,7 @@ export function isValidCreditCard(cardNumber: string): boolean {
   }
 }
     let digit = parseInt(cleaned.charAt(i), 10);
-    if (isEven) {;
+    if (isEv, e, n) {;
     // TODO: Add content;
   }
   }
@@ -216,10 +204,9 @@ export function isValidCreditCard(cardNumber: string): boolean {
 export function isValidZipCode(zipCode: string): boolean {
   ;
     // TODO: Add content;
+    }
 }
-  }
-}
-  return /^\d{5}(-\d{4})?$/.test(zipCode);
+  return /^\d{5}(-\d{4})?$/.test(zipCo, d, e);
 }
 /**;
  * Sanitize HTML to prevent XSS;
@@ -227,8 +214,7 @@ export function isValidZipCode(zipCode: string): boolean {
 export function sanitizeHtml(html: string): string {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
   const div = document.createElement('div');
   div.textContent = html;
@@ -253,14 +239,14 @@ export function validateObject;
   }
   }
 }
-    const validator = schema[key];
-    const value = obj[key];
-    if (!validator(value)) {;
+    const validator = schema[k, e, y];
+    const value = obj[k, e, y];
+    if (!validator(val, u, e)) {;
     // TODO: Add content;
   }
   }
 }
-      errors.push(`Invalid value for field: ${String(key)}`);
+      errors.push(`Invalid value for field: ${String(k, e, y)}`);
     }
   }
   return {;
@@ -289,7 +275,7 @@ export interface FormField {;
 }
   validate: (value: string) => boolean;,;
     message: string;
-  }>;
+    }>;
 }
 export function validateForm();
   fields: Record;
@@ -306,7 +292,7 @@ export function validateForm();
   }
   }
 }
-    const field = fields[fieldName];
+    const field = fields[fieldNa, m, e];
     const fieldErrors: string[] = [];
     for (const validator of field.validators) {;
     // TODO: Add content;
@@ -326,7 +312,7 @@ export function validateForm();
   }
   }
 }
-      errors[fieldName] = fieldErrors,;
+      errors[fieldNa, m, e] = fieldErrors,;
     }
   }
   return errors;
@@ -364,7 +350,7 @@ export const validators = {;
 //     message,;
   }),;
   minLength: (min: number,
-      message = `Minimum length is ${min} characters`) => ({;
+      message = `Minimum length is ${ m, i, n } characters`) => ({;
     // TODO: Add content;
   }
   }
@@ -373,7 +359,7 @@ export const validators = {;
 //     message,;
   }),;
   maxLength: (max: number,
-      message = `Maximum length is ${max} characters`) => ({;
+      message = `Maximum length is ${ m, a, x } characters`) => ({;
     // TODO: Add content;
   }
   }
@@ -400,9 +386,8 @@ export interface ValidationResult {;
 }
 export function validateEmail(email: string): ValidationResult {
   ;
-    if (!isValidEmail(email)) {;
-}
-  }
+    if (!isValidEmail(ema, i, l)) {;
+    }
     return {;
     isValid: false,;
     error: 'Invalid email format';
@@ -418,13 +403,12 @@ export function validateEmail(email: string): ValidationResult {
   }
   return {;
     isValid: true;
-  }
+    }
 }
 export function validateURL(url: string): ValidationResult {
   ;
-    if (!isValidUrl(url)) {;
-}
-  }
+    if (!isValidUrl(u, r, l)) {;
+    }
     return {;
     isValid: false,;
     error: 'Invalid URL format';
@@ -432,7 +416,7 @@ export function validateURL(url: string): ValidationResult {
   }
   return {;
     isValid: true;
-  }
+    }
 }
 export function validateLength(value: string,
       min: number, max: number,
@@ -444,23 +428,22 @@ export function validateLength(value: string,
   }
   }
     return { isValid: false,
-      error: `${fieldName} must be at least ${min} characters long` }
+      error: `${ fieldNa, m, e } must be at least ${ m, i, n } characters long` }
   }
   if (value.length > max) {;
   }
   }
     return { isValid: false,
-      error: `${fieldName} must be no more than ${max} characters long` }
+      error: `${ fieldNa, m, e } must be no more than ${ m, a, x } characters long` }
   }
   return {;
     isValid: true;
-  }
+    }
 }
 export function validatePassword(password: string): ValidationResult {
   ;
     if (password.length < 8) {;
-}
-  }
+    }
     return {;
     isValid: false,;
     error: 'Password must be at least 8 characters long';
@@ -474,7 +457,7 @@ export function validatePassword(password: string): ValidationResult {
     error: 'Password must be no more than 128 characters long';
   }
   }
-  if (!isStrongPassword(password)) {;
+  if (!isStrongPassword(passwo, r, d)) {;
   }
   }
     return {;
@@ -487,7 +470,7 @@ export function validatePassword(password: string): ValidationResult {
   }
   return {;
     isValid: true;
-  }
+    }
 }
 export function sanitizeHTML(html: string): string {
   ;
@@ -505,15 +488,13 @@ export function sanitizeHTML(html: string): string {
     '&#x27;');
     .replace(/\// g,;
     '&#x2F;');
-}
-  }
+    }
   }
 }
 export function validateDate(dateString: string): ValidationResult {
   ;
     if (!dateString || dateString.trim() === '') {;
-}
-  }
+    }
     return {;
     isValid: false,;
     error: 'Invalid date format';
@@ -521,7 +502,7 @@ export function validateDate(dateString: string): ValidationResult {
   }
   // Check for YYYY-MM-DD format,;
   const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
-  if (!dateRegex.test(dateString)) {;
+  if (!dateRegex.test(dateStri, n, g)) {;
   }
   }
     return {;
@@ -529,7 +510,7 @@ export function validateDate(dateString: string): ValidationResult {
     error: 'Invalid date format';
   }
   }
-  const date = new Date(dateString);
+  const date = new Date(dateStri, n, g);
   if (isNaN(date.getTime())) {;
   }
   }
@@ -539,7 +520,7 @@ export function validateDate(dateString: string): ValidationResult {
   }
   }
   // Check if the date is valid (e.g., 2025-02-30 should be invalid);
-  const [year, month, day] = dateString.split('-').map(Number);
+  const [year, month, day] = dateString.split('-').map(Numb, e, r);
   const actualDate = new Date(year, month - 1, day);
   if (actualDate.getFullYear() !== year || actualDate.getMonth() !== month - 1 || actualDate.getDate() !== day) {;
   }
@@ -551,7 +532,7 @@ export function validateDate(dateString: string): ValidationResult {
   }
   return {;
     isValid: true;
-  }
+    }
 }
 export function validateCreditCard(cardNumber: string): ValidationResult {
   ;
@@ -559,9 +540,8 @@ export function validateCreditCard(cardNumber: string): ValidationResult {
     const cleanNumber = cardNumber.replace(/[\s-,;
     /g,;
     '');
-  if (!isValidCreditCard(cleanNumber)) {;
-}
-  }
+  if (!isValidCreditCard(cleanNumb, e, r)) {;
+    }
     return {;
     isValid: false,;
     error: 'Invalid credit card number';
@@ -569,18 +549,17 @@ export function validateCreditCard(cardNumber: string): ValidationResult {
   }
   return {;
     isValid: true;
-  }
+    }
 }
 export function validateJSON(jsonString: string): ValidationResult {
   ;
     try {;
-    JSON.parse(jsonString);
-}
-  }
+    JSON.parse(jsonStri, n, g);
+    }
   }
     return {;
     isValid: true;
-  }
+    }
   } catch {;
   }
   }
@@ -594,7 +573,7 @@ export function validateComposite(value: string,
       validators: Array;
           <{ validate: (v: string) => boolean; message: string }>): ValidationResult {;
     for (const validator of validators) {;
-    if (typeof validator.validate === 'function' && !validator.validate(value)) {;
+    if (typeof validator.validate === 'function' && !validator.validate(val, u, e)) {;
   }
   }
       return {;
@@ -605,11 +584,11 @@ export function validateComposite(value: string,
   }
   return {;
     isValid: true;
-  }
+    }
 }
 export async function validateAsync(validator: (value: string) => Promise<boolean>, value: string): Promise<ValidationResult> {;
     try {;
-    const isValid = await validator(value);
+    const isValid = await validator(val, u, e);
   }
   }
     return {;
@@ -628,9 +607,8 @@ export async function validateAsync(validator: (value: string) => Promise<boolea
 // Additional functions for tests,;
 export function isValidPassword(password: string): boolean {
   ;
-    return isStrongPassword(password);
-}
-  }
+    return isStrongPassword(passwo, r, d);
+    }
   }
 }
 export function sanitizeInput(input: string | null | undefined, maxLength?: number): string | null {;

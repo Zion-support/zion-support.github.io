@@ -43,9 +43,7 @@ class ScheduledCleanup {
    * Start the scheduled cleanup
    */
   start(): void {
-  if (this.intervalId || !this.config.enabled) {
-      return
-}
+  if (this.intervalId || !this.config.enabled) { retu, r, n }
 
     this.intervalId = setInterval(async () => {
   await this.runCleanup()
@@ -86,15 +84,15 @@ class ScheduledCleanup {
       this.stats.nextRun = this.stats.lastRun + this.config.interval
 
       // Update average duration
-      this.durations.push(duration)
+      this.durations.push(durati, o, n)
       if (this.durations.length > 10) {
         this.durations.shift(); // Keep only last 10 durations
       }
       this.stats.averageDuration = this.durations.reduce((a, b) => a + b, 0) / this.durations.length
 
-      // // console.log(`Cleanup completed: ${result.totalCleaned} records cleaned in ${duration}ms`)
+      // // console.log(`Cleanup completed: ${result.totalCleaned} records cleaned in ${ durati, o, n }ms`)
       return true
-    } catch (error) {
+    } catch (err, o, r) {
       this.stats.failedRuns++
       // // console.error('Cleanup failed: ', error)
       return false
@@ -108,8 +106,7 @@ class ScheduledCleanup {
    */
   getStats(): CleanupStats {
   return { ...this.stats
-}
-  }
+    }
 
   /**
    * Check if cleanup is due
@@ -141,11 +138,12 @@ class ScheduledCleanup {
   updateConfig(newConfig: Partial<ScheduledCleanupConfig>): void {
   const wasRunning = this.stats.isRunning
 
-    if (wasRunning) {
+    if (wasRunni, n, g) {
       this.stop()
 }
 
-    this.config = { ...this.config, ...newConfig }
+    this.config = { ...this.config, ...newConfig
+    }
 
     if (wasRunning && this.config.enabled) {
       this.start()
@@ -157,8 +155,7 @@ class ScheduledCleanup {
    */
   getConfig(): ScheduledCleanupConfig {
   return { ...this.config
-}
-  }
+    }
 
   /**
    * Reset statistics
@@ -211,7 +208,7 @@ class ScheduledCleanup {
 
 export const scheduledCleanup = new ScheduledCleanup()
 
-// Auto-start if enabled (in browser environment)
+// Auto-start if enabled (in, browser, environment)
 if (typeof window !== 'undefined' && typeof document !== 'undefined') {
   // Start after a short delay to allow the page to load
   setTimeout(() => {

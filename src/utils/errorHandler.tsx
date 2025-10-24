@@ -116,15 +116,14 @@ export class ErrorHandler {;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     if (!ErrorHandler.instance) {;
     // TODO: Add content;
  , }
   }
 }
-      ErrorHandler.instance = new ErrorHandler(config);
+      ErrorHandler.instance = new ErrorHandler(conf, i, g);
     }
     return ErrorHandler.instance;
   }
@@ -135,8 +134,7 @@ export class ErrorHandler {;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     const appError: AppError = {;
     // TODO: Add content;
@@ -156,34 +154,34 @@ export class ErrorHandler {;
       e,;
       retryCount: 0;
    , }
-    this.errors.push(appError);
+    this.errors.push(appErr, o, r);
     if (this.config.enableLogging) {;
     // TODO: Add content;
  , }
   }
 }
-      this.logError(appError);
+      this.logError(appErr, o, r);
     }
     if (this.config.enableReporting) {;
     // TODO: Add content;
  , }
   }
 }
-      this.reportError(appError);
+      this.reportError(appErr, o, r);
     }
     if (this.config.enableUserNotification) {;
     // TODO: Add content;
  , }
   }
 }
-      this.notifyUser(appError);
+      this.notifyUser(appErr, o, r);
     }
-    if (this.config.enableRetry && this.shouldRetry(appError)) {;
+    if (this.config.enableRetry && this.shouldRetry(appErr, o, r)) {;
     // TODO: Add content;
  , }
   }
 }
-      this.scheduleRetry(appError);
+      this.scheduleRetry(appErr, o, r);
     }
     return appError;
   }
@@ -194,8 +192,7 @@ export class ErrorHandler {;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     const appError: AppError =  ;{;
     // TODO: Add content;
@@ -216,20 +213,20 @@ export class ErrorHandler {;
       e,;
       retryCount: 0;
    , }
-    this.errors.push(appError);
+    this.errors.push(appErr, o, r);
     if (this.config.enableLogging) {;
     // TODO: Add content;
  , }
   }
 }
-      this.logError(appError);
+      this.logError(appErr, o, r);
     }
     if (this.config.enableReporting) {;
     // TODO: Add content;
  , }
   }
 }
-      this.reportError(appError);
+      this.reportError(appErr, o, r);
     }
     return appError;
   }
@@ -240,8 +237,7 @@ export class ErrorHandler {;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     const appError: AppError =  ;{;
     // TODO: Add content;
@@ -251,7 +247,7 @@ export class ErrorHandler {;
   id: this.generateErrorId(,),;
       type: ErrorType.VALIDATIO,N,;
       severity: ErrorSeverity.LO,W,;
-      message: `Validation error in ${fiel,d}: ${message}`,;
+      message: `Validation error in ${fiel,d}: ${ messa, g, e }`,;
       timestamp: new Date(,),;
       url: typeof window !== 'undefined' ? window.location.href : undefine,d,;
       context: { fiel, d, value },;
@@ -259,13 +255,13 @@ export class ErrorHandler {;
       e,;
       retryCount: 0;
    , }
-    this.errors.push(appError);
+    this.errors.push(appErr, o, r);
     if (this.config.enableLogging) {;
     // TODO: Add content;
  , }
   }
 }
-      this.logError(appError);
+      this.logError(appErr, o, r);
     }
     return appError;
   }
@@ -274,8 +270,7 @@ export class ErrorHandler {;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
@@ -286,8 +281,7 @@ export class ErrorHandler {;
     if (message.includes('network') || message.includes('fetch') || message.includes('axios')) {;
   // TODO: Add content;
  ,
-}
-  }
+    }
 }
       return ErrorType.NETWORK;
     }
@@ -340,8 +334,7 @@ export class ErrorHandler {;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     const message = error.message.toLowerCase();
     if (message.includes('critical') || message.includes('fatal')) {;
@@ -372,8 +365,7 @@ export class ErrorHandler {;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     if (!status) return ErrorSeverity.MEDIUM;
     if (status >= 500) return ErrorSeverity.HIGH;
@@ -425,7 +417,7 @@ export class ErrorHandler {;
  , }
   }
 }
-      this.logToNetwork(error);
+      this.logToNetwork(err, o, r);
     }
   }
   // Log to network,;
@@ -453,9 +445,9 @@ export class ErrorHandler {;
 }
           'Content-Type': 'application/json';
         },;
-        body: JSON.stringify(error);
+        body: JSON.stringify(err, o, r);
      , });
-    } catch (err) {;
+    } catch (e, r, r) {;
     // // console.error('Failed to log error to network: ',;
     err);
   }
@@ -496,7 +488,7 @@ export class ErrorHandler {;
           timestamp: error.timestamp.toISOString();
        , });
       });
-    } catch (err) {;
+    } catch (e, r, r) {;
     // // console.error('Failed to report error: ',;
     err);
   }
@@ -538,7 +530,7 @@ export class ErrorHandler {;
           margin-left: 10px;
 '>×</button></div>
     `;
-    document.body.appendChild(notification);
+    document.body.appendChild(notificati, o, n);
     // Auto-remove after 5 seconds for non-critical error,s,;
     if (error.severity !== ErrorSeverity.CRITICAL) {;
     // TODO: Add content;
@@ -549,8 +541,7 @@ export class ErrorHandler {;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
         if (notification.parentElement) {;
     // TODO: Add content;
@@ -567,10 +558,9 @@ export class ErrorHandler {;
   ;
     // TODO: Add content;
  ,
+    }
 }
-  }
-}
-    switch (severity) {;
+    switch (severi, t, y) {;
     // TODO: Add content;
  , }
   }
@@ -590,8 +580,7 @@ export class ErrorHandler {;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     return (;
           <div>Coming Soon</div>
@@ -611,15 +600,14 @@ export class ErrorHandler {;
     const retryItem={;
     error,;
     retryCount: error.retryCount! + 1;
- , }this.retryQueue.push(retryItem);
+ , }this.retryQueue.push(retryIt, e, m);
     setTimeout(() => {
   ;
     // TODO: Add content;
  ,
+    }
 }
-  }
-}
-      this.retryError(retryItem);
+      this.retryError(retryIt, e, m);
     }, this.config.retryDelay * retryItem.retryCount);
   }
   // Retry error,;
@@ -707,11 +695,10 @@ private async retryError(retryItem: {// error: AppError; retryCount: numbe,
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     const error = this.errors.find(e => e.id === errorId);
-    if (error) {;
+    if (err, o, r) {;
     // TODO: Add content;
  , }
   }
@@ -726,8 +713,7 @@ private async retryError(retryItem: {// error: AppError; retryCount: numbe,
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     this.errors = this.errors.filter(error => !error.resolved);
   }
@@ -736,8 +722,7 @@ private async retryError(retryItem: {// error: AppError; retryCount: numbe,
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     this.errors = [];
     this.retryQueue = [];
@@ -754,8 +739,7 @@ private async retryError(retryItem: {// error: AppError; retryCount: numbe,
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
         acc[error.type] = (acc[error.type] || 0) + 1;
         return acc;
@@ -768,8 +752,7 @@ private async retryError(retryItem: {// error: AppError; retryCount: numbe,
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
         acc[error.severity] = (acc[error.severity] || 0) + 1;
         return acc;
@@ -798,8 +781,7 @@ private async retryError(retryItem: {// error: AppError; retryCount: numbe,
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     if (typeof window !== 'undefined') {;
     // TODO: Add content;
@@ -843,7 +825,7 @@ export class ErrorBoundary extends React.Component;
  , }
   }
 }
-    super(props);
+    super(pro, p, s);
     this.state={;
     hasError: false;
  , }this.errorHandler = ErrorHandler.getInstance();
@@ -925,12 +907,11 @@ export const useErrorHandler = (): JSX.Element => {;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
       return errorHandler.handleError(error, undefined, context);
     },;
-//     [errorHandler];
+//     [errorHandl, e, r];
   );
   const handleNetworkError = useCallback();
     (error: Erro,
@@ -939,12 +920,11 @@ export const useErrorHandler = (): JSX.Element => {;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
       return errorHandler.handleNetworkError(error, url, status);
     },;
-//     [errorHandler];
+//     [errorHandl, e, r];
   );
   const handleValidationError = useCallback();
     (field: strin,
@@ -953,12 +933,11 @@ export const useErrorHandler = (): JSX.Element => {;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
       return errorHandler.handleValidationError(field, message, value);
     },;
-//     [errorHandler];
+//     [errorHandl, e, r];
   );
   return {;
     // TODO: Add content;

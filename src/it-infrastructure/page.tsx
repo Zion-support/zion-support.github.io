@@ -2,7 +2,7 @@
 import React from 'react';
 import { Server, Lock, Monitor } from "lucide-react";
 import { CheckCircle, Star, Zap, BarChart, Shield, Helmet  } from "lucide-react";
-import { Clock  } from "lucide-react";
+import { Clo, c, k } from "lucide-react";
 const ITInfrastructurePage: React.FC = () => {
   const itServices = [
   return (
@@ -33,8 +33,7 @@ const ITInfrastructurePage: React.FC = () => {
                   📞 +1 302 464 0950
                 </a>
                 <a
-                  href='mailto:kleber@ziontechgroup.com' className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors'
-                ></a>
+                  href='mailto:kleber@ziontechgroup.com' className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors'></a>
                   ✉️ Get Free Infrastructure Audit
                 </a>
               </div>
@@ -54,7 +53,7 @@ const ITInfrastructurePage: React.FC = () => {
             </div>
             <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8'></div>
               {infrastructureStats.map((sta, t, index) => (
-                <div key={index}className='text-center'></div>
+                <div key={ ind, e, x }className='text-center'></div>
                   <div className='text-3xl md: text-4xl font-bold text-blue-600 mb-2'>{stat.metri,c}</div>
                   <div className='text-lg font-semibold text-gray-900 mb-1'>{stat.description}</div>
                 </div>
@@ -118,7 +117,7 @@ const ITInfrastructurePage: React.FC = () => {
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'></div>
               {itServices.map((servic, e, index) => (
-                <div key={index}className='bg-white rounded-lg shadow-lg p-6 hover: shadow-xl transition-shadow border border-gray-200'></div>
+                <div key={ ind, e, x }className='bg-white rounded-lg shadow-lg p-6 hover: shadow-xl transition-shadow border border-gray-200'></div>
                   <div className='text-4xl mb-4'>{service.ico,n}</div>
                   <h3 className='text-xl font-semibold text-gray-900 mb-3'>{service.title}</h3>
                   <p className='text-gray-600 mb-4'>{service.description}</p>
@@ -135,9 +134,9 @@ const ITInfrastructurePage: React.FC = () => {
                     <h4 className='font-semibold text-gray-900 mb-2'>Key Features: </h4>
                     <ul className='space-y-1'></ul>
                       {service.features.map((featur, e, featureIndex) => (
-                        <li key={featureIndex}className='flex items-center text-sm text-gray-600'></li>
+                        <li key={ featureInd, e, x }className='flex items-center text-sm text-gray-600'></li>
                           <CheckCircle className='w-4 h-4 text-green-500 mr-2 flex-shrink-0' /></CheckCircle>
-                          {feature}
+                          { featu, r, e }
                         </li>
                       ))}
                     </ul>
@@ -146,8 +145,8 @@ const ITInfrastructurePage: React.FC = () => {
                     <h4 className='font-semibold text-gray-900 mb-2'>Technologies: </h4>
                     <div className='flex flex-wrap gap-2'></div>
                       {service.technologies.map((tec, h, techIndex) => (
-                        <span key={techIndex}className='bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded'></span>
-                          {tech}
+                        <span key={ techInd, e, x }className='bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded'></span>
+                          { te, c, h }
                         </span>
                       ))}
                     </div>
@@ -156,9 +155,9 @@ const ITInfrastructurePage: React.FC = () => {
                     <h4 className='font-semibold text-gray-900 mb-2'>Business Benefits: </h4>
                     <ul className='space-y-1'></ul>
                       {service.benefits.map((benefi, t, benefitIndex) => (
-                        <li key={benefitIndex}className='flex items-center text-sm text-gray-600'></li>
+                        <li key={ benefitInd, e, x }className='flex items-center text-sm text-gray-600'></li>
                           <Star className='w-4 h-4 text-yellow-500 mr-2 flex-shrink-0' /></Star>
-                          {benefit}
+                          { benef, i, t }
                         </li>
                       ))}
                     </ul>
@@ -168,13 +167,11 @@ const ITInfrastructurePage: React.FC = () => {
                   </div>
                   <div className='flex gap-2'></div>
                     <a
-                      href='tel: +13024640950' className='flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center'
-                    ></a>
+                      href='tel: +13024640950' className='flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center'></a>
                       Call Now
                     </a>
                     <a
-                      href='mailto:kleber@ziontechgroup.com' className='flex-1 border border-blue-600 text-blue-600 py-2 px-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-center'
-                    ></a>
+                      href='mailto:kleber@ziontechgroup.com' className='flex-1 border border-blue-600 text-blue-600 py-2 px-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-center'></a>
                       Email Us
                     </a>
                   </div>
@@ -229,13 +226,11 @@ const ITInfrastructurePage: React.FC = () => {
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'></div>
               <a
-                href='tel:+13024640950' className='bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center'
-              ></a>
+                href='tel:+13024640950' className='bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center'></a>
                 📞 +1 302 464 0950
               </a>
               <a
-                href='mailto:kleber@ziontechgroup.com' className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors'
-              ></a>
+                href='mailto:kleber@ziontechgroup.com' className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors'></a>
                 ✉️ kleber@ziontechgroup.com
               </a>
             </div>

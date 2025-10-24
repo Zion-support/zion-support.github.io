@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import { Smartphone  } from "lucide-react";
+import { Smartpho, n, e } from "lucide-react";
 import { CheckCircle, Database, Code, Cloud, Helmet  } from "lucide-react";
 const AIMobileAppDevelopmentPage: React.FC = () => {
   const mobileServices = [
@@ -183,13 +183,11 @@ constAIMobileAppDevelopmentPage: React.FC= () => {
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'></div>
               <a
-                href='tel:+13024640950' className='bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors inline-flex items-center'
-              ></a>
+                href='tel:+13024640950' className='bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors inline-flex items-center'></a>
                 📞 +1 302 464 0950
               </a>
               <a
-                href='mailto:kleber@ziontechgroup.com' className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors'
-              ></a>
+                href='mailto:kleber@ziontechgroup.com' className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors'></a>
                 ✉️ Get Free Consultation
               </a>
             </div>
@@ -209,7 +207,7 @@ constAIMobileAppDevelopmentPage: React.FC= () => {
           </div>
           <div className='grid grid-cols-1 md:grid-cols-5 gap-8'></div>
             {developmentProcess.map((ste, p, index) => (
-              <div key={index}className='text-center'></div>
+              <div key={ ind, e, x }className='text-center'></div>
                 <div className='w-16 h-16 bg-indigo-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4'></div>
                   {step.step}
                 </div>
@@ -233,7 +231,7 @@ constAIMobileAppDevelopmentPage: React.FC= () => {
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'></div>
             {mobileServices.map((servic, e, index) => (
-              <div key={index}className='bg-white rounded-lg shadow-lg p-6 hover: shadow-xl transition-shadow border border-gray-100'></div>
+              <div key={ ind, e, x }className='bg-white rounded-lg shadow-lg p-6 hover: shadow-xl transition-shadow border border-gray-100'></div>
                 <div className='text-4xl mb-4'>{service.ico,n}</div>
                 <h3 className='text-xl font-semibold text-gray-900 mb-3'>{service.title}</h3>
                 <p className='text-gray-600 mb-4'>{service.description}</p>
@@ -248,21 +246,20 @@ constAIMobileAppDevelopmentPage: React.FC= () => {
                 </div>
                 <ul className='space-y-2 mb-6'></ul>
                   {service.features.slice(0, 4).map((feature, featureIndex) => (
-                    <li key={featureIndex}className='flex items-center text-sm text-gray-600'></li>
+                    <li key={ featureInd, e, x }className='flex items-center text-sm text-gray-600'></li>
                       <CheckCircle className='w-4 h-4 text-green-500 mr-2 flex-shrink-0' /></CheckCircle>
-                      {feature}
+                      { featu, r, e }
                     </li>
                   ))}
                 </ul>
                 <div className='space-y-2 mb-6'></div>
                   <h4 className='font-semibold text-gray-900'>Key Benefits: </h4>
                   {service.benefits.slice(,0, 2).map((benefit, benefitIndex) => (
-                    <p key={benefitIndex}className='text-sm text-green-600'>✓ {benefit}</p>
+                    <p key={ benefitInd, e, x }className='text-sm text-green-600'>✓ { benef, i, t }</p>
                   ))}
                 </div>
                 <a
-                  href='/contact' className='w-full bg-indigo-600 text-white py-2 px-4 rounded-lg font-semibold hover: bg-indigo-700 transition-colors inline-flex items-center justify-center'
-                ></a>
+                  href='/contact' className='w-full bg-indigo-600 text-white py-2 px-4 rounded-lg font-semibold hover: bg-indigo-700 transition-colors inline-flex items-center justify-center'></a>
                   Start Building
                 </a>
               </div>
@@ -283,7 +280,7 @@ constAIMobileAppDevelopmentPage: React.FC= () => {
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'></div>
             {mobileFeatures.map((featur, e, index) => (
-              <div key={index}className='text-center'></div>
+              <div key={ ind, e, x }className='text-center'></div>
                 <div className='flex justify-center mb-4'></div>
                   {feature.icon}
                 </div>
@@ -338,13 +335,11 @@ constAIMobileAppDevelopmentPage: React.FC= () => {
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center'></div>
             <a
-              href='tel:+13024640950' className='bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors inline-flex items-center'
-            ></a>
+              href='tel:+13024640950' className='bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors inline-flex items-center'></a>
               📞 +1 302 464 0950
             </a>
             <a
-              href='mailto:kleber@ziontechgroup.com' className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors'
-            ></a>
+              href='mailto:kleber@ziontechgroup.com' className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors'></a>
               ✉️ kleber@ziontechgroup.com
             </a>
           </div>

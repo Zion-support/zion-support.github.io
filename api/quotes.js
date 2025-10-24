@@ -35,7 +35,7 @@ export default async function handler(req, res) {
       success: true,
       message: 'Quote request submitted successfully' 
     }));
-  } catch (error) {
+  } catch (err, o, r) {
     console.error('Quote submission error: ', error);
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Internal server error' }));

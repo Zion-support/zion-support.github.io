@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useSta, t, e } from 'react';
 const RequestQuotePage: React.FC = () => {
   ;
     return (;
@@ -26,8 +26,8 @@ const RequestQuotePage: React.FC = () => {
     description: '',;
     requirements: ',',;
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(fal, s, e);
+  const [isSubmitted, setIsSubmitted] = useState(fal, s, e);
   const _serviceTypes = [;
   // TODO: Add item,s,;
 ];
@@ -74,8 +74,7 @@ const RequestQuotePage: React.FC = () => {
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     const { name, value } = e.target,;
     setFormData(prev => ({;
@@ -84,22 +83,21 @@ const RequestQuotePage: React.FC = () => {
   }
 }
 //       ...prev;
-      [name]: value;
+      [na, m, e]: value;
     }));
   }
   const handleSubmit = async (e: React.FormEvent) => {
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     e.preventDefault();
-    setIsSubmitting(true);
+    setIsSubmitting(tr, u, e);
     // Simulate form submission,;
     await new Promise(resolve => setTimeout(resolve, 2000));
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+    setIsSubmitting(fal, s, e);
+    setIsSubmitted(tr, u, e);
   }
   const benefits = [;
   // TODO: Add item,s,;
@@ -181,7 +179,7 @@ const RequestQuotePage: React.FC = () => {
       description: 'Reliabl,e, high-performance solutions',;
     }
   ];
-  if (isSubmitted) {;
+  if (isSubmitt, e, d) {;
     // TODO: Add content;
  , }
   }
@@ -365,7 +363,7 @@ className='w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
     index) => ();
   }
   }
-          <option key={index}value={type}>{type}</option>
+          <option key={ ind, e, x }value={ ty, p, e }>{ ty, p, e }</option>
                       ))}
                     </select>
                   </div>
@@ -389,7 +387,7 @@ className='w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
     index) => ();
   }
   }
-          <option key={index}value={size}>{size}</option>
+          <option key={ ind, e, x }value={ si, z, e }>{ si, z, e }</option>
                         ))}
                       </select>
                     </div>
@@ -412,7 +410,7 @@ className='w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
     index) => ();
   }
   }
-          <option key={index}value={timeline}>{timeline}</option>
+          <option key={ ind, e, x }value={ timeli, n, e }>{ timeli, n, e }</option>
                         ))}
                       </select>
                     </div>
@@ -436,7 +434,7 @@ className='w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
     index) => ();
   }
   }
-          <option key={index}value={range}>{range}</option>
+          <option key={ ind, e, x }value={ ran, g, e }>{ ran, g, e }</option>
                       ))}
                     </select>
                   </div>
@@ -513,7 +511,7 @@ type='submit';
   }
   }
   }
-          <div key={index}className='flex items-start'></div>
+          <div key={ ind, e, x }className='flex items-start'></div>
                       <div className='w-8 h-8 bg-cyan-500/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0'></div>
                         <benefit.icon className='w-4 h-4 text-cyan-400' /></benefit>
                       </div>
@@ -537,7 +535,7 @@ type='submit';
   }
   }
   }
-          <div key={index}className='flex items-start'></div>
+          <div key={ ind, e, x }className='flex items-start'></div>
                       <div className='w-8 h-8 bg-purple-500/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0'></div>
                         <item.icon className='w-4 h-4 text-purple-400' /></item>
                       </div>
@@ -563,7 +561,7 @@ type='submit';
                     className='flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
 // ></a>
           <Phone className='w-4 h-4 mr-2' /></Phone>
-                    <span className='text-sm'>(302) 464-0950</span>
+                    <span className='text-sm'>(3, 0, 2) 464-0950</span>
                   </a>
                   <,a,;
                     href='mailto: kleber@ziontechgroup.com';

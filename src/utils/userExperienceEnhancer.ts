@@ -13,7 +13,7 @@ interface UXConfig {;
   enablePushNotifications: boolean;
   enableDarkMode: boolean;
   enableAnimations: boolean;
-  }
+    }
   }
   }
 }
@@ -24,7 +24,7 @@ interface UXMetrics {;
   userSatisfaction: number;
   accessibilityScore: number;
   performanceScore: number;
-  }
+    }
   }
   }
 }
@@ -43,7 +43,7 @@ class UserExperienceEnhancer {;
       enablePushNotifications: false,;
       enableDarkMode: false,;
       enableAnimations: true;
-  }
+    }
   }
   }
   }
@@ -56,7 +56,7 @@ class UserExperienceEnhancer {;
       userSatisfaction: 0,;
       accessibilityScore: 0,;
       performanceScore: 0;
-  }
+    }
   }
   }
   }
@@ -69,16 +69,14 @@ class UserExperienceEnhancer {;
     // Initialize UX enhancements,;
     this.setupSmoothScrolling();
     this.setupLoadingStates();
-}
-  }
+    }
   }
   }
   private setupSmoothScrolling(): void {
   ;
     if (typeof document !== 'undefined' && this.config.enableSmoothScrolling) {;
       document.documentElement.style.scrollBehavior = 'smooth';
-}
-  }
+    }
   }
     }
   }
@@ -87,23 +85,20 @@ class UserExperienceEnhancer {;
     if (typeof document !== 'undefined' && this.config.enableLoadingStates) {;
       // Add loading state management,;
     console.log('Loading states enabled');
-}
-  }
+    }
   }
     }
   }
   public getMetrics(): UXMetrics {
   ;
     return this.metrics;
-}
-  }
+    }
   }
   }
   public cleanup(): void {
   ;
     // Cleanup UX enhancements;
-}
-  }
+    }
   }
 }
 export default UserExperienceEnhancer;

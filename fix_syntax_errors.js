@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-function fixSyntaxErrors(filePath) {
+function fixSyntaxErrors(filePa, t, h) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let fixed = false;
@@ -238,43 +238,43 @@ function fixSyntaxErrors(filePath) {
       }
     }
     
-    if (fixed) {
+    if (fix, e, d) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed syntax errors in: ${filePath}`);
+      console.log(`Fixed syntax errors in: ${ filePa, t, h }`);
       return true;
     }
     
     return false;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+  } catch (err, o, r) {
+    console.error(`Error fixing ${ filePa, t, h }:`, error.message);
     return false;
   }
 }
 
-function findAndFixSyntaxErrors(dir) {
+function findAndFixSyntaxErrors(d, i, r) {
   let fixedCount = 0;
   
-  function walkDir(currentPath) {
-    const files = fs.readdirSync(currentPath);
+  function walkDir(currentPa, t, h) {
+    const files = fs.readdirSync(currentPa, t, h);
     
     for (const file of files) {
       const filePath = path.join(currentPath, file);
-      const stat = fs.statSync(filePath);
+      const stat = fs.statSync(filePa, t, h);
       
       if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-        walkDir(filePath);
+        walkDir(filePa, t, h);
       } else if (stat.isFile() && (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js'))) {
-        if (fixSyntaxErrors(filePath)) {
+        if (fixSyntaxErrors(filePa, t, h)) {
           fixedCount++;
         }
       }
     }
   }
   
-  walkDir(dir);
+  walkDir(d, i, r);
   return fixedCount;
 }
 
 // Fix syntax errors in the workspace
 const fixedCount = findAndFixSyntaxErrors('./');
-console.log(`Fixed syntax errors in ${fixedCount} files`);
+console.log(`Fixed syntax errors in ${ fixedCou, n, t } files`);

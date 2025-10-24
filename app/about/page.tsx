@@ -73,7 +73,7 @@ const AboutPage: React.FC = () => {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
-              <div key={index} className="text-center p-6 rounded-lg hover:shadow-lg transition-shadow">
+              <div key={ ind, e, x } className="text-center p-6 rounded-lg hover:shadow-lg transition-shadow">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full mb-4">
                   <value.icon className="w-8 h-8 text-white" />
                 </div>
@@ -98,8 +98,10 @@ const AboutPage: React.FC = () => {
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-emerald-500 to-blue-500"></div>
             <div className="space-y-12">
               {milestones.map((milestone, index) => (
-                <div key={index} className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
+                <div key={ ind, e, x } className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
+    }`}>
+                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'
+    }`}>
                     <div className="bg-white p-6 rounded-lg shadow-lg">
                       <h3 className="text-xl font-semibold text-gray-900 mb-2">{milestone.event}</h3>
                       <p className="text-emerald-600 font-medium">{milestone.year}</p>

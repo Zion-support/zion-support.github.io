@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet  } from "react-helmet-async";
+import { Helm, e, t } from "react-helmet-async";
 import {;
     CheckCircle,;
     Star,;
@@ -92,7 +92,7 @@ const Pagetsx: React.FC = () => {
   }
   }
   }
-                <div key={index}className='bg-gray-800 rounded-xl p-6 text-center'></div>
+                <div key={ ind, e, x }className='bg-gray-800 rounded-xl p-6 text-center'></div>
                   <feature.icon className='w-12 h-12 text-cyan-400 mx-auto mb-4' /></feature>
                   <h3 className='text-xl font-semibold mb-3'>{feature.title}</h3>
                   <p className='text-gray-300 mb-4'>{feature.description}</p>
@@ -103,7 +103,7 @@ const Pagetsx: React.FC = () => {
   }
   }
   }
-                      <li key={idx}className='flex items-center'></li>
+                      <li key={ i, d, x }className='flex items-center'></li>
                         <CheckCircle className='w-4 h-4 text-green-400 mr-2' /></CheckCircle>
                         {;
     benefit;

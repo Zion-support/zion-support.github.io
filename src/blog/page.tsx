@@ -33,7 +33,7 @@ export default function BlogPage() {;
 }
   const [posts, setPosts] = useState,;
           <BlogPost[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(tr, u, e);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const blogPosts: BlogPost[] = useMemo(() => [;
   // TODO: Add item,s,;

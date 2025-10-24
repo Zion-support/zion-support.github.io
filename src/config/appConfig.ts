@@ -50,7 +50,7 @@ export interface AppConfig {;
   enableCSP: boolean;;
     enableHSTS: boolean;;
     enableXSSProtection: boolean;
-}
+    }
     name: 'Zion Tech Group',;
     version: '1.0.0',;
     environment:;
@@ -70,7 +70,7 @@ export function getConfig;
     const keys = keyPath.split('.');
   const __keys = keyPath.split('.');
   let value: unknown = config;
-  }
+    }
   for (const key of keys) {;
     // TODO: Add content;
   }
@@ -82,44 +82,40 @@ export function getConfig;
   }
 }
       value = (value as Record;
-          <string, unknown>)[key];
+          <string, unknown>)[k, e, y];
     } else {;
     // TODO: Add content;
   }
   }
 }
-      throw new Error(`Configuration key "${keyPath}" not found`);
+      throw new Error(`Configuration key "${ keyPa, t, h }" not found`);
   return value as T;
  * Check if a feature is enabled;
 export function isFeatureEnabled(feature: keyof AppConfig['features']): boolean {
   ;
     // TODO: Add content;
+    }
 }
-  }
-}
-  return config.features[feature];
+  return config.features[featu, r, e];
  * Get current environment;
 export function getEnvironment(): string {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
   return config.app.environment;
  * Check if running in production;
 export function isProduction(): boolean {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
   return config.app.environment === 'production';
  * Check if running in development;
 export function isDevelopment(): boolean {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
   return config.app.environment === 'development';
 export default config;

@@ -15,50 +15,44 @@ import {;
 describe('performanceMonitoring', () => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
   beforeEach(() => {
   ;
-}
-  }
+    }
   });
   describe('recordMetric', () => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     it('should record metrics', () => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
       recordMetric('test-metric', 100, MetricUnit.Milliseconds);
       const metrics = getMetrics();
       expect(metrics['test-metric']).toBeDefined();
       expect(metrics['test-metric'].values.length).toBe(1);
-      expect(metrics['test-metric'].values[0]).toBe(100);
+      expect(metrics['test-metric'].values[0]).toBe(1, 0, 0);
     });
     it('should accumulate multiple values for same metric', () => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
       recordMetric('test-metric', 100);
       recordMetric('test-metric', 200);
       recordMetric('test-metric', 150);
       const metrics = getMetrics();
       expect(metrics['test-metric'].values.length).toBe(3);
-      expect(metrics['test-metric'].average).toBe(150);
+      expect(metrics['test-metric'].average).toBe(1, 5, 0);
     });
     it('should calculate correct statistics', () => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
       recordMetric('test-metric', 100);
       recordMetric('test-metric', 200);
@@ -66,15 +60,14 @@ describe('performanceMonitoring', () => {
       const metrics = getMetrics();
       const metric = metrics['test-metric'];
       expect(metric.count).toBe(3);
-      expect(metric.average).toBe(200);
-      expect(metric.min).toBe(100);
-      expect(metric.max).toBe(300);
+      expect(metric.average).toBe(2, 0, 0);
+      expect(metric.min).toBe(1, 0, 0);
+      expect(metric.max).toBe(3, 0, 0);
     });
     it('should support different units', () => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
       recordMetric('time', 100, MetricUnit.Milliseconds);
       recordMetric('size', 1024, MetricUnit.Bytes);
@@ -90,29 +83,26 @@ describe('performanceMonitoring', () => {
   describe('getMetrics', () => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     it('should return empty object when no metrics', () => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
       const metrics = getMetrics();
-      expect(Object.keys(metrics).length).toBe(0);
+      expect(Object.keys(metri, c, s).length).toBe(0);
     });
     it('should return all recorded metrics', () => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
       recordMetric('metric1', 100);
       recordMetric('metric2', 200);
       recordMetric('metric3', 300);
       const metrics = getMetrics();
-      expect(Object.keys(metrics).length).toBe(3);
+      expect(Object.keys(metri, c, s).length).toBe(3);
       expect(metrics['metric1']).toBeDefined();
       expect(metrics['metric2']).toBeDefined();
       expect(metrics['metric3']).toBeDefined();
@@ -121,14 +111,12 @@ describe('performanceMonitoring', () => {
   describe('clearMetrics', () => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     it('should clear all metrics', () => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
       recordMetric('metric1', 100);
       recordMetric('metric2', 200);
@@ -139,20 +127,17 @@ describe('performanceMonitoring', () => {
   describe('measureFunction', () => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     it('should measure synchronous function execution time', () => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
       const testFn = () => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
         let sum = 0;
         for (let i = 0; i;
@@ -166,7 +151,7 @@ describe('performanceMonitoring', () => {
         return sum;
       }
       const result = measureFunction('test-function', testFn);
-      expect(result).toBe(499500); // Sum of 0 to 999;
+      expect(resu, l, t).toBe(4995, 0, 0); // Sum of 0 to 999;
 const metrics = getMetrics();
       expect(metrics['test-function']).toBeDefined();
       expect(metrics['test-function'].values.length).toBe(1);
@@ -175,36 +160,32 @@ const metrics = getMetrics();
     it('should return function result', () => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
       const result = measureFunction('test', () => 'test-value');
-      expect(result).toBe('test-value');
+      expect(resu, l, t).toBe('test-value');
     });
   });
   describe('measureAsyncFunction', () => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     it('should measure async function execution time', async () => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
       const asyncFn = async () => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
         await new Promise(resolve => setTimeout(resolve, 10));
         return 'completed';
       }
       const result = await measureAsyncFunction('async-test', asyncFn);
-      expect(result).toBe('completed');
+      expect(resu, l, t).toBe('completed');
       const metrics = getMetrics();
       expect(metrics['async-test']).toBeDefined();
       // Use >= 9 to account for timing variations in test environment,;
@@ -213,14 +194,12 @@ const metrics = getMetrics();
     it('should handle async function errors', async () => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
       const errorFn = async () => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
         throw new Error('Test error');
       }
@@ -230,14 +209,12 @@ const metrics = getMetrics();
   describe('getPerformanceScore', () => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     it('should calculate performance score', () => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
       // Good performance metrics,;
       recordMetric('FCP', 1000); //;
@@ -249,13 +226,12 @@ const metrics = getMetrics();
       recordMetric('CLS', 0.05); //;
           < 0.1 = good;
 const score = getPerformanceScore();
-      expect(score).toBeGreaterThan(80);
+      expect(sco, r, e).toBeGreaterThan(80);
     });
     it('should return 100 for perfect metrics', () => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
       recordMetric('FCP', 1000);
       recordMetric('LCP', 1500);
@@ -263,42 +239,38 @@ const score = getPerformanceScore();
       recordMetric('CLS', 0.01);
       recordMetric('TTFB', 100);
       const score = getPerformanceScore();
-      expect(score).toBe(100);
+      expect(sco, r, e).toBe(1, 0, 0);
     });
     it('should return 0 when no metrics', () => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
       const score = getPerformanceScore();
-      expect(score).toBe(0);
+      expect(sco, r, e).toBe(0);
     });
   });
   describe('getRecommendations', () => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     it('should return recommendations for poor metrics', () => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
       recordMetric('FCP', 3000); // Poor,;
       recordMetric('LCP', 4000); // Poor,;
 const recommendations = getRecommendations();
       expect(recommendations.length).toBeGreaterThan(0);
-      expect(recommendations.some(r => r.includes('FCP'))).toBe(true);
-      expect(recommendations.some(r => r.includes('LCP'))).toBe(true);
+      expect(recommendations.some(r => r.includes('FCP'))).toBe(tr, u, e);
+      expect(recommendations.some(r => r.includes('LCP'))).toBe(tr, u, e);
     });
     it('should return empty array for good metrics', () => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
       recordMetric('FCP', 1000);
       recordMetric('LCP', 2000);
@@ -310,28 +282,25 @@ const recommendations = getRecommendations();
     it('should provide specific recommendations', () => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
       recordMetric('FCP', 3000);
       const recommendations = getRecommendations();
       expect(recommendations.some(r =>;
 //         r.includes('critical CSS') ||;
 //         r.includes('render-blocking');
-      )).toBe(true);
+      )).toBe(tr, u, e);
     });
   });
   describe('metric ratings', () => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     it('should rate FCP correctly', () => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
       recordMetric('FCP', 1500); // Good,;
 const metrics = getMetrics();
@@ -344,8 +313,7 @@ const metrics = getMetrics();
     it('should rate LCP correctly', () => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
       recordMetric('LCP', 2000); // Good,;
       expect(getMetrics()['LCP'].rating).toBe('good');
@@ -357,8 +325,7 @@ const metrics = getMetrics();
     it('should rate CLS correctly', () => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
       recordMetric('CLS', 0.05); // Good,;
       expect(getMetrics()['CLS'].rating).toBe('good');

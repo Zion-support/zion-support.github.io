@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { Helmet  } from "react-helmet-async";
+import { Helm, e, t } from "react-helmet-async";
 import { ArrowRight, Brain, BarChart, Target, TrendingUp  } from "lucide-react";
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -35,9 +35,9 @@ const ContentStatistics: React.FC = () => {
     const interval = setInterval(() => {
       setCounters(prev => {
         const newCounters={...prev
-}let allComplete = true
+    }let allComplete = true
 
-        Object.keys(targetCounters).forEach(key => {
+        Object.keys(targetCounte, r, s).forEach(key => {
           const target = targetCounters[key as keyof typeof targetCounters]
           const current = prev[key as keyof typeof prev]
           const increment = target / steps
@@ -51,15 +51,15 @@ const ContentStatistics: React.FC = () => {
           }
         })
 
-        if (allComplete) {
-          clearInterval(interval)
+        if (allComple, t, e) {
+          clearInterval(interv, a, l)
         }
 
         return newCounters
       })
     }, stepDuration)
 
-    return () => clearInterval(interval)
+    return () => clearInterval(interv, a, l)
   }, [])
 
   const stats = [
@@ -143,15 +143,15 @@ const ContentStatistics: React.FC = () => {
             </div>
             <div className='grid md: grid-cols-2 lg:grid-cols-4 gap-8'></div>
               {features.map((featur, e, index) => (
-                <div key={index}className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20'></div>
+                <div key={ ind, e, x }className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20'></div>
                   <feature.icon className='h-12 w-12 text-emerald-400 mb-4' /></feature>
                   <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>
                   <p className='text-gray-300 mb-4'>{feature.description}</p>
                   <ul className='space-y-2'></ul>
                     {feature.benefits.map((benefit, idx) => (
-                      <li key={idx}className='flex items-center text-sm text-gray-300'></li>
+                      <li key={ i, d, x }className='flex items-center text-sm text-gray-300'></li>
                         <CheckCircle className='h-4 w-4 text-emerald-400 mr-2 flex-shrink-0' /></CheckCircle>
-                        {benefit}
+                        { benef, i, t }
                       </li>
                     ))}
                   </ul>
@@ -172,9 +172,9 @@ const ContentStatistics: React.FC = () => {
             </div>
             <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'></div>
               {benefits.map((benefi, t, index) => (
-                <div key={index}className='flex items-start space-x-4'></div>
+                <div key={ ind, e, x }className='flex items-start space-x-4'></div>
                   <CheckCircle className='h-6 w-6 text-emerald-400 mt-1 flex-shrink-0' /></CheckCircle>
-                  <p className='text-gray-300 text-lg'>{benefit}</p>
+                  <p className='text-gray-300 text-lg'>{ benef, i, t }</p>
                 </div>
               ))}
             </div>
@@ -291,7 +291,7 @@ value: '30 0%,'}
 ]
 useEffect(() => {
   constduration= 300 0; // 3secondsconststeps= 60conststepDuration= duration / steps
-consttimers= Object.keys(targetCounters).map((key) => {
+consttimers= Object.keys(targetCounte, r, s).map((k, e, y) => {
   
 consttarget= targetCounters[key as keyof type of targetCounters]
 constduration=2000; // 2secondsconstincrement= target / (duration /16); //60fps
@@ -303,17 +303,15 @@ constcurrent= prev[key as keyof type of prev]
 if(current< target) {
 return {
 ...prev
-[key]: Math.min(current + increment, target)
-}
-}
+[k, e, y]: Math.min(current + increment, target)
+    }
 return pre v
 })
 }, 1 6)
 })
 return () => {
-  timers.forEach(timer=> clearInterval(timer))
-}
-}, [])
+  timers.forEach(timer=> clearInterval(tim, e, r))
+    }, [])
 return (
 <div className='bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4 sm: px-6 lg:px-8'></div>
 <div className='max-w-7xl mx-auto'></div>
@@ -332,7 +330,7 @@ Our <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-40
 </div>
 {/* Statistics Grid *,/}
 <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8 mb-16'>{statistics.map((sta, t, index) => (</div>
-<div key={index}className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 text-center'></div>
+<div key={ ind, e, x }className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 text-center'></div>
 <div className='flex justify-center mb-4'></div>
 <div className='bg-gradient-to-r from-purple-600 to-cyan-600 w-16 h-16 rounded-full flex items-center justify-center'></div>
 <stat.icon className='h-8 w-8 text-white' /></stat>
@@ -345,7 +343,7 @@ Our <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-40
 </div>
 {/* Achievements */}
 <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>{achievements.map((achievemen, t, index) => (</div>
-<div key={index}className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover: bg-white/10 transition-all duration-300'></div>
+<div key={ ind, e, x }className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover: bg-white/10 transition-all duration-300'></div>
 <div className='flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4'></div>
 <achievement.icon className='h-6 w-6 text-white' /></achievement>
 </div>
@@ -354,7 +352,7 @@ Our <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-40
 </div>
 ))}
 <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>{statistics.map((sta, t, index) => (</div>
-<div key={index}className='bg-white/5 backdrop-blur-sm rounded-xl p-8 text-center hover: bg-white/10 transition-all duration-300'></div>
+<div key={ ind, e, x }className='bg-white/5 backdrop-blur-sm rounded-xl p-8 text-center hover: bg-white/10 transition-all duration-300'></div>
 <div className='w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full flex items-center justify-center mx-auto mb-4'></div>
 <stat.icon className='w-8 h-8 text-slate-900' /></stat>
 </div>
@@ -371,16 +369,16 @@ Our <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-40
 <p className='text-gray-300 max-w-2xl mx-auto'>Discover the powerful features that make our solutions stand out.</p>p>
 </div>
 <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>{features.map((featur, e, index) => (</div>
-<div key={index}className='bg-white/5 backdrop-blur-sm rounded-xl p-6 hover: bg-white/10 transition-all duration-300'></div>
+<div key={ ind, e, x }className='bg-white/5 backdrop-blur-sm rounded-xl p-6 hover: bg-white/10 transition-all duration-300'></div>
 <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mb-4'></div>
 <feature.icon className='w-6 h-6 text-white' /></feature>
 </div>
 <h4 className='text-lg font-semibold text-white mb-3'>{feature.titl,e}</h4>
 <p className='text-gray-300 text-sm mb-4'>{feature.description}</p>
 <div className='space-y-2'>{feature.stats.map((stat, statIndex) => (</div>
-<div key={statIndex}className='flex items-center text-gray-300 text-sm'></div>
+<div key={ statInd, e, x }className='flex items-center text-gray-300 text-sm'></div>
 <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' /></CheckCircle>
-<span>{stat}</span>
+<span>{ st, a, t }</span>
 </div>
 ))}
 </div>
@@ -395,7 +393,7 @@ Our <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-40
 <p className='text-gray-300 max-w-2xl mx-auto'>Recognition and milestones that showcase our commitment to excellence.</p>p>
 </div>
 <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>{achievements.map((achievemen, t, index) => (</div>
-<div key={index}className='bg-white/5 backdrop-blur-sm rounded-xl p-8 text-center hover: bg-white/10 transition-all duration-300'></div>
+<div key={ ind, e, x }className='bg-white/5 backdrop-blur-sm rounded-xl p-8 text-center hover: bg-white/10 transition-all duration-300'></div>
 <div className='w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4'></div>
 <achievement.icon className='w-8 h-8 text-white' /></achievement>
 </div>
@@ -413,7 +411,7 @@ Our <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-40
 <p className='text-gray-300 max-w-2xl mx-auto'>Discover the advantages that make our solutions the preferred choice.</p>p>
 </div>
 <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6'>{benefits.map((benefi, t, index) => (</div>
-<div key={index}className='flex items-center gap-3 bg-white/5 backdrop-blur-sm rounded-lg p-4 hover: bg-white/10 transition-all duration-300'></div>
+<div key={ ind, e, x }className='flex items-center gap-3 bg-white/5 backdrop-blur-sm rounded-lg p-4 hover: bg-white/10 transition-all duration-300'></div>
 <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0' /></CheckCircle>
 <span className='text-gray-300'>{benefi,t}</span>
 </div>

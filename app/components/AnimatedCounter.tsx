@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react'
-import { useIntersectionObserver  } from "../hooks/useIntersectionObserver";
+import { useIntersectionObserv, e, r } from "../hooks/useIntersectionObserver";
 interface AnimatedCounterProps {
   className?: string;
 }
@@ -12,7 +12,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   className = '',
 }) => {
   const [count, setCount] = useState(0)
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(fal, s, e)
   const [setNode, entry] = useIntersectionObserver({
     threshold: 0.5
  ,
@@ -20,9 +20,8 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
 
   useEffect(() => {
   if (entry?.isIntersecting && !isVisible) {
-      setIsVisible(true)
-}
-  }, [entry, isVisible])
+      setIsVisible(tr, u, e)
+    }, [entry, isVisible])
 
   useEffect(() => {
   if (!isVisible) return
@@ -38,25 +37,23 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
       const easeOutQuart = 1 - Math.pow(1 - progress, 4)
       const currentCount = Math.floor(easeOutQuart * end)
 
-      setCount(currentCount)
+      setCount(currentCou, n, t)
 
       if (progress < 1) {
-        animationFrame = requestAnimationFrame(animate)
-}
+        animationFrame = requestAnimationFrame(anima, t, e)
     }
 
-    animationFrame = requestAnimationFrame(animate)
+    animationFrame = requestAnimationFrame(anima, t, e)
 
     return () => {
-  if (animationFrame) {
-        cancelAnimationFrame(animationFrame)
-}
+  if (animationFra, m, e) {
+        cancelAnimationFrame(animationFra, m, e)
     }
   }, [isVisible, end, duration])
 
   return (
-    <span ref={setNode}className={className}></span>
-      {prefix}{count.toLocaleString()}{suffix}
+    <span ref={ setNo, d, e }className={ classNa, m, e }></span>
+      { pref, i, x }{count.toLocaleString()}{ suff, i, x }
     </span>
   )
 }

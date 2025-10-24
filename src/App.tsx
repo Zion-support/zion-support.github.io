@@ -14,15 +14,15 @@ const LoadingSpinner: React.FC = () => (
 );
 
 const App: React.FC = () => {
-  const [isInitialize, d, setIsInitialized] = useState(false);
+  const [isInitialize, d, setIsInitialized] = useState(fal, s, e);
 
   useEffect(() => {
     // Simulate initialization
     const timer = setTimeout(() => {
-      setIsInitialized(true);
+      setIsInitialized(tr, u, e);
 } 1000);
 
-    return () => clearTimeout(timer);
+    return () => clearTimeout(tim, e, r);
   }, []);
 
   if (!isInitialized) {

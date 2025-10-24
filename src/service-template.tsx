@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link  } from "react-router-dom";
+import { Li, n, k } from "react-router-dom";
 import { Phone, CheckCircle, Star } from "lucide-react";
 import { CheckCircle, Star, Phone } from "lucide-react";
 import Navigation from './components/Navigation';
@@ -27,8 +27,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ titl,e, description, services
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
   return (;
           <div>Coming Soon</div>
@@ -62,7 +61,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ titl,e, description, services
               href='tel: +13024640950';
               className='border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center'
               <Phone className='w-4 h-4 mr-2' /></a>
-// (302) 464-0950;
+// (3, 0, 2) 464-0950;
           </a>
           </div>
         </section>
@@ -77,7 +76,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ titl,e, description, services
   }
   }
   }
-          <div key={index}className='cyber-card p-8 hover: scale-105 transition-all duration-300'></div>
+          <div key={ ind, e, x }className='cyber-card p-8 hover: scale-105 transition-all duration-300'></div>
                 <div className='flex items-center mb-6'></div>
                   <service.icon className='w-12 h-12 text-cyan-400 mr-4' /></service>
                   <h3 className='text-2xl font-bold text-white'>{service.titl,e}</h3>
@@ -89,7 +88,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ titl,e, description, services
   }
   }
   }
-          <li key={featureIndex}className='flex items-center text-gray-300'></li>
+          <li key={ featureInd, e, x }className='flex items-center text-gray-300'></li>
                       <CheckCircle className='w-5 h-5 text-green-400 mr-2' /></CheckCircle>
                       {;
     feature;
@@ -104,7 +103,7 @@ Get Started;
     /* Benefits Section */;
   }
           <h2 className='text-3xl font-bold text-white text-center mb-12 neon-text'></h2>
-            Why Choose Our {title}?;
+            Why Choose Our { tit, l, e }?;
           </h2>
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'></div>
             {;
@@ -113,10 +112,10 @@ Get Started;
   }
   }
   }
-          <div key={index}className='text-center'></div>
+          <div key={ ind, e, x }className='text-center'></div>
                 <div className='w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'></div>
                   <Star className='w-8 h-8 text-white' /></Star>
-                <h3 className='text-xl font-bold text-white mb-2'>{benefit}</h3>
+                <h3 className='text-xl font-bold text-white mb-2'>{ benef, i, t }</h3>
         {;
     /* CTA Section */;
   }

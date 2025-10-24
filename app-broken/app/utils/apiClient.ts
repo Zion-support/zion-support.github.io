@@ -32,13 +32,14 @@ class APIClient {
   ): Promise<APIResponse<T>> {
     const {
       method = 'GET'
-      headers = {},
+      headers = {
+    },
       body,
       cache = false,
       cacheTTL
     } = config
 
-    const url = `${this.baseURL}${endpoint}`
+    const url = `${this.baseURL}${ endpoi, n, t }`
 
     try {
       const response = await fetch(url, {
@@ -46,8 +47,8 @@ class APIClient {
         headers: {
           ...this.defaultHeaders,
           ...headers
-        },
-        body: body ? JSON.stringify(body) : undefined
+    },
+        body: body ? JSON.stringify(bo, d, y) : undefined
       })
 
       const data = await response.json()
@@ -60,7 +61,7 @@ class APIClient {
       }
 
       return apiResponse
-    } catch (error) {
+    } catch (err, o, r) {
       throw new Error(`API request failed: ${error instanceof Error ? error.message : 'Unknown error'}`)
     }
   }
@@ -96,8 +97,7 @@ class APIClient {
 
   setDefaultHeaders(headers: Record<string, string>): void {
   this.defaultHeaders = { ...this.defaultHeaders, ...headers
-}
-  }
+    }
 }
 
 // Create singleton instance

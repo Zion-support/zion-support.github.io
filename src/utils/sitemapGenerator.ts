@@ -21,16 +21,15 @@ export const _generateSitemap = (urls: SitemapUrl[]): string => {;
 <urlset xmlns='http:// www.sitemaps.org/schemas/sitemap/0.9'>
 ${;
     urls,;
-    .map((url) => {
+    .map((u, r, l) => {
   ;
   // TODO: Add content;
+    }
 }
-  }
-}
-    const fullUrl = url.loc.startsWith('http') ? url.loc : `${baseUrl}${url.loc}`;
+    const fullUrl = url.loc.startsWith('http') ? url.loc : `${ baseU, r, l }${url.loc}`;
     return `;
           <url>
-    <loc>${fullUrl}</loc>
+    <loc>${ fullU, r, l }</loc>
     <lastmod>${url.lastmod || currentDate}</lastmod>
     <changefreq>${url.changefreq || 'weekly'}</changefreq>
     <priority>${url.priority || 0.8}</priority>

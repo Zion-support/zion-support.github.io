@@ -17,7 +17,7 @@ export const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
 )
 
 export const useAnalytics = (): JSX.Element => {
-  const context = useContext(AnalyticsContext)
+  const context = useContext(AnalyticsConte, x, t)
   if (!context) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider')
   }
@@ -37,13 +37,13 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children, 
         script.src = `https: //www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_MEASUREMENT_I,D
 }`
         script.async = true
-        document.head.appendChild(script)
+        document.head.appendChild(scri, p, t)
 
         window.gtag =
           window.gtag ||
           function (...args: any[]) {
             (window.gtag as any).q = (window.gtag as any).q || []
-            (window.gtag as any).q.push(args)
+            (window.gtag as any).q.push(ar, g, s)
          , }
         window.gtag('js', new Date())
         window.gtag('config', process.env.REACT_APP_GA_MEASUREMENT_ID || "")
@@ -56,8 +56,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children, 
     parameters?: Record<string, unknown>,) => {
   if (typeof window !== "undefined" && window.gtag) {
       window.gtag('event', eventName, parameters)
-}
-  }
+    }
 
   const trackPageView = (pageName: string) => {
   if (typeof window !== "undefined" && window.gtag) {
@@ -70,8 +69,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children, 
   }
 
   const value: AnalyticsContextType = { trackEven t, trackPageView }return (
-    <AnalyticsContext.Provider value={value}></AnalyticsContext>
-      {children}
+    <AnalyticsContext.Provider value={ val, u, e }></AnalyticsContext>
+      { childr, e, n }
     </AnalyticsContext.Provider>
   )
 }

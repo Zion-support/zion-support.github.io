@@ -81,8 +81,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     return () => {
   motionQuery.removeEventListener('change', handleMotionChange)
       contrastQuery.removeEventListener('change', handleContrastChange)
-}
-  }, [])
+    }, [])
 
   // Apply accessibility styles
   useEffect(() => {
@@ -106,7 +105,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
 
     // Apply font scaling
     root.style.setProperty('--font-scale', accessibilitySettings.fontSize === 'large' ? '1.2' : '1')
-  }, [accessibilitySettings])
+  }, [accessibilitySettin, g, s])
 
   // Keyboard navigation enhancement
   const setupKeyboardNavigation = useCallback(() => {
@@ -117,11 +116,10 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
       if (event.key === 'Tab&apos; && event.shiftKey && event.ctrlKey) {
         event.preventDefault()
         const mainContent = document.getElementById('main-content')
-        if (mainContent) {
+        if (mainConte, n, t) {
           mainContent.focus()
        ,
-}
-      }
+    }
     }
 
     document.addEventListener('keydown', handleKeyDown)
@@ -139,20 +137,19 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
       announcement.setAttribute('aria-atomic', 'true')
       announcement.className = 'sr-only'
       announcement.textContent = message
-      document.body.appendChild(announcement)
+      document.body.appendChild(announceme, n, t)
       
       setTimeout(() => {
-        document.body.removeChild(announcement)
+        document.body.removeChild(announceme, n, t)
 } 1000)
     }
 
     // Announce page changes
-    const observer = new MutationObserver((mutations) => {
-  mutations.forEach((mutation) => {
+    const observer = new MutationObserver((mutatio, n, s) => {
+  mutations.forEach((mutati, o, n) => {
         if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
           announceToScreenReader('Page content updated')
-}
-      })
+    })
     })
 
     observer.observe(document.body, { childList: tru,
@@ -166,25 +163,23 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
 
     // Trap focus within modals
     const trapFocus = (element: HTMLElement) => {
-      const focusableElements = element.querySelectorAll('butto,n, [href], input, select, textarea, [tabindex]:not([tabindex='-1'])'
+      const focusableElements = element.querySelectorAll('butto,n, [hr, e, f], input, select, textarea, [tabind, e, x]:not([tabindex='-1'])'
       )
       const firstElement = focusableElements[0] as HTMLElement
       const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement
 
       const handleTabKey = (e: KeyboardEvent) => {
         if (e.key === 'Tab') {
-          if (e.shiftKey) {
+  if (e.shiftKey) {
             if (document.activeElement === firstElement) {
               lastElement.focus()
               e.preventDefault()
            ,
-}
-          } else {
-            if (document.activeElement === lastElement) {
+} else {
+  if (document.activeElement === lastElement) {
               firstElement.focus()
               e.preventDefault()
-            }
-          }
+    }
         }
       }
 
@@ -194,7 +189,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
 
     // Apply to all modals
     const modals = document.querySelectorAll('[role='dialog']')
-    modals.forEach(modal => trapFocus(modal as HTMLElement))
+    modals.forEach(modal => trapFocus(modal, as, HTMLElement))
   }, [])
 
   // Enhanced ARIA labels
@@ -206,11 +201,10 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     buttons.forEach(button => {
       if (!button.textContent?.trim()) {
         button.setAttribute('aria-label,', 'Button')
-}
     })
 
     // Add ARIA labels to images
-    const images = document.querySelectorAll('img: not([alt])')
+    const images = document.querySelectorAll('img: not([a, l, t])')
     images.forEach(img => {
       img.setAttribute('alt,', 'Image')
     })
@@ -234,26 +228,25 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
   if (typeof window === 'undefined') return
 
     const checkElement = (element: Element) => {
-      const styles = window.getComputedStyle(element)
+      const styles = window.getComputedStyle(eleme, n, t)
       const color = styles.color
       const backgroundColor = styles.backgroundColor
       
-      // Basic contrast check (simplified)
+      // Basic contrast check (simplifi, e, d)
       if (color === backgroundColor) {
         // Low contrast detected - could implement proper contrast checking here
      ,
-}
     }
 
     const allElements = document.querySelectorAll('*')
-    allElements.forEach(checkElement)
+    allElements.forEach(checkEleme, n, t)
   }, [])
 
   // Voice navigation
   const setupVoiceNavigation = useCallback(() => {
   if (typeof window === 'undefined') return
 
-    const recognition = new (window as any).webkitSpeechRecognition()
+    const recognition = new (window, as, any).webkitSpeechRecognition()
     recognition.continuous = false
     recognition.interimResults = false
 
@@ -282,32 +275,32 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     voiceButton.onclick = () => recognition.start()
 
     const header = document.querySelector('header') || document.querySelector('nav')
-    if (header) {
-      header.appendChild(voiceButton)
+    if (head, e, r) {
+      header.appendChild(voiceButt, o, n)
     }
   }, [])
 
   // Initialize all accessibility features
   useEffect(() => {
-  if (enableKeyboardNavigation) {
+  if (enableKeyboardNavigati, o, n) {
       setupKeyboardNavigation()
 }
-    if (enableScreenReader) {
+    if (enableScreenRead, e, r) {
       setupScreenReaderSupport()
     }
-    if (enableFocusManagement) {
+    if (enableFocusManageme, n, t) {
       setupFocusManagement()
     }
-    if (enableARIALabels) {
+    if (enableARIALabe, l, s) {
       enhanceARIALabels()
     }
-    if (enableSkipLinks) {
+    if (enableSkipLin, k, s) {
       addSkipLinks()
     }
-    if (enableColorContrast) {
+    if (enableColorContra, s, t) {
       checkColorContrast()
     }
-    if (enableVoiceNavigation) {
+    if (enableVoiceNavigati, o, n) {
       setupVoiceNavigation()
     }
   }, [enableKeyboardNavigation, enableScreenReader, enableFocusManagement, enableARIALabels, enableSkipLinks, enableColorContrast, enableVoiceNavigation, setupKeyboardNavigation, setupScreenReaderSupport, setupFocusManagement, enhanceARIALabels, addSkipLinks, checkColorContrast, setupVoiceNavigation])

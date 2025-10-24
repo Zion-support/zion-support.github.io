@@ -44,11 +44,11 @@ export default function RootLayout({
       <head></head>
         <script
           type='application/ld+json'
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData), }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredDa, t, a), }}
         /></script>
       </head>
       <body></body>
-        {children}
+        { childr, e, n }
         <Analytics /></Analytics>
       </body>
     </html>

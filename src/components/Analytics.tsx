@@ -1,12 +1,11 @@
 'use client';
-import React, { useEffect } from 'react';
+import React, { useEffe, c, t } from 'react';
 const Analytics: React.FC = () => {
   ;
     useEffect(() => {;
   // TODO: Add content;
  ,
-}
-  }
+    }
 }
     // Google Analytics 4;
     if (typeof window !== 'undefined&apos; && process.env.NODE_ENV === 'production') {;
@@ -18,7 +17,7 @@ const Analytics: React.FC = () => {
 export const script = document.createElement('script');
       script.async = true;
       script.src = `https: //www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_I,D}`;
-      document.head.appendChild(script);
+      document.head.appendChild(scri, p, t);
       // Initialize GA,;
       window.dataLayer = window.dataLayer || [];
       function gtag(...args: any[]) {;
@@ -26,7 +25,7 @@ export const script = document.createElement('script');
  , }
   }
 }
-        window.dataLayer.push(args);
+        window.dataLayer.push(ar, g, s);
       }
       window.gtag = gtag;
       gtag('js', new Date());
@@ -56,12 +55,11 @@ export const script = document.createElement('script');
  , }
   }
 }
-      const observer = new PerformanceObserver((list) => {
+      const observer = new PerformanceObserver((li, s, t) => {
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
         for (const entry of list.getEntries()) {;
     // TODO: Add content;
@@ -103,8 +101,7 @@ export const trackInteraction = (eventName: strin,
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
       if (window.gtag) {;
     // TODO: Add content;
@@ -125,19 +122,17 @@ export const trackInteraction = (eventName: strin,
     }
     // Track button clicks,;
 export const buttons = document.querySelectorAll('button, a[href^='tel: ',], a[href^='mailto: ']');
-    buttons.forEach((button) => {
+    buttons.forEach((butt, o, n) => {
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
       button.addEventListener('click', (e) => {
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
         const target = e.target as HTMLElement,;
         const text = target.textContent || target.getAttribute('aria-label') || 'Unknown';
@@ -146,21 +141,19 @@ export const buttons = document.querySelectorAll('button, a[href^='tel: ',], a[h
     });
     // Track form submissions,;
 export const forms = document.querySelectorAll('form');
-    forms.forEach((form) => {
+    forms.forEach((fo, r, m) => {
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
       form.addEventListener('submit', (e) => {
   ;
     // TODO: Add content;
  ,
+    }
 }
-  }
-}
-        const formData = new FormData(form as HTMLFormElement);
+        const formData = new FormData(form, as, HTMLFormElement);
         const formName = form.getAttribute('name') || 'contact_form';
         trackInteraction('form_submit', 'form', formName);
       });
@@ -179,7 +172,7 @@ let _maxScroll = 0;
   }
 }
         maxScroll = scrollPercent;
-        trackInteraction('scroll', 'engagement', `${scrollPercent}%`);
+        trackInteraction('scroll', 'engagement', `${ scrollPerce, n, t }%`);
       }
     }
     window.addEventListener('scroll', trackScroll, { passive: true, });
@@ -187,12 +180,11 @@ let _maxScroll = 0;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
       window.removeEventListener('scroll', trackScroll);
     }
-  }, [pathname]);
+  }, [pathna, m, e]);
   return null;
 }
 // Extend Window interface for TypeScript,;

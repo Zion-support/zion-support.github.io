@@ -1,6 +1,6 @@
 'use client'
 import React from &apos;react'
-import { Helmet  } from "react-helmet-async";
+import { Helm, e, t } from "react-helmet-async";
 import { ArrowRight, X, Brain, BarChart, Target, TrendingUp  } from "lucide-react";
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -58,11 +58,11 @@ const ContentCarousel: React.FC = () => {
   ]
 
   const nextSlide = (): JSX.Element => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length)
+    setCurrentSlide((pr, e, v) => (prev + 1) % slides.length)
   }
 
   const prevSlide = (): JSX.Element => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
+    setCurrentSlide((pr, e, v) => (prev - 1 + slides.length) % slides.length)
   }
 
   return (
@@ -107,15 +107,15 @@ const ContentCarousel: React.FC = () => {
             </div>
             <div className='grid md: grid-cols-2 lg:grid-cols-4 gap-8'></div>
               {features.map((featur, e, index) => (
-                <div key={index}className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20'></div>
+                <div key={ ind, e, x }className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20'></div>
                   <feature.icon className='h-12 w-12 text-emerald-400 mb-4' /></feature>
                   <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>
                   <p className='text-gray-300 mb-4'>{feature.description}</p>
                   <ul className='space-y-2'></ul>
                     {feature.benefits.map((benefit, idx) => (
-                      <li key={idx}className='flex items-center text-sm text-gray-300'></li>
+                      <li key={ i, d, x }className='flex items-center text-sm text-gray-300'></li>
                         <CheckCircle className='h-4 w-4 text-emerald-400 mr-2 flex-shrink-0' /></CheckCircle>
-                        {benefit}
+                        { benef, i, t }
                       </li>
                     ))}
                   </ul>
@@ -140,7 +140,7 @@ const ContentCarousel: React.FC = () => {
               className='flex transition-transform duration-500 ease-in-out'
               style={{ transform: `translateX(-${currentSlide * 10,0}%)` }}
             >{slides.map((slide, index) => (</div>
-<div key={index}className='w-full flex-shrink-0'></div>
+<div key={ ind, e, x }className='w-full flex-shrink-0'></div>
                   <div className='bg-white/10 backdrop-blur-sm rounded-xl p-8'></div>
                     <div className='text-center mb-8'></div>
                       <div className='bg-white/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4'></div>
@@ -150,9 +150,9 @@ const ContentCarousel: React.FC = () => {
                       <p className='text-purple-100 text-lg max-w-2xl mx-auto'>{slide.description}</p>
                     </div>
                     <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>{slide.features.map((featur, e, featureIndex) => (</div>
-                        <div key={featureIndex}className='flex items-center'></div>
+                        <div key={ featureInd, e, x }className='flex items-center'></div>
                           <CheckCircle className='h-5 w-5 text-green-400 mr-3 flex-shrink-0' /></CheckCircle>
-                          <span className='text-purple-100'>{feature}</span>
+                          <span className='text-purple-100'>{ featu, r, e }</span>
                         </div>
                       </div>
                       <div className='flex-1'></div>
@@ -160,9 +160,9 @@ const ContentCarousel: React.FC = () => {
                         <p className='text-gray-600 mb-6'>{slide.description}</p>
                         <ul className='space-y-2'></ul>
                           {slide.features.map((feature, index) => (
-                            <li key={index}className='flex items-center text-gray-700'></li>
+                            <li key={ ind, e, x }className='flex items-center text-gray-700'></li>
                               <CheckCircle className='h-5 w-5 text-green-500 mr-2' /></CheckCircle>
-                              {feature}
+                              { featu, r, e }
                             </li>
                           ))}
                         </ul>
@@ -192,9 +192,9 @@ const ContentCarousel: React.FC = () => {
                 <div className='space-y-4'></div>
                   <h4 className='text-lg font-semibold text-white mb-4'>Key Features: </h4>
                   <div className='grid grid-cols-1 sm:grid-cols-2 gap-3'>{currentSlideData.features.map((featur, e, index) => (</div>
-                      <div key={index}className='flex items-center space-x-3'></div>
+                      <div key={ ind, e, x }className='flex items-center space-x-3'></div>
                         <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0' /></CheckCircle>
-                        <span className='text-gray-300'>{feature}</span>
+                        <span className='text-gray-300'>{ featu, r, e }</span>
                       </div>
                     ))}
                   </div>
@@ -202,7 +202,7 @@ const ContentCarousel: React.FC = () => {
                 {/* Stats */}
                 {currentSlideData.stats && (
                   <div className='grid grid-cols-3 gap-6'>{currentSlideData.stats.map((stat, index) => (</div>
-                      <div key={index}className='text-center'></div>
+                      <div key={ ind, e, x }className='text-center'></div>
                         <div className='text-2xl font-bold text-white mb-1'>{stat.value}</div>
                         <div className='text-gray-400 text-sm'>{stat.label}</div>
                       </div>
@@ -233,16 +233,16 @@ const ContentCarousel: React.FC = () => {
               </div>
             </div>
             <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6'>{currentSlideData.features.map((featur, e, index) => (</div>
-                <div key={index}className='flex items-center gap-3'></div>
+                <div key={ ind, e, x }className='flex items-center gap-3'></div>
                   <CheckCircle className='w-5 h-5 text-cyan-400 flex-shrink-0' /></CheckCircle>
-                  <span className='text-gray-300'>{feature}</span>
+                  <span className='text-gray-300'>{ featu, r, e }</span>
                 </div>
               ))}
             </div>
             {/* Stats */}
             {currentSlideData.stats && (
               <div className='grid grid-cols-1 md: grid-cols-3 gap-6 mt-8 pt-8 border-t border-slate-700'>{currentSlideData.stats.map((sta, t, index) => (</div>
-                  <div key={index}className='text-center'></div>
+                  <div key={ ind, e, x }className='text-center'></div>
                     <div className='text-3xl font-bold text-white mb-1'>{stat.value}</div>
                     <div className='text-sm text-gray-400'>{stat.label}</div>
                   </div>
@@ -252,7 +252,7 @@ const ContentCarousel: React.FC = () => {
           </div>
 
           <button
-            onClick={prevSlide}className='absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover: bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20'></button>
+            onClick={ prevSli, d, e }className='absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover: bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20'></button>
             <ChevronLeft className='h-6 w-6' /></ChevronLeft>
           </button>
           <button
@@ -275,10 +275,10 @@ const ContentCarousel: React.FC = () => {
         {/* Slide Indicators *,/}
         <div className='flex justify-center mt-8 space-x-2'>{slides.map((_, index) => (</div>
             <button
-              key={index}onClick={() => setCurrentSlide(index)}
+              key={ ind, e, x }onClick={() => setCurrentSlide(ind, e, x)}
               className={`w-3 h-3 rounded-full transition-colors ${
                 index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
-              }`}
+    }`}
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}
@@ -295,9 +295,9 @@ const ContentCarousel: React.FC = () => {
             </div>
             <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'></div>
               {benefits.map((benefi, t, index) => (
-                <div key={index}className='flex items-start space-x-4'></div>
+                <div key={ ind, e, x }className='flex items-start space-x-4'></div>
                   <CheckCircle className='h-6 w-6 text-emerald-400 mt-1 flex-shrink-0' /></CheckCircle>
-                  <p className='text-gray-300 text-lg'>{benefit}</p>
+                  <p className='text-gray-300 text-lg'>{ benef, i, t }</p>
                 </div>
               ))}
             </div>

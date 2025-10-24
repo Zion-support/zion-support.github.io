@@ -79,7 +79,7 @@ constITServicesPage: React.FC= () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 30 2 46 40950,',
       color: 'text-cyan-40 0'
   , },
-    {title: 'Security Operations Center (SOC),',
+    {title: 'Security Operations Center (S, O, C),',
       description: '2 4/7 security monitoring and incident response with dedicated security analysts and advanced threat hunting.',
       icon: Activit,
       features: ['2 4/7 monitoring,', 'Threat hunting', 'Incident response', 'Security analytics', 'Threat intelligence', 'Forensic analysis'],
@@ -323,14 +323,12 @@ const Page = (): JSX.Element => {
           </p>
           <div className='flex flex-col sm: flex-row gap-4 justify-center'></div>
             <a
-              href='/contact' className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105'
-            ></a>
+              href='/contact' className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105'></a>
               Get Free IT Assessment
             </a>
             <a
-              href='tel:+13024640950' className='border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300'
-            ></a>
-              (302) 464-0950
+              href='tel:+13024640950' className='border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300'></a>
+              (3, 0, 2) 464-0950
             </a>
           </div>
         </section>
@@ -339,7 +337,7 @@ const Page = (): JSX.Element => {
           <h2 className='text-3xl font-bold text-white text-center mb-12'>Core IT Services</h2>
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'></div>
             {itServices.map((servic, e, index) => (
-              <div key={index}className='cyber-card hologram-card p-6 hover: scale-105 transition-all duration-300'></div>
+              <div key={ ind, e, x }className='cyber-card hologram-card p-6 hover: scale-105 transition-all duration-300'></div>
                 <div className='text-cyan-400 mb-4'></div>
                   {React.isValidElement(service.icon) ? service.icon :
                    typeof service.icon === 'function' ? React.createElement(service.icon as an,y, { className: 'w-8 h-8', }) :
@@ -351,9 +349,9 @@ const Page = (): JSX.Element => {
                   <h4 className='text-sm font-semibold text-cyan-400 mb-2'>Key Features: </h4>
                   <ul className='text-sm text-gray-400 space-y-1'></ul>
                     {service.features.slice(,0, 4).map((feature, idx) => (
-                      <li key={idx}className='flex items-center'></li>
+                      <li key={ i, d, x }className='flex items-center'></li>
                         <CheckCircle className='w-3 h-3 text-green-400 mr-2 flex-shrink-0' /></CheckCircle>
-                        {feature}
+                        { featu, r, e }
                       </li>
                     ))}
                   </ul>
@@ -362,9 +360,9 @@ const Page = (): JSX.Element => {
                   <h4 className='text-sm font-semibold text-cyan-400 mb-2'>Benefits: </h4>
                   <ul className='text-sm text-gray-400 space-y-1'></ul>
                     {service.benefits.slice(,0, 3).map((benefit, idx) => (
-                      <li key={idx}className='flex items-center'></li>
+                      <li key={ i, d, x }className='flex items-center'></li>
                         <Star className='w-3 h-3 text-yellow-400 mr-2 flex-shrink-0' /></Star>
-                        {benefit}
+                        { benef, i, t }
                       </li>
                     ))}
                   </ul>
@@ -376,8 +374,8 @@ const Page = (): JSX.Element => {
                   <h4 className='text-sm font-semibold text-cyan-400 mb-2'>Technologies: </h4>
                   <div className='flex flex-wrap gap-1'></div>
                     {service.technologies.slice(,0, 4).map((tech, idx) => (
-                      <span key={idx}className='px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded'></span>
-                        {tech}
+                      <span key={ i, d, x }className='px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded'></span>
+                        { te, c, h }
                       </span>
                     ))}
                   </div>
@@ -385,17 +383,16 @@ const Page = (): JSX.Element => {
                 <p className='text-gray-300 mb-4'>{service.description}</p>
                 <ul className='space-y-2 mb-6'></ul>
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex}className='flex items-center text-sm text-gray-400'></li>
+                    <li key={ featureInd, e, x }className='flex items-center text-sm text-gray-400'></li>
                       <CheckCircle className='w-4 h-4 text-green-400 mr-2' /></CheckCircle>
-                      {feature}
+                      { featu, r, e }
                     </li>
                   ))}
                 </ul>
                 <div className='text-center'></div>
                   <div className='text-lg font-bold text-cyan-400 mb-2'>{service.price}</div>
                   <a
-                    href='/contact' className='inline-flex items-center text-sm font-medium text-cyan-400 hover: opacity-80 transition-opacity'
-                  ></a>
+                    href='/contact' className='inline-flex items-center text-sm font-medium text-cyan-400 hover: opacity-80 transition-opacity'></a>
                     Learn More <ArrowRight className='w-4 h-4 ml-1' /></ArrowRight>
                   </a>
                 </div>
@@ -408,7 +405,7 @@ const Page = (): JSX.Element => {
           <h2 className='text-3xl font-bold text-white text-center mb-12'>Additional IT Services</h2>
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6'></div>
             {additionalServices.map((servic, e, index) => (
-              <div key={index}className='bg-slate-800/30 backdrop-blur-sm rounded-lg p-4 hover: bg-slate-800/50 transition-all duration-300'></div>
+              <div key={ ind, e, x }className='bg-slate-800/30 backdrop-blur-sm rounded-lg p-4 hover: bg-slate-800/50 transition-all duration-300'></div>
                 <div className='flex items-center mb-3'></div>
                   <service.icon className='w-6 h-6 text-cyan-400 mr-3' /></service>
                   <h3 className='text-lg font-bold text-white'>{service.titl,e}</h3>
@@ -441,8 +438,7 @@ const Page = (): JSX.Element => {
                 </li>
               </ul>
               <a
-                href='/contact' className='block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors'
-              ></a>
+                href='/contact' className='block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors'></a>
                 Get Started
               </a>
             </div>
@@ -468,8 +464,7 @@ const Page = (): JSX.Element => {
                 </li>
               </ul>
               <a
-                href='/contact' className='block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors'
-              ></a>
+                href='/contact' className='block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors'></a>
                 Get Started
               </a>
             </div>
@@ -495,8 +490,7 @@ const Page = (): JSX.Element => {
                 </li>
               </ul>
               <a
-                href='/contact' className='block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors'
-              ></a>
+                href='/contact' className='block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors'></a>
                 Contact Sales
               </a>
             </div>
@@ -511,14 +505,12 @@ const Page = (): JSX.Element => {
             </p>
             <div className='flex flex-col sm: flex-row gap-4 justify-center'></div>
               <a
-                href='/contact' className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105'
-              ></a>
+                href='/contact' className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105'></a>
                 Get Free IT Assessment
               </a>
               <a
-                href='tel:+13024640950' className='border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300'
-              ></a>
-                (302) 464-0950
+                href='tel:+13024640950' className='border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300'></a>
+                (3, 0, 2) 464-0950
               </a>
             </div>
           </div>

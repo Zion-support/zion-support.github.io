@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { Helmet  } from "react-helmet-async";
+import { Helm, e, t } from "react-helmet-async";
 import { ArrowRight, Brain, BarChart, Target, TrendingUp  } from "lucide-react";
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -62,9 +62,9 @@ const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>{benefits.map((benefi, t, index) => (</div>
-              <div key={index}className='flex items-start space-x-3'></div>
+              <div key={ ind, e, x }className='flex items-start space-x-3'></div>
                 <CheckCircle className='h-6 w-6 text-purple-400 mt-1 flex-shrink-0' /></CheckCircle>
-                <p className='text-gray-300 text-lg'>{benefit}</p>
+                <p className='text-gray-300 text-lg'>{ benef, i, t }</p>
               </div>
             ))}
           </div>
@@ -99,15 +99,15 @@ const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className
             </div>
             <div className='grid md: grid-cols-2 lg:grid-cols-4 gap-8'></div>
               {features.map((featur, e, index) => (
-                <div key={index}className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20'></div>
+                <div key={ ind, e, x }className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20'></div>
                   <feature.icon className='h-12 w-12 text-emerald-400 mb-4' /></feature>
                   <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>
                   <p className='text-gray-300 mb-4'>{feature.description}</p>
                   <ul className='space-y-2'></ul>
                     {feature.benefits.map((benefit, idx) => (
-                      <li key={idx}className='flex items-center text-sm text-gray-300'></li>
+                      <li key={ i, d, x }className='flex items-center text-sm text-gray-300'></li>
                         <CheckCircle className='h-4 w-4 text-emerald-400 mr-2 flex-shrink-0' /></CheckCircle>
-                        {benefit}
+                        { benef, i, t }
                       </li>
                     ))}
                   </ul>
@@ -128,9 +128,9 @@ const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className
             </div>
             <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'></div>
               {benefits.map((benefi, t, index) => (
-                <div key={index}className='flex items-start space-x-4'></div>
+                <div key={ ind, e, x }className='flex items-start space-x-4'></div>
                   <CheckCircle className='h-6 w-6 text-emerald-400 mt-1 flex-shrink-0' /></CheckCircle>
-                  <p className='text-gray-300 text-lg'>{benefit}</p>
+                  <p className='text-gray-300 text-lg'>{ benef, i, t }</p>
                 </div>
               ))}
             </div>
@@ -164,14 +164,13 @@ export default EnhancedErrorBoundaryPage;
   error?: Error
   errorInfo?: ErrorInfo}
 class EnhancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Props) {
-    super(props)
+    super(pro, p, s)
     this.state={hasError: fals,
       e}}
   static getDerivedStateFromError(error: Error): State {
   return { hasError: tru,
       e, error
-}
-  }
+    }
   componentDidCatch(error: Erro,
       r, errorInfo: ErrorInfo) {this.setState({errorerrorInf,o})
     // Log error to monitoring service
@@ -195,7 +194,7 @@ class EnhancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Pro
             {process.env.NODE_ENV === &apos;development' && this.state.error && (
               <details className='mb-6 text-left'></details>
                 <summary className='text-sm text-gray-400 cursor-pointer mb-2'></summary>
-                  Error Details (Development)
+                  Error Details (Developme, n, t)
                 </summary>
                 <pre className='text-xs text-red-300 bg-black/20 p-3 rounded overflow-auto'></p>
                   {this.state.error.toString()}

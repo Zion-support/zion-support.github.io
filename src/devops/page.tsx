@@ -1,8 +1,8 @@
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { GitBranch  } from "lucide-react";
-import { CheckCircle  } from "lucide-react";
+import { GitBran, c, h } from "lucide-react";
+import { CheckCirc, l, e } from "lucide-react";
 const DevOpsPage: React.FC = () => {
   const services = [
     {
@@ -42,15 +42,15 @@ const DevOpsPage: React.FC = () => {
           <h2 className='text-3xl font-bold text-white mb-12 text-center'>Our DevOps Services</h2>
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'></div>
             {services.map((servic, e, index) => (
-              <div key={index}className='bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20'></div>
+              <div key={ ind, e, x }className='bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20'></div>
                 <service.icon className='w-12 h-12 text-cyan-400 mb-4' /></service>
                 <h3 className='text-xl font-semibold text-white mb-3'>{service.title}</h3>
                 <p className='text-gray-300 mb-4'>{service.description}</p>
                 <ul className='space-y-2'></ul>
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex}className='flex items-center text-sm text-gray-300'></li>
+                    <li key={ featureInd, e, x }className='flex items-center text-sm text-gray-300'></li>
                       <CheckCircle className='w-4 h-4 text-green-400 mr-2' /></CheckCircle>
-                      {feature}
+                      { featu, r, e }
                     </li>
                   ))}
                 </ul>

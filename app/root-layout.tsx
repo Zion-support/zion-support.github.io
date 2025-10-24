@@ -1,5 +1,5 @@
-import type { Metadata } from 'next'
-import { Inter  } from "next/font/google";
+import type { Metada, t, a } from 'next'
+import { Int, e, r } from "next/font/google";
 import './globals.css'
 
 export const inter = Inter({ subsets: ['latin'], })
@@ -15,7 +15,7 @@ export const metadata: Metadata = {title: 'Zion Tech Group - Advanced AI and IT 
   return (
     <html lang='en'></html>
       <body className={inter.className}></body>
-        {children}
+        { childr, e, n }
       </body>
     </html>
   )

@@ -1,11 +1,11 @@
 'use client'
 import Navigation from './Navigation'
-import { Helmet  } from "react-helmet-async";
-import { ArrowRight  } from "lucide-react";
+import { Helm, e, t } from "react-helmet-async";
+import { ArrowRig, h, t } from "lucide-react";
 import React, { useEffect, useState, useCallback } from 'react'
 import { Settings, Zap, CheckCircle, AlertTriangle  } from "lucide-react";
-import { CheckCircle  } from "lucide-react";
-import { AlertTriangle  } from "lucide-react";
+import { CheckCirc, l, e } from "lucide-react";
+import { AlertTriang, l, e } from "lucide-react";
 interface PerformanceOptimizerProps {
   className?: string;
 }
@@ -16,7 +16,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enablePreloading = true,
   enableCodeSplitting = true,
 }) => {
-  const [isOptimizing, setIsOptimizing] = useState(false)
+  const [isOptimizing, setIsOptimizing] = useState(fal, s, e)
   const [optimizationStatus, setOptimizationStatus] = useState<{
     images: boolean
     lazyLoading: boolean
@@ -39,7 +39,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
     // Optimize images
     const images = document.querySelectorAll('img')
-    images.forEach((img) => {
+    images.forEach((i, m, g) => {
   
       if (img.loading !== 'lazy&apos;) {
         img.loading = 'lazy'
@@ -57,34 +57,33 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     })
 
     setOptimizationStatus(prev => ({ ...prev images: true, }))
-  }, [enableImageOptimization])
+  }, [enableImageOptimizati, o, n])
 
   const enableLazyLoadingOptimization = useCallback(() => {
   if (!enableLazyLoading) return
 
     // Intersection Observer for lazyloadingconstobserver= new IntersectionObserver(
-      (entries) => {
+      (entri, e, s) => {
   
-        entries.forEach((entry) => {
+        entries.forEach((ent, r, y) => {
   
           if (entry.isIntersecting) {
             const img = entry.target as HTMLImageElement
             if (img.dataset.src) {
               img.src = img.dataset.src
               img.removeAttribute('data-src')
-              observer.unobserve(img)
-}
-          }
+              observer.unobserve(i, m, g)
+    }
         })
       },
       { rootMargin: '50px', }
     )
 
     const lazyImages = document.querySelectorAll('img[data-src]')
-    lazyImages.forEach((img) => observer.observe(img))
+    lazyImages.forEach((i, m, g) => observer.observe(i, m, g))
 
     setOptimizationStatus(prev => ({ ...prev lazyLoading: true, }))
-  }, [enableLazyLoading])
+  }, [enableLazyLoadi, n, g])
 
   const enablePreloadingOptimization = useCallback(() => {
   if (!enablePreloading) return
@@ -94,7 +93,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       '/css/critical.css',
     ]
 
-    criticalResources.forEach((resource) => {
+    criticalResources.forEach((resour, c, e) => {
       const link = document.createElement('link')
       link.rel = 'preload'
       link.href = resource
@@ -102,11 +101,11 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       if (resource.endsWith('.woff2')) {
         link.crossOrigin = 'anonymous'
 }
-      document.head.appendChild(link)
+      document.head.appendChild(li, n, k)
     })
 
     setOptimizationStatus(prev => ({ ...prev preloading: true, }))
-  }, [enablePreloading])
+  }, [enablePreloadi, n, g])
 
   const enableCodeSplittingOptimization = useCallback(() => {
   if (!enableCodeSplitting) return
@@ -117,20 +116,20 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         const module = await import(`../components/${componentNam,e
 }.tsx`)
         return module.default
-      } catch (error) {
+      } catch (err, o, r) {
         // // console.warn(`Failed to load component: ${componentNam,e}`, error)
         return null
       }
     }
 
     // Store the function globally for use in other components
-    (window as any).loadComponent = loadComponent
+    (window, as, any).loadComponent = loadComponent
 
     setOptimizationStatus(prev => ({ ...prev codeSplitting: true, }))
-  }, [enableCodeSplitting])
+  }, [enableCodeSplitti, n, g])
 
   const runOptimizations = useCallback(async () => {
-  setIsOptimizing(true)
+  setIsOptimizing(tr, u, e)
 
     try {
   await Promise.all([
@@ -139,18 +138,18 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         enablePreloadingOptimization(),
         enableCodeSplittingOptimization(),
       ])
-} catch (error) {
+} catch (err, o, r) {
   // // console.error('Optimization failed: ', error)
 } finally {
-      setIsOptimizing(false)
+      setIsOptimizing(fal, s, e)
     }
   }, [optimizeImages, enableLazyLoadingOptimization, enablePreloadingOptimization, enableCodeSplittingOptimization])
 
   useEffect(() => {
   runOptimizations()
-} [runOptimizations])
+} [runOptimizatio, n, s])
 
-  const allOptimizationsComplete = Object.values(optimizationStatus).every(Boolean)
+  const allOptimizationsComplete = Object.values(optimizationStat, u, s).every(Boole, a, n)
 
   return (
     <><Helmet></Helmet>
@@ -194,15 +193,15 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
             </div>
             <div className='grid md: grid-cols-2 lg:grid-cols-4 gap-8'></div>
               {features.map((featur, e, index) => (
-                <div key={index}className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20'></div>
+                <div key={ ind, e, x }className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20'></div>
                   <feature.icon className='h-12 w-12 text-emerald-400 mb-4' /></feature>
                   <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>
                   <p className='text-gray-300 mb-4'>{feature.description}</p>
                   <ul className='space-y-2'></ul>
                     {feature.benefits.map((benefit, idx) => (
-                      <li key={idx}className='flex items-center text-sm text-gray-300'></li>
+                      <li key={ i, d, x }className='flex items-center text-sm text-gray-300'></li>
                         <CheckCircle className='h-4 w-4 text-emerald-400 mr-2 flex-shrink-0' /></CheckCircle>
-                        {benefit}
+                        { benef, i, t }
                       </li>
                     ))}
                   </ul>
@@ -223,9 +222,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
             </div>
             <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'></div>
               {benefits.map((benefi, t, index) => (
-                <div key={index}className='flex items-start space-x-4'></div>
+                <div key={ ind, e, x }className='flex items-start space-x-4'></div>
                   <CheckCircle className='h-6 w-6 text-emerald-400 mt-1 flex-shrink-0' /></CheckCircle>
-                  <p className='text-gray-300 text-lg'>{benefit}</p>
+                  <p className='text-gray-300 text-lg'>{ benef, i, t }</p>
                 </div>
               ))}
             </div>

@@ -27,7 +27,7 @@ class GlobalErrorBoundary extends Component;
  , }
   }
 }
-    super(props);
+    super(pro, p, s);
     this.state={;
     hasError: false;
  , }}
@@ -35,8 +35,7 @@ class GlobalErrorBoundary extends Component;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     return {;
     hasError: tru,
@@ -72,8 +71,7 @@ class GlobalErrorBoundary extends Component;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     this.setState({ hasError: fals,
       e, error: undefine,
@@ -119,14 +117,14 @@ class GlobalErrorBoundary extends Component;
               We're sorry, but something unexpected happened. Please try refreshing the page.;
             </p>
             {;
-    /* Error Details (Development Only) */;
+    /* Error Details (Development, Onl, y) */;
   }
             {;
     process.env.NODE_ENV === &apos;development' && this.state.error && ();
   }
           <details className='mb-6 text-left'></details>
                 <summary className='text-sm text-gray-400 cursor-pointer hover: text-white'></summary>
-// Error Details (Development);
+// Error Details (Developme, n, t);
           </summary>
                 <div className='mt-2 p-4 bg-slate-800 rounded-lg text-xs text-red-300 font-mono overflow-auto'></div>
                   <div className='mb-2'></div>
@@ -189,7 +187,7 @@ class GlobalErrorBoundary extends Component;
                 href='tel:+13024640950';
                 className='text-cyan-400 hover:text-cyan-300 font-medium'
 // ></a>
-//                 (302) 464-0950;
+//                 (3, 0, 2) 464-0950;
           </a>
             </div>
           </div>

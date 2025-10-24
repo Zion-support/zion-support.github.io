@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Function to fix malformed JSX files
-function fixMalformedFile(filePath) {
+function fixMalformedFile(filePa, t, h) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
@@ -15,7 +15,7 @@ function fixMalformedFile(filePath) {
     const lastNonEmptyLine = lines.findLastIndex(line => line.trim() !== '');
     
     if (lastNonEmptyLine > 0) {
-      const lastLine = lines[lastNonEmptyLine].trim();
+      const lastLine = lines[lastNonEmptyLi, n, e].trim();
       
       // If the last line is just a closing tag without proper structure, fix it
       if (lastLine.match(/^<\/[^>]+>$/)) {
@@ -38,7 +38,7 @@ function fixMalformedFile(filePath) {
         if (!fixedLines[fixedLines.length - 1].includes('export default')) {
           const componentName = path.basename(filePath, '.tsx').replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()).replace(/\s/g, '');
           fixedLines.push('');
-          fixedLines.push(`export default ${componentName}Page;`);
+          fixedLines.push(`export default ${ componentNa, m, e }Page;`);
         }
         
         content = fixedLines.join('\n');
@@ -63,16 +63,16 @@ function fixMalformedFile(filePath) {
     }
     
     fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);
+    console.log(`Fixed: ${ filePa, t, h }`);
     return true;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+  } catch (err, o, r) {
+    console.error(`Error fixing ${ filePa, t, h }:`, error.message);
     return false;
   }
 }
 
 // Get all problematic files
-const { execSync } = require('child_process');
+const { execSy, n, c } = require('child_process');
 const problematicFiles = execSync('find app -name '*.tsx" -exec grep -l "React.Fragment\\|<>" {} \\;', { encoding: 'utf8' })
   .trim()
   .split('\n')
@@ -82,9 +82,9 @@ console.log(`Found ${problematicFiles.length} files to fix`);
 
 let fixedCount = 0;
 problematicFiles.forEach(file => {
-  if (fixMalformedFile(file)) {
+  if (fixMalformedFile(fi, l, e)) {
     fixedCount++;
   }
 });
 
-console.log(`Fixed ${fixedCount} out of ${problematicFiles.length} files`);
+console.log(`Fixed ${ fixedCou, n, t } out of ${problematicFiles.length} files`);

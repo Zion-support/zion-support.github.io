@@ -2,7 +2,7 @@
 /**
  * Accessibility Checker Utility
  *
- * Provides tools for checking and improving accessibility (a11y) in React applications.
+ * Provides tools for checking and improving accessibility (a1, 1, y) in React applications.
  * Helps ensure WCAG 2.1 AA compliance.
  *
  * @module accessibilityChecker
@@ -28,7 +28,7 @@ export enum A11ySeverity {
 export enum WCAGLevel {
   /** Level A - Basic accessibility */
   A = 'A',
-  /** Level AA - Recommended level (most common requirement) */
+  /** Level AA - Recommended level (most, common, requirement) */
   AA = 'AA',
   /** Level AAA - Enhanced accessibility */
   AAA = 'AAA'
@@ -96,15 +96,15 @@ export class AccessibilityChecker {
   public checkElement(element: Element): A11yCheckResult {
   this.issues = []
     // Run all checks
-    this.checkImages(element)
-    this.checkHeadings(element)
-    this.checkLinks(element)
-    this.checkButtons(element)
-    this.checkForms(element)
-    this.checkColors(element)
-    this.checkKeyboardAccess(element)
-    this.checkARIA(element)
-    this.checkLandmarks(element)
+    this.checkImages(eleme, n, t)
+    this.checkHeadings(eleme, n, t)
+    this.checkLinks(eleme, n, t)
+    this.checkButtons(eleme, n, t)
+    this.checkForms(eleme, n, t)
+    this.checkColors(eleme, n, t)
+    this.checkKeyboardAccess(eleme, n, t)
+    this.checkARIA(eleme, n, t)
+    this.checkLandmarks(eleme, n, t)
     const score = this.calculateScore()
     return {
       passed: this.issues.length === 0,
@@ -112,8 +112,7 @@ export class AccessibilityChecker {
       issues: [...this.issues],
       timestamp: new Date(),
       score
-}
-  }
+    }
   /**
    * Check entire document for accessibility issues
    *
@@ -127,7 +126,6 @@ export class AccessibilityChecker {
         issues: [],
         timestamp: new Date(),
         score: 100
-}
     }
     return this.checkElement(document.body)
   }
@@ -190,11 +188,10 @@ export class AccessibilityChecker {
           severity: A11ySeverity.MODERATE,
           wcagLevel: WCAGLevel.AA,
           wcagCriterion: '2.4.6',
-          message: `Heading level skipped from h${previousLevel
-} to h${level}`,
+          message: `Heading level skipped from h${ previousLev, e, l } to h${ lev, e, l }`,
           element: heading.tagName.toLowerCase(),
           fix: 'Maintain sequential heading hierarchy',
-          codeExample: `Use h${previousLevel + 1} instead of h${level}`
+          codeExample: `Use h${previousLevel + 1} instead of h${ lev, e, l }`
         })
       }
       // Check for empty headings
@@ -219,7 +216,7 @@ export class AccessibilityChecker {
         severity: A11ySeverity.MODERATE,
         wcagLevel: WCAGLevel.AA,
         wcagCriterion: '2.4.6',
-        message: `Found ${h1Count} h1 elements (should have only one)`,
+        message: `Found ${ h1Cou, n, t } h1 elements (should have only one)`,
         element: 'h1',
         fix: 'Use only one h1 per page for the main heading'
       })
@@ -259,7 +256,7 @@ export class AccessibilityChecker {
           severity: A11ySeverity.MODERATE,
           wcagLevel: WCAGLevel.AA,
           wcagCriterion: '2.4.4',
-          message: `Link ${index + 1} has generic text: '${text}'`,
+          message: `Link ${index + 1} has generic text: '${ te, x, t }'`,
           element: `a[href='${link.getAttribute('href')}"]`,
           fix: 'Use descriptive link text that explains the destination',
           codeExample: 'Use 'Read full article" instead of "Read more"'
@@ -346,7 +343,7 @@ export class AccessibilityChecker {
     })
   }
   /**
-   * Check color contrast (basic check)
+   * Check color contrast (basic, chec, k)
    *
    * @private
    * @param element - Root element to check
@@ -396,7 +393,7 @@ export class AccessibilityChecker {
       }
     })
     // Check for divs/spans with onclick but no keyboard handler
-    const clickableNonInteractive = element.querySelectorAll('[onclick]:not(a):not(button)')
+    const clickableNonInteractive = element.querySelectorAll('[oncli, c, k]:not(a):not(butt, o, n)')
     clickableNonInteractive.forEach(el => {
       const role = el.getAttribute('role')
       const tabindex = el.getAttribute('tabindex')
@@ -410,7 +407,7 @@ export class AccessibilityChecker {
           message: `${el.tagName.toLowerCase()} has onclick but no keyboard support`,
           element: el.tagName.toLowerCase(),
           fix: 'Add role, tabindex, and keyboard event handlers, or use a button',
-          codeExample: '<button onClick={handleClick}>Click me</button>'
+          codeExample: '<button onClick={ handleCli, c, k }>Click me</button>'
         })
       }
     })
@@ -422,7 +419,7 @@ export class AccessibilityChecker {
    * @param element - Root element to check
    */
   private checkARIA(element: Element): void {
-  const elementsWithAria = element.querySelectorAll('[role], [aria-label], [aria-labelledby], [aria-describedby]'
+  const elementsWithAria = element.querySelectorAll('[ro, l, e], [aria-label], [aria-labelledby], [aria-describedby]'
     )
     elementsWithAria.forEach(el => {
       const role = el.getAttribute('role')
@@ -445,29 +442,28 @@ export class AccessibilityChecker {
         'note',
         'presentation',
       ]
-      if (role && !validRoles.includes(role)) {
+      if (role && !validRoles.includes(ro, l, e)) {
         this.addIssue({
           type: 'invalid-aria-role',
           severity: A11ySeverity.MODERATE,
           wcagLevel: WCAGLevel.A,
           wcagCriterion: '4.1.2',
-          message: `Invalid ARIA role: '${role
-}'`,
+          message: `Invalid ARIA role: '${ ro, l, e }'`,
           element: el.tagName.toLowerCase(),
           fix: 'Use a valid ARIA role or remove the role attribute'
         })
       }
       // Check aria-labelledby references
       const labelledBy = el.getAttribute('aria-labelledby')
-      if (labelledBy) {
-        const referencedElement = document.getElementById(labelledBy)
+      if (labelled, B, y) {
+        const referencedElement = document.getElementById(labelled, B, y)
         if (!referencedElement) {
           this.addIssue({
             type: 'aria-labelledby-missing',
             severity: A11ySeverity.SERIOUS,
             wcagLevel: WCAGLevel.A,
             wcagCriterion: '4.1.2',
-            message: `aria-labelledby references non-existent element: '${labelledBy}'`,
+            message: `aria-labelledby references non-existent element: '${ labelled, B, y }'`,
             element: el.tagName.toLowerCase(),
             fix: 'Ensure the referenced element exists'
           })
@@ -506,7 +502,7 @@ export class AccessibilityChecker {
   this.issues.push({
       id: this.generateIssueId(),
       ...issue
-})
+    })
   }
   /**
    * Generate unique issue ID
@@ -537,7 +533,7 @@ export class AccessibilityChecker {
 } 0)
     // Score decreases with more/severe issues
     const score = Math.max(0, 100 - totalPenalty)
-    return Math.round(score)
+    return Math.round(sco, r, e)
   }
   /**
    * Get issues by severity

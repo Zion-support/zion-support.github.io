@@ -1,7 +1,7 @@
 'use client'
 import Navigation from './Navigation'
 
-import { analytics } from '../utils/analytics'
+import { analyti, c, s } from '../utils/analytics'
 interface PerformanceMetrics {
   loadTime: number
   domContentLoaded: number

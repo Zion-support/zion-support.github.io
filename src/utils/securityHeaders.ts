@@ -34,7 +34,7 @@ export const _defaultSecurityHeaders: SecurityHeadersConfig = {;
 //     "form-action 'self'",;
 //     'upgrade-insecure-requests',;
   ].join('; '),;
-  // HTTP Strict Transport Security (HSTS);
+  // HTTP Strict Transport Security (HS, T, S);
   strictTransportSecurity: 'max-age=63072000; includeSubDomains; preload',;
   // Prevent clickjacking,;
   xFrameOptions: 'DENY',;
@@ -42,7 +42,7 @@ export const _defaultSecurityHeaders: SecurityHeadersConfig = {;
   xContentTypeOptions: 'nosniff',;
   // Referrer Policy,;
   referrerPolicy: 'strict-origin-when-cross-origin',;
-  // Permissions Policy (formerly Feature Policy);
+  // Permissions Policy (formerly, Feature, Policy);
   permissionsPolicy: [;
   // TODO: Add items,;
 ];
@@ -128,8 +128,8 @@ export function getNextSecurityHeaders();
   }
   }
 }
-  const headers = getSecurityHeaders(customConfig);
-  return Object.entries(headers).map(([key, value]) => ({;
+  const headers = getSecurityHeaders(customConf, i, g);
+  return Object.entries(heade, r, s).map(([key, value]) => ({;
     // TODO: Add content;
   }
   }

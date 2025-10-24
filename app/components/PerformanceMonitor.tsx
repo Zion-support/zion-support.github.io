@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { Helmet  } from "react-helmet-async";
+import { Helm, e, t } from "react-helmet-async";
 import { ArrowRight, Brain, BarChart, Target, TrendingUp  } from "lucide-react";
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -82,15 +82,15 @@ const PerformanceMonitorPage: React.FC = () => {
             </div>
             <div className='grid md: grid-cols-2 lg:grid-cols-4 gap-8'></div>
               {features.map((featur, e, index) => (
-                <div key={index}className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20'></div>
+                <div key={ ind, e, x }className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20'></div>
                   <feature.icon className='h-12 w-12 text-emerald-400 mb-4' /></feature>
                   <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>
                   <p className='text-gray-300 mb-4'>{feature.description}</p>
                   <ul className='space-y-2'></ul>
                     {feature.benefits.map((benefit, idx) => (
-                      <li key={idx}className='flex items-center text-sm text-gray-300'></li>
+                      <li key={ i, d, x }className='flex items-center text-sm text-gray-300'></li>
                         <CheckCircle className='h-4 w-4 text-emerald-400 mr-2 flex-shrink-0' /></CheckCircle>
-                        {benefit}
+                        { benef, i, t }
                       </li>
                     ))}
                   </ul>
@@ -111,9 +111,9 @@ const PerformanceMonitorPage: React.FC = () => {
             </div>
             <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'></div>
               {benefits.map((benefi, t, index) => (
-                <div key={index}className='flex items-start space-x-4'></div>
+                <div key={ ind, e, x }className='flex items-start space-x-4'></div>
                   <CheckCircle className='h-6 w-6 text-emerald-400 mt-1 flex-shrink-0' /></CheckCircle>
-                  <p className='text-gray-300 text-lg'>{benefit}</p>
+                  <p className='text-gray-300 text-lg'>{ benef, i, t }</p>
                 </div>
               ))}
             </div>
@@ -193,24 +193,23 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({
      }
 
       // Measure Core Web Vitals using Performance Observer
-      if('PerformanceObserver' in windo w) {// First Contentful Paint (FCP)
-        constfcpObserver= new PerformanceObserver((list) => {
+      if('PerformanceObserver' in windo w) {// First Contentful Paint (F, C, P)
+        constfcpObserver= new PerformanceObserver((li, s, t) => {
   constentries= list.getEntries()
           constfcpEntry= entries.find(entry=> entry.name=== 'first-contentful-paint')
-          if (fcpEntr y) {
+          if (fcpEnt, r, y) {
             newMetrics.firstContentfulPaint= fcpEntry.startTime
-}
-        })
+    })
         fcpObserver.observe({ entryTypes: ['paint'], })
-        // Largest Contentful Paint (LCP)
-        const lcpObserver = new PerformanceObserver((list) => {
+        // Largest Contentful Paint (L, C, P)
+        const lcpObserver = new PerformanceObserver((li, s, t) => {
   const entries = list.getEntries()
           const lastEntry = entries[entries.length - 1]
           newMetrics.largestContentfulPaint = lastEntry.startTime
 })
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'], })
-        // First Input Delay (FID)
-        constfidObserver= new PerformanceObserver((list) => {
+        // First Input Delay (F, I, D)
+        constfidObserver= new PerformanceObserver((li, s, t) => {
   constentries= list.getEntries()
           entries.forEach((entry: any) => {
   
@@ -219,31 +218,29 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({
 })
         })
         fidObserver.observe({ entryTypes: ['first-input'], })
-        // Cumulative Layout Shift (CLS)
-        letclsValue=0constclsObserver= new PerformanceObserver((list) => {
+        // Cumulative Layout Shift (C, L, S)
+        letclsValue=0constclsObserver= new PerformanceObserver((li, s, t) => {
   constentries= list.getEntries()
           entries.forEach((entry: any) => {
   
             if (!entry.hadRecentInput) {
               clsValue += entry.value
           ,
-}
-          })
+    })
           newMetrics.cumulativeLayoutShift= clsValue
         })
         clsObserver.observe({ entryTypes: ['layout-shift'], })
-        // Time to Interactive (TTI) - approximation
-        constttiObserver= new PerformanceObserver((list) => {
+        // Time to Interactive (T, T, I) - approximation
+        constttiObserver= new PerformanceObserver((li, s, t) => {
   constentries= list.getEntries()
           constlongTasks= entries.filter((entry: any) => entry.duration >50)
           if (longTasks.length=== 0) {
             newMetrics.timeToInteractive= performance.now()
         ,
-}
-        })
+    })
         ttiObserver.observe({ entryTypes: ['longtask'], })
-        // Total Blocking Time (TBT) - approximation
-        consttbtObserver= new PerformanceObserver((list) => {
+        // Total Blocking Time (T, B, T) - approximation
+        consttbtObserver= new PerformanceObserver((li, s, t) => {
   constentries= list.getEntries()
           constblockingTime= entries
             .filter((entry: any) => entry.duration >50)
@@ -254,13 +251,14 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({
       }
 
       // Update metrics state
-      setMetrics(prevMetrics => ({ ...prevMetrics ...newMetrics }))
+      setMetrics(prevMetrics => ({ ...prevMetrics ...newMetrics
+    }))
       // Call callback if provided
-      if (onMetricsUpdat e) {onMetricsUpdate(newMetrics)
+      if (onMetricsUpda, t, e) {onMetricsUpdate(newMetri, c, s)
      }
 
       // Log to console if enabled
-      if (logToConsole) {
+      if (logToConso, l, e) {
         // // console.log('Performance Metrics Updated: ', newMetrics)
       }
     }
@@ -275,21 +273,20 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({
     // Cleanup
     return () => {
   windo w.removeEventListener('load', measurePerformance)
-}
-  }, [enableRealTimeMonitoring, onMetricsUpdate, logToConsole])
+    }, [enableRealTimeMonitoring, onMetricsUpdate, logToConsole])
   // Service Worker registration for performance monitoring
   useEffect(() => {
   if('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js')
-        .then((registration) => {
+        .then((registrati, o, n) => {
           // // console.log('Service Worker registered successfully: ', registration)
 })
-        .catch((registrationError) => {
+        .catch((registrationErr, o, r) => {
   // // console.log('Service Worker registration failed: ', registrationError)
 })
     }
   }, [])
-  // Performance monitoring dashboard (only in development)
+  // Performance monitoring dashboard (only, in, development)
   if (process.env.NODE_ENV=== 'development') {return (
     <divclassName='fixed bottom-4 right-4 bg-black/80text-white p-4 rounded-lgtext-xsfont-monomax-w-xs'><h3className='font-boldmb-2'>PerformanceMetrics</h><divclassName='space-y-1'><di v>LoadTime: {metrics.loadTime ?`${metrics.loadTime.toFixed(2,)}ms`:'N/A'}</di><di v>FCP: {metrics.firstContentfulPaint?`${metrics.firstContentfulPaint.toFixed(2,)}ms`:'N/A'}</di><di v>LCP: {metrics.largestContentfulPaint?`${metrics.largestContentfulPaint.toFixed(2,)}ms`:'N/A'}</di><di v>FID: {metrics.firstInputDelay?`${metrics.firstInputDelay.toFixed(2,)}ms`:'N/A'}</di><di v>CLS: {metrics.cumulativeLayoutShift ?metrics.cumulativeLayoutShift.toFixed(4):'N/A,'}</di><di v>TTI: {metrics.timeToInteractive?`${metrics.timeToInteractive.toFixed(2,)}ms`:'N/A'}</di><di v>TBT: {metrics.totalBlockingTime?`${metrics.totalBlockingTime.toFixed(2,)}ms`:'N/A'}</di></di></di>
     )
@@ -300,25 +297,24 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({
 
 // Global performance monitoring utilitiesexportconstperformanceUtils={// Measure custom performance marksmark: (name: string) => {
   if (type of windo w !== 'undefined&apos; && 'performance' in windo w) {
-      performance.mark(name)
+      performance.mark(na, m, e)
   ,
-}},
+    },
   // Measure time between marks
   measure: (name: strin,
       g, startMark: strin,
       g, endMark?: string) => {
   if (typeof window !== 'undefined' && 'performance' in window) {
-  if (endMark) {
+  if (endMa, r, k) {
         performance.measure(name, startMark, endMark)
 } else {
-  performance.measure(namestartMark)
-}
+  performance.measure(namestartMa, r, k)
     }
   },
   // Get performance entries
   getEntries: (type?: string) => {
   if (typeof window !== 'undefined' && 'performance' in window) {
-      return type ? performance.getEntriesByType(type) : performance.getEntries()
+      return type ? performance.getEntriesByType(ty, p, e) : performance.getEntries()
    ,
 }
     return []
@@ -326,14 +322,13 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({
   // Clear performance entries
   clearEntries: (type?: string) => {
   if (typeof window !== 'undefined' && 'performance' in window) {
-  if (type) {
-        performance.clearMeasures(type)
-        performance.clearMarks(type)
+  if (ty, p, e) {
+        performance.clearMeasures(ty, p, e)
+        performance.clearMarks(ty, p, e)
     ,
 } else {
   performance.clearMeasures()
         performance.clearMarks()
-}
     }
   }
 }
@@ -352,7 +347,6 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({
         time_to_interactive: metrics.timeToInteractiv,e,
         total_blocking_time: metrics.totalBlockingTime
     ,
-}
     })
   }
 }

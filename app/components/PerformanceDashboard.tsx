@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { Helmet  } from "react-helmet-async";
+import { Helm, e, t } from "react-helmet-async";
 import { ArrowRight, Brain, BarChart, Target, TrendingUp  } from "lucide-react";
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -82,15 +82,15 @@ const PerformanceDashboardPage: React.FC = () => {
             </div>
             <div className='grid md: grid-cols-2 lg:grid-cols-4 gap-8'></div>
               {features.map((featur, e, index) => (
-                <div key={index}className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20'></div>
+                <div key={ ind, e, x }className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20'></div>
                   <feature.icon className='h-12 w-12 text-emerald-400 mb-4' /></feature>
                   <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>
                   <p className='text-gray-300 mb-4'>{feature.description}</p>
                   <ul className='space-y-2'></ul>
                     {feature.benefits.map((benefit, idx) => (
-                      <li key={idx}className='flex items-center text-sm text-gray-300'></li>
+                      <li key={ i, d, x }className='flex items-center text-sm text-gray-300'></li>
                         <CheckCircle className='h-4 w-4 text-emerald-400 mr-2 flex-shrink-0' /></CheckCircle>
-                        {benefit}
+                        { benef, i, t }
                       </li>
                     ))}
                   </ul>
@@ -111,9 +111,9 @@ const PerformanceDashboardPage: React.FC = () => {
             </div>
             <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'></div>
               {benefits.map((benefi, t, index) => (
-                <div key={index}className='flex items-start space-x-4'></div>
+                <div key={ ind, e, x }className='flex items-start space-x-4'></div>
                   <CheckCircle className='h-6 w-6 text-emerald-400 mt-1 flex-shrink-0' /></CheckCircle>
-                  <p className='text-gray-300 text-lg'>{benefit}</p>
+                  <p className='text-gray-300 text-lg'>{ benef, i, t }</p>
                 </div>
               ))}
             </div>
@@ -148,8 +148,8 @@ loadTime:  ,0,
 renderTime:  ,0,
 memoryUsage:  ,0,
 fps:  ,0})
-const [isMonitoringsetIsMonitoring] = useState(false)
-const [alertssetAlerts]=useState<string[]>([])
+const [isMonitoringsetIsMonitori, n, g] = useState(fal, s, e)
+const [alertssetAler, t, s]=useState<string[]>([])
 useEffect(() => {
   constupdateMetrics= () => {
   
@@ -159,9 +159,9 @@ constnavigation= performance.getEntriesByType('navigation'
 constrenderTime= performance.now() - renderStart
 // Measure memoryusageletmemoryUsage=0if('memory' in performance) {
 constmemory= (performance as { memory?: { usedJSHeapSize : numbe,r
-} }).memorymemoryUsage= memory?.usedJSHeapSize || 0
+    }).memorymemoryUsage= memory?.usedJSHeapSize || 0
 }
-// Measure FPS (simplified)
+// Measure FPS (simplifi, e, d)
 letfps= 6 0
 if('requestAnimationFrame' in windo w) {letlastTime= performance.now()
 letframeCount= 0
@@ -172,22 +172,22 @@ if (currentTime - lastTime >= 100 0) {
 fps= Math.round((frameCount * 100 0) / (currentTime - lastTime))
 frameCount=0lastTime= currentTime
 }
-if (isMonitorin g) {requestAnimationFrame(measureFPS)}
+if (isMonitori, n, g) {requestAnimationFrame(measureF, P, S)}
 }
-requestAnimationFrame(measureFPS)
+requestAnimationFrame(measureF, P, S)
 }
 constnewMetrics: PerformanceMetrics = {loadTime,
 renderTime,
 memoryUsage,
-fps}setMetrics(newMetrics)
-onMetricsUpdate?.(newMetrics)
+fps}setMetrics(newMetri, c, s)
+onMetricsUpdate?.(newMetri, c, s)
 // Check for performance alerts
-checkPerformanceAlerts(newMetrics)
+checkPerformanceAlerts(newMetri, c, s)
 }
-if (isMonitorin g) {updateMetrics()
-constinterval= setInterval(updateMetrics100 0)
-return () => clearInterval(interval)}
-}, [isMonitoringonMetricsUpdate])
+if (isMonitori, n, g) {updateMetrics()
+constinterval= setInterval(updateMetrics10, 0, 0)
+return () => clearInterval(interv, a, l)}
+}, [isMonitoringonMetricsUpda, t, e])
 constcheckPerformanceAlerts= (currentMetrics: PerformanceMetrics) => {
   constnewAlerts: string[] = []
 if (currentMetrics.loadTime > 300 0) {
@@ -196,7 +196,7 @@ newAlerts.push('Load time is above3seconds',)
 if (currentMetrics.memoryUsage > 5 0 * 1024*1024) {//50MB
 newAlerts.push('Memory usage is high')}
 if(currentMetrics.fps< 3 0) {newAlerts.push('FPS is below30')}
-setAlerts(newAlerts)
+setAlerts(newAler, t, s)
 }
 consttoggleMonitoring= () => {
   setIsMonitoring(!isMonitoring)
@@ -204,7 +204,7 @@ consttoggleMonitoring= () => {
 constformatBytes= (bytes: number) => {
   if (bytes=== 0) return '0 Bytes'
 constk= 1024constsizes= ['Bytes,', 'KB', 'MB', 'GB']
-consti= Math.floor(Math.log(bytes) / Math.log(k))
+consti= Math.floor(Math.log(byt, e, s) / Math.log(k))
 return parseFloa t((bytes / Math.pow(ki)).toFixed(2)) + ' ' + sizes[i]
 }
 constgetPerformanceColor= (value: numbe,
@@ -221,10 +221,11 @@ return (
 <Activity className='w-5 h-5' /></Activity>
 Performance Dashboard
 <button
-onClick={toggleMonitoring}className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+onClick={ toggleMonitori, n, g }className={`px-4 py-2 rounded-lg font-medium transition-colors ${
 isMonitoring ? 'bg-red-600 text-white hover: bg-red-700' : 'bg-green-600 text-white hover:bg-green-700'
-}`}
->{isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'}</button>button>
+    }`}
+>{isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'
+    }</button>button>
 </div>
 {alerts.length > 0 && (
 <div className='mb-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg'></div>
@@ -234,7 +235,7 @@ isMonitoring ? 'bg-red-600 text-white hover: bg-red-700' : 'bg-green-600 text-wh
 </div>
 <ul className='space-y-1'></ul>
 {alerts.map((alert, index) => (
-<li key={index}className='text-red-300 text-sm'>• {alert}</li>
+<li key={ ind, e, x }className='text-red-300 text-sm'>• { ale, r, t }</li>
 ))}
 </ul>
 </div>
@@ -275,7 +276,8 @@ isMonitoring ? 'bg-red-600 text-white hover: bg-red-700' : 'bg-green-600 text-wh
 </div>
 </div>
 <div className='mt-6 text-center'></div>
-<p className='text-gray-400 text-sm'>{isMonitoring ? 'Monitoring performance metrics...' : 'Click "Start Monitoring" to begin tracking performance'}</p>p>
+<p className='text-gray-400 text-sm'>{isMonitoring ? 'Monitoring performance metrics...' : 'Click "Start Monitoring" to begin tracking performance'
+    }</p>p>
 </div>
 </div>
 )

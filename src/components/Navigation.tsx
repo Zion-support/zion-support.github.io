@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link  } from "react-router-dom";
+import { Li, n, k } from "react-router-dom";
 import { Menu, X, Phone, MapPin, Home  } from "lucide-react";
 const Navigation: React.FC = () => {
   ;
@@ -11,15 +11,14 @@ const Navigation: React.FC = () => {
   }
   }
 }
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(fal, s, e);
+  const [isScrolled, setIsScrolled] = useState(fal, s, e);
+  const [servicesOpen, setServicesOpen] = useState(fal, s, e);
   useEffect(() => {
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     const _handleScroll = (): JSX.Element => {;
     // TODO: Add content;
@@ -36,8 +35,8 @@ const Navigation: React.FC = () => {
  , }
   }
 }
-    setIsOpen(false);
-    setServicesOpen(false);
+    setIsOpen(fal, s, e);
+    setServicesOpen(fal, s, e);
   return (;
           <div>Coming Soon</div>
   );
@@ -113,9 +112,8 @@ const Navigation: React.FC = () => {
     /* CTA Button */;
  , }
             <Link;
-              to='/contact' className='cyber-button inline-flex items-center'
-            ><Phone className='w-4 h-4 mr-2' /></Phone>
-              (302) 464-0950;
+              to='/contact' className='cyber-button inline-flex items-center'><Phone className='w-4 h-4 mr-2' /></Phone>
+              (3, 0, 2) 464-0950;
             </Link></div>
           {;
     /* Mobile Menu Button */;
@@ -150,14 +148,11 @@ const Navigation: React.FC = () => {
     /* Contact Info */;
  , }
               <div className='space-y-4'><h3 className='text-lg font-semibold text-white mb-3 neon-text'>Contact</h3><a;
-                  href='tel: +13024640950' className='flex items-center space-x-3 text-white hover:text-cyan-400 transition-colors'
-                ><Phone className='w-5 h-5' /><span>(302) 464-0950</span></a><a;
-                  href='mailto:kleber@ziontechgroup.com' className='flex items-center space-x-3 text-white hover:text-cyan-400 transition-colors'
-                ><span>kleber@ziontechgroup.com</span></a><a;
+                  href='tel: +13024640950' className='flex items-center space-x-3 text-white hover:text-cyan-400 transition-colors'><Phone className='w-5 h-5' /><span>(3, 0, 2) 464-0950</span></a><a;
+                  href='mailto:kleber@ziontechgroup.com' className='flex items-center space-x-3 text-white hover:text-cyan-400 transition-colors'><span>kleber@ziontechgroup.com</span></a><a;
                   href='https:// maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709';
                   target='_blank';
-                  rel='noopener noreferrer' className='flex items-center space-x-3 text-white hover:text-cyan-400 transition-colors'
-                ></a>
+                  rel='noopener noreferrer' className='flex items-center space-x-3 text-white hover:text-cyan-400 transition-colors'></a>
           <MapPin className='w-5 h-5' /><span>364 E Main St STE 1008<br />Middletow,n, DE 19709</span></a></div></div></div>
       </div></nav>
   );

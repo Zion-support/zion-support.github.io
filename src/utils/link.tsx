@@ -27,9 +27,8 @@ export const Link: React.FC;
 //   ...props;
 }) => {
   ;
-    if (onClick) {;
-}
-  }
+    if (onCli, c, k) {;
+    }
     }
     // Handle internal navigation,;
     if (href.startsWith('/') && !href.startsWith('//')) {;

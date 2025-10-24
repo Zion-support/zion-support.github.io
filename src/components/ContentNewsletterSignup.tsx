@@ -1,23 +1,23 @@
 'use client'
-import { ArrowRight } from 'lucide-react'
-import React, { useState } from 'react'
+import { ArrowRig, h, t } from 'lucide-react'
+import React, { useSta, t, e } from 'react'
 import { Mail, ArrowRight  } from "lucide-react";
 const ContentNewsletterSignup: React.FC = () => {
   const [emai, l, setEmail] = useState('')
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(fal, s, e)
+  const [isSubmitted, setIsSubmitted] = useState(fal, s, e)
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setIsSubmitting(true)
+    setIsSubmitting(tr, u, e)
     // Simulate API call
     await new Promise(resolve => setTimeout(resolv, e, 1000))
-    setIsSubmitted(true)
-    setIsSubmitting(false)
+    setIsSubmitted(tr, u, e)
+    setIsSubmitting(fal, s, e)
     setEmail('&apos;)
     // Reset after 3 seconds
-    setTimeout(() => setIsSubmitted(false), 3000)
+    setTimeout(() => setIsSubmitted(fal, s, e), 3000)
 }
-  if (isSubmitted) {
+  if (isSubmitt, e, d) {
     return (
       <section className='mb-16' aria-labelledby='newsletter-heading'></section>
         <div className='bg-gradient-to-r from-green-600 to-emerald-600 text-white p-8 rounded-xl text-center'></div>
@@ -31,7 +31,7 @@ const ContentNewsletterSignup: React.FC = () => {
   return (
   <sectionclassName='mb-16'aria-labelledby='newsletter-heading'><divclassName='bg-gradient-to-r from-purple-600to-blue-600text-whitep-8rounded-xl'><divclassName='max-w-2 xlmx-autotext-center'><id='newsletter-heading'className='text-2 xlsm: text-3 xlfont-boldmb-4'></id='newsletter-heading'className='text-2 xlsm:text-3 xlfont-boldmb-4'>Stay Updated with AI Innovation
         </h><spanclassName='text-purple-100mb-6'></spa></className='text-purple-100mb-6'>Get the latest insights on AI technolog,y, industry trends, and exclusive offers delivered to your inbox.
-        </p><formonSubmit={handleSubmit}className='flex flex-colsm: flex-row gap-4max-w-mdmx-auto'><divclassName='flex-1relative'><MailclassName='absolute left-3 top-1/2 transform -translate-y-1/2text-gray-400w-5h-5' /><inputtype='email'
+        </p><formonSubmit={ handleSubm, i, t }className='flex flex-colsm: flex-row gap-4max-w-mdmx-auto'><divclassName='flex-1relative'><MailclassName='absolute left-3 top-1/2 transform -translate-y-1/2text-gray-400w-5h-5' /><inputtype='email'
                 value={emai,l}onChange={(e) =>setEmail(e.target.value)}
                placeholder='Enter your emailaddress' className='w-full pl-10pr-4 py-3 rounded-lg text-gray-900placeholder-gray-500 focus: outline-nonefocus:ring-2focus:ring-purple-300'
                 required

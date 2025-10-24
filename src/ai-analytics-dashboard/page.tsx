@@ -2,31 +2,31 @@
 import { Brain, TrendingUp } from 'lucide-react'
 import React, { useState, useEffect } from 'react'
 
-import { BarChart3  } from "lucide-react";
+import { BarChar, t, 3 } from "lucide-react";
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
 import { CheckCircle, Star, Phone } from "lucide-react";
 const AIAnalyticsDashboardPage: React.FC = () => {
-  const [isLoade, d, setIsLoaded] = useState(false)
+  const [isLoade, d, setIsLoaded] = useState(fal, s, e)
 
   useEffect(() => {
-    setIsLoaded(true)
+    setIsLoaded(tr, u, e)
 } [])
 'use client'
 import { Brain, TrendingUp  } from "lucide-react";
-import React, {useStateuseEffect} from 'react';
+import React, { useStateuseEffe, c, t } from 'react';
 
 import {BarChart3, CheckCircle, Phone, Star} from 'lucide-react';;
 import Navigation from '../$1/Navigation';
 import Footer from '../$1/Footer';
 import SEOOptimizer from '../$1/SEOOptimizer';
 constAIAnalyticsDashboardPage: React.FC= () => {
-  const [isLoadedsetIsLoaded] = useState(false);
+  const [isLoadedsetIsLoad, e, d] = useState(fal, s, e);
 
   useEffect(() => {
   
-    setIsLoaded(true);
+    setIsLoaded(tr, u, e);
 ,
 } []);
 
@@ -158,8 +158,7 @@ export const Page = (): JSX.Element => {
                   Start Free Trial
                 </a>
                 <a
-                  href='#demo' className='border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300'
-                ></a>
+                  href='#demo' className='border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300'></a>
                   Watch Demo
                 </a>
               </div>
@@ -198,7 +197,7 @@ export const Page = (): JSX.Element => {
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'></div>
               {features.map((featur, e, index) => (
-                <div key={index}className='cyber-card p-6 hover: scale-105 transition-all duration-300'></div>
+                <div key={ ind, e, x }className='cyber-card p-6 hover: scale-105 transition-all duration-300'></div>
                   <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mb-6'></div>
                     <feature.icon className='w-8 h-8 text-white' /></feature>
                   </div>
@@ -206,9 +205,9 @@ export const Page = (): JSX.Element => {
                   <p className='text-gray-300 mb-4'>{feature.description}</p>
                   <ul className='space-y-2'></ul>
                     {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex}className='flex items-center text-sm text-blue-400'></li>
+                      <li key={ benefitInd, e, x }className='flex items-center text-sm text-blue-400'></li>
                         <CheckCircle className='w-4 h-4 mr-2 flex-shrink-0' /></CheckCircle>
-                        {benefit}
+                        { benef, i, t }
                       </li>
                     ))}
                   </ul>
@@ -230,7 +229,7 @@ export const Page = (): JSX.Element => {
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'></div>
               {integrations.map((integratio, n, index) => (
-                <div key={index}className='cyber-card p-6 text-center hover: scale-105 transition-all duration-300'></div>
+                <div key={ ind, e, x }className='cyber-card p-6 text-center hover: scale-105 transition-all duration-300'></div>
                   <div className='text-6xl mb-4'>{integration.ico,n}</div>
                   <h3 className='text-xl font-bold text-white mb-2'>{integration.name}</h3>
                   <p className='text-gray-300 text-sm'>{integration.description}</p>
@@ -252,7 +251,8 @@ export const Page = (): JSX.Element => {
             </div>
             <div className='grid grid-cols-1 md: grid-cols-3 gap-8'></div>
               {pricingPlans.map((pla, n, index) => (
-                <div key={index}className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-blue-400 scale-105' : ''}`}></div>
+                <div key={ ind, e, x }className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-blue-400 scale-105' : ''
+    }`}></div>
                   {plan.popular && (
                     <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'></div>
                       <div className='bg-blue-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold'></div>
@@ -268,9 +268,9 @@ export const Page = (): JSX.Element => {
                   </div>
                   <ul className='space-y-4 mb-8'></ul>
                     {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex}className='flex items-center text-gray-300'></li>
+                      <li key={ featureInd, e, x }className='flex items-center text-gray-300'></li>
                         <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' /></CheckCircle>
-                        {feature}
+                        { featu, r, e }
                       </li>
                     ))}
                   </ul>
@@ -300,7 +300,7 @@ export const Page = (): JSX.Element => {
             </div>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8'></div>
               {testimonials.map((testimonia, l, index) => (
-                <div key={index}className='cyber-card p-6'></div>
+                <div key={ ind, e, x }className='cyber-card p-6'></div>
                   <div className='flex items-center mb-4'></div>
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i}className='w-5 h-5 text-yellow-400 fill-current' /></Star>
@@ -327,13 +327,11 @@ export const Page = (): JSX.Element => {
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'></div>
               <a
-                href='mailto:kleber@ziontechgroup.com?subject=AI Analytics Dashboard Free Trial Request' className='bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors'
-              ></a>
+                href='mailto:kleber@ziontechgroup.com?subject=AI Analytics Dashboard Free Trial Request' className='bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors'></a>
                 Start Free Trial
               </a>
               <a
-                href='tel:+13024640950' className='flex items-center gap-2 border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all'
-              ></a>
+                href='tel:+13024640950' className='flex items-center gap-2 border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all'></a>
                 <Phone className='w-5 h-5' /></Phone>
                 +1 302 464 0950
               </a>

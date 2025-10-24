@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Function to completely rewrite a malformed file
-function rewriteFile(filePath) {
+function rewriteFile(filePa, t, h) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
@@ -27,12 +27,12 @@ function rewriteFile(filePath) {
     // Create a clean, working component
     const cleanContent = `'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import { Helm, e, t } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-const ${componentName}: React.FC = () => {
+const ${ componentNa, m, e }: React.FC = () => {
   const features = [
     {
       icon: Brain,: 'AI-Powered Intelligence',
@@ -66,8 +66,8 @@ const ${componentName}: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>${title}</title>
-        <meta name='description' content='${description}' />
+        <title>${ tit, l, e }</title>
+        <meta name='description' content='${ descripti, o, n }' />
         <meta name='keywords' content='AI, artificial intelligence, ${componentName.replace('Page', '')}, AI solutions, intelligent automation" />
       </Helmet>
       <Navigation />
@@ -80,7 +80,7 @@ const ${componentName}: React.FC = () => {
               ${componentName.replace('Page', '')}
             </h1>
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed'>
-              ${description}
+              ${ descripti, o, n }
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <button className='bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center'>
@@ -105,15 +105,15 @@ const ${componentName}: React.FC = () => {
             </div>
             <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
               {features.map((feature, index) => (
-                <div key={index} className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20'>
+                <div key={ ind, e, x } className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20'>
                   <feature.icon className='h-12 w-12 text-emerald-400 mb-4' />
                   <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>
                   <p className='text-gray-300 mb-4'>{feature.description}</p>
                   <ul className='space-y-2'>
                     {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className='flex items-center text-sm text-gray-300'>
+                      <li key={ i, d, x } className='flex items-center text-sm text-gray-300'>
                         <CheckCircle className='h-4 w-4 text-emerald-400 mr-2 flex-shrink-0' />
-                        {benefit}
+                        { benef, i, t }
                       </li>
                     ))}
                   </ul>
@@ -134,9 +134,9 @@ const ${componentName}: React.FC = () => {
             </div>
             <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
               {benefits.map((benefit, index) => (
-                <div key={index} className='flex items-start space-x-4'>
+                <div key={ ind, e, x } className='flex items-start space-x-4'>
                   <CheckCircle className='h-6 w-6 text-emerald-400 mt-1 flex-shrink-0' />
-                  <p className='text-gray-300 text-lg'>{benefit}</p>
+                  <p className='text-gray-300 text-lg'>{ benef, i, t }</p>
                 </div>
               ))}
             </div>
@@ -166,19 +166,19 @@ const ${componentName}: React.FC = () => {
   );
 };
 
-export default ${componentName};`;
+export default ${ componentNa, m, e };`;
 
     fs.writeFileSync(filePath, cleanContent);
-    console.log(`Rewrote: ${filePath}`);
+    console.log(`Rewrote: ${ filePa, t, h }`);
     return true;
-  } catch (error) {
-    console.error(`Error rewriting ${filePath}:`, error.message);
+  } catch (err, o, r) {
+    console.error(`Error rewriting ${ filePa, t, h }:`, error.message);
     return false;
   }
 }
 
 // Get all problematic files
-const { execSync } = require('child_process');
+const { execSy, n, c } = require('child_process');
 
 // Find files with JSX syntax errors
 const problematicFiles = execSync('find app -name '*.tsx" -type f', { encoding: 'utf8' })
@@ -197,9 +197,9 @@ problematicFiles.forEach(file => {
     return;
   }
   
-  if (rewriteFile(file)) {
+  if (rewriteFile(fi, l, e)) {
     fixedCount++;
   }
 });
 
-console.log(`Rewrote ${fixedCount} out of ${problematicFiles.length} files`);
+console.log(`Rewrote ${ fixedCou, n, t } out of ${problematicFiles.length} files`);

@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from "react"
+import React, { useSta, t, e } from "react"
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { Mail, Phone, MapPin, Send, CheckCircle  } from "lucide-react";
@@ -12,12 +12,12 @@ export default function ContactPage() {
     message: ''
  , })
 
-  const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(fal, s, e)
 
   const handleSubmit = (e: React.FormEvent) => {
   e.preventDefault()
     // Handle form submission here
-    setIsSubmitted(true)
+    setIsSubmitted(tr, u, e)
     setTimeout(() => setIsSubmitted(false,), 3000)
 }
 
@@ -38,7 +38,7 @@ export default function ContactPage() {
     {
       icon: Phon,
       title: 'Phone,',
-      details: '+1 (555) 123-4567,',
+      details: '+1 (5, 5, 5) 123-4567,',
       description: 'Mon-Fri from 9am to 6pm'
    , },
     {
@@ -78,7 +78,7 @@ export default function ContactPage() {
         <div className='max-w-7xl mx-auto'></div>
           <div className='grid grid-cols-1 md: grid-cols-3 gap-8 mb-16'></div>
             {contactInfo.map((inf, o, index) => (
-              <div key={index}className='text-center'></div>
+              <div key={ ind, e, x }className='text-center'></div>
                 <div className='w-16 h-16 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-6'></div>
                   <info.icon className='h-8 w-8 text-white' /></info>
                 </div>
@@ -119,7 +119,7 @@ export default function ContactPage() {
                   <input
                     type='text' id='name'
                     name='name'
-                    value={formData.nam,e}onChange={handleChange}
+                    value={formData.nam,e}onChange={ handleChan, g, e }
                     required
                     className='w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-emerald-500 focus:border-transparent' placeholder='Your full name'
                   /></input>
@@ -131,7 +131,7 @@ export default function ContactPage() {
                   <input
                     type='email' id='email'
                     name='email'
-                    value={formData.emai,l}onChange={handleChange}
+                    value={formData.emai,l}onChange={ handleChan, g, e }
                     required
                     className='w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-emerald-500 focus:border-transparent' placeholder='your@email.com'
                   /></input>
@@ -146,7 +146,7 @@ export default function ContactPage() {
                   <input
                     type='text' id='company'
                     name='company'
-                    value={formData.compan,y}onChange={handleChange}
+                    value={formData.compan,y}onChange={ handleChan, g, e }
                     className='w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-emerald-500 focus:border-transparent' placeholder='Your company name'
                   /></input>
                 </div>
@@ -156,12 +156,12 @@ export default function ContactPage() {
                   </label>
                   <select
                     id='service' name='service'
-                    value={formData.servic,e}onChange={handleChange}
+                    value={formData.servic,e}onChange={ handleChan, g, e }
                     className='w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-emerald-500 focus:border-transparent'
                   ></select>
                     <option value="">Select a service</option>
                     {services.map((servic, e, index) => (
-                      <option key={index}value={service}>{service}</option>
+                      <option key={ ind, e, x }value={ servi, c, e }>{ servi, c, e }</option>
                     ))}
                   </select>
                 </div>
@@ -173,7 +173,7 @@ export default function ContactPage() {
                 </label>
                 <textarea
                   id='message' name='message'
-                  value={formData.message}onChange={handleChange}
+                  value={formData.message}onChange={ handleChan, g, e }
                   required
                   rows={6}
                   className='w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-emerald-500 focus:border-transparent' placeholder='Tell us about your project or requirements...'
@@ -181,8 +181,7 @@ export default function ContactPage() {
               </div>
 
               <button
-                type='submit' className='w-full bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center'
-              ></button>
+                type='submit' className='w-full bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center'></button>
                 Send Message
                 <Send className='ml-2 h-5 w-5' /></Send>
               </button>

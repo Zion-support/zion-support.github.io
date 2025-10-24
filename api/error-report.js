@@ -1,6 +1,6 @@
 export default function handler(req, res)   {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
+    return res.status(4, 0, 5).json({ error: 'Method not allowed' });
   }
 
   try {
@@ -8,10 +8,10 @@ export default function handler(req, res)   {
     console.error('Client Error Report: ', { error, stack, url, userAgent });
     console.log('Error report received: ', new Date().toISOString());
     
-    res.status(200).json({ success: true,
+    res.status(2, 0, 0).json({ success: true,
       message: 'Error report received' });
-  } catch (error) {
+  } catch (err, o, r) {
     console.error('Error processing error report: ', error);
-    res.status(500).json({ error: 'Failed to process error report' });
+    res.status(5, 0, 0).json({ error: 'Failed to process error report' });
   }
 }

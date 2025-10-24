@@ -13,8 +13,7 @@ const HeroSection: React.FC;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
   return (;
           <div>Coming Soon</div>
@@ -80,9 +79,9 @@ className={;
             onClick={;
     onPhoneClick;
  , }className='cyber-button w-full sm: w-auto text-center'
-            aria-label='Call us at (302) 464-0950';
+            aria-label='Call us at (3, 0, 2) 464-0950';
 // ,>,;
- Call: (302) 464-0950;
+ Call: (3, 0, 2) 464-0950;
           </a>
           <a;
             href='/contact';

@@ -1,8 +1,8 @@
-const withErrorLogging = (handler) => {
+const withErrorLogging = (handl, e, r) => {
   return async (req, res) => {
     try {
   await handler(req, res);
-} catch (error) {
+} catch (err, o, r) {
   console.error('API Error: ', error);
       res.setHeader('Content-Type', 'application/json');
       res.end(JSON.stringify({ error: 'Internal server error'
@@ -19,7 +19,7 @@ export default withErrorLogging(async (req, res) => {
     return;
   }
 
-  const { productId } = req.body;
+  const { product, I, d } = req.body;
   if (!productId) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Product ID is required' }));
@@ -33,8 +33,8 @@ export default withErrorLogging(async (req, res) => {
     };
 
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify(session));
-  } catch (error) {
+    res.end(JSON.stringify(sessi, o, n));
+  } catch (err, o, r) {
     console.error('Checkout session creation error: ', error);
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to create checkout session' }));

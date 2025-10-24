@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { Helmet  } from "react-helmet-async";
+import { Helm, e, t } from "react-helmet-async";
 import { ArrowRight, Brain, BarChart, Target, TrendingUp  } from "lucide-react";
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -82,15 +82,15 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
             </div>
             <div className='grid md: grid-cols-2 lg:grid-cols-4 gap-8'></div>
               {features.map((featur, e, index) => (
-                <div key={index}className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20'></div>
+                <div key={ ind, e, x }className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20'></div>
                   <feature.icon className='h-12 w-12 text-emerald-400 mb-4' /></feature>
                   <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>
                   <p className='text-gray-300 mb-4'>{feature.description}</p>
                   <ul className='space-y-2'></ul>
                     {feature.benefits.map((benefit, idx) => (
-                      <li key={idx}className='flex items-center text-sm text-gray-300'></li>
+                      <li key={ i, d, x }className='flex items-center text-sm text-gray-300'></li>
                         <CheckCircle className='h-4 w-4 text-emerald-400 mr-2 flex-shrink-0' /></CheckCircle>
-                        {benefit}
+                        { benef, i, t }
                       </li>
                     ))}
                   </ul>
@@ -111,9 +111,9 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
             </div>
             <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'></div>
               {benefits.map((benefi, t, index) => (
-                <div key={index}className='flex items-start space-x-4'></div>
+                <div key={ ind, e, x }className='flex items-start space-x-4'></div>
                   <CheckCircle className='h-6 w-6 text-emerald-400 mt-1 flex-shrink-0' /></CheckCircle>
-                  <p className='text-gray-300 text-lg'>{benefit}</p>
+                  <p className='text-gray-300 text-lg'>{ benef, i, t }</p>
                 </div>
               ))}
             </div>
@@ -158,10 +158,10 @@ memory: nul,
       l,})
 constmeasureWebVitals= useCallback(() => {
   if (type ofwindow=== 'undefined' || !('performance' in windo w)) return i f (type ofPerformanceObserver=== 'undefined') return constobserver s: PerformanceObserver[] = []
-// Measure First Contentful Paint (FCP)
+// Measure First Contentful Paint (F, C, P)
 constfcpEntries= performance.getEntriesByName('first-contentful-paint') || []
 constfcp= fcpEntries.length >0? fcpEntries[0].startTime: null
-// Measure Largest Contentful Paint (LCP)
+// Measure Largest Contentful Paint (L, C, P)
 if('PerformanceObserver' in windo w) {
 try {
 constlcpObserver= new PerformanceObserver(list=> {
@@ -172,10 +172,10 @@ setMetrics(prev=> ({ ...prev, lcp: lastEntry.startTim,e
 }))
 })
 lcpObserver.observe({entry Types: ['largest-contentful-paint',]})
-observers.push(lcpObserver)
-} catch (error) {// eslint-disable-next-line no-console}
+observers.push(lcpObserv, e, r)
+} catch (err, o, r) {// eslint-disable-next-line no-console}
 }
-// Measure First Input Delay (FID)
+// Measure First Input Delay (F, I, D)
 if('PerformanceObserver' in windo w) {try {
 constfidObserver= new PerformanceObserver(list=> {
   
@@ -194,10 +194,10 @@ fid: fidEntry.processingStart - fidEntry.startTim,e,}))
 })
 })
 fidObserver.observe({entry Types: ['first-input',]})
-observers.push(fidObserver)
-} catch (error) {// eslint-disable-next-line no-console}
+observers.push(fidObserv, e, r)
+} catch (err, o, r) {// eslint-disable-next-line no-console}
 }
-// Measure Cumulative Layout Shift (CLS)
+// Measure Cumulative Layout Shift (C, L, S)
 if('PerformanceObserver' in windo w) {try {
 letclsValue=0constclsObserver= new PerformanceObserver(list=> {
   
@@ -218,10 +218,10 @@ setMetrics(prev=> ({ ...prev cls: clsValu,
 })
 })
 clsObserver.observe({entry Types: ['layout-shift',]})
-observers.push(clsObserver)
-} catch (error) {// eslint-disable-next-line no-console}
+observers.push(clsObserv, e, r)
+} catch (err, o, r) {// eslint-disable-next-line no-console}
 }
-// Measure Time to First Byte (TTFB)
+// Measure Time to First Byte (TT, F, B)
 try {constnavigationEntries= performance.getEntriesByType?.('navigation') || []
 constnavigationEntry= navigationEntries[0] asPerformanceNavigationTimingconstttfb= navigationEntry ? navigationEntry.responseStart - navigationEntry.requestStart: null
 // Measure MemoryUsageconstmemory=
@@ -231,14 +231,14 @@ setMetrics(prev=> ({...prev
 fcp,
 ttfb,
 memory,}))
-} catch (error) {// eslint-disable-next-line no-console}
+} catch (err, o, r) {// eslint-disable-next-line no-console}
 // Cleanup observers
 return () => {
   observers.forEach(observer=> {
   
 try {
   observer.disconnect()
-} catch (error) {
+} catch (err, o, r) {
   // eslint-disable-next-line no-console
 }
 })
@@ -268,22 +268,22 @@ import('web-vitals')
   
 const { onCLS, onFCP, onLCP, onTTFB
 } = webVitals
-if (onCL S) {onCLS((metric: { value: numbe,
+if (onC, L, S) {onCLS((metric: { value: numbe,
       r}) =>
 setMetrics(prev=> ({...prev cls: metric.valu,e}))
 )
 }
-if (onFC P) {onFCP((metric: { value: numbe,
+if (onF, C, P) {onFCP((metric: { value: numbe,
       r}) =>
 setMetrics(prev=> ({...prev fcp: metric.valu,e}))
 )
 }
-if (onLC P) {onLCP((metric: { value: numbe,
+if (onL, C, P) {onLCP((metric: { value: numbe,
       r}) =>
 setMetrics(prev=> ({...prev lcp: metric.valu,e}))
 )
 }
-if (onTTF B) {onTTFB((metric: { value: numbe,
+if (onTT, F, B) {onTTFB((metric: { value: numbe,
       r}) =>
 setMetrics(prev=> ({...prev ttfb: metric.valu,e}))
 )
@@ -303,20 +303,18 @@ measureCoreWebVitals()
 measureResourceTiming()
 } 500 0)
 return () => {
-  if (cleanu p) cleanup()
-clearInterval(interval)
-}
-}, [
+  if (clean, u, p) cleanup()
+clearInterval(interv, a, l)
+    }, [
 enableRealTimeMonitoring,
 measureWebVitals,
 measureResourceTiming,
 measureCoreWebVitals,
 ])
 useEffect(() => {
-  if (onMetricsUpdat e) {
-onMetricsUpdate(metrics)
-}
-}, [metricsonMetricsUpdate])
+  if (onMetricsUpda, t, e) {
+onMetricsUpdate(metri, c, s)
+    }, [metricsonMetricsUpda, t, e])
 // PerformancerecommendationsconstgetPerformanceRecommendations= useCallback(() => {
   constrecommendations: string[] = []
 if (metrics.fcp && metrics.fcp >1800) {
@@ -340,7 +338,7 @@ recommendations.push('Time to First Byte is slow. Optimize server response time.
 )
 }
 return recommendations
-}, [metrics])
+}, [metri, c, s])
 export const _recommendations = getPerformanceRecommendations()
 if (process.env.NODE_ENV === 'development') {
 return (
@@ -364,7 +362,7 @@ return (
 Recommendations: </h4>
 <ul className='text-xs text-red-600'></ul>
 {_recommendations.map((re, c, index) => (
-<li key={index}>• {rec}</li>
+<li key={ ind, e, x }>• { r, e, c }</li>
 ))}
 </ul>
 </div>
@@ -378,12 +376,12 @@ if (metrics.cls && metrics.cls > 0.1) {recommendations.push('Cumulative Layout S
 if (metrics.ttfb && metrics.ttfb >600) {recommendations.push('Time to First Byte is slow. Optimize server response time.'
 )}
 return recommendation s
-}, [metrics])
+}, [metri, c, s])
 const_recommendations= getPerformanceRecommendations()
 if (process.env.NODE_ENV=== 'development') {return(<divclassName='fixed bottom-4 right-4 bg-white p-4 rounded-lg shado w-lg border max-w-sm z-5 0'><h3className='font-semibold text-sm mb-2'>PerformanceMonitor</h><divclassName='text-xs space-y-1'><di v>FCP: {metrics.fcp ?`${metrics.fcp.toFixed(0,)}ms`:'N/A'}</di><di v>LCP: {metrics.lcp?`${metrics.lcp.toFixed(0,)}ms`:'N/A'}</di><di v>FID: {metrics.fid?`${metrics.fid.toFixed(0,)}ms`:'N/A'}</di><di v>CLS: {metrics.cls ?metrics.cls.toFixed(3):'N/A,'}</di><di v>TTFB: {metrics.ttfb?`${metrics.ttfb.toFixed(0,)}ms`:'N/A'}</di><di v>Memory: {','}
 {metrics.memory
 ?`${(metrics.memory /1024/1024).toFixed(1)}MB`
-:'N/A'}</di></di>{_recommendations.length >0&&(<divclassName='mt-2'><h4className='font-semibold text-xs text-red-60 0'>Recommendations: </h><ulclassName='text-xs text-red-60 0'>{_recommendations.map((recindex)=>(<likey={inde,x}>•{rec}</l>))}</u></di>)}</di>)
+:'N/A'}</di></di>{_recommendations.length >0&&(<divclassName='mt-2'><h4className='font-semibold text-xs text-red-60 0'>Recommendations: </h><ulclassName='text-xs text-red-60 0'>{_recommendations.map((recind, e, x)=>(<likey={inde,x}>•{ r, e, c }</l>))}</u></di>)}</di>)
 }
 return nul l
 }

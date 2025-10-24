@@ -16,28 +16,27 @@ const filesToFix = ['app/components/AccessibilityComponents.tsx',
   'app/pages/ContactPage.tsx'
 ];
 
-const componentTemplate = (name) => `"use client";
+const componentTemplate = (na, m, e) => `"use client";
 import React from 'react';
-const ${name}: React.FC = () => {
+const ${ na, m, e }: React.FC = () => {
   return (
     <div>
-      <h1>${name
-}</h1>
+      <h1>${ na, m, e }</h1>
     </div>
   );
 };
 
-export default ${name};`;
+export default ${ na, m, e };`;
 
 filesToFix.forEach(filePath => {
   const fullPath = path.join(process.cwd(), filePath);
   const componentName = path.basename(filePath, '.tsx');
   
   try {
-    fs.writeFileSync(fullPath, componentTemplate(componentName));
-    console.log(`Fixed: ${filePath}`);
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    fs.writeFileSync(fullPath, componentTemplate(componentNa, m, e));
+    console.log(`Fixed: ${ filePa, t, h }`);
+  } catch (err, o, r) {
+    console.error(`Error fixing ${ filePa, t, h }:`, error.message);
   }
 });
 

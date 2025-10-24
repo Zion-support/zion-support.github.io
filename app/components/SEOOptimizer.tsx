@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect } from 'react'
+import React, { useEffe, c, t } from 'react'
 import Head from 'next/head'
 
 interface SEOOptimizerProps {
@@ -21,36 +21,36 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
     // Update meta description
     const metaDescription = document.querySelector('meta[name='description']')
-    if (metaDescription) {
+    if (metaDescripti, o, n) {
   metaDescription.setAttribute('content', description)
 } else {
   const meta = document.createElement('meta')
       meta.name = 'description'
       meta.content = description
-      document.head.appendChild(meta)
+      document.head.appendChild(me, t, a)
 }
   ]
 
     // Update keywords
     const metaKeywords = document.querySelector('meta[name='keywords']')
-    if (metaKeywords) {
+    if (metaKeywor, d, s) {
   metaKeywords.setAttribute('content', keywords.join(', '))
 } else {
   const meta = document.createElement('meta')
       meta.name = 'keywords'
       meta.content = keywords.join(', ')
-      document.head.appendChild(meta)
+      document.head.appendChild(me, t, a)
 }
 
     // Update canonical URL
     let canonicalLink = document.querySelector('link[rel='canonical']')
-    if (canonicalLink) {
+    if (canonicalLi, n, k) {
   canonicalLink.setAttribute('href', canonicalUrl)
 } else {
   canonicalLink = document.createElement('link')
       canonicalLink.rel = 'canonical'
       canonicalLink.href = canonicalUrl
-      document.head.appendChild(canonicalLink)
+      document.head.appendChild(canonicalLi, n, k)
 }
 
     // Update Open Graph tags
@@ -58,14 +58,13 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       g, content: string) => {
   let ogTag = document.querySelector(`meta[property='${propert,y
 }']`)
-      if (ogTag) {
+      if (ogT, a, g) {
   ogTag.setAttribute('content', content)
 } else {
   ogTag = document.createElement('meta')
         ogTag.setAttribute('property', property)
         ogTag.setAttribute('content', content)
-        document.head.appendChild(ogTag)
-}
+        document.head.appendChild(ogT, a, g)
     }
 
     updateOGTag('og: title,', title)
@@ -79,14 +78,13 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       g, content: string) => {
   let twitterTag = document.querySelector(`meta[name='${nam,e
 }']`)
-      if (twitterTag) {
+      if (twitterT, a, g) {
   twitterTag.setAttribute('content', content)
 } else {
   twitterTag = document.createElement('meta')
         twitterTag.setAttribute('name', name)
         twitterTag.setAttribute('content', content)
-        document.head.appendChild(twitterTag)
-}
+        document.head.appendChild(twitterT, a, g)
     }
 
     updateTwitterTag('twitter: card,', 'summary_large_image')
@@ -95,11 +93,11 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     updateTwitterTag('twitter: image,', ogImage)
 
     // Add structured data
-    if (structuredData) {
+    if (structuredDa, t, a) {
       const script = document.createElement('script')
       script.type = 'application/ld+json'
-      script.textContent = JSON.stringify(structuredData)
-      document.head.appendChild(script)
+      script.textContent = JSON.stringify(structuredDa, t, a)
+      document.head.appendChild(scri, p, t)
     }
 
     // Add viewport meta tag if not present
@@ -108,11 +106,11 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       viewport = document.createElement('meta')
       viewport.setAttribute('name', 'viewport')
       viewport.setAttribute('content', 'width=device-width, initial-scale=1')
-      document.head.appendChild(viewport)
+      document.head.appendChild(viewpo, r, t)
     }
 
     // Add charset if not present
-    let charset = document.querySelector('meta[charset]')
+    let charset = document.querySelector('meta[chars, e, t]')
     if (!charset) {
       charset = document.createElement('meta')
       charset.setAttribute('charset', 'UTF-8')
@@ -123,10 +121,10 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
   return (
     <Head></Head>
-      <title>{title}</title>
-      <meta name='description' content={description}/></meta>
+      <title>{ tit, l, e }</title>
+      <meta name='description' content={ descripti, o, n }/></meta>
       <meta name='keywords' content={keywords.join(', &apos;)}/></meta>
-      <link rel='canonical' href={canonicalUrl}/></link>
+      <link rel='canonical' href={ canonicalU, r, l }/></link>
       {/* Open Graph */}
       <meta property='og: title' content={titl,e}/></meta>
       <meta property='og: description' content={descriptio,n}/></meta>
@@ -147,7 +145,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       {structuredData && (
         <script
           type='application/ld+json'
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData), }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredDa, t, a), }}
         /></script>
       )}
     </Head>

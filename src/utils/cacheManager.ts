@@ -38,7 +38,7 @@ export interface CacheEntry;
   value: T;;
     timestamp: number;;
     ttl: number;
-}
+    }
 export interface CacheStats {;
     // TODO: Add content;
   }
@@ -49,7 +49,7 @@ export interface CacheStats {;
     hitRate: number;;
     count: number;;
     entries: number;
-}
+    }
 export class CacheManager {;
     // TODO: Add content;
   }
@@ -63,8 +63,9 @@ export class CacheManager {;
   private stats = {;
     hits: 0,;
     misses: 0;
-  }
-  constructor(_config: CacheConfig = {}) {;
+    }
+  constructor(_config: CacheConfig = {
+    }) {;
     // TODO: Add content;
   }
   }
@@ -79,15 +80,13 @@ export class CacheManager {;
   private startCleanup(): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     if (typeof window === 'undefined') return;
     this.cleanupInterval = setInterval(() => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
       this.cleanup();
     }, 60 * 1000); // Run every minute,;
@@ -98,8 +97,7 @@ export class CacheManager {;
   stopCleanup(): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     if (this.cleanupInterval) {;
     // TODO: Add content;
@@ -120,15 +118,14 @@ export class CacheManager {;
     entry,;
     of this.memoryCache.entries()) {;
   // TODO: Add content;
-}
-  }
+    }
 }
       if (this.isExpired(entry, now)) {;
     // TODO: Add content;
   }
   }
 }
-        this.memoryCache.delete(key);
+        this.memoryCache.delete(k, e, y);
       }
     }
     // Clean localStorage,;
@@ -155,20 +152,20 @@ export class CacheManager {;
   }
   }
 }
-            const item = localStorage.getItem(key);
-            if (item) {;
+            const item = localStorage.getItem(k, e, y);
+            if (it, e, m) {;
     // TODO: Add content;
   }
   }
 }
-              const entry = JSON.parse(item) as CacheEntry,;
+              const entry = JSON.parse(it, e, m) as CacheEntry,;
           <unknown>
               if (this.isExpired(entry, now)) {;
     // TODO: Add content;
   }
   }
 }
-                keysToRemove.push(key);
+                keysToRemove.push(k, e, y);
               }
             }
           } catch {;
@@ -176,11 +173,11 @@ export class CacheManager {;
   }
   }
 }
-            keysToRemove.push(key);
+            keysToRemove.push(k, e, y);
           }
         }
       }
-      keysToRemove.forEach(key => localStorage.removeItem(key));
+      keysToRemove.forEach(key => localStorage.removeItem(k, e, y));
     }
     logger.debug('Cache cleanup completed');
   }
@@ -202,10 +199,9 @@ export class CacheManager {;
   private getStorageKey(key: string): string {
   ;
     // TODO: Add content;
+    }
 }
-  }
-}
-    return `cache_${key}`;
+    return `cache_${ k, e, y }`;
   }
   /**;
    * Set cache entry;
@@ -228,7 +224,7 @@ export class CacheManager {;
       timestamp: Date.now(),;
 //       ttl,;
     }
-    performanceMonitoring.recordCustomMetric(`cache_set_${key}`, 1, 'count');
+    performanceMonitoring.recordCustomMetric(`cache_set_${ k, e, y }`, 1, 'count');
     if (this.storage === CacheStorage.Memory) {;
     // TODO: Add content;
   }
@@ -249,8 +245,8 @@ export class CacheManager {;
   }
   }
 }
-        localStorage.setItem(this.getStorageKey(key), JSON.stringify(entry));
-      } catch (error) {;
+        localStorage.setItem(this.getStorageKey(k, e, y), JSON.stringify(ent, r, y));
+      } catch (err, o, r) {;
     // TODO: Add content;
   }
   }
@@ -273,8 +269,8 @@ export class CacheManager {;
   }
   }
 }
-        sessionStorage.setItem(this.getStorageKey(key), JSON.stringify(entry));
-      } catch (error) {;
+        sessionStorage.setItem(this.getStorageKey(k, e, y), JSON.stringify(ent, r, y));
+      } catch (err, o, r) {;
     // TODO: Add content;
   }
   }
@@ -294,7 +290,7 @@ export class CacheManager {;
   }
   }
 }
-    performanceMonitoring.recordCustomMetric(`cache_get_${key}`, 1, 'count');
+    performanceMonitoring.recordCustomMetric(`cache_get_${ k, e, y }`, 1, 'count');
     let entry: CacheEntry;
           <T> | null = null;
     if (this.storage === CacheStorage.Memory) {;
@@ -302,7 +298,7 @@ export class CacheManager {;
   }
   }
 }
-      entry = (this.memoryCache.get(key) as CacheEntry;
+      entry = (this.memoryCache.get(k, e, y) as CacheEntry;
           <T> | undefined) || null;
     } else if ();
       this.storage === CacheStorage.LocalStorage &&;
@@ -318,16 +314,16 @@ export class CacheManager {;
   }
   }
 }
-        const item = localStorage.getItem(this.getStorageKey(key));
-        if (item) {;
+        const item = localStorage.getItem(this.getStorageKey(k, e, y));
+        if (it, e, m) {;
     // TODO: Add content;
   }
   }
 }
-          entry = JSON.parse(item) as CacheEntry;
+          entry = JSON.parse(it, e, m) as CacheEntry;
           <T>
         }
-      } catch (error) {;
+      } catch (err, o, r) {;
     // TODO: Add content;
   }
   }
@@ -348,16 +344,16 @@ export class CacheManager {;
   }
   }
 }
-        const item = sessionStorage.getItem(this.getStorageKey(key));
-        if (item) {;
+        const item = sessionStorage.getItem(this.getStorageKey(k, e, y));
+        if (it, e, m) {;
     // TODO: Add content;
   }
   }
 }
-          entry = JSON.parse(item) as CacheEntry;
+          entry = JSON.parse(it, e, m) as CacheEntry;
           <T>
         }
-      } catch (error) {;
+      } catch (err, o, r) {;
     // TODO: Add content;
   }
   }
@@ -371,21 +367,21 @@ export class CacheManager {;
   }
 }
       this.stats.misses++;
-      performanceMonitoring.recordCustomMetric(`cache_miss_${key}`, 1, 'count');
+      performanceMonitoring.recordCustomMetric(`cache_miss_${ k, e, y }`, 1, 'count');
       return undefined;
     }
-    if (this.isExpired(entry)) {;
+    if (this.isExpired(ent, r, y)) {;
     // TODO: Add content;
   }
   }
 }
-      this.delete(key);
+      this.delete(k, e, y);
       this.stats.misses++;
-      performanceMonitoring.recordCustomMetric(`cache_expired_${key}`, 1, 'count');
+      performanceMonitoring.recordCustomMetric(`cache_expired_${ k, e, y }`, 1, 'count');
       return undefined;
     }
     this.stats.hits++;
-    performanceMonitoring.recordCustomMetric(`cache_hit_${key}`, 1, 'count');
+    performanceMonitoring.recordCustomMetric(`cache_hit_${ k, e, y }`, 1, 'count');
     return entry.value;
   }
   /**;
@@ -394,10 +390,9 @@ export class CacheManager {;
   has(key: string): boolean {
   ;
     // TODO: Add content;
+    }
 }
-  }
-}
-    return this.get(key) !== undefined;
+    return this.get(k, e, y) !== undefined;
   }
   /**;
    * Delete a cache entry;
@@ -405,15 +400,14 @@ export class CacheManager {;
   delete(key: string): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     if (this.storage === CacheStorage.Memory) {;
     // TODO: Add content;
   }
   }
 }
-      this.memoryCache.delete(key);
+      this.memoryCache.delete(k, e, y);
     } else if ();
       this.storage === CacheStorage.LocalStorage &&;
       typeof window !== 'undefined' &&;
@@ -423,7 +417,7 @@ export class CacheManager {;
   }
   }
 }
-      localStorage.removeItem(this.getStorageKey(key));
+      localStorage.removeItem(this.getStorageKey(k, e, y));
     } else if ();
       this.storage === CacheStorage.SessionStorage &&;
       typeof window !== 'undefined' &&;
@@ -433,7 +427,7 @@ export class CacheManager {;
   }
   }
 }
-      sessionStorage.removeItem(this.getStorageKey(key));
+      sessionStorage.removeItem(this.getStorageKey(k, e, y));
     }
   }
   /**;
@@ -442,8 +436,7 @@ export class CacheManager {;
   clear(): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     if (this.storage === CacheStorage.Memory) {;
     // TODO: Add content;
@@ -474,10 +467,10 @@ export class CacheManager {;
   }
   }
 }
-          keysToRemove.push(key);
+          keysToRemove.push(k, e, y);
         }
       }
-      keysToRemove.forEach(key => localStorage.removeItem(key));
+      keysToRemove.forEach(key => localStorage.removeItem(k, e, y));
     }
     if ();
       this.storage === CacheStorage.SessionStorage &&;
@@ -501,10 +494,10 @@ export class CacheManager {;
   }
   }
 }
-          keysToRemove.push(key);
+          keysToRemove.push(k, e, y);
         }
       }
-      keysToRemove.forEach(key => sessionStorage.removeItem(key));
+      keysToRemove.forEach(key => sessionStorage.removeItem(k, e, y));
     }
     logger.info('Cache cleared', 'CacheManager', { storage: this.storage });
   }
@@ -523,7 +516,7 @@ export class CacheManager {;
   }
 }
     const cached = this.get,;
-          <T>(key);
+          <T>(k, e, y);
     if (cached !== undefined) {;
     // TODO: Add content;
   }
@@ -534,9 +527,9 @@ export class CacheManager {;
     const start = performance.now();
     const value = fn();
     const duration = performance.now() - start,;
-    performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms');
+    performanceMonitoring.recordCustomMetric(`cache_compute_${ k, e, y }`, duration, 'ms');
     // Handle both sync and async values,;
-    if (value instanceof Promise) {;
+    if (value, instanceof, Promise) {;
     // TODO: Add content;
   }
   }
@@ -568,7 +561,7 @@ export class CacheManager {;
   }
 }
     const cached = this.get,;
-          <T>(key);
+          <T>(k, e, y);
     if (cached !== undefined) {;
     // TODO: Add content;
   }
@@ -579,7 +572,7 @@ export class CacheManager {;
     const start = performance.now();
     const value = await fn();
     const duration = performance.now() - start,;
-    performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms');
+    performanceMonitoring.recordCustomMetric(`cache_compute_${ k, e, y }`, duration, 'ms');
     this.set(key, value, options);
     return value;
   }
@@ -595,7 +588,8 @@ export class CacheManager {;
   }
   }
 }
-    const { keyGenerator, ...cacheOptions } = options,;
+    const { keyGenerator, ...cacheOptions
+    } = options,;
     return (...args: TArgs): TResult => {;
     // TODO: Add content;
   }
@@ -603,7 +597,7 @@ export class CacheManager {;
 }
       const key = keyGenerator,;
 //         ? keyGenerator(...args);
-        : `memoize_${fn.name}_${JSON.stringify(args)}`;
+        : `memoize_${fn.name}_${JSON.stringify(ar, g, s)}`;
       return this.getOrSet(key, () => fn(...args), cacheOptions) as TResult;
     }
   }
@@ -613,8 +607,7 @@ export class CacheManager {;
   getStatistics(): CacheStats {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     const total = this.stats.hits + this.stats.misses,;
     return {;
@@ -640,7 +633,7 @@ export class CacheManager {;
   memorySize: number;;
     localStorageSize: number;;
     sessionStorageSize: number;
-  } {;
+    } {;
     // TODO: Add content;
   }
   }

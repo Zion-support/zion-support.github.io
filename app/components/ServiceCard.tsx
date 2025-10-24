@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { Helmet  } from "react-helmet-async";
+import { Helm, e, t } from "react-helmet-async";
 import { ArrowRight, Brain, BarChart, Target, TrendingUp  } from "lucide-react";
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -82,15 +82,15 @@ const ServiceCardPage: React.FC = () => {
             </div>
             <div className='grid md: grid-cols-2 lg:grid-cols-4 gap-8'></div>
               {features.map((featur, e, index) => (
-                <div key={index}className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20'></div>
+                <div key={ ind, e, x }className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20'></div>
                   <feature.icon className='h-12 w-12 text-emerald-400 mb-4' /></feature>
                   <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>
                   <p className='text-gray-300 mb-4'>{feature.description}</p>
                   <ul className='space-y-2'></ul>
                     {feature.benefits.map((benefit, idx) => (
-                      <li key={idx}className='flex items-center text-sm text-gray-300'></li>
+                      <li key={ i, d, x }className='flex items-center text-sm text-gray-300'></li>
                         <CheckCircle className='h-4 w-4 text-emerald-400 mr-2 flex-shrink-0' /></CheckCircle>
-                        {benefit}
+                        { benef, i, t }
                       </li>
                     ))}
                   </ul>
@@ -111,9 +111,9 @@ const ServiceCardPage: React.FC = () => {
             </div>
             <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'></div>
               {benefits.map((benefi, t, index) => (
-                <div key={index}className='flex items-start space-x-4'></div>
+                <div key={ ind, e, x }className='flex items-start space-x-4'></div>
                   <CheckCircle className='h-6 w-6 text-emerald-400 mt-1 flex-shrink-0' /></CheckCircle>
-                  <p className='text-gray-300 text-lg'>{benefit}</p>
+                  <p className='text-gray-300 text-lg'>{ benef, i, t }</p>
                 </div>
               ))}
             </div>
@@ -159,7 +159,7 @@ className = ''
 <div className={`bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: bg-white/10 transition-all duration-300 group ${classNam,e
 }${
 popular ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : ''
-}`}>{popular && (</div>
+    }`}>{popular && (</div>
 <div className='flex items-center gap-2 mb-4'></div>
 <div className='w-2 h-2 bg-purple-400 rounded-full'></div>
 <span className='text-purple-400 text-sm font-semibold'>Most Popular</span>
@@ -170,21 +170,21 @@ popular ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : ''
 <p className='text-gray-300 text-sm'>{descriptio,n}</p>
 </div>
 <div className='space-y-2 mb-6'>{features.map((feature, index) => (</div>
-<div key={index}className='flex items-center gap-2'></div>
+<div key={ ind, e, x }className='flex items-center gap-2'></div>
 <CheckCircle className='w-4 h-4 text-green-400 flex-shrink-0' /></CheckCircle>
-<span className='text-gray-300 text-sm'>{feature}</span>
+<span className='text-gray-300 text-sm'>{ featu, r, e }</span>
 </div>
 ))}
 </div>
 {price && (
 <div className='mb-6'></div>
-<div className='text-3xl font-bold text-white mb-1'>{price}</div>
+<div className='text-3xl font-bold text-white mb-1'>{ pri, c, e }</div>
 <div className='text-gray-400 text-sm'>per month</div>
 </div>
 )}
 {onSelect && (
 <button
-onClick={onSelect}className='w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 rounded-lg font-semibold hover: from-purple-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center gap-2 group'></button>
+onClick={ onSele, c, t }className='w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 rounded-lg font-semibold hover: from-purple-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center gap-2 group'></button>
 Get Started
 <ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform' /></ArrowRight>
 </button>

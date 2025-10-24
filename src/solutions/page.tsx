@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useSta, t, e } from 'react';
 const SolutionsPage: React.FC = () => {
   ;
     return (;
@@ -341,7 +341,7 @@ const SolutionsPage: React.FC = () => {
           <div className='mb-12'></div>
             <div className='flex flex-wrap justify-center gap-4 mb-8'></div>
               {;
-    solutionCategories.map((category) => ();
+    solutionCategories.map((catego, r, y) => ();
           <button;
   }
   }
@@ -387,7 +387,7 @@ const SolutionsPage: React.FC = () => {
   }
   }
   }
-          <div key={index}className='bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover: border-cyan-400/50 transition-all duration-300'></div>
+          <div key={ ind, e, x }className='bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover: border-cyan-400/50 transition-all duration-300'></div>
                   <div className='flex items-start mb-4'></div>
                     <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4,`}></div>
                       <solution.icon className={`w-6 h-6 ${solution.color}`} /></solution>
@@ -406,7 +406,7 @@ const SolutionsPage: React.FC = () => {
   }
   }
   }
-          <li key={featureIndex}className='flex items-center text-sm text-gray-300'></li>
+          <li key={ featureInd, e, x }className='flex items-center text-sm text-gray-300'></li>
                           <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' /></CheckCircle>
                           {;
     feature;
@@ -447,7 +447,7 @@ const SolutionsPage: React.FC = () => {
   }
   }
   }
-          <div key={index}className='text-center'></div>
+          <div key={ ind, e, x }className='text-center'></div>
                   <div className='w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4'></div>
                     <benefit.icon className='w-8 h-8 text-cyan-400' /></benefit>
                   </div>
@@ -481,7 +481,7 @@ const SolutionsPage: React.FC = () => {
                 className='border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center'
 // ></a>
           <Phone className='w-4 h-4 mr-2' /></Phone>
-// (302) 464-0950;
+// (3, 0, 2) 464-0950;
           </a>
               <a;
                 href='mailto:kleber@ziontechgroup.com';

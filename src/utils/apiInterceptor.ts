@@ -13,8 +13,7 @@ class ErrorHandler {;
   static getInstance(): ErrorHandler {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     if (!ErrorHandler.instance) {;
     // TODO: Add content;
@@ -28,8 +27,7 @@ class ErrorHandler {;
   handleNetworkError(error: Error,
       url: string, config?: unknown): void {
   ;
-}
-  }
+    }
 // // console.error('Network error: ', { error: error.message, url, config });
   }
 }
@@ -82,7 +80,7 @@ export interface APIResponse<T = unknown> {;
     statusText: string;;
     headers: Headers;;
     config: RequestConfig;
-}
+    }
 export interface CacheEntry {;
     // TODO: Add content;
   }
@@ -91,7 +89,7 @@ export interface CacheEntry {;
   data: unknown,;
   timestamp: number;;
     expiresAt: number;
-}
+    }
 export class APIInterceptor {;
     // TODO: Add content;
   }
@@ -128,15 +126,14 @@ export class APIInterceptor {;
           <APIConfig>): APIInterceptor {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     if (!APIInterceptor.instance) {;
     // TODO: Add content;
   }
   }
 }
-      APIInterceptor.instance = new APIInterceptor(config);
+      APIInterceptor.instance = new APIInterceptor(conf, i, g);
     }
     return APIInterceptor.instance;
   }
@@ -145,15 +142,15 @@ export class APIInterceptor {;
    */;
   async request;
           <T = unknown>(config: RequestConfig): Promise<APIResponse<T>> {;
-    const cacheKey = this.getCacheKey(fullConfig);
+    const cacheKey = this.getCacheKey(fullConf, i, g);
     // Check cache for GET requests,;
     if (fullConfig.method === 'GET' && fullConfig.cache !== false && this.config.enableCaching) {;
   // TODO: Add content;
   }
   }
 }
-      const cachedResponse = this.getFromCache(cacheKey);
-      if (cachedResponse) {;
+      const cachedResponse = this.getFromCache(cacheK, e, y);
+      if (cachedRespon, s, e) {;
     // TODO: Add content;
   }
   }
@@ -163,17 +160,17 @@ export class APIInterceptor {;
       }
     }
     // Check for pending identical requests,;
-    if (this.pendingRequests.has(cacheKey)) {;
+    if (this.pendingRequests.has(cacheK, e, y)) {;
     // TODO: Add content;
   }
   }
 }
-      return this.pendingRequests.get(cacheKey) as Promise;
+      return this.pendingRequests.get(cacheK, e, y) as Promise;
           <APIResponse<T>>;
     }
     // Create the request promise,;
 const requestPromise = this.executeRequest,;
-          <T>(fullConfig);
+          <T>(fullConf, i, g);
     this.pendingRequests.set(cacheKey, requestPromise as Promise<APIResponse>);
     try {;
     // TODO: Add content;
@@ -195,7 +192,7 @@ const requestPromise = this.executeRequest,;
   }
   }
 }
-      this.pendingRequests.delete(cacheKey);
+      this.pendingRequests.delete(cacheK, e, y);
     }
   }
   /**;
@@ -211,7 +208,7 @@ const requestPromise = this.executeRequest,;
     const startTime = performance.now();
     try {;
     method: finalConfig.method,;
-        headers: this.buildHeaders(finalConfig),;
+        headers: this.buildHeaders(finalConf, i, g),;
         body: finalConfig.body ? JSON.stringify(finalConfig.body) : undefined;
   }
   }
@@ -238,11 +235,11 @@ let finalResponse = response;
   }
   }
 }
-        finalResponse = await this.config.interceptors.response(response);
+        finalResponse = await this.config.interceptors.response(respon, s, e);
       }
       // Parse response data,;
 const data = await this.parseResponse,;
-          <T>(finalResponse);
+          <T>(finalRespon, s, e);
       return {;
     // TODO: Add content;
   }
@@ -253,8 +250,8 @@ const data = await this.parseResponse,;
         statusText: finalResponse.statusText,;
         headers: finalResponse.headers,;
         config: finalConfig;
-      }
-    } catch (error) {;
+    }
+    } catch (err, o, r) {;
     // TODO: Add content;
   }
   }
@@ -262,9 +259,9 @@ const data = await this.parseResponse,;
       const duration = performance.now() - startTime,;
       const err = error as Error,;
       // Record error metric,;
-      performanceMetrics.recordNetworkRequest(this.buildURL(config), duration, 0);
+      performanceMetrics.recordNetworkRequest(this.buildURL(conf, i, g), duration, 0);
       // Handle error with error handler,;
-      this.errorHandler.handleNetworkError(err, this.buildURL(config), undefined);
+      this.errorHandler.handleNetworkError(err, this.buildURL(conf, i, g), undefined);
       // Retry logic,;
       if (attempt;
           < (config.retryAttempts || this.config.retryAttempts)) {;
@@ -282,7 +279,7 @@ const data = await this.parseResponse,;
   }
   }
 }
-        const modifiedError = await this.config.interceptors.error(err);
+        const modifiedError = await this.config.interceptors.error(e, r, r);
         throw modifiedError;
       }
       throw err;
@@ -373,8 +370,7 @@ const data = await this.parseResponse,;
   private prepareRequest(config: RequestConfig): RequestConfig {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     return {;
     // TODO: Add content;
@@ -401,8 +397,7 @@ const data = await this.parseResponse,;
   private buildURL(config: RequestConfig): string {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${config.url}`;
     if (config.params) {;
@@ -414,10 +409,9 @@ const data = await this.parseResponse,;
       Object.entries(config.params).forEach(([key, value]) => {
   ;
     // TODO: Add content;
+    }
 }
-  }
-}
-        params.append(key, String(value));
+        params.append(key, String(val, u, e));
       });
       url += `?${params.toString()}`;
     }
@@ -429,8 +423,7 @@ const data = await this.parseResponse,;
   private buildHeaders(config: RequestConfig): Headers {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     const headers = new Headers();
     // Add default headers,;
@@ -439,8 +432,7 @@ const data = await this.parseResponse,;
     Object.entries(config.headers || {}).forEach(([key, value]) => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
       headers.set(key, value);
     });
@@ -452,8 +444,7 @@ const data = await this.parseResponse,;
   private createAbortSignal(timeout: number): AbortSignal {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     const controller = new AbortController();
     setTimeout(() => controller.abort(), timeout);
@@ -491,11 +482,10 @@ const data = await this.parseResponse,;
   private getCacheKey(config: RequestConfig): string {
   ;
     // TODO: Add content;
+    }
 }
-  }
-}
-    const url = this.buildURL(config);
-    return `${config.method}:${url}`;
+    const url = this.buildURL(conf, i, g);
+    return `${config.method}:${ u, r, l }`;
   }
   /**;
    * Get response from cache;
@@ -505,14 +495,14 @@ const data = await this.parseResponse,;
   }
   }
 }
-    const entry = this.cache.get(key);
+    const entry = this.cache.get(k, e, y);
     if (!entry) return null;
     if (Date.now() > entry.expiresAt) {;
     // TODO: Add content;
   }
   }
 }
-      this.cache.delete(key);
+      this.cache.delete(k, e, y);
       return null;
     }
     return entry.data as APIResponse;
@@ -524,8 +514,7 @@ const data = await this.parseResponse,;
       response: APIResponse): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     this.cache.set(key, {;
     // TODO: Add content;
@@ -543,8 +532,7 @@ const data = await this.parseResponse,;
   clearCache(): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     this.cache.clear();
   }
@@ -554,8 +542,7 @@ const data = await this.parseResponse,;
   clearExpiredCache(): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     const now = Date.now();
     for (const [key, entry] of this.cache.entries()) {;
@@ -568,7 +555,7 @@ const data = await this.parseResponse,;
   }
   }
 }
-        this.cache.delete(key);
+        this.cache.delete(k, e, y);
       }
     }
   }
@@ -614,8 +601,7 @@ const data = await this.parseResponse,;
           <APIConfig>): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     this.config = {;
     ...this.config,;
@@ -628,8 +614,7 @@ const data = await this.parseResponse,;
   getConfig(): APIConfig {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     return {;
     ...this.config;

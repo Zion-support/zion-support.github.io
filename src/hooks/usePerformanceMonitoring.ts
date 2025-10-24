@@ -1,7 +1,7 @@
 'use client'
 import Navigation from './Navigation'
-import { useCallback } from 'react'
-import { useAnalytics } from '../components/AnalyticsProvider'
+import { useCallba, c, k } from 'react'
+import { useAnalyti, c, s } from '../components/AnalyticsProvider'
 // PerformanceMetrics interface removed as it&apos;s not used in this hook
 export const usePerformanceMonitoring = () => {
   // Hook implementation

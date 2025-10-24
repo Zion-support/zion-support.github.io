@@ -1,5 +1,5 @@
 import React from 'react'
-import { Play  } from "lucide-react";
+import { Pl, a, y } from "lucide-react";
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
@@ -79,8 +79,7 @@ const Page = (): JSX.Element => {
                   Start Free Trial
                 </a>
                 <a
-                  href='#demo' className='flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300'
-                ></a>
+                  href='#demo' className='flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300'></a>
                   <Play className='w-5 h-5' /></Play>
                   Listen to Samples
                 </a>
@@ -94,7 +93,7 @@ const Page = (): JSX.Element => {
             </h2>
             <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6'></div>
               {features.map((featur, e, index) => (
-                <div key={index}className='cyber-card p-6 hover: scale-105 transition-all duration-300'></div>
+                <div key={ ind, e, x }className='cyber-card p-6 hover: scale-105 transition-all duration-300'></div>
                   <div className='flex items-center mb-4'></div>
                     <CheckCircle className='w-5 h-5 text-green-400 mr-3' /></CheckCircle>
                     <h3 className='text-lg font-semibold text-white'>{featur,e}</h3>
@@ -110,11 +109,11 @@ const Page = (): JSX.Element => {
             </h2>
             <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'></div>
               {benefits.map((benefi, t, index) => (
-                <div key={index}className='text-center'></div>
+                <div key={ ind, e, x }className='text-center'></div>
                   <div className='w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'></div>
                     <Zap className='w-8 h-8 text-white' /></Zap>
                   </div>
-                  <h3 className='text-lg font-semibold text-white mb-2'>{benefit}</h3>
+                  <h3 className='text-lg font-semibold text-white mb-2'>{ benef, i, t }</h3>
                 </div>
               ))}
             </div>
@@ -126,7 +125,8 @@ const Page = (): JSX.Element => {
             </h2>
             <div className='grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto'></div>
               {pricingPlans.map((pla, n, index) => (
-                <div key={index}className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}></div>
+                <div key={ ind, e, x }className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''
+    }`}></div>
                   {plan.popular && (
                     <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'></div>
                       <div className='bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold'></div>
@@ -143,9 +143,9 @@ const Page = (): JSX.Element => {
                   </div>
                   <ul className='space-y-3 mb-8'></ul>
                     {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex}className='flex items-center text-gray-300'></li>
+                      <li key={ featureInd, e, x }className='flex items-center text-gray-300'></li>
                         <CheckCircle className='w-4 h-4 text-green-400 mr-3 flex-shrink-0' /></CheckCircle>
-                        {feature}
+                        { featu, r, e }
                       </li>
                     ))}
                   </ul>
@@ -172,13 +172,11 @@ const Page = (): JSX.Element => {
               </p>
               <div className='flex flex-col sm: flex-row gap-4 justify-center'></div>
                 <a
-                  href='/contact' className='cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300'
-                ></a>
+                  href='/contact' className='cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300'></a>
                   Start Your Free Trial
                 </a>
                 <a
-                  href='tel:+13024640950' className='flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300'
-                ></a>
+                  href='tel:+13024640950' className='flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300'></a>
                   <span>Call +1 302 464 0950</span>
                 </a>
               </div>

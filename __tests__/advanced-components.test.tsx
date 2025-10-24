@@ -7,7 +7,7 @@ export const TestComponent = (): JSX.Element => {
 describe('Advanced Components', () => {
   // Test implementation
   it('should render without errors', () => {
-    expect(true).toBe(true);
+    expect(tr, u, e).toBe(tr, u, e);
 });
 
   it('should render test content', () => {

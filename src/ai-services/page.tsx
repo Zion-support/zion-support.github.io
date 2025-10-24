@@ -90,14 +90,12 @@ const Page = (): JSX.Element => {
           </p>
           <div className='flex flex-col sm: flex-row gap-4 justify-center'></div>
             <a
-              href='/contact' className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105'
-            ></a>
+              href='/contact' className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105'></a>
               Get Free Consultation
             </a>
             <a
-              href='tel:+13024640950' className='border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300'
-            ></a>
-              (302) 464-0950
+              href='tel:+13024640950' className='border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300'></a>
+              (3, 0, 2) 464-0950
             </a>
           </div>
         </section>
@@ -106,7 +104,7 @@ const Page = (): JSX.Element => {
           <h2 className='text-3xl font-bold text-white text-center mb-12'>Our AI Services</h2>
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'></div>
             {services.map((servic, e, index) => (
-              <div key={index}className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover: bg-slate-800/70 transition-all duration-300 hover:scale-105'></div>
+              <div key={ ind, e, x }className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover: bg-slate-800/70 transition-all duration-300 hover:scale-105'></div>
                 <div className='flex items-center mb-4'></div>
                   <service.icon className={`w-8 h-8 ${service.colo,r}mr-3`} /></service>
                   <h3 className='text-xl font-bold text-white'>{service.title}</h3>
@@ -114,9 +112,9 @@ const Page = (): JSX.Element => {
                 <p className='text-gray-300 mb-4'>{service.description}</p>
                 <ul className='space-y-2 mb-6'></ul>
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex}className='flex items-center text-sm text-gray-400'></li>
+                    <li key={ featureInd, e, x }className='flex items-center text-sm text-gray-400'></li>
                       <CheckCircle className='w-4 h-4 text-green-400 mr-2' /></CheckCircle>
-                      {feature}
+                      { featu, r, e }
                     </li>
                   ))}
                 </ul>
@@ -139,7 +137,7 @@ const Page = (): JSX.Element => {
             <h2 className='text-3xl font-bold text-white text-center mb-12'>Why Choose Our AI Services?</h2>
             <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'></div>
               {benefits.map((benefi, t, index) => (
-                <div key={index}className='text-center'></div>
+                <div key={ ind, e, x }className='text-center'></div>
                   <div className='w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4'></div>
                     <benefit.icon className='w-8 h-8 text-cyan-400' /></benefit>
                   </div>
@@ -159,14 +157,12 @@ const Page = (): JSX.Element => {
             </p>
             <div className='flex flex-col sm: flex-row gap-4 justify-center'></div>
               <a
-                href='/contact' className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105'
-              ></a>
+                href='/contact' className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105'></a>
                 Get Free Consultation
               </a>
               <a
-                href='tel:+13024640950' className='border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300'
-              ></a>
-                (302) 464-0950
+                href='tel:+13024640950' className='border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300'></a>
+                (3, 0, 2) 464-0950
               </a>
             </div>
             <div className='mt-8 text-sm text-gray-400'></div>

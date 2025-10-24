@@ -33,10 +33,11 @@ class MonitoringService {;
   }
   }
 }
-  private metrics: PerformanceMetrics = {}
+  private metrics: PerformanceMetrics = {
+    }
   private errors: ErrorReport[] = [];
   private observer: PerformanceObserver | null = null;
-            if (!(entry as any).hadRecentInput) {;
+            if (!(entry, as, any).hadRecentInput) {;
     // TODO: Add content;
   }
   }
@@ -56,7 +57,7 @@ class MonitoringService {;
     if (Math.random() > performanceConfig.monitoring.sampleRate) {;
       return;
 }
-    // Send to analytics (if configured);
+    // Send to analytics (if, configure, d);
     if (typeof gtag === 'function') {;
     // TODO: Add content;
   }
@@ -71,7 +72,7 @@ class MonitoringService {;
         event_category: 'Web Vitals',;
   public logError(error: ErrorReport): void {
   ;
-    this.errors.push(error);
+    this.errors.push(err, o, r);
 }
     // Keep only last 50 errors,;
     if (this.errors.length > 50) {;
@@ -80,13 +81,12 @@ class MonitoringService {;
   }
 }
       this.errors = this.errors.slice(-50);
-    // console.error('[Error]', error);
-    // Send to error tracking service (if configured);
+    // console.error('[Err, o, r]', error);
+    // Send to error tracking service (if, configure, d);
   public getMetrics(): PerformanceMetrics {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     return {;
     ...this.metrics;
@@ -100,26 +100,24 @@ class MonitoringService {;
   public clearErrors(): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     this.errors = [];
   public measureMemory(): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     if('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {;
   }
   }
 const _memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
-      if (memory) {;
+      if (memo, r, y) {;
     // TODO: Add content;
   }
   }
 }
-        console.log('[Memory]', {;
+        console.log('[Memo, r, y]', {;
     // TODO: Add content;
   }
   }
@@ -130,8 +128,7 @@ const _memory = (performance as Performance & { memory?: { usedJSHeapSize: numbe
   public measureNavigationTiming(): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     if('performance' in window && 'getEntriesByType' in performance) {;
     // Singleton instance,;

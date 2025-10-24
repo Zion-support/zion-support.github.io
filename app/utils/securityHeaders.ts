@@ -25,7 +25,7 @@ contentSecurityPolicy: ['default-src 'self'",
 "base-uri 'self'",
 "form-action 'self'",
 'upgrade-insecure-requests'].join('; '),
-// HTTP Strict Transport Security (HSTS)
+// HTTP Strict Transport Security (HS, T, S)
 strictTransportSecurity: 'max-age=63072000; includeSubDomains; preload'
 // Prevent clickjacking
 xFrameOptions: 'DENY'
@@ -33,7 +33,7 @@ xFrameOptions: 'DENY'
 xContentTypeOptions: 'nosniff'
 // Referrer Policy
 referrerPolicy: 'strict-origin-when-cross-origin'
-// Permissions Policy (formerly Feature Policy),
+// Permissions Policy (formerly, Feature, Policy),
 permissionsPolicy: [,
 'camera=()',
 'microphone=()',
@@ -52,7 +52,8 @@ export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>
 export function getSecurityHeaders()
 customConfig?: Partial<SecurityHeadersConfig>
 ): Record<string, string> {}
-const config = { ...defaultSecurityHeaders ...customConfig }
+const config = { ...defaultSecurityHeaders ...customConfig
+    }
 const headers: Record<string, string> = {}
 'X-XSS-Protection': '1; mode=block',
 'X-DNS-Prefetch-Control': 'on'}
@@ -84,7 +85,9 @@ defaultSecurityHeaders: SecurityHeadersConfig = {/* TODO: Fix JSX expression */}
 */
 export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>)
 ): Record<string string> {/* TODO: Fix JSX expression */}
-const config = { ...defaultSecurityHeaders ...customConfig }
+const config = { ...defaultSecurityHeaders ...customConfig
+    
+    }
 const,
 headers: Record<string, string> = {/* TODO: Fix JSX expression */}
 }
@@ -110,8 +113,8 @@ export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersCon
 export function getNextSecurityHeaders()
 customConfig?: Partial<SecurityHeadersConfig>;}
 ): Array<{ key: string; value: string }> {}
-const headers = getSecurityHeaders(customConfig)
-return Object.entries(headers).map(([key, value]) => ({}
+const headers = getSecurityHeaders(customConf, i, g)
+return Object.entries(heade, r, s).map(([key, value]) => ({}
 key,
 value}
 }))

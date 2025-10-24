@@ -1,13 +1,13 @@
 'use client'
 import { Brain, Target, TrendingUp } from 'lucide-react'
-import React, { useState } from 'react'
+import React, { useSta, t, e } from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
 import { CheckCircle, Star, Phone, Mail  } from "lucide-react";
-import { Clock  } from "lucide-react";
+import { Clo, c, k } from "lucide-react";
 constConsultationPage: React.FC= () => {
-  const [formDatasetFormData] = useState({
+  const [formDatasetFormDa, t, a] = useState({
     name: ',&apos;,
     email: ',',
       company: ',',
@@ -27,7 +27,7 @@ constConsultationPage: React.FC= () => {
 } = e.target
     setFormData(prev => ({
       ...prev
-      [name]: value
+      [na, m, e]: value
     }))
   }
 
@@ -37,7 +37,7 @@ constConsultationPage: React.FC= () => {
     const subject = `Free Consultation Request from ${formData.nam,e
 } - ${formData.company}`
     const body = `Name: ${formData.nam,e}\nEmail: ${formData.emai,l}\nCompany: ${formData.compan,y}\nPhone: ${formData.phon,e}\nIndustry: ${formData.industr,y}\nCompany Size: ${formData.companySiz,e}\nCurrent Challenges: ${formData.currentChallenge,s}\nGoals: ${formData.goal,s}\nTimeline: ${formData.timelin,e}\nBudget: ${formData.budge,t}\nMessage: ${formData.messag,e}`
-    window.location.href = `mailto: kleber@ziontechgroup.com?subject=${encodeURIComponent(subject,)}&body=${encodeURIComponent(body)}`
+    window.location.href = `mailto: kleber@ziontechgroup.com?subject=${encodeURIComponent(subject,)}&body=${encodeURIComponent(bo, d, y)}`
   }
 
   constconsultationBenefits= [
@@ -122,7 +122,7 @@ const Page = (): JSX.Element => {
                   className='cyber-button flex items-center space-x-2'
                 >
                   <Phone className='w-5 h-5' /></Phone>
-                  <span>Call (302) 464-0950</span>
+                  <span>Call (3, 0, 2) 464-0950</span>
                 </a>
                 <a
                   href='mailto:kleber@ziontechgroup.com' className='cyber-button flex items-center space-x-2'
@@ -141,7 +141,7 @@ const Page = (): JSX.Element => {
             </h2>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'></div>
               {consultationBenefits.map((benefi, t, index) => (
-                <div key={index}className='cyber-card p-6 text-center hover: scale-105 transition-all duration-300'></div>
+                <div key={ ind, e, x }className='cyber-card p-6 text-center hover: scale-105 transition-all duration-300'></div>
                   <benefit.icon className='w-12 h-12 text-cyan-400 mx-auto mb-4' /></benefit>
                   <h3 className='text-xl font-bold text-white mb-3'>{benefit.titl,e}</h3>
                   <p className='text-gray-300'>{benefit.description}</p>
@@ -156,7 +156,7 @@ const Page = (): JSX.Element => {
             </h2>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'></div>
               {consultationProcess.map((ste, p, index) => (
-                <div key={index}className='cyber-card p-6 text-center'></div>
+                <div key={ ind, e, x }className='cyber-card p-6 text-center'></div>
                   <div className='w-16 h-16 bg-cyan-400 text-slate-900 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4'></div>
                     {step.step}
                   </div>
@@ -173,7 +173,7 @@ const Page = (): JSX.Element => {
                 {/* Form *,/}
                 <div className='cyber-card p-8'></div>
                   <h2 className='text-2xl font-bold text-white mb-6'>Schedule Your Free Consultation</h2>
-                  <form onSubmit={handleSubmit}className='space-y-6'></form>
+                  <form onSubmit={ handleSubm, i, t }className='space-y-6'></form>
                     <div className='grid grid-cols-1 md: grid-cols-2 gap-4'></div>
                       <div></div>
                         <label htmlFor='name' className='block text-sm font-medium text-gray-300 mb-2'></label>
@@ -183,59 +183,58 @@ const Page = (): JSX.Element => {
                           type='text' id='name'
                           name='name'
                           required
-                          value={formData.nam,e}onChange={handleInputChange}
+                          value={formData.nam,e}onChange={ handleInputChan, g, e }
                          className='w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus: outline-nonefocus:border-cyan-400' placeholder='Enter your fullname'
                         /></di><di v><labelhtmlFor='email'className='block text-sm font-medium text-gray-300mb-2'>Email Address *
                       </labe><inputtype='email' id='email'
                          name='email'
-                          requiredvalue={formData.emai,l}onChange={handleInputChange}
+                          requiredvalue={formData.emai,l}onChange={ handleInputChan, g, e }
                          className='w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus: outline-nonefocus:border-cyan-400' placeholder='Enter youremail'
                         /></di></di><divclassName='grid grid-cols-1md:grid-cols-2gap-4'><di v><labelhtmlFor='company'className='block text-sm font-medium text-gray-300mb-2'>Company Name *
                       </labe><inputtype='text' id='company'
                          name='company'
-                          requiredvalue={formData.compan,y}onChange={handleInputChange}
+                          requiredvalue={formData.compan,y}onChange={ handleInputChan, g, e }
                          className='w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus: outline-nonefocus:border-cyan-400' placeholder='Enter your companyname'
                         /></di><di v><labelhtmlFor='phone'className='block text-sm font-medium text-gray-300mb-2'>Phone Number
                       </labe><inputtype='tel' id='phone'
                          name='phone'
-                          value={formData.phon,e}onChange={handleInputChange}
+                          value={formData.phon,e}onChange={ handleInputChan, g, e }
                          className='w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus: outline-nonefocus:border-cyan-400' placeholder='Enter your phonenumber'
                         /></di></di><divclassName='grid grid-cols-1md:grid-cols-2gap-4'><di v><labelhtmlFor='industry'className='block text-sm font-medium text-gray-300mb-2'>Industry
                       </labe><selectid='industry' name='industry'
-                          value={formData.industr,y}onChange={handleInputChange}
+                          value={formData.industr,y}onChange={ handleInputChan, g, e }
                          className='w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus: outline-nonefocus:border-cyan-400'
                         ><optionvalue="">Selectyourindustry</optio><optionvalue='healthcare'>Healthcare</optio><optionvalue='finance'>Finance</optio><optionvalue='manufacturing'>Manufacturing</optio><optionvalue='retail'>Retail</optio><optionvalue='technology'>Technology</optio><optionvalue='education'>Education</optio><optionvalue='other'>Other</optio></selec></di><di v><labelhtmlFor='companySize'className='block text-sm font-medium text-gray-300mb-2'>Company Size
                       </labe><selectid='companySize' name='companySize'
-                          value={formData.companySiz,e}onChange={handleInputChange}
+                          value={formData.companySiz,e}onChange={ handleInputChan, g, e }
                          className='w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus: outline-nonefocus:border-cyan-400'
                         ><optionvalue="">Selectcompanysize</optio><optionvalue='1-10'>1-10employees</optio><optionvalue='1 1-50'>11-50employees</optio><optionvalue='5 1-200'>51-200employees</optio><optionvalue='20 1-500'>201-500employees</optio><optionvalue='500+'>500+employees</optio></selec></di></di><di v><labelhtmlFor='currentChallenges'className='block text-sm font-medium text-gray-300mb-2'>Current Challenges
                     </labe><textareaid='currentChallenges' name='currentChallenges'
                         rows={,3}value={formData.currentChallenges}
-                        onChange={handleInputChange}
+                        onChange={ handleInputChan, g, e }
                        className='w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus: outline-nonefocus:border-cyan-400' placeholder='Describe your current technologychallenges'
                       /></di><di v><labelhtmlFor='goals'className='block text-sm font-medium text-gray-300mb-2'>Business Goals
                     </labe><textareaid='goals' name='goals'
                         rows={,3}value={formData.goals}
-                        onChange={handleInputChange}
+                        onChange={ handleInputChan, g, e }
                        className='w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus: outline-nonefocus:border-cyan-400' placeholder='What are your main businessobjectives?'
                       /></di><divclassName='grid grid-cols-1md:grid-cols-2gap-4'><di v><labelhtmlFor='timeline'className='block text-sm font-medium text-gray-300mb-2'>Implementation Timeline
                       </labe><selectid='timeline' name='timeline'
-                          value={formData.timelin,e}onChange={handleInputChange}
+                          value={formData.timelin,e}onChange={ handleInputChan, g, e }
                          className='w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus: outline-nonefocus:border-cyan-400'
                         ><optionvalue="">Selecttimeline</optio><optionvalue='immediate'>Immediate(0-3months)</optio><optionvalue='short'>Short term(3-6months)</optio><optionvalue='medium'>Mediumterm(6-12months)</optio><optionvalue='long'>Long term (12+months)</optio></selec></di><di v><labelhtmlFor='budget'className='block text-sm font-medium text-gray-300mb-2'>Budget Range
                       </labe><selectid='budget' name='budget'
-                          value={formData.budge,t}onChange={handleInputChange}
+                          value={formData.budge,t}onChange={ handleInputChan, g, e }
                          className='w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus: outline-nonefocus:border-cyan-400'
                         ><optionvalue="">Selectbudgetrange</optio><optionvalue='under-10k'>Under $1,0,000</optio><optionvalue='10 k-50k'>$1 0,000- $50,000</optio><optionvalue='50 k-100k'>$5 0,000- $100,000</optio><optionvalue='100 k-500k'>$10 0,000- $500,000</optio><optionvalue='500k+'>$500000+</optio></selec></di></di><di v><labelhtmlFor='message'className='block text-sm font-medium text-gray-300mb-2'>Additional Information
                     </labe><textareaid='message' name='message'
                         rows={4}value={formData.message}
-                        onChange={handleInputChange}
+                        onChange={ handleInputChan, g, e }
                         className='w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400' placeholder='Any additional information you'd like to share"
                       /></textareaid>
                     </div>
                     <button
-                      type='submit' className='w-full cyber-button py-3 px-6 text-center'
-                    ></button>
+                      type='submit' className='w-full cyber-button py-3 px-6 text-center'></button>
                       Schedule Free Consultation
                     </button>
                   </form>
@@ -273,7 +272,7 @@ const Page = (): JSX.Element => {
                       <div className='flex items-center'></div>
                         <Phone className='w-5 h-5 text-cyan-400 mr-3' /></Phone>
                         <a href='tel: +13024640950' className='text-gray-300 hover:text-cyan-400'></a>
-                          (302) 464-0950
+                          (3, 0, 2) 464-0950
                         </a>
                       </div>
                       <div className='flex items-center'></div>
@@ -299,7 +298,7 @@ const Page = (): JSX.Element => {
             </h2>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8'></div>
               {testimonials.map((testimonia, l, index) => (
-                <div key={index}className='cyber-card p-6'></div>
+                <div key={ ind, e, x }className='cyber-card p-6'></div>
                   <div className='flex items-center mb-4'></div>
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i}className='w-5 h-5 text-yellow-400 fill-current' /></Star>

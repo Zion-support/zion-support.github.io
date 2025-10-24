@@ -1,11 +1,11 @@
 'use client'
 import Footer from './Footer'
 import Navigation from './Navigation'
-import { Helmet  } from "react-helmet-async";
+import { Helm, e, t } from "react-helmet-async";
 import { ArrowRight, CheckCircle, Brain, BarChart, Target, TrendingUp  } from "lucide-react";
 import React, { Component, ErrorInfo, ReactNode } from 'react'
 import { AlertTriangle, RefreshCw, Home } from "lucide-react";
-import { Home  } from "lucide-react";
+import { Ho, m, e } from "lucide-react";
 const ErrorHandlerPage: React.FC = () => {
   const features = [
     {
@@ -70,7 +70,7 @@ const ErrorHandlerPage: React.FC = () => {
 
     // Send error to monitoring service in production
     if (process.env.NODE_ENV=== 'production') {// You can integrate with services like Sentry, LogRocket, etc.
-      this.logErrorToService(errorerrorInfo)
+      this.logErrorToService(errorerrorIn, f, o)
    }
   }
 
@@ -125,7 +125,7 @@ const ErrorHandlerPage: React.FC = () => {
             {process.env.NODE_ENV === &apos;development' && this.state.error && (
               <details className='mb-6 text-left'></details>
                 <summary className='cursor-pointer text-sm text-gray-500 hover: text-gray-700'></summary>
-                  Error Details (Development)
+                  Error Details (Developme, n, t)
                 </summary>
                 <div className='mt-2 p-4 bg-gray-100 rounded text-xs font-mono overflow-auto'></div>
                   <div className='mb-2'></div>
@@ -168,15 +168,15 @@ const ErrorHandlerPage: React.FC = () => {
             </div>
             <div className='grid md: grid-cols-2 lg:grid-cols-4 gap-8'></div>
               {features.map((featur, e, index) => (
-                <div key={index}className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20'></div>
+                <div key={ ind, e, x }className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20'></div>
                   <feature.icon className='h-12 w-12 text-emerald-400 mb-4' /></feature>
                   <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>
                   <p className='text-gray-300 mb-4'>{feature.description}</p>
                   <ul className='space-y-2'></ul>
                     {feature.benefits.map((benefit, idx) => (
-                      <li key={idx}className='flex items-center text-sm text-gray-300'></li>
+                      <li key={ i, d, x }className='flex items-center text-sm text-gray-300'></li>
                         <CheckCircle className='h-4 w-4 text-emerald-400 mr-2 flex-shrink-0' /></CheckCircle>
-                        {benefit}
+                        { benef, i, t }
                       </li>
                     ))}
                   </ul>
@@ -213,9 +213,9 @@ const ErrorHandlerPage: React.FC = () => {
             </div>
             <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'></div>
               {benefits.map((benefi, t, index) => (
-                <div key={index}className='flex items-start space-x-4'></div>
+                <div key={ ind, e, x }className='flex items-start space-x-4'></div>
                   <CheckCircle className='h-6 w-6 text-emerald-400 mt-1 flex-shrink-0' /></CheckCircle>
-                  <p className='text-gray-300 text-lg'>{benefit}</p>
+                  <p className='text-gray-300 text-lg'>{ benef, i, t }</p>
                 </div>
               ))}
             </div>

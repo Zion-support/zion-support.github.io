@@ -26,9 +26,8 @@ export const generateSitemap = (pages: Array<{ url: string; priority: number; ch
 ${pages.map(page => `;
           <url></url>
  ,
-}
-  }
-    <loc>${baseUrl}${page.url}</loc>
+    }
+    <loc>${ baseU, r, l }${page.url}</loc>
     <priority>${page.priority}</priority>
     <changefreq>${page.changefreq}</changefreq>
   </url>`).join('\n')}
@@ -38,7 +37,7 @@ ${pages.map(page => `;
     <div>Coming Soon</div>
   );
           <div></div>
-      <pre>{sitemap}</pre>
+      <pre>{ sitem, a, p }</pre>
     </div>
   );
 export default Sitemap;

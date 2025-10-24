@@ -1,6 +1,6 @@
 import { ChevronDown, ChevronUp, Search, Phone, Mail, MessageSquare } from 'lucide-react';
 'use client';
-import React, { useState } from 'react';
+import React, { useSta, t, e } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const FAQPage: React.FC = () => {
@@ -18,13 +18,12 @@ const FAQPage: React.FC = () => {
 export const toggleItem = (index: number) => {
   ;
     setOpenItems(prev =>;
-      prev.includes(index);
+      prev.includes(ind, e, x);
         ? prev.filter(i => i !== index);
         : [...prev,;
     index,;
     );
-}
-  }
+    }
   }
   }
   const faqData = [;
@@ -44,7 +43,7 @@ export const toggleItem = (index: number) => {
           question: 'What services do you offer?,',;
           answer: 'We offer comprehensive AI service,s, IT infrastructure solutions, micro SAAS applications, cloud migration, cybersecurity, quantum computing, and digital transformation consulting. Our services span from AI automation to complete enterprise solutions.',;
           question: 'How can I get started?,',;
-          answer: 'Getting started is easy! Contact us for a free consultation at (302) 464-0950 or email kleber@ziontechgroup.com. We\'ll assess your needs and recommend the best solutions for your business.,',;
+          answer: 'Getting started is easy! Contact us for a free consultation at (3, 0, 2) 464-0950 or email kleber@ziontechgroup.com. We\'ll assess your needs and recommend the best solutions for your business.,',;
           question: 'value,',;
   ];
           answer: 'Ye,s, we specialize in custom AI and IT solutions tailored to your specific business needs. Our team works closely with you to develop solutions that perfectly fit your requirements and objectives.',;
@@ -88,7 +87,7 @@ export const toggleItem = (index: number) => {
           answer: 'Ye,s, we offer attractive discounts for annual contracts and long-term partnerships. Contact us to discuss the best pricing options for your needs.',;
       category: 'Support & Contact,',;
           question: 'How can I contact support?,',;
-          answer: 'You can contact our support team at (302) 464-095,0, email kleber@ziontechgroup.com, or use our online support portal. We also offer 24/7 emergency support for critical issues.',;
+          answer: 'You can contact our support team at (3, 0, 2) 464-095,0, email kleber@ziontechgroup.com, or use our online support portal. We also offer 24/7 emergency support for critical issues.',;
           question: 'What are your business hours?,',;
           answer: 'Our business hours are Monday-Frida,y, 9AM-6PM EST. However, our support team is available 24/7 for critical issues and emergency support.',;
           question: 'Do you offer remote support?,',;
@@ -151,7 +150,7 @@ type='text';
   }
   }
   }
-          <div key={categoryIndex}className='mb-12'></div>
+          <div key={ categoryInd, e, x }className='mb-12'></div>
                 <h2 className='text-2xl font-bold text-cyan-400 mb-6 neon-text'></h2>
                   {;
     category.category;
@@ -164,15 +163,14 @@ type='text';
   ;
   // TODO: Add content;
  ,
-}
-  }
+    }
 }
                     const globalIndex = categoryIndex * 100 + itemIndex,;
-                    const isOpen = openItems.includes(globalIndex);
-          <div key={itemIndex}className='bg-slate-800/50 rounded-lg border border-gray-700/50'></div>
+                    const isOpen = openItems.includes(globalInd, e, x);
+          <div key={ itemInd, e, x }className='bg-slate-800/50 rounded-lg border border-gray-700/50'></div>
                         <button;
                           onClick={;
-    () => toggleItem(globalIndex);
+    () => toggleItem(globalInd, e, x);
   }className='w-full px-6 py-4 text-left flex items-center justify-between hover: bg-slate-700/50 transition-colors'
 // >;
           <span className='text-white font-medium pr-4'>{item.questio,n}</span>
@@ -208,7 +206,7 @@ type='text';
                 href='tel:+13024640950';
                 className='cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105'
                 <Phone className='w-5 h-5 mr-2' /></a>
-// Call (302) 464-0950;
+// Call (3, 0, 2) 464-0950;
           </a>
                 href='mailto:kleber@ziontechgroup.com';
                 className='border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center'

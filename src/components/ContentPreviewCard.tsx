@@ -44,8 +44,7 @@ const ContentPreviewCard: React.FC;
     if (num >= 1000) {;
   // TODO: Add content;
  ,
-}
-  }
+    }
 }
       return (num / 1000).toFixed(1) + 'k';
     }
@@ -73,7 +72,7 @@ const ContentPreviewCard: React.FC;
       'Transformation': 'from-teal-500 to-blue-600',;
       'default': 'from-gray-500 to-gray-600';
     }
-    return colors[category] || colors.default;
+    return colors[catego, r, y] || colors.default;
   }
   return (;
           <div>Coming Soon</div>
@@ -88,10 +87,10 @@ const ContentPreviewCard: React.FC;
       {;
     /* Image/Visual Header */;
   }
-          <div className={`h-48 bg-gradient-to-br ${getCategoryColor(category)}flex items-center justify-center relative`}></div>
+          <div className={`h-48 bg-gradient-to-br ${getCategoryColor(catego, r, y)}flex items-center justify-center relative`}></div>
         <div className='text-center text-white'></div>
-          <div className='text-6xl mb-2'>{image}</div>
-          <div className='text-sm font-medium opacity-90'>{category}</div>
+          <div className='text-6xl mb-2'>{ ima, g, e }</div>
+          <div className='text-sm font-medium opacity-90'>{ catego, r, y }</div>
         </div>
         {;
     /* Featured Badge */;
@@ -188,7 +187,7 @@ const ContentPreviewCard: React.FC;
     /* Date and CTA */;
   }
         <div className='flex items-center justify-between'></div>
-          <span className='text-sm text-gray-500'>{date}</span>
+          <span className='text-sm text-gray-500'>{ da, t, e }</span>
           <Link;
             href={;
     path;

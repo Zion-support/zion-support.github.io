@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useSta, t, e } from 'react';
 const ResearchDevelopmentPage: React.FC = () => {
   ;
     return (;
@@ -390,7 +390,7 @@ const ResearchDevelopmentPage: React.FC = () => {
           <div className='mb-12'></div>
             <div className='flex flex-wrap justify-center gap-4 mb-8'></div>
               {;
-    researchAreas.map((area) => ();
+    researchAreas.map((ar, e, a) => ();
           <button;
   }
   }
@@ -439,7 +439,7 @@ const ResearchDevelopmentPage: React.FC = () => {
   }
   }
   }
-          <div key={index}className='bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover: border-cyan-400/50 transition-all duration-300'></div>
+          <div key={ ind, e, x }className='bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover: border-cyan-400/50 transition-all duration-300'></div>
                   <div className='flex items-start mb-4'></div>
                     <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4,`}></div>
                       <project.icon className={`w-6 h-6 ${project.color}`} /></project>
@@ -487,7 +487,7 @@ const ResearchDevelopmentPage: React.FC = () => {
   }
   }
   }
-          <li key={outcomeIndex}className='text-sm text-gray-300 flex items-start'></li>
+          <li key={ outcomeInd, e, x }className='text-sm text-gray-300 flex items-start'></li>
                           <span className='w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 mr-2 flex-shrink-0'></span>
                           {;
     outcome;
@@ -515,7 +515,7 @@ const ResearchDevelopmentPage: React.FC = () => {
   }
   }
   }
-          <div key={index}className='bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover: border-cyan-400/50 transition-all duration-300'></div>
+          <div key={ ind, e, x }className='bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover: border-cyan-400/50 transition-all duration-300'></div>
                     <h3 className='text-lg font-semibold text-white mb-2'>{pub.titl,e}</h3>
                     <div className='text-sm text-gray-300 mb-2'>{pub.authors}</div>
                     <div className='flex items-center justify-between'></div>
@@ -560,7 +560,7 @@ const ResearchDevelopmentPage: React.FC = () => {
   }
   }
   }
-          <div key={index}className='text-center'></div>
+          <div key={ ind, e, x }className='text-center'></div>
                   <div className='w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4'></div>
                     <achievement.icon className='w-8 h-8 text-cyan-400' /></achievement>
                   </div>
@@ -594,7 +594,7 @@ const ResearchDevelopmentPage: React.FC = () => {
                 className='border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center'
 // ></a>
           <Phone className='w-4 h-4 mr-2' /></Phone>
-// (302) 464-0950;
+// (3, 0, 2) 464-0950;
           </a>
               <a;
                 href='mailto:kleber@ziontechgroup.com';

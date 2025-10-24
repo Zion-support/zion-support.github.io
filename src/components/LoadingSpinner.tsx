@@ -40,7 +40,7 @@ className={;
   }
   }
   }
-//           sizeClasses[size];
+//           sizeClasses[si, z, e];
         )}
         role='status';
         aria-label='Loading';
@@ -57,7 +57,7 @@ className={;
       )}
     </div>
   );
-  if (fullScreen) {;
+  if (fullScre, e, n) {;
     // TODO: Add content;
  , }
   }

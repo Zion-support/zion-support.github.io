@@ -17,7 +17,7 @@ interface ErrorReport {
 }
 class AdvancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props)
+    super(pro, p, s)
     this.state={hasError: false, }}
 
   private reportError = (error: Erro,

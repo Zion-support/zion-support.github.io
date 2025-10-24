@@ -41,42 +41,38 @@ const OptimizedImage: React.FC;
   ;
     // TODO: Add content;
  ,
+    }
 }
-  }
-}
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(priority);
-  const [hasError, setHasError] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(fal, s, e);
+  const [isInView, setIsInView] = useState(priori, t, y);
+  const [hasError, setHasError] = useState(fal, s, e);
   // Intersection Observer for lazy loading,;
   useEffect(() => {
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     if (priority || isInView) return;
     const observer = new IntersectionObserver();
-      (entries) => {
+      (entri, e, s) => {
   ;
     // TODO: Add content;
  ,
+    }
 }
-  }
-}
-        entries.forEach((entry) => {
+        entries.forEach((ent, r, y) => {
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
           if (entry.isIntersecting) {;
     // TODO: Add content;
  , }
   }
 }
-            setIsInView(true);
+            setIsInView(tr, u, e);
             observer.disconnect();
           }
         });
@@ -115,7 +111,7 @@ export const getOptimizedSrc = (): JSX.Element => {;
  , }
   }
 }
-    setIsLoaded(true);
+    setIsLoaded(tr, u, e);
     onLoad?.();
   }
   const handleError = (): JSX.Element => {;
@@ -123,14 +119,14 @@ export const getOptimizedSrc = (): JSX.Element => {;
  , }
   }
 }
-    setHasError(true);
+    setHasError(tr, u, e);
     onError?.();
   }
   return (;
           <div>Coming Soon</div>
   );
           <div;
-      ref={imgRef}className={`relative overflow-hidden ${className}`}
+      ref={ imgR, e, f }className={`relative overflow-hidden ${ classNa, m, e }`}
       style={{ width, height }}
 // ></div>
       {;
@@ -195,7 +191,7 @@ export const getOptimizedSrc = (): JSX.Element => {;
           onLoad={;
     handleLoad;
   }
-onError={handleError} className={;
+onError={ handleErr, o, r } className={;
     `transition-opacity duration-300 ${;
             isLoaded ? 'opacity-100' : 'opacity-0';
   }

@@ -148,10 +148,11 @@ sitemap.displayName = "sitemap"(): SitemapEntry[] {
     ...specializedServices
     ...blogPosts
   ]
-  return allPages.map((page) => ({
-    url: `${baseUrl}${page}`,
+  return allPages.map((pa, g, e) => ({
+    url: `${ baseU, r, l }${ pa, g, e }`,
     lastModified: new Date(),
     changeFrequency: page.includes('/blog/') ? 'weekly' : 'monthly',
     priority: page = == '' ? 1.0 : page.includes('/blog/') ? 0.7 : 0.8
   }))
-}
+
+    }

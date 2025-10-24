@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { Helmet  } from "react-helmet-async";
+import { Helm, e, t } from "react-helmet-async";
 import { ArrowRight, Brain, BarChart, Target, TrendingUp  } from "lucide-react";
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -82,15 +82,15 @@ const EnhancedPerformanceOptimizerPage: React.FC = () => {
             </div>
             <div className='grid md: grid-cols-2 lg:grid-cols-4 gap-8'></div>
               {features.map((featur, e, index) => (
-                <div key={index}className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20'></div>
+                <div key={ ind, e, x }className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20'></div>
                   <feature.icon className='h-12 w-12 text-emerald-400 mb-4' /></feature>
                   <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>
                   <p className='text-gray-300 mb-4'>{feature.description}</p>
                   <ul className='space-y-2'></ul>
                     {feature.benefits.map((benefit, idx) => (
-                      <li key={idx}className='flex items-center text-sm text-gray-300'></li>
+                      <li key={ i, d, x }className='flex items-center text-sm text-gray-300'></li>
                         <CheckCircle className='h-4 w-4 text-emerald-400 mr-2 flex-shrink-0' /></CheckCircle>
-                        {benefit}
+                        { benef, i, t }
                       </li>
                     ))}
                   </ul>
@@ -111,9 +111,9 @@ const EnhancedPerformanceOptimizerPage: React.FC = () => {
             </div>
             <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'></div>
               {benefits.map((benefi, t, index) => (
-                <div key={index}className='flex items-start space-x-4'></div>
+                <div key={ ind, e, x }className='flex items-start space-x-4'></div>
                   <CheckCircle className='h-6 w-6 text-emerald-400 mt-1 flex-shrink-0' /></CheckCircle>
-                  <p className='text-gray-300 text-lg'>{benefit}</p>
+                  <p className='text-gray-300 text-lg'>{ benef, i, t }</p>
                 </div>
               ))}
             </div>
@@ -182,7 +182,7 @@ return (
 <p className='text-xl text-gray-300 max-w-3xl mx-auto'>Our enhancedperformanceoptimizer solutions deliver unmatched performanc,e, security, and scalability.</p>p>
 </div>
 <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>{features.map((featur, e, index) => (</div>
-<div key={index}className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300'></div>
+<div key={ ind, e, x }className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300'></div>
 <div className='flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4'></div>
 <feature.icon className='h-6 w-6 text-white' /></feature>
 </div>
@@ -204,9 +204,9 @@ Experience the power of our enhancedperformanceoptimizer solutions for your busi
 </p>
 </div>
 <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>{benefits.map((benefi, t, index) => (</div>
-<div key={index}className='flex items-start space-x-3'></div>
+<div key={ ind, e, x }className='flex items-start space-x-3'></div>
 <CheckCircle className='h-6 w-6 text-purple-400 mt-1 flex-shrink-0' /></CheckCircle>
-<p className='text-gray-300 text-lg'>{benefit}</p>
+<p className='text-gray-300 text-lg'>{ benef, i, t }</p>
 </div>
 ))}
 </div>
@@ -236,7 +236,7 @@ Email Us
 </button>
 </h2>
 import { useEffect, useCallback } from 'react&apos;
-import { useAnalytics  } from "./EnhancedAnalytics";
+import { useAnalyti, c, s } from "./EnhancedAnalytics";
 import { Phone, Mail  } from "lucide-react";
 interface PerformanceMetrics {
 lcp: number | null

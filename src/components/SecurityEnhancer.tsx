@@ -25,25 +25,23 @@ const SecurityEnhancer: React.FC;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
   useEffect(() => {
   ;
     // TODO: Add content;
  ,
+    }
 }
-  }
-}
-    if (enableCSP) {;
+    if (enableC, S, P) {;
   }
   }
     }
-    if (enableHTTPSRedirect) {;
+    if (enableHTTPSRedire, c, t) {;
   }
   }
     }
-    if (enableClickjackingProtection) {;
+    if (enableClickjackingProtecti, o, n) {;
   }
   }
     }
@@ -68,7 +66,7 @@ const SecurityEnhancer: React.FC;
 //       "media-src 'self'",;
 //       "worker-src 'self'";
     ].join('; ');
-    document.head.appendChild(meta);
+    document.head.appendChild(me, t, a);
   }
   const enforceHTTPS = (): JSX.Element => {;
     // TODO: Add content;
@@ -91,7 +89,7 @@ const SecurityEnhancer: React.FC;
     const meta = document.createElement('meta');
     meta.httpEquiv = 'X-XSS-Protection';
     meta.content = '1; mode=block';
-    document.head.appendChild(meta);
+    document.head.appendChild(me, t, a);
   }
   const addClickjackingProtection = (): JSX.Element => {;
     // TODO: Add content;
@@ -101,7 +99,7 @@ const SecurityEnhancer: React.FC;
     const meta = document.createElement('meta');
     meta.httpEquiv = 'X-Frame-Options';
     meta.content = 'DENY';
-    document.head.appendChild(meta);
+    document.head.appendChild(me, t, a);
   }
   const addContentTypeSniffingProtection = (): JSX.Element => {;
     // TODO: Add content;
@@ -111,7 +109,7 @@ const SecurityEnhancer: React.FC;
     const meta = document.createElement('meta');
     meta.httpEquiv = 'X-Content-Type-Options';
     meta.content = 'nosniff';
-    document.head.appendChild(meta);
+    document.head.appendChild(me, t, a);
   }
   const addSecurityHeaders = (): JSX.Element => {;
     // TODO: Add content;
@@ -137,7 +135,7 @@ const SecurityEnhancer: React.FC;
       const meta = document.createElement('meta');
       meta.httpEquiv = header.httpEquiv;
       meta.content = header.content;
-      document.head.appendChild(meta);
+      document.head.appendChild(me, t, a);
     });
   }
   const addSecurityEventListeners = (): JSX.Element => {;
@@ -145,13 +143,12 @@ const SecurityEnhancer: React.FC;
  , }
   }
 }
-    // Prevent right-click context menu (optional);
+    // Prevent right-click context menu (option, a, l);
     document.addEventListener('contextmenu', (e) => {
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
       // Only prevent on production,;
       if (process.env.NODE_ENV === 'production') {;
@@ -162,13 +159,12 @@ const SecurityEnhancer: React.FC;
         e.preventDefault();
       }
     });
-    // Prevent text selection (optional);
+    // Prevent text selection (option, a, l);
     document.addEventListener('selectstart', (e) => {
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
       // Only prevent on production,;
       if (process.env.NODE_ENV === 'production') {;
@@ -184,8 +180,7 @@ const SecurityEnhancer: React.FC;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
       e.preventDefault();
     });
@@ -193,8 +188,7 @@ const SecurityEnhancer: React.FC;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
       e.preventDefault();
     });
@@ -203,8 +197,7 @@ const SecurityEnhancer: React.FC;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
       if (process.env.NODE_ENV === 'production') {;
     // TODO: Add content;
@@ -263,14 +256,13 @@ const SecurityEnhancer: React.FC;
     }
     // Reset suspicious activity counter every 5 minutes,;
     setInterval(resetSuspiciousActivity, 5 * 60 * 1000);
-    // Track rapid clicks (potential bot activity);
+    // Track rapid clicks (potential, bot, activity);
     let clickCount = 0;
     document.addEventListener('click', () => {
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
       clickCount++;
       if (clickCount > 10) {;
@@ -292,8 +284,7 @@ let keyCount = 0;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
       keyCount++;
       if (keyCount > 100) {;

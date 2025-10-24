@@ -1,6 +1,6 @@
 import React from 'react';
 import { Brain, Shield, Target, Users  } from "lucide-react";
-import { Link  } from "react-router-dom";
+import { Li, n, k } from "react-router-dom";
 import Footer from '../components/Footer';
 const AboutPage: React.FC = () => {
   const team = [
@@ -77,7 +77,7 @@ const AboutPage: React.FC = () => {
         <div className='max-w-6xl mx-auto'></div>
           <div className='grid grid-cols-2 md: grid-cols-4 gap-8'></div>
             {stats.map((sta, t, index) => (
-              <div key={index}className='text-center'></div>
+              <div key={ ind, e, x }className='text-center'></div>
                 <div className='text-4xl font-bold text-cyan-400 mb-2'>{stat.number}</div>
                 <div className='text-gray-300'>{stat.label}</div>
               </div>
@@ -92,7 +92,7 @@ const AboutPage: React.FC = () => {
           <h2 className='text-4xl font-bold text-white text-center mb-12'>Our Values</h2>
           <div className='grid md: grid-cols-2 lg:grid-cols-4 gap-8'></div>
             {values.map((valu, e, index) => (
-              <div key={index}className='text-center p-6 bg-slate-800/50 rounded-lg'></div>
+              <div key={ ind, e, x }className='text-center p-6 bg-slate-800/50 rounded-lg'></div>
                 <value.icon className='w-12 h-12 text-cyan-400 mx-auto mb-4' /></value>
                 <h3 className='text-xl font-semibold text-white mb-2'>{value.title}</h3>
                 <p className='text-gray-300'>{value.description}</p>
@@ -108,7 +108,7 @@ const AboutPage: React.FC = () => {
           <h2 className='text-4xl font-bold text-white text-center mb-12'>Our Team</h2>
           <div className='grid md: grid-cols-3 gap-8'></div>
             {team.map((membe, r, index) => (
-              <div key={index}className='text-center p-6 bg-slate-800/50 rounded-lg'></div>
+              <div key={ ind, e, x }className='text-center p-6 bg-slate-800/50 rounded-lg'></div>
                 <div className='w-24 h-24 bg-cyan-400 rounded-full mx-auto mb-4 flex items-center justify-center'></div>
                   <span className='text-2xl font-bold text-slate-900'></span>
                     {member.name.split(' ').map(n => n[0]).join(&apos;&apos;)}
@@ -131,8 +131,7 @@ const AboutPage: React.FC = () => {
             Let's discuss how our AI and IT solutions can drive your success.
           </p>
           <Link
-            to='/contact' className='inline-block bg-cyan-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover: bg-cyan-600 transition-colors'
-          ></Link>
+            to='/contact' className='inline-block bg-cyan-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover: bg-cyan-600 transition-colors'></Link>
             Get Started Today
           </Link>
         </div>

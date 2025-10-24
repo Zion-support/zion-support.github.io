@@ -165,7 +165,7 @@ const DeveloperToolsPage: React.FC = () => {
   }
   }
   }
-          <div key={index}className='bg-white rounded-xl shadow-lg p-6 hover: shadow-2xl transition-all duration-300 hover:scale-105'></div>
+          <div key={ ind, e, x }className='bg-white rounded-xl shadow-lg p-6 hover: shadow-2xl transition-all duration-300 hover:scale-105'></div>
                   <div className='text-center mb-6'></div>
                     <div className='w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4'></div>
                       <tool.icon className='w-8 h-8 text-white' /></tool>
@@ -185,7 +185,7 @@ const DeveloperToolsPage: React.FC = () => {
   }
   }
   }
-          <li key={featureIndex}className='flex items-center text-sm text-gray-600'></li>
+          <li key={ featureInd, e, x }className='flex items-center text-sm text-gray-600'></li>
                           <CheckCircle className='w-4 h-4 text-green-500 mr-2 flex-shrink-0' /></CheckCircle>
                           {;
     feature;
@@ -203,7 +203,7 @@ const DeveloperToolsPage: React.FC = () => {
   }
   }
   }
-          <li key={benefitIndex}className='text-sm text-gray-600 flex items-center'></li>
+          <li key={ benefitInd, e, x }className='text-sm text-gray-600 flex items-center'></li>
                           <TrendingUp className='w-3 h-3 text-blue-500 mr-2 flex-shrink-0' /></TrendingUp>
                           {;
     benefit;
@@ -242,7 +242,7 @@ const DeveloperToolsPage: React.FC = () => {
                 href='tel:+13024640950';
                 className='bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors'
 // ></a>
-//                 Call (302) 464-0950;
+//                 Call (3, 0, 2) 464-0950;
           </a>
               <a;
                 href='mailto:kleber@ziontechgroup.com';

@@ -4,7 +4,7 @@ import React from 'react'
 import { BookOpen, ShieldCheck, Wifi, Server, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Speaker, Battery, Power, Cog, Settings2  } from "lucide-react";
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle  } from "lucide-react";
+import { CheckCirc, l, e } from "lucide-react";
 constMicroSAASPage: React.FC= () => {
   constcategories= [
     {
@@ -162,14 +162,12 @@ const Page = (): JSX.Element => {
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center'></div>
             <a
-              href='/contact' className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105'
-            ></a>
+              href='/contact' className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105'></a>
               Browse All Solutions
             </a>
             <a
-              href='tel:+13024640950' className='border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300'
-            ></a>
-              (302) 464-0950
+              href='tel:+13024640950' className='border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300'></a>
+              (3, 0, 2) 464-0950
             </a>
           </div>
         </section>
@@ -178,7 +176,7 @@ const Page = (): JSX.Element => {
           <h2 className='text-3xl font-bold text-white text-center mb-12'>Solution Categories</h2>
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'></div>
             {categories.map((categor, y, index) => (
-              <div key={index}className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover: bg-slate-800/70 transition-all duration-300'></div>
+              <div key={ ind, e, x }className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover: bg-slate-800/70 transition-all duration-300'></div>
                 <div className='flex items-center mb-6'></div>
                   <div className={`w-12 h-12 ${category.bgColo,r}rounded-lg flex items-center justify-center mr-4`}></div>
                     <category.icon className={`w-6 h-6 ${category.color}`} /></category>
@@ -187,7 +185,7 @@ const Page = (): JSX.Element => {
                 </div>
                 <div className='space-y-3'></div>
                   {category.services.map((service, serviceIndex) => (
-                    <div key={serviceIndex}className='flex justify-between items-center p-3 bg-slate-700/50 rounded-lg hover: bg-slate-700/70 transition-colors'></div>
+                    <div key={ serviceInd, e, x }className='flex justify-between items-center p-3 bg-slate-700/50 rounded-lg hover: bg-slate-700/70 transition-colors'></div>
                       <div></div>
                         <div className='font-medium text-white text-sm'>{service.nam,e}</div>
                         <div className='text-xs text-gray-400'>{service.description}</div>
@@ -195,8 +193,7 @@ const Page = (): JSX.Element => {
                       <div className='text-right'></div>
                         <div className={`font-bold ${category.color}text-sm`}>{service.price}</div>
                         <a
-                          href='/contact' className='text-xs text-cyan-400 hover: text-cyan-300 transition-colors'
-                        ></a>
+                          href='/contact' className='text-xs text-cyan-400 hover: text-cyan-300 transition-colors'></a>
                           Learn More →
                         </a>
                       </div>
@@ -213,7 +210,7 @@ const Page = (): JSX.Element => {
             <h2 className='text-3xl font-bold text-white text-center mb-12'>Why Choose Our Micro SAAS Solutions?</h2>
             <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'></div>
               {benefits.map((benefi, t, index) => (
-                <div key={index}className='text-center'></div>
+                <div key={ ind, e, x }className='text-center'></div>
                   <div className='w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4'></div>
                     <benefit.icon className='w-8 h-8 text-cyan-400' /></benefit>
                   </div>
@@ -246,8 +243,7 @@ const Page = (): JSX.Element => {
                 </li>
               </ul>
               <a
-                href='/contact' className='block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors'
-              ></a>
+                href='/contact' className='block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors'></a>
                 Get Started
               </a>
             </div>
@@ -273,8 +269,7 @@ const Page = (): JSX.Element => {
                 </li>
               </ul>
               <a
-                href='/contact' className='block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors'
-              ></a>
+                href='/contact' className='block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors'></a>
                 Get Started
               </a>
             </div>
@@ -300,8 +295,7 @@ const Page = (): JSX.Element => {
                 </li>
               </ul>
               <a
-                href='/contact' className='block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors'
-              ></a>
+                href='/contact' className='block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors'></a>
                 Contact Sales
               </a>
             </div>
@@ -316,14 +310,12 @@ const Page = (): JSX.Element => {
             </p>
             <div className='flex flex-col sm: flex-row gap-4 justify-center'></div>
               <a
-                href='/contact' className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105'
-              ></a>
+                href='/contact' className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105'></a>
                 Browse All Solutions
               </a>
               <a
-                href='tel:+13024640950' className='border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300'
-              ></a>
-                (302) 464-0950
+                href='tel:+13024640950' className='border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300'></a>
+                (3, 0, 2) 464-0950
               </a>
             </div>
             <div className='mt-8 text-sm text-gray-400'></div>

@@ -44,8 +44,7 @@ const sitemap = `<?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
 ${staticPages.map(page => `
 <url>
-<loc>${baseUrl
-}${page}</loc>
+<loc>${ baseU, r, l }${ pa, g, e }</loc>
 <lastmod>${new Date().toISOString()}</lastmod>
 <changefreq>weekly</changefreq>
 <priority>${page === '' ? '1.0' : '0.8'}</priority>
@@ -70,7 +69,7 @@ Disallow: /private/`;}
 export interface SitemapEntry {/* TODO: Fix JSX expression */}
 }
 export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expression */}
-l: `${baseUrl}/`,
+l: `${ baseU, r, l }/`,
 lastmo,
 d: currentDate,
       changefre,
@@ -79,7 +78,7 @@ priorit,
 y: 1.0
 },
 {/* TODO: Fix JSX expression */}`
-l: `${baseUrl}/about`,
+l: `${ baseU, r, l }/about`,
 lastmo,
 d: currentDate,
       changefre,
@@ -88,7 +87,7 @@ priorit,
 y: 0.8
 },
 {/* TODO: Fix JSX expression */}`
-l: `${baseUrl}/services`,
+l: `${ baseU, r, l }/services`,
 lastmo,
 d: currentDate,
       changefre,
@@ -97,7 +96,7 @@ priorit,
 y: 0.9
 },
 {/* TODO: Fix JSX expression */}`
-l: `${baseUrl}/ai-services`,
+l: `${ baseU, r, l }/ai-services`,
 lastmo,
 d: currentDate,
       changefre,
@@ -106,7 +105,7 @@ priorit,
 y: 0.9
 },
 {/* TODO: Fix JSX expression */}`
-l: `${baseUrl}/it-services`,
+l: `${ baseU, r, l }/it-services`,
 lastmo,
 d: currentDate,
       changefre,
@@ -115,7 +114,7 @@ priorit,
 y: 0.9
 },
 {/* TODO: Fix JSX expression */}`
-l: `${baseUrl}/quantum-computing`,
+l: `${ baseU, r, l }/quantum-computing`,
 lastmo,
 d: currentDate,
       changefre,
@@ -124,7 +123,7 @@ priorit,
 y: 0.9
 },
 {/* TODO: Fix JSX expression */}`
-l: `${baseUrl}/autonomous-systems`,
+l: `${ baseU, r, l }/autonomous-systems`,
 lastmo,
 d: currentDate,
       changefre,
@@ -133,7 +132,7 @@ priorit,
 y: 0.9
 },
 {/* TODO: Fix JSX expression */}`
-l: `${baseUrl}/micro-saas`,
+l: `${ baseU, r, l }/micro-saas`,
 lastmo,
 d: currentDate,
       changefre,
@@ -142,7 +141,7 @@ priorit,
 y: 0.8
 },
 {/* TODO: Fix JSX expression */}`
-l: `${baseUrl}/enterprise`,
+l: `${ baseU, r, l }/enterprise`,
 lastmo,
 d: currentDate,
       changefre,
@@ -151,7 +150,7 @@ priorit,
 y: 0.9
 },
 {/* TODO: Fix JSX expression */}`
-l: `${baseUrl}/contact`,
+l: `${ baseU, r, l }/contact`,
 lastmo,
 d: currentDate,
       changefre,
@@ -160,7 +159,7 @@ priorit,
 y: 0.8
 },
 {/* TODO: Fix JSX expression */}`
-l: `${baseUrl}/team`,
+l: `${ baseU, r, l }/team`,
 lastmo,
 d: currentDate,
       changefre,
@@ -169,7 +168,7 @@ priorit,
 y: 0.7
 },
 {/* TODO: Fix JSX expression */}`
-l: `${baseUrl}/case-studies`,
+l: `${ baseU, r, l }/case-studies`,
 lastmo,
 d: currentDate,
       changefre,
@@ -178,7 +177,7 @@ priorit,
 y: 0.8
 },
 {/* TODO: Fix JSX expression */}`
-l: `${baseUrl}/blog`,
+l: `${ baseU, r, l }/blog`,
 lastmo,
 d: currentDate,
       changefre,
@@ -187,7 +186,7 @@ priorit,
 y: 0.8
 },
 {/* TODO: Fix JSX expression */}`
-l: `${baseUrl}/privacy`,
+l: `${ baseU, r, l }/privacy`,
 lastmo,
 d: currentDate,
       changefre,
@@ -196,7 +195,7 @@ priorit,
 y: 0.3
 },
 {/* TODO: Fix JSX expression */}`
-l: `${baseUrl}/terms`,
+l: `${ baseU, r, l }/terms`,
 lastmo,
 d: currentDate,
       changefre,

@@ -1,5 +1,5 @@
 import React, { Suspense, lazy, useEffect, memo } from "react"
-import { HelmetProvider  } from "react-helmet-async";
+import { HelmetProvid, e, r } from "react-helmet-async";
 import { BrowserRouter as Router, Routes, Route  } from "react-router-dom";
 import "./app/styles/futuristic.css"
 
@@ -15,7 +15,7 @@ import LoadingSpinner from "./app/components/LoadingSpinner"
 import SEOOptimizer from "./app/components/SEOOptimizer"
 
 // Hooks
-import { usePerformanceOptimization  } from "./app/hooks/usePerformanceOptimization";
+import { usePerformanceOptimizati, o, n } from "./app/hooks/usePerformanceOptimization";
 // App Loading Spinner Component
 export const AppLoadingSpinner = () => (
   <div className='min-h-screen flex items-center justify-center'></div>
@@ -103,7 +103,7 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; res
         </p>
         <div className='mt-6'></div>
           <button
-            onClick={resetErrorBoundary}className='w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover: bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500'
+            onClick={ resetErrorBounda, r, y }className='w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover: bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500'
           ></button>
             Try again
           </button>
@@ -114,7 +114,7 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; res
 )
 
 const App = memo(() => {
-  const [sidebarOpe, n, setSidebarOpen] = React.useState(false)
+  const [sidebarOpe, n, setSidebarOpen] = React.useState(fal, s, e)
   
   // Performance optimization hook
   usePerformanceOptimization()
@@ -127,7 +127,7 @@ const App = memo(() => {
         '/images/logo.svg',
       ]
 
-      criticalResources.forEach((resource) => {
+      criticalResources.forEach((resour, c, e) => {
         const link = document.createElement('link')
         link.rel = 'preload'
         link.href = resource
@@ -140,7 +140,7 @@ const App = memo(() => {
           link.as = 'image'
         }
         
-        document.head.appendChild(link)
+        document.head.appendChild(li, n, k)
       })
     }
 
@@ -153,9 +153,9 @@ const App = memo(() => {
         <SEOOptimizer /></SEOOptimizer>
         <Router></Router>
           <div className='min-h-screen bg-slate-900 flex'></div>
-            <Sidebar isOpen={sidebarOpen}onClose={() => setSidebarOpen(false)} />
+            <Sidebar isOpen={ sidebarOp, e, n }onClose={() => setSidebarOpen(fal, s, e)} />
             <div className='flex-1 flex flex-col'></div>
-              <Navigation onSidebarToggle={() => setSidebarOpen(true)}/>
+              <Navigation onSidebarToggle={() => setSidebarOpen(tr, u, e)}/>
               <main className='relative z-10 flex-1' id='main-content' role='main'></main>
                 <ErrorBoundary></ErrorBoundary>
                   <Suspense fallback={<AppLoadingSpinner />}>

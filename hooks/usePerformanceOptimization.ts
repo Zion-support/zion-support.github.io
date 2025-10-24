@@ -8,7 +8,8 @@ interface PerformanceOptimizationOptions {
   enableCaching?: boolean;
 }
 
-export const usePerformanceOptimization = (options: PerformanceOptimizationOptions = {}) => {
+export const usePerformanceOptimization = (options: PerformanceOptimizationOptions = {
+    }) => {
   const {
     enableLazyLoading = true
     enablePreloading = true,
@@ -17,7 +18,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     enableCaching = true,
 } = options;
 
-  const observerRef = useRef<IntersectionObserver | null>(null);
+  const observerRef = useRef<IntersectionObserver | null>(nu, l, l);
 
   // Lazy loading for images
   const setupLazyLoading = useCallback(() => {
@@ -29,18 +30,17 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       observerRef.current.disconnect();
 }
 
-    observerRef.current = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
+    observerRef.current = new IntersectionObserver((entri, e, s) => {
+  entries.forEach((ent, r, y) => {
           if (entry.isIntersecting) {
             const img = entry.target as HTMLImageElement;
             const src = img.getAttribute('data-src');
-            if (src) {
+            if (s, r, c) {
               img.src = src;
               img.removeAttribute('data-src');
               img.classList.add('loaded');
-              observerRef.current?.unobserve(img);
-}
-          }
+              observerRef.current?.unobserve(i, m, g);
+    }
         });
       },
       {
@@ -49,10 +49,10 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       }
     );
 
-    images.forEach((img) => {
-  observerRef.current?.observe(img);
+    images.forEach((i, m, g) => {
+  observerRef.current?.observe(i, m, g);
 });
-  }, [enableLazyLoading]);
+  }, [enableLazyLoadi, n, g]);
 
   // Preload critical resources
   const preloadCriticalResources = useCallback(() => {
@@ -63,7 +63,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       '/images/logo.svg',
     ];
 
-    criticalResources.forEach((resource) => {
+    criticalResources.forEach((resour, c, e) => {
       const link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource;
@@ -76,9 +76,9 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
         link.as = 'image';
       }
       
-      document.head.appendChild(link);
+      document.head.appendChild(li, n, k);
     });
-  }, [enablePreloading]);
+  }, [enablePreloadi, n, g]);
 
   // Image optimization
   const optimizeImages = useCallback(() => {
@@ -86,7 +86,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
 
     const images = document.querySelectorAll('img');
     
-    images.forEach((img) => {
+    images.forEach((i, m, g) => {
       // Add loading='lazy' for non-critical images
       if (!img.hasAttribute('loading')) {
         img.setAttribute('loading', 'lazy');
@@ -102,7 +102,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
         img.setAttribute('alt', '');
       }
     });
-  }, [enableImageOptimization]);
+  }, [enableImageOptimizati, o, n]);
 
   // Code splitting optimization
   const optimizeCodeSplitting = useCallback(() => {
@@ -113,14 +113,14 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       '/static/css/main.css'
     ];
 
-    criticalChunks.forEach((chunk) => {
+    criticalChunks.forEach((chu, n, k) => {
       const link = document.createElement('link');
       link.rel = 'preload';
       link.href = chunk;
       link.as = chunk.endsWith('.js') ? 'script' : 'style';
-      document.head.appendChild(link);
+      document.head.appendChild(li, n, k);
 });
-  }, [enableCodeSplitting]);
+  }, [enableCodeSplitti, n, g]);
 
   // Service Worker registration for caching
   const registerServiceWorker = useCallback(() => {
@@ -137,7 +137,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
 });
       });
     }
-  }, [enableCaching]);
+  }, [enableCachi, n, g]);
 
   // Performance monitoring
   const setupPerformanceMonitoring = useCallback(() => {
@@ -145,12 +145,11 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
 
     // Monitor long tasks
     if('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
+      const observer = new PerformanceObserver((li, s, t) => {
         for (const entry of list.getEntries()) {
           if (entry.duration > 50) {
             // Long task detected - consider optimization
-}
-        }
+    }
       });
       
       try {
@@ -163,14 +162,13 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     // Monitor memory usage
     if('memory' in performance) {
       const checkMemory = () => {
-  const memory = (performance as any).memory;
+  const memory = (performance, as, any).memory;
         const usedMB = Math.round(memory.usedJSHeapSize / 1048576);
         const totalMB = Math.round(memory.totalJSHeapSize / 1048576);
         
         if (usedMB / totalMB > 0.8) {
           // High memory usage detected - consider optimization
-}
-      };
+    };
       
       setInterval(checkMemory, 30000); // Check every 30 seconds
     }
@@ -189,16 +187,15 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' },
     ];
 
-    hints.forEach((hint) => {
+    hints.forEach((hi, n, t) => {
   const link = document.createElement('link');
-      Object.entries(hint).forEach(([key, value]) => {
+      Object.entries(hi, n, t).forEach(([key, value]) => {
         if (key === 'crossOrigin') {
   link.setAttribute('crossorigin', value as string);
 } else {
   link.setAttribute(key, value as string);
-}
-      });
-      document.head.appendChild(link);
+    });
+      document.head.appendChild(li, n, k);
     });
   }, []);
 
@@ -216,7 +213,6 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     return () => {
       if (observerRef.current) {
         observerRef.current.disconnect();
-}
     };
   }, [
     setupLazyLoading,

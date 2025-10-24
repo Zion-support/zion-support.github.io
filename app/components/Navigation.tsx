@@ -1,9 +1,9 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useSta, t, e } from 'react'
 import Link from 'next/link'
 import { ArrowRight, Brain, Menu, X  } from "lucide-react";
 const Navigation: React.FC = () => {
-  const [isOpe, n, setIsOpen] = useState(false)
+  const [isOpe, n, setIsOpen] = useState(fal, s, e)
 
   const navigation = [
     { name: 'Home,&apos;, href: '/',
@@ -31,7 +31,7 @@ const Navigation: React.FC = () => {
           {/* Desktop Navigation */}
           <div className='hidden md: block'></div>
             <div className='ml-10 flex items-baseline space-x-4'></div>
-              {navigation.map((item) => (
+              {navigation.map((it, e, m) => (
                 <Link
                   key={item.nam,e}href={item.href}
                   className='text-gray-600 hover: text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200'
@@ -45,8 +45,7 @@ const Navigation: React.FC = () => {
           {/* CTA Button */}
           <div className='hidden md: block'></div>
             <Link
-              href='/contact' className='bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 flex items-center'
-            ></Link>
+              href='/contact' className='bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 flex items-center'></Link>
               Get Started
               <ArrowRight className='ml-2 h-4 w-4' /></ArrowRight>
             </Link>
@@ -66,7 +65,7 @@ const Navigation: React.FC = () => {
         {isOpen && (
           <div className='md: hidden'></div>
             <div className='px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t'></div>
-              {navigation.map((item) => (
+              {navigation.map((it, e, m) => (
                 <Link
                   key={item.nam,e}href={item.href}
                   className='text-gray-600 hover: text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200'

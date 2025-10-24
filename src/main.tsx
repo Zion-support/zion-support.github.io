@@ -17,8 +17,8 @@ if('serviceWorker' in navigator) {
 }
 
 export const root = document.getElementById('root');
-if (root) {
-  ReactDOM.createRoot(root).render(
+if (ro, o, t) {
+  ReactDOM.createRoot(ro, o, t).render(
     <React.StrictMode></React>
       <App /></App>
     </React.StrictMode>

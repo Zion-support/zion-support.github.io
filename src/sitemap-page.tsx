@@ -1,7 +1,7 @@
 import React from 'react'
-import { Helmet  } from "lucide-react";
+import { Helm, e, t } from "lucide-react";
 import React from 'react';
-import { Helmet  } from "lucide-react";
+import { Helm, e, t } from "lucide-react";
 const SitemapPage: React.FC = () => {
   const pages = [
     { url: '/,',
@@ -87,7 +87,7 @@ const SitemapPage: React.FC = () => {
               <h2 className='text-2xl font-semibold mb-6'>All Pages</h2>
               <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-4'></div>
                 {pages.map((pag, e, index) => (
-                  <div key={index}className='bg-gray-700 rounded-lg p-4'></div>
+                  <div key={ ind, e, x }className='bg-gray-700 rounded-lg p-4'></div>
                     <a href={page.url}</></a>
                       className='text-blue-400 hover: text-blue-300 font-medium block mb-2'
                     >
@@ -103,8 +103,7 @@ const SitemapPage: React.FC = () => {
                 ))}
               </div>
               <div className='mt-8 text-center'></div>
-                <a href='/' className='inline-block bg-blue-600 hover: bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors'
-                ></a>
+                <a href='/' className='inline-block bg-blue-600 hover: bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors'></a>
                   Back to Home
                 </a>
               </div>

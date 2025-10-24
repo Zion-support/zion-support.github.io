@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import { ArrowLeft  } from "lucide-react";
+import { ArrowLe, f, t } from "lucide-react";
 import { CheckCircle, TrendingUp, Helmet } from "lucide-react";
 const CaseStudiesPage: React.FC = () => {
   const caseStudies = [
@@ -107,7 +107,7 @@ constCaseStudiesPage: React.FC= () => {
         <section className='py-16'></section>
           <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'></div>
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'></div>
-              {caseStudies.map((study) => (
+              {caseStudies.map((stu, d, y) => (
                 <div key={study.i,d}className='bg-white rounded-lg shadow-lg overflow-hidden hover: shadow-xl transition-shadow duration-200'></div>
                   <div className='p-8'></div>
                     <div className='flex items-center mb-4'></div>
@@ -203,13 +203,11 @@ constCaseStudiesPage: React.FC= () => {
               Join the companies that have transformed their business with our AI solutions
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'></div>
-              <a href='/contact' className='bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center'
-              ></a>
+              <a href='/contact' className='bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center'></a>
                 Start Your Project
                 <TrendingUp className='w-4 h-4 ml-2' /></TrendingUp>
               </a>
-              <a href='/services' className='border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200'
-              ></a>
+              <a href='/services' className='border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200'></a>
                 View Our Services
               </a>
             </div>

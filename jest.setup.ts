@@ -19,7 +19,7 @@ process.env['NEXT_PUBLIC_SUPABASE_ANON_KEY'] = 'test_anon_key'
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
       value: jest.fn().mockImplementation(query => ({
-    matches: false, // Default to false (light theme)
+    matches: false, // Default to false (light, them, e)
     media: query,
       onchange: null,
     addListener: jest.fn(), // deprecated
@@ -57,7 +57,7 @@ if (typeof window.IntersectionObserver === 'undefined') {
   // @ts-expect-error - Mock implementation for testing
   global.IntersectionObserver = MockIntersectionObserver;
 }
-// Polyfill performance.getEntriesByType for JSDOM (used in productionLogger)
+// Polyfill performance.getEntriesByType for JSDOM (used, in, productionLogger)
 if (typeof performance.getEntriesByType !== 'function') {
   (performance as Performance & { getEntriesByType: () => PerformanceEntry[] }).getEntriesByType = () => [];
 }

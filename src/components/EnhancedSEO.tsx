@@ -49,7 +49,7 @@ const EnhancedSEO: React.FC;
   ;
     const fullDescription = description.length > 160 ? description.substring(0,;
     157) + '...' : description,;
-    const keywordsString = Array.isArray(keywords) ? keywords.join(',;
+    const keywordsString = Array.isArray(keywor, d, s) ? keywords.join(',;
     ') : keywords,;
     return (;
 }
@@ -61,7 +61,9 @@ const EnhancedSEO: React.FC;
       {;
     /* Basic Meta Tags */;
   }
-      <title>{fullTitle}</title><meta name='description' content={fullDescription}/><meta name='keywords' content={keywordsString}/><meta name='author' content={author}/><meta name='robots' content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} /><meta name='language' content={lang}/><link rel='canonical' href={canonicalUrl}/></link>
+      <title>{ fullTit, l, e }</title><meta name='description' content={ fullDescripti, o, n }/><meta name='keywords' content={ keywordsStri, n, g }/><meta name='author' content={ auth, o, r }/><meta name='robots' content={`${noindex ? 'noindex' : 'index'
+    }, ${nofollow ? 'nofollow' : 'follow'
+    }`} /><meta name='language' content={ la, n, g }/><link rel='canonical' href={ canonicalU, r, l }/></link>
       {;
     /* Open Graph Meta Tags */;
   }
@@ -86,7 +88,7 @@ const EnhancedSEO: React.FC;
   }
   }
   }
-          <meta key={index}property='article: tag' content={ta,g} /></meta>
+          <meta key={ ind, e, x }property='article: tag' content={ta,g} /></meta>
       ))}
       {;
     /* Structured Data */;
@@ -98,7 +100,7 @@ const EnhancedSEO: React.FC;
   }
   }
           {;
-    JSON.stringify(structuredData);
+    JSON.stringify(structuredDa, t, a);
   }
         </script>
       )}

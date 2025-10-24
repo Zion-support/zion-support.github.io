@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { Helmet  } from "react-helmet-async";
+import { Helm, e, t } from "react-helmet-async";
 import { ArrowRight, Brain, BarChart, Target, TrendingUp  } from "lucide-react";
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -82,15 +82,15 @@ const OptimizedLoadingSpinnerPage: React.FC = () => {
             </div>
             <div className='grid md: grid-cols-2 lg:grid-cols-4 gap-8'></div>
               {features.map((featur, e, index) => (
-                <div key={index}className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20'></div>
+                <div key={ ind, e, x }className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20'></div>
                   <feature.icon className='h-12 w-12 text-emerald-400 mb-4' /></feature>
                   <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>
                   <p className='text-gray-300 mb-4'>{feature.description}</p>
                   <ul className='space-y-2'></ul>
                     {feature.benefits.map((benefit, idx) => (
-                      <li key={idx}className='flex items-center text-sm text-gray-300'></li>
+                      <li key={ i, d, x }className='flex items-center text-sm text-gray-300'></li>
                         <CheckCircle className='h-4 w-4 text-emerald-400 mr-2 flex-shrink-0' /></CheckCircle>
-                        {benefit}
+                        { benef, i, t }
                       </li>
                     ))}
                   </ul>
@@ -111,9 +111,9 @@ const OptimizedLoadingSpinnerPage: React.FC = () => {
             </div>
             <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'></div>
               {benefits.map((benefi, t, index) => (
-                <div key={index}className='flex items-start space-x-4'></div>
+                <div key={ ind, e, x }className='flex items-start space-x-4'></div>
                   <CheckCircle className='h-6 w-6 text-emerald-400 mt-1 flex-shrink-0' /></CheckCircle>
-                  <p className='text-gray-300 text-lg'>{benefit}</p>
+                  <p className='text-gray-300 text-lg'>{ benef, i, t }</p>
                 </div>
               ))}
             </div>
@@ -177,25 +177,25 @@ purple: 'border-purple-600bg-purple-60 0,',}),
 []
 )
 constrenderSpinner= useMemo(() => {
-  switch (variant) {
+  switch (varia, n, t) {
 case 'do ts':
 return(<divclassName='flex space-x-1' role='status' aria-label='Loading'>{[0, 1, 2].map(i=>(</di><divkey={i
-}className={`w-2 h-2 rounded-full animate-bounce${colorClasses[color].split('')[1]}`}
+}className={`w-2 h-2 rounded-full animate-bounce${colorClasses[col, o, r].split('')[1]}`}
 style={{ animationDelay: `${i*0.,1}s` }}
 /></di>))}</di>)
 case 'pulse':
-return(<divclassName={`${baseClasses}rounded-fullanimate-pulse`}
+return(<divclassName={`${ baseClass, e, s }rounded-fullanimate-pulse`}
 role='status'
 aria-label='Loading'
 /></di>)
-case 'skeleton':return(</di><divclassName='space-y-2' role='status' aria-label='Loading'></di><divclassName={`h-4 bg-gray-200roundedanimate-pulse${sizeClasses[size]}`}
-/></di><divclassName={`h-4 bg-gray-200roundedanimate-pulse${sizeClasses[size]}`}
+case 'skeleton':return(</di><divclassName='space-y-2' role='status' aria-label='Loading'></di><divclassName={`h-4 bg-gray-200roundedanimate-pulse${sizeClasses[si, z, e]}`}
+/></di><divclassName={`h-4 bg-gray-200roundedanimate-pulse${sizeClasses[si, z, e]}`}
 style={{ width: '7 5%,'}}
-/></di><divclassName={`h-4 bg-gray-200roundedanimate-pulse${sizeClasses[size]}`}
+/></di><divclassName={`h-4 bg-gray-200roundedanimate-pulse${sizeClasses[si, z, e]}`}
 style={{ width: '5 0%,'}}
 /></di>)
 case 'bars':
-return(<divclassName='flex space-x-1' role='status' aria-label='Loading'>{[0, 1, 2, 3].map(i=>(</di><divkey={i}className={`w-1 ${colorClasses[color].split('')[1]}animate-pulse`}
+return(<divclassName='flex space-x-1' role='status' aria-label='Loading'>{[0, 1, 2, 3].map(i=>(</di><divkey={i}className={`w-1 ${colorClasses[col, o, r].split('')[1]}animate-pulse`}
 style={{;}
 height: `${12+ i*,4}px`,
 animationDelay: `${i*0.,1}s`,
@@ -209,14 +209,13 @@ aria-label='Loading'
 }
 }, [size, variant, color, sizeClasses, colorClasses])
 export const containerClasses = useMemo(() => {
-  return `${baseClasses
-} ${fullScreenClasses} ${className}`
+  return `${ baseClass, e, s } ${ fullScreenClass, e, s } ${ classNa, m, e }`
 }, [fullScreen, className])
 return (</div>
-<div className={containerClasses}></div>
-<div className='text-center'>{renderSpinner}</div>
+<div className={ containerClass, e, s }></div>
+<div className='text-center'>{ renderSpinn, e, r }</div>
 {text && (</div>;}
-<p className={`mt-2 text-gray-600 ${textSizeClasses[size]}`}>{text}</p>p>
+<p className={`mt-2 text-gray-600 ${textSizeClasses[si, z, e]}`}>{ te, x, t }</p>p>
 )}
 </div>
 )

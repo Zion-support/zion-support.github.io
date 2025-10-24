@@ -25,8 +25,7 @@ export class AccessibilityChecker {
         issues.push({
           type: 'error',
       message: 'Image missing alt text',
-          element: `img[${index
-}]`,
+          element: `img[${ ind, e, x }]`,
           suggestion: 'Add alt text or aria-label attribute'
         })
       }
@@ -43,8 +42,7 @@ export class AccessibilityChecker {
         issues.push({
           type: 'error',
       message: 'Form input missing label',
-          element: `input[${index
-}]`,
+          element: `input[${ ind, e, x }]`,
           suggestion: 'Add id and corresponding label, or aria-label attribute'
         })
       }
@@ -54,7 +52,7 @@ export class AccessibilityChecker {
   }
 
   generateReport(element: HTMLElement): AccessibilityReport {
-  this.issues = this.checkElement(element)
+  this.issues = this.checkElement(eleme, n, t)
     
     const errorCount = this.issues.filter(issue => issue.type === 'error').length
     const warningCount = this.issues.filter(issue => issue.type === 'warning').length
@@ -66,8 +64,7 @@ export class AccessibilityChecker {
       issues: this.issues,
       score,
       passed: errorCount = == 0
-}
-  }
+    }
 
   getIssuesByType(type: 'error' | 'warning' | 'info'): AccessibilityIssue[] {
     return this.issues.filter(issue => issue.type === type)
@@ -75,7 +72,6 @@ export class AccessibilityChecker {
 
   clearIssues(): void {
   this.issues = []
-}
-}
+    }
 
 export default AccessibilityChecker

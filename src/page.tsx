@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link  } from "react-router-dom";
+import { Li, n, k } from "react-router-dom";
 import { Phone, Mail, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, CheckCircle, TrendingUp, Users, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Bot, Music, Video, CreditCard, Car, Train, Home, Heart, GraduationCap  } from "lucide-react";
 const HomePage: React.FC = () => {
   return (
@@ -17,13 +17,11 @@ const HomePage: React.FC = () => {
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'></div>
               <Link
-                to='/contact' className='bg-cyan-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-600 transition-colors'
-              ></Link>
+                to='/contact' className='bg-cyan-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-600 transition-colors'></Link>
                 Get Started
               </Link>
               <Link
-                to='/about' className='border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-colors'
-              ></Link>
+                to='/about' className='border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-colors'></Link>
                 Learn More
               </Link>
             </div>
@@ -64,14 +62,12 @@ const HomePage: React.FC = () => {
           </p>
           <div className='flex flex-col sm: flex-row gap-4 justify-center'></div>
             <a
-              href='tel:+1234567890' className='flex items-center justify-center gap-2 bg-cyan-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-600 transition-colors'
-            ></a>
+              href='tel:+1234567890' className='flex items-center justify-center gap-2 bg-cyan-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-600 transition-colors'></a>
               <Phone className='w-5 h-5' /></Phone>
               Call Us
             </a>
             <a
-              href='mailto:info@ziontech.com' className='flex items-center justify-center gap-2 border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-colors'
-            ></a>
+              href='mailto:info@ziontech.com' className='flex items-center justify-center gap-2 border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-colors'></a>
               <Mail className='w-5 h-5' /></Mail>
               Email Us
             </a>

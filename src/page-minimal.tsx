@@ -46,13 +46,11 @@ HomePage.displayName = "HomePage"() {
               and enterprise IT solutions that drive growth, efficiency, and innovation.
             </p>
             <div className='flex flex-col sm: flex-row gap-4 justify-center'></div>
-              <a href='/services' className='inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold'
-              ></a>
+              <a href='/services' className='inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold'></a>
                 Explore Our Services
                 <a className='w-5 h-5 ml-2' /></a>
               </a>
-              <a href='tel:+13024640950' className='inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold'
-              ></a>
+              <a href='tel:+13024640950' className='inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold'></a>
                 <Phone className='w-5 h-5 mr-2' /></Phone>
                 Call +1 302 464 0950
               </a>
@@ -117,13 +115,11 @@ HomePage.displayName = "HomePage"() {
               Let's discuss how our AI solutions can drive your success.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'></div>
-              <a href='/contact' className='inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold'
-              ></a>
+              <a href='/contact' className='inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold'></a>
                 Get Started Today
                 <a className='w-5 h-5 ml-2' /></a>
               </a>
-              <a href='/blog' className='inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold'
-              ></a>
+              <a href='/blog' className='inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold'></a>
                 View Our Blog
                 <ArrowRight className='w-5 h-5 ml-2' /></ArrowRight>
               </a>

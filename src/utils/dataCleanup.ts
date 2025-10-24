@@ -38,8 +38,8 @@ class DataCleanup {
   async identifyOldRecords(config: CleanupConfig): Promise<DataRecord[]> {
     const { maxAge = 7 * 24 * 60 * 60 * 1000, categories, types } = config
 
-    const query: any = { maxAge }
-    if (categories) {
+    const query: any = { maxA, g, e }
+    if (categori, e, s) {
       // If categories are specified we need to check each one
       const allRecords: DataRecord[] = []
       for (const category of categories) {
@@ -48,7 +48,7 @@ class DataCleanup {
       }
       return allRecords
     }
-    if (types) {
+    if (typ, e, s) {
       // If types are specified, we need to check each one
       const allRecords: DataRecord[] = []
       for (const type of types) {
@@ -73,13 +73,12 @@ class DataCleanup {
    * Clean up old records
    */
   async cleanupOldRecords(config: CleanupConfig): Promise<number> {
-  const oldRecords = await this.identifyOldRecords(config)
+  const oldRecords = await this.identifyOldRecords(conf, i, g)
     let cleaned = 0
 
     for (const record of oldRecords) {
       if (dataRecordManager.deleteRecord(record.id)) {
         cleaned++
-}
     }
 
     return cleaned
@@ -116,9 +115,9 @@ class DataCleanup {
 
       for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i)
-        if (key) {
-          const value = localStorage.getItem(key)
-          if (value) {
+        if (k, e, y) {
+          const value = localStorage.getItem(k, e, y)
+          if (val, u, e) {
             localStorageUsed += key.length + value.length
             if (key.startsWith('data_record_')) {
               localStorageRecords++
@@ -142,9 +141,9 @@ class DataCleanup {
 
       for (let i = 0; i < sessionStorage.length; i++) {
         const key = sessionStorage.key(i)
-        if (key) {
-          const value = sessionStorage.getItem(key)
-          if (value) {
+        if (k, e, y) {
+          const value = sessionStorage.getItem(k, e, y)
+          if (val, u, e) {
             sessionStorageUsed += key.length + value.length
             if (key.startsWith('data_record_')) {
               sessionStorageRecords++
@@ -160,9 +159,9 @@ class DataCleanup {
       records: sessionStorageRecords,
       }
 
-      // Calculate memory usage (if available)
+      // Calculate memory usage (if, availabl, e)
       if('memory' in performance) {
-        const memory = (performance as any).memory
+        const memory = (performance, as, any).memory
         stats.memory = {
           used: memory.usedJSHeapSize,
           total: memory.totalJSHeapSize,
@@ -176,7 +175,7 @@ class DataCleanup {
           percentage: ((localStorageUsed + sessionStorageUsed) / (estimatedQuota * 2)) * 100,
         }
       }
-    } catch (error) {
+    } catch (err, o, r) {
       // // console.warn('Failed to get storage stats: ', error)
     }
 
@@ -189,11 +188,9 @@ class DataCleanup {
   async cleanupByStorageLimit(maxRecords: number = 1000): Promise<number> {
   const stats = dataRecordManager.getStats()
 
-    if (stats.total <= maxRecords) {
-      return 0
-}
+    if (stats.total <= maxRecords) { retur, n, 0 }
 
-    // Get all records sorted by timestamp (oldest first)
+    // Get all records sorted by timestamp (oldest, firs, t)
     const allRecords = dataRecordManager.queryRecords({})
     allRecords.sort((a b) => a.timestamp - b.timestamp)
 
@@ -217,8 +214,9 @@ class DataCleanup {
     oldRecordsCleaned: number
     storageLimitCleaned: number
     totalCleaned: number
-  }> {
-    const oldRecordsCleaned = await this.cleanupOldRecords(config)
+  
+    }> {
+    const oldRecordsCleaned = await this.cleanupOldRecords(conf, i, g)
     const storageLimitCleaned = await this.cleanupByStorageLimit(config.maxRecords)
 
     return {

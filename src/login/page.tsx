@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useSta, t, e } from 'react';
 const LoginPage: React.FC = () => {
   ;
     return (;
@@ -19,15 +19,14 @@ const LoginPage: React.FC = () => {
     password: ',',;
     rememberMe: false;
  , });
-  const [showPassword, setShowPassword] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(fal, s, e);
+  const [isLoading, setIsLoading] = useState(fal, s, e);
   const _handleInputChange = (e: React.ChangeEven,t,;
           <HTMLInputElement>) => {
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     const { name, value, type, checked } = e.target,;
     setFormData(prev => ({;
@@ -36,21 +35,20 @@ const LoginPage: React.FC = () => {
   }
 }
 //       ...prev;
-      [name]: type === 'checkbox' ? checked : value;
+      [na, m, e]: type === 'checkbox' ? checked : value;
     }));
   }
   const handleSubmit = async (e: React.FormEvent) => {
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     e.preventDefault();
-    setIsLoading(true);
+    setIsLoading(tr, u, e);
     // Simulate login process,;
     await new Promise(resolve => setTimeout(resolve, 2000));
-    setIsLoading(false);
+    setIsLoading(fal, s, e);
     // Redirect to dashboard or home page,;
     window.location.href = '/';
   }
@@ -105,7 +103,7 @@ const LoginPage: React.FC = () => {
 // Sign in to your account to access your AI and IT services,;
           </p>
               </div>
-              <form onSubmit={handleSubmit}className='space-y-6'></form>
+              <form onSubmit={ handleSubm, i, t }className='space-y-6'></form>
                 <div></div>
                   <label className='block text-sm font-medium text-gray-300 mb-2'></label>
 // Email Address,;
@@ -257,7 +255,7 @@ type='submit';
   }
   }
   }
-          <div key={index}className='flex items-start'></div>
+          <div key={ ind, e, x }className='flex items-start'></div>
                     <div className='w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0'></div>
                       <feature.icon className='w-6 h-6 text-cyan-400' /></feature>
                     </div>

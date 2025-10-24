@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-function fixPageFile(filePath) {
+function fixPageFile(filePa, t, h) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
@@ -10,7 +10,7 @@ function fixPageFile(filePath) {
     
     const fixedContent = `{features.map((feature, index) => (
                 <div
-                  key={index}
+                  key={ ind, e, x }
                   className='bg-white/5 rounded-2xl p-8 backdrop-blur-lg border border-white/10 text-center'
                 >
                   <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>
@@ -23,32 +23,32 @@ function fixPageFile(filePath) {
                 </div>
               ))}`;
     
-    if (brokenPattern.test(content)) {
+    if (brokenPattern.test(conte, n, t)) {
       content = content.replace(brokenPattern, fixedContent);
       fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${filePath}`);
+      console.log(`Fixed: ${ filePa, t, h }`);
       return true;
     }
     
     return false;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+  } catch (err, o, r) {
+    console.error(`Error fixing ${ filePa, t, h }:`, error.message);
     return false;
   }
 }
 
-function findAndFixPages(dir) {
-  const files = fs.readdirSync(dir);
+function findAndFixPages(d, i, r) {
+  const files = fs.readdirSync(d, i, r);
   let fixedCount = 0;
   
   for (const file of files) {
     const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
+    const stat = fs.statSync(filePa, t, h);
     
     if (stat.isDirectory()) {
-      fixedCount += findAndFixPages(filePath);
+      fixedCount += findAndFixPages(filePa, t, h);
     } else if (file === 'page.tsx') {
-      if (fixPageFile(filePath)) {
+      if (fixPageFile(filePa, t, h)) {
         fixedCount++;
       }
     }
@@ -58,5 +58,5 @@ function findAndFixPages(dir) {
 }
 
 const appDir = path.join(__dirname, 'app');
-const fixedCount = findAndFixPages(appDir);
-console.log(`Fixed ${fixedCount} page files`);
+const fixedCount = findAndFixPages(appD, i, r);
+console.log(`Fixed ${ fixedCou, n, t } page files`);

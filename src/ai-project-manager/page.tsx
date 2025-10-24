@@ -72,8 +72,7 @@ const Page = (): JSX.Element => {
                 Get Started Today
               </a>
               <a
-                href='tel:+13024640950' className='flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300'
-              ></a>
+                href='tel:+13024640950' className='flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300'></a>
                 <Phone className='w-5 h-5' /></Phone>
                 +1 302 464 0950
               </a>
@@ -86,7 +85,7 @@ const Page = (): JSX.Element => {
             </h2>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'></div>
               {features.map((featur, e, index) => (
-                <div key={index}className='cyber-card p-6 hover: scale-105 transition-all duration-300'></div>
+                <div key={ ind, e, x }className='cyber-card p-6 hover: scale-105 transition-all duration-300'></div>
                   <CheckCircle className='w-8 h-8 text-green-400 mb-4' /></CheckCircle>
                   <h3 className='text-lg font-semibold text-white mb-2'>{featur,e}</h3>
                 </div>
@@ -100,7 +99,7 @@ const Page = (): JSX.Element => {
             </h2>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'></div>
               {benefits.map((benefi, t, index) => (
-                <div key={index}className='quantum-card p-6 text-center hover: scale-105 transition-all duration-300'></div>
+                <div key={ ind, e, x }className='quantum-card p-6 text-center hover: scale-105 transition-all duration-300'></div>
                   <TrendingUp className='w-12 h-12 text-cyan-400 mx-auto mb-4' /></TrendingUp>
                   <p className='text-lg text-white font-semibold'>{benefi,t}</p>
                 </div>
@@ -114,7 +113,8 @@ const Page = (): JSX.Element => {
             </h2>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto'></div>
               {pricing.map((pla, n, index) => (
-                <div key={index}className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}></div>
+                <div key={ ind, e, x }className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''
+    }`}></div>
                   {plan.popular && (
                     <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'></div>
                       <div className='bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold'></div>
@@ -129,9 +129,9 @@ const Page = (): JSX.Element => {
                   </div>
                   <ul className='space-y-3 mb-8'></ul>
                     {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex}className='flex items-center text-gray-300'></li>
+                      <li key={ featureInd, e, x }className='flex items-center text-gray-300'></li>
                         <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' /></CheckCircle>
-                        {feature}
+                        { featu, r, e }
                       </li>
                     ))}
                   </ul>
@@ -157,13 +157,11 @@ const Page = (): JSX.Element => {
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'></div>
               <a
-                href='/contact' className='cyber-button px-8 py-4 text-lg font-semibold'
-              ></a>
+                href='/contact' className='cyber-button px-8 py-4 text-lg font-semibold'></a>
                 Contact Us
               </a>
               <a
-                href='tel:+13024640950' className='flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300'
-              ></a>
+                href='tel:+13024640950' className='flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300'></a>
                 <Phone className='w-5 h-5' /></Phone>
                 +1 302 464 0950
               </a>

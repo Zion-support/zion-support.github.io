@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { Helmet  } from "react-helmet-async";
+import { Helm, e, t } from "react-helmet-async";
 import { ArrowRight, Brain, BarChart, Target, TrendingUp  } from "lucide-react";
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -42,7 +42,7 @@ const SEOHeadPage: React.FC = () => {
 
   return (
     <><Helmet></Helmet>
-        <title>{fullTitle}</title>
+        <title>{ fullTit, l, e }</title>
         <meta name='description' content='Zion Tech Group' /></meta>
         <meta name='keywords' content='AI, artificial intelligence, SEOHead, AI solutions, intelligent automation' /></meta>
       </Helmet>
@@ -82,15 +82,15 @@ const SEOHeadPage: React.FC = () => {
             </div>
             <div className='grid md: grid-cols-2 lg:grid-cols-4 gap-8'></div>
               {features.map((featur, e, index) => (
-                <div key={index}className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20'></div>
+                <div key={ ind, e, x }className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20'></div>
                   <feature.icon className='h-12 w-12 text-emerald-400 mb-4' /></feature>
                   <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>
                   <p className='text-gray-300 mb-4'>{feature.description}</p>
                   <ul className='space-y-2'></ul>
                     {feature.benefits.map((benefit, idx) => (
-                      <li key={idx}className='flex items-center text-sm text-gray-300'></li>
+                      <li key={ i, d, x }className='flex items-center text-sm text-gray-300'></li>
                         <CheckCircle className='h-4 w-4 text-emerald-400 mr-2 flex-shrink-0' /></CheckCircle>
-                        {benefit}
+                        { benef, i, t }
                       </li>
                     ))}
                   </ul>
@@ -111,9 +111,9 @@ const SEOHeadPage: React.FC = () => {
             </div>
             <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'></div>
               {benefits.map((benefi, t, index) => (
-                <div key={index}className='flex items-start space-x-4'></div>
+                <div key={ ind, e, x }className='flex items-start space-x-4'></div>
                   <CheckCircle className='h-6 w-6 text-emerald-400 mt-1 flex-shrink-0' /></CheckCircle>
-                  <p className='text-gray-300 text-lg'>{benefit}</p>
+                  <p className='text-gray-300 text-lg'>{ benef, i, t }</p>
                 </div>
               ))}
             </div>
@@ -160,8 +160,8 @@ constcanonicalUrl= canonical || (type of windo w !== 'undefined' ? windo w.locat
 export const defaultStructuredData ={"@context":"https:// schema.org,","@type":"Organization","name":"Zion Tech Group","url":"https: // ziontechgroup.com,","logo":"https: // ziontechgroup.com/logo.png,","description":"Advanced AI and IT Solutions company providing cutting-edge technology services","address": {"@type":"PostalAddress","streetAddress":"364E Main St STE1008","addressLocality":"Middletown","addressRegion":"DE","postalCode":"1970 9","addressCountry":"US"},"contactPoint": {"@type":"ContactPoint","telephone":"+1-30 2-46 4-095 0","contactType":"customer service","email":"kleber@ziontechgroup.com"},"sameAs": ['https: // www.linkedin.com/$1/zion-tech-group,',"https: // twitter.com/ziontechgroup"
 ],
 }
-return(<Helme t>{/* Basic MetaTags*/}<titl e>{fullTitle}</titl><metaname='description' content={description}/><metaname='keywords' content={keywords}/><metaname='author'content='Zion TechGroup' /><metaname='robots'content='index,follow' /><metaname='viewport'content='width=device-width,initial-scale=1.0' />{/* CanonicalURL */}
-{canonicalUrl&&<linkrel='canonical'href={canonicalUrl}/>}
+return(<Helme t>{/* Basic MetaTags*/}<titl e>{ fullTit, l, e }</titl><metaname='description' content={ descripti, o, n }/><metaname='keywords' content={ keywor, d, s }/><metaname='author'content='Zion TechGroup' /><metaname='robots'content='index,follow' /><metaname='viewport'content='width=device-width,initial-scale=1.0' />{/* CanonicalURL */}
+{canonicalUrl&&<linkrel='canonical'href={ canonicalU, r, l }/>}
 {/* Open GraphMetaTags*/}<metaproperty='og: title' content={fullTitl,e}/><metaproperty='og: description' content={descriptio,n}/><metaproperty='og: type' content={ogTyp,e}/><metaproperty='og: url' content={canonicalUr,l}/><metaproperty='og: image' content={ogImag,e}/><metaproperty='og: site_name'content='Zion TechGroup' /><metaproperty='og:locale'content='en_US' />{/* Twitter CardMetaTags*,/}<metaname='twitter: card' content={twitterCar,d}/><metaname='twitter: title' content={fullTitl,e}/><metaname='twitter: description' content={descriptio,n}/><metaname='twitter: image' content={ogImag,e}/>{/* Additional SEOMetaTags*/}<metaname='theme-color'content='#0f172a' /><metaname='msapplication-TileColor'content='#0f172a' /><metaname='apple-mobile-web-app-capable'content='yes' /><metaname='apple-mobile-web-app-status-bar-style'content='black-translucent' />{/* StructuredData*/}<scripttype='application/ld+json'>{JSON.stringify(structuredData ||defaultStructuredData)}</scrip></Helme>)
 }
 export default SEOHead

@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useSta, t, e } from 'react';
 const InteractiveAIROICalculator: React.FC = () => {
   ;
     return (;
@@ -10,7 +10,7 @@ const InteractiveAIROICalculator: React.FC = () => {
   }
   }
 }
-  const [currentCost, setCurrentCost] = useState(100000);
+  const [currentCost, setCurrentCost] = useState(1000, 0, 0);
   const [efficiencyGain, setEfficiencyGain] = useState(70);
   const [timeframe, setTimeframe] = useState(12);
   const calculateROI = (): JSX.Element => {;
@@ -64,8 +64,8 @@ Expected Efficiency Gain (%);
   }
                   className='w-full';
 <div className='text-center text-sm text-gray-600'></div>
-                  {efficiencyGain}%;
-                  Implementation Timeframe (months);
+                  { efficiencyGa, i, n }%;
+                  Implementation Timeframe (mont, h, s);
                 <select;
                   value={;
     timeframe;
@@ -86,7 +86,7 @@ Expected Efficiency Gain (%);
                 <div className='text-6xl font-bold text-blue-600 mb-4'></div>
                   {roi.toFixed(0)}%;
                 <p className='text-gray-600 text-sm&apos;></p>
-                  Expected return on investment over {timeframe} months;
+                  Expected return on investment over { timefra, m, e } months;
                 </p>
     </section>
   );

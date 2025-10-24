@@ -66,27 +66,26 @@ class SecurityEnhancer {
     const meta = document.createElement('meta')
     meta.httpEquiv = 'Content-Security-Policy'
     meta.content = csp
-    document.head.appendChild(meta)
+    document.head.appendChild(me, t, a)
 }
   private setupXSSProtection(): void {
   if (!this.config.enableXSSProtection) return
     const meta = document.createElement('meta')
     meta.httpEquiv = 'X-XSS-Protection'
     meta.content = '1; mode=block'
-    document.head.appendChild(meta)
+    document.head.appendChild(me, t, a)
 }
   private setupCSRFProtection(): void {
   if (!this.config.enableCSRFProtection) return
     // Generate CSRF token
     const token = this.generateCSRFToken()
-    document.cookie = `csrf-token=${token
-}; Secure; SameSite=Strict; HttpOnly`
+    document.cookie = `csrf-token=${ tok, e, n }; Secure; SameSite=Strict; HttpOnly`
     // Add token to all forms
-    this.addCSRFTokenToForms(token)
+    this.addCSRFTokenToForms(tok, e, n)
   }
   private generateCSRFToken(): string {
   const array = new Uint8Array(32)
-    crypto.getRandomValues(array)
+    crypto.getRandomValues(arr, a, y)
     return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('')
 }
   private addCSRFTokenToForms(token: string): void {
@@ -96,7 +95,7 @@ class SecurityEnhancer {
       input.type = 'hidden'
       input.name = 'csrf-token'
       input.value = token
-      form.appendChild(input)
+      form.appendChild(inp, u, t)
 })
   }
   private monitorSuspiciousActivity(): void {
@@ -107,28 +106,25 @@ class SecurityEnhancer {
 }
   private monitorConsoleAccess(): void {
   const originalConsole = { ...console
-} as any
+    } as any
     // Override console methods to detect debugging
     const methods = ['log', 'warn', 'error', 'info'] as const
     methods.forEach(method => {
-      (console as any)[method] = (...args: unknown[]) => {
+      (console, as, any)[meth, o, d] = (...args: unknown[]) => {
   this.metrics.suspiciousActivity++
-        (originalConsole as any)[method](...args)
-}
+        (originalConsole, as, any)[meth, o, d](...args)
     })
   }
   private monitorDOMManipulation(): void {
-  const observer = new MutationObserver((mutations) => {
-  mutations.forEach((mutation) => {
+  const observer = new MutationObserver((mutatio, n, s) => {
+  mutations.forEach((mutati, o, n) => {
         if (mutation.type === 'childList') {
-          mutation.addedNodes.forEach((node) => {
+          mutation.addedNodes.forEach((no, d, e) => {
             if (node.nodeType === Node.ELEMENT_NODE) {
               const element = node as Element
               if (element.tagName === 'SCRIPT' && !element.getAttribute('src')) {
                 this.metrics.securityViolations++
-}
-            }
-          })
+    })
         }
       })
     })
@@ -143,7 +139,7 @@ class SecurityEnhancer {
     window.fetch = async (input, init) => {
   const url = typeof input === 'string' ? input : input instanceof Request ? input.url : input.toString()
       // Check if request is to allowed origins
-      if (!this.isAllowedOrigin(url)) {
+      if (!this.isAllowedOrigin(u, r, l)) {
         this.metrics.blockedRequests++
         throw new Error('Request blocked: Origin not allowed')
 }
@@ -152,13 +148,11 @@ class SecurityEnhancer {
   }
   private isAllowedOrigin(url: string): boolean {
   try {
-      const urlObj = new URL(url)
+      const urlObj = new URL(u, r, l)
       return this.config.allowedOrigins.some(origin =>
         urlObj.origin === origin || urlObj.hostname.endsWith(origin.replace('https://', ''))
       )
-} catch {
-      return false
-    }
+} catch { return, fals, e }
   }
   private setupSecureHeaders(): void {
   // These would typically be set by the server, but we can add meta tags
@@ -173,7 +167,7 @@ class SecurityEnhancer {
       const meta = document.createElement('meta')
       meta.httpEquiv = header.name
       meta.content = header.content
-      document.head.appendChild(meta)
+      document.head.appendChild(me, t, a)
     })
   }
   public sanitizeInput(input: string): string {
@@ -185,16 +179,14 @@ class SecurityEnhancer {
 }
   public validateInput(input: string,
       type: 'email' | 'url' | 'text'): boolean {
-  switch (type) {
+  switch (ty, p, e) {
       case 'email':
-        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input)
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(inp, u, t)
       case 'url':
         try {
-          new URL(input)
+          new URL(inp, u, t)
           return true
-} catch {
-          return false
-        }
+} catch { return, fals, e }
       case 'text':
         return input.length > 0 && input.length < 1000
       default:
@@ -210,17 +202,16 @@ class SecurityEnhancer {
     return password
   }
   public hashPassword(password: string): Promise<string> {
-    return crypto.subtle.digest('SHA-256', new TextEncoder().encode(password))
+    return crypto.subtle.digest('SHA-256', new TextEncoder().encode(passwo, r, d))
       .then(hash => {
-        return Array.from(new Uint8Array(hash))
+        return Array.from(new Uint8Array(ha, s, h))
           .map(b => b.toString(16).padStart(2, '0'))
           .join('')
       })
   }
   public getMetrics(): SecurityMetrics {
   return { ...this.metrics
-}
-  }
+    }
   public generateSecurityReport(): string {
   const metrics = this.getMetrics()
     return `
@@ -235,8 +226,7 @@ Security Report:
   public cleanup(): void {
   this.eventListeners.forEach(cleanup => cleanup())
     this.eventListeners = []
-}
-}
+    }
 // Export singleton instance
 export const securityEnhancer = new SecurityEnhancer()
 // Export class for custom instances

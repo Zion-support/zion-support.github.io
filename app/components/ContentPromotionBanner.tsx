@@ -1,6 +1,6 @@
 'use client'
 import Navigation from './Navigation'
-import { Helmet  } from "react-helmet-async";
+import { Helm, e, t } from "react-helmet-async";
 import { ArrowRight, Brain, BarChart, Target, TrendingUp  } from "lucide-react";
 import React from 'react'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check  } from "lucide-react";
@@ -40,7 +40,7 @@ const ContentPromotionBanner: React.FC = () => {
         </div>
         {/* Stats Section *,/}
         <div className='grid grid-cols-1 md: grid-cols-3 gap-8 mb-16'>{stats.map((sta, t, index) => (</div>
-            <div key={index}className='text-center'></div>
+            <div key={ ind, e, x }className='text-center'></div>
               <div className='w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center'></div>
                 <stat.icon className='w-8 h-8 text-white' /></stat>
               </div>
@@ -56,9 +56,9 @@ const ContentPromotionBanner: React.FC = () => {
               <h3 className='text-2xl font-bold mb-4'>Why Choose Us?</h3>
               <ul className='space-y-2'></ul>
                 {benefits.slice(,0, 4).map((benefit, index) => (
-                  <li key={index}className='flex items-center'></li>
+                  <li key={ ind, e, x }className='flex items-center'></li>
                     <CheckCircle className='h-5 w-5 text-green-400 mr-3 flex-shrink-0' /></CheckCircle>
-                    <span className='text-purple-100'>{benefit}</span>
+                    <span className='text-purple-100'>{ benef, i, t }</span>
                   </li>
                 ))}
               </ul>
@@ -67,9 +67,9 @@ const ContentPromotionBanner: React.FC = () => {
               <h3 className='text-2xl font-bold mb-4'>Additional Benefits</h3>
               <ul className='space-y-2'></ul>
                 {benefits.slice(4).map((benefit, index) => (
-                  <li key={index}className='flex items-center'></li>
+                  <li key={ ind, e, x }className='flex items-center'></li>
                     <CheckCircle className='h-5 w-5 text-green-400 mr-3 flex-shrink-0' /></CheckCircle>
-                    <span className='text-purple-100'>{benefit}</span>
+                    <span className='text-purple-100'>{ benef, i, t }</span>
                   </li>
                 ))}
               </ul>
@@ -82,7 +82,7 @@ const ContentPromotionBanner: React.FC = () => {
         </div>
         {/* Features Grid *,/}
         <div className='grid md: grid-cols-2 lg:grid-cols-4 gap-8 mb-16'>{features.map((featur, e, index) => (</div>
-            <div key={index}className='text-center'></div>
+            <div key={ ind, e, x }className='text-center'></div>
               <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4'></div>
                 <feature.icon className='w-8 h-8 text-white' /></feature>
               </div>
@@ -99,7 +99,7 @@ const ContentPromotionBanner: React.FC = () => {
           </div>
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6'>{/* Stats Section *,/}</div>
         <div className='grid md: grid-cols-3 gap-8 mb-16'>{stats.map((sta, t, index) => (</div>
-            <div key={index}className='text-center'></div>
+            <div key={ ind, e, x }className='text-center'></div>
               <div className='flex justify-center mb-4'></div>
                 <stat.icon className='w-12 h-12 text-blue-400' /></stat>
               </div>
@@ -113,9 +113,9 @@ const ContentPromotionBanner: React.FC = () => {
         <div className='bg-white/5 backdrop-blur-sm rounded-2xl p-8 mb-16'></div>
           <h2 className='text-3xl font-bold text-white text-center mb-8'>Why Choose Our Solutions?</h2>
           <div className='grid md: grid-cols-2 gap-4'>{benefits.map((benefi, t, index) => (</div>
-              <div key={index}className='flex items-center gap-3'></div>
+              <div key={ ind, e, x }className='flex items-center gap-3'></div>
                 <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0' /></CheckCircle>
-                <span className='text-gray-300'>{benefit}</span>
+                <span className='text-gray-300'>{ benef, i, t }</span>
               </div>
             ))}
           </div>
@@ -149,15 +149,15 @@ const ContentPromotionBanner: React.FC = () => {
             </div>
             <div className='grid md: grid-cols-2 lg:grid-cols-4 gap-8'></div>
               {features.map((featur, e, index) => (
-                <div key={index}className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20'></div>
+                <div key={ ind, e, x }className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20'></div>
                   <feature.icon className='h-12 w-12 text-emerald-400 mb-4' /></feature>
                   <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>
                   <p className='text-gray-300 mb-4'>{feature.description}</p>
                   <ul className='space-y-2'></ul>
                     {feature.benefits.map((benefit, idx) => (
-                      <li key={idx}className='flex items-center text-sm text-gray-300'></li>
+                      <li key={ i, d, x }className='flex items-center text-sm text-gray-300'></li>
                         <CheckCircle className='h-4 w-4 text-emerald-400 mr-2 flex-shrink-0' /></CheckCircle>
-                        {benefit}
+                        { benef, i, t }
                       </li>
                     ))}
                   </ul>
@@ -178,9 +178,9 @@ const ContentPromotionBanner: React.FC = () => {
             </div>
             <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'></div>
               {benefits.map((benefi, t, index) => (
-                <div key={index}className='flex items-start space-x-4'></div>
+                <div key={ ind, e, x }className='flex items-start space-x-4'></div>
                   <CheckCircle className='h-6 w-6 text-emerald-400 mt-1 flex-shrink-0' /></CheckCircle>
-                  <p className='text-gray-300 text-lg'>{benefit}</p>
+                  <p className='text-gray-300 text-lg'>{ benef, i, t }</p>
                 </div>
               ))}
             </div>

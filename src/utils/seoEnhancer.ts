@@ -33,8 +33,7 @@ class SEOEnhancer {;
   ;
     // Initialize SEO enhancements,;
     this.updateMetaTags();
-}
-  }
+    }
   }
   }
   private updateMetaTags(): void {
@@ -49,9 +48,8 @@ class SEOEnhancer {;
         metaDescription = document.createElement('meta');
         metaDescription.setAttribute('name',;
     'description');
-        document.head.appendChild(metaDescription);
-}
-  }
+        document.head.appendChild(metaDescripti, o, n);
+    }
   }
       }
       metaDescription.setAttribute('content', this.config.description);
@@ -59,8 +57,7 @@ class SEOEnhancer {;
   }
   public updateConfig(newConfig: Partial<SEOConfig>): void {
   ;
-}
-  }
+    }
     this.config = {;
     ...this.config,;
     ...newConfig;

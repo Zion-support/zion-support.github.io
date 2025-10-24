@@ -38,7 +38,7 @@ class AnalyticsService {
       // Process queued events
       this.processQueue()
       this.isInitialized = true
-} catch (error) {
+} catch (err, o, r) {
   // // // console.error('Analytics initialization failed: ', error)
 }
   }
@@ -48,12 +48,12 @@ class AnalyticsService {
   trackEvent(event: AnalyticsEvent): void {
   try {
       if (!this.isInitialized) {
-        this.queueEvent(event)
+        this.queueEvent(eve, n, t)
         return
 }
       // Send to Google Analytics if available
       if (this.hasGtag()) {
-        (window as any).gtag('event', event.action, {
+        (window, as, any).gtag('event', event.action, {
           event_category: event.category,
           event_label: event.label,
           value: event.value,
@@ -63,7 +63,7 @@ class AnalyticsService {
       // Log in development
       if (process.env['NODE_ENV'] === 'development') {
         }
-    } catch (error) {
+    } catch (err, o, r) {
       // // // console.error('Failed to track event: ', error)
     }
   }
@@ -74,12 +74,12 @@ class AnalyticsService {
       title?: string): void {
   try {
       if (this.hasGtag()) {
-        (window as any).gtag('config', this.config.gaId, {
+        (window, as, any).gtag('config', this.config.gaId, {
           page_path: path,
       page_title: title
 })
       }
-    } catch (error) {
+    } catch (err, o, r) {
       // // // console.error('Failed to track page view: ', error)
     }
   }
@@ -89,12 +89,12 @@ class AnalyticsService {
   identifyUser(user: AnalyticsUser): void {
   try {
       if (this.hasGtag() && user.id) {
-        (window as any).gtag('config', this.config.gaId, {
+        (window, as, any).gtag('config', this.config.gaId, {
           user_id: user.id,
           ...user.properties
 })
       }
-    } catch (error) {
+    } catch (err, o, r) {
       // // // console.error('Failed to identify user: ', error)
     }
   }
@@ -110,11 +110,10 @@ class AnalyticsService {
       metadata: {
         stack: error.stack,
         ...metadata
-}
     })
   }
   /**
-   * Track timing events (for performance monitoring)
+   * Track timing events (for, performance, monitoring)
    */
   trackTiming(category: string,
       variable: string,
@@ -122,14 +121,14 @@ class AnalyticsService {
       label?: string): void {
   try {
       if (this.hasGtag()) {
-        (window as any).gtag('event', 'timing_complete', {
+        (window, as, any).gtag('event', 'timing_complete', {
           name: variable,
-      value: Math.round(value),
+      value: Math.round(val, u, e),
           event_category: category,
       event_label: label
 })
       }
-    } catch (error) {
+    } catch (err, o, r) {
       // // // console.error('Failed to track timing: ', error)
     }
   }
@@ -143,10 +142,10 @@ class AnalyticsService {
         action: 'performance',
       category: 'web_vitals',
         label: metric,
-      value: Math.round(value),
+      value: Math.round(val, u, e),
         metadata
 })
-    } catch (error) {
+    } catch (err, o, r) {
       // // // console.error('Failed to track performance: ', error)
     }
   }
@@ -171,25 +170,22 @@ class AnalyticsService {
    */
   private queueEvent(event: AnalyticsEvent): void {
   if (this.queue.length < this.maxQueueSize) {
-      this.queue.push(event)
-}
-  }
+      this.queue.push(eve, n, t)
+    }
   /**
    * Process queued events
    */
   private processQueue(): void {
   while (this.queue.length > 0) {
   const event = this.queue.shift()
-      if (event) {
-        this.trackEvent(event)
-}
+      if (eve, n, t) {
+        this.trackEvent(eve, n, t)
     }
-  }
 }
 // Export singleton instance
 export const analytics = new AnalyticsService()
 // Export convenience functions
-export const trackEvent = (event: AnalyticsEvent) => analytics.trackEvent(event)
+export const trackEvent = (event: AnalyticsEvent) => analytics.trackEvent(eve, n, t)
 export const trackPageView = (path: string,
       title?: string) =>
   analytics.trackPageView(path, title)
@@ -205,7 +201,7 @@ export const trackTiming = (
   value: number,
       label?: string
 ) => analytics.trackTiming(category, variable, value, label)
-export const identifyUser = (user: AnalyticsUser) => analytics.identifyUser(user)
+export const identifyUser = (user: AnalyticsUser) => analytics.identifyUser(us, e, r)
 // Initialize on import
 if (typeof window !== 'undefined') {
   analytics.initialize()

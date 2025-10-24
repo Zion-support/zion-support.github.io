@@ -27,8 +27,7 @@ const PerformanceOptimizer: React.FC;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
   const [optimizationStatus, setOptimizationStatus] = useState({;
     // TODO: Add content;
@@ -47,41 +46,39 @@ const PerformanceOptimizer: React.FC;
   ;
     // TODO: Add content;
  ,
+    }
 }
-  }
-}
-    if (enableImageOptimization) {;
+    if (enableImageOptimizati, o, n) {;
   }
   }
 }
-    if (enableLazyLoading) {;
+    if (enableLazyLoadi, n, g) {;
   }
   }
     }
-    if (enablePreloading) {;
+    if (enablePreloadi, n, g) {;
   }
   }
     }
-    if (enableCodeSplitting) {;
+    if (enableCodeSplitti, n, g) {;
   }
   }
     }
-    if (enableResourceHints) {;
+    if (enableResourceHin, t, s) {;
   }
   }
     }
-    if (enableServiceWorker) {;
+    if (enableServiceWork, e, r) {;
   }
   }
     }
   }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting, enableResourceHints, enableServiceWorker]);
     const images = document.querySelectorAll('img');
-    images.forEach((img) => {
+    images.forEach((i, m, g) => {
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
       // Add loading='lazy' for images below the fold,;
       if (img.getBoundingClientRect().top > window.innerHeight) {;
@@ -118,19 +115,17 @@ const PerformanceOptimizer: React.FC;
   }
   }
 if('IntersectionObserver' in window) {}
-      const observer = new IntersectionObserver((entries) => {
+      const observer = new IntersectionObserver((entri, e, s) => {
   ;
     // TODO: Add content;
  ,
+    }
 }
-  }
-}
-        entries.forEach((entry) => {
+        entries.forEach((ent, r, y) => {
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
           if (entry.isIntersecting) {;
     // TODO: Add content;
@@ -145,7 +140,7 @@ if('IntersectionObserver' in window) {}
 }
               img.src = img.dataset.src;
               img.removeAttribute('data-src');
-              observer.unobserve(img);
+              observer.unobserve(i, m, g);
             }
           }
         });
@@ -158,7 +153,7 @@ if('IntersectionObserver' in window) {}
         threshold: 0.1;
      , });
       const lazyImages = document.querySelectorAll('img[data-src]');
-      lazyImages.forEach((img) => observer.observe(img));
+      lazyImages.forEach((i, m, g) => observer.observe(i, m, g));
       setOptimizationStatus(prev => ({ ...prev lazyLoaded: lazyImages.length, }));
     }
   }
@@ -189,12 +184,11 @@ if('IntersectionObserver' in window) {}
         type: 'text/css,',;
       }
     ];
-    criticalResources.forEach((resource) => {
+    criticalResources.forEach((resour, c, e) => {
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
       const link = document.createElement('link');
       link.rel = 'preload';
@@ -207,7 +201,7 @@ if('IntersectionObserver' in window) {}
 }
         link.type = resource.type;
       }
-      document.head.appendChild(link);
+      document.head.appendChild(li, n, k);
     });
     setOptimizationStatus(prev => ({ ...prev preloaded: criticalResources.length, }));
   }
@@ -243,12 +237,11 @@ if('IntersectionObserver' in window) {}
     crossorigin: 'anonymous';
  , }
     ];
-    hints.forEach((hint) => {
+    hints.forEach((hi, n, t) => {
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
       const link = document.createElement('link');
       link.rel = hint.rel;
@@ -260,7 +253,7 @@ if('IntersectionObserver' in window) {}
 }
         link.crossOrigin = hint.crossorigin;
       }
-      document.head.appendChild(link);
+      document.head.appendChild(li, n, k);
     });
     setOptimizationStatus(prev => ({ ...prev resourceHints: hints.length, }));
   }
@@ -268,8 +261,7 @@ if('IntersectionObserver' in window) {}
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     if('serviceWorker' in navigator) {;
     // TODO: Add content;
@@ -283,7 +275,7 @@ if('IntersectionObserver' in window) {}
 }
         const registration = await navigator.serviceWorker.register('/sw.js');
         setOptimizationStatus(prev => ({ ...prev serviceWorker: true, }));
-      } catch (error) {;
+      } catch (err, o, r) {;
     // TODO: Add content;
  , }
   }
@@ -297,20 +289,18 @@ if('IntersectionObserver' in window) {}
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     if (typeof window !== 'undefined&apos; && 'performance' in window) {;
     // TODO: Add content;
  , }
   }
 }
-      const observer = new PerformanceObserver((list) => {
+      const observer = new PerformanceObserver((li, s, t) => {
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
         for (const entry of list.getEntries()) {;
     // TODO: Add content;
@@ -328,7 +318,7 @@ if('IntersectionObserver' in window) {}
  , }
   }
 }
-              (window as any).gtag('event', 'web_vitals', {;
+              (window, as, any).gtag('event', 'web_vitals', {;
     // TODO: Add content;
  , }
   }

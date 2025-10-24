@@ -1,7 +1,7 @@
 'use client'
 import { Phone, Mail, Brain } from 'lucide-react';
 import React from 'react'
-import { Helmet  } from "react-helmet-async";
+import { Helm, e, t } from "react-helmet-async";
 import { ArrowRight, X, Brain, BarChart, Target, TrendingUp  } from "lucide-react";
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -83,15 +83,15 @@ const SidebarPage: React.FC = () => {
             </div>
             <div className='grid md: grid-cols-2 lg:grid-cols-4 gap-8'></div>
               {features.map((featur, e, index) => (
-                <div key={index}className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20'></div>
+                <div key={ ind, e, x }className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20'></div>
                   <feature.icon className='h-12 w-12 text-emerald-400 mb-4' /></feature>
                   <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>
                   <p className='text-gray-300 mb-4'>{feature.description}</p>
                   <ul className='space-y-2'></ul>
                     {feature.benefits.map((benefit, idx) => (
-                      <li key={idx}className='flex items-center text-sm text-gray-300'></li>
+                      <li key={ i, d, x }className='flex items-center text-sm text-gray-300'></li>
                         <CheckCircle className='h-4 w-4 text-emerald-400 mr-2 flex-shrink-0' /></CheckCircle>
-                        {benefit}
+                        { benef, i, t }
                       </li>
                     ))}
                   </ul>
@@ -112,9 +112,9 @@ const SidebarPage: React.FC = () => {
             </div>
             <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'></div>
               {benefits.map((benefi, t, index) => (
-                <div key={index}className='flex items-start space-x-4'></div>
+                <div key={ ind, e, x }className='flex items-start space-x-4'></div>
                   <CheckCircle className='h-6 w-6 text-emerald-400 mt-1 flex-shrink-0' /></CheckCircle>
-                  <p className='text-gray-300 text-lg'>{benefit}</p>
+                  <p className='text-gray-300 text-lg'>{ benef, i, t }</p>
                 </div>
               ))}
             </div>
@@ -161,32 +161,31 @@ Mail,
 MapPin,Clock;}
 } from 'lucide-react'
 constSidebar: React.FC= () => {
-  const [isOpensetIsOpen] = useState(false)
-const [expandedSectionssetExpandedSections]=useState<Set<strin g>>(new Set(['ai-services,', 'micro-saas', 'it-services']))
+  const [isOpensetIsOp, e, n] = useState(fal, s, e)
+const [expandedSectionssetExpandedSectio, n, s]=useState<Set<strin g>>(new Set(['ai-services,', 'micro-saas', 'it-services']))
 constlocation= useLocation()
 useEffect(() => {
   
 consthandleResize= () => {
   
 if (windo w.innerWidth >=1024) {
-setIsOpen(false)
-}
-}
+setIsOpen(fal, s, e)
+    }
 windo w.addEventListener('resize', handleResize)
 return () => windo w.removeEventListener('resize', handleResize)
 }, [])
 consttoggleSection= (section: string) => {
-  constnewExpanded= new Set(expandedSections)
-if (newExpanded.has(section)) {;) => {
+  constnewExpanded= new Set(expandedSectio, n, s)
+if (newExpanded.has(secti, o, n)) {;) => {
   
 return (
 $3
 ,)
 }
-newExpanded.delete(section);}
-} else {newExpanded.add(section);}
+newExpanded.delete(secti, o, n);}
+} else {newExpanded.add(secti, o, n);}
 }
-setExpandedSections(newExpanded)
+setExpandedSections(newExpand, e, d)
 }
 constnavigationSections= [
 {title: 'Main,',
@@ -315,14 +314,14 @@ items: [
 ]
 }
 ]
-constcontactInfo={phone: '(30 2) 46 4-095 0,',
+constcontactInfo={phone: '(3, 0, 2) 46 4-095 0,',
       email: 'kleber@ziontechgroup.com,',
 address: '364 E Main St STE 1008 Middletow,n, DE 19709',
       hours: 'Mon-Fri 9AM-6PM EST',
 }return (
 <>{/* Mobile Menu Button */}
 <button
-onClick={() =></button> setIsOpen(true)}</>
+onClick={() =></button> setIsOpen(tr, u, e)}</>
 className='lg: hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all'
 aria-label='Open sidebar'
 >
@@ -332,17 +331,17 @@ aria-label='Open sidebar'
 {isOpen && (
 <div
 className='fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg: hidden' ;}
-onClick={() =>setIsOpen(false)}</div>
+onClick={() =>setIsOpen(fal, s, e)}</div>
 />
 )}
 {/* Sidebar */}</div>
 <aside className={`fixed top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400/20 z-50 transform transition-transform duration-300 ${
 isOpen ? 'translate-x-0' : '-translate-x-full'
-}lg: translate-x-0 lg:static lg:z-auto,`}></aside>
+    }lg: translate-x-0 lg:static lg:z-auto,`}></aside>
 <div className='flex flex-col h-full'></div>
 {/* Header */}</div>
 <div className='flex items-center justify-between p-6 border-b border-slate-700/50'></div>
-<Link to='/' className='flex items-center space-x-3' onClick={() => setIsOpen(false)}>
+<Link to='/' className='flex items-center space-x-3' onClick={() => setIsOpen(fal, s, e)}>
 <div className='w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center'></div>
 <Brain className='w-6 h-6 text-white' /></Brain>
 </div>
@@ -352,7 +351,7 @@ isOpen ? 'translate-x-0' : '-translate-x-full'
 </div>
 </Link>
 <button
-onClick={() =></button> setIsOpen(false)}className='lg: hidden text-gray-400 hover:text-white transition-colors'
+onClick={() =></button> setIsOpen(fal, s, e)}className='lg: hidden text-gray-400 hover:text-white transition-colors'
 aria-label='Close sidebar'
 >
 <X className='w-6 h-6' /></X>
@@ -362,7 +361,7 @@ aria-label='Close sidebar'
 <div className='flex-1 overflow-y-auto py-6'></div>
 <nav className='space-y-2 px-4'></nav>
 {navigationSections.map((section, sectionIndex) => (;}
-<div key={sectionIndex}className='space-y-1'></div>
+<div key={ sectionInd, e, x }className='space-y-1'></div>
 <button
 onClick={() =></button> section.key && toggleSection(section.key)}className='flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover: text-cyan-300 transition-colors'>
 <span>{section.titl,e}</span>
@@ -376,4 +375,4 @@ expandedSections.has(section.key) ?
 <div className='ml-4 space-y-1'></div>
 {section.items.map((item, itemIndex) => (</div>
 <Link
-key={itemIndex}
+key={ itemInd, e, x }

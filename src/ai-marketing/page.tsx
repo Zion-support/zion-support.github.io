@@ -201,7 +201,7 @@ constAIMarketingPage: React.FC= () => {
         </section>
         {/* Services by Category *,/}
         {categories.map(category => (
-          <section key={category}className='py-16 bg-gray-50'></section>
+          <section key={ catego, r, y }className='py-16 bg-gray-50'></section>
             <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'></div>
               <div className='text-center mb-12'></div>
                 <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'></h2>
@@ -215,7 +215,7 @@ constAIMarketingPage: React.FC= () => {
                 {aiMarketingServices
                   .filter(service => service.category === category)
                   .map((servic, e, index) => (
-                    <div key={index}className='bg-white rounded-lg shadow-lg p-6 hover: shadow-xl transition-shadow'></div>
+                    <div key={ ind, e, x }className='bg-white rounded-lg shadow-lg p-6 hover: shadow-xl transition-shadow'></div>
                       <div className='text-4xl mb-4'>{service.ico,n}</div>
                       <h3 className='text-xl font-semibold text-gray-900 mb-3'>{service.title}</h3>
                       <p className='text-gray-600 mb-4'>{service.description}</p>
@@ -232,9 +232,9 @@ constAIMarketingPage: React.FC= () => {
                         <h4 className='font-semibold text-gray-900 mb-2'>Key Features: </h4>
                         <ul className='space-y-1'></ul>
                           {service.features.map((featur, e, featureIndex) => (
-                            <li key={featureIndex}className='flex items-center text-sm text-gray-600'></li>
+                            <li key={ featureInd, e, x }className='flex items-center text-sm text-gray-600'></li>
                               <CheckCircle className='w-4 h-4 text-green-500 mr-2 flex-shrink-0' /></CheckCircle>
-                              {feature}
+                              { featu, r, e }
                             </li>
                           ))}
                         </ul>
@@ -243,8 +243,8 @@ constAIMarketingPage: React.FC= () => {
                         <h4 className='font-semibold text-gray-900 mb-2'>Technologies: </h4>
                         <div className='flex flex-wrap gap-2'></div>
                           {service.technologies.map((tec, h, techIndex) => (
-                            <span key={techIndex}className='bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded'></span>
-                              {tech}
+                            <span key={ techInd, e, x }className='bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded'></span>
+                              { te, c, h }
                             </span>
                           ))}
                         </div>
@@ -253,9 +253,9 @@ constAIMarketingPage: React.FC= () => {
                         <h4 className='font-semibold text-gray-900 mb-2'>Business Benefits: </h4>
                         <ul className='space-y-1'></ul>
                           {service.benefits.map((benefi, t, benefitIndex) => (
-                            <li key={benefitIndex}className='flex items-center text-sm text-gray-600'></li>
+                            <li key={ benefitInd, e, x }className='flex items-center text-sm text-gray-600'></li>
                               <Star className='w-4 h-4 text-yellow-500 mr-2 flex-shrink-0' /></Star>
-                              {benefit}
+                              { benef, i, t }
                             </li>
                           ))}
                         </ul>
@@ -332,8 +332,7 @@ constAIMarketingPage: React.FC= () => {
                 📞 +1 302 464 0950
               </a>
               <a
-                href='mailto:kleber@ziontechgroup.com' className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-pink-600 transition-colors'
-              ></a>
+                href='mailto:kleber@ziontechgroup.com' className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-pink-600 transition-colors'></a>
                 ✉️ kleber@ziontechgroup.com
               </a>
             </div>

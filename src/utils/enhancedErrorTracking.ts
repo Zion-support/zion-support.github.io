@@ -26,7 +26,7 @@ export interface TrackedError {;
     timestamp: string;;
     userAgent: string;;
     url: string;
-}
+    }
 class EnhancedErrorTracker {;
     // TODO: Add content;
   }
@@ -46,16 +46,14 @@ class EnhancedErrorTracker {;
   private generateSessionId(): string {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     return `${Date.now()}-${Math.random().toString(36).substring(7)}`;
   }
   private setupGlobalErrorHandler(): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     if (typeof window !== 'undefined') {;
     // TODO: Add content;
@@ -93,11 +91,11 @@ class EnhancedErrorTracker {;
     }
   }
   public trackError(error: Error,
-      _context: ErrorContext = {}): void {
+      _context: ErrorContext = {
+    }): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     if (typeof window === 'undefined') return;
     const trackedError: TrackedError = {;
@@ -119,7 +117,7 @@ class EnhancedErrorTracker {;
       userAgent: navigator.userAgent,;
       url: window.location.href;
     }
-    this.errors.push(trackedError);
+    this.errors.push(trackedErr, o, r);
     // Keep only the most recent errors,;
     if (this.errors.length > this.maxErrors) {;
     // TODO: Add content;
@@ -136,13 +134,12 @@ class EnhancedErrorTracker {;
   }
     }
     // Send to analytics if available,;
-    this.sendToAnalytics(trackedError);
+    this.sendToAnalytics(trackedErr, o, r);
   }
   private sendToAnalytics(error: TrackedError): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     if ();
       typeof window !== 'undefined' &&;
@@ -193,8 +190,7 @@ class EnhancedErrorTracker {;
   public clearErrors(): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     this.errors = [];
   }
@@ -215,7 +211,7 @@ class EnhancedErrorTracker {;
     const byComponent: Record;
           <string, number> = {}
     this.errors.forEach(error => {;
-    byComponent[component] = (byComponent[component,;
+    byComponent[compone, n, t] = (byComponent[component,;
     || 0) + 1;
   }
   }

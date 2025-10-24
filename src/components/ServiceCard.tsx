@@ -16,8 +16,7 @@ const ServiceCard: React.FC;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
   return (;
           <div>Coming Soon</div>
@@ -36,8 +35,8 @@ className={`bg-white rounded-lg shadow-lg p-6 hover: shadow-xl transition-shadow
   }
         </div>
       )}
-      <h3 className='text-2xl font-semibold text-gray-900 mb-4'>{title}</h3>
-      <p className='text-gray-600'>{description}</p>
+      <h3 className='text-2xl font-semibold text-gray-900 mb-4'>{ tit, l, e }</h3>
+      <p className='text-gray-600'>{ descripti, o, n }</p>
     </article>
   );
 }

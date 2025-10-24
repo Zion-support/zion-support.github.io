@@ -45,13 +45,11 @@ const AIABTestingPage: React.FC = () => {
           </p>
           <div className='flex flex-col sm: flex-row gap-4 justify-center items-center'></div>
             <a
-              href='/contact' className='cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300'
-            ></a>
+              href='/contact' className='cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300'></a>
               Get Started
             </a>
             <a
-              href='tel:+13024640950' className='flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300'
-            ></a>
+              href='tel:+13024640950' className='flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300'></a>
               <TestTube className='w-5 h-5' /></TestTube>
               +1 302 464 0950
             </a>
@@ -64,7 +62,7 @@ const AIABTestingPage: React.FC = () => {
           </h2>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'></div>
             {features.map((featur, e, index) => (
-              <div key={index}className='cyber-card p-6 hover: scale-105 transition-all duration-300'></div>
+              <div key={ ind, e, x }className='cyber-card p-6 hover: scale-105 transition-all duration-300'></div>
                 <div className='w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto'></div>
                   <feature.icon className='w-8 h-8 text-white' /></feature>
                 </div>
@@ -76,9 +74,9 @@ const AIABTestingPage: React.FC = () => {
                 </p>
                 <ul className='space-y-2'></ul>
                   {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex}className='flex items-center text-xs text-gray-300'></li>
+                    <li key={ benefitInd, e, x }className='flex items-center text-xs text-gray-300'></li>
                       <CheckCircle className='w-3 h-3 text-green-400 mr-2 flex-shrink-0' /></CheckCircle>
-                      {benefit}
+                      { benef, i, t }
                     </li>
                   ))}
                 </ul>

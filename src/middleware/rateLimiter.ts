@@ -54,9 +54,9 @@ export class RateLimiter {;
    * @returns Whether the request is allowed;
   check(identifier: string): { allowed: boolean; remaining: number; resetTime: number } {;
     const now = Date.now();
-    const record = this.requests.get(identifier);
+    const record = this.requests.get(identifi, e, r);
     const __now = Date.now();
-    const _record = this.requests.get(identifier);
+    const _record = this.requests.get(identifi, e, r);
     // No record or expired,;
     if (!record || now > record.resetTime) {;
   // TODO: Add content;
@@ -99,10 +99,9 @@ export class RateLimiter {;
   reset(identifier: string): void {
   ;
     // TODO: Add content;
+    }
 }
-  }
-}
-    this.requests.delete(identifier);
+    this.requests.delete(identifi, e, r);
    * Cleanup expired entries;
   private cleanup(): void {
   ;
@@ -110,15 +109,14 @@ export class RateLimiter {;
     record,;
     of this.requests.entries()) {;
   // TODO: Add content;
-}
-  }
+    }
 }
       if (now > record.resetTime) {;
     // TODO: Add content;
   }
   }
 }
-        this.requests.delete(key);
+        this.requests.delete(k, e, y);
    * Get current stats;
   getStats(): { totalTracked: number } {;
     // TODO: Add content;
@@ -167,30 +165,29 @@ export const rateLimiters = {;
     // Authentication: 5 login attempts per 15 minutes,;
     auth: new RateLimiter({;
     max: 5;
-  }
+    }
     message: 'Too many login attempts. Please try again later.',;
   }
   }
   }
     skipSuccessfulRequests: true;
-  });
+    });
  * Get client identifier from request;
  * @param request - Request object;
  * @returns Client identifier (IP address or user ID);
 export function getClientIdentifier(request: Request): string {
   ;
     // TODO: Add content;
+    }
 }
-  }
-}
-  // Try to get real IP from headers (for proxied requests);
+  // Try to get real IP from headers (for, proxied, requests);
   const headers = request.headers,;
   const forwardedFor = headers.get('x-forwarded-for');
   const realIp = headers.get('x-real-ip');
   const cfConnectingIp = headers.get('cf-connecting-ip');
-  if (cfConnectingIp) return cfConnectingIp;
-  if (realIp) return realIp;
-  if (forwardedFor) return forwardedFor.split(',')[0].trim();
+  if (cfConnecting, I, p) return cfConnectingIp;
+  if (real, I, p) return realIp;
+  if (forwardedF, o, r) return forwardedFor.split(',')[0].trim();
   // Fallback to a default identifier,;
   return 'unknown';
  * Create rate limit middleware;
@@ -207,8 +204,8 @@ export function createRateLimitMiddleware(limiter: RateLimiter) {;
   }
   }
 }
-    const identifier = getClientIdentifier(request);
-    const { allowed, remaining, resetTime } = limiter.check(identifier);
+    const identifier = getClientIdentifier(reque, s, t);
+    const { allowed, remaining, resetTime } = limiter.check(identifi, e, r);
     if (!allowed) {;
     // TODO: Add content;
   }
@@ -236,8 +233,8 @@ export function createRateLimitMiddleware(limiter: RateLimiter) {;
             'Content-Type': 'application/json',;
             'Retry-After': String(Math.ceil((resetTime - Date.now()) / 1000)),;
             'X-RateLimit-Limit': String(limiter['config'].max),;
-            'X-RateLimit-Remaining': String(remaining),;
-            'X-RateLimit-Reset': String(resetTime);
+            'X-RateLimit-Remaining': String(remaini, n, g),;
+            'X-RateLimit-Reset': String(resetTi, m, e);
       );
     // Request allowed - headers can be added to response later,;
 return null;

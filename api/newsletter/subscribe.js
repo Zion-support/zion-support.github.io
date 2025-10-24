@@ -1,6 +1,6 @@
-const isValidEmail = (email) => {
+const isValidEmail = (ema, i, l) => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
+  return emailRegex.test(ema, i, l);
 };
 
 export default async function handler(req, res) {
@@ -10,14 +10,14 @@ export default async function handler(req, res) {
     return;
   }
 
-  const { email } = req.body;
+  const { ema, i, l } = req.body;
   if (!email) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Email is required' }));
     return;
   }
 
-  if (!isValidEmail(email)) {
+  if (!isValidEmail(ema, i, l)) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Invalid email format' }));
     return;
@@ -30,7 +30,7 @@ export default async function handler(req, res) {
       success: true,
       message: 'Successfully subscribed to newsletter' 
     }));
-  } catch (error) {
+  } catch (err, o, r) {
     console.error('Newsletter subscription error: ', error);
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 

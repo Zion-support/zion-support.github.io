@@ -31,8 +31,7 @@ const AdvancedPerformanceMonitor: React.FC;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
   const [metrics, setMetrics] = useState,;
           <PerformanceMetrics>({;
@@ -55,10 +54,10 @@ const AdvancedPerformanceMonitor: React.FC;
     if (typeof window === 'undefined' || !('performance' in window)) return;
     if (typeof PerformanceObserver === 'undefined') return;
     const observers: PerformanceObserver[] = [];
-    // Measure First Contentful Paint (FCP);
+    // Measure First Contentful Paint (F, C, P);
     const fcpEntries = performance.getEntriesByName('first-contentful-paint') || [];
     const fcp = _fcpEntries.length > 0 ? _fcpEntries[0].startTime : nul,l,;
-    // Measure Largest Contentful Paint (LCP);
+    // Measure Largest Contentful Paint (L, C, P);
     if('PerformanceObserver' in window) {;
     // TODO: Add content;
  , }
@@ -81,15 +80,15 @@ const AdvancedPerformanceMonitor: React.FC;
         lcpObserver.observe({;
     entryTypes: ['largest-contentful-paint,',;
   });
-        observers.push(lcpObserver);
-      } catch (error) {;
+        observers.push(lcpObserv, e, r);
+      } catch (err, o, r) {;
     // TODO: Add content;
  , }
   }
 }
         }
     }
-    // Measure First Input Delay (FID);
+    // Measure First Input Delay (F, I, D);
     if('PerformanceObserver' in window) {;
     // TODO: Add content;
  , }
@@ -135,15 +134,15 @@ const AdvancedPerformanceMonitor: React.FC;
         fidObserver.observe({;
     entryTypes: ['first-input,',;
   });
-        observers.push(fidObserver);
-      } catch (error) {;
+        observers.push(fidObserv, e, r);
+      } catch (err, o, r) {;
     // TODO: Add content;
  , }
   }
 }
         }
     }
-    // Measure Cumulative Layout Shift (CLS);
+    // Measure Cumulative Layout Shift (C, L, S);
     if('PerformanceObserver' in window) {;
     // TODO: Add content;
  , }
@@ -185,15 +184,15 @@ const AdvancedPerformanceMonitor: React.FC;
         clsObserver.observe({;
     entryTypes: ['layout-shift,',;
   });
-        observers.push(clsObserver);
-      } catch (error) {;
+        observers.push(clsObserv, e, r);
+      } catch (err, o, r) {;
     // TODO: Add content;
  , }
   }
 }
         }
     }
-    // Measure Time to First Byte (TTFB);
+    // Measure Time to First Byte (TT, F, B);
     try {;
     // TODO: Add content;
  , }
@@ -219,7 +218,7 @@ export const memory =;
 //         ttfb,;
 //         memory,;
       }));
-    } catch (error) {;
+    } catch (err, o, r) {;
     // TODO: Add content;
  , }
   }
@@ -230,8 +229,7 @@ export const memory =;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
       observers.forEach(observer => {;
     // TODO: Add content;
@@ -244,7 +242,7 @@ export const memory =;
   }
 }
           observer.disconnect();
-        } catch (error) {;
+        } catch (err, o, r) {;
     // TODO: Add content;
  , }
   }
@@ -257,8 +255,7 @@ export const memory =;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     if (typeof window === 'undefined' || !('performance' in window)) return;
     const resources = performance.getEntriesByType('resource');
@@ -285,8 +282,7 @@ export const memory =;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     if (typeof window === 'undefined') return;
     // Use web-vitals library if available,;
@@ -302,7 +298,7 @@ export const memory =;
   }
 }
           const { onCLS, onFCP, onLCP, onTTFB } = webVitals,;
-          if (onCLS) {;
+          if (onC, L, S) {;
     // TODO: Add content;
  , }
   }
@@ -311,7 +307,7 @@ export const memory =;
               setMetrics(prev => ({ ...prev cls: metric.value, }));
             );
           }
-          if (onFCP) {;
+          if (onF, C, P) {;
     // TODO: Add content;
  , }
   }
@@ -320,7 +316,7 @@ export const memory =;
               setMetrics(prev => ({ ...prev fcp: metric.value, }));
             );
           }
-          if (onLCP) {;
+          if (onL, C, P) {;
     // TODO: Add content;
  , }
   }
@@ -329,7 +325,7 @@ export const memory =;
               setMetrics(prev => ({ ...prev lcp: metric.value, }));
             );
           }
-          if (onTTFB) {;
+          if (onTT, F, B) {;
     // TODO: Add content;
  , }
   }
@@ -343,8 +339,7 @@ export const memory =;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
           // web-vitals not available, continue without it,;
         });
@@ -360,26 +355,23 @@ export const memory =;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     if (!enableRealTimeMonitoring) return;
     const cleanup = measureWebVitals();
 // Monitor performance every 5 seconds,;
     const interval = setInterval(() => {
   ;
-}
-  }
+    }
     }, 5000);
     return () => {
   ;
     // TODO: Add content;
  ,
+    }
 }
-  }
-}
-      if (_cleanup) _cleanup();
-      clearInterval(interval);
+      if (_clean, u, p) _cleanup();
+      clearInterval(interv, a, l);
     }
   }, [;
   // TODO: Add item,s,;
@@ -393,15 +385,14 @@ export const memory =;
   ;
     // TODO: Add content;
  ,
+    }
 }
-  }
-}
-    if (onMetricsUpdate) {;
+    if (onMetricsUpda, t, e) {;
     // TODO: Add content;
  , }
   }
 }
-      onMetricsUpdate(metrics);
+      onMetricsUpdate(metri, c, s);
     }
   }, [metrics, onMetricsUpdate]);
   // Performance recommendations,;
@@ -409,8 +400,7 @@ export const getPerformanceRecommendations = useCallback(() => {
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     const recommendations: string[] = [];
     if (metrics.fcp && metrics.fcp > 1800) {;
@@ -459,7 +449,7 @@ export const getPerformanceRecommendations = useCallback(() => {
       );
     }
     return recommendations;
-  }, [metrics]);
+  }, [metri, c, s]);
   const recommendations = getPerformanceRecommendations();
   if (process.env['NODE_ENV'] === 'development') {;
     // TODO: Add content;
@@ -504,7 +494,7 @@ export const getPerformanceRecommendations = useCallback(() => {
   }
   }
   }
-                <li key={index}>• {rec}</li>
+                <li key={ ind, e, x }>• { r, e, c }</li>
               ))}
             </ul>
           </div>

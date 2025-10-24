@@ -40,7 +40,7 @@ export interface ErrorConfig {;
     maxStackTraceLength: number;;
     ignoreErrors: RegExp[];,;
     severityThreshold: ErrorSeverity;
-}
+    }
 export const _errorHandlingConfig: ErrorConfig = {;
     // TODO: Add content;
   }
@@ -117,7 +117,7 @@ export class AppError extends Error {;
   }
   }
 }
-    super(message);
+    super(messa, g, e);
     this.name = 'AppError';
     Error.captureStackTrace(this, this.constructor);
   }

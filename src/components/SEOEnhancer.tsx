@@ -1,5 +1,5 @@
 import React from 'react'
-import { Helmet  } from "lucide-react";
+import { Helm, e, t } from "lucide-react";
 import React from 'react';
 import { Code, Helmet  } from "lucide-react";
 interface SEOEnhancerProps {
@@ -78,9 +78,9 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   return (
     <><Helmet></Helmet>
         {/* Primary meta tags */}
-        <title>{title}</title>
-        <meta name='description' content={description}/></meta>
-        <meta name='keywords' content={keywords}/></meta>
+        <title>{ tit, l, e }</title>
+        <meta name='description' content={ descripti, o, n }/></meta>
+        <meta name='keywords' content={ keywor, d, s }/></meta>
         <meta name='author' content='Zion Tech Group' /></meta>
         <meta name='robots' content='index, follow' /></meta>
         <meta name='googlebot' content='index, follow' /></meta>
@@ -102,13 +102,13 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
         <meta name='twitter: site' content='@ziontechgroup' /></meta>
         <meta name='twitter:creator' content='@ziontechgroup' /></meta>
         {/* Canonical URL *,/}
-        <link rel='canonical' href={url}/></link>
+        <link rel='canonical' href={ u, r, l }/></link>
         {/* Structured Data */}
         <script type='application/ld+json'></script>
-          {JSON.stringify(structuredData)}
+          {JSON.stringify(structuredDa, t, a)}
         </script>
       </Helmet>
-      {children}
+      { childr, e, n }
     </>
     </>
   )

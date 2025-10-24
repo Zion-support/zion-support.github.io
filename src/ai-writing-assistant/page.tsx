@@ -149,14 +149,12 @@ const Page = (): JSX.Element => {
           </p>
           <div className='flex flex-col sm: flex-row gap-4 justify-center items-center'></div>
             <a
-              href='tel:+13024640950' className='bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center'
-            ></a>
+              href='tel:+13024640950' className='bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center'></a>
               <Phone className='w-5 h-5 mr-2' /></Phone>
-              Call: (302) 464-0950
+              Call: (3, 0, 2) 464-0950
             </a>
             <a
-              href='/contact' className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300'
-            ></a>
+              href='/contact' className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300'></a>
               Start Free Trial
             </a>
           </div>
@@ -191,7 +189,7 @@ const Page = (): JSX.Element => {
           </h2>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'></div>
             {features.map((featur, e, index) => (
-              <div key={index}className='bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover: border-cyan-400/40 transition-all duration-300'></div>
+              <div key={ ind, e, x }className='bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover: border-cyan-400/40 transition-all duration-300'></div>
                 <feature.icon className='w-12 h-12 text-cyan-400 mb-4' /></feature>
                 <h3 className='text-xl font-bold text-white mb-3'>{feature.titl,e}</h3>
                 <p className='text-gray-300 mb-4 leading-relaxed'>{feature.description}</p>
@@ -207,7 +205,7 @@ const Page = (): JSX.Element => {
           </h2>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'></div>
             {useCases.map((useCas, e, index) => (
-              <div key={index}className='bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 text-center'></div>
+              <div key={ ind, e, x }className='bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 text-center'></div>
                 <useCase.icon className='w-12 h-12 text-cyan-400 mx-auto mb-4' /></useCase>
                 <h3 className='text-xl font-bold text-white mb-3'>{useCase.title}</h3>
                 <p className='text-gray-300 mb-4 leading-relaxed'>{useCase.description}</p>
@@ -223,7 +221,7 @@ const Page = (): JSX.Element => {
           </h2>
           <div className='grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto'></div>
             {pricingPlans.map((pla, n, index) => (
-              <div key={index}className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${
+              <div key={ ind, e, x }className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${
                 plan.popular ? 'border-cyan-400 scale-105' : 'border-slate-700 hover: border-cyan-500/50'
              , }`}></div>
                 {plan.popular && (
@@ -239,9 +237,9 @@ const Page = (): JSX.Element => {
                 </div>
                 <ul className='space-y-3 mb-8'></ul>
                   {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex}className='flex items-center text-gray-300'></li>
+                    <li key={ featureInd, e, x }className='flex items-center text-gray-300'></li>
                       <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' /></CheckCircle>
-                      {feature}
+                      { featu, r, e }
                     </li>
                   ))}
                 </ul>
@@ -261,7 +259,7 @@ const Page = (): JSX.Element => {
           </h2>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'></div>
             {testimonials.map((testimonia, l, index) => (
-              <div key={index}className='bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20'></div>
+              <div key={ ind, e, x }className='bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20'></div>
                 <div className='flex items-center mb-4'></div>
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i}className='w-5 h-5 text-yellow-400 fill-current' /></Star>
@@ -288,14 +286,12 @@ const Page = (): JSX.Element => {
           </p>
           <div className='flex flex-col sm: flex-row gap-4 justify-center items-center'></div>
             <a
-              href='tel:+13024640950' className='bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center'
-            ></a>
+              href='tel:+13024640950' className='bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center'></a>
               <Phone className='w-5 h-5 mr-2' /></Phone>
-              Call: (302) 464-0950
+              Call: (3, 0, 2) 464-0950
             </a>
             <a
-              href='/contact' className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300'
-            ></a>
+              href='/contact' className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300'></a>
               Start Free Trial
             </a>
           </div>

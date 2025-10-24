@@ -9,8 +9,7 @@ const OfflinePage: React.FC = () => {
     const handleRetry = (): JSX.Element => {;
     window.location.reload();
  ,
-}
-  }
+    }
   }
   }
   const handleGoHome = (): JSX.Element => {;

@@ -171,7 +171,7 @@ const Page = (): JSX.Element => {
           </div>
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'></div>
             {features.map((featur, e, index) => (
-              <div key={index}className='cyber-card p-6'></div>
+              <div key={ ind, e, x }className='cyber-card p-6'></div>
                 <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4'></div>
                   <feature.icon className='w-6 h-6 text-white' /></feature>
                 </div>
@@ -179,9 +179,9 @@ const Page = (): JSX.Element => {
                 <p className='text-gray-300 mb-4'>{feature.description}</p>
                 <ul className='space-y-2'></ul>
                   {feature.benefits.map((benefit, idx) => (
-                    <li key={idx}className='flex items-center text-sm text-gray-400'></li>
+                    <li key={ i, d, x }className='flex items-center text-sm text-gray-400'></li>
                       <CheckCircle className='w-4 h-4 text-cyan-400 mr-2' /></CheckCircle>
-                      {benefit}
+                      { benef, i, t }
                     </li>
                   ))}
                 </ul>
@@ -199,7 +199,7 @@ const Page = (): JSX.Element => {
           </div>
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'></div>
             {capabilities.map((capabilit, y, index) => (
-              <div key={index}className='cyber-card p-6'></div>
+              <div key={ ind, e, x }className='cyber-card p-6'></div>
                 <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4'></div>
                   <capability.icon className='w-6 h-6 text-white' /></capability>
                 </div>
@@ -220,7 +220,7 @@ const Page = (): JSX.Element => {
           </div>
           <div className='grid grid-cols-1 md: grid-cols-3 gap-8'></div>
             {testimonials.map((testimonia, l, index) => (
-              <div key={index}className='cyber-card p-6'></div>
+              <div key={ ind, e, x }className='cyber-card p-6'></div>
                 <div className='flex items-center mb-4'></div>
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i}className='w-5 h-5 text-yellow-400 fill-current' /></Star>
@@ -245,7 +245,8 @@ const Page = (): JSX.Element => {
           </div>
           <div className='grid grid-cols-1 md: grid-cols-3 gap-8'></div>
             {pricingPlans.map((pla, n, index) => (
-              <div key={index}className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-500' : ''}`}></div>
+              <div key={ ind, e, x }className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-500' : ''
+    }`}></div>
                 {plan.popular && (
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'></div>
                     <span className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold'></span>
@@ -263,9 +264,9 @@ const Page = (): JSX.Element => {
                 </div>
                 <ul className='space-y-3 mb-8'></ul>
                   {plan.features.map((feature, idx) => (
-                    <li key={idx}className='flex items-center text-gray-300'></li>
+                    <li key={ i, d, x }className='flex items-center text-gray-300'></li>
                       <CheckCircle className='w-5 h-5 text-cyan-400 mr-3' /></CheckCircle>
-                      {feature}
+                      { featu, r, e }
                     </li>
                   ))}
                 </ul>

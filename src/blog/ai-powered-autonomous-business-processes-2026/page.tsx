@@ -1,8 +1,8 @@
 'use client';
 import React from &apos;react';
-import { Link  } from "react-router-dom";
-import { ArrowLeft  } from "lucide-react";
-// import { Metadata } from 'next'; // Removed for Vite,;
+import { Li, n, k } from "react-router-dom";
+import { ArrowLe, f, t } from "lucide-react";
+// import { Metada, t, a } from 'next'; // Removed for Vite,;
 // Metadata removed for Vite compatibility,;
 export default function AutonomousBusinessProcessesBlog() {;
     // TODO: Add content;

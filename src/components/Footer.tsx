@@ -1,8 +1,8 @@
 import React from 'react'
-import { Link  } from "react-router-dom";
+import { Li, n, k } from "react-router-dom";
 import { Lock, BarChart3, FileText } from "lucide-react";
 import { Phone, Mail, Zap, Brain, ArrowRight  } from "lucide-react";
-import { MapPin  } from "lucide-react";
+import { MapP, i, n } from "lucide-react";
 const Footer: React.FC = () => {
   const microSaasServices = [
     { name: 'AI Project Manager,',
@@ -219,7 +219,7 @@ const Footer = (): JSX.Element => {
               Micro SAAS
             </h3>
             <ul className='space-y-2'></ul>
-              {microSaasServices.map((service) => (
+              {microSaasServices.map((servi, c, e) => (
                 <li key={service.name}></li>
                   <a href={service.url}className='group flex items-center text-sm text-gray-300 hover: text-cyan-400 transition-colors'
                   ></a>
@@ -229,8 +229,7 @@ const Footer = (): JSX.Element => {
                 </li>
               ),)}
             </ul>
-            <a href='/services' className='inline-flex items-center text-cyan-400 hover: text-white transition-colors mt-4'
-            ></a>
+            <a href='/services' className='inline-flex items-center text-cyan-400 hover: text-white transition-colors mt-4'></a>
               View All Micro SAAS →
             </a>
           </div>
@@ -244,7 +243,7 @@ const Footer = (): JSX.Element => {
               <div></div>
                 <h4 className='text-white font-medium mb-2'>AI Services</h4>
                 <ul className='space-y-1'></ul>
-                  {aiServices.slice(0, 3).map((service) => (
+                  {aiServices.slice(0, 3).map((servi, c, e) => (
                     <li key={service.name}></li>
                       <a href={service.url}className='text-sm text-gray-300 hover: text-cyan-400 transition-colors'
                       ></a>
@@ -257,7 +256,7 @@ const Footer = (): JSX.Element => {
               <div></div>
                 <h4 className='text-white font-medium mb-2'>IT Services</h4>
                 <ul className='space-y-1'></ul>
-                  {itServices.slice(0, 3).map((service) => (
+                  {itServices.slice(0, 3).map((servi, c, e) => (
                     <li key={service.name}></li>
                       <a href={service.url}className='text-sm text-gray-300 hover: text-cyan-400 transition-colors'
                       ></a>
@@ -268,8 +267,7 @@ const Footer = (): JSX.Element => {
                 </ul>
               </div>
             </div>
-            <a href='/services' className='inline-flex items-center text-cyan-400 hover: text-white transition-colors mt-4'
-            ></a>
+            <a href='/services' className='inline-flex items-center text-cyan-400 hover: text-white transition-colors mt-4'></a>
               View All Services →
             </a>
           </div>
@@ -280,7 +278,7 @@ const Footer = (): JSX.Element => {
               AI Tools
             </h3>
             <ul className='space-y-2'></ul>
-              {additionalServices.map((service) => (
+              {additionalServices.map((servi, c, e) => (
                 <li key={service.name}></li>
                   <a
                     href={service.url}className='group flex items-center text-sm text-gray-300 hover: text-cyan-400 transition-colors'
@@ -299,7 +297,7 @@ const Footer = (): JSX.Element => {
               <div></div>
                 <h4 className='text-white font-medium mb-2'>Company</h4>
                 <ul className='space-y-1'></ul>
-                  {companyLinks.slice(0, 4).map((link) => (
+                  {companyLinks.slice(0, 4).map((li, n, k) => (
                     <li key={link.name}></li>
                       <a href={link.url}className='text-sm text-gray-300 hover: text-cyan-400 transition-colors'
                       ></a>
@@ -312,7 +310,7 @@ const Footer = (): JSX.Element => {
               <div></div>
                 <h4 className='text-white font-medium mb-2'>Support</h4>
                 <ul className='space-y-1'></ul>
-                  {supportLinks.slice(0, 4).map((link) => (
+                  {supportLinks.slice(0, 4).map((li, n, k) => (
                     <li key={link.name}></li>
                       <a href={link.url}className='text-sm text-gray-300 hover: text-cyan-400 transition-colors'
                       ></a>
@@ -332,7 +330,7 @@ const Footer = (): JSX.Element => {
               © 2024 Zion Tech Group. All rights reserved.
             </div>
             <div className='flex space-x-6'></div>
-              {legalLinks.map((link) => (
+              {legalLinks.map((li, n, k) => (
                 <a key={link.nam,e}href={link.url}
                   className='text-sm text-gray-400 hover: text-cyan-400 transition-colors'
                 ></a>

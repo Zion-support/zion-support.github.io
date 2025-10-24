@@ -11,12 +11,14 @@ export function dynamic;
           <T extends ComponentType<unknown>>();
   importFunc: () => Promise;
           <{ default: T, }>,;
-  _options: DynamicOptions =  {}
+  _options: DynamicOptions = {
+    }
 ): ComponentType<unknown> ;{;
     return (props: unknown) => (;
  , }
   }
   }
-    <Suspense fallback={options.loading ? options.loading() : <div>Loading...</div>}><LazyComponent {...props} /></Suspense>
+    <Suspense fallback={options.loading ? options.loading() : <div>Loading...</div>}><LazyComponent {...props
+    } /></Suspense>
   );
 }

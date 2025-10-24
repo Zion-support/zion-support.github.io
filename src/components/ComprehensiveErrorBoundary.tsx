@@ -24,7 +24,7 @@ interface State {;
   errorId?: string,;,;
     retryCount: number,;,;
     isRetrying: boolean;
-}
+    }
 class ComprehensiveErrorBoundary extends Component;
           <Props, State> {;
     // TODO: Add content;
@@ -37,7 +37,7 @@ class ComprehensiveErrorBoundary extends Component;
  , }
   }
 }
-    super(props);
+    super(pro, p, s);
     this.state={;
     // TODO: Add content;
  , }}
@@ -111,8 +111,7 @@ class ComprehensiveErrorBoundary extends Component;
       userAgent: navigator.userAgen,t,;
       url: window.location.href;
  ,
-}
-  }
+    }
   }
   }
       retryCount: this.state.retryCount;
@@ -123,7 +122,7 @@ class ComprehensiveErrorBoundary extends Component;
  , }
   }
 }
-      (window as any).gtag('event', 'exception', {;
+      (window, as, any).gtag('event', 'exception', {;
     // TODO: Add content;
  , }
   }
@@ -153,8 +152,7 @@ class ComprehensiveErrorBoundary extends Component;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     if (this.state.retryCount;
           < this.maxRetries) {;
@@ -185,8 +183,7 @@ class ComprehensiveErrorBoundary extends Component;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     window.location.reload();
   }
@@ -289,7 +286,7 @@ class ComprehensiveErrorBoundary extends Component;
   }
           <details className='mt-6 text-left'></details>
                 <summary className='text-white cursor-pointer hover: text-cyan-400'></summary>
-// Technical Details (Development);
+// Technical Details (Developme, n, t);
           </summary>
                 <pre className='mt-2 p-4 bg-gray-900 rounded text-xs text-gray-300 overflow-auto'></pre>
  , }

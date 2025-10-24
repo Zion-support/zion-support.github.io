@@ -24,7 +24,7 @@ interface State {;
     error: Error | null,;,;
     errorInfo: ErrorInfo | null,;,;
     errorCount: number;
-}
+    }
 class ImprovedErrorBoundary extends Component;
           <Props, State> {;
     // TODO: Add content;
@@ -36,7 +36,7 @@ class ImprovedErrorBoundary extends Component;
  , }
   }
 }
-    super(props);
+    super(pro, p, s);
     this.state={;
     // TODO: Add content;
  , }}
@@ -71,8 +71,7 @@ class ImprovedErrorBoundary extends Component;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     // Log error to console for debugging,;
     console.error('Error caught by ImprovedErrorBoundary: ', {;
@@ -96,7 +95,7 @@ class ImprovedErrorBoundary extends Component;
       this.props.onError(error, errorInfo);
     }
     // Update state with error details,;
-    this.setState((prevState) => ({;
+    this.setState((prevSta, t, e) => ({;
     // TODO: Add content;
  , }
   }
@@ -111,7 +110,7 @@ class ImprovedErrorBoundary extends Component;
   }
 }
     }
-    // Send to external error tracking (if available);
+    // Send to external error tracking (if, availabl, e);
     if (typeof window !== 'undefined' && (window as unknown as { Sentry: unknown, }).Sentry) {;
     // TODO: Add content;
  , }
@@ -149,8 +148,7 @@ class ImprovedErrorBoundary extends Component;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     // Reset error state if resetKeys changed,;
     if (this.props.resetKeys && prevProps.resetKeys) {;
@@ -202,8 +200,7 @@ class ImprovedErrorBoundary extends Component;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     if (this.state.hasError) {;
     // TODO: Add content;
@@ -236,7 +233,7 @@ class ImprovedErrorBoundary extends Component;
   }
   }
           <details style={styles.details}></details>
-                <summary style={styles.summary}>Error Details (Development Only)</summary>
+                <summary style={styles.summary}>Error Details (Development, Onl, y)</summary>
                 <div style={styles.errorDetails}></div>
                   <p style={styles.errorMessage}></p>
                     <strong>Error: </strong> {;

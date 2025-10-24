@@ -40,12 +40,10 @@ const PrivacyPage: React.FC = () => {
                 Contact Us;
                 If you have any questions about this Privacy Polic,y, please contact us: ;
               </p><div className='flex flex-col sm:flex-row gap-4'><a;
-                  href='tel:+13024640950' className='flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
-                ><Phone className='w-5 h-5 mr-2' /></Phone>
-                  (302) 464-0950;
+                  href='tel:+13024640950' className='flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'><Phone className='w-5 h-5 mr-2' /></Phone>
+                  (3, 0, 2) 464-0950;
                 </a><a;
-                  href='mailto:kleber@ziontechgroup.com' className='flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
-                ><Mail className='w-5 h-5 mr-2' /></Mail>
+                  href='mailto:kleber@ziontechgroup.com' className='flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'><Mail className='w-5 h-5 mr-2' /></Mail>
                   kleber@ziontechgroup.com;
                 </a></div></section></div></div></main><Footer /></div>
   );,

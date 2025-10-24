@@ -32,7 +32,7 @@ class EnhancedErrorBoundary extends Component;
  , }
   }
 }
-    super(props);
+    super(pro, p, s);
     this.state={;
     // TODO: Add content;
  , }}
@@ -110,20 +110,19 @@ class EnhancedErrorBoundary extends Component;
       userId: this.getUserId(,),;
       sessionId: this.getSessionId();
  ,
-}
-  }
+    }
   }
   }
     }
     // Send to error reporting service,;
-    this.sendErrorReport(errorReport);
+    this.sendErrorReport(errorRepo, r, t);
     // Send to Google Analytics if available,;
     if (typeof window !== 'undefined' && 'gtag' in window) {;
     // TODO: Add content;
  , }
   }
 }
-      (window as any).gtag('event', 'exception', {;
+      (window, as, any).gtag('event', 'exception', {;
     // TODO: Add content;
  , }
   }
@@ -145,8 +144,7 @@ class EnhancedErrorBoundary extends Component;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     // In a real application, you would send this to your error reporting service,;
     // For now, we'll just log it,;
@@ -164,8 +162,7 @@ class EnhancedErrorBoundary extends Component;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     this.setState({;
     // TODO: Add content;
@@ -186,8 +183,7 @@ class EnhancedErrorBoundary extends Component;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     window.location.reload();
   }
@@ -195,8 +191,7 @@ class EnhancedErrorBoundary extends Component;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     window.location.href = '/';
   }
@@ -204,8 +199,7 @@ class EnhancedErrorBoundary extends Component;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     const errorDetails={;
     // TODO: Add content;
@@ -222,8 +216,7 @@ class EnhancedErrorBoundary extends Component;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
         alert('Error details copied to clipboard');
       });
@@ -231,8 +224,7 @@ class EnhancedErrorBoundary extends Component;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
         alert('Failed to copy error details');
       });

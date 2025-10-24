@@ -28,8 +28,7 @@ const AIAnalyticsPage: React.FC = () => {
     {;
   // TODO: Add content;
  ,
-}
-  }
+    }
 }
   icon: Brai,;
       title: 'Predictive Analytics,',;
@@ -155,7 +154,7 @@ icon: BarChar,;
   }
   }
   }
-          <div key={index}className='bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover: border-cyan-400/50 transition-all duration-300'></div>
+          <div key={ ind, e, x }className='bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover: border-cyan-400/50 transition-all duration-300'></div>
                   <div className='flex items-start mb-4'></div>
                     <div className='w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4'></div>
                       <feature.icon className='w-6 h-6 text-cyan-400' /></feature>
@@ -169,7 +168,7 @@ icon: BarChar,;
   }
   }
   }
-          <li key={benefitIndex}className='text-sm text-gray-300 flex items-start'></li>
+          <li key={ benefitInd, e, x }className='text-sm text-gray-300 flex items-start'></li>
                         <CheckCircle className='w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0' /></CheckCircle>
                         {;
     benefit;
@@ -188,7 +187,7 @@ icon: BarChar,;
   }
   }
   }
-          <div key={index}className='bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover: border-cyan-400/50 transition-all duration-300 text-center'></div>
+          <div key={ ind, e, x }className='bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover: border-cyan-400/50 transition-all duration-300 text-center'></div>
                   <div className={`w-16 h-16 ${useCase.color.replace('text-,', 'bg-').replace('-400', '-500/10')}rounded-full flex items-center justify-center mx-auto mb-4`}></div>
                     <useCase.icon className={`w-8 h-8 ${useCase.color}`} /></useCase>
                   <h3 className='text-lg font-semibold text-white mb-2'>{useCase.title}</h3>
@@ -204,7 +203,8 @@ icon: BarChar,;
   }
   }
   }
-          <div key={index}className={`${tier.bgColor} rounded-lg p-6 border border-gray-700/50 relative ${tier.popular ? 'ring-2 ring-cyan-400' : ''}`}></div>
+          <div key={ ind, e, x }className={`${tier.bgColor} rounded-lg p-6 border border-gray-700/50 relative ${tier.popular ? 'ring-2 ring-cyan-400' : ''
+    }`}></div>
                   {;
     tier.popular && ();
   }
@@ -228,7 +228,7 @@ icon: BarChar,;
   }
   }
   }
-          <li key={featureIndex}className='text-sm text-gray-300 flex items-start'></li>
+          <li key={ featureInd, e, x }className='text-sm text-gray-300 flex items-start'></li>
                         {;
     feature;
   }
@@ -257,7 +257,7 @@ icon: BarChar,;
   }
   }
   }
-          <div key={index}className='text-center'></div>
+          <div key={ ind, e, x }className='text-center'></div>
                   <div className='w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4'></div>
                     <benefit.icon className='w-8 h-8 text-cyan-400' /></benefit>
                   <h3 className='text-lg font-semibold text-white mb-2'>{benefit.title}</h3>
@@ -277,7 +277,7 @@ Get Free Consultation;
                 href='tel:+13024640950';
                 className='border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center'
                 <Phone className='w-4 h-4 mr-2' /></Phone>
-                (302) 464-0950;
+                (3, 0, 2) 464-0950;
                 href='mailto:kleber@ziontechgroup.com';
                 className='border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center'
                 <Mail className='w-4 h-4 mr-2' /></Mail>

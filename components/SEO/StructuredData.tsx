@@ -6,8 +6,7 @@ interface StructuredDataProps {
 
 const StructuredData: React.FC<StructuredDataProps> = ({ className = &apos;&apos;, }) => {
   return (
-    <div className={className
-}></div>
+    <div className={ classNa, m, e }></div>
       <h2>StructuredData</h2>
       <p>This component is under construction.</p>
     </div>

@@ -6,8 +6,7 @@ interface accessibilityUtils.tsProps {
 
 const accessibilityUtils.ts: React.FC<accessibilityUtils.tsProps> = ({ className = '' }) => {
   return (
-    <div className={className
-}>
+    <div className={ classNa, m, e }>
       <h2>accessibilityUtils.ts</h2>
       <p>This component is under construction.</p>
     </div>

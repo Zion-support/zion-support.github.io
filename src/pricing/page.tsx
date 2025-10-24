@@ -123,15 +123,15 @@ const Page = (): JSX.Element => {
             <div className='grid grid-cols-1 md: grid-cols-3 gap-8 max-w-7xl mx-auto'></div>
               {pricingPlans.map((pla, n, index) => (
                 <div
-                  key={index}</></div>
+                  key={ ind, e, x }</></div>
                   className={`cyber-card p-8 relative ${
                     plan.popular ? 'ring-2 ring-cyan-400scale-10 5' : ''
-                }`}
+    }`}
                 >{plan.popular && (
                   <divclassName='absolute -top-4 left-1/2transform-translate-x-1/2'><spanclassName='bg-cyan-400text-slate-900px-4 py-1 rounded-fulltext-smfont-bold'></className='bg-cyan-400text-slate-900px-4 py-1 rounded-fulltext-smfont-bold'>{plan.cta}
                     </spa></di>)}
-                <divclassName='text-centermb-8'><h3className='text-2 xl font-boldtext-whitemb-2'>{plan.name}</h><pclassName='text-gray-300mb-4'>{plan.description}</p><divclassName='flexitems-baselinejustify-center'><spanclassName='text-5 xl font-boldtext-cyan-400'>{plan.price}</spa><spanclassName='text-gray-400ml-2'>{plan.period}</spa></di></di><ulclassName='space-y-4mb-8'>{plan.features.map((featurefeatureIndex) => (
-                   <likey={featureIndex}className='flex items-centertext-gray-300'><CheckCircleclassName='w-5 h-5text-green-400mr-3flex-shrink-0' />{feature}
+                <divclassName='text-centermb-8'><h3className='text-2 xl font-boldtext-whitemb-2'>{plan.name}</h><pclassName='text-gray-300mb-4'>{plan.description}</p><divclassName='flexitems-baselinejustify-center'><spanclassName='text-5 xl font-boldtext-cyan-400'>{plan.price}</spa><spanclassName='text-gray-400ml-2'>{plan.period}</spa></di></di><ulclassName='space-y-4mb-8'>{plan.features.map((featurefeatureInd, e, x) => (
+                   <likey={ featureInd, e, x }className='flex items-centertext-gray-300'><CheckCircleclassName='w-5 h-5text-green-400mr-3flex-shrink-0' />{ featu, r, e }
                     </l>))}
                 </u><ahref={plan.popular ?"mailto: kleber@ziontechgroup.com" :"tel:+13024640950,"}className={`w-full text-center block py-3 px-6 rounded-lg font-medium transition-all ${
                       plan.popular ? 'cyber-button' : 'bg-gray-700 text-white hover: bg-gray-600'
@@ -150,7 +150,7 @@ const Page = (): JSX.Element => {
             </h2>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto'></div>
               {addOns.map((addo, n, index) => (
-                <div key={index}className='cyber-card p-6 text-center'></div>
+                <div key={ ind, e, x }className='cyber-card p-6 text-center'></div>
                   <h3 className='text-xl font-bold text-white mb-2'>{addon.name}</h3>
                   <div className='text-2xl font-bold text-cyan-400 mb-2'>{addon.price}</div>
                   <p className='text-gray-300 text-sm'>{addon.description}</p>
@@ -165,7 +165,7 @@ const Page = (): JSX.Element => {
             </h2>
             <div className='max-w-4xl mx-auto space-y-6'></div>
               {faqs.map((fa, q, index) => (
-                <div key={index}className='cyber-card p-6'></div>
+                <div key={ ind, e, x }className='cyber-card p-6'></div>
                   <h3 className='text-xl font-bold text-white mb-3'>{faq.question}</h3>
                   <p className='text-gray-300'>{faq.answer}</p>
                 </div>
@@ -183,10 +183,9 @@ const Page = (): JSX.Element => {
               </p>
               <div className='flex flex-col sm:flex-row gap-4 justify-center'></div>
                 <a
-                  href='tel:+13024640950' className='cyber-button flex items-center justify-center space-x-2'
-                ></a>
+                  href='tel:+13024640950' className='cyber-button flex items-center justify-center space-x-2'></a>
                   <Phone className='w-5 h-5' /></Phone>
-                  <span>Call (302) 464-0950</span>
+                  <span>Call (3, 0, 2) 464-0950</span>
                 </a>
                 <a
                   href='mailto:kleber@ziontechgroup.com' className='cyber-button flex items-center justify-center space-x-2'

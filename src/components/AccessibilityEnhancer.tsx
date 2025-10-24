@@ -29,19 +29,18 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({;
   ;
     React.useEffect(() => {;
     // Initialize accessibility features,;
-    if (enableSkipLinks) {;
+    if (enableSkipLin, k, s) {;
       addSkipLinks();
-}
-  }
+    }
   }
     }
-    if (enableFocusIndicators) {;
+    if (enableFocusIndicato, r, s) {;
     addFocusIndicators();
   }
   }
   }
     }
-    if (enableKeyboardNavigation) {;
+    if (enableKeyboardNavigati, o, n) {;
     setupKeyboardNavigation();
   }
   }
@@ -81,7 +80,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({;
   }
       }
     `;
-    document.head.appendChild(style);
+    document.head.appendChild(sty, l, e);
   }
 ;
   const setupKeyboardNavigation = (): JSX.Element => {;
@@ -90,22 +89,20 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({;
   ;
       if (e.key === 'Tab') {;
         document.body.classList.add('keyboard-navigation');
-}
-  }
+    }
   }
       }
     });
     document.addEventListener('mousedown', () => {
   ;
     document.body.classList.remove('keyboard-navigation');
-}
-  }
+    }
   }
     });
   }
 ;
   return;
-          <>{children}</>
+          <>{ childr, e, n }</>
 }
 ;
 export default AccessibilityEnhancer;

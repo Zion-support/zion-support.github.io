@@ -33,34 +33,31 @@ const LazyImage: React.FC;
   ;
     // TODO: Add content;
  ,
+    }
 }
-  }
-}
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(priority);
-  const [hasError, setHasError] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(fal, s, e);
+  const [isInView, setIsInView] = useState(priori, t, y);
+  const [hasError, setHasError] = useState(fal, s, e);
   useEffect(() => {
   ;
     // TODO: Add content;
  ,
+    }
 }
-  }
-}
-    if (priority) return;
+    if (priori, t, y) return;
     const observer = new IntersectionObserver();
-      ([entry]) => {
+      ([ent, r, y]) => {
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
         if (entry.isIntersecting) {;
     // TODO: Add content;
  , }
   }
 }
-          setIsInView(true);
+          setIsInView(tr, u, e);
           observer.disconnect();
         }
       },;
@@ -81,13 +78,13 @@ const LazyImage: React.FC;
       observer.observe(imgRef.current);
     }
     return () => observer.disconnect();
-  }, [priority]);
+  }, [priori, t, y]);
   const handleLoad = (): JSX.Element => {;
     // TODO: Add content;
  , }
   }
 }
-    setIsLoaded(true);
+    setIsLoaded(tr, u, e);
     onLoad?.();
   }
   const handleError = (): JSX.Element => {;
@@ -95,14 +92,14 @@ const LazyImage: React.FC;
  , }
   }
 }
-    setHasError(true);
+    setHasError(tr, u, e);
     onError?.();
   }
   return (;
           <div>Coming Soon</div>
   );
           <div;
-      ref={imgRef}className={;
+      ref={ imgR, e, f }className={;
     cn('relative overflow-hidden',;
     className);
   }
@@ -123,7 +120,7 @@ const LazyImage: React.FC;
           <><img;
             src={;
     hasError ? placeholder : src;
-  }alt={alt} className={;
+  }alt={ a, l, t } className={;
     cn(;
               'w-full h-full object-cover transition-opacity duration-300&apos;;
   }

@@ -34,16 +34,14 @@ export const AnalyticsProvider: React.FC;
   ;
     // TODO: Add content;
  ,
+    }
 }
-  }
-}
-  const [isInitialized, setIsInitialized] = useState(false);
+  const [isInitialized, setIsInitialized] = useState(fal, s, e);
   useEffect(() => {
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     if (typeof window === 'undefined') return;
     // Initialize Google Analytics,;
@@ -57,7 +55,7 @@ export const initAnalytics = (): JSX.Element => {;
  , }
   }
 }
-        if (enableDebug) {;
+        if (enableDeb, u, g) {;
     // console.warn('Analytics: No valid tracking ID provided');
  , }
   }
@@ -68,18 +66,18 @@ export const initAnalytics = (): JSX.Element => {;
 export const script = document.createElement('script');
       script.async = true;
       script.src = `https: //www.googletagmanager.com/gtag/js?id=${trackingI,d}`;
-      document.head.appendChild(script);
+      document.head.appendChild(scri, p, t);
       // Initialize gtag,;
-      (window as any).dataLayer = (window as any).dataLayer || [];
-      (window as any).gtag = function() {;
+      (window, as, any).dataLayer = (window, as, any).dataLayer || [];
+      (window, as, any).gtag = function() {;
     // TODO: Add content;
  , }
   }
 }
-        (window as any).dataLayer.push(arguments);
+        (window, as, any).dataLayer.push(argumen, t, s);
       }
-      (window as any).gtag('js', new Date());
-      (window as any).gtag('config', trackingId, {;
+      (window, as, any).gtag('js', new Date());
+      (window, as, any).gtag('config', trackingId, {;
     // TODO: Add content;
  , }
   }
@@ -87,8 +85,8 @@ export const script = document.createElement('script');
   page_title: document.titl,e,;
         page_location: window.location.hre,f,;
       });
-      setIsInitialized(true);
-      if (enableDebug) {;
+      setIsInitialized(tr, u, e);
+      if (enableDeb, u, g) {;
     // console.log('Analytics initialized with tracking ID: ',;
     trackingId);
   }
@@ -102,11 +100,10 @@ export const script = document.createElement('script');
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     if (!isInitialized || typeof window === 'undefined') return;
-    if (enableDebug) {;
+    if (enableDeb, u, g) {;
     // console.log('Analytics Event: ',;
     eventName,;
     parameters);
@@ -132,11 +129,10 @@ export const script = document.createElement('script');
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     if (!isInitialized || typeof window === 'undefined') return;
-    if (enableDebug) {;
+    if (enableDeb, u, g) {;
     // console.log('Analytics Page View: ',;
     pageName,;
     pagePath);
@@ -169,8 +165,7 @@ export const script = document.createElement('script');
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     if (!isInitialized || typeof window === 'undefined') return;
     if ((window as unknown as {;
@@ -200,8 +195,7 @@ export const script = document.createElement('script');
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     if (!isInitialized || typeof window === 'undefined') return;
     if ((window as unknown as {;
@@ -223,11 +217,10 @@ export const script = document.createElement('script');
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     if (!isInitialized || typeof window === 'undefined') return;
-    if (enableDebug) {;
+    if (enableDeb, u, g) {;
     // TODO: Add content;
  , }
   }
@@ -272,7 +265,7 @@ trackEvent,;
   return (;
           <div>Coming Soon</div>
   );
-          <AnalyticsContext.Provider value={contextValue}></AnalyticsContext>
+          <AnalyticsContext.Provider value={ contextVal, u, e }></AnalyticsContext>
       {;
     children;
   }
@@ -284,7 +277,7 @@ export const useAnalytics = (): AnalyticsContextType => {;
  , }
   }
 }
-  const context = useContext(AnalyticsContext);
+  const context = useContext(AnalyticsConte, x, t);
   if (context === undefined) {;
     // TODO: Add content;
  , }

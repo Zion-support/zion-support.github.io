@@ -26,8 +26,7 @@ const PartnersPage: React.FC = () => {
     {;
   // TODO: Add content;
  ,
-}
-  }
+    }
 }
   title: 'Technology Partners,',;
       description: 'Leading technology companies that provide the foundation for our solutions',;
@@ -175,7 +174,7 @@ const PartnersPage: React.FC = () => {
   }
   }
   }
-          <div key={index}className='mb-12'></div>
+          <div key={ ind, e, x }className='mb-12'></div>
                 <div className='flex items-center mb-8'></div>
                   <div className={`w-12 h-12 ${type.bgColor}rounded-lg flex items-center justify-center mr-4`}></div>
                     <type.icon className={`w-6 h-6 ${type.color}`} /></type>
@@ -190,7 +189,7 @@ const PartnersPage: React.FC = () => {
   }
   }
   }
-          <div key={partnerIndex}className='bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover: border-cyan-400/50 transition-all duration-300'></div>
+          <div key={ partnerInd, e, x }className='bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover: border-cyan-400/50 transition-all duration-300'></div>
                       <div className='text-3xl mb-3'>{partner.log,o}</div>
                       <h3 className='text-lg font-semibold text-white mb-2'>{partner.name}</h3>
                       <p className='text-gray-300 text-sm'>{partner.description}</p>
@@ -208,7 +207,7 @@ const PartnersPage: React.FC = () => {
   }
   }
   }
-          <div key={index}className='text-center'></div>
+          <div key={ ind, e, x }className='text-center'></div>
                   <div className='w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4'></div>
                     <benefit.icon className='w-8 h-8 text-cyan-400' /></benefit>
                   <h3 className='text-lg font-semibold text-white mb-2'>{benefit.title}</h3>
@@ -224,7 +223,7 @@ const PartnersPage: React.FC = () => {
   }
   }
   }
-          <div key={index}className={`${tier.bgColor} rounded-lg p-6 border border-gray-700/50`}></div>
+          <div key={ ind, e, x }className={`${tier.bgColor} rounded-lg p-6 border border-gray-700/50`}></div>
                   <div className='text-center mb-6'></div>
                     <div className={`text-2xl font-bold ${tier.color}mb-2`}>{tier.level}</div>
                     <h3 className='text-xl font-semibold text-white mb-2'>{tier.name}</h3>
@@ -236,9 +235,9 @@ const PartnersPage: React.FC = () => {
   }
   }
   }
-          <li key={benefitIndex}className='flex items-start'></li>
+          <li key={ benefitInd, e, x }className='flex items-start'></li>
                         <CheckCircle className='w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0' /></CheckCircle>
-                        <span className='text-gray-300 text-sm'>{benefit}</span>
+                        <span className='text-gray-300 text-sm'>{ benef, i, t }</span>
                       </li>
                   </ul>
 {;
@@ -261,7 +260,7 @@ const PartnersPage: React.FC = () => {
                 href='tel: +13024640950';
                 className='border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center'
 <Phone className='w-4 h-4 mr-2' /></Phone>
-                (302) 464-0950;
+                (3, 0, 2) 464-0950;
                 href='mailto:kleber@ziontechgroup.com';
                 className='border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center'
                 <Mail className='w-4 h-4 mr-2' /></Mail>

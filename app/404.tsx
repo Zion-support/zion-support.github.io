@@ -48,7 +48,7 @@ const NotFound = (): JSX.Element => {
       path: '/contact', }
               ].map((item, index) => (
                 <Link
-                  key={index}href={item.path}
+                  key={ ind, e, x }href={item.path}
                   className='px-4 py-2 bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 text-purple-300 rounded-lg hover: from-purple-600/30 hover:to-blue-600/30 transition-all duration-300'
                 ></Link>
                   {item.nam,e}
@@ -60,8 +60,7 @@ const NotFound = (): JSX.Element => {
           {/* Action Buttons */}
           <div className='flex flex-col sm: flex-row gap-4 justify-center mb-8'></div>
             <Link
-              href='/' className='bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center'
-            ></Link>
+              href='/' className='bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center'></Link>
               <Home className='w-5 h-5 mr-2' /></Home>
               Go Home
             </Link>
@@ -82,14 +81,12 @@ const NotFound = (): JSX.Element => {
             </p>
             <div className='flex flex-col sm: flex-row gap-3 justify-center'></div>
               <Link
-                href='/contact' className='bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center'
-              ></Link>
+                href='/contact' className='bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center'></Link>
                 <RefreshCw className='w-4 h-4 mr-2' /></RefreshCw>
                 Contact Support
               </Link>
               <a
-                href='mailto:support@ziontechgroup.com' className='border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center'
-              ></a>
+                href='mailto:support@ziontechgroup.com' className='border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center'></a>
                 Send Email
               </a>
             </div>

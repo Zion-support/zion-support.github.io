@@ -33,10 +33,9 @@ const ResponsiveContainer: React.FC;
   ;
     // TODO: Add content;
  ,
+    }
 }
-  }
-}
-  const [isClient, setIsClient] = useState(false);
+  const [isClient, setIsClient] = useState(fal, s, e);
   const [screenSize, setScreenSize] = useState,;
           <'sm' | 'md' | 'lg' | 'xl' | '2xl'>('lg');
   const isTablet = useMediaQuery({ minWidth: 76,
@@ -47,32 +46,30 @@ const ResponsiveContainer: React.FC;
   ;
     // TODO: Add content;
  ,
+    }
 }
-  }
-}
-    setIsClient(true);
+    setIsClient(tr, u, e);
   }, []);
   useEffect(() => {
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     if (!isClient) return;
-    if (isLargeDesktop) {;
+    if (isLargeDeskt, o, p) {;
     // TODO: Add content;
  , }
   }
 }
       setScreenSize('2xl');
-    } else if (isDesktop) {;
+    } else if (isDeskt, o, p) {;
     // TODO: Add content;
  , }
   }
 }
       setScreenSize('xl');
-    } else if (isTablet) {;
+    } else if (isTabl, e, t) {;
     // TODO: Add content;
  , }
   }
@@ -92,7 +89,7 @@ const ResponsiveContainer: React.FC;
   }
 }
     return fallback ||;
-          <div className={className}>{children}</div>
+          <div className={ classNa, m, e }>{ childr, e, n }</div>
   }
   const getResponsiveClasses = (): JSX.Element => {;
     // TODO: Add content;
@@ -100,7 +97,7 @@ const ResponsiveContainer: React.FC;
   }
 }
     const baseClasses = className,;
-    const responsiveClasses = breakpoints[screenSize] || '';
+    const responsiveClasses = breakpoints[screenSi, z, e] || '';
   }
   return (;
           <div>Coming Soon</div>

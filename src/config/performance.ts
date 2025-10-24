@@ -11,7 +11,7 @@ export const _performanceConfig = {;
   metrics: {;
     // lcp: {;
 // good: 2500;
-  }
+    }
   }
   }
 // needsImprovement: 4000;
@@ -110,7 +110,7 @@ export const _performanceConfig = {;
     // formats: ['image/avif',;
     'image/webp',;
     // minimumCacheTTL: 60;
-  }
+    }
   }
   }
 // dangerouslyAllowSVG: false,;
@@ -138,7 +138,7 @@ export const _performanceConfig = {;
   minChunks: 2,;
           priority: -20,;
           reuseExistingChunk: true;
-        }
+    }
       }
     }
   },;
@@ -150,7 +150,7 @@ export const _performanceConfig = {;
     // reportInterval: 30000,;
     // 30 seconds,;
     // sendToAnalytics: true;
-  }
+    }
   }
   }
 // logThreshold: 'value',;

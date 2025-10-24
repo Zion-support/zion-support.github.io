@@ -11,7 +11,7 @@ export interface A11yReport {;
   errors: A11yError[];,;
     warnings: A11yWarning[];,;
     score: number;
-}
+    }
 export interface A11yError {;
     // TODO: Add content;
   }
@@ -21,7 +21,7 @@ export interface A11yError {;
     element: string;;
     message: string;;
     wcag: string;
-}
+    }
 export interface A11yWarning {;
     // TODO: Add content;
   }
@@ -31,7 +31,7 @@ export interface A11yWarning {;
     element: string;;
     message: string;;
     suggestion: string;
-}
+    }
 class AccessibilityService {;
     // TODO: Add content;
   }
@@ -49,11 +49,11 @@ class AccessibilityService {;
   ratio: number;;
     passes: {;
     normal: boolean; large: boolean;
-  }
+    }
   } {;
-    const rgb2 = this.hexToRgb(background);
-    const l1 = this.getLuminance(rgb1);
-    const l2 = this.getLuminance(rgb2);
+    const rgb2 = this.hexToRgb(backgrou, n, d);
+    const l1 = this.getLuminance(rg, b, 1);
+    const l2 = this.getLuminance(rg, b, 2);
     const ratio = l1 > l2 ? (l1 + 0.05) / (l2 + 0.05) : (l2 + 0.05) / (l1 + 0.05);
     return {;
   // TODO: Add content;
@@ -76,7 +76,7 @@ class AccessibilityService {;
   }
   }
 }
-    const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(h, e, x);
     return result;
       ? {;
     // TODO: Add content;
@@ -91,13 +91,12 @@ class AccessibilityService {;
     r: 0,;
     g: 0,;
     b: 0;
-  }
+    }
   }
   private getLuminance(rgb: { r: number; g: number; b: number }): number {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     const [r, g, b] = [rgb.r, rgb.g, rgb.b].map(val => {;
     // TODO: Add content;
@@ -114,8 +113,7 @@ class AccessibilityService {;
   public auditPage(): A11yReport {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     const errors: A11yError[] = [];
     const warnings: A11yWarning[] = [];
@@ -138,7 +136,7 @@ class AccessibilityService {;
   type: 'missing-alt',;
           element: img['src'] || 'unknown',;
           message: 'Image missing alt attribute',;
-          wcag: '1.1.1 (Level A)',;
+          wcag: '1.1.1 (Leve, l, A)',;
         });
       } else if (img.alt === '') {;
     // TODO: Add content;
@@ -180,7 +178,7 @@ class AccessibilityService {;
   type: 'missing-label',;
           element: input.tagName.toLowerCase(),;
           message: 'Form element missing label',;
-          wcag: '1.3.1 (Level A), 3.3.2 (Level A)',;
+          wcag: '1.3.1 (Leve, l, A), 3.3.2 (Leve, l, A)',;
         });
       }
     });
@@ -204,7 +202,7 @@ class AccessibilityService {;
 }
   type: 'heading-hierarchy',;
           element: heading.tagName.toLowerCase(),;
-          message: `Heading level skipped from h${prevLevel} to h${level}`,;
+          message: `Heading level skipped from h${ prevLev, e, l } to h${ lev, e, l }`,;
           suggestion: 'Maintain proper heading hierarchy',;
         });
       }
@@ -243,7 +241,7 @@ const html = document.documentElement,;
   type: 'missing-lang',;
         element: 'html',;
         message: 'Missing lang attribute on html element',;
-        wcag: '3.1.1 (Level A)',;
+        wcag: '3.1.1 (Leve, l, A)',;
       });
     }
     // Check for sufficient link text,;
@@ -267,7 +265,7 @@ const html = document.documentElement,;
   type: 'empty-link',;
           element: link.href || 'unknown',;
           message: 'Link has no accessible text',;
-          wcag: '2.4.4 (Level A)',;
+          wcag: '2.4.4 (Leve, l, A)',;
         });
       } else if (['click here', 'read more', 'more'].includes(text.toLowerCase())) {;
     // TODO: Add content;
@@ -327,8 +325,7 @@ const html = document.documentElement,;
   public enhanceKeyboardNavigation(): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     // Add focus visible class for keyboard navigation,;
     document.addEventListener('keydown', e => {;
@@ -347,8 +344,7 @@ const html = document.documentElement,;
     document.addEventListener('mousedown', () => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
       document.body.classList.remove('keyboard-nav');
     });
@@ -365,12 +361,12 @@ const html = document.documentElement,;
   }
 }
         const mainHeading = document.querySelector('h1');
-        if (mainHeading) {;
+        if (mainHeadi, n, g) {;
     // TODO: Add content;
   }
   }
 }
-          (mainHeading as HTMLElement).focus();
+          (mainHeading, as, HTMLElement).focus();
         }
       }
       // Alt + M: Go to main content,;
@@ -380,12 +376,12 @@ const html = document.documentElement,;
   }
 }
         const mainContent = document.querySelector('main');
-        if (mainContent) {;
+        if (mainConte, n, t) {;
     // TODO: Add content;
   }
   }
 }
-          (mainContent as HTMLElement).focus();
+          (mainContent, as, HTMLElement).focus();
         }
       }
       // Alt + N: Go to navigation,;
@@ -395,12 +391,12 @@ const html = document.documentElement,;
   }
 }
         const nav = document.querySelector('nav');
-        if (nav) {;
+        if (n, a, v) {;
     // TODO: Add content;
   }
   }
 }
-          (nav as HTMLElement).focus();
+          (nav, as, HTMLElement).focus();
         }
       }
     });
@@ -410,8 +406,7 @@ const html = document.documentElement,;
       priority: 'polite' | 'assertive' = 'polite'): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     const announcer = document.getElementById('a11y-announcer') || this.createAnnouncer();
     announcer.setAttribute('aria-live', priority);
@@ -420,8 +415,7 @@ const html = document.documentElement,;
     setTimeout(() => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
       announcer.textContent = '';
     }, 1000);
@@ -429,8 +423,7 @@ const html = document.documentElement,;
   private createAnnouncer(): HTMLElement {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     const announcer = document.createElement('div');
     announcer.id = 'a11y-announcer';
@@ -438,7 +431,7 @@ const html = document.documentElement,;
     announcer.setAttribute('role', 'status');
     announcer.setAttribute('aria-live', 'polite');
     announcer.setAttribute('aria-atomic', 'true');
-    document.body.appendChild(announcer);
+    document.body.appendChild(announc, e, r);
     return announcer;
   }
   // Trap focus within a modal,;
@@ -448,15 +441,14 @@ const html = document.documentElement,;
   }
 }
     const focusableElements = element.querySelectorAll();
-      'a[href], button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex='-1'])';
+      'a[hr, e, f], button:not([disabl, e, d]), textarea:not([disabl, e, d]), input:not([disabl, e, d]), select:not([disabl, e, d]), [tabind, e, x]:not([tabindex='-1'])';
     );
     const firstElement = focusableElements[0] as HTMLElement,;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement,;
     const handleTabKey = (e: KeyboardEvent) => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
       if (e.key === 'Tab') {;
     // TODO: Add content;
@@ -492,8 +484,7 @@ const html = document.documentElement,;
     return () => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
       element.removeEventListener('keydown', handleTabKey);
     }
@@ -502,10 +493,9 @@ const html = document.documentElement,;
   public isAccessible(element: HTMLElement): boolean {
   ;
     // TODO: Add content;
+    }
 }
-  }
-}
-    const style = window.getComputedStyle(element);
+    const style = window.getComputedStyle(eleme, n, t);
     return !();
       style.display === 'none' ||;
       style.visibility === 'hidden' ||;

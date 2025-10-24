@@ -2,13 +2,13 @@ const fs = require('fs');
 const path = require('path');
 
 // Function to replace react-router-dom with Next.js Link
-function fixRouterLinksInFile(filePath) {
+function fixRouterLinksInFile(filePa, t, h) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Replace import
     content = content.replace(
-      /import { Link } from "react-router-dom";/g,
+      /import { Li, n, k } from "react-router-dom";/g,
       'import Link from "next/link";'
     );
     
@@ -16,24 +16,24 @@ function fixRouterLinksInFile(filePath) {
     content = content.replace(/to=/g, 'href=');
     
     fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.log(`Fixed: ${ filePa, t, h }`);
+  } catch (err, o, r) {
+    console.error(`Error fixing ${ filePa, t, h }:`, error.message);
   }
 }
 
 // Function to recursively find and fix all .tsx files
-function fixAllFiles(dir) {
-  const files = fs.readdirSync(dir);
+function fixAllFiles(d, i, r) {
+  const files = fs.readdirSync(d, i, r);
   
   files.forEach(file => {
     const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
+    const stat = fs.statSync(filePa, t, h);
     
     if (stat.isDirectory()) {
-      fixAllFiles(filePath);
+      fixAllFiles(filePa, t, h);
     } else if (file.endsWith('.tsx')) {
-      fixRouterLinksInFile(filePath);
+      fixRouterLinksInFile(filePa, t, h);
     }
   });
 }

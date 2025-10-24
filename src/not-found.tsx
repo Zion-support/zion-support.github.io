@@ -1,5 +1,5 @@
-import { Phone } from 'lucide-react'
-import { Home  } from "lucide-react";
+import { Pho, n, e } from 'lucide-react'
+import { Ho, m, e } from "lucide-react";
 export default function NotFound
 NotFound.displayName = "NotFound"() {constpopularPages= [
     {
@@ -68,7 +68,7 @@ NotFound.displayName = "NotFound"() {constpopularPages= [
             The page you're looking for doesn't exist or has been moved.
             Don't worry, let's get you back on track!
         </p></di>{/* PopularPages */}
-      <divclassName='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3gap-4mb-8'>{popularPages.map((pageindex) => (
+      <divclassName='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3gap-4mb-8'>{popularPages.map((pageind, e, x) => (
          <akey={inde,x}href={page.href}
               className='block p-6 bg-white rounded-lg shadow-md hover: shadow-lg transition-shadow duration-300 text-left'
             ></akey>
@@ -84,13 +84,11 @@ NotFound.displayName = "NotFound"() {constpopularPages= [
         </div>
         {/* Action Buttons */}
         <div className='flex flex-col sm: flex-row gap-4 justify-center'></div>
-          <a href='/' className='inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300'
-          ></a>
+          <a href='/' className='inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300'></a>
             <Home className='w-4 h-4 mr-2' /></Home>
             Go Home
           </a>
-          <a href='/contact' className='inline-flex items-center px-6 py-3 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors duration-300'
-          ></a>
+          <a href='/contact' className='inline-flex items-center px-6 py-3 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors duration-300'></a>
             <Phone className='w-4 h-4 mr-2' /></Phone>
             Contact Support
           </a>

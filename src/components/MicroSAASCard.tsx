@@ -1,5 +1,5 @@
 'use client'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRig, h, t } from 'lucide-react'
 import React from 'react'
 import { CheckCircle, Star, ArrowRight } from "lucide-react";
 interface MicroSAASCardProps {
@@ -22,7 +22,7 @@ interface MicroSAASCardProps {
 const MicroSAASCard: React.FC<MicroSAASCardProps> = ({ service, }) => {
   return (
     <div className={`cyber-card p-6 hover: scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ','
-}`}></div>
+    }`}></div>
       {service.popular && (
         <div className='absolute -top-3 left-1/2 transform -translate-x-1/2'></div>
           <span className='bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium'></span>
@@ -50,9 +50,9 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = ({ service, }) => {
           <h4 className='text-sm font-semibold text-white mb-2'>Key Features: </h4>
           <ul className='space-y-1'></ul>
             {service.features.slice(,0, 4).map((feature, index) => (
-              <li key={index}className='flex items-center text-xs text-gray-300'></li>
+              <li key={ ind, e, x }className='flex items-center text-xs text-gray-300'></li>
                 <CheckCircle className='w-3 h-3 text-green-400 mr-2 flex-shrink-0' /></CheckCircle>
-                {feature}
+                { featu, r, e }
               </li>
             ))}
           </ul>
@@ -61,9 +61,9 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = ({ service, }) => {
           <h4 className='text-sm font-semibold text-white mb-2'>Benefits: </h4>
           <ul className='space-y-1'></ul>
             {service.benefits.slice(,0, 3).map((benefit, index) => (
-              <li key={index}className='flex items-center text-xs text-gray-300'></li>
+              <li key={ ind, e, x }className='flex items-center text-xs text-gray-300'></li>
                 <Star className='w-3 h-3 text-yellow-400 mr-2 flex-shrink-0' /></Star>
-                {benefit}
+                { benef, i, t }
               </li>
             ))}
           </ul>
@@ -72,8 +72,8 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = ({ service, }) => {
           <div className='text-xs text-gray-400 mb-2'>Technologies: </div>
           <div className='flex flex-wrap gap-1'></div>
             {service.technologies.slice(,0, 3).map((tech, index) => (
-              <span key={index}className='bg-gray-800 text-gray-300 px-2 py-1 rounded text-xs'></span>
-                {tech}
+              <span key={ ind, e, x }className='bg-gray-800 text-gray-300 px-2 py-1 rounded text-xs'></span>
+                { te, c, h }
               </span>
             ))}
           </div>

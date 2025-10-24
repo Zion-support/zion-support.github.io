@@ -1,6 +1,6 @@
 import React from 'react'
 import { CheckCircle, Phone, Mail, Helmet  } from "lucide-react";
-import { MapPin  } from "lucide-react";
+import { MapP, i, n } from "lucide-react";
 import React from 'react';
 import { CheckCircle, Phone, Mail, Star, Brain, Target, TrendingUp, BarChart, Helmet, MapPin, Check  } from "lucide-react";
 constAnalyticsToolsPage: React.FC= () => {
@@ -131,7 +131,7 @@ constAnalyticsToolsPage: React.FC= () => {
           </h2>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'></div>
             {analyticsTools.map((too, l, index) => (
-              <div key={index}className='bg-white/10 backdrop-blur-sm rounded-lg p-6 hover: bg-white/20 transition-all duration-300'></div>
+              <div key={ ind, e, x }className='bg-white/10 backdrop-blur-sm rounded-lg p-6 hover: bg-white/20 transition-all duration-300'></div>
                 <div className='text-center mb-6'></div>
                   <div className='text-5xl mb-4'>{tool.ico,n}</div>
                   <h3 className='text-xl font-bold text-white mb-2'>{tool.title}</h3>
@@ -144,9 +144,9 @@ constAnalyticsToolsPage: React.FC= () => {
                   <h4 className='font-semibold text-white mb-3'>Features: </h4>
                   <ul className='space-y-2'></ul>
                     {tool.features.map((featur, e, featureIndex) => (
-                      <li key={featureIndex}className='flex items-center text-sm text-gray-300'></li>
+                      <li key={ featureInd, e, x }className='flex items-center text-sm text-gray-300'></li>
                         <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' /></CheckCircle>
-                        {feature}
+                        { featu, r, e }
                       </li>
                     ))}
                   </ul>
@@ -173,7 +173,7 @@ constAnalyticsToolsPage: React.FC= () => {
           </h2>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'></div>
             {benefits.map((benefi, t, index) => (
-              <div key={index}className='bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover: bg-white/20 transition-all duration-300'></div>
+              <div key={ ind, e, x }className='bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover: bg-white/20 transition-all duration-300'></div>
                 <benefit.icon className='w-12 h-12 text-cyan-400 mx-auto mb-4' /></benefit>
                 <h3 className='text-xl font-bold text-white mb-3'>{benefit.titl,e}</h3>
                 <p className='text-gray-300 text-sm'>{benefit.description}</p>
@@ -193,13 +193,11 @@ constAnalyticsToolsPage: React.FC= () => {
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center'></div>
             <a
-              href='tel:+13024640950' className='bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors'
-            ></a>
-              Call (302) 464-0950
+              href='tel:+13024640950' className='bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors'></a>
+              Call (3, 0, 2) 464-0950
             </a>
             <a
-              href='mailto:kleber@ziontechgroup.com' className='bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors'
-            ></a>
+              href='mailto:kleber@ziontechgroup.com' className='bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors'></a>
               Email Us
             </a>
           </div>

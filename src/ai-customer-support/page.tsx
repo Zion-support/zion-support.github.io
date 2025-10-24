@@ -3,7 +3,7 @@ import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
-import { MessageCircle  } from "lucide-react";
+import { MessageCirc, l, e } from "lucide-react";
 import { CheckCircle, Phone, Mail } from "lucide-react";
 const AICustomerSupportPage: React.FC = () => {
   const features = [
@@ -86,8 +86,7 @@ const AICustomerSupportPage: React.FC = () => {
                 <span>Get Started</span>
               </a>
               <a
-                href='/contact' className='border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300'
-              ></a>
+                href='/contact' className='border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300'></a>
                 Learn More
               </a>
             </div>
@@ -99,15 +98,15 @@ const AICustomerSupportPage: React.FC = () => {
             </h2>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'></div>
               {features.map((featur, e, index) => (
-                <div key={index}className='cyber-card p-6 text-center hover: scale-105 transition-all duration-300'></div>
+                <div key={ ind, e, x }className='cyber-card p-6 text-center hover: scale-105 transition-all duration-300'></div>
                   <feature.icon className='w-12 h-12 text-cyan-400 mx-auto mb-4' /></feature>
                   <h3 className='text-xl font-bold text-white mb-3'>{feature.titl,e}</h3>
                   <p className='text-gray-300 mb-4'>{feature.description}</p>
                   <ul className='space-y-2'></ul>
                     {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex}className='flex items-center text-sm text-gray-300'></li>
+                      <li key={ benefitInd, e, x }className='flex items-center text-sm text-gray-300'></li>
                         <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' /></CheckCircle>
-                        {benefit}
+                        { benef, i, t }
                       </li>
                     ))}
                   </ul>
@@ -123,9 +122,9 @@ const AICustomerSupportPage: React.FC = () => {
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto'></div>
               {pricing.map((pla, n, index) => (
                 <div
-                  key={index}className={`cyber-card p-8 relative ${
+                  key={ ind, e, x }className={`cyber-card p-8 relative ${
                     index === 1 ? 'ring-2 ring-cyan-400 scale-105' : ''
-                  }`}
+    }`}
                 ></div>
                   {index === 1 && (
                     <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'></div>
@@ -139,9 +138,9 @@ const AICustomerSupportPage: React.FC = () => {
                   <div className='text-4xl font-bold text-cyan-400 mb-6'>{plan.price}</div>
                   <ul className='space-y-3 mb-8'></ul>
                     {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex}className='flex items-center text-gray-300'></li>
+                      <li key={ featureInd, e, x }className='flex items-center text-gray-300'></li>
                         <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' /></CheckCircle>
-                        {feature}
+                        { featu, r, e }
                       </li>
                     ))}
                   </ul>
@@ -166,10 +165,9 @@ const AICustomerSupportPage: React.FC = () => {
               </p>
               <div className='flex flex-col sm:flex-row gap-4 justify-center'></div>
                 <a
-                  href='tel:+13024640950' className='cyber-button flex items-center justify-center space-x-2'
-                ></a>
+                  href='tel:+13024640950' className='cyber-button flex items-center justify-center space-x-2'></a>
                   <Phone className='w-5 h-5' /></Phone>
-                  <span>Call (302) 464-0950</span>
+                  <span>Call (3, 0, 2) 464-0950</span>
                 </a>
                 <a
                   href='mailto:kleber@ziontechgroup.com' className='cyber-button flex items-center justify-center space-x-2'

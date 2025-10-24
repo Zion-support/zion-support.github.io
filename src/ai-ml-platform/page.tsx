@@ -1,6 +1,6 @@
 import React from 'react';
 import { Brain, TrendingUp, Shield, BarChart, Users, Clock, Star  } from "lucide-react";
-import { Helmet  } from "react-helmet-async";
+import { Helm, e, t } from "react-helmet-async";
 import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Brain, Phone  } from "lucide-react";
 import { Brain, TrendingUp, Shield, Users, Clock, Star  } from "lucide-react";
 import Navigation from '../components/Navigation';
@@ -11,8 +11,7 @@ const AIMLPlatformPage: React.FC = () => {
     {;
   // TODO: Add content;
  ,
-}
-  }
+    }
 }
   icon: Brai,;
       title: 'Complete ML Platform,',;

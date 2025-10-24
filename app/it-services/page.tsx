@@ -92,7 +92,7 @@ const ITServicesPage: React.FC = () => {
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'></div>
             {services.map((servic, e, index) => (
-              <div key={index}className='bg-white p-6 rounded-xl shadow-lg hover: shadow-xl transition-shadow duration-300'></div>
+              <div key={ ind, e, x }className='bg-white p-6 rounded-xl shadow-lg hover: shadow-xl transition-shadow duration-300'></div>
                 <div className='flex items-center justify-center w-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg mb-4'></div>
                   <service.icon className='h-6 w-6 text-white' /></service>
                 </div>
@@ -100,9 +100,9 @@ const ITServicesPage: React.FC = () => {
                 <p className='text-gray-600 mb-4'>{service.description}</p>
                 <ul className='space-y-2 mb-4'></ul>
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex}className='flex items-center text-sm text-gray-600'></li>
+                    <li key={ featureInd, e, x }className='flex items-center text-sm text-gray-600'></li>
                       <CheckCircle className='h-4 w-4 text-emerald-500 mr-2' /></CheckCircle>
-                      {feature}
+                      { featu, r, e }
                     </li>
                   ))}
                 </ul>
@@ -129,7 +129,7 @@ const ITServicesPage: React.FC = () => {
           </div>
           <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4'></div>
             {technologies.map((tec, h, index) => (
-              <div key={index}className='bg-white p-4 rounded-lg shadow-md text-center hover: shadow-lg transition-shadow duration-300'></div>
+              <div key={ ind, e, x }className='bg-white p-4 rounded-lg shadow-md text-center hover: shadow-lg transition-shadow duration-300'></div>
                 <span className='text-gray-700 font-medium'>{tec,h}</span>
               </div>
             ))}
@@ -190,8 +190,7 @@ const ITServicesPage: React.FC = () => {
                 Let&apos;s discuss your IT needs and create a customized solution that drives your business forward.
               </p>
               <a
-                href='/contact' className='bg-white text-emerald-600 px-6 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors duration-200 inline-flex items-center'
-              ></a>
+                href='/contact' className='bg-white text-emerald-600 px-6 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors duration-200 inline-flex items-center'></a>
                 Contact Us Today
                 <ArrowRight className='ml-2 h-4 w-4' /></ArrowRight>
               </a>
@@ -211,14 +210,12 @@ const ITServicesPage: React.FC = () => {
           </p>
           <div className='flex flex-col sm: flex-row gap-4 justify-center'></div>
             <a
-              href='/contact' className='bg-white text-emerald-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center'
-            ></a>
+              href='/contact' className='bg-white text-emerald-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center'></a>
               Get Free Consultation
               <ArrowRight className='ml-2 h-5 w-5' /></ArrowRight>
             </a>
             <a
-              href='/ai-services' className='border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200'
-            ></a>
+              href='/ai-services' className='border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200'></a>
               Explore AI Services
             </a>
           </div>

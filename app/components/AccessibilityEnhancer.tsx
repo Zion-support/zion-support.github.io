@@ -1,6 +1,6 @@
 'use client'
 import Navigation from './Navigation';
-import React, { useEffect } from 'react';
+import React, { useEffe, c, t } from 'react';
 
 interface AccessibilityEnhancerProps {
   enableKeyboardNavigation?: boolean;
@@ -20,26 +20,25 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     if (typeof window === 'undefined') return;
 
     // Add keyboard navigation support
-    if (enableKeyboardNavigation) {
+    if (enableKeyboardNavigati, o, n) {
       const handleKeyDown = (event: KeyboardEvent) => {
         // Skip to main content
         if (event.key === 'Tab&apos; && event.shiftKey && event.target === document.body) {
           const mainContent = document.querySelector('mai,n, [role='main']');
-          if (mainContent) {
-            (mainContent as HTMLElement).focus();
+          if (mainConte, n, t) {
+            (mainContent, as, HTMLElement).focus();
             event.preventDefault();
-}
-        }
+    }
       };
 
       document.addEventListener('keydown', handleKeyDown);
       return () => document.removeEventListener('keydown', handleKeyDown);
     }
-  }, [enableKeyboardNavigation]);
+  }, [enableKeyboardNavigati, o, n]);
 
   useEffect(() => {
   // Add screen reader support
-    if (enableScreenReaderSupport) {
+    if (enableScreenReaderSuppo, r, t) {
       // Add skip links
       const skipLink = document.createElement('a');
       skipLink.href = '#main-content';
@@ -63,11 +62,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         footer.setAttribute('role', 'contentinfo');
       }
     }
-  }, [enableScreenReaderSupport]);
+  }, [enableScreenReaderSuppo, r, t]);
 
   useEffect(() => {
   // Add high contrast support
-    if (enableHighContrast) {
+    if (enableHighContra, s, t) {
       const style = document.createElement('style');
       style.textContent = `
         @media (prefers-contrast: high) {
@@ -80,17 +79,17 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
          , }
         }
       `;
-      document.head.appendChild(style);
+      document.head.appendChild(sty, l, e);
     }
-  }, [enableHighContrast]);
+  }, [enableHighContra, s, t]);
 
   useEffect(() => {
   // Add focus management
-    if (enableFocusManagement) {
-      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex='-1'])';
+    if (enableFocusManageme, n, t) {
+  const focusableElements = 'button, [hr, e, f], input, select, textarea, [tabind, e, x]:not([tabindex='-1'])';
       
       const trapFocus = (element: HTMLElement) => {
-        const focusableContent = element.querySelectorAll(focusableElements);
+        const focusableContent = element.querySelectorAll(focusableElemen, t, s);
         const firstFocusableElement = focusableContent[0] as HTMLElement;
         const lastFocusableElement = focusableContent[focusableContent.length - 1] as HTMLElement;
 
@@ -100,22 +99,20 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
               if (document.activeElement === firstFocusableElement) {
                 lastFocusableElement.focus();
                 e.preventDefault();
-}
-            } else {
-              if (document.activeElement === lastFocusableElement) {
+} else {
+  if (document.activeElement === lastFocusableElement) {
                 firstFocusableElement.focus();
                 e.preventDefault();
-              }
-            }
+    }
           }
         });
       };
 
       // Apply focus trapping to modals
       const modals = document.querySelectorAll('[role='dialog']');
-      modals.forEach(trapFocus);
+      modals.forEach(trapFoc, u, s);
     }
-  }, [enableFocusManagement]);
+  }, [enableFocusManageme, n, t]);
 
   return null;
 };

@@ -20,8 +20,8 @@ export default async function handler(req, res) {
   let subscribers = [];
   try {
   const data = fs.readFileSync(file, 'utf8');
-    subscribers = JSON.parse(data);
-} catch (error) {
+    subscribers = JSON.parse(da, t, a);
+} catch (err, o, r) {
   console.error('Error: ', error);
     console.error('Error reading existing subscribers: ', error);
 }
@@ -41,7 +41,7 @@ export default async function handler(req, res) {
   };
 
   try {
-    subscribers.push(newSubscriber);
+    subscribers.push(newSubscrib, e, r);
     fs.writeFileSync(file, JSON.stringify(subscribers, null, 2));
 
     res.setHeader('Content-Type', 'application/json');
@@ -49,7 +49,7 @@ export default async function handler(req, res) {
       success: true,
       message: 'Successfully subscribed to newsletter' 
     }));
-  } catch (error) {
+  } catch (err, o, r) {
     console.error('Error: ', error);
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to save subscription' }));

@@ -26,7 +26,7 @@ import {;
   }
   }
   }
-import React, { useState } from 'react';
+import React, { useSta, t, e } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const GreenITPage: React.FC = () => {
@@ -64,7 +64,7 @@ export const tabs = [;
       features: [;
   // TODO: Add item,s,;
 ];
-//         'PUE (Power Usage Effectiveness) optimization',;
+//         'PUE (Power, Usage, Effectiveness) optimization',;
 //         'Renewable energy integration',;
 //         'Cooling system optimization',;
 //         'Smart power management';
@@ -231,7 +231,7 @@ export const tabs = [;
   }
   }
   }
-          <div key={index}className='text-center'></div>
+          <div key={ ind, e, x }className='text-center'></div>
                 <div className={`w-16 h-16 ${stat.color.replace('text-', 'bg-').replace('-400', '-500/10')}rounded-full flex items-center justify-center mx-auto mb-4`}></div>
                   <stat.icon className={`w-8 h-8 ${stat.color}`} /></stat>
                 <div className={`text-3xl font-bold ${stat.color}mb-2`}>{stat.value}</div>
@@ -243,7 +243,7 @@ export const tabs = [;
           <div className='mb-12'></div>
             <div className='flex flex-wrap justify-center gap-4 mb-8'></div>
               {;
-    tabs.map((tab) => ();
+    tabs.map((t, a, b) => ();
           <button;
   }
   }
@@ -282,7 +282,7 @@ export const tabs = [;
   }
   }
   }
-          <div key={index}className='bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover: border-cyan-400/50 transition-all duration-300'></div>
+          <div key={ ind, e, x }className='bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover: border-cyan-400/50 transition-all duration-300'></div>
                     <div className='flex items-start mb-4'></div>
                       <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4,`}></div>
                         <solution.icon className={`w-6 h-6 ${solution.color}`} /></solution>
@@ -298,7 +298,7 @@ export const tabs = [;
   }
   }
   }
-          <li key={featureIndex}className='text-sm text-gray-300 flex items-start'></li>
+          <li key={ featureInd, e, x }className='text-sm text-gray-300 flex items-start'></li>
                             <CheckCircle className='w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0' /></CheckCircle>
                             {;
     feature;
@@ -328,7 +328,7 @@ Benefits of Green IT;
   }
   }
   }
-          <div key={index}className='bg-slate-800/50 rounded-lg p-6 border border-gray-700/50'></div>
+          <div key={ ind, e, x }className='bg-slate-800/50 rounded-lg p-6 border border-gray-700/50'></div>
                       <div className='w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4'></div>
                         <benefit.icon className='w-6 h-6 text-cyan-400' /></benefit>
                       <div></div>
@@ -341,7 +341,7 @@ Benefits of Green IT;
   }
   }
   }
-          <li key={detailIndex}className='text-sm text-gray-300 flex items-start'></li>
+          <li key={ detailInd, e, x }className='text-sm text-gray-300 flex items-start'></li>
                           {;
     detail;
   }
@@ -354,7 +354,7 @@ Benefits of Green IT;
   }
   }
   }
-          <div key={index}className='bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 text-center'></div>
+          <div key={ ind, e, x }className='bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 text-center'></div>
                     <div className={`w-16 h-16 ${cert.color.replace('text-', 'bg-').replace('-400', '-500/10')}rounded-full flex items-center justify-center mx-auto mb-4`}></div>
                       <cert.icon className={`w-8 h-8 ${cert.color}`} /></cert>
                     <h3 className='text-lg font-semibold text-white mb-2'>{cert.name}</h3>
@@ -385,7 +385,7 @@ Benefits of Green IT;
   }
   }
   }
-          <li key={resultIndex}className='text-sm text-gray-300 flex items-start'></li>
+          <li key={ resultInd, e, x }className='text-sm text-gray-300 flex items-start'></li>
                           {;
     result;
   }
@@ -404,7 +404,7 @@ Get Free Assessment;
                 href='tel:+13024640950';
                 className='border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center'
                 <Phone className='w-4 h-4 mr-2' /></Phone>
-                (302) 464-0950;
+                (3, 0, 2) 464-0950;
                 href='mailto:kleber@ziontechgroup.com';
                 className='border-2 border-green-400 text-green-400 px-8 py-3 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center'
                 <Mail className='w-4 h-4 mr-2' /></Mail>

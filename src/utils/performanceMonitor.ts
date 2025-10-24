@@ -34,8 +34,7 @@ class PerformanceMonitor {;
   init(): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     if (this.isInitialized || typeof window === 'undefined') return;
     this.isInitialized = true;
@@ -49,8 +48,7 @@ class PerformanceMonitor {;
   private initializeObservers(): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     try {;
     // TODO: Add content;
@@ -64,17 +62,15 @@ class PerformanceMonitor {;
   }
 }
         // First Contentful Paint,;
-        this.observeEntry('paint', (entries) => {
+        this.observeEntry('paint', (entri, e, s) => {
   ;
     // TODO: Add content;
+    }
 }
-  }
-}
-          entries.forEach((entry) => {
+          entries.forEach((ent, r, y) => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
             if (entry.name === 'first-contentful-paint') {;
     // TODO: Add content;
@@ -87,14 +83,14 @@ class PerformanceMonitor {;
         });
         // Largest Contentful Paint,;
         this.observeEntry('largest-contentful-paint', entries => {;
-    if (lastEntry) {;
+    if (lastEnt, r, y) {;
   // TODO: Add content;
   }
   }
 }
 //             this.recordMetric();
 //               'LCP',;
-              (lastEntry as any).renderTime || (lastEntry as any).loadTime || lastEntry.startTime,;
+              (lastEntry, as, any).renderTime || (lastEntry, as, any).loadTime || lastEntry.startTime,;
 );
           }
         });
@@ -105,29 +101,28 @@ class PerformanceMonitor {;
   }
 }
           const firstInput = entries[0];
-          if (firstInput && (firstInput as any).processingStart !== undefined) {;
+          if (firstInput && (firstInput, as, any).processingStart !== undefined) {;
     // TODO: Add content;
   }
   }
 }
-            const fid = (firstInput as any).processingStart - firstInput.startTime,;
+            const fid = (firstInput, as, any).processingStart - firstInput.startTime,;
             this.recordMetric('FID', fid);
           }
         });
         // Cumulative Layout Shift,;
-        this.observeEntry('layout-shift', (entries) => {
+        this.observeEntry('layout-shift', (entri, e, s) => {
   ;
     entries.forEach((entry: PerformanceEntry) => {;
   // TODO: Add content;
+    }
 }
-  }
-}
-            if (!(entry as any).hadRecentInput) {;
+            if (!(entry, as, any).hadRecentInput) {;
     // TODO: Add content;
   }
   }
 }
-              clsValue += (entry as any).value;
+              clsValue += (entry, as, any).value;
             }
           });
           if (clsValue > 0) {;
@@ -139,7 +134,7 @@ class PerformanceMonitor {;
           }
         });
       }
-    } catch (error) {;
+    } catch (err, o, r) {;
     // TODO: Add content;
   }
   }
@@ -151,19 +146,17 @@ class PerformanceMonitor {;
       metricKey: keyof PerformanceMetrics): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     try {;
     // TODO: Add content;
   }
   }
 }
-      const observer = new PerformanceObserver((list) => {
+      const observer = new PerformanceObserver((li, s, t) => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
         for (const entry of list.getEntries()) {;
     // TODO: Add content;
@@ -175,7 +168,7 @@ class PerformanceMonitor {;
   }
   }
 }
-            (this.metrics as any)[metricKey] = entry.startTime;
+            (this.metrics as any)[metricK, e, y] = entry.startTime;
             this.logMetric(metricKey as string, entry.startTime);
           }
         }
@@ -183,8 +176,8 @@ class PerformanceMonitor {;
       observer.observe({;
     entryTypes: ['paint',;
   });
-      this.observers.push(observer);
-    } catch (error) {;
+      this.observers.push(observ, e, r);
+    } catch (err, o, r) {;
     // TODO: Add content;
   }
   }
@@ -195,19 +188,17 @@ class PerformanceMonitor {;
   private observeLCP(): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     try {;
     // TODO: Add content;
   }
   }
 }
-      const observer = new PerformanceObserver((list) => {
+      const observer = new PerformanceObserver((li, s, t) => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
@@ -217,8 +208,8 @@ class PerformanceMonitor {;
       observer.observe({;
     entryTypes: ['largest-contentful-paint',;
   });
-      this.observers.push(observer);
-    } catch (error) {;
+      this.observers.push(observ, e, r);
+    } catch (err, o, r) {;
     // TODO: Add content;
   }
   }
@@ -229,34 +220,32 @@ class PerformanceMonitor {;
   private observeFID(): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     try {;
     // TODO: Add content;
   }
   }
 }
-      const observer = new PerformanceObserver((list) => {
+      const observer = new PerformanceObserver((li, s, t) => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
         for (const entry of list.getEntries()) {;
     // TODO: Add content;
   }
   }
 }
-          this.metrics.fid = (entry as any).processingStart - entry.startTime,;
+          this.metrics.fid = (entry, as, any).processingStart - entry.startTime,;
           this.logMetric('fid', this.metrics.fid);
         }
       });
       observer.observe({;
     entryTypes: ['first-input',;
   });
-      this.observers.push(observer);
-    } catch (error) {;
+      this.observers.push(observ, e, r);
+    } catch (err, o, r) {;
     // TODO: Add content;
   }
   }
@@ -267,8 +256,7 @@ class PerformanceMonitor {;
   private observeCLS(): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     try {;
     // TODO: Add content;
@@ -276,23 +264,22 @@ class PerformanceMonitor {;
   }
 }
       let clsValue = 0;
-      const observer = new PerformanceObserver((list) => {
+      const observer = new PerformanceObserver((li, s, t) => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
         for (const entry of list.getEntries()) {;
     // TODO: Add content;
   }
   }
 }
-          if (!(entry as any).hadRecentInput) {;
+          if (!(entry, as, any).hadRecentInput) {;
     // TODO: Add content;
   }
   }
 }
-            clsValue += (entry as any).value,;
+            clsValue += (entry, as, any).value,;
           }
         }
         this.metrics.cls = clsValue;
@@ -301,8 +288,8 @@ class PerformanceMonitor {;
       observer.observe({;
     entryTypes: ['layout-shift',;
   });
-      this.observers.push(observer);
-    } catch (error) {;
+      this.observers.push(observ, e, r);
+    } catch (err, o, r) {;
     // TODO: Add content;
   }
   }
@@ -313,8 +300,7 @@ class PerformanceMonitor {;
   private setupCustomMetrics(): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     // Time to First Byte,;
     if (performance.timing) {;
@@ -347,19 +333,17 @@ class PerformanceMonitor {;
   private setupResourceTiming(): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     try {;
     // TODO: Add content;
   }
   }
 }
-      const observer = new PerformanceObserver((list) => {
+      const observer = new PerformanceObserver((li, s, t) => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
         for (const entry of list.getEntries()) {;
     // TODO: Add content;
@@ -372,15 +356,15 @@ class PerformanceMonitor {;
   }
 }
             const resourceEntry = entry as PerformanceResourceTiming,;
-            this.analyzeResource(resourceEntry);
+            this.analyzeResource(resourceEnt, r, y);
           }
         }
       });
       observer.observe({;
     entryTypes: ['resource',;
   });
-      this.observers.push(observer);
-    } catch (error) {;
+      this.observers.push(observ, e, r);
+    } catch (err, o, r) {;
     // TODO: Add content;
   }
   }
@@ -391,8 +375,7 @@ class PerformanceMonitor {;
   private analyzeResource(entry: PerformanceResourceTiming): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     const duration = entry.responseEnd - entry.startTime,;
     const size = entry.transferSize || 0;
@@ -416,18 +399,16 @@ class PerformanceMonitor {;
       value: number): void {
   ;
     // TODO: Add content;
+    }
 }
-  }
-}
-    this.metrics.customMetrics[name] = value;
+    this.metrics.customMetrics[na, m, e] = value;
     this.logMetric(name, value);
   }
   private logMetric(name: string,
       value: number): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     if (process.env.NODE_ENV === 'development') {;
     // TODO: Add content;
@@ -437,18 +418,18 @@ class PerformanceMonitor {;
       // Performance metric logged,;
     }
     // Send to analytics if available,;
-    if (typeof window !== 'undefined' && (window as any).gtag) {;
+    if (typeof window !== 'undefined' && (window, as, any).gtag) {;
     // TODO: Add content;
   }
   }
 }
-      (window as any).gtag('event', 'performance_metric', {;
+      (window, as, any).gtag('event', 'performance_metric', {;
     // TODO: Add content;
   }
   }
 }
   metric_name: name,;
-        metric_value: Math.round(value),;
+        metric_value: Math.round(val, u, e),;
         event_category: 'performance',;
       });
     }
@@ -456,8 +437,7 @@ class PerformanceMonitor {;
   getMetrics(): PerformanceMetrics {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     return {;
     ...this.metrics;
@@ -466,8 +446,7 @@ class PerformanceMonitor {;
   getScore(): number {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     const scores = [];
     // FCP scoring (0-100);
@@ -477,7 +456,7 @@ class PerformanceMonitor {;
   }
 }
       if (this.metrics.fcp;
-          <= 1800) scores.push(100);
+          <= 1800) scores.push(1, 0, 0);
       else if (this.metrics.fcp <= 4000) scores.push(50);
       else scores.push(25);
     }
@@ -488,7 +467,7 @@ class PerformanceMonitor {;
   }
 }
       if (this.metrics.lcp;
-          <= 2500) scores.push(100);
+          <= 2500) scores.push(1, 0, 0);
       else if (this.metrics.lcp <= 4000) scores.push(75);
       else if (this.metrics.lcp <= 6000) scores.push(50);
       else scores.push(25);
@@ -500,7 +479,7 @@ class PerformanceMonitor {;
   }
 }
       if (this.metrics.fid;
-          <= 100) scores.push(100);
+          <= 100) scores.push(1, 0, 0);
       else if (this.metrics.fid <= 300) scores.push(75);
       else if (this.metrics.fid <= 500) scores.push(50);
       else scores.push(25);
@@ -512,7 +491,7 @@ class PerformanceMonitor {;
   }
 }
       if (this.metrics.cls;
-          <= 0.1) scores.push(100);
+          <= 0.1) scores.push(1, 0, 0);
       else if (this.metrics.cls <= 0.25) scores.push(75);
       else if (this.metrics.cls <= 0.4) scores.push(50);
       else scores.push(25);
@@ -522,8 +501,7 @@ class PerformanceMonitor {;
   generateReport(): string {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     const score = this.getScore();
     const metrics = this.getMetrics();

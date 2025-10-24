@@ -29,7 +29,7 @@ class ErrorBoundary extends Component;
  , }
   }
 }
-    super(props);
+    super(pro, p, s);
     this.state={;
     hasError: false;
  , }}
@@ -37,8 +37,7 @@ class ErrorBoundary extends Component;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     return {;
     // TODO: Add content;
@@ -78,7 +77,7 @@ class ErrorBoundary extends Component;
  , }
   }
 }
-      (window as any).gtag('event', 'exception', {;
+      (window, as, any).gtag('event', 'exception', {;
     // TODO: Add content;
  , }
   }
@@ -103,8 +102,7 @@ class ErrorBoundary extends Component;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     // In a real application, you would send this to your error tracking service,;
     // For example: Sentr,
@@ -119,7 +117,7 @@ class ErrorBoundary extends Component;
       sessionId: this.getSessionId();
    , }
     // Send to error tracking service,;
-    this.sendToErrorService(errorReport);
+    this.sendToErrorService(errorRepo, r, t);
   }
   private getUserId = (): string | null => {;
     // TODO: Add content;
@@ -145,8 +143,7 @@ class ErrorBoundary extends Component;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     // In a real application, you would send this to your error tracking service,;
 // console.log('Error report: ', errorReport);
@@ -164,15 +161,14 @@ class ErrorBoundary extends Component;
 }
     //     'Content-Type': 'application/json',;
     //   },;
-    //   body: JSON.stringify(errorReport);
+    //   body: JSON.stringify(errorRepo, r, t);
     //, }).catch(console.error);
   }
   private handleRetry = () => {
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     this.setState({ hasError: fals,
       e, error: undefine,
@@ -182,8 +178,7 @@ class ErrorBoundary extends Component;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     window.location.reload();
   }
@@ -191,8 +186,7 @@ class ErrorBoundary extends Component;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     window.location.href = '/';
   }
@@ -234,7 +228,7 @@ class ErrorBoundary extends Component;
   }
           <details className='mb-6 text-left'></details>
                   <summary className='text-cyan-400 cursor-pointer mb-2'></summary>
-// Error Details (Development Only);
+// Error Details (Development, Onl, y);
           </summary>
                   <div className='bg-gray-800 p-4 rounded-lg text-sm text-gray-300 overflow-auto'></div>
                     <div className='mb-2'></div>
@@ -293,7 +287,7 @@ class ErrorBoundary extends Component;
                 </p>
                 <p></p>
                    <a href='tel: +13024640950' className='text-cyan-400 hover:text-cyan-300'></a>
-// +1 (302) 464-0950;
+// +1 (3, 0, 2) 464-0950;
           </a>
                 </p>
               </div>

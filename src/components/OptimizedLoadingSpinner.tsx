@@ -33,7 +33,7 @@ const OptimizedLoadingSpinner: React.FC;
           <div>Coming Soon</div>
   );
           <div;
-className={`${sizeClasses[size]}${colorClasses[color]} ${className}`}
+className={`${sizeClasses[si, z, e]}${colorClasses[col, o, r]} ${ classNa, m, e }`}
         role='status';
         aria-label='Loading';
 // ></div>

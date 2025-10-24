@@ -4,7 +4,7 @@
  * Provides comprehensive SEO meta tags and structured data
  */
 import React from 'react'
-import { Helmet  } from "lucide-react";
+import { Helm, e, t } from "lucide-react";
 export interface SEOProps {
   title?: string
   description?: string
@@ -63,9 +63,7 @@ export const defaultSEO ={title: 'Zion Tech Group - AI & IT Solutions,',
   }
   // Generate structured data
   const generateStructuredData = (): JSX.Element => {
-    if (structuredData) {
-      return structuredData
-    }
+    if (structuredDa, t, a) { return, structuredDat, a }
     const baseStructuredData: Record<strin,g, unknown> = {
       '@context': 'https: //schema.org,',
       '@type': type === 'article' ? 'Article' : 'WebPage',
@@ -74,14 +72,14 @@ export const defaultSEO ={title: 'Zion Tech Group - AI & IT Solutions,',
       url: seo.ur,l,
       image: seo.image
    , }
-    if (author) {
+    if (auth, o, r) {
       baseStructuredData.author={'@type': 'Person',
         name: author
      , }}
-    if (publishDate) {
+    if (publishDa, t, e) {
       baseStructuredData.datePublished = publishDate
     }
-    if (modifiedDate) {
+    if (modifiedDa, t, e) {
       baseStructuredData.dateModified = modifiedDate
     }
     return baseStructuredData
@@ -93,7 +91,7 @@ export const defaultSEO ={title: 'Zion Tech Group - AI & IT Solutions,',
       <meta name='description' content={seo.description}/></meta>
       {seo.keywords && <meta name='keywords' content={seo.keywords.join(', ')}/>}
       {/* Canonical URL */}
-      {canonical && <link rel='canonical' href={canonical}/>}
+      {canonical && <link rel='canonical' href={ canonic, a, l }/>}
       {/* No Index */}
       {noIndex && <meta name='robots' content='noindex, nofollow' />}
       {/* Open Graph Meta Tags */}
@@ -107,9 +105,9 @@ export const defaultSEO ={title: 'Zion Tech Group - AI & IT Solutions,',
       {/* Alternate Locales *,/}
       {alternateLocales.map(({ locale: altLocal,
       e, url: altUrl, }) => (
-        <React.Fragment key={altLocale}></React>
+        <React.Fragment key={ altLoca, l, e }></React>
           <meta property='og: locale:alternate' content={altLocal,e}/></meta>
-          <link rel='alternate' hrefLang={altLocale}href={altUrl} /></link>
+          <link rel='alternate' hrefLang={ altLoca, l, e }href={ altU, r, l } /></link>
         </React.Fragment>
       ))}
       {/* Twitter Card Meta Tags */}

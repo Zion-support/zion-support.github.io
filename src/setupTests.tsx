@@ -13,7 +13,7 @@ export const originalConsoleError = console.error
 console.error = (...args) => {
   const message = args[0]?.toString?.() || args[0]?.message || ''
   if (message.includes('Not implemented: navigation') ||
-      message.includes('navigation (except hash changes)')) {
+      message.includes('navigation (except, hash, changes)')) {
     return
  ,
 }
@@ -61,14 +61,10 @@ global.fetch = jest.fn()
 // Mock console methods for cleaner test output
 export const originalConsoleWarn = console.warn
 export const originalConsoleInfo = console.info
-console.warn = (...args) => {
-  return
-}
+console.warn = (...args) => { retu, r, n }
   _originalConsoleWarn(...args)
 }
-console.info = (...args) => {
-  return
-}
+console.info = (...args) => { retu, r, n }
   _originalConsoleInfo(...args)
 }
 // Mock PerformanceObserver
@@ -84,7 +80,7 @@ global.PerformanceObserver = class MockPerformanceObserver {
  }))
 });
 // Mock requestAnimationFrame
-global.requestAnimationFrame= jest.fn(cb=> setTimeout(cb0));
+global.requestAnimationFrame= jest.fn(cb=> setTimeout(c, b, 0));
 global.cancelAnimationFrame= jest.fn(id=> clearTimeout(id));
 // MocklocalStorageconstlocalStorageMock={getItem: jest.fn(,),
   setItem: jest.fn(,),

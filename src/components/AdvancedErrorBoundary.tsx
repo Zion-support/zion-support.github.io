@@ -38,7 +38,7 @@ interface ErrorReport {;
     url: string,;,;
     userId: string | null,;,;
     sessionId: string;
-}
+    }
 class AdvancedErrorBoundary extends Component;
           <;
 // ErrorBoundaryProps,;
@@ -55,7 +55,7 @@ class AdvancedErrorBoundary extends Component;
  , }
   }
 }
-    super(props);
+    super(pro, p, s);
     this.state={;
     // TODO: Add content;
  , }}
@@ -138,8 +138,7 @@ class AdvancedErrorBoundary extends Component;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     const _errorReport: ErrorReport = {;
     // TODO: Add content;
@@ -158,7 +157,7 @@ class AdvancedErrorBoundary extends Component;
       sessionId: this.getSessionId();
    , }
     // Send to error reporting service,;
-    this.sendErrorReport(errorReport);
+    this.sendErrorReport(errorRepo, r, t);
   }
   private getUserId = (): string | null => {;
     // TODO: Add content;
@@ -220,8 +219,7 @@ class AdvancedErrorBoundary extends Component;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     try {;
     // TODO: Add content;
@@ -242,9 +240,9 @@ class AdvancedErrorBoundary extends Component;
 }
           'Content-Type': 'application/json';
         },;
-        body: JSON.stringify(errorReport);
+        body: JSON.stringify(errorRepo, r, t);
      , });
-    } catch (reportError) {;
+    } catch (reportErr, o, r) {;
     // TODO: Add content;
  , }
   }
@@ -263,8 +261,7 @@ class AdvancedErrorBoundary extends Component;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     if (this.retryCount;
           < this.maxRetries) {;
@@ -292,8 +289,7 @@ class AdvancedErrorBoundary extends Component;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     window.location.reload();
   }
@@ -301,8 +297,7 @@ class AdvancedErrorBoundary extends Component;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     window.location.href = '/';
   }

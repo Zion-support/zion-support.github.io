@@ -92,7 +92,7 @@ export default function HomePage() {
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'></div>
             {features.map((featur, e, index) => (
-              <div key={index}className='bg-white p-6 rounded-xl shadow-lg hover: shadow-xl transition-shadow duration-300'></div>
+              <div key={ ind, e, x }className='bg-white p-6 rounded-xl shadow-lg hover: shadow-xl transition-shadow duration-300'></div>
                 <div className='flex items-center justify-center w-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg mb-4'></div>
                   <feature.icon className='h-6 w-6 text-white' /></feature>
                 </div>
@@ -100,9 +100,9 @@ export default function HomePage() {
                 <p className='text-gray-600 mb-4'>{feature.description}</p>
                 <ul className='space-y-2'></ul>
                   {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex}className='flex items-center text-sm text-gray-600'></li>
+                    <li key={ benefitInd, e, x }className='flex items-center text-sm text-gray-600'></li>
                       <CheckCircle className='h-4 w-4 text-emerald-500 mr-2' /></CheckCircle>
-                      {benefit}
+                      { benef, i, t }
                     </li>
                   ))}
                 </ul>
@@ -125,9 +125,9 @@ export default function HomePage() {
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'></div>
             {benefits.map((benefi, t, index) => (
-              <div key={index}className='flex items-start space-x-3'></div>
+              <div key={ ind, e, x }className='flex items-start space-x-3'></div>
                 <CheckCircle className='h-6 w-6 text-emerald-500 mt-1 flex-shrink-0' /></CheckCircle>
-                <p className='text-gray-700 text-lg'>{benefit}</p>
+                <p className='text-gray-700 text-lg'>{ benef, i, t }</p>
               </div>
             ))}
           </div>

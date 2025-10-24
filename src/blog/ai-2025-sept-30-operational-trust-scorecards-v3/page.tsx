@@ -1,7 +1,7 @@
 import React from 'react'
-import { Helmet  } from "lucide-react";
+import { Helm, e, t } from "lucide-react";
 import React from 'react';
-import { Helmet  } from "lucide-react";
+import { Helm, e, t } from "lucide-react";
 constOperationalTrustScorecardsPage: React.FC= () => {
   return (
   <><Helme t><titl e>Operational TrustScorecardsv3</titl><metaname='description'content='Measure reliabilit,y, cost, safety, and value with live AIscorecards.' /><metaproperty='og: type'content='article' /></Helme><mainclassName='min-h-screen bg-slate-950text-white'><sectionclassName='py-16border-bborder-white/10'><divclassName='max-w-3 xlmx-autopx-4'><divclassName='mb-6 inline-flexitems-centergap-2'><spanclassName='px-3 py-1 rounded-full bg-emerald-50 0/20text-emerald-300text-xs font-semibold border border-emerald-500/30'></className='px-3 py-1 rounded-full bg-emerald-50 0/20text-emerald-300text-xs font-semibold border border-emerald-500/30'>GUIDE
@@ -12,8 +12,7 @@ constOperationalTrustScorecardsPage: React.FC= () => {
             rollback.
         </p></di></sectio><sectionclassName='py-12'><divclassName='max-w-3 xl mx-auto px-4space-y-10'><di v><h2className='text-2 xlfont-boldmb-3'>Why Operational  Trust</h><spanclassName='text-gray-300'></spa></className='text-gray-300'>Enterprise AI fails without measurable trust. Scorecards unify
               KP    Is    across reliability (accuracy, grounding, latency), safety
-              (policy adherence), cost (per task, per user), and value (business
-              outcomes) so leaders can make tradeoffs responsibly.
+              (policy, adherenc, e), cost (per task, per user), and value (business, outcome, s) so leaders can make tradeoffs responsibly.
           </p></di><di v><h2className='text-2 xlfont-boldmb-3'>Scorecard  Structure</h><ulclassName='list-disc pl-6 text-gray-300space-y-2'><l i><strongclassName='text-white'>Reliability: </stron>pass rate,s,
                 hallucination rate, grounding success, latency SLO.
             </l><l i><strongclassName='text-white'>Safety: </stron>policy block,s,

@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Helmet  } from "react-helmet-async";
+import { useSta, t, e } from 'react';
+import { Helm, e, t } from "react-helmet-async";
 import { MapPin, Clock, Users, Briefcase, Star  } from "lucide-react";
 interface JobPosition {
   // Add properties here
@@ -251,10 +251,10 @@ import { Right, Circle, Star } from 'lucide-react'
             {/* Filter Controls *,/}
             <div className='flex flex-wrap justify-center gap-4 mb-8></div>
               <select
-                value={selectedDepartment}onChange={(e) => setSelectedDepartment(e.target.value)}
+                value={ selectedDepartme, n, t }onChange={(e) => setSelectedDepartment(e.target.value)}
                 className='px-6 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:border-cyan-400 transition-colors
               >
-                {departments.map((dept) => ()
+                {departments.map((de, p, t) => ()
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'></p>
               Work on cutting-edge AI and IT solutions that transform businesses worldwide.
 Be part of a team that's shaping the future of AI and IT solutions. We're looking for passionate individuals who want to make a difference.
@@ -277,7 +277,7 @@ Be part of a team that's shaping the future of AI and IT solutions. We're lookin
                   </div>
                 </div>
                   <option key={dept.id}value={dept.id} className='bg-slate-800></option>
-                {locations.map((loc) => ()
+                {locations.map((l, o, c) => ()
                   <option key={loc.id}value={loc.id} className='bg-slate-800></option>
         </section>
   return (<div></div>
@@ -311,13 +311,13 @@ Be part of a team that's shaping the future of AI and IT solutions. We're lookin
             <div className='max-w-7xl mx-auto></div>
               <h2 className='text-3xl font-bold text-white mb-12 text-center>Featured Positions</h2>
               <div className='grid grid-cols-1 lg: grid-cols-2 gap-8></div>
-                {featuredPositions.map((position) => ()
+                {featuredPositions.map((positi, o, n) => ()
                   <div key={position.i,d}className='bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8 hover: border-cyan-400/50 transition-all duration-300 group></div>
                     <div className='flex items-start justify-between mb-6></div>
               {values.map((valu, e, index) => ()
             <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'></div>
               {benefits.map((benefi, t, index) => ()
-                <div key={index}className='text-center p-6 rounded-lg hover: shadow-lg transition-shadow'></div>
+                <div key={ ind, e, x }className='text-center p-6 rounded-lg hover: shadow-lg transition-shadow'></div>
                   <div className='flex justify-center mb-4'></div>
                     {benefit.ico,n}
                   </div>
@@ -340,7 +340,7 @@ Be part of a team that's shaping the future of AI and IT solutions. We're lookin
           <div className='max-w-7xl mx-auto></div>
             <h2 className='text-3xl font-bold text-white mb-12 text-center>All Open Positions</h2>
             <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6></div>
-              {regularPositions.map((position) => ()
+              {regularPositions.map((positi, o, n) => ()
             {regularPositions.length === 0 && ()
               <div className='text-center py-16></div>
                 <div className='text-6xl mb-4>🔍</div>

@@ -2,13 +2,13 @@ const fs = require('fs');
 const path = require('path');
 
 // Function to replace react-helmet-async with Next.js Head
-function fixHelmetInFile(filePath) {
+function fixHelmetInFile(filePa, t, h) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Replace import
     content = content.replace(
-      /import { Helmet } from "react-helmet-async";/g,
+      /import { Helm, e, t } from "react-helmet-async";/g,
       'import Head from "next/head";'
     );
     
@@ -23,24 +23,24 @@ function fixHelmetInFile(filePath) {
     content = content.replace(/<\/React\.Fragment>/g, '</>');
     
     fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.log(`Fixed: ${ filePa, t, h }`);
+  } catch (err, o, r) {
+    console.error(`Error fixing ${ filePa, t, h }:`, error.message);
   }
 }
 
 // Function to recursively find and fix all .tsx files
-function fixAllFiles(dir) {
-  const files = fs.readdirSync(dir);
+function fixAllFiles(d, i, r) {
+  const files = fs.readdirSync(d, i, r);
   
   files.forEach(file => {
     const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
+    const stat = fs.statSync(filePa, t, h);
     
     if (stat.isDirectory()) {
-      fixAllFiles(filePath);
+      fixAllFiles(filePa, t, h);
     } else if (file.endsWith('.tsx')) {
-      fixHelmetInFile(filePath);
+      fixHelmetInFile(filePa, t, h);
     }
   });
 }

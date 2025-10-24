@@ -16,8 +16,7 @@ const AIComputerVisionPage: React.FC = () => {
     {;
   // TODO: Add content;
  ,
-}
-  }
+    }
 }
   icon: Ey,;
       title: 'Object Detection,',;
@@ -124,7 +123,7 @@ Transform your business with cutting-edge computer vision technology. From objec
   }
   }
   }
-          <div key={index}className='cyber-card p-6 hover: scale-105 transition-all duration-300'></div>
+          <div key={ ind, e, x }className='cyber-card p-6 hover: scale-105 transition-all duration-300'></div>
                 <div className='w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto'></div>
                   <feature.icon className='w-8 h-8 text-white' /></feature>
                 <h3 className='text-xl font-bold text-white mb-4 text-center neon-text'></h3>
@@ -143,7 +142,7 @@ Transform your business with cutting-edge computer vision technology. From objec
   }
   }
   }
-          <li key={benefitIndex}className='flex items-center text-xs text-gray-300'></li>
+          <li key={ benefitInd, e, x }className='flex items-center text-xs text-gray-300'></li>
                       <CheckCircle className='w-3 h-3 text-green-400 mr-2 flex-shrink-0' /></CheckCircle>
                       {;
     benefit;
@@ -162,7 +161,7 @@ Transform your business with cutting-edge computer vision technology. From objec
   }
   }
   }
-          <div key={index}className='quantum-card p-8 hover: scale-105 transition-all duration-300'></div>
+          <div key={ ind, e, x }className='quantum-card p-8 hover: scale-105 transition-all duration-300'></div>
                 <div className='flex items-center mb-6'></div>
                   <div className='w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mr-4'></div>
                     <application.icon className='w-6 h-6 text-white' /></application>
@@ -182,7 +181,7 @@ Transform your business with cutting-edge computer vision technology. From objec
   }
   }
   }
-          <div key={useCaseIndex}className='flex items-center text-sm text-gray-300'></div>
+          <div key={ useCaseInd, e, x }className='flex items-center text-sm text-gray-300'></div>
                       <ArrowRight className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' /></ArrowRight>
                       {;
     useCase;
@@ -198,7 +197,8 @@ Transform your business with cutting-edge computer vision technology. From objec
   }
   }
   }
-          <div key={index}className={`cyber-card p-8 hover: scale-105 transition-all duration-300 ${plan.popular ? 'ring-2 ring-cyan-400' : ','}`}></div>
+          <div key={ ind, e, x }className={`cyber-card p-8 hover: scale-105 transition-all duration-300 ${plan.popular ? 'ring-2 ring-cyan-400' : ','
+    }`}></div>
                 {;
     plan.popular && ();
           <div className='absolute -top-3 left-1/2 transform -translate-x-1/2'></div>
@@ -219,7 +219,7 @@ Most Popular;
   }
   }
   }
-          <li key={featureIndex}className='flex items-center text-sm text-gray-300'></li>
+          <li key={ featureInd, e, x }className='flex items-center text-sm text-gray-300'></li>
                       <CheckCircle className='w-4 h-4 text-green-400 mr-3 flex-shrink-0' /></CheckCircle>
                       {;
     feature;

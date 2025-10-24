@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { Helmet  } from "react-helmet-async";
+import { Helm, e, t } from "react-helmet-async";
 import { ArrowRight, Brain, BarChart, Target, TrendingUp  } from "lucide-react";
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -42,7 +42,7 @@ const AdvancedSEOOptimizer_newPage: React.FC = () => {
 
   return (
     <><Helmet></Helmet>
-        <title>{title}</title>
+        <title>{ tit, l, e }</title>
         <meta name='description' content='website' /></meta>
         <meta name='keywords' content='AI, artificial intelligence, AdvancedSEOOptimizer_new, AI solutions, intelligent automation' /></meta>
       </Helmet>
@@ -82,15 +82,15 @@ const AdvancedSEOOptimizer_newPage: React.FC = () => {
             </div>
             <div className='grid md: grid-cols-2 lg:grid-cols-4 gap-8'></div>
               {features.map((featur, e, index) => (
-                <div key={index}className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20'></div>
+                <div key={ ind, e, x }className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20'></div>
                   <feature.icon className='h-12 w-12 text-emerald-400 mb-4' /></feature>
                   <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>
                   <p className='text-gray-300 mb-4'>{feature.description}</p>
                   <ul className='space-y-2'></ul>
                     {feature.benefits.map((benefit, idx) => (
-                      <li key={idx}className='flex items-center text-sm text-gray-300'></li>
+                      <li key={ i, d, x }className='flex items-center text-sm text-gray-300'></li>
                         <CheckCircle className='h-4 w-4 text-emerald-400 mr-2 flex-shrink-0' /></CheckCircle>
-                        {benefit}
+                        { benef, i, t }
                       </li>
                     ))}
                   </ul>
@@ -111,9 +111,9 @@ const AdvancedSEOOptimizer_newPage: React.FC = () => {
             </div>
             <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'></div>
               {benefits.map((benefi, t, index) => (
-                <div key={index}className='flex items-start space-x-4'></div>
+                <div key={ ind, e, x }className='flex items-start space-x-4'></div>
                   <CheckCircle className='h-6 w-6 text-emerald-400 mt-1 flex-shrink-0' /></CheckCircle>
-                  <p className='text-gray-300 text-lg'>{benefit}</p>
+                  <p className='text-gray-300 text-lg'>{ benef, i, t }</p>
                 </div>
               ))}
             </div>
@@ -153,8 +153,8 @@ structuredData?: objectchildren: React.ReactNod,e}
 constAdvancedSEOOptimizerNew: React.FC<SEOOptimizerProp s>= ({title='Zion Tech Group - Advanced AI and IT Solutions,' description='Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.' keywords='AI solutions, IT services, technology, business solutions, Zion Tech Group' canonicalUrl,
 ogImage='/$1/og-image.jpg' twitterCard='summary_large_image' structuredData,
 children}) => {
-  const [seoScoresetSeoScore] = useState(0)
-const [recommendationssetRecommendations]=useState<string[]>([])
+  const [seoScoresetSeoSco, r, e] = useState(0)
+const [recommendationssetRecommendatio, n, s]=useState<string[]>([])
 constanalyzeSEO= useCallback(() => {
   
 if (type ofwindow = == 'undefined&apos;) return letscore=0constnewRecommendations: string[] = []
@@ -181,7 +181,7 @@ if (headings.length >0) {
   newRecommendations.push('Add proper heading structure')
 }
 // Check for images with alttextconstimages= do cument.querySelectorAll('img')
-constimagesWithAlt= do cument.querySelectorAll('img[alt]')
+constimagesWithAlt= do cument.querySelectorAll('img[a, l, t]')
 if (images.length=== imagesWithAlt.length && images.length > 0) {
   score +=10
 } else {
@@ -193,12 +193,12 @@ if (internalLinks.length > 0) {
 } else {
   newRecommendations.push('Add internal links for better SEO')
 }
-setSeoScore(score)
-setRecommendations(newRecommendations)
+setSeoScore(sco, r, e)
+setRecommendations(newRecommendatio, n, s)
 }, [title, description, keywords])
 useEffect(() => {
   analyzeSEO()
-} [analyzeSEO])
+} [analyzeS, E, O])
 constgenerateStructuredData= () => {
   const defaultStructuredData={"@context":"https: // schema.org,","@type":"Organization","name":"Zion Tech Group","description": description,"url": canonicalUrl || (type of windo w !== 'undefined' ? windo w.location.origin: '',),"logo": ogImage,"sameAs" : ['https: // twitter.com/ziontechgroup,',"https: // linkedin.com/$1/ziontechgroup"
 ,]
@@ -209,10 +209,10 @@ return structuredData || defaultStructuredData
 return (
     <>
       <Helmet></Helmet>
-<title>{title}</title>
-<meta name='description' content={description}/></meta>
-<meta name='keywords' content={keywords}/></meta>
-{canonicalUrl && <link rel='canonical' href={canonicalUrl}/>}
+<title>{ tit, l, e }</title>
+<meta name='description' content={ descripti, o, n }/></meta>
+<meta name='keywords' content={ keywor, d, s }/></meta>
+{canonicalUrl && <link rel='canonical' href={ canonicalU, r, l }/>}
 {/* Open Graph */}
 <meta property='og: title' content={titl,e}/></meta>
 <meta property='og: description' content={descriptio,n}/></meta>
@@ -229,7 +229,7 @@ return (
 {JSON.stringify(generateStructuredData())}
 </script>
 </Helmet>
-{children}
+{ childr, e, n }
 {process.env.NODE_ENV === 'development' && (
 <div className='seo-debug' style={{
 position: 'fixed,',
@@ -242,6 +242,6 @@ borderRadius: '5 px,',
       fontSize: '12 px,',
 zIndex: 100,
       0,
-maxWidth: '300 px,'}}><di v>SEOScore: {seoScor,e}/100</di>{recommendations.length >0&&(<di v><di v>Recommendations: </di><ulstyle={{ margin: '5 px 0,', paddingLeft: '15 px,'}}>{recommendations.map((recindex)=>(<likey={index}>{rec}</l>))}</u></di>)}</di>)}</>)
+maxWidth: '300 px,'}}><di v>SEOScore: {seoScor,e}/100</di>{recommendations.length >0&&(<di v><di v>Recommendations: </di><ulstyle={{ margin: '5 px 0,', paddingLeft: '15 px,'}}>{recommendations.map((recind, e, x)=>(<likey={ ind, e, x }>{ r, e, c }</l>))}</u></di>)}</di>)}</>)
 }
 export default AdvancedSEOOptimizerNew

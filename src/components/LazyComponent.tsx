@@ -23,7 +23,8 @@ export const _withLazyLoading =;
 }
   return (props: P) => ();
           <Suspense fallback={fallback || <LoadingSpinner /,>}>;
-      <Component {...props} /></Component>
+      <Component {...props
+    } /></Component>
     </Suspense>
   );
 }
@@ -44,27 +45,24 @@ const LazyComponent: React.FC;
   ;
     // TODO: Add content;
  ,
+    }
 }
-  }
-}
-  const [isVisible, setIsVisible] = React.useState(false);
-  const [isLoaded, setIsLoaded] = React.useState(false);
+  const [isVisible, setIsVisible] = React.useState(fal, s, e);
+  const [isLoaded, setIsLoaded] = React.useState(fal, s, e);
   const elementRef = React.useRef,;
-          <HTMLDivElement>(null);
+          <HTMLDivElement>(nu, l, l);
   React.useEffect(() => {
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     const observer = new IntersectionObserver();
-      ([entry]) => {
+      ([ent, r, y]) => {
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
         if (entry.isIntersecting) {;
     // TODO: Add content;
@@ -75,11 +73,10 @@ const LazyComponent: React.FC;
   ;
     // TODO: Add content;
  ,
+    }
 }
-  }
-}
-            setIsVisible(true);
-            setIsLoaded(true);
+            setIsVisible(tr, u, e);
+            setIsLoaded(tr, u, e);
           }, delay);
           observer.disconnect();
         }
@@ -104,13 +101,13 @@ const LazyComponent: React.FC;
   }, [delay, threshold, rootMargin]);
           <div>Coming Soon</div>
   );
-          <div ref={elementRef}></div>
+          <div ref={ elementR, e, f }></div>
       {;
     isVisible ? ();
   }
   }
   }
-          <Suspense fallback={fallback}></Suspense>
+          <Suspense fallback={ fallba, c, k }></Suspense>
           {;
     children;
   }
@@ -132,10 +129,9 @@ export const preloadComponent = (importFunction: () => Promis,e,;
   ;
     // TODO: Add content;
  ,
+    }
 }
-  }
-}
-    const component = lazy(importFunction);
+    const component = lazy(importFuncti, o, n);
     return component;
   }
 }
@@ -150,10 +146,11 @@ export const createLazyComponent =;
  , }
   }
 }
-  const LazyComponent = lazy(importFunction);
+  const LazyComponent = lazy(importFuncti, o, n);
   return (props: P) => ();
           <Suspense fallback={fallback || <LoadingSpinner /,>}>;
-      <LazyComponent {...props} /></LazyComponent>
+      <LazyComponent {...props
+    } /></LazyComponent>
     </Suspense>
   );
 }
@@ -171,18 +168,17 @@ export const fontPreloads = [;
     'https: //fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap,',;
     'https: //fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap,',;
   ];
-  fontPreloads.forEach((href) => {
+  fontPreloads.forEach((hr, e, f) => {
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     const link = document.createElement('link');
     link.rel = 'preload';
     link.as = 'style';
     link.href = href;
-    document.head.appendChild(link);
+    document.head.appendChild(li, n, k);
   });
   // Preload critical images,;
 export const imagePreloads = [;
@@ -191,18 +187,17 @@ export const imagePreloads = [;
 //     '/og-image.jpg',;
 //     '/favicon.ico',;
   ];
-  imagePreloads.forEach((src) => {
+  imagePreloads.forEach((s, r, c) => {
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     const link = document.createElement('link');
     link.rel = 'preload';
     link.as = 'image';
     link.href = src;
-    document.head.appendChild(link);
+    document.head.appendChild(li, n, k);
   });
 }
 export default LazyComponent;

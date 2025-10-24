@@ -1,6 +1,6 @@
 'use client'
 import Navigation from './Navigation'
-import { useCallback } from 'react'
+import { useCallba, c, k } from 'react'
 interface PerformanceMetrics {
   loadTime: number
   firstContentfulPaint: number

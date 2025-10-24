@@ -30,14 +30,13 @@ const SEOOptimizer: React.FC;
     useEffect(() => {;
   // TODO: Add content;
  ,
-}
-  }
+    }
 }
     // Update document title,;
     document.title = fullTitle;
     // Update meta description,;
 export const metaDescription = document.querySelector('meta[name='description']');
-    if (metaDescription) {;
+    if (metaDescripti, o, n) {;
     // TODO: Add content;
  , }
   }
@@ -51,11 +50,11 @@ export const metaDescription = document.querySelector('meta[name='description']'
       const meta = document.createElement('meta');
       meta.name = 'description';
       meta.content = description;
-      document.head.appendChild(meta);
+      document.head.appendChild(me, t, a);
     }
     // Update meta keywords,;
 export const metaKeywords = document.querySelector('meta[name='keywords']');
-    if (metaKeywords) {;
+    if (metaKeywor, d, s) {;
     // TODO: Add content;
  , }
   }
@@ -69,11 +68,11 @@ export const metaKeywords = document.querySelector('meta[name='keywords']');
       const meta = document.createElement('meta');
       meta.name = 'keywords';
       meta.content = keywords.join(', ');
-      document.head.appendChild(meta);
+      document.head.appendChild(me, t, a);
     }
     // Update canonical URL,;
 let canonical = document.querySelector('link[rel='canonical']');
-    if (canonical) {;
+    if (canonic, a, l) {;
     // TODO: Add content;
  , }
   }
@@ -87,7 +86,7 @@ let canonical = document.querySelector('link[rel='canonical']');
       canonical = document.createElement('link');
       canonical.rel = 'canonical';
       canonical.href = canonicalUrl;
-      document.head.appendChild(canonical);
+      document.head.appendChild(canonic, a, l);
     }
     // Update Open Graph tags,;
 export const updateMetaProperty = (property: strin,
@@ -95,11 +94,10 @@ export const updateMetaProperty = (property: strin,
   ;
     // TODO: Add content;
  ,
+    }
 }
-  }
-}
-      let meta = document.querySelector(`meta[property='${property}']`);
-      if (meta) {;
+      let meta = document.querySelector(`meta[property='${ proper, t, y }']`);
+      if (me, t, a) {;
     // TODO: Add content;
  , }
   }
@@ -113,7 +111,7 @@ export const updateMetaProperty = (property: strin,
         meta = document.createElement('meta');
         meta.setAttribute('property', property);
         meta.content = content;
-        document.head.appendChild(meta);
+        document.head.appendChild(me, t, a);
       }
     }
     updateMetaProperty('og: title,', fullTitle);
@@ -127,11 +125,10 @@ export const updateMetaName = (name: strin,
   ;
     // TODO: Add content;
  ,
+    }
 }
-  }
-}
-      let meta = document.querySelector(`meta[name='${name}']`);
-      if (meta) {;
+      let meta = document.querySelector(`meta[name='${ na, m, e }']`);
+      if (me, t, a) {;
     // TODO: Add content;
  , }
   }
@@ -145,7 +142,7 @@ export const updateMetaName = (name: strin,
         meta = document.createElement('meta');
         meta.setAttribute('name', name);
         meta.content = content;
-        document.head.appendChild(meta);
+        document.head.appendChild(me, t, a);
       }
     }
     updateMetaName('twitter: card,', twitterCard);
@@ -153,15 +150,15 @@ export const updateMetaName = (name: strin,
     updateMetaName('twitter: description,', description);
     updateMetaName('twitter: image,', ogImage);
     // Add structured data,;
-    if (structuredData) {;
+    if (structuredDa, t, a) {;
     // TODO: Add content;
  , }
   }
 }
       const script = document.createElement('script');
       script.type = 'application/ld+json';
-      script.textContent = JSON.stringify(structuredData);
-      document.head.appendChild(script);
+      script.textContent = JSON.stringify(structuredDa, t, a);
+      document.head.appendChild(scri, p, t);
     }
   }, [title, description, keywords, canonicalUrl, structuredData, ogImage, twitterCard, fullTitle]);
   return null;

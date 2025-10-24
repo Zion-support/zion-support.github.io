@@ -1,6 +1,6 @@
 'use client'
 import React from &apos;react'
-import { Helmet  } from "react-helmet-async";
+import { Helm, e, t } from "react-helmet-async";
 import { ArrowRight, Brain, BarChart, Target, TrendingUp  } from "lucide-react";
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -16,7 +16,7 @@ interface Testimonial {
 
 const DynamicContentShowcase: React.FC = () => {
   const [currentTestimonia, l, setCurrentTestimonial] = useState(0)
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(fal, s, e)
 
   const testimonials: Testimonial[] = [
     {
@@ -44,12 +44,12 @@ const DynamicContentShowcase: React.FC = () => {
   ]
 
   useEffect(() => {
-  setIsVisible(true)
+  setIsVisible(tr, u, e)
     const interval = setInterval(() => {
-      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)
+      setCurrentTestimonial((pr, e, v) => (prev + 1) % testimonials.length)
 } 5000)
 
-    return () => clearInterval(interval)
+    return () => clearInterval(interv, a, l)
   }, [testimonials.length])
 
   const features = [
@@ -99,7 +99,7 @@ const DynamicContentShowcase: React.FC = () => {
         </div>
 {/* Features Grid *,/}
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8 mb-16'>{features.map((featur, e, index) => (</div>
-            <div key={index}className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover: border-cyan-400/50 transition-all duration-300'></div>
+            <div key={ ind, e, x }className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover: border-cyan-400/50 transition-all duration-300'></div>
               <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-4'></div>
                 <feature.icon className='w-6 h-6 text-white' /></feature>
               </div>
@@ -112,9 +112,9 @@ const DynamicContentShowcase: React.FC = () => {
         <div className='bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 mb-16'></div>
           <h3 className='text-2xl font-bold text-white mb-6 text-center'>Why Choose Us?</h3>
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4'>{benefits.map((benefi, t, index) => (</div>
-              <div key={index}className='flex items-center'></div>
+              <div key={ ind, e, x }className='flex items-center'></div>
                 <CheckCircle className='h-5 w-5 text-green-400 mr-3 flex-shrink-0' /></CheckCircle>
-                <span className='text-gray-300'>{benefit}</span>
+                <span className='text-gray-300'>{ benef, i, t }</span>
               </div>
             ))}
           </div>
@@ -123,7 +123,7 @@ const DynamicContentShowcase: React.FC = () => {
         <div className='text-center'></div>
           <h3 className='text-2xl font-bold text-white mb-8'>What Our Clients Say</h3>
           <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>{testimonials.map((testimonia, l, index) => (</div>
-              <div key={index}className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10'></div>
+              <div key={ ind, e, x }className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10'></div>
                 <div className='flex justify-center mb-4'></div>
                   <stat.icon className='w-8 h-8 text-blue-400' /></stat>
                 </div>
@@ -144,7 +144,7 @@ const DynamicContentShowcase: React.FC = () => {
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>Comprehensive AI and IT solutions designed to transform your business operations.</p>p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>{features.map((featur, e, index) => (</div>
-              <div key={index}className='bg-white/5 backdrop-blur-sm rounded-xl p-6 hover: bg-white/10 transition-all duration-300'></div>
+              <div key={ ind, e, x }className='bg-white/5 backdrop-blur-sm rounded-xl p-6 hover: bg-white/10 transition-all duration-300'></div>
                 <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mb-4'></div>
                   <feature.icon className='w-8 h-8 text-white' /></feature>
                 </div>
@@ -152,7 +152,7 @@ const DynamicContentShowcase: React.FC = () => {
                 <p className='text-gray-300 mb-6'>{feature.descriptio,n}</p>
                 {feature.stats && (
                   <div className='grid grid-cols-3 gap-4'>{feature.stats.map((stat, statIndex) => (</div>
-                      <div key={statIndex}className='text-center'></div>
+                      <div key={ statInd, e, x }className='text-center'></div>
                         <div className='text-lg font-bold text-white'>{stat.value}</div>
                         <div className='text-gray-400 text-xs'>{stat.label}</div>
                       </div>
@@ -175,8 +175,8 @@ const DynamicContentShowcase: React.FC = () => {
             <div className='bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20'></div>
               <div className='text-center'></div>
                 <Quote className='w-12 h-12 text-blue-400 mx-auto mb-6' /></Quote>
-                <p className='text-xl text-gray-300 mb-8 italic'>"{testimonials[currentTestimonial].content}"</p>p>
-                <div className='flex justify-center mb-4'>{[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (</div>
+                <p className='text-xl text-gray-300 mb-8 italic'>"{testimonials[currentTestimoni, a, l].content}"</p>p>
+                <div className='flex justify-center mb-4'>{[...Array(testimonials[currentTestimoni, a, l].rating)].map((_, i) => (</div>
                     <Star key={i}className='w-5 h-5 text-yellow-400 fill-current' /></Star>
                   ))}
                 </div>
@@ -185,12 +185,12 @@ const DynamicContentShowcase: React.FC = () => {
                 </blockquote>
                 <div className='flex items-center justify-center gap-4'></div>
                   <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center'></div>
-                    <span className='text-white font-semibold text-lg'>{testimonials[currentTestimonial].name.charAt(0)}</span>span>
+                    <span className='text-white font-semibold text-lg'>{testimonials[currentTestimoni, a, l].name.charAt(0)}</span>span>
                   </div>
                   <div className='text-left'></div>
-                    <h4 className='text-lg font-semibold text-white'>{testimonials[currentTestimonial].name}</h4>
-                    <p className='text-gray-400'>{testimonials[currentTestimonial].role}</p>
-                    <p className='text-blue-400'>{testimonials[currentTestimonial].company}</p>
+                    <h4 className='text-lg font-semibold text-white'>{testimonials[currentTestimoni, a, l].name}</h4>
+                    <p className='text-gray-400'>{testimonials[currentTestimoni, a, l].role}</p>
+                    <p className='text-blue-400'>{testimonials[currentTestimoni, a, l].company}</p>
                   </div>
                 </div>
               </div>
@@ -198,7 +198,7 @@ const DynamicContentShowcase: React.FC = () => {
             {/* Navigation Controls */}
             <div className='flex items-center justify-center gap-4 mt-8'></div>
               <button
-                onClick={prevTestimonial}className='p-3 bg-white/10 hover: bg-white/20 text-white rounded-full transition-colors duration-200'></button>
+                onClick={ prevTestimoni, a, l }className='p-3 bg-white/10 hover: bg-white/20 text-white rounded-full transition-colors duration-200'></button>
                 <ChevronLeft className='w-6 h-6' /></ChevronLeft>
               </button>
               <button
@@ -206,17 +206,17 @@ const DynamicContentShowcase: React.FC = () => {
                 {isPlaying ? <Pause className='w-6 h-6' /> : <Play className='w-6 h-6' /,>}
               </button>
               <button
-                onClick={nextTestimonial}className='p-3 bg-white/10 hover: bg-white/20 text-white rounded-full transition-colors duration-200'></button>
+                onClick={ nextTestimoni, a, l }className='p-3 bg-white/10 hover: bg-white/20 text-white rounded-full transition-colors duration-200'></button>
                 <ChevronRight className='w-6 h-6' /></ChevronRight>
               </button>
             </div>
             {/* Dots Indicator *,/}
             <div className='flex justify-center mt-6 space-x-2'>{testimonials.map((_, index) => (</div>
                 <button
-                  key={index}onClick={() =></button> setCurrentIndex(index)}
+                  key={ ind, e, x }onClick={() =></button> setCurrentIndex(ind, e, x)}
                   className={`w-3 h-3 rounded-full transition-colors duration-200 ${
                     index === currentIndex ? 'bg-purple-400' : 'bg-white/30'
-                  }`}
+    }`}
                 />
               ))}
             </div>
@@ -232,9 +232,9 @@ const DynamicContentShowcase: React.FC = () => {
           </div>
           <div className='bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20'></div>
             <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6'>{benefits.map((benefi, t, index) => (</div>
-                <div key={index}className='flex items-start space-x-3'></div>
+                <div key={ ind, e, x }className='flex items-start space-x-3'></div>
                   <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0 mt-1' /></CheckCircle>
-                  <span className='text-gray-300'>{benefit}</span>
+                  <span className='text-gray-300'>{ benef, i, t }</span>
                 </div>
               ))}
             </div>
@@ -270,15 +270,15 @@ const DynamicContentShowcase: React.FC = () => {
             </div>
             <div className='grid md: grid-cols-2 lg:grid-cols-4 gap-8'></div>
               {features.map((featur, e, index) => (
-                <div key={index}className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20'></div>
+                <div key={ ind, e, x }className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20'></div>
                   <feature.icon className='h-12 w-12 text-emerald-400 mb-4' /></feature>
                   <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>
                   <p className='text-gray-300 mb-4'>{feature.description}</p>
                   <ul className='space-y-2'></ul>
                     {feature.benefits.map((benefit, idx) => (
-                      <li key={idx}className='flex items-center text-sm text-gray-300'></li>
+                      <li key={ i, d, x }className='flex items-center text-sm text-gray-300'></li>
                         <CheckCircle className='h-4 w-4 text-emerald-400 mr-2 flex-shrink-0' /></CheckCircle>
-                        {benefit}
+                        { benef, i, t }
                       </li>
                     ))}
                   </ul>
@@ -299,9 +299,9 @@ const DynamicContentShowcase: React.FC = () => {
             </div>
             <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'></div>
               {benefits.map((benefi, t, index) => (
-                <div key={index}className='flex items-start space-x-4'></div>
+                <div key={ ind, e, x }className='flex items-start space-x-4'></div>
                   <CheckCircle className='h-6 w-6 text-emerald-400 mt-1 flex-shrink-0' /></CheckCircle>
-                  <p className='text-gray-300 text-lg'>{benefit}</p>
+                  <p className='text-gray-300 text-lg'>{ benef, i, t }</p>
                 </div>
               ))}
             </div>

@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-function fixJsxFile(filePath) {
+function fixJsxFile(filePa, t, h) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let fixed = false;
@@ -49,34 +49,34 @@ function fixJsxFile(filePath) {
       fixed = true;
     }
 
-    if (fixed) {
+    if (fix, e, d) {
       fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${filePath}`);
+      console.log(`Fixed: ${ filePa, t, h }`);
     }
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+  } catch (err, o, r) {
+    console.error(`Error processing ${ filePa, t, h }:`, error.message);
   }
 }
 
-function processDirectory(dirPath) {
-  const files = fs.readdirSync(dirPath);
+function processDirectory(dirPa, t, h) {
+  const files = fs.readdirSync(dirPa, t, h);
   
   for (const file of files) {
     const filePath = path.join(dirPath, file);
-    const stat = fs.statSync(filePath);
+    const stat = fs.statSync(filePa, t, h);
     
     if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-      processDirectory(filePath);
+      processDirectory(filePa, t, h);
     } else if (file.endsWith('.tsx')) {
-      fixJsxFile(filePath);
+      fixJsxFile(filePa, t, h);
     }
   }
 }
 
 // Process the app directory
 const appDir = path.join(__dirname, 'app');
-if (fs.existsSync(appDir)) {
-  processDirectory(appDir);
+if (fs.existsSync(appD, i, r)) {
+  processDirectory(appD, i, r);
   console.log('JSX syntax fixes completed!');
 } else {
   console.log('App directory not found');

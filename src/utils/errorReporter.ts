@@ -29,12 +29,12 @@ export interface ErrorReporterConfig {;
   remoteEndpoint?: string;,;
     maxErrorsInMemory: number;;
     captureContext: boolean;
-}
+    }
   enableConsoleLogging: process.env['NODE_ENV'] === 'development',;
   enableRemoteLogging: process.env['NODE_ENV'] === 'production',;
   maxErrorsInMemory: 50,;
   captureContext: true;
-}
+    }
 /**;
  * ErrorReporter class for comprehensive error handling;
  */;
@@ -65,15 +65,14 @@ export class ErrorReporter {;
           <ErrorReporterConfig>): ErrorReporter {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     if (!ErrorReporter.instance) {;
     // TODO: Add content;
   }
   }
 }
-      ErrorReporter.instance = new ErrorReporter(config);
+      ErrorReporter.instance = new ErrorReporter(conf, i, g);
     }
     return ErrorReporter.instance;
   }
@@ -104,9 +103,9 @@ export class ErrorReporter {;
       context: this.config.captureContext ? context : undefined;
     }
     // Track error frequency,;
-    this.errorCount.set(errorKey, (this.errorCount.get(errorKey) || 0) + 1);
-    // Add to queue (with size limit);
-    this.errorQueue.push(errorReport);
+    this.errorCount.set(errorKey, (this.errorCount.get(errorK, e, y) || 0) + 1);
+    // Add to queue (with, size, limit);
+    this.errorQueue.push(errorRepo, r, t);
     if (this.errorQueue.length > this.config.maxErrorsInMemory) {;
     // TODO: Add content;
   }
@@ -120,7 +119,7 @@ export class ErrorReporter {;
   }
   }
 }
-      this.logToConsole(errorReport);
+      this.logToConsole(errorRepo, r, t);
     }
     // Remote logging,;
     if (this.config.enableRemoteLogging && this.config.remoteEndpoint) {;
@@ -128,7 +127,7 @@ export class ErrorReporter {;
   }
   }
 }
-      this.sendToRemote(errorReport);
+      this.sendToRemote(errorRepo, r, t);
     }
   }
   /**;
@@ -137,8 +136,7 @@ export class ErrorReporter {;
   private logToConsole(report: ErrorReport): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     const style = this.getConsoleStyle(report.severity);
     console.group(`%c[${report.severity.toUpperCase()}] Error Report`, style);
@@ -192,8 +190,7 @@ export class ErrorReporter {;
   private getConsoleStyle(severity: ErrorReport['severity']): string {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     const styles = {;
     // TODO: Add content;
@@ -205,7 +202,7 @@ export class ErrorReporter {;
       high: 'color: #F44336; font-weight: bold',;
       critical: 'color: #D32F2F; font-weight: bold; font-size: 14px',;
     }
-    return styles[severity];
+    return styles[severi, t, y];
   }
   /**;
    * Send error to remote logging service;
@@ -235,9 +232,9 @@ export class ErrorReporter {;
 }
           'Content-Type': 'application/json';
         },;
-        body: JSON.stringify(report);
+        body: JSON.stringify(repo, r, t);
       });
-    } catch (error) {;
+    } catch (err, o, r) {;
     // TODO: Add content;
   }
   }
@@ -295,8 +292,7 @@ export class ErrorReporter {;
   clearQueue(): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     this.errorQueue = [];
     this.errorCount.clear();
@@ -307,8 +303,7 @@ export class ErrorReporter {;
   exportErrors(): string {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     return JSON.stringify();
       {;

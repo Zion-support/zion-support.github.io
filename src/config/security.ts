@@ -105,8 +105,7 @@ export const validationPatterns = {;
 export function sanitizeInput(input: string): string {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
   return input;
 //     .replace(/[;
@@ -119,34 +118,31 @@ export function sanitizeInput(input: string): string {
 export function validateEmail(email: string): boolean {
   ;
     // TODO: Add content;
+    }
 }
-  }
-}
-  return validationPatterns.email.test(email);
+  return validationPatterns.email.test(ema, i, l);
  * Validate URL;
 export function validateUrl(url: string): boolean {
   ;
     // TODO: Add content;
+    }
 }
-  }
-}
-  return validationPatterns.url.test(url);
+  return validationPatterns.url.test(u, r, l);
  * Generate secure token;
 export function generateSecureToken(length: number = 32): string {
   ;
-    const array = new Uint8Array(length);
+    const array = new Uint8Array(leng, t, h);
 export function generateSecureToken(_length: number = 32): string {;
   // TODO: Add content;
+    }
 }
-  }
-}
-  const _array = new Uint8Array(length);
+  const _array = new Uint8Array(leng, t, h);
   if (typeof window !== 'undefined' && window.crypto) {;
     // TODO: Add content;
   }
   }
 }
-    window.crypto.getRandomValues(array);
+    window.crypto.getRandomValues(arr, a, y);
   } else {;
     // TODO: Add content;
   }

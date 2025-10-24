@@ -47,8 +47,7 @@ class AnalyticsTracker {;
   initialize(): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     if (typeof window === 'undefined') return;
     this.isInitialized = true;
@@ -64,8 +63,7 @@ class AnalyticsTracker {;
   trackEvent(event: AnalyticsEvent): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     if (typeof window === 'undefined') return;
       if (window.gtag) {;
@@ -100,7 +98,7 @@ class AnalyticsTracker {;
   }
   }
 }
-      this.queue.push(track);
+      this.queue.push(tra, c, k);
     }
   }
   /**;
@@ -109,15 +107,13 @@ class AnalyticsTracker {;
   trackPerformance(metrics: PerformanceMetrics): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     if (typeof window === 'undefined') return;
     const track = () => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
       if (window.gtag) {;
     // TODO: Add content;
@@ -150,7 +146,7 @@ class AnalyticsTracker {;
   }
   }
 }
-      this.queue.push(track);
+      this.queue.push(tra, c, k);
     }
   }
   /**;
@@ -161,15 +157,13 @@ class AnalyticsTracker {;
       label?: string): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     if (typeof window === 'undefined') return;
     const track = () => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
       if (window.gtag) {;
     // TODO: Add content;
@@ -182,10 +176,10 @@ class AnalyticsTracker {;
   }
 }
   name: variable,;
-          value: Math.round(value),;
+          value: Math.round(val, u, e),;
           event_category: category,;
           event_label: label;
-        });
+    });
       }
       if (process.env.NODE_ENV === 'development') {;
     // TODO: Add content;
@@ -202,7 +196,7 @@ class AnalyticsTracker {;
   }
   }
 }
-      this.queue.push(track);
+      this.queue.push(tra, c, k);
     }
   }
 }
@@ -228,8 +222,7 @@ if (typeof window !== 'undefined') {;
     window.addEventListener('load', () => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
       analyticsTracker.initialize();
     });

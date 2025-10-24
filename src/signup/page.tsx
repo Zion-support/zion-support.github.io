@@ -17,7 +17,7 @@ import {;
   }
   }
   }
-import React, { useState } from 'react';
+import React, { useSta, t, e } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const SignupPage: React.FC = () => {
@@ -46,14 +46,13 @@ const SignupPage: React.FC = () => {
       e,;
     subscribeNewsletter: false;
  , });
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(fal, s, e);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(fal, s, e);
+  const [isLoading, setIsLoading] = useState(fal, s, e);
 export const handleInputChange = (e: React.ChangeEven,t,;
           <HTMLInputElement>) => {
   ;
-}
-  }
+    }
     const { name, value, type, checked } = e.target,;
     setFormData(prev => ({;
     // TODO: Add content;
@@ -61,15 +60,14 @@ export const handleInputChange = (e: React.ChangeEven,t,;
   }
 }
 //       ...prev;
-      [name]: type === 'checkbox' ? checked : value;
+      [na, m, e]: type === 'checkbox' ? checked : value;
     }));
   }
   const handleSubmit = async (e: React.FormEvent) => {
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     e.preventDefault();
     if (formData.password !== formData.confirmPassword) {;
@@ -86,10 +84,10 @@ export const handleInputChange = (e: React.ChangeEven,t,;
   }
 }
       alert('Please agree to the terms and conditions');
-    setIsLoading(true);
+    setIsLoading(tr, u, e);
     // Simulate signup process,;
     await new Promise(resolve => setTimeout(resolve, 2000));
-    setIsLoading(false);
+    setIsLoading(fal, s, e);
     // Redirect to dashboard or home page,;
     window.location.href = '/';
   const features = [;
@@ -138,7 +136,7 @@ icon: Awar,;
 // Join thousands of businesses transforming with AI and IT solutions,;
           </p>
               </div>
-              <form onSubmit={handleSubmit}className='space-y-6'></form>
+              <form onSubmit={ handleSubm, i, t }className='space-y-6'></form>
                 <div className='grid grid-cols-1 md: grid-cols-2 gap-4'></div>
                   <div></div>
                     <label className='block text-sm font-medium text-gray-300 mb-2'></label>
@@ -289,7 +287,7 @@ Join thousands of businesses already using our AI and IT solutions;
   }
   }
   }
-          <div key={index}className='flex items-start'></div>
+          <div key={ ind, e, x }className='flex items-start'></div>
                     <div className='w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0'></div>
                       <feature.icon className='w-6 h-6 text-cyan-400' /></feature>
                       <h3 className='text-lg font-semibold text-white mb-2'>{feature.title}</h3>
@@ -306,7 +304,7 @@ Join thousands of businesses already using our AI and IT solutions;
   }
   }
   }
-          <div key={index}className='flex items-center text-sm text-gray-300'></div>
+          <div key={ ind, e, x }className='flex items-center text-sm text-gray-300'></div>
                       <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' /></CheckCircle>
                       {;
     benefit;

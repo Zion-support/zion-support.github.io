@@ -64,7 +64,7 @@ class ErrorLogger {;
       stackTrace: error?.stack;
     }
     // Add to internal log,;
-    this.logs.push(entry);
+    this.logs.push(ent, r, y);
     if (this.logs.length > this.maxLogs) {;
     // TODO: Add content;
   }
@@ -78,7 +78,7 @@ class ErrorLogger {;
   }
   }
 }
-      this.logToConsole(entry);
+      this.logToConsole(ent, r, y);
     }
     // Send to external logging service in production,;
     if (process.env['NODE_ENV'] === 'production' && severity === ErrorSeverity.CRITICAL) {;
@@ -86,7 +86,7 @@ class ErrorLogger {;
   }
   }
 }
-      this.sendToExternalService(entry);
+      this.sendToExternalService(ent, r, y);
     }
   }
   /**;
@@ -95,8 +95,7 @@ class ErrorLogger {;
   private logToConsole(entry: ErrorLogEntry): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     const styles: Record;
           <ErrorSeverity, string> = {;
@@ -184,7 +183,7 @@ class ErrorLogger {;
             : undefined;
         });
       });
-    } catch (error) {;
+    } catch (err, o, r) {;
     // TODO: Add content;
   }
   }
@@ -219,8 +218,7 @@ class ErrorLogger {;
   clearLogs(): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     this.logs = [];
   }
@@ -230,8 +228,7 @@ class ErrorLogger {;
   exportLogs(): string {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     return JSON.stringify(this.logs, null, 2);
   }

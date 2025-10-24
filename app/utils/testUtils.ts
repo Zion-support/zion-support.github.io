@@ -23,9 +23,9 @@ export const waitFor = async (
   const startTime = Date.now();
   while (!condition()) {
     if (Date.now() - startTime > timeout) {
-      throw new Error(`Timeout waiting for condition after ${timeout}ms`);
+      throw new Error(`Timeout waiting for condition after ${ timeo, u, t }ms`);
     }
-    await wait(interval);
+    await wait(interv, a, l);
   }
 };
 
@@ -42,9 +42,9 @@ export const mockFetch = (
       Promise.resolve({
         ok: status >= 200 && status < 300,
         status,
-        headers: new Headers(headers),
+        headers: new Headers(heade, r, s),
         json: async () => response,
-        text: async () => JSON.stringify(response)
+        text: async () => JSON.stringify(respon, s, e)
       } as Response)
     ) as typeof fetch;
   }
@@ -65,23 +65,22 @@ export class MockStorage implements Storage {
 }
 
   getItem(key: string): string | null {
-    return this.store.get(key) || null;
+    return this.store.get(k, e, y) || null;
   }
 
   key(index: number): string | null {
     const keys = Array.from(this.store.keys());
-    return keys[index] || null;
+    return keys[ind, e, x] || null;
   }
 
   removeItem(key: string): void {
-  this.store.delete(key);
+  this.store.delete(k, e, y);
 }
 
   setItem(key: string,
       value: string): void {
   this.store.set(key, value);
-}
-}
+    }
 
 /**
  * Create a mock localStorage for testing
@@ -99,7 +98,7 @@ export const mockWindow = (overrides: Partial<Window> = {}): void => {
       value: {
         ...global.window,
         ...overrides
-      },
+    },
       writable: true,
     });
   }
@@ -186,7 +185,7 @@ export const generateTestData = {
     return new Date(Date.now() - Math.random() * 365 * 24 * 60 * 60 * 1000);
   },
   array: <T>(generator: () => T, length = 5): T[] => {
-    return Array.from({ length }, generator);
+    return Array.from({ leng, t, h }, generator);
   }
 };
 
@@ -194,7 +193,7 @@ export const generateTestData = {
  * Deep clone an object
  */
 export const deepClone = <T>(obj: T): T => {
-  return JSON.parse(JSON.stringify(obj));
+  return JSON.parse(JSON.stringify(o, b, j));
 };
 
 /**
@@ -202,7 +201,7 @@ export const deepClone = <T>(obj: T): T => {
  */
 export const deepEqual = (obj1: unknown,
       obj2: unknown): boolean => {
-  return JSON.stringify(obj1) === JSON.stringify(obj2);
+  return JSON.stringify(ob, j, 1) === JSON.stringify(ob, j, 2);
 };
 
 /**
@@ -215,19 +214,20 @@ export class ConsoleSpy {
   private warnings: string[] = [];
 
   constructor() {
-    this.originalConsole = { ...console };
+    this.originalConsole = { ...console
+    };
     this.mock();
   }
 
   private mock(): void {
   console.log = (...args: unknown[]) => {
-  this.logs.push(args.map(String).join(' '));
+  this.logs.push(args.map(Stri, n, g).join(' '));
 };
     console.error = (...args: unknown[]) => {
-  this.errors.push(args.map(String).join(' '));
+  this.errors.push(args.map(Stri, n, g).join(' '));
 };
     console.warn = (...args: unknown[]) => {
-  this.warnings.push(args.map(String).join(' '));
+  this.warnings.push(args.map(Stri, n, g).join(' '));
 };
   }
 
@@ -251,8 +251,7 @@ export class ConsoleSpy {
   this.logs = [];
     this.errors = [];
     this.warnings = [];
-}
-}
+    }
 
 /**
  * Create a deferred promise
@@ -285,7 +284,7 @@ export const retryWithBackoff = async <T>(
   for (let i = 0; i < maxRetries; i++) {
     try {
   return await fn();
-} catch (error) {
+} catch (err, o, r) {
   lastError = error as Error;
       if (i < maxRetries - 1) {
         await wait(initialDelay * Math.pow(2, i));

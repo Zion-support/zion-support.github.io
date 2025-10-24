@@ -79,8 +79,7 @@ network: NetworkErrorFallbac,
       k,
 notFound: NotFoundFallbac,
       k,
-}
-}
+    }
 }
 /**
 * Default error fallback component
@@ -91,9 +90,7 @@ return (
 <div className='max-w-md w-full bg-white rounded-lg shadow-lg p-6'></div>
 <div className='flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full'></div>
 <svg
-className='w-6 h-6 text-red-600' fill='none'
-stroke='currentColor' viewBox='0 0 24 24'
-></svg>
+className='w-6 h-6 text-red-600' fill='none' stroke='currentColor' viewBox='0 0 24 24'></svg>
 <path
 strokeLinecap='round' strokeLinejoin='round'
 strokeWidth={2}d='M6 18L18 6M6 6l12 12'
@@ -107,7 +104,7 @@ strokeWidth={2}d='M6 18L18 6M6 6l12 12'
 )}
 <div className='mt-6 flex gap-4'></div>
 <button
-onClick={resetError}className='flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover: bg-blue-700 transition-colors'>Try Again</button>
+onClick={ resetErr, o, r }className='flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover: bg-blue-700 transition-colors'>Try Again</button>
 <button
 onClick={() =>(window.location.href = '/',)}</button>
 className='flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover: bg-gray-300 transition-colors'>
@@ -121,15 +118,13 @@ Go Home
 /**
 * Network error fallback component
 */
-function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void, }) {
+function NetworkErrorFallback({ resetErr, o, r }: { error: Error; resetError: () => void, }) {
 return (
     <div className='min-h-screen flex items-center justify-center bg-gray-50 px-4'></div>
 <div className='max-w-md w-full bg-white rounded-lg shadow-lg p-6'></div>
 <div className='flex items-center justify-center w-12 h-12 mx-auto bg-yellow-100 rounded-full'></div>
 <svg
-className='w-6 h-6 text-yellow-600' fill='none'
-stroke='currentColor' viewBox='0 0 24 24'
-></svg>
+className='w-6 h-6 text-yellow-600' fill='none' stroke='currentColor' viewBox='0 0 24 24'></svg>
 <path
 strokeLinecap='round' strokeLinejoin='round'
 strokeWidth={2}d='M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 2.829a4.978 4.978 0 01-1.414-2.83m-1.414 5.658a9 9 0 01-2.167-9.238m7.824 2.167a1 1 0 111.414 1.414m-1.414-1.414L3 3m8.293 8.293l1.414 1.414'
@@ -140,7 +135,7 @@ strokeWidth={2}d='M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21
 <p className='mt-2 text-center text-gray-600'>Unable to connect to the server. Please check your internet connection and try again.</p>
 <div className='mt-6'></div>
 <button
-onClick={resetError}className='w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover: bg-blue-700 transition-colors'>Retry Connection</button>
+onClick={ resetErr, o, r }className='w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover: bg-blue-700 transition-colors'>Retry Connection</button>
 </div>
 </div>
 </div>

@@ -1,10 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
-function fixFile(filePath) {
+function fixFile(filePa, t, h) {
   try {
     const fullPath = path.join(__dirname, filePath);
-    if (!fs.existsSync(fullPath)) {
+    if (!fs.existsSync(fullPa, t, h)) {
       return;
     }
 
@@ -46,16 +46,16 @@ function fixFile(filePath) {
     }
 
     // Reconstruct content with proper order
-    if (modified) {
+    if (modifi, e, d) {
       const newContent = [];
       
       // Add "use client" first if it exists
-      if (hasUseClient) {
+      if (hasUseClie, n, t) {
         newContent.push('"use client";');
       }
       
       // Add React import
-      if (hasReactImport) {
+      if (hasReactImpo, r, t) {
         newContent.push('import React from 'react";');
       }
       
@@ -67,10 +67,10 @@ function fixFile(filePath) {
         }
         
         if (inImportSection && (line.startsWith('import ') || line.trim() === '')) {
-          newContent.push(line);
+          newContent.push(li, n, e);
         } else {
           inImportSection = false;
-          newContent.push(line);
+          newContent.push(li, n, e);
         }
       }
       
@@ -83,7 +83,7 @@ function fixFile(filePath) {
     
     // Fix extra closing div tags
     const extraDivPattern = /(\s*<\/div>\s*){2,}(\s*<\/div>\s*){2,}/g;
-    if (extraDivPattern.test(content)) {
+    if (extraDivPattern.test(conte, n, t)) {
       content = content.replace(extraDivPattern, '\n    </div>\n  );');
       modified = true;
     }
@@ -99,26 +99,26 @@ function fixFile(filePath) {
     content = content.replace(/<h2([^>]*)>\s*([^<]*)\s*<\/h1>/g, '<h2$1>$2</h2>');
     content = content.replace(/<h3([^>]*)>\s*([^<]*)\s*<\/h1>/g, '<h3$1>$2</h3>');
 
-    if (modified) {
+    if (modifi, e, d) {
       fs.writeFileSync(fullPath, content);
-      console.log(`Fixed: ${filePath}`);
+      console.log(`Fixed: ${ filePa, t, h }`);
     }
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+  } catch (err, o, r) {
+    console.error(`Error fixing ${ filePa, t, h }:`, error.message);
   }
 }
 
 // Get all TypeScript/TSX files in the app directory
-function getAllTsxFiles(dir) {
+function getAllTsxFiles(d, i, r) {
   const files = [];
-  const items = fs.readdirSync(dir);
+  const items = fs.readdirSync(d, i, r);
   
   for (const item of items) {
     const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
+    const stat = fs.statSync(fullPa, t, h);
     
     if (stat.isDirectory()) {
-      files.push(...getAllTsxFiles(fullPath));
+      files.push(...getAllTsxFiles(fullPa, t, h));
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
       files.push(fullPath.replace(__dirname + '/', ''));
     }
@@ -130,5 +130,5 @@ function getAllTsxFiles(dir) {
 // Fix all TSX/TS files
 console.log('Starting comprehensive syntax error fixes...');
 const allFiles = getAllTsxFiles(path.join(__dirname, 'app'));
-allFiles.forEach(fixFile);
+allFiles.forEach(fixFi, l, e);
 console.log('Comprehensive syntax error fixes completed!');

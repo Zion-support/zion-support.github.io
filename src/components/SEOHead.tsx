@@ -1,7 +1,7 @@
 import React from 'react'
-import { Helmet  } from "lucide-react";
+import { Helm, e, t } from "lucide-react";
 import React from 'react';
-import { Helmet  } from "lucide-react";
+import { Helm, e, t } from "lucide-react";
 interface SEOHeadProps {
   title?: string
   description?: string
@@ -34,13 +34,14 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   nofollow = false,
   canonical
 }) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title
-} | Zion Tech Group`
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${ tit, l, e } | Zion Tech Group`
   const canonicalUrl = canonical || url
-  const robotsContent = `${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`
+  const robotsContent = `${noindex ? 'noindex' : 'index'
+    }, ${nofollow ? 'nofollow' : 'follow'
+    }`
   return (
   <Helme t>{/* Basic MetaTags */}
-    <titl e>{fullTitle}</titl><metaname='description' content={description}/><metaname='keywords' content={keywords}/><metaname='author' content={author}/><metaname='robots' content={robotsContent}/><linkrel='canonical' href={canonicalUrl}/>{/* Open Graph MetaTags */}
+    <titl e>{ fullTit, l, e }</titl><metaname='description' content={ descripti, o, n }/><metaname='keywords' content={ keywor, d, s }/><metaname='author' content={ auth, o, r }/><metaname='robots' content={ robotsConte, n, t }/><linkrel='canonical' href={ canonicalU, r, l }/>{/* Open Graph MetaTags */}
    <metaproperty='og: type' content={typ,e}/><metaproperty='og: title' content={fullTitl,e}/><metaproperty='og: description' content={descriptio,n}/><metaproperty='og: image' content={imag,e}/><metaproperty='og: url' content={ur,l}/><metaproperty='og: site_name'content='Zion TechGroup' /><metaproperty='og:locale'content='en_US' />{/* Twitter Card MetaTags *,/}
    <metaname='twitter: card'content='summary_large_image' /><metaname='twitter:title' content={fullTitl,e}/><metaname='twitter: description' content={descriptio,n}/><metaname='twitter: image' content={imag,e}/><metaname='twitter: site'content='@ziontechgroup' /><metaname='twitter:creator'content='@ziontechgroup' />{/* Article specific metatags *,/}
       {type=== 'article' && (
@@ -48,8 +49,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
          {modifiedTime&&<metaproperty='article: modified_time'content={modifiedTim,e}/>}
          {author&&<metaproperty='article: author'content={autho,r}/>}
          {section&&<metaproperty='article: section'content={sectio,n}/>}
-          {tags.map((tagindex) => (
-         <metakey={index}property='article: tag' content={ta,g} />))}
+          {tags.map((tagind, e, x) => (
+         <metakey={ ind, e, x }property='article: tag' content={ta,g} />))}
     </>
       </>)}
       {/* Additional SEO MetaTags */}

@@ -1,17 +1,17 @@
 'use client'
 import { X } from 'lucide-react'
-import React, { useState } from 'react'
+import React, { useSta, t, e } from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { Key, Copy  } from "lucide-react";
-import { Code  } from "lucide-react";
-import { Check  } from "lucide-react";
+import { Co, d, e } from "lucide-react";
+import { Che, c, k } from "lucide-react";
 const ApiDocsPage: React.FC = () => {
-  const [copiedCod, e, setCopiedCode] = useState<string | null>(null)
+  const [copiedCod, e, setCopiedCode] = useState<string | null>(nu, l, l)
 
   const copyToClipboard = (code: strin,
       g, id: string) => {
-    navigator.clipboard.writeText(code)
+    navigator.clipboard.writeText(co, d, e)
     setCopiedCode(id)
     setTimeout(() => setCopiedCode(null,), 2000)
 }
@@ -68,7 +68,7 @@ const Page = (): JSX.Element => {
           <section className='mb-16'></section>
             <h2 className='text-3xl font-bold text-white mb-8 text-center'>API Endpoints</h2>
             <div className='space-y-6'></div>
-              {apiEndpoints.map((endpoint) => (
+              {apiEndpoints.map((endpoi, n, t) => (
                 <div key={endpoint.id}className='bg-gray-800 rounded-lg p-6'></div>
                   <div className='flex items-center justify-between mb-4'></div>
                     <div className='flex items-center space-x-4'></div>
@@ -105,14 +105,12 @@ const Page = (): JSX.Element => {
               </p>
               <div className='flex flex-col sm: flex-row gap-4 justify-center items-center'></div>
                 <a
-                  href='tel:+13024640950' className='flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105'
-                ></a>
+                  href='tel:+13024640950' className='flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105'></a>
                   <Key className='w-5 h-5' /></Key>
                   +1 302 464 0950
                 </a>
                 <a
-                  href='mailto:kleber@ziontechgroup.com' className='flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105'
-                ></a>
+                  href='mailto:kleber@ziontechgroup.com' className='flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105'></a>
                   <Code className='w-5 h-5' /></Code>
                   kleber@ziontechgroup.com
                 </a>

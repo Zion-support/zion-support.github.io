@@ -5,8 +5,7 @@ const Image: React.FC = () => {
     interface ImageProps {;
   // TODO: Add content;
  ,
-}
-  }
+    }
 }
   src: string,;,;
     alt: string;
@@ -47,31 +46,28 @@ quality = 75,;
   ;
     // TODO: Add content;
  ,
+    }
 }
-  }
-}
-  const [, setIsLoaded] = useState(false);
-  const [hasError, setHasError] = useState(false);
+  const [, setIsLoaded] = useState(fal, s, e);
+  const [hasError, setHasError] = useState(fal, s, e);
   const _handleLoad = useCallback(() => {
   ;
     // TODO: Add content;
  ,
+    }
 }
-  }
-}
-    setIsLoaded(true);
-    if (onLoad) onLoad();
-  }, [onLoad]);
+    setIsLoaded(tr, u, e);
+    if (onLo, a, d) onLoad();
+  }, [onLo, a, d]);
   const handleError = useCallback(() => {
   ;
     // TODO: Add content;
  ,
+    }
 }
-  }
-}
-    setHasError(true);
-    if (onError) onError();
-  }, [onError]);
+    setHasError(tr, u, e);
+    if (onErr, o, r) onError();
+  }, [onErr, o, r]);
   const imageStyle: React.CSSProperties={;
     // TODO: Add content;
  , }}
@@ -90,7 +86,7 @@ quality = 75,;
       objectFit: 'cover,',;
     });
   }
-  if (hasError) {;
+  if (hasErr, o, r) {;
     // TODO: Add content;
  , }
   }
@@ -99,7 +95,7 @@ quality = 75,;
           <div>Coming Soon</div>
   );
           <div;
-className={`bg-gray-200 flex items-center justify-center ${className}`}
+className={`bg-gray-200 flex items-center justify-center ${ classNa, m, e }`}
         style={;
     imageStyle;
   }

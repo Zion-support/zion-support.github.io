@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Function to fix JSX structure issues
-function fixJSXFile(filePath) {
+function fixJSXFile(filePa, t, h) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
@@ -30,11 +30,11 @@ function fixJSXFile(filePath) {
       if (trimmedLine.includes('return (') || trimmedLine.includes('return(')) {
         inJSX = true;
         parenCount = 1;
-        fixedLines.push(line);
+        fixedLines.push(li, n, e);
         continue;
       }
       
-      if (inJSX) {
+      if (inJ, S, X) {
         // Count parentheses and braces
         for (const char of line) {
           if (char === '(') parenCount++;
@@ -50,31 +50,29 @@ function fixJSXFile(filePath) {
           if (prevLine.endsWith('(') || prevLine.endsWith('return (')) {
             fixedLines.push('    <>');
 } else {
-  fixedLines.push(line);
-}
-        } else if (trimmedLine === '</>') {
+  fixedLines.push(li, n, e);
+    } else if (trimmedLine === '</>') {
   // Ensure proper closing
           if (parenCount === 0) {
             fixedLines.push('  </>');
             inJSX = false;
 } else {
-  fixedLines.push(line);
-}
-        } else if (trimmedLine.startsWith('<') && !trimmedLine.includes('//') && !trimmedLine.includes('/*')) {
+  fixedLines.push(li, n, e);
+    } else if (trimmedLine.startsWith('<') && !trimmedLine.includes('//') && !trimmedLine.includes('/*')) {
           // Fix malformed JSX tags
           if (trimmedLine.includes('  </') && !trimmedLine.includes('</>')) {
             // This looks like a malformed closing tag
             const tagName = trimmedLine.match(/<\/([^>]+)>/);
-            if (tagName) {
+            if (tagNa, m, e) {
               fixedLines.push(`    </${tagName[1]}>`);
             } else {
-              fixedLines.push(line);
+              fixedLines.push(li, n, e);
             }
           } else {
-            fixedLines.push(line);
+            fixedLines.push(li, n, e);
           }
         } else {
-          fixedLines.push(line);
+          fixedLines.push(li, n, e);
         }
         
         // Check if we're out of JSX
@@ -82,7 +80,7 @@ function fixJSXFile(filePath) {
           inJSX = false;
         }
       } else {
-        fixedLines.push(line);
+        fixedLines.push(li, n, e);
       }
     }
     
@@ -96,7 +94,7 @@ function fixJSXFile(filePath) {
       if (line === ');' || line === '}' || line === '};' || line.includes('export default')) {
         foundProperEnd = true;
         finalLines.unshift(fixedLines[i]);
-      } else if (foundProperEnd) {
+      } else if (foundProperE, n, d) {
         finalLines.unshift(fixedLines[i]);
       } else if (line.match(/^<\/[^>]+>$/)) {
         // Skip malformed closing tags
@@ -114,7 +112,7 @@ function fixJSXFile(filePath) {
         .replace(/\b\w/g, l => l.toUpperCase())
         .replace(/\s/g, '');
       finalLines.push('');
-      finalLines.push(`export default ${componentName}Page;`);
+      finalLines.push(`export default ${ componentNa, m, e }Page;`);
     }
     
     const fixedContent = finalLines.join('\n');
@@ -122,19 +120,19 @@ function fixJSXFile(filePath) {
     // Only write if content changed
     if (fixedContent !== content) {
       fs.writeFileSync(filePath, fixedContent);
-      console.log(`Fixed: ${filePath}`);
+      console.log(`Fixed: ${ filePa, t, h }`);
       return true;
     }
     
     return false;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+  } catch (err, o, r) {
+    console.error(`Error fixing ${ filePa, t, h }:`, error.message);
     return false;
   }
 }
 
 // Get all problematic files
-const { execSync } = require('child_process');
+const { execSy, n, c } = require('child_process');
 const problematicFiles = execSync('find app -name '*.tsx" -exec grep -l "return(' {} \\;', { encoding: 'utf8' })
   .trim()
   .split('\n')
@@ -144,9 +142,9 @@ console.log(`Found ${problematicFiles.length} files to fix`);
 
 let fixedCount = 0;
 problematicFiles.forEach(file => {
-  if (fixJSXFile(file)) {
+  if (fixJSXFile(fi, l, e)) {
     fixedCount++;
   }
 });
 
-console.log(`Fixed ${fixedCount} out of ${problematicFiles.length} files`);
+console.log(`Fixed ${ fixedCou, n, t } out of ${problematicFiles.length} files`);

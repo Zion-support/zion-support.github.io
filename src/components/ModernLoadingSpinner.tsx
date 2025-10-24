@@ -41,10 +41,10 @@ const ModernLoadingSpinner: React.FC;
   }
   const spinnerClasses = `;
     ${;
-    sizeClasses[size];
+    sizeClasses[si, z, e];
   }
     ${;
-    colorClasses[color];
+    colorClasses[col, o, r];
   }
 //     animate-spin,;
 //     border-2;
@@ -58,10 +58,10 @@ const ModernLoadingSpinner: React.FC;
   return (;
           <div>Coming Soon</div>
   );
-          <div className={containerClasses}role='status' aria-label='Loading'></div>
+          <div className={ containerClass, e, s }role='status' aria-label='Loading'></div>
       <div className='flex flex-col items-center space-y-4'></div>
         <div className='relative'></div>
-          <div className={spinnerClasses}></div>
+          <div className={ spinnerClass, e, s }></div>
           <div className='absolute inset-0 rounded-full border-2 border-current border-opacity-20'></div>
         </div>
         {;
@@ -69,7 +69,7 @@ const ModernLoadingSpinner: React.FC;
   }
   }
   }
-          <p className='text-sm text-gray-300 animate-pulse'>{text}</p>
+          <p className='text-sm text-gray-300 animate-pulse'>{ te, x, t }</p>
         )}
       </div>
       <span className='sr-only'>Loading content, please wait...</span>

@@ -4,7 +4,7 @@ import { ArrowLeft, FileText, Lock } from "lucide-react";
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, Shield, Users } from "lucide-react";
-import { Award  } from "lucide-react";
+import { Awa, r, d } from "lucide-react";
 const CompliancePage: React.FC = () => {
   const certifications = [
     { name: 'SOC 2 Type II,&apos;, status: 'Certified',
@@ -56,7 +56,7 @@ const Page = (): JSX.Element => {
             </h2>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'></div>
               {certifications.map((cer, t, index) => (
-                <div key={index}className='bg-gray-50 rounded-lg p-6 text-center border border-gray-200'></div>
+                <div key={ ind, e, x }className='bg-gray-50 rounded-lg p-6 text-center border border-gray-200'></div>
                   <Award className='w-12 h-12 text-blue-600 mb-4 mx-auto' /></Award>
                   <h3 className='text-xl font-semibold text-gray-900 mb-2'>{cert.name}</h3>
                   <div className='flex items-center justify-center text-green-600'></div>
@@ -118,8 +118,7 @@ const Page = (): JSX.Element => {
               Our compliance team is available to answer your questions and provide additional documentation.
             </p>
             <a
-              href='mailto:compliance@ziontechgroup.com' className='bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors inline-flex items-center'
-            ></a>
+              href='mailto:compliance@ziontechgroup.com' className='bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors inline-flex items-center'></a>
               Contact Compliance Team
             </a>
             <div className='mt-8 text-sm text-blue-200'></div>

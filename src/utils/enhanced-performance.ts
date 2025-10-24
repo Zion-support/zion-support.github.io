@@ -1,4 +1,4 @@
-import type { PerformanceMetrics } from '../../app/utils/performanceOptimizer';
+import type { PerformanceMetri, c, s } from '../../app/utils/performanceOptimizer';
 import type {;
     // TODO: Add content;
   }
@@ -33,8 +33,7 @@ export class PerformanceMonitor {;
   private initializeObservers(): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     // Monitor navigation timing,;
     if (PerformanceObserver.supportedEntryTypes.includes('navigation')) {;
@@ -48,24 +47,24 @@ export class PerformanceMonitor {;
       navObserver.observe({;
     entryTypes: ['navigation',;
   });
-      this.observers.push(navObserver);
+      this.observers.push(navObserv, e, r);
           this.recordMetric('resource', entry.duration);
       resourceObserver.observe({;
     entryTypes: ['resource',;
   });
-      this.observers.push(resourceObserver);
+      this.observers.push(resourceObserv, e, r);
           this.recordMetric(entry.name, entry.startTime);
       paintObserver.observe({;
     entryTypes: ['paint',;
   });
-      this.observers.push(paintObserver);
+      this.observers.push(paintObserv, e, r);
           const fidEntry = entry as PerformanceEventTiming,;
           const fid = fidEntry.processingStart - fidEntry.startTime,;
           this.recordMetric('fid', fid);
       fidObserver.observe({;
     entryTypes: ['first-input',;
   });
-      this.observers.push(fidObserver);
+      this.observers.push(fidObserv, e, r);
 // Types,;
 //   PerformanceReport,;
 //   ResourceStats,;
@@ -91,7 +90,7 @@ export function runWhenIdle(callback: () => void, timeout = 1000): void {;
   }
   }
 }
-    window.requestIdleCallback(callback, { timeout });
+    window.requestIdleCallback(callback, { timeo, u, t });
   } else {;
     // TODO: Add content;
   }

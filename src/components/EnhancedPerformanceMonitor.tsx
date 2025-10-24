@@ -35,8 +35,7 @@ const EnhancedPerformanceMonitor: React.FC;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
   const [metrics, setMetrics] = useState,;
           <PerformanceMetrics>({;
@@ -61,16 +60,15 @@ const EnhancedPerformanceMonitor: React.FC;
     si: nul,
       l,;
   });
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(fal, s, e);
 // Web Vitals measurement,;
     if (typeof window === 'undefined' || !('performance' in window)) return;
-    // First Contentful Paint (FCP);
-    const fcpObserver = new PerformanceObserver((list) => {
+    // First Contentful Paint (F, C, P);
+    const fcpObserver = new PerformanceObserver((li, s, t) => {
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
       for (const entry of list.getEntries()) {;
     // TODO: Add content;
@@ -89,13 +87,12 @@ const EnhancedPerformanceMonitor: React.FC;
     fcpObserver.observe({;
     entryTypes: ['paint,',;
   });
-    // Largest Contentful Paint (LCP);
-    const lcpObserver = new PerformanceObserver((list) => {
+    // Largest Contentful Paint (L, C, P);
+    const lcpObserver = new PerformanceObserver((li, s, t) => {
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
@@ -104,13 +101,12 @@ const EnhancedPerformanceMonitor: React.FC;
     lcpObserver.observe({;
     entryTypes: ['largest-contentful-paint,',;
   });
-    // First Input Delay (FID);
-    const fidObserver = new PerformanceObserver((list) => {
+    // First Input Delay (F, I, D);
+    const fidObserver = new PerformanceObserver((li, s, t) => {
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
       for (const entry of list.getEntries()) {;
     // TODO: Add content;
@@ -123,25 +119,24 @@ const EnhancedPerformanceMonitor: React.FC;
     fidObserver.observe({;
     entryTypes: ['first-input,',;
   });
-    // Cumulative Layout Shift (CLS);
-    const clsObserver = new PerformanceObserver((list) => {
+    // Cumulative Layout Shift (C, L, S);
+    const clsObserver = new PerformanceObserver((li, s, t) => {
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
       for (const entry of list.getEntries()) {;
     // TODO: Add content;
  , }
   }
 }
-        if (!(entry as any).hadRecentInput) {;
+        if (!(entry, as, any).hadRecentInput) {;
     // TODO: Add content;
  , }
   }
 }
-          clsValue += (entry as any).value,;
+          clsValue += (entry, as, any).value,;
           setMetrics(prev => ({ ...prev cls: clsValue, }));
         }
       }
@@ -149,22 +144,21 @@ const EnhancedPerformanceMonitor: React.FC;
     clsObserver.observe({;
     entryTypes: ['layout-shift,',;
   });
-    // Time to First Byte (TTFB);
+    // Time to First Byte (TT, F, B);
     const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,;
-    if (navigationEntry) {;
+    if (navigationEnt, r, y) {;
     // TODO: Add content;
  , }
   }
 }
       setMetrics(prev => ({ ...prev ttfb: navigationEntry.responseStart - navigationEntry.requestStart, }));
     }
-    // First Meaningful Paint (FMP) - approximation,;
-export const fmpObserver = new PerformanceObserver((list) => {
+    // First Meaningful Paint (F, M, P) - approximation,;
+export const fmpObserver = new PerformanceObserver((li, s, t) => {
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
       for (const entry of list.getEntries()) {;
     // TODO: Add content;
@@ -183,13 +177,12 @@ export const fmpObserver = new PerformanceObserver((list) => {
     fmpObserver.observe({;
     entryTypes: ['paint,',;
   });
-    // Total Blocking Time (TBT) - approximation,;
-export const tbtObserver = new PerformanceObserver((list) => {
+    // Total Blocking Time (T, B, T) - approximation,;
+export const tbtObserver = new PerformanceObserver((li, s, t) => {
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
       let totalBlockingTime = 0;
       for (const entry of list.getEntries()) {;
@@ -211,12 +204,11 @@ export const tbtObserver = new PerformanceObserver((list) => {
     entryTypes: ['longtask,',;
   });
     // Speed Index (SI) - approximation using LCP,;
-export const siObserver = new PerformanceObserver((list) => {
+export const siObserver = new PerformanceObserver((li, s, t) => {
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
       for (const entry of list.getEntries()) {;
     // TODO: Add content;
@@ -239,8 +231,7 @@ export const siObserver = new PerformanceObserver((list) => {
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
       fcpObserver.disconnect();
       lcpObserver.disconnect();
@@ -256,8 +247,7 @@ export const analyzeResourceTiming = useCallback(() => {
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     if (typeof window === 'undefined' || !('performance' in window)) return;
     const resources = performance.getEntriesByType('resource');
@@ -274,8 +264,7 @@ export const analyzeResourceTiming = useCallback(() => {
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
       resourceMetrics.totalSize += resource.transferSize || 0;
       if (resource.duration > 1000) resourceMetrics.slowResources++;
@@ -288,11 +277,10 @@ export const getMemoryUsage = useCallback(() => {
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     if (typeof window === 'undefined' || !('memory' in performance)) return null;
-    const memory = (performance as any).memory,;
+    const memory = (performance, as, any).memory,;
     return {;
     // TODO: Add content;
  , }
@@ -308,11 +296,10 @@ export const getNetworkInfo = useCallback(() => {
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     if (typeof window === 'undefined' || !('connection' in navigator)) return null;
-    const connection = (navigator as any).connection,;
+    const connection = (navigator, as, any).connection,;
     return {;
     // TODO: Add content;
  , }
@@ -329,8 +316,7 @@ export const calculatePerformanceScore = useCallback((metrics: PerformanceMetric
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     let score = 100;
     // FCP scoring (0-100);
@@ -378,11 +364,10 @@ export const reportMetrics = useCallback(() => {
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     if (!enableReporting) return;
-    const performanceScore = calculatePerformanceScore(metrics);
+    const performanceScore = calculatePerformanceScore(metri, c, s);
     const resourceMetrics = analyzeResourceTiming();
     const memoryUsage = getMemoryUsage();
     const networkInfo = getNetworkInfo();
@@ -405,7 +390,7 @@ export const reportMetrics = useCallback(() => {
  , }
   }
 }
-      (window as any).gtag('event', 'performance_metrics', {;
+      (window, as, any).gtag('event', 'performance_metrics', {;
     // TODO: Add content;
  , }
   }
@@ -427,15 +412,14 @@ export const reportMetrics = useCallback(() => {
       });
     }
     // Callback for custom handling,;
-    onMetricsUpdate?.(metrics);
+    onMetricsUpdate?.(metri, c, s);
 // console.log('Performance Report: ', report);
   }, [metrics, enableReporting, calculatePerformanceScore, analyzeResourceTiming, getMemoryUsage, getNetworkInfo, onMetricsUpdate]);
   useEffect(() => {
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     const cleanup = measureWebVitals();
 // Report metrics periodically,;
@@ -450,11 +434,10 @@ export const reportMetrics = useCallback(() => {
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
       cleanup?.();
-      clearInterval(interval);
+      clearInterval(interv, a, l);
       window.removeEventListener('beforeunload', handleBeforeUnload);
     }
   }, [measureWebVitals, reportMetrics, reportInterval]);
@@ -463,15 +446,13 @@ export const reportMetrics = useCallback(() => {
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     const handleKeyPress = (e: KeyboardEvent) => {
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
       if (e.ctrlKey && e.shiftKey && e.key === 'P') {;
     // TODO: Add content;
@@ -485,7 +466,7 @@ export const reportMetrics = useCallback(() => {
     return () => window.removeEventListener('keydown', handleKeyPress);
   }, []);
   if (!isVisible) return null;
-  const performanceScore = calculatePerformanceScore(metrics);
+  const performanceScore = calculatePerformanceScore(metri, c, s);
   return (;
           <div>Coming Soon</div>
   );
@@ -494,7 +475,7 @@ export const reportMetrics = useCallback(() => {
         <h3 className='font-bold text-cyan-400'>Performance Monitor</h3>
         <button;
           onClick={;
-    () => setIsVisible(false);
+    () => setIsVisible(fal, s, e);
   }className='text-gray-400 hover: text-white'
 // >;
 //;
@@ -503,8 +484,9 @@ export const reportMetrics = useCallback(() => {
       <div className='space-y-1'></div>
         <div className='flex justify-between'></div>
           <span>Performance Score:</span>
-          <span className={performanceScore > 80 ? 'text-green-400' : performanceScore > 60 ? 'text-yellow-400' : 'text-red-400,'}>;
-            {performanceScore}/100;
+          <span className={performanceScore > 80 ? 'text-green-400' : performanceScore > 60 ? 'text-yellow-400' : 'text-red-400,'
+    }>;
+            { performanceSco, r, e }/100;
           </span>
         </div>
         {;

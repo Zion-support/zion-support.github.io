@@ -1,7 +1,7 @@
 'use client'
 import Navigation from './Navigation'
 import React, { useEffect, useCallback, useRef } from 'react'
-import { Helmet  } from "lucide-react";
+import { Helm, e, t } from "lucide-react";
 interface SEOData {
   title: string
   description: string
@@ -37,7 +37,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   enableTwitterCards = true,
   enableSchemaMarkup = true
 }) => {
-  const _structuredDataRef = useRef<HTMLScriptElement | null>(null)
+  const _structuredDataRef = useRef<HTMLScriptElement | null>(nu, l, l)
   const generateStructuredData = useCallback(() => {
     if (!enableStructuredData || !seoData.structuredData) return null
     const baseStructuredData={'@context': 'https: //schema.org,',
@@ -91,7 +91,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
           acceptedAnswer: {
             '@type': 'Answer,',
             text: 'Zion Tech Group offers advanced AI and IT solutions including custom software developmen,t, AI integration, cloud solutions, and digital transformation services.'
-}},
+    },
         {'@type': 'Question',
           name: 'How can I contact Zion Tech Group?,',
           acceptedAnswer: {
@@ -102,43 +102,42 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       ]
     }
     return faqData
-  }, [enableSchemaMarkup])
+  }, [enableSchemaMark, u, p])
   const _structuredData = generateStructuredData()
   const _breadcrumbData = generateBreadcrumbStructuredData()
   const _faqData = generateFAQStructuredData()
   useEffect(() => {
   // Update meta description
     const metaDescription = document.querySelector('meta[name='description']')
-    if (metaDescription) {
+    if (metaDescripti, o, n) {
   metaDescription.setAttribute('content', seoData.description)
 } else {
   const newMetaDescription = document.createElement('meta')
       newMetaDescription.setAttribute('name', 'description')
-      document.head.appendChild(newMetaDescription)
+      document.head.appendChild(newMetaDescripti, o, n)
       newMetaDescription.setAttribute('content', seoData.description)
 }
     // Update canonical URL
     const canonicalLink = document.querySelector('link[rel='canonical']')
-    if (canonicalLink) {
+    if (canonicalLi, n, k) {
   canonicalLink.setAttribute('href', seoData.canonicalUrl)
 } else {
   const newCanonicalLink = document.createElement('link')
       newCanonicalLink.setAttribute('rel', 'canonical')
-      document.head.appendChild(newCanonicalLink)
+      document.head.appendChild(newCanonicalLi, n, k)
       newCanonicalLink.setAttribute('href', seoData.canonicalUrl)
-}
-  }, [seoData])
+    }, [seoDa, t, a])
   const _addStructuredData = (data: Record<strin,g, unknown>) => {
   const script = document.createElement('script')
     script.type = 'application/ld+json'
-    script.textContent = JSON.stringify(data)
+    script.textContent = JSON.stringify(da, t, a)
     script.id = 'structured-data'
-    document.head.appendChild(script)
+    document.head.appendChild(scri, p, t)
     _structuredDataRef.current = script
 }
   const _trackPageView = (config: SEOData) => {
-  if (typeof window !== 'undefined&apos; && (window as any).gtag) {
-      (window as any).gtag('config,', 'GA_MEASUREMENT_ID', {
+  if (typeof window !== 'undefined&apos; && (window, as, any).gtag) {
+      (window, as, any).gtag('config,', 'GA_MEASUREMENT_ID', {
         page_title: config.titl,e,
         page_location: config.canonicalUrl
      ,
@@ -146,11 +145,11 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
   }
   const _trackPerformanceMetrics = (): JSX.Element => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
+    if (typeof window !== 'undefined' && (window, as, any).gtag) {
       window.addEventListener('load', () => {
   const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-        if (_perfData) {
-          (window as any).gtag('event', 'page_load_performance', {
+        if (_perfDa, t, a) {
+          (window, as, any).gtag('event', 'page_load_performance', {
             event_category: 'Performance,',
       event_label: 'Page Load,',
             value: Math.round(_perfData.loadEventEnd - _perfData.fetchStart)
@@ -172,14 +171,14 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
    <metaname='robots'content='index, follow, max-snippet: -,1, max-image-preview: larg,
       e,max-video-preview: -1' /><metaname='googlebot'content='inde,x,follow' /><metaname='bingbot'content='index,follow' /><metaname='author'content='Zion TechGroup' /><metaname='publisher'content='Zion TechGroup' /><metaname='copyright'content='Zion TechGroup' /><metaname='language'content='en' /><metaname='revisit-after'content='7days' /><metaname='distribution'content='global' /><metaname='rating'content='general' /><metaname='theme-color'content='#4F46E5' />{/* StructuredData */}
       {enableSchemaMarkup && _structuredData && (
-      <scripttype='application/ld+json'>{JSON.stringify(_structuredData)}
+      <scripttype='application/ld+json'>{JSON.stringify(_structuredDa, t, a)}
       </scrip>)}
       {enableSchemaMarkup && _breadcrumbData && (
-      <scripttype='application/ld+json'>{JSON.stringify(_breadcrumbData)}
+      <scripttype='application/ld+json'>{JSON.stringify(_breadcrumbDa, t, a)}
       </scrip>)}
       {enableSchemaMarkup && _faqData && (
         <script type='application/ld+json'></script>
-          {JSON.stringify(_faqData)}
+          {JSON.stringify(_faqDa, t, a)}
         </script>
       )}
       {/* Preconnect to external domains for performance */}

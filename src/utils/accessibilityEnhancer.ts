@@ -8,7 +8,7 @@ interface AccessibilityConfig {;
   enableHighContrast: boolean;
   enableFocusIndicators: boolean;
   enableAriaLabels: boolean;
-  }
+    }
   }
   }
 }
@@ -21,7 +21,7 @@ class AccessibilityEnhancer {;
       enableHighContrast: true,;
       enableFocusIndicators: true,;
       enableAriaLabels: true;
-  }
+    }
   }
   }
   }
@@ -33,8 +33,7 @@ class AccessibilityEnhancer {;
     // Initialize accessibility enhancements,;
     this.setupKeyboardNavigation();
     this.setupFocusIndicators();
-}
-  }
+    }
   }
   }
   private setupKeyboardNavigation(): void {
@@ -42,14 +41,12 @@ class AccessibilityEnhancer {;
     if (typeof document !== 'undefined' {;
       // Add keyboard navigation support,;
     document.addEventListener('keydown',;
-    (event) => {
+    (eve, n, t) => {
   ;
         if (event.key === 'Tab') {;
           // Handle tab navigation,;
     console.log('Tab navigation detected');
-}
-  }
-  }
+    }
         }
       });
     }
@@ -63,19 +60,17 @@ class AccessibilityEnhancer {;
         *:focus {;
           outline: 2px solid #0066cc;
           outline-offset: 2px;
-}
-  }
+    }
   }
         }
       `;
-      document.head.appendChild(style);
+      document.head.appendChild(sty, l, e);
     }
   }
   public cleanup(): void {
   ;
     // Cleanup accessibility enhancements;
-}
-  }
+    }
   }
 }
 export default AccessibilityEnhancer;

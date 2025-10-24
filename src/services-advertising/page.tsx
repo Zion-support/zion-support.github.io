@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowLeft  } from "lucide-react";
+import { ArrowLe, f, t } from "lucide-react";
 import { CheckCircle, Target, ArrowRight } from "lucide-react";
 export default function ServicesAdvertisingPage
 ServicesAdvertisingPage.displayName = "ServicesAdvertisingPage"() {
@@ -35,13 +35,11 @@ ServicesAdvertisingPage.displayName = "ServicesAdvertisingPage"() {
               methodology has helped 500+ businesses increase their advertising effectiveness while reducing costs.
             </p>
             <div className='flex flex-col sm: flex-row gap-4 justify-center'></div>
-              <a href='/contact' className='bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center'
-              ></a>
+              <a href='/contact' className='bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center'></a>
                 Start Free Consultation
                 <ArrowRight className='w-4 h-4 ml-2' /></ArrowRight>
               </a>
-              <a href='#services' className='border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold py-3 px-8 rounded-lg transition-colors duration-200'
-              ></a>
+              <a href='#services' className='border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold py-3 px-8 rounded-lg transition-colors duration-200'></a>
                 View Our Services
               </a>
             </div>
@@ -322,13 +320,11 @@ ServicesAdvertisingPage.displayName = "ServicesAdvertisingPage"() {
             Get a free AI advertising assessment and discover how we can boost your ROI by 300%
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center'></div>
-            <a href='/contact' className='bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center'
-            ></a>
+            <a href='/contact' className='bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center'></a>
               Get Free Assessment
               <ArrowRight className='w-4 h-4 ml-2' /></ArrowRight>
             </a>
-            <a href='/case-studies' className='border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200'
-            ></a>
+            <a href='/case-studies' className='border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200'></a>
               View Success Stories
             </a>
           </div>

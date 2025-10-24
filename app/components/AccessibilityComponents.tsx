@@ -7,8 +7,7 @@ interface AccessibilityComponentsProps {
 
 const AccessibilityComponents: React.FC<AccessibilityComponentsProps> = ({ className, }) => {
   return (
-    <div className={className
-}></div>
+    <div className={ classNa, m, e }></div>
       <h1>Accessibility Components</h1>
     </div>
   );

@@ -113,8 +113,10 @@ const defaultSEOConfig: SEOConfig = {
 title: 'Zion Holdings'
 description: 'Leading provider of AI-powered business solutions'
 keywords: []
-// Default SEO config;}
-const defaultSEOConfig: SEOConfig = {}
+// Default SEO config;
+    }
+const defaultSEOConfig: SEOConfig = {
+    }
 title: 'Zion Holdings'
       description: 'Leading provider of AI-powered business solutions',
 keywords: [],
@@ -147,7 +149,8 @@ url: data.url || '',
 logo: data.logo || '',
 sameAs: data.sameAs || []}
 }
-return { ...baseStructure ...data }
+return { ...baseStructure ...data
+    }
 }
 // SEO Enhancer class
 export class SEOEnhancer {
@@ -155,14 +158,16 @@ private static instance: SEOEnhancer,
 // SEO Enhancer class;}
 export class SEOEnhancer {}
 private static instance: SEOEnhancer
-private config: SEOConfig;}
-constructor(config: Partial<SEOConfig> = {}) {}</SEOConfig></<<<SEOConfig>this</SEOConfig></SEOConfig>.config = { ...defaultSEOConfig ...config }
+private config: SEOConfig;
+    }
+constructor(config: Partial<SEOConfig> = {}) {}</SEOConfig></<<<SEOConfig>this</SEOConfig></SEOConfig>.config = { ...defaultSEOConfig ...config
+    }
 }
 static getInstance(config?: Partial<SEOConfig>): SEOEnhancer {
   
 }
 if (!SEOEnhancer.instance) {}
-SEOEnhancer.instance = new SEOEnhancer(config);}
+SEOEnhancer.instance = new SEOEnhancer(conf, i, g);}
 }
 return SEOEnhancer.instance
 }
@@ -206,7 +211,7 @@ let canonical = document.querySelector('link[rel='canonical']') as HTMLLinkEleme
 if (!canonical) {}
 canonical = document.createElement('link')
 canonical.rel = 'canonical'
-document.head.appendChild(canonical);}
+document.head.appendChild(canonic, a, l);}
 }
 canonical.href = url
 }
@@ -256,10 +261,10 @@ updateStructuredData(data: Record<string, unknown>) {
 updateStructuredData(data: Record<string, unknown>) {}
 const script = document.createElement('script')
 script.type = 'application/ld+json'
-script.textContent = JSON.stringify(data)
+script.textContent = JSON.stringify(da, t, a)
 // Remove existing structured data
 const existingScript = document.querySelector('script[type='application/ld+json']')
-if (existingScript) {}
+if (existingScri, p, t) {}
 existingScript.remove();}
 // SEO Config interface
 interface SEOConfig {/* TODO: Fix JSX expression */}
@@ -267,7 +272,8 @@ interface SEOConfig {/* TODO: Fix JSX expression */}
 // Default SEO config
 const,
 defaultSEOConfig: SEOConfig = {/* TODO: Fix JSX expression */}
-a: {}
+a: {
+    }
 robot,
 s: 'index, follow',
 languag,
@@ -284,30 +290,31 @@ export const generateStructuredData = (dat,
 a: {/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
 }
-return { ...baseStructure ...data }
+return { ...baseStructure ...data
+    }
 }
 // SEO Enhancer class
 export class SEOEnhancer {/* TODO: Fix JSX expression */}
 g: Partial<SEOConfig> = {}) {/* TODO: Fix JSX expression */}
-this.config = { ...defaultSEOConfig ...config }
+this.config = { ...defaultSEOConfig ...config
+    }
 }
 static getInstance(config?: Partial<SEOConfig>): SEOEnhancer {
   /* TODO: Fix JSX expression */
-}
-}
+    }
 return SEOEnhancer.instance
 }
 // Update page title
-updateTitle(titl)
+updateTitle(ti, t, l)
 e: string) {/* TODO: Fix JSX expression */}
 }
 }
 // Update meta description
-updateDescription(descriptio)
+updateDescription(descript, i, o)
 n: string) {/* TODO: Fix JSX expression */}
 }
 // Update meta keywords
-updateKeywords(keyword)
+updateKeywords(keywo, r, d)
 s: string[]) {/* TODO: Fix JSX expression */}
 }
 // Update canonical URL
@@ -317,7 +324,7 @@ l: string) {/* TODO: Fix JSX expression */}
 canonical.href = url
 }
 // Update Open Graph tags
-updateOpenGraph(confi)
+updateOpenGraph(con, f, i)
 g: Partial<SEOConfig>) {/* TODO: Fix JSX expression */}
 t: config.title || this.config.title },
 {/* TODO: Fix JSX expression */}
@@ -346,11 +353,10 @@ t: config.tags.join(', ') })
 }
 ogTags.forEach(({ property, content }) => {
   /* TODO: Fix JSX expression */
-}
-})
+    })
 }
 // Update Twitter Card tags
-updateTwitterCard(confi)
+updateTwitterCard(con, f, i)
 g: Partial<SEOConfig>) {/* TODO: Fix JSX expression */}
 t: config.twitterCard || this.config.twitterCard },
 {/* TODO: Fix JSX expression */}
@@ -365,17 +371,17 @@ t: config.description || this.config.description },
 t: config.ogImage || this.config.ogImage }]
 twitterTags.forEach(({ name, content }) => {
   /* TODO: Fix JSX expression */
-}
-})
+    })
 }
 // Update structured data
-updateStructuredData(dat)
+updateStructuredData(d, a, t)
 a: Record<string, unknown>) {/* TODO: Fix JSX expression */}
 }
-document.head.appendChild(script)
+document.head.appendChild(scri, p, t)
 }
 // Update robots meta tag
-updateRobots(robots: string) {,;}
+updateRobots(robots: string) {,;
+    }
 this.updateMetaTag('robots', robots);}
 }
 // Update language
@@ -393,7 +399,7 @@ private updateMetaTag(nameOrProperty: string,
       content: string) {,
 if (typeof document === 'undefined') return;}
 let meta = document.querySelector(})
-`meta[name='${nameOrProperty}'], meta[property='${nameOrProperty}'])
+`meta[name='${ nameOrProper, t, y }'], meta[property='${ nameOrProper, t, y }'])
 ) as HTMLMetaElement
 if (!meta) {
 meta = document.createElement('meta')
@@ -417,7 +423,7 @@ private updateMetaTag(nameOrProperty: string,
       content: string) {}
 if (typeof document === 'undefined') return
 let meta = document.querySelector(})
-`meta[name='${nameOrProperty}'], meta[property='${nameOrProperty}']
+`meta[name='${ nameOrProper, t, y }'], meta[property='${ nameOrProper, t, y }']
 ) as HTMLMetaElement
 if (!meta) {}
 meta = document.createElement('meta')
@@ -426,16 +432,16 @@ meta.setAttribute('property', nameOrProperty);}
 } else {}
 meta.setAttribute('name', nameOrProperty);}
 // Update robots meta tag
-updateRobots(robot)
+updateRobots(rob, o, t)
 s: string) {/* TODO: Fix JSX expression */}
 }
 // Update language
-updateLanguage(languag)
+updateLanguage(langu, a, g)
 e: string) {/* TODO: Fix JSX expression */}
 }
 }
 // Update author
-updateAuthor(autho)
+updateAuthor(aut, h, o)
 r: string) {/* TODO: Fix JSX expression */}
 }
 // Helper method to update meta tags
@@ -443,12 +449,12 @@ private updateMetaTag(nameOrPropert,
 y: string,
       conten)
 t: string) {/* TODO: Fix JSX expression */}
-`meta[name='${nameOrProperty}'], meta[property='${nameOrProperty}']`
+`meta[name='${ nameOrProper, t, y }'], meta[property='${ nameOrProper, t, y }']`
 ) as HTMLMetaElement
 if (!meta) {/* TODO: Fix JSX expression */}
 } else {/* TODO: Fix JSX expression */}
 }
-document.head.appendChild(meta)
+document.head.appendChild(me, t, a)
 }
 meta.content = content
 }
@@ -465,7 +471,7 @@ pages: Array<{ url: string; lastmod: string; changefreq: string; priority: strin
 ) {}
 const sitemap = `<?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
-${pages}
+${ pag, e, s }
 .map()
 page => `  <url>}
 <loc>${page.url}</loc>
@@ -485,7 +491,7 @@ const robots = `User-agent: *,
 generateRobotsTxt(disallowPaths: string[] = []) {}
 const robots = `User-agent: *
 Allow: /`}
-${disallowPaths.map(path => `Disallow: ${path}`).join('\n')}
+${disallowPaths.map(path => `Disallow: ${ pa, t, h }`).join('\n')}
 Sitemap: ${this.config.canonicalUrl}/sitemap.xml`
 return robots
 }
@@ -494,13 +500,14 @@ initialize(config?: Partial<SEOConfig>) {
 // Initialize SEO;}
 initialize(config?: Partial<SEOConfig>) {}
 if (typeof document === 'undefined') return;}
-const finalConfig = { ...this.config, ...config }
+const finalConfig = { ...this.config, ...config
+    }
 this.updateTitle(finalConfig.title)
 this.updateDescription(finalConfig.description)
 this.updateKeywords(finalConfig.keywords)
 this.updateCanonicalUrl(finalConfig.canonicalUrl)
-this.updateOpenGraph(finalConfig)
-this.updateTwitterCard(finalConfig)
+this.updateOpenGraph(finalConf, i, g)
+this.updateTwitterCard(finalConf, i, g)
 this.updateRobots(finalConfig.robots)
 this.updateLanguage(finalConfig.language)
 this.updateAuthor(finalConfig.author)
@@ -574,9 +581,9 @@ y: string }>)
 return sitemap
 }
 // Generate robots.txt
-generateRobotsTxt(disallowPath)
+generateRobotsTxt(disallowPa, t, h)
 s: string[] = []) {/* TODO: Fix JSX expression */}`
-w: ${path}`).join('
+w: ${ pa, t, h }`).join('
 ')}
 Sitema,`
 p: ${this.config.canonicalUrl}/sitemap.xml`
@@ -584,13 +591,14 @@ return robots
 }
 // Initialize SEO
 initialize(config?: Partial<SEOConfig>) {/* TODO: Fix JSX expression */}
-const finalConfig = { ...this.config, ...config }
+const finalConfig = { ...this.config, ...config
+    }
 this.updateTitle(finalConfig.title)
 this.updateDescription(finalConfig.description)
 this.updateKeywords(finalConfig.keywords)
 this.updateCanonicalUrl(finalConfig.canonicalUrl)
-this.updateOpenGraph(finalConfig)
-this.updateTwitterCard(finalConfig)
+this.updateOpenGraph(finalConf, i, g)
+this.updateTwitterCard(finalConf, i, g)
 this.updateRobots(finalConfig.robots)
 this.updateLanguage(finalConfig.language)
 this.updateAuthor(finalConfig.author)
@@ -627,9 +635,9 @@ potentialAction: {}
 '@type': 'SearchAction',
 target: {}
 '@type': 'EntryPoint',`}
-urlTemplate: `${data.url}/search?q={search_term_string}
+urlTemplate: `${data.url}/search?q={ search_term_stri, n, g }
 if (data.type === 'WebSite') {/* TODO: Fix JSX expression */}`
-e: `${data.url}/search?q={search_term_string}`
+e: `${data.url}/search?q={ search_term_stri, n, g }`
 },
 'query-input': 'required name=search_term_string'
 }
@@ -693,10 +701,10 @@ priority: page.priority}
 export const generateRobotsTxt = useCallback((...args) => {
   `
 }
-const disallowRules = disallowPaths.map(path => `Disallow: ${path}`).join('\n')
+const disallowRules = disallowPaths.map(path => `Disallow: ${ pa, t, h }`).join('\n')
 return `User-agent: *,
-${disallowRules}
-Sitemap: ${sitemapUrl}`
+${ disallowRul, e, s }
+Sitemap: ${ sitemapU, r, l }`
 }
 // SEO validation
 export const validateSEOData = (data: {// title: string; description: string; url: string}) => {
@@ -730,13 +738,13 @@ export const generateRobotsTxt = (sitemapUr,
 l: string,
       disallowPath)
 s: string[] = []) => {/* TODO: Fix JSX expression */}`
-w: ${path}`).join('
+w: ${ pa, t, h }`).join('
 ');`
 return `User-agen,
 t: *
-${disallowRules}
+${ disallowRul, e, s }
 Sitema,`
-p: ${sitemapUrl}`
+p: ${ sitemapU, r, l }`
 }
 // SEO validation
 export const validateSEOData = (
@@ -821,8 +829,8 @@ sameAs: ['https://twitter.com/zionholdings', 'https://linkedin.com/company/zion-
 })
 const script = document.createElement('script')
 script.type = 'application/ld+json'
-script.textContent = JSON.stringify(organizationData)
-document.head.appendChild(script)
+script.textContent = JSON.stringify(organizationDa, t, a)
+document.head.appendChild(scri, p, t)
 }
 if (data.title.length < 30) {
 issues.push('Title is too short (recommended: 30-60 characters)');}
@@ -850,11 +858,10 @@ s: Array<{/* TODO: Fix JSX expression */}
 // Initialize SEO enhancements
 export const initializeSEOEnhancements = () => {
   /* TODO: Fix JSX expression */
-}
-})
+    })
 const script = document.createElement('script')
 script.type = 'application/ld+json'
-script.textContent = JSON.stringify(organizationData)
-document.head.appendChild(script)
+script.textContent = JSON.stringify(organizationDa, t, a)
+document.head.appendChild(scri, p, t)
 }
 "`

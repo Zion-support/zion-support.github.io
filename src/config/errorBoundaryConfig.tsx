@@ -68,8 +68,7 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
   const isDevelopment = process.env['NODE_ENV'] === 'development';
   return {;
@@ -169,7 +168,7 @@ className='w-6 h-6 text-red-600' fill='none';
 /**;
  * Network error fallback component;
  */;
-function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void, }) {;
+function NetworkErrorFallback({ resetErr, o, r }: { error: Error; resetError: () => void, }) {;
     // TODO: Add content;
  , }
   }

@@ -1,5 +1,5 @@
 'use client'
-import { BarChart } from 'lucide-react'
+import { BarCha, r, t } from 'lucide-react'
 import React from 'react'
 import { CheckCircle, Star, BarChart } from "lucide-react";
 import { Bot, Cpu  } from "lucide-react";
@@ -106,7 +106,7 @@ constAutonomousSystemsPage: React.FC= () => {
             </p>
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'></div>
-            {autonomousServices.map((service) => (
+            {autonomousServices.map((servi, c, e) => (
               <div key={service.i,d}className='bg-white rounded-lg shadow-lg p-8 hover: shadow-xl transition-shadow'></div>
                 <h3 className='text-2xl font-bold text-gray-900 mb-4'>{service.titl,e}</h3>
                 <p className='text-gray-600 mb-6'>{service.description}</p>
@@ -114,9 +114,9 @@ constAutonomousSystemsPage: React.FC= () => {
                   <h4 className='text-lg font-semibold text-gray-900 mb-3'>Key Features: </h4>
                   <ul className='space-y-2'></ul>
                     {service.features.map((featur, e, index) => (
-                      <li key={index}className='flex items-center text-gray-600'></li>
+                      <li key={ ind, e, x }className='flex items-center text-gray-600'></li>
                         <CheckCircle className='w-5 h-5 text-green-500 mr-2' /></CheckCircle>
-                        {feature}
+                        { featu, r, e }
                       </li>
                     ))}
                   </ul>
@@ -125,9 +125,9 @@ constAutonomousSystemsPage: React.FC= () => {
                   <h4 className='text-lg font-semibold text-gray-900 mb-3'>Benefits: </h4>
                   <ul className='space-y-2'></ul>
                     {service.benefits.map((benefi, t, index) => (
-                      <li key={index}className='flex items-center text-gray-600'></li>
+                      <li key={ ind, e, x }className='flex items-center text-gray-600'></li>
                         <Star className='w-5 h-5 text-yellow-500 mr-2' /></Star>
-                        {benefit}
+                        { benef, i, t }
                       </li>
                     ))}
                   </ul>

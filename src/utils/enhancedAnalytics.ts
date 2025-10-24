@@ -31,7 +31,8 @@ class EnhancedAnalytics {;
   }
 }
   private queue: AnalyticsEvent[] = [];
-  private _userProperties: UserProperties = {}
+  private _userProperties: UserProperties = {
+    }
   private sessionId: string;
   private isInitialized = false;
   private batchSize = 10;
@@ -49,16 +50,14 @@ class EnhancedAnalytics {;
   private generateSessionId(): string {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     return `session-${Date.now()}-${Math.random().toString(36).substring(7)}`;
   }
   private setupOfflineHandling(): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     if (typeof window !== 'undefined') {;
     // TODO: Add content;
@@ -68,16 +67,14 @@ class EnhancedAnalytics {;
       window.addEventListener('online', () => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
         this.flushOfflineQueue();
       });
       window.addEventListener('beforeunload', () => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
         this.flush();
       });
@@ -86,8 +83,7 @@ class EnhancedAnalytics {;
   private setupPeriodicFlush(): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     if (typeof window !== 'undefined') {;
     // TODO: Add content;
@@ -97,8 +93,7 @@ class EnhancedAnalytics {;
       setInterval(() => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
         this.flush();
       }, this.flushInterval);
@@ -107,8 +102,7 @@ class EnhancedAnalytics {;
   public initialize(config?: { userId?: string; userType?: string }): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     if (this.isInitialized) return;
     this.isInitialized = true;
@@ -142,8 +136,7 @@ class EnhancedAnalytics {;
   public setUserProperties(properties: UserProperties): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     this.userProperties = {;
     // TODO: Add content;
@@ -157,8 +150,7 @@ class EnhancedAnalytics {;
   public trackEvent(event: AnalyticsEvent): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     const enrichedEvent: AnalyticsEvent = {;
     // TODO: Add content;
@@ -178,9 +170,9 @@ class EnhancedAnalytics {;
       }
     }
     // Add to queue,;
-    this.queue.push(enrichedEvent);
+    this.queue.push(enrichedEve, n, t);
     // Send to gtag if available,;
-    this.sendToGtag(enrichedEvent);
+    this.sendToGtag(enrichedEve, n, t);
     // Check if we should flush,;
     if (this.queue.length >= this.batchSize) {;
     // TODO: Add content;
@@ -193,8 +185,7 @@ class EnhancedAnalytics {;
   private sendToGtag(event: AnalyticsEvent): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     if ();
       typeof window !== 'undefined' &&;
@@ -240,8 +231,7 @@ class EnhancedAnalytics {;
       pageTitle?: string): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     this.trackEvent({;
     // TODO: Add content;
@@ -265,8 +255,7 @@ class EnhancedAnalytics {;
       label?: string, value?: number): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     this.trackEvent({;
     // TODO: Add content;
@@ -284,8 +273,7 @@ class EnhancedAnalytics {;
           <string, unknown>): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     this.trackEvent({;
     // TODO: Add content;
@@ -309,8 +297,7 @@ class EnhancedAnalytics {;
       value: number, rating?: string): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     this.trackEvent({;
     // TODO: Add content;
@@ -319,7 +306,7 @@ class EnhancedAnalytics {;
 }
   category: 'Performance',;
       action: metric,;
-      value: Math.round(value),;
+      value: Math.round(val, u, e),;
       metadata: {;
     // TODO: Add content;
   }
@@ -333,8 +320,7 @@ class EnhancedAnalytics {;
       value?: number): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     this.trackEvent({;
     // TODO: Add content;
@@ -380,8 +366,7 @@ class EnhancedAnalytics {;
   private flush(): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     if (this.queue.length === 0) return;
     // Check if online,;
@@ -407,8 +392,7 @@ class EnhancedAnalytics {;
   private flushOfflineQueue(): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     if (this.offlineQueue.length === 0) return;
     // Merge offline queue into main queue,;
@@ -420,24 +404,21 @@ class EnhancedAnalytics {;
   public getQueueSize(): number {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     return this.queue.length;
   }
   public getSessionId(): string {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     return this.sessionId;
   }
   public getUserProperties(): UserProperties {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     return {;
     ...this.userProperties;
@@ -452,7 +433,7 @@ class EnhancedAnalytics {;
     offlineQueueSize: number;;
     sessionId: string;;
     userProperties: UserProperties;
-  } {;
+    } {;
     // TODO: Add content;
   }
   }

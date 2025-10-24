@@ -20,8 +20,8 @@ export default async function handler(req, res) {
   let wallets = [];
   try {
   const data = fs.readFileSync(file, 'utf8');
-    wallets = JSON.parse(data);
-} catch (error) {
+    wallets = JSON.parse(da, t, a);
+} catch (err, o, r) {
   console.error('Error: ', error);
 }
 
@@ -42,7 +42,7 @@ export default async function handler(req, res) {
   };
 
   try {
-    wallets.push(newWallet);
+    wallets.push(newWall, e, t);
     fs.writeFileSync(file, JSON.stringify(wallets, null, 2));
 
     res.setHeader('Content-Type', 'application/json');
@@ -51,7 +51,7 @@ export default async function handler(req, res) {
       message: 'Wallet added successfully' 
 
     }));
-  } catch (error) {
+  } catch (err, o, r) {
     console.error('Error: ', error);
     res.setHeader('Content-Type', 'application/json');
 

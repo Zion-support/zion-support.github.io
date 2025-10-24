@@ -53,8 +53,7 @@ class EnvValidator {;
   ;
     if (!validation.isValid) {;
   // TODO: Add content;
-}
-  }
+    }
 }
       throw new Error();
         `Environment validation failed:\n${validation.errors.join('\n')}`;
@@ -73,21 +72,20 @@ class EnvValidator {;
 //       this.errors.push('NODE_ENV is not set');
 //       return,;
     }
-    if (!validEnvs.includes(nodeEnv)) {;
+    if (!validEnvs.includes(nodeE, n, v)) {;
     // TODO: Add content;
   }
   }
 }
 //       this.errors.push();
-        `NODE_ENV must be one of: ${validEnvs.join(', ')}. Got: ${nodeEnv}`;
+        `NODE_ENV must be one of: ${validEnvs.join(', ')}. Got: ${ nodeE, n, v }`;
 //       );
     }
   }
   private validateOptionalVars(): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
     const nodeEnv = this.getNodeEnv();
     // In production, these should be set,;
@@ -102,7 +100,7 @@ class EnvValidator {;
   }
 }
 //         this.warnings.push();
-          'NEXT_PUBLIC_SITE_URL is not set (recommended for production)';
+          'NEXT_PUBLIC_SITE_URL is not set (recommended, for, production)';
 //         );
       }
       if (!process.env['NEXT_PUBLIC_GA_ID']) {;
@@ -131,8 +129,7 @@ export const envValidator = new EnvValidator();
 export function validateEnv(): EnvConfig {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
   return envValidator.getConfig();
 }

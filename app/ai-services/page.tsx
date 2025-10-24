@@ -104,7 +104,7 @@ export default function AIServicesPage() {
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'></div>
             {services.map((servic, e, index) => (
-              <div key={index}className='bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-shadow duration-300'></div>
+              <div key={ ind, e, x }className='bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-shadow duration-300'></div>
                 <div className='flex items-center justify-center w-16 h-16 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg mb-6'></div>
                   <service.icon className='h-8 w-8 text-white' /></service>
                 </div>
@@ -112,9 +112,9 @@ export default function AIServicesPage() {
                 <p className='text-gray-600 mb-6'>{service.description}</p>
                 <ul className='space-y-3'></ul>
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex}className='flex items-center text-gray-600'></li>
+                    <li key={ featureInd, e, x }className='flex items-center text-gray-600'></li>
                       <CheckCircle className='h-5 w-5 text-emerald-500 mr-3' /></CheckCircle>
-                      {feature}
+                      { featu, r, e }
                     </li>
                   ))}
                 </ul>
@@ -137,7 +137,7 @@ export default function AIServicesPage() {
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'></div>
             {process.map((ste, p, index) => (
-              <div key={index}className='text-center'></div>
+              <div key={ ind, e, x }className='text-center'></div>
                 <div className='w-16 h-16 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6'></div>
                   <span className='text-2xl font-bold text-white'>{step.step}</span>
                 </div>

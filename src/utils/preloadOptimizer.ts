@@ -5,8 +5,7 @@
 export const _preloadCriticalResources = () => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
   if (typeof window === 'undefined') return;
   // Preload critical fonts,;
@@ -26,7 +25,7 @@ const fontPreloads = [;
     link.as = 'style';
     link.href = href;
     link.crossOrigin = 'anonymous';
-//     document.head.appendChild(link);
+//     document.head.appendChild(li, n, k);
   });
   // Preload critical images,;
 const criticalImages = [;
@@ -45,14 +44,13 @@ const criticalImages = [;
     link.rel = 'preload';
     link.as = 'image';
     link.href = src;
-//     document.head.appendChild(link);
+//     document.head.appendChild(li, n, k);
   });
 }
 export const preloadRoute = (route: string) => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
   if (typeof window === 'undefined') return;
   // Preload route-specific resources,;
@@ -66,7 +64,7 @@ const routeResources = {;
     '/contact': ['/api/contact', '/images/contact-hero.jpg'];
   }
   const resources = routeResources[route as keyof typeof routeResources];
-  if (resources) {;
+  if (resourc, e, s) {;
     // TODO: Add content;
   }
   }
@@ -79,15 +77,14 @@ const routeResources = {;
       const link = document.createElement('link');
       link.rel = 'prefetch';
       link.href = resource;
-//       document.head.appendChild(link);
+//       document.head.appendChild(li, n, k);
     });
   }
 }
 export const optimizeImages = () => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
   if (typeof window === 'undefined') return;
   // Add loading='lazy' to images below the fold,;
@@ -105,11 +102,10 @@ const images = document.querySelectorAll('img[data-lazy]');
   }
   }
 }
-    const imageObserver = new IntersectionObserver((entries) => {
+    const imageObserver = new IntersectionObserver((entri, e, s) => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
       entries.forEach(entry => {;
     // TODO: Add content;
@@ -129,20 +125,19 @@ const images = document.querySelectorAll('img[data-lazy]');
 }
             img['src'] = img.dataset['src'];
 //             img.removeAttribute('data-src');
-//             imageObserver.unobserve(img);
+//             imageObserver.unobserve(i, m, g);
           }
         }
       });
     });
     const lazyImages = document.querySelectorAll('img[data-src]');
-    lazyImages.forEach(img => imageObserver.observe(img));
+    lazyImages.forEach(img => imageObserver.observe(i, m, g));
   }
 }
 export const optimizeThirdPartyScripts = () => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
   if (typeof window === 'undefined') return;
   // Defer non-critical scripts,;
@@ -162,8 +157,7 @@ const scripts = document.querySelectorAll('script[data-defer]');
 }
     document.addEventListener('DOMContentLoaded', () => {
   ;
-}
-  }
+    }
 });
   } else {;
   }
@@ -173,12 +167,11 @@ const scripts = document.querySelectorAll('script[data-defer]');
 const loadAnalytics = () => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
   // Load Google Analytics after page load,;
 const gaScript = document.createElement('script');
   gaScript.async = true;
   gaScript['src'] = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';
-//   document.head.appendChild(gaScript);
+//   document.head.appendChild(gaScri, p, t);
 }

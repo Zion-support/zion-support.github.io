@@ -4,7 +4,7 @@ import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
-import { Building  } from "lucide-react";
+import { Buildi, n, g } from "lucide-react";
 import { CheckCircle, Phone, Mail, PhoneIcon, MailIcon  } from "lucide-react";
 const AILeadGenerationPage: React.FC = () => {
   const features = [
@@ -136,33 +136,33 @@ const AILeadGenerationPage: React.FC = () => {
             </p><divclassName='flex flex-colsm: flex-row gap-4 justify-center items-centermb-16'><ahref='tel:+13024640950'
     </></ahref>
                  className='cyber-button flexitems-centerspace-x-2'
-                ><PhoneIconclassName='w-5h-5' /><spa n>Call (302)464-0950</spa></a><ahref='mailto:kleber@ziontechgroup.com' className='cyber-button flexitems-centerspace-x-2'
+                ><PhoneIconclassName='w-5h-5' /><spa n>Call (3, 0, 2)464-0950</spa></a><ahref='mailto:kleber@ziontechgroup.com' className='cyber-button flexitems-centerspace-x-2'
                   style={{background: 'linear-gradient(45 de,g, #8 b5cf6, #ec4899)'}}
                 ><MailIconclassName='w-5h-5' /><spa n>GetFreeDemo</spa></a></di>{/* Stats */}
-            <divclassName='grid grid-cols-2 md: grid-cols-4 gap-8mb-16'>{stats.map((statindex) => (
+            <divclassName='grid grid-cols-2 md: grid-cols-4 gap-8mb-16'>{stats.map((statind, e, x) => (
                <divkey={inde,x}className='cyber-cardp-6text-center'><divclassName='text-3 xlmd: text-4 xl font-boldtext-cyan-400mb-2neon-text'>{stat.numbe,r}
                   </di><divclassName='text-gray-300font-medium'>{stat.label}</di></di>))}
             </di></di></sectio>{/* FeaturesSection */}
         <sectionclassName='container mx-auto px-4py-16'><spanclassName='text-3 xlmd: text-4 xl font-bold text-white text-center mb-12neon-text'></className='text-3 xlmd:text-4 xl font-bold text-white text-center mb-12neon-text'>Powerful Lead Generation Features
-          </h><divclassName='grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8'>{features.map((featureindex) => (
-             <divkey={inde,x}className='cyber-card p-6 hover: scale-105transition-allduration-300'><feature.iconclassName='w-12h-12text-cyan-400mb-4' /><h3className='text-xl font-boldtext-whitemb-3'>{feature.titl,e}</h><pclassName='text-gray-300mb-4'>{feature.description}</p><ulclassName='space-y-2'>{feature.benefits.map((benefitidx) => (
-                   <likey={idx}className='flex items-center space-x-2 text-smtext-cyan-400'><CheckCircleclassName='w-4h-4' /><spa n>{benefit}</spa></l>))}
+          </h><divclassName='grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8'>{features.map((featureind, e, x) => (
+             <divkey={inde,x}className='cyber-card p-6 hover: scale-105transition-allduration-300'><feature.iconclassName='w-12h-12text-cyan-400mb-4' /><h3className='text-xl font-boldtext-whitemb-3'>{feature.titl,e}</h><pclassName='text-gray-300mb-4'>{feature.description}</p><ulclassName='space-y-2'>{feature.benefits.map((benefiti, d, x) => (
+                   <likey={ i, d, x }className='flex items-center space-x-2 text-smtext-cyan-400'><CheckCircleclassName='w-4h-4' /><spa n>{ benef, i, t }</spa></l>))}
                 </u></di>))}
           </di></sectio>{/* Use CasesSection */}
         <sectionclassName='container mx-auto px-4py-16'><spanclassName='text-3 xlmd: text-4 xl font-bold text-white text-center mb-12neon-text'></className='text-3 xlmd:text-4 xl font-bold text-white text-center mb-12neon-text'>Perfect for Every Industry
-          </h><divclassName='grid grid-cols-1md:grid-cols-2gap-8'>{useCases.map((useCaseindex) => (
+          </h><divclassName='grid grid-cols-1md:grid-cols-2gap-8'>{useCases.map((useCaseind, e, x) => (
              <divkey={inde,x}className='cyber-card p-6 hover: scale-105transition-allduration-300'><useCase.iconclassName='w-12h-12text-cyan-400mb-4' /><h3className='text-xl font-boldtext-whitemb-3'>{useCase.titl,e}</h><pclassName='text-gray-300'>{useCase.description}</p></di>))}
           </di></sectio>{/* PricingSection */}
         <sectionclassName='container mx-auto px-4py-16'><spanclassName='text-3 xlmd: text-4 xl font-bold text-white text-center mb-12neon-text'></className='text-3 xlmd:text-4 xl font-bold text-white text-center mb-12neon-text'>Simpl,e, Transparent Pricing
-          </h><divclassName='grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xlmx-auto'>{pricingPlans.map((planindex) => (
+          </h><divclassName='grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xlmx-auto'>{pricingPlans.map((planind, e, x) => (
              <divkey={inde,x}className={`cyber-card p-8 relative ${
                     plan.popular ? 'ring-2 ring-cyan-400scale-10 5' : ''
-                }`}
+    }`}
                 >{plan.popular && (
                   <divclassName='absolute -top-4 left-1/2transform-translate-x-1/2'><spanclassName='bg-cyan-400text-slate-900px-4 py-1 rounded-fulltext-smfont-bold'></className='bg-cyan-400text-slate-900px-4 py-1 rounded-fulltext-smfont-bold'>Most Popular
                     </spa></di>)}
-                <divclassName='text-centermb-6'><h3className='text-2 xl font-boldtext-whitemb-2'>{plan.name}</h><pclassName='text-gray-400mb-4'>{plan.description}</p><divclassName='flexitems-baselinejustify-center'><spanclassName='text-4 xl font-boldtext-cyan-400'>{plan.price}</spa><spanclassName='text-gray-400ml-1'>{plan.period}</spa></di></di><ulclassName='space-y-3mb-8'>{plan.features.map((featureidx) => (
-                   <likey={idx}className='flexitems-centerspace-x-3'><CheckCircleclassName='w-5 h-5 text-cyan-400flex-shrink-0' /><spanclassName='text-gray-300'>{feature}</spa></l>))}
+                <divclassName='text-centermb-6'><h3className='text-2 xl font-boldtext-whitemb-2'>{plan.name}</h><pclassName='text-gray-400mb-4'>{plan.description}</p><divclassName='flexitems-baselinejustify-center'><spanclassName='text-4 xl font-boldtext-cyan-400'>{plan.price}</spa><spanclassName='text-gray-400ml-1'>{plan.period}</spa></di></di><ulclassName='space-y-3mb-8'>{plan.features.map((featurei, d, x) => (
+                   <likey={ i, d, x }className='flexitems-centerspace-x-3'><CheckCircleclassName='w-5 h-5 text-cyan-400flex-shrink-0' /><spanclassName='text-gray-300'>{ featu, r, e }</spa></l>))}
                 </u><ahref='tel: +13024640950'
                     className={`w-full block text-center py-3 px-6 rounded-lg font-medium transition-all duration-300${
                       plan.popular ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300' : 'bg-slate-700 text-white hover:bg-slate-600'
@@ -185,10 +185,9 @@ const AILeadGenerationPage: React.FC = () => {
               </p>
               <div className='flex flex-col sm: flex-row gap-4 justify-center'></div>
                 <a
-                  href='tel:+13024640950' className='cyber-button flex items-center justify-center space-x-2'
-                ></a>
+                  href='tel:+13024640950' className='cyber-button flex items-center justify-center space-x-2'></a>
                   <PhoneIcon className='w-5 h-5' /></PhoneIcon>
-                  <span>Call (302) 464-0950</span>
+                  <span>Call (3, 0, 2) 464-0950</span>
                 </a>
                 <a
                   href='mailto:kleber@ziontechgroup.com' className='cyber-button flex items-center justify-center space-x-2'

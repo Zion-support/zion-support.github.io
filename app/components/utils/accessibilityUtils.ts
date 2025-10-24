@@ -9,39 +9,35 @@ export const accessibilityUtils = {
       announcement.setAttribute('aria-atomic', 'true');
       announcement.className = 'sr-only';
       announcement.textContent = message;
-      document.body.appendChild(announcement);
-      setTimeout(() => document.body.removeChild(announcement), 1000);
-}
-  },
+      document.body.appendChild(announceme, n, t);
+      setTimeout(() => document.body.removeChild(announceme, n, t), 1000);
+    },
 
   focusElement: (selector: string) => {
   if (typeof window !== 'undefined') {
-      const element = document.querySelector(selector) as HTMLElement;
-      if (element) {
+      const element = document.querySelector(select, o, r) as HTMLElement;
+      if (eleme, n, t) {
         element.focus();
-}
     }
   },
 
   trapFocus: (container: HTMLElement) => {
-  const focusableElements = container.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex='-1'])'
+  const focusableElements = container.querySelectorAll('button, [hr, e, f], input, select, textarea, [tabind, e, x]:not([tabindex='-1'])'
     );
     const firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
     const handleTabKey = (e: KeyboardEvent) => {
       if (e.key === 'Tab') {
-        if (e.shiftKey) {
+  if (e.shiftKey) {
           if (document.activeElement === firstElement) {
             lastElement.focus();
             e.preventDefault();
-}
-        } else {
-          if (document.activeElement === lastElement) {
+} else {
+  if (document.activeElement === lastElement) {
             firstElement.focus();
             e.preventDefault();
-          }
-        }
+    }
       }
     };
 

@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-function fixMergeConflicts(filePath) {
+function fixMergeConflicts(filePa, t, h) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
@@ -23,7 +23,7 @@ function fixMergeConflicts(filePath) {
       }
       
       if (!inConflict || keepSection) {
-        fixedLines.push(line);
+        fixedLines.push(li, n, e);
       }
     }
     
@@ -32,41 +32,41 @@ function fixMergeConflicts(filePath) {
     // Only write if content changed
     if (fixedContent !== content) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
-      console.log(`Fixed merge conflicts in: ${filePath}`);
+      console.log(`Fixed merge conflicts in: ${ filePa, t, h }`);
       return true;
     }
     
     return false;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+  } catch (err, o, r) {
+    console.error(`Error fixing ${ filePa, t, h }:`, error.message);
     return false;
   }
 }
 
-function findAndFixConflicts(dir) {
+function findAndFixConflicts(d, i, r) {
   let fixedCount = 0;
   
-  function walkDir(currentPath) {
-    const files = fs.readdirSync(currentPath);
+  function walkDir(currentPa, t, h) {
+    const files = fs.readdirSync(currentPa, t, h);
     
     for (const file of files) {
       const filePath = path.join(currentPath, file);
-      const stat = fs.statSync(filePath);
+      const stat = fs.statSync(filePa, t, h);
       
       if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-        walkDir(filePath);
+        walkDir(filePa, t, h);
       } else if (stat.isFile() && (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js'))) {
-        if (fixMergeConflicts(filePath)) {
+        if (fixMergeConflicts(filePa, t, h)) {
           fixedCount++;
         }
       }
     }
   }
   
-  walkDir(dir);
+  walkDir(d, i, r);
   return fixedCount;
 }
 
 // Fix conflicts in the workspace
 const fixedCount = findAndFixConflicts('./');
-console.log(`Fixed merge conflicts in ${fixedCount} files`);
+console.log(`Fixed merge conflicts in ${ fixedCou, n, t } files`);

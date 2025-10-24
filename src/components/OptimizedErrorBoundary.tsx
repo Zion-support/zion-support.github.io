@@ -21,7 +21,7 @@ interface State {;
     error: Error | null,;,;
     errorInfo: ErrorInfo | null,;,;
     errorId: string;
-}
+    }
 class OptimizedErrorBoundary extends Component;
           <;
 // OptimizedErrorBoundaryProps,;
@@ -37,7 +37,7 @@ class OptimizedErrorBoundary extends Component;
  , }
   }
 }
-    super(props);
+    super(pro, p, s);
     this.state={;
     // TODO: Add content;
  , }}
@@ -112,7 +112,7 @@ class OptimizedErrorBoundary extends Component;
   }
 }
     const { resetKeys, resetOnPropsChange } = this.props,;
-    const { hasError } = this.state,;
+    const { hasErr, o, r } = this.state,;
     if (hasError && prevProps.resetKeys !== resetKeys) {;
     // TODO: Add content;
  , }
@@ -123,7 +123,7 @@ class OptimizedErrorBoundary extends Component;
     index) => key !== prevProps.resetKeys?.[index,;
         );
   }
-        if (hasResetKeyChanged) {;
+        if (hasResetKeyChang, e, d) {;
     // TODO: Add content;
  , }
   }
@@ -162,8 +162,7 @@ class OptimizedErrorBoundary extends Component;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     // Report to error monitoring service,;
     if (typeof window !== 'undefined' && 'gtag' in window) {;
@@ -210,8 +209,7 @@ class OptimizedErrorBoundary extends Component;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     if (this.resetTimeoutId) {;
     // TODO: Add content;
@@ -224,8 +222,7 @@ class OptimizedErrorBoundary extends Component;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
       this.setState({;
     // TODO: Add content;
@@ -246,8 +243,7 @@ class OptimizedErrorBoundary extends Component;
   ;
     // TODO: Add content;
  ,
-}
-  }
+    }
 }
     this.resetErrorBoundary();
   }
@@ -334,7 +330,7 @@ className='w-6 h-6 text-red-600';
   }
           <details className='mb-4 text-left'></details>
             <summary className='cursor-pointer text-sm text-gray-500 hover: text-gray-700'></summary>
-// Error Details (Development);
+// Error Details (Developme, n, t);
           </summary>
             <div className='mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto'></div>
               <div className='mb-2'></div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { CheckCircle, Phone, Mail, TrendingUp, Helmet  } from "lucide-react";
-import { MapPin  } from "lucide-react";
+import { MapP, i, n } from "lucide-react";
 import React from 'react';
 import { CheckCircle, Phone, Mail, Star, Brain, Target, TrendingUp, Camera, Palette, Video, Music, Calendar, Code, Bot, Helmet, MapPin, Check  } from "lucide-react";
 constMicroSAASPage: React.FC= () => {
@@ -3181,7 +3181,7 @@ constMicroSAASPage: React.FC= () => {
           </h2>
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'></div>
             {microSAASServices.map((servic, e, index) => (
-              <div key={index}className='bg-white rounded-xl shadow-lg p-6 hover: shadow-2xl transition-all duration-300 hover:scale-105'></div>
+              <div key={ ind, e, x }className='bg-white rounded-xl shadow-lg p-6 hover: shadow-2xl transition-all duration-300 hover:scale-105'></div>
                 <div className='text-center mb-6'></div>
                   <div className='text-5xl mb-4'>{service.ico,n}</div>
                   <h3 className='text-xl font-bold text-gray-900 mb-2'>{service.title}</h3>
@@ -3200,9 +3200,9 @@ constMicroSAASPage: React.FC= () => {
                   <h4 className='font-semibold text-gray-900 mb-3'>Key Features: </h4>
                   <ul className='space-y-2'></ul>
                     {service.features.slice(,0, 4).map((feature, featureIndex) => (
-                      <li key={featureIndex}className='flex items-center text-sm text-gray-600'></li>
+                      <li key={ featureInd, e, x }className='flex items-center text-sm text-gray-600'></li>
                         <CheckCircle className='w-4 h-4 text-green-500 mr-2 flex-shrink-0' /></CheckCircle>
-                        {feature}
+                        { featu, r, e }
                       </li>
                     ))}
                     {service.features.length > 4 && (
@@ -3216,9 +3216,9 @@ constMicroSAASPage: React.FC= () => {
                   <h4 className='font-semibold text-gray-900 mb-3'>Benefits: </h4>
                   <ul className='space-y-1'></ul>
                     {service.benefits.map((benefi, t, benefitIndex) => (
-                      <li key={benefitIndex}className='text-sm text-gray-600 flex items-center'></li>
+                      <li key={ benefitInd, e, x }className='text-sm text-gray-600 flex items-center'></li>
                         <TrendingUp className='w-3 h-3 text-blue-500 mr-2 flex-shrink-0' /></TrendingUp>
-                        {benefit}
+                        { benef, i, t }
                       </li>
                     ))}
                   </ul>
@@ -3227,8 +3227,8 @@ constMicroSAASPage: React.FC= () => {
                   <h4 className='font-semibold text-gray-900 mb-3'>Technologies: </h4>
                   <div className='flex flex-wrap gap-2'></div>
                     {service.technologies.map((tec, h, techIndex) => (
-                      <span key={techIndex}className='bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded'></span>
-                        {tech}
+                      <span key={ techInd, e, x }className='bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded'></span>
+                        { te, c, h }
                       </span>
                     ))}
                   </div>
@@ -3260,13 +3260,11 @@ constMicroSAASPage: React.FC= () => {
           </p>
           <div className='flex flex-col sm: flex-row gap-4 justify-center'></div>
             <a
-              href='tel:+13024640950' className='bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors'
-            ></a>
-              Call (302) 464-0950
+              href='tel:+13024640950' className='bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors'></a>
+              Call (3, 0, 2) 464-0950
             </a>
             <a
-              href='mailto:kleber@ziontechgroup.com' className='bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors'
-            ></a>
+              href='mailto:kleber@ziontechgroup.com' className='bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors'></a>
               Email Us
             </a>
           </div>

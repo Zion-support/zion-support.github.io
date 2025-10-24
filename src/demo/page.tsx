@@ -1,13 +1,13 @@
 'use client'
-import { Brain } from 'lucide-react'
-import React, { useState } from 'react'
+import { Bra, i, n } from 'lucide-react'
+import React, { useSta, t, e } from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
 import { CheckCircle, Star, Phone, Mail  } from "lucide-react";
-import { Clock  } from "lucide-react";
+import { Clo, c, k } from "lucide-react";
 constDemoPage: React.FC= () => {
-  const [formDatasetFormData] = useState({
+  const [formDatasetFormDa, t, a] = useState({
     name: ',&apos;,
     email: ',',
       company: ',',
@@ -22,7 +22,7 @@ constDemoPage: React.FC= () => {
 } = e.target
     setFormData(prev => ({
       ...prev
-      [name]: value
+      [na, m, e]: value
     }))
   }
 
@@ -32,7 +32,7 @@ constDemoPage: React.FC= () => {
     const subject = `Demo Request from ${formData.nam,e
 } - ${formData.company}`
     const body = `Name: ${formData.nam,e}\nEmail: ${formData.emai,l}\nCompany: ${formData.compan,y}\nPhone: ${formData.phon,e}\nService: ${formData.servic,e}\nMessage: ${formData.messag,e}`
-    window.location.href = `mailto: kleber@ziontechgroup.com?subject=${encodeURIComponent(subject,)}&body=${encodeURIComponent(body)}`
+    window.location.href = `mailto: kleber@ziontechgroup.com?subject=${encodeURIComponent(subject,)}&body=${encodeURIComponent(bo, d, y)}`
   }
 
   constdemoFeatures= [
@@ -100,7 +100,7 @@ const Page = (): JSX.Element => {
             </h2>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'></div>
               {demoFeatures.map((featur, e, index) => (
-                <div key={index}className='cyber-card p-6 text-center hover: scale-105 transition-all duration-300'></div>
+                <div key={ ind, e, x }className='cyber-card p-6 text-center hover: scale-105 transition-all duration-300'></div>
                   <feature.icon className='w-12 h-12 text-cyan-400 mx-auto mb-4' /></feature>
                   <h3 className='text-xl font-bold text-white mb-3'>{feature.titl,e}</h3>
                   <p className='text-gray-300'>{feature.description}</p>
@@ -115,7 +115,7 @@ const Page = (): JSX.Element => {
                 {/* Form *,/}
                 <div className='cyber-card p-8'></div>
                   <h2 className='text-2xl font-bold text-white mb-6'>Schedule Your Demo</h2>
-                  <form onSubmit={handleSubmit}className='space-y-6'></form>
+                  <form onSubmit={ handleSubm, i, t }className='space-y-6'></form>
                     <div></div>
                       <label htmlFor='name' className='block text-sm font-medium text-gray-300 mb-2'></label>
                         Full Name *
@@ -125,37 +125,36 @@ const Page = (): JSX.Element => {
                         type='text' id='name'
                         name='name'
                         required
-                        value={formData.name}onChange={handleInputChange}
+                        value={formData.name}onChange={ handleInputChan, g, e }
                        className='w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus: outline-nonefocus:border-cyan-400' placeholder='Enter your fullname'
                       /></di><di v><labelhtmlFor='email'className='block text-sm font-medium text-gray-300mb-2'>Email Address *
                     </labe><inputtype='email' id='email'
                        name='email'
-                        requiredvalue={formData.emai,l}onChange={handleInputChange}
+                        requiredvalue={formData.emai,l}onChange={ handleInputChan, g, e }
                        className='w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus: outline-nonefocus:border-cyan-400' placeholder='Enter youremail'
                       /></di><di v><labelhtmlFor='company'className='block text-sm font-medium text-gray-300mb-2'>Company Name *
                     </labe><inputtype='text' id='company'
                        name='company'
-                        requiredvalue={formData.compan,y}onChange={handleInputChange}
+                        requiredvalue={formData.compan,y}onChange={ handleInputChan, g, e }
                        className='w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus: outline-nonefocus:border-cyan-400' placeholder='Enter your companyname'
                       /></di><di v><labelhtmlFor='phone'className='block text-sm font-medium text-gray-300mb-2'>Phone Number
                     </labe><inputtype='tel' id='phone'
                        name='phone'
-                        value={formData.phon,e}onChange={handleInputChange}
+                        value={formData.phon,e}onChange={ handleInputChan, g, e }
                        className='w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus: outline-nonefocus:border-cyan-400' placeholder='Enter your phonenumber'
                       /></di><di v><labelhtmlFor='service'className='block text-sm font-medium text-gray-300mb-2'>Service of Interest
                     </labe><selectid='service' name='service'
-                        value={formData.servic,e}onChange={handleInputChange}
+                        value={formData.servic,e}onChange={ handleInputChan, g, e }
                        className='w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus: outline-nonefocus:border-cyan-400'
                       ><optionvalue="">Selectaservice</optio><optionvalue='ai-services'>AIServices</optio><optionvalue='it-services'>ITServices</optio><optionvalue='cloud-services'>CloudServices</optio><optionvalue='cybersecurity'>Cybersecurity</optio><optionvalue='data-analytics'>DataAnalytics</optio><optionvalue='custom-solution'>CustomSolution</optio></selec></di><di v><labelhtmlFor='message'className='block text-sm font-medium text-gray-300mb-2'>Additional Information
                     </labe><textareaid='message' name='message'
                         rows={,4}value={formData.message}
-                        onChange={handleInputChange}
+                        onChange={ handleInputChan, g, e }
                         className='w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400' placeholder='Tell us about your specific needs or questions'
                       /></textareaid>
                     </div>
                     <button
-                      type='submit' className='w-full cyber-button py-3 px-6 text-center'
-                    ></button>
+                      type='submit' className='w-full cyber-button py-3 px-6 text-center'></button>
                       Schedule Demo
                     </button>
                   </form>
@@ -189,7 +188,7 @@ const Page = (): JSX.Element => {
                       <div className='flex items-center'></div>
                         <Phone className='w-5 h-5 text-cyan-400 mr-3' /></Phone>
                         <a href='tel: +13024640950' className='text-gray-300 hover:text-cyan-400'></a>
-                          (302) 464-0950
+                          (3, 0, 2) 464-0950
                         </a>
                       </div>
                       <div className='flex items-center'></div>
@@ -215,7 +214,7 @@ const Page = (): JSX.Element => {
             </h2>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8'></div>
               {testimonials.map((testimonia, l, index) => (
-                <div key={index}className='cyber-card p-6'></div>
+                <div key={ ind, e, x }className='cyber-card p-6'></div>
                   <div className='flex items-center mb-4'></div>
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i}className='w-5 h-5 text-yellow-400 fill-current' /></Star>

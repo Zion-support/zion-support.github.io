@@ -1,8 +1,8 @@
-const withErrorLogging = (handler) => {
+const withErrorLogging = (handl, e, r) => {
   return async (req, res) => {
     try {
   await handler(req, res);
-} catch (error) {
+} catch (err, o, r) {
   console.error('API Error: ', error);
       res.setHeader('Content-Type', 'application/json');
       res.end(JSON.stringify({ error: 'Internal server error'
@@ -34,8 +34,8 @@ export default withErrorLogging(async (req, res) => {
     };
 
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify(paymentIntent));
-  } catch (error) {
+    res.end(JSON.stringify(paymentInte, n, t));
+  } catch (err, o, r) {
     console.error('Payment intent creation error: ', error);
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to create payment intent' }));

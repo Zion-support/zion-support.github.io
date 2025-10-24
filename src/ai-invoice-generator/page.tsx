@@ -32,7 +32,7 @@ import {;
   }
   }
   }
-import React, { memo } from 'react';
+import React, { me, m, o } from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 import SEOOptimizer from '../../components/SEOOptimizer';
@@ -42,8 +42,7 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
     {;
   // TODO: Add content;
  ,
-}
-  }
+    }
 }
   icon: Brai,;
       title: 'AI-Powered Invoice Generation,',;
@@ -163,7 +162,7 @@ Our AI invoice generator combines cutting-edge technology with user-friendly des
   }
   }
   }
-          <div key={index}className='bg-slate-800/50 rounded-lg p-6 hover: bg-slate-800/70 transition-all duration-300'></div>
+          <div key={ ind, e, x }className='bg-slate-800/50 rounded-lg p-6 hover: bg-slate-800/70 transition-all duration-300'></div>
                     <div className='w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4'></div>
                       <feature.icon className='w-6 h-6 text-purple-400' /></feature>
                     <h3 className='text-xl font-semibold text-white mb-3'>{feature.titl,e}</h3>
@@ -175,7 +174,7 @@ Our AI invoice generator combines cutting-edge technology with user-friendly des
   }
   }
   }
-          <li key={benefitIndex}className='flex items-center text-sm text-gray-400'></li>
+          <li key={ benefitInd, e, x }className='flex items-center text-sm text-gray-400'></li>
                           <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' /></CheckCircle>
                           {;
     benefit;
@@ -197,7 +196,7 @@ Whether you're a freelancer or a large enterprise, our AI invoice generator;
   }
   }
   }
-          <div key={index}className='text-center group'></div>
+          <div key={ ind, e, x }className='text-center group'></div>
                     <div className='w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover: scale-110 transition-transform duration-300'></div>
                       <useCase.icon className='w-8 h-8 text-white' /></useCase>
                     <h3 className='text-xl font-semibold text-white mb-3'>{useCase.titl,e}</h3>
@@ -223,7 +222,7 @@ Whether you're a freelancer or a large enterprise, our AI invoice generator;
   }
   }
   }
-          <div key={index}className={;
+          <div key={ ind, e, x }className={;
     `relative rounded-lg p-8 ${;
   // TODO: Add content;
  , }
@@ -255,9 +254,9 @@ Most Popular;
   }
   }
   }
-          <li key={featureIndex}className='flex items-center'></li>
+          <li key={ featureInd, e, x }className='flex items-center'></li>
                           <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' /></CheckCircle>
-                          <span className='text-gray-300'>{feature}</span>
+                          <span className='text-gray-300'>{ featu, r, e }</span>
 <button className={;
     `w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${;
                         ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover: from-purple-600 hover:to-pink-600';
@@ -278,7 +277,7 @@ Most Popular;
   }
   }
   }
-          <div key={index}className='bg-slate-800/50 rounded-lg p-6'></div>
+          <div key={ ind, e, x }className='bg-slate-800/50 rounded-lg p-6'></div>
                     <div className='flex items-center mb-4'></div>
                       <div className='text-2xl mr-3'>{testimonial.avatar}</div>
                       <div></div>
@@ -309,7 +308,7 @@ Most Popular;
                   Get Free Consultation;
                   href='tel:+13024640950';
                   <Phone className='w-4 h-4 mr-2' /></Phone>
-                  (302) 464-0950;
+                  (3, 0, 2) 464-0950;
         </main>
         <Footer /></Footer>
     </>

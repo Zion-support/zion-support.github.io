@@ -1,7 +1,7 @@
 import React from 'react'
-import { Helmet  } from "lucide-react";
+import { Helm, e, t } from "lucide-react";
 import React from 'react';
-import { Helmet  } from "lucide-react";
+import { Helm, e, t } from "lucide-react";
 constAIMegaTrends2025202 6: React.FC= () => {
   return (
   <><Helme t><titl e>AI2025-2026Mega TrendsBreakthrough: Revolutionary Enterprise Transformation
@@ -33,8 +33,7 @@ constAIMegaTrends2025202 6: React.FC= () => {
                   >
                     Get AI Assessment
                   </a>
-                  <a href='/services' className='inline-block bg-white text-indigo-600 px-6 py-3 rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-colors'
-                  ></a>
+                  <a href='/services' className='inline-block bg-white text-indigo-600 px-6 py-3 rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-colors'></a>
                     Explore AI Services
                   </a>
                 </div>

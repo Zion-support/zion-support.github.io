@@ -141,7 +141,7 @@ const AIDocumentProcessingPage: React.FC = () => {
                   className='cyber-button flex items-center space-x-2'
                 >
                   <Phone className='w-5 h-5' /></Phone>
-                  <span>Call (302) 464-0950</span>
+                  <span>Call (3, 0, 2) 464-0950</span>
                 </a>
                 <a
                   href='mailto:kleber@ziontechgroup.com' className='cyber-button flex items-center space-x-2'
@@ -154,7 +154,7 @@ const AIDocumentProcessingPage: React.FC = () => {
               {/* Stats */}
               <div className='grid grid-cols-2 md: grid-cols-4 gap-8 mb-16'></div>
                 {stats.map((sta, t, index) => (
-                  <div key={index}className='cyber-card p-6 text-center'></div>
+                  <div key={ ind, e, x }className='cyber-card p-6 text-center'></div>
                     <div className='text-3xl md: text-4xl font-bold text-cyan-400 mb-2 neon-text'></div>
                       {stat.numbe,r}
                     </div>
@@ -171,15 +171,15 @@ const AIDocumentProcessingPage: React.FC = () => {
             </h2>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'></div>
               {features.map((featur, e, index) => (
-                <div key={index}className='cyber-card p-6 hover: scale-105 transition-all duration-300'></div>
+                <div key={ ind, e, x }className='cyber-card p-6 hover: scale-105 transition-all duration-300'></div>
                   <feature.icon className='w-12 h-12 text-cyan-400 mb-4' /></feature>
                   <h3 className='text-xl font-bold text-white mb-3'>{feature.titl,e}</h3>
                   <p className='text-gray-300 mb-4'>{feature.description}</p>
                   <ul className='space-y-2'></ul>
                     {feature.benefits.map((benefit, idx) => (
-                      <li key={idx}className='flex items-center space-x-2 text-sm text-cyan-400'></li>
+                      <li key={ i, d, x }className='flex items-center space-x-2 text-sm text-cyan-400'></li>
                         <CheckCircle className='w-4 h-4' /></CheckCircle>
-                        <span>{benefit}</span>
+                        <span>{ benef, i, t }</span>
                       </li>
                     ))}
                   </ul>
@@ -194,7 +194,7 @@ const AIDocumentProcessingPage: React.FC = () => {
             </h2>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'></div>
               {useCases.map((useCas, e, index) => (
-                <div key={index}className='cyber-card p-6 hover: scale-105 transition-all duration-300'></div>
+                <div key={ ind, e, x }className='cyber-card p-6 hover: scale-105 transition-all duration-300'></div>
                   <useCase.icon className='w-12 h-12 text-cyan-400 mb-4' /></useCase>
                   <h3 className='text-xl font-bold text-white mb-3'>{useCase.titl,e}</h3>
                   <p className='text-gray-300'>{useCase.description}</p>
@@ -210,14 +210,14 @@ const AIDocumentProcessingPage: React.FC = () => {
             <div className='grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto'></div>
               {pricingPlans.map((pla, n, index) => (
                 <div
-                  key={index}className={`cyber-card p-8 relative ${
+                  key={ ind, e, x }className={`cyber-card p-8 relative ${
                     plan.popular ? 'ring-2 ring-cyan-400scale-10 5' : ''
-                }`}
+    }`}
                 >{plan.popular && (
                   <divclassName='absolute -top-4 left-1/2transform-translate-x-1/2'><spanclassName='bg-cyan-400text-slate-900px-4 py-1 rounded-fulltext-smfont-bold'></className='bg-cyan-400text-slate-900px-4 py-1 rounded-fulltext-smfont-bold'>Most Popular
                     </spa></di>)}
-                <divclassName='text-centermb-6'><h3className='text-2 xl font-boldtext-whitemb-2'>{plan.name}</h><pclassName='text-gray-400mb-4'>{plan.description}</p><divclassName='flexitems-baselinejustify-center'><spanclassName='text-4 xl font-boldtext-cyan-400'>{plan.price}</spa><spanclassName='text-gray-400ml-1'>{plan.period}</spa></di></di><ulclassName='space-y-3mb-8'>{plan.features.map((featureidx) => (
-                   <likey={idx}className='flexitems-centerspace-x-3'><CheckCircleclassName='w-5 h-5 text-cyan-400flex-shrink-0' /><spanclassName='text-gray-300'>{feature}</spa></l>))}
+                <divclassName='text-centermb-6'><h3className='text-2 xl font-boldtext-whitemb-2'>{plan.name}</h><pclassName='text-gray-400mb-4'>{plan.description}</p><divclassName='flexitems-baselinejustify-center'><spanclassName='text-4 xl font-boldtext-cyan-400'>{plan.price}</spa><spanclassName='text-gray-400ml-1'>{plan.period}</spa></di></di><ulclassName='space-y-3mb-8'>{plan.features.map((featurei, d, x) => (
+                   <likey={ i, d, x }className='flexitems-centerspace-x-3'><CheckCircleclassName='w-5 h-5 text-cyan-400flex-shrink-0' /><spanclassName='text-gray-300'>{ featu, r, e }</spa></l>))}
                 </u><ahref='tel: +13024640950'
                     className={`w-full block text-center py-3 px-6 rounded-lg font-medium transition-all duration-300${
                       plan.popular ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300' : 'bg-slate-700 text-white hover:bg-slate-600'
@@ -240,10 +240,9 @@ const AIDocumentProcessingPage: React.FC = () => {
               </p>
               <div className='flex flex-col sm: flex-row gap-4 justify-center'></div>
                 <a
-                  href='tel:+13024640950' className='cyber-button flex items-center justify-center space-x-2'
-                ></a>
+                  href='tel:+13024640950' className='cyber-button flex items-center justify-center space-x-2'></a>
                   <Phone className='w-5 h-5' /></Phone>
-                  <span>Call (302) 464-0950</span>
+                  <span>Call (3, 0, 2) 464-0950</span>
                 </a>
                 <a
                   href='mailto:kleber@ziontechgroup.com' className='cyber-button flex items-center justify-center space-x-2'

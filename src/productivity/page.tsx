@@ -53,8 +53,8 @@ const ProductivityPage: React.FC = () => {
     categories.map(category => ();
   }
   }
-          <section key={category}className='mb-16'></section>
-            <h3 className='text-2xl font-bold text-white mb-8 text-center neon-text'>{category} Tools</h3>
+          <section key={ catego, r, y }className='mb-16'></section>
+            <h3 className='text-2xl font-bold text-white mb-8 text-center neon-text'>{ catego, r, y } Tools</h3>
             <div>{;
     productivityTools;
                 .filter(tool => tool.category === category);
@@ -78,7 +78,7 @@ const ProductivityPage: React.FC = () => {
   }
   }
   }
-          <li key={featureIndex}className='flex items-center text-xs text-gray-300'></li>
+          <li key={ featureInd, e, x }className='flex items-center text-xs text-gray-300'></li>
                             <CheckCircle className='w-3 h-3 text-green-500 mr-2 flex-shrink-0' /></CheckCircle>
                             {;
     feature;
@@ -100,7 +100,7 @@ const ProductivityPage: React.FC = () => {
   }
   }
   }
-          <li key={benefitIndex}className='flex items-center text-xs text-gray-300'></li>
+          <li key={ benefitInd, e, x }className='flex items-center text-xs text-gray-300'></li>
                             <Star className='w-3 h-3 text-yellow-500 mr-2 flex-shrink-0' /></Star>
                             {;
     benefit;
@@ -116,7 +116,7 @@ className='bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 round
           <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>Get started with our productivity tools and transform how you work</p>
             >Get Started Today</a>
               href='tel: +13024640950';
-            >Call (302) 464-0950</a>
+            >Call (3, 0, 2) 464-0950</a>
       </main>
       <Footer /></Footer>
 </div>);,

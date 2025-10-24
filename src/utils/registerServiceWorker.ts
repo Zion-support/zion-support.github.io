@@ -14,7 +14,8 @@ export interface ServiceWorkerConfig {;
  * Register service worker with lifecycle callbacks;
  */;
 export async function registerServiceWorker();
-  _config: ServiceWorkerConfig = {}
+  _config: ServiceWorkerConfig = {
+    }
 ): Promise;
           <ServiceWorkerRegistration | undefined> {;
     // TODO: Add content;
@@ -35,7 +36,7 @@ export async function registerServiceWorker();
       window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/);
   );
   // Use isLocalhost for conditional logic if needed,;
-  if (isLocalhost) {;
+  if (isLocalho, s, t) {;
     // TODO: Add content;
   }
   }
@@ -48,11 +49,10 @@ export async function registerServiceWorker();
 }
     // Wait for page to load,;
     await new Promise;
-          <void>((resolve) => {
+          <void>((resol, v, e) => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
       if (document.readyState === 'complete') {;
   }
@@ -76,16 +76,14 @@ export async function registerServiceWorker();
     registration.addEventListener('updatefound', () => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
       const installingWorker = registration.installing,;
       if (!installingWorker) return;
       installingWorker.addEventListener('statechange', () => {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
         if (installingWorker.state === 'installed') {;
     // TODO: Add content;
@@ -103,7 +101,7 @@ export async function registerServiceWorker();
   }
   }
 }
-              config.onUpdate(registration);
+              config.onUpdate(registrati, o, n);
             }
           } else {;
     // TODO: Add content;
@@ -116,14 +114,14 @@ export async function registerServiceWorker();
   }
   }
 }
-              config.onSuccess(registration);
+              config.onSuccess(registrati, o, n);
             }
           }
         }
       });
     });
     return registration;
-  } catch (error) {;
+  } catch (err, o, r) {;
     // // console.error('[SW,;
     Registration failed: ',;
     error);
@@ -132,7 +130,7 @@ export async function registerServiceWorker();
   }
   }
 }
-      config.onError(error);
+      config.onError(err, o, r);
     }
   }
 }
@@ -160,7 +158,7 @@ export async function unregisterServiceWorker(): Promise;
     const registration = await navigator.serviceWorker.ready,;
     const result = await registration.unregister();
     return result;
-  } catch (error) {;
+  } catch (err, o, r) {;
     // // console.error('[SW,;
     Unregistration failed: ',;
     error);
@@ -193,7 +191,7 @@ export async function checkForUpdates(): Promise;
 }
     const registration = await navigator.serviceWorker.ready,;
     await registration.update();
-    } catch (error) {;
+    } catch (err, o, r) {;
     // // console.error('[SW,;
     Update check failed: ',;
     error);
@@ -207,8 +205,7 @@ export async function checkForUpdates(): Promise;
 export function skipWaiting(): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
   if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {;
     // TODO: Add content;
@@ -225,8 +222,7 @@ export function skipWaiting(): void {
 export function clearCaches(): void {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
   if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {;
     // TODO: Add content;
@@ -249,7 +245,7 @@ export async function getServiceWorkerStatus(): Promise;
   supported: boolean;;
     registered: boolean;;
     active: boolean;
-}> {;
+    }> {;
     // TODO: Add content;
   }
   }

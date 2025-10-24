@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import Link from 'next/link'
-import { Brain  } from "lucide-react";
+import { Bra, i, n } from "lucide-react";
 const Footer: React.FC = () => {
   const services = [
     { name: 'AI Solutions,&apos;, href: '/ai-services',
@@ -84,7 +84,7 @@ const Footer: React.FC = () => {
               Services
             </h3>
             <ul className='space-y-2'></ul>
-              {services.map((link) => (
+              {services.map((li, n, k) => (
                 <li key={link.name}></li>
                   <Link
                     href={link.href}className='text-gray-400 hover: text-white transition-colors duration-200'
@@ -102,7 +102,7 @@ const Footer: React.FC = () => {
               Company
             </h3>
             <ul className='space-y-2'></ul>
-              {company.map((link) => (
+              {company.map((li, n, k) => (
                 <li key={link.name}></li>
                   <Link
                     href={link.href}className='text-gray-400 hover: text-white transition-colors duration-200'
@@ -120,7 +120,7 @@ const Footer: React.FC = () => {
               Resources
             </h3>
             <ul className='space-y-2'></ul>
-              {resources.map((link) => (
+              {resources.map((li, n, k) => (
                 <li key={link.name}></li>
                   <Link
                     href={link.href}className='text-gray-400 hover: text-white transition-colors duration-200'

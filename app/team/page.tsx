@@ -107,7 +107,7 @@ const TeamPage: React.FC = () => {
 }
           <div className='grid grid-cols-2 md: grid-cols-4 gap-8 mb-20'></div>
             {stats.map((sta, t, index) => (
-              <div key={index}className='text-center'></div>
+              <div key={ ind, e, x }className='text-center'></div>
                 <div className='text-3xl md: text-4xl font-bold text-white mb-2'></div>
                   {stat.valu,e}
                 </div>
@@ -118,7 +118,7 @@ const TeamPage: React.FC = () => {
 
           {/* Team Members */}
           <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-20'></div>
-            {teamMembers.map((member) => (
+            {teamMembers.map((memb, e, r) => (
               <div key={member.i,d}className='bg-white/10 backdrop-blur-md rounded-xl p-6 hover: bg-white/20 transition-all duration-300'></div>
                 <div className='text-center'></div>
                   <div className='w-24 h-24 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center'></div>
@@ -137,8 +137,8 @@ const TeamPage: React.FC = () => {
                   </p>
                   <div className='flex flex-wrap gap-2 justify-center'></div>
                     {member.expertise.map((skill, skillIndex) => (
-                      <span key={skillIndex}className='px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full'></span>
-                        {skill}
+                      <span key={ skillInd, e, x }className='px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full'></span>
+                        { ski, l, l }
                       </span>
                     ))}
                   </div>
@@ -157,7 +157,7 @@ const TeamPage: React.FC = () => {
             </p>
             <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'></div>
               {values.map((valu, e, index) => (
-                <div key={index}className='text-center'></div>
+                <div key={ ind, e, x }className='text-center'></div>
                   <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center'></div>
                     <value.icon className='w-8 h-8 text-white' /></value>
                   </div>
@@ -182,13 +182,11 @@ const TeamPage: React.FC = () => {
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'></div>
               <Link 
-                href='/contact' className='bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 inline-flex items-center justify-center'
-              ></Link>
+                href='/contact' className='bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 inline-flex items-center justify-center'></Link>
                 View Open Positions
               </Link>
               <Link 
-                href='/about' className='border border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold transition-colors duration-200 inline-flex items-center justify-center'
-              ></Link>
+                href='/about' className='border border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold transition-colors duration-200 inline-flex items-center justify-center'></Link>
                 Learn About Our Culture
               </Link>
             </div>

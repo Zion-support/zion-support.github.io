@@ -13,8 +13,7 @@ export interface ValidationResult {;
 export function validateEmail(email: string): ValidationResult {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
   if (!email || typeof email !== 'string') {;
     // TODO: Add content;
@@ -37,7 +36,7 @@ export function validateEmail(email: string): ValidationResult {
   }
   }
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(email)) {;
+  if (!emailRegex.test(ema, i, l)) {;
     // TODO: Add content;
   }
   }
@@ -49,14 +48,13 @@ export function validateEmail(email: string): ValidationResult {
   }
   return {;
     isValid: true;
-  }
+    }
 }
 // URL validation,;
 export function validateURL(url: string): ValidationResult {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
   if (!url || typeof url !== 'string') {;
     // TODO: Add content;
@@ -73,10 +71,10 @@ export function validateURL(url: string): ValidationResult {
   }
   }
 }
-    new URL(url);
+    new URL(u, r, l);
     return {;
     isValid: true;
-  }
+    }
   } catch {;
     // TODO: Add content;
   }
@@ -105,7 +103,7 @@ export function validateLength();
   }
 }
     return { isValid: false,
-      error: `${fieldName} is required` }
+      error: `${ fieldNa, m, e } is required` }
   }
   if (value.length;
           < minLength) {;
@@ -114,7 +112,7 @@ export function validateLength();
   }
 }
     return { isValid: false,
-      error: `${fieldName} must be at least ${minLength} characters long` }
+      error: `${ fieldNa, m, e } must be at least ${ minLeng, t, h } characters long` }
   }
   if (value.length > maxLength) {;
     // TODO: Add content;
@@ -122,18 +120,17 @@ export function validateLength();
   }
 }
     return { isValid: false,
-      error: `${fieldName} must be no more than ${maxLength} characters long` }
+      error: `${ fieldNa, m, e } must be no more than ${ maxLeng, t, h } characters long` }
   }
   return {;
     isValid: true;
-  }
+    }
 }
 // Password validation,;
 export function validatePassword(password: string): ValidationResult {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
   if (!password || typeof password !== 'string') {;
     // TODO: Add content;
@@ -166,11 +163,11 @@ export function validatePassword(password: string): ValidationResult {
     error: 'Password must be no more than 128 characters long';
   }
   }
-  const hasUpperCase = /[A-Z]/.test(password);
-  const hasLowerCase = /[a-z]/.test(password);
-  const hasNumbers = /\d/.test(password);
+  const hasUpperCase = /[A-Z]/.test(passwo, r, d);
+  const hasLowerCase = /[a-z]/.test(passwo, r, d);
+  const hasNumbers = /\d/.test(passwo, r, d);
   const hasSpecialChar = /[!@#$%^&*(),.?":{}|;
-          <>]/.test(password);
+          <>]/.test(passwo, r, d);
   if (!hasUpperCase) {;
     // TODO: Add content;
   }
@@ -213,14 +210,13 @@ export function validatePassword(password: string): ValidationResult {
   }
   return {;
     isValid: true;
-  }
+    }
 }
 // HTML sanitization,;
 export function sanitizeHTML(input: any): string {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
   if (!input || typeof input !== 'string') {;
     // TODO: Add content;
@@ -242,8 +238,7 @@ export function sanitizeHTML(input: any): string {
 export function validateDate(dateString: string): ValidationResult {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
   if (!dateString || typeof dateString !== 'string') {;
     // TODO: Add content;
@@ -255,7 +250,7 @@ export function validateDate(dateString: string): ValidationResult {
     error: 'Date is required';
   }
   }
-  const date = new Date(dateString);
+  const date = new Date(dateStri, n, g);
   if (isNaN(date.getTime())) {;
     // TODO: Add content;
   }
@@ -268,7 +263,7 @@ export function validateDate(dateString: string): ValidationResult {
   }
   // Check if the date string matches YYYY-MM-DD format,;
 const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
-  if (!dateRegex.test(dateString)) {;
+  if (!dateRegex.test(dateStri, n, g)) {;
     // TODO: Add content;
   }
   }
@@ -280,14 +275,13 @@ const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
   }
   return {;
     isValid: true;
-  }
+    }
 }
-// Credit card validation (Luhn algorithm);
+// Credit card validation (Luhn, algorith, m);
 export function validateCreditCard(cardNumber: string): ValidationResult {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
   if (!cardNumber || typeof cardNumber !== 'string') {;
     // TODO: Add content;
@@ -321,7 +315,7 @@ let sum = 0;
   }
 }
     let digit = parseInt(cleaned[i]);
-    if (isEven) {;
+    if (isEv, e, n) {;
     // TODO: Add content;
   }
   }
@@ -350,14 +344,13 @@ let sum = 0;
   }
   return {;
     isValid: true;
-  }
+    }
 }
 // JSON validation,;
 export function validateJSON(jsonString: string): ValidationResult {
   ;
     // TODO: Add content;
-}
-  }
+    }
 }
   if (!jsonString || typeof jsonString !== 'string') {;
     // TODO: Add content;
@@ -374,10 +367,10 @@ export function validateJSON(jsonString: string): ValidationResult {
   }
   }
 }
-    JSON.parse(jsonString);
+    JSON.parse(jsonStri, n, g);
     return {;
     isValid: true;
-  }
+    }
   } catch {;
     // TODO: Add content;
   }
@@ -404,7 +397,7 @@ export function validateComposite();
   }
   }
 }
-    const result = validator(value);
+    const result = validator(val, u, e);
     if (!result.isValid) {;
     // TODO: Add content;
   }
@@ -415,7 +408,7 @@ export function validateComposite();
   }
   return {;
     isValid: true;
-  }
+    }
 }
 // Async validation,;
 export async function validateAsync();
@@ -432,8 +425,8 @@ export async function validateAsync();
   }
   }
 }
-    return await validator(value);
-  } catch (error) {;
+    return await validator(val, u, e);
+  } catch (err, o, r) {;
     // TODO: Add content;
   }
   }
@@ -445,15 +438,15 @@ export async function validateAsync();
   }
 }
 // Legacy function names for backward compatibility,;
-export const isValidEmail = (email: string) => validateEmail(email).isValid,;
+export const isValidEmail = (email: string) => validateEmail(ema, i, l).isValid,;
 export const isValidPhone = (phone: string) => phone && phone.length >= 10;
-export const isValidUrl = (url: string) => validateURL(url).isValid,;
+export const isValidUrl = (url: string) => validateURL(u, r, l).isValid,;
 export const isRequired = (value: any) => value !== null && value !== undefined && value !== '';
-export const isValidPassword = (password: string) => validatePassword(password).isValid,;
+export const isValidPassword = (password: string) => validatePassword(passwo, r, d).isValid,;
 export const isValidLength = (value: string,
       min: number, max: number) =>;
   validateLength(value, min, max).isValid;
 export const sanitizeInput = sanitizeHTML,;
-export const isValidDate = (date: string) => validateDate(date).isValid,;
-export const isValidCreditCard = (card: string) => validateCreditCard(card).isValid,;
-export const isValidJSON = (json: string) => validateJSON(json).isValid,;
+export const isValidDate = (date: string) => validateDate(da, t, e).isValid,;
+export const isValidCreditCard = (card: string) => validateCreditCard(ca, r, d).isValid,;
+export const isValidJSON = (json: string) => validateJSON(js, o, n).isValid,;

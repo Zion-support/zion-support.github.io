@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { Helmet  } from "react-helmet-async";
+import { Helm, e, t } from "react-helmet-async";
 import { ArrowRight, Brain, BarChart, Target, TrendingUp  } from "lucide-react";
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -82,15 +82,15 @@ const BreadcrumbPage: React.FC = () => {
             </div>
             <div className='grid md: grid-cols-2 lg:grid-cols-4 gap-8'></div>
               {features.map((featur, e, index) => (
-                <div key={index}className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20'></div>
+                <div key={ ind, e, x }className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20'></div>
                   <feature.icon className='h-12 w-12 text-emerald-400 mb-4' /></feature>
                   <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>
                   <p className='text-gray-300 mb-4'>{feature.description}</p>
                   <ul className='space-y-2'></ul>
                     {feature.benefits.map((benefit, idx) => (
-                      <li key={idx}className='flex items-center text-sm text-gray-300'></li>
+                      <li key={ i, d, x }className='flex items-center text-sm text-gray-300'></li>
                         <CheckCircle className='h-4 w-4 text-emerald-400 mr-2 flex-shrink-0' /></CheckCircle>
-                        {benefit}
+                        { benef, i, t }
                       </li>
                     ))}
                   </ul>
@@ -111,9 +111,9 @@ const BreadcrumbPage: React.FC = () => {
             </div>
             <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'></div>
               {benefits.map((benefi, t, index) => (
-                <div key={index}className='flex items-start space-x-4'></div>
+                <div key={ ind, e, x }className='flex items-start space-x-4'></div>
                   <CheckCircle className='h-6 w-6 text-emerald-400 mt-1 flex-shrink-0' /></CheckCircle>
-                  <p className='text-gray-300 text-lg'>{benefit}</p>
+                  <p className='text-gray-300 text-lg'>{ benef, i, t }</p>
                 </div>
               ))}
             </div>
@@ -145,21 +145,21 @@ const BreadcrumbPage: React.FC = () => {
 
 export default BreadcrumbPage;
 // Don't show breadcrumb on home page
-if (location.pathname=== '/') {
-return nul l}
+if (location.pathname=== '/') { return, nul, l }
 constpathSegments= location.pathname.split('/').filter(segment=> segment !== '')
 constbreadcrumbItems= [
 {name: 'Home,',
       path: '/,', icon: Hom,}
 ]
-pathSegments.forEach((segmentindex) => {
+pathSegments.forEach((segmentind, e, x) => {
   constpath='/&apos; + pathSegments.slice(0 index + 1).join('/')
 constname= segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ')
 breadcrumbItems.push({ name, path, icon: nul,
 })
 })
-return(<nav aria-label='Breadcrumb'className='bg-slate-80 0/50backdrop-blur-sm border-bborder-slate-700'><divclassName='max-w-7 xl mx-autopx-4py-3'><olclassName='flex items-centerspace-x-2text-sm'>{breadcrumbItems.map((itemindex)=>(<likey={item.path}className='flexitems-center'>{index >0&&(<ChevronRightclassName='w-4 h-4 text-gray-400mx-2' />)}<ahref={item.path}className={`flex items-center space-x-1 transition-colors duration-200${
-index=== breadcrumbItems.length -1 ? 'text-cyan-400font-medium' : 'text-gray-300 hover: text-cyan-400,'}`}
+return(<nav aria-label='Breadcrumb'className='bg-slate-80 0/50backdrop-blur-sm border-bborder-slate-700'><divclassName='max-w-7 xl mx-autopx-4py-3'><olclassName='flex items-centerspace-x-2text-sm'>{breadcrumbItems.map((itemind, e, x)=>(<likey={item.path}className='flexitems-center'>{index >0&&(<ChevronRightclassName='w-4 h-4 text-gray-400mx-2' />)}<ahref={item.path}className={`flex items-center space-x-1 transition-colors duration-200${
+index=== breadcrumbItems.length -1 ? 'text-cyan-400font-medium' : 'text-gray-300 hover: text-cyan-400,'
+    }`}
 >{item.icon&&<item.iconclassName='w-4h-4'/>}<spa n>{item.name}</spa></a></l>))}</o></di></na>
 )
 }
