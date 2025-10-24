@@ -122,10 +122,10 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({,
       )}
     </Head>
 <<<<<<< HEAD
-  )
+  );
 }
  SEOOptimizer
-  )
+  );
 }
 =======
 export default SEOOptimizer

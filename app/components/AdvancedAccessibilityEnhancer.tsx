@@ -57,9 +57,9 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
 
       ) => {
       motionQuery.removeEventListener('change', handleMotionChange
-    </div>
+    
   )
-    </div>
+    
   );
       contrastQuery.removeEventListener('change', handleContrastChange);
   }, [])
@@ -167,7 +167,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     const trapFocus = (element: HTMLElement) => {
       const focusableElements = element.querySelectorAll(
         'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
-    </div>
+    
 <<<<<<< HEAD
   ) as NodeListOf<HTMLElement></HTMLElement>
       const firstElement = focusableElements[0]
@@ -194,7 +194,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
 
 
       ) => element.removeEventListener('keydown', handleTabKey
-    </div>
+    
   )
     </div>
   );

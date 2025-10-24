@@ -62,10 +62,10 @@ trackEvent,
       {children}
     </AnalyticsContext.Provider>
 <<<<<<< HEAD
-  )
+  );
 }
  AnalyticsProvider
-  )
+  );
 }
 =======
 export default AnalyticsProvider

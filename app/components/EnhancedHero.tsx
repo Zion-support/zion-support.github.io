@@ -10,9 +10,9 @@ const EnhancedHero: React.FC = () => {
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology',
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-            </div>
-          </div>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            
+          
         </section>
 
         {/* Benefits Section */}
@@ -23,7 +23,7 @@ const EnhancedHero: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience the benefits of our Enhanced Hero solution.
               </p>
-            </div>
+            
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-4">

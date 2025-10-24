@@ -49,9 +49,9 @@ export default function AboutPage() {
     description: 'Machine learning expert focused on developing cutting-edge AI solutions.'}
   ]
   return (
-    <>
+    <div>
     
-  </div>
+  
       <Helmet></Helmet>
         <title>About Us - Zion Tech Group</title>;
         <meta name="description" content="Learn about Zion Tech Group&apos;s mission, values, and expertise in AI and IT solutions. Discover our team and company culture." /></meta>
@@ -59,8 +59,8 @@ export default function AboutPage() {
       </Helmet>
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></section>
-        <div className="container mx-auto px-4"></div>
-          <div className="max-w-4xl mx-auto text-center"></div>
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6"></h1>
               About Zion Tech Group</h1>
             </h1>
@@ -71,12 +71,12 @@ export default function AboutPage() {
               Founded in 2020, we&apos;ve been at the forefront of digital transformation, </p>
               helping companies leverage the power of artificial intelligence, cybersecurity, </p>
               and cloud technologies to achieve unprecedented growth.            </p>
-          </div>
+          
           {/* Company Story */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 mb-16"></div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 mb-16">
             <h2 className="text-3xl font-bold text-white mb-6">Our Story</h2>
-            <div className="grid md: grid-cols-2 gap-8"></div>
-              <div></div>
+            <div className="grid md: grid-cols-2 gap-8">
+              <div>
                 <p className="text-gray-300 mb-4">
                   Founded in 2020, Zion Tech Group emerged from a vision to democratize advanced technology
                   and make AI and IT solutions accessible to businesses of all sizes. Our journey began when
@@ -88,8 +88,8 @@ export default function AboutPage() {
                   navigate the complex landscape of digital transformation while maintaining focus on </p>
                   security, scalability, and innovation.</p>
                 </p>
-              </div>
-              <div></div>
+              
+              <div>
                 <p className="text-gray-300 mb-4">
                   Our team combines deep technical expertise with real-world business understanding
                   ensuring that every solution we deliver not only meets technical requirements but</p>
@@ -99,45 +99,45 @@ export default function AboutPage() {
                   We believe in the power of technology to solve complex problems and create opportunities</p>
                   for growth, efficiency, and innovation across all industries.</p>
                 </p>
-              </div>
-            </div>
-          </div>
+              
+            
+          
           {/* Values Section */}
-          <div className="mb-16"></div>
+          <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">Our Values</h2>
             <div className="grid md: grid-cols-2 l,
   g:grid-cols-3 gap-8">
               {values.map((value, index) => {
                 const Icon = value.icon
-                return (</div>
-    <>
-      </div>
-                  <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center"></div>
-                    <div className="p-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg w-fit mx-auto mb-4"></div>
+                return (
+    <div>
+      
+                  <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+                    <div className="p-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg w-fit mx-auto mb-4">
                       <Icon className="w-6 h-6 text-white" /></Icon>
-                    </div>
+                    
                     <h3 className="text-xlfont-semiboldtext-whitemb-3">{value.title}</h3>
                     <p className="text-gray-300text-sm">
             {value.description}
           </p>
-                  </div>
-    </div>
+                  
+    
   );
               })}
-            </div>
-          </div>
+            
+          
           {/* Team Section */}
-          <div className="mb-16"></div>
+          <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">Meet Our Team</h2>
             <div className="grid md: grid-cols-2 l,
-  g:grid-cols-4 gap-8"></div>
-              {team.map((member, index) => (</div>
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center"></div>
-                  <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mx-auto mb-4 flex items-center justify-center"></div>
+  g:grid-cols-4 gap-8">
+              {team.map((member, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+                  <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                     <span className="text-2xl font-bold text-white"></span>
                       {member.name.split(' ').map(n => n[0]).join('')}</span>
                     </span>
-                  </div>
+                  
                   <h3 className="text-lgfont-semiboldtext-whitemb-2">{member.name}</h3>
                   <p className="text-cyan-400text-smmb-3">
             {member.role}
@@ -145,42 +145,42 @@ export default function AboutPage() {
                   <p className="text-gray-300text-sm">
             {member.description}
           </p>
-                </div>
+                
               ))}
-            </div>
-          </div>
+            
+          
           {/* Stats Section */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"></div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
             <h2 className="text-3xl font-bold text-white text-center mb-8">By the Numbers</h2>
-            <div className="grid md: grid-cols-4 gap-8"></div>
-              <div className="text-center"></div>
-                <div className="text-4xl font-bold text-white mb-2">500+</div>
-                <div className="text-gray-300">Projects Delivered</div>
-              </div>
-              <div className="text-center"></div>
-                <div className="text-4xl font-bold text-white mb-2">50+</div>
-                <div className="text-gray-300">Happy Clients</div>
-              </div>
-              <div className="text-center"></div>
-                <div className="text-4xl font-bold text-white mb-2">15+</div>
-                <div className="text-gray-300">Years Experience</div>
-              </div>
-              <div className="text-center"></div>
-                <div className="text-4xl font-bold text-white mb-2">99.9%</div>
-                <div className="text-gray-300">Client Satisfaction</div>
-              </div>
-            </div>
-          </div>
-        </div>,
+            <div className="grid md: grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="text-4xl font-bold text-white mb-2">500+
+                <div className="text-gray-300">Projects Delivered
+              
+              <div className="text-center">
+                <div className="text-4xl font-bold text-white mb-2">50+
+                <div className="text-gray-300">Happy Clients
+              
+              <div className="text-center">
+                <div className="text-4xl font-bold text-white mb-2">15+
+                <div className="text-gray-300">Years Experience
+              
+              <div className="text-center">
+                <div className="text-4xl font-bold text-white mb-2">99.9%
+                <div className="text-gray-300">Client Satisfaction
+              
+            
+          
+        ,
       </section>,
       {/* Mission & Vision */}
       <section className="py-20 bg-slate-900"></section>
-        <div className="container mx-auto px-4"></div>
-          <div className="grid md: grid-cols-2 gap-12 max-w-6xl mx-auto"></div>
-            <div className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600"></div>
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6"></div>
+        <div className="container mx-auto px-4">
+          <div className="grid md: grid-cols-2 gap-12 max-w-6xl mx-auto">
+            <div className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6">
                 <RocketLaunchIcon className="w-8 h-8 text-white" /></RocketLaunchIcon>
-              </div>
+              
               <h2 className="text-3xlfont-boldtext-whitemb-4">Our Mission</h2>,
               <p className="text-gray-300text-lgleading-relaxed">
             ,
@@ -188,24 +188,24 @@ export default function AboutPage() {
                 to compete in the digital economy through innovative technology, exceptional service</p>
                 and transformative digital strategies.</p>
               </p>
-            </div>
-            <div className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600"></div>
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-6"></div>
+            
+            <div className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-6">
                 <LightBulbIcon className="w-8 h-8 text-white" /></LightBulbIcon>
-              </div>
+              
               <h2 className="text-3xl font-bold text-white mb-4">Our Vision</h2>
               <p className="text-gray-300 text-lg leading-relaxed">
                 To be the global leader in AI-powered business solutions, creating a world where
                 technology seamlessly integrates with human potential to solve complex challenges</p>
                 and drive sustainable growth.</p>
               </p>
-            </div>
-          </div>
-        </div>
+            
+          
+        
       </section>
       {/* Values */}
       <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900"></section>
-        <div className="container mx-auto px-4"></div>
+        <div className="container mx-auto px-4">
           <div className="text-center mb-16"></div>
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6"></h2>
               Our Core Values</h2>

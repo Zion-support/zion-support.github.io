@@ -58,14 +58,14 @@ class ErrorBoundary extends Component<Props, State> {
                     strokeWidth = {
 2
 };
-        </div>
-        </div>
-        </div>
-        </div>
+        
+        
+        
+        
                     d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"
                   /></path>
                 </svg>
-              </div>
+              
               <h3 className="text-lg font-medium text-white mb-2">
                 Something went wrong
               </h3>
@@ -85,7 +85,7 @@ class ErrorBoundary extends Component<Props, State> {
                 >
                   Try Again
                 </button>
-              </div>
+              
               {process.env.NODE_ENV === 'development' && this.state.error && (
                 <details className="mt-4 text-left">
                   <summary className="text-sm text-gray-400 cursor-pointer hover:text-gray-300">
@@ -96,21 +96,21 @@ class ErrorBoundary extends Component<Props, State> {
                   </pre>
                 </details>
               )}
-            </div>
-          </div>
+            
+          
         </section>
         {/* Features Section */}
         <section className="py-20 px-4"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Powerful AI-driven features designed to transform your business operations
               </p>
-            </div>
-            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8"></div>
+            
+            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"></div>
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
                   <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -122,21 +122,21 @@ class ErrorBoundary extends Component<Props, State> {
                       </li>
                     ))}
                   </ul>
-                </div>
+                
               ))}
-            </div>
-          </div>
+            
+          
         </section>
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience the benefits of cutting-edge AI technology
               </p>
-            </div>
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8"></div>
+            
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-4"></div>
                   <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
@@ -164,7 +164,7 @@ class ErrorBoundary extends Component<Props, State> {
           </div>
         </section>
       </div>
-      <Footer />
+      
 </div>
 
     return this.props.children;

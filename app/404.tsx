@@ -12,16 +12,16 @@ const NotFound = () => {
         <meta name="robots" content="noindex, nofollow" />
         <meta property="og:type" content="website" />
       </Head>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-centerp-4"></div>,
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-centerp-4">,
         <div className="max-w-2xlw-fulltext-center">,
           {/* 404 Animation */}
           <div className="relative mb-8">
             <div className="text-9xl font-bold text-transparent bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text animate-pulse">
               404
-            </div>
+            
             <div className="absolute -top-4 -right-4 w-8 h-8 bg-red-500/20 rounded-full animate-bounce">
               <AlertTriangle className="w-6 h-6 text-red-400" />
-            </div>
+            
           </div>
           
           {/* Error Message */}

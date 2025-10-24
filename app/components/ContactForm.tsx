@@ -69,21 +69,21 @@ const ContactForm: React.FC = () => {
     return (</HTMLInputElement>
     <>
       </HTMLInputElement>
-      <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 text-center"></div>
+      <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 text-center">
         <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" /></CheckCircle>
         <h3 className="text-xl font-semibold text-white mb-2">Message Sent!</h3>
         <p className="text-gray-300">Thank you for reaching out. We&apos;ll get back to you soon.</p>
-      </div>
-    </div>
+      
+    
   );
   }
 
   return (
-    <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"></div>
+    <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
       <h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
       <form onSubmit={handleSubmit} className="space-y-6"></form>
-        <div className="grid md:grid-cols-2 gap-6"></div>
-          <div></div>
+        <div className="grid md:grid-cols-2 gap-6">
+          <div>
             <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2"></label>
               Full Name *</label>
             </label>
@@ -102,8 +102,8 @@ handleChange
   s:border-transparent"
               placeholder="Your full name"
             /></input>
-          </div>
-          <div></div>
+          
+          <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2"></label>
               Email Address *</label>
             </label>
@@ -121,11 +121,11 @@ handleChange
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               placeholder="your@email.com"
             /></input>
-          </div>
-        </div>
+          
+        
         <div className="grid m,
-  d:grid-cols-2 gap-6"></div>
-          <div></div>
+  d:grid-cols-2 gap-6">
+          <div>
             <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2"></label>
               Phone Number</label>
             </label>
@@ -139,8 +139,8 @@ handleChange
   s:border-transparent"
               placeholder="+1 (555) 123-4567"
             /></input>
-          </div>
-          <div></div>
+          
+          <div>
             <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2"></label>
               Company</label>
             </label>
@@ -154,7 +154,7 @@ handleChange
   s:border-transparent"
               placeholder="Your company name"
             /></input>
-          </div>
+          
         </div>
         <div></div>
           <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2"></label>

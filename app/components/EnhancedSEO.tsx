@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Brain, CheckCircle, Phone, Mail, MapPin, Zap, Shield, Globe } from 'lucide-react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 
 const EnhancedSEOPage: React.FC = () => {
   const benefits = [
@@ -15,35 +14,35 @@ const EnhancedSEOPage: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success',
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover: from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
                 <Phone className="mr-2 h-5 w-5" />
                 Call Now
               <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover: from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us
-            </div>
-          </div>
+            
+          
         </section>
-      </div>
-      <Footer />
-    </div>
+      
+      
+    
   );
 };
 
 export default EnhancedSEOPage
-                </div>
+                
               ))}
-            </div>
-          </div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">{benefits.map((benefit, index) => (</div>
-              <div key={index} className="flex items-start space-x-3"></div>
+            
+          
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">{benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
+              
             ))}
-          </div>
+          
         </div>
       </section>
       {/* CTA Section */}

@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Brain, CheckCircle, Phone, Mail, MapPin, Zap, Shield, Globe } from 'lucide-react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 
 const EnhancedPerformanceMonitorPage: React.FC = () => {
   const benefits = [
@@ -12,9 +11,9 @@ const EnhancedPerformanceMonitorPage: React.FC = () => {
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology',
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-            </div>
-          </div>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            
+          
         </section>
 
         {/* Features Section */}
@@ -27,7 +26,7 @@ const EnhancedPerformanceMonitorPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our enhanced performance monitoring system provides comprehensive insights and optimization.
               </p>
-            </div>
+            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-gray-800 rounded-lg p-6 hover:bg-gray-700 transition-colors">
@@ -94,7 +93,7 @@ const EnhancedPerformanceMonitorPage: React.FC = () => {
           </div>
         </section>
       </div>
-      <Footer />
+      
     </div>
   );
 };

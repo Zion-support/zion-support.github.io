@@ -47,9 +47,9 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
         <meta name="description" content="Advanced Enhanced Accessibility Enhancer solution for modern businesses." /></meta>
         <meta name="keywords" content="AI, artificial intelligence, enhanced accessibility enhancer, AI solutions, intelligent automation" /></meta>
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-emerald-900to-slate-900"></div>
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-emerald-900to-slate-900">
         {/* Hero Section */}
-    </div>
+    
         <section className="relativepy-20px-4overflow-hidden"></section>
           <div className="absolute inset-0bg-gradient-to-rfrom-emerald-600/20to-blue-600/20">
         <div className="relativemax-w-7xlmx-autotext-center">

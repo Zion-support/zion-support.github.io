@@ -82,9 +82,9 @@ notFoun,
 function DefaultErrorFallback({ error, resetError }: { error: Error; resetErro,)
   r: () => void }) {
 return (
-    <div className="min-h-screen flex items-center justify-centerbg-gray-50px-4"></div>
-<div className="max-w-md w-full bg-white rounded-lgshadow-lgp-6"></div>
-<div className="flex items-center justify-center w-12 h-12 mx-autobg-red-100rounded-full"></div>
+    <div className="min-h-screen flex items-center justify-centerbg-gray-50px-4">
+<div className="max-w-md w-full bg-white rounded-lgshadow-lgp-6">
+<div className="flex items-center justify-center w-12 h-12 mx-autobg-red-100rounded-full">
 <svg
 className="w-6h-6text-red-600"
 fill="none"
@@ -100,7 +100,7 @@ strokeWidth = {
 d="M6 18L18 6M6 6l12 12"
 /></path>
 </svg>
-</div>
+
 <h2 className="mt-4 text-2xl font-boldtext-centertext-gray-900">Oops! Something went wrong</h2>
 <p className="mt-2text-centertext-gray-600">
             {error.message || 'An unexpected error occurred'}
@@ -108,7 +108,7 @@ d="M6 18L18 6M6 6l12 12"
 {process.env['NODE_ENV'] === 'development' && (}
 <pre className="mt-4 p-4 bg-gray-100 roundedtext-xsoverflow-auto">{error.stack}</pre>
 )}
-<div className="mt-6flexgap-4"></div>
+<div className="mt-6flexgap-4">
 <button
 onClick = {
 resetError
@@ -119,18 +119,18 @@ onClick={() =>(window.location.href = '/')}</button>
 className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300transition-colors">
 Go Home
 </
-</div>
-</div>
-</div>
+
+
+
 /**
 * Network error fallback component
 */
 function NetworkErrorFallback({ resetError }: { error: Error; resetErro,)
   r: () => void }) {
 return (
-    <div className="min-h-screen flex items-center justify-centerbg-gray-50px-4"></div>
-<div className="max-w-md w-full bg-white rounded-lgshadow-lgp-6"></div>
-<div className="flex items-center justify-center w-12 h-12 mx-autobg-yellow-100rounded-full"></div>
+    <div className="min-h-screen flex items-center justify-centerbg-gray-50px-4">
+<div className="max-w-md w-full bg-white rounded-lgshadow-lgp-6">
+<div className="flex items-center justify-center w-12 h-12 mx-autobg-yellow-100rounded-full">
 <svg
 className="w-6h-6text-yellow-600"
 fill="none"

@@ -98,8 +98,8 @@ if (hasError) {}
 return(<div};
 interface ImageProps {/* TODO: Fix JSX expression */};
 export const
-Image: React.FC<ImageProps>= ({/* TOD,)</div>
-  O: Fix JSX expression */})</div>
+Image: React.FC<ImageProps>= ({/* TOD,)
+  O: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
 }, [onLoad])
 const handleError = useCallback(() => {/* TODO: Fix JSX expression */}
@@ -114,13 +114,13 @@ style = {
 imageStyle
 };
 {...props})
->)</div>
+>)
 <span className="text-gray-500text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>)
 <<<<<<< HEAD
-</div>;
+;
   );
 =======
-</div>),
+),
 >>>>>>> cursor/fix-errors-and-merge-to-main-996d,
 {...props}
 ></div>

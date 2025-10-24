@@ -1,58 +1,65 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix JSX fragments in a single page file
-function fixJSXFragments(filePath) {
+// Function to fix JSX fragment syntax issues
+function fixJSXFragmentSyntax(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Check if file has JSX fragments
-    if (content.includes('return (\n    <>') && content.includes('</>')) {
-      // Replace JSX fragments with div elements
-      content = content.replace(
-        /return \(\s*<>/g,
-        'return (\n    <div>'
-      );
-      
-      content = content.replace(
-        /<\/>\s*\);/g,
-        '</div>\n  );'
-      );
-      
-      // Write the fixed content back
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed JSX fragments: ${filePath}`);
+    let modified = false;
+
+    // Fix malformed JSX fragments - replace <> with <div>
+    if (content.includes('return (\n    <>')) {
+      content = content.replace(/return \(\n\s*<>/g, 'return (\n    <div>');
+      modified = true;
+    }
+
+    // Fix closing fragments - replace </> with </div>
+    if (content.includes('</>')) {
+      content = content.replace(/<\/>/g, '</div>');
+      modified = true;
+    }
+
+    // Fix malformed JSX where fragments are not properly closed
+    if (content.includes('  )\n}') && !content.includes('  );\n}')) {
+      content = content.replace(/  \)\n}/g, '  );\n}');
+      modified = true;
+    }
+
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed JSX fragments in: ${filePath}`);
       return true;
     }
+    return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
   }
-  return false;
 }
 
-// Function to recursively find and fix all page.tsx files
-function fixAllPages(dir) {
+// Function to recursively find and fix all .tsx files
+function fixAllJSXFragmentSyntax(dir) {
   const files = fs.readdirSync(dir);
   let fixedCount = 0;
-  
+
   for (const file of files) {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
-    
+
     if (stat.isDirectory()) {
-      fixedCount += fixAllPages(filePath);
-    } else if (file === 'page.tsx') {
-      if (fixJSXFragments(filePath)) {
+      fixedCount += fixAllJSXFragmentSyntax(filePath);
+    } else if (file.endsWith('.tsx')) {
+      if (fixJSXFragmentSyntax(filePath)) {
         fixedCount++;
       }
     }
   }
-  
+
   return fixedCount;
 }
 
 // Start fixing from the app directory
 const appDir = path.join(__dirname, 'app');
-console.log('Starting to fix JSX fragments...');
-const totalFixed = fixAllPages(appDir);
-console.log(`Fixed ${totalFixed} page files.`);
+console.log('Fixing JSX fragment syntax...');
+const totalFixed = fixAllJSXFragmentSyntax(appDir);
+console.log(`Fixed ${totalFixed} files`);

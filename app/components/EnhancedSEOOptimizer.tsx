@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle, Phone, Mail, Zap, Shield, Globe } from 'lucide-react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 
 const EnhancedSEOOptimizerPage: React.FC = () => {
   const features = [,
@@ -42,7 +41,7 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Enhanced SEO Optimizer - Zion Tech Group</title>
         <meta name="description" content="Advanced SEO optimization tools powered by AI for maximum search engine visibility" />
@@ -68,9 +67,9 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
                 <button className="border border-gray-300 text-white hover:bg-white hover:text-gray-900 font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Learn More
                 </button>
-              </div>
-            </div>
-          </div>
+              
+            
+          
         </section>
 
         {/* Features Section */}
@@ -139,7 +138,7 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
           </div>
         </section>
       </div>
-      <Footer />
+      
     </div>
   );
 };

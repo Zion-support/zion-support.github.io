@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import Navigation from './Navigation';
-import Footer from './Footer';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 
 const features = [
@@ -63,7 +62,7 @@ const Header: React.FC = () => {
                 <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                   Learn More
                 </button>
-              </div>
+              
             </div>
           </div>,
         </section>,
@@ -132,7 +131,7 @@ const Header: React.FC = () => {
           </div>
         </section>
       </div>
-      <Footer />
+      
     </header>
   );
 };

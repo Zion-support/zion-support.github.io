@@ -1,5 +1,4 @@
 'use client';
-import Footer from './Footer';
 import Navigation from './Navigation';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight } from 'lucide-react';
@@ -55,13 +54,13 @@ interface ContentNewsletterSignupProps {
     } finally {
       setIsSubmitting(false),}
   return (</ContentNewsletterSignupProp>
-    <div className="bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900 py-16 px-4"></div>
-      <div className="max-w-4xl mx-auto text-center"></div>
+    <div className="bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900 py-16 px-4">
+      <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-4xl font-bold text-white mb-4">{title}</h2>
         <p className="text-xl text-gray-300 mb-8">{subtitle}</p>
         
         <form onSubmit={handleSubmit} className="max-w-md mx-auto mb-8"></form>
-          <div className="flex flex-col sm:flex-row gap-4"></div>
+          <div className="flex flex-col sm:flex-row gap-4">
             <input
               type="email"
               value={email}
@@ -80,16 +79,16 @@ interface ContentNewsletterSignupProps {
               {isLoading ? 'Subscribing...' : buttonText}</button>
               <ArrowRight className="ml-2 h-4 w-4" /></ArrowRight>
             </button>
-          </div>
+          
         </form>
         
         {isSubscribed && (
-          <div className="mt-4 p-4 bg-emerald-600/20 border border-emerald-500/50 rounded-lg"></div>
+          <div className="mt-4 p-4 bg-emerald-600/20 border border-emerald-500/50 rounded-lg">
             <p className="text-emerald-400 flex items-center justify-center"></p>
               <CheckCircle className="h-5 w-5 mr-2" />
               Thank you for subscribing!</CheckCircle>
             </p>
-          </div>
+          
         )}
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
