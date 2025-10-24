@@ -1,7 +1,10 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
 import { Brain, Shield, Zap } from 'lucide-react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-d028
 
 
 const teamMembers = [

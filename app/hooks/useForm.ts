@@ -12,7 +12,11 @@ export const useForm = (initialValues = {}) => {
     }));
   };
 
+<<<<<<< HEAD
   const handleSubmit = (onSubmit: (_values: unknown) => void) => (e: React.FormEvent) => {
+=======
+  const handleSubmit = (onSubmit: (_values: any) => void) => (e: React.FormEvent) => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-d028
     e.preventDefault();
     onSubmit(values);
   };
