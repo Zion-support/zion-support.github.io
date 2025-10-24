@@ -6,11 +6,12 @@ interface StructuredDataProps {
 }
 
 const StructuredData: React.FC<StructuredDataProps> = (_props) => {
+
   return (
-    <div>
+    
+    <div></div>
       {/* Component content */}
     </div>
-  );
-};
+  )};
 
 export default StructuredData;

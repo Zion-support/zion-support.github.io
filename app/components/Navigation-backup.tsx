@@ -4,46 +4,46 @@ import { X, Menu } from 'lucide-react';
 interface NavigationBackupProps {
   logo?: string
   logoText?: string
-  menuItems?: Array<{
-    label: string,
-      href: string
-    submenu?: Array<{
-      label: string,
-      href: string
-    }>
+  menuItems?: Array<{;
+    label: string,;
+      href: string,
+    submenu?: Array<{;
+      label: string,;
+      href: string}>
   }>
   ctaText?: string
   ctaHref?: string
 }
 
 const NavigationBackup: React.FC<NavigationBackupProps> = ({
-  logo
-  logoText = 'Zion Tech Group'
+  logo;
+  logoText = 'Zion Tech Group';
   menuItems = [
     { label: 'Home', href: '/' },
     { label: 'About', href: '/about' },
     { label: 'Services', href: '/services' },
     { label: 'Contact', href: '/contact' }
-  ],
-  ctaText = 'Get Started',
-  ctaHref = '/contact',
-}) => {
+  ],;
+  ctaText = 'Get Started',;
+  ctaHref = '/contact'}) => {
+
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null)
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+
+    setIsMenuOpen(!isMenuOpen)};
 
   const _toggleSubmenu = (label: string) => {
-    setActiveSubmenu(activeSubmenu === label ? null : label);
-  };
+
+    setActiveSubmenu(activeSubmenu === label ? null : label)};
 
   return (
+    
     <nav className="...">
-      <div className="...">
-        <div className="...">
+      <div className="..."></div>
+        <div className="..."></div>
           {/* Logo */}
-          <div className="...">
+          <div className="..."></div>
             {logo ? (
               <img src={logo} alt={logoText} className="h-8 w-auto" />
             ) : (
@@ -52,19 +52,19 @@ const NavigationBackup: React.FC<NavigationBackupProps> = ({
           </div>
 
           {/* Desktop Menu */}
-          <div className="...">
+          <div className="..."></div>
             {menuItems.map((item, index) => (
-              <div key={index} className="...">
-                <a
+              <div key={index} className="..."></div>
+                <a;
                   href={item.href}
                   className="...">
                   {item.label}
                 </a>
                 {item.submenu && (
-                  <div className="...">
-                    <div className="...">
+                  <div className="..."></div>
+                    <div className="..."></div>
                       {item.submenu.map((subItem, subIndex) => (
-                        <a
+                        <a;
                           key={subIndex}
                           href={subItem.href}
                           className="...">
@@ -79,8 +79,8 @@ const NavigationBackup: React.FC<NavigationBackupProps> = ({
           </div>
 
           {/* CTA Button */}
-          <div className="...">
-            <a
+          <div className="..."></div>
+            <a;
               href={ctaHref}
               className="...">
               {ctaText}
@@ -88,8 +88,8 @@ const NavigationBackup: React.FC<NavigationBackupProps> = ({
           </div>
 
           {/* Mobile menu button */}
-          <div className="...">
-            <button
+          <div className="..."></div>
+            <button;
               onClick={toggleMenu}
               className="...">
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -99,19 +99,19 @@ const NavigationBackup: React.FC<NavigationBackupProps> = ({
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="...">
-            <div className="...">
+          <div className="..."></div>
+            <div className="..."></div>
               {menuItems.map((item, index) => (
-                <div key={index}>
-                  <a
+                <div key={index}></div>
+                  <a;
                     href={item.href}
                     className="...">
                     {item.label}
                   </a>
                   {item.submenu && (
-                    <div className="...">
+                    <div className="..."></div>
                       {item.submenu.map((subItem, subIndex) => (
-                        <a
+                        <a;
                           key={subIndex}
                           href={subItem.href}
                           className="...">
@@ -122,8 +122,8 @@ const NavigationBackup: React.FC<NavigationBackupProps> = ({
                   )}
                 </div>
               ))}
-              <div className="...">
-                <a
+              <div className="..."></div>
+                <a;
                   href={ctaHref}
                   className="...">
                   {ctaText}
@@ -136,4 +136,4 @@ const NavigationBackup: React.FC<NavigationBackupProps> = ({
     </nav>
   )
 }
-export default NavigationBackup
+export default NavigationBackup;

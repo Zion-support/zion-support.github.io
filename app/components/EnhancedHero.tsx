@@ -2,39 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
-import { ArrowRight, Brain , CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'lucide-react';
-import { Phone, Mail } from 'lucide-react',;
-    'use client'
-=======
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Phone, Mail, CheckCircle, Zap, Shield, Brain, Globe } from 'lucide-react'
 
-const EnhancedHero: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    }
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-8836
   ]
   const benefits = [
     'Increase efficiency by up to 50%',
@@ -54,7 +22,8 @@ const EnhancedHero: React.FC = () => {
   ]
 
   return (
-    <div className="...">
+    
+    <div className="..."></div>
       <Helmet>
         <title>Page Title</title>
         <meta name="description" content="Page description" />
@@ -65,9 +34,9 @@ const EnhancedHero: React.FC = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="...">
-        <div className="...">
-          <div className="...">
+      <section className="..."></section>
+        <div className="..."></div>
+          <div className="..."></div>
             <h1 className="...">
               <span className="...">
                 Enhanced Hero
@@ -79,28 +48,23 @@ const EnhancedHero: React.FC = () => {
               Transform your business with our advanced enhanced hero solutions. 
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-<<<<<<< HEAD
-            <div className="...">
-              <button className="...">
-=======
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
+
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="...">
-                Learn More
-              </button>
-            </div>
+              Learn More
+              
+            </button>
+          </div>
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="...">
-        <div className="...">
-          <div className="...">
+      <section className="..."></section>
+        <div className="..."></div>
+          <div className="..."></div>
             <h2 className="...">
               Why Choose Our Enhanced Hero?
             </h2>
@@ -108,72 +72,4 @@ const EnhancedHero: React.FC = () => {
               Our enhanced hero solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
-<<<<<<< HEAD
-=======
 
-          <div className="...">
-            {features.map((feature, index) => (
-              <div key={index} className="...">
-                <div className="...">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="...">
-        <div className="...">
-          <div className="...">
-            <h2 className="...">
-              Key Benefits
-            </h2>
-            <p className="...">
-              Experience the power of our enhanced hero solutions for your business.
-            </p>
-          </div>
-
-          <div className="...">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="...">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="...">
-        <div className="...">
-          <div className="...">
-            <h2 className="...">
-              Ready to Get Started?
-            </h2>
-            <p className="...">
-              Contact our experts to discuss your enhanced hero needs and get a customized solution.
-            </p>
-            <div className="...">
-              <button className="...">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-              </button>
-              <button className="...">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  )
-}
-
-export default EnhancedHero
->>>>>>> cursor/fix-errors-and-merge-to-main-8836

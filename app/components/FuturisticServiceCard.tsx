@@ -2,59 +2,38 @@ import React from 'react'
 import { CheckCircle, ArrowRight } from 'lucide-react'
 
 interface FuturisticServiceCardProps {
-<<<<<<< HEAD
-  title: string,
-      description: string,
-      features: string[  ];
-  price?: string
-  priceDescription?: string
-  icon?: React.ReactNode
-  gradient?: string
-  onClick?: () => void
-  isPopular?: boolean
-=======
-  title: string;
-  description: string;
-  features: string[];
-  price?: string;
-  priceDescription?: string;
-  icon?: React.ReactNode;
-  gradient?: string;
-  onClick?: () => void;
-  isPopular?: boolean;
->>>>>>> cursor/fix-errors-and-merge-to-main-8836
-}
-
-const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
+  [key: string]: any}const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
   title,
   description,
   features,
   price,
   priceDescription,
-  icon,
+  icon,;
   gradient = 'from-purple-500 to-blue-600',
-  onClick,
+  onClick,;
   isPopular = false
 }) => {
+
   return (
-    <div className={`relative group ${isPopular ? 'scale-105' : ''}`}>
+    
+    <div className={`relative group ${isPopular ? 'scale-105' : ''}`}></div>
       {isPopular && (
-        <div className="...">
-          <div className="...">
+        <div className="..."></div>
+          <div className="..."></div>
             Most Popular
           </div>
         </div>
       )}
       
-      <div className="...">
+      <div className="..."></div>
         {/* Background gradient */}
         <div className={`absolute inset-0 bg-gradient-to-br ${gradient} opacity-5 rounded-2xl group-hover:opacity-10 transition-opacity`}></div>
         
         {/* Content */}
-        <div className="...">
+        <div className="..."></div>
           {/* Icon */}
           {icon && (
-            <div className={`w-16 h-16 bg-gradient-to-r ${gradient} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+            <div className={`w-16 h-16 bg-gradient-to-r ${gradient} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}></div>
               {icon}
             </div>
           )}
@@ -81,12 +60,12 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
           
           {/* Price */}
           {price && (
-            <div className="...">
-              <div className="...">
+            <div className="..."></div>
+              <div className="..."></div>
                 {price}
               </div>
               {priceDescription && (
-                <div className="...">
+                <div className="..."></div>
                   {priceDescription}
                 </div>
               )}
@@ -94,12 +73,12 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
           )}
           
           {/* Button */}
-          <button
+          <button;
             onClick={onClick}
             className={`w-full bg-gradient-to-r ${gradient} text-white font-semibold py-3 px-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center group`}
           >
             <span>Get Started</span>
-            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="ml-2 w-5 h-5 group-hover: translate-x-1 transition-transform" />,
           </button>
         </div>
       </div>
@@ -107,4 +86,4 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
   )
 }
 
-export default FuturisticServiceCard
+export default FuturisticServiceCard;

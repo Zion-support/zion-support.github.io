@@ -6,9 +6,9 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
 const LazyImage: React.FC = ($2) => {
-$3
-};
-        <section className="relative py-20 px-4 overflow-hidden"> </section><div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20">
+
+$3};
+        <section className="relative py-20 px-4 overflow-hidden"> </section><div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
         <div className="relative max-w-7xl mx-auto text-center"> </div><h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">,
               LazyImage
             </h1>
@@ -25,7 +25,7 @@ $3
         </section>,
 ,
         {/* Features Section */}
-        <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto">
+        <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto"></div>
         <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p>Discover the powerful features that make LazyImage the perfect solution for your business.</p>
             </div>
@@ -43,86 +43,53 @@ $3
                 <p className="text-gray-300">Optimized performance for maximum productivity.</p>
                 </div>
               </div>
-            </div>
-        </section>,
+        </div>
+      </section>,
 ,
         {/* CTA Section */}
         <section className="py-20 px-4"> </section><div className="max-w-4xl mx-auto text-center"> </div><h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
             <p>Join thousands of businesses already using LazyImage to transform their operations.</p>
-            <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">,
+            <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
               Start Your Free Trial
+            
             </button>
-            </div>
+          </div>
         </section>
         </div>
       </Footer>
       </div>
-<<<<<<< HEAD
 
-      <Footer /> </Footer></>
-  )
-}
-
-const LazyImage: React.FC<LazyImageProps> = ({
-  src,
-  alt,
-  className = '',
-  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PC9zdmc+',
-  onLoad,
-  onError
-}) => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(false);
-  const [hasError, setHasError] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsInView(true);
-          observer.disconnect();
-        }
-<<<<<<< HEAD
-          }
-=======
-      },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
       { threshold: 0.1 }
     );
 
     if (imgRef.current) {
-      observer.observe(imgRef.current);
-    }
+      observer.observe(imgRef.current)}
 
     return () => observer.disconnect();
-<<<<<<< HEAD
-  }, []);
-=======
-  }, [])
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
+
 
   const handleLoad = () => {
+
     setIsLoaded(true);
-    onLoad?.();
-  };
+    onLoad?.()};
 
   const handleError = () => {
+
     setHasError(true);
-    onError?.();
-  };
+    onError?.()};
 
   return (
-    <div ref={imgRef} className={`relative overflow-hidden ${className}`}>
+    
+    <div ref={imgRef} className={`relative overflow-hidden ${className}`}></div>
       {!isLoaded && !hasError && (
-        <img
+        <img;
           src={placeholder}
-          alt=""
+          alt="";
           className="absolute inset-0 w-full h-full object-cover blur-sm"
         />
       )}
       {isInView && (
-        <img
+        <img;
           src={src}
           alt={alt}
           onLoad={handleLoad}
@@ -134,12 +101,11 @@ const LazyImage: React.FC<LazyImageProps> = ({
         />
       )}
       {hasError && (
-        <div className="...">
+        <div className="..."></div>
           Failed to load
         </div>
       )}
     </div>
-  );
-};
+  )};
 
 export default LazyImage;

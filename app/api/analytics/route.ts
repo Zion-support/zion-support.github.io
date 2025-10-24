@@ -9,25 +9,12 @@ export async function POST(request: NextRequest) {
       ...event,
       timestamp: new Date().toISOString(),
       userAgent: request.headers.get('user-agent'),
-      ip: request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip'),
+      ip: request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip')
     });
-
-    // Here you would typically send the event to your analytics service
-    // For example: Google Analytics, Mixpanel, Amplitude, etc.
     
     return NextResponse.json({ success: true });
   } catch (error) {
-    console.error('Analytics API Error:', error);
-    return NextResponse.json(
-      { error: 'Failed to process analytics event' },
-      { status: 500 }
-    );
+    console.error('Analytics error:', error);
+    return NextResponse.json({ error: 'Failed to process analytics event' }, { status: 500 });
   }
-}
-
-export async function GET() {
-  return NextResponse.json({ 
-    message: 'Analytics API is running',
-    timestamp: new Date().toISOString()
-  });
 }

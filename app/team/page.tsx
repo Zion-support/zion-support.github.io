@@ -1,45 +1,41 @@
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
+import React from 'react';
+import { Metadata } from 'next';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-export default function TeamPage() {
+export const metadata: Metadata = {
+  title: 'Page - Zion Tech Group',
+  description: 'Professional page services by Zion Tech Group.',
+  keywords: 'page, services, technology, AI, IT solutions'
+};
+
+const PagePage = () => {
   return (
-    <>
+    <div className="min-h-screen bg-white">
       <Navigation />
-      <div className="min-h-screen bg-gray-50 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Team</h1>
-            <p className="text-xl text-gray-600 mb-8">
-              Meet the experts behind our innovative solutions.
+      
+      <section className="pt-20 pb-16 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Page
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Professional page services by Zion Tech Group.
+          </p>
+          <div className="space-y-4">
+            <p className="text-gray-400">
+              Our page solutions are designed to help your business grow and succeed.
             </p>
-            <div className="bg-white rounded-lg shadow-lg p-8 max-w-4xl mx-auto">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Expert Team</h2>
-              <p className="text-gray-600 mb-6">
-                Our team consists of experienced professionals in AI, cloud computing, 
-                cybersecurity, and software development.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="text-center">
-                  <div className="w-24 h-24 bg-blue-100 rounded-full mx-auto mb-4"></div>
-                  <h3 className="font-semibold text-gray-900">AI Specialists</h3>
-                  <p className="text-gray-600">Machine Learning & AI Experts</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-24 h-24 bg-green-100 rounded-full mx-auto mb-4"></div>
-                  <h3 className="font-semibold text-gray-900">Cloud Engineers</h3>
-                  <p className="text-gray-600">Cloud Infrastructure & DevOps</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-24 h-24 bg-purple-100 rounded-full mx-auto mb-4"></div>
-                  <h3 className="font-semibold text-gray-900">Security Experts</h3>
-                  <p className="text-gray-600">Cybersecurity & Compliance</p>
-                </div>
-              </div>
-            </div>
+            <p className="text-gray-400">
+              Contact us to learn more about how we can help you achieve your goals.
+            </p>
           </div>
         </div>
-      </div>
+      </section>
+
       <Footer />
-    </>
-  )
-}
+    </div>
+  );
+};
+
+export default PagePage;

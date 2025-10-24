@@ -3,28 +3,28 @@ import React from 'react';
 import Navigation from './Navigation';
 import { ArrowRight, CheckCircle  } from "lucide-react";
 const features = [
-  {
-    icon: CheckCircle,
-    title: "Advanced AI",
-    description: "Cutting-edge artificial intelligence solutions",
+  {;
+    icon: CheckCircle,;
+    title: "Advanced AI",;
+    description: "Cutting-edge artificial intelligence solutions",;
     benefits: ["Machine Learning", "Natural Language Processing", "Computer Vision"]
   },
-  {
-    icon: CheckCircle,
-    title: "Cloud Infrastructure",
-    description: "Scalable and secure cloud solutions",
+  {;
+    icon: CheckCircle,;
+    title: "Cloud Infrastructure",;
+    description: "Scalable and secure cloud solutions",;
     benefits: ["Auto-scaling", "High Availability", "Security"]
   },
-  {
-    icon: CheckCircle,
-    title: "Data Analytics",
-    description: "Powerful data analysis and visualization",
+  {;
+    icon: CheckCircle,;
+    title: "Data Analytics",;
+    description: "Powerful data analysis and visualization",;
     benefits: ["Real-time Analytics", "Predictive Modeling", "Business Intelligence"]
   },
-  {
-    icon: CheckCircle,
-    title: "Automation",
-    description: "Streamline your business processes",
+  {;
+    icon: CheckCircle,;
+    title: "Automation",;
+    description: "Streamline your business processes",;
     benefits: ["Workflow Automation", "Process Optimization", "Efficiency Gains"]
   }
 ];
@@ -40,9 +40,10 @@ const benefits = [
 
 
 import Footer from '@/components/Footer';const Header: React.FC = ($2) => {
+
 $3
 };
-        <section className="relative py-20 px-4 overflow-hidden"> </section><div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20">
+        <section className="relative py-20 px-4 overflow-hidden"> </section><div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
         <div className="relative max-w-7xl mx-auto text-center"> </div><h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">,
               Header
             </h1>
@@ -52,14 +53,15 @@ $3
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">,
-                Learn More
-              </button>
-            </div>
+              <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              Learn More
+              
+            </button>
+          </div>
           </div>,
         </section>,
         {/* Features Section */}
-        <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto">
+        <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto"></div>
         <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p>Powerful AI-driven features designed to transform your business operations</p>
             </div>
@@ -75,10 +77,10 @@ $3
                 </div>
               
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
         {/* Benefits Section */}
-        <section className="py-20 px-4 bg-white/5"> </section><div className="max-w-7xl mx-auto">
+        <section className="py-20 px-4 bg-white/5"> </section><div className="max-w-7xl mx-auto"></div>
         <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <p>Experience the benefits of cutting-edge AI technology</p>
             </div>
@@ -90,8 +92,8 @@ $3
                 </div>
               
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
         {/* CTA Section */}
         <section className="py-20 px-4"> </section><div className="max-w-4xl mx-auto text-center"> </div><h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p>Join thousands of businesses already using our AI solutions</p>
@@ -99,15 +101,14 @@ $3
             <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">,
                 Start Free Trial
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">,
-                Contact Sales
-              </button>
-            </div>
+              <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              Contact Sales
+              
+            </button>
           </div>
-        </section>
+        </div>
+      </section>
       </div>
       <Footer />
 
-  );
-
-}
+  )}
