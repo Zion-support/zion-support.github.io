@@ -1,4 +1,15 @@
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
+"use client";
+import React from 'react';
+
+const testUtils.ts = () => {
+  return null;
+};
+
+<<<<<<< HEAD:app-broken/app/utils/testUtils.ts
+export default testUtils.ts;
+export default testUtils.ts;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b73a
 'use client'
 /**
  * Testing Utilities
@@ -312,3 +323,5 @@ export default {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-75e3
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891
+>>>>>>> main:app/utils/testUtils.ts
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b73a

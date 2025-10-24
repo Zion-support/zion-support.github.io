@@ -42,7 +42,7 @@ export default AccessibilityEnhancer
   useEffect(() => {
     // Add focus management
     if (enableFocusManagement) {
-      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex=&quot;-1&quot;])';
       
       const trapFocus = (element: HTMLElement) => {
         const focusableContent = element.querySelectorAll(focusableElements);
@@ -67,7 +67,7 @@ export default AccessibilityEnhancer
       };
 
       // Apply focus trapping to modals
-      const modals = document.querySelectorAll('[role="dialog"]');
+      const modals = document.querySelectorAll('[role=&quot;dialog&quot;]');
       modals.forEach(trapFocus);
     }
   }, [enableFocusManagement]);

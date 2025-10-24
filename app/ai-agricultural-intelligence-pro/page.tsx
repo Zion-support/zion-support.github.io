@@ -54,6 +54,10 @@ const AiAgriculturalIntelligenceProPage: React.FC = () => {
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
         {/* Hero Section */}
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-c0b7
+      <Navigation />
+      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
+        {/* Hero Section */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b73a
 <<<<<<< HEAD:app-broken/app/404.tsx
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;>
           <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>

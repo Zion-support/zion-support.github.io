@@ -119,10 +119,10 @@ export function AnalyticsProvider({ children }: AnalyticsProviderProps) {
     <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
-<<<<<<< HEAD
   );
 };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 
+<<<<<<< HEAD
 export default AnalyticsProvider;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80

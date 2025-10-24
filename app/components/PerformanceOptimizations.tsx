@@ -1,6 +1,6 @@
 "use client"
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 const PerformanceOptimizationsPage: React.FC = () => {
   return (

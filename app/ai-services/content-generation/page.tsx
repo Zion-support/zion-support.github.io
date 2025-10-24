@@ -69,6 +69,16 @@ const ContentGenerationPage: React.FC = () => {
               Page
             </h1>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-c0b7
+      <Navigation />
+      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
+        {/* Hero Section */}
+        <section className=&quot;relative py-20 px-4 overflow-hidden&quot;>
+          <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
+          <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
+            <h1 className=&quot;text-5xl md:text-7xl font-bold text-white mb-6 leading-tight&quot;>
+              Page
+            </h1>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b73a
 <<<<<<< HEAD:app-broken/app/it-services/cybersecurity-audit/page.tsx
             <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
               Advanced Page solution for modern businesses.
