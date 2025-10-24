@@ -138,3 +138,5 @@ const AiDocumentProcessingPage: React.FC = () => {
 };
 
 export default AiDocumentProcessingPage;
+
+export default PagePage;

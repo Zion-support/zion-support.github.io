@@ -197,3 +197,5 @@ const CaseStudiesPage: React.FC = () => {
 };
 
 export default CaseStudiesPage;
+
+export default PagePage;

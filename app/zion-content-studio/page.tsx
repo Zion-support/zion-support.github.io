@@ -138,3 +138,5 @@ const ZionContentStudioPage: React.FC = () => {
 };
 
 export default ZionContentStudioPage;
+
+export default PagePage;

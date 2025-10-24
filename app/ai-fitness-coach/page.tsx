@@ -138,3 +138,5 @@ const AiFitnessCoachPage: React.FC = () => {
 };
 
 export default AiFitnessCoachPage;
+
+export default PagePage;

@@ -138,3 +138,5 @@ const AiAnalyticsDashboardPage: React.FC = () => {
 };
 
 export default AiAnalyticsDashboardPage;
+
+export default PagePage;

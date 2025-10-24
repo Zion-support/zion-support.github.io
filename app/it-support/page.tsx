@@ -138,3 +138,5 @@ const ItSupportPage: React.FC = () => {
 };
 
 export default ItSupportPage;
+
+export default PagePage;

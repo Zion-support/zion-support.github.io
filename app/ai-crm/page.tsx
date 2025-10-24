@@ -138,3 +138,5 @@ const AiCrmPage: React.FC = () => {
 };
 
 export default AiCrmPage;
+
+export default PagePage;

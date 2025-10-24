@@ -138,3 +138,5 @@ const AiVoiceProcessingPage: React.FC = () => {
 };
 
 export default AiVoiceProcessingPage;
+
+export default PagePage;

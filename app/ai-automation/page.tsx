@@ -1,3 +1,4 @@
+import React from "react";
 'use client';
 import React from 'react';
 import Link from 'next/link';
@@ -198,7 +199,7 @@ const AIAutomationPage: React.FC = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -234,3 +235,5 @@ const AIAutomationPage: React.FC = () => {
 };
 
 export default AIAutomationPage;
+
+export default Aiautomation;

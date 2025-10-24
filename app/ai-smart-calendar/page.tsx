@@ -138,3 +138,5 @@ const AiSmartCalendarPage: React.FC = () => {
 };
 
 export default AiSmartCalendarPage;
+
+export default PagePage;

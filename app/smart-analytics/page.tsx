@@ -138,3 +138,5 @@ const SmartAnalyticsPage: React.FC = () => {
 };
 
 export default SmartAnalyticsPage;
+
+export default PagePage;

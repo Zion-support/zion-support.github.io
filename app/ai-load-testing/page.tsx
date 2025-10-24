@@ -138,3 +138,5 @@ const AiLoadTestingPage: React.FC = () => {
 };
 
 export default AiLoadTestingPage;
+
+export default PagePage;

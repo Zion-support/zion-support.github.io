@@ -138,3 +138,5 @@ const AiApiManagerPage: React.FC = () => {
 };
 
 export default AiApiManagerPage;
+
+export default PagePage;

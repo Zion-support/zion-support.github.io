@@ -138,3 +138,5 @@ const ZionAiImageGeneratorPage: React.FC = () => {
 };
 
 export default ZionAiImageGeneratorPage;
+
+export default PagePage;

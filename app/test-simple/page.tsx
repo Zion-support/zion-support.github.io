@@ -138,3 +138,5 @@ const TestSimplePage: React.FC = () => {
 };
 
 export default TestSimplePage;
+
+export default PagePage;

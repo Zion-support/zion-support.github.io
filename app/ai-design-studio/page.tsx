@@ -138,3 +138,5 @@ const AiDesignStudioPage: React.FC = () => {
 };
 
 export default AiDesignStudioPage;
+
+export default PagePage;

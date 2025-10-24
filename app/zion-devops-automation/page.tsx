@@ -138,3 +138,5 @@ const ZionDevopsAutomationPage: React.FC = () => {
 };
 
 export default ZionDevopsAutomationPage;
+
+export default PagePage;

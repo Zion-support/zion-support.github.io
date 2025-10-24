@@ -138,3 +138,5 @@ const AiCodeGenerationPage: React.FC = () => {
 };
 
 export default AiCodeGenerationPage;
+
+export default PagePage;

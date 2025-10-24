@@ -138,3 +138,5 @@ const AiChatbotBuilderPage: React.FC = () => {
 };
 
 export default AiChatbotBuilderPage;
+
+export default PagePage;

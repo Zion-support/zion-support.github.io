@@ -138,3 +138,5 @@ const AiRealEstatePage: React.FC = () => {
 };
 
 export default AiRealEstatePage;
+
+export default PagePage;

@@ -10,3 +10,5 @@ import { ArrowRight, Mail, Zap, BarChart, Users, CheckCircle, Brain } from 'luci
 export default AIEmailMarketingAutomationPage;
 
 export default PagePage;
+
+export default PagePage;

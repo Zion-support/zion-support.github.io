@@ -138,3 +138,5 @@ const AI3DGenerationPage: React.FC = () => {
 };
 
 export default AI3DGenerationPage;
+
+export default PagePage;

@@ -138,3 +138,5 @@ const ZionComplianceManagerPage: React.FC = () => {
 };
 
 export default ZionComplianceManagerPage;
+
+export default PagePage;

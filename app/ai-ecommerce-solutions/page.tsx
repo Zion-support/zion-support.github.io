@@ -138,3 +138,5 @@ const AiEcommerceSolutionsPage: React.FC = () => {
 };
 
 export default AiEcommerceSolutionsPage;
+
+export default PagePage;

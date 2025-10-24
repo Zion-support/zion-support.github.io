@@ -10,3 +10,5 @@ import { ArrowRight, FileText, DollarSign, CheckCircle, Brain, Settings, BarChar
 export default AIInvoiceGeneratorPage;
 
 export default PagePage;
+
+export default PagePage;

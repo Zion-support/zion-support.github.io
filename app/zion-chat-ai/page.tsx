@@ -138,3 +138,5 @@ const ZionChatAiPage: React.FC = () => {
 };
 
 export default ZionChatAiPage;
+
+export default PagePage;

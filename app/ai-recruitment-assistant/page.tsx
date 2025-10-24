@@ -138,3 +138,5 @@ const AiRecruitmentAssistantPage: React.FC = () => {
 };
 
 export default AiRecruitmentAssistantPage;
+
+export default PagePage;

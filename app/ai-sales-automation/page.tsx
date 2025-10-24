@@ -138,3 +138,5 @@ const AiSalesAutomationPage: React.FC = () => {
 };
 
 export default AiSalesAutomationPage;
+
+export default PagePage;

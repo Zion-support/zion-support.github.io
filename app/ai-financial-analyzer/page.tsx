@@ -138,3 +138,5 @@ const AiFinancialAnalyzerPage: React.FC = () => {
 };
 
 export default AiFinancialAnalyzerPage;
+
+export default PagePage;

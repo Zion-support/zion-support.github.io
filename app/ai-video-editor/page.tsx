@@ -10,3 +10,5 @@ import { ArrowRight, Video, Play, BarChart, Users, CheckCircle, Brain, Settings,
 export default AIVideoEditorPage;
 
 export default PagePage;
+
+export default PagePage;

@@ -6,7 +6,11 @@ const Aimedicaldiagnosisassistant = () => {
     {
       icon: "🚀",
       title: "Professional",
+<<<<<<< HEAD:temp-pages/ai-medical-diagnosis-assistant/page.tsx
       description: "Professional medical diagnosis assistant solutions"
+=======
+      description: "Professional zion meeting transcriber solutions"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a086:app/zion-ai-meeting-transcriber/page.tsx
     },
     {
       icon: "⚡",
@@ -31,10 +35,17 @@ const Aimedicaldiagnosisassistant = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+<<<<<<< HEAD:temp-pages/ai-medical-diagnosis-assistant/page.tsx
             Medical Diagnosis Assistant
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Professional medical diagnosis assistant solutions tailored to your business needs
+=======
+            Zion Meeting Transcriber
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional zion meeting transcriber solutions tailored to your business needs
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a086:app/zion-ai-meeting-transcriber/page.tsx
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -62,6 +73,10 @@ const Aimedicaldiagnosisassistant = () => {
             <p className="text-lg text-gray-300">
               Everything you need for success
             </p>
+<<<<<<< HEAD:temp-pages/ai-medical-diagnosis-assistant/page.tsx
+=======
+          </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a086:app/zion-ai-meeting-transcriber/page.tsx
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
@@ -70,6 +85,10 @@ const Aimedicaldiagnosisassistant = () => {
                   {feature.title}
                 </h3>
                 <p className="text-gray-300">{feature.description}</p>
+<<<<<<< HEAD:temp-pages/ai-medical-diagnosis-assistant/page.tsx
+=======
+              </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a086:app/zion-ai-meeting-transcriber/page.tsx
             ))}
           </div>
         </div>

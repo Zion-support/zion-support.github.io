@@ -138,3 +138,5 @@ const AiEdgeComputingPage: React.FC = () => {
 };
 
 export default AiEdgeComputingPage;
+
+export default PagePage;

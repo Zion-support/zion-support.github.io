@@ -138,3 +138,5 @@ const ZionInvoiceGeniusPage: React.FC = () => {
 };
 
 export default ZionInvoiceGeniusPage;
+
+export default PagePage;

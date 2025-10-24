@@ -138,3 +138,5 @@ const AiEnergyPage: React.FC = () => {
 };
 
 export default AiEnergyPage;
+
+export default PagePage;

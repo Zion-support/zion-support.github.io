@@ -138,3 +138,5 @@ const AiSentimentAnalyzerPage: React.FC = () => {
 };
 
 export default AiSentimentAnalyzerPage;
+
+export default PagePage;

@@ -138,3 +138,5 @@ const ZionAiSupplyChainOptimizerPage: React.FC = () => {
 };
 
 export default ZionAiSupplyChainOptimizerPage;
+
+export default PagePage;

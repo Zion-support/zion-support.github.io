@@ -138,3 +138,5 @@ const AiFintechPage: React.FC = () => {
 };
 
 export default AiFintechPage;
+
+export default PagePage;

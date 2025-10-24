@@ -138,3 +138,5 @@ const ZionSecurityShieldPage: React.FC = () => {
 };
 
 export default ZionSecurityShieldPage;
+
+export default PagePage;

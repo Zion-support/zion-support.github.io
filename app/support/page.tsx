@@ -157,3 +157,5 @@ const SupportPage: React.FC = () => {
 };
 
 export default SupportPage;
+
+export default PagePage;

@@ -150,3 +150,5 @@ const AccessibilityPagePage: React.FC = () => {
 };
 
 export default AccessibilityPagePage;
+
+export default PagePage;

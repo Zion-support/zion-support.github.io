@@ -10,3 +10,5 @@ import { Receipt, ArrowRight, BarChart, DollarSign, CheckCircle, Brain, Settings
 export default AIExpenseTrackerPage;
 
 export default PagePage;
+
+export default PagePage;

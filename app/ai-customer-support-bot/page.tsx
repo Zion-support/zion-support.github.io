@@ -138,3 +138,5 @@ const AiCustomerSupportBotPage: React.FC = () => {
 };
 
 export default AiCustomerSupportBotPage;
+
+export default PagePage;

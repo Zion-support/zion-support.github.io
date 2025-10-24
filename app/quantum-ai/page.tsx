@@ -138,3 +138,5 @@ const QuantumAiPage: React.FC = () => {
 };
 
 export default QuantumAiPage;
+
+export default PagePage;

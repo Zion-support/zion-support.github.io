@@ -138,3 +138,5 @@ const AiTransportationPage: React.FC = () => {
 };
 
 export default AiTransportationPage;
+
+export default PagePage;

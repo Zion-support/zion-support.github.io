@@ -138,3 +138,5 @@ const AiPredictiveAnalyticsPage: React.FC = () => {
 };
 
 export default AiPredictiveAnalyticsPage;
+
+export default PagePage;

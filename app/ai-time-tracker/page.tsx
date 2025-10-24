@@ -138,3 +138,5 @@ const AiTimeTrackerPage: React.FC = () => {
 };
 
 export default AiTimeTrackerPage;
+
+export default PagePage;

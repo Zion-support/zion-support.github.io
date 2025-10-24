@@ -138,3 +138,5 @@ const AiQualityAssurancePage: React.FC = () => {
 };
 
 export default AiQualityAssurancePage;
+
+export default PagePage;

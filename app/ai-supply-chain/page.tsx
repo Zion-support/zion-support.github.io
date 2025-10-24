@@ -138,3 +138,5 @@ const AiSupplyChainPage: React.FC = () => {
 };
 
 export default AiSupplyChainPage;
+
+export default PagePage;

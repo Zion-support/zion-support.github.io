@@ -138,3 +138,5 @@ const SolutionsPage: React.FC = () => {
 };
 
 export default SolutionsPage;
+
+export default PagePage;

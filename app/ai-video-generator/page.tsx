@@ -138,3 +138,5 @@ const AiVideoGeneratorPage: React.FC = () => {
 };
 
 export default AiVideoGeneratorPage;
+
+export default PagePage;

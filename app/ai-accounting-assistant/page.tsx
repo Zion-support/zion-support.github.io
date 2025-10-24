@@ -150,3 +150,5 @@ const AiAccountingAssistantPage: React.FC = () => {
 };
 
 export default AiAccountingAssistantPage;
+
+export default PagePage;

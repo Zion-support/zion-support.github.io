@@ -138,3 +138,5 @@ const ItInfrastructureSolutionsPage: React.FC = () => {
 };
 
 export default ItInfrastructureSolutionsPage;
+
+export default PagePage;

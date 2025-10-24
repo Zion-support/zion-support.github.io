@@ -138,3 +138,5 @@ const ProcessAutomationPage: React.FC = () => {
 };
 
 export default ProcessAutomationPage;
+
+export default PagePage;

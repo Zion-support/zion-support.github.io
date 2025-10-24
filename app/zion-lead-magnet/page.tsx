@@ -138,3 +138,5 @@ const ZionLeadMagnetPage: React.FC = () => {
 };
 
 export default ZionLeadMagnetPage;
+
+export default PagePage;

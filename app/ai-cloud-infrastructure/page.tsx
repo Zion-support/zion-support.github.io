@@ -138,3 +138,5 @@ const AiCloudInfrastructurePage: React.FC = () => {
 };
 
 export default AiCloudInfrastructurePage;
+
+export default PagePage;

@@ -138,3 +138,5 @@ const ManagedItPage: React.FC = () => {
 };
 
 export default ManagedItPage;
+
+export default PagePage;

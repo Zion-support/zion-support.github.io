@@ -138,3 +138,5 @@ const AiMlPage: React.FC = () => {
 };
 
 export default AiMlPage;
+
+export default PagePage;

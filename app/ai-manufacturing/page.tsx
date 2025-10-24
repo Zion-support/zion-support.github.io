@@ -138,3 +138,5 @@ const AiManufacturingPage: React.FC = () => {
 };
 
 export default AiManufacturingPage;
+
+export default PagePage;

@@ -138,3 +138,5 @@ const SmartContractSecurityAuditPage: React.FC = () => {
 };
 
 export default SmartContractSecurityAuditPage;
+
+export default PagePage;

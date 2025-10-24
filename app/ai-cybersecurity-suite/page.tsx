@@ -138,3 +138,5 @@ const AiCybersecuritySuitePage: React.FC = () => {
 };
 
 export default AiCybersecuritySuitePage;
+
+export default PagePage;

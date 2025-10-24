@@ -138,3 +138,5 @@ const FraudDetectionPage: React.FC = () => {
 };
 
 export default FraudDetectionPage;
+
+export default PagePage;

@@ -138,3 +138,5 @@ const EnergyManagementPage: React.FC = () => {
 };
 
 export default EnergyManagementPage;
+
+export default PagePage;

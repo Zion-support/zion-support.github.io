@@ -10,3 +10,5 @@ import { ArrowRight, Mic, Speaker, BarChart, Users, CheckCircle, Brain, Settings
 export default AIVoiceAssistantPage;
 
 export default PagePage;
+
+export default PagePage;

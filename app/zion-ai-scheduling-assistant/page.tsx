@@ -138,3 +138,5 @@ const ZionAiSchedulingAssistantPage: React.FC = () => {
 };
 
 export default ZionAiSchedulingAssistantPage;
+
+export default PagePage;

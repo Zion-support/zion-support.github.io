@@ -138,3 +138,5 @@ const AiMarketingPage: React.FC = () => {
 };
 
 export default AiMarketingPage;
+
+export default PagePage;

@@ -138,3 +138,5 @@ const AiDataVisualizationPage: React.FC = () => {
 };
 
 export default AiDataVisualizationPage;
+
+export default PagePage;

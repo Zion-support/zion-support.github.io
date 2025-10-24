@@ -6,7 +6,11 @@ const Intelligentemailinfrastructure = () => {
     {
       icon: "🚀",
       title: "Professional",
+<<<<<<< HEAD:temp-pages/intelligent-email-infrastructure/page.tsx
       description: "Professional intelligent email infrastructure solutions"
+=======
+      description: "Professional zion customer churn predictor solutions"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a086:app/zion-ai-customer-churn-predictor/page.tsx
     },
     {
       icon: "⚡",
@@ -31,10 +35,17 @@ const Intelligentemailinfrastructure = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+<<<<<<< HEAD:temp-pages/intelligent-email-infrastructure/page.tsx
             Intelligent Email Infrastructure
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Professional intelligent email infrastructure solutions tailored to your business needs
+=======
+            Zion Customer Churn Predictor
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional zion customer churn predictor solutions tailored to your business needs
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a086:app/zion-ai-customer-churn-predictor/page.tsx
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -62,6 +73,10 @@ const Intelligentemailinfrastructure = () => {
             <p className="text-lg text-gray-300">
               Everything you need for success
             </p>
+<<<<<<< HEAD:temp-pages/intelligent-email-infrastructure/page.tsx
+=======
+          </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a086:app/zion-ai-customer-churn-predictor/page.tsx
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
@@ -70,6 +85,10 @@ const Intelligentemailinfrastructure = () => {
                   {feature.title}
                 </h3>
                 <p className="text-gray-300">{feature.description}</p>
+<<<<<<< HEAD:temp-pages/intelligent-email-infrastructure/page.tsx
+=======
+              </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a086:app/zion-ai-customer-churn-predictor/page.tsx
             ))}
           </div>
         </div>

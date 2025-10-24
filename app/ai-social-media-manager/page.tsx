@@ -10,3 +10,5 @@ import { ArrowRight, Share2, BarChart, Users, CheckCircle, Brain, Settings, Targ
 export default AISocialMediaManagerPage;
 
 export default PagePage;
+
+export default PagePage;

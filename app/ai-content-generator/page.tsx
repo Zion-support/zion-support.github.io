@@ -107,3 +107,5 @@ export default function AIContentGeneratorPage() {
     </div>
   );
 }
+
+export default Aicontentgenerator;

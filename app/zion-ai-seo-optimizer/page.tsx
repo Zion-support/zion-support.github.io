@@ -139,3 +139,5 @@ const ZionAiSeoOptimizerPage: React.FC = () => {
 };
 
 export default ZionAiSeoOptimizerPage;
+
+export default PagePage;

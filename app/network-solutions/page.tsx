@@ -138,3 +138,5 @@ const NetworkSolutionsPage: React.FC = () => {
 };
 
 export default NetworkSolutionsPage;
+
+export default PagePage;

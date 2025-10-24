@@ -138,3 +138,5 @@ const RoboticsPage: React.FC = () => {
 };
 
 export default RoboticsPage;
+
+export default PagePage;

@@ -203,7 +203,6 @@ export default function ContactPage() {
               Send us a Message
             </h2>
             <p className="text-xl text-gray-600">
-<<<<<<< HEAD
               Fill out the form below and we'll get back to you as soon as possible.
             </p>
           </div>
@@ -386,6 +385,7 @@ export default function ContactPage() {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
   );
 };
 
