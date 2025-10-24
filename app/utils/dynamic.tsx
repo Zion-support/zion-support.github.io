@@ -1,3 +1,4 @@
+'use client';
 
 // dynamic utility
 export const dynamic = () => {

@@ -1,3 +1,4 @@
+'use client';
 import { CheckCircle, Phone, Mail, Helmet } from 'lucide-react',;
   ]
   const benefits = [
