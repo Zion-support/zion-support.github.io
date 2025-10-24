@@ -1,5 +1,6 @@
 "use client"
 import React from "react";
+import Head from "next/head";
 import React, { useEffect } from "react"
 import { Head  } from "next/head";
 interface SEOOptimizerProps {

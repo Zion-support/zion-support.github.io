@@ -17,8 +17,6 @@ Contact Us</Link> <ArrowRight className="w-5 h-5 ml-2" />
 )
   )
     </div>
-    </div>
-    </div>
 }
 
 export const FuturisticLoader: React.FC<FuturisticLoaderProps> = ({ className = '', children }) => {

@@ -1,5 +1,6 @@
 "use client"
 import React from "react";
+import Head from "next/head";
 import { Head  } from "next/head"
 import { Link  } from "next/link";
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw   } from "lucide-react";
@@ -53,7 +54,6 @@ onClick={() => window.history.back()
               className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center"> <ArrowLeft className="w-5 h-5 mr-2" />
 Go Back
             </button>
-              </div>
           {/* Help Section*/} <div className="[^"]*">
     <h1 className="text-lg font-semibold text-white mb-3">Need Help?</h3> <p className="[^"]*">
 Our support team is here to help you navigate our services and find exactly what you"re looking for.
@@ -78,13 +78,9 @@ confused sometimes. That"s why we have humans to help when things
 go wrong! 🤖
             </p>
               </div>
-            </div>
-          </div>
-    </div>
     </>
   ) "}
 export default monitorCoreWebVitals
-    </div>
 }
 
 export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ className = '', children }) => {

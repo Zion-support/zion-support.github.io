@@ -21,8 +21,6 @@ const benefits = [
                     </div>
                   <p className="text-gray-300">benefit</p>
                   </div>
-              </div>
-            </div>
         </section>
 
         /CTA Section /<section className="py-20 px-4"> <div className="[^"]*"><h2 className="text-4 xl font-bold text-white mb-6">Ready to Get Started</h2> <p className="[^"]*">
@@ -31,8 +29,6 @@ Join thousands of businesses already using Enhanced Hero to transform their oper
 Start Your Free Trial</button>
             </div>
         </section>
-        </div>
-      </div>
     </>
   )
 

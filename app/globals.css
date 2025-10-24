@@ -41,7 +41,6 @@ a {
   background-clip: text;
 }
 
-<<<<<<< HEAD
 /* Performance optimizations */
 .lazy {
   opacity: 0;
@@ -84,19 +83,10 @@ a {
   }
 }
 
-@keyframes pulse {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-=======
 .glass-dark {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
->>>>>>> origin/main
 }
 
 .animate-fade-in {
@@ -109,6 +99,15 @@ a {
 
 .animate-pulse-slow {
   animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
 }
 
 @keyframes fadeIn {

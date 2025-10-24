@@ -1,5 +1,6 @@
 "use client"
 import React from "react";
+import Head from "next/head";
 const ContactPage = () => {
   return (<div>
       <h1>Contact Page</h1>

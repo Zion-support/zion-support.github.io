@@ -59,7 +59,6 @@ page_title: "pageName",page_location: "window.location.href"})}
 
   return (<AnalyticsContext.Provider value = {value}; />
       {children}
-    </div>
   );
 };
 

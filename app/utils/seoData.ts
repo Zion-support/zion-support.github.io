@@ -1,5 +1,3 @@
-export interface StructuredData {'@context": string"
-  '@type": string
 export interface StructuredData {
   "@context": string
   "@type": string
@@ -28,6 +26,7 @@ export interface StructuredData {
   }
 
 }
+
 export const generateStructuredData = (data: Partial<StructuredData>): StructuredData => {
   return {
     "@context": "https://schema.org",

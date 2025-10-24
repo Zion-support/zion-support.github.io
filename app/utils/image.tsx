@@ -130,8 +130,6 @@ onError = {handleError}
     <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: "</span>Failed to load image</span>)
 
 {...props"}
->  </div> <span className="text-gray-500 text-sm" /><span className="sr-only">Screen reader: "</span>Failed to load image</span>
-  </div>
 return(<img
 return (<img />)
 src={src"};alt = {alt};width = {width};height = {height};className = {className};style = {imageStyle};sizes = {sizes};loading = {priority?"eager" : "lazy"};onLoad = {handleLoad};onError = {handleError};{...props })

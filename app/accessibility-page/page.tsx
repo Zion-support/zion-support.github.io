@@ -1,6 +1,7 @@
 "use client"
 import React from "react";
 import Head from "next/head";
+import Footer from "@/components/Footer";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 export default function ServicePage() {
@@ -49,6 +50,6 @@ export default function ServicePage() {
         </div>
       </div>
       <Footer />
-    </div>
+    </>
   )
 }
