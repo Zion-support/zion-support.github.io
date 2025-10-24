@@ -1,9 +1,23 @@
-"use client";
+'use client';
 
-import { useEffect } from 'react';
+import React from 'react';
 
-export default function AccessibilityEnhancer() {
-  useEffect(() => {
+interface AccessibilityEnhancerProps {
+  children: React.ReactNode;
+  enableKeyboardNavigation?: boolean;
+  enableScreenReaderSupport?: boolean;
+  enableHighContrast?: boolean;
+  enableFocusManagement?: boolean;
+}
+
+export default function AccessibilityEnhancer({
+  children,
+  enableKeyboardNavigation = true,
+  enableScreenReaderSupport = true,
+  enableHighContrast = false,
+  enableFocusManagement = true
+}: AccessibilityEnhancerProps) {
+  React.useEffect(() => {
     // Add skip link functionality
     const addSkipLink = () => {
       const skipLink = document.createElement('a');
@@ -72,6 +86,8 @@ export default function AccessibilityEnhancer() {
 
     // Add keyboard navigation support
     const addKeyboardNavigation = () => {
+      if (!enableKeyboardNavigation) return;
+      
       document.addEventListener('keydown', (e) => {
         // Skip to main content with Enter key
         if (e.key === 'Enter' && e.target === document.querySelector('a[href="#main-content"]')) {
@@ -86,6 +102,8 @@ export default function AccessibilityEnhancer() {
 
     // Add screen reader announcements
     const addAnnouncementRegion = () => {
+      if (!enableScreenReaderSupport) return;
+      
       const announcement = document.createElement('div');
       announcement.setAttribute('aria-live', 'polite');
       announcement.setAttribute('aria-atomic', 'true');
@@ -108,7 +126,7 @@ export default function AccessibilityEnhancer() {
         skipLink.remove();
       }
     };
-  }, []);
+  }, [enableKeyboardNavigation, enableScreenReaderSupport]);
 
-  return null;
+  return <>{children}</>;
 }

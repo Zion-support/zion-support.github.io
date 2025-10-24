@@ -1,87 +1,85 @@
-// Performance optimization utilities
+// Performance monitoring utilities
+import React from "react";
 
-export const debounce = <T extends (...args: any[]) => any>(
-  func: T,
-  wait: number
-): ((...args: Parameters<T>) => void) => {
-  let timeout: NodeJS.Timeout
-  return (...args: Parameters<T>) => {
-    clearTimeout(timeout)
-    timeout = setTimeout(() => func(...args), wait)
+export class PerformanceMonitor {
+  private static instance: PerformanceMonitor;
+  private metrics: Map<string, number> = new Map();
+
+  static getInstance(): PerformanceMonitor {
+    if (!PerformanceMonitor.instance) {
+      PerformanceMonitor.instance = new PerformanceMonitor()}
+    return PerformanceMonitor.instance}
+
+  startTiming(label: string): void {
+    if (typeof window !== "undefined" && "performance" in window) {
+      performance.mark(`${label}-start`)}
   }
+
+  endTiming(label: string): number {
+    if (typeof window !== "undefined" && "performance" in window) {
+      performance.mark(`${label}-end`);
+      performance.measure(label, `${label}-start`, `${label}-end`);
+      const measure = performance.getEntriesByName(label)[0];
+      const duration = measure ? measure.duration : 0;
+      this.metrics.set(label, duration);
+      return duration}
+    return 0}
+
+  getMetric(label: string): number | undefined {
+    return this.metrics.get(label)}
+
+  getAllMetrics(): Record<string, number> {
+    return Object.fromEntries(this.metrics)}
+
+  clearMetrics(): void {
+    this.metrics.clear()}
+
+  // Web Vitals monitoring
+  measureWebVitals(): void {
+    if (typeof window === "undefined") return;
+
+    // Largest Contentful Paint
+    new PerformanceObserver((entryList) => {
+      const entries = entryList.getEntries();
+      const lastEntry = entries[entries.length - 1];
+      this.metrics.set("LCP", lastEntry.startTime)}).observe({ entryTypes: ["largest-contentful-paint"] });
+
+    // First Input Delay
+    new PerformanceObserver((entryList) => {
+      const entries = entryList.getEntries();
+      entries.forEach((entry) => {
+        // Use processingStart if available, otherwise calculate from startTime
+        const processingStart = (entry as { processingStart?: number }).processingStart || entry.startTime;
+        this.metrics.set("FID", processingStart - entry.startTime)})}).observe({ entryTypes: ["first-input"] });
+
+    // Cumulative Layout Shift
+    let clsValue = 0;
+    new PerformanceObserver((entryList) => {
+      const entries = entryList.getEntries();
+      entries.forEach((entry) => {
+        if (!(entry as { hadRecentInput?: boolean }).hadRecentInput) {
+          clsValue += (entry as { value?: number }).value || 0}
+      });
+      this.metrics.set("CLS", clsValue)}).observe({ entryTypes: ["layout-shift"] })}
 }
 
-export const throttle = <T extends (...args: any[]) => any>(
-  func: T,
-  limit: number
-): ((...args: Parameters<T>) => void) => {
-  let inThrottle: boolean
-  return (...args: Parameters<T>) => {
-    if (!inThrottle) {
-      func(...args)
-      inThrottle = true
-      setTimeout(() => (inThrottle = false), limit)
-    }
-  }
-}
+// Hook for React components
+export function usePerformanceMonitor() {
+  const monitor = PerformanceMonitor.getInstance();
+  return {
+    startTiming: monitor.startTiming.bind(monitor),
+    endTiming: monitor.endTiming.bind(monitor),
+    getMetric: monitor.getMetric.bind(monitor),
+    getAllMetrics: monitor.getAllMetrics.bind(monitor)
+  }}
 
-export const lazyLoad = (callback: () => void) => {
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            callback()
-            observer.disconnect()
-          }
-        })
-      },
-      { threshold: 0.1 }
-    )
-    
-    return observer
-  } else {
-    // Fallback for older browsers
-    callback()
-    return null
-  }
-}
-
-export const preloadImage = (src: string): Promise<void> => {
-  return new Promise((resolve, reject) => {
-    const img = new Image()
-    img.onload = () => resolve()
-    img.onerror = reject
-    img.src = src
-  })
-}
-
-export const measurePerformance = (name: string, fn: () => void) => {
-  const start = performance.now()
-  fn()
-  const end = performance.now()
-  console.log(`${name} took ${end - start} milliseconds`)
-}
-
-export const getDeviceType = (): 'mobile' | 'tablet' | 'desktop' => {
-  if (typeof window === 'undefined') return 'desktop'
-  
-  const width = window.innerWidth
-  if (width < 768) return 'mobile'
-  if (width < 1024) return 'tablet'
-  return 'desktop'
-}
-
-export const isSlowConnection = (): boolean => {
-  if (typeof navigator === 'undefined') return false
-  
-  // @ts-ignore - connection API is not fully standardized
-  const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection
-  
-  if (connection) {
-    // @ts-ignore
-    return connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g'
-  }
-  
-  return false
-}
+// Utility function to measure component render time
+export function measureComponentRender(componentName: string) {
+  return function <T extends React.ComponentType<unknown>>(WrappedComponent: T): T {
+    return ((props: unknown) => {
+      const monitor = PerformanceMonitor.getInstance();
+      React.useEffect(() => {
+        monitor.startTiming(`${componentName}-render`);
+        return () => {
+          monitor.endTiming(`${componentName}-render`)}});
+      return React.createElement(WrappedComponent, props)}) as T}}

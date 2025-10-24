@@ -3,23 +3,24 @@ import React, { memo } from 'react';
 interface AIToolCardProps {
   title: string;
   description: string;
-  link: string;
-}
+  link: string}
 
 const AIToolCard: React.FC<AIToolCardProps> = memo(({ title, description, link }) => {
   return (
-    <div className="bg-slate-800 p-6 rounded-lg hover:bg-slate-700 transition-colors">
-      <h3 className="text-xl font-semibold text-white mb-3">{title}</h3>
-      <p className="text-gray-300 mb-4">{description}</p>
+    <article className="bg-whitep-4rounded-lgshadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+      <h3 className="text-lgfont-semiboldtext-gray-900mb-2">{title}</h3>
+      <p className="text-gray-600text-smmb-3leading-relaxed">
+        {description}
+      </p>
       <a 
-        href={link} 
-        className="text-cyan-400 hover:text-cyan-300 transition-colors"
+        href={link}
+        className="text-blue-600hover:text-blue-800text-smfont-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-md px-1 py-1 inline-block transition-colors"
+        aria-label={`Try ${title} tool`}
       >
-        Learn More →
+        Try Now →
       </a>
-    </div>
-  );
-});
+    </article>
+  )});
 
 AIToolCard.displayName = 'AIToolCard';
 
