@@ -1,15 +1,15 @@
 'use client';
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 interface EnhancedAccessibilityWrapperProps {
+  children: ReactNode;
   className?: string;
 }
 
-const EnhancedAccessibilityWrapper: React.FC<EnhancedAccessibilityWrapperProps> = ({ className }) => {
+const EnhancedAccessibilityWrapper: React.FC<EnhancedAccessibilityWrapperProps> = ({ children, className }) => {
   return (
     <div className={className}>
-      <h2>EnhancedAccessibilityWrapper</h2>
-      <p>This component is being rebuilt.</p>
+      {children}
     </div>
   );
 };
