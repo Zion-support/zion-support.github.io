@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-
-export default function Component() {
-=======
 'use client';
-=======
 import React, {useState, useEffect, useCallback} from 'react';
 export default SystemMonitor;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 /**
  * System Monitor Component
  * Real-time monitoring dashboard for performance, errors, and system health
@@ -83,7 +74,6 @@ interface SystemMetrics {
     downlink: number;
     rtt: number;
     saveData: boolean;
-=======
 
 
 'use client';
@@ -108,12 +98,8 @@ const __collectPerformanceMetrics = () => {/* TODO: Fix JSX expression */}
   e: navigation.loadEventEnd - navigation.navigationStart,
     firstContentfulPain,
   t: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   };
 }
-<<<<<<< HEAD
-interface SystemMonitorProps {
-=======
   const metrics = performanceOptimizer.getMetrics();
   if (!metrics) return 0;
   let __score = 100;
@@ -211,65 +197,11 @@ interface SystemMetrics {/* TODO: Fix JSX expression */}
 interface SystemMonitorProps {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   refreshInterval?: number;
   showDetails?: boolean;
   enableExport?: boolean;
   className?: string;
-<<<<<<< HEAD
-}
-const SystemMonitor: React.FC<SystemMonitorProps> = ({
-  refreshInterval = 5000,
-  showDetails = true,
-  enableExport = true,
-  className = ''
-}) => {
-  const [metrics, setMetrics] = useState<SystemMetrics | null>(null);
-  const [isMonitoring, setIsMonitoring] = useState(false);
-  const [lastUpdate, setLastUpdate] = useState<Date | null>(null);
-  // Update metrics
-  const updateMetrics = useCallback(() => {
-    try {
-      const performanceMetrics = performanceOptimizer.getMetrics();
-      const performanceScore = calculatePerformanceScore();
-      const errorStats = errorHandler.getErrorStatistics();
-      // Get memory info
-      const memoryInfo = getMemoryInfo();
-      // Get network info
-      const networkInfo = getNetworkInfo();
-      const newMetrics: SystemMetrics = {
-        performance: {
-          score: performanceScore,
-          loadTime: performanceMetrics?.loadTime || 0,
-          firstContentfulPaint: performanceMetrics?.firstContentfulPaint || 0,
-          largestContentfulPaint: 0, // Not available in current metrics
-          firstInputDelay: 0, // Not available in current metrics
-          cumulativeLayoutShift: 0, // Not available in current metrics
-        },
-        errors: {
-          total: errorStats.totalErrors,
-          byType: errorStats.errorsByType,
-          byCategory: errorStats.errorsByCategory,
-          bySeverity: errorStats.errorsBySeverity,
-          recent: errorStats.recentErrors.map(error => ({
-            id: error.id,
-            message: error.message,
-            type: error.type,
-            severity: error.severity,
-            timestamp: error.context.timestamp
-          }))
-        },
-        memory: memoryInfo,
-        network: networkInfo
-      };
-      setMetrics(newMetrics);
-      setLastUpdate(new Date());
-<<<<<<< HEAD
-    } catch (error) {
-    }
-=======
       console.error('Failed to update metrics: ', error);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
   }, []);
   // Initialize monitoring
   useEffect(() => {
@@ -290,19 +222,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
     const interval = setInterval(updateMetrics, refreshInterval);
     return () => clearInterval(interval);
   }, [isMonitoring, refreshInterval, updateMetrics]);
-<<<<<<< HEAD
-  // Get memory information
-  const getMemoryInfo = () => {
-    if ('memory' in performance) {
-      const memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
-      const used = memory.usedJSHeapSize / 1024 / 1024; // MB
-      const total = memory.totalJSHeapSize / 1024 / 1024; // MB
-      const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB
-      const percentage = (used / limit) * 100;
-      return { used, total, limit, percentage };
-    }
-    return { used: 0, total: 0, limit: 0, percentage: 0 };
-=======
   // Get memory information;
       const memory = (performance as Performance & {memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number} }).memory;
       const used = memory.usedJSHeapSize / 1024 / 1024; // MB;
@@ -311,7 +230,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       const percentage = (used / limit) * 100;
       return {used, total, limit, percentage};
     return {used: 0, total: 0, limit: 0, percentage: 0};
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
   };
   // Get network information
   const getNetworkInfo = () => {
@@ -335,20 +253,9 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   // Export data
   const handleExport = () => {
     if (!metrics) return;
-<<<<<<< HEAD
-    const exportData = {
-      metrics,
-      performanceData: performanceOptimizer.getMetrics(),
-      errorData: errorHandler.exportErrorData(),
-      timestamp: new Date().toISOString()
-    };
-    const blob = new Blob([JSON.stringify(exportData, null, 2)], {
-      type: 'application/json'
-=======
 
     };
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
     });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
@@ -385,7 +292,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       </div>
     );
   }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03b1
   return (
     <div>
       <h1>Component</h1>
@@ -393,7 +299,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
     </div>
   );
 }
-=======
 const,
   SystemMonitor: React.FC;
           <SystemMonitorProps> = ({/* TODO: Fix JSX expression */}
@@ -489,23 +394,8 @@ const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
             <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-red-500'}`}></div>"
             <span className="text-sm text-gray-600"></span>
               {isMonitoring ? 'Monitoring' : 'Stopped'}
-<<<<<<< HEAD
-            </span>
-          {enableExport && ()}
-          <button></button>
-              onClick={handleExport}"
-              className="px-4 py-2 bg-blue-600 text-white rounded-md,
-  hover:bg-blue-700,
-  focus:outline-none,
-  focus:ring-2,"
-  focus:ring-blue-500"
-// >
-//               Export Data;
-          </button>
-=======
 
               Export Data;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
           )}
       {lastUpdate && ()}"
           <p className="text-sm text-gray-500 mb-4"></p>
@@ -573,31 +463,6 @@ className={`h-2 rounded-full ${}
                     metrics.memory.percentage > 80 ? 'bg-red-500' :
                     metrics.memory.percentage > 60 ? 'bg-yellow-500' : 'bg-green-500'`
                   }`}
-<<<<<<< HEAD
-                  style={/* TODO: Fix JSX expression */}`
-  h: `${Math.min(metrics.memory.percentage, 100)}%` }}
-          
-          
-          
-          
-          
-          
-          
-          
-          "
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">Recent Errors</h3>"
-          <div className="space-y-2 max-h-64 overflow-y-auto"></div>
-            {metrics.errors.recent.map((error) => ()}"
-          <div key={error.id} className="bg-gray-50 p-3 rounded-lg"></div>"
-                <div className="flex items-center justify-between mb-2"></div>"
-                  <span className="text-sm font-medium text-gray-900">{error.message}</span>`
-                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(error.severity)}`}></span>
-                    {error.severity}"
-                <div className="flex items-center justify-between text-xs text-gray-500"></div>
-                  <span>{error.type}</span>
-                  <span>{new Date(error.timestamp).toLocaleTimeString()}</span>
-            ))}
-=======
                   style={{ width:`${Math.min(metrics.memory.percentage, 100)}%` }}
                 ></div>
             <h4 className="text-sm font-medium text-gray-600 mb-2">Network</h4>
@@ -617,7 +482,6 @@ className={`h-2 rounded-full ${}
                   <span>{new Date(error.timestamp).toLocaleTimeString()}</span>
   ))}
       )}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
       {/* Error Distribution */}
       {showDetails && (}"
           <h3 className="text-lg font-semibold text-gray-900 mb-4">Error Distribution</h3>"
@@ -626,26 +490,14 @@ className={`h-2 rounded-full ${}
                 {Object.entries(metrics.errors.byType).map(([type, count]) => ()}"
           <div key={type} className="flex justify-between text-sm"></div>"
                     <span className="capitalize">{type}</span>
-<<<<<<< HEAD
-                    <span>{count}</span>"
-=======
                     <span>{count}</span>
   ))}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
               <h4 className="text-sm font-medium text-gray-600 mb-2">By Category</h4>
                 {Object.entries(metrics.errors.byCategory).map(([category, count]) => ()}"
           <div key={category} className="flex justify-between text-sm"></div>"
                     <span className="capitalize">{category}</span>
-<<<<<<< HEAD
-
-export default SystemMonitor;
-
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
                     <span>{count}</span>
   ))}
       )}
   );
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

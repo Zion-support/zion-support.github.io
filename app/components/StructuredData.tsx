@@ -9,9 +9,6 @@ interface StructureddataProps {
   className?: string;
   children?: React.ReactNode;
 }
-<<<<<<< HEAD
-export default function Structureddata({ className = '', children, ...props }: StructureddataProps) {
-=======
 
 const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
   const getStructuredData = () => {
@@ -123,7 +120,6 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
     }
   };
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0326
   return (
     <div className={`structureddata-component ${className}`} {...props}>
       {children}

@@ -1,16 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-  );
-}
-=======
 
 interface Props {/* TODO: Fix JSX expression */}
 }
@@ -43,13 +32,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
 
  cursor/analyze-improve-and-deploy-application-cde4;
     // Log error to console in development;
-<<<<<<< HEAD
-    if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
-    }
-
-=======
       console.error('Error caught by boundary: ', error, errorInfo);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
     // Call custom error handler if provided;
     if (this.props.onError) {/* TODO: Fix JSX expression */}
     }
@@ -73,19 +56,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
     };
 
     // Log to console in development;
-<<<<<<< HEAD
-    if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
-    }
-
-    // Send to error reporting service (implement as needed)
-    try {/* TODO: Fix JSX expression */}
-  s: {// 'Content-Type': 'application/json'},
-      //   bod,
-  y: JSON.stringify(errorReport)
-      // });
-    } catch (reportingError) {/* TODO: Fix JSX expression */}
-    }
-=======
       console.group('🚨 Error Boundary Caught Error');
       console.error('Error Report: ', errorReport);
       console.groupEnd();
@@ -98,49 +68,30 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
       // body: JSON.stringify(errorReport)
       // });
       console.error('Failed to report error: ', reportingError);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
   };
   private getUserId = (): string | null => {/* TODO: Fix JSX expression */}
   };
-<<<<<<< HEAD
-  private getSessionId = (): string => {/* TODO: Fix JSX expression */}`
-      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-=======
     let sessionId = sessionStorage.getItem('sessionId');
       sessionId={`session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`};
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       sessionStorage.setItem('sessionId', sessionId);
     }
     return sessionId;
   };
-<<<<<<< HEAD
-  private handleRetry = () => {/* TODO: Fix JSX expression */}
-  o: undefined });
-=======
     this.setState({hasError: false, error: undefined, errorInfo: undefined});
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
   };
 
   private handleReload = () => {/* TODO: Fix JSX expression */}
   };
   private handleGoHome = () => {/* TODO: Fix JSX expression */}
   };
-<<<<<<< HEAD
-  private copyErrorDetails = () => {/* TODO: Fix JSX expression */}
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
     };
     navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
       .then(() => {/* TODO: Fix JSX expression */}
           }, 2000);
         }
       })
-<<<<<<< HEAD
-      .catch(() => {/* TODO: Fix JSX expression */}
-=======
         console.error('Failed to copy error details: ', error);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
       });
   };
 
@@ -159,25 +110,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
           )}
  cursor/analyze-improve-and-deploy-application-cde4;
       // Custom fallback UI;
-<<<<<<< HEAD
-      if (this.props.fallback) {/* TODO: Fix JSX expression */}
-
-      }
-
-      const { retryCount, error, errorId } = this.state;
-      const canRetry = retryCount < this.maxRetries;
-<<<<<<< HEAD
-
-
-      return ("
-        <div className="min-h-screen flex items-center justify-center bg-gray-50"></div>"
-          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center"></div>"
-            <div className="text-6xl mb-4">⚠️</div>"
-            <h1 className="text-2xl font-bold text-gray-900 mb-4"></h1>
-              Oops! Something went wrong;
-            </h1>"
-            <p className="text-gray-600 mb-6"></p>
-=======
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
@@ -186,7 +118,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
               Oops! Something went wrong
             </h1>
             <p className="text-gray-600 mb-6">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0509
               We're sorry, but something unexpected happened. Please try refreshing the page.
             </p>"
             <div className="space-y-4"></div>
@@ -230,12 +161,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
             )}
           </div>
         </div>
-=======
         return this.props.fallback;
       const {retryCount, error} = this.state;
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
@@ -275,7 +203,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             </button>
           </div>
         </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-04df
       );
     }
 
@@ -284,8 +211,3 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 }
 
 export default EnhancedErrorBoundary;
-<<<<<<< HEAD
-"`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-04df

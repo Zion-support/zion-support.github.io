@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-
-  }
-try{;
-error,;
-stack,;
-userAgent,;
-url,;
-timestamp: "new Date().toISOString()"
-",}"
-  ,} catch (error) {;"
-console.error('Error reporting failed: "'",error);"'"
-    res.status(500).json({ error: "'Failed to report error' ",});"
-  }"
-"'"
-=======
 // Error reporting API endpoint
 export default function handler(req, res) {
   if (req.method !== 'POST') {
@@ -42,4 +26,3 @@ export default function handler(req, res) {
     res.status(500).json({ error: 'Failed to process error report' });
   }
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc

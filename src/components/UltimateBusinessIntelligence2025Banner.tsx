@@ -1,71 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-
-export default function Component() {
-=======
 'use client';
 import React, { useState, useEffect } from 'react';
 const UltimateBusinessIntelligence2025Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-<<<<<<< HEAD
-  const [isVisible, setIsVisible] = useState(true);
-  const content = [
-    {
-      id: 'ultimate-business-intelligence-revolution',
-      title: 'AI 2025: The Ultimate Business Intelligence Revolution',
-      description: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
-      url: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',
-      type: 'Blog Post',
-      metrics: {
-        efficiency: '300%',
-        accuracy: '99.7%',
-        timeline: '6 months',
-        adoption: '95%'
-      },
-      tags: ['AI', 'Business Intelligence', 'Enterprise', 'ROI', '2025']
-    },
-    {
-      id: 'fortune-500-case-study',
-      title: 'Fortune 500 Ultimate Business Intelligence Success',
-      description: 'Real-world case study: How a Fortune 500 company achieved 30,000% ROI through AI-powered business intelligence transformation.',
-      url: '/case-studies/fortune-500-ultimate-business-intelligence-30000-roi-success-story',
-      type: 'Case Study',
-      metrics: {
-        roi: '30,000%',
-        savings: '$750M',
-        efficiency: '400%',
-        timeline: '18 months'
-      },
-      tags: ['Case Study', 'Fortune 500', 'ROI', '2025']
-    },
-    {
-      id: 'enterprise-automation-2025',
-      title: 'Enterprise Automation Suite 2025',
-      description: 'Automate your entire business process with our comprehensive automation suite, reducing manual work by 95% and increasing productivity by 300%.',
-      url: '/services/automation',
-      type: 'Service',
-      metrics: {
-        automation: '95%',
-        productivity: '300%',
-        efficiency: '400%',
-        cost: '80% reduction'
-      },
-      tags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
-    }
-  ];
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % content.length);
-=======
   const [isVisible] = useState(true);
 
   ];
   const currentContent = content[currentSlide];
 
  (prev + 1) % content.length);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
     }, 5000);
     return () => clearInterval(timer);
   }, [content.length]);
@@ -73,14 +15,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
     setIsVisible(false);
   };
   if (!isVisible) return null;
-<<<<<<< HEAD
-  const currentContent = content[currentSlide];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03b1
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-=======
 import React from 'react';
 
 interface UltimateBusinessIntelligence2025BannerProps {
@@ -94,11 +28,9 @@ export default function UltimateBusinessIntelligence2025Banner({ className = '' 
       <p className="text-lg opacity-90">
         Transform your business with cutting-edge AI analytics and insights
       </p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-04df
     </div>
   );
 }
-=======
 
 
 'use client';
@@ -164,7 +96,6 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
   l: '/services/automation',;
       typ,
   e: 'Service',
-=======
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background Effects */}
       <div className="absolute inset-0">
@@ -227,7 +158,6 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
             <div className="flex flex-wrap gap-2 mb-8">
                 
                 >
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
                   {tag}
             {/* CTA Buttons */}
             
@@ -274,11 +204,7 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
           <div key={index} className="text-center"></div>"
               <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>"
               <div className="text-gray-300">{stat.label}</div>
-<<<<<<< HEAD
-    </section>
-=======
   ))}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
   );
 };
 
@@ -286,4 +212,3 @@ export default UltimateBusinessIntelligence2025Banner;"
 
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc

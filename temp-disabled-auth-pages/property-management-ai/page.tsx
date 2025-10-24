@@ -66,64 +66,16 @@ const Page: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-<<<<<<< HEAD:app/property-management-ai/page.tsx
-            {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800 p-6 rounded-lg">
-                {renderIcon(feature.icon)}
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-=======
 
             <div className="bg-slate-800 p-6 rounded-lg">
 
               <div className="w-12 h-12 text-emerald-400 mb-4 flex items-center justify-center bg-emerald-500/20 rounded-lg">
 
                 <span className="text-2xl">🚀</span>
->>>>>>> origin/main:temp-disabled-auth-pages/property-management-ai/page.tsx
               </div>
             ))}
           </div>
 
-<<<<<<< HEAD:app/property-management-ai/page.tsx
-          <div className="bg-slate-800 p-8 rounded-lg mb-16">
-            <h2 className="text-3xl font-bold text-white mb-6 text-center">AI-Powered Features</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Settings className="w-8 h-8 text-emerald-400" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Automation</h3>
-                <p className="text-gray-300 text-sm">Automated workflows and processes</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <BarChart className="w-8 h-8 text-emerald-400" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Analytics</h3>
-                <p className="text-gray-300 text-sm">Real-time property performance data</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Brain className="w-8 h-8 text-emerald-400" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">AI Insights</h3>
-                <p className="text-gray-300 text-sm">Smart recommendations and predictions</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-8 h-8 text-emerald-400" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Optimization</h3>
-                <p className="text-gray-300 text-sm">Maximize property value and returns</p>
-=======
             <div className="bg-slate-800 p-6 rounded-lg">
 
               <div className="w-12 h-12 text-emerald-400 mb-4 flex items-center justify-center bg-emerald-500/20 rounded-lg">
@@ -157,7 +109,6 @@ const Page: React.FC = () => {
               <div className="w-12 h-12 text-emerald-400 mb-4 flex items-center justify-center bg-emerald-500/20 rounded-lg">
 
                 <span className="text-2xl">🎯</span>
->>>>>>> origin/main:temp-disabled-auth-pages/property-management-ai/page.tsx
               </div>
             </div>
           </div>

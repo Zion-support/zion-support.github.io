@@ -36,7 +36,6 @@ function fixMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Remove merge conflict markers and keep the content after =======
     const lines = content.split('\n');
     const fixedLines = [];
     let inConflict = false;
@@ -45,17 +44,10 @@ function fixMergeConflicts(filePath) {
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       
-      if (line.startsWith('<<<<<<< HEAD')) {
-        inConflict = true;
-        continue;
-      }
-      
-      if (line.startsWith('=======')) {
         keepContent = true;
         continue;
       }
       
-      if (line.startsWith('>>>>>>> ')) {
         inConflict = false;
         keepContent = false;
         continue;

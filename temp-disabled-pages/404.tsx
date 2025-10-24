@@ -1,17 +1,8 @@
-<<<<<<< HEAD:app/404.tsx
-'use client';
-
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from 'lucide-react';
-=======
 'use client'
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from 'lucide-react'
->>>>>>> origin/main:temp-disabled-pages/404.tsx
 
 const NotFound = () => {
   return (
@@ -32,14 +23,9 @@ const NotFound = () => {
 
               404
             </div>
-<<<<<<< HEAD:app/404.tsx
-            <div className="absolute -top-4 -right-4 w-8 h-8 bg-red-500/20 rounded-full animate-bounce">
-              <AlertTriangle className="w-6 h-6 text-red-400"  />
-=======
             <div className="absolute -top-4 -right-4">
 
               <AlertTriangle className="w-16 h-16 text-yellow-400 animate-bounce" />
->>>>>>> origin/main:temp-disabled-pages/404.tsx
             </div>
           </div>
           {/* Error Message */}
@@ -51,9 +37,6 @@ const NotFound = () => {
             Don&apos;t worry, even our AI can&apos;t predict everything!
           </p>
           
-<<<<<<< HEAD:app/404.tsx
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-=======
           {/* Search Suggestion */}
           <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 mb-8">
 
@@ -84,7 +67,6 @@ const NotFound = () => {
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
 
->>>>>>> origin/main:temp-disabled-pages/404.tsx
             <Link
               href="/"
               className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
@@ -95,11 +77,7 @@ const NotFound = () => {
             
             <button
               onClick={() => window.history.back()}
-<<<<<<< HEAD:app/404.tsx
-              className="bg-gray-700 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-600 transition-all duration-300 flex items-center justify-center"
-=======
               className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center"
->>>>>>> origin/main:temp-disabled-pages/404.tsx
             >
               <ArrowLeft className="w-5 h-5 mr-2" />
               Go Back
@@ -113,14 +91,6 @@ const NotFound = () => {
               Refresh
             </button>
           </div>
-<<<<<<< HEAD:app/404.tsx
-          
-          <div className="mt-12">
-            <p className="text-gray-400 mb-4">Looking for something specific?</p>
-            <div className="relative max-w-md mx-auto">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input
-=======
           <div className="mt-12">
 
             <p className="text-gray-400 mb-4">Looking for something specific?</p>
@@ -128,7 +98,6 @@ const NotFound = () => {
 
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input 
->>>>>>> origin/main:temp-disabled-pages/404.tsx
                 type="text"
                 placeholder="Search our services..."
                 className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
@@ -143,18 +112,11 @@ const NotFound = () => {
               />
             </div>
           </div>
-<<<<<<< HEAD:app/404.tsx
-          
-          <div className="mt-12">
-            <p className="text-gray-400 mb-6">Popular pages:</p>
-            <div className="flex flex-wrap justify-center gap-4">
-=======
           <div className="mt-12">
 
             <p className="text-gray-400 mb-6">Popular pages:</p>
             <div className="flex flex-wrap justify-center gap-4">
 
->>>>>>> origin/main:temp-disabled-pages/404.tsx
               <Link href="/services" className="text-cyan-400 hover:text-cyan-300 transition-colors">
                 Services
               </Link>
@@ -174,10 +136,5 @@ const NotFound = () => {
     </>
   )
 }
-<<<<<<< HEAD:app/404.tsx
-
-export default NotFound
-=======
 ;
 export default NotFound
->>>>>>> origin/main:temp-disabled-pages/404.tsx

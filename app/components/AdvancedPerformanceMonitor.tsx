@@ -1,90 +1,30 @@
-'use client';
-
-import React, { useEffect, useState, useCallback } from 'react';
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
-
-interface LayoutShift {
-  hadRecentInput: boolean;
-  value: number;
-}
-
-interface PerformanceMetrics {
-  fcp: number | null;
-  lcp: number | null;
-  inp: number | null;
-  cls: number | null;
-  ttfb: number | null;
-  memory: number | null;
-}
-
-interface PerformanceMonitorProps {
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
-  enableRealTimeMonitoring?: boolean;
-}
-
-const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
-  onMetricsUpdate,
-  enableRealTimeMonitoring = true,
-}) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: null,
-    lcp: null,
-    inp: null,
-    cls: null,
-    ttfb: null,
-    memory: null,
-  });
-
-  const measureWebVitals = useCallback(() => {
-    if (typeof window === 'undefined' || !('performance' in window)) return;
-    if (typeof PerformanceObserver === 'undefined') return;
-
-    const observers: PerformanceObserver[] = [];
-
-    // Measure First Contentful Paint (FCP)
-    const fcpEntries = performance.getEntriesByName('first-contentful-paint') || [];
-    const fcp = fcpEntries.length > 0 ? fcpEntries[0].startTime : null;
-
-    // Measure Largest Contentful Paint (LCP)
-    if ('PerformanceObserver' in window) {
-      try {
-        const lcpObserver = new PerformanceObserver(list => {
-          const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1];
-          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
-        });
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-        observers.push(lcpObserver);
-      } catch (error) {
-        // eslint-disable-next-line no-console
-        console.warn('LCP observer not supported:', error);
+        console.warn('LCP measurement failed:', error);
       }
     }
 
-    // Measure Interaction to Next Paint (INP)
+    // Measure First Input Delay (FID)
     if ('PerformanceObserver' in window) {
       try {
-        const inpObserver = new PerformanceObserver(list => {
+        const fidObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
           entries.forEach(entry => {
             if (
-              entry.entryType === 'event' &&
+              entry.entryType === 'first-input' &&
               'processingStart' in entry &&
               'startTime' in entry
             ) {
-              const inpEntry = entry as PerformanceEventTiming;
+              const fidEntry = entry as PerformanceEventTiming;
               setMetrics(prev => ({
                 ...prev,
-                inp: inpEntry.processingStart - inpEntry.startTime,
+                fid: fidEntry.processingStart - fidEntry.startTime,
               }));
             }
           });
         });
-        inpObserver.observe({ entryTypes: ['event'] });
-        observers.push(inpObserver);
+        fidObserver.observe({ entryTypes: ['first-input'] ,});
+        observers.push(fidObserver);
       } catch (error) {
-        // eslint-disable-next-line no-console
-        console.warn('INP observer not supported:', error);
+        console.warn('FID measurement failed:', error);
       }
     }
 
@@ -100,19 +40,18 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               'hadRecentInput' in entry &&
               'value' in entry
             ) {
-              const clsEntry = entry as LayoutShift;
+              const clsEntry = entry as any;
               if (!clsEntry.hadRecentInput) {
                 clsValue += clsEntry.value;
-                setMetrics(prev => ({ ...prev, cls: clsValue }));
+                setMetrics(prev => ({ ...prev, cls: clsValue; }));
               }
             }
           });
         });
-        clsObserver.observe({ entryTypes: ['layout-shift'] });
+        clsObserver.observe({ entryTypes: ['layout-shift'] ,});
         observers.push(clsObserver);
       } catch (error) {
-        // eslint-disable-next-line no-console
-        console.warn('CLS observer not supported:', error);
+        console.warn('CLS measurement failed:', error);
       }
     }
 
@@ -126,7 +65,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
       // Measure Memory Usage
       const memory =
-        (performance as Performance & { memory?: { usedJSHeapSize: number } })
+        (performance as Performance & { memory?: { usedJSHeapSize: number; } })
           .memory?.usedJSHeapSize || null;
 
       setMetrics(prev => ({
@@ -136,8 +75,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         memory,
       }));
     } catch (error) {
-      // eslint-disable-next-line no-console
-      console.warn('Performance measurement failed:', error);
+      console.warn('TTFB/Memory measurement failed:', error);
     }
 
     // Cleanup observers
@@ -146,8 +84,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         try {
           observer.disconnect();
         } catch (error) {
-          // eslint-disable-next-line no-console
-          console.warn('Error disconnecting observer:', error);
+          console.warn('Observer disconnect failed:', error);
         }
       });
     };
@@ -158,16 +95,20 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
     const resources = performance.getEntriesByType('resource');
     const slowResources = resources.filter(
-      (resource: PerformanceResourceTiming) => resource.duration > 1000
+      (resource: PerformanceResourceTiming,) => resource.duration > 1000
     );
 
     if (slowResources.length > 0) {
-      // Slow resources detected - could be logged to analytics service
-      // console.log('Slow resources detected:', slowResources.map(r => ({
-      //   name: r.name,
-      //   duration: r.duration,
-      //   size: r.transferSize,
-      // })));
+       
+      // eslint-disable-next-line no-console
+      console.log(
+        'Slow resources detected:',
+        slowResources.map((r: PerformanceResourceTiming,) => ({
+          name: r.name,
+          duration: r.duration,
+          size: r.transferSize,
+        }))
+      );
     }
   }, []);
 
@@ -181,23 +122,23 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           const { onCLS, onFCP, onLCP, onTTFB } = webVitals;
 
           if (onCLS) {
-            onCLS((metric: { value: number }) =>
-              setMetrics(prev => ({ ...prev, cls: metric.value }))
+            onCLS((metric: { value: number; }) =>
+              setMetrics(prev => ({ ...prev, cls: metric.value ,}))
             );
           }
           if (onFCP) {
-            onFCP((metric: { value: number }) =>
-              setMetrics(prev => ({ ...prev, fcp: metric.value }))
+            onFCP((metric: { value: number; }) =>
+              setMetrics(prev => ({ ...prev, fcp: metric.value ,}))
             );
           }
           if (onLCP) {
-            onLCP((metric: { value: number }) =>
-              setMetrics(prev => ({ ...prev, lcp: metric.value }))
+            onLCP((metric: { value: number; }) =>
+              setMetrics(prev => ({ ...prev, lcp: metric.value ,}))
             );
           }
           if (onTTFB) {
-            onTTFB((metric: { value: number }) =>
-              setMetrics(prev => ({ ...prev, ttfb: metric.value }))
+            onTTFB((metric: { value: number; }) =>
+              setMetrics(prev => ({ ...prev, ttfb: metric.value ,}))
             );
           }
         })
@@ -254,7 +195,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       );
     }
 
-    if (metrics.inp && metrics.inp > 100) {
+    if (metrics.fid && metrics.fid > 100) {
       recommendations.push(
         'First Input Delay is high. Reduce JavaScript execution time.'
       );
@@ -282,15 +223,13 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       <div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'>
         <h3 className='font-semibold text-sm mb-2'>Performance Monitor</h3>
         <div className='text-xs space-y-1'>
-          <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}</div>
-          <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A'}</div>
-          <div>INP: {metrics.inp ? `${metrics.inp.toFixed(0)}ms` : 'N/A'}</div>
-          <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
+          <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0),}ms` : 'N/A'}</div></div></div>
+          <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0),}ms` : 'N/A'}</div>
+          <div>FID: {metrics.fid ? `${metrics.fid.toFixed(0),}ms` : 'N/A'}</div>
+          <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A',}</div>
+          <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0),}ms` : 'N/A'}</div>
           <div>
-            TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}
-          </div>
-          <div>
-            Memory:{' '}
+            Memory: {' ',}
             {metrics.memory
               ? `${(metrics.memory / 1024 / 1024).toFixed(1)}MB`
               : 'N/A'}
@@ -316,3 +255,34 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 };
 
 export default AdvancedPerformanceMonitor;
+import React from 'react';
+import { Monitor } from 'lucide-react';
+interface AdvancedperformancemonitorProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+export default function Advancedperformancemonitor({ className = '', children, ...props }: AdvancedperformancemonitorProps) {
+  return (
+    <div className={`advancedperformancemonitor-component ${className}`} {...props}>
+      {children}
+    </div>
+  );
+}
+import React from 'react';
+
+const AdvancedPerformanceMonitor: React.FC = () => {
+  return (
+    <div className="advancedperformancemonitor">
+      <h2>AdvancedPerformanceMonitor</h2>
+      <p>AdvancedPerformanceMonitor component.</p>
+    </div>
+  );
+};
+
+export default AdvancedPerformanceMonitor;
+// import React from 'react';
+
+// interface AdvancedPerformanceMonitorProps {
+//   className?: string;
+//   children?: React.ReactNode;
+// }

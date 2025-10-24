@@ -1,117 +1,217 @@
+import React  from 'react';
+interface SEOHeadProps {
+  title: string;
+  description: string;
+export default SEOHead;
+
+'use client';
+import React from "react";
+
 import React from 'react';
-import { ArrowRight, BarChart, Brain, Helmet, Target, TrendingUp } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-interface EnhancedSEOHeadProps {};
-  className?: string;
-  
+import {Helmet} from 'react-helmet-async';
+import {Link} from 'react-router-dom';
+import {ArrowRight} from 'lucide-react';
+
+interface SEOHeadProps {title?: string;
+  description?: string;
+  keywords?: string;
+  image?: string;
+  url?: string;
+  type?: string;
+  siteName?: string;
+  structuredData?: object;
 }
-  );
-const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({className="''" }) => {}</EnhancedSEOHeadProps>
-  return (</EnhancedSEOHeadProps>
-    <>
+
+const SEOHead: React.FC<SEOHeadProps> = ({
+  title = 'Zion Tech Group - Advanced AI & IT Solutions',
+  description = 'Leading technology company providing cutting-edge AI solutions, cloud infrastructure, cybersecurity, and custom software development services.',
+  keywords = 'AI solutions, cloud computing, cybersecurity, software development, IT services, business automation, data analytics, machine learning, artificial intelligence',
+  canonical = 'https://ziontechgroup.com',
+  ogImage = 'https://ziontechgroup.com/og-image.jpg',
+  ogType = 'website',
+  twitterCard = 'summary_large_image',
+  structuredData
+}) => {
+  const defaultStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/logo.png",
+    "description": "Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services.",
+    "address": {
+      "@type": "PostalAddress",
+const SEOHead: React.FC<SEOHeadProps   /> = ({
+  const title = 'Zion Tech Group - Advanced AI & IT Solutions',
+  description = 'Leading technology company providing cutting-edge AI solutions, cloud infrastructure, cybersecurity, and custom software development services.',
+  keywords = 'AI solutions, cloud computing, cybersecurity, software development, IT services, business automation, data analytics, machine learning, artificial intelligence',
+  canonical = 'https: // ziontechgroup.com',
+  ogImage = 'https: // ziontechgroup.com/og-image.jpg',
+  ogType = 'website',
+  twitterCard = 'summary_large_image',
+  structuredData;
+  const defaultStructuredData = {
+    "@context": "https: // schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "description": "Leading technology company providing cutting-edge AI solutions, cloud infrastructure, cybersecurity, and custom software development services.",
+    "url": "https: // ziontechgroup.com",
+    "logo": "https: // ziontechgroup.com/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-302-464-0950",
+      "contactType": "customer service",
+      "email": "kleber@ziontechgroup.com"},
+    "address": {"@type": "PostalAddress",
+      "streetAddress": "364 E Main St STE 1008",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "postalCode": "19709",
+      "addressCountry": "US"},
+    "sameAs": ["https: // linkedin.com/company/ziontechgroup",
+      "https: // twitter.com/ziontechgroup"],
+    "foundingDate": "2020",
+    "numberOfEmployees": "50-100",
+    "industry": "Technology",
+    "services": ["AI Solutions",
+      "Cloud Infrastructure",
+      "Cybersecurity",
+      "Software Development",
+      "Data Analytics",
+      "Machine Learning"]
+  };
+
+  return (
+  structuredData?: any;
+}
+
+const EnhancedSEOHead: React.FC<SEOHeadProps> = ({ title, description, structuredData }) => {
+  return (
+    <Helmet>
+      {/* Basic Meta Tags */}
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="robots" content="index, follow" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="theme-color" content="#8b5cf6" />
+      {/* Canonical URL */}
+      <link rel="canonical" href={canonical} />
+      {/* Open Graph Meta Tags */}
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content={ogType} />
+      <meta property="og:url" content={canonical} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:locale" content="en_US" />
+      {/* Twitter Card Meta Tags */}
+      <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" />
+      {/* Additional Meta Tags */}
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+      {/* Favicon and Icons */}
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="manifest" href="/site.webmanifest" />
+      {/* Preconnect to external domains */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      {/* DNS Prefetch */}
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+      <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+      {/* Structured Data */}
+      <script type="application/ld+json">{JSON.stringify(finalStructuredData)}
+      </script>
       
-      <Navigation />
-      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
-        {/* Hero Section */}
-        <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
-          <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
-          <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md:text-7xl font-bold text-white mb-6 leading-tight&quot;>
-              EnhancedSEOHead
-            </h1>
-            <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
-              Zion Tech Group
-            </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;>
-                Get Started
-                <ArrowRight className=&quot;ml-2 h-5 w-5&quot; />
-              </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
-                Learn More
-              </button>
-            </div>
-          </div>
-        </section>
-    </>
-
-              </button>
-
-        </section>,{/* Features Section*/} <section className="py-20 px-4" /> <div className="[^"]*"> <div className="[^"]*">
-    <h1 className="text-4 xl font-bold text-white mb-4">Key Features</h2> <p className="[^"]*">
-Discover the powerful features that make EnhancedSEOHead the perfect solution for your business.</p>
-              </p>
-    <divclassName="grid md: "grid-cols-2 l","
-g: grid-cols-4 gap-8" />,<div className="[^"]*">
-    <h1 className="text-xl font-semibold text-white mb-3">AI-Powered</h3>
-                <p className="text-gray-300">Advanced AI algorithms for intelligent automation.</p> <div className="[^"]*">
-    <h1 className="text-xl font-semibold text-white mb-3">Scalable</h3>
-                <p className="text-gray-300">Grows with your business needs and requirements.</p>
-                </div> <div className="[^"]*">
-    <h1 className="text-xl font-semibold text-white mb-3">Secure</h3>
-                <p className="text-gray-300">Enterprise-grade security and data protection.</p>
-                </div> <div className="[^"]*">
-    <h1 className="text-xl font-semibold text-white mb-3">Efficient</h3>
-
-                <p className="text-gray-300">Optimized performance for maximum productivity.</p>
-                </div>
-              </div>
-            </div>
-        </section>,{/* CTA Section*/} <section className="py-20 px-4" /> <div className="[^"]*">
-    <h1 className="text-4 xl font-bold text-white mb-6">Ready to Get Started?</h2> <p className="[^"]*">
-Join thousands of businesses already using EnhancedSEOHead to transform their operations.</p>
-            </p> <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" />
-Start Your Free Trial</button>
-            </button>
-            </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
-              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
-                Experience the benefits of cutting-edge AI technology
-              </p>
-            </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
-              {benefits.map((benefit, index) => (
-                <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
-                  <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
-                  <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
-            <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
-            <p className=&quot;text-xl text-gray-300 mb-8&quot;>
-              Join thousands of businesses already using our AI solutions
-            </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
-                Start Free Trial
-              </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
-                Contact Sales
-              </button>
-            </div>
-          </div>
-        </section>
-      </div>
-      <Footer /></Footer>
-    </>
-  );,
-}
+      {/* Additional SEO Scripts */}
+      <script type="application/ld+json">{JSON.stringify({
+          "@context": "https: //schema.org",
+          "@type": "WebSite",
+          "name": "Zion Tech Group",
+          "url": "https: //ziontechgroup.com",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https: //ziontechgroup.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        })}
+      </script>
+      
+      {/* Performance Hints */}
+      <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+      {/* Security Headers */}
+        <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+        <meta httpEquiv="X-Frame-Options" content="DENY" />
+        <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
+      <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+    </Helmet>
   );
-  )
-}
+};
+
+    <title>5G Data Analytics - Zion Tech Group</title>
+      {/* Basic Meta Tags */}
+
+      <title>{title}</title>
+      {/* Canonical URL */}
+      {/* Open Graph Meta Tags */}
+
+      {/* Twitter Card Meta Tags */}
+
+      {/* Additional Meta Tags */}
+
+      {/* Favicon and Icons */}
+
+      {/* Preconnect to external domains */}
+
+      {/* DNS Prefetch */}
+
+      {/* Structured Data */}
+
+      <script type="application/ld+json">{JSON.stringify(finalStructuredData)}
+
+      {/* Additional SEO Scripts */}
+      <script type="application/ld+json"    />{JSON.stringify({
+          "@context": "https: // schema.org",
+          "@type": "WebSite",
+          "name": "Zion Tech Group",
+          "url": "https: // ziontechgroup.com",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https: // ziontechgroup.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        })}
+
+      {/* Performance Hints */}
+
+      {/* Security Headers */}
+
+      <meta httpEquiv="X-Frame-Options" content="DENY" / /   />;
+  );
+};
 
 
-export default EnhancedSEOHead;"
+const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = () => {
+  return (
+    <div className="enhancedseohead">
+      <h2>EnhancedSEOHead</h2>
+      <p>Component content coming soon.</p>
+    </div>
+  );
+};
+
+export default EnhancedSEOHead;
+export default SEOHead;

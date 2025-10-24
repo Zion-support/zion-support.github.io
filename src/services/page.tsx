@@ -1,33 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-=======
 
 
 
 import { Link } from 'react-router-dom';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-const ServicesPage: React.FC = () => {;import {CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart, Car} from 'lucide-react';
-=======
 import React from 'react';
 import {CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart, Car} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
-=======
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, Database, Cloud, Code, Smartphone, Settings, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, PieChart, TrendingDown, Activity } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-053f
-=======
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, Database, Cloud, Code, Smartphone, Settings, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, PieChart, TrendingDown, Activity } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
 
 const ServicesPage: React.FC = () => {
   const _aiServices = [
@@ -173,7 +157,6 @@ const ServicesPage: React.FC = () => {
         <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
           Contact Us
         </a>
-=======
 import SEOOptimizer from '../components/SEOOptimizer';
 const ServicesPage: React.FC = () => {import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart, Car,  Brain,  Zap,  BarChart,  Database,  Lock,  BarChart3,  ShoppingCart,  TrendingUp,  Users,  Clock } from 'lucide-react';
 
@@ -309,17 +292,12 @@ const ServicesPage: React.FC = () => {import { CheckCircle, Star, Zap, Shield, C
   hover:bg-cyan-600 transition-colors"></a>
 // Contact Us;
           </a>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       </div>
     </div>
   );
 };
 
-<<<<<<< HEAD
-export default ServicesPage;
-=======
 
 export default ServicesPage;
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc

@@ -1,26 +1,22 @@
-import React from 'react'
-import { ArrowLeft } from 'lucide-react'
-import { CheckCircle, Target, ArrowRight } from 'lucide-react'
-
-export default function ServicesAdvertisingPage
-ServicesAdvertisingPage.displayName = "ServicesAdvertisingPage"() {
+import React from 'react';
+export default function ServicesAdvertisingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
       {/* Header */}
-      <header className="bg-white shadow-sm border-b">
+      <header className="bg-white shadow-sm border-b"></header>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4"></div>
-          <a href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200">
+          <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200"></Link>
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
-          </a>
+          </Link>
         </div>
       </header>
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white py-20"></section>
+      <section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-          <div className="text-center"></div>
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-600 text-sm font-semibold mb-6"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-600 text-sm font-semibold mb-6">
               <Target className="w-4 h-4 mr-2" />
               AI-Powered Advertising Solutions
             </div>
@@ -31,30 +27,33 @@ ServicesAdvertisingPage.displayName = "ServicesAdvertisingPage"() {
               Revolutionize Your Marketing with 300% ROI Guaranteed
             </p>
             <p className="text-lg mb-8 text-gray-300 max-w-4xl mx-auto">
-              Transform your advertising campaigns with our breakthrough AI technology. Achieve 95% targeting accuracy,
-              60% cost reduction, and 300% ROI with intelligent automation and predictive analytics. Our proven
+              Transform your advertising campaigns with our breakthrough AI technology. Achieve 95% targeting accuracy, 
+              60% cost reduction, and 300% ROI with intelligent automation and predictive analytics. Our proven 
               methodology has helped 500+ businesses increase their advertising effectiveness while reducing costs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <a href="/contact"
-                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
-              >
-                Start Free Consultation
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </a>
-              <a href="#services"
-                className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
-              >
-                View Our Services
-              </a>
-            </div>
-          </div>
-        </div>
+            
+          
+          
+          
+          
+          
+          
+          
+
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <Link
+                href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
+// ></Link>
+//                 Start Free Consultation;
+          <ArrowRight className="w-4 h-4 ml-2" />
+href="#services" className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
+
+                View Our Services;
       </section>
       {/* Key Metrics */}
-      <section className="py-16 bg-white"></section>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-          <div className="text-center mb-12"></div>
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Proven Advertising Results
             </h2>
@@ -62,20 +61,20 @@ ServicesAdvertisingPage.displayName = "ServicesAdvertisingPage"() {
               Our AI-powered advertising delivers measurable business impact
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-            <div className="text-center"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
               <div className="text-4xl font-bold text-blue-600 mb-2">300%</div>
               <div className="text-gray-600">Average ROI</div>
             </div>
-            <div className="text-center"></div>
+            <div className="text-center">
               <div className="text-4xl font-bold text-green-600 mb-2">95%</div>
               <div className="text-gray-600">Targeting Accuracy</div>
             </div>
-            <div className="text-center"></div>
+            <div className="text-center">
               <div className="text-4xl font-bold text-purple-600 mb-2">60%</div>
               <div className="text-gray-600">Cost Reduction</div>
             </div>
-            <div className="text-center"></div>
+            <div className="text-center">
               <div className="text-4xl font-bold text-orange-600 mb-2">24/7</div>
               <div className="text-gray-600">Campaign Optimization</div>
             </div>
@@ -83,9 +82,9 @@ ServicesAdvertisingPage.displayName = "ServicesAdvertisingPage"() {
         </div>
       </section>
       {/* Services Section */}
-      <section id="services" className="py-16 bg-gray-50"></section>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-          <div className="text-center mb-12"></div>
+      <section id="services" className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               AI Advertising Solutions
             </h2>
@@ -93,8 +92,8 @@ ServicesAdvertisingPage.displayName = "ServicesAdvertisingPage"() {
               Comprehensive AI-powered advertising services for maximum impact
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
               <div className="text-blue-600 text-4xl mb-4">🎯</div>
               <h3 className="text-xl font-semibold mb-3">AI-Powered Targeting</h3>
               <p className="text-gray-600 mb-4">
@@ -107,11 +106,11 @@ ServicesAdvertisingPage.displayName = "ServicesAdvertisingPage"() {
                 <li>• Lookalike audience creation</li>
                 <li>• Cross-platform targeting</li>
               </ul>
-              <div className="mt-4 text-sm text-green-600 font-semibold"></div>
+              <div className="mt-4 text-sm text-green-600 font-semibold">
                 Market Price: $2,000-5,000/month | Our Price: $1,200/month
               </div>
             </div>
-            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200"></div>
+            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
               <div className="text-green-600 text-4xl mb-4">📊</div>
               <h3 className="text-xl font-semibold mb-3">Campaign Optimization</h3>
               <p className="text-gray-600 mb-4">
@@ -124,11 +123,11 @@ ServicesAdvertisingPage.displayName = "ServicesAdvertisingPage"() {
                 <li>• Bid optimization</li>
                 <li>• Landing page optimization</li>
               </ul>
-              <div className="mt-4 text-sm text-green-600 font-semibold"></div>
+              <div className="mt-4 text-sm text-green-600 font-semibold">
                 Market Price: $3,000-7,000/month | Our Price: $1,800/month
               </div>
             </div>
-            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200"></div>
+            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
               <div className="text-purple-600 text-4xl mb-4">🤖</div>
               <h3 className="text-xl font-semibold mb-3">Creative Generation</h3>
               <p className="text-gray-600 mb-4">
@@ -141,11 +140,11 @@ ServicesAdvertisingPage.displayName = "ServicesAdvertisingPage"() {
                 <li>• Video ad generation</li>
                 <li>• Brand consistency maintenance</li>
               </ul>
-              <div className="mt-4 text-sm text-green-600 font-semibold"></div>
+              <div className="mt-4 text-sm text-green-600 font-semibold">
                 Market Price: $2,500-6,000/month | Our Price: $1,500/month
               </div>
             </div>
-            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200"></div>
+            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
               <div className="text-orange-600 text-4xl mb-4">📱</div>
               <h3 className="text-xl font-semibold mb-3">Social Media Advertising</h3>
               <p className="text-gray-600 mb-4">
@@ -158,11 +157,11 @@ ServicesAdvertisingPage.displayName = "ServicesAdvertisingPage"() {
                 <li>• Twitter advertising</li>
                 <li>• Cross-platform analytics</li>
               </ul>
-              <div className="mt-4 text-sm text-green-600 font-semibold"></div>
+              <div className="mt-4 text-sm text-green-600 font-semibold">
                 Market Price: $2,000-5,000/month | Our Price: $1,200/month
               </div>
             </div>
-            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200"></div>
+            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
               <div className="text-red-600 text-4xl mb-4">🔍</div>
               <h3 className="text-xl font-semibold mb-3">Search Engine Marketing</h3>
               <p className="text-gray-600 mb-4">
@@ -175,11 +174,11 @@ ServicesAdvertisingPage.displayName = "ServicesAdvertisingPage"() {
                 <li>• Ad copy generation</li>
                 <li>• Performance tracking</li>
               </ul>
-              <div className="mt-4 text-sm text-green-600 font-semibold"></div>
+              <div className="mt-4 text-sm text-green-600 font-semibold">
                 Market Price: $1,500-4,000/month | Our Price: $900/month
               </div>
             </div>
-            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200"></div>
+            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
               <div className="text-indigo-600 text-4xl mb-4">📈</div>
               <h3 className="text-xl font-semibold mb-3">Analytics & Reporting</h3>
               <p className="text-gray-600 mb-4">
@@ -192,7 +191,7 @@ ServicesAdvertisingPage.displayName = "ServicesAdvertisingPage"() {
                 <li>• ROI optimization</li>
                 <li>• Competitive analysis</li>
               </ul>
-              <div className="mt-4 text-sm text-green-600 font-semibold"></div>
+              <div className="mt-4 text-sm text-green-600 font-semibold">
                 Market Price: $1,000-3,000/month | Our Price: $600/month
               </div>
             </div>
@@ -200,9 +199,9 @@ ServicesAdvertisingPage.displayName = "ServicesAdvertisingPage"() {
         </div>
       </section>
       {/* Pricing Section */}
-      <section className="py-16 bg-white"></section>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-          <div className="text-center mb-12"></div>
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Transparent Pricing
             </h2>
@@ -210,8 +209,8 @@ ServicesAdvertisingPage.displayName = "ServicesAdvertisingPage"() {
               Choose the plan that fits your advertising needs
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
-            <div className="bg-white border-2 border-gray-200 rounded-lg p-8 hover:border-blue-500 transition-colors duration-200"></div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white border-2 border-gray-200 rounded-lg p-8 hover:border-blue-500 transition-colors duration-200">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Starter</h3>
               <div className="text-4xl font-bold text-blue-600 mb-2">$1,200<span className="text-lg text-gray-500">/month</span></div>
               <div className="text-sm text-green-600 font-semibold mb-6">Save 40% vs market rates</div>
@@ -241,8 +240,8 @@ ServicesAdvertisingPage.displayName = "ServicesAdvertisingPage"() {
                 Get Started
               </button>
             </div>
-            <div className="bg-blue-600 text-white rounded-lg p-8 relative"></div>
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
+            <div className="bg-blue-600 text-white rounded-lg p-8 relative">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                 <span className="bg-yellow-400 text-yellow-900 px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
               </div>
               <h3 className="text-2xl font-bold mb-4">Professional</h3>
@@ -278,7 +277,7 @@ ServicesAdvertisingPage.displayName = "ServicesAdvertisingPage"() {
                 Get Started
               </button>
             </div>
-            <div className="bg-white border-2 border-gray-200 rounded-lg p-8 hover:border-blue-500 transition-colors duration-200"></div>
+            <div className="bg-white border-2 border-gray-200 rounded-lg p-8 hover:border-blue-500 transition-colors duration-200">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>
               <div className="text-4xl font-bold text-blue-600 mb-2">$5,000<span className="text-lg text-gray-500">/month</span></div>
               <div className="text-sm text-green-600 font-semibold mb-6">Save 60% vs market rates</div>
@@ -318,28 +317,29 @@ ServicesAdvertisingPage.displayName = "ServicesAdvertisingPage"() {
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white"></section>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Transform Your Advertising?
-          </h2>
-          <p className="text-xl mb-8 text-blue-100">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4"></h2>
+Ready to Transform Your Advertising?
+          <p className="text-xl mb-8 text-blue-100"></p>
             Get a free AI advertising assessment and discover how we can boost your ROI by 300%
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <a href="/contact"
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              href="/contact"
               className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
             >
               Get Free Assessment
               <ArrowRight className="w-4 h-4 ml-2" />
-            </a>
-            <a href="/case-studies"
+            </Link>
+            <Link 
+              href="/case-studies"
               className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
             >
               View Success Stories
-            </a>
+            </Link>
           </div>
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
         </div>
-      </div>
+      </section>
     </div>
-  )
-}
+  );
+};
+import React from 'react';

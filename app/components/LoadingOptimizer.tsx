@@ -1,28 +1,79 @@
-'use client';
+import React from 'react';
+import {Helmet} from 'react-helmet-async';
+import {Link} from 'react-router-dom';
+import {ArrowRight} from 'lucide-react';
+
+// Lazy load components for better performance
+
+interface LoadingOptimizerProps {children: React.ReactNode;
+  fallback?: React.ReactNode;}
+
+const LoadingOptimizer: React.FC<LoadingOptimizerProps> = ({children,
+  fallback = <DefaultLoadingSpinner   /> </DefaultLoadingSpinner&gt;}) => {return (
+    <Suspense fallback={fallback}></Suspense>
+      {children}
+    </Suspense>
+  );
+};
+
+const DefaultLoadingSpinner: React.FC = () => (
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"></div>
+    <div className="text-center"></div>
+      <div className="animate-spinrounded-full h-32 w-32 border-b-2 border-cyan-400 mx-auto mb-4"></div>
+      <p className="text-whitetext-lg">Loading...</p>
+    </div>
+  </div>
+  );
+
+// Skeleton loaders for different components
+export const ServiceCardSkeleton: React.FC = () => (
+  <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-2xll border border-slate-700/50 animate-pulse">
+    <div className="w-16 h-16 bg-slate-700 rounded-full mb-6"></div>
+    <div className="h-6 bg-slate-700 rounded mb-4"></div>
+    <div className="h-4 bg-slate-700 rounded mb-2"></div>
+    <div className="h-4 bg-slate-700 rounded w-3/4"></div>
+  </div>
+  );
+
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"></div>
+    <div className="text-centermax-w-4xl mx-auto px-4"></div>
+      <div className="h-16bg-slate-700 rounded mb-6 animate-pulse"></div>
+      <div className="h-6bg-slate-700 rounded mb-4 animate-pulse"></div>
+      <div className="h-6bg-slate-700 rounded mb-8 w-3/4 mx-auto animate-pulse"></div>
+      <div className="flexflex-col sm:flex-row gap-4 justify-center"></div>
+        <div className="h-12bg-slate-700 rounded w-48 animate-pulse"></div>
+        <div className="h-12bg-slate-700 rounded w-48 animate-pulse"></div>
+      </div>
+    </div>
+  </div>
+  );
+
+  <nav className="fixedtop-0 left-0 right-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-700/50"></nav>
+    <div className="containermx-auto px-4 py-4"></div>
+      <div className="flex items-center justify-between"></div>
+        <div className="h-8bg-slate-700 rounded w-32 animate-pulse"></div>
+        <div className="hiddenmd:flex space-x-8"></div>
+          {[...Array(6)].map((_, i) => (
+            <div key={i} className="h-4bg-slate-700 rounded w-16 animate-pulse"></div>
+  ))}
+        </div>
+        <div className="h-10bg-slate-700 rounded w-24 animate-pulse"></div>
+      </div>
+    </div>
+  </nav>
+  );
+
+export default LoadingOptimizer;
 
 import React from 'react';
 
-interface LoadingOptimizerProps {
-  size?: 'sm' | 'md' | 'lg';
-  text?: string;
-  className?: string;
-}
-
-export default function LoadingOptimizer({ 
-  size = 'md', 
-  text = 'Loading...',
-  className = '' 
-}: LoadingOptimizerProps) {
-  const sizeClasses = {
-    sm: 'h-4 w-4',
-    md: 'h-8 w-8',
-    lg: 'h-12 w-12'
-  };
-
+const LoadingOptimizer: React.FC<LoadingOptimizerProps> = () => {
   return (
-    <div className={`flex flex-col items-center justify-center ${className}`}>
-      <div className={`${sizeClasses[size]} border-4 border-gray-200 border-t-blue-600 rounded-full animate-spin mb-4`}></div>
-      {text && <p className="text-gray-600 text-sm">{text}</p>}
+    <div className="loadingoptimizer">
+      <h2>LoadingOptimizer</h2>
+      <p>Component content coming soon.</p>
     </div>
   );
-}
+};
+
+export default LoadingOptimizer;

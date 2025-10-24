@@ -1,60 +1,82 @@
+import React from 'react';
+
+const CookieConsent: React.FC<CookieConsentProps> = () => {
+  return (
+
+import {useState, useEffect} from 'react';
+import {X, Cookie} from 'lucide-react';
+
+const CookieConsent: React.FC = () => {const [showDetails, setShowDetails] = useState(false);
 'use client';
+import { useState, useEffect} from 'react';
+import { X, Cookie} from 'lucide-react';
 
-import React, { useState, useEffect } from 'react';
-import { X } from 'lucide-react';
-
-export default function CookieConsent() {
-  const [showConsent, setShowConsent] = useState(false);
-
+const CookieConsent: React.FC = () => {
+  const [showDetails, setShowDetails] = useState(false);
   useEffect(() => {
     const consent = localStorage.getItem('cookie-consent');
     if (!consent) {
-      setShowConsent(true);
-    }
+      setIsVisible(true);}
   }, []);
 
-  const acceptCookies = () => {
-    localStorage.setItem('cookie-consent', 'accepted');
-    setShowConsent(false);
-  };
+  const acceptAll = () => {localStorage.setItem('cookie-consent', 'accepted');
+    localStorage.setItem('analytics-consent', 'accepted');
+    localStorage.setItem('marketing-consent', 'accepted');
+    setIsVisible(false);};
 
-  const declineCookies = () => {
-    localStorage.setItem('cookie-consent', 'declined');
-    setShowConsent(false);
-  };
+  const acceptNecessary = () => {localStorage.setItem('cookie-consent', 'necessary');
+    localStorage.setItem('analytics-consent', 'declined');
+    localStorage.setItem('marketing-consent', 'declined');
+    setIsVisible(false);};
 
-  if (!showConsent) return null;
+  const acceptCustom = () => {localStorage.setItem('cookie-consent', 'custom');
+    setIsVisible(false);};
+
+  if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-4 z-50">
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <div className="flex-1">
-          <p className="text-sm">
-            We use cookies to enhance your experience and analyze our traffic. 
-            By continuing to use our site, you consent to our use of cookies.
-          </p>
+
+                    <button
+                      onClick={acceptAll}
+                      className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700transition-allduration-300">Accept All
+                    </button>
+                    <button
+                      onClick={acceptNecessary}
+                      className="border border-slate-600 text-gray-300 px-6 py-2 rounded-lg font-semiboldhover:bg-slate-700transition-colors">Necessary Only
+                    </button>
+                    <button;
+                      onClick="{()" =    />setShowDetails(true)}
+                      className="text-cyan-400 hover:text-cyan-300 px-6 py-2font-semibold transition-colors"
+                    >
+                      Customize
+                    </button>
+                  </div>
+                <button
+                  onClick={acceptNecessary}
+                  className="text-gray-400hover:text-whitetransition-colors"
+                  aria-label="Close" />
+
+                <button
+                  onClick={acceptAll}
+                  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700transition-allduration-300">Accept All
+                </button>
+                <button
+                  onClick={acceptCustom}
+                  className="bg-slate-700 text-white px-6 py-2 rounded-lg font-semiboldhover:bg-slate-600transition-colors">Save Preferences
+                </button>
+                <button
+                  onClick={acceptNecessary}
+                  className="border border-slate-600 text-gray-300 px-6 py-2 rounded-lg font-semiboldhover:bg-slate-700transition-colors"
+                  />Reject All
+                </button>
+              </div>
+          )}
         </div>
-        <div className="flex items-center space-x-4 ml-4">
-          <button
-            onClick={declineCookies}
-            className="text-gray-400 hover:text-white text-sm"
-          >
-            Decline
-          </button>
-          <button
-            onClick={acceptCookies}
-            className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm"
-          >
-            Accept
-          </button>
-          <button
-            onClick={acceptCookies}
-            className="text-gray-400 hover:text-white"
-          >
-            <X className="h-5 w-5" />
-          </button>
-        </div>
-      </div>
+    <div className="cookieconsent">
+      <h2>CookieConsent</h2>
+      <p>Component content coming soon.</p>
     </div>
   );
-}
+};
+
+export default CookieConsent;

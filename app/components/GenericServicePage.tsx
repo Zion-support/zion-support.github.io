@@ -1,69 +1,131 @@
-'use client';
-
 import React from 'react';
-import { ArrowRight, CheckCircle } from 'lucide-react';
+import {Helmet} from 'react-helmet-async';
+import {Link} from 'react-router-dom';
+import {ArrowRight} from 'lucide-react';
 
+interface GenericServicePageProps {title: string;,
+import React  from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, CheckCircle, Star, Phone, Mail } from 'lucide-react';
 interface GenericServicePageProps {
-  title: string;
-  description: string;
-  features: string[];
+  title: string;,
+  description: string;,
+  icon: React.ComponentType<any   />;,
+  features: string[];,
   benefits: string[];
-  ctaText?: string;
-  ctaLink?: string;
-}
+  pricing?: string;
+  category: 'AI' | 'IT' | 'MicroSAAS' | 'Emerging';,
+  color: string;}
 
-export default function GenericServicePage({
-  title,
+const GenericServicePage: React.FC<GenericServicePageProps   /> = ({title,
   description,
+  icon: Icon,
   features,
   benefits,
-  ctaText = 'Get Started',
-  ctaLink = '/contact'
-}: GenericServicePageProps) {
+  pricing,
+  category,
+  color;}) => {const categoryColors = {
+    AI: 'from-purple-500 to-pink-600',
+    IT: 'from-blue-500 to-cyan-600',
+    MicroSAAS: 'from-green-500 to-emerald-600',
+    Emerging: 'from-orange-500 to-red-600'};
+  const categoryColor = categoryColors[category] || 'from-cyan-500 to-purple-600';
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">{title}</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">{description}</p>
+      <Helmet>
+        <title>5G Data Analytics - Zion Tech Group</title>
+        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+      </Helmet>
+        <title>{title} | Zion Tech Group</title>
+        <meta const name = "description" content="{description}" / / />
+        <meta name="keywords" content="{`${title.toLowerCase()}," AI solutions, IT services, ${category.toLowerCase()}`} / / />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
+        <main className="container mx-auto px-4py-16pt-24" />
+
+          {/* Hero Section */}
+          <section className="text-centermb-16" />
+            <div className="max-w-4xlmx-auto">
+              <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-600 rounded-2xll flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300shadow-lgshadow-cyan-500/25">
+                <Icon className="w-10h-10text-white" />
+              </div>
+              <h1 className="w-5h-5ml-2">{title}
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3 xlmx-autoleading-relaxed">
+              {description}
+              </p>
+              {pricing && (
+                <div className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-full text-cyan-400font-semiboldmb-8">Starting at {pricing}
+                </div>
+
+              )}
+              
+              <div className="flex flex-col sm:flex-rowgap-4justify-center">
         </div>
+                <a 
+                  href="/contact" 
+                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40transformhover:scale-105" />
+                  Get Started Today
+                  <ArrowRight className="w-5 h-5 ml-2group-hover:translate-x-1transition-transform" />
+                </a>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-          <div>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-6">Key Features</h2>
-            <ul className="space-y-4">
-              {features.map((feature, index) => (
-                <li key={index} className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">{feature}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+                <a 
+                  href="tel:+13024640950" 
+                  className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-centerjustify-centergroup" />
+                  <Phone className="w-5h-5mr-2" />
+                  Call (302) 464-0950
+                </a>
+              </div>
+          </section>
 
-          <div>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-6">Benefits</h2>
-            <ul className="space-y-4">
-              {benefits.map((benefit, index) => (
-                <li key={index} className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">{benefit}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+          {/* Features Section */}
+          <section className="mb-16" />
+            <div className="text-centermb-12">
 
-        <div className="text-center">
-          <a
-            href={ctaLink}
-            className="inline-flex items-center bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            {ctaText}
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </a>
+                <a 
+                  href="/contact" 
+                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40transformhover:scale-105" />
+                  Get Free Consultation
+                  <ArrowRight className="w-5 h-5 ml-2group-hover:translate-x-1transition-transform" />
+                </a>
+
+                <a 
+                  href="mailto:kleber@ziontechgroup.com" 
+                  className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-centerjustify-centergroup" />
+                  <Mail className="w-5h-5mr-2" />
+                  Email Us
+                </a>
+              </div>
+          </section>
+        </main>
+      </div>
         </div>
       </div>
+          </div>
+        </div>
+      </div>
+        </div>
+      </div>
+          </div>
+        </div>
+      </div>
+        </div>
+      </div>
+      </div>
+
+  );
+};
+
+export default GenericServicePage;
+import React from 'react';
+
+const GenericServicePage: React.FC<GenericServicePageProps> = () => {
+  return (
+    <div className="genericservicepage">
+      <h2>GenericServicePage</h2>
+      <p>Component content coming soon.</p>
     </div>
   );
-}
+};
+
+export default GenericServicePage;

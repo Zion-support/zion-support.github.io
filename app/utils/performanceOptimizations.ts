@@ -1,349 +1,310 @@
-import { useCallback, useMemo } from 'react';
-  
 'use client'
-  );
-// Performance optimization utilities
-// Debounce utility for performance
+// Performance optimization utilities;
+// Debounce utility for performance;
 export const debounce = <T extends (...args: any[]) => any>(
   func: T,
-  wait: number
+  wait: number,
 ): ((...args: Parameters<T>) => void) => {
+  let timeout: NodeJS.Timeout;
+  return (...args: Parameters<T>) => {,
+    clearTimeout(timeout),
+  func: T,
+  wait: number,
+): ((...args: Parameters<T>) => void) => {,}
   let timeout: NodeJS.Timeout
-  );
-  return (...args: Parameters<T>) => {
+  return (...args: Parameters<T>) => {,}
     clearTimeout(timeout)
-  );
-    timeout = setTimeout(() => func(...args), wait)
-  );
+    timeout = setTimeout(() => func(...args), wait);}
   }
-  );
 }
-  );
-// Throttle utility for performance
+// Throttle utility for performance;
 export const throttle = <T extends (...args: any[]) => any>(
   func: T,
-  limit: number
-): ((...args: Parameters<T>) => void) => {
-  let inThrottle: boolean
-  );
-  return (...args: Parameters<T>) => {
-    if (!inThrottle) {
+  limit: number,
+): ((...args: Parameters<T>) => void) => {,}
+  let inThrottle: boolean;
+  return (...args: Parameters<T>) => {,}
+    if (!inThrottle) {}
       func(...args)
-  );
       inThrottle = true
-  );
-      setTimeout(() => (inThrottle = false), limit)
-  );
+      setTimeout(() => (inThrottle = false), limit);}
     }
   }
-  );
 }
-  );
-// Intersection Observer hook for lazy loading
+// Intersection Observer hook for lazy loading;
 export const useIntersectionObserver = (
-  callback: (entries: IntersectionObserverEntry[]) => void,
-  options: IntersectionObserverInit = {}
-) => {
-  const observer = useMemo(
+  callback: (entries: IntersectionObserverEntry[]) => void;
+  options: IntersectionObserverInit = {,}
+) => {}
+  const observer = useMemo()
     () =>
       typeof window !== 'undefined'
-        ? new IntersectionObserver(callback, {
+        ? new IntersectionObserver(callback, {)}
             threshold: 0.1,
             rootMargin: '50px',
-            ...options
+            ...options}
           })
         : null,
-    [callback, options];
+    [callback, options]
   )
-  );
-  const observe = useCallback(
-    (element: Element | null) => {
-      if (observer && element) {
+  const observe = useCallback()
+    (element: Element | null) => {,}
+      if (observer && element) {}
         observer.observe(element)
+        return () => observer.unobserve(element);}
+'use client';
+// Performance optimization utilities;
+// Debounce utility for performance;
+export const debounce = <T extends (...arg)
+  s: any[]) => any>(fun,
+  c: T,
+  wai,
+  t: number;)
+): ((...arg)
+  s: Parameters<T>) => void) => {/* TODO: Fix JSX expression */}
+  };
+};
+// Throttle utility for performance;
+export const throttle = <T extends (...arg)
+  s: any[]) => any>(fun,
+  c: T,
+  limi,
+  t: number;)
+): ((...arg)
+  s: Parameters<T>) => void) => {/* TODO: Fix JSX expression */}
+    }
+  };
+};
+// Intersection Observer hook for lazy loading;
+export const useIntersectionObserver = (callbac,
+  k: (entrie)
+  s: IntersectionObserverEntry[]) => void,
+  option,
+  s: IntersectionObserverInit = {,}
+) => {/* TODO: Fix JSX expression */,}
+          })
+        : null,
+    [callback, options]
   );
-        return () => observer.unobserve(element)
-  );
+  const observe = useCallback((elemen)
+  t: Element | null) => {/* TODO: Fix JSX expression */}
       }
       return () => {}
-  );
     },
-    [observer];
-  )
-  );
-  const disconnect = useCallback(() => {
-    if (observer) {
-      observer.disconnect()
-  );
-    }
-  }, [observer])
-  );
-  useEffect(() => {
-    return () => disconnect()
-  );
-  }, [disconnect])
-  );
-  return { observe, disconnect }
-  );
-}
-  );
+    [observer]
 // Image lazy loading hook
-export const useLazyImage = (src: string, placeholder?: string) => {
-  const [imageSrc, setImageSrc] = useState(placeholder || '');
-  
-  const [isLoaded, setIsLoaded] = useState(false);
-  
-  const [isError, setIsError] = useState(false);
-  
-  const { observe } = useIntersectionObserver(
-    useCallback(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && !isLoaded && !isError) {
+export const useLazyImage = useCallback((...args) => {}
+  const [imageSrc, setImageSrc] = useState(placeholder || '')
+  const [isLoaded, setIsLoaded] = useState(false)
+  const [isError, setIsError] = useState(false);}
+  const { observe } = useIntersectionObserver()
+    useCallback()
+      (entries) => {}
+        entries.forEach((entry) => {}
+          if (entry.isIntersecting && !isLoaded && !isError) {}
             const img = new Image()
-  );
-            img.onload = () => {
+            img.onload = () => {}
               setImageSrc(src)
-  );
-              setIsLoaded(true)
-  );
+              setIsLoaded(true);}
+            }
+            img.onerror = () => {}
+              setIsError(true);}
             }
   );
-            img.onerror = () => {
-              setIsError(true)
-  );
-            }
-  );
-            img.src = src
-  );
+  const disconnect = useCallback(() => {/* TODO: Fix JSX expression */,}
+    }
+  }, [observer]);
+  useEffect(() => {/* TODO: Fix JSX expression */,}
+  }, [disconnect]);
+  return { observe, disconnect };
+};
+// Image lazy loading hook;
+export const useLazyImage = (sr)
+  c: string, placeholder?: string) => {/* TODO: Fix JSX expression */}
+  const { observe } = useIntersectionObserver(useCallback()
+      (entries) => {/* TODO: Fix JSX expression */,}
+            };
+            img.onerror = () => {/* TODO: Fix JSX expression */,}
+            };
+            img.src = src;
           }
         })
-  );
       },
-      [src, isLoaded, isError];
+      [src, isLoaded, isError]
     )
-  )
-  );
-  return { imageSrc, isLoaded, isError, observe }
-  );
-}
-  );
 // Performance monitoring hook
-export const usePerformanceMonitoring = () => {
-  const [metrics, setMetrics] = useState<{
+export const usePerformanceMonitoring = useCallback((...args) => {}
+  const [metrics, setMetrics] = useState<{}
     fcp?: number
-  );
     lcp?: number
-  );
     fid?: number
-  );
     cls?: number
-  );
-    ttfb?: number
-  );
+    ttfb?: number;}
   }>({})
-  );
-  useEffect(() => {
+  useEffect(() => {}
     if (typeof window === 'undefined') return
-  );
-    const updateMetrics = () => {
+    const updateMetrics = useCallback((...args) => {}
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-  );
       const paint = performance.getEntriesByType('paint')
-  );
       const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime
-  );
       const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime
-  );
-      setMetrics({
+      setMetrics({)}
         fcp,
         lcp,
-        ttfb: navigation?.responseStart - navigation?.requestStart
+        ttfb: navigation?.responseStart - navigation?.requestStart,}
       })
-  );
     }
-  );
     // Monitor performance after page load
-    if (document.readyState === 'complete') {
-      updateMetrics()
-  );
-    } else {
-      window.addEventListener('load', updateMetrics)
-  );
+    if (document.readyState === 'complete') {}
+      updateMetrics();}
+    } else {}
+      window.addEventListener('load', updateMetrics);}
     }
-    // Monitor Core Web Vitals
-    if ('web-vitals' in window) {
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-        getCLS((metric) => setMetrics(prev => ({ ...prev, cls: metric.value }))
-  
-        getFID((metric) => setMetrics(prev => ({ ...prev, fid: metric.value })));
-  );
-        getFCP((metric) => setMetrics(prev => ({ ...prev, fcp: metric.value })))
-  );
-        getLCP((metric) => setMetrics(prev => ({ ...prev, lcp: metric.value })))
-  );
-        getTTFB((metric) => setMetrics(prev => ({ ...prev, ttfb: metric.value })))
-  );
+    // Monitor Core Web Vitals;
+    if ('web-vitals' in window) {}
+      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {}
+        getCLS((metric) => setMetrics(prev => ({ ...prev, cls: metric.value ,})))
+        getFID((metric) => setMetrics(prev => ({ ...prev, fid: metric.value ,})))
+        getFCP((metric) => setMetrics(prev => ({ ...prev, fcp: metric.value ,})))
+        getLCP((metric) => setMetrics(prev => ({ ...prev, lcp: metric.value ,})))
+        getTTFB((metric) => setMetrics(prev => ({ ...prev, ttfb: metric.value ,})))
       })
-  );
     }
-    return () => {
-      window.removeEventListener('load', updateMetrics)
-  );
+    return () => {}
+      window.removeEventListener('load', updateMetrics);}
     }
-  );
   }, [])
-  );
-  return metrics
-  );
+  return metrics;
 }
-  );
 // Memory usage monitoring
-export const useMemoryMonitoring = () => {
-  const [memoryInfo, setMemoryInfo] = useState<{
+export const useMemoryMonitoring = useCallback((...args) => {}
+  const [memoryInfo, setMemoryInfo] = useState<{}
     usedJSHeapSize?: number
-  );
     totalJSHeapSize?: number
-  );
-    jsHeapSizeLimit?: number
-  );
+    jsHeapSizeLimit?: number;}
   }>({})
-  );
-  useEffect(() => {
+  useEffect(() => {}
     if (typeof window === 'undefined' || !('memory' in performance)) return
-  );
-    const updateMemoryInfo = () => {
+    const updateMemoryInfo = useCallback((...args) => {}
       const memory = (performance as any).memory
-  );
-      if (memory) {
-        setMemoryInfo({
+      if (memory) {}
+        setMemoryInfo({)}
           usedJSHeapSize: memory.usedJSHeapSize,
           totalJSHeapSize: memory.totalJSHeapSize,
-          jsHeapSizeLimit: memory.jsHeapSizeLimit
+          jsHeapSizeLimit: memory.jsHeapSizeLimit}
         })
   );
+  return { imageSrc, isLoaded, isError, observe };
+};
+// Performance monitoring hook;
+export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */,}
+  }>({});
+  useEffect(() => {/* TODO: Fix JSX expression */,}
+      });
+    };
+    // Monitor performance after page load;
+    if (document.readyState === 'complete') {/* TODO: Fix JSX expression */,}
+    } else {/* TODO: Fix JSX expression */,}
+    }
+    // Monitor Core Web Vitals;
+    if ('web-vitals' in window) {/* TODO: Fix JSX expression */,}
+      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {/* TODO: Fix JSX expression */,}
+  s: metric.value ,})));
+        getFID((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */,})
+  d: metric.value ,})));
+        getFCP((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */,})
+  p: metric.value ,})));
+        getLCP((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */,})
+  p: metric.value ,})));
+        getTTFB((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */,})
+  b: metric.value ,})));
+      });
+    }
+    return () => {/* TODO: Fix JSX expression */,}
+    };
+  }, []);
+  return metrics;
+};
+// Memory usage monitoring;
+export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */,}
+  }>({});
+  useEffect(() => {/* TODO: Fix JSX expression */,}
+        });
       }
     }
-  );
     updateMemoryInfo()
-  );
     const interval = setInterval(updateMemoryInfo, 5000)
-  );
     return () => clearInterval(interval)
-  );
   }, [])
-  );
-  return memoryInfo
-  );
-}
-  );
+  return memoryInfo;
 // Resource preloading utility
-export const preloadResource = (href: string, as: string) => {
+export const preloadResource = useCallback((...args) => {}
   if (typeof window === 'undefined') return
-  );
   const link = document.createElement('link')
-  );
   link.rel = 'preload'
-  );
-  link.href = href
-  );
-  link.as = as
-  );
-  document.head.appendChild(link)
-  );
+  link.href = href;
+  link.as = as;
+  document.head.appendChild(link);}
 }
-  );
 // Critical resource preloading
-export const preloadCriticalResources = () => {
+export const preloadCriticalResources = useCallback((...args) => {}
   if (typeof window === 'undefined') return
-  );
   // Preload critical fonts
   preloadResource('/fonts/inter-var.woff2', 'font')
-  );
   preloadResource('/fonts/inter-var.woff', 'font')
-  );
-  // Preload critical images
+  // Preload critical images;
   preloadResource('/images/hero-bg.webp', 'image')
-  );
   preloadResource('/images/logo.svg', 'image')
-  );
-  // Preload critical CSS
-  preloadResource('/styles/critical.css', 'style')
-  );
+  // Preload critical CSS;
+  preloadResource('/styles/critical.css', 'style');}
 }
-  );
 // Bundle size monitoring
-export const useBundleSizeMonitoring = () => {
-  const [bundleSize, setBundleSize] = useState<{
+export const useBundleSizeMonitoring = useCallback((...args) => {}
+  const [bundleSize, setBundleSize] = useState<{}
     totalSize?: number
-  );
     jsSize?: number
-  );
     cssSize?: number
-  );
-    imageSize?: number
-  );
+    imageSize?: number;}
   }>({})
-  );
-  useEffect(() => {
+  useEffect(() => {}
     if (typeof window === 'undefined') return
-  );
-    const calculateBundleSize = () => {
+    const calculateBundleSize = useCallback((...args) => {}
       const resources = performance.getEntriesByType('resource')
-  );
       let totalSize = 0
-  );
       let jsSize = 0
-  );
       let cssSize = 0
-  );
       let imageSize = 0
-  );
-      resources.forEach((resource) => {
+      resources.forEach((resource) => {}
         const size = (resource as PerformanceResourceTiming).transferSize || 0
-  );
         totalSize += size
-  );
-        if (resource.name.includes('.js')) {
-          jsSize += size
-  );
-        } else if (resource.name.includes('.css')) {
-          cssSize += size
-  );
-        } else if (resource.name.match(/\.(jpg|jpeg|png|gif|webp|svg)$/)) {
-          imageSize += size
-  );
+        if (resource.name.includes('.js')) {}
+          jsSize += size;}
+        } else if (resource.name.includes('.css')) {}
+          cssSize += size;}
+        } else if (resource.name.match(/\.(jpg|jpeg|png|gif|webp|svg)$/)) {}
+          imageSize += size;}
         }
       })
-  );
-      setBundleSize({
+      setBundleSize({)}
         totalSize,
         jsSize,
         cssSize,
-        imageSize
+        imageSize}
       })
-  );
     }
-  );
     // Calculate after page load
-    if (document.readyState === 'complete') {
-      calculateBundleSize()
-  );
-    } else {
-      window.addEventListener('load', calculateBundleSize)
-  );
+    if (document.readyState === 'complete') {}
+      calculateBundleSize();}
+    } else {}
+      window.addEventListener('load', calculateBundleSize);}
     }
-    return () => {
-      window.removeEventListener('load', calculateBundleSize)
-  );
+    return () => {}
+      window.removeEventListener('load', calculateBundleSize);}
     }
-  );
   }, [])
-  );
-  return bundleSize
-  );
+  return bundleSize;
 }
-  );
-const performanceOptimizations = {
+export default {}
   debounce,
   throttle,
   useIntersectionObserver,
@@ -352,7 +313,129 @@ const performanceOptimizations = {
   useMemoryMonitoring,
   preloadResource,
   preloadCriticalResources,
-  useBundleSizeMonitoring
+  useBundleSizeMonitoring}
 }
-export default performanceOptimization;s
-  );
+};
+// Resource preloading utility;
+export const preloadResource = (hre,
+  f: string, a)
+  s: string) => {/* TODO: Fix JSX expression */}
+};
+// Critical resource preloading;
+export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */,}
+};
+// Bundle size monitoring;
+export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */,}
+  }>({});
+  useEffect(() => {/* TODO: Fix JSX expression */,}
+        } else if (resource.name.includes('.css')) {/* TODO: Fix JSX expression */,}
+        } else if (resource.name.match(/\.(jpg|jpeg|png|gif|webp|svg)$/)) {/* TODO: Fix JSX expression */,}
+        }
+      });
+      setBundleSize({/* TODO: Fix JSX expression */,})
+      });
+    };
+    // Calculate after page load;
+    if (document.readyState === 'complete') {/* TODO: Fix JSX expression */,}
+    } else {/* TODO: Fix JSX expression */,}
+    }
+    return () => {/* TODO: Fix JSX expression */,}
+    };
+  }, []);
+  return bundleSize;
+};
+export default {/* TODO: Fix JSX expression */,}
+};
+// Utility file: performanceOptimizations
+
+export interface OptimizationConfig {
+  enableImageOptimization: boolean;
+  enableLazyLoading: boolean;
+  enableCodeSplitting: boolean;
+  enableCaching: boolean;
+  enableCompression: boolean;
+}
+
+export class PerformanceOptimizations {
+  private config: OptimizationConfig;
+
+  constructor(config: OptimizationConfig = {
+    enableImageOptimization: true,
+    enableLazyLoading: true,
+    enableCodeSplitting: true,
+    enableCaching: true,
+    enableCompression: true
+  }) {
+    this.config = config;
+  }
+
+  optimizeImages(): void {
+    if (!this.config.enableImageOptimization) return;
+
+    const images = document.querySelectorAll('img');
+    images.forEach((img) => {
+      if (!img.loading) {
+        img.loading = 'lazy';
+      }
+    });
+  }
+
+  enableLazyLoading(): void {
+    if (!this.config.enableLazyLoading) return;
+
+    const lazyElements = document.querySelectorAll('[data-lazy]');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const element = entry.target as HTMLElement;
+          element.classList.add('loaded');
+          observer.unobserve(element);
+        }
+      });
+    });
+
+    lazyElements.forEach((element) => observer.observe(element));
+  }
+
+  preloadCriticalResources(): void {
+    const criticalResources = [
+      '/fonts/inter.woff2',
+      '/images/hero-bg.jpg',
+      '/images/logo.png',
+    ];
+
+    criticalResources.forEach((resource) => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource;
+      link.as = resource.endsWith('.woff2') ? 'font' : 'image';
+      if (resource.endsWith('.woff2')) {
+        link.crossOrigin = 'anonymous';
+      }
+      document.head.appendChild(link);
+    });
+  }
+
+  optimizeScrollPerformance(): void {
+    let ticking = false;
+    const updateScrollPosition = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', updateScrollPosition, { passive: true });
+  }
+
+  initialize(): void {
+    this.optimizeImages();
+    this.enableLazyLoading();
+    this.preloadCriticalResources();
+    this.optimizeScrollPerformance();
+  }
+}
+
+export const performanceOptimizations = new PerformanceOptimizations();

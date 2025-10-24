@@ -1,8 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-=======
 export default function AICybersecuritySuitePage() {return (
     <title>AI Cybersecurity Suite - Zion Tech Group</title>
       {/* Hero Section */}
@@ -14,7 +10,6 @@ export default function AICybersecuritySuitePage() {return (
       {/* Features Section */}
               Advanced Security Features;
               Protect your organization with cutting-edge AI-powered cybersecurity solutions.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 
 export default function Page() {
   return (
@@ -28,7 +23,6 @@ export default function Page() {
         <h1 className="text-4xl font-bold mb-8"></h1>
         <div className="prose prose-invert max-w-none">
           <p>This page is under construction. Please check back later for  solutions.</p>
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -65,7 +59,6 @@ export default function AICybersecuritySuitePage() {
               View Pricing
             </Link>
           </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
         </div>
       </div>
     </div>

@@ -1,10 +1,6 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
 
 const AIDocumentProcessorPage: React.FC = () => {
   const _features = [
@@ -103,8 +99,6 @@ const AIDocumentProcessorPage: React.FC = () => {
     </div>
   );
 };
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 
 export default AIDocumentProcessorPage;
 import Footer from '../components/Footer';

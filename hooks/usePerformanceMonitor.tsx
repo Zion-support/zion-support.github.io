@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-"use client"
-const usePerformanceMonitor = () => {;
-  return null
-};
-export default usePerformanceMonitor;
-=======
 'use client';
 import { useEffect } from 'react';
 
@@ -151,4 +143,3 @@ export const usePerformanceMonitor = () => {
     };
   }, []);
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738

@@ -23,39 +23,7 @@ export interface FieldValidation {// TODO: Add content;}
 /**
  * Common validation rules;
  */
-<<<<<<< HEAD
-
-export const _validationRules = {// TODO: Add content;}
-
-}
-  /**
-   * Validate required field;
-   */
-
-  required: (message = 'This field is required'): ValidationRule;
-          <string> => ({// TODO: Add content;}
-};
-  validate: (value: string) => value !== null && value !== undefined && value.trim().length > 0,
-
-//     message;
-  }),
-  /**
-   * Validate email format;
-   */
-
-  email: (message = 'Please enter a valid email address'): ValidationRule;
-          <string> => ({// TODO: Add content;}
-
-};
-  validat,
-  e: (valu)
-  e: string) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-=======
 export 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
       return emailRegex.test(value);
     },
 //     message;
@@ -389,22 +357,9 @@ export function debounce;
 }
       clearTimeout(timeout);
     }
-<<<<<<< HEAD
-    if (timeout) {/* TODO: Fix JSX expression */}
-  }
-      clearTimeout(timeout)
-    }
-    timeout = setTimeout(later, wait)
-  }
-}"`
-
-
-
-=======
     timeout = setTimeout(later, wait);
   };
 }
 
 
 export default later;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522

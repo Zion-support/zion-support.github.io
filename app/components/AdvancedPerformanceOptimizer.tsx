@@ -1,453 +1,306 @@
-'use client'
-import React from 'react';
-interface AdvancedPerformanceOptimizerProps {enableAdvancedCaching?: boolean;
-  
-  enableImageOptimization?: boolean
-  );
-  enableLazyLoading?: boolean
-  );
-  enablePreloading?: boolean
-  );
-  enableCodeSplitting?: boolean
-  );
-  enableResourceHints?: boolean
-  );
-  enableServiceWorker?: boolean;}
-  enableCriticalCSS?: boolean}
+'use client';
+import React, { useEffect, useState, useCallback } from 'react';
 
-interface AdvancedPerformanceOptimizerProps {
-  enableAdvancedCaching?: boolean
-  enableImageOptimization?: boolean
-  enableLazyLoading?: boolean
-  enablePreloading?: boolean
-  enableCodeSplitting?: boolean
-  enableResourceHints?: boolean
-  enableServiceWorker?: boolean
-  enableCriticalCSS?: boolean
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9ef9
-  enableWebVitals?: boolean
-}
-  );
-constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> = ({enableAdvancedCaching: "true,";"
-  enableImageOptimization: "true,";"
-  enableLazyLoading: "true,";"
-  enablePreloading: "true,";"
-  enableCodeSplitting: "true,";"
-  enableResourceHints: "true,";"
-  enableServiceWorker: "true,";"}
-  enableCriticalCSS: "true,}
-  );
-  enableWebVitals="true})" => {const [performanceMetricssetPerformanceMetrics] = useState({
+const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({}
+  enableAdvancedCaching = true,
+const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({
+  enableAdvancedCaching = true;
+  enableImageOptimization = true,
+  enableLazyLoading = true,
+  enablePreloading = true,
+  enableCodeSplitting = true,
+  enableResourceHints = true,
+  enableServiceWorker = true,
+  enableCriticalCSS = true,
+  enableWebVitals = true
+}) => {}
+  const [performanceMetrics, setPerformanceMetrics] = useState({)}
     fcp: 0,
     lcp: 0,
-    fid: 0,}
-    cls: 0,});
-  
+    fid: 0,
+    cls: 0,
     ttfb: 0
- ,
-})
+  });
 
-  // Web Vitals monitoring
-  );
-  useEffect(() => {if (enableWebVitals && type of windo w !== 'undefined') {"
-      constmeasureWebVitals="()" => {
+  const [performanceMetrics, setPerformanceMetrics] = useState({)
+    fcp: 0;)
+    lcp: 0;)
+    fid: 0),
+    cls: 0),
+    ttfb: 0;
+  });
 
-  // Web Vitals monitoring,
-useEffect(() => {
+  // Web Vitals monitoring;
+  useEffect(() => {
     if (enableWebVitals && typeof window !== 'undefined') {
       const measureWebVitals = () => {
-<<<<<<< HEAD:app-broken/app/components/AdvancedPerformanceOptimizer.tsx
-  return (
-    // First Contentful Paint,
-new PerformanceObserver((list) => {
+        // First Contentful Paint;
+        new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
             if (entry.name === 'first-contentful-paint') {
-              setPerformanceMetrics(prev => ({ ...prev, fcp: entry.startTime
-  );
-}))
-  );
+  // Web Vitals monitoring
+  useEffect(() => {}
+    if (enableWebVitals && typeof window !== 'undefined') {}
+      const measureWebVitals = () => {}
+        // First Contentful Paint
+        new PerformanceObserver((list) => {}
+          for (const entry of list.getEntries()) {}
+            if (entry.name === 'first-contentful-paint') {}
+              setPerformanceMetrics(prev => ({ ...prev, fcp: entry.startTime }));
             }
           }
-        }).observe({ entryTypes: ['paint'],})
-  );
-        // Largest Contentful Paint,
-new PerformanceObserver((list) => {
-          const entries = list.getEntries()
-  );
-          const lastEntry = entries[entries.length - 1];
-          setPerformanceMetrics(prev => ({ ...prev, lcp: lastEntry.startTime,}))
-  );
-        }).observe({ entryTypes: ['largest-contentful-paint'],})
-  );
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6928
-  
-        // First Contentful Paint
-        new PerformanceObserver((list) => {
-  );
-          for (const entry of list.getEntries()) {"}
-            if (entry.name="==" 'first-contentful-paint') {}
-              setPerformanceMetrics(prev => ({...prev, fcp: entry.startTime })
-  );
-}
-        }).observe({entryTypes: ['paint'] })
+        }).observe({ entryTypes: ['paint'] });
 
         // Largest Contentful Paint
-  );
         new PerformanceObserver((list) => {}
-          const entries=";"
-        }).observe({entryTypes: ['largest-contentful-paint'] })
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
+          setPerformanceMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+        }).observe({ entryTypes: ['largest-contentful-paint'] });
 
         // First Input Delay
-  );
-        new PerformanceObserver((list) => {for (const entry of list.getEntries()) {}
-            setPerformanceMetrics(prev => ({...prev, fid: entry.processingStart - entry.startTime }))
-
-        // First Input Delay,
-new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-<<<<<<< HEAD:app-broken/app/components/AdvancedPerformanceOptimizer.tsx
-            setPerformanceMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime,}))
-  );
+        new PerformanceObserver((list) => {}
+          for (const entry of list.getEntries()) {}
+            setPerformanceMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
           }
-        }).observe({ entryTypes: ['first-input'],})
-  );
-        // Cumulative Layout Shift,
-let clsValue = 0
-  );
-        new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (!(entry as any).hadRecentInput) {
-              clsValue += (entry as any).value
-  );
-              setPerformanceMetrics(prev => ({ ...prev, cls: clsValue,}))
-  );
+        }).observe({ entryTypes: ['first-input'] });
+
+        // Cumulative Layout Shift;
+        let clsValue = 0;
+        new PerformanceObserver((list) => {}
+          for (const entry of list.getEntries()) {}
+            if (!(entry as any).hadRecentInput) {}
+              clsValue += (entry as any).value;
+              setPerformanceMetrics(prev => ({ ...prev, cls: clsValue }));
             }
           }
-        }).observe({ entryTypes: ['layout-shift'],})
-  );
-      }
-  );
-            setPerformanceMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }))
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6928
-          }
-        }).observe({entryTypes: ['first-input'] })
+        }).observe({ entryTypes: ['layout-shift'] });
+      };
 
-        // Cumulative Layout Shift;"
-        let clsValue=";"
-        }).observe({entryTypes: ['layout-shift'] })
-      }
-  );
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6928
-      measureWebVitals()
+      measureWebVitals();
     }
-  }, [enableWebVita, l, s])
+  }, [enableWebVitals]);
 
-  // Advanced caching strategies;"
-  const setupAdvancedCaching=";";"
-    if (typeof window="==" 'undefined') return
+  // Advanced caching strategies
+  const setupAdvancedCaching = useCallback(() => {}
+    if (typeof window === 'undefined') return;
 
     // Service Worker for advanced caching
-  );
     if ('serviceWorker' in navigator && enableServiceWorker) {}
-
-    // Service Worker for advanced caching,
-if ('serviceWorker' in navigator && enableServiceWorker) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6928
       navigator.serviceWorker.register('/sw.js')
-        .then((registration) => {
-          console.log('Service Worker registered:', registration)
-  );
-        })
-        .catch((registrationError) => {
-          console.error('Service Worker registration failed:', registrationError)
-  );
-        })
-  );
+        .then((registration) => {}
+          // })
+        .catch((registrationError) => {}
+          // });
     }
 
-    // Memory-based caching for API responses;"
-    const cache=";";"
-      const url="typeof" input="==" 'string' ? input : input.url;"
-      const cacheKey=";";"
-    if (typeof window="==" 'undefined') return
-  );
-"
-    const images="document.querySelectorAll('img[data-src]')";"
-    const imageObserver=";";"
-            const canvas="document.createElement('canvas')";"
-            const webpSupported="canvas.toDataURL('image/webp').indexOf('data:image/webp')" === 0
-  );
-            if (webpSupported && !src.includes('.webp')) {}
-              img.src="src.replace(/\.(jpg|jpeg|png)$/i," '.webp')
-            } else {}
-              img.src="src"
-    window.fetch = async (input, init) => {
-      const url = typeof input === 'string' ? input : input.url
-      const cacheKey = `${url}_${JSON.stringify(init)}`
+    // Memory-based caching for API responses;
+    const cache = new Map();
+    const originalFetch = window.fetch;
+    window.fetch = async (input, init) => {}
+      const url = typeof input === 'string' ? input : input.url;
+      const cacheKey = `${url}_${JSON.stringify(init)}`;
 
-      if (cache.has(cacheKey)) {
-        return cache.get(cacheKey)
+      if (cache.has(cacheKey)) {}
+        return cache.get(cacheKey);
       }
 
-      const response = await originalFetch(input, init)
-      if (response.ok) {
-        cache.set(cacheKey, response.clone())
+      const response = await originalFetch(input, init);
+      if (response.ok) {}
+        cache.set(cacheKey, response.clone());
       }
 
-      return response
-    }
-  }, [enableServiceWorker])
+      return response;
+    };
+  }, [enableServiceWorker]);
 
-<<<<<<< HEAD:app-broken/app/components/AdvancedPerformanceOptimizer.tsx
-  // Image optimization with WebP and lazy loading,
-const optimizeImages = useCallback(() => {
-    if (typeof window === 'undefined') return
-  );
   // Image optimization with WebP and lazy loading
-  const optimizeImages = useCallback(() => {
-    if (typeof window === 'undefined') return
->>>>>>> main:app/components/AdvancedPerformanceOptimizer.tsx
+  const optimizeImages = useCallback(() => {}
+    if (typeof window === 'undefined') return;
 
-    const images = document.querySelectorAll('img[data-src]')
-    const imageObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-  
-        if (entry.isIntersecting) {
-          const img = entry.target as HTMLImageElement
-          const src = img.dataset.src
-          if (src) {
-<<<<<<< HEAD:app-broken/app/components/AdvancedPerformanceOptimizer.tsx
-            // Check for WebP support,
-const canvas = document.createElement('canvas')
-  );
-            const webpSupported = canvas.toDataURL('image/webp').indexOf('data: image/webp') === 0
-  );
-            if (webpSupported && !src.includes('.webp')) {
-              img.src = src.replace(/\.(jpg|jpeg|png)$/i,, '.webp')
-  );
+    const images = document.querySelectorAll('img[data-src]');
+    const imageObserver = new IntersectionObserver((entries) => {}
+      entries.forEach((entry) => {}
+        if (entry.isIntersecting) {}
+          const img = entry.target as HTMLImageElement;
+          const src = img.dataset.src;
+          if (src) {}
             // Check for WebP support
-            const canvas = document.createElement('canvas')
-            const webpSupported = canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0
+            const canvas = document.createElement('canvas');
+            const webpSupported = canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
 
-            if (webpSupported && !src.includes('.webp')) {
-              img.src = src.replace(/\.(jpg|jpeg|png)$/i, '.webp')
->>>>>>> main:app/components/AdvancedPerformanceOptimizer.tsx
-            } else {
-              img.src = src
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6928
+            if (webpSupported && !src.includes('.webp')) {}
+              img.src = src.replace(/\.(jpg|jpeg|png)$/i, '.webp');
+            } else {}
+              img.src = src;
             }
-  );
-            img.classList.remove('lazy')
-  );
-            imageObserver.unobserve(img
-  );
+
+            img.classList.remove('lazy');
+            imageObserver.unobserve(img);
+          }
+        }
+
+interface AdvancedPerformanceOptimizerProps {
+  children: React.ReactNode;
+  enableOptimizations?: boolean;
 }
-  );
-    images.forEach((img) => imageObserver.observe(img))
-  }, [])
 
-  // Critical resource preloading;"
-  const preloadCriticalResources=";";"
-    if (typeof window="==" 'undefined') return
-  );
-"
-    const criticalResources=";"
+const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({ children }) => {
+  useEffect(() => {
+    // Advanced performance optimizations
+    const optimizePerformance = () => {
+      // Lazy load images
+      const images = document.querySelectorAll('img[data-src]');
+      const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
+            img.src = img.dataset.src || '';
+            img.classList.remove('lazy');
+            imageObserver.unobserve(img);
+          }
+        });
+      });
 
-    const criticalResources = [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6928
-      '/fonts/inter-var.woff2',
-      '/css/critical.css',
-      '/js/main.js'
+      images.forEach(img => imageObserver.observe(img));
+
+  // Critical resource preloading
+  const preloadCriticalResources = useCallback(() => {}
+    if (typeof window === 'undefined') return;
+
+    const images = document.querySelectorAll('img');
+    let optimizedCount = 0;
+
+    criticalResources.forEach((resource) => {}
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource;
+      link.as = resource.endsWith('.css') ? 'style' : 'script';
+      document.head.appendChild(link);
+
+  }, []);
+
+  // Resource hints for better performance
+  const addResourceHints = useCallback(() => {}
+    if (typeof window === 'undefined') return;
+
+    const hints = [
+      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
+      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
+      { rel: 'preconnect', href: 'https://www.googletagmanager.com' },
+      { rel: 'preconnect', href: 'https://www.google-analytics.com' }
     ];
-"
-    criticalResources.forEach((resource) => {const link="document.createElement('link')";"
-      link.rel="'preload'";"
-      link.href="resource";"}
-      link.as="resource.endsWith('.css')" ? 'style' : 'script'}
-      document.head.appendChild(link)
 
-  }, [])
-
-  // Resource hints for better performance;"
-  const addResourceHints=";";"
-    if (typeof window="==" 'undefined') return
-  );
-"
-    const hints=";"
-      {rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-      {rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-      {rel: 'preconnect', href: 'https://www.googletagmanager.com' },
-      {rel: 'preconnect', href: 'https://www.google-analytics.com' }
-    ];
-"
-    hints.forEach((hint) => {const link="document.createElement('link')";"
-      link.rel="hint.rel";"
-      link.href="hint.href";"}
-      if (hint.rel="==" 'preconnect') {}
-        link.crossOrigin="'anonymous'"
-
-    hints.forEach((hint) => {
-      const link = document.createElement('link')
-      link.rel = hint.rel
-      link.href = hint.href
-      if (hint.rel === 'preconnect') {
-        link.crossOrigin = 'anonymous'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6928
+    hints.forEach((hint) => {}
+      const link = document.createElement('link');
+      link.rel = hint.rel;
+      link.href = hint.href;
+      if (hint.rel === 'preconnect') {}
+        link.crossOrigin = 'anonymous';
       }
-      document.head.appendChild(link)
 
-  }, [])
+      // Add decoding attribute for better performance
+      if (!img.hasAttribute('decoding')) {
+        img.setAttribute('decoding', 'async');
+        optimizedCount++;
+      }
+    });
 
-  // Critical CSS inlining;"
-  const inlineCriticalCSS=";";"
-    if (typeof window="==" 'undefined') return
-  );
-"
-    const criticalCSS=";"
-      .cyber-grid {background-image: linear-gradient(45deg, transparent 25%, rgba(255,255,255,0.1) 25%), linear-gradient(-45deg, transparent 25%, rgba(255,255,255,0.1) 25%), linear-gradient(45deg, rgba(255,255,255,0.1) 75%, transparent 75%), linear-gradient(-45deg, rgba(255,255,255,0.1) 75%, transparent 75%); background-size: 20px 20px; background-position: 0 0, 0 10px, 10px -10px, -10px 0px; }
-      .cyber-card {background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
-      .cyber-button {background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border: none; color: white; padding: 12px 24px; border-radius: 8px; font-weight: 600; transition: all 0.3s ease; }
-      .cyber-button:hover {transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
-    `
-  );
-"
-    const style="document.createElement('style')";"
-    style.textContent="criticalCSS"
-  );
-    document.head.insertBefore(style, document.head.firstChild)
-  }, [])
+    return optimizedCount;
+  }, []);
 
-  // Performance monitoring and reporting;"
-  const reportPerformanceMetrics=";";"
-    if (typeof window="==" 'undefined') return
+  // Critical CSS inlining
+  const inlineCriticalCSS = useCallback(() => {}
+    if (typeof window === 'undefined') return;
 
-    const style = document.createElement('style')
-    style.textContent = criticalCSS
-    document.head.insertBefore(style, document.head.firstChild)
-  }, [])
+    const scripts = document.querySelectorAll('script[src]');
+    let optimizedCount = 0;
 
-<<<<<<< HEAD:app-broken/app/components/AdvancedPerformanceOptimizer.tsx
-  // Performance monitoring and reporting,
-const reportPerformanceMetrics = useCallback(() => {
-    if (typeof window === 'undefined') return
-  );
-    // Report to analytics,
-if ('gtag' in window) {
-      (window as any).gtag('event', 'web_vitals', {
-        event_category: 'Performance',,
-        event_label: 'Core Web Vitals',,
-        value: Math.round(performanceMetrics.lcp),,
+    scripts.forEach((script) => {
+      // Add defer attribute if not already present
+      if (!script.hasAttribute('defer') && !script.hasAttribute('async')) {
+        script.setAttribute('defer', '');
+        optimizedCount++;
+      }
+    });
+
+    return optimizedCount;
+  }, []);
+
+      (window as any).gtag('event', 'web_vitals', {)
+        event_category: 'Performance')
+        event_label: 'Core Web Vitals')
+        value: Math.round(performanceMetrics.lcp)
         custom_map: {
-          fcp: Math.round(performanceMetrics.fcp),,
-          lcp: Math.round(performanceMetrics.lcp),,
-          fid: Math.round(performanceMetrics.fid),,
-          cls: Math.round(performanceMetrics.cls * 1000) / 1000,}
   // Performance monitoring and reporting
-  const reportPerformanceMetrics = useCallback(() => {
-    if (typeof window === 'undefined') return
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6928
+  const reportPerformanceMetrics = useCallback(() => {}
+    if (typeof window === 'undefined') return;
 
     // Report to analytics
-    if ('gtag' in windo w) {
-      (windo w as any).gtag('event', 'web_vitals', {
+    if ('gtag' in window) {}
+      (window as any).gtag('event', 'web_vitals', {)}
         event_category: 'Performance',
         event_label: 'Core Web Vitals',
         value: Math.round(performanceMetrics.lcp),
-        custom_map: {
-          fcp: Math.round(performanceMetrics.fcp)
-          lcp: Math.round(performanceMetrics.lcp)
-          fid: Math.round(performanceMetrics.fid)
-          cls: Math.round(performanceMetrics.cls * 100 0) / 1000
-}
+        custom_map: {}
+          fcp: Math.round(performanceMetrics.fcp),
+          lcp: Math.round(performanceMetrics.lcp),
+          fid: Math.round(performanceMetrics.fid),
+          cls: Math.round(performanceMetrics.cls * 1000) / 1000;
+        }
+      });
+    });
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6928
-    }
-  }, [performanceMetrics])
+    observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] });
 
-  useEffect(() => {if (enableAdvancedCaching) {}
-      setupAdvancedCaching()
+  useEffect(() => {}
+    if (enableWebVitals && performanceMetrics.lcp > 0) {}
+      reportPerformanceMetrics();
     }
-    if (enableImageOptimization) {}
-      optimizeImages()
-    }
-    if (enablePreloading) {}
-      preloadCriticalResources()
-    }
-    if (enableResourceHints) {}
-      addResourceHints()
-    }
-    if (enableCriticalCSS) {}
-      inlineCriticalCSS()
-    }
-  }, [enableAdvancedCaching, enableImageOptimization, enablePreloading, enableResourceHints, enableCriticalCSS, setupAdvancedCaching, optimizeImages, preloadCriticalResources, addResourceHints, inlineCriticalCSS])
+  }, [enableWebVitals, performanceMetrics, reportPerformanceMetrics]);
 
-  useEffect(() => {if (enableWebVitals && performanceMetrics.lcp > 0) {}
-      reportPerformanceMetrics()
-    }
-  }, [enableWebVitals, performanceMetrics, reportPerformanceMetrics])
+  return null;
+      // Preload critical resources
+      const criticalResources = [
+        '/fonts/main.woff2',
+        '/css/critical.css'
+      ];
 
-  return null
-  );
-}
-  );
-}}}}}
-};</AdvancedPerformanceOptimizerProp>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6928
+      criticalResources.forEach(resource => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.href = resource;
+        link.as = resource.endsWith('.css') ? 'style' : 'font';
+        document.head.appendChild(link);
+      });
+    };
 
+    optimizePerformance();
+  }, []);
 
-export default AdvancedPerformanceOptimizerPag;e;</AdvancedPerformanceOptimizerProp>"
-=======
-interface AdvancedPerformanceOptimizerProps {
-  className?: string
-  );
-  children?: React.ReactNode
-  );
-}
-
-const AdvancedPerformanceOptimizer: "React.FC<AdvancedPerformanceOptimizerProps> = ({
-  className"
-  enableWebVitals = true
-  enableAdvancedCaching = true
-  enableImageOptimization = true
-  enablePreloading = true
-  enableServiceWorker = true
-}) => {
-  const [performanceMetrics, setPerformanceMetrics ] = useState<PerformanceMetrics>({
-    lcp: "0"
-    fid: "0"
-    cls: "0"
-    fcp: "0"
-    ttfb: "0"
-  })
-  //Web Vitals monitoring
-  const measureWebVitals = useCallback(() => {
-    if (enableWebVitals && typeof window !== "undefined") {
-      //Measure Largest Contentful Paint
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === "largest-contentful-paint") {
-            setPerformanceMetrics(prev => ({
-              ...prev
-              lcp: "entry.startTime")
-            })
-  );
-}
-      })
-      observer.observe({ entryTypes: "["largest-contentful-paint"] "})
-    }
-  }, [enableWebVitals,])
-  useEffect(() => {
-    measureWebVitals()
-  }, [measureWebVitals,])
-  return (<div className = {className}>
-      <h2>Advanced Performance Optimizer</h2>
-      <p>Advanced performance optimization for better application performance.</p>
+    <div className="performance-optimized" data-optimized={isOptimized}>
+      {children}
+      {process.env.NODE_ENV === 'development' && (
+        <div className="optimization-debug" style={{
+          position: 'fixed',
+          bottom: '10px',
+          right: '10px',
+          background: 'rgba(0,0,0,0.8)',
+          color: 'white',
+          padding: '10px',
+          borderRadius: '5px',
+          fontSize: '12px',
+          zIndex: 1000;
+        }}>
+          <div>Images: {optimizationMetrics.imagesOptimized,}</div></div></div>
+          <div>Scripts: {optimizationMetrics.scriptsOptimized,}</div>
+          <div>CSS: {optimizationMetrics.cssOptimized,}</div>
+          <div>Total: {optimizationMetrics.totalSavings,}</div>
+        </div>
+      )}
     </div>
-    </>
-  )
-  )
-}
+  );
+  return <>{children}</>;
+};
 
 export default AdvancedPerformanceOptimizer;
-  
->>>>>>> d05312d5d680673ba2e628470e93a08bc6917172

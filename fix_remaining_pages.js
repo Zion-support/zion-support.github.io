@@ -83,14 +83,9 @@ const pageConfigs = {'ai-website-builder': {
     description: 'The page you are looking for could not be found. Please check the URL or return to the homepage.',
     keywords: '404, not found, error, page not found'};
 
-<<<<<<< HEAD
-// Fix pages;
-for (const page, of, pagesToFix) {const pagePath = `/workspace/app/${page}/page.tsx`;
-=======
 // Fix pages
 for (const page of pagesToFix) {
   const pagePath={`/workspace/app/${page}/page.tsx`};
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   const config = pageConfigs[page];
 
     word.charAt(0).toUpperCase() + word.slice(1)

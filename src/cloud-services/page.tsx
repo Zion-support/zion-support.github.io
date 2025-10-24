@@ -36,20 +36,6 @@ const CloudServicesPage: React.FC = () => {
     'Enhanced Security',
     'Global CDN'
   ];
-<<<<<<< HEAD
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        {/* Hero Section */}
-        <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Cloud Services
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your business with our comprehensive cloud solutions. 
-            From migration to optimization, we provide end-to-end cloud services.
-=======
   return (<div>Coming Soon</div>)
   )
     
@@ -63,23 +49,9 @@ const CloudServicesPage: React.FC = () => {
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium"></p>
             Coming Soon
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a
-<<<<<<< HEAD
-              href="tel:+13024640950"
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
-            >
-              Get Started Today
-            </a>
-            <a
-              href="/contact"
-              className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all"
-            >
-              Learn More
-            </a>
-=======
               href="tel:+13024640950" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
 // ></a>
 //               Get Started Today;
@@ -90,7 +62,6 @@ const CloudServicesPage: React.FC = () => {
 // ></a>
 //               Learn More;
           </a>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
           </div>
         </section>
         {/* Services Grid */}
@@ -138,19 +109,6 @@ const CloudServicesPage: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a
-<<<<<<< HEAD
-              href="tel:+13024640950"
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
-            >
-              Call (302) 464-0950
-            </a>
-            <a
-              href="/contact"
-              className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all"
-            >
-              Get Free Consultation
-            </a>
-=======
               href="tel:+13024640950" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
 // ></a>
 //               Call (302) 464-0950;
@@ -161,7 +119,6 @@ const CloudServicesPage: React.FC = () => {
 // ></a>
 //               Get Free Consultation;
           </a>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
           </div>
         </section>
       </main>

@@ -13,29 +13,8 @@ function cleanMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
-    if (!content.includes('<<<<<<< HEAD') && !content.includes('=======') && !content.includes('>>>>>>> ')) {
-      return false; // No conflicts to clean
-    }
-    
-    console.log(`Cleaning merge conflicts in: ${filePath}`);
-    
-    // Split content into lines
-    const lines = content.split('\n');
-    const cleanedLines = [];
-    let inConflict = false;
-    let conflictType = null; // 'head' or 'main'
-    
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      
-      if (line.trim().startsWith('<<<<<<< HEAD')) {
-        inConflict = true;
-        conflictType = 'head';
-        continue;
-      } else if (line.trim().startsWith('=======')) {
         conflictType = 'main';
         continue;
-      } else if (line.trim().startsWith('>>>>>>> ')) {
         inConflict = false;
         conflictType = null;
         continue;
@@ -44,10 +23,8 @@ function cleanMergeConflicts(filePath) {
       if (!inConflict) {
         cleanedLines.push(line);
       } else if (conflictType === 'main') {
-        // Keep the main branch version (after =======)
         cleanedLines.push(line);
       }
-      // Skip head version (before =======)
     }
     
     // Write cleaned content back

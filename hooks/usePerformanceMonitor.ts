@@ -2,15 +2,6 @@
       if ('performance' in window) {const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
             const paint = performance.getEntriesByType('paint');
 
-<<<<<<< HEAD
-            // Log performance metrics;
-            console.log('Page Load Performance: ', {
-              domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-              loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
- entry.name === 'first-paint')?.startTime,
- entry.name === 'first-contentful-paint')?.startTime,});
-          }, 0);
-=======
 interface PerformanceData {
   loadTime: number;
   firstContentfulPaint: number;
@@ -42,7 +33,6 @@ export const usePerformanceMonitor = () => {
           largestContentfulPaint: lcp ? lcp.startTime : 0,
           cumulativeLayoutShift: cls ? (cls as PerformanceEntry & { value: number }).value : 0,
           firstInputDelay: fid ? (fid as PerformanceEntry & { processingStart: number }).processingStart - fid.startTime : 0,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
         });
     };
 
