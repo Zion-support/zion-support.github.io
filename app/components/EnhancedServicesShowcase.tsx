@@ -3,9 +3,13 @@ import React from 'react';
 
 interface EnhancedServicesShowcaseProps {
   className?: string;
+
+
+
+
 };
 
-const EnhancedServicesShowcase: React.FC<EnhancedServicesShowcaseProps> = ({ className }) => {
+const EnhancedServicesShowcase: React.FC<EnhancedServicesShowcaseProps> = ({ className }) =;>; ;{;
   return (
     <div className={className}>
       <h2>EnhancedServicesShowcase</h2>
@@ -14,5 +18,5 @@ const EnhancedServicesShowcase: React.FC<EnhancedServicesShowcaseProps> = ({ cla
   );
 };
 
-export default EnhancedServicesShowcase
+export default EnhancedServicesShowcase;
 }]

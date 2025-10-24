@@ -7,48 +7,48 @@ import Link from 'next/link';
 export default function AboutPage() {
   const values = [
     {
-      icon: Target
-    title: 'Mission-Driven'
-      description: 'We are committed to delivering innovative solutions that drive real business value and transformation.'}
+      icon: Tar;g;e;t;
+    title: 'Mission-Driv;e;n;';
+      description: 'We are committed to delivering innovative solutions that drive real business value and transformation;.;';};
   {
-    icon: Users
-    title: 'Client-Focused'
-      description: 'Our success is measured by our clients\' success. We build lasting partnerships based on trust and results.'}
+    icon: Us;e;r;s;
+    title: 'Client-Focus;e;d;';
+      description: 'Our success is measured by our clients\' success. We build lasting partnerships based on trust and results;.;';};
   {
-    icon: Award
-    title: 'Excellence'
-      description: 'We maintain the highest standards of quality and continuously strive for excellence in everything we do.'}
+    icon: Aw;a;r;d;
+    title: 'Excellen;c;e;';
+      description: 'We maintain the highest standards of quality and continuously strive for excellence in everything we do;.;';};
   {
-    icon: Lightbulb
-    title: 'Innovation'
-      description: 'We embrace cutting-edge technologies and creative approaches to solve complex business challenges.'}
+    icon: Lightb;u;l;b;
+    title: 'Innovati;o;n;';
+      description: 'We embrace cutting-edge technologies and creative approaches to solve complex business challenges;.;';};
   {
-    icon: Shield
-    title: 'Integrity'
-      description: 'We conduct business with honesty, transparency, and ethical practices in all our interactions.'
+    icon: Shi;e;l;d;
+    title: 'Integri;t;y;';
+      description: 'We conduct business with hon;e;s;t;y, transparency, and ethical practices in all our interactions.'
 }
   {
-    icon: Zap
-    title: 'Agility'
-    description: 'We adapt quickly to changing market conditions and client needs to deliver optimal solutions.'}
+    icon:  ;Z;a;p;
+    title: 'Agili;t;y;';
+    description: 'We adapt quickly to changing market conditions and client needs to deliver optimal solutions;.;';};
   ]
   const team = [
     {
-      name: 'Kleber Santos'
-    role: 'CEO & Founder'
-      description: 'Visionary leader with 15+ years in AI and technology innovation.'}
+      name: 'Kleber Sant;o;s;';
+    role: 'CEO & Found;e;r;';
+      description: 'Visionary leader with 15+ years in AI and technology innovation;.;';};
     {
-      name: 'Sarah Johnson'
-    role: 'CTO'
-      description: 'Technical expert specializing in cloud architecture and AI implementation.'}
+      name: 'Sarah Johns;o;n;';
+    role: 'C;T;O;';
+      description: 'Technical expert specializing in cloud architecture and AI implementation;.;';};
     {
-      name: 'Michael Chen'
-    role: 'Head of Security'
-      description: 'Cybersecurity specialist with expertise in enterprise security solutions.'}
+      name: 'Michael Ch;e;n;';
+    role: 'Head of Securi;t;y;';
+      description: 'Cybersecurity specialist with expertise in enterprise security solutions;.;';};
     {
-      name: 'Emily Rodriguez'
-    role: 'Lead AI Engineer'
-    description: 'Machine learning expert focused on developing cutting-edge AI solutions.'}
+      name: 'Emily Rodrigu;e;z;';
+    role: 'Lead AI Engine;e;r;';
+    description: 'Machine learning expert focused on developing cutting-edge AI solutions;.;';};
   ]
   return (
     <div></div>
@@ -59,7 +59,7 @@ export default function AboutPage() {
       </Helmet>
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></section>
-        <h1 className="text-5xl md: text-6xl font-bold text-white mb-6"></h1>
+        <h1 className="text-5xl md: text-6xl font-bold text-white mb-6"></;h;1;>;
               About Zion Tech Group</h1>
             </h1>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed"></p>
@@ -96,8 +96,8 @@ export default function AboutPage() {
 
           {/* Values Section */}
           <h2 className="text-3xl font-bold text-white text-center mb-12">Our Values</h2>
-            <div className="grid md: grid-cols-2 l
-  g:grid-cols-3 gap-8"></div>
+            <div className="grid md: grid-cols-;2; ;l;
+  g: grid-cols-3 gap-8"></d;i;v;>;
               {values.map((value, index) => {
                 const Icon = value.icon
                 return (
@@ -117,8 +117,8 @@ export default function AboutPage() {
           
           {/* Team Section */}
           <h2 className="text-3xl font-bold text-white text-center mb-12">Meet Our Team</h2>
-            <div className="grid md: grid-cols-2 l
-  g:grid-cols-4 gap-8"></div>
+            <div className="grid md: grid-cols-;2; ;l;
+  g: grid-cols-4 gap-8"></d;i;v;>;
               {team.map((member, index) => (
                 <span className="text-2xl font-bold text-white"></span>
                       {member.name.split(' ').map(n => n[0]).join('')}</span>
@@ -178,7 +178,7 @@ export default function AboutPage() {
       </section>
       {/* Values */}
       <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900"></section>
-        <h2 className="text-4xl md: text-5xl font-bold text-white mb-6"></h2>
+        <h2 className="text-4xl md: text-5xl font-bold text-white mb-6"></;h;2;>;
               Our Core Values</h2>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
@@ -238,7 +238,7 @@ export default function AboutPage() {
       </section>
       {/* Team Section */}
       <section className="py-20 bg-slate-900"></section>
-        <h2 className="text-4xl md: text-5xl font-bold text-white mb-6"></h2>
+        <h2 className="text-4xl md: text-5xl font-bold text-white mb-6"></;h;2;>;
               Meet Our Team</h2>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
@@ -283,7 +283,7 @@ export default function AboutPage() {
       </section>
       {/* Stats Section */}
       <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900"></section>
-        <h2 className="text-4xl md: text-5xl font-bold text-white mb-6"></h2>
+        <h2 className="text-4xl md: text-5xl font-bold text-white mb-6"></;h;2;>;
               Our Impact</h2>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
@@ -307,25 +307,25 @@ export default function AboutPage() {
       </section>
       {/* CTA Section */}
       <section className="py-20 bg-slate-900"></section>
-        <h2 className="text-4xl md: text-5xl font-bold text-white mb-8"></h2>
+        <h2 className="text-4xl md: text-5xl font-bold text-white mb-8"></;h;2;>;
               Ready to Work With Us?</h2>
             </h2>
             <p className="text-xl text-gray-300 mb-12"></p>
               Let&apos;s discuss how we can help transform your business with our technology solutions</p>
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></d;i;v;>;
               <Link ;
                 href="/contact" 
-                className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
+                className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2";
               ></Link>
                 Get In Touch</Link>
                 <ArrowRightIcon className="w-5 h-5" /></ArrowRightIcon>
               </Link>
               <Link ;
                 href="/services" 
-                className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hove
-  r:text-white transition-all duration-300 flex items-center justify-center gap-2"
+                className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-purple-400 h;o;v;e;
+  r: text-white transition-all duration-300 flex items-center justify-center gap-2";
               ></Link>
                 View Our Services</Link>
                 <ArrowRightIcon className="w-5 h-5" /></ArrowRightIcon>

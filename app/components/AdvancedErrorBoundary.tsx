@@ -4,25 +4,28 @@ import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
 import { Mail } from 'lucide-react';
 import { Home } from 'lucide-react';
 interface AdvancedErrorBoundaryProps {
-
   className?: string
 interface State {
-  hasError: boolean
+  hasError:  ;b;o;o;l;e;a;n;
   error?: Error
   errorInfo?: ErrorInfo
   errorId?: string
 class AdvancedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props)}
-    this.state = { hasError: false};
-  private reportError = (error: Error, errorInfo: ErrorInfo) => {
+  constructor(props: P;r;o;p;s;); ;{;
+    super(props)
+
+
+
+}
+    this.state = { hasError: fa;l;s;e;};
+  private reportError = (error: E;r;r;o;r, errorInfo: ErrorInfo) =;>; ;{;
     const errorRepor
-  t: ErrorReport = {
-    errorId: this.state.errorId || this.generateErrorId()
+  t: ErrorReport ;=; ;{;
+    errorId: this.state.errorId || this.generateErrorI;d;(;);
       error
       errorI
-  d: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  d: `error_${Date.now()}_${Math.random().toString(36).subs;t;r;(;2, 9)}`}
+  componentDidCatch(error: E;r;r;o;r, errorInfo: ErrorInfo;); ;{;
   this.setState({
       error
       errorInfo)
@@ -37,7 +40,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
     // Log error to external service in production
     if (process.env.NODE_ENV === 'production') {
       this.logErrorToService(error, errorInfo)}
-  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
+  logErrorToService = (error: E;r;r;o;r, errorInfo: ErrorInfo) =;>; ;{;
     // You can integrate with services like Sentry, LogRocket, etc.
     const errorData = {</Props>;
 

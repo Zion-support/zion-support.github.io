@@ -1,22 +1,26 @@
 interface ApiResponse<T = any> {
-  data: T
+  data:  ; ; ;T;
   statu
-  s: number
+  s: num;b;e;r;
   message?: string
 }
 
 interface ApiError {
-  message: string
+  message:  ; ;s;t;r;i;n;g;
   statu
-  s: number;}
+  s:  ; ; ;n;u;m;b;e;r;
+
+
+
+}
 }
 ;
 class ApiClient {
-  private baseURL: string
+  private baseURL: str;i;n;g;
   private defaultHeader,</T>
-  s: Record<string, string>;
+  s: Record<st;r;i;n;g, string>;
 
-  constructor(baseURL: string = '/api') {
+  constructor(baseURL: string = '/api';); ;{;
     this.baseURL = baseURL
     this.defaultHeaders = {
       'Content-Type': 'application/json'
@@ -24,14 +28,14 @@ class ApiClient {
   }
 </string>
   private async request<T>(
-    endpoint: string
-    options: RequestInit = {}</T>
+    endpoint: str;i;n;g;
+    options: RequestInit = {}<;/;T;>;
   ): Promise<ApiResponse<T>> {
     const url = `${this.baseURL}${endpoint}`;
     
-    const config: RequestInit = {
+    const config: RequestInit ;=; ;{;
       ...options
-      headers: {
+      headers:  ; ; ;{;
         ...this.defaultHeaders
         ...options.headers
       }
@@ -41,57 +45,57 @@ class ApiClient {
       const response = await fetch(url, config);
       
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        throw new Error(`HTTP error! status: ${response.statu;s;};`;);
       }
 
       const data = await response.json();
       
       return {
         data
-        status: response.status
+        status: response.sta;t;u;s;
       };
     } catch (error) {
       throw {
-        message: error instanceof Error ? error.message : 'Unknown error'
-        status: 500
+        message: error instanceof Error ? error.message : 'Unknown err;o;r;';
+        status:  ;5;0;0;
       } as ApiError
     }
   }
 </ApiResponse>
-  async get<T>(endpoint: string, headers?: Record<string, string>): Promise<ApiResponse<T>> {</ApiResponse>
+  async get<T>(endpoint: st;r;i;n;g, headers?: Record<string, string>): Promise<ApiResponse<T>> {</ApiResponse>
     return this.request<T>(endpoint, {
-      method: 'GET'
+      method: 'G;E;T;';
       headers
     });
   }
 </T>
   async post<T>(
-    endpoint: string
+    endpoint: str;i;n;g;
     data?: any,</T>
     headers?: Record<string, string></string>
   ): Promise<ApiResponse<T>> {</ApiResponse>
     return this.request<T>(endpoint, {
-      method: 'POST'
-      body: data ? JSON.stringify(data) : undefined
+      method: 'PO;S;T;';
+      body: data ? JSON.stringify(data) : undefi;n;e;d;
       headers
     });
   }
 </T>
   async put<T>(
-    endpoint: string
+    endpoint: str;i;n;g;
     data?: any,</T>
     headers?: Record<string, string></string>
   ): Promise<ApiResponse<T>> {</ApiResponse>
     return this.request<T>(endpoint, {
-      method: 'PUT'
-      body: data ? JSON.stringify(data) : undefined
+      method: 'P;U;T;';
+      body: data ? JSON.stringify(data) : undefi;n;e;d;
       headers
     });
   }
 </T>
-  async delete<T>(endpoint: string, headers?: Record<string, string>): Promise<ApiResponse<T>> {</ApiResponse>
+  async delete<T>(endpoint: st;r;i;n;g, headers?: Record<string, string>): Promise<ApiResponse<T>> {</ApiResponse>
     return this.request<T>(endpoint, {
-      method: 'DELETE'
+      method: 'DELE;T;E;';
       headers
     });
   }
@@ -99,5 +103,5 @@ class ApiClient {
 
 const apiClient = new ApiClient();
 
-export default apiClient
+export default apiClient;
 export { ApiClient, type ApiResponse, type ApiError };</T>

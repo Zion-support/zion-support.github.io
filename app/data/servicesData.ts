@@ -3,8 +3,18 @@ export interface Service {
   title: string;
   description: string;
   features: string[];
-  price?: string;
-  icon?: string;
+  benefits: string[];
+  pricing: {
+    basic: string;
+    pro: string;
+    enterprise: string;
+  };
+  contactInfo: {
+    website: string;
+    email: string;
+    phone: string;
+  };
+  icon: string;
   href: string;
   popular?: boolean;
   category: 'ai' | 'it' | 'cloud' | 'security' | 'data' | 'automation';
@@ -22,7 +32,22 @@ export const aiServices: Service[] = [
       'Automated reporting',
       'Machine learning models'
     ],
-    price: '$299/month',
+    benefits: [
+      'Increased efficiency',
+      'Better decision making',
+      'Cost reduction',
+      'Competitive advantage'
+    ],
+    pricing: {
+      basic: '299',
+      pro: '599',
+      enterprise: '1299'
+    },
+    contactInfo: {
+      website: '/ai-analytics',
+      email: 'ai@ziontechgroup.com',
+      phone: '+1-555-0123'
+    },
     icon: '📊',
     href: '/ai-analytics',
     popular: true,
@@ -39,7 +64,22 @@ export const aiServices: Service[] = [
       'Task scheduling',
       'Process optimization'
     ],
-    price: '$199/month',
+    benefits: [
+      'Time savings',
+      'Reduced errors',
+      'Scalable processes',
+      'Improved productivity'
+    ],
+    pricing: {
+      basic: '199',
+      pro: '399',
+      enterprise: '899'
+    },
+    contactInfo: {
+      website: '/ai-automation',
+      email: 'automation@ziontechgroup.com',
+      phone: '+1-555-0124'
+    },
     icon: '🤖',
     href: '/ai-automation',
     category: 'ai'
@@ -58,13 +98,94 @@ export const itServices: Service[] = [
       'Cross-browser compatibility',
       'Mobile-first approach'
     ],
-    price: '$2,999/project',
+    benefits: [
+      'Better user experience',
+      'Higher conversion rates',
+      'Mobile accessibility',
+      'Search engine visibility'
+    ],
+    pricing: {
+      basic: '2999',
+      pro: '5999',
+      enterprise: '12999'
+    },
+    contactInfo: {
+      website: '/web-development',
+      email: 'web@ziontechgroup.com',
+      phone: '+1-555-0125'
+    },
     icon: '🌐',
     href: '/web-development',
     popular: true,
     category: 'it'
+  },
+  {
+    id: 'cloud-infrastructure',
+    title: 'Cloud Infrastructure',
+    description: 'Scalable and secure cloud solutions for modern businesses.',
+    features: [
+      'Cloud migration',
+      'Infrastructure as Code',
+      'Auto-scaling',
+      'Security compliance',
+      '24/7 monitoring'
+    ],
+    benefits: [
+      'Scalable resources',
+      'Cost optimization',
+      'High availability',
+      'Security compliance'
+    ],
+    pricing: {
+      basic: '1999',
+      pro: '3999',
+      enterprise: '7999'
+    },
+    contactInfo: {
+      website: '/cloud-infrastructure',
+      email: 'cloud@ziontechgroup.com',
+      phone: '+1-555-0126'
+    },
+    icon: '☁️',
+    href: '/cloud-infrastructure',
+    popular: true,
+    category: 'it'
+  },
+  {
+    id: 'cybersecurity',
+    title: 'Cybersecurity',
+    description: 'Comprehensive security solutions to protect your digital assets.',
+    features: [
+      'Security audits',
+      'Threat monitoring',
+      'Incident response',
+      'Compliance management',
+      'Security training'
+    ],
+    benefits: [
+      'Data protection',
+      'Regulatory compliance',
+      'Risk mitigation',
+      'Business continuity'
+    ],
+    pricing: {
+      basic: '3999',
+      pro: '6999',
+      enterprise: '14999'
+    },
+    contactInfo: {
+      website: '/cybersecurity',
+      email: 'security@ziontechgroup.com',
+      phone: '+1-555-0127'
+    },
+    icon: '🔒',
+    href: '/cybersecurity',
+    category: 'it'
   }
 ];
+
+// Add itSolutions as alias for itServices
+export const itSolutions = itServices;
 
 export const allServices: Service[] = [...aiServices, ...itServices];
 
@@ -72,6 +193,7 @@ export const allServices: Service[] = [...aiServices, ...itServices];
 export const servicesData = {
   aiServices,
   itServices,
+  itSolutions,
   allServices
 };
 

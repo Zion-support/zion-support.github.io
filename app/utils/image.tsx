@@ -2,30 +2,32 @@
 import React from 'react';
 import React, { useState, useCallback } from 'react';
 interface ImageProps {
+  src:  ; ;s;t;r;i;n;g;
+    alt:  ; ;s;t;r;i;n;g;
 
 
-  src: string
-    alt: string};
+
+};
 
 interface ImageProps {};
-src: string
-    alt: string
+src: str;i;n;g;
+    alt: str;i;n;g;
 width?: number
 height?: number
 className?: string
 priority?: boolean
 _quality?: number
 sr
-  c: string
-    alt: string
+  c: str;i;n;g;
+    alt: str;i;n;g;
 width?: number
 height?: number
 className?: string
 priority?: boolean
 _quality?: number
 sr
-  c: string
-    alt: string
+  c: str;i;n;g;
+    alt: str;i;n;g;
 width?: number
 height?: number
 className?: string
@@ -39,10 +41,10 @@ style?: React.CSSProperties
 onLoad?: () => void
 onError?: () => void;};
 
-export const Image: React.FC<ImageProps>= ({}</ImageProps>
-export const Image: React.FC<ImageProps> = ({}
+export const Image: React.FC<ImageProps>= ({}</ImagePro;p;s;>;
+export const Image: React.FC<ImageProps> = ;(;{;};
 src</ImageProps>
-export const Image: React.FC<ImageProps> = ({
+export const Image: React.FC<ImageProps> =; ;(;{;
 src
 alt
 width
@@ -69,25 +71,25 @@ const handleError = useCallback(() => {}
 setHasError(true);
 if (onError) onError()}
 }, [onError])
-const imageStyle: React.CSSProperties = {
+const imageStyle: React.CSSProperties ;=; ;{;
 ...style
 ...(fill && {
 positio
-  n: 'absolute'
-    top: 0
+  n: 'absolu;t;e;';
+    top:  ; ; ;0;
 lef
-  t: 0};
+  t:  ; ; ;0;};
 
-const imageStyle: React.CSSProperties = {}
+const imageStyle: React.CSSProperties =; ;{;};
 ...style
 ...(fill && {}
-position: 'absolute'
-    top: 0
+position: 'absolu;t;e;';
+    top:  ; ; ;0;
 lef
-  t: 0
-    width: '100%'
-height: '100%'
-    objectFit: 'cover'}
+  t:  ; ; ;0;
+    width: '10;0;%;';
+height: '10;0;%;';
+    objectFit: 'cove;r;';};
 })
 if (hasError) {</ImageProps>
   </ImageProps>
@@ -99,30 +101,35 @@ return (
     <div}
 if (hasError) {}
 return(<div};
-interface ImageProps {/* TODO: Fix JSX expression */};
+interface ImageProps {
+  /* TODO: Fix JSX expres;s;i;o;n; ;*;/;
+
+
+
+};
 export const
-Image: React.FC<ImageProps>= ({/* TOD)
-  O: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
+Image: React.FC<ImageProps>= ({/* T;O;D;);
+  O: Fix JSX expression *;/;};);
+}) => {/* TODO: Fix JSX expression ;*;/;};
 }, [onLoad])
-const handleError = useCallback(() => {/* TODO: Fix JSX expression */}
+const handleError = useCallback(() => {/* TODO: Fix JSX expression ;*;/;};
 }, [onError])
 const
-imageStyle: React.CSSProperties = {/* TOD
-  O: Fix JSX expression */}
+imageStyle: React.CSSProperties = {/* ;T;O;D;
+  O: Fix JSX expression ;*;/;};
 })
-if (hasError) {/* TODO: Fix JSX expression */}
+if (hasError) {/* TODO: Fix JSX expression ;*;/;};
 className={`bg-gray-200 flex items-center justify-center ${className}`}
 style = {
 imageStyle
 };
 {...props})
 >)
-<span className="text-gray-500text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>)
+<span className="text-gray-500text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</spa;n;>;);
 
 {...props}
 ></div>
-<span className="text-gray-500text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>
+<span className="text-gray-500text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</sp;a;n;>;
 </div>
 return(<img
 return (<img></img>

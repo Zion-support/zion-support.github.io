@@ -1,31 +1,35 @@
 import { useEffect, useCallback, useRef, useState } from 'react';
 
 export interface UseEnhancedPerformanceOptions {
-
-
   component?: string
   trackErrors?: boolean
   trackPerformance?: boolean
-  trackAnalytics?: boolean;}
+  trackAnalytics?: boolean;
+
+
+
+}
 }
 ;
 interface PerformanceMetrics {
-
-
-  loadTime: number
-  renderTime: number
-  memoryUsage: number
+  loadTime:  ; ;n;u;m;b;e;r;
+  renderTime:  ; ;n;u;m;b;e;r;
+  memoryUsage:  ; ;n;u;m;b;e;r;
   networkLatenc
-  y: number;}
+  y:  ; ; ;n;u;m;b;e;r;
+
+
+
+}
 }
 ;
-export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) => {;
+export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) ;=;>; ;{;
   const { component = 'unknown', trackErrors = true, trackPerformance = true, trackAnalytics = false } = options
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0
-    renderTime: 0
-    memoryUsage: 0
-    networkLatency: 0
+    loadTime:  ; ; ;0;
+    renderTime:  ; ; ;0;
+    memoryUsage:  ; ; ;0;
+    networkLatency:  ; ; ;0;
   });
 
   const [isOptimized, setIsOptimized] = useState(false);</PerformanceMetrics>
@@ -62,14 +66,14 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     // Measure network latency
     const measureNetworkLatency = () => {;
       const start = performance.now();
-      fetch('/api/ping', { method: 'HEAD' });
+      fetch('/api/ping', { method: 'HEAD;'; ;};);
         .then(() => {
           const latency = performance.now() - start
-          setMetrics(prev => ({ ...prev, networkLatency: latency }));
+          setMetrics(prev => ({ ...prev, networkLatency: latency; ;};););
         })
         .catch(() => {
           // Fallback if ping endpoint doesn't exist
-          setMetrics(prev => ({ ...prev, networkLatency: 0 }));
+          setMetrics(prev => ({ ...prev, networkLatency: 0; ;};););
         });
     };
 
@@ -145,7 +149,7 @@ const images = document.querySelectorAll('img[data-src]');
   );
   }, []);
 
-  const measurePerformance = useCallback((name: string, fn: () => void) => {
+  const measurePerformance = useCallback((name: st;r;i;n;g, fn: () => void) =;>; ;{;
     if (trackPerformance) {;
       performance.mark(`${component}-${name}-start`);
       fn();
@@ -160,7 +164,7 @@ const images = document.querySelectorAll('img[data-src]');
     }
   }, [component, trackPerformance]);
 
-  const trackError = useCallback((error: Error, context?: Record<string, unknown>) => {
+  const trackError = useCallback((error: E;r;r;o;r, context?: Record<string, unknown>) => {
     if (trackErrors) {
       if (process.env.NODE_ENV === 'development') {
         // eslint-disable-next-line no-console
@@ -170,7 +174,7 @@ const images = document.querySelectorAll('img[data-src]');
     }
   }, [component, trackErrors]);
 </string>
-  const trackAnalyticsEvent = useCallback((event: string, data?: Record<string, unknown>) => {
+  const trackAnalyticsEvent = useCallback((event: st;r;i;n;g, data?: Record<string, unknown>) => {
     if (trackAnalytics) {
       if (process.env.NODE_ENV === 'development') {
         // eslint-disable-next-line no-console
@@ -186,8 +190,8 @@ const images = document.querySelectorAll('img[data-src]');
     optimizePerformance
     measurePerformance
     trackError
-    trackAnalytics: trackAnalyticsEvent
-    renderCount: renderCountRef.current
-    mountTime: mountTimeRef.current
+    trackAnalytics: trackAnalyticsEv;e;n;t;
+    renderCount: renderCountRef.curr;e;n;t;
+    mountTime: mountTimeRef.curr;e;n;t;
   };
 };</string>

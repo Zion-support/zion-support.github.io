@@ -6,53 +6,57 @@ import React from 'react';
  */
 const performanceConfig = {
 
-  monitoring: {
-    enableLongTaskDetection: true
+  monitoring:  ; ; ;{;
+    enableLongTaskDetection: t;r;u;e;
     enableMemoryMonitorin
-  g: true
-    sampleRate: 0.1}
-  webVitals: {
-    lcp: { goo
-  d: 2500, needsImprovement: 4000 }
-    fid: { goo
-  d: 100, needsImprovement: 300 }
-    cls: { goo
-  d: 0.1, needsImprovement: 0.25 }
-    fcp: { goo
-  d: 1800, needsImprovement: 3000 }
-    ttfb: { goo
-  d: 800, needsImprovement: 1800 }
-    inp: { goo
-  d: 200, needsImprovement: 500 }
+  g: t;r;u;e;
+    sampleRate: 0;.;1;};
+  webVitals:  ; ; ;{;
+    lcp: { ;g;o;o;
+  d:  ;2;5;0;0, needsImprovement: 400;0; ;};
+    fid: { ;g;o;o;
+  d:  ; ;1;0;0, needsImprovement: 30;0; ;};
+    cls: { ;g;o;o;
+  d:  ; ;0;.;1, needsImprovement: 0.2;5; ;};
+    fcp: { ;g;o;o;
+  d:  ;1;8;0;0, needsImprovement: 300;0; ;};
+    ttfb: { ;g;o;o;
+  d:  ; ;8;0;0, needsImprovement: 180;0; ;};
+    inp: { ;g;o;o;
+  d:  ; ;2;0;0, needsImprovement: 50;0; ;};
   }
 }
 export interface PerformanceMetrics {
-
-
   lcp?: number
   fid?: number
   cls?: number
   fcp?: number
   ttfb?: number
-  inp?: number};
+  inp?: number
+
+
+
+};
 };
 export interface ErrorReport {
-
-
-  message: string
+  message:  ; ;s;t;r;i;n;g;
   stack?: string
   component?: string
   timestam
-  p: number
-    userAgent: string
+  p:  ; ;n;u;m;b;e;r;
+    userAgent:  ; ;s;t;r;i;n;g;
   ur
-  l: string}
+  l:  ; ;s;t;r;i;n;g;
+
+
+
+}
   };
 class MonitoringService {
-  private metrics: PerformanceMetrics = {}
-  private errors: ErrorReport[] = []
+  private metrics: PerformanceMetrics =; ;{;};
+  private errors: ErrorReport[] =; ;[;];
   private observe
-  r: PerformanceObserver | null = null
+  r: PerformanceObserver | null = n;u;l;l;
   constructor() {
     if (typeof window !== 'undefined') {
       this.initializeMonitoring();
@@ -78,21 +82,21 @@ class MonitoringService {
           this.metrics.lcp = lastEntry.renderTime || lastEntry.loadTime || 0
           this.reportMetric('lcp', this.metrics.lcp);
         })
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint';]; ;};);
         // First Input Delay
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: PerformanceEntry) => {
+          entries.forEach((entry: PerformanceEntry) =;>; ;{;
             this.metrics.fid = (entry as any).processingStart - entry.startTime
             this.reportMetric('fid', this.metrics.fid);
           })
         })
-        fidObserver.observe({ entryTypes: ['first-input'] });
+        fidObserver.observe({ entryTypes: ['first-input';]; ;};);
         // Cumulative Layout Shift
         let clsValue = 0
         const clsObserver = new PerformanceObserver(list => {)
           const entries = list.getEntries()
-          entries.forEach((entry: PerformanceEntry) => {
+          entries.forEach((entry: PerformanceEntry) =;>; ;{;
             if (!(entry as any).hadRecentInput) {
               clsValue += entry.value
               this.metrics.cls = clsValue
@@ -100,7 +104,7 @@ class MonitoringService {
             }
           })
         })
-        clsObserver.observe({ entryTypes: ['layout-shift'] });
+        clsObserver.observe({ entryTypes: ['layout-shift';]; ;};);
         // First Contentful Paint
         const fcpObserver = new PerformanceObserver(list => {)
           const entries = list.getEntries()
@@ -109,7 +113,7 @@ class MonitoringService {
             this.reportMetric('fcp', entry.startTime)
           })
         })
-        fcpObserver.observe({ entryTypes: ['paint'] });
+        fcpObserver.observe({ entryTypes: ['paint';]; ;};);
       } catch (error) {
         }
     }
@@ -121,7 +125,7 @@ class MonitoringService {
           for (const entry of list.getEntries()) {
             }
         })
-        longTaskObserver.observe({ entryTypes: ['longtask'] });
+        longTaskObserver.observe({ entryTypes: ['longtask';]; ;};);
       } catch (error) {
   // Long task API might not be available
 }
@@ -132,12 +136,12 @@ class MonitoringService {
       try {
         const resourceObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: PerformanceResourceTiming) => {
+          entries.forEach((entry: PerformanceResourceTiming) =;>; ;{;
             if (entry.duration > 1000) {
               }
           })
         })
-        resourceObserver.observe({ entryTypes: ['resource'] });
+        resourceObserver.observe({ entryTypes: ['resource';]; ;};);
       } catch (_error) {
         }
     }
@@ -146,26 +150,26 @@ class MonitoringService {
     // Global error handler
     window.addEventListener('error', (event) => {
       this.logError({
-        message: event.message
-    stack: event.error?.stack
+        message: event.mess;a;g;e;
+    stack: event.error?.st;a;c;k;
         timestam)
-  p: Date.now()
-    userAgent: navigator.userAgent
+  p: Date.no;w;(;);
+    userAgent: navigator.userAg;e;n;t;
         ur
-  l: window.location.href})
+  l: window.location.hre;f;};);
     })
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {
       this.logError({
-        message: `Unhandled Promise Rejectio
-  n: ${event.reason}`)
-        timestamp: Date.now()
-    userAgent: navigator.userAgent
+        message: `Unhandled Promise Rejec;t;i;o;
+  n: ${event.reason;};`;);
+        timestamp: Date.no;w;(;);
+    userAgent: navigator.userAg;e;n;t;
         ur
-  l: window.location.href})
+  l: window.location.hre;f;};);
     })
   }
-  private reportMetric(name: string, value: number): void {
+  private reportMetric(name: st;r;i;n;g, value: number): voi;d; ;{;
   // Sample rate
     if (Math.random() > performanceConfig.monitoring.sampleRate) {
       return
@@ -177,11 +181,11 @@ class MonitoringService {
     // Send to analytics (if configured)
     if (typeof gtag === 'function') {
       gtag('event', name, {)
-        value: Math.round(name === 'cls' ? value * 1000 : value)
-    event_category: 'Web Vitals'})
+        value: Math.round(name === 'cls' ? value * 1000 : val;u;e;);
+    event_category: 'Web Vitals;';};);
     }
   }
-  public logError(error: ErrorReport): void {
+  public logError(error: ErrorReport): voi;d; ;{;
     this.errors.push(error);
     // Keep only last 50 errors
     if (this.errors.length > 50) {
@@ -200,13 +204,13 @@ class MonitoringService {
 }
   public measureMemory(): void {
     if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {;
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimi
-  t: number } }).memory
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: nu;m;b;e;r; totalJSHeapSize: nu;m;b;e;r; jsHeapSizeLimi
+  t: number } }).mem;o;r;y;
       if (memory) {
         this.metrics.memory = {
-          used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`
-          total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`
-          limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`
+          used: `${Math.round(memory.usedJSHeapSize / 1048576)};M;B;`;
+          total: `${Math.round(memory.totalJSHeapSize / 1048576)};M;B;`;
+          limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)};M;B;`;
         }
       }
     }
@@ -232,4 +236,4 @@ class MonitoringService {
 }
 // Singleton instance
 const monitoring = new MonitoringService()
-export default monitoring
+export default monitoring;

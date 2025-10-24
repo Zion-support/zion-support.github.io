@@ -6,25 +6,25 @@ import { useRef } from 'react';
  * Advanced performance optimization tools for the application
  */
 // Debounce function for performance optimization
-export const debounce = <T extends (...args: unknown[]) => unknown>(
-    func: T
-  wait: number</T>
-): ((...args: Parameters<T>) => void) => {;
-  let timeout: NodeJS.Timeout
+export const debounce = <T extends (...args: unknown[]) => unknow;n;>;(;
+    func:  ; ; ;T;
+  wait: number<;/;T;>;
+): ((...args: Parameters<T>) => void) ;=;>; ;{;
+  let timeout: NodeJS.Time;o;u;t;
   return (...arg,</T>
-  s: Parameters<T>) => {
+  s: Parameters<T>) =;>; ;{;
     clearTimeout(timeout)
     timeout = setTimeout(() => func(...args), wait)
   }
 }
 // Throttle function for performance optimization</T>
-export const throttle = <T extends (...args: unknown[]) => unknown>(
-    func: T
-  limit: number</T>
-): ((...args: Parameters<T>) => void) => {;
-  let inThrottle: boolean
+export const throttle = <T extends (...args: unknown[]) => unknow;n;>;(;
+    func:  ; ; ;T;
+  limit: number<;/;T;>;
+): ((...args: Parameters<T>) => void) ;=;>; ;{;
+  let inThrottle: bool;e;a;n;
   return (...arg,</T>
-  s: Parameters<T>) => {
+  s: Parameters<T>) =;>; ;{;
     if (!inThrottle) {
       func(...args);
       inThrottle = true
@@ -34,10 +34,10 @@ export const throttle = <T extends (...args: unknown[]) => unknown>(
 }
 // Performance monitoring utilities
 export class PerformanceMonitor {
-  private static instance: PerformanceMonitor
+  private static instance: PerformanceMoni;t;o;r;
   private metric,</T>
-  s: Map<string, number> = new Map()
-  private observers: PerformanceObserver[] = [];
+  s: Map<st;r;i;n;g, number> = new Map()
+  private observers: PerformanceObserver[] ;=; ;[;];
   static getInstance(): PerformanceMonitor {
     if (!PerformanceMonitor.instance) {
       PerformanceMonitor.instance = new PerformanceMonitor();
@@ -45,7 +45,7 @@ export class PerformanceMonitor {
     return PerformanceMonitor.instance
   }
   // Track component render time
-  trackRender(componentName: string, renderTime: number) {
+  trackRender(componentName: st;r;i;n;g, renderTime: number;); ;{;
     this.metrics.set(`${componentName}_render`, renderTime);
     if (process.env['NODE_ENV'] === 'development') {
       // eslint-disable-next-line no-console
@@ -53,10 +53,10 @@ export class PerformanceMonitor {
     }
   }
   // Track memory usage
-  trackMemory(componentName: string) {
+  trackMemory(componentName: string;); ;{;
     if ('memory' in performance) {
       const memory = (performance as { memory?: { usedJSHeapSiz
-  e: number } }).memory
+  e: number } }).mem;o;r;y;
       if (memory) {
         this.metrics.set(`${componentName}_memory`, memory.usedJSHeapSize);
       }
@@ -79,11 +79,11 @@ export class PerformanceMonitor {
       list.getEntries().forEach((entry) => {
         if (entry.duration > 50) { // Tasks longer than 50ms
           // eslint-disable-next-line no-console
-    console.log(`Long task detected: ${entry.name} took ${entry.duration}ms`);
+    console.log(`Long task detected: ${entry.name} took ${entry.duration};m;s;`;);
         }
       })
     })
-    observer.observe({ entryTypes: ['longtask'] });
+    observer.observe({ entryTypes: ['longtask';]; ;};);
     this.observers.push(observer);
   }
   // Cleanup observers
@@ -93,7 +93,7 @@ export class PerformanceMonitor {
 }
 }
 // React hook for performance monitoring
-export const usePerformanceMonitor = (componentName: string) => {</string>
+export const usePerformanceMonitor = (componentName: string) => {</stri;n;g;>;
   const renderStartTime = useRef<number>(0)
   const monitor = PerformanceMonitor.getInstance();
   useEffect(() => {
@@ -107,8 +107,8 @@ export const usePerformanceMonitor = (componentName: string) => {</string>
     }
   }, [componentName, monitor])
   return {
-    trackRender: (f
-  n: () => void) => {
+    trackRender:  ; ;(;f;
+  n: () => void) =;>; ;{;
       const start = performance.now()
       fn()
       const duration = performance.now() - start
@@ -168,11 +168,11 @@ export const optimizeScrollPerformance = () => {
   // Track Core Web Vitals
   const trackCLS = () => {
   let clsValue = 0
-    const clsEntries: PerformanceEntry[] = [];
+    const clsEntries: PerformanceEntry[] ;=; ;[;];
     interface LayoutShiftEntry extends PerformanceEntry {
       hadRecentInput?: boolean
       valu
-  e: number
+  e: num;b;e;r;
   }
   // Track Core Web Vitals
 const trackCLS = ($2) => {
@@ -187,7 +187,7 @@ $3
 }
       }
     })
-    observer.observe({ entryTypes: ['layout-shift'] });
+    observer.observe({ entryTypes: ['layout-shift';]; ;};);
     return () => {
   observer.disconnect();
       return clsValue
@@ -198,12 +198,12 @@ $3
 };
       }
     })
-    observer.observe({ entryTypes: ['largest-contentful-paint'] });
+    observer.observe({ entryTypes: ['largest-contentful-paint';]; ;};);
     return () => observer.disconnect();
   }
   const trackFID = () => {
   interface FirstInputEntry extends PerformanceEntry {
-      processingStart: number
+      processingStart: num;b;e;r;
   }
   const trackFID = ($2) => {
 $3
@@ -216,10 +216,10 @@ const fid = fidEntry.processingStart - entry.startTime
           }
       }
     })
-    observer.observe({ entryTypes: ['first-input'] });
+    observer.observe({ entryTypes: ['first-input';]; ;};);
     return () => observer.disconnect();
   }
-  window.addEventListener('scroll', requestTick, { passive: true });
+  window.addEventListener('scroll', requestTick, { passive: tru;e; ;};);
   // Start tracking
   const cleanupCLS = trackCLS();
   const cleanupLCP = trackLCP();
@@ -235,14 +235,14 @@ export const getMemoryUsage = () => {
   if (typeof window === 'undefined' || !('memory' in performance)) {
     return null
 };
-  const memory = (performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimi
-  t: number } }).memory
+  const memory = (performance as unknown as { memory: { usedJSHeapSize: nu;m;b;e;r; totalJSHeapSize: nu;m;b;e;r; jsHeapSizeLimi
+  t: number } }).mem;o;r;y;
   return {
-    used: memory.usedJSHeapSize
-    total: memory.totalJSHeapSize
+    used: memory.usedJSHeapS;i;z;e;
+    total: memory.totalJSHeapS;i;z;e;
     limi
-  t: memory.jsHeapSizeLimit
-    percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100}
+  t: memory.jsHeapSizeLi;m;i;t;
+    percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 1;0;0;};
 }
 // Performance metrics collection
 export const collectPerformanceMetrics = () => {
@@ -250,16 +250,16 @@ export const collectPerformanceMetrics = () => {
   const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
   const paint = performance.getEntriesByType('paint');
   return {
-    navigation: {
-    domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart
+    navigation:  ; ; ;{;
+    domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventSt;a;r;t;
       loadComplet
-  e: navigation.loadEventEnd - navigation.loadEventStart
-    totalTime: navigation.loadEventEnd - navigation.fetchStart}
-    paint: {
-    firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime || 0
+  e: navigation.loadEventEnd - navigation.loadEventSt;a;r;t;
+    totalTime: navigation.loadEventEnd - navigation.fetchSta;r;t;};
+    paint:  ; ; ;{;
+    firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime |;|; ;0;
       firstContentfulPain
-  t: paint.find((entry) => entry.name === 'first-contentful-paint')?.startTime || 0}
-    memory: getMemoryUsage()}
+  t: paint.find((entry) => entry.name === 'first-contentful-paint')?.startTime ||; ;0;};
+    memory: getMemoryUsage;(;);};
 }
 // Initialize performance enhancements
 export const initializePerformanceEnhancements = () => {

@@ -4,35 +4,39 @@ import { useState } from 'react';
 import { MessageSquare, Mail, Phone, Send, CheckCircle } from 'lucide-react';
 
 interface FormData {
-  name: string;
-  email: string;
-  phone: string;
-  company: string;
-  message: string;
-  service: string;
+  name:  ; ; ;s;t;r;i;n;g;
+  email:  ; ; ;s;t;r;i;n;g;
+  phone:  ; ; ;s;t;r;i;n;g;
+  company:  ; ; ;s;t;r;i;n;g;
+  message:  ; ; ;s;t;r;i;n;g;
+  service:  ; ; ;s;t;r;i;n;g;
+
+
+
+
 }
 
-const ContactForm: React.FC = () => {
+const ContactForm: React.FC = () =;>; ;{;
   const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    phone: '',
-    company: '',
-    message: '',
-    service: ''
+    name:  ; ; ;';',
+    email:  ; ; ;';',
+    phone:  ; ; ;';',
+    company:  ; ; ;';',
+    message:  ; ; ;';',
+    service:  ; ;';';
   });
   
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =;>; ;{;
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) =;>; ;{;
     e.preventDefault();
     setIsSubmitting(true);
     // Simulate form submission
@@ -43,12 +47,12 @@ const ContactForm: React.FC = () => {
     setTimeout(() => {
       setIsSubmitted(false);
       setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        company: '',
-        message: '',
-        service: ''
+        name:  ; ; ;';',
+        email:  ; ; ;';',
+        phone:  ; ; ;';',
+        company:  ; ; ;';',
+        message:  ; ; ;';',
+        service:  ; ;';';
       });
     }, 3000);
   };
@@ -89,7 +93,7 @@ const ContactForm: React.FC = () => {
             value={formData.name}
             onChange={handleChange}
             required
-            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
             placeholder="Your full name"
           />
         </div>
@@ -105,7 +109,7 @@ const ContactForm: React.FC = () => {
             value={formData.email}
             onChange={handleChange}
             required
-            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
             placeholder="your@email.com"
           />
         </div>
@@ -120,7 +124,7 @@ const ContactForm: React.FC = () => {
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
             placeholder="+1 (555) 123-4567"
           />
         </div>
@@ -135,7 +139,7 @@ const ContactForm: React.FC = () => {
             name="company"
             value={formData.company}
             onChange={handleChange}
-            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
             placeholder="Your company name"
           />
         </div>
@@ -149,7 +153,7 @@ const ContactForm: React.FC = () => {
             name="service"
             value={formData.service}
             onChange={handleChange}
-            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
           >
             <option value="">Select a service</option>
             {services.map((service, index) => (
@@ -171,7 +175,7 @@ const ContactForm: React.FC = () => {
             onChange={handleChange}
             required
             rows={6}
-            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
+            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none";
             placeholder="Tell us about your project or how we can help..."
           />
         </div>
@@ -179,7 +183,7 @@ const ContactForm: React.FC = () => {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-purple-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed";
         >
           {isSubmitting ? (
             <>

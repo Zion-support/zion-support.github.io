@@ -10,25 +10,29 @@ interface ContentNewsletterSignupProps {
   subtitle?: string
   placeholder?: string
   buttonText?: string
-  features?: Array<{}
-    icon: React.ComponentType<{ className?: string }>
-    text: string}>
-  onSubscribe?: (email: string) => void}constContentNewsletterSignup:React.FC<ContentNewsletterSignupProp s>= ({
+  features?: Array<{
+
+
+
+}
+    icon: React.ComponentType<{ className?: string; ;};>;
+    text: strin;g;};>;
+  onSubscribe?: (email: string) => void}constContentNewsletterSignup:React.FC<ContentNewsletterSignupProp s>=; ;(;{;
   title= "Stay Updated with Our LatestInsights"
   subtitle= "Get exclusive content, industry insights, and early access to new features delivered to yourinbox."
   placeholder= "Enter your emailaddress"
   buttonText= "Subscribe"
   features= [
-    { icon: Star, text: "Exclusive content&quot
+    { icon:  ;S;t;a;r, text: "Exclusive content&q;u;o;t;
   }
   {
-    icon: Users, text: "Industry insights&quot
+    icon: U;s;e;r;s, text: "Industry insights&q;u;o;t;
   }
   {
-    icon: Globe, text: "Global updates&quot
+    icon: G;l;o;b;e, text: "Global updates&q;u;o;t;
   }
   {
-    icon: Zap, text: "Early access&quot
+    icon:  ; ;Z;a;p, text: "Early access&q;u;o;t;
   ]
   onSubscribe
 }) => {
@@ -36,7 +40,7 @@ interface ContentNewsletterSignupProps {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) =;>; ;{;
     e.preventDefault();
     if (!email) return
     setIsSubmitting(true);
@@ -57,21 +61,21 @@ interface ContentNewsletterSignupProps {
         <p className="text-xl text-gray-300 mb-8">{subtitle}</p>
         
         <form onSubmit={handleSubmit} className="max-w-md mx-auto mb-8"></form>
-          <div className="flex flex-col sm:flex-row gap-4"></div>
+          <div className="flex flex-col sm: flex-row gap-4"></d;i;v;>;
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder={placeholder}
-              className="flex-1 px-4 py-3 rounded-lg bg-slate-800 border border-slate-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focu
-  s:border-transparent"
+              className="flex-1 px-4 py-3 rounded-lg bg-slate-800 border border-slate-600 text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-emerald-500 f;o;c;u;
+  s: border-transparent";
               required
             /></input>
             <button
               type="submit"
               disabled={isLoading}
-              className="bg-emerald-600 hover:bg-emerald-700 disable
-  d:bg-emerald-800 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"
+              className="bg-emerald-600 hover: bg-emerald-700 disa;b;l;e;
+  d: bg-emerald-800 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center";
             >
               {isLoading ? 'Subscribing...' : buttonText}</button>
               <ArrowRight className="ml-2 h-4 w-4" /></ArrowRight>
@@ -87,7 +91,7 @@ interface ContentNewsletterSignupProps {
           
         )}
         
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8"></div>
+        <div className="grid grid-cols-2 md: grid-cols-4 gap-4 mt-8"></d;i;v;>;
           {features.map((feature, index) => (</div>
             <div key={index} className="flex items-center space-x-2 text-gray-300"></div>
               <feature.icon className="h-5 w-5 text-emerald-400" /></feature>
@@ -99,6 +103,6 @@ interface ContentNewsletterSignupProps {
   );
 };
 
-export default ContentNewsletterSignup
+export default ContentNewsletterSignup;
 ;
 }

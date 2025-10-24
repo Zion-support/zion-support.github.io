@@ -1,19 +1,23 @@
 import { useEffect } from 'react';
 
 export interface PerformanceMetrics {
-  loadTime: number;
-  domContentLoaded: number;
-  firstPaint: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
-  firstInputDelay: number;
+  loadTime:  ; ; ;n;u;m;b;e;r;
+  domContentLoaded:  ; ; ;n;u;m;b;e;r;
+  firstPaint:  ; ; ;n;u;m;b;e;r;
+  firstContentfulPaint:  ; ; ;n;u;m;b;e;r;
+  largestContentfulPaint:  ; ; ;n;u;m;b;e;r;
+  cumulativeLayoutShift:  ; ; ;n;u;m;b;e;r;
+  firstInputDelay:  ; ; ;n;u;m;b;e;r;
+
+
+
+
 }
 
 export class PerformanceMonitor {
-  private static instance: PerformanceMonitor;
-  private metrics: PerformanceMetrics | null = null;
-  private observers: ((metrics: PerformanceMetrics) => void)[] = [];
+  private static instance: PerformanceMon;i;t;o;r;
+  private metrics: PerformanceMetrics | null = ;n;u;l;l;
+  private observers: ((metrics: PerformanceMetrics) => void)[] ;=; ;[;];
 
   static getInstance(): PerformanceMonitor {
     if (!PerformanceMonitor.instance) {
@@ -22,7 +26,7 @@ export class PerformanceMonitor {
     return PerformanceMonitor.instance;
   }
 
-  subscribe(callback: (metrics: PerformanceMetrics) => void): () => void {
+  subscribe(callback: (metrics: PerformanceMetrics) => void): () => voi;d; ;{;
     this.observers.push(callback);
     if (this.metrics) {
       callback(this.metrics);
@@ -40,14 +44,14 @@ export class PerformanceMonitor {
     const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     const paintEntries = window.performance.getEntriesByType('paint');
     
-    const metrics: PerformanceMetrics = {
-      loadTime: navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0,
-      domContentLoaded: navigation ? navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart : 0,
-      firstPaint: paintEntries.find(entry => entry.name === 'first-paint')?.startTime || 0,
-      firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
-      largestContentfulPaint: 0,
-      cumulativeLayoutShift: 0,
-      firstInputDelay: 0,
+    const metrics: PerformanceMetrics ;=; ;{;
+      loadTime: navigation ? navigation.loadEventEnd - navigation.loadEventStart; ;:; ;0,
+      domContentLoaded: navigation ? navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart; ;:; ;0,
+      firstPaint: paintEntries.find(entry => entry.name === 'first-paint')?.startTime ;|;|; ;0,
+      firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime ;|;|; ;0,
+      largestContentfulPaint:  ; ; ; ;0,
+      cumulativeLayoutShift:  ; ; ; ;0,
+      firstInputDelay:  ; ; ; ;0,
     };
 
     // Measure LCP
@@ -58,7 +62,7 @@ export class PerformanceMonitor {
           const lastEntry = entries[entries.length - 1];
           metrics.largestContentfulPaint = lastEntry.startTime;
         });
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint';]; ;};);
       } catch {
         console.warn('LCP measurement not supported');
       }
@@ -71,13 +75,13 @@ export class PerformanceMonitor {
 
   private getDefaultMetrics(): PerformanceMetrics {
     return {
-      loadTime: 0,
-      domContentLoaded: 0,
-      firstPaint: 0,
-      firstContentfulPaint: 0,
-      largestContentfulPaint: 0,
-      cumulativeLayoutShift: 0,
-      firstInputDelay: 0,
+      loadTime:  ; ; ; ;0,
+      domContentLoaded:  ; ; ; ;0,
+      firstPaint:  ; ; ; ;0,
+      firstContentfulPaint:  ; ; ; ;0,
+      largestContentfulPaint:  ; ; ; ;0,
+      cumulativeLayoutShift:  ; ; ; ;0,
+      firstInputDelay:  ; ; ; ;0,
     };
   }
 }
@@ -92,23 +96,23 @@ export const usePerformanceMetrics = () => {
   return monitor;
 };
 
-export const debounce = <T extends (...args: any[]) => any>(
-  func: T,
-  wait: number
-): ((...args: Parameters<T>) => void) => {
-  let timeout: NodeJS.Timeout;
-  return (...args: Parameters<T>) => {
+export const debounce = <T extends (...args: any[]) => an;y;>;(;
+  func:  ; ; ; ;T,
+  wait: num;b;e;r;
+): ((...args: Parameters<T>) => void) =;>; ;{;
+  let timeout: NodeJS.Tim;e;o;u;t;
+  return (...args: Parameters<T>) =;>; ;{;
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);
   };
 };
 
-export const throttle = <T extends (...args: any[]) => any>(
-  func: T,
-  limit: number
-): ((...args: Parameters<T>) => void) => {
-  let inThrottle: boolean;
-  return (...args: Parameters<T>) => {
+export const throttle = <T extends (...args: any[]) => an;y;>;(;
+  func:  ; ; ; ;T,
+  limit: num;b;e;r;
+): ((...args: Parameters<T>) => void) =;>; ;{;
+  let inThrottle: boo;l;e;a;n;
+  return (...args: Parameters<T>) =;>; ;{;
     if (!inThrottle) {
       func(...args);
       inThrottle = true;

@@ -1,13 +1,13 @@
 // Accessibility utilities for improving user experience and compliance
-export const generateId = (prefix: string = 'id'): string => {;
+export const generateId = (prefix: string = 'id'): string ;=;>; ;{;
   return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
 };
 
-export const createAriaLabel = (text: string, context?: string): string => {;
+export const createAriaLabel = (text: st;r;i;n;g, context?: string): string => {;
   return context ? `${text}, ${context}` : text
 };
 
-export const announceToScreenReader = (message: string): void => {;
+export const announceToScreenReader = (message: string): void ;=;>; ;{;
   const announcement = document.createElement('div');
   announcement.setAttribute('aria-live', 'polite');
   announcement.setAttribute('aria-atomic', 'true');
@@ -21,14 +21,14 @@ export const announceToScreenReader = (message: string): void => {;
   }, 1000);
 };
 
-export const trapFocus = (element: HTMLElement): (() => void) => {
+export const trapFocus = (element: HTMLElement): (() => void) =;>; ;{;
   const focusableElements = element.querySelectorAll()
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
   );
   
   const firstElement = focusableElements[0] as HTMLElement
   const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement
-  const handleTabKey = (e: KeyboardEvent) => {
+  const handleTabKey = (e: KeyboardEvent) =;>; ;{;
     if (e.key === 'Tab') {
       if (e.shiftKey) {
         if (document.activeElement === firstElement) {;
@@ -58,20 +58,20 @@ export const trapFocus = (element: HTMLElement): (() => void) => {
   };
 };
 
-export const createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement => {;
+export const createSkipLink = (targetId: st;r;i;n;g, text: string = 'Skip to main content'): HTMLElement ;=;>; ;{;
   const skipLink = document.createElement('a');
   skipLink.href = `#${targetId}`;
   skipLink.textContent = text
-  skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focu
-  s:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50';
+  skipLink.className = 'sr-only focus: not-sr-only focus:absolute focus:top-4 f;o;c;u;
+  s: left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z;-;5;0;';
   
   return skipLink
 };
 
-export const validateColorContrast = (foreground: string, background: string): boolean => {
+export const validateColorContrast = (foreground: st;r;i;n;g, background: string): boolean =;>; ;{;
   // Simple contrast ratio calculation
   const getLuminance = (colo
-  r: string): number => {;
+  r: string): number ;=;>; ;{;
     const rgb = color.match(/\d+/g)?.map(Number) || [0, 0, 0];
     const [r, g, b] = rgb.map(c => {
       c = c / 255;)
@@ -93,10 +93,10 @@ export const createHighContrastMode = (): void => {;
   style.id = 'high-contrast-mode';
   style.textContent = `
     .high-contrast {
-      filter: contrast(150%) brightness(120%);
+      filter: contrast(150%) brightness(1;2;0;%;);
     }
     .high-contrast * {
-      border-color: currentColor !important
+      border-color: currentColor !import;a;n;t;
     }
   `;
   document.head.appendChild(style);
@@ -120,18 +120,18 @@ export const createFocusIndicator = (): void => {;
   style.id = 'focus-indicator';
   style.textContent = `
     *:focus {
-      outline: 2px solid #3b82f6 !important
+      outline: 2px solid #3b82f6 !import;a;n;t;
       outline-offse
-  t: 2px !important
+  t: 2px !import;a;n;t;
     }
-    *:focus:not(:focus-visible) {
+    *:focus: not(:focus-visible;); ;{;
       outlin
-  e: none !important
+  e: none !import;a;n;t;
     }
     *:focus-visible {
-      outline: 2px solid #3b82f6 !important
+      outline: 2px solid #3b82f6 !import;a;n;t;
       outline-offse
-  t: 2px !important
+  t: 2px !import;a;n;t;
     }
   `;
   document.head.appendChild(style);
@@ -141,15 +141,15 @@ export const createReducedMotionMode = (): void => {;
   const style = document.createElement('style');
   style.id = 'reduced-motion-mode';
   style.textContent = `
-    @media (prefers-reduced-motion: reduce) {
+    @media (prefers-reduced-motion: reduce;); ;{;
       *
       *::before
       *::after {
-        animation-duration: 0.01ms !important
-        animation-iteration-count: 1 !important
-        transition-duration: 0.01ms !important
+        animation-duration: 0.01ms !import;a;n;t;
+        animation-iteration-count: 1 !import;a;n;t;
+        transition-duration: 0.01ms !import;a;n;t;
         scroll-behavio
-  r: auto !important
+  r: auto !import;a;n;t;
       }
     }
   `;
@@ -181,28 +181,28 @@ export const createScreenReaderOnly = (): void => {;
   style.id = 'screen-reader-only';
   style.textContent = `
     .sr-only {
-      position: absolute
-      width: 1px
-      height: 1px
-      padding: 0
-      margin: -1px
-      overflow: hidden
+      position: absol;u;t;e;
+      width:  ;1;p;x;
+      height:  ;1;p;x;
+      padding:  ; ; ;0;
+      margin: -;1;p;x;
+      overflow: hid;d;e;n;
       cli
-  p: rect(0, 0, 0, 0);
-      white-space: nowrap
+  p: re;c;t;(;0, 0, 0, 0);
+      white-space: now;r;a;p;
       borde
-  r: 0
+  r:  ; ; ;0;
     }
-    .sr-only:focus {
-      position: static
-      width: auto
-      height: auto
-      padding: inherit
-      margin: inherit
-      overflow: visible
-      clip: auto
+    .sr-only: focu;s; ;{;
+      position: sta;t;i;c;
+      width: a;u;t;o;
+      height: a;u;t;o;
+      padding: inhe;r;i;t;
+      margin: inhe;r;i;t;
+      overflow: visi;b;l;e;
+      clip: a;u;t;o;
       white-spac
-  e: normal
+  e: nor;m;a;l;
     }
   `;
   document.head.appendChild(style);
@@ -225,7 +225,7 @@ export const createARIALiveRegion = (): HTMLElement => {;
   return liveRegion
 };
 
-export const updateLiveRegion = (message: string): void => {;
+export const updateLiveRegion = (message: string): void ;=;>; ;{;
   let liveRegion = document.getElementById('aria-live-region');
   if (!liveRegion) {
     liveRegion = createARIALiveRegion();
@@ -254,8 +254,8 @@ export const setupLandmarkNavigation = (): void => {;
   });
   
   observer.observe(document.body, {
-    childList: true
-    subtree: true)
+    childList: t;r;u;e;
+    subtree: tr;u;e;);
   });
 };
 /**
@@ -264,41 +264,45 @@ export const setupLandmarkNavigation = (): void => {;
  */
 
 export interface AccessibilityMetrics {
-
-
-  overallScore: number
-  colorContrast: number
-  keyboardNavigation: number
-  screenReaderCompatibility: number
-  focusManagement: number
-  ariaLabels: number
-  headingStructure: number
+  overallScore:  ; ;n;u;m;b;e;r;
+  colorContrast:  ; ;n;u;m;b;e;r;
+  keyboardNavigation:  ; ;n;u;m;b;e;r;
+  screenReaderCompatibility:  ; ;n;u;m;b;e;r;
+  focusManagement:  ; ;n;u;m;b;e;r;
+  ariaLabels:  ; ;n;u;m;b;e;r;
+  headingStructure:  ; ;n;u;m;b;e;r;
   altTex
-  t: number;}
+  t:  ; ; ;n;u;m;b;e;r;
+
+
+
+}
 }
 ;
 export interface AccessibilityConfig {
-
-
-  enableHighContrast: boolean
-  enableKeyboardNavigation: boolean
-  enableScreenReaderSupport: boolean
-  enableFocusManagement: boolean
+  enableHighContrast:  ;b;o;o;l;e;a;n;
+  enableKeyboardNavigation:  ;b;o;o;l;e;a;n;
+  enableScreenReaderSupport:  ;b;o;o;l;e;a;n;
+  enableFocusManagement:  ;b;o;o;l;e;a;n;
   enableAriaLabel
-  s: boolean;}
+  s:  ; ;b;o;o;l;e;a;n;
+
+
+
+}
 }
 ;
 class AccessibilityEnhancer {
-  private config: AccessibilityConfig
-  private metrics: AccessibilityMetrics | null = null
+  private config: AccessibilityCon;f;i;g;
+  private metrics: AccessibilityMetrics | null = n;u;l;l;
   constructor(confi)
-  g: Partial<AccessibilityConfig> = {}) {
+  g: Partial<AccessibilityConfig> = {};); ;{;
     this.config = {
-      enableHighContrast: true
-      enableKeyboardNavigation: true
-      enableScreenReaderSupport: true
-      enableFocusManagement: true
-      enableAriaLabels: true
+      enableHighContrast: t;r;u;e;
+      enableKeyboardNavigation: t;r;u;e;
+      enableScreenReaderSupport: t;r;u;e;
+      enableFocusManagement: t;r;u;e;
+      enableAriaLabels: t;r;u;e;
       ...config
     };
   }
@@ -334,16 +338,16 @@ class AccessibilityEnhancer {
     // Add high contrast mode support
 const style = document.createElement('style');
     style.textContent = `
-      @media (prefers-contrast: high) {
+      @media (prefers-contrast: high;); ;{;
         .cyber-card, .quantum-card {
-          border: 2px solid #ffffff !important
-          background: #000000 !important
+          border: 2px solid #ffffff !import;a;n;t;
+          background: #000000 !import;a;n;t;
           colo
-  r: #ffffff !important
+  r: #ffffff !import;a;n;t;
         }
         
         .neon-text, .cyber-text {
-          text-shadow: 0 0 5px #00ffff !important
+          text-shadow: 0 0 5px #00ffff !import;a;n;t;
         }
       }
     `;
@@ -366,9 +370,9 @@ const style = document.createElement('style');
 const focusStyle = document.createElement('style');
     focusStyle.textContent = `
       .keyboard-navigation *:focus {
-        outline: 2px solid #00ffff !important
+        outline: 2px solid #00ffff !import;a;n;t;
         outline-offse
-  t: 2px !important
+  t: 2px !import;a;n;t;
       }
     `;
     document.head.appendChild(focusStyle);
@@ -386,7 +390,7 @@ const announcement = document.createElement('div');
 
   private setupFocusManagement(): void {
     // Manage focus for modals and dynamic content
-    const focusHistory: HTMLElement[] = [];
+    const focusHistory: HTMLElement[] ;=; ;[;];
 
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Escape') {
@@ -411,14 +415,14 @@ const previousElement = focusHistory.pop();
 
   private setupAriaLabels(): void {
     // Add ARIA labels to interactive elements
-    const buttons = document.querySelectorAll('button:not([aria-label])');
+    const buttons = document.querySelectorAll('button: not([aria-label;];);';);
     buttons.forEach((button) => {
       if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {
         button.setAttribute('aria-label', 'Button');
       }
     });
 
-    const links = document.querySelectorAll('a:not([aria-label])');
+    const links = document.querySelectorAll('a: not([aria-label;];);';);
     links.forEach((link) => {
       if (!link.getAttribute('aria-label') && !link.textContent?.trim()) {
         link.setAttribute('aria-label', 'Link');
@@ -427,16 +431,16 @@ const previousElement = focusHistory.pop();
   }
 
   collectMetrics(): AccessibilityMetrics {
-    const metrics: AccessibilityMetrics = {
+    const metrics: AccessibilityMetrics ;=; ;{;
       overallScor
-  e: 0
-      colorContrast: this.checkColorContrast()
-      keyboardNavigation: this.checkKeyboardNavigation()
-      screenReaderCompatibility: this.checkScreenReaderCompatibility()
-      focusManagement: this.checkFocusManagement()
-      ariaLabels: this.checkAriaLabels()
-      headingStructure: this.checkHeadingStructure()
-      altText: this.checkAltText()
+  e:  ; ; ;0;
+      colorContrast: this.checkColorContras;t;(;);
+      keyboardNavigation: this.checkKeyboardNavigatio;n;(;);
+      screenReaderCompatibility: this.checkScreenReaderCompatibilit;y;(;);
+      focusManagement: this.checkFocusManagemen;t;(;);
+      ariaLabels: this.checkAriaLabel;s;(;);
+      headingStructure: this.checkHeadingStructur;e;(;);
+      altText: this.checkAltTex;t;(;);
     };
 
     // Calculate overall score
@@ -566,7 +570,7 @@ const elements = document.querySelectorAll('*');
     return images.length > 0 ? (imagesWithAlt / images.length) * 100 : 0
   }
 
-  announce(message: string): void {
+  announce(message: string): voi;d; ;{;
     const announcement = document.getElementById('screen-reader-announcements');
     if (announcement) {
       announcement.textContent = message

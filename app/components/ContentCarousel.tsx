@@ -1,57 +1,58 @@
+import React from 'react';
 'use client'
 import { { { React useState useEffect from 'react'; import ArrowRight X Brain BarChart Target TrendingUp Cloud Shield Globe Database Users Settings } from 'lucide-react';
 
 interface Slide id number title string description string features string icon ReactReactNode color string const ContentCarousel ReactFC = 2 => 
 3 features     features       color "from-red-500 to-pink-500"
 
-const ContentCarousel: React.FC = () => {
+const ContentCarousel: React.FC = () =;>; ;{;
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const slides: Slide[] = [
+  const slides: Slide[] ;=; ;[;
     {
-      id: 1
-    title: "AI-Powered Analytics"
-    description: "Transform your data into actionable insights with our advanced AI analytics platform."
-    features: [
+      id:  ; ; ;1;
+    title: "AI-Powered Analyti;c;s;";
+    description: "Transform your data into actionable insights with our advanced AI analytics platfor;m;.;";
+    features:  ; ; ;[;
         "Real-time data processing"
         "Predictive analytics"
         "Custom dashboards"
         "Automated reporting"
     ]
-    icon: <BarChart className="h-12 w-12" />
-    color: "from-blue-500 to-cyan-500"
+    icon: <BarChart className="h-12 w-12"; ;/;>;
+    color: "from-blue-500 to-cyan-5;0;0;";
   }
     {
-      id: 2
-      title: "Cloud Infrastructure"
-      description: "Scalable, secure, and reliable cloud solutions for your business needs."
-      features: [
+      id:  ; ; ;2;
+      title: "Cloud Infrastructu;r;e;";
+      description: "Scal;a;b;l;e, secure, and reliable cloud solutions for your business needs."
+      features:  ; ; ;[;
         "99.9% uptime guarantee"
         "Auto-scaling capabilities"
         "Advanced security"
         "24/7 monitoring"
       ]
-      icon: <Cloud className="h-12 w-12" />
-      color: "from-green-500 to-emerald-500"
+      icon: <Cloud className="h-12 w-12"; ;/;>;
+      color: "from-green-500 to-emerald-5;0;0;";
     }
     {
-      id: 3
-      title: "Cybersecurity Solutions"
-      description: "Protect your business with our comprehensive cybersecurity services."
-      features: [
+      id:  ; ; ;3;
+      title: "Cybersecurity Solutio;n;s;";
+      description: "Protect your business with our comprehensive cybersecurity service;s;.;";
+      features:  ; ; ;[;
         "Threat detection"
         "Vulnerability assessment"
         "Incident response"
         "Security training"
       ]
-      icon: <Shield className="h-12 w-12" />
-      color: "from-red-500 to-pink-500"
+      icon: <Shield className="h-12 w-12"; ;/;>;
+      color: "from-red-500 to-pink-5;0;0;";
     }
     {
-      id: 4
-      title: "Digital Transformation"
-      description: "Modernize your business processes with cutting-edge technology solutions."
-      features: [
+      id:  ; ; ;4;
+      title: "Digital Transformati;o;n;";
+      description: "Modernize your business processes with cutting-edge technology solution;s;.;";
+      features:  ; ; ;[;
         "Process automation"
         "Digital workflows"
         "Integration services"
@@ -76,7 +77,7 @@ const ContentCarousel: React.FC = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
-  const goToSlide = (index: number) => {
+  const goToSlide = (index: number) =;>; ;{;
     setCurrentSlide(index);
   };
 
@@ -91,18 +92,18 @@ const ContentCarousel: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden"></section>
-          <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight";>;
               ContentCarousel
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced ContentCarousel solution for modern businesses.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-              <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></d;i;v;>;
+              <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center";>;
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200";>;
                 Learn More
               </button>
             
@@ -115,7 +116,7 @@ const ContentCarousel: React.FC = () => {
                 Powerful AI-driven features designed to transform your business operations
               </p>
             
-            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8"></div>
+            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8"></d;i;v;>;
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"></div>
                   <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
@@ -143,7 +144,7 @@ const ContentCarousel: React.FC = () => {
         
         <div
               className="flex transition-transform duration-500 ease-in-out&quot
-              style={{ transform: `translateX(-${currentSlide * 100}%)`}
+              style={{ transform: `translateX(-${currentSlide * 100}%;);`;};
             >{slides.map((slide, index) => (
 <div className="bg-white/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                         <slide.icon className="h-10 w-10 text-white" />
@@ -151,7 +152,7 @@ const ContentCarousel: React.FC = () => {
                       <h3 className="text-2xl font-bold mb-4">{slide.title}</h3>
                       <p className="text-purple-100 text-lg max-w-2xl mx-auto">{slide.description}</p>
                     
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">{slide.features.map((feature, featureIndex) => (
+                    <div className="grid grid-cols-1 md: grid-cols-2 gap-4">{slide.features.map((fea;t;u;r;e, featureIndex) => (
                         <div key={featureIndex} className="flex items-center"></div>
                           <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
                           <span className="text-purple-100">{feature}</span>
@@ -175,7 +176,7 @@ const ContentCarousel: React.FC = () => {
                 
               ))}
     <div className="max-w-7xl mx-auto">{/* Header */}
-        <h2 className="text-3xl md: text-4xl font-bold text-white mb-6"></h2>
+        <h2 className="text-3xl md: text-4xl font-bold text-white mb-6"></;h;2;>;
             Discover Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">Explore our comprehensive suite of AI and IT solutions designed to transform your business.</p>p>
@@ -187,8 +188,8 @@ const ContentCarousel: React.FC = () => {
                   <currentSlideData.icon className="w-8 h-8 text-slate-900" />
                 
                 {/* Features */}
-                <h4 className="text-lg font-semibold text-white mb-4">Key Features: </h4>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">{currentSlideData.features.map((feature, index) => (
+                <h4 className="text-lg font-semibold text-white mb-4">Key Features: </;h;4;>;
+                  <div className="grid grid-cols-1 sm: grid-cols-2 gap-3">{currentSlideData.features.map((fea;t;u;r;e, index) => (
                       <div key={index} className="flex items-center space-x-3"></div>
                         <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>
@@ -206,11 +207,11 @@ const ContentCarousel: React.FC = () => {
                   </div>
                 )}
                 {/* CTA */}
-                <div className="flex flex-col sm: flex-row gap-4"></div>
-                  <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover: from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"></button>
+                <div className="flex flex-col sm: flex-row gap-4"></d;i;v;>;
+                  <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover: from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"></butt;o;n;>;
                     <Zap className="w-5 h-5" />
                     Get Started
-                  <button className="inline-flex items-center gap-2 bg-white/10 text-white px-6 py-3 rounded-lg font-semibold border border-white/20 hover: bg-white/20 transition-all duration-300"></button>
+                  <button className="inline-flex items-center gap-2 bg-white/10 text-white px-6 py-3 rounded-lg font-semibold border border-white/20 hover: bg-white/20 transition-all duration-300"></butt;o;n;>;
                     <ArrowRight className="w-5 h-5" />
                     Learn More
                 </div>
@@ -225,7 +226,7 @@ const ContentCarousel: React.FC = () => {
                 </div>
               </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{currentSlideData.features.map((feature, index) => (</div>
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">{currentSlideData.features.map((fea;t;u;r;e, index) => (</div>
                 <div key={index} className="flex items-center gap-3"></div>
                   <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                   <span className="text-gray-300">{feature}</span>
@@ -234,7 +235,7 @@ const ContentCarousel: React.FC = () => {
             </div>
             {/* Stats */}
             {currentSlideData.stats && (
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 pt-8 border-t border-slate-700">{currentSlideData.stats.map((stat, index) => (</div>
+              <div className="grid grid-cols-1 md: grid-cols-3 gap-6 mt-8 pt-8 border-t border-slate-700">{currentSlideData.stats.map((;s;t;a;t, index) => (</div>
                   <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
                     <div className="text-sm text-gray-400">{stat.label}</div>
     </>
@@ -244,23 +245,23 @@ const ContentCarousel: React.FC = () => {
           </div>
           <button
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover: bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20"></button>
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover: bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20"></butt;o;n;>;
             <ChevronLeft className="h-6 w-6" />
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover: bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20"></button>
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover: bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20"></butt;o;n;>;
             <ChevronRight className="h-6 w-6" />
           </button>
         </div>
 {/* Slide Indicators */}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover: bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20"
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover: bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20";
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover: bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20"
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover: bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20";
           ></button>
             <ChevronRight className="w-6 h-6" />
           </button>
@@ -409,7 +410,7 @@ const ContentCarousel: React.FC = () => {
                 <div className="text-gray-400 text-sm">Customer Rating</div>
               </div>
             </div>
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8"></div>
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8"></d;i;v;>;
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-4"></div>
                   <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
@@ -425,11 +426,11 @@ const ContentCarousel: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8">
               Join thousands of businesses already using our AI solutions
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-              <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></d;i;v;>;
+              <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200";>;
                 Start Free Trial
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200";>;
                 Contact Sales
               </button>
             </div>

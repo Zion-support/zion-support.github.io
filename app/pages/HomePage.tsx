@@ -15,11 +15,11 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden"></section>
         {/* Animated Background */}</section>
-        <h1 className="text-6xl md: text-7xl font-bold mb-6 bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent"></h1>
+        <h1 className="text-6xl md: text-7xl font-bold mb-6 bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent"></;h;1;>;
               Zion Tech Group</h1>
             </h1>
             <p className="text-xl m
-  d: text-2xl text-gray-300 mb-8 leading-relaxed"></p>
+  d: text-2xl text-gray-300 mb-8 leading-relaxed"><;/;p;>;
               Advanced AI and IT Solutions for Modern Businesses</p>
             </p>
             <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
@@ -27,21 +27,21 @@ export default function HomePage() {
               cloud infrastructure, and digital transformation services to drive innovation and growth.</p>
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></d;i;v;>;
               <Link ;
                 href="/contact" 
-                className="group bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+                className="group bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2";
               ></Link>
                 Get Started Today</Link>
-                <ArrowRightIcon className="w-5 h-5 group-hover: translate-x-1 transition-transform" /></ArrowRightIcon>
+                <ArrowRightIcon className="w-5 h-5 group-hover: translate-x-1 transition-transform" /></ArrowRightIc;o;n;>;
               </Link>
               <Link ;
                 href="/services" 
-                className="group border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300 flex items-center gap-2"
+                className="group border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-purple-400 hover:text-white transition-all duration-300 flex items-center gap-2";
               ></Link>
                 Explore Services</Link>
                 <ArrowRightIcon className="w-5 h-5 group-hove
-  r: translate-x-1 transition-transform" /></ArrowRightIcon>
+  r: translate-x-1 transition-transform" /></ArrowRightIc;o;n;>;
               </Link>
                       
         
@@ -50,18 +50,18 @@ export default function HomePage() {
       </section>
       {/* Services Section */}
       <section className="py-20 bg-slate-900"></section>
-        <h2 className="text-4xl md: text-5xl font-bold text-white mb-6"></h2>
+        <h2 className="text-4xl md: text-5xl font-bold text-white mb-6"></;h;2;>;
               Our Core Services</h2>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Comprehensive technology solutions designed to accelerate your business growth</p>
             </p>
           
-          <div className="grid md: grid-cols-2 l
-  g:grid-cols-3 gap-8"></div>
+          <div className="grid md: grid-cols-;2; ;l;
+  g: grid-cols-3 gap-8"></d;i;v;>;
             {/* AI Solutions */}
             <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6 group-hove
-  r: scale-110 transition-transform"></div>
+  r: scale-110 transition-transform"></d;i;v;>;
                 <CpuChipIcon className="w-8 h-8 text-white" /></CpuChipIcon>
 
               <h3 className="text-2xl font-bold text-white mb-4">AI Solutions</h3>
@@ -69,14 +69,14 @@ export default function HomePage() {
                 Advanced artificial intelligence services including machine learning</p>
                 natural language processing, and predictive analytics.</p>
               </p>
-              <Link href="/ai-solutions" className="text-purple-400 hover:text-purple-300 font-semibold flex items-center gap-2 group-hove
-  r:gap-3 transition-all"></Link>
+              <Link href="/ai-solutions" className="text-purple-400 hover: text-purple-300 font-semibold flex items-center gap-2 group-h;o;v;e;
+  r: gap-3 transition-all"></Li;n;k;>;
                 Learn More <ArrowRightIcon className="w-4 h-4" /></ArrowRightIcon>
               </Link>
             
             {/* Cybersecurity */}
             <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-6 group-hove
-  r: scale-110 transition-transform"></div>
+  r: scale-110 transition-transform"></d;i;v;>;
                 <ShieldCheckIcon className="w-8 h-8 text-white" /></ShieldCheckIcon>
 
               <h3 className="text-2xl font-bold text-white mb-4">Cybersecurity</h3>
@@ -84,13 +84,13 @@ export default function HomePage() {
                 Comprehensive security solutions to protect your digital assets</p>
                 data, and infrastructure from evolving threats.</p>
               </p>
-              <Link href="/cybersecurity" className="text-cyan-400 hover:text-cyan-300 font-semibold flex items-center gap-2 group-hove
-  r:gap-3 transition-all"></Link>
+              <Link href="/cybersecurity" className="text-cyan-400 hover: text-cyan-300 font-semibold flex items-center gap-2 group-h;o;v;e;
+  r: gap-3 transition-all"></Li;n;k;>;
                 Learn More <ArrowRightIcon className="w-4 h-4" /></ArrowRightIcon>
               </Link>
             
             {/* Cloud Infrastructure */}
-            <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>
+            <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></d;i;v;>;
                 <CloudIcon className="w-8 h-8 text-white" /></CloudIcon>
 
               <h3 className="text-2xl font-bold text-white mb-4">Cloud Infrastructure</h3>
@@ -98,13 +98,13 @@ export default function HomePage() {
                 Scalable cloud solutions and infrastructure management to optimize</p>
                 performance and reduce operational costs.</p>
               </p>
-              <Link href="/cloud-solutions" className="text-green-400 hover:text-green-300 font-semibold flex items-center gap-2 group-hove
-  r:gap-3 transition-all"></Link>
+              <Link href="/cloud-solutions" className="text-green-400 hover: text-green-300 font-semibold flex items-center gap-2 group-h;o;v;e;
+  r: gap-3 transition-all"></Li;n;k;>;
                 Learn More <ArrowRightIcon className="w-4 h-4" /></ArrowRightIcon>
               </Link>
             
             {/* Digital Transformation */}
-            <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>
+            <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></d;i;v;>;
                 <ChartBarIcon className="w-8 h-8 text-white" /></ChartBarIcon>
 
               <h3 className="text-2xl font-bold text-white mb-4">Digital Transformation</h3>
@@ -112,14 +112,14 @@ export default function HomePage() {
                 Strategic digital transformation services to modernize your business</p>
                 processes and enhance customer experiences.</p>
               </p>
-              <Link href="/digital-transformation" className="text-yellow-400 hover:text-yellow-300 font-semibold flex items-center gap-2 group-hove
-  r:gap-3 transition-all"></Link>
+              <Link href="/digital-transformation" className="text-yellow-400 hover: text-yellow-300 font-semibold flex items-center gap-2 group-h;o;v;e;
+  r: gap-3 transition-all"></Li;n;k;>;
                 Learn More <ArrowRightIcon className="w-4 h-4" /></ArrowRightIcon>
               </Link>
             
             {/* Micro SaaS */}
             <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-lg flex items-center justify-center mb-6 group-hove
-  r: scale-110 transition-transform"></div>
+  r: scale-110 transition-transform"></d;i;v;>;
                 <GlobeAltIcon className="w-8 h-8 text-white" /></GlobeAltIcon>
               </div>
         </div><GlobeAltIcon className="w-8 h-8 text-white" /> </GlobeAltIcon></div>
@@ -128,14 +128,14 @@ export default function HomePage() {
                 Custom micro SaaS solutions designed to solve specific business</p>
                 challenges with scalable, cost-effective applications.</p>
               </p>
-              <Link href="/micro-saas" className="text-pink-400 hover:text-pink-300 font-semibold flex items-center gap-2 group-hove
-  r:gap-3 transition-all"></Link>
+              <Link href="/micro-saas" className="text-pink-400 hover: text-pink-300 font-semibold flex items-center gap-2 group-h;o;v;e;
+  r: gap-3 transition-all"></Li;n;k;>;
                 Learn More <ArrowRightIcon className="w-4 h-4" /></ArrowRightIcon>
               </Link>
             </div>
             {/* 5G Solutions */}
             <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-6 group-hove
-  r: scale-110 transition-transform"></div>
+  r: scale-110 transition-transform"></d;i;v;>;
                 <GlobeAltIcon className="w-8 h-8 text-white" /></GlobeAltIcon>
               </div>
         </div><GlobeAltIcon className="w-8 h-8 text-white" /> </GlobeAltIcon></div>
@@ -144,8 +144,8 @@ export default function HomePage() {
                 Next-generation 5G technology solutions for enhanced connectivity</p>
                 IoT applications, and ultra-low latency services.</p>
               </p>
-              <Link href="/5g-solutions" className="text-indigo-400 hover:text-indigo-300 font-semibold flex items-center gap-2 group-hove
-  r:gap-3 transition-all"></Link>
+              <Link href="/5g-solutions" className="text-indigo-400 hover: text-indigo-300 font-semibold flex items-center gap-2 group-h;o;v;e;
+  r: gap-3 transition-all"></Li;n;k;>;
                 Learn More <ArrowRightIcon className="w-4 h-4" /></ArrowRightIcon>
               </Link>
             </div>
@@ -154,7 +154,7 @@ export default function HomePage() {
       </section>
       {/* About Section */}
       <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900"></section>
-        <h2 className="text-4xl md: text-5xl font-bold text-white mb-8"></h2>
+        <h2 className="text-4xl md: text-5xl font-bold text-white mb-8"></;h;2;>;
               Why Choose Zion Tech Group?</h2>
             </h2>
             <p className="text-xl text-gray-300 mb-12 leading-relaxed">
@@ -176,7 +176,7 @@ export default function HomePage() {
             <Link ;
               href="/about" 
               className="inline-flex items-center gap-2 bg-white text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg hove
-  r:bg-gray-100 transition-colors"
+  r: bg-gray-100 transition-colors";
             ></Link>
               Learn More About Us <ArrowRightIcon className="w-5 h-5" /></ArrowRightIcon>
             </Link>
@@ -185,7 +185,7 @@ export default function HomePage() {
       </section>
       {/* Contact Section */}
       <section className="py-20 bg-slate-900"></section>
-        <h2 className="text-4xl md: text-5xl font-bold text-white mb-8"></h2>
+        <h2 className="text-4xl md: text-5xl font-bold text-white mb-8"></;h;2;>;
               Ready to Transform Your Business?</h2>
             </h2>
             <p className="text-xl text-gray-300 mb-12"></p>
@@ -205,17 +205,17 @@ export default function HomePage() {
               </div>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></d;i;v;>;
               <Link ;
                 href="/contact" 
-                className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
+                className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: from-purple-700 hover:to-cyan-700 transition-all duration-300";
               ></Link>
                 Get In Touch</Link>
               </Link>
               <Link ;
                 href="/demo" 
-                className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hove
-  r:text-white transition-all duration-300"
+                className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-purple-400 h;o;v;e;
+  r: text-white transition-all duration-300";
               ></Link>
                 Schedule Demo</Link>
               </Link>

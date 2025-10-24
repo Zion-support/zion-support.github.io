@@ -3,31 +3,31 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Brain, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Globe } from 'lucide-react';
 
-const EnhancedAccessibilityEnhancerPage: React.FC = () => {
+const EnhancedAccessibilityEnhancerPage: React.FC = () =;>; ;{;
   const features = [
     {
-      icon: Brain
-      title: 'AI-Powered Intelligence'
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.'
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+      icon: Br;a;i;n;
+      title: 'AI-Powered Intelligen;c;e;';
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendation;s;.;';
+      benefits: ['Smart recommendati;o;n;s;', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     }
     {
-      icon: BarChart
-      title: 'Advanced Analytics'
-      description: 'Comprehensive analytics dashboard with real-time data visualization.'
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+      icon: BarCh;a;r;t;
+      title: 'Advanced Analyti;c;s;';
+      description: 'Comprehensive analytics dashboard with real-time data visualizatio;n;.;';
+      benefits: ['Real-time dashboa;r;d;s;', 'Custom reports', 'Data visualization', 'Performance metrics']
     }
     {
-      icon: Target
-      title: 'Precision Targeting'
-      description: 'Target specific goals and objectives with precision and accuracy.'
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+      icon: Tar;g;e;t;
+      title: 'Precision Targeti;n;g;';
+      description: 'Target specific goals and objectives with precision and accurac;y;.;';
+      benefits: ['Goal track;i;n;g;', 'Performance optimization', 'Strategic planning', 'Success metrics']
     }
     {
-      icon: TrendingUp
-      title: 'Growth Optimization'
-      description: 'Optimize your business growth with data-driven strategies.'
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+      icon: Trendin;g;U;p;
+      title: 'Growth Optimizati;o;n;';
+      description: 'Optimize your business growth with data-driven strategie;s;.;';
+      benefits: ['Growth strateg;i;e;s;', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ];
 
@@ -50,18 +50,18 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
         {/* Hero Section */}
     
         <section className="relativepy-20px-4overflow-hidden"></section>
-          <h1 className="text-5xl md:text-7xl font-boldtext-whitemb-6leading-tight">
+          <h1 className="text-5xl md: text-7xl font-boldtext-whitemb-6leading-tight";>;
             Enhanced Accessibility Enhancer
             </h1>
             <p className="text-xl text-gray-300 mb-8max-w-3xlmx-autoleading-relaxed">
             Advanced Enhanced Accessibility Enhancer solution for modern businesses.
             </p>
-            <div className="flex flex-colsm:flex-rowgap-4justify-center"></div>
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200flex items-center justify-center"></button>
+            <div className="flex flex-colsm: flex-rowgap-4justify-center"></d;i;v;>;
+              <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200flex items-center justify-center"></butt;o;n;>;
                 Get Started
                 <ArrowRight className="ml-2 w-5 h-5" />
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semiboldtransition-colorsduration-200"></button>
+              <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semiboldtransition-colorsduration-200"></butt;o;n;>;
                 Learn More
               </button>
             </div>
@@ -75,7 +75,7 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
                 Discover the powerful features that make Enhanced Accessibility Enhancer the perfect solution for your business.
               </p>
             </div>
-            <div className="gridmd:grid-cols-2lg:grid-cols-4gap-8"></div>
+            <div className="gridmd: grid-cols-2lg:grid-cols-4gap-8"></d;i;v;>;
               {features.map((feature, index) => (
                 <div className="flex items-center mb-4"></div>
                     <feature.icon className="w-8 h-8 text-emerald-400 mr-3" />
@@ -91,7 +91,7 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
                   <ul className="space-y-2">featurebenefitsmapbenefit idx => 
                       </ul><li key=idx className="flex items-center text-sm text-gray-300"> </li><CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />benefit</CheckCircle></li>        <section className="py-20 px-4 bg-white/5"></section>
           </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">{benefits.map((benefit, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-6">{benefits.map((ben;e;f;i;t, index) => (
               <div key={index} className="flex items-start space-x-3"></div>
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>

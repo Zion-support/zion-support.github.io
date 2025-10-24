@@ -1,72 +1,55 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix import paths in a file;
-function fixImportPaths(filePath) {;
-try {;
-let content = fs.readFileSync(filePath, 'utf8');
+function fixImportPath(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Fix double slash imports;
-if (content.includes("import Footer from '//components/Footer'")) {;
-content = content.replace(
-        "import Footer from '//components/Footer'",
-        "import Footer from '../../components/Footer'"
-      );
+    // Count the depth of the file
+    const depth = filePath.split('/').length - 2; // -2 for 'app' and filename
+    
+    // Generate the correct import path
+    const importPath = '../'.repeat(depth) + 'components/Footer';
+    
+    // Fix the import path
+    if (content.includes("import Footer from '../components/Footer';")) {
+      content = content.replace("import Footer from '../components/Footer';", `import Footer from '${importPath}';`);
       modified = true;
     }
 
-    // Fix missing semicolons;
-if (content.includes("import React from 'react'\nimport Head")) {;
-content = content.replace(
-        "import React from 'react'\nimport Head",
-        "import React from 'react';\nimport Head"
-      );
-      modified = true;
-    }
-;
-if (modified) {;
-fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath,}`);
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed import path in: ${filePath}`);
       return true;
     }
     return false;
-  } catch (error) {;
-console.error(`Error fixing ${filePath}:`, error.message);
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Function to recursively find all .tsx files;
-function findTsxFiles(dir) {;
-const files = [];
-  const items = fs.readdirSync(dir);
-;
-for (const item of items) {;
-const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-;
-if (stat.isDirectory()) {;
-files.push(...findTsxFiles(fullPath));
-    } else if (item.endsWith('.tsx')) {;
-files.push(fullPath);
+function walkDir(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
+
+  files.forEach(file => {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      fixedCount += walkDir(filePath);
+    } else if (file === 'page.tsx') {
+      if (fixImportPath(filePath)) {
+        fixedCount++;
+      }
     }
-  }
-;
-return files;
+  });
+
+  return fixedCount;
 }
 
-// Main execution;
-const appDir = path.join(__dirname, 'app');
-const tsxFiles = findTsxFiles(appDir);
-;
-console.log(`Found ${tsxFiles.length} .tsx files to check`);
-;
-let fixedCount = 0;
-for (const file of tsxFiles) {;
-if (fixImportPaths(file)) {;
-fixedCount++;
-  }
-}
-;
+console.log('Fixing import paths...');
+const fixedCount = walkDir('./app');
 console.log(`Fixed ${fixedCount} files`);

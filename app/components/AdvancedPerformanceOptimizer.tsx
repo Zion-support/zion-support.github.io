@@ -1,35 +1,41 @@
 'use client';
 import React, { useEffect, useCallback, useState } from 'react';
 interface PerformanceMetrics {
-
-
-  lcp: number
-    fid: number
+  lcp:  ; ;n;u;m;b;e;r;
+    fid:  ; ;n;u;m;b;e;r;
   cl
-  s: number
-    fcp: number}
-  ttfb: number};
+  s:  ; ;n;u;m;b;e;r;
+    fcp:  ; ;n;u;m;b;e;r;
+
+
+
+}
+  ttfb: num;b;e;r;};
 interface AdvancedPerformanceOptimizerProps {
   enableWebVitals?: boolean
   enableAdvancedCaching?: boolean
   enableImageOptimization?: boolean
   enablePreloading?: boolean
   enableServiceWorker?: boolean
-const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({
+const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp;s;>; ;=; ;(;{;
   enableWebVitals = true
   enableAdvancedCaching = true
   enableImageOptimization = true
   enablePreloading = true
-  enableServiceWorker = true}
+  enableServiceWorker = true
+
+
+
+}
 }) => {</AdvancedPerformanceOptimizerProps>
   const [performanceMetrics, setPerformanceMetrics] = useState<PerformanceMetrics>({
-    lcp: 0
-    fid: 0
+    lcp:  ; ; ;0;
+    fid:  ; ; ;0;
     cl
-  s: 0
-    fcp: 0
+  s:  ; ; ;0;
+    fcp:  ; ; ;0;
     ttf
-  b: 0})
+  b:  ;0;};);
   // Web Vitals monitoring
   const measureWebVitals = useCallback(() => {
     if (enableWebVitals && typeof window !== 'undefined') {
@@ -39,13 +45,13 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
         const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number }
         setPerformanceMetrics(prev => ({
           ...prev)
-          lcp: lastEntry.renderTime || lastEntry.loadTime || 0})
+          lcp: lastEntry.renderTime || lastEntry.loadTime || ;0;};);
       })
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint';]; ;};);
       // Measure First Input Delay
       const fidObserver = new PerformanceObserver((list) => {
   const entries = list.getEntries();
-        entries.forEach((entry: PerformanceEntry) => {
+        entries.forEach((entry: PerformanceEntry) =;>; ;{;
           const fid = (entry as any).processingStart - entry.startTime
           setPerformanceMetrics(prev => ({
             ...prev
@@ -53,31 +59,31 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
 })
         })
       })
-      fidObserver.observe({ entryTypes: ['first-input'] });
+      fidObserver.observe({ entryTypes: ['first-input';]; ;};);
       // Measure Cumulative Layout Shift
       let clsValue = 0
       const clsObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: PerformanceEntry) => {
+        entries.forEach((entry: PerformanceEntry) =;>; ;{;
           if (!(entry as any).hadRecentInput) {
             clsValue += entry.value
             setPerformanceMetrics(prev => ({
               ...prev
               cl)
-  s: clsValue})
+  s: clsValu;e;};);
         })
       })
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
+      clsObserver.observe({ entryTypes: ['layout-shift';]; ;};);
       // Measure First Contentful Paint
       const fcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach(entry => {
           setPerformanceMetrics(prev => ({
             ...prev)
-            fcp: entry.startTime})
+            fcp: entry.startTim;e;};);
         })
       })
-      fcpObserver.observe({ entryTypes: ['paint'] });
+      fcpObserver.observe({ entryTypes: ['paint';]; ;};);
   }, [enableWebVitals])
   // Advanced caching strategies
   const setupAdvancedCaching = useCallback(() => {
@@ -140,16 +146,16 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     // Report to analytics
     if ('gtag' in window) {
       (window as any).gtag('event', 'web_vitals', {
-        event_category: 'Performance'
-    event_label: 'Core Web Vitals')
-        value: Math.round(performanceMetrics.lcp)
-    custom_map: {
+        event_category: 'Performan;c;e;';
+    event_label: 'Core Web Vital;s;';);
+        value: Math.round(performanceMetrics.l;c;p;);
+    custom_map:  ; ; ;{;
           fc
-  p: Math.round(performanceMetrics.fcp)
-    lcp: Math.round(performanceMetrics.lcp)
+  p: Math.round(performanceMetrics.f;c;p;);
+    lcp: Math.round(performanceMetrics.l;c;p;);
           fi
-  d: Math.round(performanceMetrics.fid)
-    cls: Math.round(performanceMetrics.cls * 1000) / 1000}
+  d: Math.round(performanceMetrics.f;i;d;);
+    cls: Math.round(performanceMetrics.cls * 1000) / 10;0;0;};
       })
   }, [performanceMetrics])
   useEffect(() => {

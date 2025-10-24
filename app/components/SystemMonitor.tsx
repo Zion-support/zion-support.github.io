@@ -10,7 +10,7 @@ import { { ArrowRight } from 'lucide-react';
     'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
   ]
-const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {</SystemMonitorProps>
+const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {</SystemMonitorPro;p;s;>;
   return (</SystemMonitorProps>
     <>
       <Helmet></Helmet>
@@ -22,19 +22,19 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {</S
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">;
             {/* Hero Section */};
         <section className="relative py-20 px-4 overflow-hidden"></section>
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>
+          <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight"></;h;1;>;
               SystemMonitor</h1>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"></p>
               Advanced SystemMonitor solution for modern businesses.</p>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"></button>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></d;i;v;>;
+            <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"></butt;o;n;>;
                 Get Started</button>
                 <ArrowRight className="ml-2 h-5 w-5" /></ArrowRight>
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove
-  r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
+              <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 h;o;v;e;
+  r: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></butt;o;n;>;
                 Learn More</button>
               </button>
 
@@ -46,8 +46,8 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {</S
                 Powerful AI-driven features designed to transform your business operations</p>
               </p>
             
-            <div className="grid md:grid-cols-2 l
-  g:grid-cols-4 gap-8"></div>
+            <div className="grid md: grid-cols-;2; ;l;
+  g: grid-cols-4 gap-8"></d;i;v;>;
             {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"></div>
                   <feature.icon className="h-12 w-12 text-emerald-400 mb-4" /></feature>
@@ -70,8 +70,8 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {</S
                 Experience the benefits of cutting-edge AI technology</p>
               </p>
             
-            <div className="grid md:grid-cols-2 l
-  g:grid-cols-3 gap-8"></div>
+            <div className="grid md: grid-cols-;2; ;l;
+  g: grid-cols-3 gap-8"></d;i;v;>;
             {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-4"></div>
                   <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /></CheckCircle>
@@ -89,12 +89,12 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {</S
             <p className="text-xl text-gray-300 mb-8"></p>
               Join thousands of businesses already using our AI solutions</p>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></d;i;v;>;
+            <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></butt;o;n;>;
                 Start Free Trial</button>
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove
-  r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
+              <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 h;o;v;e;
+  r: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></butt;o;n;>;
                 Contact Sales</button>
               </button>
             </div>
@@ -106,6 +106,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {</S
 
 };
 
-export default benefits
+export default benefits;
 })))))
 }

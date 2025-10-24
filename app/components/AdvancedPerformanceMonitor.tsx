@@ -3,31 +3,31 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
-const AdvancedPerformanceMonitorPage: React.FC = () => {
+const AdvancedPerformanceMonitorPage: React.FC = () =;>; ;{;
   const features = [
     {
-      icon: Brain
-      title: 'AI-Powered Intelligence'
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.'
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+      icon: Br;a;i;n;
+      title: 'AI-Powered Intelligen;c;e;';
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendation;s;.;';
+      benefits: ['Smart recommendati;o;n;s;', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     }
     {
-      icon: BarChart
-      title: 'Advanced Analytics'
-      description: 'Comprehensive analytics dashboard with real-time data visualization.'
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+      icon: BarCh;a;r;t;
+      title: 'Advanced Analyti;c;s;';
+      description: 'Comprehensive analytics dashboard with real-time data visualizatio;n;.;';
+      benefits: ['Real-time dashboa;r;d;s;', 'Custom reports', 'Data visualization', 'Performance metrics']
     }
     {
-      icon: Target
-      title: 'Precision Targeting'
-      description: 'Target specific goals and objectives with precision and accuracy.'
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+      icon: Tar;g;e;t;
+      title: 'Precision Targeti;n;g;';
+      description: 'Target specific goals and objectives with precision and accurac;y;.;';
+      benefits: ['Goal track;i;n;g;', 'Performance optimization', 'Strategic planning', 'Success metrics']
     }
     {
-      icon: TrendingUp
-      title: 'Growth Optimization'
-      description: 'Optimize your business growth with data-driven strategies.'
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+      icon: Trendin;g;U;p;
+      title: 'Growth Optimizati;o;n;';
+      description: 'Optimize your business growth with data-driven strategie;s;.;';
+      benefits: ['Growth strateg;i;e;s;', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ];
   
@@ -49,19 +49,19 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden"></section>
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>
+          <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight"></;h;1;>;
               Advanced SEO Optimizer New</h1>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"></p>
               Advanced Performance Monitor solution for modern businesses.</p>
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-              <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"></button>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></d;i;v;>;
+              <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"></butt;o;n;>;
                 Get Started</button>
                 <ArrowRight className="ml-2 h-5 w-5" /></ArrowRight>
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hove
-  r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
+              <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 h;o;v;e;
+  r: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></butt;o;n;>;
                 Learn More</button>
               </button>
             
@@ -74,8 +74,8 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
                 Powerful AI-driven features designed to transform your business operations</p>
               </p>
             
-            <div className="grid md: grid-cols-2 l
-  g:grid-cols-4 gap-8"></div>
+            <div className="grid md: grid-cols-;2; ;l;
+  g: grid-cols-4 gap-8"></d;i;v;>;
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"></div>
                   <feature.icon className="h-12 w-12 text-emerald-400 mb-4" /></feature>
@@ -101,8 +101,8 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
                 Experience the power of AI-driven performance monitoring</p>
               </p>
             </div>
-            <div className="grid md: grid-cols-2 l
-  g:grid-cols-3 gap-8"></div>
+            <div className="grid md: grid-cols-;2; ;l;
+  g: grid-cols-3 gap-8"></d;i;v;>;
               {benefits.map((benefit, index) => (</div>
                 <div key={index} className="flex items-start space-x-3"></div>
                   <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /></CheckCircle>
@@ -120,13 +120,13 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8"></p>
               Join thousands of businesses already using our AI-powered solutions</p>
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-              <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"></button>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></d;i;v;>;
+              <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"></butt;o;n;>;
                 Start Free Trial</button>
                 <ArrowRight className="ml-2 h-5 w-5" /></ArrowRight>
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hove
-  r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
+              <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 h;o;v;e;
+  r: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></butt;o;n;>;
                 Contact Sales</button>
               </button>
             </div>
@@ -138,4 +138,4 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
   );
 };
 
-export default AdvancedPerformanceMonitorPage
+export default AdvancedPerformanceMonitorPage;

@@ -2,22 +2,30 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
-  children: ReactNode
+  children: Re;a;c;t;N;o;d;e;
+
+
+
+
 };
 
 interface State {
   hasErro
-  r: boolean
+  r:  ;b;o;o;l;e;a;n;
   error?: Error,
 ;
 class ErrorBoundaryWrapper extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props)}
-    this.state = { hasError: false};
-  static getDerivedStateFromError(error: Error): State {
+  constructor(props: P;r;o;p;s;); ;{;
+    super(props)
+
+
+
+}
+    this.state = { hasError: fa;l;s;e;};
+  static getDerivedStateFromError(error: Error): Stat;e; ;{;
     return { hasErro
-  r: true, error}
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  r:  ;t;r;u;e, error}
+  componentDidCatch(error: E;r;r;o;r, errorInfo: ErrorInfo;); ;{;
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
       // eslint-disable-next-line no-console
@@ -32,7 +40,7 @@ class ErrorBoundaryWrapper extends Component<Props, State> {
               onClick = {
 () => window.location.reload();
 };
-              className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-lg font-semiboldtransition-colorsduration-200"
+              className="bg-emerald-600 hover: bg-emerald-700 text-white px-6 py-3 rounded-lg font-semiboldtransition-colorsduration-200";
             >
               Try Again</button>
             </button>
@@ -45,7 +53,7 @@ class ErrorBoundaryWrapper extends Component<Props, State> {
   }
 };
 
-export default ErrorBoundaryWrapper
+export default ErrorBoundaryWrapper;
 }
 
 }

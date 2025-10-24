@@ -1,26 +1,30 @@
 import { useCallback, useEffect, useState, useRef } from 'react';
 interface UsePerformanceMonitorOptions {
-
-
   enabled?: boolean
   threshold?: number
-  measureMemoryUsage?: boolean}
+  measureMemoryUsage?: boolean
+
+
+
+}
 };
 interface PerformanceData {
-
-
-  fps: number
-  memoryUsage: number
-  loadTime: number
+  fps:  ; ;n;u;m;b;e;r;
+  memoryUsage:  ; ;n;u;m;b;e;r;
+  loadTime:  ; ;n;u;m;b;e;r;
   renderTim
-  e: number}
+  e:  ; ;n;u;m;b;e;r;
+
+
+
+}
 };
-export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}) => {
+export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}) =;>; ;{;
   const [metrics, setMetrics] = useState<PerformanceData>({
-    fps: 0
-    memoryUsage: 0
-    loadTime: 0
-    renderTime: 0
+    fps:  ; ; ;0;
+    memoryUsage:  ; ; ;0;
+    loadTime:  ; ; ;0;
+    renderTime:  ; ; ;0;
   })
   const [isMonitoringFPS, setIsMonitoringFPS] = useState(false);
   const frameCountRef = useRef(0);
@@ -30,7 +34,7 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
       const memory = (performance as any).memory
       setMetrics(prev => ({
         ...prev
-        memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB)
+        memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to ;M;B;);
       }))
     }
   }, [])

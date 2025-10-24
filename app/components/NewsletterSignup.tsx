@@ -4,13 +4,17 @@ import { useState } from 'react';
 import { AlertCircle } from 'lucide-react';
 interface NewsletterSignupProps {
   variant?: 'inline' | 'modal'
-  onClose?: () => void};
+  onClose?: () => void
 
-const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline', onClose }) => {</NewsletterSignupProps>
+
+
+};
+
+const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inl;i;n;e;', onClose }) => {</NewsletterSignupProps>
   const [email, setEmail] = useState('')</NewsletterSignupProps>
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
   const [message, setMessage] = useState('');
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) =;>; ;{;
     e.preventDefault();
     if (!email) {
       setStatus('error');
@@ -46,21 +50,21 @@ const content = (
         </p>
       
       <form onSubmit={handleSubmit} className="space-y-4"></form>
-        <div className="flex flex-col sm: flex-row gap-3"></div>
+        <div className="flex flex-col sm: flex-row gap-3"></d;i;v;>;
           <input
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter your email address"
-            className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70 focus: outline-none focus:ring-2 focus:ring-white/50 focu
-  s:border-transparent"
+            className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70 focus: outline-none focus:ring-2 focus:ring-white/50 f;o;c;u;
+  s: border-transparent";
             disabled={status === 'loading'}</input>
           /></input>
           <button
             type="submit"
             disabled={status === 'loading'}
-            className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover: bg-white/90 transition-colors disabled:opacity-50 disable
-  d:cursor-not-allowed flex items-center justify-center"
+            className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover: bg-white/90 transition-colors disabled:opacity-50 disa;b;l;e;
+  d: cursor-not-allowed flex items-center justify-center";
           ></button>
             {status === 'loading' ? (</button>
               <>
@@ -106,7 +110,7 @@ const content = (
 }
     </div>
   );
-export default NewsletterSignup
+export default NewsletterSignup;
 })))
 
 

@@ -1,6 +1,6 @@
 
 export const generateSitemap = useCallback((...args) => {
-  const baseUrl = 'https: //ziontechgroup.com'
+  const baseUrl = 'https: //ziontechgroup.c;o;m;';
   const staticPages = [
   ''
 '/services'
@@ -42,7 +42,7 @@ export const generateSitemap = useCallback((...args) => {
     '/productivity'
   ]
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9";>;
 ${staticPages.map(page => `</urlset>
 <url></url>
 <loc>${baseUrl}${page}</loc>)
@@ -54,157 +54,162 @@ ${staticPages.map(page => `</urlset>
 return sitemap
 }
 export const generateRobotsTxt = useCallback((...args) => {}
-return `User-agent: *
-    Allow: /
-Sitemap: https://ziontechgroup.com/sitemap.xml
+return `User-agent:  ; ; ;*;
+    Allow:  ; ; ;/;
+Sitemap: https://ziontechgroup.com/sitemap.;x;m;l;
 # Crawl-delay for better server performance
-Crawl-delay: 1
+Crawl-delay:  ; ; ;1;
 # Disallow admin and private areas
 Disallo
-  w: /admin/
-    Disallow: /api/
+  w: /adm;i;n;/;
+    Disallow: /a;p;i;/;
 Disallo
-  w: /_next/,;
-    Disallow: /private/`;}
+  w: /_n;e;x;t;/,;
+    Disallow: /priva;t;e;/;`;}
 }
-export interface SitemapEntry {/* TODO: Fix JSX expression */};
+export interface SitemapEntry {
+  /* TODO: Fix JSX expres;s;i;o;n; ;*;/;
+
+
+
+};
 }
-export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expression */}
-l: `${baseUrl}/`
+export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expression ;*;/;};
+l: `${baseUrl;};/;`;
 lastmo
-d: currentDate
+d: currentD;a;t;e;
 changefre,
 ;
-  q: 'daily'
+  q: 'dai;l;y;';
 priorit
-y: 1.0}
-{/* TODO: Fix JSX expression */}`
-l: `${baseUrl}/about`
+y: 1;.;0;};
+{/* TODO: Fix JSX expression *;/;};`;
+l: `${baseUrl}/abo;u;t;`;
 lastmo
-d: currentDate
+d: currentD;a;t;e;
 changefre,
 ;
-  q: 'monthly'
+  q: 'month;l;y;';
 priorit
-y: 0.8}
-{/* TODO: Fix JSX expression */}`
-l: `${baseUrl}/services`
+y: 0;.;8;};
+{/* TODO: Fix JSX expression *;/;};`;
+l: `${baseUrl}/servic;e;s;`;
 lastmo
-d: currentDate
+d: currentD;a;t;e;
 changefre,
 ;
-  q: 'weekly'
+  q: 'week;l;y;';
 priorit
-y: 0.9}
-{/* TODO: Fix JSX expression */}`
-l: `${baseUrl}/ai-services`
+y: 0;.;9;};
+{/* TODO: Fix JSX expression *;/;};`;
+l: `${baseUrl}/ai-servic;e;s;`;
 lastmo
-d: currentDate
+d: currentD;a;t;e;
 changefre,
 ;
-  q: 'weekly'
+  q: 'week;l;y;';
 priorit
-y: 0.9}
-{/* TODO: Fix JSX expression */}`
-l: `${baseUrl}/it-services`
+y: 0;.;9;};
+{/* TODO: Fix JSX expression *;/;};`;
+l: `${baseUrl}/it-servic;e;s;`;
 lastmo
-d: currentDate
+d: currentD;a;t;e;
 changefre,
 ;
-  q: 'weekly'
+  q: 'week;l;y;';
 priorit
-y: 0.9}
-{/* TODO: Fix JSX expression */}`
-l: `${baseUrl}/quantum-computing`
+y: 0;.;9;};
+{/* TODO: Fix JSX expression *;/;};`;
+l: `${baseUrl}/quantum-computi;n;g;`;
 lastmo
-d: currentDate
+d: currentD;a;t;e;
 changefre,
 ;
-  q: 'weekly'
+  q: 'week;l;y;';
 priorit
-y: 0.9}
-{/* TODO: Fix JSX expression */}`
-l: `${baseUrl}/autonomous-systems`
+y: 0;.;9;};
+{/* TODO: Fix JSX expression *;/;};`;
+l: `${baseUrl}/autonomous-syste;m;s;`;
 lastmo
-d: currentDate
+d: currentD;a;t;e;
 changefre,
 ;
-  q: 'weekly'
+  q: 'week;l;y;';
 priorit
-y: 0.9}
-{/* TODO: Fix JSX expression */}`
-l: `${baseUrl}/micro-saas`
+y: 0;.;9;};
+{/* TODO: Fix JSX expression *;/;};`;
+l: `${baseUrl}/micro-sa;a;s;`;
 lastmo
-d: currentDate
+d: currentD;a;t;e;
 changefre,
 ;
-  q: 'weekly'
+  q: 'week;l;y;';
 priorit
-y: 0.8}
-{/* TODO: Fix JSX expression */}`
-l: `${baseUrl}/enterprise`
+y: 0;.;8;};
+{/* TODO: Fix JSX expression *;/;};`;
+l: `${baseUrl}/enterpri;s;e;`;
 lastmo
-d: currentDate
+d: currentD;a;t;e;
 changefre,
 ;
-  q: 'weekly'
+  q: 'week;l;y;';
 priorit
-y: 0.9}
-{/* TODO: Fix JSX expression */}`
-l: `${baseUrl}/contact`
+y: 0;.;9;};
+{/* TODO: Fix JSX expression *;/;};`;
+l: `${baseUrl}/conta;c;t;`;
 lastmo
-d: currentDate
+d: currentD;a;t;e;
 changefre,
 ;
-  q: 'monthly'
+  q: 'month;l;y;';
 priorit
-y: 0.8}
-{/* TODO: Fix JSX expression */}`
-l: `${baseUrl}/team`
+y: 0;.;8;};
+{/* TODO: Fix JSX expression *;/;};`;
+l: `${baseUrl}/te;a;m;`;
 lastmo
-d: currentDate
+d: currentD;a;t;e;
 changefre,
 ;
-  q: 'monthly'
+  q: 'month;l;y;';
 priorit
-y: 0.7}
-{/* TODO: Fix JSX expression */}`
-l: `${baseUrl}/case-studies`
+y: 0;.;7;};
+{/* TODO: Fix JSX expression *;/;};`;
+l: `${baseUrl}/case-studi;e;s;`;
 lastmo
-d: currentDate
+d: currentD;a;t;e;
 changefre,
 ;
-  q: 'weekly'
+  q: 'week;l;y;';
 priorit
-y: 0.8}
-{/* TODO: Fix JSX expression */}`
-l: `${baseUrl}/blog`
+y: 0;.;8;};
+{/* TODO: Fix JSX expression *;/;};`;
+l: `${baseUrl}/bl;o;g;`;
 lastmo
-d: currentDate
+d: currentD;a;t;e;
 changefre,
 ;
-  q: 'daily'
+  q: 'dai;l;y;';
 priorit
-y: 0.8}
-{/* TODO: Fix JSX expression */}`
-l: `${baseUrl}/privacy`
+y: 0;.;8;};
+{/* TODO: Fix JSX expression *;/;};`;
+l: `${baseUrl}/priva;c;y;`;
 lastmo
-d: currentDate
+d: currentD;a;t;e;
 changefre,
 ;
-  q: 'yearly'
+  q: 'year;l;y;';
 priorit
-y: 0.3}
-{/* TODO: Fix JSX expression */}`
-l: `${baseUrl}/terms`
+y: 0;.;3;};
+{/* TODO: Fix JSX expression *;/;};`;
+l: `${baseUrl}/ter;m;s;`;
 lastmo
-d: currentDate
+d: currentD;a;t;e;
 changefre,
 ;
-  q: 'yearly'
+  q: 'year;l;y;';
 priorit
-    y: 0.3}
+    y: 0;.;3;};
   ]
 }
-export const generateRobotsTxt = (): string => {/* TODO: Fix JSX expression */}
+export const generateRobotsTxt = (): string => {/* TODO: Fix JSX expression ;*;/;};
 }`;)

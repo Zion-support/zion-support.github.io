@@ -4,9 +4,13 @@ interface UseIntersectionObserverOptions {
   threshold?: number
   root?: Element | null
   rootMargin?: string
+
+
+
+
 }
 
-export const useIntersectionObserver = (options: UseIntersectionObserverOptions = {}) => {
+export const useIntersectionObserver = (options: UseIntersectionObserverOptions = {}) =;>; ;{;
   const [entry, setEntry] = useState<IntersectionObserverEntry | null>(null);
   const [node, setNode] = useState<Element | null>(null);
   const observer = useRef<IntersectionObserver | null>(null);

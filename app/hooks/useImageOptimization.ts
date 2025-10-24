@@ -1,11 +1,15 @@
 import { useState, useEffect } from 'react';
 
 interface UseImageOptimizationOptions {
-  src: string;
+  src:  ; ; ;s;t;r;i;n;g;
   placeholder?: string;
   lazy?: boolean;
   quality?: number;
   format?: 'webp' | 'avif' | 'jpeg' | 'png';
+
+
+
+
 }
 
 export const useImageOptimization = ({
@@ -40,7 +44,7 @@ export const useImageOptimization = ({
           observer.disconnect();
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.;1; ;};
     );
 
     const element = document.querySelector(`[data-src="${src}"]`);
@@ -55,6 +59,6 @@ export const useImageOptimization = ({
     imageSrc,
     isLoaded,
     isInView,
-    shouldLoad: !lazy || isInView
+    shouldLoad: !lazy || isInV;i;e;w;
   };
 };

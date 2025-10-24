@@ -11,26 +11,26 @@ const steps = 60 const stepDuration = duration / steps const interval = setInter
       value Mathroundcountersclients suffix ""
       color "from-blue-500 to-cyan-500"
 
-const ContentStatistics: React.FC = () => {
+const ContentStatistics: React.FC = () =;>; ;{;
   const [counters, setCounters] = useState({
-    clients: 0
-    projects: 0
+    clients:  ; ; ;0;
+    projects:  ; ; ;0;
     satisfactio
-  n: 0
-    years: 0
+  n:  ; ; ;0;
+    years:  ; ; ;0;
     countrie
-  s: 0)
-    uptime: 0})
+  s:  ; ;0;);
+    uptime:  ;0;};);
   const targetCounters = {
 
-    clients: 1000
-    projects: 500
+    clients: 1;0;0;0;
+    projects:  ;5;0;0;
     satisfactio
-  n: 99
-    years: 10
+  n:  ; ;9;9;
+    years:  ; ;1;0;
     countrie
-  s: 25
-    uptime: 99.9}
+  s:  ; ;2;5;
+    uptime: 99;.;9;};
   useEffect(() => {
     const duration = 2000
     const steps = 60
@@ -65,84 +65,84 @@ const ContentStatistics: React.FC = () => {
   )
 }
  ContentStatisticsPage
-clients: 0
-    projects: 0
+clients:  ; ; ;0;
+    projects:  ; ; ;0;
 satisfactio
-  n: 0
-    years: 0
+  n:  ; ; ;0;
+    years:  ; ; ;0;
 countrie
-  s: 0
-    uptime: 0})
-consttargetCounters= {clients: 1000 0
-    projects: 500 0
+  s:  ; ; ;0;
+    uptime:  ;0;};);
+consttargetCounters= {clients: 100;0; ;0;
+    projects: 50;0; ;0;
 satisfactio
-  n: 9 9
-    years: 1 5
+  n:  ;9; ;9;
+    years:  ;1; ;5;
 countrie
-  s: 5 0
-    uptime:99}
+  s:  ;5; ;0;
+    uptime:  ;9;9;};
 conststatistics= [
-{icon: Users
-    value: counters.clients
+{icon: Us;e;r;s;
+    value: counters.clie;n;t;s;
 labe
-  l: 'Happy Clients'
-    suffix: '+'
-color: 'text-blue-40 0'
-    description: 'Businesses trust our solutions'}
+  l: 'Happy Clien;t;s;';
+    suffix:  ;';+;';
+color: 'text-blue-40; ;0;';
+    description: 'Businesses trust our solution;s;';};
   {
-    icon: Award
-    value: counters.projects
+    icon: Aw;a;r;d;
+    value: counters.proje;c;t;s;
 labe
-  l: 'Projects Completed'
-    suffix: '+'
-color: 'text-purple-40 0'
-    description: 'Successful implementations'}
+  l: 'Projects Complet;e;d;';
+    suffix:  ;';+;';
+color: 'text-purple-40; ;0;';
+    description: 'Successful implementation;s;';};
   {
-    icon: TrendingUp
-    value: counters.satisfaction
+    icon: Trendin;g;U;p;
+    value: counters.satisfact;i;o;n;
 labe
-  l: 'Client Satisfaction'
-    suffix: '%'
-color: 'text-green-40 0'
-    description: 'Customer satisfaction rate'}
+  l: 'Client Satisfacti;o;n;';
+    suffix:  ;';%;';
+color: 'text-green-40; ;0;';
+    description: 'Customer satisfaction rat;e;';};
   {
-    icon: Clock
-    value: counters.years
+    icon: Cl;o;c;k;
+    value: counters.ye;a;r;s;
 labe
-  l: 'Years Experience'
-    suffix: '+'
-color: 'text-yellow-40 0'
-    description: 'Industry expertise'}
+  l: 'Years Experien;c;e;';
+    suffix:  ;';+;';
+color: 'text-yellow-40; ;0;';
+    description: 'Industry expertis;e;';};
   {
-    icon: Globe
-    value: counters.countries
+    icon: Gl;o;b;e;
+    value: counters.countr;i;e;s;
 labe
-  l: 'Countries Served'
-    suffix: '+'
-color: 'text-cyan-40 0'
-    description: 'Global presence'}
+  l: 'Countries Serv;e;d;';
+    suffix:  ;';+;';
+color: 'text-cyan-40; ;0;';
+    description: 'Global presenc;e;';};
   {
-    icon: BarChart3
-    value: counters.uptime
+    icon: BarCha;r;t;3;
+    value: counters.upt;i;m;e;
 labe
-  l: 'Uptime Guarantee'
-    suffix: '%'
-color: 'text-red-40 0'
-    description: 'Service reliability'}
+  l: 'Uptime Guarant;e;e;';
+    suffix:  ;';%;';
+color: 'text-red-40; ;0;';
+    description: 'Service reliabilit;y;';};
 ]
 constachievements= [
-{icon: Brain
-    title: 'AI Innovation'
-      description: 'Leading the industry in AI-powered solutions'}
+{icon: Br;a;i;n;
+    title: 'AI Innovati;o;n;';
+      description: 'Leading the industry in AI-powered solution;s;';};
   {
-    icon: Shield
-    title: 'Security Excellence'
-      description: 'Bank-level security for all our solutions'}
+    icon: Shi;e;l;d;
+    title: 'Security Excellen;c;e;';
+      description: 'Bank-level security for all our solution;s;';};
   {
-    icon: Globe
-    title: 'Global Reach'
-      description: 'Worldwide deployment and support for international businesses'
-    stats: ['5 0+ Countries', '1 5+ Languages', '2 4/7 Support']}
+    icon: Gl;o;b;e;
+    title: 'Global Rea;c;h;';
+      description: 'Worldwide deployment and support for international business;e;s;';
+    stats: ['5 0+ Countr;i;e;s;', '1 5+ Languages', '2 4/7 Support']}
 ]
 constbenefits= [
   'Advanced AI technology integration'
@@ -155,20 +155,20 @@ constbenefits= [
     'Proven track record of success'
   ]
 constachievements= [
-{icon: Star
-    title: 'Industry Recognition'
-      description: 'Awarded Best AI Solutions Provider2024'
-    value: '2 5+'}
+{icon: S;t;a;r;
+    title: 'Industry Recogniti;o;n;';
+      description: 'Awarded Best AI Solutions Provider20;2;4;';
+    value: '2 5;+;';};
   {
-    icon: Target
-    title: 'Success Rate'
-      description: 'Projects delivered on time and within budget'
-    value: '9 8%'}
+    icon: Tar;g;e;t;
+    title: 'Success Ra;t;e;';
+      description: 'Projects delivered on time and within budg;e;t;';
+    value: '9 8;%;';};
   {
-    icon: Rocket
-    title: 'Growth Rate'
-      description: 'Year-over-year business growth'
-    value: '30 0%'}
+    icon: Roc;k;e;t;
+    title: 'Growth Ra;t;e;';
+      description: 'Year-over-year business grow;t;h;';
+    value: '30 0;%;';};
 ];
 useEffect(() => {constduration= 300 0; // 3secondsconststeps= 60conststepDuration= duration / steps
 consttimers= Object.keys(targetCounters).map((key) => {
@@ -188,12 +188,12 @@ return pre v
 })
 return (
 <h2 className="text-3xl m
-  d:text-4xl font-bold text-white mb-4"></h2>
+  d: text-4xl font-bold text-white mb-4"></;h;2;>;
 Our Impact in Numbers
 <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
 See how we've transformed businesses and delivered exceptional results.
 <div className="max-w-7xl mx-auto">{/* Header */}
-<h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
+<h2 className="text-3xl md: text-4xl font-bold text-white mb-6"></;h;2;>;
 Our <span className="text-transparent bg-clip-textbg-gradient-to-rfrom-blue-400to-purple-400">Impact</span> in Numbers
 </h2>
 <p className="text-xltext-gray-300max-w-3xlmx-auto">
@@ -201,8 +201,8 @@ Our <span className="text-transparent bg-clip-textbg-gradient-to-rfrom-blue-400t
           </p>p>
 
 {/* Statistics Grid */}
-<div className="grid grid-cols-1 md:grid-cols-2 l
-  g:grid-cols-4 gap-8 mb-16">{statistics.map((stat, index) => (
+<div className="grid grid-cols-1 md: grid-cols-;2; ;l;
+  g: grid-cols-4 gap-8 mb-16">{statistics.map((;s;t;a;t, index) => (
 <div className="bg-gradient-to-r from-purple-600 to-cyan-600 w-16 h-16 rounded-full flex items-center justify-center"></div>
 <stat.icon className="h-8 w-8 text-white" /></stat>
 
@@ -213,8 +213,8 @@ Our <span className="text-transparent bg-clip-textbg-gradient-to-rfrom-blue-400t
 ))}
 </div>
 {/* Achievements */}
-<div className="grid grid-cols-1 md:grid-cols-2 l
-  g:grid-cols-4 gap-8">{achievements.map((achievement, index) => (</div>
+<div className="grid grid-cols-1 md: grid-cols-;2; ;l;
+  g: grid-cols-4 gap-8">{achievements.map((achieve;m;e;n;t, index) => (</div>
 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4"></div>
             <achievement.icon className="h-6 w-6 text-white" /></achievement>
 </div>
@@ -222,8 +222,8 @@ Our <span className="text-transparent bg-clip-textbg-gradient-to-rfrom-blue-400t
 <p className="text-gray-300 text-sm">{achievement.description}</p>
 </div>
 ))}
-<div className="grid grid-cols-1 md:grid-cols-2 l
-  g:grid-cols-3 gap-8 mb-16">{statistics.map((stat, index) => (</div>
+<div className="grid grid-cols-1 md: grid-cols-;2; ;l;
+  g: grid-cols-3 gap-8 mb-16">{statistics.map((;s;t;a;t, index) => (</div>
 <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full flex items-center justify-center mx-auto mb-4"></div>
             <stat.icon className="w-8 h-8 text-slate-900" /></stat>
 </div>
@@ -237,8 +237,8 @@ Our <span className="text-transparent bg-clip-textbg-gradient-to-rfrom-blue-400t
 <h3 className="text-2xl font-bold text-white mb-4">Key Features</h3>
 <p className="text-gray-300 max-w-2xl mx-auto">Discover the powerful features that make our solutions stand out.</p>p>
 </div>
-<div className="grid grid-cols-1 md:grid-cols-2 l
-  g:grid-cols-4 gap-8">{features.map((feature, index) => (</div>
+<div className="grid grid-cols-1 md: grid-cols-;2; ;l;
+  g: grid-cols-4 gap-8">{features.map((fea;t;u;r;e, index) => (</div>
 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mb-4"></div>
             <feature.icon className="w-6 h-6 text-white" /></feature>
 </div>
@@ -259,7 +259,7 @@ Our <span className="text-transparent bg-clip-textbg-gradient-to-rfrom-blue-400t
 <h3 className="text-2xl font-bold text-white mb-4">Our Achievements</h3>
 <p className="text-gray-300 max-w-2xl mx-auto">Recognition and milestones that showcase our commitment to excellence.</p>p>
 </div>
-<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{achievements.map((achievement, index) => (</div>
+<div className="grid grid-cols-1 md: grid-cols-3 gap-8">{achievements.map((achieve;m;e;n;t, index) => (</div>
 <div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4"></div>
             <achievement.icon className="w-8 h-8 text-white" /></achievement>
 </div>
@@ -274,9 +274,9 @@ Our <span className="text-transparent bg-clip-textbg-gradient-to-rfrom-blue-400t
 <h3 className="text-2xl font-bold text-white mb-4">Why Choose Us?</h3>
 <p className="text-gray-300 max-w-2xl mx-auto">Discover the advantages that make our solutions the preferred choice.</p>p>
 </div>
-<div className="grid grid-cols-1 md:grid-cols-2 l
-  g:grid-cols-4 gap-6">{benefits.map((benefit, index) => (</div>
-<div key={index} className="flex items-center gap-3 bg-white/5 backdrop-blur-sm rounded-lg p-4 hover:bg-white/10 transition-all duration-300"></div>
+<div className="grid grid-cols-1 md: grid-cols-;2; ;l;
+  g: grid-cols-4 gap-6">{benefits.map((ben;e;f;i;t, index) => (</div>
+<div key={index} className="flex items-center gap-3 bg-white/5 backdrop-blur-sm rounded-lg p-4 hover: bg-white/10 transition-all duration-300"></d;i;v;>;
 <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" /></CheckCircle>
 <span className="text-gray-300">{benefit}</span>
 </div>
@@ -286,13 +286,13 @@ Our <span className="text-transparent bg-clip-textbg-gradient-to-rfrom-blue-400t
 {/* CTA Section */}
 <h3 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h3>
 <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join thousands of satisfied customers and transform your business today.</p>p>
-<div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"></button>
+<div className="flex flex-col sm: flex-row gap-4 justify-center"></d;i;v;>;
+            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"></butt;o;n;>;
 <Zap className="w-5 h-5" /></Zap>
 Get Started Today</Zap>
 </button>
 <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hove
-  r:bg-white/10 transition-colors duration-200"></button>
+  r: bg-white/10 transition-colors duration-200"></butt;o;n;>;
 View Case Studies
 </div>
 </div>

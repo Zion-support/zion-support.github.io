@@ -5,11 +5,11 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import Footer from '../components/Footer';
 
-export default function pagePage() {
+export default function Page() {
   return (
     <div>
       <Head>
-        <title>Page - Zion Tech Group</title>
+        <title>Security Monitoring - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">

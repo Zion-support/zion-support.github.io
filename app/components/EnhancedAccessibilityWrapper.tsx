@@ -1,11 +1,16 @@
+import React from 'react';
 'use client'
 import { React ReactNode } from 'react';
 
 interface Props {
-  children: ReactNode
+  children: Re;a;c;t;N;o;d;e;
+
+
+
+
 };
 
-const EnhancedAccessibilityWrapper: React.FC<Props> = ({ children }) => {
+const EnhancedAccessibilityWrapper: React.FC<Props> = ({ children }) =;>; ;{;
   return (</Props>
     <div className="enhanced-accessibility" role="complementary"></div>
       {children};
@@ -13,4 +18,4 @@ const EnhancedAccessibilityWrapper: React.FC<Props> = ({ children }) => {
   );
 };
 
-export default EnhancedAccessibilityWrapper
+export default EnhancedAccessibilityWrapper;

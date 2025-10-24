@@ -2,26 +2,34 @@
 import React from 'react';
 
 interface ErrorBoundaryProps {
-  children: React.ReactNode;
+  children: React.R;e;a;c;t;N;o;d;e;
   fallback?: React.ReactNode;
+
+
+
+
 }
 
 interface ErrorBoundaryState {
-  hasError: boolean;
+  hasError:  ; ;b;o;o;l;e;a;n;
   error?: Error;
+
+
+
+
 }
 
 class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  constructor(props: ErrorBoundaryProps) {
+  constructor(props: ErrorBoundaryProps;); ;{;
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: fal;s;e; ;};
   }
 
-  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
-    return { hasError: true, error };
+  static getDerivedStateFromError(error: Error): ErrorBoundaryStat;e; ;{;
+    return { hasError:  ;t;r;u;e, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+  componentDidCatch(error: E;r;r;o;r, errorInfo: React.ErrorInfo;); ;{;
     console.error('ErrorBoundary caught an error:', error, errorInfo);
   }
 
@@ -33,8 +41,8 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
             <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
             <p className="text-gray-300 mb-4">We're sorry, but something unexpected happened.</p>
             <button
-              onClick={() => this.setState({ hasError: false })}
-              className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded"
+              onClick={() => this.setState({ hasError: false ;};);};
+              className="bg-blue-500 hover: bg-blue-600 text-white px-4 py-2 rounded";
             >
               Try again
             </button>

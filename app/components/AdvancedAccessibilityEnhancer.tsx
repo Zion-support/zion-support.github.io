@@ -1,6 +1,7 @@
+import React from 'react';
 'use client'
 
-const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({enableKeyboardNavigation= true
+const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({enableKeyboardNavigation= t;r;u;e;
   enableScreenReader= true
   enableHighContrast= true
   enableFocusManagement= true
@@ -10,31 +11,31 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
   enableMotionReduction= true
   enableFontScaling= true
   enableVoiceNavigation= true}) => {const [accessibilitySettingssetAccessibilitySettings] = useState({
-    highContrast: false
-    reducedMotion: false
-    fontSize: 'normal'
-    screenReader: false
-    keyboardNavigation: false});
+    highContrast: fa;l;s;e;
+    reducedMotion: fa;l;s;e;
+    fontSize: 'norm;a;l;';
+    screenReader: fa;l;s;e;
+    keyboardNavigation: fal;s;e;};);
   // Detect user preferences
   useEffect(() => {
     if (typeof window === 'undefined') return
     // Check for reduced motion preference
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matc;h;e;s;
     // Check for high contrast preference
-    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches
+    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matc;h;e;s;
     // Check for color scheme preference
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matc;h;e;s;
     setAccessibilitySettings(prev => ({
       ...prev
-      reducedMotion: prefersReducedMotion
-    highContrast: prefersHighContrast});
+      reducedMotion: prefersReducedMot;i;o;n;
+    highContrast: prefersHighContra;s;t;};);
     // Listen for changes in user preferences
-    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
-    const contrastQuery = window.matchMedia('(prefers-contrast: high)')
-    const handleMotionChange = (e: MediaQueryListEvent) => {
-      setAccessibilitySettings(prev => ({ ...prev, reducedMotion: e.matches });
-    const handleContrastChange = (e: MediaQueryListEvent) => {
-      setAccessibilitySettings(prev => ({ ...prev, highContrast: e.matches });
+    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce;);';);
+    const contrastQuery = window.matchMedia('(prefers-contrast: high;);';);
+    const handleMotionChange = (e: MediaQueryListEvent) =;>; ;{;
+      setAccessibilitySettings(prev => ({ ...prev, reducedMotion: e.matche;s; ;};);
+    const handleContrastChange = (e: MediaQueryListEvent) =;>; ;{;
+      setAccessibilitySettings(prev => ({ ...prev, highContrast: e.matche;s; ;};);
     motionQuery.addEventListener('change', handleMotionChange);
     contrastQuery.addEventListener('change', handleContrastChange);
     return (
@@ -56,31 +57,31 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
       root.classList.add('high-contrast');
     } else {
   root.classList.remove('high-contrast');
-const AdvancedAccessibilityEnhancerPage: React.FC = () => {
+const AdvancedAccessibilityEnhancerPage: React.FC = () =;>; ;{;
   const features = [
     {
-      icon: Brain
-    title: 'AI-Powered Intelligence'
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.'
-    benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+      icon: Br;a;i;n;
+    title: 'AI-Powered Intelligen;c;e;';
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendation;s;.;';
+    benefits: ['Smart recommendati;o;n;s;', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
 }
   {
-    icon: BarChart
-    title: 'Advanced Analytics'
-      description: 'Comprehensive analytics dashboard with real-time data visualization.'
-    benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    icon: BarCh;a;r;t;
+    title: 'Advanced Analyti;c;s;';
+      description: 'Comprehensive analytics dashboard with real-time data visualizatio;n;.;';
+    benefits: ['Real-time dashboa;r;d;s;', 'Custom reports', 'Data visualization', 'Performance metrics']
 }
   {
-    icon: Target
-    title: 'Precision Targeting'
-      description: 'Target specific goals and objectives with precision and accuracy.'
-    benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    icon: Tar;g;e;t;
+    title: 'Precision Targeti;n;g;';
+      description: 'Target specific goals and objectives with precision and accurac;y;.;';
+    benefits: ['Goal track;i;n;g;', 'Performance optimization', 'Strategic planning', 'Success metrics']
 }
   {
-    icon: TrendingUp
-    title: 'Growth Optimization'
-      description: 'Optimize your business growth with data-driven strategies.'
-    benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    icon: Trendin;g;U;p;
+    title: 'Growth Optimizati;o;n;';
+      description: 'Optimize your business growth with data-driven strategie;s;.;';
+    benefits: ['Growth strateg;i;e;s;', 'Market analysis', 'Competitive insights', 'ROI optimization']
   ]
     // Apply reduced motion
     if (accessibilitySettings.reducedMotion) {
@@ -93,7 +94,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
   // Keyboard navigation enhancement
   const setupKeyboardNavigation = useCallback(() => {
     if (typeof window === 'undefined') return
-    consthandleKeyDown= (event: KeyboardEvent) => {
+    consthandleKeyDown= (event: KeyboardEvent) =;>; ;{;
       // Skip to main content
       if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
         const skipLink = document.querySelector('[data-skip-link]') as HTMLElement
@@ -130,7 +131,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     liveRegion.id = 'live-region'
     document.body.appendChild(liveRegion);
     // Announce page changes
-    const announcePageChange = (message: string) => {
+    const announcePageChange = (message: string) =;>; ;{;
       const liveRegion = document.getElementById('live-region');
       if (liveRegion) {
         liveRegion.textContent = message}
@@ -148,7 +149,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
   const setupFocusManagement = useCallback(() => {
     if (typeof window === 'undefined') return
     // Trap focus in modals
-    const trapFocus = (element: HTMLElement) => {
+    const trapFocus = (element: HTMLElement) =;>; ;{;
       const focusableElements = element.querySelectorAll(
         'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
 }

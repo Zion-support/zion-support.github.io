@@ -3,15 +3,19 @@
 import React from 'react';
 
 interface ServiceTemplateProps {
-  title: string
-  description: string
-  features: string[];
+  title:  ; ;s;t;r;i;n;g;
+  description:  ; ;s;t;r;i;n;g;
+  features:  ;s;t;r;i;n;g;[;];
 
 const ServiceTemplat
-  e: React.FC<ServiceTemplateProps> = ({
+  e: React.FC<ServiceTemplateProp;s;>; ;=; ;(;{;
   title
   description
-  features}
+  features
+
+
+
+}
 }) => {
   return (</ServiceTemplateProps>
     <h1 className="text-3xl font-bold text-gray-900 mb-8">
@@ -22,7 +26,7 @@ const ServiceTemplat
             {description}</p>
           </p>
           
-          <div className="grid md:grid-cols-2 gap-4"></div>
+          <div className="grid md: grid-cols-2 gap-4"></d;i;v;>;
             {features.map((feature, index) => (
               <div key={index} className="flex items-center space-x-2"></div>
                 <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"></svg>
