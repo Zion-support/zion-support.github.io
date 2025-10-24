@@ -129,7 +129,7 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     images.forEach((img) => imageObserver.observe(img));
 
     return () => imageObserver.disconnect();
-  }, [component, trackPerformance]);
+  }, []);
 
   const measurePerformance = useCallback((name: string, fn: () => void) => {
     if (trackPerformance) {
@@ -147,14 +147,14 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
   }, [component, trackPerformance]);
 
   const trackError = useCallback((error: Error, context?: Record<string, unknown>) => {
-    if (trackErrors) {
+    if (trackErrors && process.env.NODE_ENV === 'development') {
       console.error(`Error in ${component}:`, error, context);
       // Here you would typically send to an error tracking service
     }
   }, [component, trackErrors]);
 
   const trackAnalyticsEvent = useCallback((event: string, data?: Record<string, unknown>) => {
-    if (trackAnalytics) {
+    if (trackAnalytics && process.env.NODE_ENV === 'development') {
       console.log(`Analytics event in ${component}:`, event, data);
       // Here you would typically send to an analytics service
     }
