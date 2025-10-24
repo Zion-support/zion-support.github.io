@@ -1,8 +1,11 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, Zap, Shield, Brain, Globe } from 'lucide-react';
+'use client'
 
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, Zap, Shield, Brain, Globe } from 'lucide-react'
+
+const AdvancedAccessibilityEnhancer: React.FC = () => {
+  const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -22,6 +25,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, Zap, Shield, Brain, Globe } from 
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
+    }
   ]
 
   const benefits = [
@@ -36,9 +40,13 @@ import { CheckCircle, ArrowRight, Phone, Mail, Zap, Shield, Brain, Globe } from 
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet></Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
         <title>Advanced Accessibility Enhancer | Zion Tech Group</title>
+      </Helmet>
+      
+      <section className="py-20">
+        <div className="container mx-auto px-4">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
@@ -50,7 +58,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, Zap, Shield, Brain, Globe } from 
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -64,21 +72,32 @@ import { CheckCircle, ArrowRight, Phone, Mail, Zap, Shield, Brain, Globe } from 
       </section>
 
       {/* Features Section */}
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-colors"></div>
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-colors">
                 <feature.icon className="w-12 h-12 text-blue-400 mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
-            ))
+            ))}
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
-              </button>
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-white mb-8">Key Benefits</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+                  {benefit}
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -87,3 +106,4 @@ import { CheckCircle, ArrowRight, Phone, Mail, Zap, Shield, Brain, Globe } from 
   )
 }
 
+export default AdvancedAccessibilityEnhancer

@@ -2,15 +2,13 @@
 
 import React, { useEffect } from 'react'
 
-import React from 'react';
-
 interface AccessibilityEnhancerProps {
   children: React.ReactNode
   enableKeyboardNavigation?: boolean
   enableScreenReaderSupport?: boolean
   enableHighContrast?: boolean
   enableFocusManagement?: boolean
-
+}
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ 
   children,
@@ -23,7 +21,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     <div className="accessibility-enhanced">
       {children}
     </div>
-  );
-};
+  )
+}
 
-export default AccessibilityEnhancer;
+export default AccessibilityEnhancer
