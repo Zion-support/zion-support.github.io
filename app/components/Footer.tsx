@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 const Footer: React.FC = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   const _currentYear = new Date().getFullYear()
   const _aiServices = [
@@ -47,6 +48,8 @@ const Footer: React.FC = () => {
     { name: 'GDPR Compliance', url: '/gdpr' }
   ];
 >>>>>>> cursor/fix-errors-and-merge-to-main-d028
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-ac10
 
   return (
     <footer className="bg-slate-900 text-white py-12">

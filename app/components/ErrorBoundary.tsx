@@ -46,6 +46,7 @@ class ErrorBoundary extends Component<Props, State> {
     window.location.href = '/';
   };
 
+<<<<<<< HEAD
   handleReload = () => {
     window.location.reload();
   };
@@ -54,6 +55,8 @@ class ErrorBoundary extends Component<Props, State> {
     window.location.href = '/';
   };
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-ac10
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
@@ -67,18 +70,25 @@ class ErrorBoundary extends Component<Props, State> {
               <AlertTriangle className="w-8 h-8 text-red-400" />
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             
 >>>>>>> cursor/fix-errors-and-merge-to-main-d028
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-ac10
             <h1 className="text-2xl font-bold text-white mb-4">Oops! Something went wrong</h1>
             <p className="text-gray-300 mb-6">
               We're sorry, but something unexpected happened. Please try refreshing the page or go back to the home page.
             </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
             
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-d028
+=======
+            
+>>>>>>> cursor/fix-errors-and-merge-to-main-ac10
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mb-6 text-left">
                 <summary className="text-sm text-gray-400 cursor-pointer mb-2">
@@ -91,10 +101,14 @@ class ErrorBoundary extends Component<Props, State> {
               </details>
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
             
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-d028
+=======
+            
+>>>>>>> cursor/fix-errors-and-merge-to-main-ac10
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
                 onClick={this.handleReload}
@@ -112,10 +126,14 @@ class ErrorBoundary extends Component<Props, State> {
               </button>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
             
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-d028
+=======
+            
+>>>>>>> cursor/fix-errors-and-merge-to-main-ac10
             <div className="mt-6 pt-6 border-t border-white/20">
               <p className="text-sm text-gray-400 mb-3">Still having trouble? Contact our support team:</p>
               <a

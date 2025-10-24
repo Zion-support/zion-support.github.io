@@ -15,6 +15,9 @@ interface OptimizedImageProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-ac10
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,
@@ -25,6 +28,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   quality = 75,
   placeholder = 'empty',
   blurDataURL
+<<<<<<< HEAD
 =======
 const OptimizedImage: React.FC<OptimizedImageProps> = ({ 
   _className = '',
@@ -37,6 +41,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   _placeholder = 'empty',
   _blurDataURL
 >>>>>>> cursor/fix-errors-and-merge-to-main-d028
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-ac10
 }) => {
   return (
     <div className={`relative overflow-hidden ${className}`}>

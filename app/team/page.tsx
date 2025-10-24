@@ -2,9 +2,12 @@
 import React from 'react';
 import Link from 'next/link';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Brain, Shield, Zap } from 'lucide-react';
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-d028
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-ac10
 
 
 const teamMembers = [

@@ -1,9 +1,12 @@
 import React from 'react';
 import { Metadata } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { Users, Shield, Globe, Brain } from 'lucide-react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-d028
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-ac10
 
 export const metadata: Metadata = {
   title: 'About Us - Zion Tech Group | AI & IT Solutions',
@@ -17,6 +20,7 @@ export const metadata: Metadata = {
   }
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export default function AboutPage() {
@@ -52,6 +56,10 @@ export default function AboutPage() {
     { number: '24/7', label: 'Support Available' }
   ];
 >>>>>>> cursor/fix-errors-and-merge-to-main-d028
+=======
+
+export default function AboutPage() {
+>>>>>>> cursor/fix-errors-and-merge-to-main-ac10
   return (
     <div className="min-h-screen py-12">
       <div className="max-w-4xl mx-auto px-4">

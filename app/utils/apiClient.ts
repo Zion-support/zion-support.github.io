@@ -1,6 +1,7 @@
 // API Client for making HTTP requests
 import logger from './logger';
 
+<<<<<<< HEAD
 // Type definition for fetch options
 type FetchOptions = {
   method?: string;
@@ -11,6 +12,10 @@ type FetchOptions = {
   retries?: number;
 };
 
+=======
+// Type definitions
+type RequestInit = globalThis.RequestInit;
+>>>>>>> cursor/fix-errors-and-merge-to-main-ac10
 
 export interface ApiResponse<T = unknown> {
   data: T;

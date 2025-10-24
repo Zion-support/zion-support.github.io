@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /**
  * Accessibility Enhancement Utilities
  * Provides tools to improve web accessibility
@@ -17,16 +18,32 @@ export interface AccessibilityOptions {
   announceChanges?: boolean;
 }
 
+=======
+export interface AccessibilityConfig {
+  enableKeyboardNavigation: boolean;
+  enableScreenReaderSupport: boolean;
+  enableFocusManagement: boolean;
+  enableHighContrast: boolean;
+  enableReducedMotion: boolean;
+  announceChanges: boolean;
+}
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-ac10
 export interface AccessibilityMetrics {
   focusableElements: number;
   imagesWithoutAlt: number;
   linksWithoutText: number;
   headingsWithoutContent: number;
+<<<<<<< HEAD
+=======
+  colorContrastIssues: number;
+>>>>>>> cursor/fix-errors-and-merge-to-main-ac10
   colorContrastScore: number;
   keyboardNavigationScore: number;
   screenReaderScore: number;
   ariaImplementationScore: number;
   overallScore: number;
+<<<<<<< HEAD
   colorContrastIssues: number;
 }
 
@@ -133,6 +150,88 @@ export class AccessibilityEnhancer {
         this.handleArrowNavigation(event);
         break;
     }
+=======
+}
+
+export class AccessibilityEnhancer {
+  private config: AccessibilityConfig;
+  private metrics: AccessibilityMetrics;
+  private observers: MutationObserver[] = [];
+
+  constructor(config: Partial<AccessibilityConfig> = {}) {
+    this.config = {
+      enableKeyboardNavigation: true,
+      enableScreenReaderSupport: true,
+      enableFocusManagement: true,
+      enableHighContrast: true,
+      enableReducedMotion: true,
+      announceChanges: true,
+      ...config
+    };
+
+    this.metrics = {
+      focusableElements: 0,
+      imagesWithoutAlt: 0,
+      linksWithoutText: 0,
+      headingsWithoutContent: 0,
+      colorContrastIssues: 0,
+      colorContrastScore: 100,
+      keyboardNavigationScore: 100,
+      screenReaderScore: 100,
+      ariaImplementationScore: 100,
+      overallScore: 100
+    };
+  }
+
+  /**
+   * Initialize accessibility enhancements
+   */
+  init(): void {
+    this.setupKeyboardNavigation();
+    this.setupScreenReaderSupport();
+    this.setupFocusManagement();
+    this.setupHighContrastMode();
+    this.setupReducedMotion();
+    this.setupAriaLabels();
+    this.setupColorContrast();
+    this.setupImageAltText();
+    this.setupHeadingStructure();
+    this.setupFormAccessibility();
+    this.setupNavigationAccessibility();
+    this.setupContentAnnouncements();
+    this.setupMetricsCollection();
+  }
+
+  /**
+   * Setup keyboard navigation
+   */
+  private setupKeyboardNavigation(): void {
+    if (!this.config.enableKeyboardNavigation) return;
+
+    document.addEventListener('keydown', (event) => {
+      this.handleKeyDown(event);
+    });
+  }
+
+  /**
+   * Handle key down events
+   */
+  private handleKeyDown(event: KeyboardEvent): void {
+    switch (event.key) {
+      case 'Tab':
+        this.handleTabNavigation(event);
+        break;
+      case 'Escape':
+        this.handleEscapeKey(event);
+        break;
+      case 'ArrowUp':
+      case 'ArrowDown':
+      case 'ArrowLeft':
+      case 'ArrowRight':
+        this.handleArrowNavigation(event);
+        break;
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-ac10
   }
 
   /**
@@ -140,6 +239,7 @@ export class AccessibilityEnhancer {
    */
   private handleTabNavigation(event: KeyboardEvent): void {
     const focusableElements = this.getFocusableElements();
+<<<<<<< HEAD
     if (focusableElements.length === 0) return;
 
     if (event.shiftKey) {
@@ -220,6 +320,28 @@ export class AccessibilityEnhancer {
 =======
   private handleEscapeKey(_event: KeyboardEvent): void {
 >>>>>>> cursor/fix-errors-and-merge-to-main-d028
+=======
+    const currentElement = document.activeElement as HTMLElement;
+    const currentIndex = focusableElements.indexOf(currentElement);
+    
+    if (currentIndex === -1) return;
+
+    let nextIndex: number;
+    if (event.shiftKey) {
+      nextIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length - 1;
+    } else {
+      nextIndex = currentIndex < focusableElements.length - 1 ? currentIndex + 1 : 0;
+    }
+
+    focusableElements[nextIndex]?.focus();
+    event.preventDefault();
+  }
+
+  /**
+   * Handle escape key
+   */
+  private handleEscapeKey(_event: KeyboardEvent): void {
+>>>>>>> cursor/fix-errors-and-merge-to-main-ac10
     // Close any open modals or dropdowns
     const modals = document.querySelectorAll('[role="dialog"], [role="alertdialog"]');
     modals.forEach(modal => {
@@ -272,6 +394,7 @@ export class AccessibilityEnhancer {
 
     const radioButtons = Array.from(document.querySelectorAll(`input[type="radio"][name="${name}"]`)) as HTMLInputElement[];
     const currentIndex = radioButtons.indexOf(currentElement);
+    
     let nextIndex: number;
 
     if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {
@@ -294,6 +417,7 @@ export class AccessibilityEnhancer {
 
     const menuItems = Array.from(menu.querySelectorAll('[role="menuitem"]')) as HTMLElement[];
     const currentIndex = menuItems.indexOf(currentElement);
+    
     let nextIndex: number;
 
     if (event.key === 'ArrowUp') {
@@ -376,7 +500,11 @@ export class AccessibilityEnhancer {
     const inputs = document.querySelectorAll('input, textarea, select');
     inputs.forEach((input) => {
       const element = input as HTMLElement;
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> cursor/fix-errors-and-merge-to-main-ac10
       // Add aria-label if no label exists
       if (!element.getAttribute('aria-label') && !element.getAttribute('aria-labelledby')) {
         const placeholder = element.getAttribute('placeholder');
@@ -476,7 +604,7 @@ export class AccessibilityEnhancer {
   /**
    * Handle focus out
    */
-  private handleFocusOut(event: FocusEvent): void {
+  private handleFocusOut(_event: FocusEvent): void {
     const element = event.target as HTMLElement;
     element.classList.remove('focus-visible');
   }
@@ -546,6 +674,85 @@ export class AccessibilityEnhancer {
     });
   }
 
+<<<<<<< HEAD
+=======
+  /**
+   * Setup color contrast checking
+   */
+  private setupColorContrast(): void {
+    // This would typically use a color contrast library
+    // For now, we'll just count potential issues
+    this.metrics.colorContrastIssues = 0;
+  }
+
+  /**
+   * Setup image alt text checking
+   */
+  private setupImageAltText(): void {
+    const images = document.querySelectorAll('img');
+    this.metrics.imagesWithoutAlt = 0;
+    images.forEach((img) => {
+      if (!img.alt) {
+        this.metrics.imagesWithoutAlt++;
+      }
+    });
+  }
+
+  /**
+   * Setup heading structure checking
+   */
+  private setupHeadingStructure(): void {
+    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    this.metrics.headingsWithoutContent = 0;
+    headings.forEach((heading) => {
+      if (!heading.textContent?.trim()) {
+        this.metrics.headingsWithoutContent++;
+      }
+    });
+  }
+
+  /**
+   * Setup form accessibility
+   */
+  private setupFormAccessibility(): void {
+    const forms = document.querySelectorAll('form');
+    forms.forEach((form) => {
+      // Add form labels
+      const inputs = form.querySelectorAll('input, textarea, select');
+      inputs.forEach((input) => {
+        const element = input as HTMLElement;
+        const id = element.id || `input-${Math.random().toString(36).substr(2, 9)}`;
+        element.id = id;
+
+        if (!element.getAttribute('aria-label') && !element.getAttribute('aria-labelledby')) {
+          const label = form.querySelector(`label[for="${id}"]`);
+          if (label) {
+            element.setAttribute('aria-labelledby', id);
+          }
+        }
+      });
+    });
+  }
+
+  /**
+   * Setup navigation accessibility
+   */
+  private setupNavigationAccessibility(): void {
+    const navs = document.querySelectorAll('nav');
+    navs.forEach((nav) => {
+      // Add navigation role if not present
+      if (!nav.getAttribute('role')) {
+        nav.setAttribute('role', 'navigation');
+      }
+
+      // Add aria-label if not present
+      if (!nav.getAttribute('aria-label')) {
+        nav.setAttribute('aria-label', 'Main navigation');
+      }
+    });
+  }
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-ac10
   /**
    * Setup content announcements
    */
@@ -709,10 +916,18 @@ Recommendations:
   }
 
   /**
+<<<<<<< HEAD
    * Cleanup resources
+=======
+   * Cleanup
+>>>>>>> cursor/fix-errors-and-merge-to-main-ac10
    */
   destroy(): void {
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ac10

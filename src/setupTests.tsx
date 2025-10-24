@@ -4,6 +4,7 @@
 
 import '@testing-library/jest-dom';
 
+<<<<<<< HEAD
 // Jest globals are already available in test environment
 
 // Polyfill for TextEncoder/TextDecoder
@@ -15,6 +16,28 @@ import { TextEncoder, TextDecoder } from 'util';
 const originalConsoleError = console.error;
 console.error = (...args: unknown[]) => {
   const message = args[0]?.toString?.() || (args[0] as any)?.message || '';
+=======
+// Jest types
+declare global {
+  var jest: {
+    fn: () => any;
+    mockImplementation: (_fn: any) => any;
+  };
+}
+
+// Make jest available globally
+const jest = global.jest;
+
+// Polyfill for TextEncoder/TextDecoder
+import { TextEncoder, TextDecoder } from 'util';
+global.TextEncoder = TextEncoder as unknown as typeof globalThis.TextEncoder;
+global.TextDecoder = TextDecoder as unknown as typeof globalThis.TextDecoder;
+
+// Suppress jsdom navigation warnings
+const originalConsoleError = console.error;
+console.error = (...args) => {
+  const message = args[0]?.toString?.() || args[0]?.message || '';
+>>>>>>> cursor/fix-errors-and-merge-to-main-ac10
   if (message.includes('Not implemented: navigation') || 
       message.includes('navigation (except hash changes)')) {
     return;
@@ -38,6 +61,7 @@ Object.defineProperty(window, 'matchMedia', {
 });
 
 // Mock requestAnimationFrame
+<<<<<<< HEAD
 <<<<<<< HEAD
 global.requestAnimationFrame = jest.fn((cb: any) => setTimeout(cb, 0)) as any;
 global.cancelAnimationFrame = jest.fn((id: number) => clearTimeout(id)) as any;
@@ -70,12 +94,62 @@ Object.defineProperty(window, 'sessionStorage', {
 
 // Mock fetch
 (global as any).fetch = (global as any).jest.fn();
+=======
+global.requestAnimationFrame = jest.fn(cb => setTimeout(cb, 0));
+global.cancelAnimationFrame = jest.fn(id => clearTimeout(id));
+
+// Mock localStorage
+const localStorageMock = {
+  getItem: jest.fn(),
+  setItem: jest.fn(),
+  removeItem: jest.fn(),
+  clear: jest.fn(),
+};
+global.localStorage = localStorageMock as unknown as Storage;
+
+// Mock sessionStorage
+const sessionStorageMock = {
+  getItem: jest.fn(),
+  setItem: jest.fn(),
+  removeItem: jest.fn(),
+  clear: jest.fn(),
+};
+global.sessionStorage = sessionStorageMock as unknown as Storage;
+
+// Mock fetch
+global.fetch = jest.fn();
+
+// Mock IntersectionObserver
+global.IntersectionObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn(),
+}));
+
+// Mock ResizeObserver
+global.ResizeObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn(),
+}));
+
+// Mock PerformanceObserver
+global.PerformanceObserver = jest.fn().mockImplementation((_callback) => ({
+  observe: jest.fn(),
+  disconnect: jest.fn(),
+  takeRecords: jest.fn(),
+})) as any;
+>>>>>>> cursor/fix-errors-and-merge-to-main-ac10
 
 // Mock console methods for cleaner test output
 const originalConsoleWarn = console.warn;
 const originalConsoleInfo = console.info;
 
+<<<<<<< HEAD
 console.warn = (...args: unknown[]) => {
+=======
+console.warn = (...args) => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-ac10
   const message = args[0]?.toString?.() || '';
   if (message.includes('Warning: ReactDOM.render is no longer supported')) {
     return;
@@ -83,13 +157,18 @@ console.warn = (...args: unknown[]) => {
   originalConsoleWarn(...args);
 };
 
+<<<<<<< HEAD
 console.info = (...args: unknown[]) => {
+=======
+console.info = (...args) => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-ac10
   const message = args[0]?.toString?.() || '';
-  if (message.includes('ReactDOM.render is no longer supported')) {
+  if (message.includes('Download the React DevTools')) {
     return;
   }
   originalConsoleInfo(...args);
 };
+<<<<<<< HEAD
 
 // Mock PerformanceObserver
 global.PerformanceObserver = class MockPerformanceObserver {
@@ -128,3 +207,5 @@ delete (window as unknown as Record<string, unknown>).location;
   assign: (global as any).jest.fn(),
   replace: (global as any).jest.fn()
 };
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-ac10
