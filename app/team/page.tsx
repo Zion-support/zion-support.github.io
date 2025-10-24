@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
+import { Brain, Globe, Shield, Zap } from 'lucide-react';
 
 
 const teamMembers = [
@@ -53,6 +54,13 @@ const teamMembers = [
     image: "/api/placeholder/300/300"
   }
 ]
+const iconMap = {
+  Brain,
+  Globe,
+  Shield,
+  Zap
+};
+
 const values = [
   {
     icon: 'Brain',
@@ -145,7 +153,7 @@ const TeamPage: React.FC = () => {
               {values.map((value, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <value.icon className="w-8 h-8 text-white" />
+                    {React.createElement(iconMap[value.icon as keyof typeof iconMap], { className: "w-8 h-8 text-white" })}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">
                     {value.title}
