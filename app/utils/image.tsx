@@ -85,7 +85,7 @@ objectFit: 'cover'}
 if (hasError) {</ImageProps>
 return (</ImageProps>;}
 if (hasError) {}
-  return (
+return (
     <div}
 if (hasError) {;}
 return(<div}
@@ -94,7 +94,7 @@ import React, { useState, useCallback } from 'react'
 interface ImageProps {/* TODO: Fix JSX expression */}
 }
 export const,
-Image: React.FC<ImageProps> = ({/* TODO: Fix JSX expression */})
+Image: React.FC<ImageProps>= ({/* TODO: Fix JSX expression */})</div>
 }) => {/* TODO: Fix JSX expression */}
 }, [onLoad])
 const handleError = useCallback(() => {/* TODO: Fix JSX expression */}
@@ -130,8 +130,6 @@ loading={priority ? 'eager' : 'lazy'}
 onLoad={handleLoad}
 onError={handleError}
 {...props}
->);
-};
-</img>
+>)</img>
 }</img>
-export default Image;</img>
+export default Image</img>

@@ -1,125 +1,68 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix missing function declarations
 function fixFunctionDeclarations(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+    let fixed = false;
 
-    // Check if file has React imports but no function declaration
-    if (content.includes('import React') && content.includes('return (') && !content.includes('const ') && !content.includes('function ')) {
-      // Extract component name from file path
-      const fileName = path.basename(filePath, '.tsx');
-      const componentName = fileName.split('-').map(word => 
-        word.charAt(0).toUpperCase() + word.slice(1)
-      ).join('') + 'Page';
+    // Fix malformed function declarations
+    if (content.includes('const ') && content.includes('export default function Page() {')) {
+      // Remove the malformed export default function declaration
+      content = content.replace(/export default function Page\(\) \{\s*/, '');
+      content = content.replace(/export default Page;/, '');
       
-      // Find where to insert the function declaration
-      const lines = content.split('\n');
-      let insertIndex = -1;
-      
-      // Look for the last import statement
-      for (let i = 0; i < lines.length; i++) {
-        if (lines[i].includes('import ') && !lines[i].includes('export')) {
-          insertIndex = i + 1;
-        }
+      // Add proper export at the end
+      if (!content.includes('export default')) {
+        content = content.replace(/\}\s*$/, '};\n\nexport default Page;');
       }
       
-      if (insertIndex > 0) {
-        // Insert function declaration
-        lines.splice(insertIndex, 0, '', `const ${componentName}: React.FC = () => {`);
-        content = lines.join('\n');
-        modified = true;
+      fixed = true;
+    }
+
+    // Fix duplicate function declarations
+    if (content.includes('const ') && content.includes('React.FC')) {
+      // Remove the React.FC declaration if there's already a function
+      content = content.replace(/const \w+: React\.FC = \(\) => \{\s*/, '');
+      content = content.replace(/export default \w+;/, '');
+      
+      // Add proper export at the end
+      if (!content.includes('export default')) {
+        content = content.replace(/\}\s*$/, '};\n\nexport default Page;');
       }
+      
+      fixed = true;
     }
 
-    // Fix missing semicolons after arrays before return statements
-    content = content.replace(/(\s+)\]\n(\s+)return \(/g, '$1];\n$2return (');
-    
-    // Fix missing semicolons after function declarations
-    content = content.replace(/(\s+)\]\n(\s+)const.*=.*\(\) => \{/g, '$1];\n$2const $3 = () => {');
-    
-    // Fix React.Fragment issues - remove closing tags without opening tags
-    if (content.includes('</React.Fragment>') && !content.includes('<React.Fragment>')) {
-      content = content.replace(/<\/React.Fragment>/g, '</div>');
-      modified = true;
-    }
-    
-    // Fix fragment issues - remove closing tags without opening tags
-    if (content.includes('</>') && !content.includes('<>')) {
-      content = content.replace(/<\/>/g, '</div>');
-      modified = true;
-    }
-
-    // Fix missing closing div tags
-    if (content.includes('</React.Fragment>') && content.includes('<div')) {
-      content = content.replace(/<\/React.Fragment>/g, '</div>');
-      modified = true;
-    }
-
-    // Fix missing semicolons in export statements
-    content = content.replace(/export default (\w+)(?!;)/g, 'export default $1;');
-
-    // Fix missing closing braces for functions
-    if (content.includes('return (') && !content.includes('};') && content.includes('export default')) {
-      // Find the last closing parenthesis and add closing brace
-      const lastReturnIndex = content.lastIndexOf('return (');
-      if (lastReturnIndex !== -1) {
-        const afterReturn = content.substring(lastReturnIndex);
-        const lastParenIndex = afterReturn.lastIndexOf(')');
-        if (lastParenIndex !== -1) {
-          const beforeExport = content.substring(0, lastReturnIndex + lastParenIndex + 1);
-          const afterExport = content.substring(lastReturnIndex + lastParenIndex + 1);
-          content = beforeExport + ';\n};\n' + afterExport;
-          modified = true;
-        }
-      }
-    }
-
-    if (modified) {
+    if (fixed) {
       fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${filePath}`);
-      return true;
+      console.log(`Fixed function declarations: ${filePath}`);
     }
-    
-    return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
+    console.error(`Error processing ${filePath}:`, error.message);
   }
 }
 
-// Function to recursively find all .tsx files
-function findTSXFiles(dir) {
-  const files = [];
-  const items = fs.readdirSync(dir);
+function processDirectory(dirPath) {
+  const files = fs.readdirSync(dirPath);
   
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
+  for (const file of files) {
+    const filePath = path.join(dirPath, file);
+    const stat = fs.statSync(filePath);
     
-    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-      files.push(...findTSXFiles(fullPath));
-    } else if (item.endsWith('.tsx')) {
-      files.push(fullPath);
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      processDirectory(filePath);
+    } else if (file.endsWith('.tsx')) {
+      fixFunctionDeclarations(filePath);
     }
   }
-  
-  return files;
 }
 
-// Main execution
+// Process the app directory
 const appDir = path.join(__dirname, 'app');
-const tsxFiles = findTSXFiles(appDir);
-
-console.log(`Found ${tsxFiles.length} .tsx files`);
-
-let fixedCount = 0;
-for (const file of tsxFiles) {
-  if (fixFunctionDeclarations(file)) {
-    fixedCount++;
-  }
+if (fs.existsSync(appDir)) {
+  processDirectory(appDir);
+  console.log('Function declaration fixes completed!');
+} else {
+  console.log('App directory not found');
 }
-
-console.log(`Fixed ${fixedCount} files`);

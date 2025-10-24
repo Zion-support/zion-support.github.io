@@ -1,73 +1,215 @@
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
+"use client"
+import React, { useState } from "react"
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react'
 
-const PagePage: React.FC = () => {
-  const features = [
+export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    service: '',
+    message: ''
+  })
+
+  const [isSubmitted, setIsSubmitted] = useState(false)
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    // Handle form submission here
+    setIsSubmitted(true)
+    setTimeout(() => setIsSubmitted(false), 3000)
+  }
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    })
+  }
+
+  const contactInfo = [
     {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+      icon: Mail,
+      title: "Email",
+      details: "hello@ziontechgroup.com",
+      description: "Send us an email anytime"
     },
     {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+      icon: Phone,
+      title: "Phone",
+      details: "+1 (555) 123-4567",
+      description: "Mon-Fri from 9am to 6pm"
     },
     {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with advanced encryption and compliance standards.',
-      benefits: ['End-to-end encryption', 'GDPR compliance', 'SOC 2 certified', 'Regular audits']
+      icon: MapPin,
+      title: "Office",
+      details: "123 Tech Street, San Francisco, CA 94105",
+      description: "Visit our headquarters"
     }
-  ];
+  ]
 
-  const benefits = [
-    'Increase productivity by 40%',
-    'Reduce operational costs by 30%',
-    'Improve decision making with data insights',
-    'Gain competitive advantage with advanced technology'
-  ];
+  const services = [
+    "AI Services",
+    "IT Services", 
+    "Micro SaaS",
+    "Consulting",
+    "Other"
+  ]
 
   return (
-    <React.Fragment>
-      <Helmet>
-        <title>PagePage - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions, technology" />
-      </Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                PagePage
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Advanced AI-powered solution for modern businesses.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
-                  Get Started
-                </button>
-                <button className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-                  Learn More
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-      <Footer />
-    </React.Fragment>
-  );
-};
+      
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+        <div className="relative max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-blue-600">Contact Us</span>
+          </h1>
+          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            Ready to transform your business? Get in touch with our team of experts 
+            to discuss your AI and IT needs.
+          </p>
+        </div>
+      </section>
 
-export default PagePage;
+      {/* Contact Info Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            {contactInfo.map((info, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-6">
+                  <info.icon className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{info.title}</h3>
+                <p className="text-lg text-gray-600 mb-2">{info.details}</p>
+                <p className="text-gray-500">{info.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Form Section */}
+      <section className="py-20 px-4 bg-white/5">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Send Us a Message
+            </h2>
+            <p className="text-xl text-gray-600">
+              Fill out the form below and we'll get back to you within 24 hours.
+            </p>
+          </div>
+
+          {isSubmitted ? (
+            <div className="bg-white p-8 rounded-xl shadow-lg text-center">
+              <CheckCircle className="h-16 w-16 text-emerald-500 mx-auto mb-4" />
+              <h3 className="text-2xl font-semibold text-gray-900 mb-2">Message Sent!</h3>
+              <p className="text-gray-600">Thank you for reaching out. We'll get back to you soon.</p>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="bg-white p-8 rounded-xl shadow-lg">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                    Full Name *
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                    placeholder="Your full name"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    Email Address *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                    placeholder="your@email.com"
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                    Company
+                  </label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                    placeholder="Your company name"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+                    Service Interest
+                  </label>
+                  <select
+                    id="service"
+                    name="service"
+                    value={formData.service}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                  >
+                    <option value="">Select a service</option>
+                    {services.map((service, index) => (
+                      <option key={index} value={service}>{service}</option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+
+              <div className="mb-6">
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  Message *
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  rows={6}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                  placeholder="Tell us about your project or requirements..."
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="w-full bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"
+              >
+                Send Message
+                <Send className="ml-2 h-5 w-5" />
+              </button>
+            </form>
+          )}
+        </div>
+      </section>
+      
+      <Footer />
+    </div>
+  )
+}

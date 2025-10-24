@@ -191,66 +191,17 @@ const HomePage: React.FC = () => {
           <h2 id="services-heading" className="sr-only">
             Our Services
           </h2>
-
-          <Suspense fallback={<ServiceCardSkeleton />}>
-            <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">AI Solutions</h3>
-              <p className="text-gray-600">
-                Harness the power of artificial intelligence to drive innovation and efficiency in
-                your organization.
-              </p>
-            </article>
-          </Suspense>
-
-          <Suspense fallback={<ServiceCardSkeleton />}>
-            <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Digital Transformation</h3>
-              <p className="text-gray-600">
-                Transform your business processes with cutting-edge technology and expert
-                consultation.
-              </p>
-            </article>
-          </Suspense>
-
-          <Suspense fallback={<ServiceCardSkeleton />}>
-            <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Cloud Services</h3>
-              <p className="text-gray-600">
-                Scale your infrastructure with secure, reliable, and efficient cloud solutions.
-              </p>
-            </article>
-          </Suspense>
-        </section>
-
-        {/* Content Carousel */}
-        <ContentCarousel />
-
-        {/* Dynamic Content Showcase */}
-        <DynamicContentShowcase />
-
-        {/* Content Statistics */}
-        <ContentStatistics />
-
-        {/* Newsletter Signup */}
-        <ContentNewsletterSignup />
-
-        {/* Call to Action Section */}
-        <section className="text-center" aria-labelledby="cta-heading">
-          <h2 id="cta-heading" className="text-3xl font-bold text-gray-900 mb-6">
-            Ready to Get Started?
-          </h2>
-          <a
-            href="tel:+13026009898"
-            onClick={handlePhoneClick}
-            className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-300"
-            aria-label="Call us at (302) 600-9898"
-          >
-            Contact Us: (302) 600-9898
-          </a>
-        </section>
-      </main>
-    </React.Fragment>
-  );
-};
-
-export default HomeP;a;g;
+          <p className="text-xl text-gray-600 mb-8">
+            Let&apos;s discuss how our AI and IT solutions can help you achieve your goals.
+          </p>
+          <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center mx-auto">
+            Start Your Journey
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </button>
+        </div>
+      </section>
+      
+      <Footer />
+    </div>
+  )
+}
