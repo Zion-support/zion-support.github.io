@@ -94,10 +94,14 @@ const EnhancedServicesShowcase: React.FC = () => {
           ))}
 =======
 <<<<<<< HEAD
+          ))}
+=======
+<<<<<<< HEAD
           </div>
         ))}
 =======
           ))}
+>>>>>>> origin/main
 >>>>>>> origin/main
 >>>>>>> origin/main
         </div>
