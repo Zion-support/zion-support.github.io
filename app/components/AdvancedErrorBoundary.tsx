@@ -1,39 +1,87 @@
 'use client';
-import React from 'react';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home, Mail     } from 'lucide-react';
-import { Mail     } from 'lucide-react';
-import { Home     } from 'lucide-react';
-interface AdvancedErrorBoundaryProps {
+import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
 
-className?: string
+interface AdvancedErrorBoundaryProps {
+  className?: string;
+  children: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+}
+
 interface State {
-hasError: boolean
-error?: Error
-errorInfo?: ErrorInfo,errorId?: string
-class AdvancedErrorBoundary extends Component<Props, State> {
-constructor(props: Props) {
-super(props),}
-    this.state={ hasError: false,}
-  private reportError = (error: Error,errorInfo: ErrorInfo) => {
-const errorRepor,t: ErrorReport={,errorId: this.state.errorId || this.generateErrorId()
-error
-errorI,d: `error_${Date.now(),}_${Math.random().toString(36).substr(2, 9)}`}
-  componentDidCatch(error: Error,errorInfo: ErrorInfo) {
-this.setState({
-error
-errorInfo)
-,})
+  hasError: boolean;
+  error?: Error;
+  errorInfo?: ErrorInfo;
+  errorId?: string;
+}
+
+class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State> {
+  constructor(props: AdvancedErrorBoundaryProps) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  private reportError = (error: Error, errorInfo: ErrorInfo) => {
+    const errorReport = {
+      errorId: this.state.errorId || this.generateErrorId(),
+      error,
+      errorInfo,
+      timestamp: new Date().toISOString(),
+      userAgent: navigator.userAgent,
+      url: window.location.href,
+    };
+
+    // Log to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error Boundary caught an error:', error, errorInfo);
+    }
+  };
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    this.setState({
+      hasError: true,
+      error,
+      errorInfo,
+    });
+
     // Call custom error handler if provided
-if(this.props.onError) {
-this.props.onError(error, errorInfo)
-    // Log error to console in development
-if(process.env.NODE_ENV === 'development') {
-      // // // eslint-disable-next-line no-console
-console.error('Error caught by boundary: ',error, errorInfo)
-    // Log error to external service in production
-if(process.env.NODE_ENV === 'production') {
-this.logErrorToService(error, errorInfo)}
-  logErrorToService = (error: Error,errorInfo: ErrorInfo) => {,// You can integrate with services like Sentry, LogRocket, etc.
-const errorData={</Props>
-}}}}}}}}}
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
+    }
+
+    // Report error
+    this.reportError(error, errorInfo);
+  }
+
+  private generateErrorId = (): string => {
+    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  };
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className={this.props.className}>
+          <div className="error-boundary">
+            <AlertTriangle className="error-icon" />
+            <h2>Something went wrong</h2>
+            <p>We're sorry, but something unexpected happened.</p>
+            <div className="error-actions">
+              <button onClick={() => window.location.reload()}>
+                <RefreshCw className="icon" />
+                Try Again
+              </button>
+              <button onClick={() => window.location.href = '/'}>
+                <Home className="icon" />
+                Go Home
+              </button>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    return this.props.children;
+  }
+}
+
+export default AdvancedErrorBoundary;
