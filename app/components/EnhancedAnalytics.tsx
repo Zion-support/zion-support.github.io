@@ -1,19 +1,20 @@
+import React, { createContext, useContext, useEffect, useState } from 'react';
 'use client';
 
-import React, { createContext, useContext, useEffect, useState } from 'react';
 
 interface AnalyticsContextType {
   trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
   trackPageView: (page: string) => void;
-}
+};
 
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+  const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
-export const useAnalytics = () => {
+export const Page = () => {
   const context = useContext(AnalyticsContext);
   if (!context) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider');
-  }
+  };
+
   return context;
 };
 
