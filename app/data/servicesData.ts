@@ -45,7 +45,11 @@ export const aiServices: Service[] = [
       enterprise: '999'
     },
     contactInfo: {
+<<<<<<< HEAD
+      website: 'https://ziontechgroup.com',
+=======
       website: 'https://ziontechgroup.com/ai-analytics',
+>>>>>>> origin/main
       email: 'ai@ziontechgroup.com',
       phone: '+1-555-0123'
     },
@@ -67,9 +71,15 @@ export const aiServices: Service[] = [
       'Process optimization'
     ],
     benefits: [
+<<<<<<< HEAD
+      'Reduced manual work',
+      'Faster processing',
+      'Lower error rates',
+=======
       'Increased productivity',
       'Reduced human error',
       'Faster processing times',
+>>>>>>> origin/main
       'Scalable operations'
     ],
     pricing: {
@@ -78,9 +88,15 @@ export const aiServices: Service[] = [
       enterprise: '799'
     },
     contactInfo: {
+<<<<<<< HEAD
+      website: 'https://ziontechgroup.com',
+      email: 'ai@ziontechgroup.com',
+      phone: '+1-555-0123'
+=======
       website: 'https://ziontechgroup.com/ai-automation',
       email: 'automation@ziontechgroup.com',
       phone: '+1-555-0124'
+>>>>>>> origin/main
     },
     price: '$199/month',
     icon: '🤖',
@@ -134,9 +150,15 @@ export const itServices: Service[] = [
       'Mobile-first approach'
     ],
     benefits: [
+<<<<<<< HEAD
+      'Better user experience',
+      'Higher conversion rates',
+      'Improved SEO rankings',
+=======
       'Increased online presence',
       'Better user experience',
       'Higher conversion rates',
+>>>>>>> origin/main
       'Mobile accessibility'
     ],
     pricing: {
@@ -145,9 +167,15 @@ export const itServices: Service[] = [
       enterprise: '9999'
     },
     contactInfo: {
+<<<<<<< HEAD
+      website: 'https://ziontechgroup.com',
+      email: 'web@ziontechgroup.com',
+      phone: '+1-555-0123'
+=======
       website: 'https://ziontechgroup.com/web-development',
       email: 'webdev@ziontechgroup.com',
       phone: '+1-555-0126'
+>>>>>>> origin/main
     },
     price: '$2,999/project',
     icon: '🌐',
@@ -160,11 +188,19 @@ export const itServices: Service[] = [
     title: 'Cloud Infrastructure',
     description: 'Scalable and secure cloud solutions for modern businesses.',
     features: [
+<<<<<<< HEAD
+      'AWS/Azure/GCP setup',
+      'Auto-scaling',
+      'Load balancing',
+      'Disaster recovery',
+      '24/7 monitoring'
+=======
       'Cloud migration',
       'Infrastructure as Code',
       'Auto-scaling',
       'Disaster recovery',
       'Security compliance'
+>>>>>>> origin/main
     ],
     benefits: [
       'Reduced infrastructure costs',
@@ -178,13 +214,23 @@ export const itServices: Service[] = [
       enterprise: '1999'
     },
     contactInfo: {
+<<<<<<< HEAD
+      website: 'https://ziontechgroup.com',
+      email: 'cloud@ziontechgroup.com',
+      phone: '+1-555-0123'
+=======
       website: 'https://ziontechgroup.com/cloud-infrastructure',
       email: 'cloud@ziontechgroup.com',
       phone: '+1-555-0127'
+>>>>>>> origin/main
     },
     price: '$499/month',
     icon: '☁️',
     href: '/cloud-infrastructure',
+<<<<<<< HEAD
+    popular: true,
+=======
+>>>>>>> origin/main
     category: 'it'
   },
   {
@@ -193,6 +239,17 @@ export const itServices: Service[] = [
     description: 'Comprehensive security solutions to protect your digital assets.',
     features: [
       'Security audits',
+<<<<<<< HEAD
+      'Penetration testing',
+      'Firewall configuration',
+      'Incident response',
+      'Compliance management'
+    ],
+    benefits: [
+      'Enhanced security posture',
+      'Compliance assurance',
+      'Risk mitigation',
+=======
       'Threat monitoring',
       'Incident response',
       'Compliance management',
@@ -202,6 +259,7 @@ export const itServices: Service[] = [
       'Protection against threats',
       'Regulatory compliance',
       'Reduced risk exposure',
+>>>>>>> origin/main
       'Peace of mind'
     ],
     pricing: {
@@ -210,9 +268,15 @@ export const itServices: Service[] = [
       enterprise: '1499'
     },
     contactInfo: {
+<<<<<<< HEAD
+      website: 'https://ziontechgroup.com',
+      email: 'security@ziontechgroup.com',
+      phone: '+1-555-0123'
+=======
       website: 'https://ziontechgroup.com/cybersecurity',
       email: 'security@ziontechgroup.com',
       phone: '+1-555-0128'
+>>>>>>> origin/main
     },
     price: '$399/month',
     icon: '🔒',
@@ -221,6 +285,8 @@ export const itServices: Service[] = [
   }
 ];
 
+export const itSolutions = itServices;
+
 export const allServices: Service[] = [...aiServices, ...itServices];
 
 // Export as servicesData for backward compatibility
@@ -228,6 +294,7 @@ export const servicesData = {
   aiServices,
   itSolutions: itServices, // Add alias for itSolutions
   itServices,
+  itSolutions,
   allServices
 };
 
