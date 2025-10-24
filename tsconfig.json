@@ -25,11 +25,11 @@
   },
   "include": [
     "next-env.d.ts",
-    ".next/types/**/*.ts",
     "app/page.tsx",
     "app/layout.tsx",
     "app/team/page.tsx",
-    "app/_not-found.tsx"
+    "app/_not-found.tsx",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
