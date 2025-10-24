@@ -39,9 +39,9 @@ const EnhancedServicesShowcase: React.FC = () => {
   ]
 
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4"></div>
-      <div className="max-w-7xl mx-auto"></div>
-        <div className="text-center mb-16"></div>
+    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Enhanced Services Showcase
           </h2>
@@ -50,27 +50,27 @@ const EnhancedServicesShowcase: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
             <div
-              key={index
+              key={index}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
-            ></div>
-              <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"></div>
+            >
+              <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <service.icon className="h-8 w-8 text-white" />
               </div>
               
               <h3 className="text-xl font-bold text-white mb-3 text-center">
-                {service.title
+                {service.title}
               </h3>
               
               <p className="text-gray-300 text-center mb-4">
-                {service.description
+                {service.description}
               </p>
 
-              <div className="mb-4"></div>
+              <div className="mb-4">
                 <div className="text-2xl font-bold text-purple-400 text-center mb-2">
-                  {service.stats
+                  {service.stats}
                 </div>
                 <div className="text-sm text-gray-400 text-center">
                   Average Improvement
@@ -83,7 +83,7 @@ const EnhancedServicesShowcase: React.FC = () => {
                     <CheckCircle className="h-4 w-4 text-green-400 flex-shrink-0" />
                     <span className="text-gray-300 text-sm">{feature}</span>
                   </li>
-                ))
+                ))}
               </ul>
 
               <button className="w-full bg-gradient-to-r from-purple-500 to-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
@@ -91,14 +91,11 @@ const EnhancedServicesShowcase: React.FC = () => {
                 <ArrowRight className="h-4 w-4 ml-2" />
               </button>
             </div>
-          ))
+          ))}
         </div>
       </div>
     </div>
   )
 }
 
-}
-
 export default EnhancedServicesShowcase
-}
