@@ -1,51 +1,174 @@
-"use client";
-import React from "react";
-import Footer from '../components/Footer';
-import Head from "next/head";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+'use client';
+import React, { useState, useEffect } from 'react';
+import { X, Cookie, Shield, Settings } from 'lucide-react';
 
-export default function ServicePage() {
+const CookieConsent: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [preferences, setPreferences] = useState({
+    necessary: true,
+    analytics: false,
+    marketing: false,
+    functional: false
+  });
+
+  useEffect(() => {
+    const consent = localStorage.getItem('cookie-consent');
+    if (!consent) {
+      setIsVisible(true);
+    }
+  }, []);
+
+  const handleAcceptAll = () => {
+    const allPreferences = {
+      necessary: true,
+      analytics: true,
+      marketing: true,
+      functional: true
+    };
+    setPreferences(allPreferences);
+    localStorage.setItem('cookie-consent', JSON.stringify(allPreferences));
+    setIsVisible(false);
+  };
+
+  const handleRejectAll = () => {
+    const minimalPreferences = {
+      necessary: true,
+      analytics: false,
+      marketing: false,
+      functional: false
+    };
+    setPreferences(minimalPreferences);
+    localStorage.setItem('cookie-consent', JSON.stringify(minimalPreferences));
+    setIsVisible(false);
+  };
+
+  const handleSavePreferences = () => {
+    localStorage.setItem('cookie-consent', JSON.stringify(preferences));
+    setIsVisible(false);
+  };
+
+  const handlePreferenceChange = (key: keyof typeof preferences) => {
+    if (key === 'necessary') return; // Can't disable necessary cookies
+    setPreferences(prev => ({
+      ...prev,
+      [key]: !prev[key]
+    }));
+  };
+
+  if (!isVisible) return null;
+
   return (
-    <>
-      <Head>
-        <title>CookieConsent | Zion Tech Group</title>
-        <meta name="description" content="Professional CookieConsent services and solutions for modern businesses." />
-        <meta name="robots" content="index, follow" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="CookieConsent | Zion Tech Group" />
-        <meta property="og:description" content="Professional CookieConsent services and solutions for modern businesses." />
-        <meta property="og:type" content="website" />
-      </Head>
-      
-      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
-              CookieConsent
-            </h1>
-            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-              Professional CookieConsent services and solutions for modern businesses.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-              >
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link
-                href="/about"
-                className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors"
-              >
-                Learn More
-              </Link>
+    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+      <div className="bg-white rounded-xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+        <div className="p-6">
+          <div className="flex items-center justify-between mb-6">
+            <div className="flex items-center space-x-3">
+              <Cookie className="h-8 w-8 text-blue-600" />
+              <h2 className="text-2xl font-bold text-gray-900">Cookie Preferences</h2>
             </div>
+            <button
+              onClick={handleRejectAll}
+              className="text-gray-400 hover:text-gray-600 transition-colors"
+            >
+              <X className="h-6 w-6" />
+            </button>
+          </div>
+
+          <p className="text-gray-600 mb-6">
+            We use cookies to enhance your browsing experience, serve personalized content, 
+            and analyze our traffic. By clicking &ldquo;Accept All&rdquo;, you consent to our use of cookies.
+          </p>
+
+          <div className="space-y-4 mb-6">
+            <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+              <div className="flex items-center space-x-3">
+                <Shield className="h-5 w-5 text-green-600" />
+                <div>
+                  <h3 className="font-semibold text-gray-900">Necessary Cookies</h3>
+                  <p className="text-sm text-gray-600">Required for basic website functionality</p>
+                </div>
+              </div>
+              <input
+                type="checkbox"
+                checked={preferences.necessary}
+                disabled
+                className="h-4 w-4 text-blue-600 rounded border-gray-300"
+              />
+            </div>
+
+            <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+              <div className="flex items-center space-x-3">
+                <Settings className="h-5 w-5 text-blue-600" />
+                <div>
+                  <h3 className="font-semibold text-gray-900">Analytics Cookies</h3>
+                  <p className="text-sm text-gray-600">Help us understand how you use our website</p>
+                </div>
+              </div>
+              <input
+                type="checkbox"
+                checked={preferences.analytics}
+                onChange={() => handlePreferenceChange('analytics')}
+                className="h-4 w-4 text-blue-600 rounded border-gray-300"
+              />
+            </div>
+
+            <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+              <div className="flex items-center space-x-3">
+                <Settings className="h-5 w-5 text-purple-600" />
+                <div>
+                  <h3 className="font-semibold text-gray-900">Marketing Cookies</h3>
+                  <p className="text-sm text-gray-600">Used to deliver relevant advertisements</p>
+                </div>
+              </div>
+              <input
+                type="checkbox"
+                checked={preferences.marketing}
+                onChange={() => handlePreferenceChange('marketing')}
+                className="h-4 w-4 text-blue-600 rounded border-gray-300"
+              />
+            </div>
+
+            <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+              <div className="flex items-center space-x-3">
+                <Settings className="h-5 w-5 text-orange-600" />
+                <div>
+                  <h3 className="font-semibold text-gray-900">Functional Cookies</h3>
+                  <p className="text-sm text-gray-600">Enable enhanced functionality and personalization</p>
+                </div>
+              </div>
+              <input
+                type="checkbox"
+                checked={preferences.functional}
+                onChange={() => handlePreferenceChange('functional')}
+                className="h-4 w-4 text-blue-600 rounded border-gray-300"
+              />
+            </div>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-3">
+            <button
+              onClick={handleRejectAll}
+              className="flex-1 px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
+            >
+              Reject All
+            </button>
+            <button
+              onClick={handleSavePreferences}
+              className="flex-1 px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
+            >
+              Save Preferences
+            </button>
+            <button
+              onClick={handleAcceptAll}
+              className="flex-1 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Accept All
+            </button>
           </div>
         </div>
       </div>
-      <Footer />
-    </>
+    </div>
   );
-}
+};
+
+export default CookieConsent;

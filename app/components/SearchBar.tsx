@@ -1,51 +1,100 @@
-"use client";
-import React from "react";
-import Footer from '../components/Footer';
-import Head from "next/head";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+'use client';
+import React, { useState, useRef, useEffect } from 'react';
+import { Search, X } from 'lucide-react';
 
-export default function ServicePage() {
-  return (
-    <>
-      <Head>
-        <title>SearchBar | Zion Tech Group</title>
-        <meta name="description" content="Professional SearchBar services and solutions for modern businesses." />
-        <meta name="robots" content="index, follow" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="SearchBar | Zion Tech Group" />
-        <meta property="og:description" content="Professional SearchBar services and solutions for modern businesses." />
-        <meta property="og:type" content="website" />
-      </Head>
-      
-      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
-              SearchBar
-            </h1>
-            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-              Professional SearchBar services and solutions for modern businesses.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-              >
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link
-                href="/about"
-                className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors"
-              >
-                Learn More
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-      <Footer />
-    </>
-  );
+interface SearchBarProps {
+  placeholder?: string;
+  onSearch?: (query: string) => void;
+  suggestions?: string[];
+  className?: string;
 }
+
+const SearchBar: React.FC<SearchBarProps> = ({
+  placeholder = "Search...",
+  onSearch,
+  suggestions = [],
+  className = ""
+}) => {
+  const [query, setQuery] = useState('');
+  const [isOpen, setIsOpen] = useState(false);
+  const [filteredSuggestions, setFilteredSuggestions] = useState<string[]>([]);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if (query.length > 0) {
+      const filtered = suggestions.filter(suggestion =>
+        suggestion.toLowerCase().includes(query.toLowerCase())
+      );
+      setFilteredSuggestions(filtered);
+      setIsOpen(filtered.length > 0);
+    } else {
+      setFilteredSuggestions([]);
+      setIsOpen(false);
+    }
+  }, [query, suggestions]);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (onSearch && query.trim()) {
+      onSearch(query.trim());
+      setIsOpen(false);
+    }
+  };
+
+  const handleSuggestionClick = (suggestion: string) => {
+    setQuery(suggestion);
+    if (onSearch) {
+      onSearch(suggestion);
+    }
+    setIsOpen(false);
+  };
+
+  const handleClear = () => {
+    setQuery('');
+    setIsOpen(false);
+    inputRef.current?.focus();
+  };
+
+  return (
+    <div className={`relative ${className}`}>
+      <form onSubmit={handleSubmit} className="relative">
+        <div className="relative">
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+          <input
+            ref={inputRef}
+            type="text"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder={placeholder}
+            className="w-full pl-10 pr-10 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          />
+          {query && (
+            <button
+              type="button"
+              onClick={handleClear}
+              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+            >
+              <X className="h-5 w-5" />
+            </button>
+          )}
+        </div>
+      </form>
+
+      {isOpen && filteredSuggestions.length > 0 && (
+        <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-50 max-h-60 overflow-y-auto">
+          {filteredSuggestions.map((suggestion, index) => (
+            <button
+              key={index}
+              onClick={() => handleSuggestionClick(suggestion)}
+              className="w-full text-left px-4 py-2 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none"
+            >
+              {suggestion}
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default SearchBar;

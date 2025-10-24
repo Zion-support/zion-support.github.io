@@ -1,51 +1,84 @@
-"use client";
-import React from "react";
-import Footer from '../components/Footer';
-import Head from "next/head";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+'use client';
+import React, { useState, useEffect } from 'react';
+import { Sun, Moon, Monitor } from 'lucide-react';
 
-export default function ServicePage() {
+type Theme = 'light' | 'dark' | 'system';
+
+const ThemeToggle: React.FC = () => {
+  const [theme, setTheme] = useState<Theme>('system');
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    const savedTheme = localStorage.getItem('theme') as Theme;
+    if (savedTheme) {
+      setTheme(savedTheme);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!mounted) return;
+
+    const root = window.document.documentElement;
+    root.classList.remove('light', 'dark');
+
+    if (theme === 'system') {
+      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      root.classList.add(systemTheme);
+    } else {
+      root.classList.add(theme);
+    }
+
+    localStorage.setItem('theme', theme);
+  }, [theme, mounted]);
+
+  const handleThemeChange = (newTheme: Theme) => {
+    setTheme(newTheme);
+  };
+
+  if (!mounted) {
+    return (
+      <div className="w-10 h-10 rounded-lg bg-gray-200 animate-pulse"></div>
+    );
+  }
+
   return (
-    <>
-      <Head>
-        <title>ThemeToggle | Zion Tech Group</title>
-        <meta name="description" content="Professional ThemeToggle services and solutions for modern businesses." />
-        <meta name="robots" content="index, follow" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="ThemeToggle | Zion Tech Group" />
-        <meta property="og:description" content="Professional ThemeToggle services and solutions for modern businesses." />
-        <meta property="og:type" content="website" />
-      </Head>
-      
-      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
-              ThemeToggle
-            </h1>
-            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-              Professional ThemeToggle services and solutions for modern businesses.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-              >
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link
-                href="/about"
-                className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors"
-              >
-                Learn More
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-      <Footer />
-    </>
+    <div className="flex items-center space-x-1 bg-gray-100 dark:bg-gray-800 rounded-lg p-1">
+      <button
+        onClick={() => handleThemeChange('light')}
+        className={`p-2 rounded-md transition-colors ${
+          theme === 'light'
+            ? 'bg-white text-yellow-600 shadow-sm'
+            : 'text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100'
+        }`}
+        title="Light theme"
+      >
+        <Sun className="h-4 w-4" />
+      </button>
+      <button
+        onClick={() => handleThemeChange('dark')}
+        className={`p-2 rounded-md transition-colors ${
+          theme === 'dark'
+            ? 'bg-gray-800 text-blue-400 shadow-sm'
+            : 'text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100'
+        }`}
+        title="Dark theme"
+      >
+        <Moon className="h-4 w-4" />
+      </button>
+      <button
+        onClick={() => handleThemeChange('system')}
+        className={`p-2 rounded-md transition-colors ${
+          theme === 'system'
+            ? 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100 shadow-sm'
+            : 'text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100'
+        }`}
+        title="System theme"
+      >
+        <Monitor className="h-4 w-4" />
+      </button>
+    </div>
   );
-}
+};
+
+export default ThemeToggle;

@@ -1,51 +1,67 @@
-"use client";
-import React from "react";
-import Footer from '../components/Footer';
-import Head from "next/head";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+'use client';
+import React, { useState, useEffect } from 'react';
+import { Loader2, CheckCircle, AlertCircle } from 'lucide-react';
 
-export default function ServicePage() {
-  return (
-    <>
-      <Head>
-        <title>OptimizedLoading | Zion Tech Group</title>
-        <meta name="description" content="Professional OptimizedLoading services and solutions for modern businesses." />
-        <meta name="robots" content="index, follow" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="OptimizedLoading | Zion Tech Group" />
-        <meta property="og:description" content="Professional OptimizedLoading services and solutions for modern businesses." />
-        <meta property="og:type" content="website" />
-      </Head>
-      
-      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
-              OptimizedLoading
-            </h1>
-            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-              Professional OptimizedLoading services and solutions for modern businesses.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-              >
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link
-                href="/about"
-                className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors"
-              >
-                Learn More
-              </Link>
-            </div>
-          </div>
+interface OptimizedLoadingProps {
+  message?: string;
+  timeout?: number;
+  onComplete?: () => void;
+}
+
+const OptimizedLoading: React.FC<OptimizedLoadingProps> = ({ 
+  message = "Loading...", 
+  timeout = 3000,
+  onComplete 
+}) => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setProgress(prev => {
+        if (prev >= 100) {
+          setIsLoading(false);
+          clearInterval(interval);
+          if (onComplete) {
+            setTimeout(onComplete, 500);
+          }
+          return 100;
+        }
+        return prev + 2;
+      });
+    }, timeout / 50);
+
+    return () => clearInterval(interval);
+  }, [timeout, onComplete]);
+
+  if (!isLoading) {
+    return (
+      <div className="flex items-center justify-center p-4">
+        <div className="text-center">
+          <CheckCircle className="h-8 w-8 text-green-500 mx-auto mb-2" />
+          <p className="text-sm text-gray-600">Complete</p>
         </div>
       </div>
-      <Footer />
-    </>
+    );
+  }
+
+  return (
+    <div className="flex items-center justify-center p-4">
+      <div className="text-center">
+        <div className="relative mb-4">
+          <Loader2 className="h-8 w-8 text-blue-500 animate-spin mx-auto" />
+        </div>
+        <p className="text-sm text-gray-600 mb-2">{message}</p>
+        <div className="w-32 bg-gray-200 rounded-full h-1 mx-auto">
+          <div 
+            className="bg-blue-500 h-1 rounded-full transition-all duration-300"
+            style={{ width: `${progress}%` }}
+          ></div>
+        </div>
+        <p className="text-xs text-gray-500 mt-1">{progress}%</p>
+      </div>
+    </div>
   );
-}
+};
+
+export default OptimizedLoading;
