@@ -1,5 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import Footer from '../components/Footer';
 import { CheckCircle, Shield, Brain, Globe, Phone, Mail } from 'lucide-react';
 import React, { lazy } from 'react';
 import { Cloud, Shield, Zap, Target, TrendingUp, CheckCircle, ArrowRight, Server, Database } from 'lucide-react';
