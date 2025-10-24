@@ -1,19 +1,31 @@
 "use client"
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import { Brain, ArrowRight } from 'lucide-react'
+import { useRouter } from 'next/navigation'
+import {
+  Bars3Icon,
+  XMarkIcon,
+  HomeIcon,
+  InformationCircleIcon,
+  BriefcaseIcon,
+  PhoneIcon,
+  DocumentTextIcon,
+  CogIcon,
+  ChevronDownIcon
+} from '@heroicons/react/24/outline';
+import { Brain, ArrowRight, Mail } from 'lucide-react';
 
 const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
+    { name: 'Team', href: '/team' },
     { name: 'Contact', href: '/contact' }
-  ]
+  ];
 
   return (
     <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-700 sticky top-0 z-50">
@@ -52,8 +64,26 @@ const Navigation: React.FC = () => {
             </Link>
           </div>
 
+          {/* Contact Info */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <a
+              href="tel:+13024640950"
+              className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
+            >
+              <PhoneIcon className="w-4 h-4" />
+              <span className="text-sm">(302) 464-0950</span>
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
+            >
+              <Mail className="w-4 h-4" />
+              <span className="text-sm">Email</span>
+            </a>
+          </div>
+
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover:text-white transition-colors duration-200"
@@ -69,7 +99,7 @@ const Navigation: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 backdrop-blur-sm rounded-lg mt-2">
               {navigation.map((item) => (
                 <Link
