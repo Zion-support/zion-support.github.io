@@ -1,4 +1,8 @@
 
+'use client';
+
+import React, { useState, useEffect } from 'react';
+
 interface EnhancedAccessibilityEnhancerProps {
   children: React.ReactNode
   enableKeyboardNavigation?: boolean
