@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Service Worker for Zion Tech Group
 const CACHE_NAME = 'zion-tech-group-v1';
 const urlsToCache = [
@@ -91,3 +92,20 @@ async function sendQueuedAnalytics() {
     console.error('Failed to send analytics data:', error);
   }
 }
+=======
+
+// Service Worker for Zion Tech Group Website()
+const CACHE_NAME = 'zion-tech-group-v1''
+  '/''
+  '/about''
+  '/contact''
+  '/services''
+  '/ai-services''
+  '/consultation''
+  '/static/js/bundle.js''
+  '/static/css/main.css''
+    '/manifest.json''
+self.addEventListener('install''
+self.addEventListener('fetch''
+self.addEventListener('activate''
+>>>>>>> cursor/fix-errors-and-merge-to-main-45ea

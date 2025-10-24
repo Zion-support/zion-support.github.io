@@ -1,4 +1,4 @@
-// SEO utility functions
+// SEO utility functions()
 export const seoUtils = {
-  // Add SEO utility functions here
+  // Add SEO utility functions here()
 }

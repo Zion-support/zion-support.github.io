@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Metadata } from 'next';
 
@@ -39,3 +40,6 @@ const 404Page = () => {
 };
 
 export default 404Page;
+=======
+import Link from 'next/link';
+>>>>>>> cursor/fix-errors-and-merge-to-main-45ea

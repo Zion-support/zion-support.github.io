@@ -4,35 +4,17 @@ const withErrorLogging = (handler) => {
     try {
       await handler(req, res)
     } catch (error) {
-      // eslint-disable-next-line no-console
-    console.error('API Error:', error)
-      res.setHeader('Content-Type', 'application/json')
-      res.end(JSON.stringify({ error: 'Internal server error' }))
-    }
-  }
-}
-export default withErrorLogging(async (req, res) => {
-  if (req.method !== 'POST') {
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ error: 'Method not allowed' }))
-    return
-  }
-  const { productId } = req.body
-  if (!productId) {
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ error: 'Product ID is required' }))
-    return
-  }
-  try {
-    const session = {
-      status: 'pending',
-    productId: productId}
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify(session))
-  } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error('Checkout session creation error:', error)
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ error: 'Failed to create checkout session' }))
-  }
-})
+      // eslint-disable-next-line no-console()
+    console.error('API "Error": '',
+      res.setHeader('Content-Type', 'application/json''
+      res.end(JSON.stringify({ "error": 'Internal server error'',
+  if (req.method !== 'POST''
+    res.setHeader('Content-Type', 'application/json''
+    res.end(JSON.stringify({ "error": 'Method not allowed'',
+    res.setHeader('Content-Type', 'application/json''
+    res.end(JSON.stringify({ "error": 'Product ID is required'',
+      "status": 'pending'',
+    res.setHeader('Content-Type', 'application/json''
+    console.error('Checkout session creation "error": '',
+    res.setHeader('Content-Type', 'application/json''
+    res.end(JSON.stringify({ "error": 'Failed to create checkout session''
