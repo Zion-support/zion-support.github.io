@@ -1,7 +1,5 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
 import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Building, Wifi, Cpu, Database} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -222,12 +220,6 @@ export default PagePage
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page | Zion Tech Group</title>
-        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
-      </Helmet>
-
       {/* Hero Section */}
       <section$1>
         <div$2>
@@ -252,8 +244,7 @@ export default PagePage
                 Learn More
               </button>
     <>
-      <Helmet>
-        </Helmet><title>Smart City Infrastructure - Zion Tech Group</title>
+      <title>Smart City Infrastructure - Zion Tech Group</title>
         <meta name="description" content="Advanced smart city infrastructure solutions including IoT networks, data analytics, and digital transformation for modern cities." />
         <meta name="keywords" content="smart city, infrastructure, IoT, data analytics, digital transformation, urban planning" />
       </Helmet>

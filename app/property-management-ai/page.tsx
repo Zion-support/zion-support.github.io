@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import {Home, Users, DollarSign, BarChart, Shield, Zap} from 'lucide-react';
 const PropertyManagementAIPage: React.FC = () => {
   const features = [
@@ -13,11 +12,7 @@ const PropertyManagementAIPage: React.FC = () => {
   return(<React.Fragment>)</React.Fragment>
       <Helmet />
     <>
-      <Helmet>
-        <title>Property Management AI | Zion Tech Group - Intelligent Real Estate Management</title>
-    <React.Fragment>
-      </React><Helmet>
-        </Helmet><title>Property Management AI | Zion Tech Group - Intelligent Real Estate Management</title>
+      <title>Property Management AI | Zion Tech Group - Intelligent Real Estate Management</title>
         <meta name="description" content="Transform your property management with AI-powered tools. Optimize rent, manage tenants, and maximize property value." />
         <meta name="keywords" content="property management AI, real estate software, tenant management, rent optimization, property analytics" />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

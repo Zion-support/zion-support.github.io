@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings} from 'lucide-react';
@@ -81,14 +80,7 @@ return(<>)
 return (
     <>
   </>
-      <Helmet>
-        <title>Ai Content Writer - Zion Tech Group</title>
-    'Gain competitive advantage with advanced technology'
-  ]
-return (
-    <>
-      <Helmet>
-        </Helmet><title>Ai Content Writer - Zion Tech Group</title>
+      <title>Ai Content Writer - Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>

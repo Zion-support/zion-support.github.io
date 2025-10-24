@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
 const PagePage: React.FC = () => {
@@ -28,7 +27,6 @@ const PagePage: React.FC = () => {
   ];
 'use client';
 import React, {useState}from 'react';
-import { Helmet } from 'react-helmet-async';
 import {Users, MessageCircle, Calendar, Star, ArrowRight, ExternalLink, Mail, Phone, MapPin, Clock, CheckCircle, Award, TrendingUp, Heart} from 'lucide-react';
 
 const CommunityPage: React.FC = () => {
@@ -36,7 +34,6 @@ const CommunityPage: React.FC = () => {
 
 'use client'
 import React, { useState } from 'react'
-import { Helmet } from 'react-helmet-async'
 import { Users, MessageCircle, Calendar, Star, ArrowRight, ExternalLink, Mail, Phone, MapPin, Clock, CheckCircle, Award, TrendingUp, Heart } from 'lucide-react'
 const CommunityPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('overview')

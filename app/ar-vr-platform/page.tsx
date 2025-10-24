@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe} from 'lucide-react';
 const ARVRPlatformPage: React.FC = () => {
   const features = [
@@ -36,11 +35,6 @@ const ARVRPlatformPage: React.FC = () => {
       <Helmet />
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>AR/VR Platform | Zion Tech Group</title>
-        <meta name="description" content="Professional AR/VR Platform services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-      </Helmet>
-
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         </section>
@@ -64,8 +58,7 @@ const ARVRPlatformPage: React.FC = () => {
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      </div><Helmet>
-        </Helmet><title>AR/VR Platform | Zion Tech Group</title>
+      </div><title>AR/VR Platform | Zion Tech Group</title>
         <meta name="description" content="Professional AR/VR Platform services by Zion Tech Group. Advanced AI and IT solutions for your business." />
       </Helmet>
       {/* Hero Section */}

@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import {Shield,}
   Search,
   AlertTriangle,
@@ -66,8 +65,7 @@ return(<>)
   ]
 return (
     <>
-      <Helmet>
-        </Helmet><title>Penetration Testing Services - Zion Tech Group | Security Assessment</title>
+      <title>Penetration Testing Services - Zion Tech Group | Security Assessment</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>

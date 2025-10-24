@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings} from 'lucide-react';
@@ -34,11 +33,7 @@ const ErrorPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
     <>
-      <Helmet>
-        <title>Error - Zion Tech Group</title>
-    <React.Fragment>
-      </React><Helmet>
-        </Helmet><title>Error - Zion Tech Group</title>
+      <title>Error - Zion Tech Group</title>
         <meta name="description" content="Error page." />
         <meta name="keywords" content="error, AI solutions, IT services, business transformation" />
       <Navigation />

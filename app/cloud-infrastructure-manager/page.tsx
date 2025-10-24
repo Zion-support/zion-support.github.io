@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import {Cloud,}
   Settings,
   CheckCircle,
@@ -66,8 +65,7 @@ return(<>)
   ]
 return (
     <>
-      <Helmet>
-        </Helmet><title>Cloud Infrastructure Manager - Zion Tech Group | Cloud Management Platform</title>
+      <title>Cloud Infrastructure Manager - Zion Tech Group | Cloud Management Platform</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import {Mail, ArrowRight} from 'lucide-react';
 const EmailMarketingSuitePage: React.FC = () => {
     return(<>,)
@@ -9,12 +8,6 @@ const EmailMarketingSuitePage: React.FC = () => {
   return (
     <>
   </>
-      <Helmet>
-        <title>Email Marketing Suite | Zion Tech Group - AI Email Campaigns</title>
-        <meta name="description" content="AI-powered email marketing automation. Create, send, and optimize email campaigns with intelligent automation." />
-        <link rel="canonical" href="https://ziontechgroup.com/micro-saas/email-marketing" />
-      </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <section$1>
         <div$2></div>

@@ -2,7 +2,6 @@
 import React from 'react';
 'use client';
 import React, {useState, useCallback}from 'react';
-import { Helmet } from 'react-helmet-async';
 import {Phone,}
   Mail,
   MapPin,
@@ -121,13 +120,7 @@ const contactInfo = [
 
   return (
     <>
-      <Helmet>
-        <title>Contact Us - Zion Tech Group | Get in Touch</title>
-        <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact us for consultations, support, or to discuss your project needs." />
-        <meta name="keywords" content="contact us, Zion Tech Group, AI consultation, IT support, get in touch" />
-      </Helmet>
-
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
         <div className="container mx-auto px-4">
           {/* Header */}
           <div className="text-center mb-16">

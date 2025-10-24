@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import {CheckSquare,}
   Users,
   CheckCircle,
@@ -65,8 +64,7 @@ return(<>)
   ]
 return (
     <>
-      <Helmet>
-        </Helmet><title>Project Management Pro - Zion Tech Group | Project Management Platform</title>
+      <title>Project Management Pro - Zion Tech Group | Project Management Platform</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>

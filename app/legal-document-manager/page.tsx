@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import {FileText, Search, Shield, Zap, BarChart, CheckCircle} from 'lucide-react';
 const LegalDocumentManagerPage: React.FC = () => {
   const features = [
@@ -13,11 +12,7 @@ const LegalDocumentManagerPage: React.FC = () => {
   return(<React.Fragment>)</React.Fragment>
       <Helmet />
     <>
-      <Helmet>
-        <title>Legal Document Manager | Zion Tech Group - Intelligent Legal Document Management</title>
-    <React.Fragment>
-      </React><Helmet>
-        </Helmet><title>Legal Document Manager | Zion Tech Group - Intelligent Legal Document Management</title>
+      <title>Legal Document Manager | Zion Tech Group - Intelligent Legal Document Management</title>
         <meta name="description" content="Streamline legal document management with AI-powered tools. Organize, search, and analyze legal documents efficiently." />
         <meta name="keywords" content="legal document management, contract analysis, legal software, compliance tracking, legal AI" />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

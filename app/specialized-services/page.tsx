@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe} from 'lucide-react';
 const PagePage: React.FC = () => {
     const features = [
@@ -39,12 +38,6 @@ const PagePage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page | Zion Tech Group</title>
-        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
-      </Helmet>
-
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -223,8 +216,7 @@ export default PagePage;
 
   return (
     <>
-      <Helmet>
-        </Helmet><title>Specialized Services - Zion Tech Group</title>
+      <title>Specialized Services - Zion Tech Group</title>
         <meta name="description" content="Advanced specialized services for modern businesses including AI solutions, automation, and digital transformation." />
         <meta name="keywords" content="specialized services, AI solutions, automation, digital transformation, business optimization" />
       </Helmet>

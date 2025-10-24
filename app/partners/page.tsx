@@ -1,7 +1,5 @@
 'use client';
 import React, {useState}from 'react';
-import { Helmet } from 'react-helmet-async';
-
 const PartnersPage: React.FC = () => {
   const partners = [
 import {ExternalLink, Award, Handshake, Users, Star, CheckCircle, ArrowRight} from 'lucide-react';
@@ -77,7 +75,6 @@ const PartnersPage: React.FC = () => {
   const partners: Partner[] = [
 'use client'
 import React, { useState } from 'react'
-import { Helmet } from 'react-helmet-async'
 const PartnersPage: React.FC = () => {
   const partners = [
 import { ExternalLink, Award, Handshake, Users, Star, CheckCircle, ArrowRight } from 'lucide-react'
@@ -132,140 +129,6 @@ const PartnersPage: React.FC = () => {
   return (
     <>
   </>
-      <Helmet>
-                </div>
-              ))}
-            </div>
-
-            <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10">
-              <h2 className="text-2xl font-bold text-white mb-6 text-center">Partnership Benefits</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                    <span className="text-gray-300">{benefit}</span>
-                  ))
-                ))}
-              </div>
-      description: 'Preferred cloud infrastructure partner',
-      category: 'Cloud Infrastructure',
-      website: 'https://aws.amazon.com',
-      tier: 'strategic',
-    },
-    {
-      name: 'Google Cloud',
-      logo: '/images/partners/google-cloud.png',
-      description: 'AI and machine learning solutions partner',
-      category: 'AI & ML',
-      website: 'https://cloud.google.com',
-      tier: 'strategic',
-    },
-    {
-      name: 'IBM',
-      logo: '/images/partners/ibm.png',
-      description: 'Enterprise AI and quantum computing partner',
-      category: 'Enterprise AI',
-      website: 'https://ibm.com',
-      tier: 'preferred',
-    },
-    {
-      name: 'Salesforce',
-      logo: '/images/partners/salesforce.png',
-      description: 'CRM and customer experience solutions',
-      category: 'CRM',
-      website: 'https://salesforce.com',
-      tier: 'preferred',
-    },
-    {
-      name: 'Oracle',
-      logo: '/images/partners/oracle.png',
-      description: 'Database and enterprise applications',
-      category: 'Database',
-      website: 'https://oracle.com',
-      tier: 'preferred',
-    },
-    {
-      name: 'ServiceNow',
-      logo: '/images/partners/servicenow.png',
-      description: 'IT service management solutions',
-      category: 'ITSM',
-      website: 'https://servicenow.com',
-      tier: 'certified',
-    },
-    {
-      name: 'Splunk',
-      logo: '/images/partners/splunk.png',
-      description: 'Data analytics and monitoring platform',
-      category: 'Analytics',
-      website: 'https://splunk.com',
-      tier: 'certified',
-    },
-    {
-      name: 'Snowflake',
-      logo: '/images/partners/snowflake.png',
-      description: 'Cloud data platform solutions',
-      category: 'Data Platform',
-      website: 'https://snowflake.com',
-      tier: 'certified',
-    }
-  ];
-
-  const benefits = [
-    {
-      icon: <Handshake className="w-8 h-8 text-blue-600" />,
-      title: 'Strategic Partnerships',
-      description: 'Long-term relationships with industry leaders for mutual growth and innovation.',
-    },
-    {
-      icon: <Award className="w-8 h-8 text-green-600" />,
-      title: 'Certified Expertise',
-      description: 'Certified professionals with deep expertise in partner technologies and solutions.',
-    },
-    {
-      icon: <Zap className="w-8 h-8 text-purple-600" />,
-      title: 'Faster Implementation',
-      description: 'Accelerated project delivery through proven methodologies and best practices.',
-    },
-    {
-      icon: <Users className="w-8 h-8 text-orange-600" />,
-      title: 'Dedicated Support',
-      description: 'Access to partner support teams and specialized resources for your projects.',
-    }
-  ];
-
-  const partnerTiers = {
-    strategic: {
-      title: 'Strategic Partners',
-      description: 'Our most important partnerships with industry leaders',
-      color: 'bg-blue-100 text-blue-800',
-    },
-    preferred: {
-      title: 'Preferred Partners',
-      description: 'Trusted partners with proven track records',
-      color: 'bg-green-100 text-green-800',
-    },
-    certified: {
-      title: 'Certified Partners',
-      description: 'Certified solution providers with specialized expertise',
-      color: 'bg-purple-100 text-purple-800',
-    }
-  };
-
-  const groupedPartners = partners.reduce((acc, partner) => {
-    if (!acc[partner.tier]) {
-      acc[partner.tier] = [];
-    }
-    acc[partner.tier].push(partner);
-    return acc;
-  }, {} as Record<string, Partner[]>);
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-900">
-      <Helmet>
-        <title>Partners - Zion Tech Group</title>
-        <meta name="description" content="Join our partner ecosystem and grow your business with Zion Tech Group's AI and IT solutions." />
-      </Helmet>
-      
       <Navigation />
       
       {/* Hero Section */}

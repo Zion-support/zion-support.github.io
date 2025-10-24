@@ -1,7 +1,5 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
 import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Cloud, Server, Database, Lock} from 'lucide-react';
 
 const CloudServicesPage: React.FC = () => {
@@ -100,10 +98,7 @@ const CloudServicesPage: React.FC = () => {
   return (
 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Cloud Services - Zion Tech Group | Cloud Solutions & Migration</title>
-      </div><Helmet>
-        </Helmet><title>Cloud Services - Zion Tech Group | Cloud Solutions & Migration</title>
+      <title>Cloud Services - Zion Tech Group | Cloud Solutions & Migration</title>
         <meta name="description" content="Expert cloud services including migration, infrastructure, security, and database solutions. Transform your business with our cloud expertise." />
         <meta name="keywords" content="cloud services, cloud migration, AWS, Azure, GCP, cloud infrastructure, database solutions, cloud security" />
         <meta property="og: title" content="Cloud Services - Zion Tech Group" />,
@@ -268,7 +263,6 @@ export default CloudServicesPage;
 
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react'
 const CloudServicesPage: React.FC = () => {
 const features = [
@@ -305,12 +299,6 @@ const features = [
   ]
   return (
     <React.Fragment>
-      <Helmet>
-        <title>Cloud Services | Zion Tech Group</title>
-        <meta name="description" content="Professional cloud services by Zion Tech Group. Advanced cloud solutions for your business." />
-        <meta name="keywords" content="cloud services, cloud infrastructure, cloud solutions, Zion Tech Group" />
-      </Helmet>
-
       <Navigation />
 
       {/* Hero Section */}

@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import {CheckCircle, ArrowRight, Phone, Mail, Shield, Brain, Globe, Zap} from 'lucide-react';
 const BlockchainPage: React.FC = () => {
   const features = [
@@ -155,17 +154,7 @@ const BlockchainPage: React.FC = () => {
   return (
     <>
   </>
-      <Helmet>
-        <title>Blockchain Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive blockchain solutions including smart contracts, DeFi protocols, NFT marketplaces, and enterprise blockchain applications." />
-        <meta name="keywords" content="blockchain development, smart contracts, DeFi, NFTs, enterprise blockchain, Web3" />
-        <title>Blockchain Solutions | Zion Tech Group</title>
-    'Proven track record of success'
-  ]
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      </div><Helmet>
-        </Helmet><title>Blockchain Solutions | Zion Tech Group</title>
+      <title>Blockchain Solutions | Zion Tech Group</title>
         <meta name="description" content="Professional Blockchain Solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="blockchain solutions, blockchain technology, IT services, Zion Tech Group, smart contracts" />
       </Helmet>

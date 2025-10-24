@@ -1,20 +1,14 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 const ApiDevelopmentPage: React.FC = () => {
-  return(<>)
-      <Helmet />
-        <title>API Development - Zion Tech Group</title>
-        <meta name="description" content="Professional API development services including RESTful APIs, GraphQL, microservices, and API integration solutions for modern applications." />
-        <meta name="keywords" content="API development, RESTful APIs, GraphQL, microservices, API integration, web services" />
-      </Helmet>
+  return (
+    <>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">API Development;</h1>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Build robust, scalable APIs that power your applications with our comprehensive;</p>
+            <h1 className="text-5xl font-bold text-white mb-6">API Development</h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Build robust, scalable APIs that power your applications with our comprehensive development services.</p>
               API development services including RESTful APIs, GraphQL, and microservices.
             </p>
           </div>

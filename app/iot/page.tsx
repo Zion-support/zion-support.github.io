@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import {CheckCircle, Star, Wifi, Shield, Zap, Target, BarChart, Cpu, Sparkles} from 'lucide-react';
 const IoTPage: React.FC = () => {
     const iotServices = [
@@ -165,12 +164,6 @@ const IoTPage: React.FC = () => {
   return (
     <>
   </>
-      <Helmet>
-        <title>IoT Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive IoT solutions including smart cities, industrial IoT, smart agriculture, and connected device management." />
-        <meta name="keywords" content="IoT services, smart cities, industrial IoT, smart agriculture, connected devices, Internet of Things" />
-      </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50">
         {/* Hero Section */}</div>
         <section$1>
@@ -201,9 +194,7 @@ return(<>)
 const categories = [...new Set(iotServices.map(service => service.category))]
 return (
     <>
-      <Helmet>
-        <title>IoT Services - Zion Tech Group</title>
-        </Helmet><title>IoT Services - Zion Tech Group</title>
+      <title>IoT Services - Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>

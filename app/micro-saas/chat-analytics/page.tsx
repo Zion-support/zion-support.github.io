@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import {Settings, ArrowRight} from 'lucide-react';
 const MicroSaaSPage: React.FC = () => {
     const serviceName = 'chat-analytics';
@@ -13,12 +12,6 @@ return(<>,)
   return (
     <>
   </>
-      <Helmet>
-        <title>{title} | Zion Tech Group - Micro SaaS Solutions</title>
-        <meta name="description" content={`Powerful ${title.toLowerCase()} micro SaaS solution for modern businesses.`} />
-        <link rel="canonical" href={`https://ziontechgroup.com/micro-saas/${serviceName}`} />
-      </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <section$1>
         <div$2></div>
@@ -97,7 +90,6 @@ export default MicroSaaSPage;
 }
 export default MicroSaaSPage
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import { Settings, ArrowRight } from 'lucide-react'
 const MicroSaaSPage: React.FC = () => {
   const serviceName = 'chat-analytics'

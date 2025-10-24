@@ -1,23 +1,24 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe} from 'lucide-react';
 const AnalyticsToolsPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
       title: 'AI-Powered Analytics',
-      description: 'Advanced AI technology to transform your data analysis and business intelligence',},
+      description: 'Advanced AI technology to transform your data analysis and business intelligence'
+    },
     {icon: Zap,
       title: 'Real-Time Processing',
-      description: 'Lightning-fast data processing and real-time analytics for optimal insights',},
+      description: 'Lightning-fast data processing and real-time analytics for optimal insights'
+    },
     {icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards for your data',},
+      description: 'Bank-level security with encryption and compliance standards for your data'
+    },
     {icon: Globe,
       title: 'Global Scalability',
-      description: 'Worldwide deployment and support for international business analytics',}];
-  ];];];
+      description: 'Worldwide deployment and support for international business analytics',}
   ]
   const benefits = [
     'Advanced AI-powered data analysis',
@@ -36,14 +37,7 @@ const AnalyticsToolsPage: React.FC = () => {
       <Helmet />
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Analytics Tools | Zion Tech Group</title>
-    'Proven track record of success'
-  ]
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      </div><Helmet>
-        </Helmet><title>Analytics Tools | Zion Tech Group</title>
+      <title>Analytics Tools | Zion Tech Group</title>
         <meta name="description" content="Professional Analytics Tools services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="analytics tools, AI solutions, IT services, Zion Tech Group, data analytics" />
       </Helmet>

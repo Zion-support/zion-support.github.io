@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
@@ -93,12 +92,6 @@ const IoTPlatformPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>IoT Platform - Zion Tech Group | Internet of Things Solutions</title>
-        <meta name="description" content="Build and scale IoT solutions with our comprehensive platform. Connect, manage, and analyze millions of devices with secure, reliable IoT technology." />
-        <meta name="keywords" content="IoT platform, internet of things, device management, IoT analytics, smart devices, edge computing, IoT security" />
-      </Helmet>
-      
       <Navigation />
       
       {/* Hero Section */}

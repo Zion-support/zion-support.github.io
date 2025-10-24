@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import {Mail,}
   Target,
   CheckCircle,
@@ -64,8 +63,7 @@ return(<>)
   ]
 return (
     <>
-      <Helmet>
-        </Helmet><title>Email Marketing Automation - Zion Tech Group | Marketing Platform</title>
+      <title>Email Marketing Automation - Zion Tech Group | Marketing Platform</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>

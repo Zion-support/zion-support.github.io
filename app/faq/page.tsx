@@ -1,10 +1,7 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
 const FAQPage: React.FC = () => {
 'use client';
 import React, {useState}from 'react';
-import { Helmet } from 'react-helmet-async';
 import {ChevronDown, ChevronUp} from 'lucide-react';
 const FAQPage: React.FC = () => {
   const [openItems, setOpenItems] = useState<number[]>([]);
@@ -70,11 +67,6 @@ const FAQPage: React.FC = () => {
   return (
     <>
   </>
-      <Helmet>
-        <title>Frequently Asked Questions - Zion Tech Group</title>
-        <meta name="description" content="Find answers to common questions about our AI and IT solutions, services, development process, and how we can help transform your business." />
-      </Helmet>
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -103,8 +95,7 @@ const FAQPage: React.FC = () => {
                 </div>
         <title>FAQ - Zion Tech Group | Frequently Asked Questions</title>
     </number><React.Fragment>
-      </React><Helmet>
-        </Helmet><title>FAQ - Zion Tech Group | Frequently Asked Questions</title>
+      </React><title>FAQ - Zion Tech Group | Frequently Asked Questions</title>
         <meta name="description" content="Find answers to frequently asked questions about our AI and IT services, pricing, implementation, and support." />
         <meta name="keywords" content="FAQ, frequently asked questions, AI services, IT services, support, pricing" />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

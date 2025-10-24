@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import {Shield, FileText, Users, Lock, BarChart, CheckCircle, ArrowRight, Zap, Brain} from 'lucide-react';
 const MedicalRecordsManagerPage: React.FC = () => {
   const features = [
@@ -26,11 +25,7 @@ const MedicalRecordsManagerPage: React.FC = () => {
   return(<React.Fragment>)</React.Fragment>
       <Helmet />
     <>
-      <Helmet>
-        <title>Medical Records Manager | Zion Tech Group - Secure Healthcare Data Management</title>
-    <React.Fragment>
-      </React><Helmet>
-        </Helmet><title>Medical Records Manager | Zion Tech Group - Secure Healthcare Data Management</title>
+      <title>Medical Records Manager | Zion Tech Group - Secure Healthcare Data Management</title>
         <meta name="description" content="Secure, HIPAA-compliant medical records management system with AI-powered insights. Streamline healthcare data management and improve patient care." />
         <meta name="keywords" content="medical records management, HIPAA compliance, healthcare data, patient records, medical software, healthcare analytics" />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
