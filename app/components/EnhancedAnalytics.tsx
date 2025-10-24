@@ -33,7 +33,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     if (isLoaded && typeof window !== 'undefined') {
       // Track event with analytics service
       if (process.env.NODE_ENV === 'development') {
-        console.log('Analytics Event:', event, properties);
+        // Log analytics events in development
+        // console.log('Analytics Event:', event, properties);
       }
     }
   };
