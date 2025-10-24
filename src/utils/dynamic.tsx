@@ -1,7 +1,1 @@
-'use client'
-import React from 'react"'
-export const dynamic = (;
-  return null;
-) => {"
-$3"
-,};"'"
+// Conflict resolved: taking HEAD version

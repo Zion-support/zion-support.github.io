@@ -1,3 +1,1 @@
-'use client';
-      // Add loading = "lazy;"
-      // Add decoding="async;"
+// Conflict resolved: taking HEAD version

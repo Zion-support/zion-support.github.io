@@ -17,10 +17,5 @@ Contact Us"
             <ArrowRight className="w-5 h-5 ml-2 /">
           </Link>
       </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-9 f8a: temp-problematic/page.tsx)
   )"
-",;"
-};"'"
-  )"
-"}";'"
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
+// Conflict resolved: taking HEAD version

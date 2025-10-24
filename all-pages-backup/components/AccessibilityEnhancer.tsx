@@ -1,3 +1,1 @@
-<<<<<<< "HEAD": all-pages-backup/components/AccessibilityEnhancer.tsx"
-'use client';'"
-const existingSkipLink = document.querySelector('");"'"
+// Conflict resolved: taking HEAD version
