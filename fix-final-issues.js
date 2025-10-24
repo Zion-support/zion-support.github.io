@@ -4,16 +4,7 @@ const path = require('path');
 // Function to fix duplicate exports and remaining JSX issues
 function fixFile(filePa, t, h) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-    
-    // Fix duplicate default exports
-    const exportMatches = content.match(/export default [^;]+;/g);
-    if (exportMatches && exportMatches.length > 1) {
-      // Keep only the first export
-      const firstExport = exportMatches[0];
-      content = content.replace(/export default [^;]+;/g, '');
-      content += '\n' + firstExport;
+
       modified = true;
     }
     

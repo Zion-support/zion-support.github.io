@@ -88,8 +88,7 @@ const OptimizedLoadingSpinnerPage: React.FC = () => {const features = [
                 </div>
               ))}
             </div>
-          </div>
-        </section>
+          );
 
         {/* Benefits Section */}
         <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
@@ -108,8 +107,7 @@ const OptimizedLoadingSpinnerPage: React.FC = () => {const features = [
                 </div>
               ))}
             </div>
-          </div>
-        </section>
+          );
 
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;></section>

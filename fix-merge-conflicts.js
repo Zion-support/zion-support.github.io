@@ -64,7 +64,7 @@ function findTsxFiles(d, i, r) {
 const appDir = path.join(__dirname, 'app');
 const files = findTsxFiles(appD, i, r);
 
-console.log(`Found ${files.length} TypeScript files to check`);
+console.log(`Found ${filesWithConflicts.length} files with merge conflicts`);
 
 let fixedCount = 0;
 for (const file of files) {

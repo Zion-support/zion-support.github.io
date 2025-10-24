@@ -57,6 +57,12 @@ const ErrorBoundaryPage: React.FC = () => {const features = [
               <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
                 Learn More
               </button>
+              <Link
+                to="/"
+                className="block w-full border-2 border-red-600 text-red-600 hover:bg-red-50 font-semibold py-3 px-6 rounded-lg transition-colors"
+              >
+                Go to Homepage
+              </Link>
             </div>
           </div>
         </section>
@@ -86,10 +92,12 @@ const ErrorBoundaryPage: React.FC = () => {const features = [
                     ))}
                   </ul>
                 </div>
-              ))}
-            </div>
+                </details>
+              )}
           </div>
-        </section>
+        </div>
+      );
+    }
 
         {/* Benefits Section */}
         <section className=&quot;py-20 px-4 bg-white/5&quot;></section>

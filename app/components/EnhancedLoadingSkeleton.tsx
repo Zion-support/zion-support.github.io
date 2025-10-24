@@ -30,4 +30,4 @@ const EnhancedLoadingSkeletonPage: React.FC = () => {
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ]
-}
+

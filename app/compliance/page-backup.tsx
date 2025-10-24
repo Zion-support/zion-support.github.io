@@ -86,34 +86,6 @@ const PageBackupPage: React.FC = () => {
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300 group">
                 <div className="mb-6">
                   {feature.icon}
-=======
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-const PageBackupPage: React.FC="()" => {const features: ";",;
-      title: &apos;AI-Powered Analysis&apos;,;
-      description: &apos;Advanced AI algorithms provide intelligent insights and recommendations.&apos;,}
-      benefits: [&apos;Smart recommendations&apos;, &apos;Predictive analytics&apos;, &apos;Automated insights&apos;, &apos;Real-time analysis&apos;]
-    },
-    {icon: BarChart,;
-      title: &apos;Advanced Analytics&apos;,;
-      description: &apos;Comprehensive analytics dashboard with real-time data visualization.&apos;,}
-      benefits: [&apos;Real-time dashboards&apos;, &apos;Custom reports&apos;, &apos;Data visualization&apos;, &apos;Performance metrics&apos;]
-    },
-    {icon: Target,;
-      title: &apos;Precision Targeting&apos;,;
-      description: &apos;Target specific goals and objectives with precision and accuracy.&apos;,}
-      benefits: [&apos;Goal tracking&apos;, &apos;Performance optimization&apos;, &apos;Strategic planning&apos;, &apos;Success metrics&apos;]
-    },
-    {icon: TrendingUp,;
-      title: &apos;Growth Optimization&apos;,;
-      description: &apos;Optimize your business growth with data-driven strategies.&apos;,}
-      benefits: [&apos;Growth strategies&apos;, &apos;Market analysis&apos;, &apos;Competitive insights&apos;, &apos;ROI optimization&apos;]
-    }
-  ];
-  return (
-    <>
-      
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="relative py-20 px-4 overflow-hidden">

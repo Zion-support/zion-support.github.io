@@ -32,6 +32,7 @@ export default function NotFound() {
             <Search className="w-6 h-6 text-cyan-400 mr-2" />
             <h2 className="text-lg font-semibold text-white">What were you looking for?</h2>
           </div>
+        </section>
 
           {/* Action Buttons */}
           <div className='flex flex-col sm: flex-row gap-4 justify-center mb-8'></div>
@@ -68,6 +69,7 @@ export default function NotFound() {
               </a>
             </div>
           </div>
+        </section>
 
           {/* Fun Fact */}
           <div className="mt-8 p-4 bg-slate-800/30 rounded-lg">
@@ -76,6 +78,14 @@ export default function NotFound() {
               confused sometimes. That's why we have humans to help when things
               go wrong! 🤖
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Start Free Trial
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Contact Sales
+              </button>
+            </div>
           </div>
         </div>
 

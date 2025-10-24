@@ -157,10 +157,7 @@ const ContentPromotionBanner: React.FC = () => {const benefits: ";"
                     ))}
                   </ul>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
+              </div>
 
         {/* Benefits Section */}
         <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
@@ -177,10 +174,7 @@ const ContentPromotionBanner: React.FC = () => {const benefits: ";"
                   <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
                   <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
+              )}
 
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -197,6 +191,17 @@ const ContentPromotionBanner: React.FC = () => {const benefits: ";"
               <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;></button>
                 Schedule Demo
             </div>
+
+            {/* Close button */}
+            <button
+              onClick={handleClose}
+              className={`ml-6 p-2 rounded-full hover:bg-white hover:bg-opacity-20 transition-colors ${banner.textColor}`}
+              aria-label="Close banner"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
           </div>
         </div>
       <div className=&quot;text-center&quot;></div>
