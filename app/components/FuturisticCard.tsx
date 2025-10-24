@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw     } from 'lucide-react';
@@ -71,12 +70,6 @@ go wrong! 🤖
 ,}
 export default getVariantStyles
     </div>
-=======
-
-interface FuturisticCardProps {
-  className?: string;
-  children?: React.ReactNode;
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36
 }
 
 const FuturisticCard: React.FC<FuturisticCardProps> = ({ className = '', children }) => {

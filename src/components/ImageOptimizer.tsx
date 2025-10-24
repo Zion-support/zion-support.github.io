@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 &quot;use client&quot;
 import React from &quot;react&quot;
 import { Helmet } from &quot;react-helmet-async&quot
@@ -35,13 +34,6 @@ return (
     <h1 className=&quot;text-5 xl md: text-6 xl font-bold text-white mb-6&quot;>ImageOptimizer</h1>p className=&quot;text-xl text-gray-300 max-w-3 xl mx-auto leading-relaxed&quot;>Professional ImageOptimizer services tailored to your business needs.</p>p>/div>/div>/section>/div>,)
       </div>
   )
-=======
-import React from 'react';
-
-interface ImageOptimizerProps {
-  className?: string;
-  children?: React.ReactNode;
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36
 }
 
 const ImageOptimizer: React.FC<ImageOptimizerProps> = ({ className = '', children }) => {

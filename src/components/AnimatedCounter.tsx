@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState, useRef } from "react";
 import { useIntersectionObserver     } from '../hooks/useIntersectionObserver';
 interface AnimatedCounterProps {
@@ -57,16 +56,4 @@ return (
 }
 ;
 export default AnimatedCounter;
-=======
-'use client';
-import React from 'react';
-
-export default function AnimatedCounter() {
-  return (
-    <div>
-      <h1>AnimatedCounter</h1>
-      <p>AnimatedCounter content.</p>
-    </div>
-  );
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36
 }

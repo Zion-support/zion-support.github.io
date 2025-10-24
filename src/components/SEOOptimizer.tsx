@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client'
 "use client";
 import React, { useEffect } from 'react';
@@ -197,16 +196,4 @@ export default SEOOptimizer;
 export default SEOOptimizerPage;
 }
 export default SEOOptimizerPage;
-=======
-'use client';
-import React from 'react';
-
-export default function SEOOptimizer() {
-  return (
-    <div>
-      <h1>SEOOptimizer</h1>
-      <p>SEOOptimizer content.</p>
-    </div>
-  );
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36
 }

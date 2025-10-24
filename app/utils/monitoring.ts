@@ -13,7 +13,6 @@ export const monitoring = {
     }
   }
 };
-<<<<<<< HEAD
 };
 export interface ErrorReport {
 ;
@@ -197,5 +196,3 @@ console.log('Performance metrics: ',{)
 const monitoring = new MonitoringService();
 export default monitoring;
 }
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36

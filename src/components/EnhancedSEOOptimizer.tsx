@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet     } from 'react-helmet-async';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp     } from 'lucide-react';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe     } from 'lucide-react';
@@ -79,12 +78,6 @@ Ready to Boost Your SEO Rankings?</h2>/h2>p className="text-xl text-gray-600 mb-
 Let's discuss how our SEO optimizer can help you achieve better search engine visibility.</p>/p>button className="bg-blue-600 hove,r: bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center mx-auto">
 Start Your Journey</button>ArrowRightclassNam e="w-8 h-8" / />
           </button>/div>/section>/div>,)
-=======
-
-interface EnhancedSEOOptimizerProps {
-  className?: string;
-  children?: React.ReactNode;
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36
 }
 
 const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({ className = '', children }) => {

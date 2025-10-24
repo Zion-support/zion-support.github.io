@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw     } from 'lucide-react';
@@ -72,22 +71,3 @@ go wrong! 🤖
   )
 ,}
 export default errorHandler}
-=======
-
-interface ErrorHandlerProps {
-  error: Error;
-  resetError: () => void;
-}
-
-const ErrorHandler: React.FC<ErrorHandlerProps> = ({ error, resetError }) => {
-  return (
-    <div className="error-handler">
-      <h2>An error occurred</h2>
-      <p>{error.message}</p>
-      <button onClick={resetError}>Try again</button>
-    </div>
-  );
-};
-
-export default ErrorHandler;
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36

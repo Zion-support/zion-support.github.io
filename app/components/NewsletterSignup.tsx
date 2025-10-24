@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { useState     } from 'react';
 import { AlertCircle     } from 'lucide-react';
 interface NewsletterSignupProps {
@@ -79,14 +78,6 @@ return (,
             {content}</div>/div>/div>/div>
 return content
 }
-=======
-
-export default function NewsletterSignup() {
-  return (
-    <div>
-      <h1>NewsletterSignup</h1>
-      <p>NewsletterSignup content.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36
     </div>
   );
 }

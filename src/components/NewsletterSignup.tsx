@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 import { useState     } from 'react';
 import { Mail, S,end, AlertCircle, CheckCircle     } from 'lucide-react';
 interface NewsletterSignupProps {
@@ -116,15 +115,4 @@ export default NewsletterSignup;
 return content
 }
 export default NewsletterSignup;
-=======
-import React from 'react';
-
-export default function NewsletterSignup() {
-  return (
-    <div>
-      <h1>NewsletterSignup</h1>
-      <p>NewsletterSignup content.</p>
-    </div>
-  );
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36
 }

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const Sidebar: React.FC = () => {
 return (
     <div>Helmet />
@@ -37,21 +36,4 @@ Join thousands of businesses already using Sidebar to transform their operations
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}  )}
-=======
-import React from 'react';
-
-interface SidebarProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const Sidebar: React.FC<SidebarProps> = ({ className = '', children }) => {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-};
-
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36
 export default Sidebar;

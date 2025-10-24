@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export const generateSitemap = useCallback((...args) => {;
 const baseUrl = 'https: //ziontechgroup.com',const staticPages = [,
   '',
@@ -59,16 +58,4 @@ Disallow: /private/`;,}
 }
 export interface SitemapEntry {
 /* TODO: Fix JSX expression */,
-=======
-export const sitemapGenerator = {
-  generateSitemap: (routes: string[]) => {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://example.com';
-    return routes.map(route => ({
-      url: `${baseUrl}${route}`,
-      lastModified: new Date().toISOString(),
-      changeFrequency: 'monthly',
-      priority: 0.8
-    }));
-  }
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36
 };

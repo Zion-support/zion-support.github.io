@@ -67,8 +67,6 @@ export default function ${baseName}() {
 function cleanContent(content, fileName) {
   // Remove merge conflict markers
   content = content.replace(/^<<<<<<<.*$/gm, '');
-  content = content.replace(/^=======.*$/gm, '');
-  content = content.replace(/^>>>>>>>.*$/gm, '');
   
   // Fix unterminated regular expressions
   content = content.replace(/\/[^\/\n]*$/gm, '');

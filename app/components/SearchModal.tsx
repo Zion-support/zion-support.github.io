@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import Link from 'next/link';
 import { ArrowRight     } from 'lucide-react';
 export default function SearchModal() {
@@ -17,20 +16,3 @@ Contact Us</Link>ArrowRightclassNam e="w-5 h-5 ml-2" / />
 ,}
     </div>/div>/div>
 }
-=======
-
-interface SearchModalProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const SearchModal: React.FC<SearchModalProps> = ({ className = '', children }) => {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export default SearchModal;
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36

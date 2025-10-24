@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const Loading: React.FC = () => {
 return (
     <div>Helmet />
@@ -38,13 +37,6 @@ Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}  )}
 export default Loading;
-=======
-import React from 'react';
-
-interface LoadingProps {
-  className?: string;
-  children?: React.ReactNode;
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36
 }
 
 const Loading: React.FC<LoadingProps> = ({ className = '', children }) => {

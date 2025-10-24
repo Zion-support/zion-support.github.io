@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react'
 interface ServiceTemplateProps {
@@ -7,14 +6,6 @@ title: string;, description: string
 const ServiceTemplat,e: React.FC<ServiceTemplateProps> = ({
 title,description
 features
-=======
-import React from 'react';
-
-interface ServiceTemplateProps {
-  title: string;
-  description: string;
-  features: string[];
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36
 }
 
 const ServiceTemplate: React.FC<ServiceTemplateProps> = ({ 
@@ -22,7 +13,6 @@ const ServiceTemplate: React.FC<ServiceTemplateProps> = ({
   description, 
   features 
 }) => {
-<<<<<<< HEAD
 return (</ServiceTemplateProps>,
     <div className="min-h-screen bg-gray-50 py-12"></div>,
     <div className="max-w-4 xl mx-auto px-4"></div>,
@@ -37,19 +27,4 @@ return (</ServiceTemplateProps>,
     <span className="text-gray-700">{feature}</span>/div>
             ))}
             </div>/div>/div>}
-=======
-  return (
-    <div className="service-template">
-      <h1>{title}</h1>
-      <p>{description}</p>
-      <ul>
-        {features.map((feature, index) => (
-          <li key={index}>{feature}</li>
-        ))}
-      </ul>
-    </div>
-  );
-};
-
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36
 export default ServiceTemplate;

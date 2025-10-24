@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import Head from "next/head";
 import { Loader2, CheckCircle     } from 'lucide-react';
 export const PageLoader: React.FC = () => {
@@ -185,20 +184,3 @@ return (
 ,}
 export default PageLoader;
 }
-=======
-
-interface LoadingStatesProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const LoadingStates: React.FC<LoadingStatesProps> = ({ className = '', children }) => {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export default LoadingStates;
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const NeonButton: React.FC = () => {
 return (
     <div>Helmet />
@@ -37,21 +36,4 @@ Join thousands of businesses already using NeonButton to transform their operati
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}  )}
-=======
-import React from 'react';
-
-interface NeonButtonProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const NeonButton: React.FC<NeonButtonProps> = ({ className = '', children }) => {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-};
-
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36
 export default NeonButton;

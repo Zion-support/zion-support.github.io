@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw     } from 'lucide-react';
@@ -72,20 +71,3 @@ go wrong! 🤖
   )
 ,}
 export default preloadCriticalResources}
-=======
-
-interface EnhancedPerformanceOptimizerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const EnhancedPerformanceOptimizer: React.FC<EnhancedPerformanceOptimizerProps> = ({ className = '', children }) => {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export default EnhancedPerformanceOptimizer;
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36

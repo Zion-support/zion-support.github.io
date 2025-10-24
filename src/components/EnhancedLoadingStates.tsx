@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet     } from 'react-helmet-async';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp     } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -164,20 +163,3 @@ export const ContentSkeleton: React.FC = () => (,<div className=&quot;space-y-6 
     <div className=&quot;h-4 bg-gray-600 rounded w-2/3&quot; / /></div>/div>,)
 </pclassName>/divclassName>
 }
-=======
-
-interface EnhancedLoadingStatesProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const EnhancedLoadingStates: React.FC<EnhancedLoadingStatesProps> = ({ className = '', children }) => {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export default EnhancedLoadingStates;
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36

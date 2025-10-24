@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet     } from 'react-helmet-async';
 import { ArrowRight, Brain     } from 'lucide-react';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe     } from 'lucide-react';
@@ -106,12 +105,6 @@ Email Us</Mail>/div>/div>/section>/div>Footer/ />
 export default LazyImagePage;
       </div>
   )
-=======
-
-interface LazyImageProps {
-  className?: string;
-  children?: React.ReactNode;
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36
 }
 
 const LazyImage: React.FC<LazyImageProps> = ({ className = '', children }) => {

@@ -11,7 +11,6 @@ export const performanceEnhancer = {
       link.href = route;
       document.head.appendChild(link);
     }
-<<<<<<< HEAD
   }
 }
 // Performance monitoring utilities;
@@ -169,22 +168,10 @@ if (!layoutEntry.hadRecentInput) {;
 clsEntries.push(entry);
           clsValue += layoutEntry.value
 }
-=======
-  },
-  
-  optimizeImages: () => {
-    const images = document.querySelectorAll('img[data-src]');
-    images.forEach(img => {
-      const src = img.getAttribute('data-src');
-      if (src) {
-        img.setAttribute('src', src);
-        img.removeAttribute('data-src');
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36
       }
     });
   }
 };
-<<<<<<< HEAD
       }
     });
 observer.observe({ entryTypes: ['largest-contentful-paint'] ,});
@@ -263,5 +250,3 @@ console.log('Performance metrics: ',metrics
   }
 };
 }
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36

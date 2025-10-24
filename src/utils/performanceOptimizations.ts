@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import { useCallback, useMemo, useState, useEffect } from 'react';
 // Performance optimization utilities
@@ -259,18 +258,3 @@ export default performanceOptimizations
 ;
 export default performanceOptimizations;
 }}
-=======
-export const performanceOptimizations = {
-  debounce: (func: Function, wait: number) => {
-    let timeout: NodeJS.Timeout;
-    return function executedFunction(...args: any[]) {
-      const later = () => {
-        clearTimeout(timeout);
-        func(...args);
-      };
-      clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
-    };
-  }
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36

@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet     } from 'react-helmet-async';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp     } from 'lucide-react';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe     } from 'lucide-react';
@@ -28,20 +27,3 @@ const benefits = [
     'Gain competitive advantage with advanced technology';
 export default FuturisticHeroPage;
 }
-=======
-
-interface FuturisticHeroProps {
-  className?: string;
-}
-
-const FuturisticHero: React.FC<FuturisticHeroProps> = ({ className }) => {
-  return (
-    <div className={className}>
-      <h2>FuturisticHero</h2>
-      <p>FuturisticHero component for enhanced functionality.</p>
-    </div>
-  );
-};
-
-export default FuturisticHero;
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36

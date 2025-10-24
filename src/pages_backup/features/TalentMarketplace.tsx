@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw     } from 'lucide-react';
@@ -75,16 +74,3 @@ go wrong! 🤖
 ,}
 export default TalentMarketplacePage;
 }
-=======
-
-const TalentMarketplace: React.FC = () => {
-  return (
-    <div className="talent-marketplace">
-      <h1>Talent Marketplace</h1>
-      <p>Connect with top talent worldwide.</p>
-    </div>
-  );
-};
-
-export default TalentMarketplace;
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36

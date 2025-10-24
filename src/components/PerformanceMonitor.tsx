@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect } from 'react'
 interface PerformanceMonitorProps {
 performanceData?: any
@@ -274,16 +273,3 @@ export default PerformanceMonitor;
 export default PerformanceMonitor;
 </divclassName>/h3 className>/divclassName>
 }}
-=======
-'use client';
-import React from 'react';
-
-export default function PerformanceMonitor() {
-  return (
-    <div>
-      <h1>PerformanceMonitor</h1>
-      <p>PerformanceMonitor content.</p>
-    </div>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36

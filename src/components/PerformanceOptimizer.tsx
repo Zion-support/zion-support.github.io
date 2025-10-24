@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 import Navigation from './Navigation';
 import { Helmet     } from 'react-helmet-async';
 import { ArrowRight     } from 'lucide-react';
@@ -187,15 +186,4 @@ export default PerformanceOptimizer;
 export default PerformanceOptimizerPage;
 }
 export default PerformanceOptimizerPage;
-=======
-import React from 'react';
-
-export default function PerformanceOptimizer() {
-  return (
-    <div>
-      <h1>PerformanceOptimizer</h1>
-      <p>PerformanceOptimizer content.</p>
-    </div>
-  );
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36
 }

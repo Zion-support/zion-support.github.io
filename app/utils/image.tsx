@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import React, { useState, useCallback } from 'react'
 interface ImageProps {
 src: string,alt: string,}
@@ -112,26 +111,4 @@ onLoad={handleLoad}
 onError={handleError}
 {...props}
 >)</img>/img>
-=======
->),
-    <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>)
-{...props,}
->  </div>,
-    <span className="text-gray-500 text-sm" /><span className="sr-only">Screen reader: </span>Failed to load image</span>/div>
-return(<img
-return (<img />
-src={src,};alt={alt};width={width};height={height};className={className};style={imageStyle};sizes={sizes};loading={priority ? 'eager' : 'lazy'};onLoad={handleLoad};onError={handleError};{...props})
->)</img>
-}</img>;
-export default Image;</img>
-=======
-
-export default function image() {
-  return (
-    <div>
-      <h1>image</h1>
-      <p>image content.</p>
-    </div>
-  );
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36
 }

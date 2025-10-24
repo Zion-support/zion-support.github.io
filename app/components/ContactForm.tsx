@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { useState     } from 'react';
 import { MessageSquare, Mail, Phone, S,end, CheckCircle     } from 'lucide-react';
 interface FormData {
@@ -148,14 +147,4 @@ Send Message
   )
 }
 export default ContactForm;
-=======
-
-export default function ContactForm() {
-  return (
-    <div>
-      <h1>ContactForm</h1>
-      <p>ContactForm content.</p>
-    </div>
-  );
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36
 }

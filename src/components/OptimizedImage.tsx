@@ -1,7 +1,6 @@
 import React from 'react';
 
 interface OptimizedImageProps {
-<<<<<<< HEAD
   className?: string
 }
 }
@@ -88,18 +87,3 @@ export default OptimizedImagePage;
 }
 export default OptimizedImagePage;
 }
-=======
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '', children }) => {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export default OptimizedImage;
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36

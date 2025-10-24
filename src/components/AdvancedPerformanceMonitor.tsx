@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet     } from 'react-helmet-async';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle     } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -126,12 +125,6 @@ Contact Sales</button>/button>/div>/div>/section>
 className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hove,r: bg-blue-700 transition-colors" />
 Contact Us</Link>ArrowRightclassNam e="ml-2 h-4 w-4" / />
           </Link>/div>/div>/div>,)
-=======
-
-interface AdvancedPerformanceMonitorProps {
-  className?: string;
-  children?: React.ReactNode;
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36
 }
 
 const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({ className = '', children }) => {

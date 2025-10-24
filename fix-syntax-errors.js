@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 
-<<<<<<< HEAD
 // Function to fix common syntax errors
 function fixSyntaxErrors(content) {
   let fixed = content;
@@ -57,13 +56,6 @@ function fixSyntaxErrors(content) {
 
 // Function to process all TypeScript/TSX files
 function processFiles(dir) {
-=======
-// Function to clean up common syntax errors
-function cleanFileContent(content) {
-  // Remove merge conflict markers
-  content = content.replace(/^<<<<<<<.*$/gm, '');
-  content = content.replace(/^=======.*$/gm, '');
-  content = content.replace(/^>>>>>>>.*$/gm, '');
   
   // Fix duplicate imports
   content = content.replace(/import React from ['"]react['"];\s*import React from ['"]react['"]/g, "import React from 'react'");
@@ -352,7 +344,6 @@ function processFiles() {
 }
 
 function processDirectory(dir) {
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36
   const files = fs.readdirSync(dir);
   
   files.forEach(file => {
@@ -360,7 +351,6 @@ function processDirectory(dir) {
     const stat = fs.statSync(filePath);
     
     if (stat.isDirectory()) {
-<<<<<<< HEAD
       processFiles(filePath);
     } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
       try {
@@ -373,31 +363,11 @@ function processDirectory(dir) {
         }
       } catch (error) {
         console.error(`Error processing ${filePath}:`, error.message);
-=======
-      processDirectory(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
-      try {
-        let content = fs.readFileSync(filePath, 'utf8');
-        const originalContent = content;
-        
-        // Clean the content
-        content = cleanFileContent(content);
-        content = fixSpecificFile(filePath, content);
-        
-        // Only write if content changed
-        if (content !== originalContent) {
-          fs.writeFileSync(filePath, content, 'utf8');
-          console.log('Fixed: ' + filePath);
-        }
-      } catch (error) {
-        console.error('Error processing ' + filePath + ':', error.message);
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36
       }
     }
   });
 }
 
-<<<<<<< HEAD
 // Process app directory
 console.log('Fixing syntax errors in app directory...');
 processFiles('./app');
@@ -411,8 +381,3 @@ console.log('Fixing syntax errors in components directory...');
 processFiles('./components');
 
 console.log('Syntax error fixes completed!');
-=======
-// Run the script
-processFiles();
-console.log('Syntax error fixing completed!');
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36

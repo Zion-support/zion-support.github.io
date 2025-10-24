@@ -1,7 +1,6 @@
 import React from 'react';
 
 interface NeonButtonProps {
-<<<<<<< HEAD
 children?: React.ReactNode
 className?: string
 title?: string
@@ -145,18 +144,3 @@ export default NeonButton;
 export default NeonButton;
 </spanclassName>/di>
 }
-=======
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const NeonButton: React.FC<NeonButtonProps> = ({ className = '', children }) => {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export default NeonButton;
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36
