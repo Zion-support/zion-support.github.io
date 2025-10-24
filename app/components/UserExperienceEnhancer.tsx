@@ -15,9 +15,9 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
   children,
   enableAccessibility: _enableAccessibility = true,
   enableKeyboardNavigation = true,
-  enableAnimations = true,
-  enableHoverEffects = true,
-  enableFocusManagement = true,
+  enableAnimations: _enableAnimations = true,
+  enableHoverEffects: _enableHoverEffects = true,
+  enableFocusManagement: _enableFocusManagement = true,
   enableHighContrast: _enableHighContrast = false,
   enableReducedMotion: _enableReducedMotion = false
 }) => {
@@ -82,7 +82,7 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
     <div 
       className={`user-experience-enhancer ${
         isReducedMotion ? 'reduced-motion' : ''
-      } ${isHighContrast ? 'high-contrast' : ''}`}
+      } ${_isHighContrast ? 'high-contrast' : ''}`}
     >
       {children}
     </div>

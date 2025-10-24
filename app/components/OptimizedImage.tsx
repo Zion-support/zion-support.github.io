@@ -15,7 +15,7 @@ interface OptimizedImageProps {
   blurDataURL?: string;
 }
 
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
+const _OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,
   width = 800,
@@ -42,4 +42,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     </div>
   );
 };
+
+export default _OptimizedImage;
 

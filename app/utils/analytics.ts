@@ -1,5 +1,4 @@
 // Analytics utilities for tracking user interactions and performance
-import React from "react";
 
 interface AnalyticsEvent {
   category: string;
@@ -30,3 +29,19 @@ class Analytics {
 
     // In production, you would send this to your analytics service
     if (process.env.NODE_ENV === "production") {
+      console.log('Analytics event:', event);
+    }
+  }
+
+  // Get all tracked events
+  getEvents(): AnalyticsEvent[] {
+    return [...this.events];
+  }
+
+  // Clear all events
+  clearEvents(): void {
+    this.events = [];
+  }
+}
+
+export default Analytics;
