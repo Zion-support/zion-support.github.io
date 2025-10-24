@@ -3,9 +3,10 @@
 import React, { createContext, useContext, useEffect } from 'react'
 
 interface AnalyticsContextType {
-  track: (_event: string, _properties?: Record<string, unknown>) => void
-  identify: (_userId: string, _traits?: Record<string, unknown>) => void
-  page: (_name: string, _properties?: Record<string, unknown>) => void
+  track: (_event: string, _properties?: Record<string, unknown>) => void;
+  identify: (_userId: string, _traits?: Record<string, unknown>) => void;
+  page: (_name: string, _properties?: Record<string, unknown>) => void;
+}
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined)
 
@@ -16,7 +17,8 @@ export const useAnalytics = () => {
   return context}
 
 interface AnalyticsProviderProps {
-  children: React.ReactNode
+  children: React.ReactNode;
+}
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   useEffect(() => {
@@ -35,10 +37,11 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
           ((window as unknown as { gtag: { q?: unknown[] } }).gtag.q = (window as unknown as { gtag: { q?: unknown[] } }).gtag.q || []).push(_args)}
         (window as unknown as { gtag?: (..._args: unknown[]) => void }).gtag = (window as unknown as { gtag?: (..._args: unknown[]) => void }).gtag || gtagFunction
         window.gtag = window.gtag || gtagFunction
-        window.gtag('js', new Date())
-        window.gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX')
-    
-  }, [])
+        window.gtag('js', new Date());
+        window.gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX');
+      }
+    }
+  }, []);
 
   const track = (_event: string, _properties?: Record<string, unknown>) => {
     if (typeof window !== 'undefined') {

@@ -1,17 +1,15 @@
-import React from 'react';
-
 'use client';
 
 import React, { useState, useEffect } from 'react';
 
 interface EnhancedAccessibilityEnhancerProps {
-  children: React.ReactNode
-  enableKeyboardNavigation?: boolean
-  enableScreenReaderSupport?: boolean
-  enableHighContrast?: boolean
-  enableFocusManagement?: boolean
-  enableVoiceNavigation?: boolean
-
+  children: React.ReactNode;
+  enableKeyboardNavigation?: boolean;
+  enableScreenReaderSupport?: boolean;
+  enableHighContrast?: boolean;
+  enableFocusManagement?: boolean;
+  enableVoiceNavigation?: boolean;
+}
 
 const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps> = ({
   children,
@@ -55,15 +53,15 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
       // Add skip links functionality
       if (event.key === 'Enter' && event.target instanceof HTMLElement) {
         if (event.target.getAttribute('data-skip-link')) {
-          const targetId = event.target.getAttribute('data-skip-link')
-          const target = document.getElementById(targetId || '')
+          const targetId = event.target.getAttribute('data-skip-link');
+          const target = document.getElementById(targetId || '');
           if (target) {
-            target.focus()
-            target.scrollIntoView({ behavior: 'smooth' })
-          
-        
-      
-    }
+            target.focus();
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      }
+    };
 
     const handleMouseDown = () => {
       document.body.classList.remove('keyboard-navigation')
@@ -76,7 +74,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
       document.removeEventListener('keydown', handleKeyDown)
       document.removeEventListener('mousedown', handleMouseDown)
     }
-  }, [isHighContrast, isReducedMotion])
+  }, [isHighContrast, isReducedMotion]);
 
   const toggleHighContrast = () => {
     setIsHighContrast(!isHighContrast)

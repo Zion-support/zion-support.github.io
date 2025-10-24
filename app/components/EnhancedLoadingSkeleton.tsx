@@ -1,12 +1,14 @@
+'use client';
+
 import React from 'react';
 
 interface EnhancedLoadingSkeletonProps {
-  lines?: number
-  showAvatar?: boolean
-  showImage?: boolean
-  height?: string
-  className?: string
-
+  lines?: number;
+  showAvatar?: boolean;
+  showImage?: boolean;
+  height?: string;
+  className?: string;
+}
 
 const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({
   lines = 3,

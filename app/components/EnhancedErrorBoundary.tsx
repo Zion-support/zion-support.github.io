@@ -4,9 +4,10 @@ import React, { Component, ReactNode } from 'react'
 import { AlertTriangle, RefreshCw, Home, Phone } from 'lucide-react'
 
 interface Props {
-  children: ReactNode
-  fallback?: ReactNode
-  onError?: (_error: Error, _errorInfo: React.ErrorInfo) => void
+  children: ReactNode;
+  fallback?: ReactNode;
+  onError?: (_error: Error, _errorInfo: React.ErrorInfo) => void;
+}
 
 
 interface State {
