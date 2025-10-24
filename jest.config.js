@@ -1,19 +1,58 @@
-const nextJest = require('next/jest')
-
-const createJestConfig = nextJest({
-  // Provide the path to your Next.js app to load next.config.js and .env files
-  dir: './',
-})
-
-// Add any custom config to be passed to Jest
-const customJestConfig = {
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+export default {
   testEnvironment: 'jsdom',
-  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/$1',
+    '^@/(.*)$': '<rootDir>/app/$1',
+    '^@/components/(.*)$': '<rootDir>/app/components/$1',
+    '^@/pages/(.*)$': '<rootDir>/app/$1',
+    '^@/utils/(.*)$': '<rootDir>/utils/$1',
+    '^@/types/(.*)$': '<rootDir>/types/$1',
+    '^@/hooks/(.*)$': '<rootDir>/hooks/$1',
+    '^@/config/(.*)$': '<rootDir>/config/$1',
+    '^@/data/(.*)$': '<rootDir>/data/$1',
+    '^@/content/(.*)$': '<rootDir>/content/$1'
   },
-}
+  transform: {
+    '^.+\\.(ts|tsx)$': ['ts-jest', {
+      tsconfig: 'tsconfig.json',
+      useESM: true
+    }],
+    '^.+\\.(js|jsx)$': 'babel-jest'
+    '^.+\\.(ts|tsx|js|jsx)$': ['babel-jest', {
+      presets: [
+        ['@babel/preset-env', { targets: { node: 'current' } }],
+        ['@babel/preset-react', { runtime: 'automatic' }],
+        '@babel/preset-typescript'
+      ]
+    }]
 
-// createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
-module.exports = createJestConfig(customJestConfig)
+  },
+  testMatch: [
+    '<rootDir>/__tests__/**/*.(ts|tsx|js|jsx)',
+    '<rootDir>/app/**/*.(test|spec).(ts|tsx|js|jsx)'
+  ],
+  collectCoverageFrom: [
+    'app/**/*.{ts,tsx}',
+    '!app/**/*.d.ts',
+    '!app/**/*.stories.{ts,tsx}',
+    '!app/**/index.{ts,tsx}'
+  ],
+  coverageDirectory: 'coverage',
+  coverageReporters: ['text', 'lcov', 'html'],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
+  testPathIgnorePatterns: [
+    '<rootDir>/node_modules/',
+    '<rootDir>/dist/',
+    '<rootDir>/.next/',
+    '<rootDir>/out/'
+  ],
+  transformIgnorePatterns: [
+    'node_modules/(?!(.*\\.mjs$|lucide-react|framer-motion))'
+  ],
+  extensionsToTreatAsEsm: ['.ts', '.tsx'],
+  globals: {
+    'ts-jest': {
+      useESM: true
+    }
+  }
+};

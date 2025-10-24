@@ -16,48 +16,45 @@ function fixMergeConflicts(filePath) {
     
     console.log(`Fixing merge conflicts in: ${filePath}`);
     
-    // Remove merge conflict markers and keep the HEAD version
+    // Split by merge conflict markers
     const lines = content.split('\n');
-    const fixedLines = [];
+    const result = [];
     let inConflict = false;
-    let keepHead = false;
+    let conflictType = null;
     
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       
       if (line.includes('<<<<<<< HEAD')) {
         inConflict = true;
-        keepHead = true;
+        conflictType = 'head';
         continue;
       }
       
       if (line.includes('=======')) {
-        keepHead = false;
+        conflictType = 'separator';
         continue;
       }
       
       if (line.includes('>>>>>>>')) {
         inConflict = false;
-        keepHead = false;
+        conflictType = null;
         continue;
       }
       
-      if (inConflict && !keepHead) {
-        continue; // Skip lines in the non-HEAD section
+      if (inConflict) {
+        // Keep HEAD version (before =======)
+        if (conflictType === 'head') {
+          result.push(line);
+        }
+        // Skip the other version (after =======)
+      } else {
+        result.push(line);
       }
-      
-      fixedLines.push(line);
     }
     
-    const fixedContent = fixedLines.join('\n');
-    
-    // Clean up any remaining syntax issues
-    const cleanedContent = fixedContent
-      .replace(/;\s*$/gm, '') // Remove trailing semicolons
-      .replace(/\s+$/gm, '') // Remove trailing whitespace
-      .replace(/\n\s*\n\s*\n/g, '\n\n'); // Remove multiple empty lines
-    
-    fs.writeFileSync(filePath, cleanedContent);
+    // Write the cleaned content back
+    fs.writeFileSync(filePath, result.join('\n'), 'utf8');
     return true;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
@@ -77,7 +74,7 @@ function findTsxFiles(dir) {
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
         traverse(fullPath);
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx')) {
         files.push(fullPath);
       }
     }
@@ -87,25 +84,27 @@ function findTsxFiles(dir) {
   return files;
 }
 
-// Main execution
+// Find all files with potential merge conflicts
 const appDir = path.join(__dirname, 'app');
 const files = findTsxFiles(appDir);
 
-console.log(`Found ${files.length} TypeScript files to check`);
-
 let fixedCount = 0;
+let totalConflicts = 0;
+
+console.log('Scanning for merge conflicts...');
+
 for (const file of files) {
-  if (fixMergeConflicts(file)) {
-    fixedCount++;
+  try {
+    const content = fs.readFileSync(file, 'utf8');
+    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
+      totalConflicts++;
+      if (fixMergeConflicts(file)) {
+        fixedCount++;
+      }
+    }
+  } catch (error) {
+    console.error(`Error processing ${file}:`, error.message);
   }
 }
 
-console.log(`Fixed merge conflicts in ${fixedCount} files`);
-
-// Also check the root App.tsx
-if (fixMergeConflicts(path.join(__dirname, 'App.tsx'))) {
-  fixedCount++;
-  console.log('Fixed merge conflicts in App.tsx');
-}
-
-console.log(`Total files fixed: ${fixedCount}`);
+console.log(`\nFixed ${fixedCount} out of ${totalConflicts} files with merge conflicts.`);

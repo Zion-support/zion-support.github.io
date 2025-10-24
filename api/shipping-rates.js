@@ -1,55 +1,48 @@
-import fs from 'fs';
-import path from 'path';
-
-const dir = path.join(process.cwd(), 'data');
-const file = path.join(dir, 'shipping-rates.json');
-
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
+    res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
   }
 
-  const { destination, weight } = req.body;
-  if (!destination || !weight) {
-    return res.status(400).json({ error: 'Destination and weight are required' });
-  }
-
-  let rates = [];
   try {
-    const data = fs.readFileSync(file, 'utf8');
-    rates = JSON.parse(data);
-  } catch (error) {
-    console.error('Error:', error);
-    console.error('Error reading existing rates:', error);
-  }
+    const { 
+      destination, 
+      weight, 
+      dimensions, 
+      serviceType = 'standard' 
+    } = req.body || {};
 
-  const distanceMultiplier = destination === 'US' ? 1 : 2;
-  const baseRate = 10;
-  const rate = baseRate + (weight * 0.5 * distanceMultiplier);
 
-  try {
-    const newRate = {
-      id: Date.now().toString(),
-      destination,
-      weight,
-      rate,
-      createdAt: new Date().toISOString()
-    };
 
-    rates.push(newRate);
-    fs.writeFileSync(file, JSON.stringify(rates, null, 2));
+    // Mock shipping rates calculation
+    // In a real application, you would integrate with shipping providers like UPS, FedEx, etc.
+    const baseRate = 10; // Base rate in USD
+    const weightMultiplier = weight * 0.5; // $0.50 per pound
+    const distanceMultiplier = destination === 'US' ? 1 : 2; // International shipping costs more
+    
+    const shippingRates = [
+      {
+        service: 'Standard',
+        cost: Math.round((baseRate + weightMultiplier) * distanceMultiplier * 100) / 100,
+        estimatedDays: destination === 'US' ? '3-5' : '7-14'
+      },
+        service: 'Express',
+        cost: Math.round((baseRate + weightMultiplier) * distanceMultiplier * 1.5 * 100) / 100,
+        estimatedDays: destination === 'US' ? '1-2' : '3-7'
+        service: 'Overnight',
+        cost: Math.round((baseRate + weightMultiplier) * distanceMultiplier * 2 * 100) / 100,
+        estimatedDays: destination === 'US' ? '1' : '2-3'
+    ];
 
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
+    res.statusCode = 200;
+    res.end(JSON.stringify({
       success: true,
-      rate: rate,
-      message: 'Shipping rate calculated successfully'
+      rates: shippingRates
     }));
+
   } catch (error) {
-    console.error('Error:', error);
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to save rate' }));
-  }
-}
+    console.error('Shipping rates error:', error);
+    res.statusCode = 500;
+    res.end(JSON.stringify({ error: 'Internal server error' }));
