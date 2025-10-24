@@ -10,7 +10,7 @@ interface OptimizedImageProps {
 }
 const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {
   return (
-    <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>OptimizedImage | Zion Tech Group</title>
         <meta name=&quot;description&quot; content=&quot;Professional OptimizedImage services by Zion Tech Group. Advanced AI and IT solutions for your business.&quot; />

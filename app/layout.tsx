@@ -8,7 +8,7 @@ export const metadata = {
   description: 'Advanced AI and IT solutions for modern businesses',
 };
 
-export default function RootLayout({
+function RootLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -19,3 +19,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+export default RootLayout;

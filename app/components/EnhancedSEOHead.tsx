@@ -14,8 +14,8 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({ className = '' }) => 
     <>
       <Helmet>
         <title>{title}</title>
-        <meta name=&quot;description&quot; content=&quot;Zion Tech Group&quot; />
-        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, EnhancedSEOHead, AI solutions, intelligent automation&quot; />
+        <meta name="description" content="Zion Tech Group" />
+        <meta name="keywords" content="AI, artificial intelligence, EnhancedSEOHead, AI solutions, intelligent automation" />
       </Helmet>
       <Navigation />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>

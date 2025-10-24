@@ -37,10 +37,32 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology',
-                </div>
-              ))}
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
+            {title}
+          </h1>
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
+            {description}
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {features.map((feature, index) => (
+            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <div className="text-center">
+                <div className="text-2xl mb-4">🚀</div>
+                <h3 className="text-xl font-bold text-white mb-4">{feature}</h3>
+              </div>
             </div>
-          </div>
-            <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;></div>
+          ))}
+        </div>
+
+        <div className="text-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             </div>
           </div>
