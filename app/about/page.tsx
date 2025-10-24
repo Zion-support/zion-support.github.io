@@ -74,14 +74,10 @@ const AboutPage = () => {
                 <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-300">{stat.label}</div>
               </div>
-            </section>
+            ))}
           </div>
-        </main>
-        <Footer />
-      </div>
-    </>
-  );
-};
+        </div>
+      </section>
 
       {/* Values Section */}
       <section className="py-20">

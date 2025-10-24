@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 
-const Page: React.FC = () => {
+const Navigation: React.FC = () => {
   return (
     <nav className="bg-white shadow-lg">
       <div className="max-w-7xl mx-auto px-4">

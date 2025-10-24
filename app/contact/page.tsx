@@ -25,81 +25,113 @@ const Page: React.FC = () => {
                 Contact Us
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Ready to transform your business with AI? Get in touch with our expert team today.
+                Ready to transform your business? Get in touch with our team of experts for personalized AI and IT solutions.
               </p>
             </section>
 
-            {/* Contact Info */}
+            {/* Contact Information */}
             <section className="mb-16">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="cyber-card p-6 text-center">
-                  <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                  <h3 className="text-xl font-bold text-white mb-3">Phone</h3>
-                  <p className="text-gray-300">(302) 464-0950</p>
+                <div className="text-center">
+                  <div className="inline-flex p-4 rounded-full bg-blue-600/20 mb-4">
+                    <Phone className="w-8 h-8 text-blue-400" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
+                  <p className="text-gray-300">+1 (555) 123-4567</p>
                 </div>
-                <div className="cyber-card p-6 text-center">
-                  <Mail className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                  <h3 className="text-xl font-bold text-white mb-3">Email</h3>
-                  <p className="text-gray-300">kleber@ziontechgroup.com</p>
+                <div className="text-center">
+                  <div className="inline-flex p-4 rounded-full bg-blue-600/20 mb-4">
+                    <Mail className="w-8 h-8 text-blue-400" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
+                  <p className="text-gray-300">info@ziontechgroup.com</p>
                 </div>
-                <div className="cyber-card p-6 text-center">
-                  <Clock className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                  <h3 className="text-xl font-bold text-white mb-3">Hours</h3>
-                  <p className="text-gray-300">Mon-Fri: 9AM-6PM EST</p>
+                <div className="text-center">
+                  <div className="inline-flex p-4 rounded-full bg-blue-600/20 mb-4">
+                    <MapPin className="w-8 h-8 text-blue-400" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
+                  <p className="text-gray-300">123 Tech Street, San Francisco, CA 94105</p>
                 </div>
               </div>
             </section>
 
             {/* Contact Form */}
-            <section className="mb-16">
-              <div className="cyber-card p-12 max-w-4xl mx-auto">
+            <section className="max-w-4xl mx-auto">
+              <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700">
                 <h2 className="text-3xl font-bold text-white text-center mb-8">
                   Send us a Message
                 </h2>
                 <form className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-white mb-2">Name</label>
+                      <label htmlFor="firstName" className="block text-sm font-medium text-gray-300 mb-2">
+                        First Name
+                      </label>
                       <input
                         type="text"
-                        className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/50"
-                        placeholder="Your Name"
+                        id="firstName"
+                        name="firstName"
+                        className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        placeholder="John"
                       />
                     </div>
                     <div>
-                      <label className="block text-white mb-2">Email</label>
+                      <label htmlFor="lastName" className="block text-sm font-medium text-gray-300 mb-2">
+                        Last Name
+                      </label>
                       <input
-                        type="email"
-                        className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/50"
-                        placeholder="your@email.com"
+                        type="text"
+                        id="lastName"
+                        name="lastName"
+                        className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        placeholder="Doe"
                       />
                     </div>
                   </div>
                   <div>
-                    <label className="block text-white mb-2">Subject</label>
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                      Email
+                    </label>
                     <input
-                      type="text"
-                      className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/50"
-                      placeholder="How can we help?"
+                      type="email"
+                      id="email"
+                      name="email"
+                      className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      placeholder="john@example.com"
                     />
                   </div>
                   <div>
-                    <label className="block text-white mb-2">Message</label>
+                    <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+                      Company
+                    </label>
+                    <input
+                      type="text"
+                      id="company"
+                      name="company"
+                      className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      placeholder="Your Company"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                      Message
+                    </label>
                     <textarea
+                      id="message"
+                      name="message"
                       rows={6}
-                      className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/50"
+                      className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="Tell us about your project..."
                     ></textarea>
                   </div>
-                  <div className="text-center">
-                    <button
-                      type="submit"
-                      className="cyber-button px-8 py-4 text-lg inline-flex items-center space-x-2"
-                    >
-                      <Send className="w-5 h-5" />
-                      <span>Send Message</span>
-                    </button>
-                  </div>
+                  <button
+                    type="submit"
+                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
+                  >
+                    Send Message
+                    <Send className="ml-2 w-5 h-5" />
+                  </button>
                 </form>
               </div>
             </section>
@@ -107,8 +139,8 @@ const Page: React.FC = () => {
         </main>
         <Footer />
       </div>
-      
-      <Footer />
-    </div>
-  )
-}
+    </>
+  );
+};
+
+export default Page;
