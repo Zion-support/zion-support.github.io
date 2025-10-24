@@ -67,8 +67,7 @@ interface PerformanceEnhancerProps {
 const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = (_props) => {
 
   return (
-    
-    <div></div>
+    <div>
       {/* Component content */}
     </div>
   )};

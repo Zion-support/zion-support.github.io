@@ -39,17 +39,17 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
     
     if (isHighContrast) {
       document.documentElement.classList.add('high-contrast')
-    
+    }
     
     if (isReducedMotion) {
       document.documentElement.classList.add('reduced-motion')
-    
+    }
 
     // Add keyboard navigation support
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Tab') {
         document.body.classList.add('keyboard-navigation')
-      
+      }
       
       // Add skip links functionality
       if (event.key === 'Enter' && event.target instanceof HTMLElement) {
@@ -59,9 +59,9 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
           if (target) {
             target.focus()
             target.scrollIntoView({ behavior: 'smooth' })
-          
-        
-      
+          }
+        }
+      }
     }
 
     const handleMouseDown = () => {
