@@ -35,17 +35,31 @@ const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
   const optimizedSrc = src; // Simplified for now
 
   const placeholderSrc = placeholder && (width && height) 
+<<<<<<< HEAD
     ? `data:image/svg+xml;base64,${Buffer.from(`<svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#f3f4f6"/></svg>`).toString('base64')}`
+=======
+    ? `data:image/svg+xml;base64,${btoa(`<svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#f3f4f6"/></svg>`)}`
+>>>>>>> origin/main
     : undefined;
 
   useEffect(() => {
     if (lazy && imgRef.current && typeof window !== 'undefined' && 'IntersectionObserver' in window) {
+<<<<<<< HEAD
       // Simplified lazy loading
+=======
+>>>>>>> origin/main
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const img = entry.target as HTMLImageElement;
+<<<<<<< HEAD
             img.src = optimizedSrc;
+=======
+            if (img.dataset.src) {
+              img.src = img.dataset.src;
+              img.removeAttribute('data-src');
+            }
+>>>>>>> origin/main
             observer.unobserve(img);
           }
         });
@@ -72,7 +86,11 @@ const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
       >
         <div className="text-center text-gray-500">
           <svg className="w-8 h-8 mx-auto mb-2" fill="currentColor" viewBox="0 0 20 20">
+<<<<<<< HEAD
             <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm1 2h12l-4 8-3-6-2 4-3-6z" clipRule="evenodd" />
+=======
+            <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm1 2h10l-4 8-3-6-2 4-3-6z" clipRule="evenodd" />
+>>>>>>> origin/main
           </svg>
           <span className="text-sm">Failed to load</span>
         </div>

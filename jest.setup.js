@@ -1,39 +1,46 @@
+import React from 'react';
 import '@testing-library/jest-dom';
+
+// Mock react-router-dom
+jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
+  useNavigate: () => jest.fn(),
+  useLocation: () => ({ pathname: '/' }),
+  Link: ({ children, to, ...props }) => <a href={to} {...props}>{children}</a>,
+  BrowserRouter: ({ children }) => <div>{children}</div>,
+  Routes: ({ children }) => <div>{children}</div>,
+  Route: ({ element }) => element,
+}));
 
 // Mock Next.js router
 jest.mock('next/router', () => ({
-  useRouter() {
-    return {
-      route: '/',
-      pathname: '/',
-      query: {},
-      asPath: '/',
-      push: jest.fn(),
-      pop: jest.fn(),
-      reload: jest.fn(),
-      back: jest.fn(),
-      prefetch: jest.fn().mockResolvedValue(undefined),
-      beforePopState: jest.fn(),
-      events: {
-        on: jest.fn(),
-        off: jest.fn(),
-        emit: jest.fn(),
-      },
-      isFallback: false,
-    };
-  },
+  useRouter: () => ({
+    push: jest.fn(),
+    pathname: '/',
+    query: {},
+    asPath: '/',
+  }),
 }));
 
-// Mock Next.js Image component
-jest.mock('next/image', () => {
-  return function MockedImage({ src, alt, ...props }) {
-    return <img src={src} alt={alt} {...props} />;
-  };
-});
-
-// Mock Next.js Link component
+// Mock Next.js Link
 jest.mock('next/link', () => {
-  return function MockedLink({ children, href, ...props }) {
+  return ({ children, href, ...props }) => {
     return <a href={href} {...props}>{children}</a>;
   };
 });
+
+// Mock IntersectionObserver
+global.IntersectionObserver = class IntersectionObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+
+// Mock ResizeObserver
+global.ResizeObserver = class ResizeObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};

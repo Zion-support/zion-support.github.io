@@ -23,7 +23,7 @@ export const optimizeImageUrl = (
   // For external images, use a placeholder service or CDN
   if (src.startsWith('http')) {
     // If using a CDN like Cloudinary, Vercel, or similar
-    const params = new URLSearchParams()
+    const params = new URLSearchParams();
     if (quality) params.set('q', quality.toString())
     if (format) params.set('f', format)
     if (width) params.set('w', width.toString())
@@ -67,7 +67,7 @@ export const lazyLoadImage = (img: HTMLImageElement): void => {
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          const target = entry.target as HTMLImageElement
+          const target = entry.target as HTMLImageElement;
           if (target.dataset.src) {
             target.src = target.dataset.src
             target.removeAttribute('data-src')

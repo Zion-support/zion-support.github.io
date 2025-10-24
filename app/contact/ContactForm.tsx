@@ -38,6 +38,11 @@ const ContactForm: React.FC = memo(() => {
     },
   });
 
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    handleChange(name as 'name' | 'email' | 'message', value);
+  };
+
   return (
     <div>
       <h2 className="text-2xl font-semibold text-gray-900 mb-6">Send us a Message</h2>

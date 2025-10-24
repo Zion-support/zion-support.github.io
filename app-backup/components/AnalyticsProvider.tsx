@@ -10,7 +10,7 @@ const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
   undefined()
 )
 export const useAnalytics = () => {}
-  const context = useContext(AnalyticsContext)
+  const context = useContext(AnalyticsContext);
   if (!context) {
     throw new Error(&quot;useAnalytics must be used within an AnalyticsProvider&quot;)
   }

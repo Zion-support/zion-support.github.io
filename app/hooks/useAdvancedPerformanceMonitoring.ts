@@ -41,8 +41,8 @@ export const useAdvancedPerformanceMonitoring = (options: PerformanceMonitoringO
     ttfb: null,
     navigation: null
   })
-  const observerRef = useRef<PerformanceObserver | null>(null)
-  const intervalRef = useRef<NodeJS.Timeout | null>(null)
+  const observerRef = useRef<PerformanceObserver | null>(null);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
   const updateMetrics = useCallback((newMetrics: Partial<PerformanceMetrics>) => {
     metricsRef.current = { ...metricsRef.current, ...newMetrics }
     onMetricsUpdate?.(metricsRef.current)
@@ -71,7 +71,7 @@ export const useAdvancedPerformanceMonitoring = (options: PerformanceMonitoringO
   }, [enableWebVitals, updateMetrics])
   const measureNavigationTiming = useCallback(() => {
     if (!enableNavigationTiming || typeof window === 'undefined') return
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (navigation) {
       const navigationMetrics = {
         loadTime: navigation.loadEventEnd - navigation.loadEventStart,
@@ -93,7 +93,7 @@ export const useAdvancedPerformanceMonitoring = (options: PerformanceMonitoringO
   }, [enableNavigationTiming, updateMetrics])
   const measureResourceTiming = useCallback(() => {
     if (!enableResourceTiming || typeof window === 'undefined') return
-    const resources = performance.getEntriesByType('resource')
+    const resources = performance.getEntriesByType('resource');
     const resourceMetrics = {
       totalResources: resources.length,
       totalSize: 0,
@@ -116,7 +116,7 @@ export const useAdvancedPerformanceMonitoring = (options: PerformanceMonitoringO
   }, [enableResourceTiming])
   const measureMemoryUsage = useCallback(() => {
     if (!enableMemoryMonitoring || typeof window === 'undefined' || !('memory' in performance)) return
-    const memory = (performance as any).memory
+    const memory = (performance as any).memory;
     const memoryMetrics = {
       usedJSHeapSize: memory.usedJSHeapSize,
       totalJSHeapSize: memory.totalJSHeapSize,
@@ -128,7 +128,7 @@ export const useAdvancedPerformanceMonitoring = (options: PerformanceMonitoringO
   }, [enableMemoryMonitoring])
   const measureNetworkInfo = useCallback(() => {
     if (!enableNetworkMonitoring || typeof window === 'undefined' || !('connection' in navigator)) return
-    const connection = (navigator as any).connection
+    const connection = (navigator as any).connection;
     const networkInfo = {
       effectiveType: connection.effectiveType,
       downlink: connection.downlink,
@@ -192,7 +192,7 @@ export const useAdvancedPerformanceMonitoring = (options: PerformanceMonitoringO
     startPerformanceObserver,
     startPeriodicMonitoring
   ])
-  const getCurrentMetrics = useCallback(() => metricsRef.current, [])
+  const getCurrentMetrics = useCallback(() => metricsRef.current, []);
   const markPerformance = useCallback((name: string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       performance.mark(name)
