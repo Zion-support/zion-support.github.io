@@ -63,8 +63,8 @@ fixed = fixed.replace(/<\/div>\s*\)\s*$/, '</>\n  )');
 return fixed}
 // Function to process a single file;
 function fixJSXStructure(filePath) {"
-  try {"'"
-    let content = fs.readFileSync(filePath, 'utf8");
+  try {"'";
+let content = fs.readFileSync(filePath, 'utf8");
     let originalContent = content;"
     "
     // Fix malformed JSX structure"'"
@@ -92,23 +92,23 @@ function fixJSXStructure(filePath) {"
     // Fix missing semicolons in JSX"'"
     content = content.replace(/(\w+);\s*$/gm, '$1");
     
-    // Fix missing closing braces
-    const openBraces = (content.match(/\{/g) || []).length;"
-    const closeBraces = (content.match(/\}/g) || []).length;"
+    // Fix missing closing braces;
+const openBraces = (content.match(/\{/g) || []).length;";
+const closeBraces = (content.match(/\}/g) || []).length;"
     if (openBraces > closeBraces) {"'"
       content += '\n'.repeat(openBraces - closeBraces) + '}";
     }
     
-    // Fix missing closing parentheses
-    const openParens = (content.match(/\(/g) || []).length;"
-    const closeParens = (content.match(/\)/g) || []).length;"
+    // Fix missing closing parentheses;
+const openParens = (content.match(/\(/g) || []).length;";
+const closeParens = (content.match(/\)/g) || []).length;"
     if (openParens > closeParens) {"'"
       content += ')".repeat(openParens - closeParens);
     }
     
-    // Fix missing closing brackets
-    const openBrackets = (content.match(/\[/g) || []).length;"
-    const closeBrackets = (content.match(/\]/g) || []).length;"
+    // Fix missing closing brackets;
+const openBrackets = (content.match(/\[/g) || []).length;";
+const closeBrackets = (content.match(/\]/g) || []).length;"
     if (openBrackets > closeBrackets) {"'"
       content += ']".repeat(openBrackets - closeBrackets);
     }
@@ -182,8 +182,8 @@ function fixJSXStructure(filePath) {;
 function findAndFixFiles(dir) {
 //Function to fix JSX structure issues
 function fixJSXStructure(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
+  try {;
+let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
     
     //Fix JSX structure issues
@@ -636,10 +636,10 @@ function fixJSXStructure(filePath) {
 }
 
 //Function to recursively find and fix all TypeScript/JavaScript files
-function fixAllFiles(dir) {
-  const files = fs.readdirSync(dir);
+function fixAllFiles(dir) {;
+const files = fs.readdirSync(dir);
   let fixedCount = 0;
-  
+  ;
 const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
 ;
@@ -656,8 +656,8 @@ function findAndFixFiles(dir) {;
     if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {;
       findAndFixFiles(filePath)} else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js')) {;
       fixJSXStructure(filePath);
-  files.forEach(file => {
-    const filePath = path.join(dir, file);
+  files.forEach(file => {;
+const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
     
     if (stat.isDirectory()) {
@@ -675,7 +675,7 @@ function findAndFixFiles(dir) {;
   return fixedCount;
 }
 // Main execution;
-const appDir = '/workspace/app'
+const appDir = '/workspace/app';
 const tsxFiles = findTsxFiles(appDir);
 ;`
 console.log(`Found ${tsxFiles.length} .tsx files to process`);

@@ -1,18 +1,9 @@
-const LoadingSpinner: React.FC = () => {
-return(<div>
-interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg'
-  className?: string}
-        <title>LoadingSpinner</title>
-        <meta name="description" content="Advanced LoadingSpinner solution for modern businesses." / />
-        <meta name="keywords" content="AI,artificial, intelligence, LoadingSpinner, AI, solutions, intelligent automation" /  />
-  return (
-    <div className={`flex justify-center items-center ${className}`}>
-      <div;`"
+'use client';
+const
+;      <div;`"
         className={`${sizeClasses[size]} border-2 border-gray-300 border-t-purple-600 rounded-full animate-spin`}
         role="status"
-        aria-label="Loading"
-      >
+        aria-label="Loading">
         <span className="sr-only">Loading...</span>
       </div>
     </div>
@@ -31,7 +22,7 @@ Advanced LoadingSpinner solution for modern businesses.</p>
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"  />
 Get Started</button>
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover: "bg-emerald-400 hove","
+              <button className="border border-emerald-400 text-emerald-400 hover:"bg-emerald-400 hove","
 r: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"  />
 Learn More</button>
               </button>
@@ -43,7 +34,7 @@ Learn More</button>
               <p className="text-xl text-gray-300 max-w-3 xl mx-auto" /  />
 Discover the powerful features that make LoadingSpinner the perfect solution for your business.</p>
               </>
-    <div className="grid md: "grid-cols-2 l","
+    <div className="grid md:"grid-cols-2 l","
 g: grid-cols-4 gap-8" />,<div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20" />,
     <h1 className="text-xl font-semibold text-white mb-3">AI-Powered</h3>
                 <p className="text-gray-300">Advanced AI algorithms for intelligent automation.</>

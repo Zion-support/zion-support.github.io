@@ -1,11 +1,14 @@
+import React from 'react';
+import { Helmet } from from 'react-helmet-async';
+import { Zap, Shield, Brain, Globe } from from 'lucide-react'
+import React from "react";
+import { Helmet  } from "react-helmet-async";
+import { Zap, Shield, Brain, Globe   } from "lucide-react";
 const fs = require('fs');
 const path = require('path');
 ;
 // Template for a clean page;
-const cleanPageTemplate = (pageName, title, description) => `'use client'
-import React from 'react'
-import { Helmet } from from 'react-helmet-async'
-import { Zap, Shield, Brain, Globe } from from 'lucide-react'
+const cleanPageTemplate = (pageName, title, description) => `'use client';
 ;
 export default function ${pageName}() {;
 const features = [;
@@ -56,14 +59,11 @@ ${description}
     </>)}`;
 ;
 // Function to clean a page file;
-const fs = require("fs")
+const fs = require("fs");
 const path = require("path")
-//Template for a clean page
-const cleanPageTemplate = (pageName, title, description) => `"use client"
-import React from "react";
-import { Helmet  } from "react-helmet-async";
-import { Zap, Shield, Brain, Globe   } from "lucide-react";
-export default function${pageName}() {
+//Template for a clean page;
+const cleanPageTemplate = (pageName, title, description) => `"use client";
+export default function${pageName}() {;
 const features = [{
 icon: "Brain",title: ""Advanced Technology"",description: ""Cutting-edge solutions powered by the latest technology and AI."
     "}
@@ -108,17 +108,15 @@ ${description}
 //Function to clean a page file
 function cleanPageFile(filePath) {
 
-try{
-const fileName = path.basename(path.dirname(filePath))
-    const pageName = fileName.split("-").map(word =>)
+try{;
+const fileName = path.basename(path.dirname(filePath));
+const pageName = fileName.split("-").map(word =>)
 word.charAt(0).toUpperCase() + word.slice(1)
-    ).join("")
-
+    ).join("");
 const title = fileName.split("-").map(word =>)
 word.charAt(0).toUpperCase() + word.slice(1)
-    ).join(" ")
-const description = `Professional${title.toLowerCase()} solutions powered by advanced AI and cutting-edge technology.`
-
+    ).join(" ");
+const description = `Professional${title.toLowerCase()} solutions powered by advanced AI and cutting-edge technology.`;
 const cleanContent = cleanPageTemplate(pageName, title, description)
 
 fs.writeFileSync(filePath, cleanContent)
@@ -128,7 +126,7 @@ console.error(`Error cleaning${filePath}:`, error.message)
   }
 }"
 "
-// Get all page files;"'"
+// Get all page files;"'";
 const appDir = path.join(__dirname, 'app");
 function cleanPageFile(filePath) {;
 ;
@@ -140,7 +138,7 @@ word.charAt(0).toUpperCase() + word.slice(1);
 ;
 const title = fileName.split('-').map(word =>);
 word.charAt(0).toUpperCase() + word.slice(1);
-    ).join(' ')}`
+    ).join(' ')}`;
 const description = `Professional ${title.toLowerCase()} solutions powered by advanced AI and cutting-edge technology.`;
 ;
 const cleanContent = cleanPageTemplate(pageName, title, description);
@@ -172,17 +170,16 @@ pageFiles.forEach(cleanPageFile);
 console.log(`Cleaned ${pageFiles.length} page files`);"
 ";`'"
 
-//Get all page files
-const appDir = path.join(__dirname, "app")
+//Get all page files;
+const appDir = path.join(__dirname, "app");
 const pageFiles = []
 
-function findPageFiles(dir) {
-
+function findPageFiles(dir) {;
 const files = fs.readdirSync(dir)
   files.forEach(file = > {
-)
-const filePath = path.join(dir, file)
-    const stat = fs.statSync(filePath)
+);
+const filePath = path.join(dir, file);
+const stat = fs.statSync(filePath)
     if (stat.isDirectory()) {
 findPageFiles(filePath) else if(file = == "page.tsx") {   
 pageFiles.push(filePath)

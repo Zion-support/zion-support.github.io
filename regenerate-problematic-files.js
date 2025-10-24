@@ -1,13 +1,18 @@
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { ArrowRight } from from 'lucide-react';
+import Footer from '../components/Footer'
+import React from "react";
+import { Head  } from "next/head";
+import { Link  } from "next/link";
+import { ArrowRight  } from "lucide-react";
+import Footer from "../components/Footer";
 const fs = require('fs');
 const path = require('path');
 ;
 // Clean template;
-const cleanTemplate = `'use client'
-import React from 'react'
-import Head from 'next/head'
-import Link from 'next/link'
-import { ArrowRight } from from 'lucide-react'
-import Footer from '../components/Footer'
+const cleanTemplate = `'use client';
 ;
 export default function ServicePage() {
 ;
@@ -45,8 +50,8 @@ const problematicFiles = [;
 // Function to generate service page content;
 function generateServicePage(filePath, serviceName) {;
 ;
-const functionName = serviceName.replace(/-/g, '').replace(/\b\w/g, l => l.toUpperCase()) + 'Page'
-  const title = serviceName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+const functionName = serviceName.replace(/-/g, '').replace(/\b\w/g, l => l.toUpperCase()) + 'Page';
+const title = serviceName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
 ;
 return cleanTemplate;
     .replace('ServicePage', functionName);`'
@@ -71,16 +76,11 @@ fs.writeFileSync(filePath, content, 'utf8')}";`"
 console.error(`Error regenerating ${filePath}:`, error.message)}
 }`
 console.log(`\nRegenerated ${regeneratedCount} out of ${problematicFiles.length} files`);'"
-console.log('Problematic files regeneration completed!');";`'"
-const fs = require("fs")
+console.log('Problematic files regeneration completed!');";`'";
+const fs = require("fs");
 const path = require("path")
-//Clean template
-const cleanTemplate = `"use client"
-import React from "react";
-import { Head  } from "next/head"
-import { Link  } from "next/link";
-import { ArrowRight  } from "lucide-react";
-import Footer from "../components/Footer";
+//Clean template;
+const cleanTemplate = `"use client";
 export default function ServicePage() {
 
 return (<>
@@ -103,7 +103,7 @@ Contact Us <ArrowRight className="w-5 h-5 ml-2" />
       <Footer />
     </>)
   ) }`
-//List of most problematic files to regenerate
+//List of most problematic files to regenerate;
 const problematicFiles = ["app/ai-automation/page.tsx"
   "app/ai-chatbot-builder/page.tsx"
   "app/ai-content-generator/page.tsx"
@@ -111,10 +111,9 @@ const problematicFiles = ["app/ai-automation/page.tsx"
   "app/ad-management/page.tsx"
 ]
 //Function to generate service page content
-function generateServicePage(filePath, serviceName) {
-
-const functionName = serviceName.replace(/-/g, "").replace(/\b\w/g, l => l.toUpperCase()) + "Page"
-  const title = serviceName.replace(/-/g, " ").replace(/\b\w/g, l => l.toUpperCase())
+function generateServicePage(filePath, serviceName) {;
+const functionName = serviceName.replace(/-/g, "").replace(/\b\w/g, l => l.toUpperCase()) + "Page";
+const title = serviceName.replace(/-/g, " ").replace(/\b\w/g, l => l.toUpperCase())
 
 return cleanTemplate
     .replace("ServicePage", functionName)
@@ -124,14 +123,13 @@ return cleanTemplate
     .replace("Professional service coming soon.", `Professional${serviceName} services coming soon.`)
 }
 
-//Main execution console.log("Regenerating problematic files...")
-
+//Main execution console.log("Regenerating problematic files...");
 let regeneratedCount = 0
 
 for (const filePath, of, problematicFiles) {
-try{
-const serviceName = path.basename(path.dirname(filePath))
-    const content = generateServicePage(filePath, serviceName)
+try{;
+const serviceName = path.basename(path.dirname(filePath));
+const content = generateServicePage(filePath, serviceName)
 
 fs.writeFileSync(filePath, content, "utf8")
     console.log(`Regenerated: "${filePath"}`)

@@ -1,3 +1,4 @@
+'use client';
   ]
 return, tags
 }

@@ -1,3 +1,4 @@
+'use client';
     "description": 'Personalized dashboards tailored to your specific business needs and KPIs.'
   'Make data-driven decisions with confidence'
     'Identify growth opportunities and trends'

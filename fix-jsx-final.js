@@ -58,12 +58,12 @@ function fixJSXFinal(filePath) {;
 }
 function findAndFixFiles(dir) {;
   const files = fs.readdirSync(dir);
-const fs = require("fs")
+const fs = require("fs");
 const path = require("path")
 function fixJSXFinal(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, "utf8")
-    let originalContent = content
+  try {;
+let content = fs.readFileSync(filePath, "utf8");
+let originalContent = content
     //Fix the specific JSX structure issue
     content = content.replace(/return \(\s*<div>\s*<Head>/g, "return (\n    <div>\n      <Head>")
     content = content.replace(/<div>\s*<Head>/g, "<div>\n      <Head>")
@@ -86,23 +86,23 @@ function fixJSXFinal(filePath) {
     content = content.replace(/^\s*<\/>/gm, "</>")
     //Fix missing semicolons in JSX
     content = content.replace(/(\w+);\s*$/gm, "$1")
-    //Fix missing closing braces
-    const openBraces = (content.match(/\{/g) || []).length
-    const closeBraces = (content.match(/\}/g) || []).length
+    //Fix missing closing braces;
+const openBraces = (content.match(/\{/g) || []).length;
+const closeBraces = (content.match(/\}/g) || []).length
     if (openBraces > closeBraces) {
       content+= "\n".repeat(openBraces - closeBraces) + "}"
     }
     
-    //Fix missing closing parentheses
-    const openParens = (content.match(/\(/g) || []).length
-    const closeParens = (content.match(/\)/g) || []).length
+    //Fix missing closing parentheses;
+const openParens = (content.match(/\(/g) || []).length;
+const closeParens = (content.match(/\)/g) || []).length
     if (openParens > closeParens) {
       content+= ")".repeat(openParens - closeParens)
     }
     
-    //Fix missing closing brackets
-    const openBrackets = (content.match(/\[/g) || []).length
-    const closeBrackets = (content.match(/\]/g) || []).length
+    //Fix missing closing brackets;
+const openBrackets = (content.match(/\[/g) || []).length;
+const closeBrackets = (content.match(/\]/g) || []).length
     if (openBrackets > closeBrackets) {
       content+= "]".repeat(openBrackets - closeBrackets)
     }
@@ -121,11 +121,11 @@ function fixJSXFinal(filePath) {
   }
 }
 
-function findAndFixFiles(dir) {
-  const files = fs.readdirSync(dir)
-  for (const file of files) {
-    const filePath = path.join(dir, file)
-    const stat = fs.statSync(filePath)
+function findAndFixFiles(dir) {;
+const files = fs.readdirSync(dir)
+  for (const file of files) {;
+const filePath = path.join(dir, file);
+const stat = fs.statSync(filePath)
     if (stat.isDirectory() && !file.startsWith(".") && file !== "node_modules") {
       findAndFixFiles(filePath)
     } else if (file.endsWith(".tsx") || file.endsWith(".ts") || file.endsWith(".js")) {
@@ -160,3 +160,4 @@ console.log('Final JSX fixing completed!');
 ;`'
 
 //Start fixing from the app directory findAndFixFiles("./app") findAndFixFiles("./components") findAndFixFiles("./src") console.log("Final JSX fixing completed!")
+)

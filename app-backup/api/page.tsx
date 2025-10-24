@@ -1,3 +1,4 @@
+'use client';
     "description": 'Comprehensive documentation and SDKs for seamless integration with any platform.'
   'Accelerate development with pre-built APIs'
     'Reduce integration time by 70%'

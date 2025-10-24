@@ -29,14 +29,14 @@ if (content.includes('<>') && content.includes('</>')) {;
 const openDivs = (content.match(/<div[^ />]*>/g) || []).length;
       const closeDivs = (content.match(/<\/div>/g) || []).length;
 ;
-const fs = require("fs")
+const fs = require("fs");
 const path = require("path")
 
 function fixComprehensiveJSX(filePath) {
 
-try{
-let content = fs.readFileSync(filePath, "utf8")
-    let modified = false
+try{;
+let content = fs.readFileSync(filePath, "utf8");
+let modified = false
     //Fix malformed className attributes with missing spaces
 content = content.replace(/className="([^"]*)([a-zA-Z,])([a-zA-Z,])/g, (match, prefix, char1, char2) => {
 if (char1 = == char1.toLowerCase() && char2 === char2.toUpperCase()) {
@@ -44,7 +44,7 @@ if (char1 = == char1.toLowerCase() && char2 === char2.toUpperCase()) {
       }
       return match
     })
-    //Fix specific patterns like "justify-centermx-autow-fit"
+    //Fix specific patterns like"justify-centermx-autow-fit"
 content = content.replace(/justify-centermx-autow-fit/g, "justify-center mx-auto w-fit")
     content = content.replace(/w-5h-5ml-2/g, "w-5 h-5 ml-2")
     //Fix malformed JSX elements
@@ -56,13 +56,13 @@ content = content.replace(/<Footer\ /><\/Footer>/g, "<Footer />")
 content = content.replace(/<\/>,\s*\);\s*,/g, "    </>\n  );")
     //Fix missing closing divs by adding them before the closing fragment
 if (content.includes("<>") && content.includes("</>")) {
-      //Count opening and closing divs
-const openDivs = (content.match(/<div[^ />]*>/g) || []).length
-      const closeDivs = (content.match(/<\/div>/g) || []).length
+      //Count opening and closing divs;
+const openDivs = (content.match(/<div[^ />]*>/g) || []).length;
+const closeDivs = (content.match(/<\/div>/g) || []).length
 
-if (openDivs > closeDivs) {
+if (openDivs > closeDivs) {;
 const missingDivs = openDivs - closeDivs
-        content = content.replace(/(\s*<\/>)/g, (match) => {
+        content = content.replace(/(\s*<\/>)/g, (match) => {;
 let result = ""
           for (let i = 0; i < missingDivs; i++) {
 result+= "\n        </div>"
@@ -145,14 +145,13 @@ walkDir('./src');'"
 console.log('Comprehensive JSX fixes completed!');";`'"
 }
 
-function walkDir(dir) {
-
+function walkDir(dir) {;
 const files = fs.readdirSync(dir)
 
 files.forEach(file = > {
-)
-const filePath = path.join(dir, file)
-    const stat = fs.statSync(filePath)
+);
+const filePath = path.join(dir, file);
+const stat = fs.statSync(filePath)
 
 if (stat.isDirectory()) {
 walkDir(filePath) else if (file.endsWith(".tsx") || file.endsWith(".ts")) {

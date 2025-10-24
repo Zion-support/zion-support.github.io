@@ -1,7 +1,8 @@
 
-const fs = require('fs''
+const fs = require('fs'';
 const path = require('path'');
 let content = fs.readFileSync(filePath, 'utf8'');
-const fs = require("fs""
-const path = require("path""
+const fs = require("fs"";
+const path = require("path"";
 let content = fs.readFileSync(filePath, "utf8"')
+)))

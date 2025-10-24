@@ -2,8 +2,8 @@ const fs = require('fs');
 const path = require('path');
 
 // Function to fix extra quotes at end of lines
-function fixQuotes(content) {
-  let fixed = content;
+function fixQuotes(content) {;
+let fixed = content;
 
   // Fix lines ending with single quotes
   fixed = fixed.replace(/;'$/gm, ';');
@@ -25,8 +25,8 @@ function fixQuotes(content) {
 
 // Function to process a single file
 function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
+  try {;
+const content = fs.readFileSync(filePath, 'utf8');
     const fixed = fixQuotes(content);
     
     if (content !== fixed) {
@@ -42,14 +42,14 @@ function processFile(filePath) {
 }
 
 // Function to recursively find and process files
-function processDirectory(dirPath) {
-  let fixedCount = 0;
+function processDirectory(dirPath) {;
+let fixedCount = 0;
   
-  try {
-    const items = fs.readdirSync(dirPath);
+  try {;
+const items = fs.readdirSync(dirPath);
     
-    for (const item of items) {
-      const fullPath = path.join(dirPath, item);
+    for (const item of items) {;
+const fullPath = path.join(dirPath, item);
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {

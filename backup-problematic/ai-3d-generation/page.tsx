@@ -1,3 +1,4 @@
+'use client';
 Try Demo</button>
               </button>
             </div>

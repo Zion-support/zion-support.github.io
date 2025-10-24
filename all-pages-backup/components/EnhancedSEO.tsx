@@ -1,3 +1,4 @@
+'use client';
     'Real-time processing and analytics'
     'Enterprise-grade security and compliance'
     'Scalable and flexible solutions'

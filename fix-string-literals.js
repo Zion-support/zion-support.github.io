@@ -2,8 +2,8 @@ const fs = require('fs');
 const path = require('path');
 
 // Function to fix unterminated string literals
-function fixStringLiterals(content) {
-  let fixed = content;
+function fixStringLiterals(content) {;
+let fixed = content;
 
   // Fix unterminated string literals in JSX'
   fixed = fixed.replace(/title="([^"]*)\s*$/gm, 'title="$1"');'"
@@ -37,14 +37,14 @@ function fixStringLiterals(content) {
 
   return fixed;
 }
-
+;
 const fs = require("fs");
 const path = require("path");
 
 //Function to fix string literal issues
 function fixStringLiterals(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, "utf8");
+  try {;
+let content = fs.readFileSync(filePath, "utf8");
     let originalContent = content;
     
     //Fix common string literal issues
@@ -495,8 +495,8 @@ function fixStringLiterals(filePath) {
   } catch (error) {
 // Function to process a single file
 function processFile(filePath) {
-  try {'
-    const content = fs.readFileSync(filePath, 'utf8');
+  try {';
+const content = fs.readFileSync(filePath, 'utf8');
     const fixed = fixStringLiterals(content);
     
     if (content !== fixed) {'
@@ -511,14 +511,14 @@ function processFile(filePath) {
     return false;
   }
 }
-
-  let fixedCount = 0;
+;
+let fixedCount = 0;
   
-  try {
-    const items = fs.readdirSync(dirPath);
+  try {;
+const items = fs.readdirSync(dirPath);
     
-    for (const item of items) {
-      const fullPath = path.join(dirPath, item);
+    for (const item of items) {;
+const fullPath = path.join(dirPath, item);
       const stat = fs.statSync(fullPath);
       '
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
@@ -533,12 +533,12 @@ function processFile(filePath) {
     console.error(`Error processing directory ${dirPath}:`, error.message);
   }
 //Function to recursively find and fix all TypeScript/JavaScript files
-function fixAllFiles(dir) {
-  const files = fs.readdirSync(dir);
+function fixAllFiles(dir) {;
+const files = fs.readdirSync(dir);
   let fixedCount = 0;
   
-  files.forEach(file => {
-    const filePath = path.join(dir, file);
+  files.forEach(file => {;
+const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
     
     if (stat.isDirectory()) {

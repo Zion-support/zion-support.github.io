@@ -1,13 +1,13 @@
+'use client';
       }
       document.head.appendChild(link)"
     })"
 setOptimizationStatus(prev =>({ ...prev, preloading: "true "}))
-  }, [enablePreloading])"
-const enableCodeSplittingOptimization = useCallback(() => {"
-    if (!enableCodeSplitting) return // Dynamic imports for codesplittingconstloadComponent= async (componentName: "string) => {"
-  ",try {
-const module = await import(`../components/${componentName}.tsx`)"
-        return module.default } catch(error) {";`
+  }, [enablePreloading])";
+const
+;  ",try {;
+const
+;        return module.default } catch(error) {";`
         // // console.warn(`Failed to load component: "${componentName"}`, error)
         return, null}
     }

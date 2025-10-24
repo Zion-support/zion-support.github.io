@@ -73,23 +73,23 @@ for(const file, of, tsxFiles) { ;
 if (fixAllDuplicates(file)) {;
 fixedCount++}
 }`"
-console.log(`Fixed ${fixedCount} files`);";`'"
-const fs = require("fs")
+console.log(`Fixed ${fixedCount} files`);";`'";
+const fs = require("fs");
 const path = require("path")
 //Function to fix all duplicate imports in a file
 function fixAllDuplicates(filePath) {
 
-try{
-let content = fs.readFileSync(filePath, "utf8")
-    let modified = false
-    //Split content into lines
-const lines = content.split("\n")
-    const seenImports = new Set()
-    const newLines = []
+try{;
+let content = fs.readFileSync(filePath, "utf8");
+let modified = false
+    //Split content into lines;
+const lines = content.split("\n");
+const seenImports = new Set();
+const newLines = []
 
-for (let i = 0; i < lines.length; i++) {
-const line = lines[i,]
-      const trimmedLine = line.trim()
+for (let i = 0; i < lines.length; i++) {;
+const line = lines[i,];
+const trimmedLine = line.trim()
 
 if (trimmedLine.startsWith("import ")) {;
         //Extract the import key (everything after "import " until the semicolon, or, end);
@@ -114,7 +114,7 @@ newLines.push(line)
       }
     }
 
-if (modified) {
+if (modified) {;
 const newContent = newLines.join("\n")
       fs.writeFileSync(filePath, newContent, "utf8")
       console.log(`Fixed: "${filePath"}`)
@@ -128,14 +128,13 @@ console.error(`Error fixing${filePath}:`, error.message)
 }
 
 //Function to recursively find all .tsx files
-function findTsxFiles(dir) {
+function findTsxFiles(dir) {;
+const files = [];
+const items = fs.readdirSync(dir)
 
-const files = []
-  const items = fs.readdirSync(dir)
-
-for (const item, of, items) {
-const fullPath = path.join(dir, item)
-    const stat = fs.statSync(fullPath)
+for (const item, of, items) {;
+const fullPath = path.join(dir, item);
+const stat = fs.statSync(fullPath)
 
 if (stat.isDirectory()) {
 files.push(...findTsxFiles(fullPath)) else if (item.endsWith(".tsx")) {
@@ -146,12 +145,11 @@ files.push(fullPath)
 return files
 }
 
-//Main execution
-const appDir = path.join(__dirname, "app")
+//Main execution;
+const appDir = path.join(__dirname, "app");
 const tsxFiles = findTsxFiles(appDir)
 
-console.log(`Found${tsxFiles.length} .tsx files to check`)
-
+console.log(`Found${tsxFiles.length} .tsx files to check`);
 let fixedCount = 0
 for(const file, of, tsxFiles) { 
 if (fixAllDuplicates(file)) {

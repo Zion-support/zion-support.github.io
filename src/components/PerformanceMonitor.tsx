@@ -1,3 +1,4 @@
+'use client';
       <Helmet />
         <title>PerformanceMonitor</>
         <meta name=&quotdescription&quot; content=&quot;Advanced PerformanceMonitor solution for modern businesses.&quot; /  />

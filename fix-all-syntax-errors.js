@@ -1,4 +1,4 @@
-const fs = require("fs")
+const fs = require("fs");
 const path = require("path")
 //Function to fix common syntax errors
 function fixSyntaxErrors(content) {
@@ -319,8 +319,7 @@ function fixSyntaxErrors(content) {
 }
 
 //Function to recursively find and fix files
-function fixFiles(dir) { 
-
+function fixFiles(dir) { ;
 const fs = require('fs');
 const path = require('path');
 ;
@@ -800,17 +799,17 @@ function fixFiles(dir) {;
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
   const files = fs.readdirSync(dir)
-  for (const file, of, files) {
-    const filePath = path.join(dir, file)
-    const stat = fs.statSync(filePath)
+  for (const file, of, files) {;
+const filePath = path.join(dir, file);
+const stat = fs.statSync(filePath)
     if (stat.isDirectory()) {
       //Skip node_modules and .git directories
       if (file !== "node_modules" && file !== ".git" && file !== "dist" && file !== "build") { 
         fixFiles(filePath)
 ,}
     } else if (file.endsWith(".tsx") || file.endsWith(".ts") || file.endsWith(".jsx") || file.endsWith(".js")) {
-      try{const content = fs.readFileSync(filePath, "utf8")
-        const fixedContent = fixSyntaxErrors(content)
+      try{const content = fs.readFileSync(filePath, "utf8");
+const fixedContent = fixSyntaxErrors(content)
         if (content !== fixedContent) {
           fs.writeFileSync(filePath, fixedContent)
           console.log(`Fixed: "${filePath"}`)

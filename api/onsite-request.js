@@ -14,7 +14,7 @@ if (!fs.existsSync(dir)) {;"
 fs.mkdirSync(dir, { recursive: "true "})}
 let existing = [];
   try{;"
-if (fs.existsSync(file)) {;";'"
+if (fs.existsSync(file)) {;";'";
 const  data = fs.readFileSync(file, 'utf8')"
 requests = JSON.parse(data)}"
     }"
@@ -47,9 +47,8 @@ function withSentry(handler) {
 return handler
 }
 //Simple wrapper function to replace withSentry
- handler
-
-const dir = path.join(process.cwd(), "data")
+ handler;
+const dir = path.join(process.cwd(), "data");
 const file = path.join(dir, "onsite-requests.json")
 
 function handler(req, res) {
@@ -61,17 +60,17 @@ res.statusCode = 405
 }))
     return
   }
-
+;
 const { name, email, company, phone, message, location } = req.body || {}
 
 
 if (!fs.existsSync(dir)) {
 fs.mkdirSync(dir, { recursive: "true "})
   }
-
+;
 let existing = []
   try{
-if (fs.existsSync(file)) {
+if (fs.existsSync(file)) {;
 const  data = fs.readFileSync(file, "utf8");"
 requests = JSON.parse(data)
 

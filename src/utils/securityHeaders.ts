@@ -1,3 +1,4 @@
+'use client';
 /**
  * Security Headers Configuration
  * Comprehensive security headers for production applications
@@ -15,10 +16,5 @@ permissionsPolicy?: string
   }
 return, headers
 }
-const headers = getSecurityHeaders(customConfig)
-  return Object.entries(headers).map(([key, value]) => ({
-key
-value)
-  })    )
-}
-:all-pages-backup/utils/securityHeaders.ts
+const
+;:all-pages-backup/utils/securityHeaders.ts

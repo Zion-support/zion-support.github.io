@@ -1,8 +1,8 @@
-const fs = require("fs")
+const fs = require("fs");
 const path = require("path")
 //Function to fix JSX syntax issues comprehensively
-function fixJSXSyntax(content) {
-  let fixed = content
+function fixJSXSyntax(content) {;
+let fixed = content
   //1. Fix malformed component declarations
   fixed = fixed.replace(/interface\s+(\w+)Props\s*{\s*([^}]*)\s*}\s*const\s+(\w+):\s*React\.FC<(\w+)Props>\s*=\s*\(\s*{\s*([^}]*)\s*}\s*\)\s*=>\s*{\s*return\s*\(\s*<\/\w+>/g
     "interface$1Props {\n$2\n}\n\nconst : React.FC<$1Props> = ({ $5 }) => {\n  return (\n    <div>"
@@ -78,16 +78,16 @@ function fixJSXSyntax(content) {
   fixed = fixed.replace(/className\s*=\s*"([^"]*)"\s*>/g, "className="$1">")
   fixed = fixed.replace(/className\s*=\s*{([^}]+)}\s*>/g, "className = {$1} >")
   //Fix JSX element spacing
-  fixed = fixed.replace(/<([A-Z,][a-zA-Z0-9,]*)\s+([^>]*?)\s*>/g, (match, tag, attrs) => {
-    const cleanAttrs = attrs.replace(/\s+/g, " ").trim()
+  fixed = fixed.replace(/<([A-Z,][a-zA-Z0-9,]*)\s+([^>]*?)\s*>/g, (match, tag, attrs) => {;
+const cleanAttrs = attrs.replace(/\s+/g, " ").trim()
     return`<${tag} ${cleanAttrs}>`
   })
   //Fix missing closing tags
   fixed = fixed.replace(/<div([^>]*)>(?!.*<\/div>)([\s\S,]*?)<\/div>/g, "<div$1>$2</div>")
   fixed = fixed.replace(/<span([^>]*)>(?!.*<\/span>)([\s\S,]*?)<\/span>/g, "<span$1>$2</span>")
   fixed = fixed.replace(/<p([^>]*)>(?!.*<\/p>)([\s\S,]*?)<\/p>/g, "<p$1>$2</p>")
-  fixed = fixed.replace(/<h[1-6,]([^>]*)>(?!.*<\/h[1-6,]>)([\s\S,]*?)<\/h[1-6,]>/g, (match, attrs, content) => {
-    const level = match.match(/<h([1-6,])/)[1,]
+  fixed = fixed.replace(/<h[1-6,]([^>]*)>(?!.*<\/h[1-6,]>)([\s\S,]*?)<\/h[1-6,]>/g, (match, attrs, content) => {;
+const level = match.match(/<h([1-6,])/)[1,]
     return`<h${level}${attrs}>${content}</h${level}>`
   })
   //Fix React component structure
@@ -119,8 +119,8 @@ function fixJSXSyntax(content) {
   fixed = fixed.replace(/\n\s*\n\s*\n/g, "\n\n")
   fixed = fixed.replace(/^\s+$/gm, "")
 //Function to fix specific file patterns
-function fixSpecificFile(content, filePath) {
-  let fixed = content;"
+function fixSpecificFile(content, filePath) {;
+let fixed = content;"
   "
   // Fix 404.tsx specific issues"'"
   if (filePath.includes('404.tsx")) {
@@ -202,8 +202,8 @@ function fixSpecificFile(content, filePath) {
   return fixed
 }
 
-  try {"'"
-    const content = fs.readFileSync(filePath, 'utf8");
+  try {"'";
+const content = fs.readFileSync(filePath, 'utf8");
     let fixed = fixJSXSyntax(content);
     fixed = fixSpecificFile(fixed, filePath);"
     "
@@ -356,17 +356,17 @@ function processFile(filePath) {;
 //Function to process a single file
 function processFile(filePath) {
 
-  try{const content = fs.readFileSync(filePath, "utf8")
-    const fixed = fixJSXStructure(content)
+  try{const content = fs.readFileSync(filePath, "utf8");
+const fixed = fixJSXStructure(content)
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed)
 }
       console.log(`Fixed JSX structure: "${filePath"}`)
       return true
     }
-    return false
-    const content = fs.readFileSync(filePath, "utf8")
-    let fixed = fixJSXSyntax(content)
+    return false;
+const content = fs.readFileSync(filePath, "utf8");
+let fixed = fixJSXSyntax(content)
     fixed = fixSpecificFile(fixed, filePath)
     //Write the fixed content back
     fs.writeFileSync(filePath, fixed, "utf8")
@@ -407,11 +407,11 @@ function processDirectory(dirPath) {;
     } else if (file.endsWith('.tsx') || file.endsWith('.jsx')) {;
       if (processFile(filePath)) {;
         processedCount++;
-  const files = fs.readdirSync(dirPath)
-  let processedCount = 0
-  for (const file of files) {
-    const filePath = path.join(dirPath, file)
-    const stat = fs.statSync(filePath)
+  const files = fs.readdirSync(dirPath);
+let processedCount = 0
+  for (const file of files) {;
+const filePath = path.join(dirPath, file);
+const stat = fs.statSync(filePath)
     if (stat.isDirectory()) {
       //Skip node_modules and other directories
       if (!["node_modules", ".git", ".next", "dist", "build"].includes(file)) {
@@ -465,9 +465,9 @@ console.log('Comprehensive JSX syntax fixes completed!');
   return processedCount
 }
 
-//Main execution console.log("Starting comprehensive JSX syntax fixes...")
+//Main execution console.log("Starting comprehensive JSX syntax fixes...");
 const processedCount = processDirectory("/workspace") console.log(`Processed${processedCount} files`)
-//Also process specific problematic files mentioned in the lint output
+//Also process specific problematic files mentioned in the lint output;
 const problematicFiles = ["/workspace/app/404.tsx"
   "/workspace/app/components/AccessibilityComponents.tsx"
   "/workspace/app/components/AnimatedText.tsx"
@@ -479,7 +479,7 @@ const problematicFiles = ["/workspace/app/404.tsx"
   "/workspace/app/pages/HomePage.tsx"
   "/workspace/app/pages/AboutPage.tsx"
   "/workspace/app/pages/ContactPage.tsx"
-]
+];
 const endTime = Date.now() console.log(`\nCompleted! Fixed${fixedCount} files in${endTime - startTime}ms`)
 for (const file of problematicFiles) {
   if (fs.existsSync(file)) {

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'zion-tech-group-v1'
+const CACHE_NAME = 'zion-tech-group-v1';
 const urlsToCache = [;
   '/',;
   '/static/js/bundle.js',;
@@ -50,7 +50,7 @@ self.addEventListener('activate", (event) => {
           if (cacheName !== CACHE_NAME) {"'"
             console.log('Deleting old cache:", cacheName);
             return caches.delete(cacheName);
-const CACHE_NAME = "zion-tech-group-v1"
+const CACHE_NAME = "zion-tech-group-v1";
 const urlsToCache = ["/"
   "/static/js/bundle.js"
   "/static/css/main.css"
@@ -131,3 +131,4 @@ self.addEventListener('activate', (event) => {;
   )});
   )
 })
+}}}}}))))))

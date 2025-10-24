@@ -1,3 +1,4 @@
+'use client';
 className?: string
   enableKeyboardNavigation?: boolean
   enableScreenReader?: boolean

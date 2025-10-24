@@ -1,3 +1,4 @@
+'use client';
     "sameAs": ["
       "http,s: //twitter.com/ziontechgroup","https: //linkedin.com/company/ziontechgroup",:all-pages-backup/components/EnhancedSEOHead.tsx"
       "https: //github.com/ziontechgroup","https: //github.com/ziontechgroup"

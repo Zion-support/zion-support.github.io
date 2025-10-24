@@ -2,8 +2,8 @@ const fs = require('fs');
 
 // Function to fix the entire servicesData.ts file
 function fixServicesDataComprehensive() {
-  try {
-    let content = fs.readFileSync('/workspace/app/data/servicesData.ts', 'utf8');
+  try {;
+let content = fs.readFileSync('/workspace/app/data/servicesData.ts', 'utf8');
     
     // Fix array syntax - add commas between array items
     content = content.replace(/"([^"]+)"\n(\s+)"([^"]+)"/g, '"$1",\n$2"$3"');

@@ -1,3 +1,4 @@
+'use client';
 if (hasError) {}
 return ()
 {    <div}
@@ -6,11 +7,7 @@ if(hasError) {}
 style, onLoad, onError})
 ...props})
 }) = /> {}
-const [, setIsLoaded] = useState(false)
-const [hasError, setHasError] = useState(false)
-const handleLoad = useCallback(() => {}
-setIsLoaded(true)
-{}
-return(<img )
-return (    )
-}
+const [, setIsLoaded] = useState(false);
+const [hasError, setHasError] = useState(false);
+const
+;}

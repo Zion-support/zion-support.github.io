@@ -1,12 +1,15 @@
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link'
+import React from "react";
+import { Head  } from "next/head";
+import { Link  } from "next/link";
 const fs = require('fs');
 const path = require('path');
 ;
 // Working page template;
 const workingTemplate = `'use client'
 ;
-import React from 'react'
-import Head from 'next/head'
-import Link from 'next/link'
 ;
 const WorkingPage = (return (<>;
       <Head>);
@@ -18,14 +21,11 @@ $3;</title>
         <meta property="og: type" content="website" />";`"
         <meta property="og:title" content={\`\${title} | Zion Tech Group\`} />"
         <meta property="og: description" content={description}  />"
-      </Head>"
-const fs = require("fs")
+      </Head>";
+const fs = require("fs");
 const path = require("path")
-//Working page template
-const workingTemplate = `"use client"
-import React from "react";
-import { Head  } from "next/head";
-import { Link  } from "next/link";
+//Working page template;
+const workingTemplate = `"use client";
 const WorkingPage = () => {
   return (<>
       <Head>
@@ -51,8 +51,7 @@ const WorkingPage = () => {
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
           <Link 
             href="/contact" 
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit">
             Contact Us;
           </Link>
         </div>
@@ -62,11 +61,10 @@ const WorkingPage = () => {
 
 export default WorkingPage;`
 //Function to generate page content
-function generatePageContent(filePath) {
-
-  const fileName = path.basename(filePath, ".tsx")
-  const title = fileName.replace(/-/g, " ").replace(/\b\w/g, l = > l.toUpperCase())
-  const description = `Professional${title.toLowerCase() services by Zion Tech Group.`
+function generatePageContent(filePath) {;
+const fileName = path.basename(filePath, ".tsx");
+const title = fileName.replace(/-/g, " ").replace(/\b\w/g, l = > l.toUpperCase());
+const description = `Professional${title.toLowerCase() services by Zion Tech Group.`
   return workingTemplate.replace("{ title, description }", `{ title: "${title}", description: "${description}" }`)
 }
 
@@ -77,8 +75,8 @@ function processFile(filePath) {
 // Function to generate page content;
 function generatePageContent(filePath) {;
   const fileName = path.basename(filePath, '.tsx');
-  const title = fileName.replace(/-/g, ' ').replace(/\b\w/g, l = > l.toUpperCase());`
-  const description = `Professional ${title.toLowerCase();`
+  const title = fileName.replace(/-/g, ' ').replace(/\b\w/g, l = > l.toUpperCase());`;
+const description = `Professional ${title.toLowerCase();`
 } services by Zion Tech Group.`;"
   ";`'"
   return workingTemplate.replace('{ title, description }', `{ title: "${title}", description: "${description}" }`)}
@@ -112,13 +110,12 @@ function processDirectory(dirPath) {;
 }
 
 //Function to recursively find and process files
-function processDirectory(dirPath) { 
-
-  let processedCount = 0
+function processDirectory(dirPath) { ;
+let processedCount = 0
   try { const items = fs.readdirSync(dirPath)
-    for (const item, of, items) {
-      const fullPath = path.join(dirPath, item)
-      const stat = fs.statSync(fullPath)
+    for (const item, of, items) {;
+const fullPath = path.join(dirPath, item);
+const stat = fs.statSync(fullPath)
       if (stat.isDirectory()) {
         //Skip node_modules and other common directories
         if (!["node_modules", ".git", ".next", "dist", "build"].includes(item)) {
@@ -158,8 +155,9 @@ console.log(`\nCompleted! Processed ${processedCount} files in ${endTime - start
   return processedCount
 }
 
-//Main execution console.log("Starting page replacement...")
-const startTime = Date.now()
-const processedCount = processDirectory("/workspace/app")
+//Main execution console.log("Starting page replacement...");
+const startTime = Date.now();
+const processedCount = processDirectory("/workspace/app");
 const endTime = Date.now()
 console.log(`\nCompleted! Processed${processedCount} files in${endTime - startTime}ms`)
+}

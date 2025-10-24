@@ -1,3 +1,4 @@
+'use client';
 export interface User {
 "
 id: "string
@@ -41,4 +42,4 @@ id: "string
   stack?: string
 context: ErrorContext
   severity: ErrorSeverity"
-  resolved: boolean"
+  resolved: boolean"}

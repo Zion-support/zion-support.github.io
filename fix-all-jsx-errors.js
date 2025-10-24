@@ -87,16 +87,16 @@ fixedCount++}
 return fixedCount}'
 console.log('Starting comprehensive JSX error fixes...');
 const fixedCount = walkDirectory('./app');`"
-console.log(`Fixed JSX errors in ${fixedCount} files`);";`'"
-const fs = require("fs")
+console.log(`Fixed JSX errors in ${fixedCount} files`);";`'";
+const fs = require("fs");
 const path = require("path")
 
 function fixJSXErrors(filePath) {
 
-try{
-let content = fs.readFileSync(filePath, "utf8")
-    let modified = false
-    //Fix common JSX patterns
+try{;
+let content = fs.readFileSync(filePath, "utf8");
+let modified = false
+    //Fix common JSX patterns;
 const fixes = [//Fix malformed Link tags
       {
 pattern: "/<Link\s+([^>]*?)>\s*<\/Link>\s*([^<]+)\s*<([^>]*?)\s*\/><\/[^>]*>\s*<\/Link>/gs",replacement: ""<Link$1>\n$2\n            < />\n          </Link>"
@@ -148,7 +148,7 @@ pattern: "/<p[^ />]*><\/p>\s*([^<]+)\s*<\/p>/gs",replacement: ""<p$1</p />""}
     ]
 
 fixes.forEach(fix = > {
-)
+);
 const newContent = content.replace(fix.pattern, fix.replacement)
       if(newContent !== content) {  
 content = newContent
@@ -175,15 +175,14 @@ console.error(`Error fixing${filePath}:`, error.message)
   return false
 }
 
-function walkDirectory(dir) {
-
-const files = fs.readdirSync(dir)
-  let fixedCount = 0
+function walkDirectory(dir) {;
+const files = fs.readdirSync(dir);
+let fixedCount = 0
 
 files.forEach(file = > {
-)
-const filePath = path.join(dir, file)
-    const stat = fs.statSync(filePath)
+);
+const filePath = path.join(dir, file);
+const stat = fs.statSync(filePath)
 
 if (stat.isDirectory() && !file.startsWith(".") && file !== "node_modules") {
 fixedCount+= walkDirectory(filePath) else if (file.endsWith(".tsx") || file.endsWith(".ts")) {
@@ -195,6 +194,6 @@ fixedCount++
 
 return fixedCount
 }
- console.log("Starting comprehensive JSX error fixes...")
+ console.log("Starting comprehensive JSX error fixes...");
 const fixedCount = walkDirectory("./app")
 console.log(`Fixed JSX errors in${fixedCount} files`)

@@ -59,8 +59,8 @@ const missingClosingTags = ['Suspense', 'ErrorBoundary', 'HelmetProvider', 'Brow
     ];
 ;
 missingClosingTags.forEach(tag = > {);
-const openPattern = new RegExp(`<${tag}[^>]*>`, 'g');`'
-      const closePattern = new RegExp(`</${tag}>`, 'g');
+const openPattern = new RegExp(`<${tag}[^>]*>`, 'g');`';
+const closePattern = new RegExp(`</${tag}>`, 'g');
 ;
 const openMatches = content.match(openPattern);
       const closeMatches = content.match(closePattern);
@@ -70,23 +70,23 @@ if (openMatches && closeMatches && openMatches.length > closeMatches.length) {;
 content = content.replace(/(\s*\)\s*;?\s*$)/gm, `\n        </${tag}>\n      );`);
         modified = true}
     });
-const fs = require("fs")
+const fs = require("fs");
 const path = require("path")
 
 function fixJSXComprehensive(filePath) { 
 
-try { 
-let content = fs.readFileSync(filePath, "utf8")
-    let modified = false
+try { ;
+let content = fs.readFileSync(filePath, "utf8");
+let modified = false
     //Fix missing closing JSX fragments - more comprehensive approach
-    //Look for return statements with opening fragments but no closing
-const lines = content.split("\n")
-    let newLines = []
-    let inFragment = false
-    let fragmentDepth = 0
-    let returnIndex = -1
+    //Look for return statements with opening fragments but no closing;
+const lines = content.split("\n");
+let newLines = [];
+let inFragment = false;
+let fragmentDepth = 0;
+let returnIndex = -1
 
-for (let i = 0; i < lines.length; i++) { 
+for (let i = 0; i < lines.length; i++) { ;
 const line = lines[i,]
       //Check for return statement with opening fragment
 if (line.includes("return (") && line.includes("<>")) {
@@ -139,17 +139,16 @@ content = content.replace(/(<Suspense[^>]*>[\s\S,]*?)(\s*\)\s*;?\s*$)/gm, "$1\n 
       modified = true
     }
 
-    //Fix missing closing tags for specific elements
+    //Fix missing closing tags for specific elements;
 const missingClosingTags = ["Suspense", "ErrorBoundary", "HelmetProvider", "BrowserRouter"
     ]
 
 missingClosingTags.forEach(tag = > {
-)
-const openPattern = new RegExp(`<${tag }[^>]*>`, "g")
-      const closePattern = new RegExp(`</${tag}>`, "g")
-
-const openMatches = content.match(openPattern)
-      const closeMatches = content.match(closePattern)
+);
+const openPattern = new RegExp(`<${tag }[^>]*>`, "g");
+const closePattern = new RegExp(`</${tag}>`, "g");
+const openMatches = content.match(openPattern);
+const closeMatches = content.match(closePattern)
 
 if (openMatches && closeMatches && openMatches.length > closeMatches.length) {
         //Add missing closing tag
@@ -190,14 +189,13 @@ walkDir('./src');'"
 console.log('Comprehensive JSX fixes completed!');";`'"
 }
 
-function walkDir(dir) {
-
+function walkDir(dir) {;
 const files = fs.readdirSync(dir)
 
 files.forEach(file = > {
-)
-const filePath = path.join(dir, file)
-    const stat = fs.statSync(filePath)
+);
+const filePath = path.join(dir, file);
+const stat = fs.statSync(filePath)
 
 if (stat.isDirectory()) {
 walkDir(filePath) else if (file.endsWith(".tsx") || file.endsWith(".ts")) {

@@ -1,10 +1,9 @@
-import, React, { useEffect, useCallback, useState } from 'react'
+'use client';
+import, React, { useEffect, useCallback, useState } from 'react';
 'use client';'
 if(enableWebVitals && typeof window !== 'undefined'
-console.error('Service Worker registration "failed": '
-const url = typeof input === 'string'
-if (typeof window === 'undefined'
-const images = document.querySelectorAll('img'
-img.loading = 'lazy'
-img.decoding = 'async'
-if (typeof window === 'undefined'
+console.error('Service Worker registration "failed": ';
+const
+;if (typeof window === 'undefined';
+const
+;if (typeof window === 'undefined')))))

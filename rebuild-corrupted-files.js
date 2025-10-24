@@ -1,16 +1,16 @@
-const fs = require('fs');
-const path = require('path');
-
-// Function to create a basic React component structure
-function createBasicPageComponent(filePath) {
-  const fileName = path.basename(filePath, '.tsx');
-  const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/-([a-z])/g, (g) => g[1].toUpperCase());
-  
-  return `'use client'
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+const fs = require('fs');
+const path = require('path');
+
+// Function to create a basic React component structure
+function createBasicPageComponent(filePath) {;
+const fileName = path.basename(filePath, '.tsx');
+  const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/-([a-z])/g, (g) => g[1].toUpperCase());
+  
+  return `'use client';
 
 export default function ${componentName}Page() {
   return (
@@ -32,15 +32,13 @@ export default function ${componentName}Page() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/contact" 
-                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-              >
+                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link 
                 href="/about" 
-                className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors"
-              >
+                className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors">
                 Learn More
               </Link>
             </div>
@@ -53,8 +51,8 @@ export default function ${componentName}Page() {
 }
 
 // Function to create a basic component structure
-function createBasicComponent(filePath) {
-  const fileName = path.basename(filePath, '.tsx');
+function createBasicComponent(filePath) {;
+const fileName = path.basename(filePath, '.tsx');
   const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/-([a-z])/g, (g) => g[1].toUpperCase());
   
   return `import React from 'react';
@@ -76,8 +74,8 @@ export default ${componentName};`;
 }
 
 // Function to create a basic TypeScript file
-function createBasicTypeScript(filePath) {
-  const fileName = path.basename(filePath, '.ts');
+function createBasicTypeScript(filePath) {;
+const fileName = path.basename(filePath, '.ts');
   
   return `// ${fileName} types and interfaces
 
@@ -98,8 +96,8 @@ export const default${fileName.charAt(0).toUpperCase() + fileName.slice(1)}: ${f
 
 // Function to check if a file is corrupted
 function isCorrupted(content) {
-  // Check for common corruption patterns
-  const corruptionPatterns = [
+  // Check for common corruption patterns;
+const corruptionPatterns = [
     /import\s+[^;]*['"][^'"]*['"][^;]*;/g,
     /from\s+[^;]*['"][^'"]*['"][^;]*;/g,
     /app\/[^'"]*['"][^'"]*['"][^;]*;/g,
@@ -112,15 +110,15 @@ function isCorrupted(content) {
 
 // Function to process a single file
 function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
+  try {;
+const content = fs.readFileSync(filePath, 'utf8');
     
     // Only process if file is corrupted
     if (!isCorrupted(content)) {
       return false;
     }
-    
-    let newContent = '';
+    ;
+let newContent = '';
     
     if (filePath.endsWith('.tsx')) {
       if (filePath.includes('/page.tsx') || filePath.includes('/pages/')) {
@@ -144,14 +142,14 @@ function processFile(filePath) {
 }
 
 // Function to recursively find all TypeScript/TSX files
-function findTsFiles(dir) {
-  const files = [];
+function findTsFiles(dir) {;
+const files = [];
   
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
+  function traverse(currentDir) {;
+const items = fs.readdirSync(currentDir);
     
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
+    for (const item of items) {;
+const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
@@ -168,16 +166,16 @@ function findTsFiles(dir) {
 
 // Main execution
 console.log('Starting file rebuild...');
-
+;
 const appDir = path.join(__dirname, 'app');
 const srcDir = path.join(__dirname, 'src');
 const componentsDir = path.join(__dirname, 'components');
-
+;
 let totalRebuilt = 0;
 
 // Process app directory
-if (fs.existsSync(appDir)) {
-  const appFiles = findTsFiles(appDir);
+if (fs.existsSync(appDir)) {;
+const appFiles = findTsFiles(appDir);
   console.log(`Found ${appFiles.length} files in app directory`);
   
   for (const file of appFiles) {
@@ -188,8 +186,8 @@ if (fs.existsSync(appDir)) {
 }
 
 // Process src directory
-if (fs.existsSync(srcDir)) {
-  const srcFiles = findTsFiles(srcDir);
+if (fs.existsSync(srcDir)) {;
+const srcFiles = findTsFiles(srcDir);
   console.log(`Found ${srcFiles.length} files in src directory`);
   
   for (const file of srcFiles) {
@@ -200,8 +198,8 @@ if (fs.existsSync(srcDir)) {
 }
 
 // Process components directory
-if (fs.existsSync(componentsDir)) {
-  const componentFiles = findTsFiles(componentsDir);
+if (fs.existsSync(componentsDir)) {;
+const componentFiles = findTsFiles(componentsDir);
   console.log(`Found ${componentFiles.length} files in components directory`);
   
   for (const file of componentFiles) {

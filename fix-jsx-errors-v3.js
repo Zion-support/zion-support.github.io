@@ -3,8 +3,8 @@ const path = require('path');
 
 // Function to fix JSX errors in a file
 function fixJSXErrors(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
+  try {;
+let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
     // Fix missing closing div tag before closing fragment
@@ -68,12 +68,12 @@ function fixJSXErrors(filePath) {
 }
 
 // Function to recursively find all .tsx files
-function findTSXFiles(dir) {
-  const files = [];
+function findTSXFiles(dir) {;
+const files = [];
   const items = fs.readdirSync(dir);
   
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
+  for (const item of items) {;
+const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
     
     if (stat.isDirectory()) {
@@ -90,7 +90,7 @@ function findTSXFiles(dir) {
 console.log('Starting JSX error fixes v3...');
 const appDir = '/workspace/app';
 const tsxFiles = findTSXFiles(appDir);
-
+;
 let fixedCount = 0;
 for (const file of tsxFiles) {
   if (fixJSXErrors(file)) {

@@ -1,3 +1,4 @@
+'use client';
             }"'"
             if (id.includes('react-router")) {"'"
               return 'router-vendor"

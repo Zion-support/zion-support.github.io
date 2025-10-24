@@ -1,3 +1,4 @@
+'use client';
 fcpObserver.observe({ "entryTypes": ['paint'
 if (typeof window === 'undefined'
 if ('serviceWorker'
@@ -5,10 +6,6 @@ navigator.serviceWorker.register('/sw.js'
 if (typeof window === 'undefined'
 img.src = src.replace(/\.(jpg|jpeg|png)$/i, '.webp'
 img.classList.remove('lazy'
-if (typeof window === 'undefined'
-const images = document.querySelectorAll('img'
-img.loading = 'lazy'
-img.decoding = 'async'
-if (typeof window === 'undefined'
-      '/fonts/inter-var.woff2'
-      '/css/critical.css'
+if (typeof window === 'undefined';
+const
+;      '/css/critical.css'}))))))))))

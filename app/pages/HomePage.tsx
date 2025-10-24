@@ -1,3 +1,4 @@
+'use client';
 export default function HomePage() {
   return (
     <div>
@@ -9,4 +10,4 @@ Schedule Demo</Link>
               </Link>
                 </div>
               </div>
-            </div>
+            </div>})

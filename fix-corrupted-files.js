@@ -2,16 +2,16 @@ const fs = require('fs');
 const path = require('path');
 
 // Function to clean corrupted file content
-function cleanFileContent(content, filePath) {
-  let cleaned = content;
+function cleanFileContent(content, filePath) {;
+let cleaned = content;
   
   // Remove corrupted import statements with file paths
   cleaned = cleaned.replace(/import\s+[^;]*['"][^'"]*['"][^;]*;/g, '');
   cleaned = cleaned.replace(/from\s+[^;]*['"][^'"]*['"][^;]*;/g, '');
   
   // Remove lines that contain file paths as strings
-  cleaned = cleaned.split('\n').filter(line => {
-    const trimmed = line.trim();
+  cleaned = cleaned.split('\n').filter(line => {;
+const trimmed = line.trim();
     // Skip lines that are just file paths or contain file paths as strings
     if (trimmed.includes("'") && trimmed.includes('.tsx') || 
         trimmed.includes('"') && trimmed.includes('.tsx') ||
@@ -37,8 +37,8 @@ function cleanFileContent(content, filePath) {
 }
 
 // Function to fix specific file types
-function fixSpecificFile(content, filePath) {
-  let fixed = content;
+function fixSpecificFile(content, filePath) {;
+let fixed = content;
   
   if (filePath.endsWith('.tsx')) {
     // Fix React component files
@@ -56,8 +56,8 @@ function fixSpecificFile(content, filePath) {
     }
     
     // Fix component structure
-    if (fixed.includes('const ') && fixed.includes('= (') && !fixed.includes('export default')) {
-      const componentName = fixed.match(/const\s+([A-Z][a-zA-Z0-9]*)/)?.[1];
+    if (fixed.includes('const ') && fixed.includes('= (') && !fixed.includes('export default')) {;
+const componentName = fixed.match(/const\s+([A-Z][a-zA-Z0-9]*)/)?.[1];
       if (componentName) {
         fixed += `\n\nexport default ${componentName};`;
       }
@@ -76,8 +76,8 @@ function fixSpecificFile(content, filePath) {
 
 // Function to process a single file
 function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
+  try {;
+const content = fs.readFileSync(filePath, 'utf8');
     let cleaned = cleanFileContent(content, filePath);
     cleaned = fixSpecificFile(cleaned, filePath);
     
@@ -94,14 +94,14 @@ function processFile(filePath) {
 }
 
 // Function to recursively find all TypeScript/TSX files
-function findTsFiles(dir) {
-  const files = [];
+function findTsFiles(dir) {;
+const files = [];
   
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
+  function traverse(currentDir) {;
+const items = fs.readdirSync(currentDir);
     
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
+    for (const item of items) {;
+const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
@@ -118,16 +118,16 @@ function findTsFiles(dir) {
 
 // Main execution
 console.log('Starting file cleanup...');
-
+;
 const appDir = path.join(__dirname, 'app');
 const srcDir = path.join(__dirname, 'src');
 const componentsDir = path.join(__dirname, 'components');
-
+;
 let totalFixed = 0;
 
 // Process app directory
-if (fs.existsSync(appDir)) {
-  const appFiles = findTsFiles(appDir);
+if (fs.existsSync(appDir)) {;
+const appFiles = findTsFiles(appDir);
   console.log(`Found ${appFiles.length} files in app directory`);
   
   for (const file of appFiles) {
@@ -138,8 +138,8 @@ if (fs.existsSync(appDir)) {
 }
 
 // Process src directory
-if (fs.existsSync(srcDir)) {
-  const srcFiles = findTsFiles(srcDir);
+if (fs.existsSync(srcDir)) {;
+const srcFiles = findTsFiles(srcDir);
   console.log(`Found ${srcFiles.length} files in src directory`);
   
   for (const file of srcFiles) {
@@ -150,8 +150,8 @@ if (fs.existsSync(srcDir)) {
 }
 
 // Process components directory
-if (fs.existsSync(componentsDir)) {
-  const componentFiles = findTsFiles(componentsDir);
+if (fs.existsSync(componentsDir)) {;
+const componentFiles = findTsFiles(componentsDir);
   console.log(`Found ${componentFiles.length} files in components directory`);
   
   for (const file of componentFiles) {
@@ -161,4 +161,4 @@ if (fs.existsSync(componentsDir)) {
   }
 }
 
-console.log(`\nCleanup complete! Fixed ${totalFixed} files.`);
+console.log(`\nCleanup complete! Fixed ${totalFixed} files.`);)

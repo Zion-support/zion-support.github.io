@@ -80,15 +80,15 @@ return fixedCount}
 const appDir = path.join(__dirname, 'app');
 console.log('Fixing comprehensive JSX syntax...');
 const totalFixed = fixAllJSXSyntaxComprehensive(appDir);`"
-console.log(`Fixed ${totalFixed} files`);";`'"
-const fs = require("fs")
+console.log(`Fixed ${totalFixed} files`);";`'";
+const fs = require("fs");
 const path = require("path")
 //Function to fix comprehensive JSX syntax issues
 function fixJSXSyntaxComprehensive(filePath) { 
 
-try { 
-let content = fs.readFileSync(filePath, "utf8")
-    let modified = false
+try { ;
+let content = fs.readFileSync(filePath, "utf8");
+let modified = false
     //Ensure React import is present
 if (!content.includes("import React from "react"") && content.includes("export default function")) {;
 content = content.replace(/"use client";\n/, ""use client";\nimport React from "react";\n")
@@ -110,13 +110,13 @@ content = content.replace(/(\s+)(<\/Head>\s*)(\s+)(<\/div>\s*)(\s+)(\);\s*})/g, 
 
     //Fix any remaining malformed JSX patterns
 if (content.includes("return (\n    <div>") && !content.includes("    </div>")) {
-      //This is a more complex fix - let"s ensure proper structure
-const lines = content.split("\n")
-      let inJSX = false
-      let divCount = 0
-      let newLines = []
+      //This is a more complex fix - let"s ensure proper structure;
+const lines = content.split("\n");
+let inJSX = false;
+let divCount = 0;
+let newLines = []
 
-for (let i = 0; i < lines.length; i++) {
+for (let i = 0; i < lines.length; i++) {;
 const line = lines[i,]
         newLines.push(line)
 
@@ -156,14 +156,13 @@ console.error(`Error processing${filePath}:`, error.message)
 }
 
 //Function to recursively find and fix all .tsx files
-function fixAllJSXSyntaxComprehensive(dir) {
+function fixAllJSXSyntaxComprehensive(dir) {;
+const files = fs.readdirSync(dir);
+let fixedCount = 0
 
-const files = fs.readdirSync(dir)
-  let fixedCount = 0
-
-for (const file, of, files) {
-const filePath = path.join(dir, file)
-    const stat = fs.statSync(filePath)
+for (const file, of, files) {;
+const filePath = path.join(dir, file);
+const stat = fs.statSync(filePath)
 
 if (stat.isDirectory()) {
 fixedCount+= fixAllJSXSyntaxComprehensive(filePath) else if (file.endsWith(".tsx")) {
@@ -176,7 +175,7 @@ fixedCount++
 return fixedCount
 }
 
-//Start fixing from the app directory
-const appDir = path.join(__dirname, "app") console.log("Fixing comprehensive JSX syntax...')
+//Start fixing from the app directory;
+const appDir = path.join(__dirname, "app") console.log("Fixing comprehensive JSX syntax...');
 const totalFixed = fixAllJSXSyntaxComprehensive(appDir)
 console.log(`Fixed${totalFixed} files`)

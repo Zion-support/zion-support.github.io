@@ -1,9 +1,10 @@
+'use client';
   constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
-} as any
-  constructor() {}
+} as any;
+constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}

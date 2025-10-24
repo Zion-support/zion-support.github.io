@@ -1,71 +1,113 @@
-import React from 'react'
-import { MetadataRoute } from 'next'
-// Import services data safely
-let servicesData: any = null
-try {
-  servicesData = require('./data/servicesData').servicesData
-} catch (error) {
-  console.warn('Could not load services data for sitemap:', error    )
-}
+import { MetadataRoute } from 'next';
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://zion.app'
+  const baseUrl = 'https://ziontechgroup.com';
+  
   // Static pages
   const staticPages = [
     '',
     '/about',
     '/services',
-    '/solutions',
     '/contact',
-    '/careers',
     '/blog',
+    '/careers',
+    '/privacy',
+    '/terms',
+    '/cookies',
     '/case-studies',
-    '/privacy-policy',
-    '/terms-of-service',
-  ]
-  // Generate sitemap entries for static pages
-  const staticSitemap: MetadataRoute.Sitemap = staticPages.map((page) => ({
+    '/team',
+    '/pricing',
+    '/compliance',
+    '/cloud-infrastructure',
+    '/cybersecurity-solutions',
+    '/web-development',
+    '/mobile-development',
+    '/api-development',
+    '/database-management',
+    '/devops-cicd',
+    '/it-support',
+    '/data-analytics-bi',
+    '/custom-software',
+    '/network-infrastructure',
+    '/it-asset-management',
+    '/it-security-services',
+    '/it-project-management',
+    '/cloud-native-development',
+    '/ai-integration-services',
+    '/blockchain-development',
+    '/iot-development',
+    '/e-commerce-development',
+    '/api-development-advanced',
+    '/data-engineering',
+    '/cybersecurity-advanced',
+    '/cloud-migration-advanced',
+    '/devops-advanced',
+    '/machine-learning-ops',
+    '/enterprise-integration',
+    '/performance-optimization',
+    '/disaster-recovery-advanced',
+    '/compliance-automation',
+    '/cloud-cost-optimization',
+    '/security-automation',
+    '/data-visualization',
+    '/workflow-automation',
+    '/cloud-native-security',
+    '/ai-services',
+    '/ai-marketing',
+    '/ai-automation',
+    '/ai-healthcare',
+    '/ai-fintech',
+    '/ai-content-generation',
+    '/ai-data-analytics',
+    '/ai-cybersecurity',
+    '/ai-crm',
+    '/ai-voice-solutions',
+    '/ai-ecommerce-solutions',
+    '/ai-hr-solutions',
+    '/ai-workflow-automation',
+    '/ai-document-processing',
+    '/ai-predictive-analytics',
+    '/ai-edge-computing',
+    '/ai-video-analysis',
+    '/ai-speech-synthesis',
+    '/ai-recommendation-engine',
+    '/ai-sentiment-analysis',
+    '/ai-chatbot-enterprise',
+    '/ai-content-moderation',
+    '/ai-predictive-modeling',
+    '/ai-document-intelligence',
+    '/ai-conversation-analytics',
+    '/ai-supply-chain-ai',
+    '/ai-healthcare-diagnostics',
+    '/ai-financial-forecasting',
+    '/ai-iot-analytics',
+    '/ai-conversational-ai',
+    '/ai-automated-testing',
+    '/ai-knowledge-management',
+    '/ai-customer-churn',
+    '/ai-automated-reporting',
+    '/ai-voice-assistant',
+    '/ai-content-generation-pro',
+    '/ai-accounting-assistant',
+    '/ai-cybersecurity-monitor-pro',
+    '/5g-data-analytics',
+    '/5g-edge-computing',
+    '/5g-implementation',
+    '/5g-iot-solutions',
+    '/5g-mobile-applications',
+    '/5g-network-infrastructure',
+    '/5g-private-networks',
+    '/5g-smart-city-solutions',
+    '/5g-solutions',
+  ];
+
+  // Generate sitemap entries
+  const sitemap: MetadataRoute.Sitemap = staticPages.map((page) => ({
     url: `${baseUrl}${page}`,
     lastModified: new Date(),
-    changeFrequency: page === '' ? 'daily' : 'weekly',
+    changeFrequency: 'monthly' as const,
     priority: page === '' ? 1.0 : 0.8,
-  }))
-  // If services data is not available, return only static pages
-  if (!servicesData) {
-    return staticSitemap
-  }
-  // Generate sitemap entries for AI services
-  const aiServicesSitemap: MetadataRoute.Sitemap = (servicesData.aiServices || []).map((service: any) => ({
-    url: `${baseUrl}/ai-${service.slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
-  }))
-  // Generate sitemap entries for IT services
-  const itServicesSitemap: MetadataRoute.Sitemap = (servicesData.itServices || []).map((service: any) => ({
-    url: `${baseUrl}/${service.slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
-  }))
-  // Generate sitemap entries for 5G services
-  const g5ServicesSitemap: MetadataRoute.Sitemap = (servicesData.g5Services || []).map((service: any) => ({
-    url: `${baseUrl}/5g-${service.slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
-  }))
-  // Generate sitemap entries for AI services subcategories
-  const aiServicesSubSitemap: MetadataRoute.Sitemap = (servicesData.aiServicesSubcategories || []).map((service: any) => ({
-    url: `${baseUrl}/ai-services/${service.slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.6,
-  }))
-  return [
-    ...staticSitemap,
-    ...aiServicesSitemap,
-    ...itServicesSitemap,
-    ...g5ServicesSitemap,
-    ...aiServicesSubSitemap,
-  ]
+  }));
+
+  return sitemap;
 }

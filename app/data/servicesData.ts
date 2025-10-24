@@ -1,3 +1,4 @@
+'use client';
 export interface Service {
   id: string
   title: string
@@ -18,7 +19,5 @@ export interface Service {
   popular?: boolean
 }
 
-export const aiServices: Service[] = []
-export const itServices: Service[] = []
-export const itSolutions = itServices
-export const allServices: Service[] = [...aiServices, ...itServices]
+export const
+;export const allServices: Service[] = [...aiServices, ...itServices]

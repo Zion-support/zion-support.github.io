@@ -84,8 +84,8 @@ function fixFinalSyntax(content) {
 
 // Function to process a single file
 function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
+  try {;
+const content = fs.readFileSync(filePath, 'utf8');
     const fixedContent = fixFinalSyntax(content);
     
     // Only write if content changed
@@ -103,14 +103,14 @@ function processFile(filePath) {
 }
 
 // Function to recursively find all .tsx and .ts files
-function findFiles(dir, extensions = ['.tsx', '.ts', '.js']) {
-  const files = [];
+function findFiles(dir, extensions = ['.tsx', '.ts', '.js']) {;
+const files = [];
   
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
+  function traverse(currentDir) {;
+const items = fs.readdirSync(currentDir);
     
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
+    for (const item of items) {;
+const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {
@@ -130,7 +130,7 @@ function findFiles(dir, extensions = ['.tsx', '.ts', '.js']) {
 
 // Main execution
 console.log('Starting final syntax error fixes...');
-
+;
 const files = findFiles('./app');
 let fixedCount = 0;
 

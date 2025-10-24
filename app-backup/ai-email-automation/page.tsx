@@ -1,3 +1,4 @@
+'use client';
     "description": 'Perfect for small businesses and startups'
         'Up, to, 5,000 contacts'
         '10,000 emails/month'

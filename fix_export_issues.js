@@ -1,20 +1,20 @@
-const fs = require("fs")
+const fs = require("fs");
 const path = require("path")
 //Function to fix export statement issues
 function fixExportIssues(filePath) { 
 
-try { 
-let content = fs.readFileSync(filePath, "utf8")
-    let modified = false
+try { ;
+let content = fs.readFileSync(filePath, "utf8");
+let modified = false
     //Fix export statements that are inside functions or objects
 if (content.includes("export default function Page() { ") && content.includes("];")) {
-      //Find the pattern where export is inside an array or object
-const lines = content.split("\n")
-      let newContent = ""
-      let inArray = false
-      let foundExport = false
+      //Find the pattern where export is inside an array or object;
+const lines = content.split("\n");
+let newContent = "";
+let inArray = false;
+let foundExport = false
 
-for (let i = 0; i < lines.length; i++) { 
+for (let i = 0; i < lines.length; i++) { ;
 const line = lines[i,]
 
 if (line.includes("[") && !line.includes("export")) {
@@ -79,7 +79,7 @@ console.error(`Error fixing${filePath}:`, error.message)
   }
 }"
 "
-// Get all page files;"'"
+// Get all page files;"'";
 const appDir = path.join(__dirname, 'app");
 const fs = require('fs');
 const path = require('path');
@@ -95,8 +95,8 @@ let content = fs.readFileSync(filePath, 'utf8');
 if (content.includes('export default function Page() { ') && content.includes(']')) {;
       // Find the pattern where export is inside an array or object;
 const lines = content.split('\n');
-      let newContent = ''
-      let inArray = false;
+      let newContent = '';
+let inArray = false;
       let foundExport = false;
 ;
 for (let i = 0; i < lines.length; i++) { ;
@@ -163,17 +163,16 @@ pageFiles.forEach(fixExportIssues);
 console.log(`Processed ${pageFiles.length} page files`);"
 ";`'"
 
-//Get all page files
-const appDir = path.join(__dirname, "app")
+//Get all page files;
+const appDir = path.join(__dirname, "app");
 const pageFiles = []
 
-function findPageFiles(dir) {
-
+function findPageFiles(dir) {;
 const files = fs.readdirSync(dir)
   files.forEach(file = > {
-)
-const filePath = path.join(dir, file)
-    const stat = fs.statSync(filePath)
+);
+const filePath = path.join(dir, file);
+const stat = fs.statSync(filePath)
     if (stat.isDirectory()) {
 findPageFiles(filePath) else if(file = == "page.tsx") {   
 pageFiles.push(filePath)
@@ -186,3 +185,4 @@ findPageFiles(appDir)
 pageFiles.forEach(fixExportIssues)
 
 console.log(`Processed${pageFiles.length} page files`)
+}}}}}}}}}))))

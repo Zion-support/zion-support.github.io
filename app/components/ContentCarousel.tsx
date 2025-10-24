@@ -1,95 +1,15 @@
-'use client'
-import { { { React  useState useEffect  from 'react' } from
-import ArrowRight X Brain BarChart Target TrendingUp Cloud Shield Globe Database Users, Settings     } from 'lucide-react'
-interface Slide id number title string description string features string icon ReactReactNode color string const ContentCarousel ReactFC = 2 =>3 features     features       color "from-red-500 to-pink-500"
-const ContentCarousel: "React.FC = () => {"
-const [currentSlide",setCurrentSlide] = useState(0)"
-const slides: "Slide[] = ["
-    {"
-id: 1",title: "AI-Powered Analytics",description: "Transform your data into actionable insights with our advanced AI analytics platform.",features: ["
-        "Real-time data processing","Predictive analytics"
-        "Custom dashboards"
-        "Automated reporting"
-    ]
-icon: <BarChart className="h-12 w-12" />,color: "from-blue-500 to-cyan-500"
-  }
-    {"
-id: "2",title: "Cloud Infrastructure",description: "Scalable,secure, and reliable cloud solutions for your business needs."
-features: "[","99.9% uptime guarantee"
-        "Auto-scaling capabilities"
-        "Advanced security"
-        "24/7 monitoring"
-      ]
-icon: <Cloud className="h-12 w-12" />,color: "from-green-500 to-emerald-500"
-    }
-    {"
-id: "3",title: "Cybersecurity Solutions",description: "Protect your business with our comprehensive cybersecurity services.",features: ["
-"
-        "Threat detection","Vulnerability assessment"
-        "Incident response"
-        "Security training"
-      ]
-icon: <Shield className="h-12 w-12" />,color: "from-red-500 to-pink-500"
-    }
-    {"
-id: "4",title: "Digital Transformation",description: "Modernize your business processes with cutting-edge technology solutions.",features: ["
-        "Process automation","Digital workflows"
-        "Integration services"
-        "Change management
-icon <Settings className="h-12 w-12" />"
-color "from-purple-500 to-indigo-500
-useEffect(() => {
-const timer = setInterval(() => {
-setCurrentSlide((prev) => (prev + 1) % slides.length)
-    }, 5000)
-return () => clearInterval(timer)
-  }, [slides.length])
-const nextSlide = (return)
-setCurrentSlide((prev) => (prev + 1) % slides.length)
-  ) => {
-$3
-}
-const prevSlide = (return)
-setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
-  ) => {
-$3
-}
-const goToSlide = (
-setCurrentSlide(index)
-  ,) => {
-$3
-}
-return (<>
-      <div>
-      <Helmet  />
-        <title>ContentCarousel</title>
-        <meta name="description" content="Advanced ContentCarousel solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial, intelligence, ContentCarousel, AI, solutions, intelligent automation"  />
-      </Helmet>
-    </div>
-      <Navigation />,
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"  />"
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden" />,
-    <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20" />,
-    <div className="relative max-w-7 xl mx-auto text-center" />,
-    <h1 className="text-5 xl md: text-7 xl font-bold text-white mb-6 leading-tight"  />ContentCarousel</h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto leading-relaxed"  />
-Advanced ContentCarousel solution for modern businesses.</p>,<div className="flex flex-col sm: flex-row gap-4 justify-center" />
-              <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">Get Started
-                <ArrowRight className="ml-2 h-5 w-5"  /></button>
-              <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-Learn More
-              </button>
-          ,</section>{/* Features Section */}
-        <section className="py-20 px-4" />,
-    <div className="max-w-7 xl mx-auto" />,
-    <div className="text-center mb-16" />,
-    <h1 className="text-4 xl font-bold text-white mb-4">Key Features</h2>
-              <p className="text-xl text-gray-300 max-w-3 xl mx-auto"  />Powerful AI-driven features designed to transform your business operations</>")
-    <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8" />)"
-              {features.map((feature,index) => (
-                <divkey = {index};className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20" />
+'use client';
+import { { { React  useState useEffect  from 'react' } from;
+import ArrowRight X Brain BarChart Target TrendingUp Cloud Shield Globe Database Users, Settings     } from 'lucide-react';
+interface Slide id number title string description string features string icon ReactReactNode color string const ContentCarousel ReactFC = 2 =>3 features     features       color "from-red-500 to-pink-500";
+const ContentCarousel: "React.FC = () => {";
+const [currentSlide",setCurrentSlide] = useState(0)";
+const
+;useEffect(() => {;
+const
+;  }, [slides.length]);
+const
+;                <divkey = {index};className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20" />
                   <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />,
     <h1 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>

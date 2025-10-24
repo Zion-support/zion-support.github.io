@@ -1,3 +1,4 @@
+'use client';
 sm: "'max-w-sm'",md: "'max-w-md'",lg: "'max-w-lg'",xl: "'max-w-xl'",'2 xl': 'max-w-2 xl'
     '3 xl': 'max-w-3 xl'
     '4 xl': 'max-w-4 xl'

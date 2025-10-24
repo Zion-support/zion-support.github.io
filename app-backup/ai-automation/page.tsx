@@ -1,3 +1,4 @@
+'use client';
     "description": 'Automate, invoice, processing, expense, management, and financial reporting.'
   'Reduce operational costs by up to 70%'
     'Increase productivity and efficiency'

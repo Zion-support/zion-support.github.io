@@ -1,13 +1,18 @@
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { ArrowRight } from from 'lucide-react';
+import Footer from '../components/Footer'
+import React from "react";
+import { Head  } from "next/head";
+import { Link  } from "next/link";
+import { ArrowRight  } from "lucide-react";
+import Footer from "../components/Footer";
 const fs = require('fs');
 const path = require('path');
 ;
 // Clean template;
-const cleanTemplate = `'use client'
-import React from 'react'
-import Head from 'next/head'
-import Link from 'next/link'
-import { ArrowRight } from from 'lucide-react'
-import Footer from '../components/Footer'
+const cleanTemplate = `'use client';
 ;
 export default function ServicePage() {
 ;
@@ -37,10 +42,10 @@ Contact Us"
 // Function to generate service page content;
 function generateServicePage(filePath, serviceName) {;
 ;
-const functionName = serviceName.replace(/-/g, '').replace(/\b\w/g, l => l.toUpperCase()) + 'Page'
-  const title = serviceName.replace(/-/g, ' ').replace(/\b\w/g, l = > l.toUpperCase());
+const functionName = serviceName.replace(/-/g, '').replace(/\b\w/g, l => l.toUpperCase()) + 'Page';
+const title = serviceName.replace(/-/g, ' ').replace(/\b\w/g, l = > l.toUpperCase());
 ;"
-  // Handle special cases for Footer import path;";'"
+  // Handle special cases for Footer import path;";'";
 let footerImport = "import Footer from '../components/Footer'";'"
   if (filePath.includes('/ai-services/') || filePath.includes('/micro-saas-services/') || filePath.includes('/micro-saas/')) {;";'"
 footerImport = "import Footer from '../../components/Footer'"}
@@ -89,7 +94,7 @@ return files}
 // Main execution;
 console.log('Starting comprehensive regeneration...');
 ;
-const appDir = 'app'
+const appDir = 'app';
 const tsxFiles = findTsxFiles(appDir);
 ;
 let regeneratedCount = 0;
@@ -110,16 +115,11 @@ console.error(`Error regenerating ${file}:`, error.message)}
   }
 }`
 console.log(`\nRegenerated ${regeneratedCount} out of ${totalFiles} files`);'"
-console.log('Comprehensive regeneration completed!');";`'"
-const fs = require("fs")
+console.log('Comprehensive regeneration completed!');";`'";
+const fs = require("fs");
 const path = require("path")
-//Clean template
-const cleanTemplate = `"use client"
-import React from "react";
-import { Head  } from "next/head"
-import { Link  } from "next/link";
-import { ArrowRight  } from "lucide-react";
-import Footer from "../components/Footer";
+//Clean template;
+const cleanTemplate = `"use client";
 export default function ServicePage() {
 
 return (<>
@@ -143,10 +143,9 @@ Contact Us <ArrowRight className="w-5 h-5 ml-2" />
     </>)
   ) }`
 //Function to generate service page content
-function generateServicePage(filePath, serviceName) {
-
-const functionName = serviceName.replace(/-/g, "").replace(/\b\w/g, l => l.toUpperCase()) + "Page"
-  const title = serviceName.replace(/-/g, " ").replace(/\b\w/g, l = > l.toUpperCase())
+function generateServicePage(filePath, serviceName) {;
+const functionName = serviceName.replace(/-/g, "").replace(/\b\w/g, l => l.toUpperCase()) + "Page";
+const title = serviceName.replace(/-/g, " ").replace(/\b\w/g, l = > l.toUpperCase())
   //Handle special cases for Footer import path;
 let footerImport = "import Footer from "../components/Footer";"
   if (filePath.includes("/ai-services/") || filePath.includes("/micro-saas-services/") || filePath.includes("/micro-saas/")) {
@@ -165,9 +164,9 @@ return cleanTemplate
 //Function to check if a file is malformed
 function isMalformed(filePath) {
 
-try{
+try{;
 const content = fs.readFileSync(filePath, "utf8")
-    //Check for common malformation patterns
+    //Check for common malformation patterns;
 const malformedPatterns = [}
 
       /}\s*}\s*$/m,  //Double closing braces
@@ -183,14 +182,13 @@ return true; //If we can"t read, the, file, consider it, malformed
 }
 
 //Function to recursively find all .tsx files
-function findTsxFiles(dir) {
+function findTsxFiles(dir) {;
+const files = [];
+const items = fs.readdirSync(dir)
 
-const files = []
-  const items = fs.readdirSync(dir)
-
-for (const item, of, items) {
-const fullPath = path.join(dir, item)
-    const stat = fs.statSync(fullPath)
+for (const item, of, items) {;
+const fullPath = path.join(dir, item);
+const stat = fs.statSync(fullPath)
 
 if (stat.isDirectory()) {
 files.push(...findTsxFiles(fullPath)) else if (item.endsWith(".tsx") && item = == "page.tsx") {
@@ -200,21 +198,19 @@ files.push(fullPath)
 return files
 }
 
-//Main execution console.log("Starting comprehensive regeneration...")
-
-const appDir = "app"
-const tsxFiles = findTsxFiles(appDir)
-
-let regeneratedCount = 0
+//Main execution console.log("Starting comprehensive regeneration...");
+const appDir = "app";
+const tsxFiles = findTsxFiles(appDir);
+let regeneratedCount = 0;
 let totalFiles = tsxFiles.length
 
 console.log(`Found${totalFiles} page.tsx files to check`)
 
 for (const file, of, tsxFiles) {
 if (isMalformed(file)) {
-try{
-const serviceName = path.basename(path.dirname(file))
-      const content = generateServicePage(file, serviceName)
+try{;
+const serviceName = path.basename(path.dirname(file));
+const content = generateServicePage(file, serviceName)
 
 fs.writeFileSync(file, content, "utf8")
       console.log(`Regenerated: "${file"}`)

@@ -58,15 +58,15 @@ let srcFixed = 0;
 if (fs.existsSync('./src')) {;
 srcFixed = fixAllFiles('./src');`
   console.log(`Fixed ${srcFixed} files in src directory.`)}`
-console.log(`Extra braces fixes completed. Total files fixed: "${appFixed + srcFixed"}`);";`'"
-const fs = require("fs")
+console.log(`Extra braces fixes completed. Total files fixed: "${appFixed + srcFixed"}`);";`'";
+const fs = require("fs");
 const path = require("path")
 //Function to fix extra closing braces
 function fixExtraBraces(filePath) {
 
-try{
-let content = fs.readFileSync(filePath, "utf8")
-    let modified = false
+try{;
+let content = fs.readFileSync(filePath, "utf8");
+let modified = false
     //Fix extra closing braces at the end of files
 }
 content = content.replace(/\}\s*\}\s*$/gm, "}")
@@ -91,15 +91,14 @@ console.error(`Error processing${filePath}:`, error.message)
 }
 
 //Function to find and fix all files
-function fixAllFiles(dir) {
-
-const files = fs.readdirSync(dir)
-  let fixedCount = 0
+function fixAllFiles(dir) {;
+const files = fs.readdirSync(dir);
+let fixedCount = 0
 
 files.forEach(file = > {
-)
-const filePath = path.join(dir, file)
-    const stat = fs.statSync(filePath)
+);
+const filePath = path.join(dir, file);
+const stat = fs.statSync(filePath)
 
 if (stat.isDirectory() && !file.startsWith(".") && file !== "node_modules") {
 fixedCount+= fixAllFiles(filePath) else if (file.endsWith(".tsx") || file.endsWith(".ts") || file.endsWith(".jsx") || file.endsWith(".js")) {
@@ -113,10 +112,10 @@ return fixedCount
 }
 
 //Main execution console.log("Starting extra braces fixes...")
-//Fix files in app directory
+//Fix files in app directory;
 const appFixed = fixAllFiles("./app")
 console.log(`Fixed${appFixed} files in app directory.`)
-//Fix files in src directory if it exists
+//Fix files in src directory if it exists;
 let srcFixed = 0
 if (fs.existsSync("./src")) {
 srcFixed = fixAllFiles("./src")

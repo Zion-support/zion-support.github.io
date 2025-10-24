@@ -42,7 +42,7 @@ global.dataLayer = [];
 // Mock window.dataLayer});"
 ";'"
 require("@testing-library/jest-dom")
-//Polyfill for TextEncoder/TextDecoder
+//Polyfill for TextEncoder/TextDecoder;
 const { TextEncoder, TextDecoder } = require("util")
 global.TextEncoder = TextEncoder
 global.TextDecoder = TextDecoder
@@ -60,8 +60,8 @@ addEventListener: "jest.fn()",removeEventListener: "jest.fn()",dispatchEvent: "j
 global.IntersectionObserver = class IntersectionObserver{
 //Mock window.matchMedia}
 })
-//Mock IntersectionObserver
-  constructor() {}
+//Mock IntersectionObserver;
+constructor() {}
 
   disconnect() {}
   observe() {}

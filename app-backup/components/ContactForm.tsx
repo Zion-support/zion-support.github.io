@@ -1,3 +1,4 @@
+'use client';
     "service": ''
   'AI Solutions'
     'Web Development'

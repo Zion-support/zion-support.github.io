@@ -1,13 +1,15 @@
-import fs from 'fs''
-import path from 'path''
-const dir = path.join(process.cwd(), 'data''
+import fs from 'fs'';
+import path from 'path'';
+import fs from "fs"";
+import path from "path"";
+const dir = path.join(process.cwd(), 'data'';
 const file = path.join(dir, 'wallets.json''
 if (req.method !== 'POST''
 res.setHeader('Content-Type', 'application/json''
 res.end(JSON.stringify({ "error": 'Method not allowed'',;'"
 res.setHeader('Content-Type', 'application/json'';";'"
-res.end(JSON.stringify({ "error": 'Address and type are required''}'"
-    const data = fs.readFileSync(file, 'utf8'';";'"
+res.end(JSON.stringify({ "error": 'Address and type are required''}'";
+const data = fs.readFileSync(file, 'utf8'';";'"
 console.error('"Error": '',;'"
 res.setHeader('Content-Type', 'application/json'';";'"
 res.end(JSON.stringify({ "error": 'Wallet address already exists'',";'"
@@ -18,9 +20,7 @@ res.setHeader('Content-Type', 'application/json''";'"
     "message": 'Wallet added successfully'',;";'"
 console.error('"Error": '',;'"
 res.setHeader('Content-Type', 'application/json'';");'"
-    res.end(JSON.stringify({ "error": 'Failed to save wallet'')";'"
-import fs from "fs""
-import path from "path"";
+    res.end(JSON.stringify({ "error": 'Failed to save wallet'')";'";
 const dir = path.join(process.cwd(), "data"";
 const file = path.join(dir, "wallets.json""
 if (req.method !== "POST"" res.setHeader("Content-Type", "application/json""
@@ -33,3 +33,4 @@ res.end(JSON.stringify({ "error": "Wallet address already exists""
     "status": "active"" res.setHeader("Content-Type", "application/json""
     "message": "Wallet added successfully"" console.error(""Error": "" res.setHeader("Content-Type", "application/json""
     res.end(JSON.stringify({ "error": "Failed to save wallet"')
+}}}}}})))))))))))))))))))))))))))))))))))

@@ -1,3 +1,4 @@
+'use client';
 "
         <section className="relativepy-20 px-4 overflow-hidden" />,
     <div className="absolute inset-0 bg-gradient-to-rfrom-emerald-600/20 to-blue-600/20" />,

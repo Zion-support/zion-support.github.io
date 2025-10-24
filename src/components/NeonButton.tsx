@@ -1,3 +1,4 @@
+'use client';
 import React from &quot;react&quot
 <meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />
       </>
@@ -45,8 +46,8 @@ Contact Sales</button>
               </div>
             </div>
         </section>
-        </div>
-  constcontent = (
+        </div>;
+constcontent = (
   <di v>{icon&&<span className=&quot;mr-2&quot; />{icon}</spa>}
       {children}
       {!icon && <ArrowRight className = &quot;w-5 h-5 ml-2&quot; />}</ArrowRight>

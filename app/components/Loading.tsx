@@ -1,6 +1,7 @@
-const Loading: React.FC = () => {
-return(<div>
+'use client';
 import React from 'react'
+const Loading: React.FC = () => {;
+return(<div>;
         <title>Loading</title>
         <meta name="description" content="Advanced Loading solution for modern businesses." / />
         <meta name="keywords" content="AI,artificial, intelligence, Loading, AI, solutions, intelligent automation" /  />
@@ -20,7 +21,7 @@ Advanced Loading solution for modern businesses.</p></p>,<div className="flex fl
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"  />
 Get Started</button>
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover: "bg-emerald-400 hove","
+              <button className="border border-emerald-400 text-emerald-400 hover:"bg-emerald-400 hove","
 r: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"  />
 Learn More</button>
               </button>
@@ -32,7 +33,7 @@ Learn More</button>
               <p className="text-xl text-gray-300 max-w-3 xl mx-auto" /  />
 Discover the powerful features that make Loading the perfect solution for your business.</p>
               </>
-    <div className="grid md: "grid-cols-2 l","
+    <div className="grid md:"grid-cols-2 l","
 g: grid-cols-4 gap-8" />,<div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20" />,
     <h1 className="text-xl font-semibold text-white mb-3">AI-Powered</h3>
                 <p className="text-gray-300">Advanced AI algorithms for intelligent automation.</>
@@ -67,17 +68,7 @@ Start Your Free Trial</button>
     </div>)
   )}      )
 }
-export default Loading}'
-const Loading: React.FC<LoadingProps> = ({ size = 'md', className = '' }) => {
-  const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12'
-  }
-  return (<div className={`flex items-center justify-center ${className}`}>`
-      <div className={`${sizeClasses[size]} border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin`}
-       />
-    </div>)
-    )
-}
-export default Loading";`'
+export default Loading}';
+const Loading: React.FC<LoadingProps> = ({ size = 'md', className = '' }) => {;
+const
+;export default Loading";`'

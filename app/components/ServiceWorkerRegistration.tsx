@@ -1,10 +1,10 @@
-'use client'
-import { CheckCircle, Phone, Mail, ArrowRight, Helmet } from 'lucide-react'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-import { CheckCircle, Phone, Mail, ArrowRight } from 'lucide-react'
-const ServiceWorkerRegistrationPage: "React.FC = () =>{"
+'use client';
+import { CheckCircle, Phone, Mail, ArrowRight, Helmet } from 'lucide-react';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+import { CheckCircle, Phone, Mail, ArrowRight } from 'lucide-react';
+const ServiceWorkerRegistrationPage: "React.FC = () =>{";
 const features = [",{";'"
 icon: "Brain",title: 'AI-Powered Intelligence'",description: 'Advanced AI algorithms that provide intelligent insights and recommendations.'",benefits: "['Smart recommendations'",'Predictive analytics', 'Automated insights', 'Real-time analysis']
 }
@@ -16,12 +16,9 @@ icon: "Target",title: 'Precision Targeting'",description: 'Target specific goals
 }
   {";'"
 icon: "TrendingUp",title: 'Growth Optimization'",description: 'Optimize your business growth with data-driven strategies.'",benefits: "['Growth strategies'",'Market analysis', 'Competitive insights', 'ROI optimization']
-  ]
-const benefits = [
-    'Increase efficiency by up to 50%'
-    'Reduce costs by 30% with automation'
-    'Improve decision-making with AI insights'
-    'Scale operations without proportional staff increases';'"
+  ];
+const
+;    'Scale operations without proportional staff increases';'"
     'Gain competitive advantage with advanced technology',
     <div className="flex flex-col sm: flex-row gap-4 justify-center" />
               <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover: from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105" />

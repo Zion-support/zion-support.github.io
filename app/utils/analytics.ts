@@ -1,3 +1,4 @@
+'use client';
   category: string
   action: string
   label?: string
@@ -86,14 +87,7 @@
 }
   }
 }
-export const analytics = Analytics.getInstance()
-// React hooks for easy integration
-export function useAnalytics() {
-}
-// Higher-order component for automatic page view tracking
-export function withAnalytics<T extends React.ComponentType<any>>(WrappedComponent: T): T {
-  return ((props: any) => {
-    const { trackPageView } = useAnalytics()
-    React.useEffect(() => {
-      trackPageView(window.location.pathname, document.title)}, [trackPageView])
-    return React.createElement(WrappedComponent, props)}) as T}'
+export const
+;  return ((props: any) => {;
+const
+;    return React.createElement(WrappedComponent, props)}) as T}'

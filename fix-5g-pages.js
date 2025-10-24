@@ -1,11 +1,11 @@
-const fs = require("fs")
+const fs = require("fs");
 const path = require("path")
 //Function to fix 5G pages specifically
 function fix5GPage(filePath) { 
 
-try { 
-let content = fs.readFileSync(filePath, "utf8")
-    let modified = false
+try { ;
+let content = fs.readFileSync(filePath, "utf8");
+let modified = false
     //Fix duplicate return statements
 if (content.includes("return \n  return (")) {
 content = content.replace(/return\s*\n\s*return\s*\(/g, "return (")
@@ -41,13 +41,13 @@ console.error(`Error processing${filePath}:`, error.message)
   }
 }
 
-//Find and fix all 5G pages
-const appDir = "./app"
+//Find and fix all 5G pages;
+const appDir = "./app";
 const files = fs.readdirSync(appDir)
 
 files.forEach(file = > {
 )
-if (file.startsWith("5g-")) {
+if (file.startsWith("5g-")) {;
 const filePath = path.join(appDir, file, "page.tsx")
     if (fs.existsSync(filePath)) {
 fix5GPage(filePath)
@@ -55,7 +55,7 @@ fix5GPage(filePath)
   }"
 });"
 ;"'"
-console.log('5G pages fix completed.");")'"
+console.log('5G pages fix completed.");")'";
 const fs = require('fs');
 const path = require('path');
 ;
@@ -98,7 +98,7 @@ console.error(`Error processing ${filePath}:`, error.message);
     return false}
 }
 // Find and fix all 5G pages;
-const appDir = './app'
+const appDir = './app';
 const files = fs.readdirSync(appDir);
 ;
 files.forEach(file = > {);

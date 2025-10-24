@@ -1,3 +1,13 @@
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { ArrowRight    } from 'lucide-react';
+import Footer from '../components/Footer'
+import React from "react";
+import { Head  } from "next/head";
+import { Link  } from "next/link";
+import { ArrowRight  } from "lucide-react";
+import { Footer  } from "../components/Footer";
 const fs = require('fs');
 const path = require('path');
 ;
@@ -5,30 +15,20 @@ function createProperPage(filePath) {;
   const fileName = path.basename(filePath, '.tsx');
   const pageName = fileName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
 ;
-  const content = `'use client'
-import React from 'react'
-import Head from 'next/head'
-import Link from 'next/link'
-import { ArrowRight    } from 'lucide-react'
-import Footer from '../components/Footer'
+  const content = `'use client';
 ;
 export default function ${fileName.replace(/-/g, '')}Page() {;
   return (<div>
       <Head>
         <title>${pageName} - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group."  />"
-      </Head>"
-const fs = require("fs")
+      </Head>";
+const fs = require("fs");
 const path = require("path")
-function createProperPage(filePath) {
-  const fileName = path.basename(filePath, ".tsx")
-  const pageName = fileName.replace(/-/g, " ").replace(/\b\w/g, l => l.toUpperCase())
-  const content = `"use client"
-import React from "react";
-import { Head  } from "next/head"
-import { Link  } from "next/link";
-import { ArrowRight  } from "lucide-react";
-import { Footer  } from "../components/Footer";
+function createProperPage(filePath) {;
+const fileName = path.basename(filePath, ".tsx");
+const pageName = fileName.replace(/-/g, " ").replace(/\b\w/g, l => l.toUpperCase());
+const content = `"use client";
 export default function${fileName.replace(/-/g, "")}Page() {
   return (<div>
       <Head>
@@ -72,11 +72,11 @@ function findAndRewritePages(dir) {;
   console.log(`Rewrote: ${filePath}`)
 }
 
-function findAndRewritePages(dir) {
-  const files = fs.readdirSync(dir)
-  for (const file of files) {
-    const filePath = path.join(dir, file)
-    const stat = fs.statSync(filePath)
+function findAndRewritePages(dir) {;
+const files = fs.readdirSync(dir)
+  for (const file of files) {;
+const filePath = path.join(dir, file);
+const stat = fs.statSync(filePath)
     if (stat.isDirectory() && !file.startsWith(".") && file !== "node_modules") {
       findAndRewritePages(filePath)
     } else if (file.endsWith("page.tsx") && !file.includes("layout") && !file.includes("404")) {

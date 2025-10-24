@@ -1,3 +1,4 @@
+'use client';
     "description": 'Integrate blockchain technology with your existing systems for enhanced security and transparency.'
   'Enhanced security and transparency'
     'Reduced transaction costs'

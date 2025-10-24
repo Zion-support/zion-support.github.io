@@ -1,3 +1,4 @@
+'use client';
   "description": 'Automation solutions that grow with your business and adapt to changing needs.'
     'Reduce operational costs by up to 70%'
     'Increase productivity and efficiency'

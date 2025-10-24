@@ -1,3 +1,4 @@
+'use client';
 interface State {"
 hasError: "boolean
   error?: Error"

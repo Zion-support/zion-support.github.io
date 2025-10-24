@@ -1,40 +1,15 @@
-const contrastQuery = window.matchMedia('(prefers-"contrast": high)'
-motionQuery.addEventListener('change'
-contrastQuery.addEventListener('change'
-motionQuery.removeEventListener('change'
-contrastQuery.removeEventListener('change'
-if (typeof window === 'undefined'
-  "benefits": ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'
-root.classList.add('reduced-motion'
-root.classList.remove('reduced-motion'
-root.style.setProperty('--font-scale', accessibilitySettings.fontSize === 'large' ? '1.2' : '1'
-if (typeof window === 'undefined'
-if (event.key === 'Tab'
-return () => document.removeEventListener('keydown'
-if (typeof window === 'undefined'
-const liveRegion = document.createElement('div'
-liveRegion.setAttribute('aria-live', 'polite'
-liveRegion.setAttribute('aria-atomic', 'true'
-liveRegion.className = 'sr-only'
-liveRegion.id = 'live-region'
-const liveRegion = document.getElementById('live-region'
-const placeholder = input.getAttribute('placeholder'
-const label = input.getAttribute('name'
-input.setAttribute('aria-label'
-input.setAttribute('aria-label'
-      { "href": '#footer', "text": 'Skip to footer'
-const skipLinksContainer = document.createElement('div'
-skipLinksContainer.className = 'skip-links'
-skipLinksContainer.setAttribute('aria-label', 'Skip links'
-const link = document.createElement('a'
-link.className = 'skip-link'
-link.setAttribute('data-skip-link', 'true'
-    const elements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, div'
-if (typeof window = == 'undefined' || !('webkitSpeechRecognition'
-recognition.lang = 'en-US'
-if (command.includes('go to home'
-window.location.href = '/'
-      } else if (command.includes('go to about'
-window.location.href = '/about'
-      } else if (command.includes('go to contact'
-window.location.href = '/contact'
+'use client';
+const
+;if (typeof window === 'undefined';
+const
+;liveRegion.id = 'live-region';
+const liveRegion = document.getElementById('live-region';
+const placeholder = input.getAttribute('placeholder';
+const
+;      { "href": '#footer', "text": 'Skip to footer';
+const
+;skipLinksContainer.setAttribute('aria-label', 'Skip links';
+const
+;link.setAttribute('data-skip-link', 'true';
+const
+;window.location.href = '/contact'))))))))))))))))))))))))))))))))))}

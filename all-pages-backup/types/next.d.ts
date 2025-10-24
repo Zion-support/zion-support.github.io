@@ -1,3 +1,4 @@
+'use client';
 // Type definitions for Next.js compatibility()
 export interface Metadata {
   title?: string()
@@ -30,4 +31,4 @@ publishedTime?: string()"
   }
   twitter?: {
 card?: 'summary' | 'summary_large_image' | 'app' | 'player''
-      'max-video-preview''
+      'max-video-preview''}

@@ -1,6 +1,6 @@
-'use client'
-import React from 'react'
-import, React, { useState, useCallback } from 'react'
+'use client';
+import React from 'react';
+import, React, { useState, useCallback } from 'react';
 interface ImageProps {
 }
 src: "string",alt: "string"}
@@ -31,43 +31,18 @@ fill?: boolean"
 sizes?: string"
 style?: React.CSSProperties",onLoad?: () =>void"
 onError?: () => void}
-export const Image: "React.FC<ImageProps>= ({"}</>
-export const Image: "React.FC<ImageProps>= ({"}
-src</>
-export const Image: "React.FC<ImageProps>= ({
-src
-alt
-width
-height
-className
-priority = false
-quality = 75
-placeholder = 'empty'
-blurDataURL
-fill = false"
-sizes"
-style",onLoad, onError}
-...props})
-}) => {}
-const [ setIsLoaded] = useState(false)
-const [hasError, setHasError] = useState(false)
-const handleLoad = useCallback(() => {}
-setIsLoaded(true)
-if (onLoad) onLoad(    )
-}
-}, [onLoad])
-const handleError = useCallback(() => {}
-setHasError(true)
-if (onError) onError(  )
-}
-}, [onError])"
-const imageStyle: "React.CSSProperties={
-...style"
-...(fill && {";'"
+export const
+;const [ setIsLoaded] = useState(false);
+const [hasError, setHasError] = useState(false);
+const
+;}, [onLoad]);
+const
+;}, [onError])";
+const
+;...(fill && {";'"
 positio",n: 'absolute'",top: "0"
-lef",t: "0"};const imageStyle: "React.CSSProperties = {"}
-...style"
-...(fill && {}";'"
+lef",t: "0"};const
+;...(fill && {}";'"
 position: 'absolute'",top: "0";'
 lef",t: "0",width: '100%'",height: '100%'",objectFit: 'cover'"})
 })
@@ -86,9 +61,9 @@ export, const)"
 Image: "React.FC<ImageProps />= ({/* TOD",)"
 O: "Fix JSX expression */"})"
 }) => {/* TODO: "Fix JSX expression */"}
-}, [onLoad])"
-const handleError = useCallback(() => {/* TODO: "Fix JSX expression */"}
-}, [onError])"
+}, [onLoad])";
+const
+;}, [onError])";
 const"
 imageStyle: "React.CSSProperties={/* TOD",O: "Fix JSX expression */"}})"
 if (hasError) {/* TODO: "Fix JSX expression */"}

@@ -1,3 +1,4 @@
+'use client';
 import React from &quot;react&quot(    )
 }
 }
@@ -6,7 +7,7 @@ import React from &quot;react&quot(    )
 title?: string()
 description?: string()
 href?: string()
-onClick?: () => void()
+onClick?: () => void();
 variant?: &quot;primary&quot; | &quot;secondary&quot; | &quot;accent&quot()
 size?: &quot;sm&quot; | &quot;md&quot; | &quot;lg&quot()
 icon?: React.ReactNode()

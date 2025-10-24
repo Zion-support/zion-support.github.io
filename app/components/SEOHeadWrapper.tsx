@@ -1,3 +1,4 @@
+'use client';
 className?: string
   title?: string
   description?: string

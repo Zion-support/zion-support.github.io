@@ -1,3 +1,13 @@
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link'}';
+import { ArrowRight } from from 'lucide-react';
+import Footer from '../components/Footer'
+import React from "react";
+import { Head  } from "next/head";
+import { Link  } from "next/link"
+import { ArrowRight  } from "lucide-react";
+import { Footer  } from "../components/Footer";
 function fixPageJsx(filePath) {;
 ;
 try{;
@@ -13,16 +23,11 @@ const componentNameMatch = content.match(/export default function (\w+)/);
 ;
 if (componentNameMatch) {;
 const componentName = componentNameMatch[1];
-        const title = titleMatch ? titleMatch[1] : 'Page - Zion Tech Group'
-        const description = descriptionMatch ? descriptionMatch[1] : 'Professional services by Zion Tech Group.'
+        const title = titleMatch ? titleMatch[1] : 'Page - Zion Tech Group';
+const description = descriptionMatch ? descriptionMatch[1] : 'Professional services by Zion Tech Group.'
 ;
         // Create a proper page structure;
-const properStructure = `'use client'
-import React from 'react'
-import Head from 'next/head'
-import Link from 'next/link'}'
-import { ArrowRight } from from 'lucide-react'
-import Footer from '../components/Footer'
+const properStructure = `'use client';
 ;
 export default function ${componentName}() {;
 return (<>;
@@ -88,34 +93,29 @@ if (fixPageJsx(file)) {;
 fixedCount++}
 }`"
 console.log(`Fixed page JSX in ${fixedCount} files.`);";`'"
-#!/usr/bin/env node
-const fs = require("fs")
+#!/usr/bin/env node;
+const fs = require("fs");
 const path = require("path")
 
 function fixPageJsx(filePath) {
 
-try{
-let content = fs.readFileSync(filePath, "utf8")
-    let modified = false
+try{;
+let content = fs.readFileSync(filePath, "utf8");
+let modified = false
     //Check if this is a page component with broken JSX
 if (content.includes("export default function") && content.includes("return (") && content.includes("<>")) {
-      //Extract the component name and title
-const componentNameMatch = content.match(/export default function (\w+)/)
-      const titleMatch = content.match(/<title>([^<]+)<\/title>/)
-      const descriptionMatch = content.match(/<meta name="description" content="([^"]+)" \/>/)
+      //Extract the component name and title;
+const componentNameMatch = content.match(/export default function (\w+)/);
+const titleMatch = content.match(/<title>([^<]+)<\/title>/);
+const descriptionMatch = content.match(/<meta name="description" content="([^"]+)" \/>/)
 
-if (componentNameMatch) {
-const componentName = componentNameMatch[1,]
-        const title = titleMatch?titleMatch[1,] : "Page - Zion Tech Group"
-        const description = descriptionMatch?descriptionMatch[1,] : "Professional services by Zion Tech Group."
-        //Create a proper page structure
-const properStructure = `"use client"
-import React from "react";
-import { Head  } from "next/head"
-import { Link  } from "next/link"
+if (componentNameMatch) {;
+const componentName = componentNameMatch[1,];
+const title = titleMatch?titleMatch[1,] : "Page - Zion Tech Group";
+const description = descriptionMatch?descriptionMatch[1,] : "Professional services by Zion Tech Group."
+        //Create a proper page structure;
+const properStructure = `"use client";
 };
-import { ArrowRight  } from "lucide-react";
-import { Footer  } from "../components/Footer";
 export default function${componentName}() {
 return (<>
       <Head>
@@ -155,16 +155,15 @@ console.error(`Error fixing${filePath}:`, error.message)
   }
 }
 
-function findPageFiles(dir) {
-
+function findPageFiles(dir) {;
 const files = []
 
-function traverse(currentDir) {
+function traverse(currentDir) {;
 const items = fs.readdirSync(currentDir)
 
-for (const item, of, items) {
-const fullPath = path.join(currentDir, item)
-      const stat = fs.statSync(fullPath)
+for (const item, of, items) {;
+const fullPath = path.join(currentDir, item);
+const stat = fs.statSync(fullPath)
 
 if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {
 traverse(fullPath) else if (item = == "page.tsx" && fullPath.includes("/app/')) {
@@ -176,12 +175,11 @@ traverse(dir)
   return files
 }
 
-//Main execution
-const workspaceDir = process.cwd()
+//Main execution;
+const workspaceDir = process.cwd();
 const pageFiles = findPageFiles(workspaceDir)
 
-console.log(`Checking${pageFiles.length} page files for broken JSX...`)
-
+console.log(`Checking${pageFiles.length} page files for broken JSX...`);
 let fixedCount = 0
 for(const file, of, pageFiles) { 
 if (fixPageJsx(file)) {
@@ -190,3 +188,4 @@ fixedCount++
 }
 
 console.log(`Fixed page JSX in${fixedCount} files.`)
+}

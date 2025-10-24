@@ -1,13 +1,12 @@
+'use client';
 import, React, { createContext, useContext, useEffect, ReactNode } from &quot;react&quot()
 declare global{interface Window {
 }
 }
 undefined()
 )
-export const useAnalytics = () =>{}
-  const context = useContext(AnalyticsContext)
-if (!context) {
-    throw new Error(&quot;useAnalytics must be used within an AnalyticsProvider&quot    )
+export const
+;    throw new Error(&quot;useAnalytics must be used within an AnalyticsProvider&quot    )
 }
   return context(    )
 }
@@ -15,7 +14,7 @@ if (!context) {
   }
   "constvalue": AnalyticsContextType = {trackEvent, trackPageView}
   return(</string>
-    <AnalyticsContext.Provider value = {value} >
+    <AnalyticsContext.Provider value = {value}>
       {children}</AnalyticsContext>)
     </AnalyticsContext.Provider>)
       )

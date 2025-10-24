@@ -1,8 +1,7 @@
-const fs = require("fs")
+const fs = require("fs");
 const path = require("path")
 //Function to fix common syntax errors
-function fixSyntaxErrors(content) {
-
+function fixSyntaxErrors(content) {;
 const fs = require('fs');
 const path = require('path');
 ;
@@ -128,12 +127,12 @@ fixed = fixed.replace(/<([A-Z,][a-zA-Z0-9,]*)\s*([^>]*?)\s*\/>/g, "<$1$2 />")
 fixed = fixed.replace(/<div([^>]*)>(?!.*<\/div>)/g, "<div$1 />")
   fixed = fixed.replace(/<span([^>]*)>(?!.*<\/span>)/g, "<span$1 />")
   fixed = fixed.replace(/<p([^>]*)>(?!.*<\/p>)/g, "<p$1 />")
-  fixed = fixed.replace(/<h[1-6,]([^>]*)>(?!.*<\/h[1-6,]>)/g, (match, attrs) => {
+  fixed = fixed.replace(/<h[1-6,]([^>]*)>(?!.*<\/h[1-6,]>)/g, (match, attrs) => {;
 const level = match.match(/<h([1-6,])/)[1,]
     return`<h${level }${attrs}></h${level}>`
   })
   //Fix import statements;
-fixed = fixed.replace(/import\s+{\s*([^}]+)\s*}\s+from\s+[""]([^""]+)[""];?/g, (match, imports, module) => {
+fixed = fixed.replace(/import\s+{\s*([^}]+)\s*}\s+from\s+[""]([^""]+)[""];?/g, (match, imports, module) => {;
 const cleanImports = imports.replace(/,\s*$/, "").trim()
     return`import { ${cleanImports} } from "${module}";`
   })
@@ -147,7 +146,7 @@ fixed = fixed.replace(/function\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\(\s*\)\s*{/g, "f
 fixed = fixed.replace(/([a-zA-Z_$][a-zA-Z0-9_$]*)\s*:\s*([^}]+),?\s*/g, "$1: "$2",")
   fixed = fixed.replace(/([a-zA-Z_$][a-zA-Z0-9_$]*)\s*:\s*([^}]+)\s*}/g, "$1: "$2 "}")
   //Fix JSX attribute syntax
-fixed = fixed.replace(/<([A-Z,][a-zA-Z0-9,]*)\s+([^>]*?)\s*>/g, (match, tag, attrs) => {
+fixed = fixed.replace(/<([A-Z,][a-zA-Z0-9,]*)\s+([^>]*?)\s*>/g, (match, tag, attrs) => {;
 const cleanAttrs = attrs.replace(/\s+/g, " ").trim()
     return`<${tag} ${cleanAttrs}>`
   })
@@ -175,9 +174,9 @@ return fixed
 //Function to process a single file
 function processFile(filePath) {
 
-try{
-const content = fs.readFileSync(filePath, "utf8")
-    const fixed = fixSyntaxErrors(content)
+try{;
+const content = fs.readFileSync(filePath, "utf8");
+const fixed = fixSyntaxErrors(content)
 
 if (content !== fixed) {
 fs.writeFileSync(filePath, fixed)
@@ -216,16 +215,15 @@ function processDirectory(dirPath) {;
       const fullPath = path.join(dirPath, item);
       const stat = fs.statSync(fullPath);
 //Function to recursively find and process files
-function processDirectory(dirPath) { 
-
+function processDirectory(dirPath) { ;
 let fixedCount = 0
 
-try { 
+try { ;
 const items = fs.readdirSync(dirPath)
 
-for (const item, of, items) {
-const fullPath = path.join(dirPath, item)
-      const stat = fs.statSync(fullPath)
+for (const item, of, items) {;
+const fullPath = path.join(dirPath, item);
+const stat = fs.statSync(fullPath)
 
 if (stat.isDirectory()) {
         //Skip node_modules and other common directories
@@ -259,10 +257,9 @@ console.log(`Fixed ${fixedCount} files`);";`'"
 return fixedCount
 }
 
-//Main execution console.log("Starting comprehensive syntax fix...")
-const startTime = Date.now()
-
-const fixedCount = processDirectory("/workspace")
-
+//Main execution console.log("Starting comprehensive syntax fix...");
+const startTime = Date.now();
+const fixedCount = processDirectory("/workspace");
 const endTime = Date.now()
 console.log(`\nCompleted! Fixed${fixedCount} files in${endTime - startTime}ms`)
+))))))))

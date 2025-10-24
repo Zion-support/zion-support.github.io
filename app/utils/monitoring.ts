@@ -1,3 +1,4 @@
+'use client';
   }
 }
 export interface PerformanceMetrics {
@@ -30,5 +31,5 @@ return [...this.errors]
     }
   }
 }
-// Singleton instance
+// Singleton instance;
 const monitoring = new MonitoringService()"

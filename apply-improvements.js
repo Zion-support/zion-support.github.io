@@ -1,5 +1,5 @@
 
-const fs = require('fs''
+const fs = require('fs'';
 const path = require('path'');
 let content = fs.readFileSync(filePath, 'utf8'');
 if (content.includes('export default function') && !content.includes('ErrorBoundary'');
@@ -14,9 +14,9 @@ content = content.replace(/const team = \[/g, 'const "team": Array<{name: "strin
 if (content.includes('<button') && !content.includes('aria-label'');
 content = content.replace(/<button([^>]*)>/g, ''''
 if(content.includes('');'"
-        '')";'"
-const fs = require("fs""
-const path = require("path""
+        '')";'";
+const fs = require("fs"";
+const path = require("path"";
 let content = fs.readFileSync(filePath, "utf8"")
 if (content.includes("export default function") && !content.includes("ErrorBoundary""
 if (content.includes("")
@@ -31,3 +31,4 @@ if (content.includes("<button") && !content.includes("aria-label"")
 content = content.replace(/<button([^>]*)>/g, ""
         "" if(content.includes(""
         "')
+)))))))))))))))))

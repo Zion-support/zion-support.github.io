@@ -1,10 +1,17 @@
+import { Head } from 'next/head';
+import { Inter } from 'next/font/google';
+import './globals.css';
+import React from 'react';
+import Link from 'next/link';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
+import SEOHead from './components/SEOHead';
 const fs = require('fs');
 const path = require('path');
 
-// Fix SEOHead component
+// Fix SEOHead component;
 const seoHeadContent = `'use client';
-
-import { Head } from 'next/head';
+;
 
 interface SEOHeadProps {
   title: string;
@@ -41,11 +48,9 @@ export default function SEOHead({
   );
 }`;
 
-// Fix layout.tsx
+// Fix layout.tsx;
 const layoutContent = `import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
-
+;
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -65,11 +70,9 @@ export default function RootLayout({
   );
 }`;
 
-// Fix not-found.tsx
+// Fix not-found.tsx;
 const notFoundContent = `'use client';
-
-import React from 'react';
-import Link from 'next/link';
+;
 
 export default function NotFound() {
   return (
@@ -79,8 +82,7 @@ export default function NotFound() {
         <p className="text-xl text-gray-300 mb-8">Page not found</p>
         <Link
           href="/"
-          className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700"
-        >
+          className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700">
           Go Home
         </Link>
       </div>
@@ -88,11 +90,8 @@ export default function NotFound() {
   );
 }`;
 
-// Fix page.tsx
+// Fix page.tsx;
 const pageContent = `import Link from 'next/link';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import SEOHead from './components/SEOHead';
 
 export default function HomePage() {
   return (
@@ -140,14 +139,12 @@ export default function HomePage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up delay-300">
                 <Link
                   href="/about"
-                  className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all duration-300 hover:scale-105"
-                >
+                  className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all duration-300 hover:scale-105">
                   Learn More
                 </Link>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center px-8 py-3 border border-white text-base font-medium rounded-md text-white bg-transparent hover:bg-white hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-300 hover:scale-105"
-                >
+                  className="inline-flex items-center px-8 py-3 border border-white text-base font-medium rounded-md text-white bg-transparent hover:bg-white hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-300 hover:scale-105">
                   Get Started
                 </Link>
               </div>
@@ -235,14 +232,12 @@ export default function HomePage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all duration-300 hover:scale-105"
-                >
+                  className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all duration-300 hover:scale-105">
                   Start Your Journey
                 </Link>
                 <Link
                   href="/ai-services"
-                  className="inline-flex items-center px-8 py-3 border border-green-400 text-base font-medium rounded-md text-green-400 bg-transparent hover:bg-green-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-400 transition-all duration-300 hover:scale-105"
-                >
+                  className="inline-flex items-center px-8 py-3 border border-green-400 text-base font-medium rounded-md text-green-400 bg-transparent hover:bg-green-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-400 transition-all duration-300 hover:scale-105">
                   Explore AI Solutions
                 </Link>
               </div>
@@ -256,7 +251,7 @@ export default function HomePage() {
   );
 }`;
 
-// Fix globals.css
+// Fix globals.css;
 const globalsCssContent = `@tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -315,7 +310,7 @@ const globalsCssContent = `@tailwind base;
   }
 }`;
 
-// Fix files
+// Fix files;
 const filesToFix = [
   { path: './app/components/SEOHead.tsx', content: seoHeadContent },
   { path: './app/layout.tsx', content: layoutContent },

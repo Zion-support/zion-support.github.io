@@ -1,3 +1,4 @@
+'use client';
 Learn More</button>
               </button>
                 </div>

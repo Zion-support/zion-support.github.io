@@ -39,9 +39,9 @@ fs.writeFileSync(filePath, content);"
 return false} catch (error) {;`
 console.error(`Error processing ${filePath}:`, error.message);
     return false}
-const fs = require("fs")
+const fs = require("fs");
 const path = require("path")
-//List of problematic pages that need dynamic rendering
+//List of problematic pages that need dynamic rendering;
 const problematicPages = ["ai-content-generator"
   "ai-email-automation"
   "ai-email-marketing-automation"
@@ -58,7 +58,7 @@ const problematicPages = ["ai-content-generator"
 //Function to add dynamic export to a file
 function addDynamicExport(filePath) { 
 
-try { 
+try { ;
 let content = fs.readFileSync(filePath, "utf8")
     //Check if dynamic export already exists
 if (content.includes("export const dynamic")) {
@@ -66,11 +66,11 @@ return false
 }
     }
 
-    //Add dynamic export after the imports
+    //Add dynamic export after the imports;
 const importMatch = content.match(/import.*from "lucide-react";/)
-    if (importMatch) {
-const insertPoint = importMatch.index+importMatch[0,].length
-      const dynamicExport = "\n\nexport const dynamic = "force-dynamic";\n"
+    if (importMatch) {;
+const insertPoint = importMatch.index+importMatch[0,].length;
+const dynamicExport = "\n\nexport const dynamic = "force-dynamic";\n"
       content = content.slice(0, insertPoint) + dynamicExport+content.slice(insertPoint)
 
 fs.writeFileSync(filePath, content)
@@ -94,9 +94,9 @@ fixedCount++}
   }
 }`"
 console.log(`Added dynamic exports to ${fixedCount} pages`);";`'"
-//Fix all problematic pages
+//Fix all problematic pages;
 let fixedCount = 0
-for(const page, of, problematicPages) { 
+for(const page, of, problematicPages) { ;
 const filePath = path.join(__dirname, "app", page, "page.tsx")
   if (fs.existsSync(filePath)) {
 if (addDynamicExport(filePath)) {

@@ -3,8 +3,8 @@ const path = require('path');
 
 // Function to fix malformed page files
 function fixPageFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
+  try {;
+let content = fs.readFileSync(filePath, 'utf8');
     
     // Skip if file doesn't exist or is empty
     if (!content) return;
@@ -15,8 +15,8 @@ function fixPageFile(filePath) {
       return;
     }
     
-    // Fix common syntax issues
-    let fixed = content
+    // Fix common syntax issues;
+let fixed = content
       // Remove extra semicolons after imports
       .replace(/import\s+[^;]+;\s*;/g, (match) => match.replace(/;\s*;/, ';'))
       // Fix malformed JSX return statements
@@ -53,11 +53,11 @@ function fixPageFile(filePath) {
 }
 
 // Function to recursively find and fix page files
-function fixAllPages(dir) {
-  const items = fs.readdirSync(dir);
+function fixAllPages(dir) {;
+const items = fs.readdirSync(dir);
   
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
+  for (const item of items) {;
+const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
     
     if (stat.isDirectory()) {

@@ -2,8 +2,8 @@ const fs = require('fs');
 
 // Function to fix all missing commas in servicesData.ts
 function fixAllCommas() {
-  try {
-    let content = fs.readFileSync('/workspace/app/data/servicesData.ts', 'utf8');
+  try {;
+let content = fs.readFileSync('/workspace/app/data/servicesData.ts', 'utf8');
     
     // Fix missing commas in arrays - add commas between array items
     content = content.replace(/"([^"]+)"\n(\s+)"([^"]+)"/g, '"$1",\n$2"$3"');

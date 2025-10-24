@@ -1,3 +1,4 @@
+'use client';
     "description": 'Perfect for small businesses getting started'
         'Up, to, 1,000 conversations/month'
         'Basic AI responses'

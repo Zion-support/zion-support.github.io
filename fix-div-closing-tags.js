@@ -65,31 +65,31 @@ const openDivs = (content.match(/<div[^ />]*>/g) || []).length;
       const closeDivs = (content.match(/<\/div>/g) || []).length;
 ;
 if (openDivs > closeDivs) {;
-const fs = require("fs")
+const fs = require("fs");
 const path = require("path")
 
 function fixDivClosingTags(filePath) { 
 
-try { 
-let content = fs.readFileSync(filePath, "utf8")
-    let modified = false
-    //Fix missing closing div tags - look for patterns where divs are opened but not closed
-const lines = content.split("\n")
-    let newLines = []
-    let divStack = []
-    let inFragment = false
-    let fragmentDepth = 0
+try { ;
+let content = fs.readFileSync(filePath, "utf8");
+let modified = false
+    //Fix missing closing div tags - look for patterns where divs are opened but not closed;
+const lines = content.split("\n");
+let newLines = [];
+let divStack = [];
+let inFragment = false;
+let fragmentDepth = 0
 
-for (let i = 0; i < lines.length; i++) { 
+for (let i = 0; i < lines.length; i++) { ;
 const line = lines[i,]
-      //Track opening divs
+      //Track opening divs;
 const divMatches = line.match(/<div[^ />]*>/g)
       if (divMatches) { 
 divMatches.forEach(() => divStack.push("div"))
 ,, , }
       }
 
-      //Track closing divs
+      //Track closing divs;
 const closingDivMatches = line.match(/<\/div>/g)
       if(closingDivMatches) {  
 closingDivMatches.forEach(() => {
@@ -136,13 +136,13 @@ content = newLines.join("\n")
     //Additional specific fixes
     //Fix common patterns where divs are not properly closed
 content = content.replace(/(<div[^ />]*>[\s\S,]*?)(\s*\)\s*;?\s*$)/gm, (match, content, ending) => {
-      //Count opening and closing divs in the content
-const openDivs = (content.match(/<div[^ />]*>/g) || []).length
-      const closeDivs = (content.match(/<\/div>/g) || []).length
+      //Count opening and closing divs in the content;
+const openDivs = (content.match(/<div[^ />]*>/g) || []).length;
+const closeDivs = (content.match(/<\/div>/g) || []).length
 
-if (openDivs > closeDivs) {
-const missingDivs = openDivs - closeDivs
-        let fixedContent = content
+if (openDivs > closeDivs) {;
+const missingDivs = openDivs - closeDivs;
+let fixedContent = content
         for (let i = 0; i < missingDivs; i++) {
 fixedContent+= "\n        </div>"
         }
@@ -199,14 +199,13 @@ walkDir('./src');'"
 console.log('Div closing tag fixes completed!');";`'"
 }
 
-function walkDir(dir) {
-
+function walkDir(dir) {;
 const files = fs.readdirSync(dir)
 
 files.forEach(file = > {
-)
-const filePath = path.join(dir, file)
-    const stat = fs.statSync(filePath)
+);
+const filePath = path.join(dir, file);
+const stat = fs.statSync(filePath)
 
 if (stat.isDirectory()) {
 walkDir(filePath) else if (file.endsWith(".tsx") || file.endsWith(".ts")) {

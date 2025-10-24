@@ -1,11 +1,11 @@
-const fs = require("fs")
+const fs = require("fs");
 const path = require("path")
 
 function fixJSXFragmentLines(filePath) {
 
-try{
-let content = fs.readFileSync(filePath, "utf8")
-    let modified = false
+try{;
+let content = fs.readFileSync(filePath, "utf8");
+let modified = false
     //Fix the specific pattern: "return(<> \n \n <Head>
     //This should be: return ( <> <Head>)
 content = content.replace(/return\s*\(\s*<>\s*\n\s*\n\s*<Head>/g","return (\n    <>\n      <Head>")
@@ -67,13 +67,12 @@ fixJSXFragmentLines(filePath)}
 console.log('Starting JSX fragment lines fixes...');
 walkDir('./app');
 walkDir('./src');'"
-console.log('JSX fragment lines fixes completed!');";`'"
-
+console.log('JSX fragment lines fixes completed!');";`'";
 const files = fs.readdirSync(dir)
 
-files.forEach(file = /> {)
-const filePath = path.join(dir, file)
-    const stat = fs.statSync(filePath)
+files.forEach(file = /> {);
+const filePath = path.join(dir, file);
+const stat = fs.statSync(filePath)
 
 if (stat.isDirectory()) {
 walkDir(filePath) else if (file.endsWith(".tsx") || file.endsWith(".ts")) {
@@ -83,3 +82,4 @@ fixJSXFragmentLines(filePath)
 }
 
 //Start fixing from the app directory console.log("Starting JSX fragment lines fixes...") walkDir("./app") walkDir("./src") console.log("JSX fragment lines fixes completed!")
+)))))))))

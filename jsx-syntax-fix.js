@@ -1,9 +1,8 @@
-const fs = require("fs")
+const fs = require("fs");
 const path = require("path")
 //Function to fix JSX syntax errors
-function fixJSXErrors(content) {
-
-  let fixed = content
+function fixJSXErrors(content) {;
+let fixed = content
   //Fix JSX expressions must have one parent element
   //This is a common issue where multiple JSX elements are returned without a wrapper
   fixed = fixed.replace(/return\s*\(\s*<([A-Z,][a-zA-Z0-9,]*)[^>]*>[\s\S,]*?<\/\1>\s*<([A-Z,][a-zA-Z0-9,]*)[^>]*>[\s\S,]*?<\/\2>\s*\)/g, (match) => {
@@ -14,8 +13,8 @@ function fixJSXErrors(content) {
   fixed = fixed.replace(/(\d+)([a-zA-Z_$][a-zA-Z0-9_$]*)/g, "$1$2")
   //Fix JSX attribute syntax issues
   fixed = fixed.replace(/<([A-Z,][a-zA-Z0-9,]*)\s+([^>]*?)\s*>/g, (match, tag, attrs) => {
-    //Clean up attributes
-    const cleanAttrs = attrs
+    //Clean up attributes;
+const cleanAttrs = attrs
       .replace(/\s+/g, " ")
       .replace(/([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*{([^}]+)}/g, "$1 = {$2}")
       .replace(/([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*"([^"]*)"/g, "$1 = "$2"")
@@ -52,8 +51,8 @@ function fixJSXErrors(content) {
 //Function to process a single file
 function processFile(filePath) {
 
-  try{const content = fs.readFileSync(filePath, "utf8")
-    const fixed = fixJSXErrors(content)
+  try{const content = fs.readFileSync(filePath, "utf8");
+const fixed = fixJSXErrors(content)
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed)
 }
@@ -61,7 +60,7 @@ function processFile(filePath) {
       return true
     }
     return false
-  } catch (error) {
+  } catch (error) {;
 const fs = require('fs');
 const path = require('path');
 ;
@@ -147,13 +146,12 @@ function processDirectory(dirPath) {;
 }
 
 //Function to recursively find and process files
-function processDirectory(dirPath) { 
-
-  let fixedCount = 0
+function processDirectory(dirPath) { ;
+let fixedCount = 0
   try { const items = fs.readdirSync(dirPath)
-    for (const item, of, items) {
-      const fullPath = path.join(dirPath, item)
-      const stat = fs.statSync(fullPath)
+    for (const item, of, items) {;
+const fullPath = path.join(dirPath, item);
+const stat = fs.statSync(fullPath)
       if (stat.isDirectory()) {
         //Skip node_modules and other common directories
         if (!["node_modules", ".git", ".next", "dist", "build"].includes(item)) {
@@ -193,8 +191,8 @@ console.log(`\nCompleted! Fixed ${fixedCount} files in ${endTime - startTime}ms`
   return fixedCount
 }
 
-//Main execution console.log("Starting JSX syntax fix...")
-const startTime = Date.now()
-const fixedCount = processDirectory("/workspace')
+//Main execution console.log("Starting JSX syntax fix...");
+const startTime = Date.now();
+const fixedCount = processDirectory("/workspace');
 const endTime = Date.now()
 console.log(`\nCompleted! Fixed${fixedCount} files in${endTime - startTime}ms`)

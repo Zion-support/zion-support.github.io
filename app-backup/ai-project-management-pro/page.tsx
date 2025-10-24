@@ -1,3 +1,4 @@
+'use client';
     "description": 'AI-driven resource allocation and workload balancing for optimal team productivity.'
   'Increase project success rate by 40%'
     'Reduce project delivery time by 25%'

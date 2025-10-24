@@ -1,2 +1,3 @@
+'use client';
 interface SecurityConfig {
-enableCSP: "boolean
+enableCSP: "boolean}

@@ -27,8 +27,8 @@ jsFiles.push(filePath)});
 ;
 findJSFiles(DIST_DIR);
 ;
-  // Analyze each JS file;"
-  const analysis = {;"
+  // Analyze each JS file;";
+const analysis = {;"
 totalFiles: "jsFiles.length",totalSize: "0",files: "[]",recommendations: "[]"
   "}
 const stats = fs.statSync(filePath);
@@ -69,8 +69,8 @@ console.log(`\n📄 Detailed report saved to: "${reportPath"}`);";`'"
 ;
 function formatBytes(bytes) {;
 ;
-if (bytes === 0) return '0 Bytes'
-  const k = 1024;
+if (bytes === 0) return '0 Bytes';
+const k = 1024;
   const sizes = ['Bytes', 'KB', 'MB', 'GB'];
   const i = Math.floor(Math.log(bytes) / Math.log(k));
   return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
@@ -112,7 +112,7 @@ recommendations.push('Use dynamic imports for route-based code splitting.');
 analysis.recommendations = recommendations;
 ;
 function generateHTMLReport(analysis) {;
-;`
+;`;
 const html = `;
     <title>Bundle Analysis Report - Zion Tech Group</>;"
 body{;";'"
@@ -176,10 +176,9 @@ margin: 0;
             padding-left: 20px;
         .recommendations li {;
 margin-bottom: 8px;
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
-
-const DIST_DIR = path.join(__dirname, "..", "dist")
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const DIST_DIR = path.join(__dirname, "..", "dist");
 const ANALYSIS_DIR = path.join(__dirname, "..", "analysis")
 //Ensure analysis directory exists
 if (!fs.existsSync(ANALYSIS_DIR)) {
@@ -190,27 +189,26 @@ function analyzeBundle() {
   //Check if dist directory exists
   if (!fs.existsSync(DIST_DIR)) { console.error("❌ Dist directory not found. Please run "npm run build" first.")
     process.exit(1)
-  //Get all JS files in dist
-  const jsFiles = []
-  function findJSFiles(dir) {
-const files = fs.readdirSync(dir)
-      const filePath = path.join(dir, file)
-      const stat = fs.statSync(filePath)
+  //Get all JS files in dist;
+const jsFiles = []
+  function findJSFiles(dir) {;
+const files = fs.readdirSync(dir);
+const filePath = path.join(dir, file);
+const stat = fs.statSync(filePath)
       if (stat.isDirectory()) {
 findJSFiles(filePath) else if (file.endsWith(".js")) {
 jsFiles.push(filePath)
     })
 
 findJSFiles(DIST_DIR)
-  //Analyze each JS file
-  const analysis = {
+  //Analyze each JS file;
+const analysis = {
 totalFiles: "jsFiles.length",totalSize: "0",files: "[]",recommendations: "[]
   "}
-
-
-const stats = fs.statSync(filePath)
-    const size = stats.size
-    const relativePath = path.relative(DIST_DIR, filePath)
+;
+const stats = fs.statSync(filePath);
+const size = stats.size;
+const relativePath = path.relative(DIST_DIR, filePath)
 
 analysis.totalSize+= size
     analysis.files.push({)
@@ -222,8 +220,8 @@ sizeFormatted: "formatBytes(size)
  b.size - a.size)
   //Generate recommendations
   generateRecommendations(analysis)
-  //Write analysis report
-  const reportPath = path.join(ANALYSIS_DIR, "bundle-analysis.json")
+  //Write analysis report;
+const reportPath = path.join(ANALYSIS_DIR, "bundle-analysis.json")
   fs.writeFileSync(reportPath, JSON.stringify(analysis, null, 2))
   //Generate HTML report
   generateHTMLReport(analysis)
@@ -243,13 +241,13 @@ console.log(`\n📄 Detailed report saved to: "${reportPath"}`)
 
 function formatBytes(bytes) {
 
-if (bytes === 0) return "0 Bytes"
-  const k = 1024
-  const sizes = ["Bytes", "KB", "MB", "GB"]
-  const i = Math.floor(Math.log(bytes) /Math.log(k))
+if (bytes === 0) return "0 Bytes";
+const k = 1024;
+const sizes = ["Bytes", "KB", "MB", "GB"];
+const i = Math.floor(Math.log(bytes) /Math.log(k))
   return parseFloat((bytes /Math.pow(k, i)).toFixed(2)) + " " + sizes[i,]
 
-function generateRecommendations(analysis) {
+function generateRecommendations(analysis) {;
 const recommendations = []
   //Check total bundle size
  2*1024*1024) { //2MB
@@ -278,8 +276,7 @@ sum+file.size, 0)
 
 analysis.recommendations = recommendations
 
-function generateHTMLReport(analysis) {
-
+function generateHTMLReport(analysis) {;
 const html = `
     <title>Bundle Analysis Report - Zion Tech Group</title>
 body{
@@ -431,9 +428,9 @@ analyzeBundle()";`'"
             <h3>💡 Optimization Recommendations</h3>
 ${analysis.recommendations.map(rec = > `<li>${rec}</li>`).join("")}
 
-  `
-
+  `;
 const htmlPath = path.join(ANALYSIS_DIR, "bundle-report.html')
   fs.writeFileSync(htmlPath, html)
 //Run analysis
 analyzeBundle()
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}

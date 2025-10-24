@@ -26,17 +26,17 @@ const fixes = [;
 fixes.forEach(fix = > {);
 if (fix.pattern.test(content)) {;
 content = content.replace(fix.pattern, fix.replacement);
-#!/usr/bin/env node
-const fs = require("fs")
-const path = require("path")
+#!/usr/bin/env node;
+const fs = require("fs");
+const path = require("path");
 const glob = require("glob")
 //Function to fix JSX closing tag issues
 function fixJSXClosingTags(filePath) {
 
-try{
-let content = fs.readFileSync(filePath, "utf8")
-    let modified = false
-    //Fix common JSX closing tag issues
+try{;
+let content = fs.readFileSync(filePath, "utf8");
+let modified = false
+    //Fix common JSX closing tag issues;
 const fixes = [//Fix standalone </> tags that should be </div>
 }
       { pattern: "/(\s*)<\/>(\s*)/g",replacement: ""$1</div>$2" "}
@@ -68,7 +68,7 @@ content = content.replace(fix.pattern, fix.replacement)
   )
   )
 if (content.includes("return (") && content.includes("</>")) {
-      //Find the return statement and fix the closing tag
+      //Find the return statement and fix the closing tag;
 const returnMatch = content.match(/return\s*\(\s*<div[^ />]*>[\s\S,]*?<\/>/)
       if(returnMatch) {  
 content = content.replace(/return\s*\(\s*<div[^>]*>([\s\S,]*?)<\/>/","return (\n    <div>$1</div>")
@@ -88,7 +88,7 @@ console.error(`Error processing${filePath}:`, error.message)
   }
 }"
 "
-// Find all TSX files in the app directory;"'"
+// Find all TSX files in the app directory;"'";
 const pattern = 'app/**/*.tsx";
         modified = true}
     });"
@@ -115,7 +115,7 @@ console.error(`Error processing ${filePath}:`, error.message);
     return false}
 }
 // Find all TSX files in the app directory;
-const pattern = 'app/**/*.tsx'
+const pattern = 'app/**/*.tsx';
 const files = glob.sync(pattern);
 ;`
 console.log(`Found ${files.length} TSX files to process`);
@@ -129,12 +129,11 @@ fixedCount++;";`"
 ;`"
 console.log(`Fixed ${fixedCount} files`);";`'"
 
-//Find all TSX files in the app directory
-const pattern = "app/*  */*.tsx"
+//Find all TSX files in the app directory;
+const pattern = "app/*  */*.tsx";
 const files = glob.sync(pattern)
 
-console.log(`Found${files.length} TSX files to process`)
-
+console.log(`Found${files.length} TSX files to process`);
 let fixedCount = 0
 files.forEach(file = > {
 )

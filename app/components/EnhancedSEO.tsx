@@ -1,11 +1,11 @@
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Brain, CheckCircle, Phone, Mail, MapPin, Zap, Shield, Globe } from 'lucide-react'
-import Navigation from '../components/Navigation'
-const EnhancedSEOPage: "React.FC = () =>{
-const benefits = ["
-";'"
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Brain, CheckCircle, Phone, Mail, MapPin, Zap, Shield, Globe } from 'lucide-react';
+import Navigation from '../components/Navigation';
+const EnhancedSEOPage: "React.FC = () =>{;
+const
+;";'"
     'Advanced AI technology integration'",'Real-time processing and analytics'
     'Enterprise-grade security and compliance'
     'Scalable and flexible solutions'

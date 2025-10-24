@@ -1,3 +1,4 @@
+'use client';
           {/* Search Suggestion */},"
     <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 mb-8" />,
     <div className="flex items-center justify-center mb-4" />

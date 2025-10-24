@@ -3,111 +3,98 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to clean merge conflicts and syntax errors comprehensively
-function cleanFile(filePath) {
+// Function to fix 'use client' directive
+function fixUseClient(content) {
+  // Check if file already has 'use client' at the top
+  if (content.startsWith("'use client';\n")) {
+    return content;
+  }
+  
+  // Remove any existing 'use client' directives
+  let fixed = content.replace(/^'use client';\s*\n?/gm, '');
+  fixed = fixed.replace(/\n'use client';\s*\n?/g, '\n');
+  
+  // Add 'use client' at the very beginning
+  fixed = "'use client';\n" + fixed;
+  
+  return fixed;
+}
+
+// Function to fix common syntax issues
+function fixSyntax(content) {
+  let fixed = content;
+  
+  // Fix missing semicolons after imports
+  fixed = fixed.replace(/(import[^;]+from[^;]+)(\n)/g, '$1;$2');
+  
+  // Fix missing semicolons after const/let/var declarations
+  fixed = fixed.replace(/(const|let|var)\s+[^=]+=[^;]+(\n)/g, '$1$2;');
+  
+  // Fix malformed JSX attributes
+  fixed = fixed.replace(/className\s*=\s*"([^"]*?)\s*"/g, 'className="$1"');
+  fixed = fixed.replace(/href\s*=\s*"([^"]*?)\s*"/g, 'href="$1"');
+  
+  // Fix missing closing braces
+  const openBraces = (fixed.match(/\{/g) || []).length;
+  const closeBraces = (fixed.match(/\}/g) || []).length;
+  if (openBraces > closeBraces) {
+    fixed += '}'.repeat(openBraces - closeBraces);
+  }
+  
+  // Fix missing closing parentheses
+  const openParens = (fixed.match(/\(/g) || []).length;
+  const closeParens = (fixed.match(/\)/g) || []).length;
+  if (openParens > closeParens) {
+    fixed += ')'.repeat(openParens - closeParens);
+  }
+  
+  return fixed;
+}
+
+// Function to fix a single file
+function fixFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    const content = fs.readFileSync(filePath, 'utf8');
+    let fixed = content;
     
-    // Remove merge conflict markers completely
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    content = content.replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+    // Apply fixes
+    fixed = fixUseClient(fixed);
+    fixed = fixSyntax(fixed);
     
-    // Fix malformed strings and quotes
-    content = content.replace(/\"\"/g, '"');
-    content = content.replace(/;\"/g, '"');
-    content = content.replace(/\"\s*$/gm, '"');
-    content = content.replace(/\"\s*;\s*$/gm, '"');
-    
-    // Fix JSX syntax errors
-    content = content.replace(/<div>\s*<Head>/g, '<div>\n      <Head>');
-    content = content.replace(/<\/Head>\s*<div/g, '</Head>\n      <div');
-    
-    // Fix function declarations
-    content = content.replace(/export default function\s+(\w+)\s*\(\s*\)\s*{\s*return\s*\(\s*<div>/g, 'export default function $1() {\n  return (\n    <div>');
-    
-    // Fix malformed closing tags and parentheses
-    content = content.replace(/\)\s*}\s*;?\s*$/gm, '  );\n}');
-    content = content.replace(/\)\s*}\s*;?\s*\"\s*;?\s*$/gm, '  );\n}');
-    content = content.replace(/\)\s*}\s*;?\s*\"\s*;?\s*\"\s*;?\s*$/gm, '  );\n}');
-    
-    // Fix specific patterns
-    content = content.replace(/const NotFound = \(return \(<>;/g, 'const NotFound = () => {\n  return (\n    <>');
-    content = content.replace(/from from /g, 'from ');
-    content = content.replace(/;\s*$/gm, '');
-    
-    // Fix JSX closing tags
-    content = content.replace(/<\/div>\s*\)\s*;\s*$/gm, '</div>\n  );\n}');
-    content = content.replace(/<\/div>\s*\)\s*\"\s*;\s*$/gm, '</div>\n  );\n}');
-    content = content.replace(/<\/div>\s*\)\s*\"\s*;\s*\"\s*;\s*$/gm, '</div>\n  );\n}');
-    
-    // Fix malformed strings in JSX
-    content = content.replace(/content=\"([^\"]*)\"\s*\"\s*$/gm, 'content="$1"');
-    content = content.replace(/title=\"([^\"]*)\"\s*\"\s*$/gm, 'title="$1"');
-    
-    // Fix malformed JSX attributes
-    content = content.replace(/className=\"([^\"]*)\"\s*\"\s*$/gm, 'className="$1"');
-    content = content.replace(/href=\"([^\"]*)\"\s*\"\s*$/gm, 'href="$1"');
-    
-    // Fix malformed text content
-    content = content.replace(/>\s*([^<]*)\"\s*<\//gm, '>$1</');
-    content = content.replace(/>\s*([^<]*)\"\s*$/gm, '>$1');
-    
-    // Clean up extra whitespace and newlines
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    content = content.replace(/^\s*\n/gm, '');
-    
-    // Fix specific malformed patterns
-    content = content.replace(/}\s*\"\s*;?\s*$/gm, '}');
-    content = content.replace(/}\s*\"\s*;?\s*\"\s*;?\s*$/gm, '}');
-    
-    // Fix malformed function endings
-    content = content.replace(/\)\s*}\s*\"\s*;?\s*\"\s*;?\s*\"\s*;?\s*$/gm, '  );\n}');
-    
-    // Fix malformed JSX closing
-    content = content.replace(/<\/div>\s*\)\s*\"\s*;\s*\"\s*;?\s*\"\s*;?\s*$/gm, '</div>\n  );\n}');
-    
-    // Final cleanup
-    content = content.replace(/\s+$/gm, '');
-    content = content.replace(/\n{3,}/g, '\n\n');
-    
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);
+    if (content !== fixed) {
+      fs.writeFileSync(filePath, fixed);
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Function to find all TypeScript/JSX files
-function findTsxFiles(dir) {
-  const files = [];
+// Function to recursively find and fix files
+function fixDirectory(dirPath) {
+  const items = fs.readdirSync(dirPath);
+  let fixedCount = 0;
   
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
+  for (const item of items) {
+    const fullPath = path.join(dirPath, item);
+    const stat = fs.statSync(fullPath);
     
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath);
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-        files.push(fullPath);
+    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' && item !== 'dist' && item !== 'build') {
+      fixedCount += fixDirectory(fullPath);
+    } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts'))) {
+      if (fixFile(fullPath)) {
+        fixedCount++;
       }
     }
   }
   
-  traverse(dir);
-  return files;
+  return fixedCount;
 }
 
 // Main execution
-console.log('Starting comprehensive syntax fix...');
-
-const files = findTsxFiles('/workspace');
-console.log(`Found ${files.length} TypeScript/JSX files to process`);
-
-files.forEach(file => {
-  cleanFile(file);
-});
-
-console.log('Comprehensive syntax fix completed!');
+console.log('Starting comprehensive fixes...');
+const fixedCount = fixDirectory('/workspace');
+console.log(`Fixed ${fixedCount} files`);

@@ -1,3 +1,11 @@
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link'}';
+import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from from 'lucide-react'
+import React from "react";
+import { Head  } from "next/head";
+import { Link  } from "next/link"
+import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw   } from "lucide-react";
 function fixBrokenJsx(filePath) {;
 ;
 try{;
@@ -13,13 +21,9 @@ const componentNameMatch = content.match(/const\s+(\w+)\s*=\s*\(\)\s*=>/);
       if (componentNameMatch) {;
 const componentName = componentNameMatch[1];
 ;"
-        // Create a basic working structure;"
+        // Create a basic working structure;";
 const basicStructure = `"use client"
 ;
-import React from 'react'
-import Head from 'next/head'
-import Link from 'next/link'}'
-import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from from 'lucide-react'
 ;
 const ${componentName} = () => {;
 return (<>;
@@ -50,32 +54,27 @@ Oops! The page you're looking for seems to have vanished into the digital void. 
           <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 mb-8" />"
             <div className="flex items-center justify-center mb-4" />"
               <Search className="w-6 h-6 text-cyan-400 mr-2" />"
-#!/usr/bin/env node
-const fs = require("fs")
+#!/usr/bin/env node;
+const fs = require("fs");
 const path = require("path")
 
 function fixBrokenJsx(filePath) {
 
-try{
-let content = fs.readFileSync(filePath, "utf8")
-    let modified = false
+try{;
+let content = fs.readFileSync(filePath, "utf8");
+let modified = false
     //Fix broken JSX structure - this is a complex pattern
     //Look for files that have malformed JSX with missing closing tags and broken structure
 
     //First, let"s check if this is a Next.js page component
 if (content.includes(""use client"") || content.includes(""use client"")) {
-      //Extract the component name
+      //Extract the component name;
 const componentNameMatch = content.match(/const\s+(\w+)\s*=\s*\(\)\s*=>/)
-      if (componentNameMatch) {
+      if (componentNameMatch) {;
 const componentName = componentNameMatch[1,]
-        //Create a basic working structure
-const basicStructure = `"use client"
-
-import React from "react";
-import { Head  } from "next/head"
-import { Link  } from "next/link"
+        //Create a basic working structure;
+const basicStructure = `"use client";
 };
-import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw   } from "lucide-react";
 const${componentName} = () => {
 return (<>
       <Head>
@@ -156,8 +155,7 @@ Contact Support;
               </Link>
               <a"
 href="mailto:support@ziontechgroup.com"
-className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center"
-              >;
+className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center">;
 Send Email;
               </a>
             </div>
@@ -182,8 +180,7 @@ Our support team is here to help you navigate our services and find exactly what
               <Link href="/contact" className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"> <RefreshCw className="w-4 h-4 mr-2" />
 Contact Support
               </Link>
-              <a href="mailto:support@ziontechgroup.com" className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center"
-              >
+              <a href="mailto:support@ziontechgroup.com" className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center">
 Send Email
               </a>
             </div>
@@ -277,16 +274,15 @@ console.error(`Error fixing${filePath}:`, error.message)
   }
 }
 
-function findTsxFiles(dir) {
-
+function findTsxFiles(dir) {;
 const files = []
 
-function traverse(currentDir) {
+function traverse(currentDir) {;
 const items = fs.readdirSync(currentDir)
 
-for (const item, of, items) {
-const fullPath = path.join(currentDir, item)
-      const stat = fs.statSync(fullPath)
+for (const item, of, items) {;
+const fullPath = path.join(currentDir, item);
+const stat = fs.statSync(fullPath)
 
 if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {
 traverse(fullPath) else if (item.endsWith(".tsx")) {
@@ -299,12 +295,11 @@ traverse(dir)
   return files
 }
 
-//Main execution
-const workspaceDir = process.cwd()
+//Main execution;
+const workspaceDir = process.cwd();
 const tsxFiles = findTsxFiles(workspaceDir)
 
-console.log(`Checking${tsxFiles.length} TSX files for broken JSX...`)
-
+console.log(`Checking${tsxFiles.length} TSX files for broken JSX...`);
 let fixedCount = 0
 for(const file, of, tsxFiles) { 
 if (fixBrokenJsx(file)) {
@@ -313,3 +308,4 @@ fixedCount++
 }
 
 console.log(`Fixed broken JSX in${fixedCount} files.`)
+}

@@ -1,15 +1,14 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 
 // Function to fix import paths based on directory depth
 function fixImportPaths(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
+  try {;
+let content = fs.readFileSync(filePath, 'utf8');
     
-    // Count directory depth
-    const pathParts = filePath.split('/');
+    // Count directory depth;
+const pathParts = filePath.split('/');
     const depth = pathParts.filter(part => part === 'app').length > 0 ? 
       pathParts.slice(pathParts.indexOf('app') + 1, -1).length : 0;
     
@@ -28,14 +27,14 @@ function fixImportPaths(filePath) {
 }
 
 // Function to find all page files
-function findPageFiles(dir) {
-  const files = [];
+function findPageFiles(dir) {;
+const files = [];
   
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
+  function traverse(currentDir) {;
+const items = fs.readdirSync(currentDir);
     
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
+    for (const item of items) {;
+const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
@@ -52,7 +51,7 @@ function findPageFiles(dir) {
 
 // Main execution
 console.log('Starting import path fixes...');
-
+;
 const appDir = '/workspace/app';
 const files = findPageFiles(appDir);
 

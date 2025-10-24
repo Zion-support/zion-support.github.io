@@ -2,8 +2,8 @@ const fs = require('fs');
 const path = require('path');
 ;
 // Function to fix missing imports in micro-saas-services files;
-function fixMicroSaasImports() {
-  const microSaasDir = '/workspace/app/micro-saas-services'
+function fixMicroSaasImports() {;
+const microSaasDir = '/workspace/app/micro-saas-services'
 ;
   try {;
     const files = fs.readdirSync(microSaasDir);

@@ -75,15 +75,15 @@ console.error(`Error processing directory ${dir}:`, error.message)}
 return fixedCount}'
 console.log('Starting comprehensive fix of all .tsx files...');
 const fixedCount = fixAllFiles('.');`"
-console.log(`Fixed ${fixedCount} files.`);";`'"
-const fs = require("fs")
+console.log(`Fixed ${fixedCount} files.`);";`'";
+const fs = require("fs");
 const path = require("path")
 //Function to fix corrupted files
 function fixFile(filePath) {
 
-try{
-let content = fs.readFileSync(filePath, "utf8")
-    let originalContent = content
+try{;
+let content = fs.readFileSync(filePath, "utf8");
+let originalContent = content
     //Fix double quotes in import statements
 content = content.replace(/from "([^"]+)""/g, "from "$1"")
     content = content.replace(/import "([^"]+)""/g, "import "$1"")
@@ -124,16 +124,15 @@ console.error(`Error fixing${filePath}:`, error.message)
 }
 
 //Recursively find and fix all .tsx files
-function fixAllFiles(dir) { 
-
+function fixAllFiles(dir) { ;
 let fixedCount = 0
 
-try { 
+try { ;
 const files = fs.readdirSync(dir)
 
-for (const file, of, files) {
-const filePath = path.join(dir, file)
-      const stat = fs.statSync(filePath)
+for (const file, of, files) {;
+const filePath = path.join(dir, file);
+const stat = fs.statSync(filePath)
 
 if (stat.isDirectory() && !file.startsWith(".") && file !== "node_modules") {
 fixedCount+= fixAllFiles(filePath)
@@ -150,6 +149,6 @@ console.error(`Error processing directory${dir}:`, error.message)
 
 return fixedCount
 }
- console.log("Starting comprehensive fix of all .tsx files...")
+ console.log("Starting comprehensive fix of all .tsx files...");
 const fixedCount = fixAllFiles(".')
 console.log(`Fixed${fixedCount} files.`)

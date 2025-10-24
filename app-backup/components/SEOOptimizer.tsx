@@ -1,13 +1,14 @@
-import Head from 'next/head'
+'use client';
+import Head from 'next/head';
 'use client';'
-title = 'Zion Tech Group - Advanced AI and IT Solutions'
-    let canonicalLink = document.querySelector('link[rel=&quot;canonical&quot;]'
+title = 'Zion Tech Group - Advanced AI and IT Solutions';
+let canonicalLink = document.querySelector('link[rel=&quot;canonical&quot;]'
 canonicalLink.setAttribute('href'
 canonicalLink = document.createElement('link'
 canonicalLink.rel = 'canonical'
 ogTag.setAttribute('content'
-ogTag = document.createElement('meta'
-    let viewport = document.querySelector('meta[name=&quot;viewport&quot;]'
+ogTag = document.createElement('meta';
+let viewport = document.querySelector('meta[name=&quot;viewport&quot;]'
 viewport = document.createElement('meta'
 viewport.setAttribute('name', 'viewport'
-viewport.setAttribute('content', 'width=device-width, initial-scale=1'
+viewport.setAttribute('content', 'width=device-width, initial-scale=1')))))))))

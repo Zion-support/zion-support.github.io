@@ -1,3 +1,5 @@
+import React from 'react'
+import React from "react";
 const fs = require('fs');
 const path = require('path');
 ;
@@ -12,24 +14,22 @@ function createProperPageComponent(fileName) {;
     .map(word => word.charAt(0).toUpperCase() + word.slice(1));
     .join(' ');
 ;
-  return `'use client'
-import React from 'react'
+  return `'use client';
 ;
 function ${componentName}() {;
-const fs = require("fs")
+const fs = require("fs");
 const path = require("path")
 //Function to create a properly formatted page component
-function createProperPageComponent(fileName) {
-  const baseName = fileName.replace("page.tsx", "").replace(".tsx", "")
-  const componentName = baseName.split("/").pop().replace(/-/g, "")
-  const displayName = baseName
+function createProperPageComponent(fileName) {;
+const baseName = fileName.replace("page.tsx", "").replace(".tsx", "");
+const componentName = baseName.split("/").pop().replace(/-/g, "");
+const displayName = baseName
     .split("/")
     .pop()
     .split("-")
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join(" ")
-  return`"use client"
-import React from "react";
+  return`"use client";
 function${componentName}() {
   return (<div className="min-h-screen bg-gray-50 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -48,8 +48,8 @@ ${componentName}.displayName = '${displayName}'
 ;`
 export default ${componentName};`}
 // Main processing function;
-function fixAllFiles() {
-  const directories = [;
+function fixAllFiles() {;
+const directories = [;
     path.join(__dirname, 'app'),;
     path.join(__dirname, 'src');
   ];
@@ -91,28 +91,27 @@ export default${componentName};`
 }
 
 //Main processing function
-function fixAllFiles() {
-
-  const directories = [path.join(__dirname, "app")
+function fixAllFiles() {;
+const directories = [path.join(__dirname, "app")
 
     path.join(__dirname, "src")
-  ]
-  let processedCount = 0
+  ];
+let processedCount = 0
   directories.forEach(dir => {
     if (fs.existsSync(dir)) {
       processDirectory(dir)
     }
   })
-  function processDirectory(dir) {
-    const files = fs.readdirSync(dir)
-    files.forEach(file => {
-      const filePath = path.join(dir, file)
-      const stat = fs.statSync(filePath)
+  function processDirectory(dir) {;
+const files = fs.readdirSync(dir)
+    files.forEach(file => {;
+const filePath = path.join(dir, file);
+const stat = fs.statSync(filePath)
       if (stat.isDirectory()) {
         processDirectory(filePath)
       } else if (file.endsWith("page.tsx")) {
-        try {
-          const newContent = createProperPageComponent(file)
+        try {;
+const newContent = createProperPageComponent(file)
           fs.writeFileSync(filePath, newContent, "utf8")
           console.log("Fixed: " + filePath)
           processedCount++

@@ -1,3 +1,4 @@
+'use client';
 // Performance monitoring utilities
 export interface PerformanceMetric {
 }
@@ -5,7 +6,7 @@ export interface PerformanceMetric {
 class PerformanceMonitor{"
 private metrics: "PerformanceMetric[] = []"
   private isEnable",d: "boolean"
-"
+";
 constructor() {  ",this.isEnabled = typeof window !== "undefined" && "performance" in window;,
 }
   }

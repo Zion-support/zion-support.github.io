@@ -1,3 +1,4 @@
+'use client';
     "description": 'Tailored cloud migration strategies that fit your specific business needs and requirements.'
   'Reduce infrastructure costs by 40%'
     'Improve scalability and flexibility'

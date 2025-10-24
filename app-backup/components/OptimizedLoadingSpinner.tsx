@@ -1,3 +1,4 @@
+'use client';
     "benefits": ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'
   'Increase efficiency by up to 50%'
     'Reduce costs by 30% with automation'
@@ -5,9 +6,9 @@
     'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
 color?: 'blue' | 'gray' | 'green' | 'red' | 'purple'
-({size = 'md'
+({size = 'md';
 variant= 'spinner'
 "purple": 'border-purple-600 bg-purple-60 0'
 case 'do ts'
 return(<div className='flex space-x-1' role='status' aria-label='Loading'
-case 'pulse'
+case 'pulse'}))

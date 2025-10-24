@@ -1,9 +1,12 @@
+import React from 'react';
+import Link from 'next/link';
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud    } from 'lucide-react'
+import React from "react";
+import { Link  } from "next/link";
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud    } from "lucide-react";
 const fs = require('fs');
 ;
-const footerContent = `'use client'
-import React from 'react'
-import Link from 'next/link'
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud    } from 'lucide-react'
+const footerContent = `'use client';
 ;
 const Footer: React.FC = () => {;
   const currentYear = new Date().getFullYear();
@@ -57,15 +60,12 @@ const Footer: React.FC = () => {;
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white"  />;"
-const fs = require("fs")
-const footerContent = `"use client"
-import React from "react";
-import { Link  } from "next/link";
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud    } from "lucide-react";
-const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear()
-  const aiServices = [{ name: "AI Analytics & BI", url: "/ai-analytics", description: "Business intelligence" }
+                <Brain className="w-5 h-5 text-white"  />;";
+const fs = require("fs");
+const footerContent = `"use client";
+const Footer: React.FC = () => {;
+const currentYear = new Date().getFullYear();
+const aiServices = [{ name: "AI Analytics & BI", url: "/ai-analytics", description: "Business intelligence" }
 
     { name: "AI Automation", url: "/ai-automation", description: "Process automation" }
 
@@ -80,8 +80,8 @@ const Footer: React.FC = () => {
     { name: "Predictive Analytics", url: "/predictive-analytics", description: "Forecasting" }
 
     { name: "Speech & Voice AI", url: "/ai-voice-assistant", description: "Voice technology" }
-  ]
-  const itServices = [{ name: "Web Development", url: "/web-development", description: "Custom websites" }
+  ];
+const itServices = [{ name: "Web Development", url: "/web-development", description: "Custom websites" }
 
     { name: "Mobile Development", url: "/mobile-development", description: "iOS & Android apps" }
 
@@ -96,24 +96,24 @@ const Footer: React.FC = () => {
     { name: "IoT Solutions", url: "/iot-solutions", description: "Internet of Things" }
 
     { name: "Blockchain", url: "/blockchain", description: "Blockchain technology" }
-  ]
-  const company = [{ name: "About Us", url: "/about" }
+  ];
+const company = [{ name: "About Us", url: "/about" }
 
     { name: "Our Team", url: "/team" }
 
     { name: "Careers", url: "/careers" }
 
     { name: "Contact", url: "/contact" }
-  ]
-  const resources = [{ name: "Documentation", url: "/docs" }
+  ];
+const resources = [{ name: "Documentation", url: "/docs" }
 
     { name: "API Reference", url: "/api" }
 
     { name: "Blog", url: "/blog" }
 
     { name: "Case Studies", url: "/case-studies" }
-  ]
-  const legal = [{ name: "Privacy Policy", url: "/privacy" }
+  ];
+const legal = [{ name: "Privacy Policy", url: "/privacy" }
 
     { name: "Terms of Service", url: "/terms" }
 
@@ -154,8 +154,7 @@ const Footer: React.FC = () => {
               {aiServices.map((service, index) => (<li key={index}>
                   <Link 
                     href={service.url}
-                    className="text-gray-300 hover:text-white transition-colors text-sm flex items-center group"
-                  > <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    className="text-gray-300 hover:text-white transition-colors text-sm flex items-center group"> <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {service.name}
                   </Link>
                 </li>);
@@ -172,8 +171,7 @@ const Footer: React.FC = () => {
               {itServices.map((service, index) => (<li key={index}>
                   <Link;"
                     href={service.url}"
-                    className="text-gray-300 hover:text-white transition-colors text-sm flex items-center group"
-                  >"
+                    className="text-gray-300 hover:text-white transition-colors text-sm flex items-center group">"
                     <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity"  />;
           </div>
 
@@ -186,8 +184,7 @@ const Footer: React.FC = () => {
               {itServices.map((service, index) => (<li key={index}>
                   <Link 
                     href={service.url}
-                    className="text-gray-300 hover:text-white transition-colors text-sm flex items-center group"
-                  > <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    className="text-gray-300 hover:text-white transition-colors text-sm flex items-center group"> <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {service.name}
                   </Link>
                 </li>);
@@ -212,8 +209,7 @@ const Footer: React.FC = () => {
                 {company.map((item, index) => (<li key={index}>
                     <Link 
                       href={item.url}
-                      className="text-gray-300 hover:text-white transition-colors text-sm"
-                    >;
+                      className="text-gray-300 hover:text-white transition-colors text-sm">;
                       {item.name}
                     </Link>
                   </li>);
@@ -229,8 +225,7 @@ const Footer: React.FC = () => {
                 {resources.map((item, index) => (<li key={index}>
                     <Link 
                       href={item.url}
-                      className="text-gray-300 hover:text-white transition-colors text-sm"
-                    >;
+                      className="text-gray-300 hover:text-white transition-colors text-sm">;
                       {item.name}
                     </Link>
                   </li>);
@@ -246,8 +241,7 @@ const Footer: React.FC = () => {
                 {legal.map((item, index) => (<li key={index}>
                     <Link 
                       href={item.url}
-                      className="text-gray-300 hover:text-white transition-colors text-sm"
-                    >;
+                      className="text-gray-300 hover:text-white transition-colors text-sm">;
                       {item.name}
                     </Link>
                   </li>);
@@ -287,3 +281,4 @@ console.log('Footer component rewritten successfully!');"
 }
 
 export default Footer;` fs.writeFileSync("./app/components/Footer.tsx", footerContent) console.log("Footer component rewritten successfully!")
+}}}})))

@@ -1,9 +1,9 @@
-const fs = require("fs")
+const fs = require("fs");
 const path = require("path")
 
-try { 
-let content = fs.readFileSync(filePath, "utf8")
-    let modified = false
+try { ;
+let content = fs.readFileSync(filePath, "utf8");
+let modified = false
     //Fix malformed JSX fragments - replace <> with <div />
 if (content.includes("return (\n    <>")) {
 content = content.replace(/return \(\n\s*<>/g, "return (\n    <div />")

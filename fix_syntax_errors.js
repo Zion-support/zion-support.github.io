@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-// Common syntax fixes
+// Common syntax fixes;
 const fixes = [
   // Fix missing 'use client' directive
   {
@@ -49,8 +49,8 @@ const fixes = [
 ];
 
 function fixFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
+  try {;
+let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
     
     // Apply fixes
@@ -95,12 +95,12 @@ function fixFile(filePath) {
   }
 }
 
-function walkDirectory(dir) {
-  const files = fs.readdirSync(dir);
+function walkDirectory(dir) {;
+const files = fs.readdirSync(dir);
   let fixedCount = 0;
   
-  files.forEach(file => {
-    const filePath = path.join(dir, file);
+  files.forEach(file => {;
+const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
     
     if (stat.isDirectory()) {
@@ -117,4 +117,4 @@ function walkDirectory(dir) {
 
 console.log('Starting syntax error fixes...');
 const fixedCount = walkDirectory('./app');
-console.log(`Fixed ${fixedCount} files`);
+console.log(`Fixed ${fixedCount} files`);))

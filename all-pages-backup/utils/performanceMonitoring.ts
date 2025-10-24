@@ -1,3 +1,4 @@
+'use client';
     'FCP''
     'LCP''
     'FID''

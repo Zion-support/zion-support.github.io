@@ -1,3 +1,4 @@
+'use client';
 Scalable and secure cloud infrastructure solutions.</p>
           </p>
             </div>

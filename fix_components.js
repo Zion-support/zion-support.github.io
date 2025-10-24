@@ -1,13 +1,14 @@
-const fs = require('fs');
-
-// Navigation component
-const navigationContent = `'use client';
-
 import React, { useState } from 'react';
 import Link from 'next/link';
+import React from 'react';
+const fs = require('fs');
 
-export default function Navigation() {
-  const [isOpen, setIsOpen] = useState(false);
+// Navigation component;
+const navigationContent = `'use client';
+;
+
+export default function Navigation() {;
+const [isOpen, setIsOpen] = useState(false);
 
   return (
     <nav className="relative z-50">
@@ -23,26 +24,22 @@ export default function Navigation() {
             <div className="ml-10 flex items-baseline space-x-4">
               <Link
                 href="/about"
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
-              >
+                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 About
               </Link>
               <Link
                 href="/services"
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
-              >
+                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 Services
               </Link>
               <Link
                 href="/ai-services"
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
-              >
+                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 AI Solutions
               </Link>
               <Link
                 href="/contact"
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
-              >
+                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 Contact
               </Link>
             </div>
@@ -65,26 +62,22 @@ export default function Navigation() {
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white/10 backdrop-blur-sm rounded-lg">
               <Link
                 href="/about"
-                className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              >
+                className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                 About
               </Link>
               <Link
                 href="/services"
-                className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              >
+                className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                 Services
               </Link>
               <Link
                 href="/ai-services"
-                className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              >
+                className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                 AI Solutions
               </Link>
               <Link
                 href="/contact"
-                className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              >
+                className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                 Contact
               </Link>
             </div>
@@ -95,11 +88,9 @@ export default function Navigation() {
   );
 }`;
 
-// Footer component
+// Footer component;
 const footerContent = `'use client';
-
-import React from 'react';
-import Link from 'next/link';
+;
 
 export default function Footer() {
   return (

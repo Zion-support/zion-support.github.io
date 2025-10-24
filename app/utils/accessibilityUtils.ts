@@ -1,3 +1,4 @@
+'use client';
 // Accessibility utilities for improving user experience and compliance
   announcement.textContent = message
 document.body.appendChild(announcement)
@@ -15,50 +16,15 @@ firstElement.focus()
           e.preventDefault();,, }
         }
       }
-  // Simple contrast ratio calculation"
-const getLuminance = (colo",r: "string): number => {"
-"
-const fgLuminance = getLuminance(foreground)
-  const bgLuminance = getLuminance(background)
-const contrast = (Math.max(fgLuminance, bgLuminance) + 0.05) / (Math.min(fgLuminance, bgLuminance) + 0.05)
-e.target.click()
-      ,}
-    }
-  style.textContent = `"
-    .sr-only{"
-position: "absolute
-      width: 1px
-      height: 1px
-      margin: -1px"
-      overflow: hidden"
-      cli",p: "rect(0",0, 0, 0)"
-      white-space: "nowrap"
-    .sr-only: "focus{
-position: static
-      width: auto
-      height: auto
-      padding: inherit
-  `
-  document.head.appendChild(style    )
-}
-export const setupAccessibility = (): void => {
-  createFocusIndicator()
-  createReducedMotionMode()
-  createScreenReaderOnly()
-  setupKeyboardNavigation()
-export const setupLandmarkNavigation = (): void => {
-  createLandmarkNavigation()
-// Update landmarks when content changes
-const observer = new MutationObserver(() => {
-createLandmarkNavigation()
-"
-overallScore: "number
-  colorContrast: number
-  keyboardNavigation: number
-  screenReaderCompatibility: number
-    // Initialize accessibility enhancements
-if(this.config.enableHighContrast) {
-this.setupHighContrast();,}
+  // Simple contrast ratio calculation";
+const
+;";
+const fgLuminance = getLuminance(foreground);
+const bgLuminance = getLuminance(background);
+const
+;// Update landmarks when content changes;
+const
+;this.setupHighContrast();,}
     }
 if (this.config.enableKeyboardNavigation) {
 this.setupKeyboardNavigation(    )
@@ -79,10 +45,9 @@ this.collectMetrics(    )
       @media (prefers-contrast: "high) {",.cyber-card, .quantum-card {"
 border: "2px solid #ffffff !important"
           background: #000000 !important"
-        // Return focus to previous element
-const previousElement = focusHistory.pop()
-        if (previousElement) {
-previousElement.focus();,}
+        // Return focus to previous element;
+const
+;previousElement.focus();,}
         }
       }
 if(event.target, instanceof, HTMLElement) {
@@ -91,28 +56,20 @@ focusHistory.push(event.target)
 focusHistory.shift(    )
 }
       }
-    let goodContrast = 0
-    let totalElements = 0
-elements.forEach((element) => {
-const styles = window.getComputedStyle(element)
-      const color = styles.color
-      const backgroundColor = styles.backgroundColor
-        }
-      }
-    }    )
-}
-      }
-    })
-    let compatibleElements = 0
-"
-elements.forEach((element) => {"
-if(element, instanceof, HTMLElement) {  "
-const hasAriaLabel = element.hasAttribute('aria-label")"
-        const hasAriaLabelledBy = element.hasAttribute('aria-labelledby")
-        const hasRole = element.hasAttribute('role")
-        const hasTextContent = element.textContent?.trim().length > 0
-if (hasAriaLabel || hasAriaLabelledBy || hasRole || hasTextContent) {
-compatibleElements++;,}
+    let goodContrast = 0;
+let
+;elements.forEach((element) => {;
+const styles = window.getComputedStyle(element);
+const color = styles.color;
+const
+;    });
+let
+;if(element, instanceof, HTMLElement) {  ";
+const hasAriaLabel = element.hasAttribute('aria-label")";
+const hasAriaLabelledBy = element.hasAttribute('aria-labelledby");
+const hasRole = element.hasAttribute('role");
+const
+;compatibleElements++;,}
         }
       }
     })
@@ -120,15 +77,14 @@ compatibleElements++;,}
 properlyManaged++;,}
         }
       }
-    })
-      const hasTextContent = element.textContent?.trim().length > 0
-if(hasAriaLabel || hasAriaLabelledBy || hasTextContent) {
-labeledElements++;,}
+    });
+const
+;labeledElements++;,}
       }
-    })
-    let properStructure = 0
-    let previousLevel = 0
-headings.forEach((heading) => {
+    });
+let properStructure = 0;
+let
+;headings.forEach((heading) => {;
 const level = parseInt(heading.tagName.charAt(1));</>
 if(level <= previousLevel + 1) {
 properStructure++

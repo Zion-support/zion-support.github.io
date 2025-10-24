@@ -1,3 +1,4 @@
+'use client';
   "category": 'Revenue Analytics'
         'Revenue forecasting'
         'Sales performance tracking'

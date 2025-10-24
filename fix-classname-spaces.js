@@ -78,15 +78,15 @@ fixClassNameSpaces(filePath)}
 console.log('Starting className space fixes...');
 walkDir('./app');
 walkDir('./src');'"
-console.log('ClassName space fixes completed!');";`'"
-const fs = require("fs")
+console.log('ClassName space fixes completed!');";`'";
+const fs = require("fs");
 const path = require("path")
 
 function fixClassNameSpaces(filePath) {
 
-try{
-let content = fs.readFileSync(filePath, "utf8")
-    let modified = false
+try{;
+let content = fs.readFileSync(filePath, "utf8");
+let modified = false
     //Fix className attributes with missing spaces
     //Pattern: "from-slate-900via-purple-900to-slate-900pt-20
 content = content.replace(/from-slate-900via-purple-900to-slate-900pt-20/g","from-slate-900 via-purple-900 to-slate-900 pt-20")
@@ -137,14 +137,13 @@ console.error(`Error fixing${filePath}:`, error.message)
   }
 }
 
-function walkDir(dir) {
-
+function walkDir(dir) {;
 const files = fs.readdirSync(dir)
 
 files.forEach(file = > {
-)
-const filePath = path.join(dir, file)
-    const stat = fs.statSync(filePath)
+);
+const filePath = path.join(dir, file);
+const stat = fs.statSync(filePath)
 
 if (stat.isDirectory()) {
 walkDir(filePath) else if (file.endsWith(".tsx") || file.endsWith(".ts")) {

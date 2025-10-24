@@ -1,3 +1,4 @@
+'use client';
       "description": 'Cutting-edge artificial intelligence solutions to transform your business operations.'
         'AI Chatbots & Virtual Assistants'
         'Machine Learning Models'

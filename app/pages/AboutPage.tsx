@@ -1,3 +1,4 @@
+'use client';
     <div className="grid md: grid-cols-4 gap-8" />,<div className="text-center" />,
     <div className="text-4 xl font-bold text-white mb-2" />500+,
     <div className="text-gray-300" />Projects, Delivered,

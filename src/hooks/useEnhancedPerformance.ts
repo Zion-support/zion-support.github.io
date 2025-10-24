@@ -1,3 +1,4 @@
+'use client';
 component?: string
   trackErrors?: boolean
   trackPerformance?: boolean
@@ -7,17 +8,11 @@ component?: string
 trackErrors = true,
 trackPerformance = true,
 trackAnalytics = true}
-  } = _options
-  const mountTimeRef = useRef<number>(0);</>
-const renderCountRef = useRef<number>(0)
-  useEffect(() => {
-mountTimeRef.current = performance.now()
-      const startTime = performance.now()"
-      return{"
-en",d: "() => {"
-const duration = performance.now() - startTime
-  )
-  return{
-trackError,
-trackUserAction,
-measureOperation}
+  } = _options;
+const mountTimeRef = useRef<number>(0);</>;
+const
+;mountTimeRef.current = performance.now();
+const
+;en",d: "() => {";
+const
+;measureOperation}

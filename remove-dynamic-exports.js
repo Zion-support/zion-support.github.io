@@ -43,13 +43,13 @@ return fixedCount}
 const appDir = path.join(__dirname, 'app');
 console.log('Starting to remove dynamic exports...');
 const fixedCount = fixAllFiles(appDir);`"
-console.log(`Removed dynamic exports from ${fixedCount} files`);";`'"
-const fs = require("fs")
+console.log(`Removed dynamic exports from ${fixedCount} files`);";`'";
+const fs = require("fs");
 const path = require("path")
 //Function to remove dynamic exports from a file
 function removeDynamicExport(filePath) {
 
-try{
+try{;
 let content = fs.readFileSync(filePath, "utf8")
     //Check if dynamic export exists
 if (content.includes("export const dynamic")) {
@@ -70,14 +70,13 @@ console.error(`Error processing${filePath}:`, error.message)
 }
 
 //Function to recursively find and fix all .tsx files
-function fixAllFiles(dir) { 
+function fixAllFiles(dir) { ;
+const files = fs.readdirSync(dir);
+let fixedCount = 0
 
-const files = fs.readdirSync(dir)
-  let fixedCount = 0
-
-for (const file, of, files) {
-const filePath = path.join(dir, file)
-    const stat = fs.statSync(filePath)
+for (const file, of, files) {;
+const filePath = path.join(dir, file);
+const stat = fs.statSync(filePath)
 
 if (stat.isDirectory()) {
       //Skip node_modules and other directories we don"t want to process
@@ -93,7 +92,7 @@ fixedCount++
 return fixedCount
 }
 
-//Start fixing from the app directory
-const appDir = path.join(__dirname, "app") console.log("Starting to remove dynamic exports...')
+//Start fixing from the app directory;
+const appDir = path.join(__dirname, "app") console.log("Starting to remove dynamic exports...');
 const fixedCount = fixAllFiles(appDir)
 console.log(`Removed dynamic exports from${fixedCount} files`)

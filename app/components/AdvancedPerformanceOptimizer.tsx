@@ -1,3 +1,4 @@
+'use client';
 lcp: "number
   fid: number
   cls: number"

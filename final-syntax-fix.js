@@ -1,6 +1,11 @@
+import React from "react";
+import { Head  } from "next/head";
+import { Link  } from "next/link";
+import { ArrowRight  } from "lucide-react";
+import { Footer  } from "../components/Footer";
 // Function to fix all remaining syntax issues
-function fixFinalSyntax(content) {
-  let fixed = content;
+function fixFinalSyntax(content) {;
+let fixed = content;
 
   // Fix unterminated strings - add missing quotes
   fixed = fixed.replace(/<Link"$/gm, '<Link');
@@ -90,8 +95,8 @@ function fixFinalSyntax(content) {
 
 // Function to process a single file
 function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
+  try {;
+const content = fs.readFileSync(filePath, 'utf8');
     const fixed = fixFinalSyntax(content);
     
     if (content !== fixed) {
@@ -105,38 +110,32 @@ function processFile(filePath) {
     return false;
   }
 }
-
-const fs = require("fs")
+;
+const fs = require("fs");
 const path = require("path")
 //Function to completely rewrite malformed files
 function fixMalformedFile(filePath) {
 
-try{
+try{;
 let content = fs.readFileSync(filePath, "utf8")
-    //Extract the function name and basic structure
+    //Extract the function name and basic structure;
 const functionMatch = content.match(/export default function (\w+)\(\)/)
-    if (!functionMatch) return false
-
+    if (!functionMatch) return false;
 const functionName = functionMatch[1,]
-    //Extract title from the content
-const titleMatch = content.match(/<title>([^<]+)<\/title>/)
-    const title = titleMatch?titleMatch[1,] : "Page"
-    //Extract description
-const descMatch = content.match(/content="([^"]+)"/)
-    const description = descMatch?descMatch[1,] : "Professional services by Zion Tech Group"
-    //Extract the main heading
-const headingMatch = content.match(/<h1[^ />]*>([^<]+)<\/h1>/)
-    const heading = headingMatch?headingMatch[1,] : title
-    //Extract the paragraph content
-const paragraphMatch = content.match(/<p[^ />]*>([^<]+)<\/p>/)
-    const paragraph = paragraphMatch?paragraphMatch[1,] : `${title} services. Transform your business with our expert solutions.`
-    //Create, a, clean, properly formatted file
-const cleanContent = `"use client"
-import React from "react";
-import { Head  } from "next/head"
-import { Link  } from "next/link";
-import { ArrowRight  } from "lucide-react";
-import { Footer  } from "../components/Footer";
+    //Extract title from the content;
+const titleMatch = content.match(/<title>([^<]+)<\/title>/);
+const title = titleMatch?titleMatch[1,] : "Page"
+    //Extract description;
+const descMatch = content.match(/content="([^"]+)"/);
+const description = descMatch?descMatch[1,] : "Professional services by Zion Tech Group"
+    //Extract the main heading;
+const headingMatch = content.match(/<h1[^ />]*>([^<]+)<\/h1>/);
+const heading = headingMatch?headingMatch[1,] : title
+    //Extract the paragraph content;
+const paragraphMatch = content.match(/<p[^ />]*>([^<]+)<\/p>/);
+const paragraph = paragraphMatch?paragraphMatch[1,] : `${title} services. Transform your business with our expert solutions.`
+    //Create, a, clean, properly formatted file;
+const cleanContent = `"use client";
 export default function${functionName}() {
 return (<div />
       <Head>
@@ -171,15 +170,14 @@ console.error(`Error processing${filePath}:`, error.message)
 }
 
 //Function to find and fix all malformed page files
-function fixAllPageFiles() {
-
-const appDir = "./app"
-  const files = fs.readdirSync(appDir)
-  let fixedCount = 0
+function fixAllPageFiles() {;
+const appDir = "./app";
+const files = fs.readdirSync(appDir);
+let fixedCount = 0
 
 files.forEach(file = > {
 )
-if (file.startsWith("5g-") || file.startsWith("ai-") || file.startsWith("src/")) {
+if (file.startsWith("5g-") || file.startsWith("ai-") || file.startsWith("src/")) {;
 const filePath = path.join(appDir, file, "page.tsx")
       if (fs.existsSync(filePath)) {
 if (fixMalformedFile(filePath)) {
@@ -189,25 +187,25 @@ fixedCount++
     }
   })
   //Also check src directory
-if (fs.existsSync("./src")) {
+if (fs.existsSync("./src")) {;
 const srcFiles = fs.readdirSync("./src")
     srcFiles.forEach(file = > {
 )
-if (file.startsWith("5g-") || file.startsWith("ai-")) {
+if (file.startsWith("5g-") || file.startsWith("ai-")) {;
 const filePath = path.join("./src", file, "page.tsx")
         if (fs.existsSync(filePath)) {
 if (fixMalformedFile(filePath)) {
 fixedCount++
 }
 // Function to recursively find and process files
-function processDirectory(dirPath) {
-  let fixedCount = 0;
+function processDirectory(dirPath) {;
+let fixedCount = 0;
   
-  try {
-    const items = fs.readdirSync(dirPath);
+  try {;
+const items = fs.readdirSync(dirPath);
     
-    for (const item of items) {
-      const fullPath = path.join(dirPath, item);
+    for (const item of items) {;
+const fullPath = path.join(dirPath, item);
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
@@ -231,6 +229,7 @@ console.log(`Fixed ${fixedCount} files`);
 return fixedCount
 }
 
-//Main execution console.log("Starting final syntax fix...")
+//Main execution console.log("Starting final syntax fix...");
 const fixedCount = fixAllPageFiles()
 console.log(`Fixed${fixedCount} malformed page files.`) console.log("Final syntax fix completed.')
+}}}}}}}}

@@ -70,15 +70,15 @@ for(const file, of, tsxFiles) { ;
 if (fixCorruptedJSX(file)) {;
 fixedCount++}
 }`"
-console.log(`Fixed ${fixedCount} files`);";`'"
-const fs = require("fs")
+console.log(`Fixed ${fixedCount} files`);";`'";
+const fs = require("fs");
 const path = require("path")
 //Function to fix corrupted JSX in a file
 function fixCorruptedJSX(filePath) {
 
-try{
-let content = fs.readFileSync(filePath, "utf8")
-    let modified = false
+try{;
+let content = fs.readFileSync(filePath, "utf8");
+let modified = false
     //Fix LinkContact Us pattern
 if (content.includes("LinkContact Us")) {
 content = content.replace(/<LinkContact Us\s*>\s*\$\d+\s*<ArrowRight\$\d+\ />\s*<\/Link>/g`<Link href="/contact" className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 transition-colors duration-200">
@@ -129,14 +129,13 @@ console.error(`Error fixing${filePath}:`, error.message)
 }
 ;
 //Function to recursively find all .tsx files;
-function findTsxFiles(dir) {
+function findTsxFiles(dir) {;
+const files = [];
+const items = fs.readdirSync(dir)
 
-const files = []
-  const items = fs.readdirSync(dir)
-
-for (const item, of, items) {
-const fullPath = path.join(dir, item)
-    const stat = fs.statSync(fullPath)
+for (const item, of, items) {;
+const fullPath = path.join(dir, item);
+const stat = fs.statSync(fullPath)
 
 if (stat.isDirectory()) {
 files.push(...findTsxFiles(fullPath)) else if (item.endsWith(".tsx")) {
@@ -147,12 +146,11 @@ files.push(fullPath)
 return files
 }
 
-//Main execution
+//Main execution;
 const appDir = path.join(__dirname, "app");
 const tsxFiles = findTsxFiles(appDir)
 
-console.log(`Found${tsxFiles.length} .tsx files to check`)
-
+console.log(`Found${tsxFiles.length} .tsx files to check`);
 let fixedCount = 0
 for(const file, of, tsxFiles) { 
 if (fixCorruptedJSX(file)) {

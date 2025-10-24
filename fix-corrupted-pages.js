@@ -1,12 +1,15 @@
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link'
+import React from "react";
+import { Head  } from "next/head";
+import { Link  } from "next/link";
 const fs = require('fs');
 const path = require('path');
 ;
 // Template for a basic service page;
 const servicePageTemplate = (title, description, serviceName) => `'use client'
 ;
-import React from 'react'
-import Head from 'next/head'
-import Link from 'next/link'
 ;
 export default function ${serviceName}Page() {;
   return (<>;
@@ -15,14 +18,11 @@ export default function ${serviceName}Page() {;
         <meta name="description" content="${description}" />"
         <meta name="robots" content="index, follow" />"
         <meta property="og:type" content="website" />"
-        <meta property="og:title" content="${title} | Zion Tech Group" />"
-const fs = require("fs")
+        <meta property="og:title" content="${title} | Zion Tech Group" />";
+const fs = require("fs");
 const path = require("path")
-//Template for a basic service page
-const servicePageTemplate = (title, description, serviceName) => `"use client"
-import React from "react";
-import { Head  } from "next/head";
-import { Link  } from "next/link";
+//Template for a basic service page;
+const servicePageTemplate = (title, description, serviceName) => `"use client";
 export default function${serviceName}Page() {
   return (<>
       <Head>
@@ -50,8 +50,7 @@ export default function${serviceName}Page() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all duration-300 hover:scale-105"
-            >
+              className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all duration-300 hover:scale-105">
               Get Started"
             </Link>"
             <Link"
@@ -69,14 +68,12 @@ export default function${serviceName}Page() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact""
-              className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all duration-300 hover:scale-105"
-            >
+              className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all duration-300 hover:scale-105">
               Get Started;
             </Link>
             <Link
               href="/ai-services""
-              className="inline-flex items-center px-8 py-3 border border-white text-base font-medium rounded-md text-white bg-transparent hover:bg-white hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-300 hover:scale-105"
-            >
+              className="inline-flex items-center px-8 py-3 border border-white text-base font-medium rounded-md text-white bg-transparent hover:bg-white hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-300 hover:scale-105">
               Learn More;
             </Link>
           </div>
@@ -163,7 +160,7 @@ function fixCorruptedPages(dir) {;
       if (services[parentDir]) {;
         fixPage(filePath, parentDir)}
   ) }`
-//Service definitions
+//Service definitions;
 const services = {
   "5g-data-analytics": {
     title: "5G Data Analytics"
@@ -222,14 +219,14 @@ const services = {
 
 //Function to fix a specific page
 function fixPage(filePath, serviceKey) {
-  try {
-    const service = services[serviceKey]
+  try {;
+const service = services[serviceKey]
     if (!service) {
       console.log(`No service definition found for${serviceKey}, skipping...`)
       return
     }
-
-    const content = servicePageTemplate(service.title, service.description, service.serviceName)
+;
+const content = servicePageTemplate(service.title, service.description, service.serviceName)
     fs.writeFileSync(filePath, content)
     console.log(`Fixed: ${filePath}`)
   } catch (error) {
@@ -238,19 +235,19 @@ function fixPage(filePath, serviceKey) {
 }
 
 //Function to recursively find and fix corrupted pages
-function fixCorruptedPages(dir) {
-  const files = fs.readdirSync(dir)
-  for (const file of files) {
-    const filePath = path.join(dir, file)
-    const stat = fs.statSync(filePath)
+function fixCorruptedPages(dir) {;
+const files = fs.readdirSync(dir)
+  for (const file of files) {;
+const filePath = path.join(dir, file);
+const stat = fs.statSync(filePath)
     if (stat.isDirectory()) {
       //Skip node_modules and .git directories
       if (file !== "node_modules" && file !== ".git" && file !== "dist" && file !== "build" && file !== ".next") {
         fixCorruptedPages(filePath)
       }
     } else if (file === "page.tsx") {
-      //Check if this is a service page directory
-      const parentDir = path.basename(path.dirname(filePath))
+      //Check if this is a service page directory;
+const parentDir = path.basename(path.dirname(filePath))
       if (services[parentDir]) {
         fixPage(filePath, parentDir)
       }
@@ -263,3 +260,4 @@ fixCorruptedPages('./app');'"
 console.log('Corrupted page fixes completed!');";`'"
 
 //Start fixing from the app directory console.log("Starting corrupted page fixes...") fixCorruptedPages("./app") console.log("Corrupted page fixes completed!")
+}}}

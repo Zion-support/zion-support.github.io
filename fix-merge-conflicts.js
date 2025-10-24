@@ -1,13 +1,12 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
 // Function to clean merge conflicts and syntax errors
 function cleanFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
+  try {;
+let content = fs.readFileSync(filePath, 'utf8');
     
     // Remove merge conflict markers
     content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
@@ -53,14 +52,14 @@ function cleanFile(filePath) {
 }
 
 // Function to find all TypeScript/JSX files
-function findTsxFiles(dir) {
-  const files = [];
+function findTsxFiles(dir) {;
+const files = [];
   
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
+  function traverse(currentDir) {;
+const items = fs.readdirSync(currentDir);
     
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
+    for (const item of items) {;
+const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
@@ -77,7 +76,7 @@ function findTsxFiles(dir) {
 
 // Main execution
 console.log('Starting merge conflict cleanup...');
-
+;
 const files = findTsxFiles('/workspace');
 console.log(`Found ${files.length} TypeScript/JSX files to process`);
 
@@ -85,4 +84,4 @@ files.forEach(file => {
   cleanFile(file);
 });
 
-console.log('Merge conflict cleanup completed!');
+console.log('Merge conflict cleanup completed!');)

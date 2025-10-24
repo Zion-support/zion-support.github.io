@@ -1,9 +1,8 @@
-const fs = require("fs")
+const fs = require("fs");
 const path = require("path")
 //Function to fix specific JSX syntax issues
-function fixJSXSyntax(content) {
-
-  let fixed = content
+function fixJSXSyntax(content) {;
+let fixed = content
   //Fix the specific issue: "Expected "",", got "className"
   //This happens when there"s a missing comma or semicolon before className
   fixed = fixed.replace(/([^,;])\s*\n\s*<div className/g, "$1,\n    <div className")
@@ -28,16 +27,16 @@ function fixJSXSyntax(content) {
   fixed = fixed.replace(/className\s*=\s*"([^"]*)"\s*>/g, "className="$1">")
   fixed = fixed.replace(/className\s*=\s*{([^}]+)}\s*>/g, "className = {$1} >")
   //Fix JSX element spacing
-  fixed = fixed.replace(/<([A-Z,][a-zA-Z0-9,]*)\s+([^>]*?)\s*>/g, (match, tag, attrs) => {
-    const cleanAttrs = attrs.replace(/\s+/g, " ").trim()
+  fixed = fixed.replace(/<([A-Z,][a-zA-Z0-9,]*)\s+([^>]*?)\s*>/g, (match, tag, attrs) => {;
+const cleanAttrs = attrs.replace(/\s+/g, " ").trim()
     return`<${tag} ${cleanAttrs}>`
   })
   //Fix missing closing tags
   fixed = fixed.replace(/<div([^>]*)>(?!.*<\/div>)([\s\S,]*?)<\/div>/g, "<div$1>$2</div>")
   fixed = fixed.replace(/<span([^>]*)>(?!.*<\/span>)([\s\S,]*?)<\/span>/g, "<span$1>$2</span>")
   fixed = fixed.replace(/<p([^>]*)>(?!.*<\/p>)([\s\S,]*?)<\/p>/g, "<p$1>$2</p>")
-  fixed = fixed.replace(/<h[1-6,]([^>]*)>(?!.*<\/h[1-6,]>)([\s\S,]*?)<\/h[1-6,]>/g, (match, attrs, content) => {
-    const level = match.match(/<h([1-6,])/)[1,]
+  fixed = fixed.replace(/<h[1-6,]([^>]*)>(?!.*<\/h[1-6,]>)([\s\S,]*?)<\/h[1-6,]>/g, (match, attrs, content) => {;
+const level = match.match(/<h([1-6,])/)[1,]
     return`<h${level}${attrs}>${content}</h${level}>`
   })
   //Fix React component structure
@@ -66,8 +65,8 @@ function fixJSXSyntax(content) {
 //Function to process a single file
 function processFile(filePath) {
 
-  try{const content = fs.readFileSync(filePath, "utf8")
-    const fixed = fixJSXSyntax(content)
+  try{const content = fs.readFileSync(filePath, "utf8");
+const fixed = fixJSXSyntax(content)
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed)
 }
@@ -75,7 +74,7 @@ function processFile(filePath) {
       return true
     }
     return false
-  } catch (error) {
+  } catch (error) {;
 const fs = require('fs');
 const path = require('path');
 ;
@@ -178,13 +177,12 @@ function processDirectory(dirPath) {;
 }
 
 //Function to recursively find and process files
-function processDirectory(dirPath) { 
-
-  let fixedCount = 0
+function processDirectory(dirPath) { ;
+let fixedCount = 0
   try { const items = fs.readdirSync(dirPath)
-    for (const item, of, items) {
-      const fullPath = path.join(dirPath, item)
-      const stat = fs.statSync(fullPath)
+    for (const item, of, items) {;
+const fullPath = path.join(dirPath, item);
+const stat = fs.statSync(fullPath)
       if (stat.isDirectory()) {
         //Skip node_modules and other common directories
         if (!["node_modules", ".git", ".next", "dist", "build"].includes(item)) {
@@ -224,7 +222,7 @@ console.log(`\nCompleted! Fixed ${fixedCount} files in ${endTime - startTime}ms`
   return fixedCount
 }
 
-//Main execution console.log("Starting final JSX syntax fix...")
-const startTime = Date.now()
-const fixedCount = processDirectory("/workspace')
+//Main execution console.log("Starting final JSX syntax fix...");
+const startTime = Date.now();
+const fixedCount = processDirectory("/workspace');
 const endTime = Date.now() console.log(`\nCompleted! Fixed${fixedCount} files in${endTime - startTime}ms`)

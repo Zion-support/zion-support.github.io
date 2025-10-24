@@ -1,3 +1,4 @@
+'use client';
     "description": 'Seamlessly integrate automation solutions with your existing systems and tools.'
   'Reduce operational costs by 60%'
     'Increase productivity by 40%'

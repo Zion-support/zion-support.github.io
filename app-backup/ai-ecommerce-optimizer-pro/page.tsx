@@ -1,3 +1,4 @@
+'use client';
     "description": 'Perfect for established online stores'
         'Up, to, 50,000 products'
         'Advanced AI optimization'

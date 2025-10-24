@@ -1,3 +1,4 @@
+'use client';
               </a>
             </li>
           )    )

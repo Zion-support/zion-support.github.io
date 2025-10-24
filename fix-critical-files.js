@@ -1,3 +1,5 @@
+import React from 'react'
+import React from "react";
 const fs = require('fs');
 const path = require('path');
 ;
@@ -17,7 +19,6 @@ const criticalFiles = [;
 // Simple component template;
 const createSimpleComponent = (name, props = '') => `'use client'
 ;
-import React from 'react'
 ;
 interface ${name}Props {;
   children?: React.ReactNode;
@@ -28,9 +29,9 @@ const ${name}: React.FC<${name}Props> = ({ children, className }) => {;
     </div>);
   )}`
 export default ${name};`;
-const fs = require("fs")
+const fs = require("fs");
 const path = require("path")
-//List of critical files to fix
+//List of critical files to fix;
 const criticalFiles = ["app/components/AdvancedAccessibilityEnhancer.tsx"
   "app/components/AdvancedErrorBoundary.tsx"
   "app/components/Analytics.tsx"
@@ -41,14 +42,13 @@ const criticalFiles = ["app/components/AdvancedAccessibilityEnhancer.tsx"
   "app/components/Breadcrumb.tsx"
   "app/components/ContentCarousel.tsx"
 ]
-//Simple component template
-const createSimpleComponent = (name, props = "") => `"use client"
-import React from "react";
+//Simple component template;
+const createSimpleComponent = (name, props = "") => `"use client";
 interface${name}Props {
   children?: React.ReactNode
   className?: string
 }
-
+;
 const${name}: React.FC<${name}Props> = ({ children, className }) => {
   return (<div className={className}>
       {children}
@@ -59,9 +59,9 @@ const${name}: React.FC<${name}Props> = ({ children, className }) => {
 
 export default${name};`
 //Fix each file
-criticalFiles.forEach(filePath => {
-  const fullPath = path.join(__dirname, filePath)
-  const componentName = path.basename(filePath, ".tsx")
+criticalFiles.forEach(filePath => {;
+const fullPath = path.join(__dirname, filePath);
+const componentName = path.basename(filePath, ".tsx")
   try {
     fs.writeFileSync(fullPath, createSimpleComponent(componentName))
     console.log(`Fixed: ${filePath}`)

@@ -1,3 +1,4 @@
+'use client';
                   <p className="text-gray-300">benefit</p>
                   </div>
               </div>
