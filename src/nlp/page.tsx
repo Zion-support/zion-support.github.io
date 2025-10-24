@@ -1,16 +1,18 @@
+import React from 'react'
 import React from 'react';
-import { Phone } from 'lucide-react'
+import { Phone } from 'lucide-react';
 
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { Phone } from 'lucide-react'
 
 const Page: React.FC = () => {
   return (
     <>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <main className="container mx-auto px-4 py-16 pt-24">
-          <section className="text-center mb-16">
+          <section className="text-center mb-16"></section>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
               Service Coming Soon
             </h1>
@@ -18,9 +20,9 @@ const Page: React.FC = () => {
               This service is currently under development
             </p>
             <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">
-              We&apos;re working hard to bring you this amazing service. Contact us to learn more about our development timeline.
+              We're working hard to bring you this amazing service. Contact us to learn more about our development timeline.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a
                 href="/contact"
                 className="cyber-button px-8 py-4 text-lg font-semibold"
@@ -38,9 +40,10 @@ const Page: React.FC = () => {
           </section>
         </main>
         <Footer />
+>>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Page;
+export default Page

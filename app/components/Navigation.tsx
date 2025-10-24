@@ -1,19 +1,17 @@
-"use client";
+'use client'
+import React, { useState } from 'react'
+import Link from 'next/link'
+import { ArrowRight, Brain, Menu, X } from 'lucide-react'
 
-import React, { useState } from "react";
-import Link from "next/link";
-import { ArrowRight, Brain, Menu, X } from 'lucide-react';
 const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
 
-  const navigationItems = [
-    { name: "Home", href: "/" },
-    { name: "AI Services", href: "/ai-services" },
-    { name: "IT Services", href: "/it-services" },
-    { name: "Micro SaaS", href: "/micro-saas-solutions" },
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
-  ];
+  const navigation = [
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '/services' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' }
+  ]
 
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
@@ -22,36 +20,34 @@ const Navigation: React.FC = () => {
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-bold text-gray-900">
-                Zion Tech Group
-              </span>
+              <Brain className="h-8 w-8 text-blue-600" />
+              <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navigationItems.map((item, index) => (
-              <Link
-                key={index}
-                href={item.href}
-                className="text-gray-700 hover:text-purple-600 transition-colors font-medium"
-              >
-                {item.name}
-              </Link>
-            ))}
+          <div className="hidden md:block">
+            <div className="ml-10 flex items-baseline space-x-4">
+              {navigation.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
           </div>
 
           {/* CTA Button */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:block">
             <Link
               href="/contact"
-              className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 flex items-center"
             >
               Get Started
-              <ArrowRight className="w-4 h-4 ml-2" />
+              <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </div>
 
@@ -59,7 +55,7 @@ const Navigation: React.FC = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-purple-600 transition-colors"
+              className="text-gray-600 hover:text-blue-600 focus:outline-none focus:text-blue-600"
             >
               {isOpen ? (
                 <X className="w-6 h-6" />
@@ -74,11 +70,11 @@ const Navigation: React.FC = () => {
         {isOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
-              {navigationItems.map((item, index) => (
+              {navigation.map((item) => (
                 <Link
                   key={index}
                   href={item.href}
-                  className="block px-3 py-2 text-gray-700 hover:text-purple-600 transition-colors font-medium"
+                  className="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
@@ -86,7 +82,7 @@ const Navigation: React.FC = () => {
               ))}
               <Link
                 href="/contact"
-                className="block px-3 py-2 bg-gradient-to-r from-purple-500 to-blue-600 text-white rounded-lg font-medium hover:from-purple-600 hover:to-blue-700 transition-all duration-300"
+                className="bg-blue-600 hover:bg-blue-700 text-white block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 mt-4"
                 onClick={() => setIsOpen(false)}
               >
                 Get Started
@@ -96,7 +92,7 @@ const Navigation: React.FC = () => {
         )}
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default Navigation;
+export default Navigation

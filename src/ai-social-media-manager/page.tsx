@@ -1,11 +1,12 @@
+import React from 'react'
 import React from 'react';
+import { CheckCircle, Phone, Star, TrendingUp, Check } from 'lucide-react';
+
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 import { CheckCircle, Phone, TrendingUp } from 'lucide-react'
 
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const AISocialMediaManagerPage: React.FC = () => {
-  const features = [
+constAISocialMediaManagerPage: React.FC= () =>{constfeatures= [
     'AI-powered content creation and curation',
     'Smart scheduling across all platforms',
     'Advanced analytics and performance insights',
@@ -14,7 +15,7 @@ const AISocialMediaManagerPage: React.FC = () => {
     'Competitor analysis and benchmarking',
     'Automated engagement and responses',
     'Multi-platform campaign management'
-  ];
+  ]
 
   const benefits = [
     '200% increase in engagement rates',
@@ -23,7 +24,7 @@ const AISocialMediaManagerPage: React.FC = () => {
     '50% better ROI on campaigns',
     '95% content quality consistency',
     '60% faster content creation'
-  ];
+  ]
 
   const platforms = [
     { name: 'Facebook', icon: '📘', users: '2.9B' },
@@ -32,15 +33,16 @@ const AISocialMediaManagerPage: React.FC = () => {
     { name: 'LinkedIn', icon: '💼', users: '900M' },
     { name: 'TikTok', icon: '🎵', users: '1B' },
     { name: 'YouTube', icon: '📺', users: '2.7B' }
-  ];
+  ]
 
+const Page = () => {
   return (
     <>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
-          <section className="text-center mb-16">
+          <section className="text-center mb-16"></section>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
               AI Social Media Manager
             </h1>
@@ -48,10 +50,10 @@ const AISocialMediaManagerPage: React.FC = () => {
               Automate your social media with AI-powered content creation
             </p>
             <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">
-              Transform your social media presence with our intelligent AI system that creates, 
+              Transform your social media presence with our intelligent AI system that creates,
               schedules, and optimizes content across all platforms automatically.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a
                 href="/contact"
                 className="cyber-button px-8 py-4 text-lg font-semibold"
@@ -67,30 +69,28 @@ const AISocialMediaManagerPage: React.FC = () => {
               </a>
             </div>
           </section>
-
           {/* Features Section */}
-          <section className="mb-16">
+          <section className="mb-16"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
               AI-Powered Features
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
               {features.map((feature, index) => (
-                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300"></div>
                   <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
                   <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
                 </div>
               ))}
             </div>
           </section>
-
           {/* Platforms Section */}
-          <section className="mb-16">
+          <section className="mb-16"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
               Supported Platforms
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
               {platforms.map((platform, index) => (
-                <div key={index} className="quantum-card p-6 text-center hover:scale-105 transition-all duration-300">
+                <div key={index} className="quantum-card p-6 text-center hover:scale-105 transition-all duration-300"></div>
                   <div className="text-4xl mb-4">{platform.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-2">{platform.name}</h3>
                   <p className="text-cyan-400">{platform.users} users</p>
@@ -98,31 +98,29 @@ const AISocialMediaManagerPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Benefits Section */}
-          <section className="mb-16">
+          <section className="mb-16"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
               Proven Results
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
               {benefits.map((benefit, index) => (
-                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"></div>
                   <TrendingUp className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                   <p className="text-lg text-white font-semibold">{benefit}</p>
                 </div>
               ))}
             </div>
           </section>
-
           {/* Contact Section */}
-          <section className="text-center">
+          <section className="text-center"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 neon-text">
               Ready to Automate Your Social Media?
             </h2>
             <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
               Join thousands of businesses already using AI to transform their social media presence.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a
                 href="/contact"
                 className="cyber-button px-8 py-4 text-lg font-semibold"
@@ -140,9 +138,10 @@ const AISocialMediaManagerPage: React.FC = () => {
           </section>
         </main>
         <Footer />
+>>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
       </div>
     </>
-  );
-};
+  )
+}
 
-export default AISocialMediaManagerPage;
+export default Page;

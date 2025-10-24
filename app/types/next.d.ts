@@ -1,4 +1,4 @@
-// Type definitions for Next.js compatibility in Vite
+// Type definitions for Next.js compatibility
 export interface Metadata {
   title?: string
   description?: string
@@ -22,7 +22,7 @@ export interface Metadata {
     url?: string
     siteName?: string
     images?: Array<{
-      url: string,
+      url: string
       width?: number
       height?: number
       alt?: string
@@ -60,14 +60,14 @@ export interface Metadata {
 }
 
 export interface MetadataRoute {
-  url: string,
+  url: string
   lastModified?: string | Date
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
   priority?: number
 }
 
 export interface MetadataRouteSitemap extends MetadataRoute {
-  url: string,
+  url: string
   lastModified?: string | Date
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
   priority?: number

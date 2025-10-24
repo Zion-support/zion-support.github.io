@@ -140,8 +140,6 @@ const PagePage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </>
-  );
-};
-
-export default PagePage;
+    </div>
+  )
+}
