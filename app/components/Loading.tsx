@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface LoadingProps {
@@ -15,18 +14,3 @@ const Loading: React.FC<LoadingProps> = ({ className = '', children }) => {
 };
 
 export default Loading;
-=======
-'use client'
-
-import React from 'react'
-
-const Loading: React.FC = () => {
-  return (
-    <div className="loading">
-      <div className="spinner"></div>
-    </div>
-  )
-}
-
-export default Loading
->>>>>>> cursor/fix-errors-and-merge-to-main-2503
