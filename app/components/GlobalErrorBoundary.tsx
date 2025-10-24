@@ -1,5 +1,82 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
+=======
+import { AlertTriangle, RefreshCw, Home, Phone, Mail } from 'lucide-react';
+
+interface Props {
+  children: ReactNode;
+  fallback?: ReactNode;
+  onError?: (_error: Error, _errorInfo: ErrorInfo) => void;
+}
+
+interface State {
+  hasError: boolean;
+  error?: Error;
+  errorInfo?: ErrorInfo;
+  errorId?: string;
+}
+
+class GlobalErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error: Error): State {
+    return { 
+      hasError: true, 
+      error,
+      errorId: `ERR_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+    };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    this.setState({ error, errorInfo });
+    
+    // Log error for monitoring in production
+    if (process.env.NODE_ENV === 'production') {
+      // In production, you would send this to an error reporting service
+      // Example: errorReportingService.captureException(error, { extra: errorInfo })
+      console.error('Global Error Boundary caught an error:', error, errorInfo);
+    }
+    
+    this.props.onError?.(error, errorInfo);
+  }
+
+  handleRetry = () => {
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined, errorId: undefined });
+  };
+
+  handleReload = () => {
+    window.location.reload();
+  };
+
+  handleGoHome = () => {
+    window.location.href = '/';
+  };
+
+  render() {
+    if (this.state.hasError) {
+      if (this.props.fallback) {
+        return this.props.fallback;
+      }
+
+      return (
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-center justify-center px-4">
+          <div className="max-w-lg w-full bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center">
+            <div className="w-20 h-20 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+              <AlertTriangle className="w-10 h-10 text-red-400" />
+            </div>
+            
+            <h1 className="text-3xl font-bold text-white mb-4">
+              Oops! Something went wrong
+            </h1>
+            
+            <p className="text-gray-300 mb-6 text-lg">
+              We're sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.
+            </p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b30
 
 interface Props {
   children: ReactNode;
@@ -87,49 +164,49 @@ class GlobalErrorBoundary extends Component<Props, State> {
                   />
                 </svg>
               </div>
-              
-              <h1 className="text-2xl font-bold text-gray-900 mb-2">
-                Oops! Something went wrong
-              </h1>
-              
-              <p className="text-gray-600 mb-6">
-                We're sorry, but something unexpected happened. Please try again or contact support if the problem persists.
-              </p>
+            )}
 
-              {process.env.NODE_ENV === 'development' && this.state.error && (
-                <details className="mb-6 text-left">
-                  <summary className="cursor-pointer text-sm font-medium text-gray-700 mb-2">
-                    Error Details (Development)
-                  </summary>
-                  <div className="bg-gray-100 p-3 rounded text-xs font-mono text-gray-800 overflow-auto">
-                    <div className="mb-2">
-                      <strong>Error:</strong> {this.state.error.message}
-                    </div>
-                    {this.state.errorInfo && (
-                      <div>
-                        <strong>Stack:</strong>
-                        <pre className="whitespace-pre-wrap mt-1">
-                          {this.state.errorInfo.componentStack}
-                        </pre>
-                      </div>
-                    )}
-                  </div>
-                </details>
-              )}
+            <div className="flex flex-col sm:flex-row gap-3 justify-center mb-6">
+              <button
+                onClick={this.handleRetry}
+                className="flex items-center justify-center space-x-2 bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
+              >
+                <RefreshCw className="w-4 h-4" />
+                <span>Try Again</span>
+              </button>
+              <button
+                onClick={this.handleReload}
+                className="flex items-center justify-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
+              >
+                <RefreshCw className="w-4 h-4" />
+                <span>Reload Page</span>
+              </button>
+              <button
+                onClick={this.handleGoHome}
+                className="flex items-center justify-center space-x-2 border border-gray-400 text-gray-300 hover:bg-gray-400 hover:text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
+              >
+                <Home className="w-4 h-4" />
+                <span>Go Home</span>
+              </button>
+            </div>
 
+            <div className="pt-6 border-t border-white/20">
+              <p className="text-sm text-gray-400 mb-4">Need help? Contact our support team:</p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <button
-                  onClick={this.handleRetry}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
+                <a
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="inline-flex items-center justify-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors px-4 py-2 rounded-lg border border-cyan-400/30 hover:bg-cyan-400/10"
                 >
-                  Try Again
-                </button>
-                <Link
-                  to="/"
-                  className="border border-gray-300 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-50 transition-colors text-center"
+                  <Mail className="w-4 h-4" />
+                  <span>Email Support</span>
+                </a>
+                <a
+                  href="tel:+1234567890"
+                  className="inline-flex items-center justify-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors px-4 py-2 rounded-lg border border-cyan-400/30 hover:bg-cyan-400/10"
                 >
-                  Go Home
-                </Link>
+                  <Phone className="w-4 h-4" />
+                  <span>Call Support</span>
+                </a>
               </div>
             </div>
           </div>
