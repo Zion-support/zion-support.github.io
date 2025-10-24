@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import '@/types/analytics';
 
 interface PerformanceMetrics {
   loadTime: number | null;
@@ -190,8 +191,4 @@ export default function PerformanceMonitor({
 }
 
 
-declare global {
-  interface Window {
-    gtag: (..._args: unknown[]) => void;
-  }
-}
+// Global types are now defined in types/analytics.ts

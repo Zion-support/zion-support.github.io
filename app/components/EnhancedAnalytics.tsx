@@ -1,12 +1,7 @@
 'use client'
 
 import React, { createContext, useContext, useEffect } from 'react';
-
-interface AnalyticsContextType {
-  track: (_event: string, _properties?: Record<string, unknown>) => void;
-  identify: (_userId: string, _traits?: Record<string, unknown>) => void;
-  page: (_name: string, _properties?: Record<string, unknown>) => void;
-}
+import type { AnalyticsContextType } from '@/types/analytics';
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
@@ -35,8 +30,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
         document.head.appendChild(script);
 
         // Initialize gtag
-        (window as { gtag?: (..._args: unknown[]) => void }).gtag = (window as { gtag?: (..._args: unknown[]) => void }).gtag || function(..._args: unknown[]) {
-          ((window as { gtag: (..._args: unknown[]) => void }).gtag.q = (window as { gtag: (..._args: unknown[]) => void }).gtag.q || []).push(_args);
+        (window as Window & { gtag?: { (..._args: unknown[]): void; q: unknown[] } }).gtag = (window as Window & { gtag?: { (..._args: unknown[]): void; q: unknown[] } }).gtag || function(..._args: unknown[]) {
+          ((window as Window & { gtag: { (..._args: unknown[]): void; q: unknown[] } }).gtag.q = (window as Window & { gtag: { (..._args: unknown[]): void; q: unknown[] } }).gtag.q || []).push(_args);
         };
         window.gtag('js', new Date());
         window.gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX');
@@ -106,12 +101,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   );
 };
 
-// Extend Window interface for TypeScript
-declare global {
-  interface Window {
-    dataLayer: unknown[];
-    gtag: (..._args: unknown[]) => void;
-  }
-}
+// Global types are now defined in types/analytics.ts
 
 export default AnalyticsProvider;
