@@ -49,12 +49,3 @@ const ImageOptimizerPage: React.FC = () => {
           </div>
         
     </div>
-<<<<<<< HEAD
-    </div>
-  );,
-  ),
-}
- ImageOptimizerPage
-=======
-export default ImageOptimizerPage
->>>>>>> cursor/fix-errors-and-merge-to-main-996d

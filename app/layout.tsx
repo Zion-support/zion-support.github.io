@@ -36,53 +36,5 @@ export const metadata: Metadata = {
     locale: 'en_US''',
     type: 'website''',
   },
-<<<<<<< HEAD
-  twitter: {card: 'summary_large_image''',
-    title: 'ZionTechGroup - AI Solutions & Technology Services''',
-    description: 'Leading provider of AI solution''',s, technology services, and digital transformation for businesses worldwide.''',
-    images: ['/og-image.jpg''',]},
-  robots: {index: tru,e,
-    follow: tru,e,
-    googleBot: {
-      index: tru,e,
-      follow: tru,e,
-      'max-video-preview': -1'',
-      'max-image-preview': 'large''',
-      'max-snippet': -1}'',
-=======
-  twitter: {
-    card: 'summary_large_image',
-    title: 'ZionTechGroup - AI Solutions & Technology Services',
-    description: 'Leading provider of AI solutions, technology services, and digital transformation for businesses worldwide.',
-    images: ['/og-image.jpg'],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  verification: {
-    google: 'your-google-verification-code',
->>>>>>> cursor/fix-errors-and-merge-to-main-1948
-  },
-};
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <html lang="en">
-      <body className={inter.className}>
-        {children}
-      </body>
->>>>>>> origin/main
     </html>
 }

@@ -27,10 +27,3 @@ export default function AppPage() {
       <Footer />
     </div>
   );
-<<<<<<< HEAD
-};
-
-export default HomePage;
-=======
-}
->>>>>>> origin/main

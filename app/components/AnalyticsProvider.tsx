@@ -60,12 +60,3 @@ trackEvent,
     <AnalyticsContext.Provider value={value}></AnalyticsContext>
       {children}
     </AnalyticsContext.Provider>
-<<<<<<< HEAD
-  )
-}
- AnalyticsProvider
-  )
-}
-=======
-export default AnalyticsProvider
->>>>>>> cursor/fix-errors-and-merge-to-main-996d

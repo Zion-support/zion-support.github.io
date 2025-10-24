@@ -120,18 +120,3 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {</S
       </div>
       <Footer /></Footer>
 </>
-<<<<<<< HEAD
-  )
-}
- SystemMonitorPage
-            </div>
-        </div>
-    </div>
-    </div>
-  );
-=======
-  );
->>>>>>> cursor/fix-errors-and-merge-to-main-996d
-};
-
-export default benefits;

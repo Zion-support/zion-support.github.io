@@ -484,19 +484,3 @@ const ContentCarousel: React.FC = () => {
       </div>
       <Footer />
 </div>
-<<<<<<< HEAD,
-  ),
-}
- ContentCarouselPage
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </button>
-        </div>
-<<<<<<< HEAD
-      </div>
-    </div>
-=======
-    </div>);
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-1948
-
-export default ContentCarousel }

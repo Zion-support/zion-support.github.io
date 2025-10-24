@@ -3,7 +3,7 @@ import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import  ArrowRight  from 'lucide-react'
-import Footer from '/components/Footer'
+import Footer from '../components/Footer'
 
 export default function GsolutionsPage() {
   return (
@@ -25,14 +25,9 @@ export default function GsolutionsPage() {
         </div>
         </div>
       <Footer />
-<<<<<<< HEAD
-    </div>
-    </div>
->>>>>>> origin/main
   );
 }
 >>>>>>> origin/main
-=======
     </div>);
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-1948
