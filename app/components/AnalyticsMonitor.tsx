@@ -2,16 +2,17 @@
 
 import React, { useEffect, useCallback, useState } from 'react';
 
-interface AnalyticsEvent {;
+interface AnalyticsEvent {
   name: string;
   properties?: Record<string, any>;
-  timestamp: number}
+  timestamp: number;
+}
 
-interface PerformanceMetrics {;
-  fcp: number; // First Contentful Paint,;
-  lcp: number; // Largest Contentful Paint;
-  fid: number; // First Input Delay,;
-  cls: number; // Cumulative Layout Shift;
+interface PerformanceMetrics {
+  fcp: number; // First Contentful Paint
+  lcp: number; // Largest Contentful Paint
+  fid: number; // First Input Delay
+  cls: number; // Cumulative Layout Shift
   ttfb: number; // Time to First Byte
 }
 

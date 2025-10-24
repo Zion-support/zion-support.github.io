@@ -1,47 +1,45 @@
 'use client';
 import React from 'react';
 import Navigation from './Navigation';
-import { ArrowRight, CheckCircle  } from "lucide-react";
-const features = [
-  {
-    icon: CheckCircle,
-    title: "Advanced AI",
-    description: "Cutting-edge artificial intelligence solutions",
-    benefits: ["Machine Learning", "Natural Language Processing", "Computer Vision"]
-  },
-  {
-    icon: CheckCircle,
-    title: "Cloud Infrastructure",
-    description: "Scalable and secure cloud solutions",
-    benefits: ["Auto-scaling", "High Availability", "Security"]
-  },
-  {
-    icon: CheckCircle,
-    title: "Data Analytics",
-    description: "Powerful data analysis and visualization",
-    benefits: ["Real-time Analytics", "Predictive Modeling", "Business Intelligence"]
-  },
-  {
-    icon: CheckCircle,
-    title: "Automation",
-    description: "Streamline your business processes",
-    benefits: ["Workflow Automation", "Process Optimization", "Efficiency Gains"]
-  }
-];
+import Footer from '../components/Footer';
+import { ArrowRight, CheckCircle } from "lucide-react";
 
-const benefits = [
-  "Reduce operational costs by up to 40%",
-  "Increase productivity with AI automation",
-  "Scale your business with cloud solutions",
-  "Make data-driven decisions with analytics",
-  "Enhance security with advanced monitoring",
-  "Improve customer experience with AI";
-];
+const Header: React.FC = () => {
+  const features = [
+    {
+      icon: CheckCircle,
+      title: "Advanced AI",
+      description: "Cutting-edge artificial intelligence solutions",
+      benefits: ["Machine Learning", "Natural Language Processing", "Computer Vision"]
+    },
+    {
+      icon: CheckCircle,
+      title: "Cloud Infrastructure",
+      description: "Scalable and secure cloud solutions",
+      benefits: ["Auto-scaling", "High Availability", "Security"]
+    },
+    {
+      icon: CheckCircle,
+      title: "Data Analytics",
+      description: "Powerful data analysis and visualization",
+      benefits: ["Real-time Analytics", "Predictive Modeling", "Business Intelligence"]
+    },
+    {
+      icon: CheckCircle,
+      title: "Automation",
+      description: "Streamline your business processes",
+      benefits: ["Workflow Automation", "Process Optimization", "Efficiency Gains"]
+    }
+  ];
 
-
-import Footer from '../components/Footer';const Header: React.FC = ($2) => {
-$3
-};
+  const benefits = [
+    "Reduce operational costs by up to 40%",
+    "Increase productivity with AI automation",
+    "Scale your business with cloud solutions",
+    "Make data-driven decisions with analytics",
+    "Enhance security with advanced monitoring",
+    "Improve customer experience with AI"
+  ];
         <section className="relative py-20 px-4 overflow-hidden"> </section><div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20">
         <div className="relative max-w-7xl mx-auto text-center"> </div><h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">,
               Header

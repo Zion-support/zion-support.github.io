@@ -7,24 +7,21 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 const ContentStatistics: React.FC = () => {
+  const [counters, setCounters] = useState({
+    clients: 0,
+    projects: 0,
+    satisfaction: 0,
+    years: 0
+  });
 
-  const [counters, setCounters] = useState({;
-    clients: 0,;
-    projects: 0,;
-    satisfaction: 0,;
-    years: 0});
-;
-    clients: 1000,;
-    projects: 500;
-    satisfactio,;
-  n: 99,;
-    years: 10;
-    countrie,;
-  s: 25,;
-    uptime: 99.9};useEffect(() => {
+  const targetCounters = {
+    clients: 1000,
+    projects: 500,
+    satisfaction: 99,
+    years: 5
+  };
 
-    const duration = 2000;
-
+  useEffect(() => {
     const duration = 2000; // 2 seconds
     const steps = 60
     const stepDuration = duration / steps

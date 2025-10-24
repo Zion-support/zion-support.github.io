@@ -1,23 +1,28 @@
 "use client";
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from 'lucide-react';
 
-
-const MobileOptimizer: React.FC = ($2) => {
-
-$3
-}};
-
-    // Add touch-friendly classes;
-
-const addTouchClasses = ($2) => {
-
-$3
-}})}
+const MobileOptimizer: React.FC = () => {
+  useEffect(() => {
+    // Add touch-friendly classes
+    const addTouchClasses = () => {
+      if (typeof window !== 'undefined') {
+        // Add touch-friendly styles
+        document.body.classList.add('touch-friendly');
+        
+        // Add mobile-specific optimizations
+        const viewport = document.querySelector('meta[name="viewport"]');
+        if (viewport) {
+          viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
+        }
+      }
     };
+
+    addTouchClasses();
+  }, []);
 
     // Optimize images for mobile;
 

@@ -2,24 +2,29 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-interface EnhancedAccessibilityEnhancerProps {;
-  children: React.ReactNode,
-  enableKeyboardNavigation?: boolean
-  enableScreenReaderSupport?: boolean
-  enableHighContrast?: boolean
-  enableFocusManagement?: boolean
-  enableVoiceNavigation?: boolean
+interface EnhancedAccessibilityEnhancerProps {
+  children: React.ReactNode;
+  enableKeyboardNavigation?: boolean;
+  enableScreenReaderSupport?: boolean;
+  enableHighContrast?: boolean;
+  enableFocusManagement?: boolean;
+  enableVoiceNavigation?: boolean;
 }
 
-  const features = [
-    {;
-      icon: Brain,;
-      title: 'AI-Powered Intelligence',;
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',;
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {;
-      icon: BarChart,;
+const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps> = ({
+  children,
+  enableKeyboardNavigation = true,
+  enableScreenReaderSupport = true,
+  enableHighContrast = true,
+  enableFocusManagement = true,
+  enableVoiceNavigation = false
+}) => {
+  return (
+    <div className="enhanced-accessibility">
+      {children}
+    </div>
+  );
+};
       title: 'Advanced Analytics',;
       description: 'Comprehensive analytics dashboard with real-time data visualization.',;
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']

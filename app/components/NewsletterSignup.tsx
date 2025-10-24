@@ -4,19 +4,22 @@ import React, { useState } from 'react';
 import { AlertCircle, Mail, Send, CheckCircle } from 'lucide-react';
 
 interface NewsletterSignupProps {
-  variant?: 'inline' | 'modal'
-  onClose?: () => void}
-const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline', onClose }) => {</NewsletterSignupProps>
-  const [email, setEmail] = useState('')</NewsletterSignupProps>
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
-  const [message, setMessage] = useState('')
-  const handleSubmit = async (e: React.FormEvent) => {
+  variant?: 'inline' | 'modal';
+  onClose?: () => void;
+}
 
-    e.preventDefault()
+const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline', onClose }) => {
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
     if (!email) {
       setStatus('error');
       setMessage('Please enter your email address');
-      return}
+      return;
+    }
 
     setStatus('loading');
     setMessage('');

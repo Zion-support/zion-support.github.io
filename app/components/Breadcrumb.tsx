@@ -1,30 +1,21 @@
 'use client'
 
 import React from 'react'
-;
-interface BreadcrumbProps {;
-  items: Array<{;
-    label: string,
-    href?: string
-  }>
+
+interface BreadcrumbProps {
+  items: Array<{
+    label: string;
+    href?: string;
+  }>;
 }
 
 const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
-
   return (
-    
     <nav aria-label="Breadcrumb" className="bg-slate-800/50 backdrop-blur-sm border-b border-slate-700">
-      <div className="max-w-7xl mx-auto px-4 py-3"></div>
+      <div className="max-w-7xl mx-auto px-4 py-3">
         <ol className="flex items-center space-x-2 text-sm">
-          <li>
-            <Link href="/" className="text-gray-400 hover: text-white transition-colors"></Link>,
-              Home
-            </Link>
-          </li>
-          {pathnames.map((name, index) => {
-
-            const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;
-            const isLast = index === pathnames.length - 1;
+          {items.map((item, index) => {
+            const isLast = index === items.length - 1;
             
             return (
     

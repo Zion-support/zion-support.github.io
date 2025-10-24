@@ -6,36 +6,30 @@ import Link from 'next/link';
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from 'lucide-react';
 
 const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-
   useEffect(() => {
-
-    // Add high contrast mode support;
-
-const addHighContrastSupport = () => {
-
+    // Add high contrast mode support
+    const addHighContrastSupport = () => {
       if (typeof window !== 'undefined' && typeof document !== 'undefined') {
-        const mediaQuery = window.matchMedia('(prefers-contrast: high)');,
+        const mediaQuery = window.matchMedia('(prefers-contrast: high)');
         const handleContrastChange = (e: MediaQueryListEvent) => {
-
           if (e.matches) {
-            document.documentElement.classList.add('high-contrast')} else {
-            document.documentElement.classList.remove('high-contrast')}
+            document.documentElement.classList.add('high-contrast');
+          } else {
+            document.documentElement.classList.remove('high-contrast');
+          }
         };
         mediaQuery.addEventListener('change', handleContrastChange);
         handleContrastChange(mediaQuery as any);
 
-        return (
-    
+        return () => mediaQuery.removeEventListener('change', handleContrastChange);
+      }
+    };
+
+    addHighContrastSupport();
+  }, []);
+
+  return (
     <>
-      ) => mediaQuery.removeEventListener('change', handleContrastChange
-    </>
-    </>
-    </>
-  )}
-      return (
-    
-    <>
-      ) => {};
     </>
     </>
     };
