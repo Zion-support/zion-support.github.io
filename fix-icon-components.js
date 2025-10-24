@@ -26,9 +26,12 @@ function fixPage(filePath) {
     const fullPath = path.join(__dirname, filePath);
     let content = fs.readFileSync(fullPath, 'utf8');
     
-    // Add dynamic export to disable static generation
+    // Fix the icon component usage
     const newContent = content
-      .replace(/'use client';\n\nimport React from 'react';/, `'use client';\n\nexport const dynamic = 'force-dynamic';\n\nimport React from 'react';`);
+      .replace(
+        /<feature\.icon className="[^"]+" \/>/g,
+        '{React.createElement(feature.icon, { className: "w-12 h-12 text-emerald-400 mb-4" })}'
+      );
     
     fs.writeFileSync(fullPath, newContent);
     console.log(`Fixed: ${filePath}`);
@@ -39,4 +42,4 @@ function fixPage(filePath) {
 
 // Fix all files
 filesToFix.forEach(fixPage);
-console.log('All pages have been configured to disable static generation!');
+console.log('All pages have been fixed for icon component usage!');

@@ -26,9 +26,14 @@ function fixPage(filePath) {
     const fullPath = path.join(__dirname, filePath);
     let content = fs.readFileSync(fullPath, 'utf8');
     
-    // Add dynamic export to disable static generation
+    // Remove the metadata export and use document.title instead
     const newContent = content
-      .replace(/'use client';\n\nimport React from 'react';/, `'use client';\n\nexport const dynamic = 'force-dynamic';\n\nimport React from 'react';`);
+      .replace(/export const metadata = \{\n  title: '[^']+',\n  description: '[^']+',\n\};\n\n/, '')
+      .replace(/const Page: React\.FC = \(\) => \{/, `const Page: React.FC = () => {
+  // Set document title for SEO
+  React.useEffect(() => {
+    document.title = '${extractTitle(content)}';
+  }, []);`);
     
     fs.writeFileSync(fullPath, newContent);
     console.log(`Fixed: ${filePath}`);
@@ -37,6 +42,11 @@ function fixPage(filePath) {
   }
 }
 
+function extractTitle(content) {
+  const titleMatch = content.match(/title: '([^']+)'/);
+  return titleMatch ? titleMatch[1] : 'Page - Zion Tech Group';
+}
+
 // Fix all files
 filesToFix.forEach(fixPage);
-console.log('All pages have been configured to disable static generation!');
+console.log('All pages have been fixed to remove metadata export!');

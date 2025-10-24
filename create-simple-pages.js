@@ -1,70 +1,66 @@
-<<<<<<< HEAD
-import React from 'react'
-import Link from 'next/link'
-=======
-'use client';
+const fs = require('fs');
+const path = require('path');
+
+// List of files to fix
+const filesToFix = [
+  'app/ai-powered-devops/page.tsx',
+  'app/ai-powered-email-analyzer/page.tsx',
+  'app/ecommerce-analytics-pro/page.tsx',
+  'app/legal-document-manager/page.tsx',
+  'app/medical-records-manager/page.tsx',
+  'app/test/page.tsx',
+  'app/property-management-ai/page.tsx',
+  'app/supply-chain-optimizer/page.tsx',
+  'app/micro-saas-services/ai-chatbot-builder/page.tsx',
+  'app/micro-saas-services/ai-analytics-dashboard/page.tsx',
+  'app/it-services/cybersecurity-audit/page.tsx',
+  'app/micro-saas-services/ai-lead-generation/page.tsx',
+  'app/micro-saas-services/ai-content-generator/page.tsx',
+  'app/micro-saas-services/page.tsx',
+  'app/micro-saas-services/ai-email-assistant/page.tsx',
+  'app/online-learning-platform/page.tsx'
+];
+
+function createSimplePage(filePath) {
+  try {
+    const fullPath = path.join(__dirname, filePath);
+    
+    // Extract page name from path
+    const pathParts = filePath.split('/');
+    const pageName = pathParts[pathParts.length - 2] || 'page';
+    const title = pageName.split('-').map(word => 
+      word.charAt(0).toUpperCase() + word.slice(1)
+    ).join(' ');
+    
+    // Determine import path for components
+    const depth = pathParts.length - 2; // app/.../page.tsx
+    const componentPath = '../'.repeat(depth) + 'components';
+    
+    const simplePageContent = `'use client';
 
 export const dynamic = 'force-dynamic';
 
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Navigation from '${componentPath}/Navigation';
+import Footer from '${componentPath}/Footer';
 
 const Page: React.FC = () => {
   // Set document title for SEO
   React.useEffect(() => {
-    document.title = 'Property Management Ai - Zion Tech Group';
+    document.title = '${title} - Zion Tech Group';
   }, []);
->>>>>>> cursor/fix-errors-and-merge-to-main-0ea5
 
-export default function Page() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-white">
-      <div className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Professional Technology Solutions</h1>
-          
-          <div className="prose prose-lg max-w-none">
-            <p className="text-xl text-gray-600 mb-6">
-              Leading provider of professional technology solutions and services for modern businesses.
-              We specialize in AI, 5G, cybersecurity, and digital transformation.
-            </p>
-            
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Key Features</h2>
-            <ul className="list-disc list-inside text-gray-600 space-y-2 mb-6">
-              <li>Advanced technology implementation</li>
-              <li>Scalable and secure solutions</li>
-              <li>24/7 support and maintenance</li>
-              <li>Custom solutions tailored to your needs</li>
-              <li>Proven track record of success</li>
-            </ul>
-            
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Benefits</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Performance</h3>
-                <p className="text-gray-600">
-                  Optimized solutions designed for maximum performance and efficiency.
-                </p>
-              </div>
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Reliability</h3>
-                <p className="text-gray-600">
-                  Built with enterprise-grade reliability and security standards.
-                </p>
-              </div>
-=======
     <>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Property Management Ai
+              ${title}
             </h1>
             <p className="text-xl text-emerald-400 max-w-3xl mx-auto">
-              Professional property management ai services and solutions from Zion Tech Group.
+              Professional ${title.toLowerCase()} services and solutions from Zion Tech Group.
             </p>
           </div>
 
@@ -145,25 +141,18 @@ export default function Page() {
                   ROI tracking
                 </li>
               </ul>
->>>>>>> cursor/fix-errors-and-merge-to-main-0ea5
             </div>
           </div>
-          
-          <div className="mt-12 text-center">
-            <Link 
-              href="/contact" 
-              className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              Transform your business with our cutting-edge AI solutions. Contact us today to learn more.
+            </p>
+            <a
+              href="/contact"
+              className="inline-flex items-center bg-gradient-to-r from-emerald-500 to-blue-500 text-white px-8 py-3 rounded-lg hover:from-emerald-600 hover:to-blue-600 transition-all duration-300"
             >
-<<<<<<< HEAD
-              Learn More
-            </Link>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}
-=======
               Get Started
               <span className="ml-2">→</span>
             </a>
@@ -175,5 +164,15 @@ export default function Page() {
   );
 };
 
-export default Page;
->>>>>>> cursor/fix-errors-and-merge-to-main-0ea5
+export default Page;`;
+    
+    fs.writeFileSync(fullPath, simplePageContent);
+    console.log(`Created simple page: ${filePath}`);
+  } catch (error) {
+    console.error(`Error creating ${filePath}:`, error.message);
+  }
+}
+
+// Create all simple pages
+filesToFix.forEach(createSimplePage);
+console.log('All pages have been simplified!');
