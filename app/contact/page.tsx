@@ -1,3 +1,4 @@
+'use client';
 import React, { useState, useCallback, useMemo } from 'react';
 import SEOHead from '../components/SEOHead';
 import { generateStructuredData } from '../utils/seoData';

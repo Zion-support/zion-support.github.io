@@ -1,15 +1,16 @@
+'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Head from 'next/head';
 import { servicesData } from '../data/servicesData';
 
 const AIServicesPage: React.FC = () => {
   return (
     <>
-      <Helmet>
+      <Head>
         <title>AI Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive AI services including machine learning, natural language processing, and custom AI solutions." />
         <meta name="keywords" content="AI services, machine learning, natural language processing, computer vision, AI consulting" />
-      </Helmet>
+      </Head>
       
       <div className="min-h-screen relative overflow-hidden">
         {/* Hero Section */}
