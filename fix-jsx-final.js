@@ -1,10 +1,19 @@
 const fs = require('fs');
 const path = require('path');
 
-function fixSyntaxErrors(filePath) {
+function fixJSXFinal(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
+    
+    // Fix the specific JSX structure issue
+    content = content.replace(/return \(\s*<div>\s*<Head>/g, 'return (\n    <div>\n      <Head>');
+    content = content.replace(/<div>\s*<Head>/g, '<div>\n      <Head>');
+    content = content.replace(/<div>\s*<div/g, '<div>\n      <div');
+    content = content.replace(/<div>\s*<section/g, '<div>\n      <section');
+    content = content.replace(/<div>\s*<main/g, '<div>\n      <main');
+    content = content.replace(/<div>\s*<header/g, '<div>\n      <header');
+    content = content.replace(/<div>\s*<footer/g, '<div>\n      <footer');
     
     // Fix missing closing tags
     content = content.replace(/<div([^>]*)>\s*$/gm, '<div$1></div>');
@@ -20,47 +29,8 @@ function fixSyntaxErrors(filePath) {
     content = content.replace(/<>\s*$/gm, '<>');
     content = content.replace(/^\s*<\/>/gm, '</>');
     
-    // Fix missing commas in arrays and objects
-    content = content.replace(/(\w+)\s*$/gm, (match, p1) => {
-      if (match.includes('=') || match.includes(':') || match.includes('{') || match.includes('(')) {
-        return match;
-      }
-      return match;
-    });
-    
-    // Fix import statements
-    content = content.replace(/import\s+{\s*([^}]+)\s*}\s*from\s+['"]([^'"]+)['"];?/g, (match, imports, module) => {
-      const cleanImports = imports.replace(/\s+/g, ' ').trim();
-      return `import { ${cleanImports} } from '${module}';`;
-    });
-    
-    // Fix function declarations
-    content = content.replace(/const\s+(\w+)\s*:\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{/g, 'const $1: React.FC = () => {');
-    
-    // Fix JSX syntax issues
-    content = content.replace(/<(\w+)\s*\/>\s*<\/\1>/g, '<$1 />');
-    
-    // Fix missing semicolons
-    content = content.replace(/(\w+)\s*$/gm, (match) => {
-      if (match.trim() && !match.includes(';') && !match.includes('{') && !match.includes('}') && !match.includes('(') && !match.includes(')')) {
-        return match + ';';
-      }
-      return match;
-    });
-    
-    // Fix object property syntax
-    content = content.replace(/(\w+)\s*:\s*(\w+)\s*$/gm, '$1: $2,');
-    
-    // Fix array syntax
-    content = content.replace(/(\w+)\s*$/gm, (match) => {
-      if (match.trim() && !match.includes(',') && !match.includes(';') && !match.includes('{') && !match.includes('}')) {
-        return match + ',';
-      }
-      return match;
-    });
-    
-    // Fix JSX expressions
-    content = content.replace(/\{\s*(\w+)\s*\}\s*$/gm, '{$1}');
+    // Fix missing semicolons in JSX
+    content = content.replace(/(\w+);\s*$/gm, '$1');
     
     // Fix missing closing braces
     const openBraces = (content.match(/\{/g) || []).length;
@@ -107,7 +77,7 @@ function findAndFixFiles(dir) {
     if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
       findAndFixFiles(filePath);
     } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js')) {
-      fixSyntaxErrors(filePath);
+      fixJSXFinal(filePath);
     }
   }
 }
@@ -117,4 +87,4 @@ findAndFixFiles('./app');
 findAndFixFiles('./components');
 findAndFixFiles('./src');
 
-console.log('Syntax error fixing completed!');
+console.log('Final JSX fixing completed!');

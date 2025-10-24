@@ -19,15 +19,13 @@ def resolve_merge_conflicts(file_path):
             return False
         
         # Pattern to match merge conflict blocks
-        pattern = r'<<<<<<< HEAD.*?=======(.*?)>>>>>>> [^\n]+'
-        
+        pattern = r'<<<<<<< HEAD.*?=======(.*?)        
         # Replace merge conflicts with the newer version (after =======)
         resolved_content = re.sub(pattern, r'\1', content, flags=re.DOTALL)
         
         # Clean up any remaining conflict markers
         resolved_content = re.sub(r'<<<<<<< HEAD.*?=======', '', resolved_content, flags=re.DOTALL)
-        resolved_content = re.sub(r'>>>>>>> [^\n]+', '', resolved_content)
-        
+        resolved_content = re.sub(r'        
         # Write the resolved content back
         with open(file_path, 'w', encoding='utf-8') as f:
             f.write(resolved_content)
