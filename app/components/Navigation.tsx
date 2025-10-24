@@ -49,9 +49,6 @@ const Navigation: React.FC = () => {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-gray-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
     }`}>
-
-  return (
-    <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-700/50 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -175,15 +172,6 @@ const Navigation: React.FC = () => {
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
-          {/* Mobile menu button */}
-          <div className="lg:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-white p-2"
-            >
-              {isOpen ? <XMarkIcon className="w-6 h-6" /> : <Bars3Icon className="w-6 h-6" />}
-            </button>
-          </div>
         </div>
 
         {/* Mobile Navigation */}
@@ -284,12 +272,6 @@ const Navigation: React.FC = () => {
               <Link 
                 to="/contact" 
                 className="block px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 text-center"
-                  onClick={() => setIsOpen(false)}
-                  className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white block px-3 py-2 rounded-md text-base font-medium text-center"
-                >
-                  Get Started
-                </Link>
-              </div>
                 onClick={() => setIsOpen(false)}
               >
                 Get Started

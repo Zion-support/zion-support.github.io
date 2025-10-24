@@ -110,40 +110,9 @@ const Footer: React.FC = () => {
                 </li>
               ))}
             </ul>
-
-  return (
-    <footer className="bg-slate-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Company Info */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">Z</span>
-              </div>
-              <span className="text-xl font-bold">Zion Tech Group</span>
-            </div>
-            <p className="text-gray-300 mb-6 max-w-sm">
-              Leading provider of AI and IT solutions, helping businesses transform through innovative technology.
-            </p>
-            <div className="flex space-x-4">
-              {socialLinks.map((social) => {
-                const Icon = social.icon;
-                return (
-                  <a
-                    key={social.name}
-                    href={social.href}
-                    className="text-gray-400 hover:text-white transition-colors"
-                    aria-label={social.name}
-                  >
-                    <Icon className="w-5 h-5" />
-                  </a>
-                );
-              })}
-            </div>
           </div>
 
-          {/* Services */}
+          {/* IT Services */}
           <div>
             <h3 className="text-lg font-semibold mb-6 flex items-center">
               <Cloud className="w-5 h-5 mr-2 text-purple-400" />
@@ -179,7 +148,6 @@ const Footer: React.FC = () => {
                   >
                     <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                     {service.name}
-                    {link.name}
                   </Link>
                 </li>
               ))}
@@ -201,9 +169,6 @@ const Footer: React.FC = () => {
                   >
                     <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                     {item.name}
-                  >
-                    <ArrowRightIcon className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    {link.name}
                   </Link>
                 </li>
               ))}
@@ -222,24 +187,6 @@ const Footer: React.FC = () => {
                   >
                     <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                     {item.name}
-                  >
-                    <ArrowRightIcon className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            
-            <h3 className="text-lg font-semibold mb-4">Legal</h3>
-            <ul className="space-y-2">
-              {footerLinks.legal.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="text-gray-300 hover:text-white transition-colors flex items-center group"
-                  >
-                    <ArrowRightIcon className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    {link.name}
                   </Link>
                 </li>
               ))}
@@ -247,35 +194,8 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Contact Info */}
-        <div className="border-t border-slate-700 mt-8 pt-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="flex items-center space-x-3">
-              <PhoneIcon className="w-5 h-5 text-cyan-400" />
-              <span className="text-gray-300">+1 (555) 123-4567</span>
-            </div>
-            <div className="flex items-center space-x-3">
-              <EnvelopeIcon className="w-5 h-5 text-cyan-400" />
-              <span className="text-gray-300">info@ziontechgroup.com</span>
-            </div>
-            <div className="flex items-center space-x-3">
-              <MapPinIcon className="w-5 h-5 text-cyan-400" />
-              <span className="text-gray-300">San Francisco, CA</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Copyright */}
-        <div className="border-t border-slate-700 mt-8 pt-8 text-center">
-          <p className="text-gray-400">
-            © {currentYear} Zion Tech Group. All rights reserved.
-          </p>
-        </div>
-      </div>
-
-      {/* Newsletter Signup */}
-      <div className="border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Newsletter Signup */}
+        <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="mb-4 md:mb-0">
               <h3 className="text-lg font-semibold mb-2">Stay Updated</h3>
@@ -293,11 +213,9 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Bottom Footer */}
-      <div className="border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        {/* Bottom Footer */}
+        <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
               © {currentYear} Zion Tech Group. All rights reserved.
