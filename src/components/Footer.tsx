@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 =======
@@ -22,6 +23,10 @@ const Footer: React.FC = () => {
     { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis' }
   ];
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0509
+=======
+'use client';
+import React, { memo } from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
 
 const Footer: React.FC = memo(() => {
   const _currentYear = new Date().getFullYear();

@@ -7,6 +7,7 @@ import React from 'react';
 import React, { useState, useEffect } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { Link } from 'react-router-dom';
 import { 
@@ -99,6 +100,8 @@ const Navigation: React.FC = () => {
   // Removed unused state variables;
   const [isScrolled, setIsScrolled] = useState(false);
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);

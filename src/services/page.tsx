@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 
@@ -12,6 +13,13 @@ import SEOOptimizer from '../components/SEOOptimizer';
 
 <<<<<<< HEAD
 const ServicesPage: React.FC = () => {;import {CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart, Car} from 'lucide-react';
+=======
+import React from 'react';
+import {CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart, Car} from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
 
 const ServicesPage: React.FC = () => {
   const _aiServices = [

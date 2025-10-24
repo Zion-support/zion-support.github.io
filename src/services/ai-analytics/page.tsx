@@ -1,12 +1,15 @@
 <<<<<<< HEAD
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 =======
 
 
 
 import { Link } from 'react-router-dom';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -444,6 +447,7 @@ ico,
 
 export default AIAnalyticsPage;
 import React from 'react';
+<<<<<<< HEAD
 =======
 {/* Use Cases */}
               Use Cases;"
@@ -529,3 +533,5 @@ export default AiAnalyticsPage;
 
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522

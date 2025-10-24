@@ -70,12 +70,17 @@ export class RateLimiter {// TODO: Add content;}
    * @returns Whether the request is allowed
    */
   check(identifier: string): { allowed: boolean; remaining: number; resetTime: number } {
+<<<<<<< HEAD
     const now = Date.now();
     const record = this.requests.get(identifier);
     const now = Date.now();
     const record = this.requests.get(identifier);
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+    const now = Date.now();
+    const record = this.requests.get(identifier);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
     // No record or expired
     if (!record || now > record.resetTime) {
       const resetTime = now + this.config.windowMs;

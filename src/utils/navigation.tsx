@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
 'use client';
 export const useRouter = () => {
   const push = useCallback((url: string) => {

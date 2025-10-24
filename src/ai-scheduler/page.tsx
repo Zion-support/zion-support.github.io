@@ -352,9 +352,13 @@ const AISchedulerPage: React.FC = () => {
 
 export default AISchedulerPage;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 import { ArrowRight, CheckCircle, Calendar, Clock, Users, Zap, Brain, Target, Shield, Globe, Phone, Mail } from 'lucide-react';
 
 export default AISchedulerPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522

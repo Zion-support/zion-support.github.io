@@ -18,12 +18,17 @@ interface PerformanceMetrics {
   cumulativeLayoutShift: number;
   firstInputDelay: number;
 }
+<<<<<<< HEAD
 export const _usePerformanceOptimization = () => {
   const measurePerformance = useCallback(() => {
     if (typeof window === 'undefined' || !('performance' in window)) {
       return null;
 <<<<<<< HEAD
     }
+=======
+export 
+    ) => {$3};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
     const navigation = performance.getEntriesByType(
       'navigation'
 =======
@@ -53,7 +58,7 @@ export const _usePerformanceOptimization = () => {
 <<<<<<< HEAD
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
     // Measure CLS
-    let __clsValue = 0;
+    
     const clsObserver = new PerformanceObserver(list => {
       for (const entry of list.getEntries()) {
         const layoutShiftEntry = entry as PerformanceEntry & {
@@ -176,4 +181,10 @@ export const _usePerformanceOptimization = () => {
     preloadCriticalResources
   };
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03b1
+=======
+
+
+export default _usePerformanceOptimization;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522

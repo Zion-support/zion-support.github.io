@@ -1,12 +1,15 @@
 <<<<<<< HEAD
 'use client';
 import React, { useState } from 'react';
+<<<<<<< HEAD
 =======
 
 
 import { Link } from 'react-router-dom';
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 

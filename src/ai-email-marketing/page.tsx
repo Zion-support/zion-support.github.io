@@ -1,8 +1,11 @@
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
 
 const AIEmailMarketingPage: React.FC = () => {
   const _features = [
@@ -104,6 +107,7 @@ const AIEmailMarketingPage: React.FC = () => {
     }
   ];
 
+<<<<<<< HEAD
 const AiEmailMarketingPage: React.FC = () => {
 =======
 import { Helmet } from 'react-helmet-async';
@@ -113,6 +117,8 @@ import Footer from '../components/Footer';
 
 const AIEmailMarketingPage: React.FC = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03cc
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
   return (
 <<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">

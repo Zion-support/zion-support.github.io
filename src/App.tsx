@@ -5,9 +5,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Lazy load components for better performance
 const HomePage = lazy(() => import('./page'));
+<<<<<<< HEAD
 =======
 const HomePage = lazy(() => import('../app/page'));
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
 
 // Import enhancement utilities
 import PerformanceEnhancer from './utils/performanceEnhancer';
@@ -151,6 +154,12 @@ import CaseStudiesPage from './case-studies/page';
 
 // Support Pages
 
+<<<<<<< HEAD
+=======
+import AboutPage from './about/page';
+
+// Support Pages
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
 // Additional Pages
 import PricingPage from './pricing/page';
 import DemoPage from './demo/page';
@@ -347,6 +356,7 @@ const App: React.FC = () => {
 
       setIsInitialized(true);
     } catch {
+<<<<<<< HEAD
 =======
         // Reports are available but not logged to console
         performanceEnhancer.getMetrics();
@@ -360,6 +370,12 @@ const App: React.FC = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       // Silently handle enhancer initialization errors
       setIsInitialized(true); // Continue even if enhancers fail
+=======
+      // Silently handle enhancer initialization errors
+      setIsInitialized(true); // Continue even if enhancers fail
+      // Continue even if enhancers fail
+      setIsInitialized(true);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
     }
   };
 

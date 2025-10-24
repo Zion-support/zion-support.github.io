@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 =======
@@ -9,6 +10,9 @@ import { Bot, MessageSquare, Users, BarChart, TrendingUp, Clock, Star, CheckCirc
 'use client';
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -95,7 +99,6 @@ const AICustomerSupportBotPage: React.FC = () => {
     { icon: Star, value: '4.8/5', label: 'Customer Rating' }
   ];
 
-const AiCustomerSupportBotPage: React.FC = () => {
   return (
 <<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">

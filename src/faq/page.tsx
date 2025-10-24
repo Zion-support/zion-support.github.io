@@ -259,6 +259,7 @@ const FAQPage: React.FC = () => {
 
 export default FAQPage;
 import React, { useState } from 'react';
+<<<<<<< HEAD
 =======
 
 
@@ -547,3 +548,5 @@ export default FaqPage;
 
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522

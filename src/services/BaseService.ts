@@ -47,7 +47,10 @@ export class BaseService {
    */
   protected isCacheValid(key: string): boolean {
     const entry = this.cache.get(key);
+<<<<<<< HEAD
     const entry = this.cache.get(key);
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
     if (!entry) return false;
     const age = Date.now() - entry.timestamp;
     return age < (this.options.cacheDuration || 300000);

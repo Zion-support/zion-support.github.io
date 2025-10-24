@@ -23,6 +23,7 @@ export interface FieldValidation {// TODO: Add content;}
 /**
  * Common validation rules;
  */
+<<<<<<< HEAD
 
 export const _validationRules = {// TODO: Add content;}
 
@@ -52,6 +53,9 @@ export const _validationRules = {// TODO: Add content;}
   O: Add content;}
 }
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+=======
+export 
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
       return emailRegex.test(value);
     },
 //     message;
@@ -385,6 +389,7 @@ export function debounce;
 }
       clearTimeout(timeout);
     }
+<<<<<<< HEAD
     if (timeout) {/* TODO: Fix JSX expression */}
   }
       clearTimeout(timeout)
@@ -395,3 +400,11 @@ export function debounce;
 
 
 
+=======
+    timeout = setTimeout(later, wait);
+  };
+}
+
+
+export default later;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522

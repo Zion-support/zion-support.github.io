@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const SitemapPage: React.FC = () => {
@@ -303,3 +304,5 @@ export default SitemapPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3a03
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0509
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522

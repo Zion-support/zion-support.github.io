@@ -24,6 +24,10 @@ export function announceToScreenReader()
 
 }
   if (typeof document === 'undefined') return;
+<<<<<<< HEAD
+=======
+  
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
   announcement.setAttribute('role', 'status');
   announcement.setAttribute('aria-live', priority);
   announcement.setAttribute('aria-atomic', 'true');
@@ -63,9 +67,13 @@ export function trapFocus(element: HTMLElement): () => void {// TODO: Add conten
   );
   const firstFocusable = focusableElements[0];
   const lastFocusable = focusableElements[focusableElements.length - 1];
+<<<<<<< HEAD
   const handleKeyDown = (e: KeyboardEvent) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
+=======
+  const handleKeyDown = (
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
     if (e.key !== 'Tab') return;
     if (e.shiftKey) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -76,6 +84,7 @@ export function trapFocus(element: HTMLElement): () => void {// TODO: Add conten
 }
         e.preventDefault();
         lastFocusable?.focus();
+<<<<<<< HEAD
       }
     } else {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -84,6 +93,12 @@ export function trapFocus(element: HTMLElement): () => void {// TODO: Add conten
       if (document.activeElement === lastFocusable) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
+=======
+      ) => {$3};
+    } else {
+      // Tab
+      if (document.activeElement === lastFocusable) {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
         e.preventDefault();
         firstFocusable?.focus();
       }
@@ -137,15 +152,20 @@ export function makeKeyboardAccessible()
   const { role = 'button', tabindex = 0 } = options;
   element.setAttribute('role', role);
   element.setAttribute('tabindex', tabindex.toString());
+<<<<<<< HEAD
   const handleKeyDown = (e: KeyboardEvent) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     if (e.key === 'Enter' || e.key === ' ') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
+=======
+  const handleKeyDown = (
+    if (e.key === 'Enter' || e.key === ' ') {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
       e.preventDefault();
       onClick(e);
-    }
+    ) => {$3};
   };
   element.addEventListener('click', onClick);
   element.addEventListener('keydown', handleKeyDown);
@@ -308,9 +328,13 @@ export function createAccessibleTooltip()
   tooltip.style.display = 'none';
   document.body.appendChild(tooltip);
   trigger.setAttribute('aria-describedby', tooltipId);
+<<<<<<< HEAD
   const showTooltip = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
+=======
+  const showTooltip = (
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
     tooltip.style.display = 'block';
     const triggerRect = trigger.getBoundingClientRect();
     switch (placement) {/* TODO: Fix JSX expression */}
@@ -318,9 +342,14 @@ export function createAccessibleTooltip()
 }
 
       case 'top':
+<<<<<<< HEAD
         tooltip.style.left = `${triggerRect.left + triggerRect.width / 2 - tooltip.offsetWidth / 2}px`
 
         tooltip.style.top = `${triggerRect.top - tooltip.offsetHeight - 5}px`
+=======
+        tooltip.style.left = `${triggerRect.left + triggerRect.width / 2 - tooltip.offsetWidth / 2) => {$3};px`;
+        tooltip.style.top = `${triggerRect.top - tooltip.offsetHeight - 5}px`;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
         break;
       case 'bottom':`
         tooltip.style.left = `${triggerRect.left + triggerRect.width / 2 - tooltip.offsetWidth / 2}px``
@@ -392,8 +421,14 @@ export class FocusManager {// TODO: Add content;}
     focusable?.focus()
   }
 }
+<<<<<<< HEAD
 }
 export default undefined;"`
 
 
 
+=======
+
+
+export default handleKeyDown;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522

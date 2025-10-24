@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 <<<<<<< HEAD
@@ -64,13 +65,21 @@ export function usePerformanceMonitoringEnhanced() {
 =======
 'use client';
 export const usePerformanceMonitoring = () => {
+=======
+'use client';
+export const usePerformanceMonitoring = (
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
   const reportWebVitals = useCallback((metric: any) => {
     const body = JSON.stringify(metric);
     const url = '/api/analytics';
     if (navigator.sendBeacon) {
       navigator.sendBeacon(url, body);
 <<<<<<< HEAD
+<<<<<<< HEAD
     } else {
+=======
+    ) => {$3}; else {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
       fetch(url, { body, method: 'POST', keepalive: true }).catch(() => {
         // Analytics reporting failed
       });
@@ -102,4 +111,10 @@ export const usePerformanceMonitoring = () => {
   }, [reportWebVitals]);
   return {reportWebVitals};
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03b1
+=======
+
+
+export default usePerformanceMonitoring;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522

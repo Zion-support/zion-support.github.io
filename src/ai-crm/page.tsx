@@ -1,8 +1,11 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
 const AICRMPage: React.FC = () => {
 
 const AiCrmPage: React.FC = () => {

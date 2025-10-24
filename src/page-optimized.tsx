@@ -24,6 +24,7 @@ const ContentShowcase = lazy(() =>
     default: EmptyComponent
   }))
 );
+<<<<<<< HEAD
 
 // Lazy load heavy components - these may not exist, so make them optional
 // const UnifiedBanner = lazy(() =>
@@ -41,6 +42,8 @@ const ContentShowcase = lazy(() =>
 //     default: EmptyComponent
 //   }))
 // );
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
 export default function OptimizedHomePage() {
   return (
 <<<<<<< HEAD

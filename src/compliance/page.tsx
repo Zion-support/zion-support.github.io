@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 =======
 
 
@@ -9,6 +10,8 @@ import { Link } from 'react-router-dom';
 
 import { ArrowLeft, CheckCircle, Shield, FileText, Users, Lock,  Shield,  FileText,  Users } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -181,8 +184,12 @@ const CompliancePage: React.FC = () => {
 
 export default CompliancePage;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522

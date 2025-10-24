@@ -256,6 +256,7 @@ const PagePage: React.FC = () => {
     </div>
   );
 };
+<<<<<<< HEAD
 =======
 
               <div className="text-gray-300">Analytics Tools</div>
@@ -351,5 +352,7 @@ Call (302) 464-0950;
 
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
 export default AnalyticsToolsPage;
 import React from 'react';

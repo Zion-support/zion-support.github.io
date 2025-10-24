@@ -33,6 +33,7 @@ class EnvironmentConfig {// TODO: Add content;}
     this.config = this.loadConfig();
     this.isInitialized = true;
   }
+<<<<<<< HEAD
   private loadConfig(): EnvConfig {// Safely access environment variables with defaults;}
     return {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -47,6 +48,17 @@ class EnvironmentConfig {// TODO: Add content;}
   y: process.env.NEXT_PUBLIC_API_KEY || process.env.VITE_API_KEY,
       enableAnalytic,
   s:
+=======
+  private loadConfig(): EnvConfig {
+    // Safely access environment variables with defaults
+    
+    return {
+      nodeEnv,
+      apiUrl:
+        process.env.NEXT_PUBLIC_API_URL || process.env.VITE_API_URL || 'http://localhost:3000/api',
+      apiKey: process.env.NEXT_PUBLIC_API_KEY || process.env.VITE_API_KEY,
+      enableAnalytics:
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
         process.env.NEXT_PUBLIC_ENABLE_ANALYTICS === 'true' || nodeEnv === 'production',
       enableLoggin,
   g: nodeEnv !== 'test',
@@ -194,6 +206,7 @@ class EnvironmentConfig {// TODO: Add content;}
     }
   }
 }
+<<<<<<< HEAD
 // Export singleton instance;
 export const envConfig = new EnvironmentConfig()
 // Export convenient helper functions;
@@ -205,3 +218,16 @@ export const getApiHeaders = () => envConfig.getApiHeaders()`
 
 
 
+=======
+// Export singleton instance
+export const envConfig = new EnvironmentConfig();
+// Export convenient helper functions
+export const isProduction = () => envConfig.isProduction();
+export const isDevelopment = () => envConfig.isDevelopment();
+export const isTest = () => envConfig.isTest();
+export const getConfig = () => envConfig.getConfig();
+export const getApiHeaders = () => envConfig.getApiHeaders();
+
+
+export default _nodeEnv;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522

@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 'use client';
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
@@ -1265,6 +1268,7 @@ const HomePage: React.FC = () => {
 
 export default HomePage;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03cc
@@ -1643,3 +1647,6 @@ const HomePage: React.FC = () => {
 
 export default HomePage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522

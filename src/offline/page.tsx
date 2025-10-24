@@ -69,4 +69,7 @@ const OfflinePage: React.FC = () => {
 
 export default OfflinePage;
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3a03
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522

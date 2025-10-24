@@ -9,6 +9,7 @@ import '@testing-library/jest-dom';
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder as typeof globalThis.TextDecoder;
 // Suppress jsdom navigation warnings
+<<<<<<< HEAD
 // eslint-disable-next-line no-console
 =======
 import { TextEncoder, TextDecoder } from 'util';
@@ -17,6 +18,12 @@ global.TextDecoder = TextDecoder as any;
 // Suppress jsdom navigation warnings
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0468
 const originalConsoleError = console.error;
+=======
+const originalConsoleError = console.error;
+// eslint-disable-next-line no-console
+const originalConsoleError = console.error;
+const __originalConsoleError = console.error;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
 console.error = (...args) => {
   const message = args[0]?.toString?.() || args[0]?.message || '';
   if (message.includes('Not implemented: navigation') || 
@@ -67,6 +74,7 @@ global.fetch = jest.fn();
 // Mock console methods for cleaner test output
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 // eslint-disable-next-line no-console
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
@@ -85,6 +93,13 @@ const originalConsoleInfo = console.info;
 const originalConsoleWarn = console.warn;
 const originalConsoleInfo = console.info;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0468
+=======
+const originalConsoleWarn = console.warn;
+const originalConsoleInfo = console.info;
+// eslint-disable-next-line no-console
+const originalConsoleWarn = console.warn;
+const originalConsoleInfo = console.info;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
 console.warn = (...args) => {
   const message = args[0]?.toString?.() || '';
   if (message.includes('Warning: ReactDOM.render is no longer supported')) {

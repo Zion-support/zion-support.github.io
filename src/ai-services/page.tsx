@@ -1,12 +1,15 @@
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { Helmet } from 'react-helmet-async';
 import { Brain, Zap, Shield, BarChart } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03cc
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -46,7 +49,12 @@ const AIServicesPage: React.FC = () => {
     '300% Average ROI Increase',
     '95% Process Automation',
     '50% Cost Reduction',
+<<<<<<< HEAD
     '99.9% Uptime Guarantee';  ];
+=======
+    '99.9% Uptime Guarantee'
+  ];
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
 
 const AiServicesPage: React.FC = () => {
   return (

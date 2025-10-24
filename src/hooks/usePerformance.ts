@@ -9,6 +9,7 @@ export default function Component() {
     </div>
   );
 }
+<<<<<<< HEAD
 =======
 
 
@@ -29,6 +30,9 @@ export const _usePerformance = () => {// TODO: Add content;}
 }
   const [metrics, setMetrics] = useState;
           <PerformanceMetrics | null>(null);
+=======
+export 
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
   const [isMonitoring, setIsMonitoring] = useState(false);
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -47,6 +51,7 @@ export const _usePerformance = () => {// TODO: Add content;}
       const largestContentfulPaint =
         paintEntries.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0;
       // Measure CLS (Cumulative Layout Shift)
+<<<<<<< HEAD
 
       if ('PerformanceObserver' in window) {// TODO: Add content;}
 
@@ -64,6 +69,16 @@ export const _usePerformance = () => {// TODO: Add content;}
   O: Add content;}
 }
 
+=======
+      
+      if ('PerformanceObserver' in window) {
+        const observer = new PerformanceObserver(list => {
+          for (const entry of list.getEntries()) {
+            if (
+              entry.entryType === 'layout-shift' &&
+              !(entry as unknown as { hadRecentInput: boolean ) => {$3};).hadRecentInput
+            ) {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
               cumulativeLayoutShift += (entry as unknown as { value: number }).value;
 
             }
@@ -75,6 +90,7 @@ export const _usePerformance = () => {// TODO: Add content;}
   )
       }
       // Measure FID (First Input Delay)
+<<<<<<< HEAD
 
       if ('PerformanceObserver' in window) {// TODO: Add content;}
 
@@ -92,6 +108,13 @@ export const _usePerformance = () => {// TODO: Add content;}
             if (entry.entryType === 'first-input') {// TODO: Add content;}
 }
 
+=======
+      
+      if ('PerformanceObserver' in window) {
+        const observer = new PerformanceObserver(list => {
+          for (const entry of list.getEntries()) {
+            if (entry.entryType === 'first-input') {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
               firstInputDelay =
                 (entry as unknown as {/* TODO: Fix JSX expression */})
   t: number }).processingStart - entry.startTime;
@@ -174,5 +197,9 @@ export const _usePerformance = () => {// TODO: Add content;}
 };
 
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+export default _usePerformance;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522

@@ -192,3 +192,8 @@ href="/services" className="inline-block bg-white text-green-600 px-6 py-3 round
 };
 
 export default AICostOptimizationBreakthrough2026Page;
+<<<<<<< HEAD
+=======
+export default AICostOptimizationBreakthrough2026Page;
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522

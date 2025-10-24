@@ -1,6 +1,7 @@
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 =======
@@ -549,6 +550,9 @@ export default function ITServicesPage() {
 =======
 import { Cloud, Shield, Server, Database, BarChart, Users } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03cc
+=======
+import { Cloud } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
@@ -624,10 +628,14 @@ const ITServicesPage: React.FC = () => {
   ];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const ItServicesPage: React.FC = () => {
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03cc
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">

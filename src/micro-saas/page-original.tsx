@@ -1,5 +1,8 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
 const MicroSAASPage: React.FC = () => {
   const _microSAASServices = [
     // AI-Powered Developer Tools

@@ -1,6 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Phone, CheckCircle, Star } from 'lucide-react';
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 
@@ -8,7 +11,10 @@ import Footer from './components/Footer';
 interface ServicePageProps {
   title: string;
   description: string;
+<<<<<<< HEAD
   icon: React.ComponentType<{ className?: string }>;
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
   services: Array<{
     title: string;
     description: string;

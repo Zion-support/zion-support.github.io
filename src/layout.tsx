@@ -211,6 +211,7 @@ export default function RootLayout({
       </body>
     </html>
   );
+<<<<<<< HEAD
 =======
         priceSpecification: {// TODO: Add content;}
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
@@ -229,3 +230,8 @@ export default SrcPage;
 
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+}
+}
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522

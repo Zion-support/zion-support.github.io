@@ -5,8 +5,12 @@ import Footer from '../components/Footer';
 
 const AboutPage: React.FC = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   const team = [
+=======
+  const _team = [
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
     {
       name: 'Kleber Santos',
       role: 'CEO & Founder',
@@ -201,9 +205,21 @@ export default function AboutPage() {
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       {/* Hero Section */}
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+    <div className='min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8'>
+      <div className='max-w-7xl mx-auto'>
+        <div className='text-center mb-12'>
+          <h1 className='text-4xl font-bold text-gray-900 mb-4'>
+            About Zion Tech Group
+          </h1>
+          <p className='text-xl text-gray-600'>
+            Leading the future of AI and IT solutions
+          </p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16"></div>
@@ -229,8 +245,17 @@ export default function AboutPage() {
           </div>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
       </div>
       <Footer />
+=======
+
+      {/* Stats Section */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
                 <div key={index} className="text-center">
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
 =======
@@ -412,8 +437,19 @@ export default function AboutPage() {
 
 <<<<<<< HEAD
       <Footer />
+<<<<<<< HEAD
       </div>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3a03
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold text-white mb-4">About</h1>
+        <p className="text-gray-300 mb-8">Coming Soon - Advanced about solutions</p>
+        <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
+          Contact Us
+        </a>
+      </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
     </div>
   );
 };

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 interface SitemapEntry {
   url: string;
@@ -7,6 +8,8 @@ interface SitemapEntry {
   priority: number;
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0468
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
 
 export default function sitemap(): SitemapEntry[] {
   const baseUrl = 'https://ziontechgroup.com'

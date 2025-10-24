@@ -13,8 +13,8 @@ const AiWritingAssistantPage: React.FC = () => {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 };
 
@@ -27,3 +27,5 @@ import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, Cpu, T
 export default AIWritingAssistantPage;
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
