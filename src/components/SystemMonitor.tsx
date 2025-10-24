@@ -6,19 +6,28 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { performanceOptimizer } from '../utils/performanceOptimizer';
 import { errorHandler } from '../utils/enhancedErrorHandler';
-// Removed unused collectPerformanceMetrics function
+// Collect basic performance metrics
+const _collectPerformanceMetrics = () => {
+  if (typeof window === 'undefined' || !window.performance) return null;
+  const _navigation = window.performance.timing;
+  const _paint = window.performance.getEntriesByType('paint');
+  return {
+    loadTime: _navigation.loadEventEnd - _navigation.navigationStart,
+    firstContentfulPaint: _paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
+  };
+};
 // Helper functions
-const calculatePerformanceScore = () => {}
-  const metrics = performanceOptimizer.getMetrics();
-  if (!metrics) return 0;
-  let score = 100;
+const calculatePerformanceScore = () => {
+  const _metrics = performanceOptimizer.getMetrics();
+  if (!_metrics) return 0;
+  let _score = 100;
   // Deduct points for slow load times
-  if (metrics.loadTime > 3000) score -= 20;
-  if (metrics.loadTime > 5000) score -= 30;
+  if (_metrics.loadTime > 3000) _score -= 20;
+  if (_metrics.loadTime > 5000) _score -= 30;
   // Deduct points for slow paint times
-  if (metrics.firstContentfulPaint && metrics.firstContentfulPaint > 2000) score -= 15;
-  if (metrics.firstContentfulPaint && metrics.firstContentfulPaint > 3000) score -= 25;
-  return Math.max(0, score);
+  if (_metrics.firstContentfulPaint && _metrics.firstContentfulPaint > 2000) _score -= 15;
+  if (_metrics.firstContentfulPaint && _metrics.firstContentfulPaint > 3000) _score -= 25;
+  return Math.max(0, _score);
 };
 // Network connection interface
 interface NetworkConnection {}
