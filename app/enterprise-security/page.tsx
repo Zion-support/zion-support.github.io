@@ -23,8 +23,7 @@ const PagePage: React.FC = () => {
       description: 'Seamless integration with CI/CD pipelines and DevOps tools for streamlined operations.'
     }
   ];
-const benefits = [
-  ]
+  
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -53,38 +52,45 @@ const benefits = [
 return (
     <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
-        </Helmet>
-      <title>Page | Zion Tech Group</title>
-        <meta name="description" content="AI-powered solution" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+        <title>Enterprise Security | Zion Tech Group</title>
+        <meta name="description" content="Advanced enterprise security solutions powered by AI" />
+        <meta name="keywords" content="enterprise security, AI, cybersecurity, business solutions" />
       </Helmet>
       {/* Hero Section */}
       <section className="py-20 px-4">
-        <div className="max-w-7 xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center">
-            <h1 className="text-4 xl md:text-6 xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-              <p className="text-xltext-gray-300">Section description</p>
-            </div>
+                Enterprise Security
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300">Advanced security solutions for enterprise environments</p>
+          </div>
         </div>
       </section>
-        <div className="max-w-7 xl mx-auto"></div>
-          <div className="text-center"></div>
-            <h1>
-              <span>Page;</span>
-                Page
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                Enterprise Security
               </span>
-              <br>
+              <br />
               <span className="text-white">Solutions</span>
             </h1>
-            <p>Transform your business with our advanced page solutions.;</p>
+            <p className="text-xl text-gray-300 mb-8">
+              Transform your business with our advanced security solutions.
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-            <div className="flexflex-colsm:flex-row gap-4 justify-center"></div>,
-              <button>Get Started;</button>
-                <ArrowRight>
+          </div>
+        </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="w-5 h-5 inline ml-2" />
               </button>
-              <button>Learn More,</button>
+              <button className="bg-transparent border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+                Learn More
               </button>
             </div>
           </div>
@@ -95,20 +101,21 @@ return (
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7 xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3 xlmd:text-4 xl font-boldtext-white mb-4">
-              Why Choose Our Page?
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our Security Solutions?
             </h2>
-            <p>Our page solutions deliver unmatched performance, security, and scalability.</p>
+            <p className="text-xl text-gray-300 mb-8">
+              Our security solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-smrounded-xlp-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flexitems-centerjustify-centerw-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xlfont-semiboldtext-whitemb-3">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
@@ -120,15 +127,11 @@ return (
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7 xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3 xlmd:text-4 xl font-boldtext-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits
             </h2>
-            <p>Experience the power of our page solutions for your business.</p>
-            </p>
-          </div>
-          </div>
-        </div>
-      </section>
+            <p className="text-xl text-gray-300 mb-8">
+              Experience the power of our security solutions for your business.
             </p>
           </div>
 
@@ -150,22 +153,24 @@ return (
             <h2 className="text-3 xlmd:text-4 xl font-boldtext-white mb-4">
               Ready to Get Started?
             </h2>
-            <p>Contact our experts to discuss your page needs and get a customized solution.</p>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact our experts to discuss your security needs and get a customized solution.
             </p>
-            <div className="flexflex-colsm:flex-row gap-4 justify-center"></div>,
-              <button>
-                <Phone>
-                Call Now;
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300">
+                <Phone className="w-5 h-5 inline mr-2" />
+                Call Now
               </button>
-              <button>
-                <Mail>
-                Email Us;
+              <button className="bg-transparent border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+                <Mail className="w-5 h-5 inline mr-2" />
+                Email Us
               </button>
             </div>
           </div>
         </div>
       </section>
     </div>
-  )};
+  );
+};
 
 export default PagePage;

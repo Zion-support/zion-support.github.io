@@ -47,51 +47,67 @@ title: 'IoT Integration',
       icon: Database,
       title: 'Edge Storage',
       description: 'Distributed storage solutions optimized for edge computing workloads.',
-      
-    {icon: Wifi,
+      benefits: ['High availability', 'Auto-scaling', 'Load balancing', 'Fault tolerance']
+    },
+    {
+      icon: Wifi,
       title: 'IoT Integration',
       description: 'Seamless integration with IoT devices and sensors for comprehensive edge solutions.',
-      
-    {icon: Server,
+      benefits: ['Real-time processing', 'Device management', 'Data analytics', 'Security']
+    },
+    {
+      icon: Server,
       title: 'Edge Infrastructure',
       description: 'Robust infrastructure designed for edge computing requirements and scalability.',
-      benefits: ['High availability', 'Auto-scaling', 'Load balancing', 'Fault tolerance']}]
-const services = [
-    {icon: '⚡',
-      
-    {
-    icon: Shield,
-      title: 'Edge Security',
-      description: 'Advanced security measures designed specifically for edge computing environments.',
-      
-    {
-    icon: Database,
-      title: 'Edge Storage',
-      description: 'Distributed storage solutions optimized for edge computing workloads.',
-      
-    {
-    icon: Wifi,
-      title: 'IoT Integration',
-      description: 'Seamless integration with IoT devices and sensors for comprehensive edge solutions.',
-      
-    {
-    icon: Server,
-      title: 'Edge Infrastructure',
-      description: 'Robust infrastructure designed for edge computing requirements and scalability.',
-      benefits: ['High availability', 'Auto-scaling', 'Load balancing', 'Fault tolerance']}
-    ]
-const services = [
+      benefits: ['High availability', 'Auto-scaling', 'Load balancing', 'Fault tolerance']
     }
   ]
+const services = [
+    {
+      icon: '⚡',
+      title: 'Edge Computing',
+      description: 'High-performance computing at the edge for real-time processing.',
+      benefits: ['Low latency', 'High availability', 'Scalability', 'Cost efficiency']
+    },
+    {
+      icon: Shield,
+      title: 'Edge Security',
+      description: 'Advanced security measures designed specifically for edge computing environments.',
+      benefits: ['Threat detection', 'Data encryption', 'Access control', 'Compliance']
+    },
+    {
+      icon: Database,
+      title: 'Edge Storage',
+      description: 'Distributed storage solutions optimized for edge computing workloads.',
+      benefits: ['High performance', 'Low latency', 'Scalability', 'Reliability']
+    },
+    {
+      icon: Wifi,
+      title: 'IoT Integration',
+      description: 'Seamless integration with IoT devices and sensors for comprehensive edge solutions.',
+      benefits: ['Real-time processing', 'Device management', 'Data analytics', 'Security']
+    },
+    {
+      icon: Server,
+      title: 'Edge Infrastructure',
+      description: 'Robust infrastructure designed for edge computing requirements and scalability.',
+      benefits: ['High availability', 'Auto-scaling', 'Load balancing', 'Fault tolerance']
+    }
+  ];
+  
   const services = [
     {
-    icon: '⚡',
+      icon: '⚡',
       title: 'Edge Analytics',
-      description: 'Real-time data processing and analytics at the edge'},
+      description: 'Real-time data processing and analytics at the edge',
+      benefits: ['Real-time processing', 'Data analytics', 'Performance', 'Scalability']
+    },
     {
       icon: '🌐',
       title: 'Edge Networking',
-      description: 'Optimized networking solutions for edge deployments'},
+      description: 'Optimized networking solutions for edge deployments',
+      benefits: ['Low latency', 'High bandwidth', 'Reliability', 'Security']
+    },
     {
       icon: '🔒',
       title: 'Edge Security',
@@ -131,275 +147,46 @@ const useCases = [
       icon: '🏥'},
     {title: 'Gaming',
       description: 'Cloud gaming with minimal latency',
-      icon: '🎮'}}
-  ]
-return(<div className="min-h-screenbg-gradient-to-brfrom-slate-900 via-blue-900 to-slate-900"></div>)
-      <Helmet><title>Edge Computing Solutions | Zion Tech Group</title>
-        <meta name="description" content="AI-powered solution" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-      </Helmet>
-      <Navigation />
-      {/* Hero Section */} <section className="py-20 px-4">
-          <div className="max-w-7 xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4 xl font-boldtext-whitemb-4">Section Title</h2>
-        </Helmet>
-      <title>Edge Computing Solutions | Zion Tech Group</title>
-        <meta name="description" content="AI-powered solution" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-      </Helmet>
-      <Navigation>
-      {/* Hero Section */}
-      </Navigation><section className="py-20 px-4">
-          </section>
-        <div className="text-center mb-16">
-              </div><h2 className="text-4 xl font-boldtext-whitemb-4">Section Title</h2>
-              <p className="text-xltext-gray-300">Section description</p>
-            </div>
-        </div>
-      </section>
-        <div className="absoluteinset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" /></div>
-        <div className="absoluteinset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)]animate-pulse" style={{ animationDelay: '1s' }} /></div>
-        <div className="relativemax-w-7 xl mx-autotext-center"></div>
-          <h1>Edge Computing;</h1>
-            <span>Solutions;</span>
-            </span>
-          </h1>
-          <p>Bring computing power closer to your data and users with our advanced edge computing solutions.;</p>
-            Ultra-low latency, real-time processing, and global edge infrastructure.
-          </p>
-          <div className="flexflex-colsm:flex-row gap-4 justify-center"></div>,
-            <button>Get Started Today;</button>
-              <ArrowRight>
-            </button>
-            <button>View Demo,</button>
-            </button>
-          </div>
-        </div>
-      </section>
-      {/* Features Section */} <section className="py-20 px-4">
-          <section>
-        <div>
-          <div>
-            <h2>Section Title</h2>
-            <p>Section description</p>
-          </div>
-        </div>
-      </section>
-        <div className="max-w-7 xl mx-auto" / /></div>
-          <div className="text-center mb-16" / /></div>
-            <h2 className="text-4 xl font-boldtext-whitemb-4">Edge Computing Features</h2>
-            <p>Advanced edge computing capabilities designed for modern applications and IoT solutions;</p>
-            </p>
-          </div>
-          <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>,
-            {features.map((feature, index) => (
-                <div key={index}className="bg-slate-800/50 backdrop-blur-smborderborder-gray-700 rounded-xl p-6 hover: border-blue-400/50 transition-all duration-300 group"></div>,
-                <div className="w-12 h-12 bg-gradient-to-rfrom-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover: scale-110 transition-transform duration-300"></div>,
-                  <feature />
-                <h3 className="text-xlfont-semiboldtext-whitemb-3">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul>
-                  {feature.benefits.map((benefit, benefitIndex) => (} <li>
-                      <CheckCircle />
-
-                      {benefit} </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-
-          </div>
-        </div>
-      </section>
-      {/* Services Section */} <section className="py-20 px-4">
-          <section>
-        <div>
-          <div>
-            <h2>Section Title</h2>
-            <p>Section description</p>
-          </div>
-        </div>
-      </section>
-        <div className="max-w-7 xl mx-auto" / /></div>
-          <div className="text-center mb-16" / /></div>
-            <h2 className="text-4 xl font-boldtext-whitemb-4">Edge Computing Services</h2>
-            <p>Comprehensive edge computing solutions for all your business needs;</p>
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>,
-            {services.map((service, index) => (} <div key={index}className="bg-white/5 backdrop-blur-smborderborder-white/10 rounded-xl p-6 text-center hover: bg-white/10 transition-all duration-300"></div>,
-                <div className="text-4 xlmb-4">{service.icon}</div>
-                <h3 className="text-xlfont-semiboldtext-whitemb-3">{service.title}</h3>
-                <p className="text-gray-300">{service.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Use Cases Section */} <section className="py-20 px-4">
-          <section>
-        <div>
-          <div>
-            <h2>Section Title</h2>
-            <p>Section description</p>
-          </div>
-        </div>
-      </section>
-        <div className="max-w-7 xl mx-auto" / /></div>
-          <div className="text-center mb-16" / /></div>
-            <h2 className="text-4 xl font-boldtext-whitemb-4">Use Cases</h2>
-            <p>Edge computing solutions for various industries and applications;</p>
-            </p>
-          </div>
-          <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>,
-            {useCases.map((useCase, index) => (} <div key={index}className="bg-white/5 backdrop-blur-smborderborder-white/10 rounded-xl p-6 text-center hover: bg-white/10 transition-all duration-300 group"></div>,
-                <div className="text-4 xlmb-4 group-hover:scale-110 transition-transform">{useCase.icon,}</div>
-                <h3 className="text-xlfont-semiboldtext-whitemb-3">{useCase.title}</h3>
-                <p className="text-gray-300">{useCase.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Benefits Section */} <section className="py-20 px-4">
-          <section>
-        <div>
-          <div>
-            <h2>Section Title</h2>
-            <p>Section description</p>
-          </div>
-        </div>
-      </section>
-        <div className="max-w-7 xl mx-auto" / /></div>
-          <div className="text-center mb-16" / /></div>
-            <h2 className="text-4 xl font-boldtext-whitemb-4">Why Choose Edge Computing?</h2>
-            <p>Experience the benefits of edge computing with our proven solutions;</p>
-            </p>
-          </div>
-          <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>,
-            {benefits.map((benefit, index) => (
-                <div key={index}className="bg-white/5 backdrop-blur-smborderborder-white/10 rounded-xl p-6 text-center"></div>
-                <div className="w-16 h-16 bg-gradient-to-rfrom-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center"></div>
-                  <CheckCircle />
-                <h3 className="text-lgfont-semiboldtext-white">{benefit}</h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* CTA Section */} <section className="py-20 px-4">
-          <section>
-        <div>
-          <div>
-            <h2>Section Title</h2>
-            <p>Section description</p>
-          </div>
-        </div>
-      </section>
-        <div className="max-w-4 xlmx-autotext-center" / /></div>
-          <h2 className="text-4 xl font-boldtext-whitemb-6">Ready to Deploy Edge Computing?</h2>
-          <p>Transform your applications with ultra-low latency edge computing solutions;</p>
-          </p>
-          <div className="flexflex-colsm:flex-row gap-4 justify-center"></div>,
-            <button>Start Free Trial;</button>
-            </button>
-            <button>Contact Sales;</button>
-            </button>
-          </div>
-        </div>
-      </section>
-      <Footer /></Footer>
-  )}
-export default EdgeComputingPage
-    'Real-time Processing',
-    'Global Scalability'
-  ]
-  const useCases = [
-    {
-      title: 'Autonomous Vehicles',
-      description: 'Real-time decision making for self-driving cars',
-      icon: '🚗'},
-    {
-      title: 'Smart Cities',
-      description: 'IoT sensors and real-time city management',
-      icon: '🏙️'},
-    {
-      title: 'Industrial IoT',
-      description: 'Manufacturing automation and monitoring',
-      icon: '🏭'},
-    {
-      title: 'AR/VR Applications',
-      description: 'Immersive experiences with low latency',
-      icon: '🥽'},
-    {
-      title: 'Healthcare',
-      description: 'Real-time patient monitoring and diagnostics',
-      icon: '🏥'},
-    {
-      title: 'Gaming',
-      description: 'Cloud gaming with minimal latency',
-      icon: '🎮'}
-  ]
+      icon: '🎮',
+      benefits: ['Low latency', 'High performance', 'Scalability', 'Reliability']
+    }
+  ];
+  
   return (
-    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
-        <title>Edge Computing Solutions - Zion Tech Group | Distributed Computing</title>
-        <meta name="description" content="Transform your applications with edge computing solutions. Low-latency processing, real-time analytics, and distributed computing for modern applications." />
-        <meta name="keywords" content="edge computing, distributed computing, IoT, real-time processing, low latency, edge analytics" />
+        <title>Edge Computing Solutions | Zion Tech Group</title>
+        <meta name="description" content="Advanced edge computing solutions powered by AI" />
+        <meta name="keywords" content="edge computing, AI, artificial intelligence, business solutions" />
       </Helmet>
-      
       <Navigation />
       {/* Hero Section */}
       <section className="py-20 px-4">
-        <div className="max-w-7 xl mx-auto">
-        <div className="absoluteinset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)]animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="relativemax-w-7 xl mx-autotext-center">
-          <h1 className="text-5 xlmd:text-7 xlfont-boldtext-white mb-6 leading-tight">
-            Edge Computing
-            <span className="blockbg-gradient-to-rfrom-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Solutions
-            </span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto leading-relaxed">
-            Bring computing power closer to your data and users with our edge computing solutions. 
-            Reduce latency, improve performance, and enable real-time applications.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-rfrom-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
-              Get Edge Computing Demo
-            </button>
-            <button className="borderborder-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Learn More
-            </button>
-</div>
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Edge Computing Solutions</h2>
+            <p className="text-xl text-gray-300">Advanced edge computing solutions for modern businesses</p>
+          </div>
         </div>
       </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7 xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4 xl font-boldtext-whitemb-4">Advanced Edge Computing Features</h2>
-            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
-              Comprehensive edge computing solution designed for modern applications and IoT deployments.
-            </p>
-          </div>
-          
-          <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-smborderborder-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group">
-                <div className="w-12 h-12 bg-gradient-to-rfrom-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
+            {benefits.map((benefit, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <CheckCircle className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xlfont-semiboldtext-whitemb-3">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flexitems-centertext-smtext-gray-400">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {benefit}
-                  ))}
+                <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      
+      <Footer />
+    </div>
+  );
+};
+
+export default EdgeComputingPage;
             ))}
           </div>
         </div>

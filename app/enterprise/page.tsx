@@ -48,60 +48,80 @@ const EnterprisePage: React.FC = () => {
   ];
 
   const solutions = [
-      
-    {icon: Brain,
+    {
+      icon: Brain,
       title: 'AI Integration',
       description: 'Enterprise-grade AI solutions for automation and intelligent decision making.',
-      
-    {icon: Database,
+      benefits: ['Automation', 'Intelligence', 'Scalability', 'Integration']
+    },
+    {
+      icon: Database,
       title: 'Data Management',
       description: 'Advanced data management and analytics for enterprise-scale operations.',
-      
-    {icon: Users,
+      benefits: ['Data processing', 'Analytics', 'Storage', 'Security']
+    },
+    {
+      icon: Users,
       title: 'User Management',
       description: 'Comprehensive user and access management for large organizations.',
-      
-    {icon: Settings,
+      benefits: ['Access control', 'User provisioning', 'Authentication', 'Authorization']
+    },
+    {
+      icon: Settings,
       title: 'System Integration',
       description: 'Seamless integration with existing enterprise systems and workflows.',
-      benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization']}]
-      
+      benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization']
+    }
+  ];
+  
+  const additionalSolutions = [
     {
-    icon: Brain,
+      icon: Brain,
       title: 'AI Integration',
       description: 'Enterprise-grade AI solutions for automation and intelligent decision making.',
-      
+      benefits: ['Machine learning', 'Automation', 'Intelligence', 'Scalability']
+    },
     {
-    icon: Database,
+      icon: Database,
       title: 'Data Management',
       description: 'Advanced data management and analytics for enterprise-scale operations.',
-      
+      benefits: ['Data processing', 'Analytics', 'Storage', 'Security']
+    },
     {
-    icon: Users,
+      icon: Users,
       title: 'User Management',
       description: 'Comprehensive user and access management for large organizations.',
-      
+      benefits: ['Access control', 'User provisioning', 'Authentication', 'Authorization']
+    },
     {
-    icon: Settings,
+      icon: Settings,
       title: 'System Integration',
       description: 'Seamless integration with existing enterprise systems and workflows.',
-      benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization']}
-    ]
-const solutions = [
-    {title: 'Enterprise Resource Planning',
+      benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization']
+    }
+  ];
+  
+  const solutions = [
+    {
+      title: 'Enterprise Resource Planning',
       description: 'Comprehensive ERP solutions that streamline business processes and improve efficiency.',
       icon: Building,
       benefits: ['Financial management', 'Supply chain optimization', 'Human resources', 'Project management']
     },
-      
-    {title: 'Customer Relationship Management',
     {
-    title: 'Enterprise Resource Planning',
+      title: 'Customer Relationship Management',
+      description: 'Advanced CRM systems for managing customer relationships and sales processes.',
+      icon: Users,
+      benefits: ['Lead management', 'Sales automation', 'Customer analytics', 'Marketing automation']
+    },
+    {
+      title: 'Enterprise Resource Planning',
       description: 'Comprehensive ERP solutions that streamline business processes and improve efficiency.',
       icon: Building,
-      
+      benefits: ['Financial management', 'Supply chain optimization', 'Human resources', 'Project management']
+    },
     {
-    title: 'Customer Relationship Management',
+      title: 'Customer Relationship Management',
       description: 'Advanced CRM systems for managing customer relationships and sales processes.',
       icon: Users,
       benefits: ['Lead management', 'Sales automation', 'Customer analytics', 'Marketing automation']
@@ -117,30 +137,16 @@ const solutions = [
       description: 'Automate complex business processes to improve efficiency and reduce errors.',
       icon: Zap,
       benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management']
+    },
+    {
+      title: 'Business Intelligence',
+      description: 'Powerful BI solutions for data-driven decision making and strategic planning.',
+      icon: BarChart,
+      benefits: ['Data visualization', 'Reporting', 'Analytics', 'Insights']
     }
-      
-    {title: 'Business Intelligence',
-      description: 'Powerful BI solutions for data-driven decision making and strategic planning.',
-      icon: BarChart,
-      
-    {title: 'Workflow Automation',
-      description: 'Automate complex business processes to improve efficiency and reduce errors.',
-      icon: Zap,
-      benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management']}]
   ];
-      
-    {
-    title: 'Business Intelligence',
-      description: 'Powerful BI solutions for data-driven decision making and strategic planning.',
-      icon: BarChart,
-      
-    {
-    title: 'Workflow Automation',
-      description: 'Automate complex business processes to improve efficiency and reduce errors.',
-      icon: Zap,
-      benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management']}
-  ]
-const benefits = [
+  
+  const benefits = [
     'Reduce operational costs by 30%',
     'Improve productivity by 50%',
     'Enhance security and compliance',
@@ -152,25 +158,52 @@ const benefits = [
 
     'Integrate with existing systems',
 
-    'Provide 24/7 support and monitoring';
+    'Provide 24/7 support and monitoring'
   ];
-const stats = [
-    {number: '500+', label: 'Enterprise Clients', icon: Building },
-    {number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
-    {number: '50%', label: 'Cost Reduction', icon: TrendingUp },
-    {number: '24/7', label: 'Support Available', icon: Clock }]
-return(<div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
+  
+  const stats = [
     { number: '500+', label: 'Enterprise Clients', icon: Building },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
     { number: '50%', label: 'Cost Reduction', icon: TrendingUp },
     { number: '24/7', label: 'Support Available', icon: Clock }
-  ]
-return (
-    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+  ];
+  
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer>
+        <title>Enterprise Solutions | Zion Tech Group</title>
+        <meta name="description" content="Comprehensive enterprise solutions powered by AI" />
+        <meta name="keywords" content="enterprise solutions, AI, business solutions" />
+      </SEOOptimizer>
       <Navigation />
-      {/* Hero Section */} <section className="py-20 px-4">
-          <section>
+      {/* Hero Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                Enterprise Solutions
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Comprehensive enterprise-grade solutions designed for large-scale business operations.
+              Transform your organization with cutting-edge technology and expert implementation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300">
+                Get Enterprise Consultation
+                <ArrowRight className="w-5 h-5 inline ml-2" />
+              </button>
+              <button className="bg-transparent border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+                View Case Studies
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-20 px-4">
         <div>
           <div>
             <h2>Section Title</h2>
@@ -178,52 +211,6 @@ return (
           </div>
         </div>
       </section>
-        <div className="absoluteinset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)]animate-pulse" /></div>
-        <div className="absoluteinset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style={{ animationDelay: '1s' }} /></div>
-        <div className="relativemax-w-7 xl mx-autotext-center"></div>
-          <h1>
-            Enterprise</h1>
-            <span>Solutions;</span>
-            </span>
-          </h1>
-          <p>Comprehensive enterprise-grade solutions designed for large-scale business operations.;</p>
-            Transform your organization with cutting-edge technology and expert implementation.
-          </p>
-          <div className="flexflex-colsm:flex-row gap-4 justify-center"></div>,
-            <button>Get Enterprise Consultation;</button>
-              <ArrowRight>
-            </button>
-            <button>View Case Studies,</button>
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */} <section className="py-20 px-4">
-          <section>
-        <div>
-          <div>
-            <h2>Section Title</h2>
-            <p>Section description</p>
-          </div>
-        </div>
-      </section>
-        <div className="max-w-7 xl mx-auto"></div>
-          <div className="gridgrid-cols-2 md:grid-cols-4 gap-8"></div>,
-            {stats.map((stat, index) => (} <div key={index}className="text-center"></div>
-                <div className="flexjustify-centermb-4"></div>
-                  <stat />
-                <div className="text-3 xlfont-boldtext-whitemb-2">{stat.number}</div>
-                <div className="text-gray-300 text-sm">{stat.label}</div>
-              </div>
-            ))}
-
-          </div>
-        </div>
-      </section>
-      {/* Features Section */} <section className="py-20 px-4">
-          <div className="max-w-7 xl mx-auto">
-            <div className="text-center mb-16">
               <h2 className="text-4 xl font-boldtext-whitemb-4">Section Title</h2>
     <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <SEOOptimizer
@@ -234,22 +221,20 @@ return (
       <Navigation />
       {/* Hero Section */}
       <section className="py-20 px-4">
-        <div className="max-w-7 xl mx-auto"></div>
-        <div className="absoluteinset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style={{ animationDelay: '1s' }} /></div>
-        <div className="relativemax-w-7 xl mx-autotext-center"></div>
-          <h1 className="text-5 xlmd:text-7 xlfont-boldtext-white mb-6 leading-tight">
-            Enterprise</h1>
-            <span className="blockbg-gradient-to-rfrom-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Solutions
-            </span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto leading-relaxed">
-            Comprehensive enterprise-grade solutions designed for large-scale business operations. 
-            Transform your organization with cutting-edge technology and expert implementation.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <button className="bg-gradient-to-rfrom-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
-              Get Enterprise Consultation
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                Enterprise Solutions
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Comprehensive enterprise-grade solutions designed for large-scale business operations. 
+              Transform your organization with cutting-edge technology and expert implementation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
+                Get Enterprise Consultation
               <ArrowRight className="inline-blockml-2 w-5 h-5" />
             </button>
             <button className="borderborder-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
@@ -261,14 +246,14 @@ return (
 
       {/* Stats Section */}
       <section className="py-20 px-4">
-        <div className="max-w-7 xl mx-auto">
-          <div className="gridgrid-cols-2 md:grid-cols-4 gap-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="flexjustify-centermb-4">
+                <div className="flex justify-center mb-4">
                   <stat.icon className="w-12 h-12 text-purple-400" />
                 </div>
-                <div className="text-3 xlfont-boldtext-whitemb-2">{stat.number}</div>
+                <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-gray-300 text-sm">{stat.label}</div>
               </div>
             ))}

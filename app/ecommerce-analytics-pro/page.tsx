@@ -48,18 +48,14 @@ const EcommerceAnalyticsProPage: React.FC = () => {
             </div>
             <div>
               {features.map((feature, index) => (
-                <div>
+                <div key={index} className="bg-white/5 rounded-lg p-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mb-6">
-                    <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
+                    <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
-                <div className="bg-white/5 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">Service 2</h3>
-                  <p className="text-gray-300">Description of service 2</p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
@@ -67,22 +63,7 @@ const EcommerceAnalyticsProPage: React.FC = () => {
 
       <Footer />
     </>
-  )};
+  );
+};
 
 export default EcommerceAnalyticsProPage;
-  </h1>
-  )
-}
-export default EcommerceAnalyticsProPage
-  </h1>
-                <$2 />
-                  key={index}
-                  className="bg-white/5 backdrop-blur-lgrounded-2 xlp-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-rfrom-cyan-500 to-purple-500 rounded-full flex items-center justify-center mb-6">
-                    <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
-                  <h3 className="text-xlfont-boldtext-whitemb-4">{feature.title}
-                  <p className="text-gray-300">{feature.description}
-              ))}
-  )
-}
-export default EcommerceAnalyticsProPage</div></div></div></p></p></h1></h3></section>

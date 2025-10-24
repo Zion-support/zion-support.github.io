@@ -9,62 +9,67 @@ const ErrorPage: React.FC = () => {
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      
-    {icon: BarChart},
+      benefits: ['AI insights', 'Intelligence', 'Recommendations', 'Automation']
+    },
     {
       icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      
-    {icon: Target,
+      benefits: ['Data visualization', 'Real-time analytics', 'Reporting', 'Insights']
+    },
+    {
+      icon: Target,
       title: 'Precision Targeting',
       description: 'Target specific goals and objectives with precision and accuracy.',
-      
-    {icon: TrendingUp,
+      benefits: ['Targeting', 'Precision', 'Accuracy', 'Goals']
+    },
+    {
+      icon: TrendingUp,
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']}]
-  return (<React.Fragment>
-      <Helmet />
-    }]
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    }
+  ];
+  
+  return (
+    <React.Fragment>
+      <Helmet>
   return (
     <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
     <>
 
       <Navigation />
-      <main className="min-h-screenbg-gradient-to-brfrom-slate-50 to-blue-50">{/* Hero Section */</main>} <section className="relativepy-20 px-4 sm: px-6 lg:px-8">,</section>
-          <div className="max-w-7 xl mx-auto">
+      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
             <div className="text-center">
-              <h1>
-                Error;
-  </
-              <p className="text-xltext-gray-600 mb-8 max-w-3 xl mx-auto">Error page.</p>
-              <div>
-                <button className="bg-blue-600 text-whitepx-8 py-3 rounded-lg hover: bg-blue-700 transition-colors">,</button>
-                  Get Started;
-  </
-                <button className="borderborder-blue-600 text-blue-600 px-8 py-3 rounded-lg hover: bg-blue-50 transition-colors">,</button>
-                  Learn More,
-  
+              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                Error
+              </h1>
+              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                Something went wrong. Please try again later.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                  Get Started
+                </button>
+                <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
+                  Learn More
+                </button>
               </div>
             </div>
-        </div>
-      </section>
-        {/* Features Section */} <section className="py-20 px-4 sm:px-6 lg:px-8">,<section>
-        <div>
-          <div>
-            <h2>,</h2>
-                Our Services,
-  </
-              <p className="text-xltext-gray-600 max-w-3 xlmx-auto">Discover how our solutions can help transform your business.</p>
+          </div>
+        </section>
+      </main>
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-          </section>
-        <div className="text-center mb-16">
-              </div><h2 className="text-3 xlmd:text-4 xl font-boldtext-gray-900 mb-4">
-                Our Services,
-  
-              <p className="text-xltext-gray-600 max-w-3 xlmx-auto" /></p>
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Our Services
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Discover how our solutions can help transform your business.
               </p>
             </div>
@@ -78,23 +83,29 @@ const ErrorPage: React.FC = () => {
                   <p className="text-gray-600 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex}className="flexitems-centertext-smtext-gray-600">
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                        {benefit} </li>
+                        {benefit}
+                      </li>
                     ))}
+                  </ul>
+                </div>
               ))}
             </div>
-        </div>
-      </section>
-        {/* CTA Section */} <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">,</section>
-          <div className="max-w-4 xlmx-autotext-center">
-            <h2 className="text-3 xlmd:text-4 xl font-bold text-white mb-6">Ready to Get Started?</h2>
-            <p className="text-xltext-blue-100 mb-8">Contact us today to learn more about our services.</p>
-            <button className="bg-whitetext-blue-600 px-8 py-3 rounded-lg hover: bg-gray-100 transition-colors font-semibold">,</button>
-              Contact Us;
-  </
           </div>
         </div>
+      </section>
+      
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
+          <p className="text-xl text-blue-100 mb-8">Contact us today to learn more about our services.</p>
+          <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
+            Contact Us
+          </button>
+        </div>
+      </section>
       </main>
 
       <Footer />
