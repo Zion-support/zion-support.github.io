@@ -3,11 +3,8 @@ import React from 'react';
 import Link from 'next/link';
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud } from 'lucide-react';
 
-const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear();
-  
+export default function Footer() {
   const aiServices = [
-    { name: 'AI Analytics & BI', url: '/ai-analytics', description: 'Business intelligence' },
     { name: 'AI Automation', url: '/ai-automation', description: 'Process automation' },
     { name: 'AI Chatbots & NLP', url: '/ai-chatbot-builder', description: 'Conversational AI' },
     { name: 'AI Content Generation', url: '/ai-content-generation', description: 'Automated content' },
@@ -189,6 +186,4 @@ const Footer: React.FC = () => {
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

@@ -12,6 +12,7 @@ const Breadcrumb: React.FC = () => {
     return null;
   }
 
+export default function BreadcrumbPage() {
   return (
     <nav aria-label="Breadcrumb" className="bg-slate-800/50 backdrop-blur-sm border-b border-slate-700"></nav>
       <div className="max-w-7xl mx-auto px-4 py-3"></div>
