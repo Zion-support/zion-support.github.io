@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../components/Footer';
 import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
@@ -28,7 +29,10 @@ export default function HomePage() {
           </Link>
         </div>
       </div>
+<<<<<<< HEAD
       <Footer />
+=======
+>>>>>>> 287f6d970974679ed039d33fdfca20ff92074c02
     </>
   );
 }
