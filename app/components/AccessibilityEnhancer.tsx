@@ -1,14 +1,12 @@
-<<<<<<< HEAD
-'use client'
-
-import React, { useEffect } from 'react'
+'use client';
+import React, { useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {
-  children: React.ReactNode
-  enableKeyboardNavigation?: boolean
-  enableScreenReaderSupport?: boolean
-  enableHighContrast?: boolean
-  enableFocusManagement?: boolean
+  children?: React.ReactNode;
+  enableKeyboardNavigation?: boolean;
+  enableScreenReaderSupport?: boolean;
+  enableHighContrast?: boolean;
+  enableFocusManagement?: boolean;
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ 
@@ -18,28 +16,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableHighContrast: _enableHighContrast = false,
   enableFocusManagement: _enableFocusManagement = true
 }) => {
-  useEffect(() => {
-    // Add accessibility enhancements here
-    if (_enableHighContrast) {
-      document.body.classList.add('high-contrast')
-    } else {
-      document.body.classList.remove('high-contrast')
-    }
-
-    return () => {
-      document.body.classList.remove('high-contrast')
-    }
-  }, [_enableHighContrast])
-
-  return <>{children}</>
-}
-
-export default AccessibilityEnhancer
-=======
-'use client';
-import React, { useEffect } from 'react';
-
-const AccessibilityEnhancer: React.FC = () => {
   useEffect(() => {
     // Add skip links
     const addSkipLinks = () => {
@@ -246,8 +222,7 @@ const AccessibilityEnhancer: React.FC = () => {
     };
   }, []);
 
-  return null; // This component doesn't render anything
+  return children ? <>{children}</> : null;
 };
 
 export default AccessibilityEnhancer;
->>>>>>> 883b2f1837ad94df26f75676952a53319ed72f1c

@@ -1,5 +1,7 @@
 'use client';
 
+import React from 'react';
+
 interface LoadingProps {
   size?: 'sm' | 'md' | 'lg';
   text?: string;
