@@ -4,7 +4,7 @@ import Link from 'next/link';
   
 const UltimateBusinessIntelligence2025Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible] = useState(true);
   
   const content = [
     {
