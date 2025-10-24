@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone',
   trailingSlash: true,
   images: {
     unoptimized: true
@@ -10,8 +9,7 @@ const nextConfig = {
   },
   typescript: {
     ignoreBuildErrors: true,
-  },
-  output: 'standalone'
+  }
 }
 
 module.exports = nextConfig

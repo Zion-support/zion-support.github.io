@@ -1,8 +1,8 @@
 "use client";
 import React from 'react';
 
-const shipping-rates = () => {
+const ShippingRates = () => {
   return null;
 };
 
-export default shipping-rates;
+export default ShippingRates;
