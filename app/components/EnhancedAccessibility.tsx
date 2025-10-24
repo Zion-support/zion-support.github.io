@@ -2,7 +2,8 @@
 import { Settings } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { AccessibilitySettings, AccessibilityContextType } from '../types/accessibility';
-import { AccessibilityContext, useAccessibility } from '../contexts/AccessibilityContext';
+import { AccessibilityContext } from '../contexts/AccessibilityContext';
+import { useAccessibility } from '../hooks/useAccessibility';
 
 interface EnhancedAccessibilityProps {
   children: React.ReactNode;
