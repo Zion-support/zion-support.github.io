@@ -7,12 +7,12 @@
 // Jest types for testing environment
 declare global {
   const jest: {
-    fn: (_implementation?: (..._args: any[]) => any) => any;
+    fn: (_implementation?: (..._args: unknown[]) => unknown) => unknown;
   };
   const Console: {
-    log: (..._args: any[]) => void;
-    error: (..._args: any[]) => void;
-    warn: (..._args: any[]) => void;
+    log: (..._args: unknown[]) => void;
+    error: (..._args: unknown[]) => void;
+    warn: (..._args: unknown[]) => void;
   };
 }
 

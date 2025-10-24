@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Zap, Shield, Brain, Cloud } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface ContentCarouselProps {
   items: Array<{
@@ -57,7 +57,7 @@ const ContentCarousel: React.FC<ContentCarouselProps> = ({
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
-          {items.map((item, index) => (
+          {items.map((item, _index) => (
             <div key={item.id} className="w-full flex-shrink-0">
               <div className="relative h-64 md:h-96 bg-gradient-to-br from-blue-600 to-purple-700 text-white">
                 {item.image && (
@@ -110,7 +110,7 @@ const ContentCarousel: React.FC<ContentCarouselProps> = ({
 
       {/* Dots indicator */}
       <div className="flex justify-center mt-4 space-x-2">
-          {items.map((_, _index) => (
+          {items.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
