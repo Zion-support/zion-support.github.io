@@ -59,7 +59,9 @@ export class PerformanceMonitor {
     new PerformanceObserver((entryList) => {
       const entries = entryList.getEntries();
       entries.forEach((entry) => {
-        this.metrics.set('FID', entry.processingStart - entry.startTime);
+        const fidEntry = entry as any;
+        const fid = fidEntry.processingStart ? fidEntry.processingStart - fidEntry.startTime : 0;
+        this.metrics.set('FID', fid);
       });
     }).observe({ entryTypes: ['first-input'] });
 

@@ -120,7 +120,7 @@ const ContactPage: React.FC = () => {
         title="Contact Us - Zion Tech Group"
         description="Get in touch with Zion Tech Group for your AI and IT solution needs. We're here to help."
         keywords="contact us, get in touch, AI consultation, IT support, customer service, Zion Tech Group"
-        canonical="https://ziontechgroup.com/contact"
+        url="https://ziontechgroup.com/contact"
         structuredData={structuredData}
       />
       

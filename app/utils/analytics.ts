@@ -6,6 +6,7 @@ interface AnalyticsEvent {
   action: string;
   label?: string;
   value?: number;
+  timestamp?: number;
   custom_parameters?: Record<string, any>;
 }
 
@@ -131,6 +132,7 @@ export function useAnalytics() {
     trackFormSubmission: analytics.trackFormSubmission.bind(analytics),
     trackPerformance: analytics.trackPerformance.bind(analytics),
     trackError: analytics.trackError.bind(analytics),
+    getEvents: analytics.getEvents.bind(analytics),
   };
 }
 
