@@ -359,7 +359,6 @@ const ContentCarousel: React.FC = () => {
           </button>
         </div>
       </div>
-    </div>
   );
 };
 

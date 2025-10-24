@@ -27,6 +27,5 @@ export default function SearchModal() {
         </div>
       </div>
     </div>
-    </div>
   );
 }

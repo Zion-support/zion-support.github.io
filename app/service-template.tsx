@@ -36,6 +36,5 @@ const ServiceTemplat,
             ))}
           </div>
         </div>
-      </div>
-    </div>}
+      </div>}
 export default ServiceTemplate;

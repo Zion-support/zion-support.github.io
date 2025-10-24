@@ -27,6 +27,5 @@ export default function main() {
         </div>
       </div>
     </div>
-    </div>
   );
 }

@@ -27,6 +27,5 @@ export default function GenericServicePage() {
         </div>
       </div>
     </div>
-    </div>
   );
 }

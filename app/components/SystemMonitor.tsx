@@ -125,7 +125,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {</S
             </div>
         </div>
     </div>
-    </div>
   );
 =======
   );

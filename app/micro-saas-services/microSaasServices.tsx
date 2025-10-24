@@ -27,6 +27,5 @@ export default function microSaasServices() {
         </div>
       </div>
     </div>
-    </div>
   );
 }

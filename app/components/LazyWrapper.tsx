@@ -27,6 +27,5 @@ export default function LazyWrapper() {
         </div>
       </div>
     </div>
-    </div>
   );
 }

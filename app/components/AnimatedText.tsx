@@ -27,6 +27,5 @@ export default function AnimatedText() {
         </div>
       </div>
     </div>
-    </div>
   );
 }

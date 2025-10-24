@@ -27,6 +27,5 @@ export default function CookieConsent() {
         </div>
       </div>
     </div>
-    </div>
   );
 }

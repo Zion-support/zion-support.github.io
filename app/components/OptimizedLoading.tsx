@@ -27,6 +27,5 @@ export default function OptimizedLoading() {
         </div>
       </div>
     </div>
-    </div>
   );
 }

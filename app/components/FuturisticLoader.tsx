@@ -27,6 +27,5 @@ export default function FuturisticLoader() {
         </div>
       </div>
     </div>
-    </div>
   );
 }
