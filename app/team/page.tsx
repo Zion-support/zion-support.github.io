@@ -27,7 +27,7 @@ import {
   Activity,
   Globe2,
   Map,
-  Navigation,
+  Navigation as NavigationIcon,
   Compass,
   Clock3,
   Smartphone,
