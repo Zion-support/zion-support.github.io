@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 function fixMergeConflicts(filePath) {
-  let content = fs.readFileSync(filePath, 'utf8');
+  const content = fs.readFileSync(filePath, 'utf8');
   
   // Remove merge conflict markers and keep the HEAD version
   const lines = content.split('\n');

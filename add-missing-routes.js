@@ -1,14 +1,15 @@
 import fs from 'fs';
-import path from 'path';
+// import path from 'path';
+// import { fileURLToPath } from 'url';
 
-// Read the current App.tsx
-const appContent = fs.readFileSync('/workspace/App.tsx', 'utf8');
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = path.dirname(__filename);
 
 // Read the missing pages from the analysis
 const analysisData = JSON.parse(fs.readFileSync('/workspace/navigation-analysis.json', 'utf8'));
 const missingPages = analysisData.missingPagesList;
 
-// Generate import statements for missing pages
+
 const generateImportStatement = (route) => {
   const componentName = route.split('/').pop().replace(/-/g, '').replace(/(^|_)([a-z])/g, (match, p1, p2) => p2.toUpperCase()) + 'Page';
   return `const ${componentName} = React.lazy(() => import('.${route}/page'));`;
@@ -16,9 +17,7 @@ const generateImportStatement = (route) => {
 
 // Generate route statements
 const generateRouteStatement = (route) => {
-  const componentName = route.split('/').pop().replace(/-/g, '').replace(/(^|_)([a-z])/g, (match, p1, p2) => p2.toUpperCase()) + 'Page';
   return `            <Route path="${route}" element={<${componentName} />} />`;
-};
 
 // Generate the new App.tsx content
 const newImports = missingPages.map(generateImportStatement).join('\n');

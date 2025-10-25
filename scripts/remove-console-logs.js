@@ -41,7 +41,7 @@ for (const file of files) {
     // But keep console.error in development mode checks
     const originalContent = content;
     
-    let newContent = content
+    const newContent = content
       // Remove standalone console.log statements
       .replace(/^\s*console\.log\([^)]*\);\s*$/gm, '')
       // Remove console.warn statements

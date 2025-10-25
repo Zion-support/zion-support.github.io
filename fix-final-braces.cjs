@@ -17,7 +17,7 @@ function fixFinalBraces() {
   files.forEach(file => {
     try {
       let content = fs.readFileSync(file, 'utf8');
-      let originalContent = content;
+      const originalContent = content;
       
       // Fix missing closing braces for function components that end with );
       if (content.includes('export default function') && content.trim().endsWith(');')) {
