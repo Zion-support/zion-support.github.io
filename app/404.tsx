@@ -24,6 +24,7 @@ const NotFound = () => {
               <AlertTriangle className="w-6 h-6 text-red-400" />
             </div>
           </div>
+          
           {/* Error Message */}
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Page Not Found
