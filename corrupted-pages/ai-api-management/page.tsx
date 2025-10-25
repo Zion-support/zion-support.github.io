@@ -1,4 +1,11 @@
 
+<<<<<<< HEAD:app/ai-api-management/page.tsx
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, Zap, Shield, Brain, BarChart, Users, Settings } from 'lucide-react'
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-21fe:corrupted-pages/ai-api-management/page.tsx
 
 const AIApiManagementPage: React.FC = () => {
   const features = [
