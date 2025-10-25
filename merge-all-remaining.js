@@ -57,7 +57,7 @@ function mergeBranch(branchName) {,
   3: Merge function with conflict resolution,
 function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
     execSync(`git fetch origin ${branchName}`, {/* TODO: Fix JSX expression */})
-  o: 'pipe' })
+  o: 'pipe' });
     //Check if already merged;`
     const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" || echo "not_merged"`,
       {/* TODO: Fix JSX expression */}

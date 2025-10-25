@@ -99,7 +99,7 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
             execSync(`git add "${file}"`, { stdio: 'inherit' })
 //             } catch (fileError) {
       for (const file of conflictedFiles) {/* TODO: Fix JSX expression */}"`
-            execSync(`git checkout --theirs "${file}"`, {/* TODO: Fix JSX expression */})
+            execSync(`git checkout --theirs "${file}"`, {/* TODO: Fix JSX expression */});
   o: 'inherit' });"`
             execSync(`git add "${file}"`, {/* TODO: Fix JSX expression */})
   o: 'inherit' })

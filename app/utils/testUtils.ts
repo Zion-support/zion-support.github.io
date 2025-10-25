@@ -1,4 +1,6 @@
-// testUtils utility
-// Add utility functions here
+'use client'
+/**
+ * Testing Utilities
+ * Provides helper functions and utilities for testing
+ */
 
-export {};

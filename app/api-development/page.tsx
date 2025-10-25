@@ -1,49 +1,41 @@
-'use client';
 
-import React from 'react';
+import { Metadata } from 'next';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const APIDevelopmentPage: React.FC = () => {
+
+export const metadata: Metadata = {
+  title: 'Page - Zion Tech Group',
+  description: 'Professional page services by Zion Tech Group.',
+  keywords: 'page, services, technology, AI, IT solutions'
+};
+
+const PagePage = () => {
   return (
     <>
-
       <Navigation />
       
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              API Development
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional API Development services by Zion Tech Group. Advanced AI and IT solutions for your business.
+      <section className="pt-20 pb-16 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></section>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"></div>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+const Page = null;
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Professional page services by Zion Tech Group.
+          </p>
+          <div className="space-y-4"></div>
+            <p className="text-gray-400">
+              Our page solutions are designed to help your business grow and succeed.
+            </p>
+            <p className="text-gray-400">
+              Contact us to learn more about how we can help you achieve your goals.
             </p>
           </div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
-              <h2 className="text-2xl font-bold text-white mb-4">Our Services</h2>
-              <p className="text-gray-300 mb-6">
-                We provide comprehensive API Development solutions tailored to your business needs.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-white/5 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">Service 1</h3>
-                  <p className="text-gray-300">Description of service 1</p>
-                </div>
-                <div className="bg-white/5 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">Service 2</h3>
-                  <p className="text-gray-300">Description of service 2</p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </main>
+      </section>
 
       <Footer />
-    </>
+    </div>
   );
 };
 
-export default APIDevelopmentPage;
+export default PagePage;

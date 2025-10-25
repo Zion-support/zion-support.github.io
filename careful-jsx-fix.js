@@ -26,7 +26,8 @@ const fixes = [
   // Fix other corrupted patterns
   {
     pattern: /<\/\w+><\/\w+>/g,
-    replacement: (match) => {
+    replacement: (match) =>
+                {
       // Extract the first closing tag
       const firstTag = match.match(/<\/(\w+)>/)[1]
       return `</${firstTag}>`
@@ -88,4 +89,4 @@ async function main() {
   console.log(`Fixed ${fixedCount} files`)
 }
 
-main().catch(console.error)
+main().catch(console.error);

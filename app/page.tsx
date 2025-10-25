@@ -1,151 +1,131 @@
-'use client'
-import React from 'react'
-import Navigation from './components/Navigation'
-import Footer from './components/Footer'
-import { Shield, Zap, Users, ArrowRight } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, ImageIcon, Upload, Zap, Download, Clock, X, Circle } from 'lucide-react';
+import Link from 'next/link';
+import Head from 'next/head';
+&apos;use client&apos;;
 
-const HomePage: React.FC = () => {
-  const features = [
-    {
-      icon: Zap,
-      title: 'AI-Powered Solutions',
-      description: 'Cutting-edge artificial intelligence to transform your business operations and drive innovation.'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security measures to protect your data and ensure compliance with industry standards.'
-    },
-    {
-      icon: Users,
-      title: 'Expert Team',
-      description: 'Experienced developers and consultants dedicated to delivering exceptional results for your projects.'
-    }
-  ]
+import Footer from &apos;./components/Footer&apos;;
+import Head from &apos;next/head&apos;;
+import Link from &apos;next/link&apos;;
+import { ArrowRight } from &apos;lucide-react&apos;;
 
-  const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '50+', label: 'Happy Clients' },
-    { number: '99%', label: 'Client Satisfaction' },
-    { number: '24/7', label: 'Support Available' }
-  ]
+const features = [
+  {
+    title: &apos;AI Solutions&apos;,
+    description: &apos;Cutting-edge artificial intelligence solutions&apos;,
+    icon: () => <div className=&quot;w-8 h-8 bg-blue-600 rounded&quot; />,
+    href: &apos;/ai-solutions&apos;
+  },
+  {
+    title: &apos;IT Services&apos;,
+    description: &apos;Comprehensive IT support and services&apos;,
+    icon: () => <div className=&quot;w-8 h-8 bg-green-600 rounded&quot; />,
+    href: &apos;/it-services&apos;
+  },
+  {
+    title: &apos;Web Development&apos;,
+    description: &apos;Modern web applications and websites&apos;,
+    icon: () => <div className=&quot;w-8 h-8 bg-purple-600 rounded&quot; />,
+    href: &apos;/web-development&apos;
+  },
+  {
+    title: &apos;Consulting&apos;,
+    description: &apos;Expert technology consulting&apos;,
+    icon: () => <div className=&quot;w-8 h-8 bg-orange-600 rounded&quot; />,
+    href: &apos;/consulting&apos;
+  }
+];
 
+const stats = [
+  { number: &apos;100+&apos;, label: &apos;Projects Completed&apos; },
+  { number: &apos;50+&apos;, label: &apos;Happy Clients&apos; },
+  { number: &apos;5+&apos;, label: &apos;Years Experience&apos; },
+  { number: &apos;24/7&apos;, label: &apos;Support Available&apos; }
+];
+
+export default function HomePage() {
   return (
-    <>
-      <Navigation />
-      
-      <main className="pt-16">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-5xl font-bold mb-6">
-                Transform Your Business with 
-                <span className="block text-yellow-300">Cutting-Edge Technology</span>
-              </h1>
-              <p className="text-xl mb-8 text-blue-100">
-                Leading technology solutions provider helping businesses transform their digital
-                presence with AI, cloud architecture, and innovative development services.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">
-                  Get Started
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+    <div>
+      <Head>
+        <title>Zion Tech Group - AI & IT Solutions</title>
+        <meta name=&quot;description&quot; content=&quot;Professional services by Zion Tech Group.&quot; />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center&quot;></div>
+          <h1 className=&quot;text-4xl font-bold text-white mb-4&quot;>Zion Tech Group - AI & IT Solutions</h1>
+          <p className=&quot;text-xl text-gray-300 mb-8&quot;>Professional AI & IT solutions services coming soon.</p>
+          <Link href=&quot;/contact&quot;
+            className=&quot;bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit&quot;
+          >
+            Contact Us
+            <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
+          </Link>
+        </div>
+      </div>
+
+      {/* Features Section */}
+      <section className=&quot;py-20 px-4&quot;></section>
+        <div className=&quot;max-w-7xl mx-auto&quot;></div>
+          <div className=&quot;text-center mb-16&quot;></div>
+            <h2 className=&quot;text-4xl font-bold text-gray-900 mb-4&quot;>Our Services</h2>
+            <p className=&quot;text-xl text-gray-600&quot;>
+              Comprehensive solutions to accelerate your digital transformation
+            </p>
+          </div>
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
+            {features.map((feature, index) => (
+              <div key={index} className=&quot;bg-white rounded-2xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow&quot;></div>
+                <div className=&quot;w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6&quot;></div>
+                  <feature.icon />
+                </div>
+                <h3 className=&quot;text-xl font-bold text-gray-900 mb-3&quot;>{feature.title}</h3>
+                <p className=&quot;text-gray-600 mb-4&quot;>{feature.description}</p>
+                <Link 
+                  href={feature.href}
+                  className=&quot;inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold&quot;
+                >
                   Learn More
-                </button>
+                  <ArrowRight className=&quot;ml-1 h-4 w-4&quot; />
+                </Link>
               </div>
-            </div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Features Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                  Why Choose Zion Tech Group?
-                </h2>
-                <p className="text-xl text-gray-600">
-                  We deliver exceptional results through innovative technology solutions
-                </p>
+      {/* Stats Section */}
+      <section className=&quot;py-16 px-4 bg-gray-50&quot;></section>
+        <div className=&quot;max-w-7xl mx-auto&quot;></div>
+          <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8&quot;></div>
+            {stats.map((stat, index) => (
+              <div key={index} className=&quot;text-center&quot;></div>
+                <div className=&quot;text-4xl font-bold text-blue-600 mb-2&quot;>{stat.number}</div>
+                <div className=&quot;text-gray-600&quot;>{stat.label}</div>
               </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {features.map((feature, index) => (
-                  <div key={index} className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                    <feature.icon className="w-12 h-12 text-blue-600 mb-4" />
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                      {feature.title}
-                    </h3>
-                    <p className="text-gray-600">
-                      {feature.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Stats Section */}
-        <section className="py-20 bg-blue-600 text-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold mb-4">
-                  Our Impact in Numbers
-                </h2>
-                <p className="text-xl text-blue-100">
-                  Delivering measurable results for our clients
-                </p>
-              </div>
-              
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                {stats.map((stat, index) => (
-                  <div key={index} className="text-center">
-                    <div className="text-4xl font-bold mb-2">
-                      {stat.number}
-                    </div>
-                    <div className="text-blue-100">
-                      {stat.label}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
+      {/* CTA Section */}
+      <section className=&quot;py-20 px-4 bg-blue-600&quot;></section>
+        <div className=&quot;max-w-7xl mx-auto text-center&quot;></div>
+          <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>
+            Ready to Transform Your Business?
+          </h2>
+          <p className=&quot;text-xl text-blue-100 mb-8 max-w-2xl mx-auto&quot;>
+            Let&apos;s discuss how our solutions can help you achieve your goals.
+          </p>
+          <Link 
+            href=&quot;/contact&quot; 
+            className=&quot;inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold&quot;
+          >
+            Start Your Project
+            <ArrowRight className=&quot;ml-2 h-5 w-5&quot; />
+          </Link>
+        </div>
+      </section>
 
-        {/* CTA Section */}
-        <section className="py-20 bg-gray-900 text-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl font-bold mb-6">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Let's discuss how our technology solutions can drive your success
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center">
-                  Start Your Project
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors">
-                  Schedule Consultation
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-      
       <Footer />
-    </>
-  )
+    </div>
+  );
 }
-
-export default HomePage

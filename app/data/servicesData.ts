@@ -1,4 +1,6 @@
+import { Workflow, Cloud } from 'lucide-react';
 export interface Service {
+
   id: string;
   title: string;
   description: string;
@@ -7,13 +9,11 @@ export interface Service {
   pricing: {
     basic: string;
     pro: string;
-    enterprise: string;
-  };
+    enterprise: string};
   contactInfo: {
-    website: string;
+  website: string;
     email: string;
-    phone: string;
-  };
+    phone: string};
   price?: string;
   icon?: string;
   href: string;
@@ -40,16 +40,16 @@ export const aiServices: Service[] = [
       "Cost savings"
     ],
     pricing: {
-      basic: "$999/month",
-      pro: "$2,999/month",
+      basic: "$299/month",
+      pro: "$999/month",
       enterprise: "Custom pricing"
     },
     contactInfo: {
-      website: 'https://ziontechgroup.com/ai-analytics',
-      email: 'ai@ziontechgroup.com',
-      phone: '+1-555-0123'
+      website: "https://ziontechgroup.com",
+      email: "sales@ziontechgroup.com",
+      phone: "+1-555-0123"
     },
-    price: "Starting at $999/month",
+    price: "Starting at $299/month",
     icon: "📊",
     href: "/services/ai-analytics",
     popular: true,
@@ -67,22 +67,22 @@ export const aiServices: Service[] = [
       "Smart scheduling"
     ],
     benefits: [
-      'Increased productivity',
-      'Reduced human error',
-      'Faster processing times',
-      'Scalable operations'
+      "Increased efficiency",
+      "Reduced human error",
+      "24/7 operation",
+      "Scalable solutions"
     ],
     pricing: {
-      basic: "$1,499/month",
-      pro: "$3,999/month",
+      basic: "$499/month",
+      pro: "$999/month",
       enterprise: "Custom pricing"
     },
     contactInfo: {
-      website: 'https://ziontechgroup.com/ai-automation',
-      email: 'automation@ziontechgroup.com',
-      phone: '+1-555-0124'
+      website: "https://ziontechgroup.com",
+      email: "sales@ziontechgroup.com",
+      phone: "+1-555-0123"
     },
-    price: "Starting at $1,499/month",
+    price: "Starting at $499/month",
     icon: "🤖",
     href: "/services/ai-automation",
     popular: true,
@@ -106,8 +106,8 @@ export const aiServices: Service[] = [
       "Scalable support"
     ],
     pricing: {
-      basic: "$799/month",
-      pro: "$2,499/month",
+      basic: "$199/month",
+      pro: "$499/month",
       enterprise: "Custom pricing"
     },
     contactInfo: {
@@ -115,13 +115,13 @@ export const aiServices: Service[] = [
       email: "sales@ziontechgroup.com",
       phone: "+1-555-0123"
     },
-    price: "Starting at $799/month",
+    price: "Starting at $199/month",
     icon: "💬",
     href: "/services/ai-chatbots",
     popular: false,
     category: "ai"
   }
-];
+]
 
 export const itServices: Service[] = [
   {
@@ -136,10 +136,10 @@ export const itServices: Service[] = [
       "Performance optimization"
     ],
     benefits: [
-      'Increased online presence',
-      'Better user experience',
-      'Higher conversion rates',
-      'Mobile accessibility'
+      "Reduced infrastructure costs",
+      "Improved scalability",
+      "Enhanced security",
+      "Better performance"
     ],
     pricing: {
       basic: "$5,000/project",
@@ -147,9 +147,9 @@ export const itServices: Service[] = [
       enterprise: "Custom pricing"
     },
     contactInfo: {
-      website: 'https://ziontechgroup.com/web-development',
-      email: 'webdev@ziontechgroup.com',
-      phone: '+1-555-0126'
+      website: "https://ziontechgroup.com",
+      email: "sales@ziontechgroup.com",
+      phone: "+1-555-0123"
     },
     price: "Starting at $5,000",
     icon: "☁️",
@@ -162,11 +162,11 @@ export const itServices: Service[] = [
     title: "Cybersecurity Solutions",
     description: "Protect your business with comprehensive cybersecurity services and monitoring.",
     features: [
-      'Security audits',
-      'Threat monitoring',
-      'Incident response',
-      'Compliance management',
-      'Security training'
+      "Security assessment",
+      "Threat monitoring",
+      "Incident response",
+      "Compliance auditing",
+      "Security training"
     ],
     benefits: [
       "Enhanced security posture",
@@ -175,73 +175,23 @@ export const itServices: Service[] = [
       "Peace of mind"
     ],
     pricing: {
-      basic: "$2,999/month",
-      pro: "$7,999/month",
+      basic: "$1,999/month",
+      pro: "$4,999/month",
       enterprise: "Custom pricing"
     },
     contactInfo: {
-      website: 'https://ziontechgroup.com/cloud-infrastructure',
-      email: 'cloud@ziontechgroup.com',
-      phone: '+1-555-0127'
+      website: "https://ziontechgroup.com",
+      email: "sales@ziontechgroup.com",
+      phone: "+1-555-0123"
     },
-    price: '$499/month',
-    icon: '☁️',
-    href: '/cloud-infrastructure',
-    category: 'it'
-  },
-  {
-    id: 'cybersecurity',
-    title: 'Cybersecurity',
-    description: 'Comprehensive security solutions to protect your digital assets.',
-    features: [
-      'Security audits',
-      'Threat monitoring',
-      'Incident response',
-      'Compliance management',
-      'Security training'
-    ],
-    benefits: [
-      'Protection against threats',
-      'Regulatory compliance',
-      'Reduced risk exposure',
-      'Peace of mind'
-    ],
-    pricing: {
-      basic: '399',
-      pro: '799',
-      enterprise: '1499'
-    },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/cybersecurity',
-      email: 'security@ziontechgroup.com',
-      phone: '+1-555-0128'
-    },
-    price: '$399/month',
-    icon: '🔒',
-    href: '/cybersecurity',
-    category: 'it'
->>>>>>> cursor/fix-errors-and-merge-to-main-e11d
+    price: "Starting at $1,999/month",
+    icon: "🔒",
+    href: "/services/cybersecurity",
+    popular: true,
+    category: "security"
   }
-];
+]
 
-export const allServices: Service[] = [...aiServices, ...itServices];
+export const allServices: Service[] = [...aiServices, ...itServices]
 
-// Export as servicesData for backward compatibility
-export const servicesData = {
-  aiServices,
-  itServices,
-  itSolutions: itServices, // Add alias for itSolutions
-  allServices
-};
-
-export const getServiceById = (id: string): Service | undefined => {
-  return allServices.find(service => service.id === id);
-};
-
-export const getServicesByCategory = (category: Service['category']): Service[] => {
-  return allServices.filter(service => service.category === category);
-};
-
-export const getPopularServices = (): Service[] => {
-  return allServices.filter(service => service.popular);
-};
+export default allServices

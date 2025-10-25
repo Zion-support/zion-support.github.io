@@ -1,49 +1,27 @@
+import { ArrowRight, CheckCircle, Star, ImageIcon, Upload, Zap, Download, Clock, X, Circle } from 'lucide-react';
+import Link from 'next/link';
+import Head from 'next/head';
 'use client';
 
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-const PagePage: React.FC = () => {
+export default function SmartCityInfrastructurePage() {
   return (
-    <>
-
-      <Navigation />
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Page
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business.
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
-              <h2 className="text-2xl font-bold text-white mb-4">Our Services</h2>
-              <p className="text-gray-300 mb-6">
-                We provide comprehensive Page solutions tailored to your business needs.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-white/5 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">Service 1</h3>
-                  <p className="text-gray-300">Description of service 1</p>
-                </div>
-                <div className="bg-white/5 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">Service 2</h3>
-                  <p className="text-gray-300">Description of service 2</p>
-                </div>
-              </div>
-            </div>
-          </div>
+    <div>
+      <Head>
+        <title>Smart City Infrastructure - Zion Tech Group</title>
+        <meta name="description" content="Professional services by Zion Tech Group." />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"></div>
+          <h1>Smart City Infrastructure - Zion Tech Group</h1>
+          <p>Professional smart city infrastructure - zion tech group services coming soon.</p>
+          <Link href="/contact"
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+          >
+            Contact Us
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
         </div>
-      </main>
-
-      <Footer />
-    </>
+      </div>
+    </div>
   );
-};
-
-export default PagePage;
+}

@@ -90,8 +90,8 @@ export function usePerformanceMonitor() {
 
 // Utility function to measure component render time
 export function measureComponentRender(componentName: string) {
-  return function <T extends React.ComponentType<unknown>>(WrappedComponent: T): T {
-    return ((props: unknown) => {
+  return function <T extends React.ComponentType<Record<string, unknown>>>(WrappedComponent: T): T {
+    return ((props: Record<string, unknown>) => {
       const monitor = PerformanceMonitor.getInstance();
       React.useEffect(() => {
         monitor.startTiming(`${componentName}-render`);
