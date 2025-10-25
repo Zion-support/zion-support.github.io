@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-<<<<<<< HEAD
   // Disable static generation completely
   output: 'export',
   trailingSlash: true,
@@ -12,6 +11,7 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ['@heroicons/react', 'lucide-react', 'framer-motion'],
     webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB'],
+    missingSuspenseWithCSRBailout: false,
   },
   
   // Generate build ID for better caching
@@ -22,6 +22,12 @@ const nextConfig = {
   // Note: Headers are not supported with static export
   // Headers should be configured at the server/CDN level for static sites
   
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   
   // Webpack optimizations
   webpack: (config, { isServer, dev }) => {
@@ -52,23 +58,4 @@ const nextConfig = {
   },
 }
 
-module.exports = nextConfig
-=======
-  output: 'export',
-  trailingSlash: true,
-  images: {
-    unoptimized: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  experimental: {
-    missingSuspenseWithCSRBailout: false,
-  }
-}
-
-module.exports = nextConfig;
->>>>>>> origin/main
+export default nextConfig;
