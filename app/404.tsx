@@ -4,7 +4,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 
-const 404Page: React.FC = () => {
+const NotFoundPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
