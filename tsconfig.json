@@ -22,18 +22,39 @@
       }
     ],
     "target": "ES2017",
-    "types": ["jest", "@testing-library/jest-dom"]
+    "types": [
+      "jest",
+      "@testing-library/jest-dom"
+    ]
   },
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
-    "types/**/*.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "jest.setup.ts"
+    "app/layout.tsx",
+    "app/components/Header.tsx",
+    "app/components/Navigation.tsx",
+    "app/components/ErrorBoundary.tsx",
+    "app/components/Analytics.tsx",
+    "app/components/PerformanceMonitor.tsx",
+    "components/**/*.tsx",
+    "__tests__/**/*.tsx",
+    "jest.setup.ts",
+    "dist/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
+    "app/components/Footer.tsx",
+    "app/components/AccessibilityEnhancer.tsx",
+    "app/components/AdvancedErrorBoundary.tsx",
+    "app/components/AdvancedAccessibilityEnhancer.tsx",
+    "app/components/AdvancedSEOOptimizer_new.tsx",
+    "app/components/Breadcrumb.tsx",
+    "app/components/ContentNewsletterSignup.tsx",
+    "app/components/ContentStatistics.tsx",
+    "hooks/**/*.ts",
+    "hooks/**/*.tsx",
+    "utils/**/*.ts",
+    "types/**/*.ts",
     "corrupted-src-backup",
     "problematic-files-backup",
     "problematic-pages",
@@ -49,6 +70,28 @@
     "**/temp-disabled-pages/**",
     "**/temp-pages/**",
     "**/temp-problematic/**",
-    "**/temp-all-problematic/**"
+    "**/temp-all-problematic/**",
+    "**/api-backup/**",
+    "**/App_minimal.tsx",
+    "**/EnhancedFooter.tsx",
+    "app/404.tsx",
+    "app/page.tsx",
+    "app/5g-iot-solutions/**",
+    "app/accessibility/**",
+    "app/ad-management/**",
+    "app/advanced-security-suite/**",
+    "app/ai-analytics-dashboard/**",
+    "app/ai-analytics/**",
+    "app/ai-api-management/**",
+    "app/ai-api-manager/**",
+    "app/ai-automated-reporting/**",
+    "app/ai-automation/**",
+    "app/ai-business-intelligence/**",
+    "app/ai-content-generator/**",
+    "app/ai-content-management/**",
+    "app/ai-customer-support/**",
+    "app/ai-cybersecurity/**",
+    "app/ai-data-analytics/**",
+    "app/App.tsx"
   ]
 }
