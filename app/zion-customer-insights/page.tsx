@@ -1,33 +1,26 @@
-import { Helmet } from 'react-helmet-async';
+import { ArrowRight, CheckCircle, Star, ImageIcon, Upload, Zap, Download, Clock, X, Circle } from 'lucide-react';
+import Link from 'next/link';
+import Head from 'next/head';
+'use client';
 
-export default function ZioncustomerinsightsPage() {
+export default function ZionCustomerInsightsPage() {
   return (
-    <>
-      <Helmet>
+    <div>
+      <Head>
         <title>Zion Customer Insights - Zion Tech Group</title>
-        <meta name="description" content="Zion Customer Insights services and solutions from Zion Tech Group." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Zion Customer Insights
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional Zion Customer Insights services and solutions for your business needs.
-            </p>
-            <div className="flex justify-center space-x-4">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
-                Get Started
-              </button>
-              <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-3 px-6 rounded-lg">
-                Learn More
-              </button>
-            </div>
-          </div>
+        <meta name="description" content="Professional services by Zion Tech Group." />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"></div>
+          <h1>Zion Customer Insights - Zion Tech Group</h1>
+          <p>Professional zion customer insights - zion tech group services coming soon.</p>
+          <Link href="/contact"
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+          >
+            Contact Us
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
         </div>
       </div>
-    </>
-  );
-}
+    </div>
+  )}

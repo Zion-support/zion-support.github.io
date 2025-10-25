@@ -1,191 +1,128 @@
-import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import {
-  Bars3Icon,
-  XMarkIcon,
-  HomeIcon,
-  InformationCircleIcon,
-  PhoneIcon,
-  DocumentTextIcon,
-  QuestionMarkCircleIcon,
-  CurrencyDollarIcon,
-  CogIcon,
-  GlobeAltIcon,
-  CloudIcon,
-  CpuChipIcon,
-  SignalIcon,
-  UserGroupIcon,
-  EnvelopeIcon,
-  ShareIcon,
-  ChatBubbleLeftRightIcon,
-  ChartBarIcon,
-  EyeIcon,
-  CircleStackIcon,
-  CodeBracketIcon,
-  DevicePhoneMobileIcon,
-  UserPlusIcon,
-  CheckCircleIcon,
-  ShieldCheckIcon
-} from '@heroicons/react/24/outline';
+'use client';
+import { Home, Info, Briefcase, Phone, GraduationCap, X, Menu } from 'lucide-react';
 
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { ArrowRight, CheckCircle, Star, ImageIcon, Upload, Zap, Download, Clock, X, Circle } from 'lucide-react';
+import { usePathname } from 'next/navigation';
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation();
+  const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)};
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll)}, []);
+
+  const closeAllMenus = () => {
+    setIsOpen(false)};
 
   const navigation = [
-    { name: 'Home', href: '/', icon: HomeIcon },
-    { name: 'About', href: '/about', icon: InformationCircleIcon },
-    {
-      name: 'AI Services',
-      href: '/ai-services',
-      icon: CpuChipIcon,
-      submenu: [
-        { name: 'AI Solutions Overview', href: '/ai-solutions', icon: CpuChipIcon },
-        { name: 'AI Content Generator', href: '/ai-content-generator', icon: DocumentTextIcon },
-        { name: 'AI Email Marketing', href: '/ai-email-marketing-automation', icon: EnvelopeIcon },
-        { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: ShareIcon },
-        { name: 'AI Customer Support Chatbot', href: '/ai-customer-support-chatbot', icon: ChatBubbleLeftRightIcon },
-        { name: 'AI Project Management Pro', href: '/ai-project-management-pro', icon: CogIcon },
-        { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro', icon: ChartBarIcon },
-        { name: 'AI Content Generation', href: '/ai-content-generation-pro', icon: DocumentTextIcon },
-        { name: 'AI Computer Vision', href: '/ai-computer-vision', icon: EyeIcon },
-        { name: 'AI Automation Platform', href: '/ai-automation-platform', icon: CogIcon }
-      ]
-    },
-    {
-      name: 'Micro SaaS',
-      href: '/micro-saas-solutions',
-      icon: GlobeAltIcon,
-      submenu: [
-        { name: 'Micro SaaS Overview', href: '/micro-saas-solutions', icon: GlobeAltIcon },
-        { name: 'Task Manager Pro', href: '/task-manager-pro', icon: CheckCircleIcon },
-        { name: 'Analytics Dashboard', href: '/analytics-dashboard', icon: ChartBarIcon },
-        { name: 'Customer Support Hub', href: '/customer-support-hub', icon: ChatBubbleLeftRightIcon },
-        { name: 'Inventory Manager', href: '/inventory-manager', icon: CircleStackIcon },
-        { name: 'Social Media Scheduler', href: '/social-media-scheduler', icon: ShareIcon },
-        { name: 'Expense Tracker Pro', href: '/expense-tracker-pro', icon: CurrencyDollarIcon }
-      ]
-    },
-    {
-      name: 'IT Solutions',
-      href: '/it-services',
-      icon: CogIcon,
-      submenu: [
-        { name: 'IT Solutions Overview', href: '/it-services', icon: CogIcon },
-        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },
-        { name: 'Cybersecurity Solutions', href: '/cybersecurity', icon: ShieldCheckIcon },
-        { name: 'Web Development', href: '/web-development', icon: CodeBracketIcon },
-        { name: 'Mobile App Development', href: '/mobile-development', icon: DevicePhoneMobileIcon },
-        { name: 'Database Management', href: '/database-management', icon: CircleStackIcon },
-        { name: 'Network Infrastructure', href: '/network-infrastructure', icon: SignalIcon },
-        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }
-      ]
-    },
-    {
-      name: 'Resources',
-      href: '#',
-      icon: DocumentTextIcon,
-      submenu: [
-        { name: 'Case Studies', href: '/case-studies', icon: DocumentTextIcon },
-        { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
-        { name: 'API Documentation', href: '/api-docs', icon: DocumentTextIcon },
-        { name: 'Help Center', href: '/help', icon: QuestionMarkCircleIcon }
-      ]
-    },
-    {
-      name: 'Company',
-      href: '#',
-      icon: UserGroupIcon,
-      submenu: [
-        { name: 'Our Team', href: '/team', icon: UserGroupIcon },
-        { name: 'Careers', href: '/careers', icon: UserPlusIcon },
-        { name: 'Partnerships', href: '/partnerships', icon: ShareIcon },
-        { name: 'Contact', href: '/contact', icon: PhoneIcon }
-      ]
-    },
-    { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon }
+    { name: 'Home', href: '/', icon: Home },
+    { name: 'About', href: '/about', icon: Info },
+    { name: 'Services', href: '/services', icon: Briefcase },
+    { name: 'Contact', href: '/contact', icon: Phone },
+    { name: 'Team', href: '/team', icon: GraduationCap }
   ];
 
-  const isActive = (href: string) => {
-    if (href === '/') {
-      return location.pathname === '/';
-    }
-    return location.pathname.startsWith(href);
-  };
-
-  const toggleMobileMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const closeMobileMenu = () => {
-    setIsOpen(false);
-  };
-
   return (
-    <nav className="bg-white shadow-lg">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          <div className="flex">
-            <div className="flex-shrink-0 flex items-center">
-              <Link to="/" className="text-2xl font-bold text-gray-900">
-                Zion Tech Group
-              </Link>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+    }`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+        <div className="flex justify-between items-center h-16"></div>
+          {/* Logo */}
+          <Link href="/" className="flex items-center space-x-2" onClick={closeAllMenus}>
+            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center"></div>
+              <span className="text-white font-bold text-xl">Z</span>
             </div>
-            <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
-              {navigation.map((item) => (
-                <div key={item.name} className="relative">
+            <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center space-x-8"></div>
+            {navigation.map((item) => {
+              const Icon = item.icon;
+              return (
+                <div key={item.name} className="relative group"></div>
                   <Link
-                    to={item.href}
-                    className={`${
-                      isActive(item.href)
-                        ? 'border-blue-500 text-gray-900'
-                        : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'
-                    } inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium`}
+                    href={item.href}
+                    className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                      pathname === item.href
+                        ? 'bg-purple-600 text-white'
+                        : 'text-gray-300 hover:text-white hover:bg-slate-800'}`}
                   >
-                    <item.icon className="w-4 h-4 mr-2" />
-                    {item.name}
+                    <Icon className="w-4 h-4" />
+                    <span>{item.name}</span>
                   </Link>
                 </div>
-              ))}
-            </div>
+              )})}
           </div>
-          <div className="sm:hidden">
-            <button
-              onClick={toggleMobileMenu}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+
+          {/* CTA Button */}
+          <div className="hidden lg:flex items-center space-x-4"></div>
+            <Link
+              href="/contact"
+              className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
             >
+              Get Started
+            </Link>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="lg:hidden"></div>
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-gray-300 hover:text-white p-2"
+            >
+              <span className="sr-only">Open main menu</span>
               {isOpen ? (
-                <XMarkIcon className="block h-6 w-6" />
+                <X className="block h-6 w-6" aria-hidden="true" />
               ) : (
-                <Bars3Icon className="block h-6 w-6" />
+                <Menu className="block h-6 w-6" aria-hidden="true" />
               )}
             </button>
           </div>
         </div>
-      </div>
-      {isOpen && (
-        <div className="sm:hidden">
-          <div className="pt-2 pb-3 space-y-1">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                to={item.href}
-                className={`${
-                  isActive(item.href)
-                    ? 'bg-blue-50 border-blue-500 text-blue-700'
-                    : 'border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700'
-                } block pl-3 pr-4 py-2 border-l-4 text-base font-medium`}
-                onClick={closeMobileMenu}
-              >
-                <item.icon className="w-4 h-4 mr-2 inline" />
-                {item.name}
-              </Link>
-            ))}
+
+        {/* Mobile Navigation */}
+        {isOpen && (
+          <div className="lg:hidden"></div>
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-800 rounded-lg mt-2"></div>
+              {navigation.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <div key={item.name}></div>
+                    <Link
+                      href={item.href}
+                      onClick={() => setIsOpen(false)}
+                      className={`flex items-center space-x-3 px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                        pathname === item.href
+                          ? 'bg-purple-600 text-white'
+                          : 'text-gray-300 hover:text-white hover:bg-slate-700'}`}
+                    >
+                      <Icon className="w-5 h-5" />
+                      <span>{item.name}</span>
+                    </Link>
+                  </div>
+                )})}
+              <div className="pt-4 border-t border-slate-700"></div>
+                <Link
+                  href="/contact"
+                  onClick={() => setIsOpen(false)}
+                  className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white block px-3 py-2 rounded-md text-base font-medium text-center"
+                >
+                  Get Started
+                </Link>
+              </div>
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </nav>
-  );
-};
+  )};
 
 export default Navigation;

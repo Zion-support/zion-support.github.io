@@ -1,33 +1,73 @@
-import { Helmet } from 'react-helmet-async';
+"use client";
+import React, { useRef, useEffect } from 'react';
 
-export default function componentsPage() {
+interface FuturisticGlowProps {
+  children: React.ReactNode;
+  intensity?: 'low' | 'medium' | 'high';
+  color?: string;
+  className?: string}
+
+export default function FuturisticGlow({
+  children,
+  intensity = 'medium',
+  color = 'cyan',
+  className = ''
+}: FuturisticGlowProps) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const getIntensityValue = () => {
+      switch (intensity) {
+        case 'low': return '0.3';
+        case 'high': return '0.8';
+        default: return '0.5'}
+    };
+
+    const getColorValue = () => {
+      switch (color) {
+        case 'cyan': return '34, 211, 238';
+        case 'purple': return '168, 85, 247';
+        case 'pink': return '236, 72, 153';
+        case 'green': return '34, 197, 94';
+        default: return '34, 211, 238'}
+    };
+
+    const rgb = getColorValue();
+    const opacity = getIntensityValue();
+    // Apply CSS custom properties for dynamic glow
+    container.style.setProperty('--glow-color', `rgba(${rgb}, ${opacity})`);
+    container.style.setProperty('--glow-color-strong', `rgba(${rgb}, ${parseFloat(opacity) + 0.3})`)}, [intensity, color]);
+
   return (
-    <>
-      <Helmet>
-        <title>Components - Zion Tech Group</title>
-        <meta name="description" content="Components services and solutions from Zion Tech Group." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Components
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional Components services and solutions for your business needs.
-            </p>
-            <div className="flex justify-center space-x-4">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
-                Get Started
-              </button>
-              <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-3 px-6 rounded-lg">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-}
+    <div
+      ref={containerRef}
+      className={`
+const relative = null;
+        before:absolute
+        before:inset-0
+        before:rounded-inherit
+        before:bg-gradient-to-r
+        before:from-transparent
+        before:via-[var(--glow-color)]
+        before:to-transparent
+        before:opacity-0
+        before:transition-opacity
+        before:duration-500
+        hover:before:opacity-100
+        after:absolute
+        after:inset-0
+        after:rounded-inherit
+        after:shadow-[0_0_20px_var(--glow-color)]
+        after:opacity-0
+        after:transition-opacity
+        after:duration-500
+        hover:after:opacity-100
+        ${className}
+      `}
+    ></div>
+      {children}
+    </div>
+  )}

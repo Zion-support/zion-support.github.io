@@ -1,60 +1,59 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
-const path = require('path');
+const glob = require('glob');
 
-// Find all page files with invalid function names
-function findInvalidFunctionNames(dir) {
-  const invalidFiles = [];
-  
-  function scanDirectory(currentDir) {
-    const files = fs.readdirSync(currentDir);
-    
-    files.forEach(file => {
-      const filePath = path.join(currentDir, file);
-      const stat = fs.statSync(filePath);
-      
-      if (stat.isDirectory()) {
-        scanDirectory(filePath);
-      } else if (file.endsWith('.tsx') && file === 'page.tsx') {
-        try {
-          const content = fs.readFileSync(filePath, 'utf8');
-          // Check if function name starts with a number
-          if (content.includes('export default function 5') || content.includes('export default function 6') || content.includes('export default function 7') || content.includes('export default function 8') || content.includes('export default function 9')) {
-            invalidFiles.push(filePath);
-          }
-        } catch (e) {
-          // File might be corrupted
-        }
-      }
+// Function to fix function names with hyphens
+function fixFunctionNames(content) {
+  return content
+    // Fix function names with hyphens
+    .replace(/export default function ([a-zA-Z0-9-]+)Page\(\)/g, (match, name) => {
+      const cleanName = name.replace(/-/g, '');
+      return `export default function ${cleanName}Page()`;
     });
+}
+
+// Main function to process files
+function processFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    const originalContent = content;
+    
+    // Apply fixes
+    content = fixFunctionNames(content);
+    
+    // Only write if content changed
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    
+    return false;
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
   }
-  
-  scanDirectory(dir);
-  return invalidFiles;
 }
 
-// Fix function names that start with numbers
-function fixFunctionName(filePath) {
-  const content = fs.readFileSync(filePath, 'utf8');
+// Get all page files
+const patterns = [
+  'app/*/page.tsx',
+  'app/*/*/page.tsx'
+];
+
+let totalFiles = 0;
+let fixedFiles = 0;
+
+patterns.forEach(pattern => {
+  const files = glob.sync(pattern, { cwd: process.cwd() });
+  totalFiles += files.length;
   
-  // Replace function names that start with numbers
-  const fixedContent = content
-    .replace(/export default function 5(\w+)/g, 'export default function Five$1')
-    .replace(/export default function 6(\w+)/g, 'export default function Six$1')
-    .replace(/export default function 7(\w+)/g, 'export default function Seven$1')
-    .replace(/export default function 8(\w+)/g, 'export default function Eight$1')
-    .replace(/export default function 9(\w+)/g, 'export default function Nine$1');
-  
-  fs.writeFileSync(filePath, fixedContent);
-  console.log('Fixed function name in: ' + filePath);
-}
-
-// Find and fix all files with invalid function names
-const invalidFiles = findInvalidFunctionNames('/workspace/app');
-
-console.log('Found ' + invalidFiles.length + ' files with invalid function names');
-
-invalidFiles.forEach(filePath => {
-  fixFunctionName(filePath);
+  files.forEach(file => {
+    if (processFile(file)) {
+      fixedFiles++;
+    }
+  });
 });
 
-console.log('All function names have been fixed!');
+console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files.`);

@@ -94,6 +94,8 @@ const nextConfig = {
     optimizeCss: false,
     optimizePackageImports: ["lucide-react", "@heroicons/react"],
   },
+  trailingSlash: true,
+  skipTrailingSlashRedirect: true,
   compiler: {
     removeConsole:
       process.env.NODE_ENV === "production"

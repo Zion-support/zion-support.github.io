@@ -1,33 +1,60 @@
+'use client';
+import { CheckCircle } from 'lucide-react';
+import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export default function componentsPage() {
+const PerformanceEnhancer: React.FC = () => {
+  useEffect(() => {
+    // Performance optimization code
+    const optimizePerformance = () => {
+      // Lazy load images
+      const images = document.querySelectorAll('img[data-src]');
+      const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
+            img.src = img.dataset.src || '';
+            img.classList.remove('lazy');
+            imageObserver.unobserve(img)}
+        })});
+      
+      images.forEach(img => imageObserver.observe(img))};
+
+    optimizePerformance()}, []);
+
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
+
   return (
-    <>
+    <div className="performance-enhancer"></div>
       <Helmet>
-        <title>Components - Zion Tech Group</title>
-        <meta name="description" content="Components services and solutions from Zion Tech Group." />
+        <title>Performance Enhancer - Zion Tech Group</title>
+        <meta name="description" content="Advanced performance optimization solutions." />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Components
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional Components services and solutions for your business needs.
-            </p>
-            <div className="flex justify-center space-x-4">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
-                Get Started
-              </button>
-              <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-3 px-6 rounded-lg">
-                Learn More
-              </button>
-            </div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900 py-20"></div>
+        <div className="max-w-7xl mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
+            <h1 className="text-4xl font-bold text-white mb-4">Performance Enhancer</h1>
+            <p className="text-xl text-gray-300">Optimize your application performance with our advanced solutions.</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start space-x-3"></div>
+                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                <p className="text-gray-300 text-lg">{benefit}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
-    </>
-  );
-}
+    </div>
+  )};
+
+export default PerformanceEnhancer;

@@ -1,48 +1,25 @@
-import { useState, useEffect } from 'react';
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
-  firstInputDelay: number;
-}
-
-export const usePerformanceMetrics = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-
-  useEffect(() => {
-    const measurePerformance = () => {
-      if (typeof window === 'undefined') return;
-
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paintEntries = performance.getEntriesByType('paint');
+const UsePerformanceMetrics.tsPage: React.FC = () => {
+  return (
+    <React.Fragment>
+      <Helmet>
+        <title>UsePerformanceMetrics.ts - Zion Tech Group</title>
+        <meta name="description" content="Professional usePerformanceMetrics.ts services by Zion Tech Group" />
+      </Helmet>
       
-      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-      const lcp = performance.getEntriesByType('largest-contentful-paint')[0];
-      const cls = performance.getEntriesByType('layout-shift')[0];
-      const fid = performance.getEntriesByType('first-input')[0];
-
-      setMetrics({
-        loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-        firstContentfulPaint: fcp ? fcp.startTime : 0,
-        largestContentfulPaint: lcp ? lcp.startTime : 0,
-        cumulativeLayoutShift: cls ? (cls as any).value : 0,
-        firstInputDelay: fid ? (fid as any).processingStart - fid.startTime : 0,
-      });
-    };
-
-    // Measure after page load
-    if (document.readyState === 'complete') {
-      measurePerformance();
-    } else {
-      window.addEventListener('load', measurePerformance);
-    }
-
-    return () => {
-      window.removeEventListener('load', measurePerformance);
-    };
-  }, []);
-
-  return metrics;
+      <div className="min-h-screen bg-gray-900 text-white">
+        <div className="container mx-auto px-4 py-8">
+          <h1 className="text-4xl font-bold mb-6">UsePerformanceMetrics.ts</h1>
+          <p className="text-lg text-gray-300">
+            This page is currently under development. Please check back soon for more information.
+          </p>
+        </div>
+      </div>
+    </React.Fragment>
+  );
 };
+
+export default UsePerformanceMetrics.tsPage;

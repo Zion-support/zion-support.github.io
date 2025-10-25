@@ -1,33 +1,80 @@
-import { Helmet } from 'react-helmet-async';
+import type { Metadata} from 'next';
+import { Inter} from 'next/font/google';
+import './globals.css';
 
-export default function appPage() {
+import Analytics from './components/Analytics';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import PerformanceMonitor from './components/PerformanceMonitor';
+
+const inter = Inter({ subsets: ['latin'] });
+
+export const metadata: Metadata = {
+  title: 'Zion Tech Group - Leading AI & Technology Solutions Provider',
+  description: 'Transform your business with cutting-edge AI, cloud architecture, cybersecurity, and innovative development services. Expert technology solutions for modern enterprises.',
+  keywords: 'AI solutions, artificial intelligence, cloud architecture, web development, mobile apps, data analytics, cybersecurity, machine learning, cloud computing, digital transformation',
+  authors: [{ name: 'Zion Tech Group' }],
+  creator: 'Zion Tech Group',
+  publisher: 'Zion Tech Group',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false},
+  metadataBase: new URL('https://ziontechgroup.com'),
+  alternates: {
+    canonical: '/'},
+  openGraph: {
+    title: 'Zion Tech Group - Leading AI & Technology Solutions Provider',
+    description: 'Transform your business with cutting-edge AI, cloud architecture, cybersecurity, and innovative development services.',
+    url: 'https://ziontechgroup.com',
+    siteName: 'Zion Tech Group',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Zion Tech Group - AI & Technology Solutions'}],
+    locale: 'en_US',
+    type: 'website'},
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Zion Tech Group - Leading AI & Technology Solutions Provider',
+    description: 'Transform your business with cutting-edge AI, cloud architecture, cybersecurity, and innovative development services.',
+    images: ['/og-image.jpg']},
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1}},
+  verification: {
+    google: 'your-google-verification-code'}};
+
+export default function RootLayout({
+  children}: {
+  children: React.ReactNode}) {
   return (
-    <>
-      <Helmet>
-        <title>App - Zion Tech Group</title>
-        <meta name="description" content="App services and solutions from Zion Tech Group." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              App
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional App services and solutions for your business needs.
-            </p>
-            <div className="flex justify-center space-x-4">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
-                Get Started
-              </button>
-              <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-3 px-6 rounded-lg">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-}
+    <html lang="en" className="scroll-smooth">
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="theme-color" content="#3b82f6" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
+      <body className={`${inter.className} antialiased`}>
+        <Analytics />
+        <PerformanceOptimizer>
+          <AccessibilityEnhancer>
+            {children}
+          </AccessibilityEnhancer>
+        </PerformanceOptimizer>
+        <PerformanceMonitor />
+      </body>
+    </html>
+  )}

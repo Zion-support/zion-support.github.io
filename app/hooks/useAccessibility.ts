@@ -1,11 +1,10 @@
-import { useState, useEffect } from 'react';
+'use client';
+import { useContext } from 'react';
+import { AccessibilityContext } from '../contexts/AccessibilityContext';
+import { AccessibilityContextType } from '../types/accessibility';
 
-export function useAccessibility() {
-  const [state, setState] = useState(null);
-  
-  useEffect(() => {
-    /// Comment
-  }, []);
-  
-  return { state, setState };
-}
+export const useAccessibility = (): AccessibilityContextType => {
+  const context = useContext(AccessibilityContext);
+  if (!context) {
+    throw new Error('useAccessibility must be used within an AccessibilityProvider')}
+  return context};

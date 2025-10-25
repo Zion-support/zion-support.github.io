@@ -1,53 +1,50 @@
-const withErrorLogging = (handler) => {
-  return async (req, res) => {
-    try {
-      await handler(req, res);
-    } catch (error) {
-      console.error('API Error:', error);
-      res.status(500).json({
-        error: 'Internal server error',
-        message: error.message
-      });
-    }
-  };
-};
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
-export default withErrorLogging(async (req, res) => {
+const PROD_DOMAIN = 'https://ziontechgroup.com';
+
+export default async function handler(req, res) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
+    res.statusCode = 405;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Method not allowed' }));
+    return;
+  }
+
+  const { productId, userId, priceId, quantity = 1 } = req.body || {};
+
+  if (!productId) {
+    res.statusCode = 400;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Product ID is required' }));
+    return;
   }
 
   try {
-    const { 
-      priceId, 
-      quantity = 1, 
-      successUrl, 
-      cancelUrl,
-      customerEmail 
-    } = req.body;
-
-    if (!priceId) {
-      return res.status(400).json({ error: 'Price ID is required' });
-    }
-
-    // Mock checkout session creation
-    // In a real implementation, you would use Stripe or another payment processor
-    const checkoutSession = {
-      id: `cs_${Date.now()}`,
-      url: `https://checkout.example.com/session/${Date.now()}`,
-      payment_status: 'unpaid',
-      amount_total: 10000, // $100.00 in cents
-      currency: 'usd',
-      customer_email: customerEmail || null,
-      success_url: successUrl || `${req.headers.origin}/success`,
-      cancel_url: cancelUrl || `${req.headers.origin}/cancel`
+    console.log('Creating checkout session for product:', productId);
+    
+    // Create a mock checkout session
+    const sessionData = {
+      id: 'cs_test_' + Math.random().toString(36).substr(2, 9),
+      status: 'pending',
+      productId: productId,
+      userId: userId || null,
+      timestamp: new Date().toISOString()
     };
 
-    res.status(200).json({ 
-      checkoutSession 
-    });
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({
+      success: true,
+      sessionId: sessionData.id,
+      checkoutUrl: `${PROD_DOMAIN}/checkout?session=${sessionData.id}`,
+      data: sessionData
+    }));
   } catch (error) {
     console.error('Checkout session creation error:', error);
-    res.status(500).json({ error: 'Internal server error' });
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
+      error: 'Failed to create checkout session',
+      details: process.env.NODE_ENV === 'development' ? error.message : undefined
+    }));
   }
-});
+}

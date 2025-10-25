@@ -1,65 +1,57 @@
-import React, { Component, ReactNode } from 'react';
+'use client';
+import { CheckCircle } from 'lucide-react';
+import React from 'react';
 
-interface Props {
-  children: ReactNode;
-}
 
-interface State {
-  hasError: boolean;
-  error?: Error;
-}
+const GlobalErrorBoundary: React.FC = () => {
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
 
-class GlobalErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-  }
-
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('GlobalErrorBoundary caught an error:', error, errorInfo);
-    
-    // Log to external service if available
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'exception', {
-        description: error.message,
-        fatal: false,
-      });
-    }
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
-            <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full">
-              <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.268 19.5c-.77.833.192 2.5 1.732 2.5z" />
-              </svg>
-            </div>
-            <div className="mt-4 text-center">
-              <h3 className="text-lg font-medium text-gray-900">Something went wrong</h3>
-              <p className="mt-2 text-sm text-gray-500">
-                {this.state.error?.message || 'An unexpected error occurred'}
-              </p>
-              <button
-                onClick={() => window.location.reload()}
-                className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
-                Reload Page
-              </button>
-            </div>
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-center justify-center"></div>
+      <div className="max-w-4xl mx-auto px-4 text-center"></div>
+        <div className="mb-8"></div>
+          <div className="w-24 h-24 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-6"></div>
+            <CheckCircle className="w-12 h-12 text-white" />
           </div>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+            Something went wrong
+          </h1>
+          <p className="text-xl text-gray-300 mb-8">
+            We're sorry, but something unexpected happened. Our team has been notified.
+          </p>
         </div>
-      );
-    }
-
-    return this.props.children;
-  }
-}
+        
+        <div className="grid md:grid-cols-2 gap-6 mb-8"></div>
+          {benefits.map((benefit, index) => (
+            <div key={index} className="flex items-center text-gray-300"></div>
+              <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+              {benefit}
+            </div>
+          ))}
+        </div>
+        
+        <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+          <button 
+            onClick={() => window.location.reload()}
+            className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"
+          >
+            Try Again
+          </button>
+          <button 
+            onClick={() => window.location.href = '/'}
+            className="border border-red-400 text-red-400 hover:bg-red-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"
+          >
+            Go Home
+          </button>
+        </div>
+      </div>
+    </div>
+  )};
 
 export default GlobalErrorBoundary;

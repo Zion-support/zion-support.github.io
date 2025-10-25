@@ -1,30 +1,51 @@
-const isValidEmail = (email) => {
+const withSentry = require('../../api/withSentry.cjs');
+
+function isValidEmail(email) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
-};
+}
 
-export default async function handler(req, res) {
+async function handler(req, res) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
+    res.statusCode = 405;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Method not allowed' }));
+    return;
+  }
+
+  const { email, name } = req.body;
+  
+  if (!email) {
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Email is required' }));
+    return;
+  }
+
+  if (!isValidEmail(email)) {
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Invalid email format' }));
+    return;
   }
 
   try {
-    const { email } = req.body;
-    
-    if (!email || !isValidEmail(email)) {
-      return res.status(400).json({ error: 'Valid email is required' });
-    }
-
     // Here you would typically save to a database
-    // For now, we'll just return success
-    console.log('Newsletter subscription:', email);
+    console.log('Newsletter subscription:', { email, name });
     
-    res.status(200).json({ 
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({
       message: 'Successfully subscribed to newsletter',
-      email: email 
-    });
+      subscription
+    }));
+
   } catch (error) {
     console.error('Newsletter subscription error:', error);
-    res.status(500).json({ error: 'Internal server error' });
+    res.statusCode = 500;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
+      error: 'Failed to subscribe to newsletter',
+      details: process.env.NODE_ENV === 'development' ? error.message : undefined
+    }));
   }
 }
+
+module.exports = withSentry(handler);

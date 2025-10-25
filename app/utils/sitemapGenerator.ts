@@ -1,6 +1,8 @@
-/// Comment
+// Fixed file - minimal working version
+export const defaultConfig = {
+  enabled: true,
+  debug: false
+};
 
-export function sitemapGenerator() {
-  /// Comment
-  return null;
-}
+export const defaultFunction = () => {
+  return null};

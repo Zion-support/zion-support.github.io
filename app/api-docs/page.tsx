@@ -1,33 +1,40 @@
-import { Helmet } from 'react-helmet-async';
 
-export default function ApiDocsPage() {
+import { Metadata } from 'next';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
+export const metadata: Metadata = {
+  title: 'Page - Zion Tech Group',
+  description: 'Professional page services by Zion Tech Group.',
+  keywords: 'page, services, technology, AI, IT solutions'
+};
+
+const PagePage = () => {
   return (
     <>
-      <Helmet>
-        <title>Api Docs - Zion Tech Group</title>
-        <meta name="description" content="Professional api docs solutions for modern businesses." />
-      </Helmet>
+      <Navigation />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Api Docs
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional Api Docs services and solutions for your business needs.
+      <section className="pt-20 pb-16 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></section>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"></div>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+const Page = null;
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Professional page services by Zion Tech Group.
+          </p>
+          <div className="space-y-4"></div>
+            <p className="text-gray-400">
+              Our page solutions are designed to help your business grow and succeed.
             </p>
-            <div className="flex justify-center space-x-4">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
-                Get Started
-              </button>
-              <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-3 px-6 rounded-lg">
-                Learn More
-              </button>
-            </div>
+            <p className="text-gray-400">
+              Contact us to learn more about how we can help you achieve your goals.
+            </p>
           </div>
-        </div>
-      </div>
-    </>
-  );
-}
+                </div>
+      </section>
+
+      <Footer />
+    </div>
+  )};
+
+export default PagePage;

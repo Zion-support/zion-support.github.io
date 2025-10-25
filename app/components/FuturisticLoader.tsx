@@ -1,33 +1,64 @@
-import { Helmet } from 'react-helmet-async';
+'use client';
+import React from 'react';
+import { motion } from 'framer-motion';
 
-export default function componentsPage() {
+interface FuturisticLoaderProps {
+  size?: 'sm' | 'md' | 'lg';
+  text?: string;
+  className?: string}
+
+const FuturisticLoader: React.FC<FuturisticLoaderProps> = ({
+  size = 'md',
+  text = 'Loading...',
+  className = ''
+}) => {
+  const sizeClasses = {
+    sm: 'w-8 h-8',
+    md: 'w-12 h-12',
+    lg: 'w-16 h-16'
+  };
+
+  const textSizeClasses = {
+    sm: 'text-sm',
+    md: 'text-base',
+    lg: 'text-lg'
+  };
+
   return (
-    <>
-      <Helmet>
-        <title>Components - Zion Tech Group</title>
-        <meta name="description" content="Components services and solutions from Zion Tech Group." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Components
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional Components services and solutions for your business needs.
-            </p>
-            <div className="flex justify-center space-x-4">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
-                Get Started
-              </button>
-              <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-3 px-6 rounded-lg">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </div>
+    <div className={`flex flex-col items-center justify-center space-y-4 ${className}`}></div>
+      <div className="relative"></div>
+        {/* Outer ring */}
+        <motion.div
+          className={`${sizeClasses[size]} border-4 border-cyan-500/20 rounded-full`}
+          animate={{ rotate: 360 }}
+          transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
+        />
+        
+        {/* Inner ring */}
+        <motion.div
+          className={`absolute top-0 left-0 ${sizeClasses[size]} border-4 border-transparent border-t-cyan-400 rounded-full`}
+          animate={{ rotate: 360 }}
+          transition={{ duration: 1.5, repeat: Infinity, ease: 'linear' }}
+        />
+        
+        {/* Center dot */}
+        <motion.div
+          className="absolute top-1/2 left-1/2 w-2 h-2 bg-cyan-400 rounded-full transform -translate-x-1/2 -translate-y-1/2"
+          animate={{ scale: [1, 1.5, 1] }}
+          transition={{ duration: 1, repeat: Infinity }}
+        />
       </div>
-    </>
-  );
-}
+      
+      {text && (
+        <motion.p
+          className={`text-gray-300 ${textSizeClasses[size]} font-medium`}
+          animate={{ opacity: [0.5, 1, 0.5] }}
+          transition={{ duration: 1.5, repeat: Infinity }}
+        >
+          {text}
+        </motion.p>
+      )}
+    </div>
+  )};
+
+export default FuturisticLoader;
