@@ -55,9 +55,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   }, []);
 
   return (
-    <div className="performance-optimizer">
+    <div className="performance-optimizer"></div>
       {isOptimized && (
-        <div className="text-green-500 text-sm">
+        <div className="text-green-500 text-sm"></div>
           Performance optimized
         </div>
       )}

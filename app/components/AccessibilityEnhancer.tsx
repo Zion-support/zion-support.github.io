@@ -54,7 +54,7 @@ const AccessibilityEnhancer: React.FC<Props> = ({ children}) => {
   }, []);
 
   return (
-    <div className="accessibility-enhanced" role="main">
+    <div className="accessibility-enhanced" role="main"></div>
       {children}
     </div>
   );

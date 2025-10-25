@@ -13,12 +13,11 @@ const Analytics: React.FC<AnalyticsProps> = () => {
         window.gtag("config", "GA_MEASUREMENT_ID", {
           page_title: document.title,
           page_location: window.location.href,
-        })
+        }))
       }
     }
-    initAnalytics()
-  }, [])
-
+    initAnalytics())
+  }, []))
   return null; // Analytics component doesn't render anything
 }
 

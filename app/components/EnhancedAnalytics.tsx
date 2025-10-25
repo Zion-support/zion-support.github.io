@@ -100,7 +100,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   const value: AnalyticsContextType = {
     track,
     identify,
-    page
+const page = null;
   };
 
   return (

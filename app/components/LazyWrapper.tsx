@@ -14,13 +14,13 @@ const LazyWrapper: React.FC<LazyWrapperProps> = ({
   className = ''
 }) => {
   const defaultFallback = (
-    <div className="flex items-center justify-center min-h-[200px]">
+    <div className="flex items-center justify-center min-h-[200px]"></div>
       <FuturisticLoader text="Loading content..." />
     </div>
   );
 
   return (
-    <div className={className}>
+    <div className={className}></div>
       <Suspense fallback={fallback || defaultFallback}>
         {children}
       </Suspense>

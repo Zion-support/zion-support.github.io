@@ -3,6 +3,7 @@ import { Home, Info, Briefcase, Phone, GraduationCap, X, Menu } from 'lucide-rea
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { ArrowRight, CheckCircle, Star, ImageIcon, Upload, Zap, Download, Clock, X, Circle } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,22 +35,22 @@ const Navigation = () => {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
     }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+        <div className="flex justify-between items-center h-16"></div>
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2" onClick={closeAllMenus}>
-            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center"></div>
               <span className="text-white font-bold text-xl">Z</span>
             </div>
             <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-8"></div>
             {navigation.map((item) => {
               const Icon = item.icon;
               return (
-                <div key={item.name} className="relative group">
+                <div key={item.name} className="relative group"></div>
                   <Link
                     href={item.href}
                     className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
@@ -66,7 +67,7 @@ const Navigation = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-4"></div>
             <Link
               href="/contact"
               className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
@@ -76,7 +77,7 @@ const Navigation = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="lg:hidden">
+          <div className="lg:hidden"></div>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover:text-white p-2"
@@ -93,12 +94,12 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-800 rounded-lg mt-2">
+          <div className="lg:hidden"></div>
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-800 rounded-lg mt-2"></div>
               {navigation.map((item) => {
                 const Icon = item.icon;
                 return (
-                  <div key={item.name}>
+                  <div key={item.name}></div>
                     <Link
                       href={item.href}
                       onClick={() => setIsOpen(false)}
@@ -113,7 +114,7 @@ const Navigation = () => {
                   </div>
                 );
               })}
-              <div className="pt-4 border-t border-slate-700">
+              <div className="pt-4 border-t border-slate-700"></div>
                 <Link
                   href="/contact"
                   onClick={() => setIsOpen(false)}

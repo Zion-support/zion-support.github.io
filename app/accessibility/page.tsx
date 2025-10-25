@@ -61,13 +61,13 @@ const services = [
 
 export default function AccessibilityPage() {
   return (
-    <>
+    <div>
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
+      <section className="relative py-20 px-4 overflow-hidden"></section>
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-        <div className="relative max-w-7xl mx-auto text-center">
+        <div className="relative max-w-7xl mx-auto text-center"></div>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Accessibility Solutions
           </h1>
@@ -75,7 +75,7 @@ export default function AccessibilityPage() {
             Make your digital experiences inclusive and accessible to everyone. 
             Our AI-powered accessibility solutions ensure compliance and improve user experience for all.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <button className="inline-flex items-center px-8 py-3 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors font-semibold">
               Get Accessibility Audit
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -88,17 +88,17 @@ export default function AccessibilityPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 px-4 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
+      <section className="py-16 px-4 bg-gray-50"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-12"></div>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">The Accessibility Challenge</h2>
             <p className="text-xl text-gray-600">
               Digital accessibility is not just a legal requirement—it's a business imperative.
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
+              <div key={index} className="text-center"></div>
                 <div className="text-4xl font-bold text-emerald-600 mb-2">{stat.number}</div>
                 <div className="text-gray-600">{stat.label}</div>
               </div>
@@ -108,19 +108,19 @@ export default function AccessibilityPage() {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
+      <section className="py-16 px-4"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-12"></div>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Accessibility Solutions</h2>
             <p className="text-xl text-gray-600">
               Comprehensive tools and services to make your digital assets accessible to everyone.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
             {features.map((feature, index) => (
-              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mr-4">
+              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200"></div>
+                <div className="flex items-center mb-4"></div>
+                  <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mr-4"></div>
                     {feature.icon()}
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900">{feature.title}</h3>
@@ -141,18 +141,18 @@ export default function AccessibilityPage() {
       </section>
 
       {/* Services Section */}
-      <section className="py-16 px-4 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
+      <section className="py-16 px-4 bg-gray-50"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-12"></div>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
             <p className="text-xl text-gray-600">
               From audits to implementation, we provide end-to-end accessibility solutions.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             {services.map((service, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-lg border border-gray-200 text-center">
-                <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div key={index} className="bg-white rounded-xl p-6 shadow-lg border border-gray-200 text-center"></div>
+                <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                   {service.icon()}
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
@@ -165,15 +165,15 @@ export default function AccessibilityPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 bg-emerald-600">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="py-16 px-4 bg-emerald-600"></section>
+        <div className="max-w-7xl mx-auto text-center"></div>
           <h2 className="text-4xl font-bold text-white mb-4">
             Ready to Make Your Digital Assets Accessible?
           </h2>
           <p className="text-xl text-emerald-100 mb-8 max-w-2xl mx-auto">
             Let's work together to create inclusive digital experiences that work for everyone.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <button className="inline-flex items-center px-8 py-3 bg-white text-emerald-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
               Start Your Accessibility Journey
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -186,6 +186,6 @@ export default function AccessibilityPage() {
       </section>
 
       <Footer />
-    </>
+    </div>
   );
 }

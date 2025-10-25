@@ -2,18 +2,21 @@
 
 import Head from 'next/head';
 import Link from 'next/link';
+import { ArrowRight, CheckCircle, Star, ImageIcon, Upload, Zap, Download, Clock, X, Circle } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, ImageIcon, Upload, Zap, Download, Clock, X, Circle } from 'lucide-react';
+import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import Footer from '../components/Footer';
 
 export default function AccessibilitypagePage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Accessibility Page - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"></div>
           <h1>Accessibility Page - Zion Tech Group</h1>
           <p>Professional accessibility page - zion tech group services coming soon.</p>
           <Link href="/contact"

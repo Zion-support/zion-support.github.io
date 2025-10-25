@@ -11,18 +11,18 @@ export const metadata: Metadata = {
 
 const PagePage = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <>
       <Navigation />
       
-      <section className="pt-20 pb-16 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+      <section className="pt-20 pb-16 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></section>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"></div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Page
+const Page = null;
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Professional page services by Zion Tech Group.
           </p>
-          <div className="space-y-4">
+          <div className="space-y-4"></div>
             <p className="text-gray-400">
               Our page solutions are designed to help your business grow and succeed.
             </p>

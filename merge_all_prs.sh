@@ -1,72 +1,38 @@
 #!/bin/bash
 
-# Script to automatically merge all open PRs
-# This script will resolve conflicts and merge PRs into main
+# Script to merge all open PR branches into main
+echo "Starting comprehensive merge of all PR branches..."
 
-set -e
+# Get all cursor/fix-errors-and-merge-to-main branches
+branches=$(git branch -r | grep "cursor/fix-errors-and-merge-to-main" | head -20)
 
-echo "Starting PR merge process..."
+echo "Found branches to merge:"
+echo "$branches"
 
-# Get all open PRs
-PRS=$(gh pr list --state open --json number,title,headRefName --limit 50)
+# Switch to main
+git checkout main
 
-echo "Found PRs to process..."
-
-# Process each PR
-echo "$PRS" | jq -r '.[] | "\(.number) \(.headRefName)"' | while read -r pr_number branch_name; do
-    echo "Processing PR #$pr_number ($branch_name)..."
+# Merge each branch
+for branch in $branches; do
+    echo "Attempting to merge $branch..."
     
-    # Checkout the PR
-    if gh pr checkout "$pr_number"; then
-        echo "Checked out PR #$pr_number"
-        
-        # Fetch latest main
-        git fetch origin main
-        
-        # Try to merge with main
-        if git merge origin/main; then
-            echo "Successfully merged PR #$pr_number with main"
-            
-            # Push the changes
-            git push origin "$branch_name"
-            
-            # Mark PR as ready and merge
-            gh pr ready "$pr_number" || true
-            gh pr merge "$pr_number" --merge --delete-branch || true
-            
-            echo "Successfully merged PR #$pr_number"
-        else
-            echo "Merge conflict in PR #$pr_number, attempting to resolve..."
-            
-            # Resolve conflicts by removing build artifacts and regenerating
-            rm -f tsconfig.tsbuildinfo
-            rm -rf .next out dist node_modules/.cache
-            
-            # Add resolved files
-            git add .
-            
-            # Commit the resolution
-            git commit -m "Resolve merge conflicts automatically" || true
-            
-            # Push the changes
-            git push origin "$branch_name"
-            
-            # Mark PR as ready and merge
-            gh pr ready "$pr_number" || true
-            gh pr merge "$pr_number" --merge --delete-branch || true
-            
-            echo "Resolved conflicts and merged PR #$pr_number"
-        fi
-        
-        # Go back to main
-        git checkout main
-        git pull origin main
+    # Extract branch name without origin/
+    branch_name=$(echo $branch | sed 's/origin\///')
+    
+    # Try to merge the branch
+    if git merge "origin/$branch_name" --no-ff -m "Merge $branch_name into main" 2>/dev/null; then
+        echo "Successfully merged $branch_name"
     else
-        echo "Failed to checkout PR #$pr_number"
+        echo "Failed to merge $branch_name (conflicts or already merged)"
+        # Reset merge attempt
+        git merge --abort 2>/dev/null
     fi
-    
-    echo "Completed processing PR #$pr_number"
-    echo "---"
 done
 
-echo "PR merge process completed!"
+echo "Merge process completed. Checking status..."
+git status
+
+echo "Pushing changes to main..."
+git push origin main
+
+echo "All done!"

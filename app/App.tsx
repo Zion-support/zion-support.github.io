@@ -70,7 +70,7 @@ const App: React.FC = () => {
   return (
     <ErrorBoundary>
       <BrowserRouter>
-          <div className="App">
+          <div className="App"></div>
             <PerformanceOptimizer>
               <PerformanceMonitor />
               <EnhancedAccessibility>

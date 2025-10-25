@@ -12,20 +12,19 @@ const ConsultationPage: React.FC = () => {
     message: '',
     preferredTime: '',
     budget: ''
-  })
-
+  }))
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }))
+    })))
   }
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault())
     if (process.env.NODE_ENV === 'development') {
-      console.log('Consultation form submitted:', formData)
+      console.log('Consultation form submitted:', formData))
     }
   }
 
@@ -60,11 +59,11 @@ const ConsultationPage: React.FC = () => {
   ]
 
   return (
-    <>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-        <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="relative max-w-7xl mx-auto text-center">
+    <div>
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900"></div>
+        <section className="relative py-20 px-4 overflow-hidden"></section>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
+        <div className="relative max-w-7xl mx-auto text-center"></div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Free <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Consultation</span>
           </h1>
@@ -76,13 +75,13 @@ const ConsultationPage: React.FC = () => {
       </section>
 
       {/* Consultation Form Section */}
-      <section className="py-20 bg-gray-900/50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
+      <section className="py-20 bg-gray-900/50"></section>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8"></div>
               <h2 className="text-2xl font-bold text-white mb-6">Schedule Your Consultation</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+                  <div></div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                       Full Name *
                     </label>
@@ -92,12 +91,12 @@ const ConsultationPage: React.FC = () => {
                       name="name"
                       value={formData.name}
                       onChange={handleInputChange}
-                      required
+const required = null;
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
                       placeholder="Your full name"
                     />
                   </div>
-                  <div>
+                  <div></div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                       Email Address *
                     </label>
@@ -107,17 +106,17 @@ const ConsultationPage: React.FC = () => {
                       name="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      required
+const required = null;
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
                       placeholder="your@email.com"
                     />
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+                  <div></div>
                     <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
-                      Company
+const Company = null;
                     </label>
                     <input
                       type="text"
@@ -129,7 +128,7 @@ const ConsultationPage: React.FC = () => {
                       placeholder="Your company name"
                     />
                   </div>
-                  <div>
+                  <div></div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
                       Phone Number
                     </label>
@@ -145,7 +144,7 @@ const ConsultationPage: React.FC = () => {
                   </div>
                 </div>
 
-                <div>
+                <div></div>
                   <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
                     Service Interest *
                   </label>
@@ -154,7 +153,7 @@ const ConsultationPage: React.FC = () => {
                     name="service"
                     value={formData.service}
                     onChange={handleInputChange}
-                    required
+const required = null;
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
                   >
                     <option value="">Select a service</option>
@@ -166,7 +165,7 @@ const ConsultationPage: React.FC = () => {
                   </select>
                 </div>
 
-                <div>
+                <div></div>
                   <label htmlFor="preferredTime" className="block text-sm font-medium text-gray-300 mb-2">
                     Preferred Time
                   </label>
@@ -186,7 +185,7 @@ const ConsultationPage: React.FC = () => {
                   </select>
                 </div>
 
-                <div>
+                <div></div>
                   <label htmlFor="budget" className="block text-sm font-medium text-gray-300 mb-2">
                     Project Budget
                   </label>
@@ -205,7 +204,7 @@ const ConsultationPage: React.FC = () => {
                   </select>
                 </div>
 
-                <div>
+                <div></div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                     Project Details
                   </label>
@@ -231,18 +230,18 @@ const ConsultationPage: React.FC = () => {
             </div>
 
 
-            <div className="space-y-8">
-              <div>
+            <div className="space-y-8"></div>
+              <div></div>
                 <h2 className="text-2xl font-bold text-white mb-6">Why Choose Our Consultation?</h2>
-                <div className="space-y-4">
+                <div className="space-y-4"></div>
                   {benefits.map((benefit, index) => (
-                    <div key={index} className="flex items-start">
+                    <div key={index} className="flex items-start"></div>
                       <CheckCircle className="w-6 h-6 text-purple-400 mr-3 flex-shrink-0 mt-1" />
                       <span className="text-gray-300">{benefit}</span>
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
+        <section className="relative py-20 px-4 overflow-hidden"></section>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
+          <div className="relative max-w-7xl mx-auto text-center"></div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Free <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Consultation</span>
             </h1>
@@ -254,15 +253,15 @@ const ConsultationPage: React.FC = () => {
         </section>
 
         {/* Consultation Form */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-4xl mx-auto"></div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12"></div>
               {/* Form */}
-              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8"></div>
                 <h2 className="text-2xl font-bold text-white mb-6">Schedule Your Consultation</h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+                    <div></div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                         Full Name *
                       </label>
@@ -272,12 +271,12 @@ const ConsultationPage: React.FC = () => {
                         name="name"
                         value={formData.name}
                         onChange={handleInputChange}
-                        required
+const required = null;
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
                         placeholder="Your full name"
                       />
                     </div>
-                    <div>
+                    <div></div>
                       <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                         Email Address *
                       </label>
@@ -287,17 +286,17 @@ const ConsultationPage: React.FC = () => {
                         name="email"
                         value={formData.email}
                         onChange={handleInputChange}
-                        required
+const required = null;
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
                         placeholder="your@email.com"
                       />
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+                    <div></div>
                       <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
-                        Company
+const Company = null;
                       </label>
                       <input
                         type="text"
@@ -309,7 +308,7 @@ const ConsultationPage: React.FC = () => {
                         placeholder="Your company name"
                       />
                     </div>
-                    <div>
+                    <div></div>
                       <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
                         Phone Number
                       </label>
@@ -325,7 +324,7 @@ const ConsultationPage: React.FC = () => {
                     </div>
                   </div>
 
-                  <div>
+                  <div></div>
                     <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
                       Service Interest *
                     </label>
@@ -334,7 +333,7 @@ const ConsultationPage: React.FC = () => {
                       name="service"
                       value={formData.service}
                       onChange={handleInputChange}
-                      required
+const required = null;
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
                     >
                       <option value="">Select a service</option>
@@ -346,7 +345,7 @@ const ConsultationPage: React.FC = () => {
                     </select>
                   </div>
 
-                  <div>
+                  <div></div>
                     <label htmlFor="preferredTime" className="block text-sm font-medium text-gray-300 mb-2">
                       Preferred Time
                     </label>
@@ -366,7 +365,7 @@ const ConsultationPage: React.FC = () => {
                     </select>
                   </div>
 
-                  <div>
+                  <div></div>
                     <label htmlFor="budget" className="block text-sm font-medium text-gray-300 mb-2">
                       Project Budget
                     </label>
@@ -385,7 +384,7 @@ const ConsultationPage: React.FC = () => {
                     </select>
                   </div>
 
-                  <div>
+                  <div></div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                       Project Details
                     </label>
@@ -411,12 +410,12 @@ const ConsultationPage: React.FC = () => {
               </div>
 
               {/* Benefits & Info */}
-              <div className="space-y-8">
-                <div>
+              <div className="space-y-8"></div>
+                <div></div>
                   <h2 className="text-2xl font-bold text-white mb-6">Why Choose Our Consultation?</h2>
-                  <div className="space-y-4">
+                  <div className="space-y-4"></div>
                     {benefits.map((benefit, index) => (
-                      <div key={index} className="flex items-start">
+                      <div key={index} className="flex items-start"></div>
                         <CheckCircle className="w-6 h-6 text-purple-400 mr-3 flex-shrink-0 mt-1" />
                         <span className="text-gray-300">{benefit}</span>
                       </div>
@@ -424,7 +423,7 @@ const ConsultationPage: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6">
+                <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6"></div>
                   <h3 className="text-xl font-bold text-white mb-4">What to Expect</h3>
                   <ul className="space-y-3 text-gray-300">
                     <li className="flex items-start">
@@ -446,18 +445,18 @@ const ConsultationPage: React.FC = () => {
                   </ul>
                 </div>
 
-                <div className="bg-gradient-to-br from-purple-500/20 to-blue-600/20 rounded-xl p-6">
+                <div className="bg-gradient-to-br from-purple-500/20 to-blue-600/20 rounded-xl p-6"></div>
                   <h3 className="text-xl font-bold text-white mb-4">Contact Information</h3>
-                  <div className="space-y-3 text-gray-300">
-                    <div className="flex items-center">
+                  <div className="space-y-3 text-gray-300"></div>
+                    <div className="flex items-center"></div>
                       <Mail className="w-5 h-5 text-purple-400 mr-3" />
                       <span>consultation@ziontechgroup.com</span>
                     </div>
-                    <div className="flex items-center">
+                    <div className="flex items-center"></div>
                       <Phone className="w-5 h-5 text-purple-400 mr-3" />
                       <span>+1 (555) 123-4567</span>
                     </div>
-                    <div className="flex items-center">
+                    <div className="flex items-center"></div>
                       <Building className="w-5 h-5 text-purple-400 mr-3" />
                       <span>Available Monday - Friday, 9 AM - 6 PM EST</span>
                     </div>
@@ -468,8 +467,8 @@ const ConsultationPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
-  )
+    </div>
+  ))
 }
 
 export default ConsultationPage

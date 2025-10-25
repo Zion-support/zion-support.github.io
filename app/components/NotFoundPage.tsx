@@ -1,13 +1,14 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
+import { ArrowRight, CheckCircle, Star, ImageIcon, Upload, Zap, Download, Clock, X, Circle } from 'lucide-react';
 import { Home, ArrowLeft, Search, AlertTriangle } from 'lucide-react';
 
 const NotFoundPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
-      <div className="max-w-md w-full text-center">
-        <div className="mb-8">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4"></div>
+      <div className="max-w-md w-full text-center"></div>
+        <div className="mb-8"></div>
           <AlertTriangle className="w-24 h-24 text-red-400 mx-auto mb-6" />
           <h1 className="text-6xl font-bold text-white mb-4">404</h1>
           <h2 className="text-2xl font-semibold text-gray-300 mb-4">
@@ -18,7 +19,7 @@ const NotFoundPage: React.FC = () => {
           </p>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-4"></div>
           <Link
             href="/"
             className="inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
@@ -36,9 +37,9 @@ const NotFoundPage: React.FC = () => {
           </button>
         </div>
 
-        <div className="mt-12">
+        <div className="mt-12"></div>
           <p className="text-gray-500 text-sm mb-4">Or try searching:</p>
-          <div className="relative">
+          <div className="relative"></div>
             <input
               type="text"
               placeholder="Search for something..."
@@ -48,7 +49,7 @@ const NotFoundPage: React.FC = () => {
           </div>
         </div>
 
-        <div className="mt-8 text-center">
+        <div className="mt-8 text-center"></div>
           <p className="text-gray-500 text-sm">
             Need help? <Link href="/contact" className="text-cyan-400 hover:text-cyan-300">Contact us</Link>
           </p>

@@ -33,7 +33,7 @@ const PerformanceMonitor: React.FC = () => {
         [metric.name]: metric.value,
       }));
 
-      // Send to analytics service (replace with your analytics endpoint)
+      // Send to analytics service (replace with your analytics endpoint))
       if (typeof window !== 'undefined' && (window as unknown as { gtag?: Function }).gtag) {
         (window as unknown as { gtag: Function }).gtag('event', metric.name, {
           event_category: 'Web Vitals',

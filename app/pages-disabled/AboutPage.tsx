@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { ArrowRight, CheckCircle, Star, ImageIcon, Upload, Zap, Download, Clock, X, Circle } from 'lucide-react';
 import { import { Shield, Star, ArrowRight, Shield, Users } from 'lucide-react';;
 
   UserGroupIcon,
@@ -64,8 +65,7 @@ export default function AboutPage() {
 
   return (
     
-    <>
-
+    <div>
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></section>
         <div className="container mx-auto px-4"><div className="max-w-4xl mx-auto text-center"></div>
@@ -372,5 +372,5 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   )}

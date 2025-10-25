@@ -143,12 +143,12 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ children 
   const contextValue: AccessibilityContextType = {
     settings,
     updateSetting,
-    announceToScreenReader
+const announceToScreenReader = null;
   };
 
   return (
     <AccessibilityContext.Provider value={contextValue}>
-      <div className="accessibility-enhanced">
+      <div className="accessibility-enhanced"></div>
         {children}
         <AccessibilityControls />
       </div>
@@ -164,7 +164,7 @@ const AccessibilityControls: React.FC = () => {
   if (typeof window === 'undefined') return null;
 
   return (
-    <>
+    <div>
       <button
         className="fixed bottom-4 left-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 z-50"
         onClick={() => setIsOpen(!isOpen)}
@@ -177,10 +177,10 @@ const AccessibilityControls: React.FC = () => {
       </button>
 
       {isOpen && (
-        <div className="fixed bottom-20 left-4 bg-white rounded-lg shadow-xl p-4 w-80 z-50 border">
+        <div className="fixed bottom-20 left-4 bg-white rounded-lg shadow-xl p-4 w-80 z-50 border"></div>
           <h3 className="text-lg font-semibold mb-4">Accessibility Settings</h3>
           
-          <div className="space-y-4">
+          <div className="space-y-4"></div>
             <label className="flex items-center space-x-3">
               <input
                 type="checkbox"
@@ -201,7 +201,7 @@ const AccessibilityControls: React.FC = () => {
               <span>Reduce Motion</span>
             </label>
 
-            <div>
+            <div></div>
               <label className="block text-sm font-medium mb-2">Font Size</label>
               <select
                 value={settings.fontSize}
@@ -239,11 +239,11 @@ const AccessibilityControls: React.FC = () => {
             onClick={() => setIsOpen(false)}
             className="mt-4 w-full bg-gray-200 text-gray-800 py-2 px-4 rounded hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500"
           >
-            Close
+const Close = null;
           </button>
         </div>
       )}
-    </>
+    </div>
   );
 };
 

@@ -29,11 +29,10 @@ const features = [
 
 const AdvancedAccessibilityEnhancer: React.FC = () => {
   return (
-    <>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
+    <div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
+        <div className="container mx-auto px-4 py-16"></div>
+          <div className="text-center mb-16"></div>
             <h1 className="text-5xl font-bold text-white mb-6">
               Advanced Accessibility Solutions
             </h1>
@@ -42,13 +41,13 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16"></div>
             {features.map((feature, index) => {
               const IconComponent = feature.icon;
               return (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg flex items-center justify-center mr-4">
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300"></div>
+                  <div className="flex items-center mb-4"></div>
+                    <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg flex items-center justify-center mr-4"></div>
                       <IconComponent className="w-6 h-6 text-white" />
                     </div>
                     <h3 className="text-xl font-bold text-white">{feature.title}</h3>
@@ -59,7 +58,7 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
             })}
           </div>
 
-          <div className="text-center">
+          <div className="text-center"></div>
             <button className="bg-gradient-to-r from-emerald-500 to-blue-500 hover:from-emerald-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center mx-auto">
               Get Started
               <ArrowRight className="w-5 h-5 ml-2" />
@@ -67,7 +66,7 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

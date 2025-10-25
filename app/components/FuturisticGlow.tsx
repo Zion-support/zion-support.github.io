@@ -49,7 +49,7 @@ export default function FuturisticGlow({
     <div
       ref={containerRef}
       className={`
-        relative
+const relative = null;
         before:absolute
         before:inset-0
         before:rounded-inherit
@@ -71,7 +71,7 @@ export default function FuturisticGlow({
         hover:after:opacity-100
         ${className}
       `}
-    >
+    ></div>
       {children}
     </div>
   );

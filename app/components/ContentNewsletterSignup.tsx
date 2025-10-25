@@ -1,4 +1,7 @@
-import React, { useState } from 'react';
+import { ArrowRight, CheckCircle, Star, ImageIcon, Upload, Zap, Download, Clock, X, Circle } from 'lucide-react';
+import React, { useState } from &apos;react&apos;;
+import { ArrowRight } from &apos;lucide-react&apos;;
+import { CheckCircle } from &apos;lucide-react&apos;;
 
 
 interface ContentNewsletterSignupProps {
@@ -10,13 +13,13 @@ interface ContentNewsletterSignupProps {
 }
 
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
-  title = "Stay Updated with Our Latest Insights",
-  subtitle = "Get exclusive content, industry insights, and early access to new features delivered to your inbox.",
-  placeholder = "Enter your email address",
-  buttonText = "Subscribe",
-  onSubscribe
+  title = &quot;Stay Updated with Our Latest Insights&quot;,
+  subtitle = &quot;Get exclusive content, industry insights, and early access to new features delivered to your inbox.&quot;,
+  placeholder = &quot;Enter your email address&quot;,
+  buttonText = &quot;Subscribe&quot;,
+const onSubscribe = null;
 }) => {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState(&apos;&apos;);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(false);
 
@@ -29,7 +32,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
       await onSubscribe(email);
       setIsSubscribed(true);
     } catch (error) {
-      console.error('Subscription failed:', error);
+      console.error(&apos;Subscription failed:&apos;, error);
     } finally {
       setIsSubmitting(false);
     }
@@ -37,43 +40,43 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
 
   if (isSubscribed) {
     return (
-      <div className="bg-emerald-900/20 border border-emerald-500/30 rounded-lg p-8 text-center">
-        <CheckCircle className="w-16 h-16 text-emerald-400 mx-auto mb-4" />
-        <h3 className="text-2xl font-bold text-white mb-2">Thank you for subscribing!</h3>
-        <p className="text-emerald-300">You'll receive our latest updates soon.</p>
+      <div className=&quot;bg-emerald-900/20 border border-emerald-500/30 rounded-lg p-8 text-center&quot;></div>
+        <CheckCircle className=&quot;w-16 h-16 text-emerald-400 mx-auto mb-4&quot; />
+        <h3 className=&quot;text-2xl font-bold text-white mb-2&quot;>Thank you for subscribing!</h3>
+        <p className=&quot;text-emerald-300&quot;>You&apos;ll receive our latest updates soon.</p>
       </div>
     );
   }
 
   return (
-    <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-8">
-      <div className="text-center mb-6">
-        <h3 className="text-2xl font-bold text-white mb-2">{title}</h3>
-        <p className="text-gray-300">{subtitle}</p>
+    <div className=&quot;bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-8&quot;></div>
+      <div className=&quot;text-center mb-6&quot;></div>
+        <h3 className=&quot;text-2xl font-bold text-white mb-2&quot;>{title}</h3>
+        <p className=&quot;text-gray-300&quot;>{subtitle}</p>
       </div>
       
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <div className="flex flex-col sm:flex-row gap-3">
+      <form onSubmit={handleSubmit} className=&quot;space-y-4&quot;>
+        <div className=&quot;flex flex-col sm:flex-row gap-3&quot;></div>
           <input
-            type="email"
+            type=&quot;email&quot;
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder={placeholder}
-            className="flex-1 px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
-            required
+            className=&quot;flex-1 px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent&quot;
+const required = null;
           />
           <button
-            type="submit"
+            type=&quot;submit&quot;
             disabled={isSubmitting}
-            className="bg-emerald-600 hover:bg-emerald-700 disabled:opacity-50 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"
+            className=&quot;bg-emerald-600 hover:bg-emerald-700 disabled:opacity-50 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;
           >
             {isSubmitting ? (
-              <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+              <div className=&quot;w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin&quot; /></div>
             ) : (
-              <>
+              <div>
                 {buttonText}
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </>
+                <ArrowRight className=&quot;w-4 h-4 ml-2&quot; />
+              </div>
             )}
           </button>
         </div>

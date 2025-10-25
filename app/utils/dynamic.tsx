@@ -9,7 +9,7 @@ interface Props {
 
 const Component: React.FC<Props> = ({ children, className }) => {
   return (
-    <div className={className}>
+    <div className={className}></div>
       {children}
     </div>
   );

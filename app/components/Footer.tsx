@@ -1,6 +1,7 @@
 'use client';
 import {Facebook, Twitter, Linkedin, Github, Phone, Mail, MapPin} from 'lucide-react';
 import Link from 'next/link';
+import { ArrowRight, CheckCircle, Star, ImageIcon, Upload, Zap, Download, Clock, X, Circle } from 'lucide-react';
 const Footer: React.FC = () => {
 
   const currentYear = new Date().getFullYear();
@@ -47,12 +48,12 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+      <div className="container mx-auto px-4 py-12"></div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8"></div>
           {/* Company Info */}
-          <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
+          <div className="space-y-4"></div>
+            <div className="flex items-center space-x-2"></div>
+              <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center"></div>
                 <span className="text-white font-bold text-lg">Z</span>
               </div>
               <span className="text-white font-bold text-xl">Zion Tech Group</span>
@@ -60,7 +61,7 @@ const Footer: React.FC = () => {
             <p className="text-gray-300">
               Leading provider of AI and IT solutions, empowering businesses with cutting-edge technology and innovative digital transformation services.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4"></div>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
@@ -77,7 +78,7 @@ const Footer: React.FC = () => {
           </div>
           
           {/* AI Services */}
-          <div className="space-y-4">
+          <div className="space-y-4"></div>
             <h3 className="text-lg font-semibold">AI Services</h3>
             <ul className="space-y-2">
               {aiServices.map((service) => (
@@ -91,7 +92,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* IT Services */}
-          <div className="space-y-4">
+          <div className="space-y-4"></div>
             <h3 className="text-lg font-semibold">IT Services</h3>
             <ul className="space-y-2">
               {itServices.map((service) => (
@@ -105,7 +106,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Company & Resources */}
-          <div className="space-y-4">
+          <div className="space-y-4"></div>
             <h3 className="text-lg font-semibold">Company</h3>
             <ul className="space-y-2">
               {company.map((item) => (
@@ -122,7 +123,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Support */}
-          <div>
+          <div></div>
             <h3 className="text-white font-semibold mb-4">Support</h3>
             <ul className="space-y-2">
               {support.map((item) => (
@@ -140,17 +141,17 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Contact Info */}
-        <div className="border-t border-gray-800 mt-8 pt-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-300">
-            <div className="flex items-center space-x-2">
+        <div className="border-t border-gray-800 mt-8 pt-8"></div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-300"></div>
+            <div className="flex items-center space-x-2"></div>
               <Phone className="h-4 w-4" />
               <span>+1 (555) 123-4567</span>
             </div>
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-2"></div>
               <Mail className="h-4 w-4" />
               <span>info@ziontechgroup.com</span>
             </div>
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-2"></div>
               <MapPin className="h-4 w-4" />
               <span>San Francisco, CA</span>
             </div>
@@ -158,7 +159,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400"></div>
           <p>&copy; {currentYear} Zion Tech Group. All rights reserved.</p>
         </div>
       </div>

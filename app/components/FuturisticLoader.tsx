@@ -26,8 +26,8 @@ const FuturisticLoader: React.FC<FuturisticLoaderProps> = ({
   };
 
   return (
-    <div className={`flex flex-col items-center justify-center space-y-4 ${className}`}>
-      <div className="relative">
+    <div className={`flex flex-col items-center justify-center space-y-4 ${className}`}></div>
+      <div className="relative"></div>
         {/* Outer ring */}
         <motion.div
           className={`${sizeClasses[size]} border-4 border-cyan-500/20 rounded-full`}

@@ -69,7 +69,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
     // fetch('/api/error-report', {
     //   method: 'POST',
     //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify(errorData)
+    //   body: JSON.stringify(errorData))
     // });
     
     // For now, just log to console
@@ -100,9 +100,9 @@ class AdvancedErrorBoundary extends Component<Props, State> {
       }
 
       return (
-        <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center px-4">
-          <div className="max-w-2xl w-full bg-white rounded-lg shadow-lg p-8 text-center">
-            <div className="flex justify-center mb-6">
+        <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center px-4"></div>
+          <div className="max-w-2xl w-full bg-white rounded-lg shadow-lg p-8 text-center"></div>
+            <div className="flex justify-center mb-6"></div>
               <AlertTriangle className="h-20 w-20 text-red-500" />
             </div>
             <h1 className="text-3xl font-bold text-gray-900 mb-4">
@@ -112,7 +112,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
               We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
             </p>
             
-            <div className="bg-gray-100 p-4 rounded-lg mb-6">
+            <div className="bg-gray-100 p-4 rounded-lg mb-6"></div>
               <p className="text-sm text-gray-600">
                 <strong>Error ID:</strong> {this.state.errorId}
               </p>
@@ -124,14 +124,14 @@ class AdvancedErrorBoundary extends Component<Props, State> {
             {process.env.NODE_ENV === 'development' && (
               <details className="mb-6 text-left">
                 <summary className="cursor-pointer text-sm font-medium text-gray-700 mb-2">
-                  Error Details (Development)
+                  Error Details (Development))
                 </summary>
-                <div className="bg-gray-100 p-3 rounded text-xs font-mono text-gray-800 overflow-auto max-h-40">
-                  <div className="mb-2">
+                <div className="bg-gray-100 p-3 rounded text-xs font-mono text-gray-800 overflow-auto max-h-40"></div>
+                  <div className="mb-2"></div>
                     <strong>Error:</strong> {this.state.error?.message}
                   </div>
                   {this.state.errorInfo && (
-                    <div>
+                    <div></div>
                       <strong>Stack:</strong>
                       <pre className="whitespace-pre-wrap mt-1">
                         {this.state.errorInfo.componentStack}
@@ -142,7 +142,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
               </details>
             )}
 
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center"></div>
               <button
                 onClick={this.handleReset}
                 className="flex items-center justify-center px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
@@ -165,7 +165,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
                 Report Issue
               </button>
             </div>
-            <div className="mt-8 pt-6 border-t border-gray-200">
+            <div className="mt-8 pt-6 border-t border-gray-200"></div>
               <p className="text-sm text-gray-500">
                 If this problem persists, please contact our support team at{' '}
                 <a 

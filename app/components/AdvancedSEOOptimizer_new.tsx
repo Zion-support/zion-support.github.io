@@ -8,7 +8,7 @@ interface AdvancedSEOOptimizer_newProps {
 
 const AdvancedSEOOptimizer_new: React.FC<AdvancedSEOOptimizer_newProps> = (_props) => {
   return (
-    <div>
+    <div></div>
       {/* Component content */}
     </div>
   );

@@ -1,14 +1,17 @@
+import { ArrowRight, CheckCircle, Star, ImageIcon, Upload, Zap, Download, Clock, X, Circle } from 'lucide-react';
+import Link from 'next/link';
+import Head from 'next/head';
 'use client';
 
 export default function ZionAiTranslationServicePage() {
   return (
-    <>
+    <div>
       <Head>
         <title>Zion Ai Translation Service - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"></div>
           <h1>Zion Ai Translation Service - Zion Tech Group</h1>
           <p>Professional zion ai translation service - zion tech group services coming soon.</p>
           <Link href="/contact"
@@ -19,6 +22,6 @@ export default function ZionAiTranslationServicePage() {
           </Link>
         </div>
       </div>
-    </>
+    </div>
   );
 }
