@@ -11,7 +11,7 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   experimental: {
-    missingSuspenseWithCSRBailout: false,
+    // Removed deprecated missingSuspenseWithCSRBailout option
   }
 }
 
