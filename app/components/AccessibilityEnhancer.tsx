@@ -42,7 +42,10 @@ const AccessibilityEnhancer: React.FC<Props> = ({ children}) => {
       // Enhance form accessibility
       const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])');
       inputs.forEach((input) => {
-
+        const htmlInput = input as HTMLInputElement;
+        const label = document.querySelector(`label[for="${htmlInput.id}"]`);
+        if (!label && !htmlInput.getAttribute('aria-label')) {
+          htmlInput.setAttribute('aria-label', htmlInput.placeholder || 'Input field');
         }
       });
     };

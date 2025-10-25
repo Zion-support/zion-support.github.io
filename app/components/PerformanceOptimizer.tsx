@@ -49,3 +49,21 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     // Run optimizations after component mount
     const timer = setTimeout(optimize, 100);
 
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
+
+  return (
+    <div className="performance-optimizer">
+      {isOptimized && (
+        <div className="text-green-500 text-sm">
+          Performance optimized
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default PerformanceOptimizer;
+

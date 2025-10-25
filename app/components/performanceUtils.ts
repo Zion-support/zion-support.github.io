@@ -91,7 +91,10 @@ export const performanceUtils = {
   optimizeThirdPartyScripts: () => {
     if (typeof window !== 'undefined') {
       // Defer non-critical scripts
-
+      const scripts = document.querySelectorAll('script[src]');
+      scripts.forEach((script) => {
+        if (!script.hasAttribute('defer') && !script.hasAttribute('async')) {
+          script.setAttribute('defer', '');
         }
       });
     }

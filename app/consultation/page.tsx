@@ -60,8 +60,9 @@ const ConsultationPage: React.FC = () => {
   ]
 
   return (
-
-      <section className="relative py-20 px-4 overflow-hidden">
+    <>
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+        <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -74,8 +75,10 @@ const ConsultationPage: React.FC = () => {
         </div>
       </section>
 
-
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
+      {/* Consultation Form Section */}
+      <section className="py-20 bg-gray-900/50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
               <h2 className="text-2xl font-bold text-white mb-6">Schedule Your Consultation</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

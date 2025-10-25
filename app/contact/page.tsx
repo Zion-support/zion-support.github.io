@@ -1,34 +1,22 @@
-'use client'
-import React from 'react'
-import { Mail, Phone, MapPin, Clock } from 'lucide-react'
+"use client"
 
+import React from "react"
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-1">Email</h3>
-                  <p className="text-gray-300">contact@ziontechgroup.com</p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <Phone className="w-6 h-6 text-purple-400 mr-4 mt-1" />
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-1">Phone</h3>
-                  <p className="text-gray-300">+1 (555) 123-4567</p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <MapPin className="w-6 h-6 text-purple-400 mr-4 mt-1" />
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-1">Address</h3>
-                  <p className="text-gray-300">123 Tech Street<br />San Francisco, CA 94105</p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <Clock className="w-6 h-6 text-purple-400 mr-4 mt-1" />
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-1">Business Hours</h3>
-                  <p className="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM<br />Sat: 10:00 AM - 4:00 PM</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
+export default function ContactPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+      <Navigation />
+      <main className="py-20 px-4">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Contact Us</h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Get in touch with our team to discuss your AI and IT needs.
+          </p>
+        </div>
+      </main>
+      <Footer />
+    </div>
+  )
+}
