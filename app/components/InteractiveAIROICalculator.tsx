@@ -13,6 +13,7 @@ const InteractiveAIROICalculator: React.FC = () => {
   };
   
   const roi = calculateROI();
+  
   return (
     <section className='bg-white py-16 rounded-2xl shadow-lg'>
       <div className='container mx-auto px-4'>
@@ -51,7 +52,39 @@ const InteractiveAIROICalculator: React.FC = () => {
               </div>
               <div>
                 <label className='block text-sm font-medium text-gray-700 mb-2'>
-                  Implementation Timeframe (months)
+<<<<<<< HEAD
+                  Implementation Timeline (months)
+                </label>
+                <input
+                  type='range'
+                  min='3'
+                  max='24'
+                  value={timeframe}
+                  onChange={e => setTimeframe(Number(e.target.value))}
+                  className='w-full'
+                />
+                <div className='text-center text-sm text-gray-600'>
+                  {timeframe} months
+                </div>
+              </div>
+            </div>
+            
+            <div className='bg-gradient-to-br from-blue-50 to-indigo-100 p-8 rounded-2xl'>
+              <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>
+                ROI Projection
+              </h3>
+              <div className='text-center mb-6'>
+                <div className='text-6xl font-bold text-blue-600 mb-2'>
+                  {roi.toFixed(0)}%
+                </div>
+                <div className='text-gray-600'>Return on Investment</div>
+              </div>
+              
+              <div className='space-y-4'>
+                <div className='flex justify-between items-center p-4 bg-white rounded-lg shadow-sm'>
+                  <span className='text-gray-700'>Annual Savings:</span>
+=======
+                  Timeframe (months)
                 </label>
                 <select
                   value={timeframe}
@@ -65,24 +98,75 @@ const InteractiveAIROICalculator: React.FC = () => {
                 </select>
               </div>
             </div>
-            <div className='bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl'>
+            
+            <div className='bg-gradient-to-br from-blue-50 to-indigo-100 p-8 rounded-xl'>
               <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>
-                Your ROI Projection
+                ROI Analysis
               </h3>
-              <div className='text-center'>
-                <div className='text-6xl font-bold text-blue-600 mb-4'>
-                  {roi.toFixed(0)}%
+              <div className='space-y-4'>
+                <div className='flex justify-between items-center'>
+                  <span className='text-gray-700'>Current Annual Cost:</span>
+                  <span className='font-semibold'>${currentCost.toLocaleString()}</span>
                 </div>
-                <p className='text-gray-600 text-sm'>
-                  Expected return on investment over {timeframe} months
-                </p>
+                <div className='flex justify-between items-center'>
+                  <span className='text-gray-700'>Expected Annual Savings:</span>
+>>>>>>> 25adb2f5c6bac8e2e9c4ea63f8e65ad0a7ecbbec
+                  <span className='font-semibold text-green-600'>
+                    ${((currentCost * efficiencyGain) / 100).toLocaleString()}
+                  </span>
+                </div>
+<<<<<<< HEAD
+                <div className='flex justify-between items-center p-4 bg-white rounded-lg shadow-sm'>
+                  <span className='text-gray-700'>Total Savings ({timeframe} months):</span>
+                  <span className='font-semibold text-green-600'>
+                    ${((currentCost * efficiencyGain * timeframe) / 1200).toLocaleString()}
+                  </span>
+                </div>
+                <div className='flex justify-between items-center p-4 bg-white rounded-lg shadow-sm'>
+                  <span className='text-gray-700'>Net Profit:</span>
+                  <span className='font-semibold text-blue-600'>
+                    ${(((currentCost * efficiencyGain * timeframe) / 1200) - currentCost).toLocaleString()}
+                  </span>
+=======
+                <div className='flex justify-between items-center'>
+                  <span className='text-gray-700'>Total Savings ({timeframe} months):</span>
+                  <span className='font-semibold text-green-600'>
+                    ${(((currentCost * efficiencyGain) / 100) * (timeframe / 12)).toLocaleString()}
+                  </span>
+                </div>
+                <div className='border-t pt-4'>
+                  <div className='flex justify-between items-center'>
+                    <span className='text-lg font-semibold text-gray-900'>ROI:</span>
+                    <span className={`text-2xl font-bold ${roi > 0 ? 'text-green-600' : 'text-red-600'}`}>
+                      {roi.toFixed(1)}%
+                    </span>
+                  </div>
+>>>>>>> 25adb2f5c6bac8e2e9c4ea63f8e65ad0a7ecbbec
+                </div>
+              </div>
+              
+              <div className='mt-6 text-center'>
+<<<<<<< HEAD
+                <button className='bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors'>
+=======
+                <button className='bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors'>
+>>>>>>> 25adb2f5c6bac8e2e9c4ea63f8e65ad0a7ecbbec
+                  Get Detailed Analysis
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   );
 };
 
 export default InteractiveAIROICalculator;
+=======
+  )
+}
+
+export default InteractiveAIROICalculator
+>>>>>>> 25adb2f5c6bac8e2e9c4ea63f8e65ad0a7ecbbec

@@ -3,47 +3,49 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const APIPage: React.FC = () => {
-  return (
-    <>
 
+const ApiPage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              API
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional API services by Zion Tech Group. Advanced AI and IT solutions for your business.
-            </p>
+      <main>
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Api</h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Advanced AI solutions for modern businesses.</p>
           </div>
+        </section>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
-              <h2 className="text-2xl font-bold text-white mb-4">Our Services</h2>
-              <p className="text-gray-300 mb-6">
-                We provide comprehensive API solutions tailored to your business needs.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-white/5 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">Service 1</h3>
-                  <p className="text-gray-300">Description of service 1</p>
-                </div>
-                <div className="bg-white/5 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">Service 2</h3>
-                  <p className="text-gray-300">Description of service 2</p>
-                </div>
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Features</h2>
+              <p className="text-xl text-gray-300">Advanced AI solutions</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-4">AI-Powered</h3>
+                <p className="text-gray-300">Leverage artificial intelligence for enhanced performance and insights.</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-4">Scalable</h3>
+                <p className="text-gray-300">Built to scale with your business needs and growth.</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-4">Secure</h3>
+                <p className="text-gray-300">Enterprise-grade security and compliance features.</p>
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </main>
 
       <Footer />
-    </>
+    </div>
   );
 };
 
-export default APIPage;
+export default ApiPage;

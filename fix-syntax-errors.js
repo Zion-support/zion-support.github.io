@@ -56,6 +56,7 @@ function fixSyntaxErrors(filePath) {
     console.log(`Fixed syntax errors in: ${filePath}`);
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
 }
 

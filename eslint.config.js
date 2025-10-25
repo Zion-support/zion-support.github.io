@@ -128,7 +128,7 @@ export default [
         'warn',
         {
           allowConstantExport: true, 
-          allowExportNames: ['metadata', 'useAnalytics', 'AnalyticsProvider'] 
+          allowExportNames: ['metadata', 'viewport', 'useAnalytics', 'AnalyticsProvider'] 
         }
       ],
       '@typescript-eslint/no-unused-vars': ['error', { 
@@ -148,6 +148,12 @@ export default [
       'react/no-unescaped-entities': 'off',
       'react/react-in-jsx-scope': 'off',
     },
+  },
+  {
+    files: ['**/AnalyticsProvider.tsx'],
+    rules: {
+      'react-refresh/only-export-components': 'off'
+    }
   },
   {
     files: ['**/*.test.{js,jsx,ts,tsx}', '**/__tests__/**/*.{js,jsx,ts,tsx}', '**/setupTests.{js,ts,jsx,tsx}', '**/jest.setup.js'],

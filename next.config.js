@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Disable static generation completely
-  output: 'export',
+  output: 'standalone',
   trailingSlash: true,
   distDir: 'dist',
   images: {
@@ -23,6 +23,14 @@ const nextConfig = {
   },
   typescript: {
     ignoreBuildErrors: true,
+  },
+  
+  // Add webpack configuration to handle react-helmet-async
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      config.externals = [...(config.externals || []), 'react-helmet-async'];
+    }
+    return config;
   },
 }
 
