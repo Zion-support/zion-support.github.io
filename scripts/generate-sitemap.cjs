@@ -1,57 +1,55 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
-// Generate sitemap for the website
+// Simple sitemap generator
 const generateSitemap = () => {
-  const baseUrl = 'https://ziontechgroup.com';
+  const baseUrl = "https://ziontechgroup.com";
   const pages = [
-    '',
-    '/about',
-    '/services',
-    '/pricing',
-    '/blog',
-    '/case-studies',
-    '/careers',
-    '/partners',
-    '/support',
-    '/faq',
-    '/demo',
-    '/consultation',
-    '/contact',
-    '/micro-saas',
-    // IT Services
-    '/security-monitoring',
-    '/penetration-testing',
-    '/data-analytics',
-    '/process-automation',
-    // Micro SAAS Services
-    '/security-monitoring-suite',
-    '/cloud-infrastructure-manager',
-    '/email-marketing-automation',
-    '/project-management-pro',
-    '/ecommerce-analytics-pro',
-    '/ai-recruitment-assistant',
-    '/medical-records-manager',
-    '/ai-accounting-assistant',
-    '/property-management-ai',
-    '/legal-document-manager',
-    '/online-learning-platform',
-    '/supply-chain-optimizer'
+    "",
+    "/about",
+    "/services",
+    "/ai-services",
+    "/ai-solutions",
+    "/it-services",
+    "/cloud-infrastructure",
+    "/digital-transformation",
+    "/5g-solutions",
+    "/micro-saas-solutions",
+    "/ai-content-generator",
+    "/data-analytics",
+    "/web-development",
+    "/mobile-development",
+    "/database-management",
+    "/network-infrastructure",
+    "/pricing",
+    "/case-studies",
+    "/blog",
+    "/team",
+    "/careers",
+    "/partnerships",
+    "/contact",
+    "/help",
+    "/api-docs",
+    "/privacy",
+    "/terms",
+    "/cookies",
   ];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${pages.map(page => `  <url>
+${pages
+  .map(
+    (page) => `  <url>
     <loc>${baseUrl}${page}</loc>
-    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>${page === '' ? '1.0' : '0.8'}</priority>
-  </url>`).join('\n')}
+    <priority>${page === "" ? "1.0" : "0.8"}</priority>
+  </url>`,
+  )
+  .join("\n")}
 </urlset>`;
 
-  const sitemapPath = path.join(__dirname, '..', 'public', 'sitemap.xml');
-  fs.writeFileSync(sitemapPath, sitemap);
-  console.log('Sitemap generated successfully');
+  fs.writeFileSync(path.join(__dirname, "../public/sitemap.xml"), sitemap);
+  console.log("Sitemap generated successfully");
 };
 
 generateSitemap();

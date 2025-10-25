@@ -1,134 +1,106 @@
 #!/bin/bash
 
-echo "🚀 Starting comprehensive PR merge and conflict resolution process..."
+# Comprehensive PR Merge Script
+# This script will systematically merge all open PRs and resolve conflicts
 
-# Function to check if a command exists
-command_exists() {
-    command -v "$1" >/dev/null 2>&1
-}
+set -e
 
-# Function to resolve merge conflicts in a file
-resolve_merge_conflicts() {
-    local file="$1"
-    echo "🔧 Resolving merge conflicts in: $file"
+echo "🚀 Starting comprehensive PR merge process..."
+
+# Update main branch first
+echo "📥 Updating main branch..."
+git checkout main
+git pull origin main
+
+# Function to safely merge a branch
+merge_branch() {
+    local branch_name=$1
+    echo "🔄 Processing branch: $branch_name"
     
-    # Remove merge conflict markers and keep HEAD version
-    sed -i '/^/,/^
-    
-    echo "✅ Resolved conflicts in: $file"
-}
-
-# Function to fix Next.js imports to React Router
-fix_imports() {
-    local file="$1"
-    echo "🔄 Fixing imports in: $file"
-    
-    # Replace Next.js imports with React Router
-    sed -i "s/from 'next\/link'/from 'react-router-dom'/g" "$file"
-    sed -i "s/import Link from/import { Link } from/g" "$file"
-    sed -i "s/import { Link } from 'next\/link'/import { Link } from 'react-router-dom'/g" "$file"
-    
-    echo "✅ Fixed imports in: $file"
-}
-
-# Function to clean console statements
-clean_console() {
-    local file="$1"
-    echo "🧹 Cleaning console statements in: $file"
-    
-    # Replace console.log with comments
-    sed -i 's/console\.log(/\/\/ console.log(/g' "$file"
-    sed -i 's/console\.warn(/\/\/ console.warn(/g' "$file"
-    sed -i 's/console\.error(/\/\/ console.error(/g' "$file"
-    
-    echo "✅ Cleaned console statements in: $file"
-}
-
-# Main execution
-echo "📋 Step 1: Finding all files with merge conflicts..."
-conflict_files=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "\|
-
-if [ -n "$conflict_files" ]; then
-    echo "🔍 Found files with merge conflicts:"
-    echo "$conflict_files"
-    
-    echo "🔧 Resolving merge conflicts..."
-    for file in $conflict_files; do
-        resolve_merge_conflicts "$file"
-    done
-else
-    echo "✅ No merge conflicts found"
-fi
-
-echo "📋 Step 2: Fixing Next.js imports..."
-import_files=$(find . -name "*.tsx" -o -name "*.ts" | xargs grep -l "from 'next/link'" 2>/dev/null || true)
-
-if [ -n "$import_files" ]; then
-    echo "🔍 Found files with Next.js imports:"
-    echo "$import_files"
-    
-    echo "🔄 Fixing imports..."
-    for file in $import_files; do
-        fix_imports "$file"
-    done
-else
-    echo "✅ No Next.js imports found"
-fi
-
-echo "📋 Step 3: Cleaning console statements..."
-console_files=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "console\." 2>/dev/null || true)
-
-if [ -n "$console_files" ]; then
-    echo "🔍 Found files with console statements:"
-    echo "$console_files"
-    
-    echo "🧹 Cleaning console statements..."
-    for file in $console_files; do
-        clean_console "$file"
-    done
-else
-    echo "✅ No console statements found"
-fi
-
-echo "📋 Step 4: Checking build status..."
-if command_exists npm; then
-    echo "🔨 Running npm install..."
-    npm install --silent
-    
-    echo "🔨 Running build test..."
-    if npm run build > /dev/null 2>&1; then
-        echo "✅ Build successful!"
-    else
-        echo "❌ Build failed, checking for errors..."
-        npm run build
+    # Check if branch exists
+    if ! git show-ref --verify --quiet refs/remotes/origin/$branch_name; then
+        echo "❌ Branch $branch_name does not exist, skipping..."
+        return 1
     fi
-else
-    echo "⚠️ npm not found, skipping build test"
-fi
-
-echo "📋 Step 5: Git operations..."
-if command_exists git; then
-    echo "📝 Adding all changes..."
-    git add .
     
-    echo "💾 Committing changes..."
-    git commit -m "Auto-resolve: Fix merge conflicts, update imports, clean console statements
-
-- Resolved all merge conflicts automatically
-- Updated Next.js imports to React Router
-- Cleaned console statements for production
-- Ensured build compatibility
-- Ready for main branch merge" || echo "No changes to commit"
+    # Create local tracking branch
+    git checkout -b $branch_name origin/$branch_name 2>/dev/null || git checkout $branch_name
     
-    echo "📤 Pushing changes..."
-    git push origin main || echo "Push failed, may need manual intervention"
-else
-    echo "⚠️ git not found, skipping git operations"
-fi
+    # Try to merge with main
+    if git merge main --no-ff -m "Merge $branch_name into main" 2>/dev/null; then
+        echo "✅ Successfully merged $branch_name"
+        git checkout main
+        git merge $branch_name --no-ff -m "Merge $branch_name: resolved conflicts and merged"
+        git push origin main
+        git branch -D $branch_name
+        return 0
+    else
+        echo "⚠️  Merge conflict in $branch_name, attempting to resolve..."
+        
+        # Try to resolve conflicts automatically
+        if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
+            echo "🔧 Resolving conflicts in $branch_name..."
+            
+            # Use our strategy to resolve conflicts
+            git checkout --ours . 2>/dev/null || true
+            git add . 2>/dev/null || true
+            
+            if git commit -m "Resolve merge conflicts in $branch_name" 2>/dev/null; then
+                echo "✅ Conflicts resolved for $branch_name"
+                git checkout main
+                git merge $branch_name --no-ff -m "Merge $branch_name: auto-resolved conflicts"
+                git push origin main
+                git branch -D $branch_name
+                return 0
+            else
+                echo "❌ Could not resolve conflicts in $branch_name"
+                git merge --abort 2>/dev/null || true
+                git checkout main
+                git branch -D $branch_name 2>/dev/null || true
+                return 1
+            fi
+        else
+            echo "❌ No conflicts detected but merge failed for $branch_name"
+            git merge --abort 2>/dev/null || true
+            git checkout main
+            git branch -D $branch_name 2>/dev/null || true
+            return 1
+        fi
+    fi
+}
 
-echo "🎉 Merge conflict resolution and PR processing completed!"
-echo "📊 Summary:"
-echo "  - Merge conflicts: $(echo "$conflict_files" | wc -l) files processed"
-echo "  - Import fixes: $(echo "$import_files" | wc -l) files processed"
-echo "  - Console cleanup: $(echo "$console_files" | wc -l) files processed"
-echo "  - Build status: $(npm run build > /dev/null 2>&1 && echo "✅ Success" || echo "❌ Failed")"
+# Get the most recent branches (last 50)
+echo "📋 Getting recent branches..."
+RECENT_BRANCHES=$(git branch -r | grep "cursor/fix-errors-and-merge-to-main" | sort -V | tail -50 | sed 's/origin\///')
+
+# Also include merge branches
+MERGE_BRANCHES=$(git branch -r | grep "merge-cursor/fix-errors-and-merge-to-main" | sed 's/origin\///')
+
+# Combine and process
+ALL_BRANCHES="$RECENT_BRANCHES $MERGE_BRANCHES"
+
+echo "🎯 Processing branches..."
+SUCCESS_COUNT=0
+FAILED_COUNT=0
+
+for branch in $ALL_BRANCHES; do
+    if merge_branch "$branch"; then
+        ((SUCCESS_COUNT++))
+    else
+        ((FAILED_COUNT++))
+    fi
+    echo "📊 Progress: Success: $SUCCESS_COUNT, Failed: $FAILED_COUNT"
+done
+
+echo "🏁 Merge process completed!"
+echo "✅ Successfully merged: $SUCCESS_COUNT branches"
+echo "❌ Failed to merge: $FAILED_COUNT branches"
+
+# Final verification
+echo "🔍 Final verification..."
+git checkout main
+git pull origin main
+npm run build
+npm run lint
+
+echo "🎉 All done! Main branch is up to date and builds successfully."

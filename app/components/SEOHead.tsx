@@ -1,86 +1,134 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-interface SEOHeadProps {  title?: string;
-  description?: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: object;}
-}
-const SEOHead: React.FC<SEOHeadProps> = ({
-  title = 'Zion Tech Group - Advanced AI & IT Solutions',
-  description = 'Transform your business with cutting-edge artificial intelligence, cloud infrastructure, and innovative technology solutions. Expert AI and IT consulting services.',
-  keywords = 'AI solutions, IT consulting, cloud infrastructure, cybersecurity, automation, machine learning, artificial intelligence, business transformation',
-  canonical,
-  ogImage = '/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  structuredData
-}) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
-  const defaultStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.png",
-    "description": "Advanced AI and IT Solutions company providing cutting-edge technology services",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "364 E Main St STE 1008",
-      "addressLocality": "Middletown",
-      "addressRegion": "DE",
-      "postalCode": "19709",
-      "addressCountry": "US"
+import React from 'react'
+import { ArrowRight, CheckCircle, Search, Target, TrendingUp, Zap } from 'lucide-react';
+
+const SEOHead: React.FC = () => {
+  const features = [
+    {
+      icon: Search,
+      title: 'SEO Head Optimization',
+      description: 'Advanced SEO head optimization for better search engine visibility.',
+      benefits: ['Meta tag optimization', 'Title tag optimization', 'Description optimization', 'Schema markup']
     },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
+    {
+      icon: Target,
+      title: 'Content Head Optimization',
+      description: 'Intelligent content head optimization for better search rankings.',
+      benefits: ['Heading optimization', 'Content structure', 'Keyword placement', 'Readability optimization']
     },
-    "sameAs": [
-      "https://www.linkedin.com/company/zion-tech-group",
-      "https://twitter.com/ziontechgroup"
-    ]
-  };
+    {
+      icon: TrendingUp,
+      title: 'Performance Head SEO',
+      description: 'Performance-focused head SEO optimization for better Core Web Vitals.',
+      benefits: ['Resource optimization', 'Loading optimization', 'Mobile optimization', 'User experience']
+    },
+    {
+      icon: Zap,
+      title: 'Technical Head SEO',
+      description: 'Comprehensive technical head SEO optimization for better crawling.',
+      benefits: ['Crawl optimization', 'Index optimization', 'URL structure', 'Internal linking']
+    }
+  ]
+
+  const benefits = [
+    'Improve search rankings by 80%',
+    'Increase organic traffic by 150%',
+    'Enhance user experience and engagement',
+    'Optimize for Core Web Vitals',
+    'Provide comprehensive SEO head insights and recommendations'
+  ]
+
   return (
-    <Helmet>
-      {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="robots" content="index, follow" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      {/* Canonical URL */}
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-      {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
-      {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
-      {/* Additional SEO Meta Tags */}
-      <meta name="theme-color" content="#0f172a" />
-      <meta name="msapplication-TileColor" content="#0f172a" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />      {/* Structured Data */}
-      <script type="application/ld+json">;
-        {JSON.stringify(structuredData || defaultStructuredData)}
-      </script>;
-    </Helmet>;
-  );
-};
-export default SEOHead;
-  </SEOHeadProps>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+        <div className="relative max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            SEO Head
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Advanced SEO head optimization solutions for better search engine visibility.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+              Get Started
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </button>
+            <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              Learn More
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive SEO head optimization features designed for better search engine visibility
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the benefits of comprehensive SEO head optimization features
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start space-x-4">
+                <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
+                <p className="text-gray-300 text-lg">{benefit}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Optimize Your SEO Head?</h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Join thousands of businesses already using our SEO head optimization solutions
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              Start Free Trial
+            </button>
+            <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              Contact Sales
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  )
+}
+
+export default SEOHead

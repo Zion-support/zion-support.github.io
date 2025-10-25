@@ -1,87 +1,134 @@
-import React from 'react';
-import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe } from 'lucide-react';
+import React from 'react'
+import { ArrowRight, Brain, Cloud, Shield, Zap, CheckCircle } from 'lucide-react';
+
 const EnhancedServicesShowcase: React.FC = () => {
   const services = [
     {
-      title: 'AI Solutions',
-      description: 'Transform your business with cutting-edge artificial intelligence',
       icon: Brain,
-      color: 'text-purple-400',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-      stats: '300% ROI'
+      title: 'AI Solutions',
+      description: 'Advanced AI solutions for business automation and intelligence.',
+      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
     },
     {
-      title: 'IT Infrastructure',
-      description: 'Build and maintain robust technology foundations',
       icon: Cloud,
-      color: 'text-blue-400',
-      features: ['Cloud Migration', 'Server Management', 'Network Security', 'Data Backup'],
-      stats: '99.9% Uptime'
+      title: 'Cloud Services',
+      description: 'Comprehensive cloud services for scalable and reliable infrastructure.',
+      features: ['Cloud Migration', 'Infrastructure as Code', 'DevOps Automation', 'Monitoring & Analytics']
     },
     {
-      title: 'Cybersecurity',
-      description: 'Protect your business with enterprise-grade security',
       icon: Shield,
-      color: 'text-green-400',
-      features: ['Threat Detection', 'Security Audits', 'Compliance', 'Incident Response'],
-      stats: 'Zero Breaches'
+      title: 'Security Solutions',
+      description: 'Enterprise-grade security solutions to protect your business.',
+      features: ['Cybersecurity', 'Data Protection', 'Compliance', 'Risk Assessment']
     },
     {
-      title: 'Automation',
-      description: 'Streamline processes with intelligent automation',
       icon: Zap,
-      color: 'text-yellow-400',
-      features: ['Workflow Automation', 'Process Optimization', 'Smart Scheduling', 'Task Management'],
-      stats: '95% Efficiency'
+      title: 'Performance Optimization',
+      description: 'Performance optimization services for better user experience.',
+      features: ['Speed Optimization', 'Resource Optimization', 'Caching Strategies', 'Performance Monitoring']
     }
-  ];
+  ]
+
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ]
+
   return (
-    <section className="py-16">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse">
-            Our Core Services;
-  </
-          <p className="text-xl text-cyan-400 max-w-3xl mx-auto">
-            Comprehensive AI and IT solutions designed to transform your business and drive innovation;
-  </
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+        <div className="relative max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            Enhanced Services Showcase
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Comprehensive showcase of our advanced technology services and solutions.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+              Get Started
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </button>
+            <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              Learn More
+            </button>
+          </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service, index) => (</div>
-            <div key={index} className="cyber-card hologram-card p-6 group hover:scale-105 transition-all duration-300">
-              <div className="flex items-center mb-4">
-                <service.icon className={`w-12 h-12 ${service.color} mr-4`} />
-                <div></div>
-                  <h3 className="text-xl font-bold text-white">{service.title}</h3>
-                  <div className="text-sm text-cyan-400 font-semibold">{service.stats}</div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Our Services</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive technology services designed to transform your business
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {services.map((service, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <service.icon className="h-12 w-12 text-emerald-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                <p className="text-gray-300 mb-4">{service.description}</p>
+                <ul className="space-y-2">
+                  {service.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <p className="text-gray-300 mb-4">{service.description}</p>
-              <ul className="space-y-2 mb-6">
-                {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center text-sm text-gray-400">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />                    {feature}
-                  </li>;
-                ))}
-              </ul>
-              <a
-                href="/services"
-                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium group-hover:translate-x-1 transition-transform">
-                Learn More <ArrowRight className="w-4 h-4 ml-2" />
-              </a>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-        <div className="text-center mt-12">
-          <a
-            href="/services"
-            className="cyber-button inline-flex items-center">
-            View All Services
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </a>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Services</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the benefits of our comprehensive technology services
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start space-x-4">
+                <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
+                <p className="text-gray-300 text-lg">{benefit}</p>
+              </div>
+            ))}
+          </div>
         </div>
-    </section>
-  );
-};
-export default EnhancedServicesShowcase;
-  </p>
-  </h2>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Join thousands of businesses already using our technology services
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              Start Free Trial
+            </button>
+            <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              Contact Sales
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  )
+}
+
+export default EnhancedServicesShowcase

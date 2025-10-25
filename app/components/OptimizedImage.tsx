@@ -1,115 +1,138 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import React from 'react'
+import { ArrowRight, CheckCircle, Image, Zap, Target, TrendingUp } from 'lucide-react';
+
+interface OptimizedImageProps {
+  className?: string
+}
+
+const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {
+  const features = [
+    {
+      icon: Image,
+      title: 'Image Optimization',
+      description: 'Advanced image optimization techniques for better performance and quality.',
+      benefits: ['Format optimization', 'Size reduction', 'Quality enhancement', 'Lazy loading']
+    },
+    {
+      icon: Zap,
+      title: 'Performance Optimization',
+      description: 'Performance-focused image optimization for better Core Web Vitals.',
+      benefits: ['Speed optimization', 'Resource optimization', 'Caching strategies', 'CDN integration']
+    },
+    {
+      icon: Target,
+      title: 'Smart Compression',
+      description: 'Intelligent image compression that maintains quality while reducing file size.',
+      benefits: ['Lossless compression', 'Quality preservation', 'Size reduction', 'Format conversion']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Analytics & Monitoring',
+      description: 'Comprehensive image performance analytics and monitoring.',
+      benefits: ['Performance metrics', 'Usage analytics', 'Optimization tracking', 'Quality monitoring']
+    }
+  ]
+
+  const benefits = [
+    'Improve page load speed by 40%',
+    'Reduce bandwidth usage by 60%',
+    'Enhance user experience with optimized images',
+    'Optimize for Core Web Vitals',
+    'Provide better SEO performance'
+  ]
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>OptimizedImage | Zion Tech Group</title>
-        <meta name="description" content="Professional OptimizedImage services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="OptimizedImage, AI solutions, IT services, Zion Tech Group, optimizedimage" />
-      </Helmet>
+    <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900 ${className}`}>
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                OptimizedImage;
-  </
-              <br />
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced optimizedimage solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More;
-  </
-            </div>
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+        <div className="relative max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            Optimized Image
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Advanced optimized image solutions for better performance and user experience.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+              Get Started
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </button>
+            <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              Learn More
+            </button>
           </div>
         </div>
       </section>
+
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our OptimizedImage?
-            </h2>
+            <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our optimizedimage solutions deliver unmatched performance, security, and scalability.
+              Comprehensive optimized image features designed for optimal performance
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
         </div>
       </section>
+
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+      <section className="py-20 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits;
-  </
+            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our optimizedimage solutions for your business.
+              Experience the benefits of comprehensive optimized image features
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+              <div key={index} className="flex items-start space-x-4">
+                <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
+
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your optimizedimage needs and get a customized solution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now;
-  </
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us;
-  </
-            </div>
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Optimize Your Images?</h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Join thousands of businesses already using our optimized image solutions
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              Start Free Trial
+            </button>
+            <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              Contact Sales
+            </button>
           </div>
         </div>
       </section>
     </div>
-  );
-};
-export default OptimizedImagePage;
-  </button>
-  </button>
-  </h2>
-  </button>
-  </span>
+  )
+}
+
+export default OptimizedImage

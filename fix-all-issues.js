@@ -1,133 +1,123 @@
-#!/usr/bin/env node;
-import fs from 'fs';
-import path from 'path';
-import { execSync } from 'child_process';
-import { fileURLToPath } from 'url';
+const fs = require('fs');
+const path = require('path');
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Function to fix a specific file;
-function fixFile(filePath) {
+// Function to fix all issues in a page file
+function fixPageFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
-    
-    // Remove duplicate function declarations;
-    content = content.replace(/const\s+(\w+)\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{/g, (match, name) => {
-      return `const ${name}: React.FC = () => {`;
-function fixFile(filePath) {/* TODO: Fix JSX expression */}
-    content = content.replace(/const\s+(\w+)\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{/* TODO: Fix JSX expression */}
-      return `const ${name}: React.FC = () => {/* TODO: Fix JSX expression */}
+    let modified = false;
+
+    // Get the directory name to create proper component name
+    const dirName = path.basename(path.dirname(filePath));
+    const componentName = dirName.split('-').map(word => 
+      word.charAt(0).toUpperCase() + word.slice(1)
+    ).join('') + 'Page';
+
+    // Fix component names
+    if (content.includes('const PagePage: React.FC = () => {')) {
+      content = content.replace(/const PagePage: React.FC = \(\) => {/g, `const ${componentName}: React.FC = () => {`);
+      content = content.replace(/export default PagePage;/g, `export default ${componentName};`);
+      modified = true;
+    }
+
+    // Fix any remaining generic names
+    content = content.replace(/const (\w+Page): React.FC = \(\) => {/g, (match, name) => {
+      if (name === 'PagePage' || name.includes('PagePage')) {
+        return `const ${componentName}: React.FC = () => {`;
+      }
+      return match;
     });
-    
-    content = content.replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*=\s*\(\)\s*=>\s*{/* TODO: Fix JSX expression */}`
-      return `const ${name} = () => {/* TODO: Fix JSX expression */}
+
+    content = content.replace(/export default (\w+Page);/g, (match, name) => {
+      if (name === 'PagePage' || name.includes('PagePage')) {
+        return `export default ${componentName};`;
+      }
+      return match;
     });
+
+    // Fix icon objects that might cause serialization issues
+    // Replace complex icon objects with simple references
+    content = content.replace(/icon: <([A-Z][a-zA-Z0-9]+) className="[^"]*" \/>/g, 'icon: $1');
     
-    // Fix missing closing braces;
-    content = content.replace(/(\w+)\s*=\s*\(\)\s*=>\s*{([\s\S]*?)(?=\n\s*const|\n\s*export|\n\s*$)/g, (match, name, body) => {
-      const lines = body.split('\n');
-      let openBraces = 0;
-      let closeBraces = 0;
+    // Fix any remaining complex icon usage
+    content = content.replace(/<([A-Z][a-zA-Z0-9]+) className="[^"]*" \/>/g, (match, iconName) => {
+      // Only replace if it's in an icon context
+      if (match.includes('className=')) {
+        return `<${iconName} className="w-8 h-8" />`;
+      }
+      return match;
+    });
+
+    // Fix 'use client' directive issues with Helmet
+    if (content.includes("'use client'") && content.includes('react-helmet-async')) {
+      content = content.replace(/import { Helmet } from 'react-helmet-async';\n?/g, '');
+      content = content.replace(/<Helmet>[\s\S]*?<\/Helmet>/g, '');
+      modified = true;
+    }
+
+    // Fix Link components using 'to' instead of 'href'
+    if (content.includes('to=')) {
+      content = content.replace(/to=/g, 'href=');
+      modified = true;
+    }
+
+    // Add missing icon imports
+    const commonIcons = [
+      'Send', 'BarChart3', 'Shield', 'Target', 'Zap', 'Globe', 'DollarSign', 
+      'Clock', 'Star', 'Activity', 'Lock', 'FileText', 'CreditCard', 
+      'Database', 'Building2', 'Sparkles', 'PieChart', 'CheckCircle'
+    ];
+    
+    const existingImports = content.match(/import {[^}]+} from 'lucide-react'/);
+    if (existingImports) {
+      const currentIcons = existingImports[0].match(/[A-Z][a-zA-Z0-9]+/g) || [];
+      const missingIcons = commonIcons.filter(icon => !currentIcons.includes(icon));
       
-      for (const line of lines) {
-        openBraces += (line.match(/{/g) || []).length;
-    content = content.replace(/(\w+)\s*=\s*\(\)\s*=>\s*{/* TODO: Fix JSX expression */}
-        closeBraces += (line.match(/}/g) || []).length;
+      if (missingIcons.length > 0) {
+        const newImport = `import { ${currentIcons.join(', ')}, ${missingIcons.join(', ')} } from 'lucide-react'`;
+        content = content.replace(existingImports[0], newImport);
+        modified = true;
       }
-      
-      if (openBraces > closeBraces) {/* TODO: Fix JSX expression */}`
-        return `${name} = () => {${body}${'  '.repeat(missingBraces).replace(/  /g, '}\n')}`;
-      }
-      return match;
-    });
-    
-    // Fix missing semicolons;
-    content = content.replace(/(\w+)\s*=\s*\[[\s\S]*?\]\s*(?=\n\s*const|\n\s*export|\n\s*$)/g, (match) => {
-      if (!match.endsWith(';')) {
-        return match + ';';
-    content = content.replace(/(\w+)\s*=\s*\[[\s\S]*?\]\s*(?=\n\s*const|\n\s*export|\n\s*$)/g, (match) => {/* TODO: Fix JSX expression */}
-      }
-      return match;
-    });
-    
-    // Fix missing closing braces for JSX;
-    content = content.replace(/(<[^>]*>)([^<]*?)(?=\n\s*const|\n\s*export|\n\s*$)/g, (match, tag, body) => {
-      if (tag.includes('<div') && !match.includes('</div>')) {
-        return match + '</div>';
-    content = content.replace(/(<[^>]*>)([^<]*?)(?=\n\s*const|\n\s*export|\n\s*$)/g, (match, tag, body) => {/* TODO: Fix JSX expression */}
-      }
-      return match;
-    });
-    
-    // Only write if content changed;
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
+    }
+
+    if (modified) {
+      fs.writeFileSync(filePath, content);
       console.log(`Fixed: ${filePath}`);
-    if (content !== originalContent) {/* TODO: Fix JSX expression */}`
-  d: ${filePath}`);
       return true;
     }
     
     return false;
-  } catch (error) {/* TODO: Fix JSX expression */}`
-    console.error(`Error processing ${filePath}:`, error.message);
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Function to find all TypeScript/JavaScript files;
-function findFiles(dir) {
-  const files = [];
-  
-  function walkDir(currentPath) {
-    try {
-      const items = fs.readdirSync(currentPath);
-      
-      for (const item of items) {
-        const fullPath = path.join(currentPath, item);
-        const stat = fs.statSync(fullPath);
-        
-        if (stat.isDirectory()) {
-          if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
-            walkDir(fullPath);
-function findFiles(dir) {/* TODO: Fix JSX expression */}
-          }
-        } else if (stat.isFile()) {/* TODO: Fix JSX expression */}
-          }
-        }
+// Function to recursively fix all page files
+function fixAllPages(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
+
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+
+    if (stat.isDirectory()) {
+      if (file !== 'node_modules' && file !== '.next' && !file.startsWith('.')) {
+        fixedCount += fixAllPages(filePath);
       }
-    } catch (error) {
-      // Skip directories that can't be read;
-    } catch (error) {/* TODO: Fix JSX expression */}
+    } else if (file === 'page.tsx' || file === 'page.js') {
+      if (fixPageFile(filePath)) {
+        fixedCount++;
+      }
     }
   }
-  
-  walkDir(dir);
-  return files;
+
+  return fixedCount;
 }
 
-// Main execution;
-console.log('🔧 Fixing all remaining issues...');
-const srcDir = path.join(__dirname, 'src');
-const files = findFiles(srcDir);
-`
-console.log(`Found ${files.length} files to check`);
-
-let fixedCount = 0;
-for (const file of files) {/* TODO: Fix JSX expression */}
-  }
-}
-`
-console.log(`✅ Fixed issues in ${fixedCount} files`);
-
-// Run build to check if issues are resolved;
-console.log('\n🔍 Running build to check results...');
-try {/* TODO: Fix JSX expression */}
-  o: 'pipe' });
-  console.log('✅ Build successful!');
-} catch (error) {/* TODO: Fix JSX expression */}
-}
-
-console.log('\n🎉 Issue fixing complete!');`
+// Start fixing from the app directory
+const appDir = path.join(__dirname, 'app');
+console.log('Starting comprehensive fix...');
+const totalFixed = fixAllPages(appDir);
+console.log(`Fixed ${totalFixed} page files`);

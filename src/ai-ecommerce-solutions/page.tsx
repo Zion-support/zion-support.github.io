@@ -1,10 +1,14 @@
-import { Link } from 'react-router-dom';
-'use client';
+"use client";
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-          Contact Us</a></div></div>)
-  );
-};
-export default AiEcommerceSolutionsPage
-export default PagePage
+
+import { BarChart3 } from 'lucide-react'
+import { CheckCircle, Zap, Shield, Users, Helmet } from 'lucide-react'
+
+const AIEcommerceSolutionsPage: React.FC = () => {
+  const ecommerceServices = [
+        </div>
+      </div>
+    </div>
+  )
+}
+export default AIEcommerceSolutionsPage

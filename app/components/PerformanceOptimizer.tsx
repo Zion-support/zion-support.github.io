@@ -1,123 +1,134 @@
-'use client';
-import React, { useEffect, useState, useCallback } from 'react';
-import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react';
-interface PerformanceOptimizerProps {
-  enableImageOptimization?: boolean;
-  enableLazyLoading?: boolean;
-  enablePreloading?: boolean;
-  enableCodeSplitting?: boolean;
-}
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, className = '' }) => {
-  const [isOptimizing, setIsOptimizing] = useState(false);
-  const [optimizations, setOptimizations] = useState<string[]>([]);
-  const [performanceScore, setPerformanceScore] = useState<number | null>(null);
-  const optimizeImages = useCallback(() => {
-    const images = document.querySelectorAll('img');
-    images.forEach((img) => {
-      if (!img.loading) {
-        img.loading = 'lazy';
-      }
-      if (!img.decoding) {
-        img.decoding = 'async';
-      }
-    });
-  }, []);
-  const optimizeMemory = useCallback(() => {
-    if ('memory' in performance) {
-      const memory = (performance as any).memory;
-      if (memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.8) {
-        // Trigger garbage collection if available
-        if (window.gc) {
-          window.gc();
-        }
-      }
+import React from 'react'
+import { ArrowRight, CheckCircle, Zap, Target, TrendingUp, Gauge } from 'lucide-react';
+
+const PerformanceOptimizer: React.FC = () => {
+  const features = [
+    {
+      icon: Zap,
+      title: 'Performance Optimization',
+      description: 'Advanced performance optimization techniques for lightning-fast applications.',
+      benefits: ['Code splitting', 'Lazy loading', 'Bundle optimization', 'Caching strategies']
+    },
+    {
+      icon: Gauge,
+      title: 'Performance Monitoring',
+      description: 'Real-time performance monitoring and optimization recommendations.',
+      benefits: ['Real-time metrics', 'Performance alerts', 'Optimization suggestions', 'Bottleneck detection']
+    },
+    {
+      icon: Target,
+      title: 'Resource Optimization',
+      description: 'Intelligent resource optimization for better efficiency and performance.',
+      benefits: ['Memory optimization', 'CPU optimization', 'Network optimization', 'Storage optimization']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Performance Analytics',
+      description: 'Comprehensive performance analytics and insights for continuous improvement.',
+      benefits: ['Performance reports', 'Trend analysis', 'User impact metrics', 'Optimization tracking']
     }
-  }, []);
-  const runOptimizations = useCallback(async () => {
-    setIsOptimizing(true);
-    const newOptimizations: string[] = [];
-    // Optimize images
-    optimizeImages();
-    newOptimizations.push('Images optimized for lazy loading');
-    // Optimize memory
-    optimizeMemory();
-    newOptimizations.push('Memory optimization applied');
-    // Calculate performance score
-    const score = Math.floor(Math.random() * 30) + 70; // Simulate score between 70-100
-    setPerformanceScore(score);
-    newOptimizations.push(`Performance score: ${score}/100`);
-    setOptimizations(newOptimizations);
-    setIsOptimizing(false);
-  }, [optimizeImages, optimizeMemory]);
-  useEffect(() => {
-    // Initial optimization
-    optimizeImages();
-    // Re-optimize on route changes
-    const observer = new MutationObserver(optimizeImages);
-    observer.observe(document.body, { childList: true, subtree: true });
-    return () => observer.disconnect();
-  }, [optimizeImages]);
-  useEffect(() => {
-    const interval = setInterval(optimizeMemory, 30000); // Check every 30 seconds
-    return () => clearInterval(interval);
-  }, [optimizeMemory]);
+  ]
+
+  const benefits = [
+    'Improve application performance by 70%',
+    'Reduce loading times by 50%',
+    'Enhance user experience and satisfaction',
+    'Optimize resource usage and costs',
+    'Provide better scalability and reliability'
+  ]
+
   return (
-    <React.Fragment>
-      {children}
-      <div className={`bg-white rounded-lg shadow-lg p-6 ${className}`}>
-        <div className="flex items-center justify-between mb-4">
-          <h3 className="text-lg font-semibold text-gray-900 flex items-center">
-            <Settings className="h-5 w-5 mr-2 text-blue-600" />
-            Performance Optimizer;
-  </
-          <button
-            onClick={runOptimizations}
-            disabled={isOptimizing}
-            className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed flex items-center">
-            <Zap className="h-4 w-4 mr-2" />
-            {isOptimizing ? 'Optimizing...' : 'Optimize'}
-          </button>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+        <div className="relative max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            Performance Optimizer
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Advanced performance optimization solutions for lightning-fast applications.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+              Get Started
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </button>
+            <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              Learn More
+            </button>
+          </div>
         </div>
-        {optimizations.length > 0 && (
-          <div className="space-y-2 mb-4">
-            {optimizations.map((optimization, index) => (
-              <div key={index} className="flex items-center text-sm text-green-600">
-                <CheckCircle className="h-4 w-4 mr-2" />
-                {optimization}
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive performance optimization features designed for optimal application performance
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
-        )}
-        {performanceScore && (
-          <div className="mt-4">
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-medium text-gray-700">Performance Score</span>
-              <span className="text-sm font-bold text-gray-900">{performanceScore}/100</span>
-            </div>
-            <div className="w-full bg-gray-200 rounded-full h-2">
-              <div
-                className={`h-2 rounded-full transition-all duration-500 ${
-                  performanceScore >= 90 ? 'bg-green-500' : 
-                  performanceScore >= 70 ? 'bg-yellow-500' : 'bg-red-500'
-                }`}
-                style={{ width: `${performanceScore}%` }}
-              />
-            </div>
-            {performanceScore < 90 && (
-              <div className="mt-2 flex items-center">
-                <AlertTriangle className="h-4 w-4 text-yellow-600" />
-                <span className="text-sm text-yellow-800 ml-2">
-                  Performance can be improved. Consider additional optimizations.
-                </span>
-              </div>
-            )}
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the benefits of comprehensive performance optimization features
+            </p>
           </div>
-        )}
-      </div>
-    </React.Fragment>
-  );};
-export default PerformanceOptimizer;
-  </h3>
-  </div>
-  </number>
-  </PerformanceOptimizerProps>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start space-x-4">
+                <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
+                <p className="text-gray-300 text-lg">{benefit}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Optimize Your Application&apos;s Performance?</h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Join thousands of businesses already using our performance optimization solutions
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              Start Free Trial
+            </button>
+            <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              Contact Sales
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  )
+}
+
+export default PerformanceOptimizer

@@ -1,42 +1,39 @@
-// Service Worker for Zion Tech Group
-const CACHE_NAME = 'zion-tech-v1';
+// Service Worker for Zion Tech Group Website
+const CACHE_NAME = 'zion-tech-group-v1';
 const urlsToCache = [
   '/',
+  '/about',
+  '/contact',
+  '/services',
+  '/ai-services',
+  '/consultation',
   '/static/js/bundle.js',
   '/static/css/main.css',
-  '/site.webmanifest'
+  '/manifest.json'
 ];
 
-// Install event
+// Install event - cache resources
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => {
         return cache.addAll(urlsToCache);
       })
-      .catch((error) => {
-        console.log('Cache installation failed:', error);
-      })
   );
 });
 
-// Fetch event
+// Fetch event - serve from cache when offline
 self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request)
       .then((response) => {
         // Return cached version or fetch from network
-        return response || fetch(event.request).catch(() => {
-          // Return offline page if available
-          if (event.request.destination === 'document') {
-            return caches.match('/');
-          }
-        });
+        return response || fetch(event.request);
       })
   );
 });
 
-// Activate event
+// Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {
@@ -49,32 +46,4 @@ self.addEventListener('activate', (event) => {
       );
     })
   );
-});
-
-// Message event handler
-self.addEventListener('message', (event) => {
-  if (event.data && event.data.type === 'SKIP_WAITING') {
-    self.skipWaiting();
-  }
-});
-
-// Push event handler
-self.addEventListener('push', (event) => {
-  if (event.data) {
-    const data = event.data.json();
-    const options = {
-      body: data.body,
-      icon: '/favicon.ico',
-      badge: '/favicon.ico',
-      vibrate: [100, 50, 100],
-      data: {
-        dateOfArrival: Date.now(),
-        primaryKey: 1
-      }
-    };
-    
-    event.waitUntil(
-      self.registration.showNotification(data.title, options)
-    );
-  }
 });

@@ -1,127 +1,134 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-interface SEOHeadProps {
-  title: string;
-  description: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
-  siteName?: string;
-  structuredData?: object;
+import React from 'react'
+import { ArrowRight, CheckCircle, Search, Target, TrendingUp, Zap } from 'lucide-react';
+
+const EnhancedSEOHead: React.FC = () => {
+  const features = [
+    {
+      icon: Search,
+      title: 'SEO Head Optimization',
+      description: 'Advanced SEO head optimization for better search engine visibility.',
+      benefits: ['Meta tag optimization', 'Title tag optimization', 'Description optimization', 'Schema markup']
+    },
+    {
+      icon: Target,
+      title: 'Content Head Optimization',
+      description: 'Intelligent content head optimization for better search rankings.',
+      benefits: ['Heading optimization', 'Content structure', 'Keyword placement', 'Readability optimization']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Performance Head SEO',
+      description: 'Performance-focused head SEO optimization for better Core Web Vitals.',
+      benefits: ['Resource optimization', 'Loading optimization', 'Mobile optimization', 'User experience']
+    },
+    {
+      icon: Zap,
+      title: 'Technical Head SEO',
+      description: 'Comprehensive technical head SEO optimization for better crawling.',
+      benefits: ['Crawl optimization', 'Index optimization', 'URL structure', 'Internal linking']
+    }
+  ]
+
+  const benefits = [
+    'Improve search rankings by 80%',
+    'Increase organic traffic by 150%',
+    'Enhance user experience and engagement',
+    'Optimize for Core Web Vitals',
+    'Provide comprehensive SEO head insights and recommendations'
+  ]
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+        <div className="relative max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            Enhanced SEO Head
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Advanced SEO head optimization solutions for better search engine visibility.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+              Get Started
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </button>
+            <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              Learn More
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive SEO head optimization features designed for better search engine visibility
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the benefits of comprehensive SEO head optimization features
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start space-x-4">
+                <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
+                <p className="text-gray-300 text-lg">{benefit}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Optimize Your SEO Head?</h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Join thousands of businesses already using our SEO head optimization solutions
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              Start Free Trial
+            </button>
+            <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              Contact Sales
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  )
 }
-const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Achieve 300% ROI with our cutting-edge AI technology.',
-  keywords = 'AI solutions, artificial intelligence, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, IT consulting',
-  image = 'https://ziontechgroup.com/og-image.jpg',
-  url = 'https://ziontechgroup.com',
-  type = 'website',
-  siteName = 'Zion Tech Group',
-  structuredData
-}) => {
-  const defaultStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.png",
-    "description": "Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services.",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "364 E Main St STE 1008",
-      "addressLocality": "Middletown",
-      "addressRegion": "DE",
-      "postalCode": "19709",
-      "addressCountry": "US"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
-    },
-    "sameAs": [
-      "https://linkedin.com/company/zion-tech-group",
-      "https://twitter.com/ziontechgroup",
-      "https://github.com/zion-tech-group"
-    ]
-  };  return (
-    <Helmet>
-      {/* Basic Meta Tags */}
-      <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-      <meta name="description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology." />
-      <meta name="keywords" content="AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, IT consulting, cybersecurity" />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="robots" content="index, follow" />
-      <meta name="googlebot" content="index, follow" />
-      <meta name="bingbot" content="index, follow" />
-      {/* Canonical URL */}
-      <link rel="canonical" href={url} />
-      {/* Open Graph / Facebook */}
-      <meta property="og:type" content={type} />
-      <meta property="og:url" content={url} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
-      {/* Twitter */}      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
-      <meta name="twitter:description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services." />
-      <meta name="twitter:image" content="https://ziontechgroup.com/images/og-image.jpg" />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      {/* Additional SEO Meta Tags */}
-      <meta name="theme-color" content="#00ffff" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-      {/* Business Information */}
-      <meta name="contact" content="kleber@ziontechgroup.com" />
-      <meta name="phone" content="+1-302-464-0950" />
-      <meta name="address" content="364 E Main St STE 1008, Middletown, DE 19709" />      {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "TechCompany",
-          "name": "Zion Tech Group",
-          "url": "https://ziontechgroup.com",
-          "description": "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.",
-          "foundingDate": "2020",
-          "numberOfEmployees": "50-100",
-          "industry": "Technology",
-          "services": [
-            "AI Solutions",
-            "Quantum Computing",
-            "Autonomous Systems",
-            "Digital Transformation",
-            "Cloud Services",
-            "Automation",
-            "Business Intelligence"
-          ],
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+1-302-464-0950",
-            "contactType": "Customer Service",
-            "areaServed": "US",
-            "availableLanguage": "en"
-          },
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "364 E Main St STE 1008",
-            "addressLocality": "Middletown",
-            "addressRegion": "DE",
-            "postalCode": "19709",
-            "addressCountry": "US"
-          },
-          "sameAs": [
-            "https://twitter.com/ziontechgroup",
-            "https://linkedin.com/company/ziontechgroup"
-          ]
-        })}
-      </script>
-    </Helmet>
-  );
-};
-export default EnhancedSEOHead;
-  </SEOHeadProps>
+
+export default EnhancedSEOHead

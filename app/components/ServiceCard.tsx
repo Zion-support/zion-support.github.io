@@ -1,64 +1,52 @@
-'use client';
-import React from 'react';
+import React from 'react'
 import { ArrowRight, CheckCircle } from 'lucide-react';
+
 interface ServiceCardProps {
-  title: string;
-  description: string;
-  features: string[];
-  price?: string;
-  popular?: boolean;
-  onSelect?: () => void;
-  className?: string;
+  title: string
+  description: string
+  icon: React.ComponentType<{ className?: string }>
+  features: string[]
+  price?: string
+  className?: string
 }
+
 const ServiceCard: React.FC<ServiceCardProps> = ({
   title,
   description,
+  icon: Icon,
   features,
   price,
-  popular = false,
-  onSelect,
   className = ''
 }) => {
   return (
-    <div className={`bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 group ${className} ${
-      popular ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : ''
-    }`}>
-      {popular && (
-        <div className="flex items-center gap-2 mb-4">
-          <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
-          <span className="text-purple-400 text-sm font-semibold">Most Popular</span>
-        </div>
-      )}
-      <div className="mb-4">
-        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
-          {title}
-        </h3>
-        <p className="text-gray-300 text-sm">{description}</p>
-      </div>
-      <div className="space-y-2 mb-6">
-        {features.map((feature, index) => (
-          <div key={index} className="flex items-center gap-2">
-            <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-            <span className="text-gray-300 text-sm">{feature}</span>
+    <div className={`bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-emerald-400/50 transition-all duration-300 group ${className}`}>
+      <div className="flex items-center justify-between mb-4">
+        <Icon className="h-12 w-12 text-emerald-400" />
+        {price && (
+          <div className="text-2xl font-bold text-white">
+            {price}
           </div>
-        ))}
+        )}
       </div>
-      {price && (
-        <div className="mb-6">
-          <div className="text-3xl font-bold text-white mb-1">{price}</div>
-          <div className="text-gray-400 text-sm">per month</div>
-        </div>
-      )}
-      {onSelect && (
-        <button
-          onClick={onSelect}
-          className="w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center gap-2 group">
-          Get Started
-          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-        </button>
-      )}
+      
+      <h3 className="text-xl font-semibold text-white mb-3">{title}</h3>
+      <p className="text-gray-300 mb-4">{description}</p>
+      
+      <ul className="space-y-2 mb-6">
+        {features.map((feature, index) => (
+          <li key={index} className="flex items-center text-sm text-gray-300">
+            <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
+            {feature}
+          </li>
+        ))}
+      </ul>
+      
+      <button className="w-full bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center group-hover:bg-emerald-500">
+        Learn More
+        <ArrowRight className="ml-2 h-4 w-4" />
+      </button>
     </div>
-  );
-};
-export default ServiceCard;
-  </ServiceCardProps>
+  )
+}
+
+export default ServiceCard

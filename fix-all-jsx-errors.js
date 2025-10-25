@@ -1,115 +1,90 @@
-#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
 
-import fs from 'fs';
-import path from 'path';
-import { execSync } from 'child_process';
-
-// Get all TSX files
-const tsxFiles = execSync('find . -name "*.tsx" -not -path "./node_modules/*" -not -path "./dist/*" | head -50', { encoding: 'utf8' })
-  .trim()
-  .split('\n')
-  .filter(file => file);
-
-console.log(`Found ${tsxFiles.length} TSX files to check`);
-
-function fixJSXErrors(content) {
-  let fixed = content;
-  
-  // Fix malformed closing tags - pattern: text followed by ; or < or > on new line
-  fixed = fixed.replace(/(\w+)\s*;\s*$/gm, '$1');
-  fixed = fixed.replace(/(\w+)\s*<\s*$/gm, '$1');
-  fixed = fixed.replace(/(\w+)\s*>\s*$/gm, '$1');
-  
-  // Fix broken button tags
-  fixed = fixed.replace(/<button([^>]*)>\s*([^<]+)\s*;\s*$/gm, '<button$1>$2</button>');
-  fixed = fixed.replace(/<button([^>]*)>\s*([^<]+)\s*<\s*$/gm, '<button$1>$2</button>');
-  fixed = fixed.replace(/<button([^>]*)>\s*([^<]+)\s*>\s*$/gm, '<button$1>$2</button>');
-  
-  // Fix broken heading tags
-  fixed = fixed.replace(/<(h[1-6])([^>]*)>\s*([^<]+)\s*;\s*$/gm, '<$1$2>$3</$1>');
-  fixed = fixed.replace(/<(h[1-6])([^>]*)>\s*([^<]+)\s*<\s*$/gm, '<$1$2>$3</$1>');
-  fixed = fixed.replace(/<(h[1-6])([^>]*)>\s*([^<]+)\s*>\s*$/gm, '<$1$2>$3</$1>');
-  
-  // Fix broken paragraph tags
-  fixed = fixed.replace(/<p([^>]*)>\s*([^<]+)\s*;\s*$/gm, '<p$1>$2</p>');
-  fixed = fixed.replace(/<p([^>]*)>\s*([^<]+)\s*<\s*$/gm, '<p$1>$2</p>');
-  fixed = fixed.replace(/<p([^>]*)>\s*([^<]+)\s*>\s*$/gm, '<p$1$2>$3</$1>');
-  
-  // Fix broken span tags
-  fixed = fixed.replace(/<span([^>]*)>\s*([^<]+)\s*;\s*$/gm, '<span$1>$2</span>');
-  fixed = fixed.replace(/<span([^>]*)>\s*([^<]+)\s*<\s*$/gm, '<span$1>$2</span>');
-  fixed = fixed.replace(/<span([^>]*)>\s*([^<]+)\s*>\s*$/gm, '<span$1>$2</span>');
-  
-  // Fix broken div tags
-  fixed = fixed.replace(/<div([^>]*)>\s*([^<]+)\s*;\s*$/gm, '<div$1>$2</div>');
-  fixed = fixed.replace(/<div([^>]*)>\s*([^<]+)\s*<\s*$/gm, '<div$1>$2</div>');
-  fixed = fixed.replace(/<div([^>]*)>\s*([^<]+)\s*>\s*$/gm, '<div$1>$2</div>');
-  
-  // Fix broken section tags
-  fixed = fixed.replace(/<section([^>]*)>\s*([^<]+)\s*;\s*$/gm, '<section$1>$2</section>');
-  fixed = fixed.replace(/<section([^>]*)>\s*([^<]+)\s*<\s*$/gm, '<section$1>$2</section>');
-  fixed = fixed.replace(/<section([^>]*)>\s*([^<]+)\s*>\s*$/gm, '<section$1>$2</section>');
-  
-  // Fix broken ul/li tags
-  fixed = fixed.replace(/<ul([^>]*)>\s*([^<]+)\s*;\s*$/gm, '<ul$1>$2</ul>');
-  fixed = fixed.replace(/<ul([^>]*)>\s*([^<]+)\s*<\s*$/gm, '<ul$1>$2</ul>');
-  fixed = fixed.replace(/<ul([^>]*)>\s*([^<]+)\s*>\s*$/gm, '<ul$1>$2</ul>');
-  
-  fixed = fixed.replace(/<li([^>]*)>\s*([^<]+)\s*;\s*$/gm, '<li$1>$2</li>');
-  fixed = fixed.replace(/<li([^>]*)>\s*([^<]+)\s*<\s*$/gm, '<li$1>$2</li>');
-  fixed = fixed.replace(/<li([^>]*)>\s*([^<]+)\s*>\s*$/gm, '<li$1>$2</li>');
-  
-  // Fix broken React.Fragment tags
-  fixed = fixed.replace(/<React\.Fragment>\s*([^<]+)\s*;\s*$/gm, '<React.Fragment>$1</React.Fragment>');
-  fixed = fixed.replace(/<React\.Fragment>\s*([^<]+)\s*<\s*$/gm, '<React.Fragment>$1</React.Fragment>');
-  fixed = fixed.replace(/<React\.Fragment>\s*([^<]+)\s*>\s*$/gm, '<React.Fragment>$1</React.Fragment>');
-  
-  // Fix broken JSX expressions
-  fixed = fixed.replace(/\{\s*>\s*\}/g, '>');
-  fixed = fixed.replace(/\{\s*<\s*\}/g, '<');
-  fixed = fixed.replace(/\{\s*\/\s*\}/g, '/');
-  
-  // Fix malformed className attributes
-  fixed = fixed.replace(/className=\{\s*>\s*\}/g, 'className=""');
-  fixed = fixed.replace(/className=\{\s*<\s*\}/g, 'className=""');
-  fixed = fixed.replace(/className=\{\s*\/\s*\}/g, 'className=""');
-  
-  // Fix broken string literals
-  fixed = fixed.replace(/=\{\s*>\s*\}/g, '=""');
-  fixed = fixed.replace(/=\{\s*<\s*\}/g, '=""');
-  fixed = fixed.replace(/=\{\s*\/\s*\}/g, '=""');
-  
-  // Fix orphaned closing tags
-  fixed = fixed.replace(/^\s*;\s*$/gm, '');
-  fixed = fixed.replace(/^\s*<\s*$/gm, '');
-  fixed = fixed.replace(/^\s*>\s*$/gm, '');
-  
-  return fixed;
-}
-
-let processedCount = 0;
-let errorCount = 0;
-
-for (const filePath of tsxFiles) {
+function fixFile(filePath) {
   try {
-    if (!fs.existsSync(filePath)) {
-      console.log(`File not found: ${filePath}`);
-      continue;
+    const fullPath = path.join(__dirname, filePath);
+    if (!fs.existsSync(fullPath)) {
+      return;
     }
-    
-    const originalContent = fs.readFileSync(filePath, 'utf8');
-    let fixedContent = fixJSXErrors(originalContent);
-    
-    // Only write if content changed
-    if (fixedContent !== originalContent) {
-      fs.writeFileSync(filePath, fixedContent, 'utf8');
+
+    let content = fs.readFileSync(fullPath, 'utf8');
+    let modified = false;
+
+    // Fix malformed JSX closing structure like </div>););
+    if (content.includes('););')) {
+      content = content.replace(/<\/div>\s*\);\s*\);/g, '\n    </div>\n  );\n}');
+      modified = true;
+    }
+
+    // Fix missing closing div tags and extra closing braces
+    if (content.includes('}\n}')) {
+      content = content.replace(/<\/div>\s*\);\s*}\s*}/g, '\n    </div>\n  );\n}');
+      modified = true;
+    }
+
+    // Fix extra closing div tags pattern
+    const extraDivPattern = /(\s*<\/div>\s*){2,}(\s*<\/div>\s*){2,}/g;
+    if (extraDivPattern.test(content)) {
+      content = content.replace(extraDivPattern, '\n    </div>\n  );');
+      modified = true;
+    }
+
+    // Fix incorrect closing tags
+    content = content.replace(/<\s*\/\s*>/g, '</div>');
+    if (content.includes('</>')) {
+      modified = true;
+    }
+
+    // Fix h1/h2/h3 tag mismatches
+    content = content.replace(/<h1([^>]*)>\s*([^<]*)\s*<\/h2>/g, '<h1$1>$2</h1>');
+    content = content.replace(/<h2([^>]*)>\s*([^<]*)\s*<\/h1>/g, '<h2$1>$2</h2>');
+    content = content.replace(/<h3([^>]*)>\s*([^<]*)\s*<\/h1>/g, '<h3$1>$2</h3>');
+
+    // Fix extra closing braces
+    content = content.replace(/}\s*}\s*$/g, '}');
+    if (content.match(/}\s*}\s*$/)) {
+      modified = true;
+    }
+
+    // Fix malformed JSX structure with missing opening tags
+    if (content.includes('    </div>\n  );\n}')) {
+      // This is already correct, no need to change
+    } else if (content.includes('</div>\n  );')) {
+      content = content.replace(/<\/div>\s*\);\s*}/g, '\n    </div>\n  );\n}');
+      modified = true;
+    }
+
+    if (modified) {
+      fs.writeFileSync(fullPath, content);
       console.log(`Fixed: ${filePath}`);
-      processedCount++;
     }
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    errorCount++;
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 
-console.log(`\nProcessed ${processedCount} files, ${errorCount} errors`);
+// Get all TypeScript/TSX files in the app directory
+function getAllTsxFiles(dir) {
+  const files = [];
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory()) {
+      files.push(...getAllTsxFiles(fullPath));
+    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+      files.push(fullPath.replace(__dirname + '/', ''));
+    }
+  }
+  
+  return files;
+}
+
+// Fix all TSX/TS files
+console.log('Starting comprehensive JSX error fixes...');
+const allFiles = getAllTsxFiles(path.join(__dirname, 'app'));
+allFiles.forEach(fixFile);
+console.log('Comprehensive JSX error fixes completed!');

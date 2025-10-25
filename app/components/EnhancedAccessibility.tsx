@@ -1,153 +1,134 @@
-'use client';
-import React, { useEffect } from 'react';
-const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  useEffect(() => {
-    // Add ARIA landmarks
-    const addLandmarks = () => {
-      const main = document.querySelector('main');
-      if (main && !main.getAttribute('role')) {
-        main.setAttribute('role', 'main');
-      }
-      const nav = document.querySelector('nav');
-      if (nav && !nav.getAttribute('role')) {
-        nav.setAttribute('role', 'navigation');
-      }
-      const footer = document.querySelector('footer');
-      if (footer && !footer.getAttribute('role')) {
-        footer.setAttribute('role', 'contentinfo');
-      }
-    };
-    // Add skip links
-    const addSkipLinks = () => {
-      const skipLink = document.createElement('a');
-      skipLink.href = '#main-content';
-      skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-600 text-white px-4 py-2 rounded-lg font-semibold z-50';
-      document.body.insertBefore(skipLink, document.body.firstChild);
-    };
-    // Enhance focus management
-    const enhanceFocusManagement = () => {
-      // Add focus indicators
-      const style = document.createElement('style');
-      style.textContent = `
-        *:focus {
-          outline: 2px solid #06b6d4 !important;
-          outline-offset: 2px !important;
-        }
-        .sr-only {
-          position: absolute;
-          width: 1px;
-          height: 1px;
-          padding: 0;
-          margin: -1px;
-          overflow: hidden;
-          clip: rect(0, 0, 0, 0);
-          white-space: nowrap;
-          border: 0;
-        }
-        .sr-only.focus:not-sr-only {
-          position: static;
-          width: auto;
-          height: auto;
-          padding: inherit;
-          margin: inherit;
-          overflow: visible;
-          clip: auto;
-          white-space: normal;
-        }
-      `;
-      document.head.appendChild(style);
-    };
-    // Initialize accessibility enhancements
-    addLandmarks();
-    addSkipLinks();
-    enhanceFocusManagement();
-    // Cleanup function
-    return () => {
-      const skipLink = document.querySelector('a[href="#main-content"]');
-      if (skipLink) {
-        skipLink.remove();      }
-    };
+import React from 'react'
+import { ArrowRight, Brain, CheckCircle, Eye, Ear, Hand } from 'lucide-react';
 
-    // Add focus management
-    const addFocusManagement = () => {
-      const focusableElements = document.querySelectorAll(
-        'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
-      );
+const EnhancedAccessibility: React.FC = () => {
+  const features = [
+    {
+      icon: Eye,
+      title: 'Visual Accessibility',
+      description: 'Advanced visual accessibility features for users with visual impairments.',
+      benefits: ['High contrast modes', 'Screen reader support', 'Text scaling', 'Color blind support']
+    },
+    {
+      icon: Ear,
+      title: 'Audio Accessibility',
+      description: 'Comprehensive audio accessibility features for users with hearing impairments.',
+      benefits: ['Audio descriptions', 'Visual alerts', 'Sign language support', 'Subtitles']
+    },
+    {
+      icon: Hand,
+      title: 'Motor Accessibility',
+      description: 'Motor accessibility features for users with mobility impairments.',
+      benefits: ['Keyboard navigation', 'Voice control', 'Switch control', 'Gesture recognition']
+    },
+    {
+      icon: Brain,
+      title: 'Cognitive Accessibility',
+      description: 'Cognitive accessibility features for users with cognitive impairments.',
+      benefits: ['Simplified interfaces', 'Clear instructions', 'Consistent navigation', 'Error prevention']
+    }
+  ]
 
-      focusableElements.forEach((element) => {
-        element.addEventListener('focus', (e) => {
-          const target = e.target as HTMLElement;
-          target.style.outline = '2px solid #06b6d4';
-          target.style.outlineOffset = '2px';
-        });
+  const benefits = [
+    'Increase accessibility compliance by 100%',
+    'Improve user experience for all users',
+    'Meet WCAG 2.1 AA standards',
+    'Reduce legal compliance risks',
+    'Enhance brand reputation and inclusivity'
+  ]
 
-        element.addEventListener('blur', (e) => {
-          const target = e.target as HTMLElement;
-          target.style.outline = '';
-          target.style.outlineOffset = '';
-        });
-      });
-    };
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+        <div className="relative max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            Enhanced Accessibility
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Advanced accessibility solutions for inclusive digital experiences.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+              Get Started
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </button>
+            <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              Learn More
+            </button>
+          </div>
+        </div>
+      </section>
 
-    // Add keyboard navigation
-    const addKeyboardNavigation = () => {
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Tab') {
-          document.body.classList.add('keyboard-navigation');
-        }
-      });
+      {/* Features Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive accessibility features designed for inclusive user experiences
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-      document.addEventListener('mousedown', () => {
-        document.body.classList.remove('keyboard-navigation');
-      });
-    };
+      {/* Benefits Section */}
+      <section className="py-20 px-4 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the benefits of comprehensive accessibility features
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start space-x-4">
+                <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
+                <p className="text-gray-300 text-lg">{benefit}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-    // Add screen reader announcements
-    const addScreenReaderSupport = () => {
-      const announce = (message: string) => {
-        const announcement = document.createElement('div');
-        announcement.setAttribute('aria-live', 'polite');
-        announcement.setAttribute('aria-atomic', 'true');
-        announcement.className = 'sr-only';
-        announcement.textContent = message;
-        document.body.appendChild(announcement);
+      {/* CTA Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Make Your App Accessible?</h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Join thousands of businesses already using our accessibility solutions
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              Start Free Trial
+            </button>
+            <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              Contact Sales
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  )
+}
 
-        setTimeout(() => {
-          document.body.removeChild(announcement);
-        }, 1000);
-      };
-
-      // Announce page changes
-      const observer = new MutationObserver((mutations) => {
-        mutations.forEach((mutation) => {
-          if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
-            const addedNode = mutation.addedNodes[0] as HTMLElement;
-            if (addedNode && addedNode.getAttribute && addedNode.getAttribute('aria-label')) {
-              announce(addedNode.getAttribute('aria-label')!);
-            }
-          }
-        });
-      });
-
-      observer.observe(document.body, {
-        childList: true,
-        subtree: true
-      });
-
-      return () => observer.disconnect();
-    };
-
-    // Initialize accessibility features
-    addLandmarks();
-    addFocusManagement();
-    addKeyboardNavigation();
-    const cleanup = addScreenReaderSupport();
-
-    return () => {
-      if (cleanup) cleanup();
-    };
-  }, []);
-  return <React.Fragment>{children}</React.Fragment>;
-};
-export default EnhancedAccessibility;
+export default EnhancedAccessibility

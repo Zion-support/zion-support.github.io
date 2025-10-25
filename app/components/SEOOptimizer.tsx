@@ -1,15 +1,16 @@
 'use client';
 
-import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useEffect } from 'react'
+import Head from 'next/head'
 
 interface SEOOptimizerProps {
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  canonicalUrl?: string;
-  ogImage?: string;
-  structuredData?: Record<string, unknown>;
+  title?: string
+  description?: string
+  keywords?: string[]
+  canonicalUrl?: string
+  ogImage?: string
+  structuredData?: object
+  className?: string
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
@@ -18,200 +19,141 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
   canonicalUrl = 'https://ziontechgroup.com',
   ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  structuredData
+  structuredData,
+  className
 }) => {
   useEffect(() => {
     // Update page title
-    document.title = title;
+    document.title = title
 
     // Update meta description
-    const metaDescription = document.querySelector('meta[name="description"]');
+    const metaDescription = document.querySelector('meta[name="description"]')
     if (metaDescription) {
-      metaDescription.setAttribute('content', description);
+      metaDescription.setAttribute('content', description)
     } else {
-      const meta = document.createElement('meta');
-      meta.name = 'description';
-      meta.content = description;
-      document.head.appendChild(meta);
+      const meta = document.createElement('meta')
+      meta.name = 'description'
+      meta.content = description
+      document.head.appendChild(meta)
     }
-    meta.setAttribute('content', content);
-  };
-  const updateCanonicalUrl = (url: string) => {
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonical);
+
+    // Update keywords
+    const metaKeywords = document.querySelector('meta[name="keywords"]')
+    if (metaKeywords) {
+      metaKeywords.setAttribute('content', keywords.join(', '))
+    } else {
+      const meta = document.createElement('meta')
+      meta.name = 'keywords'
+      meta.content = keywords.join(', ')
+      document.head.appendChild(meta)
     }
-    canonical.setAttribute('href', url);
-  };
-  const addStructuredData = (data: Record<string, unknown>) => {
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(data);
-    script.id = 'structured-data';
-    // Remove existing structured data
-    const existing = document.getElementById('structured-data');
-    if (existing) {
-      existing.remove();
-    }
-    document.head.appendChild(script);
-  };
-  const addBreadcrumbStructuredData = () => {
-    const breadcrumbData = {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      'itemListElement': [
-        {
-          '@type': 'ListItem',
-          'position': 1,
-          'name': 'Home',
-          'item': 'https://ziontechgroup.com'
-        }
-      ]
-    };
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(breadcrumbData);
-    script.id = 'breadcrumb-structured-data';
-    // Remove existing breadcrumb data
-    const existing = document.getElementById('breadcrumb-structured-data');
-    if (existing) {
-      existing.remove();
-    }
-    document.head.appendChild(script);
-  };
-  const addOrganizationStructuredData = () => {
-    const organizationData = {
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      'name': 'Zion Tech Group',
-      'url': 'https://ziontechgroup.com',
-      'logo': 'https://ziontechgroup.com/logo.png',
-      'description': 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
-      'foundingDate': '2020',
-      'numberOfEmployees': '50-100',
-      'industry': 'Technology',
-      'contactPoint': {
-        '@type': 'ContactPoint',
-        'telephone': '+1-302-464-0950',
-        'contactType': 'Customer Service',
-        'areaServed': 'US',
-        'availableLanguage': 'en'
-      },
-      'address': {
-        '@type': 'PostalAddress',
-        'streetAddress': '364 E Main St STE 1008',
-        'addressLocality': 'Middletown',
-        'addressRegion': 'DE',
-        'postalCode': '19709',
-        'addressCountry': 'US'
-      },
-      'sameAs': [
-        'https://twitter.com/ziontechgroup',
-        'https://linkedin.com/company/ziontechgroup'
-      ]
-    };
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(organizationData);
-    script.id = 'organization-structured-data';
-    // Remove existing organization data
-    const existing = document.getElementById('organization-structured-data');
-    if (existing) {
-      existing.remove();    }
 
     // Update canonical URL
-    const canonical = document.querySelector('link[rel="canonical"]');
-    if (canonical) {
-      canonical.setAttribute('href', canonicalUrl);
+    let canonicalLink = document.querySelector('link[rel="canonical"]')
+    if (canonicalLink) {
+      canonicalLink.setAttribute('href', canonicalUrl)
     } else {
-      const link = document.createElement('link');
-      link.rel = 'canonical';
-      link.href = canonicalUrl;
-      document.head.appendChild(link);
+      canonicalLink = document.createElement('link')
+      canonicalLink.rel = 'canonical'
+      canonicalLink.href = canonicalUrl
+      document.head.appendChild(canonicalLink)
     }
 
     // Update Open Graph tags
-    const ogTitle = document.querySelector('meta[property="og:title"]');
-    if (ogTitle) {
-      ogTitle.setAttribute('content', title);
-    } else {
-      const meta = document.createElement('meta');
-      meta.setAttribute('property', 'og:title');
-      meta.content = title;
-      document.head.appendChild(meta);
+    const updateOGTag = (property: string, content: string) => {
+      let ogTag = document.querySelector(`meta[property="${property}"]`)
+      if (ogTag) {
+        ogTag.setAttribute('content', content)
+      } else {
+        ogTag = document.createElement('meta')
+        ogTag.setAttribute('property', property)
+        ogTag.setAttribute('content', content)
+        document.head.appendChild(ogTag)
+      }
     }
 
-    const ogDescription = document.querySelector('meta[property="og:description"]');
-    if (ogDescription) {
-      ogDescription.setAttribute('content', description);
-    } else {
-      const meta = document.createElement('meta');
-      meta.setAttribute('property', 'og:description');
-      meta.content = description;
-      document.head.appendChild(meta);
+    updateOGTag('og:title', title)
+    updateOGTag('og:description', description)
+    updateOGTag('og:image', ogImage)
+    updateOGTag('og:url', canonicalUrl)
+    updateOGTag('og:type', 'website')
+
+    // Update Twitter Card tags
+    const updateTwitterTag = (name: string, content: string) => {
+      let twitterTag = document.querySelector(`meta[name="${name}"]`)
+      if (twitterTag) {
+        twitterTag.setAttribute('content', content)
+      } else {
+        twitterTag = document.createElement('meta')
+        twitterTag.setAttribute('name', name)
+        twitterTag.setAttribute('content', content)
+        document.head.appendChild(twitterTag)
+      }
     }
 
-    const ogImage = document.querySelector('meta[property="og:image"]');
-    if (ogImage) {
-      ogImage.setAttribute('content', ogImage);
-    } else {
-      const meta = document.createElement('meta');
-      meta.setAttribute('property', 'og:image');
-      meta.content = ogImage;
-      document.head.appendChild(meta);
-    }
+    updateTwitterTag('twitter:card', 'summary_large_image')
+    updateTwitterTag('twitter:title', title)
+    updateTwitterTag('twitter:description', description)
+    updateTwitterTag('twitter:image', ogImage)
 
     // Add structured data
     if (structuredData) {
-      const script = document.createElement('script');
-      script.type = 'application/ld+json';
-      script.textContent = JSON.stringify(structuredData);
-      script.id = 'structured-data';
-      
-      // Remove existing structured data
-      const existing = document.getElementById('structured-data');
-      if (existing) {
-        existing.remove();
-      }
-      document.head.appendChild(script);
+      const script = document.createElement('script')
+      script.type = 'application/ld+json'
+      script.textContent = JSON.stringify(structuredData)
+      document.head.appendChild(script)
     }
-  }, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
+
+    // Add viewport meta tag if not present
+    let viewport = document.querySelector('meta[name="viewport"]')
+    if (!viewport) {
+      viewport = document.createElement('meta')
+      viewport.setAttribute('name', 'viewport')
+      viewport.setAttribute('content', 'width=device-width, initial-scale=1')
+      document.head.appendChild(viewport)
+    }
+
+    // Add charset if not present
+    let charset = document.querySelector('meta[charset]')
+    if (!charset) {
+      charset = document.createElement('meta')
+      charset.setAttribute('charset', 'UTF-8')
+      document.head.insertBefore(charset, document.head.firstChild)
+    }
+
+  }, [title, description, keywords, canonicalUrl, ogImage, structuredData])
 
   return (
-    <Helmet>
+    <Head>
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords.join(', ')} />
       <link rel="canonical" href={canonicalUrl} />
-      
       {/* Open Graph */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:type" content="website" />
-      
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
-      
       {/* Additional SEO meta tags */}
       <meta name="robots" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta charSet="UTF-8" />
       {/* Structured Data */}
       {structuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
       )}
-    </Helmet>
-  );
-};
-export default SEOOptimizer;
-  </SEOOptimizerProps>
+    </Head>
+  )
+}
+
+export default SEOOptimizer
