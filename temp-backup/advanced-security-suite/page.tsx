@@ -36,8 +36,12 @@ export default function Page() {
           </div>
         </div>
         <Footer />
+<<<<<<< HEAD:temp-backup/advanced-security-suite/page.tsx
 <<<<<<< HEAD:app/advanced-security-suite/page.tsx
       </div>
+=======
+      </main>
+>>>>>>> origin/main:app/advanced-security-suite/page.tsx
     </div>
   )
 }

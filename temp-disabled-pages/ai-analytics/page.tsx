@@ -25,12 +25,15 @@ export default function Page() {
           </h1>
           <p className="text-xl text-gray-300 mb-8">
             Professional services by Zion Tech Group.
+<<<<<<< HEAD:temp-disabled-pages/ai-analytics/page.tsx
 =======
             AI Analytics
           </h1>
           <p className="text-xl text-gray-300 mb-8">
             Professional AI analytics services and solutions.
 >>>>>>> origin/main:temp-disabled-pages/ai-analytics/page.tsx
+=======
+>>>>>>> origin/main:app/ai-analytics/page.tsx
           </p>
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
 
@@ -45,7 +48,10 @@ export default function Page() {
           </div>
         </div>
         <Footer />
+<<<<<<< HEAD:temp-disabled-pages/ai-analytics/page.tsx
 <<<<<<< HEAD:app/5g-solutions/page.tsx
+=======
+>>>>>>> origin/main:app/ai-analytics/page.tsx
       </main>
     </div>
   )

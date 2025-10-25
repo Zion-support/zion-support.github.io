@@ -25,11 +25,15 @@ export default function Page() {
             Ai Agricultural Intelligence Pro
           </h1>
           <p className="text-xl text-gray-300 mb-8">
+<<<<<<< HEAD:temp-backup/ai-agricultural-intelligence-pro/page.tsx
 <<<<<<< HEAD:app/ai-agricultural-intelligence-pro/page.tsx
             Professional ai agricultural intelligence pro services and solutions by Zion Tech Group.
 =======
             Professional services by Zion Tech Group.
 >>>>>>> origin/main:temp-backup/ai-agricultural-intelligence-pro/page.tsx
+=======
+            Professional services by Zion Tech Group.
+>>>>>>> origin/main:app/ai-agricultural-intelligence-pro/page.tsx
           </p>
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
 
@@ -40,8 +44,12 @@ export default function Page() {
           </div>
         </div>
         <Footer />
+<<<<<<< HEAD:temp-backup/ai-agricultural-intelligence-pro/page.tsx
 <<<<<<< HEAD:app/ai-agricultural-intelligence-pro/page.tsx
       </div>
+=======
+      </main>
+>>>>>>> origin/main:app/ai-agricultural-intelligence-pro/page.tsx
     </div>
   )
 }

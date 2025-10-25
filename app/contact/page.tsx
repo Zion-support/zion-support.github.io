@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
+=======
+'use client'
+import React from 'react'
+import Head from 'next/head'
+import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
+import Footer from '../components/Footer'
+>>>>>>> origin/main
 
 export default function ContactPage() {
   return (
@@ -92,7 +101,14 @@ export default function ContactPage() {
             </form>
           </div>
         </div>
+<<<<<<< HEAD
       </div>
     </div>
   );
+=======
+        <Footer />
+      </main>
+    </div>
+  )
+>>>>>>> origin/main
 }

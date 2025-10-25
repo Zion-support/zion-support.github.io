@@ -36,8 +36,12 @@ export default function Page() {
           </div>
         </div>
         <Footer />
+<<<<<<< HEAD:temp-disabled-pages/ad-management/page.tsx
 <<<<<<< HEAD:app/ad-management/page.tsx
       </div>
+=======
+      </main>
+>>>>>>> origin/main:app/ad-management/page.tsx
     </div>
   )
 =======

@@ -1,28 +1,28 @@
 <<<<<<< HEAD
 const CACHE_NAME = 'zion-tech-group-v1';
-const urlsToCache = [;
-  '/',;
-  '/static/js/bundle.js',;
-  '/static/css/main.css',;
+const urlsToCache = [
+  '/',
+  '/about',
+  '/services',
+  '/solutions',
+  '/contact',
+  '/static/js/bundle.js',
+  '/static/css/main.css',
   '/manifest.json'
 ];
-self.addEventListener('install', (event) => {;
-event.waitUntil();
-caches.open(CACHE_NAME);
-      .then((cache) => cache.addAll(urlsToCache));
-  )});
-;
-self.addEventListener('fetch', (event) => {;
-event.respondWith();
-caches.match(event.request);
-      .then((response) => {;
-if (response) {;
-return response}
-        return fetch(event.request);
+
+// Install event
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then((cache) => {
+        console.log('Opened cache');
+        return cache.addAll(urlsToCache);
       })
   );
 });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD"
 // Notification click;"
@@ -123,20 +123,29 @@ self.addEventListener('fetch', (event) => {
   }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03b1
+=======
+// Fetch event
+self.addEventListener('fetch', (event) => {
+>>>>>>> origin/main
   event.respondWith(
 <<<<<<< HEAD
     caches.match(event.request)
-      .then((response) => {"
-        // Return cached version or fetch from "network"
-        return response || fetch(event.request)";
-      })
+      .then((response) => {
+        // Return cached version or fetch from network
+        if (response) {
+          return response;
+        }
+        return fetch(event.request);
+      }
+    )
   );
-});"
+});
 
-// Activate event - clean up old caches"'"
-self.addEventListener('activate", (event) => {
+// Activate event
+self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {
+<<<<<<< HEAD
       return Promise.all("
         cacheNames.map((cacheName) => {"
           if (cacheName !== CACHE_NAME) {"'"
@@ -242,14 +251,19 @@ return response
 //Activate event - clean up old caches self.addEventListener("activate", (event) => {
   event.waitUntil(caches.keys().then((cacheNames) => {
       return Promise.all(cacheNames.map((cacheName) => {
+=======
+      return Promise.all(
+        cacheNames.map((cacheName) => {
+>>>>>>> origin/main
           if (cacheName !== CACHE_NAME) {
-            console.log("Deleting old cache:", cacheName)
-            return caches.delete(cacheName)
+            console.log('Deleting old cache:', cacheName);
+            return caches.delete(cacheName);
           }
         })
       );
     })
   );
+<<<<<<< HEAD
 });"
 >>>>>>> 25500927562937ed05befe3bb53e25b2bd9a2d81"
 
@@ -308,3 +322,6 @@ self.addEventListener('activate', (event) => {;
       clients.openWindow('/')
     )})
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+});
+>>>>>>> origin/main

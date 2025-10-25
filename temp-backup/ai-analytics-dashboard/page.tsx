@@ -25,11 +25,15 @@ export default function Page() {
             Ai Analytics Dashboard
           </h1>
           <p className="text-xl text-gray-300 mb-8">
+<<<<<<< HEAD:temp-backup/ai-analytics-dashboard/page.tsx
 <<<<<<< HEAD:app/ai-analytics-dashboard/page.tsx
             Professional ai analytics dashboard services and solutions by Zion Tech Group.
 =======
             Professional services by Zion Tech Group.
 >>>>>>> origin/main:temp-backup/ai-analytics-dashboard/page.tsx
+=======
+            Professional services by Zion Tech Group.
+>>>>>>> origin/main:app/ai-analytics-dashboard/page.tsx
           </p>
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
 
@@ -40,8 +44,12 @@ export default function Page() {
           </div>
         </div>
         <Footer />
+<<<<<<< HEAD:temp-backup/ai-analytics-dashboard/page.tsx
 <<<<<<< HEAD:app/ai-analytics-dashboard/page.tsx
       </div>
+=======
+      </main>
+>>>>>>> origin/main:app/ai-analytics-dashboard/page.tsx
     </div>
   )
 }
