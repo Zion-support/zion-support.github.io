@@ -1,44 +1,48 @@
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
+const fs = require('fs');'const path = require('path');'
 function fixMergeConflicts(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
+    let content = fs.readFileSync(filePath, 'utf8');'    
     // Check if file has merge conflicts
-        inConflict = false;
-        keepHead = false;
+    if (!content.includes('      return false;'    }
+    
+    console.log(`Fixing merge conflicts in: ${filePath}`);`    
+    // Remove all merge conflict markers and keep the content after the last     const lines = content.split('\n');'    const fixedLines = [];
+    let inConflict = false;
+    let foundEquals = false;
+    
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      
+        keepContent = true;
         continue;
       }
       
-      if (inConflict && !keepHead) {
-        continue; // Skip lines in the non-HEAD section
+      if (line.includes('        inConflict = true;'        foundEquals = false;
+        continue;
       }
       
-      fixedLines.push(line);
+      if (line.includes('        foundEquals = true;'        continue;
+      }
+      
+      if (line.includes('        inConflict = false;'        foundEquals = false;
+        continue;
+      }
+      
+      if (inConflict && foundEquals) {
+        // Keep content after         fixedLines.push(line);
+      } else if (!inConflict) {
+        // Keep content outside conflicts
+        fixedLines.push(line);
+      }
     }
     
-    const fixedContent = fixedLines.join('\n');
-    
-    // Clean up any remaining syntax issues
-    const cleanedContent = fixedContent
-      .replace(/;\s*$/gm, '') // Remove trailing semicolons
-      .replace(/\s+$/gm, '') // Remove trailing whitespace
-      .replace(/\n\s*\n\s*\n/g, '\n\n'); // Remove multiple empty lines
-    
-    fs.writeFileSync(filePath, cleanedContent);
-    return true;
+    const fixedContent = fixedLines.join('\n');'    fs.writeFileSync(filePath, fixedContent, 'utf8');'    return true;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
+    console.error(`Error fixing ${filePath}:`, error.message);`    return false;
   }
 }
 
-function findTsxFiles(dir) {
+function findFilesWithConflicts(dir) {
   const files = [];
   
   function traverse(currentDir) {
@@ -48,10 +52,8 @@ function findTsxFiles(dir) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
       
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath);
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-        files.push(fullPath);
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {'        traverse(fullPath);
+      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js'))) {'        const content = fs.readFileSync(fullPath, 'utf8');'        if (content.includes('          files.push(fullPath);'        }
       }
     }
   }
@@ -60,25 +62,13 @@ function findTsxFiles(dir) {
   return files;
 }
 
-// Main execution
-const appDir = path.join(__dirname, 'app');
-const files = findTsxFiles(appDir);
-
-console.log(`Found ${files.length} TypeScript files to check`);
-
+// Find and fix all files with merge conflicts
+const filesWithConflicts = findFilesWithConflicts('./app');'console.log(`Found ${filesWithConflicts.length} files with merge conflicts`);`
 let fixedCount = 0;
-for (const file of files) {
+for (const file of filesWithConflicts) {
   if (fixMergeConflicts(file)) {
     fixedCount++;
   }
 }
 
-console.log(`Fixed merge conflicts in ${fixedCount} files`);
-
-// Also check the root App.tsx
-if (fixMergeConflicts(path.join(__dirname, 'App.tsx'))) {
-  fixedCount++;
-  console.log('Fixed merge conflicts in App.tsx');
-}
-
-console.log(`Total files fixed: ${fixedCount}`);
+console.log(`Fixed ${fixedCount} files`);

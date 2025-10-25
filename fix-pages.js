@@ -1,99 +1,56 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import React from 'react';
+export default ${componentName};`;
 
-// Function to fix common issues in page files
-function fixPageFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-
-    // Fix 'use client' directive issues
-    if (content.includes("'use client'") && content.includes('react-helmet-async')) {
-      content = content.replace(/import { Helmet } from 'react-helmet-async';\n?/g, '');
-      content = content.replace(/<Helmet>[\s\S]*?<\/Helmet>/g, '');
-      modified = true;
-    }
-
-    // Fix Link components using 'to' instead of 'href'
-    if (content.includes('to=')) {
-      content = content.replace(/to=/g, 'href=');
-      modified = true;
-    }
-
-    // Fix generic component names
-    if (content.includes('const PagePage: React.FC = () => {')) {
-      const fileName = path.basename(path.dirname(filePath));
-      const componentName = fileName.split('-').map(word => 
-        word.charAt(0).toUpperCase() + word.slice(1)
-      ).join('') + 'Page';
+// List of pages that need to be fixed;
+const pagesToFix = ['cookies', 'privacy', 'terms', 'consultation', 'pricing', 'blog',
+  'case-studies', 'careers', 'ai-services', 'it-services', 'micro-saas'];`'use client';
+  return (
+      <Helmet>
+        <title>${title} - Zion Tech Group</title>
+        <meta name="description" content="${title} services by Zion Tech Group. Professional AI and IT solutions." />
+        <meta name="keywords" content="${pageName}, AI solutions, IT services" />
+      </Helmet>
       
-      content = content.replace(/const PagePage: React.FC = () => {/g, `const ${componentName}: React.FC = () => {`);
-      content = content.replace(/export default PagePage;/g, `export default ${componentName};`);
-      modified = true;
-    }
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                ${title}
+              Professional ${title.toLowerCase()} services by Zion Tech Group.
 
-    // Fix missing icon imports by adding common ones
-    const commonIcons = [
-      'Send', 'BarChart3', 'Shield', 'Target', 'Zap', 'Globe', 'DollarSign', 
-      'Clock', 'Star', 'Activity', 'Lock', 'FileText', 'CreditCard', 
-      'Database', 'Building2', 'Sparkles', 'PieChart', 'CheckCircle'
-    ];
-    
-    const existingImports = content.match(/import {[^}]+} from 'lucide-react'/);
-    if (existingImports) {
-      const currentIcons = existingImports[0].match(/[A-Z][a-zA-Z0-9]+/g) || [];
-      const missingIcons = commonIcons.filter(icon => !currentIcons.includes(icon));
-      
-      if (missingIcons.length > 0) {
-        const newImport = `import { ${currentIcons.join(', ')}, ${missingIcons.join(', ')} } from 'lucide-react'`;
-        content = content.replace(existingImports[0], newImport);
-        modified = true;
-      }
-    }
+            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
+              We're working on bringing you comprehensive ${title.toLowerCase()} solutions.
+              Contact us to learn more about our services.
+            </p>
+            <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
+              Contact Us
+            </button>
+          </div>
+        </div>
+      </div>
 
-    // Fix complex icon objects that might cause serialization issues
-    content = content.replace(/icon: <([A-Z][a-zA-Z0-9]+) className="[^"]*" \/>/g, 'icon: $1');
-    content = content.replace(/<([A-Z][a-zA-Z0-9]+) className="[^"]*" \/>/g, '<$1 className="w-8 h-8" />');
-    
-    if (modified) {
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    
-    return false;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
-}
+  );
+};
 
-// Function to recursively find and fix all page files
-function fixAllPages(dir) {
-  const files = fs.readdirSync(dir);
-  let fixedCount = 0;
+// Fix pages;
+    word.charAt(0).toUpperCase() + word.slice(1)
+  ).join(' ');
 
-  for (const file of files) {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
+    word.charAt(0).toUpperCase() + word.slice(1)
+  ).join('') + 'Page';
 
-    if (stat.isDirectory()) {
-      // Skip node_modules and .next directories
-      if (file !== 'node_modules' && file !== '.next' && !file.startsWith('.')) {
-        fixedCount += fixAllPages(filePath);
-      }
-    } else if (file === 'page.tsx' || file === 'page.js') {
-      if (fixPageFile(filePath)) {
-        fixedCount++;
-      }
-    }
-  }
+  const pageDir = path.join('/workspace/app', pageName);
+  const pageFile = path.join(pageDir, 'page.tsx');
 
-  return fixedCount;
-}
+  // Create directory if it doesn't exist;
+  if (!fs.existsSync(pageDir)) {fs.mkdirSync(pageDir, { recursive: true});
 
-// Start fixing from the app directory
-const appDir = path.join(__dirname, 'app');
-console.log('Starting to fix pages...');
-const totalFixed = fixAllPages(appDir);
-console.log(`Fixed ${totalFixed} page files`);
+  // Overwrite page file with correct template;
+  fs.writeFileSync(pageFile, pageTemplate(pageName, title, componentName));
+  console.log(`Fixed: ${pageFile}`);
+});
+
+console.log('Page fixes completed!');

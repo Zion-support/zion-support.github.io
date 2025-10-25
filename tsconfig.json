@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "target": "ES2020",
     "lib": [
       "dom",
       "dom.iterable",
@@ -8,29 +9,49 @@
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
+    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
-    "incremental": true,
-    "module": "esnext",
     "esModuleInterop": true,
+    "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "incremental": true,
     "plugins": [
       {
         "name": "next"
       }
     ],
-    "strictNullChecks": true,
-    "target": "ES2017"
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    }
   },
   "include": [
-    "next-env.d.ts",
-    ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    "components/**/*.ts",
+    "components/**/*.tsx",
+    "next-env.d.ts",
+    "types/**/*.ts",
+    "dist/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "corrupted-src-backup",
+    "problematic-files-backup",
+    "problematic-pages",
+    "**/ai-pages-backup/**",
+    "**/all-pages-backup/**",
+    "**/backup*/**",
+    "**/*.backup.*",
+    "**/*.bak",
+    "**/backup/**"
   ]
 }
