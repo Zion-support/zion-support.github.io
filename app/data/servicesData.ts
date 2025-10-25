@@ -45,9 +45,9 @@ export const aiServices: Service[] = [
       enterprise: "Custom pricing"
     },
     contactInfo: {
-      website: "https://ziontechgroup.com",
-      email: "sales@ziontechgroup.com",
-      phone: "+1-555-0123"
+      website: 'https://ziontechgroup.com/ai-analytics',
+      email: 'ai@ziontechgroup.com',
+      phone: '+1-555-0123'
     },
     price: "Starting at $999/month",
     icon: "📊",
@@ -67,10 +67,10 @@ export const aiServices: Service[] = [
       "Smart scheduling"
     ],
     benefits: [
-      "Increased efficiency",
-      "Reduced human error",
-      "24/7 operation",
-      "Scalable solutions"
+      'Increased productivity',
+      'Reduced human error',
+      'Faster processing times',
+      'Scalable operations'
     ],
     pricing: {
       basic: "$1,499/month",
@@ -78,9 +78,9 @@ export const aiServices: Service[] = [
       enterprise: "Custom pricing"
     },
     contactInfo: {
-      website: "https://ziontechgroup.com",
-      email: "sales@ziontechgroup.com",
-      phone: "+1-555-0123"
+      website: 'https://ziontechgroup.com/ai-automation',
+      email: 'automation@ziontechgroup.com',
+      phone: '+1-555-0124'
     },
     price: "Starting at $1,499/month",
     icon: "🤖",
@@ -136,10 +136,10 @@ export const itServices: Service[] = [
       "Performance optimization"
     ],
     benefits: [
-      "Reduced infrastructure costs",
-      "Improved scalability",
-      "Enhanced security",
-      "Better performance"
+      'Increased online presence',
+      'Better user experience',
+      'Higher conversion rates',
+      'Mobile accessibility'
     ],
     pricing: {
       basic: "$5,000/project",
@@ -147,9 +147,9 @@ export const itServices: Service[] = [
       enterprise: "Custom pricing"
     },
     contactInfo: {
-      website: "https://ziontechgroup.com",
-      email: "sales@ziontechgroup.com",
-      phone: "+1-555-0123"
+      website: 'https://ziontechgroup.com/web-development',
+      email: 'webdev@ziontechgroup.com',
+      phone: '+1-555-0126'
     },
     price: "Starting at $5,000",
     icon: "☁️",
@@ -162,11 +162,11 @@ export const itServices: Service[] = [
     title: "Cybersecurity Solutions",
     description: "Protect your business with comprehensive cybersecurity services and monitoring.",
     features: [
-      "Security assessment",
-      "Threat monitoring",
-      "Incident response",
-      "Compliance auditing",
-      "Security training"
+      'Security audits',
+      'Threat monitoring',
+      'Incident response',
+      'Compliance management',
+      'Security training'
     ],
     benefits: [
       "Enhanced security posture",
@@ -180,18 +180,68 @@ export const itServices: Service[] = [
       enterprise: "Custom pricing"
     },
     contactInfo: {
-      website: "https://ziontechgroup.com",
-      email: "sales@ziontechgroup.com",
-      phone: "+1-555-0123"
+      website: 'https://ziontechgroup.com/cloud-infrastructure',
+      email: 'cloud@ziontechgroup.com',
+      phone: '+1-555-0127'
     },
-    price: "Starting at $2,999/month",
-    icon: "🔒",
-    href: "/services/cybersecurity",
-    popular: true,
-    category: "security"
+    price: '$499/month',
+    icon: '☁️',
+    href: '/cloud-infrastructure',
+    category: 'it'
+  },
+  {
+    id: 'cybersecurity',
+    title: 'Cybersecurity',
+    description: 'Comprehensive security solutions to protect your digital assets.',
+    features: [
+      'Security audits',
+      'Threat monitoring',
+      'Incident response',
+      'Compliance management',
+      'Security training'
+    ],
+    benefits: [
+      'Protection against threats',
+      'Regulatory compliance',
+      'Reduced risk exposure',
+      'Peace of mind'
+    ],
+    pricing: {
+      basic: '399',
+      pro: '799',
+      enterprise: '1499'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/cybersecurity',
+      email: 'security@ziontechgroup.com',
+      phone: '+1-555-0128'
+    },
+    price: '$399/month',
+    icon: '🔒',
+    href: '/cybersecurity',
+    category: 'it'
+>>>>>>> cursor/fix-errors-and-merge-to-main-e11d
   }
 ];
 
 export const allServices: Service[] = [...aiServices, ...itServices];
 
-export default allServices;
+// Export as servicesData for backward compatibility
+export const servicesData = {
+  aiServices,
+  itServices,
+  itSolutions: itServices, // Add alias for itSolutions
+  allServices
+};
+
+export const getServiceById = (id: string): Service | undefined => {
+  return allServices.find(service => service.id === id);
+};
+
+export const getServicesByCategory = (category: Service['category']): Service[] => {
+  return allServices.filter(service => service.category === category);
+};
+
+export const getPopularServices = (): Service[] => {
+  return allServices.filter(service => service.popular);
+};
