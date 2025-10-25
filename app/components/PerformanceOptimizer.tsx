@@ -1,93 +1,104 @@
+'use client';
+
+import { useEffect, useCallback, useMemo } from 'react';
+
+interface PerformanceOptimizerProps {
+  children: React.ReactNode;
 }
 
-const PerformanceOptimizer: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null)
-  const [isOptimized, setIsOptimized] = useState(false)
+export default function PerformanceOptimizer({ children }: PerformanceOptimizerProps) {
+  // Preload critical resources
+  useEffect(() => {
+    const preloadCriticalResources = () => {
+      // Preload critical fonts
+      const fontPreload = document.createElement('link');
+      fontPreload.rel = 'preload';
+      fontPreload.href = '/fonts/inter-var.woff2';
+      fontPreload.as = 'font';
+      fontPreload.type = 'font/woff2';
+      fontPreload.crossOrigin = 'anonymous';
+      document.head.appendChild(fontPreload);
+
+      // Preload critical images
+      const criticalImages = [
+        '/og-image.jpg',
+        '/hero-bg.jpg',
+        '/logo.png'
+      ];
+
+      criticalImages.forEach(src => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.href = src;
+        link.as = 'image';
+        document.head.appendChild(link);
+      });
+    };
+
+    preloadCriticalResources();
+  }, []);
+
+  // Optimize scroll performance
+  const handleScroll = useCallback(() => {
+    // Throttle scroll events
+    let ticking = false;
+    
+    const updateScrollPosition = () => {
+      // Update scroll position for performance monitoring
+      const scrollY = window.scrollY;
+      const scrollPercent = (scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+      
+      // Store scroll metrics for analytics
+      if (typeof window !== 'undefined') {
+        (window as any).scrollMetrics = {
+          scrollY,
+          scrollPercent,
+          timestamp: Date.now()
+        };
+      }
+      
+      ticking = false;
+    };
+
+    if (!ticking) {
+      requestAnimationFrame(updateScrollPosition);
+      ticking = true;
+    }
+  }, []);
 
   useEffect(() => {
-    const measurePerformance = () => {
-      const startTime = performance.now()
-      
-      // Measure load time
-      const loadTime = performance.timing?.loadEventEnd 
-        ? performance.timing.loadEventEnd - performance.timing.navigationStart 
-        : 0
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [handleScroll]);
 
-      // Measure render time
-      const renderTime = performance.now() - startTime
+  // Optimize resize performance
+  const handleResize = useCallback(() => {
+    let timeoutId: NodeJS.Timeout;
+    
+    const updateDimensions = () => {
+      const dimensions = {
+        width: window.innerWidth,
+        height: window.innerHeight,
+        devicePixelRatio: window.devicePixelRatio,
+        timestamp: Date.now()
+      };
 
-      // Check memory usage (if available)
-      const memoryUsage = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize || 0
-
-      // Check connection speed
-      const connection = (navigator as Navigator & { connection?: { effectiveType: string }, mozConnection?: { effectiveType: string }, webkitConnection?: { effectiveType: string } }).connection || (navigator as Navigator & { mozConnection?: { effectiveType: string } }).mozConnection || (navigator as Navigator & { webkitConnection?: { effectiveType: string } }).webkitConnection
-      const isSlowConnection = connection ? connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g' : false
-
-      setMetrics({
-        loadTime,
-        renderTime,
-        memoryUsage,
-        isSlowConnection
-      })
-
-      // Auto-optimize based on metrics
-      if (loadTime > 3000 || renderTime > 100 || isSlowConnection) {
-        setIsOptimized(true)
-        applyOptimizations()
+      if (typeof window !== 'undefined') {
+        (window as any).viewportMetrics = dimensions;
       }
-    }
+    };
 
-    const applyOptimizations = () => {
-      // Lazy load images
-      const images = document.querySelectorAll('img[data-src]')
-      images.forEach(img => {
-        const imageElement = img as HTMLImageElement
-        if (imageElement.dataset.src) {
-          imageElement.src = imageElement.dataset.src
-          imageElement.removeAttribute('data-src')
-        }
-      })
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(updateDimensions, 150);
+  }, []);
 
-      // Preload critical resources
-      const criticalResources = [
-        '/fonts/inter.woff2',
-        '/css/critical.css'
-      ]
+  useEffect(() => {
+    window.addEventListener('resize', handleResize, { passive: true });
+    return () => window.removeEventListener('resize', handleResize);
+  }, [handleResize]);
 
-      criticalResources.forEach(resource => {
-        const link = document.createElement('link')
-        link.rel = 'preload'
-        link.href = resource
-        link.as = resource.endsWith('.woff2') ? 'font' : 'style'
-        document.head.appendChild(link)
-      })
-    }
+  // Memoize children to prevent unnecessary re-renders
+  const memoizedChildren = useMemo(() => children, [children]);
 
-    // Measure performance after component mount
-    const timer = setTimeout(measurePerformance, 100)
-
-    return () => clearTimeout(timer)
-  }, [])
-
-  // Don't render anything in production
-  if (process.env.NODE_ENV === 'production') {
-    return null
-  }
-
-  return (
-    <div className="fixed bottom-4 right-4 bg-black bg-opacity-80 text-white p-4 rounded-lg text-xs font-mono z-50">
-      <div className="mb-2 font-bold">Performance Monitor</div>
-      {metrics && (
-        <div className="space-y-1">
-          <div>Load: {metrics.loadTime.toFixed(0)}ms</div>
-          <div>Render: {metrics.renderTime.toFixed(0)}ms</div>
-          <div>Memory: {(metrics.memoryUsage / 1024 / 1024).toFixed(1)}MB</div>
-          <div>Slow: {metrics.isSlowConnection ? 'Yes' : 'No'}</div>
-          {isOptimized && <div className="text-green-400">Optimized</div>}
-        </div>
-      )}
-    </div>
-  )
+  return <>{memoizedChildren}</>;
 }
-
-export default PerformanceOptimizer

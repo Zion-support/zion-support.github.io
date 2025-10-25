@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
     "lib": [
       "dom",
       "dom.iterable",
@@ -9,65 +8,32 @@
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
-    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
-    "esModuleInterop": true,
+    "incremental": true,
     "module": "esnext",
-    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true,
     "plugins": [
       {
         "name": "next"
       }
     ],
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "./*"
-      ]
-    }
+    "target": "ES2017"
   },
   "include": [
-<<<<<<< HEAD
     "next-env.d.ts",
-<<<<<<< HEAD
-    "app/page.tsx",
-    "app/layout.tsx",
-    "app/team/page.tsx",
-    "app/_not-found.tsx",
-    ".next/types/**/*.ts"
-=======
     ".next/types/**/*.ts",
     "types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
->>>>>>> 6d21a698833607de6a5fc802b68ed751e474e57d
-=======
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts",
-    "app/**/*.ts",
-    "app/**/*.tsx",
-    "components/**/*.ts",
-    "components/**/*.tsx",
-    "next-env.d.ts",
-    "types/**/*.ts",
-    "dist/types/**/*.ts"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0ece
   ],
   "exclude": [
     "node_modules",
     "corrupted-src-backup",
     "problematic-files-backup",
-    "problematic-pages",
-    "**/ai-pages-backup/**",
-    "**/all-pages-backup/**",
-    "**/backup*/**",
-    "**/*.backup.*",
-    "**/*.bak",
-    "**/backup/**"
+    "problematic-pages"
   ]
 }
