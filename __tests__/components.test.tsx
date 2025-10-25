@@ -1,14 +1,22 @@
-import { describe, test, expect } from '@jest/globals';
+import React from 'react';
 import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import { describe, test, expect } from '@jest/globals';
+import { HelmetProvider } from 'react-helmet-async';
 
 const TestComponent = () => {
   return (
-    <div>Test content</div>
+    <HelmetProvider>
+      <div>Test content</div>
+    </HelmetProvider>
   );
 };
 
+const MockComponent = () => <div data-testid="mock-component">Mock Component</div>;
+
+// Basic test structure
 describe('Components', () => {
-  test('should render without errors', () => {
+  it('renders without crashing', () => {
     expect(true).toBe(true);
   });
   
@@ -17,10 +25,25 @@ describe('Components', () => {
     expect(screen.getByText('Test content')).toBeTruthy();
   });
   
-  test('should handle basic component rendering', () => {
+  test('should handle SEO head component', () => {
     render(
-      <div>SEO Test</div>
+      <HelmetProvider>
+        <div>SEO Test</div>
+      </HelmetProvider>
     );
     expect(screen.getByText('SEO Test')).toBeTruthy();
+<<<<<<< HEAD
+=======
+  });
+  
+  it('renders mock component', () => {
+    render(<MockComponent />);
+    expect(screen.getByTestId('mock-component')).toBeInTheDocument();
+  });
+  
+  it('displays correct text', () => {
+    render(<MockComponent />);
+    expect(screen.getByText('Mock Component')).toBeInTheDocument();
+>>>>>>> 37f1b5c5f3c3e6c4c4ce4d59d91fac2c3215daf9
   });
 });

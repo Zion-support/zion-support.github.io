@@ -1,185 +1,126 @@
-"use client";
+import { ArrowRight, CheckCircle, Star, ImageIcon, Upload, Zap, Download, Clock, X, Circle } from 'lucide-react';
+import Link from 'next/link';
+import Head from 'next/head';
+&apos;use client&apos;;
 
-import React, { Suspense } from 'react';
+import Footer from &apos;./components/Footer&apos;;
+import Head from &apos;next/head&apos;;
+import Link from &apos;next/link&apos;;
+import { ArrowRight } from &apos;lucide-react&apos;;
 
-const ServiceCardSkeleton = () => (
-  <div className="cyber-card hologram-card p-4 sm:p-6 animate-pulse">
-    <div className="h-12 bg-gray-700 rounded mb-4"></div>
-    <div className="h-6 bg-gray-700 rounded mb-2"></div>
-    <div className="h-4 bg-gray-700 rounded mb-4"></div>
-    <div className="h-4 bg-gray-700 rounded"></div>
-  </div>
-);
+const features = [
+  {
+    title: &apos;AI Solutions&apos;,
+    description: &apos;Cutting-edge artificial intelligence solutions&apos;,
+    icon: () => <div className=&quot;w-8 h-8 bg-blue-600 rounded&quot; />,
+    href: &apos;/ai-solutions&apos},
+  {
+    title: &apos;IT Services&apos;,
+    description: &apos;Comprehensive IT support and services&apos;,
+    icon: () => <div className=&quot;w-8 h-8 bg-green-600 rounded&quot; />,
+    href: &apos;/it-services&apos},
+  {
+    title: &apos;Web Development&apos;,
+    description: &apos;Modern web applications and websites&apos;,
+    icon: () => <div className=&quot;w-8 h-8 bg-purple-600 rounded&quot; />,
+    href: &apos;/web-development&apos},
+  {
+    title: &apos;Consulting&apos;,
+    description: &apos;Expert technology consulting&apos;,
+    icon: () => <div className=&quot;w-8 h-8 bg-orange-600 rounded&quot; />,
+    href: &apos;/consulting&apos}
+];
 
-export default function AppPage() {
+const stats = [
+  { number: &apos;100+&apos;, label: &apos;Projects Completed&apos},
+  { number: &apos;50+&apos;, label: &apos;Happy Clients&apos},
+  { number: &apos;5+&apos;, label: &apos;Years Experience&apos},
+  { number: &apos;24/7&apos;, label: &apos;Support Available&apos}
+];
+
+export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20"></div>
-        <div className="container mx-auto px-4 py-20 relative z-10">
-          <div className="text-center">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
-              Advanced App Solutions
-            </h1>
-            <p className="text-xl sm:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Cutting-edge mobile and web applications powered by AI and modern technology
+    <div>
+      <Head>
+        <title>Zion Tech Group - AI & IT Solutions</title>
+        <meta name=&quot;description&quot; content=&quot;Professional services by Zion Tech Group.&quot; />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center&quot;></div>
+          <h1 className=&quot;text-4xl font-bold text-white mb-4&quot;>Zion Tech Group - AI & IT Solutions</h1>
+          <p className=&quot;text-xl text-gray-300 mb-8&quot;>Professional AI & IT solutions services coming soon.</p>
+          <Link href=&quot;/contact&quot;
+            className=&quot;bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit&quot;
+          >
+            Contact Us
+            <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
+          </Link>
+        </div>
+      </div>
+
+      {/* Features Section */}
+      <section className=&quot;py-20 px-4&quot;></section>
+        <div className=&quot;max-w-7xl mx-auto&quot;></div>
+          <div className=&quot;text-center mb-16&quot;></div>
+            <h2 className=&quot;text-4xl font-bold text-gray-900 mb-4&quot;>Our Services</h2>
+            <p className=&quot;text-xl text-gray-600&quot;>
+              Comprehensive solutions to accelerate your digital transformation
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-              >
-                Get Started
-              </a>
-              <a
-                href="/demo"
-                className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300"
-              >
-                View Demo
-              </a>
-            </div>
+          </div>
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
+            {features.map((feature, index) => (
+              <div key={index} className=&quot;bg-white rounded-2xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow&quot;></div>
+                <div className=&quot;w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6&quot;></div>
+                  <feature.icon />
+                </div>
+                <h3 className=&quot;text-xl font-bold text-gray-900 mb-3&quot;>{feature.title}</h3>
+                <p className=&quot;text-gray-600 mb-4&quot;>{feature.description}</p>
+                <Link 
+                  href={feature.href}
+                  className=&quot;inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold&quot;
+                >
+                  Learn More
+                  <ArrowRight className=&quot;ml-1 h-4 w-4&quot; />
+                </Link>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="mb-16" aria-labelledby="services-heading">
-        <div className="container mx-auto px-4">
-          <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
-            Our Services
+      {/* Stats Section */}
+      <section className=&quot;py-16 px-4 bg-gray-50&quot;></section>
+        <div className=&quot;max-w-7xl mx-auto&quot;></div>
+          <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8&quot;></div>
+            {stats.map((stat, index) => (
+              <div key={index} className=&quot;text-center&quot;></div>
+                <div className=&quot;text-4xl font-bold text-blue-600 mb-2&quot;>{stat.number}</div>
+                <div className=&quot;text-gray-600&quot;>{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className=&quot;py-20 px-4 bg-blue-600&quot;></section>
+        <div className=&quot;max-w-7xl mx-auto text-center&quot;></div>
+          <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>
+            Ready to Transform Your Business?
           </h2>
-          <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
-            Comprehensive AI and IT solutions designed to transform your business operations
+          <p className=&quot;text-xl text-blue-100 mb-8 max-w-2xl mx-auto&quot;>
+            Let&apos;s discuss how our solutions can help you achieve your goals.
           </p>
-          
-          {/* Primary Services Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
-            <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="cyber-card hologram-card p-4 sm:p-6">
-                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🤖</div>
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">
-                  AI-Powered Solutions
-                </h3>
-                <p className="text-gray-300 text-sm sm:text-base mb-4 sm:mb-6 text-center leading-relaxed">
-                  Advanced artificial intelligence solutions that automate processes, enhance decision-making, and drive innovation across your organization.
-                </p>
-                <ul className="text-gray-300 text-xs sm:text-sm space-y-2 mb-4 sm:mb-6">
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2 flex-shrink-0"></span>
-                    Machine Learning & Deep Learning
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2 flex-shrink-0"></span>
-                    Natural Language Processing
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2 flex-shrink-0"></span>
-                    Computer Vision & Image Recognition
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2 flex-shrink-0"></span>
-                    Predictive Analytics
-                  </li>
-                </ul>
-                <div className="text-center">
-                  <a
-                    href="/ai-services"
-                    className="inline-block bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 text-sm sm:text-base"
-                  >
-                    Explore AI Services
-                  </a>
-                </div>
-              </article>
-            </Suspense>
-
-            <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="cyber-card hologram-card p-4 sm:p-6">
-                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">💻</div>
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">
-                  IT Infrastructure
-                </h3>
-                <p className="text-gray-300 text-sm sm:text-base mb-4 sm:mb-6 text-center leading-relaxed">
-                  Robust and scalable IT infrastructure solutions that ensure your systems are secure, efficient, and future-ready.
-                </p>
-                <ul className="text-gray-300 text-xs sm:text-sm space-y-2 mb-4 sm:mb-6">
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2 flex-shrink-0"></span>
-                    Cloud Migration & Management
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2 flex-shrink-0"></span>
-                    Cybersecurity & Data Protection
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2 flex-shrink-0"></span>
-                    DevOps & Automation
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2 flex-shrink-0"></span>
-                    Network Architecture & Optimization
-                  </li>
-                </ul>
-                <div className="text-center">
-                  <a
-                    href="/it-services"
-                    className="inline-block bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 text-sm sm:text-base"
-                  >
-                    Explore IT Services
-                  </a>
-                </div>
-              </article>
-            </Suspense>
-
-            <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="cyber-card hologram-card p-4 sm:p-6">
-                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🚀</div>
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">
-                  Micro SaaS Solutions
-                </h3>
-                <p className="text-gray-300 text-sm sm:text-base mb-4 sm:mb-6 text-center leading-relaxed">
-                  Specialized software-as-a-service solutions that address specific business needs with precision and efficiency.
-                </p>
-                <ul className="text-gray-300 text-xs sm:text-sm space-y-2 mb-4 sm:mb-6">
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2 flex-shrink-0"></span>
-                    Custom Business Applications
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2 flex-shrink-0"></span>
-                    Workflow Automation Tools
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2 flex-shrink-0"></span>
-                    Data Analytics Platforms
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2 flex-shrink-0"></span>
-                    Integration & API Services
-                  </li>
-                </ul>
-                <div className="text-center">
-                  <a
-                    href="/micro-saas-solutions"
-                    className="inline-block bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 text-sm sm:text-base"
-                  >
-                    Explore Micro SaaS
-                  </a>
-                </div>
-              </article>
-            </Suspense>
-          </div>
-          
-          <div className="text-center mt-8">
-            <a 
-              href="/services"
-              className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
-            >
-              View All Services
-            </a>
-          </div>
+          <Link 
+            href=&quot;/contact&quot; 
+            className=&quot;inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold&quot;
+          >
+            Start Your Project
+            <ArrowRight className=&quot;ml-2 h-5 w-5&quot; />
+          </Link>
         </div>
       </section>
+
+      <Footer />
     </div>
-  );
-}
+  )}

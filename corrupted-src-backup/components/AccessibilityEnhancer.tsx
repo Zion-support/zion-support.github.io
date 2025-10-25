@@ -1,30 +1,25 @@
+'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async;
-import { ArrowRight } from 'lucide-react;
-// Note: These components are not available in this context;
-export default function AccessibilityEnhancerPage() {
-return(<>
-  </>"
-      <Helmet />"
-        <title>Accessibility Enhancer - Zion Tech Group</title>"
-        <metaname = "description" content="Enhance accessibility with our AI-powered tools and solutions." / />"
-      </Helmet>"
-      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white py-20" />,<div className="max-w-7 xl mx-auto px-4" />,"
-    <div className="text-center" />,"
-    <h1 className="text-4 xl font-bold text-white mb-4" />"
-Accessibility Enhancer</h1>"
-            </h1>"
-            <p className="text-gray-300 mb-8" />"
-This page is under construction.</p>"
-            </p>"
-            <buttonclassName="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover: "from-cyan-600 hove",r: to-purple-700 transition-all duration-300 inline-flex items-center" />"
-Learn More</button>"
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </button>
-          </div>
+import { Helmet } from 'react-helmet-async';
+
+const AccessibilityEnhancerPage: React.FC = () => {
+  return (
+    <React.Fragment>
+      <Helmet>
+        <title>AccessibilityEnhancer - Zion Tech Group</title>
+        <meta name="description" content="Professional AccessibilityEnhancer services by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-900 text-white">
+        <div className="container mx-auto px-4 py-8">
+          <h1 className="text-4xl font-bold mb-6">AccessibilityEnhancer</h1>
+          <p className="text-lg text-gray-300">
+            This page is currently under development. Please check back soon for more information.
+          </p>
         </div>
-      </main>
-    </>)
-  )"
-,;
+      </div>
+    </React.Fragment>
+  );
 };
+
+export default AccessibilityEnhancerPage;

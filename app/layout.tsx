@@ -1,91 +1,75 @@
-import type { Metadata, Viewport } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
-import Header from './components/Header'
-import Footer from './components/Footer'
-import ErrorBoundary from './components/ErrorBoundary'
-import Analytics from './components/Analytics'
-import PerformanceMonitor from './components/PerformanceMonitor'
-import AccessibilityEnhancer from './components/AccessibilityEnhancer'
+import type { Metadata} from 'next';
+import { Inter} from 'next/font/google';
+import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] })
+import Analytics from './components/Analytics';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import PerformanceMonitor from './components/PerformanceMonitor';
+
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://zion.app'),
-  title: 'Zion Tech Group - Advanced AI & IT Solutions',
-  description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services. Transform your business with cutting-edge technology.',
-  keywords: 'AI solutions, IT services, cybersecurity, cloud computing, digital transformation, machine learning, artificial intelligence, data analytics, blockchain, IoT',
+  title: 'Zion Tech Group - Leading AI & Technology Solutions Provider',
+  description: 'Transform your business with cutting-edge AI, cloud architecture, cybersecurity, and innovative development services. Expert technology solutions for modern enterprises.',
+  keywords: 'AI solutions, artificial intelligence, cloud architecture, web development, mobile apps, data analytics, cybersecurity, machine learning, cloud computing, digital transformation',
   authors: [{ name: 'Zion Tech Group' }],
-  robots: 'index, follow',
+  creator: 'Zion Tech Group',
+  publisher: 'Zion Tech Group',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false},
+  metadataBase: new URL('https://ziontechgroup.com'),
+  alternates: {
+    canonical: '/'},
   openGraph: {
-    title: 'Zion Tech Group - Advanced AI & IT Solutions',
-    description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services. Transform your business with cutting-edge technology.',
-    type: 'website',
-    locale: 'en_US',
-    url: 'https://zion.app',
+    title: 'Zion Tech Group - Leading AI & Technology Solutions Provider',
+    description: 'Transform your business with cutting-edge AI, cloud architecture, cybersecurity, and innovative development services.',
+    url: 'https://ziontechgroup.com',
     siteName: 'Zion Tech Group',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Zion Tech Group - Advanced AI & IT Solutions',
-      },
-    ],
-  },
+        alt: 'Zion Tech Group - AI & Technology Solutions'}],
+    locale: 'en_US',
+    type: 'website'},
   twitter: {
     card: 'summary_large_image',
-    title: 'Zion Tech Group - Advanced AI & IT Solutions',
-    description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
-    images: ['/og-image.jpg'],
-  },
-  alternates: {
-    canonical: 'https://zion.app',
-  },
-  category: 'technology',
-}
-
-export const viewport: Viewport = {
-  width: 'device-width',
-  initialScale: 1,
-}
+    title: 'Zion Tech Group - Leading AI & Technology Solutions Provider',
+    description: 'Transform your business with cutting-edge AI, cloud architecture, cybersecurity, and innovative development services.',
+    images: ['/og-image.jpg']},
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1}},
+  verification: {
+    google: 'your-google-verification-code'}};
 
 export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+  children}: {
+  children: React.ReactNode}) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              // Performance monitoring
-              if (typeof window !== 'undefined') {
-                window.addEventListener('load', function() {
-                  // Measure page load time
-                  const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart
-                  console.log('Page load time:', loadTime + 'ms')
-                  
-                  // Track Core Web Vitals
-                  if ('web-vitals' in window) {
-                    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-                      getCLS(console.log)
-                      getFID(console.log)
-                      getFCP(console.log)
-                      getLCP(console.log)
-                      getTTFB(console.log)
-                    })
-                  }
-                })
-              }
-            `,
-          }}
-        />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="theme-color" content="#3b82f6" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.className} antialiased`}>
         <Analytics />
+<<<<<<< HEAD
         <PerformanceMonitor />
         <ErrorBoundary>
           <AccessibilityEnhancer>
@@ -96,7 +80,14 @@ export default function RootLayout({
             <Footer />
           </AccessibilityEnhancer>
         </ErrorBoundary>
+=======
+        <PerformanceOptimizer>
+          <AccessibilityEnhancer>
+            {children}
+          </AccessibilityEnhancer>
+        </PerformanceOptimizer>
+        <PerformanceMonitor />
+>>>>>>> 37f1b5c5f3c3e6c4c4ce4d59d91fac2c3215daf9
       </body>
     </html>
-  )
-}
+  )}
