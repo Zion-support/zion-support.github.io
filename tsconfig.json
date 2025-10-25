@@ -21,7 +21,10 @@
         "name": "next"
       }
     ],
+<<<<<<< HEAD
     "strictNullChecks": true,
+=======
+>>>>>>> main
     "target": "ES2017"
   },
   "include": [

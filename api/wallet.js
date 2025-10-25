@@ -8,10 +8,19 @@ async function handler(req, res) {
     return;
   }
 
+<<<<<<< HEAD
   const { address, type, name, userId } = req.body;
   if (!address || !type) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Address and type are required' }));
+=======
+  const { action, amount, currency = 'USD' } = req.body || {};
+
+  if (!action) {
+    res.statusCode = 400;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Action is required' }));
+>>>>>>> main
     return;
   }
 
@@ -22,8 +31,14 @@ async function handler(req, res) {
           res.statusCode = 400;
           res.setHeader('Content-Type', 'application/json');
           res.end(JSON.stringify({ error: 'Amount is required for payment intent' }));
+<<<<<<< HEAD
 
         // Mock payment intent creation
+=======
+          return;
+        }
+
+>>>>>>> main
         const paymentIntent = {
           id: 'pi_' + Math.random().toString(36).substr(2, 9),
           amount: Math.round(amount * 100), // Convert to cents
@@ -32,6 +47,7 @@ async function handler(req, res) {
           created: Math.floor(Date.now() / 1000)
         };
 
+<<<<<<< HEAD
     // Check if wallet address already exists
     if (data.find(wallet => wallet.address === address)) {
       res.setHeader('Content-Type', 'application/json');
@@ -52,12 +68,25 @@ async function handler(req, res) {
 
       case 'get_balance': {
         // Mock balance retrieval
+=======
+        res.statusCode = 200;
+        res.setHeader('Content-Type', 'application/json');
+        res.end(JSON.stringify({
+          message: 'Payment intent created successfully',
+          paymentIntent
+        }));
+        break;
+      }
+
+      case 'get_balance': {
+>>>>>>> main
         const balance = {
           currency,
           amount: 0, // In a real app, this would come from a database
           lastUpdated: new Date().toISOString()
         };
 
+<<<<<<< HEAD
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       success: true, 
@@ -70,3 +99,30 @@ async function handler(req, res) {
     res.end(JSON.stringify({ error: 'Failed to add wallet' }));
   }
 }
+=======
+        res.statusCode = 200;
+        res.setHeader('Content-Type', 'application/json');
+        res.end(JSON.stringify({
+          message: 'Balance retrieved successfully',
+          balance
+        }));
+        break;
+      }
+
+      default: {
+        res.statusCode = 400;
+        res.setHeader('Content-Type', 'application/json');
+        res.end(JSON.stringify({ error: 'Invalid action' }));
+        break;
+      }
+    }
+  } catch (error) {
+    console.error('Wallet operation error:', error);
+    res.statusCode = 500;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Failed to process wallet operation' }));
+  }
+}
+
+module.exports = withSentry(handler);
+>>>>>>> main

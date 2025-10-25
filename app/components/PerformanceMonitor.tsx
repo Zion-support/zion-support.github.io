@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 
 import React, { useEffect, useState } from 'react'
@@ -9,6 +10,10 @@ interface PerformanceMetrics {
   cls: number | null
   ttfb: number | null
 }
+=======
+import React, { useEffect } from 'react';
+import { getPerformanceTracker } from '../utils/performance';
+>>>>>>> main
 
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
@@ -20,6 +25,7 @@ const PerformanceMonitor: React.FC = () => {
   })
 
   useEffect(() => {
+<<<<<<< HEAD
     if (typeof window === 'undefined') return
 
     // Monitor Core Web Vitals
@@ -56,6 +62,18 @@ const PerformanceMonitor: React.FC = () => {
       // eslint-disable-next-line no-console
       console.warn('Performance Observer not supported:', e)
     }
+=======
+    const tracker = getPerformanceTracker();
+    
+    // The tracker handles all performance monitoring internally
+    // We just need to ensure it's initialized
+    
+    return () => {
+      // Cleanup is handled by the tracker singleton
+      tracker.cleanup();
+    };
+  }, []);
+>>>>>>> main
 
     // Monitor TTFB
     const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming

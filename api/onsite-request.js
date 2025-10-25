@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 // Simple wrapper function to replace withSentry
 // const withSentry = (handler) => handler;
 
@@ -6,6 +7,9 @@ const dir = path.join(process.cwd(), 'data');
 const file = path.join(dir, 'onsite-requests.json');
 
 export default function handler(req, res) {
+=======
+async function handler(req, res) {
+>>>>>>> main
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
@@ -33,6 +37,31 @@ export default function handler(req, res) {
       timestamp: new Date().toISOString(),
       status: 'pending'
     };
+<<<<<<< HEAD
+=======
+
+    // In a real application, you would save this to a database
+    // For now, we'll just log it
+    console.log('Onsite request submitted:', request);
+
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({
+      message: 'Onsite request submitted successfully',
+      requestId: request.id
+    }));
+  } catch (error) {
+    console.error('Onsite request error:', error);
+    res.statusCode = 500;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Failed to submit onsite request' }));
+  }
+}
+//Simple wrapper function to replace withSentry
+ handler;
+const dir = path.join(process.cwd(), "data");
+const file = path.join(dir, "onsite-requests.json")
+>>>>>>> main
 
       // Ensure data directory exists
       if (!fs.existsSync(dir)) {

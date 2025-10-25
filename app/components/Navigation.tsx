@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -24,6 +25,15 @@ const Navigation: React.FC = () => {
     { name: 'Contact', href: '/contact' },
   ];
 
+=======
+
+import React from 'react'
+import Link from 'next/link'
+import { Menu, X, Brain } from 'lucide-react'
+
+
+const Navigation = () => {
+>>>>>>> main
   return (
     <nav className={`bg-white shadow-lg sticky top-0 z-50 transition-all duration-300 ${
       isScrolled ? 'shadow-xl' : ''

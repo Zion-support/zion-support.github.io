@@ -82,9 +82,17 @@ const Footer: React.FC = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">AI Services</h3>
             <ul className="space-y-2">
+<<<<<<< HEAD
               {aiServices.map((service) => (
                 <li key={service.name}>
                   <Link href={service.url} className="text-gray-300 hover:text-white transition-colors">
+=======
+              {aiServices.map((service, index) => (
+                <li key={index}>
+                  <Link 
+                    href={service.url}
+                    className="text-gray-300 hover:text-white text-sm transition-colors flex items-center group">
+>>>>>>> main
                     {service.name}
                   </Link>
                 </li>
@@ -96,13 +104,26 @@ const Footer: React.FC = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">IT Services</h3>
             <ul className="space-y-2">
+<<<<<<< HEAD
               {itServices.map((service) => (
                 <li key={service.name}>
                   <Link href={service.url} className="text-gray-300 hover:text-white transition-colors">
+=======
+
+              {itServices.map((service, index) => (
+                <li key={index}>
+                  <Link 
+                    href={service.url}
+                    className="text-gray-300 hover:text-white text-sm transition-colors flex items-center group">
+>>>>>>> main
                     {service.name}
                   </Link>
                 </li>
               ))}
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
             </ul>
           </div>
 

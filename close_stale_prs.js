@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 import https from 'https';
 
@@ -54,10 +55,26 @@ async function checkBranchExists(branchName) {
     await makeGitHubRequest(`/repos/${REPO_OWNER}/${REPO_NAME}/branches/${branchName}`);
     return true;
   } catch (error) {
+=======
+const { execSync } = require('child_process');
+
+// Function to close a stale PR
+function closeStalePR(prNumber) {
+  try {
+    console.log(`Closing stale PR #${prNumber}...`);
+    
+    // Try to close the PR
+    execSync(`gh pr close ${prNumber} --comment "Closing stale PR - branch no longer exists"`, { stdio: 'inherit' });
+    console.log(`✅ Closed PR #${prNumber}`);
+    return true;
+  } catch (error) {
+    console.error(`❌ Error closing PR #${prNumber}:`, error.message);
+>>>>>>> main
     return false;
   }
 }
 
+<<<<<<< HEAD
 // Function to close a PR
 async function closePR(pr) {
   try {
@@ -69,11 +86,22 @@ async function closePR(pr) {
   } catch (error) {
     console.log(`  ❌ Failed to close PR #${pr.number}: ${error.message}`);
     return false;
+=======
+// Function to get all open PRs
+function getAllOpenPRs() {
+  try {
+    const output = execSync('gh pr list --state open --json number', { encoding: 'utf8' });
+    return JSON.parse(output);
+  } catch (error) {
+    console.error('Error getting PR list:', error.message);
+    return [];
+>>>>>>> main
   }
 }
 
 // Main function
 async function main() {
+<<<<<<< HEAD
   try {
     console.log('🔍 Checking for stale PRs...');
     
@@ -125,6 +153,31 @@ async function main() {
   } catch (error) {
     console.error('❌ Error in main process:', error.message);
   }
+=======
+  console.log('🚀 Starting to close stale PRs...');
+  
+  const prs = getAllOpenPRs();
+  console.log(`Found ${prs.length} open PRs`);
+  
+  let successCount = 0;
+  let errorCount = 0;
+  
+  for (const pr of prs) {
+    const success = closeStalePR(pr.number);
+    if (success) {
+      successCount++;
+    } else {
+      errorCount++;
+    }
+    
+    // Add a small delay between PRs
+    await new Promise(resolve => setTimeout(resolve, 1000));
+  }
+  
+  console.log(`\n🎉 Processing complete!`);
+  console.log(`✅ Successfully closed: ${successCount} PRs`);
+  console.log(`❌ Failed to close: ${errorCount} PRs`);
+>>>>>>> main
 }
 
 main().catch(console.error);

@@ -8,16 +8,26 @@ export default async function handler(req, res) {
     return;
   }
 
+<<<<<<< HEAD
   const { amount, currency = 'usd', userId } = req.body || {};
 
   if (!amount || amount <= 0) {
     res.statusCode = 400;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Valid amount is required' }));
+=======
+  const { amount, currency = 'usd' } = req.body || {};
+
+  if (!amount) {
+    res.statusCode = 400;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Amount is required' }));
+>>>>>>> main
     return;
   }
 
   try {
+<<<<<<< HEAD
     // Basic payment intent creation logic
     const paymentIntent = {
       id: `pi_${Date.now()}`,
@@ -26,6 +36,14 @@ export default async function handler(req, res) {
       userId: userId || null,
       timestamp: new Date().toISOString(),
       status: 'requires_payment_method'
+=======
+    const paymentIntent = {
+      id: 'pi_' + Math.random().toString(36).substr(2, 9),
+      amount: Math.round(amount * 100), // Convert to cents
+      currency,
+      status: 'requires_payment_method',
+      created: Math.floor(Date.now() / 1000)
+>>>>>>> main
     };
 
     res.statusCode = 200;
