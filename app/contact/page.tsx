@@ -1,8 +1,11 @@
 'use client'
 import React, { useState, useCallback } from 'react'
 import Head from 'next/head'
-import { Phone } from 'lucide-react'
+import { Phone, Mail, MapPin, Clock } from 'lucide-react'
 import Footer from '../components/Footer'
+
+// Force dynamic rendering
+export const dynamic = 'force-dynamic';
 
 interface FormData {
   name: string

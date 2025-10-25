@@ -1,10 +1,13 @@
 'use client';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Search, BookOpen, Code, FileText, Download, ArrowRight, ChevronRight } from 'lucide-react';
 import SEOOptimizer from '../components/SEOOptimizer';
+
+// Force dynamic rendering
+export const dynamic = 'force-dynamic';
 
 const DocsPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
