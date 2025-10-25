@@ -1,12 +1,10 @@
 import { Inter } from 'next/font/google'
 import React from 'react'
 import './globals.css'
-import { metadata } from './constants/metadata'
-import { viewport } from './constants/viewport'
+import type { Metadata, Viewport } from 'next'
 
 const inter = Inter({ subsets: ['latin'] })
 
-<<<<<<< HEAD
 export const metadata: Metadata = {
   metadataBase: new URL('https://zion.app'),
   title: 'Zion Tech Group - Advanced AI & IT Solutions',
@@ -46,9 +44,6 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
 }
-=======
-export { metadata, viewport }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0ece
 
 export default function RootLayout({
   children,
@@ -57,7 +52,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-<<<<<<< HEAD
       <head>
         <script
           dangerouslySetInnerHTML={{
@@ -96,10 +90,6 @@ export default function RootLayout({
           </main>
           <Footer />
         </ErrorBoundary>
-=======
-      <body className={inter.className}>
-        {children}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0ece
       </body>
     </html>
   )
