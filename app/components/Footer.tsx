@@ -81,8 +81,7 @@ const Footer: React.FC = () => {
                 <li key={index}>
                   <Link 
                     href={service.url}
-                    className="text-gray-300 hover:text-white text-sm transition-colors flex items-center group"
-                  >
+                    className="text-gray-300 hover:text-white text-sm transition-colors flex items-center group">
                     {service.name}
                     <ArrowRight className="h-3 w-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </Link>
@@ -100,8 +99,7 @@ const Footer: React.FC = () => {
                 <li key={index}>
                   <Link 
                     href={service.url}
-                    className="text-gray-300 hover:text-white text-sm transition-colors flex items-center group"
-                  >
+                    className="text-gray-300 hover:text-white text-sm transition-colors flex items-center group">
                     {service.name}
                     <ArrowRight className="h-3 w-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </Link>

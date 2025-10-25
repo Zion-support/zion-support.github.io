@@ -290,22 +290,19 @@ const TeamPage: React.FC = () => {
                         href={member.linkedin}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-gray-400 hover:text-cyan-400 transition-colors"
-                      >
+                        className="text-gray-400 hover:text-cyan-400 transition-colors">
                         <ExternalLink className="w-5 h-5" />
                       </a>
                       <a
                         href={member.twitter}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-gray-400 hover:text-cyan-400 transition-colors"
-                      >
+                        className="text-gray-400 hover:text-cyan-400 transition-colors">
                         <ExternalLink className="w-5 h-5" />
                       </a>
                       <a
                         href={`mailto:${member.email}`}
-                        className="text-gray-400 hover:text-cyan-400 transition-colors"
-                      >
+                        className="text-gray-400 hover:text-cyan-400 transition-colors">
                         <Mail className="w-5 h-5" />
                       </a>
                     </div>
@@ -369,15 +366,13 @@ const TeamPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="/careers"
-                className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center gap-2"
-              >
+                className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center gap-2">
                 <Users className="w-5 h-5" />
                 View Open Positions
               </a>
               <a
                 href="mailto:careers@ziontechgroup.com"
-                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 flex items-center gap-2"
-              >
+                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 flex items-center gap-2">
                 <Mail className="w-5 h-5" />
                 Contact HR
               </a>

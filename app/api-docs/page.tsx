@@ -189,14 +189,12 @@ console.log(scanResult);`
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="#getting-started"
-                className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
-              >
+                className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
                 Get Started
               </a>
               <a
                 href="#endpoints"
-                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300"
-              >
+                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
                 View Endpoints
               </a>
             </div>
@@ -284,15 +282,16 @@ console.log(scanResult);`
                           <h4 className="text-lg font-semibold text-white">{example.language} Example</h4>
                           <button
                             onClick={() => copyToClipboard(example.code, `${endpoint.id}-${index}`)}
-                            className="flex items-center gap-2 px-3 py-1 bg-white/10 text-gray-300 rounded-lg hover:bg-white/20 transition-colors"
-                          >
+                            className="flex items-center gap-2 px-3 py-1 bg-white/10 text-gray-300 rounded-lg hover:bg-white/20 transition-colors">
                             {copiedCode === `${endpoint.id}-${index}` ? (
                               <>
+
                                 <Check className="w-4 h-4 text-green-400" />
                                 Copied!
                               </>
                             ) : (
                               <>
+
                                 <Copy className="w-4 h-4" />
                                 Copy
                               </>
@@ -344,14 +343,12 @@ console.log(scanResult);`
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="/support"
-                className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
-              >
+                className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
                 Contact Support
               </a>
               <a
                 href="mailto:api-support@ziontechgroup.com"
-                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300"
-              >
+                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
                 Email API Team
               </a>
             </div>

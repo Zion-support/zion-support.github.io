@@ -225,8 +225,7 @@ const ContactPage: React.FC = () => {
                   <a
                     href={method.action}
                     onClick={method.title === 'Phone' ? handlePhoneClick : method.title === 'Email' ? handleEmailClick : undefined}
-                    className="inline-block mt-4 text-cyan-400 hover:text-cyan-300 transition-colors"
-                  >
+                    className="inline-block mt-4 text-cyan-400 hover:text-cyan-300 transition-colors">
                     {method.title === 'Phone' ? 'Call Now' : method.title === 'Email' ? 'Send Email' : 'View Location'}
                   </a>
                 )}
@@ -334,8 +333,7 @@ const ContactPage: React.FC = () => {
                     name="service"
                     value={formData.service}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  >
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
                     <option value="">Select a service</option>
                     {services.map((service, index) => (
                       <option key={index} value={service} className="bg-slate-800">
@@ -364,15 +362,16 @@ const ContactPage: React.FC = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-                >
+                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2">
                   {isSubmitting ? (
                     <>
+
                       <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                       Sending...
                     </>
                   ) : (
                     <>
+
                       <Send className="w-5 h-5" />
                       Send Message
                     </>

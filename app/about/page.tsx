@@ -8,6 +8,7 @@ import Navigation from '../components/Navigation'
 const AboutPage: React.FC = () => {
   return (
     <>
+
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}

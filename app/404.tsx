@@ -13,6 +13,7 @@ import {
 export default function Custom404() {
   return (
     <>
+
       <Head>
         <title>404 - Page Not Found | Zion Tech Group</title>
         <meta name="robots" content="noindex, nofollow" />
@@ -75,6 +76,7 @@ const NotFoundPage: React.FC = () => {
 
   return (
     <>
+
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
@@ -126,8 +128,7 @@ const NotFoundPage: React.FC = () => {
                 <Link
                   key={index}
                   href={item.path}
-                  className="px-4 py-2 bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 text-purple-300 rounded-lg hover:from-purple-600/30 hover:to-blue-600/30 transition-all duration-300"
-                >
+                  className="px-4 py-2 bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 text-purple-300 rounded-lg hover:from-purple-600/30 hover:to-blue-600/30 transition-all duration-300">
                   {item.name}
                 </Link>
         {/* Features Section */}
@@ -163,15 +164,13 @@ const NotFoundPage: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Link
               href="/"
-              className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
-            >
+              className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
               <Home className="w-5 h-5 mr-2" />
               Go Home
             </Link>
             <button
               onClick={() => window.history.back()}
-              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center"
-            >
+              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
               <ArrowLeft className="w-5 h-5 mr-2" />
               Go Back
             </button>
@@ -187,15 +186,13 @@ const NotFoundPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link
                 href="/contact"
-                className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-              >
+                className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
                 <RefreshCw className="w-4 h-4 mr-2" />
                 Contact Support
               </Link>
               <a
                 href="mailto:support@ziontechgroup.com"
-                className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center"
-              >
+                className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center">
                 Send Email
               </a>
         {/* Benefits Section */}

@@ -1,95 +1,108 @@
-'use client'
-import React from 'react'
-import Head from 'next/head'
-import Link from 'next/link'
-import { ArrowRight } from 'lucide-react'
-import Footer from '../components/Footer'
+'use client';
 
-const TutorialsPage: React.FC = () => {
+import React from 'react';
+import SEOHead from '../components/SEOHead';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
+export default function TutorialsPage() {
+  const tutorials = [
+    {
+      id: 1,
+      title: 'Getting Started with AI Solutions',
+      description: 'Learn the basics of implementing AI solutions in your business.',
+      duration: '15 min',
+      difficulty: 'Beginner',
+      category: 'AI Solutions'
+    },
+    {
+      id: 2,
+      title: 'Cloud Migration Best Practices',
+      description: 'Step-by-step guide to migrating your infrastructure to the cloud.',
+      duration: '30 min',
+      difficulty: 'Intermediate',
+      category: 'Cloud Services'
+    },
+    {
+      id: 3,
+      title: 'API Integration Tutorial',
+      description: 'How to integrate our APIs into your applications.',
+      duration: '20 min',
+      difficulty: 'Intermediate',
+      category: 'Development'
+    },
+    {
+      id: 4,
+      title: 'Security Configuration',
+      description: 'Configure security settings for your enterprise solutions.',
+      duration: '25 min',
+      difficulty: 'Advanced',
+      category: 'Security'
+    }
+  ];
+
   return (
     <>
       <SEOHead
         title="Tutorials - Zion Tech Group"
-        description="Learn how to use our AI and IT solutions with comprehensive tutorials and guides."
-        keywords="tutorials, guides, learning, AI tutorials, IT tutorials, how-to"
+        description="Learn how to use Zion Tech Group services with our comprehensive tutorials and guides."
+        keywords="tutorials, guides, learning, documentation, how-to, training"
         canonicalUrl="https://ziontechgroup.com/tutorials"
       />
       
       <div className="min-h-screen bg-slate-900 text-white">
+        <Navigation />
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              Tutorials & Learning Center
+              Tutorials & Guides
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Master our AI and IT solutions with step-by-step tutorials, guides, and best practices.
+              Learn how to use Zion Tech Group services with our comprehensive tutorials and guides.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300">
-              <h3 className="text-xl font-semibold mb-4 text-white">AI Solutions Tutorials</h3>
-              <p className="text-gray-400 mb-4">
-                Learn how to implement and use our AI-powered solutions effectively.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-300">
-                <li>• Getting Started with AI Chatbot Builder</li>
-                <li>• AI Document Processing Best Practices</li>
-                <li>• Voice Assistant Integration Guide</li>
-                <li>• Fraud Detection Setup Tutorial</li>
-              </ul>
-            </div>
-            
-            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500 transition-all duration-300">
-              <h3 className="text-xl font-semibold mb-4 text-white">IT Solutions Guides</h3>
-              <p className="text-gray-400 mb-4">
-                Comprehensive guides for our IT infrastructure and development services.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-300">
-                <li>• Cloud Infrastructure Setup</li>
-                <li>• Web Development Best Practices</li>
-                <li>• Database Management Tutorials</li>
-                <li>• Security Implementation Guide</li>
-              </ul>
-            </div>
-            
-            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-green-500 transition-all duration-300">
-              <h3 className="text-xl font-semibold mb-4 text-white">Micro SaaS Tutorials</h3>
-              <p className="text-gray-400 mb-4">
-                Step-by-step guides for using our micro SaaS applications.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-300">
-                <li>• Task Manager Pro Setup</li>
-                <li>• Analytics Dashboard Configuration</li>
-                <li>• Customer Support Hub Tutorial</li>
-                <li>• Inventory Manager Guide</li>
-              </ul>
-            </div>
+
+          {/* Tutorials Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {tutorials.map((tutorial) => (
+              <div key={tutorial.id} className="bg-slate-800 rounded-lg p-6 hover:bg-slate-700 transition-colors">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-sm text-purple-400 font-medium">{tutorial.category}</span>
+                  <span className="text-sm text-gray-400">{tutorial.duration}</span>
+                </div>
+                <h3 className="text-xl font-semibold mb-2">{tutorial.title}</h3>
+                <p className="text-gray-300 mb-4">{tutorial.description}</p>
+                <div className="flex items-center justify-between">
+                  <span className={`text-sm px-2 py-1 rounded ${
+                    tutorial.difficulty === 'Beginner' ? 'bg-green-600' :
+                    tutorial.difficulty === 'Intermediate' ? 'bg-yellow-600' :
+                    'bg-red-600'
+                  }`}>
+                    {tutorial.difficulty}
+                  </span>
+                  <button className="text-purple-400 hover:text-purple-300 font-medium">
+                    Start Tutorial →
+                  </button>
+                </div>
+              </div>
+            ))}
           </div>
-export default function Page() {
-  return (
-    <div>
-      <Head>
-        <title>Tutorials - Zion Tech Group</title>
-        <meta name="description" content="Professional tutorials services and solutions by Zion Tech Group." />
-      </Head>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">
-            Tutorials
-          </h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Professional tutorials services and solutions by Zion Tech Group.
-          </p>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
-            <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300">
-              Our tutorials services are currently under development. Contact us to learn more about our upcoming services.
+
+          {/* CTA Section */}
+          <div className="text-center mt-16">
+            <h2 className="text-2xl font-bold mb-4">Need More Help?</h2>
+            <p className="text-gray-300 mb-6">
+              Can't find what you're looking for? Our support team is here to help.
             </p>
+            <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold">
+              Contact Support
+            </button>
           </div>
         </div>
+        
         <Footer />
       </div>
-    </div>
-  )
+    </>
+  );
 }
