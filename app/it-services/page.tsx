@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Cpu, Cloud, Shield, Database, Settings, Users, Lock, Globe, Code, Smartphone, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Phone, Mail, MapPin, CheckCircle, ArrowRight, Star, Award, TrendingUp, Zap, Target, BarChart, MessageSquare, Eye, Sparkles } from 'lucide-react';
+import { Cpu, Cloud, Shield, Database, Settings, Users, Lock, Globe, Code, Smartphone, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Phone, Mail, MapPin, CheckCircle, ArrowRight, Star, Award, TrendingUp, Zap, Target, BarChart, MessageSquare, Eye, Sparkles } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';

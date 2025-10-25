@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Shield, Lock, Eye, Database, UserCheck, FileText } from 'lucide-react';
+import { Shield, Lock, Eye, Database, UserCheck, FileText, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
