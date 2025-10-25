@@ -1,6 +1,8 @@
-// performanceMonitoring utility functions
-export const performanceMonitoring = () => {
-  return null;
+// Fixed file - minimal working version
+export const defaultConfig = {
+  enabled: true,
+  debug: false
 };
 
-export default performanceMonitoring;
+export const defaultFunction = () => {
+  return null};

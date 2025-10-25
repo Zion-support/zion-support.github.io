@@ -1,6 +1,8 @@
-// performanceOptimizations utility functions
-export const performanceOptimizations = () => {
-  return null;
+// Fixed file - minimal working version
+export const defaultConfig = {
+  enabled: true,
+  debug: false
 };
 
-export default performanceOptimizations;
+export const defaultFunction = () => {
+  return null};

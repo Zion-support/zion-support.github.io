@@ -1,13 +1,15 @@
-"use client";
-import React from 'react';
+'use client';
 
-const Analytics = () => {
-  return (
-    <div>
-      <h1>Analytics</h1>
-      <p>This component is under construction.</p>
-    </div>
-  );
+import React, { useEffect } from 'react';
+
+const Analytics: React.FC = () => {
+  useEffect(() => {
+    // Analytics initialization would go here
+    // For now, this is a placeholder component
+    // console.log('Analytics component mounted');
+  }, []);
+
+  return null;
 };
 
 export default Analytics;

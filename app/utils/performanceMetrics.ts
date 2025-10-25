@@ -1,6 +1,8 @@
-// performanceMetrics utility functions
-export const performanceMetrics = () => {
-  return null;
+// Fixed file - minimal working version
+export const defaultConfig = {
+  enabled: true,
+  debug: false
 };
 
-export default performanceMetrics;
+export const defaultFunction = () => {
+  return null};

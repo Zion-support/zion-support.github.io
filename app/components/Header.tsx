@@ -1,12 +1,11 @@
-"use client";
 import React from 'react';
+import Navigation from './Navigation';
 
-const Header = () => {
+const Header: React.FC = () => {
   return (
-    <div>
-      <h1>Header</h1>
-      <p>This component is under construction.</p>
-    </div>
+    <header>
+      <Navigation />
+    </header>
   );
 };
 

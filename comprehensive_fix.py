@@ -1,129 +1,190 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
+"""
+Comprehensive script to fix all merge conflicts and syntax errors
+"""
 import os
 import re
 import glob
+import json
 
-def fix_imports_and_syntax(file_path):
-    """Fix common import and syntax issues"""
+def fix_jsx_syntax_errors(file_path):
+    """Fix common JSX syntax errors"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         original_content = content
         
-        # Fix missing imports for common components
-        if 'Helmet' in content and 'import { Helmet }' not in content:
-            content = content.replace(
-                "'use client'",
-                "'use client'\nimport { Helmet } from 'react-helmet-async'"
-            )
+        # Fix common JSX syntax issues
+        # Fix missing closing tags
+        content = re.sub(r'<(\w+)([^>]*)>\s*$', r'<\1\2></\1>', content, flags=re.MULTILINE)
         
-        if 'Navigation' in content and 'import Navigation' not in content:
-            content = content.replace(
-                "'use client'",
-                "'use client'\nimport Navigation from './Navigation'"
-            )
+        # Fix unclosed JSX elements
+        content = re.sub(r'<(\w+)([^>]*?)(?<!/)>\s*$', r'<\1\2></\1>', content, flags=re.MULTILINE)
         
-        if 'Footer' in content and 'import Footer' not in content:
-            content = content.replace(
-                "'use client'",
-                "'use client'\nimport Footer from './Footer'"
-            )
+        # Fix missing semicolons in imports
+        content = re.sub(r'import\s+.*?from\s+[\'"][^\'"]+[\'"]\s*$', lambda m: m.group(0) + ';', content, flags=re.MULTILINE)
         
-        # Fix missing lucide-react imports
-        lucide_icons = ['ArrowRight', 'CheckCircle', 'Download', 'X', 'Brain', 'BarChart', 'Target', 'TrendingUp']
-        missing_icons = [icon for icon in lucide_icons if icon in content and f'import {{ {icon}' not in content]
-        if missing_icons:
-            import_line = f"import {{ {', '.join(missing_icons)} }} from 'lucide-react'"
-            if 'import { Helmet }' in content:
-                content = content.replace("import { Helmet } from 'react-helmet-async'", f"import {{ Helmet }} from 'react-helmet-async'\n{import_line}")
-            else:
-                content = content.replace("'use client'", f"'use client'\n{import_line}")
+        # Fix missing commas in object literals
+        content = re.sub(r'(\w+):\s*([^,}\n]+)\s*\n\s*(\w+):', r'\1: \2,\n  \3:', content)
         
-        # Fix unescaped entities
-        content = re.sub(r"Let's", "Let&apos;s", content)
-        content = re.sub(r"Don't", "Don&apos;t", content)
-        content = re.sub(r"can't", "can&apos;t", content)
-        content = re.sub(r"won't", "won&apos;t", content)
-        content = re.sub(r"it's", "it&apos;s", content)
-        content = re.sub(r"we're", "we&apos;re", content)
-        content = re.sub(r"you're", "you&apos;re", content)
-        content = re.sub(r"they're", "they&apos;re", content)
-        content = re.sub(r"isn't", "isn&apos;t", content)
-        content = re.sub(r"aren't", "aren&apos;t", content)
-        content = re.sub(r"wasn't", "wasn&apos;t", content)
-        content = re.sub(r"weren't", "weren&apos;t", content)
-        content = re.sub(r"hasn't", "hasn&apos;t", content)
-        content = re.sub(r"haven't", "haven&apos;t", content)
-        content = re.sub(r"hadn't", "hadn&apos;t", content)
-        content = re.sub(r"wouldn't", "wouldn&apos;t", content)
-        content = re.sub(r"shouldn't", "shouldn&apos;t", content)
-        content = re.sub(r"couldn't", "couldn&apos;t", content)
-        content = re.sub(r"didn't", "didn&apos;t", content)
-        content = re.sub(r"doesn't", "doesn&apos;t", content)
-        content = re.sub(r"do n't", "don&apos;t", content)
+        # Fix missing closing parentheses
+        content = re.sub(r'\(\s*$', '()', content, flags=re.MULTILINE)
         
-        # Fix quotes
-        content = re.sub(r'"([^"]*)"', r'&quot;\1&quot;', content)
+        # Fix missing closing braces
+        content = re.sub(r'{\s*$', '{}', content, flags=re.MULTILINE)
         
-        # Fix console statements (comment them out)
-        content = re.sub(r'console\.(log|warn|error)\([^)]*\);?', r'// \g<0>', content)
-        
-        # Fix missing display names for components
-        if 'export default function' in content and 'displayName' not in content:
-            # Find the function name
-            match = re.search(r'export default function (\w+)', content)
-            if match:
-                func_name = match.group(1)
-                content = content.replace(
-                    f'export default function {func_name}',
-                    f'export default function {func_name}\n{func_name}.displayName = "{func_name}"'
-                )
-        
-        # Fix const vs let issues
-        content = re.sub(r'let clsEntries', 'const clsEntries', content)
-        
-        # Fix missing closing tags (basic fixes)
-        content = re.sub(r'<div([^>]*)>\s*$', r'<div\1></div>', content, flags=re.MULTILINE)
-        content = re.sub(r'<section([^>]*)>\s*$', r'<section\1></section>', content, flags=re.MULTILINE)
-        
-        # Fix merge conflict markers that might have been missed
-        content = re.sub(r'<<<<<<< HEAD.*?=======.*?>>>>>>>.*?\n', '', content, flags=re.DOTALL)
-        content = re.sub(r'=======.*?>>>>>>>.*?\n', '', content, flags=re.DOTALL)
+        # Fix any remaining syntax issues
+        content = re.sub(r'\n\s*\n\s*\n+', '\n\n', content)  # Remove excessive newlines
         
         if content != original_content:
             with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(content)
-            print(f"Fixed issues in: {file_path}")
+            print(f"Fixed syntax errors in: {file_path}")
             return True
         return False
+        
     except Exception as e:
         print(f"Error fixing {file_path}: {e}")
         return False
 
+def fix_merge_conflicts_comprehensive(file_path):
+    """Comprehensive merge conflict resolution"""
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        if '<<<<<<<' not in content and '=======' not in content and '>>>>>>>' not in content:
+            return False
+        
+        lines = content.split('\n')
+        fixed_lines = []
+        in_conflict = False
+        conflict_sections = []
+        current_section = []
+        
+        for line in lines:
+            if line.strip().startswith('<<<<<<<'):
+                if current_section:
+                    conflict_sections.append(current_section)
+                current_section = []
+                in_conflict = True
+            elif line.strip().startswith('======='):
+                if current_section:
+                    conflict_sections.append(current_section)
+                current_section = []
+            elif line.strip().startswith('>>>>>>>'):
+                if current_section:
+                    conflict_sections.append(current_section)
+                current_section = []
+                in_conflict = False
+            elif in_conflict:
+                current_section.append(line)
+            else:
+                fixed_lines.append(line)
+        
+        # Take the last section (most recent)
+        if conflict_sections:
+            fixed_lines.extend(conflict_sections[-1])
+        
+        # Clean up the result
+        fixed_content = '\n'.join(fixed_lines)
+        fixed_content = re.sub(r'\n\s*\n\s*\n+', '\n\n', fixed_content)
+        
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(fixed_content)
+        
+        print(f"Fixed merge conflicts in: {file_path}")
+        return True
+        
+    except Exception as e:
+        print(f"Error fixing merge conflicts in {file_path}: {e}")
+        return False
+
+def fix_specific_syntax_issues(file_path):
+    """Fix specific syntax issues based on file content"""
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        original_content = content
+        
+        # Fix specific patterns based on the linting errors
+        if 'app/components' in file_path or 'app/page' in file_path:
+            # Fix missing closing tags
+            content = re.sub(r'<section([^>]*)>\s*$', r'<section\1></section>', content, flags=re.MULTILINE)
+            content = re.sub(r'<div([^>]*)>\s*$', r'<div\1></div>', content, flags=re.MULTILINE)
+            content = re.sub(r'<p([^>]*)>\s*$', r'<p\1></p>', content, flags=re.MULTILINE)
+            
+            # Fix JSX expressions
+            content = re.sub(r'{\s*$', '{}', content, flags=re.MULTILINE)
+            content = re.sub(r'\(\s*$', '()', content, flags=re.MULTILINE)
+            
+            # Fix missing semicolons
+            content = re.sub(r'import\s+.*?from\s+[\'"][^\'"]+[\'"]\s*$', lambda m: m.group(0) + ';', content, flags=re.MULTILINE)
+            
+            # Fix object literal syntax
+            content = re.sub(r'(\w+):\s*([^,}\n]+)\s*\n\s*(\w+):', r'\1: \2,\n  \3:', content)
+        
+        # Fix enum syntax
+        if 'enum' in content:
+            content = re.sub(r'enum\s+(\w+)\s*{\s*(\w+)\s*$', r'enum \1 {\n  \2\n}', content, flags=re.MULTILINE)
+        
+        # Fix function declarations
+        content = re.sub(r'function\s+(\w+)\s*\(\s*\)\s*{\s*$', r'function \1() {\n  // TODO: implement\n}', content, flags=re.MULTILINE)
+        
+        if content != original_content:
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(content)
+            print(f"Fixed specific syntax issues in: {file_path}")
+            return True
+        
+        return False
+        
+    except Exception as e:
+        print(f"Error fixing specific syntax in {file_path}: {e}")
+        return False
+
 def main():
-    # Find all TypeScript/TSX files
+    # Find all TypeScript/JavaScript files
     patterns = [
         'app/**/*.tsx',
         'app/**/*.ts',
+        '*.tsx',
+        '*.ts',
         'src/**/*.tsx',
-        'src/**/*.ts',
-        'components/**/*.tsx',
-        'components/**/*.ts'
+        'src/**/*.ts'
     ]
     
-    fixed_count = 0
-    total_files = 0
-    
+    files_to_fix = []
     for pattern in patterns:
-        files = glob.glob(pattern, recursive=True)
-        for file_path in files:
-            if os.path.isfile(file_path):
-                total_files += 1
-                if fix_imports_and_syntax(file_path):
-                    fixed_count += 1
+        files_to_fix.extend(glob.glob(pattern, recursive=True))
     
-    print(f"\nFixed issues in {fixed_count} out of {total_files} files")
+    # Filter out backup files and node_modules
+    files_to_fix = [f for f in files_to_fix if not f.endswith('.original') and 'node_modules' not in f and os.path.isfile(f)]
+    
+    print(f"Found {len(files_to_fix)} files to check and fix")
+    
+    fixed_count = 0
+    for file_path in files_to_fix:
+        try:
+            # First fix merge conflicts
+            if fix_merge_conflicts_comprehensive(file_path):
+                fixed_count += 1
+            
+            # Then fix syntax errors
+            if fix_jsx_syntax_errors(file_path):
+                fixed_count += 1
+            
+            # Then fix specific issues
+            if fix_specific_syntax_issues(file_path):
+                fixed_count += 1
+                
+        except Exception as e:
+            print(f"Error processing {file_path}: {e}")
+    
+    print(f"Fixed issues in {fixed_count} files")
 
 if __name__ == "__main__":
     main()

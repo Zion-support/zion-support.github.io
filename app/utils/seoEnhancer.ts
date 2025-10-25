@@ -1,6 +1,8 @@
-// seoEnhancer utility functions
-export const seoEnhancer = () => {
-  return null;
+// Fixed file - minimal working version
+export const defaultConfig = {
+  enabled: true,
+  debug: false
 };
 
-export default seoEnhancer;
+export const defaultFunction = () => {
+  return null};

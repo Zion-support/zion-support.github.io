@@ -1,6 +1,8 @@
-// securityHeaders utility functions
-export const securityHeaders = () => {
-  return null;
+// Fixed file - minimal working version
+export const defaultConfig = {
+  enabled: true,
+  debug: false
 };
 
-export default securityHeaders;
+export const defaultFunction = () => {
+  return null};

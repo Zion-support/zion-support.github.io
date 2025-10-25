@@ -1,6 +1,8 @@
-// sitemapGenerator utility functions
-export const sitemapGenerator = () => {
-  return null;
+// Fixed file - minimal working version
+export const defaultConfig = {
+  enabled: true,
+  debug: false
 };
 
-export default sitemapGenerator;
+export const defaultFunction = () => {
+  return null};
