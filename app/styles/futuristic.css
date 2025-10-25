@@ -1,0 +1,172 @@
+/* Futuristic CSS Styles */
+.futuristic-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.futuristic-glow {
+  box-shadow: 0 0 20px rgba(102, 126, 234, 0.5);
+}
+
+.futuristic-text {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.futuristic-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+}
+
+.futuristic-button {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 12px 24px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.futuristic-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.futuristic-input {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: white;
+  padding: 12px 16px;
+  backdrop-filter: blur(10px);
+}
+
+.futuristic-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.futuristic-animation {
+  animation: futuristic-pulse 2s infinite;
+}
+
+@keyframes futuristic-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.futuristic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.futuristic-section {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+.futuristic-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.futuristic-heading {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.futuristic-subheading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #a0a0a0;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.futuristic-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.futuristic-card-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.futuristic-card-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
+  border-color: rgba(102, 126, 234, 0.3);
+}
+
+.futuristic-icon {
+  width: 3rem;
+  height: 3rem;
+  margin: 0 auto 1rem;
+  color: #667eea;
+}
+
+.futuristic-text-content {
+  color: #e0e0e0;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.futuristic-link {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.futuristic-link:hover {
+  color: #764ba2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .futuristic-heading {
+    font-size: 2rem;
+  }
+  
+  .futuristic-subheading {
+    font-size: 1.25rem;
+  }
+  
+  .futuristic-container {
+    padding: 0 1rem;
+  }
+  
+  .futuristic-card-grid {
+    grid-template-columns: 1fr;
+  }
+}

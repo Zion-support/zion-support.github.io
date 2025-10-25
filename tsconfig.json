@@ -12,7 +12,7 @@
     "incremental": true,
     "module": "esnext",
     "esModuleInterop": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -20,16 +20,19 @@
       {
         "name": "next"
       }
-    ],
-    "strictNullChecks": true
+    ]
   },
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
+    "types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "corrupted-src-backup",
+    "problematic-files-backup",
+    "problematic-pages"
   ]
 }
