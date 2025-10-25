@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowRight, Brain, CheckCircle, Shield, Zap, Target, TrendingUp, Settings } from 'lucide-react'
+import { ArrowRight, CheckCircle, Zap, Target, TrendingUp, Settings } from 'lucide-react';
 
 const ServiceWorker: React.FC = () => {
   const features = [

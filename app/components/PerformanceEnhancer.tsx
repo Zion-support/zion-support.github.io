@@ -1,5 +1,5 @@
 import React from 'react'
-import { Brain, CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Globe } from 'lucide-react'
+import { ArrowRight } from 'lucide-react';
 
 const PerformanceEnhancer: React.FC = () => {
   const benefits = [

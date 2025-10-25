@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowRight, Brain, CheckCircle, Shield, Eye, Ear, Hand, Heart } from 'lucide-react'
+import { ArrowRight, Brain, CheckCircle, Eye, Ear, Hand } from 'lucide-react';
 
 const EnhancedAccessibilityEnhancer: React.FC = () => {
   const features = [

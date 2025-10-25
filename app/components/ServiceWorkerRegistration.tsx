@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { ArrowRight, Brain, CheckCircle, Shield, Settings, Zap, Target, TrendingUp } from 'lucide-react'
+import { ArrowRight, CheckCircle, Settings, Zap, Target, TrendingUp } from 'lucide-react';
 
 const ServiceWorkerRegistration: React.FC = () => {
   const [isRegistered, setIsRegistered] = useState(false)

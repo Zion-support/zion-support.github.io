@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowRight, Brain, CheckCircle, Shield, Image, Zap, Target, TrendingUp } from 'lucide-react'
+import { ArrowRight, CheckCircle, Image, Zap, Target, TrendingUp } from 'lucide-react';
 
 const ImageOptimizer: React.FC = () => {
   const features = [

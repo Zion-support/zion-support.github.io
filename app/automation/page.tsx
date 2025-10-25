@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Zap, Settings, CheckCircle, Brain, Target, Users, Calendar, BarChart, Workflow } from 'lucide-react';
+import { ArrowRight, Zap, Settings, CheckCircle, Brain, Workflow } from 'lucide-react';
 
 const AutomationPage: React.FC = () => {
   const features = [

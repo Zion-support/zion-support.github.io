@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowRight, Brain, CheckCircle, Shield, SkipForward, Zap, Target, TrendingUp } from 'lucide-react'
+import { ArrowRight, CheckCircle, Shield, SkipForward, Zap, Target } from 'lucide-react';
 
 const EnhancedSkipLink: React.FC = () => {
   const features = [

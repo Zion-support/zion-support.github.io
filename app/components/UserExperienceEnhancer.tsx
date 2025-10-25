@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowRight, Brain, CheckCircle, Shield, Heart, Zap, Target, TrendingUp } from 'lucide-react'
+import { ArrowRight, CheckCircle, Heart, Zap, Target, TrendingUp } from 'lucide-react';
 
 const UserExperienceEnhancer: React.FC = () => {
   const features = [

@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowRight, Brain, CheckCircle, Shield, Search, Target, TrendingUp, Zap } from 'lucide-react'
+import { ArrowRight, CheckCircle, Search, Target, TrendingUp, Zap } from 'lucide-react';
 
 const EnhancedSEOHead: React.FC = () => {
   const features = [

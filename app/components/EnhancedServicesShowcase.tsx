@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowRight, TrendingUp, Brain, Cloud, Shield, Zap, CheckCircle, Star, Users, Award, Clock, Globe } from 'lucide-react'
+import { ArrowRight, Brain, Cloud, Shield, Zap, CheckCircle } from 'lucide-react';
 
 const EnhancedServicesShowcase: React.FC = () => {
   const services = [

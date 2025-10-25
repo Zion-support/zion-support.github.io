@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowRight, Brain, CheckCircle, Shield, Loader2, Clock, Zap, RefreshCw } from 'lucide-react'
+import { ArrowRight, CheckCircle, Loader2, Clock, Zap, RefreshCw } from 'lucide-react';
 
 const EnhancedLoading: React.FC = () => {
   const features = [

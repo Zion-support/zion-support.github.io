@@ -2,22 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { 
-  Bars3Icon, 
-  XMarkIcon,
-  HomeIcon,
-  InformationCircleIcon,
-  BriefcaseIcon,
-  PhoneIcon,
-  DocumentTextIcon,
-  AcademicCapIcon,
-  PlayIcon,
-  QuestionMarkCircleIcon,
-  ShieldCheckIcon,
-  CurrencyDollarIcon,
-  CogIcon,
-  ChevronDownIcon
-} from '@heroicons/react/24/outline';
+import { Bars3Icon, XMarkIcon, HomeIcon, InformationCircleIcon, BriefcaseIcon, PhoneIcon, DocumentTextIcon, AcademicCapIcon, PlayIcon, QuestionMarkCircleIcon, CurrencyDollarIcon, CogIcon, ChevronDownIcon } from '@heroicons/react/24/outline';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);

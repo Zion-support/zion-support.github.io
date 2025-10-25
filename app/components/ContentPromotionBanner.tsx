@@ -1,6 +1,6 @@
 import React from 'react'
 import Navigation from './Navigation'
-import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle, Zap, Star, Clock, Shield, Globe, Database, Users, Settings } from 'lucide-react'
+import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle } from 'lucide-react';
 
 const ContentPromotionBanner: React.FC = () => {
   const benefits = [

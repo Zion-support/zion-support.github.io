@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowRight, Brain, CheckCircle, Shield, Zap, Gauge, Activity, TrendingUp } from 'lucide-react'
+import { ArrowRight, CheckCircle, Zap, Gauge, Activity, TrendingUp } from 'lucide-react';
 
 const EnhancedPerformanceOptimizer: React.FC = () => {
   const features = [

@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowRight, Brain, CheckCircle, Shield, AlertTriangle, Bug, RefreshCw, Zap } from 'lucide-react'
+import { ArrowRight, CheckCircle, Shield, AlertTriangle, Bug, RefreshCw } from 'lucide-react';
 
 const ErrorBoundary: React.FC = () => {
   const features = [

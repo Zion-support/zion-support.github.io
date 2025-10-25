@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowRight, Brain, CheckCircle, Shield, Sparkles, Zap, Target, TrendingUp } from 'lucide-react'
+import { ArrowRight, CheckCircle, Sparkles, Zap, Target, TrendingUp } from 'lucide-react';
 
 const FuturisticBackground: React.FC = () => {
   const features = [

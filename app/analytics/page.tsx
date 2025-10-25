@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, BarChart, TrendingUp, CheckCircle, Brain, Settings, Target, Users, Calendar, Zap } from 'lucide-react';
+import { ArrowRight, BarChart, TrendingUp, CheckCircle, Brain, Target } from 'lucide-react';
 
 const AnalyticsPage: React.FC = () => {
   const features = [

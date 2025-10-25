@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Code, Zap, CheckCircle, Brain, Settings, Target, Users, Calendar, BarChart } from 'lucide-react';
+import { ArrowRight, Code, Zap, CheckCircle, Brain, Settings } from 'lucide-react';
 
 const APIPage: React.FC = () => {
   const features = [

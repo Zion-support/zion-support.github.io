@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowRight, Brain, CheckCircle, Shield, Zap, Target, TrendingUp, Sparkles } from 'lucide-react'
+import { ArrowRight, CheckCircle, Zap, Target, TrendingUp, Sparkles } from 'lucide-react';
 
 const NeonButton: React.FC = () => {
   const features = [

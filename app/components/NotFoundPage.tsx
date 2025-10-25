@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowRight, Brain, CheckCircle, Shield, AlertTriangle, Home, Search, RefreshCw } from 'lucide-react'
+import { ArrowRight, CheckCircle, AlertTriangle, Home, Search, RefreshCw } from 'lucide-react';
 
 const NotFoundPage: React.FC = () => {
   const features = [

@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Shield, Zap, CheckCircle, Brain, Settings, Target, Users, Calendar, BarChart, Lock } from 'lucide-react';
+import { ArrowRight, Shield, CheckCircle, Brain, Settings, Lock } from 'lucide-react';
 
 const BlockchainPage: React.FC = () => {
   const features = [

@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowRight, Brain, CheckCircle, Shield, Lock, Eye, Zap, Target } from 'lucide-react'
+import { ArrowRight, CheckCircle, Lock, Eye, Zap, Target } from 'lucide-react';
 
 const SecurityEnhancer: React.FC = () => {
   const features = [

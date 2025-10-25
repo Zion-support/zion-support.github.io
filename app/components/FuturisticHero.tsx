@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle, Phone, Mail, MapPin, Zap, Shield, Globe } from 'lucide-react'
+import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle } from 'lucide-react';
 
 const FuturisticHero: React.FC = () => {
   const features = [
