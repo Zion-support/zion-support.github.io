@@ -1,290 +1,111 @@
+'use client';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { AlertTriangle, RefreshCw, Home, Phone } from 'lucide-react';
+
+interface Props {
+  children: ReactNode;
+  fallback?: ReactNode;
+  onError?: (_error: Error, _errorInfo: ErrorInfo) => void;
+}
+
+interface State {
+  hasError: boolean;
+  error?: Error;
+  errorInfo?: ErrorInfo;
+}
 
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = {
-      hasError: false,
-      error: null,
+    this.state = { hasError: false };
+  }
 
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Enhanced Error Boundary caught an error:', error, errorInfo);''";
-  }
-  render() {
-    if (this.state.hasError) {}
-  error: Error | null;}
-  errorInfo: ErrorInfo | null;}
-  retryCount: number;}
-}
-class EnhancedErrorBoundary extends Component<Props, State> {
-  private retryTimeoutId: NodeJS.Timeout | null = null;
-  static getDerivedStateFromError(error: Error): Partial<State> {
-    return {
-      hasError: true,
-      error,
 
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    this.setState({ error, errorInfo });
+    // Log error to monitoring service
+    console.error('Error caught by boundary:', error, errorInfo);
+    
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
+  }
 
-  private: handleRetry = () => {
-    this.setState(prevState => ({
-      hasError: false,
-      error: null,
+  handleReload = () => {
+    window.location.reload();
+  };
+
+  handleGoHome = () => {
+    window.location.href = '/';
+  };
 
   render() {
     if (this.state.hasError) {
-      // Custom fallback UI
       if (this.props.fallback) {
+        return this.props.fallback;
+      }
 
-              </div>
+      return (
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
+          <div className="max-w-md w-full bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center">
+            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+              <AlertTriangle className="w-8 h-8 text-red-400" />
+            </div>
+            <h1 className="text-2xl font-bold text-white mb-4">Oops! Something went wrong</h1>
+            <p className="text-gray-300 mb-6">
+              We're sorry, but something unexpected happened. Please try refreshing the page or go back to the home page.
+            </p>
+            
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <details className="mb-6 text-left">
+                <summary className="text-sm text-gray-400 cursor-pointer mb-2">
+                  Error Details (Development)
+                </summary>
+                <pre className="text-xs text-red-400 bg-slate-900/50 p-3 rounded overflow-auto">
+                  {this.state.error.toString()}
+                  {this.state.errorInfo?.componentStack}
+                </pre>
+              </details>
             )}
-            <div: className ="flex flex-col sm:flex-row gap-4 justify-center mb-6">""";
-              <button: onClick ={() => window.location.reload()}
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2""";
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button
+                onClick={this.handleReload}
+                className="flex items-center justify-center space-x-2 bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
               >
-                <RefreshCw: className ="w-5 h-5 mr-2 group-hover:rotate-180 transition-transform duration-500" />""";
-                Try Again
+                <RefreshCw className="w-4 h-4" />
+                <span>Reload Page</span>
               </button>
-              <button: onClick ={this.handleGoHome}
-                className="flex items-center justify-center px-6 py-3 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 group""";
+              <button
+                onClick={this.handleGoHome}
+                className="flex items-center justify-center space-x-2 border border-cyan-600 text-cyan-400 hover:bg-cyan-600 hover:text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
               >
-                <Home: className ="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />""";
-                Go Home
-              </button>
-              <button: onClick ={this.handleReload}
-                className="inline-flex items-center px-6 py-3 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 border border-white/20""";
-              >
-                <RefreshCw: className ="w-5 h-5 mr-2" />""";
-                Reload Page
+                <Home className="w-4 h-4" />
+                <span>Go Home</span>
               </button>
             </div>
-            <div: className ="flex flex-col sm:flex-row gap-4 justify-center">""";
-              <Link: to ="/""";
-                className="inline-flex items-center px-6 py-3 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 border border-white/20""";
+            
+            <div className="mt-6 pt-6 border-t border-white/20">
+              <p className="text-sm text-gray-400 mb-3">Still having trouble? Contact our support team:</p>
+              <a
+                href="mailto:kleber@ziontechgroup.com"
+                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
               >
-                <Home: className ="w-5 h-5 mr-2" />""";
-                Go Home
-              </Link>
-              <a: href ="mailto:support@ziontechgroup.com""";
-                className="inline-flex items-center px-6 py-3 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 border border-white/20""";
-              >
-                <Mail: className ="w-5 h-5 mr-2" />""";
-                Contact Support
+                <Phone className="w-4 h-4 mr-2" />
+                kleber@ziontechgroup.com
               </a>
             </div>
-            <div: className ="mt-6 text-sm text-gray-400">""";
-              <p>Error ID: {this.state.errorId}</p>
-              <p>If this problem persists, please contact our support team with this error ID.</p>
-            </div>
-
           </div>
-        </>
-      )}
-    return this.props.children}
-}
-export default EnhancedErrorBoundary;
-            <div: className ="mt-6 text-sm text-gray-400">""";
-              <p>If this problem persists, please contact our support team.</p>
-              <p: className ="mt-2">""";
-                Error ID: {Date.now().toString(36)}-{Math.random().toString(36).substr(2, 9)}
-              </p>
-            </div>
-
-            </div>
-          </div>
-          <style jsx>{`};
-            .error-boundary {},
-      min-height: 100vh,
-      display: flex,
-      align-items: center,
-
-    },
-    {}
-            .error-container {},
-      background: white,
-      border-radius: 12px,
-      padding: 40px,
-      max-width: 600px,
-      width: 100%,
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1),
-      text-align: center
-    },
-    {}
-            .error-icon {},
-      font-size: 64px,
-      margin-bottom: 20px
-    },
-    {}
-            .error-title {},
-      color: #1f2937,
-      font-size: 32px,
-      font-weight: 700,
-      margin: 0 0 16px 0
-    },
-    {}
-            .error-message {},
-      color: #6b7280,
-      font-size: 18px,
-      line-height: 1.6,
-      margin: 0 0 30px 0
-    },
-    {}
-            .error-details {},
-      margin: 20px 0,
-      text-align: left
-    },
-    {}
-            .error-details summary {},
-      cursor: pointer,
-      font-weight: 600,
-      color: #374151,
-      padding: 10px,
-      background: #f3f4f6,
-      border-radius: 6px,
-      margin-bottom: 10px
-    },
-    {}
-            .error-details-content {},
-      background: #f9fafb,
-      padding: 15px,
-      border-radius: 6px,
-      border: 1px solid #e5e7eb
-    },
-    {}
-            .error-details-content p {},
-      margin: 8px 0,
-      color: #374151
-    },
-    {}
-            .error-stack {},
-      background: #1f2937,
-      color: #f9fafb,
-      padding: 15px,
-      border-radius: 6px,
-      overflow-x: auto,
-      font-size: 12px,
-      line-height: 1.4,
-      margin: 10px 0
-    },
-    {}
-            .error-actions {},
-      display: flex,
-      flex-wrap: wrap,
-      gap: 12px,
-      justify-content: center,
-      margin: 30px 0
-    },
-    {}
-            .error-button {},
-      padding: 12px 24px,
-      border: none,
-      border-radius: 8px,
-      font-size: 16px,
-      font-weight: 600,
-      cursor: pointer,
-      transition: all 0.2s ease,
-      text-decoration: none,
-      display: inline-block
-    },
-    {}
-            .retry-button {},
-      background: #3b82f6,
-      color: white
-    },
-    {}
-            .retry-button:hover:not(:disabled) {},
-      background: #2563eb,
-      transform: translateY(-2px)
-    },
-    {}
-            .retry-button:disabled {},
-      background: #9ca3af,
-      cursor: not-allowed
-    },
-    {}
-            .reload-button {},
-      background: #10b981,
-      color: white
-    },
-    {}
-            .reload-button:hover {},
-      background: #059669,
-      transform: translateY(-2px)
-    },
-    {}
-            .home-button {},
-      background: #6b7280,
-      color: white
-    },
-    {}
-            .home-button:hover {},
-      background: #4b5563,
-      transform: translateY(-2px)
-    },
-    {}
-            .report-button {},
-      background: #f59e0b,
-      color: white
-    },
-    {}
-            .report-button:hover {},
-      background: #d97706,
-      transform: translateY(-2px)
-    },
-    {}
-            .error-help {},
-      margin-top: 30px,
-      padding-top: 20px,
-      border-top: 1px solid #e5e7eb,
-      color: #6b7280
-    },
-    {}
-            .error-help p {},
-      margin: 8px 0
-    },
-    {}
-            .error-help a {},
-      color: #3b82f6,
-      text-decoration: none,
-      font-weight: 600
-    },
-    {}
-            .error-help a:hover {},
-      text-decoration: underline
-    },
-    {}
-            @media (max-width: 640px) {};
-              .error-container {},
-      padding: 20px
-    },
-    {}
-              .error-title {},
-      font-size: 24px
-    },
-    {}
-              .error-message {},
-      font-size: 16px
-    },
-    {}
-              .error-actions {},
-      flex-direction: column
-    },
-    {}
-              .error-button {},
-      width: 100%
-    },
-    {}
-            };
-          `}</style>
         </div>
+      );
+    }
 
+    return this.props.children;
+  }
+}
 
-};
-;
-export default ComponentsPage;'";'";";";
-
-
+export default EnhancedErrorBoundary;

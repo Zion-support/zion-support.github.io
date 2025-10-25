@@ -1,81 +1,243 @@
+'use client';
+import React, { useState, useEffect } from 'react';
 
 interface PerformanceMetrics {
-  fcp: number | null
-  lcp: number | null
-  fid= number | null
-  cls: number | null
-  ttfb: number | null
+  loadTime: number | null;
+  firstContentfulPaint: number | null;
+  largestContentfulPaint: number | null;
+  firstInputDelay: number | null;
+  cumulativeLayoutShift: number | null;
+  timeToInteractive: number | null;
+  totalBlockingTime: number | null;
 }
 
-const PerformanceMonitor: React.FC = () => {
+interface PerformanceMonitorProps {
+  onMetricsUpdate?: (_metrics: PerformanceMetrics) => void;
+  enableRealTimeMonitoring?: boolean;
+  logToConsole?: boolean;
+}
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
+  onMetricsUpdate,
+  enableRealTimeMonitoring = true,
+  logToConsole = true
+}) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: null,
-    lcp: null,
-    fid= null,
-    cls: null,
-    ttfb: null
-  })
+    loadTime: null,
+    firstContentfulPaint: null,
+    largestContentfulPaint: null,
+    firstInputDelay: null,
+    cumulativeLayoutShift: null,
+    timeToInteractive: null,
+    totalBlockingTime: null
+  });
+
   useEffect(() => {
-    // Performance monitoring logic
-    const observer = new PerformanceObserver((list) => {
-      for (const entry of list.getEntries()) {
-        console.log('Performance entry:', entry);
+    if (!enableRealTimeMonitoring || typeof window === 'undefined') return;
+
+    const measurePerformance = () => {
+      const newMetrics: PerformanceMetrics = {
+        loadTime: null,
+        firstContentfulPaint: null,
+        largestContentfulPaint: null,
+        firstInputDelay: null,
+        cumulativeLayoutShift: null,
+        timeToInteractive: null,
+        totalBlockingTime: null
+      };
+
+      // Measure page load time
+      if (performance.timing) {
+        const timing = performance.timing;
+        newMetrics.loadTime = timing.loadEventEnd - timing.navigationStart;
       }
-    });
 
-    observer.observe({ entryTypes: ['measure', 'navigation'] });
+      // Measure Core Web Vitals using Performance Observer
+      if ('PerformanceObserver' in window) {
+        // First Contentful Paint (FCP)
+        const fcpObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
+          if (fcpEntry) {
+            newMetrics.firstContentfulPaint = fcpEntry.startTime;
+          }
+        });
+        fcpObserver.observe({ entryTypes: ['paint'] });
 
-    return () => observer.disconnect();
+        // Largest Contentful Paint (LCP)
+        const lcpObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
+          newMetrics.largestContentfulPaint = lastEntry.startTime;
+        });
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+
+        // First Input Delay (FID)
+        const fidObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry: any) => {
+            newMetrics.firstInputDelay = entry.processingStart - entry.startTime;
+          });
+        });
+        fidObserver.observe({ entryTypes: ['first-input'] });
+
+        // Cumulative Layout Shift (CLS)
+        let clsValue = 0;
+        const clsObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry: any) => {
+            if (!entry.hadRecentInput) {
+              clsValue += entry.value;
+            }
+          });
+          newMetrics.cumulativeLayoutShift = clsValue;
+        });
+        clsObserver.observe({ entryTypes: ['layout-shift'] });
+
+        // Time to Interactive (TTI) - approximation
+        const ttiObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const longTasks = entries.filter((entry: any) => entry.duration > 50);
+          if (longTasks.length === 0) {
+            newMetrics.timeToInteractive = performance.now();
+          }
+        });
+        ttiObserver.observe({ entryTypes: ['longtask'] });
+
+        // Total Blocking Time (TBT) - approximation
+        const tbtObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const blockingTime = entries
+            .filter((entry: any) => entry.duration > 50)
+            .reduce((total, entry: any) => total + (entry.duration - 50), 0);
+          newMetrics.totalBlockingTime = blockingTime;
+        });
+        tbtObserver.observe({ entryTypes: ['longtask'] });
+      }
+
+      // Update metrics state
+      setMetrics(prevMetrics => ({ ...prevMetrics, ...newMetrics }));
+
+      // Call callback if provided
+      if (onMetricsUpdate) {
+        onMetricsUpdate(newMetrics);
+      }
+
+      // Log to console if enabled
+      if (logToConsole) {
+        console.log('Performance Metrics Updated:', newMetrics);
+      }
+    };
+
+    // Measure performance after page load
+    if (document.readyState === 'complete') {
+      measurePerformance();
+    } else {
+      window.addEventListener('load', measurePerformance);
+    }
+
+    // Cleanup
+    return () => {
+      window.removeEventListener('load', measurePerformance);
+    };
+  }, [enableRealTimeMonitoring, onMetricsUpdate, logToConsole]);
+
+  // Service Worker registration for performance monitoring
+  useEffect(() => {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+          console.log('Service Worker registered successfully:', registration);
+        })
+        .catch((registrationError) => {
+          console.log('Service Worker registration failed:', registrationError);
+        });
+    }
   }, []);
 
-  return (
-    <div  className ="fixed bottom-4 right-4 bg-white shadow-lg rounded-lg p-4 max-w-sm z-50">"
-      <h3  className ="text-sm font-semibold text-gray-900 mb-2">Performance Monitor</h3>"
-      <div  className ="space-y-1 text-xs">"
-        <div  className ="flex justify-between">"
-          <span>FCP:</span>
-          <span  className ={metrics.fcp && metrics.fcp > 1800 ? 'text-red-600' : 'text-green-600'}>"
-            {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : '...'}"
-          </span>
-        </div>
-        
-        <div  className ="flex justify-between">"
-          <span>LCP:</span>
-          <span  className ={metrics.lcp && metrics.lcp > 2500 ? 'text-red-600' : 'text-green-600'}>"
-            {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : '...'}"
-          </span>
-        </div>
-        
-        <div  className ="flex justify-between">"
-          <span>FID:</span>
-          <span  className ={metrics.fid && metrics.fid > 100 ? 'text-red-600' : 'text-green-600'}>"
-            {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : '...'}"
-          </span>
-        </div>
-        
-        <div  className ="flex justify-between">"
-          <span>CLS:</span>
-          <span  className ={metrics.cls && metrics.cls > 0.1 ? 'text-red-600' : 'text-green-600'}>"
-            {metrics.cls ? metrics.cls.toFixed(3) : '...'}"
-          </span>
-        </div>
-        
-        <div  className ="flex justify-between">"
-          <span>TTFB:</span>
-          <span  className ={metrics.ttfb && metrics.ttfb > 600 ? 'text-red-600' : 'text-green-600'}>"
-            {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : '...'}"
-          </span>
+  // Performance monitoring dashboard (only in development)
+  if (process.env.NODE_ENV === 'development') {
+    return (
+      <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono max-w-xs">
+        <h3 className="font-bold mb-2">Performance Metrics</h3>
+        <div className="space-y-1">
+          <div>Load Time: {metrics.loadTime ? `${metrics.loadTime.toFixed(2)}ms` : 'N/A'}</div>
+          <div>FCP: {metrics.firstContentfulPaint ? `${metrics.firstContentfulPaint.toFixed(2)}ms` : 'N/A'}</div>
+          <div>LCP: {metrics.largestContentfulPaint ? `${metrics.largestContentfulPaint.toFixed(2)}ms` : 'N/A'}</div>
+          <div>FID: {metrics.firstInputDelay ? `${metrics.firstInputDelay.toFixed(2)}ms` : 'N/A'}</div>
+          <div>CLS: {metrics.cumulativeLayoutShift ? metrics.cumulativeLayoutShift.toFixed(4) : 'N/A'}</div>
+          <div>TTI: {metrics.timeToInteractive ? `${metrics.timeToInteractive.toFixed(2)}ms` : 'N/A'}</div>
+          <div>TBT: {metrics.totalBlockingTime ? `${metrics.totalBlockingTime.toFixed(2)}ms` : 'N/A'}</div>
         </div>
       </div>
+    );
+  }
 
-      {warnings.length > 0 && (
-        <div  className ="mt-2 p-2 bg-red-50 rounded text-xs">"
-          <div  className ="font-semibold text-red-800 mb-1">Warnings:</div>"
-          {warnings.map((warning, index) => (
-            <div  key ={index} className="text-red-700">• {warning}</div>"
-          ))}
-        </div>
-      )}
-    </div>
+  return null;
+};
 
+// Global performance monitoring utilities
+export const performanceUtils = {
+  // Measure custom performance marks
+  mark: (name: string) => {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      performance.mark(name);
+    }
+  },
+  // Measure time between marks
+  measure: (name: string, startMark: string, endMark?: string) => {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      if (endMark) {
+        performance.measure(name, startMark, endMark);
+      } else {
+        performance.measure(name, startMark);
+      }
+    }
+  },
+  // Get performance entries
+  getEntries: (type?: string) => {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      return type ? performance.getEntriesByType(type) : performance.getEntries();
+    }
+    return [];
+  },
+  // Clear performance entries
+  clearEntries: (type?: string) => {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      if (type) {
+        performance.clearMeasures(type);
+        performance.clearMarks(type);
+      } else {
+        performance.clearMeasures();
+        performance.clearMarks();
+      }
+    }
+  }
+};
 
+// Google Analytics integration for performance tracking
+export const trackPerformanceToGA = (_metrics: PerformanceMetrics) => {
+  if (typeof window !== 'undefined' && 'gtag' in window) {
+    (window as any).gtag('event', 'performance_metrics', {
+      event_category: 'Performance',
+      event_label: 'Core Web Vitals',
+      custom_map: {
+        load_time: _metrics.loadTime,
+        first_contentful_paint: _metrics.firstContentfulPaint,
+        largest_contentful_paint: _metrics.largestContentfulPaint,
+        first_input_delay: _metrics.firstInputDelay,
+        cumulative_layout_shift: _metrics.cumulativeLayoutShift,
+        time_to_interactive: _metrics.timeToInteractive,
+        total_blocking_time: _metrics.totalBlockingTime
+      }
+    });
+  }
+};
+
+declare global {
+  interface Window {
+    gtag: (..._args: unknown[]) => void;
+  }
+}
+
+export default PerformanceMonitor;

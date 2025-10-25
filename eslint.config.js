@@ -1,46 +1,71 @@
-import js from "@eslint/js";
-import globals from "globals";
-import reactHooks from "eslint-plugin-react-hooks";
-import reactRefresh from "eslint-plugin-react-refresh";
-import tseslint from "typescript-eslint";
+import globals from 'globals';
+import js from '@eslint/js';
+import tseslint from '@typescript-eslint/eslint-plugin';
+import tsParser from '@typescript-eslint/parser';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
+import react from 'eslint-plugin-react';
 
-export default tseslint.config(
+export default [
+  {ignores: ['dist', 'node_modules', '.next', 'out']},
   {
-    ignores: [
-      "dist",
-      ".next",
-      "backup-problematic/**",
-      "corrupted-src-backup/**",
-      "app-broken/**",
-      "app-disabled/**",
-      "src/**",
-      "*.js",
-      "scripts/**",
-      "public/sw.js",
-      "identify_missing_pages.js",
-      "merge-with-conflict-resolution.js",
-      "resolve-all-conflicts.js",
-      "**/app/**/*.tsx",
-      "**/api/**/*.js",
-      "**/__tests__/**/*.tsx"
-    ]
-  },
-  {
-    extends: [js.configs.recommended, ...tseslint.configs.recommended],
-    files: ["**/*.{ts,tsx}"],
+    files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2020,
-      globals: globals.browser
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+      },
+      parser: tsParser,
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
     },
     plugins: {
-      "react-hooks": reactHooks,
-      "react-refresh": reactRefresh
+      '@typescript-eslint': tseslint,
+      'react-hooks': reactHooks,
+      'react-refresh': reactRefresh,
+      'react': react,
     },
     rules: {
+      ...js.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
-      "react-refresh/only-export-components": "off",
-      "@typescript-eslint/no-unused-vars": "warn",
-      "@typescript-eslint/no-explicit-any": "off"
-    }
-  }
-);
+      'react-refresh/only-export-components': [
+        'warn',
+        { allowConstantExport: true },
+      ],
+      '@typescript-eslint/no-unused-vars': ['error', { 
+        'argsIgnorePattern': '^_',
+        'varsIgnorePattern': '^_',
+        'caughtErrorsIgnorePattern': '^_'
+      }],
+      '@typescript-eslint/no-explicit-any': 'warn',
+      'no-console': 'off',
+      'no-unused-vars': ['error', { 
+        'argsIgnorePattern': '^_',
+        'varsIgnorePattern': '^_',
+        'caughtErrorsIgnorePattern': '^_'
+      }],
+      'prefer-const': 'error',
+      'no-var': 'error',
+      'react/no-unescaped-entities': 'off',
+      'react/react-in-jsx-scope': 'off',
+    },
+  },
+  {
+    files: ['**/*.test.{js,jsx,ts,tsx}', '**/__tests__/**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        ...globals.jest,
+      },
+    },
+    rules: {
+      '@typescript-eslint/no-unused-vars': 'off',
+      'no-unused-vars': 'off',
+    },
+  },
+];

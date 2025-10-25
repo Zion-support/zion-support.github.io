@@ -1,116 +1,134 @@
+import React from 'react'
+import { ArrowRight, CheckCircle, Loader2, Clock, Zap, RefreshCw } from 'lucide-react';
 
-interface OptimizedLoadingSpinnerProps {},
-      size?: "xs" | "sm" | "md" | "lg" | "xl"""
-  variant?: "dots" | "pulse" | "spinner" | "skeleton" | "bars"""
-  text?: string;
-className?: string;
-color?: "blue" | "gray" | "green" | "red" | "purple"""
-  fullScreen?: boolean
-      const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(({},)
-      size = "md", variant = "spinner", text = "Loading...", className = "", color = "blue", fullScreen = false}) => {},""
-      const  sizeClasses = useMemo(() => ({},)
-      xs: "h-3 w-3",""
-      sm: "h-4 w-4",""
-      md= "h-8 w-8",""
-      lg: "h-12 w-12",""
-      xl: "h-16 w-16"});""
-      []
-    ),
-      const  textSizeClasses = useMemo(() => ({},)
-      xs: "text-xs",""
-      sm: "text-sm",""
-      md= "text-base",""
-      lg: "text-lg",""
-      xl: "text-xl"});""
-      []
-    ),
-      const  colorClasses = useMemo(() => ({},)
-      blue: "text-blue-500",""
-      gray: "text-gray-500",""
-      green: "text-green-500",""
-      red= "text-red-500",""
-      purple: "text-purple-500"});""
-      []
-    )
-    const  renderSpinner = () => {}
-}switch (variant) {},
-      case "dots":""
-          return (<div  className ="flex space-x-1"></div>)""
-              {[0, 1, _2].map((i) => ()}
-                <divkey={i},>
-      className={`${sizeClasses[size]} ${colorClasses[color]} rounded-full animate-pulse`},
-      style={{},
-      animationDelay: `${i * 0.2}s`,
-      animationDuration: "1s"}} />""
-              ))}
-            </div>
-          )
-        case "pulse":""
-          return ()
-            <div>
-              className={`${sizeClasses[size]} ${colorClasses[color]} rounded-full animate-pulse`} />
-          )
-        case "spinner":""
-          return ()
-            <div>
-              className={`${sizeClasses[size]} ${colorClasses[color]} border-2 border-current border-t-transparent rounded-full animate-spin`} />
-          )
-        case "skeleton":""
-          return ()
-            <div  className ="space-y-2"></div>""
-              <div  className ={`h-4 bg-gray-300 rounded animate-pulse`} />
-              <div  className ={`h-4 bg-gray-300 rounded animate-pulse w-3/4`} />
-            </div>
-          )
-        case "bars":""
-          return (<div  className ="flex space-x-1"></div>)""
-              {[0, 1, _2, _3].map((i) => ()}
-                <divkey={i},>
-      className={`w-1 ${colorClasses[color]} animate-pulse`},
-      style={{},
-      height: `${8 + i * 4}px`,
-      animationDelay: `${i * 0.1}s`,
+const OptimizedLoadingSpinner: React.FC = () => {
+  const features = [
+    {
+      icon: Loader2,
+      title: 'Optimized Loading Spinner',
+      description: 'Intelligent optimized loading spinner that adapts to user context and content type.',
+      benefits: ['Context-aware loading', 'Progressive loading', 'Skeleton screens', 'Smooth transitions']
+    },
+    {
+      icon: Clock,
+      title: 'Performance Loading Spinner',
+      description: 'Optimized loading spinner for better performance and user experience.',
+      benefits: ['Lazy loading', 'Code splitting', 'Resource optimization', 'Caching strategies']
+    },
+    {
+      icon: Zap,
+      title: 'Instant Loading Spinner',
+      description: 'Near-instant optimized loading spinner experiences through advanced optimization techniques.',
+      benefits: ['Preloading', 'Predictive loading', 'Background processing', 'Optimistic updates']
+    },
+    {
+      icon: RefreshCw,
+      title: 'Dynamic Loading Spinner',
+      description: 'Dynamic optimized loading spinner that responds to real-time application state changes.',
+      benefits: ['Real-time updates', 'State synchronization', 'Error recovery', 'Retry mechanisms']
+    }
+  ]
 
-              ))};
+  const benefits = [
+    'Improve perceived performance by 60%',
+    'Reduce bounce rate with better loading experiences',
+    'Enhance user engagement and satisfaction',
+    'Optimize resource usage and bandwidth',
+    'Provide consistent loading experiences across devices'
+  ]
 
-            </div>
-          )
-        default:
-          return ()
-            <div>
-              className={`${sizeClasses[size]} ${colorClasses[color]} border-2 border-current border-t-transparent rounded-full animate-spin`} />
-          )
-
-
-    return ()
-      <div></div>
-        <Helmet></Helmet>
-          <title>Loading - Zion Tech Group</title>
-        </Helmet>
-
-          {renderSpinner()};
-          {text && ()};
-            <pclassName={`${textSizeClasses[size]} ${colorClasses[color]} mt-2`};>
-            ></p
->
-
-            </p>
-          )}
-          <>
-            to="/contact""
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit""
-          ></>
-            Contact Us
-
-
-          </>
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+        <div className="relative max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            Optimized Loading Spinner
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Advanced optimized loading spinner solutions for better user experience.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+              Get Started
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </button>
+            <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              Learn More
+            </button>
+          </div>
         </div>
+      </section>
 
-        </div>;
-      </div>;
-    </>;,";
-  ),";";
-};";";";
-;"
+      {/* Features Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive optimized loading spinner features designed for optimal user experience
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-export default ComponentsPage;'";'";"
+      {/* Benefits Section */}
+      <section className="py-20 px-4 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the benefits of comprehensive optimized loading spinner features
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start space-x-4">
+                <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
+                <p className="text-gray-300 text-lg">{benefit}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Enhance Your Optimized Loading Spinner?</h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Join thousands of businesses already using our optimized loading spinner solutions
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              Start Free Trial
+            </button>
+            <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              Contact Sales
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  )
+}
+
+export default OptimizedLoadingSpinner

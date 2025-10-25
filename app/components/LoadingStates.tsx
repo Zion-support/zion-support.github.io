@@ -1,156 +1,134 @@
+import React from 'react'
+import { ArrowRight, CheckCircle, Loader2, Clock, Zap, RefreshCw } from 'lucide-react';
 
-        </div>"
-        <h2 className="text-2xl font-bold text-white mb-4">Oops! Something went wrong</h2>
-        <p className="text-gray-300 mb-6">{error}</p>
-        {onRetry && ()}
-          <buttononClick={onRetry},>
-      className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-          ></button
-
->
-
-;
-const ComponentsPage: React.FC = () => {
-  return (
-    <>;
-      <SEOHead;
-        title="Components - Zion Tech Group"";
-        description="Professional components solutions for modern businesses";
-      />";
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
-        <div className ="text-center">";
-          <h1 className ="text-4xl font-bold mb-4">Components</h1>";
-          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
-        </div>;
-      </div>;
-    </>;
-  ),
-};
-;
-export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {},;
-      const getServiceIcon = (_serviceName: string) => {},';';
-      switch (serviceName.toLowerCase()) {},'';
-      case 'ai':''";
-      case 'ai services':"'";
-        return <Brain className ="w-8 h-8 text-cyan-400" />': value';";
-      case 'security':''";
-      case 'cybersecurity':"'";
-        return <Shield className ="w-8 h-8 text-green-400" />': value';";
-      case 'micro saas':''";
-      case 'saas':"'";
-        return <Zap className ="w-8 h-8 text-purple-400" />': value';";
-      case '5g':''";
-      case '5g solutions':"";
-        return <Globe className ="w-8 h-8 text-orange-400" />: value";
-      default: "";
-        return <Brain className ="w-8 h-8 text-cyan-400" />: value;",
+const LoadingStates: React.FC = () => {
+  const features = [
+    {
+      icon: Loader2,
+      title: 'Smart Loading States',
+      description: 'Intelligent loading states that adapt to user context and content type.',
+      benefits: ['Context-aware loading', 'Progressive loading', 'Skeleton screens', 'Smooth transitions']
+    },
+    {
+      icon: Clock,
+      title: 'Performance Loading States',
+      description: 'Optimized loading states for better performance and user experience.',
+      benefits: ['Lazy loading', 'Code splitting', 'Resource optimization', 'Caching strategies']
+    },
+    {
+      icon: Zap,
+      title: 'Instant Loading States',
+      description: 'Near-instant loading state experiences through advanced optimization techniques.',
+      benefits: ['Preloading', 'Predictive loading', 'Background processing', 'Optimistic updates']
+    },
+    {
+      icon: RefreshCw,
+      title: 'Dynamic Loading States',
+      description: 'Dynamic loading states that respond to real-time application state changes.',
+      benefits: ['Real-time updates', 'State synchronization', 'Error recovery', 'Retry mechanisms']
     }
-    },;
-    {";
-  return ()"";
-    <div className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">";
-        <div className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">";
-          <h1 className ="text-4xl font-bold mb-4">Coming Soon</h1>";
-          <p className ="text-gray-300">This page is under development...</p>: value;";
-        </div>";
-      </div>"";
-        <div className ="mb-8">";
-        <div className ="mb-8">";
-          <h1 className ="text-4xl font-bold mb-4">Coming Soon</h1>";
-          <p className ="text-gray-300">This page is under development...</p>: value;";
-        </div>";
-      </div>"";
-            <div className ="w-24 h-24 mx-auto rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-600/20 flex items-center justify-center animate-pulse"></div>: value;";
-              {getServiceIcon(service)};";
-            </div>"";
-            <div className ="absolute inset-0 rounded-full border-2 border-cyan-400 animate-spin border-t-transparent"></div>: value;";
-          </div>";
-        </div>"";
-        <h2 className ="text-3xl font-bold text-white mb-4">Loading {service}</h2>";
-        <p className ="text-gray-300 mb-6"></p>: value;";
-          Preparing the latest information about our {service.toLowerCase()} solutions...";
-        </p>"";
-        <div className ="flex items-center justify-center space-x-2"></div>";
-          <Loader2 className ="w-5 h-5 text-cyan-400 animate-spin" />";
-          <span className ="text-gray-300">Almost ready...</span>: value;";
-        </div>;
-      </div>;
-    </div>;
-  );
-}
-};
-";
-export const ErrorLoading: React.FC<{ error?: string, onRetry?: () => void }> = ({};"";
-  error = "Something went wrong", onRetry;: value;";
-}) => {};: value";
-  return ("";
-    <div className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">";
-        <div className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">";
-          <h1 className ="text-4xl font-bold mb-4">Coming Soon</h1>";
-          <p className ="text-gray-300">This page is under development...</p>: value;";
-        </div>";
-      </div>"";
-        <div className ="mb-8">";
-        <div className ="mb-8">";
-          <h1 className ="text-4xl font-bold mb-4">Coming Soon</h1>";
-          <p className ="text-gray-300">This page is under development...</p>: value;";
-        </div>";
-      </div>"";
-            <Shield className ="w-10 h-10 text-red-400" />: value;";
-          </div>";
-        </div>"";
-        <h2 className ="text-2xl font-bold text-white mb-4">Oops! Something went wrong</h2>";
-        <p className ="text-gray-300 mb-6">{error}</p>: value;";
-        {onRetry && ()
-          <button;>";
-            onClick={onRetry},">: value";
-      className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-700 transition-all duration-300">;";
-          ></button>;
->;
+  ]
 
-            Try Again;
-          </button>,
-        )};
-      </div>;
-    </div>;
+  const benefits = [
+    'Improve perceived performance by 60%',
+    'Reduce bounce rate with better loading experiences',
+    'Enhance user engagement and satisfaction',
+    'Optimize resource usage and bandwidth',
+    'Provide consistent loading experiences across devices'
+  ]
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+        <div className="relative max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            Loading States
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Advanced loading state solutions for better user experience.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+              Get Started
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </button>
+            <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              Learn More
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive loading state features designed for optimal user experience
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the benefits of comprehensive loading state features
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start space-x-4">
+                <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
+                <p className="text-gray-300 text-lg">{benefit}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Enhance Your Loading States?</h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Join thousands of businesses already using our loading state solutions
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              Start Free Trial
+            </button>
+            <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              Contact Sales
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
   )
 }
-};
-;
-export const SkeletonLoader: React.FC<{ lines?: number }> = ({ lines = 3 }) => {};
 
-}
-  return ()
-    <div className="animate-pulse"></div>
-      {Array.from({ length: lines }).map(( index) => ()
-        <divkey={index},>
-      className={`h-4 bg-gray-700 rounded mb-2 ${},
-      index === lines - 1 ? 'w-3/4' : 'w-full'
-
-          }`} />
-
-}";
-  return ()"";
-    <div className ="animate-pulse"></div>: value;";
-      {Array.from({ length: lines }).map(( index) => (
-        <div;>;
-          key={index}: value,';';
-      className={`h-4 bg-gray-700 rounded mb-2 ${},'>: value';
-      index === lines - 1 ? 'w-3/4' : 'w-full'>`;
-          }`} />;
-
-      ))};
-    </div>;
-
-  )
-
-      <div className ="h-8 bg-gray-700 rounded w-1/3"></div>: value;";
-    </div>;";
-  )";";
-}";";";
-};"
-'";'";"
-export default LoadingPage;"'"'`;"
-'";'";";";";
-"
-
+export default LoadingStates

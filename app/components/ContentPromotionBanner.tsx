@@ -1,56 +1,106 @@
+import React from 'react'
+import Navigation from './Navigation'
+import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle } from 'lucide-react';
 
-interface ContentPromotionBannerProps {},
-      title?: string;
-description?: string;
-ctaText?: string;
-ctaLink?: string;
-variant?: "primary" | "secondary" | "success"""
-  className?: string
-      const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({},)
-      title = "Transform Your Business with AI", description = "Discover how our cutting-edge AI solutions can revolutionize your operations and drive unprecedented growth.", ctaText = "Get Started Today", ctaLink = "/contact", variant = "primary", className = ""}) => {},""
-      const  getVariantStyles = () => {},
-      switch (variant) {},
-      case "primary":""
-        return "bg-gradient-to-r from-cyan-500 to-purple-600"""
-      case "secondary":""
-        return "bg-gradient-to-r from-blue-500 to-indigo-600"""
-      case "success":""
-        return "bg-gradient-to-r from-green-500 to-emerald-600"""
-      default:
-        return "bg-gradient-to-r from-cyan-500 to-purple-600"""
+const ContentPromotionBanner: React.FC = () => {
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ]
 
+  const stats = [
+    { icon: Brain, value: '500+', label: 'Projects Completed' },
+    { icon: BarChart, value: '50+', label: 'Happy Clients' },
+    { icon: Target, value: '5+', label: 'Years Experience' },
+    { icon: TrendingUp, value: '99%', label: 'Client Satisfaction' }
+  ]
 
-  const  getIcon = () => {}
-}switch (variant) {},
-      case "primary":""
-        return <className="w-6 h-6" />""
-      case "secondary":""
-        return <Star: className ="w-6 h-6" />""
-      case "success":""
-        return <Star: className ="w-6 h-6" />""
-      default:
-        return <className="w-6 h-6" />""
+  return (
+    <>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              ContentPromotionBanner
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Advanced ContentPromotionBanner solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
 
+        {/* Stats Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <stat.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+                  <div className="text-gray-400 text-sm">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-  return ()
-    <divclassName={`relative overflow-hidden rounded-lg p-8 text-white ${getVariantStyles()} ${className}`};>
-    ></div
-      <div  className ="relative z-10"></div>""
-        <div  className ="flex items-center justify-center mb-4">{getIcon()}</div>""
-        <h2  className ="text-3xl font-bold text-center mb-4">{title}</h2>""
-        <p  className ="text-lg text-center mb-6 opacity-90 max-w-2xl mx-auto"></p>""
-          {description}
-        </p>
-        <div  className ="text-center"></div>""
-            to={ctaLink},
-      className="inline-flex items-center bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"""
-          ></>
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the benefits of cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start space-x-4">
+                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
+                  <p className="text-gray-300 text-lg">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-
-          </>
-        </div>
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of businesses already using our AI solutions
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Start Free Trial
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
       </div>
     </>
+  );
+};
 
-
-
+export default ContentPromotionBanner;

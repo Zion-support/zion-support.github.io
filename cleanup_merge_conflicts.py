@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
 """
-Comprehensive merge conflict cleanup script
-This script will clean up all merge conflict markers and resolve conflicts
-by keeping the most recent/complete version of the code.
+<<<<<<< HEAD
+Script to clean up merge conflict markers from files.
+This script will resolve merge conflicts by keeping the latest version (after the last =======).
+=======
+Script to automatically resolve merge conflicts by choosing the HEAD version.
+This will remove all merge conflict markers and keep only the HEAD version.
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 """
 
 import os
@@ -10,106 +14,155 @@ import re
 import glob
 from pathlib import Path
 
+<<<<<<< HEAD
 def clean_merge_conflicts(content):
-    """Clean merge conflict markers from file content"""
-    # Remove all merge conflict markers and their content
-    # Pattern matches: <<<<<<< HEAD, =======, >>>>>>> branch-name
-    lines = content.split('\n')
-    cleaned_lines = []
-    in_conflict = False
-    conflict_depth = 0
+    """Clean merge conflict markers from file content."""
+    # Pattern to match merge conflict markers
+    conflict_pattern = r'<<<<<<<.*?\n(.*?)\n=======.*?\n(.*?)\n>>>>>>>.*?\n'
     
-    for line in lines:
-        # Check for conflict start markers
-        if line.strip().startswith('<<<<<<<'):
-            in_conflict = True
-            conflict_depth += 1
-            continue
-        # Check for conflict separator
-        elif line.strip().startswith('======='):
-            continue
-        # Check for conflict end markers
-        elif line.strip().startswith('>>>>>>>'):
-            in_conflict = False
-            conflict_depth -= 1
-            continue
-        # Skip lines within conflicts (keep only the last version)
-        elif in_conflict and conflict_depth > 0:
-            continue
-        else:
-            cleaned_lines.append(line)
+    def replace_conflict(match):
+        # Get the content after the last =======
+        after_equals = match.group(2)
+        return after_equals
     
-    return '\n'.join(cleaned_lines)
+    # Replace all merge conflicts
+    cleaned = re.sub(conflict_pattern, replace_conflict, content, flags=re.DOTALL)
+    
+    # Also handle cases where there might be multiple conflict markers in sequence
+    # Remove any remaining conflict markers
+    cleaned = re.sub(r'<<<<<<<.*?\n', '', cleaned, flags=re.DOTALL)
+    cleaned = re.sub(r'=======.*?\n', '', cleaned, flags=re.DOTALL)
+    cleaned = re.sub(r'>>>>>>>.*?\n', '', cleaned, flags=re.DOTALL)
+    
+    return cleaned
 
-def fix_syntax_errors(content):
-    """Fix common syntax errors after merge conflict cleanup"""
-    # Fix unterminated strings
-    content = re.sub(r'(["\'])([^"\']*?)\n', r'\1\2\1\n', content)
-    
-    # Fix missing semicolons after statements
-    content = re.sub(r'(\w+)\s*\n\s*(\w+)', r'\1;\n\2', content)
-    
-    # Fix broken JSX closing tags
-    content = re.sub(r'<(\w+)([^>]*?)\s*$', r'<\1\2>', content)
-    
-    # Remove orphaned characters
-    content = re.sub(r'^\s*[;,]+\s*$', '', content, flags=re.MULTILINE)
-    
-    return content
-
-def clean_file(file_path):
-    """Clean a single file"""
+def process_file(file_path):
+    """Process a single file to remove merge conflicts."""
+=======
+def clean_merge_conflicts(file_path):
+    """Clean merge conflicts from a single file."""
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Clean merge conflicts
-        cleaned_content = clean_merge_conflicts(content)
+<<<<<<< HEAD
+        # Check if file has merge conflicts
+        if '<<<<<<<' in content or '=======' in content or '>>>>>>>' in content:
+            print(f"Processing: {file_path}")
+            cleaned_content = clean_merge_conflicts(content)
+            
+            # Write back the cleaned content
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(cleaned_content)
+            
+            print(f"✓ Cleaned: {file_path}")
+            return True
+        else:
+            return False
+            
+=======
+        # Pattern to match merge conflict blocks
+        # <<<<<<< HEAD
+        # ... content ...
+        # =======
+        # ... other content ...
+        # >>>>>>> branch-name
+        pattern = r'<<<<<<< HEAD\n(.*?)\n=======\n.*?\n>>>>>>> [^\n]+'
         
-        # Fix syntax errors
-        cleaned_content = fix_syntax_errors(cleaned_content)
+        # Replace with just the HEAD content
+        cleaned_content = re.sub(pattern, r'\1', content, flags=re.DOTALL)
+        
+        # Also handle cases where there might be multiple conflicts in one file
+        # Remove any remaining conflict markers
+        cleaned_content = re.sub(r'<<<<<<< HEAD\n.*?\n=======\n.*?\n>>>>>>> [^\n]+', '', cleaned_content, flags=re.DOTALL)
+        
+        # Clean up any remaining conflict markers
+        cleaned_content = re.sub(r'<<<<<<< HEAD\n.*?\n=======\n.*?\n>>>>>>> [^\n]+', '', cleaned_content, flags=re.DOTALL)
+        
+        # Remove any standalone conflict markers
+        cleaned_content = re.sub(r'<<<<<<< HEAD\n', '', cleaned_content)
+        cleaned_content = re.sub(r'=======\n', '', cleaned_content)
+        cleaned_content = re.sub(r'>>>>>>> [^\n]+\n', '', cleaned_content)
+        
+        # Clean up extra whitespace
+        cleaned_content = re.sub(r'\n\s*\n\s*\n', '\n\n', cleaned_content)
         
         # Write back the cleaned content
         with open(file_path, 'w', encoding='utf-8') as f:
             f.write(cleaned_content)
         
-        print(f"✓ Cleaned: {file_path}")
         return True
-        
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
     except Exception as e:
-        print(f"✗ Error cleaning {file_path}: {e}")
+        print(f"✗ Error processing {file_path}: {e}")
         return False
 
 def main():
-    """Main cleanup function"""
-    print("Starting merge conflict cleanup...")
-    
-    # File patterns to clean
+<<<<<<< HEAD
+    """Main function to process all files."""
+    # Get all TypeScript and JavaScript files
+    patterns = [
+        'app/**/*.tsx',
+        'app/**/*.ts',
+        '*.tsx',
+        '*.ts',
+        '*.jsx',
+        '*.js'
+=======
+    """Main function to clean all merge conflicts."""
+    # Find all TypeScript and JavaScript files
     patterns = [
         '**/*.tsx',
         '**/*.ts', 
         '**/*.js',
         '**/*.jsx'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
     ]
     
-    cleaned_count = 0
-    error_count = 0
+    files_processed = 0
+    files_with_conflicts = 0
     
     for pattern in patterns:
-        files = glob.glob(pattern, recursive=True)
-        for file_path in files:
+        for file_path in glob.glob(pattern, recursive=True):
             # Skip node_modules and other directories
+<<<<<<< HEAD
+            if any(skip in file_path for skip in ['node_modules', '.git', 'dist', '.next', 'out']):
+                continue
+                
+            files_processed += 1
+            if process_file(file_path):
+                files_cleaned += 1
+    
+    print(f"\nSummary:")
+    print(f"Files processed: {files_processed}")
+    print(f"Files cleaned: {files_cleaned}")
+=======
             if 'node_modules' in file_path or '.git' in file_path:
                 continue
                 
-            if clean_file(file_path):
-                cleaned_count += 1
-            else:
-                error_count += 1
+            try:
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                
+                # Check if file has merge conflicts
+                if '<<<<<<< HEAD' in content:
+                    files_with_conflicts += 1
+                    print(f"Processing: {file_path}")
+                    
+                    if clean_merge_conflicts(file_path):
+                        files_processed += 1
+                        print(f"✓ Cleaned: {file_path}")
+                    else:
+                        print(f"✗ Failed: {file_path}")
+                        
+            except Exception as e:
+                print(f"Error reading {file_path}: {e}")
     
-    print(f"\nCleanup complete!")
-    print(f"✓ Files cleaned: {cleaned_count}")
-    print(f"✗ Errors: {error_count}")
+    print(f"\nSummary:")
+    print(f"Files with conflicts found: {files_with_conflicts}")
+    print(f"Files successfully cleaned: {files_processed}")
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 
 if __name__ == "__main__":
     main()

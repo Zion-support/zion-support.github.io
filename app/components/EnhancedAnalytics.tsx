@@ -1,91 +1,116 @@
+'use client';
 
-      interface AnalyticsContextType {},
-      track: (_event: string, properties?: Record<string, _unknown>) => void,
-      identify: (_userId: string, traits?: Record<string, _unknown>) => void,
-      page: (_name: string, properties?: Record<string, _unknown>) => void
-    },
+import React, { createContext, useContext, useEffect } from 'react';
 
 interface AnalyticsContextType {
-  track: (event: string, properties?: Record<string, unknown>) => void;
-  identify: (userId: string, traits?: Record<string, unknown>) => void;
-  page: (name: string, properties?: Record<string, unknown>) => void;
+  track: (_event: string, _properties?: Record<string, unknown>) => void;
+  identify: (_userId: string, _traits?: Record<string, unknown>) => void;
+  page: (_name: string, _properties?: Record<string, unknown>) => void;
+}
 
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+
+export const useAnalytics = () => {
+  const context = useContext(AnalyticsContext);
+  if (!context) {
+    throw new Error('useAnalytics must be used within an AnalyticsProvider');
   }
-  return context
+  return context;
+};
 
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
-  children,
-}) => {
+interface AnalyticsProviderProps {
+  children: React.ReactNode;
+}
+
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
+  // Initialize analytics
   useEffect(() => {
-
-    // Initialize analytics
-
+    if (typeof window !== 'undefined') {
+      // Google Analytics
+      if (process.env.NODE_ENV === 'production') {
+        const script = document.createElement('script');
         script.async = true;
         script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_ID}`;
         document.head.appendChild(script);
-        (window as any).dataLayer = (window as any).dataLayer || [];
 
+        window.dataLayer = window.dataLayer || [];
+        function gtag(..._args: unknown[]) {
+          window.dataLayer.push(_args);
+        }
+        gtag('js', new Date());
+        gtag('config', process.env.REACT_APP_GA_ID);
       }
+    }
+  }, []);
 
-
-  }, []),
-      const: track = (_event: string, properties?: Record<string, _unknown>) => {},;
-      if (typeof window !== "undefined") {};";"
-      // Google Analytics;
-if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {};
-        (_window as unknown as { gtag: (...args: unknown[]) => void }).gtag()
-
-          "event",";
-
-          event,
-          properties,
-        )
-      };
-      // Custom analytics
-
-          process.env.REACT_APP_GA_ID,
-          {};
-            user_id: userId,
-            custom_map: traits},
-        )
-      };
-      // Custom analytics
-
-            page_title: name,
-            page_location: window.location.href,
-            ...properties},
-        )
-      // Custom analytics
-  const value: AnalyticsContextType  =  {},
-      track,
-      identify,
-      page},
-      return ()
-
-          custom_map: traits,
-        })
+  const track = (_event: string, _properties?: Record<string, unknown>) => {
+    if (typeof window !== 'undefined') {
+      // Google Analytics
+      if (window.gtag) {
+        window.gtag('event', _event, _properties);
       }
       
-      // Custom analytics tracking
-
-          page_title: name,
-          page_location: window.location.href,
-          ...properties,
-        })
-
-      
-      // Custom analytics tracking
-
+      // Custom analytics - only log in development
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Analytics Event: ', _event, _properties);
+      }
+    }
   };
-  const value: AnalyticsContextType  =  {,
+
+  const identify = (_userId: string, _traits?: Record<string, unknown>) => {
+    if (typeof window !== 'undefined') {
+      // Google Analytics
+      if (window.gtag) {
+        window.gtag('config', process.env.REACT_APP_GA_ID, {
+          user_id: _userId,
+          custom_map: _traits
+        });
+      }
+      
+      // Custom analytics - only log in development
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Analytics Identify: ', _userId, _traits);
+      }
+    }
+  };
+
+  const page = (_name: string, _properties?: Record<string, unknown>) => {
+    if (typeof window !== 'undefined') {
+      // Google Analytics
+      if (window.gtag) {
+        window.gtag('event', 'page_view', {
+          page_title: _name,
+          page_location: window.location.href,
+          ..._properties
+        });
+      }
+      
+      // Custom analytics - only log in development
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Analytics Page: ', _name, _properties);
+      }
+    }
+  };
+
+  const value: AnalyticsContextType = {
     track,
     identify,
-    page,;
+    page
   };
 
   return (
-    <AnalyticsContext.Provider: value ={value}>
-      {children};
+    <AnalyticsContext.Provider value={value}>
+      {children}
     </AnalyticsContext.Provider>
-  )
+  );
+};
 
+// Extend Window interface for TypeScript
+declare global {
+  interface Window {
+    dataLayer: unknown[];
+    gtag: (..._args: unknown[]) => void;
+  }
+}
+
+export default AnalyticsProvider;
