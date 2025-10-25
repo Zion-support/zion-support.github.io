@@ -32,18 +32,15 @@ describe('Components', () => {
       </HelmetProvider>
     );
     expect(screen.getByText('SEO Test')).toBeTruthy();
-<<<<<<< HEAD
-=======
   });
   
   it('renders mock component', () => {
     render(<MockComponent />);
-    expect(screen.getByTestId('mock-component')).toBeInTheDocument();
+    expect(screen.getByTestId('mock-component')).toBeTruthy();
   });
   
   it('displays correct text', () => {
     render(<MockComponent />);
-    expect(screen.getByText('Mock Component')).toBeInTheDocument();
->>>>>>> 37f1b5c5f3c3e6c4c4ce4d59d91fac2c3215daf9
+    expect(screen.getByText('Mock Component')).toBeTruthy();
   });
 });
