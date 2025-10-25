@@ -4,6 +4,21 @@
  * Provides helper functions and utilities for testing
  */
 
+<<<<<<< HEAD
+=======
+// Jest types for testing environment
+declare global {
+  const jest: {
+    fn: (_implementation?: (..._args: unknown[]) => unknown) => unknown;
+  };
+  const Console: {
+    log: (..._args: unknown[]) => void;
+    error: (..._args: unknown[]) => void;
+    warn: (..._args: unknown[]) => void;
+  };
+}
+
+>>>>>>> origin/fix-linting-errors
 /**
  * Wait for a specified amount of time
  */

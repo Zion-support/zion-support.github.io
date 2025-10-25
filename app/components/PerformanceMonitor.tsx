@@ -37,8 +37,13 @@ const PerformanceMonitor: React.FC = () => {
       }));
 
       // Send to analytics service (replace with your analytics endpoint)
+<<<<<<< HEAD
       if (typeof window !== 'undefined' && (window as unknown as { gtag?: Function }).gtag) {
         (window as unknown as { gtag: Function }).gtag('event', metric.name, {
+=======
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', metric.name, {
+>>>>>>> origin/fix-linting-errors
           event_category: 'Web Vitals',
           value: Math.round(metric.value),
           event_label: metric.id,

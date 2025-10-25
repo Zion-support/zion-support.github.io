@@ -48,8 +48,8 @@ export const createMock = <T,>(defaultValue: T): T => {
 
 export const mockFunction = <T extends (..._args: unknown[]) => unknown,>(
   _implementation?: T
-): any => {
-  return (() => {}) as any;
+): T => {
+  return (() => {}) as T;
 };
 
 // Test runner component
@@ -94,13 +94,13 @@ const TestRunner: React.FC<TestRunnerProps> = ({
   }, [config, onTestComplete, onPerformanceUpdate, onCoverageUpdate])
   const measurePerformance = async (): Promise<PerformanceMetrics> => {
     const startTime = performance.now();
-    const startMemory = (performance as unknown as { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize || 0;
+    const startMemory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize || 0;
     
     // Simulate some work
     await new Promise(resolve => setTimeout(resolve, 100));
     
     const endTime = performance.now();
-    const endMemory = (performance as unknown as { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize || 0;
+    const endMemory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize || 0;
     return {
       renderTime: endTime - startTime,
       memoryUsage: endMemory - startMemory,
