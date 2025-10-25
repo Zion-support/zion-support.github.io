@@ -1,5 +1,5 @@
-import { TextEncoder, TextDecoder } from 'util';
-import '@testing-library/jest-dom';
+import { TextEncoder, TextDecoder } from 'util'
+import '@testing-library/jest-dom'
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
@@ -14,14 +14,14 @@ Object.defineProperty(window, 'matchMedia', {
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn(),
   })),
-});
+})
 
 // Mock URL.revokeObjectURL
 if (typeof URL.revokeObjectURL === 'undefined') {
   Object.defineProperty(URL, 'revokeObjectURL', {
     writable: true,
     value: jest.fn(),
-  });
+  })
 }
 
 // Mock window.scrollTo
@@ -29,7 +29,7 @@ if (typeof window.scrollTo === 'undefined') {
   Object.defineProperty(window, 'scrollTo', {
     writable: true,
     value: jest.fn(),
-  });
+  })
 }
 
 // Mock IntersectionObserver
@@ -38,7 +38,7 @@ global.IntersectionObserver = class IntersectionObserver {
   disconnect() {}
   observe() {}
   unobserve() {}
-} as any;
+} as any
 
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
@@ -46,11 +46,11 @@ global.ResizeObserver = class ResizeObserver {
   disconnect() {}
   observe() {}
   unobserve() {}
-};
+}
 
 // Mock TextEncoder and TextDecoder
-global.TextEncoder = TextEncoder;
-global.TextDecoder = TextDecoder as any;
+global.TextEncoder = TextEncoder
+global.TextDecoder = TextDecoder as any
 
 // Mock Next.js router
 jest.mock('next/router', () => ({
@@ -72,9 +72,9 @@ jest.mock('next/router', () => ({
         emit: jest.fn(),
       },
       isFallback: false,
-    };
+    }
   },
-}));
+}))
 
 // Mock Next.js navigation
 jest.mock('next/navigation', () => ({
@@ -86,74 +86,59 @@ jest.mock('next/navigation', () => ({
       back: jest.fn(),
       forward: jest.fn(),
       refresh: jest.fn(),
-    };
+    }
   },
   useSearchParams() {
-    return new URLSearchParams();
+    return new URLSearchParams()
   },
   usePathname() {
-    return '/';
+    return '/'
   },
-}));
+}))
 
-// Mock framer-motion if it exists
-try {
-  require('framer-motion');
-  jest.mock('framer-motion', () => ({
-    motion: {
-      div: 'div',
-      span: 'span',
-      h1: 'h1',
-      h2: 'h2',
-      h3: 'h3',
-      p: 'p',
-      button: 'button',
-      section: 'section',
-      article: 'article',
-      header: 'header',
-      footer: 'footer',
-      nav: 'nav',
-      main: 'main',
-      aside: 'aside',
-    },
-    AnimatePresence: ({ children }: { children: React.ReactNode }) => children,
-    useAnimation: () => ({
-      start: jest.fn(),
-      stop: jest.fn(),
-      set: jest.fn(),
-    }),
-    useInView: () => true,
-    useMotionValue: () => ({ get: jest.fn(), set: jest.fn() }),
-    useTransform: () => ({ get: jest.fn(), set: jest.fn() }),
-    useSpring: () => ({ get: jest.fn(), set: jest.fn() }),
-    useScroll: () => ({ scrollY: { get: jest.fn() } }),
-    useViewportScroll: () => ({ scrollY: { get: jest.fn() } }),
-  }));
-} catch (e) {
-  // framer-motion not installed, skip mock
-}
+// Mock framer-motion
+jest.mock('framer-motion', () => ({
+  motion: {
+    div: 'div',
+    span: 'span',
+    h1: 'h1',
+    h2: 'h2',
+    h3: 'h3',
+    p: 'p',
+    button: 'button',
+    section: 'section',
+    article: 'article',
+    header: 'header',
+    footer: 'footer',
+    nav: 'nav',
+    main: 'main',
+    aside: 'aside',
+  },
+  AnimatePresence: ({ children }: { children: React.ReactNode }) => children,
+  useAnimation: () => ({
+    start: jest.fn(),
+    stop: jest.fn(),
+    set: jest.fn(),
+  }),
+  useInView: () => true,
+  useMotionValue: () => ({ get: jest.fn(), set: jest.fn() }),
+  useTransform: () => ({ get: jest.fn(), set: jest.fn() }),
+  useSpring: () => ({ get: jest.fn(), set: jest.fn() }),
+  useScroll: () => ({ scrollY: { get: jest.fn() } }),
+  useViewportScroll: () => ({ scrollY: { get: jest.fn() } }),
+}))
 
-// Mock react-helmet-async if it exists
-try {
-  require('react-helmet-async');
-  jest.mock('react-helmet-async', () => ({
-    Helmet: ({ children }: { children: React.ReactNode }) => children,
-    HelmetProvider: ({ children }: { children: React.ReactNode }) => children,
-  }));
-} catch (e) {
-  // react-helmet-async not installed, skip mock
-}
+// Mock react-helmet-async
+jest.mock('react-helmet-async', () => ({
+  Helmet: ({ children }: { children: React.ReactNode }) => children,
+  HelmetProvider: ({ children }: { children: React.ReactNode }) => children,
+}))
 
-// Mock web-vitals if it exists
-try {
-  require('web-vitals');
-  jest.mock('web-vitals', () => ({
-    getCLS: jest.fn(),
-    getFID: jest.fn(),
-    getFCP: jest.fn(),
-    getLCP: jest.fn(),
-    getTTFB: jest.fn(),
-  }));
-} catch (e) {
-  // web-vitals not installed, skip mock
-}
+// Mock web-vitals
+jest.mock('web-vitals', () => ({
+  getCLS: jest.fn(),
+  getFID: jest.fn(),
+  getFCP: jest.fn(),
+  getLCP: jest.fn(),
+  getTTFB: jest.fn(),
+}))

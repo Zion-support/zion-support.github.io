@@ -1,120 +1,301 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
-import { Helmet } from 'react-helmet-async;
-export default function Ai3 dGenerationPage() {"
-const features = ["
-    {"
-icon: "🎨",title: "Text-to-3 D Generation",description: "Create 3 D models from simple text descriptions using advanced AI algorithms."
-    ,}"
-    {"
-icon: "🖼️",title: "Image-to-3 D Conversion",description: "Transform 2 D images into detailed 3 D models with our cutting-edge technology."
-    ,}"
-    {"
-icon: "⚡",title: "Real-time Processing",description: "Generate 3 D models in seconds with our optimized AI processing pipeline."
-    ,}"
-    {"
-icon: "🎯",title: "High Quality Output",description: "Get professional-grade 3 D models suitable, for, games,VR, and AR applications."
-    }"
-  ]"
-const useCases = ["
-    "Game Development"
-    "Architecture Visualization"
-    "Product Design"
-    "Medical Imaging"
-    "Education"
-    "Entertainment"
-  ]
-return(<>
-  </>"
-      <Helmet />"
-        <title>AI 3 D Generation - Zion Tech Group</title>"
-        <metaname="description" content="Transform your ideas into stunning 3 D models with our advanced AI-powered generation technology." / />
-      </Helmet>"
-"
-      {/* Hero Section */,}"
-      <section className="bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white py-20" />,"
-    <div className="max-w-7 xl mx-auto px-4" />,"
-    <div className="text-center" />,"
-    <h1 className="text-5 xl font-bold mb-6">AI 3 D Generation</h1>"
-            <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto" />
-Transform your ideas into stunning 3 D models with our advanced AI-powered generation technology.</p>"
-Create detailed 3 D assets from text descriptions or 2 D images in seconds.</p>"
-            </p>,"
-    <div className="flex flex-col sm: flex-row gap-4 justify-center" />"
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300" />"
-Get Started</button>"
-              </button>"
-              <buttonclassName="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: "bg-white hove",r: text-gray-900 transition-all duration-300" />
-Try Demo</button>
-              </button>
-            </div>
+import { Helmet } from 'react-helmet-async';
+
+export default function Page() {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white">
+      <Helmet>
+        <title> - Zion Tech Group</title>
+        <meta name="description" content=" solutions by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold mb-8"></h1>
+        <div className="prose prose-invert max-w-none">
+          <p>This page is under construction. Please check back later for  solutions.</p>
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+
+export default function Ai3dGenerationPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <Helmet>
+        <title>AI 3D Generation - Zion Tech Group</title>
+        <meta name="description" content="Transform your ideas into stunning 3D models with our advanced AI-powered generation technology." />
+        <meta name="keywords" content="AI 3D generation, 3D modeling, AI technology, Zion Tech Group" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">AI 3D Generation</h1>
+          <p className="text-lg text-gray-300 mb-8">
+            Transform your ideas into stunning 3D models with our advanced AI-powered generation technology.
+            Create detailed 3D assets from text descriptions or 2D images in seconds.
+          </p>
+          
+          <div className="flex gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+            >
+              Get Started
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Link>
+            <Link
+              to="/demo"
+              className="inline-flex items-center bg-transparent border border-cyan-500 text-cyan-500 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
+            >
+              Try Demo
+            </Link>
           </div>
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
         </div>
-      </section>"
-"
-      {/* Features Section */,}"
-      <section className="py-20 bg-gray-50" />,"
-    <div className="max-w-7 xl mx-auto px-4" />,"
-    <div className="text-center mb-16" />,"
-    <h1 className="text-4 xl font-bold text-gray-900 mb-4">Powerful 3 D Generation Features</h2>"
-            <p className="text-xl text-gray-600 max-w-3 xl mx-auto" />
-Everything you need to create professional 3 D models with AI assistance.</p>"
-            </p>"
-          </div>,"
-    <divclassName="grid md: "grid-cols-2 l",g: grid-cols-4 gap-8" />)"
-            {features.map((feature,index) => ("
-      <divkey = {index,} className="bg-white p-6 rounded-lg shadow-lg" />"
-    </div>,"
-    <div className = "text-4 xl mb-4">{feature.icon,}</div>,"
-    <h1 className = "text-xl font-semibold text-gray-900 mb-4"></h3>"
-                  {feature.title,;}</h3>"
-                </h3>"
-                <p className="text-gray-600" />
-                  {feature.description,;}</p>
-                </p>
-              </div>);
+      </div>
+=======
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xll p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
+                <div className="mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
             ))}
           </div>
-        </div>
-      </section>"
-"
-      {/* Use Cases Section */;
-}
-      <section className="py-20 bg-white" />,"
-    <div className="max-w-7 xl mx-auto px-4" />,"
-    <div className="text-center mb-16" />,"
-    <h1 className="text-4 xl font-bold text-gray-900 mb-4">Perfect For</h2>"
-            <p className="text-xl text-gray-600 max-w-3 xl mx-auto" />
-Our AI 3 D generation technology excels in various industries and applications.</p>"
-            </p>"
-          </div>,"
-    <div className="flex flex-wrap justify-center gap-4" />"
-            {useCases.map((useCase, index) => (</div>"
-              <spankey = {index,;} className = "bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-full font-semibold" />
-                {useCase,;}</span>
-              </span>
-            ));}
-          </div>
-        </div>
-      </section>"
-"
-      {/* CTA Section */;
-}
-      <section className="py-20 bg-gradient-to-r from-purple-900 to-blue-900 text-white" />,"
-    <div className="max-w-7 xl mx-auto px-4 text-center" />,"
-    <h1 className="text-4 xl font-bold mb-6">Ready to Create Amazing 3 D Models?</h2>"
-          <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto" />"
-Start generating professional 3 D models with our AI-powered technology today.</p>"
-          </p>,"
-    <div className="flex flex-col sm: flex-row gap-4 justify-center" />"
-            <button className="bg-white text-purple-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300" />"
-Get Started Today</button>"
-            </button>"
-            <buttonclassName="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: "bg-white hove",r: text-purple-900 transition-all duration-300" />
-View All AI Services</button>
-            </button>
-          </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-white/10 backdrop-blur-lg rounded-2xll p-8 lg:p-12 border border-white/20">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Perfect For
+              </h2>
+              <p className="text-xl text-gray-300">
+                Our AI 3D generation technology excels in various industries and applications
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {useCases.map((useCase, index) => (
+                <div key={index} className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                  <span className="text-sm">{useCase}</span>
+                </div>
+              ))}
+            </div>
         </div>
       </section>
-    </>"
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-6 sm:p-8 lg:p-12 text-center">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Create Amazing 3D Models?
+            </h2>
+            <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+              Start generating professional 3D models with our AI-powered technology today.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
+              >
+                Get Started Today
+              </Link>
+              <Link
+                to="/ai-services"
+                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300"
+              >
+                View All AI Services
+              </Link>
+            </div>
+        </div>
+      </section>    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>AI 3D Generation - Zion Tech Group</title>
+        <meta name="description" content="Create stunning 3D models with AI-powered generation. Transform text descriptions and images into detailed 3D assets instantly." />
+        <meta name="keywords" content="AI 3D generation, 3D modeling, text-to-3D, image-to-3D, 3D assets, AI modeling" />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+              AI 3D Generation
+            </h1>
+            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Transform your ideas into stunning 3D models with our advanced AI-powered generation technology.
+              Create detailed 3D assets from text descriptions or 2D images in seconds.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link
+                to="/demo"
+                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
+              >
+                Try Demo
+              </Link>
+            </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Powerful 3D Generation Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Everything you need to create professional 3D models with AI assistance.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xll p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
+                <div className="mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-white/10 backdrop-blur-lg rounded-2xll p-8 lg:p-12 border border-white/20">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Perfect For
+              </h2>
+              <p className="text-xl text-gray-300">
+                Our AI 3D generation technology excels in various industries and applications
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {useCases.map((useCase, index) => (
+                <div key={index} className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                  <span className="text-sm">{useCase}</span>
+                </div>
+              ))}
+            </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-6 sm:p-8 lg:p-12 text-center">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Create Amazing 3D Models?
+            </h2>
+            <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+              Start generating professional 3D models with our AI-powered technology today.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
+              >
+                Get Started Today
+              </Link>
+              <Link
+                to="/ai-services"
+                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300"
+              >
+                View All AI Services
+              </Link>
+            </div>
+        </div>
+      </section>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
+    </div>
   );
-,};
+<<<<<<< HEAD
+}
+=======
+export default function Ai3dGenerationPage() {return (
+    <title>AI 3D Generation - Zion Tech Group</title>
+      {/* Hero Section */}
+              AI 3D Generation;
+              Transform your ideas into stunning 3D models with our advanced AI-powered generation technology.
+              Create detailed 3D assets from text descriptions or 2D images in seconds.
+                Get Started;
+                Try Demo;
+      {/* Features Section */}
+              Powerful 3D Generation Features;
+              Everything you need to create professional 3D models with AI assistance.
+
+ (
+                <div className="mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+  ))}
+
+      {/* Use Cases Section */}
+                Perfect For;
+                Our AI 3D generation technology excels in various industries and applications;
+ (
+                  <span className="text-sm">{useCase}</span>
+  ))}
+
+      {/* CTA Section */}
+              Ready to Create Amazing 3D Models?
+              Start generating professional 3D models with our AI-powered technology today.
+                Get Started Today;
+                View All AI Services;
+      </section>    <div></div>
+        <title>AI 3D Generation - Zion Tech Group</title>
+      {/* Hero Section */}
+              AI 3D Generation;
+              Transform your ideas into stunning 3D models with our advanced AI-powered generation technology.
+              Create detailed 3D assets from text descriptions or 2D images in seconds.
+                Get Started;
+                Try Demo;
+      {/* Features Section */}
+              Powerful 3D Generation Features;
+              Everything you need to create professional 3D models with AI assistance.
+
+ (
+                <div className="mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+  ))}
+
+      {/* Use Cases Section */}
+                Perfect For;
+                Our AI 3D generation technology excels in various industries and applications;
+ (
+                  <span className="text-sm">{useCase}</span>
+  ))}
+
+      {/* CTA Section */}
+              Ready to Create Amazing 3D Models?
+              Start generating professional 3D models with our AI-powered technology today.
+                Get Started Today;
+                View All AI Services;
+  );
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

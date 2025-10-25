@@ -1,99 +1,73 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async;
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
+=======
+export default function AICybersecuritySuitePage() {return (
+    <title>AI Cybersecurity Suite - Zion Tech Group</title>
+      {/* Hero Section */}
+              AI Cybersecurity Suite;
+              Comprehensive AI-powered cybersecurity solutions with advanced threat detection,
+              zero trust security, and automated incident response capabilities.
+                Get Started;
+                View Pricing;
+      {/* Features Section */}
+              Advanced Security Features;
+              Protect your organization with cutting-edge AI-powered cybersecurity solutions.
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+
+export default function Page() {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white">
+      <Helmet>
+        <title> - Zion Tech Group</title>
+        <meta name="description" content=" solutions by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold mb-8"></h1>
+        <div className="prose prose-invert max-w-none">
+          <p>This page is under construction. Please check back later for  solutions.</p>
+=======
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+
 export default function AICybersecuritySuitePage() {
-"
-const features = ["
-    {"
-icon: "🛡️",title: "AI Threat Detection",description: "Advanced machine learning algorithms detect and prevent cyber threats in real-time.",details: ["Real-time monitoring","Behavioral analysis", "Anomaly detection"]
-    "
-}"
-    {"
-icon: "🔐",title: "Zero Trust Security",description: "Implement zero trust architecture with continuous verification and access control.",details: ["Continuous verification","Access control", "Identity management"]"
-    }"
-    {"
-icon: "⚡",title: "Automated Response",description: "Automated incident response and threat mitigation with AI-powered decision making.",details: ["Instant response","Threat mitigation", "Recovery automation"]
-    }
-  ]
-return(<>
-  </>"
-      <Helmet />"
-        <title>AI Cybersecurity Suite - Zion Tech Group</title>"
-        <metaname="description" content="Comprehensive AI-powered cybersecurity solutions with advanced, threat, detection, zero, trust, security, and automated incident response capabilities." / />
-      </Helmet>"
-"
-      {/* Hero Section */}"
-      <section className="bg-gradient-to-br from-red-900 via-purple-900 to-indigo-900 text-white py-20" />,"
-    <div className="max-w-7 xl mx-auto px-4" />,"
-    <div className="text-center" />,"
-    <h1 className="text-5 xl font-bold mb-6">AI Cybersecurity Suite</h1>"
-            <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto" />
-Comprehensive AI-powered cybersecurity solutions with advanced, threat, detection, </p>"
-zero, trust, security, and automated incident response capabilities.</p>"
-            </p>,"
-    <div className="flex flex-col sm: flex-row gap-4 justify-center" />"
-              <button className="bg-gradient-to-r from-red-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-red-600 hover:to-purple-700 transition-all duration-300" />"
-Get Started</button>"
-              </button>"
-              <buttonclassName="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: "bg-white hove",r: text-gray-900 transition-all duration-300" />
-View Pricing</button>
-              </button>
-            </div>
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <Helmet>
+        <title>AI Cybersecurity Suite - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive AI-powered cybersecurity solutions with advanced threat detection, zero trust security, and automated incident response capabilities." />
+        <meta name="keywords" content="AI cybersecurity, threat detection, zero trust security, Zion Tech Group" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">AI Cybersecurity Suite</h1>
+          <p className="text-lg text-gray-300 mb-8">
+            Comprehensive AI-powered cybersecurity solutions with advanced threat detection, 
+            zero trust security, and automated incident response capabilities.
+          </p>
+          
+          <div className="flex gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+            >
+              Get Started
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Link>
+            <Link
+              to="/pricing"
+              className="inline-flex items-center bg-transparent border border-cyan-500 text-cyan-500 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
+            >
+              View Pricing
+            </Link>
           </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
         </div>
-      </section>"
-"
-      {/* Features Section */,}"
-      <section className="py-20 bg-gray-50" />,"
-    <div className="max-w-7 xl mx-auto px-4" />,"
-    <div className="text-center mb-16" />,"
-    <h1 className="text-4 xl font-bold text-gray-900 mb-4">Advanced Security Features</h2>"
-            <p className="text-xl text-gray-600 max-w-3 xl mx-auto" />
-Protect your organization with cutting-edge AI-powered cybersecurity solutions.</p>"
-            </p>"
-          </div>,"
-    <div className="grid md: grid-cols-3 gap-8" />)"
-            {features.map((feature,index) => ("
-      <divkey = {index,} className="bg-white p-8 rounded-lg shadow-lg" />"
-    </div>,"
-    <div className = "text-4 xl mb-4">{feature.icon,}</div>,"
-    <h1 className = "text-2 xl font-semibold text-gray-900 mb-4"></h3>"
-                  {feature.title,}</h3>"
-                </h3>"
-                <p className="text-gray-600 mb-6" />"
-                  {feature.description,;}</p>"
-                </p>"
-                <ul className="space-y-2" />"
-                  {feature.details.map((detail, detailIndex) => (</ul>"
-                    <likey = {detailIndex,;} className="flex items-center text-gray-600" />,"
-    <span className="w-2 h-2 bg-red-500 rounded-full mr-3" />
-                      {detail,;}
-                    </li>
-                  ));}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>"
-"
-      {/* CTA Section */;
-}
-      <section className="py-20 bg-gradient-to-r from-red-900 to-purple-900 text-white" />,"
-    <div className="max-w-7 xl mx-auto px-4 text-center" />,"
-    <h1 className="text-4 xl font-bold mb-6">Ready to Secure Your Organization?</h2>"
-          <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto" />"
-Protect your business with our comprehensive AI-powered cybersecurity suite.</p>"
-          </p>,"
-    <div className="flex flex-col sm: flex-row gap-4 justify-center" />"
-            <button className="bg-white text-red-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300" />"
-Get Started</button>"
-            </button>"
-            <buttonclassName="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: "bg-white hove",r: text-red-900 transition-all duration-300" />
-View Pricing</button>
-            </button>
-          </div>
-        </div>
-      </section>
-    </>"
+      </div>
+    </div>
   );
-,};
+}
