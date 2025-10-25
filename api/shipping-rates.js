@@ -1,55 +1,65 @@
-import fs from 'fs';
-import path from 'path';
+const { withSentry } = require('./withSentry.cjs');
 
-const dir = path.join(process.cwd(), 'data');
-const file = path.join(dir, 'shipping-rates.json');
-
-export default async function handler(req, res) {
+async function handler(req, res) {
   if (req.method !== 'POST') {
+    res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
   }
 
-  const { destination, weight } = req.body;
-  if (!destination || !weight) {
-    return res.status(400).json({ error: 'Destination and weight are required' });
-  }
-
-  let rates = [];
   try {
-    const data = fs.readFileSync(file, 'utf8');
-    rates = JSON.parse(data);
-  } catch (error) {
-    console.error('Error:', error);
-    console.error('Error reading existing rates:', error);
-  }
+    const { fromAddress, toAddress, parcel } = req.body || {};
+    const apiKey = process.env.EASYPOST_API_KEY;
 
-  const distanceMultiplier = destination === 'US' ? 1 : 2;
-  const baseRate = 10;
-  const rate = baseRate + (weight * 0.5 * distanceMultiplier);
+    if (!apiKey) {
+      res.statusCode = 500;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ error: 'EasyPost API key not configured' }));
+      return;
+    }
 
-  try {
-    const newRate = {
-      id: Date.now().toString(),
-      destination,
-      weight,
-      rate,
-      createdAt: new Date().toISOString()
-    };
+    const response = await fetch('https://api.easypost.com/v2/shipments', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${apiKey}`
+      },
+      body: JSON.stringify({
+        shipment: {
+          to_address: toAddress,
+          from_address: fromAddress,
+          parcel: parcel
+        }
+      })
+    });
 
-    rates.push(newRate);
-    fs.writeFileSync(file, JSON.stringify(rates, null, 2));
+    if (!response.ok) {
+      throw new Error(`EasyPost API error: ${response.status}`);
+    }
 
+    const data = await response.json();
+    const rates = data.shipment.rates || [];
+
+    res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      success: true,
-      rate: rate,
-      message: 'Shipping rate calculated successfully'
+    res.end(JSON.stringify({
+      message: 'Shipping rates retrieved successfully',
+      rates: rates.map(rate => ({
+        id: rate.id,
+        service: rate.service,
+        carrier: rate.carrier,
+        rate: rate.rate,
+        currency: rate.currency,
+        deliveryDays: rate.delivery_days
+      }))
     }));
   } catch (error) {
-    console.error('Error:', error);
+    console.error('Shipping rates error:', error);
+    res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to save rate' }));
+    res.end(JSON.stringify({ error: 'Failed to retrieve shipping rates' }));
   }
 }
+
+module.exports = withSentry(handler);

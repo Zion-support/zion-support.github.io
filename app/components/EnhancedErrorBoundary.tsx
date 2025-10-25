@@ -1,174 +1,193 @@
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
-    }
-  ]
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ]
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" loading="lazy">
-      <Helmet>
-        <title>EnhancedErrorBoundary | Zion Tech Group</title>
-        <meta name="description" content="Professional EnhancedErrorBoundary services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="EnhancedErrorBoundary, AI solutions, IT services, Zion Tech Group, enhancederrorboundary" />
-      </Helmet>
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8" loading="lazy">
-        <div className="max-w-7xl mx-auto" loading="lazy">
-          <div className="text-center mb-16" loading="lazy">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" loading="lazy">Why Choose Our EnhancedErrorBoundary?</h2>h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto" loading="lazy">Our enhancederrorboundary solutions deliver unmatched performance, security, and scalability.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" loading="lazy">{features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300" loading="lazy">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4" loading="lazy">
-                  <feature.icon className="h-6 w-6 text-white" loading="lazy" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3" loading="lazy">{feature.title}</h3>
-                <p className="text-gray-300" loading="lazy">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5" loading="lazy">
-        <div className="max-w-7xl mx-auto" loading="lazy">
-          <div className="text-center mb-16" loading="lazy">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" loading="lazy">Key Benefits</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto" loading="lazy">Experience the power of our enhancederrorboundary solutions for your business.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6" loading="lazy">{benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3" loading="lazy">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" loading="lazy" />
-                <p className="text-gray-300 text-lg" loading="lazy">{benefit}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8" loading="lazy">
-        <div className="max-w-4xl mx-auto text-center" loading="lazy">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12" loading="lazy">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" loading="lazy">Ready to Get Started?</h2>h2>
-            <p className="text-xl text-purple-100 mb-8" loading="lazy">Contact our experts to discuss your enhancederrorboundary needs and get a customized solution.</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center" loading="lazy">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center" loading="lazy" aria-label="Action button">
-                <Phone className="mr-2 h-5 w-5" loading="lazy" />
-                Call Now
-  </
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center" loading="lazy" aria-label="Action button">
-                <Mail className="mr-2 h-5 w-5" loading="lazy" />
-                Email Us
-  </
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  )
-}
-export default EnhancedErrorBoundaryPage
-  </button>
-  </button>
-  </h2>
-import React, { Component, ErrorInfo, ReactNode } from 'react'
-import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react'
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+
 interface Props {
-  children: ReactNode
-  fallback?: ReactNode
+  children: ReactNode;
+  fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  resetOnPropsChange?: boolean;
+  resetKeys?: Array<string | number>;
 }
+
 interface State {
-  hasError: boolean
-  error?: Error
-  errorInfo?: ErrorInfo
+  hasError: boolean;
+  error: Error | null;
+  errorInfo: ErrorInfo | null;
+  errorId: string;
 }
+
 class EnhancedErrorBoundary extends Component<Props, State> {
+  private resetTimeoutId: NodeJS.Timeout | null = null;
+
   constructor(props: Props) {
-    super(props)
-    this.state = { hasError: false }
+    super(props);
+    this.state = {
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorId: ''
+    };
   }
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error }
+
+  static getDerivedStateFromError(error: Error): Partial<State> {
+    return {
+      hasError: true,
+      error,
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+    };
   }
+
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo
-    })
-    // Log error to monitoring service
-    console.error('Error caught by boundary:', error, errorInfo)
+    });
+
+    // Call custom error handler if provided
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
+    }
+
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('EnhancedErrorBoundary caught an error:', error, errorInfo);
+    }
+
+    // Send error to monitoring service in production
+    if (process.env.NODE_ENV === 'production') {
+      this.reportError(error, errorInfo);
+    }
   }
-  handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined })
+
+  componentDidUpdate(prevProps: Props) {
+    const { resetKeys, resetOnPropsChange } = this.props;
+    const { hasError } = this.state;
+
+    if (hasError && prevProps.resetKeys !== resetKeys) {
+      if (resetOnPropsChange && resetKeys) {
+        this.resetErrorBoundary();
+      }
+    }
   }
-  handleReload = () => {
-    window.location.reload()
+
+  componentWillUnmount() {
+    if (this.resetTimeoutId) {
+      clearTimeout(this.resetTimeoutId);
+    }
   }
+
+  private reportError = (error: Error, errorInfo: ErrorInfo): void => {
+    // Example: Send to error reporting service
+    // errorReportingService.captureException(error, {
+    //   extra: errorInfo,
+    //   tags: {
+    //     component: 'ErrorBoundary',
+    //     errorId: this.state.errorId
+    //   }
+    // });
+    
+    // For now, we'll just log it
+    console.error('Error reported:', {
+      error: error.message,
+      stack: error.stack,
+      componentStack: errorInfo.componentStack,
+      errorId: this.state.errorId
+    });
+  };
+
+  private resetErrorBoundary = (): void => {
+    if (this.resetTimeoutId) {
+      clearTimeout(this.resetTimeoutId);
+    }
+
+    this.setState({
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorId: ''
+    });
+  };
+
+  private handleRetry = (): void => {
+    this.resetErrorBoundary();
+  };
+
+  private handleReload = (): void => {
+    window.location.reload();
+  };
+
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
-        return this.props.fallback
+        return this.props.fallback;
       }
+
       return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4" loading="lazy">
-          <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center" loading="lazy">
-            <div className="w-16 h-16 bg-red-500/20 rounded-2xl flex items-center justify-center mb-6 mx-auto" loading="lazy">
-              <AlertTriangle className="w-8 h-8 text-red-400" loading="lazy" />
+        <div 
+          className="min-h-screen flex items-center justify-center bg-gray-50" 
+          role="alert" 
+          aria-live="polite"
+          aria-labelledby="error-title"
+        >
+          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
+            <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full" aria-hidden="true">
+              <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.268 19.5c-.77.833.192 2.5 1.732 2.5z" />
+              </svg>
             </div>
-            <h1 className="text-2xl font-bold text-white mb-4" loading="lazy">Oops! Something went wrong</h1>
-            <p className="text-gray-300 mb-6" loading="lazy">We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.</p>
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mb-6 text-left" loading="lazy">
-                <summary className="text-sm text-gray-400 cursor-pointer mb-2" loading="lazy">
-                  Error Details (Development)
-                </summary>
-                <pre className="text-xs text-red-300 bg-black/20 p-3 rounded overflow-auto" loading="lazy">{this.state.error.toString()}</p>
-                  {this.state.errorInfo?.componentStack}
-                </pre>
-              </details>
-            )}
-            <div className="space-y-3" loading="lazy">
-              <button
-                onClick={this.handleRetry}
-                className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center" loading="lazy"
-               aria-label="Action button">
-                <RefreshCw className="w-4 h-4 mr-2" loading="lazy" />
-                Try Again
-              </button>
-              <button
-                onClick={this.handleReload}
-                className="w-full border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center" loading="lazy"
-               aria-label="Action button">
-                <Home className="w-4 h-4 mr-2" loading="lazy" />
-                Reload Page
-              </button>
-            </div>
-            <div className="mt-6 pt-6 border-t border-gray-700" loading="lazy">
-              <p className="text-sm text-gray-400 mb-3" loading="lazy">Still having issues? Contact our support team:</p>
-              <a
-                href="mailto:support@ziontechgroup.com"
-                className="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm" loading="lazy"
-              >
-                <Mail className="w-4 h-4 mr-2" loading="lazy" />
-                support@ziontechgroup.com
-              </a>
+            <div className="mt-4 text-center">
+              <h1 id="error-title" className="text-lg font-medium text-gray-900">
+                Something went wrong
+              </h1>
+              <p className="mt-2 text-sm text-gray-500">
+                {this.state.error?.message || 'An unexpected error occurred'}
+              </p>
+              
+              {process.env.NODE_ENV === 'development' && this.state.error && (
+                <details className="mt-4 text-left">
+                  <summary className="cursor-pointer text-sm text-gray-600 hover:text-gray-800">
+                    Error Details
+                  </summary>
+                  <pre className="mt-2 text-xs text-gray-500 bg-gray-100 p-2 rounded overflow-auto max-h-32">
+                    {this.state.error.stack}
+                  </pre>
+                </details>
+              )}
+              
+              <div className="mt-6 space-y-3">
+                <button
+                  onClick={this.handleRetry}
+                  className="w-full px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
+                  aria-label="Try to continue without reloading"
+                >
+                  Try Again
+                </button>
+                <button
+                  onClick={this.handleReload}
+                  className="w-full px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors"
+                  aria-label="Reload the page to try again"
+                >
+                  Reload Page
+                </button>
+                <button
+                  onClick={() => window.history.back()}
+                  className="w-full px-4 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors"
+                  aria-label="Go back to the previous page"
+                >
+                  Go Back
+                </button>
+              </div>
+              
+              <div className="mt-4 text-xs text-gray-400">
+                Error ID: {this.state.errorId}
+              </div>
             </div>
           </div>
         </div>
-      )
+      );
     }
-    return this.props.children
+
+    return this.props.children;
   }
 }
-export default EnhancedErrorBoundary
+
+export default EnhancedErrorBoundary;
