@@ -45,13 +45,26 @@
   "exclude": [
     "node_modules",
     "corrupted-src-backup",
+    "corrupted-pages-backup",
+    "corrupted-pages",
+    "working-pages",
     "problematic-files-backup",
     "problematic-pages",
     "**/ai-pages-backup/**",
     "**/all-pages-backup/**",
+    "**/ai-pages-disabled/**",
+    "**/ai-*-disabled/**",
+    "**/api-backup/**",
+    "**/api-disabled/**",
+    "**/app-disabled-all/**",
+    "**/app-disabled/**",
+    "**/apps/**",
     "**/backup*/**",
     "**/*.backup.*",
     "**/*.bak",
-    "**/backup/**"
+    "**/backup/**",
+    "**/*-backup.*",
+    "**/*-fixed.*",
+    "**/App.tsx"
   ]
 }
