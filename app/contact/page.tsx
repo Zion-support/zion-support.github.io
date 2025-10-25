@@ -1,34 +1,71 @@
 'use client'
 import React from 'react'
+<<<<<<< HEAD
 import Head from 'next/head'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
+=======
+import Navigation from '../components/Navigation'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0ece
 import Footer from '../components/Footer'
+import { Mail, Phone, MapPin } from 'lucide-react'
 
-export default function Page() {
+const ContactPage: React.FC = () => {
   return (
-    <div>
-      <Head>
-        <title>Contact Us - Zion Tech Group</title>
-        <meta name="description" content="Get in touch with Zion Tech Group for AI and technology solutions." />
-      </Head>
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">
-            Contact Us
-          </h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Get in touch with Zion Tech Group for AI and technology solutions.
-          </p>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
-            <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300">
-              This service is currently under development. Contact us to learn more about our upcoming services.
-            </p>
+    <>
+      <Navigation />
+      
+      <main className="pt-16">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-5xl font-bold mb-6">Contact Us</h1>
+              <p className="text-xl text-blue-100">
+                Ready to transform your business? Let&apos;s discuss your project
+              </p>
+            </div>
           </div>
+<<<<<<< HEAD
         </div>
         <Footer />
       </main>
     </div>
   )
 }
+=======
+        </section>
+
+        {/* Contact Info Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="text-center">
+                  <Mail className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Email</h3>
+                  <p className="text-gray-600">info@ziontechgroup.com</p>
+                </div>
+                <div className="text-center">
+                  <Phone className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Phone</h3>
+                  <p className="text-gray-600">+1 (555) 123-4567</p>
+                </div>
+                <div className="text-center">
+                  <MapPin className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Address</h3>
+                  <p className="text-gray-600">123 Tech Street, Innovation City</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
+}
+
+export default ContactPage
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0ece

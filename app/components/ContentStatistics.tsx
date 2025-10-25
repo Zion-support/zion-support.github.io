@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 "use client";
 import React from 'react';
 =======
@@ -239,3 +240,21 @@ export default ContentStatistics;
 
 export default ContentStatistics
 >>>>>>> 6d21a698833607de6a5fc802b68ed751e474e57d
+=======
+
+import React from 'react';
+
+interface ContentStatisticsProps {
+  // Add props here
+}
+
+const ContentStatistics: React.FC<ContentStatisticsProps> = (_props) => {
+  return (
+    <div>
+      {/* Component content */}
+    </div>
+  );
+};
+
+export default ContentStatistics;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0ece

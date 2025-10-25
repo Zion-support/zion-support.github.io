@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 "use client";
 import React from 'react';
 
@@ -189,3 +190,21 @@ const EnhancedPerformanceMonitor: React.FC = () => {
 
 export default EnhancedPerformanceMonitor
 >>>>>>> 6d21a698833607de6a5fc802b68ed751e474e57d
+=======
+
+import React from 'react';
+
+interface EnhancedPerformanceMonitorProps {
+  // Add props here
+}
+
+const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = (_props) => {
+  return (
+    <div>
+      {/* Component content */}
+    </div>
+  );
+};
+
+export default EnhancedPerformanceMonitor;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0ece

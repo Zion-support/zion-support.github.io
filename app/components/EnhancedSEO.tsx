@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 "use client";
 import React from 'react';
 
@@ -7,11 +8,25 @@ const EnhancedSEO = () => {
     <div>
       <h1>EnhancedSEO</h1>
       <p>This component is under construction.</p>
+=======
+
+import React from 'react';
+
+interface EnhancedSEOProps {
+  // Add props here
+}
+
+const EnhancedSEO: React.FC<EnhancedSEOProps> = (_props) => {
+  return (
+    <div>
+      {/* Component content */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0ece
     </div>
   );
 };
 
 export default EnhancedSEO;
+<<<<<<< HEAD
 =======
 'use client'
 import React from 'react'
@@ -192,3 +207,5 @@ const EnhancedSEO: React.FC = () => {
 
 export default EnhancedSEO
 >>>>>>> 6d21a698833607de6a5fc802b68ed751e474e57d
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0ece

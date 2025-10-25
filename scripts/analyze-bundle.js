@@ -13,9 +13,14 @@ function analyzeBundle() {"
 ;"'"
 console.log('🔍 Analyzing bundle...\n");
 
-  // Check if dist directory exists;"
-  if (!fs.existsSync(DIST_DIR)) {;"'"
-console.error('❌ Dist directory not found. Please run "npm run build" first.");
+// Ensure analysis directory exists;
+if (!fs.existsSync(ANALYSIS_DIR)) {fs.mkdirSync(ANALYSIS_DIR, { recursive: true});
+
+function analyzeBundle() {console.log('🔍 Analyzing bundle...\n');
+
+  // Check if dist directory exists;
+  if (!fs.existsSync(DIST_DIR)) {
+    console.error('❌ Dist directory not found. Please run "npm run build" first.');
     process.exit(1);
 ;
   // Get all JS files in dist;
@@ -24,33 +29,25 @@ console.error('❌ Dist directory not found. Please run "npm run build" first.")
 const files = fs.readdirSync(dir);
       const filePath = path.join(dir, file);
       const stat = fs.statSync(filePath);
-      if (stat.isDirectory()) {;"
-findJSFiles(filePath);"
-      "'"
-,} else if (file.endsWith('.js")) {;
-jsFiles.push(filePath);
-    });
-;
-findJSFiles(DIST_DIR);
+      if (stat.isDirectory()) {
+        findJSFiles(filePath);} else if (file.endsWith('.js')) {jsFiles.push(filePath);});
 
-  // Analyze each JS file;"
-  const analysis = {;"
-totalFiles: "jsFiles.length",totalSize: "0",files: "[]",recommendations: "[]"
-  ",};
-;
-  // Analyze each JS file;";
-const analysis = {;"
-totalFiles: "jsFiles.length",totalSize: "0",files: "[]",recommendations: "[]"
-  "}
-const stats = fs.statSync(filePath);
+  findJSFiles(DIST_DIR);
+
+  // Analyze each JS file;
+  const analysis = {totalFiles: jsFiles.length,
+    totalSize: 0,
+    files: [],
+    recommendations: []};
+
+    const stats = fs.statSync(filePath);
     const size = stats.size;
     const relativePath = path.relative(DIST_DIR, filePath);
-;"
-analysis.totalSize += size;"
-    analysis.files.push({;)"
-path: "relativePath",size: "size",);"
-sizeFormatted: "formatBytes(size)"
-    ",});
+
+    analysis.totalSize += size;
+    analysis.files.push({path: relativePath,
+      size: size,
+      sizeFormatted: formatBytes(size)});
   });
 
   // Sort files by size;
@@ -65,24 +62,24 @@ sizeFormatted: "formatBytes(size)"
 ;
   // Generate HTML report;
   generateHTMLReport(analysis);
-;'"
-console.log('📊 Bundle Analysis Complete!\n');"
-  console.log(`Total files: "${analysis.totalFiles"}`);";`"
-  console.log(`Total size: "${formatBytes(analysis.totalSize)"}\n`);"
-;";'"
-console.log('📁 Largest files: "');";`"
-    console.log(`  ${file.path"}: ${file.sizeFormatted}`)});"
-;";'"
-console.log('\n💡 Recommendations: "');";`"
-    console.log(`  • ${rec"}`)});"
-;";`"
-console.log(`\n📄 Detailed report saved to: "${reportPath"}`);";`'"
-  console.log(`🌐 HTML report saved to: "${path.join(ANALYSIS_DIR",'bundle-report.html')}`);
-;
-function formatBytes(bytes) {;
-;
-if (bytes === 0) return '0 Bytes';
-const k = 1024;
+
+  console.log('📊 Bundle Analysis Complete!\n');
+  console.log(`Total files: ${analysis.totalFiles}`);
+  console.log(`Total size: ${formatBytes(analysis.totalSize)}\n`);
+
+  console.log('📁 Largest files:');
+    console.log(`${file.path}: ${file.sizeFormatted}`);
+  });
+
+  console.log('\n💡 Recommendations:');
+    console.log(`• ${rec}`);
+  });
+
+  console.log(`\n📄 Detailed report saved to: ${reportPath}`);
+  console.log(`🌐 HTML report saved to: ${path.join(ANALYSIS_DIR, 'bundle-report.html')}`);
+
+function formatBytes(bytes) {if (bytes === 0) return '0 Bytes';
+  const k = 1024;
   const sizes = ['Bytes', 'KB', 'MB', 'GB'];
   const i = Math.floor(Math.log(bytes) / Math.log(k));
   return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
@@ -107,29 +104,39 @@ sum + file.size, 0);"
  1024 * 1024) { // 1MB;"'"
       recommendations.push('Vendor bundle is large. Consider tree shaking and removing unused dependencies.");"
 
-  // Check for duplicate chunks;"'"
- f.path.split('-")[0,]);"
- chunkNames.indexOf(name) !== index);"
- 0) {;"'"
-recommendations.push('Duplicate chunks detected. Consider optimizing chunk splitting strategy.");
+  // Check for vendor files;
+ file.path.includes('vendor'));
+ 0) {sum + file.size, 0);
+ 1024 * 1024) { // 1MB;
+      recommendations.push('Vendor bundle is large. Consider tree shaking and removing unused dependencies.');
 
-  // Performance recommendations;"
- 1024 * 1024) { // 1MB;"'"
-    recommendations.push('Enable gzip compression on your server to reduce bundle size by ~70%.");"
-;"'"
-recommendations.push('Use dynamic imports for route-based code splitting.");"'"
-  recommendations.push('Consider using a CDN for static assets.");"'"
-  recommendations.push('Implement service worker for caching strategies.");
-;
-analysis.recommendations = recommendations;
-;
-function generateHTMLReport(analysis) {;
-;`;
-const html = `;
-    <title>Bundle Analysis Report - Zion Tech Group</>;"
-body{;";'"
-font-family: "-apple-system",BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;"
-            margin: "0;
+  // Check for duplicate chunks;
+ f.path.split('-')[0]);
+ chunkNames.indexOf(name) !== index);
+ 0) {
+    recommendations.push('Duplicate chunks detected. Consider optimizing chunk splitting strategy.');
+
+  // Performance recommendations;
+ 1024 * 1024) { // 1MB;
+    recommendations.push('Enable gzip compression on your server to reduce bundle size by ~70%.');
+
+  recommendations.push('Use dynamic imports for route-based code splitting.');
+  recommendations.push('Consider using a CDN for static assets.');
+  recommendations.push('Implement service worker for caching strategies.');
+
+  analysis.recommendations = recommendations;
+
+function generateHTMLReport(analysis) {
+  const html={`
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bundle Analysis Report - Zion Tech Group</title>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
             padding: 20px;
             background: #0f172a;
             color: #e2e8f0;
@@ -351,46 +358,35 @@ color: #00d4ff
 margin: 0
             padding-left: 20px
         .recommendations li {
-margin-bottom: 8px
-            color: #e2e8f0
-        <h1 />📊 Bundle Analysis Report<>
-    </h1>
-    <divclass = stat-value" />
-,}"
-</>${analysis.totalFiles,}<>
-    </div>
-    <divclass = stat-label" />
-</>Total Files<>
-    </div>
-    <divclass=stat-value />
-</>${formatBytes(analysis.totalSize),}<>
-    </div>
-    <divclass=stat-label" />
-</>Total Size<>
-    </div>
-    <divclass=stat-value />'"
-</>${analysis.files.length > 0 ? formatBytes(analysis.files[0,].size) : '0"}<>
-    </div>
-    <divclass = stat-label" />
-</>Largest File<>
-    </div>
-    <th>
-</>File Path<>
-    </th>
-    <th>
-</>Size</th>
- `"
-                            <td>${file.path,}<>
-    </td>
-    <td class = size">
-</>${file.sizeFormatted,;}</td>'
-                    `).join('");};"
-;"
-            <h3>💡 Optimization Recommendations</h3>;"'"
-${analysis.recommendations.map(rec = > `<li>${rec,}</li>`).join('")};"
-  `;"
-;"'"
-const htmlPath = path.join(ANALYSIS_DIR, 'bundle-report.html");
+            margin-bottom: 8px;
+            color: #e2e8f0;
+        <h1>📊 Bundle Analysis Report</h1>
+                <div class="stat-value">${analysis.totalFiles}</div>
+                <div class="stat-label">Total Files</div>
+                <div class="stat-value">${formatBytes(analysis.totalSize)}</div>
+                <div class="stat-label">Total Size</div>
+                <div class="stat-value">${analysis.files.length > 0 ? formatBytes(analysis.files[0].size) : '0'}</div>
+                <div class="stat-label">Largest File</div>
+                        <th>File Path</th>
+                        <th>Size</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${analysis.files.map(file => `}
+                        <tr>
+                            <td>${file.path}</td>
+                            <td class="size">${file.sizeFormatted}</td>
+                        </tr>
+                    `).join('')}
+                </tbody>
+            </table>
+        </div>
+
+            <h3>💡 Optimization Recommendations</h3>
+                ${analysis.recommendations.map(rec => `<li>${rec}</li>`).join('')}
+  `;
+
+  const htmlPath = path.join(ANALYSIS_DIR, 'bundle-report.html');
   fs.writeFileSync(htmlPath, html);
 
 

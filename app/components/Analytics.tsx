@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 "use client";
 import React from 'react';
 
@@ -7,11 +8,26 @@ const Analytics = () => {
     <div>
       <h1>Analytics</h1>
       <p>This component is under construction.</p>
+=======
+
+
+import React from 'react';
+
+interface AnalyticsProps {
+  // Add props here
+}
+
+const Analytics: React.FC<AnalyticsProps> = (_props) => {
+  return (
+    <div>
+      {/* Component content */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0ece
     </div>
   );
 };
 
 export default Analytics;
+<<<<<<< HEAD
 =======
 'use client'
 import React, { useEffect } from 'react'
@@ -176,3 +192,5 @@ declare global {
 
 export default Analytics
 >>>>>>> 6d21a698833607de6a5fc802b68ed751e474e57d
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0ece

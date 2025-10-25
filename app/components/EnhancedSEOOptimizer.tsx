@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 "use client";
 import React from 'react';
 
@@ -192,3 +193,21 @@ const EnhancedSEOOptimizer: React.FC = () => {
 
 export default EnhancedSEOOptimizer
 >>>>>>> 6d21a698833607de6a5fc802b68ed751e474e57d
+=======
+
+import React from 'react';
+
+interface EnhancedSEOOptimizerProps {
+  // Add props here
+}
+
+const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = (_props) => {
+  return (
+    <div>
+      {/* Component content */}
+    </div>
+  );
+};
+
+export default EnhancedSEOOptimizer;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0ece

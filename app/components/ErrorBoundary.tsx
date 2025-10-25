@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 "use client";
 import React from 'react';
 
@@ -7,11 +8,26 @@ const ErrorBoundary = () => {
     <div>
       <h1>ErrorBoundary</h1>
       <p>This component is under construction.</p>
+=======
+'use client';
+
+import React from 'react';
+
+interface ErrorBoundaryProps {
+  // Add props here
+}
+
+const ErrorBoundary: React.FC<ErrorBoundaryProps> = (_props) => {
+  return (
+    <div>
+      {/* Component content */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0ece
     </div>
   );
 };
 
 export default ErrorBoundary;
+<<<<<<< HEAD
 =======
 'use client'
 import React, { Component, ErrorInfo, ReactNode } from 'react'
@@ -126,3 +142,5 @@ class ErrorBoundary extends Component<Props, State> {
 
 export default ErrorBoundary
 >>>>>>> 6d21a698833607de6a5fc802b68ed751e474e57d
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0ece

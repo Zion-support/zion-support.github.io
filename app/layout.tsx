@@ -1,15 +1,12 @@
-import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
+import React from 'react'
 import './globals.css'
-import Header from './components/Header'
-import Footer from './components/Footer'
-import ErrorBoundary from './components/ErrorBoundary'
-import Analytics from './components/Analytics'
-import PerformanceMonitor from './components/PerformanceMonitor'
-import AccessibilityEnhancer from './components/AccessibilityEnhancer'
+import { metadata } from './constants/metadata'
+import { viewport } from './constants/viewport'
 
 const inter = Inter({ subsets: ['latin'] })
 
+<<<<<<< HEAD
 export const metadata: Metadata = {
   metadataBase: new URL('https://zion.app'),
   title: 'Zion Tech Group - Advanced AI & IT Solutions',
@@ -49,6 +46,9 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
 }
+=======
+export { metadata, viewport }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0ece
 
 export default function RootLayout({
   children,
@@ -57,6 +57,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+<<<<<<< HEAD
       <head>
         <script
           dangerouslySetInnerHTML={{
@@ -95,6 +96,10 @@ export default function RootLayout({
           </main>
           <Footer />
         </ErrorBoundary>
+=======
+      <body className={inter.className}>
+        {children}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0ece
       </body>
     </html>
   )
