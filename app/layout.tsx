@@ -7,6 +7,9 @@ import ErrorBoundary from './components/ErrorBoundary'
 import Analytics from './components/Analytics'
 import PerformanceMonitor from './components/PerformanceMonitor'
 import AccessibilityEnhancer from './components/AccessibilityEnhancer'
+import PerformanceOptimizer from './components/PerformanceOptimizer'
+import SEOEnhancer from './components/SEOEnhancer'
+import PWAInstaller from './components/PWAInstaller'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -58,9 +61,28 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#3b82f6" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+        <link rel="apple-touch-icon" href="/icon-192x192.png" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
+              // Register service worker
+              if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function() {
+                  navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                      console.log('SW registered: ', registration);
+                    })
+                    .catch(function(registrationError) {
+                      console.log('SW registration failed: ', registrationError);
+                    });
+                });
+              }
+              
               // Performance monitoring
               if (typeof window !== 'undefined') {
                 window.addEventListener('load', function() {
@@ -85,16 +107,20 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
-        <Analytics />
-        <PerformanceMonitor />
-        <AccessibilityEnhancer />
-        <ErrorBoundary>
-          <Header />
-          <main className="pt-16">
-            {children}
-          </main>
-          <Footer />
-        </ErrorBoundary>
+        <PerformanceOptimizer>
+          <Analytics />
+          <PerformanceMonitor />
+          <AccessibilityEnhancer />
+          <SEOEnhancer />
+          <ErrorBoundary>
+            <Header />
+            <main id="main-content" className="pt-16">
+              {children}
+            </main>
+            <Footer />
+            <PWAInstaller />
+          </ErrorBoundary>
+        </PerformanceOptimizer>
       </body>
     </html>
   )
