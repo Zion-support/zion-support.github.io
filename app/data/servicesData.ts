@@ -14,8 +14,7 @@ export interface Service {
     email: string;
     phone: string;
   };
-  price?: string;
-  icon?: string;
+  icon: string;
   href: string;
   popular?: boolean;
   category: 'ai' | 'it' | 'cloud' | 'security' | 'data' | 'automation';
@@ -34,22 +33,21 @@ export const aiServices: Service[] = [
       'Machine learning models'
     ],
     benefits: [
-      'Improved decision making',
-      'Cost reduction',
       'Increased efficiency',
-      'Better customer insights'
+      'Better decision making',
+      'Cost reduction',
+      'Competitive advantage'
     ],
     pricing: {
       basic: '299',
       pro: '599',
-      enterprise: '999'
+      enterprise: '1299'
     },
     contactInfo: {
-      website: 'https://ziontechgroup.com',
+      website: '/ai-analytics',
       email: 'ai@ziontechgroup.com',
       phone: '+1-555-0123'
     },
-    price: '$299/month',
     icon: '📊',
     href: '/ai-analytics',
     popular: true,
@@ -67,22 +65,21 @@ export const aiServices: Service[] = [
       'Process optimization'
     ],
     benefits: [
-      'Reduced manual work',
-      'Faster processing',
-      'Lower error rates',
-      'Scalable operations'
+      'Time savings',
+      'Reduced errors',
+      'Scalable processes',
+      'Improved productivity'
     ],
     pricing: {
       basic: '199',
       pro: '399',
-      enterprise: '799'
+      enterprise: '899'
     },
     contactInfo: {
-      website: 'https://ziontechgroup.com',
-      email: 'ai@ziontechgroup.com',
-      phone: '+1-555-0123'
+      website: '/ai-automation',
+      email: 'automation@ziontechgroup.com',
+      phone: '+1-555-0124'
     },
-    price: '$199/month',
     icon: '🤖',
     href: '/ai-automation',
     category: 'ai'
@@ -104,20 +101,19 @@ export const itServices: Service[] = [
     benefits: [
       'Better user experience',
       'Higher conversion rates',
-      'Improved SEO rankings',
-      'Mobile accessibility'
+      'Mobile accessibility',
+      'Search engine visibility'
     ],
     pricing: {
       basic: '2999',
       pro: '5999',
-      enterprise: '9999'
+      enterprise: '12999'
     },
     contactInfo: {
-      website: 'https://ziontechgroup.com',
+      website: '/web-development',
       email: 'web@ziontechgroup.com',
-      phone: '+1-555-0123'
+      phone: '+1-555-0125'
     },
-    price: '$2,999/project',
     icon: '🌐',
     href: '/web-development',
     popular: true,
@@ -128,29 +124,28 @@ export const itServices: Service[] = [
     title: 'Cloud Infrastructure',
     description: 'Scalable and secure cloud solutions for modern businesses.',
     features: [
-      'AWS/Azure/GCP setup',
+      'Cloud migration',
+      'Infrastructure as Code',
       'Auto-scaling',
-      'Load balancing',
-      'Disaster recovery',
+      'Security compliance',
       '24/7 monitoring'
     ],
     benefits: [
-      'Reduced infrastructure costs',
-      'Improved scalability',
-      'Enhanced security',
-      'Better reliability'
+      'Scalable resources',
+      'Cost optimization',
+      'High availability',
+      'Security compliance'
     ],
     pricing: {
-      basic: '499',
-      pro: '999',
-      enterprise: '1999'
+      basic: '1999',
+      pro: '3999',
+      enterprise: '7999'
     },
     contactInfo: {
-      website: 'https://ziontechgroup.com',
+      website: '/cloud-infrastructure',
       email: 'cloud@ziontechgroup.com',
-      phone: '+1-555-0123'
+      phone: '+1-555-0126'
     },
-    price: '$499/month',
     icon: '☁️',
     href: '/cloud-infrastructure',
     popular: true,
@@ -162,38 +157,37 @@ export const itServices: Service[] = [
     description: 'Comprehensive security solutions to protect your digital assets.',
     features: [
       'Security audits',
-      'Penetration testing',
-      'Firewall configuration',
+      'Threat monitoring',
       'Incident response',
-      'Compliance management'
+      'Compliance management',
+      'Security training'
     ],
     benefits: [
-      'Enhanced security posture',
-      'Compliance assurance',
+      'Data protection',
+      'Regulatory compliance',
       'Risk mitigation',
-      'Peace of mind'
+      'Business continuity'
     ],
     pricing: {
-      basic: '399',
-      pro: '799',
-      enterprise: '1499'
+      basic: '3999',
+      pro: '6999',
+      enterprise: '14999'
     },
     contactInfo: {
-      website: 'https://ziontechgroup.com',
+      website: '/cybersecurity',
       email: 'security@ziontechgroup.com',
-      phone: '+1-555-0123'
+      phone: '+1-555-0127'
     },
-    price: '$399/month',
     icon: '🔒',
     href: '/cybersecurity',
     category: 'it'
   }
 ];
 
+// Add itSolutions as alias for itServices
 export const itSolutions = itServices;
 
 export const allServices: Service[] = [...aiServices, ...itServices];
-
 // Export as servicesData for backward compatibility
 export const servicesData = {
   aiServices,
@@ -201,7 +195,6 @@ export const servicesData = {
   itSolutions,
   allServices
 };
-
 export const getServiceById = (id: string): Service | undefined => {
   return allServices.find(service => service.id === id);
 };
