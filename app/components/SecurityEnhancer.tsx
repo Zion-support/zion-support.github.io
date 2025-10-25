@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 import { Metadata } from 'next';
 import React from 'react'
 import  Helmet  from 'react-helmet-async'
@@ -86,6 +87,20 @@ const SecurityEnhancer: React.FC = () => {
       <EnhancedFooter /></Footer>
     </>
 ;
+=======
+import React from 'react';
+
+interface SecurityEnhancerProps {
+  // Add props here
+}
+
+const SecurityEnhancer: React.FC<SecurityEnhancerProps> = (_props) => {
+  return (
+    <div>
+      {/* Component content */}
+    </div>
+>>>>>>> origin/main
   );
-}  )}
-export default SecurityEnhancer
+};
+
+export default SecurityEnhancer;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -28,20 +29,140 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
-  ];
+=======
+'use client'
+import React, { useState, useEffect } from 'react'
 
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ];
+interface EnhancedAccessibilityEnhancerProps {
+  children: React.ReactNode
+  enableKeyboardNavigation?: boolean
+  enableScreenReaderSupport?: boolean
+  enableHighContrast?: boolean
+  enableFocusManagement?: boolean
+  enableVoiceNavigation?: boolean
+}
+
+const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps> = ({
+  children,
+  enableKeyboardNavigation: _enableKeyboardNavigation = true,
+  enableScreenReaderSupport: _enableScreenReaderSupport = true,
+  enableHighContrast: _enableHighContrast = false,
+  enableFocusManagement: _enableFocusManagement = true,
+  enableVoiceNavigation = false,
+}) => {
+  const [isHighContrast, setIsHighContrast] = useState(false)
+  const [_fontSize, setFontSize] = useState('medium')
+  const [isReducedMotion, setIsReducedMotion] = useState(false)
+  const [isVoiceEnabled, setIsVoiceEnabled] = useState(false)
+
+  useEffect(() => {
+    // Check for user's motion preferences
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
+    setIsReducedMotion(mediaQuery.matches)
+
+    // Check for high contrast preference
+    const highContrastQuery = window.matchMedia('(prefers-contrast: high)')
+    setIsHighContrast(highContrastQuery.matches)
+
+    // Apply accessibility enhancements
+    document.documentElement.setAttribute('data-accessibility-enhanced', 'true')
+    
+    if (isHighContrast) {
+      document.documentElement.classList.add('high-contrast')
+    }
+    
+    if (isReducedMotion) {
+      document.documentElement.classList.add('reduced-motion')
+>>>>>>> origin/main
+    }
+
+    // Add keyboard navigation support
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Tab') {
+        document.body.classList.add('keyboard-navigation')
+      }
+      
+      // Add skip links functionality
+      if (event.key === 'Enter' && event.target instanceof HTMLElement) {
+        if (event.target.getAttribute('data-skip-link')) {
+          const targetId = event.target.getAttribute('data-skip-link')
+          const target = document.getElementById(targetId || '')
+          if (target) {
+            target.focus()
+            target.scrollIntoView({ behavior: 'smooth' })
+          }
+        }
+      }
+    }
+
+    const handleMouseDown = () => {
+      document.body.classList.remove('keyboard-navigation')
+    }
+
+    document.addEventListener('keydown', handleKeyDown)
+    document.addEventListener('mousedown', handleMouseDown)
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown)
+      document.removeEventListener('mousedown', handleMouseDown)
+    }
+  }, [isHighContrast, isReducedMotion])
+
+  const toggleHighContrast = () => {
+    setIsHighContrast(!isHighContrast)
+    document.documentElement.classList.toggle('high-contrast')
+  }
+
+  const changeFontSize = (size: string) => {
+    setFontSize(size)
+    document.documentElement.setAttribute('data-font-size', size)
+  }
+
+  const toggleVoiceNavigation = () => {
+    if (enableVoiceNavigation && 'speechSynthesis' in window) {
+      setIsVoiceEnabled(!isVoiceEnabled)
+    }
+  }
 
   return (
-    <div>
+    <div className="accessibility-enhanced">
+      <div 
+        className="accessibility-controls" 
+        style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 }}
+      >
+        <button
+          onClick={toggleHighContrast}
+          className="accessibility-button"
+          aria-label="Toggle high contrast"
+        >
+          {isHighContrast ? 'Normal Contrast' : 'High Contrast'}
+        </button>
+        
+        <div className="font-size-controls">
+          <button
+            onClick={() => changeFontSize('small')}
+            className="accessibility-button"
+            aria-label="Small font size"
+          >
+            A
+          </button>
+          <button
+            onClick={() => changeFontSize('medium')}
+            className="accessibility-button"
+            aria-label="Medium font size"
+          >
+            A
+          </button>
+          <button
+            onClick={() => changeFontSize('large')}
+            className="accessibility-button"
+            aria-label="Large font size"
+          >
+            A
+          </button>
+        </div>
 
+<<<<<<< HEAD
       <Helmet></Helmet>
         <title>Enhanced Accessibility Enhancer - Zion Tech Group</title>
         <meta name="description" content="Advanced Enhanced Accessibility Enhancer solution for modern businesses." /></meta>
@@ -117,9 +238,24 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
               Start Your Free Trial</button>
           </div>
         </section>
+=======
+        {enableVoiceNavigation && (
+          <button
+            onClick={toggleVoiceNavigation}
+            className="accessibility-button"
+            aria-label="Toggle voice navigation"
+          >
+            {isVoiceEnabled ? '🔊' : '🔇'}
+          </button>
+        )}
+>>>>>>> origin/main
       </div>
-    </>
+      {children}
+    </div>
+  )
+}
 
+<<<<<<< HEAD
 export default EnhancedAccessibilityEnhancerPage        <section className="py-20 px-4 bg-white/5"> </section><div className="max-w-7xl mx-auto">
         </div>
         <div className="text-center mb-16"> </div></div><h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
@@ -136,3 +272,6 @@ export default EnhancedAccessibilityEnhancerPage        <section className="py-2
 
   </>
 export default EnhancedAccessibilityEnhancerPage }
+=======
+export default EnhancedAccessibilityEnhancer
+>>>>>>> origin/main

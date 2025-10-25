@@ -1,10 +1,7 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle, Phone, Mail, Zap, Shield, Globe } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 
+<<<<<<< HEAD
 const EnhancedSEOOptimizerPage: React.FC = () => {
   const features = [,
     {,
@@ -145,4 +142,19 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
 };
 
 export default EnhancedSEOOptimizerPage;
+>>>>>>> origin/main
+=======
+interface EnhancedSEOOptimizerProps {
+  // Add props here
+}
+
+const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = (_props) => {
+  return (
+    <div>
+      {/* Component content */}
+    </div>
+  );
+};
+
+export default EnhancedSEOOptimizer;
 >>>>>>> origin/main

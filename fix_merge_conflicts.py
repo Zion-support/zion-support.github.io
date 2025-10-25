@@ -1,135 +1,149 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
+=======
 """
-Script to automatically resolve merge conflicts in TSX files.
-This script will:
-1. Find all files with merge conflict markers
-2. For each file, choose the appropriate version (usually the newer one)
-3. Clean up the merge conflict markers
-4. Ensure proper JSX structure
+Script to fix merge conflicts by keeping the HEAD version and removing conflict markers
 """
-
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 import os
 import re
 import glob
-from pathlib import Path
 
-def fix_merge_conflicts_in_file(file_path):
-    """Fix merge conflicts in a single file"""
+def fix_merge_conflicts(file_path):
+<<<<<<< HEAD
+    """Fix common merge conflict patterns in a file"""
+=======
+    """Fix merge conflicts in a single file by keeping HEAD version"""
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
+<<<<<<< HEAD
         # Skip if file is too small or doesn't contain merge conflicts
         if len(content) < 50 or '<<<<<<< HEAD' not in content:
             return False
             
         print(f"Fixing merge conflicts in: {file_path}")
+=======
+<<<<<<< HEAD
+        original_content = content
+>>>>>>> origin/main
         
-        print(f"Fixing merge conflicts in: {file_path}")
+        # Remove merge conflict markers and keep the HEAD version
+        # Pattern 1: <<<<<<< HEAD ... ======= ... >>>>>>> branch
+        content = re.sub(r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+\n', r'\1\n', content, flags=re.DOTALL)
         
-        # Split content by merge conflict markers
-        parts = re.split(r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+', content, flags=re.DOTALL)
+        # Pattern 2: <<<<<<< HEAD ... ======= ... >>>>>>> branch (without newlines)
+        content = re.sub(r'<<<<<<< HEAD(.*?)=======(.*?)>>>>>>> [^\n]+', r'\1', content, flags=re.DOTALL)
         
-        if len(parts) < 2:
-            # Fallback: try to clean up any remaining markers
-            content = re.sub(r'<<<<<<< HEAD.*?>>>>>>> [^\n]+\n?', '', content, flags=re.DOTALL)
-            content = re.sub(r'=======.*?>>>>>>> [^\n]+\n?', '', content, flags=re.DOTALL)
-            content = re.sub(r'<<<<<<< HEAD.*?=======', '', content, flags=re.DOTALL)
-        else:
-            # Reconstruct the file by choosing the appropriate parts
-            new_content = parts[0]  # Content before first conflict
-            
-            for i in range(1, len(parts), 3):
-                if i + 2 < len(parts):
-                    # Choose the second version (after =======) as it's usually newer
-                    chosen_version = parts[i + 1]
-                    new_content += chosen_version
-                    if i + 3 < len(parts):
-                        new_content += parts[i + 3]  # Content after conflict
-                else:
-                    new_content += parts[i]
-            
-            content = new_content
+        # Pattern 3: Simple <<<<<<< HEAD ... ======= ... >>>>>>> 
+        content = re.sub(r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+', r'\1\n', content, flags=re.DOTALL)
         
-        # Clean up any remaining merge conflict markers
-        content = re.sub(r'<<<<<<< HEAD.*?>>>>>>> [^\n]+\n?', '', content, flags=re.DOTALL)
-        content = re.sub(r'=======.*?>>>>>>> [^\n]+\n?', '', content, flags=re.DOTALL)
-        content = re.sub(r'<<<<<<< HEAD.*?=======', '', content, flags=re.DOTALL)
+        # Pattern 4: <<<<<<< HEAD ... ======= ... >>>>>>> (inline)
+        content = re.sub(r'<<<<<<< HEAD(.*?)=======(.*?)>>>>>>> [^\n]+', r'\1', content, flags=re.DOTALL)
         
-        # Clean up any orphaned ======= or >>>>>>> markers
+        # Clean up any remaining conflict markers
+        content = re.sub(r'<<<<<<< HEAD.*?=======.*?>>>>>>> [^\n]+', '', content, flags=re.DOTALL)
+        content = re.sub(r'<<<<<<< HEAD.*?>>>>>>> [^\n]+', '', content, flags=re.DOTALL)
+        
+        # Clean up any orphaned ======= or >>>>>>> lines
         content = re.sub(r'^=======.*$', '', content, flags=re.MULTILINE)
         content = re.sub(r'^>>>>>>> .*$', '', content, flags=re.MULTILINE)
         
         # Clean up multiple empty lines
         content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)
         
-        # Ensure proper JSX structure - add missing closing tags if needed
-        # This is a basic fix for common JSX issues
-        if content.strip().endswith('</div>') or content.strip().endswith('</main>') or content.strip().endswith('</>'):
-            pass  # Already properly closed
-        elif 'export default' in content and not content.strip().endswith('}'):
-            # Add missing closing brace for export default
-            content = content.rstrip() + '\n}'
+        # Clean up trailing whitespace
+        content = re.sub(r'[ \t]+$', '', content, flags=re.MULTILINE)
+        
+        # Only write if content changed
+        if content != original_content:
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(content)
+            return True
+        return False
+=======
+        # Check if file has merge conflicts
+        if '<<<<<<< HEAD' not in content:
+            return False
+        
+        # Pattern to match merge conflict blocks
+        # This will match from <<<<<<< HEAD to ======= to >>>>>>> origin/main
+        pattern = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> origin/main'
+        
+        # Replace with just the HEAD content (first capture group)
+        def replace_conflict(match):
+            head_content = match.group(1)
+            return head_content
+        
+        # Apply the replacement
+        new_content = re.sub(pattern, replace_conflict, content, flags=re.DOTALL)
+        
+        # Also handle cases where there might be different conflict markers
+        # Remove any remaining conflict markers
+        new_content = re.sub(r'<<<<<<< HEAD\n?', '', new_content)
+        new_content = re.sub(r'=======\n?', '', new_content)
+        new_content = re.sub(r'>>>>>>> origin/main\n?', '', new_content)
+        new_content = re.sub(r'>>>>>>> .*\n?', '', new_content)
+        
+        # Clean up any double newlines that might have been created
+        new_content = re.sub(r'\n\n\n+', '\n\n', new_content)
         
         # Write the cleaned content back
         with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(content)
+            f.write(new_content)
         
+        print(f"Fixed merge conflicts in: {file_path}")
         return True
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
         
     except Exception as e:
-        print(f"Error fixing {file_path}: {e}")
+        print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
+<<<<<<< HEAD
+    """Main function to fix merge conflicts in all relevant files"""
+    # Get all TypeScript, JavaScript, and JSX files
+    patterns = [
+        '**/*.ts',
+        '**/*.tsx', 
+=======
     """Main function to fix all merge conflicts"""
-    app_dir = Path('/workspace/app')
+    # Find all TypeScript/JavaScript files
+    patterns = [
+        '**/*.tsx',
+        '**/*.ts', 
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+        '**/*.js',
+        '**/*.jsx'
+    ]
     
-    if not app_dir.exists():
-        print("App directory not found!")
-        return
+    files_processed = 0
+    files_fixed = 0
     
-    # Find all TSX files with merge conflicts
-    tsx_files = list(app_dir.rglob('*.tsx'))
-    files_with_conflicts = []
+    for pattern in patterns:
+        for file_path in glob.glob(pattern, recursive=True):
+<<<<<<< HEAD
+            # Skip node_modules and other irrelevant directories
+=======
+            # Skip node_modules and other directories
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+            if 'node_modules' in file_path or '.git' in file_path:
+                continue
+                
+            files_processed += 1
+            if fix_merge_conflicts(file_path):
+                files_fixed += 1
+                print(f"Fixed: {file_path}")
     
-    for file_path in tsx_files:
-        try:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                content = f.read()
-                if '<<<<<<< HEAD' in content or '=======' in content or '>>>>>>>' in content:
-                    files_with_conflicts.append(file_path)
-        except Exception as e:
-            print(f"Error reading {file_path}: {e}")
-    
-    print(f"Found {len(files_with_conflicts)} files with merge conflicts")
-    
-    fixed_count = 0
-    for file_path in files_with_conflicts:
-        if fix_merge_conflicts_in_file(file_path):
-            fixed_count += 1
-    
-    print(f"Fixed merge conflicts in {fixed_count} files")
-    
-    # Verify no more conflicts exist
-    remaining_conflicts = []
-    for file_path in tsx_files:
-        try:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                content = f.read()
-                if '<<<<<<< HEAD' in content or '=======' in content or '>>>>>>>' in content:
-                    remaining_conflicts.append(file_path)
-        except Exception:
-            pass
-    
-    if remaining_conflicts:
-        print(f"Warning: {len(remaining_conflicts)} files still have conflicts:")
-        for file_path in remaining_conflicts[:10]:  # Show first 10
-            print(f"  {file_path}")
-        if len(remaining_conflicts) > 10:
-            print(f"  ... and {len(remaining_conflicts) - 10} more")
-    else:
-        print("All merge conflicts have been resolved!")
+    print(f"\nProcessed {files_processed} files")
+<<<<<<< HEAD
+    print(f"Fixed {files_fixed} files")
+=======
+    print(f"Fixed merge conflicts in {files_fixed} files")
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 
 if __name__ == "__main__":
     main()

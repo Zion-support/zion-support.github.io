@@ -1,22 +1,11 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Brain, CheckCircle, Phone, Mail, MapPin, Zap, Shield, Globe } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 
-const EnhancedPerformanceMonitorPage: React.FC = () => {
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology',
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-            </div>
-          </div>
-        </section>
+interface EnhancedPerformanceMonitorProps {
+  // Add props here
+}
 
+<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -96,7 +85,14 @@ const EnhancedPerformanceMonitorPage: React.FC = () => {
       </div>
       <EnhancedFooter />
     </>
+=======
+const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = (_props) => {
+  return (
+    <div>
+      {/* Component content */}
+    </div>
+>>>>>>> origin/main
   );
 };
 
-export default EnhancedPerformanceMonitorPage;
+export default EnhancedPerformanceMonitor;

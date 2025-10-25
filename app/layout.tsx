@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { type Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
@@ -8,6 +9,23 @@ export const metadata: Metadata = {
   title: 'ZionTechGroup - AI Solutions & Technology Services',
   description: 'Leading provider of AI solutions, technology services, and digital transformation for businesses worldwide.',
   keywords: ['AI solutions', 'technology services', 'digital transformation', 'machine learning', 'artificial intelligence'],
+=======
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import React from 'react'
+import './globals.css'
+import Analytics from './components/Analytics'
+import PerformanceMonitor from './components/PerformanceMonitor'
+import PerformanceOptimizer from './components/PerformanceOptimizer'
+import AccessibilityEnhancer from './components/AccessibilityEnhancer'
+
+const inter = Inter({ subsets: ['latin'] })
+
+export const metadata: Metadata = {
+  title: 'Zion Tech Group - Leading AI & Technology Solutions Provider',
+  description: 'Transform your business with cutting-edge AI, cloud architecture, cybersecurity, and innovative development services. Expert technology solutions for modern enterprises.',
+  keywords: 'AI solutions, artificial intelligence, cloud architecture, web development, mobile apps, data analytics, cybersecurity, machine learning, cloud computing, digital transformation',
+>>>>>>> origin/main
   authors: [{ name: 'Zion Tech Group' }],
   creator: 'Zion Tech Group',
   publisher: 'Zion Tech Group',
@@ -16,21 +34,28 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://ziontechgroup.com'),
+  metadataBase: new URL('https://zion.app'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
+<<<<<<< HEAD
     title: 'ZionTechGroup - AI Solutions & Technology Services',
     description: 'Leading provider of AI solutions, technology services, and digital transformation for businesses worldwide.',
     url: 'https://ziontechgroup.com',
     siteName: 'ZionTechGroup',
+=======
+    title: 'Zion Tech Group - Leading AI & Technology Solutions Provider',
+    description: 'Transform your business with cutting-edge AI, cloud architecture, cybersecurity, and innovative development services.',
+    url: 'https://zion.app',
+    siteName: 'Zion Tech Group',
+>>>>>>> origin/main
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'ZionTechGroup - AI Solutions',
+        alt: 'Zion Tech Group - AI & Technology Solutions',
       },
     ],
     locale: 'en_US',
@@ -38,8 +63,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'ZionTechGroup - AI Solutions & Technology Services',
-    description: 'Leading provider of AI solutions, technology services, and digital transformation for businesses worldwide.',
+    title: 'Zion Tech Group - Leading AI & Technology Solutions Provider',
+    description: 'Transform your business with cutting-edge AI, cloud architecture, cybersecurity, and innovative development services.',
     images: ['/og-image.jpg'],
   },
   robots: {
@@ -53,18 +78,48 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+<<<<<<< HEAD
 };
+=======
+  verification: {
+    google: 'your-google-verification-code',
+  },
+}
+>>>>>>> origin/main
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
+<<<<<<< HEAD
     <html lang="en">
       <body className={inter.className}>
         {children}
       </body>
     </html>
   );
+=======
+    <html lang="en" className="scroll-smooth">
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="theme-color" content="#7c3aed" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+      </head>
+      <body className={`${inter.className} antialiased`}>
+        <Analytics>
+          <PerformanceOptimizer />
+          <AccessibilityEnhancer />
+          {children}
+          <PerformanceMonitor />
+        </Analytics>
+      </body>
+    </html>
+  )
+>>>>>>> origin/main
 }

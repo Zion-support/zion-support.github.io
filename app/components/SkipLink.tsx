@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 import { Metadata } from 'next';
 import React from 'react'
 import  Helmet  from 'react-helmet-async'
@@ -86,6 +87,20 @@ const SkipLink: React.FC = () => {
       <EnhancedFooter /></Footer>
     </>
 ;
+=======
+import React from 'react';
+
+interface SkipLinkProps {
+  // Add props here
+}
+
+const SkipLink: React.FC<SkipLinkProps> = (_props) => {
+  return (
+    <div>
+      {/* Component content */}
+    </div>
+>>>>>>> origin/main
   );
-}  )}
-export default SkipLink
+};
+
+export default SkipLink;

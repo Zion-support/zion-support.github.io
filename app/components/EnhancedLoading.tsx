@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import { Metadata } from 'next';
 import React from 'react'
@@ -85,6 +86,19 @@ const EnhancedLoading: React.FC = () => {
       </div>
       <EnhancedFooter /></Footer>
     </>;
+=======
+import React from 'react';
+
+interface EnhancedLoadingProps {
+  // Add props here
+}
+
+const EnhancedLoading: React.FC<EnhancedLoadingProps> = (_props) => {
+  return (
+    <div>
+      {/* Component content */}
+    </div>
+>>>>>>> origin/main
   );
 };
 

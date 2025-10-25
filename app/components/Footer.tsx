@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import Link from 'next/link';
@@ -26,10 +27,45 @@ export default function Footer() {
   ];
 
   const company = [
+=======
+'use client'
+
+import React, { memo } from 'react'
+import Link from 'next/link'
+import { Phone, Mail, MapPin, Brain, Facebook, Github, Linkedin, Twitter } from 'lucide-react'
+
+const Footer: React.FC = memo(() => {
+  const currentYear = new Date().getFullYear()
+  
+  const aiServices = [
+    { name: 'AI Analytics & BI', url: '/ai-analytics' },
+    { name: 'AI Automation', url: '/ai-automation' },
+    { name: 'AI Chatbots & NLP', url: '/ai-chatbot-builder' },
+    { name: 'AI Content Generation', url: '/ai-content-generation' },
+    { name: 'AI Cybersecurity', url: '/ai-cybersecurity' },
+    { name: 'Computer Vision', url: '/computer-vision' },
+    { name: 'Predictive Analytics', url: '/predictive-analytics' },
+    { name: 'Speech & Voice AI', url: '/ai-voice-assistant' }
+  ]
+
+  const itServices = [
+    { name: 'Web Development', url: '/web-development' },
+    { name: 'Mobile Development', url: '/mobile-development' },
+    { name: 'Cloud Migration', url: '/cloud-migration' },
+    { name: 'Cybersecurity', url: '/cybersecurity' },
+    { name: 'DevOps', url: '/devops' },
+    { name: 'Data Analytics', url: '/data-analytics' },
+    { name: 'IoT Solutions', url: '/iot-solutions' },
+    { name: 'Blockchain', url: '/blockchain' }
+  ]
+
+  const companyLinks = [
+>>>>>>> origin/main
     { name: 'About Us', url: '/about' },
     { name: 'Our Team', url: '/team' },
     { name: 'Careers', url: '/careers' },
     { name: 'Contact', url: '/contact' }
+<<<<<<< HEAD
   ];
 
   const resources = [
@@ -40,54 +76,87 @@ export default function Footer() {
   ];
 
   const legal = [
+=======
+  ]
+
+  const resourceLinks = [
+    { name: 'Documentation', url: '/docs' },
+    { name: 'API Reference', url: '/api' },
+    { name: 'Blog', url: '/blog' },
+    { name: 'Support', url: '/support' }
+  ]
+
+  const legalLinks = [
+>>>>>>> origin/main
     { name: 'Privacy Policy', url: '/privacy' },
     { name: 'Terms of Service', url: '/terms' },
-    { name: 'Cookie Policy', url: '/cookies' },
-    { name: 'GDPR Compliance', url: '/gdpr' }
-  ];
+    { name: 'Cookie Policy', url: '/cookies' }
+  ]
 
   return (
-    <footer className="bg-slate-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <footer className="bg-gray-900 text-white">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
-          <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">Z</span>
+          <div className="lg:col-span-2">
+            <div className="flex items-center space-x-2 mb-4">
+              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-xl">Z</span>
               </div>
-              <span className="text-xl font-bold">Zion Tech Group</span>
+              <div className="text-xl font-bold">Zion Tech Group</div>
             </div>
+<<<<<<< HEAD
             <p className="text-gray-400 text-sm">
               Leading provider of AI and IT solutions, empowering businesses with cutting-edge technology and innovative digital transformation services.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 <Github className="w-5 h-5" />
+=======
+            <p className="text-gray-300 mb-6 max-w-md">
+              Leading technology solutions provider helping businesses transform their digital
+              infrastructure with cutting-edge AI and IT services.
+            </p>
+            <div className="flex space-x-4">
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Twitter className="w-5 h-5" />
+>>>>>>> origin/main
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Twitter className="w-5 h-5" />
+                <Github className="w-5 h-5" />
               </a>
             </div>
           </div>
 
           {/* AI Services */}
+<<<<<<< HEAD
           <div className="space-y-4">
             <h3 className="text-lg font-semibold flex items-center">
               <Brain className="w-5 h-5 mr-2 text-cyan-400" />
+=======
+          <div>
+            <h3 className="text-lg font-semibold mb-4 flex items-center">
+              <Brain className="w-5 h-5 mr-2 text-blue-400" />
+>>>>>>> origin/main
               AI Services
             </h3>
             <ul className="space-y-2">
-              {aiServices.map((service, index) => (
-                <li key={index}>
+              {aiServices.map((service) => (
+                <li key={service.name}>
                   <Link
                     href={service.url}
-                    className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
+                    className="text-gray-300 hover:text-white transition-colors block"
                   >
+<<<<<<< HEAD
                     <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+=======
+>>>>>>> origin/main
                     {service.name}
                   </Link>
                 </li>
@@ -96,6 +165,7 @@ export default function Footer() {
           </div>
 
           {/* IT Services */}
+<<<<<<< HEAD
           <div className="space-y-4">
             <h3 className="text-lg font-semibold flex items-center">
               <Cloud className="w-5 h-5 mr-2 text-purple-400" />
@@ -104,11 +174,21 @@ export default function Footer() {
             <ul className="space-y-2">
               {itServices.map((service, index) => (
                 <li key={index}>
+=======
+          <div>
+            <h3 className="text-lg font-semibold mb-4">IT Services</h3>
+            <ul className="space-y-2">
+              {itServices.map((service) => (
+                <li key={service.name}>
+>>>>>>> origin/main
                   <Link
                     href={service.url}
-                    className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
+                    className="text-gray-300 hover:text-white transition-colors block"
                   >
+<<<<<<< HEAD
                     <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+=======
+>>>>>>> origin/main
                     {service.name}
                   </Link>
                 </li>
@@ -116,6 +196,7 @@ export default function Footer() {
             </ul>
           </div>
 
+<<<<<<< HEAD
           {/* Company & Resources */}
           <div className="space-y-6">
             <div>
@@ -148,42 +229,99 @@ export default function Footer() {
                 ))}
               </ul>
             </div>
+=======
+          {/* Company */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Company</h3>
+            <ul className="space-y-2">
+              {companyLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.url}
+                    className="text-gray-300 hover:text-white transition-colors block"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Resources</h3>
+            <ul className="space-y-2">
+              {resourceLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.url}
+                    className="text-gray-300 hover:text-white transition-colors block"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+>>>>>>> origin/main
           </div>
         </div>
 
         {/* Contact Info */}
-        <div className="border-t border-slate-800 mt-12 pt-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="border-t border-gray-800 mt-12 pt-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="flex items-center space-x-3">
-              <Mail className="w-5 h-5 text-cyan-400" />
-              <span className="text-gray-400">contact@ziontechgroup.com</span>
+              <Phone className="w-5 h-5 text-blue-400" />
+              <div>
+                <p className="text-sm text-gray-400">Phone</p>
+                <p className="text-white">+1 (555) 123-4567</p>
+              </div>
             </div>
             <div className="flex items-center space-x-3">
-              <Phone className="w-5 h-5 text-cyan-400" />
-              <span className="text-gray-400">+1 (555) 123-4567</span>
+              <Mail className="w-5 h-5 text-blue-400" />
+              <div>
+                <p className="text-sm text-gray-400">Email</p>
+                <p className="text-white">info@ziontechgroup.com</p>
+              </div>
             </div>
             <div className="flex items-center space-x-3">
-              <MapPin className="w-5 h-5 text-cyan-400" />
-              <span className="text-gray-400">San Francisco, CA</span>
+              <MapPin className="w-5 h-5 text-blue-400" />
+              <div>
+                <p className="text-sm text-gray-400">Address</p>
+                <p className="text-white">123 Tech Street, Silicon Valley, CA 94000</p>
+              </div>
             </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-slate-800 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center">
-          <div className="flex flex-wrap gap-6 mb-4 md:mb-0">
-            {legal.map((item, index) => (
+        <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <div className="flex items-center space-x-4 mb-4 md:mb-0">
+            <p className="text-gray-400 text-sm">
+              © {currentYear} Zion Tech Group. All rights reserved.
+            </p>
+          </div>
+          <div className="flex space-x-6">
+            {legalLinks.map((link) => (
               <Link
-                key={index}
-                href={item.url}
-                className="text-gray-400 hover:text-white transition-colors text-sm"
+                key={link.name}
+                href={link.url}
+                className="text-gray-400 hover:text-white text-sm transition-colors"
               >
-                {item.name}
+                {link.name}
               </Link>
             ))}
           </div>
         </div>
       </div>
     </footer>
+<<<<<<< HEAD
   );
 }
+=======
+  )
+})
+
+Footer.displayName = 'Footer'
+
+export default Footer
+>>>>>>> origin/main

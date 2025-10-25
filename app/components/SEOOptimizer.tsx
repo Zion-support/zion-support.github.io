@@ -1,7 +1,8 @@
 'use client';
-import React, { useEffect } from 'react';
-import Head from 'next/head';
+import React from 'react';
+
 interface SEOOptimizerProps {
+<<<<<<< HEAD
   className?: string
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({,
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -123,3 +124,17 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({,
     </Head>
 
 export default SEOOptimizer }
+=======
+  // Add props here
+}
+
+const SEOOptimizer: React.FC<SEOOptimizerProps> = (_props) => {
+  return (
+    <div>
+      {/* Component content */}
+    </div>
+  );
+};
+
+export default SEOOptimizer;
+>>>>>>> origin/main

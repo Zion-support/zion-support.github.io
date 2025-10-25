@@ -1,12 +1,21 @@
+<<<<<<< HEAD
 'use client';
 import { Metadata } from 'next';
 import React from 'react'
 import  Helmet  from 'react-helmet-async'
 import Navigation  } from '/components/Navigation'
 import EnhancedFooter from '/components/EnhancedFooter'
+=======
+import React from 'react'
+>>>>>>> origin/main
 
-const ServiceCard: React.FC = () => {
+interface ServiceCardProps {
+  // Add props here
+}
+
+const ServiceCard: React.FC<ServiceCardProps> = (_props) => {
   return (
+<<<<<<< HEAD
     <>
     
   </>
@@ -89,3 +98,12 @@ const ServiceCard: React.FC = () => {
   );
 }  )}
 export default ServiceCard
+=======
+    <div>
+      {/* Component content */}
+    </div>
+  )
+}
+
+export default ServiceCard
+>>>>>>> origin/main

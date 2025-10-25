@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import Navigation from '/components/Navigation';
 import EnhancedFooter from '/components/EnhancedFooter';
@@ -89,3 +90,19 @@ const EnhancedSEOHead: React.FC = () => {
 };
 
 export default EnhancedSEOHead;
+=======
+
+interface EnhancedSEOHeadProps {
+  // Add props here
+}
+
+const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = (_props) => {
+  return (
+    <div>
+      {/* Component content */}
+    </div>
+  );
+};
+
+export default EnhancedSEOHead;
+>>>>>>> origin/main

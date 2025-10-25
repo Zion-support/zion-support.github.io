@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useCallback } from "react";
 
 interface FormState<T> {
@@ -102,4 +103,9 @@ export function useForm<T extends Record<string, any>>({
     handleSubmit,
     resetForm,
   };
+=======
+export const useForm = () => {
+  // Add hook logic here
+  return {}
+>>>>>>> origin/main
 }

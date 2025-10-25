@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 import { Metadata } from 'next';
 import React from 'react'
 import  Helmet  from 'react-helmet-async'
@@ -86,6 +87,20 @@ const PerformanceDashboard: React.FC = () => {
       <EnhancedFooter /></Footer>
     </>
 ;
+=======
+import React from 'react';
+
+interface PerformanceDashboardProps {
+  // Add props here
+}
+
+const PerformanceDashboard: React.FC<PerformanceDashboardProps> = (_props) => {
+  return (
+    <div>
+      {/* Component content */}
+    </div>
+>>>>>>> origin/main
   );
-}  )}
-export default PerformanceDashboard
+};
+
+export default PerformanceDashboard;

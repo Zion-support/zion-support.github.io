@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 import { Metadata } from 'next';
 import React from 'react'
 import  Helmet  from 'react-helmet-async'
@@ -25,3 +26,20 @@ import { { ArrowRight     } from 'lucide-react'
         </div>
       </section>;
 export default PerformanceEnhancerPage }
+=======
+import React from 'react';
+
+interface PerformanceEnhancerProps {
+  // Add props here
+}
+
+const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = (_props) => {
+  return (
+    <div>
+      {/* Component content */}
+    </div>
+  );
+};
+
+export default PerformanceEnhancer;
+>>>>>>> origin/main

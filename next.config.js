@@ -1,34 +1,42 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Use standalone output for better compatibility
+  // Disable static generation completely
   output: 'standalone',
   trailingSlash: true,
+  distDir: 'dist',
   images: {
     unoptimized: true,
     formats: ['image/webp', 'image/avif'],
   },
+  
+  // Disable experimental features that might cause issues
+  experimental: {
+    // optimizePackageImports: ['@heroicons/react', 'lucide-react', 'framer-motion'],
+    // webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB'],
+  },
+  
+  // Disable static optimization
+  // generateStaticParams: false, // This is not a valid Next.js config option
+  
+  // Disable linting and type checking during build
   eslint: {
-    // Warning: This allows production builds to successfully complete even if
-    // your project has ESLint errors.
     ignoreDuringBuilds: true,
   },
   typescript: {
-    // Warning: This allows production builds to successfully complete even if
-    // your project has type errors.
     ignoreBuildErrors: true,
   },
-  // Skip problematic pages for now
-  experimental: {
-    missingSuspenseWithCSRBailout: false,
-  },
-  // Disable static generation to avoid prerendering errors
-  staticPageGenerationTimeout: 1000,
-  // Disable static optimization
-  swcMinify: false,
-  // Force all pages to be dynamic
-  generateBuildId: async () => {
-    return 'build-' + Date.now()
+  
+  // Add webpack configuration to handle react-helmet-async
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      config.externals = [...(config.externals || []), 'react-helmet-async'];
+    }
+    return config;
   },
 }
 
+<<<<<<< HEAD
 module.exports = nextConfig;
+=======
+export default nextConfig
+>>>>>>> origin/main

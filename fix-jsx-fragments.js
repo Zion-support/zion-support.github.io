@@ -1,62 +1,62 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 
-function fixJsxFragments(filePath) {
+function fixJSXFragments(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
-    // Fix missing closing JSX fragments
-    const fragmentPattern = /<>\s*([^<]*?)\s*$/gm;
+    // Fix JSX fragments that are missing closing tags
+    const fragmentPattern = /<>\s*([\s\S]*?)\s*$/gm;
     const matches = content.match(fragmentPattern);
+    
     if (matches) {
-      content = content.replace(fragmentPattern, '<>\n    $1\n  </>');
-      modified = true;
+      // Find the last opening fragment and add closing tag
+      const lastFragmentIndex = content.lastIndexOf('<>');
+      if (lastFragmentIndex !== -1) {
+        const beforeFragment = content.substring(0, lastFragmentIndex);
+        const afterFragment = content.substring(lastFragmentIndex);
+        
+        // Count opening and closing tags to determine if we need to close
+        const openTags = (afterFragment.match(/<[^\/][^>]*>/g) || []).length;
+        const closeTags = (afterFragment.match(/<\/[^>]*>/g) || []).length;
+        
+        if (openTags > closeTags) {
+          // Add missing closing fragment tag
+          content = content + '\n    </>\n  );\n};\n\nexport default';
+          modified = true;
+        }
+      }
     }
     
-    // Fix JSX expressions that need parent elements
-    const jsxExpressionPattern = /return\s*\(\s*([^)]*?)\s*\)\s*;?\s*$/gm;
-    content = content.replace(jsxExpressionPattern, (match, jsxContent) => {
-      if (jsxContent.includes('<') && !jsxContent.includes('<>')) {
-        return `return (\n    <>\n      ${jsxContent.trim()}\n    </>\n  );`;
-      }
-      return match;
-    });
+    // Fix specific patterns
+    const patterns = [
+      // Fix JSX expressions with one parent element
+      { pattern: /return\s*\(\s*<>\s*<([^>]+)>\s*([\s\S]*?)\s*<\/\1>\s*$/gm, replacement: 'return (\n    <$1>\n      $2\n    </$1>\n  );' },
+      
+      // Fix missing closing fragments
+      { pattern: /<>\s*([\s\S]*?)\s*export default/gm, replacement: '<>\n    $1\n  </>\n);\n};\n\nexport default' },
+      
+      // Fix malformed JSX
+      { pattern: /<>\s*([\s\S]*?)\s*\);\s*};/gm, replacement: '<>\n    $1\n  </>\n);' },
+      
+      // Fix incomplete JSX fragments
+      { pattern: /<>\s*([\s\S]*?)\s*$/gm, replacement: '<>\n    $1\n  </>\n);' },
+    ];
     
-    // Fix missing closing tags in JSX
-    const unclosedTagPattern = /<(\w+)[^>]*>[^<]*$/gm;
-    content = content.replace(unclosedTagPattern, (match, tagName) => {
-      if (!match.includes('</')) {
-        return match + `</${tagName}>`;
-      }
-      return match;
-    });
-    
-    // Fix missing semicolons after return statements
-    content = content.replace(/return\s*\([^)]*\)\s*$/gm, (match) => {
-      if (!match.endsWith(';')) {
-        return match + ';';
-      }
-      return match;
-    });
-    
-    // Fix missing export statements
-    if (content.includes('const ') && content.includes('React.FC') && !content.includes('export default')) {
-      const componentName = content.match(/const\s+(\w+)\s*:\s*React\.FC/)?.[1];
-      if (componentName) {
-        content = content + `\n\nexport default ${componentName};`;
+    patterns.forEach(pattern => {
+      const newContent = content.replace(pattern.pattern, pattern.replacement);
+      if (newContent !== content) {
+        content = newContent;
         modified = true;
       }
-    }
+    });
     
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed JSX fragments in: ${filePath}`);
       return true;
     }
-    
     return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
@@ -64,39 +64,26 @@ function fixJsxFragments(filePath) {
   }
 }
 
-function findTsxFiles(dir) {
-  const files = [];
+function walkDirectory(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
   
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
+  files.forEach(file => {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
     
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath);
-      } else if (item.endsWith('.tsx')) {
-        files.push(fullPath);
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      fixedCount += walkDirectory(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
+      if (fixJSXFragments(filePath)) {
+        fixedCount++;
       }
     }
-  }
+  });
   
-  traverse(dir);
-  return files;
+  return fixedCount;
 }
 
-// Main execution
-const workspaceDir = process.cwd();
-const tsxFiles = findTsxFiles(workspaceDir);
-
-console.log(`Checking ${tsxFiles.length} TSX files for JSX fragment issues...`);
-
-let fixedCount = 0;
-for (const file of tsxFiles) {
-  if (fixJsxFragments(file)) {
-    fixedCount++;
-  }
-}
-
+console.log('Starting JSX fragment fixes...');
+const fixedCount = walkDirectory('./app');
 console.log(`Fixed JSX fragments in ${fixedCount} files.`);

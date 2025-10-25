@@ -1,10 +1,7 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Brain, CheckCircle, Phone, Mail, MapPin, Zap, Shield, Globe } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 
+<<<<<<< HEAD
 const EnhancedSEOPage: React.FC = () => {
   const benefits = [
     'Advanced AI technology integration',
@@ -53,3 +50,18 @@ export default EnhancedSEOPage
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             </div>
           </div>
+=======
+interface EnhancedSEOProps {
+  // Add props here
+}
+
+const EnhancedSEO: React.FC<EnhancedSEOProps> = (_props) => {
+  return (
+    <div>
+      {/* Component content */}
+    </div>
+  );
+};
+
+export default EnhancedSEO;
+>>>>>>> origin/main
