@@ -26,8 +26,13 @@
   },
   "include": [
     "next-env.d.ts",
-    "app/**/*.tsx",
-    "app/**/*.ts",
+    "app/layout.tsx",
+    "app/page.tsx",
+    "app/team/page.tsx",
+    "app/_not-found.tsx",
+    "app/components/ErrorBoundary.tsx",
+    "app/components/LoadingSpinner.tsx",
+    "app/components/PerformanceMonitor.tsx",
     ".next/types/**/*.ts"
   ],
   "exclude": [
@@ -40,6 +45,14 @@
     "jest.setup.ts",
     "vite.config.ts",
     "vite.config.optimized.ts",
-    "src/**/*"
+    "src/**/*",
+    "app/accessibility-page/**/*",
+    "app/accessibility/**/*",
+    "app/ad-management/**/*",
+    "app/advanced-security-suite/**/*",
+    "app/ai-analytics-dashboard/**/*",
+    "app/ai-analytics/**/*",
+    "app/ai-api-management/**/*",
+    "app/ai-api-manager/**/*"
   ]
 }

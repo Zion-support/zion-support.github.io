@@ -1,4 +1,5 @@
 'use client';
+import React from 'react';
 import {Facebook, Twitter, Linkedin, Github, Phone, Mail, MapPin} from 'lucide-react';
 import Link from 'next/link';
 import { ArrowRight, CheckCircle, Star, ImageIcon, Upload, Zap, Download, Clock, X, Circle } from 'lucide-react';
