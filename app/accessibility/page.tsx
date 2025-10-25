@@ -74,25 +74,6 @@ const AccessibilityPage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
-    <div>
-      <Head>
-        <title>Accessibility - Zion Tech Group</title>
-        <meta name="description" content="Professional services by Zion Tech Group." />
-      </Head>
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">
-            Accessibility
-          </h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Professional services by Zion Tech Group.
-          </p>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
-            <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300">
-              This service is currently under development. Contact us to learn more about our upcoming services.
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
@@ -109,7 +90,6 @@ const AccessibilityPage: React.FC = () => {
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Creating inclusive digital experiences that work for everyone. Our accessibility solutions ensure your applications are usable by people of all abilities and comply with international standards.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0ece
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
@@ -120,14 +100,6 @@ const AccessibilityPage: React.FC = () => {
               </button>
             </div>
           </div>
-<<<<<<< HEAD
-        </div>
-        <Footer />
-      </main>
-    </div>
-  )
-}
-=======
         </section>
 
         {/* Features Section */}
@@ -206,4 +178,3 @@ const AccessibilityPage: React.FC = () => {
 };
 
 export default AccessibilityPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0ece

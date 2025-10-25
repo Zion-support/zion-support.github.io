@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-"use client";
-import React from 'react';
-=======
 'use client';
 
 import Link from 'next/link';
@@ -16,16 +11,9 @@ const Breadcrumb: React.FC = () => {
   if (pathnames.length === 0) {
     return null;
   }
->>>>>>> 6d21a698833607de6a5fc802b68ed751e474e57d
 
 const Breadcrumb = () => {
   return (
-<<<<<<< HEAD
-    <div>
-      <h1>Breadcrumb</h1>
-      <p>This component is under construction.</p>
-    </div>
-=======
     <nav className="flex items-center space-x-2 text-sm text-gray-400 mb-4">
       <Link href="/" className="hover:text-white transition-colors">
         Home
@@ -48,12 +36,10 @@ const Breadcrumb = () => {
         );
       })}
     </nav>
->>>>>>> 6d21a698833607de6a5fc802b68ed751e474e57d
   );
 };
 
 export default Breadcrumb;
-=======
 'use client';
 import React from 'react';
 
@@ -85,4 +71,3 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
 
 export default Breadcrumb;
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0ece

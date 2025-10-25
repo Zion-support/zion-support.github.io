@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-"use client";
-import React from 'react';
-=======
 'use client'
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
@@ -27,20 +23,9 @@ const Header: React.FC = () => {
     { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' }
   ]
->>>>>>> 6d21a698833607de6a5fc802b68ed751e474e57d
 
 const Header = () => {
   return (
-<<<<<<< HEAD
-    <div>
-      <h1>Header</h1>
-      <p>This component is under construction.</p>
-    </div>
-  );
-};
-
-export default Header;
-=======
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-slate-900/95 backdrop-blur-sm border-b border-slate-700' : 'bg-transparent'
     }`}>
@@ -116,4 +101,3 @@ export default Header;
 }
 
 export default Header
->>>>>>> 6d21a698833607de6a5fc802b68ed751e474e57d

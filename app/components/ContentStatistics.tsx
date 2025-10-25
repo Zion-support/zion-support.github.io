@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-"use client";
-import React from 'react';
-=======
 'use client'
 import React, { useState, useEffect } from 'react'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
@@ -132,20 +127,9 @@ const ContentStatistics: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ]
->>>>>>> 6d21a698833607de6a5fc802b68ed751e474e57d
 
 const ContentStatistics = () => {
   return (
-<<<<<<< HEAD
-    <div>
-      <h1>ContentStatistics</h1>
-      <p>This component is under construction.</p>
-    </div>
-  );
-};
-
-export default ContentStatistics;
-=======
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
@@ -239,8 +223,6 @@ export default ContentStatistics;
 }
 
 export default ContentStatistics
->>>>>>> 6d21a698833607de6a5fc802b68ed751e474e57d
-=======
 
 import React from 'react';
 
@@ -257,4 +239,3 @@ const ContentStatistics: React.FC<ContentStatisticsProps> = (_props) => {
 };
 
 export default ContentStatistics;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0ece

@@ -1,3 +1,11 @@
+'use client'
+import React, { useState, useEffect } from 'react'
+
+interface PerformanceMetrics {
+  loadTime: number
+  renderTime: number
+  memoryUsage: number
+  isOptimized: boolean
 }
 
 const PerformanceOptimizer: React.FC = () => {

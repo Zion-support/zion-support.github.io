@@ -1,12 +1,6 @@
 'use client'
 import React from 'react'
-<<<<<<< HEAD
-import Head from 'next/head'
-import Link from 'next/link'
-import { ArrowRight } from 'lucide-react'
-=======
 import Navigation from '../components/Navigation'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0ece
 import Footer from '../components/Footer'
 import { Mail, Phone, MapPin } from 'lucide-react'
 
@@ -26,14 +20,6 @@ const ContactPage: React.FC = () => {
               </p>
             </div>
           </div>
-<<<<<<< HEAD
-        </div>
-        <Footer />
-      </main>
-    </div>
-  )
-}
-=======
         </section>
 
         {/* Contact Info Section */}
@@ -68,4 +54,3 @@ const ContactPage: React.FC = () => {
 }
 
 export default ContactPage
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0ece

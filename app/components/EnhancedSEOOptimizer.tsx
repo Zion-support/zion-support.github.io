@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-"use client";
-import React from 'react';
-
-const EnhancedSEOOptimizer = () => {
-  return (
-    <div>
-      <h1>EnhancedSEOOptimizer</h1>
-      <p>This component is under construction.</p>
-    </div>
-  );
-};
-
-export default EnhancedSEOOptimizer;
-=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -192,8 +176,6 @@ const EnhancedSEOOptimizer: React.FC = () => {
 }
 
 export default EnhancedSEOOptimizer
->>>>>>> 6d21a698833607de6a5fc802b68ed751e474e57d
-=======
 
 import React from 'react';
 
@@ -210,4 +192,3 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = (_props) => {
 };
 
 export default EnhancedSEOOptimizer;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0ece

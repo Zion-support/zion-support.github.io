@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-"use client";
-import React from 'react';
-
-const EnhancedPerformanceMonitor = () => {
-  return (
-    <div>
-      <h1>EnhancedPerformanceMonitor</h1>
-      <p>This component is under construction.</p>
-    </div>
-  );
-};
-
-export default EnhancedPerformanceMonitor;
-=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -189,8 +173,6 @@ const EnhancedPerformanceMonitor: React.FC = () => {
 }
 
 export default EnhancedPerformanceMonitor
->>>>>>> 6d21a698833607de6a5fc802b68ed751e474e57d
-=======
 
 import React from 'react';
 
@@ -207,4 +189,3 @@ const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = (_
 };
 
 export default EnhancedPerformanceMonitor;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0ece

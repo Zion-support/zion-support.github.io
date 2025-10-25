@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-"use client";
-import React from 'react';
-
-const PerformanceMonitor = () => {
-  return (
-    <div>
-      <h1>PerformanceMonitor</h1>
-      <p>This component is under construction.</p>
-    </div>
-  );
-};
-
-export default PerformanceMonitor;
-=======
 'use client'
 import React, { useEffect, useState } from 'react'
 
@@ -195,8 +179,6 @@ const PerformanceMonitor: React.FC = () => {
 }
 
 export default PerformanceMonitor
->>>>>>> 6d21a698833607de6a5fc802b68ed751e474e57d
-=======
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -385,4 +367,3 @@ export default function PerformanceMonitor({
 
   return null;
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0ece

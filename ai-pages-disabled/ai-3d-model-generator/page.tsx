@@ -1,8 +1,5 @@
 <<<<<<< HEAD:app/components/AdvancedSEOOptimizer_new.tsx
 "use client";
-<<<<<<< HEAD
-import React from 'react';
-=======
 
 import React from 'react';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle } from 'lucide-react';
@@ -14,7 +11,6 @@ interface AdvancedSEOOptimizerNewProps {
 }
 
 const AdvancedSEOOptimizerNewPage: React.FC<AdvancedSEOOptimizerNewProps> = ({ className = '' }) => {
-=======
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
@@ -23,7 +19,6 @@ import { CheckCircle, ArrowRight } from 'lucide-react';
 
 
 const Ai3dModelGeneratorPage: React.FC = () => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0ece:ai-pages-disabled/ai-3d-model-generator/page.tsx
   const features = [
     {
       icon: 'Brain',
@@ -58,23 +53,10 @@ const Ai3dModelGeneratorPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
 <<<<<<< HEAD:app/components/AdvancedSEOOptimizer_new.tsx
   ];
->>>>>>> 6d21a698833607de6a5fc802b68ed751e474e57d
 
 const AdvancedSEOOptimizernew = () => {
-=======
   ]
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0ece:ai-pages-disabled/ai-3d-model-generator/page.tsx
   return (
-<<<<<<< HEAD
-    <div>
-      <h1>AdvancedSEOOptimizer_new</h1>
-      <p>This component is under construction.</p>
-    </div>
-  );
-};
-
-export default AdvancedSEOOptimizernew;
-=======
     <>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
@@ -88,13 +70,11 @@ export default AdvancedSEOOptimizernew;
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced SEO optimization solution for modern businesses.
-=======
             <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">
               Page
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Generate 3D models using AI technology. Create high-quality 3D assets with our advanced AI-powered model generator.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0ece:ai-pages-disabled/ai-3d-model-generator/page.tsx
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
@@ -103,11 +83,9 @@ export default AdvancedSEOOptimizernew;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-=======
                 <ArrowRight className="w-8 h-8" />
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0ece:ai-pages-disabled/ai-3d-model-generator/page.tsx
                 Learn More
               </button>
             </div>
@@ -135,9 +113,7 @@ export default AdvancedSEOOptimizernew;
                       <li key={idx} className="flex items-center text-sm text-gray-300">
 <<<<<<< HEAD:app/components/AdvancedSEOOptimizer_new.tsx
                         <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
-=======
                         <CheckCircle className="w-4 h-4 text-emerald-400 mr-2 flex-shrink-0" />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0ece:ai-pages-disabled/ai-3d-model-generator/page.tsx
                         {benefit}
                       </li>
                     ))}
@@ -179,9 +155,7 @@ export default AdvancedSEOOptimizernew;
               </button>
 <<<<<<< HEAD:app/components/AdvancedSEOOptimizer_new.tsx
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-=======
               <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0ece:ai-pages-disabled/ai-3d-model-generator/page.tsx
                 Contact Sales
               </button>
             </div>
@@ -195,10 +169,7 @@ export default AdvancedSEOOptimizernew;
 };
 
 export default AdvancedSEOOptimizerNewPage;
->>>>>>> 6d21a698833607de6a5fc802b68ed751e474e57d
-=======
 </>
   )
 }
 export default Ai3dModelGeneratorPage
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0ece:ai-pages-disabled/ai-3d-model-generator/page.tsx

@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-import Link from 'next/link'
-import { Menu, X, Brain } from 'lucide-react'
-
-const Navigation = () => {
-=======
 'use client'
 
 import React, { useState, useEffect, useCallback } from 'react'
@@ -83,7 +76,6 @@ const Navigation: React.FC = () => {
     { name: 'Zion CRM Intelligence', href: '/zion-crm-intelligence', icon: Users, description: 'AI-enhanced CRM' }
   ]
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0ece
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
@@ -101,14 +93,6 @@ const Navigation: React.FC = () => {
           </Link>
 
           {/* Desktop Navigation */}
-<<<<<<< HEAD
-          <div className="hidden md:flex items-center space-x-8">
-            <Link href="/ai-services" className="text-gray-300 hover:text-white transition-colors">
-              AI Services
-            </Link>
-            <Link href="/it-services" className="text-gray-300 hover:text-white transition-colors">
-              IT Services
-=======
           <div className="hidden lg:flex items-center space-x-8">
             <Link 
               href="/" 
@@ -117,7 +101,6 @@ const Navigation: React.FC = () => {
               }`}
             >
               Home
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0ece
             </Link>
             
             {/* AI Services Dropdown */}
@@ -245,16 +228,12 @@ const Navigation: React.FC = () => {
             >
               About
             </Link>
-<<<<<<< HEAD
-            <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">
-=======
             <Link
               href="/contact"
               className={`py-2 px-3 rounded-lg transition-colors ${
                 isScrolled ? 'text-gray-700 hover:bg-gray-100' : 'text-white hover:bg-white/10'
               }`}
             >
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0ece
               Contact
             </Link>
           </div>
@@ -273,14 +252,6 @@ const Navigation: React.FC = () => {
             </Link>
           </div>
 
-<<<<<<< HEAD
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button className="text-gray-300 hover:text-white">
-              <Menu className="h-6 w-6" />
-            </button>
-          </div>
-=======
           {/* Mobile Menu Button */}
           <button
             className="lg:hidden p-2"
@@ -292,7 +263,6 @@ const Navigation: React.FC = () => {
               <Menu className={`w-6 h-6 ${isScrolled ? 'text-gray-900' : 'text-white'}`} />
             )}
           </button>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0ece
         </div>
 
         {/* Mobile Menu */}
@@ -384,8 +354,4 @@ const Navigation: React.FC = () => {
   )
 }
 
-<<<<<<< HEAD
 export default Navigation
-=======
-export default Navigation
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0ece
