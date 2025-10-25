@@ -80,16 +80,9 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
-        <Analytics />
-        <PerformanceMonitor />
-        <AccessibilityEnhancer />
-        <ErrorBoundary>
-          <Header />
-          <main className="pt-16">
-            {children}
-          </main>
-          <Footer />
-        </ErrorBoundary>
+        <main className="pt-16">
+          {children}
+        </main>
       </body>
     </html>
   )

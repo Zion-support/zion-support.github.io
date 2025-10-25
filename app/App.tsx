@@ -1,11 +1,10 @@
 
 const App: React.FC = () => {
   return (
-    <ErrorBoundary>
-      <HelmetProvider>
-        <BrowserRouter>
-          <div className="App">
-          </div>
-        </BrowserRouter>
-      </HelmetProvider>
-    </ErrorBoundary>
+    <div className="App">
+      <h1>Zion Tech Group</h1>
+    </div>
+  )
+}
+
+export default App

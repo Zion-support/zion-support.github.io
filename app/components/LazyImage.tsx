@@ -1,4 +1,7 @@
 
+import React, { useState, useEffect, useRef } from 'react'
+import Image from 'next/image'
+
 interface LazyImageProps {
   src: string
   alt: string
@@ -52,22 +55,23 @@ const LazyImage: React.FC<LazyImageProps> = ({
   return (
     <div ref={imgRef} className={`relative overflow-hidden ${className}`}>
       {!isLoaded && !hasError && (
-        <img
+        <Image
           src={placeholder}
           alt=""
+          fill
           className="absolute inset-0 w-full h-full object-cover blur-sm"
         />
       )}
       {isInView && (
-        <img
+        <Image
           src={src}
           alt={alt}
           onLoad={handleLoad}
           onError={handleError}
+          fill
           className={`w-full h-full object-cover transition-opacity duration-300 ${
             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}
-          loading="lazy"
         />
       )}
       {hasError && (

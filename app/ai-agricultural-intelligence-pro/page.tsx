@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+// import Head from 'next/head' // Removed for SSR compatibility
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, Leaf, Zap, Eye, BarChart, Globe, Shield } from 'lucide-react'
@@ -75,10 +76,7 @@ const AIAgriculturalIntelligenceProPage: React.FC = () => {
 
   return (
     <div>
-      <Head>
-        <title>Ai Agricultural Intelligence Pro - Zion Tech Group</title>
-        <meta name="description" content="Professional ai agricultural intelligence pro services and solutions by Zion Tech Group." />
-      </Head>
+      {/* SEO handled by layout.tsx */}
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">

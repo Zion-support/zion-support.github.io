@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { CheckCircle, Bot, Cpu, Brain, Settings, RefreshCw } from 'lucide-react';
+import { CheckCircle, Bot, Cpu, Brain, Settings, RefreshCw, Zap, Shield, Target, Star, BarChart } from 'lucide-react';
 
 const AutonomousSystemsPage: React.FC = () => {
   const autonomousServices = [
