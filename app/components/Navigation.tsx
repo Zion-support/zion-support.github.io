@@ -1,6 +1,8 @@
+
 import React from 'react'
 import Link from 'next/link'
 import { Menu, X, Brain } from 'lucide-react'
+
 
 const Navigation = () => {
   return (

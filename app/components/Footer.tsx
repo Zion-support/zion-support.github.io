@@ -95,6 +95,7 @@ const Footer: React.FC = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-purple-400">IT Services</h3>
             <ul className="space-y-2">
+
               {itServices.map((service, index) => (
                 <li key={index}>
                   <Link 
@@ -106,6 +107,7 @@ const Footer: React.FC = () => {
                   </Link>
                 </li>
               ))}
+
             </ul>
           </div>
 
