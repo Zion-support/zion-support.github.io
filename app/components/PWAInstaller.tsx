@@ -1,121 +1,89 @@
-'use client'
-import React, { useState, useEffect } from 'react'
-import { X } from 'lucide-react'
-import { Download } from 'lucide-react'
+'use client';
+
+import { useState, useEffect } from 'react';
 
 interface BeforeInstallPromptEvent extends Event {
-  prompt(): Promise<void>
-  userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>
+  readonly platforms: string[];
+  readonly userChoice: Promise<{
+    outcome: 'accepted' | 'dismissed';
+    platform: string;
+  }>;
+  prompt(): Promise<void>;
 }
 
-const PWAInstaller: React.FC = () => {
-  const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null)
-  const [showInstallPrompt, setShowInstallPrompt] = useState(false)
-  const [isInstalled, setIsInstalled] = useState(false)
+export default function PWAInstaller() {
+  const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
+  const [showInstallButton, setShowInstallButton] = useState(false);
 
   useEffect(() => {
-    // Check if app is already installed
-    const checkInstalled = () => {
-      if (window.matchMedia('(display-mode: standalone)').matches) {
-        setIsInstalled(true)
-      }
-    }
-    checkInstalled()
-
-    // Listen for beforeinstallprompt event
     const handleBeforeInstallPrompt = (e: Event) => {
-      e.preventDefault()
-      setDeferredPrompt(e as BeforeInstallPromptEvent)
-      setShowInstallPrompt(true)
-    }
+      e.preventDefault();
+      setDeferredPrompt(e as BeforeInstallPromptEvent);
+      setShowInstallButton(true);
+    };
 
-    // Listen for appinstalled event
-    const handleAppInstalled = () => {
-      setIsInstalled(true)
-      setShowInstallPrompt(false)
-      setDeferredPrompt(null)
-    }
-
-    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt)
-    window.addEventListener('appinstalled', handleAppInstalled)
+    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
 
     return () => {
-      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt)
-      window.removeEventListener('appinstalled', handleAppInstalled)
-    }
-  }, [])
+      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+    };
+  }, []);
 
   const handleInstallClick = async () => {
-    if (!deferredPrompt) return
-    try {
-      await deferredPrompt.prompt()
-      const { outcome } = await deferredPrompt.userChoice
-      if (outcome === 'accepted') {
-        // Installation successful
-      } else {
-        // Installation dismissed
-      }
-      setDeferredPrompt(null)
-      setShowInstallPrompt(false)
-    } catch (error) {
-      // console.error('Installation failed:', error)
+    if (!deferredPrompt) return;
+
+    deferredPrompt.prompt();
+    const { outcome } = await deferredPrompt.userChoice;
+    
+    if (outcome === 'accepted') {
+      console.log('User accepted the install prompt');
+    } else {
+      console.log('User dismissed the install prompt');
     }
-  }
+    
+    setDeferredPrompt(null);
+    setShowInstallButton(false);
+  };
 
-  const handleDismiss = () => {
-    setShowInstallPrompt(false)
-    // Don&apos;t show again for this session
-    sessionStorage.setItem('pwa-install-dismissed', 'true')
-  }
-
-  // Don&apos;t show if already installed or dismissed this session
-  if (isInstalled || !showInstallPrompt || sessionStorage.getItem('pwa-install-dismissed')) {
-    return null
+  if (!showInstallButton) {
+    return null;
   }
 
   return (
-    <div className=&quot;fixed bottom-4 right-4 z-50 max-w-sm&quot;></div>
-      <div className=&quot;bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4&quot;></div>
-        <div className=&quot;flex items-start justify-between mb-3&quot;></div>
-          <div className=&quot;flex items-center space-x-2&quot;></div>
-            <div className=&quot;w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center&quot;></div>
-              <Download className=&quot;w-4 h-4 text-white&quot; />
-            </div>
-            <div></div>
-              <h3 className=&quot;text-white text-sm font-medium&quot;>Install App</h3>
-              <p className=&quot;text-gray-300 text-xs&quot;>Get quick access to Zion Tech Group</p>
+    <div className="fixed bottom-4 right-4 z-50">
+      <div className="bg-white rounded-lg shadow-lg border border-gray-200 p-4 max-w-sm">
+        <div className="flex items-start space-x-3">
+          <div className="flex-shrink-0">
+            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+              </svg>
             </div>
           </div>
-          <button
-            onClick={handleDismiss}
-            className=&quot;text-gray-400 hover:text-white transition-colors&quot;
-            aria-label=&quot;Dismiss install prompt&quot;
-          >
-            <X className=&quot;w-4 h-4&quot; />
-          </button>
-        </div>
-        <div className=&quot;space-y-2&quot;></div>
-          <button
-            onClick={handleInstallClick}
-            className=&quot;w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 text-sm font-medium&quot;
-          >
-            Install Now
-          </button>
-          <button
-            onClick={handleDismiss}
-            className=&quot;w-full bg-transparent border border-gray-600 text-gray-300 px-4 py-2 rounded-lg hover:bg-slate-700 hover:text-white transition-all duration-300 text-sm&quot;
-          >
-            Not Now
-          </button>
-        </div>
-        <div className=&quot;mt-3 text-xs text-gray-400&quot;></div>
-          <p>• Faster loading</p>
-          <p>• Offline access</p>
-          <p>• Native app experience</p>
+          <div className="flex-1 min-w-0">
+            <h3 className="text-sm font-medium text-gray-900">
+              Install App
+            </h3>
+            <p className="text-sm text-gray-500 mt-1">
+              Install Zion Tech Group for quick access and better experience.
+            </p>
+            <div className="mt-3 flex space-x-2">
+              <button
+                onClick={handleInstallClick}
+                className="bg-blue-600 text-white px-3 py-1.5 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors"
+              >
+                Install
+              </button>
+              <button
+                onClick={() => setShowInstallButton(false)}
+                className="text-gray-500 px-3 py-1.5 rounded-md text-sm font-medium hover:text-gray-700 transition-colors"
+              >
+                Not now
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
-
-export default PWAInstaller

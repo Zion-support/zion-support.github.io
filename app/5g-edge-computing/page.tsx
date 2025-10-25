@@ -1,31 +1,34 @@
-import React from 'react';
+'use client'
+import React from 'react'
+import Head from 'next/head'
+import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
+import Footer from '../components/Footer'
 
-import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
-
-export default function EdgeComputing5GPage() {
+export default function Page() {
   return (
-    <>
-      
-        <title>5G Edge Computing - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G edge computing services for low-latency applications." />
-      
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-white mb-6">5G Edge Computing</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional 5G edge computing services for low-latency applications.</p>
-          
-          <Link 
-            href="/contact" 
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Link>
+    <div>
+      <Head>
+        <title>5g Edge Computing - Zion Tech Group</title>
+        <meta name="description" content="Professional 5g edge computing services and solutions by Zion Tech Group." />
+      </Head>
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">
+            5g Edge Computing
+          </h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Professional services by Zion Tech Group.
+          </p>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
+            <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
+            <p className="text-gray-300">
+              This service is currently under development. Contact us to learn more about our upcoming services.
+            </p>
+          </div>
         </div>
-      </div>
-    </>
-  );
+        <Footer />
+      </main>
+    </div>
+  )
 }
-
