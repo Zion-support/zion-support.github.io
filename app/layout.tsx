@@ -1,61 +1,60 @@
-import type { Metadata} from 'next';
-import { Inter} from 'next/font/google';
-import './globals.css';
+import type { Metadata, Viewport } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import ErrorBoundary from './components/ErrorBoundary'
+import Analytics from './components/Analytics'
+import PerformanceMonitor from './components/PerformanceMonitor'
+import AccessibilityEnhancer from './components/AccessibilityEnhancer'
 
-import Analytics from './components/Analytics';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import PerformanceMonitor from './components/PerformanceMonitor';
-
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Zion Tech Group - Leading AI & Technology Solutions Provider',
-  description: 'Transform your business with cutting-edge AI, cloud architecture, cybersecurity, and innovative development services. Expert technology solutions for modern enterprises.',
-  keywords: 'AI solutions, artificial intelligence, cloud architecture, web development, mobile apps, data analytics, cybersecurity, machine learning, cloud computing, digital transformation',
+  metadataBase: new URL('https://zion.app'),
+  title: 'Zion Tech Group - Advanced AI & IT Solutions',
+  description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services. Transform your business with cutting-edge technology.',
+  keywords: 'AI solutions, IT services, cybersecurity, cloud computing, digital transformation, machine learning, artificial intelligence, data analytics, blockchain, IoT',
   authors: [{ name: 'Zion Tech Group' }],
-  creator: 'Zion Tech Group',
-  publisher: 'Zion Tech Group',
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false},
-  metadataBase: new URL('https://ziontechgroup.com'),
-  alternates: {
-    canonical: '/'},
+  robots: 'index, follow',
   openGraph: {
-    title: 'Zion Tech Group - Leading AI & Technology Solutions Provider',
-    description: 'Transform your business with cutting-edge AI, cloud architecture, cybersecurity, and innovative development services.',
-    url: 'https://ziontechgroup.com',
+    title: 'Zion Tech Group - Advanced AI & IT Solutions',
+    description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
+    url: 'https://zion.app',
     siteName: 'Zion Tech Group',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Zion Tech Group - AI & Technology Solutions'}],
+        alt: 'Zion Tech Group - AI & IT Solutions',
+      },
+    ],
     locale: 'en_US',
-    type: 'website'},
+    type: 'website',
+  },
   twitter: {
     card: 'summary_large_image',
-    title: 'Zion Tech Group - Leading AI & Technology Solutions Provider',
-    description: 'Transform your business with cutting-edge AI, cloud architecture, cybersecurity, and innovative development services.',
-    images: ['/og-image.jpg']},
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1}},
+    title: 'Zion Tech Group - Advanced AI & IT Solutions',
+    description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
+    images: ['/og-image.jpg'],
+  },
   verification: {
-    google: 'your-google-verification-code'}};
+    google: 'your-google-verification-code',
+  },
+}
+
+export const viewport: Viewport = {
+  themeColor: '#3b82f6',
+  width: 'device-width',
+  initialScale: 1,
+}
 
 export default function RootLayout({
-  children}: {
-  children: React.ReactNode}) {
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="en" className="scroll-smooth">
       <head>
@@ -67,14 +66,19 @@ export default function RootLayout({
         <meta name="theme-color" content="#3b82f6" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body className={`${inter.className} antialiased`}>
+      <body className={inter.className}>
         <Analytics />
-        <PerformanceOptimizer>
-          <AccessibilityEnhancer>
-            {children}
-          </AccessibilityEnhancer>
-        </PerformanceOptimizer>
         <PerformanceMonitor />
+        <ErrorBoundary>
+          <AccessibilityEnhancer>
+            <Header />
+            <main className="pt-16">
+              {children}
+            </main>
+            <Footer />
+          </AccessibilityEnhancer>
+        </ErrorBoundary>
       </body>
     </html>
-  )}
+  )
+}
