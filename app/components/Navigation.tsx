@@ -1,26 +1,46 @@
-"use client";
+'use client'
 
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap } from 'lucide-react';
+import React, { useState, useEffect, useCallback } from 'react'
+import Link from 'next/link'
+import { 
+  ChevronDown, 
+  Menu, 
+  X, 
+  Cloud, 
+  BarChart, 
+  Zap, 
+  Globe, 
+  Smartphone, 
+  Lock, 
+  TrendingUp, 
+  Settings, 
+  Users, 
+  Shield, 
+  Code, 
+  Brain, 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Clock 
+} from 'lucide-react'
 
-const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+const Navigation = () => {
+  const [isOpen, setIsOpen] = useState(false)
+  const [servicesOpen, setServicesOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+      setIsScrolled(window.scrollY > 50)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
-  const closeAllMenus = () => {
-    setIsOpen(false);
-    setServicesOpen(false);
-  };
+  const closeAllMenus = useCallback(() => {
+    setIsOpen(false)
+    setServicesOpen(false)
+  }, [])
 
   const serviceCategories = [
     {
@@ -75,7 +95,7 @@ const Navigation: React.FC = () => {
         { name: 'Business Intelligence', path: '/business-intelligence' }
       ]
     }
-  ];
+  ]
 
   return (
     <nav className={`sticky top-0 z-50 transition-all duration-300 ${
@@ -85,7 +105,7 @@ const Navigation: React.FC = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link 
-            to="/" 
+            href="/" 
             className="flex items-center space-x-2 text-2xl font-bold"
             onClick={closeAllMenus}
           >
@@ -100,7 +120,7 @@ const Navigation: React.FC = () => {
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center space-x-8">
             <Link 
-              to="/" 
+              href="/" 
               className={`font-medium transition-colors hover:text-purple-600 ${
                 isScrolled ? 'text-gray-700' : 'text-white'
               }`}
@@ -110,7 +130,7 @@ const Navigation: React.FC = () => {
             </Link>
             
             <Link 
-              to="/about" 
+              href="/about" 
               className={`font-medium transition-colors hover:text-purple-600 ${
                 isScrolled ? 'text-gray-700' : 'text-white'
               }`}
@@ -146,7 +166,7 @@ const Navigation: React.FC = () => {
                           {category.services.map((service, serviceIndex) => (
                             <Link
                               key={serviceIndex}
-                              to={service.path}
+                              href={service.path}
                               className="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-purple-600 rounded-lg transition-colors"
                               onClick={closeAllMenus}
                             >
@@ -159,7 +179,7 @@ const Navigation: React.FC = () => {
                   </div>
                   <div className="border-t border-gray-200 mt-6 pt-4 px-6">
                     <Link
-                      to="/services"
+                      href="/services"
                       className="block w-full text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all"
                       onClick={closeAllMenus}
                     >
@@ -171,7 +191,7 @@ const Navigation: React.FC = () => {
             </div>
 
             <Link 
-              to="/case-studies" 
+              href="/case-studies" 
               className={`font-medium transition-colors hover:text-purple-600 ${
                 isScrolled ? 'text-gray-700' : 'text-white'
               }`}
@@ -181,7 +201,7 @@ const Navigation: React.FC = () => {
             </Link>
             
             <Link 
-              to="/enterprise" 
+              href="/enterprise" 
               className={`font-medium transition-colors hover:text-purple-600 ${
                 isScrolled ? 'text-gray-700' : 'text-white'
               }`}
@@ -191,7 +211,7 @@ const Navigation: React.FC = () => {
             </Link>
             
             <Link 
-              to="/team" 
+              href="/team" 
               className={`font-medium transition-colors hover:text-purple-600 ${
                 isScrolled ? 'text-gray-700' : 'text-white'
               }`}
@@ -202,7 +222,7 @@ const Navigation: React.FC = () => {
 
             {/* Contact Button */}
             <Link 
-              to="/contact" 
+              href="/contact" 
               className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl"
               onClick={closeAllMenus}
             >
@@ -228,7 +248,7 @@ const Navigation: React.FC = () => {
           <div className="lg:hidden border-t border-gray-200 py-6 bg-white">
             <div className="space-y-6">
               <Link 
-                to="/" 
+                href="/" 
                 className="block text-lg font-medium text-gray-900 hover:text-purple-600 transition-colors"
                 onClick={closeAllMenus}
               >
@@ -236,7 +256,7 @@ const Navigation: React.FC = () => {
               </Link>
               
               <Link 
-                to="/about" 
+                href="/about" 
                 className="block text-lg font-medium text-gray-900 hover:text-purple-600 transition-colors"
                 onClick={closeAllMenus}
               >
@@ -259,7 +279,7 @@ const Navigation: React.FC = () => {
                         {category.services.map((service, serviceIndex) => (
                           <Link
                             key={serviceIndex}
-                            to={service.path}
+                            href={service.path}
                             className="block text-sm text-gray-600 hover:text-purple-600 transition-colors"
                             onClick={closeAllMenus}
                           >
@@ -271,7 +291,7 @@ const Navigation: React.FC = () => {
                   ))}
                 </div>
                 <Link
-                  to="/services"
+                  href="/services"
                   className="block w-full text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all mt-4"
                   onClick={closeAllMenus}
                 >
@@ -280,7 +300,7 @@ const Navigation: React.FC = () => {
               </div>
 
               <Link 
-                to="/case-studies" 
+                href="/case-studies" 
                 className="block text-lg font-medium text-gray-900 hover:text-purple-600 transition-colors"
                 onClick={closeAllMenus}
               >
@@ -288,7 +308,7 @@ const Navigation: React.FC = () => {
               </Link>
               
               <Link 
-                to="/enterprise" 
+                href="/enterprise" 
                 className="block text-lg font-medium text-gray-900 hover:text-purple-600 transition-colors"
                 onClick={closeAllMenus}
               >
@@ -296,7 +316,7 @@ const Navigation: React.FC = () => {
               </Link>
               
               <Link 
-                to="/team" 
+                href="/team" 
                 className="block text-lg font-medium text-gray-900 hover:text-purple-600 transition-colors"
                 onClick={closeAllMenus}
               >
@@ -304,7 +324,7 @@ const Navigation: React.FC = () => {
               </Link>
 
               <Link 
-                to="/contact" 
+                href="/contact" 
                 className="block w-full text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all"
                 onClick={closeAllMenus}
               >
@@ -335,7 +355,7 @@ const Navigation: React.FC = () => {
         )}
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default Navigation;
+export default Navigation

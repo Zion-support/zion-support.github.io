@@ -1,0 +1,210 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+"use client";
+import React from 'react';
+
+const EnhancedPerformanceMonitor = () => {
+  return (
+    <div>
+      <h1>EnhancedPerformanceMonitor</h1>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default EnhancedPerformanceMonitor;
+=======
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, Brain, CheckCircle, Phone, Mail, MapPin, Zap, Shield, Globe } from 'lucide-react'
+import Navigation from './Navigation'
+
+const EnhancedPerformanceMonitor: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Analytics',
+      description: 'Advanced machine learning algorithms analyze your performance data in real-time.',
+      benefits: [
+        'Predictive performance insights',
+        'Automated anomaly detection',
+        'Intelligent recommendations',
+        'Custom performance metrics'
+      ]
+    },
+    {
+      icon: Zap,
+      title: 'Real-Time Monitoring',
+      description: 'Monitor your systems and applications with lightning-fast real-time updates.',
+      benefits: [
+        'Live performance dashboards',
+        'Instant alert notifications',
+        'Historical trend analysis',
+        'Custom monitoring intervals'
+      ]
+    },
+    {
+      icon: Shield,
+      title: 'Security & Compliance',
+      description: 'Enterprise-grade security with full compliance monitoring and reporting.',
+      benefits: [
+        'SOC 2 Type II compliance',
+        'End-to-end encryption',
+        'Role-based access control',
+        'Audit trail logging'
+      ]
+    },
+    {
+      icon: Globe,
+      title: 'Global Infrastructure',
+      description: 'Monitor performance across multiple regions and cloud providers.',
+      benefits: [
+        'Multi-region monitoring',
+        'Cloud provider agnostic',
+        'Global CDN optimization',
+        'Edge computing support'
+      ]
+    }
+  ]
+
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Enhanced Performance Monitor | Zion Tech Group</title>
+        <meta name="description" content="Advanced performance monitoring solution with AI-powered analytics, real-time insights, and enterprise-grade security." />
+      </Helmet>
+      
+      <Navigation />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Enhanced Performance Monitor
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Monitor, analyze, and optimize your systems with our AI-powered performance monitoring solution.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
+                View Demo
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our enhanced performance monitoring system provides comprehensive insights and optimization.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-gray-800 rounded-lg p-6 hover:bg-gray-700 transition-colors">
+                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-400">
+                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our Performance Monitor?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the benefits of advanced performance monitoring with our comprehensive solution.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start space-x-3">
+                  <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                  <p className="text-gray-300 text-lg">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Ready to Optimize Your Performance?
+              </h2>
+              <p className="text-xl text-purple-100 mb-8">
+                Get started with our enhanced performance monitoring solution today.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-white text-purple-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  <Phone className="mr-2 h-5 w-5 inline" />
+                  Call Now
+                </button>
+                <button className="bg-white text-purple-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  <Mail className="mr-2 h-5 w-5 inline" />
+                  Email Us
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+  )
+}
+
+export default EnhancedPerformanceMonitor
+>>>>>>> 6d21a698833607de6a5fc802b68ed751e474e57d
+=======
+
+import React from 'react';
+
+interface EnhancedPerformanceMonitorProps {
+  // Add props here
+}
+
+const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = (_props) => {
+  return (
+    <div>
+      {/* Component content */}
+    </div>
+  );
+};
+
+export default EnhancedPerformanceMonitor;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0ece

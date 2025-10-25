@@ -1,60 +1,43 @@
-import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
+import React from 'react'
 import './globals.css'
+import { metadata } from './constants/metadata'
+import { viewport } from './constants/viewport'
 
 const inter = Inter({ subsets: ['latin'] })
 
+<<<<<<< HEAD
 export const metadata: Metadata = {
-  title: 'Zion Tech Group - Advanced AI and IT Solutions',
-  description: 'Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.',
-  keywords: 'AI solutions, machine learning, quantum computing, IT services, digital transformation, enterprise technology',
+  metadataBase: new URL('https://zion.app'),
+  title: 'Zion Tech Group - Advanced AI & IT Solutions',
+  description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services. Transform your business with cutting-edge technology.',
+  keywords: 'AI solutions, IT services, cybersecurity, cloud computing, digital transformation, machine learning, artificial intelligence, data analytics, blockchain, IoT',
   authors: [{ name: 'Zion Tech Group' }],
-  creator: 'Zion Tech Group',
-  publisher: 'Zion Tech Group',
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  metadataBase: new URL('https://ziontechgroup.com'),
-  alternates: {
-    canonical: '/',
-  },
+  robots: 'index, follow',
   openGraph: {
-    title: 'Zion Tech Group - Advanced AI and IT Solutions',
-    description: 'Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.',
-    url: 'https://ziontechgroup.com',
+    title: 'Zion Tech Group - Advanced AI & IT Solutions',
+    description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services. Transform your business with cutting-edge technology.',
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://zion.app',
     siteName: 'Zion Tech Group',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Zion Tech Group - Advanced AI and IT Solutions',
+        alt: 'Zion Tech Group - Advanced AI & IT Solutions',
       },
     ],
-    locale: 'en_US',
-    type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Zion Tech Group - Advanced AI and IT Solutions',
-    description: 'Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.',
+    title: 'Zion Tech Group - Advanced AI & IT Solutions',
+    description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
     images: ['/og-image.jpg'],
   },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  verification: {
-    google: 'your-google-verification-code',
+  alternates: {
+    canonical: 'https://zion.app',
   },
   category: 'technology',
 }
@@ -63,6 +46,9 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
 }
+=======
+export { metadata, viewport }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0ece
 
 export default function RootLayout({
   children,
@@ -70,7 +56,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en">
+<<<<<<< HEAD
       <head>
         <script
           dangerouslySetInnerHTML={{
@@ -81,6 +68,7 @@ export default function RootLayout({
                   // Measure page load time
                   const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart
                   console.log('Page load time:', loadTime + 'ms')
+                  
                   // Track Core Web Vitals
                   if ('web-vitals' in window) {
                     import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
@@ -97,8 +85,21 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.className} antialiased`}>
+      <body className={inter.className}>
+        <Analytics />
+        <PerformanceMonitor />
+        <AccessibilityEnhancer />
+        <ErrorBoundary>
+          <Header />
+          <main className="pt-16">
+            {children}
+          </main>
+          <Footer />
+        </ErrorBoundary>
+=======
+      <body className={inter.className}>
         {children}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0ece
       </body>
     </html>
   )
