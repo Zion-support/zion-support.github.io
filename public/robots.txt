@@ -1,6 +1,9 @@
 User-agent: *
 Allow: /
 
+<<<<<<< HEAD
+Sitemap: https://ziontechgroup.com/sitemap.xml
+=======
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
@@ -14,51 +17,32 @@ Disallow: /_next/
 Disallow: /private/
 
 # Allow important pages
-Allow: /
-Allow: /about
-Allow: /services
-Allow: /contact
-Allow: /blog
-Allow: /case-studies
-Allow: /careers
+Allow: /ai-services/
+Allow: /ai-solutions/
+Allow: /cloud-migration/
+Allow: /cybersecurity/
+Allow: /quantum-computing/
+Allow: /autonomous-systems/
+Allow: /blockchain/
+Allow: /blog/
+Allow: /case-studies/
+Allow: /contact/
+Allow: /about/
+
+# Host
+Host: https://ziontechgroup.com
 Allow: /partners
-Allow: /pricing
-Allow: /consultation
 Allow: /support
 Allow: /faq
 Allow: /demo
-
-# AI Services
-Allow: /ai-services
-Allow: /ai-marketing
-Allow: /ai-automation
-Allow: /ai-healthcare
-Allow: /ai-fintech
-Allow: /ai-customer-support
-Allow: /ai-sales-automation
-Allow: /ai-workflow-automation
-Allow: /ai-data-visualization
-Allow: /ai-lead-generation
-Allow: /ai-document-processing
-
-# IT Services
-Allow: /it-services
-Allow: /cloud-migration
-Allow: /cybersecurity-suite
-Allow: /devops-cicd
-Allow: /database-management
-Allow: /network-solutions
-Allow: /mobile-app-development
-Allow: /it-consulting
-Allow: /it-support
-
-# Micro SAAS
+Allow: /consultation
 Allow: /micro-saas
-Allow: /ai-crm
-Allow: /ai-analytics
-Allow: /ai-content-studio
-Allow: /ai-chatbot-builder
-Allow: /ai-email-marketing
-Allow: /ai-mobile-builder
-Allow: /ai-seo-optimizer
-Allow: /ai-invoice-generator
+Allow: /ai-services
+Allow: /it-services
+Allow: /privacy
+Allow: /terms
+Allow: /cookies
+Allow: /docs
+Allow: /community
+Allow: /tutorials
+>>>>>>> cursor/delete-records-30ea

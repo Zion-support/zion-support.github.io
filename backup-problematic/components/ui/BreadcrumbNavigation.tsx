@@ -1,34 +1,25 @@
-import React from react;
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-interface BreadcrumbNavigationProps {/* TODO: Fix JSX expression */}
-
-}
-
-;
-
-const BreadcrumbNavigation = React.memo(function BreadcrumbNavigation({);;;
-
-  className = ')
-}: BreadcrumbNavigationProps) {
-  return(<div className={`bg-blue-100 p-4 rounded-lg ${className}}>)
-      <h3 className="text-lg font-semibold text-blue-800>BreadcrumbNavigation</h3>)
-      <p className="text-blue-600>This component is under development.</p>)
-    </div>)
+const BreadcrumbNavigationPage: React.FC = () => {
   return (
+    <React.Fragment>
+      <Helmet>
+        <title>BreadcrumbNavigation - Zion Tech Group</title>
+        <meta name="description" content="Professional BreadcrumbNavigation services by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-900 text-white">
+        <div className="container mx-auto px-4 py-8">
+          <h1 className="text-4xl font-bold mb-6">BreadcrumbNavigation</h1>
+          <p className="text-lg text-gray-300">
+            This page is currently under development. Please check back soon for more information.
+          </p>
+        </div>
+      </div>
+    </React.Fragment>
+  );
+};
 
-    <div className={`bg-blue-100 p-4 rounded-lg ${className}}></div>
-      <h3 className="text-lg font-semibold text-blue-800>BreadcrumbNavigation</h3>;
-
-const BreadcrumbNavigation = React.memo(function BreadcrumbNavigation({/* TODO: Fix JSX expression */});;
-
-}: BreadcrumbNavigationProps) {/* TODO: Fix JSX expression */}
-
-    <div className={`bg-blue-100 p-4 rounded-lg ${className}}></div>
-      <h3 className="text-lg font-semibold text-blue-800">BreadcrumbNavigation</h3>
-      <p className="text-blue-600>This component is under development.</p>
-    </div>
-  )});
-
-export default BreadcrumbNavigation;
-
-"`
+export default BreadcrumbNavigationPage;

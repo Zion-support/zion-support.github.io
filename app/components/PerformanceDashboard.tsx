@@ -1,138 +1,65 @@
-'use client;
-
-import React from 'react;
-
-import React, { useState, useEffect } from react;
+import React, { useState, useEffect } from 'react';
 
 interface PerformanceMetrics {
-  loadTime: number,
-  renderTime: number,
-  memoryUsage: number,
+  renderTime: number;
+  memoryUsage: number;
   fps: number}
 
-interface PerformanceMetrics {
-  loadTime: number,
-  renderTime: number,
-  memoryUsage: number,
-  fps: number,
-  [key: string]: number}
-
-;
-
 const PerformanceDashboard: React.FC = () => {
-return (;
-
-const [metrics, setMetrics] = useState<PerformanceMetrics>
-);
-
-}({
-    loadTime: 0,
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
     renderTime: 0,
     memoryUsage: 0,
-    fps: 0})const [isVisible, setIsVisible] = useState(false);
+    fps: 0
+  });
 
-  useEffect(() => {;
+  useEffect(() => {
+    let _frameCount = 0;
+    let lastTime = performance.now();
 
-const updateMetrics = () => {const navigation = performance.getEntriesByType(;;
-
-        navigation
-      )[0] as PerformanceNavigationTiming;
-
-const loadTime = navigation;;
-
-        ? navigation.loadEventEnd - navigation.fetchStart
-        : 0;
-
-      // Measure render time// Measure memory usage;
-
-let _memoryUsage = 0;;;
-
-      if ('memory in performance) {memoryUsage = memory?.usedJSHeapSize || 0}
-
-      // Measure FPS (simplified);
-
-let _fps = 0;;
-
-      if ($1) { let _lastTime = performance.now();;
-
-        let _frameCount = 0;;
-
-const measureFPS = (currentTime: number) => {;;
-
-          frameCount++;
-
-          if (currentTime - lastTime >= 1000) {
-            fps = Math.round((frameCount * 1000) / (currentTime - lastTime))            frameCount = 0;
-
-            lastTime = currentTime}
-
-          requestAnimationFrame(measureFPS);
-
-        requestAnimationFrame(measureFPS);
-
+    const updateMetrics = () => {
+      const currentTime = performance.now();
+      const renderTime = currentTime - lastTime;
+      
+      const memoryUsage = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize || 0;
+      
+      _frameCount++;
+      const fps = Math.round(1000 / renderTime);
+      
       setMetrics({
-        loadTime,
-        renderTime,
-        memoryUsage,
-        fps})    updateMetrics();
+        renderTime: Math.round(renderTime * 100) / 100,
+        memoryUsage: Math.round(memoryUsage / 1024 / 1024 * 100) / 100,
+const fps = null});
+      
+      lastTime = currentTime};
 
-    // Update metrics every 5 secondsreturn () => clearInterval(interval)}, []);
+    const interval: NodeJS.Timeout = setInterval(updateMetrics, 1000);
 
-  if (!isVisible) {
-  return (
-
-      <button
-        onClick={() => setIsVisible(true);
-
-        className="fixed bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors
-      >
-        Show Performance
-      </button>);
+    return () => {
+      if (interval) {
+        clearInterval(interval)}
+    }}, []);
 
   return (
-
-    <div className="fixed bottom-4 right-4 bg-white border border-gray-300 rounded-lg shadow-lg p-4 w-80 max-h-96 overflow-y-auto>
-      <div className="flex justify-between items-center mb-4>
-        <h3 className="text-lg font-semibold text-gray-800>Performance Dashboard</h3>
-        <button
-          onClick={() => setIsVisible(false);
-
-          className="text-gray-500 hover:text-gray-700
-        >
-          ×
-        </button>
+    <div className="bg-white rounded-lg shadow-lg p-6"></div>
+      <h2 className="text-2xl font-bold text-gray-900 mb-6">Performance Dashboard</h2>
+      
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+        <div className="bg-blue-50 rounded-lg p-4"></div>
+          <h3 className="text-lg font-semibold text-blue-900 mb-2">Render Time</h3>
+          <p className="text-3xl font-bold text-blue-600">{metrics.renderTime}ms</p>
+        </div>
+        
+        <div className="bg-green-50 rounded-lg p-4"></div>
+          <h3 className="text-lg font-semibold text-green-900 mb-2">Memory Usage</h3>
+          <p className="text-3xl font-bold text-green-600">{metrics.memoryUsage}MB</p>
+        </div>
+        
+        <div className="bg-purple-50 rounded-lg p-4"></div>
+          <h3 className="text-lg font-semibold text-purple-900 mb-2">FPS</h3>
+          <p className="text-3xl font-bold text-purple-600">{metrics.fps}</p>
+        </div>
       </div>
+    </div>
+  )};
 
-      <div className="space-y-3>
-        <div className="flex justify-between>
-          <span className="text-sm text-gray-600>Load Time:</span>
-          <span className="text-sm font-mono>
-            {metrics.loadTime.toFixed(2)}ms
-          </span>
-        </div>
-
-        <div className="flex justify-between>
-          <span className="text-sm text-gray-600>Render Time:</span>
-          <span className="text-sm font-mono>
-            {metrics.renderTime.toFixed(2)}ms
-          </span>
-        </div>
-
-        <div className="flex justify-between>
-          <span className="text-sm text-gray-600>Memory Usage:</span>
-          <span className="text-sm font-mono>
-            {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB
-          </span>
-        </div>
-
-        <div className="flex justify-between>
-          <span className="text-sm text-gray-600>FPS:</span>
-          <span className="text-sm font-mono>{metrics.fps}</span>
-        </div>
-
-        <div className="pt-2 border-t border-gray-200>
-          <div className="text-xs text-gray-500>
-            Last updated: {new Date().toLocaleTimeString()}</div>
-        </div>
-    </div>)
 export default PerformanceDashboard;

@@ -1,246 +1,86 @@
-  private observers: PerformanceObserver[] = [];
+// Performance utilities for optimization
+export const defaultConfig = {
+  enabled: true,
+  debug: false
+};
 
-;
+export const defaultFunction = () => {
+  return null};
 
-constructor() {
-    this.initializeMetrics();
+// Performance utilities object
+export const performanceUtils = {
+  measurePerformance: (name: string, fn: () => void) => {
+    const start = performance.now();
+    fn();
+    const end = performance.now();
+    console.log(`${name} took ${end - start} milliseconds`)},
 
-  private initializeMetrics(): void {
-    if (typeof window === 'undefined' || !(performance in window)) return;
-
-    // Measure page load time
-    window.addEventListener(load, () => {;
-
-const navigation = performance.getEntriesByType(navigation)[0] as PerformanceNavigationTiming;;
-
-      this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart});
-
-    // Measure Core Web Vitals
-    this.measureCoreWebVitals();
-
-  private measureCoreWebVitals(): void {
-    // First Contentful Paint
-    this.observePaint('first-contentful-paint, (entry) => {
-      this.metrics.firstContentfulPaint = entry.startTime});
-
-    // Largest Contentful Paint
-    this.observeLCP();
-
-    // First Input Delay
-    this.observeFID();
-
-    // Cumulative Layout Shift
-    this.observeCLS();
-
-  private observePaint(type: string, callback: (entry: PerformanceEntry) => void): void {
-    if (typeof window === 'undefined' || !(PerformanceObserver in window)) return;
-
-    try {;
-
-const observer = new PerformanceObserver((list) => {;;
-
+  monitorWebVitals: () => {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      // Monitor Core Web Vitals
+      const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          if (entry.name === type) {
-            callback(entry);
-
-        }
-
+          if (entry.entryType === 'largest-contentful-paint') {
+            console.log('LCP:', entry.startTime)}
+          if (entry.entryType === 'first-input') {
+            console.log('FID:', entry.processingStart - entry.startTime)}
+          console.log('Performance metric:', entry.name, entry.value)}
       });
+      
+      try {
+        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'measure', 'navigation'] })} catch (e) {
+        // Fallback for older browsers
+        console.log('Performance monitoring not fully supported')}
+    }
+  },
 
-      observer.observe({ entryTypes: [paint] });
+  optimizeImages: () => {
+    if (typeof window !== 'undefined') {
+      // Lazy load images with intersection observer
+      const images = document.querySelectorAll('img[data-src]');
+      const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
+            img.src = img.dataset.src || '';
+            img.classList.remove('lazy');
+            imageObserver.unobserve(img)}
+        })});
 
-      this.observers.push(observer)} catch (error) {
-      // console.warn removed for production
-}
+      images.forEach(img => imageObserver.observe(img));
+      
+      // Also set loading="lazy" for regular images
+      const regularImages = document.querySelectorAll('img:not([data-src])');
+      regularImages.forEach(img => {
+        if (!img.loading) {
+          img.loading = 'lazy'}
+      })}
+    return true},
 
+  optimizeFonts: () => {
+    if (typeof window !== 'undefined') {
+      // Preload critical fonts
+      const fontPreloads = [
+        { href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2' },
+        { href: '/fonts/inter-var.woff', as: 'font', type: 'font/woff' }
+      ];
+
+      fontPreloads.forEach(font => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.href = font.href;
+        link.as = font.as;
+        if (font.type) link.type = font.type;
+        link.crossOrigin = 'anonymous';
+        document.head.appendChild(link)})}
+    return true}},
+
+  cleanup: () => {
+    // Cleanup function for component unmount
+    if (typeof window !== 'undefined') {
+      // Remove any performance observers or timers
+      const observers = document.querySelectorAll('[data-performance-observer]');
+      observers.forEach(observer => observer.remove());
+      console.log('Performance utilities cleanup')}
   }
-
-  private observeLCP(): void {
-    if (typeof window === 'undefined' || !(PerformanceObserver in window)) return;
-
-    try {;
-
-const observer = new PerformanceObserver((list) => {;;
-
-const entries = list.getEntries();;
-
-const lastEntry = entries[entries.length - 1];;
-
-        this.metrics.largestContentfulPaint = lastEntry.startTime});
-
-      observer.observe({ entryTypes: [largest-contentful-paint] });
-
-      this.observers.push(observer)} catch (error) {
-      // console.warn removed for production
-}
-
-  }
-
-  private observeFID(): void {
-    if (typeof window === 'undefined' || !(PerformanceObserver in window)) return;
-
-    try {;
-
-const observer = new PerformanceObserver((list) => {;;
-
-        for (const entry of list.getEntries()) {
-          this.metrics.firstInputDelay = entry.processingStart - entry.startTime}
-
-      });
-
-      observer.observe({ entryTypes: [first-input] });
-
-      this.observers.push(observer)} catch (error) {
-      // console.warn removed for production
-}
-
-  }
-
-  private observeCLS(): void {
-    if (typeof window === 'undefined' || !(PerformanceObserver in window)) return;
-
-    try {;
-
-let clsValue = 0;;
-
-const observer = new PerformanceObserver((list) => {;;
-
-        for (const entry of list.getEntries()) {
-          if (!(entry as any).hadRecentInput) {
-            clsValue += (entry as any).value}
-
-        }
-
-        this.metrics.cumulativeLayoutShift = clsValue});
-
-      observer.observe({ entryTypes: [layout-shift] });
-
-      this.observers.push(observer)} catch (error) {
-      // console.warn removed for production
-}
-
-  }
-
-  public getMetrics(): PerformanceMetrics {
-    return { ...this.metrics }}
-
-  public getLoadTime(): number {
-    return this.metrics.loadTime}
-
-  public getFirstContentfulPaint(): number {
-    return this.metrics.firstContentfulPaint}
-
-  public getLargestContentfulPaint(): number {
-    return this.metrics.largestContentfulPaint}
-
-  public getFirstInputDelay(): number {
-    return this.metrics.firstInputDelay}
-
-  public getCumulativeLayoutShift(): number {
-    return this.metrics.cumulativeLayoutShift}
-
-  public isPerformanceGood(): boolean {
-  return (
-
-      this.metrics.firstContentfulPaint < 1800 &&
-      this.metrics.largestContentfulPaint < 2500 &&
-      this.metrics.firstInputDelay < 100 &&
-      this.metrics.cumulativeLayoutShift < 0.1);
-
-  public cleanup(): void {
-    this.observers.forEach(observer => observer.disconnect());
-
-    this.observers = []}
-
-}
-
-export const performanceMonitor = new PerformanceMonitor();;
-
-// Utility functions
-export const measureFunction = <T extends (...args: any[]) => any>(;;
-
-  fn: T,
-  name?: string
-): T => {
-return ((...args: Parameters<T>
-);
-
-}) => {;
-
-const start = performance.now();;
-
-const result = fn(...args);;
-
-const end = performance.now();;
-
-    if (name) {
-      // console.log removed for production
-}
-
-    return result}) as T}
-
-export const debounce = <T extends (...args: any[]) => any>(;;
-
-  func: T,
-  wait: number
-): T => {
-  return (
-
-;
-
-let timeout: NodeJS.Timeout;
-
-  return ((...args: Parameters<T>
-);
-
-}) => {
-    clearTimeout(timeout);
-
-    timeout = setTimeout(() => func(...args), wait)}) as T}
-
-export const throttle = <T extends (...args: any[]) => any>(;;
-
-  func: T,
-  limit: number
-): T => {
-  return (
-
-;
-
-let inThrottle: boolean;
-
-  return ((...args: Parameters<T>
-);
-
-}) => {
-    if (!inThrottle) {
-      func(...args);
-
-      inThrottle = true;
-
-      setTimeout(() => inThrottle = false, limit);
-
-  }) as T}
-
-export const lazyLoad = (callback: () => void): void => {;;
-
-  if ('requestIdleCallback in window) {
-    requestIdleCallback(callback)} else {
-    setTimeout(callback, 1);
-
-}
-
-export const preloadImage = (src: string): Promise<void> => {;;
-
-  return new Promise((resolve, reject) => {;
-
-const img = new Image();;
-
-    img.onload = () => resolve();
-
-    img.onerror = reject;
-
-    img.src = src})
-export const preloadImages = (srcs: string[]): Promise<void[]> => {;;
-
-  return Promise.all(srcs.map(preloadImage));
+};

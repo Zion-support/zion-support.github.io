@@ -1,92 +1,208 @@
 #!/usr/bin/env node
 
-/**
- * Performance monitoring script for Zion Tech Group website
- * Monitors build performance and provides optimization suggestions
- */
-
 const fs = require('fs');
 const path = require('path');
 
-const distPath = path.join(__dirname, '..', 'dist');
-
-function analyzeBuild() {
-  console.log('🔍 Analyzing build performance...\n');
-
-  // Check if dist directory exists
-  if (!fs.existsSync(distPath)) {
-    console.error('❌ Build directory not found. Please run npm run build first.');
-    process.exit(1);
+// Performance monitoring script
+class PerformanceMonitor {
+  constructor() {
+    this.metrics = {
+      bundleSize: 0,
+      assetCount: 0,
+      cssSize: 0,
+      jsSize: 0,
+      imageSize: 0,
+      fontSize: 0,
+      otherSize: 0,
+      timestamp: new Date().toISOString()
+    };
   }
 
-  // Analyze file sizes
-  const files = fs.readdirSync(distPath, { recursive: true });
-  let totalSize = 0;
-  const fileSizes = [];
-
-  files.forEach(file => {
-    const filePath = path.join(distPath, file);
-    if (fs.statSync(filePath).isFile()) {
-      const size = fs.statSync(filePath).size;
-      totalSize += size;
-      fileSizes.push({
-        name: file,
-        size: size,
-        sizeKB: (size / 1024).toFixed(2)
-      });
+  // Analyze build output
+  analyzeBuild() {
+    const distPath = path.join(__dirname, '../dist');
+    
+    if (!fs.existsSync(distPath)) {
+      console.error('❌ Dist directory not found. Run build first.');
+      process.exit(1);
     }
-  });
 
-  // Sort by size
-  fileSizes.sort((a, b) => b.size - a.size);
+    console.log('🔍 Analyzing build output...');
+    
+    this.analyzeDirectory(distPath);
+    this.generateReport();
+  }
 
-  console.log('📊 File Size Analysis:');
-  console.log('─'.repeat(50));
-  fileSizes.forEach(file => {
-    const sizeColor = file.size > 100000 ? '🔴' : file.size > 50000 ? '🟡' : '🟢';
-    console.log(`${sizeColor} ${file.name.padEnd(30)} ${file.sizeKB.padStart(8)} KB`);
-  });
-
-  console.log('\n📈 Total Build Size:');
-  console.log(`   ${(totalSize / 1024).toFixed(2)} KB (${(totalSize / 1024 / 1024).toFixed(2)} MB)`);
-
-  // Performance recommendations
-  console.log('\n💡 Performance Recommendations:');
-  console.log('─'.repeat(50));
-
-  const largeFiles = fileSizes.filter(f => f.size > 100000);
-  if (largeFiles.length > 0) {
-    console.log('🔴 Large files detected:');
-    largeFiles.forEach(file => {
-      console.log(`   • ${file.name} (${file.sizeKB} KB) - Consider code splitting or optimization`);
+  // Recursively analyze directory
+  analyzeDirectory(dirPath, relativePath = '') {
+    const items = fs.readdirSync(dirPath);
+    
+    items.forEach(item => {
+      const itemPath = path.join(dirPath, item);
+      const itemRelativePath = path.join(relativePath, item);
+      const stats = fs.statSync(itemPath);
+      
+      if (stats.isDirectory()) {
+        this.analyzeDirectory(itemPath, itemRelativePath);
+      } else {
+        this.analyzeFile(itemPath, itemRelativePath, stats.size);
+      }
     });
   }
 
-  if (totalSize > 500000) {
-    console.log('🟡 Total bundle size is large - consider:');
-    console.log('   • Tree shaking unused code');
-    console.log('   • Dynamic imports for non-critical components');
-    console.log('   • Image optimization');
+  // Analyze individual file
+  analyzeFile(filePath, relativePath, size) {
+    this.metrics.assetCount++;
+    this.metrics.bundleSize += size;
+    
+    const ext = path.extname(filePath).toLowerCase();
+    
+    switch (ext) {
+      case '.css':
+        this.metrics.cssSize += size;
+        break;
+      case '.js':
+        this.metrics.jsSize += size;
+        break;
+      case '.png':
+      case '.jpg':
+      case '.jpeg':
+      case '.gif':
+      case '.svg':
+      case '.webp':
+        this.metrics.imageSize += size;
+        break;
+      case '.woff':
+      case '.woff2':
+      case '.ttf':
+      case '.eot':
+        this.metrics.fontSize += size;
+        break;
+      default:
+        this.metrics.otherSize += size;
+    }
   }
 
-  // Check for common performance issues
-  const jsFiles = fileSizes.filter(f => f.name.endsWith('.js'));
-  const cssFiles = fileSizes.filter(f => f.name.endsWith('.css'));
+  // Generate performance report
+  generateReport() {
+    const report = {
+      ...this.metrics,
+      recommendations: this.generateRecommendations(),
+      performance: this.calculatePerformanceScore()
+    };
 
-  if (jsFiles.length > 5) {
-    console.log('🟡 Many JS files detected - consider:');
-    console.log('   • Consolidating smaller chunks');
-    console.log('   • Using dynamic imports');
+    // Save report
+    const reportPath = path.join(__dirname, '../performance-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    
+    // Display summary
+    this.displaySummary();
   }
 
-  if (cssFiles.length > 3) {
-    console.log('🟡 Multiple CSS files - consider:');
-    console.log('   • CSS code splitting optimization');
-    console.log('   • Critical CSS inlining');
+  // Generate recommendations
+  generateRecommendations() {
+    const recommendations = [];
+    
+    // Bundle size recommendations
+    if (this.metrics.bundleSize > 1024 * 1024) { // > 1MB
+      recommendations.push({
+        type: 'warning',
+        message: 'Bundle size is large (>1MB). Consider code splitting or tree shaking.',
+        impact: 'high'
+      });
+    }
+    
+    // CSS size recommendations
+    if (this.metrics.cssSize > 100 * 1024) { // > 100KB
+      recommendations.push({
+        type: 'info',
+        message: 'CSS size is large (>100KB). Consider purging unused styles.',
+        impact: 'medium'
+      });
+    }
+    
+    // Image size recommendations
+    if (this.metrics.imageSize > 500 * 1024) { // > 500KB
+      recommendations.push({
+        type: 'info',
+        message: 'Image size is large (>500KB). Consider optimizing images.',
+        impact: 'medium'
+      });
+    }
+    
+    // Asset count recommendations
+    if (this.metrics.assetCount > 50) {
+      recommendations.push({
+        type: 'info',
+        message: 'High number of assets. Consider bundling or lazy loading.',
+        impact: 'low'
+      });
+    }
+    
+    return recommendations;
   }
 
-  console.log('\n✅ Performance analysis complete!');
+  // Calculate performance score
+  calculatePerformanceScore() {
+    let score = 100;
+    
+    // Deduct points for large bundle size
+    if (this.metrics.bundleSize > 1024 * 1024) score -= 20;
+    else if (this.metrics.bundleSize > 500 * 1024) score -= 10;
+    
+    // Deduct points for large CSS
+    if (this.metrics.cssSize > 100 * 1024) score -= 15;
+    else if (this.metrics.cssSize > 50 * 1024) score -= 5;
+    
+    // Deduct points for large images
+    if (this.metrics.imageSize > 500 * 1024) score -= 15;
+    else if (this.metrics.imageSize > 200 * 1024) score -= 5;
+    
+    // Deduct points for too many assets
+    if (this.metrics.assetCount > 100) score -= 10;
+    else if (this.metrics.assetCount > 50) score -= 5;
+    
+    return Math.max(0, score);
+  }
+
+  // Display summary
+  displaySummary() {
+    console.log('\n📊 Performance Analysis Summary');
+    console.log('================================');
+    console.log(`📦 Total Bundle Size: ${this.formatBytes(this.metrics.bundleSize)}`);
+    console.log(`📄 Total Assets: ${this.metrics.assetCount}`);
+    console.log(`🎨 CSS Size: ${this.formatBytes(this.metrics.cssSize)}`);
+    console.log(`⚡ JavaScript Size: ${this.formatBytes(this.metrics.jsSize)}`);
+    console.log(`🖼️  Image Size: ${this.formatBytes(this.metrics.imageSize)}`);
+    console.log(`🔤 Font Size: ${this.formatBytes(this.metrics.fontSize)}`);
+    console.log(`📁 Other Size: ${this.formatBytes(this.metrics.otherSize)}`);
+    console.log(`🏆 Performance Score: ${this.metrics.performance}/100`);
+    
+    if (this.metrics.recommendations && this.metrics.recommendations.length > 0) {
+      console.log('\n💡 Recommendations:');
+      this.metrics.recommendations.forEach((rec, index) => {
+        const icon = rec.type === 'warning' ? '⚠️' : 'ℹ️';
+        console.log(`  ${index + 1}. ${icon} ${rec.message}`);
+      });
+    }
+    
+    console.log('\n✅ Performance report saved to performance-report.json');
+  }
+
+  // Format bytes to human readable format
+  formatBytes(bytes) {
+    if (bytes === 0) return '0 Bytes';
+    const k = 1024;
+    const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+  }
 }
 
-// Run analysis
-analyzeBuild();
+// Run performance monitor
+if (require.main === module) {
+  const monitor = new PerformanceMonitor();
+  monitor.analyzeBuild();
+}
+
+module.exports = PerformanceMonitor;

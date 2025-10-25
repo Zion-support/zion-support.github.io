@@ -1,41 +1,99 @@
-/**
- * SEO utility functions;
- */
+// SEO utilities for better search engine optimization
+export const seoManager = {
+  init() {
+    this.setupMetaTags();
+    this.setupStructuredData();
+    this.setupSitemap();
+  },
 
-export interface SEOConfig {
-  title: string;
-  description: string;
-  keywords?: string[];
-  ogImage?: string;,
-  canonicalUrl?: string}
+  setupMetaTags() {
+    // Set up dynamic meta tags
+    const metaTags = {
+      'og:title': document.title,
+      'og:description': this.getMetaContent('description'),
+      'og:type': 'website',
+      'og:url': window.location.href,
+      'twitter:card': 'summary_large_image',
+      'twitter:title': document.title,
+      'twitter:description': this.getMetaContent('description')
+    };
 
-export const generateMetaTags = (config: SEOConfig): string => {,;
-export interface SEOConfig {/* TODO: Fix JSX expression */}
-}
+    Object.entries(metaTags).forEach(([property, content]) => {
+      this.setMetaTag(property, content);
+    });
+  },
 
-export const generateMetaTags = (confi);
-  g: SEOConfig): string => {/* TODO: Fix JSX expression */}
-  const { title, description, keywords, ogImage, canonicalUrl } = config;
-;
-let _tags = `<title>${title}</title>`;`;`
-  tags += `<meta name="description" content="${description}" />`;`
+  setupStructuredData() {
+    // Add structured data for better SEO
+    const structuredData = {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'Zion Tech Group',
+      description: 'Advanced AI and IT Solutions',
+      url: window.location.origin,
+      logo: `${window.location.origin}/logo.png`,
+      sameAs: [
+        'https://twitter.com/ziontechgroup',
+        'https://linkedin.com/company/ziontechgroup'
+      ]
+    };
 
-  if (keywords && keywords.length > 0) {/* TODO: Fix JSX expression */}"``
-    tags += `<meta name="keywords" content="${keywords.join(', ')}" />`}`
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(structuredData);
+    document.head.appendChild(script);
+  },
 
-  if (ogImage) {/* TODO: Fix JSX expression */}"``
-  g:image" content="${ogImage}" />`}`
+  setupSitemap() {
+    // Generate sitemap dynamically
+    const pages = [
+      '/',
+      '/about',
+      '/services',
+      '/contact'
+    ];
 
-  if (canonicalUrl) {/* TODO: Fix JSX expression */}"``
-    tags += `<link rel="canonical" href="${canonicalUrl}" />`}`
+    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  ${pages.map(page => `
+  <url>
+    <loc>${window.location.origin}${page}</loc>
+    <lastmod>${new Date().toISOString()}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>`).join('')}
+</urlset>`;
 
-  return tags};
+    // Save sitemap (in a real app, this would be server-side)
+    console.log('Sitemap generated:', sitemap);
+  },
 
-export const updatePageTitle = (title: string) => {,;
-  if (typeof window !== 'undefined') {,'
+  getMetaContent(name: string): string {
+    const meta = document.querySelector(`meta[name="${name}"]`);
+    return meta ? meta.getAttribute('content') || '' : '';
+  },
+
+  setMetaTag(property: string, content: string): void {
+    let meta = document.querySelector(`meta[property="${property}"]`) as HTMLMetaElement;
+    if (!meta) {
+      meta = document.createElement('meta');
+      meta.setAttribute('property', property);
+      document.head.appendChild(meta);
+    }
+    meta.setAttribute('content', content);
+  },
+
+  updateTitle(title: string): void {
     document.title = title;
-export const updatePageTitle = (titl);
-  e: string) => {/* TODO: Fix JSX expression */}
+    this.setMetaTag('og:title', title);
+    this.setMetaTag('twitter:title', title);
+  },
+
+  updateDescription(description: string): void {
+    this.setMetaTag('description', description);
+    this.setMetaTag('og:description', description);
+    this.setMetaTag('twitter:description', description);
   }
 };
-"`
+
+export default seoManager;

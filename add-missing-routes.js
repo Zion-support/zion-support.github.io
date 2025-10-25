@@ -1,41 +1,44 @@
 import fs from 'fs';
-// Read the current App.tsx;
-const appContent = fs.readFileSync('/workspace/src/App.tsx', 'utf8');
-// Generate all import statements';
+// import path from 'path';
+// import { fileURLToPath } from 'url';
 
-const importStatements = missingPages.map(generateImportStatement).join('\n);;
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = path.dirname(__filename);
 
-// Generate all route statements;
+// Read the missing pages from the analysis
+const analysisData = JSON.parse(fs.readFileSync('/workspace/navigation-analysis.json', 'utf8'));
+const missingPages = analysisData.missingPagesList;
 
-const routeStatements = missingPages.map(generateRouteStatement).join('\n);;
 
-// Find the position to insert the imports (after the existing imports)';
+const generateImportStatement = (route) => {
+  const componentName = route.split('/').pop().replace(/-/g, '').replace(/(^|_)([a-z])/g, (match, p1, p2) => p2.toUpperCase()) + 'Page';
+  return `const ${componentName} = React.lazy(() => import('.${route}/page'));`;
+};
 
-const importInsertionPoint = appContent.lastIndexOf('// Blog Pages);;
+// Generate route statements
+const generateRouteStatement = (route) => {
+  return `            <Route path="${route}" element={<${componentName} />} />`;
 
-const beforeImports = appContent.substring(0, importInsertionPoint);;
+// Generate the new App.tsx content
+const newImports = missingPages.map(generateImportStatement).join('\n');
+const newRoutes = missingPages.map(generateRouteStatement).join('\n');
 
-const afterImports = appContent.substring(importInsertionPoint);;
+// Find the insertion points in the existing App.tsx
+const importInsertionPoint = appContent.lastIndexOf('// 5G Solutions Pages');
+const routeInsertionPoint = appContent.lastIndexOf('{/* 5G Solutions Routes */}');
 
-// Insert the new imports';
-
-const newImports = beforeImports + '\n// Missing Pages\n' + importStatements + '\n\n + afterImports;;
-
-// Find the position to insert the routes (before the 404 route);
-
-const routeInsertionPoint = newImports.lastIndexOf('            {/* 404 Page */});;
-
-const beforeRoutes = newImports.substring(0, routeInsertionPoint);;
-
-const afterRoutes = newImports.substring(routeInsertionPoint);;
-
-// Insert the new routes;
-
-const newAppContent = beforeRoutes + '\n            {/* Missing Pages */}\n' + routeStatements + '\n            \n + afterRoutes;;
-
-// Write the updated App.tsx;
-
-fs.writeFileSync('/workspace/src/App.tsx, newAppContent);
-
-// console.log removed for production
-// console.log removed for production
+if (importInsertionPoint !== -1 && routeInsertionPoint !== -1) {
+  const beforeImports = appContent.substring(0, importInsertionPoint);
+  const afterImports = appContent.substring(importInsertionPoint);
+  const beforeRoutes = appContent.substring(0, routeInsertionPoint);
+  const afterRoutes = appContent.substring(routeInsertionPoint);
+  
+  const newAppContent = beforeImports + '\n' + newImports + '\n' + afterImports;
+  const finalAppContent = beforeRoutes + '\n' + newRoutes + '\n' + afterRoutes;
+  
+  // Write the updated App.tsx
+  fs.writeFileSync('/workspace/App.tsx', finalAppContent);
+  console.log('Successfully added missing routes to App.tsx');
+} else {
+  console.log('Could not find insertion points in App.tsx');
+}

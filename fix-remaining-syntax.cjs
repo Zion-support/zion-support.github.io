@@ -1,81 +1,91 @@
 #!/usr/bin/env node
 
 const fs = require('fs');
-const path = require('path');
+const glob = require('glob');
 
-// Function to fix remaining syntax issues
+// Function to fix remaining syntax errors
 function fixRemainingSyntax(content) {
-  // Remove stray semicolons and quotes
-  content = content.replace(/^';$/gm, '');
-  content = content.replace(/^;$/gm, '');
-  
-  // Fix unterminated string literals
-  content = content.replace(/['"]([^'"]*);$/gm, (match, p1) => {
-    if (match.includes('import') || match.includes('from')) {
-      return match.replace(/;$/, "';");
-    }
-    return match;
-  });
-  
-  // Fix malformed function declarations
-  content = content.replace(/const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{\s*return\s*\(\s*$/gm, 'const $1 = () => {\n  return (\n');
-  
-  // Fix missing closing braces
-  content = content.replace(/\{\s*return\s*\(\s*$/gm, '{\n  return (\n');
-  
-  // Fix duplicate return statements
-  content = content.replace(/return\s*\(\s*\n\s*return\s*\(/g, 'return (');
-  
-  // Clean up extra newlines
-  content = content.replace(/\n\n\n+/g, '\n\n');
-  
-  return content;
+  return content
+    // Fix double semicolons
+    .replace(/;;/g, ';')
+    // Fix semicolons in JSX attributes
+    .replace(/href="([^"]*);"/g, 'href="$1"')
+    .replace(/className="([^"]*);"/g, 'className="$1"')
+    // Fix semicolons in JSX closing tags
+    .replace(/;>/g, '>')
+    .replace(/;<\//g, '</')
+    // Fix semicolons in object properties
+    .replace(/(\w+):\s*([^;]+);/g, '$1: $2,')
+    // Fix semicolons in metadata objects
+    .replace(/export const metadata: Metadata = ;{;/g, 'export const metadata: Metadata = {')
+    .replace(/title: '([^']*);',;/g, "title: '$1',")
+    .replace(/description: '([^']*);',;/g, "description: '$1',")
+    .replace(/keywords: '([^']*);',;/g, "keywords: '$1',")
+    // Fix semicolons in function calls
+    .replace(/\(([^)]*);\)/g, '($1)')
+    // Fix semicolons in array literals
+    .replace(/\[([^\]]*);\]/g, '[$1]')
+    // Fix semicolons in template literals
+    .replace(/`([^`]*);`/g, '`$1`')
+    // Fix stray semicolons
+    .replace(/;\s*$/gm, '')
+    // Fix malformed JSX
+    .replace(/<(\w+)([^>]*);>/g, '<$1$2>')
+    .replace(/<\/(\w+)>/g, '</$1>')
+    // Fix missing closing tags
+    .replace(/<(\w+)([^>]*)>(?!.*<\/\1>)/gs, (match, tag, attrs) => {
+      const lines = match.split('\n');
+      const lastLine = lines[lines.length - 1];
+      if (lastLine.trim() && !lastLine.includes(`</${tag}>`)) {
+        return match + `\n    </${tag}>`;
+      }
+      return match;
+    });
 }
 
-// Function to fix specific file
-function fixFile(filePath) {
+// Main function to process files
+function processFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
     
+    // Apply fixes
     content = fixRemainingSyntax(content);
     
+    // Only write if content changed
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed remaining syntax in: ${filePath}`);
+      console.log(`Fixed: ${filePath}`);
       return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Main function
-function main() {
-  console.log('Fixing remaining syntax issues...');
+// Get all TypeScript and JavaScript files
+const patterns = [
+  'app/**/*.tsx',
+  'app/**/*.ts',
+  'app/**/*.js',
+  'app/**/*.jsx'
+];
+
+let totalFiles = 0;
+let fixedFiles = 0;
+
+patterns.forEach(pattern => {
+  const files = glob.sync(pattern, { cwd: process.cwd() });
+  totalFiles += files.length;
   
-  const filesToFix = [
-    'App_minimal.tsx', 
-    'App_test.tsx',
-    'EnhancedFooter.tsx',
-    'EnhancedHeader.tsx',
-    'SidebarNavigation.tsx'
-  ];
-  
-  let fixedCount = 0;
-  
-  filesToFix.forEach(filePath => {
-    if (fs.existsSync(filePath)) {
-      if (fixFile(filePath)) {
-        fixedCount++;
-      }
+  files.forEach(file => {
+    if (processFile(file)) {
+      fixedFiles++;
     }
   });
-  
-  console.log(`Fixed remaining syntax in ${fixedCount} files`);
-}
+});
 
-main();
+console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files.`);

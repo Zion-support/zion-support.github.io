@@ -1,49 +1,40 @@
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
-    return}
+    res.statusCode = 405;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Method not allowed' }));
+    return;
+  }
 
-  try {;
-
-const { name, email, phone, details, country, service } = req.body || {};
-
-    if (!name || !email || !phone || !details) {
-      return}
-
-    // Process quote submission logic here
-    // In a real application, you would:
-    // 1. Save to your database
-    // 2. Send notification to your sales team
-    // 3. Send confirmation email to the customer
-    // 4. Integrate with your CRM;
-
-const quoteData = {;;
-
-      name,
-      email,
-      phone,
-      details,
-      country: country || 'Not specified',
-      service: service || 'General inquiry',
-      timestamp: new Date().toISOString(),
-      status: pending
+  try {
+    const { name, email, phone, details, country, service } = req.body || {};
+    
+    // Process the quote request
+    const quote = {
+      id: Date.now().toString(),
+      name: name || '',
+      email: email || '',
+      phone: phone || '',
+      details: details || '',
+      country: country || '',
+      service: service || '',
+      timestamp: new Date().toISOString()
     };
 
-    // console.log removed for production
-res.statusCode = 200;
+    // In a real application, you would save this to a database
+    // For now, we'll just log it
+    console.log('Quote submitted:', quote);
 
-    res.setHeader('Content-Type', 'application/json);
-
-    res.end(JSON.stringify({ 
-      success: true, 
+    res.statusCode = 200;
+    res.end(JSON.stringify({
+      success: true,
       message: 'Quote request submitted successfully',
-      quoteId: `quote_${Date.now()}`,
-      data: quoteData
-    }))} catch (error) {
-    // console.error removed for production
-res.statusCode = 500;
+      quoteId: quote.id
+    }));
 
-    res.setHeader('Content-Type', 'application/json);
-
-    res.end(JSON.stringify({ error: 'Internal server error' }))}
-
+  } catch (error) {
+    console.error('Quote submission error:', error);
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Internal server error' }));
+  }
 }

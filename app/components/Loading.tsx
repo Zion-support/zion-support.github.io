@@ -1,50 +1,37 @@
-'use client;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-import React from 'react;
+const Loading: React.FC = () => {
+  return (
+    <div>
+      <Helmet>
+        <title>Loading - Zion Tech Group</title>
+        <meta name="description" content="Advanced Loading solution for modern businesses." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center"></div>
+        <div className="text-center"></div>
+          <div className="relative mb-8"></div>
+            <div className="w-16 h-16 border-4 border-emerald-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+            <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin absolute top-2 left-1/2 transform -translate-x-1/2"></div>
+          </div>
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            Loading...
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Advanced Loading solution for modern businesses.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+              Get Started
+            </button>
+            <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              Learn More
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  )};
 
-import { Helmet } from 'react-helmet-async;
-
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from lucide-react;
-
-;
-
-const LoadingPage: React.FC = () => {const features = [;;;
-
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions,
-      description: Advanced AI technology to transform your business operations and improve efficiency
-    },
-    {
-      icon: Zap,
-      title: 'High Performance,
-      description: Lightning-fast processing and real-time analytics for optimal results
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security,
-      description: Bank-level security with encryption and compliance standards
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach,
-      description: Worldwide deployment and support for international businesses
-    }
-
-  ];
-
-;
-
-const benefits = [;;
-
-    'Advanced AI technology integration,
-    'Real-time processing and analytics,
-    'Enterprise-grade security and compliance,
-    'Scalable and flexible solutions,
-    '24/7 technical support,
-    'Easy integration with existing systems,
-    'Cost-effective pricing plans,
-    Proven track record of success
-  ]}
-
-export default LoadingPage;
+export default Loading;

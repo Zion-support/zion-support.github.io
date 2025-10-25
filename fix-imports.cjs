@@ -1,71 +1,43 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix import issues
-function fixImports(content) {
-  // Fix React.lazy import statements with missing quotes and extra semicolons
-  content = content.replace(/React\.lazy\(\(\)\s*=>\s*import\(['"]([^'"]*)\)\);;/g, (match, p1) => {
-    return `React.lazy(() => import('${p1}'))`;
-  });
-  
-  // Fix other import statements with missing quotes
-  content = content.replace(/import\(['"]([^'"]*)\)\);;/g, (match, p1) => {
-    return `import('${p1}'))`;
-  });
-  
-  // Fix double semicolons
-  content = content.replace(/;;+/g, ';');
-  
-  return content;
-}
-
-// Function to fix specific file
-function fixFile(filePath) {
+// Function to fix import syntax errors
+function fixImportSyntax(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    const originalContent = content;
     
-    content = fixImports(content);
+    // Fix common import syntax errors
+    content = content.replace(/import \{Helmet\}\}from 'react-helmet-async';/g, "import { Helmet } from 'react-helmet-async';");
+    content = content.replace(/import \{([^}]+)\}\}from 'lucide-react';/g, "import { $1 } from 'lucide-react';");
     
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed imports in: ${filePath}`);
-      return true;
-    }
+    // Fix other common syntax errors
+    content = content.replace(/const (\w+): React\.FC = \(\) => \{,/g, 'const $1: React.FC = () => {');
+    content = content.replace(/'use client'/g, "'use client';");
     
-    return false;
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed: ${filePath}`);
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
   }
 }
 
-// Main function
-function main() {
-  console.log('Fixing import issues...');
+// Function to recursively find and fix all .tsx files
+function fixAllTsxFiles(dir) {
+  const files = fs.readdirSync(dir);
   
-  const filesToFix = [
-    'App.tsx',
-    'App_minimal.tsx', 
-    'App_test.tsx',
-    'EnhancedFooter.tsx',
-    'EnhancedHeader.tsx',
-    'SidebarNavigation.tsx'
-  ];
-  
-  let fixedCount = 0;
-  
-  filesToFix.forEach(filePath => {
-    if (fs.existsSync(filePath)) {
-      if (fixFile(filePath)) {
-        fixedCount++;
-      }
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory()) {
+      fixAllTsxFiles(filePath);
+    } else if (file.endsWith('.tsx')) {
+      fixImportSyntax(filePath);
     }
-  });
-  
-  console.log(`Fixed imports in ${fixedCount} files`);
+  }
 }
 
-main();
+// Start fixing from the app directory
+console.log('Fixing import syntax errors in all .tsx files...');
+fixAllTsxFiles('./app');
+console.log('Done!');

@@ -4,6 +4,7 @@ import tseslint from '@typescript-eslint/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
+import react from 'eslint-plugin-react';
 
 export default [
   // Global ignores
@@ -17,12 +18,26 @@ export default [
       'api-disabled/**',
       'api.disabled/**',
       'api-backup/**',
+      'app/components-disabled/**',
+      'app/components.disabled/**',
+      'app/config-disabled/**',
+      'app/contexts-disabled/**',
+      'app/pages-disabled/**',
+      'app/*-disabled/**',
+      'app/*.disabled/**',
+      'app/main-disabled.tsx',
+      'app/root-layout-disabled.tsx',
+      'app/service-template-disabled.tsx',
       'components-disabled/**',
       'components.disabled/**',
       'automation_backup/**',
       'backup*/**',
-      '*-disabled/**',
-      '*.disabled/**',
+      '**/*-disabled/**',
+      '**/*.disabled/**',
+      '**/components-disabled/**',
+      '**/pages-disabled/**',
+      '**/contexts-disabled/**',
+      '**/config-disabled/**',
       '*.broken',
       '*.backup',
       'temp-files/**',
@@ -41,6 +56,7 @@ export default [
       'backup-pages/**',
       'backup-problematic/**',
       'backup-problematic-files/**',
+      'corrupted-src-backup/**',
       'clean-build/**',
       'ci-cd-reports/**',
       'apps.backup/**',
@@ -48,7 +64,16 @@ export default [
       'out/**',
       '*.min.js',
       '*.min.css',
-      'chunk-*.js'
+      'chunk-*.js',
+      'comprehensive-*.js',
+      'comprehensive_*.js',
+      'automation-runner.js',
+      'check_*.js',
+      'cleanup-*.js',
+      'close-*.js',
+      'code-quality-*.js',
+      'commit-and-*.js',
+      'contracts/**'
     ]
   },
   // Base JavaScript configuration
@@ -91,11 +116,15 @@ export default [
     },
     rules: {
       ...tseslint.configs.recommended.rules,
-...reactHooks.configs.recommended.rules,
-
+      ...reactHooks.configs.recommended.rules,
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
       'react-refresh/only-export-components': [
         'warn',
-        { allowConstantExport: true }
+        { 
+          allowConstantExport: true,
+          allowExportNames: ['metadata', 'generateMetadata', 'generateStaticParams', 'useAnalytics', 'AnalyticsContext', 'createMock', 'mockFunction']
+        }
       ],
       '@typescript-eslint/no-unused-vars': 'off',
       '@typescript-eslint/no-explicit-any': 'off',

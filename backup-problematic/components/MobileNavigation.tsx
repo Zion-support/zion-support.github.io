@@ -1,34 +1,25 @@
-import React from react;
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-interface MobileNavigationProps {/* TODO: Fix JSX expression */}
-
-}
-
-;
-
-const MobileNavigation = React.memo(function MobileNavigation({);;;
-
-  className = ')
-}: MobileNavigationProps) {
-  return(<div className={`bg-blue-100 p-4 rounded-lg ${className}}>)
-      <h3 className="text-lg font-semibold text-blue-800>MobileNavigation</h3>)
-      <p className="text-blue-600>This component is under development.</p>)
-    </div>)
+const MobileNavigationPage: React.FC = () => {
   return (
+    <React.Fragment>
+      <Helmet>
+        <title>MobileNavigation - Zion Tech Group</title>
+        <meta name="description" content="Professional MobileNavigation services by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-900 text-white">
+        <div className="container mx-auto px-4 py-8">
+          <h1 className="text-4xl font-bold mb-6">MobileNavigation</h1>
+          <p className="text-lg text-gray-300">
+            This page is currently under development. Please check back soon for more information.
+          </p>
+        </div>
+      </div>
+    </React.Fragment>
+  );
+};
 
-    <div className={`bg-blue-100 p-4 rounded-lg ${className}}></div>
-      <h3 className="text-lg font-semibold text-blue-800>MobileNavigation</h3>;
-
-const MobileNavigation = React.memo(function MobileNavigation({/* TODO: Fix JSX expression */});;
-
-}: MobileNavigationProps) {/* TODO: Fix JSX expression */}
-
-    <div className={`bg-blue-100 p-4 rounded-lg ${className}}></div>
-      <h3 className="text-lg font-semibold text-blue-800">MobileNavigation</h3>
-      <p className="text-blue-600>This component is under development.</p>
-    </div>
-  )});
-
-export default MobileNavigation;
-
-"`
+export default MobileNavigationPage;

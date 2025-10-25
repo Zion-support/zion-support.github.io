@@ -1,41 +1,45 @@
 #!/bin/bash
 
-# Script to resolve merge conflicts by choosing the Next.js version (pr-26771)
+# Script to resolve merge conflicts by accepting incoming changes
+# This will merge the branch and resolve conflicts automatically
 
-echo "Resolving merge conflicts..."
+echo "Starting merge conflict resolution..."
 
-# List of files with conflicts
-files=(
-  "app/App.tsx"
-  "app/components/PWAInstaller.tsx"
-  "app/components/AccessibilityEnhancer.tsx"
-  "app/components/GlobalErrorBoundary.tsx"
-  "app/components/Footer.tsx"
-  "app/components/PerformanceMonitor.tsx"
-  "app/components/AnalyticsProvider.tsx"
-  "app/components/OptimizedImage.tsx"
-  "app/components/Navigation.tsx"
-  "app/components/EnhancedErrorBoundary.tsx"
-  "app/autonomous-systems/page.tsx"
-  "app/business-intelligence/page.tsx"
-  "app/quantum-computing/page.tsx"
-  "app/ai-content-generation/page.tsx"
-  "app/sitemap/page.tsx"
-  "app/utils/accessibilityChecker.ts"
-  "app/utils/logger.ts"
-  "app/globals.css"
-)
+# Merge the branch
+git merge origin/cursor/fix-errors-and-merge-to-main-8aeb --no-commit
 
-for file in "${files[@]}"; do
-  if [ -f "$file" ]; then
-    echo "Processing $file..."
+# Check if there are conflicts
+if [ $? -ne 0 ]; then
+    echo "Merge conflicts detected. Resolving automatically..."
     
-    # Use git checkout to get the version from pr-26771 (the Next.js version)
-    git checkout --theirs "$file" 2>/dev/null || echo "Could not resolve $file automatically"
+    # Get list of conflicted files
+    conflicted_files=$(git diff --name-only --diff-filter=U)
     
-    # Add the resolved file
-    git add "$file"
-  fi
-done
+    echo "Conflicted files:"
+    echo "$conflicted_files"
+    
+    # For each conflicted file, accept the incoming version (theirs)
+    for file in $conflicted_files; do
+        echo "Resolving conflicts in $file..."
+        git checkout --theirs "$file"
+        git add "$file"
+    done
+    
+    # Handle deleted files - remove them if they were deleted in the incoming branch
+    deleted_files=$(git diff --name-only --diff-filter=D)
+    for file in $deleted_files; do
+        echo "Removing deleted file: $file"
+        git rm "$file"
+    done
+    
+    echo "All conflicts resolved. Committing merge..."
+    git commit -m "Merge branch 'cursor/fix-errors-and-merge-to-main-8aeb' with automatic conflict resolution
 
-echo "Conflict resolution complete!"
+- Resolved merge conflicts by accepting incoming changes
+- Applied fixes from the branch to main
+- Removed deleted files as per branch changes"
+    
+    echo "Merge completed successfully!"
+else
+    echo "No conflicts detected. Merge completed successfully!"
+fi

@@ -1,30 +1,25 @@
-import React from 'react;
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-interface EnhancedFooterProps {/* TODO: Fix JSX expression */}
-
-}
-
-;
-
-const EnhancedFooter = React.memo(function EnhancedFooter({ className =  }: EnhancedFooterProps) {;;
-
-  return(<div className={`bg-blue-100 p-4 rounded-lg ${className}}>)
-      <h3 className="text-lg font-semibold text-blue-800>EnhancedFooter</h3>)
-      <p className="text-blue-600>This component is under development.</p>)
-    </div>)
+const EnhancedFooterPage: React.FC = () => {
   return (
+    <React.Fragment>
+      <Helmet>
+        <title>EnhancedFooter - Zion Tech Group</title>
+        <meta name="description" content="Professional EnhancedFooter services by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-900 text-white">
+        <div className="container mx-auto px-4 py-8">
+          <h1 className="text-4xl font-bold mb-6">EnhancedFooter</h1>
+          <p className="text-lg text-gray-300">
+            This page is currently under development. Please check back soon for more information.
+          </p>
+        </div>
+      </div>
+    </React.Fragment>
+  );
+};
 
-    <div className={`bg-blue-100 p-4 rounded-lg ${className}}></div>
-      <h3 className="text-lg font-semibold text-blue-800>EnhancedFooter</h3>;
-
-const EnhancedFooter = React.memo(function EnhancedFooter({ className =  }: EnhancedFooterProps) {/* TODO: Fix JSX expression */};;
-
-    <div className={`bg-blue-100 p-4 rounded-lg ${className}}></div>
-      <h3 className="text-lg font-semibold text-blue-800">EnhancedFooter</h3>
-      <p className="text-blue-600>This component is under development.</p>
-    </div>
-  )});
-
-export default EnhancedFooter;
-
-"`
+export default EnhancedFooterPage;

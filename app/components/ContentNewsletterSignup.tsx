@@ -1,191 +1,81 @@
-    text: string;)
-}>;
+import { ArrowRight, CheckCircle, Star, ImageIcon, Upload, Zap, Download, Clock, X, Circle } from 'lucide-react';
+import React, { useState } from &apos;react&apos;;
+import { ArrowRight } from &apos;lucide-react&apos;;
+import { CheckCircle } from &apos;lucide-react&apos;;
 
-  onSubscribe?: (email: string) => void;);
 
-const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({)
-  title = "Stay Updated with Our Latest Insights),
-const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps></ContentNewsletterSignupProps> = ({
-  title = "Stay Updated with Our Latest Insights,
-  subtitle = "Get exclusive content, industry insights, and early access to new features delivered to your inbox.",  placeholder = "Enter your email address,
-  buttonText = "Subscribe Now,
-  features = [
-    {
-      icon: CheckCircle,
-      text: "Weekly industry insights]
-    },
-    {
-      icon: Star,
-      text: "Exclusive content and tips]
-    },
-    {
-      icon: Users,
-      text: "Join 10,000+ subscribers]
-    },
-    {
-      icon: Globe,
-      text: "Global community access;);
+interface ContentNewsletterSignupProps {
+  title?: string;
+  subtitle?: string;
+  placeholder?: string;
+  buttonText?: string;
+  onSubscribe?: (email: string) => Promise<void>}
 
-  ],
+const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
+  title = &quot;Stay Updated with Our Latest Insights&quot;,
+  subtitle = &quot;Get exclusive content, industry insights, and early access to new features delivered to your inbox.&quot;,
+  placeholder = &quot;Enter your email address&quot;,
+  buttonText = &quot;Subscribe&quot;,
+const onSubscribe = null}) => {
+  const [email, setEmail] = useState(&apos;&apos;);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubscribed, setIsSubscribed] = useState(false);
 
-}) => {
-}); => {;
-
-const [email, setEmail] = useState(');
-
-const [isSubscribed, setIsSubscribed] = useState(false);
-
-const [isLoading, setIsLoading] = useState(false);
-
-const handleSubmit = async (e: React.FormEvent) => {;
-  const [email, setEmail] = useState(');  const [isSubscribed, setIsSubscribed] = useState(false);
-
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {    e.preventDefault();;
-
-    if (!email) return;
-
-    setIsLoading(true);
-
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email || !onSubscribe) return;
+    
+    setIsSubmitting(true);
     try {
-      if (onSubscribe) {
-        await onSubscribe(email)]
-    } else {
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1000)););
-
-        await onSubscribe(email);
-
-      } else {
-        /
-        await new Promise(resolve => setTimeout(resolve, 1000));
-
-      }
-
-            setIsSubscribed(true);
-
-      setEmail(');)
-} catch (error) {
-      // console.error removed for production
-)
-} finally {
-      setIsLoading(false););
-
-        await new Promise(resolve => setTimeout(resolve, 1000))]
-    }
-
-      setIsSubscribed(true);
-
-      setEmail(')]
-    } catch (error) {
-      console.error('Subscription failed:, error)]
-    } finally {
-      setIsLoading(false)]
-    }
-
+      await onSubscribe(email);
+      setIsSubscribed(true)} catch (error) {
+      console.error(&apos;Subscription failed:&apos;, error)} finally {
+      setIsSubmitting(false)}
   };
 
   if (isSubscribed) {
-    return (<div className="bg-gradient-to-r from-green-500 to-blue-600 py-16 px-4>
-        <div className="max-w-4xl mx-auto text-center>
-          <div className=w-16 h-16 bg-white
-            
-            Welcome to Our Community!
-          <
-          <p className="text-xl text-blue-100 mb-8>
-            Thank you for subscribing. Youll receive our latest insights and updates soon.
-          <
-          <button)
-            onClick = { () => setIsSubscribed(false) };
+    return (
+      <div className=&quot;bg-emerald-900/20 border border-emerald-500/30 rounded-lg p-8 text-center&quot;></div>
+        <CheckCircle className=&quot;w-16 h-16 text-emerald-400 mx-auto mb-4&quot; />
+        <h3 className=&quot;text-2xl font-bold text-white mb-2&quot;>Thank you for subscribing!</h3>
+        <p className=&quot;text-emerald-300&quot;>You&apos;ll receive our latest updates soon.</p>
+      </div>
+    )}
 
-            className="text-white underline hover:text-blue-200 transition-colors
+  return (
+    <div className=&quot;bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-8&quot;></div>
+      <div className=&quot;text-center mb-6&quot;></div>
+        <h3 className=&quot;text-2xl font-bold text-white mb-2&quot;>{title}</h3>
+        <p className=&quot;text-gray-300&quot;>{subtitle}</p>
+      </div>
+      
+      <form onSubmit={handleSubmit} className=&quot;space-y-4&quot;>
+        <div className=&quot;flex flex-col sm:flex-row gap-3&quot;></div>
+          <input
+            type=&quot;email&quot;
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder={placeholder}
+            className=&quot;flex-1 px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent&quot;
+const required = null;
+          />
+          <button
+            type=&quot;submit&quot;
+            disabled={isSubmitting}
+            className=&quot;bg-emerald-600 hover:bg-emerald-700 disabled:opacity-50 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;
           >
-            Subscribe another email
-          <
-        <
-      <
-    );
-
-  }
-
-  return (<div className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 py-16 px-4>
-      <div className="max-w-6xl mx-auto>
-        <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center>
-          {/* Content *
-          <div>
-            <h2 className=text-4xl m,
-    d:text-5xl font-bold text-white mb-6>
-              {title}
-
-            <
-            <p className="text-xl text-blue-100 mb-8>
-              {subtitle}            <
-            
-            <div className="space-y-4>)
-              {features.map((feature, index) => (<div key={index} className="flex items-center space-x-3>
-                  <div className=w-6 h-6 bg-white
-                    <feature.icon className="w-4 h-4 text-white 
-                  <
-                  <span className="text-blue-100>{feature.text}<
-                <)
-              ))}
-
-            <
-          <
-
-          {/* Newsletter Form *
-          <div className=bg-white/10 backdrop-blur-sm border border-white
-            <form onSubmit={handleSubmit} className="space-y-6>
+            {isSubmitting ? (
+              <div className=&quot;w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin&quot; /></div>
+            ) : (
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-white mb-2>
-                  Email Address                <
-                <input
-                  type="email
-                  id="email
-                  value = { email };
+                {buttonText}
+                <ArrowRight className=&quot;w-4 h-4 ml-2&quot; />
+              </div>
+            )}
+          </button>
+        </div>
+      </form>
+    </div>
+  )};
 
-                  onChange = { (e) => setEmail(e.target.value) };
-
-                  placeholder = { placeholder };
-
-                  className=w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-blue-200 focus: outline-none focus:ring-2 focu,
-    s:ring-white
-                
-              <
-              
-              <button
-                type="submit
-                disabled = { isLoading || !email };
-
-                className=w-full bg-white text-purple-600 font-bold py-3 px-6 rounded-lg hover: bg-blue-50 disabled:opacity-50 disable,
-    d:cursor-not-allowed transition-all duration-300 flex items-center justify-center
-              >
-                {isLoading ? (<>
-                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-purple-600 mr-2><
-                    <div>
-                    Subscribing...
-                  </React.Fragment>
-                ) : (
-
-                  <React.Fragment>
-                    Subscribing...
-                  <)
-                ) : (<>
-                    {buttonText}
-
-                                    We respect your privacy. Unsubscribe at any time.
-              <
-            <
-          <
-        <
-      <
-    <
-  );
-
-)]
-    };
-
-};
-
-export default ContentNewsletterSignup;}
+export default ContentNewsletterSignup;

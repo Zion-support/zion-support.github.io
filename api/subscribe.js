@@ -1,100 +1,52 @@
-const fs = require(fs);;
+const { isValidEmail } = require('./emailUtils.cjs');
+const fs = require('fs');
+const path = require('path');
 
-const path = require(path);;
-
-;
-
-const dir = path.join(process.cwd(), data);;
-
-const file = path.join(dir, subscribers.json);;
-
-export default function handler(req, res) {
-  if (req.method !== 'POST) {
+async function handler(req, res) {
+  if (req.method !== 'POST') {
     res.statusCode = 405;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Method not allowed' }));
+    return;
+  }
 
-    res.setHeader('Content-Type', application/json);
-
-    res.end(JSON.stringify({ error: Method not allowed }));
-
-    return}
-
-;
-
-const { email, name, preferences } = req.body || {};
-
+  const { email, name, interests } = req.body;
   if (!email) {
     res.statusCode = 400;
-
-    res.setHeader('Content-Type', application/json);
-
-    res.end(JSON.stringify({ error: Email is required }));
-
-    return}
-
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true })}
-
-;
-
-let existing = [];;
+    res.end(JSON.stringify({ error: 'Email is required' }));
 
   try {
-    if (fs.existsSync(file)) {;
+    if (!isValidEmail(email)) {
+      res.statusCode = 400;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ error: 'Invalid email format' }));
 
-const data = fs.readFileSync(file, utf8);;
+    const subscriber = {
+      id: Date.now().toString(),
+      email,
+      name,
+      source,
+      subscribedAt: new Date().toISOString(),
+      status: 'active'
+    };
 
-      existing = JSON.parse(data);
-
-      if (!Array.isArray(existing)) existing = []}
-
-  } catch (error) {
-    // console.error removed for production
-existing = []}
-
-  // Check if email already exists;
-
-const existingSubscriber = existing.find(sub => sub.email === email);;
-
-  if (existingSubscriber) {
-    res.statusCode = 400;
-
-    res.setHeader('Content-Type', application/json);
-
-    res.end(JSON.stringify({ error: Email already subscribed }));
-
-    return}
-
-;
-
-const newSubscriber = {;;
-
-    id: Date.now().toString(),
-    email,
-    name: name || ',
-    preferences: preferences || {},
-    timestamp: new Date().toISOString(),
-    status: active
-  };
-
-  existing.push(newSubscriber);
-
-  try {
-    fs.writeFileSync(file, JSON.stringify(existing, null, 2));
+    // In a real application, you would save this to a database
+    // For now, we'll just log it
+    console.log('New subscriber:', subscriber);
 
     res.statusCode = 200;
-
-    res.setHeader('Content-Type', application/json);
-
+    res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       success: true, 
-      message: 'Successfully subscribed to newsletter,
-      id: newSubscriber.id
-    }))} catch (error) {
-    // console.error removed for production
-res.statusCode = 500;
+      message: 'Successfully subscribed to newsletter' 
+    }));
 
-    res.setHeader('Content-Type', application/json);
-
-    res.end(JSON.stringify({ error: 'Failed to save subscription }))}
-
+  } catch (error) {
+    console.error('Subscription error:', error);
+    res.statusCode = 500;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Failed to process subscription' }));
+  }
 }
+
+module.exports = withSentry(handler);

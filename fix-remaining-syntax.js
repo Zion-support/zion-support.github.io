@@ -1,116 +1,107 @@
-#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
 
-import fs from fs;
+// Function to fix remaining syntax issues
+function fixRemainingSyntax(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    const modified = false;
 
-import { glob } from glob;
+    // Fix stray ); after import statements
+    content = content.replace(/import[^;]*;\s*\);/g, (match) => {
+      return match.replace(/\);/g, '');
+    });
 
-// Function to fix remaining syntax errors
-function fixRemainingSyntax(content) {
-  let fixed = content;;
+    // Fix stray ); after useState
+    content = content.replace(/useState\([^)]*\)\s*\);/g, (match) => {
+      return match.replace(/\);/g, '');
+    });
 
-  // Fix common syntax errors
-  fixed = fixed
-    // Fix ;) -> }
+    // Fix stray ); after array declarations
+    content = content.replace(/\]\s*\);/g, '];');
 
-    .replace(/;\)/g, '})
-    // Fix ,) -> }
+    // Fix stray ); after export default
+    content = content.replace(/export default \w+\s*\);/g, (match) => {
+      return match.replace(/\);/g, '');
+    });
 
-    .replace(/,\)/g, '})
-    // Fix ,; -> ;
-
-    .replace(/,;/g, ';)
-    // Fix missing commas in object literals
-    .replace(/(\w+:\s*[^,;}\n]+)\n\s*(\w+:\s*)/g, '$1,\n  $2)
-    // Fix missing semicolons
-    .replace(/([^;}])\n\s*}/g, '$1;\n})
-    // Fix missing closing parentheses
-    .replace(/([^)])\n\s*}/g, '$1)\n})
-    // Fix JSX fragment issues
-    .replace(/<>\s*<div/g, '<>\n      <div)
-    .replace(/<\/div>\s*<\/>/g, '</div>\n    </>)
-    // Fix missing closing tags
-    .replace(/<(\w+)([^>]*)>(?!.*<\/\1>)/g, (match, tag, attrs) => {
-      // Only add closing tag if its not a self-closing tag
-      if (!match.includes('/>') && !['img', 'br', 'hr', 'input', 'meta', 'link].includes(tag)) {
-        return match + `</${tag}>;
-
+    // Fix missing semicolons after import statements
+    content = content.replace(/import[^;]*\n/g, (match) => {
+      if (!match.trim().endsWith(';')) {
+        return match.trim() + ';\n';
       }
-
       return match;
-
     });
 
-  return fixed;
-
-}
-
-// Main function to process files
-async function processFiles() {
-  console.log(Starting remaining syntax fixes...);
-
-  const patterns = [;;
-
-    'app/**/*.tsx,
-    app/**/*.ts
-  ];
-
-  let processedCount = 0;;
-
-  let errorCount = 0;;
-
-  for (const pattern of patterns) {
-    const files = await glob(pattern, {;;
-
-      ignore: [
-        'node_modules/**,
-        'dist/**,
-        '*.disabled/**,
-        '*-disabled/**,
-        'backup*/**,
-        '**/*.backup,
-        **/*.broken
-      ]
-    });
-
-    for (const file of files) {
-      try {
-        const content = fs.readFileSync(file, utf8);;
-
-        // Check if file has syntax issues
-        if (content.includes(';)) || 
-            content.includes(',)) ||
-            content.includes(',;) ||
-            content.includes('Property assignment expected) ||
-            content.includes('Declaration or statement expected)) {
-          
-          console.log(`Processing syntax errors in: ${file});
-
-          let fixed = fixRemainingSyntax(content);;
-
-          fs.writeFileSync(file, fixed);
-
-          processedCount++;
-
-        }
-
-      } catch (error) {
-        console.error(`Error processing ${file}:, error.message);
-
-        errorCount++;
-
+    // Fix missing semicolons after useState
+    content = content.replace(/useState\([^)]*\)\n/g, (match) => {
+      if (!match.trim().endsWith(';')) {
+        return match.trim() + ';\n';
       }
+      return match;
+    });
 
+    // Fix missing semicolons after array declarations
+    content = content.replace(/\]\n/g, (match) => {
+      if (!match.trim().endsWith(';')) {
+        return match.trim() + ';\n';
+      }
+      return match;
+    });
+
+    // Fix missing semicolons after export default
+    content = content.replace(/export default \w+\n/g, (match) => {
+      if (!match.trim().endsWith(';')) {
+        return match.trim() + ';\n';
+      }
+      return match;
+    });
+
+    if (content !== fs.readFileSync(filePath, 'utf8')) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed remaining syntax: ${filePath}`);
+      return true;
     }
-
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
-
-  console.log(`\nRemaining syntax fixes complete!);
-
-  console.log(`Files processed: ${processedCount});
-
-  console.log(`Errors encountered: ${errorCount});
-
+  return false;
 }
 
-// Run the script
-processFiles().catch(console.error);
+// Function to recursively find all .tsx and .ts files
+function findFiles(dir, extensions = ['.tsx', '.ts']) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        traverse(fullPath);
+      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+        files.push(fullPath);
+      }
+    }
+  }
+  
+  traverse(dir);
+  return files;
+}
+
+// Main execution
+console.log('Fixing remaining syntax issues...');
+
+const appDir = path.join('/workspace', 'app');
+const files = findFiles(appDir);
+
+let fixedCount = 0;
+for (const file of files) {
+  if (fixRemainingSyntax(file)) {
+    fixedCount++;
+  }
+}
+
+console.log(`Fixed ${fixedCount} files with remaining syntax issues.`);

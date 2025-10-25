@@ -1,91 +1,108 @@
 #!/bin/bash
 
-echo "🚀 Starting comprehensive branch merge process..."
+# Script to merge all cursor/fix-errors-and-merge-to-main branches into main
+# This script will attempt to merge all available branches and resolve conflicts automatically
 
-# Set git configuration
-git config pull.rebase false
+set -e
 
-# Fetch all branches
-echo "📥 Fetching all branches..."
-git fetch --all
+echo "Starting comprehensive branch merge process..."
 
-# Get current branch
-current_branch=$(git branch --show-current)
-echo "📍 Current branch: $current_branch"
+# Ensure we're on main branch
+git checkout main
+git pull origin main
 
-# Ensure we're on main
-if [ "$current_branch" != "main" ]; then
-    echo "🔄 Switching to main branch..."
-    git checkout main
-fi
+# Get all cursor/fix-errors-and-merge-to-main branches
+branches=$(git branch -r | grep "cursor/fix-errors-and-merge-to-main" | sed 's/origin\///')
 
-# List of branches to merge (prioritized)
-branches=(
-    "origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d9b6"
-    "origin/cursor/enhance-app-with-new-services-and-futuristic-design-6ffe"
-    "origin/merge-error-fixes"
-    "origin/cursor/delete-old-data-records-c826"
-)
+# Counter for successful merges
+successful_merges=0
+failed_merges=0
 
-# Add all fix-error branches
-for branch in $(git branch -r | grep "cursor/fix-errors-and-merge-to-main-" | head -10); do
-    branches+=("$branch")
-done
+echo "Found $(echo "$branches" | wc -l) branches to process"
 
-echo "📋 Found ${#branches[@]} branches to merge:"
-for branch in "${branches[@]}"; do
-    echo "  - $branch"
-done
-
-# Merge each branch
-for branch in "${branches[@]}"; do
-    echo ""
-    echo "🔄 Attempting to merge: $branch"
+for branch in $branches; do
+    echo "Processing branch: $branch"
     
-    # Check if branch exists
-    if git show-ref --verify --quiet refs/remotes/$branch; then
-        echo "✅ Branch exists, attempting merge..."
-        
-        # Try to merge
-        if git merge "$branch" --no-ff -m "Merge: $branch"; then
-            echo "✅ Successfully merged: $branch"
-        else
-            echo "⚠️  Merge conflict in: $branch"
-            echo "🔧 Attempting to resolve conflicts..."
-            
-            # Check for conflict markers
-            if git grep -l "<<<<<<< HEAD" -- .; then
-                echo "🔍 Found conflict markers, attempting resolution..."
-                
-                # Try to resolve common conflicts automatically
-                git add . || true
-                git commit -m "Resolve merge conflicts for $branch" || true
-                
-                if [ $? -eq 0 ]; then
-                    echo "✅ Conflicts resolved for: $branch"
-                else
-                    echo "❌ Could not resolve conflicts for: $branch"
-                    echo "🔄 Aborting merge and continuing..."
-                    git merge --abort || true
-                fi
-            else
-                echo "✅ No conflict markers found, continuing..."
-            fi
-        fi
+    # Check if branch exists locally
+    if git show-ref --verify --quiet refs/heads/$branch; then
+        echo "Branch $branch already exists locally"
     else
-        echo "❌ Branch does not exist: $branch"
+        echo "Fetching branch $branch"
+        git fetch origin $branch:$branch || {
+            echo "Failed to fetch branch $branch, skipping..."
+            ((failed_merges++))
+            continue
+        }
     fi
+    
+    # Try to merge the branch
+    echo "Attempting to merge $branch into main..."
+    
+    if git merge $branch --no-edit; then
+        echo "Successfully merged $branch"
+        ((successful_merges++))
+        
+        # Push the changes
+        echo "Pushing changes to origin/main..."
+        git push origin main || {
+            echo "Failed to push changes for $branch"
+            ((failed_merges++))
+        }
+    else
+        echo "Merge conflict in $branch, attempting to resolve..."
+        
+        # Check if there are actual conflicts or if it's already up to date
+        if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
+            echo "Real conflicts detected in $branch, attempting auto-resolution..."
+            
+            # Try to resolve conflicts automatically
+            # This is a basic conflict resolution strategy
+            git status --porcelain | grep "^UU\|^AA\|^DD" | while read status file; do
+                echo "Resolving conflict in $file"
+                
+                # For most conflicts, we'll take the main branch version
+                # This is a simple strategy - in practice, you might want more sophisticated resolution
+                if [[ "$status" == "UU" || "$status" == "AA" ]]; then
+                    git checkout --ours "$file" || true
+                    git add "$file" || true
+                elif [[ "$status" == "DD" ]]; then
+                    git rm "$file" || true
+                fi
+            done
+            
+            # Try to complete the merge
+            if git commit --no-edit; then
+                echo "Successfully resolved conflicts and merged $branch"
+                ((successful_merges++))
+                
+                # Push the changes
+                echo "Pushing resolved changes to origin/main..."
+                git push origin main || {
+                    echo "Failed to push resolved changes for $branch"
+                    ((failed_merges++))
+                }
+            else
+                echo "Failed to resolve conflicts for $branch, aborting merge"
+                git merge --abort || true
+                ((failed_merges++))
+            fi
+        else
+            echo "No real conflicts in $branch, likely already up to date"
+            git merge --abort || true
+        fi
+    fi
+    
+    echo "Completed processing $branch"
+    echo "---"
 done
 
-echo ""
-echo "📤 Pushing all changes to main..."
-if git push origin main; then
-    echo "✅ Successfully pushed to main"
-else
-    echo "❌ Failed to push to main"
-fi
+echo "Merge process completed!"
+echo "Successful merges: $successful_merges"
+echo "Failed merges: $failed_merges"
 
-echo ""
-echo "🎉 Branch merge process completed!"
-echo "📊 Final status:"
-git status --short
+# Final status check
+echo "Final git status:"
+git status
+
+echo "Final build test:"
+npm run build || echo "Build failed - manual intervention required"

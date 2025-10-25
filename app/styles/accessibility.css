@@ -1,13 +1,97 @@
 /* Accessibility Styles */
 
-/* Skip links */
-.skip-links {
-  position: absolute;
-  top: -40px;
-  left: 6px;
-  z-index: 1000;
+/* High Contrast Mode */
+.high-contrast {
+  --bg-primary: #000000;
+  --bg-secondary: #ffffff;
+  --text-primary: #ffffff;
+  --text-secondary: #000000;
+  --border-color: #ffffff;
+  --focus-color: #ffff00;
 }
 
+.high-contrast * {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+.high-contrast button,
+.high-contrast input,
+.high-contrast select,
+.high-contrast textarea {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-secondary) !important;
+  border: 2px solid var(--border-color) !important;
+}
+
+/* Reduced Motion */
+.reduced-motion * {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* Font Size Adjustments */
+.font-small {
+  font-size: 0.875rem;
+}
+
+.font-medium {
+  font-size: 1rem;
+}
+
+.font-large {
+  font-size: 1.125rem;
+}
+
+.font-small h1 { font-size: 1.5rem; }
+.font-small h2 { font-size: 1.25rem; }
+.font-small h3 { font-size: 1.125rem; }
+
+.font-large h1 { font-size: 3rem; }
+.font-large h2 { font-size: 2.5rem; }
+.font-large h3 { font-size: 2rem; }
+
+/* Focus Management */
+.focus-visible *:focus {
+  outline: 3px solid var(--focus-color, #3b82f6) !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3) !important;
+}
+
+.keyboard-navigation *:focus {
+  outline: 2px solid #3b82f6 !important;
+  outline-offset: 2px !important;
+}
+
+/* Screen Reader Mode */
+.screen-reader-mode .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.screen-reader-mode .visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Skip Links */
 .skip-link {
   position: absolute;
   top: -40px;
@@ -18,14 +102,44 @@
   text-decoration: none;
   z-index: 1000;
   border-radius: 4px;
-  font-weight: bold;
 }
 
 .skip-link:focus {
   top: 6px;
 }
 
-/* Screen reader only content */
+/* Focus Indicators for Interactive Elements */
+button:focus,
+input:focus,
+select:focus,
+textarea:focus,
+a:focus,
+[tabindex]:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* High contrast focus indicators */
+.high-contrast button:focus,
+.high-contrast input:focus,
+.high-contrast select:focus,
+.high-contrast textarea:focus,
+.high-contrast a:focus,
+.high-contrast [tabindex]:focus {
+  outline: 3px solid #ffff00;
+  outline-offset: 2px;
+}
+
+/* ARIA Live Regions */
+[aria-live] {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* Screen Reader Only Text */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -38,241 +152,75 @@
   border: 0;
 }
 
-/* High contrast mode */
-.high-contrast {
-  --bg-color: #000;
-  --text-color: #fff;
-  --border-color: #fff;
-  --accent-color: #ffff00;
-}
-
-.high-contrast * {
-  background-color: var(--bg-color) !important;
-  color: var(--text-color) !important;
-  border-color: var(--border-color) !important;
-}
-
-.high-contrast .cyber-button {
-  background: var(--accent-color) !important;
-  color: #000 !important;
-  border: 2px solid #000 !important;
-}
-
-/* Reduced motion */
-.reduced-motion * {
-  animation-duration: 0.01ms !important;
-  animation-iteration-count: 1 !important;
-  transition-duration: 0.01ms !important;
-}
-
-.reduced-motion .animate-pulse,
-.reduced-motion .animate-bounce,
-.reduced-motion .animate-spin {
-  animation: none !important;
-}
-
-/* Focus indicators */
-*:focus {
-  outline: 2px solid #4f46e5;
-  outline-offset: 2px;
-}
-
-.cyber-button:focus,
-button:focus {
-  outline: 3px solid #ffff00;
-  outline-offset: 2px;
-}
-
-/* Voice navigation button */
-.voice-navigation-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #4f46e5;
-  color: white;
-  border: none;
-  padding: 12px 16px;
-  border-radius: 50px;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 600;
-  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
-  transition: all 0.3s ease;
+/* Skip to Content */
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #000;
+  color: #fff;
+  padding: 8px 16px;
+  text-decoration: none;
   z-index: 1000;
+  border-radius: 4px;
+  font-weight: bold;
 }
 
-.voice-navigation-button:hover {
-  background: #3730a3;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(79, 70, 229, 0.4);
+.skip-to-content:focus {
+  top: 6px;
 }
 
-.voice-navigation-button:focus {
-  outline: 3px solid #ffff00;
-  outline-offset: 2px;
-}
-
-/* Font scaling */
-.font-scale-large {
-  font-size: 1.2em;
-}
-
-.font-scale-extra-large {
-  font-size: 1.4em;
-}
-
-/* Color contrast indicators */
-[data-contrast-checked="true"] {
+/* Focus Trap */
+.focus-trap {
   position: relative;
 }
 
-[data-contrast-checked="true"]:after {
-  content: "⚠️";
+.focus-trap::before,
+.focus-trap::after {
+  content: '';
   position: absolute;
-  top: -5px;
-  right: -5px;
-  font-size: 12px;
-  opacity: 0.7;
-}
-
-/* Live region for screen readers */
-#live-region {
-  position: absolute;
-  left: -10000px;
   width: 1px;
   height: 1px;
-  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
 }
 
-/* Enhanced focus for interactive elements */
-a:focus,
-button:focus,
-input:focus,
-select:focus,
-textarea:focus,
-[tabindex]:focus {
-  outline: 3px solid #4f46e5;
-  outline-offset: 2px;
-  border-radius: 4px;
+/* Reduced Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
-/* High contrast focus for better visibility */
-.high-contrast a:focus,
-.high-contrast button:focus,
-.high-contrast input:focus,
-.high-contrast select:focus,
-.high-contrast textarea:focus,
-.high-contrast [tabindex]:focus {
-  outline: 3px solid #ffff00;
-  outline-offset: 2px;
+/* High Contrast Preferences */
+@media (prefers-contrast: high) {
+  :root {
+    --bg-primary: #000000;
+    --bg-secondary: #ffffff;
+    --text-primary: #ffffff;
+    --text-secondary: #000000;
+    --border-color: #ffffff;
+  }
 }
 
-/* Ensure sufficient color contrast */
-.cyber-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #ffffff;
-}
-
-.cyber-card h1,
-.cyber-card h2,
-.cyber-card h3,
-.cyber-card h4,
-.cyber-card h5,
-.cyber-card h6 {
-  color: #ffffff;
-}
-
-.cyber-card p,
-.cyber-card span,
-.cyber-card div {
-  color: #e5e7eb;
-}
-
-/* Ensure text is readable on all backgrounds */
-.text-white {
-  color: #ffffff !important;
-}
-
-.text-gray-300 {
-  color: #d1d5db !important;
-}
-
-.text-gray-400 {
-  color: #9ca3af !important;
-}
-
-/* Button contrast improvements */
-.cyber-button {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: #ffffff;
-  border: 2px solid transparent;
-  font-weight: 600;
-}
-
-.cyber-button:hover {
-  background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
-  color: #ffffff;
-}
-
-.cyber-button:focus {
-  outline: 3px solid #ffff00;
-  outline-offset: 2px;
-}
-
-/* Form accessibility */
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="url"],
-textarea,
-select {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #ffffff;
-  padding: 12px;
-  border-radius: 6px;
-  font-size: 16px; /* Prevent zoom on mobile */
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="tel"]:focus,
-input[type="url"]:focus,
-textarea:focus,
-select:focus {
-  outline: 3px solid #4f46e5;
-  outline-offset: 2px;
-  border-color: #4f46e5;
-}
-
-/* Placeholder text contrast */
-input::placeholder,
-textarea::placeholder {
-  color: #9ca3af;
-  opacity: 1;
-}
-
-/* Error states */
-.error {
-  border-color: #ef4444 !important;
-  outline: 2px solid #ef4444 !important;
-}
-
-.error-message {
-  color: #fca5a5;
-  font-size: 14px;
-  margin-top: 4px;
-}
-
-/* Success states */
-.success {
-  border-color: #10b981 !important;
-  outline: 2px solid #10b981 !important;
-}
-
-.success-message {
-  color: #6ee7b7;
-  font-size: 14px;
-  margin-top: 4px;
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-only {
+    display: block !important;
+  }
+  
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  
+  a[href^="#"]:after {
+    content: "";
+  }
 }

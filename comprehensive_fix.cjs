@@ -1,102 +1,96 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
-const { exec } = require('child_process');
-const util = require('util');
-const execPromise = util.promisify(exec);
 
-console.log('Starting comprehensive error fixes...\n');
-
-// List of problematic test files that should be skipped/renamed
-const problematicTestFiles = [
-  '__tests__/performance.test.js',
-  '__tests__/profile-page.test.tsx',
-  '__tests__/signup-auto-login.test.tsx',
-  '__tests__/signup.test.tsx',
-  '__tests__/smoke.test.ts',
-  '__tests__/smoke.test.tsx',
-  '__tests__/utils.test.ts'
-];
-
-// Skip problematic test files by renaming them
-for (const file of problematicTestFiles) {
-  const fullPath = path.join(__dirname, file);
-  const skipPath = fullPath + '.skip';
-  if (fs.existsSync(fullPath) && !fs.existsSync(skipPath)) {
-    try {
-      fs.renameSync(fullPath, skipPath);
-      console.log(`✓ Skipped ${file}`);
-    } catch (e) {
-      console.log(`  (${file} already handled or doesn't exist)`);
-    }
-  }
+// Function to fix complex syntax errors
+function fixComplexSyntaxErrors(content) {
+  // Fix malformed JSX with extra characters
+  content = content.replace(/,\s*-\s*>\s*([^<]*?)\s*`\s*-\s*>\s*/g, '');
+  content = content.replace(/,\s*-\s*>\s*([^<]*?)\s*`\s*-\s*>\s*/g, '');
+  
+  // Fix malformed h2 tags
+  content = content.replace(/<h2 className="([^"]*?)">,<\/h2>\s*([^<]*?)\s*<\/h2>/g, '<h2 className="$1">$2</h2>');
+  
+  // Fix malformed p tags
+  content = content.replace(/<p className="([^"]*?)">([^<]*?)<\/p>\s*<\/p>/g, '<p className="$1">$2</p>');
+  
+  // Fix malformed ul/li tags
+  content = content.replace(/<\/ul><li>/g, '<li>');
+  content = content.replace(/<li>([^<]*?)<\/li>\s*<\/ul>/g, '<li>$1</li></ul>');
+  
+  // Fix malformed div tags
+  content = content.replace(/<\/div><div/g, '<div');
+  content = content.replace(/<\/div><\/div>/g, '</div>');
+  
+  // Fix malformed return statements
+  content = content.replace(/return\s*\(\s*<[^>]*>\s*\)\s*<\/[^>]*>/g, (match) => {
+    return match.replace(/return\s*\(\s*<([^>]*)>\s*\)\s*<\/[^>]*>/, 'return (<$1>');
+  });
+  
+  // Fix extra commas in object literals
+  content = content.replace(/,\s*}/g, '}');
+  content = content.replace(/,\s*]/g, ']');
+  
+  // Fix malformed template literals
+  content = content.replace(/`\s*}'`/g, '`}');
+  content = content.replace(/`\s*}\s*`/g, '`}');
+  
+  // Fix malformed array declarations
+  content = content.replace(/];\s*];\s*];\s*\]/g, '];');
+  content = content.replace(/];\s*];\s*\]/g, '];');
+  
+  // Fix malformed function calls
+  content = content.replace(/const\s+(\w+)\s*=\s*(\w+)\.map\((\w+)\s*=>\s*\(\s*{\)/g, 'const $1 = $2.map($3 => ({');
+  
+  // Fix malformed JSX attributes
+  content = content.replace(/className="([^"]*?)\s+([^"]*?)"/g, 'className="$1$2"');
+  
+  // Fix malformed closing tags
+  content = content.replace(/<\s*\/\s*>/g, '</>');
+  
+  // Fix malformed grid classes
+  content = content.replace(/grid-cols-1\s+md:\s+grid-cols-2/g, 'grid-cols-1 md:grid-cols-2');
+  
+  // Fix malformed return statements with fragments
+  content = content.replace(/return\s*\(\s*<[^>]*>\s*\)\s*<\/[^>]*>\s*return\s*\(/g, 'return (');
+  
+  // Fix malformed Helmet tags
+  content = content.replace(/<Helmet\s*\/>\s*<title>/g, '<Helmet><title>');
+  
+  // Fix malformed array elements
+  content = content.replace(/,\s*\]\s*const\s+(\w+)\s*=\s*\[/g, '];\n  const $1 = [');
+  
+  return content;
 }
 
-// Fix merge conflicts in all files
-async function fixMergeConflicts() {
-  console.log('\nFixing merge conflicts...');
-  try {
-    const { stdout } = await execPromise('grep -rl "^<<<<<<< " --include="*.js" --include="*.jsx" --include="*.ts" --include="*.tsx" --include="*.json" . 2>/dev/null || true');
-    const files = stdout.trim().split('\n').filter(f => f && !f.includes('node_modules'));
+// Function to recursively find and fix files
+function fixFilesInDirectory(dir) {
+  const files = fs.readdirSync(dir);
+  
+  files.forEach(file => {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
     
-    for (const file of files) {
-      if (!file) continue;
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      fixFilesInDirectory(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
       try {
-        let content = fs.readFileSync(file, 'utf8');
+        let content = fs.readFileSync(filePath, 'utf8');
+        const originalContent = content;
         
-        // Remove merge conflict markers
-        const originalLength = content.length;
-        content = content.replace(/^<<<<<<< .*$/gm, '');
-        content = content.replace(/^=======$/gm, '');
-        content = content.replace(/^>>>>>>> .*$/gm, '');
+        content = fixComplexSyntaxErrors(content);
         
-        if (content.length !== originalLength) {
-          fs.writeFileSync(file, content, 'utf8');
-          console.log(`✓ Fixed merge conflicts in ${file}`);
+        if (content !== originalContent) {
+          fs.writeFileSync(filePath, content, 'utf8');
+          console.log(`Fixed: ${filePath}`);
         }
-      } catch (e) {
-        console.log(`✗ Error fixing ${file}: ${e.message}`);
+      } catch (error) {
+        console.error(`Error processing ${filePath}:`, error.message);
       }
     }
-  } catch (e) {
-    console.log('No merge conflicts found or error occurred');
-  }
+  });
 }
 
-// Fix aggressive.js and similar problematic files by removing duplicates
-const problematicJsFiles = [
-  'aggressive-fix.js',
-  'advanced-app-improvements.js',
-  'advanced-source-fixer.js'
-];
-
-for (const file of problematicJsFiles) {
-  const fullPath = path.join(__dirname, file);
-  if (fs.existsSync(fullPath)) {
-    try {
-      let content = fs.readFileSync(fullPath, 'utf8');
-      const lines = content.split('\n');
-      
-      // Remove lines that are duplicated/concatenated code
-      if (lines.some(line => line.length > 5000)) {
-        // This file has concatenated code, skip it
-        fs.renameSync(fullPath, fullPath + '.broken');
-        console.log(`✓ Renamed problematic ${file} to .broken`);
-      }
-    } catch (e) {
-      console.log(`  (${file} already handled)`);
-    }
-  }
-}
-
-// Run the merge conflict fixes
-fixMergeConflicts().then(() => {
-  console.log('\n✅ Comprehensive fixes completed!');
-  console.log('\nNext steps:');
-  console.log('1. Install dependencies: npm install --legacy-peer-deps');
-  console.log('2. Run lint with auto-fix: npm run lint:fix');
-  console.log('3. Run type check: npm run type-check');
-}).catch(err => {
-  console.log('Error during fixes:', err);
-});
+// Start fixing from the app directory
+console.log('Starting comprehensive syntax error fixes...');
+fixFilesInDirectory('./app');
+console.log('Comprehensive syntax error fixes completed!');
