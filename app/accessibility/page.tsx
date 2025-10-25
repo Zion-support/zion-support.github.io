@@ -66,9 +66,9 @@ export default function AccessibilityPage() {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden"></section>
+      <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-        <div className="relative max-w-7xl mx-auto text-center"></div>
+        <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Accessibility Solutions
           </h1>
@@ -76,7 +76,7 @@ export default function AccessibilityPage() {
             Make your digital experiences inclusive and accessible to everyone. 
             Our AI-powered accessibility solutions ensure compliance and improve user experience for all.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="inline-flex items-center px-8 py-3 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors font-semibold">
               Get Accessibility Audit
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -89,9 +89,9 @@ export default function AccessibilityPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 px-4 bg-gray-50"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-12"></div>
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">The Accessibility Challenge</h2>
             <p className="text-xl text-gray-600">
               Digital accessibility is not just a legal requirement—it's a business imperative.

@@ -79,7 +79,7 @@ const Footer: React.FC = () => {
           </div>
           
           {/* AI Services */}
-          <div className="space-y-4"></div>
+          <div className="space-y-4">
             <h3 className="text-lg font-semibold">AI Services</h3>
             <ul className="space-y-2">
               {aiServices.map((service) => (
@@ -93,7 +93,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* IT Services */}
-          <div className="space-y-4"></div>
+          <div className="space-y-4">
             <h3 className="text-lg font-semibold">IT Services</h3>
             <ul className="space-y-2">
               {itServices.map((service) => (
@@ -107,7 +107,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Company & Resources */}
-          <div className="space-y-4"></div>
+          <div className="space-y-4">
             <h3 className="text-lg font-semibold">Company</h3>
             <ul className="space-y-2">
               {company.map((item) => (
@@ -124,7 +124,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Support */}
-          <div></div>
+          <div className="space-y-4">
             <h3 className="text-white font-semibold mb-4">Support</h3>
             <ul className="space-y-2">
               {support.map((item) => (
