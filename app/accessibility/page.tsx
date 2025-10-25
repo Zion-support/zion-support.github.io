@@ -117,11 +117,11 @@ export default function AccessibilityPage() {
               Comprehensive tools and services to make your digital assets accessible to everyone.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200"></div>
-                <div className="flex items-center mb-4"></div>
-                  <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mr-4"></div>
+              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mr-4">
                     {feature.icon()}
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900">{feature.title}</h3>
