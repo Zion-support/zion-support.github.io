@@ -1,40 +1,34 @@
-import React, { memo } from 'react';
-import SEOHead from '../components/SEOHead';
+'use client'
+import React from 'react'
+import Head from 'next/head'
+import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
+import Footer from '../components/Footer'
 
-const ZionAITranslationServicePage: React.FC = memo(() => {
+export default function Page() {
   return (
-    <>
-      <SEOHead
-        title="Zion AI Translation Service Pro - Break Language Barriers with AI"
-        description="Advanced AI-powered translation service supporting 100+ languages with context-aware translations and real-time processing for global communication."
-        keywords="AI translation, language translation, multilingual, global communication, translation service"
-        canonicalUrl="https://ziontechgroup.com/zion-ai-translation-service"
-      />
-      
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-              Zion AI Translation Service Pro
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-              Coming Soon - Break language barriers with AI-powered translation supporting 100+ languages.
+    <div>
+      <Head>
+        <title>Zion Ai Translation Service - Zion Tech Group</title>
+        <meta name="description" content="Professional zion ai translation service services and solutions by Zion Tech Group." />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">
+            Zion Ai Translation Service
+          </h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Professional zion ai translation service services and solutions by Zion Tech Group.
+          </p>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
+            <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
+            <p className="text-gray-300">
+              Our zion ai translation service services are currently under development. Contact us to learn more about our upcoming services.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <a href="mailto:kleber@ziontechgroup.com" className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-10 py-4 rounded-xl text-lg font-semibold transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/30 hover:scale-105 transform">
-                Contact Us
-              </a>
-              <a href="tel:+13024640950" className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500/10 px-10 py-4 rounded-xl text-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/20 hover:scale-105 transform">
-                Call +1 302 464 0950
-              </a>
-            </div>
           </div>
         </div>
+        <Footer />
       </div>
-    </>
-  );
-});
-
-ZionAITranslationServicePage.displayName = 'ZionAITranslationServicePage';
-
-export default ZionAITranslationServicePage;
+    </div>
+  )
+}

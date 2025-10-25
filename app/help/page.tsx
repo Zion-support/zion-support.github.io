@@ -1,41 +1,34 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+'use client'
+import React from 'react'
+import Head from 'next/head'
+import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
+import Footer from '../components/Footer'
 
-const HelpPage: React.FC = () => {
+export default function Page() {
   return (
-    <>
-      <Helmet>
-        <title>Help & Support - Zion Tech Group</title>
-        <meta name="description" content="Get help and support for our AI and IT solutions. Find answers to common questions and contact our support team." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">Help & Support</h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We're here to help you succeed
+    <div>
+      <Head>
+        <title>Help - Zion Tech Group</title>
+        <meta name="description" content="Professional help services and solutions by Zion Tech Group." />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">
+            Help
+          </h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Professional help services and solutions by Zion Tech Group.
+          </p>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
+            <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
+            <p className="text-gray-300">
+              Our help services are currently under development. Contact us to learn more about our upcoming services.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md border">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">FAQ</h3>
-              <p className="text-gray-600">
-                Find answers to frequently asked questions about our services and solutions.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md border">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Contact Support</h3>
-              <p className="text-gray-600">
-                Get in touch with our support team for personalized assistance.
-              </p>
-            </div>
-          </div>
         </div>
+        <Footer />
       </div>
-    </>
-  );
-};
-
-export default HelpPage;
+    </div>
+  )
+}

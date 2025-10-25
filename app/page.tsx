@@ -1,120 +1,17 @@
-'use client';
-import React from 'react';
-import { Link } from 'react-router-dom';
-import SEOHead from './components/SEOHead';
-import { 
-  CpuChipIcon, 
-  ShieldCheckIcon, 
-  CloudIcon, 
-  RocketLaunchIcon,
-  CheckCircleIcon,
-  ArrowRightIcon,
-  BoltIcon,
-  SparklesIcon,
-  ChartBarIcon,
-  GlobeAltIcon,
-  CogIcon
-} from '@heroicons/react/24/outline';
+'use client'
+import React from 'react'
+import Head from 'next/head'
+import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
+import Footer from './components/Footer'
 
 const HomePage: React.FC = () => {
-  const services = [
-    {
-      icon: CpuChipIcon,
-      title: 'AI Solutions',
-      description: 'Advanced artificial intelligence and machine learning solutions to transform your business.',
-      href: '/ai-solutions',
-      gradient: 'from-purple-500 to-pink-500',
-      glow: 'shadow-purple-500/25'
-    },
-    {
-      icon: ShieldCheckIcon,
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your digital assets and infrastructure.',
-      href: '/cybersecurity',
-      gradient: 'from-green-500 to-emerald-500',
-      glow: 'shadow-green-500/25'
-    },
-    {
-      icon: CloudIcon,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable cloud solutions and infrastructure management for modern businesses.',
-      href: '/cloud-solutions',
-      gradient: 'from-blue-500 to-cyan-500',
-      glow: 'shadow-blue-500/25'
-    },
-    {
-      icon: RocketLaunchIcon,
-      title: 'Digital Transformation',
-      description: 'Complete digital transformation strategies to modernize your operations.',
-      href: '/digital-transformation',
-      gradient: 'from-orange-500 to-red-500',
-      glow: 'shadow-orange-500/25'
-    },
-    {
-      icon: GlobeAltIcon,
-      title: 'Micro SaaS Solutions',
-      description: 'Innovative micro software solutions designed to solve specific business challenges.',
-      href: '/micro-saas-solutions',
-      gradient: 'from-cyan-500 to-blue-500',
-      glow: 'shadow-cyan-500/25'
-    },
-    {
-      icon: CogIcon,
-      title: 'IT Solutions',
-      description: 'Comprehensive technology services including development, infrastructure, and support.',
-      href: '/it-solutions',
-      gradient: 'from-indigo-500 to-purple-500',
-      glow: 'shadow-indigo-500/25'
-    },
-    {
-      icon: ChartBarIcon,
-      title: 'Data Analytics',
-      description: 'Transform your data into actionable insights with advanced analytics and visualization.',
-      href: '/data-analytics',
-      gradient: 'from-yellow-500 to-orange-500',
-      glow: 'shadow-yellow-500/25'
-    },
-    {
-      icon: BoltIcon,
-      title: '5G Solutions',
-      description: 'Next-generation 5G technology solutions for ultra-fast connectivity and IoT applications.',
-      href: '/5g-solutions',
-      gradient: 'from-pink-500 to-rose-500',
-      glow: 'shadow-pink-500/25'
-    }
-  ];
-
-  const features = [
-    '24/7 Expert Support',
-    'Cutting-edge Technology',
-    'Scalable Solutions',
-    'Industry Expertise',
-    'Proven Results',
-    'Custom Implementation',
-    'AI-Powered Solutions',
-    'Real-time Analytics',
-    'Enterprise Security',
-    'Cloud-Native Architecture',
-    'Mobile-First Design',
-    'API-First Approach'
-  ];
-
-  const stats = [
-    { number: '1000+', label: 'Projects Completed' },
-    { number: '200+', label: 'Happy Clients' },
-    { number: '99.9%', label: 'Uptime Guarantee' },
-    { number: '24/7', label: 'Support Available' },
-    { number: '50+', label: 'AI Models Deployed' },
-    { number: '10M+', label: 'API Calls Processed' }
-  ];
-
   return (
-    <>
-      <SEOHead 
-        title="Zion Tech Group - Advanced AI & IT Solutions"
-        description="Leading provider of AI solutions, cybersecurity, cloud infrastructure, and digital transformation services. Transform your business with cutting-edge technology."
-        keywords="AI solutions, cybersecurity, cloud infrastructure, digital transformation, IT services, machine learning, artificial intelligence"
-      />
+    <div>
+      <Head>
+        <title>Zion Tech Group - AI and IT Solutions</title>
+        <meta name="description" content="Leading provider of enterprise AI solutions, cloud services, and digital transformation services." />
+      </Head>
       
       <div className="min-h-screen bg-slate-900 text-white cyber-grid">
         {/* Matrix Rain Effect */}
@@ -164,25 +61,158 @@ const HomePage: React.FC = () => {
                 >
                   Learn More
                 </Link>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Zion Tech Group
+            </h1>
+            <p className="text-xl text-emerald-400 max-w-3xl mx-auto mb-8">
+              Advanced AI and IT Solutions for Modern Businesses
+            </p>
+            <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-12">
+              Leading provider of enterprise AI solutions, cloud services, and digital transformation services.
+              Transform your business with our cutting-edge technology and achieve unprecedented growth.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a
+                href="/contact"
+                className="bg-gradient-to-r from-emerald-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-600 hover:to-blue-600 transition-all duration-300"
+              >
+                Get Started Today
+              </a>
+              <a
+                href="tel:+13024640950"
+                className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+              >
+                <span>📞</span>
+                +1 302 464 0950
+              </a>
+            </div>
+          </div>
+
+          {/* Services Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div className="bg-slate-800 p-6 rounded-lg">
+              <div className="w-12 h-12 text-emerald-400 mb-4 flex items-center justify-center bg-emerald-500/20 rounded-lg">
+                <span className="text-2xl">🧠</span>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">AI Services</h3>
+              <p className="text-gray-300 mb-4">Advanced artificial intelligence solutions for enterprise applications</p>
+              <ul className="space-y-2">
+                <li className="flex items-center text-gray-300">
+                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
+                  Machine Learning
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
+                  Natural Language Processing
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
+                  Computer Vision
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
+                  AI Automation
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-slate-800 p-6 rounded-lg">
+              <div className="w-12 h-12 text-emerald-400 mb-4 flex items-center justify-center bg-emerald-500/20 rounded-lg">
+                <span className="text-2xl">☁️</span>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Cloud Services</h3>
+              <p className="text-gray-300 mb-4">Comprehensive cloud solutions for modern enterprise infrastructure</p>
+              <ul className="space-y-2">
+                <li className="flex items-center text-gray-300">
+                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
+                  Cloud Migration
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
+                  Infrastructure Setup
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
+                  Cost Optimization
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
+                  Security Configuration
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-slate-800 p-6 rounded-lg">
+              <div className="w-12 h-12 text-emerald-400 mb-4 flex items-center justify-center bg-emerald-500/20 rounded-lg">
+                <span className="text-2xl">🔒</span>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Cybersecurity</h3>
+              <p className="text-gray-300 mb-4">Advanced security solutions with threat detection and prevention</p>
+              <ul className="space-y-2">
+                <li className="flex items-center text-gray-300">
+                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
+                  Threat Detection
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
+                  Vulnerability Assessment
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
+                  Security Monitoring
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
+                  Incident Response
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Contact Information */}
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-white mb-8">Get In Touch</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <div className="bg-slate-800 p-6 rounded-lg">
+                <div className="text-4xl mb-4">📞</div>
+                <h3 className="text-xl font-bold text-white mb-2">Phone</h3>
+                <p className="text-gray-300 mb-4">+1 302 464 0950</p>
+                <a
+                  href="tel:+13024640950"
+                  className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
+                >
+                  Call Now
+                </a>
               </div>
               
-              {/* Stats */}
-              <div className="grid grid-cols-2 lg:grid-cols-6 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto px-4">
-                {stats.map((stat, index) => (
-                  <div key={index} 
-                    className="text-center p-4 bg-slate-800/30 rounded-lg backdrop-blur-sm hover:bg-slate-700/30 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/10 group"
-                    style={{
-                      animationDelay: `${index * 100}ms`
-                    }}
-                  >
-                    <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-purple-400 mb-1 lg:mb-2 group-hover:text-purple-300 transition-colors">
-                      {stat.number}
-                    </div>
-                    <div className="text-gray-300 text-xs sm:text-sm lg:text-base group-hover:text-white transition-colors">
-                      {stat.label}
-                    </div>
-                  </div>
-                ))}
+              <div className="bg-slate-800 p-6 rounded-lg">
+                <div className="text-4xl mb-4">📧</div>
+                <h3 className="text-xl font-bold text-white mb-2">Email</h3>
+                <p className="text-gray-300 mb-4">kleber@ziontechgroup.com</p>
+                <a
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="text-pink-400 hover:text-pink-300 font-medium transition-colors"
+                >
+                  Send Email
+                </a>
+              </div>
+              
+              <div className="bg-slate-800 p-6 rounded-lg">
+                <div className="text-4xl mb-4">📍</div>
+                <h3 className="text-xl font-bold text-white mb-2">Address</h3>
+                <p className="text-gray-300 mb-4">364 E Main St STE 1008<br />Middletown, DE 19709</p>
+                <a
+                  href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-green-400 hover:text-green-300 font-medium transition-colors"
+                >
+                  View on Map
+                </a>
               </div>
             </div>
           </div>
@@ -473,9 +503,11 @@ const HomePage: React.FC = () => {
             </div>
           </div>
         </section>
+        </div>
+        <Footer />
       </div>
-    </>
-  );
-};
+    </div>
+  )
+}
 
-export default HomePage;
+export default HomePage

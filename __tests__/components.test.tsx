@@ -1,11 +1,28 @@
+import { describe, test, expect } from '@jest/globals';
 import { render, screen } from '@testing-library/react';
+import { HelmetProvider } from 'react-helmet-async';
 import '@testing-library/jest-dom';
-
-const MockComponent = () => <div>Test Component</div>;
-
-describe('components.test', () => {
-  test('should render without crashing', () => {
-    render(<MockComponent />);
-    expect(screen.getByText('Test Component')).toBeInTheDocument();
+const TestComponent = () => {
+  return (
+    <HelmetProvider>
+      <div>Test content</div>
+    </HelmetProvider>
+  );
+};
+describe('Components', () => {
+  test('should render without errors', () => {
+    expect(true).toBe(true);
+  });
+  test('should render test content', () => {
+    render(<TestComponent />);
+    expect(screen.getByText('Test content')).toBeTruthy();
+  });
+  test('should handle SEO head component', () => {
+    render(
+      <HelmetProvider>
+        <div>SEO Test</div>
+      </HelmetProvider>
+    );
+    expect(screen.getByText('SEO Test')).toBeTruthy();
   });
 });

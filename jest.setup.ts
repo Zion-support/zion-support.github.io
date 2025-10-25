@@ -1,4 +1,5 @@
-import '@testing-library/jest-dom';
+import { TextEncoder, TextDecoder } from 'util'
+import '@testing-library/jest-dom'
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
@@ -13,7 +14,23 @@ Object.defineProperty(window, 'matchMedia', {
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn(),
   })),
-});
+})
+
+// Mock URL.revokeObjectURL
+if (typeof URL.revokeObjectURL === 'undefined') {
+  Object.defineProperty(URL, 'revokeObjectURL', {
+    writable: true,
+    value: jest.fn(),
+  })
+}
+
+// Mock window.scrollTo
+if (typeof window.scrollTo === 'undefined') {
+  Object.defineProperty(window, 'scrollTo', {
+    writable: true,
+    value: jest.fn(),
+  })
+}
 
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
@@ -21,7 +38,7 @@ global.IntersectionObserver = class IntersectionObserver {
   disconnect() {}
   observe() {}
   unobserve() {}
-} as any;
+} as any
 
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
@@ -29,42 +46,99 @@ global.ResizeObserver = class ResizeObserver {
   disconnect() {}
   observe() {}
   unobserve() {}
-};
+}
 
-// Mock window.scrollTo
-Object.defineProperty(window, 'scrollTo', {
-  writable: true,
-  value: jest.fn(),
-});
+// Mock TextEncoder and TextDecoder
+global.TextEncoder = TextEncoder
+global.TextDecoder = TextDecoder as any
 
-// Mock console methods to reduce noise in tests
-const originalError = console.error;
-const originalWarn = console.warn;
-
-beforeAll(() => {
-  console.error = (...args: any[]) => {
-    if (
-      typeof args[0] === 'string' &&
-      args[0].includes('Warning: ReactDOM.render is no longer supported')
-    ) {
-      return;
+// Mock Next.js router
+jest.mock('next/router', () => ({
+  useRouter() {
+    return {
+      route: '/',
+      pathname: '/',
+      query: {},
+      asPath: '/',
+      push: jest.fn(),
+      pop: jest.fn(),
+      reload: jest.fn(),
+      back: jest.fn(),
+      prefetch: jest.fn().mockResolvedValue(undefined),
+      beforePopState: jest.fn(),
+      events: {
+        on: jest.fn(),
+        off: jest.fn(),
+        emit: jest.fn(),
+      },
+      isFallback: false,
     }
-    originalError.call(console, ...args);
-  };
+  },
+}))
 
-  console.warn = (...args: any[]) => {
-    if (
-      typeof args[0] === 'string' &&
-      (args[0].includes('componentWillReceiveProps') ||
-        args[0].includes('componentWillMount'))
-    ) {
-      return;
+// Mock Next.js navigation
+jest.mock('next/navigation', () => ({
+  useRouter() {
+    return {
+      push: jest.fn(),
+      replace: jest.fn(),
+      prefetch: jest.fn(),
+      back: jest.fn(),
+      forward: jest.fn(),
+      refresh: jest.fn(),
     }
-    originalWarn.call(console, ...args);
-  };
-});
+  },
+  useSearchParams() {
+    return new URLSearchParams()
+  },
+  usePathname() {
+    return '/'
+  },
+}))
 
-afterAll(() => {
-  console.error = originalError;
-  console.warn = originalWarn;
-});
+// Mock framer-motion
+jest.mock('framer-motion', () => ({
+  motion: {
+    div: 'div',
+    span: 'span',
+    h1: 'h1',
+    h2: 'h2',
+    h3: 'h3',
+    p: 'p',
+    button: 'button',
+    section: 'section',
+    article: 'article',
+    header: 'header',
+    footer: 'footer',
+    nav: 'nav',
+    main: 'main',
+    aside: 'aside',
+  },
+  AnimatePresence: ({ children }: { children: React.ReactNode }) => children,
+  useAnimation: () => ({
+    start: jest.fn(),
+    stop: jest.fn(),
+    set: jest.fn(),
+  }),
+  useInView: () => true,
+  useMotionValue: () => ({ get: jest.fn(), set: jest.fn() }),
+  useTransform: () => ({ get: jest.fn(), set: jest.fn() }),
+  useSpring: () => ({ get: jest.fn(), set: jest.fn() }),
+  useScroll: () => ({ scrollY: { get: jest.fn() } }),
+  useViewportScroll: () => ({ scrollY: { get: jest.fn() } }),
+}))
+
+// Mock react-helmet-async
+jest.mock('react-helmet-async', () => ({
+  Helmet: ({ children }: { children: React.ReactNode }) => children,
+  HelmetProvider: ({ children }: { children: React.ReactNode }) => children,
+}))
+
+// Mock web-vitals
+jest.mock('web-vitals', () => ({
+  getCLS: jest.fn(),
+  getFID: jest.fn(),
+  getFCP: jest.fn(),
+  getLCP: jest.fn(),
+  getTTFB: jest.fn(),
+}))

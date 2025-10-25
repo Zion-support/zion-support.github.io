@@ -1,69 +1,34 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+'use client'
+import React from 'react'
+import Head from 'next/head'
+import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
+import Footer from '../components/Footer'
 
-const ZionAIWorkflowAutomatorProPage: React.FC = () => {
+export default function Page() {
   return (
-    <>
-      <Helmet>
-        <title>AI Workflow Automator Pro - Zion Tech Group</title>
-        <meta name="description" content="Automate complex business workflows with our advanced AI-powered workflow automation solution. Streamline processes and boost productivity." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">AI Workflow Automator Pro</h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Automate complex business workflows with advanced AI technology. Streamline processes, reduce errors, and boost productivity.
+    <div>
+      <Head>
+        <title>Zion Ai Workflow Automator Pro - Zion Tech Group</title>
+        <meta name="description" content="Professional zion ai workflow automator pro services and solutions by Zion Tech Group." />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">
+            Zion Ai Workflow Automator Pro
+          </h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Professional zion ai workflow automator pro services and solutions by Zion Tech Group.
+          </p>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
+            <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
+            <p className="text-gray-300">
+              Our zion ai workflow automator pro services are currently under development. Contact us to learn more about our upcoming services.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            <div className="bg-white p-6 rounded-lg shadow-md border">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Intelligent Automation</h3>
-              <p className="text-gray-600">
-                AI-powered workflow automation that learns from your business processes and optimizes them automatically.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md border">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Process Optimization</h3>
-              <p className="text-gray-600">
-                Analyze and optimize your existing workflows to eliminate bottlenecks and improve efficiency.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md border">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Real-time Monitoring</h3>
-              <p className="text-gray-600">
-                Monitor workflow performance in real-time with detailed analytics and insights.
-              </p>
-            </div>
-          </div>
-          
-          <div className="bg-gray-50 rounded-lg p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Key Features</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Visual Workflow Builder</h3>
-                <p className="text-gray-600">Create complex workflows using our intuitive drag-and-drop interface.</p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI-Powered Decision Making</h3>
-                <p className="text-gray-600">Let AI make intelligent decisions based on data patterns and business rules.</p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Integration Capabilities</h3>
-                <p className="text-gray-600">Seamlessly integrate with your existing tools and systems.</p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Scalable Architecture</h3>
-                <p className="text-gray-600">Scale your automation as your business grows without performance issues.</p>
-              </div>
-            </div>
-          </div>
         </div>
+        <Footer />
       </div>
-    </>
-  );
-};
-
-export default ZionAIWorkflowAutomatorProPage;
+    </div>
+  )
+}
