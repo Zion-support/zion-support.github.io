@@ -1,21 +1,9 @@
 
-// Simple wrapper function to replace withSentry;
-function withSentry(handler) {;
-;
-return handler}
-// Simple wrapper function to replace withSentry;
- handler;
-;
-const dir = path.join(process.cwd(), 'data");"'"
-const file = path.join(dir, 'onsite-requests.json");
-;"
-function handler(req, res) {"
-;"'"
-if (req.method !== 'POST") {;"
-res.statusCode = 405;"'"
-    res.setHeader('Content-Type', 'application/json");"'"
-    res.end(JSON.stringify({ error: "'Method not allowed' ",
-}));
+async function handler(req, res) {
+  if (req.method !== 'POST') {
+    res.statusCode = 405;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
   }
 ;
@@ -61,7 +49,35 @@ success: "false",error: "'Failed to save request" )"
 //Simple wrapper function to replace withSentry
 function withSentry(handler) {
 
-return handler
+  try {
+    const request = {
+      id: Date.now().toString(),
+      name,
+      email,
+      company,
+      phone,
+      message,
+      location,
+      timestamp: new Date().toISOString(),
+      status: 'pending'
+    };
+
+    // In a real application, you would save this to a database
+    // For now, we'll just log it
+    console.log('Onsite request submitted:', request);
+
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({
+      message: 'Onsite request submitted successfully',
+      requestId: request.id
+    }));
+  } catch (error) {
+    console.error('Onsite request error:', error);
+    res.statusCode = 500;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Failed to submit onsite request' }));
+  }
 }
 //Simple wrapper function to replace withSentry
  handler;
