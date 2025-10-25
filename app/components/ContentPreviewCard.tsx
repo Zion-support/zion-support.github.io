@@ -1,7 +1,7 @@
 import React from 'react';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
-import { CheckCircle, ArrowRight, Brain, BarChart, Target } from 'lucide-react';
+import { CheckCircle, Brain, BarChart, Target, ArrowRight } from 'lucide-react';
 
 const Page: React.FC = () => {
   const features = [

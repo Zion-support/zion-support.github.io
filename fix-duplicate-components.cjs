@@ -25,7 +25,7 @@ function fixDuplicateComponents(filePath) {
       const secondMatchIndex = secondMatch.index;
       
       // Extract the content before the second declaration
-      let beforeSecond = content.substring(0, secondMatchIndex);
+      const beforeSecond = content.substring(0, secondMatchIndex);
       
       // Find the last closing brace before the second declaration
       const lastBraceIndex = beforeSecond.lastIndexOf('};');

@@ -4,6 +4,10 @@
 
 import '@testing-library/jest-dom';
 
+// Jest globals
+declare const jest: any;
+declare const PerformanceObserverCallback: any;
+
 // Polyfill for TextEncoder/TextDecoder
 import { TextEncoder, TextDecoder } from 'util';
 global.TextEncoder = TextEncoder as any;
@@ -11,7 +15,7 @@ global.TextDecoder = TextDecoder as any;
 
 // Suppress jsdom navigation warnings
 const originalConsoleError = console.error;
-console.error = (...args: any[]) => {
+console.error = (...args) => {
   const message = args[0]?.toString?.() || args[0]?.message || '';
   if (message.includes('Not implemented: navigation') || 
       message.includes('navigation (except hash changes)')) {
@@ -23,7 +27,7 @@ console.error = (...args: any[]) => {
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
-  value: jest.fn().mockImplementation((query: string) => ({
+  value: jest.fn().mockImplementation(query => ({
     matches: false,
     media: query,
     onchange: null,
@@ -36,8 +40,8 @@ Object.defineProperty(window, 'matchMedia', {
 });
 
 // Mock requestAnimationFrame
-global.requestAnimationFrame = jest.fn((cb: FrameRequestCallback) => setTimeout(cb, 0));
-global.cancelAnimationFrame = jest.fn((id: number) => clearTimeout(id));
+global.requestAnimationFrame = jest.fn(cb => setTimeout(cb, 0));
+global.cancelAnimationFrame = jest.fn(id => clearTimeout(id));
 
 // Mock localStorage
 const localStorageMock = {
@@ -68,7 +72,7 @@ global.fetch = jest.fn();
 const originalConsoleWarn = console.warn;
 const originalConsoleInfo = console.info;
 
-console.warn = (...args: any[]) => {
+console.warn = (...args) => {
   const message = args[0]?.toString?.() || '';
   if (message.includes('Warning: ReactDOM.render is no longer supported')) {
     return;
@@ -76,7 +80,7 @@ console.warn = (...args: any[]) => {
   originalConsoleWarn(...args);
 };
 
-console.info = (...args: any[]) => {
+console.info = (...args) => {
   const message = args[0]?.toString?.() || '';
   if (message.includes('ReactDOM.render is no longer supported')) {
     return;
@@ -87,19 +91,12 @@ console.info = (...args: any[]) => {
 // Mock PerformanceObserver
 global.PerformanceObserver = class MockPerformanceObserver {
   static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'];
-  constructor(public callback: PerformanceObserverCallback) {}
+  constructor(public _callback: PerformanceObserverCallback) {}
   observe() {}
   disconnect() {}
   takeRecords() {
     return [];
   }
-};
-// Suppress JSDOM navigation warnings
-console.error = (...args: any[]) => {
-  if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {
-    return;
-  }
-  originalConsoleError(...args);
 };
 
 // Mock window.location
