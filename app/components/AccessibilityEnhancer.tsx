@@ -112,8 +112,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       };
 
       // Apply focus trapping to modals
-      const modals = document.querySelectorAll('[role=&quot;dialog&quot;]');
-      modals.forEach(trapFocus);
+      const modals = document.querySelectorAll('[role="dialog"]');
+      modals.forEach((modal) => trapFocus(modal as HTMLElement));
     }
   }, [enableFocusManagement]);
 

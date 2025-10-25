@@ -7,7 +7,7 @@
     ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": false,
+    "strict": true,
     "noEmit": true,
     "incremental": true,
     "module": "esnext",
@@ -26,10 +26,8 @@
   },
   "include": [
     "next-env.d.ts",
-    "app/page.tsx",
-    "app/layout.tsx",
-    "app/team/page.tsx",
-    "app/_not-found.tsx",
+    "app/**/*.tsx",
+    "app/**/*.ts",
     ".next/types/**/*.ts"
   ],
   "exclude": [
@@ -42,8 +40,6 @@
     "jest.setup.ts",
     "vite.config.ts",
     "vite.config.optimized.ts",
-    "src/**/*",
-    "app/components/**/*",
-    "app/utils/**/*"
+    "src/**/*"
   ]
 }
