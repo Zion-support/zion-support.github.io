@@ -16,10 +16,8 @@ interface GenericServicePageProps {
   pricing?: {
     basic: number;
     pro: number;
-    enterprise: number;
-  };
-  className?: string;
-}
+    enterprise: number};
+  className?: string}
 
 const GenericServicePage: React.FC<GenericServicePageProps> = ({
   title,
@@ -27,8 +25,7 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
   features = [],
   benefits = [],
   pricing,
-  className = &apos;&apos;
-}) => {
+  className = &apos;&apos}) => {
   return (
     <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 ${className}`}></div>
       <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;></div>
@@ -121,7 +118,6 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
         )}
       </div>
     </div>
-  );
-};
+  )};
 
 export default GenericServicePage;

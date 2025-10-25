@@ -5,8 +5,7 @@ interface AdvancedErrorBoundaryProps {
 
   children: ReactNode
   className?: string
-  onError?: (_error: Error, _errorInfo: ErrorInfo) => void;
-}
+  onError?: (_error: Error, _errorInfo: ErrorInfo) => void}
 interface State {
 
   hasError: boolean
@@ -102,8 +101,7 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
       )
     }
 
-    return this.props.children;
-  }
+    return this.props.children}
 }
 
 export default AdvancedErrorBoundary;

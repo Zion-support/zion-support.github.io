@@ -11,8 +11,7 @@ export default function SearchBar() {
     e.preventDefault();
     if (query.trim()) {
       // Handle search logic here
-      console.log('Searching for:', query);
-    }
+      console.log('Searching for:', query)}
   };
 
   return (
@@ -36,8 +35,7 @@ export default function SearchBar() {
         </button>
       </form>
     </div>
-  );
-}
+  )}
             Contact Us
             
             <ArrowRight className="w-5 h-5 ml-2" />

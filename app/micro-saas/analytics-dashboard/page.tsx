@@ -24,5 +24,4 @@ export default function AnalyticsDashboardPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

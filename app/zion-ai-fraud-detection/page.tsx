@@ -23,5 +23,4 @@ export default function ZionAiFraudDetectionPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

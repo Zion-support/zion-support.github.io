@@ -20,7 +20,6 @@ const ServicesPage: React.FC = () => {
         </div>
       </div>
     </React.Fragment>
-  );
-};
+  )};
 
 export default ServicesPage;

@@ -23,5 +23,4 @@ export default function ZionDevopsAutomationPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

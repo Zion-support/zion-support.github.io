@@ -29,5 +29,4 @@ export default function TestSimplePage() {
       </div>
       <Footer />
     </div>
-  );
-}
+  )}

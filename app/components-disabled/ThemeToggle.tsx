@@ -10,20 +10,17 @@ export default function ThemeToggle() {
     const savedTheme = localStorage.getItem('theme') as 'light' | 'dark' | null;
     if (savedTheme) {
       setTheme(savedTheme);
-      document.documentElement.classList.toggle('dark', savedTheme === 'dark');
-    } else {
+      document.documentElement.classList.toggle('dark', savedTheme === 'dark')} else {
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       setTheme(prefersDark ? 'dark' : 'light');
-      document.documentElement.classList.toggle('dark', prefersDark);
-    }
+      document.documentElement.classList.toggle('dark', prefersDark)}
   }, []);
 
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
     setTheme(newTheme);
     localStorage.setItem('theme', newTheme);
-    document.documentElement.classList.toggle('dark', newTheme === 'dark');
-  };
+    document.documentElement.classList.toggle('dark', newTheme === 'dark')};
 
   return (
     <button
@@ -37,8 +34,7 @@ export default function ThemeToggle() {
         <Sun className="w-5 h-5" />
       )}
     </button>
-  );
-}
+  )}
             Contact Us
             
             <ArrowRight className="w-5 h-5 ml-2" />

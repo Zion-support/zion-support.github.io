@@ -12,16 +12,12 @@ interface SidebarProps {
     icon?: React.ReactNode;
     submenu?: Array<{
       label: string;
-      href: string;
-    }>;
-  }>;
+      href: string}>}>;
   user?: {
     name: string;
     email: string;
-    avatar?: string;
-  };
-  onLogout?: () => void;
-}
+    avatar?: string};
+  onLogout?: () => void}
 
 const Sidebar: React.FC<SidebarProps> = ({
   isOpen,
@@ -36,8 +32,7 @@ const Sidebar: React.FC<SidebarProps> = ({
 }) => {
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
   const toggleSubmenu = (label: string) => {
-    setActiveSubmenu(activeSubmenu === label ? null : label);
-  };
+    setActiveSubmenu(activeSubmenu === label ? null : label)};
   if (!isOpen) return null;
   return (
     <>
@@ -136,7 +131,6 @@ const Sidebar: React.FC<SidebarProps> = ({
         </div>
       </div>
     </>
-  );
-};
+  )};
 
 export default Sidebar;

@@ -15,16 +15,12 @@ const PerformanceEnhancer: React.FC = () => {
             const img = entry.target as HTMLImageElement;
             img.src = img.dataset.src || '';
             img.classList.remove('lazy');
-            imageObserver.unobserve(img);
-          }
-        });
-      });
+            imageObserver.unobserve(img)}
+        })});
       
-      images.forEach(img => imageObserver.observe(img));
-    };
+      images.forEach(img => imageObserver.observe(img))};
 
-    optimizePerformance();
-  }, []);
+    optimizePerformance()}, []);
 
   const benefits = [
     'Increase efficiency by up to 50%',
@@ -59,7 +55,6 @@ const PerformanceEnhancer: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default PerformanceEnhancer;

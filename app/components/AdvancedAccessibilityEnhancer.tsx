@@ -8,23 +8,19 @@ const features = [
   {
     icon: Brain,
     title: 'AI-Powered Solutions',
-    description: 'Advanced AI technology to transform your business operations and improve efficiency',
-  },
+    description: 'Advanced AI technology to transform your business operations and improve efficiency'},
   {
     icon: Zap,
     title: 'High Performance',
-    description: 'Lightning-fast processing and real-time analytics for optimal results',
-  },
+    description: 'Lightning-fast processing and real-time analytics for optimal results'},
   {
     icon: Shield,
     title: 'Secure & Reliable',
-    description: 'Enterprise-grade security with 99.9% uptime guarantee',
-  },
+    description: 'Enterprise-grade security with 99.9% uptime guarantee'},
   {
     icon: Globe,
     title: 'Global Reach',
-    description: 'Connect with customers worldwide with our scalable solutions',
-  }
+    description: 'Connect with customers worldwide with our scalable solutions'}
 ];
 
 const AdvancedAccessibilityEnhancer: React.FC = () => {
@@ -54,8 +50,7 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
                   </div>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
-              );
-            })}
+              )})}
           </div>
 
           <div className="text-center"></div>
@@ -67,7 +62,6 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default AdvancedAccessibilityEnhancer;

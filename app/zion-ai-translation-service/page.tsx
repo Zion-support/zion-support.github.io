@@ -23,5 +23,4 @@ export default function ZionAiTranslationServicePage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

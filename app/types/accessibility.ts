@@ -4,11 +4,9 @@ export interface AccessibilitySettings {
   fontSize: 'small' | 'medium' | 'large';
   focusVisible: boolean;
   screenReaderMode: boolean;
-  keyboardNavigation: boolean;
-}
+  keyboardNavigation: boolean}
 
 export interface AccessibilityContextType {
   settings: AccessibilitySettings;
   updateSetting: (key: keyof AccessibilitySettings, value: boolean | string) => void;
-  announceToScreenReader: (message: string) => void;
-}
+  announceToScreenReader: (message: string) => void}

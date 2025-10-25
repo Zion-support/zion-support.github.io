@@ -23,5 +23,4 @@ export default function ZionAiSurveyBuilderPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

@@ -23,5 +23,4 @@ export default function ZionPerformanceMonitorPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

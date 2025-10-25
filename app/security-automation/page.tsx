@@ -23,5 +23,4 @@ export default function SecurityAutomationPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

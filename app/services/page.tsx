@@ -81,7 +81,7 @@ const ServicesPage: React.FC = () => {
       {/* Services Grid */}
       <section className="py-20"></section>
         <div className="container mx-auto px-4"></div>
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-8"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
             {serviceCategories.map((category, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover: bg-white/20 transition-all duration-300"></div>
                 <div className="flex items-center mb-6"></div>

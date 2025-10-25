@@ -24,5 +24,4 @@ export default function ExpenseTrackerPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

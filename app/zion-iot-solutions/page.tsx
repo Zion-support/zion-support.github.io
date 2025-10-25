@@ -23,5 +23,4 @@ export default function ZionIotSolutionsPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

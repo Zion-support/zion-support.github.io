@@ -14,32 +14,28 @@ const EnhancedServicesShowcase: React.FC = () => {
       icon: Brain,
       color: &apos;text-purple-400&apos;,
       features: [&apos;Machine Learning&apos;, &apos;Natural Language Processing&apos;, &apos;Computer Vision&apos;, &apos;Predictive Analytics&apos;],
-      stats: &apos;300% ROI&apos;,
-    },
+      stats: &apos;300% ROI&apos},
     {
       title: &apos;IT Infrastructure&apos;,
       description: &apos;Build and maintain robust technology foundations&apos;,
       icon: Cloud,
       color: &apos;text-blue-400&apos;,
       features: [&apos;Cloud Migration&apos;, &apos;Server Management&apos;, &apos;Network Security&apos;, &apos;Data Backup&apos;],
-      stats: &apos;99.9% Uptime&apos;,
-    },
+      stats: &apos;99.9% Uptime&apos},
     {
       title: &apos;Cybersecurity&apos;,
       description: &apos;Protect your business with enterprise-grade security&apos;,
       icon: Shield,
       color: &apos;text-green-400&apos;,
       features: [&apos;Threat Detection&apos;, &apos;Security Audits&apos;, &apos;Compliance&apos;, &apos;Incident Response&apos;],
-      stats: &apos;Zero Breaches&apos;,
-    },
+      stats: &apos;Zero Breaches&apos},
     {
       title: &apos;Performance Optimization&apos;,
       description: &apos;Maximize efficiency and speed across all systems&apos;,
       icon: Zap,
       color: &apos;text-yellow-400&apos;,
       features: [&apos;Code Optimization&apos;, &apos;Database Tuning&apos;, &apos;Caching Strategies&apos;, &apos;Load Balancing&apos;],
-      stats: &apos;10x Faster&apos;
-    }
+      stats: &apos;10x Faster&apos}
   ]
 
   return (

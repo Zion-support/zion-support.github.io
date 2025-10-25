@@ -52,7 +52,6 @@ const GlobalErrorBoundary: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default GlobalErrorBoundary;

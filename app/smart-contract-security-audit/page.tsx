@@ -23,5 +23,4 @@ export default function SmartContractSecurityAuditPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

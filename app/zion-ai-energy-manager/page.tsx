@@ -23,5 +23,4 @@ export default function ZionAiEnergyManagerPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

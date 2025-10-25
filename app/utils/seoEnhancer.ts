@@ -5,5 +5,4 @@ export const defaultConfig = {
 };
 
 export const defaultFunction = () => {
-  return null;
-};
+  return null};

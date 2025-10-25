@@ -23,5 +23,4 @@ export default function ZionAiSocialMediaManagerPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

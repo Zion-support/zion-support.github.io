@@ -3,32 +3,27 @@ import { Component, ErrorInfo, ReactNode } from 'react';
 import ErrorBoundary from './ErrorBoundary';
 
 interface Props {
-  children: ReactNode;
-}
+  children: ReactNode}
 
 interface State {
   hasError: boolean;
-  error?: Error;
-}
+  error?: Error}
 
 class ErrorBoundaryWrapper extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
       hasError: false
-    };
-  }
+    }}
 
   static getDerivedStateFromError(_error: Error): State {
     return { 
       hasError: true, 
       error 
-    };
-  }
+    }}
 
   componentDidCatch(_error: Error, errorInfo: ErrorInfo) {
-    console.error('Error caught by wrapper:', error, errorInfo);
-  }
+    console.error('Error caught by wrapper:', error, errorInfo)}
 
   render() {
     if (this.state.hasError) {
@@ -51,11 +46,9 @@ class ErrorBoundaryWrapper extends Component<Props, State> {
             </div>
           </div>
         </ErrorBoundary>
-      );
-    }
+      )}
 
-    return this.props.children;
-  }
+    return this.props.children}
 }
 
 export default ErrorBoundaryWrapper;

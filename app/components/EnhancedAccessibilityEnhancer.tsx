@@ -18,8 +18,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
   enableScreenReaderSupport: _enableScreenReaderSupport = true,
   enableHighContrast: _enableHighContrast = false,
   enableFocusManagement: _enableFocusManagement = true,
-  enableVoiceNavigation: _enableVoiceNavigation = false,
-}) => {
+  enableVoiceNavigation: _enableVoiceNavigation = false}) => {
   const [isHighContrast, setIsHighContrast] = useState(false))
   const [_fontSize, setFontSize] = useState('medium'))
   const [isReducedMotion, setIsReducedMotion] = useState(false))

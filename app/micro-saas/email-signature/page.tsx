@@ -24,5 +24,4 @@ export default function EmailSignaturePage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

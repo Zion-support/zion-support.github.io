@@ -24,5 +24,4 @@ export default function LeadScoringPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

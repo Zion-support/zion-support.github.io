@@ -23,5 +23,4 @@ export default function ZionAiFinancialForecasterPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

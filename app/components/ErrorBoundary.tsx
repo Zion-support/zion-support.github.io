@@ -3,40 +3,33 @@ import React from 'react';
 
 interface ErrorBoundaryState {
   hasError: boolean;
-  _error: Error | undefined;
-}
+  _error: Error | undefined}
 
 interface ErrorBoundaryProps {
   children: React.ReactNode;
-  fallback?: React.ComponentType<{ error?: Error | undefined; resetError: () => void }>;
-}
+  fallback?: React.ComponentType<{ error?: Error | undefined; resetError: () => void }>}
 
 class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
     super(props);
-    this.state = { hasError: false, _error: undefined };
-  }
+    this.state = { hasError: false, _error: undefined }}
 
   static getDerivedStateFromError(_error: Error): ErrorBoundaryState {
-    return { hasError: true, _error };
-  }
+    return { hasError: true, _error }}
 
   override componentDidCatch(_error: Error, errorInfo: React.ErrorInfo) {
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', _error, errorInfo);
-    }
+      console.error('Error caught by boundary:', _error, errorInfo)}
   }
 
   resetError = () => {
-    this.setState({ hasError: false, _error: undefined });
-  };
+    this.setState({ hasError: false, _error: undefined })};
 
   override render() {
     if (this.state.hasError) {
       const FallbackComponent = this.props.fallback;
       if (FallbackComponent) {
-        return <FallbackComponent error={this.state._error} resetError={this.resetError} />;
-      }
+        return <FallbackComponent error={this.state._error} resetError={this.resetError} />}
 
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50"></div>
@@ -53,11 +46,9 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
             </button>
           </div>
         </div>
-      );
-    }
+      )}
 
-    return this.props.children;
-  }
+    return this.props.children}
 }
 
 export default ErrorBoundary;

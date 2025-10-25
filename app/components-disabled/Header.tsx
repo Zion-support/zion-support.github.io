@@ -107,6 +107,4 @@ const Header: React.FC = () => {
       </div>
       <Footer />
 
-  );
-
-}
+  )}

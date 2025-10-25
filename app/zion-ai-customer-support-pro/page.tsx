@@ -23,5 +23,4 @@ export default function ZionAiCustomerSupportProPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

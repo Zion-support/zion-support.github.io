@@ -23,5 +23,4 @@ export default function ZionChatAiPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

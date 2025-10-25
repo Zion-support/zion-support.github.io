@@ -5,8 +5,7 @@ import { motion } from 'framer-motion';
 interface FuturisticLoaderProps {
   size?: 'sm' | 'md' | 'lg';
   text?: string;
-  className?: string;
-}
+  className?: string}
 
 const FuturisticLoader: React.FC<FuturisticLoaderProps> = ({
   size = 'md',
@@ -60,7 +59,6 @@ const FuturisticLoader: React.FC<FuturisticLoaderProps> = ({
         </motion.p>
       )}
     </div>
-  );
-};
+  )};
 
 export default FuturisticLoader;

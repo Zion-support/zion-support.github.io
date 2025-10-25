@@ -10,8 +10,7 @@ interface FuturisticServiceCardProps {
   icon?: React.ReactNode;
   gradient?: string;
   onClick?: () => void;
-  isPopular?: boolean;
-}
+  isPopular?: boolean}
 
 const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
   title,

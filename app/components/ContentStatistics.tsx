@@ -38,20 +38,15 @@ const ContentStatistics: React.FC = () => {
               current + increment,
 const target = null;
             );
-            allComplete = false;
-          }
+            allComplete = false}
         });
         
         if (allComplete) {
-          clearInterval(interval);
-        }
+          clearInterval(interval)}
         
-        return newCounters;
-      });
-    }, stepDuration);
+        return newCounters})}, stepDuration);
 
-    return () => clearInterval(interval);
-  }, []);
+    return () => clearInterval(interval)}, []);
 
   const statistics = [
     {
@@ -267,7 +262,6 @@ const target = null;
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default ContentStatistics;

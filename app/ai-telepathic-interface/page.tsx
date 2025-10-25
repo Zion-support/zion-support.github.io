@@ -29,5 +29,4 @@ export default function AiTelepathicInterfacePage() {
       </div>
       <Footer />
     </div>
-  );
-}
+  )}

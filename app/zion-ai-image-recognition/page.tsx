@@ -23,5 +23,4 @@ export default function ZionAiImageRecognitionPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

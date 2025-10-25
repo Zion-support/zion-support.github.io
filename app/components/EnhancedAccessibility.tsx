@@ -7,8 +7,7 @@ import { AccessibilityContext } from '../contexts/AccessibilityContext';
 import { useAccessibility } from '../hooks/useAccessibility';
 
 interface EnhancedAccessibilityProps {
-  children: React.ReactNode;
-}
+  children: React.ReactNode}
 
 const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ children }) => {
   const [settings, setSettings] = useState<any>({
@@ -28,17 +27,14 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ children 
     if (savedSettings) {
       try {
         const parsed = JSON.parse(savedSettings);
-        setSettings((prev: any) => ({ ...prev, ...parsed }));
-      } catch (error) {
-        console.warn('Failed to parse accessibility settings:', error);
-      }
+        setSettings((prev: any) => ({ ...prev, ...parsed }))} catch (error) {
+        console.warn('Failed to parse accessibility settings:', error)}
     }
   }, []);
 
   // Save settings to localStorage
   useEffect(() => {
-    localStorage.setItem('accessibility-settings', JSON.stringify(settings));
-  }, [settings]);
+    localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [settings]);
 
   // Apply accessibility settings
   useEffect(() => {
@@ -46,17 +42,13 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ children 
     
     // High contrast
     if (settings.highContrast) {
-      root.classList.add('high-contrast');
-    } else {
-      root.classList.remove('high-contrast');
-    }
+      root.classList.add('high-contrast')} else {
+      root.classList.remove('high-contrast')}
 
     // Reduced motion
     if (settings.reducedMotion) {
-      root.classList.add('reduced-motion');
-    } else {
-      root.classList.remove('reduced-motion');
-    }
+      root.classList.add('reduced-motion')} else {
+      root.classList.remove('reduced-motion')}
 
     // Font size
     root.classList.remove('font-small', 'font-medium', 'font-large');
@@ -64,17 +56,13 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ children 
 
     // Focus visible
     if (settings.focusVisible) {
-      root.classList.add('focus-visible');
-    } else {
-      root.classList.remove('focus-visible');
-    }
+      root.classList.add('focus-visible')} else {
+      root.classList.remove('focus-visible')}
 
     // Screen reader mode
     if (settings.screenReaderMode) {
-      root.classList.add('screen-reader-mode');
-    } else {
-      root.classList.remove('screen-reader-mode');
-    }
+      root.classList.add('screen-reader-mode')} else {
+      root.classList.remove('screen-reader-mode')}
   }, [settings]);
 
   // Keyboard navigation detection
@@ -82,36 +70,30 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ children 
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Tab') {
         setSettings((prev: any) => ({ ...prev, keyboardNavigation: true }));
-        document.body.classList.add('keyboard-navigation');
-      }
+        document.body.classList.add('keyboard-navigation')}
     };
 
     const handleMouseDown = () => {
       setSettings((prev: any) => ({ ...prev, keyboardNavigation: false }));
-      document.body.classList.remove('keyboard-navigation');
-    };
+      document.body.classList.remove('keyboard-navigation')};
 
     document.addEventListener('keydown', handleKeyDown);
     document.addEventListener('mousedown', handleMouseDown);
 
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('mousedown', handleMouseDown);
-    };
-  }, []);
+      document.removeEventListener('mousedown', handleMouseDown)}}, []);
 
   // Focus management
   useEffect(() => {
     const handleFocusIn = (event: FocusEvent) => {
       const target = event.target as HTMLElement;
       if (target && typeof target.scrollIntoView === 'function') {
-        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }
+        target.scrollIntoView({ behavior: 'smooth', block: 'center' })}
     };
 
     document.addEventListener('focusin', handleFocusIn);
-    return () => document.removeEventListener('focusin', handleFocusIn);
-  }, []);
+    return () => document.removeEventListener('focusin', handleFocusIn)}, []);
 
   // Screen reader announcements
   useEffect(() => {
@@ -127,24 +109,19 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ children 
       
       setTimeout(() => {
         document.body.removeChild(announcementElement);
-        setAnnouncements(prev => prev.slice(1));
-      }, 1000);
-    }
+        setAnnouncements(prev => prev.slice(1))}, 1000)}
   }, [announcements]);
 
   const updateSetting = (key: string, value: any) => {
-    setSettings((prev: any) => ({ ...prev, [key]: value }));
-  };
+    setSettings((prev: any) => ({ ...prev, [key]: value }))};
 
   const announceToScreenReader = (message: string) => {
-    setAnnouncements(prev => [...prev, message]);
-  };
+    setAnnouncements(prev => [...prev, message])};
 
   const contextValue: AccessibilityContextType = {
     settings,
     updateSetting,
-const announceToScreenReader = null;
-  };
+const announceToScreenReader = null};
 
   return (
     <AccessibilityContext.Provider value={contextValue}>
@@ -153,8 +130,7 @@ const announceToScreenReader = null;
         <AccessibilityControls />
       </div>
     </AccessibilityContext.Provider>
-  );
-};
+  )};
 
 // Accessibility controls component
 const AccessibilityControls: React.FC = () => {
@@ -244,7 +220,6 @@ const Close = null;
         </div>
       )}
     </div>
-  );
-};
+  )};
 
 export default EnhancedAccessibility;

@@ -23,5 +23,4 @@ export default function SystemIntegrationPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

@@ -23,5 +23,4 @@ export default function SmartCityInfrastructurePage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

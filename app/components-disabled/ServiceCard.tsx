@@ -8,8 +8,7 @@ interface ServiceCardProps {
   description: string;
   icon: React.ReactNode;
   href: string;
-  features?: string[];
-}
+  features?: string[]}
 
 const ServiceCard: React.FC<ServiceCardProps> = ({
   title,
@@ -43,7 +42,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         <ArrowRight className="ml-1 h-4 w-4" />
       </Link>
     </div>
-  );
-};
+  )};
 
 export default ServiceCard;

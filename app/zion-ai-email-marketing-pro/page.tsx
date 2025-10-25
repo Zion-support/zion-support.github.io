@@ -23,5 +23,4 @@ export default function ZionAiEmailMarketingProPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

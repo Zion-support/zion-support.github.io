@@ -2,8 +2,7 @@ import { ArrowRight, CheckCircle, Star, ImageIcon, Upload, Zap, Download, Clock,
 'use client';
 
 interface LoadingOptimizerProps {
-  className?: string;
-}
+  className?: string}
 
 const LoadingOptimizer: React.FC<LoadingOptimizerProps> = ({
   className = ''
@@ -37,12 +36,9 @@ const LoadingOptimizer: React.FC<LoadingOptimizerProps> = ({
       
       // Mark as completed after a short delay
       setTimeout(() => {
-        setCompletedOptimizations(prev => [...prev, optimizationSteps[i]]);
-      }, 400);
-    }
+        setCompletedOptimizations(prev => [...prev, optimizationSteps[i]])}, 400)}
 
-    setIsOptimizing(false);
-  };
+    setIsOptimizing(false)};
 
   return (
     <div className={`bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 ${className}`}></div>
@@ -123,8 +119,7 @@ const isCompleted = null;
                     {step}
                   </span>
                 </div>
-              );
-            })}
+              )})}
           </div>
         )}
 
@@ -142,7 +137,6 @@ const isCompleted = null;
         )}
       </div>
     </div>
-  );
-};
+  )};
 
 export default LoadingOptimizer;

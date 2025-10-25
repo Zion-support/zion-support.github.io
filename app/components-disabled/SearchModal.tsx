@@ -5,31 +5,25 @@ import { ArrowRight } from 'lucide-react';
 
 interface SearchModalProps {
   isOpen: boolean;
-  onClose: () => void;
-}
+  onClose: () => void}
 
 export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
   const [query, setQuery] = useState('');
 
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
+      document.body.style.overflow = 'hidden'} else {
+      document.body.style.overflow = 'unset'}
 
     return () => {
-      document.body.style.overflow = 'unset';
-    };
-  }, [isOpen]);
+      document.body.style.overflow = 'unset'}}, [isOpen]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (query.trim()) {
       // Handle search logic here
       console.log('Searching for:', query);
-      onClose();
-    }
+      onClose()}
   };
 
   if (!isOpen) return null;
@@ -62,8 +56,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
         </form>
       </div>
     </div>
-  );
-}
+  )}
             Contact Us
             
             <ArrowRight className="w-5 h-5 ml-2" />

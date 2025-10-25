@@ -129,7 +129,6 @@ const App: React.FC = () => {
           </div>
         </BrowserRouter>
     </ErrorBoundary>
-  );
-};
+  )};
 
 export default App;

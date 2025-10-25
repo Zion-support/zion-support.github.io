@@ -1,9 +1,8 @@
 import Link from 'next/link';
-import { ArrowRight, CheckCircle, Star, ImageIcon, Upload, Zap, Download, Clock, X, Circle } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, ImageIcon, Upload, Zap, Download, Clock, X, Circle, Users, Target, Award } from 'lucide-react';
 import { Metadata } from 'next';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, Users, Target, Award, ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'About Us - Zion Tech Group',
@@ -45,9 +44,9 @@ const AboutPage = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-20 pb-16 bg-gradient-to-br from-blue-50 to-indigo-100"></section>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-          <div className="text-center"></div>
+      <section className="pt-20 pb-16 bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
               About Zion Tech Group
             </h1>
@@ -60,9 +59,9 @@ const AboutPage = () => {
       </section>
 
       {/* Mission Section */}
-      <section className="py-16 bg-white"></section>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-          <div className="text-center mb-16"></div>
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Mission</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               To empower businesses with cutting-edge technology solutions that drive growth, 
@@ -73,18 +72,18 @@ const AboutPage = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-16 bg-gray-50"></section>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-          <div className="text-center mb-16"></div>
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Values</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               These core values guide everything we do and shape our company culture.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
-              <div key={index} className="text-center"></div>
-                <div className="flex justify-center mb-4"></div>
+              <div key={index} className="text-center">
+                <div className="flex justify-center mb-4">
                   {value.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{value.title}</h3>
@@ -96,8 +95,8 @@ const AboutPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-blue-600"></section>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
+      <section className="py-16 bg-blue-600">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Work With Us?</h2>
           <p className="text-xl text-blue-100 mb-8">
             Let's discuss how we can help transform your business with our technology solutions.
@@ -113,8 +112,7 @@ const AboutPage = () => {
       </section>
 
       <Footer />
-    </div>
-  );
-};
+    </>
+  )};
 
 export default AboutPage;

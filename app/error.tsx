@@ -5,11 +5,9 @@ import { ArrowRight, CheckCircle, Star, ImageIcon, Upload, Zap, Download, Clock,
 
 export default function Error({
   error: _error,
-  reset,
-}: {
+  reset}: {
   error: Error & { digest?: string};
-  reset: () => void;
-}) {
+  reset: () => void}) {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50"></div>
       <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6 text-center"></div>
@@ -33,5 +31,4 @@ export default function Error({
         </div>
       </div>
     </div>
-  );
-}
+  )}

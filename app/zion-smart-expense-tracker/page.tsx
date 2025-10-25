@@ -23,5 +23,4 @@ export default function ZionSmartExpenseTrackerPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

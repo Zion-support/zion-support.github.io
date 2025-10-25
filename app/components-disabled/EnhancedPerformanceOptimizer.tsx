@@ -7,8 +7,7 @@ interface PerformanceMetrics {
   firstContentfulPaint: number;
   largestContentfulPaint: number;
   cumulativeLayoutShift: number;
-  firstInputDelay: number;
-}
+  firstInputDelay: number}
 
 const EnhancedPerformanceOptimizer: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
@@ -24,13 +23,11 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
         largestContentfulPaint: Math.random() * 3000 + 1000,
         cumulativeLayoutShift: Math.random() * 0.1,
         firstInputDelay: Math.random() * 100 + 10
-      });
-    };
+      })};
 
     simulateMetrics();
     const interval = setInterval(simulateMetrics, 5000);
-    return () => clearInterval(interval);
-  }, []);
+    return () => clearInterval(interval)}, []);
 
   const runOptimizations = async () => {
     setIsOptimizing(true);
@@ -49,11 +46,9 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
 
     for (let i = 0; i < optimizationSteps.length; i++) {
       await new Promise(resolve => setTimeout(resolve, 1000));
-      setOptimizations(prev => [...prev, optimizationSteps[i]]);
-    }
+      setOptimizations(prev => [...prev, optimizationSteps[i]])}
 
-    setIsOptimizing(false);
-  };
+    setIsOptimizing(false)};
 
   const getPerformanceScore = (): number => {
     if (!metrics) return 0;
@@ -65,14 +60,12 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
     if (metrics.cumulativeLayoutShift > 0.1) score -= 10;
     if (metrics.firstInputDelay > 100) score -= 10;
     
-    return Math.max(0, score);
-  };
+    return Math.max(0, score)};
 
   const getScoreColor = (score: number): string => {
     if (score >= 90) return 'text-green-400';
     if (score >= 70) return 'text-yellow-400';
-    return 'text-red-400';
-  };
+    return 'text-red-400'};
 
   const score = getPerformanceScore();
 
@@ -165,7 +158,6 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
         )}
       </div>
     </div>
-  );
-};
+  )};
 
 export default EnhancedPerformanceOptimizer;

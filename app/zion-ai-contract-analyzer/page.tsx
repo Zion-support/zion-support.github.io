@@ -23,5 +23,4 @@ export default function ZionAiContractAnalyzerPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

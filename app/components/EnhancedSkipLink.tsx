@@ -4,8 +4,7 @@ import React from 'react';
 interface SkipLinkProps {
   href: string;
   children: React.ReactNode;
-  className?: string;
-}
+  className?: string}
 
 const EnhancedSkipLink: React.FC<SkipLinkProps> = ({
   href,
@@ -26,13 +25,11 @@ const EnhancedSkipLink: React.FC<SkipLinkProps> = ({
         const target = document.querySelector(href);
         if (target) {
           target.scrollIntoView({ behavior: 'smooth' });
-          (target as HTMLElement).focus();
-        }
+          (target as HTMLElement).focus()}
       }}
     >
       {children}
     </a>
-  );
-};
+  )};
 
 export default EnhancedSkipLink;

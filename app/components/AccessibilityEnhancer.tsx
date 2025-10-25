@@ -20,23 +20,20 @@ const AccessibilityEnhancer: React.FC<Props> = ({ children}) => {
       // Add main content landmark
       const mainContent = document.querySelector('main') || document.querySelector('[role="main"]');
       if (mainContent) {
-        mainContent.id = 'main-content';
-      }
+        mainContent.id = 'main-content'}
 
       // Enhance focus management
       const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
       const focusableContent = document.querySelectorAll(focusableElements);
       
       focusableContent.forEach((element) => {
-        element.setAttribute('tabindex', '0');
-      });
+        element.setAttribute('tabindex', '0')});
 
       // Add ARIA labels where missing
       const buttons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
       buttons.forEach((button) => {
         if (!button.textContent?.trim()) {
-          button.setAttribute('aria-label', 'Button');
-        }
+          button.setAttribute('aria-label', 'Button')}
       });
 
       // Enhance form accessibility
@@ -45,19 +42,15 @@ const AccessibilityEnhancer: React.FC<Props> = ({ children}) => {
         const htmlInput = input as HTMLInputElement;
         const label = document.querySelector(`label[for="${htmlInput.id}"]`);
         if (!label && !htmlInput.getAttribute('aria-label')) {
-          htmlInput.setAttribute('aria-label', htmlInput.placeholder || 'Input field');
-        }
-      });
-    };
+          htmlInput.setAttribute('aria-label', htmlInput.placeholder || 'Input field')}
+      })};
 
-    initAccessibility();
-  }, []);
+    initAccessibility()}, []);
 
   return (
     <div className="accessibility-enhanced" role="main"></div>
       {children}
     </div>
-  );
-};
+  )};
 
 export default AccessibilityEnhancer;

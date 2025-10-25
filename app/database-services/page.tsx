@@ -30,5 +30,4 @@ export default function DatabaseservicesPage() {
           </div>
       <Footer />
         </div>
-  );
-}
+  )}

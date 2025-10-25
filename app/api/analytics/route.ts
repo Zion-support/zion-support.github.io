@@ -13,9 +13,7 @@ export async function POST(request: NextRequest) {
       ip: request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip')
     });
     
-    return NextResponse.json({ success: true});
-  } catch (error) {
+    return NextResponse.json({ success: true})} catch (error) {
     console.error('Analytics error:', error);
-    return NextResponse.json({ error: 'Failed to process analytics event' }, { status: 500});
-  }
+    return NextResponse.json({ error: 'Failed to process analytics event' }, { status: 500})}
 }

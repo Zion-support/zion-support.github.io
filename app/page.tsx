@@ -13,33 +13,29 @@ const features = [
     title: &apos;AI Solutions&apos;,
     description: &apos;Cutting-edge artificial intelligence solutions&apos;,
     icon: () => <div className=&quot;w-8 h-8 bg-blue-600 rounded&quot; />,
-    href: &apos;/ai-solutions&apos;
-  },
+    href: &apos;/ai-solutions&apos},
   {
     title: &apos;IT Services&apos;,
     description: &apos;Comprehensive IT support and services&apos;,
     icon: () => <div className=&quot;w-8 h-8 bg-green-600 rounded&quot; />,
-    href: &apos;/it-services&apos;
-  },
+    href: &apos;/it-services&apos},
   {
     title: &apos;Web Development&apos;,
     description: &apos;Modern web applications and websites&apos;,
     icon: () => <div className=&quot;w-8 h-8 bg-purple-600 rounded&quot; />,
-    href: &apos;/web-development&apos;
-  },
+    href: &apos;/web-development&apos},
   {
     title: &apos;Consulting&apos;,
     description: &apos;Expert technology consulting&apos;,
     icon: () => <div className=&quot;w-8 h-8 bg-orange-600 rounded&quot; />,
-    href: &apos;/consulting&apos;
-  }
+    href: &apos;/consulting&apos}
 ];
 
 const stats = [
-  { number: &apos;100+&apos;, label: &apos;Projects Completed&apos; },
-  { number: &apos;50+&apos;, label: &apos;Happy Clients&apos; },
-  { number: &apos;5+&apos;, label: &apos;Years Experience&apos; },
-  { number: &apos;24/7&apos;, label: &apos;Support Available&apos; }
+  { number: &apos;100+&apos;, label: &apos;Projects Completed&apos},
+  { number: &apos;50+&apos;, label: &apos;Happy Clients&apos},
+  { number: &apos;5+&apos;, label: &apos;Years Experience&apos},
+  { number: &apos;24/7&apos;, label: &apos;Support Available&apos}
 ];
 
 export default function HomePage() {
@@ -127,5 +123,4 @@ export default function HomePage() {
 
       <Footer />
     </div>
-  );
-}
+  )}

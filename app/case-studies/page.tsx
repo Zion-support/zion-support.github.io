@@ -134,7 +134,6 @@ const CaseStudiesPage: React.FC = () => {
       </div>
       <Footer />
     </div>
-  );
-};
+  )};
 
 export default CaseStudiesPage;

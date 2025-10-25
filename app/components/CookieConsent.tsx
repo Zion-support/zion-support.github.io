@@ -13,19 +13,16 @@ export default function CookieConsent() {
   useEffect(() => {
     const consent = localStorage.getItem(&apos;cookie-consent&apos;);
     if (!consent) {
-      setIsVisible(true);
-    }
+      setIsVisible(true)}
   }, []);
 
   const acceptCookies = () => {
     localStorage.setItem(&apos;cookie-consent&apos;, &apos;accepted&apos;);
-    setIsVisible(false);
-  };
+    setIsVisible(false)};
 
   const declineCookies = () => {
     localStorage.setItem(&apos;cookie-consent&apos;, &apos;declined&apos;);
-    setIsVisible(false);
-  };
+    setIsVisible(false)};
 
   if (!isVisible) return null;
 
@@ -66,5 +63,4 @@ const Decline = null;
         </button>
       </div>
     </div>
-  );
-}
+  )}

@@ -9,23 +9,19 @@ const EnhancedHero: React.FC = () => {
     {
       icon: Brain,
       title: &apos;AI-Powered Solutions&apos;,
-      description: &apos;Advanced AI technology to transform your business operations and improve efficiency&apos;
-    },
+      description: &apos;Advanced AI technology to transform your business operations and improve efficiency&apos},
     {
       icon: Zap,
       title: &apos;High Performance&apos;,
-      description: &apos;Lightning-fast processing and real-time analytics for optimal results&apos;
-    },
+      description: &apos;Lightning-fast processing and real-time analytics for optimal results&apos},
     {
       icon: Shield,
       title: &apos;Enterprise Security&apos;,
-      description: &apos;Bank-level security with encryption and compliance standards&apos;
-    },
+      description: &apos;Bank-level security with encryption and compliance standards&apos},
     {
       icon: Globe,
       title: &apos;Global Reach&apos;,
-      description: &apos;Worldwide deployment and support for international businesses&apos;
-    }
+      description: &apos;Worldwide deployment and support for international businesses&apos}
   ]
 
   const benefits = [

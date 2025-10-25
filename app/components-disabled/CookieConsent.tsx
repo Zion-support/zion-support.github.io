@@ -8,19 +8,16 @@ export default function CookieConsent() {
   useEffect(() => {
     const consent = localStorage.getItem('cookie-consent');
     if (!consent) {
-      setIsVisible(true);
-    }
+      setIsVisible(true)}
   }, []);
 
   const acceptCookies = () => {
     localStorage.setItem('cookie-consent', 'accepted');
-    setIsVisible(false);
-  };
+    setIsVisible(false)};
 
   const declineCookies = () => {
     localStorage.setItem('cookie-consent', 'declined');
-    setIsVisible(false);
-  };
+    setIsVisible(false)};
 
   if (!isVisible) return null;
 
@@ -49,8 +46,7 @@ export default function CookieConsent() {
         </div>
       </div>
     </div>
-  );
-}
+  )}
             Contact Us
             
             <ArrowRight className="w-5 h-5 ml-2" />

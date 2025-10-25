@@ -30,5 +30,4 @@ export default function MobiledevelopmentPage() {
           </div>
       <Footer />
         </div>
-  );
-}
+  )}

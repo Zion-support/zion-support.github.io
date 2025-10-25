@@ -23,5 +23,4 @@ export default function ZionAiSocialSchedulerProPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

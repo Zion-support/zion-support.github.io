@@ -3,22 +3,19 @@ export interface BundleAnalysis {
   totalSize: number;
   gzipSize: number;
   chunks: ChunkInfo[];
-  recommendations: string[];
-}
+  recommendations: string[]}
 
 export interface ChunkInfo {
   name: string;
   size: number;
   gzipSize: number;
-  modules: ModuleInfo[];
-}
+  modules: ModuleInfo[]}
 
 export interface ModuleInfo {
   name: string;
   size: number;
   gzipSize: number;
-  type: 'js' | 'css' | 'image' | 'font' | 'other';
-}
+  type: 'js' | 'css' | 'image' | 'font' | 'other'}
 
 export class BundleAnalyzer {
   private static instance: BundleAnalyzer;
@@ -26,16 +23,13 @@ export class BundleAnalyzer {
 
   static getInstance(): BundleAnalyzer {
     if (!BundleAnalyzer.instance) {
-      BundleAnalyzer.instance = new BundleAnalyzer();
-    }
-    return BundleAnalyzer.instance;
-  }
+      BundleAnalyzer.instance = new BundleAnalyzer()}
+    return BundleAnalyzer.instance}
 
   // Analyze current bundle
   analyzeBundle(): BundleAnalysis {
     if (this.analysis) {
-      return this.analysis;
-    }
+      return this.analysis}
 
     const chunks = this.analyzeChunks();
     const totalSize = chunks.reduce((sum, chunk) => sum + chunk.size, 0);
@@ -49,8 +43,7 @@ export class BundleAnalyzer {
       recommendations
     };
 
-    return this.analysis;
-  }
+    return this.analysis}
 
   private analyzeChunks(): ChunkInfo[] {
     // This would typically analyze webpack stats or vite build output
@@ -76,8 +69,7 @@ export class BundleAnalyzer {
           { name: 'styles.css', size: 30000, gzipSize: 10000, type: 'css' }
         ]
       }
-    ];
-  }
+    ]}
 
   private generateRecommendations(chunks: ChunkInfo[]): string[] {
     const recommendations: string[] = [];
@@ -85,24 +77,21 @@ export class BundleAnalyzer {
     // Check for large chunks
     const largeChunks = chunks.filter(chunk => chunk.size > 300000);
     if (largeChunks.length > 0) {
-      recommendations.push(`Consider code splitting for large chunks: ${largeChunks.map(c => c.name).join(', ')}`);
-    }
+      recommendations.push(`Consider code splitting for large chunks: ${largeChunks.map(c => c.name).join(', ')}`)}
 
     // Check for unused modules
     const lodashChunk = chunks.find(chunk => 
       chunk.modules.some(module => module.name === 'lodash')
     );
     if (lodashChunk) {
-      recommendations.push('Consider using lodash-es or individual lodash functions to reduce bundle size');
-    }
+      recommendations.push('Consider using lodash-es or individual lodash functions to reduce bundle size')}
 
     // Check for duplicate dependencies
     const reactModules = chunks.flatMap(chunk => 
       chunk.modules.filter(module => module.name.includes('react'))
     );
     if (reactModules.length > 2) {
-      recommendations.push('Check for duplicate React dependencies');
-    }
+      recommendations.push('Check for duplicate React dependencies')}
 
     // Check for large images
     const imageModules = chunks.flatMap(chunk => 
@@ -110,11 +99,9 @@ export class BundleAnalyzer {
     );
     const largeImages = imageModules.filter(module => module.size > 100000);
     if (largeImages.length > 0) {
-      recommendations.push('Optimize large images or use WebP format');
-    }
+      recommendations.push('Optimize large images or use WebP format')}
 
-    return recommendations;
-  }
+    return recommendations}
 
   // Get optimization suggestions
   getOptimizationSuggestions(): string[] {
@@ -122,22 +109,18 @@ export class BundleAnalyzer {
     const suggestions: string[] = [];
 
     if (analysis.totalSize > 1000000) { // 1MB
-      suggestions.push('Bundle size is large. Consider implementing code splitting.');
-    }
+      suggestions.push('Bundle size is large. Consider implementing code splitting.')}
 
     if (analysis.gzipSize / analysis.totalSize > 0.7) {
-      suggestions.push('Gzip compression ratio is low. Check for already compressed assets.');
-    }
+      suggestions.push('Gzip compression ratio is low. Check for already compressed assets.')}
 
     const jsChunks = analysis.chunks.filter(chunk => 
       chunk.modules.some(module => module.type === 'js')
     );
     if (jsChunks.length > 10) {
-      suggestions.push('Too many JS chunks. Consider consolidating smaller chunks.');
-    }
+      suggestions.push('Too many JS chunks. Consider consolidating smaller chunks.')}
 
-    return suggestions;
-  }
+    return suggestions}
 
   // Generate bundle report
   generateReport(): string {
@@ -152,21 +135,17 @@ export class BundleAnalyzer {
 
     report += 'Chunks:\n';
     analysis.chunks.forEach(chunk => {
-      report += `- ${chunk.name}: ${(chunk.size / 1024).toFixed(2)} KB (${(chunk.gzipSize / 1024).toFixed(2)} KB gzipped)\n`;
-    });
+      report += `- ${chunk.name}: ${(chunk.size / 1024).toFixed(2)} KB (${(chunk.gzipSize / 1024).toFixed(2)} KB gzipped)\n`});
 
     report += '\nRecommendations:\n';
     analysis.recommendations.forEach(rec => {
-      report += `- ${rec}\n`;
-    });
+      report += `- ${rec}\n`});
 
     report += '\nOptimization Suggestions:\n';
     suggestions.forEach(suggestion => {
-      report += `- ${suggestion}\n`;
-    });
+      report += `- ${suggestion}\n`});
 
-    return report;
-  }
+    return report}
 }
 
 // Export singleton instance

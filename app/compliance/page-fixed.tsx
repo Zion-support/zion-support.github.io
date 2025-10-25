@@ -47,7 +47,7 @@ const CompliancePageFixed: React.FC = () => {
         {/* Hero Section */}
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
           <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse&quot; /></div>
-          <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse&quot; style={{ animationDelay: &apos;1s&apos; }} /></div>
+          <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse&quot; style={{ animationDelay: &apos;1s&apos}} /></div>
           <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
             <h1 className=&quot;text-5xl md:text-7xl font-bold text-white mb-6 leading-tight&quot;>
               Page Fixed
@@ -133,7 +133,6 @@ const CompliancePageFixed: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
+  )};
 
 export default CompliancePageFixed;

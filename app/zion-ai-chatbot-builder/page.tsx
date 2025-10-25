@@ -23,5 +23,4 @@ export default function ZionAiChatbotBuilderPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

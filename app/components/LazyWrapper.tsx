@@ -5,8 +5,7 @@ import FuturisticLoader from './FuturisticLoader';
 interface LazyWrapperProps {
   children: ReactNode;
   fallback?: ReactNode;
-  className?: string;
-}
+  className?: string}
 
 const LazyWrapper: React.FC<LazyWrapperProps> = ({
   children,
@@ -25,7 +24,6 @@ const LazyWrapper: React.FC<LazyWrapperProps> = ({
         {children}
       </Suspense>
     </div>
-  );
-};
+  )};
 
 export default LazyWrapper;

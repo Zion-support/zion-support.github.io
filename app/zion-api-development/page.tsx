@@ -23,5 +23,4 @@ export default function ZionApiDevelopmentPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

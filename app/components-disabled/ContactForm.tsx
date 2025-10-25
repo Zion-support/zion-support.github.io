@@ -10,8 +10,7 @@ interface FormData {
   phone: string;
   company: string;
   message: string;
-  service: string;
-}
+  service: string}
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
@@ -30,8 +29,7 @@ const ContactForm: React.FC = () => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
-    });
-  };
+    })};
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -53,9 +51,7 @@ const ContactForm: React.FC = () => {
         company: '',
         message: '',
         service: ''
-      });
-    }, 3000);
-  };
+      })}, 3000)};
 
   const services = [
     'AI Solutions',
@@ -75,8 +71,7 @@ const ContactForm: React.FC = () => {
         <h3 className="text-xl font-semibold text-white mb-2">Message Sent!</h3>
         <p className="text-gray-300">Thank you for reaching out. We&apos;ll get back to you soon.</p>
       </div>
-    );
-  }
+    )}
 
   return (
     <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
@@ -220,7 +215,6 @@ const ContactForm: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default ContactForm;

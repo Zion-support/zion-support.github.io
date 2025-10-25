@@ -6,9 +6,7 @@ import Link from 'next/link'
 interface BreadcrumbProps {
   items: Array<{
     label: string;
-    href?: string;
-  }>;
-}
+    href?: string}>}
 
 const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
   return (

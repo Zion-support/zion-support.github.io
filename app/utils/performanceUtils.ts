@@ -5,8 +5,7 @@ export const defaultConfig = {
 };
 
 export const defaultFunction = () => {
-  return null;
-};
+  return null};
 
 // Performance utilities object
 export const performanceUtils = {
@@ -14,8 +13,7 @@ export const performanceUtils = {
     const start = performance.now();
     fn();
     const end = performance.now();
-    console.log(`${name} took ${end - start} milliseconds`);
-  },
+    console.log(`${name} took ${end - start} milliseconds`)},
 
   monitorWebVitals: () => {
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -23,21 +21,16 @@ export const performanceUtils = {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
-            console.log('LCP:', entry.startTime);
-          }
+            console.log('LCP:', entry.startTime)}
           if (entry.entryType === 'first-input') {
-            console.log('FID:', entry.processingStart - entry.startTime);
-          }
-          console.log('Performance metric:', entry.name, entry.value);
-        }
+            console.log('FID:', entry.processingStart - entry.startTime)}
+          console.log('Performance metric:', entry.name, entry.value)}
       });
       
       try {
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'measure', 'navigation'] });
-      } catch (e) {
+        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'measure', 'navigation'] })} catch (e) {
         // Fallback for older browsers
-        console.log('Performance monitoring not fully supported');
-      }
+        console.log('Performance monitoring not fully supported')}
     }
   },
 
@@ -51,10 +44,8 @@ export const performanceUtils = {
             const img = entry.target as HTMLImageElement;
             img.src = img.dataset.src || '';
             img.classList.remove('lazy');
-            imageObserver.unobserve(img);
-          }
-        });
-      });
+            imageObserver.unobserve(img)}
+        })});
 
       images.forEach(img => imageObserver.observe(img));
       
@@ -62,12 +53,9 @@ export const performanceUtils = {
       const regularImages = document.querySelectorAll('img:not([data-src])');
       regularImages.forEach(img => {
         if (!img.loading) {
-          img.loading = 'lazy';
-        }
-      });
-    }
-    return true;
-  },
+          img.loading = 'lazy'}
+      })}
+    return true},
 
   optimizeFonts: () => {
     if (typeof window !== 'undefined') {
@@ -84,14 +72,8 @@ export const performanceUtils = {
         link.as = font.as;
         if (font.type) link.type = font.type;
         link.crossOrigin = 'anonymous';
-        document.head.appendChild(link);
-      });
-    }
-    return true;
-  },
-
-
-  },
+        document.head.appendChild(link)})}
+    return true}},
 
   cleanup: () => {
     // Cleanup function for component unmount
@@ -99,7 +81,6 @@ export const performanceUtils = {
       // Remove any performance observers or timers
       const observers = document.querySelectorAll('[data-performance-observer]');
       observers.forEach(observer => observer.remove());
-      console.log('Performance utilities cleanup');
-    }
+      console.log('Performance utilities cleanup')}
   }
 };

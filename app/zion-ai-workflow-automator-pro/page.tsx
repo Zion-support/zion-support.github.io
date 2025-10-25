@@ -23,5 +23,4 @@ export default function ZionAiWorkflowAutomatorProPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

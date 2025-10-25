@@ -23,5 +23,4 @@ export default function ZionAnalyticsProPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

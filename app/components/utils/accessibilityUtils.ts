@@ -10,8 +10,7 @@ export const accessibilityUtils = {
   focusElement: (selector: string) => {
     const element = document.querySelector(selector) as HTMLElement;
     if (element) {
-      element.focus();
-    }
+      element.focus()}
   },
 
   // Skip to main content
@@ -19,8 +18,7 @@ export const accessibilityUtils = {
     const main = document.querySelector('main') as HTMLElement;
     if (main) {
       main.focus();
-      main.scrollIntoView();
-    }
+      main.scrollIntoView()}
   },
 
   // Announce to screen readers
@@ -32,15 +30,12 @@ export const accessibilityUtils = {
     announcement.textContent = message;
     document.body.appendChild(announcement);
     setTimeout(() => {
-      document.body.removeChild(announcement);
-    }, 1000);
-  },
+      document.body.removeChild(announcement)}, 1000)},
 
   // Check if element is visible
   isVisible: (element: HTMLElement) => {
     const rect = element.getBoundingClientRect();
-    return rect.width > 0 && rect.height > 0;
-  },
+    return rect.width > 0 && rect.height > 0},
 
   // Get accessible name
   getAccessibleName: (element: HTMLElement) => {
@@ -49,8 +44,7 @@ export const accessibilityUtils = {
            element.textContent ||
            element.getAttribute('alt') ||
            element.getAttribute('title') ||
-           '';
-  }
+           ''}
 };
 
 export default accessibilityUtils;

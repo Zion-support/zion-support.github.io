@@ -23,5 +23,4 @@ export default function ZionAiCustomerSentimentTrackerPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

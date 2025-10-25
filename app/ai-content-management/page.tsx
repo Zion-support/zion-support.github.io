@@ -29,5 +29,4 @@ export default function AicontentmanagementPage() {
       </div>
       <Footer />
     </div>
-  );
-}
+  )}

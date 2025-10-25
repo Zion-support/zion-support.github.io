@@ -53,10 +53,8 @@ const UltimateBusinessIntelligence2025Banner = () => {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % content.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, [content.length]);
+      setCurrentSlide((prev) => (prev + 1) % content.length)}, 5000);
+    return () => clearInterval(timer)}, [content.length]);
 
   // const handleClose = () => {
   //   setIsVisible(false);
@@ -205,8 +203,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
             { value: '500+', label: 'Enterprise Clients' },
             { value: '30,000%', label: 'Average ROI' },
             { value: '99.9%', label: 'Success Rate' },
-            { value: '5M+', label: 'Data Points Processed' },
-          ].map((stat, index) => (
+            { value: '5M+', label: 'Data Points Processed' }].map((stat, index) => (
             <div key={index} className="text-center">
               <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
               <div className="text-gray-300">{stat.label}</div>
@@ -214,6 +211,5 @@ const UltimateBusinessIntelligence2025Banner = () => {
           ))}
         </div>
     </section>
-  );
-}
+  )}
 export default UltimateBusinessIntelligence2025Banner;

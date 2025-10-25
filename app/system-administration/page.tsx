@@ -23,5 +23,4 @@ export default function SystemAdministrationPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

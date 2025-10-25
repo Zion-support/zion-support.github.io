@@ -7,8 +7,7 @@ interface PerformanceOptimizerProps {
   enableMonitoring?: boolean;
   enableImageOptimization?: boolean;
   enableFontOptimization?: boolean;
-  enableThirdPartyOptimization?: boolean;
-}
+  enableThirdPartyOptimization?: boolean}
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   children,
@@ -22,37 +21,30 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   useEffect(() => {
     const optimize = () => {
       if (enableMonitoring) {
-        performanceUtils.mark('performance-optimization-start');
-      }
+        performanceUtils.mark('performance-optimization-start')}
 
       // Simulate optimization tasks
       if (enableImageOptimization) {
         // Image optimization would be handled by Next.js Image component
-        performanceUtils.mark('image-optimization-complete');
-      }
+        performanceUtils.mark('image-optimization-complete')}
 
       if (enableFontOptimization) {
         // Font optimization would be handled by Next.js font optimization
-        performanceUtils.mark('font-optimization-complete');
-      }
+        performanceUtils.mark('font-optimization-complete')}
 
       if (enableThirdPartyOptimization) {
         // Third-party optimization would be handled by Next.js
-        performanceUtils.mark('third-party-optimization-complete');
-      }
+        performanceUtils.mark('third-party-optimization-complete')}
 
       performanceUtils.mark('performance-optimization-end');
       performanceUtils.measure('performance-optimization', 'performance-optimization-start', 'performance-optimization-end');
-      setIsOptimized(true);
-    };
+      setIsOptimized(true)};
 
     // Run optimizations after component mount
     const timer = setTimeout(optimize, 100);
 
     return () => {
-      clearTimeout(timer);
-    };
-  }, []);
+      clearTimeout(timer)}}, []);
 
   return (
     <div className="performance-optimizer"></div>
@@ -62,8 +54,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         </div>
       )}
     </div>
-  );
-};
+  )};
 
 export default PerformanceOptimizer;
 

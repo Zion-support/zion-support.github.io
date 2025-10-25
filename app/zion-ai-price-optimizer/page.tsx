@@ -23,5 +23,4 @@ export default function ZionAiPriceOptimizerPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

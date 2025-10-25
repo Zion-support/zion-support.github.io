@@ -78,7 +78,6 @@ const ErrorHandler = null;
       </div>
       <Footer />
     </div>
-  );
-};
+  )};
 
 export default Page;

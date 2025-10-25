@@ -23,5 +23,4 @@ export default function ZionAiDataVisualizerPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

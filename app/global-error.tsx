@@ -5,11 +5,9 @@ import { ArrowRight, CheckCircle, Star, ImageIcon, Upload, Zap, Download, Clock,
 
 export default function GlobalError({
   error: _error,
-  reset,
-}: {
+  reset}: {
   error: Error & { digest?: string};
-  reset: () => void;
-}) {
+  reset: () => void}) {
   return (
     <html>
       <body>
@@ -37,5 +35,4 @@ export default function GlobalError({
         </div>
       </body>
     </html>
-  );
-}
+  )}

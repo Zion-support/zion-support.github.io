@@ -8,29 +8,25 @@ import { Download } from &apos;lucide-react&apos;;
 
 interface ImageOptimizerProps {
   onImageOptimized?: (optimizedImage: File) => void;
-  className?: string;
-}
+  className?: string}
 
 const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   onImageOptimized,
-  className = &apos;&apos;
-}) => {
+  className = &apos;&apos}) => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [optimizedFile, setOptimizedFile] = useState<File | null>(null);
   const [isOptimizing, setIsOptimizing] = useState(false);
   const [optimizationStats, setOptimizationStats] = useState<{
     originalSize: number;
     optimizedSize: number;
-    compressionRatio: number;
-  } | null>(null);
+    compressionRatio: number} | null>(null);
 
   const handleFileSelect = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file && file.type.startsWith(&apos;image/&apos;)) {
       setSelectedFile(file);
       setOptimizedFile(null);
-      setOptimizationStats(null);
-    }
+      setOptimizationStats(null)}
   }, []);
 
   const optimizeImage = useCallback(async () => {
@@ -68,20 +64,14 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
             setOptimizationStats({
               originalSize,
               optimizedSize,
-const compressionRatio = null;
-            });
+const compressionRatio = null});
             
-            onImageOptimized?.(optimizedFile);
-          }
-        }, &apos;image/jpeg&apos;, 0.8);
-      };
+            onImageOptimized?.(optimizedFile)}
+        }, &apos;image/jpeg&apos;, 0.8)};
       
-      img.src = URL.createObjectURL(selectedFile);
-    } catch (error) {
-      console.error(&apos;Error optimizing image:&apos;, error);
-    } finally {
-      setIsOptimizing(false);
-    }
+      img.src = URL.createObjectURL(selectedFile)} catch (error) {
+      console.error(&apos;Error optimizing image:&apos;, error)} finally {
+      setIsOptimizing(false)}
   }, [selectedFile, onImageOptimized]);
 
   const downloadOptimizedImage = useCallback(() => {
@@ -93,8 +83,7 @@ const compressionRatio = null;
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-    }
+      URL.revokeObjectURL(url)}
   }, [optimizedFile]);
 
   return (
@@ -121,7 +110,7 @@ const compressionRatio = null;
           >
             <Upload className=&quot;w-8 h-8 text-gray-400&quot; />
             <span className=&quot;text-gray-300&quot;>
-              {selectedFile ? selectedFile.name : &apos;Click to select an image&apos;}
+              {selectedFile ? selectedFile.name : &apos;Click to select an image&apos}
             </span>
           </label>
         </div>
@@ -186,7 +175,6 @@ const compressionRatio = null;
         )}
       </div>
     </div>
-  );
-};
+  )};
 
 export default ImageOptimizer;

@@ -23,5 +23,4 @@ export default function ZionSmartCrmAutomationPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

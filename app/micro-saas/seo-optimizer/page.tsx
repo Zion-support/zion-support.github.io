@@ -24,5 +24,4 @@ export default function SeoOptimizerPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

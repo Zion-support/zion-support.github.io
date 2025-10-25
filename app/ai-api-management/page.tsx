@@ -34,7 +34,6 @@ const Page = null;
 
       <Footer />
     </div>
-  );
-};
+  )};
 
 export default PagePage;

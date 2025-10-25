@@ -30,5 +30,4 @@ export default function SpecializedservicesPage() {
           </div>
       <Footer />
         </div>
-  );
-}
+  )}

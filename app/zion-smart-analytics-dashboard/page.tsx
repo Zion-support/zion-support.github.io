@@ -23,5 +23,4 @@ export default function ZionSmartAnalyticsDashboardPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

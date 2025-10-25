@@ -24,5 +24,4 @@ export default function DocumentProcessorPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

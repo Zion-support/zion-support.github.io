@@ -48,12 +48,12 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-4 py-12"></div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8"></div>
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
-          <div className="space-y-4"></div>
-            <div className="flex items-center space-x-2"></div>
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center"></div>
+          <div className="space-y-4">
+            <div className="flex items-center space-x-2">
+              <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">Z</span>
               </div>
               <span className="text-white font-bold text-xl">Zion Tech Group</span>
@@ -61,7 +61,7 @@ const Footer: React.FC = () => {
             <p className="text-gray-300">
               Leading provider of AI and IT solutions, empowering businesses with cutting-edge technology and innovative digital transformation services.
             </p>
-            <div className="flex space-x-4"></div>
+            <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
@@ -164,8 +164,7 @@ const Footer: React.FC = () => {
         </div>
       </div>
     </footer>
-  );
-};
+  )};
 
 Footer.displayName = 'Footer';
 

@@ -7,8 +7,7 @@ export default function LazyWrapper({ children }: { children: React.ReactNode })
     <div className="lazy-wrapper">
       {children}
     </div>
-  );
-}
+  )}
             Contact Us
             
             <ArrowRight className="w-5 h-5 ml-2" />

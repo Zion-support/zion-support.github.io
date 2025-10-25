@@ -24,5 +24,4 @@ export default function SocialManagerPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

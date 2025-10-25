@@ -12,16 +12,13 @@ const Navigation = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+      setIsScrolled(window.scrollY > 50)};
 
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    return () => window.removeEventListener('scroll', handleScroll)}, []);
 
   const closeAllMenus = () => {
-    setIsOpen(false);
-  };
+    setIsOpen(false)};
 
   const navigation = [
     { name: 'Home', href: '/', icon: Home },
@@ -62,8 +59,7 @@ const Navigation = () => {
                     <span>{item.name}</span>
                   </Link>
                 </div>
-              );
-            })}
+              )})}
           </div>
 
           {/* CTA Button */}
@@ -112,8 +108,7 @@ const Navigation = () => {
                       <span>{item.name}</span>
                     </Link>
                   </div>
-                );
-              })}
+                )})}
               <div className="pt-4 border-t border-slate-700"></div>
                 <Link
                   href="/contact"
@@ -128,7 +123,6 @@ const Navigation = () => {
         )}
       </div>
     </nav>
-  );
-};
+  )};
 
 export default Navigation;

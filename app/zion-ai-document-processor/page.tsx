@@ -23,5 +23,4 @@ export default function ZionAiDocumentProcessorPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

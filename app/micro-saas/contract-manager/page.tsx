@@ -24,5 +24,4 @@ export default function ContractManagerPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

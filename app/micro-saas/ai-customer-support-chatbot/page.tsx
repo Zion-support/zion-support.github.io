@@ -24,5 +24,4 @@ export default function AiCustomerSupportChatbotPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

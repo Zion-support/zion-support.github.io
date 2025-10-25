@@ -23,5 +23,4 @@ export default function ZionAiCrmOptimizerPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

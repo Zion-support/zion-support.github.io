@@ -23,5 +23,4 @@ export default function ZionCustomerInsightsPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

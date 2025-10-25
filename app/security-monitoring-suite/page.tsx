@@ -23,5 +23,4 @@ export default function SecurityMonitoringSuitePage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

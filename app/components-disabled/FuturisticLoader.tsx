@@ -13,8 +13,7 @@ export default function FuturisticLoader() {
         <p className="text-gray-400">Please wait while we prepare your experience</p>
       </div>
     </div>
-  );
-}
+  )}
             Contact Us
             
             <ArrowRight className="w-5 h-5 ml-2" />

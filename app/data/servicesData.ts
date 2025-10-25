@@ -18,8 +18,7 @@ export interface Service {
   icon?: string;
   href: string;
   popular?: boolean;
-  category: "ai" | "it" | "cloud" | "security" | "data" | "automation";
-}
+  category: "ai" | "it" | "cloud" | "security" | "data" | "automation"}
 
 export const aiServices: Service[] = [
   {

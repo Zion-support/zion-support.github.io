@@ -43,22 +43,19 @@ export interface TestSuite {
 
 // Mock utilities
 export const createMock = <T,>(defaultValue: T): T => {
-  return defaultValue;
-};
+  return defaultValue};
 
 export const mockFunction = <T extends (..._args: unknown[]) => unknown,>(
   _implementation?: T
 ): T => {
-  return (() => {}) as T;
-};
+  return (() => {}) as T};
 
 // Test runner component
 interface TestRunnerProps {
   config: TestConfig;
   onTestComplete?: (_results: TestSuite[]) => void;
   onPerformanceUpdate?: (_metrics: PerformanceMetrics) => void;
-  onCoverageUpdate?: (_metrics: CoverageMetrics) => void;
-}
+  onCoverageUpdate?: (_metrics: CoverageMetrics) => void}
 
 const TestRunner: React.FC<TestRunnerProps> = ({
   config,
@@ -105,8 +102,7 @@ const TestRunner: React.FC<TestRunnerProps> = ({
       renderTime: endTime - startTime,
       memoryUsage: endMemory - startMemory,
       timestamp: new Date().toISOString()
-    };
-  }
+    }}
   const measureCoverage = async (): Promise<CoverageMetrics> => {
     // Simulate coverage measurement
     return {
@@ -114,8 +110,7 @@ const TestRunner: React.FC<TestRunnerProps> = ({
       branches: Math.floor(Math.random() * 100),
       functions: Math.floor(Math.random() * 100),
       lines: Math.floor(Math.random() * 100)
-    };
-  }
+    }}
   const runAccessibilityTests = async (): Promise<TestSuite> => {
     const tests: TestResult[] = [  ];
     // Check for alt text on images
@@ -149,14 +144,11 @@ const TestRunner: React.FC<TestRunnerProps> = ({
       name: 'Accessibility Tests',
       tests,
       duration: 0,
-      status: passedTests === totalTests ? 'passed' : passedTests > 0 ? 'partial' : 'failed',
-    };
-  };
+      status: passedTests === totalTests ? 'passed' : passedTests > 0 ? 'partial' : 'failed'}};
 
   React.useEffect(() => {
     if (config.enablePerformance || config.enableCoverage || config.enableAccessibility) {
-      runTests();
-    }
+      runTests()}
   }, [runTests, config])
   return null
 }

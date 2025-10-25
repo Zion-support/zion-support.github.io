@@ -23,5 +23,4 @@ export default function ZionCrmIntelligencePage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

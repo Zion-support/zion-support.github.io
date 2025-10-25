@@ -23,5 +23,4 @@ export default function ZionAiTaskSchedulerPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

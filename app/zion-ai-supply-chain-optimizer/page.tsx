@@ -23,5 +23,4 @@ export default function ZionAiSupplyChainOptimizerPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

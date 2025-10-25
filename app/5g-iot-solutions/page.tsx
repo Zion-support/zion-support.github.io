@@ -29,5 +29,4 @@ export default function GiotsolutionsPage() {
       </div>
       <Footer />
     </div>
-  );
-}
+  )}

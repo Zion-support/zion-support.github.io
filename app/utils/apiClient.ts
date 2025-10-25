@@ -3,15 +3,13 @@ interface RequestOptions {
   method?: string;
   headers?: Record<string, string>;
   body?: string | FormData;
-  timeout?: number;
-}
+  timeout?: number}
 
 interface ApiResponse<T = unknown> {
   data: T;
   status: number;
   statusText: string;
-  headers: Record<string, string>;
-}
+  headers: Record<string, string>}
 
 class ApiClient {
   private baseURL: string;
@@ -21,9 +19,7 @@ class ApiClient {
     this.baseURL = baseURL;
     this.defaultHeaders = {
       'Content-Type': 'application/json',
-      ...defaultHeaders,
-    };
-  }
+      ...defaultHeaders}}
 
   private async makeRequest<T>(url: string, options: RequestOptions = {}): Promise<ApiResponse<T>> {
     const controller = new AbortController();
@@ -34,68 +30,52 @@ class ApiClient {
         method: options.method || 'GET',
         headers: {
           ...this.defaultHeaders,
-          ...options.headers,
-        },
+          ...options.headers},
         body: options.body,
-        signal: controller.signal,
-      });
+        signal: controller.signal});
 
       clearTimeout(timeoutId);
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
+        throw new Error(`HTTP error! status: ${response.status}`)}
 
       const data = await response.json();
       return {
         data,
         status: response.status,
         statusText: response.statusText,
-        headers: Object.fromEntries(response.headers.entries()),
-      };
-    } catch (error) {
+        headers: Object.fromEntries(response.headers.entries())}} catch (error) {
       clearTimeout(timeoutId);
-      throw error;
-    }
+      throw error}
   }
 
   async get<T>(url: string, options: RequestOptions = {}): Promise<ApiResponse<T>> {
     return this.makeRequest<T>(`${this.baseURL}${url}`, {
       method: 'GET',
-      ...options,
-    });
-  }
+      ...options})}
 
   async post<T>(url: string, data: unknown, options: RequestOptions = {}): Promise<ApiResponse<T>> {
     return this.makeRequest<T>(`${this.baseURL}${url}`, {
       method: 'POST',
       body: JSON.stringify(data),
-      ...options,
-    });
-  }
+      ...options})}
 
   async put<T>(url: string, data: unknown, options: RequestOptions = {}): Promise<ApiResponse<T>> {
     return this.makeRequest<T>(`${this.baseURL}${url}`, {
       method: 'PUT',
       body: JSON.stringify(data),
-      ...options,
-    });
-  }
+      ...options})}
 
   async delete<T>(url: string, options: RequestOptions = {}): Promise<ApiResponse<T>> {
     return this.makeRequest<T>(`${this.baseURL}${url}`, {
       method: 'DELETE',
-      ...options,
-    });
-  }
+      ...options})}
 
   async patch<T>(url: string, data: unknown, options: RequestOptions = {}): Promise<ApiResponse<T>> {
     return this.makeRequest<T>(`${this.baseURL}${url}`, {
       method: 'PATCH',
       body: JSON.stringify(data),
-      ...options,
-    });
-  }
+      ...options})}
 }
 
 export default ApiClient;

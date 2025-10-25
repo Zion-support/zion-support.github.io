@@ -23,5 +23,4 @@ export default function ZionProjectMasterPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

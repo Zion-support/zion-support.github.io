@@ -46,18 +46,14 @@ const HomePage: React.FC = () => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('event', 'phone_click', {
         event_category: 'engagement',
-        event_label: 'header_phone',
-      });
-    }
+        event_label: 'header_phone'})}
   }, []))
   // Analytics tracking for email clicks - optimized
   const _handleEmailClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('event', 'email_click', {
         event_category: 'engagement',
-        event_label: 'header_email',
-      });
-    }
+        event_label: 'header_email'})}
   }, []))
   const features = [
     {
@@ -68,23 +64,19 @@ const HomePage: React.FC = () => {
     {
       icon: '☁️',
       title: 'Cloud Architecture',
-      description: 'Scalable and secure cloud solutions designed to grow with your business needs.',
-    },
+      description: 'Scalable and secure cloud solutions designed to grow with your business needs.'},
     {
       icon: '📱',
       title: 'Mobile Development',
-      description: 'Native and cross-platform mobile applications that deliver exceptional user experiences.',
-    },
+      description: 'Native and cross-platform mobile applications that deliver exceptional user experiences.'},
     {
       icon: '🔒',
       title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your digital assets and ensure compliance.',
-    },
+      description: 'Comprehensive security solutions to protect your digital assets and ensure compliance.'},
     {
       icon: '📊',
       title: 'Data Analytics',
-      description: 'Transform raw data into actionable insights that drive business growth and efficiency.',
-    },
+      description: 'Transform raw data into actionable insights that drive business growth and efficiency.'},
     {
       icon: '👥',
       title: 'Expert Team',
@@ -211,7 +203,6 @@ const HomePage: React.FC = () => {
         </AccessibilityEnhancer>
       </PerformanceOptimizer>
     </SEOOptimizer>
-  );
-};
+  )};
 
 export default HomePage;

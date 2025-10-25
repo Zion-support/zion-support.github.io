@@ -30,5 +30,4 @@ export default function IttrainingPage() {
           </div>
       <Footer />
         </div>
-  );
-}
+  )}

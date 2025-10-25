@@ -24,5 +24,4 @@ export default function EmployeeDirectoryPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

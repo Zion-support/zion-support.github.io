@@ -23,5 +23,4 @@ export default function ZionBlockchainSolutionsPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

@@ -23,5 +23,4 @@ export default function ZionAiImageGeneratorPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

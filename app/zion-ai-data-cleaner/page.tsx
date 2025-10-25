@@ -23,5 +23,4 @@ export default function ZionAiDataCleanerPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

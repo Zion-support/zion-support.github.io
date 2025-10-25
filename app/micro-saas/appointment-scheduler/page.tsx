@@ -24,5 +24,4 @@ export default function AppointmentSchedulerPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

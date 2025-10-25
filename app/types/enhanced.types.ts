@@ -7,8 +7,7 @@ export interface PerformanceMetrics {
   cumulativeLayoutShift: number;
   firstInputDelay: number;
   timeToInteractive: number;
-  firstMeaningfulPaint: number;
-}
+  firstMeaningfulPaint: number}
 
 export interface ErrorContext {
   url?: string;
@@ -17,8 +16,7 @@ export interface ErrorContext {
   userId?: string;
   sessionId?: string;
   action?: string;
-  stack?: string;
-}
+  stack?: string}
 
 export interface ErrorReport {
   id: string;
@@ -28,8 +26,7 @@ export interface ErrorReport {
   severity: ErrorSeverity;
   resolved: boolean;
   createdAt: string;
-  updatedAt?: string;
-}
+  updatedAt?: string}
 
 export type ErrorSeverity = 'low' | 'medium' | 'high' | 'critical';
 
@@ -43,20 +40,17 @@ export interface Service {
   pricing: {
     basic: number;
     pro: number;
-    enterprise: number;
-  };
+    enterprise: number};
   benefits: string[];
   useCases: string[];
   marketPrice: string;
   contactInfo: {
     phone: string;
     email: string;
-    website: string;
-  };
+    website: string};
   link: string;
   category: 'ai' | 'it' | '5g' | 'blockchain' | 'iot';
-  tags: string[];
-}
+  tags: string[]}
 
 export interface User {
   id: string;
@@ -65,15 +59,13 @@ export interface User {
   role: 'admin' | 'user' | 'guest';
   preferences?: UserPreferences;
   createdAt: string;
-  lastLogin?: string;
-}
+  lastLogin?: string}
 
 export interface UserPreferences {
   theme: 'light' | 'dark' | 'auto';
   language: string;
   notifications: boolean;
-  analytics: boolean;
-}
+  analytics: boolean}
 
 export interface ContactFormData {
   name: string;
@@ -83,16 +75,14 @@ export interface ContactFormData {
   service: string;
   phone?: string;
   budget?: string;
-  timeline?: string;
-}
+  timeline?: string}
 
 export interface AnalyticsEvent {
   name: string;
   timestamp: number;
   properties?: Record<string, string | number | boolean | null>;
   userId?: string;
-  sessionId?: string;
-}
+  sessionId?: string}
 
 export interface SEOData {
   title: string;
@@ -103,16 +93,14 @@ export interface SEOData {
   ogDescription?: string;
   ogImage?: string;
   twitterCard?: 'summary' | 'summary_large_image';
-  structuredData?: Record<string, unknown>;
-}
+  structuredData?: Record<string, unknown>}
 
 export interface NavigationItem {
   name: string;
   href: string;
   icon?: React.ComponentType<{ className?: string }>;
   submenu?: NavigationItem[];
-  external?: boolean;
-}
+  external?: boolean}
 
 export interface PerformanceConfig {
   enableLazyLoading: boolean;
@@ -120,23 +108,20 @@ export interface PerformanceConfig {
   enableCodeSplitting: boolean;
   enableImageOptimization: boolean;
   enableBundleAnalysis: boolean;
-  enableServiceWorker: boolean;
-}
+  enableServiceWorker: boolean}
 
 export interface AccessibilityConfig {
   enableKeyboardNavigation: boolean;
   enableScreenReader: boolean;
   enableHighContrast: boolean;
   enableReducedMotion: boolean;
-  enableFocusIndicators: boolean;
-}
+  enableFocusIndicators: boolean}
 
 // Utility types
 export type Optional<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>;
 export type RequiredFields<T, K extends keyof T> = T & Required<Pick<T, K>>;
 export type DeepPartial<T> = {
-  [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P];
-};
+  [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P]};
 
 // API Response types
 export interface ApiResponse<T = unknown> {
@@ -144,46 +129,39 @@ export interface ApiResponse<T = unknown> {
   data?: T;
   error?: string;
   message?: string;
-  timestamp: string;
-}
+  timestamp: string}
 
 export interface PaginatedResponse<T = unknown> extends ApiResponse<T[]> {
   pagination: {
     page: number;
     limit: number;
     total: number;
-    totalPages: number;
-  };
-}
+    totalPages: number}}
 
 // Form validation types
 export interface ValidationError {
   field: string;
   message: string;
-  code: string;
-}
+  code: string}
 
 export interface FormState<T = Record<string, unknown>> {
   values: T;
   errors: ValidationError[];
   touched: Record<keyof T, boolean>;
   isSubmitting: boolean;
-  isValid: boolean;
-}
+  isValid: boolean}
 
 // Component props types
 export interface BaseComponentProps {
   className?: string;
   children?: React.ReactNode;
   id?: string;
-  'data-testid'?: string;
-}
+  'data-testid'?: string}
 
 export interface LoadingProps extends BaseComponentProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: 'primary' | 'secondary' | 'white';
-  text?: string;
-}
+  text?: string}
 
 export interface ButtonProps extends BaseComponentProps {
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger';
@@ -191,8 +169,7 @@ export interface ButtonProps extends BaseComponentProps {
   disabled?: boolean;
   loading?: boolean;
   onClick?: () => void;
-  type?: 'button' | 'submit' | 'reset';
-}
+  type?: 'button' | 'submit' | 'reset'}
 
 export interface InputProps extends BaseComponentProps {
   type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'search';
@@ -204,5 +181,4 @@ export interface InputProps extends BaseComponentProps {
   disabled?: boolean;
   required?: boolean;
   error?: string;
-  label?: string;
-}
+  label?: string}

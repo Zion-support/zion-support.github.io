@@ -6,8 +6,7 @@ interface AnimatedTextProps {
   text: string;
   delay?: number;
   speed?: number;
-  className?: string;
-}
+  className?: string}
 
 const AnimatedText: React.FC<AnimatedTextProps> = ({ 
   text, 
@@ -23,20 +22,16 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
     const timer = setTimeout(() => {
       if (currentIndex < text.length) {
         setDisplayedText(prev => prev + text[currentIndex]);
-        setCurrentIndex(prev => prev + 1);
-      }
+        setCurrentIndex(prev => prev + 1)}
     }, speed);
 
-    return () => clearTimeout(timer);
-  }, [currentIndex, text, speed]);
+    return () => clearTimeout(timer)}, [currentIndex, text, speed]);
 
   useEffect(() => {
     const cursorTimer = setInterval(() => {
-      setShowCursor(prev => !prev);
-    }, 500);
+      setShowCursor(prev => !prev)}, 500);
 
-    return () => clearInterval(cursorTimer);
-  }, []);
+    return () => clearInterval(cursorTimer)}, []);
 
   return (
     <div className={className}>
@@ -45,7 +40,6 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
         {showCursor && <span className="animate-pulse">|</span>}
       </span>
     </div>
-  );
-};
+  )};
 
 export default AnimatedText;

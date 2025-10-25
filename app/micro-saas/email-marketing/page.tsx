@@ -24,5 +24,4 @@ export default function EmailMarketingPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

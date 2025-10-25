@@ -23,5 +23,4 @@ export default function ZionAiCodeAssistantPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

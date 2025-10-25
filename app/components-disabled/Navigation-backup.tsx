@@ -9,12 +9,9 @@ interface NavigationBackupProps {
     href: string;
     submenu?: Array<{
       label: string;
-      href: string;
-    }>;
-  }>;
+      href: string}>}>;
   ctaText?: string;
-  ctaHref?: string;
-}
+  ctaHref?: string}
 
 const NavigationBackup: React.FC<NavigationBackupProps> = ({
   logo,
@@ -26,17 +23,14 @@ const NavigationBackup: React.FC<NavigationBackupProps> = ({
     { label: 'Contact', href: '/contact' }
   ],
   ctaText = 'Get Started',
-  ctaHref = '/contact',
-}) => {
+  ctaHref = '/contact'}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null)
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+    setIsMenuOpen(!isMenuOpen)};
 
   const _toggleSubmenu = (label: string) => {
-    setActiveSubmenu(activeSubmenu === label ? null : label);
-  };
+    setActiveSubmenu(activeSubmenu === label ? null : label)};
 
   return (
     <nav className="...">

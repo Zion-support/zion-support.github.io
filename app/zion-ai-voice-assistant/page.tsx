@@ -23,5 +23,4 @@ export default function ZionAiVoiceAssistantPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

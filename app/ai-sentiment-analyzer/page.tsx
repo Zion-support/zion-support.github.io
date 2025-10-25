@@ -29,5 +29,4 @@ export default function AiSentimentAnalyzerPage() {
       </div>
       <Footer />
     </div>
-  );
-}
+  )}

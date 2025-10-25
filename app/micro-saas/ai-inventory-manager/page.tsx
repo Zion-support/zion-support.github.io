@@ -24,5 +24,4 @@ export default function AiInventoryManagerPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

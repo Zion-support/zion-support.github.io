@@ -24,5 +24,4 @@ export default function AiProjectManagerPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

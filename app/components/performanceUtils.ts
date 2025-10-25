@@ -5,46 +5,38 @@ interface PerformanceMetrics {
   firstInputDelay: number | null;
   cumulativeLayoutShift: number | null;
   timeToInteractive: number | null;
-  totalBlockingTime: number | null;
-}
+  totalBlockingTime: number | null}
 
 // Global performance monitoring utilities
 export const performanceUtils = {
   // Measure custom performance marks
   mark: (name: string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
-      performance.mark(name);
-    }
+      performance.mark(name)}
   },
 
   // Measure time between marks
   measure: (name: string, startMark: string, endMark?: string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       if (endMark) {
-        performance.measure(name, startMark, endMark);
-      } else {
-        performance.measure(name, startMark);
-      }
+        performance.measure(name, startMark, endMark)} else {
+        performance.measure(name, startMark)}
     }
   },
   // Get performance entries
   getEntries: (type?: string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
-      return type ? performance.getEntriesByType(type) : performance.getEntries();
-    }
-    return [];
-  },
+      return type ? performance.getEntriesByType(type) : performance.getEntries()}
+    return []},
 
   // Clear performance entries
   clearEntries: (type?: string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       if (type) {
         performance.clearMeasures(type);
-        performance.clearMarks(type);
-      } else {
+        performance.clearMarks(type)} else {
         performance.clearMeasures();
-        performance.clearMarks();
-      }
+        performance.clearMarks()}
     }
   },
 
@@ -54,11 +46,8 @@ export const performanceUtils = {
       // Basic Web Vitals monitoring
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          console.log('Performance entry:', entry);
-        }
-      });
-
-    }
+          console.log('Performance entry:', entry)}
+      })}
   },
 
   // Optimize images
@@ -67,10 +56,8 @@ export const performanceUtils = {
       const images = document.querySelectorAll('img');
       images.forEach(img => {
         if (!img.loading) {
-          img.loading = 'lazy';
-        }
-      });
-    }
+          img.loading = 'lazy'}
+      })}
   },
 
   // Optimize fonts
@@ -83,8 +70,7 @@ export const performanceUtils = {
       link.as = 'font';
       link.type = 'font/woff2';
       link.crossOrigin = 'anonymous';
-      document.head.appendChild(link);
-    }
+      document.head.appendChild(link)}
   },
 
   // Optimize third-party scripts
@@ -94,18 +80,15 @@ export const performanceUtils = {
       const scripts = document.querySelectorAll('script[src]');
       scripts.forEach((script) => {
         if (!script.hasAttribute('defer') && !script.hasAttribute('async')) {
-          script.setAttribute('defer', '');
-        }
-      });
-    }
+          script.setAttribute('defer', '')}
+      })}
   },
 
   // Cleanup resources
   cleanup: () => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       performance.clearMeasures();
-      performance.clearMarks();
-    }
+      performance.clearMarks()}
   },
 
   // Preload resource
@@ -115,8 +98,7 @@ export const performanceUtils = {
       link.rel = 'preload';
       link.href = href;
       link.as = as;
-      document.head.appendChild(link);
-    }
+      document.head.appendChild(link)}
   }
 }
 // Google Analytics integration for performance tracking
@@ -134,12 +116,10 @@ export const trackPerformanceToGA = (metrics: PerformanceMetrics) => {
         time_to_interactive: metrics.timeToInteractive,
         total_blocking_time: metrics.totalBlockingTime
       }
-    });
-  }
+    })}
 };
 
 declare global {
   interface Window {
-    gtag: (..._args: unknown[]) => void;
-  }
+    gtag: (..._args: unknown[]) => void}
 }

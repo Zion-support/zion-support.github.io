@@ -3,8 +3,7 @@
 import React, { useEffect } from "react"
 
 interface AnalyticsProps {
-  className?: string;
-}
+  className?: string}
 
 const Analytics: React.FC<AnalyticsProps> = () => {
   useEffect(() => {
@@ -12,8 +11,7 @@ const Analytics: React.FC<AnalyticsProps> = () => {
       if (typeof window !== "undefined" && window.gtag) {
         window.gtag("config", "GA_MEASUREMENT_ID", {
           page_title: document.title,
-          page_location: window.location.href,
-        }))
+          page_location: window.location.href}))
       }
     }
     initAnalytics())

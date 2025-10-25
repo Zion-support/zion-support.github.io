@@ -23,5 +23,4 @@ export default function MicroSaasPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

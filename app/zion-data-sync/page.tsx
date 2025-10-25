@@ -23,5 +23,4 @@ export default function ZionDataSyncPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

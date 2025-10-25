@@ -30,5 +30,4 @@ export default function AdmanagementPage() {
       </div>
       <Footer />
       </div>
-  );
-}
+  )}

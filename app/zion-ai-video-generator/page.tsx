@@ -23,5 +23,4 @@ export default function ZionAiVideoGeneratorPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

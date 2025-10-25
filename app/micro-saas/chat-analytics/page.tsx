@@ -24,5 +24,4 @@ export default function ChatAnalyticsPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

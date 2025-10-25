@@ -12,8 +12,7 @@ export interface PerformanceMetrics {
   cls?: number;
   fcp?: number;
   ttfb?: number;
-  inp?: number;
-}
+  inp?: number}
 
 export interface ErrorReport {
   message: string;
@@ -21,8 +20,7 @@ export interface ErrorReport {
   component?: string;
   timestamp: number;
   userAgent: string;
-  url: string;
-}
+  url: string}
 
 class MonitoringService {
   private metrics: PerformanceMetrics = {}
@@ -63,9 +61,7 @@ class MonitoringService {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
             this.metrics.fid = (entry as any).processingStart - entry.startTime;
-            this.reportMetric('fid', this.metrics.fid);
-          });
-        });
+            this.reportMetric('fid', this.metrics.fid)})});
         fidObserver.observe({ entryTypes: ['first-input'] });
 
         // Cumulative Layout Shift
@@ -76,8 +72,7 @@ class MonitoringService {
             if (!(entry as any).hadRecentInput) {
               clsValue += entry.value;
               this.metrics.cls = clsValue;
-              this.reportMetric('cls', clsValue);
-            }
+              this.reportMetric('cls', clsValue)}
           })
         })
         clsObserver.observe({ entryTypes: ['layout-shift'] })
@@ -87,11 +82,8 @@ class MonitoringService {
           const entries = list.getEntries();
           entries.forEach(entry => {
             this.metrics.fcp = entry.startTime;
-            this.reportMetric('fcp', entry.startTime);
-          });
-        });
-        fcpObserver.observe({ entryTypes: ['paint'] });
-      } catch (error) {
+            this.reportMetric('fcp', entry.startTime)})});
+        fcpObserver.observe({ entryTypes: ['paint'] })} catch (error) {
         // console.error('Error setting up performance observers:', error)
       }
     }

@@ -3,8 +3,7 @@ import React, { useState, useEffect } from 'react';
 interface PerformanceMetrics {
   renderTime: number;
   memoryUsage: number;
-  fps: number;
-}
+  fps: number}
 
 const PerformanceDashboard: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
@@ -29,20 +28,16 @@ const PerformanceDashboard: React.FC = () => {
       setMetrics({
         renderTime: Math.round(renderTime * 100) / 100,
         memoryUsage: Math.round(memoryUsage / 1024 / 1024 * 100) / 100,
-const fps = null;
-      });
+const fps = null});
       
-      lastTime = currentTime;
-    };
+      lastTime = currentTime};
 
     const interval: NodeJS.Timeout = setInterval(updateMetrics, 1000);
 
     return () => {
       if (interval) {
-        clearInterval(interval);
-      }
-    };
-  }, []);
+        clearInterval(interval)}
+    }}, []);
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6"></div>
@@ -65,7 +60,6 @@ const fps = null;
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default PerformanceDashboard;

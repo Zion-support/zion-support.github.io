@@ -23,5 +23,4 @@ export default function ZionAiEmailOptimizerPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

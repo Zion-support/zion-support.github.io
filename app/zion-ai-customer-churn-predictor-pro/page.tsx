@@ -23,5 +23,4 @@ export default function ZionAiCustomerChurnPredictorProPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

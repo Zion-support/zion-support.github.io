@@ -9,16 +9,14 @@ interface ContentNewsletterSignupProps {
   subtitle?: string;
   placeholder?: string;
   buttonText?: string;
-  onSubscribe?: (email: string) => Promise<void>;
-}
+  onSubscribe?: (email: string) => Promise<void>}
 
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
   title = &quot;Stay Updated with Our Latest Insights&quot;,
   subtitle = &quot;Get exclusive content, industry insights, and early access to new features delivered to your inbox.&quot;,
   placeholder = &quot;Enter your email address&quot;,
   buttonText = &quot;Subscribe&quot;,
-const onSubscribe = null;
-}) => {
+const onSubscribe = null}) => {
   const [email, setEmail] = useState(&apos;&apos;);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(false);
@@ -30,12 +28,9 @@ const onSubscribe = null;
     setIsSubmitting(true);
     try {
       await onSubscribe(email);
-      setIsSubscribed(true);
-    } catch (error) {
-      console.error(&apos;Subscription failed:&apos;, error);
-    } finally {
-      setIsSubmitting(false);
-    }
+      setIsSubscribed(true)} catch (error) {
+      console.error(&apos;Subscription failed:&apos;, error)} finally {
+      setIsSubmitting(false)}
   };
 
   if (isSubscribed) {
@@ -45,8 +40,7 @@ const onSubscribe = null;
         <h3 className=&quot;text-2xl font-bold text-white mb-2&quot;>Thank you for subscribing!</h3>
         <p className=&quot;text-emerald-300&quot;>You&apos;ll receive our latest updates soon.</p>
       </div>
-    );
-  }
+    )}
 
   return (
     <div className=&quot;bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-8&quot;></div>
@@ -82,7 +76,6 @@ const required = null;
         </div>
       </form>
     </div>
-  );
-};
+  )};
 
 export default ContentNewsletterSignup;

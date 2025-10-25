@@ -23,5 +23,4 @@ export default function ZionComplianceManagerPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

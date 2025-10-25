@@ -20,8 +20,7 @@ export default function GenericServicePage() {
         </Link>
       </div>
     </div>
-  );
-}
+  )}
             Contact Us
             
             <ArrowRight className="w-5 h-5 ml-2" />

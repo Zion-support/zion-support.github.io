@@ -5,50 +5,42 @@ import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-}
+  onError?: (error: Error, errorInfo: ErrorInfo) => void}
 
 interface State {
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
-  errorId?: string;
-}
+  errorId?: string}
 
 class AdvancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false };
-  }
+    this.state = { hasError: false }}
 
   static getDerivedStateFromError(error: Error): State {
     return {
       hasError: true,
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    };
-  }
+    }}
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo,
-    });
+      errorInfo});
     
     // Call custom error handler if provided
     if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
+      this.props.onError(error, errorInfo)}
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
-    }
+      console.error('Error caught by boundary:', error, errorInfo)}
 
     // Log error to external service in production
     if (process.env.NODE_ENV === 'production') {
-      this.logErrorToService(error, errorInfo);
-    }
+      this.logErrorToService(error, errorInfo)}
   }
 
   logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
@@ -60,8 +52,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
       errorId: this.state.errorId,
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
-      url: window.location.href,
-    };
+      url: window.location.href};
     
     // Log the error data for debugging
     // Example: Send to your error reporting service
@@ -73,8 +64,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
     // });
     
     // For now, just log to console
-    console.log('Error data logged:', errorData);
-  };
+    console.log('Error data logged:', errorData)};
 
   handleReset = () => {
     this.setState({
@@ -82,22 +72,19 @@ class AdvancedErrorBoundary extends Component<Props, State> {
       error: undefined,
       errorInfo: undefined,
       errorId: undefined
-    });
-  };
+    })};
 
   handleReportError = () => {
     const { error, errorId } = this.state;
     const subject = `Error Report - ${errorId}`;
     const body = `Error: ${error?.message}\n\nStack: ${error?.stack}\n\nPlease describe what you were doing when this error occurred:`;
     const mailtoLink = `mailto:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.open(mailtoLink);
-  };
+    window.open(mailtoLink)};
 
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
-        return this.props.fallback;
-      }
+        return this.props.fallback}
 
       return (
         <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center px-4"></div>
@@ -178,11 +165,9 @@ class AdvancedErrorBoundary extends Component<Props, State> {
             </div>
           </div>
         </div>
-      );
-    }
+      )}
 
-    return this.props.children;
-  }
+    return this.props.children}
 }
 
 export default AdvancedErrorBoundary;

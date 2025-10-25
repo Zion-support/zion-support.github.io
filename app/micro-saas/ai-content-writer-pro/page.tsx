@@ -24,5 +24,4 @@ export default function AiContentWriterProPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

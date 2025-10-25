@@ -23,5 +23,4 @@ export default function ZionAiFormBuilderPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}
