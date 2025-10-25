@@ -1,108 +1,71 @@
+import globals from 'globals';
 import js from '@eslint/js';
-import typescript from '@typescript-eslint/eslint-plugin';
-import typescriptParser from '@typescript-eslint/parser';
-import react from 'eslint-plugin-react';
+import tseslint from '@typescript-eslint/eslint-plugin';
+import tsParser from '@typescript-eslint/parser';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
+import react from 'eslint-plugin-react';
 
 export default [
-  js.configs.recommended,
+  {ignores: ['dist', 'node_modules', '.next', 'out']},
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
-    ignores: [
-      'node_modules/**',
-      'dist/**',
-      'build/**',
-      '.next/**',
-      'out/**',
-      '*.config.js',
-      '*.config.ts',
-      '*.config.mjs',
-      'add-missing-routes*.jsx',
-      'aggressive-*.js',
-      'aggressive-*.cjs',
-      'batch-*.js',
-      'cleanup-*.js',
-      'cleanup-*.cjs',
-      'comprehensive-*.js',
-      'fix-*.js',
-      'fix-*.cjs',
-      '*.cjs',
-      'create-*.js',
-      'identify-*.js',
-      'merge-*.js',
-      'remove-*.js',
-      'simple-*.js',
-      'website-*.js',
-      'resolve-*.js',
-      'check-*.js',
-      'clean-*.js',
-      'analyze-*.js',
-      '*.broken',
-      '*.backup',
-      'temp-*.js',
-      'analyze-*.js',
-      'check-*.js',
-      'clean-*.js',
-      'jest.setup.js',
-      'app-broken/**',
-      'app-disabled/**'
-    ],
     languageOptions: {
-      ecmaVersion: 'latest',
-      sourceType: 'module',
+      ecmaVersion: 2020,
       globals: {
-        window: 'readonly',
-        document: 'readonly',
-        console: 'readonly',
-        process: 'readonly',
-        global: 'readonly',
-        HTMLElement: 'readonly',
-        Event: 'readonly',
-        KeyboardEvent: 'readonly',
-        MediaQueryListEvent: 'readonly',
-        PerformanceObserver: 'readonly',
-        PerformanceNavigationTiming: 'readonly',
-        HTMLInputElement: 'readonly',
-        HTMLTextAreaElement: 'readonly',
-        HTMLSelectElement: 'readonly',
-        setTimeout: 'readonly',
-        clearTimeout: 'readonly',
-        setInterval: 'readonly',
-        clearInterval: 'readonly',
-        performance: 'readonly',
-        require: 'readonly',
-        module: 'readonly',
-        exports: 'readonly',
-        fs: 'readonly'
+        ...globals.browser,
+        ...globals.node,
       },
-      parser: typescriptParser,
+      parser: tsParser,
       parserOptions: {
         ecmaFeatures: {
-          jsx: true
-        }
-      }
+          jsx: true,
+        },
+      },
     },
     plugins: {
-      '@typescript-eslint': typescript,
-      'react': react,
+      '@typescript-eslint': tseslint,
       'react-hooks': reactHooks,
-      'react-refresh': reactRefresh
+      'react-refresh': reactRefresh,
+      'react': react,
     },
     rules: {
+      ...js.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      'react-refresh/only-export-components': [
+        'warn',
+        { allowConstantExport: true },
+      ],
+      '@typescript-eslint/no-unused-vars': ['error', { 
+        'argsIgnorePattern': '^_',
+        'varsIgnorePattern': '^_',
+        'caughtErrorsIgnorePattern': '^_'
+      }],
+      '@typescript-eslint/no-explicit-any': 'warn',
       'no-console': 'off',
-      'no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-vars': ['error', { 'argsIgnorePattern': '^_' }],
+      'no-unused-vars': ['error', { 
+        'argsIgnorePattern': '^_',
+        'varsIgnorePattern': '^_',
+        'caughtErrorsIgnorePattern': '^_'
+      }],
+      'prefer-const': 'error',
+      'no-var': 'error',
+      'react/no-unescaped-entities': 'off',
       'react/react-in-jsx-scope': 'off',
-      'react/prop-types': 'off',
-      'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'warn',
-      'react-refresh/only-export-components': 'warn'
     },
-    settings: {
-      react: {
-        version: 'detect'
-      }
-    }
-  }
+  },
+  {
+    files: ['**/*.test.{js,jsx,ts,tsx}', '**/__tests__/**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        ...globals.jest,
+      },
+    },
+    rules: {
+      '@typescript-eslint/no-unused-vars': 'off',
+      'no-unused-vars': 'off',
+    },
+  },
 ];
