@@ -1,59 +1,104 @@
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async;
-import { ArrowRight } from 'lucide-react;
-// Note: These components are not available in this context;
-export default function AdvertisingBannerPage() {
-return(<>
-  </>"
-      <Helmet />"
-        <title>Advertising Banner - Zion Tech Group</title>"
-        <metaname = "description" content="Create effective advertising banners with our AI-powered tools." / />"
-      </Helmet>"
-      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white py-20" />,<div className="max-w-7 xl mx-auto px-4" />,"
-    <div className="text-center" />,"
-    <h1 className="text-4 xl font-bold text-white mb-4" />"
-Advertising Banner</h1>"
-            </h1>"
-            <p className="text-gray-300 mb-8" />"
-This page is under construction.</p>"
-            </p>"
-            <buttonclassName="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover: "from-cyan-600 hove",r: to-purple-700 transition-all duration-300 inline-flex items-center" />"
-Learn More</button>"
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </button>
-          </div>
-        </div>
-      </main>
-    </>)
-  )"
-,;
-=======
 import React from 'react'
-import {Helmet} from 'react-helmet-async'
-import {ArrowRight} from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-export default AdvertisingbannerPage;
-'use client'
-
-  return (
-    <title>Advertisingbanner - Zion Tech Group</title>
-            <h1 className="text-4xl font-bold text-white mb-4">Advertisingbanner</h1>
-            <p className="text-gray-300 mb-8">This page is under construction.</p>
-              Learn More;
-  );
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-};
-=======
-
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-  );
+interface AdvertisingBannerProps {/* TODO: Fix JSX expression */}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0314
+const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({,
+  title
+  description,
+  ctaText,
+  ctaUrl,
+  imageUrl,
+  backgroundColor = '#3 b82 f6',
+  textColor = '#ffffff'}) =>
+                {
+  return(<$2 />
+      className="advertising-banner"
+      style={{
+        backgroundColor,
+        color: textColor,
+        padding: '2rem',
+        borderRadius: '0.5rem')
+        margin: '1rem 0')
+        display: 'flex')
+        alignItems: 'center')}
+        gap: '2rem'}
+      }}
+    >
+                {imageUrl && (
+        <div className="banner-image"></div>
+          <img
+      {imageUrl && (
+        <div className="banner-image"></img
+>
+          <img
+            src={imageUrl}
+            alt={title}
+            style={{
+              width: '200px',
+              height: 'auto')}
+              borderRadius: '0.25rem')}
+const,
+  AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({/* TODO: Fix JSX expression */})
+}) =>
+                {/* TODO: Fix JSX expression */}
+      }}
+    >
+                {/* TODO: Fix JSX expression */}
+            src={imageUrl}
+            alt={title}
+            style={/* TODO: Fix JSX expression */}
+            }}
+          />
+      )}
+                <div className="banner-content" style={{ flex: 1 }}></div>
+        <h2 style={{ margin: '0 0 1rem 0', fontSize: '1.5rem' }}></h2>
+                {title}
+                <p style={{ margin: '0 0 1.5rem 0', fontSize: '1rem', opacity: 0.9 }}></p>
+                {description}
+                <$2 />
+          href={ctaUrl}
+          style={{
+            display: 'inline-block',
+            padding: '0.75 rem 1.5 rem',
+            backgroundColor: 'rgba(255, 255, 255, 0.2)',
+            color: textColor,
+            textDecoration: 'none',
+            borderRadius: '0.25rem',
+            fontWeight: 'bold'}
+            transition: 'background-color 0.2s'}
+          }}
+          onMouseOver={e =>
+                {};
+            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.3)';}
+          }}
+          onMouseOut={e =>
+                {}
+            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';}
+                < className="banner-content" style={/* TODO: Fix JSX expression */}$2 />
+  x: 1 }}>
+        < style={/* TODO: Fix JSX expression */}$2 />
+  e: '1.5rem' }}>
+                {title}
+                < style={/* TODO: Fix JSX expression */}$2 />
+  y: 0.9 }}>
+                {description}
+                <a></a>
+          href={ctaUrl}
+          style={/* TODO: Fix JSX expression */}
+          }}
+          onMouseOver={/* TODO: Fix JSX expression */}
+          }}
+          onMouseOut={/* TODO: Fix JSX expression */}
+          }}
+        >
+                {ctaText}
+                </a>
+                </div>
+    </div>
+  )
+}
+export default AdvertisingBanner
+"
+  </AdvertisingBannerProps>
+                </AdvertisingBannerProps>
+</div>
+                </p></h2>

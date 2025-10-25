@@ -1,41 +1,3 @@
-<<<<<<< HEAD
-import fs from 'fs'';
-import path from 'path'';
-import fs from "fs"";
-import path from "path"";
-const dir = path.join(process.cwd(), 'data'';
-const file = path.join(dir, 'wallets.json''
-if (req.method !== 'POST''
-res.setHeader('Content-Type', 'application/json''
-res.end(JSON.stringify({ "error": 'Method not allowed'',;'"
-res.setHeader('Content-Type', 'application/json'';";'"
-res.end(JSON.stringify({ "error": 'Address and type are required''}'";
-const data = fs.readFileSync(file, 'utf8'';";'"
-console.error('"Error": '',;'"
-res.setHeader('Content-Type', 'application/json'';";'"
-res.end(JSON.stringify({ "error": 'Wallet address already exists'',";'"
-    "name": name || ''',";'"
-    "userId": userId || ''',";'"
-    "status": 'active'',;'"
-res.setHeader('Content-Type', 'application/json''";'"
-    "message": 'Wallet added successfully'',;";'"
-console.error('"Error": '',;'"
-res.setHeader('Content-Type', 'application/json'';");'"
-    res.end(JSON.stringify({ "error": 'Failed to save wallet'')";'";
-const dir = path.join(process.cwd(), "data"";
-const file = path.join(dir, "wallets.json""
-if (req.method !== "POST"" res.setHeader("Content-Type", "application/json""
-res.end(JSON.stringify({ "error": "Method not allowed"" res.setHeader("Content-Type", "application/json""
-res.end(JSON.stringify({ "error": "Address and type are required""}
-    const data = fs.readFileSync(file, "utf8"" console.error(""Error": "" res.setHeader("Content-Type", "application/json""
-res.end(JSON.stringify({ "error": "Wallet address already exists""
-    "name": name || """
-    "userId": userId || """
-    "status": "active"" res.setHeader("Content-Type", "application/json""
-    "message": "Wallet added successfully"" console.error(""Error": "" res.setHeader("Content-Type", "application/json""
-    res.end(JSON.stringify({ "error": "Failed to save wallet"')
-}}}}}})))))))))))))))))))))))))))))))))))
-=======
 const { withSentry } = require('./withSentry.cjs');
 
 async function handler(req, res) {
@@ -46,12 +8,10 @@ async function handler(req, res) {
     return;
   }
 
-  const { action, amount, currency = 'USD' } = req.body || {};
-
-  if (!action) {
-    res.statusCode = 400;
+  const { address, type, name, userId } = req.body;
+  if (!address || !type) {
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Action is required' }));
+    res.end(JSON.stringify({ error: 'Address and type are required' }));
     return;
   }
 
@@ -62,79 +22,51 @@ async function handler(req, res) {
           res.statusCode = 400;
           res.setHeader('Content-Type', 'application/json');
           res.end(JSON.stringify({ error: 'Amount is required for payment intent' }));
-          return;
-        }
 
         // Mock payment intent creation
         const paymentIntent = {
-          id: `pi_${Date.now()}`,
+          id: 'pi_' + Math.random().toString(36).substr(2, 9),
           amount: Math.round(amount * 100), // Convert to cents
-          currency: currency.toLowerCase(),
+          currency,
           status: 'requires_payment_method',
-          client_secret: `pi_${Date.now()}_secret_${Math.random().toString(36).substr(2, 9)}`
+          created: Math.floor(Date.now() / 1000)
         };
 
-        res.statusCode = 200;
-        res.setHeader('Content-Type', 'application/json');
-        res.end(JSON.stringify({ paymentIntent }));
-        break;
-      }
+    // Check if wallet address already exists
+    if (data.find(wallet => wallet.address === address)) {
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ error: 'Wallet address already exists' }));
+      return;
+    }
+
+    // Add new wallet
+    const newWallet = {
+      id: Date.now(),
+      address,
+      type,
+      name: name || '',
+      userId: userId || null,
+      status: 'active',
+      createdAt: new Date().toISOString()
+    };
 
       case 'get_balance': {
         // Mock balance retrieval
         const balance = {
-          available: 1000.00,
-          pending: 0.00,
-          currency: currency.toUpperCase()
+          currency,
+          amount: 0, // In a real app, this would come from a database
+          lastUpdated: new Date().toISOString()
         };
 
-        res.statusCode = 200;
-        res.setHeader('Content-Type', 'application/json');
-        res.end(JSON.stringify({ balance }));
-        break;
-      }
-
-      case 'get_transactions': {
-        // Mock transaction history
-        const transactions = [
-          {
-            id: 'tx_1',
-            amount: 100.00,
-            currency: currency.toUpperCase(),
-            type: 'credit',
-            description: 'Payment received',
-            timestamp: new Date().toISOString()
-          },
-          {
-            id: 'tx_2',
-            amount: -50.00,
-            currency: currency.toUpperCase(),
-            type: 'debit',
-            description: 'Service fee',
-            timestamp: new Date(Date.now() - 86400000).toISOString()
-          }
-        ];
-
-        res.statusCode = 200;
-        res.setHeader('Content-Type', 'application/json');
-        res.end(JSON.stringify({ transactions }));
-        break;
-      }
-
-      default: {
-        res.statusCode = 400;
-        res.setHeader('Content-Type', 'application/json');
-        res.end(JSON.stringify({ error: 'Invalid action' }));
-        break;
-      }
-    }
-  } catch (error) {
-    console.error('Wallet API error:', error);
-    res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Internal server error' }));
+    res.end(JSON.stringify({ 
+      success: true, 
+      message: 'Wallet added successfully',
+      walletId: newWallet.id
+    }));
+  } catch (error) {
+    console.error('Error:', error);
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Failed to add wallet' }));
   }
 }
-
-module.exports = withSentry(handler);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc

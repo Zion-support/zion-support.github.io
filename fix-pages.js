@@ -7,9 +7,6 @@ export default ${componentName};`;
 const pagesToFix = ['cookies', 'privacy', 'terms', 'consultation', 'pricing', 'blog',
   'case-studies', 'careers', 'ai-services', 'it-services', 'micro-saas'];`'use client';
   return (
-<<<<<<< HEAD
-    <title>${title} - Zion Tech Group</title>
-=======
       <Helmet>
         <title>${title} - Zion Tech Group</title>
         <meta name="description" content="${title} services by Zion Tech Group. Professional AI and IT solutions." />
@@ -21,16 +18,12 @@ const pagesToFix = ['cookies', 'privacy', 'terms', 'consultation', 'pricing', 'b
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
                 ${title}
               Professional ${title.toLowerCase()} services by Zion Tech Group.
 
             <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
               We're working on bringing you comprehensive ${title.toLowerCase()} solutions.
               Contact us to learn more about our services.
-<<<<<<< HEAD
-              Contact Us;
-=======
             </p>
             <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
               Contact Us
@@ -39,7 +32,6 @@ const pagesToFix = ['cookies', 'privacy', 'terms', 'consultation', 'pricing', 'b
         </div>
       </div>
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   );
 };
 

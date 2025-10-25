@@ -1,102 +1,158 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-// Fix all remaining syntax issues comprehensively
-function fixAllRemainingIssues() {
-  console.log('🔧 Fixing all remaining syntax issues comprehensively...');
-  
-  // Get all TypeScript/JSX files
-  const files = execSync('find /workspace -name "*.tsx" -o -name "*.ts" | grep -v node_modules', { encoding: 'utf8' })
-    .trim().split('\n').filter(line => line.trim());
-  
-  let fixed = 0;
-  
-  files.forEach(file => {
-    try {
-      let content = fs.readFileSync(file, 'utf8');
-      let originalContent = content;
-      
-      // Fix missing closing braces for function components
-      if (content.includes('export default function') && !content.trim().endsWith('}')) {
-        content = content.trim() + '\n}';
-      }
-      
-      // Fix missing closing braces for arrow functions
-      if (content.includes('const') && content.includes('= () => {') && !content.trim().endsWith('}')) {
-        content = content.trim() + '\n}';
-      }
-      
-      // Fix missing closing braces for JSX elements
-      content = content.replace(/<section[^>]*>[^<]*$/g, (match) => {
-        if (!match.includes('</section>')) {
-          return match + '\n  </section>';
-        }
-        return match;
-      });
-      
-      // Fix orphaned closing braces
-      content = content.replace(/\n\s*}\s*$/g, '');
-      
-      // Fix missing closing braces in JSX
+// Function to fix final comprehensive syntax issues
+function fixFinalComprehensive(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+    
+    // Fix malformed JSX - remove invalid characters
+    content = content.replace(/,\s*-\s*>\s*`\s*-\s*>/g, '');
+    content = content.replace(/`\s*-\s*>/g, '');
+    
+    // Fix malformed Helmet usage
+    content = content.replace(/<\/Helmet><title>/g, '<title>');
+    content = content.replace(/<\/Helmet>/g, '');
+    content = content.replace(/<Helmet \/>/g, '');
+    
+    // Fix malformed features array in the middle of files
+    content = content.replace(
+      /(\s+const features = \[\s*{\s*icon: \w+,\s*title: '[^']*',\s*description: '[^']*',\s*}\s*\]\s*const benefits =)/g,
+      '$1'
+    );
+    
+    // Fix missing opening brace in features array
+    content = content.replace(
+      /(\s+icon: \w+,\s*title: '[^']*',\s*description: '[^']*',\s*)\]/g,
+      '$1\n    }\n  ]'
+    );
+    
+    // Fix malformed object properties
+    content = content.replace(
+      /(\s+icon: \w+,\s*)\n\s*title: '([^']*)',/g,
+      '$1\n      title: \'$2\','
+    );
+    
+    content = content.replace(
+      /(\s+title: '[^']*',\s*)\n\s*description: '([^']*)',/g,
+      '$1\n      description: \'$2\','
+    );
+    
+    // Fix missing commas in arrays
+    content = content.replace(
+      /(\s+description: '[^']*')\s*\n\s*\]/g,
+      '$1\n    }\n  ]'
+    );
+    
+    // Fix duplicate closing brackets
+    content = content.replace(/\}\s*\]\s*\]/g, '}\n  ]');
+    
+    // Fix malformed pricing plans
+    content = content.replace(/popular: false;,},/g, 'popular: false\n    },\n    {');
+    
+    // Fix misplaced imports
+    if (content.includes('const ') && content.includes('import ')) {
       const lines = content.split('\n');
-      let braceCount = 0;
-      let jsxDepth = 0;
-      let fixedLines = [];
+      const imports = [];
+      const otherLines = [];
       
-      for (let i = 0; i < lines.length; i++) {
-        const line = lines[i];
-        const openBraces = (line.match(/\{/g) || []).length;
-        const closeBraces = (line.match(/\}/g) || []).length;
-        const openJSX = (line.match(/<[^\/][^>]*>/g) || []).length;
-        const closeJSX = (line.match(/<\/[^>]*>/g) || []).length;
-        
-        braceCount += openBraces - closeBraces;
-        jsxDepth += openJSX - closeJSX;
-        
-        // Skip extra closing braces at the end
-        if (i === lines.length - 1 && braceCount < 0) {
-          continue;
+      for (const line of lines) {
+        if (line.trim().startsWith('import ')) {
+          imports.push(line);
+        } else {
+          otherLines.push(line);
         }
-        
-        fixedLines.push(line);
       }
       
-      content = fixedLines.join('\n');
-      
-      // Clean up multiple empty lines
-      content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-      
-      if (content !== originalContent) {
-        fs.writeFileSync(file, content);
-        console.log(`✅ Fixed: ${file}`);
-        fixed++;
+      if (imports.length > 0) {
+        content = imports.join('\n') + '\n' + otherLines.join('\n');
+        modified = true;
       }
-    } catch (error) {
-      console.log(`⚠️  Could not process ${file}: ${error.message}`);
     }
-  });
-  
-  console.log(`\n📊 Fixed ${fixed} files`);
-  return fixed;
+    
+    // Fix malformed JSX return
+    if (content.includes('return(<>')) {
+      content = content.replace(/return\(\<\>/g, 'return (\n    <>');
+      modified = true;
+    }
+    
+    // Fix semicolon instead of comma in arrays
+    content = content.replace(
+      /(\s*'[^']*')\s*;\s*\n\s*\]/g,
+      '$1,\n  ]'
+    );
+    
+    // Remove extra closing braces at the end of files
+    if (content.includes('export default') && content.includes('\n\n}\n')) {
+      content = content.replace(/\n\n}\s*$/, '');
+      modified = true;
+    }
+    
+    // Fix malformed features array - missing opening brace
+    content = content.replace(
+      /const features = \[\s*icon: (\w+),\s*title: '([^']*)',\s*description: '([^']*)',\s*\]/g,
+      'const features = [\n    {\n      icon: $1,\n      title: \'$2\',\n      description: \'$3\'\n    }\n  ]'
+    );
+    
+    // Fix missing opening brace in benefits array
+    content = content.replace(
+      /const benefits = \[\s*'([^']*)',/g,
+      'const benefits = [\n    \'$1\','
+    );
+    
+    // Fix missing closing brace in benefits array
+    content = content.replace(
+      /(\s*'[^']*',\s*)\];/g,
+      '$1\n  ];'
+    );
+    
+    // Remove any remaining extra closing braces
+    content = content.replace(/\n\n}\s*$/, '');
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed final comprehensive: ${filePath}`);
+      return true;
+    }
+    
+    return false;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
+  }
 }
 
-// Run the fix
-const fixed = fixAllRemainingIssues();
-
-if (fixed > 0) {
-  console.log('\n🎉 Running final checks...');
-  try {
-    execSync('cd /workspace && pnpm run type-check 2>&1 | head -10', { stdio: 'inherit' });
-  } catch (error) {
-    console.log('Type check completed with some issues');
+// Function to recursively find all .tsx files in the app directory
+function findTsxFiles(dir) {
+  const files = [];
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory()) {
+      files.push(...findTsxFiles(fullPath));
+    } else if (item.endsWith('.tsx') && item === 'page.tsx') {
+      files.push(fullPath);
+    }
   }
   
-  try {
-    execSync('cd /workspace && pnpm run lint 2>&1 | head -10', { stdio: 'inherit' });
-  } catch (error) {
-    console.log('Lint check completed with some issues');
+  return files;
+}
+
+// Main execution
+const appDir = path.join(__dirname, 'app');
+const tsxFiles = findTsxFiles(appDir);
+
+console.log(`Found ${tsxFiles.length} page.tsx files to check for final comprehensive syntax issues`);
+
+let fixedCount = 0;
+for (const file of tsxFiles) {
+  if (fixFinalComprehensive(file)) {
+    fixedCount++;
   }
 }
+
+console.log(`Fixed final comprehensive syntax issues in ${fixedCount} files`);

@@ -22,28 +22,13 @@ function fixJSXSyntax(filePath) {
       modified = true;
     }
 
-    // Fix extra closing div tags
-    if (content.includes('    </div>\n    </div>')) {
-      content = content.replace(/    <\/div>\n    <\/div>/g, '    </div>');
-      modified = true;
-    }
-
-    // Fix any remaining $2, $3 patterns
-    content = content.replace(/\$\d+/g, '');
-    if (content !== fs.readFileSync(filePath, 'utf8')) {
-      modified = true;
-    }
-
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
-    }
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
-  }
   return false;
-}
 
 // Function to recursively find all .tsx files
 function findTSXFiles(dir) {
@@ -58,11 +43,8 @@ function findTSXFiles(dir) {
       files.push(...findTSXFiles(fullPath));
     } else if (item.endsWith('.tsx')) {
       files.push(fullPath);
-    }
-  }
   
   return files;
-}
 
 // Main execution
 console.log('Starting JSX syntax fixes...');
@@ -73,7 +55,5 @@ let fixedCount = 0;
 for (const file of tsxFiles) {
   if (fixJSXSyntax(file)) {
     fixedCount++;
-  }
-}
 
 console.log(`\nFixed ${fixedCount} files out of ${tsxFiles.length} total .tsx files`);

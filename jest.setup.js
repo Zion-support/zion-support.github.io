@@ -1,80 +1,55 @@
-require("@testing-library/jest-dom");
 
-// Polyfill for TextEncoder/TextDecoder
-const {TextEncoder, TextDecoder} = require('util');
+// Polyfills for Node.js environment
+const { TextEncoder, TextDecoder } = require('util');
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-// Mock files that use import.meta.env
-jest.mock('./app/utils/logger.ts', () => ({
-  logger: {
-    debug: jest.fn(),
-    info: jest.fn(),
-    warn: jest.fn(),
-    error: jest.fn(),
-    log: jest.fn(),
+// Mock Next.js router
+jest.mock('next/router', () => ({
+  useRouter() {
+    return {
+      route: '/',
+      pathname: '/',
+      query: {},
+      asPath: '/',
+      push: jest.fn(),
+      pop: jest.fn(),
+      reload: jest.fn(),
+      back: jest.fn(),
+      prefetch: jest.fn(),
+      beforePopState: jest.fn(),
+      events: {
+        on: jest.fn(),
+        off: jest.fn(),
+        emit: jest.fn(),
+      },
+    };
   },
 }));
 
-jest.mock('./app/utils/analytics.ts', () => ({
-  trackEvent: jest.fn(),
-  trackPageView: jest.fn(),
-  initAnalytics: jest.fn(),
+// Mock Next.js navigation
+jest.mock('next/navigation', () => ({
+  useRouter() {
+    return {
+      push: jest.fn(),
+      replace: jest.fn(),
+      prefetch: jest.fn(),
+      back: jest.fn(),
+      forward: jest.fn(),
+      refresh: jest.fn(),
+    };
+  },
+  usePathname() {
+    return '/';
+  },
+  useSearchParams() {
+    return new URLSearchParams();
+  },
 }));
 
-jest.mock('./app/utils/errorTracking.ts', () => ({
-  reportError: jest.fn(),
-  initErrorReporting: jest.fn(),
-}));
-
-// Performance hooks mocks removed - files don't exist
-
-// Mock React Router (this is a Vite project, not Next.js)
-jest.mock('react-router-dom', () => {
-  const actual = jest.requireActual('react-router-dom');
-  const React = require('react');
-  return {
-    ...actual,
-    useNavigate: () => jest.fn(),
-    useLocation: () => ({
-      pathname: '/',
-      search: '',
-      hash: '',
-      state: null,
-    }),
-    useParams: () => ({}),
-    Link: ({ children, to, ...props }) => {
-      return React.createElement('a', { href: to, ...props }, children);
-    },
-    NavLink: ({ children, to, ...props }) => {
-      return React.createElement('a', { href: to, ...props }, children);
-    },
-    BrowserRouter: ({ children }) => children,
-    MemoryRouter: ({ children }) => {
-      const { createMemoryRouter, RouterProvider } = actual;
-      const router = createMemoryRouter([
-        {
-          path: '/',
-          element: children,
-        },
-      ], {
-        initialEntries: ['/'],
-        initialIndex: 0,
-      });
-      return React.createElement(RouterProvider, { router });
-    },
-    RouterProvider: ({ router }) => null,
-  };
-});
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-063c
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 // Mock window.matchMedia
-Object.defineProperty(window, 'matchMedia', {writable: true,
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
   value: jest.fn().mockImplementation(query => ({
     matches: false,
     media: query,
@@ -83,49 +58,52 @@ Object.defineProperty(window, 'matchMedia', {writable: true,
     removeListener: jest.fn(), // deprecated
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn(),})),
+    dispatchEvent: jest.fn(),
+  })),
 });
 
 // Mock IntersectionObserver
-<<<<<<< HEAD
-global.IntersectionObserver = class IntersectionObserver {constructor() {}
-=======
 global.IntersectionObserver = class IntersectionObserver {
-// Mock window.matchMedia;
-});
-
-// Mock IntersectionObserver;
   constructor() {}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
   disconnect() {}
   observe() {}
   unobserve() {}
 };
 
 // Mock ResizeObserver
-<<<<<<< HEAD
-global.ResizeObserver = class ResizeObserver {constructor() {}
-=======
 global.ResizeObserver = class ResizeObserver {
-// Mock ResizeObserver;
   constructor() {}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
   disconnect() {}
   observe() {}
   unobserve() {}
 };
 
-// Mock window.gtag
-global.gtag = jest.fn();
-
-// Mock window.dataLayer
-<<<<<<< HEAD
-global.dataLayer = [];
-=======
-global.dataLayer = [];
-// Mock window.gtag;
+// Mock performance API
+Object.defineProperty(window, 'performance', {
+  writable: true,
+  value: {
+    now: jest.fn(() => Date.now()),
+    mark: jest.fn(),
+    measure: jest.fn(),
+    getEntriesByType: jest.fn(() => []),
+    getEntriesByName: jest.fn(() => []),
+  },
 });
 
-// Mock window.dataLayer;
-});
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+// Mock localStorage
+const localStorageMock = {
+  getItem: jest.fn(),
+  setItem: jest.fn(),
+  removeItem: jest.fn(),
+  clear: jest.fn(),
+};
+global.localStorage = localStorageMock;
+
+// Mock sessionStorage
+const sessionStorageMock = {
+  getItem: jest.fn(),
+  setItem: jest.fn(),
+  removeItem: jest.fn(),
+  clear: jest.fn(),
+};
+global.sessionStorage = sessionStorageMock;

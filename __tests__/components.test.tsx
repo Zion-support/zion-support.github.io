@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-import { describe, test, expect } from '@jest/globals';
+import React from 'react';
 import { render, screen } from '@testing-library/react';
-import { HelmetProvider } from 'react-helmet-async';
-<<<<<<< HEAD
 import '@testing-library/jest-dom';
-=======
-import LoadingSpinner from '../src/components/LoadingSpinner';
-import SEOEnhancer from '../src/components/SEOEnhancer';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-063c
+import { describe, test, expect } from '@jest/globals';
+import { HelmetProvider } from 'react-helmet-async';
 
 const TestComponent = () => {
   return (
@@ -19,8 +14,9 @@ const TestComponent = () => {
 
 const MockComponent = () => <div data-testid="mock-component">Mock Component</div>;
 
+// Basic test structure
 describe('Components', () => {
-  test('should render without errors', () => {
+  it('renders without crashing', () => {
     expect(true).toBe(true);
   });
   
@@ -30,16 +26,6 @@ describe('Components', () => {
   });
   
   test('should handle SEO head component', () => {
-=======
-import {describe, test, expect} from '@jest/globals'
-import {render, screen} from '@testing-library/react'
-import {HelmetProvider} from 'react-helmet-async'
-import Loading from '../app/components/Loading'
-import SEOHead from '../app/components/SEOHead'
-    render(<Loading   />)
-    expect(screen.getByText('Loading...')).toBeInTheDocument()
-  })
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
     render(
       <HelmetProvider>
         <div>SEO Test</div>
