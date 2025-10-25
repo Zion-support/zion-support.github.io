@@ -4,7 +4,7 @@ interface AnalyticsState {
   pageViews: number;
   events: Array<{
     name: string;
-    timestamp: number;
+    timestamp: number;>
     properties?: Record<string, any>;
   }>;
   user: {

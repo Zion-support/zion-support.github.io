@@ -62,8 +62,7 @@ const ConsultationPage: React.FC = () => {
     <div>
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900"></div>
         <section className="relative py-20 px-4 overflow-hidden"></section>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
-        <div className="relative max-w-7xl mx-auto text-center"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /><div className="relative max-w-7xl mx-auto text-center"></div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Free <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Consultation</span>
           </h1>
@@ -76,12 +75,10 @@ const ConsultationPage: React.FC = () => {
 
       {/* Consultation Form Section */}
       <section className="py-20 bg-gray-900/50"></section>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8"></div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"><div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8"></div>
               <h2 className="text-2xl font-bold text-white mb-6">Schedule Your Consultation</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
-                  <div></div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6"><div></div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                       Full Name *
                     </label>
@@ -93,7 +90,7 @@ const ConsultationPage: React.FC = () => {
                       onChange={handleInputChange}
 const required = null;
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
-                      placeholder="Your full name"
+                      placeholder="Your full name">
                     />
                   </div>
                   <div></div>
@@ -108,13 +105,12 @@ const required = null;
                       onChange={handleInputChange}
 const required = null;
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
-                      placeholder="your@email.com"
+                      placeholder="your@email.com">
                     />
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
-                  <div></div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6"><div></div>
                     <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
 const Company = null;
                     </label>
@@ -125,7 +121,7 @@ const Company = null;
                       value={formData.company}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
-                      placeholder="Your company name"
+                      placeholder="Your company name">
                     />
                   </div>
                   <div></div>
@@ -139,7 +135,7 @@ const Company = null;
                       value={formData.phone}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
-                      placeholder="+1 (555) 123-4567"
+                      placeholder="+1 (555) 123-4567">
                     />
                   </div>
                 </div>
@@ -154,7 +150,7 @@ const Company = null;
                     value={formData.service}
                     onChange={handleInputChange}
 const required = null;
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500">
                   >
                     <option value="">Select a service</option>
                     {services.map((service) => (
@@ -174,7 +170,7 @@ const required = null;
                     name="preferredTime"
                     value={formData.preferredTime}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500">
                   >
                     <option value="">Select preferred time</option>
                     {timeSlots.map((time) => (
@@ -194,7 +190,7 @@ const required = null;
                     name="budget"
                     value={formData.budget}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500">
                   >
                     <option value="">Select budget range</option>
                     <option value="under-10k" className="bg-gray-800">Under $10,000</option>
@@ -215,13 +211,13 @@ const required = null;
                     onChange={handleInputChange}
                     rows={4}
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
-                    placeholder="Tell us about your project requirements, challenges, and goals..."
+                    placeholder="Tell us about your project requirements, challenges, and goals...">
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+                  className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
                 >
                   Schedule Consultation
                   <ArrowRight className="w-5 h-5 ml-2" />
@@ -230,8 +226,7 @@ const required = null;
             </div>
 
 
-            <div className="space-y-8"></div>
-              <div></div>
+            <div className="space-y-8"><div></div>
                 <h2 className="text-2xl font-bold text-white mb-6">Why Choose Our Consultation?</h2>
                 <div className="space-y-4"></div>
                   {benefits.map((benefit, index) => (
@@ -240,8 +235,7 @@ const required = null;
                       <span className="text-gray-300">{benefit}</span>
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden"></section>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
-          <div className="relative max-w-7xl mx-auto text-center"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /><div className="relative max-w-7xl mx-auto text-center"></div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Free <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Consultation</span>
             </h1>
@@ -254,14 +248,12 @@ const required = null;
 
         {/* Consultation Form */}
         <section className="py-20 px-4"></section>
-          <div className="max-w-4xl mx-auto"></div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12"></div>
+          <div className="max-w-4xl mx-auto"><div className="grid grid-cols-1 lg:grid-cols-2 gap-12"></div>
               {/* Form */}
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8"></div>
                 <h2 className="text-2xl font-bold text-white mb-6">Schedule Your Consultation</h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
-                    <div></div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6"><div></div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                         Full Name *
                       </label>
@@ -273,7 +265,7 @@ const required = null;
                         onChange={handleInputChange}
 const required = null;
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
-                        placeholder="Your full name"
+                        placeholder="Your full name">
                       />
                     </div>
                     <div></div>
@@ -288,13 +280,12 @@ const required = null;
                         onChange={handleInputChange}
 const required = null;
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
-                        placeholder="your@email.com"
+                        placeholder="your@email.com">
                       />
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
-                    <div></div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6"><div></div>
                       <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
 const Company = null;
                       </label>
@@ -305,7 +296,7 @@ const Company = null;
                         value={formData.company}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
-                        placeholder="Your company name"
+                        placeholder="Your company name">
                       />
                     </div>
                     <div></div>
@@ -319,7 +310,7 @@ const Company = null;
                         value={formData.phone}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
-                        placeholder="+1 (555) 123-4567"
+                        placeholder="+1 (555) 123-4567">
                       />
                     </div>
                   </div>
@@ -334,7 +325,7 @@ const Company = null;
                       value={formData.service}
                       onChange={handleInputChange}
 const required = null;
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500">
                     >
                       <option value="">Select a service</option>
                       {services.map((service) => (
@@ -354,7 +345,7 @@ const required = null;
                       name="preferredTime"
                       value={formData.preferredTime}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500">
                     >
                       <option value="">Select preferred time</option>
                       {timeSlots.map((time) => (
@@ -374,7 +365,7 @@ const required = null;
                       name="budget"
                       value={formData.budget}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500">
                     >
                       <option value="">Select budget range</option>
                       <option value="under-10k" className="bg-gray-800">Under $10,000</option>
@@ -395,13 +386,13 @@ const required = null;
                       onChange={handleInputChange}
                       rows={4}
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
-                      placeholder="Tell us about your project requirements, challenges, and goals..."
+                      placeholder="Tell us about your project requirements, challenges, and goals...">
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+                    className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
                   >
                     Schedule Consultation
                     <ArrowRight className="w-5 h-5 ml-2" />
@@ -410,8 +401,7 @@ const required = null;
               </div>
 
               {/* Benefits & Info */}
-              <div className="space-y-8"></div>
-                <div></div>
+              <div className="space-y-8"><div></div>
                   <h2 className="text-2xl font-bold text-white mb-6">Why Choose Our Consultation?</h2>
                   <div className="space-y-4"></div>
                     {benefits.map((benefit, index) => (
@@ -447,8 +437,7 @@ const required = null;
 
                 <div className="bg-gradient-to-br from-purple-500/20 to-blue-600/20 rounded-xl p-6"></div>
                   <h3 className="text-xl font-bold text-white mb-4">Contact Information</h3>
-                  <div className="space-y-3 text-gray-300"></div>
-                    <div className="flex items-center"></div>
+                  <div className="space-y-3 text-gray-300"><div className="flex items-center"></div>
                       <Mail className="w-5 h-5 text-purple-400 mr-3" />
                       <span>consultation@ziontechgroup.com</span>
                     </div>

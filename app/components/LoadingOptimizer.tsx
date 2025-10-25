@@ -29,7 +29,7 @@ const LoadingOptimizer: React.FC<LoadingOptimizerProps> = ({
     setOptimizations([]);
     setCompletedOptimizations([]);
 
-    for (let i = 0; i < optimizationSteps.length; i++) {
+    for (let i = 0; i < optimizationSteps.length; i++) {>
       await new Promise(resolve => setTimeout(resolve, 800));
       
       setOptimizations(prev => [...prev, optimizationSteps[i]]);
@@ -41,8 +41,7 @@ const LoadingOptimizer: React.FC<LoadingOptimizerProps> = ({
     setIsOptimizing(false)};
 
   return (
-    <div className={`bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 ${className}`}></div>
-      <div className="text-center mb-6"></div>
+    <div className={`bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 ${className}`}><div className="text-center mb-6"></div>
         <Zap className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
         <h3 className="text-xl font-semibold text-white mb-2">Loading Optimizer</h3>
         <p className="text-gray-300">Optimize your application's loading performance</p>
@@ -53,7 +52,7 @@ const LoadingOptimizer: React.FC<LoadingOptimizerProps> = ({
         <button
           onClick={runOptimizations}
           disabled={isOptimizing}
-          className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center disabled:opacity-50"
+          className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center disabled:opacity-50">
         >
           {isOptimizing ? (
             <div>
@@ -70,15 +69,13 @@ const LoadingOptimizer: React.FC<LoadingOptimizerProps> = ({
 
         {/* Progress Bar */}
         {isOptimizing && (
-          <div className="space-y-2"></div>
-            <div className="flex justify-between text-sm text-gray-400"></div>
+          <div className="space-y-2"><div className="flex justify-between text-sm text-gray-400"></div>
               <span>Progress</span>
               <span>{optimizations.length} / {optimizationSteps.length}</span>
             </div>
-            <div className="w-full bg-slate-700 rounded-full h-2"></div>
-              <div
+            <div className="w-full bg-slate-700 rounded-full h-2"><div
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 h-2 rounded-full transition-all duration-500"
-                style={{ width: `${(optimizations.length / optimizationSteps.length) * 100}%` }}
+                style={{ width: `${(optimizations.length / optimizationSteps.length) * 100}%` }}>
               /></div>
             </div>
           </div>
@@ -100,7 +97,7 @@ const isCompleted = null;
                       : isCurrent 
                         ? 'bg-cyan-500/10 border border-cyan-500/20' 
                         : 'bg-slate-700/30'
-                  }`}
+                  }`}>
                 ></div>
                   {isCompleted ? (
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
@@ -114,7 +111,7 @@ const isCompleted = null;
                       ? 'text-green-300' 
                       : isCurrent 
                         ? 'text-cyan-300' 
-                        : 'text-gray-400'
+                        : 'text-gray-400'>
                   }`}>
                     {step}
                   </span>

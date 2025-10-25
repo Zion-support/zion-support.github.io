@@ -32,8 +32,7 @@ const FuturisticHero: React.FC = () => {
       {/* Animated background */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-600/20 to-purple-600/20 animate-pulse">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-bounce"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-bounce" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-bounce"><div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-bounce" style={{ animationDelay: '1s' }}></div>
         </div>
       </div>
 
@@ -45,7 +44,7 @@ const FuturisticHero: React.FC = () => {
               className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8 }}>
             >
               The Future of
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
@@ -57,7 +56,7 @@ const FuturisticHero: React.FC = () => {
               className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              transition={{ duration: 0.8, delay: 0.2 }}>
             >
               Transform your business with cutting-edge AI, 5G connectivity, and enterprise-grade security solutions.
             </motion.p>
@@ -66,7 +65,7 @@ const FuturisticHero: React.FC = () => {
               className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              transition={{ duration: 0.8, delay: 0.4 }}>
             >
               <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
                 Get Started
@@ -82,7 +81,7 @@ const FuturisticHero: React.FC = () => {
               className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
+              transition={{ duration: 0.8, delay: 0.6 }}>
             >
               {features.map((feature, index) => (
                 <motion.div
@@ -91,7 +90,7 @@ const FuturisticHero: React.FC = () => {
                   whileHover={{ y: -5 }}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
+                  transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}>
                 >
                   <feature.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                   <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>

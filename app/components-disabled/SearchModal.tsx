@@ -35,7 +35,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
           <h2 className="text-2xl font-bold text-white">Search</h2>
           <button
             onClick={onClose}
-            className="text-gray-400 hover:text-white transition-colors"
+            className="text-gray-400 hover:text-white transition-colors">
           >
             <X className="w-6 h-6" />
           </button>
@@ -45,7 +45,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
           <div className="relative">
             <input
               type="text"
-              value={query}
+              value={query}>
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search..."
               className="w-full px-4 py-3 pl-12 pr-4 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"

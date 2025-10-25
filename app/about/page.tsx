@@ -103,7 +103,7 @@ const AboutPage = () => {
           </p>
           <Link 
             href="/contact" 
-            className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
+            className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold">
           >
             Get Started
             <ArrowRight className="ml-2 w-5 h-5" />

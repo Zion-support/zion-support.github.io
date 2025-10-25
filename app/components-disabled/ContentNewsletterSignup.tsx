@@ -10,7 +10,7 @@ interface ContentNewsletterSignupProps {
   subtitle?: string
   placeholder?: string
   buttonText?: string
-  features?: Array<{
+  features?: Array<{>
     icon: React.ComponentType<{ className?: string }>
     text: string
   }>
@@ -74,7 +74,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
           <div className="flex-1">
             <input
               type="email"
-              value={email}
+              value={email}>
               onChange={(e) => setEmail(e.target.value)}
               placeholder={placeholder}
               className="w-full px-4 py-3 bg-white/10 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
@@ -84,7 +84,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
           <button
             type="submit"
             disabled={isLoading}
-            className="bg-gradient-to-r from-emerald-600 to-blue-600 hover:from-emerald-700 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+            className="bg-gradient-to-r from-emerald-600 to-blue-600 hover:from-emerald-700 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed">
           >
             {isLoading ? (
               <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>

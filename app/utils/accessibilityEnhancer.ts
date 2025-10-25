@@ -88,7 +88,7 @@ export function useAccessibilityEnhancer(options: AccessibilityEnhancerOptions =
       }
     }
   }, [])
-
+>
   const handleVoiceCommand = useCallback((transcript: string) => {
     const command = transcript.toLowerCase().trim()
     

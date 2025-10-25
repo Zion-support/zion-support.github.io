@@ -69,7 +69,7 @@ const ContactForm: React.FC = () => {
       <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 text-center">
         <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
         <h3 className="text-xl font-semibold text-white mb-2">Message Sent!</h3>
-        <p className="text-gray-300">Thank you for reaching out. We&apos;ll get back to you soon.</p>
+        <p className="text-gray-300">Thank you for reaching out. We'll get back to you soon.</p>
       </div>
     )}
 
@@ -91,7 +91,7 @@ const ContactForm: React.FC = () => {
               onChange={handleChange}
               required
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-              placeholder="Your full name"
+              placeholder="Your full name">
             />
           </div>
           <div>
@@ -106,7 +106,7 @@ const ContactForm: React.FC = () => {
               onChange={handleChange}
               required
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-              placeholder="your@email.com"
+              placeholder="your@email.com">
             />
           </div>
         </div>
@@ -123,7 +123,7 @@ const ContactForm: React.FC = () => {
               value={formData.phone}
               onChange={handleChange}
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-              placeholder="+1 (555) 123-4567"
+              placeholder="+1 (555) 123-4567">
             />
           </div>
           <div>
@@ -137,7 +137,7 @@ const ContactForm: React.FC = () => {
               value={formData.company}
               onChange={handleChange}
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-              placeholder="Your company name"
+              placeholder="Your company name">
             />
           </div>
         </div>
@@ -151,7 +151,7 @@ const ContactForm: React.FC = () => {
             name="service"
             value={formData.service}
             onChange={handleChange}
-            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
           >
             <option value="">Select a service</option>
             {services.map((service, index) => (
@@ -174,14 +174,14 @@ const ContactForm: React.FC = () => {
             required
             rows={6}
             className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
-            placeholder="Tell us about your project or how we can help..."
+            placeholder="Tell us about your project or how we can help...">
           />
         </div>
 
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed">
         >
           {isSubmitting ? (
             <>

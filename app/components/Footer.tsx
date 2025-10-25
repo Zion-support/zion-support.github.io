@@ -114,7 +114,7 @@ const Footer: React.FC = () => {
                 <li key={item.name}>
                   <Link 
                     href={item.url}
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
+                    className="text-gray-300 hover:text-white transition-colors text-sm">
                   >
                     {item.name}
                   </Link>
@@ -131,7 +131,7 @@ const Footer: React.FC = () => {
                 <li key={item.name}>
                   <Link 
                     href={item.url}
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
+                    className="text-gray-300 hover:text-white transition-colors text-sm">
                   >
                     {item.name}
                   </Link>
@@ -142,9 +142,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Contact Info */}
-        <div className="border-t border-gray-800 mt-8 pt-8"></div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-300"></div>
-            <div className="flex items-center space-x-2"></div>
+        <div className="border-t border-gray-800 mt-8 pt-8"><div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-300"><div className="flex items-center space-x-2"></div>
               <Phone className="h-4 w-4" />
               <span>+1 (555) 123-4567</span>
             </div>

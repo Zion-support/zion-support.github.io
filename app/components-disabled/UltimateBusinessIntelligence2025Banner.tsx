@@ -66,14 +66,12 @@ const UltimateBusinessIntelligence2025Banner = () => {
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background Effects */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"><div
           className="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"
-          style={{ animationDelay: '2s' }}
-        ></div>
-        <div
+          style={{ animationDelay: '2s' }}>
+        ><div
           className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"
-          style={{ animationDelay: '1s' }}
+          style={{ animationDelay: '1s' }}>
         ></div>
       </div>
 
@@ -98,7 +96,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
             <Link
               href="/services"
-              className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold text-lg rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl"
+              className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold text-lg rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl">
             >
               Get Started Today
               <svg className="ml-3 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -106,13 +104,13 @@ const UltimateBusinessIntelligence2025Banner = () => {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3">
                 />
               </svg>
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center px-10 py-5 border-2 border-indigo-400 text-indigo-300 font-bold text-lg rounded-xl hover:bg-indigo-400/10 transition-all duration-300"
+              className="inline-flex items-center px-10 py-5 border-2 border-indigo-400 text-indigo-300 font-bold text-lg rounded-xl hover:bg-indigo-400/10 transition-all duration-300">
             >
               Schedule Consultation
             </Link>
@@ -126,13 +124,13 @@ const UltimateBusinessIntelligence2025Banner = () => {
                   className="w-8 h-8 text-white"
                   fill="none"
                   stroke="currentColor"
-                  viewBox="0 0 24 24"
+                  viewBox="0 0 24 24">
                 >
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
-                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
                   />
                 </svg>
               </div>
@@ -155,7 +153,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
               {currentContent.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="bg-white/10 text-white px-3 py-1 rounded-full text-sm border border-white/20"
+                  className="bg-white/10 text-white px-3 py-1 rounded-full text-sm border border-white/20">
                 >
                   {tag}
                 </span>
@@ -166,7 +164,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <Link
                 href={currentContent.url}
-                className="flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-cyan-500/25"
+                className="flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-cyan-500/25">
               >
                 <span className="text-xl">📖</span>
                 <span>Read {currentContent.type}</span>
@@ -174,7 +172,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
               </Link>
               <a
                 href="tel:+13024640950"
-                className="flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:bg-white/10"
+                className="flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:bg-white/10">
               >
                 <span className="text-xl">📞</span>
                 <span>Call +1 302 464 0950</span>
@@ -186,7 +184,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
           <div className="flex justify-center mt-8 space-x-2">
             {content.map((_, index) => (
               <button
-                key={index}
+                key={index}>
                 onClick={() => setCurrentSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'

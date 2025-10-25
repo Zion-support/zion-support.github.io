@@ -80,11 +80,9 @@ const ServicesPage: React.FC = () => {
       </section>
       {/* Services Grid */}
       <section className="py-20"></section>
-        <div className="container mx-auto px-4"></div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+        <div className="container mx-auto px-4"><div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
             {serviceCategories.map((category, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover: bg-white/20 transition-all duration-300"></div>
-                <div className="flex items-center mb-6"></div>
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover: bg-white/20 transition-all duration-300"><div className="flex items-center mb-6"></div>
                   <category.icon className="w-8 h-8 text-cyan-400" />
                   <h3 className="text-2xl font-bold text-white ml-4">{category.title}</h3>
                 </div>
@@ -108,8 +106,7 @@ const ServicesPage: React.FC = () => {
       </section>
       {/* CTA Section */}
       <section className="py-20"></section>
-        <div className="container mx-auto px-4 text-center"></div>
-          <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-12"></div>
+        <div className="container mx-auto px-4 text-center"><div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-12"></div>
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Let's discuss your project and see how we can help you achieve your goals.

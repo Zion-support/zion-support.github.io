@@ -30,10 +30,7 @@ import SecurityEnhancer from './components/SecurityEnhancer';
 
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
-  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card"></div>
-    <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
-    <div className="h-4 bg-gray-200 rounded mb-2"></div>
-    <div className="h-4 bg-gray-200 rounded w-5/6"></div>
+  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card"><div className="h-8 bg-gray-200 rounded mb-4 w-3/4"><div className="h-4 bg-gray-200 rounded mb-2"><div className="h-4 bg-gray-200 rounded w-5/6"></div>
   </div>
 ));
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
@@ -93,7 +90,7 @@ const HomePage: React.FC = () => {
     <SEOOptimizer
       title="Zion Tech Group - Leading Technology Solutions Provider"
       description="Transform your business with cutting-edge AI, cloud architecture, and innovative development services from Zion Tech Group."
-      keywords="AI solutions, cloud architecture, web development, mobile apps, data analytics, cybersecurity"
+      keywords="AI solutions, cloud architecture, web development, mobile apps, data analytics, cybersecurity">
     >
       <PerformanceOptimizer>
         <AccessibilityEnhancer>
@@ -105,8 +102,7 @@ const HomePage: React.FC = () => {
                 <main className="pt-16"></main>
                   {/* Hero Section */}
                   <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20"></section>
-                    <div className="container mx-auto px-4"></div>
-                      <div className="max-w-4xl mx-auto text-center"></div>
+                    <div className="container mx-auto px-4"><div className="max-w-4xl mx-auto text-center"></div>
                         <h1 className="text-5xl font-bold mb-6">
                           Transform Your Business with 
                           <span className="block text-yellow-300">Cutting-Edge Technology</span>
@@ -129,11 +125,9 @@ const HomePage: React.FC = () => {
 
                   {/* Stats Section */}
                   <section className="py-16 bg-white"></section>
-                    <div className="container mx-auto px-4"></div>
-                      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"></div>
+                    <div className="container mx-auto px-4"><div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"></div>
                         {stats.map((stat, index) => (
-                          <div key={index} className="text-center"></div>
-                            <div className="text-4xl font-bold text-blue-600 mb-2"></div>
+                          <div key={index} className="text-center"><div className="text-4xl font-bold text-blue-600 mb-2"></div>
                               {stat.number}
                             </div>
                             <div className="text-gray-600"></div>
@@ -147,9 +141,7 @@ const HomePage: React.FC = () => {
 
                   {/* Features Section */}
                   <section className="py-16 bg-gray-50"></section>
-                    <div className="container mx-auto px-4"></div>
-                      <div className="max-w-6xl mx-auto"></div>
-                        <div className="text-center mb-16"></div>
+                    <div className="container mx-auto px-4"><div className="max-w-6xl mx-auto"><div className="text-center mb-16"></div>
                           <h2 className="text-4xl font-bold text-gray-900 mb-4">
                             Our Services
                           </h2>
@@ -160,8 +152,7 @@ const HomePage: React.FC = () => {
                         
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
                           {features.map((feature, index) => (
-                            <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"></div>
-                              <div className="text-4xl mb-4">{feature.icon}</div>
+                            <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"><div className="text-4xl mb-4">{feature.icon}</div>
                               <h3 className="text-xl font-semibold text-gray-900 mb-3">
                                 {feature.title}
                               </h3>

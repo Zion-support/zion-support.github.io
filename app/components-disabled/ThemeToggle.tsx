@@ -26,7 +26,7 @@ export default function ThemeToggle() {
     <button
       onClick={toggleTheme}
       className="p-2 rounded-lg bg-slate-700 hover:bg-slate-600 text-white transition-colors duration-200"
-      aria-label="Toggle theme"
+      aria-label="Toggle theme">
     >
       {theme === 'light' ? (
         <Moon className="w-5 h-5" />

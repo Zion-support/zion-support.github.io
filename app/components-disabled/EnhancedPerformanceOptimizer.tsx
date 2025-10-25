@@ -44,7 +44,7 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
       'Configuring CDN...'
     ];
 
-    for (let i = 0; i < optimizationSteps.length; i++) {
+    for (let i = 0; i < optimizationSteps.length; i++) {>
       await new Promise(resolve => setTimeout(resolve, 1000));
       setOptimizations(prev => [...prev, optimizationSteps[i]])}
 
@@ -92,7 +92,7 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
           
           <div className="w-full bg-slate-700 rounded-full h-4 mb-6">
             <div 
-              className={`h-4 rounded-full transition-all duration-1000 ${
+              className={`h-4 rounded-full transition-all duration-1000 ${>
                 score >= 90 ? 'bg-green-500' : score >= 70 ? 'bg-yellow-500' : 'bg-red-500'
               }`}
               style={{ width: `${score}%` }}
@@ -102,7 +102,7 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
           <button
             onClick={runOptimizations}
             disabled={isOptimizing}
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto disabled:opacity-50"
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto disabled:opacity-50">
           >
             {isOptimizing ? (
               <>

@@ -26,7 +26,7 @@ const Navigation: React.FC = () => {
 
   return (
     <nav className={`bg-white shadow-lg sticky top-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'shadow-xl' : ''
+      isScrolled ? 'shadow-xl' : ''>
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
@@ -49,7 +49,7 @@ const Navigation: React.FC = () => {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+                  className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">
                 >
                   {item.name}
                 </Link>
@@ -59,7 +59,7 @@ const Navigation: React.FC = () => {
 
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <button
+            <button>
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-purple-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-purple-500"
               aria-expanded="false"
@@ -83,7 +83,7 @@ const Navigation: React.FC = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 hover:text-purple-600 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+                className="text-gray-700 hover:text-purple-600 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}

@@ -45,7 +45,7 @@ const target = null;
           clearInterval(interval)}
         
         return newCounters})}, stepDuration);
-
+>
     return () => clearInterval(interval)}, []);
 
   const statistics = [
@@ -143,8 +143,7 @@ const target = null;
   ];
 
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4 sm:px-6 lg:px-8"></div>
-      <div className="max-w-7xl mx-auto"></div>
+    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4 sm:px-6 lg:px-8"><div className="max-w-7xl mx-auto"></div>
         {/* Header */}
         <div className="text-center mb-16"></div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -158,9 +157,7 @@ const target = null;
         {/* Statistics Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16"></div>
           {statistics.map((stat, index) => (
-            <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 text-center hover:bg-white/10 transition-all duration-300"></div>
-              <div className="flex justify-center mb-4"></div>
-                <div className="bg-gradient-to-r from-purple-600 to-cyan-600 w-16 h-16 rounded-full flex items-center justify-center"></div>
+            <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 text-center hover:bg-white/10 transition-all duration-300"><div className="flex justify-center mb-4"><div className="bg-gradient-to-r from-purple-600 to-cyan-600 w-16 h-16 rounded-full flex items-center justify-center"></div>
                   <stat.icon className="h-8 w-8 text-white" />
                 </div>
               </div>
@@ -174,8 +171,7 @@ const target = null;
         </div>
 
         {/* Features Section */}
-        <div className="mb-16"></div>
-          <div className="text-center mb-12"></div>
+        <div className="mb-16"><div className="text-center mb-12"></div>
             <h3 className="text-2xl font-bold text-white mb-4">Key Features</h3>
             <p className="text-gray-300 max-w-2xl mx-auto">
               Discover the powerful features that make our solutions stand out.
@@ -183,8 +179,7 @@ const target = null;
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300"></div>
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mb-4"></div>
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300"><div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mb-4"></div>
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <h4 className="text-lg font-semibold text-white mb-3">{feature.title}</h4>
@@ -203,8 +198,7 @@ const target = null;
         </div>
 
         {/* Achievements Section */}
-        <div className="mb-16"></div>
-          <div className="text-center mb-12"></div>
+        <div className="mb-16"><div className="text-center mb-12"></div>
             <h3 className="text-2xl font-bold text-white mb-4">Our Achievements</h3>
             <p className="text-gray-300 max-w-2xl mx-auto">
               Recognition and milestones that showcase our commitment to excellence.
@@ -212,8 +206,7 @@ const target = null;
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
             {achievements.map((achievement, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-8 text-center hover:bg-white/10 transition-all duration-300"></div>
-                <div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-8 text-center hover:bg-white/10 transition-all duration-300"><div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                   <achievement.icon className="w-8 h-8 text-white" />
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{achievement.value}</div>
@@ -225,8 +218,7 @@ const target = null;
         </div>
 
         {/* Benefits Section */}
-        <div className="mb-16"></div>
-          <div className="text-center mb-12"></div>
+        <div className="mb-16"><div className="text-center mb-12"></div>
             <h3 className="text-2xl font-bold text-white mb-4">Why Choose Us?</h3>
             <p className="text-gray-300 max-w-2xl mx-auto">
               Discover the advantages that make our solutions the preferred choice.
@@ -243,8 +235,7 @@ const target = null;
         </div>
 
         {/* CTA Section */}
-        <div className="text-center"></div>
-          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-12"></div>
+        <div className="text-center"><div className="bg-white/5 backdrop-blur-sm rounded-2xl p-12"></div>
             <h3 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h3>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Join thousands of satisfied customers and transform your business today.

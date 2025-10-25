@@ -37,7 +37,7 @@ class ErrorBoundaryWrapper extends Component<Props, State> {
               <p className="text-gray-300 mb-6">
                 We're working to fix this issue. Please try again later.
               </p>
-              <button
+              <button>
                 onClick={() => window.location.reload()}
                 className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
               >

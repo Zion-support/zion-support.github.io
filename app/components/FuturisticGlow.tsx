@@ -66,7 +66,7 @@ const relative = null;
         after:duration-500
         hover:after:opacity-100
         ${className}
-      `}
+      `}>
     ></div>
       {children}
     </div>

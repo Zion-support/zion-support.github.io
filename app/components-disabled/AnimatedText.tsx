@@ -20,7 +20,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      if (currentIndex < text.length) {
+      if (currentIndex < text.length) {>
         setDisplayedText(prev => prev + text[currentIndex]);
         setCurrentIndex(prev => prev + 1)}
     }, speed);

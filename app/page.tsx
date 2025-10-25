@@ -72,7 +72,7 @@ export default function HomePage() {
       <PerformanceMonitor />
       <a 
         href="#main-content" 
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded-md z-50"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded-md z-50">
       >
         Skip to main content
       </a>
@@ -93,14 +93,14 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
               className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
-              aria-label="Get started with our AI and IT solutions"
+              aria-label="Get started with our AI and IT solutions">
             >
               Get Started
               <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
             </button>
             <button 
               className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
-              aria-label="Learn more about our services"
+              aria-label="Learn more about our services">
             >
               Learn More
             </button>
@@ -185,18 +185,18 @@ export default function HomePage() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-purple-100 mb-8">
-              Let&apos;s discuss how our AI and IT solutions can help you achieve your business goals.
+              Let's discuss how our AI and IT solutions can help you achieve your business goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button 
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
-                aria-label="Start your project with us"
+                aria-label="Start your project with us">
               >
                 Start Your Project
               </button>
               <button 
                 className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
-                aria-label="Schedule a consultation"
+                aria-label="Schedule a consultation">
               >
                 Schedule Consultation
               </button>

@@ -26,9 +26,7 @@ const features = [
 const AdvancedAccessibilityEnhancer: React.FC = () => {
   return (
     <div>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
-        <div className="container mx-auto px-4 py-16"></div>
-          <div className="text-center mb-16"></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"><div className="container mx-auto px-4 py-16"><div className="text-center mb-16"></div>
             <h1 className="text-5xl font-bold text-white mb-6">
               Advanced Accessibility Solutions
             </h1>
@@ -41,9 +39,7 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
             {features.map((feature, index) => {
               const IconComponent = feature.icon;
               return (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300"></div>
-                  <div className="flex items-center mb-4"></div>
-                    <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg flex items-center justify-center mr-4"></div>
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300"><div className="flex items-center mb-4"><div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg flex items-center justify-center mr-4"></div>
                       <IconComponent className="w-6 h-6 text-white" />
                     </div>
                     <h3 className="text-xl font-bold text-white">{feature.title}</h3>

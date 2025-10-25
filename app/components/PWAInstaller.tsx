@@ -63,7 +63,7 @@ const PWAInstaller: React.FC = () => {
           </div>
           <button
             onClick={handleDismiss}
-            className="text-gray-400 hover:text-white transition-colors"
+            className="text-gray-400 hover:text-white transition-colors">
           >
             <X className="w-4 h-4" />
           </button>
@@ -87,14 +87,14 @@ const PWAInstaller: React.FC = () => {
         <div className="flex space-x-2">
           <button
             onClick={handleInstallClick}
-            className="flex-1 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white text-sm font-medium py-2 px-3 rounded-lg transition-all duration-200 flex items-center justify-center"
+            className="flex-1 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white text-sm font-medium py-2 px-3 rounded-lg transition-all duration-200 flex items-center justify-center">
           >
             <Download className="w-4 h-4 mr-1" />
             Install
           </button>
           <button
             onClick={handleDismiss}
-            className="px-3 py-2 text-gray-400 hover:text-white text-sm transition-colors"
+            className="px-3 py-2 text-gray-400 hover:text-white text-sm transition-colors">
           >
             Later
           </button>

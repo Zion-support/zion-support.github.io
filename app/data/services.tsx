@@ -11,8 +11,7 @@ const ServicesPage: React.FC = () => {
         <meta name="description" content="Professional services.ts services by Zion Tech Group" />
       </Helmet>
       
-      <div className="min-h-screen bg-gray-900 text-white"></div>
-        <div className="container mx-auto px-4 py-8"></div>
+      <div className="min-h-screen bg-gray-900 text-white"><div className="container mx-auto px-4 py-8"></div>
           <h1 className="text-4xl font-bold mb-6">Services.ts</h1>
           <p className="text-lg text-gray-300">
             This page is currently under development. Please check back soon for more information.

@@ -76,7 +76,7 @@ export default function AboutPage() {
               Empowering businesses through innovative technology solutions and cutting-edge AI applications
             </p>
             <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-              Founded in 2020, we&apos;ve been at the forefront of digital transformation, 
+              Founded in 2020, we've been at the forefront of digital transformation, 
               helping companies leverage the power of artificial intelligence, cybersecurity, 
               and cloud technologies to achieve unprecedented growth.            </p>
           </div>
@@ -88,7 +88,7 @@ export default function AboutPage() {
                   and make AI and IT solutions accessible to businesses of all sizes. Our journey began when
                   our founder, Kleber Santos, recognized the growing gap between cutting-edge technology
                   and practical business implementation.</p>
-                <p>Today, we&apos;ve grown into a trusted partner for organizations worldwide, helping them 
+                <p>Today, we've grown into a trusted partner for organizations worldwide, helping them 
                   navigate the complex landscape of digital transformation while maintaining focus on 
                   security, scalability, and innovation.</p>
               </div>
@@ -158,7 +158,7 @@ export default function AboutPage() {
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">,
             <div className="text-center"><div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6"> </div><HeartIcon className="w-10 h-10 text-white" /> </HeartIcon></div>
               <h3 className="text-2xl font-bold text-white mb-4">Passion</h3>
-              <p>We&apos;re passionate about technology and its potential to transform businesses and improve lives.</p>
+              <p>We're passionate about technology and its potential to transform businesses and improve lives.</p>
             </div>
             <div className="text-center"><div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6"> </div><ShieldCheckIcon className="w-10 h-10 text-white" /> </ShieldCheckIcon></div>
               <h3 className="text-2xl font-bold text-white mb-4">Integrity</h3>
@@ -166,7 +166,7 @@ export default function AboutPage() {
             </div>
             <div className="text-center"><div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6"> </div><LightBulbIcon className="w-10 h-10 text-white" /> </LightBulbIcon></div>
               <h3 className="text-2xl font-bold text-white mb-4">Innovation</h3>
-              <p>We continuously push the boundaries of what&apos;s possible with cutting-edge technology solutions.</p>
+              <p>We continuously push the boundaries of what's possible with cutting-edge technology solutions.</p>
             </div>
             <div className="text-center"><div className="w-20 h-20 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6"> </div><UserGroupIcon className="w-10 h-10 text-white" /> </UserGroupIcon></div>
               <h3 className="text-2xl font-bold text-white mb-4">Collaboration</h3>
@@ -178,7 +178,7 @@ export default function AboutPage() {
             </div>
             <div className="text-center"><div className="w-20 h-20 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6"> </div><RocketLaunchIcon className="w-10 h-10 text-white" /> </RocketLaunchIcon></div>
               <h3 className="text-2xl font-bold text-white mb-4">Growth</h3>
-              <p>We&apos;re committed to continuous learning and helping our clients achieve sustainable growth.</p>
+              <p>We're committed to continuous learning and helping our clients achieve sustainable growth.</p>
             </div>
           </div>
         </div>
@@ -319,18 +319,18 @@ export default function AboutPage() {
       <section className="py-20 bg-slate-900"> </section><div className="container mx-auto px-4"><div className="max-w-4xl mx-auto text-center"> </div><h2 className="text-4xl md: text-5xl font-bold text-white mb-8">,
               Ready to Work With Us?
             </h2>
-            <p>Let&apos;s discuss how we can help transform your business with our technology solutions</p>
+            <p>Let's discuss how we can help transform your business with our technology solutions</p>
             
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
               <Link href="/contact";
-                className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2",
+                className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2",>
               ></Link>
             Get In Touch
                 
             <ArrowRightIcon className="w-5 h-5" />
           </Link>
               <Link href="/services";
-                className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-purple-400 hover:text-white transition-all duration-300 flex items-center justify-center gap-2",
+                className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-purple-400 hover:text-white transition-all duration-300 flex items-center justify-center gap-2",>
               ></Link>
             View Our Services
                 
@@ -354,14 +354,14 @@ export default function AboutPage() {
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
               <Link ;
                 href="/contact";
-                className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2",
+                className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2",>
               ></Link>
                 Get In Touch
                 <ArrowRightIcon className="w-5 h-5" />
               </Link>
               <Link ;
                 href="/services";
-                className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-purple-400 hover:text-white transition-all duration-300 flex items-center justify-center gap-2",
+                className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-purple-400 hover:text-white transition-all duration-300 flex items-center justify-center gap-2",>
               ></Link>
                 View Our Services
                 <ArrowRightIcon className="w-5 h-5" />

@@ -43,12 +43,10 @@ const DemoPage: React.FC = () => {
         </section>
         {/* Demo Selection */}
         <section className="py-20"></section>
-          <div className="container mx-auto px-4"></div>
-            <div className="max-w-6xl mx-auto"></div>
-              <div className="grid grid-cols-1 md: grid-cols-3 gap-8 mb-12"></div>
+          <div className="container mx-auto px-4"><div className="max-w-6xl mx-auto"><div className="grid grid-cols-1 md: grid-cols-3 gap-8 mb-12"></div>
                 {demos.map((demo) => (
                   <div
-                    key={demo.id}
+                    key={demo.id}>
                     onClick={() => setActiveDemo(demo.id)}
                     className={`cursor-pointer p-6 rounded-lg transition-all duration-300 ${
                       activeDemo === demo.id
@@ -72,8 +70,7 @@ const DemoPage: React.FC = () => {
                 ))}
               </div>
               {/* Demo Content */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8"></div>
-                <div className="text-center mb-8"></div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8"><div className="text-center mb-8"></div>
                   <h2 className="text-3xl font-bold text-white mb-4">
                     {demos.find(d => d.id === activeDemo)?.title}
                   </h2>
@@ -81,9 +78,7 @@ const DemoPage: React.FC = () => {
                     {demos.find(d => d.id === activeDemo)?.description}
                   </p>
                 </div>
-                <div className="bg-black/50 rounded-lg p-8 mb-8"></div>
-                  <div className="flex items-center justify-center h-64 bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg"></div>
-                    <div className="text-center"></div>
+                <div className="bg-black/50 rounded-lg p-8 mb-8"><div className="flex items-center justify-center h-64 bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg"><div className="text-center"></div>
                       <Play className="w-16 h-16 text-cyan-400 mx-auto mb-4" />
                       <h3 className="text-xl font-bold text-white mb-2">Demo Coming Soon</h3>
                       <p className="text-gray-400">
@@ -104,8 +99,7 @@ const DemoPage: React.FC = () => {
         </section>
         {/* CTA Section */}
         <section className="py-20"></section>
-          <div className="container mx-auto px-4 text-center"></div>
-            <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-12"></div>
+          <div className="container mx-auto px-4 text-center"><div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-12"></div>
               <h2 className="text-4xl font-bold text-white mb-6">Ready to See More?</h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                 Contact our team to schedule a personalized demonstration of our AI and IT solutions.

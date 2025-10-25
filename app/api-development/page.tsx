@@ -22,7 +22,7 @@ const Page = null;
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Professional page services by Zion Tech Group.
           </p>
-          <div className="space-y-4"></div>
+          <div className="space-y-4">
             <p className="text-gray-400">
               Our page solutions are designed to help your business grow and succeed.
             </p>

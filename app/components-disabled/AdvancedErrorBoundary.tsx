@@ -78,17 +78,17 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
             <AlertTriangle className="h-16 w-16 text-red-500 mx-auto mb-4" />
             <h1 className="text-2xl font-bold text-gray-900 mb-2">Something went wrong</h1>
             <p className="text-gray-600 mb-6">
-              We&apos;re sorry, but something unexpected happened. Please try again.
+              We're sorry, but something unexpected happened. Please try again.
             </p>
             <div className="space-y-3">
               <button
                 onClick={this.handleRetry}
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200 flex items-center justify-center"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200 flex items-center justify-center">
               >
                 <RefreshCw className="h-4 w-4 mr-2" />
                 Try Again
               </button>
-              <button 
+              <button >
                 onClick={() => window.location.href = "/"}
                 className="w-full bg-gray-600 hover:bg-gray-700 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200 flex items-center justify-center"
               >

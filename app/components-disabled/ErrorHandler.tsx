@@ -64,7 +64,7 @@ const ErrorHandler: React.FC = () => {
             </p>
             <a
               href="/contact"
-              className="inline-flex items-center bg-gradient-to-r from-emerald-500 to-blue-500 text-white px-8 py-3 rounded-lg hover:from-emerald-600 hover:to-blue-600 transition-all duration-300"
+              className="inline-flex items-center bg-gradient-to-r from-emerald-500 to-blue-500 text-white px-8 py-3 rounded-lg hover:from-emerald-600 hover:to-blue-600 transition-all duration-300">
             >
               Get Started
               <ArrowRight className="w-5 h-5 ml-2" />

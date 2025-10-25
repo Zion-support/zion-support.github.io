@@ -41,8 +41,7 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-        <div className="relative max-w-7xl mx-auto text-center">
+        <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"><div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Enhanced Performance Optimizer
           </h1>
@@ -113,7 +112,7 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Optimize Your Application&apos;s Performance?</h2>
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Optimize Your Application's Performance?</h2>
           <p className="text-xl text-gray-300 mb-8">
             Join thousands of businesses already using our performance optimization solutions
           </p>

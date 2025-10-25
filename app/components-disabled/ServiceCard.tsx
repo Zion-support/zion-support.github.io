@@ -36,7 +36,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       )}
       <Link 
         href={href}
-        className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
+        className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold">
       >
         Learn More
         <ArrowRight className="ml-1 h-4 w-4" />

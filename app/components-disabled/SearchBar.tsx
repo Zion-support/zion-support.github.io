@@ -20,7 +20,7 @@ export default function SearchBar() {
         <div className="relative">
           <input
             type="text"
-            value={query}
+            value={query}>
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search..."
             className="w-64 px-4 py-2 pl-10 pr-4 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
@@ -29,7 +29,7 @@ export default function SearchBar() {
         </div>
         <button
           type="submit"
-          className="ml-2 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors duration-200"
+          className="ml-2 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors duration-200">
         >
           Search
         </button>

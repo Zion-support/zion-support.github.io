@@ -87,9 +87,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
         return this.props.fallback}
 
       return (
-        <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center px-4"></div>
-          <div className="max-w-2xl w-full bg-white rounded-lg shadow-lg p-8 text-center"></div>
-            <div className="flex justify-center mb-6"></div>
+        <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center px-4"><div className="max-w-2xl w-full bg-white rounded-lg shadow-lg p-8 text-center"><div className="flex justify-center mb-6"></div>
               <AlertTriangle className="h-20 w-20 text-red-500" />
             </div>
             <h1 className="text-3xl font-bold text-gray-900 mb-4">
@@ -113,8 +111,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
                 <summary className="cursor-pointer text-sm font-medium text-gray-700 mb-2">
                   Error Details (Development))
                 </summary>
-                <div className="bg-gray-100 p-3 rounded text-xs font-mono text-gray-800 overflow-auto max-h-40"></div>
-                  <div className="mb-2"></div>
+                <div className="bg-gray-100 p-3 rounded text-xs font-mono text-gray-800 overflow-auto max-h-40"><div className="mb-2"></div>
                     <strong>Error:</strong> {this.state.error?.message}
                   </div>
                   {this.state.errorInfo && (
@@ -132,12 +129,12 @@ class AdvancedErrorBoundary extends Component<Props, State> {
             <div className="flex flex-col sm:flex-row gap-3 justify-center"></div>
               <button
                 onClick={this.handleReset}
-                className="flex items-center justify-center px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+                className="flex items-center justify-center px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
               >
                 <RefreshCw className="h-4 w-4 mr-2" />
                 Try Again
               </button>
-              <button
+              <button>
                 onClick={() => window.location.href = '/'}
                 className="flex items-center justify-center px-6 py-3 bg-gray-600 text-white rounded-md hover:bg-gray-700 transition-colors"
               >
@@ -146,7 +143,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
               </button>
               <button
                 onClick={this.handleReportError}
-                className="flex items-center justify-center px-6 py-3 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors"
+                className="flex items-center justify-center px-6 py-3 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors">
               >
                 <Mail className="h-4 w-4 mr-2" />
                 Report Issue
@@ -157,7 +154,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
                 If this problem persists, please contact our support team at{' '}
                 <a 
                   href="mailto:support@ziontechgroup.com" 
-                  className="text-blue-600 hover:text-blue-800"
+                  className="text-blue-600 hover:text-blue-800">
                 >
                   support@ziontechgroup.com
                 </a>

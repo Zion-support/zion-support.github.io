@@ -13,10 +13,7 @@ const GlobalErrorBoundary: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-center justify-center"></div>
-      <div className="max-w-4xl mx-auto px-4 text-center"></div>
-        <div className="mb-8"></div>
-          <div className="w-24 h-24 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-6"></div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-center justify-center"><div className="max-w-4xl mx-auto px-4 text-center"><div className="mb-8"><div className="w-24 h-24 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-6"></div>
             <CheckCircle className="w-12 h-12 text-white" />
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
@@ -37,13 +34,13 @@ const GlobalErrorBoundary: React.FC = () => {
         </div>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-          <button 
+          <button >
             onClick={() => window.location.reload()}
             className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"
           >
             Try Again
           </button>
-          <button 
+          <button >
             onClick={() => window.location.href = '/'}
             className="border border-red-400 text-red-400 hover:bg-red-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"
           >

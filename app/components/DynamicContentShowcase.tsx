@@ -39,9 +39,7 @@ const DynamicContentShowcase: React.FC = () => {
   const currentFeature = features[currentIndex]
 
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4"></div>
-      <div className="max-w-7xl mx-auto"></div>
-        <div className="text-center mb-16"></div>
+    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4"><div className="max-w-7xl mx-auto"><div className="text-center mb-16"></div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Dynamic Content Showcase
           </h2>
@@ -50,10 +48,7 @@ const DynamicContentShowcase: React.FC = () => {
           </p>
         </div>
 
-        <div className="relative"></div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-white/20"></div>
-            <div className="flex items-center justify-center mb-8"></div>
-              <div className={`bg-gradient-to-r ${currentFeature.color} p-4 rounded-full`}></div>
+        <div className="relative"><div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-white/20"><div className="flex items-center justify-center mb-8"><div className={`bg-gradient-to-r ${currentFeature.color} p-4 rounded-full`}></div>
                 <currentFeature.icon className="h-12 w-12 text-white" />
               </div>
             </div>
@@ -69,7 +64,7 @@ const DynamicContentShowcase: React.FC = () => {
             <div className="flex justify-center space-x-2 mb-8"></div>
               {features.map((_, index) => (
                 <button
-                  key={index}
+                  key={index}>
                   onClick={() => setCurrentIndex(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
                     index === currentIndex ? 'bg-white' : 'bg-white/30'
