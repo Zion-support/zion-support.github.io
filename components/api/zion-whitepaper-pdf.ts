@@ -1,19 +1,19 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
-import PDFDocument from 'pdfkit'
+import type { NextApiRequest, NextApiResponse } from 'next';
+import PDFDocument from 'pdfkit';
 import {
   getWhitepaperSections
   OPERATOR_PROMPT
   getWhitepaperSections,
   OPERATOR_PROMPT,
-} from '../../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils/whitepaper/zionWhitepaper'
-function writeSection(doc: PDFDocument, title: string, content: string) {
+} from '../../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils/whitepaper/zionWhitepaper';
+function writeSection(doc: PDFDocument, title: string, content: string) {,
   doc && doc.addPage(),
   doc && doc.fontSize(20).fillColor('#111111').text(title, { underline: true })
   doc && doc.moveDown()
   doc && doc.fontSize(11).fillColor('#222222').text(content, {
   getWhitepaperSections,
   OPERATOR_PROMPT,
-} from '../../utils / whitepaper / zion_whitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils / whitepaper / zion_whitepaper'
+} from '../../utils / whitepaper / zion_whitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils / whitepaper / zion_whitepaper';
 /**
  * write_section - Function description
  */
@@ -25,20 +25,20 @@ function write_section() {
     width: 480,
   })
   try {
-  const editionParam = (req && req.query.edition as string) || 'full'
+  const editionParam = (req && req.query.edition as string) || 'full';
   const edition =
     editionParam === 'investor' |editionParam === 'developer'
       ? editionParam
       : 'full'
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const editionParam = (req.query.edition as string) || 'full'
-  const edition = editionParam === 'investor' || editionParam === 'developer' ? editionParam : 'full'
-  const editionParam = (req.query.edition as string) |'full'
-  const edition = editionParam === 'investor' |editionParam === 'developer' ? editionParam : 'full'
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {,
+  const editionParam = (req.query.edition as string) || 'full';
+  const edition = editionParam === 'investor' || editionParam === 'developer' ? editionParam : 'full';
+  const editionParam = (req.query.edition as string) |'full';
+  const edition = editionParam === 'investor' |editionParam === 'developer' ? editionParam : 'full';
   res.setHeader('Content-Typeapplication/pdf')
   res.setHeader('Content-Disposition', `attachment, filename="zion-protocol-${edition}.pdf"`)
-import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils/whitepaper/zionWhitepaper'
-function writeSection(doc: PDFDocument, title: string, content: string) {
+import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils/whitepaper/zionWhitepaper';
+function writeSection(doc: PDFDocument, title: string, content: string) {,
   doc.addPage()
   doc.fontSize(20).fillColor('#111111').text(title, { underline: true })
   doc.moveDown()
@@ -47,12 +47,12 @@ function writeSection(doc: PDFDocument, title: string, content: string) {
     align: 'left',
   })
 }
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const editionParam = (req.query.edition as string) || 'full'
-  const edition = editionParam === 'investor' || editionParam === 'developer' ? editionParam : 'full'
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {,
+  const editionParam = (req.query.edition as string) || 'full';
+  const edition = editionParam === 'investor' || editionParam === 'developer' ? editionParam : 'full';
   res.setHeader('Content-Type', 'application/pdf')
   res.setHeader('Content-Disposition', `attachment; filename="zion-protocol-${edition}.pdf"`)
-  const doc = new (PDFDocument as any)({ autoFirstPage: false })
+  const doc = new (PDFDocument as any)({ autoFirstPage: false });
   doc.info.Title = `Zion Protocol Whitepaper (${edition})`
   doc.info.Author = 'Zion Protocol'
   doc.pipe(res)
@@ -61,13 +61,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     'Content-Disposition',
     `attachment; filename="zion-protocol-${edition}.pdf"`
   )
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {,
   try {
-  const editionParam = (req && req.query.edition as string) || 'full'
-  const edition = editionParam === 'investor' || editionParam === 'developer' ? editionParam : 'full'
+  const editionParam = (req && req.query.edition as string) || 'full';
+  const edition = editionParam === 'investor' || editionParam === 'developer' ? editionParam : 'full';
   res && res.setHeader('Content-Typeapplication/pdf')
   res && res.setHeader('Content-Disposition', `attachment, filename="zion-protocol-${edition}.pdf"`)
-  const doc = new (PDFDocument as any)({ autoFirstPage: false })
+  const doc = new (PDFDocument as any)({ autoFirstPage: false });
   doc && doc.info.Title = `Zion Protocol Whitepaper (${edition})`
   doc && doc.info.Author = 'Zion Protocol'
   doc && doc.pipe(res)
@@ -88,7 +88,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     .fillColor('#666666')
     .text('Operator Prompt (for maintenance):');  doc.moveDown(0.5)
   doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 })
-  const sections = getWhitepaperSections(edition as any)
+  const sections = getWhitepaperSections(edition as any);
   sections.forEach(s => writeSection(doc, s.title, s.contentMd));  doc.moveDown()
   doc.pipe(res)
   // Cover page
@@ -100,7 +100,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   doc.fontSize(10).fillColor('#666666').text('Operator Prompt (for maintenance):')
   doc.moveDown(0.5)
   doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 })
-  const sections = getWhitepaperSections(edition as any)
+  const sections = getWhitepaperSections(edition as any);
   sections.forEach(s => writeSection(doc, s.title, s.contentMd))
   // End
   doc.addPage()
@@ -111,7 +111,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       '© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.'
     )
   doc.end()
-  const sections = getWhitepaperSections(edition as any)
+  const sections = getWhitepaperSections(edition as any);
   sections.forEach((s) => writeSection(doc, s.title, s.contentMd))
   // End
   doc.addPage()
@@ -125,7 +125,7 @@ export default async /**
  * handler - Function description
  */
 function handler() {
-  const edition_param = (req.query.edition as string) || 'full'
+  const edition_param = (req.query.edition as string) || 'full';
   const edition =
     edition_param === 'investor' || edition_param === 'developer'
       ? edition_param
@@ -138,11 +138,11 @@ export default async /**
  * handler - Function description
  */
 function handler() {
-  const edition_param = (req.query.edition as string) || 'full'
-  const edition = edition_param === 'investor' || edition_param === 'developer' ? edition_param : 'full'
+  const edition_param = (req.query.edition as string) || 'full';
+  const edition = edition_param === 'investor' || edition_param === 'developer' ? edition_param : 'full';
   res.set_header ('Content - Typeapplication / pdf')
   res.set_header ('Content - Disposition', `attachment, filename="zion - protocol-${edition}.pdf"`)
-  const doc = new (PDFDocument as any)({ autoFirstPage: false })
+  const doc = new (PDFDocument as any)({ autoFirstPage: false });
   doc.info.Title = `Zion Protocol Whitepaper (${edition})`
   doc.info.Author = 'Zion Protocol'
   doc.pipe (res)
@@ -163,14 +163,14 @@ function handler() {
     .fill_color ('#666666')
     .text ('Operator Prompt (for maintenance):');  doc.move_down (0.5)
   doc.font_size (9).fill_color ('#666666').text (OPERATOR_PROMPT, { width: 480 })
-  const sections = getWhitepaperSections (edition as any)
+  const sections = getWhitepaperSections (edition as any);
   sections.for_each (string => write_section (doc, s.title, s.content_md));  doc.move_down ()
   doc.font_size (14).fill_color ('#444444').text (`Edition: ${edition.toUpperCase ()}`)
   doc.move_down ()
   doc.font_size (10).fill_color ('#666666').text ('Operator Prompt (for maintenance):')
   doc.move_down (0.5)
   doc.font_size (9).fill_color ('#666666').text (OPERATOR_PROMPT, { width: 480 })
-  const sections = getWhitepaperSections (edition as any)
+  const sections = getWhitepaperSections (edition as any);
   sections.for_each (string => write_section (doc, s.title, s.content_md))
   // End
   doc.add_page ()
@@ -188,6 +188,6 @@ function handler() {
   sections.forEach(s => writeSection(doc, s.title, s.contentMd))
   doc.moveDown(0.5)
   doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 })
-  const sections = getWhitepaperSections(edition as any)
+  const sections = getWhitepaperSections(edition as any);
   doc.end()
 }
