@@ -1,9 +1,9 @@
 import React, { memo } from 'react';
 
 interface AIToolCardProps {
-  title: string;
-  description: string;
-  link: string;
+  title: string
+  description: string
+  link: string
 }
 
 const AIToolCard: React.FC<AIToolCardProps> = memo(({ title, description, link }) => {

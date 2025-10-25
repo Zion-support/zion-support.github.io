@@ -26,6 +26,7 @@ const Page: React.FC = () => {
   ];
 
   return (
+    <>
       <Navigation />
       <div className="min-h-screenbg-gradient-to-brfrom-slate-900via-emerald-900 to-slate-900">
         <div className="containermx-autopx-4py-20">
@@ -72,6 +73,8 @@ const Page: React.FC = () => {
         </div>
       </div>
       <Footer />
-  )};
+    </>
+  );
+};
 
 export default Page;

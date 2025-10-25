@@ -14,28 +14,24 @@ import {
   Lock, 
   TrendingUp, 
   Settings, 
-  MessageCircle, 
-  Mic, 
-  Eye,
-  Shield,
-  FileText,
-  Users,
-  Brain,
-  Code,
-  Package
+  Users, 
+  Shield, 
+  Code, 
+  Brain, 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Clock 
 } from 'lucide-react'
 
-const Navigation: React.FC = () => {
+const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const [servicesOpen, setServicesOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
-  const [aiServicesOpen, setAiServicesOpen] = useState(false)
-  const [itServicesOpen, setItServicesOpen] = useState(false)
-  const [microSaasOpen, setMicroSaasOpen] = useState(false)
 
-  // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0)
+      setIsScrolled(window.scrollY > 50)
     }
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
@@ -43,309 +39,317 @@ const Navigation: React.FC = () => {
 
   const closeAllMenus = useCallback(() => {
     setIsOpen(false)
-    setAiServicesOpen(false)
-    setItServicesOpen(false)
-    setMicroSaasOpen(false)
+    setServicesOpen(false)
   }, [])
 
-  // Service data
-  const aiServices = [
-    { name: 'AI Analytics', href: '/ai-analytics', icon: BarChart, description: 'Advanced data insights' },
-    { name: 'AI Automation', href: '/ai-automation', icon: Zap, description: 'Process automation' },
-    { name: 'AI Chatbots', href: '/ai-chatbot-builder', icon: MessageCircle, description: 'Conversational AI' },
-    { name: 'Computer Vision', href: '/ai-computer-vision', icon: Eye, description: 'Image recognition' },
-    { name: 'Predictive Analytics', href: '/ai-predictive-analytics', icon: TrendingUp, description: 'Forecasting' },
-    { name: 'Voice AI', href: '/ai-voice-assistant', icon: Mic, description: 'Voice technology' }
-  ]
-
-  const itServices = [
-    { name: 'Cloud Infrastructure', href: '/cloud-architecture', icon: Cloud, description: 'Scalable cloud solutions' },
-    { name: 'Cybersecurity Solutions', href: '/cybersecurity', icon: Lock, description: 'Security solutions' },
-    { name: 'Web Development', href: '/web-development', icon: Globe, description: 'Modern web applications' },
-    { name: 'Mobile Development', href: '/mobile-development', icon: Smartphone, description: 'iOS & Android apps' },
-    { name: 'DevOps', href: '/devops', icon: Settings, description: 'Development operations' },
-    { name: 'Data Analytics', href: '/data-analytics', icon: BarChart, description: 'Data insights' }
-  ]
-
-  const microSaasServices = [
-    { name: 'Zion Analytics Pro', href: '/zion-analytics-pro', icon: BarChart, description: 'Business intelligence' },
-    { name: 'Zion Chat AI', href: '/zion-chat-ai', icon: MessageCircle, description: 'AI customer support' },
-    { name: 'Zion Security Shield', href: '/zion-security-shield', icon: Shield, description: 'Cybersecurity monitoring' },
-    { name: 'Zion Cloud Vault', href: '/zion-cloud-vault', icon: Cloud, description: 'Cloud backup & recovery' },
-    { name: 'Zion Content Studio', href: '/zion-content-studio', icon: FileText, description: 'AI content creation' },
-    { name: 'Zion CRM Intelligence', href: '/zion-crm-intelligence', icon: Users, description: 'AI-enhanced CRM' }
+  const serviceCategories = [
+    {
+      title: 'AI Services',
+      icon: Brain,
+      bgColor: 'bg-purple-100',
+      color: 'text-purple-600',
+      services: [
+        { name: 'AI Services', path: '/ai-services' },
+        { name: 'AI Marketing', path: '/ai-marketing' },
+        { name: 'AI Automation', path: '/ai-automation' },
+        { name: 'AI Healthcare', path: '/ai-healthcare' },
+        { name: 'AI Fintech', path: '/ai-fintech' }
+      ]
+    },
+    {
+      title: 'IT Services',
+      icon: Cloud,
+      bgColor: 'bg-blue-100',
+      color: 'text-blue-600',
+      services: [
+        { name: 'IT Services', path: '/it-services' },
+        { name: 'Cloud Services', path: '/cloud-services' },
+        { name: 'Cybersecurity', path: '/cybersecurity' },
+        { name: 'DevOps', path: '/devops' },
+        { name: 'Database Services', path: '/database' }
+      ]
+    },
+    {
+      title: 'Micro SAAS',
+      icon: Code,
+      bgColor: 'bg-green-100',
+      color: 'text-green-600',
+      services: [
+        { name: 'Micro SAAS', path: '/micro-saas' },
+        { name: 'Developer Tools', path: '/developer-tools' },
+        { name: 'Business Apps', path: '/business-apps' },
+        { name: 'Productivity Tools', path: '/productivity' },
+        { name: 'Marketing Tools', path: '/marketing-tools' }
+      ]
+    },
+    {
+      title: 'Specialized',
+      icon: Zap,
+      bgColor: 'bg-orange-100',
+      color: 'text-orange-600',
+      services: [
+        { name: 'Quantum Computing', path: '/quantum-computing' },
+        { name: 'Autonomous Systems', path: '/autonomous-systems' },
+        { name: 'Blockchain & Web3', path: '/blockchain-web3' },
+        { name: 'IoT & Edge Computing', path: '/iot-edge-computing' },
+        { name: 'Business Intelligence', path: '/business-intelligence' }
+      ]
+    }
   ]
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <nav className={`sticky top-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
     }`}>
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">Z</span>
+          <Link 
+            href="/" 
+            className="flex items-center space-x-2 text-2xl font-bold"
+            onClick={closeAllMenus}
+          >
+            <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
+              <Zap className="w-5 h-5 text-white" />
             </div>
-            <span className={`text-xl font-bold ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
+            <span className={`transition-colors ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
               Zion Tech Group
             </span>
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Menu */}
           <div className="hidden lg:flex items-center space-x-8">
             <Link 
               href="/" 
-              className={`py-2 px-3 rounded-lg transition-colors ${
-                isScrolled ? 'text-gray-700 hover:bg-gray-100' : 'text-white hover:bg-white/10'
+              className={`font-medium transition-colors hover:text-purple-600 ${
+                isScrolled ? 'text-gray-700' : 'text-white'
               }`}
+              onClick={closeAllMenus}
             >
               Home
             </Link>
             
-            {/* AI Services Dropdown */}
-            <div className="relative">
-              <button
-                className={`flex items-center space-x-1 py-2 px-3 rounded-lg transition-colors ${
-                  isScrolled ? 'text-gray-700 hover:bg-gray-100' : 'text-white hover:bg-white/10'
-                }`}
-                onMouseEnter={() => setAiServicesOpen(true)}
-                onMouseLeave={() => setAiServicesOpen(false)}
-              >
-                <Brain className="w-4 h-4" />
-                <span>AI Services</span>
-                <ChevronDown className="w-4 h-4" />
-              </button>
-              
-              {aiServicesOpen && (
-                <div
-                  className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
-                  onMouseEnter={() => setAiServicesOpen(true)}
-                  onMouseLeave={() => setAiServicesOpen(false)}
-                >
-                  <div className="grid grid-cols-2 gap-4 px-4">
-                    {aiServices.map((service, index) => (
-                      <Link
-                        key={index}
-                        href={service.href}
-                        className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors"
-                      >
-                        <service.icon className="w-5 h-5 text-blue-600 mt-0.5" />
-                        <div>
-                          <div className="font-medium text-gray-900">{service.name}</div>
-                          <div className="text-sm text-gray-500">{service.description}</div>
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* IT Services Dropdown */}
-            <div className="relative group">
-              <button
-                className={`flex items-center space-x-1 py-2 px-3 rounded-lg transition-colors ${
-                  isScrolled ? 'text-gray-700 hover:bg-gray-100' : 'text-white hover:bg-white/10'
-                }`}
-                onMouseEnter={() => setItServicesOpen(true)}
-                onMouseLeave={() => setItServicesOpen(false)}
-              >
-                <Code className="w-4 h-4" />
-                <span>IT Services</span>
-                <ChevronDown className="w-4 h-4" />
-              </button>
-              
-              {itServicesOpen && (
-                <div
-                  className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
-                  onMouseEnter={() => setItServicesOpen(true)}
-                  onMouseLeave={() => setItServicesOpen(false)}
-                >
-                  <div className="grid grid-cols-2 gap-4 px-4">
-                    {itServices.map((service, index) => (
-                      <Link
-                        key={index}
-                        href={service.href}
-                        className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors"
-                      >
-                        <service.icon className="w-5 h-5 text-blue-600 mt-0.5" />
-                        <div>
-                          <div className="font-medium text-gray-900">{service.name}</div>
-                          <div className="text-sm text-gray-500">{service.description}</div>
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* Micro SaaS Dropdown */}
-            <div className="relative group">
-              <button
-                className={`flex items-center space-x-1 py-2 px-3 rounded-lg transition-colors ${
-                  isScrolled ? 'text-gray-700 hover:bg-gray-100' : 'text-white hover:bg-white/10'
-                }`}
-                onMouseEnter={() => setMicroSaasOpen(true)}
-                onMouseLeave={() => setMicroSaasOpen(false)}
-              >
-                <Package className="w-4 h-4" />
-                <span>Micro SaaS</span>
-                <ChevronDown className="w-4 h-4" />
-              </button>
-              
-              {microSaasOpen && (
-                <div
-                  className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
-                  onMouseEnter={() => setMicroSaasOpen(true)}
-                  onMouseLeave={() => setMicroSaasOpen(false)}
-                >
-                  <div className="grid grid-cols-2 gap-4 px-4">
-                    {microSaasServices.map((service, index) => (
-                      <Link
-                        key={index}
-                        href={service.href}
-                        className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors"
-                      >
-                        <service.icon className="w-5 h-5 text-blue-600 mt-0.5" />
-                        <div>
-                          <div className="font-medium text-gray-900">{service.name}</div>
-                          <div className="text-sm text-gray-500">{service.description}</div>
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-
-            <Link
-              href="/about"
-              className={`py-2 px-3 rounded-lg transition-colors ${
-                isScrolled ? 'text-gray-700 hover:bg-gray-100' : 'text-white hover:bg-white/10'
+            <Link 
+              href="/about" 
+              className={`font-medium transition-colors hover:text-purple-600 ${
+                isScrolled ? 'text-gray-700' : 'text-white'
               }`}
+              onClick={closeAllMenus}
             >
               About
             </Link>
-            <Link
-              href="/contact"
-              className={`py-2 px-3 rounded-lg transition-colors ${
-                isScrolled ? 'text-gray-700 hover:bg-gray-100' : 'text-white hover:bg-white/10'
+
+            {/* Services Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => setServicesOpen(!servicesOpen)}
+                className={`flex items-center space-x-1 font-medium transition-colors hover:text-purple-600 ${
+                  isScrolled ? 'text-gray-700' : 'text-white'
+                }`}
+              >
+                <span>Services</span>
+                <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {servicesOpen && (
+                <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-xl shadow-2xl border border-gray-200 py-6 z-50">
+                  <div className="grid grid-cols-2 gap-6 px-6">
+                    {serviceCategories.map((category, index) => (
+                      <div key={index} className="space-y-3">
+                        <div className="flex items-center space-x-2 mb-3">
+                          <div className={`w-8 h-8 ${category.bgColor} rounded-lg flex items-center justify-center`}>
+                            <category.icon className={`w-4 h-4 ${category.color}`} />
+                          </div>
+                          <h3 className="font-semibold text-gray-900 text-sm">{category.title}</h3>
+                        </div>
+                        <div className="space-y-2">
+                          {category.services.map((service, serviceIndex) => (
+                            <Link
+                              key={serviceIndex}
+                              href={service.path}
+                              className="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-purple-600 rounded-lg transition-colors"
+                              onClick={closeAllMenus}
+                            >
+                              {service.name}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="border-t border-gray-200 mt-6 pt-4 px-6">
+                    <Link
+                      href="/services"
+                      className="block w-full text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all"
+                      onClick={closeAllMenus}
+                    >
+                      View All Services
+                    </Link>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            <Link 
+              href="/case-studies" 
+              className={`font-medium transition-colors hover:text-purple-600 ${
+                isScrolled ? 'text-gray-700' : 'text-white'
               }`}
+              onClick={closeAllMenus}
+            >
+              Case Studies
+            </Link>
+            
+            <Link 
+              href="/enterprise" 
+              className={`font-medium transition-colors hover:text-purple-600 ${
+                isScrolled ? 'text-gray-700' : 'text-white'
+              }`}
+              onClick={closeAllMenus}
+            >
+              Enterprise
+            </Link>
+            
+            <Link 
+              href="/team" 
+              className={`font-medium transition-colors hover:text-purple-600 ${
+                isScrolled ? 'text-gray-700' : 'text-white'
+              }`}
+              onClick={closeAllMenus}
+            >
+              Team
+            </Link>
+
+            {/* Contact Button */}
+            <Link 
+              href="/contact" 
+              className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl"
+              onClick={closeAllMenus}
             >
               Contact
             </Link>
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <Link
-              href="/contact"
-              className={`px-6 py-2 rounded-lg font-medium transition-colors ${
-                isScrolled
-                  ? 'bg-blue-600 text-white hover:bg-blue-700'
-                  : 'bg-white text-blue-600 hover:bg-gray-100'
-              }`}
-            >
-              Get Started
-            </Link>
-          </div>
-
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2"
             onClick={() => setIsOpen(!isOpen)}
+            className={`lg:hidden p-2 rounded-lg transition-colors ${
+              isScrolled 
+                ? 'text-gray-700 hover:bg-gray-100' 
+                : 'text-white hover:bg-white/10'
+            }`}
           >
-            {isOpen ? (
-              <X className={`w-6 h-6 ${isScrolled ? 'text-gray-900' : 'text-white'}`} />
-            ) : (
-              <Menu className={`w-6 h-6 ${isScrolled ? 'text-gray-900' : 'text-white'}`} />
-            )}
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="lg:hidden bg-white border-t border-gray-200">
-            <div className="px-4 py-6 space-y-4">
-              <Link
-                href="/"
-                className="block py-2 text-gray-900 hover:text-blue-600"
+          <div className="lg:hidden border-t border-gray-200 py-6 bg-white">
+            <div className="space-y-6">
+              <Link 
+                href="/" 
+                className="block text-lg font-medium text-gray-900 hover:text-purple-600 transition-colors"
                 onClick={closeAllMenus}
               >
                 Home
               </Link>
               
-              <div>
-                <button
-                  className="flex items-center justify-between w-full py-2 text-left"
-                  onClick={() => setAiServicesOpen(!aiServicesOpen)}
-                >
-                  <span className="font-medium text-gray-900">AI Services</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform ${aiServicesOpen ? 'rotate-180' : ''}`} />
-                </button>
-                {aiServicesOpen && (
-                  <div className="mt-2 space-y-2 pl-4">
-                    {aiServices.map((service, index) => (
-                      <Link
-                        key={index}
-                        href={service.href}
-                        className="block py-2 text-gray-600 hover:text-blue-600"
-                        onClick={closeAllMenus}
-                      >
-                        {service.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              <div>
-                <button
-                  className="flex items-center justify-between w-full py-2 text-left"
-                  onClick={() => setItServicesOpen(!itServicesOpen)}
-                >
-                  <span className="font-medium text-gray-900">IT Services</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform ${itServicesOpen ? 'rotate-180' : ''}`} />
-                </button>
-                {itServicesOpen && (
-                  <div className="mt-2 space-y-2 pl-4">
-                    {itServices.map((service, index) => (
-                      <Link
-                        key={index}
-                        href={service.href}
-                        className="block py-2 text-gray-600 hover:text-blue-600"
-                        onClick={closeAllMenus}
-                      >
-                        {service.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              <Link
-                href="/about"
-                className="block py-2 text-gray-900 hover:text-blue-600"
+              <Link 
+                href="/about" 
+                className="block text-lg font-medium text-gray-900 hover:text-purple-600 transition-colors"
                 onClick={closeAllMenus}
               >
                 About
               </Link>
-              <Link
-                href="/contact"
-                className="block py-2 text-gray-900 hover:text-blue-600"
+
+              {/* Mobile Services Section */}
+              <div className="space-y-4">
+                <div className="text-lg font-semibold text-gray-900">Services</div>
+                <div className="grid grid-cols-1 gap-4 pl-4">
+                  {serviceCategories.map((category, index) => (
+                    <div key={index} className="space-y-2">
+                      <div className="flex items-center space-x-2">
+                        <div className={`w-6 h-6 ${category.bgColor} rounded-lg flex items-center justify-center`}>
+                          <category.icon className={`w-3 h-3 ${category.color}`} />
+                        </div>
+                        <h3 className="font-medium text-gray-700 text-sm">{category.title}</h3>
+                      </div>
+                      <div className="space-y-1 pl-8">
+                        {category.services.map((service, serviceIndex) => (
+                          <Link
+                            key={serviceIndex}
+                            href={service.path}
+                            className="block text-sm text-gray-600 hover:text-purple-600 transition-colors"
+                            onClick={closeAllMenus}
+                          >
+                            {service.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <Link
+                  href="/services"
+                  className="block w-full text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all mt-4"
+                  onClick={closeAllMenus}
+                >
+                  View All Services
+                </Link>
+              </div>
+
+              <Link 
+                href="/case-studies" 
+                className="block text-lg font-medium text-gray-900 hover:text-purple-600 transition-colors"
                 onClick={closeAllMenus}
               >
-                Contact
+                Case Studies
               </Link>
-              <Link
-                href="/contact"
-                className="block w-full bg-blue-600 text-white text-center py-3 rounded-lg font-medium hover:bg-blue-700"
+              
+              <Link 
+                href="/enterprise" 
+                className="block text-lg font-medium text-gray-900 hover:text-purple-600 transition-colors"
                 onClick={closeAllMenus}
               >
-                Get Started
+                Enterprise
               </Link>
+              
+              <Link 
+                href="/team" 
+                className="block text-lg font-medium text-gray-900 hover:text-purple-600 transition-colors"
+                onClick={closeAllMenus}
+              >
+                Team
+              </Link>
+
+              <Link 
+                href="/contact" 
+                className="block w-full text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all"
+                onClick={closeAllMenus}
+              >
+                Contact Us
+              </Link>
+
+              {/* Contact Info */}
+              <div className="border-t border-gray-200 pt-6 space-y-3">
+                <div className="flex items-center space-x-3 text-sm text-gray-600">
+                  <Phone className="w-4 h-4" />
+                  <a href="tel:+13024640950" className="hover:text-purple-600 transition-colors">
+                    +1 302 464 0950
+                  </a>
+                </div>
+                <div className="flex items-center space-x-3 text-sm text-gray-600">
+                  <Mail className="w-4 h-4" />
+                  <a href="mailto:kleber@ziontechgroup.com" className="hover:text-purple-600 transition-colors">
+                    kleber@ziontechgroup.com
+                  </a>
+                </div>
+                <div className="flex items-center space-x-3 text-sm text-gray-600">
+                  <MapPin className="w-4 h-4" />
+                  <span>364 E Main St STE 1008, Middletown DE 19709</span>
+                </div>
+              </div>
             </div>
           </div>
         )}

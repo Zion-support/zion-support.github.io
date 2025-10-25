@@ -15,7 +15,8 @@ export default {
   transform: {
     '^.+\\.(ts|tsx)$': ['ts-jest', {
       tsconfig: 'tsconfig.json',
-      useESM: true
+      useESM: true,
+      jsx: 'react-jsx'
     }],
     '^.+\\.(js|jsx)$': 'babel-jest'
   },
@@ -41,10 +42,5 @@ export default {
   transformIgnorePatterns: [
     'node_modules/(?!(.*\\.mjs$|lucide-react|framer-motion))'
   ],
-  extensionsToTreatAsEsm: ['.ts', '.tsx'],
-  globals: {
-    'ts-jest': {
-      useESM: true
-    }
-  }
+  extensionsToTreatAsEsm: ['.ts', '.tsx']
 };

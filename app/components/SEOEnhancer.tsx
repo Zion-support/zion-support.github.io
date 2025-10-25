@@ -62,6 +62,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   }, [title, description, keywords, canonicalUrl]);
 
   return (
+    <>
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -89,6 +90,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
         )}
       </Helmet>
       {children}
+    </>
   );
 };
 
