@@ -1,89 +1,8 @@
-<<<<<<< HEAD
 import React from 'react'
 import Link from 'next/link'
 import { Menu, X, Brain } from 'lucide-react'
 
 const Navigation = () => {
-=======
-'use client'
-
-import React, { useState, useEffect, useCallback } from 'react'
-import Link from 'next/link'
-import { 
-  ChevronDown, 
-  Menu, 
-  X, 
-  Cloud, 
-  BarChart, 
-  Zap, 
-  Globe, 
-  Smartphone, 
-  Lock, 
-  TrendingUp, 
-  Settings, 
-  MessageCircle, 
-  Mic, 
-  Eye,
-  Shield,
-  FileText,
-  Users,
-  Brain,
-  Code,
-  Package
-} from 'lucide-react'
-
-const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [aiServicesOpen, setAiServicesOpen] = useState(false)
-  const [itServicesOpen, setItServicesOpen] = useState(false)
-  const [microSaasOpen, setMicroSaasOpen] = useState(false)
-
-  // Handle scroll effect
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
-  const closeAllMenus = useCallback(() => {
-    setIsOpen(false)
-    setAiServicesOpen(false)
-    setItServicesOpen(false)
-    setMicroSaasOpen(false)
-  }, [])
-
-  // Service data
-  const aiServices = [
-    { name: 'AI Analytics', href: '/ai-analytics', icon: BarChart, description: 'Advanced data insights' },
-    { name: 'AI Automation', href: '/ai-automation', icon: Zap, description: 'Process automation' },
-    { name: 'AI Chatbots', href: '/ai-chatbot-builder', icon: MessageCircle, description: 'Conversational AI' },
-    { name: 'Computer Vision', href: '/ai-computer-vision', icon: Eye, description: 'Image recognition' },
-    { name: 'Predictive Analytics', href: '/ai-predictive-analytics', icon: TrendingUp, description: 'Forecasting' },
-    { name: 'Voice AI', href: '/ai-voice-assistant', icon: Mic, description: 'Voice technology' }
-  ]
-
-  const itServices = [
-    { name: 'Cloud Infrastructure', href: '/cloud-architecture', icon: Cloud, description: 'Scalable cloud solutions' },
-    { name: 'Cybersecurity Solutions', href: '/cybersecurity', icon: Lock, description: 'Security solutions' },
-    { name: 'Web Development', href: '/web-development', icon: Globe, description: 'Modern web applications' },
-    { name: 'Mobile Development', href: '/mobile-development', icon: Smartphone, description: 'iOS & Android apps' },
-    { name: 'DevOps', href: '/devops', icon: Settings, description: 'Development operations' },
-    { name: 'Data Analytics', href: '/data-analytics', icon: BarChart, description: 'Data insights' }
-  ]
-
-  const microSaasServices = [
-    { name: 'Zion Analytics Pro', href: '/zion-analytics-pro', icon: BarChart, description: 'Business intelligence' },
-    { name: 'Zion Chat AI', href: '/zion-chat-ai', icon: MessageCircle, description: 'AI customer support' },
-    { name: 'Zion Security Shield', href: '/zion-security-shield', icon: Shield, description: 'Cybersecurity monitoring' },
-    { name: 'Zion Cloud Vault', href: '/zion-cloud-vault', icon: Cloud, description: 'Cloud backup & recovery' },
-    { name: 'Zion Content Studio', href: '/zion-content-studio', icon: FileText, description: 'AI content creation' },
-    { name: 'Zion CRM Intelligence', href: '/zion-crm-intelligence', icon: Users, description: 'AI-enhanced CRM' }
-  ]
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0ece
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
@@ -101,23 +20,12 @@ const Navigation: React.FC = () => {
           </Link>
 
           {/* Desktop Navigation */}
-<<<<<<< HEAD
           <div className="hidden md:flex items-center space-x-8">
             <Link href="/ai-services" className="text-gray-300 hover:text-white transition-colors">
               AI Services
             </Link>
             <Link href="/it-services" className="text-gray-300 hover:text-white transition-colors">
               IT Services
-=======
-          <div className="hidden lg:flex items-center space-x-8">
-            <Link 
-              href="/" 
-              className={`py-2 px-3 rounded-lg transition-colors ${
-                isScrolled ? 'text-gray-700 hover:bg-gray-100' : 'text-white hover:bg-white/10'
-              }`}
-            >
-              Home
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0ece
             </Link>
             
             {/* AI Services Dropdown */}
@@ -245,16 +153,7 @@ const Navigation: React.FC = () => {
             >
               About
             </Link>
-<<<<<<< HEAD
             <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">
-=======
-            <Link
-              href="/contact"
-              className={`py-2 px-3 rounded-lg transition-colors ${
-                isScrolled ? 'text-gray-700 hover:bg-gray-100' : 'text-white hover:bg-white/10'
-              }`}
-            >
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0ece
               Contact
             </Link>
           </div>
@@ -273,26 +172,12 @@ const Navigation: React.FC = () => {
             </Link>
           </div>
 
-<<<<<<< HEAD
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button className="text-gray-300 hover:text-white">
               <Menu className="h-6 w-6" />
             </button>
           </div>
-=======
-          {/* Mobile Menu Button */}
-          <button
-            className="lg:hidden p-2"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? (
-              <X className={`w-6 h-6 ${isScrolled ? 'text-gray-900' : 'text-white'}`} />
-            ) : (
-              <Menu className={`w-6 h-6 ${isScrolled ? 'text-gray-900' : 'text-white'}`} />
-            )}
-          </button>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0ece
         </div>
 
         {/* Mobile Menu */}
@@ -384,8 +269,4 @@ const Navigation: React.FC = () => {
   )
 }
 
-<<<<<<< HEAD
 export default Navigation
-=======
-export default Navigation
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0ece
