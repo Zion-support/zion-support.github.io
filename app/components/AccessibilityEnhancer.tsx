@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {
-  children?: React.ReactNode;
+  children: React.ReactNode;
   enableKeyboardNavigation?: boolean;
   enableScreenReaderSupport?: boolean;
   enableHighContrast?: boolean;
@@ -232,7 +232,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     };
   }, [_enableHighContrast]);
 
-  return children ? <>{children}</> : null;
+  return <>{children}</>;
 };
 
 export default AccessibilityEnhancer;

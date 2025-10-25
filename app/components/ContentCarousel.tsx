@@ -191,8 +191,8 @@ const ContentCarousel: React.FC = () => {
                     {slide.description}
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {slide.features.map((feature, index) => (
-                      <div key={index} className="flex items-center space-x-3">
+                    {slide.features.map((feature, _index) => (
+                      <div key={_index} className="flex items-center space-x-3">
                         <div className="w-2 h-2 bg-white rounded-full"></div>
                         <span className="text-white/90">{feature}</span>
                       </div>
@@ -200,8 +200,8 @@ const ContentCarousel: React.FC = () => {
                   </div>
                   {slide.stats && (
                     <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
-                      {slide.stats.map((stat, index) => (
-                        <div key={index} className="text-center">
+                      {slide.stats.map((stat, _index) => (
+                        <div key={_index} className="text-center">
                           <div className="text-2xl font-bold text-white">{stat.value}</div>
                           <div className="text-white/80">{stat.label}</div>
                         </div>
@@ -209,41 +209,11 @@ const ContentCarousel: React.FC = () => {
                     </div>
                   )}
                 </div>
->>>>>>> 565082f4af95f25101578a95e87917e85c6148f6
               </div>
             </div>
           ))}
         </div>
       </div>
-<<<<<<< HEAD
-
-      {/* Navigation buttons */}
-      <button
-        onClick={goToPrevious}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 rounded-full p-2 shadow-lg"
-        aria-label="Previous slide"
-      >
-        ←
-      </button>
-      <button
-        onClick={goToNext}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 rounded-full p-2 shadow-lg"
-        aria-label="Next slide"
-      >
-        →
-      </button>
-
-      {/* Dots indicator */}
-      <div className="flex justify-center mt-4 space-x-2">
-        {items.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full ${
-              index === currentIndex ? 'bg-blue-600' : 'bg-gray-300'
-            }`}
-            aria-label={`Go to slide ${index + 1}`}
-=======
       
       {/* Navigation buttons */}
       <button
@@ -261,14 +231,13 @@ const ContentCarousel: React.FC = () => {
       
       {/* Dots indicator */}
       <div className="flex justify-center mt-6 space-x-2">
-        {slides.map((_, index) => (
+        {slides.map((_, _index) => (
           <button
-            key={index}
-            onClick={() => setCurrentSlide(index)}
+            key={_index}
+            onClick={() => setCurrentSlide(_index)}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentSlide ? 'bg-white' : 'bg-white/30'
+              _index === currentSlide ? 'bg-white' : 'bg-white/30'
             }`}
->>>>>>> 565082f4af95f25101578a95e87917e85c6148f6
           />
         ))}
       </div>

@@ -19,8 +19,8 @@ const ErrorHandler: React.FC = () => {
     },
     {
       icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target the right audience with AI-driven precision and accuracy.',
+      title: 'Targeted Solutions',
+      description: 'Customized solutions tailored to your specific business needs and goals.',
       benefits: ['Audience segmentation', 'Behavioral analysis', 'Conversion optimization', 'ROI tracking']
     }
   ];
@@ -28,17 +28,23 @@ const ErrorHandler: React.FC = () => {
   return (
     <>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-        <div className="container mx-auto px-4 py-20">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
+        <div className="container mx-auto px-4">
+          {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              ErrorHandler
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                Error Handler
+              </span>
+              <br />
+              <span className="text-white">Solutions</span>
             </h1>
-            <p className="text-xl text-emerald-400 max-w-3xl mx-auto">
-              Advanced ErrorHandler solutions powered by artificial intelligence and machine learning.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced error handling and monitoring solutions to ensure your applications run smoothly and reliably.
             </p>
           </div>
 
+          {/* Features Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800 p-6 rounded-lg">
@@ -48,8 +54,8 @@ const ErrorHandler: React.FC = () => {
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-                      {benefit}
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <span>{benefit}</span>
                     </li>
                   ))}
                 </ul>
@@ -57,18 +63,12 @@ const ErrorHandler: React.FC = () => {
             ))}
           </div>
 
+          {/* CTA Section */}
           <div className="text-center">
-            <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
-            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Transform your business with our cutting-edge AI solutions. Contact us today to learn more.
-            </p>
-            <a
-              href="/contact"
-              className="inline-flex items-center bg-gradient-to-r from-emerald-500 to-blue-500 text-white px-8 py-3 rounded-lg hover:from-emerald-600 hover:to-blue-600 transition-all duration-300"
-            >
+            <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center mx-auto">
               Get Started
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </a>
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </button>
           </div>
         </div>
       </div>

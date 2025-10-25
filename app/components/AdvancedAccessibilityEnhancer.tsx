@@ -42,7 +42,6 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>Advanced Accessibility Enhancer | Zion Tech Group</title>
         <meta name="description" content="Professional Advanced Accessibility Enhancer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="Advanced Accessibility Enhancer, AI solutions, IT services, Zion Tech Group, accessibility" />
@@ -85,20 +84,6 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our accessibility solutions deliver unmatched performance, security, and scalability.
-=======
-        <title>Advanced Accessibility - Zion Tech Group</title>
-        <meta name="description" content="Advanced accessibility solutions for modern web applications" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Advanced Accessibility Solutions
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Making your applications accessible to everyone with cutting-edge technology and best practices
->>>>>>> 565082f4af95f25101578a95e87917e85c6148f6
             </p>
           </div>
 
@@ -126,7 +111,6 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
             </button>
           </div>
         </div>
-<<<<<<< HEAD
       </section>
 
       {/* Benefits Section */}
@@ -175,16 +159,8 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
-};
-
-export default AdvancedAccessibilityEnhancer;
-=======
-      </div>
     </>
   );
 };
 
 export default AdvancedAccessibilityEnhancer;
->>>>>>> 565082f4af95f25101578a95e87917e85c6148f6
