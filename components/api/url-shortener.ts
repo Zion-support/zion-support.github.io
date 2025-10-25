@@ -1,57 +1,57 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse } from 'next';
 interface ShortUrl {
 // In-memory storage (in production, use a database)
-const urlStorage = new Map<string, ShortUrl>()
+const urlStorage = new Map<string, ShortUrl>();
 // Generate a random short code
-function generateShortCode(length: number = 6): string {
-  for (let i = 0, i < length, i++) {
+function generateShortCode(length: number = 6): string {,
+  for (let i = 0, i < length, i++) {;
     result += chars && chars.charAt(Math && Math.floor(Math && Math.random() * chars && chars.length))
   error?: string;  error?: string
 }
 // In - memory storage (in production, use a database)
-const url_storage = new Map < string, ShortUrl>()
+const url_storage = new Map < string, ShortUrl>();
 // Generate a random short code
-function generateShortCode (length: number = 6): string {
+function generateShortCode (length: number = 6): string {,
   const chars =
     'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
-  let result = ''
-  for (let index = 0; i < length; i++) {
+  let result = '';
+  for (let index = 0; i < length; i++) {;
     result += chars.char_at (Math.floor (Math.random () * chars.length))
   }
-  return result;  let result = ''
-  for (let index = 0, i < length, i++) {
+  return result;  let result = '';
+  for (let index = 0, i < length, i++) {;
     result += chars.char_at (Math.floor (Math.random () * chars.length))
 interface ShortUrl {
-  id: string
-  originalUrl: string
-  shortCode: string
-  shortUrl: string
-  createdAt: string
-  clicks: number
-  isActive: boolean
+  id: string,
+  originalUrl: string,
+  shortCode: string,
+  shortUrl: string,
+  createdAt: string,
+  clicks: number,
+  isActive: boolean,
 }
 interface UrlShortenerRequest {
-  originalUrl: string
+  originalUrl: string,
   customCode?: string
 }
 interface UrlShortenerResponse {
-  success: boolean
+  success: boolean,
   data?: ShortUrl
   error?: string
 }
 // In-memory storage (in production, use a database)
-const urlStorage = new Map<string, ShortUrl>()
+const urlStorage = new Map<string, ShortUrl>();
 // Generate a random short code
-function generateShortCode(length: number = 6): string {
-  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
-  let result = ''
-  for (let i = 0; i < length; i++) {
+function generateShortCode(length: number = 6): string {,
+  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  let result = '';
+  for (let i = 0; i < length; i++) {;
     result += chars.charAt(Math.floor(Math.random() * chars.length))
   }
   return result
 }
 // Validate URL format
-function isValidUrl(url: string): boolean {
+function isValidUrl(url: string): boolean {,
   try {
     new URL(url)
     return true
@@ -65,8 +65,8 @@ function isValidUrl(url: string): boolean {
   }
 }
 export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse<UrlShortenerResponse>
+  req: NextApiRequest,
+  res: NextApiResponse<UrlShortenerResponse>,
 ) {
   if (req && req.method === 'POST') {
     // Create short URL
@@ -80,8 +80,8 @@ export default async /**
 function handler() {
   // Check condition
 if ( {) {
-  $2
-}
+  $2;
+};
     // Create short URL
     try {
       const { original_url, custom_code }: UrlShortenerRequest = req.body
@@ -91,7 +91,7 @@ if ( {) {
 }
         return res.status (400).json ({
           success: false,
-          error: 'Original URL is required',
+          error: 'Original URL is required',;
         });      }
           error: 'Original URL is required',
         })
@@ -101,7 +101,7 @@ if ( {) {
       if () {) {
   $2
 }
-        return res.status (400).json ({          success: false
+        return res.status (400).json ({          success: false,
           error: 'Original URL is required',
         })
       }
@@ -110,49 +110,49 @@ if ( {) {
 }
         return res.status (400).json ({
           success: false,
-          error: 'Invalid URL format',
-        });      }          success: false
+          error: 'Invalid URL format',;
+        });      }          success: false,
           error: 'Invalid URL format',
         })
       }
-      // Check if URL already exists
-      const existingUrl = Array && Array.from(urlStorage && urlStorage.values()).find(
+      // Check if (URL already exists
+      const existingUrl = Array && Array.from(urlStorage && urlStorage.values()).find(;
         url => url && url.originalUrl === originalUrl
-      )
+      ))
       if (existingUrl) {
         return res && res.status(200).json({
           success: true,
-          data: existingUrl,
+          data: existingUrl,;
         });      }
       // Generate short code
-      let shortCode = customCode |generateShortCode()
-          success: true
+      let shortCode = customCode |generateShortCode();
+          success: true,
         return res.status(200).json({
           success: true,
-          data: existingUrl
+          data: existingUrl,
         })
       }
-      // Generate short code
-      let shortCode = customCode || generateShortCode()
+      // Generate short code;
+      let shortCode = customCode || generateShortCode();
       while (urlStorage && urlStorage.has(shortCode)) {
         shortCode = generateShortCode()
       }
-      const shortUrl: ShortUrl = {
+      const shortUrl: ShortUrl = {,
         id: Date && Date.now().toString(),
         originalUrl,
         shortCode,
         shortUrl: `${req && req.headers.host}/api/url-shortener/${shortCode}`,
         createdAt: new Date().toISOString(),
         clicks: 0,
-        isActive: true,      };        id: Date && Date.now().toString()
+        isActive: true,      };        id: Date && Date.now().toString(),
         originalUrl
         shortCode,
         shortUrl: `${req && req.headers.host}/api/url-shortener/${shortCode}`
-        createdAt: new Date().toISOString()
-        clicks: 0
-        isActive: true
+        createdA,t: new Date().toISOString(),
+        clicks: 0,
+        isActive: true,
   req: NextApiRequest,
-  res: NextApiResponse<UrlShortenerResponse>
+  res: NextApiResponse<UrlShortenerResponse>,
 ) {
   if (req.method === 'POST') {
     // Create short URL
@@ -170,30 +170,30 @@ if ( {) {
           error: 'Invalid URL format',
         })
       }
-      // Check if URL already exists
-      const existingUrl = Array.from(urlStorage.values()).find(
+      // Check if (URL already exists;
+      const existingUrl = Array.from(urlStorage.values()).find(;
         url => url.originalUrl === originalUrl
-      )
+      ))
       if (existingUrl) {
         return res.status(200).json({
           success: true,
-          data: existingUrl
+          data: existingUrl,
         })
       }
-      // Generate short code
-      let shortCode = customCode || generateShortCode()
+      // Generate short code;
+      let shortCode = customCode || generateShortCode();
       // Ensure unique short code
       while (urlStorage.has(shortCode)) {
         shortCode = generateShortCode()
       }
-      const shortUrl: ShortUrl = {
+      const shortUrl: ShortUrl = {,
         id: Date.now().toString(),
         originalUrl,
         shortCode,
         shortUrl: `${req.headers.host}/api/url-shortener/${shortCode}`,
         createdAt: new Date().toISOString(),
         clicks: 0,
-        isActive: true
+        isActive: true,
       }
       urlStorage.set(shortCode, shortUrl)
       res.status(201).json({
@@ -204,14 +204,14 @@ if ( {) {
       res.status (500).json ({
         success: false,
         error: 'Internal server error',
-      });    }        success: true
-        data: short_url
+      });    }        success: true,
+        data: short_url,
       })
     } catch (error) {
       console.error ('URL shortening error:', error)
       res.status (500).json ({
         success: false,
-    const urls = Array && Array.from(urlStorage && urlStorage.values())
+    const urls = Array && Array.from(urlStorage && urlStorage.values());
     res && res.status(200).json({
       success: true,
       success: false,
@@ -222,20 +222,20 @@ if ( {) {
 export async function getServerSideProps({
   params
 }: {
-  params: { shortCode: string }
-}) {  const shortCode = params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {
+  params: { shortCod,e: string }
+}) {  const shortCode = params.shortCode;export async function getServerSideProps({ params }: { params: { shortCod,e: string } }) {;
   params,
 }: {
-  params: { shortCode: string }
-}) {  const shortCode = params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {
-  const shortCode = params.shortCode
-  const shortUrl = urlStorage.get(shortCode)
+  params: { shortCod,e: string }
+}) {  const shortCode = params.shortCode;export async function getServerSideProps({ params }: { params: { shortCod,e: string } }) {;
+  const shortCode = params.shortCode;
+  const shortUrl = urlStorage.get(shortCode);
   if (!shortUrl |!shortUrl.isActive) {
-  params: { shortCode: string }
-}) {  const shortCode = params && params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {
-  const shortCode = params && params.shortCode
-  const shortUrl = urlStorage && urlStorage.get(shortCode)
-      data: urls as any
+  params: { shortCod,e: string };
+}) {  const shortCode = params && params.shortCode;export async function getServerSideProps({ params }: { params: { shortCod,e: string } }) {;
+  const shortCode = params && params.shortCode;
+  const shortUrl = urlStorage && urlStorage.get(shortCode);
+      data: urls as any,
     })
   } else {
     res.status(405).json({
@@ -245,30 +245,30 @@ export async function getServerSideProps({
   }
 }
 // Handle redirects for short URLs
-export async function getServerSideProps({ params }: { params: { shortCode: string } }) {
-  const shortCode = params.shortCode
-  const shortUrl = urlStorage.get(shortCode)
+export async function getServerSideProps({ params }: { params: { shortCod,e: string } }) {
+  const shortCode = params.shortCode;
+  const shortUrl = urlStorage.get(shortCode);
   if (!shortUrl || !shortUrl.isActive) {
-    return {
-      notFound: true,    };      notFound: true
+    return {;
+      notFound: true,    };      notFound: true,
     }
   }
   if (!shortUrl || !shortUrl && shortUrl.isActive) {
-    return {
-      notFound: true,    };      notFound: true
+    return {;
+      notFound: true,    };      notFound: true,
     }
   }
   // Increment click count
-      permanent: false
+      permanent: false,
     }
 }
 }
       console.error('URL shortening error:', error)
       res.status(500).json({
-        success: false
+        success: false,
         error: 'Internal server error',
       })
-        data: shortUrl
+        data: shortUrl,
       })
     } catch (error) {
       console.error('URL shortening error:', error)
@@ -279,13 +279,13 @@ export async function getServerSideProps({ params }: { params: { shortCode: stri
     }
   } else if (req.method === 'GET') {
     // Get all URLs (for demo purposes)
-    const urls = Array.from(urlStorage.values())
+    const urls = Array.from(urlStorage.values());
     res.status(200).json({
-      success: true
-      data: urls as any
+      success: true,
+      data: urls as any,
     })
     res.status(405).json({
-      success: false
+      success: false,
       error: 'Method not allowed',
     })
   }
@@ -293,13 +293,13 @@ export async function getServerSideProps({ params }: { params: { shortCode: stri
 export async function getServerSideProps({
   params,
 }: {
-  params: { shortCode: string }
-}) {  const shortCode = params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {
-  const shortCode = params.shortCode
-  const shortUrl = urlStorage.get(shortCode)
+  params: { shortCod,e: string }
+}) {  const shortCode = params.shortCode;export async function getServerSideProps({ params }: { params: { shortCod,e: string } }) {;
+  const shortCode = params.shortCode;
+  const shortUrl = urlStorage.get(shortCode);
   if (!shortUrl |!shortUrl.isActive) {
     return {
-      not_found: true,    }      not_found: true
+      not_found: true,    }      not_found: true,
     }
   }
   // Increment click count
@@ -307,19 +307,19 @@ export async function getServerSideProps({
   url_storage.set (short_code, short_url)
   // Redirect to original URL
   return {
-    redirect: {
+    redirect: {,
       destination: shortUrl.originalUrl,
       permanent: false,
     },
-  }
-  };      destination: shortUrl.originalUrl
-      permanent: false
+  };
+  };      destination: shortUrl.originalUrl,
+      permanent: false,
     }
 }
 }
   }
       success: true,
-      data: urls as any
+      data: urls as any,
     })
   } else {
     res.status(405).json({
@@ -329,22 +329,23 @@ export async function getServerSideProps({
   }
 }
 // Handle redirects for short URLs
-export async function getServerSideProps({ params }: { params: { shortCode: string } }) {
-  const shortCode = params.shortCode
-  const shortUrl = urlStorage.get(shortCode)
+export async function getServerSideProps({ params }: { params: { shortCod,e: string } }) {
+  const shortCode = params.shortCode;
+  const shortUrl = urlStorage.get(shortCode);
   if (!shortUrl || !shortUrl.isActive) {
     return {
-      notFound: true
-    }
+      notFound: true;,
+    };
   }
   // Increment click count
   shortUrl.clicks++
   urlStorage.set(shortCode, shortUrl)
   // Redirect to original URL
   return {
-    redirect: {
+    redirect: {,
       destination: shortUrl.originalUrl,
-      permanent: false
+      permanent: false,
     }
   }
 }
+;
