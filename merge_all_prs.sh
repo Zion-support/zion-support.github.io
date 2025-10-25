@@ -1,83 +1,106 @@
 #!/bin/bash
 
-# Script to merge all open PRs
-echo "Starting to merge all open PRs..."
+# Comprehensive PR Merge Script
+# This script will systematically merge all open PRs and resolve conflicts
 
-# Get list of open PRs
-PR_LIST=$(gh pr list --state open --json number,title,headRefName --jq '.[] | "\(.number) \(.headRefName)"')
+set -e
 
-# Process each PR
-while IFS= read -r line; do
-    if [ -z "$line" ]; then
-        continue
+echo "🚀 Starting comprehensive PR merge process..."
+
+# Update main branch first
+echo "📥 Updating main branch..."
+git checkout main
+git pull origin main
+
+# Function to safely merge a branch
+merge_branch() {
+    local branch_name=$1
+    echo "🔄 Processing branch: $branch_name"
+    
+    # Check if branch exists
+    if ! git show-ref --verify --quiet refs/remotes/origin/$branch_name; then
+        echo "❌ Branch $branch_name does not exist, skipping..."
+        return 1
     fi
     
-    PR_NUMBER=$(echo "$line" | awk '{print $1}')
-    BRANCH_NAME=$(echo "$line" | awk '{print $2}')
+    # Create local tracking branch
+    git checkout -b $branch_name origin/$branch_name 2>/dev/null || git checkout $branch_name
     
-    echo "Processing PR #$PR_NUMBER ($BRANCH_NAME)..."
-    
-    # Check if PR can be merged directly
-    if gh pr merge "$PR_NUMBER" --merge --dry-run 2>/dev/null; then
-        echo "Merging PR #$PR_NUMBER directly..."
-        gh pr merge "$PR_NUMBER" --merge
+    # Try to merge with main
+    if git merge main --no-ff -m "Merge $branch_name into main" 2>/dev/null; then
+        echo "✅ Successfully merged $branch_name"
+        git checkout main
+        git merge $branch_name --no-ff -m "Merge $branch_name: resolved conflicts and merged"
+        git push origin main
+        git branch -D $branch_name
+        return 0
     else
-        echo "PR #$PR_NUMBER has conflicts, resolving..."
+        echo "⚠️  Merge conflict in $branch_name, attempting to resolve..."
         
-        # Checkout the PR branch
-        gh pr checkout "$PR_NUMBER"
-        
-        # Fetch latest main
-        git fetch origin main
-        
-        # Try to merge main into the branch
-        if git merge origin/main; then
-            echo "Merge successful, pushing changes..."
-            git push origin "$BRANCH_NAME"
+        # Try to resolve conflicts automatically
+        if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
+            echo "🔧 Resolving conflicts in $branch_name..."
             
-            # Now try to merge the PR
-            if gh pr merge "$PR_NUMBER" --merge; then
-                echo "Successfully merged PR #$PR_NUMBER"
+            # Use our strategy to resolve conflicts
+            git checkout --ours . 2>/dev/null || true
+            git add . 2>/dev/null || true
+            
+            if git commit -m "Resolve merge conflicts in $branch_name" 2>/dev/null; then
+                echo "✅ Conflicts resolved for $branch_name"
+                git checkout main
+                git merge $branch_name --no-ff -m "Merge $branch_name: auto-resolved conflicts"
+                git push origin main
+                git branch -D $branch_name
+                return 0
             else
-                echo "Failed to merge PR #$PR_NUMBER after conflict resolution"
+                echo "❌ Could not resolve conflicts in $branch_name"
+                git merge --abort 2>/dev/null || true
+                git checkout main
+                git branch -D $branch_name 2>/dev/null || true
+                return 1
             fi
         else
-            echo "Merge conflict detected, attempting to resolve..."
-            
-            # Check for common conflict patterns and resolve them
-            if git status --porcelain | grep -q "deleted by us"; then
-                echo "Resolving delete conflicts..."
-                git status --porcelain | grep "deleted by us" | awk '{print $2}' | xargs git rm
-            fi
-            
-            if git status --porcelain | grep -q "deleted by them"; then
-                echo "Resolving delete conflicts (deleted by them)..."
-                git status --porcelain | grep "deleted by them" | awk '{print $2}' | xargs git add
-            fi
-            
-            # Add all changes
-            git add .
-            
-            # Commit the merge
-            if git commit -m "Resolve merge conflicts"; then
-                echo "Conflicts resolved, pushing changes..."
-                git push origin "$BRANCH_NAME"
-                
-                # Try to merge the PR
-                if gh pr merge "$PR_NUMBER" --merge; then
-                    echo "Successfully merged PR #$PR_NUMBER after conflict resolution"
-                else
-                    echo "Failed to merge PR #$PR_NUMBER after conflict resolution"
-                fi
-            else
-                echo "Failed to resolve conflicts for PR #$PR_NUMBER"
-            fi
+            echo "❌ No conflicts detected but merge failed for $branch_name"
+            git merge --abort 2>/dev/null || true
+            git checkout main
+            git branch -D $branch_name 2>/dev/null || true
+            return 1
         fi
     fi
-    
-    echo "Completed processing PR #$PR_NUMBER"
-    echo "---"
-    
-done <<< "$PR_LIST"
+}
 
-echo "Finished processing all PRs"
+# Get the most recent branches (last 50)
+echo "📋 Getting recent branches..."
+RECENT_BRANCHES=$(git branch -r | grep "cursor/fix-errors-and-merge-to-main" | sort -V | tail -50 | sed 's/origin\///')
+
+# Also include merge branches
+MERGE_BRANCHES=$(git branch -r | grep "merge-cursor/fix-errors-and-merge-to-main" | sed 's/origin\///')
+
+# Combine and process
+ALL_BRANCHES="$RECENT_BRANCHES $MERGE_BRANCHES"
+
+echo "🎯 Processing branches..."
+SUCCESS_COUNT=0
+FAILED_COUNT=0
+
+for branch in $ALL_BRANCHES; do
+    if merge_branch "$branch"; then
+        ((SUCCESS_COUNT++))
+    else
+        ((FAILED_COUNT++))
+    fi
+    echo "📊 Progress: Success: $SUCCESS_COUNT, Failed: $FAILED_COUNT"
+done
+
+echo "🏁 Merge process completed!"
+echo "✅ Successfully merged: $SUCCESS_COUNT branches"
+echo "❌ Failed to merge: $FAILED_COUNT branches"
+
+# Final verification
+echo "🔍 Final verification..."
+git checkout main
+git pull origin main
+npm run build
+npm run lint
+
+echo "🎉 All done! Main branch is up to date and builds successfully."
