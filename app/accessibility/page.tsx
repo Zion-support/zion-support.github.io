@@ -3,7 +3,7 @@
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, Eye, MousePointer, Volume2, Shield } from 'lucide-react';
+import { CheckCircle, Eye, MousePointer, Volume2, Shield, Users, Globe } from 'lucide-react';
 
 const AccessibilityPage: React.FC = () => {
   const features = [

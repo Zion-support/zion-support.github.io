@@ -2,7 +2,7 @@
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { Shield } from 'lucide-react';
+import { Shield, Target, Globe } from 'lucide-react';
 
 const AboutPage: React.FC = () => {
   const values = [
