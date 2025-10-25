@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const PagePage = () => {
   return (
-    <>
+    <div>
       <Navigation />
       
       <section className="pt-20 pb-16 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -34,6 +34,7 @@ const PagePage = () => {
 
       <Footer />
     </div>
-  )};
+  );
+};
 
 export default PagePage;

@@ -97,9 +97,9 @@ export default function AccessibilityPage() {
               Digital accessibility is not just a legal requirement—it's a business imperative.
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center"></div>
+              <div key={index} className="text-center">
                 <div className="text-4xl font-bold text-emerald-600 mb-2">{stat.number}</div>
                 <div className="text-gray-600">{stat.label}</div>
               </div>

@@ -148,11 +148,11 @@ const Footer: React.FC = () => {
               <Phone className="h-4 w-4" />
               <span>+1 (555) 123-4567</span>
             </div>
-            <div className="flex items-center space-x-2"></div>
+            <div className="flex items-center space-x-2">
               <Mail className="h-4 w-4" />
               <span>info@ziontechgroup.com</span>
             </div>
-            <div className="flex items-center space-x-2"></div>
+            <div className="flex items-center space-x-2">
               <MapPin className="h-4 w-4" />
               <span>San Francisco, CA</span>
             </div>
@@ -160,7 +160,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400"></div>
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
           <p>&copy; {currentYear} Zion Tech Group. All rights reserved.</p>
         </div>
       </div>
