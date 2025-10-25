@@ -1,10 +1,5 @@
 'use client';
-<<<<<<< HEAD
-import React from 'react';
-import { Circle, ArrowRight, Brain, Globe, Cloud, Smartphone } from 'lucide-react';;
-=======
-import { Brain, Globe, ArrowRight, Smartphone, Circle, Cloud } from 'lucide-react';
->>>>>>> origin/main
+
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
   {

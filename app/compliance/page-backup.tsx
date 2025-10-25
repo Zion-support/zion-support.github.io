@@ -3,11 +3,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-import { Shield, CheckCircle, Clock, Database, Lock, ArrowRight, Check } from 'lucide-react';;
-=======
-import { Shield, CheckCircle, Clock, Database, Lock, ArrowRight, } from 'lucide-react';
->>>>>>> origin/main
+
 
 const CompliancePageBackup: React.FC = () => {
 
@@ -68,16 +64,7 @@ const CompliancePageBackup: React.FC = () => {
 
       {/* Stats Section */}
       <section className="py-16 px-4">
-<<<<<<< HEAD
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
->>>>>>> origin/main
+
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full mx-auto mb-4">
@@ -85,18 +72,13 @@ const CompliancePageBackup: React.FC = () => {
                   </div>
                   <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                   <div className="text-gray-300">{stat.label}</div>
-=======
->>>>>>> origin/main
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full mx-auto mb-4">
                   <stat.icon className="h-8 w-8 text-white" />
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
->>>>>>> origin/main
+
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-300">{stat.label}</div>

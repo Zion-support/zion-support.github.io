@@ -60,13 +60,7 @@ const ConsultationPage: React.FC = () => {
   ]
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      {/* Hero Section */}
->>>>>>> origin/main
+
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
@@ -80,17 +74,7 @@ const ConsultationPage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-=======
-      {/* Consultation Form */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Form */}
->>>>>>> origin/main
+
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
               <h2 className="text-2xl font-bold text-white mb-6">Schedule Your Consultation</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -243,10 +227,7 @@ const ConsultationPage: React.FC = () => {
               </form>
             </div>
 
-<<<<<<< HEAD
-=======
-            {/* Benefits & Info */}
->>>>>>> origin/main
+
             <div className="space-y-8">
               <div>
                 <h2 className="text-2xl font-bold text-white mb-6">Why Choose Our Consultation?</h2>
@@ -255,12 +236,6 @@ const ConsultationPage: React.FC = () => {
                     <div key={index} className="flex items-start">
                       <CheckCircle className="w-6 h-6 text-purple-400 mr-3 flex-shrink-0 mt-1" />
                       <span className="text-gray-300">{benefit}</span>
-=======
-=======
-    <>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
->>>>>>> origin/main
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
@@ -298,7 +273,6 @@ const ConsultationPage: React.FC = () => {
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
                         placeholder="Your full name"
                       />
->>>>>>> origin/main
                     </div>
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">

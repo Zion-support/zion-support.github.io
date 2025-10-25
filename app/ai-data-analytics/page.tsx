@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/main
-import { Metadata} from 'next';
+import { Metadata } from 'next';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 

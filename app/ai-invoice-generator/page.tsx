@@ -1,11 +1,7 @@
 'use client';
 import { Zap, Brain, Users, FileText, Clock, ArrowRight, CheckCircle, Target, ShoppingCart, Calculator, Building2, Settings, Shield } from 'lucide-react';
 import Link from 'next/link';
-<<<<<<< HEAD
-import { ArrowRight, FileText, Calculator, CheckCircle, Brain, Settings, Target, Users, Zap, Building2, ShoppingCart, Clock, Shield, Check } from 'lucide-react';;
 
-=======
->>>>>>> origin/main
 const AiInvoiceGeneratorPage: React.FC = () => {
   const features = [
     {

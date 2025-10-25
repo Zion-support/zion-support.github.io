@@ -2,11 +2,7 @@
 import { Zap, Brain, Globe, Users, TrendingUp, Clock, Star, CheckCircle, Target, Shield, Database } from 'lucide-react';
 
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-import { CheckCircle, Zap, Check, Brain, Globe, Users, TrendingUp, Clock, Shield, Star, Target, Database } from 'lucide-react';;
 
-=======
->>>>>>> origin/main
 const ContentStatistics: React.FC = () => {
   const [counters, setCounters] = useState({
     clients: 0,

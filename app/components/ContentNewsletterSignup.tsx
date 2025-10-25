@@ -1,9 +1,5 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-import { CheckCircle, ArrowRight, Check } from 'lucide-react';;
-=======
-import { CheckCircle, ArrowRight, } from 'lucide-react';
->>>>>>> origin/main
+
 
 interface ContentNewsletterSignupProps {
   title?: string;

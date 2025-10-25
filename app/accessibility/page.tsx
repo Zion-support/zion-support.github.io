@@ -1,10 +1,6 @@
 'use client';
-<<<<<<< HEAD
-import { ArrowRight, CheckCircle, Check } from 'lucide-react';;
-=======
 
-import { ArrowRight, CheckCircle, } from 'lucide-react';
->>>>>>> origin/main
+import { ArrowRight, CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -125,11 +121,7 @@ export default function AccessibilityPage() {
               <div key={index} className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mr-4">
-<<<<<<< HEAD
-                    <div className="h-6 w-6 bg-emerald-600 rounded" />
-=======
                     {feature.icon()}
->>>>>>> origin/main
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900">{feature.title}</h3>
                 </div>
@@ -161,11 +153,7 @@ export default function AccessibilityPage() {
             {services.map((service, index) => (
               <div key={index} className="bg-white rounded-xl p-6 shadow-lg border border-gray-200 text-center">
                 <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-<<<<<<< HEAD
-                  <div className="h-8 w-8 bg-emerald-600 rounded" />
-=======
                   {service.icon()}
->>>>>>> origin/main
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>

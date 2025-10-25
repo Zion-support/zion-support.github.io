@@ -1,10 +1,5 @@
 'use client';
-<<<<<<< HEAD
-import React, { useEffect, useState, createContext, useContext } from 'react';
-import { AccessibilitySettings, AccessibilityContextType } from '../types/accessibility';
-import { Settings } from 'lucide-react';;
-=======
->>>>>>> origin/main
+
 
 import React, { useEffect, useState } from 'react';
 import { AccessibilityContextType } from '../types/accessibility';

@@ -1,10 +1,7 @@
 'use client';
 import { Zap, Brain, ArrowRight, CheckCircle, Play, Shield } from 'lucide-react';
 import React, { useState } from 'react';
-<<<<<<< HEAD
-import { Play, CheckCircle, ArrowRight, Check, Zap, Brain, Shield } from 'lucide-react';;
-=======
->>>>>>> origin/main
+
 const DemoPage: React.FC = () => {
   const [activeDemo, setActiveDemo] = useState('ai-chatbot')
   const demos = [

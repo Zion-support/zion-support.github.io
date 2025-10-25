@@ -57,11 +57,7 @@ export const performanceUtils = {
           console.log('Performance entry:', entry);
         }
       });
-<<<<<<< HEAD
-      observer.observe({ entryTypes: ['measure', 'navigation'] });
-=======
-      observer.observe({ entryTypes: ['measure', 'navigation', 'paint'] });
->>>>>>> origin/main
+
     }
   },
 
@@ -95,18 +91,7 @@ export const performanceUtils = {
   optimizeThirdPartyScripts: () => {
     if (typeof window !== 'undefined') {
       // Defer non-critical scripts
-<<<<<<< HEAD
-      const scripts = document.querySelectorAll<HTMLScriptElement>('script[src]');
-      scripts.forEach(script => {
-        if (!script.defer && !script.async) {
-          script.defer = true;
-=======
-      const scripts = document.querySelectorAll('script[src]');
-      scripts.forEach(script => {
-        const htmlScript = script as HTMLScriptElement;
-        if (!htmlScript.defer && !htmlScript.async) {
-          htmlScript.defer = true;
->>>>>>> origin/main
+
         }
       });
     }

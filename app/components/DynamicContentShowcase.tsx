@@ -1,11 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react'
-<<<<<<< HEAD
-import { Cloud, Zap, Shield, Globe, Brain, Star } from 'lucide-react';
 
-=======
-import { Zap, Brain, Globe, Shield } from 'lucide-react'
->>>>>>> origin/main
 const DynamicContentShowcase: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
 

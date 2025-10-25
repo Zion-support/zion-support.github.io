@@ -1,10 +1,6 @@
 'use client';
 import React, { useState, useCallback } from 'react';
-<<<<<<< HEAD
-import { Upload, Download, Zap, ImageIcon } from 'lucide-react';;
-=======
-import { Upload, Download, ImageIcon, Zap } from 'lucide-react';
->>>>>>> origin/main
+
 
 interface ImageOptimizerProps {
   onImageOptimized?: (optimizedImage: File) => void;

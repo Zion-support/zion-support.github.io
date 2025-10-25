@@ -1,10 +1,6 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-import { ArrowRight, CheckCircle, Star, Check } from 'lucide-react';;
-=======
-import { ArrowRight, CheckCircle, Star, } from 'lucide-react';
->>>>>>> origin/main
+
 import Link from 'next/link';
 
 interface GenericServicePageProps {

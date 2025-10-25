@@ -1,15 +1,5 @@
 'use client';
-<<<<<<< HEAD
-import Head from 'next/head';
-import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';;
 
-=======
-
-import Head from 'next/head';
-import Link from 'next/link';
-import { ArrowRight, } from 'lucide-react';
->>>>>>> origin/main
 export default function SmartContractSecurityAuditPage() {
   return (
       <>
