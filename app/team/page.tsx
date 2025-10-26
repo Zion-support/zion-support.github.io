@@ -1,38 +1,18 @@
-'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-const TeamPage: React.FC = () => {
-    return (
-    <></>
-      <Helmet>
-        <title>Our Team - Zion Tech Group</title>
-        <meta>
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
-        <Navigation>
-        <main className="pt-20"></main>
-          <div className="container mx-auto px-4 py-16"></div>
-            <div className="max-w-4xl mx-auto"></div>
-              <h1>
-                Our Team</h1>
-              </h1>
-              <div className="prose prose-lg max-w-none"></div>
-                <p>
-                  Meet the experts behind our success.
-                </p>
-                <p>
-                  Coming soon - stay tuned to meet our team!
-                </p>
-              </div>
-            </div>
-          </div>
-        </main>
-        <Footer>
+
+const TeamPage = () => {
+  return (
+    <div className="min-h-screen bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Our Team</h1>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            Meet the experts behind our innovative technology solutions.
+          </p>
+        </div>
       </div>
-    </>,
-  )
-  }
-}
+    </div>
+  );
+};
+
 export default TeamPage;

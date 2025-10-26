@@ -1,117 +1,111 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import { resolve } from 'path';
+import path from 'path';
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react({
+      // Optimize JSX runtime
+      jsxRuntime: 'automatic',
+    })
+  ],
   resolve: {
     alias: {
-      '@': resolve(__dirname, './app'),
-      '@/components': resolve(__dirname, './app/components'),
-      '@/pages': resolve(__dirname, './app'),
-      '@/utils': resolve(__dirname, './utils'),
-      '@/types': resolve(__dirname, './types'),
-      '@/hooks': resolve(__dirname, './hooks'),
-      '@/config': resolve(__dirname, './config'),
-      '@/data': resolve(__dirname, './data'),
-      '@/content': resolve(__dirname, './content')
-    }
+      '@': path.resolve(__dirname, './app'),
+      '@components': path.resolve(__dirname, './app/components'),
+      '@pages': path.resolve(__dirname, './app/pages'),
+      '@utils': path.resolve(__dirname, './utils'),
+      '@types': path.resolve(__dirname, './types'),
+    },
   },
   build: {
     outDir: 'dist',
-    assetsDir: 'assets',
-    sourcemap: false,
+    sourcemap: true,
     minify: 'terser',
-    target: 'es2020',
-    cssTarget: 'chrome80',
-    reportCompressedSize: true,
-    chunkSizeWarningLimit: 500,
-    rollupOptions: {
-      output: {
-        manualChunks: (id) => {
-          // Vendor chunks
-          if (id.includes('node_modules')) {
-            if (id.includes('react') || id.includes('react-dom')) {
-              return 'vendor-react';
-            }
-            if (id.includes('react-router')) {
-              return 'vendor-router';
-            }
-            if (id.includes('framer-motion') || id.includes('lucide-react') || id.includes('@heroicons')) {
-              return 'vendor-ui';
-            }
-            if (id.includes('recharts')) {
-              return 'vendor-charts';
-            }
-            if (id.includes('web-vitals')) {
-              return 'vendor-analytics';
-            }
-            return 'vendor-misc';
-          }
-          // App chunks
-          if (id.includes('/app/ai-')) {
-            return 'ai-services';
-          }
-          if (id.includes('/app/it-')) {
-            return 'it-services';
-          }
-          if (id.includes('/app/components/')) {
-            return 'components';
-          }
-          return 'app';
-        },
-        chunkFileNames: 'assets/[name]-[hash].js',
-        entryFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: (assetInfo) => {
-          const ext = assetInfo.name?.split('.').pop();
-          if (/\.(css)$/i.test(assetInfo.name || '')) {
-            return `assets/css/[name]-[hash].${ext}`;
-          }
-          if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name || '')) {
-            return `assets/images/[name]-[hash].${ext}`;
-          }
-          if (/\.(woff2?|eot|ttf|otf)$/i.test(assetInfo.name || '')) {
-            return `assets/fonts/[name]-[hash].${ext}`;
-          }
-          return `assets/[name]-[hash].${ext}`;
-        }
-      }
-    },
     terserOptions: {
       compress: {
         drop_console: true,
         drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug'],
+        pure_funcs: ['console.log', 'console.info'],
         passes: 2,
       },
       mangle: {
         safari10: true,
-        properties: {
-          regex: /^_/
-        }
       },
-      format: {
-        comments: false,
-        ascii_only: true
-      }
     },
-    chunkSizeWarningLimit: 500,
-    reportCompressedSize: true,
+    rollupOptions: {
+      output: {
+        manualChunks: (id) => {
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('react-dom')) {
+              return 'react';
+            }
+            if (id.includes('react-router')) {
+              return 'router';
+            }
+            if (id.includes('@heroicons') || id.includes('lucide-react')) {
+              return 'icons';
+            }
+            if (id.includes('framer-motion')) {
+              return 'motion';
+            }
+            if (id.includes('clsx') || id.includes('tailwind-merge')) {
+              return 'utils';
+            }
+            if (id.includes('web-vitals')) {
+              return 'analytics';
+            }
+            if (id.includes('react-helmet-async')) {
+              return 'seo';
+            }
+            return 'vendor';
+          }
+          // Split app code by feature
+          if (id.includes('/app/components/')) {
+            return 'components';
+          }
+          if (id.includes('/app/hooks/')) {
+            return 'hooks';
+          }
+          if (id.includes('/app/utils/')) {
+            return 'utils';
+          }
+        },
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]',
+      },
+    },
+    chunkSizeWarningLimit: 1000,
+    target: 'es2020',
     cssCodeSplit: true,
-    assetsInlineLimit: 4096,
+    reportCompressedSize: false,
   },
   server: {
     port: 3000,
-    host: true
+    open: true,
+    host: true,
+    cors: true,
   },
   preview: {
     port: 4173,
-    host: true
+    open: true,
+    host: true,
   },
+  // Optimize dependencies
   optimizeDeps: {
-    include: ['react', 'react-dom', 'framer-motion', 'lucide-react', 'react-router-dom']
+    include: [
+      'react',
+      'react-dom',
+      'react-router-dom',
+      '@heroicons/react/24/outline',
+      'framer-motion',
+      'clsx',
+      'tailwind-merge'
+    ],
   },
+  // CSS optimization
   css: {
-    devSourcemap: true
-  }
+    devSourcemap: true,
+  },
 });

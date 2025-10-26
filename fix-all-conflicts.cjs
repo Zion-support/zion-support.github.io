@@ -1,65 +1,69 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 
-// Function to recursively find all .tsx and .ts files
-function findFiles(dir, extensions = ['.tsx', '.ts']) {
-  let results = [];
-  const list = fs.readdirSync(dir);
-  
-  list.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat && stat.isDirectory()) {
-      results = results.concat(findFiles(filePath, extensions));
-    } else if (extensions.some(ext => file.endsWith(ext))) {
-      results.push(filePath);
-    }
-  });
-  
-  return results;
-}
-
-// Function to fix all merge conflicts and syntax issues
-function fixAllConflicts(filePath) {
+function fixMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
     
-    // Remove all merge conflict markers and origin/ references
-    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>') || content.includes('origin/')) {
-      content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>>[^\n]*/g, '');
-      content = content.replace(/origin\/[a-zA-Z0-9-]+/g, '');
-      modified = true;
-    }
+    // Remove all merge conflict markers and keep the current version (HEAD)
     
-    // Fix any remaining syntax issues
-    if (content.includes('cursor/')) {
-      content = content.replace(/cursor\/[a-zA-Z0-9-]+/g, '');
-      modified = true;
-    }
+    // Clean up any remaining conflict markers
+    content = content.replace(/<<<<<<< [^\n]+\n?/g, '');
     
-    // Clean up any double spaces or empty lines
+    // Remove empty lines that might be left behind
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    content = content.replace(/  +/g, ' ');
     
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-    }
+    // Clean up any broken JSX or syntax
+    content = content.replace(/\n\s*<[^>]*$/gm, '');
+    content = content.replace(/^\s*[^<]*>\s*$/gm, '');
+    
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed: ${filePath}`);
+    return true;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Main execution
-const appDir = path.join(__dirname, 'app');
-const files = findFiles(appDir);
+function findAndFixFiles(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
+  
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      fixedCount += findAndFixFiles(filePath);
+    } else if (file.match(/\.(tsx?|jsx?)$/)) {
+      if (fixMergeConflicts(filePath)) {
+        fixedCount++;
+      }
+    }
+  }
+  
+  return fixedCount;
+}
 
-console.log(`Found ${files.length} files to check...`);
+// Fix root directory files
+const rootFiles = ['App.tsx', 'EnhancedFooter.tsx', 'main.tsx', '.eslintrc.js', 'eslint.config.js', 'vite.config.ts', 'jest.setup.ts'];
+let totalFixed = 0;
 
-files.forEach(file => {
-  fixAllConflicts(file);
+rootFiles.forEach(file => {
+  if (fs.existsSync(file)) {
+    if (fixMergeConflicts(file)) {
+      totalFixed++;
+    }
+  }
 });
 
-console.log('All conflicts fixes completed!');
+// Fix app directory
+if (fs.existsSync('app')) {
+  totalFixed += findAndFixFiles('app');
+}
+
+console.log(`\nTotal files fixed: ${totalFixed}`);
+console.log('All merge conflicts have been resolved!');

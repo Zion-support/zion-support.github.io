@@ -1,0 +1,25 @@
+import fs from 'fs'
+import path from 'path'
+#!/usr/bin// Fixed regex
+  '
+  '
+  '
+  '
+  '
+  '
+  '
+  '
+  '
+  '
+  '
+  '
+  '
+  const lines = content.split('\n'
+  return resolved.join('\n'
+  // eslint-disable-next-line no-console
+    console.error('Error: '
+    const content = fs.readFileSync(filePath, 'utf8'
+// eslint-disable-next-line no-console
+    console.log('Starting merge conflict resolution...'
+// eslint-disable-next-line no-console
+    console.log('Merge conflict resolution completed!'

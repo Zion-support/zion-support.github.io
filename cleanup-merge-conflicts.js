@@ -1,109 +1,61 @@
-#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
 
-import fs from 'fs';
-import path from 'path';
-import { execSync } from 'child_process';
-
-// Function to clean merge conflict markers from a file
 function cleanMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
     
-    // Remove merge conflict markers and keep the HEAD version
-    content = content.replace(/\n?/g, '');
-    content = content.replace(/\n?/g, '');
-    content = content.replace(/    
-    // Clean up any remaining merge conflict artifacts
-    content = content.replace(/    content = content.replace(/\n?/g, '');
-    content = content.replace(/    
-    // Fix common syntax issues that might result from merge conflicts
-    content = content.replace(/,\s*\)/g, ')');
+    // Remove merge conflict markers
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+    content = content.replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+    
+    // Fix common syntax issues
     content = content.replace(/,\s*}/g, '}');
     content = content.replace(/,\s*]/g, ']');
-    content = content.replace(/,\s*;/g, ';');
-    content = content.replace(/\(\s*\)/g, '()');
-    content = content.replace(/{\s*}/g, '{}');
-    content = content.replace(/\[\s*\]/g, '[]');
+    content = content.replace(/,\s*\)/g, ')');
     
-    // Fix common JSX issues
-    content = content.replace(/<\s*\/\s*>/g, '</>');
-    content = content.replace(/<\s*\/\s*div\s*>/g, '</div>');
-    content = content.replace(/<\s*\/\s*span\s*>/g, '</span>');
-    content = content.replace(/<\s*\/\s*p\s*>/g, '</p>');
+    // Fix JSX syntax issues
+    content = content.replace(/<(\w+)([^>]*?)\s*>\s*<\/\1>/g, '<$1$2 />');
     
-    // Fix function syntax issues
-    content = content.replace(/function\s*\(\s*\)\s*{\s*}/g, 'function() {}');
-    content = content.replace(/\(\s*\)\s*=>\s*{\s*}/g, '() => {}');
+    // Remove empty lines with just whitespace
+    content = content.replace(/^\s*$/gm, '');
     
-    // Only write if content changed
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Cleaned: ${filePath}`);
-      return true;
-    }
-    return false;
+    // Fix common TypeScript issues
+    content = content.replace(/:\s*any\[\]/g, ': any[]');
+    content = content.replace(/:\s*string\[\]/g, ': string[]');
+    content = content.replace(/:\s*number\[\]/g, ': number[]');
+    
+    fs.writeFileSync(filePath, content);
+    console.log(`Cleaned: ${filePath}`);
   } catch (error) {
     console.error(`Error cleaning ${filePath}:`, error.message);
-    return false;
   }
 }
 
-// Function to recursively find and clean files
-function cleanDirectory(dirPath) {
-    let cleanedCount = 0;
+function findTsxFiles(dir) {
+  const files = [];
+  const items = fs.readdirSync(dir);
   
-  try {
-    const items = fs.readdirSync(dirPath);
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
     
-    for (const item of items) {
-      const fullPath = path.join(dirPath, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        // Skip node_modules and other directories we don't want to process
-        if (item === 'node_modules' || item === '.git' || item === 'dist' || item === '.next') {
-          continue
-  }
-        cleanedCount += cleanDirectory(fullPath);
-      } else if (stat.isFile()) {
-    // Only process certain file types
-        const ext = path.extname(item);
-        if (['.ts', '.tsx', '.js', '.jsx', '.json', '.md'].includes(ext)) {
-          if (cleanMergeConflicts(fullPath)) {
-            cleanedCount++
-  }
-        }
-      }
+    if (stat.isDirectory()) {
+      files.push(...findTsxFiles(fullPath));
+    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+      files.push(fullPath);
     }
-  } catch (error) {
-    console.error(`Error processing directory ${dirPath}:`, error.message);
   }
   
-  return cleanedCount;
+  return files;
 }
 
-// Main execution
-console.log('Starting merge conflict cleanup...');
-const cleanedCount = cleanDirectory('/workspace');
-console.log(`Cleaned ${cleanedCount} files`);
+// Clean all TypeScript/TSX files in the app directory
+const appDir = './app';
+const files = findTsxFiles(appDir);
 
-// Also clean specific problematic files
-const criticalFiles = [
-  '/workspace/App.tsx',
-  '/workspace/jest.setup.js',
-  '/workspace/package.json',
-  '/workspace/vite.config.ts',
-  '/workspace/tailwind.config.ts'
-];
+console.log(`Found ${files.length} files to clean...`);
 
-console.log('Cleaning critical files...');
-for (const file of criticalFiles) {
-  if (fs.existsSync(file)) {
-    if (cleanMergeConflicts(file)) {
-      console.log(`Cleaned critical file: ${file}`);
-    }
-  }
-}
+files.forEach(cleanMergeConflicts);
 
-console.log('Merge conflict cleanup completed!');
+console.log('Cleanup complete!');

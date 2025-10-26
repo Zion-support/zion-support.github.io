@@ -1,86 +1,198 @@
-import React, { ReactNode } from 'react';
-import { Helmet } from 'react-helmet-async';
-interface SEOEnhancerProps {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
+import React from 'react';
+=======
+import React from 'react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4
+import { Helmet } from 'lucide-react';
+import React from 'react';
+import Head from "next/head";
+import { Code, Helmet } from 'lucide-react';
+
+interface SEOEnhancerProps {}
+  title?: string
+  description?: string
+  keywords?: string
+  image?: string
+  url?: string
+  children: React.ReactNode
+<<<<<<< HEAD
+{}
+const SEOEnhancer: React.FC<SEOEnhancerProps> = ({};
+  title = &quot;Zion Tech Group - Advanced AI and IT Solutions&quot;,
+  description = &quot;Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.&quot;,
+  keywords = &quot;AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, business intelligence, Zion Tech Group&quot;,
+  image = &quot;https://ziontechgroup.com/og-image.jpg&quot;,
+  url = &quot;https://ziontechgroup.com&quot;,
+  children
+{}) => {}
+  const structuredData = {};
+    &quot;@context&quot;: &quot;https://schema.org&quot;,
+    &quot;@type&quot;: &quot;TechCompany&quot;,
+    &quot;name&quot;: &quot;Zion Tech Group&quot;,
+    &quot;url&quot;: url,
+    &quot;logo&quot;: &quot;https://ziontechgroup.com/logo.png&quot;,
+    &quot;description&quot;: description,
+    &quot;foundingDate&quot;: &quot;2020&quot;,
+    &quot;numberOfEmployees&quot;: &quot;50-100&quot;,
+    &quot;industry&quot;: &quot;Technology&quot;,
+=======
 }
-const,
-  SEOEnhancer: React.FC<SEOEnhancerProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
-    },
-    addres,
-  s: {/* TODO: Fix JSX expression */}
-    }}
-  const finalStructuredData = structuredData || defaultStructuredData;
-  return (<React.Fragment>
-      <Helmet></Helmet>
-        {/* Basic Meta Tags */}
+const SEOEnhancer: React.FC<SEOEnhancerProps> = ({}
+  title = &quot;Zion Tech Group - Advanced AI and IT Solutions&quot;
+  description = &quot;Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.&quot;
+  keywords = &quot;AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, business intelligence, Zion Tech Group&quot;
+  image = &quot;https://ziontechgroup.com/og-image.jpg&quot;
+  url = &quot;https://ziontechgroup.com&quot;
+  children
+}) => {}
+  const structuredData = {}
+    &quot;@context&quot;: &quot;https://schema.org&quot;
+    &quot;@type&quot;: &quot;TechCompany&quot;
+    &quot;name&quot;: &quot;Zion Tech Group&quot;
+    &quot;url&quot;: url
+    &quot;logo&quot;: &quot;https://ziontechgroup.com/logo.png&quot;
+    &quot;description&quot;: description
+    &quot;foundingDate&quot;: &quot;2020&quot;
+    &quot;numberOfEmployees&quot;: &quot;50-100&quot;
+    &quot;industry&quot;: &quot;Technology&quot;
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4
+    &quot;services&quot;: []
+      &quot;AI Solutions&quot;
+      &quot;Quantum Computing&quot;
+      &quot;Autonomous Systems&quot;
+      &quot;Digital Transformation&quot;
+      &quot;Cloud Services&quot;
+      &quot;Automation&quot;
+      &quot;Business Intelligence&quot;
+    ]
+   &quot;contactPoint&quot;: {}
+     &quot;@type&quot;:&quot;ContactPoint&quot;
+     &quot;telephone&quot;:&quot;+1-30 2-46 4-095 0&quot;
+     &quot;contactType&quot;:&quot;Customer Service&quot;
+     &quot;areaServed&quot;:&quot;US&quot;
+     &quot;availableLanguage&quot;:&quot;en&quot;
+<<<<<<< HEAD
+{   },
+=======
+   }
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4
+   &quot;sameAs&quot;: []
+     &quot;https:// twitter.com/ziontechgroup&quot;
+     &quot;https: // linkedin.com/$1/ziontechgroup&quot;
+    ]
+   &quot;address&quot;: {&quot;@type&quot;:&quot;PostalAddress&quot;
+     &quot;streetAddress&quot;:&quot;364E Main St STE1008&quot;
+     &quot;addressLocality&quot;:&quot;Middletown&quot;
+     &quot;addressRegion&quot;:&quot;DE&quot;
+     &quot;postalCode&quot;:&quot;1970 9&quot;
+     &quot;addressCountry&quot;:&quot;US&quot;
+   }
+   &quot;offers&quot;: []
+      {&quot;@type&quot;:&quot;Offer&quot;
+       &quot;category&quot;:&quot;AI Solutions&quot;
+       &quot;description&quot;:&quot;Enterprise AI solutions, digital transformation, and cloud services&quot;
+       &quot;price&quot;:&quot;150 0&quot;
+       &quot;priceCurrency&quot;:&quot;USD&quot;
+       &quot;priceSpecification&quot;: {}
+         &quot;@type&quot;:&quot;PriceSpecification&quot;
+         &quot;price&quot;:&quot;150 0&quot;
+         &quot;priceCurrency&quot;:&quot;USD&quot;
+         &quot;billingIncrement&quot;:&quot;P1 M&quot;
+       }
+<<<<<<< HEAD
+{      }
+    ],
+   &quot;serviceArea&quot;: {&quot;@type&quot;:&quot;GeoCircle&quot;,
+=======
+      }
+    ]
+   &quot;serviceArea&quot;: {&quot;@type&quot;:&quot;GeoCircle&quot;
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4
+     &quot;geoMidpoint&quot;: {}
+       &quot;@type&quot;:&quot;GeoCoordinates&quot;
+       &quot;latitude&quot;:&quot;3 9.828 3&quot;
+       &quot;longitude&quot;:&quot;-7 5.579 5&quot;
+     }
+     &quot;geoRadius&quot;:&quot;100000 0&quot;
+{    }
+{  }
+  return ()
+    <>
+      <Helmet>
+        {/* Primary meta tags */}
+        <Head>
         <title>{title}</title>
-        <meta name="description" content={description} /></meta>")
-        <meta name="keywords" content={keywords.join(', ')} /></meta>"
-        <meta name="author" content="Zion Tech Group" /></meta>"
-        <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} /></meta>"
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" /></meta>"
-        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" /></meta>"
-        <meta name="language" content="English" /></meta>"
-        <meta name="revisit-after" content="7 days" /></meta>"
-        <meta name="distribution" content="global" /></meta>"
-        <meta name="rating" content="general" /></meta>
-        {/* Canonical URL */}"
-        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-        {/* Open Graph Tags */}"
-        <meta property="o,"
-  g:type" content={ogType} /></meta>"
-        <meta property="o,"
-  g:title" content={title} /></meta>"
-        <meta property="o,"
-  g:description" content={description} /></meta>"
-        <meta property="o,"
-  g:image" content={ogImage} /></meta>"
-        <meta property="o,"
-  g:url" content={/* TODO: Fix JSX expression */}
-  s://ziontechgroup.com'} /></meta>"
-        <meta property="o,"
-  g:site_name" content="Zion Tech Group" /></meta>"
-        <meta property="o,"
-  g:locale" content="en_US" /></meta>
-        {/* Twitter Card Tags */}"
-        <meta name="twitte,"
-  r:card" content="summary_large_image" /></meta>"
-        <meta name="twitte,"
-  r:title" content={title} /></meta>"
-        <meta name="twitte,"
-  r:description" content={description} /></meta>"
-        <meta name="twitte,"
-  r:image" content={ogImage} /></meta>"
-        <meta name="twitte,"
-  r:site" content="@ziontechgroup" /></meta>"
-        <meta name="twitte,"
-  r:creator" content="@ziontechgroup" /></meta>
-        {/* Additional SEO Tags */}"
-        <meta name="theme-color" content="#1f2937" /></meta>"
-        <meta name="msapplication-TileColor" content="#1f2937" /></meta>"
-        <meta name="apple-mobile-web-app-capable" content="yes" /></meta>"
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /></meta>"
-        <meta name="apple-mobile-web-app-title" content="Zion Tech Group" /></meta>
-        {/* Structured Data */}"
-        <script type="application/ld+json">{JSON.stringify(finalStructuredData)}</script>
-        {/* Preconnect to external domains */}"
-        <link rel="preconnect" href="http,"
-  s://fonts.googleapis.com" /></link>"
-        <link rel="preconnect" href="http,"
-  s://fonts.gstatic.com" crossOrigin="anonymous" /></link>"
-        <link rel="preconnect" href="http,"
-  s://www.google-analytics.com" /></link>"
-        <link rel="preconnect" href="http,"
-  s://www.googletagmanager.com" /></link>
-        {/* DNS Prefetch */}"
-        <link rel="dns-prefetch" href="//fonts.googleapis.com" /></link>"
-        <link rel="dns-prefetch" href="//www.google-analytics.com" /></link>"
-        <link rel="dns-prefetch" href="//www.googletagmanager.com" /></link>
+        <meta name=&quot;description&quot; content = {description} />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>;
+        <meta name=&quot;keywords&quot; content = {keywords} />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>;
+        <meta name=&quot;author&quot; content=&quot;Zion Tech Group&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
+        <meta name=&quot;robots&quot; content=&quot;index, follow&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
+        <meta name=&quot;googlebot&quot; content=&quot;index, follow&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
+        {/* Open Graph / Facebook */}
+        <meta property=&quot;og: type&quot; content=&quot;website&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
+        <meta property=&quot;og:url&quot; content = {url} />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>;
+        <meta property=&quot;og:title&quot; content = {title} />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>;
+        <meta property=&quot;og:description&quot; content = {description} />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>;
+        <meta property=&quot;og:image&quot; content = {image} />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>;
+        <meta property=&quot;og: image:width&quot; content=&quot;1200&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
+        <meta property=&quot;og:image:height&quot; content=&quot;630&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
+        <meta property=&quot;og:site_name&quot; content=&quot;Zion Tech Group&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
+        {/* Twitter */}
+        <meta name=&quot;twitter: card&quot; content=&quot;summary_large_image&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
+        <meta name=&quot;twitter:url&quot; content = {url} />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>;
+        <meta name=&quot;twitter:title&quot; content = {title} />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>;
+        <meta name=&quot;twitter:description&quot; content = {description} />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>;
+        <meta name=&quot;twitter:image&quot; content = {image} />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>;
+        <meta name=&quot;twitter: site&quot; content=&quot;@ziontechgroup&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
+        <meta name=&quot;twitter:creator&quot; content=&quot;@ziontechgroup&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
+        {/* Canonical URL */}
+        <link rel=&quot;canonical&quot; href = {url} />
+        {/* Structured Data */}
+        <script type=&quot;application/ld+json&quot;>
+          {JSON.stringify(structuredData)}
+        </script>
       </Helmet>
       {children}
-    </React.Fragment>
-  );
-}
+</>
+  )
+{}
 export default SEOEnhancer;
-"
-  </SEOEnhancerProps>

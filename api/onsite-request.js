@@ -1,13 +1,13 @@
-const fs = require('fs');
-const path = require('path');
 
 // Simple wrapper function to replace withSentry
-const withSentry = (handler) => handler;
+function withSentry(handler) {
+  return handler;
+}
 
 const dir = path.join(process.cwd(), 'data');
 const file = path.join(dir, 'onsite-requests.json');
 
-export default function handler(req, res) {
+function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
@@ -15,7 +15,7 @@ export default function handler(req, res) {
     return;
   }
 
-  const { name, email, company, phone, message, location } = req.body || {}
+  const { name, email, company, phone, message, location } = req.body || {};
 
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true });
@@ -26,13 +26,11 @@ export default function handler(req, res) {
     if (fs.existsSync(file)) {
       const data = fs.readFileSync(file, 'utf8');
       existing = JSON.parse(data);
-      if (!Array.isArray(existing)) existing = []
-  }
+      if (!Array.isArray(existing)) existing = [];
+    }
   } catch (error) {
     // Log error for debugging in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error reading existing requests:', error)
-  }
+    console.error('Error reading existing requests:', error);
     existing = [];
   }
 
@@ -44,9 +42,8 @@ export default function handler(req, res) {
     phone,
     message,
     location,
-    timestamp: new Date().toISOString(),
-    status: 'pending'
-  }
+    timestamp: new Date().toISOString()
+  };
 
   existing.push(newRequest);
 
@@ -55,19 +52,16 @@ export default function handler(req, res) {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
-      success: true, 
-      message: 'Onsite request submitted successfully',
+      success: true,
       id: newRequest.id
     }));
   } catch (error) {
     // Log error for debugging in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error saving onsite request:', error)
-  }
+    console.error('Error saving onsite request:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to save request' }));
   }
 }
-module.exports = handler;
 
+module.exports = withSentry(handler);

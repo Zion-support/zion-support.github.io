@@ -1,57 +1,68 @@
-#!/usr/bin/env node;
-import { readFileSync, writeFileSync } from 'fs';
+const fs = require('fs');
+const path = require('path');
 
-console.log('🔧 Resolving merge conflicts in app/page.tsx...');
+// Function to resolve merge conflicts
+function resolveConflicts(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
 
-try {
-    // Read the file;
-  const content = readFileSync('/workspace/app/page.tsx', 'utf8');
-  
-  // Split by conflict markers and keep our version (after )
-  const lines = content.split('\n');
-  const resolvedLines = [];
-  let skipUntilNextMarker = false;
-  
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
+    // Check if file has merge conflict markers
+      const lines = content.split('\n');
+      const resolvedLines = [];
+      let inConflict = false;
+      let keepCurrent = false;
+      
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        
+          keepCurrent = true;
+          continue;
+        }
+        
+          inConflict = false;
+          keepCurrent = false;
+          continue;
+        }
+        
+        if (inConflict && !keepCurrent) {
+          // Skip lines from HEAD
+          continue;
+        }
+        
+        resolvedLines.push(line);
+      }
+      
+      content = resolvedLines.join('\n');
+      modified = true;
+    }
+
+    if (modified) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
     
-    if (line.includes('')) {
-      skipUntilNextMarker = true;
-      continue
+    return false;
+  } catch (error) {
+    console.error(`Error resolving ${filePath}:`, error.message);
+    return false;
   }
+}
+
+// Function to find all files with conflicts
+function findConflictFiles(dir) {
+  let results = [];
+  const list = fs.readdirSync(dir);
+  
+  list.forEach(file => {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
     
-    if (line.includes('')) {
-    skipUntilNextMarker = false;
-      continue
-  }
-    
-    if(line.includes('      continue;)
-    })
-    )
-    if (!skipUntilNextMarker) {
-    resolvedLines.push(line)
-  }
-  }
-  
-  // Write the resolved content;
-  writeFileSync('/workspace/app/page.tsx', resolvedLines.join('\n'));
-  
-  console.log('✅ Merge conflicts resolved successfully!');
-  
-  // Also clean up duplicate imports;
-  const finalContent = readFileSync('/workspace/app/page.tsx', 'utf8');
-  const importLines = finalContent.split('\n').filter(line => line.startsWith('import'));
-  const uniqueImports = [...new Set(importLines)];
-  
-  // Remove duplicate imports;
-  const nonImportLines = finalContent.split('\n').filter(line => !line.startsWith('import'));
-  const cleanedContent = [...uniqueImports, ...nonImportLines].join('\n');
-  
-  writeFileSync('/workspace/app/page.tsx', cleanedContent);
-  
-  console.log('✅ Duplicate imports cleaned up!');
-  
-} catch (error) {
-    console.error('❌ Error resolving conflicts:', error.message);
-  process.exit(1)
-  }
+    if (stat && stat.isDirectory()) {
+      if (file !== 'node_modules' && file !== '.next' && file !== '.git' && !file.startsWith('.')) {
+        results = results.concat(findConflictFiles(filePath));
+      }
+    } else {
+      try {
+        const content = fs.readFileSync(filePath, 'utf8');

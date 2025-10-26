@@ -1,96 +1,106 @@
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { Link } from 'react-router-dom';
+import { Bug, RefreshCw, Home } from 'lucide-react';
+
+interface Props {
+  children: ReactNode;
+}
+
+interface State {
+  hasError: boolean;
+  error?: Error;
+  errorInfo?: ErrorInfo;
+  errorId?: string;
+}
+
+class GlobalErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error: Error): State {
+    return {
+      hasError: true,
+      error,
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+    };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    this.setState({
+      error,
+      errorInfo
+    });
+
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error caught by boundary:', error, errorInfo);
     }
-  ];
-const benefits = [
-    'Advanced AI technology integration',;
-    'Real-time processing and analytics',;
-    'Enterprise-grade security and compliance',;
-    'Scalable and flexible solutions',;
-    '24/7 technical support',;
-    'Easy integration with existing systems',;
-    'Cost-effective pricing plans',;
-    'Proven track record of success';
-  ];
-return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet>
-        <title>GlobalErrorBoundary | Zion Tech Group</title>
-        <meta>
-        <meta>
-      </Helmet>
-      {/* Features Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2>
-              Why Choose Our GlobalErrorBoundary?,
-            </h2>
-            <p>
-              Our globalerrorboundary solutions deliver unmatched performance, security, and scalability.;
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-            {
-    features.map((feature, index) => (
+
+    // In production, you might want to send this to an error reporting service
+    // Example: errorReportingService.captureException(error, { extra: errorInfo });
   }
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div>
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
-                  <feature>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2>
-              Key Benefits
-            </h2>
-            <p>
-              Experience the power of our globalerrorboundary solutions for your business.,
+
+  handleRetry = () => {
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+  };
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
+          <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-lg p-8 text-center border border-white/20">
+            <div className="w-16 h-16 mx-auto mb-6 bg-red-500/20 rounded-full flex items-center justify-center">
+              <Bug className="w-8 h-8 text-red-400" />
+            </div>
+            
+            <h1 className="text-2xl font-bold text-white mb-4">
+              Oops! Something went wrong
+            </h1>
+            
+            <p className="text-gray-300 mb-6">
+              We're sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.
             </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
-            {
-    benefits.map((benefit, index) => (
-  }
-              <div key={index} className="flex items-start space-x-3"></div>
-                <CheckCircle>
-                <p className="text-gray-300 text-lg">{benefit}</p>
+
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <div className="mb-6 p-4 bg-red-900/20 border border-red-500/30 rounded-lg text-left">
+                <h3 className="text-red-400 font-semibold mb-2">Error Details:</h3>
+                <p className="text-red-200 text-sm font-mono break-all">
+                  {this.state.error.message}
+                </p>
+                {this.state.errorId && (
+                  <p className="text-gray-400 text-xs mt-2">
+                    Error ID: {this.state.errorId}
+                  </p>
+                )}
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8"></section>
-        <div className="max-w-4xl mx-auto text-center"></div>
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div>
-            <h2>
-              Ready to Get Started?;
-            </h2>
-            <p>
-              Contact our experts to discuss your globalerrorboundary needs and get a customized solution.;
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button>
-                <Phone>
-                Call Now
+            )}
+
+            <div className="flex flex-col sm:flex-row gap-3">
+              <button
+                onClick={this.handleRetry}
+                className="flex items-center justify-center gap-2 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300"
+              >
+                <RefreshCw className="w-4 h-4" />
+                Try Again
               </button>
-              <button>
-                <Mail>
-                Email Us
-              </button>
+              
+              <Link
+                to="/"
+                className="flex items-center justify-center gap-2 border border-white/30 text-white hover:bg-white/10 font-semibold py-3 px-6 rounded-lg transition-all duration-300"
+              >
+                <Home className="w-4 h-4" />
+                Go Home
+              </Link>
             </div>
           </div>
         </div>
-      </section>
-    </div>
-  ),
-}
-export default GlobalErrorBoundaryPage;
+      );
+    }
 
+    return this.props.children;
+  }
+}
+
+export default GlobalErrorBoundary;
