@@ -1,195 +1,224 @@
-'use client';
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { Brain, Zap, Shield, Target, CheckCircle, ArrowRight } from 'lucide-react';
+import { Metadata } from 'next';
+import { 
+  Brain, 
+  Shield, 
+  Zap, 
+  Star, 
+  Cloud, 
+  Database, 
+  Lock, 
+  BarChart3,
+  Smartphone,
+  Globe,
+  Code,
+  Settings
+} from 'lucide-react';
 
-const services = [
-  {
-    title: 'AI Solutions',
-    description: 'Advanced AI-powered solutions for modern businesses including machine learning, natural language processing, and predictive analytics.',
-    features: ['Machine Learning', 'Natural Language Processing', 'Predictive Analytics', 'Computer Vision'],
+export const metadata: Metadata = {
+  title: 'Our Services - Zion Tech Group | AI & IT Solutions',
+  description: 'Comprehensive AI and IT services including cloud solutions, cybersecurity, data analytics, and custom software development.',
+  keywords: 'AI services, IT services, cloud solutions, cybersecurity, data analytics, software development',
+  openGraph: {
+    title: 'Our Services - Zion Tech Group',
+    description: 'Comprehensive AI and IT services including cloud solutions, cybersecurity, data analytics, and custom software development.',
+    type: 'website',
+    url: 'https://ziontechgroup.com/services',
   },
-  {
-    title: 'Cloud Infrastructure',
-    description: 'Scalable and secure cloud solutions that grow with your business needs.',
-    features: ['AWS/Azure/GCP', 'Container Orchestration', 'Auto-scaling', 'Disaster Recovery'],
-  },
-  {
-    title: 'Cybersecurity',
-    description: 'Comprehensive security solutions to protect your business from evolving threats.',
-    features: ['Threat Detection', 'Security Audits', 'Compliance', 'Incident Response'],
-  },
-  {
-    title: 'Digital Transformation',
-    description: 'Complete digital transformation services to modernize your business operations.',
-    features: ['Process Automation', 'Data Migration', 'System Integration', 'Change Management'],
-  },
-];
+};
 
-const processSteps = [
-  {
-    step: '01',
-    title: 'Discovery',
-    description: 'We analyze your current systems and identify opportunities for improvement.',
-  },
-  {
-    step: '02',
-    title: 'Strategy',
-    description: 'We develop a comprehensive strategy tailored to your business goals.',
-  },
-  {
-    step: '03',
-    title: 'Implementation',
-    description: 'We execute the solution with minimal disruption to your operations.',
-  },
-  {
-    step: '04',
-    title: 'Optimization',
-    description: 'We continuously monitor and optimize for maximum performance.',
-  },
-];
+const ServicesPage = () => {
+  const services = [
+    {
+      category: 'AI Solutions',
+      icon: <Brain className="w-12 h-12" />,
+      color: 'from-blue-500 to-cyan-500',
+      items: [
+        {
+          title: 'Machine Learning',
+          description: 'Custom ML models for predictive analytics and automation',
+          features: ['Predictive Analytics', 'Natural Language Processing', 'Computer Vision', 'Recommendation Systems']
+        },
+        {
+          title: 'AI Automation',
+          description: 'Intelligent process automation to streamline operations',
+          features: ['Workflow Automation', 'Document Processing', 'Customer Service Bots', 'Data Entry Automation']
+        },
+        {
+          title: 'AI Consulting',
+          description: 'Strategic AI implementation and optimization consulting',
+          features: ['AI Strategy', 'Technology Assessment', 'Implementation Planning', 'Performance Optimization']
+        }
+      ]
+    },
+    {
+      category: 'IT Infrastructure',
+      icon: <Cloud className="w-12 h-12" />,
+      color: 'from-green-500 to-emerald-500',
+      items: [
+        {
+          title: 'Cloud Solutions',
+          description: 'Scalable cloud infrastructure and migration services',
+          features: ['AWS/Azure/GCP', 'Cloud Migration', 'Serverless Architecture', 'Container Orchestration']
+        },
+        {
+          title: 'Network Security',
+          description: 'Comprehensive cybersecurity and network protection',
+          features: ['Firewall Management', 'Intrusion Detection', 'VPN Solutions', 'Security Audits']
+        },
+        {
+          title: 'Database Management',
+          description: 'Optimized database design and management solutions',
+          features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Data Migration']
+        }
+      ]
+    },
+    {
+      category: 'Development',
+      icon: <Code className="w-12 h-12" />,
+      color: 'from-purple-500 to-pink-500',
+      items: [
+        {
+          title: 'Custom Software',
+          description: 'Tailored software solutions for your business needs',
+          features: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration']
+        },
+        {
+          title: 'DevOps & CI/CD',
+          description: 'Streamlined development and deployment processes',
+          features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Monitoring & Logging', 'Automated Testing']
+        },
+        {
+          title: 'Legacy Modernization',
+          description: 'Upgrade and modernize existing systems',
+          features: ['System Analysis', 'Technology Migration', 'Performance Optimization', 'Security Updates']
+        }
+      ]
+    },
+    {
+      category: 'Analytics & Insights',
+      icon: <BarChart3 className="w-12 h-12" />,
+      color: 'from-yellow-500 to-orange-500',
+      items: [
+        {
+          title: 'Business Intelligence',
+          description: 'Data-driven insights and reporting solutions',
+          features: ['Dashboard Creation', 'KPI Tracking', 'Data Visualization', 'Report Automation']
+        },
+        {
+          title: 'Data Analytics',
+          description: 'Advanced analytics and data science services',
+          features: ['Statistical Analysis', 'Data Mining', 'Predictive Modeling', 'Real-time Analytics']
+        },
+        {
+          title: 'Performance Monitoring',
+          description: 'Comprehensive system and application monitoring',
+          features: ['Real-time Monitoring', 'Alert Systems', 'Performance Metrics', 'Capacity Planning']
+        }
+      ]
+    }
+  ];
 
-export default function ServicesPage() {
+  const stats = [
+    { number: '500+', label: 'Projects Completed' },
+    { number: '99.9%', label: 'Uptime Guarantee' },
+    { number: '24/7', label: 'Support Available' },
+    { number: '50+', label: 'Expert Team Members' }
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
-      <SEOOptimizer
-        title="Services - ZionTechGroup"
-        description="Comprehensive AI and technology services to transform your business. From AI solutions to cloud infrastructure and cybersecurity."
-        keywords="AI services, cloud infrastructure, cybersecurity, digital transformation, technology consulting"
-      />
-      <Navigation />
-      
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className="relative overflow-hidden py-24">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Our <span className="text-blue-600">Services</span>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Services</span>
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Comprehensive technology solutions designed to transform your business 
-              and drive sustainable growth in the digital age.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Comprehensive AI and IT solutions designed to accelerate your business growth and digital transformation.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
-                <div className="flex items-center mb-6">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-lg mr-4">
-                    {index === 0 && <Brain className="h-8 w-8 text-blue-600" />}
-                    {index === 1 && <Zap className="h-8 w-8 text-blue-600" />}
-                    {index === 2 && <Shield className="h-8 w-8 text-blue-600" />}
-                    {index === 3 && <Target className="h-8 w-8 text-blue-600" />}
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900">{service.title}</h3>
-                </div>
-                <p className="text-gray-600 mb-6">{service.description}</p>
-                <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
-                      <span className="text-gray-700">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Process Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Process
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              A proven methodology that ensures successful project delivery and maximum value.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {processSteps.map((step, index) => (
+      {/* Stats Section */}
+      <section className="py-16 bg-gray-900/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-600 text-white rounded-full text-2xl font-bold mb-4">
-                  {step.step}
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{step.title}</h3>
-                <p className="text-gray-600">{step.description}</p>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-gray-300">{stat.label}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose ZionTechGroup?
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              We combine deep technical expertise with business acumen to deliver solutions that matter.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-6">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
-                <CheckCircle className="h-8 w-8 text-green-600" />
+      {/* Services Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="space-y-20">
+            {services.map((category, categoryIndex) => (
+              <div key={categoryIndex} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700">
+                <div className="flex items-center mb-8">
+                  <div className={`inline-flex p-4 rounded-xl bg-gradient-to-r ${category.color} mr-4`}>
+                    {category.icon}
+                  </div>
+                  <h2 className="text-3xl font-bold text-white">{category.category}</h2>
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  {category.items.map((service, serviceIndex) => (
+                    <div key={serviceIndex} className="bg-gray-900/50 rounded-xl p-6 border border-gray-600 hover:border-gray-500 transition-colors">
+                      <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                      <p className="text-gray-300 mb-4">{service.description}</p>
+                      <ul className="space-y-2">
+                        {service.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-center text-sm text-gray-400">
+                            <Star className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Proven Track Record</h3>
-              <p className="text-gray-600">500+ successful projects delivered across various industries.</p>
-            </div>
-            <div className="text-center p-6">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
-                <Brain className="h-8 w-8 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Expert Team</h3>
-              <p className="text-gray-600">Certified professionals with years of experience in cutting-edge technologies.</p>
-            </div>
-            <div className="text-center p-6">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">
-                <Shield className="h-8 w-8 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">24/7 Support</h3>
-              <p className="text-gray-600">Round-the-clock support to ensure your systems run smoothly.</p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+      <section className="py-20 bg-gray-900/50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>
-          <p className="text-xl text-blue-100 mb-8">
-            Let's discuss how our services can help you achieve your business goals.
+          <p className="text-xl text-gray-300 mb-8">
+            Let's discuss how our services can help you achieve your goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 transition-colors">
+            <a 
+              href="/contact" 
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+            >
               Get Started
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </button>
-            <button className="inline-flex items-center px-8 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-blue-700 transition-colors">
+            </a>
+            <a 
+              href="/about" 
+              className="border border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors"
+            >
               Learn More
-            </button>
+            </a>
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
-}
+};
+
+export default ServicesPage;
