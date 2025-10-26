@@ -1,3 +1,5 @@
+'use client';
+
 // Performance monitoring utilities
 import React from "react";
 

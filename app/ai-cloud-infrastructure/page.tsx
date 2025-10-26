@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Zap, Shield, Clock, TrendingUp } from 'lucide-react';
 
 const AICloudInfrastructurePage: React.FC = () => {
@@ -85,11 +84,7 @@ const AICloudInfrastructurePage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>AI Cloud Infrastructure Services | Zion Tech Group</title>
-        <meta name="description" content="Transform your cloud infrastructure with AI-powered solutions. Automated migration, optimization, and security monitoring for maximum efficiency and cost savings." />
-        <meta name="keywords" content="AI cloud infrastructure, cloud migration, cloud optimization, AI security monitoring, cloud automation" />
-      </Helmet>
+      
 
       <div className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20"></div>

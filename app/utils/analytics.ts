@@ -1,3 +1,5 @@
+'use client';
+
 // Analytics utilities for tracking user interactions and performance
 import React from "react";
 

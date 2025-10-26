@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp} from 'lucide-react';
@@ -53,8 +52,7 @@ return(<React.Fragment>)
   }
     ]
 return (
-      <Helmet>
-        </Helmet><title>Page Fixed - Zion Tech Group</title>
+      <title>Page Fixed - Zion Tech Group</title>
         <meta>
       </Helmet>
       <Navigation />

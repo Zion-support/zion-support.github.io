@@ -1,14 +1,15 @@
-'use client'
-import React from 'react'
+'use client';
+
+import React from 'react';
 import Link from 'next/link'
 import { ArrowRight, Mail, Phone, MapPin } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
+// Navigation removed - using Header from layout instead
+// import Footer from '../components/Footer'
 
 const ContactPage: React.FC = () => {
   return (
     <>
-      <Navigation />
+      {/* Navigation handled by layout */}
       
       <main className="pt-16">
         {/* Hero Section */}
@@ -22,7 +23,7 @@ const ContactPage: React.FC = () => {
             </div>
           </div>
         </section>
-        <Footer />
+        {/* Footer removed temporarily */}
       </main>
     </>
   )

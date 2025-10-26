@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { CheckCircle, Link, Coins, Brain, Database } from 'lucide-react';
+import { CheckCircle, Link, Coins, Brain, Database, Shield, Zap, Globe, Star } from 'lucide-react';
 
 const BlockchainWeb3Page: React.FC = () => {
   const blockchainServices = [

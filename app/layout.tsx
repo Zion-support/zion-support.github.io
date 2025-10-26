@@ -2,6 +2,12 @@ import { Inter } from 'next/font/google'
 import React from 'react'
 import './globals.css'
 import type { Metadata, Viewport } from 'next'
+import Analytics from './components/Analytics'
+import PerformanceMonitor from './components/PerformanceMonitor'
+import AccessibilityEnhancer from './components/AccessibilityEnhancer'
+import ErrorBoundary from './components/ErrorBoundary'
+import Header from './components/Header'
+import Footer from './components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 

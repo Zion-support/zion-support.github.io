@@ -1,12 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Disable static generation completely
-  output: 'export',
-  trailingSlash: true,
-  distDir: 'dist',
-  images: {
-    unoptimized: true
-  },
+  // Temporarily disable static export to fix build issues
+  // output: 'export',
+  // trailingSlash: true,
+  // distDir: 'dist',
+  // images: {
+  //   unoptimized: true
+  // },
   
   // Disable experimental features that might cause issues
   experimental: {

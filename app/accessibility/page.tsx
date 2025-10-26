@@ -1,10 +1,11 @@
 'use client';
-import React from 'react';
 
-export const dynamic = 'force-dynamic';
+import React from 'react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+// import Footer from '../components/Footer';
 import { Eye, Volume2, Keyboard, Mouse, CheckCircle, Shield, Brain, BarChart, Target, Globe, Code } from 'lucide-react';
+// Metadata removed - client components can't export metadata
+
 
 const AccessibilityPage: React.FC = () => {
   const accessibilityFeatures = [
@@ -75,10 +76,7 @@ const AccessibilityPage: React.FC = () => {
 
   return (
     <div>
-      <Head>
-        <title>Accessibility - Zion Tech Group</title>
-        <meta name="description" content="Professional services by Zion Tech Group." />
-      </Head>
+      
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">
@@ -102,7 +100,7 @@ const AccessibilityPage: React.FC = () => {
             </div>
           </div>
         </div>
-        <Footer />
+        {/* Footer removed temporarily */}
       </main>
     </div>
   )
