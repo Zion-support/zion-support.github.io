@@ -33,7 +33,7 @@ function fixSyntaxErrors(filePath) {
     // Fix malformed imports
     const importFixes = [
       // Fix malformed import statements
-      {;
+      {
         pattern: /import\s+{([^}]*)\s+from\s+'([^']*)';\s*}/g,
         replacement: "import { $1 } from '$2';"
       },
@@ -43,7 +43,7 @@ function fixSyntaxErrors(filePath) {
         replacement: "import { $1, $2 } from '$3';"
       },
       // Fix malformed import with semicolon
-      {;
+      {
         pattern: /import\s+{([^}]*)\s+from\s+'([^']*)';\s*}/g,
         replacement: "import { $1 } from '$2';"
       }
@@ -60,8 +60,8 @@ function fixSyntaxErrors(filePath) {
     const functionFixes = [
       // Fix malformed function with missing return
       {
-        pattern: /const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{\s*return\s*\(\s*}\s*</g,
-        replacement: 'const $1: React.FC = () => {\n  return (\n    <'
+        pattern: /const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{\s*return\s*\(\s*}\s*</g,$2 />
+        replacement: 'const $1: React.FC = () => {\n  return (\n    <'$2 />
       },
       // Fix malformed function with missing return statement
       {

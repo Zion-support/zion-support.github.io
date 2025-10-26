@@ -31,8 +31,7 @@ export interface CacheConfig {/* TODO: Fix JSX expression */}
   defaultTTL?: number
 }
 export interface CacheEntry
-          <T></T>
-                {/* TODO: Fix JSX expression */}
+          <T> {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
 
@@ -84,8 +83,7 @@ export class CacheManager {
 
 }
     if (typeof window === 'undefined') return
-    this.cleanupInterval = setInterval(() =>
-                {/* TODO: Fix JSX expression */}
+    this.cleanupInterval = setInterval(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       this.cleanup()
@@ -144,7 +142,7 @@ export class CacheManager {
   O: Add content,}
 }
               const entry = JSON.parse(item) as CacheEntry
-          <unknown></>
+          <unknown>
               if (this.isExpired(entry, now)) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -285,7 +283,7 @@ export class CacheManager {
   O: Add content,}
 }
           entry = JSON.parse(item) as CacheEntry
-          <T></T>
+          <T>
         }
       } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -308,7 +306,7 @@ export class CacheManager {
   O: Add content,}
 }
           entry = JSON.parse(item) as CacheEntry
-          <T></T>
+          <T>
         }
       } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -455,8 +453,7 @@ export class CacheManager {
           <T>,
 
     options: { ttl?: number } = {}
-  ): T | Promise<T></T>
-                {
+  ): T | Promise<T> {
     // TODO: Add content
   }
 
@@ -476,8 +473,7 @@ export class CacheManager {
     if (value instanceof Promise) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      return value.then(resolvedValue =>
-                {/* TODO: Fix JSX expression */}
+      return value.then(resolvedValue => {/* TODO: Fix JSX expression */}
   O: Add content,}
 })
         this.set(key, resolvedValue, options)
@@ -499,8 +495,7 @@ export class CacheManager {
           <T> | T,
 
     options: { ttl?: number } = {}
-  ): Promise<T></T>
-                {
+  ): Promise<T> {
     // TODO: Add content
   }
 
@@ -534,8 +529,7 @@ export class CacheManager {
 }
     const { keyGenerator, ...cacheOptions } = options
     return (...arg)
-  s: TArgs): TResult =>
-                {/* TODO: Fix JSX expression */}
+  s: TArgs): TResult => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       const key = keyGenerator

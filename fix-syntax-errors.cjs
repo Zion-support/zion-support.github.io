@@ -1,172 +1,65 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix syntax errors in a file
 function fixSyntaxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let fixed = false;
+    let modified = false;
     
-    // Fix common syntax error patterns
-    const fixes = [
-      // Fix broken interface definitions
-      {
-        pattern: /interface\s+\w+\s*\{[^}]*\}\s*\}\s*/g,
-        replacement: 'interface Props {\n  [key: string]: any;\n}\n'
-      },
-      // Fix orphaned property definitions
-      {
-        pattern: /^\s*[a-zA-Z_$][a-zA-Z0-9_$]*\s*:\s*[^;]+;\s*$/gm,
-        replacement: ''
-      },
-      // Fix broken JSX fragments
-      {
-        pattern: /^\s*\}\s*\}\s*$/gm,
-        replacement: ''
-      },
-      // Fix incomplete function definitions
-      {
-        pattern: /^\s*const\s+\w+\s*=\s*\([^)]*\)\s*=>\s*\{[^}]*$/gm,
-        replacement: 'const Component = () => {\n  return null;\n};\n'
-      },
-      // Fix broken imports
-      {
-        pattern: /import\s+[^;]+;\s*$/gm,
-        replacement: ''
-      },
-      // Fix orphaned type definitions
-      {
-        pattern: /^\s*[a-zA-Z_$][a-zA-Z0-9_$]*\s*:\s*[^;]+;\s*$/gm,
-        replacement: ''
-      },
-      // Fix broken JSX expressions
-      {
-        pattern: /^\s*[a-zA-Z_$][a-zA-Z0-9_$]*\s*:\s*[^;]+;\s*$/gm,
-        replacement: ''
-      }
-    ];
-    
-    // Apply fixes
-    for (const fix of fixes) {
-      if (fix.pattern.test(content)) {
-        content = content.replace(fix.pattern, fix.replacement);
-        fixed = true;
-      }
+    // Fix common syntax issues
+    if (content.includes('<>') && !content.includes('React.Fragment')) {
+      // Replace empty fragments with React.Fragment
+      content = content.replace(/<>/g, '<React.Fragment>');
+      content = content.replace(/<\/>/g, '</React.Fragment>');
+      modified = true;
     }
     
-    // If file is still broken, replace with a basic component
-    if (content.includes('  end: number;') || 
-        content.includes('  duration?: number;') ||
-        content.includes('  prefix?: string;') ||
-        content.includes('  suffix?: string;') ||
-        content.includes('  className?: string;}') ||
-        content.includes('const animate = (currentTime: number) => {') ||
-        content.includes('if (!startTime) startTime = currentTime;')) {
-      
-      const fileName = path.basename(filePath, '.tsx');
-      const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1);
-      
-      const basicComponent = `'use client';
-import React from 'react';
-
-interface Props {
-  [key: string]: any;
-}
-
-const ${componentName}: React.FC<Props> = (props) => {
-  return (
-    <div className="p-4">
-      <h2>${componentName}</h2>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
-export default ${componentName};
-`;
-      
-      fs.writeFileSync(filePath, basicComponent, 'utf8');
-      fixed = true;
+    // Fix missing React import
+    if (content.includes('React.Fragment') && !content.includes("import React")) {
+      content = content.replace(/('use client'\n)/, "$1import React from 'react';\n");
+      modified = true;
     }
     
-    return fixed;
+    // Fix JSX syntax issues
+    if (content.includes('return (') && content.includes('<>')) {
+      // Ensure proper JSX structure
+      content = content.replace(/return \(\s*<>/g, 'return (\n    <React.Fragment>');
+      content = content.replace(/<\/>\s*\)/g, '</React.Fragment>\n  )');
+      modified = true;
+    }
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content);
+      return true;
+    }
+    
+    return false;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Function to find files with syntax errors
-function findFilesWithSyntaxErrors(dir) {
-  const files = [];
+function processDirectory(dirPath) {
+  const files = fs.readdirSync(dirPath);
+  let fixedCount = 0;
   
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
+  for (const file of files) {
+    const fullPath = path.join(dirPath, file);
+    const stat = fs.statSync(fullPath);
     
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        // Skip node_modules and other common directories
-        if (!['node_modules', '.git', 'dist', 'build', '.next', 'corrupted-src-backup'].includes(item)) {
-          traverse(fullPath);
-        }
-      } else if (stat.isFile()) {
-        // Check for TypeScript/JavaScript/JSX files
-        if (/\.(ts|tsx|js|jsx)$/.test(item)) {
-          try {
-            const content = fs.readFileSync(fullPath, 'utf8');
-            if (content.includes('  end: number;') || 
-                content.includes('  duration?: number;') ||
-                content.includes('  prefix?: string;') ||
-                content.includes('  suffix?: string;') ||
-                content.includes('  className?: string;}') ||
-                content.includes('const animate = (currentTime: number) => {') ||
-                content.includes('if (!startTime) startTime = currentTime;') ||
-                content.includes('interface ') && content.includes('} }') ||
-                content.includes('const ') && content.includes('=> {') && !content.includes('return')) {
-              files.push(fullPath);
-            }
-          } catch (error) {
-            // Skip files that can't be read
-          }
-        }
+    if (stat.isDirectory()) {
+      fixedCount += processDirectory(fullPath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
+      if (fixSyntaxErrors(fullPath)) {
+        fixedCount++;
       }
     }
   }
   
-<<<<<<< HEAD
-  traverse(dir);
-  return files;
+  return fixedCount;
 }
 
-// Main execution
-console.log('Starting syntax error fix...');
-
-const workspaceDir = process.cwd();
-const errorFiles = findFilesWithSyntaxErrors(workspaceDir);
-
-console.log(`Found ${errorFiles.length} files with syntax errors`);
-
-let fixedCount = 0;
-let errorCount = 0;
-
-for (const file of errorFiles) {
-  try {
-    const fixed = fixSyntaxErrors(file);
-    if (fixed) {
-      fixedCount++;
-    }
-  } catch (error) {
-    console.error(`Failed to fix ${file}:`, error.message);
-    errorCount++;
-  }
-}
-
-console.log(`\nFix complete:`);
-console.log(`- Files processed: ${errorFiles.length}`);
-console.log(`- Files fixed: ${fixedCount}`);
-console.log(`- Errors: ${errorCount}`);
+console.log('Fixing syntax errors...');
+const fixedCount = processDirectory('./app');
+console.log(`Fixed syntax errors in ${fixedCount} files`);

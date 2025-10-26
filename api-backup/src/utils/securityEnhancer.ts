@@ -74,8 +74,7 @@ class SecurityEnhancer {
   }
   private addCSRFTokenToForms(token: string): void {
     const forms = document.querySelectorAll('form')
-    forms.forEach(form =>
-                {
+    forms.forEach(form => {
       const input = document.createElement('input')
       input.type = 'hidden'
       input.name = 'csrf-token'
@@ -100,13 +99,10 @@ class SecurityEnhancer {
     Object.assign(console, originalConsole)
   }
   private monitorDOMManipulation(): void {
-    const observer = new MutationObserver((mutations) =>
-                {
-      mutations.forEach((mutation) =>
-                {
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
         if (mutation.type === 'childList') {
-          mutation.addedNodes.forEach((node) =>
-                {
+          mutation.addedNodes.forEach((node) => {
             if (node.nodeType === Node.ELEMENT_NODE) {
               const element = node as Element
               if (element.tagName === 'SCRIPT' && !element.getAttribute('src')) {
@@ -125,8 +121,7 @@ class SecurityEnhancer {
   }
   private monitorNetworkRequests(): void {
     const originalFetch = window.fetch
-    window.fetch = async (input, init) =>
-                {
+    window.fetch = async (input, init) => {
       const url = typeof input === 'string' ? input : input instanceof Request ? input.url : input.toString()
       // Check if request is to allowed origins
       if (!this.isAllowedOrigin(url)) {

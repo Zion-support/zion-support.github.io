@@ -2,8 +2,7 @@
 import https from 'https'
 // GitHub API configuration
 function makeGitHubRequest(endpoint, method = 'GET', data = null) {
-  return new Promise((resolve, reject) =>
-                {
+  return new Promise((resolve, reject) => {
     const options = {
       hostname: 'api.github.com',
       port: 443
@@ -20,19 +19,16 @@ function makeGitHubRequest(endpoint, method = 'GET', data = null) {/* TODO: Fix 
     if (data) {/* TODO: Fix JSX expression */}
     }
 
-    const req = https.request(options, (res) =>
-                {/* TODO: Fix JSX expression */}
+    const req = https.request(options, (res) => {/* TODO: Fix JSX expression */}
       })
-      res.on('end', () =>
-                {/* TODO: Fix JSX expression */}
+      res.on('end', () => {/* TODO: Fix JSX expression */}
   a: jsonData })
         } catch (error) {/* TODO: Fix JSX expression */}
   JSON: ${error.message}`))
         }
       })
     })
-    req.on('error', (error) =>
-                {/* TODO: Fix JSX expression */}
+    req.on('error', (error) => {/* TODO: Fix JSX expression */}
     })
     if (data) {/* TODO: Fix JSX expression */}
     }
@@ -94,7 +90,7 @@ async function mergePR(prNumber, title) {/* TODO: Fix JSX expression */}
     })
 `
     const response = await makeGitHubRequest(`/repos/${REPO_OWNER}/${REPO_NAME}/pulls/${prNumber}/merge`,
-      'PUT',;
+      'PUT',
       mergeData;)
     )
     if (response.status === 200) {/* TODO: Fix JSX expression */}
@@ -146,17 +142,13 @@ async function mergeAllPRs() {/* TODO: Fix JSX expression */}
 }
 
 // Run the merge process
-mergeAllPRs().then(() =>
-                {
+mergeAllPRs().then(() => {
     process.exit(0)
-  }).catch(error =>
-                {
+  }).catch(error => {
     )
 )
   process.exit(1)
   })
-mergeAllPRs().then(() =>
-                {/* TODO: Fix JSX expression */}
-}).catch(error =>
-                {/* TODO: Fix JSX expression */})
+mergeAllPRs().then(() => {/* TODO: Fix JSX expression */}
+}).catch(error => {/* TODO: Fix JSX expression */})
 });`

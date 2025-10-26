@@ -64,14 +64,14 @@ const LoadingPage: React.FC = () => {
         {/* Features Section */}
         <section className="py-20 px-4 sm: px-6 lg:px-8">
           </section>< className="$2 />
-            </div><div className="text-center mb-16"></div>
-              </div><h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"></h2>
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our Services,
   
               <p className="text-xl text-gray-600 max-w-3xl mx-auto" /></p>
                 Discover how our solutions can help transform your business.
               </p>
-                </div>
+            </div>
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
               {features.map((feature, index) => (
                 <div key={index}className="bg-white p-6 rounded-xl shadow-lg hover: shadow-xl transition-shadow">,</div>
@@ -116,7 +116,7 @@ const LoadingPage: React.FC = () => {
 
 export default LoadingPage;
           </div>
-                </section>
+        </section>
       </main>
       <Footer /></Footer>
     </>
@@ -127,7 +127,5 @@ export default LoadingPage;
   </button>
   </h2>
   </button>
-                </h2>
   </button>
-                </button>
   </h1>

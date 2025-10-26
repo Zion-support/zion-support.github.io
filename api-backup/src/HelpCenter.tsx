@@ -1,6 +1,8 @@
-import { useState  } from 'react';
-import { motion  } from 'framer-motion';import { Link  } from 'react-router-dom';
-import { import React from 'react'
+import { useState } from 'react'
+import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
+import { 
+import React from 'react'
 import { 
   HelpCircle, 
   Search, 
@@ -30,9 +32,11 @@ import {
   ArrowRight,
   ChevronDown,
   ChevronRight,
-  ExternalLink,;
-import { Helmet  } from 'react-helmet-async';import { motion  } from 'framer-motion';
-import { Search, 
+  ExternalLink,
+import { Helmet } from 'react-helmet-async'
+import { motion } from 'framer-motion'
+import { 
+  Search, 
   HelpCircle, 
   BookOpen, 
   Video, 
@@ -94,8 +98,9 @@ import { Search,
   Video,
   Book,
   Mail as MailIcon,
-  CreditCard;
- } from 'lucide-react';import SEOHead from '../components/SEOHead'
+  CreditCard
+} from 'lucide-react'
+import SEOHead from '../components/SEOHead'
   Zap, 
   Brain, 
   Cloud, 
@@ -115,27 +120,36 @@ import { Search,
   Building,
   CreditCard
 } from 'lucide-react'
-import React, { useState } from 'react';
-import { Search, BookOpen, Users, Shield, CreditCard, Settings, HelpCircle, ChevronDown, ChevronRight  } from 'lucide-react';
-import { Link  } from 'react-router-dom';import { Header  } from '@/components/header/Header';
-import { Footer  } from '@/components/Footer';import { SEO  } from '@/components/SEO';
-import { GradientHeading  } from '@/components/GradientHeading';import { Button  } from '@/components/ui/Button';
-import { Search, BookOpen, MessageCircle, Phone, Mail, FileText, Users, Settings, Shield, Zap  } from 'lucide-react';import { Link  } from 'react-router-dom';
-import { Helmet  } from 'react-helmet-async';import { Link  } from 'react-router-dom';
-import { Search, Phone, Mail, ArrowRight  } from 'lucide-react';export default function HelpCenter() {
+import React, { useState } from 'react'
+import { Search, BookOpen, Users, Shield, CreditCard, Settings, HelpCircle, ChevronDown, ChevronRight } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { Header } from "@/components/header/Header"
+import { Footer } from "@/components/Footer"
+import { SEO } from "@/components/SEO"
+import { GradientHeading } from "@/components/GradientHeading"
+import { Button } from "@/components/ui/Button"
+import { Search, BookOpen, MessageCircle, Phone, Mail, FileText, Users, Settings, Shield, Zap } from "lucide-react"
+import { Link } from "react-router-dom"
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import { Search, Phone, Mail, ArrowRight } from 'lucide-react'
+export default function HelpCenter() {
   const [searchQuery, setSearchQuery] = useState('')
-import { motion , motion  } from 'framer-motion';import { Search, BookOpen, MessageCircle, FileText, Video, Users, Phone, Mail, Clock, CheckCircle, ChevronDown, ChevronRight } from 'lucide-react'
-const HelpCenter  = () => {
+import { motion } from 'framer-motion'
+import { motion } from 'framer-motion'
+import { Search, BookOpen, MessageCircle, FileText, Video, Users, Phone, Mail, Clock, CheckCircle, ChevronDown, ChevronRight } from 'lucide-react'
+const HelpCenter = () => {
   const [searchQuery, setSearchQuery] = useState('')
-  const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
-import { motion  } from 'framer-motion';
-import { Link  } from 'react-router-dom';import { Search, Book, MessageCircle, Phone, Mail, FileText, Video, Download, ChevronDown, ChevronRight, Star, Clock, Users, HelpCircle, Zap, Shield, Settings, Globe  } from 'lucide-react';
-import { SEO  } from '@/components/SEO';const HelpCenter  = () => {
+  const [expandedCategories, setExpandedCategories] = useState<string[]>([])
+import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
+import { Search, Book, MessageCircle, Phone, Mail, FileText, Video, Download, ChevronDown, ChevronRight, Star, Clock, Users, HelpCircle, Zap, Shield, Settings, Globe } from 'lucide-react'
+import { SEO } from '@/components/SEO'
+const HelpCenter = () => {
   const [searchQuery, setSearchQuery] = useState('')
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null)
   const [expandedCategories, setExpandedCategories] = useState<string[]>([])
-  const toggleCategory = (category: string) =>
-                {
+  const toggleCategory = (category: string) => {
     setExpandedCategories(prev => 
       prev.includes(category) 
         ? prev.filter(c => c !== category)
@@ -242,8 +256,7 @@ export default function HelpCenter() {
     'Payment and escrow system',
     'Account security best practices'
   ]
-  const toggleCategory = (categoryId: string) =>
-                {
+  const toggleCategory = (categoryId: string) => {
     setExpandedCategories(prev => 
       prev.includes(categoryId) 
         ? prev.filter(id => id !== categoryId)
@@ -282,8 +295,7 @@ export default function HelpCenter() {
     {
   const [activeCategory, setActiveCategory] = useState('getting-started')
   const [expandedFaqs, setExpandedFaqs] = useState<Set<number>>(new Set([0, 1]))
-  const toggleFaq = (index: number) =>
-                {
+  const toggleFaq = (index: number) => {
     const newExpanded = new Set(expandedFaqs)
     if (newExpanded.has(index)) {
       newExpanded.delete(index)
@@ -372,9 +384,10 @@ export default function HelpCenter() {
   ]
   const popularArticles = [
     {
-import React from 'react';
-import { Link  } from 'react-router-dom';
-import { Search, 
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { 
+  Search, 
   BookOpen, 
   MessageCircle, 
   Phone, 
@@ -388,8 +401,9 @@ import { Search,
   Shield,
   Zap,
   Brain,
-  Rocket;
- } from 'lucide-react';const HelpCenter  = () => {
+  Rocket
+} from 'lucide-react'
+const HelpCenter = () => {
   const helpCategories = [
     {
       title: 'Getting Started',
@@ -484,7 +498,7 @@ import { Search,
   FileText,
   Download
 } from 'lucide-react'
-const HelpCenter  = () => {
+const HelpCenter = () => {
   const [searchQuery, setSearchQuery] = useState('')
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null)
   const categories = [
@@ -546,9 +560,10 @@ const HelpCenter  = () => {
         { title: "Payment Methods", path: "/help/payment-methods" },
         { title: "Support Plans", path: "/help/support-plans" },
         { title: "Refund Policy", path: "/help/refund-policy" }
-import React from 'react';
-import { Helmet  } from 'react-helmet-async';
-import { motion  } from 'framer-motion';import { 
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { motion } from 'framer-motion'
+import { 
   QuestionMarkCircleIcon, 
   BookOpenIcon, 
   ChatBubbleLeftRightIcon, 
@@ -558,7 +573,7 @@ import { motion  } from 'framer-motion';import {
   VideoCameraIcon,
   AcademicCapIcon
 } from '@heroicons/react/24/outline'
-const HelpCenter: React.FC  = () => {
+const HelpCenter: React.FC = () => {
   const faqCategories = [
     {
       title: "Getting Started",
@@ -612,9 +627,10 @@ const HelpCenter: React.FC  = () => {
           question: "What payment methods do you accept?",
           answer: "We accept all major credit cards, bank transfers, and can arrange custom payment terms for enterprise clients. All payments are processed securely through our payment systems."
         }
-      ];
-import { motion, AnimatePresence  } from 'framer-motion';
-import { Search, 
+      ]
+import { motion, AnimatePresence } from 'framer-motion'
+import { 
+  Search, 
   MessageCircle, 
   Phone, 
   Mail, 
@@ -638,8 +654,9 @@ import { Search,
   Download,
   Play,
   Star,
-  CheckCircle;
- } from 'lucide-react';const HelpCenter  = () => {
+  CheckCircle
+} from 'lucide-react'
+const HelpCenter = () => {
   const [searchQuery, setSearchQuery] = useState('')
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null)
   const [activeCategory, setActiveCategory] = useState('all')
@@ -974,7 +991,7 @@ export default function HelpCenter() {
   Brain,
   Building
 } from 'lucide-react'
-const HelpCenter  = () => {
+const HelpCenter = () => {
   const [searchQuery, setSearchQuery] = useState('')
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null)
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null)
@@ -1390,8 +1407,7 @@ const HelpCenter  = () => {
     item.answer.toLowerCase().includes(searchQuery.toLowerCase()) ||
     item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
   )
-  const toggleFaq = (faqId: string) =>
-                {
+  const toggleFaq = (faqId: string) => {
     const newExpanded = new Set(expandedFaqs)
     if (newExpanded.has(faqId)) {
       newExpanded.delete(faqId)
@@ -1407,32 +1423,33 @@ const HelpCenter  = () => {
     selectedCategory === 'all' || article.category.toLowerCase().includes(selectedCategory.toLowerCase())
   )
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900"></div>
-                {/* Hero Section */}
-                <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center"></div>
-            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent mb-6"></h1>
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+      {/* Hero Section */}
+      <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent mb-6">
               Help Center
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8"></p>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
               Find answers to your questions, learn how to use our platform, and get the support you need.
 
 
-      <div className="relative overflow-hidden"></div>
+      <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20"></div>
-          <div className="text-center"></div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               How can we help you?
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Find answers to common questions, learn how to use our platform, 
               and get support when you need it most.
             </p>
-                {/* Search Bar */}
-                <div className="max-w-2xl mx-auto"></div>
-              <div className="relative"></div>
+            
+            {/* Search Bar */}
+            <div className="max-w-2xl mx-auto">
+              <div className="relative">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                 <input
                   type="text"
@@ -1441,47 +1458,46 @@ const HelpCenter  = () => {
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-12 pr-4 py-4 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 />
-                <button className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-md hover:from-cyan-400 hover:to-blue-500 transition-all duration-200"></button>
+                <button className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-md hover:from-cyan-400 hover:to-blue-500 transition-all duration-200">
                   Search
                 </button>
-                </div>
+              </div>
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               How Can We
-              <span className="block bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent"></span>
+              <span className="block bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent">
                 Help You?
               </span>
-                </h1>
+            </h1>
             
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"></p>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
               Find answers to your questions, get technical support, and access comprehensive 
               resources to make the most of our AI-powered solutions.
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-7xl mx-auto text-center"></div>
+      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-          ></motion.div
->
-            <div className="inline-flex items-center px-4 py-2 bg-cyan-500/20 border border-cyan-500/50 rounded-full text-cyan-400 text-sm font-medium mb-6"></div>
+          >
+            <div className="inline-flex items-center px-4 py-2 bg-cyan-500/20 border border-cyan-500/50 rounded-full text-cyan-400 text-sm font-medium mb-6">
               <HelpCircle className="w-4 h-4 mr-2" />
               Support Center
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"></h1>
+            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
               How Can We Help?
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8"></p>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
               Find answers to common questions, get technical support, and learn how to make the most of Zion Tech Group's innovative solutions.
-      <div className="relative overflow-hidden"></div>
+      <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/50 to-purple-900/50"></div>
-        <div className="relative z-10 container mx-auto px-4 py-24"></div>
-          <div className="text-center max-w-4xl mx-auto"></div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"></h1>
+        <div className="relative z-10 container mx-auto px-4 py-24">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
               Help Center
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8"></p>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8">
               Find answers, get support, and learn how to make the most of our innovative solutions
       title: "Documentation",
       description: "Comprehensive guides and API references",
@@ -1499,39 +1515,37 @@ const HelpCenter  = () => {
     faq.answer.toLowerCase().includes(searchQuery.toLowerCase()) ||
     faq.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
   )
-  const toggleFaq = (id: number) =>
-                {
+  const toggleFaq = (id: number) => {
     setExpandedFaq(expandedFaq === id ? null : id)
   }
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900"></div>
-                {/* Hero Section */}
-                <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-7xl mx-auto text-center"></div>
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          ></motion.div
->
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6"></h1>
+          >
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               How Can We
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500"> Help?</span>
-                </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Find answers to your questions, access helpful resources, and get the support you need 
               to make the most of Zion Tech Group's innovative solutions.
-      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white"></div>
-                {/* Hero Section */}
-                <section className="pt-32 pb-16 px-4"></section>
-          <div className="max-w-6xl mx-auto text-center"></div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6"></h1>
+      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+        {/* Hero Section */}
+        <section className="pt-32 pb-16 px-4">
+          <div className="max-w-6xl mx-auto text-center">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               How can we <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">help you?</span>
-                </h1>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8"></p>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
               Find answers to common questions, explore tutorials, and get the support you need to succeed with Zion Tech Group.
             </p>
-                {/* Search Bar */}
+            {/* Search Bar */}
                   placeholder="Search for help articles, guides, and tutorials..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
@@ -1586,18 +1600,19 @@ const HelpCenter  = () => {
     )
   )
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900"></div>
-                {/* Hero Section */}
-                <section className="pt-20 pb-16 px-4"></section>
-        <div className="max-w-7xl mx-auto text-center"></div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+      {/* Hero Section */}
+      <section className="pt-20 pb-16 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Help Center
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Find answers to your questions, learn how to use our services, and get the support you need.
           </p>
-                {/* Search Bar */}
-                <div className="max-w-2xl mx-auto mb-12"></div>
+          
+          {/* Search Bar */}
+          <div className="max-w-2xl mx-auto mb-12">
   const filteredCategories = Object.entries(helpCategories).filter(([key, category]) =>
     category.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
     category.articles.some(article => 
@@ -1605,21 +1620,22 @@ const HelpCenter  = () => {
     )
   )
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20"></div>
-      <div className="container mx-auto px-4 py-12"></div>
-                {/* Header */}
-                <div className="text-center mb-16"></div>
-          <div className="flex items-center justify-center mb-6"></div>
-            <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mr-4"></div>
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20">
+      <div className="container mx-auto px-4 py-12">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <div className="flex items-center justify-center mb-6">
+            <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mr-4">
               <HelpCircle className="w-8 h-8 text-white" />
             </div>
-            <div></div>
+            <div>
               <h1 className="text-5xl font-bold text-white mb-2">Help Center</h1>
               <p className="text-xl text-zion-slate-light">Find answers to your questions and get the support you need</p>
-                </div>
+            </div>
           </div>
-                {/* Search Bar */}
-                <div className="max-w-2xl mx-auto relative"></div>
+          
+          {/* Search Bar */}
+            <div className="max-w-2xl mx-auto relative">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
               <input
                 type="text"
@@ -1818,8 +1834,7 @@ export default function HelpCenter() {
       available: "Always Available"
     }
   ]
-  const filteredFAQs = faqs.filter(faq => </input
->
+  const filteredFAQs = faqs.filter(faq => 
     (activeCategory === 'all' || faq.category === activeCategory) &&
     (searchQuery === '' || 
       faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -1908,18 +1923,19 @@ export default function HelpCenter() {
         canonical="https://ziontechgroup.com/help"
       />
       
-      <main className="min-h-screen bg-zion-blue pt-24 pb-20"></main>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8"></div>
-                {/* Header */}
-                <div className="text-center mb-16"></div>
+      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Header */}
+          <div className="text-center mb-16">
             <GradientHeading>Help Center</GradientHeading>
-            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto"></p>
+            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
               Find answers to your questions and learn how to make the most of our platform
             </p>
-                </div>
-                {/* Search Bar */}
-                <div className="max-w-2xl mx-auto mb-12"></div>
-            <div className="relative"></div>
+          </div>
+
+          {/* Search Bar */}
+          <div className="max-w-2xl mx-auto mb-12">
+            <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
               <input
                 type="text"
@@ -1927,7 +1943,7 @@ export default function HelpCenter() {
                 className="w-full pl-10 pr-4 py-3 bg-zion-blue-dark border border-zion-purple/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
               />
             </div>
-                </div>
+          </div>
 
     <>
       <SEOHead 
@@ -1940,20 +1956,21 @@ export default function HelpCenter() {
         }}
       />
       
-      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900"></div>
-                {/* Hero Section */}
-                <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8"></section>
-          <div className="max-w-7xl mx-auto text-center"></div>
-            <div className="mb-8"></div>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
+      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+        {/* Hero Section */}
+        <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <div className="mb-8">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Help Center
               </h1>
-              <p className="text-xl md:text-2xl text-cyan-300 mb-8 max-w-4xl mx-auto"></p>
+              <p className="text-xl md:text-2xl text-cyan-300 mb-8 max-w-4xl mx-auto">
                 Get the help you need with our comprehensive support resources, documentation, and expert assistance.
               </p>
-                {/* Search Bar */}
-                <div className="max-w-2xl mx-auto mb-8"></div>
-                <div className="relative"></div>
+              
+              {/* Search Bar */}
+              <div className="max-w-2xl mx-auto mb-8">
+                <div className="relative">
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
                   <input
                     type="text"
@@ -1963,99 +1980,95 @@ export default function HelpCenter() {
                     className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
                   />
                 </div>
-                </div>
+              </div>
             ))}
       {/* Support Options */}
-                <section className="py-16 px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Get Help Fast
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the support option that works best for you.
             </p>
-                </div>
+          </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
-                {supportOptions.map((option, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {supportOptions.map((option, index) => (
               <$2 />
                 key={index}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105"
               >
-                <div className={`w-16 h-16 bg-gradient-to-r ${option.color} rounded-lg flex items-center justify-center mb-4 mx-auto`}></div>
+                <div className={`w-16 h-16 bg-gradient-to-r ${option.color} rounded-lg flex items-center justify-center mb-4 mx-auto`}>
                   <option.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2 text-center"></h3>
-                {option.title}
-                </h3>
-                <p className="text-gray-300 text-sm text-center mb-4"></p>
-                {option.description}
-                </p>
-                <button className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"></button>
-                {option.action}
+                <h3 className="text-lg font-semibold text-white mb-2 text-center">{option.title}</h3>
+                <p className="text-gray-300 text-sm text-center mb-4">{option.description}</p>
+                <button className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
+                  {option.action}
                 </button>
-                </div>
+              </div>
             ))}
-                </div>
-                </section>
-                {/* Help Categories */}
-                <section className="py-16 px-4"></section>
-          <div className="max-w-6xl mx-auto"></div>
+          </div>
+        </section>
+
+        {/* Help Categories */}
+        <section className="py-16 px-4">
+          <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Browse Help Categories</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-                {Object.entries(helpCategories).map(([key, category]) => (
-                <div key={key} className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300"></div>
-                  <div className="flex items-center justify-between mb-4"></div>
-                    <div className="flex items-center gap-3"></div>
-                      <div className="w-10 h-10 bg-cyan-500/20 rounded-lg flex items-center justify-center"></div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {Object.entries(helpCategories).map(([key, category]) => (
+                <div key={key} className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 bg-cyan-500/20 rounded-lg flex items-center justify-center">
                         <category.icon className="w-5 h-5 text-cyan-400" />
                       </div>
-                      <h3 className="text-xl font-bold text-white"></h3>
-                {category.title}
-                </h3>
-                </div>
+                      <h3 className="text-xl font-bold text-white">{category.title}</h3>
+                    </div>
                     <$2 />
                       onClick={() => toggleCategory(key)}
                       className="text-gray-300 hover:text-cyan-400 transition-colors"
                     >
-                {expandedCategories.includes(key) ? (
+                      {expandedCategories.includes(key) ? (
                         <ChevronDown className="w-5 h-5" />
                       ) : (
                         <ChevronRight className="w-5 h-5" />
                       )}
-                </button>
-                </div>
-                {expandedCategories.includes(key) && (
-                    <div className="space-y-2"></div>
-                {category.articles.map((article, index) => (
+                    </button>
+                  </div>
+                  {expandedCategories.includes(key) && (
+                    <div className="space-y-2">
+                      {category.articles.map((article, index) => (
                         <$2 />
                           key={index}
                           to={article.href}
                           className="block text-gray-300 hover:text-cyan-400 transition-colors py-2 px-3 rounded-lg hover:bg-white/10"
                         >
                           <FileText className="w-5 h-5 text-cyan-400 mr-3" />
-                          <span className="text-gray-300 hover:text-white transition-colors duration-300"></span>
-                {article.title}
-                </span>
-                </Link>
+                          <span className="text-gray-300 hover:text-white transition-colors duration-300">
+                            {article.title}
+                          </span>
+                        </Link>
                       ))}
-                </div>
+                    </div>
                   className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20"
                 />
               </div>
-                </div>
+            </div>
           </motion.div>
-                {/* Categories Section */}
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20"></div>
-        <div className="text-center mb-16"></div>
+      {/* Categories Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+        <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-white mb-6">Browse by Category</h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Find the help you need organized by topic and category
           </p>
-                </div>
-                {/* Category Filter */}
-                <div className="flex flex-wrap justify-center gap-3 mb-12"></div>
+        </div>
+
+        {/* Category Filter */}
+        <div className="flex flex-wrap justify-center gap-3 mb-12">
           <$2 />
             onClick={() => setSelectedCategory('all')}
             className={`px-4 py-2 rounded-full border transition-all duration-200 ${
@@ -2066,7 +2079,7 @@ export default function HelpCenter() {
           >
             All Categories
           </button>
-                {categories.map((category) => (
+          {categories.map((category) => (
             <$2 />
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
@@ -2076,35 +2089,30 @@ export default function HelpCenter() {
                   : 'border-gray-600 text-gray-300 hover:border-cyan-500 hover:text-cyan-400'
               }`}
             >
-                {category.name}
-                </button>
+              {category.name}
+            </button>
           ))}
-                </div>
-                {/* Categories Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-                {filteredCategories.map((category) =>
-                {
+        </div>
+
+        {/* Categories Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredCategories.map((category) => {
             const Icon = category.icon
             return (
               <$2 />
                 key={category.id}
                 className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-8 border border-gray-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105"
               >
-                <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center mb-6`}></div>
+                <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center mb-6`}>
                   <Icon className="w-8 h-8 text-white" />
                 </div>
                 
-                <h3 className="text-xl font-semibold text-white mb-3"></h3>
-                {category.name}
-                </h3>
-                <p className="text-gray-400 mb-4"></p>
-                {category.description}
-                </p>
+                <h3 className="text-xl font-semibold text-white mb-3">{category.name}</h3>
+                <p className="text-gray-400 mb-4">{category.description}</p>
                 
-                <div className="flex items-center justify-between"></div>
-                  <span className="text-sm text-gray-500"></span>
-                {category.articleCount} articles</span>
-                  <button className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200"></button>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-500">{category.articleCount} articles</span>
+                  <button className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200">
                     Browse Articles
                     <ArrowRight className="w-4 h-4 ml-1 inline" />
                   </button>
@@ -2112,73 +2120,69 @@ export default function HelpCenter() {
               </div>
             )
           })}
-                </div>
-                </div>
-                {/* Popular Articles */}
-                <div className="bg-gradient-to-r from-gray-800 to-gray-900 border-t border-gray-700"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20"></div>
-          <div className="text-center mb-16"></div>
+        </div>
+      </div>
+
+      {/* Popular Articles */}
+      <div className="bg-gradient-to-r from-gray-800 to-gray-900 border-t border-gray-700">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white mb-6">Popular Help Articles</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Most viewed and helpful articles from our knowledge base
             </p>
-                </div>
+          </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
-                {filteredArticles.map((article) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {filteredArticles.map((article) => (
               <$2 />
                 key={article.id}
                 className="bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl p-6 border border-gray-600 hover:border-cyan-500 transition-all duration-300"
               >
-                <div className="flex items-center justify-between mb-3"></div>
-                  <span className="text-sm text-cyan-400 font-medium"></span>
-                {article.category}
-                </span>
-                  <div className="flex items-center space-x-4 text-sm text-gray-400"></div>
-                    <span className="flex items-center"></span>
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-sm text-cyan-400 font-medium">{article.category}</span>
+                  <div className="flex items-center space-x-4 text-sm text-gray-400">
+                    <span className="flex items-center">
                       <Clock className="w-4 h-4 mr-1" />
-                {article.readTime}
-                </span>
-                    <span className="flex items-center"></span>
+                      {article.readTime}
+                    </span>
+                    <span className="flex items-center">
                       <TrendingUp className="w-4 h-4 mr-1" />
-                {article.views}
-                </span>
-                </div>
-                </div>
-                
-                <h3 className="text-lg font-semibold text-white mb-3"></h3>
-                {article.title}
-                </h3>
-                <p className="text-gray-300 mb-4"></p>
-                {article.excerpt}
-                </p>
-                
-                <div className="flex items-center justify-between"></div>
-                  <div className="flex items-center text-sm text-gray-400"></div>
-                    <Star className="w-4 h-4 mr-1 text-yellow-400" />
-                {article.helpful} found this helpful
+                      {article.views}
+                    </span>
                   </div>
-                  <button className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200"></button>
+                </div>
+                
+                <h3 className="text-lg font-semibold text-white mb-3">{article.title}</h3>
+                <p className="text-gray-300 mb-4">{article.excerpt}</p>
+                
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center text-sm text-gray-400">
+                    <Star className="w-4 h-4 mr-1 text-yellow-400" />
+                    {article.helpful} found this helpful
+                  </div>
+                  <button className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200">
                     Read Article
                     <ArrowRight className="w-4 h-4 ml-1 inline" />
                   </button>
                 </div>
               </div>
             ))}
-                </div>
-                </div>
+          </div>
+        </div>
       </div>
-                {/* FAQ Section */}
-                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20"></div>
-        <div className="text-center mb-16"></div>
+
+      {/* FAQ Section */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-white mb-6">Frequently Asked Questions</h2>
-          <p className="text-xl text-gray-300"></p>
+          <p className="text-xl text-gray-300">
             Quick answers to the most common questions
           </p>
-                </div>
+        </div>
         
-        <div className="space-y-4"></div>
-                {faqs.map((faq) => (
+        <div className="space-y-4">
+          {faqs.map((faq) => (
             <$2 />
               key={faq.id}
               className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl border border-gray-700 overflow-hidden"
@@ -2187,120 +2191,105 @@ export default function HelpCenter() {
                 onClick={() => toggleFaq(faq.id)}
                 className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-700/50 transition-colors duration-200"
               >
-                <h3 className="text-lg font-semibold text-white"></h3>
-                {faq.question}
-                </h3>
+                <h3 className="text-lg font-semibold text-white">{faq.question}</h3>
                 {expandedFaqs.has(faq.id) ? (
                   <ChevronDown className="w-5 h-5 text-gray-400" />
                 ) : (
                   <ChevronRight className="w-5 h-5 text-gray-400" />
                 )}
-                </button>
-                {expandedFaqs.has(faq.id) && (
-                <div className="px-6 pb-4"></div>
-                  <p className="text-gray-300"></p>
-                {faq.answer}
-                </p>
+              </button>
+              
+              {expandedFaqs.has(faq.id) && (
+                <div className="px-6 pb-4">
+                  <p className="text-gray-300">{faq.answer}</p>
                 </div>
               )}
-                </div>
+            </div>
           ))}
-                </div>
-                </div>
-                {/* Support Channels */}
-                <div className="bg-gradient-to-r from-gray-800 to-gray-900 border-t border-gray-700"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20"></div>
-          <div className="text-center mb-16"></div>
+        </div>
+      </div>
+
+      {/* Support Channels */}
+      <div className="bg-gradient-to-r from-gray-800 to-gray-900 border-t border-gray-700">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white mb-6">Get Support</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Multiple ways to get help when you need it
             </p>
-                </div>
+          </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
-                {supportChannels.map((channel, index) =>
-                {
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {supportChannels.map((channel, index) => {
               const Icon = channel.icon
               return (
                 <$2 />
                   key={index}
                   className="bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl p-6 border border-gray-600 hover:border-cyan-500 transition-all duration-300 text-center"
                 >
-                  <div className={`w-16 h-16 bg-gradient-to-r ${channel.color} rounded-xl flex items-center justify-center mx-auto mb-4`}></div>
+                  <div className={`w-16 h-16 bg-gradient-to-r ${channel.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
                     <Icon className="w-8 h-8 text-white" />
                   </div>
                   
-                  <h3 className="text-lg font-semibold text-white mb-2"></h3>
-                {channel.name}
-                </h3>
-                  <p className="text-gray-400 text-sm mb-4"></p>
-                {channel.description}
-                </p>
+                  <h3 className="text-lg font-semibold text-white mb-2">{channel.name}</h3>
+                  <p className="text-gray-400 text-sm mb-4">{channel.description}</p>
                   
-                  <div className="space-y-2 text-sm"></div>
-                    <div className="text-gray-300"></div>
-                      <span className="font-medium">Availability:</span>
-                {channel.availability}
-                </div>
-                    <div className="text-gray-300"></div>
-                      <span className="font-medium">Response:</span>
-                {channel.responseTime}
-                </div>
-                </div>
+                  <div className="space-y-2 text-sm">
+                    <div className="text-gray-300">
+                      <span className="font-medium">Availability:</span> {channel.availability}
+                    </div>
+                    <div className="text-gray-300">
+                      <span className="font-medium">Response:</span> {channel.responseTime}
+                    </div>
+                  </div>
                   
-                  <button className="w-full mt-4 py-2 px-4 bg-gray-600 hover:bg-gray-500 text-white rounded-lg transition-colors duration-200"></button>
+                  <button className="w-full mt-4 py-2 px-4 bg-gray-600 hover:bg-gray-500 text-white rounded-lg transition-colors duration-200">
                     Get Help
                   </button>
                 </div>
               )
             })}
-                </div>
-                </div>
+          </div>
+        </div>
       </div>
-                {/* Support Channels */}
-                <section className="py-16 px-4"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <h2 className="text-3xl font-bold text-white text-center mb-12"></h2>
+
+      {/* Support Channels */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
             Get Support
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
-                {supportChannels.map((channel, index) => (
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black/20"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <h2 className="text-3xl font-bold text-white mb-12 text-center"></h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {supportChannels.map((channel, index) => (
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black/20">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">
             Get Support
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
-                {supportChannels.map((channel) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {supportChannels.map((channel) => (
               <$2 />
                 key={channel.title}
                 className="text-center p-8 bg-gray-800/50 border border-gray-700 rounded-xl hover:border-cyan-500/50 transition-all duration-200"
               >
-                <div className={`w-16 h-16 bg-gradient-to-r ${channel.color} rounded-full flex items-center justify-center mx-auto mb-6`}></div>
+                <div className={`w-16 h-16 bg-gradient-to-r ${channel.color} rounded-full flex items-center justify-center mx-auto mb-6`}>
                   <channel.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3"></h3>
-                {channel.title}
-                </h3>
-                <p className="text-gray-400 mb-4"></p>
-                {channel.description}
-                </p>
-                <div className="space-y-2"></div>
-                  <p className="text-cyan-400 font-medium"></p>
-                {channel.contact}
-                </p>
-                  <p className="text-sm text-gray-500">Available: {channel.availability}
-                </p>
+                <h3 className="text-xl font-semibold text-white mb-3">{channel.title}</h3>
+                <p className="text-gray-400 mb-4">{channel.description}</p>
+                <div className="space-y-2">
+                  <p className="text-cyan-400 font-medium">{channel.contact}</p>
+                  <p className="text-sm text-gray-500">Available: {channel.availability}</p>
                 </div>
               </div>
-      <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-7xl mx-auto text-center"></div>
+      <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
           <motion.h1 
             className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          ></motion.h1>
+          >
             Help Center
           </motion.h1>
           <motion.p 
@@ -2308,18 +2297,19 @@ export default function HelpCenter() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-          ></motion.p>
+          >
             Find answers to common questions and get the support you need
           </motion.p>
-                {/* Search Bar */}
-                <motion.div 
+          
+          {/* Search Bar */}
+          <motion.div 
             className="max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-          ></motion.div>
-                {/* Search Bar */}
-                <div className="relative max-w-2xl mx-auto mb-8"></div>
+          >
+            {/* Search Bar */}
+            <div className="relative max-w-2xl mx-auto mb-8">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" />
               <input
                 type="text"
@@ -2330,7 +2320,7 @@ export default function HelpCenter() {
               />
             </div>
 
-            <div className="flex flex-wrap justify-center gap-4"></div>
+            <div className="flex flex-wrap justify-center gap-4">
               <$2 />
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
@@ -2344,8 +2334,8 @@ export default function HelpCenter() {
               >
                 Explore Services
               </Link>
-                </div>
-            <div className="relative"></div>
+            </div>
+            <div className="relative">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
@@ -2355,85 +2345,80 @@ export default function HelpCenter() {
                 className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300"
               />
             </div>
-                </motion.div>
+          </motion.div>
         </div>
-                </section>
-                {/* Support Channels Section */}
+      </section>
+
+      {/* Support Channels Section */}
 
             {/* Quick Stats */}
-                <div className="flex flex-wrap justify-center gap-6"></div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white"></div>
+            <div className="flex flex-wrap justify-center gap-6">
+              <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white">
                 <span className="font-semibold">500+</span> Help Articles
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white"></div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white">
                 <span className="font-semibold">24/7</span> Support
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white"></div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white">
                 <span className="font-semibold">99%</span> Satisfaction
               </div>
-                </div>
+            </div>
           </motion.div>
-                </div>
+        </div>
       </section>
-                {/* Support Channels */}
-                <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-7xl mx-auto"></div>
+
+      {/* Support Channels */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
       {/* Support Channels */}
-                <section className="py-20 bg-black/20"></motion.div
->
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-4xl font-bold text-white mb-4"></h2>
+      <section className="py-20 bg-black/20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
               Multiple Ways to Get Help
             </h2>
-            <p className="text-xl text-gray-300"></p>
+            <p className="text-xl text-gray-300">
               Choose the support channel that works best for you
             </p>
-                </div>
+          </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
-                {supportChannels.map((channel, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {supportChannels.map((channel, index) => (
               <$2 />
                 key={index}
                 className="bg-gray-800/50 rounded-xl border border-gray-700 p-6 hover:border-cyan-500/50 transition-all duration-300 hover:bg-gray-800/70"
               >
-                <div className={`w-16 h-16 bg-gradient-to-br ${channel.color} rounded-xl flex items-center justify-center mb-4`}></div>
+                <div className={`w-16 h-16 bg-gradient-to-br ${channel.color} rounded-xl flex items-center justify-center mb-4`}>
                   <channel.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2"></h3>
-                {channel.title}
-                </h3>
-                <p className="text-gray-300 mb-4"></p>
-                {channel.description}
-                </p>
+                <h3 className="text-xl font-semibold text-white mb-2">{channel.title}</h3>
+                <p className="text-gray-300 mb-4">{channel.description}</p>
                 {channel.details && (
-                  <p className="text-cyan-400 font-mono text-sm mb-4"></p>
-                {channel.details}
-                </p>
+                  <p className="text-cyan-400 font-mono text-sm mb-4">{channel.details}</p>
                 )}
-                <button className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"></button>
-                {channel.action}
+                <button className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
+                  {channel.action}
                 </button>
-                </div>
+              </div>
             ))}
         {/* Categories Section */}
-                <section className="py-16 px-4 sm:px-6 lg:px-8"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Browse by Category
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Find help organized by topic to quickly locate the information you need.
               </p>
-                </div>
+            </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6"></div>
-                {categories.map((category) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+              {categories.map((category) => (
                 <$2 />
                   key={category.id}
                   onClick={() => setActiveCategory(category.id)}
@@ -2443,272 +2428,239 @@ export default function HelpCenter() {
                       : 'bg-gray-800/50 border-gray-700 text-gray-300 hover:border-cyan-500/50 hover:bg-gray-800/70'
                   }`}
                 >
-                  <div className="flex justify-center mb-3"></div>
+                  <div className="flex justify-center mb-3">
                     <category.icon className="h-8 w-8" />
                   </div>
-                  <h3 className="font-semibold mb-2"></h3>
-                {category.name}
-                </h3>
-                  <p className="text-sm opacity-75"></p>
-                {category.count} articles</p>
+                  <h3 className="font-semibold mb-2">{category.name}</h3>
+                  <p className="text-sm opacity-75">{category.count} articles</p>
                 </button>
               ))}
             </div>
         </div>
       </section>
 
-      <section className="py-20"></section>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-4xl font-bold text-white mb-4"></h2>
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
               Frequently Asked Questions
             </h2>
-            <p className="text-xl text-gray-300"></p>
+            <p className="text-xl text-gray-300">
               Quick answers to common questions
             </p>
-                </motion.div>
+          </motion.div>
 
-          <div className="space-y-8"></div>
-                {faqCategories.map((category, categoryIndex) => (
+          <div className="space-y-8">
+            {faqCategories.map((category, categoryIndex) => (
               <motion.div
                 key={categoryIndex}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700"
-              ></motion.div
->
-                <div className="flex items-center mb-6"></div>
+              >
+                <div className="flex items-center mb-6">
                   <category.icon className="w-8 h-8 text-cyan-400 mr-3" />
-                  <h3 className="text-2xl font-bold text-white"></h3>
-                {category.title}
-                </h3>
+                  <h3 className="text-2xl font-bold text-white">{category.title}</h3>
                 </div>
                 
-                <div className="space-y-6"></div>
-                {category.questions.map((item, questionIndex) => (
-                    <div key={questionIndex} className="border-b border-gray-700 pb-4 last:border-b-0"></div>
-                      <h4 className="text-lg font-semibold text-white mb-2"></h4>
-                {item.question}
-                </h4>
-                      <p className="text-gray-300"></p>
-                {item.answer}
-                </p>
-                </div>
+                <div className="space-y-6">
+                  {category.questions.map((item, questionIndex) => (
+                    <div key={questionIndex} className="border-b border-gray-700 pb-4 last:border-b-0">
+                      <h4 className="text-lg font-semibold text-white mb-2">
+                        {item.question}
+                      </h4>
+                      <p className="text-gray-300">{item.answer}</p>
+                    </div>
                   ))}
                 </div>
-                </motion.div>
+              </motion.div>
             ))}
       {/* Additional Resources */}
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20"></div>
-        <div className="text-center mb-16"></div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-white mb-6">Additional Resources</h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Explore more ways to learn and get the most out of our platform
           </p>
-                </div>
+        </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
-          <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-8 border border-gray-700 text-center"></div>
-            <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-6"></div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-8 border border-gray-700 text-center">
+            <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-6">
               <Video className="w-8 h-8 text-white" />
             </div>
             <h3 className="text-xl font-semibold text-white mb-3">Video Tutorials</h3>
             <p className="text-gray-400 mb-6">Step-by-step video guides for all major features</p>
-            <button className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-400 hover:to-cyan-400 text-white px-6 py-3 rounded-lg transition-all duration-200"></button>
+            <button className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-400 hover:to-cyan-400 text-white px-6 py-3 rounded-lg transition-all duration-200">
               Watch Videos
             </button>
-                </div>
+          </div>
           
-          <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-8 border border-gray-700 text-center"></div>
-            <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-6"></div>
+          <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-8 border border-gray-700 text-center">
+            <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-6">
               <FileText className="w-8 h-8 text-white" />
             </div>
             <h3 className="text-xl font-semibold text-white mb-3">API Documentation</h3>
             <p className="text-gray-400 mb-6">Complete API reference and integration guides</p>
-            <button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white px-6 py-3 rounded-lg transition-all duration-200"></button>
+            <button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white px-6 py-3 rounded-lg transition-all duration-200">
               View Docs
             </button>
-                </div>
-                {/* Popular Articles */}
-                <div className="mb-20"></div>
-            <h2 className="text-3xl font-bold text-center mb-12 text-white"></h2>
+          </div>
+          {/* Popular Articles */}
+          <div className="mb-20">
+            <h2 className="text-3xl font-bold text-center mb-12 text-white">
               Popular Articles
             </h2>
-            <div className="grid md:grid-cols-2 gap-6"></div>
-                {popularArticles.map((article, index) => (
+            <div className="grid md:grid-cols-2 gap-6">
+              {popularArticles.map((article, index) => (
                 <$2 />
                   key={index}
                   className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg p-6 hover:border-cyan-400/50 transition-all duration-300 cursor-pointer"
                 >
-                  <div className="flex items-start justify-between mb-4"></div>
-                    <span className="text-sm text-cyan-400 bg-cyan-400/10 px-3 py-1 rounded-full"></span>
-                {article.category}
-                </span>
-                    <span className="text-sm text-gray-400"></span>
-                {article.readTime}
-                </span>
-                </div>
-                  <h3 className="text-xl font-semibold text-white mb-2"></h3>
-                {article.title}
-                </h3>
-                  <p className="text-gray-300"></p>
-                {article.description}
-                </p>
+                  <div className="flex items-start justify-between mb-4">
+                    <span className="text-sm text-cyan-400 bg-cyan-400/10 px-3 py-1 rounded-full">
+                      {article.category}
+                    </span>
+                    <span className="text-sm text-gray-400">{article.readTime}</span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{article.title}</h3>
+                  <p className="text-gray-300">{article.description}</p>
                   )}
                 </div>
               ))}
-                </div>
-                </div>
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4"></div>
+            </div>
+          </div>
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <resource.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3"></h3>
-                {resource.title}
-                </h3>
-                <p className="text-gray-300 mb-4"></p>
-                {resource.description}
-                </p>
-                <div className="text-2xl font-bold text-cyan-400"></div>
-                {resource.count}
-                </div>
-                </motion.div>
-              <div key={index} className="bg-gray-800/30 rounded-lg p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300"></div>
-                <div className={`w-12 h-12 bg-gradient-to-r ${channel.color} rounded-lg flex items-center justify-center mb-4`}></div>
+                <h3 className="text-xl font-semibold text-white mb-3">{resource.title}</h3>
+                <p className="text-gray-300 mb-4">{resource.description}</p>
+                <div className="text-2xl font-bold text-cyan-400">{resource.count}</div>
+              </motion.div>
+              <div key={index} className="bg-gray-800/30 rounded-lg p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300">
+                <div className={`w-12 h-12 bg-gradient-to-r ${channel.color} rounded-lg flex items-center justify-center mb-4`}>
                   <channel.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2"></h3>
-                {channel.title}
-                </h3>
-                <p className="text-gray-300 mb-4 text-sm"></p>
-                {channel.description}
-                </p>
-                <button className={`w-full py-2 px-4 bg-gradient-to-r ${channel.color} text-white font-medium rounded-lg transition-all duration-300 hover:scale-105`}></button>
-                {channel.action}
+                <h3 className="text-xl font-bold text-white mb-2">{channel.title}</h3>
+                <p className="text-gray-300 mb-4 text-sm">{channel.description}</p>
+                <button className={`w-full py-2 px-4 bg-gradient-to-r ${channel.color} text-white font-medium rounded-lg transition-all duration-300 hover:scale-105`}>
+                  {channel.action}
                 </button>
-                </div>
+              </div>
             ))}
-                </div>
-                {/* Quick Support Channels */}
-                <div className="container mx-auto px-4 py-16"></div>
+          </div>
+      {/* Quick Support Channels */}
+      <div className="container mx-auto px-4 py-16">
         <h2 className="text-3xl font-bold text-center mb-12 text-white">Get Help Fast</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
-                {supportChannels.map((channel, index) =>
-                {
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {supportChannels.map((channel, index) => {
             const Icon = channel.icon
             return (
-              <div key={index} className="bg-gray-800/50 rounded-2xl p-6 text-center hover:bg-gray-700/50 transition-all duration-300 border border-gray-700/50 hover:border-cyan-500/50"></div>
-                <div className={`w-16 h-16 bg-gradient-to-r ${channel.color} rounded-full flex items-center justify-center mx-auto mb-4`}></div>
+              <div key={index} className="bg-gray-800/50 rounded-2xl p-6 text-center hover:bg-gray-700/50 transition-all duration-300 border border-gray-700/50 hover:border-cyan-500/50">
+                <div className={`w-16 h-16 bg-gradient-to-r ${channel.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
                   <Icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2 text-white"></h3>
-                {channel.title}
-                </h3>
-                <p className="text-gray-400 mb-4 text-sm"></p>
-                {channel.description}
-                </p>
-                <button className={`px-6 py-2 bg-gradient-to-r ${channel.color} text-white font-medium rounded-full hover:opacity-90 transition-opacity duration-300`}></button>
-                {channel.action}
+                <h3 className="text-xl font-semibold mb-2 text-white">{channel.title}</h3>
+                <p className="text-gray-400 mb-4 text-sm">{channel.description}</p>
+                <button className={`px-6 py-2 bg-gradient-to-r ${channel.color} text-white font-medium rounded-full hover:opacity-90 transition-opacity duration-300`}>
+                  {channel.action}
                 </button>
-                </div>
+              </div>
             )
           })}
-                </div>
-                </div>
-                {/* Help Categories */}
-                <div className="container mx-auto px-4 py-16"></div>
+        </div>
+      </div>
+
+      {/* Help Categories */}
+      <div className="container mx-auto px-4 py-16">
         <h2 className="text-3xl font-bold text-center mb-12 text-white">Help Categories</h2>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
-                {helpCategories.map((category) =>
-                {
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {helpCategories.map((category) => {
             const Icon = category.icon
             const isExpanded = expandedCategory === category.id
             return (
-              <div key={category.id} className="bg-gray-800/50 rounded-2xl border border-gray-700/50"></div>
+              <div key={category.id} className="bg-gray-800/50 rounded-2xl border border-gray-700/50">
                 <$2 />
                   onClick={() => setExpandedCategory(isExpanded ? null : category.id)}
                   className="w-full p-6 text-left hover:bg-gray-700/50 transition-colors duration-300 rounded-t-2xl"
                 >
-                  <div className="flex items-center justify-between"></div>
-                    <div className="flex items-center"></div>
-                      <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-xl flex items-center justify-center mr-4"></div>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center">
+                      <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-xl flex items-center justify-center mr-4">
                         <Icon className="w-6 h-6 text-white" />
                       </div>
-                      <div></div>
-                        <h3 className="text-xl font-semibold text-white"></h3>
-                {category.title}
-                </h3>
-                        <p className="text-gray-400 text-sm"></p>
-                {category.description}
-                </p>
-                </div>
+                      <div>
+                        <h3 className="text-xl font-semibold text-white">{category.title}</h3>
+                        <p className="text-gray-400 text-sm">{category.description}</p>
+                      </div>
                     </div>
-                {isExpanded ? (
+                    {isExpanded ? (
                       <ChevronDown className="w-6 h-6 text-gray-400" />
                     ) : (
                       <ChevronRight className="w-6 h-6 text-gray-400" />
                     )}
-                </div>
+                  </div>
                 </button>
+                
                 {isExpanded && (
-                  <div className="px-6 pb-6 border-t border-gray-700/50"></div>
-                    <div className="pt-4 space-y-3"></div>
-                {category.articles.map((article, index) => (
+                  <div className="px-6 pb-6 border-t border-gray-700/50">
+                    <div className="pt-4 space-y-3">
+                      {category.articles.map((article, index) => (
                         <$2 />
                           key={index}
                           to={article.path}
                           className="flex items-center p-3 rounded-lg hover:bg-gray-700/50 transition-colors duration-300 group"
                         >
                           <FileText className="w-5 h-5 text-cyan-400 mr-3" />
-                          <span className="text-gray-300 group-hover:text-white transition-colors duration-300"></span>
-                {article.title}
-                </span>
+                          <span className="text-gray-300 group-hover:text-white transition-colors duration-300">
+                            {article.title}
+                          </span>
                           <ExternalLink className="w-4 h-4 text-gray-500 ml-auto group-hover:text-cyan-400 transition-colors duration-300" />
                         </Link>
                       ))}
-                </div>
-                </div>
+                    </div>
+                  </div>
                 )}
-                </div>
+              </div>
             )
           })}
-                </div>
-                </div>
-                {/* Popular Articles */}
-                <section className="py-16 px-4 bg-gray-800/20"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <h2 className="text-3xl font-bold text-white text-center mb-12"></h2>
+        </div>
+      </div>
+
+      {/* Popular Articles */}
+      <section className="py-16 px-4 bg-gray-800/20">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
             Popular Articles
           </h2>
-          <div className="grid md:grid-cols-2 gap-6"></div>
-                {popularArticles.map((article, index) => (
+          <div className="grid md:grid-cols-2 gap-6">
+            {popularArticles.map((article, index) => (
               <$2 />
                 key={index}
                 to={article.path}
                 className="bg-gray-800/30 rounded-lg p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300 group"
               >
-                <div className="flex items-start justify-between"></div>
-                  <div></div>
-                    <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors"></h3>
-                {article.title}
-                </h3>
-                    <p className="text-gray-400 text-sm"></p>
-                {article.category}
-                </p>
-                </div>
+                <div className="flex items-start justify-between">
+                  <div>
+                    <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                      {article.title}
+                    </h3>
+                    <p className="text-gray-400 text-sm">{article.category}</p>
+                  </div>
                   <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 transition-colors" />
                 </div>
-                </Link>
+              </Link>
             ))}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Get Support</h2>
             <p className="text-xl text-gray-300">Multiple ways to get the help you need, when you need it</p>
-                </motion.div>
+          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
-                {supportChannels.map((channel, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {supportChannels.map((channel, index) => (
               <motion.div
                 key={channel.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -2716,52 +2668,43 @@ export default function HelpCenter() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-cyan-500/50 transition-all duration-300"
-              ></motion.div
->
-                <div className={`w-16 h-16 bg-gradient-to-r ${channel.color} rounded-lg flex items-center justify-center mb-4 mx-auto`}></div>
+              >
+                <div className={`w-16 h-16 bg-gradient-to-r ${channel.color} rounded-lg flex items-center justify-center mb-4 mx-auto`}>
                   <channel.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2"></h3>
-                {channel.title}
-                </h3>
-                <p className="text-gray-400 mb-4 text-sm"></p>
-                {channel.description}
-                </p>
-                <div className="space-y-2 mb-4"></div>
-                  <div className="flex justify-between text-sm"></div>
+                <h3 className="text-xl font-semibold text-white mb-2">{channel.title}</h3>
+                <p className="text-gray-400 mb-4 text-sm">{channel.description}</p>
+                <div className="space-y-2 mb-4">
+                  <div className="flex justify-between text-sm">
                     <span className="text-gray-400">Response:</span>
-                    <span className="text-cyan-400"></span>
-                {channel.responseTime}
-                </span>
-                </div>
-                  <div className="flex justify-between text-sm"></div>
+                    <span className="text-cyan-400">{channel.responseTime}</span>
+                  </div>
+                  <div className="flex justify-between text-sm">
                     <span className="text-gray-400">Available:</span>
-                    <span className="text-green-400"></span>
-                {channel.availability}
-                </span>
+                    <span className="text-green-400">{channel.availability}</span>
+                  </div>
                 </div>
-                </div>
-                <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300"></button>
-                {channel.action}
+                <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300">
+                  {channel.action}
                 </button>
-                </motion.div>
+              </motion.div>
             ))}
-                <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-8 border border-gray-700 text-center"></div>
-            <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-6"></div>
+          <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-8 border border-gray-700 text-center">
+            <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-6">
               <Users className="w-8 h-8 text-white" />
             </div>
             <h3 className="text-xl font-semibold text-white mb-3">Community Forum</h3>
             <p className="text-gray-400 mb-6">Connect with other users and share solutions</p>
-            <button className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-400 hover:to-emerald-400 text-white px-6 py-3 rounded-lg transition-all duration-200"></button>
+            <button className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-400 hover:to-emerald-400 text-white px-6 py-3 rounded-lg transition-all duration-200">
               Join Community
             </button>
-                </div>
+          </div>
         </div>
-                </div>
+      </div>
 
 
-          <div className="max-w-4xl mx-auto space-y-4"></div>
-                {faqs.map((faq, index) => (
+          <div className="max-w-4xl mx-auto space-y-4">
+            {faqs.map((faq, index) => (
               <$2 />
                 key={index}
                 className="bg-gray-800/50 rounded-xl border border-gray-700 overflow-hidden"
@@ -2770,40 +2713,35 @@ export default function HelpCenter() {
                   className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-800/70 transition-colors duration-300"
                   onClick={() => toggleFaq(index)}
                 >
-                  <span className="text-lg font-semibold text-white"></span>
-                {faq.question}
-                </span>
-                {expandedFaqs.has(index) ? (
+                  <span className="text-lg font-semibold text-white">{faq.question}</span>
+                  {expandedFaqs.has(index) ? (
                     <ChevronDown className="w-5 h-5 text-cyan-400" />
                   ) : (
                     <ChevronRight className="w-5 h-5 text-cyan-400" />
                   )}
                 </button>
                 {expandedFaqs.has(index) && (
-                  <div className="px-6 pb-4"></div>
-                    <p className="text-gray-300"></p>
-                {faq.answer}
-                </p>
-                </div>
+                  <div className="px-6 pb-4">
+                    <p className="text-gray-300">{faq.answer}</p>
+                  </div>
                 )}
-                </div>
+              </div>
             ))}
         {/* Categories Section */}
-                <section className="py-20 relative"></section>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-            <div className="text-center mb-16"></div>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
+        <section className="py-20 relative">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Browse by Category
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Find the help you need by exploring our organized categories 
                 of support articles and resources.
               </p>
-                </div>
+            </div>
             
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6"></div>
-                {categories.map((category) =>
-                {
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+              {categories.map((category) => {
                 const Icon = category.icon
                 const isActive = activeCategory === category.id
                 return (
@@ -2826,29 +2764,29 @@ export default function HelpCenter() {
                     < className={`text-sm font-semibold mb-2 ${$2 />
                       isActive ? 'text-white' : 'text-gray-300'
                     }`}>
-                {category.name}
-                </h3>
+                      {category.name}
+                    </h3>
                     < className={`text-xs ${$2 />
                       isActive ? 'text-blue-300' : 'text-gray-500'
                     }`}>
-                {category.count} articles
+                      {category.count} articles
                     </p>
-                </button>
+                  </button>
                 )
               })}
-                </div>
-                {/* Categories */}
-                <section className="pb-20 px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-12"></div>
+            </div>
+      {/* Categories */}
+      <section className="pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Browse by Category</h2>
-            <p className="text-gray-300 max-w-2xl mx-auto"></p>
+            <p className="text-gray-300 max-w-2xl mx-auto">
               Find the help you need by browsing our organized categories
             </p>
-                </div>
+          </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-                {categories.map((category, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {categories.map((category, index) => (
               <motion.div
                 key={category.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -2859,151 +2797,134 @@ export default function HelpCenter() {
                 }`}
                 onClick={() => setActiveCategory(activeCategory === category.id ? null : category.id)}
               >
-                <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${category.color} p-3 mb-4`}></div>
+                <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${category.color} p-3 mb-4`}>
                   <category.icon className="w-full h-full text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2"></h3>
-                {category.title}
-                </h3>
-                <p className="text-gray-400 text-sm"></p>
-                {category.description}
-                </p>
-                </motion.div>
+                <h3 className="text-xl font-bold text-white mb-2">{category.title}</h3>
+                <p className="text-gray-400 text-sm">{category.description}</p>
+              </motion.div>
             ))}
-                </div>
-                </section>
+          </div>
+        </section>
 
                           className="block p-4 bg-gray-700/30 rounded-lg hover:bg-gray-600/30 transition-colors"
                         >
-                          <h4 className="text-white font-medium mb-1"></h4>
-                {article.title}
-                </h4>
-                          <p className="text-gray-400 text-sm"></p>
-                {article.description}
-                </p>
-                </Link>
+                          <h4 className="text-white font-medium mb-1">{article.title}</h4>
+                          <p className="text-gray-400 text-sm">{article.description}</p>
+                        </Link>
                       ))}
-                </div>
-                </div>
+                    </div>
+                  </div>
                 )}
-                </div>
+              </div>
             ))}
-                </div>
-                {/* FAQ Section */}
-                <section className="py-16 px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <h2 className="text-3xl font-bold text-white mb-12 text-center"></h2>
+          </div>
+      {/* FAQ Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">
             Frequently Asked Questions
           </h2>
-          <div className="space-y-8"></div>
-                {faqCategories.map((category) => (
-              <div key={category.title} className="bg-gray-800/30 border border-gray-700 rounded-xl p-8"></div>
-                <div className="flex items-center mb-6"></div>
-                  <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4"></div>
+          <div className="space-y-8">
+            {faqCategories.map((category) => (
+              <div key={category.title} className="bg-gray-800/30 border border-gray-700 rounded-xl p-8">
+                <div className="flex items-center mb-6">
+                  <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
                     <category.icon className="w-5 h-5 text-white" />
                   </div>
-                  <h3 className="text-2xl font-semibold text-white"></h3>
-                {category.title}
-                </h3>
+                  <h3 className="text-2xl font-semibold text-white">{category.title}</h3>
                 </div>
-                <div className="space-y-4"></div>
-                {category.faqs.map((faq, index) => (
-                    <details key={index} className="group"></details>
-                      <summary className="flex items-center justify-between cursor-pointer p-4 bg-gray-700/30 rounded-lg hover:bg-gray-700/50 transition-colors duration-200"></summary>
-                        <span className="font-medium text-white"></span>
-                {faq.question}
-                </span>
+                <div className="space-y-4">
+                  {category.faqs.map((faq, index) => (
+                    <details key={index} className="group">
+                      <summary className="flex items-center justify-between cursor-pointer p-4 bg-gray-700/30 rounded-lg hover:bg-gray-700/50 transition-colors duration-200">
+                        <span className="font-medium text-white">{faq.question}</span>
                         <ChevronDown className="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform duration-200" />
                       </summary>
-                      <div className="p-4 bg-gray-700/20 rounded-lg mt-2"></div>
-                        <p className="text-gray-300"></p>
-                {faq.answer}
-                </p>
-                </div>
+                      <div className="p-4 bg-gray-700/20 rounded-lg mt-2">
+                        <p className="text-gray-300">{faq.answer}</p>
+                      </div>
                     </details>
                   ))}
                 </div>
-                </div>
+              </div>
             ))}
-                </div>
-                </div>
+          </div>
+        </div>
       </section>
 
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/50 to-purple-900/50"></section>
-        <div className="max-w-4xl mx-auto text-center"></div>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/50 to-purple-900/50">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Still Need Help?
           </h2>
-          <p className="text-xl text-gray-300 mb-8"></p>
+          <p className="text-xl text-gray-300 mb-8">
             Can't find what you're looking for? Our expert support team is here to help you succeed.
-      <section className="py-20 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></section>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
-          <h2 className="text-4xl font-bold text-white mb-6"></h2>
+      <section className="py-20 bg-gradient-to-r from-cyan-500/10 to-blue-500/10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
             Still Need Help?
           </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"></p>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Our expert support team is here to help you succeed with our technologies.
         </div>
-                </section>
-                {/* Contact Section */}
-                <section className="py-16 px-4 bg-gradient-to-r from-cyan-900/20 to-purple-900/20"></section>
-        <div className="max-w-4xl mx-auto text-center"></div>
-          <h2 className="text-3xl font-bold text-white mb-6"></h2>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-16 px-4 bg-gradient-to-r from-cyan-900/20 to-purple-900/20">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
             Still Need Help?
           </h2>
-          <p className="text-xl text-gray-300 mb-8"></p>
+          <p className="text-xl text-gray-300 mb-8">
             Our expert team is here to help you succeed. Get in touch for personalized assistance.
       {/* FAQs */}
-                <div className="container mx-auto px-4 py-16"></div>
+      <div className="container mx-auto px-4 py-16">
         <h2 className="text-3xl font-bold text-center mb-12 text-white">Frequently Asked Questions</h2>
-        <div className="max-w-4xl mx-auto space-y-4"></div>
-                {filteredFAQs.map((faq) =>
-                {
+        <div className="max-w-4xl mx-auto space-y-4">
+          {filteredFAQs.map((faq) => {
             const isExpanded = expandedFAQ === faq.id
             return (
-              <div key={faq.id} className="bg-gray-800/50 rounded-2xl border border-gray-700/50"></div>
+              <div key={faq.id} className="bg-gray-800/50 rounded-2xl border border-gray-700/50">
                 <$2 />
                   onClick={() => setExpandedFAQ(isExpanded ? null : faq.id)}
                   className="w-full p-6 text-left hover:bg-gray-700/50 transition-colors duration-300 rounded-t-2xl"
                 >
-                  <div className="flex items-center justify-between"></div>
-                    <div className="flex-1"></div>
-                      <h3 className="text-lg font-semibold text-white mb-2"></h3>
-                {faq.question}
-                </h3>
-                      <div className="flex items-center space-x-4"></div>
-                        <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full"></span>
-                {faq.category}
-                </span>
-                </div>
+                  <div className="flex items-center justify-between">
+                    <div className="flex-1">
+                      <h3 className="text-lg font-semibold text-white mb-2">{faq.question}</h3>
+                      <div className="flex items-center space-x-4">
+                        <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full">
+                          {faq.category}
+                        </span>
+                      </div>
                     </div>
-                {isExpanded ? (
+                    {isExpanded ? (
                       <ChevronDown className="w-6 h-6 text-gray-400 ml-4" />
                     ) : (
                       <ChevronRight className="w-6 h-6 text-gray-400 ml-4" />
                     )}
-                </div>
+                  </div>
                 </button>
+                
                 {isExpanded && (
-                  <div className="px-6 pb-6 border-t border-gray-700/50"></div>
-                    <div className="pt-4"></div>
-                      <p className="text-gray-300 leading-relaxed"></p>
-                {faq.answer}
-                </p>
-                </div>
+                  <div className="px-6 pb-6 border-t border-gray-700/50">
+                    <div className="pt-4">
+                      <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
+                    </div>
                   </div>
                 )}
-                </div>
+              </div>
             )
           })}
-                </div>
-                </div>
-                {/* Resources */}
-                <div className="container mx-auto px-4 py-16"></div>
+        </div>
+      </div>
+
+      {/* Resources */}
+      <div className="container mx-auto px-4 py-16">
         <h2 className="text-3xl font-bold text-center mb-12 text-white">Additional Resources</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
-                {resources.map((resource, index) =>
-                {
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {resources.map((resource, index) => {
             const Icon = resource.icon
             return (
               <$2 />
@@ -3011,34 +2932,31 @@ export default function HelpCenter() {
                 to={resource.link}
                 className="bg-gray-800/50 rounded-2xl p-6 text-center hover:bg-gray-700/50 transition-all duration-300 border border-gray-700/50 hover:border-cyan-500/50 group"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"></div>
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2 text-white"></h3>
-                {resource.title}
-                </h3>
-                <p className="text-gray-400 mb-3 text-sm"></p>
-                {resource.description}
-                </p>
-                <span className="inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full"></span>
-                {resource.type}
+                <h3 className="text-xl font-semibold mb-2 text-white">{resource.title}</h3>
+                <p className="text-gray-400 mb-3 text-sm">{resource.description}</p>
+                <span className="inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full">
+                  {resource.type}
                 </span>
-                </Link>
+              </Link>
             )
           })}
-                </div>
-                </div>
-                {/* Contact Support */}
-                <div className="container mx-auto px-4 py-16"></div>
-        <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 rounded-3xl p-12 text-center"></div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white"></h2>
+        </div>
+      </div>
+
+      {/* Contact Support */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 rounded-3xl p-12 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
             Still Need Help?
           </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"></p>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Our expert support team is here to help you succeed. 
             Get in touch with us for personalized assistance.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <$2 />
               to="/contact"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
@@ -3053,7 +2971,7 @@ export default function HelpCenter() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-            ></motion.div>
+            >
               Contact Support Team
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
@@ -3066,164 +2984,162 @@ export default function HelpCenter() {
             >
               Explore Our Services
             </Link>
-      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-4xl mx-auto text-center"></div>
-          <h2 className="text-3xl font-bold text-white mb-6"></h2>
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
             Still Need Help?
           </h2>
-          <p className="text-xl text-gray-400 mb-8"></p>
+          <p className="text-xl text-gray-400 mb-8">
             Can't find what you're looking for? Our support team is here to help you 
             with any questions or technical issues.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <button className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg text-white font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"></button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg text-white font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-200">
               <Phone className="w-5 h-5" />
               <span>Call Support</span>
-                </button>
-            <button className="inline-flex items-center space-x-2 px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-medium hover:bg-cyan-500 hover:text-white transition-all duration-200"></button>
+            </button>
+            <button className="inline-flex items-center space-x-2 px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-medium hover:bg-cyan-500 hover:text-white transition-all duration-200">
               <Mail className="w-5 h-5" />
               <span>Email Support</span>
-                </button>
-                {/* Popular Articles */}
-                <section className="pb-16 px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-7xl mx-auto"></div>
+            </button>
+      {/* Popular Articles */}
+      <section className="pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <motion.h2 
             className="text-3xl font-bold text-white text-center mb-12"
             ))}
-                </div>
-                </div>
+          </div>
+        </div>
       </section>
-                {/* Contact Support CTA */}
-                <section className="pb-16 px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-4xl mx-auto text-center"></div>
+
+      {/* Contact Support CTA */}
+      <section className="pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
           <motion.div 
             className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-          ></motion.div>
-                {/* Contact Support Section */}
-                <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-600/20 to-blue-600/20"></section>
-        <div className="max-w-4xl mx-auto text-center"></div>
+          >
+      {/* Contact Support Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-600/20 to-blue-600/20">
+        <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          ></motion.div
->
-            <h2 className="text-4xl font-bold text-white mb-6"></h2>
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
               Still Need Help?
             </h2>
-            <p className="text-xl text-gray-300 mb-8"></p>
+            <p className="text-xl text-gray-300 mb-8">
               Our support team is here to help you succeed. Contact us for 
               personalized assistance and expert guidance.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 Contact Support
               </button>
-              <button className="border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300"></button>
+              <button className="border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300">
                 Schedule Call
               </button>
-                </div>
+            </div>
           </motion.div>
-            <h2 className="text-3xl font-bold text-white mb-4"></h2>
+            <h2 className="text-3xl font-bold text-white mb-4">
               Still Need Help?
             </h2>
-            <p className="text-gray-300 mb-6"></p>
+            <p className="text-gray-300 mb-6">
               Our expert support team is here to help you with any questions or technical issues.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"></button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
                 Contact Support
               </button>
-              <button className="px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/20 transition-all duration-300"></button>
+              <button className="px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/20 transition-all duration-300">
                 Schedule a Call
               </button>
-                </div>
+            </div>
           </motion.div>
-                </div>
+        </div>
       </section>
-                {/* Contact Support CTA */}
+
+      {/* Contact Support CTA */}
       {/* Help Categories */}
-                <section className="pb-16 px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-4xl mx-auto"></div>
+      <section className="pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
           <motion.div 
             className="space-y-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-          ></motion.div>
-                {filteredHelp.map((item) => (
+          >
+            {filteredHelp.map((item) => (
               <motion.div
                 key={item.id}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 overflow-hidden"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-              ></motion.div
->
+              >
                 <$2 />
                   onClick={() => toggleCategory(item.id.toString())}
                   className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-700/30 transition-colors duration-200"
                 >
-                  <div className="flex items-center gap-3"></div>
-                    <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center"></div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
                       <BookOpen className="w-5 h-5 text-white" />
                     </div>
-                    <div></div>
-                      <h3 className="text-lg font-semibold text-white"></h3>
-                {item.question}
-                </h3>
-                      <div className="flex gap-2 mt-1"></div>
-                {item.tags.map((tag, index) => (
+                    <div>
+                      <h3 className="text-lg font-semibold text-white">{item.question}</h3>
+                      <div className="flex gap-2 mt-1">
+                        {item.tags.map((tag, index) => (
                           <$2 />
                             key={index}
                             className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full"
                           >
-                {tag}
-                </span>
+                            {tag}
+                          </span>
                         ))}
-                </div>
-                </div>
+                      </div>
+                    </div>
                   </div>
-                {expandedCategories.includes(item.id.toString()) ? (
+                  {expandedCategories.includes(item.id.toString()) ? (
                     <ChevronDown className="w-5 h-5 text-gray-400" />
                   ) : (
                     <ChevronRight className="w-5 h-5 text-gray-400" />
                   )}
                 </button>
-                </div>
+              </div>
             </motion.div>
-                </motion.div>
+          </motion.div>
         </section>
-                {/* Quick Links */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"></div>
-                {quickLinks.map((link) => (
+
+        {/* Quick Links */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          {quickLinks.map((link) => (
             <$2 />
               key={link.title}
               to={link.href}
               className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 group"
             >
-              <div className="flex items-center mb-4"></div>
-                <div className="p-2 bg-blue-100 rounded-lg mr-3"></div>
+              <div className="flex items-center mb-4">
+                <div className="p-2 bg-blue-100 rounded-lg mr-3">
                   <link.icon className="h-6 w-6 text-blue-600" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors duration-200"></h3>
-                {link.title}
+                <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors duration-200">
+                  {link.title}
                 </h3>
-                </div>
-              <p className="text-gray-600 text-sm"></p>
-                {link.description}
-                </p>
-                </Link>
+              </div>
+              <p className="text-gray-600 text-sm">{link.description}</p>
+            </Link>
           ))}
-                </div>
-                {/* FAQ Categories */}
-                <div className="space-y-6"></div>
-                {filteredCategories.map((category) => (
-            <div key={category.title} className="bg-white rounded-xl shadow-lg overflow-hidden"></div>
+        </div>
+
+        {/* FAQ Categories */}
+        <div className="space-y-6">
+          {filteredCategories.map((category) => (
+            <div key={category.title} className="bg-white rounded-xl shadow-lg overflow-hidden">
               <$2 />
                 onClick={() => toggleCategory(category.title)}
                 className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
@@ -3258,10 +3174,12 @@ export default function HelpCenter() {
         { title: 'Cybersecurity Solutions', path: '/help/cybersecurity' },
         { title: 'Cloud & Infrastructure', path: '/help/cloud-infrastructure' },
         { title: 'Digital Transformation', path: '/help/digital-transformation' }
-import React from 'react';
-import { SEO  } from '@/components/SEO';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';import { Accordion, AccordionContent, AccordionItem, AccordionTrigger  } from '@/components/ui/accordion';
-import { Search, BookOpen, MessageCircle, FileText, Users, Settings, HelpCircle, Mail  } from 'lucide-react';import { Link } from 'react-router-dom'
+import React from 'react'
+import { SEO } from '@/components/SEO'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
+import { Search, BookOpen, MessageCircle, FileText, Users, Settings, HelpCircle, Mail } from 'lucide-react'
+import { Link } from 'react-router-dom'
 export default function HelpCenter() {
   const faqCategories = [
     {
@@ -3337,7 +3255,7 @@ export default function HelpCenter() {
       ]
     }
   ]</$1>
-                </div>
+        </div>
       </div>
             <$2 />
               href="tel:+13024640950"
@@ -3345,9 +3263,9 @@ export default function HelpCenter() {
             >
               Call Now
             </a>
-                </div>
+          </div>
         </div>
-                </div>
+      </div>
     </div>
   )
 }
@@ -3355,44 +3273,46 @@ export default HelpCenter
 }
 }
 }
-                </div>
+    </div>
   )</$1>
-                {/* Popular Articles */}
-                <div className="mb-16"></div>
+
+        {/* Popular Articles */}
+        <div className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Popular Articles</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
-                {popularArticles.map((article, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {popularArticles.map((article, index) => (
               <$2 />
                 key={index}
                 to={article.path}
                 className="group bg-white/5 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 transform hover:scale-105"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300"></div>
+                <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <FileText className="w-6 h-6 text-white" />
                 </div>
-                <div className="mb-3"></div>
-                  <span className="text-xs text-zion-cyan bg-zion-cyan/10 px-2 py-1 rounded-full"></span>
-                {article.category}
-                </span>
+                <div className="mb-3">
+                  <span className="text-xs text-zion-cyan bg-zion-cyan/10 px-2 py-1 rounded-full">
+                    {article.category}
+                  </span>
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-zion-cyan transition-colors line-clamp-2"></h3>
-                {article.title}
+                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-zion-cyan transition-colors line-clamp-2">
+                  {article.title}
                 </h3>
-                <div className="flex items-center text-zion-slate-light group-hover:text-zion-cyan transition-colors"></div>
+                <div className="flex items-center text-zion-slate-light group-hover:text-zion-cyan transition-colors">
                   <span className="text-sm">Read More</span>
                   <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
                 </div>
-                </Link>
+              </Link>
             ))}
-                </div>
-                </div>
-                {/* Contact Support Section */}
-                <div className="mt-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-xl text-white p-8 text-center"></div>
+          </div>
+        </div>
+
+        {/* Contact Support Section */}
+        <div className="mt-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-xl text-white p-8 text-center">
           <h2 className="text-2xl font-bold mb-4">Still Need Help?</h2>
-          <p className="text-blue-100 mb-6 max-w-2xl mx-auto"></p>
+          <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
             Can't find what you're looking for? Our support team is here to help you with any questions or issues.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <$2 />
               to="/contact"
               className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
@@ -3405,69 +3325,70 @@ export default HelpCenter
             >
               Email Support
             </a>
-                </div>
+          </div>
         </div>
-                {/* Additional Resources */}
-                <div className="mt-16 bg-white rounded-xl shadow-lg p-8"></div>
+
+        {/* Additional Resources */}
+        <div className="mt-16 bg-white rounded-xl shadow-lg p-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Additional Resources</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
-            <div className="text-center"></div>
-              <div className="p-3 bg-green-100 rounded-lg inline-block mb-3"></div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="text-center">
+              <div className="p-3 bg-green-100 rounded-lg inline-block mb-3">
                 <BookOpen className="h-8 w-8 text-green-600" />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Documentation</h3>
               <p className="text-gray-600 text-sm">Comprehensive guides and technical documentation</p>
-                </div>
-            <div className="text-center"></div>
-              <div className="p-3 bg-purple-100 rounded-lg inline-block mb-3"></div>
+            </div>
+            <div className="text-center">
+              <div className="p-3 bg-purple-100 rounded-lg inline-block mb-3">
                 <Users className="h-8 w-8 text-purple-600" />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Community</h3>
               <p className="text-gray-600 text-sm">Connect with other users and experts</p>
-                </div>
-            <div className="text-center"></div>
-              <div className="p-3 bg-orange-100 rounded-lg inline-block mb-3"></div>
+            </div>
+            <div className="text-center">
+              <div className="p-3 bg-orange-100 rounded-lg inline-block mb-3">
                 <FileText className="h-8 w-8 text-orange-600" />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Blog</h3>
               <p className="text-gray-600 text-sm">Latest updates and industry insights</p>
-                </div>
+            </div>
           </div>
-                </div>
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20"></div>
-        <div className="text-center"></div>
-          <h2 className="text-3xl font-bold text-white mb-6"></h2>
+        </div>
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
             Still Need Help?
           </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"></p>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Can't find what you're looking for? Our support team is here to help 
             you get the most out of our platform.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <button className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-105"></button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-105">
               Contact Support
               <MessageCircle className="w-5 h-5 ml-2" />
             </button>
-            <button className="inline-flex items-center justify-center px-8 py-4 border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-medium rounded-lg transition-all duration-200"></button>
+            <button className="inline-flex items-center justify-center px-8 py-4 border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-medium rounded-lg transition-all duration-200">
               Schedule a Call
             </button>
-                </div>
+          </div>
         </div>
-                </div>
+      </div>
     </>
   )
 }
-                </section>
-                {/* Popular Articles */}
-                <section className="py-16 px-4 bg-white/5"></section>
-          <div className="max-w-6xl mx-auto"></div>
+
+        </section>
+
+        {/* Popular Articles */}
+        <section className="py-16 px-4 bg-white/5">
+          <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Popular Help Articles</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-                {popularArticles.map((article, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300"></div>
-                  <h3 className="text-lg font-semibold text-white mb-3"></h3>
-                {article}
-                </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {popularArticles.map((article, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300">
+                  <h3 className="text-lg font-semibold text-white mb-3">{article}</h3>
                   <$2 />
                     to={`/help/${article.toLowerCase().replace(/\s+/g, '-')}`}
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
@@ -3485,22 +3406,22 @@ export default HelpCenter
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Still Need Help?</h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"></p>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Our support team is here to help you 24/7. Get in touch with us through any of these channels.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"></div>
-              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6"></div>
-                <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6">
+                <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <MessageSquare className="w-6 h-6 text-cyan-400" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Live Chat</h3>
                 <p className="text-gray-300 text-sm mb-4">Get instant help from our support team</p>
-                <button className="bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"></button>
+                <button className="bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
                   Start Chat
                 </button>
-                </div>
-              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6"></div>
-                <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6">
+                <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Mail className="w-6 h-6 text-cyan-400" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Email Support</h3>
@@ -3511,9 +3432,9 @@ export default HelpCenter
                 >
                   Send Email
                 </Link>
-                </div>
-              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6"></div>
-                <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6">
+                <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Phone className="w-6 h-6 text-cyan-400" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Phone Support</h3>
@@ -3524,7 +3445,7 @@ export default HelpCenter
                 >
                   Call Now
                 </a>
-                </div>
+              </div>
             </div>
         </div>
       </section>
@@ -3533,84 +3454,84 @@ export default HelpCenter
   )
 }
           {/* Help Categories */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"></div>
-                {helpCategories.map((category) =>
-                {
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            {helpCategories.map((category) => {
               const Icon = category.icon
               return (
-                <Card key={category.title} className="bg-zion-blue-dark border-zion-purple/20 hover:border-zion-purple/40 transition-colors"></Card>
-                  <CardHeader className="text-center"></CardHeader>
-                    <div className={`mx-auto w-12 h-12 ${category.bgColor} rounded-lg flex items-center justify-center mb-3`}></div>
+                <Card key={category.title} className="bg-zion-blue-dark border-zion-purple/20 hover:border-zion-purple/40 transition-colors">
+                  <CardHeader className="text-center">
+                    <div className={`mx-auto w-12 h-12 ${category.bgColor} rounded-lg flex items-center justify-center mb-3`}>
                       <Icon className={`w-6 h-6 ${category.color}`} />
                     </div>
-                    <CardTitle className="text-white"></CardTitle>
-                {category.title}
-                </CardTitle>
-                    <CardDescription className="text-zion-slate-light"></CardDescription>
-                {category.description}
-                </CardDescription>
-                </CardHeader>
-                  <CardContent className="text-center"></CardContent>
-                    <Button asChild variant="outline" className="w-full"></Button>
+                    <CardTitle className="text-white">{category.title}</CardTitle>
+                    <CardDescription className="text-zion-slate-light">
+                      {category.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <Button asChild variant="outline" className="w-full">
                       <Link to={category.href}>Learn More</Link>
-                </Button>
+                    </Button>
                   </CardContent>
                 </Card>
               )
             })}
-                </div>
-                {/* Quick Actions */}
-                <div className="bg-zion-blue-dark border border-zion-purple/20 rounded-lg p-6 mb-16"></div>
-            <h2 className="text-2xl font-bold text-white mb-4">Quick Actions</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4"></div>
-              <Button asChild className="w-full bg-zion-purple hover:bg-zion-purple-dark"></Button>
-                <Link to="/contact">Contact Support</Link>
-                </Button>
-              <Button asChild variant="outline" className="w-full"></Button>
-                <Link to="/api-docs">View API Documentation</Link>
-                </Button>
-              <Button asChild variant="outline" className="w-full"></Button>
-                <Link to="/blog">Browse Tutorials</Link>
-                </Button>
-            </div>
-                </div>
-                {/* FAQs */}
-                <div className="mb-16"></div>
-            <h2 className="text-2xl font-bold text-white mb-6 text-center">Frequently Asked Questions</h2>
-            <div className="max-w-4xl mx-auto"></div>
-              <Accordion type="single" collapsible className="space-y-4"></Accordion>
-                {faqs.map((faq, index) => (
-                  <AccordionItem key={index} value={`item-${index}`} className="bg-zion-blue-dark border border-zion-purple/20 rounded-lg"></AccordionItem>
-                    <AccordionTrigger className="px-6 py-4 text-left text-white hover:text-zion-cyan"></AccordionTrigger>
-                {faq.question}
-                </AccordionTrigger>
-                    <AccordionContent className="px-6 pb-4 text-zion-slate-light"></AccordionContent>
-                {faq.answer}
-                </AccordionContent>
-                </AccordionItem>
-                ))}
-                </Accordion>
-                </div>
           </div>
-                {/* Contact Support */}
-                <div className="text-center"></div>
-            <div className="bg-zion-blue-dark border border-zion-purple/20 rounded-lg p-8 max-w-2xl mx-auto"></div>
+
+          {/* Quick Actions */}
+          <div className="bg-zion-blue-dark border border-zion-purple/20 rounded-lg p-6 mb-16">
+            <h2 className="text-2xl font-bold text-white mb-4">Quick Actions</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <Button asChild className="w-full bg-zion-purple hover:bg-zion-purple-dark">
+                <Link to="/contact">Contact Support</Link>
+              </Button>
+              <Button asChild variant="outline" className="w-full">
+                <Link to="/api-docs">View API Documentation</Link>
+              </Button>
+              <Button asChild variant="outline" className="w-full">
+                <Link to="/blog">Browse Tutorials</Link>
+              </Button>
+            </div>
+          </div>
+
+          {/* FAQs */}
+          <div className="mb-16">
+            <h2 className="text-2xl font-bold text-white mb-6 text-center">Frequently Asked Questions</h2>
+            <div className="max-w-4xl mx-auto">
+              <Accordion type="single" collapsible className="space-y-4">
+                {faqs.map((faq, index) => (
+                  <AccordionItem key={index} value={`item-${index}`} className="bg-zion-blue-dark border border-zion-purple/20 rounded-lg">
+                    <AccordionTrigger className="px-6 py-4 text-left text-white hover:text-zion-cyan">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="px-6 pb-4 text-zion-slate-light">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
+          </div>
+
+          {/* Contact Support */}
+          <div className="text-center">
+            <div className="bg-zion-blue-dark border border-zion-purple/20 rounded-lg p-8 max-w-2xl mx-auto">
               <MessageCircle className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">Still Need Help?</h3>
-              <p className="text-zion-slate-light mb-6"></p>
+              <p className="text-zion-slate-light mb-6">
                 Our support team is here to help you with any questions or issues you may have.
               </p>
-              <div className="space-x-4"></div>
-                <Button asChild className="bg-zion-purple hover:bg-zion-purple-dark"></Button>
+              <div className="space-x-4">
+                <Button asChild className="bg-zion-purple hover:bg-zion-purple-dark">
                   <Link to="/contact">Contact Support</Link>
                 </Button>
-                <Button asChild variant="outline"></Button>
+                <Button asChild variant="outline">
                   <Link to="/community">Ask Community</Link>
                 </Button>
               </div>
-                </div>
+            </div>
           </div>
-                </div>
+        </div>
       </main>
     </>
   )
@@ -3631,8 +3552,7 @@ function CreditCard(props: React.SVGProps<SVGSVGElement>) {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-    ></svg
->
+    >
       <rect width="20" height="14" x="2" y="5" rx="2" />
       <line x1="2" x2="22" y1="10" y2="10" />
     </svg>
@@ -3645,7 +3565,7 @@ function CreditCard(props: React.SVGProps<SVGSVGElement>) {
     { title: 'Blog & Updates', href: '/blog', icon: FileText, description: 'Latest news and platform updates' }
   ]
   return (
-    <div className="min-h-screen bg-background"></div>
+    <div className="min-h-screen bg-background">
       <SEO 
         title="Help Center | Zion Tech Group" 
         description="Get help and support for using the Zion Tech Group platform. Find answers to frequently asked questions and contact our support team."
@@ -3653,17 +3573,18 @@ function CreditCard(props: React.SVGProps<SVGSVGElement>) {
         canonical="https://ziontechgroup.com/help"
       />
 
-      <div className="container mx-auto px-4 py-8"></div>
-                {/* Header */}
-                <div className="text-center mb-12"></div>
+      <div className="container mx-auto px-4 py-8">
+        {/* Header */}
+        <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-white mb-4">Help Center</h1>
-          <p className="text-xl text-zion-slate-light max-w-2xl mx-auto"></p>
+          <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
             Find answers to common questions and get the support you need to make the most of our platform.
           </p>
-                </div>
-                {/* Search Bar */}
-                <div className="max-w-2xl mx-auto mb-12"></div>
-          <div className="relative"></div>
+        </div>
+
+        {/* Search Bar */}
+        <div className="max-w-2xl mx-auto mb-12">
+          <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-5 w-5" />
             <input
               type="text"
@@ -3671,77 +3592,74 @@ function CreditCard(props: React.SVGProps<SVGSVGElement>) {
               className="w-full pl-10 pr-4 py-3 bg-zion-blue-dark border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent"
             />
           </div>
-                </div>
-                {/* Quick Links */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"></div>
-                {quickLinks.map((link) =>
-                {
+        </div>
+
+        {/* Quick Links */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          {quickLinks.map((link) => {
             const IconComponent = link.icon
             return (
-              <Link key={link.title} to={link.href}></Link>
-                <Card className="h-full hover:bg-zion-blue-dark/50 transition-colors cursor-pointer border-zion-blue-light"></Card>
-                  <CardHeader className="pb-3"></CardHeader>
-                    <div className="flex items-center space-x-2"></div>
+              <Link key={link.title} to={link.href}>
+                <Card className="h-full hover:bg-zion-blue-dark/50 transition-colors cursor-pointer border-zion-blue-light">
+                  <CardHeader className="pb-3">
+                    <div className="flex items-center space-x-2">
                       <IconComponent className="h-5 w-5 text-zion-cyan" />
-                      <CardTitle className="text-white text-lg"></CardTitle>
-                {link.title}
-                </CardTitle>
-                </div>
+                      <CardTitle className="text-white text-lg">{link.title}</CardTitle>
+                    </div>
                   </CardHeader>
-                  <CardContent></CardContent>
-                    <CardDescription className="text-zion-slate-light"></CardDescription>
-                {link.description}
-                </CardDescription>
-                </CardContent>
+                  <CardContent>
+                    <CardDescription className="text-zion-slate-light">
+                      {link.description}
+                    </CardDescription>
+                  </CardContent>
                 </Card>
-                </Link>
+              </Link>
             )
           })}
-                </div>
-                {/* FAQ Categories */}
-                <div className="space-y-8"></div>
-                {faqCategories.map((category) =>
-                {
+        </div>
+
+        {/* FAQ Categories */}
+        <div className="space-y-8">
+          {faqCategories.map((category) => {
             const IconComponent = category.icon
             return (
-              <Card key={category.title} className="border-zion-blue-light"></Card>
-                <CardHeader></CardHeader>
-                  <div className="flex items-center space-x-3"></div>
+              <Card key={category.title} className="border-zion-blue-light">
+                <CardHeader>
+                  <div className="flex items-center space-x-3">
                     <IconComponent className="h-6 w-6 text-zion-cyan" />
-                    <CardTitle className="text-white text-xl"></CardTitle>
-                {category.title}
-                </CardTitle>
-                </div>
+                    <CardTitle className="text-white text-xl">{category.title}</CardTitle>
+                  </div>
                 </CardHeader>
-                <CardContent></CardContent>
-                  <Accordion type="single" collapsible className="w-full"></Accordion>
-                {category.items.map((item, index) => (
-                      <AccordionItem key={index} value={`item-${index}`}></AccordionItem>
-                        <AccordionTrigger className="text-left text-zion-slate-light hover:text-white"></AccordionTrigger>
-                {item.question}
-                </AccordionTrigger>
-                        <AccordionContent className="text-zion-slate-light"></AccordionContent>
-                {item.answer}
-                </AccordionContent>
-                </AccordionItem>
+                <CardContent>
+                  <Accordion type="single" collapsible className="w-full">
+                    {category.items.map((item, index) => (
+                      <AccordionItem key={index} value={`item-${index}`}>
+                        <AccordionTrigger className="text-left text-zion-slate-light hover:text-white">
+                          {item.question}
+                        </AccordionTrigger>
+                        <AccordionContent className="text-zion-slate-light">
+                          {item.answer}
+                        </AccordionContent>
+                      </AccordionItem>
                     ))}
-                </Accordion>
+                  </Accordion>
                 </CardContent>
               </Card>
             )
           })}
-                </div>
-                {/* Contact Support Section */}
-                <div className="mt-16 text-center"></div>
-          <Card className="border-zion-blue-light bg-zion-blue-dark/50"></Card>
-            <CardHeader></CardHeader>
+        </div>
+
+        {/* Contact Support Section */}
+        <div className="mt-16 text-center">
+          <Card className="border-zion-blue-light bg-zion-blue-dark/50">
+            <CardHeader>
               <CardTitle className="text-white text-2xl">Still Need Help?</CardTitle>
-              <CardDescription className="text-zion-slate-light text-lg"></CardDescription>
+              <CardDescription className="text-zion-slate-light text-lg">
                 Can't find what you're looking for? Our support team is here to help.
               </CardDescription>
-                </CardHeader>
-            <CardContent className="space-y-4"></CardContent>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <$2 />
                   to="/contact"
                   className="inline-flex items-center justify-center px-6 py-3 bg-zion-purple text-white font-medium rounded-lg hover:bg-zion-purple/90 transition-colors"
@@ -3756,15 +3674,15 @@ function CreditCard(props: React.SVGProps<SVGSVGElement>) {
                   <Mail className="h-5 w-5 mr-2" />
                   Email Support
                 </a>
-                </div>
-              <p className="text-zion-slate-light"></p>
+              </div>
+              <p className="text-zion-slate-light">
                 Response time: Usually within 24 hours
               </p>
-                </CardContent>
+            </CardContent>
           </Card>
-                </div>
+        </div>
       </div>
-                </div>
+    </div>
   )
 }
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></p></p></p></p></p></p></p></li></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section>

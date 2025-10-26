@@ -16,11 +16,9 @@ const AnalyticsToolsPage: React.FC = () => {
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards for your data'
     },
-    {
-      icon: Globe,
+    {icon: Globe,
       title: 'Global Scalability',
-      description: 'Worldwide deployment and support for international business analytics'
-    }
+      description: 'Worldwide deployment and support for international business analytics',}
   ]
   const benefits = [
     'Advanced AI-powered data analysis',
@@ -117,7 +115,7 @@ const AnalyticsToolsPage: React.FC = () => {
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the power of our analytics tools for your business.</p>
             </p>
-                </div>
+          </div>
           <div className="grid grid-cols-1 md: grid-cols-2 gap-6">,</div>
             {benefits.map((benefit, index) => (
               <div key={index}className="flex items-center space-x-3">
@@ -140,8 +138,7 @@ const AnalyticsToolsPage: React.FC = () => {
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center space-x-3">
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
-                <span className="text-gray-300"></span>
-                {benefit}
+                <span className="text-gray-300">{benefit}
             ))}
           </div>
         </div>
@@ -206,9 +203,9 @@ const AnalyticsToolsPage: React.FC = () => {
               Email Us;
   </
           </div>
-                </div>
+        </div>
       </div>
-                </div>
+    </div>
   ),
 };
 
@@ -216,9 +213,7 @@ export default PagePage;
   </button>
   </button>
   </button>
-                </button>
   </button>
-                </button>
   </section>
   </h2>
   </section>

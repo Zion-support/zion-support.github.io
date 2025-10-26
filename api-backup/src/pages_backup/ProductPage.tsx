@@ -61,7 +61,7 @@ if (!id) return
   }
 
   const inCart = items.some(i => i.id === product.id),
-  const handleAdd  = () => {
+  const handleAdd = () => {
     if (inCart) return,
     setAdding(true),
     dispatch({
@@ -81,12 +81,10 @@ if (!id) return
 
 
       />
-      <div className="min-h-screen bg-zion-blue p-6 text-white"></div>
-        <h1 className="text-2xl font-bold mb-4"></h1>
-                {product.title}
-                </h1>
-                {product.images?.length ? (
-          <div className="mb-4 relative w-full h-64"></div>
+      <div className="min-h-screen bg-zion-blue p-6 text-white">
+        <h1 className="text-2xl font-bold mb-4">{product.title}</h1>
+        {product.images?.length ? (
+          <div className="mb-4 relative w-full h-64">
             <Image
               src = {product.images[0] |'/placeholder.svg',};
               alt = {product.title,}
@@ -100,24 +98,27 @@ if (!id) return
             />
           </div>
         ) : null}
-                <p className="mb-6"></p>
-                {product.description}
-                </p>
-        <Button onClick={handleAdd} disabled={adding |inCart}></Button>
-                {inCart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}
-                </Button>
-                </$1>
+        <p className="mb-6">{product.description}</p>
+        <Button onClick={handleAdd} disabled={adding |inCart}>
+          {inCart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}
+
+
+
+        </Button></$1>
     </>
   )
 }
 //Only fetch if id is available (from router) 
 }
 
-import Image from 'next / image';
-import { Button } from '@/components / ui / button';
-import { NEW_PRODUCTS } from '@/data / newProductsData';import { use_cart } from '@/context / CartContext';
-import { toast } from '@/hooks / use - toast';import { SEO } from '@/components / SEO';
-import { logErrorToProduction } from '@/utils / production_logger';export default /**
+import Image from 'next / image'
+import {Button} from '@/components / ui / button'
+import {NEW_PRODUCTS} from '@/data / newProductsData'
+import {use_cart} from '@/context / CartContext'
+import {toast} from '@/hooks / use - toast'
+import {SEO} from '@/components / SEO'
+import {logErrorToProduction} from '@/utils / production_logger'
+export default /**
  * ProductPage - Function description
  */
 function ProductPage() {
@@ -128,27 +129,30 @@ function ProductPage() {
     NEW_PRODUCTS.find ((p) => p.id === id) || null)
   const { items, dispatch } = use_cart ()
   const [adding, set_adding] = useState (false)
-  useEffect (() =>
-                {// Update product if id changes and is available from router.query
+  useEffect (() => {
+    // Update product if id changes and is available from router.query
     // Check condition
 if ( {) {
   $2
 }
-                <Button onClick={handleAdd} disabled={adding || inCart}></Button>
-                {inCart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}
-                </$1>
-                </$1>
+
+        <Button onClick={handleAdd} disabled={adding || inCart}>
+          {inCart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}
+</$1></$1>
     </>
   )
 }
 //Only fetch if id is available (from router) 
 }
 
-import Image from 'next / image';
-import { Button } from '@/components / ui / button';
-import { NEW_PRODUCTS } from '@/data / newProductsData';import { use_cart } from '@/context / CartContext';
-import { toast } from '@/hooks / use - toast';import { SEO } from '@/components / SEO';
-import { logErrorToProduction } from '@/utils / production_logger';export default /**
+import Image from 'next / image'
+import {Button} from '@/components / ui / button'
+import {NEW_PRODUCTS} from '@/data / newProductsData'
+import {use_cart} from '@/context / CartContext'
+import {toast} from '@/hooks / use - toast'
+import {SEO} from '@/components / SEO'
+import {logErrorToProduction} from '@/utils / production_logger'
+export default /**
  * ProductPage - Function description
  */
 function ProductPage() {
@@ -159,8 +163,7 @@ function ProductPage() {
     NEW_PRODUCTS.find ((p) => p.id === id) || null)
   const { items, dispatch } = use_cart ()
   const [adding, set_adding] = useState (false)
-  useEffect (() =>
-                {
+  useEffect (() => {
     // Update product if id changes and is available from router.query
     // Check condition
 if ( {) {
@@ -171,8 +174,7 @@ if ( {) {
       set_product (found_product || null)
     }
   }, [id])
-</$1>
-                </$1>
+</$1></$1>
     </>
   )
 }
@@ -201,8 +203,7 @@ product.title
   product.description 
 }og_image= {
   product.images?.[0] 
-}/> </Button>
-                </div> </>) 
+}/> </Button> </div> </>) 
 }'
 }
 

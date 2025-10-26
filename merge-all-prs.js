@@ -1,25 +1,44 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+const { execSync } = require('child_process');
+const fs = require('fs');
 
-const Merge-all-prs.jsPage: React.FC = () => {
-  return (
-    <React.Fragment>
-      <Helmet>
-        <title>Merge-all-prs.js - Zion Tech Group</title>
-        <meta name="description" content="Professional merge-all-prs.js services by Zion Tech Group" />
-      </Helmet>
+// Function to run git commands
+function runGitCommand(command) {
+  try {
+    return execSync(command, { cwd: '/workspace', encoding: 'utf8' });
+  } catch (error) {
+    console.error(`Error running command: ${command}`);
+    console.error(error.message);
+    return null;
+  }
+}
+
+// Function to get all open PRs
+function getOpenPRs() {
+  try {
+    const result = execSync('gh pr list --state open --json number,title,headRefName,mergeable,mergeStateStatus', 
+      { cwd: '/workspace', encoding: 'utf8' });
+    return JSON.parse(result);
+  } catch (error) {
+    console.error('Error getting PR list:', error.message);
+    return [];
+  }
+}
+
+// Function to resolve merge conflicts automatically
+function resolveConflicts() {
+  console.log('Resolving merge conflicts...');
+  
+  // Find all files with conflict markers
+  const conflictFiles = runGitCommand('git diff --name-only --diff-filter=U');
+  if (!conflictFiles) return;
+  
+  const files = conflictFiles.trim().split('\n').filter(f => f);
+  
+  for (const file of files) {
+    console.log(`Resolving conflicts in ${file}`);
+    
+    try {
+      // Read the file
+      const content = fs.readFileSync(`/workspace/${file}`, 'utf8');
       
-      <div className="min-h-screen bg-gray-900 text-white">
-        <div className="container mx-auto px-4 py-8">
-          <h1 className="text-4xl font-bold mb-6">Merge-all-prs.js</h1>
-          <p className="text-lg text-gray-300">
-            This page is currently under development. Please check back soon for more information.
-          </p>
-        </div>
-      </div>
-    </React.Fragment>
-  );
-};
-
-export default Merge-all-prs.jsPage;
+      let resolved = content

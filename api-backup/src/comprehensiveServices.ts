@@ -3963,4 +3963,4 @@ export const SUBSCRIPTION_TIERS = [
   "Learning Analytics",
   "Digital Assets",
   "Penetration Testing"
-];
+]

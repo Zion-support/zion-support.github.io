@@ -11,13 +11,11 @@ import React from 'react';
       description: 'Lightning-fast processing and real-time analytics for optimal results',},
     {icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards for your AR/VR data'
-    },
-    {
-      icon: Globe,
-      title: 'Cross-Platform Support',
-      description: 'Deploy across multiple devices and platforms for maximum reach and accessibility'
-    }
+      description: 'Bank-level security with encryption and compliance standards',},
+    {icon: Globe,
+      title: 'Global Reach',
+      description: 'Worldwide deployment and support for international businesses',}];
+  ];];];
   ]
   const benefits = [
     'Advanced AI technology integration',
@@ -73,8 +71,8 @@ import React from 'react';
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced seoenhancer solutions. 
               Powered by cutting-edge AI technology and industry expertise.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              </div><button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center"></button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              </div><button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
                 </button><ArrowRight className="ml-2 h-5 w-5" />
               </button>
@@ -178,17 +176,17 @@ import React from 'react';
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us;
       {/* CTA Section */}
-                <section className="py-20 px-4 sm: px-6 lg:px-8"></section>
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         </section>< className="$2 />
-          </div><div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div>
-            </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
+          </div><div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+            </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Get Started?
             </h2>
             <p className="text-xl text-purple-100 mb-8" /></p>
               Contact our experts to discuss your seoenhancer needs and get a customized solution.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              </div><button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center"></button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              </div><button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                 </button><Phone className="mr-2 h-5 w-5" />
                 Call Now
               </button>

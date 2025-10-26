@@ -241,8 +241,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
    */
   private checkImages(element: Element): void {
     const images = element.querySelectorAll('img'),
-    images.forEach((img, index) =>
-                {
+    images.forEach((img, index) => {
       const alt = img.getAttribute('alt')
       const role = img.getAttribute('role')
       // Check for missing alt attribute
@@ -302,8 +301,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
 
 }
     const images = element.querySelectorAll('img')
-    images.forEach((img, index) =>
-                {/* TODO: Fix JSX expression */}
+    images.forEach((img, index) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       const alt = img.getAttribute('alt')
@@ -366,8 +364,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
   private checkHeadings(element: Element): void {
     const headings = Array.from(element.querySelectorAll('h1, h2, h3, h4, h5, h6'))
     if (headings.length === 0) return
-    headings.forEach((heading, index) =>
-                {
+    headings.forEach((heading, index) => {
       const level = parseInt(heading.tagName.charAt(1))
       // Check for skipped heading levels
       if (level > previousLevel + 1 && previousLevel !== 0) {
@@ -397,8 +394,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
 }
     const headings = Array.from(element.querySelectorAll('h1, h2, h3, h4, h5, h6'))
     if (headings.length === 0) return
-    headings.forEach((heading, index) =>
-                {/* TODO: Fix JSX expression */}
+    headings.forEach((heading, index) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       const level = parseInt(heading.tagName.charAt(1))
@@ -484,8 +480,7 @@ $4})
    */
   private checkLinks(element: Element): void {
     const links = element.querySelectorAll('a'),
-    links.forEach((link, index) =>
-                {
+    links.forEach((link, index) => {
         fix: 'Use only one h1 per page for the main heading'
 ,
       }
@@ -505,8 +500,7 @@ $4})
 
 }
     const links = element.querySelectorAll('a')
-    links.forEach((link, index) =>
-                {/* TODO: Fix JSX expression */}
+    links.forEach((link, index) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       const text = link.textContent?.trim()
@@ -612,8 +606,7 @@ const target = link.getAttribute('target')
    */
   private checkButtons(element: Element): void {
     const buttons = element.querySelectorAll('button'),
-    buttons.forEach((button, index) =>
-                {
+    buttons.forEach((button, index) => {
       const text = button.textContent?.trim()
       const ariaLabel = button.getAttribute('aria-label')
       const ariaLabelledBy = button.getAttribute('aria-labelledby')
@@ -645,8 +638,7 @@ const target = link.getAttribute('target')
 
 }
     const buttons = element.querySelectorAll('button')
-    buttons.forEach((button, index) =>
-                {/* TODO: Fix JSX expression */}
+    buttons.forEach((button, index) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       const text = button.textContent?.trim()
@@ -680,8 +672,7 @@ const target = link.getAttribute('target')
    */
   private checkForms(element: Element): void {
     const inputs = element.querySelectorAll('input, select, textarea')
-    inputs.forEach((input, index) =>
-                {
+    inputs.forEach((input, index) => {
       const id = input.getAttribute('id')
       const ariaLabel = input.getAttribute('aria-label')
       const ariaLabelledBy = input.getAttribute('aria-labelledby')
@@ -716,12 +707,11 @@ const target = link.getAttribute('target')
 
 }
     const inputs = element.querySelectorAll('input, select, textarea')
-    inputs.forEach((input, index) =>
-                {/* TODO: Fix JSX expression */}
+    inputs.forEach((input, index) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       const id = input.getAttribute('id')
-      const ariaLabel = input.getAttribute('aria-label');
+      const ariaLabel = input.getAttribute('aria-label')
       const ariaLabelledBy = input.getAttribute('aria-labelledby');"`
       const label = id ? element.querySelector(`label[for="${id}"]`) : null
       const type = input.getAttribute('type')
@@ -767,8 +757,7 @@ const target = link.getAttribute('target')
     // This is a simplified check - full color contrast checking requires
     // computing actual rendered colors which is complex
     const elementsWithColor = element.querySelectorAll('[style*="color"]')
-    elementsWithColor.forEach(el =>
-                {
+    elementsWithColor.forEach(el => {
       const style = el.getAttribute('style'),
       if (style?.includes('color:') && !style.includes('background')) {
         this.addIssue({
@@ -784,8 +773,7 @@ const target = link.getAttribute('target')
     // This is a simplified check - full color contrast checking requires
     // computing actual rendered colors which is complex;"
 const elementsWithColor = element.querySelectorAll('[style*="color"]')
-    elementsWithColor.forEach(el =>
-                {/* TODO: Fix JSX expression */}
+    elementsWithColor.forEach(el => {/* TODO: Fix JSX expression */}
   O: Add content,}
 })
       const style = el.getAttribute('style')
@@ -817,8 +805,7 @@ $4})
   private checkKeyboardAccess(element: Element): void {
     // Check for interactive elements with tabindex="-1"
     const interactiveElements = element.querySelectorAll('a, button, input, select, textarea')
-    interactiveElements.forEach(el =>
-                {
+    interactiveElements.forEach(el => {
       const tabindex = el.getAttribute('tabindex')
       if (tabindex === '-1') {
         this.addIssue({
@@ -845,8 +832,7 @@ $4})
 
     // Check for interactive elements with tabindex="-1"
     const interactiveElements = element.querySelectorAll('a, button, input, select, textarea')
-    interactiveElements.forEach(el =>
-                {/* TODO: Fix JSX expression */}
+    interactiveElements.forEach(el => {/* TODO: Fix JSX expression */}
   O: Add content,}
 })
       const tabindex = el.getAttribute('tabindex')
@@ -870,8 +856,7 @@ $4})
     })
     // Check for divs/spans with onclick but no keyboard handler
     const clickableNonInteractive = element.querySelectorAll('[onclick]:not(a):not(button)')
-    clickableNonInteractive.forEach(el =>
-                {
+    clickableNonInteractive.forEach(el => {
       const role = el.getAttribute('role')
       const tabindex = el.getAttribute('tabindex')
       const onKeyDown = el.getAttribute('onkeydown')
@@ -888,8 +873,7 @@ $4})
     })
     // Check for divs/spans with onclick but no keyboard handler
 const clickableNonInteractive = element.querySelectorAll('[onclick]:not(a):not(button)')
-    clickableNonInteractive.forEach(el =>
-                {/* TODO: Fix JSX expression */}
+    clickableNonInteractive.forEach(el => {/* TODO: Fix JSX expression */}
   O: Add content,}
 })
       const role = el.getAttribute('role')
@@ -924,8 +908,7 @@ $4})
     const elementsWithAria = element.querySelectorAll(
       '[role], [aria-label], [aria-labelledby], [aria-describedby]'
     )
-    elementsWithAria.forEach(el =>
-                {
+    elementsWithAria.forEach(el => {
       const role = el.getAttribute('role')
       // Check for invalid ARIA roles
       const validRoles = [
@@ -973,8 +956,7 @@ $4})
     const elementsWithAria = element.querySelectorAll()
 //       '[role], [aria-label], [aria-labelledby], [aria-describedby]'
     )
-    elementsWithAria.forEach(el =>
-                {/* TODO: Fix JSX expression */}
+    elementsWithAria.forEach(el => {/* TODO: Fix JSX expression */}
   O: Add content,}
 })
       const role = el.getAttribute('role')
@@ -1239,8 +1221,7 @@ $4})
       [A11ySeverity.SERIOUS]: 7,
       [A11ySeverity.CRITICAL]: 15
     }
-    const totalPenalty = this.issues.reduce((sum, issue) =>
-                {/* TODO: Fix JSX expression */}
+    const totalPenalty = this.issues.reduce((sum, issue) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       return sum + severityWeights[issue.severity]
@@ -1296,5 +1277,4 @@ const score = Math.max(0, 100 - totalPenalty)
   }
 }"`
 
-</main>
-                </main>
+</main></main>

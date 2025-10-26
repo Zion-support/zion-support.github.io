@@ -110,7 +110,7 @@ export class AdvancedDataVisualization {/* TODO: Fix JSX expression */}
     const _lines = csv.trim().split('\n')
     //     const headers = lines[0].split(',')
     const points: DataPoint[] = [],
-,;
+,
     for (let i = 1; i < lines.length; i++) {,
       const _values = lines[i].split(',')
       if (values.length >= 2) {

@@ -40,10 +40,10 @@ const AIAutomatedReportingPage: React.FC = () => {
                   Get Started Free
                   <ArrowRight className="w-5 h-5 ml-2 inline" />
                 </button>
-                <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300"></button>
+                <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">
                   View Demo
                 </button>
-                </div>
+              </div>
             </div>
         </div>
       </section>
@@ -59,7 +59,7 @@ const AIAutomatedReportingPage: React.FC = () => {
                 Our AI-powered reporting platform delivers comprehensive insights 
                 and automated analytics for data-driven decision making.
               </p>
-                </div>
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300">
@@ -71,16 +71,16 @@ const AIAutomatedReportingPage: React.FC = () => {
                   Generate real-time reports and analytics with live data integration 
                   and instant insights for immediate decision making.
                 </p>
-                <ul className="space-y-2 text-sm text-gray-400"></ul>
-                  <li className="flex items-center"></li>
+                <ul className="space-y-2 text-sm text-gray-400">
+                  <li className="flex items-center">
                     <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
                     Live data streaming
                   </li>
-                  <li className="flex items-center"></li>
+                  <li className="flex items-center">
                     <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
                     Instant report generation
                   </li>
-                  <li className="flex items-center"></li>
+                  <li className="flex items-center">
                     <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
                     Real-time dashboards
                   </li>
@@ -96,16 +96,16 @@ const AIAutomatedReportingPage: React.FC = () => {
                   AI automatically generates comprehensive reports based on your data, 
                   saving hours of manual work and ensuring consistency.
                 </p>
-                <ul className="space-y-2 text-sm text-gray-400"></ul>
-                  <li className="flex items-center"></li>
+                <ul className="space-y-2 text-sm text-gray-400">
+                  <li className="flex items-center">
                     <CheckCircle className="w-4 h-4 text-purple-400 mr-2" />
                     Scheduled reporting
                   </li>
-                  <li className="flex items-center"></li>
+                  <li className="flex items-center">
                     <CheckCircle className="w-4 h-4 text-purple-400 mr-2" />
                     Custom templates
                   </li>
-                  <li className="flex items-center"></li>
+                  <li className="flex items-center">
                     <CheckCircle className="w-4 h-4 text-purple-400 mr-2" />
                     Multi-format export
                   </li>
@@ -121,8 +121,8 @@ const AIAutomatedReportingPage: React.FC = () => {
                   Leverage AI to predict trends, identify patterns, and forecast 
                   future performance with advanced machine learning algorithms.
                 </p>
-                <ul className="space-y-2 text-sm text-gray-400"></ul>
-                  <li className="flex items-center"></li>
+                <ul className="space-y-2 text-sm text-gray-400">
+                  <li className="flex items-center">
                     <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                     Trend forecasting
                   </li>
@@ -226,13 +226,13 @@ const AIAutomatedReportingPage: React.FC = () => {
                 Transform your reporting process with intelligent automation 
                 and gain competitive advantages through data-driven insights.
               </p>
-                </div>
+            </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"></div>
-              <div></div>
-                <div className="space-y-8"></div>
-                  <div className="flex items-start space-x-4"></div>
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0"></div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="space-y-8">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
                       <Clock className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -241,11 +241,11 @@ const AIAutomatedReportingPage: React.FC = () => {
                         Automate repetitive reporting tasks and focus on strategic analysis 
                         instead of manual data compilation and formatting.
                       </p>
-                </div>
+                    </div>
                   </div>
 
-                  <div className="flex items-start space-x-4"></div>
-                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center flex-shrink-0"></div>
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center flex-shrink-0">
                       <Users className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -254,7 +254,7 @@ const AIAutomatedReportingPage: React.FC = () => {
                         Share insights across teams with automated distribution, 
                         real-time collaboration, and role-based access controls.
                       </p>
-                </div>
+                    </div>
                   </div>
 
                   <div className="flex items-start space-x-4">
@@ -267,7 +267,7 @@ const AIAutomatedReportingPage: React.FC = () => {
                         Access comprehensive insights and predictions to make 
                         informed decisions faster and with greater confidence.
                       </p>
-                </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -292,8 +292,7 @@ const AIAutomatedReportingPage: React.FC = () => {
                     <span className="text-orange-400 font-bold">-60%</span>
                   </div>
                 </div>
-                </div>
-                </div>
+              </div>
             </div>
         </div>
       </section>
@@ -308,12 +307,12 @@ const AIAutomatedReportingPage: React.FC = () => {
               Join thousands of businesses already using AI-powered automated reporting 
               to drive better decisions and accelerate growth.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25"></button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 inline" />
               </button>
-              <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300"></button>
+              <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">
                 Schedule Demo
               </button>
             </div>

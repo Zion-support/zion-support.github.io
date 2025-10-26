@@ -118,8 +118,8 @@ export default PWAInstallerPage
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
-                </div>
-                </div>
+          </div>
+        </div>
       </section>
 
       {/* Benefits Section */}

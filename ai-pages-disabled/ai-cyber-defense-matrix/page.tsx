@@ -126,12 +126,12 @@ const AICyberDefenseMatrix: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 via-orange-500/10 to-yellow-500/10"></div>
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-red-500/20 via-transparent to-transparent"></div>
           
-          <div className="max-w-7xl mx-auto relative z-10"></div>
-            </div><div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}></div>
-              </div><div className="inline-flex items-center space-x-2 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-full px-6 py-3 mb-8 border border-red-500/30"></div>
+          <div className="max-w-7xl mx-auto relative z-10">
+            </div><div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              </div><div className="inline-flex items-center space-x-2 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-full px-6 py-3 mb-8 border border-red-500/30">
                 </div><Shield className="w-5 h-5 text-red-400" />
                 <span className="text-red-400 font-semibold">Cyber Defense</span>
-                </div>
+              </div>
               
               <h1 className="text-5xl md: text-7xl font-bold mb-6 bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent">,</h1>
                 AI Cyber Defense Matrix;
@@ -147,11 +147,11 @@ const AICyberDefenseMatrix: React.FC = () => {
                   <Shield className="w-5 h-5" />
                   <span className="font-semibold">99.9% Detection</span>
                 </div>
-                <div className="flex items-center space-x-2 text-orange-400"></div>
+                <div className="flex items-center space-x-2 text-orange-400">
                   </div><Zap className="w-5 h-5" />
                   <span className="font-semibold">Zero-Trust</span>
                 </div>
-                <div className="flex items-center space-x-2 text-yellow-400"></div>
+                <div className="flex items-center space-x-2 text-yellow-400">
                   </div><Target className="w-5 h-5" />
                   <span className="font-semibold">Auto Response</span>
                 </div>
@@ -172,7 +172,7 @@ const AICyberDefenseMatrix: React.FC = () => {
                   <Mail className="w-5 h-5 mr-2" />
                   Get Quote;
                 </a>
-                </div>
+              </div>
             </div>
         </div>
       </section>
@@ -186,14 +186,14 @@ const AICyberDefenseMatrix: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our AI-powered cyber defense matrix provides comprehensive security solutions;</p>
                 with advanced threat detection and automated response capabilities.
               </p>
-                </div>
+            </div>
             
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
               {features.map((feature, index) => (
                 <div;
                   key={index}className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-red-500/20 hover: border-red-500/40 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-red-500/10",
                 >
-                  </div><div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-600 rounded-xl flex items-center justify-center mb-6"></div>
+                  </div><div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-600 rounded-xl flex items-center justify-center mb-6">
                     </div><feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold mb-4 text-white">{feature.title}</h3>
@@ -204,7 +204,7 @@ const AICyberDefenseMatrix: React.FC = () => {
                         <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />
                         {benefit} </li>
                     ))}
-                </ul>
+                  </ul>
                 </div>
               ))}
             </div>
@@ -220,25 +220,19 @@ const AICyberDefenseMatrix: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our AI cyber defense matrix is trusted by leading organizations;</p>
                 across various industries for mission-critical security protection.
               </p>
-                </div>
+            </div>
             
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
               {useCases.map((useCase, index) => (
                 <div;
                   key={index}className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-orange-500/20 hover: border-orange-500/40 transition-all duration-300 hover:scale-105",
                 >
-                  </div><div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-yellow-600 rounded-xl flex items-center justify-center mb-6"></div>
+                  </div><div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-yellow-600 rounded-xl flex items-center justify-center mb-6">
                     </div><useCase.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold mb-4 text-white"></h3>
-                {useCase.title}
-                </h3>
-                  <p className="text-gray-300 mb-4"></p>
-                {useCase.description</p>}
-                </p>
-                  <div className="text-red-400 font-semibold text-sm"></div>
-                {useCase.results</div>}
-                </div>
+                  <h3 className="text-xl font-bold mb-4 text-white">{useCase.title}</h3>
+                  <p className="text-gray-300 mb-4">{useCase.description</p>}</p>
+                  <div className="text-red-400 font-semibold text-sm">{useCase.results</div>} </div>
                 </div>
               ))}
             </div>
@@ -254,7 +248,7 @@ const AICyberDefenseMatrix: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose the perfect cyber defense plan for your organization.</p>
                 All plans include our advanced AI threat detection and response capabilities.
               </p>
-                </div>
+            </div>
             
             <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,</div>
               {pricingPlans.map((plan, index) => (

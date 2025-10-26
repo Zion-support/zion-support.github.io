@@ -1,25 +1,146 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const Page: React.FC = () => {
+import { Link } from 'react-router-dom'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
   return (
-    <React.Fragment>
-      <Helmet>
-        <title> - Zion Tech Group</title>
-        <meta name="description" content="Professional  services by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gray-900 text-white">
-        <div className="container mx-auto px-4 py-8">
-          <h1 className="text-4xl font-bold mb-6"></h1>
-          <p className="text-lg text-gray-300">
-            This page is currently under development. Please check back soon for more information.
-          </p>
-        </div>
-      </div>
-    </React.Fragment>
-  );
-};
-
-export default Page;
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
+      <main className="container mx-auto px-4 py-16 pt-24">
+        <section className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 holographic-text cyber-text">
+// AI Email Assistant</h1>"
+          < className="text-xl,"$2 />
+  md:text-2xl text-cyan-400 mb-8 font-medium neon-glow">
+// Smart Email Management with AI-Powered Intelligence
+          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+            This page is under development. Please check back soon for updates.
+          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-12">
+            <$2 />
+              href="tel:+13024640950" className="cyber-button w-full sm:w-auto text-center"
+// >,
+ Cal)
+  l: (302) 464-0950
+            <$2 />
+              href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
+// >
+//               Get Free Demo
+        {/* Features Section */}"
+        <section className="mb-16"></section>"
+          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
+// Key Features</h2>"
+          < className="grid grid-cols-1,$2 />
+  md:grid-cols-2,"
+  lg:grid-cols-3 gap-8"></div>"
+            <div className="cyber-card hologram-card p-6"></div>"
+              <div className="text-4xl mb-4"></div>"
+              <h3 className="text-xl font-bold text-white mb-4">Smart Responses</h3>"
+              <p className="text-gray-300">
+// AI-powered email responses that understand context and tone, automatically generating
+//                 professional replies based on your communication style.
+            </div>"
+            <div className="cyber-card hologram-card p-6"></div>"
+              <div className="text-4xl mb-4"></div>"
+              <h3 className="text-xl font-bold text-white mb-4">Intelligent Scheduling</h3>"
+              <p className="text-gray-300">
+// Automatically schedule meetings, set reminders, and manage your calendar based on
+//                 email content and your availability preferences.
+            </div>"
+            <div className="cyber-card hologram-card p-6"></div>"
+              <div className="text-4xl mb-4"></div>"
+              <h3 className="text-xl font-bold text-white mb-4">Priority Sorting</h3>"
+              <p className="text-gray-300">
+// AI analyzes email importance and urgency, automatically organizing your inbox
+//                 with smart priority levels and categorization.
+            </div>"
+            <div className="cyber-card hologram-card p-6"></div>"
+              <div className="text-4xl mb-4"></div>"
+              <h3 className="text-xl font-bold text-white mb-4">Auto Follow-ups</h3>"
+              <p className="text-gray-300">
+                Automated follow-up sequences for sales, customer service, and project management
+// with personalized timing and content.
+            </div>"
+            <div className="cyber-card hologram-card p-6"></div>"
+              <div className="text-4xl mb-4"></div>"
+              <h3 className="text-xl font-bold text-white mb-4">Analytics Dashboard</h3>"
+              <p className="text-gray-300">
+// Track email performance, response times, and engagement metrics with detailed
+//                 analytics and insights.
+            </div>"
+            <div className="cyber-card hologram-card p-6"></div>"
+              <div className="text-4xl mb-4"></div>"
+              <h3 className="text-xl font-bold text-white mb-4">Enterprise Security</h3>"
+              <p className="text-gray-300">
+// Bank-level encryption and security protocols ensure your email data remains
+//                 private and protected at all times.
+        {/* Pricing Section */}"
+        <section className="mb-16"></section>"
+          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
+// Pricing Plans</h2>"
+          < className="grid grid-cols-1,"$2 />
+  md:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>"
+            <div className="cyber-card hologram-card p-8 text-center"></div>"
+              <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>"
+              <div className="text-4xl font-bold text-cyan-400 mb-6">$29<span className="text-lg text-gray-400">/month</span></div>"
+              <ul className="text-gray-300 space-y-3 mb-8">
+                <li> Up to 1,000 emails/month
+                <li> Basic AI responses
+                <li> Priority sorting
+                <li> Email templates
+                <li> Basic analytics
+              </ul>"
+              <a href="/contact" className="cyber-button w-full text-center">
+// Get Started
+            </div>"
+            <div className="cyber-card hologram-card p-8 text-center border-2 border-cyan-400"></div>"
+              <div className="text-sm font-bold text-cyan-400 mb-2">MOST POPULAR</div>"
+              <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>"
+              <div className="text-4xl font-bold text-cyan-400 mb-6">$79<span className="text-lg text-gray-400">/month</span></div>"
+              <ul className="text-gray-300 space-y-3 mb-8">
+                <li> Up to 10,000 emails/month
+                <li> Advanced AI responses
+                <li> Smart scheduling
+                <li> Auto follow-ups
+                <li> Advanced analytics
+                <li> Team collaboration
+              </ul>"
+              <a href="/contact" className="cyber-button w-full text-center">
+// Get Started
+            </div>"
+            <div className="cyber-card hologram-card p-8 text-center"></div>"
+              <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>"
+              <div className="text-4xl font-bold text-cyan-400 mb-6">$199<span className="text-lg text-gray-400">/month</span></div>"
+              <ul className="text-gray-300 space-y-3 mb-8">
+                <li> Unlimited emails
+                <li> Custom AI training
+                <li> Advanced integrations
+                <li> White-label options
+                <li> Dedicated support
+                <li> Custom analytics
+              </ul>"
+              <a href="/contact" className="cyber-button w-full text-center">
+// Contact Sales
+        {/* Contact Section */}"
+        <section className="text-center"></section>"
+          <h2 className="text-3xl font-bold text-white mb-8 neon-text">
+// Ready to Transform Your Email Workflow?
+          </h2>"
+          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+// Contact us today to schedule a free demo and see how our AI Email Assistant
+//             can revolutionize your business communication.
+          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+            <$2 />
+              href="tel:+13024640950" className="cyber-button w-full sm:w-auto text-center"
+// >,
+ Cal,
+  l: (302) 464-0950
+            <$2 />
+              href="mailto:kleber@ziontechgroup.com" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300"
+// >
+//                Email Us</a>
+          </div>
+        </section>
+      </main>
+      <Footer /></Footer>
+    </div>
+  ),
+}
+export default PagePage</$1></a></p></p></p></p></p></p></p></p></li></li></li></li></li></li></li></li></li>

@@ -68,9 +68,9 @@ function generateInnovationListing(index: number): ProductListing {
     aiScore: Math.floor(Math.random() * 20) + 80
 import { GradientHeading } from "@/components/GradientHeading",
 import { ProductListingCard } from "@/components/ProductListingCard",
-import { useState, useEffect, useRef, Suspense } from "react",;
-import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase  } from 'lucide-react';
-import { MARKETPLACE_LISTINGS  } from '@/data/listingData';,
+import { useState, useEffect, useRef, Suspense } from "react",
+import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase } from 'lucide-react'
+import { MARKETPLACE_LISTINGS } from "@/data/listingData",
 import { ProductListing } from "@/types/listings",
 import { useRouter } from 'next/router',
 import Link from 'next/link',
@@ -171,7 +171,7 @@ function generateInnovationListing (index: number): ProductListing {
     'developer-tools': {
       title: "Developer Tools",
       description: "AI-powered coding assistance and automation",
-      icon: <Code className="w-6 h-6" />;
+      icon: <Code className="w-6 h-6" />
     };          icon: <Bot className="w-6 h-6" />},
     },
 
@@ -197,8 +197,7 @@ function generateInnovationListing (index: number): ProductListing {
     }
   },
 
-  useEffect(() =>
-                {
+  useEffect(() => {
     async function load() {
       setIsLoading(true),
       try {
@@ -255,12 +254,10 @@ function generateInnovationListing (index: number): ProductListing {
     load()
   }, [slug]),
 
-  useEffect(() =>
-                {
+  useEffect(() => {
     if (slug !== 'innovation') return,
 
-    const interval = setInterval(() =>
-                {
+    const interval = setInterval(() => {
       innovationCounterRef.current += 1,
       setListings((prev) => [
         generateInnovationListing(innovationCounterRef.current),
@@ -271,8 +268,7 @@ function generateInnovationListing (index: number): ProductListing {
   }, [slug]),
 
   // Handle requesting a quote
-  const handleRequestQuote = (listingId: string) =>
-                {
+  const handleRequestQuote = (listingId: string) => {
     const listing = listings.find(item => item.id === listingId),
     
     if (listing) {
@@ -310,20 +306,20 @@ function generateInnovationListing (index: number): ProductListing {
       <Suspense fallback={<ListingGridSkeleton />}>
 
       <Suspense fallback={<ListingGridSkeleton />}> 
-        <div className="min-h-screen bg-zion-blue"></div>
-          <div className="container mx-auto px-4 py-12"></div>
-          <div className="mb-4"></div>
-            <Link href="/categories" className="text-zion-cyan hover:text-zion-cyan-light transition-colors inline-flex items-center"></Link>
+        <div className="min-h-screen bg-zion-blue">
+          <div className="container mx-auto px-4 py-12">
+          <div className="mb-4">
+            <Link href="/categories" className="text-zion-cyan hover:text-zion-cyan-light transition-colors inline-flex items-center">
                Back to Categories
             </Link>
-                </div>
+          </div>
           
 
 
 
-          <div className="text-center mb-12"></div>
-            <div className="flex justify-center mb-6"></div>
-              <div className="text-zion-cyan p-4 bg-zion-blue-dark rounded-full"></div>
+          <div className="text-center mb-12">
+            <div className="flex justify-center mb-6">
+              <div className="text-zion-cyan p-4 bg-zion-blue-dark rounded-full">
       title: "Talents",
       description: "Connect with AI experts, developers, and tech specialists"
       icon: <Brain className="w - 6 h - 6" />
@@ -383,30 +379,30 @@ function generateInnovationListing (index: number): ProductListing {
       <NextSeo title={seo_title} description={seo_description} />
       <Header />
       <Suspense fallback={<ListingGridSkeleton />}>
-        <div className="min - h-screen bg - zion - blue"></div>
-          <div className="container mx - auto px - 4 py - 12"></div>
-          <div className="mb - 4"></div>
-            <Link href="/categories" className="text - zion - cyan hover:text - zion - cyan - light transition - colors inline - flex items - center"></Link>
-              ← Back to Categories</$1>
-                </$1>
-          <div className="text - center mb - 12"></div>
-            <div className="flex justify - center mb - 6"></div>
-              <div className="text - zion - cyan p - 4 bg - zion - blue - dark rounded - full"></div>
+        <div className="min - h-screen bg - zion - blue">
+          <div className="container mx - auto px - 4 py - 12">
+          <div className="mb - 4">
+            <Link href="/categories" className="text - zion - cyan hover:text - zion - cyan - light transition - colors inline - flex items - center">
+              ← Back to Categories</$1></$1>
+          <div className="text - center mb - 12">
+            <div className="flex justify - center mb - 6">
+              <div className="text - zion - cyan p - 4 bg - zion - blue - dark rounded - full">
                 {category.icon}
-                </div>
-                </div>
-            <GradientHeading className="text-4xl md:text-5xl font-bold mb-4"></GradientHeading>
-                {category.title}
-                </GradientHeading>
-            <p className="text-zion-slate-light text-lg max-w-3xl mx-auto"></p>
-                {category.description}
+              </div>
+            </div>
+            <GradientHeading className="text-4xl md:text-5xl font-bold mb-4">
+              {category.title}
+            </GradientHeading>
+            <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
+              {category.description}
 
 
 
 import { useRouter } from 'next/router'
-import Link from 'next/link';
-import { toast } from '@/hooks/use-toast';
-import { NextSeo } from '@/components/NextSeo';import {Header} from "@/components/Header"
+import Link from 'next/link'
+import {toast} from "@/hooks/use-toast"
+import {NextSeo} from '@/components/NextSeo'
+import {Header} from "@/components/Header"
 import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton'
 import {logErrorToProduction} from '@/utils/productionLogger'
 const AUTO_SERVICE_TITLES = [
@@ -503,8 +499,7 @@ function generateInnovationListing(): any (index: number): ProductListing {
       icon: <Briefcase className="w-6 h-6" />
     }
   },
-  useEffect(() =>
-                {
+  useEffect(() => {
     async function load() {
       setIsLoading(true),
       try {
@@ -556,11 +551,9 @@ function generateInnovationListing(): any (index: number): ProductListing {
 
     load()
   }, [slug]),
-  useEffect(() =>
-                {
+  useEffect(() => {
     if (slug !== 'innovation') return,
-    const interval = setInterval(() =>
-                {
+    const interval = setInterval(() => {
       innovationCounterRef.current += 1,
       setListings((prev) => [
         generateInnovationListing(innovationCounterRef.current),
@@ -569,8 +562,7 @@ function generateInnovationListing(): any (index: number): ProductListing {
     return () => clearInterval(interval)
   }, [slug]),
   // Handle requesting a quote
-  const handleRequestQuote = (listingId: string) =>
-                {
+  const handleRequestQuote = (listingId: string) => {
     const listing = listings.find(item => item.id === listingId),
     if (listing) {
       toast({
@@ -598,30 +590,27 @@ function generateInnovationListing(): any (index: number): ProductListing {
       <NextSeo title={seoTitle} description={seoDescription} />
       <Header />
       <Suspense fallback={<ListingGridSkeleton />}>
-        <div className="min-h-screen bg-zion-blue"></div>
-          <div className="container mx-auto px-4 py-12"></div>
-          <div className="mb-4"></div>
-            <Link href="/categories" className="text-zion-cyan hover:text-zion-cyan-light transition-colors inline-flex items-center"></Link>
-              ← Back to Categories</$1>
-                </$1>
-          <div className="text-center mb-12"></div>
-            <div className="flex justify-center mb-6"></div>
-              <div className="text-zion-cyan p-4 bg-zion-blue-dark rounded-full"></div>
+        <div className="min-h-screen bg-zion-blue">
+          <div className="container mx-auto px-4 py-12">
+          <div className="mb-4">
+            <Link href="/categories" className="text-zion-cyan hover:text-zion-cyan-light transition-colors inline-flex items-center">
+              ← Back to Categories</$1></$1>
+          <div className="text-center mb-12">
+            <div className="flex justify-center mb-6">
+              <div className="text-zion-cyan p-4 bg-zion-blue-dark rounded-full">
                 {category.icon}
-                </div>
-                </$1>
-            <GradientHeading className="text-4xl md:text-5xl font-bold mb-4"></GradientHeading>
-                {category.title}
-                </GradientHeading>
-            <p className="text-zion-slate-light text-lg max-w-3xl mx-auto"></p>
-                {category.description}
-                </p>
-                </$1>
-                {isLoading ? (
+              </div></$1>
+            <GradientHeading className="text-4xl md:text-5xl font-bold mb-4">
+              {category.title}
+            </GradientHeading>
+            <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
+              {category.description}
+            </p></$1>
+          {isLoading ? (
             <ListingGridSkeleton />
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"></div>
-                {listings && listings.map((listing,) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {listings && listings.map((listing,) => (
                 <ProductListingCard
                   key = {listing && listing.id,};
                   listing = {listing,};
@@ -629,30 +618,39 @@ function generateInnovationListing(): any (index: number): ProductListing {
                   detailBasePath="/marketplace/listing"
                 />
               ))}
-                </div>
+            </div>
           )}
-                </div>
-                </$1></$1>
+
+
+
+
+
+
+
+
+
+          </div></$1></$1>
     </>
   )
 }
-                </p>
-                </$1>
-                {is_loading ? (
+
+
+
+
+            </p></$1>
+          {is_loading ? (
             <ListingGridSkeleton />) : (
-            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 4 gap - 6"></div>
-                {listings.map ((listing, ) => (
+            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 4 gap - 6">
+              {listings.map ((listing, ) => (
                 <ProductListingCard
                   key = {listing.id, };
                   listing = {listing, };
                   onRequestQuote = {handleRequestQuote, };
                   detailBasePath="/marketplace / listing"
                 />))}
-                </div>)}
-                </div>
-                </$1></$1>
+            </div>)}
+          </div></$1></$1>
     </>)
 }
-                </$1>
-                </div></div>
-                </div></div>;
+
+</$1></div></div></div></div>

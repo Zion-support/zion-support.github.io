@@ -1,10 +1,16 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import Link from 'next/link';
-import { ArrowRight, Calculator, Building2, Wallet, PiggyBank, BarChart, TrendingUp, CheckCircle, Brain, Settings, BarChart3, Shield, Target, Zap, Globe, DollarSign, Activity, Lock, FileText, CreditCard, Database, Star, Sparkles, PieChart, Send, Clock } from 'lucide-react';
-
-const AiFinancialAnalyticsProPage: React.FC = () => {
+import { ArrowRight, Calculator, Building2, Wallet, TrendingUp, CheckCircle, Brain, BarChart3, Shield, Target, Zap, Globe, DollarSign, Activity, Lock, FileText, CreditCard, Database, Star, Sparkles, PieChart } from 'lucide-react';
+import { Metadata } from 'next';
+export const metadata: Metadata = {
+    title: 'AI Financial Analytics Pro - Zion Tech Group | Advanced Financial Intelligence Platform',
+      description: 'Transform your financial analysis with AI Financial Analytics Pro. Advanced machine learning, real-time insights, and predictive analytics for smarter financial decisions. Start your free trial today.',
+  keywords: 'AI financial analytics, financial intelligence, predictive analytics, financial reporting, business intelligence, Zion Tech Group',
+  openGraph: {
+    title: 'AI Financial Analytics Pro - Advanced Financial Intelligence Platform',
+      description: 'Transform your financial analysis with AI-powered insights, real-time analytics, and predictive modeling. Make smarter financial decisions with advanced intelligence.',
+    type: 'website',
+    url: 'https://ziontechgroup.com/ai-financial-analytics-pro'}}
+export default function AiFinancialAnalyticsProPage() {
   const features = [
     {
       icon: Brain,
@@ -273,7 +279,7 @@ const AiFinancialAnalyticsProPage: React.FC = () => {
               <div key={index} className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700 hover: border-cyan-500/30 transition-all duration-300 group">
                 <div className="mb-6">
                   <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl mx-auto mb-4 group-hover: scale-110 transition-transform">
-                    <feature.icon className="w-12 h-12 text-cyan-400" />
+                    <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3 text-center">{feature.title}</h3>
                   <p className="text-gray-300 mb-4 text-center">{feature.description}</p>
@@ -455,7 +461,5 @@ const AiFinancialAnalyticsProPage: React.FC = () => {
         </section>
       </div>
     </div>
-  );
-};
-
-export default AiFinancialAnalyticsProPage;
+  )
+}

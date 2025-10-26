@@ -8,12 +8,12 @@ const Button: React.FC<{
   className?: string,
   children: React.ReactNode
   }> = ({ onClick, className = '', children }) => (
-  <button onClick={onClick} className={`px-4 py-2 rounded ${className}`}></button>
+  <button onClick={onClick} className={`px-4 py-2 rounded ${className}`}>
 const,
   Button: React.FC<{/* TODO: Fix JSX expression */}
-}> = ({ onClick, className = '', children }) => (<button onClick={onClick} className={`px-4 py-2 rounded ${className}`}></button>
-                {children}
-                </button>)
+}> = ({ onClick, className = '', children }) => (<button onClick={onClick} className={`px-4 py-2 rounded ${className}`}>
+    {children}
+  </button>)
 )
 // Simple logger replacement
 const logger = {
@@ -22,18 +22,15 @@ const logger = {/* TODO: Fix JSX expression */};
     //     },
   war,
   n: (messag)
-  e: string, error?: unknown, meta?: unknown) =>
-                {/* TODO: Fix JSX expression */}
+  e: string, error?: unknown, meta?: unknown) => {/* TODO: Fix JSX expression */}
     //     },
   inf,
   o: (messag)
-  e: string, meta?: unknown) =>
-                {/* TODO: Fix JSX expression */}
+  e: string, meta?: unknown) => {/* TODO: Fix JSX expression */}
     //     },
   debu,
   g: (messag)
-  e: string, meta?: unknown) =>
-                {/* TODO: Fix JSX expression */}
+  e: string, meta?: unknown) => {/* TODO: Fix JSX expression */}
     //     }}
 `
-</button>;
+</button>

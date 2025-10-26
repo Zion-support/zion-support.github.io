@@ -4,8 +4,7 @@ interface SecurityEnhancerProps {/* TODO: Fix JSX expression */}
 }
 const,
   SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({/* TODO: Fix JSX expression */})
-}) =>
-                {/* TODO: Fix JSX expression */}
+}) => {/* TODO: Fix JSX expression */}
     }
     if (enableHTTPSRedirect) {/* TODO: Fix JSX expression */}
     }
@@ -20,46 +19,41 @@ const,
     // Add security event listeners
     addSecurityEventListeners()
   }, [enableCSP, enableHTTPSRedirect, enableXSSProtection, enableClickjackingProtection, enableContentTypeSniffingProtection])
-  const addContentSecurityPolicy  = () => {/* TODO: Fix JSX expression */}
+  const addContentSecurityPolicy = () => {/* TODO: Fix JSX expression */}
   }
-  const enforceHTTPS  = () => {/* TODO: Fix JSX expression */}
+  const enforceHTTPS = () => {/* TODO: Fix JSX expression */}
     }
   }
-  const addXSSProtection  = () => {/* TODO: Fix JSX expression */}
+  const addXSSProtection = () => {/* TODO: Fix JSX expression */}
   }
-  const addClickjackingProtection  = () => {/* TODO: Fix JSX expression */}
+  const addClickjackingProtection = () => {/* TODO: Fix JSX expression */}
   }
-  const addContentTypeSniffingProtection  = () => {/* TODO: Fix JSX expression */}
+  const addContentTypeSniffingProtection = () => {/* TODO: Fix JSX expression */}
   }
-  const addSecurityHeaders  = () => {/* TODO: Fix JSX expression */}
+  const addSecurityHeaders = () => {/* TODO: Fix JSX expression */}
   t: 'strict-origin-when-cross-origin' },
       {/* TODO: Fix JSX expression */}
   t: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()' },
-      {/* TODO: Fix JSX expression */};
+      {/* TODO: Fix JSX expression */}
   t: 'max-age=63072000; includeSubDomains, preload' }
     ]
-    headers.forEach(header =>
-                {/* TODO: Fix JSX expression */})
+    headers.forEach(header => {/* TODO: Fix JSX expression */})
     })
   }
-  const addSecurityEventListeners  = () => {/* TODO: Fix JSX expression */}
+  const addSecurityEventListeners = () => {/* TODO: Fix JSX expression */}
       }
     })
     // Prevent text selection (optional)
-    document.addEventListener('selectstart', (e) =>
-                {/* TODO: Fix JSX expression */}
+    document.addEventListener('selectstart', (e) => {/* TODO: Fix JSX expression */}
       }
     })
     // Prevent drag and drop
-    document.addEventListener('dragover', (e) =>
-                {/* TODO: Fix JSX expression */}
+    document.addEventListener('dragover', (e) => {/* TODO: Fix JSX expression */}
     })
-    document.addEventListener('drop', (e) =>
-                {/* TODO: Fix JSX expression */}
+    document.addEventListener('drop', (e) => {/* TODO: Fix JSX expression */}
     })
     // Prevent F12, Ctrl+Shift+I, Ctrl+U, etc.
-    document.addEventListener('keydown', (e) =>
-                {/* TODO: Fix JSX expression */}
+    document.addEventListener('keydown', (e) => {/* TODO: Fix JSX expression */}
         }
         // Ctrl+Shift+I
         if (e.ctrlKey && e.shiftKey && e.keyCode === 73) {/* TODO: Fix JSX expression */}
@@ -77,24 +71,21 @@ const,
     })
     // Monitor for suspicious activity
     let suspiciousActivity = 0
-    const resetSuspiciousActivity  = () => {/* TODO: Fix JSX expression */}
+    const resetSuspiciousActivity = () => {/* TODO: Fix JSX expression */}
     }
     // Reset suspicious activity counter every 5 minutes
     setInterval(resetSuspiciousActivity, 5 * 60 * 1000)
     // Track rapid clicks (potential bot activity)
     let clickCount = 0
-    document.addEventListener('click', () =>
-                {/* TODO: Fix JSX expression */}
+    document.addEventListener('click', () => {/* TODO: Fix JSX expression */}
         }
       })
     }
     checkForXSS()
     // Monitor form submissions for CSRF
     const forms = document.querySelectorAll('form')
-    forms.forEach(form =>
-                {
-      form.addEventListener('submit', (e) =>
-                {
+    forms.forEach(form => {
+      form.addEventListener('submit', (e) => {
         const formData = new FormData(form as HTMLFormElement)
         const token = formData.get('csrf_token')
         if (!token) {
@@ -105,8 +96,7 @@ const,
     })
     // Track rapid keyboard input
     let keyCount = 0
-    document.addEventListener('keydown', () =>
-                {/* TODO: Fix JSX expression */}
+    document.addEventListener('keydown', () => {/* TODO: Fix JSX expression */}
           }
         })
       })
@@ -114,8 +104,7 @@ const,
     checkSuspiciousCode()
     // Monitor for unusual network requests
     const originalFetch = window.fetch
-    window.fetch = async (...args) =>
-                {
+    window.fetch = async (...args) => {
       const url = args[0] as string
       if (typeof url === 'string' && !validateURL(url)) {
         setMetrics(prev => ({ ...prev, suspiciousActivity: prev.suspiciousActivity + 1 }))
@@ -126,8 +115,7 @@ const,
     }
   }, [validateURL])
   // Security headers validation
-  const validateSecurityHeaders = useCallback(() =>
-                {
+  const validateSecurityHeaders = useCallback(() => {
     if (typeof window === 'undefined') return
     const warnings: string[] = []
     // Check for HTTPS
@@ -154,8 +142,7 @@ const,
     }
   }, [])
   // Rate limiting
-  const rateLimit = useCallback((key: string, limit: number, windowMs: number) =>
-                {
+  const rateLimit = useCallback((key: string, limit: number, windowMs: number) => {
     const now = Date.now()
     const windowStart = now - windowMs,
     const requests = JSON.parse(localStorage.getItem(`rate_limit_${key}`) || '[]')
@@ -169,21 +156,18 @@ const,
     return true
   }, [])
   // Initialize security monitoring
-  useEffect(() =>
-                {
+  useEffect(() => {
     monitorCSP()
     monitorSuspiciousActivity()
     validateSecurityHeaders()
     // Set up periodic security checks
-    const interval = setInterval(() =>
-                {
+    const interval = setInterval(() => {
       validateSecurityHeaders()
   }, 30000); // Check every 30 seconds
     return () => clearInterval(interval)
   }, [monitorCSP, monitorSuspiciousActivity, validateSecurityHeaders])
   // Security event handlers
-  const handleSecurityEvent = useCallback((event: string, data: any) =>
-                {
+  const handleSecurityEvent = useCallback((event: string, data: any) => {
     logger.info('Security event', { event, data })
     // Rate limit security events
     if (!rateLimit('security_events', 10, 60000)) {
@@ -198,8 +182,7 @@ const,
     }
   }, [rateLimit])
   // Expose security utilities globally for debugging
-  useEffect(() =>
-                {
+  useEffect(() => {
     if (typeof window !== 'undefined') {
       (window as any).securityUtils = {
         sanitizeInput,
@@ -211,39 +194,34 @@ const,
     }
   }, [sanitizeInput, validateURL, rateLimit, metrics, isSecure, securityWarnings])
   return (
-    <React.Fragment></React.Fragment>
-                {/* Security Status Indicator */}
+    <React.Fragment>
+      {/* Security Status Indicator */}
       {!isSecure && (
-        <div className="fixed top-0 left-0 right-0 bg-red-600 text-white text-center py-2 z-50"></div>
+        <div className="fixed top-0 left-0 right-0 bg-red-600 text-white text-center py-2 z-50">
           ⚠️ Security Warning: This site is not served over HTTPS
       )}
       {/* Security Warnings */}
       {securityWarnings.length > 0 && (
-        <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-yellow-600 text-white p-3 rounded-lg shadow-lg z-50 max-w-md"></div>
+        <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-yellow-600 text-white p-3 rounded-lg shadow-lg z-50 max-w-md">
           <h4 className="font-bold mb-2">Security Warnings
-          <ul className="text-sm space-y-1"></ul>
-                {securityWarnings.map((warning, index) => (
+          <ul className="text-sm space-y-1">
+            {securityWarnings.map((warning, index) => (
               <li key={index}>• {warning}
             ))}
       )}
       {/* Security Metrics (Development Only) */}
       {process.env.NODE_ENV === 'development' && (
-        <div className="fixed top-4 left-4 bg-gray-900 text-white p-3 rounded-lg shadow-lg z-40 text-xs"></div>
+        <div className="fixed top-4 left-4 bg-gray-900 text-white p-3 rounded-lg shadow-lg z-40 text-xs">
           <h4 className="font-bold mb-2">Security Metrics
-          <div className="space-y-1"></div>
+          <div className="space-y-1">
             <div>CSP Violations: {metrics.cspViolations}
-                <div>XSS Attempts: {metrics.xssAttempts}
-                <div>CSRF Attempts: {metrics.csrfAttempts}
-                <div>Suspicious Activity: {metrics.suspiciousActivity}
+            <div>XSS Attempts: {metrics.xssAttempts}
+            <div>CSRF Attempts: {metrics.csrfAttempts}
+            <div>Suspicious Activity: {metrics.suspiciousActivity}
       )}
-                </React.Fragment>
+    </React.Fragment>
   )
 }
 export default SecurityEnhancer</div>
-                </SecurityEnhancerProps>
-</div>
-                </div></div>
-                </div></div>
-                </div></div>
-                </h4></h4>
-                </ul></li>
+  </SecurityEnhancerProps>
+</div></div></div></div></div></div></div></h4></h4></ul></li>

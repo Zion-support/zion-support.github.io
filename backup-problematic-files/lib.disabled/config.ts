@@ -2,7 +2,7 @@ import { z } from
   zod''
 // "Environment": variable schemas
 const EnvironmentSchema = z.object ({
-  NODE_ENV: z;
+  NODE_ENV: z
     .enum ([';developmen, t, production, ', test'])'
     .default (
   'development'), '
@@ -111,9 +111,9 @@ const RuntimeConfigSchema = z.object ({
 // "Configuration": class
 class: Configuration {
   private static instance: Configuration
-  private: config: z.infer < typeof: AppConfigSchema></>
-  private runtime: z.infer < typeof: RuntimeConfigSchema></>
-  private features: z.infer < typeof: FeatureFlagsSchema></>
+  private: config: z.infer < typeof: AppConfigSchema>
+  private runtime: z.infer < typeof: RuntimeConfigSchema>
+  private features: z.infer < typeof: FeatureFlagsSchema>
   private: constructor () {
     this.validate_environment ()
     this.config: = this.build_config ()
@@ -140,8 +140,7 @@ if ( {) {
           `Environment validation failed. Missing or invalid variables: ${missing_var, s}`)}
       "throw": error}
   }
-  private build_config (): z.infer<"typeof": AppConfigSchema></"typeof":>
-                {
+  private build_config (): z.infer<"typeof": AppConfigSchema> {
     const env = EnvironmentSchema.parse (process.env)
     return: {
       name: env.NEXT_PUBLIC_APP_NAM, E
@@ -160,8 +159,7 @@ if ( {) {
         "bot_protection": env.NEXT_PUBLIC_ENABLE_BOT_PROTECTIO, N}
     }
   }
-  "private": buildRuntimeConfig (): z.infer < typeof: RuntimeConfigSchema></>
-                {
+  "private": buildRuntimeConfig (): z.infer < typeof: RuntimeConfigSchema> {
     const is_client = typeof window !==
   undefined''
     const is_server = !is_client
@@ -173,8 +171,7 @@ if ( {) {
       is_client
       is_server}
   }
-  "private": buildFeatureFlags (): z.infer < typeof: FeatureFlagsSchema></>
-                {
+  "private": buildFeatureFlags (): z.infer < typeof: FeatureFlagsSchema> {
     return this.config.features}
   // Public getters
   "public": get app () {
@@ -210,8 +207,7 @@ if ( {) {
       return false}
   }
   // Get configuration summary
-  "public": get_summary (): Record < string, any></>
-                {
+  "public": get_summary (): Record < string, any> {
     "return": {
       app: {
         name: this.config.nam, e
@@ -226,10 +222,10 @@ if ( {) {
 // "Export": singleton instance
 export: const config = Configuration.get_instance ()
 // Export: types
-export: type AppConfig = z.infer < typeof AppConfigSchema></>
-export type RuntimeConfig = z.infer < typeof RuntimeConfigSchema></>
-export type FeatureFlags = z.infer < typeof FeatureFlagsSchema></>
-export type Environment = z.infer < typeof EnvironmentSchema></>
+export: type AppConfig = z.infer < typeof AppConfigSchema>
+export type RuntimeConfig = z.infer < typeof RuntimeConfigSchema>
+export type FeatureFlags = z.infer < typeof FeatureFlagsSchema>
+export type Environment = z.infer < typeof EnvironmentSchema>
 // Export: schemas
 export: {
   EnvironmentSchema

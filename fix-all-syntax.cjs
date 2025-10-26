@@ -1,96 +1,94 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
-// Function to fix common syntax issues
-function fixSyntaxIssues(content) {
-  let fixed = content;
+// Fix all remaining syntax issues
+function fixAllSyntax() {
+  console.log('🔧 Fixing all remaining syntax issues...');
   
-  // Fix missing closing braces in interfaces
-  fixed = fixed.replace(/(interface\s+\w+\s*\{[^}]*?)(\n\w+)/g, (match, interfacePart, nextLine) => {
-    if (!interfacePart.includes('}')) {
-      return interfacePart + '\n}' + nextLine;
+  // Get all TypeScript/JSX files
+  const files = execSync('find /workspace -name "*.tsx" -o -name "*.ts" | grep -v node_modules', { encoding: 'utf8' })
+    .trim().split('\n').filter(line => line.trim());
+  
+  let fixed = 0;
+  
+  files.forEach(file => {
+    try {
+      let content = fs.readFileSync(file, 'utf8');
+      const originalContent = content;
+      
+      // Fix extra closing braces at the end
+      content = content.replace(/\n\s*}\s*}\s*}\s*$/g, '\n}');
+      content = content.replace(/\n\s*}\s*}\s*$/g, '\n}');
+      content = content.replace(/\n\s*}\s*$/g, '\n}');
+      
+      // Fix missing closing braces in useEffect
+      content = content.replace(/if \(typeof window !== 'undefined'\) \{\s*console\.log\([^)]+\);\s*\n\s*\n\s*\}, \[\]\);/g, 
+        'if (typeof window !== \'undefined\') {\n      console.log(\'Zion Tech Group App initialized\');\n    }\n  }, []);');
+      
+      // Fix incomplete function declarations
+      content = content.replace(/export default function[^{]*\{[^}]*$/g, (match) => {
+        if (!match.includes('}')) {
+          return match + '\n  return null;\n}';
+        }
+        return match;
+      });
+      
+      // Remove orphaned closing braces
+      const lines = content.split('\n');
+      let braceCount = 0;
+      const fixedLines = [];
+      
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        const openBraces = (line.match(/\{/g) || []).length;
+        const closeBraces = (line.match(/\}/g) || []).length;
+        
+        braceCount += openBraces - closeBraces;
+        
+        // Skip extra closing braces at the end
+        if (i === lines.length - 1 && braceCount < 0) {
+          continue;
+        }
+        
+        fixedLines.push(line);
+      }
+      
+      content = fixedLines.join('\n');
+      
+      // Clean up multiple empty lines
+      content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+      
+      if (content !== originalContent) {
+        fs.writeFileSync(file, content);
+        console.log(`✅ Fixed: ${file}`);
+        fixed++;
+      }
+    } catch (error) {
+      console.log(`⚠️  Could not process ${file}: ${error.message}`);
     }
-    return match;
   });
   
-  // Fix missing semicolons after interface declarations
-  fixed = fixed.replace(/(interface\s+\w+\s*\{[^}]*\})\s*(\n\w+)/g, '$1;\n$2');
-  
-  // Fix missing closing braces in function declarations
-  fixed = fixed.replace(/(const\s+\w+:\s*React\.FC<[^>]*>\s*=\s*\([^)]*\)\s*=>\s*\{[^}]*?)(\n\w+)/g, (match, funcPart, nextLine) => {
-    if (!funcPart.includes('}')) {
-      return funcPart + '\n}' + nextLine;
-    }
-    return match;
-  });
-  
-  // Fix missing closing parentheses in function calls
-  fixed = fixed.replace(/(\w+\([^)]*?)(\n\s*[a-zA-Z])/g, (match, callPart, nextLine) => {
-    if (!callPart.includes(')') && callPart.includes('(')) {
-      return callPart + ')' + nextLine;
-    }
-    return match;
-  });
-  
-  // Fix malformed className attributes (missing spaces)
-  fixed = fixed.replace(/className="([^"]*?)([a-zA-Z])([a-zA-Z])/g, (match, before, char1, char2) => {
-    return `className="${before}${char1} ${char2}`;
-  });
-  
-  // Fix missing semicolons at end of statements
-  fixed = fixed.replace(/(\w+)\s*(\n\s*[a-zA-Z])/g, (match, statement, nextLine) => {
-    if (!statement.includes(';') && !statement.includes('{') && !statement.includes('}') && !statement.includes('=')) {
-      return statement + ';' + nextLine;
-    }
-    return match;
-  });
-  
+  console.log(`\n📊 Fixed ${fixed} files`);
   return fixed;
 }
 
-// Function to recursively find all TypeScript/JavaScript files
-function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
-  const files = [];
-  
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath);
-      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
-        files.push(fullPath);
-      }
-    }
-  }
-  
-  traverse(dir);
-  return files;
-}
+// Run the fix
+const fixed = fixAllSyntax();
 
-// Main execution
-const appDir = path.join(__dirname, 'app');
-const files = findFiles(appDir);
-
-console.log(`Found ${files.length} files to process...`);
-
-let fixedCount = 0;
-for (const file of files) {
+if (fixed > 0) {
+  console.log('\n🎉 Running final checks...');
   try {
-    const content = fs.readFileSync(file, 'utf8');
-    const fixed = fixSyntaxIssues(content);
-    
-    if (content !== fixed) {
-      fs.writeFileSync(file, fixed);
-      console.log(`Fixed: ${file}`);
-      fixedCount++;
-    }
+    execSync('cd /workspace && pnpm run type-check 2>&1 | head -10', { stdio: 'inherit' });
   } catch (error) {
-    console.error(`Error processing ${file}:`, error.message);
+    console.log('Type check completed with some issues');
+  }
+  
+  try {
+    execSync('cd /workspace && pnpm run lint 2>&1 | head -10', { stdio: 'inherit' });
+  } catch (error) {
+    console.log('Lint check completed with some issues');
   }
 }
-
-console.log(`Fixed ${fixedCount} files`);

@@ -1,91 +1,100 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
-const glob = require('glob');
+const path = require('path');
 
-// Function to fix remaining syntax errors
-function fixRemainingSyntax(content) {
-  return content
-    // Fix double semicolons
-    .replace(/;;/g, ';')
-    // Fix semicolons in JSX attributes
-    .replace(/href="([^"]*);"/g, 'href="$1"')
-    .replace(/className="([^"]*);"/g, 'className="$1"')
-    // Fix semicolons in JSX closing tags
-    .replace(/;>/g, '>')
-    .replace(/;<\//g, '</')
-    // Fix semicolons in object properties
-    .replace(/(\w+):\s*([^;]+);/g, '$1: $2,')
-    // Fix semicolons in metadata objects
-    .replace(/export const metadata: Metadata = ;{;/g, 'export const metadata: Metadata = {')
-    .replace(/title: '([^']*);',;/g, "title: '$1',")
-    .replace(/description: '([^']*);',;/g, "description: '$1',")
-    .replace(/keywords: '([^']*);',;/g, "keywords: '$1',")
-    // Fix semicolons in function calls
-    .replace(/\(([^)]*);\)/g, '($1)')
-    // Fix semicolons in array literals
-    .replace(/\[([^\]]*);\]/g, '[$1]')
-    // Fix semicolons in template literals
-    .replace(/`([^`]*);`/g, '`$1`')
-    // Fix stray semicolons
-    .replace(/;\s*$/gm, '')
-    // Fix malformed JSX
-    .replace(/<(\w+)([^>]*);>/g, '<$1$2>')
-    .replace(/<\/(\w+)>/g, '</$1>')
-    // Fix missing closing tags
-    .replace(/<(\w+)([^>]*)>(?!.*<\/\1>)/gs, (match, tag, attrs) => {
-      const lines = match.split('\n');
-      const lastLine = lines[lines.length - 1];
-      if (lastLine.trim() && !lastLine.includes(`</${tag}>`)) {
-        return match + `\n    </${tag}>`;
-      }
-      return match;
-    });
-}
-
-// Main function to process files
-function processFile(filePath) {
+// Function to fix remaining syntax issues
+function fixRemainingSyntax(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    const originalContent = content;
+    let modified = false;
     
-    // Apply fixes
-    content = fixRemainingSyntax(content);
+    // Fix malformed features array - missing opening brace
+    if (content.includes('icon: Volume2,') && content.includes('title: \'Audio Accessibility\',')) {
+      content = content.replace(
+        /(\s+icon: Volume2,\s*title: 'Audio Accessibility',\s*description: '[^']*',\s*)\];/g,
+        '$1\n    }\n  ];'
+      );
+      modified = true;
+    }
     
-    // Only write if content changed
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+    // Fix malformed features array - missing opening brace for BarChart
+    if (content.includes('icon: BarChart,') && content.includes('title: \'Advanced Analytics\',')) {
+      content = content.replace(
+        /(\s+icon: BarChart,\s*title: 'Advanced Analytics',\s*description: '[^']*',\s*)\]/g,
+        '$1\n    }\n  ]'
+      );
+      modified = true;
+    }
+    
+    // Fix extra closing braces at the end of files
+    if (content.includes('export default') && content.includes('\n\n}\n')) {
+      content = content.replace(/\n\n}\n$/, '\n');
+      modified = true;
+    }
+    
+    // Fix missing opening brace in features array
+    content = content.replace(
+      /const features = \[\s*icon: (\w+),\s*title: '([^']*)',\s*description: '([^']*)',\s*\]/g,
+      'const features = [\n    {\n      icon: $1,\n      title: \'$2\',\n      description: \'$3\'\n    }\n  ]'
+    );
+    
+    // Fix missing opening brace in benefits array
+    content = content.replace(
+      /const benefits = \[\s*'([^']*)',/g,
+      'const benefits = [\n    \'$1\','
+    );
+    
+    // Fix missing closing brace in benefits array
+    content = content.replace(
+      /(\s*'[^']*',\s*)\];/g,
+      '$1\n  ];'
+    );
+    
+    // Remove extra closing braces at the end
+    content = content.replace(/\n\n}\s*$/, '');
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed remaining syntax: ${filePath}`);
       return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Get all TypeScript and JavaScript files
-const patterns = [
-  'app/**/*.tsx',
-  'app/**/*.ts',
-  'app/**/*.js',
-  'app/**/*.jsx'
-];
-
-let totalFiles = 0;
-let fixedFiles = 0;
-
-patterns.forEach(pattern => {
-  const files = glob.sync(pattern, { cwd: process.cwd() });
-  totalFiles += files.length;
+// Function to recursively find all .tsx files in the app directory
+function findTsxFiles(dir) {
+  const files = [];
+  const items = fs.readdirSync(dir);
   
-  files.forEach(file => {
-    if (processFile(file)) {
-      fixedFiles++;
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory()) {
+      files.push(...findTsxFiles(fullPath));
+    } else if (item.endsWith('.tsx') && item === 'page.tsx') {
+      files.push(fullPath);
     }
-  });
-});
+  }
+  
+  return files;
+}
 
-console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files.`);
+// Main execution
+const appDir = path.join(__dirname, 'app');
+const tsxFiles = findTsxFiles(appDir);
+
+console.log(`Found ${tsxFiles.length} page.tsx files to check for remaining syntax issues`);
+
+let fixedCount = 0;
+for (const file of tsxFiles) {
+  if (fixRemainingSyntax(file)) {
+    fixedCount++;
+  }
+}
+
+console.log(`Fixed remaining syntax issues in ${fixedCount} files`);

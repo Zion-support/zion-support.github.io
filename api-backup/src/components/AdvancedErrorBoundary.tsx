@@ -22,8 +22,7 @@ interface ErrorReport {
   errorUserAgent: string | null,
   errorUrl: string | null
   }
-class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState></ErrorBoundaryProps,>
-                {
+class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
     super(props),
     this.state = {
@@ -33,8 +32,7 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       errorId: null
     };
   }
-  static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState></ErrorBoundaryState>
-                {
+  static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
     return {
       hasError: true,
       error,
@@ -56,8 +54,7 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     this.reportError(error, errorInfo)
   }
   }
-  private reportError = async (error: Error, errorInfo: ErrorInfo) =>
-                {
+  private reportError = async (error: Error, errorInfo: ErrorInfo) => {
     try {
       const errorReport: ErrorReport = {
         errorId: this.state.errorId,
@@ -83,8 +80,7 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     console.error('Failed to report error:', reportError)
   }
   }
-  private handleRetry = () =>
-                {
+  private handleRetry = () => {
     this.setState({
       hasError: false,
       error: null,
@@ -92,8 +88,7 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       errorId: null
     })
   }
-  private handleReload = () =>
-                {
+  private handleReload = () => {
     if (typeof window !== 'undefined') {
       window.location.reload()
   }
@@ -104,24 +99,24 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
         return this.props.fallback
   }
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50"></div>
-          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6"></div>
-            <div className="flex items-center mb-4"></div>
-              <div className="flex-shrink-0"></div>
-                <svg className="h-8 w-8 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"></svg>
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
+            <div className="flex items-center mb-4">
+              <div className="flex-shrink-0">
+                <svg className="h-8 w-8 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
-              <div className="ml-3"></div>
+              <div className="ml-3">
                 <h3 className="text-lg font-medium text-gray-900">Something went wrong
-                <p className="text-sm text-gray-500"></p>
+                <p className="text-sm text-gray-500">
                   We're sorry, but something unexpected happened.
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-md"></div>
+              <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-md">
                 <h4 className="text-sm font-medium text-red-800 mb-2">Error Details:
-                <pre className="text-xs text-red-700 overflow-auto"></pre>
-                {this.state.error.message}
+                <pre className="text-xs text-red-700 overflow-auto">
+                  {this.state.error.message}
                   {this.state.error.stack && `\n\n${this.state.error.stack}`}
             )}
-                <div className="flex space-x-3"></div>
+            <div className="flex space-x-3">
               <$2 />
                 onClick={this.handleRetry}
                 className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
@@ -133,8 +128,8 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
                 Reload Page,
   
             </div>
-                {this.state.errorId && (
-              <p className="mt-4 text-xs text-gray-500 text-center"></p>
+            {this.state.errorId && (
+              <p className="mt-4 text-xs text-gray-500 text-center">
                 Error ID: {this.state.errorId}
             )}
       )
@@ -142,10 +137,4 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     return this.props.children
   }
 }
-export default AdvancedErrorBoundary</div>
-                </div></div>
-                </div></div>
-                </div></div>
-                </p></p>
-                </p></p>
-                </h3></h4>;
+export default AdvancedErrorBoundary</div></div></div></div></div></div></div></p></p></p></p></h3></h4>

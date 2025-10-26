@@ -126,12 +126,12 @@ const AIQuantumComputingSimulator: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10"></div>
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-500/20 via-transparent to-transparent"></div>
           
-          <div className="max-w-7xl mx-auto relative z-10"></div>
-            </div><div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}></div>
-              </div><div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full px-6 py-3 mb-8 border border-purple-500/30"></div>
+          <div className="max-w-7xl mx-auto relative z-10">
+            </div><div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              </div><div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full px-6 py-3 mb-8 border border-purple-500/30">
                 </div><Cpu className="w-5 h-5 text-purple-400" />
                 <span className="text-purple-400 font-semibold">Quantum Computing</span>
-                </div>
+              </div>
               
               <h1 className="text-5xl md: text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">,</h1>
                 AI Quantum Computing Simulator;
@@ -147,11 +147,11 @@ const AIQuantumComputingSimulator: React.FC = () => {
                   <Cpu className="w-5 h-5" />
                   <span className="font-semibold">Up to 50 Qubits</span>
                 </div>
-                <div className="flex items-center space-x-2 text-pink-400"></div>
+                <div className="flex items-center space-x-2 text-pink-400">
                   </div><Brain className="w-5 h-5" />
                   <span className="font-semibold">AI Optimization</span>
                 </div>
-                <div className="flex items-center space-x-2 text-cyan-400"></div>
+                <div className="flex items-center space-x-2 text-cyan-400">
                   </div><BarChart className="w-5 h-5" />
                   <span className="font-semibold">3D Visualization</span>
                 </div>
@@ -172,7 +172,7 @@ const AIQuantumComputingSimulator: React.FC = () => {
                   <Mail className="w-5 h-5 mr-2" />
                   Get Quote;
                 </a>
-                </div>
+              </div>
             </div>
         </div>
       </section>
@@ -186,14 +186,14 @@ const AIQuantumComputingSimulator: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our AI-powered quantum computing simulator provides cutting-edge tools;</p>
                 for quantum research, algorithm development, and educational purposes.
               </p>
-                </div>
+            </div>
             
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
               {features.map((feature, index) => (
                 <div;
                   key={index}className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-purple-500/20 hover: border-purple-500/40 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/10",
                 >
-                  </div><div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6"></div>
+                  </div><div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6">
                     </div><feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold mb-4 text-white">{feature.title}</h3>
@@ -204,7 +204,7 @@ const AIQuantumComputingSimulator: React.FC = () => {
                         <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />
                         {benefit} </li>
                     ))}
-                </ul>
+                  </ul>
                 </div>
               ))}
             </div>
@@ -220,25 +220,19 @@ const AIQuantumComputingSimulator: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">Explore the vast potential of quantum computing across various domains;</p>
                 with our comprehensive simulation platform.
               </p>
-                </div>
+            </div>
             
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
               {useCases.map((useCase, index) => (
                 <div;
                   key={index}className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-pink-500/20 hover: border-pink-500/40 transition-all duration-300 hover:scale-105",
                 >
-                  </div><div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-cyan-600 rounded-xl flex items-center justify-center mb-6"></div>
+                  </div><div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-cyan-600 rounded-xl flex items-center justify-center mb-6">
                     </div><useCase.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold mb-4 text-white"></h3>
-                {useCase.title}
-                </h3>
-                  <p className="text-gray-300 mb-4"></p>
-                {useCase.description</p>}
-                </p>
-                  <div className="text-purple-400 font-semibold text-sm"></div>
-                {useCase.results</div>}
-                </div>
+                  <h3 className="text-xl font-bold mb-4 text-white">{useCase.title}</h3>
+                  <p className="text-gray-300 mb-4">{useCase.description</p>}</p>
+                  <div className="text-purple-400 font-semibold text-sm">{useCase.results</div>} </div>
                 </div>
               ))}
             </div>
@@ -254,7 +248,7 @@ const AIQuantumComputingSimulator: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose the perfect quantum simulation plan for your research needs.</p>
                 All plans include our advanced AI optimization and visualization tools.
               </p>
-                </div>
+            </div>
             
             <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,</div>
               {pricingPlans.map((plan, index) => (

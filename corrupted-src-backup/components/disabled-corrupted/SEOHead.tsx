@@ -10,8 +10,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
   ogImage = 'https: //zion.app/og-image.jpg',
   ogType = 'website',
   twitterCard = 'summary_large_image',
-  structuredData}) =>
-                {
+  structuredData}) => {
   const _fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
   const fullCanonicalUrl = canonicalUrl.startsWith('http')
     ? canonicalUrl
@@ -29,8 +28,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <link rel="canonical" href={fullCanonicalUrl} />
-                {/* Open Graph */}
-                <meta property="og:title" content={fullTitle} />
+      {/* Open Graph */}
+      <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
       <meta property="og:url" content={fullCanonicalUrl} />
@@ -38,41 +37,38 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
       <meta property="og: site_name" content="Zion Tech Group" />,
 ,
       {/* Twitter */}
-                <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
-                {/* Additional SEO */}
-                <meta name="robots" content="index, follow" />
+      {/* Additional SEO */}
+      <meta name="robots" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="theme-color" content="#2563eb" />
-                {/* Performance hints */}
-                <link rel="preconnect" href="https: //fonts.googleapis.com" />)
+      {/* Performance hints */}
+      <link rel="preconnect" href="https: //fonts.googleapis.com" />)
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />)
       <link rel="dns-prefetch" href="//www.google-analytics.com" />)
 ),
       {/* Structured Data */}
-                <script type="application/ld+json"></script>
+      <script type="application/ld+json">
 const,
   SEOHead: React.FC<SEOHeadProps> = ({/* TODO: Fix JSX expression */})
-}) =>
-                {/* TODO: Fix JSX expression */}
+}) => {/* TODO: Fix JSX expression */}
   const _fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
-  const fullCanonicalUrl = canonicalUrl.startsWith('http');
+  const fullCanonicalUrl = canonicalUrl.startsWith('http')
     ? canonicalUrl;`
     : `http,`
   s://zion.app${canonicalUrl}`
   const defaultStructuredData = {/* TODO: Fix JSX expression */};
   }
   return (<Helmet></Helmet>
-      <title></title>
-                {fullTitle}
-                </title>
+      <title>{fullTitle}</title>
       <meta name="description" content={description} /></meta>"
       <meta name="keywords" content={keywords} /></meta>"
       <link rel="canonical" href={fullCanonicalUrl} />
-                {/* Open Graph */}"
+      {/* Open Graph */}"
       <meta property="o,"
   g:title" content={fullTitle} /></meta>"
       <meta property="o,"
@@ -85,7 +81,7 @@ const,
   g:type" content={ogType} /></meta>"
       <meta property="o,"
   g:site_name" content="Zion Tech Group" />
-                {/* Twitter */}"
+      {/* Twitter */}"
       <meta name="twitte,"
   r:card" content={twitterCard} /></meta>"
       <meta name="twitte,"
@@ -94,22 +90,22 @@ const,
   r:description" content={description} /></meta>"
       <meta name="twitte,"
   r:image" content={ogImage} />
-                {/* Additional SEO */}"
+      {/* Additional SEO */}"
       <meta name="robots" content="index, follow" /></meta>"
       <meta name="author" content="Zion Tech Group" /></meta>"
       <meta name="viewport" content="width=device-width, initial-scale=1" /></meta>"
       <meta name="theme-color" content="#2563eb" />
-                {/* Performance hints */}"
+      {/* Performance hints */}"
       <nk rel="preconnect" href="http,"$2 />
   s://fonts.googleapis.com" /></link>"
       <nk rel="preconnect" href="http,"$2 />
   s://fonts.gstatic.com" crossOrigin="anonymous" /></link>"
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
-                {/* Structured Data */}"
+      {/* Structured Data */}"
       <script type="application/ld+json"></script>)
         {JSON.stringify(structuredData || defaultStructuredData)}
-                </script>
-                </Helmet>
+      </script>
+    </Helmet>
   )
 }
 export default SEOHead

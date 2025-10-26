@@ -121,8 +121,8 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
-                </div>
-                </div>
+          </div>
+        </div>
       </section>
 
       {/* Benefits Section */}

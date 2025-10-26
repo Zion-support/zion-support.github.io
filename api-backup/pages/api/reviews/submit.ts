@@ -1,12 +1,14 @@
   }
   try {
-import type { NextApiRequest, NextApiResponse } from './next';
-import { v4 as uuidv4   } from './uuid';
-import { findProjectById,
+import type { NextApiRequest, NextApiResponse } from './next'
+import { v4 as uuidv4  } from './uuid'
+import {
+  findProjectById,
   hasExistingReview,
   upsert_review,
-  counterpart_role,;
- } from '../../../utils / data_store';import type { Review } from "../../../types / reviews"
+  counterpart_role,
+} from '../../../utils / data_store'
+import type { Review } from "../../../types / reviews"
 export default async /**
  * handler - Function description
  */
@@ -98,4 +100,3 @@ if ( {) {
   } catch (error: any) {
   }
 }
-;

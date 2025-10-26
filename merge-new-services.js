@@ -65,7 +65,7 @@ function mergeServiceBranch(branchName) {,
   3: Enhanced merge function with conflict resolution,
 function mergeServiceBranch(branchName) {/* TODO: Fix JSX expression */}
     execSync(`git fetch origin ${branchName}`, {/* TODO: Fix JSX expression */})
-  o: 'inherit' });
+  o: 'inherit' })
     //Try direct merge first;`
     execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName} - Add new services and deploy updates"`,
       {/* TODO: Fix JSX expression */}

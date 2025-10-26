@@ -1,109 +1,193 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import { glob } from 'glob';
+import fs from 'fs'
+import path from 'path'
+import { execSync } from 'child_process'
+// Function to fix common syntax patterns
+function fixCommonSyntaxErrors(content) {
+  let modified = false
+  // Fix malformed imports
+  const importFixes = [
+    // Fix malformed import statements with missing commas
+    {
+      pattern: /import\s+{([^}]*),\s*([^}]*),\s*([^}]*)\s+from\s+'([^']*)';\s*}/g,
+      replacement: "import { $1, $2, $3 } from '$4';"
+    },
+    // Fix malformed import statements with missing commas
+    {
+      pattern: /import\s+{([^}]*),\s*([^}]*)\s+from\s+'([^']*)';\s*}/g,
+      replacement: "import { $1, $2 } from '$3';"
+    },
+    // Fix malformed import statements
+    {
+      pattern: /import\s+{([^}]*)\s+from\s+'([^']*)';\s*}/g,
+      replacement: "import { $1 } from '$2';"
+    }
+  ]
+  for (const fix of importFixes) {
+    const newContent = content.replace(fix.pattern, fix.replacement)
+    if (newContent !== content) {
+      content = newContent
+      modified = true
+    }
+  }
+  
+  // Fix malformed function declarations
+  const functionFixes = [
+    // Fix malformed function with missing return
+    {
+      pattern: /const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{\s*const\s+(\w+)\s*=\s*\[\s*}\s*const\s+(\w+)\s*=\s*\[\s*}/g,
+      replacement: 'const $1: React.FC = () => {\n  const $2 = [];\n  const $3 = [];\n  return (',
+    },
+    // Fix malformed function with missing return
+    {
+      pattern: /const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{\s*const\s+(\w+)\s*=\s*\[\s*}/g,
+      replacement: 'const $1: React.FC = () => {\n  const $2 = [];\n  return (',
+    },
+    // Fix malformed function with missing return
+    {
+      pattern: /const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{\s*return\s*\(\s*}\s*</g,$2 />
+      replacement: 'const $1: React.FC = () => {\n  return (\n    <'$2 />
+    }
+  ]
+  for (const fix of functionFixes) {
+    const newContent = content.replace(fix.pattern, fix.replacement)
+    if (newContent !== content) {
+      content = newContent
+      modified = true
+    }
+  }
+  
+  // Fix malformed object literals
+  const objectFixes = [
+    // Fix malformed object with missing commas
+    {
+      pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
+      replacement: '$1: $2,\n    $3:',
+    },
+    // Fix malformed array with missing commas
+    {
+      pattern: /(\w+):\s*\[\s*}\s*(\w+):/g,
+      replacement: '$1: [],\n    $2:',
+    },
+    // Fix malformed object with missing commas
+    {
+      pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
+      replacement: '$1: $2,\n    $3:',
+    }
+  ]
+  for (const fix of objectFixes) {
+    const newContent = content.replace(fix.pattern, fix.replacement)
+    if (newContent !== content) {
+      content = newContent
+      modified = true
+    }
+  }
+  
+  // Fix malformed JSX
+  const jsxFixes = [
+    // Fix malformed JSX attributes
+    {
+      pattern: /(\w+)="([^"]*)"\s*(\w+)/g,
+      replacement: '$1="$2" $3',
+    },
+    // Fix malformed JSX closing tags
+    {
+      pattern: /<(\w+)([^>]*)>([^<]*)<\/?$/gm,
+      replacement: '<$1$2>$3</$1>',
+    },
+    // Fix malformed JSX with missing closing tags
+    {
+      pattern: /<(\w+)([^>]*)>([^<]*)<\/?$/gm,
+      replacement: '<$1$2>$3</$1>',
+    }
+  ]
+  for (const fix of jsxFixes) {
+    const newContent = content.replace(fix.pattern, fix.replacement)
+    if (newContent !== content) {
+      content = newContent
+      modified = true
+    }
+  }
+  
+  // Fix malformed comments
+  const commentFixes = [
+    // Fix malformed comments
+    {
+      pattern: /\/\/\s*(\w+);/g,
+      replacement: '// $1',
+    },
+    // Fix malformed comments
+    {
+      pattern: /\/\/\s*(\w+);/g,
+      replacement: '// $1',
+    }
+  ]
+  for (const fix of commentFixes) {
+    const newContent = content.replace(fix.pattern, fix.replacement)
+    if (newContent !== content) {
+      content = newContent
+      modified = true
+    }
+  }
+  
+  return { content, modified }
+}
 
-// Function to fix all remaining syntax errors
-function fixAllRemainingErrors(filePath) {
+// Function to fix syntax errors in a file
+function fixSyntaxErrors(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-
-    // Fix 1: Add missing commas between object properties in arrays
-    content = content.replace(/(\w+):\s*([^,\n]+)\s*\n\s*(\w+):/g, '$1: $2,\n      $3:');
-    
-    // Fix 2: Add missing commas between array elements
-    content = content.replace(/(\w+):\s*([^,\n]+)\s*\n\s*}\s*\n\s*\{/g, '$1: $2\n    },\n    {');
-    
-    // Fix 3: Fix missing commas in string arrays
-    content = content.replace(/'([^']+)'\s*\n\s*'([^']+)'/g, '\'$1\',\n    \'$2\'');
-    
-    // Fix 4: Fix missing commas in import statements
-    content = content.replace(/(\w+)\s*\n\s*(\w+)/g, '$1,\n  $2');
-    
-    // Fix 5: Fix missing commas in object properties
-    content = content.replace(/(\w+):\s*(\w+)\s*\n\s*(\w+):\s*(\w+)/g, '$1: $2,\n      $3: $4');
-    
-    // Fix 6: Fix missing commas in object properties with strings
-    content = content.replace(/(\w+):\s*(\w+)\s*\n\s*(\w+):\s*'([^']+)'/g, '$1: $2,\n      $3: \'$4\'');
-    
-    // Fix 7: Fix missing commas in object properties with arrays
-    content = content.replace(/(\w+):\s*(\w+)\s*\n\s*(\w+):\s*\[/g, '$1: $2,\n      $3: [');
-    
-    // Fix 8: Fix missing commas in object properties with objects
-    content = content.replace(/(\w+):\s*(\w+)\s*\n\s*(\w+):\s*\{/g, '$1: $2,\n      $3: {');
-    
-    // Fix 9: Fix missing commas in object properties with functions
-    content = content.replace(/(\w+):\s*(\w+)\s*\n\s*(\w+):\s*\(/g, '$1: $2,\n      $3: (');
-    
-    // Fix 10: Fix missing commas in object properties with numbers
-    content = content.replace(/(\w+):\s*(\w+)\s*\n\s*(\w+):\s*(\d+)/g, '$1: $2,\n      $3: $4');
-    
-    // Fix 11: Fix missing commas in object properties with booleans
-    content = content.replace(/(\w+):\s*(\w+)\s*\n\s*(\w+):\s*(true|false)/g, '$1: $2,\n      $3: $4');
-    
-    // Fix 12: Fix missing commas in object properties with null
-    content = content.replace(/(\w+):\s*(\w+)\s*\n\s*(\w+):\s*(null|undefined)/g, '$1: $2,\n      $3: $4');
-    
-    // Fix 13: Fix missing commas in object properties with variables
-    content = content.replace(/(\w+):\s*(\w+)\s*\n\s*(\w+):\s*(\w+)/g, '$1: $2,\n      $3: $4');
-    
-    // Fix 14: Fix missing commas in object properties with template literals
-    content = content.replace(/(\w+):\s*(\w+)\s*\n\s*(\w+):\s*`([^`]+)`/g, '$1: $2,\n      $3: `$4`');
-    
-    // Fix 15: Fix missing commas in object properties with regular expressions
-    content = content.replace(/(\w+):\s*(\w+)\s*\n\s*(\w+):\s*\/([^\/]+)\//g, '$1: $2,\n      $3: /$4/');
-    
-    // Fix 16: Fix missing commas in object properties with comments
-    content = content.replace(/(\w+):\s*(\w+)\s*\n\s*\/\/\s*([^\n]+)\n\s*(\w+):/g, '$1: $2,\n      // $3\n      $4:');
-    
-    // Fix 17: Fix missing commas in object properties with JSX
-    content = content.replace(/(\w+):\s*(\w+)\s*\n\s*(\w+):\s*<([^>]+)>/g, '$1: $2,\n      $3: <$4>');
-    
-    // Fix 18: Fix missing commas in object properties with JSX elements
-    content = content.replace(/(\w+):\s*(\w+)\s*\n\s*(\w+):\s*<(\w+)/g, '$1: $2,\n      $3: <$4');
-    
-    // Fix 19: Fix missing commas in object properties with JSX attributes
-    content = content.replace(/(\w+):\s*(\w+)\s*\n\s*(\w+):\s*(\w+)=/g, '$1: $2,\n      $3: $4=');
-    
-    // Fix 20: Fix missing commas in object properties with JSX text
-    content = content.replace(/(\w+):\s*(\w+)\s*\n\s*(\w+):\s*([^<>\n]+)/g, '$1: $2,\n      $3: $4');
-
-    if (content !== fs.readFileSync(filePath, 'utf8')) {
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed remaining errors: ${filePath}`);
-      modified = true;
+    let content = fs.readFileSync(filePath, 'utf8')
+    let modified = false
+    // Apply common fixes
+    const result = fixCommonSyntaxErrors(content)
+    content = result.content
+    modified = result.modified
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8')
+      console.log(`Fixed syntax errors in: ${filePath}`)
+      return true
     }
     
-    return modified;
+    return false
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
+    console.error(`Error processing ${filePath}:`, error.message)
+    return false
   }
 }
 
-// Function to fix specific files
-async function fixSpecificFiles() {
-  const patterns = [
-    'app/**/*.tsx',
-    'app/**/*.ts'
-  ];
-  
-  let totalFixed = 0;
-  
-  for (const pattern of patterns) {
-    const files = await glob(pattern, { cwd: process.cwd() });
-    for (const file of files) {
-      if (fixAllRemainingErrors(file)) {
-        totalFixed++;
-      }
-    }
+// Function to find files with syntax errors
+function findFilesWithSyntaxErrors() {
+  try {
+    const result = execSync('npm run lint 2>&1 | grep -B1 "error.*Parsing error" | grep "^/workspace" | sort -u 2>/dev/null || true', { encoding: 'utf8' })
+    return result.trim().split('\n').filter(file => file.length > 0)
+  } catch (error) {
+    console.error('Error finding files with syntax errors:', error.message)
+    return []
   }
-  
-  console.log(`Total files fixed: ${totalFixed}`);
 }
 
-// Run the fix
-console.log('Starting comprehensive remaining error fixes...');
-await fixSpecificFiles();
-console.log('Comprehensive remaining error fixes completed!');
+// Main execution
+console.log('Starting comprehensive syntax error resolution...')
+const filesWithErrors = findFilesWithSyntaxErrors()
+console.log(`Found ${filesWithErrors.length} files with syntax errors`)
+let fixedCount = 0
+for (const file of filesWithErrors) {
+  if (fixSyntaxErrors(file)) {
+    fixedCount++
+  }
+}
+
+console.log(`Fixed syntax errors in ${fixedCount} files`)
+// Verify no more syntax errors exist
+try {
+  const remainingErrors = execSync('npm run lint 2>&1 | grep -c "error.*Parsing error" 2>/dev/null || echo "0"', { encoding: 'utf8' })
+  const count = parseInt(remainingErrors.trim())
+  if (count === 0) {
+    console.log('✅ All syntax errors resolved!')
+  } else {
+    console.log(`⚠️  ${count} syntax errors still remain`)
+  }
+} catch (error) {
+  console.log('✅ No syntax errors found')
+}

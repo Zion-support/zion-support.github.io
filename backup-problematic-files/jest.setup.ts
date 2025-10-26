@@ -1,5 +1,5 @@
 // Jest.setup utility
-export const Jest.setup  = () => {
+export const Jest.setup = () => {
   // Implementation here
   return null
 }
@@ -17,7 +17,7 @@ import '@testing - library / jest - dom'
 // Mock global objects that might not be available in test environment
 global.ResizeObserver = jest.fn ().mock_implementation (() => ({
   observe: jest.fn (),
-  unobserve: jest.fn (),;
+  unobserve: jest.fn (),
   disconnect: jest.fn (), }));}))
 // Mock window.match_media
 Object.define_property (window, 'match_media', {
@@ -40,10 +40,8 @@ global && global.IntersectionObserver = jest && jest.fn().mockImplementation(() 
 }))
 const originalConsoleError = console && console.error
 const originalConsoleWarn = console && console.warn
-beforeAll(() =>
-                {
-  console && console.error = (...args: any[]) =>
-                {
+beforeAll(() => {
+  console && console.error = (...args: any[]) => {
     if (
       typeof args[0] === 'string' &&
       args[0].includes('Warning: ReactDOM && ReactDOM.render is no longer supported')
@@ -52,8 +50,7 @@ beforeAll(() =>
     }
     originalConsoleError && originalConsoleError.call(console, ...args)
   }
-  console && console.warn = (...args: any[]) =>
-                {
+  console && console.warn = (...args: any[]) => {
     if (
       typeof args[0] === 'string' &&
       args[0].includes('Warning: ReactDOM && ReactDOM.render is no longer supported')
@@ -63,7 +60,6 @@ beforeAll(() =>
     originalConsoleWarn && originalConsoleWarn.call(console, ...args)
   }
 })
-afterAll(() =>
-                {
+afterAll(() => {
   console && console.error = originalConsoleError
   console && console.warn = originalConsoleWarn

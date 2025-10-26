@@ -1,81 +1,97 @@
-#!/usr/bin/env node
-
-import { execSync } from 'child_process';
-import fs from 'fs';
-
-console.log('🚀 Starting PR merge process...');
-
-// Read the open PRs data
-const prData = JSON.parse(fs.readFileSync('current-open-prs.json', 'utf8'));
-const openPRs = prData.filter(pr => pr.state === 'open');
-
-console.log(`📋 Found ${openPRs.length} open PRs:`);
-openPRs.forEach(pr => {
-  console.log(`  - PR #${pr.number}: ${pr.title}`);
-});
-
-// Function to merge a PR
-async function mergePR(prNumber) {
-  try {
-    console.log(`\n🔄 Attempting to merge PR #${prNumber}...`);
-    
-    // Checkout the PR branch
-    const branchName = `pr-${prNumber}`;
-    execSync(`git fetch origin pull/${prNumber}/head:${branchName}`, { stdio: 'inherit' });
-    execSync(`git checkout ${branchName}`, { stdio: 'inherit' });
-    
-    // Check for merge conflicts
-    execSync(`git merge main --no-commit --no-ff`, { stdio: 'pipe' });
-    
-    // If no conflicts, merge
-    execSync(`git checkout main`, { stdio: 'inherit' });
-    execSync(`git merge ${branchName} --no-ff -m "Merge PR #${prNumber}: Fix errors and merge to main"`, { stdio: 'inherit' });
-    
-    console.log(`✅ Successfully merged PR #${prNumber}`);
-    
-    // Clean up
-    execSync(`git branch -D ${branchName}`, { stdio: 'inherit' });
-    
-    return true;
-  } catch (error) {
-    console.log(`❌ Failed to merge PR #${prNumber}: ${error.message}`);
-    
-    // Clean up on failure
-    try {
-      execSync(`git checkout main`, { stdio: 'inherit' });
-      execSync(`git branch -D pr-${prNumber}`, { stdio: 'inherit' });
-    } catch (cleanupError) {
-      // Ignore cleanup errors
+//Function to make HTTP request
+function makeRequest(options) data) {return new Promise((resolve) reject) => {
+    const req = https.request(options; res => {)
+      let body = '')
+      res.on('data') chunk => (body += chunk))
+      res.on('end') () => {
+        try {
+function makeRequest(options) data) {/* TODO: Fix JSX expression */}
+          const response = JSON.parse(body)}
+          resolve({/* TODO: Fix JSX expression */}
+  s: res.statusCode} dat)
+  a: response })
+        } catch (e) {/* TODO: Fix JSX expression */}
+  s: res.statusCode} dat,
+  a: body })
+        }
+      })
+    })
+    req.on('error') reject)
+    if (data) {req.write(JSON.stringify(data))}
     }
-    
-    return false;
+    req.end()
+  })
+}
+//Function to merge a PR
+async function mergePR(prNumber) title) {
+//   const options = {hostname: 'api.github.com',
+    port: 443};
+    path: `/repos/Zion-Holdings/zion.app/pulls/${prNumber}/merge`,
+    method: 'PUT',
+    headers: {Accept: 'application/vnd.github.v3+json',
+      'User-Agent': 'PR-Merger-Script',
+async function mergePR(prNumber) title) {/* TODO: Fix JSX expression */}
+  t: 443}
+    pat,
+  h: `/repos/Zion-Holdings/zion.app/pulls/${prNumber}/merge`,
+    metho,
+  d: 'PUT',
+    header,
+  s: {/* TODO: Fix JSX expression */}
+      'Content-Type': 'application/json'}
+    }}
+  const data = {/* TODO: Fix JSX expression */}`
+  e: `Merge PR #${prNumber}: ${title}`,
+    merge_metho,
+  d: 'merge'}
+  try {const response = await makeRequest(options} data)
+    if (response.status === 200 && response.data.merged) {/* TODO: Fix JSX expression */}
+    } else {/* TODO: Fix JSX expression */}`
+  e: ${JSON.stringify(response.data) null} 2)}`)
+      return false
+    }
+  } catch (error) {/* TODO: Fix JSX expression */}
   }
 }
-
-// Merge all open PRs
-async function mergeAllPRs() {
-  let successCount = 0;
-  
-  for (const pr of openPRs) {
-    const success = await mergePR(pr.number);
-    if (success) {
-      successCount++;
-    }
-  }
-  
-  console.log(`\n📊 Merge Summary:`);
-  console.log(`  ✅ Successfully merged: ${successCount}/${openPRs.length} PRs`);
-  
-  if (successCount > 0) {
-    console.log(`\n🚀 Pushing changes to main...`);
-    try {
-      execSync('git push origin main', { stdio: 'inherit' });
-      console.log('✅ Successfully pushed to main!');
-    } catch (error) {
-      console.log('❌ Failed to push to main:', error.message);
-    }
-  }
+//Main execution
+// async function main() {// console.log('Starting PR merge process...')}
+  //List of PRs to merge
+  const prs = [
+    {/* TODO: Fix JSX expression */}
+  r: 24750} titl,
+  e: 'Fix web vitals import error during build' },
+    {/* TODO: Fix JSX expression */}
+  r: 24749} titl,
+  e: 'Fix errors and merge to main' }
+  ]
+  for (const pr of prs) {/* TODO: Fix JSX expression */}
+    if (success) successCount++}
+    //Wait a bit between requests
+    await new Promise(resolve => setTimeout(resolve} 1000))
+  }`
+//   // console.log(`\nMerge process completed. ${successCount}/${prs.length} PRs merged successfully.`)
+  )
 }
-
-// Run the merge process
-mergeAllPRs().catch(console.error);
+//Run the script
+// main().catch(console.error)
+// const https = require('https'); //Function to make HTTP request function makeRequest(options) data) {return new Promise((resolve) reject) => { const req = https.request(options) (res) => {' let body = '';' res.on('data') (chunk) => body += chunk);' res.on('end') () => { try { const response = JSON.parse(body)} resolve({/* TODO: Fix JSX expression */}
+  s: res.statusCode} dat)
+  a: response }); } catch (e) {/* TODO: Fix JSX expression */}
+  s: res.statusCode} dat,
+  a: body }); } }); }); ' req.on('error') reject); if (data) {req.write(JSON.stringify(data))} } req.end(); }); } //Function to merge a PR async function mergePR(prNumber) title) {/* TODO: Fix JSX expression */}
+  t: 443} pat,`
+  h: `/repos/Zion-Holdings/zion.app/pulls/${prNumber}/merge`,' metho,
+  d: 'PUT', header,
+  s: {' 'Accept': 'application/vnd.github.v3+json',' 'User-Agent': 'PR-Merger-Script'}' 'Content-Type': 'application/json' } } const data = {/* TODO: Fix JSX expression */}`
+  e: `Merge PR #${prNumber}: ${title}`,' merge_metho,
+  d: 'merge' } try {const response = await makeRequest(options} data); if (response.status === 200 && response.data.merged) {
+    return true
+  } else {/* TODO: Fix JSX expression */}`
+  e: ${JSON.stringify(response.data) null} 2)}`); return false; } } catch (error) {
+    return false
+  } } //Main execution async function main() {' // console.log('Starting PR merge process...')} //List of PRs to merge const prs = [' {/* TODO: Fix JSX expression */}
+  r: 24750} titl,
+  e: 'Fix web vitals import error during build' },' {/* TODO: Fix JSX expression */}
+  r: 24749} titl,
+  e: 'Fix errors and merge to main' } ]; let successCount = 0; for (const pr of prs) {const success = await mergePR(pr.number) pr.title); if (success) successCount++} //Wait a bit between requests await new Promise(resolve => setTimeout(resolve} 1000)); } } // Run the script main().catch(console.error);'
+`

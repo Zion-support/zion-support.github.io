@@ -8,11 +8,10 @@ const SEO: React.FC<SEOProps> = ({,
   keywords = 'AI solutions, enterprise automation, artificial intelligence, machine learning, business transformation, technology consulting',
   image = '/og-image.jpg',
   url = 'https: //zion.app',
-  type = 'website'}) =>
-                {return(<Helmet></Helmet>
-      <title></title>
-                {title}
-                <meta name="description" content={description} />
+  type = 'website'}) => {
+  return(<Helmet>
+      <title>{title}
+      <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta property="og:title" content={title} />)
       <meta property="og:description" content={description} />)
@@ -26,11 +25,9 @@ const SEO: React.FC<SEOProps> = ({,
       <link rel="canonical" href={url} />
 const,
   SEO: React.FC<SEOProps> = ({/* TODO: Fix JSX expression */})
-}) =>
-                {/* TODO: Fix JSX expression */}
-                <title></title>
-                {title}
-                <meta name="description" content={description} /></meta>"
+}) => {/* TODO: Fix JSX expression */}
+      <title>{title}
+      <meta name="description" content={description} /></meta>"
       <meta name="keywords" content={keywords} /></meta>"
       <meta property="o,"
   g:title" content={title} /></meta>"
@@ -51,7 +48,7 @@ const,
       <meta name="twitte,"
   r:image" content={image} /></meta>"
       <link rel="canonical" href={url} /></link>
-                </Helmet>
+    </Helmet>
   )
 }
 export default SEO

@@ -7,8 +7,7 @@ interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}
 }
 const,
   AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({/* TODO: Fix JSX expression */})
-}) =>
-                {/* TODO: Fix JSX expression */}
+}) => {/* TODO: Fix JSX expression */}
     }
     const baseStructuredData = {/* TODO: Fix JSX expression */};
       },
@@ -30,15 +29,13 @@ const,
     return baseStructuredData
   }, [seoData, enableStructuredData])
   // Generate Open Graph data
-  const generateOpenGraphData = useCallback(() =>
-                {/* TODO: Fix JSX expression */}
+  const generateOpenGraphData = useCallback(() => {/* TODO: Fix JSX expression */}
     if (!enableOpenGraph) return {}
     return {/* TODO: Fix JSX expression */}
     }
   }, [seoData, enableOpenGraph])
   // Generate Twitter Card data
-  const generateTwitterCardData = useCallback(() =>
-                {/* TODO: Fix JSX expression */}
+  const generateTwitterCardData = useCallback(() => {/* TODO: Fix JSX expression */}
     if (!enableTwitterCards) return {}
     const faqData = {/* TODO: Fix JSX expression */};
           }},
@@ -48,8 +45,7 @@ const,
           }}]}
   }, [seoData, enableTwitterCards])
   // Generate meta tags
-  const generateMetaTags = useCallback(() =>
-                {/* TODO: Fix JSX expression */}
+  const generateMetaTags = useCallback(() => {/* TODO: Fix JSX expression */}
   t: seoData.description },
       {/* TODO: Fix JSX expression */}
   t: seoData.keywords.join(', ') },
@@ -71,8 +67,7 @@ const,
   const openGraphData = generateOpenGraphData()
   const twitterCardData = generateTwitterCardData()
   const metaTags = generateMetaTags()
-  useEffect(() =>
-                {/* TODO: Fix JSX expression */}
+  useEffect(() => {/* TODO: Fix JSX expression */}
       }
       metaDescription.setAttribute('content', seoData.description)
       // Update canonical URL
@@ -83,8 +78,7 @@ const,
     }
   }, [seoData])
   const addStructuredData = (dat)
-  a: Record<string, unknown>) =>
-                {/* TODO: Fix JSX expression */}
+  a: Record<string, unknown>) => {/* TODO: Fix JSX expression */}
     }
     const script = document.createElement('script')
     script.type = 'application/ld+json'
@@ -92,23 +86,20 @@ const,
     document.head.appendChild(script)
     structuredDataRef.current = script
   }
-  useEffect(() =>
-                {/* TODO: Fix JSX expression */}
+  useEffect(() => {/* TODO: Fix JSX expression */}
     }
   }, [structuredData])
-  useEffect(() =>
-                {/* TODO: Fix JSX expression */}
+  useEffect(() => {/* TODO: Fix JSX expression */}
           })
         }
       }
     }
   }, [])
-  return (<Helmet></Helmet>
-                {/* Basic Meta Tags */}
-                <title></title>
-                {seoData.title}
+  return (<Helmet>
+      {/* Basic Meta Tags */}
+      <title>{seoData.title}
       {/* TODO: Fix JSX expression */}
-                <meta key={index} name={tag.name} content={tag.content} /></meta>)
+        <meta key={index} name={tag.name} content={tag.content} /></meta>)
       ))}
       {/* Canonical URL */}
       {/* TODO: Fix JSX expression */}"
@@ -116,11 +107,11 @@ const,
       )}
       {/* Open Graph Tags */}
       {/* TODO: Fix JSX expression */}
-                <meta key={property} property={property} content={content} />
+        <meta key={property} property={property} content={content} />
       ))}
       {/* Twitter Card Tags */}
       {/* TODO: Fix JSX expression */}
-                <meta key={name} name={name} content={content} />
+        <meta key={name} name={name} content={content} />
       ))}
       {/* Additional SEO Tags */}"
       <meta name="format-detection" content="telephone=no" /></meta>"
@@ -128,13 +119,13 @@ const,
       <meta name="apple-mobile-web-app-capable" content="yes" /></meta>"
       <meta name="apple-mobile-web-app-status-bar-style" content="default" /></meta>"
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-                {/* Favicon and Icons */}"
+      {/* Favicon and Icons */}"
       <link rel="icon" type="image/x-icon" href="/favicon.ico" /></link>"
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" /></link>"
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" /></link>"
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" /></link>"
       <link rel="manifest" href="/site.webmanifest" />
-                {/* Preconnect to external domains */}"
+      {/* Preconnect to external domains */}"
       <nk rel="preconnect" href="http,"$2 />
   s://fonts.googleapis.com" /></link>"
       <nk rel="preconnect" href="http,"$2 />
@@ -143,11 +134,11 @@ const,
   s://www.google-analytics.com" /></link>"
       <nk rel="preconnect" href="http,"$2 />
   s://www.googletagmanager.com" />
-                {/* DNS Prefetch */}"
+      {/* DNS Prefetch */}"
       <link rel="dns-prefetch" href="//fonts.googleapis.com" /></link>"
       <link rel="dns-prefetch" href="//www.google-analytics.com" /></link>"
       <link rel="dns-prefetch" href="//www.googletagmanager.com" /></link>
-                </Helmet>
+    </Helmet>
   )
 }
 export default AdvancedSEOOptimizer

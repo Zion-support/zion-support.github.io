@@ -1,15 +1,15 @@
 import React from 'react';
-import { Link  } from 'react-router-dom';
-import { motion  } from 'framer-motion';
-import { ArrowRight, Play, Star, Users, Award, TrendingUp  } from 'lucide-react';
-import { SEO  } from '../components/SEO';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { ArrowRight, Play, Star, Users, Award, TrendingUp } from 'lucide-react';
+import { SEO } from '../components/SEO';
 import { ContentShowcase } from '../components/ContentShowcase';
 import NewContentShowcase from '../components/NewContentShowcase';
 import RevolutionaryContent2026Showcase from '../components/RevolutionaryContent2026Showcase';
 import InteractiveTechDemo from '../components/InteractiveTechDemo';
 import { ServicesHighlight } from '../components/ServicesHighlight';
 
-const EnhancedHome: React.FC  = () => {
+const EnhancedHome: React.FC = () => {
   const stats = [
     { number: '500+', label: 'Projects Completed', icon: Award },
     { number: '98%', label: 'Client Satisfaction', icon: Star },
@@ -72,39 +72,38 @@ const EnhancedHome: React.FC  = () => {
   ];
 
   return (
-    <div className="min-h-screen"></div>
+    <div className="min-h-screen">
       <SEO 
         title="Zion Tech Group - Leading Technology Solutions"
         description="Transform your business with cutting-edge AI, cybersecurity, cloud infrastructure, and data analytics solutions. Expert technology consulting and implementation."
         keywords="AI solutions, cybersecurity, cloud computing, data analytics, technology consulting"
       />
-                {/* Hero Section */}
-                <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white overflow-hidden"></section>
-                {/* Static background to avoid complex inline data URLs during build */}
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 to-slate-900/10 opacity-20"></div>
+
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white overflow-hidden">
+        {/* Static background to avoid complex inline data URLs during build */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 to-slate-900/10 opacity-20"></div>
         
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24"></div>
-          <div className="text-center"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="text-center">
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6"
-            ></motion.h1
->
+            >
               Transform Your Business with
-              <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"></span>
+              <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 Cutting-Edge Technology
               </span>
-                </motion.h1>
+            </motion.h1>
             
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl sm:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto"
-            ></motion.p
->
+            >
               Leading technology solutions in AI, cybersecurity, cloud infrastructure, and data analytics. 
               Empowering businesses to thrive in the digital age.
             </motion.p>
@@ -114,183 +113,175 @@ const EnhancedHome: React.FC  = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
-            ></motion.div
->
+            >
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg text-lg font-semibold hover:bg-blue-700 transition-all duration-300 hover:scale-105"
-              ></Link
->
+              >
                 Get Free Consultation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <button className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg text-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"></button>
+              <button className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg text-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 <Play className="mr-2 w-5 h-5" />
                 Watch Demo
               </button>
-                </motion.div>
-                {/* Stats */}
-                <motion.div
+            </motion.div>
+            
+            {/* Stats */}
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
               className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto"
-            ></motion.div
->
-                {stats.map((stat, index) =>
-                {
+            >
+              {stats.map((stat, index) => {
                 const IconComponent = stat.icon;
                 return (
-                  <div key={index} className="text-center"></div>
-                    <div className="flex justify-center mb-2"></div>
+                  <div key={index} className="text-center">
+                    <div className="flex justify-center mb-2">
                       <IconComponent className="w-8 h-8 text-blue-400" />
                     </div>
-                    <div className="text-3xl font-bold text-white mb-1"></div>
-                {stat.number}
-                </div>
-                    <div className="text-blue-200 text-sm"></div>
-                {stat.label}
-                </div>
-                </div>
+                    <div className="text-3xl font-bold text-white mb-1">{stat.number}</div>
+                    <div className="text-blue-200 text-sm">{stat.label}</div>
+                  </div>
                 );
               })}
-                </motion.div>
-                </div>
+            </motion.div>
+          </div>
         </div>
-                </section>
-                {/* Features Section */}
-                <section className="py-20 bg-white"></section>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4"></h2>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Comprehensive Technology Solutions
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto"></p>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               From AI-powered automation to secure cloud infrastructure, we provide end-to-end 
               technology solutions that drive innovation and growth.
             </p>
-                </div>
+          </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-                {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center group"
-              ></motion.div
->
-                <div className="text-6xl mb-4 group-hover:scale-110 transition-transform duration-300"></div>
-                {feature.icon}
+              >
+                <div className="text-6xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                  {feature.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3"></h3>
-                {feature.title}
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  {feature.title}
                 </h3>
-                <p className="text-gray-600 mb-4"></p>
-                {feature.description}
+                <p className="text-gray-600 mb-4">
+                  {feature.description}
                 </p>
                 <Link
                   to={feature.link}
                   className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors"
-                ></Link
->
+                >
                   Learn More
                   <ArrowRight className="ml-1 w-4 h-4" />
                 </Link>
-                </motion.div>
+              </motion.div>
             ))}
-                </div>
-                </div>
+          </div>
+        </div>
       </section>
-                {/* Testimonials Section */}
-                <section className="py-20 bg-gray-50"></section>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4"></h2>
+
+      {/* Testimonials Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               What Our Clients Say
             </h2>
-            <p className="text-xl text-gray-600"></p>
+            <p className="text-xl text-gray-600">
               Don't just take our word for it - hear from the businesses we've transformed.
             </p>
-                </div>
+          </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
-                {testimonials.map((testimonial, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 className="bg-white rounded-lg shadow-md p-6"
-              ></motion.div
->
-                <div className="flex items-center mb-4"></div>
-                {[...Array(testimonial.rating)].map((_, i) => (
+              >
+                <div className="flex items-center mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-gray-600 mb-6 italic"></p>
+                <p className="text-gray-600 mb-6 italic">
                   "{testimonial.content}"
                 </p>
-                <div className="flex items-center"></div>
+                <div className="flex items-center">
                   <img
                     src={testimonial.avatar}
                     alt={testimonial.name}
                     className="w-12 h-12 rounded-full mr-4"
                   />
-                  <div></div>
-                    <div className="font-semibold text-gray-900"></div>
-                {testimonial.name}
+                  <div>
+                    <div className="font-semibold text-gray-900">{testimonial.name}</div>
+                    <div className="text-sm text-gray-600">{testimonial.role}, {testimonial.company}</div>
+                  </div>
                 </div>
-                    <div className="text-sm text-gray-600"></div>
-                {testimonial.role}, {testimonial.company}
-                </div>
-                </div>
-                </div>
-                </motion.div>
+              </motion.div>
             ))}
-                </div>
-                </div>
+          </div>
+        </div>
       </section>
-                {/* Services Highlight */}
-                <ServicesHighlight />
-                {/* New Content Showcase */}
-                <NewContentShowcase />
-                {/* Revolutionary 2026 Content Showcase */}
-                <RevolutionaryContent2026Showcase />
-                {/* Interactive Demo */}
-                <InteractiveTechDemo />
-                {/* Content Showcase */}
-                <ContentShowcase />
-                {/* CTA Section */}
-                <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white"></section>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6"></h2>
+
+      {/* Services Highlight */}
+      <ServicesHighlight />
+
+      {/* New Content Showcase */}
+      <NewContentShowcase />
+
+      {/* Revolutionary 2026 Content Showcase */}
+      <RevolutionaryContent2026Showcase />
+
+      {/* Interactive Demo */}
+      <InteractiveTechDemo />
+
+      {/* Content Showcase */}
+      <ContentShowcase />
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6">
             Ready to Transform Your Business?
           </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto text-blue-100"></p>
+          <p className="text-xl mb-8 max-w-2xl mx-auto text-blue-100">
             Join hundreds of companies that have already revolutionized their operations with our technology solutions.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors"
-            ></Link
->
+            >
               Start Your Project
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <Link
               to="/case-studies"
               className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-            ></Link
->
+            >
               View Success Stories
             </Link>
-                </div>
+          </div>
         </div>
-                </section>
+      </section>
     </div>
   );
 };

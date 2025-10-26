@@ -73,7 +73,7 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
 
     //Check if branch is already merged
     try {/* TODO: Fix JSX expression */}`
-      const mergeBase = execSync(`git merge-base HEAD origin/${branchName}`, {/* TODO: Fix JSX expression */});
+      const mergeBase = execSync(`git merge-base HEAD origin/${branchName}`, {/* TODO: Fix JSX expression */})
       }).trim();`
       const branchCommit = execSync(`git rev-parse origin/${branchName}`, {/* TODO: Fix JSX expression */})
       }).trim()

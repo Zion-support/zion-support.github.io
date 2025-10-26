@@ -161,7 +161,7 @@ const AiCodeAssistantPage: React.FC = () => {
                 Powerful AI Features,
   </
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">Discover how our AI platform can revolutionize your business operations.</p>
-                </p>
+              </p>
             </div>
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
               {features.map((feature, index) => (
@@ -175,10 +175,9 @@ const AiCodeAssistantPage: React.FC = () => {
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex}className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                {benefit}
-                </li>
+                        {benefit} </li>
                     ))}
-                </ul>
+                  </ul>
                 </div>
               ))}
             </div>
@@ -262,9 +261,9 @@ const AiCodeAssistantPage: React.FC = () => {
 
 export default AiCodeAssistantPage;
   </button>
-                </h2>
+  </h2>
   </button>
-                </button>
+  </button>
   </h1>
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
@@ -332,7 +331,7 @@ export default AiCodeAssistantPage;
         <div$2>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Powerful AI Features
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto"></p>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Discover how our AI platform can revolutionize your business operations.
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (

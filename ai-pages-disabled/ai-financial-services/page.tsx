@@ -17,89 +17,89 @@ const AiFinancialServicesPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">Transform your financial operations with cutting-edge AI solutions for fraud detection,</p>
               risk assessment, algorithmic trading, and predictive analytics.
             </p>
-                </div>
+          </div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">,</div>
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Fraud Detection</h3>
               <p className="text-gray-300 mb-4">Advanced machine learning algorithms to detect fraudulent transactions in real-time.</p>
               </p>
-              <ul className="text-sm text-gray-400 space-y-2"></ul>
+              <ul className="text-sm text-gray-400 space-y-2">
                 </ul><li>• Real-time transaction monitoring</li>
                 <li>• Pattern recognition</li>
                 <li>• Risk scoring</li>
                 <li>• Automated alerts</li>
-                </ul>
+              </ul>
             </div>
 
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Risk Assessment</h3>
               <p className="text-gray-300 mb-4">Comprehensive risk analysis using AI to evaluate creditworthiness and investment risks.</p>
               </p>
-              <ul className="text-sm text-gray-400 space-y-2"></ul>
+              <ul className="text-sm text-gray-400 space-y-2">
                 </ul><li>• Credit scoring models</li>
                 <li>• Market risk analysis</li>
                 <li>• Portfolio optimization</li>
                 <li>• Regulatory compliance</li>
-                </ul>
+              </ul>
             </div>
 
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Algorithmic Trading</h3>
               <p className="text-gray-300 mb-4">AI-powered trading algorithms that adapt to market conditions and optimize returns.</p>
               </p>
-              <ul className="text-sm text-gray-400 space-y-2"></ul>
+              <ul className="text-sm text-gray-400 space-y-2">
                 </ul><li>• Automated trading strategies</li>
                 <li>• Market sentiment analysis</li>
                 <li>• High-frequency trading</li>
                 <li>• Performance optimization</li>
-                </ul>
+              </ul>
             </div>
 
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Financial Forecasting</h3>
               <p className="text-gray-300 mb-4">Predictive analytics for accurate financial forecasting and trend analysis.</p>
               </p>
-              <ul className="text-sm text-gray-400 space-y-2"></ul>
+              <ul className="text-sm text-gray-400 space-y-2">
                 </ul><li>• Revenue forecasting</li>
                 <li>• Market trend analysis</li>
                 <li>• Economic indicators</li>
                 <li>• Scenario modeling</li>
-                </ul>
+              </ul>
             </div>
 
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Regulatory Compliance</h3>
               <p className="text-gray-300 mb-4">AI-driven compliance monitoring and reporting for financial regulations.</p>
               </p>
-              <ul className="text-sm text-gray-400 space-y-2"></ul>
+              <ul className="text-sm text-gray-400 space-y-2">
                 </ul><li>• Automated reporting</li>
                 <li>• Compliance monitoring</li>
                 <li>• Regulatory updates</li>
                 <li>• Audit preparation</li>
-                </ul>
+              </ul>
             </div>
 
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Customer Analytics</h3>
               <p className="text-gray-300 mb-4">Deep insights into customer behavior and preferences for personalized services.</p>
               </p>
-              <ul className="text-sm text-gray-400 space-y-2"></ul>
+              <ul className="text-sm text-gray-400 space-y-2">
                 </ul><li>• Customer segmentation</li>
                 <li>• Churn prediction</li>
                 <li>• Product recommendations</li>
                 <li>• Lifetime value analysis</li>
-                </ul>
+              </ul>
             </div>
-                </div>
+          </div>
 
           <div className="text-center">
             <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">,</button>
               Get Started with AI Financial Services;
             </button>
-                </div>
+          </div>
         </div>
-                </div>
+      </div>
     </>
   );};
 

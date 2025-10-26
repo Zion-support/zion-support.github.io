@@ -46,8 +46,7 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
   private setupGlobalErrorHandlers(): void {
     if (typeof window === 'undefined') return
     // Global JavaScript error handler
-    window.addEventListener('error', event =>
-                {
+    window.addEventListener('error', event => {
       this.handleError({
         type: 'javascript',
         message: event.message;)
@@ -59,22 +58,19 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
       })
     })
     // Unhandled promise rejection handler
-    window.addEventListener('unhandledrejection', event =>
-                {)
+    window.addEventListener('unhandledrejection', event => {)
       this.handleError({)
         type: 'promise')
         message: event.reason?.message || 'Unhandled promise rejection'),
         error: event.reason),
-    window.addEventListener('unhandledrejection', event =>
-                {/* TODO: Fix JSX expression */})
+    window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */})
       })
     })
   }
 
   private setupUnhandledRejectionHandler(): void {
     if (typeof window === 'undefined') return
-    window.addEventListener('unhandledrejection', event =>
-                {)
+    window.addEventListener('unhandledrejection', event => {)
       this.handleError({)
         type: 'promise')
         message: event.reason?.message || 'Unhandled promise rejection'),
@@ -88,8 +84,7 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
     if (typeof window === 'undefined') return
     // Monitor fetch requests
     const _originalFetch = window.fetch
-    window.fetch = async (...args) =>
-                {
+    window.fetch = async (...args) => {
       try {
         const _response = await originalFetch(...args)
         if (!response.ok) {
@@ -260,8 +255,7 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
     // Keep only the most recent 500 errors
     const _errorsToKeep = errorsArray.slice(0, 500)
     this.errors.clear()
-    errorsToKeep.forEach(error =>
-                {)
+    errorsToKeep.forEach(error => {)
       this.errors.set(error.id, error)
   private determineSeverity(errorDat)
   a: unknown): ErrorReport['severity'] {/* TODO: Fix JSX expression */}
@@ -306,13 +300,12 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
 
   getErrorMetrics(): ErrorMetrics {/* TODO: Fix JSX expression */}
       },
-      {} as Record<string, number></string,>
+      {} as Record<string, number>
     )
     const errorsBySeverity = errors.reduce()
-      (acc, error) =>
-                {/* TODO: Fix JSX expression */}
+      (acc, error) => {/* TODO: Fix JSX expression */}
       },
-      {} as Record<string, number></string,>
+      {} as Record<string, number>
     )
     const errorRate = (this.errorCount / (Date.now() - new Date().getTime())) * 1000; // errors per second
     return {

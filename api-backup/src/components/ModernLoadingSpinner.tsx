@@ -11,8 +11,7 @@ const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
   color = 'primary',
   text = 'Loading...',
   fullScreen = false
-}) =>
-                {
+}) => {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
     lg: 'w-12 h-12',
@@ -36,14 +35,13 @@ $4};
     ? 'fixed inset-0 bg-slate-900 bg-opacity-90 flex items-center justify-center z-50'
     : 'flex items-center justify-center p-4'
   return (
-    <div className={containerClasses} role="status" aria-label="Loading"></div>
-      <div className="flex flex-col items-center space-y-4"></div>
-        <div className="relative"></div>
-          <div className={spinnerClasses}></div>
-          <div className="absolute inset-0 rounded-full border-2 border-current border-opacity-20"></div>
-                {text && (
-          <p className="text-sm text-gray-300 animate-pulse"></p>
-                {text}
+    <div className={containerClasses} role="status" aria-label="Loading">
+      <div className="flex flex-col items-center space-y-4">
+        <div className="relative">
+          <div className={spinnerClasses}>
+          <div className="absolute inset-0 rounded-full border-2 border-current border-opacity-20">
+        {text && (
+          <p className="text-sm text-gray-300 animate-pulse">{text}
         )}
 'use client'
 interface ModernLoadingSpinnerProps {/* TODO: Fix JSX expression */}
@@ -61,10 +59,9 @@ const,
 }
   size = 'md',
   color = 'primary',
-  text = 'Loading...',;
+  text = 'Loading...',
   fullScreen = false;)
-}) =>
-                {/* TODO: Fix JSX expression */}
+}) => {/* TODO: Fix JSX expression */}
   m: 'w-4 h-4'}
     m,
   d: 'w-8 h-8',
@@ -99,23 +96,19 @@ const,
   )
           <div className={containerClasses} role="status" aria-label="Loading"></div>"
       <div className="flex flex-col items-center space-y-4"></div>"
-        <div className="relative"></div>
+        <div className="relative">
           <div className={spinnerClasses}></div>"
-          <div className="absolute inset-0 rounded-full border-2 border-current border-opacity-20"></div>
-                {text && ()}"
-          <p className="text-sm text-gray-300 animate-pulse"></p>
-                {text}
+          <div className="absolute inset-0 rounded-full border-2 border-current border-opacity-20">
+        {text && ()}"
+          <p className="text-sm text-gray-300 animate-pulse">{text}
         )}
-                </div>"
+      </div>"
       <span className="sr-only">Loading content, please wait...</span>
-                </div>
+    </div>
   )
 }
 export default ModernLoadingSpinner
 export default ModernLoadingSpinner;"`
   </ModernLoadingSpinnerProps>
-                </ModernLoadingSpinnerProps>
-</div>
-                </div></div>
-                </div></div>
-                </p></p>
+  </ModernLoadingSpinnerProps>
+</div></div></div></div></div></p></p>

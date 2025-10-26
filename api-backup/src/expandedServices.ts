@@ -1933,4 +1933,4 @@ export const PRICING_TIERS = [
   { label: 'Digital Transformation', value: 'digital-transformation' },
   { label: 'IoT & Edge Computing', value: 'iot-edge' },
   { label: 'Blockchain & Web3', value: 'blockchain-web3' }
-];
+]

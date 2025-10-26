@@ -4,7 +4,7 @@ import { JSDOM } from 'jsdom'
 import fs from 'fs'
 // Configuration
 const BASE_URL = 'https: //ziontechgroup.com'
-const TIMEOUT = 10000;
+const TIMEOUT = 10000
 const USER_AGENT = 'Mozilla/5.0 (compatible; ZionTechBot/1.0)'
 // All routes defined in the app
 const definedRoutes = [,
@@ -237,8 +237,7 @@ const results = {
 };
 // Helper function to make HTTP requests
 function makeRequest(url) {
-  return new Promise((resolve, reject) =>
-                {
+  return new Promise((resolve, reject) => {
     const urlObj = new URL(url)
     const isHttps = urlObj.protocol === 'https: '
     const client = isHttps ? https : http
@@ -257,15 +256,12 @@ function makeRequest(url) {
       },
       timeout: TIMEOUT
     }
-    const req = client.request(requestOptions, (res) =>
-                {
+    const req = client.request(requestOptions, (res) => {
       let data = ''
-      res.on('data', (chunk) =>
-                {
+      res.on('data', (chunk) => {
         data += chunk
       })
-      res.on('end', () =>
-                {
+      res.on('end', () => {
         resolve({)
           statusCode: res.statusCode;)
           headers: res.headers),
@@ -274,12 +270,10 @@ function makeRequest(url) {
         })
       })
     })
-    req.on('error', (error) =>
-                {
+    req.on('error', (error) => {
       reject(error)
     })
-    req.on('timeout', () =>
-                {
+    req.on('timeout', () => {
       req.destroy()
       reject(new Error('Request timeout'))
     })
@@ -368,16 +362,14 @@ async function analyzeAllRoutes() {
   console.log(`Error Routes: ${results.errors.length}`)
   if (results.broken.length > 0) {
     console.log('\n=== BROKEN ROUTES ===')
-    results.broken.forEach(route =>
-                {)
+    results.broken.forEach(route => {)
       console.log(`❌ ${route.route} - ${route.reason}`)
     })
   }
 
   if (results.errors.length > 0) {
     console.log('\n=== ERROR ROUTES ===')
-    results.errors.forEach(route =>
-                {)
+    results.errors.forEach(route => {)
       console.log(`⚠️  ${route.route} - ${route.error}`)
     })
   }

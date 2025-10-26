@@ -71,4 +71,3 @@ Tone: professional, modern, trustworthy`;
 
       faq = JSON.parse(faqResp.choices?.[0]?.message?.content || '[]')
     } catch {
-;

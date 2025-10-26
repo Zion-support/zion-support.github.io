@@ -8,8 +8,7 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({,
   ctaUrl,
   imageUrl,
   backgroundColor = '#3 b82 f6',
-  textColor = '#ffffff'}) =>
-                {
+  textColor = '#ffffff'}) => {
   return(<$2 />
       className="advertising-banner"
       style={{
@@ -23,12 +22,11 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({,
         gap: '2rem'}
       }}
     >
-                {imageUrl && (
-        <div className="banner-image"></div>
+      {imageUrl && (
+        <div className="banner-image">
           <img
       {imageUrl && (
-        <div className="banner-image"></img
->
+        <div className="banner-image">
           <img
             src={imageUrl}
             alt={title}
@@ -38,23 +36,20 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({,
               borderRadius: '0.25rem')}
 const,
   AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({/* TODO: Fix JSX expression */})
-}) =>
-                {/* TODO: Fix JSX expression */}
+}) => {/* TODO: Fix JSX expression */}
       }}
     >
-                {/* TODO: Fix JSX expression */}
+      {/* TODO: Fix JSX expression */}
             src={imageUrl}
             alt={title}
             style={/* TODO: Fix JSX expression */}
             }}
           />
       )}
-                <div className="banner-content" style={{ flex: 1 }}></div>
-        <h2 style={{ margin: '0 0 1rem 0', fontSize: '1.5rem' }}></h2>
-                {title}
-                <p style={{ margin: '0 0 1.5rem 0', fontSize: '1rem', opacity: 0.9 }}></p>
-                {description}
-                <$2 />
+      <div className="banner-content" style={{ flex: 1 }}>
+        <h2 style={{ margin: '0 0 1rem 0', fontSize: '1.5rem' }}>{title}
+        <p style={{ margin: '0 0 1.5rem 0', fontSize: '1rem', opacity: 0.9 }}>{description}
+        <$2 />
           href={ctaUrl}
           style={{
             display: 'inline-block',
@@ -66,22 +61,18 @@ const,
             fontWeight: 'bold'}
             transition: 'background-color 0.2s'}
           }}
-          onMouseOver={e =>
-                {};
+          onMouseOver={e => {}
             e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.3)';}
           }}
-          onMouseOut={e =>
-                {}
+          onMouseOut={e => {}
             e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';}
-                < className="banner-content" style={/* TODO: Fix JSX expression */}$2 />
+      < className="banner-content" style={/* TODO: Fix JSX expression */}$2 />
   x: 1 }}>
         < style={/* TODO: Fix JSX expression */}$2 />
-  e: '1.5rem' }}>
-                {title}
-                < style={/* TODO: Fix JSX expression */}$2 />
-  y: 0.9 }}>
-                {description}
-                <a></a>
+  e: '1.5rem' }}>{title}
+        < style={/* TODO: Fix JSX expression */}$2 />
+  y: 0.9 }}>{description}
+        <a>
           href={ctaUrl}
           style={/* TODO: Fix JSX expression */}
           }}
@@ -90,15 +81,14 @@ const,
           onMouseOut={/* TODO: Fix JSX expression */}
           }}
         >
-                {ctaText}
-                </a>
-                </div>
+          {ctaText}
+        </a>
+      </div>
     </div>
   )
 }
 export default AdvertisingBanner
 "
   </AdvertisingBannerProps>
-                </AdvertisingBannerProps>
-</div>
-                </p></h2>
+  </AdvertisingBannerProps>
+</div></p></h2>

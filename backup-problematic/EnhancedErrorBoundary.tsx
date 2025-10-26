@@ -4,8 +4,7 @@ interface Props {/* TODO: Fix JSX expression */}
 }
 interface State {/* TODO: Fix JSX expression */}
 }
-class EnhancedErrorBoundary extends Component<Props, State></Props,>
-                {
+class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {,
     super(props)
     this.state = { hasError: false };
@@ -40,20 +39,20 @@ class EnhancedErrorBoundary extends Component<Props, State></Props,>
       // errorReportingService.captureException(error, { extra: errorInfo })
     }
   }
-      return(<div className="min-h-screen flex items-center justify-center bg-gray-50"></div>
-          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center"></div>
+      return(<div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50"></div>
-          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center"></div>
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
             <div className="text-6xl mb-4">⚠️
-            <h1 className="text-2xl font-bold text-gray-900 mb-4"></h1>
+            <h1 className="text-2xl font-bold text-gray-900 mb-4">
               Oops! Something went wrong
-            <p className="text-gray-600 mb-6"></p>
+            <p className="text-gray-600 mb-6">
               We're sorry, but something unexpected happened. Please try refreshing the page.
             </p>)
-            <div className="space-y-4">);
+            <div className="space-y-4">)
               <;)$2 />
-            <div className="space-y-4"></div>
+            <div className="space-y-4">
               <$2 />
                 onClick={() => window.location.reload()}
                 className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover: bg-indigo-700 transition-colors">
@@ -61,8 +60,7 @@ class EnhancedErrorBoundary extends Component<Props, State></Props,>
               <$2 />
                 onClick={() => window.history.back()}
                 className="w-full bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold hover: bg-gray-300 transition-colors"
-class EnhancedErrorBoundary extends Component<Props, State></Props,>
-                {/* TODO: Fix JSX expression */}
+class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression */}
   r: false }
   }
   static getDerivedStateFromError(erro)
@@ -90,27 +88,27 @@ class EnhancedErrorBoundary extends Component<Props, State></Props,>
       return (<div className="min-h-screen flex items-center justify-center bg-gray-50"></div>"
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center"></div>"
             <div className="text-6xl mb-4">⚠️</div>"
-            <h1 className="text-2xl font-bold text-gray-900 mb-4"></h1>
+            <h1 className="text-2xl font-bold text-gray-900 mb-4">
               Oops! Something went wrong</$1>"
-            <p className="text-gray-600 mb-6"></p>
+            <p className="text-gray-600 mb-6">
               We're sorry, but something unexpected happened. Please try refreshing the page.
             </p>"
-            <div className="space-y-4"></div>
+            <div className="space-y-4">
               <button></button>)
                 onClick={() => window.location.reload()}"
                 className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold,"
   hover:bg-indigo-700 transition-colors"
               >
                 Refresh Page
-              <button></button>
+              <button>
                 onClick={() => window.history.back()}"
                 className="w-full bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold,"
   hover:bg-gray-300 transition-colors"
               >
                 Go Back
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mt-6 text-left"></details>
-                <summary className="cursor-pointer text-sm text-gray-500"></summary>
+              <details className="mt-6 text-left">
+                <summary className="cursor-pointer text-sm text-gray-500">
                   Error Details (Development),
                 </summary>,
                 <pre className="mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto">,
@@ -123,10 +121,4 @@ class EnhancedErrorBoundary extends Component<Props, State></Props,>
     return this.props.children
   }
 }
-export default EnhancedErrorBoundary;"</div>
-                </div></div>
-                </div></div>
-                </div></div>
-                </div></button>
-                </p></h1>
-                </h1>
+export default EnhancedErrorBoundary;"</div></div></div></div></div></div></div></div></button></p></h1></h1>

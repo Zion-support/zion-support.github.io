@@ -13,8 +13,7 @@ const config = {
 // Helper function to read files recursively
 function getAllFiles(_dir, fileList = []) {
 
-  files.forEach(file =>
-                {)
+  files.forEach(file => {)
     if (fs.statSync(filePath).isDirectory()) {
       // Skip node_modules and .git directories
       if (!file.startsWith('.') && file !== 'node_modules') {
@@ -58,7 +57,7 @@ function improveLogging(content, filePath) {
         //         const depth = (filePath.match(/app\//g) || []).length - 1
         //         const loggerPath = '../'.repeat(depth) + 'utils/logger'
         if (content.includes('import')) {
-          newContent = content.replace(;
+          newContent = content.replace(
             /(import.*?from.*?;)/,
 // Improvement,
   1: Replace unwrapped console statements with logger,
@@ -194,8 +193,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}`
 
 // Run improvements
 // const files = getAllFiles(config.appDir)
-files.forEach(file =>
-                {
+files.forEach(file => {
     )
   if (processFile(file)) {
     filesImproved++
@@ -203,10 +201,8 @@ files.forEach(file =>
 })
 // Generate report
 // // // // // // if (config.improvements.length > 0) {
-  //   config.improvements.slice(0, 20).forEach((improvement, i) =>
-                {
-files.forEach(file =>
-                {/* TODO: Fix JSX expression */}
+  //   config.improvements.slice(0, 20).forEach((improvement, i) => {
+files.forEach(file => {/* TODO: Fix JSX expression */}
   })
 })
 // Generate report

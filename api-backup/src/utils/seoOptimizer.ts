@@ -427,8 +427,7 @@ class SEOOptimizer {
     // Monitor Core Web Vitals for SEO impact
     if (typeof window !== 'undefined' && 'performance' in window) {
       // Monitor LCP (Largest Contentful Paint)
-      new PerformanceObserver((list) =>
-                {
+      new PerformanceObserver((list) => {
         const entries = list.getEntries()
         const lastEntry = entries[entries.length - 1]
         if (lastEntry.startTime > 4000) { // Poor LCP
@@ -437,8 +436,7 @@ class SEOOptimizer {
       }).observe({ entryTypes: ['largest-contentful-paint'] })
       // Monitor CLS (Cumulative Layout Shift)
       let clsValue = 0
-      new PerformanceObserver((list) =>
-                {
+      new PerformanceObserver((list) => {
     for (const entry of list.getEntries()) {
           if (!(entry as any).hadRecentInput) {
             clsValue += (entry as any).value
@@ -466,8 +464,7 @@ $4})
   /**
    * Generate sitemap data
    */
-  generateSitemapData(): Array<{ url: string; lastmod: string; changefreq: string, priority: number }></{>
-                {
+  generateSitemapData(): Array<{ url: string; lastmod: string; changefreq: string, priority: number }> {
     // This would typically come from your CMS or routing system
     return [
       {
@@ -515,8 +512,7 @@ Disallow: /static/`,
   }
     // Check for images without alt text
     const images = document.querySelectorAll('img')
-    images.forEach((img, index) =>
-                {
+    images.forEach((img, index) => {
       if (!img.alt) {
         issues.push(`Image ${index + 1} is missing alt text`)
       }
@@ -630,8 +626,7 @@ private addStructuredData(data: unknown): void {
   O: Add content,}
 }
       // Monitor LCP (Largest Contentful Paint)
-      new PerformanceObserver((list) =>
-                {/* TODO: Fix JSX expression */}
+      new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
         const entries = list.getEntries()
@@ -646,8 +641,7 @@ private addStructuredData(data: unknown): void {
   )
       // Monitor CLS (Cumulative Layout Shift)
       let clsValue = 0
-      new PerformanceObserver((list) =>
-                {/* TODO: Fix JSX expression */}
+      new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
         for (const entry of list.getEntries()) {/* TODO: Fix JSX expression */}
@@ -698,8 +692,7 @@ private addStructuredData(data: unknown): void {
    */
   generateSitemapData(): Array
           <{/* TODO: Fix JSX expression */}
-  y: number }></{/*>
-                {/* TODO: Fix JSX expression */}
+  y: number }> {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     // This would typically come from your CMS or routing system
@@ -784,8 +777,7 @@ const description = document.querySelector('meta[name="description"]')?.getAttri
     }
     // Check for images without alt text
 const images = document.querySelectorAll('img')
-    images.forEach((img, index) =>
-                {/* TODO: Fix JSX expression */}
+    images.forEach((img, index) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       if (!img.alt) {/* TODO: Fix JSX expression */}

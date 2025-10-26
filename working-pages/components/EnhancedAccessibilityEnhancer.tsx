@@ -39,10 +39,9 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
-                {/* Hero Section */}
-                <section className="py-20 px-4"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
+      {/* Hero Section */} <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
     'Proven track record of success'
   ]
@@ -68,7 +67,7 @@ return (
               <span>EnhancedAccessibilityEnhancer;</span>
                 EnhancedAccessibilityEnhancer
               </span>
-              <br></br>
+              <br>
               <span className="text-white">Solutions</span>
             </h1>
             <p>Transform your business with our advanced enhancedaccessibilityenhancer solutions.;</p>
@@ -79,9 +78,9 @@ return (
                 <ArrowRight>
               </button>
               <button>Learn More,</button>
-                </button>
+              </button>
             </div>
-                </div>
+          </div>
         </div>
       </section>
       {/* Features Section */} <section className="py-20 px-4">

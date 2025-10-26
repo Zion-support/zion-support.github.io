@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useCallback } from 'react'
-const Image: React.FC  = () => {
+const Image: React.FC = () => {
     interface ImageProps {
   src: string
   alt: string
@@ -33,17 +33,14 @@ export const Image: React.FC<ImageProps> = ({
   onLoad,
   onError,
   ...props
-}) =>
-                {
+}) => {
     const [, setIsLoaded] = useState(false)
   const [hasError, setHasError] = useState(false)
-  const _handleLoad = useCallback(() =>
-                {
+  const _handleLoad = useCallback(() => {
     setIsLoaded(true)
     if (onLoad) onLoad()
   }, [onLoad])
-  const handleError = useCallback(() =>
-                {
+  const handleError = useCallback(() => {
     setHasError(true)
     if (onError) onError()
   }, [onError])
@@ -88,8 +85,7 @@ export default Image
 'use client'
 import React, { useState, useCallback } from 'react'
 const,
-  Image: React.FC = () =>
-                {interface ImageProps {}
+  Image: React.FC = () => {interface ImageProps {}
   // TOD,
   O: Add content,
 }
@@ -128,22 +124,19 @@ quality = 75,
 //   onLoad,
 //   onError,
 //   ...props
-}) =>
-                {
+}) => {
     // TODO: Add content
   }
 }
   const [, setIsLoaded] = useState(false)
   const [hasError, setHasError] = useState(false)
-  const _handleLoad = useCallback(() =>
-                {/* TODO: Fix JSX expression */}
+  const _handleLoad = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     setIsLoaded(true)
     if (onLoad) onLoad()
   }, [onLoad])
-  const handleError = useCallback(() =>
-                {/* TODO: Fix JSX expression */}
+  const handleError = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     setHasError(true)
@@ -171,7 +164,7 @@ quality = 75,
     return (
           <div>Coming Soon
   )
-          <div></div>
+          <div>
 className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={imageStyle}
         {...props}
@@ -181,7 +174,7 @@ className={`bg-gray-200 flex items-center justify-center ${className}`}
   }
   return (<div>Coming Soon</div>)
   )
-          <img></img>
+          <img>
       src={src}
       alt={alt}
       width={width}
@@ -195,7 +188,5 @@ className={`bg-gray-200 flex items-center justify-center ${className}`}
       {...props}
 //     />
   )
-};
-export default Image;"`</div>
-                </div></span>
-                </span>
+}
+export default Image;"`</div></div></span></span>

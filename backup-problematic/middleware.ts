@@ -49,8 +49,7 @@ export function middleware(request: NextRequest) {
     'X-Download-Options': 'noopen',
     'X-Permitted-Cross-Domain-Policies': 'none'}
   // Apply all security headers
-  Object.entries(securityHeaders).forEach(([key, value]) =>
-                {
+  Object.entries(securityHeaders).forEach(([key, value]) => {
     response.headers.set(key, value)
   })
   // CORS headers for API routes
@@ -68,8 +67,7 @@ export function middleware(reques)
   t: NextRequest) {/* TODO: Fix JSX expression */}
   }
   // Apply all security headers
-  Object.entries(securityHeaders).forEach(([key, value]) =>
-                {/* TODO: Fix JSX expression */}
+  Object.entries(securityHeaders).forEach(([key, value]) => {/* TODO: Fix JSX expression */}
   })
   // CORS headers for API routes
   if (request.nextUrl.pathname.startsWith('/api/')) {/* TODO: Fix JSX expression */}

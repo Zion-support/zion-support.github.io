@@ -98,8 +98,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
 
   addCSRFTokenToForms() {
     const _forms = document.querySelectorAll('form')
-    forms.forEach(form =>
-                {)
+    forms.forEach(form => {)
 //       const token = sessionStorage.getItem('csrf_token')
       if (token && !form.querySelector('input[name="csrf_token"]')) {
         const _input = document.createElement('input')
@@ -132,8 +131,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
   addCSRFTokenToAJAX() {
     // Override fetch to include CSRF token
     const _originalFetch = window.fetch
-    window.fetch = (url, options = {}) =>
-                {
+    window.fetch = (url, options = {}) => {
 //       const token = sessionStorage.getItem('csrf_token')
       if (token) {
         options.headers = {
@@ -164,10 +162,8 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
 
   setupFormValidation() {
     const _forms = document.querySelectorAll('form')
-    forms.forEach(form =>
-                {)
-      form.addEventListener('submit', event =>
-                {)
+    forms.forEach(form => {)
+      form.addEventListener('submit', event => {)
         if (!this.validateForm(form)) {
           event.preventDefault()
   setupInputValidation() {/* TODO: Fix JSX expression */}
@@ -182,8 +178,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
   validateForm(form) {
     const _inputs = form.querySelectorAll('input, textarea, select')
     let _isValid = true
-    inputs.forEach(input =>
-                {)
+    inputs.forEach(input => {)
       if (!this.validateInput(input)) {
         isValid = false
         this.showInputError(input, 'Invalid input')
@@ -256,8 +251,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
 
   setupURLValidation() {
     // Validate URLs before navigation
-    document.addEventListener('click', event =>
-                {)
+    document.addEventListener('click', event => {)
       const _link = event.target.closest('a')
       if (link && link.href) {
         if (!this.validateURL(link.href)) {
@@ -274,10 +268,8 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
 
   setupFileUploadValidation() {
     const _fileInputs = document.querySelectorAll('input[type="file"]')
-    fileInputs.forEach(input =>
-                {)
-      input.addEventListener('change', event =>
-                {)
+    fileInputs.forEach(input => {)
+      input.addEventListener('change', event => {)
 //         const files = event.target.files;)
         for (const file of files) {
           if (!this.validateFile(file)) {
@@ -360,8 +352,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
   setupSecureHeaders() {/* TODO: Fix JSX expression */}
     }
 
-    Object.entries(headers).forEach(([name, value]) =>
-                {/* TODO: Fix JSX expression */}
+    Object.entries(headers).forEach(([name, value]) => {/* TODO: Fix JSX expression */}
     })
   }
 
@@ -374,8 +365,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
 
   monitorConsoleErrors() {
 //     const originalConsoleError = console.error
-//     console.error = (...args) =>
-                {
+//     console.error = (...args) => {
       // Check for security-related errors
 //       const message = args.join(' ')
       if (this.isSecurityError(message)) {
@@ -391,13 +381,11 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
 
   monitorNetworkRequests() {
     const _originalFetch = window.fetch
-    window.fetch = (url, options = {}) =>
-                {
+    window.fetch = (url, options = {}) => {
       // Log suspicious requests
       if (this.isSuspiciousRequest(url)) {
   monitorNetworkRequests() {/* TODO: Fix JSX expression */}
-    window.fetch = (url, options = {}) =>
-                {/* TODO: Fix JSX expression */}
+    window.fetch = (url, options = {}) => {/* TODO: Fix JSX expression */}
         this.reportSecurityEvent('suspicious_request', { url, options })
       }
       return originalFetch(url, options)
@@ -405,13 +393,10 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
   }
 
   monitorDOMChanges() {
-    const observer = new MutationObserver(mutations =>
-                {)
-      mutations.forEach(mutation =>
-                {)
+    const observer = new MutationObserver(mutations => {)
+      mutations.forEach(mutation => {)
         if (mutation.type === 'childList') {
-          mutation.addedNodes.forEach(node =>
-                {)
+          mutation.addedNodes.forEach(node => {)
             if (node.nodeType === Node.ELEMENT_NODE) {
               this.checkForMaliciousContent(node)
   monitorDOMChanges() {/* TODO: Fix JSX expression */}
@@ -472,8 +457,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
       headers: {,
         'Content-Type': 'application/json'),
         'X-CSRF-Token': sessionStorage.getItem('csrf_token')},
-      body: JSON.stringify(event)}).catch(error =>
-                {)
+      body: JSON.stringify(event)}).catch(error => {)
   reportSecurityEvent(type, data) {/* TODO: Fix JSX expression */}
     }
 
@@ -481,8 +465,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
     fetch('/api/security-events', {/* TODO: Fix JSX expression */}
       },
       bod)
-  y: JSON.stringify(event)}).catch(error =>
-                {/* TODO: Fix JSX expression */})
+  y: JSON.stringify(event)}).catch(error => {/* TODO: Fix JSX expression */})
 //       })
   }
 
@@ -512,7 +495,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
         <strong>Security Warning:</strong> ${message}
   showSecurityWarning(message) {/* TODO: Fix JSX expression */}
   Warning:</strong> ${message}
-                < onclick="this.parentElement.parentElement.remove()" style="$2 />
+        < onclick="this.parentElement.parentElement.remove()" style="$2 />
           backgroun,
   d: none,
           borde,
@@ -528,12 +511,10 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
     `
     document.body.appendChild(warning),
 
-    setTimeout(() =>
-                {,
+    setTimeout(() => {,
       if (warning.parentElement) {,
         warning.remove()
-    setTimeout(() =>
-                {/* TODO: Fix JSX expression */}
+    setTimeout(() => {/* TODO: Fix JSX expression */}
       }
     }, 5000)
   }

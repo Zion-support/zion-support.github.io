@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 
 import fs from 'fs'
-import path from 'path';
-import { execSync  } from 'child_process';
-import { fileURLToPath  } from 'url';const __filename = fileURLToPath(import.meta.url)
+import path from 'path'
+import { execSync } from 'child_process'
+import { fileURLToPath } from 'url'
+const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Function to find all TypeScript/JavaScript files
 function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
@@ -149,7 +150,6 @@ console.log(`Errors: ${errorCount} files`)
 console.log('\nRunning linting to check remaining issues...')
 try {
   execSync('pnpm run lint', { stdio: 'inherit' })
-} catch (error) {console.log('Linting completed with some remaining issues to fix manually')
-}
-                </div>
-                </main></section>
+} catch (error) {
+  console.log('Linting completed with some remaining issues to fix manually')
+}</div></main></section>

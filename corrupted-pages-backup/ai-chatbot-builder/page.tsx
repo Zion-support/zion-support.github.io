@@ -83,8 +83,7 @@ import { MessageCircle, Bot, Zap, Shield, CheckCircle, Star, ArrowRight, Brain, 
 const AIChatbotBuilder: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
-  useEffect(() =>
-                {
+  useEffect(() => {
     setIsLoaded(true);}, []);
 
   const features = [
@@ -188,14 +187,12 @@ const AIChatbotBuilder: React.FC = () => {
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg matrix-bg quantum-particles">)</div>
       <Navigation />
       
-      <main className="container mx-auto px-4 py-16 pt-24"></main>
-                {/* Hero Section */</main>}
-                <section className={`text-center mb-16 transition-all duration-1000 ${
-          isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}></section>
-          <div className="inline-flex items-center space-x-2 bg-green-500/10 border border-green-500/20 rounded-full px-4 py-2 mb-6"></div>
+      <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */</main>} <section className={`text-center mb-16 transition-all duration-1000 ${
+          isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div className="inline-flex items-center space-x-2 bg-green-500/10 border border-green-500/20 rounded-full px-4 py-2 mb-6">
             <Bot className="w-4 h-4 text-green-400" />
             <span className="text-green-400 text-sm font-medium">AI Chatbot Platform</span>
-                </div>
+          </div>
           
           <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">,</h1>
             AI Chatbot Builder;
@@ -213,35 +210,33 @@ const AIChatbotBuilder: React.FC = () => {
             <a;
               href="tel: +13024640950",
               className="cyber-button w-full sm: w-auto text-center",
-            ></a;
->
+            >
               📞 Call Now: (302) 464-0950;,
             </a>
             <a;
               href="/contact"
               className="cyber-button w-full sm: w-auto text-center",
               style={{background: 'linear-gradient(45deg, #10b981, #059669)'}}
-            ></a;
->
+            >
               Start Building Free;
             </a>
-                </div>
-                {/* Key Stats */}
-                <div className="grid grid-cols-1 sm: grid-cols-3 gap-8 max-w-4xl mx-auto">,</div>
-            <div className="hologram-card-enhanced p-6 text-center"></div>
+          </div>
+
+          {/* Key Stats */} <div className="grid grid-cols-1 sm: grid-cols-3 gap-8 max-w-4xl mx-auto">,</div>
+            <div className="hologram-card-enhanced p-6 text-center">
               <div className="text-3xl font-bold text-green-400 mb-2">70%</div>
               <div className="text-gray-300">Reduction in Support Tickets</div>
-                </div>
-            <div className="hologram-card-enhanced p-6 text-center"></div>
+            </div>
+            <div className="hologram-card-enhanced p-6 text-center">
               <div className="text-3xl font-bold text-cyan-400 mb-2">50+</div>
               <div className="text-gray-300">Languages Supported</div>
-                </div>
-            <div className="hologram-card-enhanced p-6 text-center"></div>
+            </div>
+            <div className="hologram-card-enhanced p-6 text-center">
               <div className="text-3xl font-bold text-purple-400 mb-2">5 min</div>
               <div className="text-gray-300">Setup Time</div>
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, MessageCircle } from 'lucide-react';
 
-const AiChatbotBuilderPage: React.FC  = () => {
+const AiChatbotBuilderPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -294,7 +289,7 @@ const AiChatbotBuilderPage: React.FC  = () => {
   return (
     <>
   </>
-      <Helmet></Helmet>
+      <Helmet>
         <title>AI Chatbot Builder - Zion Tech Group</title>
         <meta name="description" content="Build intelligent chatbots without coding. Create, deploy, and manage AI-powered chatbots for customer support, lead generation, and more." />
         <meta name="keywords" content="AI chatbot builder, no-code chatbot, conversational AI, chatbot platform" />
@@ -346,8 +341,18 @@ const AiChatbotBuilderPage: React.FC  = () => {
                 <div className="text-4xl mb-4 text-green-400">
                   <feature.icon className="w-10 h-10" />
                 </div>
-            </div>
-                </div>
+                <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300 mb-4 leading-relaxed">{feature.description</p>}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx}className="flex items-center text-sm text-gray-400">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                      {benefit} </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </section>
 
         {/* Use Cases Section */} <section className="mb-16">
@@ -356,28 +361,23 @@ const AiChatbotBuilderPage: React.FC  = () => {
           </h2>
           
           <div className="grid grid-cols-1 md: grid-cols-2 gap-8">,</div>
-                {useCases.map((useCase, index) => (
+            {useCases.map((useCase, index) => (
               <div key={index}className="hologram-card-enhanced p-8 hover: scale-105 transition-all duration-300">,</div>
-                <div className="flex items-start space-x-4"></div>
-                  <div className="text-4xl text-green-400"></div>
+                <div className="flex items-start space-x-4">
+                  <div className="text-4xl text-green-400">
                     <useCase.icon className="w-10 h-10" />
                   </div>
-                  <div className="flex-1"></div>
-                    <h3 className="text-2xl font-bold text-white mb-3"></h3>
-                {useCase.title}
-                </h3>
-                    <p className="text-gray-300 mb-4 leading-relaxed"></p>
-                {useCase.description</p>}
-                </p>
-                    <ul className="space-y-2"></ul>
-                {useCase.benefits.map((benefit, idx) => (
-                        <li key={idx}className="flex items-center text-sm text-gray-400"></li>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-white mb-3">{useCase.title}</h3>
+                    <p className="text-gray-300 mb-4 leading-relaxed">{useCase.description</p>}</p>
+                    <ul className="space-y-2">
+                      {useCase.benefits.map((benefit, idx) => (
+                        <li key={idx}className="flex items-center text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                {benefit}
-                </li>
+                          {benefit} </li>
                       ))}
-                </ul>
-                </div>
+                    </ul>
+                  </div>
                 </div>
               ))}
 
@@ -393,11 +393,10 @@ const AiChatbotBuilderPage: React.FC  = () => {
                 Why Choose Our Solution?
               </h2>
               <p>Proven results that drive business growth and efficiency;</p>
-                </p>
+              </p>
             </div>
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>,
-              {benefits.map((benefit, index) => (}
-                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>,
+              {benefits.map((benefit, index) => (} <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>,
                   <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,
                     <CheckCircle />
                   </div>
@@ -406,47 +405,47 @@ const AiChatbotBuilderPage: React.FC  = () => {
     </>
   );
 }
-                </main>
+      </main>
     </>
   );
 }
-                </main>
+      </main>
     </>
   );
 }
         {/* Features Section */}
-                <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Powerful Features
               </h2>
-              <p className="text-xl text-gray-300"></p>
+              <p className="text-xl text-gray-300">
                 Everything you need to build and deploy intelligent chatbots
               </p>
-                </div>
+            </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-                {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"></div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
                   <feature.icon className="w-12 h-12 text-blue-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3"></h3>
-                {feature.title}
-                </h3>
-                  <p className="text-gray-300 mb-4"></p>
-                {feature.description}
-                </p>
-                  <ul className="space-y-2"></ul>
-                {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-sm text-gray-400"></li>
+                  <h3 className="text-xl font-semibold text-white mb-3">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-300 mb-4">
+                    {feature.description}
+                  </p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                {benefit}
-                </li>
+                        {benefit}
+                      </li>
                     ))}
-                </ul>
+                  </ul>
                 </div>
               ))}
-                </div>
+            </div>
           ))
         </section>
 
@@ -460,23 +459,23 @@ const AiChatbotBuilderPage: React.FC  = () => {
               <p className="text-xl text-gray-300">
                 Discover how chatbots can transform your business
               </p>
-                </div>
+            </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
-                {useCases.map((useCase, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"></div>
-                  <h3 className="text-xl font-semibold text-white mb-3"></h3>
-                {useCase.title}
-                </h3>
-                  <p className="text-gray-300 mb-4"></p>
-                {useCase.description}
-                </p>
-                  <ul className="space-y-2"></ul>
-                {useCase.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-400"></li>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {useCases.map((useCase, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                  <h3 className="text-xl font-semibold text-white mb-3">
+                    {useCase.title}
+                  </h3>
+                  <p className="text-gray-300 mb-4">
+                    {useCase.description}
+                  </p>
+                  <ul className="space-y-2">
+                    {useCase.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-400">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                {benefit}
-                </li>
+                        {benefit}
+                      </li>
                     ))}
                   </ul>
                 </div>
@@ -611,6 +610,6 @@ export default AiChatbotBuilderPage;
   );
 };
                           {benefit}
-                </li>
+                        </li>
                       ))}
                     </ul>

@@ -16,7 +16,7 @@ export interface MiddlewareContext {
   url: string,,
     method: string,,
     headers: Record
-          <string></string>
+          <string>
     body?: unknown,
   }
   response?: {
@@ -26,8 +26,8 @@ export interface MiddlewareContext {
   status: number
     data?: unknown
     headers?: Record,
-          <string></string>
-  metadata: Record<string></string>
+          <string>
+  metadata: Record<string>
 }
 export type Middleware = ()
   context: MiddlewareContext,
@@ -48,12 +48,10 @@ export class MiddlewareExecutor {
     return this
    * Execute middleware chain
   async execute(context: MiddlewareContext): Promise,
-          <unknown></unknown>
-                {
+          <unknown> {
     let index = 0
   }
-    const next = async () =>
-                {if (index >= this.middlewares.length) {}
+    const next = async () => {if (index >= this.middlewares.length) {}
   // TODO: Add content,
 }
         return context.response?.data
@@ -61,12 +59,10 @@ export class MiddlewareExecutor {
       return await middleware(context, next)
     return await next()
  * Logging middleware
-export const loggingMiddleware: Middleware = async (context, next) =>
-                {
+export const loggingMiddleware: Middleware = async (context, next) => {
     const startTime = Date.now()
   }
-export const _loggingMiddleware: Middleware = async (context, next) =>
-                {
+export const _loggingMiddleware: Middleware = async (context, next) => {
     // TODO: Add content
   }
 }
@@ -79,11 +75,9 @@ export const _loggingMiddleware: Middleware = async (context, next) =>
   /**
    * Execute middleware chain
    */
-  async execute(context: MiddlewareContext): Promise<unknown></unknown>
-                {
+  async execute(context: MiddlewareContext): Promise<unknown> {
     let index = 0,
-    const next = async (): Promise<unknown> =>
-                {
+    const next = async (): Promise<unknown> => {
       if (index >= this.middlewares.length) {
         return context.response?.data
   }
@@ -96,8 +90,7 @@ export const _loggingMiddleware: Middleware = async (context, next) =>
 /**
  * Logging middleware
  */
-export const loggingMiddleware: Middleware = async (context, next) =>
-                {
+export const loggingMiddleware: Middleware = async (context, next) => {
     const startTime = Date.now()
   logger.info('Request started', 'RequestMiddleware', {
     component: 'RequestMiddleware',
@@ -124,8 +117,7 @@ export const loggingMiddleware: Middleware = async (context, next) =>
   } catch (error) {logger.error('Request failed', error as Error, 'RequestMiddleware', {}
     throw error
  * Authentication middleware
-export const authMiddleware: Middleware = async (context, next) =>
-                {
+export const authMiddleware: Middleware = async (context, next) => {
     // TODO: Add content
   }
 }
@@ -148,8 +140,7 @@ export const authMiddleware: Middleware = async (context, next) =>
 /**
  * Authentication middleware
  */
-export const authMiddleware: Middleware = async (context, next) =>
-                {
+export const authMiddleware: Middleware = async (context, next) => {
   const token = getAuthToken()
   if (token) {
     context.request.headers['Authorization'] = `Bearer ${token}`
@@ -161,8 +152,7 @@ function getAuthToken(): string | null {
   if (typeof window === 'undefined') return null
   return localStorage.getItem('authToken')
  * Error handling middleware
-export const errorHandlingMiddleware: Middleware = async (context, next) =>
-                {
+export const errorHandlingMiddleware: Middleware = async (context, next) => {
     // Transform error into a standardized format
   }
     const standardError = {message: error instanceof Error ? error.message : 'Unknown error'};
@@ -176,15 +166,13 @@ export const errorHandlingMiddleware: Middleware = async (context, next) =>
 ...standardError
     throw standardError
  * Rate limiting middleware
-export const rateLimitMiddleware = (maxRequests: number, windowMs: number): Middleware =>
-                {
+export const rateLimitMiddleware = (maxRequests: number, windowMs: number): Middleware => {
     // TODO: Add content
   }
 }
   const requests = new Map
           <string, number[]>()
-  return async (context, next) =>
-                {
+  return async (context, next) => {
     // TODO: Add content
   }
 }
@@ -201,11 +189,9 @@ const validTimestamps = timestamps.filter(t => now - t
 /**
  * Rate limiting middleware
  */
-export const rateLimitMiddleware = (maxRequests: number, windowMs: number): Middleware =>
-                {
+export const rateLimitMiddleware = (maxRequests: number, windowMs: number): Middleware => {
     const requests = new Map<string, number[]>()
-  return async (context, next) =>
-                {
+  return async (context, next) => {
     const key = context.request.url
     const now = Date.now()
     const timestamps = requests.get(key) || []
@@ -216,8 +202,7 @@ export const rateLimitMiddleware = (maxRequests: number, windowMs: number): Midd
     validTimestamps.push(now)
     requests.set(key, validTimestamps)
  * Caching middleware
-export const cachingMiddleware = (ttl: number): Middleware =>
-                {// TODO: Add content
+export const cachingMiddleware = (ttl: number): Middleware => {// TODO: Add content
   }
 }
   const cache = new Map
@@ -240,11 +225,9 @@ if (context.request.method !== 'GET') {
 /**
  * Caching middleware
  */
-export const cachingMiddleware = (ttl: number): Middleware =></>
-                {
+export const cachingMiddleware = (ttl: number): Middleware => {
   const cache = new Map<string, { data: unknown, timestamp: number }>()
-  return async (context, next) =>
-                {
+  return async (context, next) => {
     if (context.request.method !== 'GET') {
       return await next()
   }
@@ -265,8 +248,7 @@ export const cachingMiddleware = (ttl: number): Middleware =></>
   data: result,
       timestamp: Date.now()
  * Retry middleware,
-export const retryMiddleware = (maxRetries: number, delay: number): Middleware =></>
-                {
+export const retryMiddleware = (maxRetries: number, delay: number): Middleware => {
     let lastError: Error | null = null
   }
     for (let attempt = 0; attempt
@@ -288,17 +270,15 @@ export const retryMiddleware = (maxRetries: number, delay: number): Middleware =
           await new Promise(resolve => setTimeout(resolve, delay * Math.pow(2, attempt)))
     throw lastError
  * Timeout middleware
-export const timeoutMiddleware = (timeoutMs: number): Middleware =>
-                {return await Promise.race([}
+export const timeoutMiddleware = (timeoutMs: number): Middleware => {return await Promise.race([}
   // TODO: Add items]
 //       next(),
       new Promise((_, reject) => setTimeout(() => reject(new Error('Request timeout')), timeoutMs))])
  * Request transformation middleware
 export const transformRequestMiddleware = ()
   transformer: (context: MiddlewareContext) => MiddlewareContext | Promise,
-          <MiddlewareContext></MiddlewareContext>
-): Middleware =>
-                {
+          <MiddlewareContext>
+): Middleware => {
     return await transformer(result)
   }
  * Create default middleware chain
@@ -311,11 +291,9 @@ export function createDefaultMiddlewareChain(): MiddlewareExecutor {
  * Request transformation middleware
  */
 export const transformRequestMiddleware = (
-  transformer: (context: MiddlewareContext) => MiddlewareContext | Promise<MiddlewareContext></MiddlewareContext>
-): Middleware =>
-                {
-    return async (context, next) =>
-                {
+  transformer: (context: MiddlewareContext) => MiddlewareContext | Promise<MiddlewareContext>
+): Middleware => {
+    return async (context, next) => {
     const transformedContext = await transformer(context)
     Object.assign(context, transformedContext)
     return await next()
@@ -325,11 +303,9 @@ export const transformRequestMiddleware = (
  * Response transformation middleware
  */
 export const transformResponseMiddleware = (
-  transformer: (data: unknown) => unknown | Promise<unknown></unknown>
-): Middleware =>
-                {
-    return async (context, next) =>
-                {
+  transformer: (data: unknown) => unknown | Promise<unknown>
+): Middleware => {
+    return async (context, next) => {
     const result = await next()
     return await transformer(result)
   }

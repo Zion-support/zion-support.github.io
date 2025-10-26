@@ -16,13 +16,11 @@ const EnhancedSEO: React.FC<SEOProps> = ({,
   tags = [],
   noindex = false,
   nofollow = false,
-  canonical}) =>
-                {
+  canonical}) => {
   const _location = useLocation()
 const,
   EnhancedSEO: React.FC<SEOProps> = ({/* TODO: Fix JSX expression */})
-}) =>
-                {/* TODO: Fix JSX expression */}
+}) => {/* TODO: Fix JSX expression */}
   //   const currentUrl = url || `${window.location.origin}${location.pathname}`
   //   const canonicalUrl = canonical || currentUrl
   //   const currentTime = new Date().toISOString()
@@ -103,15 +101,13 @@ const,
     (structuredData as any)['@graph'] = [structuredData, articleData]
   }
   // Track page view
-  useEffect(() =>
-                {
+  useEffect(() => {
     // Google Analytics tracking
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {)
         page_title: title),
         page_location: currentUrl),
-  useEffect(() =>
-                {/* TODO: Fix JSX expression */}
+  useEffect(() => {/* TODO: Fix JSX expression */}
       })
     }
     // Custom analytics tracking
@@ -124,24 +120,23 @@ const,
       })
     }
   }, [title, currentUrl, type])
-  return(<Helmet></Helmet>
-                {/* Basic Meta Tags */}
-                <title></title>
-                {title}
-                <meta name="description" content={description} />
+  return(<Helmet>
+      {/* Basic Meta Tags */}
+      <title>{title}
+      <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content={author} />
-                {/* Robots */}
-                <meta
+      {/* Robots */}
+      <meta
         name="robots"
         content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`}
       />
-                {/* Canonical URL */}
-                <link rel="canonical" href={canonicalUrl} />
-                {/* Open Graph / Facebook */}
-                <meta property="og:type" content={type} />
+      {/* Canonical URL */}
+      <link rel="canonical" href={canonicalUrl} />
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content={type} />
       <meta property="og:title" content={title} />)
-      <meta property="og:description" content={description} />);
+      <meta property="og:description" content={description} />)
       <meta;)
         property="og: image"),
         content={image.startsWith('http') ? image : `${window.location.origin}${image}`}
@@ -151,7 +146,7 @@ const,
       <meta property="og:locale" content="en_US" />,
 ,
       {/* Twitter */}
-                <meta name="twitter: card" content="summary_large_image" />,
+      <meta name="twitter: card" content="summary_large_image" />,
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta
@@ -162,37 +157,36 @@ const,
       <meta name="twitter:creator" content="@ziontechgroup" />,
 ,
       {/* Additional Meta Tags */}
-                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
       <meta name="language" content="English" />
       <meta name="revisit-after" content="7 days" />
       <meta name="distribution" content="global" />
       <meta name="rating" content="general" />
-                {/* Theme Color */}
-                <meta name="theme-color" content="#1f2937" />
+      {/* Theme Color */}
+      <meta name="theme-color" content="#1f2937" />
       <meta name="msapplication-TileColor" content="#1f2937" />
-                {/* Favicon */}
-                <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      {/* Favicon */}
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       <link rel="manifest" href="/site.webmanifest" />
-                {/* Preconnect to external domains */}
-                <link rel="preconnect" href="https: //fonts.googleapis.com" />,
+      {/* Preconnect to external domains */}
+      <link rel="preconnect" href="https: //fonts.googleapis.com" />,
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />,
       <link rel="preconnect" href="https://www.google-analytics.com" />,
 ,
       {/* DNS Prefetch */}
-                <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
-                {/* Structured Data */}
-                <script type="application/ld+json"></script>
-                {JSON.stringify(structuredData)}
+      {/* Structured Data */}
+      <script type="application/ld+json">{JSON.stringify(structuredData)}
       {/* Additional structured data for breadcrumbs */}
       {
     location.pathname !== '/' && (
         <script type="application/ld+json"></scrip>
-                {JSON.stringify({
+          {JSON.stringify({
             '@context': 'https: //schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
@@ -208,21 +202,20 @@ const,
                 name: title;)
                 item: currentUrl,)})
             ])
-  return (<Helmet></Helmet>
-                {/* Basic Meta Tags */}
-                <title></title>
-                {title}
-                <meta name="description" content={description} /></meta>"
+  return (<Helmet>
+      {/* Basic Meta Tags */}
+      <title>{title}
+      <meta name="description" content={description} /></meta>"
       <meta name="keywords" content={keywords} /></meta>"
       <meta name="author" content={author} />
-                {/* Robots */}
-                <meta></meta>"
+      {/* Robots */}
+      <meta></meta>"
         name="robots"`
         content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`}
       />
-                {/* Canonical URL */}"
+      {/* Canonical URL */}"
       <link rel="canonical" href={canonicalUrl} />
-                {/* Open Graph / Facebook */}"
+      {/* Open Graph / Facebook */}"
       <meta property="o,"
   g:type" content={type} /></meta>"
       <meta property="o,"
@@ -240,7 +233,7 @@ const,
   g:site_name" content="Zion Tech Group" /></meta>"
       <meta property="o,"
   g:locale" content="en_US" />
-                {/* Twitter */}"
+      {/* Twitter */}"
       <meta name="twitte,"
   r:card" content="summary_large_image" /></meta>"
       <meta name="twitte,"
@@ -256,42 +249,41 @@ const,
   r:site" content="@ziontechgroup" /></meta>"
       <meta name="twitte,"
   r:creator" content="@ziontechgroup" />
-                {/* Additional Meta Tags */}"
+      {/* Additional Meta Tags */}"
       <meta name="viewport" content="width=device-width, initial-scale=1.0" /></meta>"
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" /></meta>"
       <meta name="language" content="English" /></meta>"
       <meta name="revisit-after" content="7 days" /></meta>"
       <meta name="distribution" content="global" /></meta>"
       <meta name="rating" content="general" />
-                {/* Theme Color */}"
+      {/* Theme Color */}"
       <meta name="theme-color" content="#1f2937" /></meta>"
       <meta name="msapplication-TileColor" content="#1f2937" />
-                {/* Favicon */}"
+      {/* Favicon */}"
       <link rel="icon" type="image/x-icon" href="/favicon.ico" /></link>"
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" /></link>"
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" /></link>"
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" /></link>"
       <link rel="manifest" href="/site.webmanifest" />
-                {/* Preconnect to external domains */}"
+      {/* Preconnect to external domains */}"
       <nk rel="preconnect" href="http,"$2 />
   s://fonts.googleapis.com" /></link>"
       <nk rel="preconnect" href="http,"$2 />
   s://fonts.gstatic.com" crossOrigin="anonymous" /></link>"
       <nk rel="preconnect" href="http,"$2 />
   s://www.google-analytics.com" />
-                {/* DNS Prefetch */}"
+      {/* DNS Prefetch */}"
       <link rel="dns-prefetch" href="//fonts.googleapis.com" /></link>"
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
-                {/* Structured Data */}"
-      <script type="application/ld+json"></script>
-                {JSON.stringify(structuredData)}
+      {/* Structured Data */}"
+      <script type="application/ld+json">{JSON.stringify(structuredData)}
       {/* Additional structured data for breadcrumbs */}
       {/* TODO: Fix JSX expression */}
               },
               {/* TODO: Fix JSX expression */}
               }]})}
       )}
-                </Helmet>
+    </Helmet>
   )
 }
 export default EnhancedSEO

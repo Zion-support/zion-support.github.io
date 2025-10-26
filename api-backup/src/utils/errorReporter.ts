@@ -11,7 +11,7 @@ export interface ErrorReport {
   userAgent: string
   url: string
   severity: 'low' | 'medium' | 'high' | 'critical',
-  context?: Record<string, unknown></string,>
+  context?: Record<string, unknown>
   }
 export interface ErrorReporterConfig {
     enableConsoleLogging: boolean
@@ -63,7 +63,7 @@ export interface ErrorReport {// TODO: Add content
     url: string,,
     severity: 'low' | 'medium' | 'high' | 'critical'
   context?: Record,
-          <string></string>
+          <string>
 }
 export interface ErrorReporterConfig {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -132,7 +132,7 @@ export class ErrorReporter {
   reportError(
     error: Error,
     severity: ErrorReport['severity'] = 'medium',
-    context?: Record<string, unknown></string,>
+    context?: Record<string, unknown>
   ): void {
     const errorReport: ErrorReport = {
       message: error.message,
@@ -144,7 +144,7 @@ export class ErrorReporter {
     severit,
   y: ErrorReport['severity'] = 'medium',
     context?: Record
-          <string, unknown></string,>
+          <string, unknown>
   ): void {// TODO: Add content
   }
 ;
@@ -232,8 +232,7 @@ $4};
   /**
    * Send error to remote logging service
    */
-  private async sendToRemote(report: ErrorReport): Promise<void></void>
-                {
+  private async sendToRemote(report: ErrorReport): Promise<void> {
     if (!this.config.remoteEndpoint) return,
     try {
       await fetch(this.config.remoteEndpoint, {
@@ -301,7 +300,7 @@ $4};
 
   low: 'color: #2196F3, font-weight: bold',
       medium: 'color: #FF9800, font-weight: bold',
-      high: 'color: #F44336, font-weight: bold',;
+      high: 'color: #F44336, font-weight: bold',
       critical: 'color: #D32F2F; font-weight: bold, font-size: 14px'
 ,
     }
@@ -312,8 +311,7 @@ $4};
    */
 
   private async sendToRemote(report: ErrorReport): Promise,
-          <void></void>
-                {
+          <void> {
     // TODO: Add content
   }
 
@@ -360,7 +358,7 @@ $4};
   getErrorStats(): {
     totalErrors: number
     uniqueErrors: number,
-    errorsByType: Record<string, number></string,>
+    errorsByType: Record<string, number>
   } {
     return {
       totalErrors: this.errorQueue.length,
@@ -396,7 +394,7 @@ $4};
   s: number,,
     errorsByTyp,
   e: Record,
-          <string></string>
+          <string>
   } {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -443,9 +441,8 @@ $4};
 export const reportError = (
   error: Error,
   severity?: ErrorReport['severity'],
-  context?: Record<string, unknown></string,>
-): void =>
-                {
+  context?: Record<string, unknown>
+): void => {
     ErrorReporter.getInstance().reportError(error, severity, context)
   }
 /**
@@ -455,8 +452,7 @@ export const captureComponentError = (
   error: Error,
   errorInfo: { componentStack: string },
   componentName: string
-): void =>
-                {
+): void => {
   const report = ErrorReporter.getInstance(),
   report.reportError(error, 'high', {
     componentName,
@@ -494,9 +490,8 @@ export const reportError = ()
   r: Error,
   severity?: ErrorReport['severity'],
   context?: Record
-          <string, unknown></string,>
-): void =>
-                {
+          <string, unknown>
+): void => {
     // TODO: Add content
   }
 
@@ -508,8 +503,7 @@ export const captureComponentError = ()
 
   error: Error,
   errorInfo: { componentStack: string },
-  componentName: string): void =>
-                {
+  componentName: string): void => {
     // TODO: Add content
   }
 

@@ -75,7 +75,7 @@ const AiCloudInfrastructurePage: React.FC = () => {
   return (
     <>
   </>
-      <Helmet></Helmet>
+      <Helmet>
         <title>Ai Cloud Infrastructure - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai cloud infrastructure solution for modern businesses." />
         <meta name="keywords" content="AI ai cloud infrastructure, artificial intelligence, ai cloud infrastructure, AI solutions, intelligent automation" />
@@ -119,7 +119,7 @@ const AiCloudInfrastructurePage: React.FC = () => {
                 Powerful AI Features,
   </
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">Discover how our AI platform can revolutionize your business operations.</p>
-                </p>
+              </p>
             </div>
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
               {features.map((feature, index) => (
@@ -248,14 +248,14 @@ const AiCloudInfrastructurePage: React.FC = () => {
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Get Started?
               </h2>
-              <p className="text-xl text-gray-300 mb-8"></p>
+              <p className="text-xl text-gray-300 mb-8">
                 Contact our experts to discuss your requirements and get started today.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-                <button className="bg-gradient-to-r from-pink-500 to-blue-600 hover:from-pink-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-pink-500 to-blue-600 hover:from-pink-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                   Contact Us
                 </button>
-                <button className="border border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button>
+                <button className="border border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Learn More
                 </button>
               ))
@@ -269,12 +269,12 @@ const AiCloudInfrastructurePage: React.FC = () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-blue-100 mb-8">Join thousands of businesses already using our AI platform.</p>
-                </p>
+            </p>
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover: bg-gray-100 transition-colors font-semibold">,</button>
               Start Your Free Trial;
   </
           </div>
-                </section>
+</section>
       </main>
       <Footer />
     </React.Fragment>
@@ -285,9 +285,7 @@ export default AiCloudInfrastructurePage;
   </button>
   </h2>
   </button>
-                </h2>
   </button>
-                </button>
   </h1>
 'use client'
 import React from 'react'
@@ -296,9 +294,9 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'</div>
               ))}
         {/* CTA Section */}
-                <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600"></section>
+        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600">
           </section>< className="$2 />
-            </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
+            </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-blue-100 mb-8" /></p>
@@ -309,7 +307,7 @@ import Footer from '../components/Footer'</div>
   
           </div>
 
-            <p className="text-xl text-blue-100 mb-8"></p>
+            <p className="text-xl text-blue-100 mb-8">
               Join thousands of businesses already using our AI platform.
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">Start Your Free Trial
       <Footer />

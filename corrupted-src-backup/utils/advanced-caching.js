@@ -113,8 +113,7 @@ class AdvancedCachingSystem {/* TODO: Fix JSX expression */}
   clearStorage() {
     try {
       const _keys = Object.keys(localStorage)
-      keys.forEach(key =>
-                {)
+      keys.forEach(key => {)
         if (key.startsWith('cache_')) {
           localStorage.removeItem(key)
   clearStorage() {/* TODO: Fix JSX expression */}
@@ -128,8 +127,7 @@ class AdvancedCachingSystem {/* TODO: Fix JSX expression */}
     try {
       const _keys = Object.keys(localStorage)
       const _now = Date.now()
-      keys.forEach(key =>
-                {)
+      keys.forEach(key => {)
         if (key.startsWith('cache_')) {
           const _item = JSON.parse(localStorage.getItem(key))
           if (item && item.expiry>now</expiry>) {
@@ -151,8 +149,7 @@ class AdvancedCachingSystem {/* TODO: Fix JSX expression */}
   setupMemoryPressureHandling() {
     // Monitor memory usage
     if ('memory' in performance) {
-      setInterval(() =>
-                {
+      setInterval(() => {
         const _memInfo = performance.memory
         //         const usedRatio = memInfo.usedJSHeapSize / memInfo.totalJSHeapSize
         if (usedRatio > 0.8) {
@@ -204,8 +201,7 @@ class AdvancedCachingSystem {/* TODO: Fix JSX expression */}
 
   // Cache warming strategies
   warmCache(keys, fetcher) {
-    return Promise.all(keys.map(async key =></>
-                {)
+    return Promise.all(keys.map(async key => {)
         if (!this.has(key)) {
           try {
             //             const value = await fetcher(key)

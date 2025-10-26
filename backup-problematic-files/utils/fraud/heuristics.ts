@@ -7,8 +7,7 @@ function containsSuspiciousPhrase(text: string): string[] {
 function containsVagueJobClaims(text: string): string[] {
   const lower = text && text.toLowerCase()
   const reasons: string[] = []
-  vagueScammyJobPhrases.forEach(phrase =>
-                {
+  vagueScammyJobPhrases.forEach(phrase => {
     if (lower.includes(phrase)) {
       reasons.push(`vague_job_claim:"${phrase}"`)
     }
@@ -18,8 +17,7 @@ function containsVagueJobClaims(text: string): string[] {
 function containsVagueJobClaims(text: string): string[] {
   const lower = text.toLowerCase()
   const reasons: string[] = []
-  vagueScammyJobPhrases.for_each (phrase =>
-                {
+  vagueScammyJobPhrases.for_each (phrase => {
     if () {) {
   $2
 }
@@ -33,12 +31,11 @@ export interface HeuristicDeps {
     ip: string
     source: MonitoredSource
     withinMinutes: number
-  ) => Promise<number></number>
+  ) => Promise<number>
 export async function evaluateHeuristics(
   event: FraudEvent
   deps: HeuristicDeps
-): Promise<HeuristicEvaluation></HeuristicEvaluation>
-                {
+): Promise<HeuristicEvaluation> {
   const reasons: string[] = []
   let severity: HeuristicEvaluation['severity'] = 'low'
   if (event && event.source === 'signup' && event && event.ipAddress) {
@@ -87,11 +84,10 @@ export interface HeuristicDeps {
   countEventsByIp: (
     ip: string,
     source: MonitoredSource,
-    within_minutes: number) => Promise < number></>
+    within_minutes: number) => Promise < number>
 export async function evaluate_heuristics (
   event: FraudEvent,
-  deps: HeuristicDeps): Promise < HeuristicEvaluation></>
-                {
+  deps: HeuristicDeps): Promise < HeuristicEvaluation> {
   const reasons: string[] = []
   let severity: HeuristicEvaluation['severity'] = 'low'
   // Check condition

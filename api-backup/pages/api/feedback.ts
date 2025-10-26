@@ -1,4 +1,5 @@
-import { saveFeedbackFallback,
+import {
+  saveFeedbackFallback,
   FeedbackRecord,
 } from "../../utils/feedback/store"
 import {
@@ -13,7 +14,7 @@ function bad(res: NextApiResponse, msg: string, code = 400) {
 }
 async function tryWriteToFirestore(doc: FeedbackRecord) {
   const { FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY } =
-    process && process.env as Record<string, string | undefined></string,>
+    process && process.env as Record<string, string | undefined>
   if (!FIREBASE_PROJECT_ID || !FIREBASE_CLIENT_EMAIL || !FIREBASE_PRIVATE_KEY)
     return false
   try {
@@ -24,11 +25,13 @@ async function tryWriteToFirestore(doc: FeedbackRecord) {
           projectId: FIREBASE_PROJECT_ID,
           clientEmail: FIREBASE_CLIENT_EMAIL,
           privateKey: (FIREBASE_PRIVATE_KEY || "").replace(/\\n/g, "\n"),
-import type { NextApiRequest, NextApiResponse } from './next';
-import { v4 as uuidv4   } from './uuid';
-import { saveFeedbackFallback,
-  FeedbackRecord,;
- } from '../../utils / feedback / store';/**
+import type { NextApiRequest, NextApiResponse } from './next'
+import { v4 as uuidv4  } from './uuid'
+import {
+  saveFeedbackFallback,
+  FeedbackRecord,
+} from '../../utils / feedback / store'
+/**
  * ok - Function description
  */
 function ok() {
@@ -45,7 +48,7 @@ async /**
  */
 function tryWriteToFirestore() {
   const { FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY } =
-    process.env as Record < string, string | undefined></>
+    process.env as Record < string, string | undefined>
   // Check condition
 if (
     return false) {

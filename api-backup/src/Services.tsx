@@ -1,11 +1,16 @@
-import React, { useState } from 'react';
-import { useState, useMemo , useState  } from 'react';import { motion  } from 'framer-motion';
-import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES  } from '../data/comprehensiveServices';import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
+import { useState, useMemo } from 'react'
+import { useState } from 'react'
+import { motion } from 'framer-motion'
+import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES } from '../data/comprehensiveServices'
+import React, { useState, useEffect } from 'react'
 import { SEO } from "@/components/SEO"
-import React from 'react';
-import { motion  } from 'framer-motion';
-import { SEO  } from '@/components/SEO';import { Link  } from 'react-router-dom';
-import { Brain, 
+import React from 'react'
+import { motion } from 'framer-motion'
+import { SEO } from '@/components/SEO'
+import { Link } from 'react-router-dom'
+import { 
+  Brain, 
   Cpu, 
   Cloud, 
   Shield, 
@@ -20,8 +25,9 @@ import { Brain,
   Globe,
   Settings,
   Database,
-  Network;
- } from 'lucide-react';export default function Services() {
+  Network
+} from 'lucide-react'
+export default function Services() {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
   const serviceCategories = [
@@ -218,29 +224,29 @@ import { Brain,
     )
   )
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20"></div>
-                {/* Hero Section */}
-                <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-7xl mx-auto text-center"></div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6"></h1>
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20">
+      {/* Hero Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Comprehensive
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400"></span>
-                {" "}Micro SAAS Services
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+              {" "}Micro SAAS Services
             </span>
-                </h1>
-    <div className="min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100"></div>
-                {/* Hero Section */}
-                <section className="relative bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-cyan text-white py-20"></section>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8"></div>
-          <div className="max-w-4xl mx-auto text-center"></div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6"></h1>
+          </h1>
+    <div className="min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-cyan text-white py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Our Services
             </h1>
-            <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed"></p>
+            <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed">
               Comprehensive technology solutions designed to transform your business 
               and drive sustainable growth in the digital age.
             </p>
-            <div className="flex flex-wrap justify-center gap-4"></div>
+            <div className="flex flex-wrap justify-center gap-4">
               <$2 />
                 to="/contact" 
                 className="inline-flex items-center px-8 py-3 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan-light transition-colors"
@@ -253,21 +259,23 @@ import { Brain,
               >
                 Request Quote
               </Link>
-                </div>
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple"></div>
-                {/* Hero Section */}
-                <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-7xl mx-auto text-center"></div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
+            </div>
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
+      {/* Hero Section */}
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Our <span className="bg-gradient-to-r from-zion-cyan to-zion-purple-light bg-clip-text text-transparent">Services</span>
-                </h1>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8"></p>
+          </h1>
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
             Comprehensive technology solutions designed to accelerate your business growth and digital transformation.
           </p>
 import React from 'react'
-import React from 'react';
-import { motion  } from 'framer-motion';
-import { Link  } from 'react-router-dom';import {Brain, 
+import React from 'react'
+import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
+import { 
+  Brain, 
   Cloud, 
   Shield, 
   Zap, 
@@ -275,13 +283,12 @@ import { Link  } from 'react-router-dom';import {Brain,
   Database, 
   Smartphone, 
           {/* Category Pills */}
-                <motion.div
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-wrap justify-center gap-3 mb-8"
-          ></motion.div
->
+          >
             <$2 />
               onClick={() => handleCategorySelect('all')}
               className={`px-6 py-3 rounded-full font-medium transition-all ${
@@ -298,78 +305,78 @@ import { Link  } from 'react-router-dom';import {Brain,
             >
               View Pricing
             </Link>
-                </div>
+          </div>
         </div>
-                </section>
-                {/* Service Categories */}
-                <section className="py-20"></section>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-4xl font-bold text-zion-blue-dark mb-4"></h2>
+      </section>
+
+      {/* Service Categories */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
               Service Categories
             </h2>
-            <p className="text-xl text-zion-slate max-w-3xl mx-auto"></p>
+            <p className="text-xl text-zion-slate max-w-3xl mx-auto">
               Explore our comprehensive range of technology services designed to meet 
               every aspect of your digital transformation journey.
             </p>
-                </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-                {serviceCategories.map((category, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6"></div>
-                <div className="flex justify-center mb-4"></div>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {serviceCategories.map((category, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6">
+                <div className="flex justify-center mb-4">
                   <category.icon className="w-16 h-16 text-zion-cyan" />
                 </div>
-                <h3 className="text-2xl font-bold text-zion-blue-dark mb-3 text-center"></h3>
-                {category.title}
+                <h3 className="text-2xl font-bold text-zion-blue-dark mb-3 text-center">
+                  {category.title}
                 </h3>
-                <p className="text-zion-slate mb-6 text-center leading-relaxed"></p>
-                {/* Service Categories */}
-                <section className="py-16 px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-7xl mx-auto"></div>
+                <p className="text-zion-slate mb-6 text-center leading-relaxed">
+      {/* Service Categories */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Core Service Categories</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-                {serviceCategories.map((category, index) => (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light text-white"></div>
-                {/* Animated Background Elements */}
-                <div className="fixed inset-0 overflow-hidden pointer-events-none"></div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {serviceCategories.map((category, index) => (
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light text-white">
+      {/* Animated Background Elements */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-20 w-72 h-72 bg-zion-cyan/10 rounded-full blur-3xl animate-float"></div>
         <div className="absolute top-40 right-20 w-96 h-96 bg-zion-purple/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
         <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-zion-cyan/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '4s' }}></div>
         <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-zion-purple/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '6s' }}></div>
-                </div>
+      </div>
 
-      <div className="relative z-10"></div>
-                {/* Hero Section */}
-                <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32"></section>
+      <div className="relative z-10">
+        {/* Hero Section */}
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
           <motion.div
             className="text-center"
-    <div className="min-h-screen bg-zion-blue-dark text-white"></motion.div
->
-                {/* Hero Section */}
-                <section className="relative pt-32 pb-20 px-6 bg-gradient-to-br from-zion-blue-dark via-zion-blue-light to-zion-purple overflow-hidden"></section>
-                {/* Animated Background */}
-                <div className="absolute inset-0 overflow-hidden"></div>
+    <div className="min-h-screen bg-zion-blue-dark text-white">
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 px-6 bg-gradient-to-br from-zion-blue-dark via-zion-blue-light to-zion-purple overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-cyan/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-zion-purple/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-zion-cyan/10 rounded-full blur-3xl animate-pulse delay-500"></div>
-                </div>
+        </div>
         
-        <div className="max-w-7xl mx-auto text-center relative z-10"></div>
+        <div className="max-w-7xl mx-auto text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          ></motion.div
->
+          >
                 className="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 backdrop-blur-sm"
               />
               <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-6 h-6" />
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Comprehensive AI-powered technology solutions designed to transform your business and drive innovation across all industries.
           </p>
-                {/* Search and Filter */}
-                <div className="max-w-2xl mx-auto mb-8"></div>
-            <div className="relative"></div>
+          
+          {/* Search and Filter */}
+          <div className="max-w-2xl mx-auto mb-8">
+            <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
@@ -379,7 +386,7 @@ import { Link  } from 'react-router-dom';import {Brain,
                 className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               />
             </div>
-                </div>
+          </div>
                 key={category}
                 onClick={() => handleCategorySelect(category)}
                 className={`px-6 py-3 rounded-full font-medium transition-all ${
@@ -389,7 +396,7 @@ import { Link  } from 'react-router-dom';import {Brain,
                 }`}
               >
                 {category.name}
-                <div className="flex flex-wrap justify-center gap-3 mb-8"></div>
+          <div className="flex flex-wrap justify-center gap-3 mb-8">
             <$2 />
               onClick={() => setSelectedCategory('all')}
               className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
@@ -400,7 +407,7 @@ import { Link  } from 'react-router-dom';import {Brain,
             >
               All Services
             </button>
-                {serviceCategories.map((category) => (
+            {serviceCategories.map((category) => (
               <$2 />
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
@@ -411,62 +418,62 @@ import { Link  } from 'react-router-dom';import {Brain,
                 }`}
               >
                 {category.title}
-                </button>
+              </button>
             ))}
-                </div>
-                </section>
+          </div>
+        </section>
         </div>
 
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-zion-cyan to-zion-purple bg-clip-text text-transparent"></h1>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-zion-cyan to-zion-purple bg-clip-text text-transparent">
               Revolutionary Technology Services
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed"></p>
+            <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed">
               Discover our cutting-edge portfolio of innovative technology solutions designed to transform your business. 
               From AI-powered analytics to quantum computing platforms, we're building the future today.
             </p>
-            <div className="flex flex-wrap justify-center gap-6 mt-8 text-sm text-zion-slate-light"></div>
-              <span className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full"></span>
+            <div className="flex flex-wrap justify-center gap-6 mt-8 text-sm text-zion-slate-light">
+              <span className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
                 <Zap className="w-4 h-4 text-zion-cyan" />
                 {services.length}+ Revolutionary Services
               </span>
-              <span className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full"></span>
+              <span className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
                 <Shield className="w-4 h-4 text-zion-cyan" />
                 99.9% Uptime Guarantee
               </span>
-              <span className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full"></span>
+              <span className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
                 <Brain className="w-4 h-4 text-zion-cyan" />
                 AI-Powered Solutions
               </span>
-              <span className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full"></span>
+              <span className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
                 <Star className="w-4 h-4 text-zion-cyan" />
                 Competitive Pricing
               </span>
-                </div>
+            </div>
           </motion.div>
-                </div>
+        </div>
       </section>
-                {/* Filters and Search */}
-                <section className="py-16 px-6 bg-zion-blue-dark/50"></section>
-        <div className="max-w-6xl mx-auto"></div>
+
+      {/* Filters and Search */}
+      <section className="py-16 px-6 bg-zion-blue-dark/50">
+        <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 shadow-2xl"
-          ></motion.div
->
-            <div className="grid md:grid-cols-4 gap-6"></div>
-                {/* Category Filter */}
-                <div></div>
+          >
+            <div className="grid md:grid-cols-4 gap-6">
+              {/* Category Filter */}
+              <div>
                 <label className="block text-sm font-medium text-zion-slate-light mb-2">Category</label>
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
                   className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-all duration-300 mb-12"
         >
-          <div className="bg-zion-blue-light/20 backdrop-blur-md border border-zion-purple/30 rounded-2xl p-6"></div>
-                {/* Search Bar */}
-                <div className="relative mb-6"></div>
+          <div className="bg-zion-blue-light/20 backdrop-blur-md border border-zion-purple/30 rounded-2xl p-6">
+            {/* Search Bar */}
+            <div className="relative mb-6">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
               <input
                 type="text"
@@ -476,61 +483,57 @@ import { Link  } from 'react-router-dom';import {Brain,
                 className="w-full pl-12 pr-4 py-3 bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20"
               />
             </div>
-                {/* Filters */}
-                <div className="flex flex-wrap gap-4"></div>
-                {/* Category Filter */}
-                <div className="flex-1 min-w-48"></div>
+
+            {/* Filters */}
+            <div className="flex flex-wrap gap-4">
+              {/* Category Filter */}
+              <div className="flex-1 min-w-48">
                 <label className="block text-zion-slate-light text-sm font-medium mb-2">Category</label>
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
                   className="w-full px-3 py-2 bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg text-white focus:outline-none focus:border-zion-cyan"
                 >
-                {categories.map(category => (
-                    <option key={category} value={category}></option>
-                {category}
-                </option>
+                  {categories.map(category => (
+                    <option key={category} value={category}>{category}</option>
                   ))}
                 </select>
-                </div>
-                {/* Pricing Filter */}
-                <div className="flex-1 min-w-48"></div>
+              </div>
+
+              {/* Pricing Filter */}
+              <div className="flex-1 min-w-48">
                 <label className="block text-zion-slate-light text-sm font-medium mb-2">Pricing Model</label>
                 <select
                   value={selectedPricing}
                   onChange={(e) => setSelectedPricing(e.target.value)}
                   className="w-full px-3 py-2 bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg text-white focus:outline-none focus:border-zion-cyan"
                 >
-                {pricingModels.map(model => (
-                    <option key={model} value={model}></option>
-                {model.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())}
-                </option>
+                  {pricingModels.map(model => (
+                    <option key={model} value={model}>{model.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())}</option>
                   ))}
                 </select>
-                </div>
+              </div>
 
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24"></section>
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div
             variants={containerVariants}
             initial="hidden"
             animate="visible"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20"
-          ></motion.div
->
-                {filteredServices.map((service) => (
+          >
+            {filteredServices.map((service) => (
               <motion.div
                 key={service.id}
                 variants={itemVariants}
                 className="group bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 transform hover:-translate-y-2"
-              ></motion.div
->
+              >
                 {/* Service Header */}
-                <div className="mb-6"></div>
-                  <div className="flex items-center justify-between mb-4"></div>
-                    <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs font-medium rounded-full border border-zion-cyan/30"></span>
-                {service.category}
-                </span>
-                {service.badge && (
+                <div className="mb-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs font-medium rounded-full border border-zion-cyan/30">
+                      {service.category}
+                    </span>
+                    {service.badge && (
                       < className={`px-3 py-1 text-xs font-medium rounded-full border ${$2 />
                         service.badge === 'Popular' ? 'bg-zion-purple/20 text-zion-purple border-zion-purple/30' :
                         service.badge === 'New' ? 'bg-green-500/20 text-green-400 border-green-500/30' :
@@ -538,42 +541,44 @@ import { Link  } from 'react-router-dom';import {Brain,
                         service.badge === 'Premium' ? 'bg-zion-cyan/20 text-zion-cyan border-zion-cyan/30' :
                         'bg-zion-purple/20 text-zion-purple border-zion-purple/30'
                       }`}>
-                {service.badge}
-                </span>
+                        {service.badge}
+                      </span>
                     )}
+                  </div>
+                  <h3 className="text-2xl font-bold mb-2 text-white group-hover:text-zion-cyan transition-colors duration-300">
+                    {service.title}
+                  </h3>
+                  <p className="text-zion-slate-light leading-relaxed mb-4">
+                    {service.description}
+                  </p>
                 </div>
-                  <h3 className="text-2xl font-bold mb-2 text-white group-hover:text-zion-cyan transition-colors duration-300"></h3>
-                {service.title}
-                </h3>
-                  <p className="text-zion-slate-light leading-relaxed mb-4"></p>
-                {service.description}
-                </p>
-                </div>
+
                 {/* Pricing */}
-                <div className="mb-6"></div>
-                  <div className="flex items-center justify-between mb-2"></div>
-                    <span className="text-2xl font-bold text-zion-cyan"></span>
-                {service.price.currency}{service.price.monthly.toLocaleString()}
-                </span>
+                <div className="mb-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-2xl font-bold text-zion-cyan">
+                      {service.price.currency}{service.price.monthly.toLocaleString()}
+                    </span>
                     <span className="text-zion-slate-light text-sm">/month</span>
-                </div>
-                {service.price.yearly && (
-                    <div className="text-zion-slate-light text-sm"></div>
-                {service.price.currency}{service.price.yearly.toLocaleString()}/year (Save {Math.round((1 - service.price.yearly / (service.price.monthly * 12)) * 100)}%)
+                  </div>
+                  {service.price.yearly && (
+                    <div className="text-zion-slate-light text-sm">
+                      {service.price.currency}{service.price.yearly.toLocaleString()}/year (Save {Math.round((1 - service.price.yearly / (service.price.monthly * 12)) * 100)}%)
                     </div>
                   )}
                 </div>
+
                 {/* Key Features */}
-                <div className="mb-4"></div>
+                <div className="mb-4">
                   <h4 className="text-sm font-semibold text-zion-purple mb-2">Key Features:</h4>
-                  <ul className="space-y-1"></ul>
-                {service.features.slice(0, 3).map((feature, idx) => (
-                      <li key={idx} className="text-xs text-zion-slate-light flex items-center gap-2"></li>
+                  <ul className="space-y-1">
+                    {service.features.slice(0, 3).map((feature, idx) => (
+                      <li key={idx} className="text-xs text-zion-slate-light flex items-center gap-2">
                         <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full"></div>
-                {feature}
-                </li>
+                        {feature}
+                      </li>
                     ))}
-                </ul>
+                  </ul>
                 </div>
 
               <motion.div
@@ -582,71 +587,73 @@ import { Link  } from 'react-router-dom';import {Brain,
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-6 hover:bg-white/10 transition-all duration-300 group hover:scale-105 hover:shadow-2xl hover:shadow-zion-cyan/20"
-              ></motion.div
->
+              >
                 {/* Service Header */}
-                <div className="flex items-start justify-between mb-4"></div>
-                  <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300"></div>
+                <div className="flex items-start justify-between mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <service.icon className="w-6 h-6 text-white" />
                   </div>
-                  <div className="flex gap-2"></div>
-                {service.popular && (
+                  <div className="flex gap-2">
+                    {service.popular && (
                       <span className="bg-zion-cyan text-white text-xs px-2 py-1 rounded-full font-medium">Popular</span>
                     )}
                     {service.new && (
                       <span className="bg-zion-purple text-white text-xs px-2 py-1 rounded-full font-medium">New</span>
                     )}
+                  </div>
                 </div>
-                </div>
+
                 {/* Service Content */}
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors"></h3>
-                {service.name}
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
+                  {service.name}
                 </h3>
-                <p className="text-zion-slate-light mb-4 leading-relaxed"></p>
-                {service.description}
+                <p className="text-zion-slate-light mb-4 leading-relaxed">
+                  {service.description}
                 </p>
+
                 {/* Price Comparison */}
-                <div className="mb-4"></div>
-                  <div className="text-2xl font-bold text-zion-cyan"></div>
-                {service.price}
-                </div>
-                  <div className="text-sm text-zion-slate-light"></div>
+                <div className="mb-4">
+                  <div className="text-2xl font-bold text-zion-cyan">
+                    {service.price}
+                  </div>
+                  <div className="text-sm text-zion-slate-light">
                     Market: {service.marketPrice}
+                  </div>
                 </div>
-                </div>
+
                 {/* Key Benefits */}
-                <div className="mb-4"></div>
-                  <h4 className="text-sm font-semibold text-white mb-2 flex items-center gap-2"></h4>
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-white mb-2 flex items-center gap-2">
                     <TrendingUp className="w-4 h-4 text-zion-cyan" />
                     Key Benefits:
                   </h4>
-                  <ul className="space-y-1"></ul>
-                {service.benefits.slice(0, 2).map((benefit, idx) => (
-                      <li key={idx} className="text-sm text-zion-slate-light flex items-center gap-2"></li>
+                  <ul className="space-y-1">
+                    {service.benefits.slice(0, 2).map((benefit, idx) => (
+                      <li key={idx} className="text-sm text-zion-slate-light flex items-center gap-2">
                         <CheckCircle className="w-3 h-3 text-zion-cyan" />
-                {benefit}
-                </li>
+                        {benefit}
+                      </li>
                     ))}
-                </ul>
+                  </ul>
                 </div>
+
                 {/* Tags */}
-                <div className="mb-4"></div>
-                  <div className="flex flex-wrap gap-2"></div>
-                {service.tags.slice(0, 4).map((tag, idx) => (
+                <div className="mb-4">
+                  <div className="flex flex-wrap gap-2">
+                    {service.tags.slice(0, 4).map((tag, idx) => (
                       <$2 />
                         key={idx}
                         className="px-2 py-1 bg-zion-blue-light/20 text-zion-slate-light text-xs rounded border border-zion-blue-light/30"
                       >
-                {tag}
-                </span>
+                        {tag}
+                      </span>
                     ))}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-                {filteredServices.map((service, index) =>
-                {
+          {filteredServices.map((service, index) => {
             const IconComponent = service.icon
             return (
               <motion.div
@@ -655,23 +662,22 @@ import { Link  } from 'react-router-dom';import {Brain,
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
                 className="group bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 hover:border-blue-400/50 hover:bg-white/20 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-400/20"
-              ></motion.div
->
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl mb-6 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300"></div>
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl mb-6 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
                   <IconComponent className="w-8 h-8" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors"></h3>
-                {service.name}
+                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
+                  {service.name}
                 </h3>
-                <p className="text-gray-300 mb-6 leading-relaxed"></p>
-                {service.description}
+                <p className="text-gray-300 mb-6 leading-relaxed">
+                  {service.description}
                 </p>
-                <ul className="space-y-2 mb-6"></ul>
-                {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-400"></li>
+                <ul className="space-y-2 mb-6">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-400">
                       <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
-                {feature}
-                </li>
+                      {feature}
+                    </li>
                   ))}
                 </ul>
                 <$2 />
@@ -681,88 +687,88 @@ import { Link  } from 'react-router-dom';import {Brain,
                   Learn More
                   <ArrowRight className="w-4 h-4" />
                 </Link>
-                </motion.div>
+              </motion.div>
             )
           })}
-                </motion.div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-                {filteredServices.map((service, idx) => (
+        </motion.div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredServices.map((service, idx) => (
             <$2 />
               key={idx}
               className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 group"
             >
-                {/* Service Header */}
-                <div className="flex items-start space-x-4 mb-4"></div>
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300"></div>
+              {/* Service Header */}
+              <div className="flex items-start space-x-4 mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <service.icon className="w-6 h-6 text-white" />
                 </div>
-                <div className="flex-1"></div>
-                  <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200"></h3>
-                {service.name}
-                </h3>
-                  <p className="text-gray-400 text-sm leading-relaxed"></p>
-                {service.description}
-                </p>
+                <div className="flex-1">
+                  <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200">
+                    {service.name}
+                  </h3>
+                  <p className="text-gray-400 text-sm leading-relaxed">
+                    {service.description}
+                  </p>
                 </div>
               </div>
-                {/* Features */}
-                <div className="mb-4"></div>
+
+              {/* Features */}
+              <div className="mb-4">
                 <h4 className="text-sm font-medium text-gray-300 mb-2">Key Features:</h4>
-                <ul className="space-y-1"></ul>
-                {service.features.map((feature, featureIdx) => (
-                    <li key={featureIdx} className="flex items-center space-x-2 text-sm text-gray-400"></li>
+                <ul className="space-y-1">
+                  {service.features.map((feature, featureIdx) => (
+                    <li key={featureIdx} className="flex items-center space-x-2 text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                      <span></span>
-                {feature}
-                </span>
-                </li>
+                      <span>{feature}</span>
+                    </li>
                   ))}
                 </ul>
-                </div>
-                {/* Pricing */}
-                <div className="mb-4 p-3 bg-gray-700/50 rounded-lg"></div>
-                <div className="flex items-center space-x-2 text-sm text-gray-300"></div>
+              </div>
+
+              {/* Pricing */}
+              <div className="mb-4 p-3 bg-gray-700/50 rounded-lg">
+                <div className="flex items-center space-x-2 text-sm text-gray-300">
                   <DollarSign className="w-4 h-4 text-green-400" />
-                  <span></span>
-                {service.pricing}
-                </span>
+                  <span>{service.pricing}</span>
                 </div>
               </div>
-                {/* CTA Button */}
-                <$2 />
+
+              {/* CTA Button */}
+              <$2 />
                 to={service.path}
                 className="w-full flex items-center justify-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 group-hover:scale-105"
               >
                 <span>Learn More</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
               </Link>
-                </div>
+            </div>
           ))}
-                </div>
-                {/* Empty State */}
+        </div>
+
+        {/* Empty State */}
         {filteredServices.length === 0 && (
-          <div className="text-center py-16"></div>
+          <div className="text-center py-16">
             <Search className="w-16 h-16 text-gray-600 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-gray-400 mb-2">No services found</h3>
             <p className="text-gray-500">Try adjusting your search or filter criteria.</p>
-                </div>
+          </div>
         )}
 
         {/* Enhanced Services Section */}
-                <div className="mt-16 mb-16"></div>
-          <div className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 border border-purple-500/20 rounded-2xl p-8"></div>
-            <div className="text-center mb-8"></div>
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 rounded-full px-6 py-3 mb-4"></div>
+        <div className="mt-16 mb-16">
+          <div className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 border border-purple-500/20 rounded-2xl p-8">
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 rounded-full px-6 py-3 mb-4">
                 <Sparkles className="h-5 w-5 text-purple-400" />
                 <span className="text-purple-400 font-medium">New & Enhanced</span>
-                </div>
-              <h2 className="text-3xl font-bold text-white mb-4"></h2>
+              </div>
+              <h2 className="text-3xl font-bold text-white mb-4">
                 Ready to Transform Your Business?
               </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"></p>
+              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                 Let our AI experts help you implement the right technology solutions to drive growth and innovation.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <$2 />
                   to="/contact"
                   className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
@@ -781,43 +787,44 @@ import { Link  } from 'react-router-dom';import {Brain,
                 >
                   Request Custom Quote
                 </Link>
-                </div>
+              </div>
             </div>
-                </div>
+          </div>
         </div>
-                {/* Additional Services Links */}
-                <section className="py-16 px-4"></section>
-          <div className="container mx-auto text-center"></div>
+
+        {/* Additional Services Links */}
+        <section className="py-16 px-4">
+          <div className="container mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Explore More Services</h2>
-            <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto"></p>
+            <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
               Discover our comprehensive portfolio of innovative micro SAAS and specialized IT solutions.
             </p>
-            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-8"></div>
+            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-8">
               <$2 />
                 to="/services/comprehensive"
                 className="bg-zion-blue-light/20 rounded-lg p-6 border border-zion-purple/30 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105"
               >
                 <h3 className="text-xl font-bold text-white mb-3">Comprehensive Services</h3>
-                <p className="text-zion-slate-light mb-4"></p>
+                <p className="text-zion-slate-light mb-4">
                   Explore our complete portfolio of micro SAAS and IT solutions with transparent pricing and detailed features.
                 </p>
-                <div className="text-zion-cyan hover:text-zion-cyan-light flex items-center justify-center group"></div>
+                <div className="text-zion-cyan hover:text-zion-cyan-light flex items-center justify-center group">
                   View All Services <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </div>
-                </Link>
+              </Link>
               
               <$2 />
                 to="/services/innovative-showcase"
                 className="bg-zion-blue-light/20 rounded-lg p-6 border border-zion-purple/30 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105"
               >
                 <h3 className="text-xl font-bold text-white mb-3">Innovative Showcase</h3>
-                <p className="text-zion-slate-light mb-4"></p>
+                <p className="text-zion-slate-light mb-4">
                   Discover cutting-edge solutions including AI-powered business intelligence and advanced cybersecurity platforms.
                 </p>
-                <div className="text-zion-cyan hover:text-zion-cyan-light flex items-center justify-center group"></div>
+                <div className="text-zion-cyan hover:text-zion-cyan-light flex items-center justify-center group">
                   Explore Innovations <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </div>
-                </Link>
+              </Link>
             </div>
         </div>
       </section>
@@ -828,11 +835,11 @@ import { Link  } from 'react-router-dom';import {Brain,
             <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto"></p>
+            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
               Let's discuss how our technology solutions can accelerate your growth and 
               give you a competitive edge in the market.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <$2 />
                 to="/contact"
                 className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
@@ -850,20 +857,17 @@ import { Link  } from 'react-router-dom';import {Brain,
     { name: "Government", icon: "🏛️", description: "Secure government technology solutions" }
   ]
   const categories = ['all', 'AI/ML', 'Security', 'Cloud', 'Transformation', 'Consulting', 'Global']
-  useEffect(() =>
-                {
+  useEffect(() => {
     setIsVisible(true)
   }, [])
-  const filteredServices = services.filter(service =>
-                {
+  const filteredServices = services.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
     return matchesSearch && matchesCategory
   })
-  const getCategoryColor = (category: string) =>
-                {
+  const getCategoryColor = (category: string) => {
     const colors = {
       'AI/ML': 'from-purple-500 to-pink-500',
       'Security': 'from-red-500 to-orange-500',
@@ -875,7 +879,7 @@ import { Link  } from 'react-router-dom';import {Brain,
     return colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600'
   }
   return (
-    <div className="min-h-screen relative"></div>
+    <div className="min-h-screen relative">
       <SEO 
         title="Comprehensive Technology Services - Zion Tech Group"
         description="Transform your business with our comprehensive technology services including AI & Machine Learning, Cybersecurity, Cloud Infrastructure, Digital Transformation, IT Consulting, and Global Solutions. Expert consulting and implementation services."
@@ -884,28 +888,31 @@ import { Link  } from 'react-router-dom';import {Brain,
         ogImage="https://ziontechgroup.com/services-og-image.jpg"
         twitterCard="summary_large_image"
       />
-                {/* Background Elements */}
-                <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-blue-900"></div>
+
+      {/* Background Elements */}
+      <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-blue-900">
         <div className="absolute top-0 left-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse animate-quantum-float"></div>
         <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse animate-quantum-float animation-delay-1000"></div>
         <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse animate-quantum-float animation-delay-2000"></div>
-                </div>
-                {/* Hero Section */}
-                <section className="relative pt-24 pb-16 px-4 overflow-hidden"></section>
-        <div className="relative z-10 container mx-auto text-center"></div>
-          <div className={`animate-fade-in-up transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}></div>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6"></h1>
-              <span className="neon-text"></span>
+      </div>
+
+      {/* Hero Section */}
+      <section className="relative pt-24 pb-16 px-4 overflow-hidden">
+        <div className="relative z-10 container mx-auto text-center">
+          <div className={`animate-fade-in-up transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+              <span className="neon-text">
                 Our Services
               </span>
-                </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8"></p>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
               Comprehensive technology solutions designed to transform your business and drive innovation.
               From AI to cybersecurity, we deliver the expertise you need to succeed.
             </p>
-                {/* Search and Filter */}
-                <div className="max-w-2xl mx-auto mb-8"></div>
-              <div className="relative"></div>
+            
+            {/* Search and Filter */}
+            <div className="max-w-2xl mx-auto mb-8">
+              <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
@@ -915,8 +922,9 @@ import { Link  } from 'react-router-dom';import {Brain,
                   className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:outline-none transition-colors"
                 />
               </div>
-                {/* Category Filter */}
-                <div className="flex flex-wrap justify-center gap-2 mt-4"></div>
+              
+              {/* Category Filter */}
+              <div className="flex flex-wrap justify-center gap-2 mt-4">
                 {categories.map((category) => (
                   <$2 />
                     key={category}
@@ -927,190 +935,175 @@ import { Link  } from 'react-router-dom';import {Brain,
                         : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 hover:text-white'
                     }`}
                   >
-                {category === 'all' ? 'All Services' : category}
-                </button>
+                    {category === 'all' ? 'All Services' : category}
+                  </button>
                 ))}
-                </div>
-                </div>
+              </div>
+            </div>
           </div>
-                </div>
+        </div>
       </section>
-                {/* Services Grid */}
-                <section className="relative py-16 px-4"></section>
-        <div className="relative z-10 container mx-auto"></div>
-          <div className="text-center mb-12"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
+
+      {/* Services Grid */}
+      <section className="relative py-16 px-4">
+        <div className="relative z-10 container mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               What We <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Offer</span>
-                </h2>
-            <p className="text-gray-300"></p>
+            </h2>
+            <p className="text-gray-300">
               Showing {filteredServices.length} of {allServices.length} total services
             </p>
-                </div>
+          </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-                {filteredServices.map((service, index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service, index) => (
               <$2 />
                 key={index} ;
                 className={`group bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 animate-fade-in-up`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {/* Service Header */}
-                <div className="flex items-start justify-between mb-4"></div>
-                  <div className="text-3xl"></div>
-                {getCategoryIcon(service.category)}
-                </div>
-                  <div className="text-right"></div>
+                <div className="flex items-start justify-between mb-4">
+                  <div className="text-3xl">{getCategoryIcon(service.category)}</div>
+                  <div className="text-right">
                     < className={`px-3 py-1 rounded-full text-xs font-medium ${$2 />
                       service.serviceType === 'Micro SAAS' && (service as any).pricing === 'Freemium' ? 'bg-green-500/20 text-green-400' :
                       service.serviceType === 'Micro SAAS' && (service as any).pricing === 'Professional' ? 'bg-blue-500/20 text-blue-400' :
                       'bg-purple-500/20 text-purple-400'
                     }`}>
-                {service.serviceType === 'Micro SAAS' ? (service as any).pricing : service.serviceType}
-                </span>
-                </div>
+                      {service.serviceType === 'Micro SAAS' ? (service as any).pricing : service.serviceType}
+                    </span>
+                  </div>
                 )}
-                <div className="text-cyan-400 mb-4 group-hover:scale-110 transition-transform duration-300"></div>
-                {service.icon}
+                
+                <div className="text-cyan-400 mb-4 group-hover:scale-110 transition-transform duration-300">
+                  {service.icon}
                 </div>
+
                 {/* Service Title and Description */}
-                <h3 className="text-xl font-semibold text-white mb-3"></h3>
-                {service.name}
-                </h3>
-                <p className="text-gray-300 mb-4 text-sm leading-relaxed"></p>
-                {service.description}
-                </p>
+                <h3 className="text-xl font-semibold text-white mb-3">{service.name}</h3>
+                <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
+
                 {/* Pricing */}
-                <div className="mb-4"></div>
-                  <div className="text-2xl font-bold text-blue-400"></div>
-                {service.serviceType === 'IT Service' 
+                <div className="mb-4">
+                  <div className="text-2xl font-bold text-blue-400">
+                    {service.serviceType === 'IT Service' 
                       ? `$${(service as any).hourlyRate}/hour or $${(service as any).projectRate.toLocaleString()} project`
                       : formatPrice((service as any).price, (service as any).pricingModel)
                     }
-                </div>
-                  <div className="text-sm text-gray-400"></div>
+                  </div>
+                  <div className="text-sm text-gray-400">
                     Market Price: {service.marketPrice}
-                </div>
-                {service.serviceType !== 'Micro SAAS' && (
-                    <div className="text-xs text-gray-500 mt-1"></div>
-                {service.serviceType}
-                </div>
+                  </div>
+                  {service.serviceType !== 'Micro SAAS' && (
+                    <div className="text-xs text-gray-500 mt-1">
+                      {service.serviceType}
+                    </div>
                   )}
                 </div>
+                
                 {/* Rating */}
-                <div className="flex items-center mb-4"></div>
-                  <div className="flex items-center"></div>
-                {[...Array(5)].map((_, i) => (
+                <div className="flex items-center mb-4">
+                  <div className="flex items-center">
+                    {[...Array(5)].map((_, i) => (
                       <Star 
                         key={i} ;
                         className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'text-yellow-400 fill-current' : 'text-gray-600'}`} 
                       />
                     ))}
+                  </div>
+                  <span className="text-gray-400 text-sm ml-2">{service.rating}</span>
                 </div>
-                  <span className="text-gray-400 text-sm ml-2"></span>
-                {service.rating}
-                </span>
-                </div>
+                
                 {/* Features */}
-                <div className="mb-6"></div>
+                <div className="mb-6">
                   <h4 className="text-sm font-medium text-white mb-3">Key Features:</h4>
-                  <ul className="space-y-2"></ul>
-                {service.features.slice(0, 4).map((feature, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300"></li>
+                  <ul className="space-y-2">
+                    {service.features.slice(0, 4).map((feature, idx) => (
+                      <li key={idx} className="flex items-center gap-2 text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
                         <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                {feature}
-                </li>
+                        {feature}
+                      </li>
                     ))}
-                </ul>
+                  </ul>
                 </div>
+
                 {/* Benefits */}
-                <div className="mb-6"></div>
+                <div className="mb-6">
                   <h4 className="text-sm font-semibold text-green-400 mb-3">Benefits:</h4>
-                  <div className="space-y-1"></div>
-                {service.benefits.slice(0, 3).map((benefit, idx) => (
-                      <div key={idx} className="flex items-center text-sm text-gray-300"></div>
+                  <div className="space-y-1">
+                    {service.benefits.slice(0, 3).map((benefit, idx) => (
+                      <div key={idx} className="flex items-center text-sm text-gray-300">
                         <span className="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
-                {benefit}
-                </div>
+                        {benefit}
+                      </div>
                     ))}
+                  </div>
                 </div>
-                </div>
+
                 {/* Additional Info */}
-                <div className="mb-6 space-y-2 text-sm"></div>
-                {service.serviceType === 'Micro SAAS' ? (
+                <div className="mb-6 space-y-2 text-sm">
+                  {service.serviceType === 'Micro SAAS' ? (
                     <>
-                      <div className="flex justify-between"></div>
+                      <div className="flex justify-between">
                         <span className="text-gray-400">Setup Time:</span>
-                        <span className="text-white"></span>
-                {(service as any).setupTime}
-                </span>
-                </div>
-                      <div className="flex justify-between"></div>
+                        <span className="text-white">{(service as any).setupTime}</span>
+                      </div>
+                      <div className="flex justify-between">
                         <span className="text-gray-400">ROI:</span>
-                        <span className="text-green-400"></span>
-                {(service as any).roi}
-                </span>
-                </div>
-                      <div className="flex justify-between"></div>
+                        <span className="text-green-400">{(service as any).roi}</span>
+                      </div>
+                      <div className="flex justify-between">
                         <span className="text-gray-400">Users:</span>
-                        <span className="text-white"></span>
-                {(service as any).userLimit}
-                </span>
-                </div>
+                        <span className="text-white">{(service as any).userLimit}</span>
+                      </div>
                     </>
                   ) : service.serviceType === 'IT Service' ? (
                     <>
-                      <div className="flex justify-between"></div>
+                      <div className="flex justify-between">
                         <span className="text-gray-400">Response Time:</span>
-                        <span className="text-white"></span>
-                {(service as any).responseTime}
-                </span>
-                </div>
-                      <div className="flex justify-between"></div>
+                        <span className="text-white">{(service as any).responseTime}</span>
+                      </div>
+                      <div className="flex justify-between">
                         <span className="text-gray-400">SLA:</span>
-                        <span className="text-green-400"></span>
-                {(service as any).sla}
-                </span>
-                </div>
-                      <div className="flex justify-between"></div>
+                        <span className="text-green-400">{(service as any).sla}</span>
+                      </div>
+                      <div className="flex justify-between">
                         <span className="text-gray-400">Delivery:</span>
-                        <span className="text-white"></span>
-                {(service as any).deliveryTime}
-                </span>
-                </div>
+                        <span className="text-white">{(service as any).deliveryTime}</span>
+                      </div>
                     </>
                   ) : (
                     <>
-                      <div className="flex justify-between"></div>
+                      <div className="flex justify-between">
                         <span className="text-gray-400">AI Score:</span>
-                        <span className="text-green-400"></span>
-                {(service as any).aiScore}/100</span>
-                </div>
-                      <div className="flex justify-between"></div>
+                        <span className="text-green-400">{(service as any).aiScore}/100</span>
+                      </div>
+                      <div className="flex justify-between">
                         <span className="text-gray-400">Accuracy:</span>
-                        <span className="text-white"></span>
-                {(service as any).accuracy}
-                </span>
-                </div>
-                      <div className="flex justify-between"></div>
+                        <span className="text-white">{(service as any).accuracy}</span>
+                      </div>
+                      <div className="flex justify-between">
                         <span className="text-gray-400">Models:</span>
-                        <span className="text-white"></span>
-                {(service as any).aiModels?.length || 0}
-                </span>
-                </div>
+                        <span className="text-white">{(service as any).aiModels?.length || 0}</span>
+                      </div>
                     </>
                   )}
                 </div>
+
                 {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-6"></div>
-                {service.tags.map((tag, idx) => (
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {service.tags.map((tag, idx) => (
                     <$2 />
                       key={idx} ;
                       className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-full border border-gray-600/50"
                     >
-                {tag}
-                </span>
+                      {tag}
+                    </span>
                   ))}
                 </div>
+                
                 {/* CTA */}
                 <$2 />
                   to={`/services/${service.category.toLowerCase()}`}
@@ -1119,24 +1112,24 @@ import { Link  } from 'react-router-dom';import {Brain,
                   Learn More 
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
-                </div>
+              </div>
             ))}
-                </div>
-                {filteredServices.length === 0 && (
-            <div className="text-center py-12"></div>
+          </div>
+          
+          {filteredServices.length === 0 && (
+            <div className="text-center py-12">
               <div className="text-6xl mb-4">🔍</div>
               <h3 className="text-xl font-semibold text-white mb-2">No services found</h3>
               <p className="text-gray-400">Try adjusting your search terms or category filter</p>
-                </div>
-                {/* Filters and Sort Controls */}
-                <motion.div
+            </div>
+          {/* Filters and Sort Controls */}
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-col md:flex-row items-center justify-between gap-4 mb-8"
-          ></motion.div
->
-            <div className="flex items-center gap-4"></div>
+          >
+            <div className="flex items-center gap-4">
               <$2 />
                 onClick={() => setShowFilters(!showFilters)}
                 className="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 text-zion-slate-light rounded-lg transition-colors"
@@ -1144,7 +1137,8 @@ import { Link  } from 'react-router-dom';import {Brain,
                 <Filter className="w-4 h-4" />
                 Filters
               </button>
-                {Object.keys(filters).length > 0 && (
+              
+              {Object.keys(filters).length > 0 && (
                 <$2 />
                   onClick={clearFilters}
                   className="px-3 py-1 bg-red-500/20 text-red-400 rounded-full text-sm hover:bg-red-500/30 transition-colors"
@@ -1152,9 +1146,9 @@ import { Link  } from 'react-router-dom';import {Brain,
                   Clear Filters
                 </button>
               )}
-                </div>
+            </div>
 
-            <div className="flex items-center gap-2"></div>
+            <div className="flex items-center gap-2">
               <span className="text-zion-slate-light text-sm">Sort by:</span>
               <$2 />
                 onClick={() => handleSort('title')}
@@ -1166,7 +1160,7 @@ import { Link  } from 'react-router-dom';import {Brain,
                 {sortBy === 'title' && (
                   sortOrder === 'asc' ? <SortAsc className="w-4 h-4" /> : <SortDesc className="w-4 h-4" />
                 )}
-                </button>
+              </button>
               <$2 />
                 onClick={() => handleSort('price')}
                 className={`flex items-center gap-1 px-3 py-2 rounded-lg transition-colors ${
@@ -1177,20 +1171,20 @@ import { Link  } from 'react-router-dom';import {Brain,
                 {sortBy === 'price' && (
                   sortOrder === 'asc' ? <SortAsc className="w-4 h-4" /> : <SortDesc className="w-4 h-4" />
                 )}
-                </button>
-                </div>
+              </button>
+            </div>
           </motion.div>
-                {/* Filters Panel */}
+
+          {/* Filters Panel */}
           {showFilters && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               className="bg-white/10 backdrop-blur-sm border border-zion-cyan/30 rounded-xl p-6 mb-8"
-            ></motion.div
->
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
-                <div></div>
+            >
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div>
                   <label className="block text-zion-slate-light text-sm font-medium mb-2">Pricing Model</label>
                   <select
                     value={filters.pricingModel || ''}
@@ -1201,10 +1195,10 @@ import { Link  } from 'react-router-dom';import {Brain,
                     <option value="monthly">Monthly</option>
                     <option value="one-time">One-time</option>
                     <option value="custom">Custom</option>
-                </select>
+                  </select>
                 </div>
                 
-                <div></div>
+                <div>
                   <label className="block text-zion-slate-light text-sm font-medium mb-2">Support Level</label>
                   <select
                     value={filters.supportLevel || ''}
@@ -1215,12 +1209,12 @@ import { Link  } from 'react-router-dom';import {Brain,
                     <option value="basic">Basic</option>
                     <option value="premium">Premium</option>
                     <option value="enterprise">Enterprise</option>
-                </select>
+                  </select>
                 </div>
                 
-                <div></div>
+                <div>
                   <label className="block text-zion-slate-light text-sm font-medium mb-2">Price Range</label>
-                  <div className="flex gap-2"></div>
+                  <div className="flex gap-2">
                     <input
                       type="number"
                       placeholder="Min"
@@ -1238,12 +1232,12 @@ import { Link  } from 'react-router-dom';import {Brain,
                   </div>
                 </div>
               </div>
-                </motion.div>
+            </motion.div>
           )}
-                </div>
-                </section>
+        </div>
+      </section>
 
-const Services  = () => {
+const Services = () => {
   const services = [
     {
       icon: Brain,
@@ -1440,14 +1434,12 @@ export default function Services() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             className="text-center py-16"
-          ></motion.div
->
+          >
             <div className="text-6xl mb-4">🔍</div>
             <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
             <p className="text-gray-400 mb-6">Try adjusting your search criteria or filters</p>
             <$2 />
-              onClick={() =>
-                {
+              onClick={() => {
                 setSearchTerm('')
                 setSelectedCategory('all')
                 setSelectedSubcategory('all')
@@ -1456,53 +1448,54 @@ export default function Services() {
             >
               Clear Filters
             </button>
-                </motion.div>
+          </motion.div>
         )}
 
               {/* Contact Info */}
-                <div></div>
+              <div>
                 <h4 className="text-lg font-semibold text-white mb-4">Contact</h4>
-                <div className="space-y-2 text-zion-slate-light"></div>
+                <div className="space-y-2 text-zion-slate-light">
                   <p>📱 +1 (302) 464-0950</p>
                   <p>✉️ kleber@ziontechgroup.com</p>
                   <p>📍 364 E Main St STE 1008<br />Middletown DE 19709</p>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Innovation First</h3>
                 <p className="text-gray-300">Cutting-edge AI and quantum technologies that keep you ahead of the competition</p>
-                </div>
-              <div className="text-center"></div>
-                <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Award className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Proven Excellence</h3>
                 <p className="text-gray-300">Trusted by enterprises worldwide with a track record of successful implementations</p>
-                </div>
-              <div className="text-center"></div>
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Users className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Expert Support</h3>
                 <p className="text-gray-300">24/7 expert support and dedicated success managers for your business</p>
-                </div>
+              </div>
             </div>
             
-            <div className="border-t border-zion-blue-light mt-8 pt-8 text-center"></div>
-              <p className="text-zion-slate-light text-sm"></p>
+            <div className="border-t border-zion-blue-light mt-8 pt-8 text-center">
+              <p className="text-zion-slate-light text-sm">
                 © 2024 Zion Tech Group. All rights reserved. | 
                 <a href="/contact" className="ml-2 hover:text-zion-cyan transition-colors">Privacy Policy</a> | 
                 <a href="/contact" className="ml-2 hover:text-zion-cyan transition-colors">Terms of Service</a>
-                </p>
+              </p>
             </div>
-                </div>
+            </div>
           </div>
-                </div>
+        </div>
         </motion.div>
+                  </div>
                 </div>
-                </div>
+
                 {/* Rating and Reviews */}
-                <div className="flex items-center justify-between mb-6"></div>
-                  <div className="flex items-center space-x-1"></div>
-                {[...Array(5)].map((_, i) => (
+                <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center space-x-1">
+                    {[...Array(5)].map((_, i) => (
                       <Star
                         key={i}
                         className={`w-4 h-4 ${
@@ -1510,24 +1503,24 @@ export default function Services() {
                         }`}
                       />
                     ))}
-                <span className="text-zion-slate-light text-sm ml-2"></span>
-                {service.rating} ({service.reviewCount} reviews)
+                    <span className="text-zion-slate-light text-sm ml-2">
+                      {service.rating} ({service.reviewCount} reviews)
                     </span>
-                </div>
-                  <div className="text-zion-cyan text-sm font-medium"></div>
+                  </div>
+                  <div className="text-zion-cyan text-sm font-medium">
                     AI Score: {service.aiScore}%
                   </div>
                 </div>
+
                 {/* Contact Info */}
-                <div className="mb-6 p-4 bg-zion-blue-light/5 rounded-lg border border-zion-cyan/20"></div>
+                <div className="mb-6 p-4 bg-zion-blue-light/5 rounded-lg border border-zion-cyan/20">
                   <h4 className="text-sm font-semibold text-zion-cyan mb-2">Contact Information:</h4>
-                  <p>📧 {service.author.name}
-                </p>
-                  <p>📱 {service.author.id}
-                </p>
+                  <p>📧 {service.author.name}</p>
+                  <p>📱 {service.author.id}</p>
                 </div>
+
                 {/* Action Buttons */}
-                <div className="flex space-x-3"></div>
+                <div className="flex space-x-3">
                   <$2 />
                     to={service.link}
                     className="flex-1 px-4 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium text-center hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
@@ -1543,41 +1536,41 @@ export default function Services() {
                 </div>
               </motion.div>
             ))}
-                </motion.div>
-                {/* No Results Message */}
+          </motion.div>
+
+          {/* No Results Message */}
           {filteredServices.length === 0 && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               className="text-center py-20"
-            ></motion.div
->
+            >
               <div className="text-6xl mb-4">🔍</div>
               <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
-              <p className="text-zion-slate-light mb-6"></p>
+              <p className="text-zion-slate-light mb-6">
                 Try adjusting your search terms or category filter
               </p>
               <$2 />
-                onClick={() =>
-                {
+                onClick={() => {
                   setSearchTerm('')
                   setSelectedCategory('all')
                 }}
                 className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
                 {/* Technology Stack */}
-                <div className="mb-6"></div>
-                  <h4 className="text-sm font-semibold text-white mb-2 flex items-center gap-2"></h4>
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-white mb-2 flex items-center gap-2">
                     <Code className="w-4 h-4 text-zion-cyan" />
                     Technology:
                   </h4>
-                  <div className="flex flex-wrap gap-2"></div>
-                {service.technology.slice(0, 3).map((tech, idx) => (
-                      <span key={idx} className="bg-white/10 text-zion-slate-light text-xs px-2 py-1 rounded-full"></span>
-                {tech}
-                </span>
+                  <div className="flex flex-wrap gap-2">
+                    {service.technology.slice(0, 3).map((tech, idx) => (
+                      <span key={idx} className="bg-white/10 text-zion-slate-light text-xs px-2 py-1 rounded-full">
+                        {tech}
+                      </span>
                     ))}
+                  </div>
                 </div>
-                </div>
+
                 {/* CTA Button */}
                 <$2 />
                   href={service.link}
@@ -1588,20 +1581,19 @@ export default function Services() {
                   <span>Learn More</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </a>
-                </motion.div>
+              </motion.div>
             ))}
-                </div>
-                {filteredServices.length === 0 && (
+          </div>
+
+          {filteredServices.length === 0 && (
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               className="text-center py-16"
-            ></motion.div
->
+            >
               <div className="text-zion-slate-light text-lg mb-4">No services found matching your criteria</div>
               <$2 />
-                onClick={() =>
-                {
+                onClick={() => {
                   setSelectedCategory('All')
                   setSearchTerm('')
                   setPriceRange('all')
@@ -1610,16 +1602,16 @@ export default function Services() {
               >
                 Clear Filters
               </button>
-                </motion.div>
+            </motion.div>
           )}
       {/* Featured Services */}
-                <section className="py-20 bg-white"></section>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-4xl font-bold text-zion-blue-dark mb-4"></h2>
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
               Featured Services
             </h2>
-            <p className="text-xl text-zion-slate max-w-3xl mx-auto"></p>
+            <p className="text-xl text-zion-slate max-w-3xl mx-auto">
               Our most popular and impactful solutions that are transforming businesses worldwide.
     { value: '200+', label: 'Projects Delivered', icon: CheckCircle, color: 'text-green-400' },
     { value: '99.99%', label: 'Uptime Guarantee', icon: Shield, color: 'text-blue-400' },
@@ -1653,136 +1645,137 @@ export default function Services() {
     }
   ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900"></div>
-                {/* Hero Section */}
-                <section className="pt-32 pb-20 px-6"></section>
-        <div className="max-w-7xl mx-auto text-center"></div>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 px-6">
+        <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          ></motion.div
->
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-400 to-purple-400 bg-clip-text text-transparent"></h1>
+          >
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-400 to-purple-400 bg-clip-text text-transparent">
               Our Services
             </h1>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto mb-8"></p>
+            <p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">
               Comprehensive technology solutions designed to transform your business and drive innovation. 
               From AI and cloud infrastructure to cybersecurity and digital transformation.
             </p>
-                </div>
-          <div className="grid lg:grid-cols-3 gap-8"></div>
-                {featuredServices.map((service, index) => (
-              <div key={index} className="bg-gradient-to-br from-zion-blue-dark to-zion-blue text-white rounded-xl p-8 hover:shadow-xl transition-shadow"></div>
-                <div className="flex justify-center mb-6"></div>
+          </div>
+          <div className="grid lg:grid-cols-3 gap-8">
+            {featuredServices.map((service, index) => (
+              <div key={index} className="bg-gradient-to-br from-zion-blue-dark to-zion-blue text-white rounded-xl p-8 hover:shadow-xl transition-shadow">
+                <div className="flex justify-center mb-6">
                   <service.icon className="w-16 h-16 text-zion-cyan" />
-                {/* Services Grid */}
-                <section className="py-20"></section>
-        <div className="container mx-auto px-4"></div>
-                {/* Results Summary */}
-                <div className="text-center mb-12"></div>
-            <p className="text-zion-slate-light"></p>
-                {isLoading ? 'Searching...' : `Showing ${totalResults} services`}
+      {/* Services Grid */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          {/* Results Summary */}
+          <div className="text-center mb-12">
+            <p className="text-zion-slate-light">
+              {isLoading ? 'Searching...' : `Showing ${totalResults} services`}
               {query && ` for "${query}"`}
               {selectedCategory !== 'all' && ` in ${selectedCategory}`}
-                </p>
-                </div>
-                {/* Services Grid */}
-                <motion.div
+            </p>
+          </div>
+
+          {/* Services Grid */}
+          <motion.div
             variants={containerVariants}
             initial="hidden"
             animate="visible"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12"
-          ></motion.div
->
-                {paginatedResults.results.map((service) => (
-              <motion.div key={service.id} variants={itemVariants}></motion.div>
-                <div className="group bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm rounded-xl overflow-hidden border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-500 hover:transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-zion-cyan/20"></div>
-                {/* Service Image */}
-                <div className="relative h-48 overflow-hidden"></div>
+          >
+            {paginatedResults.results.map((service) => (
+              <motion.div key={service.id} variants={itemVariants}>
+                <div className="group bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm rounded-xl overflow-hidden border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-500 hover:transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-zion-cyan/20">
+                  {/* Service Image */}
+                  <div className="relative h-48 overflow-hidden">
                     <OptimizedImage
                       src={`https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80`}
                       alt={service.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                    <div className="absolute top-4 right-4"></div>
-                      <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs font-medium rounded-full"></span>
-                {service.category}
-                </span>
-                </div>
-                  </div>
-                {/* Service Content */}
-                <div className="p-6"></div>
-                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300"></h3>
-                {service.title}
-                </h3>
-                    
-                    <p className="text-zion-slate-light text-sm mb-4 leading-relaxed"></p>
-                {service.description}
-                </p>
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-4"></div>
-                {service.tags.slice(0, 3).map((tag, index) => (
-                        <span key={index} className="px-2 py-1 rounded-md bg-zion-slate/30 text-zion-slate-light text-xs"></span>
-                {tag}
-                </span>
-                      ))}
-                </div>
-                {/* Service Details */}
-                <div className="space-y-2 mb-4 text-sm text-zion-slate-light"></div>
-                      <div className="flex items-center gap-2"></div>
-                        <Clock className="w-4 h-4 text-zion-cyan" />
-                        <span>Delivery: {service.estimatedDelivery}
-                </span>
-                </div>
-                      <div className="flex items-center gap-2"></div>
-                        <Shield className="w-4 h-4 text-zion-cyan" />
-                        <span>Support: {service.supportLevel}
-                </span>
-                </div>
+                    <div className="absolute top-4 right-4">
+                      <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs font-medium rounded-full">
+                        {service.category}
+                      </span>
                     </div>
-                {/* Price and CTA */}
-                <div className="flex items-center justify-between"></div>
-                      <div className="text-2xl font-bold text-zion-cyan"></div>
-                {service.currency}{service.price.toLocaleString()}
-                <span className="text-sm text-zion-slate-light font-normal">/{service.pricingModel}
-                </span>
-                </div>
-                      <button className="px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:from-zion-cyan-light hover:to-zion-purple-light transition-all duration-300 transform hover:scale-105"></button>
+                  </div>
+                  
+                  {/* Service Content */}
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300">
+                      {service.title}
+                    </h3>
+                    
+                    <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">
+                      {service.description}
+                    </p>
+                    
+                    {/* Tags */}
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {service.tags.slice(0, 3).map((tag, index) => (
+                        <span key={index} className="px-2 py-1 rounded-md bg-zion-slate/30 text-zion-slate-light text-xs">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    
+                    {/* Service Details */}
+                    <div className="space-y-2 mb-4 text-sm text-zion-slate-light">
+                      <div className="flex items-center gap-2">
+                        <Clock className="w-4 h-4 text-zion-cyan" />
+                        <span>Delivery: {service.estimatedDelivery}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Shield className="w-4 h-4 text-zion-cyan" />
+                        <span>Support: {service.supportLevel}</span>
+                      </div>
+                    </div>
+                    
+                    {/* Price and CTA */}
+                    <div className="flex items-center justify-between">
+                      <div className="text-2xl font-bold text-zion-cyan">
+                        {service.currency}{service.price.toLocaleString()}
+                        <span className="text-sm text-zion-slate-light font-normal">/{service.pricingModel}</span>
+                      </div>
+                      <button className="px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:from-zion-cyan-light hover:to-zion-purple-light transition-all duration-300 transform hover:scale-105">
                         Get Quote
                       </button>
-                </div>
+                    </div>
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-center"></h3>
-                {service.title}
+                <h3 className="text-2xl font-bold mb-4 text-center">
+                  {service.title}
                 </h3>
-                <p className="text-zion-slate-light mb-6 text-center leading-relaxed"></p>
-                {service.description}
+                <p className="text-zion-slate-light mb-6 text-center leading-relaxed">
+                  {service.description}
                 </p>
-                <ul className="space-y-2 mb-8"></ul>
-                {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-zion-slate-light"></li>
+                <ul className="space-y-2 mb-8">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-zion-slate-light">
                       <div className="w-2 h-2 bg-zion-cyan rounded-full mr-3"></div>
-                {feature}
-                </li>
+                      {feature}
+                    </li>
                   ))}
                 </ul>
-                <div className="text-center"></div>
+                <div className="text-center">
                   <$2 />
                     to={service.link}
                     className="inline-flex items-center px-6 py-2 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan-light transition-colors"
                   >
-                {service.cta}
-                </Link>
+                    {service.cta}
+                  </Link>
                 </div>
               </div>
             ))}
-                </motion.div>
-                {/* Pagination */}
+          </motion.div>
+
+          {/* Pagination */}
           {paginatedResults.totalPages > 1 && (
-            <div className="flex justify-center items-center gap-2"></div>
+            <div className="flex justify-center items-center gap-2">
               <$2 />
                 onClick={() => setCurrentPage(currentPage - 1)}
                 disabled={!paginatedResults.hasPrevPage}
@@ -1791,9 +1784,9 @@ export default function Services() {
                 Previous
               </button>
               
-              <span className="px-4 py-2 text-zion-slate-light"></span>
+              <span className="px-4 py-2 text-zion-slate-light">
                 Page {currentPage} of {paginatedResults.totalPages}
-                </span>
+              </span>
               
               <$2 />
                 onClick={() => setCurrentPage(currentPage + 1)}
@@ -1802,10 +1795,10 @@ export default function Services() {
               >
                 Next
               </button>
-                </div>
+            </div>
           )}
-                </div>
-                </section>
+        </div>
+      </section>
     </div>
   )
 }
@@ -1813,14 +1806,14 @@ export default Services
           transition={{ duration: 0.8, delay: 0.8 }}
           className="text-center mt-20"
         >
-          <div className="bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-blue-500/20 border border-blue-400/30 rounded-2xl p-12 backdrop-blur-md"></div>
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white"></h2>
+          <div className="bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-blue-500/20 border border-blue-400/30 rounded-2xl p-12 backdrop-blur-md">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Let's discuss how our services can transform your business and drive growth.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <$2 />
                 to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-blue-500/25 transition-all duration-300 flex items-center gap-2 justify-center"
@@ -1834,18 +1827,18 @@ export default Services
               >
                 Request Quote
               </Link>
-                </div>
+            </div>
           </div>
-                </div>
+        </div>
       </section>
-                </div>
+    </div>
   )
 }
 export default Services
-                    <li key={serviceIndex} className="flex items-center gap-2 text-sm text-zion-slate-light"></li>
+                    <li key={serviceIndex} className="flex items-center gap-2 text-sm text-zion-slate-light">
                       <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-                {service}
-                </li>
+                      {service}
+                    </li>
                   ))}
                 </ul>
                 <$2 />
@@ -1853,87 +1846,87 @@ export default Services
                   className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light font-semibold text-sm transition-colors"
                 >
                   Learn More
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"></svg>
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </Link>
               </div>
             ))}
-                </div>
-                </div>
+          </div>
+        </div>
       </section>
-                {/* Emerging Technologies */}
-                <section className="py-16 px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-7xl mx-auto"></div>
+
+      {/* Emerging Technologies */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Emerging Technologies</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
-                {emergingTech.map((tech, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center hover:border-zion-cyan/50 transition-all duration-300"></div>
-                <div className="w-16 h-16 bg-zion-cyan/20 rounded-xl flex items-center justify-center text-zion-cyan mx-auto mb-4"></div>
-                {tech.icon}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {emergingTech.map((tech, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center hover:border-zion-cyan/50 transition-all duration-300">
+                <div className="w-16 h-16 bg-zion-cyan/20 rounded-xl flex items-center justify-center text-zion-cyan mx-auto mb-4">
+                  {tech.icon}
                 </div>
-                <h3 className="text-lg font-bold text-white mb-2"></h3>
-                {tech.title}
-                </h3>
-                <p className="text-zion-slate-light text-sm leading-relaxed"></p>
-                {tech.description}
+                <h3 className="text-lg font-bold text-white mb-2">{tech.title}</h3>
+                <p className="text-zion-slate-light text-sm leading-relaxed">
+                  {tech.description}
                 </p>
-                </div>
+              </div>
             ))}
-                </div>
-                </div>
+          </div>
+        </div>
       </section>
-                {/* Why Choose Us */}
-                <section className="py-16 px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="grid lg:grid-cols-2 gap-12 items-center"></div>
-            <div></div>
+
+      {/* Why Choose Us */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
               <h2 className="text-3xl font-bold text-white mb-6">Why Choose Zion Tech Group?</h2>
-              <div className="space-y-4"></div>
-                <div className="flex items-start gap-4"></div>
-                  <div className="w-8 h-8 bg-zion-cyan rounded-lg flex items-center justify-center flex-shrink-0"></div>
+              <div className="space-y-4">
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 bg-zion-cyan rounded-lg flex items-center justify-center flex-shrink-0">
                     <CheckCircle className="w-5 h-5 text-white" />
                   </div>
-                  <div></div>
+                  <div>
                     <h3 className="text-lg font-semibold text-white mb-1">Expert Team</h3>
                     <p className="text-zion-slate-light">15+ years of experience in cutting-edge technologies</p>
+                  </div>
                 </div>
-                </div>
-                <div className="flex items-start gap-4"></div>
-                  <div className="w-8 h-8 bg-zion-cyan rounded-lg flex items-center justify-center flex-shrink-0"></div>
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 bg-zion-cyan rounded-lg flex items-center justify-center flex-shrink-0">
                     <CheckCircle className="w-5 h-5 text-white" />
                   </div>
-                  <div></div>
+                  <div>
                     <h3 className="text-lg font-semibold text-white mb-1">Proven Results</h3>
                     <p className="text-zion-slate-light">500+ successful projects delivered worldwide</p>
+                  </div>
                 </div>
-                </div>
-                <div className="flex items-start gap-4"></div>
-                  <div className="w-8 h-8 bg-zion-cyan rounded-lg flex items-center justify-center flex-shrink-0"></div>
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 bg-zion-cyan rounded-lg flex items-center justify-center flex-shrink-0">
                     <CheckCircle className="w-5 h-5 text-white" />
                   </div>
-                  <div></div>
+                  <div>
                     <h3 className="text-lg font-semibold text-white mb-1">24/7 Support</h3>
                     <p className="text-zion-slate-light">Round-the-clock technical support and maintenance</p>
+                  </div>
                 </div>
-                </div>
-                <div className="flex items-start gap-4"></div>
-                  <div className="w-8 h-8 bg-zion-cyan rounded-lg flex items-center justify-center flex-shrink-0"></div>
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 bg-zion-cyan rounded-lg flex items-center justify-center flex-shrink-0">
                     <CheckCircle className="w-5 h-5 text-white" />
                   </div>
-                  <div></div>
+                  <div>
                     <h3 className="text-lg font-semibold text-white mb-1">Scalable Solutions</h3>
                     <p className="text-zion-slate-light">Built to grow with your business needs</p>
+                  </div>
                 </div>
-                </div>
-                </div>
+              </div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20"></div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
               <h3 className="text-2xl font-bold text-white mb-6">Ready to Get Started?</h3>
-              <p className="text-zion-slate-light mb-6"></p>
+              <p className="text-zion-slate-light mb-6">
                 Let's discuss your project requirements and create a custom solution that drives results.
               </p>
-              <div className="space-y-4"></div>
+              <div className="space-y-4">
                 <$2 />
                   to="/contact"
                   className="w-full bg-zion-cyan hover:bg-zion-cyan-light text-white py-3 px-6 rounded-lg font-semibold transition-colors text-center block"
@@ -1946,19 +1939,20 @@ export default Services
                 >
                   Get a Free Quote
                 </Link>
-                </div>
+              </div>
             </div>
-                </div>
+          </div>
         </div>
-                </section>
-                {/* CTA Section */}
-                <section className="py-16 px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-4xl mx-auto text-center"></div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Transform Your Business Today</h2>
-          <p className="text-lg text-zion-slate-light mb-8"></p>
+          <p className="text-lg text-zion-slate-light mb-8">
             Join hundreds of companies already leveraging our technology solutions to achieve unprecedented growth.
           </p>
-          <div className="flex flex-wrap justify-center gap-4"></div>
+          <div className="flex flex-wrap justify-center gap-4">
             <$2 />
               to="/contact" 
               className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-3 rounded-lg font-semibold transition-colors"
@@ -1971,25 +1965,24 @@ export default Services
             >
               Call: +1 302 464 0950
             </a>
-                </div>
-          <div className="mb-6"></div>
+          </div>
+          <div className="mb-6">
             <$2 />
               to="/enhanced-services"
               className="inline-flex items-center px-6 py-2 text-blue-400 hover:text-blue-300 border border-blue-400 rounded-lg transition-all duration-300"
             >
               View Complete Services Portfolio →
             </Link>
-                </div>
+          </div>
         </div>
-                </section>
+      </section>
     </div>
   )
       {/* Stats Section */}
-                <section className="py-16 bg-zion-blue-dark"></section>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8"></div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
-                {stats.map((stat, index) =>
-                {
+      <section className="py-16 bg-zion-blue-dark">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => {
               const IconComponent = stat.icon
               return (
                 <motion.div
@@ -1998,44 +1991,38 @@ export default Services
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="text-center"
-                ></motion.div
->
-                  <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4"></div>
+                >
+                  <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4">
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
-                  <div className="text-3xl font-bold text-white mb-2"></div>
-                {stat.value}
-                </div>
-                  <div className="text-zion-slate-light"></div>
-                {stat.label}
-                </div>
+                  <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+                  <div className="text-zion-slate-light">{stat.label}</div>
                 </motion.div>
               )
             })}
-                </div>
-                </div>
+          </div>
+        </div>
       </section>
-                {/* Services Section */}
-                <section className="py-20 bg-zion-blue"></section>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8"></div>
+
+      {/* Services Section */}
+      <section className="py-20 bg-zion-blue">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          ></motion.div
->
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Our Technology Services
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto"></p>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Comprehensive solutions designed to drive innovation and transform your business
             </p>
-                </motion.div>
+          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-                {services.map((service, index) =>
-                {
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => {
               const IconComponent = service.icon
               return (
                 <motion.div
@@ -2044,34 +2031,27 @@ export default Services
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-zion-blue-dark border border-zion-blue-light rounded-2xl p-6 hover:border-zion-cyan/50 transition-all duration-300"
-                ></motion.div
->
-                  <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center mb-6`}></div>
+                >
+                  <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center mb-6`}>
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4"></h3>
-                {service.title}
-                </h3>
-                  <p className="text-zion-slate-light mb-6"></p>
-                {service.description}
-                </p>
+                  <h3 className="text-xl font-bold text-white mb-4">{service.title}</h3>
+                  <p className="text-zion-slate-light mb-6">{service.description}</p>
                   
-                  <div className="mb-6"></div>
+                  <div className="mb-6">
                     <h4 className="text-sm font-semibold text-zion-cyan mb-3">Key Features:</h4>
-                    <ul className="space-y-2"></ul>
-                {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm text-zion-slate-light"></li>
+                    <ul className="space-y-2">
+                      {service.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-sm text-zion-slate-light">
                           <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
-                {feature}
-                </li>
+                          {feature}
+                        </li>
                       ))}
-                </ul>
-                </div>
+                    </ul>
+                  </div>
                   
-                  <div className="text-center"></div>
-                    <div className="text-2xl font-bold text-zion-cyan mb-4"></div>
-                {service.price}
-                </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-zion-cyan mb-4">{service.price}</div>
                     <$2 />
                       to={service.link}
                       className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
@@ -2079,76 +2059,68 @@ export default Services
                       Learn More
                       <ArrowRight className="ml-2 w-4 h-4" />
                     </Link>
-                </div>
+                  </div>
                 </motion.div>
               )
             })}
-                </div>
-                </div>
+          </div>
+        </div>
       </section>
-                {/* Industries Section */}
-                <section className="py-20 bg-zion-blue-dark"></section>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8"></div>
+
+      {/* Industries Section */}
+      <section className="py-20 bg-zion-blue-dark">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          ></motion.div
->
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Industries We Serve
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto"></p>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Proven expertise across diverse industries and business sectors
             </p>
-                </motion.div>
+          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-                {industries.map((industry, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {industries.map((industry, index) => (
               <motion.div
                 key={industry.name}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-blue border border-zion-blue-light rounded-xl p-6 text-center hover:border-zion-cyan/50 transition-all duration-300"
-              ></motion.div
->
-                <div className="text-4xl mb-3"></div>
-                {industry.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3"></h3>
-                {industry.name}
-                </h3>
-                <p className="text-zion-slate-light"></p>
-                {industry.description}
-                </p>
-                </motion.div>
+              >
+                <div className="text-4xl mb-3">{industry.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{industry.name}</h3>
+                <p className="text-zion-slate-light">{industry.description}</p>
+              </motion.div>
             ))}
-                </div>
-                </div>
+          </div>
+        </div>
       </section>
-                {/* Benefits Section */}
-                <section className="py-20 bg-zion-blue"></section>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8"></div>
+
+      {/* Benefits Section */}
+      <section className="py-20 bg-zion-blue">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          ></motion.div
->
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Why Choose Our Services?
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto"></p>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Experience the benefits of professional technology services
             </p>
-                </motion.div>
+          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
-                {benefits.map((benefit, index) =>
-                {
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {benefits.map((benefit, index) => {
               const IconComponent = benefit.icon
               return (
                 <motion.div
@@ -2157,41 +2129,36 @@ export default Services
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="flex items-start gap-6"
-                ></motion.div
->
-                  <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center flex-shrink-0"></div>
+                >
+                  <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center flex-shrink-0">
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
-                  <div></div>
-                    <h3 className="text-xl font-bold text-white mb-3"></h3>
-                {benefit.title}
-                </h3>
-                    <p className="text-zion-slate-light"></p>
-                {benefit.description}
-                </p>
-                </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
+                    <p className="text-zion-slate-light">{benefit.description}</p>
+                  </div>
                 </motion.div>
               )
             })}
-                </div>
-                </div>
+          </div>
+        </div>
       </section>
-                {/* CTA Section */}
-                <section className="py-20 bg-gradient-to-r from-zion-cyan to-zion-blue"></section>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-zion-cyan to-zion-blue">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-          ></motion.div
->
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8"></p>
+            <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
               Let's discuss how our technology services can drive innovation and growth for your organization
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <$2 />
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-white text-zion-blue-dark font-semibold rounded-xl hover:shadow-lg transition-all duration-300"
@@ -2205,30 +2172,30 @@ export default Services
               >
                 Get Free Quote
               </Link>
-                </div>
+        </div>
       </section>
-                {/* CTA Section */}
-                <section className="py-20 px-6 bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan relative overflow-hidden"></section>
-                {/* Animated Background */}
-                <div className="absolute inset-0 overflow-hidden"></div>
+
+      {/* CTA Section */}
+      <section className="py-20 px-6 bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan relative overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-zion-purple/20 via-zion-blue-light/20 to-zion-cyan/20"></div>
           <div className="absolute -top-20 -right-20 w-40 h-40 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-white/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-                </div>
+        </div>
         
-        <div className="max-w-4xl mx-auto text-center relative z-10"></div>
+        <div className="max-w-4xl mx-auto text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-          ></motion.div
->
+          >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
-            <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed"></p>
+            <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
               Let's discuss how our technology services can help you achieve your goals and stay ahead of the competition. 
               Our team of experts is ready to guide you through the digital transformation journey.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <$2 />
                 href="mailto:kleber@ziontechgroup.com"
                 className="bg-white text-zion-purple font-semibold py-4 px-8 rounded-lg hover:bg-zion-slate-light transition-all duration-300 flex items-center justify-center space-x-2 group"
@@ -2243,28 +2210,24 @@ export default Services
                 <span>Call Now</span>
                 <Phone className="w-5 h-5 group-hover:scale-110 transition-transform" />
               </a>
-                </div>
+            </div>
           </motion.div>
-                </div>
+        </div>
       </section>
-                </div>
+    </div>
   )
-              <div key={index} className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 hover:border-zion-cyan/50 transition-all duration-300"></div>
-                <div className="w-16 h-16 bg-zion-cyan rounded-lg flex items-center justify-center mb-4 text-white"></div>
-                {category.icon}
+              <div key={index} className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 hover:border-zion-cyan/50 transition-all duration-300">
+                <div className="w-16 h-16 bg-zion-cyan rounded-lg flex items-center justify-center mb-4 text-white">
+                  {category.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3"></h3>
-                {category.title}
-                </h3>
-                <p className="text-zion-slate-light mb-4"></p>
-                {category.description}
-                </p>
-                <ul className="space-y-2 mb-6"></ul>
-                {category.services.map((service, serviceIndex) => (
-                    <li key={serviceIndex} className="flex items-start gap-2 text-zion-slate-light text-sm"></li>
+                <h3 className="text-xl font-semibold text-white mb-3">{category.title}</h3>
+                <p className="text-zion-slate-light mb-4">{category.description}</p>
+                <ul className="space-y-2 mb-6">
+                  {category.services.map((service, serviceIndex) => (
+                    <li key={serviceIndex} className="flex items-start gap-2 text-zion-slate-light text-sm">
                       <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mt-2 flex-shrink-0"></div>
-                {service}
-                </li>
+                      {service}
+                    </li>
                   ))}
                 </ul>
                 <$2 />
@@ -2272,172 +2235,172 @@ export default Services
                   className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light transition-colors font-medium"
                 >
                   Learn More
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"></svg>
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </Link>
               </div>
             ))}
-                </div>
-                </div>
+          </div>
+        </div>
       </section>
-                {/* Emerging Technologies */}
-                <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm"></section>
-        <div className="max-w-7xl mx-auto"></div>
+
+      {/* Emerging Technologies */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm">
+        <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Emerging Technologies</h2>
-          <p className="text-lg text-zion-slate-light text-center max-w-3xl mx-auto mb-12"></p>
+          <p className="text-lg text-zion-slate-light text-center max-w-3xl mx-auto mb-12">
             Stay ahead of the curve with our cutting-edge technology solutions that are shaping the future.
           </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
-                {emergingTechServices.map((service, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 text-center"></div>
-                <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4 text-white"></div>
-                {service.icon}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {emergingTechServices.map((service, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 text-center">
+                <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4 text-white">
+                  {service.icon}
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2"></h3>
-                {service.title}
-                </h3>
-                <p className="text-zion-slate-light text-sm"></p>
-                {service.description}
-                </p>
-                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{service.title}</h3>
+                <p className="text-zion-slate-light text-sm">{service.description}</p>
+              </div>
             ))}
-                </div>
-                </div>
+          </div>
+        </div>
       </section>
-                {/* Why Choose Us */}
-                <section className="py-16 px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-7xl mx-auto"></div>
+
+      {/* Why Choose Us */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Why Choose Zion Tech Group?</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-            <div className="text-center"></div>
-              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4"></div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Expert Team</h3>
-              <p className="text-zion-slate-light"></p>
+              <p className="text-zion-slate-light">
                 Our team of experienced professionals brings 15+ years of expertise 
                 in cutting-edge technologies and industry best practices.
               </p>
-                </div>
+            </div>
 
-            <div className="text-center"></div>
-              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4"></div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                 <BarChart3 className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Proven Results</h3>
-              <p className="text-zion-slate-light"></p>
+              <p className="text-zion-slate-light">
                 We've successfully delivered 500+ projects across various industries, 
                 consistently exceeding client expectations and driving measurable results.
               </p>
-                </div>
+            </div>
 
-            <div className="text-center"></div>
-              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4"></div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                 <Lock className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Security First</h3>
-              <p className="text-zion-slate-light"></p>
+              <p className="text-zion-slate-light">
                 Enterprise-grade security and compliance standards ensure your data 
                 and systems remain protected at all times.
               </p>
-                </div>
+            </div>
 
-            <div className="text-center"></div>
-              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4"></div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                 <Rocket className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Innovation Driven</h3>
-              <p className="text-zion-slate-light"></p>
+              <p className="text-zion-slate-light">
                 We stay at the forefront of technology trends, continuously innovating 
                 to deliver cutting-edge solutions that give you a competitive advantage.
               </p>
-                </div>
+            </div>
 
-            <div className="text-center"></div>
-              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4"></div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                 <Globe className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Global Reach</h3>
-              <p className="text-zion-slate-light"></p>
+              <p className="text-zion-slate-light">
                 Serving clients worldwide with 24/7 support and localized expertise 
                 to ensure your success regardless of your location.
               </p>
-                </div>
+            </div>
 
-            <div className="text-center"></div>
-              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4"></div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                 <Zap className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Fast Delivery</h3>
-              <p className="text-zion-slate-light"></p>
+              <p className="text-zion-slate-light">
                 Agile development methodologies and efficient processes ensure 
                 rapid delivery without compromising quality or security.
               </p>
-                </div>
+            </div>
           </div>
-                </div>
+        </div>
       </section>
-                {/* Service Process */}
-                <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm"></section>
-        <div className="max-w-7xl mx-auto"></div>
+
+      {/* Service Process */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm">
+        <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Our Service Process</h2>
-          <div className="grid md:grid-cols-4 gap-8"></div>
-            <div className="text-center"></div>
-              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl"></div>
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
                 1
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Discovery</h3>
-              <p className="text-zion-slate-light"></p>
+              <p className="text-zion-slate-light">
                 We analyze your requirements, understand your business goals, 
                 and design a tailored solution strategy.
               </p>
-                </div>
+            </div>
 
-            <div className="text-center"></div>
-              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl"></div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
                 2
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Planning</h3>
-              <p className="text-zion-slate-light"></p>
+              <p className="text-zion-slate-light">
                 Detailed project planning, architecture design, and timeline 
                 development to ensure successful execution.
               </p>
-                </div>
+            </div>
 
-            <div className="text-center"></div>
-              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl"></div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
                 3
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Development</h3>
-              <p className="text-zion-slate-light"></p>
+              <p className="text-zion-slate-light">
                 Agile development with regular updates, testing, and quality 
                 assurance to deliver exceptional results.
               </p>
-                </div>
+            </div>
 
-            <div className="text-center"></div>
-              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl"></div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
                 4
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Launch & Support</h3>
-              <p className="text-zion-slate-light"></p>
+              <p className="text-zion-slate-light">
                 Smooth deployment, comprehensive training, and ongoing support 
                 to ensure long-term success.
               </p>
-                </div>
+            </div>
           </div>
-                </div>
+        </div>
       </section>
-                {/* CTA Section */}
-                <section className="py-16 px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-4xl mx-auto text-center"></div>
+
+      {/* CTA Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
-          <p className="text-lg text-zion-slate-light mb-8"></p>
+          <p className="text-lg text-zion-slate-light mb-8">
             Let's discuss your project requirements and explore how our innovative 
             solutions can drive your success.
           </p>
-          <div className="flex flex-wrap justify-center gap-4"></div>
+          <div className="flex flex-wrap justify-center gap-4">
             <$2 />
               to="/contact" 
               className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-3 rounded-lg font-semibold transition-colors"
@@ -2450,9 +2413,9 @@ export default Services
             >
               Get Free Quote
             </Link>
-                </div>
+          </div>
         </div>
-                </section>
+      </section>
     </div>
   )
 }
@@ -2460,178 +2423,160 @@ export default Services
 }
 }
               {/* Results Count */}
-                <div className="flex items-end"></div>
-                <span className="text-zion-slate-light"></span>
-                {filteredServices.length} services found
+              <div className="flex items-end">
+                <span className="text-zion-slate-light">
+                  {filteredServices.length} services found
                 </span>
-                </div>
+              </div>
             </div>
-                </div>
+          </div>
         </motion.div>
-                {/* Services Grid */}
-                <motion.div
+
+        {/* Services Grid */}
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        ></motion.div
->
-                {filteredServices.map((service, index) => (
+        >
+          {filteredServices.map((service, index) => (
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-6 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20"
-            ></motion.div
->
-                {/* Service Header */}
-                <div className="flex items-start justify-between mb-4"></div>
-                <div className="flex items-center gap-3"></div>
-                  <div className="p-2 bg-zion-purple/20 rounded-lg text-zion-cyan"></div>
-                {getCategoryIcon(service.category)}
+            >
+              {/* Service Header */}
+              <div className="flex items-start justify-between mb-4">
+                <div className="flex items-center gap-3">
+                  <div className="p-2 bg-zion-purple/20 rounded-lg text-zion-cyan">
+                    {getCategoryIcon(service.category)}
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-lg text-white group-hover:text-zion-cyan transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-zion-slate-light text-sm">{service.category}</p>
+                  </div>
                 </div>
-                  <div></div>
-                    <h3 className="font-semibold text-lg text-white group-hover:text-zion-cyan transition-colors"></h3>
-                {service.title}
-                </h3>
-                    <p className="text-zion-slate-light text-sm"></p>
-                {service.category}
-                </p>
-                </div>
-                </div>
-                <div className="text-right"></div>
-                  <div className="text-2xl font-bold text-zion-cyan"></div>
-                {getPricingDisplay(service)}
-                </div>
-                  <div className="text-xs text-zion-slate-light capitalize"></div>
-                {service.pricingModel.replace('-', ' ')}
-                </div>
+                <div className="text-right">
+                  <div className="text-2xl font-bold text-zion-cyan">
+                    {getPricingDisplay(service)}
+                  </div>
+                  <div className="text-xs text-zion-slate-light capitalize">
+                    {service.pricingModel.replace('-', ' ')}
+                  </div>
                 </div>
               </div>
-                {/* Description */}
-                <p className="text-zion-slate-light mb-4 line-clamp-3"></p>
+
+              {/* Description */}
+              <p className="text-zion-slate-light mb-4 line-clamp-3">
                 {service.description}
-                </p>
-                {/* Key Features */}
-                <div className="mb-4"></div>
-                <h4 className="text-white font-medium mb-2 flex items-center gap-2"></h4>
+              </p>
+
+              {/* Key Features */}
+              <div className="mb-4">
+                <h4 className="text-white font-medium mb-2 flex items-center gap-2">
                   <Star className="w-4 h-4 text-zion-cyan" />
                   Key Features
                 </h4>
-                <div className="space-y-1"></div>
-                {service.features.slice(0, 3).map((feature, idx) => (
-                    <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light"></div>
+                <div className="space-y-1">
+                  {service.features.slice(0, 3).map((feature, idx) => (
+                    <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">
                       <CheckCircle className="w-3 h-3 text-zion-cyan flex-shrink-0" />
-                      <span className="line-clamp-1"></span>
-                {feature}
-                </span>
-                </div>
+                      <span className="line-clamp-1">{feature}</span>
+                    </div>
                   ))}
                 </div>
-                </div>
-                {/* Service Details */}
-                <div className="grid grid-cols-2 gap-3 mb-4 text-sm"></div>
-                <div className="flex items-center gap-2 text-zion-slate-light"></div>
+              </div>
+
+              {/* Service Details */}
+              <div className="grid grid-cols-2 gap-3 mb-4 text-sm">
+                <div className="flex items-center gap-2 text-zion-slate-light">
                   <Clock className="w-4 h-4 text-zion-cyan" />
-                  <span></span>
-                {service.estimatedDelivery}
-                </span>
+                  <span>{service.estimatedDelivery}</span>
                 </div>
-                <div className="flex items-center gap-2 text-zion-slate-light"></div>
+                <div className="flex items-center gap-2 text-zion-slate-light">
                   <Shield className="w-4 h-4 text-zion-cyan" />
-                  <span className="capitalize"></span>
-                {service.supportLevel}
-                </span>
+                  <span className="capitalize">{service.supportLevel}</span>
                 </div>
               </div>
-                {/* Market Price */}
-                <div className="mb-4 p-3 bg-zion-blue-dark/30 rounded-lg"></div>
+
+              {/* Market Price */}
+              <div className="mb-4 p-3 bg-zion-blue-dark/30 rounded-lg">
                 <div className="text-xs text-zion-slate-light mb-1">Market Price Range</div>
-                <div className="text-zion-cyan font-medium"></div>
-                {service.marketPrice}
-                </div>
-                </div>
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-4"></div>
+                <div className="text-zion-cyan font-medium">{service.marketPrice}</div>
+              </div>
+
+              {/* Tags */}
+              <div className="flex flex-wrap gap-2 mb-4">
                 {service.tags.slice(0, 3).map((tag, idx) => (
                   <$2 />
                     key={idx}
                     className="px-2 py-1 bg-zion-purple/20 border border-zion-purple/30 rounded-full text-xs text-zion-cyan"
                   >
-                {tag}
-                </span>
+                    {tag}
+                  </span>
                 ))}
-                </div>
-                {/* Contact Info */}
-                <div className="border-t border-zion-purple/20 pt-4"></div>
-                <div className="flex items-center justify-between"></div>
-                  <div className="text-sm text-zion-slate-light"></div>
-                    <div>📧 {service.contactInfo.email}
-                </div>
-                    <div>📱 {service.contactInfo.phone}
-                </div>
-                </div>
+              </div>
+
+              {/* Contact Info */}
+              <div className="border-t border-zion-purple/20 pt-4">
+                <div className="flex items-center justify-between">
+                  <div className="text-sm text-zion-slate-light">
+                    <div>📧 {service.contactInfo.email}</div>
+                    <div>📱 {service.contactInfo.phone}</div>
+                  </div>
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-sm font-medium hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2"
-                  ></motion.button
->
+                  >
                     Get Quote
                     <ArrowRight className="w-4 h-4" />
                   </motion.button>
                 </div>
               </div>
-                </motion.div>
+            </motion.div>
           ))}
-                </motion.div>
-                {/* Call to Action */}
-                <motion.div
+        </motion.div>
+
+        {/* Call to Action */}
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           className="mt-20 text-center"
-        ></motion.div
->
-          <div className="bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-cyan/20 border border-zion-cyan/30 rounded-2xl p-12 backdrop-blur-md"></div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white"></h2>
+        >
+          <div className="bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-cyan/20 border border-zion-cyan/30 rounded-2xl p-12 backdrop-blur-md">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto"></p>
+            <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
               Let's discuss how our cutting-edge solutions can drive innovation and growth for your organization.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300"
-              ></motion.button
->
+              >
                 Schedule Consultation
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-lg text-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300"
-              ></motion.button
->
+              >
                 View Case Studies
               </motion.button>
-                </div>
+            </div>
           </div>
-                </motion.div>
+        </motion.div>
       </div>
-                </div>
+    </div>
   )
 }
 }
-                </div>
-                </div></div>
-                </div></div>
-                </div></div>
-                </p></p>
-                </p></p>
-                </section></section>
-                </section></section>
-                </section>;
+</div></div></div></div></div></div></div></p></p></p></p></section></section></section></section></section>

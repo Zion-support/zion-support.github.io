@@ -33,7 +33,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */};
       }
     }
 
-    // Remove the entire metadata export;
+    // Remove the entire metadata export
     content = content.replace(/export const metadata = \{[\s\S]*?\};/g, '')
     // Remove any remaining broken metadata lines
     for (let i = 0; i < lines.length; i++) {
@@ -68,7 +68,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */};
     // Fix function declarations
     content = content.replace(
       /export default function (\w+)\(\) \{/,
-      'const $1: React.FC  = () => {'
+      'const $1: React.FC = () => {'
     )
     // Add proper export at the end if missing
     if (!content.includes('export default') && content.includes('const ')) {,
@@ -82,12 +82,13 @@ function processFile(filePath) {/* TODO: Fix JSX expression */};
     }
 
     // Update Helmet with extracted metadata
-    if (metadata.title || metadata.description) {//       const helmetMatch = content.match(/(<Helmet></Helmet>[\s\S]*?<\/Helmet>)/)
+    if (metadata.title || metadata.description) {
+      //       const helmetMatch = content.match(/(<Helmet></Helmet>[\s\S]*?<\/Helmet>)/)
       if (helmetMatch) {
-        const newHelmet = `<Helmet></Helmet>
+        const newHelmet = `<Helmet>
     if (metadata.title || metadata.description) {/* TODO: Fix JSX expression */}
-                <title>${metadata.title || 'Zion Tech Group'}
-                <meta name="description" content="${metadata.description || 'Advanced AI and IT Solutions'}" />
+        <title>${metadata.title || 'Zion Tech Group'}
+        <meta name="description" content="${metadata.description || 'Advanced AI and IT Solutions'}" />
         ${/* TODO: Fix JSX expression */}"`
   g:type" content="${metadata.type}" />` : ''}
         ${/* TODO: Fix JSX expression */}"`
@@ -107,13 +108,11 @@ function processFile(filePath) {/* TODO: Fix JSX expression */};
 }
 
 // Process all files
-filesToFix.forEach(file =>
-                {)
+filesToFix.forEach(file => {)
   if (processFile(file)) {
     fixedCount++
   }
-filesToFix.forEach(file =>
-                {/* TODO: Fix JSX expression */}
+filesToFix.forEach(file => {/* TODO: Fix JSX expression */}
   })
 })
 // "`

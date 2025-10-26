@@ -78,7 +78,7 @@ const createJestConfig = next_jest ({
 export default createJestConfig(config)
 ursor/integrate-build-improve-and-re-verify-8f7d
 export default createJestConfig(config)
-origin/automation-improvements-final;
+origin/automation-improvements-final
 import type { Config } from 'jest'; import nextJest from 'next/jest.js'; const createJestConfig = nextJest({ dir: './',}); const config: Config = { coverageProvider: 'v8',testEnvironment: 'jsdom',setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],moduleNameMapping: { '^@/(.*)$': '<rootDir>/src/$1',},testMatch: [ '**/__tests__*.(js|jsx|ts|tsx)','***.{js,jsx,ts,tsx}','!src*.d.ts','!src*.stories.{js,jsx,ts,tsx}',],coverageThreshold: { global: { branches: 70,functions: 70,lines: 70,statements: 70,},},}; export default createJestConfig(config)
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -106,7 +106,7 @@ const config: Config = {
 }
 export default createJestConfig(config)
 export default createJestConfig(config)
-ursor/fix-lint-push-and-merge-to-main-ae4e;
+ursor/fix-lint-push-and-merge-to-main-ae4e
 import type { Config } from 'jest'; import nextJest from 'next/jest.js'; const createJestConfig = nextJest({ dir: './',}); const config: Config = { coverageProvider: 'v8',testEnvironment: 'jsdom',setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],moduleNameMapping: { '^@/(.*)$': '<rootDir>/src/$1',},testMatch: [ '**/__tests__*.(js|jsx|ts|tsx)','***.{js,jsx,ts,tsx}','!src*.d.ts','!src*.stories.{js,jsx,ts,tsx}',],coverageThreshold: { global: { branches: 70,functions: 70,lines: 70,statements: 70,},},}; export default createJestConfig(config)
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -136,4 +136,4 @@ const config: Config = {
     global: { branches: 70, functions: 70, lines: 70, statements: 70 },
   },
 }
-export default createJestConfig (config);
+export default createJestConfig (config)

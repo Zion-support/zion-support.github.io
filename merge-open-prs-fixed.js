@@ -54,7 +54,7 @@ function mergePR(pr) {/* TODO: Fix JSX expression */}
 //         return true
       } catch (resolveError) {
 //         //         // Reset to clean state
-        execSync('git reset --hard HEAD', { stdio: 'pipe' });
+        execSync('git reset --hard HEAD', { stdio: 'pipe' })
     // Fetch the latest changes;`
 //     execSync(`git fetch origin ${branchName}`, {/* TODO: Fix JSX expression */})
   o: 'inherit' })

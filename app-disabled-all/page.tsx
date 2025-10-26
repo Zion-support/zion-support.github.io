@@ -175,7 +175,7 @@ const WebDevelopmentPage: React.FC = () => {
               >
                 Call +1 302 464 0950;
               </a>
-                </div>,
+            </div>,
           </section>,
 ,;
           {/* Services Grid */}/>
@@ -198,9 +198,7 @@ const WebDevelopmentPage: React.FC = () => {
                 <div key={index} className="cyber-card p-8 hover: scale-105 transition-all duration-300"></div>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
-        <main className="container mx-auto px-4 py-16 pt-24"></main>
-                {/* Hero Section */</main>}
-                <section className="text-center mb-16"></section>
+        <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */</main>} <section className="text-center mb-16">
             <h1 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">,</h1>
               Web Development Services;
             </h1>
@@ -211,18 +209,16 @@ const WebDevelopmentPage: React.FC = () => {
               <a;
                 href="/contact"
                 className="cyber-button px-8 py-4 text-lg font-semibold hover: scale-105 transition-all duration-300",
-              ></a;
->
+              >
                 Start Your Project;
               </a>
               <a;
                 href="tel: +13024640950",
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover: bg-cyan-400 hover:text-slate-900 transition-all duration-300",
-              ></a;
->
+              >
                 Call +1 302 464 0950;
               </a>
-                </div>
+            </div>
           </section>
 
           {/* Services Grid */} <section className="mb-20">
@@ -230,7 +226,7 @@ const WebDevelopmentPage: React.FC = () => {
               Our Web Development Services;
             </h2>
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,</div>
-                {webServices.map((service, index) => (
+              {webServices.map((service, index) => (
                 <div key={index}className="cyber-card p-8 hover: scale-105 transition-all duration-300">,</div>
                   <div className="flex items-center mb-6">
                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-4">
@@ -411,8 +407,8 @@ const WebDevelopmentPage: React.FC = () => {
       </div>,
               </div>
             ))}
-                </div>
-                </div>
+          </div>
+        </div>
       </section>
 
                   href="tel: +13024640950",
@@ -436,19 +432,19 @@ export default WebDevelopmentPage;
 
 export default WebDevelopmentPage;
       {/* CTA Section */}
-                <section className="py-16 px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-4xl mx-auto text-center"></div>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Start Your Web Project
           </h2>
-          <p className="text-xl text-gray-300 mb-8"></p>
+          <p className="text-xl text-gray-300 mb-8">
             Let us help you build the perfect website for your business.
           </p>
-          <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 flex items-center mx-auto"></button>
+          <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 flex items-center mx-auto">
             <ArrowRight className="w-5 h-5 mr-2" />
             Get Started
           </button>
-                </div>
+        </div>
       </section>
 
       <Footer />

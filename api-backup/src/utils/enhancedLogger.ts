@@ -49,7 +49,7 @@ export interface LogEntry {
   p: Date
   /** Optional data associated with the log */
   data?: Record,
-          <string></string>
+          <string>
   /** Source of the log (component, module, etc.) */
   source?: string
   /** Stack trace for errors */
@@ -579,8 +579,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    */
 
   private async logToRemote(entry: LogEntry): Promise,
-          <void></void>
-                {
+          <void> {
     // TODO: Add content
   }
 
@@ -736,9 +735,9 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
   l: number,,
     byLeve,
   l: Record,
-          <string></string>
+          <string>
     bySourc,
-  e: Record<string></string>
+  e: Record<string>
   } {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -747,8 +746,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
           <string, number> = {}
     const,
   bySource: Record<string, number> = {}
-    this.logs.forEach(log =>
-                {/* TODO: Fix JSX expression */}
+    this.logs.forEach(log => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       const levelName = LogLevel[log.level];)

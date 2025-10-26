@@ -1,68 +1,43 @@
 import React, { useState } from 'react';
-const InteractiveAIROICalculator: React.FC = () => {return (
-    <div}>Coming Soon
-        </div>
-  );
-};
+
+const InteractiveAIROICalculator: React.FC = () => {
   const [currentCost, setCurrentCost] = useState(100000);
   const [efficiencyGain, setEfficiencyGain] = useState(70);
   const [timeframe, setTimeframe] = useState(12);
   
   const calculateROI = () => {
-    const _annualSavings = (currentCost * efficiencyGain) / 100;
-    const _totalSavings = _annualSavings * (timeframe / 12);
-    const _roi = ((_totalSavings - currentCost) / currentCost) * 100;
-    return Math.max(0, _roi);
+    const annualSavings = (currentCost * efficiencyGain) / 100;
+    const totalSavings = annualSavings * (timeframe / 12);
+    const roi = ((totalSavings - currentCost) / currentCost) * 100;
+    return Math.max(0, roi);
   };
   
   const roi = calculateROI();
   return (
     <section className='bg-white py-16 rounded-2xl shadow-lg'>
       <div className='container mx-auto px-4'>
-        <h2 className='text-4xl font-bold text-center text-gray-900 mb-8'>// AI ROI Calculator
-        
-          
-          
-          
-          
-          
-          
-          
-          
-          </h2>
+        <h2 className='text-4xl font-bold text-center text-gray-900 mb-8'>
+          AI ROI Calculator
+        </h2>
         <div className='max-w-4xl mx-auto'>
           <div className='grid md:grid-cols-2 gap-8'>
             <div className='space-y-6'>
               <div>
-                <label className='block text-sm font-medium text-gray-700 mb-2'>// Current Annual Cost ($)
-                
-          
-          
-          
-          
-          
-          
-          
-          
-          </label>
-                <input;
-type='number'
+                <label className='block text-sm font-medium text-gray-700 mb-2'>
+                  Current Annual Cost ($)
+                </label>
+                <input
+                  type='number'
                   value={currentCost}
-                  onChange={e =}>setCurrentCost(Number(e.target.value))}
+                  onChange={e => setCurrentCost(Number(e.target.value))}
                   className='w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
-// />
-              
-          
-          
-          
-          
-          
-          
-          
-          
-          
-        </div>
-Expected Efficiency Gain (%)
+                />
+              </div>
+              <div>
+                <label className='block text-sm font-medium text-gray-700 mb-2'>
+                  Expected Efficiency Gain (%)
+                </label>
+                <input
                   type='range'
                   min='10'
                   max='90'
@@ -91,21 +66,15 @@ Expected Efficiency Gain (%)
               </div>
             </div>
             <div className='bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl'>
-              <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>// Your ROI Projection
-              
-          
-          
-          
-          
-          
-          
-          
-          
-          </h3>
+              <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>
+                Your ROI Projection
+              </h3>
               <div className='text-center'>
                 <div className='text-6xl font-bold text-blue-600 mb-4'>
                   {roi.toFixed(0)}%
-                <p className='text-gray-600 text-sm'>Expected return on investment over {timeframe} months
+                </div>
+                <p className='text-gray-600 text-sm'>
+                  Expected return on investment over {timeframe} months
                 </p>
               </div>
             </div>

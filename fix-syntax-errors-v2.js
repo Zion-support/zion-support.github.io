@@ -35,7 +35,7 @@ function fixSyntaxErrors(filePath) {
         replacement: 'export const metadata = {\n  $1: "$2",\n  $3:',
       },
       // Fix malformed function parameters
-      {;
+      {
         pattern: /export\s+default\s+function\s+(\w+)\s*\(\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*}\s*:\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*;\s*(\w+):/g,
         replacement: 'export default function $1({\n  $2:',
       },

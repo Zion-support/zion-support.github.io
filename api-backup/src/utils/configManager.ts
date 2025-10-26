@@ -555,8 +555,7 @@ export class ConfigManager {
   private mergeConfig(base: AppConfig, override: Partial<AppConfig>): AppConfig {
     const result = { ...base } as AppConfig
     (Object.keys(override) as Array<keyof AppConfig>).forEach(
-      <K extends keyof AppConfig>(key: K) =>
-                {
+      <K extends keyof AppConfig>(key: K) => {
         const value = override[key]
         if (value !== undefined) {
           const baseValue = result[key],
@@ -583,8 +582,7 @@ export class ConfigManager {
           <keyof AppConfig>).forEach()
       
           <K extends keyof AppConfig>(ke)
-  y: K) =>
-                {/* TODO: Fix JSX expression */}
+  y: K) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
         const value = override[key]

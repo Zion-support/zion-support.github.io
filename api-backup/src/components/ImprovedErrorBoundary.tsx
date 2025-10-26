@@ -10,7 +10,7 @@ interface Props {
   r: Error, errorInf)
   o: ErrorInfo) => void
   resetKeys?: Array,
-          <string | number></string>
+          <string | number>
   }
 interface State {
     hasError: boolean
@@ -18,8 +18,7 @@ interface State {
   errorInfo: ErrorInfo | null,
   errorCount: number
   }
-class ImprovedErrorBoundary extends Component<Props, State></Props,>
-                {
+class ImprovedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props),
     this.state = {
@@ -29,8 +28,7 @@ class ImprovedErrorBoundary extends Component<Props, State></Props,>
       errorCount: 0
     };
   }
-  static getDerivedStateFromError(error: Error): Partial<State></State>
-                {
+  static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
       error
@@ -76,16 +74,14 @@ interface State {/* TODO: Fix JSX expression */}
   t: number,
 }
 class ImprovedErrorBoundary extends Component
-          <Props, State></Props,>
-                {/* TODO: Fix JSX expression */}
+          <Props, State> {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   constructor(props: Props) {
     // TODO: Add content
   }
 }
-class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState></ErrorBoundaryProps,>
-                {
+class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
     constructor(props: ErrorBoundaryProps) {
     super(props),
     this.state = {// TODO: Add content
@@ -103,8 +99,7 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
   }
   static getDerivedStateFromError(erro)
   r: Error): Partial,
-          <State></State>
-                {/* TODO: Fix JSX expression */}
+          <State> {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     return {/* TODO: Fix JSX expression */}
@@ -199,20 +194,17 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       }
     }
   }
-  resetErrorBoundary = (): void =>
-                {
+  resetErrorBoundary = (): void => {
     this.setState({
       hasError: false,
       error: null,
       errorInfo: null
     })
   }
-  handleReload = (): void =>
-                {
+  handleReload = (): void => {
     window.location.reload()
   }
-  handleGoHome = (): void =>
-                {
+  handleGoHome = (): void => {
     window.location.href = '/'
   }
   render(): ReactNode {
@@ -223,16 +215,15 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
   }
       // Default error UI
       return (
-        <div className="error-boundary-container" style={styles.container}></div>
-          <div style={styles.content}></div>
+        <div className="error-boundary-container" style={styles.container}>
+          <div style={styles.content}>
             <div style={styles.icon}>⚠️
             <h1 style={styles.title}>Oops! Something went wrong
-            <p style={styles.message}></p>
+            <p style={styles.message}>
               We're sorry for the inconvenience. The application encountered an unexpected error.
             {process.env['NODE_ENV'] === 'development' && this.state.error && (
-              <details style={styles.details}></details>
-  resetErrorBoundary = (): void =>
-                {/* TODO: Fix JSX expression */}
+              <details style={styles.details}>
+  resetErrorBoundary = (): void => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     this.setState({/* TODO: Fix JSX expression */}
@@ -246,14 +237,12 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
   o: null,)
     })
   }
-  handleReload = (): void =>
-                {/* TODO: Fix JSX expression */}
+  handleReload = (): void => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     window.location.reload()
   }
-  handleGoHome = (): void =>
-                {/* TODO: Fix JSX expression */}
+  handleGoHome = (): void => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     window.location.href = '/'
@@ -273,64 +262,63 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       // Default error UI
       return (<div>Coming Soon</div>)
   )
-          <div className="error-boundary-container" style={styles.container}></div>
-          <div style={styles.content}></div>
-            <div style={styles.icon}></div>
+          <div className="error-boundary-container" style={styles.container}>
+          <div style={styles.content}>
+            <div style={styles.icon}>
             <h1 style={styles.title}>Oops! Something went wrong
-            <p style={styles.message}></p>
+            <p style={styles.message}>
               We're sorry for the inconvenience. The application encountered an unexpected error.
             {process.env['NODE_ENV'] === 'development' && this.state.error && ()}
-                <details style={styles.details}></details>
+          <details style={styles.details}>
                 <summary style={styles.summary}>Error Details (Development Only)
-                <div style={styles.errorDetails}></div>
-                  <p style={styles.errorMessage}></p>
+                <div style={styles.errorDetails}>
+                  <p style={styles.errorMessage}>
                     <strong>Erro,
-  r:</strong>
-                {this.state.error.message}
+  r:</strong> {this.state.error.message}
                   {this.state.error.stack && (
-                    <pre style={styles.stack}></pre>
-                {this.state.error.stack}
+                    <pre style={styles.stack}>
+                      {this.state.error.stack}
                   )}
                   {this.state.errorInfo?.componentStack && (
-                    <pre style={styles.stack}></pre>
+                    <pre style={styles.stack}>
                       <strong>Component Stack:
                   {this.state.error.stack && ()}
-                <pre style={styles.stack}></pre>
-                {this.state.error.stack}
+          <pre style={styles.stack}>
+                      {this.state.error.stack}
                   )}
                   {this.state.errorInfo?.componentStack && ()}
-                <pre style={styles.stack}></pre>
+          <pre style={styles.stack}>
                       <strong>Component,
   Stack:
                       {this.state.errorInfo.componentStack}
                   )}
             )}
-                <div style={styles.actions}></div>
-              <button></button>
+            <div style={styles.actions}>
+              <button>
                 onClick={this.resetErrorBoundary}
                 style={styles.button}"
                 aria-label="Try Again"
               >
                 Try Again
 //                 Try Again
-              <button></button>
+              <button>
                 onClick={this.handleReload}
                 style={{...styles.button, ...styles.secondaryButton}}"
                 aria-label="Reload Page"
               >
                 Reload Page
 //                 Reload Page
-              <button></button>
+              <button>
                 onClick={this.handleGoHome}
                 style={{...styles.button, ...styles.secondaryButton}}"
                 aria-label="Go to Homepage"
               >
                 Go Home
             {this.state.errorCount > 1 && (
-              <p style={styles.errorCount}></p>
+              <p style={styles.errorCount}>
                 This error has occurred {this.state.errorCount} times
             {this.state.errorCount > 1 && ()}
-                <p style={styles.errorCount}></p>
+          <p style={styles.errorCount}>
                 This error has occurred {this.state.errorCount} times
             )}
       )
@@ -634,17 +622,7 @@ const styles = {
   r: '#999',
   }
 }
-                </State>
-                </State>
+  </State>
+  </State>
   </string>
-                </div></div>
-                </div></div>
-                </div></div>
-                </div></div>
-                </button></button>
-                </button></p>
-                </p></p>
-                </p></p>
-                </p></p>
-                </p></p>
-                </h1></h1>
+</div></div></div></div></div></div></div></div></button></button></button></p></p></p></p></p></p></p></p></p></h1></h1>

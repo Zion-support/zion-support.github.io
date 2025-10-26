@@ -1,14 +1,20 @@
-import React from 'react';
-import { Link  } from 'react-router-dom';
-import { Header  } from '@/components/header/Header';import { Footer  } from '@/components/Footer';
-import { SEO  } from '@/components/SEO';import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/Card';
-import { Badge  } from '@/components/ui/Badge';import { Home, 
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Header } from '@/components/header/Header'
+import { Footer } from '@/components/Footer'
+import { SEO } from '@/components/SEO'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
+import { Badge } from '@/components/ui/Badge'
+import { 
+  Home, 
   Briefcase, 
   Users, 
-import React from 'react';
-import { SEO  } from '../components/SEO';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent  } from '../components/ui/card.js';import { Badge  } from '../components/ui/badge.js';
-import { Home, 
+import React from 'react'
+import { SEO } from '../components/SEO'
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '../components/ui/card.js'
+import { Badge } from '../components/ui/badge.js'
+import { 
+  Home, 
   HelpCircle, 
   MessageCircle, 
   Zap, 
@@ -18,12 +24,16 @@ import { Home,
   BookOpen, 
   Phone, 
   FileText, 
-  Shield, ;
-import { motion  } from 'framer-motion';import { Brain, 
-  Shield, ;
-import { SEO  } from '../components/SEO';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent  } from '../components/ui/card.js';import { Badge  } from '../components/ui/badge.js';
-import { Phone, Mail  } from 'lucide-react';interface SitemapSection {
+  Shield, 
+import { motion } from 'framer-motion'
+import { 
+  Brain, 
+  Shield, 
+import { SEO } from '../components/SEO'
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '../components/ui/card.js'
+import { Badge } from '../components/ui/badge.js'
+import { Phone, Mail } from 'lucide-react'
+interface SitemapSection {
   id: string
   title: string
   description: string
@@ -404,10 +414,12 @@ export default function Sitemap() {
         { name: 'Cookie Policy', path: '/cookies', description: 'Cookie usage information' },
         { name: 'GDPR Compliance', path: '/gdpr', description: 'Data protection compliance' },
         { name: 'Accessibility', path: '/accessibility', description: 'Accessibility standards' },
-import React from 'react';
-import { SEO  } from '@/components/SEO';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';import { Link  } from 'react-router-dom';
-import { Home, 
+import React from 'react'
+import { SEO } from "@/components/SEO"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Link } from "react-router-dom"
+import { 
+  Home, 
   Users, 
   Briefcase, 
   ShoppingCart, 
@@ -422,8 +434,9 @@ import { Home,
   Shield,
   Mail,
   Phone,
-  MapPin;
- } from 'lucide-react';export default function Sitemap() {
+  MapPin
+} from "lucide-react"
+export default function Sitemap() {
   const sitemapSections = [
     {
       title: "Main Pages",
@@ -506,8 +519,9 @@ import { Home,
       ]
     }
   ]
-import { motion  } from 'framer-motion';
-import { Map, 
+import { motion } from 'framer-motion'
+import { 
+  Map, 
   Home, 
   Info, 
   Settings, 
@@ -528,8 +542,9 @@ import { Map,
   Factory,
   Award,
   Mail,
-  ArrowRight;
- } from 'lucide-react';export default function Sitemap() {
+  ArrowRight
+} from 'lucide-react'
+export default function Sitemap() {
   const mainPages = [
     { path: '/', title: 'Home', description: 'Welcome to Zion Tech Group', icon: Home },
     { path: '/about', title: 'About Us', description: 'Learn about our company and mission', icon: Users },
@@ -582,30 +597,26 @@ import { Map,
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-6"
-    ></motion.div
->
-      <h2 className="text-2xl font-bold text-white mb-6 flex items-center"></h2>
+    >
+      <h2 className="text-2xl font-bold text-white mb-6 flex items-center">
         <IconComponent className="w-6 h-6 text-zion-cyan mr-3" />
-                {title}
-                </h2>
-      <ul className="space-y-3"></ul>
-                {pages.map((page) => (
-          <li key={page.href}></li>
+        {title}
+      </h2>
+      <ul className="space-y-3">
+        {pages.map((page) => (
+          <li key={page.href}>
             <$2 />
               to={page.href} ;
               className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group"
             >
               <span className="w-2 h-2 bg-zion-cyan rounded-full mr-3 group-hover:bg-zion-cyan transition-colors"></span>
-              <span className="font-medium"></span>
-                {page.name}
-                </span>
-              <span className="ml-2 text-sm text-zion-slate-light opacity-75">- {page.description}
-                </span>
-                </Link>
+              <span className="font-medium">{page.name}</span>
+              <span className="ml-2 text-sm text-zion-slate-light opacity-75">- {page.description}</span>
+            </Link>
           </li>
         ))}
-                </ul>
-                </motion.div>
+      </ul>
+    </motion.div>
   const quickLinks = [
     { name: 'Get Started', path: '/get-started', icon: Star, color: 'bg-green-100 text-green-700' },
     { name: 'Request Demo', path: '/demo', icon: Play, color: 'bg-blue-100 text-blue-700' },
@@ -623,107 +634,102 @@ import { Map,
       
       <Header />
       
-      <main className="pt-32 pb-20"></main>
-        <div className="container mx-auto px-4"></div>
-                {/* Header Section */}
-                <div className="text-center mb-16"></div>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"></h1>
+      <main className="pt-32 pb-20">
+        <div className="container mx-auto px-4">
+          {/* Header Section */}
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Site Navigation Guide
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto"></p>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Explore our comprehensive website structure. Find all pages, services, and resources organized by category for easy navigation.
             </p>
-                </div>
-                {/* Quick Links */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16"></div>
-                {quickLinks.map((link, index) => (
+          </div>
+
+          {/* Quick Links */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+            {quickLinks.map((link, index) => (
               <$2 />
                 key={index}
                 to={link.path}
                 className={`${link.color} p-4 rounded-lg text-center hover:scale-105 transition-transform duration-200`}
               >
                 <link.icon className="h-8 w-8 mx-auto mb-2" />
-                <div className="font-semibold text-sm"></div>
-                {link.name}
-                </div>
-                </Link>
+                <div className="font-semibold text-sm">{link.name}</div>
+              </Link>
             ))}
-                </div>
-                {/* Sitemap Sections */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8"></div>
-                {sitemapSections.map((section, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow duration-300"></Card>
-                <CardHeader></CardHeader>
-                  <div className="flex items-center space-x-3 mb-4"></div>
-                    <div className="w-10 h-10 bg-zion-blue/10 rounded-lg flex items-center justify-center"></div>
+          </div>
+
+          {/* Sitemap Sections */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+            {sitemapSections.map((section, index) => (
+              <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
+                <CardHeader>
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className="w-10 h-10 bg-zion-blue/10 rounded-lg flex items-center justify-center">
                       <section.icon className="h-5 w-5 text-zion-blue" />
                     </div>
-                    <CardTitle className="text-xl"></CardTitle>
-                {section.title}
-                </CardTitle>
-                </div>
+                    <CardTitle className="text-xl">{section.title}</CardTitle>
+                  </div>
                 </CardHeader>
-                <CardContent></CardContent>
-                  <div className="space-y-3"></div>
-                {section.links.map((link, linkIndex) => (
-                      <div key={linkIndex} className="border-l-2 border-gray-200 pl-4"></div>
+                <CardContent>
+                  <div className="space-y-3">
+                    {section.links.map((link, linkIndex) => (
+                      <div key={linkIndex} className="border-l-2 border-gray-200 pl-4">
                         <$2 />
                           to={link.path}
                           className="block text-zion-blue hover:text-zion-blue-dark font-medium mb-1 transition-colors"
                         >
-                {link.name}
-                </Link>
-                        <p className="text-sm text-gray-600"></p>
-                {link.description}
-                </p>
-                </div>
+                          {link.name}
+                        </Link>
+                        <p className="text-sm text-gray-600">{link.description}</p>
+                      </div>
                     ))}
-                </div>
+                  </div>
                 </CardContent>
               </Card>
             ))}
-                </div>
-                {/* Additional Information */}
-                <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8"></div>
-            <Card></Card>
-              <CardHeader></CardHeader>
-                <CardTitle className="flex items-center space-x-2"></CardTitle>
+          </div>
+
+          {/* Additional Information */}
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center space-x-2">
                   <Globe className="h-5 w-5 text-zion-blue" />
                   <span>Site Information</span>
                 </CardTitle>
               </CardHeader>
-              <CardContent></CardContent>
-                <div className="space-y-3 text-sm text-gray-600"></div>
-                  <div className="flex justify-between"></div>
+              <CardContent>
+                <div className="space-y-3 text-sm text-gray-600">
+                  <div className="flex justify-between">
                     <span>Total Pages:</span>
                     <span className="font-medium">50+</span>
-                </div>
-                  <div className="flex justify-between"></div>
+                  </div>
+                  <div className="flex justify-between">
                     <span>Last Updated:</span>
-                    <span className="font-medium"></span>
-                {new Date().toLocaleDateString()}
-                </span>
-                </div>
-                  <div className="flex justify-between"></div>
+                    <span className="font-medium">{new Date().toLocaleDateString()}</span>
+                  </div>
+                  <div className="flex justify-between">
                     <span>Site Version:</span>
                     <span className="font-medium">2.0.0</span>
+                  </div>
                 </div>
-                </div>
-                </CardContent>
+              </CardContent>
             </Card>
 
-            <Card></Card>
-              <CardHeader></CardHeader>
-                <CardTitle className="flex items-center space-x-2"></CardTitle>
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center space-x-2">
                   <MessageSquare className="h-5 w-5 text-zion-blue" />
                   <span>Need Help?</span>
                 </CardTitle>
               </CardHeader>
-              <CardContent></CardContent>
-                <p className="text-sm text-gray-600 mb-4"></p>
+              <CardContent>
+                <p className="text-sm text-gray-600 mb-4">
                   Can't find what you're looking for? Our support team is here to help.
                 </p>
-                <div className="space-y-2"></div>
+                <div className="space-y-2">
                   <$2 />
                     to="/contact"
                     className="block text-zion-blue hover:text-zion-blue-dark text-sm font-medium"
@@ -738,9 +744,9 @@ import { Map,
                   </Link>
                 </div>
               </CardContent>
-                </Card>
+            </Card>
           </div>
-                </div>
+        </div>
       </main>
       
       <Footer />
@@ -749,133 +755,135 @@ import { Map,
   return (
     </>
   const renderPageSection = (title: string, pages: any[], IconComponent: any) => (
-    <div key={title} className="mb-8"></div>
-      <h3 className="text-lg font-semibold text-white mb-4 flex items-center"></h3>
+    <div key={title} className="mb-8">
+      <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
         <IconComponent className="w-5 h-5 mr-2 text-cyan-400" />
-                {title}
-                </h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
-                {pages.map((page) => (
+        {title}
+      </h3>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {pages.map((page) => (
           <$2 />
             key={page.path}
             to={page.path}
             className="block p-4 bg-gray-800/30 border border-gray-700 rounded-lg hover:border-cyan-500/50 transition-all duration-200 group"
           >
-            <h4 className="font-medium text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200"></h4>
-                {page.title}
-                </h4>
-            <p className="text-sm text-gray-400"></p>
-                {page.description}
-                </p>
-                </Link>
+            <h4 className="font-medium text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200">
+              {page.title}
+            </h4>
+            <p className="text-sm text-gray-400">{page.description}</p>
+          </Link>
         ))}
-                </div>
-                </div>
+      </div>
+    </div>
   )
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white"></div>
-                {/* Hero Section */}
-                <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
-        <div className="relative z-10 max-w-7xl mx-auto text-center"></div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"></h1>
+        <div className="relative z-10 max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
             Sitemap
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"></p>
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Navigate through all the pages and sections of our website to find exactly 
             what you're looking for.
           </p>
-                </div>
+        </div>
       </section>
-                {/* Sitemap Content */}
-                <section className="py-16 px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12"></div>
-                {/* Left Column */}
-                <div></div>
-                {renderPageSection('Main Pages', mainPages, Home)}
+
+      {/* Sitemap Content */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Left Column */}
+            <div>
+              {renderPageSection('Main Pages', mainPages, Home)}
               {renderPageSection('Services', servicePages, Briefcase)}
               {renderPageSection('Solutions', solutionPages, Building)}
-                </div>
-                {/* Right Column */}
-                <div></div>
-                {renderPageSection('Technology Platforms', technologyPages, Rocket)}
+            </div>
+
+            {/* Right Column */}
+            <div>
+              {renderPageSection('Technology Platforms', technologyPages, Rocket)}
               {renderPageSection('Resources', resourcePages, FileText)}
               {renderPageSection('Legal & Support', legalPages, Shield)}
-                </div>
-                </div>
+            </div>
+          </div>
         </div>
-                </section>
-                {/* Quick Navigation */}
-                <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black/20"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-12"></div>
-            <h2 className="text-3xl font-bold text-white mb-4"></h2>
+      </section>
+
+      {/* Quick Navigation */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black/20">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">
               Quick Navigation
             </h2>
-            <p className="text-gray-400"></p>
+            <p className="text-gray-400">
               Popular destinations and frequently accessed pages
             </p>
-                </div>
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <$2 />
               to="/services"
               className="group p-6 bg-gray-800/50 border border-gray-700 rounded-xl hover:border-cyan-500/50 transition-all duration-200"
             >
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300"></div>
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                 <Briefcase className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Our Services</h3>
               <p className="text-sm text-gray-400">Explore our comprehensive service offerings</p>
-                </Link>
+            </Link>
 
             <$2 />
               to="/pricing"
               className="group p-6 bg-gray-800/50 border border-gray-700 rounded-xl hover:border-cyan-500/50 transition-all duration-200"
             >
-              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300"></div>
+              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                 <DollarSign className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Pricing Plans</h3>
               <p className="text-sm text-gray-400">Transparent pricing for all our services</p>
-                </Link>
+            </Link>
 
             <$2 />
               to="/contact"
               className="group p-6 bg-gray-800/50 border border-gray-700 rounded-xl hover:border-cyan-500/50 transition-all duration-200"
             >
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300"></div>
+              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                 <Mail className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Get in Touch</h3>
               <p className="text-sm text-gray-400">Contact our team for inquiries</p>
-                </Link>
+            </Link>
 
             <$2 />
               to="/careers"
               className="group p-6 bg-gray-800/50 border border-gray-700 rounded-xl hover:border-cyan-500/50 transition-all duration-200"
             >
-              <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300"></div>
+              <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                 <Users className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Join Our Team</h3>
               <p className="text-sm text-gray-400">Career opportunities at Zion Tech Group</p>
-                </Link>
+            </Link>
           </div>
-                </div>
+        </div>
       </section>
-                {/* CTA Section */}
-                <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-4xl mx-auto text-center"></div>
-          <h2 className="text-3xl font-bold text-white mb-6"></h2>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
             Need Help Finding Something?
           </h2>
-          <p className="text-xl text-gray-400 mb-8"></p>
+          <p className="text-xl text-gray-400 mb-8">
             Can't find what you're looking for? Our team is here to help you navigate 
             our website and find the information you need.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <$2 />
               to="/contact"
               className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg text-white font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
@@ -890,23 +898,22 @@ import { Map,
               <span>Visit Help Center</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
-                </div>
+          </div>
         </div>
-                </section>
+      </section>
     </div>
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900"></div>
-      <div className="max-w-6xl mx-auto px-4 py-12"></div>
-                {/* Header */}
-                <motion.div
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+      <div className="max-w-6xl mx-auto px-4 py-12">
+        {/* Header */}
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-12"
-        ></motion.div
->
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4"></h1>
+        >
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Zion Tech Group Sitemap
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Navigate through our comprehensive range of services, solutions, and resources. 
             Find everything you need to transform your business with cutting-edge technology.
 import { 
@@ -949,7 +956,7 @@ import {
   RefreshCw,
   MessageSquare
 } from 'lucide-react'
-const Sitemap  = () => {
+const Sitemap = () => {
   const siteStructure = [
     {
       title: 'Main Pages',
@@ -1033,19 +1040,18 @@ const Sitemap  = () => {
     }
   ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white"></div>
-                {/* Header Section */}
-                <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8"></div>
-        <div className="max-w-7xl mx-auto text-center"></div>
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6"></h1>
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+      {/* Header Section */}
+      <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
             Site Map
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto"></p>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Explore all the pages and resources available on the Zion Tech Group website. 
             Find exactly what you're looking for with our comprehensive site navigation.
           </p>
-                </div>
+        </div>
       </div>
-                </div></div>
-                </div></p>
-                </li></section>;
+
+</div></div></div></p></li></section>

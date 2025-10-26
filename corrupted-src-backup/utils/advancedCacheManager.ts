@@ -9,12 +9,10 @@ interface CacheConfig {
 interface CacheConfig {/* TODO: Fix JSX expression */}
 }
 
-interface CacheEntry<T></T>
-                {/* TODO: Fix JSX expression */}
+interface CacheEntry<T> {/* TODO: Fix JSX expression */}
 }
 
-class AdvancedCacheManager<T></T>
-                {
+class AdvancedCacheManager<T> {
   private cache: Map<string, CacheEntry<T>> = new Map()
   private config: CacheConfig
   private hits = 0
@@ -41,8 +39,7 @@ class AdvancedCacheManager<T></T>
       this.cache.delete(key)
       this.misses++
       return null
-class AdvancedCacheManager<T></T>
-                {/* TODO: Fix JSX expression */}
+class AdvancedCacheManager<T> {/* TODO: Fix JSX expression */}
   g: Partial<CacheConfig> = {}) {/* TODO: Fix JSX expression */}
     }
   }

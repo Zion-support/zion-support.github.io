@@ -4,7 +4,7 @@
  * Optimizes resource loading for better performance
  */
 
-export const _preloadCriticalResources  = () => {
+export const _preloadCriticalResources = () => {
     // TODO: Add content
   }
 
@@ -23,8 +23,7 @@ const fontPreloads = [
   o: wght@400;500;600&display=swap'
   ],
 
-  fontPreloads.forEach(href =>
-                {
+  fontPreloads.forEach(href => {
     // TODO: Add content
   }
 }
@@ -46,8 +45,7 @@ const criticalImages = [
 //     '/images/logo.png',
 //     '/images/favicon.ico'
   ]
-  criticalImages.forEach(src =>
-                {
+  criticalImages.forEach(src => {
     // TODO: Add content
   }
 }
@@ -61,8 +59,7 @@ const criticalImages = [
   )
 }
 
-export const preloadRoute = (route: string) =>
-                {
+export const preloadRoute = (route: string) => {
     // TODO: Add content
   }
 
@@ -82,8 +79,7 @@ const routeResources = {/* TODO: Fix JSX expression */};
     // TODO: Add content
   }
 }
-    resources.forEach(resource =>
-                {
+    resources.forEach(resource => {
     // TODO: Add content
   }
 }
@@ -97,7 +93,7 @@ const routeResources = {/* TODO: Fix JSX expression */};
   }
 }
 
-export const optimizeImages  = () => {
+export const optimizeImages = () => {
     // TODO: Add content
   }
 
@@ -105,8 +101,7 @@ export const optimizeImages  = () => {
   if (typeof window === 'undefined') return
   // Add loading="lazy" to images below the fold
 const images = document.querySelectorAll('img[data-lazy]')
-  images.forEach(img =>
-                {/* TODO: Fix JSX expression */}
+  images.forEach(img => {/* TODO: Fix JSX expression */}
   O: Add content,}
 })
 //     img.setAttribute('loading', 'lazy')
@@ -115,12 +110,10 @@ const images = document.querySelectorAll('img[data-lazy]')
   if ('IntersectionObserver' in window) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    const imageObserver = new IntersectionObserver((entries) =>
-                {/* TODO: Fix JSX expression */}
+    const imageObserver = new IntersectionObserver((entries) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      entries.forEach(entry =>
-                {/* TODO: Fix JSX expression */}
+      entries.forEach(entry => {/* TODO: Fix JSX expression */}
   O: Add content,}
 })
         if (entry.isIntersecting) {/* TODO: Fix JSX expression */}
@@ -144,7 +137,7 @@ const images = document.querySelectorAll('img[data-lazy]')
   }
 }
 
-export const optimizeThirdPartyScripts  = () => {
+export const optimizeThirdPartyScripts = () => {
     // TODO: Add content
   }
 
@@ -152,8 +145,7 @@ export const optimizeThirdPartyScripts  = () => {
   if (typeof window === 'undefined') return
   // Defer non-critical scripts
 const scripts = document.querySelectorAll('script[data-defer]')
-  scripts.forEach(script =>
-                {/* TODO: Fix JSX expression */}
+  scripts.forEach(script => {/* TODO: Fix JSX expression */}
   O: Add content,}
 })
 //     script.setAttribute('defer', '')
@@ -163,14 +155,13 @@ const scripts = document.querySelectorAll('script[data-defer]')
   O: Add content,}
 }
 
-    document.addEventListener('DOMContentLoaded', () =>
-                {}
+    document.addEventListener('DOMContentLoaded', () => {}
   )
   } else {/* TODO: Fix JSX expression */}
   }
 }
 
-const loadAnalytics  = () => {
+const loadAnalytics = () => {
     // TODO: Add content
   }
 

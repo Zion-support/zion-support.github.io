@@ -45,7 +45,7 @@ for (const branch of prBranches) {/* TODO: Fix JSX expression */}
     mergedCount++
     //     } else {
     conflictCount++
-    //     //Try to abort the merge if there was a conflict;
+    //     //Try to abort the merge if there was a conflict
   //Try to merge the branch;`
   const mergeResult = safeGitCommand(`git merge origin/${branch} --no-ff -m "Merge branch ${branch}"`,`
     `Merge ${branch}`)

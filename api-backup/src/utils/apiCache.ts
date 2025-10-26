@@ -19,18 +19,17 @@ interface ApiCacheConfig {// TODO: Add content
   retryDelay?: number
   deduplicate?: boolean
 }
-interface PendingRequest<T></T>
-                {
-    promise: Promise<T></T>
+interface PendingRequest<T> {
+    promise: Promise<T>
   timestamp: number
   }
 /**
  * API Cache Manager with request deduplication
  */
 export class ApiCache {
-  private cache: CacheManager<unknown></unknown>
+  private cache: CacheManager<unknown>
   private pendingRequests: Map<string, PendingRequest<unknown>> = new Map()
-  private config: Required<ApiCacheConfig></ApiCacheConfig>
+  private config: Required<ApiCacheConfig>
   constructor(_config: ApiCacheConfig = {}) {
     this.cache = new CacheManager({
       maxSize: 500,
@@ -44,11 +43,9 @@ $4})
       deduplicate: config.deduplicate ?? true
     };
     // Auto-cleanup every 5 minutes
-    setInterval(() =>
-                {
+    setInterval(() => {
 interface PendingRequest
-          <T></T>
-                {/* TODO: Fix JSX expression */}
+          <T> {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
 
@@ -69,11 +66,11 @@ export class ApiCache {
 }
   private,
   cache: CacheManager,
-          <unknown></unknown>
+          <unknown>
   private,
   pendingRequests: Map<string, PendingRequest<unknown>> = new Map()
   private,
-  config: Required<ApiCacheConfig></ApiCacheConfig>
+  config: Required<ApiCacheConfig>
   constructor(_confi)
   g: ApiCacheConfig = {}) {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -101,8 +98,7 @@ export class ApiCache {
   e: config.deduplicate ?? true,
     }
     // Auto-cleanup every 5 minutes
-    setInterval(() =>
-                {/* TODO: Fix JSX expression */}
+    setInterval(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       this.cache.cleanup()
@@ -127,7 +123,7 @@ export class ApiCache {
     const pending = this.pendingRequests.get(cacheKey)
       if (pending && Date.now() - pending.timestamp < 30000) {
         // Reuse pending request if less than 30 seconds old
-        return pending.promise as Promise<T></>
+        return pending.promise as Promise<T>
   }
     }
     // Create new request with retry logic
@@ -160,9 +156,8 @@ export class ApiCache {
     option,
   s: RequestInit = {},
     cacheConfig?: Partial
-          <ApiCacheConfig></ApiCacheConfig>
-  ): Promise<T></T>
-                {
+          <ApiCacheConfig>
+  ): Promise<T> {
 
     const mergedConfig = { ...this.config, ...cacheConfig };
     // Check cache first
@@ -182,7 +177,7 @@ export class ApiCache {
 }
         // Reuse pending request if less than 30 seconds old
         return pending.promise as Promise
-          <T></>
+          <T>
       }
     }
     // Create new request with retry logic
@@ -230,8 +225,7 @@ const requestPromise = this.fetchWithRetry
     maxRetries: number,
     retryDelay: number,
     attempt = 1
-  ): Promise<T></T>
-                {
+  ): Promise<T> {
     try {
       const response = await fetch(url, options)
       if (!response.ok) {
@@ -277,8 +271,7 @@ const requestPromise = this.fetchWithRetry
     retryDela,
   y: number,
     attempt = 1): Promise
-          <T></T>
-                {/* TODO: Fix JSX expression */}
+          <T> {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     try {/* TODO: Fix JSX expression */}
@@ -376,9 +369,8 @@ const requestPromise = this.fetchWithRetry
   async prefetch<T>(
     url: string,
     options: RequestInit = {},
-    cacheConfig?: Partial<ApiCacheConfig></ApiCacheConfig>
-  ): Promise<void></void>
-                {
+    cacheConfig?: Partial<ApiCacheConfig>
+  ): Promise<void> {
     try {
       await this.fetch<T>(url, options, cacheConfig)
   } catch (error) {
@@ -396,8 +388,7 @@ const requestPromise = this.fetchWithRetry
   /**
    * Delay helper
    */
-  private delay(ms: number): Promise<void></void>
-                {
+  private delay(ms: number): Promise<void> {
     return new Promise((resolve) => setTimeout(resolve, ms))
   }
   /**
@@ -433,9 +424,8 @@ const requestPromise = this.fetchWithRetry
     option,
   s: RequestInit = {},
     cacheConfig?: Partial
-          <ApiCacheConfig></ApiCacheConfig>
-  ): Promise<void></void>
-                {
+          <ApiCacheConfig>
+  ): Promise<void> {
     // TODO: Add content
   }
 
@@ -469,8 +459,7 @@ const requestPromise = this.fetchWithRetry
    */
 
   private delay(ms: number): Promise,
-          <void></void>
-                {
+          <void> {
     // TODO: Add content
   }
 
@@ -514,9 +503,8 @@ export const defaultApiCache = new ApiCache({
 export async function cachedFetch<T>(
   url: string,
   options?: RequestInit,
-  cacheConfig?: Partial<ApiCacheConfig></ApiCacheConfig>
-): Promise<T></T>
-                {
+  cacheConfig?: Partial<ApiCacheConfig>
+): Promise<T> {
     return defaultApiCache.fetch<T>(url, options, cacheConfig)
   }
 /**
@@ -587,9 +575,8 @@ export async function cachedFetch
   l: string,
   options?: RequestInit,
   cacheConfig?: Partial
-          <ApiCacheConfig></ApiCacheConfig>
-): Promise<T></T>
-                {
+          <ApiCacheConfig>
+): Promise<T> {
     // TODO: Add content
   }
 

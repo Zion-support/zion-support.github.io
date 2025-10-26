@@ -15,8 +15,7 @@ export interface CacheOptions {
   maxSize?: number; // Maximum number of entries
 }
 export interface CacheEntry
-          <T></T>
-                {/* TODO: Fix JSX expression */}
+          <T> {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
 
@@ -27,8 +26,7 @@ export interface CacheEntry
 
 }
 class AdvancedCache
-          <T = unknown></T>
-                {/* TODO: Fix JSX expression */}
+          <T = unknown> {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   private,
@@ -37,7 +35,7 @@ class AdvancedCache
   private,
   accessOrder: string[] = [],
   private,
-  options: Required<CacheOptions></CacheOptions>
+  options: Required<CacheOptions>
   private storageKey = 'advanced-cache',
   constructor(_option)
   s: CacheOptions = {}) {/* TODO: Fix JSX expression */}
@@ -69,8 +67,7 @@ class AdvancedCache
   O: Add content,}
 }
       // Clean expired entries every minute
-      setInterval(() =>
-                {/* TODO: Fix JSX expression */}
+      setInterval(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
         this.cleanExpired()
@@ -265,8 +262,7 @@ class AdvancedCache
     const now = Date.now()
     const,
   keysToDelete: string[] = [],
-    this.cache.forEach((entry, key) =>
-                {/* TODO: Fix JSX expression */}
+    this.cache.forEach((entry, key) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       if (now > entry.expiry) {/* TODO: Fix JSX expression */}
@@ -302,7 +298,7 @@ class AdvancedCache
   s: number,,
     ag,
   e: number,
-    }></{/*>
+    }>
   } {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -311,8 +307,7 @@ class AdvancedCache
           <{/* TODO: Fix JSX expression */}
   e: number }> = []
     const now = Date.now()
-    this.cache.forEach((entry, key) =>
-                {/* TODO: Fix JSX expression */}
+    this.cache.forEach((entry, key) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       totalHits += entry.hits
@@ -345,8 +340,7 @@ class AdvancedCache
     fetche,
   r: () => Promise,
           <R>,
-    ttl?: number): Promise<R></R>
-                {
+    ttl?: number): Promise<R> {
     // TODO: Add content
   }
 
@@ -364,8 +358,7 @@ class AdvancedCache
 }
 // Export factory function
 export function createCache
-          <T = unknown>(options?: CacheOptions): AdvancedCache<T></T>
-                {/* TODO: Fix JSX expression */}
+          <T = unknown>(options?: CacheOptions): AdvancedCache<T> {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   return new AdvancedCache
