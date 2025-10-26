@@ -1,3 +1,4 @@
+import { Star, CheckCircle, Eye, Phone, Receipt } from 'lucide-react';
 'use client';
 import React, { memo } from 'react';
 import Navigation from '../../components/Navigation';
@@ -154,98 +155,97 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
   ];
 
   return (
-    <>
-      <SEOOptimizer
-        title="AI Invoice Generator - Automated Invoice Creation | Zion Tech Group"
-        description="Generate professional invoices instantly with AI-powered automation. Save time, reduce errors, and improve cash flow with our intelligent invoice generation platform."
+    <SEOOptimizer,
+title="AI Invoice Generator - Automated Invoice Creation | Zion Tech Group""
+        description="Generate professional invoices instantly with AI-powered automation. Save time, reduce errors, and improve cash flow with our intelligent invoice generation platform.""
         keywords={['AI invoice generator', 'automated invoicing', 'invoice automation', 'AI billing', 'smart invoicing', 'invoice management', 'business automation']}
-        canonicalUrl="https://ziontechgroup.com/ai-invoice-generator"
+        canonicalUrl="https://ziontechgroup.com/ai-invoice-generator""
       />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
         <Navigation />
         
-        <main className="pt-24">
+        <main className="pt-24">"
           {/* Hero Section */}
-          <section className="container mx-auto px-4 py-16">
-            <div className="text-center max-w-4xl mx-auto">
-              <div className="inline-flex items-center bg-purple-500/10 border border-purple-500/20 rounded-full px-4 py-2 mb-6">
-                <Receipt className="w-5 h-5 text-purple-400 mr-2" />
-                <span className="text-purple-400 text-sm font-medium">AI Invoice Generator</span>
+          <section className="container mx-auto px-4 py-16">"
+            <div className="text-center max-w-4xl mx-auto"></div>"
+              <div className="inline-flex items-center bg-purple-500/10 border border-purple-500/20 rounded-full px-4 py-2 mb-6"></div>"
+                <Receipt className="w-5 h-5 text-purple-400 mr-2" />"
+                <span className="text-purple-400 text-sm font-medium">AI Invoice Generator</span>"
               </div>
               
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
                 Generate Professional Invoices with{' '}
-                <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">"
                   AI Intelligence
                 </span>
               </h1>
               
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Transform your invoicing process with AI-powered automation. Create, send, and track invoices 
-                effortlessly while gaining valuable insights into your business performance.
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed">"
+                Transform your invoicing process with AI-powered automation. Create, send, and track invoices,
+effortlessly while gaining valuable insights into your business performance.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                <a
-                  href="#pricing"
-                  className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 inline-flex items-center"
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12"></div>"
+                <a,
+href="#pricing""
+                  className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 inline-flex items-center""
                 >
-                  <Calculator className="w-5 h-5 mr-2" />
+                  <Calculator className="w-5 h-5 mr-2" />"
                   Start Free Trial
                 </a>
-                <a
-                  href="#demo"
-                  className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300 inline-flex items-center"
+                <a,
+href="#demo""
+                  className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300 inline-flex items-center""
                 >
-                  <Eye className="w-5 h-5 mr-2" />
+                  <Eye className="w-5 h-5 mr-2" />"
                   Watch Demo
                 </a>
               </div>
               
               {/* Key Stats */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">95%</div>
-                  <div className="text-gray-300">Time Saved</div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto"></div>"
+                <div className="text-center"></div>"
+                  <div className="text-3xl font-bold text-purple-400 mb-2">95%</div>"
+                  <div className="text-gray-300">Time Saved</div>"
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">10K+</div>
-                  <div className="text-gray-300">Invoices Generated</div>
+                <div className="text-center"></div>"
+                  <div className="text-3xl font-bold text-purple-400 mb-2">10K+</div>"
+                  <div className="text-gray-300">Invoices Generated</div>"
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">40%</div>
-                  <div className="text-gray-300">Faster Payments</div>
+                <div className="text-center"></div>"
+                  <div className="text-3xl font-bold text-purple-400 mb-2">40%</div>"
+                  <div className="text-gray-300">Faster Payments</div>"
                 </div>
               </div>
             </div>
           </section>
 
           {/* Features Section */}
-          <section className="py-16 bg-slate-800/30">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <section className="py-16 bg-slate-800/30">"
+            <div className="container mx-auto px-4"></div>"
+              <div className="text-center mb-16"></div>"
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">"
                   Powerful AI Features
                 </h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Our AI invoice generator combines cutting-edge technology with user-friendly design 
-                  to revolutionize your billing process.
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto">"
+                  Our AI invoice generator combines cutting-edge technology with user-friendly design,
+to revolutionize your billing process.
                 </p>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>"
                 {features.map((feature, index) => (
-                  <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300">
-                    <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4">
-                      <feature.icon className="w-6 h-6 text-purple-400" />
+                  <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300"></div>"
+                    <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4"></div>"
+                      <feature.icon className="w-6 h-6 text-purple-400" />"
                     </div>
-                    <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                    <p className="text-gray-300 mb-4">{feature.description}</p>
-                    <ul className="space-y-2">
+                    <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>"
+                    <p className="text-gray-300 mb-4">{feature.description}</p>"
+                    <ul className="space-y-2">"
                       {feature.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        <li key={benefitIndex} className="flex items-center text-sm text-gray-400">"
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />"
                           {benefit}
                         </li>
                       ))}
@@ -257,30 +257,30 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
           </section>
 
           {/* Use Cases Section */}
-          <section className="py-16">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <section className="py-16">"
+            <div className="container mx-auto px-4"></div>"
+              <div className="text-center mb-16"></div>"
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">"
                   Perfect for Every Business
                 </h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Whether you're a freelancer or a large enterprise, our AI invoice generator 
-                  adapts to your specific needs and industry requirements.
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto">"
+                  Whether you're a freelancer or a large enterprise, our AI invoice generator,
+adapts to your specific needs and industry requirements.
                 </p>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>"
                 {useCases.map((useCase, index) => (
-                  <div key={index} className="text-center group">
-                    <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                      <useCase.icon className="w-8 h-8 text-white" />
+                  <div key={index} className="text-center group"></div>"
+                    <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"></div>"
+                      <useCase.icon className="w-8 h-8 text-white" />"
                     </div>
-                    <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
-                    <p className="text-gray-300 mb-4">{useCase.description}</p>
-                    <ul className="space-y-2 text-left">
+                    <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>"
+                    <p className="text-gray-300 mb-4">{useCase.description}</p>"
+                    <ul className="space-y-2 text-left">"
                       {useCase.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        <li key={benefitIndex} className="flex items-center text-sm text-gray-400">"
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />"
                           {benefit}
                         </li>
                       ))}
@@ -292,47 +292,47 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
           </section>
 
           {/* Pricing Section */}
-          <section id="pricing" className="py-16 bg-slate-800/30">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <section id="pricing" className="py-16 bg-slate-800/30">"
+            <div className="container mx-auto px-4"></div>"
+              <div className="text-center mb-16"></div>"
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">"
                   Simple, Transparent Pricing
                 </h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Choose the plan that fits your business needs. All plans include our core AI features 
-                  with no hidden fees or setup costs.
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto">"
+                  Choose the plan that fits your business needs. All plans include our core AI features,
+with no hidden fees or setup costs.
                 </p>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>"
                 {pricingPlans.map((plan, index) => (
                   <div key={index} className={`relative rounded-lg p-8 ${
                     plan.popular 
                       ? 'bg-gradient-to-br from-purple-500/20 to-pink-500/20 border-2 border-purple-400' 
                       : 'bg-slate-800/50 border border-slate-700'
-                  }`}>
+                  }`}></div>
                     {plan.popular && (
-                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                        <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1 rounded-full text-sm font-medium">
+                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>"
+                        <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1 rounded-full text-sm font-medium">"
                           Most Popular
                         </span>
                       </div>
                     )}
                     
-                    <div className="text-center mb-6">
-                      <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                      <p className="text-gray-400 mb-4">{plan.description}</p>
-                      <div className="flex items-baseline justify-center">
-                        <span className="text-4xl font-bold text-white">{plan.price}</span>
-                        <span className="text-gray-400 ml-1">{plan.period}</span>
+                    <div className="text-center mb-6"></div>"
+                      <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>"
+                      <p className="text-gray-400 mb-4">{plan.description}</p>"
+                      <div className="flex items-baseline justify-center"></div>"
+                        <span className="text-4xl font-bold text-white">{plan.price}</span>"
+                        <span className="text-gray-400 ml-1">{plan.period}</span>"
                       </div>
                     </div>
                     
-                    <ul className="space-y-4 mb-8">
+                    <ul className="space-y-4 mb-8">"
                       {plan.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center">
-                          <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                          <span className="text-gray-300">{feature}</span>
+                        <li key={featureIndex} className="flex items-center">"
+                          <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"
+                          <span className="text-gray-300">{feature}</span>"
                         </li>
                       ))}
                     </ul>
@@ -351,33 +351,33 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
           </section>
 
           {/* Testimonials Section */}
-          <section className="py-16">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <section className="py-16">"
+            <div className="container mx-auto px-4"></div>"
+              <div className="text-center mb-16"></div>"
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">"
                   Loved by Businesses Worldwide
                 </h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto">"
                   See how our AI invoice generator is transforming businesses across industries.
                 </p>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>"
                 {testimonials.map((testimonial, index) => (
-                  <div key={index} className="bg-slate-800/50 rounded-lg p-6">
-                    <div className="flex items-center mb-4">
-                      <div className="text-2xl mr-3">{testimonial.avatar}</div>
-                      <div>
-                        <div className="font-semibold text-white">{testimonial.name}</div>
-                        <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                  <div key={index} className="bg-slate-800/50 rounded-lg p-6"></div>"
+                    <div className="flex items-center mb-4"></div>"
+                      <div className="text-2xl mr-3">{testimonial.avatar}</div>"
+                      <div></div>
+                        <div className="font-semibold text-white">{testimonial.name}</div>"
+                        <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>"
                       </div>
                     </div>
-                    <div className="flex mb-4">
+                    <div className="flex mb-4"></div>"
                       {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                        <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />"
                       ))}
                     </div>
-                    <p className="text-gray-300 italic">"{testimonial.content}"</p>
+                    <p className="text-gray-300 italic">"{testimonial.content}"</p>"
                   </div>
                 ))}
               </div>
@@ -385,28 +385,28 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
           </section>
 
           {/* CTA Section */}
-          <section className="py-16 bg-gradient-to-r from-purple-600/20 to-pink-600/20">
-            <div className="container mx-auto px-4 text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <section className="py-16 bg-gradient-to-r from-purple-600/20 to-pink-600/20">"
+            <div className="container mx-auto px-4 text-center"></div>"
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">"
                 Ready to Transform Your Invoicing?
               </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">"
                 Join thousands of businesses already using AI to streamline their invoicing process. 
                 Start your free trial today and experience the difference.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 inline-flex items-center"
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>"
+                <a,
+href="/contact""
+                  className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 inline-flex items-center""
                 >
-                  <Phone className="w-5 h-5 mr-2" />
+                  <Phone className="w-5 h-5 mr-2" />"
                   Get Free Consultation
                 </a>
-                <a
-                  href="tel:+13024640950"
-                  className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300 inline-flex items-center"
+                <a,
+href="tel:+13024640950""
+                  className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300 inline-flex items-center""
                 >
-                  <Phone className="w-4 h-4 mr-2" />
+                  <Phone className="w-4 h-4 mr-2" />"
                   (302) 464-0950
                 </a>
               </div>

@@ -89,7 +89,7 @@ const,
   };
 
   return (
-    <div className="responsivecontainer"></div>
+    <div className="responsivecontainer"></div>"
 
       {/* Component content */}
     </div>)

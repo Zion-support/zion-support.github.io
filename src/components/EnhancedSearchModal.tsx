@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import React, { useState, useEffect, useRef } from 'react';
 import { Search, X, ArrowRight, Clock, TrendingUp, Star } from 'lucide-react';
 
@@ -128,8 +129,8 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
     setIsSearching(true);
     setShowSuggestions(false);
 
-    // Simulate API call delay
-    await new Promise(resolve => setTimeout(resolve, 300));
+    // Simulate API call delay,
+await new Promise(resolve => setTimeout(resolve, 300));
 
     const filteredResults = mockSearchResults.filter(result =>
       result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -137,8 +138,8 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
       result.category.toLowerCase().includes(searchQuery.toLowerCase())
     );
 
-    // Sort by popularity and relevance
-    const sortedResults = filteredResults.sort((a, b) => {
+    // Sort by popularity and relevance,
+const sortedResults = filteredResults.sort((a, b) => {
       const aRelevance = a.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2 : 1;
       const bRelevance = b.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2 : 1;
       return (b.popularity || 0) * bRelevance - (a.popularity || 0) * aRelevance;
@@ -199,50 +200,50 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex min-h-screen items-start justify-center p-4 pt-16"></div>
+    <div className="fixed inset-0 z-50 flex min-h-screen items-start justify-center p-4 pt-16"></div>"
       {/* Backdrop */}
-      <div
-        className="fixed inset-0 bg-black/50 backdrop-blur-sm"
+      <div,
+className="fixed inset-0 bg-black/50 backdrop-blur-sm""
         onClick={onClose}
-      />
+      /></div>
       
       {/* Modal */}
-      <div className="relative w-full max-w-2xl bg-slate-900/95 backdrop-blur-md rounded-xl shadow-2xl border border-cyan-400/20"></div>
+      <div className="relative w-full max-w-2xl bg-slate-900/95 backdrop-blur-md rounded-xl shadow-2xl border border-cyan-400/20"></div>"
         {/* Header */}
-        <div className="flex items-center p-4 border-b border-cyan-400/20"></div>
-          <Search className="w-5 h-5 text-cyan-400 mr-3" />
-          <input
-            ref={inputRef}
-            type="text"
-            placeholder="Search services, pages, documentation..."
+        <div className="flex items-center p-4 border-b border-cyan-400/20"></div>"
+          <Search className="w-5 h-5 text-cyan-400 mr-3" />"
+          <input,
+ref={inputRef}
+            type="text""
+            placeholder="Search services, pages, documentation...""
             value={query}
             onChange={handleInputChange}
-            className="flex-1 bg-transparent text-white placeholder-gray-400 outline-none text-lg"
+            className="flex-1 bg-transparent text-white placeholder-gray-400 outline-none text-lg""
           />
-          <button
-            onClick={onClose}
-            className="p-2 text-gray-400 hover:text-white transition-colors"
+          <button,
+onClick={onClose}
+            className="p-2 text-gray-400 hover:text-white transition-colors""
           ></button>
-            <X className="w-5 h-5" />
+            <X className="w-5 h-5" />"
           </button>
         </div>
 
         {/* Content */}
-        <div className="max-h-96 overflow-y-auto"></div>
+        <div className="max-h-96 overflow-y-auto"></div>"
           {showSuggestions && !query && (
-            <div className="p-4 space-y-6"></div>
+            <div className="p-4 space-y-6"></div>"
               {/* Recent Searches */}
               <div></div>
-                <h3 className="text-sm font-semibold text-gray-400 mb-3 flex items-center"></h3>
-                  <Clock className="w-4 h-4 mr-2" />
+                <h3 className="text-sm font-semibold text-gray-400 mb-3 flex items-center"></h3>"
+                  <Clock className="w-4 h-4 mr-2" />"
                   Recent Searches
                 </h3>
-                <div className="flex flex-wrap gap-2"></div>
+                <div className="flex flex-wrap gap-2"></div>"
                   {recentSearches.map((search, index) => (
-                    <button
-                      key={index}
+                    <button,
+key={index}
                       onClick={() => handleSuggestionClick(search)}
-                      className="px-3 py-1 bg-slate-800/50 text-gray-300 rounded-full text-sm hover:bg-cyan-400/20 hover:text-cyan-400 transition-colors"
+                      className="px-3 py-1 bg-slate-800/50 text-gray-300 rounded-full text-sm hover:bg-cyan-400/20 hover:text-cyan-400 transition-colors""
                     >
                       {search}
                     </button>
@@ -252,16 +253,16 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
 
               {/* Popular Searches */}
               <div></div>
-                <h3 className="text-sm font-semibold text-gray-400 mb-3 flex items-center"></h3>
-                  <TrendingUp className="w-4 h-4 mr-2" />
+                <h3 className="text-sm font-semibold text-gray-400 mb-3 flex items-center"></h3>"
+                  <TrendingUp className="w-4 h-4 mr-2" />"
                   Popular Searches
                 </h3>
-                <div className="flex flex-wrap gap-2"></div>
+                <div className="flex flex-wrap gap-2"></div>"
                   {popularSearches.map((search, index) => (
-                    <button
-                      key={index}
+                    <button,
+key={index}
                       onClick={() => handleSuggestionClick(search)}
-                      className="px-3 py-1 bg-slate-800/50 text-gray-300 rounded-full text-sm hover:bg-cyan-400/20 hover:text-cyan-400 transition-colors"
+                      className="px-3 py-1 bg-slate-800/50 text-gray-300 rounded-full text-sm hover:bg-cyan-400/20 hover:text-cyan-400 transition-colors""
                     >
                       {search}
                     </button>
@@ -273,16 +274,16 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
 
           {/* Search Results */}
           {query && (
-            <div className="p-4"></div>
+            <div className="p-4"></div>"
               {isSearching ? (
-                <div className="flex items-center justify-center py-8"></div>
-                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-400"></div>
+                <div className="flex items-center justify-center py-8"></div>"
+                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-400"></div>"
                 </div>
               ) : results.length > 0 ? (
-                <div className="space-y-2"></div>
+                <div className="space-y-2"></div>"
                   {results.map((result, index) => (
-                    <button
-                      key={result.id}
+                    <button,
+key={result.id}
                       onClick={() => handleResultClick(result)}
                       className={`w-full text-left p-3 rounded-lg transition-colors ${
                         index === selectedIndex
@@ -290,21 +291,21 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
                           : 'hover:bg-slate-800/50 text-gray-300'
                       }`}
                     >
-                      <div className="flex items-start justify-between"></div>
-                        <div className="flex-1"></div>
-                          <div className="flex items-center space-x-2 mb-1"></div>
-                            <span className="text-lg">{getCategoryIcon(result.category)}</span>
-                            <h3 className="font-medium">{result.title}</h3>
+                      <div className="flex items-start justify-between"></div>"
+                        <div className="flex-1"></div>"
+                          <div className="flex items-center space-x-2 mb-1"></div>"
+                            <span className="text-lg">{getCategoryIcon(result.category)}</span>"
+                            <h3 className="font-medium">{result.title}</h3>"
                             <span className={`text-xs px-2 py-1 rounded ${getTypeColor(result.type)} bg-slate-800/50`}></span>
                               {result.type}
                             </span>
                           </div>
-                          <p className="text-sm text-gray-400 mb-2">{result.description}</p>
-                          <div className="flex items-center space-x-4 text-xs text-gray-500"></div>
+                          <p className="text-sm text-gray-400 mb-2">{result.description}</p>"
+                          <div className="flex items-center space-x-4 text-xs text-gray-500"></div>"
                             <span>{result.category}</span>
                             {result.popularity && (
-                              <div className="flex items-center space-x-1"></div>
-                                <Star className="w-3 h-3" />
+                              <div className="flex items-center space-x-1"></div>"
+                                <Star className="w-3 h-3" />"
                                 <span>{result.popularity}%</span>
                               </div>
                             )}
@@ -313,19 +314,19 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
                             )}
                           </div>
                         </div>
-                        <ArrowRight className="w-4 h-4 text-gray-400" />
+                        <ArrowRight className="w-4 h-4 text-gray-400" />"
                       </div>
                     </button>
                   ))}
                 </div>
               ) : (
-                <div className="text-center py-8"></div>
-                  <Search className="w-12 h-12 text-gray-600 mx-auto mb-4" />
-                  <h3 className="text-lg font-medium text-gray-300 mb-2">No results found</h3>
-                  <p className="text-sm text-gray-500"></p>
+                <div className="text-center py-8"></div>"
+                  <Search className="w-12 h-12 text-gray-600 mx-auto mb-4" />"
+                  <h3 className="text-lg font-medium text-gray-300 mb-2">No results found</h3>"
+                  <p className="text-sm text-gray-500"></p>"
                     Try searching for something else or check your spelling
                   </p>
-                  <div className="text-sm text-gray-500 mt-4"></div>
+                  <div className="text-sm text-gray-500 mt-4"></div>"
                     Popular searches: AI Analytics, Quantum Computing, Workflow Automation
                   </div>
                 </div>

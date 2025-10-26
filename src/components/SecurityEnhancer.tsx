@@ -108,8 +108,8 @@ const,
 
     checkForXSS();
 
-    // Monitor form submissions for CSRF
-    const forms = document.querySelectorAll('form');
+    // Monitor form submissions for CSRF,
+const forms = document.querySelectorAll('form');
     forms.forEach(form => {
       form.addEventListener('submit', (e) => {
         const formData = new FormData(form as HTMLFormElement);
@@ -134,8 +134,8 @@ const,
 
     checkSuspiciousCode();
 
-    // Monitor for unusual network requests
-    const originalFetch = window.fetch;
+    // Monitor for unusual network requests,
+const originalFetch = window.fetch;
     window.fetch = async (...args) => {
       const url = args[0] as string;
       
@@ -150,14 +150,14 @@ const,
 
   }, [validateURL]);
 
-  // Security headers validation
-  const validateSecurityHeaders = useCallback(() => {
+  // Security headers validation,
+const validateSecurityHeaders = useCallback(() => {
     if (typeof window === 'undefined') return;
 
     const warnings: string[] = [];
 
-    // Check for HTTPS
-    if (location.protocol !== 'https:') {
+    // Check for HTTPS,
+if (location.protocol !== 'https:') {
       warnings.push('Site is not served over HTTPS');
       setIsSecure(false);
     }
@@ -183,8 +183,8 @@ const,
     }
   }, []);
 
-  // Rate limiting
-  const rateLimit = useCallback((key: string, limit: number, windowMs: number) => {
+  // Rate limiting,
+const rateLimit = useCallback((key: string, limit: number, windowMs: number) => {
     const now = Date.now();
     const windowStart = now - windowMs;
     
@@ -201,31 +201,30 @@ const,
     return true;
   }, []);
 
-  // Initialize security monitoring
-  useEffect(() => {
+  // Initialize security monitoring,
+useEffect(() => {
     monitorCSP();
     monitorSuspiciousActivity();
     validateSecurityHeaders();
 
-    // Set up periodic security checks
-    const interval = setInterval(() => {
+    // Set up periodic security checks,
+const interval = setInterval(() => {
       validateSecurityHeaders();
-    }, 30000); // Check every 30 seconds
-
-    return () => clearInterval(interval);
+    }, 30000); // Check every 30 seconds,
+return () => clearInterval(interval);
   }, [monitorCSP, monitorSuspiciousActivity, validateSecurityHeaders]);
 
-  // Security event handlers
-  const handleSecurityEvent = useCallback((event: string, data: any) => {
+  // Security event handlers,
+const handleSecurityEvent = useCallback((event: string, data: any) => {
     logger.info('Security event', { event, data });
     
-    // Rate limit security events
-    if (!rateLimit('security_events', 10, 60000)) {
+    // Rate limit security events,
+if (!rateLimit('security_events', 10, 60000)) {
       return;
     }
 
-    // Send to security monitoring service
-    if (typeof window !== 'undefined' && 'gtag' in window) {
+    // Send to security monitoring service,
+if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'security_event', {
         event_category: 'Security',
         event_label: event,
@@ -233,8 +232,8 @@ const,
     }
   }, [rateLimit]);
 
-  // Expose security utilities globally for debugging
-  useEffect(() => {
+  // Expose security utilities globally for debugging,
+useEffect(() => {
     if (typeof window !== 'undefined') {
       (window as any).securityUtils = {
         sanitizeInput,
@@ -250,16 +249,16 @@ const,
     <>
       {/* Security Status Indicator */}
       {!isSecure && (
-        <div className="fixed top-0 left-0 right-0 bg-red-600 text-white text-center py-2 z-50"></div>
+        <div className="fixed top-0 left-0 right-0 bg-red-600 text-white text-center py-2 z-50"></div>"
           ⚠️ Security Warning: This site is not served over HTTPS
         </div>
       )}
 
       {/* Security Warnings */}
       {securityWarnings.length > 0 && (
-        <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-yellow-600 text-white p-3 rounded-lg shadow-lg z-50 max-w-md"></div>
-          <h4 className="font-bold mb-2">Security Warnings</h4>
-          <ul className="text-sm space-y-1"></ul>
+        <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-yellow-600 text-white p-3 rounded-lg shadow-lg z-50 max-w-md"></div>"
+          <h4 className="font-bold mb-2">Security Warnings</h4>"
+          <ul className="text-sm space-y-1"></ul>"
             {securityWarnings.map((warning, index) => (
               <li key={index}>• {warning}</li>
             ))}
@@ -269,9 +268,9 @@ const,
 
       {/* Security Metrics (Development Only) */}
       {process.env.NODE_ENV === 'development' && (
-        <div className="fixed top-4 left-4 bg-gray-900 text-white p-3 rounded-lg shadow-lg z-40 text-xs"></div>
-          <h4 className="font-bold mb-2">Security Metrics</h4>
-          <div className="space-y-1"></div>
+        <div className="fixed top-4 left-4 bg-gray-900 text-white p-3 rounded-lg shadow-lg z-40 text-xs"></div>"
+          <h4 className="font-bold mb-2">Security Metrics</h4>"
+          <div className="space-y-1"></div>"
             <div>CSP Violations: {metrics.cspViolations}</div>
             <div>XSS Attempts: {metrics.xssAttempts}</div>
             <div>CSRF Attempts: {metrics.csrfAttempts}</div>

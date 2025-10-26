@@ -18,7 +18,7 @@ const AccessibilityEnhancer: React.FC = () => {
         padding: 8px 16px;
         text-decoration: none;
         border-radius: 4px;
-        z-index: 1000;
+        z-index: 50;
         transition: top 0.3s;
       `;
       
@@ -82,32 +82,9 @@ const AccessibilityEnhancer: React.FC = () => {
       });
     };
 
-    // Add high contrast mode support
-    const addHighContrastSupport = () => {
-      const style = document.createElement('style');
-      style.textContent = `
-        @media (prefers-contrast: high) {
-          * {
-            border-color: currentColor !important;
-          }
-        }
-      `;
-      document.head.appendChild(style);
-    };
-
-    // Initialize accessibility enhancements
     addSkipLink();
     addAriaLandmarks();
     enhanceFocusManagement();
-    addHighContrastSupport();
-
-    // Cleanup function
-    return () => {
-      const skipLink = document.querySelector('a[href="#main-content"]');
-      if (skipLink) {
-        skipLink.remove();
-      }
-    };
   }, []);
 
   return null;

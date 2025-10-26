@@ -1,3 +1,4 @@
+import { CheckCircle, Phone, Mail } from 'lucide-react';
 'use client';
 import React, { useState } from 'react';
 
@@ -609,17 +610,16 @@ const SolutionsPage: React.FC = () => {
   return (<div>Coming Soon</div>)
   )
     
-          <>
-      <Navigation /></Navigation>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
-        <div className="container mx-auto px-4 py-16 pt-24"></div>
-          {/* Header */}"
-          <div className="text-center mb-16"></div>"
-            <h1 className="text-4xl,"
-  md:text-5xl font-bold text-white mb-6 neon-text"></h1>
+          <Navigation /></Navigation>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>""
+        <div className="container mx-auto px-4 py-16 pt-24"></div>"
+          {/* Header */}""
+          <div className="text-center mb-16"></div>""
+            <h1 className="text-4xl,""
+  md:text-5xl font-bold text-white mb-6 neon-text"></h1>"
 // Our Solutions;
-          </h1>"
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
+          </h1>""
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>"
 // Comprehensive technology solutions designed to transform your business operations;
 //               and drive innovation across every aspect of your organization.
             
@@ -633,9 +633,9 @@ const SolutionsPage: React.FC = () => {
           
           </p>
           </div>
-          {/* Solution Categories Tabs */}"
-          <div className="mb-12"></div>"
-            <div className="flex flex-wrap justify-center gap-4 mb-8"></div>
+          {/* Solution Categories Tabs */}""
+          <div className="mb-12"></div>""
+            <div className="flex flex-wrap justify-center gap-4 mb-8"></div>"
               {solutionCategories.map((category) => ()}
           <button></button>
                   key={category.id}
@@ -658,66 +658,66 @@ const SolutionsPage: React.FC = () => {
           
           
           
-          "
-          <category.icon className="w-5 h-5 mr-2" /></category>"
-                  <span className="font-medium">{category.name}</span>
+          ""
+          <category.icon className="w-5 h-5 mr-2" /></category>""
+                  <span className="font-medium">{category.name}</span>"
                 </button>
               ))}
-            </div>"
-            <div className="text-center"></div>"
-              <p className="text-gray-300 max-w-2xl mx-auto"></p>
+            </div>""
+            <div className="text-center"></div>""
+              <p className="text-gray-300 max-w-2xl mx-auto"></p>"
                 {solutionCategories.find(cat => cat.id === activeTab)?.description}
               </p>
             </div>
           </div>
-          {/* Solutions Grid */}"
-          <div className="mb-16"></div>"
-            <div className="grid grid-cols-1,"
-  md:grid-cols-2 gap-8"></div>
-              {solutions[activeTab as keyof typeof solutions].map((solution, index) => ()}"
-          <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50,"
-  hover:border-cyan-400/50 transition-all duration-300"></div>"
-                  <div className="flex items-start mb-4"></div>`
+          {/* Solutions Grid */}""
+          <div className="mb-16"></div>""
+            <div className="grid grid-cols-1,""
+  md:grid-cols-2 gap-8"></div>"
+              {solutions[activeTab as keyof typeof solutions].map((solution, index) => ()}""
+          <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50,""
+  hover:border-cyan-400/50 transition-all duration-300"></div>""
+                  <div className="flex items-start mb-4"></div>`"
                     <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}></div>`
                       <solution.icon className={`w-6 h-6 ${solution.color}`} /></solution>
-                    </div>"
-                    <div className="flex-1"></div>"
-                      <h3 className="text-xl font-semibold text-white mb-2">{solution.title}</h3>"
-                      <p className="text-gray-300 text-sm mb-4">{solution.description}</p>
+                    </div>""
+                    <div className="flex-1"></div>""
+                      <h3 className="text-xl font-semibold text-white mb-2">{solution.title}</h3>""
+                      <p className="text-gray-300 text-sm mb-4">{solution.description}</p>"
                     </div>
-                  </div>"
-                  <div className="mb-4"></div>"
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key,
-  Features:</h4>"
-                    <ul className="space-y-1"></ul>
-                      {solution.features.map((feature, featureIndex) => ()}"
-          <li key={featureIndex} className="flex items-center text-sm text-gray-300"></li>"
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /></CheckCircle>
+                  </div>""
+                  <div className="mb-4"></div>""
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key,"
+  Features:</h4>""
+                    <ul className="space-y-1"></ul>"
+                      {solution.features.map((feature, featureIndex) => ()}""
+          <li key={featureIndex} className="flex items-center text-sm text-gray-300"></li>""
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /></CheckCircle>"
                           {feature}
                         </li>
                       ))}
                     </ul>
-                  </div>"
-                  <div className="flex items-center justify-between"></div>`
+                  </div>""
+                  <div className="flex items-center justify-between"></div>`"
                     <div className={`text-lg font-bold ${solution.color}`}></div>
                       {solution.pricing}
                     </div>
 
-                    <a
-                      href="/contact" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
+                    <a,
+href="/contact" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors""
 
 // ></a>
-//                       Learn More;"
-          <ArrowRight className="w-4 h-4 ml-1" /></ArrowRight>
+//                       Learn More;""
+          <ArrowRight className="w-4 h-4 ml-1" /></ArrowRight>"
                     </a>
                   </div>
                 </div>
               ))}
             </div>
           </div>
-          {/* Benefits Section */}"
-          <div className="mb-16"></div>"
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
+          {/* Benefits Section */}""
+          <div className="mb-16"></div>""
+            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>"
 // Why Choose Our Solutions?
             
           
@@ -728,24 +728,24 @@ const SolutionsPage: React.FC = () => {
           
           
           
-          </h2>"
-            <div className="grid grid-cols-1,
-  md:grid-cols-2,"
-  lg:grid-cols-4 gap-6"></div>
-              {benefits.map((benefit, index) => ()}"
-          <div key={index} className="text-center"></div>"
-                  <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4"></div>"
-                    <benefit.icon className="w-8 h-8 text-cyan-400" /></benefit>
-                  </div>"
-                  <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>"
-                  <p className="text-gray-300 text-sm">{benefit.description}</p>
+          </h2>""
+            <div className="grid grid-cols-1,"
+  md:grid-cols-2,""
+  lg:grid-cols-4 gap-6"></div>"
+              {benefits.map((benefit, index) => ()}""
+          <div key={index} className="text-center"></div>""
+                  <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4"></div>""
+                    <benefit.icon className="w-8 h-8 text-cyan-400" /></benefit>"
+                  </div>""
+                  <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>""
+                  <p className="text-gray-300 text-sm">{benefit.description}</p>"
                 </div>
               ))}
             </div>
           </div>
-          {/* CTA Section */}"
-          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center"></div>"
-            <h2 className="text-2xl font-bold text-white mb-4"></h2>
+          {/* CTA Section */}""
+          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center"></div>""
+            <h2 className="text-2xl font-bold text-white mb-4"></h2>"
 // Ready to Transform Your Business?
             
           
@@ -756,8 +756,8 @@ const SolutionsPage: React.FC = () => {
           
           
           
-          </h2>"
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto"></p>
+          </h2>""
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto"></p>"
 // Get a free consultation and discover how our solutions can revolutionize your operations;
 //               and drive unprecedented growth.
             
@@ -771,9 +771,9 @@ const SolutionsPage: React.FC = () => {
           
 
           </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
-              <a
-                href="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>"
+              <a,
+href="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105""
 
 // ></a>
                 
@@ -784,13 +784,13 @@ const SolutionsPage: React.FC = () => {
           
           
           
-          "
-          <Phone className="w-5 h-5 mr-2" /></Phone>
+          ""
+          <Phone className="w-5 h-5 mr-2" /></Phone>"
 // Get Free Consultation;
           </a>
 
-              <a
-                href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+              <a,
+href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center""
 
 // ></a>
                 
@@ -801,13 +801,13 @@ const SolutionsPage: React.FC = () => {
           
           
           
-          "
-          <Phone className="w-4 h-4 mr-2" /></Phone>
+          ""
+          <Phone className="w-4 h-4 mr-2" /></Phone>"
 // (302) 464-0950;
           </a>
 
-              <a
-                href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+              <a,
+href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center""
 
 // ></a>
                 
@@ -818,8 +818,8 @@ const SolutionsPage: React.FC = () => {
           
           
           
-          "
-          <Mail className="w-4 h-4 mr-2" /></Mail>
+          ""
+          <Mail className="w-4 h-4 mr-2" /></Mail>"
 // Email Us;
           </a>
             </div>

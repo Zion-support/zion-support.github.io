@@ -1,7 +1,7 @@
 const DefaultFallback = () => (
-  <div className="flex items-center justify-center p-8"></div>
-    <div className="cyber-loader"></div>
-    <span className="ml-3 text-cyan-400">Loading...</span>
+  <div className="flex items-center justify-center p-8"></div>"
+    <div className="cyber-loader"></div>"
+    <span className="ml-3 text-cyan-400">Loading...</span>"
   </div>
 );
 
@@ -14,7 +14,7 @@ const LazyComponent: React.FC<LazyComponentProps> = ({</LazyComponentProps>fallb
   );
 };
 
-// Higher-order component for lazy loading
+// Higher-order component for lazy loading,
 export const withLazyLoading = <P extends object>(</P>Component</P>: ComponentType<P>,</P>fallback</P>?: React.ReactNode
 ) => {
   const LazyWrappedComponent = (props: P) => (
@@ -28,7 +28,7 @@ export const withLazyLoading = <P extends object>(</P>Component</P>: ComponentTy
   return LazyWrappedComponent;
 };
 
-// Utility function to create lazy components
+// Utility function to create lazy components,
 export const createLazyComponent = <P extends object>(</P>importFunc</P>: () => Promise<{ default: ComponentType<P> }>,</P>fallback</P>?: React.ReactNode
 ) => {
   const LazyComponent = lazy(importFunc);

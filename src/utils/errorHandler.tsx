@@ -35,8 +35,8 @@ export interface AppError {/* TODO: Fix JSX expression */}
   id: string;,
     type: ErrorType;,
     severity: ErrorSeverity;,
-    message: string
-  stack?: string;,
+    message: string,
+stack?: string;,
     timestamp: Date;
 
   userId?: string;
@@ -61,9 +61,8 @@ export interface ErrorHandlerConfig {/* TODO: Fix JSX expression */}
     retryDelay: number;,
     enableUserNotification: boolean;,
     enableConsoleLogging: boolean;,
-    enableNetworkLogging: boolean
-
-  reportEndpoint?: string;,
+    enableNetworkLogging: boolean,
+reportEndpoint?: string;,
     logLeve,
   l: 'debug' | 'info' | 'warn' | 'error'
 }
@@ -335,8 +334,8 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   M:
           // // console.warn(logMessage, error)
 
-          break
-        case ErrorSeverity.LOW:
+          break,
+case ErrorSeverity.LOW:
           if (process.env['NODE_ENV'] === 'development') {// TODO: Add content;}
 
 }
@@ -458,14 +457,14 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
           
           
 
-          <div style="display: flex; justify-content: space-between; align-items: center;"><div><strong>${error.severity} Error</strong><p style="margin: 5px 0 0 0; font-size: 14px;">${error.message}</p></div><button onclick="this.parentElement.parentElement.remove()" style="
+          <div style="display: flex; justify-content: space-between; align-items: center;"><div><strong>${error.severity} Error</strong><p style="margin: 5px 0 0 0; font-size: 14px;">${error.message}</p></div><button onclick="this.parentElement.parentElement.remove()" style=""
           background: none;,
     border: none;,
-    color: white
-          font-size: 18px;,
-    cursor: pointer
-          margin-left: 10px
-">×</button></div>
+    color: white,
+font-size: 18px;,
+    cursor: pointer,
+margin-left: 10px
+">×</button></div>"
 
     `;
     document.body.appendChild(notification);
@@ -768,8 +767,8 @@ this.props.fallback || (
           
           
 
-          <div style={{ padding: '20px', textAlign: 'center' }}><h2>Something went wrong</h2><p>We're sorry, but something unexpected happened.</p><button
-              onClick={() => this.setState({ hasError: false, error: undefined })}
+          <div style={{ padding: '20px', textAlign: 'center' }}></div><h2>Something went wrong</h2><p>We're sorry, but something unexpected happened.</p><button,
+onClick={() => this.setState({ hasError: false, error: undefined })}
 
               style={{}
   // TOD,
@@ -840,7 +839,7 @@ export const useErrorHandler = () => {/* TODO: Fix JSX expression */}
   s: () => errorHandler.clearResolvedErrors()
   }
 }
-export default ErrorHandler;"`
+export default ErrorHandler;"`"
 
 
 

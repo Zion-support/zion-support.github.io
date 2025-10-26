@@ -19,18 +19,18 @@ const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     if (typeof window === 'undefined' || !('performance' in window)) return;
 
-    // Web Vitals measurement
-    const measureWebVitals = () => {
-      // LCP - Largest Contentful Paint
-      const lcpObserver = new PerformanceObserver((list) => {
+    // Web Vitals measurement,
+const measureWebVitals = () => {
+      // LCP - Largest Contentful Paint,
+const lcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
         setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
       });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
-      // FID - First Input Delay
-      const fidObserver = new PerformanceObserver((list) => {
+      // FID - First Input Delay,
+const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry: any) => {
           setMetrics(prev => ({ 
@@ -41,8 +41,8 @@ const PerformanceMonitor: React.FC = () => {
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
 
-      // CLS - Cumulative Layout Shift
-      let clsValue = 0;
+      // CLS - Cumulative Layout Shift,
+let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry: any) => {
@@ -54,8 +54,8 @@ const PerformanceMonitor: React.FC = () => {
       });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
 
-      // FCP - First Contentful Paint
-      const fcpObserver = new PerformanceObserver((list) => {
+      // FCP - First Contentful Paint,
+const fcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry) => {
           if (entry.name === 'first-contentful-paint') {
@@ -65,8 +65,8 @@ const PerformanceMonitor: React.FC = () => {
       });
       fcpObserver.observe({ entryTypes: ['paint'] });
 
-      // TTFB - Time to First Byte
-      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      // TTFB - Time to First Byte,
+const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigationEntry) {
         setMetrics(prev => ({ 
           ...prev, 
@@ -74,8 +74,8 @@ const PerformanceMonitor: React.FC = () => {
         }));
       }
 
-      // Cleanup observers
-      return () => {
+      // Cleanup observers,
+return () => {
         lcpObserver.disconnect();
         fidObserver.disconnect();
         clsObserver.disconnect();
@@ -113,8 +113,8 @@ const PerformanceMonitor: React.FC = () => {
       }
     };
 
-    // Send metrics after a delay to allow all measurements to complete
-    const timeoutId = setTimeout(() => {
+    // Send metrics after a delay to allow all measurements to complete,
+const timeoutId = setTimeout(() => {
       sendToAnalytics(metrics);
     }, 5000);
 
@@ -124,14 +124,14 @@ const PerformanceMonitor: React.FC = () => {
     };
   }, [metrics]);
 
-  // Don't render anything in production
-  if (process.env.NODE_ENV === 'production') {
+  // Don't render anything in production,
+if (process.env.NODE_ENV === 'production') {
     return null;
   }
 
   return (
-    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50"></div>
-      <div className="mb-2 font-bold">Performance Metrics</div>
+    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50"></div>"
+      <div className="mb-2 font-bold">Performance Metrics</div>"
       <div>LCP: {metrics.lcp ? `${Math.round(metrics.lcp)}ms` : 'Measuring...'}</div>
       <div>FID: {metrics.fid ? `${Math.round(metrics.fid)}ms` : 'Measuring...'}</div>
       <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'Measuring...'}</div>

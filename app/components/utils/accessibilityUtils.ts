@@ -1,4 +1,4 @@
-"use client";
+"use client";""
 <<<<<<< HEAD
 
 /**
@@ -12,10 +12,10 @@
 export const isVisibleToScreenReader = (element: HTMLElement): boolean => {
   const style = window.getComputedStyle(element)
   );
-  return (
-    style.display !== 'none' &&
-    style.visibility !== 'hidden' &&
-    element.getAttribute('aria-hidden') !== 'true'
+  return ()
+    style.display !== 'none' &&'
+    style.visibility !== 'hidden' &&'
+    element.getAttribute('aria-hidden') !== 'true''
   )
   );
 }
@@ -24,13 +24,13 @@ export const isVisibleToScreenReader = (element: HTMLElement): boolean => {
  * Get accessible name for an element
  */
 export const getAccessibleName = (element: HTMLElement): string => {
-  // Check aria-label first
-  const ariaLabel = element.getAttribute('aria-label')
+  // Check aria-label first,
+const ariaLabel = element.getAttribute('aria-label')'
   );
   if (ariaLabel) return ariaLabel
   );
-  // Check aria-labelledby
-  const ariaLabelledBy = element.getAttribute('aria-labelledby')
+  // Check aria-labelledby,
+const ariaLabelledBy = element.getAttribute('aria-labelledby')'
   );
   if (ariaLabelledBy) {
     const labelElement = document.getElementById(ariaLabelledBy)
@@ -39,16 +39,16 @@ export const getAccessibleName = (element: HTMLElement): string => {
   );
   }
 
-  // Check for associated label
-  if (element.id) {
-    const label = document.querySelector(`label[for="${element.id}"]`)
+  // Check for associated label,
+if (element.id) {
+    const label = document.querySelector(`label[for="${element.id}"]`)"`"`
   );
     if (label) return label.textContent || ''
   );
   }
 
-  // Fallback to text content
-  return element.textContent || element.getAttribute('alt') || ''
+  // Fallback to text content,
+return element.textContent || element.getAttribute('alt') || ''
   );
 }
   );
@@ -56,7 +56,7 @@ export const getAccessibleName = (element: HTMLElement): string => {
  * Check if element has proper focus management
  */
 export const hasProperFocus = (element: HTMLElement): boolean => {
-  return element.tabIndex >= 0 || element.getAttribute('tabindex') !== null
+  return element.tabIndex >= 0 || element.getAttribute('tabindex') !== null'
   );
 }
   );
@@ -69,7 +69,7 @@ export const getContrastRatio = (color1: string, color2: string): number => {
   );
     if (!rgb || rgb.length !== 3) return 0
   );
-    const [r, g, b] = rgb.map(c => {
+    const [r, g, b] = rgb.map(c => {)
       const val = parseInt(c) / 255
   );
       return val <= 0.03928 ? val / 12.92 : Math.pow((val + 0.055) / 1.055, 2.4)
@@ -104,7 +104,7 @@ export const meetsWCAGStandards = (foreground: string, background: string): bool
 /**
  * Generate ARIA attributes for better accessibility
  */
-export const generateARIA = (element: HTMLElement, options: {
+export const generateARIA = (element: HTMLElement, options: {)
   role?: string
   );
   label?: string
@@ -118,17 +118,17 @@ export const generateARIA = (element: HTMLElement, options: {
   hidden?: boolean
   );
 }) => {
-  if (options.role) element.setAttribute('role', options.role)
+  if (options.role) element.setAttribute('role', options.role)'
   );
-  if (options.label) element.setAttribute('aria-label', options.label)
+  if (options.label) element.setAttribute('aria-label', options.label)'
   );
-  if (options.describedBy) element.setAttribute('aria-describedby', options.describedBy)
+  if (options.describedBy) element.setAttribute('aria-describedby', options.describedBy)'
   );
-  if (options.expanded !== undefined) element.setAttribute('aria-expanded', String(options.expanded))
+  if (options.expanded !== undefined) element.setAttribute('aria-expanded', String(options.expanded))'
   );
-  if (options.selected !== undefined) element.setAttribute('aria-selected', String(options.selected))
+  if (options.selected !== undefined) element.setAttribute('aria-selected', String(options.selected))'
   );
-  if (options.hidden !== undefined) element.setAttribute('aria-hidden', String(options.hidden))
+  if (options.hidden !== undefined) element.setAttribute('aria-hidden', String(options.hidden))'
   );
 }
   );
@@ -136,13 +136,13 @@ export const generateARIA = (element: HTMLElement, options: {
  * Announce message to screen readers
  */
 export const announceToScreenReader = (message: string): void => {
-  const announcement = document.createElement('div')
+  const announcement = document.createElement('div')'
   );
-  announcement.setAttribute('aria-live', 'polite')
+  announcement.setAttribute('aria-live', 'polite')'
   );
-  announcement.setAttribute('aria-atomic', 'true')
+  announcement.setAttribute('aria-atomic', 'true')'
   );
-  announcement.className = 'sr-only'
+  announcement.className = 'sr-only''
   );
   announcement.textContent = message
   );
@@ -161,12 +161,12 @@ export const announceToScreenReader = (message: string): void => {
 export const isKeyboardAccessible = (element: HTMLElement): boolean => {
   const tagName = element.tagName.toLowerCase()
   );
-  const interactiveElements = ['a', 'button', 'input', 'select', 'textarea', 'details', 'summary'];
+  const interactiveElements = ['a', 'button', 'input', 'select', 'textarea', 'details', 'summary'];'
   if (interactiveElements.includes(tagName)) return true
   );
-  if (element.getAttribute('tabindex') !== null) return true
+  if (element.getAttribute('tabindex') !== null) return true'
   );
-  if (element.getAttribute('role') && element.getAttribute('role') !== 'presentation') return true
+  if (element.getAttribute('role') && element.getAttribute('role') !== 'presentation') return true'
   );
   return false
   );
@@ -177,8 +177,8 @@ export const isKeyboardAccessible = (element: HTMLElement): boolean => {
  */
 export const focusManagement = {
   trap: (container: HTMLElement): (() => void) => {
-    const focusableElements = container.querySelectorAll(
-      'a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select'
+    const focusableElements = container.querySelectorAll()
+      'a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select'"'"'
     )
   );
     const firstElement = focusableElements[0] as HTMLElement
@@ -186,7 +186,7 @@ export const focusManagement = {
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement
   );
     const handleTabKey = (e: KeyboardEvent) => {
-      if (e.key !== 'Tab') return
+      if (e.key !== 'Tab') return'
   );
       if (e.shiftKey) {
         if (document.activeElement === firstElement) {
@@ -205,12 +205,12 @@ export const focusManagement = {
       }
     }
   );
-    container.addEventListener('keydown', handleTabKey)
+    container.addEventListener('keydown', handleTabKey)'
   );
     firstElement?.focus()
   );
     return () => {
-      container.removeEventListener('keydown', handleTabKey)
+      container.removeEventListener('keydown', handleTabKey)'
   );
     }
   );

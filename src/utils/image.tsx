@@ -9,14 +9,13 @@ const,
 };
 
   src: string;,
-    alt: string
-  width?: number
-  height?: number
-  className?: string
-  priority?: boolean
-  _quality?: number
-
-  _placeholder?: 'blur' | 'empty'
+    alt: string,
+width?: number,
+height?: number,
+className?: string,
+priority?: boolean,
+_quality?: number,
+_placeholder?: 'blur' | 'empty'
   _blurDataURL?: string;
   fill?: boolean;
   sizes?: string;
@@ -111,7 +110,7 @@ className={`bg-gray-200 flex items-center justify-center ${className}`}
           
           
           
-          <span className="text-gray-500 text-sm">Failed to load image</span>
+          <span className="text-gray-500 text-sm">Failed to load image</span>"
       </div>
     )
   }
@@ -133,7 +132,7 @@ className={`bg-gray-200 flex items-center justify-center ${className}`}
 //     />
   )
 }
-export default Image;"`
+export default Image;"`"
 
 
 

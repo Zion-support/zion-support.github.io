@@ -5,8 +5,7 @@ import { Star, Code, Helmet } from 'lucide-react';
 
 const InnovationLabsPage: React.FC = () => {
   return (
-    <>
-      <Helmet>
+    <Helmet>
         <title>AI Innovation Labs: Product Development Revolution 2025 | Zion Tech Group</title>
         <meta name=&quot;description&quot; content=&quot;Discover how AI Innovation Labs are revolutionizing product development with 10x faster time-to-market, 85% cost reduction, and breakthrough innovation acceleration.&quot; />
         <meta property=&quot;og:url&quot; content=&quot;/og/ai-innovation-labs-2025.jpg&quot; />
@@ -29,8 +28,8 @@ const InnovationLabsPage: React.FC = () => {
             <h2 className=&quot;text-2xl font-bold text-gray-900 mb-6&quot;>🎯 Innovation Results</h2>
             <p className=&quot;text-gray-700 mb-6&quot;></p>
               Discover how AI Innovation Labs are revolutionizing product development with <strong>10x faster time-to-market</strong>,
-              <strong>85% cost reduction</strong>, and breakthrough innovation acceleration. Learn the proven methodologies
-              that are transforming how companies build and launch products.
+              <strong>85% cost reduction</strong>, and breakthrough innovation acceleration. Learn the proven methodologies,
+that are transforming how companies build and launch products.
             </p>
             <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6 mb-8&quot;></div>
               <div className=&quot;bg-blue-50 p-6 rounded-lg text-center&quot;></div>
@@ -56,8 +55,8 @@ const InnovationLabsPage: React.FC = () => {
             </ul>
             <h2 className=&quot;text-2xl font-bold text-gray-900 mb-6&quot;>🚀 Innovation Methodology</h2>
             <p className=&quot;text-gray-700 mb-6&quot;>
-              Our AI Innovation Labs follow a systematic approach to product development that leverages
-              cutting-edge AI technologies to accelerate every stage of the product lifecycle.
+              Our AI Innovation Labs follow a systematic approach to product development that leverages,
+cutting-edge AI technologies to accelerate every stage of the product lifecycle.
             </p>
             <h3 className=&quot;text-xl font-semibold text-gray-800 mb-4&quot;>Phase 1: AI-Powered Ideation</h3>
             <ul className=&quot;list-disc list-inside text-gray-700 mb-4 space-y-2&quot;>
@@ -108,8 +107,8 @@ const InnovationLabsPage: React.FC = () => {
             </div>
             <h2 className=&quot;text-2xl font-bold text-gray-900 mb-6&quot;>🚀 Getting Started with AI Innovation</h2>
             <p className=&quot;text-gray-700 mb-6&quot;>
-              Ready to revolutionize your product development? Our AI Innovation Labs can help you
-              achieve breakthrough results in product development speed, cost, and innovation.
+              Ready to revolutionize your product development? Our AI Innovation Labs can help you,
+achieve breakthrough results in product development speed, cost, and innovation.
             </p>
             <div className=&quot;bg-blue-50 p-6 rounded-lg text-center&quot;></div>
               <h3 className=&quot;text-xl font-semibold text-gray-800 mb-4&quot;>Start Your AI Innovation Journey</h3>

@@ -2,8 +2,8 @@ import { ListChecks, FileWarning, RefreshCw } from 'lucide-react'
 import { Calendar } from 'lucide-react'
 import { Clock } from 'lucide-react'
 
-export default function Page
-Page.displayName = "Page"() {
+export default function Page,
+Page.displayName = "Page"() {"
   return (
     <main className='min-h-screen bg-gradient-to-br from-fuchsia-50 via-white to-purple-50'>
       <header className='bg-gradient-to-br from-fuchsia-900 via-purple-900 to-slate-900 text-white py-20'>

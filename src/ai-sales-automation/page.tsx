@@ -1,3 +1,4 @@
+import { Phone, Mail } from 'lucide-react';
 'use client'
 import { BarChart, Target } from 'lucide-react'
 import React from 'react'
@@ -77,7 +78,7 @@ const AISalesAutomationPage: React.FC = () => {
 
 const Page = () => {
   return (
-  <><SEOOptimizertitle=&quot;AI Sales Automation Solutions - ZionTechGroup&quot;
+  <SEOOptimizertitle=&quot;AI Sales Automation Solutions - ZionTechGroup&quot;
         description=&quot;Revolutionize your sales process with AI-powered automation. Increase sales by40%, save60% time, and improve lead accuracy by85%.&quot;
         keywords={['AI sales automation', 'lead scoring', 'sales forecasting', 'customer segmentation', 'salesoptimization']}
         canonicalUrl=&quot;https://ziontechgroup.com/ai-sales-automation&quot;
@@ -99,15 +100,15 @@ const Page = () => {
                 optimize your sales process, and close more deals with less effort.
               </p>
               <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center mb-16&quot;></div>
-                <a
-                  href=&quot;tel:+13024640950&quot;
+                <a,
+href=&quot;tel:+13024640950&quot;
                   className=&quot;cyber-button flex items-center space-x-2&quot;
                 >
                   <Phone className=&quot;w-5 h-5&quot; />
                   <span>Call (302) 464-0950</span>
                 </a>
-                <a
-                  href=&quot;mailto:kleber@ziontechgroup.com&quot;
+                <a,
+href=&quot;mailto:kleber@ziontechgroup.com&quot;
                   className=&quot;cyber-button flex items-center space-x-2&quot;
                   style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
                 >
@@ -173,8 +174,8 @@ const Page = () => {
             </h2>
             <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto&quot;></div>
               {pricing.map((plan, index) => (
-                <div
-                  key={index}
+                <div,
+key={index}
                   className={`cyber-card p-8 relative ${
                     index === 1 ? 'ring-2 ring-cyan-400 scale-105' : ''
                   }`}
@@ -197,8 +198,8 @@ const Page = () => {
                       </li>
                     ))}
                   </ul>
-                  <a
-                    href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${plan.name} Plan`}
+                  <a,
+href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${plan.name} Plan`}
                     className=&quot;cyber-button w-full text-center block&quot;
                   >
                     Get Started
@@ -217,15 +218,15 @@ const Page = () => {
                 Join 400+ companies already using our AI sales automation solutions
               </p>
               <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-                <a
-                  href=&quot;tel:+13024640950&quot;
+                <a,
+href=&quot;tel:+13024640950&quot;
                   className=&quot;cyber-button flex items-center justify-center space-x-2&quot;
                 >
                   <Phone className=&quot;w-5 h-5&quot; />
                   <span>Call (302) 464-0950</span>
                 </a>
-                <a
-                  href=&quot;mailto:kleber@ziontechgroup.com&quot;
+                <a,
+href=&quot;mailto:kleber@ziontechgroup.com&quot;
                   className=&quot;cyber-button flex items-center justify-center space-x-2&quot;
                   style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
                 >

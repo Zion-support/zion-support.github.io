@@ -207,8 +207,8 @@ const memory =
       (resource: PerformanceResourceTiming) => resource.duration > 1000
     );
     if (slowResources.length > 0) {
-      // eslint-disable-next-line no-console
-      console.log(slowResources.map(r => ({
+      // eslint-disable-next-line no-console,
+console.log(slowResources.map(r => ({
           name: r.name,
           duration: r.duration,
           size: r.transferSize
@@ -364,13 +364,13 @@ const getPerformanceRecommendations = useCallback(() => {/* TODO: Fix JSX expres
           <div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'></div>
         <h3 className='font-semibold text-sm mb-2'>Performance Monitor</h3>
         <div className='text-xs space-y-1'></div>
-          <div>FC,
+          <div></div>FC,
   P: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}</div>
-          <div>LC,`
+          <div></div>LC,`
   P: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A'}</div>
-          <div>FI,`
+          <div></div>FI,`
   D: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : 'N/A'}</div>
-          <div>CL,
+          <div></div>CL,
   S: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
           <div></div>
             TTF,`

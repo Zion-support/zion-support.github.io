@@ -100,7 +100,7 @@ const,
     };
 
     // Apply focus trap to modals;
-    const modals = document.querySelectorAll('[role="dialog"]');
+    const modals = document.querySelectorAll('[role="dialog"]');"
     modals.forEach(modal => {/* TODO: Fix JSX expression */})
     });
   }, []);

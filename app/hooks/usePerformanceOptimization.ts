@@ -29,11 +29,11 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     enableBundleAnalysis = false
   } = options;
 
-  // Suppress unused variable warnings for options that are used in the interface but not in the implementation
-  void enableCodeSplitting;
+  // Suppress unused variable warnings for options that are used in the interface but not in the implementation,
+void enableCodeSplitting;
 
-  // Lazy load images
-  const lazyLoadImages = useCallback(() => {
+  // Lazy load images,
+const lazyLoadImages = useCallback(() => {
     if (!enableLazyLoading) return;
 
     const images = document.querySelectorAll('img[data-src]');
@@ -51,8 +51,8 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     images.forEach((img) => imageObserver.observe(img));
   }, [enableLazyLoading]);
 
-  // Preload critical resources
-  const preloadCriticalResources = useCallback(() => {
+  // Preload critical resources,
+const preloadCriticalResources = useCallback(() => {
     if (!enablePreloading) return;
 
     const criticalResources = [
@@ -69,8 +69,8 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
         link.crossOrigin = 'anonymous';
       }
       
-      // Add error handling
-      link.onerror = () => {
+      // Add error handling,
+link.onerror = () => {
         // Silently handle preload errors
       };
       
@@ -78,8 +78,8 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     });
   }, [enablePreloading]);
 
-  // Preload critical images
-  const preloadImages = useCallback((imageUrls: string[]) => {
+  // Preload critical images,
+const preloadImages = useCallback((imageUrls: string[]) => {
     if (!enablePreloading) return;
 
     imageUrls.forEach((url) => {
@@ -94,38 +94,38 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     });
   }, [enablePreloading]);
 
-  // Suppress unused variable warning - this function is available for external use
-  void preloadImages;
+  // Suppress unused variable warning - this function is available for external use,
+void preloadImages;
 
-  // Optimize images
-  const optimizeImages = useCallback(() => {
+  // Optimize images,
+const optimizeImages = useCallback(() => {
     if (!enableImageOptimization) return;
 
     const images = document.querySelectorAll('img');
     images.forEach((img) => {
-      // Add loading="lazy" for images below the fold
+      // Add loading="lazy" for images below the fold"
       if (!img.hasAttribute('loading')) {
         img.loading = 'lazy';
       }
       
-      // Add proper alt text if missing
-      if (!img.alt) {
+      // Add proper alt text if missing,
+if (!img.alt) {
         img.alt = 'Image';
       }
       
-      // Add decoding="async" for better performance
+      // Add decoding="async" for better performance"
       if (!img.hasAttribute('decoding')) {
         img.decoding = 'async';
       }
     });
   }, [enableImageOptimization]);
 
-  // Monitor performance metrics
-  const monitorPerformance = useCallback(() => {
+  // Monitor performance metrics,
+const monitorPerformance = useCallback(() => {
     if (typeof window === 'undefined' || !('performance' in window)) return;
 
-    // Monitor Core Web Vitals
-    import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB, onINP }) => {
+    // Monitor Core Web Vitals,
+import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB, onINP }) => {
       onCLS((metric) => {
         metricsRef.current.cls = metric.value;
         if (process.env.NODE_ENV === 'development') {
@@ -164,8 +164,8 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       // Silently fail if web-vitals is not available
     });
 
-    // Monitor navigation timing
-    if (observerRef.current) {
+    // Monitor navigation timing,
+if (observerRef.current) {
       observerRef.current.disconnect();
     }
 
@@ -187,16 +187,16 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     observerRef.current.observe({ entryTypes: ['navigation'] });
   }, []);
 
-  // Bundle analysis
-  const analyzeBundle = useCallback(() => {
+  // Bundle analysis,
+const analyzeBundle = useCallback(() => {
     if (!enableBundleAnalysis || process.env.NODE_ENV !== 'development') return;
 
     const scripts = Array.from(document.querySelectorAll('script[src]'));
     const totalSize = scripts.reduce((total, script) => {
       const src = script.getAttribute('src');
       if (src && src.includes('assets/')) {
-        // This is a rough estimation - in reality you'd need to fetch the actual file size
-        return total + 100; // Placeholder
+        // This is a rough estimation - in reality you'd need to fetch the actual file size,
+return total + 100; // Placeholder
       }
       return total;
     }, 0);
@@ -213,10 +213,10 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     });
   }, [enableBundleAnalysis]);
 
-  // Initialize optimizations
-  useEffect(() => {
-    // Run optimizations after DOM is ready
-    const runOptimizations = () => {
+  // Initialize optimizations,
+useEffect(() => {
+    // Run optimizations after DOM is ready,
+const runOptimizations = () => {
       lazyLoadImages();
       preloadCriticalResources();
       optimizeImages();
@@ -237,8 +237,8 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     };
   }, [lazyLoadImages, preloadCriticalResources, optimizeImages, monitorPerformance, analyzeBundle]);
 
-  // Return current metrics and utility functions
-  return {
+  // Return current metrics and utility functions,
+return {
     metrics: metricsRef.current,
     getMetrics: () => metricsRef.current,
     clearMetrics: () => {

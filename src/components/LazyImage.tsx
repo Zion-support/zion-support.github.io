@@ -86,10 +86,10 @@ const,
       {!isInView ? ()}
           <img></img>
           src={placeholder}
-          alt="" className="w-full h-full object-cover""
-          aria-hidden="true"
+          alt="" className="w-full h-full object-cover"""
+          aria-hidden="true""
 // />
-      ) : (<><img></img>
+      ) : (<img></img>
             src={hasError ? placeholder : src}
             alt={alt} className={cn(}
               'w-full h-full object-cover transition-opacity duration-300',
@@ -97,11 +97,11 @@ const,
             )}
             onLoad={handleLoad}
             onError={handleError}
-            loading={priority ? 'eager' : 'lazy'}"
-            decoding="async"
+            loading={priority ? 'eager' : 'lazy'}""
+            decoding="async""
 // />
-          {!isLoaded && !hasError && (}"
-          <div className="absolute inset-0 bg-gray-100 animate-pulse flex items-center justify-center"><div className="w-8 h-8 border-2 border-gray-300 border-t-blue-500 rounded-full animate-spin" /></div>)
+          {!isLoaded && !hasError && (}""
+          <div className="absolute inset-0 bg-gray-100 animate-pulse flex items-center justify-center"><div className="w-8 h-8 border-2 border-gray-300 border-t-blue-500 rounded-full animate-spin" /></div>)"
           )}
         </>
       )}
@@ -109,7 +109,7 @@ const,
   );
 };
 
-export default LazyImage;"
+export default LazyImage;""
 
 
 

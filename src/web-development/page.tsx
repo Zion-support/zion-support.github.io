@@ -1,3 +1,4 @@
+import { CheckCircle } from 'lucide-react';
 'use client';
 import React from 'react';
 import { Code, Smartphone, Globe, Database, Zap, Shield, BarChart, Users, Phone, Mail, CheckCircle, ArrowRight, Cloud } from 'lucide-react';
@@ -94,51 +95,50 @@ const WebDevelopmentPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <SEOOptimizer
-        title="Web Development Services - Zion Tech Group"
-        description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices."
+    <SEOOptimizer,
+title="Web Development Services - Zion Tech Group""
+        description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices.""
         keywords={['web development', 'frontend development', 'backend development', 'full-stack', 'e-commerce', 'React', 'Node.js']}
-        canonicalUrl="https://ziontechgroup.com/web-development"
+        canonicalUrl="https://ziontechgroup.com/web-development""
       />
-        <PerformanceOptimizer
-          enableImageOptimization={true}
+        <PerformanceOptimizer,
+enableImageOptimization={true}
           enableLazyLoading={true}
           enableCodeSplitting={true}
           enablePreloading={true}
         />
       <AccessibilityEnhancer />
-      <SecurityEnhancer
-        enableCSP={true}
+      <SecurityEnhancer,
+enableCSP={true}
         enableHTTPSRedirect={true}
         enableXSSProtection={true}
         enableClickjackingProtection={true}
       />
       <Analytics />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
         <Navigation />
         
-        <main className="container mx-auto px-4 py-16 pt-24">
+        <main className="container mx-auto px-4 py-16 pt-24">"
           {/* Hero Section */}
-          <section className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">
+          <section className="text-center mb-16">"
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">"
               Web Development Services
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"
               Build modern, scalable, and high-performance web applications with our expert development team. 
               From frontend to backend, we deliver solutions that drive business growth.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>"
+              <a,
+href="/contact""
+                className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300""
               >
                 Start Your Project
               </a>
-              <a
-                href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+              <a,
+href="tel:+13024640950""
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300""
               >
                 Call +1 302 464 0950
               </a>
@@ -146,32 +146,32 @@ const WebDevelopmentPage: React.FC = () => {
           </section>
 
           {/* Services Grid */}
-          <section className="mb-20">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
+          <section className="mb-20">"
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">"
               Our Web Development Services
             </h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>"
               {webServices.map((service, index) => (
-                <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300">
-                  <div className="flex items-center mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-4">
-                      <service.icon className="w-8 h-8 text-white" />
+                <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300"></div>"
+                  <div className="flex items-center mb-6"></div>"
+                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-4"></div>"
+                      <service.icon className="w-8 h-8 text-white" />"
                     </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}</h3>
+                    <div></div>
+                      <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}</h3>"
                       <div className={`font-semibold ${service.color}`}>{service.price}</div>
                     </div>
                   </div>
 
-                  <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
+                  <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>"
 
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-3">Features</h4>
-                    <ul className="space-y-2">
+                  <div className="mb-6"></div>"
+                    <h4 className="text-lg font-semibold text-white mb-3">Features</h4>"
+                    <ul className="space-y-2">"
                       {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                        <li key={featureIndex} className="flex items-center text-gray-300">"
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />"
                           {feature}
                         </li>
                       ))}
@@ -179,12 +179,12 @@ const WebDevelopmentPage: React.FC = () => {
                   </div>
 
                   {service.benefits && (
-                    <div className="mb-6">
-                      <h4 className="text-lg font-semibold text-white mb-3">Benefits</h4>
-                      <ul className="space-y-2">
+                    <div className="mb-6"></div>"
+                      <h4 className="text-lg font-semibold text-white mb-3">Benefits</h4>"
+                      <ul className="space-y-2">"
                         {service.benefits.map((benefit, benefitIndex) => (
-                          <li key={benefitIndex} className="flex items-center text-gray-300">
-                            <ArrowRight className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
+                          <li key={benefitIndex} className="flex items-center text-gray-300">"
+                            <ArrowRight className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />"
                             {benefit}
                           </li>
                         ))}
@@ -192,9 +192,9 @@ const WebDevelopmentPage: React.FC = () => {
                     </div>
                   )}
 
-                  <a
-                    href="/contact"
-                    className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover:scale-105 cyber-button"
+                  <a,
+href="/contact""
+                    className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover:scale-105 cyber-button""
                   >
                     Get Started
                   </a>
@@ -204,60 +204,60 @@ const WebDevelopmentPage: React.FC = () => {
           </section>
 
           {/* Technologies */}
-          <section className="mb-20">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
+          <section className="mb-20">"
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">"
               Technologies We Use
             </h2>
             
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6"></div>"
               {technologies.map((tech, index) => (
-                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
-                  <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                  <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3>
-                  <p className="text-sm text-gray-300">{tech.description}</p>
+                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"></div>"
+                  <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />"
+                  <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3>"
+                  <p className="text-sm text-gray-300">{tech.description}</p>"
                 </div>
               ))}
             </div>
           </section>
 
           {/* Process */}
-          <section className="mb-20">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
+          <section className="mb-20">"
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">"
               Our Development Process
             </h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>"
               {process.map((step, index) => (
-                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl font-bold text-white">{step.step}</span>
+                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"></div>"
+                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>"
+                    <span className="text-2xl font-bold text-white">{step.step}</span>"
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3 neon-text">{step.title}</h3>
-                  <p className="text-gray-300">{step.description}</p>
+                  <h3 className="text-xl font-bold text-white mb-3 neon-text">{step.title}</h3>"
+                  <p className="text-gray-300">{step.description}</p>"
                 </div>
               ))}
             </div>
           </section>
 
           {/* CTA Section */}
-          <section className="text-center">
-            <div className="cyber-card p-12 max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
+          <section className="text-center">"
+            <div className="cyber-card p-12 max-w-4xl mx-auto"></div>"
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">"
                 Ready to Build Your Next Web Application?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-xl text-gray-300 mb-8">"
                 Let's discuss your project requirements and create a custom solution that drives your business forward.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>"
+                <a,
+href="/contact""
+                  className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300""
                 >
                   Start Your Project
                 </a>
-                <a
-                  href="tel:+13024640950"
-                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+                <a,
+href="tel:+13024640950""
+                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300""
                 >
                   Call +1 302 464 0950
                 </a>

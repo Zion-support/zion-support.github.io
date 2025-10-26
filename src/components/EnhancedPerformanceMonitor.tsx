@@ -379,13 +379,13 @@ const reportMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
   return (<div>Coming Soon</div>)
   )
     
-          <div className="fixed bottom-4 right-4 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg p-4 text-white text-xs z-50 max-w-sm"></div>"
-      <div className="flex items-center justify-between mb-2"></div>"
-        <h3 className="font-bold text-cyan-400">Performance Monitor</h3>
+          <div className="fixed bottom-4 right-4 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg p-4 text-white text-xs z-50 max-w-sm"></div>""
+      <div className="flex items-center justify-between mb-2"></div>""
+        <h3 className="font-bold text-cyan-400">Performance Monitor</h3>"
         <button></button>
-          onClick={() => setIsVisible(false)}"
-          className="text-gray-400,"
-  hover:text-white"
+          onClick={() => setIsVisible(false)}""
+          className="text-gray-400,""
+  hover:text-white""
 // >
 //
         
@@ -398,59 +398,59 @@ const reportMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
           
           
           </button>
-      </div>"
-      <div className="space-y-1"></div>"
-        <div className="flex justify-between"></div>
+      </div>""
+      <div className="space-y-1"></div>""
+        <div className="flex justify-between"></div>"
           <span>Performance,
   Score:</span>
           <span className={performanceScore > 80 ? 'text-green-400' : performanceScore > 60 ? 'text-yellow-400' : 'text-red-400'}>
             {performanceScore}/100;
           </span>
         </div>
-        {metrics.fcp !== null && ()}"
-          <div className="flex justify-between"></div>
+        {metrics.fcp !== null && ()}""
+          <div className="flex justify-between"></div>"
             <span>FC,
   P:</span>
             <span>{metrics.fcp.toFixed(0)}ms</span>
           </div>
         )}
-        {metrics.lcp !== null && ()}"
-          <div className="flex justify-between"></div>
+        {metrics.lcp !== null && ()}""
+          <div className="flex justify-between"></div>"
             <span>LC,
   P:</span>
             <span>{metrics.lcp.toFixed(0)}ms</span>
           </div>
         )}
-        {metrics.fid !== null && ()}"
-          <div className="flex justify-between"></div>
+        {metrics.fid !== null && ()}""
+          <div className="flex justify-between"></div>"
             <span>FI,
   D:</span>
             <span>{metrics.fid.toFixed(0)}ms</span>
           </div>
         )}
-        {metrics.cls !== null && ()}"
-          <div className="flex justify-between"></div>
+        {metrics.cls !== null && ()}""
+          <div className="flex justify-between"></div>"
             <span>CL,
   S:</span>
             <span>{metrics.cls.toFixed(3)}</span>
           </div>
         )}
-        {metrics.ttfb !== null && ()}"
-          <div className="flex justify-between"></div>
+        {metrics.ttfb !== null && ()}""
+          <div className="flex justify-between"></div>"
             <span>TTF,
   B:</span>
             <span>{metrics.ttfb.toFixed(0)}ms</span>
           </div>
         )}
-      </div>"
-      <div className="mt-2 text-gray-400 text-xs"></div>
+      </div>""
+      <div className="mt-2 text-gray-400 text-xs"></div>"
 // Press Ctrl+Shift+P to toggle;
           </div>
     </div>
   );
 };
 
-export default EnhancedPerformanceMonitor;"
+export default EnhancedPerformanceMonitor;""
 
 
 

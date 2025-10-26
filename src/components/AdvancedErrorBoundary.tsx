@@ -99,8 +99,8 @@ class AdvancedErrorBoundary extends Component;
 //       error,
 //       errorInfo;)
     });
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
+    // Log error to console in development,
+if (process.env.NODE_ENV === 'development') {
       console.error('Error Boundary caught an error', { 
         context: 'ErrorBoundary', 
         error: error.message,
@@ -167,8 +167,8 @@ class AdvancedErrorBoundary extends Component;
       return null;
     }
   };
-    // Generate or retrieve session ID
-      let sessionId = sessionStorage.getItem('sessionId');
+    // Generate or retrieve session ID,
+let sessionId = sessionStorage.getItem('sessionId');
         sessionId={`session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`};
         sessionStorage.setItem('sessionId', sessionId);
       }
@@ -260,12 +260,12 @@ class AdvancedErrorBoundary extends Component;
       // Default error UI;
       return (<div className='min-h-screen bg-gray-50 flex flex-col justify-center py-12,
   sm:px-6,
-  lg:px-8'><div className='s,
+  lg:px-8'></div><div className='s,
   m:mx-auto,
   sm:w-full,
-  sm:max-w-md'><div className='bg-white py-8 px-4 shadow,
+  sm:max-w-md'></div><div className='bg-white py-8 px-4 shadow,
   sm:rounded-lg,
-  sm:px-10'><div className='text-center'><div className='mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100'><svg className='h-6 w-6 text-red-600'
+  sm:px-10'></div><div className='text-center'></div><div className='mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100'></div><svg className='h-6 w-6 text-red-600'
                     fill='none'
                     viewBox='0 0 24 24'
                     stroke='currentColor'
@@ -281,10 +281,10 @@ class AdvancedErrorBoundary extends Component;
                   has been notified.
                 </p></div>
               {process.env.NODE_ENV === 'development' && (}
-                <div className='mt-6 bg-red-50 border border-red-200 rounded-md p-4'><h3 className='text-sm font-medium text-red-800'></h3>
+                <div className='mt-6 bg-red-50 border border-red-200 rounded-md p-4'></div><h3 className='text-sm font-medium text-red-800'></h3>
                     Error,
   Details:
-                  </h3><div className='mt-2 text-sm text-red-700'><p><strong>Error,
+                  </h3><div className='mt-2 text-sm text-red-700'></div><p><strong>Error,
   ID:</strong> {this.state.errorId}
                     </p><p><strong>Messag,
   e:</strong> {this.state.error?.message}
@@ -335,7 +335,7 @@ onClick={this.handleRetry} className='w-full flex justify-center py-2 px-4 borde
   focus:ring-indigo-500'
                 >
                   Go to Homepage;
-                </button></div><div className='mt-6 text-center'><p className='text-xs text-gray-500'></p>
+                </button></div><div className='mt-6 text-center'></div><p className='text-xs text-gray-500'></p>
                   If this problem persists, please contact our support team;
                   at&nbsp;
 
@@ -375,28 +375,28 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
   render() {
     if (this.state.hasError) {
       return this.props.fallback || (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-          <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
-            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <AlertTriangle className="w-8 h-8 text-red-400" />
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>"
+          <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center"></div>"
+            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6"></div>"
+              <AlertTriangle className="w-8 h-8 text-red-400" />"
             </div>
-            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
-            <p className="text-gray-300 mb-6">
+            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>"
+            <p className="text-gray-300 mb-6">"
               We're sorry, but something unexpected happened. Please try refreshing the page.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <button
-                onClick={this.handleReset}
-                className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"
+            <div className="flex flex-col sm:flex-row gap-3 justify-center"></div>"
+              <button,
+onClick={this.handleReset}
+                className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors""
               >
-                <RefreshCw className="w-4 h-4" />
+                <RefreshCw className="w-4 h-4" />"
                 Try Again
               </button>
-              <button
-                onClick={() => window.location.href = '/'}
-                className="flex items-center justify-center gap-2 border border-gray-600 text-gray-300 hover:text-white hover:bg-gray-600 px-4 py-2 rounded-lg transition-colors"
+              <button,
+onClick={() => window.location.href = '/'}
+                className="flex items-center justify-center gap-2 border border-gray-600 text-gray-300 hover:text-white hover:bg-gray-600 px-4 py-2 rounded-lg transition-colors""
               >
-                <Home className="w-4 h-4" />
+                <Home className="w-4 h-4" />"
                 Go Home
               </button>
             </div>

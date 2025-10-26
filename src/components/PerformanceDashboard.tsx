@@ -15,8 +15,8 @@ export default function PerformanceDashboard({ className = '' }: PerformanceDash
     const updateMetrics = () => {
       setMetrics({
         loadTime: performance.now(),
-        memoryUsage: (performance as any).memory?.usedJSHeapSize || 0, // eslint-disable-line @typescript-eslint/no-explicit-any
-        fps: 60 // Placeholder
+        memoryUsage: (performance as any).memory?.usedJSHeapSize || 0, // eslint-disable-line @typescript-eslint/no-explicit-any,
+fps: 60 // Placeholder
       });
     };
 
@@ -26,20 +26,20 @@ export default function PerformanceDashboard({ className = '' }: PerformanceDash
   }, []);
 
   return (
-    <div className={`bg-white rounded-lg shadow-lg p-6 ${className}`}>
-      <h3 className="text-xl font-bold mb-4">Performance Dashboard</h3>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="bg-blue-100 p-4 rounded-md">
-          <h4 className="font-semibold text-blue-800">Load Time</h4>
-          <p className="text-2xl font-bold text-blue-600">{metrics.loadTime.toFixed(2)}ms</p>
+    <div className={`bg-white rounded-lg shadow-lg p-6 ${className}`}></div>
+      <h3 className="text-xl font-bold mb-4">Performance Dashboard</h3>"
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4"></div>"
+        <div className="bg-blue-100 p-4 rounded-md"></div>"
+          <h4 className="font-semibold text-blue-800">Load Time</h4>"
+          <p className="text-2xl font-bold text-blue-600">{metrics.loadTime.toFixed(2)}ms</p>"
         </div>
-        <div className="bg-green-100 p-4 rounded-md">
-          <h4 className="font-semibold text-green-800">Memory Usage</h4>
-          <p className="text-2xl font-bold text-green-600">{(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB</p>
+        <div className="bg-green-100 p-4 rounded-md"></div>"
+          <h4 className="font-semibold text-green-800">Memory Usage</h4>"
+          <p className="text-2xl font-bold text-green-600">{(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB</p>"
         </div>
-        <div className="bg-purple-100 p-4 rounded-md">
-          <h4 className="font-semibold text-purple-800">FPS</h4>
-          <p className="text-2xl font-bold text-purple-600">{metrics.fps}</p>
+        <div className="bg-purple-100 p-4 rounded-md"></div>"
+          <h4 className="font-semibold text-purple-800">FPS</h4>"
+          <p className="text-2xl font-bold text-purple-600">{metrics.fps}</p>"
         </div>
       </div>
     </div>
@@ -79,11 +79,11 @@ const,
       )[0] as PerformanceNavigationTiming;
 
         : 0;
-      // Measure render time
-      const renderStart = performance.now();
+      // Measure render time,
+const renderStart = performance.now();
       const renderTime = performance.now() - renderStart;
-      // Measure memory usage
-      let memoryUsage = 0;
+      // Measure memory usage,
+let memoryUsage = 0;
       if ('memory' in performance) {
         const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
         memoryUsage = memory?.usedJSHeapSize || 0;
@@ -104,33 +104,33 @@ const,
       });
     };
     updateMetrics();
-    // Update metrics every 5 seconds
-    const interval = setInterval(updateMetrics, 5000);
+    // Update metrics every 5 seconds,
+const interval = setInterval(updateMetrics, 5000);
     return () => clearInterval(interval);
   }, []);
 
 const PerformanceDashboard: React.FC = () => {
   return (
-    <div className="performance-dashboard">
+    <div className="performance-dashboard"></div>"
       <h2>Performance Dashboard</h2>
       <p>Performance monitoring dashboard component.</p>
     </div>
  setIsVisible(true)}
-        className="fixed bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors"
+        className="fixed bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors""
         Show Performance;
     );
-        <h3 className="text-lg font-semibold text-gray-800">Performance Dashboard</h3>
+        <h3 className="text-lg font-semibold text-gray-800">Performance Dashboard</h3>"
  setIsVisible(false)}
-          className="text-gray-500 hover:text-gray-700"
+          className="text-gray-500 hover:text-gray-700""
           ×
-          <span className="text-sm text-gray-600">Load Time:</span>
+          <span className="text-sm text-gray-600">Load Time:</span>"
             {metrics.loadTime.toFixed(2)}ms;
-          <span className="text-sm text-gray-600">Render Time:</span>
+          <span className="text-sm text-gray-600">Render Time:</span>"
             {metrics.renderTime.toFixed(2)}ms;
-          <span className="text-sm text-gray-600">Memory Usage:</span>
+          <span className="text-sm text-gray-600">Memory Usage:</span>"
             {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB;
-          <span className="text-sm text-gray-600">FPS:</span>
-          <span className="text-sm font-mono">{metrics.fps}</span>
+          <span className="text-sm text-gray-600">FPS:</span>"
+          <span className="text-sm font-mono">{metrics.fps}</span>"
             Last updated: {new Date().toLocaleTimeString()}
   );
 };

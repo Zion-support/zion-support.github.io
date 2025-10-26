@@ -1,3 +1,4 @@
+import { Phone, Mail } from 'lucide-react';
 'use client'
 import { Brain, BarChart } from 'lucide-react'
 import React from 'react'
@@ -118,7 +119,7 @@ const AICybersecurityPage: React.FC = () => {
     }
   ]
   return (
-  <><SEOOptimizertitle=&quot;AI Cybersecurity Solutions - ZionTechGroup&quot;
+  <SEOOptimizertitle=&quot;AI Cybersecurity Solutions - ZionTechGroup&quot;
         description=&quot;Advanced AI-powered cybersecurity with99.9% threat detection,24/7 monitoring, and automated response. Protect your business from evolvingcyberthreats.&quot;
         keywords={['AI cybersecurity', 'threat detection', 'security monitoring', 'cyber protection', 'AIsecurity']}
         canonicalUrl=&quot;https://ziontechgroup.com/ai-cybersecurity&quot;
@@ -140,15 +141,15 @@ const AICybersecurityPage: React.FC = () => {
                 automated response, and 24/7 monitoring to protect your business from evolving cyber threats.
               </p>
               <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center mb-16&quot;></div>
-                <a
-                  href=&quot;tel:+13024640950&quot;
+                <a,
+href=&quot;tel:+13024640950&quot;
                   className=&quot;cyber-button flex items-center space-x-2&quot;
                 >
                   <Phone className=&quot;w-5 h-5&quot; />
                   <span>Call (302) 464-0950</span>
                 </a>
-                <a
-                  href=&quot;mailto:kleber@ziontechgroup.com&quot;
+                <a,
+href=&quot;mailto:kleber@ziontechgroup.com&quot;
                   className=&quot;cyber-button flex items-center space-x-2&quot;
                   style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
                 >
@@ -214,15 +215,15 @@ const AICybersecurityPage: React.FC = () => {
             </h2>
             <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto&quot;></div>
               {pricingPlans.map((plan, index) => (
-                <div
-                  key={index}
+                <div,
+key={index}
                   className={`cyber-card p-8 relative ${
                     plan.popular ? 'ring-2 ring-cyan-400scale-10 5'  : ''
                 }`}
-                >{plan.popular && (
-                  <divclassName=&quot;absolute -top-4 left-1/2transform-translate-x-1/2&quot;><spanclassName=&quot;bg-cyan-400text-slate-900px-4 py-1 rounded-fulltext-smfont-bold&quot;></className=&quot;bg-cyan-400text-slate-900px-4 py-1 rounded-fulltext-smfont-bold&quot;>Most Popular
+                ></div>{plan.popular && (
+                  <divclassName=&quot;absolute -top-4 left-1/2transform-translate-x-1/2&quot;></div><spanclassName=&quot;bg-cyan-400text-slate-900px-4 py-1 rounded-fulltext-smfont-bold&quot;></className=&quot;bg-cyan-400text-slate-900px-4 py-1 rounded-fulltext-smfont-bold&quot;>Most Popular
                     </spa></di>)}
-                <divclassName=&quot;text-centermb-6&quot;><h3className=&quot;text-2 xl font-boldtext-whitemb-2&quot;>{plan.name}</h><pclassName=&quot;text-gray-400mb-4&quot;>{plan.description}</p><divclassName=&quot;flexitems-baselinejustify-center&quot;><spanclassName=&quot;text-4 xl font-boldtext-cyan-400&quot;>{plan.price}</spa><spanclassName=&quot;text-gray-400ml-1&quot;>{plan.period}</spa></di></di><ulclassName=&quot;space-y-3mb-8&quot;>{plan.features.map((featureidx) => (
+                <divclassName=&quot;text-centermb-6&quot;></div><h3className=&quot;text-2 xl font-boldtext-whitemb-2&quot;>{plan.name}</h><pclassName=&quot;text-gray-400mb-4&quot;>{plan.description}</p><divclassName=&quot;flexitems-baselinejustify-center&quot;></div><spanclassName=&quot;text-4 xl font-boldtext-cyan-400&quot;>{plan.price}</spa><spanclassName=&quot;text-gray-400ml-1&quot;>{plan.period}</spa></di></di><ulclassName=&quot;space-y-3mb-8&quot;>{plan.features.map((featureidx) => (
                    <likey={idx}className=&quot;flexitems-centerspace-x-3&quot;><CheckCircleclassName=&quot;w-5 h-5 text-cyan-400flex-shrink-0&quot; /><spanclassName=&quot;text-gray-300&quot;>{feature}</spa></l>))}
                 </u><ahref=&quot;tel:+13024640950&quot;
                     className={`w-full block text-center py-3 px-6 rounded-lg font-medium transition-all duration-300${
@@ -247,15 +248,15 @@ const AICybersecurityPage: React.FC = () => {
                 Join 3,000+ companies already protected by our AI cybersecurity platform
               </p>
               <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-                <a
-                  href=&quot;tel:+13024640950&quot;
+                <a,
+href=&quot;tel:+13024640950&quot;
                   className=&quot;cyber-button flex items-center justify-center space-x-2&quot;
                 >
                   <Phone className=&quot;w-5 h-5&quot; />
                   <span>Call (302) 464-0950</span>
                 </a>
-                <a
-                  href=&quot;mailto:kleber@ziontechgroup.com&quot;
+                <a,
+href=&quot;mailto:kleber@ziontechgroup.com&quot;
                   className=&quot;cyber-button flex items-center justify-center space-x-2&quot;
                   style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
                 >

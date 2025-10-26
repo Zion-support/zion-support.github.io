@@ -18,19 +18,19 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
   trackingId = 'G-XXXXXXXXXX' 
 }) => {
   useEffect(() => {
-    // Initialize Google Analytics
-    if (typeof window !== 'undefined' && trackingId !== 'G-XXXXXXXXXX') {
+    // Initialize Google Analytics,
+if (typeof window !== 'undefined' && trackingId !== 'G-XXXXXXXXXX') {
 'use client';
 import React, { useEffect } from 'react';
 
 const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
-    // Initialize Google Analytics
-    const GA_TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID || 'G-XXXXXXXXXX';
+    // Initialize Google Analytics,
+const GA_TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID || 'G-XXXXXXXXXX';
     
     const initAnalytics = () => {
-      // Load Google Analytics script
-      const script = document.createElement('script');
+      // Load Google Analytics script,
+const script = document.createElement('script');
       script.async = true;
       script.src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`};
       document.head.appendChild(script);
@@ -54,8 +54,8 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
       window.gtag('event', event, properties);
     }
     
-    // Also log in development
-    if (process.env.NODE_ENV === 'development') {
+    // Also log in development,
+if (process.env.NODE_ENV === 'development') {
       console.log('Analytics Event:', event, properties);
     }
   };
@@ -68,8 +68,8 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
         ...properties});
     }
     
-    // Also log in development
-    if (process.env.NODE_ENV === 'development') {
+    // Also log in development,
+if (process.env.NODE_ENV === 'development') {
       console.log('Analytics Page:', name, properties);
     }
   };
@@ -81,8 +81,8 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
         ...traits});
     }
     
-    // Also log in development
-    if (process.env.NODE_ENV === 'development') {
+    // Also log in development,
+if (process.env.NODE_ENV === 'development') {
       console.log('Analytics Identify:', userId, traits);
     }
   };
@@ -127,16 +127,16 @@ export default function AnalyticsProvider({ children }: AnalyticsProviderProps) 
 
   const trackPageView = (pageName: string, properties?: Record<string, unknown>) => {
     if (typeof window !== 'undefined' && (window as any).gtag) { // eslint-disable-line @typescript-eslint/no-explicit-any
-      (window as any).gtag('config', 'GA_MEASUREMENT_ID', { // eslint-disable-line @typescript-eslint/no-explicit-any
-        page_title: pageName,
+      (window as any).gtag('config', 'GA_MEASUREMENT_ID', { // eslint-disable-line @typescript-eslint/no-explicit-any,
+page_title: pageName,
         ...properties
       });
     }
   };
 
   useEffect(() => {
-    // Initialize analytics
-    if (typeof window !== 'undefined') {
+    // Initialize analytics,
+if (typeof window !== 'undefined') {
       console.log('Analytics initialized');
     }
   }, []);
@@ -199,13 +199,13 @@ export default AnalyticsProvider;
       });
     };
     
-    // Handle route changes
-    const handleRouteChange = () => {
+    // Handle route changes,
+const handleRouteChange = () => {
       trackPageView();
     };
     
-    // Initialize analytics
-    initAnalytics();
+    // Initialize analytics,
+initAnalytics();
     trackPageView();
     trackInteractions();
     window.addEventListener('popstate', handleRouteChange);
@@ -215,7 +215,7 @@ export default AnalyticsProvider;
   return <>{children}<  />;
 };
 
-// Export useAnalytics hook for other components
+// Export useAnalytics hook for other components,
 export const useAnalytics = () => {
   const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
     if (typeof window !== 'undefined' && (window as any).gtag) {

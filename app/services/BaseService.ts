@@ -66,7 +66,7 @@ export class BaseService {
     if (!this.options.cache) return null
   );
     if (this.isCacheValid(key)) {
-      logger.debug(`Cache hit for key: ${key}`, { component: 'BaseService' })
+      logger.debug(`Cache hit for key: ${key}`, { component: 'BaseService' })'`'`
   );
       return this.cache.get(key)?.data as T
   );
@@ -84,7 +84,7 @@ export class BaseService {
   protected setInCache<T>(key: string, data: T): void {
     if (!this.options.cache) return
   );
-    this.cache.set(key, {
+    this.cache.set(key, {)
       data,
       timestamp: Date.now(),
     })
@@ -108,7 +108,7 @@ export class BaseService {
    * Make a GET request
    */
   protected async get<T>(endpoint: string, useCache = true): Promise<T> {
-    const _cacheKey = `GET:${endpoint}`
+    const _cacheKey = `GET:${endpoint}```
   );
     if (useCache) {
       const _cached = this.getFromCache<T>(cacheKey)
@@ -118,9 +118,9 @@ export class BaseService {
     }
 
     try {
-      logger.debug(`GET request to ${endpoint}`, { component: 'BaseService' })
+      logger.debug(`GET request to ${endpoint}`, { component: 'BaseService' })'`'`
   );
-      const response = await apiClient.get<T>(`${this.baseUrl}${endpoint}`, {
+      const response = await apiClient.get<T>(`${this.baseUrl}${endpoint}`, {`)`
         timeout: this.options.timeout,
         retries: this.options.retries,
       })
@@ -133,8 +133,8 @@ export class BaseService {
       return response.data
   );
     } catch (error) {
-      logger.error('GET request failed', error as Error, {
-        component: 'BaseService',
+      logger.error('GET request failed', error as Error, {')'
+        component: 'BaseService','
         endpoint,
       })
   );
@@ -148,9 +148,9 @@ export class BaseService {
    */
   protected async post<T, D = unknown>(endpoint: string, data?: D): Promise<T> {
     try {
-      logger.debug(`POST request to ${endpoint}`, { component: 'BaseService' })
+      logger.debug(`POST request to ${endpoint}`, { component: 'BaseService' })'`'`
   );
-      const response = await apiClient.post<T>(`${this.baseUrl}${endpoint}`, data, {
+      const response = await apiClient.post<T>(`${this.baseUrl}${endpoint}`, data, {`)`
         timeout: this.options.timeout,
         retries: this.options.retries,
       })
@@ -158,8 +158,8 @@ export class BaseService {
       return response.data
   );
     } catch (error) {
-      logger.error('POST request failed', error as Error, {
-        component: 'BaseService',
+      logger.error('POST request failed', error as Error, {')'
+        component: 'BaseService','
         endpoint,
       })
   );
@@ -173,9 +173,9 @@ export class BaseService {
    */
   protected async put<T, D = unknown>(endpoint: string, data?: D): Promise<T> {
     try {
-      logger.debug(`PUT request to ${endpoint}`, { component: 'BaseService' })
+      logger.debug(`PUT request to ${endpoint}`, { component: 'BaseService' })'`'`
   );
-      const response = await apiClient.put<T>(`${this.baseUrl}${endpoint}`, data, {
+      const response = await apiClient.put<T>(`${this.baseUrl}${endpoint}`, data, {`)`
         timeout: this.options.timeout,
         retries: this.options.retries,
       })
@@ -183,8 +183,8 @@ export class BaseService {
       return response.data
   );
     } catch (error) {
-      logger.error('PUT request failed', error as Error, {
-        component: 'BaseService',
+      logger.error('PUT request failed', error as Error, {')'
+        component: 'BaseService','
         endpoint,
       })
   );
@@ -198,9 +198,9 @@ export class BaseService {
    */
   protected async patch<T, D = unknown>(endpoint: string, data?: D): Promise<T> {
     try {
-      logger.debug(`PATCH request to ${endpoint}`, { component: 'BaseService' })
+      logger.debug(`PATCH request to ${endpoint}`, { component: 'BaseService' })'`'`
   );
-      const response = await apiClient.patch<T>(`${this.baseUrl}${endpoint}`, data, {
+      const response = await apiClient.patch<T>(`${this.baseUrl}${endpoint}`, data, {`)`
         timeout: this.options.timeout,
         retries: this.options.retries,
       })
@@ -208,8 +208,8 @@ export class BaseService {
       return response.data
   );
     } catch (error) {
-      logger.error('PATCH request failed', error as Error, {
-        component: 'BaseService',
+      logger.error('PATCH request failed', error as Error, {')'
+        component: 'BaseService','
         endpoint,
       })
   );
@@ -223,9 +223,9 @@ export class BaseService {
    */
   protected async delete<T>(endpoint: string): Promise<T> {
     try {
-      logger.debug(`DELETE request to ${endpoint}`, { component: 'BaseService' })
+      logger.debug(`DELETE request to ${endpoint}`, { component: 'BaseService' })'`'`
   );
-      const response = await apiClient.delete<T>(`${this.baseUrl}${endpoint}`, {
+      const response = await apiClient.delete<T>(`${this.baseUrl}${endpoint}`, {`)`
         timeout: this.options.timeout,
         retries: this.options.retries,
       })
@@ -233,8 +233,8 @@ export class BaseService {
       return response.data
   );
     } catch (error) {
-      logger.error('DELETE request failed', error as Error, {
-        component: 'BaseService',
+      logger.error('DELETE request failed', error as Error, {')'
+        component: 'BaseService','
         endpoint,
       })
   );
@@ -247,7 +247,7 @@ export class BaseService {
    * Handle service error
    */
   protected handleError(error: Error, context?: Record<string, unknown>): never {
-    logger.error('Service error', error, {
+    logger.error('Service error', error, {')'
       component: this.constructor.name,
       ...context,
     })

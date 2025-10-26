@@ -1,4 +1,4 @@
-// Error handling utilities
+// Error handling utilities,
 export interface AppError {
   message: string;
   code?: string;

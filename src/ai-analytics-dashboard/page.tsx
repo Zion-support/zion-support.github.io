@@ -1,3 +1,4 @@
+import { Star, Phone } from 'lucide-react';
 'use client'
 import { Brain, TrendingUp } from 'lucide-react'
 import React, { useState, useEffect } from 'react'
@@ -17,7 +18,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
 
 const Page = () => {
   return (
-  <><SEOOptimizertitle=&quot;AI Analytics Dashboard - Intelligent Business Intelligence | ZionTechGroup&quot;
+  <SEOOptimizertitle=&quot;AI Analytics Dashboard - Intelligent Business Intelligence | ZionTechGroup&quot;
         description=&quot;Transform your data into actionable insights with AI-powered analytics dashboard. Get predictive insights, real-time monitoring, andintelligentrecommendations.&quot;
         keywords={['AI analytics', 'business intelligence', 'data visualization', 'predictive analytics', 'dashboard', 'datainsights']}
         canonicalUrl=&quot;https://ziontechgroup.com/ai-analytics-dashboard&quot;
@@ -40,14 +41,14 @@ const Page = () => {
                 real-time monitoring, and intelligent recommendations that drive business growth.
               </p>
               <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center&quot;></div>
-                <a
-                  href=&quot;#pricing&quot;
+                <a,
+href=&quot;#pricing&quot;
                   className=&quot;cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300&quot;
                 >
                   Start Free Trial
                 </a>
-                <a
-                  href=&quot;#demo&quot;
+                <a,
+href=&quot;#demo&quot;
                   className=&quot;border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300&quot;
                 >
                   Watch Demo
@@ -164,8 +165,8 @@ const Page = () => {
                       </li>
                     ))}
                   </ul>
-                  <a
-                    href={`mailto:kleber@ziontechgroup.com?subject=Interest in AI Analytics Dashboard ${plan.name} Plan`}
+                  <a,
+href={`mailto:kleber@ziontechgroup.com?subject=Interest in AI Analytics Dashboard ${plan.name} Plan`}
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
                       plan.popular
                         ? 'bg-blue-400 text-slate-900 hover:bg-blue-300'
@@ -218,14 +219,14 @@ const Page = () => {
               Start your free trial today and experience the power of AI-driven analytics
             </p>
             <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center&quot;></div>
-              <a
-                href=&quot;mailto:kleber@ziontechgroup.com?subject=AI Analytics Dashboard Free Trial Request&quot;
+              <a,
+href=&quot;mailto:kleber@ziontechgroup.com?subject=AI Analytics Dashboard Free Trial Request&quot;
                 className=&quot;bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors&quot;
               >
                 Start Free Trial
               </a>
-              <a
-                href=&quot;tel:+13024640950&quot;
+              <a,
+href=&quot;tel:+13024640950&quot;
                 className=&quot;flex items-center gap-2 border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all&quot;
               >
                 <Phone className=&quot;w-5 h-5&quot; />

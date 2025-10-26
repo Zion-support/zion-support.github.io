@@ -75,8 +75,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
     }
   ]
 
-  const pricing = pricingPlans
-
+  const pricing = pricingPlans,
 const Page = () => {
   return (
       </div>

@@ -52,22 +52,22 @@ const,
   return (<div>Coming Soon</div>)
   )
     
-          <div className={containerClasses} role="status" aria-label="Loading"></div>"
-      <div className="flex flex-col items-center space-y-4"></div>"
-        <div className="relative"></div>
-          <div className={spinnerClasses}></div>"
-          <div className="absolute inset-0 rounded-full border-2 border-current border-opacity-20"></div>
+          <div className={containerClasses} role="status" aria-label="Loading"></div>""
+      <div className="flex flex-col items-center space-y-4"></div>""
+        <div className="relative"></div>"
+          <div className={spinnerClasses}></div>""
+          <div className="absolute inset-0 rounded-full border-2 border-current border-opacity-20"></div>"
         </div>
-        {text && ()}"
-          <p className="text-sm text-gray-300 animate-pulse">{text}</p>
+        {text && ()}""
+          <p className="text-sm text-gray-300 animate-pulse">{text}</p>"
         )}
-      </div>"
-      <span className="sr-only">Loading content, please wait...</span>
+      </div>""
+      <span className="sr-only">Loading content, please wait...</span>"
     </div>
   );
 };
 
-export default ModernLoadingSpinner;"`
+export default ModernLoadingSpinner;"`"
 
 
 

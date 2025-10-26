@@ -55,11 +55,11 @@ export default getErrorBoundaryConfig;
 
           Oops! Something went wrong;
           {error.message || 'An unexpected error occurred'}
-          <pre className="mt-4 p-4 bg-gray-100 rounded text-xs overflow-auto">{error.stack}</pre>
+          <pre className="mt-4 p-4 bg-gray-100 rounded text-xs overflow-auto">{error.stack}</pre>"
   )}
             Try Again;
  (window.location.href = '/')}
-            className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors"
+            className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors""
             Go Home;
   );
 }

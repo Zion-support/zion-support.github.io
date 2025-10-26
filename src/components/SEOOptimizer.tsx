@@ -23,7 +23,7 @@ const,
   e: string, conten,
   t: string, attribut)
   e: string = 'name') => {/* TODO: Fix JSX expression */}
-    let meta = document.querySelector(`meta[${attribute}="${name}"]`);
+    let meta = document.querySelector(`meta[${attribute}="${name}"]`);"
     if (!meta) {/* TODO: Fix JSX expression */}
     }
     meta.setAttribute('content', content);
@@ -103,15 +103,15 @@ const,
   const mergedSEOData = { ...defaultSEOData, ...seoData };
 
   useEffect(() => {
-    // Log SEO optimization
-    logger.info('SEO optimization applied', { 
+    // Log SEO optimization,
+logger.info('SEO optimization applied', { 
       page, 
       title: mergedSEOData.title,
       description: mergedSEOData.description 
     });
 
-    // Track page view for analytics
-    if (typeof window !== 'undefined' && 'gtag' in window) {
+    // Track page view for analytics,
+if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: mergedSEOData.title,
         page_location: mergedSEOData.canonical,
@@ -126,68 +126,68 @@ const,
     <Helmet></Helmet>
       {/* Basic Meta Tags */}
       <title>{mergedSEOData.title}</title>
-      <meta name="description" content={mergedSEOData.description} />
-      <meta name="keywords" content={mergedSEOData.keywords.join(', ')} />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="robots" content="index, follow" />
-      <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="format-detection" content="telephone=no,address=no,email=no" />
-      <meta name="color-scheme" content="dark light" />
+      <meta name="description" content={mergedSEOData.description} />"
+      <meta name="keywords" content={mergedSEOData.keywords.join(', ')} />"
+      <meta name="author" content="Zion Tech Group" />"
+      <meta name="robots" content="index, follow" />"
+      <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />"
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />"
+      <meta name="format-detection" content="telephone=no,address=no,email=no" />"
+      <meta name="color-scheme" content="dark light" />"
 
       {/* Canonical URL */}
-      <link rel="canonical" href={mergedSEOData.canonical} />
+      <link rel="canonical" href={mergedSEOData.canonical} />"
 
       {/* Open Graph / Facebook */}
-      <meta property="og:type" content={mergedSEOData.ogType} />
-      <meta property="og:url" content={mergedSEOData.canonical} />
-      <meta property="og:title" content={mergedSEOData.title} />
-      <meta property="og:description" content={mergedSEOData.description} />
-      <meta property="og:image" content={mergedSEOData.ogImage} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
+      <meta property="og:type" content={mergedSEOData.ogType} />"
+      <meta property="og:url" content={mergedSEOData.canonical} />"
+      <meta property="og:title" content={mergedSEOData.title} />"
+      <meta property="og:description" content={mergedSEOData.description} />"
+      <meta property="og:image" content={mergedSEOData.ogImage} />"
+      <meta property="og:image:width" content="1200" />"
+      <meta property="og:image:height" content="630" />"
+      <meta property="og:site_name" content="Zion Tech Group" />"
+      <meta property="og:locale" content="en_US" />"
 
       {/* Twitter */}
-      <meta property="twitter:card" content={mergedSEOData.twitterCard} />
-      <meta property="twitter:url" content={mergedSEOData.canonical} />
-      <meta property="twitter:title" content={mergedSEOData.title} />
-      <meta property="twitter:description" content={mergedSEOData.description} />
-      <meta property="twitter:image" content={mergedSEOData.ogImage} />
-      <meta property="twitter:creator" content="@ziontechgroup" />
-      <meta property="twitter:site" content="@ziontechgroup" />
+      <meta property="twitter:card" content={mergedSEOData.twitterCard} />"
+      <meta property="twitter:url" content={mergedSEOData.canonical} />"
+      <meta property="twitter:title" content={mergedSEOData.title} />"
+      <meta property="twitter:description" content={mergedSEOData.description} />"
+      <meta property="twitter:image" content={mergedSEOData.ogImage} />"
+      <meta property="twitter:creator" content="@ziontechgroup" />"
+      <meta property="twitter:site" content="@ziontechgroup" />"
 
       {/* Additional SEO Meta Tags */}
-      <meta name="theme-color" content="#0f172a" />
-      <meta name="msapplication-TileColor" content="#0f172a" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+      <meta name="theme-color" content="#0f172a" />"
+      <meta name="msapplication-TileColor" content="#0f172a" />"
+      <meta name="apple-mobile-web-app-capable" content="yes" />"
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />"
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />"
 
       {/* Favicon */}
-      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-      <link rel="icon" type="image/png" href="/favicon.png" />
-      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-      <link rel="manifest" href="/manifest.json" />
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />"
+      <link rel="icon" type="image/png" href="/favicon.png" />"
+      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />"
+      <link rel="manifest" href="/manifest.json" />"
 
       {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.googletagmanager.com" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />"
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />"
+      <link rel="preconnect" href="https://www.googletagmanager.com" />"
 
       {/* DNS Prefetch for performance */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//fonts.gstatic.com" />
-      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" />"
+      <link rel="dns-prefetch" href="//fonts.gstatic.com" />"
+      <link rel="dns-prefetch" href="//www.googletagmanager.com" />"
 
       {/* Structured Data */}
-      <script type="application/ld+json"></script>
+      <script type="application/ld+json"></script>"
         {JSON.stringify(mergedSEOData.structuredData)}
       </script>
 
       {/* Additional structured data for services */}
-      <script type="application/ld+json"></script>
+      <script type="application/ld+json"></script>"
         {JSON.stringify({
           '@context': 'https://schema.org',
           '@type': 'Service',
@@ -237,6 +237,6 @@ const,
 
 
 SEOOptimizer.displayName = 'SEOOptimizer';
-export default SEOOptimizer;"`
+export default SEOOptimizer;"`"
 
 

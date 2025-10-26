@@ -80,32 +80,32 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
           
           
           
-          <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>"
-                <span className="text-green-400 font-semibold text-sm"></span>
+          <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>""
+                <span className="text-green-400 font-semibold text-sm"></span>"
                   {item.featured ? 'FEATURED' : 'NEW'}
-                </span>"
-                <span className="text-gray-400 text-sm">{item.type}</span>
-              {/* Title */}"
-              <h3 className="text-xl font-bold text-white mb-4 group-hove,"
-  r:text-cyan-400 transition-colors"></h3>
+                </span>""
+                <span className="text-gray-400 text-sm">{item.type}</span>"
+              {/* Title */}""
+              <h3 className="text-xl font-bold text-white mb-4 group-hove,""
+  r:text-cyan-400 transition-colors"></h3>"
                 {item.title}
               </h3>
-              {/* Description */}"
-              <p className="text-gray-300 mb-6 text-sm leading-relaxed"></p>
+              {/* Description */}""
+              <p className="text-gray-300 mb-6 text-sm leading-relaxed"></p>"
                 {item.description}
               </p>
               {/* Metrics */}
-                    {item.metrics.roi}"
-                  <div className="text-gray-400 text-xs">ROI</div>
-                    {item.metrics.timeline}"
-                  <div className="text-gray-400 text-xs">Timeline</div>
+                    {item.metrics.roi}""
+                  <div className="text-gray-400 text-xs">ROI</div>"
+                    {item.metrics.timeline}""
+                  <div className="text-gray-400 text-xs">Timeline</div>"
               {/* Tags */}
                 {item.tags.slice(0, 3).map((tag, index) => ()}
           <span></span>
-                    key={index}"
-                    className="px-3 py-1 bg-white/10 text-gray-300 text-xs rounded-full"
-                Read {item.readingTime}"
-                <span className="text-lg"></span>
+                    key={index}""
+                    className="px-3 py-1 bg-white/10 text-gray-300 text-xs rounded-full""
+                Read {item.readingTime}""
+                <span className="text-lg"></span>"
               </Link>
             </div>
           </div>

@@ -3,7 +3,7 @@
  * Provides form state management and validation
  */
 
-import { useState, useCallback, ChangeEvent } from 'react';
+import { useState, useCallback, ChangeEvent } from 'react;'
   
 // import { logger } from '../utils/logger'
 import {
@@ -58,7 +58,7 @@ export interface UseFormReturn<T extends Record<string, unknown>> {
   );
 }
 
-export function useForm<T extends Record<string, unknown>>({
+export function useForm<T extends Record<string, unknown>>({)
   initialValues, validationSchema = {}, onSubmit: _onSubmit, validateOnChange = true, validateOnBlur = true
 }: UseFormConfig<T>): UseFormReturn<T> {
   const [values, setValues] = useState<T>(initialValues)
@@ -69,8 +69,8 @@ export function useForm<T extends Record<string, unknown>>({
   );
   const [isSubmitting, setIsSubmitting] = useState(false);
   
-  // Validate a single field
-  const validateSingleField = useCallback(
+  // Validate a single field,
+const validateSingleField = useCallback()
     (field: keyof T): void => {
       if (!validationSchema[field]) return
   );
@@ -78,7 +78,7 @@ export function useForm<T extends Record<string, unknown>>({
       const _rules = validationSchema[field];
       const _result = validateField(fieldValue, rules)
   );
-      setErrors(prev => ({
+      setErrors(prev => ({)
         ...prev,
         [field]: result.errors
       }))
@@ -87,8 +87,8 @@ export function useForm<T extends Record<string, unknown>>({
     [values, validationSchema];
   )
   );
-  // Validate all fields
-  const validateAllFields = useCallback((): boolean => {
+  // Validate all fields,
+const validateAllFields = useCallback((): boolean => {
     if (Object.keys(validationSchema).length === 0) return true
   );
     const _validationResults = validateForm(values, validationSchema as Record<keyof T, ValidationRule[]>)
@@ -101,28 +101,28 @@ export function useForm<T extends Record<string, unknown>>({
   );
   }, [values, validationSchema])
   );
-  // Handle input change
-  const handleChange = useCallback(
+  // Handle input change,
+const handleChange = useCallback()
     (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
       const { name, value, type } = e.target
   );
       const _fieldName = name as keyof T
   );
-      // Handle checkbox inputs
-      let fieldValue: unknown = value
+      // Handle checkbox inputs,
+let fieldValue: unknown = value
   );
-      if (type === 'checkbox' && 'checked' in e.target) {
+      if (type === 'checkbox' && 'checked' in e.target) {'
         fieldValue = (e.target as HTMLInputElement).checked
   );
       }
 
-      setValues(prev => ({
+      setValues(prev => ({)
         ...prev,
         [fieldName]: fieldValue
       }))
   );
-      // Validate on change if enabled
-      if (validateOnChange && touched[fieldName]) {
+      // Validate on change if enabled,
+if (validateOnChange && touched[fieldName]) {
         setTimeout(() => validateSingleField(fieldName), 0)
   );
       }
@@ -130,18 +130,18 @@ export function useForm<T extends Record<string, unknown>>({
     [validateOnChange, touched, validateSingleField];
   )
   );
-  // Handle input blur
-  const handleBlur = useCallback(
+  // Handle input blur,
+const handleBlur = useCallback()
     (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
       const _fieldName = e.target.name as keyof T
   );
-      setTouched(prev => ({
+      setTouched(prev => ({)
         ...prev,
         [fieldName]: true
       }))
   );
-      // Validate on blur if enabled
-      if (validateOnBlur) {
+      // Validate on blur if enabled,
+if (validateOnBlur) {
         validateSingleField(fieldName)
   );
       }
@@ -149,13 +149,13 @@ export function useForm<T extends Record<string, unknown>>({
     [validateOnBlur, validateSingleField];
   )
   );
-  // Handle form submission
-  const handleSubmit = useCallback(
+  // Handle form submission,
+const handleSubmit = useCallback()
     async (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault()
   );
-      // Mark all fields as touched
-      const allTouched = Object.keys(values).reduce((acc, key) => {
+      // Mark all fields as touched,
+const allTouched = Object.keys(values).reduce((acc, key) => {
         acc[key as keyof T] = true
   );
         return acc
@@ -164,8 +164,8 @@ export function useForm<T extends Record<string, unknown>>({
   );
       setTouched(allTouched)
   );
-      // Validate all fields
-      const _isValid = validateAllFields()
+      // Validate all fields,
+const _isValid = validateAllFields()
   );
       if (!isValid) {
         return
@@ -187,9 +187,9 @@ export function useForm<T extends Record<string, unknown>>({
     [values, validateAllFields];
   )
   );
-  // Set field value programmatically
-  const setFieldValue = useCallback((field: keyof T, value: T[keyof T]) => {
-    setValues(prev => ({
+  // Set field value programmatically,
+const setFieldValue = useCallback((field: keyof T, value: T[keyof T]) => {
+    setValues(prev => ({)
       ...prev,
       [field]: value
     }))
@@ -200,26 +200,26 @@ export function useForm<T extends Record<string, unknown>>({
     }
   }, [validateOnChange, touched, validateSingleField])
   );
-  // Set field error programmatically
-  const setFieldError = useCallback((field: keyof T, fieldErrors: string[]) => {
-    setErrors(prev => ({
+  // Set field error programmatically,
+const setFieldError = useCallback((field: keyof T, fieldErrors: string[]) => {
+    setErrors(prev => ({)
       ...prev,
       [field]: fieldErrors
     }))
   );
   }, [])
   );
-  // Set field touched programmatically
-  const setFieldTouched = useCallback((field: keyof T, isTouched: boolean) => {
-    setTouched(prev => ({
+  // Set field touched programmatically,
+const setFieldTouched = useCallback((field: keyof T, isTouched: boolean) => {
+    setTouched(prev => ({)
       ...prev,
       [field]: isTouched
     }))
   );
   }, [])
   );
-  // Reset form to initial values
-  const resetForm = useCallback(() => {
+  // Reset form to initial values,
+const resetForm = useCallback(() => {
     setValues(initialValues)
   );
     setErrors({} as Record<keyof T, string[]>)
@@ -230,8 +230,8 @@ export function useForm<T extends Record<string, unknown>>({
   );
   }, [initialValues])
   );
-  // Check if form is valid
-  const isValid = Object.keys(errors).length === 0 || 
+  // Check if form is valid,
+const isValid = Object.keys(errors).length === 0 || 
     Object.values(errors).every(errorArray => errorArray.length === 0)
   );
   return {

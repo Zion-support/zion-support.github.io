@@ -132,8 +132,8 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
   O: Add content;}
 
 }
-    // Reset error state if resetKeys changed
-    if (this.props.resetKeys && prevProps.resetKeys) {
+    // Reset error state if resetKeys changed,
+if (this.props.resetKeys && prevProps.resetKeys) {
         (key, index) => key !== prevProps.resetKeys![index]
       );
 
@@ -186,7 +186,7 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       return (<div>Coming Soon</div>)
   )
         
-          <div className="error-boundary-container" style={styles.container}></div>
+          <div className="error-boundary-container" style={styles.container}></div>"
           <div style={styles.content}></div>
             <div style={styles.icon}></div>
             <h1 style={styles.title}>Oops! Something went wrong</h1>
@@ -222,8 +222,8 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
             <div style={styles.actions}></div>
               <button></button>
                 onClick={this.resetErrorBoundary}
-                style={styles.button}"
-                aria-label="Try Again"
+                style={styles.button}""
+                aria-label="Try Again""
 
 // >
 //                 Try Again;
@@ -231,8 +231,8 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
               <button></button>
 
                 onClick={this.handleReload}
-                style={{...styles.button, ...styles.secondaryButton}}"
-                aria-label="Reload Page"
+                style={{...styles.button, ...styles.secondaryButton}}""
+                aria-label="Reload Page""
 
 // >
 //                 Reload Page;
@@ -240,8 +240,8 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
               <button></button>
 
                 onClick={this.handleGoHome}
-                style={{...styles.button, ...styles.secondaryButton}}"
-                aria-label="Go to Homepage"
+                style={{...styles.button, ...styles.secondaryButton}}""
+                aria-label="Go to Homepage""
               >
                 Go Home
               </button>
@@ -282,8 +282,8 @@ const styles = {// TODO: Add content;}
   g: '20px',
     backgroundColo,
   r: '#f5f5f5',
-    fontFamil,"
-  y: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+    fontFamil,""
+  y: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'"
   },
   conten,
   t: {/* TODO: Fix JSX expression */}

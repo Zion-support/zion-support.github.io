@@ -1,3 +1,4 @@
+import { CheckCircle, Phone, Mail } from 'lucide-react';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Zap, Shield, BarChart } from 'lucide-react';
@@ -45,25 +46,25 @@ const AIServicesPage: React.FC = () => {
 
 const AiServicesPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
       <Helmet></Helmet>
         <title>AI Services | Zion Tech Group</title>
-        <meta name="description" content="Advanced AI services solutions by Zion Tech Group." />
+        <meta name="description" content="Advanced AI services solutions by Zion Tech Group." />"
       </Helmet>
       
       <Navigation />
       
-      <div className="container mx-auto px-4 py-16"></div>
-        <div className="text-center"></div>
-          <h1 className="text-5xl font-bold text-white mb-6">AI Services</h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
+      <div className="container mx-auto px-4 py-16"></div>"
+        <div className="text-center"></div>"
+          <h1 className="text-5xl font-bold text-white mb-6">AI Services</h1>"
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>"
             Coming Soon - Advanced AI services solutions that will transform your business.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors"></button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>"
+            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors"></button>"
               Contact Us
             </button>
-            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors"></button>
+            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors"></button>"
               Learn More
           </div>
       
@@ -227,42 +228,41 @@ export default function AIServicesPage() {
   ];
 
   return (
-    <>
-      <Helmet></Helmet>
+    <Helmet></Helmet>
         <title>AI Services - Zion Tech Group | Advanced AI Solutions & Pricing</title>
-        <meta name="description" content="Comprehensive AI services including automation, analytics, customer support, content generation, cybersecurity, and ML platforms. Get 300% ROI with our AI solutions." />
-        <meta name="keywords" content="AI services, artificial intelligence, machine learning, AI automation, AI analytics, AI customer support, AI content generation, AI cybersecurity, ML platform" />
-        <meta property="og:title" content="AI Services - Zion Tech Group" />
-        <meta property="og:description" content="Transform your business with our comprehensive AI services. Achieve 300% ROI with intelligent automation, analytics, and AI-powered solutions." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-services" />
+        <meta name="description" content="Comprehensive AI services including automation, analytics, customer support, content generation, cybersecurity, and ML platforms. Get 300% ROI with our AI solutions." />"
+        <meta name="keywords" content="AI services, artificial intelligence, machine learning, AI automation, AI analytics, AI customer support, AI content generation, AI cybersecurity, ML platform" />"
+        <meta property="og:title" content="AI Services - Zion Tech Group" />"
+        <meta property="og:description" content="Transform your business with our comprehensive AI services. Achieve 300% ROI with intelligent automation, analytics, and AI-powered solutions." />"
+        <meta property="og:type" content="website" />"
+        <meta property="og:url" content="https://ziontechgroup.com/ai-services" />"
       </Helmet>
 
-      <div className="min-h-screen bg-slate-900 cyber-grid"></div>
+      <div className="min-h-screen bg-slate-900 cyber-grid"></div>"
         {/* Hero Section */}
-        <section className="relative py-20 lg:py-32 overflow-hidden"></section>
-          <div className="container mx-auto px-4"></div>
+        <section className="relative py-20 lg:py-32 overflow-hidden"></section>"
+          <div className="container mx-auto px-4"></div>"
             <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}></div>
-              <h1 className="text-5xl lg:text-7xl font-bold mb-6"></h1>
-                <span className="holographic-text cyber-text">AI Services</span>
+              <h1 className="text-5xl lg:text-7xl font-bold mb-6"></h1>"
+                <span className="holographic-text cyber-text">AI Services</span>"
               </h1>
-              <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"></p>
+              <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"></p>"
                 Transform your business with cutting-edge AI solutions. Achieve 300% ROI, 70% cost reduction, 
                 and 90% efficiency gains with our comprehensive AI services.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-                <a
-                  href="tel:+13024640950"
-                  className="cyber-button inline-flex items-center px-8 py-4 text-lg"
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>"
+                <a,
+href="tel:+13024640950""
+                  className="cyber-button inline-flex items-center px-8 py-4 text-lg""
                 ></a>
-                  <Phone className="w-5 h-5 mr-2" />
+                  <Phone className="w-5 h-5 mr-2" />"
                   (302) 464-0950
                 </a>
-                <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="cyber-button inline-flex items-center px-8 py-4 text-lg"
+                <a,
+href="mailto:kleber@ziontechgroup.com""
+                  className="cyber-button inline-flex items-center px-8 py-4 text-lg""
                 ></a>
-                  <Mail className="w-5 h-5 mr-2" />
+                  <Mail className="w-5 h-5 mr-2" />"
                   Get Quote
                 </a>
               </div>
@@ -271,16 +271,16 @@ export default function AIServicesPage() {
         </section>
 
         {/* Stats Section */}
-        <section className="py-16 bg-gradient-to-r from-slate-800/50 to-slate-900/50"></section>
-          <div className="container mx-auto px-4"></div>
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8"></div>
+        <section className="py-16 bg-gradient-to-r from-slate-800/50 to-slate-900/50"></section>"
+          <div className="container mx-auto px-4"></div>"
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8"></div>"
               {stats.map((stat, index) => (
-                <div key={index} className="text-center"></div>
+                <div key={index} className="text-center"></div>"
                   <div className={`w-16 h-16 mx-auto mb-4 ${stat.color} bg-gradient-to-br from-cyan-500/20 to-purple-600/20 rounded-lg flex items-center justify-center`}></div>
-                    <stat.icon className="w-8 h-8" />
+                    <stat.icon className="w-8 h-8" />"
                   </div>
                   <div className={`text-3xl font-bold ${stat.color} mb-2`}>{stat.value}</div>
-                  <div className="text-gray-300">{stat.label}</div>
+                  <div className="text-gray-300">{stat.label}</div>"
                 </div>
               ))}
             </div>
@@ -288,73 +288,73 @@ export default function AIServicesPage() {
         </section>
 
         {/* Services Section */}
-        <section className="py-20"></section>
-          <div className="container mx-auto px-4"></div>
-            <div className="text-center mb-16"></div>
-              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6"></h2>
-                <span className="neon-text">Our AI Services</span>
+        <section className="py-20"></section>"
+          <div className="container mx-auto px-4"></div>"
+            <div className="text-center mb-16"></div>"
+              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6"></h2>"
+                <span className="neon-text">Our AI Services</span>"
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>"
                 Comprehensive AI solutions designed to transform your business operations and drive unprecedented growth.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>"
               {aiServices.map((service, index) => (
                 <div key={service.id} className={`quantum-card p-8 ${service.popular ? 'energy-pulse' : ''}`}></div>
-                  <div className="flex items-start justify-between mb-6"></div>
+                  <div className="flex items-start justify-between mb-6"></div>"
                     <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-lg flex items-center justify-center mb-4`}></div>
-                      <service.icon className="w-8 h-8 text-white" />
+                      <service.icon className="w-8 h-8 text-white" />"
                     </div>
                     {service.popular && (
-                      <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-sm font-bold"></div>
+                      <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-sm font-bold"></div>"
                         Most Popular
                       </div>
                     )}
                   </div>
 
-                  <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
-                  <p className="text-gray-300 mb-6">{service.description}</p>
+                  <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>"
+                  <p className="text-gray-300 mb-6">{service.description}</p>"
 
-                  <div className="mb-6"></div>
-                    <h4 className="text-lg font-semibold text-cyan-400 mb-3">Key Features:</h4>
-                    <ul className="space-y-2"></ul>
+                  <div className="mb-6"></div>"
+                    <h4 className="text-lg font-semibold text-cyan-400 mb-3">Key Features:</h4>"
+                    <ul className="space-y-2"></ul>"
                       {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-gray-300"></li>
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                        <li key={featureIndex} className="flex items-center text-gray-300"></li>"
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />"
                           {feature}
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  <div className="border-t border-gray-700 pt-6"></div>
-                    <h4 className="text-lg font-semibold text-cyan-400 mb-4">Pricing:</h4>
-                    <div className="space-y-3"></div>
+                  <div className="border-t border-gray-700 pt-6"></div>"
+                    <h4 className="text-lg font-semibold text-cyan-400 mb-4">Pricing:</h4>"
+                    <div className="space-y-3"></div>"
                       {Object.entries(service.pricing).map(([tier, details]) => (
-                        <div key={tier} className="flex justify-between items-center p-3 bg-slate-800/50 rounded-lg"></div>
+                        <div key={tier} className="flex justify-between items-center p-3 bg-slate-800/50 rounded-lg"></div>"
                           <div></div>
-                            <div className="text-white font-semibold capitalize">{tier}</div>
-                            <div className="text-sm text-gray-400">{details.features[0]}</div>
+                            <div className="text-white font-semibold capitalize">{tier}</div>"
+                            <div className="text-sm text-gray-400">{details.features[0]}</div>"
                           </div>
-                          <div className="text-right"></div>
-                            <div className="text-cyan-400 font-bold">{details.price}{details.period}</div>
+                          <div className="text-right"></div>"
+                            <div className="text-cyan-400 font-bold">{details.price}{details.period}</div>"
                           </div>
                         </div>
                       ))}
                     </div>
                   </div>
 
-                  <div className="mt-6 flex gap-3"></div>
-                    <a
-                      href="tel:+13024640950"
-                      className="flex-1 cyber-button text-center py-3"
+                  <div className="mt-6 flex gap-3"></div>"
+                    <a,
+href="tel:+13024640950""
+                      className="flex-1 cyber-button text-center py-3""
                     ></a>
                       Get Started
                     </a>
-                    <a
-                      href="mailto:kleber@ziontechgroup.com"
-                      className="flex-1 bg-slate-800 text-white py-3 px-4 rounded-lg hover:bg-slate-700 transition-colors text-center"
+                    <a,
+href="mailto:kleber@ziontechgroup.com""
+                      className="flex-1 bg-slate-800 text-white py-3 px-4 rounded-lg hover:bg-slate-700 transition-colors text-center""
                     ></a>
                       Learn More
                     </a>
@@ -366,27 +366,27 @@ export default function AIServicesPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20"></section>
-          <div className="container mx-auto px-4 text-center"></div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6"></h2>
+        <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20"></section>"
+          <div className="container mx-auto px-4 text-center"></div>"
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6"></h2>"
               Ready to Transform Your Business with AI?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>"
               Join 500+ companies already using our AI solutions to achieve unprecedented growth and efficiency.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <a
-                href="tel:+13024640950"
-                className="cyber-button inline-flex items-center px-8 py-4 text-lg"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>"
+              <a,
+href="tel:+13024640950""
+                className="cyber-button inline-flex items-center px-8 py-4 text-lg""
               ></a>
-                <Phone className="w-5 h-5 mr-2" />
+                <Phone className="w-5 h-5 mr-2" />"
                 Call (302) 464-0950
               </a>
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="cyber-button inline-flex items-center px-8 py-4 text-lg"
+              <a,
+href="mailto:kleber@ziontechgroup.com""
+                className="cyber-button inline-flex items-center px-8 py-4 text-lg""
               ></a>
-                <Mail className="w-5 h-5 mr-2" />
+                <Mail className="w-5 h-5 mr-2" />"
                 Email Us
               </a>
             </div>

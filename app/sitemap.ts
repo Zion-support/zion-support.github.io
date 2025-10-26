@@ -1,7 +1,7 @@
-import { MetadataRoute } from 'next'
+import { MetadataRoute } from 'next';
 
-export const dynamic = 'force-static'
-export const revalidate = false
+export const dynamic = 'force-static';
+export const revalidate = false;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
@@ -18,16 +18,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: 'https://ziontechgroup.com/services',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
       url: 'https://ziontechgroup.com/contact',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
-  ]
+    {
+      url: 'https://ziontechgroup.com/services',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+  ];
 }

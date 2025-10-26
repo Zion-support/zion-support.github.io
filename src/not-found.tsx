@@ -1,8 +1,8 @@
 import { Phone } from 'lucide-react'
 import { Home } from 'lucide-react'
 
-export default function NotFound
-NotFound.displayName = "NotFound"() {constpopularPages= [
+export default function NotFound,
+NotFound.displayName = "NotFound"() {constpopularPages= ["
     {
       title: 'Home',
       description: 'Return to our homepage',
@@ -69,7 +69,7 @@ NotFound.displayName = "NotFound"() {constpopularPages= [
             The page you&apos;re looking for doesn&apos;t exist or has been moved.
             Don&apos;t worry, let's get you back on track!
         </p></di>{/* PopularPages */}
-      <divclassName=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3gap-4mb-8&quot;>{popularPages.map((pageindex) => (
+      <divclassName=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3gap-4mb-8&quot;></div>{popularPages.map((pageindex) => (
          <akey={index}
               href={page.href}
               className=&quot;block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-left&quot;

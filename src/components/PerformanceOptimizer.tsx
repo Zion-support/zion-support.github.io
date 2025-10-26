@@ -1,5 +1,5 @@
-      // Observe all lazy images
-      document.querySelectorAll('img[data-src]').forEach(img => {
+      // Observe all lazy images,
+document.querySelectorAll('img[data-src]').forEach(img => {
         imageObserver.observe(img);
       } catch (error) {
         // Service Worker registration failed - handled silently in production
@@ -7,14 +7,14 @@
     }
   };
 
-  // Performance monitoring
-  useEffect(() => {
+  // Performance monitoring,
+useEffect(() => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
-            // Track LCP
-            if (typeof window !== 'undefined' && 'gtag' in window) {
+            // Track LCP,
+if (typeof window !== 'undefined' && 'gtag' in window) {
               (window as any).gtag('event', 'web_vitals', {
                 name: 'LCP',
                 value: Math.round(entry.startTime),
@@ -27,8 +27,8 @@ $4});
     }
   }, []);
 
-  // Resource hints optimization
-  const optimizeResourceHints = useCallback(() => {
+  // Resource hints optimization,
+const optimizeResourceHints = useCallback(() => {
     const criticalResources = [
       { href: 'https://fonts.googleapis.com', rel: 'preconnect' },
       { href: 'https://fonts.gstatic.com', rel: 'preconnect', crossorigin: 'anonymous' },
@@ -37,7 +37,7 @@ $4});
     ];
 
     criticalResources.forEach(resource => {
-      if (!document.querySelector(`link[href="${resource.href}"]`)) {
+      if (!document.querySelector(`link[href="${resource.href}"]`)) {"
         const link = document.createElement('link');
         Object.entries(resource).forEach(([key, value]) => {
           link.setAttribute(key, value as string);
@@ -47,8 +47,8 @@ $4});
 
   }, []);
 
-  // Critical CSS inlining
-  const inlineCriticalCSS = useCallback(() => {
+  // Critical CSS inlining,
+const inlineCriticalCSS = useCallback(() => {
     const criticalCSS = `
       .hero-section { opacity: 0; animation: fadeIn 0.6 s ease-out forwards; }
       @keyframes fadeIn { to { opacity: 1; } }
@@ -66,8 +66,8 @@ $4});
   }, []);
 
   useEffect(() => {
-    // Preload critical resources
-    const preloadCriticalResources = () => {
+    // Preload critical resources,
+const preloadCriticalResources = () => {
       const criticalImages = [
         '/images/hero-bg.webp',
         '/images/logo.webp',
@@ -83,24 +83,24 @@ $4});
 
     };
 
-    // Optimize images
-    const optimizeImages = () => {
+    // Optimize images,
+const optimizeImages = () => {
       const images = document.querySelectorAll('img');
       images.forEach(img => {
-        // Add loading="lazy" to non-critical images
+        // Add loading="lazy" to non-critical images"
         if (!img.hasAttribute('loading')) {
           img.setAttribute('loading', 'lazy');
         }
 
-        // Add decoding="async" for better performance
+        // Add decoding="async" for better performance"
         if (!img.hasAttribute('decoding')) {
           img.setAttribute('decoding', 'async');
         }
 
     };
 
-    // Enable service worker for caching
-    const enableServiceWorker = () => {
+    // Enable service worker for caching,
+const enableServiceWorker = () => {
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/sw.js')
           .then(registration => {
@@ -116,13 +116,13 @@ $4});
       }
     };
 
-    // Optimize scroll performance
-    const optimizeScroll = () => {
+    // Optimize scroll performance,
+const optimizeScroll = () => {
       let ticking = false;
 
       const updateScroll = () => {
-        // Throttle scroll events
-        if (!ticking) {
+        // Throttle scroll events,
+if (!ticking) {
           requestAnimationFrame(() => {
             ticking = false;
 
@@ -137,8 +137,8 @@ $4});
       };
     };
 
-    // Initialize optimizations
-    preloadCriticalResources();
+    // Initialize optimizations,
+preloadCriticalResources();
     optimizeImages();
     enableServiceWorker();
     setupIntersectionObserver();
@@ -146,24 +146,24 @@ $4});
     inlineCriticalCSS();
     const cleanupScroll = optimizeScroll();
 
-    // Cleanup on unmount
-    return () => {
+    // Cleanup on unmount,
+return () => {
       cleanupScroll();
     };
   }, [setupIntersectionObserver, optimizeResourceHints, inlineCriticalCSS]);
 
-  // Add performance monitoring
-  useEffect(() => {
-    // Monitor Core Web Vitals
-    const monitorWebVitals = () => {
+  // Add performance monitoring,
+useEffect(() => {
+    // Monitor Core Web Vitals,
+const monitorWebVitals = () => {
       if ('web-vitals' in window) {
         import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
           const logMetric = (metric: any) => {
             if (process.env.NODE_ENV === 'development') {
 
             }
-            // Send to analytics in production
-            if (process.env.NODE_ENV === 'production') {
+            // Send to analytics in production,
+if (process.env.NODE_ENV === 'production') {
               // Send to analytics service
             }
           };
@@ -213,10 +213,10 @@ const,
   const optimizeImages = () => {/* TODO: Fix JSX expression */}
       }
       
-      // Add decoding="async" for better performance;
+      // Add decoding="async" for better performance;"
       img.setAttribute('decoding', 'async');
-      "
-      // Add fetchpriority="high" for above-the-fold images;
+      ""
+      // Add fetchpriority="high" for above-the-fold images;"
       if (img.getBoundingClientRect().top <= window.innerHeight) {/* TODO: Fix JSX expression */}
       }
       
@@ -327,15 +327,15 @@ const,
   }, []);
 
   const preloadCriticalResources = useCallback(() => {
-    // Preload critical fonts
-    const fontLink = document.createElement('link');
+    // Preload critical fonts,
+const fontLink = document.createElement('link');
     fontLink.rel = 'preload';
     fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap';
     fontLink.as = 'style';
     document.head.appendChild(fontLink);
 
-    // Preload critical images
-    const criticalImages = [
+    // Preload critical images,
+const criticalImages = [
       '/logo.png',
       '/og-image.svg'];
 
@@ -349,8 +349,8 @@ const,
   }, []);
 
   const optimizeThirdPartyScripts = useCallback(() => {
-    // Defer non-critical scripts
-    const scripts = document.querySelectorAll('script[src]');
+    // Defer non-critical scripts,
+const scripts = document.querySelectorAll('script[src]');
     scripts.forEach((script) => {
       if (!script.hasAttribute('defer') && !script.hasAttribute('async')) {
         script.setAttribute('defer', '');
@@ -359,21 +359,21 @@ const,
   }, []);
 
   useEffect(() => {
-    // Collect performance metrics after page load
-    if (document.readyState === 'complete') {
+    // Collect performance metrics after page load,
+if (document.readyState === 'complete') {
       collectWebVitals();
     } else {
       window.addEventListener('load', collectWebVitals);
     }
 
-    // Optimize images
-    optimizeImages();
+    // Optimize images,
+optimizeImages();
 
-    // Preload critical resources
-    preloadCriticalResources();
+    // Preload critical resources,
+preloadCriticalResources();
 
-    // Optimize third-party scripts
-    optimizeThirdPartyScripts();
+    // Optimize third-party scripts,
+optimizeThirdPartyScripts();
 
     return () => {
       window.removeEventListener('load', collectWebVitals);
@@ -383,4 +383,4 @@ const,
   return null;
 };
 
-export default PerformanceOptimizer;"
+export default PerformanceOptimizer;""

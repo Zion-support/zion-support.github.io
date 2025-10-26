@@ -1,3 +1,4 @@
+import { Mail } from 'lucide-react';
 'use client';
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
@@ -110,12 +111,12 @@ const Footer: React.FC = memo(() => {
   ];
 
   return (
-    <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid"></footer>
+    <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid"></footer>"
       {/* Main Footer Content */}
-      <div className="container mx-auto px-4 py-16"></div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+      <div className="container mx-auto px-4 py-16"></div>"
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>"
           {/* Company Info */}
-              <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
+              <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>"
               Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services.
                   +1 302 464 0950;
                   kleber@ziontechgroup.com;
@@ -129,10 +130,10 @@ const Footer: React.FC = memo(() => {
 
           {/* AI & IT Services */}
               AI & IT Services;
-                <h4 className="text-white font-medium mb-2">AI Services</h4>
+                <h4 className="text-white font-medium mb-2">AI Services</h4>"
                         {service.name}
                   ))}
-                <h4 className="text-white font-medium mb-2">IT Services</h4>
+                <h4 className="text-white font-medium mb-2">IT Services</h4>"
                         {service.name}
                   ))}
 
@@ -145,24 +146,24 @@ const Footer: React.FC = memo(() => {
 
           {/* AI Services */}
           <div></div>
-            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">AI Services</h3>
-            <ul className="space-y-3"></ul>
+            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">AI Services</h3>"
+            <ul className="space-y-3"></ul>"
               {aiServices.slice(0, 8).map((service, index) => (
                 <li key={index}></li>
-                  <Link
-                    to={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
+                  <Link,
+to={service.url}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center""
                   ></Link>
-                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />"
                     {service.name}
                   </Link>
-                  <p className="text-xs text-gray-500 ml-5">{service.description}</p>
+                  <p className="text-xs text-gray-500 ml-5">{service.description}</p>"
                 </li>
               ))}
               <li></li>
-                <Link
-                  to="/ai-services"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
+                <Link,
+to="/ai-services""
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium""
                 ></Link>
                   View All AI Services →
                 </Link>
@@ -172,24 +173,24 @@ const Footer: React.FC = memo(() => {
 
           {/* IT Services */}
           <div></div>
-            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">IT Services</h3>
-            <ul className="space-y-3"></ul>
+            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">IT Services</h3>"
+            <ul className="space-y-3"></ul>"
               {itServices.slice(0, 8).map((service, index) => (
                 <li key={index}></li>
-                  <Link
-                    to={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
+                  <Link,
+to={service.url}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center""
                   ></Link>
-                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />"
                     {service.name}
                   </Link>
-                  <p className="text-xs text-gray-500 ml-5">{service.description}</p>
+                  <p className="text-xs text-gray-500 ml-5">{service.description}</p>"
                 </li>
               ))}
               <li></li>
-                <Link
-                  to="/it-services"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
+                <Link,
+to="/it-services""
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium""
                 ></Link>
                   View All IT Services →
                 </Link>
@@ -199,24 +200,24 @@ const Footer: React.FC = memo(() => {
 
           {/* Emerging Technologies */}
           <div></div>
-            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">Emerging Tech</h3>
-            <ul className="space-y-3"></ul>
+            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">Emerging Tech</h3>"
+            <ul className="space-y-3"></ul>"
               {emergingTech.slice(0, 8).map((service, index) => (
                 <li key={index}></li>
-                  <Link
-                    to={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
+                  <Link,
+to={service.url}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center""
                   ></Link>
-                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />"
                     {service.name}
                   </Link>
-                  <p className="text-xs text-gray-500 ml-5">{service.description}</p>
+                  <p className="text-xs text-gray-500 ml-5">{service.description}</p>"
                 </li>
               ))}
               <li></li>
-                <Link
-                  to="/quantum-computing"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
+                <Link,
+to="/quantum-computing""
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium""
                 ></Link>
                   View All Technologies →
                 </Link>
@@ -251,43 +252,43 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-slate-900 border-t border-gray-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <footer className="bg-slate-900 border-t border-gray-800">"
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"></div>"
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>"
           {/* Company Info */}
-          <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
+          <div className="space-y-4"></div>"
+            <div className="flex items-center space-x-2"></div>"
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center"></div>"
+                <Brain className="w-5 h-5 text-white" />"
               </div>
-              <span className="text-xl font-bold text-white">Zion Tech Group</span>
+              <span className="text-xl font-bold text-white">Zion Tech Group</span>"
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed">
+            <p className="text-gray-400 text-sm leading-relaxed">"
               Leading provider of AI solutions, cybersecurity, cloud services, and 5G technology. 
               Transform your business with cutting-edge technology.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Twitter className="w-5 h-5" />
+            <div className="flex space-x-4"></div>"
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">"
+                <Twitter className="w-5 h-5" />"
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Linkedin className="w-5 h-5" />
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">"
+                <Linkedin className="w-5 h-5" />"
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Github className="w-5 h-5" />
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">"
+                <Github className="w-5 h-5" />"
               </a>
             </div>
           </div>
 
           {/* Services */}
-          <div>
-            <h3 className="text-white font-semibold mb-4">Services</h3>
-            <ul className="space-y-2">
+          <div></div>
+            <h3 className="text-white font-semibold mb-4">Services</h3>"
+            <ul className="space-y-2">"
               {services.map((service) => (
                 <li key={service.name}>
-                  <Link
-                    to={service.path}
-                    className="text-gray-400 hover:text-white transition-colors text-sm"
+                  <Link,
+to={service.path}
+                    className="text-gray-400 hover:text-white transition-colors text-sm""
                   >
                     {service.name}
                   </Link>
@@ -297,14 +298,14 @@ const Footer = () => {
           </div>
 
           {/* Company */}
-          <div>
-            <h3 className="text-white font-semibold mb-4">Company</h3>
-            <ul className="space-y-2">
+          <div></div>
+            <h3 className="text-white font-semibold mb-4">Company</h3>"
+            <ul className="space-y-2">"
               {company.map((item) => (
                 <li key={item.name}>
-                  <Link
-                    to={item.path}
-                    className="text-gray-400 hover:text-white transition-colors text-sm"
+                  <Link,
+to={item.path}
+                    className="text-gray-400 hover:text-white transition-colors text-sm""
                   >
                     {item.name}
                   </Link>
@@ -314,14 +315,14 @@ const Footer = () => {
           </div>
 
           {/* Resources */}
-          <div>
-            <h3 className="text-white font-semibold mb-4">Resources</h3>
-            <ul className="space-y-2">
+          <div></div>
+            <h3 className="text-white font-semibold mb-4">Resources</h3>"
+            <ul className="space-y-2">"
               {resources.map((resource) => (
                 <li key={resource.name}>
-                  <Link
-                    to={resource.path}
-                    className="text-gray-400 hover:text-white transition-colors text-sm"
+                  <Link,
+to={resource.path}
+                    className="text-gray-400 hover:text-white transition-colors text-sm""
                   >
                     {resource.name}
                   </Link>
@@ -332,34 +333,34 @@ const Footer = () => {
         </div>
 
         {/* Contact Info */}
-        <div className="mt-8 pt-8 border-t border-gray-800">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-400">
-            <div className="flex items-center space-x-2">
-              <Mail className="w-4 h-4" />
+        <div className="mt-8 pt-8 border-t border-gray-800"></div>"
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-400"></div>"
+            <div className="flex items-center space-x-2"></div>"
+              <Mail className="w-4 h-4" />"
               <span>info@ziontechgroup.com</span>
             </div>
-            <div className="flex items-center space-x-2">
-              <Phone className="w-4 h-4" />
+            <div className="flex items-center space-x-2"></div>"
+              <Phone className="w-4 h-4" />"
               <span>+1 (555) 123-4567</span>
             </div>
-            <div className="flex items-center space-x-2">
-              <MapPin className="w-4 h-4" />
+            <div className="flex items-center space-x-2"></div>"
+              <MapPin className="w-4 h-4" />"
               <span>San Francisco, CA</span>
             </div>
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="mt-8 pt-8 border-t border-gray-800">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
+        <div className="mt-8 pt-8 border-t border-gray-800"></div>"
+          <div className="flex flex-col md:flex-row justify-between items-center"></div>"
+            <p className="text-gray-400 text-sm">"
               © 2024 Zion Tech Group. All rights reserved.
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link to="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <div className="flex space-x-6 mt-4 md:mt-0"></div>"
+              <Link to="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">"
                 Privacy Policy
               </Link>
-              <Link to="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link to="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">"
                 Terms of Service
               </Link>
             </div>

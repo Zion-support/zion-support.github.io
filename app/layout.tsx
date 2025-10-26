@@ -3,7 +3,6 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-import FuturisticBackground from './components/FuturisticBackground';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
@@ -22,6 +21,11 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Zion Tech Group - AI & IT Solutions',
+    description: 'Leading provider of AI and IT solutions for businesses worldwide.',
+  },
 };
 
 export default function RootLayout({
@@ -32,16 +36,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          <FuturisticBackground />
-          <Navigation />
-          <main className="relative z-10">
-            {children}
-          </main>
-          <Footer />
-          <PerformanceMonitor />
-          <AccessibilityEnhancer />
-        </div>
+        <Navigation />
+        <main>{children}</main>
+        <Footer />
+        <PerformanceMonitor />
+        <AccessibilityEnhancer />
       </body>
     </html>
   );
