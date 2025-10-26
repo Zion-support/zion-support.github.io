@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { ArrowRight, Brain, Shield, Users, Award, CheckCircle } from 'lucide-react';
+import { Brain, Shield, Users, CheckCircle } from 'lucide-react';
 
 export default function TestPage() {
   const features = [

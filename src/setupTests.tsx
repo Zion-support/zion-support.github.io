@@ -2,7 +2,7 @@
 /**
  * Jest setup file for testing environment
  */
-/* eslint-disable no-console */
+ 
 import '@testing-library/jest-dom';
 // Polyfill for TextEncoder/TextDecoder,
 import { TextEncoder, TextDecoder } from 'util';
@@ -11,7 +11,7 @@ global.TextDecoder = TextDecoder as any;
 // Suppress jsdom navigation warnings,
 const originalConsoleError = console.error;
 const originalConsoleError = console.error;
-// eslint-disable-next-line no-console,
+ 
 const originalConsoleError = console.error;
 const __originalConsoleError = console.error;
 import { TextEncoder, TextDecoder } from 'util';
@@ -67,17 +67,17 @@ Object.defineProperty(window, 'sessionStorage', {
 // Mock fetch,
 global.fetch = jest.fn();
 // Mock console methods for cleaner test output
-// eslint-disable-next-line no-console,
+ 
 const originalConsoleWarn = console.warn;
 const originalConsoleInfo = console.info;
-// eslint-disable-next-line no-console,
+ 
 const originalConsoleWarn = console.warn;
 const originalConsoleInfo = console.info;
 const originalConsoleWarn = console.warn;
 const originalConsoleInfo = console.info;
 const originalConsoleWarn = console.warn;
 const originalConsoleInfo = console.info;
-// eslint-disable-next-line no-console,
+ 
 const originalConsoleWarn = console.warn;
 const originalConsoleInfo = console.info;
 const originalConsoleWarn = console.warn;
@@ -89,7 +89,7 @@ console.warn = (...args) => {
   }
   originalConsoleWarn(...args);
 };
-// eslint-disable-next-line no-console,
+ 
 console.info = (...args) => {
   const message = args[0]?.toString?.() || '';
   if (message.includes('ReactDOM.render is no longer supported')) {

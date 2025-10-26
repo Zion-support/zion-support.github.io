@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { ArrowRight, Brain, Shield, Users, Award } from 'lucide-react';
+import { ArrowRight, Brain, Shield, Users } from 'lucide-react';
 
 export default function AboutPage() {
   return (

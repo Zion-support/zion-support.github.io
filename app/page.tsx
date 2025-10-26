@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+import { CheckCircle, ArrowRight, Brain, BarChart, Target } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - AI & IT Solutions',

@@ -42,7 +42,7 @@ const PerformanceMonitor: React.FC = () => {
   }, []);
 
   // Only show in development
-  if (process.env.NODE_ENV !== 'development' || !metrics) {
+  if (typeof window !== 'undefined' && window.location.hostname !== 'localhost' || !metrics) {
     return null;
   }
 

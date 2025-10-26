@@ -8,7 +8,6 @@ import reactRefresh from 'eslint-plugin-react-refresh';
 export default [
   {ignores: ['dist']},
   {
-    extends: [js.configs.recommended],
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2020,
@@ -21,6 +20,7 @@ export default [
       'react-refresh': reactRefresh,
     },
     rules: {
+      ...js.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': [
         'warn',

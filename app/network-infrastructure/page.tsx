@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone, Globe, CheckCircle, Network, Server, Wifi, Router, Database, Settings, Clock, Star, TrendingUp, Phone, MapPin } from 'lucide-react';
+import { ArrowRight, Shield, Mail, CheckCircle, Network, Server, Wifi, Router, Database, Clock, Star, TrendingUp, Phone, MapPin } from 'lucide-react';
 
 export default function NetworkInfrastructurePage() {
   const features = [
