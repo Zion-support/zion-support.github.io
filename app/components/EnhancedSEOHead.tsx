@@ -1,2 +1,9 @@
+import React from 'react';
 
-export default EnhancedSEOHead;
+interface SEOHeadProps {
+  title?: string;
+  description?: string;
+  className?: string;
+}
+
+export default SEOHead;

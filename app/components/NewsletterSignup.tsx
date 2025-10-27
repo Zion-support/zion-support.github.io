@@ -1,9 +1,12 @@
 import React from 'react';
 
 interface NewsletterSignupProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-    </div>
-  );
-};
+export default NewsletterSignup;
+
+export default NewsletterSignup;
 
 export default NewsletterSignup;

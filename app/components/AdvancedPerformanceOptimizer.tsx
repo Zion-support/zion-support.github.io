@@ -5,3 +5,6 @@ interface AdvancedPerformanceOptimizerProps {
   children?: React.ReactNode;
 }
 
+export default AdvancedPerformanceOptimizer;
+
+export default AdvancedPerformanceOptimizer;

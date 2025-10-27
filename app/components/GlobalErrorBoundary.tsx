@@ -5,3 +5,6 @@ interface GlobalErrorBoundaryProps {
   children?: React.ReactNode;
 }
 
+export default GlobalErrorBoundary;
+
+export default GlobalErrorBoundary;

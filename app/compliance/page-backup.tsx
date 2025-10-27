@@ -1,11 +1,10 @@
-'use client';
-
+'use client'
 import React from 'react';
+
+
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Shield, CheckCircle, Clock, Database, Lock, ArrowRight, } from 'lucide-react';
-
-const CompliancePageBackup: React.FC = () => {
+import { ShieldCircle, Lock, } from 'lucide-react';
 
   const features = [
     {
