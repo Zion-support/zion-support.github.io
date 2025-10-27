@@ -1,18 +1,16 @@
+'use client'
 import React from 'react';
+
 interface AccessibilityEnhancerProps {
   className?: string;
   children?: React.ReactNode;
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ 
-  className = '', 
-  children 
+  className: _className = '', 
+  children: _children 
 }) => {
-  return (
-    <div className={'accessibilityenhancer ' + className}>
-      {children || <p>AccessibilityEnhancer component</p>}
-    </div>
-  );
+  return null; // Hidden component for accessibility enhancements
 };
 
 export default AccessibilityEnhancer;
