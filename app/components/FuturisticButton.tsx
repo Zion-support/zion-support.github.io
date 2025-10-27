@@ -1,4 +1,7 @@
 import React from 'react';
+export type FuturisticButtonProps = {
+  // Add your props here
+};
 
 interface FuturisticButtonProps {
   className?: string;
