@@ -1,4 +1,3 @@
-import React from 'react';
 interface ErrorBoundaryProps {
   className?: string;
   children?: React.ReactNode;

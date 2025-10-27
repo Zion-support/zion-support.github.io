@@ -1,4 +1,3 @@
-import React from 'react';
 interface EnhancedSEOOptimizerProps {
   className?: string;
   children?: React.ReactNode;

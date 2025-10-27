@@ -1,4 +1,3 @@
-import React from 'react';
 interface SEOHeadWrapperProps {
   className?: string;
   children?: React.ReactNode;

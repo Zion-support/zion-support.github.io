@@ -1,7 +1,4 @@
 'use client'
-import React from 'react';
-
-
 function Pagee6066idyw() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">

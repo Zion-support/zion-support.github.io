@@ -3,8 +3,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { Home } from 'lucide-react';
-
-
 const Navigation: React.FC = () => {
   return (
     <nav className="bg-white shadow-lg">
