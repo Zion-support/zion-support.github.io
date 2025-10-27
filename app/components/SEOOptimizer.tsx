@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface SEOOptimizerProps {
+interface _SEOOptimizerProps {
   className?: string;
   children?: React.ReactNode;
 }

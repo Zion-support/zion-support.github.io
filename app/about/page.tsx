@@ -1,9 +1,10 @@
+import React from 'react';
 
 import Link from 'next/link';
 import { Metadata} from 'next';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, Users, Target, Award, ArrowRight, } from 'lucide-react';
+import { CheckCircle, Target, Award, ArrowRight, Users } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'About Us - Zion Tech Group',

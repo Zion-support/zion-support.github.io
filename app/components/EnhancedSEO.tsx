@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface EnhancedSEOProps {
+interface _EnhancedSEOProps {
   className?: string;
   children?: React.ReactNode;
 }

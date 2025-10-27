@@ -11,7 +11,6 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ['@heroicons/react', 'lucide-react', 'framer-motion'],
     webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB'],
-    missingSuspenseWithCSRBailout: false,
   },
   
   // Generate build ID for better caching

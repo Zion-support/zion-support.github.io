@@ -1,5 +1,8 @@
 import React from 'react';
 
+interface EnhancedHeroProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
 const EnhancedHero: React.FC<EnhancedHeroProps> = ({ 
