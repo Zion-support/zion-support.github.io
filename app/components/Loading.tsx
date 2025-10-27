@@ -1,9 +1,5 @@
 
 import React from 'react';
-export type LoadingProps = {
-  // Add your props here
-};
-
 interface LoadingProps {
   className?: string;
   children?: React.ReactNode;

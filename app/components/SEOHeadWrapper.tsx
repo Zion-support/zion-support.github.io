@@ -1,8 +1,4 @@
 import React from 'react';
-export type SEOHeadWrapperProps = {
-  // Add your props here
-};
-
 interface SEOHeadWrapperProps {
   className?: string;
   children?: React.ReactNode;

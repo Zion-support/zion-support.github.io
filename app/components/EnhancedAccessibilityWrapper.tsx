@@ -1,8 +1,4 @@
 import React from 'react';
-export type EnhancedAccessibilityWrapperProps = {
-  // Add your props here
-};
-
 interface EnhancedAccessibilityWrapperProps {
   className?: string;
   children?: React.ReactNode;

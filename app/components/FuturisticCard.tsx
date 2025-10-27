@@ -1,8 +1,4 @@
 import React from 'react';
-export type FuturisticCardProps = {
-  // Add your props here
-};
-
 interface FuturisticCardProps {
   className?: string;
   children?: React.ReactNode;
