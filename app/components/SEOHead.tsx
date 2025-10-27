@@ -1,17 +1,9 @@
-import React from 'react';
 
-interface SEOHeadProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const SEOHead: React.FC<SEOHeadProps> = ({ 
-  className = '', 
-  children 
-}) => {
+const SEOHead = () => {
   return (
-    <div className={'seohead ' + className}>
-      {children || <p>SEOHead component</p>}
+    <div className="p-4">
+      <h2>SEOHead</h2>
+      <p>Component implementation coming soon...</p>
     </div>
   );
 };

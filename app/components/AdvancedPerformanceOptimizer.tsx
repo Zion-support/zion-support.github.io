@@ -1,14 +1,14 @@
-import React from 'react';
+import React from 'react'
 
 interface AdvancedPerformanceOptimizerProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({ className, children }) => {
+const AdvancedPerformanceOptimizer = ({ className, children }: AdvancedPerformanceOptimizerProps) => {
   return (
     <div className={`advancedperformanceoptimizer-component ${className || ''}`}>
-      {children}
+      {children || <p>Advanced Performance Optimizer component</p>}
     </div>
   );
 };

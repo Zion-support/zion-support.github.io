@@ -1,14 +1,15 @@
-import React from 'react';
-
 interface EnhancedSEOOptimizerProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({ className, children }) => {
+const EnhancedSEOOptimizer = ({ 
+  className = '', 
+  children 
+}: EnhancedSEOOptimizerProps) => {
   return (
-    <div className={`enhancedseooptimizer-component ${className || ''}`}>
-      {children}
+    <div className={'enhancedseooptimizer ' + className}>
+      {children || <p>EnhancedSEOOptimizer component</p>}
     </div>
   );
 };

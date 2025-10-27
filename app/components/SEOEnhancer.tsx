@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 interface SEOEnhancerProps {
@@ -16,5 +15,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     </div>
   );
 };
+
+SEOEnhancer.displayName = 'SEOEnhancer';
 
 export default SEOEnhancer;

@@ -1,17 +1,9 @@
-import React from 'react';
 
-interface PerformanceDashboardProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({ 
-  className = '', 
-  children 
-}) => {
+const PerformanceDashboard = () => {
   return (
-    <div className={'performancedashboard ' + className}>
-      {children || <p>PerformanceDashboard component</p>}
+    <div className="p-4">
+      <h2>PerformanceDashboard</h2>
+      <p>Component implementation coming soon...</p>
     </div>
   );
 };

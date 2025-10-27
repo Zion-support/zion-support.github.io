@@ -1,14 +1,9 @@
-import React from 'react';
 
-interface SecurityEnhancerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ className, children }) => {
+const SecurityEnhancer = () => {
   return (
-    <div className={`securityenhancer-component ${className || ''}`}>
-      {children}
+    <div className="p-4">
+      <h2>SecurityEnhancer</h2>
+      <p>Component implementation coming soon...</p>
     </div>
   );
 };

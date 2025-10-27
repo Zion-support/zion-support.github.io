@@ -1,17 +1,9 @@
-import React from 'react';
 
-interface LoadingSpinnerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
-  className = '', 
-  children 
-}) => {
+const LoadingSpinner = () => {
   return (
-    <div className={'loadingspinner ' + className}>
-      {children || <p>LoadingSpinner component</p>}
+    <div className="p-4">
+      <h2>LoadingSpinner</h2>
+      <p>Component implementation coming soon...</p>
     </div>
   );
 };

@@ -1,14 +1,9 @@
-import React from 'react';
 
-interface PerformanceOptimizerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className, children }) => {
+const PerformanceOptimizer = () => {
   return (
-    <div className={`performanceoptimizer-component ${className || ''}`}>
-      {children}
+    <div className="p-4">
+      <h2>PerformanceOptimizer</h2>
+      <p>Component implementation coming soon...</p>
     </div>
   );
 };

@@ -1,17 +1,9 @@
-import React from 'react';
 
-interface EnhancedSkipLinkProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const EnhancedSkipLink: React.FC<EnhancedSkipLinkProps> = ({ 
-  className = '', 
-  children 
-}) => {
+const EnhancedSkipLink = () => {
   return (
-    <div className={'enhancedskiplink ' + className}>
-      {children || <p>EnhancedSkipLink component</p>}
+    <div className="p-4">
+      <h2>EnhancedSkipLink</h2>
+      <p>Component implementation coming soon...</p>
     </div>
   );
 };

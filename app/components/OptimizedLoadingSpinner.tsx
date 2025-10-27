@@ -1,17 +1,9 @@
-import React from 'react';
 
-interface OptimizedLoadingSpinnerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = ({ 
-  className = '', 
-  children 
-}) => {
+const OptimizedLoadingSpinner = () => {
   return (
-    <div className={'optimizedloadingspinner ' + className}>
-      {children || <p>OptimizedLoadingSpinner component</p>}
+    <div className="p-4">
+      <h2>OptimizedLoadingSpinner</h2>
+      <p>Component implementation coming soon...</p>
     </div>
   );
 };

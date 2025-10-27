@@ -1,14 +1,15 @@
-import React from 'react';
-
 interface EnhancedPerformanceMonitorProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = ({ className, children }) => {
+const EnhancedPerformanceMonitor = ({ 
+  className = '', 
+  children 
+}: EnhancedPerformanceMonitorProps) => {
   return (
-    <div className={`enhancedperformancemonitor-component ${className || ''}`}>
-      {children}
+    <div className={'enhancedperformancemonitor ' + className}>
+      {children || <p>EnhancedPerformanceMonitor component</p>}
     </div>
   );
 };

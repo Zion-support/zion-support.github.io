@@ -1,14 +1,14 @@
-import React from 'react';
+import React from 'react'
 
 interface AdvancedPerformanceMonitorProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({ className, children }) => {
+const AdvancedPerformanceMonitor = ({ className, children }: AdvancedPerformanceMonitorProps) => {
   return (
     <div className={`advancedperformancemonitor-component ${className || ''}`}>
-      {children}
+      {children || <p>Advanced Performance Monitor component</p>}
     </div>
   );
 };
