@@ -1,10 +1,8 @@
 'use client'
 import React from 'react';
-
-
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { ShieldCircle, Lock, , ArrowRight} from 'lucide-react';
+import { Shield, Database, Lock, CheckCircle, Clock, ArrowRight } from 'lucide-react';
 
   const features = [
     {
@@ -33,7 +31,7 @@ import { ShieldCircle, Lock, , ArrowRight} from 'lucide-react';
     { label: 'Recovery Time', value: '< 1 min', icon: Clock }
   ];
 
-export default function pagefixedPage() {
+export default function PageFixedPage() {
   return (
     <>
       <Navigation />
@@ -134,4 +132,3 @@ export default function pagefixedPage() {
   );
 }
 
-export default CompliancePageFixed;

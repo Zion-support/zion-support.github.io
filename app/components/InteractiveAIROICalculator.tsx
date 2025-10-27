@@ -14,7 +14,7 @@ const InteractiveAIROICalculator = () => {
   };
   
   const roi = calculateROI();
-export default function InteractiveAIROICalculatorPage() {
+
   return (
     <section className='bg-white py-16 rounded-2xl shadow-lg'>
       <div className='container mx-auto px-4'>
