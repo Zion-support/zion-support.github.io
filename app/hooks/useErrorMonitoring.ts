@@ -6,7 +6,7 @@ export const useErrorMonitoring = () => {
     const handleError = (error: ErrorEvent) => {
       console.error('Error caught:', error);
     };
-
+    
     window.addEventListener('error', handleError);
     return () => window.removeEventListener('error', handleError);
   }, []);
