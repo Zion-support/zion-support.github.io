@@ -1,4 +1,6 @@
 
+import React from 'react';
+
 interface ContactPageProps {
   className?: string;
   children?: React.ReactNode;
