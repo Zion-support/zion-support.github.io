@@ -1,6 +1,8 @@
 import React from 'react';
 
 interface ServiceTemplateProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
 const ServiceTemplate: React.FC<ServiceTemplateProps> = ({ 
