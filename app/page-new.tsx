@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+// import Navigation from '../components/Navigation';
+// import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 
 const PageNew: React.FC = () => {
@@ -44,7 +44,7 @@ const PageNew: React.FC = () => {
   return (
     <>
             {/* SEO handled by layout.tsx */}
-      <Navigation />
+      {/* <Navigation /> */}
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
@@ -135,7 +135,7 @@ const PageNew: React.FC = () => {
           </div>
         </section>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

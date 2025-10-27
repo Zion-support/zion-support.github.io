@@ -2,6 +2,8 @@ import React from 'react'
 
 
 interface HomePageProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
 const HomePage: React.FC<HomePageProps> = ({ 
