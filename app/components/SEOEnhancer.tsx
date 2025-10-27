@@ -1,4 +1,6 @@
 
+import React from 'react';
+
 interface SEOEnhancerProps {
   className?: string;
   children?: React.ReactNode;

@@ -1,10 +1,14 @@
 import React from 'react';
 
-interface _SEOOptimizerProps {
+interface SEOOptimizerProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-export default SEOOptimizer;
-
-export default SEOOptimizer;
+export default function SEOOptimizer({ className, children }: SEOOptimizerProps) {
+  return (
+    <div className={`seo-optimizer ${className || ''}`}>
+      {children}
+    </div>
+  );
+}
