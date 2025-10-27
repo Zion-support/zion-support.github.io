@@ -1,7 +1,4 @@
 'use client';
-import React from 'react';
-
-
 function Pageewcsldar8() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -18,7 +15,5 @@ function Pageewcsldar8() {
     </div>
   );
 }
-
 Pageewcsldar8.displayName = '';
-
 export default Pageewcsldar8;

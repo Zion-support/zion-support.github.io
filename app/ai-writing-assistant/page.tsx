@@ -1,7 +1,4 @@
 'use client';
-import React from 'react';
-
-
 function Pagec13pha0rd() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -18,7 +15,5 @@ function Pagec13pha0rd() {
     </div>
   );
 }
-
 Pagec13pha0rd.displayName = '';
-
 export default Pagec13pha0rd;

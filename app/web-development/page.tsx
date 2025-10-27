@@ -1,7 +1,4 @@
 'use client';
-import React from 'react';
-
-
 function Pager2thr7hz7() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -18,7 +15,5 @@ function Pager2thr7hz7() {
     </div>
   );
 }
-
 Pager2thr7hz7.displayName = '';
-
 export default Pager2thr7hz7;

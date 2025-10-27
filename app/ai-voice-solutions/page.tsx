@@ -1,7 +1,4 @@
 'use client';
-import React from 'react';
-
-
 function Pagexadqfpiar() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -18,7 +15,5 @@ function Pagexadqfpiar() {
     </div>
   );
 }
-
 Pagexadqfpiar.displayName = '';
-
 export default Pagexadqfpiar;

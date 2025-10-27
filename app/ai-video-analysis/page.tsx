@@ -1,7 +1,4 @@
 'use client';
-import React from 'react';
-
-
 function Pagec87s1lvdn() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -18,7 +15,5 @@ function Pagec87s1lvdn() {
     </div>
   );
 }
-
 Pagec87s1lvdn.displayName = '';
-
 export default Pagec87s1lvdn;

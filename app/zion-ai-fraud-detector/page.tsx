@@ -1,7 +1,4 @@
 'use client';
-import React from 'react';
-
-
 function Pageruf1mas18() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -18,7 +15,5 @@ function Pageruf1mas18() {
     </div>
   );
 }
-
 Pageruf1mas18.displayName = '';
-
 export default Pageruf1mas18;

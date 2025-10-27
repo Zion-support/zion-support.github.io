@@ -1,7 +1,4 @@
 'use client';
-import React from 'react';
-
-
 function Pageovl325ayw() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -18,7 +15,5 @@ function Pageovl325ayw() {
     </div>
   );
 }
-
 Pageovl325ayw.displayName = '';
-
 export default Pageovl325ayw;

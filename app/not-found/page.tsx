@@ -1,7 +1,4 @@
 'use client';
-import React from 'react';
-
-
 function Pagenhizgwccm() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -18,7 +15,5 @@ function Pagenhizgwccm() {
     </div>
   );
 }
-
 Pagenhizgwccm.displayName = '';
-
 export default Pagenhizgwccm;

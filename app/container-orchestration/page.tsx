@@ -1,7 +1,4 @@
 'use client';
-import React from 'react';
-
-
 function Pageiio7em425() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -18,7 +15,5 @@ function Pageiio7em425() {
     </div>
   );
 }
-
 Pageiio7em425.displayName = '';
-
 export default Pageiio7em425;

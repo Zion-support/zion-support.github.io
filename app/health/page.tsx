@@ -1,7 +1,4 @@
 'use client';
-import React from 'react';
-
-
 function Page2zy8015xp() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -18,7 +15,5 @@ function Page2zy8015xp() {
     </div>
   );
 }
-
 Page2zy8015xp.displayName = '';
-
 export default Page2zy8015xp;

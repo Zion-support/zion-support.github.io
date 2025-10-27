@@ -1,7 +1,4 @@
 'use client';
-import React from 'react';
-
-
 function Pagen57ispqux() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -18,7 +15,5 @@ function Pagen57ispqux() {
     </div>
   );
 }
-
 Pagen57ispqux.displayName = '';
-
 export default Pagen57ispqux;

@@ -1,7 +1,4 @@
 'use client';
-import React from 'react';
-
-
 function Page5udwdodge() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -18,7 +15,5 @@ function Page5udwdodge() {
     </div>
   );
 }
-
 Page5udwdodge.displayName = '';
-
 export default Page5udwdodge;

@@ -1,7 +1,4 @@
 'use client';
-import React from 'react';
-
-
 function Pagerda6of9em() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -18,7 +15,5 @@ function Pagerda6of9em() {
     </div>
   );
 }
-
 Pagerda6of9em.displayName = '';
-
 export default Pagerda6of9em;

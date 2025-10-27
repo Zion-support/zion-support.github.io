@@ -1,7 +1,4 @@
 'use client';
-import React from 'react';
-
-
 function Page814q40kfl() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -18,7 +15,5 @@ function Page814q40kfl() {
     </div>
   );
 }
-
 Page814q40kfl.displayName = '';
-
 export default Page814q40kfl;

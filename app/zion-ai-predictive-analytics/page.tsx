@@ -1,7 +1,4 @@
 'use client';
-import React from 'react';
-
-
 function Pagesov8xbxwf() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -18,7 +15,5 @@ function Pagesov8xbxwf() {
     </div>
   );
 }
-
 Pagesov8xbxwf.displayName = '';
-
 export default Pagesov8xbxwf;

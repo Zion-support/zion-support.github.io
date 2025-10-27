@@ -1,7 +1,4 @@
 'use client';
-import React from 'react';
-
-
 function Pagewumt4h1y3() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -18,7 +15,5 @@ function Pagewumt4h1y3() {
     </div>
   );
 }
-
 Pagewumt4h1y3.displayName = '';
-
 export default Pagewumt4h1y3;

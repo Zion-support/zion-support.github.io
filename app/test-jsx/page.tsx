@@ -1,7 +1,4 @@
 'use client';
-import React from 'react';
-
-
 function Pagenlpg8ex2d() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -18,7 +15,5 @@ function Pagenlpg8ex2d() {
     </div>
   );
 }
-
 Pagenlpg8ex2d.displayName = '';
-
 export default Pagenlpg8ex2d;

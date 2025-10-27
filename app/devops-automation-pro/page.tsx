@@ -1,7 +1,4 @@
 'use client';
-import React from 'react';
-
-
 function Pagebafal0gkr() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -18,7 +15,5 @@ function Pagebafal0gkr() {
     </div>
   );
 }
-
 Pagebafal0gkr.displayName = '';
-
 export default Pagebafal0gkr;

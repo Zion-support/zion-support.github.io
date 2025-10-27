@@ -1,7 +1,4 @@
 'use client';
-import React from 'react';
-
-
 function Pagekrp4zotoc() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -18,7 +15,5 @@ function Pagekrp4zotoc() {
     </div>
   );
 }
-
 Pagekrp4zotoc.displayName = '';
-
 export default Pagekrp4zotoc;

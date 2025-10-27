@@ -1,7 +1,4 @@
 'use client';
-import React from 'react';
-
-
 function Pagepx64yt13j() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -18,7 +15,5 @@ function Pagepx64yt13j() {
     </div>
   );
 }
-
 Pagepx64yt13j.displayName = '';
-
 export default Pagepx64yt13j;

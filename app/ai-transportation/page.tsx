@@ -1,7 +1,4 @@
 'use client';
-import React from 'react';
-
-
 function Pageepeqiiy11() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -18,7 +15,5 @@ function Pageepeqiiy11() {
     </div>
   );
 }
-
 Pageepeqiiy11.displayName = '';
-
 export default Pageepeqiiy11;

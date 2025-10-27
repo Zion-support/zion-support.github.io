@@ -1,7 +1,4 @@
 'use client';
-import React from 'react';
-
-
 function Pagewxf4gmvbo() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -18,7 +15,5 @@ function Pagewxf4gmvbo() {
     </div>
   );
 }
-
 Pagewxf4gmvbo.displayName = '';
-
 export default Pagewxf4gmvbo;

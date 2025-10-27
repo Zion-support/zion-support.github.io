@@ -1,7 +1,4 @@
 'use client';
-import React from 'react';
-
-
 function Pagedtptld2xb() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -18,7 +15,5 @@ function Pagedtptld2xb() {
     </div>
   );
 }
-
 Pagedtptld2xb.displayName = '';
-
 export default Pagedtptld2xb;

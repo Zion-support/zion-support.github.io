@@ -1,7 +1,4 @@
 'use client';
-import React from 'react';
-
-
 function Pagepbsvk5cfc() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -18,7 +15,5 @@ function Pagepbsvk5cfc() {
     </div>
   );
 }
-
 Pagepbsvk5cfc.displayName = '';
-
 export default Pagepbsvk5cfc;

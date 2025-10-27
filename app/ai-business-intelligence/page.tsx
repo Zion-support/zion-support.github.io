@@ -1,7 +1,4 @@
 'use client';
-import React from 'react';
-
-
 function Pageq4drepxkg() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -18,7 +15,5 @@ function Pageq4drepxkg() {
     </div>
   );
 }
-
 Pageq4drepxkg.displayName = '';
-
 export default Pageq4drepxkg;

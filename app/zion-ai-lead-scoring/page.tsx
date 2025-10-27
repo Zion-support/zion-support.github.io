@@ -1,7 +1,4 @@
 'use client';
-import React from 'react';
-
-
 function Pagei4gyyknmq() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -18,7 +15,5 @@ function Pagei4gyyknmq() {
     </div>
   );
 }
-
 Pagei4gyyknmq.displayName = '';
-
 export default Pagei4gyyknmq;

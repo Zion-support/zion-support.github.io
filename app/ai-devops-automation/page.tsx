@@ -1,7 +1,4 @@
 'use client';
-import React from 'react';
-
-
 function Paget250svv6p() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -18,7 +15,5 @@ function Paget250svv6p() {
     </div>
   );
 }
-
 Paget250svv6p.displayName = '';
-
 export default Paget250svv6p;
