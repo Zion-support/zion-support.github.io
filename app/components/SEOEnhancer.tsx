@@ -17,4 +17,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   );
 };
 
+SEOEnhancer.displayName = 'SEOEnhancer';
+
 export default SEOEnhancer;
