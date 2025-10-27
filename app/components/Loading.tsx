@@ -5,15 +5,13 @@ interface LoadingProps {
   children?: React.ReactNode;
 }
 
-const Loading: React.FC<LoadingProps> = ({ 
+export default function Loading({ 
   className = '', 
   children 
-}) => {
+}: LoadingProps) {
   return (
     <div className={'loading ' + className}>
       {children || <p>Loading component</p>}
     </div>
   );
-};
-
-export default Loading;
+}

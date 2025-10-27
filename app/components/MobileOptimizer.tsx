@@ -5,15 +5,13 @@ interface MobileOptimizerProps {
   children?: React.ReactNode;
 }
 
-const MobileOptimizer: React.FC<MobileOptimizerProps> = ({ 
+export default function MobileOptimizer({ 
   className = '', 
   children 
-}) => {
+}: MobileOptimizerProps) {
   return (
     <div className={'mobileoptimizer ' + className}>
       {children || <p>MobileOptimizer component</p>}
     </div>
   );
-};
-
-export default MobileOptimizer;
+}

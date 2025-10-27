@@ -5,15 +5,13 @@ interface FuturisticCardProps {
   children?: React.ReactNode;
 }
 
-const FuturisticCard: React.FC<FuturisticCardProps> = ({ 
+export default function FuturisticCard({ 
   className = '', 
   children 
-}) => {
+}: FuturisticCardProps) {
   return (
     <div className={'futuristiccard ' + className}>
       {children || <p>FuturisticCard component</p>}
     </div>
   );
-};
-
-export default FuturisticCard;
+}

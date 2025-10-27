@@ -5,15 +5,13 @@ interface FuturisticButtonProps {
   children?: React.ReactNode;
 }
 
-const FuturisticButton: React.FC<FuturisticButtonProps> = ({ 
+export default function FuturisticButton({ 
   className = '', 
   children 
-}) => {
+}: FuturisticButtonProps) {
   return (
     <div className={'futuristicbutton ' + className}>
       {children || <p>FuturisticButton component</p>}
     </div>
   );
-};
-
-export default FuturisticButton;
+}
