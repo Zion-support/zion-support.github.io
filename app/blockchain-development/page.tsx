@@ -1,5 +1,4 @@
 'use client';
-import React from 'react';
 
 
 function Pageazmjng2v7() {

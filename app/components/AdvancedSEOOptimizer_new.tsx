@@ -1,4 +1,3 @@
-import React from 'react';
 const AdvancedSEOOptimizer_new = () => {
   return (
     <div className="p-4">

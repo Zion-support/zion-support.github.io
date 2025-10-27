@@ -1,5 +1,4 @@
 
-import React from 'react';
 const EnhancedLoading = () => {
   return (
     <div className="p-4">

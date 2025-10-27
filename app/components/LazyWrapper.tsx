@@ -1,5 +1,4 @@
 
-import React from 'react';
 const LazyWrapper = () => {
   return (
     <div className="p-4">

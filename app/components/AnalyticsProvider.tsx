@@ -1,5 +1,4 @@
 
-import React from 'react';
 const AnalyticsProvider = () => {
   return (
     <div className="p-4">

@@ -1,5 +1,4 @@
 
-import React from 'react';
 interface UltimateBusinessIntelligence2025BannerProps {
   className?: string;
   children?: React.ReactNode;

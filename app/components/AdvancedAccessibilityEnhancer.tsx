@@ -1,5 +1,4 @@
 
-import React from 'react';
 const AdvancedAccessibilityEnhancer = () => {
   return (
     <div className="p-4">
