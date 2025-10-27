@@ -8,6 +8,5 @@ export { useAccessibilityUtils } = () => {
     // Hook implementation
   }, []);
   
-  return { state, setState };
-};
-
+  return { state, setState }
+}

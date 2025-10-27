@@ -9,12 +9,12 @@ export interface Service {
     basic: string;
     pro: string;
     enterprise: string;
-  };
+  }
   contactInfo: {
     website: string;
     email: string;
     phone: string;
-  };
+  }
   icon: string;
   href: string;
   popular?: boolean;
@@ -195,15 +195,13 @@ export const servicesData = {
   itServices,
   itSolutions,
   allServices
-};
+}
 export const getServiceById: React.FC = (id: string): Service | undefined => {
   return allServices.find(service => service.id === id);
-};
-
+}
 export const getServicesByCategory: React.FC = (category: Service['category']): Service[] => {
   return allServices.filter(service => service.category === category);
-};
-
+}
 export const getPopularServices: React.FC = (): Service[] => {
   return allServices.filter(service => service.popular);
-};
+}

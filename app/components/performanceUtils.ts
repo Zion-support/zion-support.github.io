@@ -41,8 +41,7 @@ export const performanceUtils = {
         performance.clearMarks()}
     }
   }
-};
-
+}
 // Google Analytics integration for performance tracking
 export const trackPerformanceToGA: React.FC = (metrics: PerformanceMetrics) => {
   if (typeof window !== 'undefined' && 'gtag' in window) {
@@ -59,8 +58,7 @@ export const trackPerformanceToGA: React.FC = (metrics: PerformanceMetrics) => {
         total_blocking_time: metrics.totalBlockingTime
       }
     })}
-};
-
+}
 declare global {
   interface Window {
     gtag: (..._args: unknown[]) => void}

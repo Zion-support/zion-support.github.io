@@ -2,7 +2,7 @@
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
+import { CheckCircle, Brain, BarChart, Target, TrendingUp, ArrowRight } from 'lucide-react'
 
   const benefits = [
     'Increase efficiency by up to 50%',
@@ -106,9 +106,8 @@ import { CheckCircle, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
           </div>
         </section>
       </div>
-      <Footer />;
-    </>;
+      <Footer />
+    </>
   );
-};
-
+}
 export default PageOptimizedPage;

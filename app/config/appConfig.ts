@@ -9,29 +9,29 @@ export interface AppConfig {
     name: string;
     version: string;
     environment: 'development' | 'production' | 'test';
-  };
+  }
   api: {
     baseUrl: string;
     timeout: number;
     retryAttempts: number;
-  };
+  }
   features: {
     analytics: boolean;
     monitoring: boolean;
     errorTracking: boolean;
     performanceOptimization: boolean;
-  };
+  }
   performance: {
     enableLazyLoading: boolean;
     imageLazyLoadThreshold: number;
     componentLazyLoadThreshold: number;
     cacheMaxAge: number;
-  };
+  }
   security: {
     enableCSP: boolean;
     enableHSTS: boolean;
     enableXSSProtection: boolean;
-  };
+  }
 }
 
 const config: AppConfig = {
@@ -62,8 +62,7 @@ const config: AppConfig = {
     enableHSTS: true,
     enableXSSProtection: true,
   },
-};
-
+}
 /**
  * Get configuration value by key path
  * @example getConfig('app.name') => 'Zion Tech Group'

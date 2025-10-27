@@ -1,10 +1,9 @@
 import React from 'react';
-
+import { ArrowRight, CheckCircle, Target, Award, Users } from 'lucide-react';
 import Link from 'next/link';
 import { Metadata} from 'next';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, Target, Award, } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'About Us - Zion Tech Group',
@@ -15,8 +14,7 @@ export const metadata: Metadata = {
     description: 'Learn about Zion Tech Group, a leading provider of AI and IT solutions.',
     type: 'website'
   }
-};
-
+}
 const AboutPage: React.FC = () => {
   const values = [
     {

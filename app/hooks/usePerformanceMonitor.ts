@@ -60,11 +60,11 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
 
     return () => {
       setIsMonitoringFPS(false);
-    };
+    }
   }, [options.enabled, measureFPS, measureMemoryUsage]);
 
   return {
     metrics,
     isMonitoringFPS,
-  };
-};
+  }
+}

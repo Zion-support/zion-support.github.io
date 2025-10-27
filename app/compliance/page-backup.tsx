@@ -1,5 +1,6 @@
 'use client'
 import React from 'react';
+import { ArrowRight, CheckCircle } from 'lucide-react';
 
 
 import Navigation from '../components/Navigation';

@@ -36,8 +36,7 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     const measureLoadTime = () => {
       const loadTime = performance.now();
       setMetrics(prev => ({ ...prev, loadTime }));
-    };
-
+    }
     // Measure render time
     const measureRenderTime = () => {
       const renderStart = performance.now();
@@ -45,8 +44,7 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
         const renderTime = performance.now() - renderStart;
         setMetrics(prev => ({ ...prev, renderTime }));
       });
-    };
-
+    }
     // Measure memory usage
     const measureMemoryUsage = () => {
       if ('memory' in performance) {
@@ -54,8 +52,7 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
         const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
         setMetrics(prev => ({ ...prev, memoryUsage }));
       }
-    };
-
+    }
     // Measure network latency
     const measureNetworkLatency = () => {
       const start = performance.now();
@@ -68,8 +65,7 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
           // Fallback if ping endpoint doesn't exist
           setMetrics(prev => ({ ...prev, networkLatency: 0 }));
         });
-    };
-
+    }
     // Run measurements
     measureLoadTime();
     measureRenderTime();
@@ -84,8 +80,7 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
         metrics.memoryUsage < 100 && // Memory usage under 100MB
         metrics.networkLatency < 200; // Network latency under 200ms
       setIsOptimized(isOptimized);
-    };
-
+    }
     // Check optimization after metrics are updated
     const timeoutId = setTimeout(checkOptimization, 1000);
 
@@ -135,5 +130,5 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     metrics,
     isOptimized,
     optimizePerformance,
-  };
-};
+  }
+}

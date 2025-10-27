@@ -11,12 +11,12 @@ export interface Metadata {
     email?: boolean;
     address?: boolean;
     telephone?: boolean;
-  };
+  }
   metadataBase?: URL;
   alternates?: {
     canonical?: string;
     languages?: Record<string, string>;
-  };
+  }
   openGraph?: {
     title?: string;
     description?: string;
@@ -32,7 +32,7 @@ export interface Metadata {
     type?: string;
     authors?: Array<{ name: string; url?: string }> | string[];
     publishedTime?: string;
-  };
+  }
   twitter?: {
     card?: 'summary' | 'summary_large_image' | 'app' | 'player';
     site?: string;
@@ -40,7 +40,7 @@ export interface Metadata {
     title?: string;
     description?: string;
     images?: string[];
-  };
+  }
   robots?: {
     index?: boolean;
     follow?: boolean;
@@ -50,14 +50,14 @@ export interface Metadata {
       'max-video-preview'?: number;
       'max-image-preview'?: 'none' | 'standard' | 'large';
       'max-snippet'?: number;
-    };
-  };
+    }
+  }
   verification?: {
     google?: string;
     yandex?: string;
     yahoo?: string;
     other?: Record<string, string>;
-  };
+  }
 }
 
 export interface MetadataRoute {
@@ -76,8 +76,8 @@ export interface MetadataRouteSitemap extends MetadataRoute {
 
 // Custom Next.js types
 export interface NextPageProps {
-  params: { [key: string]: string };
-  searchParams: { [key: string]: string | string[] | undefined };
+  params: { [key: string]: string }
+  searchParams: { [key: string]: string | string[] | undefined }
 }
 
 // API route types
@@ -87,8 +87,8 @@ export interface ApiRouteHandler {
 
 // Server components types
 export interface ServerComponentProps {
-  params: { [key: string]: string };
-  searchParams: { [key: string]: string | string[] | undefined };
+  params: { [key: string]: string }
+  searchParams: { [key: string]: string | string[] | undefined }
 }
 
 // Client components types
@@ -108,12 +108,12 @@ export interface RouteHandler {
 
 // Dynamic route types
 export interface DynamicRoute {
-  params: { [key: string]: string };
+  params: { [key: string]: string }
 }
 
 // Static generation types
 export interface StaticProps {
-  props: { [key: string]: any };
+  props: { [key: string]: any }
   revalidate?: number;
   notFound?: boolean;
 }
@@ -141,8 +141,8 @@ declare module 'next' {
       id: string;
       email: string;
       name?: string;
-    };
+    }
   }
 }
 
-export {};
+export {}

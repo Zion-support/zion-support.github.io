@@ -5,4 +5,4 @@ import {AccessibilityContextType} from '../types/accessibility';
 
 const AccessibilityContext = createContext<AccessibilityContextType | null>(null);
 
-export { AccessibilityContext };
+export { AccessibilityContext }

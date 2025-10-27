@@ -26,7 +26,7 @@ interface ApiResponse<T> {
       data,
       status: response.status,
       message: response.statusText,
-    };
+    }
   }
 
   async get<T>(endpoint: string, headers?: Record<string, string>): Promise<ApiResponse<T>> {

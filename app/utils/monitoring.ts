@@ -8,6 +8,5 @@ export { useMonitoring } = () => {
     // Hook implementation
   }, []);
   
-  return { state, setState };
-};
-
+  return { state, setState }
+}

@@ -6,6 +6,7 @@ import Link from 'next/link'
 import Footer from '../components/Footer'
 
 export default function Page() {
+  const currentYear = new Date().getFullYear();
   return (
     <div>
       <Head>
@@ -31,4 +32,4 @@ export default function Page() {
       </main>
     </div>
   );
-};
+}

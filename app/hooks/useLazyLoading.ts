@@ -40,7 +40,7 @@ export function useLazyLoading(options: UseLazyLoadingOptions = {}) {
 
     return () => {
       observer.unobserve(element);
-    };
+    }
   }, [threshold, rootMargin, hasIntersected]);
 
   const shouldLoad = triggerOnce ? hasIntersected : isIntersecting;
@@ -50,7 +50,7 @@ export function useLazyLoading(options: UseLazyLoadingOptions = {}) {
     isIntersecting,
     hasIntersected,
     shouldLoad,
-  };
+  }
 }
 
 export function useImageLazyLoading(src: string, options: UseLazyLoadingOptions = {}) {
@@ -68,13 +68,11 @@ export function useImageLazyLoading(src: string, options: UseLazyLoadingOptions 
   const handleLoad = () => {
     setIsLoaded(true);
     setHasError(false);
-  };
-
+  }
   const handleError = () => {
     setHasError(true);
     setIsLoaded(false);
-  };
-
+  }
   return {
     elementRef,
     imageSrc,
@@ -83,5 +81,5 @@ export function useImageLazyLoading(src: string, options: UseLazyLoadingOptions 
     shouldLoad,
     onLoad: handleLoad,
     onError: handleError,
-  };
+  }
 }

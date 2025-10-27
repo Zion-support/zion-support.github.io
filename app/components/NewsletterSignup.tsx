@@ -19,8 +19,7 @@ export default function NewsletterSignup({
       onSubmit(email);
       setEmail('');
     }
-  };
-
+  }
   return (
     <div className="newsletter-signup">
       <form onSubmit={handleSubmit}>
