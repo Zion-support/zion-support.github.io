@@ -1,7 +1,4 @@
 import React from 'react';
-export type UserExperienceEnhancerProps = {
-  // Add your props here
-};
 
 interface UserExperienceEnhancerProps {
   className?: string;

@@ -1,7 +1,4 @@
 import React from 'react';
-export type PWAInstallerProps = {
-  // Add your props here
-};
 
 interface PWAInstallerProps {
   className?: string;
