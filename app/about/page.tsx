@@ -1,6 +1,5 @@
-import React from 'react';
-import { ArrowRight, CheckCircle, Target, Award, Users } from 'lucide-react';
 import Link from 'next/link';
+import { ArrowRight, CheckCircle, Target, Award, Users } from 'lucide-react';
 import { Metadata} from 'next';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';

@@ -1,87 +1,126 @@
+#!/usr/bin/env node
+
 import fs from 'fs';
-import path from 'path';
+import { execSync } from 'child_process';
 
-function fixMissingImports(content, filePath) {
-  let modified = false;
-  
-  // Fix missing ArrowRight import
-  if (content.includes('<ArrowRight') && !content.includes("import { ArrowRight }")) {
-    if (content.includes("import React from 'react'")) {
-      content = content.replace(
-        /import React from 'react';/,
-        "import React from 'react';\nimport { ArrowRight } from 'lucide-react';"
-      );
-    } else {
-      content = content.replace(
-        /'use client'\n/,
-        "'use client'\nimport { ArrowRight } from 'lucide-react';\n"
-      );
-    }
-    modified = true;
+// Find all .tsx files in the app directory
+const findTsxFiles = () => {
+  try {
+    const result = execSync('find app -name "*.tsx" -type f', { encoding: 'utf8' });
+    return result.trim().split('\n').filter(file => file.length > 0);
+  } catch (error) {
+    console.error('Error finding .tsx files:', error.message);
+    return [];
   }
-  
-  // Fix missing currentYear variable
-  if (content.includes('currentYear') && !content.includes('const currentYear')) {
-    content = content.replace(
-      /(const benefits = \[[\s\S]*?\])/,
-      '$1\n  const currentYear = new Date().getFullYear();'
-    );
-    modified = true;
-  }
-  
-  // Fix missing CheckCircle import
-  if (content.includes('<CheckCircle') && !content.includes("import { CheckCircle }")) {
-    if (content.includes("import { ArrowRight }")) {
-      content = content.replace(
-        /import { ArrowRight } from 'lucide-react';/,
-        "import { ArrowRight, CheckCircle } from 'lucide-react';"
-      );
-    } else if (content.includes("import React from 'react'")) {
-      content = content.replace(
-        /import React from 'react';/,
-        "import React from 'react';\nimport { CheckCircle } from 'lucide-react';"
-      );
-    } else {
-      content = content.replace(
-        /'use client'\n/,
-        "'use client'\nimport { CheckCircle } from 'lucide-react';\n"
-      );
-    }
-    modified = true;
-  }
-  
-  return { content, modified };
-}
+};
 
-function processFile(filePath) {
+// Check if file uses Link but doesn't import it
+const needsLinkImport = (content) => {
+  return content.includes('<Link') && !content.includes("import Link from 'next/link'");
+};
+
+// Check if file uses ArrowRight but doesn't import it
+const needsArrowRightImport = (content) => {
+  return content.includes('<ArrowRight') && !content.includes("import { ArrowRight } from 'lucide-react'");
+};
+
+// Add missing imports to a file
+const addMissingImports = (filePath) => {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    const { content: fixedContent, modified } = fixMissingImports(content, filePath);
+    const lines = content.split('\n');
+    
+    let modified = false;
+    const newLines = [...lines];
+    
+    // Find the first import line
+    let firstImportIndex = -1;
+    for (let i = 0; i < lines.length; i++) {
+      if (lines[i].trim().startsWith('import ')) {
+        firstImportIndex = i;
+        break;
+      }
+    }
+    
+    if (firstImportIndex === -1) {
+      // No imports found, add after 'use client'
+      for (let i = 0; i < lines.length; i++) {
+        if (lines[i].includes("'use client'")) {
+          firstImportIndex = i + 1;
+          break;
+        }
+      }
+    }
+    
+    if (needsLinkImport(content)) {
+      newLines.splice(firstImportIndex, 0, "import Link from 'next/link';");
+      modified = true;
+      firstImportIndex++; // Adjust for the added line
+    }
+    
+    if (needsArrowRightImport(content)) {
+      // Find existing lucide-react import or add new one
+      let lucideImportIndex = -1;
+      for (let i = 0; i < newLines.length; i++) {
+        if (newLines[i].includes("from 'lucide-react'")) {
+          lucideImportIndex = i;
+          break;
+        }
+      }
+      
+      if (lucideImportIndex !== -1) {
+        // Add ArrowRight to existing import
+        newLines[lucideImportIndex] = newLines[lucideImportIndex].replace(
+          /import \{ ([^}]+) \} from 'lucide-react';/,
+          (match, imports) => {
+            if (!imports.includes('ArrowRight')) {
+              return `import { ${imports}, ArrowRight } from 'lucide-react';`;
+            }
+            return match;
+          }
+        );
+      } else {
+        // Add new lucide-react import
+        newLines.splice(firstImportIndex, 0, "import { ArrowRight } from 'lucide-react';");
+      }
+      modified = true;
+    }
     
     if (modified) {
-      fs.writeFileSync(filePath, fixedContent, 'utf8');
-      console.log(`Fixed imports: ${filePath}`);
+      fs.writeFileSync(filePath, newLines.join('\n'), 'utf8');
+      return true;
     }
+    return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error processing file ${filePath}:`, error.message);
+    return false;
   }
-}
+};
 
-function processDirectory(dirPath) {
-  const items = fs.readdirSync(dirPath);
+// Main execution
+const main = () => {
+  console.log('Finding .tsx files...');
+  const tsxFiles = findTsxFiles();
+  console.log(`Found ${tsxFiles.length} .tsx files`);
   
-  for (const item of items) {
-    const fullPath = path.join(dirPath, item);
-    const stat = fs.statSync(fullPath);
+  let processedCount = 0;
+  let fixedCount = 0;
+  
+  for (const filePath of tsxFiles) {
+    if (addMissingImports(filePath)) {
+      console.log(`Fixed: ${filePath}`);
+      fixedCount++;
+    }
+    processedCount++;
     
-    if (stat.isDirectory()) {
-      processDirectory(fullPath);
-    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-      processFile(fullPath);
+    if (processedCount % 100 === 0) {
+      console.log(`Processed ${processedCount}/${tsxFiles.length} files...`);
     }
   }
-}
+  
+  console.log(`\nCompleted!`);
+  console.log(`Processed: ${processedCount} files`);
+  console.log(`Fixed: ${fixedCount} files`);
+};
 
-// Process the app directory
-processDirectory('./app');
-console.log('Missing imports fixed');
+main();

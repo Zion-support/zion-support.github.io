@@ -1,7 +1,6 @@
 'use client'
-import React from 'react';
-import { ArrowRight, Brain, Cpu, Zap } from 'lucide-react';
 import Link from 'next/link';
+import { ArrowRight, Brain, Cpu, Zap } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 

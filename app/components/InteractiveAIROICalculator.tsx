@@ -1,12 +1,18 @@
 'use client'
-import React from 'react';
+import { useState } from 'react';
 
+export default function InteractiveAIROICalculator() {
+  const [currentCost, setCurrentCost] = useState(100000);
+  const [efficiencyGain, setEfficiencyGain] = useState(30);
+  const [timeframe, setTimeframe] = useState(12);
 
   const calculateROI = () => {
     const annualSavings = (currentCost * efficiencyGain) / 100;
     const totalSavings = annualSavings * (timeframe / 12);
     const roi = ((totalSavings - currentCost) / currentCost) * 100;
-    return Math.max(0, roi)}
+    return Math.max(0, roi);
+  };
+  
   const roi = calculateROI();
   return (
     <section className='bg-white py-16 rounded-2xl shadow-lg'>
@@ -77,6 +83,5 @@ import React from 'react';
         </div>
       </div>
     </section>
-  )}
-
-export default InteractiveAIROICalculator;
+  );
+}

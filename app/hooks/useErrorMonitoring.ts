@@ -1,11 +1,12 @@
 'use client';
-import React from 'react';;
-
 import { useEffect } from 'react';
 
-export const useErrorMonitoring: React.FC = () => {
+export const useErrorMonitoring = () => {
   useEffect(() => {
-    const handleError: React.FC = (error: ErrorEvent) => {
-      console.error('Error caught:', error)}
+    const handleError = (error: ErrorEvent) => {
+      console.error('Error caught:', error);
+    };
     window.addEventListener('error', handleError);
-    return () => window.removeEventListener('error', handleError)}, [])}
+    return () => window.removeEventListener('error', handleError);
+  }, []);
+};

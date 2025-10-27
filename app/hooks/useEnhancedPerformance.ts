@@ -14,8 +14,9 @@ interface PerformanceMetrics {
   networkLatency: number;
 }
 
-export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) => {
-  const { component = 'unknown', trackErrors = true, trackPerformance = true, trackAnalytics = false } = options;
+export const useEnhancedPerformance = (_options: UseEnhancedPerformanceOptions = {}) => {
+  // Destructured options are available for future use
+  // const { component = 'unknown', trackErrors = true, trackPerformance = true, trackAnalytics = false } = _options;
 
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,

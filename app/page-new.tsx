@@ -1,8 +1,35 @@
 'use client'
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
+import Navigation from './components/Navigation'
+import Footer from './components/Footer'
 import { CheckCircle, Brain, BarChart, Target, TrendingUp, ArrowRight } from 'lucide-react'
+
+const PageNewPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Leverage advanced AI algorithms to make smarter decisions',
+      benefits: ['Predictive analytics', 'Automated insights', 'Real-time processing']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive data analysis and visualization tools',
+      benefits: ['Custom dashboards', 'Performance metrics', 'Trend analysis']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target the right audience with laser precision',
+      benefits: ['Audience segmentation', 'Behavioral analysis', 'Conversion optimization']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Scale your business with data-driven strategies',
+      benefits: ['ROI tracking', 'Performance monitoring', 'Strategic planning']
+    }
+  ];
 
   const benefits = [
     'Increase efficiency by up to 50%',
