@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-
-import Link from 'next/link';
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-50ad
 export default function HomePage() {
   return (
     <div>
