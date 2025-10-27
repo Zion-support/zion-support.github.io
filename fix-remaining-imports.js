@@ -14,38 +14,71 @@ function fixUnusedImports(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Remove unused React imports (line 2)
+    // Remove unused React imports
     if (content.includes("import React from 'react';") && !content.includes('React.')) {
       content = content.replace(/import React from 'react';\n/, '');
       modified = true;
     }
 
-    // Remove unused Link imports (line 4)
+    // Remove unused Link imports
     if (content.includes("import Link from 'next/link';") && !content.includes('<Link')) {
       content = content.replace(/import Link from 'next\/link';\n/, '');
       modified = true;
     }
 
-    // Remove unused ArrowRight imports (line 5)
+    // Remove unused ArrowRight imports
     if (content.includes("import { ArrowRight } from 'lucide-react';") && !content.includes('ArrowRight')) {
       content = content.replace(/import { ArrowRight } from 'lucide-react';\n/, '');
       modified = true;
     }
 
-    // Remove unused icon imports from lucide-react
+    // Remove unused icon imports from lucide-react - more comprehensive
     const iconPattern = /import { ([^}]+) } from 'lucide-react';\n/g;
     let match;
+    const matches = [];
+    
+    // Find all matches first
     while ((match = iconPattern.exec(content)) !== null) {
-      const icons = match[1].split(',').map(icon => icon.trim());
-      const usedIcons = icons.filter(icon => content.includes(icon));
+      matches.push({
+        fullMatch: match[0],
+        icons: match[1].split(',').map(icon => icon.trim()),
+        start: match.index,
+        end: match.index + match[0].length
+      });
+    }
+
+    // Process matches in reverse order to avoid index issues
+    for (let i = matches.length - 1; i >= 0; i--) {
+      const match = matches[i];
+      const usedIcons = match.icons.filter(icon => content.includes(icon));
       
       if (usedIcons.length === 0) {
-        content = content.replace(match[0], '');
+        content = content.substring(0, match.start) + content.substring(match.end);
         modified = true;
-      } else if (usedIcons.length < icons.length) {
+      } else if (usedIcons.length < match.icons.length) {
         const newImport = `import { ${usedIcons.join(', ')} } from 'lucide-react';\n`;
-        content = content.replace(match[0], newImport);
+        content = content.substring(0, match.start) + newImport + content.substring(match.end);
         modified = true;
+      }
+    }
+
+    // Fix component export issues - add proper default exports
+    if (content.includes('export default function') && !content.includes('export default')) {
+      // This is already handled by the function declaration
+    }
+
+    // Fix missing type declarations
+    if (content.includes('interface ') && content.includes('Props')) {
+      // Check if the interface is used
+      const interfaceMatch = content.match(/interface (\w+Props)/);
+      if (interfaceMatch) {
+        const interfaceName = interfaceMatch[1];
+        if (!content.includes(interfaceName)) {
+          // Remove unused interface
+          const interfacePattern = new RegExp(`interface ${interfaceName}[\\s\\S]*?\\n\\}`, 'g');
+          content = content.replace(interfacePattern, '');
+          modified = true;
+        }
       }
     }
 
@@ -61,7 +94,7 @@ function fixUnusedImports(filePath) {
   }
 }
 
-// Function to recursively find all .tsx files
+// Function to recursively find all .tsx and .ts files
 function findTsxFiles(dir) {
   const files = [];
   const items = fs.readdirSync(dir);
@@ -72,7 +105,7 @@ function findTsxFiles(dir) {
     
     if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
       files.push(...findTsxFiles(fullPath));
-    } else if (item.endsWith('.tsx')) {
+    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
       files.push(fullPath);
     }
   }
@@ -81,7 +114,7 @@ function findTsxFiles(dir) {
 }
 
 // Main execution
-console.log('Starting to fix unused imports...');
+console.log('Starting to fix remaining unused imports...');
 
 const appDir = path.join(__dirname, 'app');
 const tsxFiles = findTsxFiles(appDir);
