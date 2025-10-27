@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Metadata} from 'next';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, Target, Award, } from 'lucide-react';
+import { CheckCircle, Target, Award, ArrowRight, Users } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'About Us - Zion Tech Group',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   }
 };
 
-const AboutPage: React.FC = () => {
+const AboutPage = () => {
   const values = [
     {
       icon: <CheckCircle className="w-8 h-8 text-blue-600" />,
@@ -116,6 +116,6 @@ const AboutPage: React.FC = () => {
       <Footer />
     </div>
   );
-}
+};
 
 export default AboutPage;

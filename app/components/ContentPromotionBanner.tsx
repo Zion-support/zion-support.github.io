@@ -10,7 +10,7 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({
   children 
 }) => {
   return (
-    <div className={`contentpromotionbanner ${className}`}>
+    <div className={'contentpromotionbanner ' + className}>
       {children || <p>ContentPromotionBanner component</p>}
     </div>
   );

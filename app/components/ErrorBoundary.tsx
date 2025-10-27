@@ -5,13 +5,15 @@ interface ErrorBoundaryProps {
   children?: React.ReactNode;
 }
 
-export default function ErrorBoundary({ 
+const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ 
   className = '', 
   children 
-}: ErrorBoundaryProps) {
+}) => {
   return (
     <div className={'errorboundary ' + className}>
       {children || <p>ErrorBoundary component</p>}
     </div>
   );
-}
+};
+
+export default ErrorBoundary;

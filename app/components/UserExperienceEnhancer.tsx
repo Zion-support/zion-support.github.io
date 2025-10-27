@@ -5,13 +5,15 @@ interface UserExperienceEnhancerProps {
   children?: React.ReactNode;
 }
 
-export default function UserExperienceEnhancer({ 
+const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ 
   className = '', 
   children 
-}: UserExperienceEnhancerProps) {
+}) => {
   return (
-    <div className={'userexperienceenhancer ' + className}>
+    <div className={'user-experience-enhancer ' + className}>
       {children || <p>UserExperienceEnhancer component</p>}
     </div>
   );
-}
+};
+
+export default UserExperienceEnhancer;

@@ -1,27 +1,19 @@
 import React from 'react';
-import Head from 'next/head';
 
 interface SEOHeadProps {
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  canonical?: string;
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export default function SEOHead({ 
-  title = "Zion Tech Group",
-  description = "Leading technology solutions provider",
-  keywords = [],
-  canonical
-}: SEOHeadProps) {
+const SEOHead: React.FC<SEOHeadProps> = ({ 
+  className = '', 
+  children 
+}) => {
   return (
-    <Head>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      {keywords.length > 0 && (
-        <meta name="keywords" content={keywords.join(', ')} />
-      )}
-      {canonical && <link rel="canonical" href={canonical} />}
-    </Head>
+    <div className={'seohead ' + className}>
+      {children || <p>SEOHead component</p>}
+    </div>
   );
-}
+};
+
+export default SEOHead;

@@ -5,13 +5,15 @@ interface ErrorBoundaryWrapperProps {
   children?: React.ReactNode;
 }
 
-export default function ErrorBoundaryWrapper({ 
+const ErrorBoundaryWrapper: React.FC<ErrorBoundaryWrapperProps> = ({ 
   className = '', 
   children 
-}: ErrorBoundaryWrapperProps) {
+}) => {
   return (
     <div className={'errorboundarywrapper ' + className}>
       {children || <p>ErrorBoundaryWrapper component</p>}
     </div>
   );
-}
+};
+
+export default ErrorBoundaryWrapper;

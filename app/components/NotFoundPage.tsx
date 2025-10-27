@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 interface NotFoundPageProps {
@@ -5,6 +6,16 @@ interface NotFoundPageProps {
   children?: React.ReactNode;
 }
 
-export default NotFoundPage;
+const NotFoundPage: React.FC<NotFoundPageProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'notfoundpage ' + className}>
+      {children || <p>NotFoundPage component</p>}
+    </div>
+  );
+};
 
 export default NotFoundPage;
+

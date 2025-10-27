@@ -4,11 +4,32 @@ interface ApiResponse<T> {
   message?: string;
 }
 
+// Simple type alias for fetch options
+type FetchOptions = {
+  method?: string;
+  headers?: Record<string, string>;
+  body?: string | FormData | URLSearchParams | null;
+  mode?: 'cors' | 'no-cors' | 'same-origin';
+  credentials?: 'omit' | 'same-origin' | 'include';
+  cache?: 'default' | 'no-cache' | 'reload' | 'force-cache' | 'only-if-cached';
+  redirect?: 'follow' | 'error' | 'manual';
+  referrer?: string;
+  referrerPolicy?: 'no-referrer' | 'no-referrer-when-downgrade' | 'origin' | 'origin-when-cross-origin' | 'same-origin' | 'strict-origin' | 'strict-origin-when-cross-origin' | 'unsafe-url';
+  integrity?: string;
+  keepalive?: boolean;
+  signal?: AbortSignal;
+};
+
+class ApiClient {
+  private baseUrl: string;
+
+  constructor(baseUrl: string = '/api') {
+    this.baseUrl = baseUrl;
   }
 
-  private async request<T>()
+  private async request<T>(
     endpoint: string,
-    options: RequestInit = {}
+    options: FetchOptions = {}
   ): Promise<ApiResponse<T>> {
     const url = `${this.baseUrl}${endpoint}`;
     

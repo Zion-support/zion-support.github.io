@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 interface LoadingProps {
@@ -5,13 +6,15 @@ interface LoadingProps {
   children?: React.ReactNode;
 }
 
-export default function Loading({ 
+const Loading: React.FC<LoadingProps> = ({ 
   className = '', 
   children 
-}: LoadingProps) {
+}) => {
   return (
     <div className={'loading ' + className}>
       {children || <p>Loading component</p>}
     </div>
   );
-}
+};
+
+export default Loading;

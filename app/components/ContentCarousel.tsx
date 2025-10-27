@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 interface ContentCarouselProps {
@@ -5,6 +6,16 @@ interface ContentCarouselProps {
   children?: React.ReactNode;
 }
 
-export default ContentCarousel;
+const ContentCarousel: React.FC<ContentCarouselProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'contentcarousel ' + className}>
+      {children || <p>ContentCarousel component</p>}
+    </div>
+  );
+};
 
 export default ContentCarousel;
+

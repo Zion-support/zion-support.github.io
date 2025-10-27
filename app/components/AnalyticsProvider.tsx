@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 interface AnalyticsProviderProps {
@@ -5,6 +6,16 @@ interface AnalyticsProviderProps {
   children?: React.ReactNode;
 }
 
-export default AnalyticsProvider;
+const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'analyticsprovider ' + className}>
+      {children || <p>AnalyticsProvider component</p>}
+    </div>
+  );
+};
 
 export default AnalyticsProvider;
+

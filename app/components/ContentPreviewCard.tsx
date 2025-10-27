@@ -10,7 +10,7 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
   children 
 }) => {
   return (
-    <div className={`contentpreviewcard ${className}`}>
+    <div className={'contentpreviewcard ' + className}>
       {children || <p>ContentPreviewCard component</p>}
     </div>
   );

@@ -1,9 +1,19 @@
 import React from 'react';
 
-interface SEOHeadProps {
-  title?: string;
-  description?: string;
+interface EnhancedSEOHeadProps {
   className?: string;
+  children?: React.ReactNode;
 }
 
-export default SEOHead;
+const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'enhancedseohead ' + className}>
+      {children || <p>EnhancedSEOHead component</p>}
+    </div>
+  );
+};
+
+export default EnhancedSEOHead;

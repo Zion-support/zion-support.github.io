@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 interface ServicePageTemplateProps {
@@ -5,6 +6,16 @@ interface ServicePageTemplateProps {
   children?: React.ReactNode;
 }
 
-export default ServicePageTemplate;
+const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'servicepagetemplate ' + className}>
+      {children || <p>ServicePageTemplate component</p>}
+    </div>
+  );
+};
 
 export default ServicePageTemplate;
+

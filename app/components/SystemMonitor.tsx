@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 interface SystemMonitorProps {
@@ -5,6 +6,16 @@ interface SystemMonitorProps {
   children?: React.ReactNode;
 }
 
-export default SystemMonitor;
+const SystemMonitor: React.FC<SystemMonitorProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'systemmonitor ' + className}>
+      {children || <p>SystemMonitor component</p>}
+    </div>
+  );
+};
 
 export default SystemMonitor;
+

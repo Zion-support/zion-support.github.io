@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface ContentStatisticsProps {
+interface _ContentStatisticsProps {
   className?: string;
   children?: React.ReactNode;
 }

@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 interface PerformanceImageProps {
@@ -5,6 +6,16 @@ interface PerformanceImageProps {
   children?: React.ReactNode;
 }
 
-export default PerformanceImage;
+const PerformanceImage: React.FC<PerformanceImageProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'performanceimage ' + className}>
+      {children || <p>PerformanceImage component</p>}
+    </div>
+  );
+};
 
 export default PerformanceImage;
+

@@ -1,30 +1,19 @@
 import React from 'react';
 
-interface AdvancedSEOOptimizerProps {
-  title?: string;
-  description?: string;
-  keywords?: string[];
+interface AdvancedSEOOptimizer_newProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export default function AdvancedSEOOptimizer({ 
-  title = "Advanced SEO Optimizer",
-  description = "This component provides advanced SEO optimization features.",
-  keywords = []
-}: AdvancedSEOOptimizerProps) {
+const AdvancedSEOOptimizer_new: React.FC<AdvancedSEOOptimizer_newProps> = ({ 
+  className = '', 
+  children 
+}) => {
   return (
-    <div>
-      <h1>{title}</h1>
-      <p>{description}</p>
-      {keywords.length > 0 && (
-        <div>
-          <h3>Keywords:</h3>
-          <ul>
-            {keywords.map((keyword, index) => (
-              <li key={index}>{keyword}</li>
-            ))}
-          </ul>
-        </div>
-      )}
+    <div className={'advancedseooptimizer_new ' + className}>
+      {children || <p>AdvancedSEOOptimizer_new component</p>}
     </div>
   );
-}
+};
+
+export default AdvancedSEOOptimizer_new;

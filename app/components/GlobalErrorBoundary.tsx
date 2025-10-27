@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface GlobalErrorBoundaryProps {
+interface _GlobalErrorBoundaryProps {
   className?: string;
   children?: React.ReactNode;
 }

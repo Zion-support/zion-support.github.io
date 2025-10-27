@@ -5,13 +5,15 @@ interface EnhancedAccessibilityWrapperProps {
   children?: React.ReactNode;
 }
 
-export default function EnhancedAccessibilityWrapper({ 
+const EnhancedAccessibilityWrapper: React.FC<EnhancedAccessibilityWrapperProps> = ({ 
   className = '', 
   children 
-}: EnhancedAccessibilityWrapperProps) {
+}) => {
   return (
     <div className={'enhancedaccessibilitywrapper ' + className}>
       {children || <p>EnhancedAccessibilityWrapper component</p>}
     </div>
   );
-}
+};
+
+export default EnhancedAccessibilityWrapper;

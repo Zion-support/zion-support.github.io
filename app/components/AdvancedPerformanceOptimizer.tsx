@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface AdvancedPerformanceOptimizerProps {
+interface _AdvancedPerformanceOptimizerProps {
   className?: string;
   children?: React.ReactNode;
 }

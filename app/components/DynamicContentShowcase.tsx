@@ -10,7 +10,7 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
   children 
 }) => {
   return (
-    <div className={`dynamiccontentshowcase ${className}`}>
+    <div className={'dynamiccontentshowcase ' + className}>
       {children || <p>DynamicContentShowcase component</p>}
     </div>
   );

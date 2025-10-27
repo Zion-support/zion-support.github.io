@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface HeaderProps {
+interface _HeaderProps {
   className?: string;
   children?: React.ReactNode;
 }

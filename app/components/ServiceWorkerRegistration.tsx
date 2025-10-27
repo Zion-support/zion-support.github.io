@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 interface ServiceWorkerRegistrationProps {
@@ -5,6 +6,16 @@ interface ServiceWorkerRegistrationProps {
   children?: React.ReactNode;
 }
 
-export default ServiceWorkerRegistration;
+const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'serviceworkerregistration ' + className}>
+      {children || <p>ServiceWorkerRegistration component</p>}
+    </div>
+  );
+};
 
 export default ServiceWorkerRegistration;
+

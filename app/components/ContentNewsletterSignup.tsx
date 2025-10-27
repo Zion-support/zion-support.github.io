@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface ContentNewsletterSignupProps {
+interface _ContentNewsletterSignupProps {
   className?: string;
   children?: React.ReactNode;
 }
