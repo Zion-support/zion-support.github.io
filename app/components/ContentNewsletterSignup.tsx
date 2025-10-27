@@ -5,3 +5,15 @@ interface ContentNewsletterSignupProps {
   children?: React.ReactNode;
 }
 
+const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`contentnewslettersignup ${className}`}>
+      {children || <p>ContentNewsletterSignup component</p>}
+    </div>
+  );
+};
+
+export default ContentNewsletterSignup;

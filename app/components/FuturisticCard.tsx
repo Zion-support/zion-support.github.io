@@ -1,5 +1,8 @@
 import React from 'react';
 
+interface FuturisticCardProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
 const FuturisticCard: React.FC<FuturisticCardProps> = ({ 
@@ -7,7 +10,7 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({
   children 
 }) => {
   return (
-    <div className={'futuristiccard ' + className}>
+    <div className={`futuristiccard ${className}`}>
       {children || <p>FuturisticCard component</p>}
     </div>
   );
