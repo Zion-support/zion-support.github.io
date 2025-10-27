@@ -1,7 +1,7 @@
 'use client';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Lock, Shield, Database, CheckCircle, Clock, ArrowRight } from 'lucide-react';
+import { _Lock, Shield, _Database, CheckCircle, Clock, ArrowRight } from 'lucide-react';
 
 export default function CompliancePageBackup() {
   const features = [
