@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import React from 'react';
@@ -24,14 +23,13 @@ export const metadata: Metadata = {
     description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
   },
 }
+
 export const viewport = {
   width: 'device-width',
   initialScale: 1,
   maximumScale: 1,
   userScalable: false,
 }
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-50ad
 export default function RootLayout({
   children,
 }: {
