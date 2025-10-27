@@ -1,9 +1,13 @@
 
-interface _AdvancedPerformanceOptimizerProps {
+interface AdvancedPerformanceOptimizerProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-export default AdvancedPerformanceOptimizer;
-
-export default AdvancedPerformanceOptimizer;
+export default function AdvancedPerformanceOptimizer({ className, children }: AdvancedPerformanceOptimizerProps) {
+  return (
+    <div className={`advancedperformanceoptimizer-component ${className || ''}`}>
+      {children}
+    </div>
+  );
+}
