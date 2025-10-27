@@ -5,3 +5,6 @@ interface ContentNewsletterSignupProps {
   children?: React.ReactNode;
 }
 
+export default ContentNewsletterSignup;
+
+export default ContentNewsletterSignup;

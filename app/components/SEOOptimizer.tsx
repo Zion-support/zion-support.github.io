@@ -5,3 +5,6 @@ interface SEOOptimizerProps {
   children?: React.ReactNode;
 }
 
+export default SEOOptimizer;
+
+export default SEOOptimizer;

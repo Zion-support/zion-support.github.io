@@ -1,16 +1,12 @@
-
 import React from 'react';
 
 interface Footer_brokenProps {
-  // Add props here
+  className?: string;
+  children?: React.ReactNode;
 }
 
-const Footer_broken: React.FC<Footer_brokenProps> = (_props) => {
-  return (
-    <div>
-      {/* Component content */}
-    </div>
-  );
-};
+export default Footer_broken;
+
+export default Footer_broken;
 
 export default Footer_broken;

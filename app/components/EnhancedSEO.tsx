@@ -5,3 +5,6 @@ interface EnhancedSEOProps {
   children?: React.ReactNode;
 }
 
+export default EnhancedSEO;
+
+export default EnhancedSEO;

@@ -5,3 +5,6 @@ interface ContentStatisticsProps {
   children?: React.ReactNode;
 }
 
+export default ContentStatistics;
+
+export default ContentStatistics;

@@ -5,3 +5,6 @@ interface AdvancedPerformanceMonitorProps {
   children?: React.ReactNode;
 }
 
+export default AdvancedPerformanceMonitor;
+
+export default AdvancedPerformanceMonitor;

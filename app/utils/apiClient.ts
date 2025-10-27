@@ -3,29 +3,10 @@ interface ApiResponse<T> {
   status: number;
   message?: string;
 }
-<<<<<<< HEAD
-}
-;
-class ApiClient {;
-private baseURL: string;
-  private defaultHeader,</T>;
-s: Record<string,string>;
-;
-constructor(baseURL: string = '/api') {;
-this.baseURL = baseURL;,this.defaultHeaders = {,
-      'Content-Type': 'application/json',
-    };
-=======
 
-class ApiClient {
-  private baseUrl: string;
-
-  constructor(baseUrl: string = '/api') {
-    this.baseUrl = baseUrl;
->>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
   }
 
-  private async request<T>(
+  private async request<T>()
     endpoint: string,
     options: RequestInit = {}
   ): Promise<ApiResponse<T>> {

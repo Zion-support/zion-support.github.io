@@ -1,9 +1,12 @@
-'use client';
+'use client'
 import React from 'react';
+
+
 import Head from 'next/head';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+
 import Footer from '../../components/Footer';
+import { ArrowRight } from 'lucide-react';
 
 export default function pagePage() {
   return (
