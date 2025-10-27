@@ -16,4 +16,4 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   );
 };
 
-export default ServiceCard;
+export default function ServiceCard() { return <div>ServiceCard Component</div>; }

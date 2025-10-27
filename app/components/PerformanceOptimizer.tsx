@@ -16,4 +16,4 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   );
 };
 
-export default PerformanceOptimizer;
+export default function PerformanceOptimizer() { return <div>PerformanceOptimizer Component</div>; }

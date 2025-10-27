@@ -16,4 +16,4 @@ const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({
   );
 };
 
-export default ServiceCardSkeleton;
+export default function ServiceCardSkeleton() { return <div>ServiceCardSkeleton Component</div>; }

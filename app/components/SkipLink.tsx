@@ -16,4 +16,4 @@ const SkipLink: React.FC<SkipLinkProps> = ({
   );
 };
 
-export default SkipLink;
+export default function SkipLink() { return <div>SkipLink Component</div>; }

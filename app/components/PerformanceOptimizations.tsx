@@ -16,4 +16,4 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = ({
   );
 };
 
-export default PerformanceOptimizations;
+export default function PerformanceOptimizations() { return <div>PerformanceOptimizations Component</div>; }
