@@ -2,6 +2,8 @@ import React from 'react'
 
 
 interface AboutPageProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
 const AboutPage: React.FC<AboutPageProps> = ({ 
