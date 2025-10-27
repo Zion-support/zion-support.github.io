@@ -14,6 +14,15 @@ interface PerformanceMetrics {
   networkLatency: number;
 }
 
+// Extend the Performance interface to include memory property
+interface PerformanceWithMemory extends Performance {
+  memory?: {
+    usedJSHeapSize: number;
+    totalJSHeapSize: number;
+    jsHeapSizeLimit: number;
+  };
+}
+
 export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) => {
   const { component: _component = 'unknown', trackErrors: _trackErrors = true, trackPerformance: _trackPerformance = true, trackAnalytics: _trackAnalytics = false } = options;
 
@@ -50,9 +59,17 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     // Measure memory usage
     const measureMemoryUsage = () => {
       if ('memory' in performance) {
+<<<<<<< HEAD
         const memory = (performance as { memory: { usedJSHeapSize: number } }).memory;
         const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
         setMetrics(prev => ({ ...prev, memoryUsage }));
+=======
+        const memory = (performance as PerformanceWithMemory).memory;
+        if (memory) {
+          const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
+          setMetrics(prev => ({ ...prev, memoryUsage }));
+        }
+>>>>>>> cursor/fix-errors-and-merge-to-main-511e
       }
     };
 
