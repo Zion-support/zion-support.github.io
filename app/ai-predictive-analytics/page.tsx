@@ -1,4 +1,5 @@
-'use client'
+'use client';
+import React from 'react';
 
 
 function Page82zw4xlzd() {

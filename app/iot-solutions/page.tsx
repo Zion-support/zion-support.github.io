@@ -1,4 +1,5 @@
-'use client'
+'use client';
+import React from 'react';
 
 
 function Pagekyn4kq2cv() {
