@@ -1,7 +1,4 @@
 import React from 'react';
-export type AccessibilityEnhancerProps = {
-  // Add your props here
-};
 
 interface AccessibilityEnhancerProps {
   className?: string;
