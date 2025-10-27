@@ -2,7 +2,35 @@
 import React from 'react'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
-import { CheckCircle, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
+import { CheckCircle, Brain, BarChart, Target, TrendingUp, ArrowRight} from 'lucide-react'
+
+const LoadingPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: "Loading Solutions",
+      description: "Advanced loading and performance optimization.",
+      benefits: ["Performance", "Speed", "Optimization"]
+    },
+    {
+      icon: BarChart,
+      title: "Analytics",
+      description: "Comprehensive loading analytics and reporting.",
+      benefits: ["Monitoring", "Analysis", "Insights"]
+    },
+    {
+      icon: Target,
+      title: "Precision",
+      description: "Precise loading and performance targeting.",
+      benefits: ["Accuracy", "Precision", "Targeting"]
+    },
+    {
+      icon: TrendingUp,
+      title: "Performance",
+      description: "Optimize performance and loading times.",
+      benefits: ["Optimization", "Performance", "Efficiency"]
+    }
+  ];
 
   const benefits = [
     'Increase efficiency by up to 50%',
@@ -106,8 +134,8 @@ import { CheckCircle, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
           </div>
         </section>
       </div>
-      <Footer />;
-    </>;
+      <Footer />
+    </>
   );
 };
 

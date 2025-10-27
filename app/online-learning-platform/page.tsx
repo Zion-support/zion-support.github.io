@@ -2,7 +2,35 @@
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
+import { CheckCircle, Brain, BarChart, Target, TrendingUp, ArrowRight} from 'lucide-react'
+
+const OnlineLearningPlatformPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: "AI-Powered Learning",
+      description: "Personalized learning experiences powered by artificial intelligence.",
+      benefits: ["Adaptive content", "Smart recommendations", "Progress tracking"]
+    },
+    {
+      icon: BarChart,
+      title: "Analytics Dashboard",
+      description: "Comprehensive analytics to track learning progress and performance.",
+      benefits: ["Real-time insights", "Performance metrics", "Learning analytics"]
+    },
+    {
+      icon: Target,
+      title: "Skill Assessment",
+      description: "Advanced assessment tools to evaluate and validate skills.",
+      benefits: ["Automated testing", "Skill validation", "Certification"]
+    },
+    {
+      icon: TrendingUp,
+      title: "Progress Tracking",
+      description: "Track learning progress and identify areas for improvement.",
+      benefits: ["Progress monitoring", "Goal setting", "Achievement tracking"]
+    }
+  ];
 
   const benefits = [
     'Increase efficiency by up to 50%',
@@ -21,9 +49,9 @@ import { CheckCircle, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Page
-            </h1>
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            Online Learning Platform
+          </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Create engaging online learning experiences with AI-powered education platform. Course management, student analytics, and personalized learning.
             </p>
@@ -106,9 +134,9 @@ import { CheckCircle, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
           </div>
         </section>
       </div>
-      <Footer />;
-    </>;
+      <Footer />
+    </>
   );
 };
 
-export default PagePage;
+export default OnlineLearningPlatformPage;

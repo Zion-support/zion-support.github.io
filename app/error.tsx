@@ -2,7 +2,35 @@
 import React from 'react'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
-import { CheckCircle, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
+import { CheckCircle, Brain, BarChart, Target, TrendingUp, ArrowRight} from 'lucide-react'
+
+const ErrorPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: "Error Handling",
+      description: "Advanced error handling and recovery systems.",
+      benefits: ["Reliability", "Stability", "Recovery"]
+    },
+    {
+      icon: BarChart,
+      title: "Error Analytics",
+      description: "Comprehensive error analytics and reporting.",
+      benefits: ["Monitoring", "Analysis", "Insights"]
+    },
+    {
+      icon: Target,
+      title: "Prevention",
+      description: "Proactive error prevention and mitigation.",
+      benefits: ["Prevention", "Mitigation", "Protection"]
+    },
+    {
+      icon: TrendingUp,
+      title: "Performance",
+      description: "Optimize performance and reduce errors.",
+      benefits: ["Optimization", "Performance", "Efficiency"]
+    }
+  ];
 
   const benefits = [
     'Increase efficiency by up to 50%',

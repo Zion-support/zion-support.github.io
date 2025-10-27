@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { Mail, Phone, MapPin, Twitter, Brain, Github, Linkedin } from 'lucide-react';
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+  
   const aiServices = [
     { name: 'AI Analytics & BI', url: '/ai-analytics', description: 'Business intelligence' },
     { name: 'AI Automation', url: '/ai-automation', description: 'Process automation' },

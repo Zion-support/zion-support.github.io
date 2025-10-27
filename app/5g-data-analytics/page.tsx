@@ -1,34 +1,117 @@
 'use client'
 import React from 'react'
-import Head from 'next/head'
-import Link from 'next/link'
+import { CheckCircle, Brain, BarChart, Target, TrendingUp, ArrowRight } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-import Footer from '../components/Footer'
+const FiveGDataAnalyticsPage: React.FC = () => {
+  const features = [
+    {
+      icon: <Brain className="h-8 w-8 text-blue-600" />,
+      title: "Real-Time Analytics",
+      description: "Process and analyze 5G data streams in real-time for instant insights."
+    },
+    {
+      icon: <BarChart className="h-8 w-8 text-green-600" />,
+      title: "Network Performance",
+      description: "Monitor and optimize 5G network performance with advanced analytics."
+    },
+    {
+      icon: <Target className="h-8 w-8 text-purple-600" />,
+      title: "Predictive Modeling",
+      description: "Predict network behavior and optimize performance using ML algorithms."
+    },
+    {
+      icon: <TrendingUp className="h-8 w-8 text-orange-600" />,
+      title: "Data Visualization",
+      description: "Transform complex 5G data into actionable insights with interactive dashboards."
+    }
+  ];
 
-export default function Page() {
+  const benefits = [
+    "Improve network efficiency by 40%",
+    "Reduce downtime by 60%",
+    "Enable predictive maintenance",
+    "Optimize resource allocation"
+  ];
+
   return (
-    <div>
-      <Head>
-        <title>5g Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5g data analytics services and solutions by Zion Tech Group." />
-      </Head>
+    <>
+      <Navigation />
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">
-            5g Data Analytics
-          </h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Professional services by Zion Tech Group.
-          </p>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
-            <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300">
-              This service is currently under development. Contact us to learn more about our upcoming services.
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              5G Data Analytics
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Unlock the power of 5G data with advanced analytics and insights
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Get Started
+              </button>
+              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
+                Learn More
+              </button>
+            </div>
+          </div>
+
+          {/* Features Section */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm p-6 rounded-lg hover:bg-white/20 transition-colors">
+                <div className="mb-4">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300">
+                  {feature.description}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* Benefits Section */}
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold text-white mb-4">
+                Why Choose Our 5G Data Analytics?
+              </h2>
+              <p className="text-xl text-gray-300">
+                Transform your 5G network data into actionable business intelligence
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="space-y-6">
+                {benefits.map((benefit, index) => (
+                  <div key={index} className="flex items-start">
+                    <CheckCircle className="h-6 w-6 text-green-400 mr-3 mt-1 flex-shrink-0" />
+                    <span className="text-lg text-gray-300">{benefit}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="bg-white/20 backdrop-blur-sm p-6 rounded-lg">
+                <h3 className="text-2xl font-semibold text-white mb-4">
+                  Ready to Analyze Your 5G Data?
+                </h3>
+                <p className="text-gray-300 mb-6">
+                  Join leading organizations that leverage our 5G analytics platform for competitive advantage.
+                </p>
+                <button className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center">
+                  Start Free Trial
+                  <ArrowRight className="h-5 w-5 ml-2" />
+                </button>
+              </div>
+            </div>
           </div>
         </div>
         <Footer />
       </main>
-    </div>
+    </>
   );
 };
+
+export default FiveGDataAnalyticsPage;

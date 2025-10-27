@@ -2,7 +2,35 @@
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
+import { CheckCircle, Brain, BarChart, Target, TrendingUp, ArrowRight} from 'lucide-react'
+
+const TestPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: "Testing Solutions",
+      description: "Advanced testing and quality assurance solutions.",
+      benefits: ["Quality", "Testing", "Assurance"]
+    },
+    {
+      icon: BarChart,
+      title: "Analytics",
+      description: "Comprehensive testing analytics and reporting.",
+      benefits: ["Monitoring", "Analysis", "Insights"]
+    },
+    {
+      icon: Target,
+      title: "Precision",
+      description: "Precise testing and quality targeting.",
+      benefits: ["Accuracy", "Precision", "Targeting"]
+    },
+    {
+      icon: TrendingUp,
+      title: "Performance",
+      description: "Optimize testing performance and quality.",
+      benefits: ["Optimization", "Performance", "Efficiency"]
+    }
+  ];
 
   const benefits = [
     'Increase efficiency by up to 50%',
@@ -106,9 +134,9 @@ import { CheckCircle, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
           </div>
         </section>
       </div>
-      <Footer />;
-    </>;
+      <Footer />
+    </>
   );
 };
 
-export default PagePage;
+export default TestPage;

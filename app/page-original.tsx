@@ -4,6 +4,34 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
 
+const PageOriginal: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: "AI-Powered Solutions",
+      description: "Advanced AI solutions for modern businesses.",
+      benefits: ["Automation", "Intelligence", "Efficiency"]
+    },
+    {
+      icon: BarChart,
+      title: "Analytics Dashboard",
+      description: "Comprehensive analytics and reporting.",
+      benefits: ["Real-time data", "Insights", "Performance"]
+    },
+    {
+      icon: Target,
+      title: "Goal Achievement",
+      description: "Achieve your business goals with our solutions.",
+      benefits: ["Targeting", "Success", "Growth"]
+    },
+    {
+      icon: TrendingUp,
+      title: "Growth Optimization",
+      description: "Optimize your business for sustainable growth.",
+      benefits: ["Optimization", "Growth", "Success"]
+    }
+  ];
+
   const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
@@ -106,9 +134,9 @@ import { CheckCircle, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
           </div>
         </section>
       </div>
-      <Footer />;
-    </>;
+      <Footer />
+    </>
   );
 };
 
-export default PageOriginalPage;
+export default PageOriginal;

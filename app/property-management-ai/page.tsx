@@ -2,7 +2,35 @@
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
+import { CheckCircle, Brain, BarChart, Target, TrendingUp, ArrowRight} from 'lucide-react'
+
+const PropertyManagementAIPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: "Rent Optimization",
+      description: "AI-powered rent pricing to maximize revenue and occupancy.",
+      benefits: ["Market analysis", "Dynamic pricing", "Revenue optimization"]
+    },
+    {
+      icon: BarChart,
+      title: "Tenant Analytics",
+      description: "Comprehensive analytics to understand tenant behavior and preferences.",
+      benefits: ["Tenant insights", "Behavior analysis", "Satisfaction tracking"]
+    },
+    {
+      icon: Target,
+      title: "Maintenance Prediction",
+      description: "Predictive maintenance to prevent costly repairs and downtime.",
+      benefits: ["Predictive analytics", "Cost reduction", "Proactive maintenance"]
+    },
+    {
+      icon: TrendingUp,
+      title: "Property Valuation",
+      description: "Accurate property valuation using AI and market data.",
+      benefits: ["Market analysis", "Value prediction", "Investment insights"]
+    }
+  ];
 
   const benefits = [
     'Increase efficiency by up to 50%',
@@ -22,7 +50,7 @@ import { CheckCircle, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Page
+              Property Management AI
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Transform your property management with AI-powered tools. Optimize rent, manage tenants, and maximize property value.
@@ -106,9 +134,9 @@ import { CheckCircle, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
           </div>
         </section>
       </div>
-      <Footer />;
-    </>;
+      <Footer />
+    </>
   );
 };
 
-export default PagePage;
+export default PropertyManagementAIPage;

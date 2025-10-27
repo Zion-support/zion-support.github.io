@@ -2,7 +2,35 @@
 import React from 'react'
 import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
-import { CheckCircle, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
+import { CheckCircle, Brain, BarChart, Target, TrendingUp, ArrowRight} from 'lucide-react'
+
+const CybersecurityAuditPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: "Vulnerability Assessment",
+      description: "Comprehensive security assessment to identify potential vulnerabilities.",
+      benefits: ["Automated scanning", "Risk prioritization", "Compliance checking"]
+    },
+    {
+      icon: BarChart,
+      title: "Security Analytics",
+      description: "Advanced analytics to monitor and analyze security threats.",
+      benefits: ["Real-time monitoring", "Threat detection", "Incident response"]
+    },
+    {
+      icon: Target,
+      title: "Penetration Testing",
+      description: "Simulated attacks to test your security defenses.",
+      benefits: ["Ethical hacking", "Vulnerability exploitation", "Security validation"]
+    },
+    {
+      icon: TrendingUp,
+      title: "Compliance Management",
+      description: "Ensure compliance with industry standards and regulations.",
+      benefits: ["GDPR compliance", "SOC 2 audit", "ISO 27001"]
+    }
+  ];
 
   const benefits = [
     'Increase efficiency by up to 50%',
@@ -22,7 +50,7 @@ import { CheckCircle, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Page
+              Cybersecurity Audit
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced Page solution for modern businesses.
@@ -106,9 +134,9 @@ import { CheckCircle, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
           </div>
         </section>
       </div>
-      <Footer />;
-    </>;
+      <Footer />
+    </>
   );
 };
 
-export default PagePage;
+export default CybersecurityAuditPage;

@@ -2,7 +2,35 @@
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
+import { CheckCircle, Brain, BarChart, Target, TrendingUp, ArrowRight} from 'lucide-react'
+
+const SupplyChainOptimizerPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: "Demand Forecasting",
+      description: "AI-powered demand forecasting to optimize inventory levels.",
+      benefits: ["Predictive analytics", "Seasonal adjustments", "Market trends"]
+    },
+    {
+      icon: BarChart,
+      title: "Logistics Optimization",
+      description: "Optimize shipping routes and delivery schedules.",
+      benefits: ["Route optimization", "Cost reduction", "Delivery tracking"]
+    },
+    {
+      icon: Target,
+      title: "Inventory Management",
+      description: "Smart inventory management with automated reordering.",
+      benefits: ["Stock optimization", "Automated reordering", "Waste reduction"]
+    },
+    {
+      icon: TrendingUp,
+      title: "Performance Analytics",
+      description: "Comprehensive analytics to monitor supply chain performance.",
+      benefits: ["KPI tracking", "Performance metrics", "Trend analysis"]
+    }
+  ];
 
   const benefits = [
     'Increase efficiency by up to 50%',
@@ -22,7 +50,7 @@ import { CheckCircle, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Page
+              Supply Chain Optimizer
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Optimize your supply chain with AI-powered tools. Logistics optimization, demand forecasting, and automated processes.
@@ -106,9 +134,9 @@ import { CheckCircle, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
           </div>
         </section>
       </div>
-      <Footer />;
-    </>;
+      <Footer />
+    </>
   );
 };
 
-export default PagePage;
+export default SupplyChainOptimizerPage;
