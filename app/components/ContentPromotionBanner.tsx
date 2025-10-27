@@ -1,17 +1,10 @@
+
 import React from 'react';
-
-interface ContentPromotionBannerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({ 
-  className = '', 
-  children 
-}) => {
+const ContentPromotionBanner = () => {
   return (
-    <div className={`contentpromotionbanner ${className}`}>
-      {children || <p>ContentPromotionBanner component</p>}
+    <div className="p-4">
+      <h2>ContentPromotionBanner</h2>
+      <p>Component implementation coming soon...</p>
     </div>
   );
 };

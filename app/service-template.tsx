@@ -5,13 +5,15 @@ interface ServiceTemplateProps {
   children?: React.ReactNode;
 }
 
-export default function ServiceTemplate({ 
+const ServiceTemplate: React.FC<ServiceTemplateProps> = ({ 
   className = '', 
   children 
-}: ServiceTemplateProps) {
+}) => {
   return (
     <div className={'service-template ' + className}>
-      {children || <p>Service Template component</p>}
+      {children || <p>Service-template component</p>}
     </div>
   );
-}
+};
+
+export default ServiceTemplate;

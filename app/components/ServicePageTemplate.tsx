@@ -1,10 +1,12 @@
+
 import React from 'react';
-
-interface ServicePageTemplateProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default ServicePageTemplate;
+const ServicePageTemplate = () => {
+  return (
+    <div className="p-4">
+      <h2>ServicePageTemplate</h2>
+      <p>Component implementation coming soon...</p>
+    </div>
+  );
+};
 
 export default ServicePageTemplate;

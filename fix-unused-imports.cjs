@@ -1,14 +1,73 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 
-// Common unused imports to remove
-const unusedImports = [
-  'Zap', 'Users', 'ArrowRight', 'Star', 'Clock', 'Target', 'TrendingUp', 
-  'Globe', 'Database', 'StarIcon', 'Check', 'Arrow', 'PhoneIcon', 'MailIcon', 'Location'
-];
+// Function to fix unused imports in a file
+function fixUnusedImports(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
 
-// Find all files with unused imports
-const findFiles = (dir) => {
+    // Remove unused React imports (when React is not used in JSX)
+    if (content.includes("import React from 'react';") && !content.includes('<') && !content.includes('React.')) {
+      content = content.replace(/import React from 'react';\n?/g, '');
+      modified = true;
+    }
+
+    // Remove unused Link imports
+    if (content.includes("import { Link } from 'next/link';") && !content.includes('<Link')) {
+      content = content.replace(/import { Link } from 'next\/link';\n?/g, '');
+      modified = true;
+    }
+
+    // Remove unused ArrowRight imports
+    if (content.includes("import { ArrowRight } from 'lucide-react';") && !content.includes('ArrowRight')) {
+      content = content.replace(/import { ArrowRight } from 'lucide-react';\n?/g, '');
+      modified = true;
+    }
+
+    // Remove unused icon imports
+    const unusedIcons = ['Star', 'Clock', 'Zap', 'Shield', 'Globe', 'Database', 'Users', 'Settings', 'Check', 'Search', 'ArrowLeft', 'RefreshCw', 'Cloud'];
+    unusedIcons.forEach(icon => {
+      const iconImportPattern = `import { ${icon} } from 'lucide-react';`;
+      if (content.includes(iconImportPattern) && !content.includes(icon)) {
+        content = content.replace(new RegExp(iconImportPattern + '\\n?', 'g'), '');
+        modified = true;
+      }
+    });
+
+    // Add React import if missing and JSX is present
+    if (content.includes('<') && !content.includes("import React") && !content.includes("import * as React")) {
+      content = "import React from 'react';\n" + content;
+      modified = true;
+    }
+
+    // Fix unused props by prefixing with underscore
+    const unusedPropsRegex = /interface (\w+Props) \{[\s\S]*?\}/g;
+    let match;
+    while ((match = unusedPropsRegex.exec(content)) !== null) {
+      const propName = match[1];
+      if (!content.includes(`React.FC<${propName}>`) && !content.includes(`: ${propName}`)) {
+        content = content.replace(new RegExp(`\\b${propName}\\b`, 'g'), `_${propName}`);
+        modified = true;
+      }
+    }
+
+    if (modified) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    return false;
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
+  }
+}
+
+// Function to find all TypeScript/TSX files
+function findTsxFiles(dir) {
   const files = [];
   const items = fs.readdirSync(dir);
   
@@ -16,58 +75,50 @@ const findFiles = (dir) => {
     const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
     
-    if (stat.isDirectory()) {
-      files.push(...findFiles(fullPath));
+    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+      files.push(...findTsxFiles(fullPath));
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-      const content = fs.readFileSync(fullPath, 'utf8');
-      if (content.includes('from \'lucide-react\'')) {
-        files.push(fullPath);
-      }
+      files.push(fullPath);
     }
   }
   
   return files;
-};
-
-// Fix a single file
-const fixFile = (filePath) => {
-  let content = fs.readFileSync(filePath, 'utf8');
-  let changed = false;
-  
-  // Find lucide-react import line
-  const importMatch = content.match(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/);
-  if (importMatch) {
-    const imports = importMatch[1].split(',').map(imp => imp.trim());
-    const usedImports = imports.filter(imp => {
-      const cleanImp = imp.replace(/\s+as\s+\w+/, '').trim();
-      return !unusedImports.includes(cleanImp) && content.includes(cleanImp);
-    });
-    
-    if (usedImports.length !== imports.length) {
-      if (usedImports.length === 0) {
-        // Remove entire import line
-        content = content.replace(/import\s*{\s*[^}]+?\s*}\s*from\s*['"]lucide-react['"];?\s*\n?/g, '');
-      } else {
-        // Replace with only used imports
-        const newImport = `import { ${usedImports.join(', ')} } from 'lucide-react';`;
-        content = content.replace(/import\s*{\s*[^}]+?\s*}\s*from\s*['"]lucide-react['"];?/g, newImport);
-      }
-      changed = true;
-    }
-  }
-  
-  if (changed) {
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);
-  }
-};
+}
 
 // Main execution
+console.log('Starting unused imports fix...');
+
 const appDir = path.join(__dirname, 'app');
-const files = findFiles(appDir);
+const files = findTsxFiles(appDir);
 
-console.log(`Found ${files.length} files with lucide-react imports`);
+let fixedCount = 0;
+files.forEach(file => {
+  if (fixUnusedImports(file)) {
+    fixedCount++;
+  }
+});
 
-files.forEach(fixFile);
+console.log(`Fixed ${fixedCount} files.`);
 
-console.log('Unused imports fixed!');
+// Also fix specific files mentioned in the lint output
+const specificFiles = [
+  'app/404.tsx',
+  'app/5g-data-analytics/page.tsx',
+  'app/5g-edge-computing/page.tsx',
+  'app/5g-implementation/page.tsx',
+  'app/5g-iot-solutions/page.tsx',
+  'app/accessibility-page/page.tsx',
+  'app/ai-powered-devops/page.tsx',
+  'app/ai-powered-email-analyzer/page.tsx'
+];
+
+specificFiles.forEach(file => {
+  const fullPath = path.join(__dirname, file);
+  if (fs.existsSync(fullPath)) {
+    if (fixUnusedImports(fullPath)) {
+      console.log(`Fixed specific file: ${file}`);
+    }
+  }
+});
+
+console.log('Unused imports fix completed!');

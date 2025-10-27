@@ -156,20 +156,18 @@ export interface FormState<T = Record<string, unknown>> {
   isValid: boolean
 }
 // Component props types
-export interface BaseComponentProps {
-  className?: string;
-  children?: React.ReactNode;
+export interface _BaseComponentProps {
+  className?: string
+  children?: React.ReactNode
+  id?: string
+  'data-testid'?: string
 }
-
-export default BaseComponent;
-
-export default BaseComponent;
-export interface LoadingProps extends BaseComponentProps {
+export interface LoadingProps extends _BaseComponentProps {
   size?: 'sm' | 'md' | 'lg' | 'xl'
   color?: 'primary' | 'secondary' | 'white'
   text?: string
 }
-export interface ButtonProps extends BaseComponentProps {
+export interface ButtonProps extends _BaseComponentProps {
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger'
   size?: 'sm' | 'md' | 'lg'
   disabled?: boolean
@@ -177,7 +175,7 @@ export interface ButtonProps extends BaseComponentProps {
   onClick?: () => void
   type?: 'button' | 'submit' | 'reset'
 }
-export interface InputProps extends BaseComponentProps {
+export interface InputProps extends _BaseComponentProps {
   type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'search'
   placeholder?: string
   value?: string
