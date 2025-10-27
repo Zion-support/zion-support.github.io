@@ -1,11 +1,8 @@
-import { useState, useEffect } from 'react';
-
-export const useSitemapGenerator = () => {
-  const [state, setState] = useState(null);
-  
-  useEffect(() => {
-    // Hook implementation
-  }, []);
-  
-  return { state, setState };
+export const sitemapGenerator = {
+  generateSitemap: (routes: string[]) => {
+    return routes.map(route => ({
+      url: route,
+      lastModified: new Date(),
+    }));
+  },
 };
