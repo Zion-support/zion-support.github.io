@@ -28,7 +28,7 @@ export default function ModernLoader({ isLoading, children }: ModernLoaderProps)
   }, [isLoading]);
 
   if (!showLoader) {
-    return <>{children}</>;
+    return <>{children}</>
   }
 
   return (

@@ -1,49 +1,19 @@
 import React from 'react';
-
 import Link from 'next/link';
-import { Metadata} from 'next';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, Target, Award, } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
   title: 'About Us - Zion Tech Group',
-  description: 'Learn about Zion Tech Group, a leading provider of AI and IT solutions. Discover our mission, values, and the team behind our innovative technology services.',
-  keywords: 'about us, company, team, mission, values, AI solutions, IT services',
-  openGraph: {
-    title: 'About Us - Zion Tech Group',
-    description: 'Learn about Zion Tech Group, a leading provider of AI and IT solutions.',
-    type: 'website'
-  }
+  description: 'Learn about Zion Tech Group, a leading provider of AI and IT solutions.',
 };
 
-const AboutPage: React.FC = () => {
-  const values = [
-    {
-      icon: <CheckCircle className="w-8 h-8 text-blue-600" />,
-      title: 'Innovation',
-      description: 'We constantly push the boundaries of technology to deliver cutting-edge solutions.'
-    },
-    {
-      icon: <Users className="w-8 h-8 text-green-600" />,
-      title: 'Collaboration',
-      description: 'We work closely with our clients to understand their unique needs and challenges.'
-    },
-    {
-      icon: <Target className="w-8 h-8 text-purple-600" />,
-      title: 'Excellence',
-      description: 'We are committed to delivering the highest quality solutions and services.'
-    },
-    {
-      icon: <Award className="w-8 h-8 text-orange-600" />,
-      title: 'Integrity',
-      description: 'We conduct business with honesty, transparency, and ethical practices.'
-    }
-  ];
+export default function AboutPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Navigation />
       
       {/* Hero Section */}
       <section className="pt-20 pb-16 bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -83,15 +53,42 @@ const AboutPage: React.FC = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
-              <div key={index} className="text-center">
-                <div className="flex justify-center mb-4">
-                  {value.icon}
+            <div className="text-center">
+              <div className="flex justify-center mb-4">
+                <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
+                  <span className="text-white font-bold">I</span>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{value.title}</h3>
-                <p className="text-gray-600">{value.description}</p>
               </div>
-            ))}
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Innovation</h3>
+              <p className="text-gray-600">We constantly push the boundaries of technology to deliver cutting-edge solutions.</p>
+            </div>
+            <div className="text-center">
+              <div className="flex justify-center mb-4">
+                <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center">
+                  <span className="text-white font-bold">C</span>
+                </div>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Collaboration</h3>
+              <p className="text-gray-600">We work closely with our clients to understand their unique needs and challenges.</p>
+            </div>
+            <div className="text-center">
+              <div className="flex justify-center mb-4">
+                <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center">
+                  <span className="text-white font-bold">E</span>
+                </div>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Excellence</h3>
+              <p className="text-gray-600">We are committed to delivering the highest quality solutions and services.</p>
+            </div>
+            <div className="text-center">
+              <div className="flex justify-center mb-4">
+                <div className="w-8 h-8 bg-orange-600 rounded-full flex items-center justify-center">
+                  <span className="text-white font-bold">I</span>
+                </div>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Integrity</h3>
+              <p className="text-gray-600">We conduct business with honesty, transparency, and ethical practices.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -113,9 +110,8 @@ const AboutPage: React.FC = () => {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 }
 
-export default AboutPage;
+

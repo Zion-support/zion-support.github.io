@@ -2,8 +2,9 @@
 import React from 'react'
 import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
-import { CheckCircle, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
+import { CheckCircle, Brain, BarChart, Target, TrendingUp, ArrowRight} from 'lucide-react'
 
+export default function CybersecurityAuditPage() {
   const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
@@ -106,9 +107,33 @@ import { CheckCircle, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
           </div>
         </section>
       </div>
-      <Footer />;
-    </>;
+      <Footer />
+    </>
   );
-};
-
-export default PagePage;
+}
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Analytics',
+      description: 'Advanced machine learning algorithms for data insights',
+      benefits: ['Real-time analysis', 'Predictive modeling', 'Automated reporting']
+    },
+    {
+      icon: BarChart,
+      title: 'Data Visualization',
+      description: 'Interactive dashboards and charts',
+      benefits: ['Custom dashboards', 'Real-time updates', 'Mobile responsive']
+    },
+    {
+      icon: Target,
+      title: 'Performance Optimization',
+      description: 'Optimize your business processes',
+      benefits: ['Process automation', 'Efficiency gains', 'Cost reduction']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Analytics',
+      description: 'Track and analyze business growth',
+      benefits: ['Growth metrics', 'Trend analysis', 'ROI tracking']
+    }
+  ];

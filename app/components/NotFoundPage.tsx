@@ -5,6 +5,5 @@ interface NotFoundPageProps {
   children?: React.ReactNode;
 }
 
-export default NotFoundPage;
 
-export default NotFoundPage;
+

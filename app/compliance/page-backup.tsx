@@ -4,7 +4,7 @@ import React from 'react';
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { ShieldCircle, Lock, } from 'lucide-react';
+import { ShieldCircle, Lock, , ArrowRight} from 'lucide-react';
 
   const features = [
     {
@@ -33,6 +33,7 @@ import { ShieldCircle, Lock, } from 'lucide-react';
     { label: 'Recovery Time', value: '< 1 min', icon: Clock }
   ];
 
+export default function pagebackupPage() {
   return (
     <>
       <Navigation />
