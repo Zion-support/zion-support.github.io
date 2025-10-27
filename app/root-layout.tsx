@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-
-=======
-import React from 'react'
->>>>>>> cursor/fix-errors-and-merge-to-main-50ad
+import React from 'react';
 
 interface RootLayoutProps {
 }
