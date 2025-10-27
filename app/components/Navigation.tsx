@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Search, Home, ArrowLeft, RefreshCw } from 'lucide-react';
+import { Home } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   return (
