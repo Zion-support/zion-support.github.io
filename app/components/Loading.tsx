@@ -8,7 +8,7 @@ interface _LoadingProps {
 export default function Loading({ 
   className = '', 
   children 
-}: LoadingProps) {
+}: _LoadingProps) {
   return (
     <div className={'loading ' + className}>
       {children || <p>Loading component</p>}

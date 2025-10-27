@@ -8,7 +8,7 @@ interface _MobileOptimizerProps {
 export default function MobileOptimizer({ 
   className = '', 
   children 
-}: MobileOptimizerProps) {
+}: _MobileOptimizerProps) {
   return (
     <div className={'mobileoptimizer ' + className}>
       {children || <p>MobileOptimizer component</p>}

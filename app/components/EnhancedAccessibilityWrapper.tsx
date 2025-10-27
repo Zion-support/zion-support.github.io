@@ -8,7 +8,7 @@ interface _EnhancedAccessibilityWrapperProps {
 export default function EnhancedAccessibilityWrapper({ 
   className = '', 
   children 
-}: EnhancedAccessibilityWrapperProps) {
+}: _EnhancedAccessibilityWrapperProps) {
   return (
     <div className={'enhancedaccessibilitywrapper ' + className}>
       {children || <p>EnhancedAccessibilityWrapper component</p>}

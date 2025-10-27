@@ -4,7 +4,25 @@ interface ApiResponse<T> {
   message?: string;
 }
 
+interface RequestInit {
+  method?: string;
+  headers?: Record<string, string>;
+  body?: string;
+  mode?: string;
+  credentials?: string;
+  cache?: string;
+  redirect?: string;
+  referrer?: string;
+  integrity?: string;
+}
+
 class ApiClient {
+  private baseUrl: string;
+
+  constructor(baseUrl: string = '') {
+    this.baseUrl = baseUrl;
+  }
+
   private async request<T>(
     endpoint: string,
     options: RequestInit = {}

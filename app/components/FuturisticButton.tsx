@@ -8,7 +8,7 @@ interface _FuturisticButtonProps {
 export default function FuturisticButton({ 
   className = '', 
   children 
-}: FuturisticButtonProps) {
+}: _FuturisticButtonProps) {
   return (
     <div className={'futuristicbutton ' + className}>
       {children || <p>FuturisticButton component</p>}

@@ -2,7 +2,7 @@
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, Brain, BarChart, Target, TrendingUp, ArrowRight} from 'lucide-react'
+import { CheckCircle, ArrowRight} from 'lucide-react'
 
   const benefits = [
     'Increase efficiency by up to 50%',
@@ -10,6 +10,33 @@ import { CheckCircle, Brain, BarChart, Target, TrendingUp, ArrowRight} from 'luc
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
+  ]
+
+  const features = [
+    {
+      icon: CheckCircle,
+      title: 'AI-Powered Analytics',
+      description: 'Advanced analytics powered by artificial intelligence',
+      benefits: ['Real-time insights', 'Predictive analytics', 'Custom dashboards']
+    },
+    {
+      icon: CheckCircle,
+      title: 'Automation Suite',
+      description: 'Comprehensive automation tools for your business',
+      benefits: ['Workflow automation', 'Task scheduling', 'Process optimization']
+    },
+    {
+      icon: CheckCircle,
+      title: 'Smart Integration',
+      description: 'Seamlessly integrate with your existing systems',
+      benefits: ['API connectivity', 'Data synchronization', 'Custom connectors']
+    },
+    {
+      icon: CheckCircle,
+      title: 'Security First',
+      description: 'Enterprise-grade security for your data',
+      benefits: ['End-to-end encryption', 'Access controls', 'Audit trails']
+    }
   ]
 
 export default function pagenewPage() {

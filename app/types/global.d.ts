@@ -1,6 +1,6 @@
 declare global {
   interface Window {
-    gtag: (...args: any[]) => void;
+    gtag: (..._args: any[]) => void;
   }
 }
 

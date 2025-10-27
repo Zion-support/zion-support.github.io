@@ -1,3 +1,4 @@
+import React from 'react';
 'use client'
 
 
@@ -15,5 +16,16 @@ interface __NavigationBackupProps {
   ctaText?: string;
   ctaHref?: string;
 }
+
+const NavigationBackup: React.FC<__NavigationBackupProps> = (_props) => {
+  return (
+    <div className="p-4">
+      <h2>NavigationBackup</h2>
+      <p>Component implementation coming soon...</p>
+    </div>
+  );
+};
+
+NavigationBackup.displayName = 'NavigationBackup';
 
 export default NavigationBackup;

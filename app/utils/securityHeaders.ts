@@ -13,7 +13,24 @@ export function getNextSecurityHeaders(customConfig?: Partial<SecurityConfig>): 
 }
 
 function getSecurityHeaders(config?: Partial<SecurityConfig>) {
-  strictTransportSecurity: boolean;
-  contentSecurityPolicy?: string;
+  const defaultConfig: SecurityConfig = {
+    strictTransportSecurity: true,
+    contentSecurityPolicy: "default-src 'self'",
+    xFrameOptions: 'DENY',
+    xContentTypeOptions: true,
+    referrerPolicy: 'strict-origin-when-cross-origin'
+  };
+
+  const mergedConfig = { ...defaultConfig, ...config };
+
+  return {
+    'Strict-Transport-Security': mergedConfig.strictTransportSecurity 
+      ? 'max-age=31536000; includeSubDomains' 
+      : '',
+    'Content-Security-Policy': mergedConfig.contentSecurityPolicy,
+    'X-Frame-Options': mergedConfig.xFrameOptions,
+    'X-Content-Type-Options': mergedConfig.xContentTypeOptions ? 'nosniff' : '',
+    'Referrer-Policy': mergedConfig.referrerPolicy
+  };
 }
 

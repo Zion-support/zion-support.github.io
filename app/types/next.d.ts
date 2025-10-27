@@ -1,4 +1,5 @@
 // Type definitions for Next.js compatibility
+import React from 'react';
 
 export interface Metadata {
   title?: string;
@@ -82,7 +83,7 @@ export interface NextPageProps {
 
 // API route types
 export interface ApiRouteHandler {
-  (req: Request): Promise<Response>;
+  (_req: Request): Promise<Response>;
 }
 
 // Server components types
@@ -99,11 +100,11 @@ export interface ClientComponentProps {
 
 // Route handlers
 export interface RouteHandler {
-  GET?: (req: Request) => Promise<Response>;
-  POST?: (req: Request) => Promise<Response>;
-  PUT?: (req: Request) => Promise<Response>;
-  DELETE?: (req: Request) => Promise<Response>;
-  PATCH?: (req: Request) => Promise<Response>;
+  GET?: (_req: Request) => Promise<Response>;
+  POST?: (_req: Request) => Promise<Response>;
+  PUT?: (_req: Request) => Promise<Response>;
+  DELETE?: (_req: Request) => Promise<Response>;
+  PATCH?: (_req: Request) => Promise<Response>;
 }
 
 // Dynamic route types

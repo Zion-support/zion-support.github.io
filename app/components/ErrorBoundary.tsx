@@ -8,7 +8,7 @@ interface _ErrorBoundaryProps {
 export default function ErrorBoundary({ 
   className = '', 
   children 
-}: ErrorBoundaryProps) {
+}: _ErrorBoundaryProps) {
   return (
     <div className={'errorboundary ' + className}>
       {children || <p>ErrorBoundary component</p>}

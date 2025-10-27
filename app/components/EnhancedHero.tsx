@@ -8,7 +8,7 @@ interface _EnhancedHeroProps {
 export default function EnhancedHero({ 
   className = '', 
   children 
-}: EnhancedHeroProps) {
+}: _EnhancedHeroProps) {
   return (
     <div className={'enhancedhero ' + className}>
       {children || <p>EnhancedHero component</p>}

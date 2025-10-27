@@ -161,9 +161,6 @@ export interface BaseComponentProps {
   children?: React.ReactNode;
 }
 
-export default BaseComponent;
-
-export default BaseComponent;
 export interface LoadingProps extends BaseComponentProps {
   size?: 'sm' | 'md' | 'lg' | 'xl'
   color?: 'primary' | 'secondary' | 'white'

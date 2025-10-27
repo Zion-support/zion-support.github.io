@@ -85,4 +85,3 @@ export default function InteractiveAIROICalculatorPage() {
     </section>
   )}
 
-export default InteractiveAIROICalculator;

@@ -8,7 +8,7 @@ interface _UserExperienceEnhancerProps {
 export default function UserExperienceEnhancer({ 
   className = '', 
   children 
-}: UserExperienceEnhancerProps) {
+}: _UserExperienceEnhancerProps) {
   return (
     <div className={'userexperienceenhancer ' + className}>
       {children || <p>UserExperienceEnhancer component</p>}

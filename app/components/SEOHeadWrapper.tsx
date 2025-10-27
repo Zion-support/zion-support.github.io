@@ -8,7 +8,7 @@ interface _SEOHeadWrapperProps {
 export default function SEOHeadWrapper({ 
   className = '', 
   children 
-}: SEOHeadWrapperProps) {
+}: _SEOHeadWrapperProps) {
   return (
     <div className={'seoheadwrapper ' + className}>
       {children || <p>SEOHeadWrapper component</p>}

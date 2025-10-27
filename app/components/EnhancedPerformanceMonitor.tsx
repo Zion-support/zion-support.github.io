@@ -8,7 +8,7 @@ interface _EnhancedPerformanceMonitorProps {
 export default function EnhancedPerformanceMonitor({ 
   className = '', 
   children 
-}: EnhancedPerformanceMonitorProps) {
+}: _EnhancedPerformanceMonitorProps) {
   return (
     <div className={'enhancedperformancemonitor ' + className}>
       {children || <p>EnhancedPerformanceMonitor component</p>}

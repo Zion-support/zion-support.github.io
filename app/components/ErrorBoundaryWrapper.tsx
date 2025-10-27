@@ -8,7 +8,7 @@ interface _ErrorBoundaryWrapperProps {
 export default function ErrorBoundaryWrapper({ 
   className = '', 
   children 
-}: ErrorBoundaryWrapperProps) {
+}: _ErrorBoundaryWrapperProps) {
   return (
     <div className={'errorboundarywrapper ' + className}>
       {children || <p>ErrorBoundaryWrapper component</p>}

@@ -8,7 +8,7 @@ interface _EnhancedSEOOptimizerProps {
 export default function EnhancedSEOOptimizer({ 
   className = '', 
   children 
-}: EnhancedSEOOptimizerProps) {
+}: _EnhancedSEOOptimizerProps) {
   return (
     <div className={'enhancedseooptimizer ' + className}>
       {children || <p>EnhancedSEOOptimizer component</p>}

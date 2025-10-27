@@ -8,7 +8,7 @@ interface _PWAInstallerProps {
 export default function PWAInstaller({ 
   className = '', 
   children 
-}: PWAInstallerProps) {
+}: _PWAInstallerProps) {
   return (
     <div className={'pwainstaller ' + className}>
       {children || <p>PWAInstaller component</p>}

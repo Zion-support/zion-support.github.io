@@ -8,7 +8,7 @@ interface _FuturisticCardProps {
 export default function FuturisticCard({ 
   className = '', 
   children 
-}: FuturisticCardProps) {
+}: _FuturisticCardProps) {
   return (
     <div className={'futuristiccard ' + className}>
       {children || <p>FuturisticCard component</p>}
