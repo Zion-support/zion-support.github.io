@@ -1,4 +1,6 @@
 
+import React from 'react';
+
 interface AnalyticsProps {
   className?: string;
   children?: React.ReactNode;

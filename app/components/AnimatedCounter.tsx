@@ -1,4 +1,6 @@
 
+import React from 'react';
+
 interface AnimatedCounterProps {
   className?: string;
   children?: React.ReactNode;

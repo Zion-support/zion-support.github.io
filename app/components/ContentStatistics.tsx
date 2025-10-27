@@ -5,6 +5,12 @@ interface ContentStatisticsProps {
   children?: React.ReactNode;
 }
 
-export default ContentStatistics;
+const ContentStatistics: React.FC<ContentStatisticsProps> = ({ className, children }) => {
+  return (
+    <div className={className} role="region" aria-label="Content Statistics">
+      {children || <p>Content Statistics</p>}
+    </div>
+  );
+};
 
 export default ContentStatistics;

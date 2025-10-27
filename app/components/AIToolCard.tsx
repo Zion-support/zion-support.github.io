@@ -5,9 +5,13 @@ interface AIToolCardProps {
   children?: React.ReactNode;
 }
 
-export default AIToolCard;
-
-export default AIToolCard;
+const AIToolCard: React.FC<AIToolCardProps> = ({ className, children }) => {
+  return (
+    <div className={className}>
+      {children}
+    </div>
+  );
+};
 
 AIToolCard.displayName = 'AIToolCard';
 
