@@ -1,17 +1,9 @@
-import React from 'react';
 
-interface ErrorHandlerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const ErrorHandler: React.FC<ErrorHandlerProps> = ({ 
-  className = '', 
-  children 
-}) => {
+const ErrorHandler = () => {
   return (
-    <div className={'errorhandler ' + className}>
-      {children || <p>ErrorHandler component</p>}
+    <div className="p-4">
+      <h2>ErrorHandler</h2>
+      <p>Component implementation coming soon...</p>
     </div>
   );
 };

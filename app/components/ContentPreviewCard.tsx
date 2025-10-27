@@ -1,17 +1,9 @@
-import React from 'react';
 
-interface ContentPreviewCardProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({ 
-  className = '', 
-  children 
-}) => {
+const ContentPreviewCard = () => {
   return (
-    <div className={'contentpreviewcard ' + className}>
-      {children || <p>ContentPreviewCard component</p>}
+    <div className="p-4">
+      <h2>ContentPreviewCard</h2>
+      <p>Component implementation coming soon...</p>
     </div>
   );
 };

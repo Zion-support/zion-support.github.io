@@ -1,17 +1,9 @@
-import React from 'react';
 
-interface PerformanceOptimizationsProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = ({ 
-  className = '', 
-  children 
-}) => {
+const PerformanceOptimizations = () => {
   return (
-    <div className={'performanceoptimizations ' + className}>
-      {children || <p>PerformanceOptimizations component</p>}
+    <div className="p-4">
+      <h2>PerformanceOptimizations</h2>
+      <p>Component implementation coming soon...</p>
     </div>
   );
 };
