@@ -1,4 +1,5 @@
-'use client'
+'use client';
+import React from 'react';
 
 
 function Page4j53vc2d8() {

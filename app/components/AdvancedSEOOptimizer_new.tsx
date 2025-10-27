@@ -1,3 +1,4 @@
+import React from 'react';
 
 interface AdvancedSEOOptimizer_newProps {
   className?: string;

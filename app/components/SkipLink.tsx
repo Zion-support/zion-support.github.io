@@ -5,15 +5,12 @@ interface SkipLinkProps {
   children?: React.ReactNode;
 }
 
-const SkipLink: React.FC<SkipLinkProps> = ({ 
-  className = '', 
-  children 
-}) => {
+const SkipLink: React.FC<SkipLinkProps> = ({ className, children }) => {
   return (
-    <div className={'skiplink ' + className}>
-      {children || <p>SkipLink component</p>}
+    <div className={`skiplink-component ${className || ''}`}>
+      {children}
     </div>
   );
 };
 
-export default function SkipLink() { return <div>SkipLink Component</div>; }
+export default SkipLink;

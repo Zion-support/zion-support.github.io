@@ -5,15 +5,12 @@ interface SidebarProps {
   children?: React.ReactNode;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ 
-  className = '', 
-  children 
-}) => {
+const Sidebar: React.FC<SidebarProps> = ({ className, children }) => {
   return (
-    <div className={'sidebar ' + className}>
-      {children || <p>Sidebar component</p>}
+    <div className={`sidebar-component ${className || ''}`}>
+      {children}
     </div>
   );
 };
 
-export default function Sidebar() { return <div>Sidebar Component</div>; }
+export default Sidebar;

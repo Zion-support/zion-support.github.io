@@ -5,15 +5,12 @@ interface ServiceCardSkeletonProps {
   children?: React.ReactNode;
 }
 
-const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ 
-  className = '', 
-  children 
-}) => {
+const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ className, children }) => {
   return (
-    <div className={'servicecardskeleton ' + className}>
-      {children || <p>ServiceCardSkeleton component</p>}
+    <div className={`servicecardskeleton-component ${className || ''}`}>
+      {children}
     </div>
   );
 };
 
-export default function ServiceCardSkeleton() { return <div>ServiceCardSkeleton Component</div>; }
+export default ServiceCardSkeleton;

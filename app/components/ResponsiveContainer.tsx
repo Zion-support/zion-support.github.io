@@ -5,15 +5,12 @@ interface ResponsiveContainerProps {
   children?: React.ReactNode;
 }
 
-const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ 
-  className = '', 
-  children 
-}) => {
+const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ className, children }) => {
   return (
-    <div className={'responsivecontainer ' + className}>
-      {children || <p>ResponsiveContainer component</p>}
+    <div className={`responsivecontainer-component ${className || ''}`}>
+      {children}
     </div>
   );
 };
 
-export default function ResponsiveContainer() { return <div>ResponsiveContainer Component</div>; }
+export default ResponsiveContainer;

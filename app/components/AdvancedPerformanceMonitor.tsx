@@ -1,17 +1,16 @@
+import React from 'react';
 
-const AdvancedPerformanceMonitor = () => {
-  return (
-    <div className="performance-monitor">
-      <h2>Advanced Performance Monitor</h2>
-      <p>This component monitors performance metrics.</p>
-    </div>
-  );
-};
+interface AdvancedPerformanceMonitorProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-export default function AdvancedPerformanceMonitor({ className, children }: AdvancedPerformanceMonitorProps) {
+const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({ className, children }) => {
   return (
     <div className={`advancedperformancemonitor-component ${className || ''}`}>
       {children}
     </div>
   );
-}
+};
+
+export default AdvancedPerformanceMonitor;

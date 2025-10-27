@@ -5,15 +5,12 @@ interface ServiceCardProps {
   children?: React.ReactNode;
 }
 
-const ServiceCard: React.FC<ServiceCardProps> = ({ 
-  className = '', 
-  children 
-}) => {
+const ServiceCard: React.FC<ServiceCardProps> = ({ className, children }) => {
   return (
-    <div className={'servicecard ' + className}>
-      {children || <p>ServiceCard component</p>}
+    <div className={`servicecard-component ${className || ''}`}>
+      {children}
     </div>
   );
 };
 
-export default function ServiceCard() { return <div>ServiceCard Component</div>; }
+export default ServiceCard;

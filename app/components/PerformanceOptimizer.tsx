@@ -5,15 +5,12 @@ interface PerformanceOptimizerProps {
   children?: React.ReactNode;
 }
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ 
-  className = '', 
-  children 
-}) => {
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className, children }) => {
   return (
-    <div className={'performanceoptimizer ' + className}>
-      {children || <p>PerformanceOptimizer component</p>}
+    <div className={`performanceoptimizer-component ${className || ''}`}>
+      {children}
     </div>
   );
 };
 
-export default function PerformanceOptimizer() { return <div>PerformanceOptimizer Component</div>; }
+export default PerformanceOptimizer;
