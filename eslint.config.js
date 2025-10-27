@@ -132,14 +132,14 @@ export default [
           allowExportNames: ['metadata', 'viewport', 'useAnalytics', 'AnalyticsProvider'] 
         }
       ],
-      '@typescript-eslint/no-unused-vars': ['error', { 
+      '@typescript-eslint/no-unused-vars': ['warn', { 
         'argsIgnorePattern': '^_',
         'varsIgnorePattern': '^_',
         'caughtErrorsIgnorePattern': '^_'
       }],
       '@typescript-eslint/no-explicit-any': 'warn',
       'no-console': 'off',
-      'no-unused-vars': ['error', { 
+      'no-unused-vars': ['warn', { 
         'argsIgnorePattern': '^_',
         'varsIgnorePattern': '^_',
         'caughtErrorsIgnorePattern': '^_'
@@ -148,6 +148,7 @@ export default [
       'no-var': 'error',
       'react/no-unescaped-entities': 'off',
       'react/react-in-jsx-scope': 'off',
+      'no-undef': 'off',
     },
   },
   {

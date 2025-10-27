@@ -1,10 +1,17 @@
+<<<<<<< HEAD
 'use client';
+=======
+'use client'
+
+import React from 'react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-50ad
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 const PageOriginal: React.FC = () => {
   const features = [
     {
+<<<<<<< HEAD
       icon: Brain,
       title: "AI-Powered Solutions",
       description: "Advanced AI solutions for modern businesses.",
@@ -27,6 +34,26 @@ const PageOriginal: React.FC = () => {
       title: "Growth Optimization",
       description: "Optimize your business for sustainable growth.",
       benefits: ["Optimization", "Growth", "Success"]
+=======
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+>>>>>>> cursor/fix-errors-and-merge-to-main-50ad
     }
   ];
 
