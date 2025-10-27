@@ -23,6 +23,6 @@ const SimpleNavigation: React.FC = () => {
         </div>
       </div>
     </nav>
-  )};
+  )}
 
 export default SimpleNavigation;

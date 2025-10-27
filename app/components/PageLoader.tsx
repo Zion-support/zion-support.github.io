@@ -8,6 +8,6 @@ const PageLoader: React.FC = () => {
         <p className="text-whitetext-lg">Loading...</p>
       </div>
     </div>
-  )};
+  )}
 
 export default PageLoader;

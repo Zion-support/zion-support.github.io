@@ -1,6 +1,7 @@
+import React from 'react';
 import { useState, useEffect } from 'react';
 
-export const useaccessibilityUtils = () => {
+export const useaccessibilityUtils: React.FC = () => {
   const [state, setState] = useState(null);
   
   useEffect(() => {
@@ -11,11 +12,11 @@ export const useaccessibilityUtils = () => {
 };
 <<<<<<< HEAD
 ;
-export const createAriaLabel = (text: string,context?: string): string => {;
+export const createAriaLabel: React.FC = (text: string,context?: string): string => {;
   return context ? `${text}, ${context}` : text;
 };
 ;
-export const announceToScreenReader = (message: string): void => {;
+export const announceToScreenReader: React.FC = (message: string): void => {;
 ;
 const announcement = document.createElement('div');
   announcement.setAttribute('aria-live','polite');
@@ -30,7 +31,7 @@ document.body.removeChild(announcement);
   }, 1000);
 };
 ;
-export const trapFocus = (element: HTMLElement): (() => void) => {;
+export const trapFocus: React.FC = (element: HTMLElement): (() => void) => {;
 const focusableElements = element.querySelectorAll()
     'button,[href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
   );
@@ -38,7 +39,7 @@ const focusableElements = element.querySelectorAll()
 const firstElement = focusableElements[0] as HTMLElement;
   const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 ;
-const handleTabKey = (e: KeyboardEvent) => {;
+const handleTabKey: React.FC = (e: KeyboardEvent) => {;
 if (e.key === 'Tab') {;
 if (e.shiftKey) {;
 if (document.activeElement === firstElement) {;
@@ -68,7 +69,7 @@ element.removeEventListener('keydown', handleTabKey
   };
 };
 ;
-export const createSkipLink = (targetId: string,text: string = 'Skip to main content'): HTMLElement => {;
+export const createSkipLink: React.FC = (targetId: string,text: string = 'Skip to main content'): HTMLElement => {;
   const skipLink = document.createElement('a');
   skipLink.href = `#${targetId,}`;
   skipLink.textContent = text;
@@ -77,9 +78,9 @@ export const createSkipLink = (targetId: string,text: string = 'Skip to main con
 return skipLink;
 ,};
 ;
-export const validateColorContrast = (foreground: string,background: string): boolean => {
+export const validateColorContrast: React.FC = (foreground: string,background: string): boolean => {
   // Simple contrast ratio calculation;
-const getLuminance = (colo,r: string): number => {;
+const getLuminance: React.FC = (colo,r: string): number => {;
 ;
 const rgb = color.match(/\d+/g)?.map(Number) || [0,0, 0];
     const [r, g, b] = rgb.map(c => {;
@@ -92,12 +93,12 @@ return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
 const fgLuminance = getLuminance(foreground);
   const bgLuminance = getLuminance(background);
 ;
-const contrast = (Math.max(fgLuminance, bgLuminance) + 0.05) / (Math.min(fgLuminance, bgLuminance) + 0.05);
+const contrast: React.FC = (Math.max(fgLuminance, bgLuminance) + 0.05) / (Math.min(fgLuminance, bgLuminance) + 0.05);
 ;
 return contrast >= 4.5; // WCAG AA standard
 };
 ;
-export const createHighContrastMode = (): void => {;
+export const createHighContrastMode: React.FC = (): void => {;
   const style = document.createElement('style');
   style.id = 'high-contrast-mode';
   style.textContent = `
@@ -109,12 +110,12 @@ border-color: currentColor !important;,}
   document.head.appendChild(style);
 };
 ;
-export const enableHighContrastMode = (): void => {;
+export const enableHighContrastMode: React.FC = (): void => {;
   document.body.classList.add('high-contrast');
   createHighContrastMode();
 };
 ;
-export const disableHighContrastMode = (): void => {;
+export const disableHighContrastMode: React.FC = (): void => {;
   document.body.classList.remove('high-contrast');
   const style = document.getElementById('high-contrast-mode');
   if (style) {;
@@ -122,7 +123,7 @@ style.remove();
   }
 };
 ;
-export const createFocusIndicator = (): void => {;
+export const createFocusIndicator: React.FC = (): void => {;
   const style = document.createElement('style');
   style.id = 'focus-indicator';
   style.textContent = `
@@ -141,7 +142,7 @@ outline: 2px solid #3b82f6 !important;
   document.head.appendChild(style);
 };
 ;
-export const createReducedMotionMode = (): void => {;
+export const createReducedMotionMode: React.FC = (): void => {;
   const style = document.createElement('style');
   style.id = 'reduced-motion-mode';
   style.textContent = `
@@ -158,7 +159,7 @@ animation-duration: 0.01ms !important;
   document.head.appendChild(style);
 };
 ;
-export const setupKeyboardNavigation = (): void => {
+export const setupKeyboardNavigation: React.FC = (): void => {
   // Add keyboard navigation support;
 document.addEventListener('keydown', (e) => {
     // Escape key to close modals/dropdowns;
@@ -177,7 +178,7 @@ e.target.click();
   });
 };
 ;
-export const createScreenReaderOnly = (): void => {;
+export const createScreenReaderOnly: React.FC = (): void => {;
   const style = document.createElement('style');
   style.id = 'screen-reader-only';
   style.textContent = `
@@ -206,14 +207,14 @@ position: static;
   document.head.appendChild(style);
 };
 ;
-export const setupAccessibility = (): void => {;
+export const setupAccessibility: React.FC = (): void => {;
   createFocusIndicator();
   createReducedMotionMode();
   createScreenReaderOnly();
   setupKeyboardNavigation();
 };
 ;
-export const createARIALiveRegion = (): HTMLElement => {;
+export const createARIALiveRegion: React.FC = (): HTMLElement => {;
   const liveRegion = document.createElement('div');
   liveRegion.setAttribute('aria-live', 'polite');
   liveRegion.setAttribute('aria-atomic', 'true');
@@ -223,7 +224,7 @@ export const createARIALiveRegion = (): HTMLElement => {;
   return liveRegion;
 };
 ;
-export const updateLiveRegion = (message: string): void => {;
+export const updateLiveRegion: React.FC = (message: string): void => {;
 ;
 let liveRegion = document.getElementById('aria-live-region');
   if (!liveRegion) {,liveRegion = createARIALiveRegion();,
@@ -231,7 +232,7 @@ let liveRegion = document.getElementById('aria-live-region');
   liveRegion.textContent = message;
 };
 ;
-export const createLandmarkNavigation = (): void => {;
+export const createLandmarkNavigation: React.FC = (): void => {;
   const landmarks = document.querySelectorAll('main, nav, aside, header, footer, section[aria-labelledby]');
 ;
 landmarks.forEach((landmark, index) => {;
@@ -243,7 +244,7 @@ landmark.setAttribute('tabindex', '-1');
   });
 };
 ;
-export const setupLandmarkNavigation = (): void => {;
+export const setupLandmarkNavigation: React.FC = (): void => {;
   createLandmarkNavigation();
 // Update landmarks when content changes;
 const observer = new MutationObserver(() => {;

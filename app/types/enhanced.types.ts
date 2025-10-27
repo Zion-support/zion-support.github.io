@@ -156,13 +156,7 @@ export interface FormState<T = Record<string, unknown>> {
   isValid: boolean
 }
 // Component props types
-export interface BaseComponentProps {
-  className?: string
-  children?: React.ReactNode
-  id?: string
-  'data-testid'?: string
-}
-export interface LoadingProps extends BaseComponentProps {
+export export interface LoadingProps extends BaseComponentProps {
   size?: 'sm' | 'md' | 'lg' | 'xl'
   color?: 'primary' | 'secondary' | 'white'
   text?: string

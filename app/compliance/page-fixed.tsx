@@ -132,6 +132,6 @@ const CompliancePageFixed: React.FC = () => {
       <Footer />
     </>
   );
-};
+}
 
 export default CompliancePageFixed;

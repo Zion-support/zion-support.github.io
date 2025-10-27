@@ -1,37 +1,101 @@
-import fs from 'fs';'import path from 'path';'export {fixFileContent, processFile};
-#!/usr/bin/env node;
-// Function to fix common parsing errors;
-function fixFileContent(content) {let fixed = content;
+#!/usr/bin/env node
 
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
+import { fileURLToPath } from 'url';
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-  // Fix specific common patterns;
-  fixed = fixed.replace(/from-slate-900pt-20/g, 'from-slate-900 pt-20');'  fixed = fixed.replace(/text-whitemb-6/g, 'text-white mb-6');'  fixed = fixed.replace(/text-gray-300mb-8/g, 'text-gray-300 mb-8');'  fixed = fixed.replace(/mx-autow-fit/g, 'mx-auto w-fit');'  fixed = fixed.replace(/w-5 h-5ml-2/g, 'w-5 h-5 ml-2');'  fixed = fixed.replace(/border-tborder-slate-800/g, 'border-t border-slate-800');'  fixed = fixed.replace(/px-4 sm: px-6 lg:px-8py-12/g, 'px-4 sm: px-6 lg:px-8 py-12');'  fixed = fixed.replace(/grid-cols-1 md:grid-cols-4gap-8/g, 'grid-cols-1 md: grid-cols-4 gap-8');'  fixed = fixed.replace(/col-span-1md:col-span-2/g, 'col-span-1 md: col-span-2');'
-  // Fix malformed JSX - add missing opening tags;
-  fixed = fixed.replace(/<div className="[^"]*"\  />/g, (match) => {const className = match.match(/className="([^"]*)"/)[1];"    return `<div className="${className}">`;"  });`
-  // Fix self-closing divs that should be opening tags;
-  fixed = fixed.replace(/<div className="([^"]*)"\  />\s*<([^>]+)>/g, '<div className="$1">\n        <$2>');"'  // Remove invalid 'use client' directive (this is a Vite project, not Next.js)'  fixed = fixed.replace(/'use client';\s*\n/g, '');'
-  // Fix JSX expressions that need parent elements;
-  fixed = fixed.replace(/<Helmet \  />\s*<title>/g, '<Helmet>\n        <title>');'  fixed = fixed.replace(/<\/title>\s*<meta/g, '</title>\n        <meta');'  fixed = fixed.replace(/<\/meta>\s*<\/Helmet>/g, '</meta>\n      </Helmet>');'
-  return fixed;
+console.log('🔧 Fixing parsing errors...');
 
-// Function to process a single file;
-function processFile(filePath) {try {
-    const content = fs.readFileSync(filePath, 'utf8');'    const fixed = fixFileContent(content);
+// Function to fix specific parsing errors
+function fixParsingError(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
 
-    if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');'      console.log(`Fixed: ${filePath}`);`      return true;
+    // Fix 1: Remove extra closing braces
+    if (content.includes('displayName') && content.includes('}\n\nexport default')) {
+      content = content.replace(/\.displayName = '[^']*';\n\n\}/g, '.displayName = \'\';');
+      modified = true;
+    }
+
+    // Fix 2: Fix malformed function structure
+    if (content.includes('function Page') && content.includes('displayName')) {
+      // Remove displayName line and extra brace
+      content = content.replace(/\n\w+\.displayName = '[^']*';\n\n\}/g, '');
+      modified = true;
+    }
+
+    // Fix 3: Fix 'use client' placement
+    if (content.includes("'use client'") && content.includes("import React")) {
+      content = content.replace(/'use client';\nimport React from 'react';\n/g, "import React from 'react';\n'use client';\n");
+      modified = true;
+    }
+
+    // Fix 4: Clean up extra whitespace and empty lines
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    content = content.trim() + '\n';
+
+    if (modified) {
+      fs.writeFileSync(filePath, content);
+      console.log(`✅ Fixed parsing error: ${filePath}`);
+      return true;
+    }
     return false;
-  } catch (error) {console.error(`Error processing ${filePath}:`, error.message);`    return false;
+  } catch (error) {
+    console.error(`❌ Error fixing ${filePath}:`, error.message);
+    return false;
+  }
+}
 
-// Main function;
-async function main() {console.log('Starting to fix parsing errors...');'
-  // Get all TypeScript/TSX files;
-  const files = await glob('**/*.{ts,tsx}', {ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**']});'
+// Function to find all TypeScript/TSX files
+function findTsxFiles(dir) {
+  const files = [];
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+      files.push(...findTsxFiles(fullPath));
+    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+      files.push(fullPath);
+    }
+  }
+  
+  return files;
+}
+
+// Main execution
+try {
+  const appDir = path.join(__dirname, 'app');
+  const files = findTsxFiles(appDir);
+  
+  console.log(`📁 Processing ${files.length} TypeScript files`);
+  
   let fixedCount = 0;
-
-    if (processFile(file)) {fixedCount++;});
-
-  console.log(`\nFixed ${fixedCount} files out of ${files.length} total files.`);`
-main().catch(console.error);
-</div></div></div></div>
+  for (const file of files) {
+    if (fixParsingError(file)) {
+      fixedCount++;
+    }
+  }
+  
+  console.log(`\n🎉 Fixed ${fixedCount} files`);
+  
+  // Run linter again to check remaining issues
+  console.log('\n🔍 Running linter to check remaining issues...');
+  try {
+    execSync('npm run lint', { stdio: 'pipe' });
+    console.log('✅ All linting issues resolved!');
+  } catch (error) {
+    console.log('⚠️  Some linting issues remain, but many have been fixed.');
+  }
+  
+} catch (error) {
+  console.error('❌ Error during fix process:', error.message);
+  process.exit(1);
+}

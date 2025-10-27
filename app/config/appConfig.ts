@@ -1,3 +1,4 @@
+import React from 'react';
 /**
  * Application Configuration;
  * Centralized configuration management for the Zion Tech Group application;
@@ -111,4 +112,3 @@ export function isDevelopment(): boolean {
 }
 
 export default config;
-

@@ -1,122 +1,178 @@
-const fs = require('fs');
-const path = require('path');
+#!/usr/bin/env node
 
-// Function to fix specific syntax patterns
-function fixSpecificPatterns(content) {
-  let fixed = content;
-  
-  // Fix malformed function declarations
-  fixed = fixed.replace(/const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{\s*;\s*/g, 'const $1: React.FC = () => {\n  ');
-  
-  // Fix malformed array declarations
-  fixed = fixed.replace(/const\s+(\w+)\s*=\s*\[\s*;\s*/g, 'const $1 = [\n    ');
-  
-  // Fix malformed object declarations
-  fixed = fixed.replace(/const\s+(\w+)\s*=\s*\[\s*\{/g, 'const $1 = [\n    {');
-  
-  // Fix missing semicolons after variable declarations
-  fixed = fixed.replace(/(const|let|var)\s+(\w+)\s*=\s*[^;]+(\n\s*const|\n\s*let|\n\s*var|\n\s*return|\n\s*})/g, (match, decl, varName, next) => {
-    if (!match.includes(';')) {
-      return match.replace(next, ';\n' + next);
-    }
-    return match;
-  });
-  
-  // Fix malformed JSX return statements
-  fixed = fixed.replace(/return\s*\(\s*\)\s*;/g, 'return (');
-  fixed = fixed.replace(/return\s*\(\s*\)\s*<>/g, 'return (<>');
-  
-  // Fix missing closing brackets
-  fixed = fixed.replace(/(\w+)\s*\]\s*(\w+)/g, '$1\n  ];\n  const $2');
-  
-  // Fix malformed JSX attributes
-  fixed = fixed.replace(/title=&quot;([^&]+)&quot;/g, 'title="$1"');
-  fixed = fixed.replace(/description=&quot;([^&]+)&quot;/g, 'description="$1"');
-  fixed = fixed.replace(/className=&quot;([^&]+)&quot;/g, 'className="$1"');
-  fixed = fixed.replace(/href=&quot;([^&]+)&quot;/g, 'href="$1"');
-  fixed = fixed.replace(/id=&quot;([^&]+)&quot;/g, 'id="$1"');
-  
-  // Fix malformed function parameters
-  fixed = fixed.replace(/\(\{\s*children\s*\}\s*:\s*\{\s*children:\s*React\.ReactNode\s*\}\s*\)/g, '({ children }: { children: React.ReactNode })');
-  
-  // Fix missing semicolons after function calls
-  fixed = fixed.replace(/(\w+)\s*\(\s*\)\s*(\n)/g, '$1();$2');
-  
-  // Fix malformed export statements
-  fixed = fixed.replace(/export default (\w+)\s*$/g, 'export default $1;');
-  
-  return fixed;
-}
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
+import { fileURLToPath } from 'url';
 
-// Function to process a single file
-function processFile(filePath) {
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+console.log('🔧 Fixing remaining parsing and linting errors...');
+
+// Function to fix specific parsing errors
+function fixParsingErrors(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixSpecificPatterns(content);
-    
-    if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+
+    // Fix 1: Remove extra semicolon after closing brace
+    if (content.includes('};\n\nexport default')) {
+      content = content.replace(/};\n\nexport default/g, '}\n\nexport default');
+      modified = true;
+    }
+
+    // Fix 2: Fix malformed function declarations
+    if (content.includes('function Page') && content.includes('displayName')) {
+      // Remove displayName and extra semicolon
+      content = content.replace(/\n\w+\.displayName = '[^']*';\n\n\};\n/g, '\n}\n');
+      modified = true;
+    }
+
+    // Fix 3: Fix 'use client' placement
+    if (content.includes("'use client'") && content.includes("import React")) {
+      content = content.replace(/'use client';\nimport React from 'react';\n/g, "import React from 'react';\n'use client';\n");
+      modified = true;
+    }
+
+    // Fix 4: Remove unused Link imports
+    if (content.includes("import Link from 'next/link'") && !content.includes('<Link')) {
+      content = content.replace(/import Link from 'next\/link'\n?/g, '');
+      modified = true;
+    }
+
+    // Fix 5: Fix missing semicolons in imports
+    content = content.replace(/import ([^;]+)\n/g, 'import $1;\n');
+
+    // Fix 6: Clean up extra whitespace
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    content = content.trim() + '\n';
+
+    if (modified) {
+      fs.writeFileSync(filePath, content);
+      console.log(`✅ Fixed parsing errors: ${filePath}`);
       return true;
     }
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`❌ Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Function to process specific problematic files
-function processProblematicFiles() {
-  const problematicFiles = [
-    '/workspace/src/ai-3d-generation/page.tsx',
-    '/workspace/src/ai-analytics-dashboard/page.tsx',
-    '/workspace/src/ai-automation/page.tsx',
-    '/workspace/src/ai-content-generation/page.tsx',
-    '/workspace/src/ai-crm/page.tsx',
-    '/workspace/src/ai-customer-support/page.tsx',
-    '/workspace/src/ai-customer-support-bot/page.tsx',
-    '/workspace/src/ai-cybersecurity/page.tsx',
-    '/workspace/src/ai-data-analytics/page.tsx',
-    '/workspace/src/ai-data-visualization/page.tsx',
-    '/workspace/src/ai-document-processing/page.tsx',
-    '/workspace/src/ai-ecommerce-solutions/page.tsx',
-    '/workspace/src/ai-email-marketing/page.tsx',
-    '/workspace/src/ai-fashion-design/page.tsx',
-    '/workspace/src/ai-financial-analyzer/page.tsx',
-    '/workspace/src/ai-fintech/page.tsx',
-    '/workspace/src/ai-fitness-coach/page.tsx',
-    '/workspace/src/ai-healthcare/page.tsx',
-    '/workspace/src/ai-lead-generation/page.tsx',
-    '/workspace/src/ai-marketing/page.tsx',
-    '/workspace/src/ai-mobile-app-development/page.tsx',
-    '/workspace/src/ai-music-composition/page.tsx',
-    '/workspace/src/ai-project-manager/page.tsx',
-    '/workspace/src/ai-sales-automation/page.tsx',
-    '/workspace/src/ai-scheduler/page.tsx',
-    '/workspace/src/ai-seo-optimizer/page.tsx',
-    '/workspace/src/ai-services/page.tsx',
-    '/workspace/src/ai-social-media-manager/page.tsx',
-    '/workspace/src/ai-video-generation/page.tsx',
-    '/workspace/src/ai-voice-cloning/page.tsx',
-    '/workspace/src/ai-workflow-automation/page.tsx',
-    '/workspace/src/ai-writing-assistant/page.tsx'
-  ];
+// Function to fix specific component files
+function fixComponentFiles(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+
+    // Fix 1: Fix missing function declarations
+    if (content.includes('return (') && !content.includes('function') && !content.includes('const') && !content.includes('=')) {
+      const exportMatch = content.match(/export default (\w+);/);
+      if (exportMatch) {
+        const componentName = exportMatch[1];
+        content = content.replace(
+          /return \(/,
+          `const ${componentName}: React.FC = () => {\n  return (`
+        );
+        content = content.replace(
+          /export default (\w+);/,
+          '};\n\nexport default $1;'
+        );
+        modified = true;
+      }
+    }
+
+    // Fix 2: Fix incomplete JSX fragments
+    if (content.includes('<>') && !content.includes('</>')) {
+      content = content.replace(/<>/g, '<React.Fragment>').replace(/<\/>/g, '</React.Fragment>');
+      modified = true;
+    }
+
+    // Fix 3: Add missing React import for JSX
+    if (content.includes('<') && content.includes('>') && !content.includes("import React")) {
+      content = "import React from 'react';\n" + content;
+      modified = true;
+    }
+
+    if (modified) {
+      fs.writeFileSync(filePath, content);
+      console.log(`✅ Fixed component: ${filePath}`);
+      return true;
+    }
+    return false;
+  } catch (error) {
+    console.error(`❌ Error fixing component ${filePath}:`, error.message);
+    return false;
+  }
+}
+
+// Function to find all TypeScript/TSX files
+function findTsxFiles(dir) {
+  const files = [];
+  const items = fs.readdirSync(dir);
   
-  let processedCount = 0;
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+      files.push(...findTsxFiles(fullPath));
+    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+      files.push(fullPath);
+    }
+  }
   
-  for (const filePath of problematicFiles) {
-    if (fs.existsSync(filePath)) {
-      if (processFile(filePath)) {
-        processedCount++;
+  return files;
+}
+
+// Main execution
+try {
+  const appDir = path.join(__dirname, 'app');
+  const files = findTsxFiles(appDir);
+  
+  console.log(`📁 Processing ${files.length} TypeScript files`);
+  
+  let fixedCount = 0;
+  for (const file of files) {
+    if (fixParsingErrors(file) || fixComponentFiles(file)) {
+      fixedCount++;
+    }
+  }
+  
+  console.log(`\n🎉 Fixed ${fixedCount} files`);
+  
+  // Run linter again to check remaining issues
+  console.log('\n🔍 Running linter to check remaining issues...');
+  try {
+    execSync('npm run lint', { stdio: 'pipe' });
+    console.log('✅ All linting issues resolved!');
+  } catch (error) {
+    console.log('⚠️  Some linting issues remain, checking specific files...');
+    
+    // Try to fix remaining specific issues
+    const remainingFiles = [
+      'app/5g-data-analytics/page.tsx',
+      'app/5g-edge-computing/page.tsx',
+      'app/5g-implementation/page.tsx',
+      'app/5g-iot-solutions/page.tsx',
+      'app/accessibility-page/page.tsx'
+    ];
+    
+    for (const file of remainingFiles) {
+      const fullPath = path.join(__dirname, file);
+      if (fs.existsSync(fullPath)) {
+        let content = fs.readFileSync(fullPath, 'utf8');
+        if (content.includes("import Link from 'next/link'") && !content.includes('<Link')) {
+          content = content.replace(/import Link from 'next\/link'\n?/g, '');
+          fs.writeFileSync(fullPath, content);
+          console.log(`✅ Removed unused Link import from ${file}`);
+        }
       }
     }
   }
   
-  return processedCount;
+} catch (error) {
+  console.error('❌ Error during fix process:', error.message);
+  process.exit(1);
 }
-
-// Main execution
-console.log('Starting targeted syntax error fixes...');
-const processedCount = processProblematicFiles();
-console.log(`Processed ${processedCount} problematic files with syntax fixes.`);
