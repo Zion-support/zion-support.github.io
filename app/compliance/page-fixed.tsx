@@ -1,12 +1,10 @@
 'use client'
 import React from 'react';
-import { ArrowRight, CheckCircle } from 'lucide-react';
-
-
+import { ArrowRight, CheckCircle, Shield, Database, Clock, Lock } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { ShieldCircle, Lock, } from 'lucide-react';
 
+const CompliancePageFixed = () => {
   const features = [
     {
       icon: Shield,

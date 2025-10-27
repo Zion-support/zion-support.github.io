@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 interface NewsletterSignupProps {
-  onSubmit?: (email: string) => void;
+  onSubmit?: (_email: string) => void;
   placeholder?: string;
   buttonText?: string;
 }

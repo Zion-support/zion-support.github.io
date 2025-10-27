@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from 'react';
 import { useState, useEffect } from 'react';
 
-export { useMonitoring } = () => {
+export const useMonitoring = () => {
   const [state, setState] = useState(null);
   
   useEffect(() => {
     // Hook implementation
   }, []);
   
-  return { state, setState }
-}
+  return { state, setState };
+};

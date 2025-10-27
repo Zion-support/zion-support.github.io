@@ -1,9 +1,9 @@
-import { useState, useCallback } from 'react';
+import React, { useState, useCallback } from 'react';
 
 export interface UseFormOptions<T> {
   initialData: T;
-  onSubmit: (data: T) => Promise<void>;
-  validate?: (data: T) => Record<string, string>;
+  onSubmit: (_data: T) => Promise<void>;
+  validate?: (_data: T) => Record<string, string>;
 }
 
 export interface FormState<T> {
@@ -13,7 +13,7 @@ export interface FormState<T> {
   errors: Record<string, string>;
 }
 
-export const useForm = <T extends Record<string, any>>({
+export const useForm = <T extends Record<string, unknown>>({
   initialData,
   onSubmit,
   validate,
@@ -25,7 +25,7 @@ export const useForm = <T extends Record<string, any>>({
     errors: {},
   });
 
-  const handleInputChange = useCallback((field: keyof T, value: any) => {
+  const handleInputChange = useCallback((field: keyof T, value: unknown) => {
     setFormState(prev => ({
       ...prev,
       data: { ...prev.data, [field]: value },

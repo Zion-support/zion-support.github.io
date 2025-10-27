@@ -4,11 +4,18 @@ interface ApiResponse<T> {
   message?: string;
 }
 
+// Using built-in Web API types
+
+class ApiClient {
+  private baseUrl: string;
+
+  constructor(baseUrl: string = '/api') {
+    this.baseUrl = baseUrl;
   }
 
-  private async request<T>()
+  private async request<T>(
     endpoint: string,
-    options: RequestInit = {}
+    options: { method?: string; headers?: Record<string, string>; body?: string } = {}
   ): Promise<ApiResponse<T>> {
     const url = `${this.baseUrl}${endpoint}`;
     
@@ -33,7 +40,7 @@ interface ApiResponse<T> {
     return this.request<T>(endpoint, { method: 'GET', headers });
   }
 
-  async post<T>(endpoint: string, data?: any, headers?: Record<string, string>): Promise<ApiResponse<T>> {
+  async post<T>(endpoint: string, data?: unknown, headers?: Record<string, string>): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, {
       method: 'POST',
       body: JSON.stringify(data),
@@ -41,7 +48,7 @@ interface ApiResponse<T> {
     });
   }
 
-  async put<T>(endpoint: string, data?: any, headers?: Record<string, string>): Promise<ApiResponse<T>> {
+  async put<T>(endpoint: string, data?: unknown, headers?: Record<string, string>): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, {
       method: 'PUT',
       body: JSON.stringify(data),

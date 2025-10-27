@@ -1,4 +1,6 @@
 
+import React from 'react';
+
 interface AIToolCardProps {
   className?: string;
   children?: React.ReactNode;
