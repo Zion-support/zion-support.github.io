@@ -107,6 +107,7 @@ export default [
       globals: {
         ...globals.browser,
         ...globals.node,
+        React: 'readonly',
       },
       parser: tsParser,
       parserOptions: {

@@ -1,4 +1,4 @@
-import React from 'react';
+
 interface EnhancedPerformanceMonitorProps {
   className?: string;
   children?: React.ReactNode;

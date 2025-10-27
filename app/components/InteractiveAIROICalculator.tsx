@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 export default function InteractiveAIROICalculator() {
   const [currentCost, setCurrentCost] = useState(100000);
@@ -84,5 +84,3 @@ export default function InteractiveAIROICalculator() {
     </section>
   );
 }
-
-export default InteractiveAIROICalculator;
