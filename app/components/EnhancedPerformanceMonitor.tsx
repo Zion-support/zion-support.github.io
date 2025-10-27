@@ -1,5 +1,8 @@
 import React from 'react';
 
+interface EnhancedPerformanceMonitorProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
 const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = ({ 

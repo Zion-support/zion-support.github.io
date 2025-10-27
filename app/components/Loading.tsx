@@ -1,4 +1,8 @@
+import React from 'react';
 
+interface LoadingProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
 const Loading: React.FC<LoadingProps> = ({ 
