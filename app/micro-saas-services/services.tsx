@@ -1,8 +1,5 @@
 import React from 'react';
 
-
-import React from 'react';
-
 interface ServicesProps {
   className?: string;
   children?: React.ReactNode;
