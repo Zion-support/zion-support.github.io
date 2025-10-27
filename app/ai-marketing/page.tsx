@@ -1,5 +1,5 @@
-import React from 'react';
 'use client';
+import React from 'react';
 
 function Page27icb8k9r() {
   return (

@@ -1,8 +1,8 @@
-import React from 'react';
 'use client';
+import React from 'react';
 
 import Link from 'next/link';
-import {_Home, _ArrowLeft, _RefreshCw} from 'lucide-react';
+import { _Home, _ArrowLeft, _RefreshCw, ArrowLeft, RefreshCw, Home } from 'lucide-react';
 
 export default function NotFound() {
   return (

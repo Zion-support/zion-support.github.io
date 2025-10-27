@@ -1,5 +1,5 @@
-import React from 'react';
 'use client';
+import React from 'react';
 
 function Pager2thr7hz7() {
   return (

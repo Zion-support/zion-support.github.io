@@ -19,7 +19,7 @@ export default function AdvancedSEOOptimizer({
         <div>
           <h3>Keywords:</h3>
           <ul>
-            {keywords.map((_keyword, _index) => (
+            {keywords.map(((_keyword, _index) => (
               <li key={index}>{keyword}</li>
             ))}
           </ul>

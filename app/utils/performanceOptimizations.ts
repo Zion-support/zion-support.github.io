@@ -1,6 +1,6 @@
+'use client';
 import React, { useState, useEffect } from 'react';
 <<<<<<< HEAD
-'use client';
 import {__useCallback, __useMemo} from 'react';
 // Performance optimization utilities
 // Debounce utility for performance;

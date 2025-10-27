@@ -1,6 +1,6 @@
+'use client';
 import React, { useState, useEffect } from 'react';
 <<<<<<< HEAD
-'use client';
 /**
  * Testing Utilities
  * Provides helper functions and utilities for testing

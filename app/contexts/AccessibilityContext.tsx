@@ -1,5 +1,5 @@
-import React from 'react';
 'use client';
+import React from 'react';
 import {_createContext} from 'react';
 import {_AccessibilityContextType} from '../types/accessibility';
 

@@ -1,10 +1,11 @@
-import { CheckCircle, ArrowRight, Star, Clock, Shield, Database, Check } from 'lucide-react';
 'use client';
+import { Lock, Shield, Database, CheckCircle, Clock, ArrowRight } from 'lucide-react';
+
+import { Star } from 'lucide-react';
 
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {_Shield, _CheckCircle, _Clock, _Database, _Lock, _ArrowRight, _} from 'lucide-react';
 
 const CompliancePageBackup: React.FC = () => {
 
@@ -67,7 +68,7 @@ const CompliancePageBackup: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {stats.map((_stat, index) => (
+            {stats.map(((_stat, _index) => (
               <div key={index} className="text-center">
                 <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full mx-auto mb-4">
                   <stat.icon className="h-8 w-8 text-white" />
@@ -93,7 +94,7 @@ const CompliancePageBackup: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {features.map((_feature, index) => (
+            {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
                 <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full mb-6">
                   <feature.icon className="h-8 w-8 text-white" />
@@ -101,7 +102,7 @@ const CompliancePageBackup: React.FC = () => {
                 <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300 mb-6">{feature.description}</p>
                 <ul className="space-y-2">
-                  {feature.benefits.map((_benefit, _benefitIndex) => (
+                  {feature.benefits.map(((_benefit, _benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
                       {benefit}

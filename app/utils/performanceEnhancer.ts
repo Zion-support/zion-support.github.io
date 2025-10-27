@@ -1,6 +1,6 @@
+'use client';
 import React, { useState, useEffect } from 'react';
 <<<<<<< HEAD
-'use client';
 import {__useRef} from 'react';
 /**
  * Performance Enhancement Utilities

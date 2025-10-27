@@ -1,3 +1,4 @@
+import { string } from 'lucide-react';
 import React from 'react';
 export interface User {
   id: string;

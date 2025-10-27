@@ -1,6 +1,6 @@
+'use client';
 import React, { useState, useEffect } from 'react';
 <<<<<<< HEAD
-'use client';
 /**
 * Performance Metrics Utility
 * Advanced performance tracking and monitoring for web applications

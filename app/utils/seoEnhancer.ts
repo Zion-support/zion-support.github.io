@@ -1,6 +1,6 @@
+'use client';
 import React, { useState, useEffect } from 'react';
 <<<<<<< HEAD
-'use client';
 /**
 * SEO Enhancement Utilities
 * Tools to improve search engine optimization

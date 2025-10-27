@@ -1,12 +1,11 @@
 import { Metadata } from 'next';
-import { CheckCircle, Users, Target, Award, ArrowRight, Star, Check } from 'lucide-react';
+import { Star, CheckCircle, Users, Target, ArrowRight, Award } from 'lucide-react';
 import React from 'react';
 
 import Link from 'next/link';
 import {__Metadata} from 'next';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {__CheckCircle, __Users, __Target, __Award, __ArrowRight, __} from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'About Us - Zion Tech Group',
@@ -85,7 +84,7 @@ const AboutPage = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((__value, __index) => (
+            {values.map((value, index) => (
               <div key={index} className="text-center">
                 <div className="flex justify-center mb-4">
                   {value.icon}

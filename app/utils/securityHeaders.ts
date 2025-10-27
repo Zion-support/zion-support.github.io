@@ -80,7 +80,7 @@ export function getSecurityHeaders(customConfig?: Partial<SecurityConfig>): Reco
 
 export function getNextSecurityHeaders(customConfig?: Partial<SecurityConfig>): Array<{ key: string; value: string }> {
   const headers = getSecurityHeaders(customConfig);
-  return Object.entries(headers).map(([_key, value]) => ({ key, value }));
+  return Object.entries(headers).map((([_key, value]) => ({ key, value }));
 }
 
 interface SecurityConfig {
@@ -141,7 +141,7 @@ customConfig?: Partial<SecurityHeadersConfig>
 ): Array<{ key: string; valu,e: string ,}> {}
 ;
 const headers = getSecurityHeaders(customConfig);
-return Object.entries(headers).map(([_key, value]) => ({}
+return Object.entries(headers).map((([_key, value]) => ({}
 key;
 value}
 }));

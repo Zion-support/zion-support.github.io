@@ -1,9 +1,10 @@
-import { ArrowRight, Database, Cloud } from 'lucide-react';
 'use client';
+import { Brain, Github, Mail, Phone, MapPin, Linkedin, Twitter } from 'lucide-react';
+
+import { Database } from 'lucide-react';
 
 import React from 'react';
 import Link from 'next/link';
-import {_Mail, _Phone, _MapPin, _Github, _Linkedin, _Twitter, _ArrowRight, _Brain, _Cloud} from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -54,7 +55,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">AI Services</h3>
             <ul className="space-y-2">
-              {aiServices.map((_service, index) => (
+              {aiServices.map((service, index) => (
                 <li key={index}>
                   <Link 
                     href={service.url}
@@ -71,7 +72,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">IT Services</h3>
             <ul className="space-y-2">
-              {itServices.map((_service, index) => (
+              {itServices.map((service, index) => (
                 <li key={index}>
                   <Link 
                     href={service.url}
