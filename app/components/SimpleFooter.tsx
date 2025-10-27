@@ -1,4 +1,7 @@
-export default function SimpleFooter() {
+
+import React from 'react';
+
+const SimpleFooter: React.FC = () => {
   return (
     <footer className="bg-gray-800 text-white py-8">
       <div className="container mx-auto px-4 text-center">
@@ -6,4 +9,6 @@ export default function SimpleFooter() {
       </div>
     </footer>
   );
-}
+};
+
+export default SimpleFooter;

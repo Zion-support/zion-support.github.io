@@ -1,5 +1,4 @@
 'use client'
-import React from 'react';
 
 
 function Pageiu5xgv2y0() {

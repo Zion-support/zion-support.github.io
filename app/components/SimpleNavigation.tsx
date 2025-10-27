@@ -1,10 +1,11 @@
 'use client'
+
 import React from 'react';
 import Link from 'next/link';
 
-export default function SimpleNavigation() {
+const SimpleNavigation: React.FC = () => {
   return (
-    <nav className="bg-white shadow-sm">
+    <nav className="bg-white shadow-lg">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           <Link href="/" className="text-xl font-bold text-gray-800">
@@ -25,4 +26,6 @@ export default function SimpleNavigation() {
       </div>
     </nav>
   );
-}
+};
+
+export default SimpleNavigation;
