@@ -1,10 +1,8 @@
-<<<<<<< HEAD
-
-=======
 import React from 'react'
->>>>>>> cursor/fix-errors-and-merge-to-main-50ad
 
 interface RootLayoutProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
 const RootLayout: React.FC<RootLayoutProps> = ({ 
