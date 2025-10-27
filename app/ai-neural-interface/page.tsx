@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+;
 
 function Pagepzi09emyk() {
   return (

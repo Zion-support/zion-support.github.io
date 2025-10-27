@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+;
 
 function Pagebnwpy1sw2() {
   return (

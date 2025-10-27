@@ -1,15 +1,23 @@
 import React from 'react';
 
+interface FuturisticButtonProps {
+  className?: string;
+  children?: React.ReactNode;
+  onClick?: () => void;
 }
 
 const FuturisticButton: React.FC<FuturisticButtonProps> = ({ 
   className = '', 
-  children 
+  children,
+  onClick 
 }) => {
   return (
-    <div className={'futuristicbutton ' + className}>
-      {children || <p>FuturisticButton component</p>}
-    </div>
+    <button 
+      className={`futuristicbutton ${className}`}
+      onClick={onClick}
+    >
+      {children || 'Futuristic Button'}
+    </button>
   );
 };
 

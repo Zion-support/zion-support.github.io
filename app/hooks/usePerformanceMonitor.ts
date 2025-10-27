@@ -1,45 +1,44 @@
-<<<<<<< HEAD
-import { useCallback, useEffect, useState, useRef } from 'react';
-interface UsePerformanceMonitorOptions {
-;
-enabled?: boolean;
-threshold?: number;
-measureMemoryUsage?: boolean
-}
-};
-interface PerformanceData {
-;
-fps: number;
-memoryUsage: number;
-loadTime: number;
-renderTim,e: number,
-}
-};
-;
-export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {,}) => {;
-const [metrics, setMetrics] = useState<PerformanceData>({;
-fps: 0,memoryUsage: 0,loadTime: 0,renderTime: 0,});
-const [isMonitoringFPS, setIsMonitoringFPS] = useState(false);
-  const frameCountRef = useRef(0);
-  const lastTimeRef = useRef(performance.now());
-const measureMemoryUsage = useCallback(() => {;
-if (typeof window !== 'undefined' && 'memory' in performance) {;
-const memory = (performance as any).memory;
-setMetrics(prev => ({
-        ...prev,;
-memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB)
-      ,}))
-    }
-=======
-import { useState, useEffect } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 
-export const useusePerformanceMonitor = () => {
-  const [state, setState] = useState(null);
-  
-  useEffect(() => {
-    // Hook implementation
->>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
+interface PerformanceMetrics {
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+  networkLatency: number;
+}
+
+export const usePerformanceMonitor = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    networkLatency: 0
+  });
+
+  const measurePerformance = useCallback(() => {
+    // Measure load time
+    const loadTime = performance.now();
+    
+    // Measure memory usage
+    let memoryUsage = 0;
+    if ('memory' in performance) {
+      const memory = (performance as any).memory;
+      memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
+    }
+
+    setMetrics(prev => ({
+      ...prev,
+      loadTime,
+      memoryUsage
+    }));
   }, []);
-  
-  return { state, setState };
+
+  useEffect(() => {
+    measurePerformance();
+  }, [measurePerformance]);
+
+  return {
+    metrics,
+    measurePerformance
+  };
 };

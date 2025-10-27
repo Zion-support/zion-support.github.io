@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+;
 
 function Pagej9bsaysri() {
   return (

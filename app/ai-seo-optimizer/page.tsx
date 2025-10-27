@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+;
 
 function Pageuko1jbc8c() {
   return (

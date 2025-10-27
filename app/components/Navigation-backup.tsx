@@ -1,6 +1,7 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
+import { X, Menu as MenuIcon } from 'lucide-react';
 
 interface NavigationBackupProps {
   logo?: string;
@@ -98,7 +99,7 @@ const NavigationBackup: React.FC<NavigationBackupProps> = ({
               onClick={toggleMenu}
               className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
             >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <_Menu className="h-6 w-6" />}
+              {isMenuOpen ? <X className="h-6 w-6" /> : <MenuIcon className="h-6 w-6" />}
             </button>
           </div>
         </div>

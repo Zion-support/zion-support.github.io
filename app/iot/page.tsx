@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+;
 
 function Pagetpd8vlgc1() {
   return (

@@ -1,13 +1,20 @@
 import React from 'react';
+import ErrorBoundary from './ErrorBoundary';
+
 interface ErrorBoundaryWrapperProps {
-  className?: string;
-  children?: React.ReactNode;
+  children: React.ReactNode;
+  fallback?: React.ReactNode;
 }
 
+const ErrorBoundaryWrapper: React.FC<ErrorBoundaryWrapperProps> = ({ 
+  children, 
+  fallback 
+}) => {
   return (
-    <div className={'errorboundarywrapper ' + className}>
-      {children || <p>ErrorBoundaryWrapper component</p>}
-    </div>
+    <ErrorBoundary fallback={fallback}>
+      {children}
+    </ErrorBoundary>
   );
 };
+
 export default ErrorBoundaryWrapper;

@@ -1,5 +1,8 @@
 import React from 'react';
 
+interface MobileOptimizerProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
 const MobileOptimizer: React.FC<MobileOptimizerProps> = ({ 
@@ -7,7 +10,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
   children 
 }) => {
   return (
-    <div className={'mobileoptimizer ' + className}>
+    <div className={`mobileoptimizer ${className}`}>
       {children || <p>MobileOptimizer component</p>}
     </div>
   );

@@ -1,86 +1,93 @@
-<<<<<<< HEAD
 export interface User {
-;
-id: string;
+  id: string;
   email: string;
   name: string;
-  role: 'admin' | 'user' | 'guest'
-,
+  role: 'admin' | 'user' | 'guest';
 }
+
 export interface Service {
-;
-id: string;
+  id: string;
   title: string;
   description: string;
   shortDescription: string;
   icon: string;
   features: string[];
-pricing: {;
-basic: number;
+  pricing: {
+    basic: number;
     pro: number;
     enterprise: number;
-  ,
+  };
+  category: string;
+  tags: string[];
 }
-  benefits: string[];
-useCases: string[];
-marketPrice: string;
-  contactInfo: {;
-phone: string;
-    email: string;
-    website: string;
-  ,}
-  link: string;
-,}
-export interface ContactFormData {
-;
-name: string;
-  email: string;
-  company: string;
-  message: string;
-  service: string;
-,
-}
-export interface AnalyticsEvent {
-;
-name: string;
-  timestamp: number;
-  properties?: Record<string,string | number | boolean | null>
-}
-export interface PerformanceMetrics {
-;
-loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
-  firstInputDelay: number;
-,
-}
-export interface ErrorContext {
-;
-url?: string;
-userAgent?: string;
-timestamp?: string;
-userId?: string;
-sessionId?: string;
-component?: string;
-action?: string
-}
-export interface ErrorReport {
-;
-id: string;
-  message: string;
-  stack?: string;
-context: ErrorContext;
-  severity: ErrorSeverity;
-  resolved: boolean;
-  createdAt: string;
-,
-}
-export type ErrorSeverity = 'low' | 'medium' | 'high' | 'critical'
-=======
-// app.types type definitions
 
-export interface AppTypes {
-  // Add type definitions here
->>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
+export interface ContactFormData {
+  name: string;
+  email: string;
+  company?: string;
+  message: string;
+  service?: string;
+}
+
+export interface NewsletterData {
+  email: string;
+  name?: string;
+}
+
+export interface PerformanceMetrics {
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+  networkLatency: number;
+}
+
+export interface SEOData {
+  title: string;
+  description: string;
+  keywords: string[];
+  canonical?: string;
+  ogImage?: string;
+}
+
+export interface AccessibilityFeatures {
+  screenReader: boolean;
+  keyboardNavigation: boolean;
+  highContrast: boolean;
+  fontSize: 'small' | 'medium' | 'large';
+}
+
+export interface AnalyticsEvent {
+  event: string;
+  category: string;
+  action: string;
+  label?: string;
+  value?: number;
+}
+
+export interface ErrorBoundaryState {
+  hasError: boolean;
+  error?: Error;
+  errorInfo?: any;
+}
+
+export interface LoadingState {
+  isLoading: boolean;
+  progress?: number;
+  message?: string;
+}
+
+export interface ThemeConfig {
+  mode: 'light' | 'dark' | 'auto';
+  primaryColor: string;
+  secondaryColor: string;
+}
+
+export interface AppConfig {
+  apiUrl: string;
+  environment: 'development' | 'staging' | 'production';
+  features: {
+    analytics: boolean;
+    accessibility: boolean;
+    performance: boolean;
+  };
 }

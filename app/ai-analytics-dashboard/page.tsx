@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+;
 
 function Pagefks9bx7j5() {
   return (

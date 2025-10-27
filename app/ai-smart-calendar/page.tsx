@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+;
 
 function Pagex3x47v76c() {
   return (

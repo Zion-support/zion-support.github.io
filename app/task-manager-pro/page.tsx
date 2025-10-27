@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+;
 
 function Page3laxh0cv7() {
   return (
