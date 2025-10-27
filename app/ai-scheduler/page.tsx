@@ -1,5 +1,4 @@
 'use client'
-import React from 'react';
 import { ArrowRight, Calendar, Clock, Users } from 'lucide-react';
 import Link from 'next/link';
 import Navigation from '../components/Navigation';

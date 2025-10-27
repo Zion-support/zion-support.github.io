@@ -27,10 +27,12 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
   const measureMemoryUsage = useCallback(() => {
     if (typeof window !== 'undefined' && 'memory' in performance) {
       const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
-      setMetrics(prev => ({
-        ...prev,
-        memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
-      }));
+      if (memory) {
+        setMetrics(prev => ({
+          ...prev,
+          memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
+        }));
+      }
     }
   }, []);
 
