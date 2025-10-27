@@ -1,4 +1,6 @@
 
+import React from 'react';
+
 interface HomePageProps {
   className?: string;
   children?: React.ReactNode;
@@ -14,5 +16,7 @@ const HomePage: React.FC<HomePageProps> = ({
     </div>
   );
 };
+
+HomePage.displayName = 'HomePage';
 
 export default HomePage;

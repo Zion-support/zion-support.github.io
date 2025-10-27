@@ -1,7 +1,4 @@
 import React from 'react';
-export type ErrorBoundaryWrapperProps = {
-  // Add your props here
-};
 
 interface ErrorBoundaryWrapperProps {
   className?: string;

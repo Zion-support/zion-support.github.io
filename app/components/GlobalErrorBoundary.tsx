@@ -1,9 +1,19 @@
 
-interface _GlobalErrorBoundaryProps {
+import React from 'react';
+
+interface GlobalErrorBoundaryProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-export default GlobalErrorBoundary;
+const GlobalErrorBoundary: React.FC<GlobalErrorBoundaryProps> = ({ className = '', children }) => {
+  return (
+    <div className={`global-error-boundary ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+GlobalErrorBoundary.displayName = 'GlobalErrorBoundary';
 
 export default GlobalErrorBoundary;

@@ -1,4 +1,6 @@
 
+import React from 'react';
+
 interface AboutPageProps {
   className?: string;
   children?: React.ReactNode;
@@ -14,5 +16,7 @@ const AboutPage: React.FC<AboutPageProps> = ({
     </div>
   );
 };
+
+AboutPage.displayName = 'AboutPage';
 
 export default AboutPage;

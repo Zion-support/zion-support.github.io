@@ -1,4 +1,6 @@
 
+import React from 'react';
+
 interface SEOEnhancerProps {
   className?: string;
   children?: React.ReactNode;
@@ -14,5 +16,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     </div>
   );
 };
+
+SEOEnhancer.displayName = 'SEOEnhancer';
 
 export default SEOEnhancer;

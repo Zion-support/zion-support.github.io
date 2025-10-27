@@ -1,9 +1,19 @@
 
-interface _AdvancedPerformanceOptimizerProps {
+import React from 'react';
+
+interface AdvancedPerformanceOptimizerProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-export default AdvancedPerformanceOptimizer;
+const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`advanced-performance-optimizer ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+AdvancedPerformanceOptimizer.displayName = 'AdvancedPerformanceOptimizer';
 
 export default AdvancedPerformanceOptimizer;

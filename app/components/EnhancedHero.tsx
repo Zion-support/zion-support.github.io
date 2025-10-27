@@ -1,7 +1,4 @@
 import React from 'react';
-export type EnhancedHeroProps = {
-  // Add your props here
-};
 
 interface EnhancedHeroProps {
   className?: string;

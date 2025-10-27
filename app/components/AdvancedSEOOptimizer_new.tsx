@@ -1,10 +1,12 @@
 
-interface AdvancedSEOOptimizer_newProps {
+import React from 'react';
+
+interface AdvancedSEOOptimizerNewProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const AdvancedSEOOptimizer_new: React.FC<AdvancedSEOOptimizer_newProps> = ({ 
+const AdvancedSEOOptimizerNew: React.FC<AdvancedSEOOptimizerNewProps> = ({ 
   className = '', 
   children 
 }) => {
@@ -15,4 +17,6 @@ const AdvancedSEOOptimizer_new: React.FC<AdvancedSEOOptimizer_newProps> = ({
   );
 };
 
-export default AdvancedSEOOptimizer_new;
+AdvancedSEOOptimizerNew.displayName = 'AdvancedSEOOptimizerNew';
+
+export default AdvancedSEOOptimizerNew;

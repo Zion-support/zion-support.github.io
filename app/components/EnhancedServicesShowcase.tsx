@@ -5,8 +5,14 @@ interface EnhancedServicesShowcaseProps {
   children?: React.ReactNode;
 }
 
-export default EnhancedServicesShowcase;
+const EnhancedServicesShowcase: React.FC<EnhancedServicesShowcaseProps> = ({ className = '', children }) => {
+  return (
+    <div className={`enhanced-services-showcase ${className}`}>
+      {children}
+    </div>
+  );
+};
 
-export default EnhancedServicesShowcase;
+EnhancedServicesShowcase.displayName = 'EnhancedServicesShowcase';
 
 export default EnhancedServicesShowcase;
