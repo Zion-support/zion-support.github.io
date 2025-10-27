@@ -5,6 +5,12 @@ interface NotFoundPageProps {
   children?: React.ReactNode;
 }
 
-export default NotFoundPage;
+const NotFoundPage: React.FC<NotFoundPageProps> = ({ className = '', children }) => {
+  return (
+    <div className={`not-found-page ${className}`}>
+      {children}
+    </div>
+  );
+};
 
 export default NotFoundPage;

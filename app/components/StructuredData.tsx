@@ -5,8 +5,12 @@ interface StructuredDataProps {
   children?: React.ReactNode;
 }
 
-export default StructuredData;
-
-export default StructuredData;
+const StructuredData: React.FC<StructuredDataProps> = ({ className = '', children }) => {
+  return (
+    <div className={`structured-data ${className}`}>
+      {children}
+    </div>
+  );
+};
 
 export default StructuredData;

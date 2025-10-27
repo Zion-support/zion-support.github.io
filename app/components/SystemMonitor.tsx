@@ -5,6 +5,12 @@ interface SystemMonitorProps {
   children?: React.ReactNode;
 }
 
-export default SystemMonitor;
+const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '', children }) => {
+  return (
+    <div className={`system-monitor ${className}`}>
+      {children}
+    </div>
+  );
+};
 
 export default SystemMonitor;

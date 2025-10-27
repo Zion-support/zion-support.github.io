@@ -5,6 +5,12 @@ interface ServicePageTemplateProps {
   children?: React.ReactNode;
 }
 
-export default ServicePageTemplate;
+const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({ className = '', children }) => {
+  return (
+    <div className={`service-page-template ${className}`}>
+      {children}
+    </div>
+  );
+};
 
 export default ServicePageTemplate;

@@ -5,6 +5,12 @@ interface HeaderProps {
   children?: React.ReactNode;
 }
 
-export default Header;
+const Header: React.FC<HeaderProps> = ({ className = '', children }) => {
+  return (
+    <header className={`header ${className}`}>
+      {children}
+    </header>
+  );
+};
 
 export default Header;

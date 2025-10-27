@@ -2,19 +2,46 @@
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
+import { CheckCircle, ArrowRight } from 'lucide-react'
 
+const Page = () => {
   const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-  ]
+  ];
+
+  const features = [
+    {
+      icon: CheckCircle,
+      title: 'AI-Powered Analytics',
+      description: 'Advanced analytics powered by artificial intelligence',
+      benefits: ['Real-time insights', 'Predictive analytics', 'Custom dashboards']
+    },
+    {
+      icon: CheckCircle,
+      title: 'Automated Reporting',
+      description: 'Automated report generation and distribution',
+      benefits: ['Scheduled reports', 'Custom templates', 'Multi-format export']
+    },
+    {
+      icon: CheckCircle,
+      title: 'Performance Monitoring',
+      description: 'Continuous monitoring of key performance indicators',
+      benefits: ['Real-time alerts', 'Trend analysis', 'Performance optimization']
+    },
+    {
+      icon: CheckCircle,
+      title: 'Data Integration',
+      description: 'Seamless integration with existing systems',
+      benefits: ['API connectivity', 'Data synchronization', 'Custom connectors']
+    }
+  ];
 
   return (
     <>
-            {/* SEO handled by layout.tsx */}
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
@@ -22,10 +49,10 @@ import { CheckCircle, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Page
+              AI Solutions
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Secure, HIPAA-compliant medical records management system with AI-powered insights. Streamline healthcare data management and improve patient care.
+              Advanced AI solutions for modern businesses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
@@ -106,9 +133,9 @@ import { CheckCircle, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
           </div>
         </section>
       </div>
-      <Footer />;
-    </>;
+      <Footer />
+    </>
   );
 };
 
-export default PagePage;
+export default Page;

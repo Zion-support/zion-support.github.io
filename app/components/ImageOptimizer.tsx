@@ -5,6 +5,12 @@ interface ImageOptimizerProps {
   children?: React.ReactNode;
 }
 
-export default ImageOptimizer;
+const ImageOptimizer: React.FC<ImageOptimizerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`image-optimizer ${className}`}>
+      {children}
+    </div>
+  );
+};
 
 export default ImageOptimizer;

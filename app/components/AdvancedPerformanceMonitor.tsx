@@ -5,6 +5,12 @@ interface AdvancedPerformanceMonitorProps {
   children?: React.ReactNode;
 }
 
-export default AdvancedPerformanceMonitor;
+const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({ className = '', children }) => {
+  return (
+    <div className={`advanced-performance-monitor ${className}`}>
+      {children}
+    </div>
+  );
+};
 
 export default AdvancedPerformanceMonitor;

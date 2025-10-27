@@ -5,6 +5,12 @@ interface GlobalErrorBoundaryProps {
   children?: React.ReactNode;
 }
 
-export default GlobalErrorBoundary;
+const GlobalErrorBoundary: React.FC<GlobalErrorBoundaryProps> = ({ className = '', children }) => {
+  return (
+    <div className={`global-error-boundary ${className}`}>
+      {children}
+    </div>
+  );
+};
 
 export default GlobalErrorBoundary;

@@ -5,8 +5,12 @@ interface FuturisticServiceCardProps {
   children?: React.ReactNode;
 }
 
-export default FuturisticServiceCard;
-
-export default FuturisticServiceCard;
+const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({ className = '', children }) => {
+  return (
+    <div className={`futuristic-service-card ${className}`}>
+      {children}
+    </div>
+  );
+};
 
 export default FuturisticServiceCard;

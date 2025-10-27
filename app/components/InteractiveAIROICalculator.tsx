@@ -1,6 +1,10 @@
 'use client'
 import React from 'react';
 
+const InteractiveAIROICalculator = () => {
+  const [currentCost, setCurrentCost] = React.useState(100000);
+  const [efficiencyGain, setEfficiencyGain] = React.useState(25);
+  const [timeframe, setTimeframe] = React.useState(12);
 
   const calculateROI = () => {
     const annualSavings = (currentCost * efficiencyGain) / 100;
@@ -78,6 +82,7 @@ import React from 'react';
         </div>
       </div>
     </section>
-  )}
+  );
+};
 
 export default InteractiveAIROICalculator;

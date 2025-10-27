@@ -5,6 +5,12 @@ interface AdvancedAccessibilityEnhancerProps {
   children?: React.ReactNode;
 }
 
-export default AdvancedAccessibilityEnhancer;
+const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`advanced-accessibility-enhancer ${className}`}>
+      {children}
+    </div>
+  );
+};
 
 export default AdvancedAccessibilityEnhancer;

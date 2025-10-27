@@ -5,6 +5,12 @@ interface ServiceWorkerRegistrationProps {
   children?: React.ReactNode;
 }
 
-export default ServiceWorkerRegistration;
+const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({ className = '', children }) => {
+  return (
+    <div className={`service-worker-registration ${className}`}>
+      {children}
+    </div>
+  );
+};
 
 export default ServiceWorkerRegistration;

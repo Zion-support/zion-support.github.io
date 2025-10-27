@@ -5,6 +5,12 @@ interface AdvancedPerformanceOptimizerProps {
   children?: React.ReactNode;
 }
 
-export default AdvancedPerformanceOptimizer;
+const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`advanced-performance-optimizer ${className}`}>
+      {children}
+    </div>
+  );
+};
 
 export default AdvancedPerformanceOptimizer;

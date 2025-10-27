@@ -1,20 +1,16 @@
-'use client'
 import React from 'react';
 
-
 interface NavigationBackupProps {
-  logo?: string;
-  logoText?: string;
-  menuItems?: Array<{
-    label: string;
-    href: string;
-    submenu?: Array<{
-      label: string;
-      href: string;
-    }>;
-  }>;
-  ctaText?: string;
-  ctaHref?: string;
+  className?: string;
+  children?: React.ReactNode;
 }
+
+const NavigationBackup: React.FC<NavigationBackupProps> = ({ className = '', children }) => {
+  return (
+    <nav className={`navigation-backup ${className}`}>
+      {children}
+    </nav>
+  );
+};
 
 export default NavigationBackup;

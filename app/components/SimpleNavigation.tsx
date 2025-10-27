@@ -1,7 +1,11 @@
-'use client'
 import React from 'react';
 
-
-import Link from 'next/link';
+const SimpleNavigation: React.FC = () => {
+  return (
+    <nav className="simple-navigation">
+      {/* Simple navigation component */}
+    </nav>
+  );
+};
 
 export default SimpleNavigation;

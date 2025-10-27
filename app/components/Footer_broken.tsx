@@ -5,8 +5,12 @@ interface Footer_brokenProps {
   children?: React.ReactNode;
 }
 
-export default Footer_broken;
-
-export default Footer_broken;
+const Footer_broken: React.FC<Footer_brokenProps> = ({ className = '', children }) => {
+  return (
+    <footer className={`footer-broken ${className}`}>
+      {children}
+    </footer>
+  );
+};
 
 export default Footer_broken;

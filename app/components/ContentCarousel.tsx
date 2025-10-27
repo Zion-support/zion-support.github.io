@@ -5,6 +5,12 @@ interface ContentCarouselProps {
   children?: React.ReactNode;
 }
 
-export default ContentCarousel;
+const ContentCarousel: React.FC<ContentCarouselProps> = ({ className = '', children }) => {
+  return (
+    <div className={`content-carousel ${className}`}>
+      {children}
+    </div>
+  );
+};
 
 export default ContentCarousel;
