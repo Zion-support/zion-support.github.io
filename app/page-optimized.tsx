@@ -3,8 +3,8 @@ import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 
-const PageOptimizedPage: React.FC = () => {
-  const features = [
+const _PageOptimizedPage: React.FC = () => {
+  const _features = [
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -29,7 +29,10 @@ const PageOptimizedPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ]
+  ];
+
+  return null; // This function is not used
+};
 
 const PageOptimized: React.FC = () => {
   const features = [
