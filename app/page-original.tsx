@@ -1,6 +1,5 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
@@ -43,11 +42,7 @@ const PageOriginalPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>OriginalPage</title>
-        <meta name="description" content="Advanced OriginalPage solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial intelligence, OriginalPage, AI solutions, intelligent automation" />
-      </Helmet>
+            {/* SEO handled by layout.tsx */}
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}

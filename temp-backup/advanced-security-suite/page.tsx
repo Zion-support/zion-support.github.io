@@ -13,12 +13,7 @@ export default function Page() {
         <title>Advanced Security Suite - Zion Tech Group</title>
         <meta name="description" content="Professional advanced security suite services and solutions by Zion Tech Group." />
       </Head>
-<<<<<<< HEAD:app/advanced-security-suite/page.tsx
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-=======
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
 
->>>>>>> origin/main:temp-backup/advanced-security-suite/page.tsx
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
 
           <h1 className="text-4xl font-bold text-white mb-6">
@@ -36,23 +31,12 @@ export default function Page() {
           </div>
         </div>
         <Footer />
-<<<<<<< HEAD:temp-backup/advanced-security-suite/page.tsx
-<<<<<<< HEAD:app/advanced-security-suite/page.tsx
-      </div>
-=======
-      </main>
->>>>>>> origin/main:app/advanced-security-suite/page.tsx
+
     </div>
   )
 }
-=======
+
       </main>
     </div>
   )
-<<<<<<< HEAD:app/advanced-security-suite/page.tsx
-}
-=======
-};
-  </div>
->>>>>>> origin/main:temp-backup/advanced-security-suite/page.tsx
->>>>>>> origin/main:temp-backup/advanced-security-suite/page.tsx
+

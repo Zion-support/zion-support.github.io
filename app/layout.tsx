@@ -9,7 +9,6 @@ export const metadata: Metadata = {
   description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
   keywords: 'AI solutions, IT services, cybersecurity, cloud computing, digital transformation',
   authors: [{ name: 'Zion Tech Group' }],
-  viewport: 'width=device-width, initial-scale=1',
   robots: 'index, follow',
   openGraph: {
     title: 'Zion Tech Group - Advanced AI & IT Solutions',
@@ -22,6 +21,13 @@ export const metadata: Metadata = {
     title: 'Zion Tech Group - Advanced AI & IT Solutions',
     description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
   },
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 };
 
 export default function RootLayout({
