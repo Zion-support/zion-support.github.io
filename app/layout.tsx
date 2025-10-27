@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import React from 'react';
@@ -30,8 +29,6 @@ export const viewport = {
   maximumScale: 1,
   userScalable: false,
 }
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-50ad
 export default function RootLayout({
   children,
 }: {
@@ -39,7 +36,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className={inter.className}>
         {children}
       </body>
     </html>

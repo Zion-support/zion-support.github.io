@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-<<<<<<< HEAD
   // Disable static generation completely
   output: 'export',
   trailingSlash: true,
@@ -30,20 +29,37 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-=======
-  // Skip build errors for now
->>>>>>> cursor/fix-errors-and-merge-to-main-50ad
   typescript: {
     ignoreBuildErrors: true,
   },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  // Use dynamic rendering
-  trailingSlash: true,
-  images: {
-    unoptimized: true,
+  
+  // Webpack optimizations
+  webpack: (config, { isServer, dev }) => {
+    // Optimize for production
+    if (!dev) {
+      config.optimization.splitChunks = {
+        chunks: 'all',
+        cacheGroups: {
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            name: 'vendors',
+            chunks: 'all',
+          },
+        },
+      };
+    }
+    
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+        net: false,
+        tls: false,
+      };
+    }
+    
+    return config;
   },
 }
 
-export default nextConfig
+export default nextConfig;
