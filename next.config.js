@@ -14,7 +14,7 @@ const nextConfig = {
   
   // Disable static generation to avoid serialization issues
   experimental: {
-    optimizePackageImports: ['@heroicons/react', 'lucide-react', 'framer-motion'],
+    optimizePackageImports: ['lucide-react', 'framer-motion'],
     webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB'],
   },
   
