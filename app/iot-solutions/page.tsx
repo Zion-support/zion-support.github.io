@@ -1,7 +1,4 @@
-'use client'
-import React from 'react';
-
-
+'use client';
 function Pagekyn4kq2cv() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -18,7 +15,5 @@ function Pagekyn4kq2cv() {
     </div>
   );
 }
-
 Pagekyn4kq2cv.displayName = '';
-
 export default Pagekyn4kq2cv;

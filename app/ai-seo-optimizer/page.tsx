@@ -1,7 +1,4 @@
-'use client'
-import React from 'react';
-
-
+'use client';
 function Pageuko1jbc8c() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -18,7 +15,5 @@ function Pageuko1jbc8c() {
     </div>
   );
 }
-
 Pageuko1jbc8c.displayName = '';
-
 export default Pageuko1jbc8c;

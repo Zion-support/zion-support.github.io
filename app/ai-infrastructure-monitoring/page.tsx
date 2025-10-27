@@ -1,7 +1,4 @@
-'use client'
-import React from 'react';
-
-
+'use client';
 function Pageouar5kpmc() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -18,7 +15,5 @@ function Pageouar5kpmc() {
     </div>
   );
 }
-
 Pageouar5kpmc.displayName = '';
-
 export default Pageouar5kpmc;

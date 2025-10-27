@@ -5,6 +5,10 @@ interface ContentStatisticsProps {
   children?: React.ReactNode;
 }
 
-export default ContentStatistics;
-
-export default ContentStatistics;
+export default function ContentStatistics({ className, children }: ContentStatisticsProps) {
+  return (
+    <div className={`contentstatistics-component ${className || ''}`}>
+      {children}
+    </div>
+  );
+}

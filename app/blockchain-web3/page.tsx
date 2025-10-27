@@ -1,7 +1,4 @@
-'use client'
-import React from 'react';
-
-
+'use client';
 function Pagepp6phtyag() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -18,7 +15,5 @@ function Pagepp6phtyag() {
     </div>
   );
 }
-
 Pagepp6phtyag.displayName = '';
-
 export default Pagepp6phtyag;

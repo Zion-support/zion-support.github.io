@@ -1,7 +1,4 @@
-'use client'
-import React from 'react';
-
-
+'use client';
 function Pagenfec4xp14() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -18,7 +15,5 @@ function Pagenfec4xp14() {
     </div>
   );
 }
-
 Pagenfec4xp14.displayName = '';
-
 export default Pagenfec4xp14;

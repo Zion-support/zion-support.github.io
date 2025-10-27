@@ -1,7 +1,4 @@
-'use client'
-import React from 'react';
-
-
+'use client';
 function Pageixa3buvyo() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -18,7 +15,5 @@ function Pageixa3buvyo() {
     </div>
   );
 }
-
 Pageixa3buvyo.displayName = '';
-
 export default Pageixa3buvyo;

@@ -1,7 +1,4 @@
-'use client'
-import React from 'react';
-
-
+'use client';
 function Pagemlfpusg06() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -18,7 +15,5 @@ function Pagemlfpusg06() {
     </div>
   );
 }
-
 Pagemlfpusg06.displayName = '';
-
 export default Pagemlfpusg06;

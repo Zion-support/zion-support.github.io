@@ -1,5 +1,19 @@
-'use client';
 import React from 'react';
 
 interface OptimizedImageProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
+const OptimizedImage: React.FC<OptimizedImageProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'optimizedimage ' + className}>
+      {children || <p>OptimizedImage component</p>}
+    </div>
+  );
+};
+
+export default OptimizedImage;

@@ -1,7 +1,4 @@
-'use client'
-import React from 'react';
-
-
+'use client';
 function Page8kbincjfz() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -18,7 +15,5 @@ function Page8kbincjfz() {
     </div>
   );
 }
-
 Page8kbincjfz.displayName = '';
-
 export default Page8kbincjfz;

@@ -1,7 +1,4 @@
-'use client'
-import React from 'react';
-
-
+'use client';
 function Pageqcbf3ddiw() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -18,7 +15,5 @@ function Pageqcbf3ddiw() {
     </div>
   );
 }
-
 Pageqcbf3ddiw.displayName = '';
-
 export default Pageqcbf3ddiw;

@@ -1,7 +1,4 @@
-'use client'
-import React from 'react';
-
-
+'use client';
 function Pagepdf4ytub8() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -18,7 +15,5 @@ function Pagepdf4ytub8() {
     </div>
   );
 }
-
 Pagepdf4ytub8.displayName = '';
-
 export default Pagepdf4ytub8;

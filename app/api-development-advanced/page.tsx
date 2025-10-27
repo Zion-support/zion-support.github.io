@@ -1,7 +1,4 @@
-'use client'
-import React from 'react';
-
-
+'use client';
 function Pagerm1o1p1fs() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -18,7 +15,5 @@ function Pagerm1o1p1fs() {
     </div>
   );
 }
-
 Pagerm1o1p1fs.displayName = '';
-
 export default Pagerm1o1p1fs;

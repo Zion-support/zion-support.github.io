@@ -1,7 +1,4 @@
-'use client'
-import React from 'react';
-
-
+'use client';
 function Page3edxsmhmu() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -18,7 +15,5 @@ function Page3edxsmhmu() {
     </div>
   );
 }
-
 Page3edxsmhmu.displayName = '';
-
 export default Page3edxsmhmu;

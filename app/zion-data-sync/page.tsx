@@ -1,7 +1,4 @@
-'use client'
-import React from 'react';
-
-
+'use client';
 function Page2ubyvhtdb() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -18,7 +15,5 @@ function Page2ubyvhtdb() {
     </div>
   );
 }
-
 Page2ubyvhtdb.displayName = '';
-
 export default Page2ubyvhtdb;

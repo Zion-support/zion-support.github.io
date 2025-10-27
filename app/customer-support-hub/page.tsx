@@ -1,7 +1,4 @@
-'use client'
-import React from 'react';
-
-
+'use client';
 function Pagey6n1yimtc() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -18,7 +15,5 @@ function Pagey6n1yimtc() {
     </div>
   );
 }
-
 Pagey6n1yimtc.displayName = '';
-
 export default Pagey6n1yimtc;

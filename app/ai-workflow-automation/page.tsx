@@ -1,7 +1,4 @@
-'use client'
-import React from 'react';
-
-
+'use client';
 function Pageyz40zingb() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -18,7 +15,5 @@ function Pageyz40zingb() {
     </div>
   );
 }
-
 Pageyz40zingb.displayName = '';
-
 export default Pageyz40zingb;

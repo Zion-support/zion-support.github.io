@@ -1,7 +1,4 @@
-'use client'
-import React from 'react';
-
-
+'use client';
 function Pageyjewipxr6() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -18,7 +15,5 @@ function Pageyjewipxr6() {
     </div>
   );
 }
-
 Pageyjewipxr6.displayName = '';
-
 export default Pageyjewipxr6;

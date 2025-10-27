@@ -1,7 +1,4 @@
-'use client'
-import React from 'react';
-
-
+'use client';
 function Pagecfruvma01() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -18,7 +15,5 @@ function Pagecfruvma01() {
     </div>
   );
 }
-
 Pagecfruvma01.displayName = '';
-
 export default Pagecfruvma01;

@@ -1,7 +1,4 @@
-'use client'
-import React from 'react';
-
-
+'use client';
 function Pagetspy18xgl() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -18,7 +15,5 @@ function Pagetspy18xgl() {
     </div>
   );
 }
-
 Pagetspy18xgl.displayName = '';
-
 export default Pagetspy18xgl;

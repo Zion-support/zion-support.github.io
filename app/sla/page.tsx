@@ -1,7 +1,4 @@
-'use client'
-import React from 'react';
-
-
+'use client';
 function Pagezg8u68fw5() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -18,7 +15,5 @@ function Pagezg8u68fw5() {
     </div>
   );
 }
-
 Pagezg8u68fw5.displayName = '';
-
 export default Pagezg8u68fw5;

@@ -1,7 +1,4 @@
-'use client'
-import React from 'react';
-
-
+'use client';
 function Pageh4bwimxin() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -18,7 +15,5 @@ function Pageh4bwimxin() {
     </div>
   );
 }
-
 Pageh4bwimxin.displayName = '';
-
 export default Pageh4bwimxin;
