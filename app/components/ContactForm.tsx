@@ -1,15 +1,5 @@
 import React from 'react';
 
-const ContactForm: React.FC = () => {
-  return (
-    <div className="contact-form">
-      {/* Contact form component */}
-    </div>
-  );
-};
-
-import React from 'react';
-
 interface ContactFormProps {
   className?: string;
   children?: React.ReactNode;
