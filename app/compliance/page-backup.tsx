@@ -130,6 +130,6 @@ import { ShieldCircle, Lock, } from 'lucide-react';
       <Footer />
     </>
   );
-};
+}
 
 export default CompliancePageBackup;

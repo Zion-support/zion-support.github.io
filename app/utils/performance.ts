@@ -51,7 +51,7 @@ export class PerformanceMonitor {
       const entries = entryList.getEntries();
       entries.forEach((entry) => {
         // Use processingStart if available, otherwise calculate from startTime
-        const processingStart = (entry as { processingStart?: number }).processingStart || entry.startTime;
+        const processingStart: React.FC = (entry as { processingStart?: number }).processingStart || entry.startTime;
         this.metrics.set("FID", processingStart - entry.startTime)})}).observe({ entryTypes: ["first-input"] });
 
     // Cumulative Layout Shift
