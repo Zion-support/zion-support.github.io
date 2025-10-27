@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+export type NewsletterSignupProps = {
+  // Add your props here
+};
 
 interface NewsletterSignupProps {
   onSubmit?: (email: string) => void;

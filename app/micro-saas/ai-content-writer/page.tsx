@@ -1,5 +1,4 @@
 'use client';
-import React from 'react';
 
 function Pagetu1s1sliv() {
   return (

@@ -1,4 +1,7 @@
 import React from 'react';
+export type EnhancedSEOOptimizerProps = {
+  // Add your props here
+};
 
 interface EnhancedSEOOptimizerProps {
   className?: string;

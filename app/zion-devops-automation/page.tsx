@@ -1,5 +1,4 @@
 'use client';
-import React from 'react';
 
 function Page8pp1jx1lo() {
   return (

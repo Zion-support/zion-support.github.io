@@ -1,5 +1,4 @@
 'use client';
-import React from 'react';
 
 function Pagenlpg8ex2d() {
   return (

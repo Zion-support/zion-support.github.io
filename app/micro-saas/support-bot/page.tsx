@@ -1,5 +1,4 @@
 'use client';
-import React from 'react';
 
 function Pagetwudef5rz() {
   return (

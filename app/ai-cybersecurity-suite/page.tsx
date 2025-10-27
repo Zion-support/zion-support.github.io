@@ -1,5 +1,4 @@
 'use client';
-import React from 'react';
 
 function Page9lrd7py64() {
   return (

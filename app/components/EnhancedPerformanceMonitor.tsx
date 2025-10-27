@@ -1,4 +1,7 @@
 import React from 'react';
+export type EnhancedPerformanceMonitorProps = {
+  // Add your props here
+};
 
 interface EnhancedPerformanceMonitorProps {
   className?: string;

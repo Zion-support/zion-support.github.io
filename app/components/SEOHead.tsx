@@ -1,4 +1,7 @@
 import React from 'react';
+export type SEOHeadProps = {
+  // Add your props here
+};
 import Head from 'next/head';
 
 interface SEOHeadProps {
