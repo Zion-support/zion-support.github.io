@@ -1,5 +1,5 @@
-'use client';
 import React from 'react';
+'use client';
 
 function Pagewumt4h1y3() {
   return (

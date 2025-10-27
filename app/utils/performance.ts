@@ -41,24 +41,24 @@ export class PerformanceMonitor {
     if (typeof window === "undefined") return;
 
     // Largest Contentful Paint
-    new PerformanceObserver((entryList) => {
+    new PerformanceObserver((_entryList) => {
       const entries = entryList.getEntries();
       const lastEntry = entries[entries.length - 1];
       this.metrics.set("LCP", lastEntry.startTime)}).observe({ entryTypes: ["largest-contentful-paint"] });
 
     // First Input Delay
-    new PerformanceObserver((entryList) => {
+    new PerformanceObserver((_entryList) => {
       const entries = entryList.getEntries();
-      entries.forEach((entry) => {
+      entries.forEach((_entry) => {
         // Use processingStart if available, otherwise calculate from startTime
         const processingStart = (entry as { processingStart?: number }).processingStart || entry.startTime;
         this.metrics.set("FID", processingStart - entry.startTime)})}).observe({ entryTypes: ["first-input"] });
 
     // Cumulative Layout Shift
     let clsValue = 0;
-    new PerformanceObserver((entryList) => {
+    new PerformanceObserver((_entryList) => {
       const entries = entryList.getEntries();
-      entries.forEach((entry) => {
+      entries.forEach((_entry) => {
         if (!(entry as { hadRecentInput?: boolean }).hadRecentInput) {
           clsValue += (entry as { value?: number }).value || 0}
       });
@@ -76,9 +76,9 @@ export function usePerformanceMonitor() {
   }}
 
 // Utility function to measure component render time
-export function measureComponentRender(componentName: string) {
+export function measureComponentRender(componentName: _string) {
   return function <T extends React.ComponentType<unknown>>(WrappedComponent: T): T {
-    return ((props: unknown) => {
+    return ((props: _unknown) => {
       const monitor = PerformanceMonitor.getInstance();
       React.useEffect(() => {
         monitor.startTiming(`${componentName}-render`);

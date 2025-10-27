@@ -1,5 +1,5 @@
-'use client';
 import React from 'react';
+'use client';
 
 function Page47ths591y() {
   return (

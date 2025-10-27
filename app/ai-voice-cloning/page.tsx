@@ -1,5 +1,5 @@
-'use client';
 import React from 'react';
+'use client';
 
 function Pager5sp79uf2() {
   return (

@@ -13,7 +13,7 @@ export default function SEOHead({
   description = "Leading technology solutions provider",
   keywords = [],
   canonical
-}: SEOHeadProps) {
+}: _SEOHeadProps) {
   return (
     <Head>
       <title>{title}</title>

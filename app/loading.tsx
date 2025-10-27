@@ -1,8 +1,9 @@
+import { CheckCircle, Users, Target, ArrowRight, Star, Clock, Zap, Shield, Globe, Database, Settings, Check } from 'lucide-react';
 'use client'
 import React from 'react'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+import {_CheckCircle, _ArrowRight, _Star, _Clock, _Zap, _Shield, _Brain, _BarChart, _Target, _TrendingUp, _Globe, _Database, _Users, _Settings, _Check} from 'lucide-react'
 
 const LoadingPage: React.FC = () => {
   const features = [
@@ -77,13 +78,13 @@ const LoadingPage: React.FC = () => {
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
+              {features.map((_feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
                   <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
+                    {feature.benefits.map((_benefit, _idx) => (
                       <li key={idx} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
                         {benefit}
@@ -106,7 +107,7 @@ const LoadingPage: React.FC = () => {
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
+              {benefits.map((_benefit, index) => (
                 <div key={index} className="flex items-start space-x-4">
                   <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p>

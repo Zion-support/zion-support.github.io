@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import {__useEffect, __useRef, __useState} from 'react';
 
 interface UseLazyLoadingOptions {
   threshold?: number;
@@ -53,7 +54,7 @@ export function useLazyLoading(options: UseLazyLoadingOptions = {}) {
   };
 }
 
-export function useImageLazyLoading(src: string, options: UseLazyLoadingOptions = {}) {
+export function useImageLazyLoading(src: __string, options: UseLazyLoadingOptions = {}) {
   const { shouldLoad, elementRef } = useLazyLoading(options);
   const [imageSrc, setImageSrc] = useState<string | null>(null);
   const [isLoaded, setIsLoaded] = useState(false);

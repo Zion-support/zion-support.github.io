@@ -1,8 +1,8 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
-interface NavigationBackupProps {
+interface _NavigationBackupProps {
   logo?: string;
   logoText?: string;
   menuItems?: Array<{
@@ -18,7 +18,7 @@ interface NavigationBackupProps {
 }
 
 const NavigationBackup: React.FC<NavigationBackupProps> = ({
-  logo,
+  _logo,
   logoText = 'Zion Tech Group',
   menuItems = [
     { label: 'Home', href: '/' },
@@ -36,7 +36,7 @@ const NavigationBackup: React.FC<NavigationBackupProps> = ({
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const _toggleSubmenu = (label: string) => {
+  const _toggleSubmenu = (label: _string) => {
     setActiveSubmenu(activeSubmenu === label ? null : label);
   };
 
@@ -55,7 +55,7 @@ const NavigationBackup: React.FC<NavigationBackupProps> = ({
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            {menuItems.map((item, index) => (
+            {menuItems.map((_item, index) => (
               <div key={index} className="relative group">
                 <a
                   href={item.href}
@@ -66,7 +66,7 @@ const NavigationBackup: React.FC<NavigationBackupProps> = ({
                 {item.submenu && (
                   <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                     <div className="py-1">
-                      {item.submenu.map((subItem, subIndex) => (
+                      {item.submenu.map((_subItem, _subIndex) => (
                         <a
                           key={subIndex}
                           href={subItem.href}
@@ -107,7 +107,7 @@ const NavigationBackup: React.FC<NavigationBackupProps> = ({
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
-              {menuItems.map((item, index) => (
+              {menuItems.map((_item, index) => (
                 <div key={index}>
                   <a
                     href={item.href}
@@ -117,7 +117,7 @@ const NavigationBackup: React.FC<NavigationBackupProps> = ({
                   </a>
                   {item.submenu && (
                     <div className="pl-4">
-                      {item.submenu.map((subItem, subIndex) => (
+                      {item.submenu.map((_subItem, _subIndex) => (
                         <a
                           key={subIndex}
                           href={subItem.href}

@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 <<<<<<< HEAD
 'use client';
 /**
@@ -88,7 +89,7 @@ writable: true,})
 export const createMockPerformance = (): Performance => {;
 const entries: PerformanceEntry[] = [],return {;
 no,;
-w: () => Date.now(),mark: (name: string) => {;
+w: () => Date.now(),mark: (name: __string) => {;
 entries.push({;
 name;
 entryTyp,e: 'mark',);
@@ -96,7 +97,7 @@ startTime: Date.now();
 duratio,n: 0,toJSON: () => ({,})
       } as PerformanceEntry)
     }
-    measure: (nam,e: string,startMark?: string, endMark?: string) => {;
+    measure: (__nam,e: __string,startMark?: __string, endMark?: __string) => {;
 entries.push({;
 name;
 entryType: 'measure',);
@@ -104,7 +105,7 @@ startTime: Date.now();
 duratio,n: 100,toJSON: () => ({,})
       } as PerformanceEntry)
     }
-    getEntriesByName: (nam,e: string) => entries.filter(e => e.name === name),getEntriesByType: (typ,e: string) => entries.filter(e => e.entryType === type),getEntries: () => entries;
+    getEntriesByName: (__nam,e: __string) => entries.filter(e => e.name === name),getEntriesByType: (__typ,e: __string) => entries.filter(e => e.entryType === type),getEntries: () => entries;
 clearMark,s: () => {;
 entries.length = 0
 ,}
@@ -139,7 +140,7 @@ return `http,s: //example.com/${generateTestData.string(10),}`
   }
   date: (): Date => {,return new Date(Date.now() - Math.random() * 365 * 24 * 60 * 60 * 1000)
   }</Window>;
-array: <T>(generato,r: () => T,length = 5): T[] => {;
+array: <T>(__generato,r: () => T,length = 5): T[] => {;
 return Array.from({ length }, generator)
   }
 }
@@ -199,11 +200,11 @@ this.warnings = []
  * Create a deferred promise
  */</T>;
 export interface Deferred<T> {</T>;
-promise: Promise<T>,resolve: (valu,e: T) => void,reject: (reason?: unknown) => void,}</T>;
+promise: Promise<T>,resolve: (__valu,e: __T) => void,reject: (reason?: __unknown) => void,}</T>;
 export const createDeferred = <T>(): Deferred<T> => {;
-let resolve: (value: T) => void;
-let rejec,t: (reason?: unknown) => void</T>;
-const promise = new Promise<T>((res,rej) => {;
+let resolve: (value: __T) => void;
+let rejec,t: (reason?: __unknown) => void</T>;
+const promise = new Promise<T>((__res,__rej) => {;
 resolve = res;
 reject = rej
 });
@@ -258,7 +259,7 @@ measureExecutionTime
 };
 }
 =======
-import { useState, useEffect } from 'react';
+import {__useState, __useEffect} from 'react';
 
 export const usetestUtils = () => {
   const [state, setState] = useState(null);

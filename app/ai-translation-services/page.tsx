@@ -1,5 +1,5 @@
-'use client';
 import React from 'react';
+'use client';
 
 function Paget2ztozwo3() {
   return (

@@ -1,13 +1,14 @@
+import React, { useState, useEffect } from 'react';
 <<<<<<< HEAD
 'use client';
-import { useCallback, useMemo } from 'react';
+import {__useCallback, __useMemo} from 'react';
 // Performance optimization utilities
 // Debounce utility for performance;
 ;
 export const debounce = <T extends (...args: any[]) => any>(,func: T,wait: number</T>
 ): ((...args: Parameters<T>) => void) => {;
   let timeout: NodeJS.Timeout;
-  return (...arg,</T>;
+  return (...__arg,</T>;
 s: Parameters<T>) => {;
 clearTimeout(timeout);
 timeout = setTimeout(() => func(...args),wait)
@@ -17,7 +18,7 @@ timeout = setTimeout(() => func(...args),wait)
 export const throttle = <T extends (...args: any[]) => any>(,func: T,limit: number</T>
 ): ((...args: Parameters<T>) => void) => {;
   let inThrottle: boolean;
-  return (...arg,</T>;
+  return (...__arg,</T>;
 s: Parameters<T>) => {;
 if(!inThrottle) {;
 func(...args);,inThrottle = true,;
@@ -28,7 +29,7 @@ setTimeout(() => (inThrottle = false), limit)
 // Intersection Observer hook for lazy loading;
 ;
 export const useIntersectionObserver = (;
-callback: (entrie,s: IntersectionObserverEntry[]) => void,options: IntersectionObserverInit = {,}
+callback: (__entrie,s: IntersectionObserverEntry[]) => void,options: IntersectionObserverInit = {,}
 ) => {;
 const observer = useMemo()
     () =>;
@@ -40,7 +41,7 @@ threshold: 0.1,rootMargin: '50px',...options)
     [callback, options]
   );
 const observe = useCallback()
-    (element: Element | null) => {;
+    (element: Element | __null) => {;
 if(observer && element) {;
 observer.observe(element);
 return (</T>div>/div>
@@ -70,14 +71,14 @@ return { observe, disconnect }
 }
 // Image lazy loading hook;
 ;
-export const useLazyImage = (src: string,placeholder?: string) => {;
+export const useLazyImage = (src: __string,placeholder?: __string) => {;
 const [imageSrc, setImageSrc] = useState(placeholder || '');
   const [isLoaded, setIsLoaded] = useState(false);
   const [isError, setIsError] = useState(false);
   const { observe } = useIntersectionObserver(;
 useCallback()
-      (entries) => {;
-entries.forEach((entry) => {;
+      (__entries) => {;
+entries.forEach((__entry) => {;
 if(entry.isIntersecting && !isLoaded && !isError) {;
 const img = new Image();
             img.onload = () => {;
@@ -131,12 +132,12 @@ window.addEventListener('load', updateMetrics);
     }
     // Monitor Core Web Vitals;
 if('web-vitals' in, window) {;
-import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {;
-getCLS((metric) => setMetrics(prev => ({ ...prev, cls: metric.value ,})));
-getFID((metric) => setMetrics(prev => ({ ...prev, fid: metric.value ,})));
-getFCP((metric) => setMetrics(prev => ({ ...prev, fcp: metric.value ,})));
-getLCP((metric) => setMetrics(prev => ({ ...prev, lcp: metric.value ,})));
-getTTFB((metric) => setMetrics(prev => ({ ...prev, ttfb: metric.value ,})))
+import('web-vitals').then(({ __getCLS, __getFID, __getFCP, __getLCP, getTTFB }) => {;
+getCLS((__metric) => setMetrics(prev => ({ ...prev, cls: metric.value ,})));
+getFID((__metric) => setMetrics(prev => ({ ...prev, fid: metric.value ,})));
+getFCP((__metric) => setMetrics(prev => ({ ...prev, fcp: metric.value ,})));
+getLCP((__metric) => setMetrics(prev => ({ ...prev, lcp: metric.value ,})));
+getTTFB((__metric) => setMetrics(prev => ({ ...prev, ttfb: metric.value ,})))
       })
     }
     return (
@@ -188,7 +189,7 @@ t: memory.jsHeapSizeLimit,})
 return memoryInfo
 }
 // Resource preloading utility;
-export const preloadResource = (href: string,as: string) => {;
+export const preloadResource = (href: __string,as: __string) => {;
 if (typeof window === 'undefined') return;
 const link = document.createElement('link');
   link.rel = 'preload';
@@ -230,7 +231,7 @@ let totalSize = 0;
 let jsSize = 0;
 let cssSize = 0;
 let imageSize = 0;
-resources.forEach((resource) => {;
+resources.forEach((__resource) => {;
 const size = (resource as PerformanceResourceTiming).transferSize || 0;
 totalSize += size;
 if (resource.name.includes('.js')) {;
@@ -281,7 +282,7 @@ useBundleSizeMonitoring
 export default performanceOptimizations;
 }
 =======
-import { useState, useEffect } from 'react';
+import {__useState, __useEffect} from 'react';
 
 export const useperformanceOptimizations = () => {
   const [state, setState] = useState(null);

@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import {__useState, __useEffect} from 'react';
 
 export const useaccessibilityUtils = () => {
   const [state, setState] = useState(null);
@@ -38,7 +39,7 @@ const focusableElements = element.querySelectorAll()
 const firstElement = focusableElements[0] as HTMLElement;
   const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 ;
-const handleTabKey = (e: KeyboardEvent) => {;
+const handleTabKey = (e: __KeyboardEvent) => {;
 if (e.key === 'Tab') {;
 if (e.shiftKey) {;
 if (document.activeElement === firstElement) {;
@@ -160,7 +161,7 @@ animation-duration: 0.01ms !important;
 ;
 export const setupKeyboardNavigation = (): void => {
   // Add keyboard navigation support;
-document.addEventListener('keydown', (e) => {
+document.addEventListener('keydown', (__e) => {
     // Escape key to close modals/dropdowns;
 if (e.key === 'Escape') {;
       const activeElement = document.activeElement as HTMLElement;
@@ -234,7 +235,7 @@ let liveRegion = document.getElementById('aria-live-region');
 export const createLandmarkNavigation = (): void => {;
   const landmarks = document.querySelectorAll('main, nav, aside, header, footer, section[aria-labelledby]');
 ;
-landmarks.forEach((landmark, index) => {;
+landmarks.forEach((__landmark, __index) => {;
 const role = landmark.getAttribute('role') || landmark.tagName.toLowerCase();
     const label = landmark.getAttribute('aria-label') || landmark.getAttribute('aria-labelledby') || `${role} ${index + 1}`;
 ;
@@ -338,7 +339,7 @@ text-shadow: 0 0 5px #00ffff !important;,}
 ;
 private setupKeyboardNavigation(): void {
     // Add keyboard navigation support;
-document.addEventListener('keydown', (event) => {;
+document.addEventListener('keydown', (__event) => {;
 if (event.key === 'Tab') {;
 document.body.classList.add('keyboard-navigation');
       }
@@ -373,7 +374,7 @@ const announcement = document.createElement('div');
 private setupFocusManagement(): void {
 // Manage focus for modals and dynamic content;
 const focusHistory: HTMLElement[] = [];,,;
-document.addEventListener('keydown', (event) => {;
+document.addEventListener('keydown', (__event) => {;
 if (event.key === 'Escape') {
         // Return focus to previous element;
 ;
@@ -384,7 +385,7 @@ previousElement.focus();
       }
     });
     // Track focus changes;
-document.addEventListener('focusin', (event) => {;
+document.addEventListener('focusin', (__event) => {;
 if (event.target instanceof HTMLElement) {;
 focusHistory.push(event.target);
         if (focusHistory.length > 10) {;
@@ -397,13 +398,13 @@ focusHistory.shift();
 private setupAriaLabels(): void {
 // Add ARIA labels to interactive elements;
 const buttons = document.querySelectorAll('button: not([aria-label])');
-    buttons.forEach((button) => {,if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {,;
+    buttons.forEach((__button) => {,if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {,;
 button.setAttribute('aria-label', 'Button');
       }
     });
 ;
 const links = document.querySelectorAll('a: not([aria-label])');
-    links.forEach((link) => {,if (!link.getAttribute('aria-label') && !link.textContent?.trim()) {,;
+    links.forEach((__link) => {,if (!link.getAttribute('aria-label') && !link.textContent?.trim()) {,;
 link.setAttribute('aria-label', 'Link');
       }
     });
@@ -415,7 +416,7 @@ overallScor,e: 0,colorContrast: this.checkColorContrast(),keyboardNavigation: th
     // Calculate overall score;
 ;
 const scores = Object.values(metrics).filter(score => typeof score === 'number' && score > 0);
-    metrics.overallScore = scores.length > 0 ? scores.reduce((sum, score) => sum + score, 0) / scores.length: 0;
+    metrics.overallScore = scores.length > 0 ? scores.reduce((__sum, __score) => sum + score, 0) / scores.length: 0;
 ;
 this.metrics = metrics;
     return metrics;
@@ -428,7 +429,7 @@ const elements = document.querySelectorAll('*');
     let goodContrast = 0;
     let totalElements = 0;
 ;
-elements.forEach((element) => {;
+elements.forEach((__element) => {;
 const styles = window.getComputedStyle(element);
       const color = styles.color;
       const backgroundColor = styles.backgroundColor;
@@ -451,7 +452,7 @@ const focusableElements = document.querySelectorAll()
     );
     let accessibleElements = 0;
 ;
-focusableElements.forEach((element) => {;
+focusableElements.forEach((__element) => {;
 if (element instanceof HTMLElement) {;
 const tabIndex = element.getAttribute('tabindex');
         if (tabIndex !== '-1') {;
@@ -467,7 +468,7 @@ private checkScreenReaderCompatibility(): number {;
 const elements = document.querySelectorAll('*');
     let compatibleElements = 0;
 ;
-elements.forEach((element) => {;
+elements.forEach((__element) => {;
 if (element instanceof HTMLElement) {;
 const hasAriaLabel = element.hasAttribute('aria-label');
         const hasAriaLabelledBy = element.hasAttribute('aria-labelledby');
@@ -490,7 +491,7 @@ const focusableElements = document.querySelectorAll()
     );
 ;
 let properlyManaged = 0;
-    focusableElements.forEach((element) => {;
+    focusableElements.forEach((__element) => {;
 if (element instanceof HTMLElement) {;
 const hasFocusStyles = window.getComputedStyle(element).outline !== 'none';
         if (hasFocusStyles) {;
@@ -508,7 +509,7 @@ const interactiveElements = document.querySelectorAll(
     );
 ;
 let labeledElements = 0;
-    interactiveElements.forEach((element) => {;
+    interactiveElements.forEach((__element) => {;
 const hasAriaLabel = element.hasAttribute('aria-label');
       const hasAriaLabelledBy = element.hasAttribute('aria-labelledby');
       const hasTextContent = element.textContent?.trim().length > 0;
@@ -526,7 +527,7 @@ const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
     let properStructure = 0;
     let previousLevel = 0;
 ;
-headings.forEach((heading) => {;
+headings.forEach((__heading) => {;
 const level = parseInt(heading.tagName.charAt(1));</AccessibilityConfig>;
 if (level <= previousLevel + 1) {;
 properStructure++;
@@ -541,7 +542,7 @@ private checkAltText(): number {;
 const images = document.querySelectorAll('img');
     let imagesWithAlt = 0;
 ;
-images.forEach((img) => {;
+images.forEach((__img) => {;
 if (img.hasAttribute('alt')) {;
 imagesWithAlt++;
       }

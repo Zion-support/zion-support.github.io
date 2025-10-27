@@ -1,5 +1,5 @@
-'use client';
 import React from 'react';
+'use client';
 
 function Pager3dc7vid7() {
   return (

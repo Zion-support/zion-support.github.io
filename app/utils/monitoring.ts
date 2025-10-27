@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import {__useState, __useEffect} from 'react';
 
 export const usemonitoring = () => {
   const [state, setState] = useState(null);
@@ -42,7 +43,7 @@ this.setupErrorHandling();
 if ('PerformanceObserver' in window) {;
 try {
 // Largest Contentful Paint;
-const lcpObserver = new PerformanceObserver((list) => {;
+const lcpObserver = new PerformanceObserver((__list) => {;
 const entries = list.getEntries();
 ;
 const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number }
@@ -51,9 +52,9 @@ this.reportMetric('lcp', this.metrics.lcp);
         });
 lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] ,});
         // First Input Delay;
-const fidObserver = new PerformanceObserver((list) => {;
+const fidObserver = new PerformanceObserver((__list) => {;
 const entries = list.getEntries();
-          entries.forEach((entry: PerformanceEntry) => {,this.metrics.fid = (entry as any).processingStart - entry.startTime,;
+          entries.forEach((entry: __PerformanceEntry) => {,this.metrics.fid = (entry as any).processingStart - entry.startTime,;
 this.reportMetric('fid', this.metrics.fid);
           })
         });
@@ -62,7 +63,7 @@ fidObserver.observe({ entryTypes: ['first-input'] ,});
 let clsValue = 0;
 const clsObserver = new PerformanceObserver(list => {);
 const entries = list.getEntries();
-entries.forEach((entry: PerformanceEntry) => {,if (!(entry as any).hadRecentInput) {;
+entries.forEach((entry: __PerformanceEntry) => {,if (!(entry as any).hadRecentInput) {;
 clsValue += entry.value,;
 this.metrics.cls = clsValue,;
 this.reportMetric('cls', clsValue);
@@ -86,7 +87,7 @@ fcpObserver.observe({ entryTypes: ['paint'] ,});
   private monitorLongTasks(): void {;
 if ('PerformanceObserver' in window && performanceConfig.monitoring.enableLongTaskDetection) {;
 try {;
-const longTaskObserver = new PerformanceObserver((list) => {;
+const longTaskObserver = new PerformanceObserver((__list) => {;
 for (const entry of list.getEntries()) {
             }
         });
@@ -99,9 +100,9 @@ longTaskObserver.observe({ entryTypes: ['longtask'] ,});
   private monitorResourceTiming(): void {;
 if ('PerformanceObserver' in window) {;
 try {;
-const resourceObserver = new PerformanceObserver((list) => {;
+const resourceObserver = new PerformanceObserver((__list) => {;
 const entries = list.getEntries();
-          entries.forEach((entry: PerformanceResourceTiming) => {,if (entry.duration > 1000) {,
+          entries.forEach((entry: __PerformanceResourceTiming) => {,if (entry.duration > 1000) {,
               }
           })
         });
@@ -112,7 +113,7 @@ resourceObserver.observe({ entryTypes: ['resource'] ,});
   }
   private setupErrorHandling(): void {
     // Global error handler;
-window.addEventListener('error', (event) => {;
+window.addEventListener('error', (__event) => {;
 this.logError({;
 message: event.message,stack: event.error?.stack;
 timestam,);
@@ -120,7 +121,7 @@ p: Date.now(),userAgent: navigator.userAgent;
 ur,l: window.location.href,})
     })
     // Unhandled promise rejection handler;
-window.addEventListener('unhandledrejection', (event) => {;
+window.addEventListener('unhandledrejection', (__event) => {;
 this.logError({;
 message: `Unhandled Promise Rejectio,n: ${event.reason,}`);
 timestamp: Date.now(),userAgent: navigator.userAgent;

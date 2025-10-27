@@ -1,5 +1,5 @@
-'use client';
 import React from 'react';
+'use client';
 
 export default function AiCustomerSupportBackup() {
   AiCustomerSupportBackup.displayName = 'AI Customer Support Backup';

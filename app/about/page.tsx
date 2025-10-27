@@ -1,9 +1,12 @@
+import { Metadata } from 'next';
+import { CheckCircle, Users, Target, Award, ArrowRight, Star, Check } from 'lucide-react';
+import React from 'react';
 
 import Link from 'next/link';
-import { Metadata} from 'next';
+import {__Metadata} from 'next';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, Users, Target, Award, ArrowRight, } from 'lucide-react';
+import {__CheckCircle, __Users, __Target, __Award, __ArrowRight, __} from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'About Us - Zion Tech Group',
@@ -52,8 +55,8 @@ const AboutPage = () => {
               About Zion Tech Group
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We are a leading technology company specializing in AI solutions, 
-              cloud infrastructure, and innovative software development services.
+              We are a leading technology company specializing in AI __solutions, 
+              cloud __infrastructure, and innovative software development services.
             </p>
           </div>
         </div>
@@ -65,8 +68,8 @@ const AboutPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Mission</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              To empower businesses with cutting-edge technology solutions that drive growth, 
-              efficiency, and innovation in the digital age.
+              To empower businesses with cutting-edge technology solutions that drive __growth, 
+              __efficiency, and innovation in the digital age.
             </p>
           </div>
         </div>
@@ -82,7 +85,7 @@ const AboutPage = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
+            {values.map((__value, __index) => (
               <div key={index} className="text-center">
                 <div className="flex justify-center mb-4">
                   {value.icon}
