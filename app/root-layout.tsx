@@ -1,8 +1,6 @@
-import React from 'react';
+import React from 'react'
 
 interface RootLayoutProps {
-  className?: string;
-  children?: React.ReactNode;
 }
 
 const RootLayout: React.FC<RootLayoutProps> = ({ 
