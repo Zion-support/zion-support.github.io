@@ -1,10 +1,11 @@
-import React from 'react';
 
-interface NotFoundPageProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default NotFoundPage;
+const NotFoundPage = () => {
+  return (
+    <div className="p-4">
+      <h2>NotFoundPage</h2>
+      <p>Component implementation coming soon...</p>
+    </div>
+  );
+};
 
 export default NotFoundPage;

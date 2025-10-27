@@ -1,12 +1,13 @@
-import React from 'react';
 
 interface FuturisticServiceCardProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-export default FuturisticServiceCard;
-
-export default FuturisticServiceCard;
-
-export default FuturisticServiceCard;
+export default function FuturisticServiceCard({ className, children }: FuturisticServiceCardProps) {
+  return (
+    <div className={`futuristicservicecard-component ${className || ''}`}>
+      {children}
+    </div>
+  );
+}

@@ -1,4 +1,3 @@
-import React from 'react';
 interface PerformanceMetrics {
   loadTime: number | null;
   firstContentfulPaint: number | null;
@@ -43,7 +42,7 @@ export const performanceUtils = {
   }
 }
 // Google Analytics integration for performance tracking
-export const trackPerformanceToGA: React.FC = (metrics: PerformanceMetrics) => {
+export const trackPerformanceToGA = (metrics: PerformanceMetrics): void => {
   if (typeof window !== 'undefined' && 'gtag' in window) {
     (window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('event', 'performance_metrics', {
       event_category: 'Performance',

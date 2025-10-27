@@ -1,17 +1,17 @@
-import React from 'react';
-
 interface ErrorBoundaryProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-export default function ErrorBoundary({ 
+const ErrorBoundary = ({ 
   className = '', 
   children 
-}: ErrorBoundaryProps) {
+}: ErrorBoundaryProps) => {
   return (
     <div className={'errorboundary ' + className}>
       {children || <p>ErrorBoundary component</p>}
     </div>
   );
-}
+};
+
+export default ErrorBoundary;
