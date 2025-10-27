@@ -1,10 +1,12 @@
-const EnhancedSkipLink = () => {
+
+interface Props {
+  // Add props here
+}
+
+export default function EnhancedSkipLink(_props: Props) {
   return (
     <div>
-      <h2>Enhanced Skip Link</h2>
-      <p>Enhanced Skip Link component</p>
+      {/* EnhancedSkipLink component content */}
     </div>
   );
-};
-
-export default EnhancedSkipLink;
+}

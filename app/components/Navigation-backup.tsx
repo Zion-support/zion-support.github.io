@@ -1,8 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { X, Menu as MenuIcon } from 'lucide-react';
-
+import { X } from 'lucide-react';
 interface NavigationBackupProps {
   logo?: string;
   logoText?: string;
