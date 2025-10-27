@@ -1,7 +1,6 @@
-import React from 'react';
 import { useState, useEffect } from 'react';
 
-export const useaccessibilityUtils: React.FC = () => {
+export const useAccessibilityUtils = () => {
   const [state, setState] = useState(null);
   
   useEffect(() => {

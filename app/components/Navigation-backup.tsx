@@ -1,9 +1,21 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
+import { Menu as MenuIcon, X } from 'lucide-react';
 
->;
+interface MenuItem {
+  label: string;
+  href: string;
+  submenu?: Array<{
+    label: string;
+    href: string;
   }>;
+}
+
+interface NavigationBackupProps {
+  logo?: string;
+  logoText?: string;
+  menuItems?: MenuItem[];
   ctaText?: string;
   ctaHref?: string;
 }
@@ -89,7 +101,7 @@ const NavigationBackup: React.FC<NavigationBackupProps> = ({
               onClick={toggleMenu}
               className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
             >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <_Menu className="h-6 w-6" />}
+              {isMenuOpen ? <X className="h-6 w-6" /> : <MenuIcon className="h-6 w-6" />}
             </button>
           </div>
         </div>
