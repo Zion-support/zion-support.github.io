@@ -1,43 +1,43 @@
-'use client'
-import React from 'react'
+'use client';
+
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, Brain, BarChart, Target, TrendingUp, ArrowRight } from 'lucide-react'
+import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 
-export default function Page() {
+const PagePage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    }
+  ]
+
   const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-  ]
-
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Automation',
-      description: 'Intelligent process automation that learns and adapts',
-      benefits: ['Automated workflows', 'Smart decision making', 'Continuous optimization']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Real-time insights and predictive analytics',
-      benefits: ['Performance metrics', 'Trend analysis', 'Predictive modeling']
-    },
-    {
-      icon: Target,
-      title: 'Strategic Planning',
-      description: 'AI-driven strategic planning and execution',
-      benefits: ['Goal setting', 'Resource allocation', 'Progress tracking']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Data-driven growth strategies and optimization',
-      benefits: ['Market analysis', 'Growth opportunities', 'ROI optimization']
-    }
   ]
 
   return (
@@ -137,4 +137,6 @@ export default function Page() {
       <Footer />
     </>
   );
-}
+};
+
+export default PagePage;

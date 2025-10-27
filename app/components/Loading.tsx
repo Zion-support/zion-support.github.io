@@ -1,17 +1,18 @@
-import React from 'react';
 
 interface LoadingProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-export default function Loading({ 
+const Loading = ({ 
   className = '', 
   children 
-}: LoadingProps) {
+}: LoadingProps) => {
   return (
     <div className={'loading ' + className}>
       {children || <p>Loading component</p>}
     </div>
   );
-}
+};
+
+export default Loading;

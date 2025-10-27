@@ -1,17 +1,18 @@
-import React from 'react';
 
 interface UserExperienceEnhancerProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-export default function UserExperienceEnhancer({ 
+const UserExperienceEnhancer = ({ 
   className = '', 
   children 
-}: UserExperienceEnhancerProps) {
+}: UserExperienceEnhancerProps) => {
   return (
     <div className={'userexperienceenhancer ' + className}>
       {children || <p>UserExperienceEnhancer component</p>}
     </div>
   );
-}
+};
+
+export default UserExperienceEnhancer;

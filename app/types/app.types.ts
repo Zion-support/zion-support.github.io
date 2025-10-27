@@ -16,7 +16,7 @@ export interface Service {
     basic: number;
     pro: number;
     enterprise: number;
-  };
+  }
   benefits: string[];
   useCases: string[];
   marketPrice: string;
@@ -24,7 +24,7 @@ export interface Service {
     phone: string;
     email: string;
     website: string;
-  };
+  }
   link: string;
 }
 

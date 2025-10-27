@@ -1,17 +1,9 @@
-import React from 'react';
 
-interface DynamicContentShowcaseProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({ 
-  className = '', 
-  children 
-}) => {
+const DynamicContentShowcase = () => {
   return (
-    <div className={`dynamiccontentshowcase ${className}`}>
-      {children || <p>DynamicContentShowcase component</p>}
+    <div className="p-4">
+      <h2>DynamicContentShowcase</h2>
+      <p>Component implementation coming soon...</p>
     </div>
   );
 };

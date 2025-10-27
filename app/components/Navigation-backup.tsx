@@ -1,6 +1,4 @@
 'use client'
-import React from 'react';
-
 
 interface NavigationBackupProps {
   logo?: string;
@@ -16,5 +14,36 @@ interface NavigationBackupProps {
   ctaText?: string;
   ctaHref?: string;
 }
+
+const NavigationBackup: React.FC<NavigationBackupProps> = ({ 
+  logo, 
+  logoText = 'Zion Tech Group', 
+  menuItems = [], 
+  ctaText = 'Get Started', 
+  ctaHref = '#' 
+}) => {
+  return (
+    <nav className="bg-white shadow-lg" role="navigation">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="flex justify-between items-center py-4">
+          <div className="flex items-center">
+            {logo && <img src={logo} alt={logoText} className="h-8 w-8 mr-2" />}
+            <span className="text-xl font-bold text-gray-800">{logoText}</span>
+          </div>
+          <div className="hidden md:flex space-x-8">
+            {menuItems.map((item, index) => (
+              <a key={index} href={item.href} className="text-gray-600 hover:text-gray-900">
+                {item.label}
+              </a>
+            ))}
+          </div>
+          <a href={ctaHref} className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+            {ctaText}
+          </a>
+        </div>
+      </div>
+    </nav>
+  );
+};
 
 export default NavigationBackup;

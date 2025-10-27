@@ -1,17 +1,18 @@
-import React from 'react';
 
 interface FuturisticButtonProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-export default function FuturisticButton({ 
+const FuturisticButton = ({ 
   className = '', 
   children 
-}: FuturisticButtonProps) {
+}: FuturisticButtonProps) => {
   return (
     <div className={'futuristicbutton ' + className}>
       {children || <p>FuturisticButton component</p>}
     </div>
   );
-}
+};
+
+export default FuturisticButton;

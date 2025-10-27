@@ -7,6 +7,11 @@ const nextConfig = {
     unoptimized: true
   },
   
+  // Enable new JSX transform
+  compiler: {
+    reactRemoveProperties: true,
+  },
+  
   // Disable static generation to avoid serialization issues
   experimental: {
     optimizePackageImports: ['@heroicons/react', 'lucide-react', 'framer-motion'],

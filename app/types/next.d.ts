@@ -1,4 +1,5 @@
 // Type definitions for Next.js compatibility
+import { ReactNode } from 'react';
 
 export interface Metadata {
   title?: string;
@@ -11,12 +12,12 @@ export interface Metadata {
     email?: boolean;
     address?: boolean;
     telephone?: boolean;
-  };
+  }
   metadataBase?: URL;
   alternates?: {
     canonical?: string;
     languages?: Record<string, string>;
-  };
+  }
   openGraph?: {
     title?: string;
     description?: string;
@@ -32,7 +33,7 @@ export interface Metadata {
     type?: string;
     authors?: Array<{ name: string; url?: string }> | string[];
     publishedTime?: string;
-  };
+  }
   twitter?: {
     card?: 'summary' | 'summary_large_image' | 'app' | 'player';
     site?: string;
@@ -40,7 +41,7 @@ export interface Metadata {
     title?: string;
     description?: string;
     images?: string[];
-  };
+  }
   robots?: {
     index?: boolean;
     follow?: boolean;
@@ -50,14 +51,14 @@ export interface Metadata {
       'max-video-preview'?: number;
       'max-image-preview'?: 'none' | 'standard' | 'large';
       'max-snippet'?: number;
-    };
-  };
+    }
+  }
   verification?: {
     google?: string;
     yandex?: string;
     yahoo?: string;
     other?: Record<string, string>;
-  };
+  }
 }
 
 export interface MetadataRoute {
@@ -76,44 +77,44 @@ export interface MetadataRouteSitemap extends MetadataRoute {
 
 // Custom Next.js types
 export interface NextPageProps {
-  params: { [key: string]: string };
-  searchParams: { [key: string]: string | string[] | undefined };
+  params: { [key: string]: string }
+  searchParams: { [key: string]: string | string[] | undefined }
 }
 
 // API route types
 export interface ApiRouteHandler {
-  (req: Request): Promise<Response>;
+  (_req: Request): Promise<Response>;
 }
 
 // Server components types
 export interface ServerComponentProps {
-  params: { [key: string]: string };
-  searchParams: { [key: string]: string | string[] | undefined };
+  params: { [key: string]: string }
+  searchParams: { [key: string]: string | string[] | undefined }
 }
 
 // Client components types
 export interface ClientComponentProps {
-  children?: React.ReactNode;
+  children?: ReactNode;
   className?: string;
 }
 
 // Route handlers
 export interface RouteHandler {
-  GET?: (req: Request) => Promise<Response>;
-  POST?: (req: Request) => Promise<Response>;
-  PUT?: (req: Request) => Promise<Response>;
-  DELETE?: (req: Request) => Promise<Response>;
-  PATCH?: (req: Request) => Promise<Response>;
+  GET?: (_req: Request) => Promise<Response>;
+  POST?: (_req: Request) => Promise<Response>;
+  PUT?: (_req: Request) => Promise<Response>;
+  DELETE?: (_req: Request) => Promise<Response>;
+  PATCH?: (_req: Request) => Promise<Response>;
 }
 
 // Dynamic route types
 export interface DynamicRoute {
-  params: { [key: string]: string };
+  params: { [key: string]: string }
 }
 
 // Static generation types
 export interface StaticProps {
-  props: { [key: string]: any };
+  props: { [key: string]: unknown }
   revalidate?: number;
   notFound?: boolean;
 }
@@ -141,8 +142,8 @@ declare module 'next' {
       id: string;
       email: string;
       name?: string;
-    };
+    }
   }
 }
 
-export {};
+export {}

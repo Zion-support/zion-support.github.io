@@ -1,4 +1,5 @@
 
+
 interface AnimatedCounterProps {
   className?: string;
   children?: React.ReactNode;

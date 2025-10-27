@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 interface NewsletterSignupProps {
-  onSubmit?: (email: string) => void;
+  onSubmit?: (_email: string) => void;
   placeholder?: string;
   buttonText?: string;
 }
@@ -19,8 +19,7 @@ export default function NewsletterSignup({
       onSubmit(email);
       setEmail('');
     }
-  };
-
+  }
   return (
     <div className="newsletter-signup">
       <form onSubmit={handleSubmit}>

@@ -1,17 +1,11 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 
-
-import { useState, useEffect } from 'react';
-
 interface ModernLoaderProps {
-  className?: string;
+  isLoading: boolean;
   children?: React.ReactNode;
 }
 
-export default ModernLoader;
-
-export default ModernLoader;
 export default function ModernLoader({ isLoading, children }: ModernLoaderProps) {
   const [showLoader, setShowLoader] = useState(isLoading);
 

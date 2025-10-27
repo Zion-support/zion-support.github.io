@@ -1,7 +1,7 @@
+// Global type definitions
+
 declare global {
-  interface Window {
-    gtag: (...args: any[]) => void;
-  }
+  // Add global type definitions here
 }
 
-export {};
+export {}

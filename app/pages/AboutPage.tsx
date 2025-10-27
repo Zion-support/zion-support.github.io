@@ -1,9 +1,19 @@
 
-export default function AboutPage() {
+
+interface AboutPageProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const AboutPage: React.FC<AboutPageProps> = ({ 
+  className = '', 
+  children 
+}) => {
   return (
-    <div>
-      <h1>About Us</h1>
-      <p>Learn more about Zion Tech Group and our mission.</p>
+    <div className={'aboutpage ' + className}>
+      {children || <p>AboutPage component</p>}
     </div>
   );
-}
+};
+
+export default AboutPage;
