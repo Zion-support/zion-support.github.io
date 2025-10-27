@@ -1,19 +1,19 @@
-import { useState, useCallback } from 'react';
+import React, { useState, useCallback } from 'react';
 
-export interface FormState<T = any> {
+export interface FormState<T = Record<string, unknown>> {
   data: T;
   errors: Record<string, string>;
   isSubmitting: boolean;
   submitStatus: 'idle' | 'success' | 'error';
 }
 
-export interface UseFormOptions<T = any> {
+export interface UseFormOptions<T = Record<string, unknown>> {
   initialData?: T;
-  validate?: (data: T) => Record<string, string>;
-  onSubmit?: (data: T) => Promise<void> | void;
+  validate?: (_data: T) => Record<string, string>;
+  onSubmit?: (_data: T) => Promise<void> | void;
 }
 
-export const useForm = <T = any>(options: UseFormOptions<T> = {}) => {
+export const useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> = {}) => {
   const { initialData = {} as T, validate, onSubmit } = options;
   
   const [formState, setFormState] = useState<FormState<T>>({
@@ -23,7 +23,7 @@ export const useForm = <T = any>(options: UseFormOptions<T> = {}) => {
     submitStatus: 'idle'
   });
 
-  const handleChange = useCallback((field: keyof T, value: any) => {
+  const handleChange = useCallback((field: keyof T, value: unknown) => {
     setFormState(prev => ({
       ...prev,
       data: { ...prev.data, [field]: value },
@@ -60,7 +60,7 @@ export const useForm = <T = any>(options: UseFormOptions<T> = {}) => {
         isSubmitting: false,
         submitStatus: 'success'
       }));
-    } catch (error) {
+    } catch (_error) {
       setFormState(prev => ({
         ...prev,
         isSubmitting: false,

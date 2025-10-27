@@ -31,7 +31,7 @@ export interface AccessibilityAudit {
 export interface AccessibilityContextType {
   config: AccessibilityConfig;
   features: AccessibilityFeatures;
-  updateConfig: (config: Partial<AccessibilityConfig>) => void;
+  updateConfig: (_config: Partial<AccessibilityConfig>) => void;
   runAudit: () => Promise<AccessibilityAudit>;
   isAccessible: boolean;
   score: number;

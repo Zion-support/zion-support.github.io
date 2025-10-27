@@ -26,7 +26,7 @@ export const useIntersectionObserver = (options: UseIntersectionObserverOptions 
         observer.current.disconnect();
       }
     };
-  }, [node, options.threshold, options.root, options.rootMargin]);
+  }, [node, options]);
 
   return {
     entry,

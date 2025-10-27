@@ -22,7 +22,7 @@ export const usePerformanceMonitor = () => {
     // Measure memory usage
     let memoryUsage = 0;
     if ('memory' in performance) {
-      const memory = (performance as any).memory;
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
       memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
     }
 

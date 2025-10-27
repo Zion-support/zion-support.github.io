@@ -64,10 +64,14 @@ export interface AnalyticsEvent {
   value?: number;
 }
 
+export interface ErrorInfo {
+  componentStack: string;
+}
+
 export interface ErrorBoundaryState {
   hasError: boolean;
   error?: Error;
-  errorInfo?: any;
+  errorInfo?: ErrorInfo;
 }
 
 export interface LoadingState {
