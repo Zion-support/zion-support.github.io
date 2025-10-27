@@ -1,17 +1,9 @@
-import React from 'react';
 
-interface NeonButtonProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const NeonButton: React.FC<NeonButtonProps> = ({ 
-  className = '', 
-  children 
-}) => {
+const NeonButton = () => {
   return (
-    <div className={'neonbutton ' + className}>
-      {children || <p>NeonButton component</p>}
+    <div className="p-4">
+      <h2>NeonButton</h2>
+      <p>Component implementation coming soon...</p>
     </div>
   );
 };

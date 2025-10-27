@@ -1,10 +1,11 @@
-import React from 'react';
 
-interface _SEOOptimizerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default SEOOptimizer;
+const SEOOptimizer = () => {
+  return (
+    <div className="p-4">
+      <h2>SEOOptimizer</h2>
+      <p>Component implementation coming soon...</p>
+    </div>
+  );
+};
 
 export default SEOOptimizer;

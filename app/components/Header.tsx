@@ -1,10 +1,11 @@
-import React from 'react';
 
-interface _HeaderProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default Header;
+const Header = () => {
+  return (
+    <div className="p-4">
+      <h2>Header</h2>
+      <p>Component implementation coming soon...</p>
+    </div>
+  );
+};
 
 export default Header;

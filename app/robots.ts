@@ -8,5 +8,8 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: '/private/'},;
-    sitemap: 'https://ziontechgroup.com/sitemap.xml'}};
+      disallow: '/private/'
+    },
+    sitemap: 'https://ziontechgroup.com/sitemap.xml'
+  };
+}

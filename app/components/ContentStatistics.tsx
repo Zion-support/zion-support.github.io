@@ -1,10 +1,11 @@
-import React from 'react';
 
-interface _ContentStatisticsProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default ContentStatistics;
+const ContentStatistics = () => {
+  return (
+    <div className="p-4">
+      <h2>ContentStatistics</h2>
+      <p>Component implementation coming soon...</p>
+    </div>
+  );
+};
 
 export default ContentStatistics;

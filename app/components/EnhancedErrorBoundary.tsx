@@ -1,17 +1,9 @@
-import React from 'react';
 
-interface EnhancedErrorBoundaryProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ 
-  className = '', 
-  children 
-}) => {
+const EnhancedErrorBoundary = () => {
   return (
-    <div className={'enhancederrorboundary ' + className}>
-      {children || <p>EnhancedErrorBoundary component</p>}
+    <div className="p-4">
+      <h2>EnhancedErrorBoundary</h2>
+      <p>Component implementation coming soon...</p>
     </div>
   );
 };

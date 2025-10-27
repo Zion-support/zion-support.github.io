@@ -1,18 +1,9 @@
 
-import React from 'react';
-
-interface LoadingProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const Loading: React.FC<LoadingProps> = ({ 
-  className = '', 
-  children 
-}) => {
+const Loading = () => {
   return (
-    <div className={'loading ' + className}>
-      {children || <p>Loading component</p>}
+    <div className="p-4">
+      <h2>Loading</h2>
+      <p>Component implementation coming soon...</p>
     </div>
   );
 };

@@ -1,17 +1,9 @@
-import React from 'react';
 
-interface AccessibilityEnhancerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ 
-  className = '', 
-  children 
-}) => {
+const AccessibilityEnhancer = () => {
   return (
-    <div className={'accessibilityenhancer ' + className}>
-      {children || <p>AccessibilityEnhancer component</p>}
+    <div className="p-4">
+      <h2>AccessibilityEnhancer</h2>
+      <p>Component implementation coming soon...</p>
     </div>
   );
 };

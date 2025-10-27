@@ -1,12 +1,11 @@
-import React from 'react';
 
-interface EnhancedServicesShowcaseProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default EnhancedServicesShowcase;
-
-export default EnhancedServicesShowcase;
+const EnhancedServicesShowcase = () => {
+  return (
+    <div className="p-4">
+      <h2>EnhancedServicesShowcase</h2>
+      <p>Component implementation coming soon...</p>
+    </div>
+  );
+};
 
 export default EnhancedServicesShowcase;

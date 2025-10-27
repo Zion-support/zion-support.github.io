@@ -1,10 +1,11 @@
-import React from 'react';
 
-interface _ContentNewsletterSignupProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default ContentNewsletterSignup;
+const ContentNewsletterSignup = () => {
+  return (
+    <div className="p-4">
+      <h2>ContentNewsletterSignup</h2>
+      <p>Component implementation coming soon...</p>
+    </div>
+  );
+};
 
 export default ContentNewsletterSignup;

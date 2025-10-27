@@ -1,18 +1,9 @@
 
-import React from 'react';
-
-interface AdvancedSEOOptimizerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({ 
-  className = '', 
-  children 
-}) => {
+const AdvancedSEOOptimizer = () => {
   return (
-    <div className={'advancedseooptimizer ' + className}>
-      {children || <p>AdvancedSEOOptimizer component</p>}
+    <div className="p-4">
+      <h2>AdvancedSEOOptimizer</h2>
+      <p>Component implementation coming soon...</p>
     </div>
   );
 };

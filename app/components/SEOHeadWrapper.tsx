@@ -1,17 +1,9 @@
-import React from 'react';
 
-interface SEOHeadWrapperProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const SEOHeadWrapper: React.FC<SEOHeadWrapperProps> = ({ 
-  className = '', 
-  children 
-}) => {
+const SEOHeadWrapper = () => {
   return (
-    <div className={'seoheadwrapper ' + className}>
-      {children || <p>SEOHeadWrapper component</p>}
+    <div className="p-4">
+      <h2>SEOHeadWrapper</h2>
+      <p>Component implementation coming soon...</p>
     </div>
   );
 };
