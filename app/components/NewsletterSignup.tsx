@@ -1,7 +1,9 @@
 import React from 'react';
 
-interface NewsletterSignupProps {
-
+const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ className, children }) => {
+  return (
+    <div className={`${className || ''}`}>
+      {children || <p>NewsletterSignup component</p>}
     </div>
   );
 };

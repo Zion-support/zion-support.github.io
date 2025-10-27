@@ -11,6 +11,6 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
       {children || <p>UserExperienceEnhancer component</p>}
     </div>
   );
-};
+}
 
 export default UserExperienceEnhancer;

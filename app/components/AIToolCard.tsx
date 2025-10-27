@@ -1,11 +1,5 @@
 import React, { memo } from 'react';
 
-interface AIToolCardProps {
-  title: string
-  description: string
-  link: string
-}
-
 const AIToolCard: React.FC<AIToolCardProps> = memo(({ title, description, link }) => {
   return (
     <article className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
@@ -24,6 +18,6 @@ const AIToolCard: React.FC<AIToolCardProps> = memo(({ title, description, link }
   );
 });
 
-AIToolCard.displayName = 'AIToolCard';
+AIToolCard.displayName = '';
 
 export default AIToolCard;

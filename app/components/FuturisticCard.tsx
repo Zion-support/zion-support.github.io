@@ -11,6 +11,6 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({
       {children || <p>FuturisticCard component</p>}
     </div>
   );
-};
+}
 
 export default FuturisticCard;

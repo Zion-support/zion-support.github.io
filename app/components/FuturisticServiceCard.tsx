@@ -1,10 +1,5 @@
 import React from 'react';
 
-interface FuturisticServiceCardProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
 const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({ 
   className = '', 
   children 
@@ -14,6 +9,6 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
       {children || <p>FuturisticServiceCard component</p>}
     </div>
   );
-};
+}
 
 export default FuturisticServiceCard;

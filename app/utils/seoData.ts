@@ -1,3 +1,4 @@
+import React from 'react';
 export interface StructuredData {
   '@context': string;
   '@type': string;
@@ -49,7 +50,7 @@ export const defaultSEOData: SEOData = {
   }
 };
 
-export const generateSEOData = (customData: Partial<SEOData> = {}): SEOData => {
+export const generateSEOData: React.FC = (customData: Partial<SEOData> = {}): SEOData => {
   return {
     ...defaultSEOData,
     ...customData,

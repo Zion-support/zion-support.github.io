@@ -131,6 +131,6 @@ const CompliancePageBackup: React.FC = () => {
       <Footer />
     </>
   );
-};
+}
 
 export default CompliancePageBackup;

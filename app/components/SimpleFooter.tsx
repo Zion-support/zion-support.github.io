@@ -7,6 +7,6 @@ const SimpleFooter: React.FC = () => {
         <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
       </div>
     </footer>
-  )};
+  )}
 
 export default SimpleFooter;

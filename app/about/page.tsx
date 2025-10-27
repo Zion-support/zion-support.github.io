@@ -1,3 +1,4 @@
+import React from 'react';
 
 import Link from 'next/link';
 import { Metadata} from 'next';
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
   }
 };
 
-const AboutPage = () => {
+const AboutPage: React.FC = () => {
   const values = [
     {
       icon: <CheckCircle className="w-8 h-8 text-blue-600" />,
@@ -115,6 +116,6 @@ const AboutPage = () => {
       <Footer />
     </div>
   );
-};
+}
 
 export default AboutPage;

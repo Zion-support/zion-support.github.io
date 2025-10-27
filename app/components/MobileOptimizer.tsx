@@ -11,6 +11,6 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
       {children || <p>MobileOptimizer component</p>}
     </div>
   );
-};
+}
 
 export default MobileOptimizer;

@@ -1,3 +1,4 @@
+import React from 'react';
 
 }
 
@@ -10,6 +11,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       {children || <p>AdvancedSEOOptimizer component</p>}
     </div>
   );
-};
+}
 
 export default AdvancedSEOOptimizer;

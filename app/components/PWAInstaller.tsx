@@ -11,6 +11,6 @@ const PWAInstaller: React.FC<PWAInstallerProps> = ({
       {children || <p>PWAInstaller component</p>}
     </div>
   );
-};
+}
 
 export default PWAInstaller;

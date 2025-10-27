@@ -11,6 +11,6 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
       {children || <p>FuturisticButton component</p>}
     </div>
   );
-};
+}
 
 export default FuturisticButton;

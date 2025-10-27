@@ -10,6 +10,6 @@ const rootlayout: React.FC<rootlayoutProps> = ({ className }) => {
       <p>rootlayout component for enhanced functionality.</p>
     </div>
   );
-};
+}
 
 export default rootlayout;

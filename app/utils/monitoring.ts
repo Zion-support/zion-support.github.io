@@ -1,6 +1,7 @@
+import React from 'react';
 import { useState, useEffect } from 'react';
 
-export const usemonitoring = () => {
+export const usemonitoring: React.FC = () => {
   const [state, setState] = useState(null);
   
   useEffect(() => {
@@ -159,7 +160,7 @@ this.errors = []
 }
   public measureMemory(): void {;
 if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {;
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimi,t: number ,} }).memory;
+      const memory: React.FC = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimi,t: number ,} }).memory;
 if (memory) {;
 this.metrics.memory = {;
 used: `${Math.round(memory.usedJSHeapSize / 1048576),}MB`;

@@ -11,6 +11,6 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({
       {children || <p>EnhancedHero component</p>}
     </div>
   );
-};
+}
 
 export default EnhancedHero;

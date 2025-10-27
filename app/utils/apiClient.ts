@@ -1,28 +1,9 @@
+import React from 'react';
 interface ApiResponse<T> {
   data: T;
   status: number;
   message?: string;
 }
-<<<<<<< HEAD
-}
-;
-class ApiClient {;
-private baseURL: string;
-  private defaultHeader,</T>;
-s: Record<string,string>;
-;
-constructor(baseURL: string = '/api') {;
-this.baseURL = baseURL;,this.defaultHeaders = {,
-      'Content-Type': 'application/json',
-    };
-=======
-
-class ApiClient {
-  private baseUrl: string;
-
-  constructor(baseUrl: string = '/api') {
-    this.baseUrl = baseUrl;
->>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
   }
 
   private async request<T>(

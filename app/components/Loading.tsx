@@ -1,3 +1,4 @@
+import React from 'react';
 
 }
 
@@ -10,6 +11,6 @@ const Loading: React.FC<LoadingProps> = ({
       {children || <p>Loading component</p>}
     </div>
   );
-};
+}
 
 export default Loading;
