@@ -1,5 +1,4 @@
 'use client';
-import React from 'react';
 
 function Paget7bdb7g2f() {
   return (

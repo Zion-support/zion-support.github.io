@@ -15,7 +15,7 @@ interface PerformanceMetrics {
 }
 
 export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) => {
-  const { component = 'unknown', trackErrors = true, trackPerformance = true, trackAnalytics = false } = options;
+  const { component: _component = 'unknown' } = options;
 
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,

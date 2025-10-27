@@ -1,5 +1,4 @@
 'use client';
-import React from 'react';
 
 function Page6pdeced3b() {
   return (

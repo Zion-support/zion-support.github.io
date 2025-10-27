@@ -1,5 +1,4 @@
 'use client';
-import React from 'react';
 
 function Page88tg5ov1a() {
   return (
