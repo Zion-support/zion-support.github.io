@@ -1,4 +1,3 @@
-import React from 'react';
 const SimpleNavigation = () => {
   return (
     <div className="p-4">

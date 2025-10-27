@@ -1,4 +1,3 @@
-import React from 'react';
 const SimpleFooter = () => {
   return (
     <div className="p-4">
