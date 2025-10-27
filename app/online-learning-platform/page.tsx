@@ -2,7 +2,35 @@
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
+import { CheckCircle, Brain, BarChart, Target, TrendingUp, ArrowRight } from 'lucide-react'
+
+const PagePage = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Analytics',
+      description: 'Advanced machine learning algorithms analyze your data',
+      benefits: ['Real-time insights', 'Predictive analytics', 'Automated reporting']
+    },
+    {
+      icon: BarChart,
+      title: 'Sales Optimization',
+      description: 'Maximize revenue with intelligent sales strategies',
+      benefits: ['Revenue forecasting', 'Customer segmentation', 'Price optimization']
+    },
+    {
+      icon: Target,
+      title: 'Inventory Management',
+      description: 'Smart inventory tracking and optimization',
+      benefits: ['Demand prediction', 'Stock optimization', 'Waste reduction']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Performance Tracking',
+      description: 'Monitor and improve business performance',
+      benefits: ['KPI monitoring', 'Trend analysis', 'Growth insights']
+    }
+  ];
 
   const benefits = [
     'Increase efficiency by up to 50%',
@@ -10,7 +38,7 @@ import { CheckCircle, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-  ]
+  ];
 
   return (
     <>
@@ -106,8 +134,8 @@ import { CheckCircle, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
           </div>
         </section>
       </div>
-      <Footer />;
-    </>;
+      <Footer />
+    </>
   );
 };
 
