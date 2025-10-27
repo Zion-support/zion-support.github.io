@@ -1,4 +1,5 @@
 
+import React from 'react';
 const SystemMonitor = () => {
   return (
     <div className="p-4">

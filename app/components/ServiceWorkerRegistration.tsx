@@ -1,4 +1,5 @@
 
+import React from 'react';
 const ServiceWorkerRegistration = () => {
   return (
     <div className="p-4">

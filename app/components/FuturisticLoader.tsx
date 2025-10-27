@@ -1,4 +1,5 @@
 
+import React from 'react';
 const FuturisticLoader = () => {
   return (
     <div className="p-4">

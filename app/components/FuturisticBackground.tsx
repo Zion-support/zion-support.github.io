@@ -1,4 +1,5 @@
 
+import React from 'react';
 const FuturisticBackground = () => {
   return (
     <div className="p-4">
