@@ -1,7 +1,5 @@
 import React from 'react';
 
-import React from 'react';
-
 interface HomePageProps {
   className?: string;
   children?: React.ReactNode;

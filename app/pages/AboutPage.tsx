@@ -1,7 +1,5 @@
 import React from 'react';
 
-import React from 'react';
-
 interface AboutPageProps {
   className?: string;
   children?: React.ReactNode;
