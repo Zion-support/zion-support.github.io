@@ -1,17 +1,12 @@
-import React from 'react';
-export type SEOHeadWrapperProps = {
-  // Add your props here
-};
-
 interface SEOHeadWrapperProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const SEOHeadWrapper: React.FC<SEOHeadWrapperProps> = ({ 
+const SEOHeadWrapper = ({ 
   className = '', 
   children 
-}) => {
+}: SEOHeadWrapperProps) => {
   return (
     <div className={'seoheadwrapper ' + className}>
       {children || <p>SEOHeadWrapper component</p>}

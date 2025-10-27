@@ -1,17 +1,15 @@
 
-const AdvancedPerformanceMonitor = () => {
+interface AdvancedPerformanceMonitorProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const AdvancedPerformanceMonitor = ({ className, children }: AdvancedPerformanceMonitorProps) => {
   return (
-    <div className="performance-monitor">
-      <h2>Advanced Performance Monitor</h2>
-      <p>This component monitors performance metrics.</p>
+    <div className={`advancedperformancemonitor-component ${className || ''}`}>
+      {children || <p>Advanced Performance Monitor component</p>}
     </div>
   );
 };
 
-export default function AdvancedPerformanceMonitor({ className, children }: AdvancedPerformanceMonitorProps) {
-  return (
-    <div className={`advancedperformancemonitor-component ${className || ''}`}>
-      {children}
-    </div>
-  );
-}
+export default AdvancedPerformanceMonitor;

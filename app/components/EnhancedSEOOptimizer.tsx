@@ -1,20 +1,17 @@
-import React from 'react';
-export type EnhancedSEOOptimizerProps = {
-  // Add your props here
-};
-
 interface EnhancedSEOOptimizerProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-export default function EnhancedSEOOptimizer({ 
+const EnhancedSEOOptimizer = ({ 
   className = '', 
   children 
-}: EnhancedSEOOptimizerProps) {
+}: EnhancedSEOOptimizerProps) => {
   return (
     <div className={'enhancedseooptimizer ' + className}>
       {children || <p>EnhancedSEOOptimizer component</p>}
     </div>
   );
-}
+};
+
+export default EnhancedSEOOptimizer;
