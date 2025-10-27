@@ -15,7 +15,7 @@ interface PerformanceMetrics {
 }
 
 export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) => {
-  const { component = 'unknown', trackErrors = true, trackPerformance = true, trackAnalytics = false } = options;
+  const { component = 'unknown', trackPerformance = true, trackAnalytics = false } = options;
   
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
@@ -50,7 +50,7 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     // Measure memory usage
     const measureMemoryUsage = () => {
       if ('memory' in performance) {
-        const memory = (performance as any).memory;
+        const memory = (performance as { memory: { usedJSHeapSize: number } }).memory;
         const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
         setMetrics(prev => ({ ...prev, memoryUsage }));
       }
@@ -92,7 +92,7 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     return () => {
       // Cleanup if needed
     };
-  }, [component, trackPerformance, trackAnalytics, metrics.loadTime]);
+  }, [component, trackPerformance, trackAnalytics, metrics]);
 
   const optimizeComponent = useCallback(() => {
     // Implement optimization logic here

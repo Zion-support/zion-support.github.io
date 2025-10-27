@@ -5,3 +5,9 @@ interface AccessibilityComponentsProps {
   children?: React.ReactNode;
 }
 
+const AccessibilityComponents: React.FC<AccessibilityComponentsProps> = ({ className = '', children }) => {
+  return <div className={`accessibility-components ${className}`}>{children}</div>;
+};
+
+export default AccessibilityComponents;
+

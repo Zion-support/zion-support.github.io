@@ -5,3 +5,8 @@ interface SEOOptimizerProps {
   children?: React.ReactNode;
 }
 
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ className = '', children }) => {
+  return <div className={`seo-optimizer ${className}`}>{children}</div>;
+};
+
+export default SEOOptimizer;

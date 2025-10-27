@@ -1,3 +1,3 @@
 'use client';
-import React from 'react';
+// Error handling utilities
 

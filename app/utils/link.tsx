@@ -1,2 +1,2 @@
-import React from 'react';
+// Link utility functions
 

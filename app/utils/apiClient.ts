@@ -3,26 +3,22 @@ interface ApiResponse<T> {
   status: number;
   message?: string;
 }
-<<<<<<< HEAD
+
+// RequestInit is a built-in TypeScript type for fetch options
+// @ts-ignore - RequestInit is a global type
+declare global {
+  interface RequestInit {
+    method?: string;
+    headers?: Record<string, string>;
+    body?: string;
+  }
 }
-;
-class ApiClient {;
-private baseURL: string;
-  private defaultHeader,</T>;
-s: Record<string,string>;
-;
-constructor(baseURL: string = '/api') {;
-this.baseURL = baseURL;,this.defaultHeaders = {,
-      'Content-Type': 'application/json',
-    };
-=======
 
 class ApiClient {
   private baseUrl: string;
 
   constructor(baseUrl: string = '/api') {
     this.baseUrl = baseUrl;
->>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
   }
 
   private async request<T>(
@@ -52,7 +48,7 @@ class ApiClient {
     return this.request<T>(endpoint, { method: 'GET', headers });
   }
 
-  async post<T>(endpoint: string, data?: any, headers?: Record<string, string>): Promise<ApiResponse<T>> {
+  async post<T>(endpoint: string, data?: unknown, headers?: Record<string, string>): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, {
       method: 'POST',
       body: JSON.stringify(data),
@@ -60,7 +56,7 @@ class ApiClient {
     });
   }
 
-  async put<T>(endpoint: string, data?: any, headers?: Record<string, string>): Promise<ApiResponse<T>> {
+  async put<T>(endpoint: string, data?: unknown, headers?: Record<string, string>): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, {
       method: 'PUT',
       body: JSON.stringify(data),

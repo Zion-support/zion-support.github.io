@@ -1,2 +1,2 @@
-import React from 'react';
+// Image utility functions
 

@@ -67,7 +67,7 @@ export interface AnalyticsEvent {
 export interface ErrorBoundaryState {
   hasError: boolean;
   error?: Error;
-  errorInfo?: any;
+  errorInfo?: unknown;
 }
 
 export interface LoadingState {
