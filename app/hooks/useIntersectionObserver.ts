@@ -1,46 +1,21 @@
-<<<<<<< HEAD
-import { useEffect, useState, useRef } from 'react';
-;
-interface UseIntersectionObserverOptions {
-;
-threshold?: number;
-  root?: Element | null;
-  rootMargin?: string;
-}
-;
-export const useIntersectionObserver = (options: UseIntersectionObserverOptions = {,}) => {;
-const [entry, setEntry] = useState<IntersectionObserverEntry | null>(null);
-  const [node, setNode] = useState<Element | null>(null);
-  const observer = useRef<IntersectionObserver | null>(null);
-;
-useEffect(() => {;
-if (!node) return;
-;
-observer.current = new IntersectionObserver(
-      ([entry]) => setEntry(entry),;
-options
-    );
-;
-observer.current.observe(node);
-;
-return () => {;
-if (observer.current) {;
-observer.current.disconnect();
-      }
-    };
-  }, [node, options.threshold, options.root, options.rootMargin]);
-;
-return [setNode, entry] as const;
-=======
-import { useState, useEffect } from 'react';
+'use client';
+import { useState, useEffect, useRef } from 'react';
 
-export const useuseIntersectionObserver = () => {
-  const [state, setState] = useState(null);
-  
+export const useIntersectionObserver = (options = {}) => {
+  const [isIntersecting, setIsIntersecting] = useState(false);
+  const ref = useRef<HTMLElement>(null);
+
   useEffect(() => {
-    // Hook implementation
-  }, []);
-  
-  return { state, setState };
->>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
+    const observer = new IntersectionObserver(([entry]) => {
+      setIsIntersecting(entry.isIntersecting);
+    }, options);
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, [options]);
+
+  return [ref, isIntersecting];
 };

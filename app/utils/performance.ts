@@ -1,8 +1,6 @@
 'use client';
-
+import React from 'react';
 // Performance monitoring utilities
-import React from "react";
-
 export class PerformanceMonitor {
   private static instance: PerformanceMonitor;
   private metrics: Map<string, number> = new Map();

@@ -1,6 +1,4 @@
-'use client';
 import React from 'react';
-
 function Page2f2leot39() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">

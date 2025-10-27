@@ -1,7 +1,5 @@
 'use client';
-
 import React from 'react';
-
 interface NavigationBackupProps {
   logo?: string;
   logoText?: string;

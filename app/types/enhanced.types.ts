@@ -1,7 +1,4 @@
-'use client';
-
 import React from 'react';
-  
 // Enhanced type definitions for better type safety
 export interface PerformanceMetrics {
   loadTime: number

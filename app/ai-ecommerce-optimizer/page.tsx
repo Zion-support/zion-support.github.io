@@ -1,6 +1,4 @@
-'use client';
 import React from 'react';
-
 function Pagerda6of9em() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
