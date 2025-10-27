@@ -1,11 +1,11 @@
 
-const Navigation-backup = () => {
+const NavigationBackup = () => {
   return (
     <div className="p-4">
-      <h2>Navigation-backup</h2>
+      <h2>Navigation Backup</h2>
       <p>Component implementation coming soon...</p>
     </div>
   );
 };
 
-export default Navigation-backup;
+export default NavigationBackup;

@@ -1,4 +1,5 @@
 
+import React from 'react';
 interface StructuredDataProps {
   className?: string;
   children?: React.ReactNode;

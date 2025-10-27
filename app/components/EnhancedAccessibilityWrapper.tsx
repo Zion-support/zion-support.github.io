@@ -1,3 +1,4 @@
+import React from 'react';
 interface EnhancedAccessibilityWrapperProps {
   className?: string;
   children?: React.ReactNode;

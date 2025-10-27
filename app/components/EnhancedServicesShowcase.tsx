@@ -1,4 +1,5 @@
 
+import React from 'react';
 interface EnhancedServicesShowcaseProps {
   className?: string;
   children?: React.ReactNode;

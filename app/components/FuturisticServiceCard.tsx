@@ -1,4 +1,5 @@
 
+import React from 'react';
 interface FuturisticServiceCardProps {
   className?: string;
   children?: React.ReactNode;
