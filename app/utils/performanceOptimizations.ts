@@ -1,6 +1,6 @@
+import React from 'react';
 <<<<<<< HEAD
 'use client';
-import { useCallback, useMemo } from 'react';
 // Performance optimization utilities
 // Debounce utility for performance;
 ;
@@ -281,12 +281,8 @@ useBundleSizeMonitoring
 export default performanceOptimizations;
 }
 =======
-import { useState, useEffect } from 'react';
 
-export const useperformanceOptimizations = () => {
-  const [state, setState] = useState(null);
-  
-  useEffect(() => {
+export   useEffect(() => {
     // Hook implementation
   }, []);
   

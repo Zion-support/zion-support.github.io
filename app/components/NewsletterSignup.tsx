@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import React, { useState } from 'react';
 
 interface NewsletterSignupProps {
   onSubmit?: (email: string) => void;

@@ -1,3 +1,4 @@
+import React from 'react';
 <<<<<<< HEAD
 'use client';
 /**
@@ -701,8 +702,7 @@ interface MetricData {
 };
 }</T>;
 const simpleMetrics = new Map<string, MetricData>();
-export const recordMetric = (nam;
-e: string,valu;
+export e: string,valu;
 e: number,uni);
 t: MetricUnit = MetricUnit.Milliseconds) => {/* TOD,O: Fix JSX expression */,}
 } else {/* TODO: Fix JSX expression */,}
@@ -733,50 +733,25 @@ if (value <= threshold.good) return 'good';
 if (value <= threshold.poor) return 'needs-improvement';
 return 'poor'
 }
-export const getMetrics = (): Record<string, MetricData> => {/* TODO: Fix JSX expression */,}</string>;
-result: Record<string,MetricData> = {}
+export result: Record<string,MetricData> = {}
 simpleMetrics.forEach((value, key) => {/* TODO: Fix JSX expression */,}
 result[key] = { ...value }
 });
 return result
 }
-export const clearMetrics = () => {/* TODO: Fix JSX expression */,}
-}</string>;
-export const measureFunction = <T>(nam;
-e: string,f);
+export export e: string,f);
 n: () => T): T => {/* TOD,O: Fix JSX expression */,}
 }</T>;
-export const measureAsyncFunction = async <T>(nam;
-e: string,f)</T>;
+export e: string,f)</T>;
 n: () => Promise<T>): Promise<T> => {/* TOD,O: Fix JSX expression */,}
 }
-export const getPerformanceScore = (): number => {/* TODO: Fix JSX expression */,}
-}
-});
-const sum = scores.reduce((a: number,b: number) => a + b,0);
+export const sum = scores.reduce((a: number,b: number) => a + b,0);
 return Math.round(sum / scores.length);
 }
-export const getRecommendations = (): string[] => {/* TODO: Fix JSX expression */,}
-}
-if (metrics.LCP && metrics.LCP.rating !== 'good') {/* TODO: Fix JSX expression */,}
-}
-if (metrics.FID && metrics.FID.rating !== 'good') {/* TODO: Fix JSX expression */,}
-}
-if (metrics.CLS && metrics.CLS.rating !== 'good') {/* TODO: Fix JSX expression */,}
-}
-if (metrics.TTFB && metrics.TTFB.rating !== 'good') {/* TODO: Fix JSX expression */,}
-}
-return recommendations
-}
-`</T>;
-}
+export }
 =======
-import { useState, useEffect } from 'react';
 
-export const useperformanceMonitoring = () => {
-  const [state, setState] = useState(null);
-  
-  useEffect(() => {
+export   useEffect(() => {
     // Hook implementation
   }, []);
   

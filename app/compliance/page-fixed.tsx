@@ -3,7 +3,6 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Shield, CheckCircle, Clock, Database, Lock, ArrowRight, } from 'lucide-react';
 
 const CompliancePageFixed: React.FC = () => {
 

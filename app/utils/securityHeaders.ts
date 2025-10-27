@@ -1,3 +1,4 @@
+import React from 'react';
 <<<<<<< HEAD
 /**
 * Security Headers Configuration

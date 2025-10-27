@@ -1,9 +1,6 @@
-import { useState, useEffect } from 'react';
+import React from 'react';
 
-export const useaccessibilityUtils = () => {
-  const [state, setState] = useState(null);
-  
-  useEffect(() => {
+export   useEffect(() => {
     // Hook implementation
   }, []);
   
@@ -11,12 +8,10 @@ export const useaccessibilityUtils = () => {
 };
 <<<<<<< HEAD
 ;
-export const createAriaLabel = (text: string,context?: string): string => {;
-  return context ? `${text}, ${context}` : text;
+export   return context ? `${text}, ${context}` : text;
 };
 ;
-export const announceToScreenReader = (message: string): void => {;
-;
+export ;
 const announcement = document.createElement('div');
   announcement.setAttribute('aria-live','polite');
   announcement.setAttribute('aria-atomic', 'true');
@@ -30,8 +25,7 @@ document.body.removeChild(announcement);
   }, 1000);
 };
 ;
-export const trapFocus = (element: HTMLElement): (() => void) => {;
-const focusableElements = element.querySelectorAll()
+export const focusableElements = element.querySelectorAll()
     'button,[href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
   );
 ;
@@ -68,8 +62,7 @@ element.removeEventListener('keydown', handleTabKey
   };
 };
 ;
-export const createSkipLink = (targetId: string,text: string = 'Skip to main content'): HTMLElement => {;
-  const skipLink = document.createElement('a');
+export   const skipLink = document.createElement('a');
   skipLink.href = `#${targetId,}`;
   skipLink.textContent = text;
   skipLink.className = 'sr-only focus: not-sr-only focus:absolute focus:top-4 focu,s: left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50';
@@ -77,9 +70,7 @@ export const createSkipLink = (targetId: string,text: string = 'Skip to main con
 return skipLink;
 ,};
 ;
-export const validateColorContrast = (foreground: string,background: string): boolean => {
-  // Simple contrast ratio calculation;
-const getLuminance = (colo,r: string): number => {;
+export const getLuminance = (colo,r: string): number => {;
 ;
 const rgb = color.match(/\d+/g)?.map(Number) || [0,0, 0];
     const [r, g, b] = rgb.map(c => {;
@@ -109,13 +100,11 @@ border-color: currentColor !important;,}
   document.head.appendChild(style);
 };
 ;
-export const enableHighContrastMode = (): void => {;
-  document.body.classList.add('high-contrast');
+export   document.body.classList.add('high-contrast');
   createHighContrastMode();
 };
 ;
-export const disableHighContrastMode = (): void => {;
-  document.body.classList.remove('high-contrast');
+export   document.body.classList.remove('high-contrast');
   const style = document.getElementById('high-contrast-mode');
   if (style) {;
 style.remove();
@@ -206,8 +195,7 @@ position: static;
   document.head.appendChild(style);
 };
 ;
-export const setupAccessibility = (): void => {;
-  createFocusIndicator();
+export   createFocusIndicator();
   createReducedMotionMode();
   createScreenReaderOnly();
   setupKeyboardNavigation();
@@ -223,8 +211,7 @@ export const createARIALiveRegion = (): HTMLElement => {;
   return liveRegion;
 };
 ;
-export const updateLiveRegion = (message: string): void => {;
-;
+export ;
 let liveRegion = document.getElementById('aria-live-region');
   if (!liveRegion) {,liveRegion = createARIALiveRegion();,
   }
@@ -243,8 +230,7 @@ landmark.setAttribute('tabindex', '-1');
   });
 };
 ;
-export const setupLandmarkNavigation = (): void => {;
-  createLandmarkNavigation();
+export   createLandmarkNavigation();
 // Update landmarks when content changes;
 const observer = new MutationObserver(() => {;
 ;
@@ -570,7 +556,6 @@ announcement.remove();
   }
 }
 ;
-export const accessibilityEnhancer = new AccessibilityEnhancer();
-}
+export }
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

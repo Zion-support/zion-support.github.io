@@ -1,122 +1,231 @@
-const fs = require('fs');
-const path = require('path');
+#!/usr/bin/env node
 
-// Function to fix specific syntax patterns
-function fixSpecificPatterns(content) {
-  let fixed = content;
-  
-  // Fix malformed function declarations
-  fixed = fixed.replace(/const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{\s*;\s*/g, 'const $1: React.FC = () => {\n  ');
-  
-  // Fix malformed array declarations
-  fixed = fixed.replace(/const\s+(\w+)\s*=\s*\[\s*;\s*/g, 'const $1 = [\n    ');
-  
-  // Fix malformed object declarations
-  fixed = fixed.replace(/const\s+(\w+)\s*=\s*\[\s*\{/g, 'const $1 = [\n    {');
-  
-  // Fix missing semicolons after variable declarations
-  fixed = fixed.replace(/(const|let|var)\s+(\w+)\s*=\s*[^;]+(\n\s*const|\n\s*let|\n\s*var|\n\s*return|\n\s*})/g, (match, decl, varName, next) => {
-    if (!match.includes(';')) {
-      return match.replace(next, ';\n' + next);
-    }
-    return match;
-  });
-  
-  // Fix malformed JSX return statements
-  fixed = fixed.replace(/return\s*\(\s*\)\s*;/g, 'return (');
-  fixed = fixed.replace(/return\s*\(\s*\)\s*<>/g, 'return (<>');
-  
-  // Fix missing closing brackets
-  fixed = fixed.replace(/(\w+)\s*\]\s*(\w+)/g, '$1\n  ];\n  const $2');
-  
-  // Fix malformed JSX attributes
-  fixed = fixed.replace(/title=&quot;([^&]+)&quot;/g, 'title="$1"');
-  fixed = fixed.replace(/description=&quot;([^&]+)&quot;/g, 'description="$1"');
-  fixed = fixed.replace(/className=&quot;([^&]+)&quot;/g, 'className="$1"');
-  fixed = fixed.replace(/href=&quot;([^&]+)&quot;/g, 'href="$1"');
-  fixed = fixed.replace(/id=&quot;([^&]+)&quot;/g, 'id="$1"');
-  
-  // Fix malformed function parameters
-  fixed = fixed.replace(/\(\{\s*children\s*\}\s*:\s*\{\s*children:\s*React\.ReactNode\s*\}\s*\)/g, '({ children }: { children: React.ReactNode })');
-  
-  // Fix missing semicolons after function calls
-  fixed = fixed.replace(/(\w+)\s*\(\s*\)\s*(\n)/g, '$1();$2');
-  
-  // Fix malformed export statements
-  fixed = fixed.replace(/export default (\w+)\s*$/g, 'export default $1;');
-  
-  return fixed;
-}
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
+import { fileURLToPath } from 'url';
 
-// Function to process a single file
-function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixSpecificPatterns(content);
-    
-    if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      return true;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Common icon imports that are often used
+const commonIcons = [
+  'ArrowRight', 'ArrowLeft', 'CheckCircle', 'Users', 'Target', 'Award', 'Shield', 
+  'Database', 'Lock', 'Clock', 'Home', 'Brain', 'Github', 'Linkedin', 'Twitter', 
+  'Mail', 'Phone', 'MapPin', 'X', 'Menu', 'Search', 'Star', 'Zap', 'Globe'
+];
+
+// Fix specific files with known issues
+function fixSpecificFiles() {
+  const fixes = [
+    {
+      file: '/workspace/app/about/page.tsx',
+      fixes: [
+        { from: "import { Metadata } from 'next';", to: "import type { Metadata } from 'next';" },
+        { from: "import { CheckCircle, Users, Target, Award, ArrowRight } from 'lucide-react';", to: "import { CheckCircle, Users, Target, Award, ArrowRight } from 'lucide-react';" }
+      ]
+    },
+    {
+      file: '/workspace/app/components/Footer.tsx',
+      fixes: [
+        { from: "import { Brain, Github, Linkedin, Twitter, Mail, Phone, MapPin } from 'lucide-react';", to: "import { Brain, Github, Linkedin, Twitter, Mail, Phone, MapPin } from 'lucide-react';" }
+      ]
+    },
+    {
+      file: '/workspace/app/components/Navigation.tsx',
+      fixes: [
+        { from: "import { Home } from 'lucide-react';", to: "import { Home } from 'lucide-react';" }
+      ]
+    },
+    {
+      file: '/workspace/app/compliance/page-backup.tsx',
+      fixes: [
+        { from: "import { Shield, Database, Lock, CheckCircle, Clock, ArrowRight } from 'lucide-react';", to: "import { Shield, Database, Lock, CheckCircle, Clock, ArrowRight } from 'lucide-react';" }
+      ]
+    },
+    {
+      file: '/workspace/app/compliance/page-fixed.tsx',
+      fixes: [
+        { from: "import { Shield, Database, Lock, CheckCircle, Clock, ArrowRight } from 'lucide-react';", to: "import { Shield, Database, Lock, CheckCircle, Clock, ArrowRight } from 'lucide-react';" }
+      ]
     }
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+  ];
+
+  for (const fix of fixes) {
+    try {
+      if (fs.existsSync(fix.file)) {
+        let content = fs.readFileSync(fix.file, 'utf8');
+        let modified = false;
+
+        for (const replacement of fix.fixes) {
+          if (content.includes(replacement.from)) {
+            content = content.replace(replacement.from, replacement.to);
+            modified = true;
+          }
+        }
+
+        if (modified) {
+          fs.writeFileSync(fix.file, content);
+          console.log(`Fixed: ${fix.file}`);
+        }
+      }
+    } catch (error) {
+      console.error(`Error fixing ${fix.file}:`, error.message);
+    }
   }
 }
 
-// Function to process specific problematic files
-function processProblematicFiles() {
-  const problematicFiles = [
-    '/workspace/src/ai-3d-generation/page.tsx',
-    '/workspace/src/ai-analytics-dashboard/page.tsx',
-    '/workspace/src/ai-automation/page.tsx',
-    '/workspace/src/ai-content-generation/page.tsx',
-    '/workspace/src/ai-crm/page.tsx',
-    '/workspace/src/ai-customer-support/page.tsx',
-    '/workspace/src/ai-customer-support-bot/page.tsx',
-    '/workspace/src/ai-cybersecurity/page.tsx',
-    '/workspace/src/ai-data-analytics/page.tsx',
-    '/workspace/src/ai-data-visualization/page.tsx',
-    '/workspace/src/ai-document-processing/page.tsx',
-    '/workspace/src/ai-ecommerce-solutions/page.tsx',
-    '/workspace/src/ai-email-marketing/page.tsx',
-    '/workspace/src/ai-fashion-design/page.tsx',
-    '/workspace/src/ai-financial-analyzer/page.tsx',
-    '/workspace/src/ai-fintech/page.tsx',
-    '/workspace/src/ai-fitness-coach/page.tsx',
-    '/workspace/src/ai-healthcare/page.tsx',
-    '/workspace/src/ai-lead-generation/page.tsx',
-    '/workspace/src/ai-marketing/page.tsx',
-    '/workspace/src/ai-mobile-app-development/page.tsx',
-    '/workspace/src/ai-music-composition/page.tsx',
-    '/workspace/src/ai-project-manager/page.tsx',
-    '/workspace/src/ai-sales-automation/page.tsx',
-    '/workspace/src/ai-scheduler/page.tsx',
-    '/workspace/src/ai-seo-optimizer/page.tsx',
-    '/workspace/src/ai-services/page.tsx',
-    '/workspace/src/ai-social-media-manager/page.tsx',
-    '/workspace/src/ai-video-generation/page.tsx',
-    '/workspace/src/ai-voice-cloning/page.tsx',
-    '/workspace/src/ai-workflow-automation/page.tsx',
-    '/workspace/src/ai-writing-assistant/page.tsx'
-  ];
+// Fix component files that have missing React imports
+function fixComponentFiles() {
+  const componentDir = path.join(__dirname, 'app', 'components');
   
-  let processedCount = 0;
+  if (!fs.existsSync(componentDir)) return;
+
+  const files = fs.readdirSync(componentDir);
   
-  for (const filePath of problematicFiles) {
-    if (fs.existsSync(filePath)) {
-      if (processFile(filePath)) {
-        processedCount++;
+  for (const file of files) {
+    const filePath = path.join(componentDir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isFile() && file.endsWith('.tsx')) {
+      try {
+        let content = fs.readFileSync(filePath, 'utf8');
+        let modified = false;
+
+        // Add React import if JSX is used but React is not imported
+        if (content.includes('<') && !content.includes("import React") && !content.includes("import * as React")) {
+          content = "import React from 'react';\n" + content;
+          modified = true;
+        }
+
+        // Add missing React hooks imports
+        if (content.includes('useState') && !content.includes("import { useState }")) {
+          if (content.includes("import React from 'react';")) {
+            content = content.replace("import React from 'react';", "import React, { useState } from 'react';");
+          } else {
+            content = "import React, { useState } from 'react';\n" + content;
+          }
+          modified = true;
+        }
+
+        if (content.includes('useEffect') && !content.includes("import { useEffect }")) {
+          if (content.includes("import React from 'react';")) {
+            content = content.replace("import React from 'react';", "import React, { useEffect } from 'react';");
+          } else if (content.includes("import React, { useState } from 'react';")) {
+            content = content.replace("import React, { useState } from 'react';", "import React, { useState, useEffect } from 'react';");
+          } else {
+            content = "import React, { useEffect } from 'react';\n" + content;
+          }
+          modified = true;
+        }
+
+        // Add missing createContext import
+        if (content.includes('createContext') && !content.includes("import { createContext }")) {
+          if (content.includes("import React from 'react';")) {
+            content = content.replace("import React from 'react';", "import React, { createContext } from 'react';");
+          } else {
+            content = "import React, { createContext } from 'react';\n" + content;
+          }
+          modified = true;
+        }
+
+        // Remove unused interface definitions
+        content = content.replace(/interface\s+\w+Props\s*{[^}]*}\s*\n(?![^]*\w+Props[^]*[^:])/g, '');
+
+        if (modified) {
+          fs.writeFileSync(filePath, content);
+          console.log(`Fixed component: ${filePath}`);
+        }
+      } catch (error) {
+        console.error(`Error fixing component ${filePath}:`, error.message);
       }
     }
   }
-  
-  return processedCount;
+}
+
+// Fix parsing errors in specific files
+function fixParsingErrors() {
+  const filesWithParsingErrors = [
+    '/workspace/app/components/utils/accessibilityUtils.ts',
+    '/workspace/app/hooks/useEnhancedPerformance.ts',
+    '/workspace/app/hooks/useErrorMonitoring.ts',
+    '/workspace/app/hooks/useForm.ts',
+    '/workspace/app/hooks/useIntersectionObserver.ts'
+  ];
+
+  for (const filePath of filesWithParsingErrors) {
+    try {
+      if (fs.existsSync(filePath)) {
+        let content = fs.readFileSync(filePath, 'utf8');
+        
+        // Fix common parsing issues
+        content = content.replace(/export\s*{\s*}\s*;?\s*$/gm, '');
+        content = content.replace(/;\s*$/gm, '');
+        content = content.replace(/,\s*$/gm, '');
+        
+        // Ensure proper export structure
+        if (content.trim() && !content.includes('export')) {
+          content = content.trim() + '\n';
+        }
+
+        fs.writeFileSync(filePath, content);
+        console.log(`Fixed parsing errors in: ${filePath}`);
+      }
+    } catch (error) {
+      console.error(`Error fixing parsing errors in ${filePath}:`, error.message);
+    }
+  }
+}
+
+// Remove unused imports from specific files
+function removeUnusedImports() {
+  const filesToFix = [
+    '/workspace/app/5g-data-analytics/page.tsx',
+    '/workspace/app/5g-edge-computing/page.tsx',
+    '/workspace/app/5g-implementation/page.tsx',
+    '/workspace/app/5g-iot-solutions/page.tsx',
+    '/workspace/app/accessibility-page/page.tsx'
+  ];
+
+  for (const filePath of filesToFix) {
+    try {
+      if (fs.existsSync(filePath)) {
+        let content = fs.readFileSync(filePath, 'utf8');
+        
+        // Remove unused Link imports
+        if (content.includes("import { Link } from 'next/link';") && !content.includes('<Link')) {
+          content = content.replace(/import\s*{\s*Link\s*}\s*from\s*'next\/link';\s*\n?/g, '');
+        }
+
+        // Remove unused ArrowRight imports
+        if (content.includes("import { ArrowRight } from 'lucide-react';") && !content.includes('<ArrowRight')) {
+          content = content.replace(/import\s*{\s*ArrowRight\s*}\s*from\s*'lucide-react';\s*\n?/g, '');
+        }
+
+        fs.writeFileSync(filePath, content);
+        console.log(`Removed unused imports from: ${filePath}`);
+      }
+    } catch (error) {
+      console.error(`Error removing unused imports from ${filePath}:`, error.message);
+    }
+  }
 }
 
 // Main execution
-console.log('Starting targeted syntax error fixes...');
-const processedCount = processProblematicFiles();
-console.log(`Processed ${processedCount} problematic files with syntax fixes.`);
+console.log('Starting comprehensive error fixes...');
+
+fixSpecificFiles();
+fixComponentFiles();
+fixParsingErrors();
+removeUnusedImports();
+
+console.log('Comprehensive error fixes completed!');
+
+// Run ESLint with --fix one more time
+try {
+  console.log('Running final ESLint --fix...');
+  execSync('npx eslint app --ext .ts,.tsx --fix', { stdio: 'inherit' });
+  console.log('Final ESLint fixes completed');
+} catch (error) {
+  console.log('ESLint completed with some remaining issues');
+}

@@ -1,3 +1,4 @@
+import React from 'react';
 <<<<<<< HEAD
 'use client';
 /**
@@ -636,12 +637,8 @@ export const performanceMetrics = PerformanceMetrics.getInstance()
 `</T>;
 }
 =======
-import { useState, useEffect } from 'react';
 
-export const useperformanceMetrics = () => {
-  const [state, setState] = useState(null);
-  
-  useEffect(() => {
+export   useEffect(() => {
     // Hook implementation
   }, []);
   

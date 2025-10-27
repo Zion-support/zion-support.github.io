@@ -1,15 +1,13 @@
 <<<<<<< HEAD
 'use client';
 import React from 'react';
-import { useRef } from 'react';
 /**
  * Performance Enhancement Utilities
  * Advanced performance optimization tools for the application
  */
 // Debounce function for performance optimization;
 ;
-export const debounce = <T extends (...args: unknown[]) => unknown>(,func: T;
-wait: number</T>
+export wait: number</T>
 ): ((...args: Parameters<T>) => void) => {;
   let timeout: NodeJS.Timeout;
   return (...arg,</T>;
@@ -19,8 +17,7 @@ timeout = setTimeout(() => func(...args),wait)
   }
 }
 // Throttle function for performance optimization</T>;
-export const throttle = <T extends (...args: unknown[]) => unknown>(,func: T;
-limit: number</T>
+export limit: number</T>
 ): ((...args: Parameters<T>) => void) => {;
   let inThrottle: boolean;
   return (...arg,</T>;
@@ -91,8 +88,7 @@ this.observers = []
 }
 }
 // React hook for performance monitoring;
-export const usePerformanceMonitor = (componentName: string) => {</string>;
-const renderStartTime = useRef<number>(0);
+export const renderStartTime = useRef<number>(0);
 const monitor = PerformanceMonitor.getInstance();
   useEffect(() => {;
 renderStartTime.current = performance.now();
@@ -214,7 +210,6 @@ $3
 for (const entry of list.getEntries()) {;
 const fidEntry = entry as FirstInputEntry;
 ;
-const fid = fidEntry.processingStart - entry.startTime;
 if (process.env['NODE_ENV'] === 'development') {
           }
       }
@@ -258,8 +253,7 @@ firstContentfulPain,t: paint.find((entry) => entry.name === 'first-contentful-pa
     memory: getMemoryUsage(),}
 }
 // Initialize performance enhancements;
-export const initializePerformanceEnhancements = () => {;
-return;
+export return;
 if (typeof window === 'undefined') return // Initialize lazy loading;
 lazyLoadImages();
   // Preload critical resources;
@@ -277,12 +271,8 @@ console.log('Performance metrics: ',metrics
 };
 }
 =======
-import { useState, useEffect } from 'react';
 
-export const useperformanceEnhancer = () => {
-  const [state, setState] = useState(null);
-  
-  useEffect(() => {
+export   useEffect(() => {
     // Hook implementation
   }, []);
   

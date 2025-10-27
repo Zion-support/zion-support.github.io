@@ -1,9 +1,6 @@
-import { useState, useEffect } from 'react';
+import React from 'react';
 
-export const usemonitoring = () => {
-  const [state, setState] = useState(null);
-  
-  useEffect(() => {
+export   useEffect(() => {
     // Hook implementation
   }, []);
   
@@ -133,9 +130,6 @@ return,
 }
     const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals];
 if (thresholds) {;
-const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor'
-}
-    // Send to analytics (if configured);
 if (typeof gtag === 'function') {;
 gtag('event', name, {);
 value: Math.round(name === 'cls' ? value * 1000 : value),event_category: 'Web Vitals',})

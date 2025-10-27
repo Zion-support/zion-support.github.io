@@ -1,3 +1,4 @@
+import React from 'react';
 <<<<<<< HEAD
 'use client';
 /**
@@ -6,8 +7,7 @@
 */
 // Generate meta tags;
 ;
-export const generateMetaTags = (data: {, title: string, description: string;
-keywords?: string;
+export keywords?: string;
 canonical?: string;
 ogTitle?: string;
 ogDescription?: string;
@@ -38,8 +38,7 @@ return tags
 }
 // Generate structured data;
 ;
-export const generateStructuredData = (data: {,name: string, description: string,url: string,logo?: string;
-  address?: {;
+export   address?: {;
 streetAddress: string,addressLocality: string;
 addressRegion: string,postalCode: string;
 addressCountr,y: string
@@ -59,8 +58,7 @@ telephone: data.contactPoint.telephone,contactType: data.contactPoint.contactTyp
 sameAs: data.sameAs || [],}
 }
 // Generate sitemap;
-export const generateSitemap = (pages: Array<{,url: string;
-lastModified: string,changeFrequency: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
+export lastModified: string,changeFrequency: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
 priorit,y: number
 ,}>) => {;
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -76,15 +74,10 @@ export const generateRobotsTxt = (sitemapUrl: string,allowAll: boolean = true) =
 return `User-agent: *;
 ${allowAll ? 'Allow: /' : 'Disallo,w: /',}
 ;
-export const generateRobotsTxt = ($2) => {;
-$3
+export $3
 =======
-import { useState, useEffect } from 'react';
 
-export const useseoEnhancer = () => {
-  const [state, setState] = useState(null);
-  
-  useEffect(() => {
+export   useEffect(() => {
     // Hook implementation
   }, []);
   
