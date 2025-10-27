@@ -5,6 +5,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 import Footer from '../../components/Footer';
+import { ArrowRight } from 'lucide-react';
 
 export default function pagePage() {
   return (

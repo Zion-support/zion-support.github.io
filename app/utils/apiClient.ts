@@ -4,9 +4,8 @@ interface ApiResponse<T> {
   message?: string;
 }
 
-  }
-
-  private async request<T>()
+class ApiClient {
+  private async request<T>(
     endpoint: string,
     options: RequestInit = {}
   ): Promise<ApiResponse<T>> {

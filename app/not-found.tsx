@@ -2,7 +2,7 @@
 
 
 import Link from 'next/link';
-import { ArrowLeft, RefreshCw } from 'lucide-react';
+import { ArrowLeft, RefreshCw, Home } from 'lucide-react';
 
 export default function NotFound() {
   return (

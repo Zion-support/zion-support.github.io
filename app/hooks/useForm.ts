@@ -1,9 +1,9 @@
-import { useState, useCallback } from 'react';
+import React, { useState, useCallback } from 'react';
 
 export interface UseFormOptions<T> {
   initialData: T;
-  onSubmit: (data: T) => Promise<void>;
-  validate?: (data: T) => Record<string, string>;
+  onSubmit: (_data: T) => Promise<void>;
+  validate?: (_data: T) => Record<string, string>;
 }
 
 export interface FormState<T> {

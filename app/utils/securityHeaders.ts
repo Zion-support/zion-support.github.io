@@ -1,4 +1,10 @@
 
+interface SecurityConfig {
+  strictTransportSecurity: boolean;
+  contentSecurityPolicy: string;
+  xFrameOptions: string;
+  xContentTypeOptions: boolean;
+  referrerPolicy: string;
 }
 
 export function getNextSecurityHeaders(customConfig?: Partial<SecurityConfig>): Array<{ key: string; value: string }> {
@@ -6,7 +12,7 @@ export function getNextSecurityHeaders(customConfig?: Partial<SecurityConfig>): 
   return Object.entries(headers).map(([key, value]) => ({ key, value }));
 }
 
-interface SecurityConfig {
+function getSecurityHeaders(config?: Partial<SecurityConfig>) {
   strictTransportSecurity: boolean;
   contentSecurityPolicy?: string;
 }
