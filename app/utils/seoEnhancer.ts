@@ -1,11 +1,7 @@
-import { useState, useEffect } from 'react';
-
-export const useSeoEnhancer = () => {
-  const [state, setState] = useState(null);
-  
-  useEffect(() => {
-    // Hook implementation
-  }, []);
-  
-  return { state, setState };
+export const seoEnhancer = {
+  generateMetaTags: (title: string, description: string) => ({
+    title,
+    description,
+    keywords: '',
+  }),
 };
