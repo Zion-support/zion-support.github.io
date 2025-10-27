@@ -1,4 +1,6 @@
 'use client';
+import React, { useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 // Analytics utilities for tracking user interactions and performance
 import React from "react";

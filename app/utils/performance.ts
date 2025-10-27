@@ -1,4 +1,6 @@
 'use client';
+import React, { useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 // Performance monitoring utilities
 import React from "react";
