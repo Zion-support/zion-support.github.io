@@ -1,9 +1,9 @@
 'use client'
-import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, Brain, BarChart, Target, TrendingUp, ArrowRight} from 'lucide-react'
+import { CheckCircle, ArrowRight} from 'lucide-react'
 
+export default function pageoptimizedPage() {
   const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
@@ -12,7 +12,32 @@ import { CheckCircle, Brain, BarChart, Target, TrendingUp, ArrowRight} from 'luc
     'Gain competitive advantage with advanced technology'
   ]
 
-export default function pageoptimizedPage() {
+  const features = [
+    {
+      icon: CheckCircle,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive data analysis and insights',
+      benefits: ['Real-time reporting', 'Predictive analytics', 'Custom dashboards']
+    },
+    {
+      icon: CheckCircle,
+      title: 'AI Automation',
+      description: 'Intelligent process automation',
+      benefits: ['Workflow optimization', 'Task automation', 'Smart scheduling']
+    },
+    {
+      icon: CheckCircle,
+      title: 'Integration Hub',
+      description: 'Seamless third-party integrations',
+      benefits: ['API connectivity', 'Data synchronization', 'Custom connectors']
+    },
+    {
+      icon: CheckCircle,
+      title: 'Security Suite',
+      description: 'Enterprise-grade security features',
+      benefits: ['Data encryption', 'Access controls', 'Audit trails']
+    }
+  ]
   return (
     <>
             {/* SEO handled by layout.tsx */}
