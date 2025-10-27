@@ -1,5 +1,5 @@
 
-const Navigation-backup = () => {
+const NavigationBackup = () => {
   return (
     <div className="p-4">
       <h2>Navigation-backup</h2>
@@ -8,4 +8,4 @@ const Navigation-backup = () => {
   );
 };
 
-export default Navigation-backup;
+export default NavigationBackup;
