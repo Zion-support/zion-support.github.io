@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-
 export default function AiCustomerSupportFixed() {
   AiCustomerSupportFixed.displayName = 'AI Customer Support Fixed';
   

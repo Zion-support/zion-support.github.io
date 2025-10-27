@@ -1,2 +1,3 @@
+import React from 'react';
 
-export default ResponsiveContainer;
+export default function ResponsiveContainer() { return <div>ResponsiveContainer Component</div>; }

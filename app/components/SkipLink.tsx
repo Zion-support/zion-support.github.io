@@ -1,2 +1,3 @@
+import React from 'react';
 
-export default SkipLink;
+export default function SkipLink() { return <div>SkipLink Component</div>; }

@@ -1,2 +1,3 @@
+import React from 'react';
 
-export default ServiceCard;
+export default function ServiceCard() { return <div>ServiceCard Component</div>; }

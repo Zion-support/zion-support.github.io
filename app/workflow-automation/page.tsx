@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-
 function Pagef5b03yqnd() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">

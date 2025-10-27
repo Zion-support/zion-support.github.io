@@ -1,3 +1,2 @@
 import React from 'react';
-
-export default SEOEnhancer;
+export default function SEOEnhancer() { return <div>SEOEnhancer Component</div>; }

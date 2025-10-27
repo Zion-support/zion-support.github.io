@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 interface UseLazyLoadingOptions {
   threshold?: number;
@@ -53,35 +53,3 @@ export function useLazyLoading(options: UseLazyLoadingOptions = {}) {
   };
 }
 
-export function useImageLazyLoading(src: string, options: UseLazyLoadingOptions = {}) {
-  const { shouldLoad, elementRef } = useLazyLoading(options);
-  const [imageSrc, setImageSrc] = useState<string | null>(null);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [hasError, setHasError] = useState(false);
-
-  useEffect(() => {
-    if (shouldLoad && src && !imageSrc) {
-      setImageSrc(src);
-    }
-  }, [shouldLoad, src, imageSrc]);
-
-  const handleLoad = () => {
-    setIsLoaded(true);
-    setHasError(false);
-  };
-
-  const handleError = () => {
-    setHasError(true);
-    setIsLoaded(false);
-  };
-
-  return {
-    elementRef,
-    imageSrc,
-    isLoaded,
-    hasError,
-    shouldLoad,
-    onLoad: handleLoad,
-    onError: handleError,
-  };
-}

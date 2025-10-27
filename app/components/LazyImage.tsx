@@ -1,2 +1,2 @@
-
-export default LazyImage;
+import React from 'react';
+export default function LazyImage() { return <div>LazyImage Component</div>; }

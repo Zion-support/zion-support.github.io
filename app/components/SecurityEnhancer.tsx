@@ -1,2 +1,3 @@
+import React from 'react';
 
-export default SecurityEnhancer;
+export default function SecurityEnhancer() { return <div>SecurityEnhancer Component</div>; }

@@ -1,2 +1,3 @@
+import React from 'react';
 
-export default ServiceCardSkeleton;
+export default function ServiceCardSkeleton() { return <div>ServiceCardSkeleton Component</div>; }

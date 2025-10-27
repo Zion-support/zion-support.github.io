@@ -1,5 +1,6 @@
-<<<<<<< HEAD
 'use client';
+import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 /**
 * SEO Enhancement Utilities
 * Tools to improve search engine optimization
@@ -79,10 +80,8 @@ ${allowAll ? 'Allow: /' : 'Disallo,w: /',}
 export const generateRobotsTxt = ($2) => {;
 $3
 =======
-import { useState, useEffect } from 'react';
 
 export const useseoEnhancer = () => {
-  const [state, setState] = useState(null);
   
   useEffect(() => {
     // Hook implementation

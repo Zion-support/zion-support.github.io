@@ -1,5 +1,7 @@
-<<<<<<< HEAD
 'use client';
+import { X } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 /**
 * Performance Metrics Utility
 * Advanced performance tracking and monitoring for web applications
@@ -636,10 +638,8 @@ export const performanceMetrics = PerformanceMetrics.getInstance()
 `</T>;
 }
 =======
-import { useState, useEffect } from 'react';
 
 export const useperformanceMetrics = () => {
-  const [state, setState] = useState(null);
   
   useEffect(() => {
     // Hook implementation

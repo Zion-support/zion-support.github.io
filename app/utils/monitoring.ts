@@ -1,7 +1,6 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export const usemonitoring = () => {
-  const [state, setState] = useState(null);
   
   useEffect(() => {
     // Hook implementation

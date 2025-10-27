@@ -1,5 +1,6 @@
-<<<<<<< HEAD
 'use client';
+import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 import { useCallback, useMemo } from 'react';
 // Performance optimization utilities
 // Debounce utility for performance;
@@ -71,9 +72,6 @@ return { observe, disconnect }
 // Image lazy loading hook;
 ;
 export const useLazyImage = (src: string,placeholder?: string) => {;
-const [imageSrc, setImageSrc] = useState(placeholder || '');
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isError, setIsError] = useState(false);
   const { observe } = useIntersectionObserver(;
 useCallback()
       (entries) => {;
@@ -102,7 +100,6 @@ img.src = src
 export const usePerformanceMonitoring = (
       </div>
   ) => {;
-const [metrics, setMetrics] = useState<{;
 fcp?: number;
     lcp?: number;
     fid?: number;
@@ -156,7 +153,6 @@ return metrics
 export const useMemoryMonitoring = (
       </div>
   ) => {;
-const [memoryInfo, setMemoryInfo] = useState<{;
 usedJSHeapSize?: number;
     totalJSHeapSize?: number;
     jsHeapSizeLimit?: number;
@@ -213,7 +209,6 @@ preloadResource('/styles/critical.css', 'style');
 export const useBundleSizeMonitoring = (
       </div>
   ) => {;
-const [bundleSize, setBundleSize] = useState<{;
 totalSize?: number;
     jsSize?: number;
     cssSize?: number;
@@ -281,10 +276,8 @@ useBundleSizeMonitoring
 export default performanceOptimizations;
 }
 =======
-import { useState, useEffect } from 'react';
 
 export const useperformanceOptimizations = () => {
-  const [state, setState] = useState(null);
   
   useEffect(() => {
     // Hook implementation

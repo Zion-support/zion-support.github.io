@@ -1,3 +1,2 @@
 import React from 'react';
-
-export default AnimatedCounter;
+export default function AnimatedCounter() { return <div>AnimatedCounter Component</div>; }

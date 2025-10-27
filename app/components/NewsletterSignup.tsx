@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 interface NewsletterSignupProps {
-  onSubmit?: (email: string) => void;
+  onSubmit?: (_email: string) => void;
   placeholder?: string;
   buttonText?: string;
 }
@@ -11,7 +11,7 @@ export default function NewsletterSignup({
   placeholder = "Enter your email",
   buttonText = "Subscribe"
 }: NewsletterSignupProps) {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

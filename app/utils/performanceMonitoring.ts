@@ -1,5 +1,7 @@
-<<<<<<< HEAD
 'use client';
+import { X } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 /**
 * Advanced Performance Monitoring System
 * Tracks Core Web Vitals and custom performance metrics
@@ -771,10 +773,8 @@ return recommendations
 `</T>;
 }
 =======
-import { useState, useEffect } from 'react';
 
 export const useperformanceMonitoring = () => {
-  const [state, setState] = useState(null);
   
   useEffect(() => {
     // Hook implementation

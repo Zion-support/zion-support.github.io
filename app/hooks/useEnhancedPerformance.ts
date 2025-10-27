@@ -1,4 +1,4 @@
-import { useEffect, useCallback, useRef, useState } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 
 export interface UseEnhancedPerformanceOptions {
   component?: string;
@@ -15,7 +15,7 @@ interface PerformanceMetrics {
 }
 
 export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) => {
-  const { component = 'unknown', trackErrors = true, trackPerformance = true, trackAnalytics = false } = options;
+  const { component: _component = 'unknown', trackErrors: _trackErrors = true, trackPerformance: _trackPerformance = true, trackAnalytics: _trackAnalytics = false } = options;
 
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
@@ -23,8 +23,8 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     memoryUsage: 0,
     networkLatency: 0,
   });
-
   const [isOptimized, setIsOptimized] = useState(false);
+
   const renderCountRef = useRef<number>(0);
   const mountTimeRef = useRef<number>(0);
 

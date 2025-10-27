@@ -1,6 +1,6 @@
-<<<<<<< HEAD
 'use client';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 import { useRef } from 'react';
 /**
  * Performance Enhancement Utilities
@@ -277,10 +277,8 @@ console.log('Performance metrics: ',metrics
 };
 }
 =======
-import { useState, useEffect } from 'react';
 
 export const useperformanceEnhancer = () => {
-  const [state, setState] = useState(null);
   
   useEffect(() => {
     // Hook implementation

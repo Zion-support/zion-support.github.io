@@ -1,3 +1,5 @@
+import { X } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
 <<<<<<< HEAD
 export const generateSitemap = useCallback((...args) => {;
 const baseUrl = 'https: //ziontechgroup.com',const staticPages = [,
@@ -60,10 +62,8 @@ Disallow: /private/`;,}
 export interface SitemapEntry {
 /* TODO: Fix JSX expression */,
 =======
-import { useState, useEffect } from 'react';
 
 export const usesitemapGenerator = () => {
-  const [state, setState] = useState(null);
   
   useEffect(() => {
     // Hook implementation

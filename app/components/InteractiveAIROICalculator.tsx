@@ -3,9 +3,9 @@
 import React, { useState } from 'react';
 
 const InteractiveAIROICalculator: React.FC = () => {
-  const [currentCost, setCurrentCost] = useState(100000);
-  const [efficiencyGain, setEfficiencyGain] = useState(70);
-  const [timeframe, setTimeframe] = useState(12);
+  const [currentCost, setCurrentCost] = useState(0);
+  const [efficiencyGain, setEfficiencyGain] = useState(0);
+  const [timeframe, setTimeframe] = useState(0);
   
   const calculateROI = () => {
     const annualSavings = (currentCost * efficiencyGain) / 100;

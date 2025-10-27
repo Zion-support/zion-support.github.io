@@ -1,5 +1,6 @@
-<<<<<<< HEAD
 'use client';
+import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 /**
  * Testing Utilities
  * Provides helper functions and utilities for testing
@@ -258,10 +259,8 @@ measureExecutionTime
 };
 }
 =======
-import { useState, useEffect } from 'react';
 
 export const usetestUtils = () => {
-  const [state, setState] = useState(null);
   
   useEffect(() => {
     // Hook implementation

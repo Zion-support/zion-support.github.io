@@ -1,7 +1,6 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
-export const useaccessibilityUtils = () => {
-  const [state, setState] = useState(null);
+export const useAccessibilityUtils = () => {
   
   useEffect(() => {
     // Hook implementation

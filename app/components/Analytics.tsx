@@ -1,3 +1,2 @@
 import React from 'react';
-
-export default Analytics;
+export default function Analytics() { return <div>Analytics Component</div>; }
