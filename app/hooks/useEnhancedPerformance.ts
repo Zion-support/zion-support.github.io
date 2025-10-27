@@ -59,17 +59,11 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     // Measure memory usage
     const measureMemoryUsage = () => {
       if ('memory' in performance) {
-<<<<<<< HEAD
-        const memory = (performance as { memory: { usedJSHeapSize: number } }).memory;
-        const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
-        setMetrics(prev => ({ ...prev, memoryUsage }));
-=======
         const memory = (performance as PerformanceWithMemory).memory;
         if (memory) {
           const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
           setMetrics(prev => ({ ...prev, memoryUsage }));
         }
->>>>>>> cursor/fix-errors-and-merge-to-main-511e
       }
     };
 
