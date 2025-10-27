@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface NotFoundPageProps {
+interface _NotFoundPageProps {
   className?: string;
   children?: React.ReactNode;
 }

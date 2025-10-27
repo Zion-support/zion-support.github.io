@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-interface NewsletterSignupProps {
+interface _NewsletterSignupProps {
   onSubmit?: (email: string) => void;
   placeholder?: string;
   buttonText?: string;

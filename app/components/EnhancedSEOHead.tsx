@@ -1,6 +1,5 @@
-import React from 'react';
 
-interface SEOHeadProps {
+interface __SEOHeadProps {
   title?: string;
   description?: string;
   className?: string;

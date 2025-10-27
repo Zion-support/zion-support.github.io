@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface AdvancedSEOOptimizerProps {
+interface _AdvancedSEOOptimizerProps {
   className?: string;
   children?: React.ReactNode;
 }
@@ -8,7 +8,7 @@ interface AdvancedSEOOptimizerProps {
 export default function AdvancedSEOOptimizer({ 
   className = '', 
   children 
-}: AdvancedSEOOptimizerProps) {
+}: _AdvancedSEOOptimizerProps) {
   return (
     <div className={'advancedseooptimizer ' + className}>
       {children || <p>AdvancedSEOOptimizer component</p>}

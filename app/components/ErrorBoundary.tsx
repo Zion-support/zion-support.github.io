@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface ErrorBoundaryProps {
+interface _ErrorBoundaryProps {
   className?: string;
   children?: React.ReactNode;
 }

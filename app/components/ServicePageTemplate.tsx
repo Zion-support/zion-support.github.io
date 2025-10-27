@@ -1,10 +1,19 @@
 import React from 'react';
 
-interface ServicePageTemplateProps {
+interface _ServicePageTemplateProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-export default ServicePageTemplate;
+
+const ServicePageTemplate: React.FC<_ServicePageTemplateProps> = ({ className = '', children }) => {
+  return (
+    <div className={`ervicepagetemplate ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+ServicePageTemplate.displayName = 'ServicePageTemplate';
 
 export default ServicePageTemplate;

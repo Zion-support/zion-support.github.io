@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface EnhancedPerformanceMonitorProps {
+interface _EnhancedPerformanceMonitorProps {
   className?: string;
   children?: React.ReactNode;
 }

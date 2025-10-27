@@ -4,14 +4,12 @@ import React, { useState, useEffect } from 'react';
 
 import { useState, useEffect } from 'react';
 
-interface ModernLoaderProps {
+interface _ModernLoaderProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-export default ModernLoader;
 
-export default ModernLoader;
 export default function ModernLoader({ isLoading, children }: ModernLoaderProps) {
   const [showLoader, setShowLoader] = useState(isLoading);
 
@@ -67,3 +65,4 @@ export default function ModernLoader({ isLoading, children }: ModernLoaderProps)
     </div>
   );
 }
+export default ModernLoader;

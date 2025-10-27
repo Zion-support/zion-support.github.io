@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface EnhancedHeroProps {
+interface _EnhancedHeroProps {
   className?: string;
   children?: React.ReactNode;
 }

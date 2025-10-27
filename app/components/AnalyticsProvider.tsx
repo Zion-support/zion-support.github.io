@@ -1,10 +1,19 @@
 import React from 'react';
 
-interface AnalyticsProviderProps {
+interface _AnalyticsProviderProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-export default AnalyticsProvider;
+
+const AnalyticsProvider: React.FC<_AnalyticsProviderProps> = ({ className = '', children }) => {
+  return (
+    <div className={`nalyticsprovider ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+AnalyticsProvider.displayName = 'AnalyticsProvider';
 
 export default AnalyticsProvider;

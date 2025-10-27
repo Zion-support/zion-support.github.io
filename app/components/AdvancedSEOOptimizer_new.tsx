@@ -1,6 +1,5 @@
-import React from 'react';
 
-interface AdvancedSEOOptimizerProps {
+interface __AdvancedSEOOptimizerProps {
   title?: string;
   description?: string;
   keywords?: string[];
@@ -10,7 +9,7 @@ export default function AdvancedSEOOptimizer({
   title = "Advanced SEO Optimizer",
   description = "This component provides advanced SEO optimization features.",
   keywords = []
-}: AdvancedSEOOptimizerProps) {
+}: __AdvancedSEOOptimizerProps) {
   return (
     <div>
       <h1>{title}</h1>

@@ -1,5 +1,4 @@
 'use client'
-import React from 'react';
 
 
 function Page2o7i0yx4m() {

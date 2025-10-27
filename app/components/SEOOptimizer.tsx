@@ -1,10 +1,19 @@
 import React from 'react';
 
-interface SEOOptimizerProps {
+interface _SEOOptimizerProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-export default SEOOptimizer;
+
+const SEOOptimizer: React.FC<_SEOOptimizerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`eooptimizer ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+SEOOptimizer.displayName = 'SEOOptimizer';
 
 export default SEOOptimizer;

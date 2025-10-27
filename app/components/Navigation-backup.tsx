@@ -1,8 +1,7 @@
 'use client'
-import React from 'react';
 
 
-interface NavigationBackupProps {
+interface __NavigationBackupProps {
   logo?: string;
   logoText?: string;
   menuItems?: Array<{

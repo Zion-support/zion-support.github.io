@@ -1,10 +1,19 @@
 import React from 'react';
 
-interface HeaderProps {
+interface _HeaderProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-export default Header;
+
+const Header: React.FC<_HeaderProps> = ({ className = '', children }) => {
+  return (
+    <div className={`eader ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+Header.displayName = 'Header';
 
 export default Header;

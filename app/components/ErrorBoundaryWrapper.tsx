@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface ErrorBoundaryWrapperProps {
+interface _ErrorBoundaryWrapperProps {
   className?: string;
   children?: React.ReactNode;
 }

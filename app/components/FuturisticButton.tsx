@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface FuturisticButtonProps {
+interface _FuturisticButtonProps {
   className?: string;
   children?: React.ReactNode;
 }

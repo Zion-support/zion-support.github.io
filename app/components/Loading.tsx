@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface LoadingProps {
+interface _LoadingProps {
   className?: string;
   children?: React.ReactNode;
 }

@@ -1,10 +1,19 @@
 import React from 'react';
 
-interface ImageOptimizerProps {
+interface _ImageOptimizerProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-export default ImageOptimizer;
+
+const ImageOptimizer: React.FC<_ImageOptimizerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`mageoptimizer ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+ImageOptimizer.displayName = 'ImageOptimizer';
 
 export default ImageOptimizer;

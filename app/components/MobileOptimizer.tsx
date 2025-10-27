@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface MobileOptimizerProps {
+interface _MobileOptimizerProps {
   className?: string;
   children?: React.ReactNode;
 }

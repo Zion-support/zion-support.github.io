@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface FuturisticCardProps {
+interface _FuturisticCardProps {
   className?: string;
   children?: React.ReactNode;
 }

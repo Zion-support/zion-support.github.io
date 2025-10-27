@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface UserExperienceEnhancerProps {
+interface _UserExperienceEnhancerProps {
   className?: string;
   children?: React.ReactNode;
 }

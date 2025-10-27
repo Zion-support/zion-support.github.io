@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface SEOHeadWrapperProps {
+interface _SEOHeadWrapperProps {
   className?: string;
   children?: React.ReactNode;
 }

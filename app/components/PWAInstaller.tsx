@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface PWAInstallerProps {
+interface _PWAInstallerProps {
   className?: string;
   children?: React.ReactNode;
 }
