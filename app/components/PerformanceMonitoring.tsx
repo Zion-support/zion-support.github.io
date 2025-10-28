@@ -2,6 +2,12 @@
 
 import React, { useEffect, memo, useCallback } from 'react';
 
+interface MemoryInfo {
+  usedJSHeapSize: number;
+  totalJSHeapSize: number;
+  jsHeapSizeLimit: number;
+}
+
 interface LayoutShiftEntry extends PerformanceEntry {
   value: number;
   hadRecentInput: boolean;
@@ -41,15 +47,8 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        const fid = entry.processingStart - entry.startTime;
-=======
-=======
->>>>>>> 399dc80731e61084505230c4568d3a3c31d0bfad
-        const fidEntry = entry as PerformanceEventTiming; // Type assertion for FID-specific properties
+        const fidEntry = entry as FIDEntry; // Type assertion for FID-specific properties
         const fid = fidEntry.processingStart - fidEntry.startTime;
->>>>>>> cbcf4d57b3a98179f03332b56137695e2d456142
         console.log('FID:', fid);
         
         if (window.gtag) {
@@ -68,8 +67,9 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const clsObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        if (!entry.hadRecentInput) {
-          clsValue += entry.value;
+        const clsEntry = entry as LayoutShiftEntry;
+        if (!clsEntry.hadRecentInput) {
+          clsValue += clsEntry.value;
           console.log('CLS:', clsValue);
           
           if (window.gtag) {
@@ -131,11 +131,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     if (typeof window === 'undefined' || !('memory' in performance)) return;
 
     const checkMemory = () => {
-<<<<<<< HEAD
-      const memory = (performance as any).memory;
-=======
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
->>>>>>> cbcf4d57b3a98179f03332b56137695e2d456142
+      const memory = (performance as Performance & { memory?: MemoryInfo }).memory;
       if (memory) {
         const used = memory.usedJSHeapSize / 1024 / 1024; // MB
         const total = memory.totalJSHeapSize / 1024 / 1024; // MB
