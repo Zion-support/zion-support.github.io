@@ -1,14 +1,10 @@
+
 import React from 'react';
 
-interface PageLoaderProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const PageLoader: React.FC<PageLoaderProps> = ({ className, children }) => {
+const PageLoader: React.FC = () => {
   return (
-    <div className={className} role="region" aria-label="Page Loader">
-      {children || <p>Page Loader</p>}
+    <div className="flex items-center justify-center min-h-screen">
+      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
     </div>
   );
 };

@@ -1,15 +1,15 @@
-
+import React from 'react';
 interface UserExperienceEnhancerProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const UserExperienceEnhancer = ({ 
+const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ 
   className = '', 
   children 
-}: UserExperienceEnhancerProps) => {
+}) => {
   return (
-    <div className={'userexperienceenhancer ' + className}>
+    <div className={'user-experience-enhancer ' + className}>
       {children || <p>UserExperienceEnhancer component</p>}
     </div>
   );
