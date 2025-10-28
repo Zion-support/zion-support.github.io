@@ -1,22 +1,7 @@
-import React, { memo, useMemo } from 'react';
+import React, { memo } from 'react';
 import SEOHead from '../components/SEOHead';
 
 const ZionAIAPITesterPage: React.FC = memo(() => {
-  const structuredData = useMemo(() => ({
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Zion AI API Tester",
-    "description": "Intelligent API testing tool that automatically generates test cases, validates responses, and ensures API reliability",
-    "url": "https://ziontechgroup.com/zion-ai-api-tester",
-    "applicationCategory": "DeveloperApplication",
-    "operatingSystem": "Web",
-    "offers": {
-      "@type": "Offer",
-      "price": "49",
-      "priceCurrency": "USD",
-      "priceValidUntil": "2025-12-31"
-    }
-  }), []);
 
   return (
     <>
@@ -24,8 +9,7 @@ const ZionAIAPITesterPage: React.FC = memo(() => {
         title="Zion AI API Tester - Intelligent API Testing & Validation Tool"
         description="AI-powered API testing tool that automatically generates test cases, validates responses, and ensures API reliability. Streamline your API testing workflow with intelligent automation."
         keywords="API testing, automated testing, API validation, test case generation, API reliability, developer tools"
-        canonicalUrl="https://ziontechgroup.com/zion-ai-api-tester"
-        structuredData={structuredData}
+        canonical="https://ziontechgroup.com/zion-ai-api-tester"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100">
