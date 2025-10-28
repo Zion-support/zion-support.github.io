@@ -1,5 +1,4 @@
-'use client';
-
+'use client'
 import React from 'react';
 import { Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
@@ -7,7 +6,6 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight } from 'lucide-react';
 const OnlineLearningPlatformPage: React.FC = () => {
-
   const features = [
     {
       icon: Brain,

@@ -11,17 +11,6 @@ function resolveMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-        separatorFound = true;
-        continue;
-      }
-      
-        endMarkerFound = true;
-        inConflict = false;
-        
-        // If no separator found, use HEAD content
-        if (separatorFound && headContent.length > 0) {
-          resolvedLines.push(...headContent);
-        }
     // Check if file has merge conflict markers
         conflictType = 'separator';
         continue;
@@ -31,17 +20,6 @@ function resolveMergeConflicts(filePath) {
       }
       
       if (inConflict) {
-        continue;
-      }
-      
-      resolvedLines.push(line);
-    }
-    
-    // Write resolved content back to file
-    const resolvedContent = resolvedLines.join('\n');
-    fs.writeFileSync(filePath, resolvedContent, 'utf8');
-    
-    return true; // Conflicts were resolved
         if (conflictType === 'separator') {
           resolvedLines.push(line);
         }

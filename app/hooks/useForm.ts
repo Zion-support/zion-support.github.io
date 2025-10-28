@@ -1,7 +1,6 @@
 import React, { useState, useCallback } from 'react';
 
 export interface FormState<T = Record<string, unknown>> {
-
   data: T;
   isSubmitting: boolean;
   submitStatus: 'idle' | 'success' | 'error';
@@ -17,7 +16,6 @@ export interface UseFormOptions<T = Record<string, unknown>> {
 export const useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> = {}) => {
   const { initialData = {} as T, validate, onSubmit } = options;
   
-
   const [formState, setFormState] = useState<FormState<T>>({
     data: initialData,
     isSubmitting: false,
@@ -25,7 +23,7 @@ export const useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> 
     errors: {},
   });
 
-  const handleInputChange = useCallback((field: keyof T, value: unknown) => {
+  const handleChange = useCallback((field: keyof T, value: unknown) => {
     setFormState(prev => ({
       ...prev,
       data: { ...prev.data, [field]: value },
@@ -62,9 +60,7 @@ export const useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> 
         submitStatus: 'success',
         data: initialData, // Reset form
       }));
-
     } catch (_error) {
-
       setFormState(prev => ({
         ...prev,
         isSubmitting: false,
@@ -83,7 +79,7 @@ export const useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> 
 
   return {
     ...formState,
-    handleInputChange,
+    handleChange,
     handleSubmit,
     resetForm,
   }
