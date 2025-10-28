@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 interface ServiceTemplateProps {
@@ -12,7 +11,7 @@ const ServiceTemplate: React.FC<ServiceTemplateProps> = ({
 }) => {
   return (
     <div className={'service-template ' + className}>
-      {children || <p>ServiceTemplate component</p>}
+      {children || <p>Service-template component</p>}
     </div>
   );
 };

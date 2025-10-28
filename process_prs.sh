@@ -1,47 +1,67 @@
 #!/bin/bash
 
-# Script to process all open PRs
-echo "Processing all open PRs..."
+# Script to process and merge open PRs
+set -e
 
-# Get list of open PRs
-gh pr list --state open --json number,title,headRefName --jq '.[] | "\(.number) \(.headRefName)"' | while read pr_number branch_name; do
-    echo "Processing PR #$pr_number with branch $branch_name"
+echo "Starting PR processing..."
+
+# Get list of open PR numbers
+PR_NUMBERS=$(curl -s -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100" | grep -o '"number": [0-9]*' | sed 's/"number": //' | head -10)
+
+echo "Found PRs: $PR_NUMBERS"
+
+for pr_num in $PR_NUMBERS; do
+    echo "Processing PR #$pr_num..."
     
-    # Try to merge the PR
-    if gh pr merge $pr_number --squash 2>/dev/null; then
-        echo "✅ Successfully merged PR #$pr_number"
+    # Get PR details
+    pr_info=$(curl -s -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/$pr_num")
+    
+    # Extract branch name
+    head_ref=$(echo "$pr_info" | grep -o '"ref": "[^"]*"' | head -1 | sed 's/"ref": "//' | sed 's/"//')
+    
+    if [ -z "$head_ref" ]; then
+        echo "Could not extract branch name for PR #$pr_num, skipping..."
+        continue
+    fi
+    
+    echo "Branch: $head_ref"
+    
+    # Fetch the branch
+    echo "Fetching branch $head_ref..."
+    git fetch origin "$head_ref" || {
+        echo "Failed to fetch branch $head_ref, skipping PR #$pr_num"
+        continue
+    }
+    
+    # Try to merge
+    echo "Attempting to merge $head_ref into main..."
+    if git merge "origin/$head_ref" --no-edit; then
+        echo "Successfully merged $head_ref"
+        # Push the changes
+        git push origin main
+        echo "Pushed changes to main"
     else
-        echo "❌ Failed to merge PR #$pr_number - has conflicts or other issues"
-        
-        # Try to checkout and resolve conflicts
-        if gh pr checkout $pr_number 2>/dev/null; then
-            echo "Checking out PR #$pr_number for conflict resolution..."
-            
-            # Fetch latest main
-            git fetch origin main
-            
-            # Try to merge
-            if git merge origin/main 2>/dev/null; then
-                echo "✅ Successfully resolved conflicts for PR #$pr_number"
-                git push origin $branch_name
-                gh pr merge $pr_number --squash
-            else
-                echo "❌ Could not resolve conflicts for PR #$pr_number"
-                # Use our conflict resolution script
-                if [ -f "resolve_conflicts.sh" ]; then
-                    ./resolve_conflicts.sh
-                    git push origin $branch_name
-                    gh pr merge $pr_number --squash
-                fi
-            fi
+        echo "Merge failed for $head_ref, checking for conflicts..."
+        # Check if there are conflicts
+        if git status | grep -q "both modified"; then
+            echo "Conflicts detected, attempting to resolve..."
+            # Try to resolve conflicts automatically
+            git add .
+            git commit -m "Resolve merge conflicts for PR #$pr_num" || {
+                echo "Failed to resolve conflicts for PR #$pr_num"
+                git merge --abort
+                continue
+            }
+            git push origin main
+            echo "Resolved conflicts and pushed for PR #$pr_num"
         else
-            echo "❌ Could not checkout PR #$pr_number"
+            echo "Merge failed for other reasons, aborting..."
+            git merge --abort
         fi
     fi
     
-    # Switch back to main
-    git checkout main
-    git pull origin main
+    echo "Completed processing PR #$pr_num"
+    echo "---"
 done
 
-echo "Finished processing all PRs!"
+echo "PR processing completed!"

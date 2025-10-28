@@ -1,8 +1,37 @@
-'use client'
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight} from 'lucide-react'
+'use client';
+
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+
+const PageNew: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    }
+  ];
 
   const benefits = [
     'Increase efficiency by up to 50%',
@@ -12,38 +41,10 @@ import { CheckCircle, ArrowRight} from 'lucide-react'
     'Gain competitive advantage with advanced technology'
   ]
 
-  const features = [
-    {
-      icon: CheckCircle,
-      title: 'AI-Powered Analytics',
-      description: 'Advanced analytics powered by artificial intelligence',
-      benefits: ['Real-time insights', 'Predictive analytics', 'Automated reporting']
-    },
-    {
-      icon: CheckCircle,
-      title: 'Smart Automation',
-      description: 'Intelligent automation for business processes',
-      benefits: ['Workflow optimization', 'Task automation', 'Process efficiency']
-    },
-    {
-      icon: CheckCircle,
-      title: 'Data Integration',
-      description: 'Seamless integration with existing systems',
-      benefits: ['API connectivity', 'Data synchronization', 'System compatibility']
-    },
-    {
-      icon: CheckCircle,
-      title: 'Security & Compliance',
-      description: 'Enterprise-grade security and compliance',
-      benefits: ['Data encryption', 'Access controls', 'Audit trails']
-    }
-  ]
-
-export default function pagenewPage() {
   return (
     <>
             {/* SEO handled by layout.tsx */}
-      <Navigation />
+      {/* <Navigation /> */}
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
@@ -134,8 +135,9 @@ export default function pagenewPage() {
           </div>
         </section>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
-}
+};
 
+export default PageNew;
