@@ -6,8 +6,7 @@ import React, { useEffect } from 'react';
 interface PerformanceEventTiming extends PerformanceEntry {
   processingStart: number;
   processingEnd: number;
-  cancelable: boolean;
-  target?: EventTarget;
+  target?: EventTarget | null;
 }
 
 interface LayoutShift extends PerformanceEntry {
