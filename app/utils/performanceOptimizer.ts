@@ -51,7 +51,7 @@ class PerformanceOptimizer {
     if (typeof window === 'undefined') return;
 
     // Monitor page load time
-    window.addEventListener(_'load', _() => {
+    window.addEventListener('load', () => {
       this.updateLoadTime();
       this.updateMemoryUsage();
       this.generateRecommendations();
@@ -59,7 +59,7 @@ class PerformanceOptimizer {
 
     // Monitor performance entries
     if ('PerformanceObserver' in window) {
-      const _observer = new PerformanceObserver(_(list) => {
+      const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           this.processPerformanceEntry(entry);
         }
@@ -72,7 +72,7 @@ class PerformanceOptimizer {
    * Update load time metrics
    */
   private updateLoadTime(): void {
-    const _navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (navigation) {
       this.metrics.loadTime = navigation.loadEventEnd - navigation.fetchStart;
     }
@@ -83,7 +83,7 @@ class PerformanceOptimizer {
    */
   private updateMemoryUsage(): void {
     if ('memory' in performance) {
-      const _memory = (performance as any).memory;
+      const memory = (performance as any).memory;
       this.metrics.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
     }
   }
@@ -112,8 +112,8 @@ class PerformanceOptimizer {
   optimizeImages(): void {
     if (!this.options.enableImageOptimization) return;
 
-    const _images = document.querySelectorAll('img');
-    images.forEach(_(img) => {
+    const images = document.querySelectorAll('img');
+    images.forEach((img) => {
       // Add loading="lazy" if not present
       if (!img.hasAttribute('loading')) {
         img.setAttribute('loading', 'lazy');
@@ -135,7 +135,7 @@ class PerformanceOptimizer {
    * Check if element is above the fold
    */
   private isAboveTheFold(element: Element): boolean {
-    const _rect = element.getBoundingClientRect();
+    const rect = element.getBoundingClientRect();
     return rect.top < window.innerHeight;
   }
 
@@ -146,7 +146,7 @@ class PerformanceOptimizer {
     if (!this.options.enablePreloading) return;
 
     // Preload critical CSS
-    const _criticalCSS = document.querySelector('link[rel="stylesheet"]');
+    const criticalCSS = document.querySelector('link[rel="stylesheet"]');
     if (criticalCSS) {
       criticalCSS.setAttribute('rel', 'preload');
       criticalCSS.setAttribute('as', 'style');
@@ -154,8 +154,8 @@ class PerformanceOptimizer {
     }
 
     // Preload critical fonts
-    const _fontLinks = document.querySelectorAll('link[href*="font"]');
-    fontLinks.forEach(_(link) => {
+    const fontLinks = document.querySelectorAll('link[href*="font"]');
+    fontLinks.forEach((link) => {
       link.setAttribute('rel', 'preload');
       link.setAttribute('as', 'font');
       link.setAttribute('type', 'font/woff2');
@@ -172,8 +172,8 @@ class PerformanceOptimizer {
     // Add cache headers for static assets
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js')
-        .then_(() => { /* empty */ })
-        .catch_(() => { /* empty */ });
+        .then(() => { /* empty */ })
+        .catch(() => { /* empty */ });
     }
   }
 
@@ -196,8 +196,8 @@ class PerformanceOptimizer {
     }
 
     // Check for unoptimized images
-    const _images = document.querySelectorAll('img');
-    const _unoptimizedImages = Array.from(images).filter(img =>
+    const images = document.querySelectorAll('img');
+    const unoptimizedImages = Array.from(images).filter(img =>
       !img.hasAttribute('loading') || !img.hasAttribute('decoding')
     );
 
@@ -239,10 +239,10 @@ class PerformanceOptimizer {
   getBundleSize(): number {
     if (typeof window === 'undefined') return 0;
 
-    const _scripts = document.querySelectorAll('script[src]');
-    let _totalSize = 0;
-    scripts.forEach(_(script) => {
-      const _src = script.getAttribute('src');
+    const scripts = document.querySelectorAll('script[src]');
+    let totalSize = 0;
+    scripts.forEach((script) => {
+      const src = script.getAttribute('src');
       if (src && src.includes('assets/')) {
         // Estimate size based on file name patterns
         totalSize += 50; // Rough estimate in KB
@@ -254,5 +254,5 @@ class PerformanceOptimizer {
 }
 
 // Create singleton instance
-export const _performanceOptimizer = new PerformanceOptimizer();
+export const performanceOptimizer = new PerformanceOptimizer();
 export default performanceOptimizer;
