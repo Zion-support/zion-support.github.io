@@ -1,5 +1,10 @@
 
 
+import React from 'react';
+import { Brain, BarChart, Target, TrendingUp, ArrowRight, CheckCircle } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
 export const metadata = {
   title: 'AI-Powered Email Analyzer | Zion Tech Group',
   description: 'Professional AI-powered email analysis services by Zion Tech Group. Advanced email intelligence and automation.',
@@ -10,6 +15,7 @@ export const metadata = {
     type: 'website',
   },
 };
+
 const AiPoweredEmailAnalyzerPage: React.FC = () => {
   const features = [
     {
@@ -125,4 +131,4 @@ const benefits = [
   );
 }
 
-
+export default AiPoweredEmailAnalyzerPage;

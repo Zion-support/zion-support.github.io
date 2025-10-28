@@ -2,6 +2,9 @@ import React from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 
 
+import Navigation from '../../components/Navigation';
+import Footer from '../../components/Footer';
+
 export const metadata = {
   title: 'Supply Chain Optimizer | Zion Tech Group',
   description: 'Professional supply chain optimizer services by Zion Tech Group. Advanced AI and technology solutions.',

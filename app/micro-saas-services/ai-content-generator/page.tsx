@@ -2,6 +2,9 @@ import React from 'react';
 import ErrorBoundary from '../../components/ErrorBoundary';
 import { Metadata } from 'next';
 
+import Navigation from '../../components/Navigation';
+import Footer from '../../components/Footer';
+
 export const metadata: Metadata = {
   title: 'Page - Zion Tech Group',
   description: 'Professional services and solutions by Zion Tech Group.',
