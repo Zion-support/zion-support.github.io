@@ -63,9 +63,7 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
           }
           originalInnerHTML.call(this, value);
         },
-        get: function() {
-          return this.textContent || '';
-        }
+        configurable: true
       });
     }
 
