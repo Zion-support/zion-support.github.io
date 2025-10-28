@@ -44,7 +44,7 @@ import { ReactNode } from 'react';
 
 // Client components types
 export interface ClientComponentProps {
-  children?: ReactNode;
+  children?: React.ReactNode;
   className?: string;
 }
 

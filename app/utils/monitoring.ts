@@ -70,7 +70,7 @@ class MonitoringService {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
             const fidEntry = entry as PerformanceEntry & { processingStart: number };
-            this.metrics.fid = fidEntry.processingStart - entry.startTime;
+            this.metrics.fid = fidEntry.processingStart - fidEntry.startTime;
             this.reportMetric('fid', this.metrics.fid);
           });
         });
@@ -168,7 +168,7 @@ class MonitoringService {
     }
 
     // Send to analytics (if configured)
-    if (typeof window !== 'undefined' && typeof (window as { gtag?: Function }).gtag === 'function') {
+    if (typeof window !== 'undefined' && 'gtag' in window && typeof (window as { gtag?: Function }).gtag === 'function') {
       (window as { gtag: Function }).gtag('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',
