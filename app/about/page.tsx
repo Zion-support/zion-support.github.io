@@ -1,15 +1,9 @@
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
-import type { Metadata } from 'next';
-
- 
-export const metadata: Metadata = {
-  title: 'About Us - Zion Tech Group',
-  description: 'Learn about Zion Tech Group, a leading provider of AI and IT solutions.',
-};
+import { aboutMetadata } from './constants';
 
 export const dynamic = 'force-static';
- 
+export const metadata = aboutMetadata;
 
 export default function AboutPage() {
   return (
@@ -113,4 +107,3 @@ export default function AboutPage() {
     </div>
   );
 }
-

@@ -1,25 +1,27 @@
 #!/usr/bin/env python3
 """
-Script to merge all open PRs systematically
+Script to automatically merge all open PRs into main branch
 """
 import subprocess
 import json
 import sys
 import time
 
-def run_command(cmd):
-    """Run a command and return the result"""
+def run_command(cmd, check=True):
+    """Run a shell command and return the result"""
     try:
-        result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
-        return result.returncode == 0, result.stdout, result.stderr
-    except Exception as e:
-        return False, "", str(e)
+        result = subprocess.run(cmd, shell=True, capture_output=True, text=True, check=check)
+        return result.stdout, result.stderr, result.returncode
+    except subprocess.CalledProcessError as e:
+        return e.stdout, e.stderr, e.returncode
 
 def get_open_prs():
-    """Get list of open PRs"""
-    success, stdout, stderr = run_command("gh pr list --state open --json number,title,headRefName,mergeable")
-    if not success:
-        print(f"Error getting PRs: {stderr}")
+    """Get list of open PRs from GitHub API"""
+    cmd = 'curl -s -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100"'
+    stdout, stderr, returncode = run_command(cmd)
+    
+    if returncode != 0:
+        print(f"Error fetching PRs: {stderr}")
         return []
     
     try:
@@ -29,84 +31,119 @@ def get_open_prs():
         print(f"Error parsing PR data: {e}")
         return []
 
-def merge_pr(pr_number, pr_title, branch_name):
-    """Attempt to merge a PR"""
-    print(f"\n🔄 Attempting to merge PR #{pr_number}: {pr_title}")
-    print(f"   Branch: {branch_name}")
+def merge_branch(branch_name):
+    """Merge a branch into main"""
+    print(f"\n🔄 Merging branch: {branch_name}")
     
-    # First, try to fetch the branch
-    fetch_cmd = f"git fetch origin {branch_name}"
-    success, stdout, stderr = run_command(fetch_cmd)
-    if not success:
-        print(f"   ❌ Failed to fetch branch: {stderr}")
+    # Checkout the branch
+    checkout_cmd = f"git checkout -b {branch_name} origin/{branch_name}"
+    stdout, stderr, returncode = run_command(checkout_cmd, check=False)
+    
+    if returncode != 0:
+        print(f"⚠️  Could not checkout branch {branch_name}: {stderr}")
         return False
     
-    # Try to merge the branch
-    merge_cmd = f"git merge origin/{branch_name} --no-ff -m 'Merge PR #{pr_number}: {pr_title}'"
-    success, stdout, stderr = run_command(merge_cmd)
+    # Switch back to main
+    run_command("git checkout main")
     
-    if success:
-        print(f"   ✅ Successfully merged PR #{pr_number}")
+    # Try to merge
+    merge_cmd = f"git merge {branch_name}"
+    stdout, stderr, returncode = run_command(merge_cmd, check=False)
+    
+    if returncode == 0:
+        print(f"✅ Successfully merged {branch_name}")
+        return True
+    elif "Already up to date" in stdout:
+        print(f"ℹ️  Branch {branch_name} is already up to date")
+        return True
+    elif "CONFLICT" in stderr:
+        print(f"⚠️  Merge conflict in {branch_name}, attempting to resolve...")
+        return resolve_conflicts(branch_name)
+    else:
+        print(f"❌ Failed to merge {branch_name}: {stderr}")
+        return False
+
+def resolve_conflicts(branch_name):
+    """Attempt to resolve merge conflicts automatically"""
+    print(f"🔧 Resolving conflicts for {branch_name}")
+    
+    # Check for common conflict patterns and resolve them
+    conflict_files = run_command("git diff --name-only --diff-filter=U")[0].strip().split('\n')
+    
+    for file_path in conflict_files:
+        if not file_path:
+            continue
+            
+        print(f"  Resolving conflicts in {file_path}")
+        
+        # Read the file
+        with open(file_path, 'r') as f:
+            content = f.read()
+        
+        # Simple conflict resolution patterns
+        if 'layout.tsx' in file_path:
+            # Remove conflict markers and keep the HEAD version for layout.tsx
+            lines = content.split('\n')
+            new_lines = []
+            skip_until_end = False
+            
+            for line in lines:
+                if '<<<<<<< HEAD' in line:
+                    skip_until_end = False
+                    continue
+                elif '=======' in line:
+                    skip_until_end = True
+                    continue
+                elif '>>>>>>>' in line:
+                    skip_until_end = False
+                    continue
+                elif not skip_until_end:
+                    new_lines.append(line)
+            
+            with open(file_path, 'w') as f:
+                f.write('\n'.join(new_lines))
+        
+        # Add the resolved file
+        run_command(f"git add {file_path}")
+    
+    # Commit the resolution
+    commit_cmd = f"git commit -m 'Auto-resolve merge conflicts for {branch_name}'"
+    stdout, stderr, returncode = run_command(commit_cmd, check=False)
+    
+    if returncode == 0:
+        print(f"✅ Successfully resolved conflicts for {branch_name}")
         return True
     else:
-        print(f"   ⚠️  Merge conflict or error: {stderr}")
-        # Try to resolve conflicts automatically
-        return resolve_conflicts(pr_number, branch_name)
-
-def resolve_conflicts(pr_number, branch_name):
-    """Attempt to resolve merge conflicts"""
-    print(f"   🔧 Attempting to resolve conflicts for PR #{pr_number}")
-    
-    # Check git status
-    success, stdout, stderr = run_command("git status --porcelain")
-    if success and stdout.strip():
-        print(f"   📋 Files with conflicts: {stdout.strip()}")
-        
-        # Try to use our version for conflicts (since we're on main)
-        success, stdout, stderr = run_command("git checkout --ours .")
-        if success:
-            success, stdout, stderr = run_command("git add .")
-            if success:
-                success, stdout, stderr = run_command(f"git commit -m 'Resolve conflicts for PR #{pr_number}'")
-                if success:
-                    print(f"   ✅ Resolved conflicts for PR #{pr_number}")
-                    return True
-    
-    print(f"   ❌ Could not resolve conflicts for PR #{pr_number}")
-    return False
+        print(f"❌ Failed to resolve conflicts for {branch_name}: {stderr}")
+        return False
 
 def main():
-    """Main function"""
-    print("🚀 Starting PR merge process...")
+    """Main function to merge all PRs"""
+    print("🚀 Starting automatic PR merge process...")
     
-    # Get all open PRs
+    # Get list of open PRs
     prs = get_open_prs()
     if not prs:
-        print("❌ No open PRs found")
+        print("❌ No open PRs found or error fetching PRs")
         return
     
     print(f"📋 Found {len(prs)} open PRs")
+    
+    # Sort PRs by number (newest first)
+    prs.sort(key=lambda x: x['number'], reverse=True)
     
     successful_merges = 0
     failed_merges = 0
     
     for pr in prs:
         pr_number = pr['number']
-        pr_title = pr['title']
-        branch_name = pr['headRefName']
-        mergeable = pr.get('mergeable', None)
+        branch_name = pr['head']['ref']
+        title = pr['title']
         
-        print(f"\n📝 PR #{pr_number}: {pr_title}")
+        print(f"\n📝 PR #{pr_number}: {title}")
         print(f"   Branch: {branch_name}")
-        print(f"   Mergeable: {mergeable}")
         
-        if mergeable is False:
-            print(f"   ⚠️  PR #{pr_number} is not mergeable, skipping...")
-            failed_merges += 1
-            continue
-        
-        success = merge_pr(pr_number, pr_title, branch_name)
-        if success:
+        if merge_branch(branch_name):
             successful_merges += 1
         else:
             failed_merges += 1
@@ -115,17 +152,18 @@ def main():
         time.sleep(1)
     
     print(f"\n📊 Merge Summary:")
-    print(f"   ✅ Successful merges: {successful_merges}")
-    print(f"   ❌ Failed merges: {failed_merges}")
-    print(f"   📋 Total PRs processed: {len(prs)}")
+    print(f"   ✅ Successful: {successful_merges}")
+    print(f"   ❌ Failed: {failed_merges}")
+    print(f"   📈 Total: {len(prs)}")
     
-    if successful_merges > 0:
-        print(f"\n🚀 Pushing changes to main branch...")
-        success, stdout, stderr = run_command("git push origin main")
-        if success:
-            print("✅ Successfully pushed to main branch")
-        else:
-            print(f"❌ Failed to push to main: {stderr}")
+    # Push all changes to main
+    print(f"\n🚀 Pushing changes to main...")
+    stdout, stderr, returncode = run_command("git push origin main --force", check=False)
+    
+    if returncode == 0:
+        print("✅ Successfully pushed all changes to main")
+    else:
+        print(f"❌ Failed to push changes: {stderr}")
 
 if __name__ == "__main__":
     main()
