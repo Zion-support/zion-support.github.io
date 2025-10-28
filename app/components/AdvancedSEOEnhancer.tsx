@@ -3,12 +3,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import Head from 'next/head';
 
-interface StructuredData {
-  '@context': string;
-  '@type': string;
-  [key: string]: unknown;
-}
-
 interface SEOData {
   title: string;
   description: string;
@@ -17,7 +11,7 @@ interface SEOData {
   ogImage: string;
   ogType: string;
   twitterCard: string;
-  structuredData: StructuredData;
+  structuredData: Record<string, unknown>;
 }
 
 interface AdvancedSEOEnhancerProps {
@@ -78,7 +72,7 @@ export const AdvancedSEOEnhancer: React.FC<AdvancedSEOEnhancerProps> = ({
     try {
       const baseUrl = typeof window !== 'undefined' ? window.location.origin : '';
       
-      const baseStructuredData = {
+      const structuredData = {
         '@context': 'https://schema.org',
         '@type': 'Organization',
         name: 'Zion Tech Group',
@@ -104,12 +98,8 @@ export const AdvancedSEOEnhancer: React.FC<AdvancedSEOEnhancerProps> = ({
           postalCode: '94105',
           addressCountry: 'US',
         },
-      };
-
-      const structuredData = {
-        ...baseStructuredData,
         ...optimizedData.structuredData,
-      } as StructuredData;
+      };
 
       return structuredData;
     } catch (error) {

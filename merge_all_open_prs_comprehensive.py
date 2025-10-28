@@ -29,7 +29,7 @@ def run_command(cmd: str, cwd: str = None) -> tuple:
 def get_open_prs() -> List[Dict[str, Any]]:
     """Get list of open PRs from the JSON file"""
     try:
-        with open('/workspace/current-open-prs.json', 'r') as f:
+        with open('/workspace/current_open_prs_fresh.json', 'r') as f:
             return json.load(f)
     except Exception as e:
         print(f"Error reading PRs file: {e}")
@@ -180,7 +180,7 @@ def main():
     successful_merges = 0
     failed_merges = 0
     
-    for branch in cursor_branches[:50]:  # Limit to first 50 to avoid overwhelming
+    for branch in cursor_branches[:200]:  # Process more branches
         if merge_branch(branch):
             successful_merges += 1
         else:
