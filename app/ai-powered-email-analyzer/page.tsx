@@ -2,10 +2,48 @@
 import React from "react";
 import Footer from '@/components/Footer';
 import Navigation from '@/components/Navigation';
-import { Brain } from "lucide-react";
+import { Brain, ArrowRight, CheckCircle } from "lucide-react";
 
 export 
 const AiPoweredEmailAnalyzerPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'Email Classification',
+      description: 'Automated categorization of incoming emails',
+      benefits: ['Improved organization', 'Faster processing', 'Better routing']
+    },
+    {
+      icon: Brain,
+      title: 'Sentiment Analysis',
+      description: 'AI-powered sentiment analysis of email content',
+      benefits: ['Customer insights', 'Priority detection', 'Response optimization']
+    },
+    {
+      icon: Brain,
+      title: 'Spam Detection',
+      description: 'Advanced spam and phishing detection',
+      benefits: ['Security protection', 'Reduced noise', 'Threat prevention']
+    },
+    {
+      icon: Brain,
+      title: 'Priority Scoring',
+      description: 'Intelligent priority scoring for email handling',
+      benefits: ['Better focus', 'Improved response times', 'Customer satisfaction']
+    },
+    {
+      icon: Brain,
+      title: 'Auto-Response Generation',
+      description: 'AI-generated responses for common inquiries',
+      benefits: ['Faster responses', 'Consistent quality', 'Reduced workload']
+    },
+    {
+      icon: Brain,
+      title: 'Analytics Dashboard',
+      description: 'Comprehensive analytics and reporting',
+      benefits: ['Performance insights', 'Trend analysis', 'Data-driven decisions']
+    }
+  ];
     
   const benefits = [
     'Increase email efficiency by up to 60%',

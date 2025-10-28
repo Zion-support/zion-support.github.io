@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState, useCallback } from 'react';
-import type { PerformanceEventTiming, LayoutShift } from '../types/performance';
 
 interface PerformanceMetrics {
   fcp: number | null;
@@ -11,59 +10,49 @@ interface PerformanceMetrics {
   ttfb: number | null;
 }
 
-export 
+export const usePerformanceMetrics = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    fcp: null,
+    lcp: null,
+    fid: null,
+    cls: null,
+    ttfb: null,
+  });
+
   const measurePerformance = useCallback(() => {
-    if (typeof window === 'undefined') return;
-
-    // Measure First Contentful Paint (FCP)
-    const fcpObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-            if (fcpEntry) {
-        setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
-      }
-    });
-    fcpObserver.observe({ entryTypes: ['paint'] });
-
-    // Measure Largest Contentful Paint (LCP)
-    const lcpObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-            setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
-    });
-    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-
-    // Measure First Input Delay (FID)
-          entries.forEach((entry) => {
-                setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
-      });
-    });
-    fidObserver.observe({ entryTypes: ['first-input'] });
-
-    // Measure Cumulative Layout Shift (CLS)
-    let clsValue = 0;
-    const clsObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-                if (!clsEntry.hadRecentInput) {
-          clsValue += clsEntry.value || 0;
-        }
-      });
-      setMetrics(prev => ({ ...prev, cls: clsValue }));
-    });
-    clsObserver.observe({ entryTypes: ['layout-shift'] });
-
-    // Measure Time to First Byte (TTFB)
-    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    if (navigationEntry) {
-      setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
+    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
+      return;
     }
 
-    // Cleanup observers
-    return () => {
-      fcpObserver.disconnect();
-      lcpObserver.disconnect();
-      fidObserver.disconnect();
-      clsObserver.disconnect();
-    };
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      
+      entries.forEach((entry) => {
+        if (entry.entryType === 'paint') {
+          if (entry.name === 'first-contentful-paint') {
+            setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+          }
+        } else if (entry.entryType === 'largest-contentful-paint') {
+          setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
+        } else if (entry.entryType === 'first-input') {
+          const fid = (entry as any).processingStart - entry.startTime;
+          setMetrics(prev => ({ ...prev, fid }));
+        } else if (entry.entryType === 'layout-shift') {
+          const cls = (entry as any).value;
+          setMetrics(prev => ({ ...prev, cls: prev.cls ? prev.cls + cls : cls }));
+        }
+      });
+    });
+
+    observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
+
+    // Measure TTFB
+    if (performance.timing) {
+      const ttfb = performance.timing.responseStart - performance.timing.navigationStart;
+      setMetrics(prev => ({ ...prev, ttfb }));
+    }
+
+    return () => observer.disconnect();
   }, []);
 
   useEffect(() => {
@@ -71,13 +60,5 @@ export
     return cleanup;
   }, [measurePerformance]);
 
-      
-        return Math.round(totalScore);
-  }, [metrics]);
-
-  return {
-    metrics,
-    getPerformanceScore,
-    measurePerformance,
-  };
+  return metrics;
 };

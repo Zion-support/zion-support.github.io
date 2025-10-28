@@ -1,7 +1,4 @@
-/**
- * Advanced Error Handling Utility
- * Provides comprehensive error tracking and recovery
- */
+'use client';
 
 export interface ErrorInfo {
   message: string;
@@ -11,140 +8,146 @@ export interface ErrorInfo {
   timestamp: number;
   userAgent: string;
   url: string;
-  userId?: string;
-  sessionId?: string;
-  severity: 'low' | 'medium' | 'high' | 'critical';
-  category: 'javascript' | 'network' | 'resource' | 'promise' | 'react' | 'unknown';
 }
 
-export interface ErrorReport {
-  errors: ErrorInfo[];
-  totalErrors: number;
-  criticalErrors: number;
-  lastError?: ErrorInfo;
-  errorRate: number;
-  timestamp: number;
+export interface ErrorHandlingOptions {
+  enableLogging?: boolean;
+  enableReporting?: boolean;
+  enableRetry?: boolean;
+  maxRetries?: number;
 }
 
-class ErrorHandler {
-  private errors: ErrorInfo[] = [];
-  private maxErrors = 100;
-  private isInitialized = false;
+class ErrorHandling {
+  private options: ErrorHandlingOptions;
+  private retryCount: Map<string, number> = new Map();
 
-  constructor() {
-    this.initialize();
+  constructor(options: ErrorHandlingOptions = {}) {
+    this.options = {
+      enableLogging: true,
+      enableReporting: true,
+      enableRetry: false,
+      maxRetries: 3,
+      ...options,
+    };
   }
 
-  private initialize(): void {
+  // Handle JavaScript errors
+  handleError(error: Error, errorInfo?: Partial<ErrorInfo>): void {
+    const errorData: ErrorInfo = {
+      message: error.message,
+      stack: error.stack,
+      timestamp: Date.now(),
+      userAgent: typeof window !== 'undefined' ? navigator.userAgent : 'Unknown',
+      url: typeof window !== 'undefined' ? window.location.href : 'Unknown',
+      ...errorInfo,
+    };
+
+    if (this.options.enableLogging) {
+      console.error('Error handled:', errorData);
+    }
+
+    if (this.options.enableReporting) {
+      this.reportError(errorData);
+    }
+  }
+
+  // Handle promise rejections
+  handlePromiseRejection(event: any): void {
+    const errorData: ErrorInfo = {
+      message: event.reason?.message || 'Unhandled promise rejection',
+      stack: event.reason?.stack,
+      timestamp: Date.now(),
+      userAgent: typeof window !== 'undefined' ? navigator.userAgent : 'Unknown',
+      url: typeof window !== 'undefined' ? window.location.href : 'Unknown',
+    };
+
+    if (this.options.enableLogging) {
+      console.error('Promise rejection handled:', errorData);
+    }
+
+    if (this.options.enableReporting) {
+      this.reportError(errorData);
+    }
+  }
+
+  // Retry a function with exponential backoff
+  async retry<T>(
+    fn: () => Promise<T>,
+    context: string,
+    maxRetries?: number
+  ): Promise<T> {
+    const retries = maxRetries || this.options.maxRetries || 3;
+    const currentRetries = this.retryCount.get(context) || 0;
+
+    if (currentRetries >= retries) {
+      throw new Error(`Max retries (${retries}) exceeded for ${context}`);
+    }
+
+    try {
+      const result = await fn();
+      this.retryCount.delete(context);
+      return result;
+    } catch (error) {
+      this.retryCount.set(context, currentRetries + 1);
+      
+      if (this.options.enableLogging) {
+        console.warn(`Retry ${currentRetries + 1}/${retries} for ${context}:`, error);
+      }
+
+      // Exponential backoff
+      const delay = Math.pow(2, currentRetries) * 1000;
+      await new Promise(resolve => setTimeout(resolve, delay));
+
+      return this.retry(fn, context, maxRetries);
+    }
+  }
+
+  // Report error to external service
+  private reportError(errorInfo: ErrorInfo): void {
     if (typeof window === 'undefined') return;
 
-    // Global error handler
+    // Send to error reporting service
+    if ((window as any).gtag) {
+      (window as any).gtag('event', 'exception', {
+        description: errorInfo.message,
+        fatal: false,
+        custom_map: {
+          component_stack: errorInfo.componentStack,
+          error_boundary: errorInfo.errorBoundary,
+        },
+      });
+    }
+
+    // Send to custom error reporting endpoint
+    fetch('/api/errors', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(errorInfo),
+    }).catch(() => {
+      // Silently fail if error reporting fails
+    });
+  }
+
+  // Initialize error handling
+  initialize(): void {
+    if (typeof window === 'undefined') return;
+
+    // Handle uncaught errors
     window.addEventListener('error', (event) => {
-      this.handleError({
-        message: event.message,
-        stack: event.error?.stack,
-        timestamp: Date.now(),
-        userAgent: navigator.userAgent,
-        url: window.location.href,
-        severity: this.determineSeverity(event.error),
-        category: 'javascript'
+      this.handleError(event.error, {
+        componentStack: 'Global error handler',
       });
     });
 
-    // Unhandled promise rejection handler
+    // Handle unhandled promise rejections
     window.addEventListener('unhandledrejection', (event) => {
-      this.handleError({
-        message: event.reason?.message || 'Unhandled promise rejection',
-        stack: event.reason?.stack,
-        timestamp: Date.now(),
-        userAgent: navigator.userAgent,
-        url: window.location.href,
-        severity: this.determineSeverity(event.reason),
-        category: 'promise'
-      });
+      this.handlePromiseRejection(event);
     });
-
-    this.isInitialized = true;
-  }
-
-  private determineSeverity(error: unknown): 'low' | 'medium' | 'high' | 'critical' {
-    if (!error) return 'low';
-        if (message.includes('chunk') || message.includes('loading') || message.includes('network')) {
-      return 'critical';
-    }
-    if (message.includes('syntax') || message.includes('reference') || message.includes('type')) {
-      return 'high';
-    }
-    if (message.includes('warning') || message.includes('deprecated')) {
-      return 'medium';
-    }
-    return 'low';
-  }
-
-  private handleError(errorInfo: ErrorInfo): void {
-    this.errors.push(errorInfo);
-    if (this.errors.length > this.maxErrors) {
-      this.errors = this.errors.slice(-this.maxErrors);
-    }
-    this.reportError(errorInfo);
-  }
-
-  private reportError(errorInfo: ErrorInfo): void {
-    // Implement error reporting logic here
-    if (errorInfo.severity === 'critical') {
-    // Empty block
-  }
-  }
-
-  public logError(
-    error: Error | string,
-    componentStack?: string,
-    errorBoundary?: string,
-    additionalInfo?: Partial<ErrorInfo>
-  ): void {
-    const errorInfo: ErrorInfo = {
-      message: typeof error === 'string' ? error : error.message,
-      stack: typeof error === 'object' ? error.stack : undefined,
-      componentStack,
-      errorBoundary,
-      timestamp: Date.now(),
-      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
-      url: typeof window !== 'undefined' ? window.location.href : 'unknown',
-      severity: 'medium',
-      category: 'react',
-      ...additionalInfo
-    };
-    this.handleError(errorInfo);
-  }
-
-  public getErrors(): ErrorInfo[] {
-    return [...this.errors];
-  }
-
-  public getErrorReport(): ErrorReport {
-            return {
-      errors: [...this.errors],
-      totalErrors: this.errors.length,
-      criticalErrors,
-      lastError,
-      errorRate: this.calculateErrorRate(),
-      timestamp: Date.now()
-    };
-  }
-
-  private calculateErrorRate(): number {
-    const oneHourAgo = Date.now() - (60 * 60 * 1000);
-        return recentErrors.length / 60;
-  }
-
-  public clearErrors(): void {
-    this.errors = [];
-  }
-
-  public exportErrors(): string {
-    return JSON.stringify(this.getErrorReport(), null, 2);
   }
 }
 
 // Export singleton instance
-export 
+export const errorHandling = new ErrorHandling();
+export default errorHandling;

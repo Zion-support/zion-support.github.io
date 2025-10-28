@@ -4,7 +4,11 @@ interface ApiResponse<T> {
   message?: string;
 }
 
-// RequestInit is available globally in modern environments
+interface RequestOptions {
+  method?: string;
+  headers?: Record<string, string>;
+  body?: string;
+}
 
 class ApiClient {
   private baseUrl: string;
@@ -15,11 +19,10 @@ class ApiClient {
 
   private async request<T>(
     endpoint: string,
-    options: { method?: string; headers?: Record<string, string>; body?: string } = {
-    // Empty block
-  }
+    options: RequestOptions = {}
   ): Promise<ApiResponse<T>> {
-        
+    const url = `${this.baseUrl}${endpoint}`;
+    
     const response = await fetch(url, {
       headers: {
         'Content-Type': 'application/json',
@@ -28,37 +31,46 @@ class ApiClient {
       ...options,
     });
 
-    
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data = await response.json();
     return {
       data,
       status: response.status,
-      message: response.statusText,
-    }
+    };
   }
 
-  async get<T>(endpoint: string, headers?: Record<string, string>): Promise<ApiResponse<T>> {
-    return this.request<T>(endpoint, { method: 'GET', headers });
+  // GET request
+  async get<T>(endpoint: string, options?: RequestOptions): Promise<ApiResponse<T>> {
+    return this.request<T>(endpoint, { ...options, method: 'GET' });
   }
 
-  async post<T>(endpoint: string, data?: unknown, headers?: Record<string, string>): Promise<ApiResponse<T>> {
+  // POST request
+  async post<T>(endpoint: string, data?: any, options?: RequestOptions): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, {
+      ...options,
       method: 'POST',
-      body: JSON.stringify(data),
-      headers,
+      body: data ? JSON.stringify(data) : undefined,
     });
   }
 
-  async put<T>(endpoint: string, data?: unknown, headers?: Record<string, string>): Promise<ApiResponse<T>> {
+  // PUT request
+  async put<T>(endpoint: string, data?: any, options?: RequestOptions): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, {
+      ...options,
       method: 'PUT',
-      body: JSON.stringify(data),
-      headers,
+      body: data ? JSON.stringify(data) : undefined,
     });
   }
 
-  async delete<T>(endpoint: string, headers?: Record<string, string>): Promise<ApiResponse<T>> {
-    return this.request<T>(endpoint, { method: 'DELETE', headers });
+  // DELETE request
+  async delete<T>(endpoint: string, options?: RequestOptions): Promise<ApiResponse<T>> {
+    return this.request<T>(endpoint, { ...options, method: 'DELETE' });
   }
 }
 
-export default new ApiClient();
+// Export singleton instance
+export const apiClient = new ApiClient();
+export default apiClient;

@@ -8,6 +8,22 @@ interface SEOOptimizationProps {
 }
 
 const SEOOptimization: React.FC<SEOOptimizationProps> = memo(({ className = '' }) => {
+  // Breadcrumb items for structured data
+  const breadcrumbItems = [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": window.location.origin
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": `${window.location.origin}/services`
+    }
+  ];
+
   // Add structured data
   const addStructuredData = useCallback(() => {
     if (typeof window === 'undefined') return;

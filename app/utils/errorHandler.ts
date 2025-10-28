@@ -10,76 +10,144 @@ export interface ErrorInfo {
   url: string;
 }
 
-export class ErrorHandler {
-  private static instance: ErrorHandler;
-  private errors: ErrorInfo[] = [];
+export interface ErrorHandlerOptions {
+  enableLogging?: boolean;
+  enableReporting?: boolean;
+  enableRetry?: boolean;
+  maxRetries?: number;
+}
 
-  private constructor() {
-    // Empty block
+class ErrorHandler {
+  private options: ErrorHandlerOptions;
+  private retryCount: Map<string, number> = new Map();
+
+  constructor(options: ErrorHandlerOptions = {}) {
+    this.options = {
+      enableLogging: true,
+      enableReporting: true,
+      enableRetry: false,
+      maxRetries: 3,
+      ...options,
+    };
   }
 
-  public static getInstance(): ErrorHandler {
-    if (!ErrorHandler.instance) {
-      ErrorHandler.instance = new ErrorHandler();
-    }
-    return ErrorHandler.instance;
-  }
-
-  public logError(error: Error, errorInfo?: { componentStack?: string; errorBoundary?: string }): void {
+  // Handle JavaScript errors
+  handleError(error: Error, errorInfo?: Partial<ErrorInfo>): void {
     const errorData: ErrorInfo = {
       message: error.message,
       stack: error.stack,
-      componentStack: errorInfo?.componentStack,
-      errorBoundary: errorInfo?.errorBoundary,
       timestamp: Date.now(),
-      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : 'Unknown',
-      url: typeof window !== 'undefined' ? window.location.href : 'Unknown'
+      userAgent: typeof window !== 'undefined' ? navigator.userAgent : 'Unknown',
+      url: typeof window !== 'undefined' ? window.location.href : 'Unknown',
+      ...errorInfo,
     };
 
-    this.errors.push(errorData);
-    
-    // Send to analytics if available
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'exception', {
-        description: error.message,
-        fatal: false
+    if (this.options.enableLogging) {
+      console.error('Error handled:', errorData);
+    }
+
+    if (this.options.enableReporting) {
+      this.reportError(errorData);
+    }
+  }
+
+  // Handle promise rejections
+  handlePromiseRejection(event: any): void {
+    const errorData: ErrorInfo = {
+      message: event.reason?.message || 'Unhandled promise rejection',
+      stack: event.reason?.stack,
+      timestamp: Date.now(),
+      userAgent: typeof window !== 'undefined' ? navigator.userAgent : 'Unknown',
+      url: typeof window !== 'undefined' ? window.location.href : 'Unknown',
+    };
+
+    if (this.options.enableLogging) {
+      console.error('Promise rejection handled:', errorData);
+    }
+
+    if (this.options.enableReporting) {
+      this.reportError(errorData);
+    }
+  }
+
+  // Retry a function with exponential backoff
+  async retry<T>(
+    fn: () => Promise<T>,
+    context: string,
+    maxRetries?: number
+  ): Promise<T> {
+    const retries = maxRetries || this.options.maxRetries || 3;
+    const currentRetries = this.retryCount.get(context) || 0;
+
+    if (currentRetries >= retries) {
+      throw new Error(`Max retries (${retries}) exceeded for ${context}`);
+    }
+
+    try {
+      const result = await fn();
+      this.retryCount.delete(context);
+      return result;
+    } catch (error) {
+      this.retryCount.set(context, currentRetries + 1);
+      
+      if (this.options.enableLogging) {
+        console.warn(`Retry ${currentRetries + 1}/${retries} for ${context}:`, error);
+      }
+
+      // Exponential backoff
+      const delay = Math.pow(2, currentRetries) * 1000;
+      await new Promise(resolve => setTimeout(resolve, delay));
+
+      return this.retry(fn, context, maxRetries);
+    }
+  }
+
+  // Report error to external service
+  private reportError(errorInfo: ErrorInfo): void {
+    if (typeof window === 'undefined') return;
+
+    // Send to error reporting service
+    if ((window as any).gtag) {
+      (window as any).gtag('event', 'exception', {
+        description: errorInfo.message,
+        fatal: false,
+        custom_map: {
+          component_stack: errorInfo.componentStack,
+          error_boundary: errorInfo.errorBoundary,
+        },
       });
     }
 
-    // Send to error reporting service if configured
-    this.sendToErrorService(errorData);
+    // Send to custom error reporting endpoint
+    fetch('/api/errors', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(errorInfo),
+    }).catch(() => {
+      // Silently fail if error reporting fails
+    });
   }
 
-  private async sendToErrorService(errorData: ErrorInfo): Promise<void> {
-    try {
-      // This would typically send to a service like Sentry, LogRocket, etc.
-      // For now, we'll just log it
-          } catch {
-    // Error handled
-  }
-  }
+  // Initialize error handling
+  initialize(): void {
+    if (typeof window === 'undefined') return;
 
-  public getErrors(): ErrorInfo[] {
-    return [...this.errors];
-  }
+    // Handle uncaught errors
+    window.addEventListener('error', (event) => {
+      this.handleError(event.error, {
+        componentStack: 'Global error handler',
+      });
+    });
 
-  public clearErrors(): void {
-    this.errors = [];
-  }
-
-  public getErrorCount(): number {
-    return this.errors.length;
+    // Handle unhandled promise rejections
+    window.addEventListener('unhandledrejection', (event) => {
+      this.handlePromiseRejection(event);
+    });
   }
 }
 
-export 
-// Global error handler
-if (typeof window !== 'undefined') {
-  window.addEventListener('error', (event) => {
-    errorHandler.logError(event.error);
-  });
-
-  window.addEventListener('unhandledrejection', (event) => {
-    errorHandler.logError(new Error(event.reason));
-  });
-}
+// Export singleton instance
+export const errorHandler = new ErrorHandler();
+export default errorHandler;

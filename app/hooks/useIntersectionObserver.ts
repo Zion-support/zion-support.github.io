@@ -6,15 +6,23 @@ interface UseIntersectionObserverOptions {
   rootMargin?: string;
 }
 
-export   const [node, setNode] = useState<Element | null>(null);
+export const useIntersectionObserver = (options: UseIntersectionObserverOptions = {}) => {
+  const [node, setNode] = useState<Element | null>(null);
+  const [isIntersecting, setIsIntersecting] = useState(false);
   const observer = useRef<IntersectionObserver | null>(null);
 
   useEffect(() => {
     if (!node) return;
 
     observer.current = new IntersectionObserver(
-      ([entry]) => setEntry(entry),
-      options
+      ([entry]) => {
+        setIsIntersecting(entry.isIntersecting);
+      },
+      {
+        threshold: options.threshold || 0,
+        root: options.root || null,
+        rootMargin: options.rootMargin || '0px',
+      }
     );
 
     observer.current.observe(node);
@@ -24,7 +32,7 @@ export   const [node, setNode] = useState<Element | null>(null);
         observer.current.disconnect();
       }
     };
-  }, [node, options]);
+  }, [node, options.threshold, options.root, options.rootMargin]);
 
-  return [setNode, entry] as const;
-}
+  return [setNode, isIntersecting] as const;
+};

@@ -2,10 +2,48 @@
 import React from "react";
 import Footer from '@/components/Footer';
 import Navigation from '@/components/Navigation';
-import { Brain } from "lucide-react";
+import { Brain, ArrowRight, CheckCircle } from "lucide-react";
 
 export 
 const AiPoweredDevopsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'Automated CI/CD Pipelines',
+      description: 'Streamlined development and deployment processes',
+      benefits: ['Faster deployments', 'Reduced errors', 'Automated testing']
+    },
+    {
+      icon: Brain,
+      title: 'Intelligent Monitoring',
+      description: 'AI-powered monitoring and alerting systems',
+      benefits: ['Proactive alerts', 'Performance insights', 'Anomaly detection']
+    },
+    {
+      icon: Brain,
+      title: 'Predictive Scaling',
+      description: 'Automated scaling based on predictive analytics',
+      benefits: ['Cost optimization', 'Performance maintenance', 'Resource efficiency']
+    },
+    {
+      icon: Brain,
+      title: 'Security Automation',
+      description: 'Automated security scanning and compliance checks',
+      benefits: ['Vulnerability detection', 'Compliance monitoring', 'Security updates']
+    },
+    {
+      icon: Brain,
+      title: 'Performance Optimization',
+      description: 'Continuous performance monitoring and optimization',
+      benefits: ['Speed improvements', 'Resource optimization', 'User experience']
+    },
+    {
+      icon: Brain,
+      title: 'Cost Management',
+      description: 'Intelligent cost tracking and optimization',
+      benefits: ['Budget control', 'Cost analysis', 'Resource optimization']
+    }
+  ];
     
   const benefits = [
     'Increase efficiency by up to 50%',

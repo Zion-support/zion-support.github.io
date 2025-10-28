@@ -4,7 +4,21 @@ import React, { memo } from 'react';
 import { usePerformanceMetrics } from '../hooks/usePerformanceMetrics';
 
 const PerformanceDashboard: React.FC = memo(() => {
-  const { metrics, getPerformanceScore } = usePerformanceMetrics();
+  const metrics = usePerformanceMetrics();
+  
+  // Calculate performance score based on metrics
+  const getPerformanceScore = () => {
+    let score = 100;
+    
+    if (metrics.fcp && metrics.fcp > 1800) score -= 20;
+    if (metrics.lcp && metrics.lcp > 2500) score -= 20;
+    if (metrics.fid && metrics.fid > 100) score -= 20;
+    if (metrics.cls && metrics.cls > 0.1) score -= 20;
+    if (metrics.ttfb && metrics.ttfb > 600) score -= 20;
+    
+    return Math.max(0, score);
+  };
+  
   const score = getPerformanceScore();
 
   const getScoreColor = (score: number) => {

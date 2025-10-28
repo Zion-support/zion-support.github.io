@@ -78,6 +78,12 @@ class PerformanceMonitor {
   }
 
   private checkThresholds(metrics: PerformanceMetrics): void {
+    const thresholds = {
+      loadTime: 3000,
+      renderTime: 1000,
+      memoryUsage: 50,
+      networkLatency: 500,
+    };
     
     Object.entries(thresholds).forEach(([key, threshold]) => {
       const value = metrics[key as keyof PerformanceMetrics];

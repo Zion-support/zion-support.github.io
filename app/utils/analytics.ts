@@ -1,94 +1,75 @@
 'use client';
-import React, { useEffect } from 'react';
-// Analytics utilities for tracking user interactions and performance
+
 interface AnalyticsEvent {
-  category: string;
-  action: string;
-  label?: string;
-  value?: number;
+  name: string;
+  properties?: Record<string, any>;
   timestamp?: number;
-  custom_parameters?: Record<string, unknown>}
+}
 
 class Analytics {
-  private static instance: Analytics;
   private events: AnalyticsEvent[] = [];
 
-  static getInstance(): Analytics {
-    if (!Analytics.instance) {
-      Analytics.instance = new Analytics()}
-    return Analytics.instance}
+  // Track an event
+  track(eventName: string, properties?: Record<string, any>): void {
+    const event: AnalyticsEvent = {
+      name: eventName,
+      properties,
+      timestamp: Date.now(),
+    };
 
-  // Track custom events
-  track(event: AnalyticsEvent): void {
-    this.events.push({
-      ...event,
-      timestamp: Date.now()
+    this.events.push(event);
+    this.sendToAnalytics(event);
+  }
+
+  // Track page view
+  pageView(pageName: string, properties?: Record<string, any>): void {
+    this.track('page_view', {
+      page_name: pageName,
+      ...properties,
     });
-
-    // In production, you would send this to your analytics service
-    if (false) {
-      this.sendToAnalytics(event)} else {
-    // Empty block
-  }
   }
 
-  // Track page views
-  trackPageView(page: string, title?: string): void {
-    this.track()}
+  // Track user action
+  action(actionName: string, properties?: Record<string, any>): void {
+    this.track('user_action', {
+      action_name: actionName,
+      ...properties,
+    });
+  }
 
-  // Track user interactions
-  trackClick(element: string, location?: string): void {
-    this.track()}
-
-  // Track form submissions
-  trackFormSubmission(formName: string, success: boolean): void {
-    this.track({
-      category: "Form",
-      action: success ? "Submit Success" : "Submit Error",
-      label: formName
-    })}
-
-  // Track performance metrics
-  trackPerformance(metric: string, value: number, unit: string = "ms"): void {
-    this.track()}
-
-  // Track errors
-  trackError(error: Error, context?: string): void {
-    this.track()}
+  // Track performance metric
+  performance(metricName: string, value: number, properties?: Record<string, any>): void {
+    this.track('performance_metric', {
+      metric_name: metricName,
+      value,
+      ...properties,
+    });
+  }
 
   // Get all events
   getEvents(): AnalyticsEvent[] {
-    return [...this.events]}
+    return [...this.events];
+  }
 
   // Clear events
   clearEvents(): void {
-    this.events = []}
+    this.events = [];
+  }
 
   // Send to analytics service (implement based on your analytics provider)
   private sendToAnalytics(event: AnalyticsEvent): void {
     // Example implementation for Google Analytics
-    if () => void }).gtag) {
-      () => void }).gtag()}
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', event.name, event.properties);
+    }
+
+    // Example implementation for other analytics services
+    if (typeof window !== 'undefined' && (window as any).analytics) {
+      (window as any).analytics.track(event.name, event.properties);
+    }
   }
 }
 
-export const analytics = Analytics.getInstance();
-
-// React hooks for easy integration
-export function useAnalytics() {
-  return {
-    track: analytics.track.bind(analytics),
-    trackPageView: analytics.trackPageView.bind(analytics),
-    trackClick: analytics.trackClick.bind(analytics),
-    trackFormSubmission: analytics.trackFormSubmission.bind(analytics),
-    trackPerformance: analytics.trackPerformance.bind(analytics),
-    trackError: analytics.trackError.bind(analytics)
-  }}
-
-// Higher-order component for automatic page view tracking
-export function withAnalytics<T extends React.ComponentType<unknown>>(PageComponent: T): T {
-  return ((props: unknown) => {
-    const { trackPageView } = useAnalytics();
-    React.useEffect(() => {
-      trackPageView(window.location.pathname, document.title)}, [trackPageView]);
-    return React.createElement(PageComponent, props)}) as T}
+// Export singleton instance
+export const analytics = new Analytics();
+export default analytics;

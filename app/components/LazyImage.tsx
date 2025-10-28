@@ -1,7 +1,6 @@
 'use client';
 
-
-import React, { useEffect }, { useState, useRef, useEffect } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 
 interface LazyImageProps {
   src: string;
@@ -16,7 +15,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
   src,
   alt,
   className = '',
-  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PC9zdmc+',
+  placeholder = '/placeholder.jpg',
   onLoad,
   onError,
 }) => {
@@ -26,8 +25,19 @@ const LazyImage: React.FC<LazyImageProps> = ({
   const imgRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
-              observer.disconnect();
-        }
+    if (typeof window === 'undefined' || !('IntersectionObserver' in window)) {
+      setIsInView(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsInView(true);
+            observer.disconnect();
+          }
+        });
       },
       { threshold: 0.1 }
     );
@@ -50,34 +60,28 @@ const LazyImage: React.FC<LazyImageProps> = ({
   };
 
   return (
-    <div className={`relative overflow-hidden ${className}`}>
-      <img
-        ref={imgRef}
-        src={isInView ? src : placeholder}
-        alt={alt}
-        className={`transition-opacity duration-300 ${
-          isLoaded ? 'opacity-100' : 'opacity-0'
-        } ${hasError ? 'opacity-50' : ''}`}
-        onLoad={handleLoad}
-        onError={handleError}
-        loading="lazy"
-        decoding="async"
-      />
-      {!isLoaded && !hasError && (
-        <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
-          <div className="w-8 h-8 border-2 border-gray-300 border-t-blue-500 rounded-full animate-spin"></div>
+    <div ref={imgRef} className={`lazy-image-container ${className}`}>
+      {!isInView ? (
+        <div className="lazy-image-placeholder">
+          <img
+            src={placeholder}
+            alt="Loading..."
+            className="placeholder-image"
+          />
         </div>
-      )}
-      {hasError && (
-        <div className="absolute inset-0 bg-gray-100 flex items-center justify-center">
-          <span className="text-gray-400 text-sm">Failed to load image</span>
-        </div>
+      ) : (
+        <img
+          src={hasError ? placeholder : src}
+          alt={alt}
+          className={`lazy-image ${isLoaded ? 'loaded' : 'loading'}`}
+          onLoad={handleLoad}
+          onError={handleError}
+          loading="lazy"
+          decoding="async"
+        />
       )}
     </div>
   );
 };
 
-LazyImage.displayName = 'LazyImage';
-
-export { LazyImage };
 export default LazyImage;

@@ -14,12 +14,11 @@ interface PerformanceMetrics {
   networkLatency: number;
 }
 
-export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {
-    // Empty block
-  }) => {
+export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) => {
   // Component name for performance tracking
-  const componentName = options.component || 'unknown';
-
+  const componentName = options.component || 'Unknown';
+  
+  // State for performance metrics
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
     renderTime: 0,
@@ -27,102 +26,112 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     networkLatency: 0,
   });
 
-  const [isOptimized, setIsOptimized] = useState(false);
-    const mountTimeRef = useRef<number>(0);
+  // Refs for performance tracking
+  const startTimeRef = useRef<number>(0);
+  const renderStartRef = useRef<number>(0);
 
-  useEffect(() => {
-    mountTimeRef.current = performance.now();
-    renderCountRef.current += 1;
-    
-    // Log component performance tracking
-    
-    // Measure load time
-    const measureLoadTime = () => {
-      const loadTime = performance.now();
+  // Measure load time
+  const measureLoadTime = useCallback(() => {
+    if (typeof window !== 'undefined') {
+      const loadTime = performance.now() - startTimeRef.current;
       setMetrics(prev => ({ ...prev, loadTime }));
-    };
-
-    // Measure render time
-          requestAnimationFrame(() => {
-                setMetrics(prev => ({ ...prev, renderTime }));
-      });
-    };
-
-    // Measure memory usage
-    const measureMemoryUsage = () => {
-      if ('memory' in performance) {
-        const memory = (performance as unknown as { memory: { usedJSHeapSize: number } }).memory;
-        const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
-        setMetrics(prev => ({ ...prev, memoryUsage }));
-      }
-    };
-
-    // Measure network latency
-          fetch('/api/ping', { method: 'HEAD' })
-        .then(() => {
-                    setMetrics(prev => ({ ...prev, networkLatency: latency }));
-        })
-        .catch(() => {
-          // Fallback if ping endpoint doesn't exist
-          setMetrics(prev => ({ ...prev, networkLatency: 0 }));
-        });
-    };
-
-    // Run measurements
-    measureLoadTime();
-    measureRenderTime();
-    measureMemoryUsage();
-    measureNetworkLatency();
-
-    // Check if performance is optimized
-     // Network latency under 200ms
-      setIsOptimized(isOptimized);
-    };
-
-    // Check optimization after metrics are updated
-    const timeoutId = setTimeout(checkOptimization, 1000);
-
-    return () => clearTimeout(timeoutId);
-  }, [componentName, metrics.loadTime, metrics.renderTime, metrics.memoryUsage, metrics.networkLatency]);
-
-  const optimizePerformance = useCallback(() => {
-    if (typeof document === 'undefined') return;
-
-    // Preload critical resources
-    const criticalResources = [
-      '/fonts/inter.woff2',
-      '/images/hero-bg.jpg',
-      '/images/logo.png',
-    ];
-
-    criticalResources.forEach((resource) => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = resource;
-      link.as = resource.endsWith('.woff2') ? 'font' : 'image';
-      if (resource.endsWith('.woff2')) {
-        link.crossOrigin = 'anonymous';
-      }
-      document.head.appendChild(link);
-    });
-
-    // Optimize images
-                  img.src = img.dataset.src || '';
-          img.classList.remove('lazy');
-          imageObserver.unobserve(img);
-        }
-      });
-    });
-
-    images.forEach((img) => imageObserver.observe(img));
-
-    return () => imageObserver.disconnect();
+    }
   }, []);
 
+  // Measure render time
+  const measureRenderTime = useCallback(() => {
+    if (typeof window !== 'undefined') {
+      const renderTime = performance.now() - renderStartRef.current;
+      setMetrics(prev => ({ ...prev, renderTime }));
+    }
+  }, []);
+
+  // Measure memory usage
+  const measureMemoryUsage = useCallback(() => {
+    if (typeof window !== 'undefined' && 'memory' in performance) {
+      const memory = (performance as unknown as { memory: { usedJSHeapSize: number } }).memory;
+      const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
+      setMetrics(prev => ({ ...prev, memoryUsage }));
+    }
+  }, []);
+
+  // Measure network latency
+  const measureNetworkLatency = useCallback(() => {
+    if (typeof window !== 'undefined') {
+      const startTime = performance.now();
+      fetch('/api/ping', { method: 'HEAD' })
+        .then(() => {
+          const latency = performance.now() - startTime;
+          setMetrics(prev => ({ ...prev, networkLatency: latency }));
+        })
+        .catch(() => {
+          // Ignore network errors for latency measurement
+        });
+    }
+  }, []);
+
+  // Error tracking
+  const trackError = useCallback((error: Error, errorInfo?: any) => {
+    if (options.trackErrors) {
+      console.error(`Error in ${componentName}:`, error, errorInfo);
+      
+      // Send to analytics if enabled
+      if (options.trackAnalytics && typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'exception', {
+          description: error.message,
+          fatal: false,
+          custom_map: {
+            component: componentName,
+          },
+        });
+      }
+    }
+  }, [componentName, options.trackErrors, options.trackAnalytics]);
+
+  // Performance tracking
+  const trackPerformance = useCallback((metricName: string, value: number) => {
+    if (options.trackPerformance) {
+      console.log(`Performance metric in ${componentName}: ${metricName} = ${value}ms`);
+      
+      // Send to analytics if enabled
+      if (options.trackAnalytics && typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'timing_complete', {
+          name: metricName,
+          value: Math.round(value),
+          custom_map: {
+            component: componentName,
+          },
+        });
+      }
+    }
+  }, [componentName, options.trackPerformance, options.trackAnalytics]);
+
+  // Initialize performance tracking
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      startTimeRef.current = performance.now();
+      renderStartRef.current = performance.now();
+    }
+  }, []);
+
+  // Measure performance on mount
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      measureLoadTime();
+      measureRenderTime();
+      measureMemoryUsage();
+      measureNetworkLatency();
+    }
+  }, [measureLoadTime, measureRenderTime, measureMemoryUsage, measureNetworkLatency]);
+
+  // Return performance utilities
   return {
     metrics,
-    isOptimized,
-    optimizePerformance,
-    renderCount: renderCountRef.current,
+    trackError,
+    trackPerformance,
+    measureLoadTime,
+    measureRenderTime,
+    measureMemoryUsage,
+    measureNetworkLatency,
   };
 };

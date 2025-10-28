@@ -1,14 +1,37 @@
-'use client'
-import { ArrowRight, Clock, Shield } from 'lucide-react';;
+'use client';
+import React from 'react';
+import { ArrowRight, Clock, Shield, CheckCircle } from 'lucide-react';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 
-  
+export default function CompliancePage() {
   const stats = [
     { label: 'Data Protected', value: '99.9%', icon: Shield },
     { label: 'Backup Success Rate', value: '100%', icon: CheckCircle },
     { label: 'Recovery Time', value: '< 1 min', icon: Clock }
   ];
 
-export default function PageFixedPage() {
+  const features = [
+    {
+      icon: Shield,
+      title: 'Automated Backups',
+      description: 'Scheduled and automated backup processes',
+      benefits: ['Daily backups', 'Incremental updates', 'Zero downtime']
+    },
+    {
+      icon: Clock,
+      title: 'Fast Recovery',
+      description: 'Quick data recovery with minimal downtime',
+      benefits: ['< 1 minute recovery', 'Point-in-time restore', 'Instant access']
+    },
+    {
+      icon: CheckCircle,
+      title: 'Data Integrity',
+      description: 'Ensuring data consistency and reliability',
+      benefits: ['Checksum verification', 'Data validation', 'Error detection']
+    }
+  ];
+
   return (
     <>
       <Navigation />

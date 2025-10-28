@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export const useLazyLoading = () => {
   const [isLoaded, setIsLoaded] = useState(false);

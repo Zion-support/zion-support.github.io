@@ -1,4 +1,4 @@
-import { useCallback, useState, useRef } from 'react';
+import { useCallback, useState, useRef, useEffect } from 'react';
 
 interface UsePerformanceMonitorOptions {
   enabled?: boolean;
@@ -13,69 +13,88 @@ interface PerformanceData {
   renderTime: number;
 }
 
-export   const [isMonitoringFPS, setIsMonitoringFPS] = useState(false);
+export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}) => {
+  const { enabled = true, threshold = 60, measureMemoryUsage = true } = options;
+  
+  const [performanceData, setPerformanceData] = useState<PerformanceData>({
+    fps: 0,
+    memoryUsage: 0,
+    loadTime: 0,
+    renderTime: 0,
+  });
+
   const frameCountRef = useRef(0);
   const lastTimeRef = useRef(performance.now());
-
-const measureMemoryUsage = useCallback(() => {
-    // Measure memory usage
-    let memoryUsage = 0;
-    if ('memory' in performance) {
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
-      if (memory) {
-        memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
-      }
-    }
-    return memoryUsage;
-}, []);
-
-      const memoryUsage = measureMemoryUsage();
-    
-    // Try to get navigation timing if available, otherwise use performance.now()
-    const loadTime = performance.timing ? 
-      performance.timing.loadEventEnd - performance.timing.navigationStart : 
-      performance.now();
-    
-    // Update metrics with performance data
-    setMetrics(prev => ({
-      ...prev,
-      loadTime,
-      memoryUsage,
-      renderTime: performance.now() - startTime
-    }));
-  }, [measureMemoryUsage]);
+  const animationFrameRef = useRef<number>();
 
   const measureFPS = useCallback(() => {
-    if (!isMonitoringFPS) return;
+    if (!enabled) return;
 
+    const now = performance.now();
     frameCountRef.current++;
-    const currentTime = performance.now();
-    const deltaTime = currentTime - lastTimeRef.current;
 
-    if (deltaTime >= 1000) {
-      const fps = Math.round((frameCountRef.current * 1000) / deltaTime);
-      setMetrics(prev => ({ ...prev, fps }));
+    if (now - lastTimeRef.current >= 1000) {
+      const fps = Math.round((frameCountRef.current * 1000) / (now - lastTimeRef.current));
+      setPerformanceData(prev => ({ ...prev, fps }));
+      
       frameCountRef.current = 0;
-      lastTimeRef.current = currentTime;
+      lastTimeRef.current = now;
     }
 
-    requestAnimationFrame(measureFPS);
-  }, [isMonitoringFPS]);
+    animationFrameRef.current = requestAnimationFrame(measureFPS);
+  }, [enabled]);
+
+  const measureMemory = useCallback(() => {
+    if (!measureMemoryUsage || typeof window === 'undefined' || !('memory' in performance)) {
+      return;
+    }
+
+    const memory = (performance as any).memory;
+    const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
+    setPerformanceData(prev => ({ ...prev, memoryUsage }));
+  }, [measureMemoryUsage]);
+
+  const measureLoadTime = useCallback(() => {
+    if (typeof window === 'undefined') return;
+
+    const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+    setPerformanceData(prev => ({ ...prev, loadTime }));
+  }, []);
+
+  const measureRenderTime = useCallback(() => {
+    if (typeof window === 'undefined') return;
+
+    const renderTime = performance.now();
+    setPerformanceData(prev => ({ ...prev, renderTime }));
+  }, []);
 
   useEffect(() => {
-    if (options.enabled) {
-      setIsMonitoringFPS(true);
+    if (enabled) {
       measureFPS();
-      measurePerformance();
+      measureLoadTime();
+      measureRenderTime();
     }
 
     return () => {
-      setIsMonitoringFPS(false);
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current);
+      }
+    };
+  }, [enabled, measureFPS, measureLoadTime, measureRenderTime]);
+
+  useEffect(() => {
+    if (measureMemoryUsage) {
+      const interval = setInterval(measureMemory, 1000);
+      return () => clearInterval(interval);
     }
-  }, [options.enabled, measureFPS, measurePerformance]);
+  }, [measureMemoryUsage, measureMemory]);
 
   return {
-    metrics,
-    isMonitoringFPS,triggerPerformanceMeasurement: measurePerformance,
-  }
-}
+    performanceData,
+    isPerformanceGood: performanceData.fps >= threshold,
+    measureFPS,
+    measureMemory,
+    measureLoadTime,
+    measureRenderTime,
+  };
+};

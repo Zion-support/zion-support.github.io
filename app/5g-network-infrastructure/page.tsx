@@ -1,8 +1,47 @@
 import React from "react";
-import { Brain } from 'lucide-react';
+import { Brain, ArrowRight, CheckCircle } from 'lucide-react';
 
 export default function FiveGNetworkInfrastructure() {
   
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Network Optimization',
+      description: 'Advanced AI algorithms optimize network performance in real-time',
+      benefits: ['Intelligent routing', 'Traffic optimization', 'Resource allocation']
+    },
+    {
+      icon: Brain,
+      title: 'Real-time Performance Monitoring',
+      description: 'Comprehensive monitoring of network performance metrics',
+      benefits: ['Live dashboards', 'Alert systems', 'Performance analytics']
+    },
+    {
+      icon: Brain,
+      title: 'Automated Capacity Planning',
+      description: 'AI-driven capacity planning and resource management',
+      benefits: ['Predictive scaling', 'Cost optimization', 'Resource forecasting']
+    },
+    {
+      icon: Brain,
+      title: 'Predictive Maintenance',
+      description: 'Proactive maintenance using machine learning predictions',
+      benefits: ['Failure prevention', 'Reduced downtime', 'Cost savings']
+    },
+    {
+      icon: Brain,
+      title: 'Edge Computing Integration',
+      description: 'Seamless integration with edge computing infrastructure',
+      benefits: ['Low latency', 'Distributed processing', 'Edge optimization']
+    },
+    {
+      icon: Brain,
+      title: 'Network Security Enhancement',
+      description: 'Advanced security measures for 5G network protection',
+      benefits: ['Threat detection', 'Security monitoring', 'Incident response']
+    }
+  ];
+
   const benefits = [
     'Increase network efficiency by up to 50%',
     'Reduce costs by 30% with automation',

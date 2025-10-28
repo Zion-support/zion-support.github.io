@@ -1,12 +1,23 @@
-import React, { useEffect } from 'react';
+'use client';
 
-export     fn();
-          }
+import { useEffect } from 'react';
+
+// Performance monitoring utilities
+export const usePerformanceMonitor = (fn: () => void) => {
+  useEffect(() => {
+    if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
+      fn();
+    } else {
+      fn();
+    }
+  }, []);
 };
 
 class PerformanceMonitor {
   private static instance: PerformanceMonitor;
   private metrics = new Map<string, number>();
+
+  private constructor() {}
 
   static getInstance(): PerformanceMonitor {
     if (!PerformanceMonitor.instance) {
@@ -15,89 +26,34 @@ class PerformanceMonitor {
     return PerformanceMonitor.instance;
   }
 
-  startTiming(label: string): void {
-    if (typeof window !== "undefined" && "performance" in window) {
-      performance.mark(`${label}-start`);
-    }
+  // Measure performance
+  measure(name: string, fn: () => void): void {
+    const start = performance.now();
+    fn();
+    const end = performance.now();
+    this.metrics.set(name, end - start);
   }
 
-  endTiming(label: string): number {
-    if (typeof window !== "undefined" && "performance" in window) {
-      performance.mark(`${label}-end`);
-      performance.measure(label, `${label}-start`, `${label}-end`);
-      const measure = performance.getEntriesByName(label)[0];
-      const duration = measure ? measure.duration : 0;
-      this.metrics.set(label, duration);
-      return duration;
-    }
-    return 0;
+  // Get metrics
+  getMetrics(): Map<string, number> {
+    return new Map(this.metrics);
   }
 
-  getMetric(label: string): number | undefined {
-    return this.metrics.get(label);
-  }
-
-  getAllMetrics(): Record<string, number> {
-    return Object.fromEntries(this.metrics);
-  }
-
+  // Clear metrics
   clearMetrics(): void {
     this.metrics.clear();
   }
 
-  // Web Vitals monitoring
-  measureWebVitals(): void {
-    if (typeof window === "undefined") return;
+  // Get performance score
+  getPerformanceScore(): number {
+    const metrics = Array.from(this.metrics.values());
+    if (metrics.length === 0) return 100;
 
-    // Largest Contentful Paint
-    new PerformanceObserver((entryList) => {
-                  this.metrics.set("LCP", lastEntry.startTime);
-    }).observe({ entryTypes: ["largest-contentful-paint"] });
-
-    // First Input Delay
-    new PerformanceObserver((entryList) => {
-            entries.forEach((entry) => {
-        // Use processingStart if available, otherwise calculate from startTime
-                this.metrics.set("FID", processingStart - entry.startTime);
-      });
-    }).observe({ entryTypes: ["first-input"] });
-
-    // Cumulative Layout Shift
-    let clsValue = 0;
-    new PerformanceObserver((entryList) => {
-            entries.forEach((entry) => {
-        if (!(entry as { hadRecentInput?: boolean }).hadRecentInput) {
-          clsValue += (entry as { value?: number }).value || 0;
-        }
-      });
-      this.metrics.set("CLS", clsValue);
-    }).observe({ entryTypes: ["layout-shift"] });
+    const average = metrics.reduce((sum, value) => sum + value, 0) / metrics.length;
+    return Math.max(0, 100 - average);
   }
 }
 
-// Hook for React components
-export function usePerformanceMonitor() {
-  const monitor = PerformanceMonitor.getInstance();
-  return {
-    startTiming: monitor.startTiming.bind(monitor),
-    endTiming: monitor.endTiming.bind(monitor),
-    getMetric: monitor.getMetric.bind(monitor),
-    getAllMetrics: monitor.getAllMetrics.bind(monitor)
-  };
-}
-
-// Utility function to measure component render time
-export function measureComponentRender(componentName: string) {
-  return function <T extends React.ComponentType<unknown>>(PageComponent: T): T {
-    return ((props: unknown) => {
-      const monitor = PerformanceMonitor.getInstance();
-      React.useEffect(() => {
-        monitor.startTiming(`${componentName}-render`);
-        return () => {
-          monitor.endTiming(`${componentName}-render`);
-        };
-      });
-      return React.createElement(PageComponent, props);
-    }) as T;
-  };
-}
+// Export singleton instance
+export const performanceMonitor = PerformanceMonitor.getInstance();
+export default performanceMonitor;

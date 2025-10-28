@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect }, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import Head from 'next/head';
 
 interface SEOData {
@@ -8,147 +8,126 @@ interface SEOData {
   description: string;
   keywords: string[];
   canonicalUrl: string;
-  ogImage: string;
-  ogType: string;
-  twitterCard: string;
-  structuredData: Record<string, unknown>;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  ogUrl?: string;
+  twitterCard?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string;
+  structuredData?: any;
 }
 
-interface AdvancedSEOEnhancerProps {
+interface SEOEnhancerProps {
   seoData: SEOData;
-  enableAutoOptimization?: boolean;
-  enableStructuredData?: boolean;
   enableSocialMeta?: boolean;
+  enableStructuredData?: boolean;
+  enableAnalytics?: boolean;
 }
 
-export const AdvancedSEOEnhancer: React.FC<AdvancedSEOEnhancerProps> = ({
+const AdvancedSEOEnhancer: React.FC<SEOEnhancerProps> = ({
   seoData,
-  enableAutoOptimization = true,
-  enableStructuredData = true,
   enableSocialMeta = true,
+  enableStructuredData = true,
+  enableAnalytics = true,
 }) => {
-  const [optimizedData, setOptimizedData] = useState<SEOData>(seoData);
-
-  // Auto-optimize SEO data
-  const optimizeSEOData = useCallback(() => {
-    if (!enableAutoOptimization) return;
-
-    try {
-      const optimized = { ...seoData };
-
-      // Optimize title length (50-60 characters)
-      if (optimized.title.length > 60) {
-        optimized.title = optimized.title.substring(0, 57) + '...';
-      }
-
-      // Optimize description length (150-160 characters)
-      if (optimized.description.length > 160) {
-        optimized.description = optimized.description.substring(0, 157) + '...';
-      }
-
-      // Ensure keywords are unique and relevant
-      optimized.keywords = [...new Set(optimized.keywords)].slice(0, 10);
-
-      // Generate canonical URL if not provided
-      if (!optimized.canonicalUrl && typeof window !== 'undefined') {
-        optimized.canonicalUrl = window.location.href;
-      }
-
-      // Generate OG image if not provided
-      if (!optimized.ogImage) {
-        optimized.ogImage = '/images/og-default.jpg';
-      }
-
-      setOptimizedData(optimized);
-    } catch {
-    // Error handled
-  }
-  }, [seoData, enableAutoOptimization]);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   // Generate structured data
   const generateStructuredData = useCallback(() => {
-    if (!enableStructuredData) return null;
+    if (!enableStructuredData || !seoData.structuredData) return null;
 
-    try {
-      const baseUrl = typeof window !== 'undefined' ? window.location.origin : '';
-      
-      const structuredData = {
-        '@context': 'https://schema.org',
-        '@type': 'Organization',
-        name: 'Zion Tech Group',
-        description: optimizedData.description,
-        url: baseUrl,
-        logo: `${baseUrl}/images/logo.png`,
-        sameAs: [
-          'https://twitter.com/ziontechgroup',
-          'https://linkedin.com/company/ziontechgroup',
-          'https://github.com/ziontechgroup',
-        ],
-        contactPoint: {
-          '@type': 'ContactPoint',
-          telephone: '+1-555-0123',
-          contactType: 'customer service',
-          availableLanguage: 'English',
-        },
-        address: {
-          '@type': 'PostalAddress',
-          streetAddress: '123 Tech Street',
-          addressLocality: 'San Francisco',
-          addressRegion: 'CA',
-          postalCode: '94105',
-          addressCountry: 'US',
-        },
-        ...optimizedData.structuredData,
-      };
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: seoData.title,
+      description: seoData.description,
+      url: seoData.canonicalUrl,
+      ...seoData.structuredData,
+    };
+  }, [enableStructuredData, seoData]);
 
-      return structuredData;
-    } catch (error) {
-            return null;
+  // Initialize analytics
+  const initializeAnalytics = useCallback(() => {
+    if (!enableAnalytics || typeof window === 'undefined') return;
+
+    // Google Analytics
+    if ((window as any).gtag) {
+      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
+        page_title: seoData.title,
+        page_location: seoData.canonicalUrl,
+      });
     }
-  }, [optimizedData, enableStructuredData]);
+  }, [enableAnalytics, seoData]);
 
-  // Initialize SEO optimization
+  // Effect to initialize on mount
   useEffect(() => {
-    optimizeSEOData();
-  }, [optimizeSEOData]);
+    setIsLoaded(true);
+    initializeAnalytics();
+  }, [initializeAnalytics]);
 
   const structuredData = generateStructuredData();
 
   return (
     <Head>
       {/* Basic Meta Tags */}
-      <title>{optimizedData.title}</title>
-      <meta name="description" content={optimizedData.description} />
-      <meta name="keywords" content={optimizedData.keywords.join(', ')} />
-      <meta name="robots" content="index, follow" />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      
-      {/* Canonical URL */}
-      <link rel="canonical" href={optimizedData.canonicalUrl} />
-      
+      <title>{seoData.title}</title>
+      <meta name="description" content={seoData.description} />
+      <meta name="keywords" content={seoData.keywords.join(', ')} />
+      <link rel="canonical" href={seoData.canonicalUrl} />
+
       {/* Open Graph Meta Tags */}
-      {enableSocialMeta && ()}
+      {enableSocialMeta && (
+        <>
+          <meta property="og:title" content={seoData.ogTitle || seoData.title} />
+          <meta property="og:description" content={seoData.ogDescription || seoData.description} />
+          <meta property="og:image" content={seoData.ogImage || '/default-og-image.jpg'} />
+          <meta property="og:url" content={seoData.ogUrl || seoData.canonicalUrl} />
+          <meta property="og:type" content="website" />
+          <meta property="og:site_name" content="Zion Tech Group" />
+        </>
+      )}
+
+      {/* Twitter Card Meta Tags */}
+      {enableSocialMeta && (
+        <>
+          <meta name="twitter:card" content={seoData.twitterCard || 'summary_large_image'} />
+          <meta name="twitter:title" content={seoData.twitterTitle || seoData.title} />
+          <meta name="twitter:description" content={seoData.twitterDescription || seoData.description} />
+          <meta name="twitter:image" content={seoData.twitterImage || seoData.ogImage || '/default-twitter-image.jpg'} />
+        </>
+      )}
 
       {/* Structured Data */}
-      {structuredData && (),
+      {structuredData && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData),
           }}
         />
       )}
 
       {/* Additional SEO Meta Tags */}
-      <meta name="theme-color" content="#7c3aed" />
-      <meta name="msapplication-TileColor" content="#7c3aed" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      
+      <meta name="robots" content="index, follow" />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="language" content="English" />
+      <meta name="revisit-after" content="7 days" />
+      <meta name="distribution" content="global" />
+      <meta name="rating" content="general" />
+
+      {/* Favicon */}
+      <link rel="icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+      <link rel="manifest" href="/manifest.json" />
+
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      
-      {/* DNS Prefetch */}
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
-      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+      <link rel="preconnect" href="https://www.google-analytics.com" />
     </Head>
   );
 };

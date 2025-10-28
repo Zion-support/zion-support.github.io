@@ -1,7 +1,7 @@
 'use client';
 
 
-import React, { useEffect }, { memo, useEffect, useState } from 'react';
+import React, { useEffect, memo, useState } from 'react';
 import LoadingSpinner from './LoadingSpinner';
 
 interface PageLoaderProps {
