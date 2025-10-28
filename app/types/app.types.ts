@@ -72,6 +72,14 @@ export interface ErrorReport {
   createdAt: string;
 }
 
+export interface AnalyticsEvent {
+  event: string;
+  category: string;
+  action: string;
+  label?: string;
+  value?: number;
+}
+
 export interface ErrorInfo {
   componentStack: string;
 }

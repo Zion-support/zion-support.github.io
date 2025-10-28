@@ -13,9 +13,7 @@ console.log('🔧 Fixing merge conflicts and parsing errors...');
 // Function to fix merge conflict markers
 function fixMergeConflicts(content) {
   // Remove merge conflict markers
-  content = content.replace(/[\s\S]*?[^\n]+/g, '');
-  content = content.replace(/[\s\S]*?
-  content = content.replace(/  
+  
   return content;
 }
 
