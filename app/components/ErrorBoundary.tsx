@@ -3,7 +3,7 @@
 interface ErrorBoundaryState {
   hasError: boolean;
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false, retryCount: 0 };
   }
 
           </div>
