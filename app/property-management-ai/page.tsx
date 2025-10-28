@@ -1,7 +1,5 @@
-import { ErrorBoundary } from '../components/ErrorBoundary';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 
 import React from 'react';
 export const metadata = {
