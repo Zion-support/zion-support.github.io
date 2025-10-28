@@ -86,14 +86,9 @@ class MonitoringService {
         const clsObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
-<<<<<<< HEAD
-            if (!(entry as unknown).hadRecentInput) {
-              clsValue += entry.value;
-=======
             const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
             if (!clsEntry.hadRecentInput) {
               clsValue += clsEntry.value || 0;
->>>>>>> 790da94db70c0abb72db88144fc02b971f69a383
               this.metrics.cls = clsValue;
               this.reportMetric('cls', clsValue);
             }
@@ -119,16 +114,11 @@ class MonitoringService {
   private monitorLongTasks(): void {
     if ('PerformanceObserver' in window) {
       try {
-<<<<<<< HEAD
-        const longTaskObserver = new PerformanceObserver(() => {
-          // Handle long tasks
-=======
         const longTaskObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
             // Handle long tasks
             console.log('Long task detected:', entry);
           }
->>>>>>> 790da94db70c0abb72db88144fc02b971f69a383
         });
         longTaskObserver.observe({ entryTypes: ['longtask'] });
       } catch {
@@ -185,8 +175,8 @@ class MonitoringService {
     }
 
     // Send to analytics (if configured)
-    if (typeof window !== 'undefined' && 'gtag' in window && typeof window.gtag === 'function') {
-      window.gtag('event', name, {
+    if (typeof window !== 'undefined' && 'gtag' in window && typeof (window as unknown).gtag === 'function') {
+      (window as unknown).gtag('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',
       });
