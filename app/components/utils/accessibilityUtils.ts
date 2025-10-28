@@ -1,5 +1,5 @@
 'use client';
-// import React from 'react';
+// import React from 'react'; // Removed unused import
 import { useState, useEffect } from 'react';
 
 export const useAccessibilityUtils = () => {

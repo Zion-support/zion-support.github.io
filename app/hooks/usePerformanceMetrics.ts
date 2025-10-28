@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState, useCallback } from 'react';
+import { LayoutShift, PerformanceEventTiming } from '../types/performance';
 
 interface PerformanceMetrics {
   fcp: number | null;
@@ -43,8 +44,9 @@ export const usePerformanceMetrics = () => {
     // Measure First Input Delay (FID)
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
-      entries.forEach((entry: any) => {
-        setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
+      entries.forEach((entry: PerformanceEntry) => {
+        const fidEntry = entry as PerformanceEventTiming;
+        setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
       });
     });
     fidObserver.observe({ entryTypes: ['first-input'] });
@@ -53,9 +55,10 @@ export const usePerformanceMetrics = () => {
     let clsValue = 0;
     const clsObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
-      entries.forEach((entry: any) => {
-        if (!entry.hadRecentInput) {
-          clsValue += entry.value;
+      entries.forEach((entry: PerformanceEntry) => {
+        const clsEntry = entry as LayoutShift;
+        if (!clsEntry.hadRecentInput) {
+          clsValue += clsEntry.value;
         }
       });
       setMetrics(prev => ({ ...prev, cls: clsValue }));

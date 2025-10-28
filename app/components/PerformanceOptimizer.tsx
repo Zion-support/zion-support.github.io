@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect } from 'react';
+import { LayoutShift, PerformanceEventTiming } from '../types/performance';
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
@@ -54,11 +55,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
               console.log('LCP:', entry.startTime);
             }
             if (entry.entryType === 'first-input') {
-              const fidEntry = entry as any;
+              const fidEntry = entry as PerformanceEventTiming;
               console.log('FID:', fidEntry.processingStart - fidEntry.startTime);
             }
             if (entry.entryType === 'layout-shift') {
-              console.log('CLS:', (entry as any).value);
+              const clsEntry = entry as LayoutShift;
+              console.log('CLS:', clsEntry.value);
             }
           });
         });
