@@ -1,12 +1,9 @@
-<<<<<<< HEAD
-import ErrorBoundary from '../../components/ErrorBoundary';
-import React from 'react';
-=======
+
 import React from 'react';
 import ErrorBoundary from "../../components/ErrorBoundary"
 import Navigation from "../../components/Navigation"
 import Footer from "../../components/Footer"
->>>>>>> cursor/fix-errors-and-merge-to-main-ad1a
+
 
 export const metadata = {
   title: 'Ai Content Generator | Zion Tech Group',
@@ -19,23 +16,7 @@ export const metadata = {
   },
 };
 
-<<<<<<< HEAD
 
-
-function AIContentGenerator() {
-  return (
-    <div className="min-h-screen bg-white">
-      <h1>AI Content Generator</h1>
-      <p>This is a placeholder for the AI Content Generator component.</p>
-    </div>
-  );
-}
-
-export default function Wrapped(props: any) {
-  return (
-    <ErrorBoundary>
-      <AIContentGenerator {...props} />
-=======
 function AicontentgeneratorPage() {
   return (
     <>
@@ -79,7 +60,7 @@ export default function Wrapped(props: { [key: string]: unknown }) {
   return (
     <ErrorBoundary>
       <AicontentgeneratorPage {...props} />
->>>>>>> cursor/fix-errors-and-merge-to-main-ad1a
+
     </ErrorBoundary>
   );
 }

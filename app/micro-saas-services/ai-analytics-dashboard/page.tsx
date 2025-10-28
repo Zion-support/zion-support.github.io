@@ -1,12 +1,9 @@
-<<<<<<< HEAD
-import ErrorBoundary from '../../components/ErrorBoundary';
-import React from 'react';
-=======
+
 import React from 'react';
 import ErrorBoundary from "../../components/ErrorBoundary"
 import Navigation from "../../components/Navigation"
 import Footer from "../../components/Footer"
->>>>>>> cursor/fix-errors-and-merge-to-main-ad1a
+
 
 export const metadata = {
   title: 'Ai Analytics Dashboard | Zion Tech Group',
@@ -19,22 +16,7 @@ export const metadata = {
   },
 };
 
-<<<<<<< HEAD
 
-function AIAnalyticsDashboard() {
-  return (
-    <div className="min-h-screen bg-white">
-      <h1>AI Analytics Dashboard</h1>
-      <p>This is a placeholder for the AI Analytics Dashboard component.</p>
-    </div>
-  );
-}
-
-export default function Wrapped(props: any) {
-  return (
-    <ErrorBoundary>
-      <AIAnalyticsDashboard {...props} />
-=======
 function AianalyticsdashboardPage() {
   return (
     <>
@@ -78,7 +60,7 @@ export default function Wrapped(props: { [key: string]: unknown }) {
   return (
     <ErrorBoundary>
       <AianalyticsdashboardPage {...props} />
->>>>>>> cursor/fix-errors-and-merge-to-main-ad1a
+
     </ErrorBoundary>
   );
 }
