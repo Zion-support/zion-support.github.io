@@ -1,4 +1,4 @@
-function AiCustomerSupportBackup()
+function AiCustomerSupportBackup() {
   AiCustomerSupportBackup.displayName = 'AI Customer Support Backup';
   
   return (
