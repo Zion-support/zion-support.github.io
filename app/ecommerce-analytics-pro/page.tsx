@@ -2,9 +2,6 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 import ErrorBoundary from '../components/ErrorBoundary';
 
 export const metadata = {
@@ -55,5 +52,3 @@ export default function EcommerceanalyticsproPage() {
     </ErrorBoundary>
   );
 }
-
-export default EcommerceanalyticsproPage;

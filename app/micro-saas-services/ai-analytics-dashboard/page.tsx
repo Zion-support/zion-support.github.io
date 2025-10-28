@@ -2,8 +2,6 @@ import React from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 import ErrorBoundary from '../../components/ErrorBoundary';
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
