@@ -75,7 +75,11 @@ class MonitoringService {
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
+<<<<<<< HEAD
             const fidEntry = entry as PerformanceEventTiming;
+=======
+            const fidEntry = entry as PerformanceEntry & { processingStart: number };
+>>>>>>> 025c27ea22ac2cd17c6db561168e53419996aed6
             this.metrics.fid = fidEntry.processingStart - entry.startTime;
             this.reportMetric('fid', this.metrics.fid);
           });
@@ -86,10 +90,14 @@ class MonitoringService {
         let clsValue = 0;
         const clsObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
-          entries.forEach((entry: PerformanceEntry) => {
-            const clsEntry = entry as LayoutShift;
+          entries.forEach((_entry: PerformanceEntry) => {
+            const clsEntry = _entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
             if (!clsEntry.hadRecentInput) {
+<<<<<<< HEAD
               clsValue += clsEntry.value;
+=======
+              clsValue += clsEntry.value || 0;
+>>>>>>> 025c27ea22ac2cd17c6db561168e53419996aed6
               this.metrics.cls = clsValue;
               this.reportMetric('cls', clsValue);
             }
@@ -106,7 +114,7 @@ class MonitoringService {
           });
         });
         fcpObserver.observe({ entryTypes: ['paint'] });
-      } catch {
+      } catch (error) {
         // Handle error silently
       }
     }
@@ -118,11 +126,10 @@ class MonitoringService {
         const longTaskObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
             // Handle long tasks
-            console.log('Long task detected:', entry.duration);
           }
         });
         longTaskObserver.observe({ entryTypes: ['longtask'] });
-      } catch {
+      } catch (error) {
         // Long task API might not be available
       }
     }
@@ -136,12 +143,11 @@ class MonitoringService {
           entries.forEach((entry: PerformanceResourceTiming) => {
             if (entry.duration > 1000) {
               // Handle slow resources
-              console.log('Slow resource detected:', entry);
             }
           });
         });
         resourceObserver.observe({ entryTypes: ['resource'] });
-      } catch {
+      } catch (_error) {
         // Handle error silently
       }
     }
@@ -177,8 +183,13 @@ class MonitoringService {
     }
 
     // Send to analytics (if configured)
+<<<<<<< HEAD
     if (typeof (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag === 'function') {
       (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event', name, {
+=======
+    if (typeof window !== 'undefined' && 'gtag' in window && typeof window.gtag === 'function') {
+      window.gtag('event', name, {
+>>>>>>> 025c27ea22ac2cd17c6db561168e53419996aed6
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',
       });

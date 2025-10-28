@@ -1,6 +1,4 @@
-import { Metadata } from 'next';
-
-export const dynamic = 'force-static';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'About Us - Zion Tech Group',

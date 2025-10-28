@@ -105,6 +105,7 @@ export default [
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2022,
+      sourceType: 'module',
       globals: {
         ...globals.browser,
         ...globals.node,
@@ -128,14 +129,18 @@ export default [
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': [
         'warn',
-        { allowConstantExport: true },
+        { 
+          allowConstantExport: true,
+          allowExportNames: ['metadata', 'viewport']
+        },
       ],
       'react/jsx-uses-react': 'off',
       'react/react-in-jsx-scope': 'off',
       '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
       '@typescript-eslint/no-explicit-any': 'warn',
       'prefer-const': 'error',
-      'no-var': 'error'
+      'no-var': 'error',
+      'react/prop-types': 'off'
     }
   }
 ];
