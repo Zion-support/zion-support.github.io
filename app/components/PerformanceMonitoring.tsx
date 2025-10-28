@@ -9,6 +9,11 @@ interface PerformanceEventTiming extends PerformanceEntry {
   target?: Node;
 }
 
+interface LayoutShiftEntry extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+}
+
 interface PerformanceMonitoringProps {
   className?: string;
 }
@@ -39,7 +44,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        const fidEntry = entry as PerformanceEventTiming;
+        const fidEntry = entry as PerformanceEventTiming; // Type assertion for FID-specific properties
         const fid = fidEntry.processingStart - fidEntry.startTime;
         console.log('FID:', fid);
         
@@ -59,9 +64,9 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const clsObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number };
-        if (!layoutShiftEntry.hadRecentInput) {
-          clsValue += layoutShiftEntry.value;
+        const clsEntry = entry as LayoutShiftEntry;
+        if (!clsEntry.hadRecentInput) {
+          clsValue += clsEntry.value;
           console.log('CLS:', clsValue);
           
           if (window.gtag) {
