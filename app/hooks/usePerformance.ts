@@ -37,7 +37,7 @@ export function usePerformance(): PerformanceState & PerformanceActions {
 
   // Optimize performance
   const optimize = useCallback(() => {
-    performanceOptimizer.optimize();
+    // performanceOptimizer.optimize();
     updateMetrics();
   }, [updateMetrics]);
 

@@ -1,18 +1,24 @@
 'use client';
+
 import React, { useState } from 'react';
 
 interface NewsletterSignupProps {
-  onSubscribe?: (email: string) => void;
   className?: string;
+  onSubscribe?: (email: string) => void;
 }
 
-const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ onSubscribe, className = '' }) => {
+const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ 
+  className = '', 
+  onSubscribe 
+}) => {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState('');
 
-  const _handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!email) return;
+
     setIsSubmitting(true);
     setMessage('');
 
@@ -26,7 +32,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ onSubscribe, classN
       
       setMessage('Thank you for subscribing!');
       setEmail('');
-    } catch (error) {
+    } catch {
       setMessage('Something went wrong. Please try again.');
     } finally {
       setIsSubmitting(false);
@@ -35,40 +41,45 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ onSubscribe, classN
 
   return (
     <div className={`newsletter-signup ${className}`}>
-      <div className="bg-white rounded-lg shadow-lg p-6">
-        <h3 className="text-2xl font-bold text-gray-900 mb-4">
-          Stay Updated
-        </h3>
-        <p className="text-gray-600 mb-6">
-          Get the latest news and updates delivered to your inbox.
+      <h3 className="text-lg font-semibold mb-4">Stay Updated</h3>
+      <p className="text-gray-600 mb-4">
+        Get the latest updates and news delivered to your inbox.
+      </p>
+      
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div>
+          <label htmlFor="email" className="sr-only">
+            Email address
+          </label>
+          <input
+            id="email"
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Enter your email"
+            required
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+        </div>
+        
+        <button
+          type="submit"
+          disabled={isSubmitting}
+          className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50"
+        >
+          {isSubmitting ? 'Subscribing...' : 'Subscribe'}
+        </button>
+      </form>
+      
+      {message && (
+        <p className={`mt-2 text-sm ${message.includes('Thank you') ? 'text-green-600' : 'text-red-600'}`}>
+          {message}
         </p>
-        <form onSubmit={_handleSubmit} className="space-y-4">
-          <div>
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              required
-            />
-          </div>
-          <button
-            type="submit"
-            disabled={isSubmitting}
-            className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
-          >
-            {isSubmitting ? 'Subscribing...' : 'Subscribe'}
-          </button>
-          {message && (
-            <p className={`text-sm ${message.includes('Thank you') ? 'text-green-600' : 'text-red-600'}`}>
-              {message}
-            </p>
-          )}
-        </form>
-      </div>
+      )}
     </div>
   );
 };
+
+NewsletterSignup.displayName = 'NewsletterSignup';
 
 export default NewsletterSignup;

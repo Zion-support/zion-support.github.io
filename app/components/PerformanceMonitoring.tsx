@@ -1,11 +1,6 @@
 'use client';
-import React, { memo, useCallback, useEffect } from 'react';
 
-interface PerformanceMonitoringProps {
-  onMetricsUpdate?: (metrics: Record<string, unknown>) => void;
-  enableRealTimeMonitoring?: boolean;
-  className?: string;
-}
+import React, { useEffect, memo, useCallback } from 'react';
 
 interface PerformanceEventTiming extends PerformanceEntry {
   processingStart: number;
@@ -19,23 +14,21 @@ interface LayoutShiftEntry extends PerformanceEntry {
   target?: Node;
 }
 
-declare global {
-  interface Window {
-    gtag?: (...args: unknown[]) => void;
-  }
+interface PerformanceMonitoringProps {
+  className?: string;
+  onMetricsUpdate?: (metrics: Record<string, unknown>) => void;
+  enableRealTimeMonitoring?: boolean;
 }
 
-const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ 
-  onMetricsUpdate, enableRealTimeMonitoring = false, className = '' 
-}) => {
+const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ className: _className = '', enableRealTimeMonitoring = true, onMetricsUpdate }) => {
   const [, setMemoryUsage] = React.useState<{ total: number; limit: number } | null>(null);
-  const [metrics, setMetrics] = React.useState({
-    fcp: 0,
-    lcp: 0,
-    fid: 0,
-    cls: 0,
-    ttfb: 0
-  });
+  const [fcp, setFCP] = React.useState<number | null>(null);
+  const [lcp, setLCP] = React.useState<number | null>(null);
+  const [fid, setFID] = React.useState<number | null>(null);
+  const [cls, setCLS] = React.useState<number>(0);
+  const [ttfb, setTTFB] = React.useState<number | null>(null);
+
+  const metrics = { fcp, lcp, fid, cls, ttfb };
 
   // Monitor Core Web Vitals
   const monitorCoreWebVitals = useCallback(() => {
@@ -124,11 +117,9 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.duration > 1000) { // Resources taking more than 1 second
-          console.warn('Slow resource:', entry.name, entry.duration);
-        }
+          }
       });
     });
-
     resourceObserver.observe({ entryTypes: ['resource'] });
 
     return () => resourceObserver.disconnect();
@@ -138,37 +129,69 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({
   const monitorMemoryUsage = useCallback(() => {
     if (typeof window === 'undefined' || !('memory' in performance)) return;
 
-    const updateMemoryUsage = () => {
-      const memory = (performance as any).memory;
+    const checkMemory = () => {
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
       if (memory) {
+        const used = memory.usedJSHeapSize / 1024 / 1024; // MB
+        const total = memory.totalJSHeapSize / 1024 / 1024; // MB
+        const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB
+        
         setMemoryUsage({
-          total: memory.totalJSHeapSize,
-          limit: memory.jsHeapSizeLimit
+          total: Math.round(total),
+          limit: Math.round(limit)
         });
+
+        if (used / limit > 0.8) {
+          // High memory usage detected
+        }
       }
     };
 
-    updateMemoryUsage();
-    const interval = setInterval(updateMemoryUsage, 5000);
-
+    checkMemory();
+    const interval = setInterval(checkMemory, 5000);
     return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
+
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (entry.entryType === 'paint') {
+          if (entry.name === 'first-contentful-paint') {
+            setFCP(entry.startTime);
+          }
+        } else if (entry.entryType === 'largest-contentful-paint') {
+          setLCP(entry.startTime);
+        } else if (entry.entryType === 'first-input') {
+          const fidEntry = entry as PerformanceEventTiming;
+          setFID(fidEntry.processingStart - fidEntry.startTime);
+        } else if (entry.entryType === 'layout-shift') {
+          const layoutShiftEntry = entry as LayoutShiftEntry;
+          if (!layoutShiftEntry.hadRecentInput) {
+            setCLS((prev) => prev + layoutShiftEntry.value);
+          }
+        } else if (entry.entryType === 'navigation') {
+          const navEntry = entry as PerformanceNavigationTiming;
+          setTTFB(navEntry.responseStart - navEntry.requestStart);
+        }
+      });
+    });
+
+    observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'] });
+
+    return () => observer.disconnect();
   }, []);
 
   useEffect(() => {
     if (!enableRealTimeMonitoring) return;
 
-    const cleanupCoreWebVitals = monitorCoreWebVitals();
-    const cleanupResourcePerformance = monitorResourcePerformance();
-    const cleanupMemoryUsage = monitorMemoryUsage();
+    monitorCoreWebVitals();
+    monitorResourcePerformance();
+    monitorMemoryUsage();
+  }, [monitorCoreWebVitals, monitorResourcePerformance, monitorMemoryUsage, enableRealTimeMonitoring]);
 
-    return () => {
-      cleanupCoreWebVitals?.();
-      cleanupResourcePerformance?.();
-      cleanupMemoryUsage?.();
-    };
-  }, [enableRealTimeMonitoring, monitorCoreWebVitals, monitorResourcePerformance, monitorMemoryUsage]);
-
-  // Update metrics when they change
   useEffect(() => {
     if (onMetricsUpdate) {
       onMetricsUpdate(metrics);
@@ -176,8 +199,15 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({
   }, [metrics, onMetricsUpdate]);
 
   return (
-    <div className={`performance-monitoring ${className}`}>
-      {/* Performance monitoring component */}
+    <div className="performance-monitoring">
+      <h3>Performance Monitoring</h3>
+      <div className="metrics">
+        <div>FCP: {metrics.fcp?.toFixed(2)}ms</div>
+        <div>LCP: {metrics.lcp?.toFixed(2)}ms</div>
+        <div>FID: {metrics.fid?.toFixed(2)}ms</div>
+        <div>CLS: {metrics.cls?.toFixed(4)}</div>
+        <div>TTFB: {metrics.ttfb?.toFixed(2)}ms</div>
+      </div>
     </div>
   );
 });

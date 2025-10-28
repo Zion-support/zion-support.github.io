@@ -6,17 +6,26 @@ import React, { useCallback, useState, useEffect, memo } from 'react';
 interface PerformanceEventTiming extends PerformanceEntry {
   processingStart: number;
   processingEnd: number;
+  cancelable: boolean;
   target?: Node;
 }
 
 interface LayoutShift extends PerformanceEntry {
   value: number;
   hadRecentInput: boolean;
+  lastInputTime: number;
+  sources: LayoutShiftAttribution[];
   target?: Node;
 }
 
 interface ConsolidatedPerformanceProps {
   className?: string;
+}
+
+interface LayoutShiftAttribution {
+  node?: Node;
+  previousRect: DOMRectReadOnly;
+  currentRect: DOMRectReadOnly;
 }
 
 const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({
@@ -40,23 +49,27 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({
         } else if (entry.entryType === 'largest-contentful-paint') {
           setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
         } else if (entry.entryType === 'first-input') {
-          const fidEntry = entry as any;
+          const fidEntry = entry as PerformanceEventTiming;
           setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
         } else if (entry.entryType === 'layout-shift') {
-          const clsEntry = entry as any;
+          const clsEntry = entry as LayoutShift;
           if (!clsEntry.hadRecentInput) {
             setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + clsEntry.value }));
           }
         } else if (entry.entryType === 'navigation') {
-          const navEntry = entry as any;
+          const navEntry = entry as PerformanceNavigationTiming;
           setMetrics(prev => ({ ...prev, ttfb: navEntry.responseStart - navEntry.requestStart }));
         }
       }
     });
 
-    observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint', 'navigation'] });
+    try {
+      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'] });
+    } catch { /* Handle error */ }
 
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+    };
   }, []);
 
   // Implement lazy loading for images
@@ -166,33 +179,19 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({
     }
   }, []);
 
-  const preloadCriticalResources = useCallback(() => {
-    const criticalResources = [
-      '/fonts/inter.woff2',
-      '/images/hero-bg.jpg',
-      '/images/logo.png'
-    ];
-
-    criticalResources.forEach(resource => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = resource;
-      link.as = resource.endsWith('.woff2') ? 'font' : 'image';
-      if (resource.endsWith('.woff2')) {
-        link.crossOrigin = 'anonymous';
-      }
-      document.head.appendChild(link);
-    });
-  }, []);
-
   useEffect(() => {
     const cleanup = measurePerformance();
-    preloadCriticalResources();
+    return cleanup;
+  }, [measurePerformance]);
+
+  useEffect(() => {
     implementLazyLoading();
     addResourceHints();
-    optimizeScrollPerformance();
-    return cleanup;
-  }, [measurePerformance, preloadCriticalResources, implementLazyLoading, addResourceHints, monitorCoreWebVitals, monitorTTFB, optimizeScrollPerformance]);
+    monitorCoreWebVitals();
+    monitorTTFB();
+    const scrollCleanup = optimizeScrollPerformance();
+    return scrollCleanup;
+  }, [implementLazyLoading, addResourceHints, monitorCoreWebVitals, monitorTTFB, optimizeScrollPerformance]);
 
   // Log metrics for debugging (remove in production)
   useEffect(() => {

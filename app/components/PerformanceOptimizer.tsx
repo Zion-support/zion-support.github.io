@@ -21,8 +21,7 @@ interface PerformanceOptimizerProps {
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  children,
-  enableOptimizations = true
+  children, enableOptimizations = true
 }) => {
   useEffect(() => {
     if (!enableOptimizations || typeof window === 'undefined') return;
@@ -44,6 +43,22 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       document.head.appendChild(link);
     });
 
+    // Optimize images with lazy loading
+    const optimizeImages = () => {
+      const images = document.querySelectorAll('img[data-src]');
+      const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
+            img.src = img.dataset.src || '';
+            img.classList.remove('lazy');
+            imageObserver.unobserve(img);
+          }
+        });
+      });
+
+      images.forEach((img) => imageObserver.observe(img));
+    };
 
     // Add performance monitoring
     const monitorPerformance = () => {
@@ -67,20 +82,25 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       }
     };
 
-    // Optimize images
-    const optimizeImages = () => {
-      const images = document.querySelectorAll('img');
-      images.forEach((img) => {
-        if (!img.decoding) {
-          img.decoding = 'async';
-        }
-        if (!img.loading) {
-          img.loading = 'lazy';
-        }
-      });
-    };
-    monitorPerformance();
+    // Call the functions
     optimizeImages();
+    monitorPerformance();
+
+    // Optimize images
+    const images = document.querySelectorAll('img');
+    images.forEach((img) => {
+      if (!img.decoding) {
+        img.decoding = 'async';
+      }
+    });
+    
+    // Call the functions
+    optimizeImages();
+    monitorPerformance();
+
+    // Call the optimization functions
+    optimizeImages();
+    monitorPerformance();
 
     // Enable service worker
     if ('serviceWorker' in navigator) {

@@ -17,31 +17,41 @@ class Logger {
     return level >= this.level;
   }
 
-  debug(_message: string, ..._args: unknown[]): void {
-    if (this.shouldLog(LogLevel.DEBUG)) { /* empty */ }
+  debug(message: string, ...args: unknown[]): void {
+    if (this.shouldLog(LogLevel.DEBUG)) {
+      console.debug(message, ...args);
+    }
   }
 
-  info(_message: string, ..._args: unknown[]): void {
-    if (this.shouldLog(LogLevel.INFO)) { /* empty */ }
+  info(message: string, ...args: unknown[]): void {
+    if (this.shouldLog(LogLevel.INFO)) {
+      console.info(message, ...args);
+    }
   }
 
-  warn(_message: string, ..._args: unknown[]): void {
-    if (this.shouldLog(LogLevel.WARN)) { /* empty */ }
+  warn(message: string, ...args: unknown[]): void {
+    if (this.shouldLog(LogLevel.WARN)) {
+      console.warn(message, ...args);
+    }
   }
 
-  error(_message: string, ..._args: unknown[]): void {
-    if (this.shouldLog(LogLevel.ERROR)) { /* empty */ }
+  error(message: string, ...args: unknown[]): void {
+    if (this.shouldLog(LogLevel.ERROR)) {
+      console.error(message, ...args);
+    }
   }
 
   // Production-safe logging (only in development)
-  dev(_message: string, ..._args: unknown[]): void {
-    if (process.env.NODE_ENV === 'development') { /* empty */ }
+  dev(message: string, ...args: unknown[]): void {
+    if (process.env.NODE_ENV === 'development') {
+      console.log(message, ...args);
+    }
   }
 }
 
 // Create logger instance
-const logger = new Logger(
+const _logger = new Logger(
   process.env.NODE_ENV === 'development' ? LogLevel.DEBUG : LogLevel.WARN
 );
 
-export default logger;
+export default _logger;

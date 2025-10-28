@@ -1,8 +1,8 @@
 'use client';
-import { X } from 'lucide-react';
+// import { X} from 'lucide-react';
 
 import React, { memo, useState, useEffect } from 'react';
-import logger from '../utils/logger';
+// import logger from '../utils/logger';
 
 interface BeforeInstallPromptEvent extends Event {
   prompt(): Promise<void>;
@@ -22,39 +22,39 @@ const PWAInstaller: React.FC = memo(() => {
     }
 
     // Listen for the beforeinstallprompt event
-    const _handleBeforeInstallPrompt = (e: Event) => {
+    const handleBeforeInstallPrompt = (e: Event) => {
       e.preventDefault();
       setDeferredPrompt(e as BeforeInstallPromptEvent);
       setShowInstallPrompt(true);
     };
 
     // Listen for the appinstalled event
-    const _handleAppInstalled = () => {
+    const handleAppInstalled = () => {
       setIsInstalled(true);
       setShowInstallPrompt(false);
       setDeferredPrompt(null);
     };
 
-    window.addEventListener('beforeinstallprompt', _handleBeforeInstallPrompt);
-    window.addEventListener('appinstalled', _handleAppInstalled);
+    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+    window.addEventListener('appinstalled', handleAppInstalled);
 
     return () => {
-      window.removeEventListener('beforeinstallprompt', _handleBeforeInstallPrompt);
-      window.removeEventListener('appinstalled', _handleAppInstalled);
+      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+      window.removeEventListener('appinstalled', handleAppInstalled);
     };
   }, []);
 
-  const _handleInstallClick = async () => {
+  const handleInstallClick = async () => {
     if (!deferredPrompt) return;
 
     try {
       await deferredPrompt.prompt();
-      const _choiceResult = await deferredPrompt.userChoice;
+      const choiceResult = await deferredPrompt.userChoice;
       
-      if (_choiceResult.outcome === 'accepted') {
-        // // console.log('User accepted the install prompt');
+      if (choiceResult.outcome === 'accepted') {
+        // console.log('User accepted the install prompt');
       } else {
-        // // console.log('User dismissed the install prompt');
+        // console.log('User dismissed the install prompt');
       }
       
       setDeferredPrompt(null);
@@ -64,7 +64,7 @@ const PWAInstaller: React.FC = memo(() => {
     }
   };
 
-  const _handleDismiss = () => {
+  const handleDismiss = () => {
     setShowInstallPrompt(false);
   };
 
@@ -89,7 +89,7 @@ const PWAInstaller: React.FC = memo(() => {
 
   return (
     <div className="fixed bottom-4 left-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50 border border-gray-200">
-      <div className="flex items-_start justify-between">
+      <div className="flex items-start justify-between">
         <div className="flex-1">
           <h3 className="text-lg font-semibold text-gray-900 mb-2">
             Install App
@@ -99,7 +99,7 @@ const PWAInstaller: React.FC = memo(() => {
           </p>
           <div className="flex space-x-2">
             <button
-              onClick={_handleInstallClick}
+              onClick={handleInstallClick}
               className="flex items-center space-x-2 bg-purple-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-purple-700 transition-colors"
              aria-label="Action Button">
               <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -108,7 +108,7 @@ const PWAInstaller: React.FC = memo(() => {
               <span>Install</span>
             </button>
             <button
-              onClick={_handleDismiss}
+              onClick={handleDismiss}
               className="bg-gray-300 text-gray-700 px-3 py-1 rounded text-sm hover:bg-gray-400 transition-colors duration-200"
             >
               Dismiss

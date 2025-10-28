@@ -19,15 +19,6 @@ const aiServices = [
   { name: 'Zion AI Database Optimizer', href: '/zion-ai-database-optimizer' }
 ];
 
-const itServices = [
-  { name: 'Web Development', href: '/web-development' },
-  { name: 'Mobile App Development', href: '/mobile-app-development' },
-  { name: 'Cloud Solutions', href: '/cloud-solutions' },
-  { name: 'Database Management', href: '/database-management' },
-  { name: 'Cybersecurity', href: '/cybersecurity' },
-  { name: 'IT Consulting', href: '/it-consulting' }
-];
-
 export default function Navigation({ className, children }: NavigationProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -60,45 +51,25 @@ export default function Navigation({ className, children }: NavigationProps) {
               </Link>
               <div className="relative">
                 <button
-                  onClick={() => toggleDropdown('ai-services')}
+                  onClick={() => toggleDropdown('ai')}
                   className="flex items-center text-gray-700 hover:text-blue-600"
                 >
                   AI Services
                   <ChevronDown className="ml-1 h-4 w-4" />
                 </button>
-                {activeDropdown === 'ai-services' && (
-                  <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
-                    {aiServices.map((service) => (
-                      <Link
-                        key={service.href}
-                        href={service.href}
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600"
-                      >
-                        {service.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-              <div className="relative">
-                <button
-                  onClick={() => toggleDropdown('it-services')}
-                  className="flex items-center text-gray-700 hover:text-blue-600"
-                >
-                  IT Services
-                  <ChevronDown className="ml-1 h-4 w-4" />
-                </button>
-                {activeDropdown === 'it-services' && (
-                  <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
-                    {itServices.map((service) => (
-                      <Link
-                        key={service.href}
-                        href={service.href}
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600"
-                      >
-                        {service.name}
-                      </Link>
-                    ))}
+                {activeDropdown === 'ai' && (
+                  <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-md shadow-lg z-50">
+                    <div className="py-1">
+                      {aiServices.map((service) => (
+                        <Link
+                          key={service.href}
+                          href={service.href}
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        >
+                          {service.name}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 )}
               </div>
@@ -108,45 +79,34 @@ export default function Navigation({ className, children }: NavigationProps) {
               <Link href="/contact" className="text-gray-700 hover:text-blue-600">
                 Contact
               </Link>
-              <Link
-                href="/contact"
-                className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-              >
-                Get Started
-              </Link>
             </div>
 
-            {/* Mobile menu button */}
-            <div className="md:hidden">
+            <div className="md:hidden flex items-center">
               <button
                 onClick={toggleMobileMenu}
-                aria-label="Toggle Mobile Menu"
-                className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
+                className="text-gray-700 hover:text-blue-600 focus:outline-none"
               >
                 {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </button>
             </div>
           </div>
 
-          {/* Mobile Navigation */}
           {isMobileMenuOpen && (
             <div className="md:hidden">
-              <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 rounded-lg mt-2">
-                <Link href="/" className="block px-3 py-2 text-gray-700 hover:text-gray-900">
+              <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <Link href="/" className="block px-3 py-2 text-gray-700 hover:text-blue-600">
                   Home
                 </Link>
-                
-                {/* AI Services Dropdown */}
-                <div className="px-3 py-2">
+                <div className="relative">
                   <button
                     onClick={() => toggleDropdown('ai-mobile')}
-                    className="flex items-center text-gray-700 hover:text-blue-600"
+                    className="flex items-center w-full px-3 py-2 text-gray-700 hover:text-blue-600"
                   >
                     AI Services
                     <ChevronDown className="ml-1 h-4 w-4" />
                   </button>
                   {activeDropdown === 'ai-mobile' && (
-                    <div className="ml-4 mt-2 space-y-1">
+                    <div className="pl-4 space-y-1">
                       {aiServices.map((service) => (
                         <Link
                           key={service.href}
@@ -159,42 +119,11 @@ export default function Navigation({ className, children }: NavigationProps) {
                     </div>
                   )}
                 </div>
-
-                {/* IT Services Dropdown */}
-                <div className="px-3 py-2">
-                  <button
-                    onClick={() => toggleDropdown('it-mobile')}
-                    className="flex items-center text-gray-700 hover:text-blue-600"
-                  >
-                    IT Services
-                    <ChevronDown className="ml-1 h-4 w-4" />
-                  </button>
-                  {activeDropdown === 'it-mobile' && (
-                    <div className="ml-4 mt-2 space-y-1">
-                      {itServices.map((service) => (
-                        <Link
-                          key={service.href}
-                          href={service.href}
-                          className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600"
-                        >
-                          {service.name}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-
-                <Link href="/about" className="block px-3 py-2 text-gray-700 hover:text-gray-900">
+                <Link href="/about" className="block px-3 py-2 text-gray-700 hover:text-blue-600">
                   About
                 </Link>
-                <Link href="/contact" className="block px-3 py-2 text-gray-700 hover:text-gray-900">
+                <Link href="/contact" className="block px-3 py-2 text-gray-700 hover:text-blue-600">
                   Contact
-                </Link>
-                <Link
-                  href="/contact"
-                  className="block px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-                >
-                  Get Started
                 </Link>
               </div>
             </div>
