@@ -13,17 +13,20 @@ import PerformanceMonitoring from './components/PerformanceMonitoring';
 import SEOOptimization from './components/SEOOptimization';
 import SecurityEnhancement from './components/SecurityEnhancement';
 import AdvancedPerformanceEnhancer from './components/AdvancedPerformanceEnhancer';
-import { metadata, viewport } from './metadata';
+import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
 
 const inter = Inter({ subsets: ['latin'] });
 
-// Define metadata and viewport for Next.js
 export const metadata = {
-  title: 'Zion Tech Group - Advanced Technology Solutions',
-  description: 'Leading provider of cutting-edge technology solutions and services',
-  keywords: 'technology, solutions, innovation, software, development',
+  title: 'Zion Tech Group - AI Solutions & Technology Services',
+  description: 'Leading technology company specializing in AI solutions, cloud infrastructure, and innovative software development services.',
+  keywords: 'AI solutions, technology services, cloud infrastructure, software development, digital transformation',
   authors: [{ name: 'Zion Tech Group' }],
-  viewport: 'width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes',
+  openGraph: {
+    title: 'Zion Tech Group - AI Solutions & Technology Services',
+    description: 'Leading technology company specializing in AI solutions, cloud infrastructure, and innovative software development services.',
+    type: 'website',
+  },
 };
 
 export const viewport = {
@@ -45,7 +48,8 @@ export default function RootLayout({
       <body className={inter.className}>
         <ErrorBoundary>
           <AdvancedPerformanceEnhancer enableMonitoring={true} enableOptimizations={true}>
-            <PerformanceOptimizer>
+            <EnhancedAccessibilityEnhancer>
+              <PerformanceOptimizer>
                 <div className="min-h-screen bg-slate-900">
                   <SkipLink />
                   <Navigation />
@@ -61,6 +65,7 @@ export default function RootLayout({
                   <SecurityEnhancement />
                 </div>
               </PerformanceOptimizer>
+            </EnhancedAccessibilityEnhancer>
           </AdvancedPerformanceEnhancer>
         </ErrorBoundary>
       </body>

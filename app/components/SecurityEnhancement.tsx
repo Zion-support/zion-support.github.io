@@ -59,9 +59,9 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
         set: function(value: string) {
           if (value && typeof value === 'string' && /<script/i.test(value)) {
             console.warn('Potential XSS attempt detected:', value);
-          } else {
-            originalInnerHTML.call(this, value);
+            return;
           }
+          originalInnerHTML.call(this, value);
         },
         configurable: true
       });
