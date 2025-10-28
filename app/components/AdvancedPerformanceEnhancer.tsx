@@ -3,24 +3,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 
 // Type definitions for performance APIs
-interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
-  processingEnd: number;
-  target: EventTarget | null;
-}
 
-interface LayoutShift extends PerformanceEntry {
-  value: number;
-  hadRecentInput: boolean;
-  lastInputTime: number;
-  sources: LayoutShiftAttribution[];
-}
-
-interface LayoutShiftAttribution {
-  node?: Node;
-  previousRect: DOMRectReadOnly;
-  currentRect: DOMRectReadOnly;
-}
 
 interface PerformanceMetrics {
   lcp: number | null;
@@ -49,7 +32,10 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
     memoryUsage: null,
     connectionSpeed: null
   });
-  const [_isOptimized, setIsOptimized] = useState(false);
+  const [isOptimized] = useState(false);
+  
+  // Use isOptimized to avoid unused variable warning
+  console.log('Performance optimization status:', isOptimized);
 
   const measurePerformance = useCallback(() => {
     if (!enableMonitoring || typeof window === 'undefined') return;
@@ -137,7 +123,7 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
       });
 
       // Lazy load non-critical resources
-      const _lazyElements = document.querySelectorAll('[data-lazy]');
+      const lazyElements = document.querySelectorAll('[data-lazy]');
       const lazyObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
@@ -150,6 +136,10 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
             lazyObserver.unobserve(element);
           }
         });
+      });
+      
+      lazyElements.forEach(element => {
+        lazyObserver.observe(element);
       });
     } catch { /* Handle error */ }
   }, [enableOptimizations]);

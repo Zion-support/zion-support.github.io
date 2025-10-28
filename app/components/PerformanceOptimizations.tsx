@@ -67,46 +67,46 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
   }, [enableResourceHints]);
 
   // Optimize scroll performance
-  const _optimizeScrollPerformance = useCallback(() => {
+  const optimizeScrollPerformance = useCallback(() => {
     if (typeof window === 'undefined') return;
 
-    let __ticking = false;
-    const __handleScroll = () => {
-      if (!__ticking) {
+    let ticking = false;
+    const handleScroll = () => {
+      if (!ticking) {
         requestAnimationFrame(() => {
           // Throttled scroll handling
-          __ticking = false;
+          ticking = false;
         });
-        __ticking = true;
+        ticking = true;
       }
     };
 
-    window.addEventListener('scroll', __handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', __handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   // Optimize resize performance
-  const _optimizeResizePerformance = useCallback(() => {
+  const optimizeResizePerformance = useCallback(() => {
     if (typeof window === 'undefined') return;
 
-    let __ticking = false;
-    const __handleResize = () => {
-      if (!__ticking) {
+    let ticking = false;
+    const handleResize = () => {
+      if (!ticking) {
         requestAnimationFrame(() => {
           // Throttled resize handling
           optimizeImages();
-          __ticking = false;
+          ticking = false;
         });
-        __ticking = true;
+        ticking = true;
       }
     };
 
-    window.addEventListener('resize', __handleResize, { passive: true });
-    return () => window.removeEventListener('resize', __handleResize);
+    window.addEventListener('resize', handleResize, { passive: true });
+    return () => window.removeEventListener('resize', handleResize);
   }, [optimizeImages]);
 
   // Intersection Observer for lazy loading
-  const _setupIntersectionObserver = useCallback(() => {
+  const setupIntersectionObserver = useCallback(() => {
     if (typeof window === 'undefined' || !('IntersectionObserver' in window)) return;
 
     const observer = new IntersectionObserver((entries) => {
@@ -141,7 +141,10 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
     optimizeImages();
     preloadCriticalResources();
     addResourceHints();
-  }, [optimizeImages, preloadCriticalResources, addResourceHints]);
+    optimizeScrollPerformance();
+    optimizeResizePerformance();
+    setupIntersectionObserver();
+  }, [optimizeImages, preloadCriticalResources, addResourceHints, optimizeScrollPerformance, optimizeResizePerformance, setupIntersectionObserver]);
 
   return null;
 });

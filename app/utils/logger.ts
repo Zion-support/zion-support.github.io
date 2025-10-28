@@ -17,24 +17,24 @@ class Logger {
     return level >= this.level;
   }
 
-  debug(_message: string, ..._args: unknown[]): void {
+  debug(): void {
     if (this.shouldLog(LogLevel.DEBUG)) { /* empty */ }
   }
 
-  info(_message: string, ..._args: unknown[]): void {
+  info(): void {
     if (this.shouldLog(LogLevel.INFO)) { /* empty */ }
   }
 
-  warn(_message: string, ..._args: unknown[]): void {
+  warn(): void {
     if (this.shouldLog(LogLevel.WARN)) { /* empty */ }
   }
 
-  error(_message: string, ..._args: unknown[]): void {
+  error(): void {
     if (this.shouldLog(LogLevel.ERROR)) { /* empty */ }
   }
 
   // Production-safe logging (only in development)
-  dev(_message: string, ..._args: unknown[]): void {
+  dev(): void {
     if (process.env.NODE_ENV === 'development') { /* empty */ }
   }
 }

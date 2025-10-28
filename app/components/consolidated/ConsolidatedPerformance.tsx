@@ -21,12 +21,6 @@ interface ConsolidatedPerformanceProps {
 
 // Type definitions for Web Performance APIs
 
-interface LayoutShiftAttribution {
-  node?: Node;
-  previousRect: DOMRectReadOnly;
-  currentRect: DOMRectReadOnly;
-}
-
 const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({
   className = ''
 }) => {
