@@ -1,6 +1,71 @@
-'use client';
+#!/usr/bin/env node
 
-import React, { useState } from 'react';
+import fs from 'fs';
+import path from 'path';
+import { glob } from 'glob';
+
+// Function to fix corrupted page files
+function fixPageFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Check if file is corrupted (has imports mixed with JSX)
+    if (content.includes('import { ErrorBoundary }') && content.includes('<div>')) {
+      console.log(`Fixing corrupted file: ${filePath}`);
+      
+      // Extract the proper imports and metadata
+      const importMatch = content.match(/import { ErrorBoundary } from '\.\/components\/ErrorBoundary'/);
+      const metadataMatch = content.match(/export const metadata = \{[\s\S]*?\};/);
+      
+      // Extract the JSX content (everything after the first <div>)
+      const jsxMatch = content.match(/<div[^>]*>[\s\S]*$/);
+      
+      if (jsxMatch) {
+        let jsxContent = jsxMatch[0];
+        
+        // Clean up the JSX content
+        jsxContent = jsxContent.replace(/import { ErrorBoundary } from '\.\/components\/ErrorBoundary'[\s\S]*?};/g, '');
+        jsxContent = jsxContent.replace(/export const metadata = \{[\s\S]*?\};/g, '');
+        
+        // Create the fixed content
+        let fixedContent = '';
+        
+        // Add imports
+        fixedContent += "import React from 'react';\n";
+        if (importMatch) {
+          fixedContent += importMatch[0] + "\n";
+        }
+        fixedContent += "import Link from 'next/link';\n\n";
+        
+        // Add metadata
+        if (metadataMatch) {
+          fixedContent += metadataMatch[0] + "\n\n";
+        }
+        
+        // Add the component
+        fixedContent += jsxContent;
+        
+        // Write the fixed content
+        fs.writeFileSync(filePath, fixedContent);
+        console.log(`Fixed: ${filePath}`);
+      }
+    }
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+  }
+}
+
+// Function to fix Navigation component
+function fixNavigationFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Check if Navigation is corrupted
+    if (content.includes('<nav>') && content.includes('<ul>') && content.includes('className={`bg-white')) {
+      console.log(`Fixing Navigation file: ${filePath}`);
+      
+      // Create a proper Navigation component
+      const fixedContent = `import React, { useState } from 'react';
 import Link from 'next/link';
 import { ChevronDown, Menu, X } from 'lucide-react';
 
@@ -38,7 +103,7 @@ export default function Navigation({ children, className = '' }: NavigationProps
   };
 
   return (
-    <nav className={`bg-white shadow-lg ${className}`} role="navigation">
+    <nav className={\`bg-white shadow-lg \${className}\`} role="navigation">
       {children || (
         <>
           <div className="max-w-7xl mx-auto px-4">
@@ -184,4 +249,54 @@ export default function Navigation({ children, className = '' }: NavigationProps
       )}
     </nav>
   );
+}`;
+      
+      fs.writeFileSync(filePath, fixedContent);
+      console.log(`Fixed Navigation: ${filePath}`);
+    }
+  } catch (error) {
+    console.error(`Error fixing Navigation ${filePath}:`, error.message);
+  }
 }
+
+// Function to fix specific problematic files
+function fixSpecificFiles() {
+  const problematicFiles = [
+    'app/page.tsx',
+    'app/offline/page.tsx',
+    'app/5g-data-analytics/page.tsx',
+    'app/5g-edge-computing/page.tsx',
+    'app/5g-implementation/page.tsx',
+    'app/5g-iot-solutions/page.tsx',
+    'app/about/page.tsx',
+    'app/accessibility-page/page.tsx',
+    'app/ai-powered-devops/page.tsx',
+    'app/ai-powered-email-analyzer/page.tsx',
+    'app/it-services/cybersecurity-audit/page.tsx',
+    'app/legal-document-manager/page.tsx',
+    'app/medical-records-manager/page.tsx',
+    'app/online-learning-platform/page.tsx',
+    'app/property-management-ai/page.tsx',
+    'app/supply-chain-optimizer/page.tsx',
+    'app/test/page.tsx',
+    'app/zion-ai-api-tester/page.tsx',
+    'app/zion-ai-database-optimizer/page.tsx',
+    'app/components/Navigation.tsx'
+  ];
+
+  problematicFiles.forEach(file => {
+    const fullPath = path.join(process.cwd(), file);
+    if (fs.existsSync(fullPath)) {
+      if (file === 'app/components/Navigation.tsx') {
+        fixNavigationFile(fullPath);
+      } else {
+        fixPageFile(fullPath);
+      }
+    }
+  });
+}
+
+// Main execution
+console.log('Starting comprehensive syntax error fixes...');
+fixSpecificFiles();
+console.log('Syntax error fixes completed!');

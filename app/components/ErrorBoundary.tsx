@@ -1,17 +1,12 @@
-import React from 'react';
+'use client';
 
-interface ErrorBoundaryProps {
-  children: React.ReactNode;
-  fallback?: React.ReactNode;
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+
+interface Props {
+  children: ReactNode;
+  fallback?: ReactNode;
 }
 
-export default function ErrorBoundary({ children }: ErrorBoundaryProps) {
-  return (
-    <div>
-      {children}
-    </div>
-  );
-}
 interface State {
   hasError: boolean;
   error?: Error;

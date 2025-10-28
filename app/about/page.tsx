@@ -1,41 +1,45 @@
 import React from 'react';
-
-export default function Home() {
-  return (
-    <div>
-      <h1>Welcome to Zion Tech Group</h1>
-      <p>AI-Powered Business Solutions</p>
-    </div>
-  );
-import { ErrorBoundary } from './components/ErrorBoundary'
+import ErrorBoundary from '../components/ErrorBoundary';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'About Us | Zion Tech Group',
-  description: 'Learn about Zion Tech Group - Leading provider of AI and IT solutions',
-  keywords: 'about, company, AI solutions, IT services, technology',
+  description: 'Learn about Zion Tech Group and our mission',
+  keywords: 'about us, technology, services, AI, automation',
   openGraph: {
     title: 'About Us | Zion Tech Group',
-    description: 'Learn about Zion Tech Group - Leading provider of AI and IT solutions',
+    description: 'Learn about Zion Tech Group and our mission',
     type: 'website',
   },
 };
 
-function AboutPage() {
+function HomePage() {
   return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              About Zion Tech Group
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We are a leading technology company specializing in AI solutions and IT services.
-            </p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div className="text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            About Us
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Learn about Zion Tech Group and our mission
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-colors"
+            >
+              Get Started
+            </Link>
+            <Link
+              href="/about"
+              className="inline-flex items-center px-8 py-3 border border-white text-base font-medium rounded-md text-white bg-transparent hover:bg-white hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-colors"
+            >
+              Learn More
+            </Link>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 }
@@ -43,7 +47,7 @@ function AboutPage() {
 export default function Wrapped(props: Record<string, unknown>) {
   return (
     <ErrorBoundary>
-      <AboutPage {...props} />
+      <HomePage {...props} />
     </ErrorBoundary>
   );
 }

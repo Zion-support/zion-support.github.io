@@ -1,12 +1,6 @@
 import React from 'react';
-
-export default function Home() {
-  return (
-    <div>
-      <h1>Welcome to Zion Tech Group</h1>
-      <p>AI-Powered Business Solutions</p>
-import { ErrorBoundary } from './components/ErrorBoundary'
-import Link from 'next/link'
+import ErrorBoundary from './components/ErrorBoundary';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Zion Tech Group - Advanced AI & IT Solutions',
@@ -22,7 +16,6 @@ export const metadata = {
 function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
