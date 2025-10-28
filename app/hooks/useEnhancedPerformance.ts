@@ -14,7 +14,13 @@ interface PerformanceMetrics {
   networkLatency: number;
 }
 
-export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = { /* empty */ }) => {
+interface PerformanceMemory {
+  usedJSHeapSize: number;
+  totalJSHeapSize: number;
+  jsHeapSizeLimit: number;
+}
+
+export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) => {
   // Component name for performance tracking
   const componentName = options.component || 'Unknown';
   
@@ -27,47 +33,29 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
   });
   
   // Refs for tracking
-  const _startTimeRef = useRef<number>(0);
-  const _renderStartRef = useRef<number>(0);
   const mountTimeRef = useRef<number>(0);
   const renderCountRef = useRef<number>(0);
-  
+
   // Track component load time
   useEffect(() => {
     mountTimeRef.current = performance.now();
     renderCountRef.current += 1;
     
     // Log component performance tracking
-    // Measure load time
-    const _measureLoadTime = () => {
+    if (options.trackPerformance) {
       const loadTime = performance.now();
       setMetrics(prev => ({ ...prev, loadTime }));
-    };
-
-    // Measure render time
-    const _measureRenderTime = () => {
-      const renderStart = performance.now();
-      requestAnimationFrame(() => {
-        const renderTime = performance.now() - renderStart;
-        setMetrics(prev => ({ ...prev, renderTime }));
-      });
-    };
-    
-    // Call the functions
-    _measureLoadTime();
-    _measureRenderTime();
+    }
   }, [options.trackPerformance]);
   
   // Track memory usage
   useEffect(() => {
     if (options.trackPerformance && 'memory' in performance) {
-      const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
-      if (memory) {
-        setMetrics(prev => ({
-          ...prev,
-          memoryUsage: memory.usedJSHeapSize / 1024 / 1024
-        }));
-      }
+      const memory = (performance as Performance & { memory: PerformanceMemory }).memory;
+      setMetrics(prev => ({ 
+        ...prev, 
+        memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
+      }));
     }
   }, [options.trackPerformance]);
   
@@ -145,6 +133,8 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
   
   return {
     metrics,
-    optimizePerformance
+    optimizePerformance,
+    componentName,
+    renderCount: renderCountRef.current
   };
 };

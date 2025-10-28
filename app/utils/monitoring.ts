@@ -122,7 +122,7 @@ class MonitoringService {
           const entries = list.getEntries();
           entries.forEach(() => {
             // Process entry if needed
-            });
+          });
         });
         longTaskObserver.observe({ entryTypes: ['longtask'] });
       } catch {

@@ -9,7 +9,7 @@ interface PerformanceOptimizationsProps {
 }
 
 const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo(({
-  enableImageOptimization = true, enablePreloading: _enablePreloading = true, enableResourceHints: _enableResourceHints = true
+  enableImageOptimization = true, enablePreloading = true, enableResourceHints = true
 }) => {
   const optimizeImages = useCallback(() => {
     if (!enableImageOptimization || typeof window === 'undefined') return;
@@ -29,7 +29,7 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
   }, [enableImageOptimization]);
 
   const preloadCriticalResources = useCallback(() => {
-    if (!_enablePreloading || typeof window === 'undefined') return;
+    if (!enablePreloading || typeof window === 'undefined') return;
 
     const criticalResources = [
       { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' },
@@ -46,10 +46,10 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
       if (resource.crossOrigin) link.crossOrigin = resource.crossOrigin;
       document.head.appendChild(link);
     });
-  }, [_enablePreloading]);
+  }, [enablePreloading]);
 
   const addResourceHints = useCallback(() => {
-    if (!_enableResourceHints || typeof window === 'undefined') return;
+    if (!enableResourceHints || typeof window === 'undefined') return;
 
     const hints = [
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
@@ -64,45 +64,45 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
       if (hint.crossOrigin) link.crossOrigin = hint.crossOrigin;
       document.head.appendChild(link);
     });
-  }, [_enableResourceHints]);
+  }, [enableResourceHints]);
 
   // Optimize scroll performance
   const optimizeScrollPerformance = useCallback(() => {
     if (typeof window === 'undefined') return;
 
-    let __ticking = false;
-    const _handleScroll = () => {
-      if (!__ticking) {
+    let ticking = false;
+    const handleScroll = () => {
+      if (!ticking) {
         requestAnimationFrame(() => {
           // Throttled scroll handling
-          __ticking = false;
+          ticking = false;
         });
-        __ticking = true;
+        ticking = true;
       }
     };
 
-    window.addEventListener('scroll', _handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', _handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   // Optimize resize performance
   const optimizeResizePerformance = useCallback(() => {
     if (typeof window === 'undefined') return;
 
-    let __ticking = false;
-    const _handleResize = () => {
-      if (!__ticking) {
+    let ticking = false;
+    const handleResize = () => {
+      if (!ticking) {
         requestAnimationFrame(() => {
           // Throttled resize handling
           optimizeImages();
-          __ticking = false;
+          ticking = false;
         });
-        __ticking = true;
+        ticking = true;
       }
     };
 
-    window.addEventListener('resize', _handleResize, { passive: true });
-    return () => window.removeEventListener('resize', _handleResize);
+    window.addEventListener('resize', handleResize, { passive: true });
+    return () => window.removeEventListener('resize', handleResize);
   }, [optimizeImages]);
 
   // Intersection Observer for lazy loading

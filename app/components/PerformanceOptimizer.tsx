@@ -21,10 +21,10 @@ interface PerformanceOptimizerProps {
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  children, enableOptimizations: _enableOptimizations = true
+  children, enableOptimizations = true
 }) => {
   useEffect(() => {
-    if (!_enableOptimizations || typeof window === 'undefined') return;
+    if (!enableOptimizations || typeof window === 'undefined') return;
 
     // Preload critical resources
     const criticalResources = [
@@ -82,6 +82,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       }
     };
 
+    // Call the functions
+    optimizeImages();
+    monitorPerformance();
+
     // Optimize images
     const images = document.querySelectorAll('img');
     images.forEach((img) => {
@@ -104,7 +108,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         // Service worker registration failed
       });
     }
-  }, [_enableOptimizations]);
+  }, [enableOptimizations]);
 
   return (
     <div className="performance-optimizer">
