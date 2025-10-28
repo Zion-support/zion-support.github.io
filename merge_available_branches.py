@@ -27,7 +27,7 @@ def run_command(cmd, timeout=30):
 
 def get_available_branches():
     """Get list of available cursor branches"""
-    success, output, error = run_command("git branch -r | grep 'cursor/fix-errors-and-merge-to-main' | head -100")
+    success, output, error = run_command("git branch -r | grep 'cursor/fix-errors-and-merge-to-main' | head -500")
     if not success:
         print(f"Error getting branches: {error}")
         return []
