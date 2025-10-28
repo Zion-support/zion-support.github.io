@@ -111,6 +111,7 @@ class MonitoringService {
           // eslint-disable-next-line @typescript-eslint/no-unused-vars
           for (const _entry of list.getEntries()) {
             // Handle long tasks
+            console.log('Long task detected:', entry);
           }
         });
         longTaskObserver.observe({ entryTypes: ['longtask'] });
