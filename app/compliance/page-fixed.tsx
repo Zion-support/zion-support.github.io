@@ -1,12 +1,31 @@
 'use client'
-import { ArrowRight, Clock, Shield } from 'lucide-react';;
+import { ArrowRight, Clock, Shield, CheckCircle } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-  
-  const stats = [
-    { label: 'Data Protected', value: '99.9%', icon: Shield },
-    { label: 'Backup Success Rate', value: '100%', icon: CheckCircle },
-    { label: 'Recovery Time', value: '< 1 min', icon: Clock }
-  ];
+const stats = [
+  { label: 'Data Protected', value: '99.9%', icon: Shield },
+  { label: 'Backup Success Rate', value: '100%', icon: CheckCircle },
+  { label: 'Recovery Time', value: '< 1 min', icon: Clock }
+];
+
+const features = [
+  {
+    title: 'Automated Daily Backups',
+    description: 'Your data is automatically backed up every day with zero manual intervention required.',
+    icon: Shield
+  },
+  {
+    title: 'Real-time Sync',
+    description: 'Changes are synced in real-time across all your devices and platforms.',
+    icon: Clock
+  },
+  {
+    title: 'Secure Encryption',
+    description: 'All backups are encrypted using military-grade AES-256 encryption.',
+    icon: CheckCircle
+  }
+];
 
 export default function PageFixedPage() {
   return (

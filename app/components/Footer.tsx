@@ -12,7 +12,7 @@ interface FooterProps {
 
 const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
   const currentYear = new Date().getFullYear();
-  const const aiServices = [
+  const aiServices = [
     { name: 'AI-Powered DevOps', href: '/ai-powered-devops' },
     { name: 'AI Email Analyzer', href: '/ai-powered-email-analyzer' },
     { name: 'E-commerce Analytics Pro', href: '/ecommerce-analytics-pro' },
@@ -23,7 +23,7 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
     { name: 'Supply Chain Optimizer', href: '/supply-chain-optimizer' }
   ];
 
-  const const itServices = [
+  const itServices = [
     { name: 'Cybersecurity Audit', href: '/it-services/cybersecurity-audit' }
   ];
 

@@ -1,14 +1,14 @@
 'use client';
 
-import React, { useEffect }, { useState, useCallback, useEffect } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 
 interface PerformanceMetrics {
-  fcp: number | null
-  lcp: number | null
-  fid: number | null
-  cls: number | null
-  ttfb: number | null
-  memory: number | null
+  fcp: number | null;
+  lcp: number | null;
+  fid: number | null;
+  cls: number | null;
+  ttfb: number | null;
+  memory: number | null;
 }
 
 interface PerformanceMonitorProps {
@@ -27,13 +27,13 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     cls: null,
     ttfb: null,
     memory: null,
-  })
+  });
 
   const measureWebVitals = useCallback(() => {
-    if (typeof window === 'undefined' || !('performance' in window)) return
-    if (typeof PerformanceObserver === 'undefined') return
+    if (typeof window === 'undefined' || !('performance' in window)) return;
+    if (typeof PerformanceObserver === 'undefined') return;
 
-    const observers: PerformanceObserver[] = []
+    const observers: PerformanceObserver[] = [];
 
     // Measure First Contentful Paint (FCP)
     try {

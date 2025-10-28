@@ -1,8 +1,9 @@
 import React from "react";
-import { Brain } from 'lucide-react';
+import { Brain, ArrowRight, CheckCircle } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 export default function FiveGNetworkInfrastructure() {
-  
   const benefits = [
     'Increase network efficiency by up to 50%',
     'Reduce costs by 30% with automation',
@@ -11,9 +12,37 @@ export default function FiveGNetworkInfrastructure() {
     'Gain competitive advantage with advanced 5G technology'
   ];
 
+  const features = [
+    {
+      title: 'AI-Powered Network Optimization',
+      description: 'Intelligent network management that adapts to traffic patterns and optimizes performance in real-time.',
+      icon: Brain,
+      benefits: ['Real-time optimization', 'Predictive analytics', 'Automated scaling']
+    },
+    {
+      title: 'Advanced 5G Infrastructure',
+      description: 'Cutting-edge 5G network infrastructure designed for maximum performance and reliability.',
+      icon: CheckCircle,
+      benefits: ['Ultra-low latency', 'High bandwidth', 'Massive connectivity']
+    },
+    {
+      title: 'Smart Network Management',
+      description: 'AI-driven network management that learns from patterns and optimizes performance automatically.',
+      icon: ArrowRight,
+      benefits: ['Self-healing networks', 'Predictive maintenance', 'Intelligent routing']
+    },
+    {
+      title: 'Scalable Architecture',
+      description: 'Flexible architecture that grows with your business needs and adapts to changing requirements.',
+      icon: CheckCircle,
+      benefits: ['Horizontal scaling', 'Modular design', 'Future-proof technology']
+    }
+  ];
+
   return (
-    <div>
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    <>
+      <Navigation />
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">
             5G Network Infrastructure
@@ -89,7 +118,8 @@ export default function FiveGNetworkInfrastructure() {
           </div>
         </div>
       </main>
-    </div>
+      <Footer />
+    </>
   );
 }
 
