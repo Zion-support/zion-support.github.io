@@ -12,3 +12,5 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({ className
     </div>
   );
 }
+
+export default FuturisticServiceCard;
