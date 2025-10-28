@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-=======
-'use client';
-'use client';
-import React, { useState, memo, useCallback } from 'react';
 import Link from 'next/link';
 import { X, ChevronDown, Menu } from 'lucide-react';
->>>>>>> 9d27805b410bab1ceb410b64b65ce66c1275b73a
 
 interface NavigationProps {
   className?: string;

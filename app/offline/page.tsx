@@ -31,8 +31,7 @@ export const metadata: Metadata = {
     title: 'Offline - Zion Tech Group',
     description: 'You are currently offline. Please check your internet connection.',
     type: 'website',
-  },
-};
+  }};
 
 function Page() {
   return (

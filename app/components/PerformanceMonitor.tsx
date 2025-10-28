@@ -24,7 +24,6 @@ interface LayoutShiftAttribution {
 }
 // Web API type declarations
 
-
 interface PerformanceMetrics {
   lcp: number | null;
   fid: number | null;

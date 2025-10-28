@@ -22,8 +22,7 @@ export const metadata: Metadata = {
     description: 'Leading technology company specializing in AI solutions, cloud infrastructure, and innovative software development services.',
 >>>>>>> 9d27805b410bab1ceb410b64b65ce66c1275b73a
     type: 'website',
-  },
-};
+  }};
 
 function AboutPage() {
   return (

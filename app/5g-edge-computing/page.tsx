@@ -10,8 +10,7 @@ export const metadata = {
     description: 'Professional page services and solutions by Zion Tech Group.',
 >>>>>>> 9d27805b410bab1ceb410b64b65ce66c1275b73a
     type: 'website',
-  },
-};
+  }};
 
 <<<<<<< HEAD
     </ErrorBoundary>
