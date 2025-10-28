@@ -2,8 +2,6 @@
 
 import React, { useEffect } from 'react';
 
-// Web API type declarations
-
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }

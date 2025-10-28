@@ -3,7 +3,6 @@
 import React, { useEffect, useState, memo } from 'react';
 
 // Web API type declarations
-
 interface PerformanceMetrics {
   lcp: number | null;
   fid: number | null;
