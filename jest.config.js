@@ -37,7 +37,14 @@ export default {
     '<rootDir>/node_modules/',
     '<rootDir>/dist/',
     '<rootDir>/.next/',
-    '<rootDir>/out/'
+    '<rootDir>/out/',
+    '<rootDir>/build/'
+  ],
+  watchPathIgnorePatterns: [
+    '<rootDir>/node_modules/',
+    '<rootDir>/.next/',
+    '<rootDir>/out/',
+    '<rootDir>/build/'
   ],
   transformIgnorePatterns: [
     'node_modules/(?!(.*\\.mjs$|lucide-react|framer-motion))'
