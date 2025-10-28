@@ -39,7 +39,7 @@ global.IntersectionObserver = class IntersectionObserver {
   disconnect() {}
   observe() {}
   unobserve() {}
-} as any
+}
 
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
@@ -51,15 +51,15 @@ global.ResizeObserver = class ResizeObserver {
 
 // Mock TextEncoder and TextDecoder
 global.TextEncoder = TextEncoder
-global.TextDecoder = TextDecoder as any
+global.TextDecoder = TextDecoder
 
 // Mock PerformanceObserver
 global.PerformanceObserver = class PerformanceObserver {
-  constructor(callback: PerformanceObserverCallback) {}
-  observe(options?: PerformanceObserverInit) {}
+  constructor(callback) {}
+  observe(options) {}
   disconnect() {}
   takeRecords() { return []; }
-} as any
+}
 
 // Mock Next.js router
 jest.mock('next/router', () => ({
@@ -109,8 +109,8 @@ jest.mock('next/navigation', () => ({
 
 // Mock react-helmet-async
 jest.mock('react-helmet-async', () => ({
-  Helmet: ({ children }: { children: React.ReactNode }) => children,
-  HelmetProvider: ({ children }: { children: React.ReactNode }) => children,
+  Helmet: ({ children }) => children,
+  HelmetProvider: ({ children }) => children,
 }))
 
 // Note: web-vitals is not installed, so no mocking needed
