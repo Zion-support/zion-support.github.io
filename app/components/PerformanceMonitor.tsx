@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useState, memo } from 'react';
+
 // Web API type declarations
 interface PerformanceEventTiming extends PerformanceEntry {
   processingStart: number;
