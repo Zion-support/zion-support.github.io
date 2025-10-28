@@ -5,7 +5,6 @@ import { Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight } from 'lucide-react';
-
 const PropertyManagementAiPage: React.FC = () => {
   const features = [
     {
