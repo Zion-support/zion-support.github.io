@@ -14,7 +14,7 @@ interface PerformanceMetrics {
   networkLatency: number;
 }
 
-export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) => {
+export const useEnhancedPerformance = (options: PerformanceOptions = {}) => {
   const { component = 'unknown', trackErrors = true, trackPerformance = true, trackAnalytics = false } = options;
   
   // Use the options to avoid unused variable warnings
