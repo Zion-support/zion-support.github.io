@@ -45,7 +45,6 @@ export default function RootLayout({
               <PerformanceMonitor />
               <AccessibilityEnhancer />
               <ServiceWorkerRegistration />
-              <PerformanceMonitoring />
               <SEOOptimization />
               <SecurityEnhancement />
             </div>
