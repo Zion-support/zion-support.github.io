@@ -74,7 +74,7 @@ class MonitoringService {
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
-            this.metrics.fid = (entry as any).processingStart - entry.startTime;
+            this.metrics.fid = (entry as PerformanceEventTiming).processingStart - entry.startTime;
             this.reportMetric('fid', this.metrics.fid);
           });
         });
@@ -85,7 +85,7 @@ class MonitoringService {
         const clsObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
-            if (!(entry as any).hadRecentInput) {
+            if (!(entry as PerformanceEntry & { hadRecentInput?: boolean }).hadRecentInput) {
               clsValue += entry.value;
               this.metrics.cls = clsValue;
               this.reportMetric('cls', clsValue);
@@ -114,8 +114,8 @@ class MonitoringService {
       try {
         const longTaskObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-            // Handle long tasks - entry is used for iteration
-            console.log('Long task detected:', entry.duration);
+            // Handle long tasks
+            console.log('Long task detected:', entry);
           }
         });
         longTaskObserver.observe({ entryTypes: ['longtask'] });

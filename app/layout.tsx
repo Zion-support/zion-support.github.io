@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import React from 'react';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import Navigation from './components/Navigation';
@@ -9,34 +9,14 @@ import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import SkipLink from './components/SkipLink';
+import { metadata } from './constants/metadata';
+import { viewport } from './constants/viewport';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export const metadata: Metadata = {
-  title: 'Zion Tech Group - Advanced AI & IT Solutions',
-  description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
-  keywords: 'AI solutions, IT services, cybersecurity, cloud computing, digital transformation',
-  authors: [{ name: 'Zion Tech Group' }],
-  robots: 'index, follow',
-  openGraph: {
-    title: 'Zion Tech Group - Advanced AI & IT Solutions',
-    description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
-    type: 'website',
-    locale: 'en_US',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Zion Tech Group - Advanced AI & IT Solutions',
-    description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
-  },
-};
-
-export const viewport = {
-  width: 'device-width',
-  initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
-}
+// Re-export metadata and viewport for Next.js
+// eslint-disable-next-line react-refresh/only-export-components
+export { metadata, viewport };
 
 export default function RootLayout({
   children,
