@@ -1,7 +1,5 @@
-import React from 'react';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
-import ErrorBoundary from '../components/ErrorBoundary';
 
 
 export const metadata = {
@@ -50,7 +48,3 @@ export default function Page() {
         </div>
       </div>
       <Footer />
-    </ErrorBoundary>
-  );
-}
-

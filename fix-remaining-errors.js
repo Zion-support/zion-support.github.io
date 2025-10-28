@@ -1,120 +1,105 @@
+#!/usr/bin/env node
+
 import fs from 'fs';
-import path from 'path';
 import { glob } from 'glob';
 
-// Function to fix ErrorBoundary import paths
-function fixErrorBoundaryImports(filePath) {
+// Function to fix remaining TypeScript errors in a file
+function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Fix incorrect ErrorBoundary import paths
-    if (content.includes("import ErrorBoundary from '../components/ErrorBoundary';")) {
-      // Check if we're in a subdirectory that needs a different path
-      const relativePath = path.relative(path.dirname(filePath), '/workspace/app/components/ErrorBoundary.tsx');
-      const correctImport = `import ErrorBoundary from '${relativePath.replace('.tsx', '')}';`;
-      content = content.replace(
-        "import ErrorBoundary from '../components/ErrorBoundary';",
-        correctImport
-      );
+    // Remove unused React imports
+    if (content.includes("import React from 'react';") && !content.includes('React.')) {
+      content = content.replace("import React from 'react';\n", '');
       modified = true;
     }
 
-    if (modified) {
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed ErrorBoundary import in: ${filePath}`);
-      return true;
-    }
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-  }
-  return false;
-}
-
-// Function to fix component prop types
-function fixComponentProps(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-
-    // Add missing prop type definitions
-    const propTypeFixes = [
-      {
-        pattern: /interface\s+(\w+)Props\s*\{/g,
-        replacement: 'interface $1Props {\n  className?: string;\n  children?: React.ReactNode;'
-      }
-    ];
-
-    propTypeFixes.forEach(({ pattern, replacement }) => {
-      if (pattern.test(content)) {
-        content = content.replace(pattern, replacement);
-        modified = true;
-      }
-    });
-
-    // Fix missing Head import issues
-    if (content.includes('Cannot find name \'Head\'') || content.includes('<Head>')) {
-      if (!content.includes("import Head from 'next/head';")) {
-        content = "import Head from 'next/head';\n" + content;
-        modified = true;
-      }
-    }
-
-    // Fix unused error parameter
-    if (content.includes('error: Error): ErrorBoundaryState {')) {
-      content = content.replace(
-        'error: Error): ErrorBoundaryState {',
-        '_error: Error): ErrorBoundaryState {'
-      );
+    // Remove unused Navigation imports
+    if (content.includes("import Navigation from '../components/Navigation';") && !content.includes('<Navigation')) {
+      content = content.replace("import Navigation from '../components/Navigation';\n", '');
       modified = true;
     }
 
-    // Fix layout.tsx issues
-    if (filePath.includes('layout.tsx')) {
-      // Remove unused imports
-      content = content.replace(/import\s+{\s*Inter\s*}\s+from\s+['"]next\/font\/google['"];\s*\n/g, '');
-      content = content.replace(/import\s+{\s*Metadata\s*}\s+from\s+['"]next['"];\s*\n/g, '');
+    // Fix ErrorBoundary usage - add import if missing
+    if (content.includes('<ErrorBoundary') && !content.includes("import ErrorBoundary")) {
+      const importLine = "import ErrorBoundary from '../../components/GlobalErrorBoundary';\n";
+      const lines = content.split('\n');
+      let insertIndex = 0;
       
-      // Fix inter variable reference
-      content = content.replace(/className=\{inter\.className\}/g, 'className="font-sans"');
+      // Find the last import line
+      for (let i = 0; i < lines.length; i++) {
+        if (lines[i].startsWith('import ')) {
+          insertIndex = i + 1;
+        }
+      }
+      
+      lines.splice(insertIndex, 0, importLine);
+      content = lines.join('\n');
+      modified = true;
+    }
+
+    // Remove unused AboutLayout function
+    if (content.includes('function AboutLayout()')) {
+      const lines = content.split('\n');
+      const newLines = [];
+      let skipFunction = false;
+      let braceCount = 0;
+      
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        
+        if (line.includes('function AboutLayout()')) {
+          skipFunction = true;
+          braceCount = 0;
+          continue;
+        }
+        
+        if (skipFunction) {
+          if (line.includes('{')) braceCount++;
+          if (line.includes('}')) braceCount--;
+          if (braceCount === 0) {
+            skipFunction = false;
+            continue;
+          }
+          continue;
+        }
+        
+        newLines.push(line);
+      }
+      
+      content = newLines.join('\n');
       modified = true;
     }
 
     if (modified) {
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed component props in: ${filePath}`);
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
       return true;
     }
+    
+    return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
-  return false;
 }
 
-// Main function to fix all remaining issues
-async function fixRemainingIssues() {
-  const patterns = [
-    'app/**/*.tsx',
-    'components/**/*.tsx'
-  ];
-  
-  let allFiles = [];
-  for (const pattern of patterns) {
-    const files = await glob(pattern, { cwd: process.cwd() });
-    allFiles = allFiles.concat(files);
-  }
-  
-  console.log(`Found ${allFiles.length} files to check for remaining issues...`);
-  
+// Main function
+async function main() {
+  // Find all TypeScript/TSX files in the app directory
+  const files = await glob('app/**/*.{ts,tsx}', { cwd: process.cwd() });
+
+  console.log(`Found ${files.length} files to check...`);
+
   let fixedCount = 0;
-  allFiles.forEach(file => {
-    if (fixErrorBoundaryImports(file) || fixComponentProps(file)) {
+  for (const file of files) {
+    if (fixFile(file)) {
       fixedCount++;
     }
-  });
-  
-  console.log(`Fixed ${fixedCount} files`);
+  }
+
+  console.log(`Fixed ${fixedCount} files.`);
 }
 
-// Run the fix
-fixRemainingIssues().catch(console.error);
+main().catch(console.error);

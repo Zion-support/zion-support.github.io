@@ -1,122 +1,94 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-94aa
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 
-<<<<<<< HEAD
-// Function to fix TypeScript errors in a file
-=======
-// Function to fix a single file
->>>>>>> cursor/fix-errors-and-merge-to-main-94aa
+// Function to fix common TypeScript errors in a file
 function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-<<<<<<< HEAD
-    // Fix 1: Remove unused ErrorBoundary imports
-    if (content.includes("import ErrorBoundary from '../components/ErrorBoundary';")) {
-      content = content.replace(/import ErrorBoundary from '\.\.\/components\/ErrorBoundary';\n?/g, '');
-      modified = true;
-    }
-
-    // Fix 2: Remove unused Page variable declarations
-    if (content.includes("function Page() {")) {
-      content = content.replace(/function Page\(\) \{\s*return \([\s\S]*?\)\s*\}/g, '');
-      modified = true;
-    }
-
-    // Fix 3: Fix PagePage undefined variable - replace with proper component
-    if (content.includes('PagePage')) {
-      // Find the component name from the file path
-      const pathParts = filePath.split('/');
-      const fileName = pathParts[pathParts.length - 2]; // Get the directory name
-      const componentName = fileName.split('-').map(word => 
-        word.charAt(0).toUpperCase() + word.slice(1)
-      ).join('');
-      
-      content = content.replace(/PagePage/g, componentName);
-      modified = true;
-    }
-
-    // Fix 4: Remove unused Page variable declarations (alternative pattern)
-    if (content.includes("const Page = () => {")) {
-      content = content.replace(/const Page = \(\) => \{\s*return \([\s\S]*?\)\s*\};?\n?/g, '');
-      modified = true;
-    }
-
-    // Fix 5: Clean up any remaining unused imports
+    // Fix unused variables by removing them
     const lines = content.split('\n');
-    const cleanedLines = lines.filter(line => {
-      // Remove lines that only contain unused imports
-      if (line.trim().startsWith('import') && line.includes('ErrorBoundary')) {
-        return false;
-      }
-      return true;
-    });
+    const fixedLines = [];
     
-    if (cleanedLines.length !== lines.length) {
-      content = cleanedLines.join('\n');
-      modified = true;
-    }
-
-    // Fix 6: Ensure proper default export
-    if (content.includes('export default function Wrapped')) {
-      // Extract the component name from the path
-      const pathParts = filePath.split('/');
-      const fileName = pathParts[pathParts.length - 2];
-      const componentName = fileName.split('-').map(word => 
-        word.charAt(0).toUpperCase() + word.slice(1)
-      ).join('');
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
       
-      // Replace the Wrapped function with a proper component
-      const wrappedPattern = /export default function Wrapped\(props: any\) \{\s*return \(\s*(\w+)\(\{\.\.\.props\}\)\s*\);\s*\}/;
-      const match = content.match(wrappedPattern);
-      
-      if (match) {
-        const newComponent = `export default function ${componentName}(props: any) {
-  return (
-    <div>
-      <Head>
-        <title>${fileName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} - Zion Tech Group</title>
-        <meta name="description" content="Professional ${fileName.replace(/-/g, ' ')} services and solutions by Zion Tech Group." />
-      </Head>
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">
-            ${fileName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
-          </h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Professional services by Zion Tech Group.
-          </p>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
-            <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300">
-              This service is currently under development. Contact us to learn more about our upcoming services.
-            </p>
-          </div>
-        </div>
-        <Footer />
-      </main>
-    </div>
-  );
-}`;
+      // Skip lines that declare unused variables
+      if (line.includes('function Home()') || 
+          line.includes('function PagePage()') ||
+          line.includes('function AboutLayout()') ||
+          line.includes('function FiveGMobileApplications()') ||
+          line.includes('function Page()') ||
+          line.includes('const Home =') ||
+          line.includes('const PagePage =') ||
+          line.includes('const AboutLayout =') ||
+          line.includes('const FiveGMobileApplications =') ||
+          line.includes('const Page =')) {
+        // Skip the function declaration and its body
+        let braceCount = 0;
+        let foundOpeningBrace = false;
+        let j = i;
         
-        content = content.replace(wrappedPattern, newComponent);
-        modified = true;
+        while (j < lines.length) {
+          const currentLine = lines[j];
+          if (currentLine.includes('{')) {
+            braceCount++;
+            foundOpeningBrace = true;
+          }
+          if (currentLine.includes('}')) {
+            braceCount--;
+          }
+          if (foundOpeningBrace && braceCount === 0) {
+            i = j; // Skip to the end of the function
+            break;
+          }
+          j++;
+        }
+        continue;
       }
+      
+      // Skip unused import lines
+      if (line.includes('import { Home }') ||
+          line.includes('import { PagePage }') ||
+          line.includes('import { AboutLayout }') ||
+          line.includes('import { FiveGMobileApplications }') ||
+          line.includes('import { Page }') ||
+          line.includes('import { ErrorBoundary }') ||
+          line.includes('import ErrorBoundary from') ||
+          line.includes('import { Home,') ||
+          line.includes('import { PagePage,') ||
+          line.includes('import { AboutLayout,') ||
+          line.includes('import { FiveGMobileApplications,') ||
+          line.includes('import { Page,') ||
+          line.includes('import { ErrorBoundary,')) {
+        continue;
+      }
+      
+      // Fix GlobalErrorBoundary import path
+      if (line.includes("import ErrorBoundary from '../components/GlobalErrorBoundary'")) {
+        fixedLines.push("import ErrorBoundary from '../../components/GlobalErrorBoundary';");
+        modified = true;
+        continue;
+      }
+      
+      // Fix Navigation import path
+      if (line.includes("import Navigation from '../components/Navigation'")) {
+        fixedLines.push("import Navigation from '../components/Navigation';");
+        modified = true;
+        continue;
+      }
+      
+      fixedLines.push(line);
     }
-
-    // Fix 7: Clean up any empty lines and ensure proper structure
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    content = content.replace(/^;\s*\n/gm, '');
-
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
+    
+    const newContent = fixedLines.join('\n');
+    
+    if (newContent !== content) {
+      fs.writeFileSync(filePath, newContent, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
     }
@@ -128,127 +100,21 @@ function fixFile(filePath) {
   }
 }
 
-// Main execution
+// Main function
 async function main() {
-  console.log('Starting TypeScript error fixes...');
+  // Find all TypeScript/TSX files in the app directory
+  const files = await glob('app/**/*.{ts,tsx}', { cwd: process.cwd() });
 
-  // Find all page.tsx files
-  const pageFiles = await glob('app/**/page.tsx', { cwd: process.cwd() });
+  console.log(`Found ${files.length} files to check...`);
 
   let fixedCount = 0;
-  let totalCount = pageFiles.length;
-
-  console.log(`Found ${totalCount} page files to process...`);
-
-  pageFiles.forEach(file => {
-=======
-    // Fix ErrorBoundary import - change from named import to default import
-    if (content.includes("import { ErrorBoundary } from '../components/ErrorBoundary';")) {
-      content = content.replace(
-        "import { ErrorBoundary } from '../components/ErrorBoundary';",
-        "import ErrorBoundary from '../components/ErrorBoundary';"
-      );
-      modified = true;
-    }
-
-    // Remove unused imports
-    const unusedImports = [
-      "import Head from 'next/head';",
-      "import Footer from '../components/Footer';",
-      "import { Metadata } from 'next';"
-    ];
-
-    unusedImports.forEach(importLine => {
-      if (content.includes(importLine)) {
-        content = content.replace(importLine + '\n', '');
-        modified = true;
-      }
-    });
-
-    // Fix missing component definitions
-    if (content.includes('<Page {...props} />')) {
-      // Replace with a simple div wrapper
-      content = content.replace(
-        /<Page \{\.\.\.props\} \/>/g,
-        '<div className="page-content">{/* Page content would go here */}</div>'
-      );
-      modified = true;
-    }
-
-    if (content.includes('<AboutPage {...props} />')) {
-      content = content.replace(
-        /<AboutPage \{\.\.\.props\} \/>/g,
-        '<div className="about-page-content">{/* About page content would go here */}</div>'
-      );
-      modified = true;
-    }
-
-    // Add proper component structure
-    if (content.includes('export default function Wrapped')) {
-      // Replace the entire content with a proper Next.js page structure
-      const pageName = path.basename(filePath, '.tsx');
-      const properContent = `import React from 'react';
-import ErrorBoundary from '../components/ErrorBoundary';
-
-export default function ${pageName.charAt(0).toUpperCase() + pageName.slice(1)}Page() {
-  return (
-    <ErrorBoundary>
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-6">
-            ${pageName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
-          </h1>
-          <div className="prose max-w-none">
-            <p className="text-lg text-gray-600">
-              This page is under development. Content will be added soon.
-            </p>
-          </div>
-        </div>
-      </div>
-    </ErrorBoundary>
-  );
-}`;
-      content = properContent;
-      modified = true;
-    }
-
-    if (modified) {
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-  }
-  return false;
-}
-
-// Main function to fix all files
-async function fixAllFiles() {
-  const pattern = 'app/**/*.tsx';
-  const files = await glob(pattern, { cwd: process.cwd() });
-  
-  console.log(`Found ${files.length} TypeScript files to check...`);
-  
-  let fixedCount = 0;
-  files.forEach(file => {
->>>>>>> cursor/fix-errors-and-merge-to-main-94aa
+  for (const file of files) {
     if (fixFile(file)) {
       fixedCount++;
     }
-  });
-<<<<<<< HEAD
+  }
 
-  console.log(`\nFixed ${fixedCount} out of ${totalCount} files.`);
-  console.log('TypeScript error fixes completed!');
+  console.log(`Fixed ${fixedCount} files.`);
 }
 
 main().catch(console.error);
-=======
-  
-  console.log(`Fixed ${fixedCount} files`);
-}
-
-// Run the fix
-fixAllFiles().catch(console.error);
->>>>>>> cursor/fix-errors-and-merge-to-main-94aa

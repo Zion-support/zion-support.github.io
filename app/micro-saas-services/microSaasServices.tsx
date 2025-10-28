@@ -10,4 +10,3 @@ const MicroSaasServices: React.FC<MicroSaasServicesProps> = ({ className = '', c
 };
 
 export default MicroSaasServices;
-

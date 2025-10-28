@@ -1,44 +1,64 @@
+#!/usr/bin/env node
+
 import fs from 'fs';
 import { glob } from 'glob';
 
+// Function to fix import paths
 function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Fix @/components/ErrorBoundary imports
-    if (content.includes("import { ErrorBoundary } from '@/components/ErrorBoundary'")) {
+    // Fix GlobalErrorBoundary import paths
+    if (content.includes("import ErrorBoundary from '../../../components/GlobalErrorBoundary'")) {
       content = content.replace(
-        "import { ErrorBoundary } from '@/components/ErrorBoundary';",
-        "import { ErrorBoundary } from '../components/ErrorBoundary';"
+        "import ErrorBoundary from '../../../components/GlobalErrorBoundary'",
+        "import ErrorBoundary from '../../components/GlobalErrorBoundary'"
       );
       modified = true;
     }
 
-    // Fix @/components/ErrorBoundary imports for nested pages
-    if (filePath.includes('micro-saas-services/')) {
-      if (content.includes("import { ErrorBoundary } from '@/components/ErrorBoundary'")) {
-        content = content.replace(
-          "import { ErrorBoundary } from '@/components/ErrorBoundary';",
-          "import { ErrorBoundary } from '../../components/ErrorBoundary';"
-        );
-        modified = true;
-      }
+    // Remove unused React imports
+    if (content.includes("import React from 'react';") && !content.includes('React.')) {
+      content = content.replace("import React from 'react';\n", '');
+      modified = true;
     }
 
-    // Fix @/components/ErrorBoundary imports for it-services pages
-    if (filePath.includes('it-services/')) {
-      if (content.includes("import { ErrorBoundary } from '@/components/ErrorBoundary'")) {
-        content = content.replace(
-          "import { ErrorBoundary } from '@/components/ErrorBoundary';",
-          "import { ErrorBoundary } from '../../components/ErrorBoundary';"
-        );
-        modified = true;
+    // Remove unused AboutLayout function
+    if (content.includes('function AboutLayout()')) {
+      const lines = content.split('\n');
+      const newLines = [];
+      let skipFunction = false;
+      let braceCount = 0;
+      
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        
+        if (line.includes('function AboutLayout()')) {
+          skipFunction = true;
+          braceCount = 0;
+          continue;
+        }
+        
+        if (skipFunction) {
+          if (line.includes('{')) braceCount++;
+          if (line.includes('}')) braceCount--;
+          if (braceCount === 0) {
+            skipFunction = false;
+            continue;
+          }
+          continue;
+        }
+        
+        newLines.push(line);
       }
+      
+      content = newLines.join('\n');
+      modified = true;
     }
 
     if (modified) {
-      fs.writeFileSync(filePath, content);
+      fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
     }
@@ -50,19 +70,21 @@ function fixFile(filePath) {
   }
 }
 
-// Main execution
+// Main function
 async function main() {
   // Find all TypeScript/TSX files in the app directory
-  const files = await glob('app/**/*.{ts,tsx}');
+  const files = await glob('app/**/*.{ts,tsx}', { cwd: process.cwd() });
+
+  console.log(`Found ${files.length} files to check...`);
 
   let fixedCount = 0;
-  files.forEach(file => {
+  for (const file of files) {
     if (fixFile(file)) {
       fixedCount++;
     }
-  });
+  }
 
-  console.log(`Fixed ${fixedCount} files`);
+  console.log(`Fixed ${fixedCount} files.`);
 }
 
 main().catch(console.error);
