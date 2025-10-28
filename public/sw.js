@@ -4,8 +4,11 @@ const urlsToCache = [
   '/',
   '/about',
   '/contact',
-  '/static/js/bundle.js',
+  '/services',
   '/static/css/main.css',
+  '/static/js/main.js',
+  '/images/logo.png',
+  '/images/hero-bg.jpg',
   '/manifest.json'
 ];
 
@@ -26,7 +29,10 @@ self.addEventListener('fetch', (event) => {
     caches.match(event.request)
       .then((response) => {
         // Return cached version or fetch from network
-        return response || fetch(event.request);
+        if (response) {
+          return response;
+        }
+        return fetch(event.request);
       }
     )
   );
