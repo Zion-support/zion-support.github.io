@@ -1,7 +1,7 @@
 import React from 'react';
 'use client';
 
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
