@@ -138,12 +138,6 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
   }, []);
 
   useEffect(() => {
-    optimizeScrollPerformance();
-    optimizeResizePerformance();
-    setupIntersectionObserver();
-  }, [optimizeScrollPerformance, optimizeResizePerformance, setupIntersectionObserver]);
-
-  useEffect(() => {
     optimizeImages();
     preloadCriticalResources();
     addResourceHints();
