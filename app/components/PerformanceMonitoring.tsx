@@ -16,7 +16,7 @@ interface LayoutShiftEntry extends PerformanceEntry {
 
 interface PerformanceMonitoringProps {
   className?: string;
-  onMetricsUpdate?: (metrics: any) => void;
+  onMetricsUpdate?: (metrics: unknown) => void;
   enableRealTimeMonitoring?: boolean;
 }
 
