@@ -2,22 +2,20 @@
 
 import React, { useEffect, memo, useCallback } from 'react';
 
-interface MemoryInfo {
-  usedJSHeapSize: number;
-  totalJSHeapSize: number;
-  jsHeapSizeLimit: number;
-}
-
 interface LayoutShiftEntry extends PerformanceEntry {
   value: number;
   hadRecentInput: boolean;
 }
 
+<<<<<<< HEAD
 interface FIDEntry extends PerformanceEntry {
   processingStart: number;
   startTime: number;
 }
 
+=======
+// FIDEntry interface is used in the code via type assertion
+>>>>>>> origin/main
 interface PerformanceMonitoringProps {
   className?: string;
 }
@@ -48,7 +46,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        const fidEntry = entry as FIDEntry; // Type assertion for FID-specific properties
+        const fidEntry = entry as PerformanceEventTiming;
         const fid = fidEntry.processingStart - fidEntry.startTime;
         console.log('FID:', fid);
         
@@ -70,7 +68,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
       entries.forEach((entry) => {
         const clsEntry = entry as LayoutShiftEntry;
         if (!clsEntry.hadRecentInput) {
-          clsValue += clsEntry.value;
+          clsValue += clsEntry.value || 0;
           console.log('CLS:', clsValue);
           
           if (window.gtag) {
@@ -132,7 +130,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     if (typeof window === 'undefined' || !('memory' in performance)) return;
 
     const checkMemory = () => {
-      const memory = (performance as Performance & { memory?: MemoryInfo }).memory;
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
       if (memory) {
         const used = memory.usedJSHeapSize / 1024 / 1024; // MB
         const total = memory.totalJSHeapSize / 1024 / 1024; // MB
