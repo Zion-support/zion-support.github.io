@@ -9,6 +9,7 @@ const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ className = '
   return (
 <div className={`servicecardskeleton-component ${className}`}>
       {children || <h2>ServiceCardSkeleton</h2>}
+
     </div>
   );
 };

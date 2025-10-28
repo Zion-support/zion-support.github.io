@@ -9,6 +9,7 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({ className
   return (
     <div className={`futuristicservicecard-component ${className}`}>
 {children || <h2>FuturisticServiceCard</h2>}
+
     </div>
   );
 };

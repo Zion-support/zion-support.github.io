@@ -52,7 +52,6 @@ export default ${componentName};
     return false;
   } catch (error) {
     console.error(`Error fixing unused interface in ${filePath}:`, error.message);
-334a97c43c32bf9e815481016c5bf31caa46a580
     return false;
   }
 }// Function to find all TypeScript files
@@ -92,4 +91,3 @@ for (const file of tsFiles) {
 }
 
 console.log(`Fixed unused interfaces in ${fixedCount} files`);
-334a97c43c32bf9e815481016c5bf31caa46a580
