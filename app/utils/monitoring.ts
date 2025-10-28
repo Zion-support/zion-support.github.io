@@ -1,25 +1,6 @@
 import { useState, useEffect } from 'react';
 
 // Performance API type definitions
-interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
-  processingEnd: number;
-  cancelable: boolean;
-  target?: EventTarget;
-}
-
-interface LayoutShift extends PerformanceEntry {
-  value: number;
-  hadRecentInput: boolean;
-  lastInputTime: number;
-  sources: LayoutShiftAttribution[];
-}
-
-interface LayoutShiftAttribution {
-  node?: Node;
-  previousRect: DOMRectReadOnly;
-  currentRect: DOMRectReadOnly;
-}
 
 // Declare gtag function for Google Analytics
 declare global {
@@ -190,8 +171,8 @@ class MonitoringService {
     }
 
     // Send to analytics (if configured)
-    if (typeof window !== 'undefined' && 'gtag' in window && typeof (window as any).gtag === 'function') {
-      (window as any).gtag('event', name, {
+    if (typeof window !== 'undefined' && 'gtag' in window && typeof (window as unknown as { gtag: unknown }).gtag === 'function') {
+      (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',
       });

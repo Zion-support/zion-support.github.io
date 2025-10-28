@@ -1,4 +1,4 @@
-/* eslint-disable react-refresh/only-export-components */
+ 
 import React from 'react';
 import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
@@ -39,7 +39,7 @@ const viewport: Viewport = {
   userScalable: false,
 };
 
-// eslint-disable-next-line react-refresh/only-export-components
+ 
 export { metadata, viewport };
 export default function RootLayout({
   children,
