@@ -14,7 +14,6 @@ export const metadata: Metadata = {
     type: 'website',
   },
 };
-
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white">
@@ -117,3 +116,4 @@ export default function AboutPage() {
     </div>
   );
 }
+
