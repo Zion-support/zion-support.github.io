@@ -93,7 +93,8 @@ class ErrorHandler {
   private reportError(errorInfo: ErrorInfo): void {
     // Implement error reporting logic here
     if (errorInfo.severity === 'critical') {
-      }
+      // Critical error reporting logic can be implemented here
+    }
   }
 
   public logError(

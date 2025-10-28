@@ -18,34 +18,34 @@ class Logger {
     return level >= this.level;
   }
 
-  debug(message: string, ...args: unknown[]): void {
+  debug(_message: string, ..._args: unknown[]): void {
     if (this.shouldLog(LogLevel.DEBUG)) {
-      // console.log(`[DEBUG] ${message}`, ...args);
+      // console.log(`[DEBUG] ${_message}`, ..._args);
     }
   }
 
-  info(message: string, ...args: unknown[]): void {
+  info(_message: string, ..._args: unknown[]): void {
     if (this.shouldLog(LogLevel.INFO)) {
-      // console.log(`[INFO] ${message}`, ...args);
+      // console.log(`[INFO] ${_message}`, ..._args);
     }
   }
 
-  warn(message: string, ...args: unknown[]): void {
+  warn(_message: string, ..._args: unknown[]): void {
     if (this.shouldLog(LogLevel.WARN)) {
-      // console.warn(`[WARN] ${message}`, ...args);
+      // console.warn(`[WARN] ${_message}`, ..._args);
     }
   }
 
-  error(message: string, ...args: unknown[]): void {
+  error(_message: string, ..._args: unknown[]): void {
     if (this.shouldLog(LogLevel.ERROR)) {
-      // console.error(`[ERROR] ${message}`, ...args);
+      // console.error(`[ERROR] ${_message}`, ..._args);
     }
   }
 
   // Production-safe logging (only in development)
-  dev(message: string, ...args: unknown[]): void {
+  dev(_message: string, ..._args: unknown[]): void {
     if (process.env.NODE_ENV === 'development') {
-      // console.log(`[DEV] ${message}`, ...args);
+      // console.log(`[DEV] ${_message}`, ..._args);
     }
   }
 }

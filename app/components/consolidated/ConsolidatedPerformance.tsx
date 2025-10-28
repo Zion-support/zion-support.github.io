@@ -192,7 +192,8 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
   // Log metrics for debugging (remove in production)
   useEffect(() => {
     if (process.env.NODE_ENV === 'development') {
-      }
+      // Development metrics logging can be added here
+    }
   }, [metrics]);
 
   return (
