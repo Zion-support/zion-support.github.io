@@ -7,6 +7,9 @@ import Footer from './components/Footer';
 import ErrorBoundary from './components/ErrorBoundary';
 import SkipLink from './components/SkipLink';
 import ClientComponents from './components/ClientComponents';
+import PerformanceMonitoring from './components/PerformanceMonitoring';
+import SEOOptimization from './components/SEOOptimization';
+import SecurityEnhancement from './components/SecurityEnhancement';
 
 const inter = Inter({ subsets: ['latin'] });
 
