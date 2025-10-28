@@ -42,9 +42,29 @@ export interface ServerComponentProps {
 
 import { ReactNode } from 'react';
 
+// Performance API types
+interface PerformanceEventTiming extends PerformanceEntry {
+  processingStart: number;
+  processingEnd: number;
+  target?: Node;
+}
+
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+  lastInputTime: number;
+  sources: LayoutShiftAttribution[];
+}
+
+interface LayoutShiftAttribution {
+  node?: Node;
+  previousRect: DOMRectReadOnly;
+  currentRect: DOMRectReadOnly;
+}
+
 // Client components types
 export interface ClientComponentProps {
-  children?: ReactNode;
+  children?: React.ReactNode;
   className?: string;
 }
 
