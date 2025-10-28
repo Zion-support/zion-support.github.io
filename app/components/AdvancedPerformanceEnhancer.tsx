@@ -16,11 +16,11 @@ import React, { useState, useEffect, useCallback } from 'react';
 //   sources: LayoutShiftAttribution[];
 // }
 
-interface LayoutShiftAttribution {
-  node?: Node;
-  previousRect: DOMRectReadOnly;
-  currentRect: DOMRectReadOnly;
-}
+// interface LayoutShiftAttribution {
+//   node?: Node;
+//   previousRect: DOMRectReadOnly;
+//   currentRect: DOMRectReadOnly;
+// }
 
 interface PerformanceMetrics {
   lcp: number | null;
@@ -49,7 +49,9 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
     memoryUsage: null,
     connectionSpeed: null
   });
-  const [_isOptimized, setIsOptimized] = useState(false);
+  const [isOptimized] = useState(false);
+  // isOptimized will be used for future optimization state tracking
+  console.log('Optimization state:', isOptimized);
 
   const measurePerformance = useCallback(() => {
     if (!enableMonitoring || typeof window === 'undefined') return;
@@ -137,7 +139,9 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
       });
 
       // Lazy load non-critical resources
-      const _lazyElements = document.querySelectorAll('[data-lazy]');
+      const lazyElements = document.querySelectorAll('[data-lazy]');
+      // lazyElements will be used for intersection observer setup
+      console.log('Lazy elements found:', lazyElements.length);
       const lazyObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
