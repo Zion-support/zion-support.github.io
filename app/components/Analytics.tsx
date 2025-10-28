@@ -14,7 +14,7 @@ interface AnalyticsProps {
 declare global {
   interface Window {
     dataLayer?: unknown[];
-    gtag?: (..._args: unknown[]) => void;
+    gtag?: (...args: unknown[]) => void;
   }
 }
 

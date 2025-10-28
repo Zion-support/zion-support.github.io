@@ -44,7 +44,7 @@ export const performanceUtils = {
 // Google Analytics integration for performance tracking
 export const trackPerformanceToGA = (metrics: PerformanceMetrics): void => {
   if (typeof window !== 'undefined' && 'gtag' in window) {
-    (window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('event', 'performance_metrics', {
+    (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event', 'performance_metrics', {
       event_category: 'Performance',
       event_label: 'Core Web Vitals',
       custom_map: {

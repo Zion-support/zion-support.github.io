@@ -10,8 +10,8 @@ export default async function handler(req, res) {
     const { 
       destination, 
       weight, 
-      dimensions, 
-      serviceType = 'standard' 
+      // dimensions, 
+      // serviceType = 'standard' 
     } = req.body || {};
 
     if (!destination || !weight) {

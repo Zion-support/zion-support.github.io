@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 
 describe('Application Improvements', () => {
   it('should have proper performance optimizations', () => {
