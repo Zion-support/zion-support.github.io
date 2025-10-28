@@ -12,6 +12,9 @@ export const metadata = {
     type: 'website',
   },
 };
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
 function ZionaiapitesterPage() {
   return (
     <>

@@ -11,6 +11,9 @@ export const metadata = {
     description: 'Professional test services by Zion Tech Group.',
     type: 'website',
   }};
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
 function TestPage() {
   return (
     <>

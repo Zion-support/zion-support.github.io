@@ -11,6 +11,9 @@ export const metadata = {
     description: 'Professional supply chain optimizer services by Zion Tech Group.',
     type: 'website',
   }};
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
 function SupplychainoptimizerPage() {
   return (
     <>

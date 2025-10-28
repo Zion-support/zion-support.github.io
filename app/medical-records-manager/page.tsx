@@ -1,6 +1,6 @@
 import React from 'react';
-import ErrorBoundary from '../components/ErrorBoundary';
-
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 export const metadata = {
   title: 'Medical Records Manager | Zion Tech Group',
@@ -10,7 +10,9 @@ export const metadata = {
     title: 'Medical Records Manager | Zion Tech Group',
     description: 'Professional medical records manager services by Zion Tech Group.',
     type: 'website',
-  }};
+  }
+};
+
 function MedicalrecordsmanagerPage() {
   return (
     <>
@@ -50,10 +52,4 @@ function MedicalrecordsmanagerPage() {
   );
 }
 
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <MedicalrecordsmanagerPage {...props} />
-    </ErrorBoundary>
-  );
-}
+export default MedicalrecordsmanagerPage;

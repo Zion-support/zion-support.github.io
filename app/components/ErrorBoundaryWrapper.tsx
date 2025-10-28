@@ -1,9 +1,7 @@
-import React from 'react'
-
+import React from 'react';
 
 interface ErrorBoundaryWrapperProps {
   className?: string;
-import ErrorBoundary from '../components/ErrorBoundary';
   children?: React.ReactNode;
 }
 

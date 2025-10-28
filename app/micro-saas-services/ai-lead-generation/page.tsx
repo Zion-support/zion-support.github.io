@@ -1,6 +1,7 @@
 import React from 'react';
-import ErrorBoundary from '../../components/ErrorBoundary';
 import { Metadata } from 'next';
+import Navigation from '../../components/Navigation';
+import Footer from '../../components/Footer';
 
 export const metadata: Metadata = {
   title: 'Page - Zion Tech Group',
@@ -51,10 +52,4 @@ function AileadgenerationPage() {
   );
 }
 
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <AileadgenerationPage {...props} />
-    </ErrorBoundary>
-  );
-}
+export default AileadgenerationPage;
