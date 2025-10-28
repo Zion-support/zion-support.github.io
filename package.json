@@ -37,7 +37,6 @@
     "full-audit": "npm run security-audit && npm run performance-audit && npm run accessibility-audit"
   },
   "dependencies": {
-    "@storybook/react-vite": "^9.1.15",
     "@tailwindcss/postcss": "^4.1.16",
     "autoprefixer": "^10.4.21",
     "clsx": "^2.1.1",
@@ -47,7 +46,6 @@
     "postcss": "^8.5.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-helmet-async": "^2.0.5",
     "tailwind-merge": "^3.3.1",
     "tailwindcss": "^4.1.16",
     "web-vitals": "^5.1.0"
