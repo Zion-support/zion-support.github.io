@@ -85,8 +85,6 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
     // Monitor for eval usage
     const originalEval = window.eval;
     window.eval = function(code) {
-      // eslint-disable-next-line no-console
-      console.log('Eval usage detected:', code);
       return originalEval.call(window, code);
     };
   }, []);
