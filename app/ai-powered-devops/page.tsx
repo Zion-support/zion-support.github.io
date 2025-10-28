@@ -2,7 +2,6 @@
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Brain, BarChart, Target, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
-import ErrorBoundary from '../../components/GlobalErrorBoundary';
 
 export const metadata = {
   title: 'AI-Powered DevOps | Zion Tech Group',

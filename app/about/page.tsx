@@ -1,7 +1,5 @@
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
 import ErrorBoundary from '../../components/GlobalErrorBoundary';
 
 export const metadata = {
