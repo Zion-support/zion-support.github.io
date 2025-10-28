@@ -59,10 +59,10 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
 
     _hints.forEach(hint => {
       const _link = document.createElement('link');
-      link.rel = hint.rel;
-      link.href = hint.href;
-      if (hint.crossOrigin) link.crossOrigin = hint.crossOrigin;
-      document.head.appendChild(link);
+      _link.rel = hint.rel;
+      _link.href = hint.href;
+      if (hint.crossOrigin) _link.crossOrigin = hint.crossOrigin;
+      document.head.appendChild(_link);
     });
   }, [enableResourceHints]);
 
