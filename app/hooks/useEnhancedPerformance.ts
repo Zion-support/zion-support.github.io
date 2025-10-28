@@ -27,8 +27,6 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
   });
   
   // Refs for tracking
-  const startTimeRef = useRef<number>(0);
-  const renderStartRef = useRef<number>(0);
   const mountTimeRef = useRef<number>(0);
   const renderCountRef = useRef<number>(0);
   
@@ -39,25 +37,21 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     
     // Log component performance tracking
     // Measure load time
-    const measureLoadTime = () => {
-      const loadTime = performance.now();
-      setMetrics(prev => ({ ...prev, loadTime }));
-    };
+    const loadTime = performance.now();
+    setMetrics(prev => ({ ...prev, loadTime }));
 
     // Measure render time
-    const measureRenderTime = () => {
-      const renderStart = performance.now();
-      requestAnimationFrame(() => {
-        const renderTime = performance.now() - renderStart;
-        setMetrics(prev => ({ ...prev, renderTime }));
-      });
-    };
+    const renderStart = performance.now();
+    requestAnimationFrame(() => {
+      const renderTime = performance.now() - renderStart;
+      setMetrics(prev => ({ ...prev, renderTime }));
+    });
   }, [options.trackPerformance]);
   
   // Track memory usage
   useEffect(() => {
     if (options.trackPerformance && 'memory' in performance) {
-      const memory = (performance as any).memory;
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
       if (memory) {
         setMetrics(prev => ({
           ...prev,
@@ -90,7 +84,7 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
         console.error(`Error in ${componentName}:`, error);
       };
       
-      const handleUnhandledRejection = (event: any) => {
+      const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
         console.error(`Unhandled promise rejection in ${componentName}:`, event.reason);
       };
       

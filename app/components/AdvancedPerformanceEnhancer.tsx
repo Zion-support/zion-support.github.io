@@ -16,11 +16,11 @@ import React, { useState, useEffect, useCallback } from 'react';
 //   sources: LayoutShiftAttribution[];
 // }
 
-interface LayoutShiftAttribution {
-  node?: Node;
-  previousRect: DOMRectReadOnly;
-  currentRect: DOMRectReadOnly;
-}
+// interface LayoutShiftAttribution {
+//   node?: Node;
+//   previousRect: DOMRectReadOnly;
+//   currentRect: DOMRectReadOnly;
+// }
 
 interface PerformanceMetrics {
   lcp: number | null;
@@ -49,7 +49,7 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
     memoryUsage: null,
     connectionSpeed: null
   });
-  const [_isOptimized, setIsOptimized] = useState(false);
+  // const [isOptimized, setIsOptimized] = useState(false);
 
   const measurePerformance = useCallback(() => {
     if (!enableMonitoring || typeof window === 'undefined') return;
@@ -137,7 +137,7 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
       });
 
       // Lazy load non-critical resources
-      const _lazyElements = document.querySelectorAll('[data-lazy]');
+      const lazyElements = document.querySelectorAll('[data-lazy]');
       const lazyObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
@@ -151,6 +151,9 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
           }
         });
       });
+      
+      // Observe all lazy elements
+      lazyElements.forEach(element => lazyObserver.observe(element));
     } catch { /* Handle error */ }
   }, [enableOptimizations]);
 

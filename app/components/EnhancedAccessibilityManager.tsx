@@ -19,7 +19,7 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
   children
 }) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
-  const [isScreenReaderActive, setIsScreenReaderActive] = useState(false);
+  const [isScreenReaderActive] = useState(false);
 
   useEffect(() => {
     if (enableAutoDetection) {

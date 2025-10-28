@@ -59,7 +59,7 @@ export const useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> 
         await onSubmit(formState.data);
       }
       setFormState(prev => ({ ...prev, isSubmitting: false, submitStatus: 'success' }));
-    } catch (_error) {
+    } catch {
       setFormState(prev => ({ 
         ...prev, 
         isSubmitting: false, 

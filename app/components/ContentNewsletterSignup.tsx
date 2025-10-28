@@ -1,10 +1,6 @@
 import React from 'react';
 
-interface ContentNewsletterSignupProps {
-  children?: React.ReactNode;
-}
-
-export default function ContentNewsletterSignup(_props: ContentNewsletterSignupProps) {
+export default function ContentNewsletterSignup() {
   return (
     <div>
       <h1>Newsletter Signup</h1>
