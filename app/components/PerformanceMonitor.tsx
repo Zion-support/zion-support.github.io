@@ -23,6 +23,16 @@ interface LayoutShiftAttribution {
   currentRect: DOMRectReadOnly;
 }
 
+interface PerformanceEventTiming extends PerformanceEntry {
+  processingStart: number;
+  processingEnd: number;
+}
+
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+}
+
 interface PerformanceMetrics {
   lcp: number | null;
   fid: number | null;
