@@ -9,32 +9,11 @@ interface PerformanceOptimizationsProps {
 // Type definitions for Performance API entries
 interface PerformanceEventTiming extends PerformanceEntry {
   processingStart: number;
-<<<<<<< HEAD
-  processingEnd: number;
-  target: EventTarget | null;
-}
-
-interface LayoutShift extends PerformanceEntry {
-  value: number;
-  hadRecentInput: boolean;
-  lastInputTime: number;
-  sources: LayoutShiftAttribution[];
-}
-
-interface LayoutShiftAttribution {
-  node?: Node;
-  previousRect: DOMRectReadOnly;
-  currentRect: DOMRectReadOnly;
-}
-
-
-=======
 }
 
 interface LayoutShift extends PerformanceEntry {
   value: number;
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-d3d4
 
 
 const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo(({ className = '' }) => {
