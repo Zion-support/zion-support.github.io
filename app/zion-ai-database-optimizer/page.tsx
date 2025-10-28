@@ -14,6 +14,9 @@ export const metadata = {
     description: 'Professional zion ai database optimizer services by Zion Tech Group.',
     type: 'website',
   }};
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
 function ZionaidatabaseoptimizerPage() {
   return (
     <>

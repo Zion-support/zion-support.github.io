@@ -14,6 +14,9 @@ export const metadata = {
     description: 'Professional micro saas services services by Zion Tech Group.',
     type: 'website',
   }};
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
 function MicrosaasservicesPage() {
   return (
     <>

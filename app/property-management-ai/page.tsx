@@ -14,6 +14,9 @@ export const metadata = {
     description: 'Professional property management ai services by Zion Tech Group.',
     type: 'website',
   }};
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
 function PropertymanagementaiPage() {
   return (
     <>
