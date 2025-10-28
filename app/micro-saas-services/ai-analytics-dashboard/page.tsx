@@ -14,9 +14,9 @@ export const metadata: Metadata = {
     type: 'website',
   },
 };
-function AianalyticsdashboardPage() {
+export default function AianalyticsdashboardPage() {
   return (
-    <>
+    <ErrorBoundary>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -49,14 +49,7 @@ function AianalyticsdashboardPage() {
         </div>
       </div>
       <Footer />
-    </>
-  );
-}
-
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <AianalyticsdashboardPage {...props} />
     </ErrorBoundary>
   );
 }
+

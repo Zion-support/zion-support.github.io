@@ -1,4 +1,6 @@
 import Navigation from '../components/Navigation';
+import ErrorBoundary from '../components/ErrorBoundary';
+import Footer from '../components/Footer';
 
 export const metadata = {
   title: 'Test Page | Zion Tech Group',
@@ -8,12 +10,10 @@ export const metadata = {
     title: 'Test Page | Zion Tech Group',
     description: 'Test page for development purposes',
     type: 'website',
-  },
-};
-
-function TestPage() {
+  }};
+export default function Page() {
   return (
-    <div>
+    <ErrorBoundary>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
@@ -37,8 +37,7 @@ function TestPage() {
           </div>
         </section>
       </div>
-    </div>
+      <Footer />
+    </ErrorBoundary>
   );
 }
-
-export default TestPage;

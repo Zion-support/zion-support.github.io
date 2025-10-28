@@ -14,9 +14,9 @@ export const metadata: Metadata = {
   },
 };
 
-function MicrosaasservicesPage() {
+export default function Page() {
   return (
-    <>
+    <ErrorBoundary>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
@@ -33,14 +33,6 @@ function MicrosaasservicesPage() {
         </section>
       </div>
       <Footer />
-    </>
-  );
-}
-
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <MicrosaasservicesPage {...props} />
     </ErrorBoundary>
   );
 }
