@@ -47,12 +47,17 @@
     "tailwindcss": "^4.1.16"
   },
   "devDependencies": {
+    "@babel/core": "^7.28.5",
+    "@babel/preset-env": "^7.28.5",
+    "@babel/preset-react": "^7.28.5",
+    "@babel/preset-typescript": "^7.28.5",
     "@eslint/js": "^9.37.0",
     "@testing-library/jest-dom": "^6.9.1",
     "@types/node": "^24.7.0",
     "@types/react": "^18.3.26",
     "@typescript-eslint/eslint-plugin": "^8.46.1",
     "@typescript-eslint/parser": "^8.46.1",
+    "babel-jest": "^30.2.0",
     "eslint": "^9.37.0",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
@@ -60,7 +65,9 @@
     "glob": "^11.0.3",
     "globals": "13.24.0",
     "jest": "^30.2.0",
+    "jest-environment-jsdom": "^30.2.0",
     "sharp": "^0.34.4",
+    "ts-jest": "^29.4.5",
     "typescript": "^5.9.3",
     "vite": "^7.1.9"
   },
