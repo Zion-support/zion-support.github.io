@@ -1,3 +1,4 @@
+import { ErrorBoundary } from '@/components/ErrorBoundary';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
@@ -14,11 +15,19 @@ export const metadata: Metadata = {
     type: 'website',
   },
 };
-export default function AboutPage() {
+function AboutPage() {
   return (
     <div className="min-h-screen bg-white">
       
       {/* Hero Section */}
+
+export default function Wrapped(props) {
+  return (
+    <ErrorBoundary>
+      < {...props} />
+    </ErrorBoundary>
+  );
+}
       <section className="pt-20 pb-16 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
