@@ -18,11 +18,13 @@ interface LayoutShift extends PerformanceEntry {
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
   enableOptimizations?: boolean;
+  className?: string;
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   children,
-  enableOptimizations = true
+  enableOptimizations = true,
+  className = ''
 }) => {
   useEffect(() => {
     if (!enableOptimizations || typeof window === 'undefined') return;
@@ -81,10 +83,22 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
       }
-      if (!img.decoding) {
-        img.decoding = 'async';
-      }
-    });
+    };
+
+    // Optimize images
+    const optimizeImageDecoding = () => {
+      const images = document.querySelectorAll('img');
+      images.forEach((img) => {
+        if (!(img as HTMLImageElement).decoding) {
+          (img as HTMLImageElement).decoding = 'async';
+        }
+      });
+    };
+
+    // Call optimization functions
+    optimizeImages();
+    optimizeImageDecoding();
+    monitorPerformance();
 
     // Enable service worker
     if ('serviceWorker' in navigator) {
@@ -95,7 +109,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   }, [enableOptimizations]);
 
   return (
-    <div className="performance-optimizer">
+    <div className={`performance-optimizer ${className}`}>
       {children}
     </div>
   );

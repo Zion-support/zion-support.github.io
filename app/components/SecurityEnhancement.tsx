@@ -14,40 +14,48 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({
     securityHeadersPresent: false
   });
 
-    // Add Content Security Policy
-    const csp = document.querySelector('meta[http-equiv="Content-Security-Policy"]');
-    if (!csp) {
-      const meta = document.createElement('meta');
-      meta.setAttribute('http-equiv', 'Content-Security-Policy');
-      meta.content = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com;";
-      document.head.appendChild(meta);
-    }
+  // Add security headers
+  const checkSecurityHeaders = useCallback(() => {
+    if (typeof window === 'undefined') return;
 
-    // Add X-Frame-Options
-    const xFrameOptions = document.querySelector('meta[http-equiv="X-Frame-Options"]');
-    if (!xFrameOptions) {
-      const meta = document.createElement('meta');
-      meta.setAttribute('http-equiv', 'X-Frame-Options');
-      meta.content = 'DENY';
-      document.head.appendChild(meta);
-    }
+    try {
+      // Add Content Security Policy
+      const csp = document.querySelector('meta[http-equiv="Content-Security-Policy"]');
+      if (!csp) {
+        const meta = document.createElement('meta');
+        meta.setAttribute('http-equiv', 'Content-Security-Policy');
+        meta.content = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com;";
+        document.head.appendChild(meta);
+      }
 
-    // Add X-Content-Type-Options
-    const xContentTypeOptions = document.querySelector('meta[http-equiv="X-Content-Type-Options"]');
-    if (!xContentTypeOptions) {
-      const meta = document.createElement('meta');
-      meta.setAttribute('http-equiv', 'X-Content-Type-Options');
-      meta.content = 'nosniff';
-      document.head.appendChild(meta);
-    }
+      // Add X-Frame-Options
+      const xFrameOptions = document.querySelector('meta[http-equiv="X-Frame-Options"]');
+      if (!xFrameOptions) {
+        const meta = document.createElement('meta');
+        meta.setAttribute('http-equiv', 'X-Frame-Options');
+        meta.content = 'DENY';
+        document.head.appendChild(meta);
+      }
 
-    // Add Referrer Policy
-    const referrerPolicy = document.querySelector('meta[name="referrer"]');
-    if (!referrerPolicy) {
-      const meta = document.createElement('meta');
-      meta.name = 'referrer';
-      meta.content = 'strict-origin-when-cross-origin';
-      document.head.appendChild(meta);
+      // Add X-Content-Type-Options
+      const xContentTypeOptions = document.querySelector('meta[http-equiv="X-Content-Type-Options"]');
+      if (!xContentTypeOptions) {
+        const meta = document.createElement('meta');
+        meta.setAttribute('http-equiv', 'X-Content-Type-Options');
+        meta.content = 'nosniff';
+        document.head.appendChild(meta);
+      }
+
+      // Add Referrer Policy
+      const referrerPolicy = document.querySelector('meta[name="referrer"]');
+      if (!referrerPolicy) {
+        const meta = document.createElement('meta');
+        meta.name = 'referrer';
+        meta.content = 'strict-origin-when-cross-origin';
+        document.head.appendChild(meta);
+      }
+    } catch (error) {
+      console.error('Security header setup error:', error);
     }
   }, []);
 
@@ -56,23 +64,24 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({
     if (typeof window === 'undefined') return;
 
     // Monitor for XSS attempts
-    const originalInnerHTML = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML')?.set;
-    if (originalInnerHTML) {
-      Object.defineProperty(Element.prototype, 'innerHTML', {
-        set: function(value) {
-          if (value && typeof value === 'string' && /<script/i.test(value)) {
-
-            return;
-          }
-          originalInnerHTML.call(this, value);
-        },
-        get: function() {
-          return this.textContent || '';
-        },
-        configurable: true
-      });
-      
-      // // console.log('Security enhancements applied');
+    try {
+      const originalInnerHTML = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML')?.set;
+      if (originalInnerHTML) {
+        Object.defineProperty(Element.prototype, 'innerHTML', {
+          set: function(value) {
+            if (value && typeof value === 'string' && /<script/i.test(value)) {
+              return;
+            }
+            originalInnerHTML.call(this, value);
+          },
+          get: function() {
+            return this.textContent || '';
+          },
+          configurable: true
+        });
+        
+        // // console.log('Security enhancements applied');
+      }
     } catch (error) {
       // // console.warn('Security enhancement error:', error);
     }
@@ -111,7 +120,9 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({
 
   useEffect(() => {
     checkSecurityHeaders();
-  }, [checkSecurityHeaders]);
+    monitorSuspiciousActivity();
+    addIntegrityChecks();
+  }, [checkSecurityHeaders, monitorSuspiciousActivity, addIntegrityChecks]);
 
   useEffect(() => {
     const checkSecurityStatus = () => {
