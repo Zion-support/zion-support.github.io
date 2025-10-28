@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { LayoutShift, PerformanceEventTiming } from '../types/performance';
 
 // Declare gtag function for Google Analytics
 declare global {
