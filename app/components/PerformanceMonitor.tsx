@@ -46,18 +46,17 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
       }
     });
 
-    // Observe different types of performance entries
+    // Observe Core Web Vitals
     try {
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
-    } catch (e) {
-      // Fallback for browsers that don't support all entry types
-      observer.observe({ entryTypes: ['paint'] });
+    } catch (error) {
+      console.warn('Performance Observer not supported:', error);
     }
 
-    // Get TTFB
-    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    if (navigationEntry) {
-      setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
+    // TTFB measurement
+    if (performance.timing) {
+      const ttfb = performance.timing.responseStart - performance.timing.navigationStart;
+      setMetrics(prev => ({ ...prev, ttfb }));
     }
 
     return () => {
@@ -65,17 +64,20 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
     };
   }, [enableReporting]);
 
-  // Report metrics to analytics (if enabled)
-  useEffect(() => {
-    if (enableReporting && metrics.lcp && metrics.fid && metrics.cls) {
-      // Here you would typically send metrics to your analytics service
-      console.log('Performance Metrics:', metrics);
-    }
-  }, [metrics, enableReporting]);
+  if (!enableReporting) {
+    return <>{children}</>;
+  }
 
   return (
-    <div className={`performance-monitor ${className}`} style={{ display: 'none' }}>
+    <div className={`performance-monitor ${className}`}>
       {children}
+      <div className="performance-metrics" style={{ display: 'none' }}>
+        {Object.entries(metrics).map(([key, value]) => (
+          <div key={key} data-metric={key} data-value={value || 0}>
+            {key}: {value?.toFixed(2) || 'N/A'}
+          </div>
+        ))}
+      </div>
     </div>
   );
 });
