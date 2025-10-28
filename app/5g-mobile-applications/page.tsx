@@ -1,4 +1,6 @@
 'use client';
+
+import ErrorBoundary from '../components/ErrorBoundary';
 function Page() {
   return (
     <div>
