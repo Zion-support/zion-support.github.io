@@ -13,12 +13,12 @@ interface EnhancedAccessibilityManagerProps {
 }
 
 const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> = memo(({ 
-  enableAutoDetection = true, _enableKeyboardShortcuts = true, _enableHighContrastMode = true, _children
+  enableAutoDetection = true, enableKeyboardShortcuts: _enableKeyboardShortcuts = true, enableHighContrastMode: _enableHighContrastMode = true, children
 }) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [isScreenReaderActive, _setIsScreenReaderActive] = useState(false);
 
-  useEffect_(() => {
+  useEffect(() => {
     if (enableAutoDetection) {
       // Check for missing alt attributes
       const images = document.querySelectorAll('img');
@@ -53,19 +53,19 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
     }
   }, [enableAutoDetection]);
 
-  useEffect_(() => {
-    if (!enableHighContrastMode) return;
+  useEffect(() => {
+    if (!_enableHighContrastMode) return;
 
     const mediaQuery = window.matchMedia('(prefers-contrast: high)');
     setIsHighContrast(mediaQuery.matches);
 
     const handleChange = (e: MediaQueryListEvent) => setIsHighContrast(e.matches);
     mediaQuery.addEventListener('change', handleChange);
-    return _() => mediaQuery.removeEventListener('change', handleChange);
-  }, [enableHighContrastMode]);
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, [_enableHighContrastMode]);
 
-  useEffect_(() => {
-    if (!enableKeyboardShortcuts) return;
+  useEffect(() => {
+    if (!_enableKeyboardShortcuts) return;
 
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
@@ -94,10 +94,10 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
     };
 
     document.addEventListener('keydown', handleKeyDown);
-    return _() => document.removeEventListener('keydown', handleKeyDown);
-  }, [enableKeyboardShortcuts]);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [_enableKeyboardShortcuts]);
 
-  useEffect_(() => {
+  useEffect(() => {
     if (isHighContrast) {
       document.body.classList.add('high-contrast');
     } else {

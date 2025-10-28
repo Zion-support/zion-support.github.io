@@ -70,9 +70,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
   }, [metrics, enableReporting]);
 
   return (
-    <div className={`performance-monitor ${className || ''}`}>
+      <div className={`performance-monitor ${_className || ''}`}>
       <h3>Performance Metrics</h3>
-      {children}
+      {_children}
       <div className="metrics">
         <div>FCP: {metrics.fcp?.toFixed(2)}ms</div>
         <div>LCP: {metrics.lcp?.toFixed(2)}ms</div>
