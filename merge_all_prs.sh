@@ -4,51 +4,40 @@
 echo "Starting to merge all open PRs..."
 
 # Get list of open PRs
-PRS=$(gh pr list --state open --json number,title,headRefName --jq '.[] | "\(.number) \(.headRefName)"')
+PRS=$(gh pr list --state open --json number,headRefName --jq '.[].number')
 
-echo "Found open PRs:"
-echo "$PRS"
-
-# Process each PR
-while IFS= read -r line; do
-    if [ -n "$line" ]; then
-        PR_NUMBER=$(echo "$line" | awk '{print $1}')
-        BRANCH_NAME=$(echo "$line" | awk '{print $2}')
+for pr in $PRS; do
+    echo "Processing PR #$pr"
+    
+    # Try to merge the PR
+    if gh pr merge $pr --merge --delete-branch 2>/dev/null; then
+        echo "✓ Successfully merged PR #$pr"
+    else
+        echo "⚠ Failed to merge PR #$pr - checking if it can be merged manually"
         
-        echo "Processing PR #$PR_NUMBER (branch: $BRANCH_NAME)"
-        
-        # Try to merge the PR
-        if gh pr merge "$PR_NUMBER" --merge --delete-branch; then
-            echo "Successfully merged PR #$PR_NUMBER"
-        else
-            echo "Failed to merge PR #$PR_NUMBER, trying to resolve conflicts..."
+        # Try to checkout and merge manually
+        if gh pr checkout $pr 2>/dev/null; then
+            echo "Checked out PR #$pr, attempting manual merge"
             
-            # Try to checkout the branch and resolve conflicts
-            if git fetch origin "$BRANCH_NAME" && git checkout -b "temp-$BRANCH_NAME" "origin/$BRANCH_NAME"; then
-                echo "Checked out branch $BRANCH_NAME"
-                
-                # Try to merge with main
-                if git merge main --no-ff; then
-                    echo "Successfully merged $BRANCH_NAME with main"
-                    git push origin "temp-$BRANCH_NAME"
-                else
-                    echo "Merge conflicts detected in $BRANCH_NAME"
-                    # Try to resolve conflicts automatically
-                    git status
-                    # For now, just abort the merge and continue
-                    git merge --abort
-                fi
-                
-                # Clean up
+            # Fetch latest main
+            git fetch origin main
+            
+            # Try to merge with main
+            if git merge origin/main 2>/dev/null; then
+                echo "✓ Successfully merged PR #$pr with main"
+                git push origin HEAD
                 git checkout main
-                git branch -D "temp-$BRANCH_NAME"
+                git merge $pr
+                git push origin main
+                echo "✓ PR #$pr merged and pushed to main"
             else
-                echo "Could not checkout branch $BRANCH_NAME"
+                echo "⚠ PR #$pr has conflicts, skipping for now"
+                git checkout main
             fi
+        else
+            echo "⚠ Could not checkout PR #$pr, skipping"
         fi
-        
-        echo "---"
     fi
-done <<< "$PRS"
+done
 
 echo "Finished processing all PRs"
