@@ -21,8 +21,7 @@ export const improveKeyboardNavigation = () => {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Tab') {
       document.body.classList.add('keyboard-navigation');
-    }
-  });
+    });
 
   document.addEventListener('mousedown', () => {
     document.body.classList.remove('keyboard-navigation');

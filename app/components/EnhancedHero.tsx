@@ -7,8 +7,7 @@ interface EnhancedHeroProps {
 
 const EnhancedHero: React.FC<EnhancedHeroProps> = ({ className = '', children }) => {
   return (
-    <div className={`enhancedhero-component ${className}`}>
-      {children}
+    <div className={`enhancedhero-component ${className}`}>{children}
     </div>
   );
 };

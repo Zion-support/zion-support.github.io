@@ -46,15 +46,11 @@ const ConsolidatedAccessibility: React.FC<ConsolidatedAccessibilityProps> = memo
             if (document.activeElement === firstElement) {
               lastElement.focus();
               e.preventDefault();
-            }
-          } else {
+            } else {
             if (document.activeElement === lastElement) {
               firstElement.focus();
               e.preventDefault();
-            }
-          }
-        }
-      };
+            };
 
       element.addEventListener('keydown', handleTabKey);
       return () => element.removeEventListener('keydown', handleTabKey);
@@ -72,8 +68,7 @@ const ConsolidatedAccessibility: React.FC<ConsolidatedAccessibilityProps> = memo
     document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])').forEach(button => {
       if (!button.textContent?.trim()) {
         button.setAttribute('aria-label', 'Button');
-      }
-    });
+      });
 
     // Add ARIA labels to links without descriptive text
     document.querySelectorAll('a:not([aria-label]):not([aria-labelledby])').forEach(link => {
@@ -81,9 +76,7 @@ const ConsolidatedAccessibility: React.FC<ConsolidatedAccessibilityProps> = memo
         const href = link.getAttribute('href');
         if (href) {
           link.setAttribute('aria-label', `Link to ${href}`);
-        }
-      }
-    });
+        });
 
     // Add role="button" to clickable divs
     document.querySelectorAll('div[onclick], div[onclick]').forEach(div => {
@@ -124,9 +117,7 @@ const ConsolidatedAccessibility: React.FC<ConsolidatedAccessibilityProps> = memo
             ? (currentIndex + 1) % items.length
             : (currentIndex - 1 + items.length) % items.length;
           (items[nextIndex] as HTMLElement).focus();
-        }
-      }
-    });
+        });
   }, []);
 
   // Add high contrast mode support
@@ -138,8 +129,7 @@ const ConsolidatedAccessibility: React.FC<ConsolidatedAccessibilityProps> = memo
         document.body.classList.add('high-contrast');
       } else {
         document.body.classList.remove('high-contrast');
-      }
-    };
+      };
 
     mediaQuery.addEventListener('change', handleContrastChange);
     handleContrastChange({ matches: mediaQuery.matches } as MediaQueryListEvent);
@@ -166,8 +156,7 @@ const ConsolidatedAccessibility: React.FC<ConsolidatedAccessibilityProps> = memo
         document.body.classList.add('reduced-motion');
       } else {
         document.body.classList.remove('reduced-motion');
-      }
-    };
+      };
 
     mediaQuery.addEventListener('change', handleMotionChange);
     handleMotionChange({ matches: mediaQuery.matches } as MediaQueryListEvent);
@@ -201,8 +190,7 @@ const ConsolidatedAccessibility: React.FC<ConsolidatedAccessibilityProps> = memo
   ]);
 
   return (
-    <div className={`consolidated-accessibility ${className}`} style={{ display: 'none' }}>
-      {/* This component doesn't render anything visible */}
+    <div className={`consolidated-accessibility ${className}`} style={{ display: 'none' }>{/* This component doesn't render anything visible */}
     </div>
   );
 });

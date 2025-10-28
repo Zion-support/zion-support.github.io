@@ -7,8 +7,7 @@ interface BreadcrumbProps {
 
 const Breadcrumb: React.FC<BreadcrumbProps> = ({ className = '', children }) => {
   return (
-    <div className={`breadcrumb-component ${className}`}>
-{children || <h2>Breadcrumb</h2>}
+    <div className={`breadcrumb-component ${className}`}>{children || <h2>Breadcrumb</h2>}
     </div>
   );
 };

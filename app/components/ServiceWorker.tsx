@@ -7,8 +7,7 @@ interface ServiceWorkerProps {
 
 const ServiceWorker: React.FC<ServiceWorkerProps> = ({ className = '', children }) => {
   return (
-<div className={`serviceworker-component ${className}`}>
-      {children}
+<div className={`serviceworker-component ${className}`}>{children}
     </div>
   );
 };

@@ -7,8 +7,7 @@ interface GenericServicePageProps {
 
 const GenericServicePage: React.FC<GenericServicePageProps> = ({ className = '', children }) => {
   return (
-    <div className={`genericservicepage-component ${className}`}>
-      {children}
+    <div className={`genericservicepage-component ${className}`}>{children}
     </div>
   );
 };

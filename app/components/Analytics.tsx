@@ -16,7 +16,6 @@ declare global {
     dataLayer?: unknown[];
     gtag?: (...args: unknown[]) => void;
   }
-}
 
 const Analytics: React.FC<AnalyticsProps> = memo(({ 
   gaId = process.env.NEXT_PUBLIC_GA_ID,
@@ -61,8 +60,7 @@ const Analytics: React.FC<AnalyticsProps> = memo(({
       const noscript = document.createElement('noscript');
       noscript.innerHTML = `<iframe src="https://www.googletagmanager.com/ns.html?id=${gtmId}" height="0" width="0" style="display:none;visibility:hidden"></iframe>`;
       document.body.insertBefore(noscript, document.body.firstChild);
-    }
-  }, [gaId, gtmId, enabled]);
+    }, [gaId, gtmId, enabled]);
 
   return null;
 });

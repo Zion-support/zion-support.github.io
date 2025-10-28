@@ -46,8 +46,7 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
       meta.name = 'referrer';
       meta.content = 'strict-origin-when-cross-origin';
       document.head.appendChild(meta);
-    }
-  }, []);
+    }, []);
 
   // Monitor for suspicious activity
   const monitorSuspiciousActivity = useCallback(() => {
@@ -97,15 +96,13 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
       const src = script.getAttribute('src');
       if (src && !src.startsWith(window.location.origin) && !script.hasAttribute('integrity')) {
         console.warn('External script without integrity check:', src);
-      }
-    });
+      });
 
     document.querySelectorAll('link[href]').forEach(link => {
       const href = link.getAttribute('href');
       if (href && !href.startsWith(window.location.origin) && !link.hasAttribute('integrity')) {
         console.warn('External stylesheet without integrity check:', href);
-      }
-    });
+      });
   }, []);
 
   useEffect(() => {
@@ -115,8 +112,7 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
   }, [addSecurityHeaders, monitorSuspiciousActivity, addIntegrityChecks]);
 
   return (
-    <div className={`security-enhancement ${className}`} style={{ display: 'none' }}>
-      {/* This component doesn't render anything visible */}
+    <div className={`security-enhancement ${className}`} style={{ display: 'none' }>{/* This component doesn't render anything visible */}
     </div>
   );
 });

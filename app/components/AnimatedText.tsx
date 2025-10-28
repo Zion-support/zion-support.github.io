@@ -7,8 +7,7 @@ interface AnimatedTextProps {
 
 const AnimatedText: React.FC<AnimatedTextProps> = ({ className = '', children }) => {
   return (
-    <div className={`animatedtext-component ${className}`}>
-      {children}
+    <div className={`animatedtext-component ${className}`}>{children}
     </div>
   );
 };

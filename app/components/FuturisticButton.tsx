@@ -7,8 +7,7 @@ interface FuturisticButtonProps {
 
 const FuturisticButton: React.FC<FuturisticButtonProps> = ({ className = '', children }) => {
   return (
-    <div className={`futuristicbutton-component ${className}`}>
-      {children}
+    <div className={`futuristicbutton-component ${className}`}>{children}
     </div>
   );
 };

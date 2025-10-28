@@ -7,8 +7,7 @@ interface Footer_brokenProps {
 
 const Footer_broken: React.FC<Footer_brokenProps> = ({ className = '', children }) => {
   return (
-    <div className={`footer_broken-component ${className}`}>
-      {children}
+    <div className={`footer_broken-component ${className}`}>{children}
     </div>
   );
 };

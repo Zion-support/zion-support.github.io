@@ -7,8 +7,7 @@ interface ModernLoaderProps {
 
 const ModernLoader: React.FC<ModernLoaderProps> = ({ className = '', children }) => {
   return (
-    <div className={`modernloader-component ${className}`}>
-      {children}
+    <div className={`modernloader-component ${className}`}>{children}
     </div>
   );
 };

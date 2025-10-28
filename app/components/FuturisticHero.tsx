@@ -7,8 +7,7 @@ interface FuturisticHeroProps {
 
 const FuturisticHero: React.FC<FuturisticHeroProps> = ({ className = '', children }) => {
   return (
-    <div className={`futuristichero-component ${className}`}>
-      {children}
+    <div className={`futuristichero-component ${className}`}>{children}
     </div>
   );
 };

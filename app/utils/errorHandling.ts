@@ -95,7 +95,6 @@ class ErrorHandler {
     if (errorInfo.severity === 'critical') {
       console.error('Critical error:', errorInfo);
     }
-  }
 
   public logError(
     error: Error | string,
@@ -148,7 +147,6 @@ class ErrorHandler {
   public exportErrors(): string {
     return JSON.stringify(this.getErrorReport(), null, 2);
   }
-}
 
 // Export singleton instance
 export const errorHandler = new ErrorHandler();

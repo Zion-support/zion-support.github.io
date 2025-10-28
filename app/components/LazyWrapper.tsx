@@ -7,8 +7,7 @@ interface LazyWrapperProps {
 
 const LazyWrapper: React.FC<LazyWrapperProps> = ({ className = '', children }) => {
   return (
-    <div className={`lazywrapper-component ${className}`}>
-      {children}
+    <div className={`lazywrapper-component ${className}`}>{children}
     </div>
   );
 };

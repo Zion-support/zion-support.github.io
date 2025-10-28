@@ -7,8 +7,7 @@ interface UserExperienceEnhancerProps {
 
 const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ className = '', children }) => {
   return (
-    <div className={`userexperienceenhancer-component ${className}`}>
-      {children}
+    <div className={`userexperienceenhancer-component ${className}`}>{children}
     </div>
   );
 };

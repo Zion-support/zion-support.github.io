@@ -7,8 +7,7 @@ interface AnalyticsProviderProps {
 
 const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ className = '', children }) => {
   return (
-    <div className={`analyticsprovider-component ${className}`}>
-      {children}
+    <div className={`analyticsprovider-component ${className}`}>{children}
     </div>
   );
 };

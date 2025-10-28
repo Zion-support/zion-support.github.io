@@ -37,8 +37,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
           value: Math.round(lastEntry.startTime),
           event_category: 'Web Vitals'
         });
-      }
-    });
+      });
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
     // FID (First Input Delay)
@@ -55,8 +54,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
             value: Math.round(fid),
             event_category: 'Web Vitals'
           });
-        }
-      });
+        });
     });
     fidObserver.observe({ entryTypes: ['first-input'] });
 
@@ -76,9 +74,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
               value: Math.round(clsValue * 1000),
               event_category: 'Web Vitals'
             });
-          }
-        }
-      });
+          });
     });
     clsObserver.observe({ entryTypes: ['layout-shift'] });
 
@@ -94,8 +90,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
             value: Math.round(entry.startTime),
             event_category: 'Web Vitals'
           });
-        }
-      });
+        });
     });
     fcpObserver.observe({ entryTypes: ['paint'] });
 
@@ -116,8 +111,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
       entries.forEach((entry) => {
         if (entry.duration > 1000) { // Resources taking more than 1 second
           console.warn('Slow resource:', entry.name, entry.duration);
-        }
-      });
+        });
     });
     resourceObserver.observe({ entryTypes: ['resource'] });
 
@@ -129,7 +123,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     if (typeof window === 'undefined' || !('memory' in performance)) return;
 
     const checkMemory = () => {
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number }).memory;
       if (memory) {
         const used = memory.usedJSHeapSize / 1024 / 1024; // MB
         const total = memory.totalJSHeapSize / 1024 / 1024; // MB
@@ -143,9 +137,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
 
         if (used / limit > 0.8) {
           console.warn('High memory usage detected:', Math.round((used / limit) * 100) + '%');
-        }
-      }
-    };
+        };
 
     const interval = setInterval(checkMemory, 30000); // Check every 30 seconds
     return () => clearInterval(interval);
@@ -164,8 +156,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
   }, [monitorCoreWebVitals, monitorResourcePerformance, monitorMemoryUsage]);
 
   return (
-    <div className={`performance-monitoring ${className}`} style={{ display: 'none' }}>
-      {/* This component doesn't render anything visible */}
+    <div className={`performance-monitoring ${className}`} style={{ display: 'none' }>{/* This component doesn't render anything visible */}
     </div>
   );
 });

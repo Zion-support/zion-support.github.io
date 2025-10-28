@@ -7,8 +7,7 @@ interface LoadingProps {
 
 const Loading: React.FC<LoadingProps> = memo(({ className = '', children }) => {
   return (
-    <div className={`loading-component ${className}`}>
-      {children}
+    <div className={`loading-component ${className}`}>{children}
     </div>
   );
 });

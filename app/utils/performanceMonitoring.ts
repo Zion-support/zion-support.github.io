@@ -49,16 +49,13 @@ class PerformanceMonitor {
           entries.forEach((entry) => {
             if (entry.entryType === 'navigation') {
               this.processNavigationTiming(entry as PerformanceNavigationTiming);
-            }
-          });
+            });
         });
         navObserver.observe({ entryTypes: ['navigation'] });
         this.observers.push(navObserver);
       } catch (error) {
         console.warn('Performance observer initialization failed:', error);
       }
-    }
-  }
 
   private processNavigationTiming(entry: PerformanceNavigationTiming): void {
     const metrics: Partial<PerformanceMetrics> = {
@@ -75,7 +72,6 @@ class PerformanceMonitor {
     if (this.metrics.length > 100) {
       this.metrics = this.metrics.slice(-100);
     }
-  }
 
   private checkThresholds(metrics: PerformanceMetrics): void {
     const thresholds = {
@@ -100,8 +96,7 @@ class PerformanceMonitor {
           threshold,
           timestamp: Date.now()
         });
-      }
-    });
+      });
   }
 
   private addAlert(alert: PerformanceAlert): void {
@@ -109,7 +104,6 @@ class PerformanceMonitor {
     if (this.alerts.length > 50) {
       this.alerts = this.alerts.slice(-50);
     }
-  }
 
   public startMonitoring(): void {
     this.isMonitoring = true;
@@ -148,7 +142,6 @@ class PerformanceMonitor {
       totalMetrics: this.metrics.length
     }, null, 2);
   }
-}
 
 // Export singleton instance
 export const performanceMonitor = new PerformanceMonitor();

@@ -7,8 +7,7 @@ interface FuturisticBackgroundProps {
 
 const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ className = '', children }) => {
   return (
-<div className={`futuristicbackground-component ${className}`}>
-      {children}
+<div className={`futuristicbackground-component ${className}`}>{children}
     </div>
   );
 };

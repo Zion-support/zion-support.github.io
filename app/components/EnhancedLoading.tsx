@@ -7,8 +7,7 @@ interface EnhancedLoadingProps {
 
 const EnhancedLoading: React.FC<EnhancedLoadingProps> = () => {
   return (
-    <div>
-      {/* Component content */}
+    <div>{/* Component content */}
     </div>
   );
 };

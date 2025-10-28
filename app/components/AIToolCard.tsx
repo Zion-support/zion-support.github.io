@@ -7,8 +7,7 @@ interface AIToolCardProps {
 
 const AIToolCard: React.FC<AIToolCardProps> = ({ className = '', children }) => {
   return (
-    <div className={`aitoolcard-component ${className}`}>
-      {children}
+    <div className={`aitoolcard-component ${className}`}>{children}
     </div>
   );
 };

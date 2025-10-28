@@ -100,7 +100,7 @@ const SEOHead: React.FC<SEOHeadProps> = memo(({
               contactType: 'customer service',
             },
           }),
-        }}
+        }
       />
     </Head>
   );

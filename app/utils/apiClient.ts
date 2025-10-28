@@ -34,7 +34,6 @@ class ApiClient {
       status: response.status,
       message: response.statusText,
     }
-  }
 
   async get<T>(endpoint: string, headers?: Record<string, string>): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, { method: 'GET', headers });
@@ -59,6 +58,5 @@ class ApiClient {
   async delete<T>(endpoint: string, headers?: Record<string, string>): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, { method: 'DELETE', headers });
   }
-}
 
 export default new ApiClient();

@@ -17,8 +17,7 @@ export const preloadCriticalStyles = () => {
     style.textContent = criticalCSS;
     style.setAttribute('data-critical', 'true');
     document.head.insertBefore(style, document.head.firstChild);
-  }
-};
+  };
 
 export const loadNonCriticalCSS = () => {
   if (typeof window !== 'undefined') {
@@ -30,5 +29,4 @@ export const loadNonCriticalCSS = () => {
       link.media = 'all';
     };
     document.head.appendChild(link);
-  }
-};
+  };

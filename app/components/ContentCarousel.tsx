@@ -92,19 +92,19 @@ const ContentCarousel: React.FC = () => {
   };
 
   return (
-    <div className="relative w-full max-w-6xl mx-auto">
-      <div className="overflow-hidden rounded-2xl">
-        <div
-          className="flex transition-transform duration-500 ease-in-out"
-          style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-        >
-          {slides.map((slide) => (
-            <div key={slide.id} className="w-full flex-shrink-0">
-              <div className={`bg-gradient-to-br ${slide.color} p-8 md:p-12 text-white`}>
-                <div className="max-w-4xl mx-auto">
-                  <div className="flex items-center justify-center mb-6">
-                    <div className="bg-white/20 p-4 rounded-full">
-                      <slide.icon className="h-12 w-12" />
+    <div className="min-h-screen bg-white">
+        
+      </div></div></div><div className="min-h-screen bg-white">
+        {slides.map((slide) => (
+        <div className="container mx-auto px-4">
+          
+        </div>
+      </div></div>
+      </div></div><div className={`bg-gradient-to-br ${slide.color} p-8 md:p-12 text-white`}>
+          
+        </div><div className="min-h-screen bg-white">
+        
+      </div></div></div><div className="bg-white/20 p-4 rounded-full"> <slide.icon className="h-12 w-12" />
                     </div>
                   </div>
                   <h2 className="text-3xl md:text-5xl font-bold text-center mb-4">
@@ -113,19 +113,26 @@ const ContentCarousel: React.FC = () => {
                   <p className="text-lg md:text-xl text-center mb-8 opacity-90">
                     {slide.description}
                   </p>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                    {slide.features.map((feature, index) => (
-                      <div key={index} className="flex items-center space-x-2">
-                        <div className="w-2 h-2 bg-white rounded-full"></div>
-                        <span className="text-sm md:text-base">{feature}</span>
+                  <div className="min-h-screen bg-white">
+        {slide.features.map((feature, index) => (
+        <div className="container mx-auto px-4">
+          
+        </div>
+      </div></div>
+      </div></div><div className="w-2 h-2 bg-white rounded-full"> <span className="text-sm md:text-base">{feature}</span>
                       </div>
                     ))}
                   </div>
                   {slide.stats && (
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                      {slide.stats.map((stat, index) => (
-                        <div key={index} className="text-center">
-                          <div className="text-2xl md:text-3xl font-bold">{stat.value}</div>
+                    <div className="min-h-screen bg-white">
+        {slide.stats.map((stat, index) => (
+        <div className="container mx-auto px-4">
+          
+        </div>
+      </div></div>
+      </div></div><div className="text-2xl md:text-3xl font-bold">
+          {stat.value}
+        </div></div>
                           <div className="text-sm opacity-80">{stat.label}</div>
                         </div>
                       ))}
@@ -156,7 +163,7 @@ const ContentCarousel: React.FC = () => {
 
       {/* Dots indicator */}
       <div className="flex justify-center mt-4 space-x-2">
-        {slides.map((_, index) => (
+          {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}

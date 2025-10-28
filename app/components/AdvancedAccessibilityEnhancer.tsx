@@ -7,8 +7,7 @@ interface AdvancedAccessibilityEnhancerProps {
 
 const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({ className = '', children }) => {
   return (
-    <div className={`advancedaccessibilityenhancer-component ${className}`}>
-      {children}
+    <div className={`advancedaccessibilityenhancer-component ${className}`}>{children}
     </div>
   );
 };

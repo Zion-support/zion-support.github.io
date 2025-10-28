@@ -63,12 +63,10 @@ class PerformanceOptimizer {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           this.processPerformanceEntry(entry);
-        }
-      });
+        });
 
       observer.observe({ entryTypes: ['navigation', 'resource', 'paint', 'measure'] });
     }
-  }
 
   /**
    * Update load time metrics
@@ -78,17 +76,15 @@ class PerformanceOptimizer {
     if (navigation) {
       this.metrics.loadTime = navigation.loadEventEnd - navigation.fetchStart;
     }
-  }
 
   /**
    * Update memory usage metrics
    */
   private updateMemoryUsage(): void {
     if ('memory' in performance) {
-      const memory = (performance as unknown as { memory: { usedJSHeapSize: number } }).memory;
+      const memory = (performance as unknown as { memory: { usedJSHeapSize: number }).memory;
       this.metrics.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
     }
-  }
 
   /**
    * Process performance entries
@@ -98,8 +94,6 @@ class PerformanceOptimizer {
       if (entry.name === 'first-contentful-paint') {
         this.metrics.renderTime = entry.startTime;
       }
-    }
-  }
 
   /**
    * Get current performance metrics
@@ -129,8 +123,7 @@ class PerformanceOptimizer {
       // Add fetchpriority="auto" for above-the-fold images
       if (this.isAboveTheFold(img)) {
         img.setAttribute('fetchpriority', 'high');
-      }
-    });
+      });
   }
 
   /**
@@ -181,7 +174,6 @@ class PerformanceOptimizer {
           console.error('Service Worker registration failed:', error);
         });
     }
-  }
 
   /**
    * Generate optimization recommendations
@@ -254,12 +246,10 @@ class PerformanceOptimizer {
       if (src && src.includes('assets/')) {
         // Estimate size based on file name patterns
         totalSize += 50; // Rough estimate in KB
-      }
-    });
+      });
 
     return totalSize;
   }
-}
 
 // Create singleton instance
 export const performanceOptimizer = new PerformanceOptimizer();
