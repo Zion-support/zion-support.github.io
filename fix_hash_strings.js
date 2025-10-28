@@ -3,62 +3,64 @@ import path from 'path';
 
 const hashString = '334a97c43c32bf9e815481016c5bf31caa46a580';
 
-// List of files to fix (excluding .git directory)
 const filesToFix = [
-  './app/types/global.d.ts',
-  './app/types/app.types.ts',
-  './app/hooks/usePerformanceMonitor.ts',
-  './app/hooks/useForm.ts',
-  './app/components/SkipLink.tsx',
-  './app/components/ServiceCard.tsx',
-  './app/components/ServiceWorkerRegistration.tsx',
-  './app/components/SystemMonitor.tsx',
-  './app/components/ThemeToggle.tsx',
-  './app/components/ServiceCardSkeleton.tsx',
-  './app/components/Sidebar.tsx',
-  './app/components/ServicePageTemplate.tsx',
   './app/components/SearchBar.tsx',
   './app/components/SEOEnhancer.tsx',
   './app/components/PerformanceOptimizer.tsx',
+  './app/components/ServiceCard.tsx',
+  './app/components/PerformanceEnhancer.tsx',
+  './app/components/SearchModal.tsx',
+  './app/components/SecurityEnhancer.tsx',
+  './app/components/SEOOptimizer.tsx',
+  './app/components/ResponsiveContainer.tsx',
+  './app/hooks/usePerformanceMonitor.ts',
+  './app/hooks/useForm.ts',
+  './app/types/global.d.ts',
+  './app/types/app.types.ts',
+  './app/components/SkipLink.tsx',
   './app/components/Breadcrumb.tsx',
   './app/components/EnhancedSEO.tsx',
+  './app/components/ServiceWorkerRegistration.tsx',
   './app/components/EnhancedSkipLink.tsx',
   './app/components/Header.tsx',
   './app/components/EnhancedPerformanceOptimizer.tsx',
   './app/components/AdvancedPerformanceOptimizer.tsx',
   './app/components/AdvancedErrorBoundary.tsx',
-  './app/components/PerformanceEnhancer.tsx',
+  './app/components/SystemMonitor.tsx',
   './app/components/ContentStatistics.tsx',
+  './app/components/ThemeToggle.tsx',
+  './app/components/ServiceCardSkeleton.tsx',
   './app/components/GlobalErrorBoundary.tsx',
   './app/components/Navigation-backup.tsx',
-  './app/components/SearchModal.tsx',
+  './app/components/Sidebar.tsx',
   './app/components/FuturisticServiceCard.tsx',
   './app/components/AnimatedCounter.tsx',
-  './app/components/SecurityEnhancer.tsx',
-  './app/components/SEOOptimizer.tsx',
-  './app/components/ContactForm.tsx',
-  './app/components/ResponsiveContainer.tsx'
+  './app/components/ServicePageTemplate.tsx',
+  './app/components/ContactForm.tsx'
 ];
-
-let fixedCount = 0;
 
 filesToFix.forEach(filePath => {
   try {
-    if (fs.existsSync(filePath)) {
-      let content = fs.readFileSync(filePath, 'utf8');
+    const fullPath = path.resolve(filePath);
+    if (fs.existsSync(fullPath)) {
+      let content = fs.readFileSync(fullPath, 'utf8');
+      const originalContent = content;
       
-      if (content.includes(hashString)) {
-        // Remove the hash string line
-        content = content.replace(new RegExp(`.*${hashString}.*\\n?`, 'g'), '');
-        
-        fs.writeFileSync(filePath, content);
+      // Remove the hash string (with or without newlines around it)
+      content = content.replace(new RegExp(`\\s*${hashString}\\s*`, 'g'), '');
+      
+      if (content !== originalContent) {
+        fs.writeFileSync(fullPath, content, 'utf8');
         console.log(`Fixed: ${filePath}`);
-        fixedCount++;
+      } else {
+        console.log(`No changes needed: ${filePath}`);
       }
+    } else {
+      console.log(`File not found: ${filePath}`);
     }
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
   }
 });
 
-console.log(`\nFixed ${fixedCount} files`);
+console.log('Hash string removal completed!');
