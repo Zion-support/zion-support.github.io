@@ -12,7 +12,6 @@ const NotFoundPage: React.FC<NotFoundPageProps> = ({ className = '', children })
     </div>
   );
 };
-cursor/fix-errors-and-merge-to-main-7271
 
 NotFoundPage.displayName = 'NotFoundPage';
 

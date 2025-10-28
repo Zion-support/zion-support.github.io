@@ -14,6 +14,5 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '', children }) =
 };
 
 SEOEnhancer.displayName = 'SEOEnhancer';
-cursor/fix-errors-and-merge-to-main-7271
 
 export default SEOEnhancer;

@@ -25,7 +25,6 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
   const lastTimeRef = useRef(performance.now());
 
 const measureMemoryUsage = useCallback(() => {
-cursor/fix-errors-and-merge-to-main-7271
     // Measure memory usage
     let memoryUsage = 0;
     if ('memory' in performance) {
@@ -46,7 +45,6 @@ cursor/fix-errors-and-merge-to-main-7271
       memoryUsage
     }));
   }, [measureMemoryUsage]);
-cursor/fix-errors-and-merge-to-main-7271
 
   const measureFPS = useCallback(() => {
     if (!isMonitoringFPS) return;
@@ -80,6 +78,6 @@ cursor/fix-errors-and-merge-to-main-7271
   return {
     metrics,
     isMonitoringFPS,
-    triggerPerformanceMeasurement,
+    measurePerformance,
   }
 }

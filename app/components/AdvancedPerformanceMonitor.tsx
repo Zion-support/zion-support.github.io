@@ -1,5 +1,4 @@
 
-cursor/fix-errors-and-merge-to-main-7271
 import React from 'react';
 
 interface AdvancedPerformanceMonitorProps {

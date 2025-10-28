@@ -5,7 +5,6 @@ interface SEOOptimizerProps {
   children?: React.ReactNode;
 }
 
-cursor/fix-errors-and-merge-to-main-7271
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ className = '', children }) => {
   return (

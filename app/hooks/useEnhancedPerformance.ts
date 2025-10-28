@@ -29,4 +29,3 @@ export function useEnhancedPerformance(options: PerformanceOptions = {}) {
   };
 }
 
-cursor/fix-errors-and-merge-to-main-7271

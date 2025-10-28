@@ -1,10 +1,11 @@
 import React from 'react';
-cursor/fix-errors-and-merge-to-main-7271
 
 interface ErrorBoundaryProps {
   className?: string;
-  children?: ReactNode;
-}const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ className = '', children }) => {
+  children?: React.ReactNode;
+}
+
+const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ className = '', children }) => {
   return (
     <div className={`errorboundary-component ${className}`}>
       {children}
@@ -13,6 +14,5 @@ interface ErrorBoundaryProps {
 };
 
 ErrorBoundary.displayName = 'ErrorBoundary';
-cursor/fix-errors-and-merge-to-main-7271
 
 export default ErrorBoundary;

@@ -1,8 +1,7 @@
 'use client'
 import React from 'react'
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-const PageOptimized: React.FC = () => {
-cursor/fix-errors-and-merge-to-main-7271
+const PageOptimizedPage: React.FC = () => {
   const features = [
     {
       icon: Brain,

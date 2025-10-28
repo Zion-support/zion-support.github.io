@@ -5,7 +5,6 @@ interface SystemMonitorProps {
   children?: React.ReactNode;
 }
 
-cursor/fix-errors-and-merge-to-main-7271
 
 const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '', children }) => {
   return (

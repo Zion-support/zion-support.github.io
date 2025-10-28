@@ -5,7 +5,6 @@ interface EnhancedSEOProps {
   children?: React.ReactNode;
 }
 
-cursor/fix-errors-and-merge-to-main-7271
 
 const EnhancedSEO: React.FC<EnhancedSEOProps> = ({ className = '', children }) => {
   return (

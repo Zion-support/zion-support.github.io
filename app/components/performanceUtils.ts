@@ -58,4 +58,3 @@ export const trackPerformanceToGA = (metrics: PerformanceMetrics): void => {
       }
     })}
 };
-cursor/fix-errors-and-merge-to-main-7271

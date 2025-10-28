@@ -9,10 +9,8 @@ const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({ className =
   return (
 <div className={`performancedashboard-component ${className}`}>
       {children}
-cursor/fix-errors-and-merge-to-main-7271
     </div>
   );
 };
 
 PerformanceDashboard.displayName = 'PerformanceDashboard';export default PerformanceDashboard;
-cursor/fix-errors-and-merge-to-main-7271

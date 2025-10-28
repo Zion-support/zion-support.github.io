@@ -1,5 +1,4 @@
 'use client'
-cursor/fix-errors-and-merge-to-main-7271
 import React from 'react';
 import { Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
@@ -7,7 +6,6 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight } from 'lucide-react';
 const SupplyChainOptimizerPage: React.FC = () => {
-cursor/fix-errors-and-merge-to-main-7271
   const features = [
     {
       icon: Brain,

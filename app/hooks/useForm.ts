@@ -1,8 +1,6 @@
 import React, { useState, useCallback } from 'react';
 
 export interface FormState<T = Record<string, unknown>> {
-
-cursor/fix-errors-and-merge-to-main-7271
   data: T;
   isSubmitting: boolean;
   submitStatus: 'idle' | 'success' | 'error';
@@ -17,14 +15,12 @@ export interface UseFormOptions<T = Record<string, unknown>> {
 
 export const useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> = {}) => {
   const { initialData = {} as T, validate, onSubmit } = options;
-cursor/fix-errors-and-merge-to-main-7271
   const [formState, setFormState] = useState<FormState<T>>({
     data: initialData,
     isSubmitting: false,
     submitStatus: 'idle',
     errors: {},
   });const handleInputChange = useCallback((field: keyof T, value: unknown) => {
-cursor/fix-errors-and-merge-to-main-7271
     setFormState(prev => ({
       ...prev,
       data: { ...prev.data, [field]: value },
@@ -61,7 +57,6 @@ cursor/fix-errors-and-merge-to-main-7271
         }));
       }
 } catch (_error) {
-cursor/fix-errors-and-merge-to-main-7271
       setFormState(prev => ({
         ...prev,
         isSubmitting: false,

@@ -1,6 +1,5 @@
 'use client';
 
-cursor/fix-errors-and-merge-to-main-7271
 
 export default function AiCustomerSupportBackup() {
   AiCustomerSupportBackup.displayName = 'AI Customer Support Backup';

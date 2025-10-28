@@ -16,4 +16,3 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
 PerformanceOptimizer.displayName = 'PerformanceOptimizer';
 
 export default PerformanceOptimizer;
-cursor/fix-errors-and-merge-to-main-7271

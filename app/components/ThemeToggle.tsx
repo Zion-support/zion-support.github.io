@@ -16,4 +16,3 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '', children }) =
 ThemeToggle.displayName = 'ThemeToggle';
 
 export default ThemeToggle;
-cursor/fix-errors-and-merge-to-main-7271

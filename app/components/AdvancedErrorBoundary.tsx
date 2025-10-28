@@ -16,4 +16,3 @@ const AdvancedErrorBoundary: React.FC<AdvancedErrorBoundaryProps> = ({ className
 AdvancedErrorBoundary.displayName = 'AdvancedErrorBoundary';
 
 export default AdvancedErrorBoundary;
-cursor/fix-errors-and-merge-to-main-7271

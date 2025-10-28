@@ -16,4 +16,3 @@ const EnhancedSkipLink: React.FC<EnhancedSkipLinkProps> = ({ className = '', chi
 EnhancedSkipLink.displayName = 'EnhancedSkipLink';
 
 export default EnhancedSkipLink;
-cursor/fix-errors-and-merge-to-main-7271

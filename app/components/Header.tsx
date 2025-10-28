@@ -5,7 +5,6 @@ interface HeaderProps {
   children?: React.ReactNode;
 }
 
-cursor/fix-errors-and-merge-to-main-7271
 
 const Header: React.FC<HeaderProps> = ({ className = '', children }) => {
   return (

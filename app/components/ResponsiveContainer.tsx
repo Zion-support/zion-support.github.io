@@ -9,7 +9,6 @@ const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ className = '
   return (
 <div className={`responsivecontainer-component ${className}`}>
       {children}
-cursor/fix-errors-and-merge-to-main-7271
     </div>
   );
 };
@@ -17,4 +16,3 @@ cursor/fix-errors-and-merge-to-main-7271
 ResponsiveContainer.displayName = 'ResponsiveContainer';
 
 export default ResponsiveContainer;
-cursor/fix-errors-and-merge-to-main-7271

@@ -5,7 +5,6 @@ interface ContentStatisticsProps {
   children?: React.ReactNode;
 }
 
-cursor/fix-errors-and-merge-to-main-7271
 
 const ContentStatistics: React.FC<ContentStatisticsProps> = ({ className = '', children }) => {
   return (

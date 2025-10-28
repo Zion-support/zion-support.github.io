@@ -1,6 +1,5 @@
 'use client';
 
-cursor/fix-errors-and-merge-to-main-7271
 
 export default function AiCustomerSupportFixed() {
   AiCustomerSupportFixed.displayName = 'AI Customer Support Fixed';

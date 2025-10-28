@@ -16,4 +16,3 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({ className = '
 PerformanceEnhancer.displayName = 'PerformanceEnhancer';
 
 export default PerformanceEnhancer;
-cursor/fix-errors-and-merge-to-main-7271

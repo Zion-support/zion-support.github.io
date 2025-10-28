@@ -3,7 +3,6 @@ import React from 'react'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-cursor/fix-errors-and-merge-to-main-7271
 const LoadingPage: React.FC = () => {
   const features = [
     {

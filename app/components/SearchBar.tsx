@@ -16,4 +16,3 @@ const SearchBar: React.FC<SearchBarProps> = ({ className = '', children }) => {
 SearchBar.displayName = 'SearchBar';
 
 export default SearchBar;
-cursor/fix-errors-and-merge-to-main-7271

@@ -9,10 +9,8 @@ const LazyImage: React.FC<LazyImageProps> = ({ className = '', children }) => {
   return (
 <div className={`lazyimage-component ${className}`}>
       {children}
-cursor/fix-errors-and-merge-to-main-7271
     </div>
   );
 };
 
 LazyImage.displayName = 'LazyImage';export default LazyImage;
-cursor/fix-errors-and-merge-to-main-7271

@@ -16,4 +16,3 @@ const EnhancedPerformanceOptimizer: React.FC<EnhancedPerformanceOptimizerProps> 
 EnhancedPerformanceOptimizer.displayName = 'EnhancedPerformanceOptimizer';
 
 export default EnhancedPerformanceOptimizer;
-cursor/fix-errors-and-merge-to-main-7271

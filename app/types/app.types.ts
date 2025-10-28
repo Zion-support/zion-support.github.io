@@ -62,8 +62,6 @@ export interface ErrorContext {
   action?: string;
 }
 
-export type ErrorSeverity = 'low' | 'medium' | 'high' | 'critical';
-
 export interface ErrorReport {
   id: string;
   message: string;
@@ -81,7 +79,6 @@ export interface AnalyticsEvent {
   label?: string;
   value?: number;
 }
-cursor/fix-errors-and-merge-to-main-7271
 export interface ErrorInfo {
   componentStack: string;
 }

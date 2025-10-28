@@ -16,4 +16,3 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ className = '', children }) => 
 Breadcrumb.displayName = 'Breadcrumb';
 
 export default Breadcrumb;
-cursor/fix-errors-and-merge-to-main-7271

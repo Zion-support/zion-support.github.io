@@ -9,10 +9,8 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ className =
   return (
 <div className={`futuristicbackground-component ${className}`}>
       {children}
-cursor/fix-errors-and-merge-to-main-7271
     </div>
   );
 };
 
 FuturisticBackground.displayName = 'FuturisticBackground';export default FuturisticBackground;
-cursor/fix-errors-and-merge-to-main-7271

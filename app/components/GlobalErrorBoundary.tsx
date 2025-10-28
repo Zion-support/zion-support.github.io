@@ -3,7 +3,6 @@ import React from 'react';
 interface GlobalErrorBoundaryProps {
   className?: string;
   children?: React.ReactNode;
-cursor/fix-errors-and-merge-to-main-7271
 }
 
 const GlobalErrorBoundary: React.FC<GlobalErrorBoundaryProps> = ({ className = '', children }) => {
@@ -14,5 +13,6 @@ const GlobalErrorBoundary: React.FC<GlobalErrorBoundaryProps> = ({ className = '
   );
 };
 
-GlobalErrorBoundary.displayName = 'GlobalErrorBoundary';export default GlobalErrorBoundary;
-cursor/fix-errors-and-merge-to-main-7271
+GlobalErrorBoundary.displayName = 'GlobalErrorBoundary';
+
+export default GlobalErrorBoundary;

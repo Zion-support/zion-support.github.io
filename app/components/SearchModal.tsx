@@ -16,4 +16,3 @@ const SearchModal: React.FC<SearchModalProps> = ({ className = '', children }) =
 SearchModal.displayName = 'SearchModal';
 
 export default SearchModal;
-cursor/fix-errors-and-merge-to-main-7271
