@@ -39,7 +39,7 @@ global.IntersectionObserver = class IntersectionObserver {
   disconnect() {}
   observe() {}
   unobserve() {}
-} as any
+} as typeof IntersectionObserver
 
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
@@ -51,7 +51,7 @@ global.ResizeObserver = class ResizeObserver {
 
 // Mock TextEncoder and TextDecoder
 global.TextEncoder = TextEncoder
-global.TextDecoder = TextDecoder as any
+global.TextDecoder = TextDecoder as typeof TextDecoder
 
 // Mock PerformanceObserver
 global.PerformanceObserver = class PerformanceObserver {
@@ -59,7 +59,7 @@ global.PerformanceObserver = class PerformanceObserver {
   observe(options?: PerformanceObserverInit) {}
   disconnect() {}
   takeRecords() { return []; }
-} as any
+} as typeof PerformanceObserver
 
 // Mock Next.js router
 jest.mock('next/router', () => ({
