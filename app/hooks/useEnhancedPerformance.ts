@@ -14,7 +14,7 @@ interface PerformanceMetrics {
   networkLatency: number;
 }
 
-export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = { /* empty */ }) => {
+export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) => {
   // Component name for performance tracking
   const componentName = options.component || 'Unknown';
   
@@ -27,11 +27,9 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
   });
   
   // Refs for tracking
-  const _startTimeRef = useRef<number>(0);
-  const _renderStartRef = useRef<number>(0);
   const mountTimeRef = useRef<number>(0);
   const renderCountRef = useRef<number>(0);
-  
+
   // Track component load time
   useEffect(() => {
     mountTimeRef.current = performance.now();
@@ -39,23 +37,15 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     
     // Log component performance tracking
     // Measure load time
-    const measureLoadTime = () => {
-      const loadTime = performance.now();
-      setMetrics(prev => ({ ...prev, loadTime }));
-    };
+    const loadTime = performance.now();
+    setMetrics(prev => ({ ...prev, loadTime }));
 
     // Measure render time
-    const measureRenderTime = () => {
-      const renderStart = performance.now();
-      requestAnimationFrame(() => {
-        const renderTime = performance.now() - renderStart;
-        setMetrics(prev => ({ ...prev, renderTime }));
-      });
-    };
-    
-    // Call the functions
-    measureLoadTime();
-    measureRenderTime();
+    const renderStart = performance.now();
+    requestAnimationFrame(() => {
+      const renderTime = performance.now() - renderStart;
+      setMetrics(prev => ({ ...prev, renderTime }));
+    });
   }, [options.trackPerformance]);
   
   // Track memory usage
@@ -145,6 +135,8 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
   
   return {
     metrics,
-    optimizePerformance
+    optimizePerformance,
+    componentName,
+    renderCount: renderCountRef.current
   };
 };
