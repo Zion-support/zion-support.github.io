@@ -1,4 +1,5 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
+
 
 interface ContactPageProps {
   className?: string;

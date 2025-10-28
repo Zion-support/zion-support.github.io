@@ -37,7 +37,9 @@ interface PerformanceMonitorProps {
 }
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({ 
-  className = '', children, enableReporting = false 
+  className = '', 
+  children,
+  enableReporting = false 
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     lcp: null,
@@ -81,7 +83,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
 
   // Report metrics (in a real app, you'd send this to analytics)
   useEffect(() => {
-    if (enableReporting && metrics.lcp && metrics.fid && metrics.cls && metrics.fcp) { /* empty */ }
+    if (enableReporting && metrics.lcp && metrics.fid && metrics.cls && metrics.fcp) { /* Empty block */ }
   }, [metrics, enableReporting]);
 
   return (

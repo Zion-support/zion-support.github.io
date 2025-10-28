@@ -40,7 +40,7 @@ interface PerformanceMetrics {
 }
 
 class MonitoringService {
-  private metrics: PerformanceMetrics = { /* empty */ };
+  private metrics: PerformanceMetrics = {};
   private errors: ErrorReport[] = [];
   private observer: PerformanceObserver | null = null;
 
@@ -136,7 +136,7 @@ class MonitoringService {
       try {
         const resourceObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((_entry: any) => {
+          entries.forEach((_entry) => {
             if (_entry.duration > 1000) {
               // Handle slow resources
             }
@@ -225,7 +225,7 @@ class MonitoringService {
     if ('performance' in window && 'getEntriesByType' in performance) {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigation) {
-        console.log('Navigation Timing:', {
+        const metrics = {
           'DNS Lookup': `${Math.round(navigation.domainLookupEnd - navigation.domainLookupStart)}ms`,
           'TCP Connect': `${Math.round(navigation.connectEnd - navigation.connectStart)}ms`,
           'TTFB': `${Math.round(navigation.responseStart - navigation.requestStart)}ms`,
@@ -233,7 +233,8 @@ class MonitoringService {
           'DOM Interactive': `${Math.round(navigation.domInteractive - navigation.fetchStart)}ms`,
           'DOM Complete': `${Math.round(navigation.domComplete - navigation.fetchStart)}ms`,
           'Load Complete': `${Math.round(navigation.loadEventEnd - navigation.fetchStart)}ms`
-        });
+        };
+        console.log('Navigation timing metrics:', metrics);
       }
     }
   }

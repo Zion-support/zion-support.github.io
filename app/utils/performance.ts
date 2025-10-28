@@ -1,15 +1,4 @@
-import React from 'react';
-
-export const performance = {
-  measure: (name: string, fn: () => void) => {
-    const start = Date.now();
-    fn();
-    const end = Date.now();
-
-  }
-};
-
-class PerformanceMonitor {
+export class PerformanceMonitor {
   private static instance: PerformanceMonitor;
   private metrics = new Map<string, number>();
 
@@ -42,12 +31,8 @@ class PerformanceMonitor {
     return this.metrics.get(label);
   }
 
-  getAllMetrics(): Record<string, number> {
-    return Object.fromEntries(this.metrics);
-  }
-
-  clearMetrics(): void {
-    this.metrics.clear();
+  getAllMetrics(): Map<string, number> {
+    return new Map(this.metrics);
   }
 
   // Web Vitals monitoring
@@ -93,21 +78,5 @@ export function usePerformanceMonitor() {
     endTiming: monitor.endTiming.bind(monitor),
     getMetric: monitor.getMetric.bind(monitor),
     getAllMetrics: monitor.getAllMetrics.bind(monitor)
-  };
-}
-
-// Utility function to measure component render time
-export function measureComponentRender(componentName: string) {
-  return function <T extends React.ComponentType<unknown>>(PageComponent: T): T {
-    return ((props: unknown) => {
-      const monitor = PerformanceMonitor.getInstance();
-      React.useEffect(() => {
-        monitor.startTiming(`${componentName}-render`);
-        return () => {
-          monitor.endTiming(`${componentName}-render`);
-        };
-      });
-      return React.createElement(PageComponent, props);
-    }) as T;
   };
 }

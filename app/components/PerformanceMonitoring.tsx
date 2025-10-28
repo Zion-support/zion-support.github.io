@@ -127,7 +127,9 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
         const total = memory.totalJSHeapSize / 1024 / 1024; // MB
         const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB
         
-        setMemoryUsage({
+        // Log memory usage for debugging
+        console.log('Memory usage:', {
+          used: Math.round(used),
           total: Math.round(total),
           limit: Math.round(limit)
         });
