@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 
 interface EnhancedSkipLinkProps {
   className?: string;
@@ -15,16 +14,3 @@ const EnhancedSkipLink: React.FC<EnhancedSkipLinkProps> = ({ className, children
 };
 
 export default EnhancedSkipLink;
-=======
-interface Props {
-  // Add props here
-}
-
-export default function EnhancedSkipLink(_props: Props) {
-  return (
-    <div>
-      {/* EnhancedSkipLink component content */}
-    </div>
-  );
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc

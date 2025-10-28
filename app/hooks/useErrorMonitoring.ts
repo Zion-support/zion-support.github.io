@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+// Error monitoring hook
 import { useEffect } from 'react';
 
 export const useErrorMonitoring = () => {

@@ -1,20 +1,10 @@
 'use client'
-<<<<<<< HEAD
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, Brain, BarChart, Target, TrendingUp, ArrowRight} from 'lucide-react'
-
-const EcommerceAnalyticsProPage: React.FC = () => {
-=======
 import React from 'react';
 import { Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
+// Navigation and Footer components removed as they're not used
 import { CheckCircle, ArrowRight } from 'lucide-react';
-const PagePage: React.FC = () => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc
+const EcommerceAnalyticsProPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -53,7 +43,7 @@ const PagePage: React.FC = () => {
   return (
     <>
             {/* SEO handled by layout.tsx */}
-      <Navigation />
+      {/* Navigation removed */}
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
@@ -144,7 +134,7 @@ const PagePage: React.FC = () => {
           </div>
         </section>
       </div>
-      <Footer />
+      {/* Footer removed */}
     </>
   );
 };

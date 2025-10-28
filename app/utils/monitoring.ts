@@ -8,9 +8,6 @@ export const useMonitoring = () => {
   }, []);
   
   return { state, setState };
-<<<<<<< HEAD
-};
-=======
 };
 
 export interface ErrorReport {
@@ -234,4 +231,3 @@ class MonitoringService {
 // Singleton instance
 const monitoring = new MonitoringService();
 export default monitoring;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc

@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-export interface AccessibilityContextType {
-  isHighContrast: boolean;
-  isReducedMotion: boolean;
-  fontSize: 'small' | 'medium' | 'large';
-  setHighContrast: (_value: boolean) => void;
-  setReducedMotion: (_value: boolean) => void;
-  setFontSize: (_size: 'small' | 'medium' | 'large') => void;
-=======
 export interface AccessibilityConfig {
   enableScreenReader: boolean;
   enableKeyboardNavigation: boolean;
@@ -44,5 +35,4 @@ export interface AccessibilityContextType {
   runAudit: () => Promise<AccessibilityAudit>;
   isAccessible: boolean;
   score: number;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc
 }

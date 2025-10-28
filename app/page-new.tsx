@@ -1,18 +1,8 @@
-<<<<<<< HEAD
-'use client';
-
-import React from 'react';
-import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-
-const PageNew: React.FC = () => {
-=======
 'use client'
 import React from 'react'
-import Navigation from './components/Navigation'
-import Footer from './components/Footer'
+// Navigation and Footer components removed as they're not used
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-const PageNewPage: React.FC = () => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc
+const PageNew: React.FC = () => {
   const features = [
     {
       icon: Brain,
