@@ -52,14 +52,14 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
   const monitorSuspiciousActivity = useCallback(() => {
     if (typeof window === 'undefined') return;
 
-    // Monitor for XSS attempts
-    const originalInnerHTML = Element.prototype.innerHTML;
-    (Element.prototype as any).innerHTML = function(value: any) {
-      if (value && typeof value === 'string' && /<script/i.test(value)) {
+    // Monitor for XSS attempts - simplified approach
+    const originalSetAttribute = Element.prototype.setAttribute;
+    Element.prototype.setAttribute = function(name: string, value: string) {
+      if (name === 'innerHTML' && value && typeof value === 'string' && /<script/i.test(value)) {
         console.warn('Potential XSS attempt detected:', value);
         return;
       }
-      return (originalInnerHTML as any).call(this, value);
+      return originalSetAttribute.call(this, name, value);
     };
 
     // Monitor for suspicious console usage
