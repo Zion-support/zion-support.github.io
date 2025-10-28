@@ -15,7 +15,6 @@ import Analytics from './components/Analytics';
 import { metadata, viewport } from './layout/metadata';
 
 const inter = Inter({ subsets: ['latin'] });
-
 // Re-export metadata and viewport for Next.js
 export { metadata, viewport };
 export default function RootLayout({
