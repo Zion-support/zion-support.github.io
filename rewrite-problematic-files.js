@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
-import path from 'path';
+// import path from 'path'; // Removed unused import
 import { execSync } from 'child_process';
-import { fileURLToPath } from 'url';
+// import { fileURLToPath } from 'url'; // Removed unused import
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// const __filename = fileURLToPath(import.meta.url); // Removed unused variable
+// const __dirname = path.dirname(__filename); // Removed unused variable
 
 console.log('🔧 Rewriting problematic files...');
 
@@ -421,7 +421,7 @@ async function main() {
   try {
     execSync('npm run lint', { stdio: 'inherit' });
     console.log('✅ Linting passed!');
-  } catch (error) {
+  } catch {
     console.log('⚠️  Some linting issues may remain. Check the output above.');
   }
 }

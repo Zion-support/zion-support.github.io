@@ -1,5 +1,5 @@
 import fs from 'fs';
-import _path from 'path';
+// import _path from 'path'; // Removed unused import
 import { glob } from 'glob';
 
 async function simplifyAllPages() {

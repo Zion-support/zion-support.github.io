@@ -1,5 +1,5 @@
 import React from 'react';
-import { User } from 'lucide-react';
+// import { User as UserIcon } from 'lucide-react'; // Removed unused import
 // Enhanced type definitions for better type safety
 export interface PerformanceMetrics {
   loadTime: number
