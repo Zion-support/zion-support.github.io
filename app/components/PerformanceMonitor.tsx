@@ -23,11 +23,7 @@ interface PerformanceMonitorProps {
 }
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({ 
-  className = '', 
-  children, 
-  enableReporting = false,
-  enableRealTimeMonitoring = false,
-  onMetricsUpdate
+  className = '', children, enableReporting = false, enableRealTimeMonitoring = false, onMetricsUpdate
 }) => {
   const [metrics, setMetrics] = useState({
     fcp: null as number | null,
@@ -47,16 +43,16 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
         } else if (entry.entryType === 'largest-contentful-paint') {
           setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
         } else if (entry.entryType === 'first-input') {
-          const fidEntry = entry as PerformanceEventTiming;
-          setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
+          const _fidEntry = entry as PerformanceEventTiming;
+          setMetrics(prev => ({ ...prev, fid: _fidEntry.processingStart - _fidEntry.startTime }));
         } else if (entry.entryType === 'layout-shift') {
-          const clsEntry = entry as LayoutShift;
-          if (!clsEntry.hadRecentInput) {
-            setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + clsEntry.value }));
+          const _clsEntry = entry as LayoutShift;
+          if (!_clsEntry.hadRecentInput) {
+            setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + _clsEntry.value }));
           }
         } else if (entry.entryType === 'navigation') {
-          const navEntry = entry as any;
-          setMetrics(prev => ({ ...prev, ttfb: navEntry.responseStart - navEntry.requestStart }));
+          const _navEntry = entry as any;
+          setMetrics(prev => ({ ...prev, ttfb: _navEntry.responseStart - _navEntry.requestStart }));
         }
       }
     });

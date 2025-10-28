@@ -1,7 +1,7 @@
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
 
-export const metadata = {
+export const _metadata = {
   title: '5G Mobile Applications | Zion Tech Group',
   description: 'Professional 5G mobile applications development services by Zion Tech Group. Advanced mobile solutions powered by 5G technology.',
   keywords: '5G, mobile applications, development, technology, services',

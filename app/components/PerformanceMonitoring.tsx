@@ -1,6 +1,11 @@
 'use client';
+import React, { memo, useCallback, useEffect } from 'react';
 
-import React, { useEffect, memo, useCallback } from 'react';
+interface PerformanceMonitoringProps {
+  onMetricsUpdate?: (metrics: Record<string, unknown>) => void;
+  enableRealTimeMonitoring?: boolean;
+  className?: string;
+}
 
 interface PerformanceEventTiming extends PerformanceEntry {
   processingStart: number;
@@ -14,12 +19,6 @@ interface LayoutShiftEntry extends PerformanceEntry {
   target?: Node;
 }
 
-interface PerformanceMonitoringProps {
-  onMetricsUpdate?: (metrics: unknown) => void;
-  enableRealTimeMonitoring?: boolean;
-  className?: string;
-}
-
 declare global {
   interface Window {
     gtag?: (...args: unknown[]) => void;
@@ -27,10 +26,9 @@ declare global {
 }
 
 const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ 
-  onMetricsUpdate, 
-  enableRealTimeMonitoring = false, 
-  className = '' 
+  onMetricsUpdate, enableRealTimeMonitoring = false, className = '' 
 }) => {
+  const [, setMemoryUsage] = React.useState<{ total: number; limit: number } | null>(null);
   const [metrics, setMetrics] = React.useState({
     fcp: 0,
     lcp: 0,
@@ -41,92 +39,136 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({
 
   // Monitor Core Web Vitals
   const monitorCoreWebVitals = useCallback(() => {
-    if (typeof window === 'undefined') return () => {};
+    if (typeof window === 'undefined') return;
 
-    const observer = new PerformanceObserver((list) => {
-      list.getEntries().forEach((entry) => {
-        if (entry.entryType === 'largest-contentful-paint') {
-          setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
-        }
-        if (entry.entryType === 'first-input') {
-          const firstInput = entry as PerformanceEventTiming;
-          setMetrics(prev => ({ ...prev, fid: firstInput.processingStart - firstInput.startTime }));
-        }
-        if (entry.entryType === 'layout-shift') {
-          const layoutShift = entry as LayoutShiftEntry;
-          setMetrics(prev => ({ ...prev, cls: layoutShift.value }));
+    // LCP (Largest Contentful Paint)
+    const lcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      const lastEntry = entries[entries.length - 1];
+      // Send to analytics if needed
+      if (window.gtag) {
+        window.gtag('event', 'web_vitals', {
+          name: 'LCP',
+          value: Math.round(lastEntry.startTime),
+          event_category: 'Web Vitals'
+        });
+      }
+    });
+    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+
+    // FID (First Input Delay)
+    const fidObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        const fidEntry = entry as PerformanceEventTiming;
+        const fid = fidEntry.processingStart - fidEntry.startTime;
+        if (window.gtag) {
+          window.gtag('event', 'web_vitals', {
+            name: 'FID',
+            value: Math.round(fid),
+            event_category: 'Web Vitals'
+          });
         }
       });
     });
+    fidObserver.observe({ entryTypes: ['first-input'] });
 
-    observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+    // CLS (Cumulative Layout Shift)
+    let clsValue = 0;
+    const clsObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        const clsEntry = entry as LayoutShiftEntry;
+        if (!clsEntry.hadRecentInput) {
+          clsValue += clsEntry.value;
+          if (window.gtag) {
+            window.gtag('event', 'web_vitals', {
+              name: 'CLS',
+              value: Math.round(clsValue * 1000),
+              event_category: 'Web Vitals'
+            });
+          }
+        }
+      });
+    });
+    clsObserver.observe({ entryTypes: ['layout-shift'] });
 
-    return () => observer.disconnect();
+    // FCP (First Contentful Paint)
+    const fcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (window.gtag) {
+          window.gtag('event', 'web_vitals', {
+            name: 'FCP',
+            value: Math.round(entry.startTime),
+            event_category: 'Web Vitals'
+          });
+        }
+      });
+    });
+    fcpObserver.observe({ entryTypes: ['paint'] });
+
+    return () => {
+      lcpObserver.disconnect();
+      fidObserver.disconnect();
+      clsObserver.disconnect();
+      fcpObserver.disconnect();
+    };
   }, []);
 
-  // Monitor resource performance
+  // Monitor resource loading performance
   const monitorResourcePerformance = useCallback(() => {
-    if (typeof window === 'undefined') return () => {};
+    if (typeof window === 'undefined') return;
 
-    const observer = new PerformanceObserver((list) => {
-      list.getEntries().forEach((entry) => {
-        if (entry.entryType === 'navigation') {
-          const navEntry = entry as PerformanceNavigationTiming;
-          setMetrics(prev => ({ 
-            ...prev, 
-            fcp: navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart,
-            ttfb: navEntry.responseStart - navEntry.requestStart
-          }));
+    const resourceObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (entry.duration > 1000) { // Resources taking more than 1 second
+          console.warn('Slow resource:', entry.name, entry.duration);
         }
       });
     });
 
-    observer.observe({ entryTypes: ['navigation'] });
+    resourceObserver.observe({ entryTypes: ['resource'] });
 
-    return () => observer.disconnect();
+    return () => resourceObserver.disconnect();
   }, []);
 
   // Monitor memory usage
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
+  const monitorMemoryUsage = useCallback(() => {
+    if (typeof window === 'undefined' || !('memory' in performance)) return;
 
-    const checkMemory = () => {
-      if ('memory' in performance) {
-        const memory = (performance as any).memory;
-        console.log('Memory usage:', {
-          used: Math.round(memory.usedJSHeapSize / 1048576) + ' MB',
-          total: Math.round(memory.totalJSHeapSize / 1048576) + ' MB',
-          limit: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB'
+    const updateMemoryUsage = () => {
+      const memory = (performance as any).memory;
+      if (memory) {
+        setMemoryUsage({
+          total: memory.totalJSHeapSize,
+          limit: memory.jsHeapSizeLimit
         });
       }
     };
 
-    checkMemory();
-    const interval = setInterval(checkMemory, 5000);
+    updateMemoryUsage();
+    const interval = setInterval(updateMemoryUsage, 5000);
+
     return () => clearInterval(interval);
   }, []);
-
-  // Measure performance metrics
-  const measurePerformance = useCallback(() => {
-    if (typeof window === 'undefined') return () => {};
-
-    const cleanup1 = monitorCoreWebVitals();
-    const cleanup2 = monitorResourcePerformance();
-
-    return () => {
-      cleanup1();
-      cleanup2();
-    };
-  }, [monitorCoreWebVitals, monitorResourcePerformance]);
 
   useEffect(() => {
     if (!enableRealTimeMonitoring) return;
 
-    const cleanup = measurePerformance();
-    return cleanup;
-  }, [enableRealTimeMonitoring, measurePerformance]);
+    const cleanupCoreWebVitals = monitorCoreWebVitals();
+    const cleanupResourcePerformance = monitorResourcePerformance();
+    const cleanupMemoryUsage = monitorMemoryUsage();
 
-  // Update metrics callback
+    return () => {
+      cleanupCoreWebVitals?.();
+      cleanupResourcePerformance?.();
+      cleanupMemoryUsage?.();
+    };
+  }, [enableRealTimeMonitoring, monitorCoreWebVitals, monitorResourcePerformance, monitorMemoryUsage]);
+
+  // Update metrics when they change
   useEffect(() => {
     if (onMetricsUpdate) {
       onMetricsUpdate(metrics);
@@ -135,7 +177,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({
 
   return (
     <div className={`performance-monitoring ${className}`}>
-      {/* Performance monitoring component - no visible UI */}
+      {/* Performance monitoring component */}
     </div>
   );
 });

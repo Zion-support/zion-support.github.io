@@ -27,6 +27,7 @@ const itServices = [
   { name: 'Cybersecurity', href: '/cybersecurity' },
   { name: 'IT Consulting', href: '/it-consulting' }
 ];
+
 export default function Navigation({ className, children }: NavigationProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -147,6 +148,30 @@ export default function Navigation({ className, children }: NavigationProps) {
                   {activeDropdown === 'ai-mobile' && (
                     <div className="ml-4 mt-2 space-y-1">
                       {aiServices.map((service) => (
+                        <Link
+                          key={service.href}
+                          href={service.href}
+                          className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600"
+                        >
+                          {service.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                {/* IT Services Dropdown */}
+                <div className="px-3 py-2">
+                  <button
+                    onClick={() => toggleDropdown('it-mobile')}
+                    className="flex items-center text-gray-700 hover:text-blue-600"
+                  >
+                    IT Services
+                    <ChevronDown className="ml-1 h-4 w-4" />
+                  </button>
+                  {activeDropdown === 'it-mobile' && (
+                    <div className="ml-4 mt-2 space-y-1">
+                      {itServices.map((service) => (
                         <Link
                           key={service.href}
                           href={service.href}

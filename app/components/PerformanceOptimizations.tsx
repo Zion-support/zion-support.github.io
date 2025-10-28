@@ -9,11 +9,9 @@ interface PerformanceOptimizationsProps {
 }
 
 const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo(({
-  enableImageOptimization = true,
-  enablePreloading = true,
-  enableResourceHints = true
+  enableImageOptimization = true, enablePreloading = true, enableResourceHints = true
 }) => {
-  const optimizeImages = useCallback(() => {
+  const _optimizeImages = useCallback(() => {
     if (!enableImageOptimization || typeof window === 'undefined') return;
 
     const images = document.querySelectorAll('img');
@@ -30,16 +28,16 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
     });
   }, [enableImageOptimization]);
 
-  const preloadCriticalResources = useCallback(() => {
+  const _preloadCriticalResources = useCallback(() => {
     if (!enablePreloading || typeof window === 'undefined') return;
 
-    const criticalResources = [
+    const _criticalResources = [
       { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' },
       { href: '/images/hero-bg.jpg', as: 'image' },
       { href: '/images/logo.png', as: 'image' }
     ];
 
-    criticalResources.forEach(resource => {
+    _criticalResources.forEach(resource => {
       const link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource.href;
@@ -50,17 +48,17 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
     });
   }, [enablePreloading]);
 
-  const addResourceHints = useCallback(() => {
+  const _addResourceHints = useCallback(() => {
     if (!enableResourceHints || typeof window === 'undefined') return;
 
-    const hints = [
+    const _hints = [
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
       { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' },
       { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' }
     ];
 
     hints.forEach(hint => {
-      const link = document.createElement('link');
+      const _link = document.createElement('link');
       link.rel = hint.rel;
       link.href = hint.href;
       if (hint.crossOrigin) link.crossOrigin = hint.crossOrigin;
@@ -69,13 +67,13 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
   }, [enableResourceHints]);
 
   // Optimize scroll performance
-  const optimizeScrollPerformance = useCallback(() => {
+  const _optimizeScrollPerformance = useCallback_(() => {
     if (typeof window === 'undefined') return;
 
-    let ticking = false;
-    const handleScroll = () => {
+    let _ticking = false;
+    const _handleScroll = () => {
       if (!ticking) {
-        requestAnimationFrame(() => {
+        requestAnimationFrame_(() => {
           // Throttled scroll handling
           ticking = false;
         });
@@ -88,13 +86,13 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
   }, []);
 
   // Optimize resize performance
-  const optimizeResizePerformance = useCallback(() => {
+  const _optimizeResizePerformance = useCallback_(() => {
     if (typeof window === 'undefined') return;
 
-    let ticking = false;
-    const handleResize = () => {
+    let _ticking = false;
+    const _handleResize = () => {
       if (!ticking) {
-        requestAnimationFrame(() => {
+        requestAnimationFrame_(() => {
           // Throttled resize handling
           optimizeImages();
           ticking = false;
@@ -108,17 +106,17 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
   }, [optimizeImages]);
 
   // Intersection Observer for lazy loading
-  const setupIntersectionObserver = useCallback(() => {
+  const _setupIntersectionObserver = useCallback(() => {
     if (typeof window === 'undefined' || !('IntersectionObserver' in window)) return;
 
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach((_entry) => {
-        if (_entry.isIntersecting) {
-          const element = _entry.target as HTMLElement;
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const element = entry.target as HTMLElement;
           
           // Load images when they come into view
           if (element.tagName === 'IMG') {
-            const img = element as HTMLImageElement;
+            const _img = element as HTMLImageElement;
             if (img.dataset.src) {
               img.src = img.dataset.src;
               img.removeAttribute('data-src');
@@ -133,7 +131,7 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
     });
 
     // Observe all images with data-src
-    const lazyImages = document.querySelectorAll('img[data-src]');
+    const _lazyImages = document.querySelectorAll('img[data-src]');
     lazyImages.forEach((img) => observer.observe(img));
 
     return () => observer.disconnect();
