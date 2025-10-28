@@ -1,75 +1,93 @@
 #!/usr/bin/env python3
+"""
+Script to automatically resolve merge conflicts
+"""
+import subprocess
 import os
 import re
-import glob
 
-def resolve_merge_conflicts(file_path):
-    """Resolve merge conflicts in a file by choosing the newer version (after =======)"""
+def run_command(cmd):
+    """Run a shell command and return the result"""
+    result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+    return result.stdout, result.stderr, result.returncode
+
+def resolve_conflicts():
+    """Resolve all merge conflicts automatically"""
+    print("🔧 Resolving merge conflicts...")
+    
+    # Get list of conflicted files
+    stdout, stderr, returncode = run_command("git diff --name-only --diff-filter=U")
+    if returncode != 0:
+        print(f"Error getting conflicted files: {stderr}")
+        return False
+    
+    conflicted_files = [f.strip() for f in stdout.split('\n') if f.strip()]
+    print(f"Found {len(conflicted_files)} conflicted files")
+    
+    for file_path in conflicted_files:
+        print(f"  Resolving {file_path}")
+        if not resolve_file_conflicts(file_path):
+            print(f"  ❌ Failed to resolve {file_path}")
+            return False
+        else:
+            print(f"  ✅ Resolved {file_path}")
+    
+    return True
+
+def resolve_file_conflicts(file_path):
+    """Resolve conflicts in a specific file"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Check if file has merge conflicts
-        if '<<<<<<< HEAD' not in content:
-            return False
+        # Remove conflict markers and keep HEAD version
+        lines = content.split('\n')
+        new_lines = []
+        skip_until_end = False
         
-        # Split by merge conflict markers
-        parts = re.split(r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>>', content, flags=re.DOTALL)
+        for line in lines:
+            if '<<<<<<< HEAD' in line:
+                skip_until_end = False
+                continue
+            elif '=======' in line:
+                skip_until_end = True
+                continue
+            elif '>>>>>>>' in line:
+                skip_until_end = False
+                continue
+            elif not skip_until_end:
+                new_lines.append(line)
         
-        if len(parts) < 3:
-            # Try alternative pattern
-            parts = re.split(r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+', content, flags=re.DOTALL)
+        # Write the resolved content
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write('\n'.join(new_lines))
         
-        if len(parts) >= 3:
-            # Choose the newer version (after =======)
-            resolved_content = parts[0] + parts[2] + ''.join(parts[3:])
-            
-            with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(resolved_content)
-            
-            print(f"Resolved conflicts in {file_path}")
-            return True
-        else:
-            print(f"Could not resolve conflicts in {file_path}")
-            return False
-            
+        # Add the file to git
+        run_command(f"git add {file_path}")
+        return True
+        
     except Exception as e:
-        print(f"Error processing {file_path}: {e}")
+        print(f"Error resolving {file_path}: {e}")
         return False
 
 def main():
-    # Find all files with merge conflicts
-    patterns = [
-        './app/**/*.tsx',
-        './app/**/*.ts',
-        './components/**/*.tsx',
-        './components/**/*.ts',
-        './*.json'
-    ]
+    """Main function"""
+    print("🚀 Starting conflict resolution...")
     
-    files_with_conflicts = []
-    for pattern in patterns:
-        files_with_conflicts.extend(glob.glob(pattern, recursive=True))
-    
-    # Filter files that actually have conflicts
-    files_to_process = []
-    for file_path in files_with_conflicts:
-        try:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                content = f.read()
-                if '<<<<<<< HEAD' in content:
-                    files_to_process.append(file_path)
-        except:
-            continue
-    
-    print(f"Found {len(files_to_process)} files with merge conflicts")
-    
-    resolved_count = 0
-    for file_path in files_to_process:
-        if resolve_merge_conflicts(file_path):
-            resolved_count += 1
-    
-    print(f"Resolved conflicts in {resolved_count} files")
+    if resolve_conflicts():
+        print("✅ All conflicts resolved successfully")
+        
+        # Commit the resolution
+        stdout, stderr, returncode = run_command("git commit -m 'Auto-resolve merge conflicts'")
+        if returncode == 0:
+            print("✅ Changes committed successfully")
+            return True
+        else:
+            print(f"❌ Failed to commit: {stderr}")
+            return False
+    else:
+        print("❌ Failed to resolve conflicts")
+        return False
 
 if __name__ == "__main__":
     main()
