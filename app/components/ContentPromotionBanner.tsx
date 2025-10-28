@@ -7,8 +7,7 @@ interface ContentPromotionBannerProps {
 
 const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({ className = '', children }) => {
   return (
-    <div className={`contentpromotionbanner-component ${className}`}>
-      {children}
+    <div className={`contentpromotionbanner-component ${className}`}>{children}
     </div>
   );
 };

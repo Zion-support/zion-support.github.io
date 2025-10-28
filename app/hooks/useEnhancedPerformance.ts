@@ -54,11 +54,10 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     // Measure memory usage
     const measureMemoryUsage = () => {
       if ('memory' in performance) {
-        const memory = (performance as unknown as { memory: { usedJSHeapSize: number } }).memory;
+        const memory = (performance as unknown as { memory: { usedJSHeapSize: number }).memory;
         const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
         setMetrics(prev => ({ ...prev, memoryUsage }));
-      }
-    };
+      };
 
     // Measure network latency
     const measureNetworkLatency = () => {
@@ -126,8 +125,7 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
           img.src = img.dataset.src || '';
           img.classList.remove('lazy');
           imageObserver.unobserve(img);
-        }
-      });
+        });
     });
 
     images.forEach((img) => imageObserver.observe(img));

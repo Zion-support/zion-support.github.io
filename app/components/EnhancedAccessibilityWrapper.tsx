@@ -7,8 +7,7 @@ interface EnhancedAccessibilityWrapperProps {
 
 const EnhancedAccessibilityWrapper: React.FC<EnhancedAccessibilityWrapperProps> = ({ className = '', children }) => {
   return (
-    <div className={`enhancedaccessibilitywrapper-component ${className}`}>
-      {children}
+    <div className={`enhancedaccessibilitywrapper-component ${className}`}>{children}
     </div>
   );
 };

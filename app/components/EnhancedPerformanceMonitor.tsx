@@ -7,8 +7,7 @@ interface EnhancedPerformanceMonitorProps {
 
 const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = ({ className = '', children }) => {
   return (
-    <div className={`enhancedperformancemonitor-component ${className}`}>
-      {children}
+    <div className={`enhancedperformancemonitor-component ${className}`}>{children}
     </div>
   );
 };

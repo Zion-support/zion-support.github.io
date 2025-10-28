@@ -9,15 +9,13 @@ export const SkipLink: React.FC = () => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Tab') {
         setIsVisible(true);
-      }
-    };
+      };
 
     const handleKeyUp = (event: KeyboardEvent) => {
       if (event.key === 'Tab') {
         // Keep visible for a short time after tab
         setTimeout(() => setIsVisible(false), 1000);
-      }
-    };
+      };
 
     const handleClick = () => {
       setIsVisible(false);
@@ -39,22 +37,21 @@ export const SkipLink: React.FC = () => {
     if (mainContent) {
       mainContent.focus();
       mainContent.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+    };
 
   const handleSkipToNav = () => {
     const navigation = document.querySelector('nav');
     if (navigation) {
       navigation.focus();
       navigation.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+    };
 
   if (!isVisible) return null;
 
   return (
     <div className="skip-links">
-      <button
+          
+          <button
         onClick={handleSkipToMain}
         className="skip-link"
         aria-label="Skip to main content"

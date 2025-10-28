@@ -26,8 +26,7 @@ const SEOOptimization: React.FC<SEOOptimizationProps> = memo(({ className = '' }
         "@type": "ContactPoint",
         "telephone": "+1-555-0123",
         "contactType": "customer service"
-      }
-    };
+      };
 
     const script = document.createElement('script');
     script.type = 'application/ld+json';
@@ -79,8 +78,7 @@ const SEOOptimization: React.FC<SEOOptimizationProps> = memo(({ className = '' }
       meta.setAttribute('property', 'og:image');
       meta.content = window.location.origin + '/og-image.jpg';
       document.head.appendChild(meta);
-    }
-  }, []);
+    }, []);
 
   // Add breadcrumb structured data
   const addBreadcrumbData = useCallback(() => {
@@ -129,8 +127,7 @@ const SEOOptimization: React.FC<SEOOptimizationProps> = memo(({ className = '' }
           img.width = img.naturalWidth;
           img.height = img.naturalHeight;
         });
-      }
-    });
+      });
   }, []);
 
   useEffect(() => {
@@ -141,8 +138,7 @@ const SEOOptimization: React.FC<SEOOptimizationProps> = memo(({ className = '' }
   }, [addStructuredData, optimizeMetaTags, addBreadcrumbData, optimizeImages]);
 
   return (
-    <div className={`seo-optimization ${className}`} style={{ display: 'none' }}>
-      {/* This component doesn't render anything visible */}
+    <div className={`seo-optimization ${className}`} style={{ display: 'none' }>{/* This component doesn't render anything visible */}
     </div>
   );
 });

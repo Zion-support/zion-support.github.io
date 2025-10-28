@@ -7,8 +7,7 @@ interface SEOOptimizerProps {
 }
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ className = '', children }) => {
   return (
-    <div className={`seooptimizer-component ${className}`}>
-      {children}
+    <div className={`seooptimizer-component ${className}`}>{children}
     </div>
   );
 };

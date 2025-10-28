@@ -8,8 +8,7 @@ interface SystemMonitorProps {
 
 const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '', children }) => {
   return (
-    <div className={`systemmonitor-component ${className}`}>
-{children || <h2>SystemMonitor</h2>}
+    <div className={`systemmonitor-component ${className}`}>{children || <h2>SystemMonitor</h2>}
     </div>
   );
 };

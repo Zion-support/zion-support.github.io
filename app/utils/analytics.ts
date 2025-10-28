@@ -29,7 +29,6 @@ class Analytics {
     if (process.env.NODE_ENV === "production") {
       this.sendToAnalytics(event)} else {
       console.log("Analytics Event:", event)}
-  }
 
   // Track page views
   trackPageView(page: string, title?: string): void {
@@ -40,8 +39,7 @@ class Analytics {
       custom_parameters: {
         page_title: title || document.title,
         page_url: window.location.href
-      }
-    })}
+      })}
 
   // Track user interactions
   trackClick(element: string, location?: string): void {
@@ -51,8 +49,7 @@ class Analytics {
       label: element,
       custom_parameters: {
         location
-      }
-    })}
+      })}
 
   // Track form submissions
   trackFormSubmission(formName: string, success: boolean): void {
@@ -71,8 +68,7 @@ class Analytics {
       value,
       custom_parameters: {
         unit
-      }
-    })}
+      })}
 
   // Track errors
   trackError(error: Error, context?: string): void {
@@ -84,8 +80,7 @@ class Analytics {
         error_name: error.name,
         error_stack: error.stack,
         context
-      }
-    })}
+      })}
 
   // Get all events
   getEvents(): AnalyticsEvent[] {
@@ -105,8 +100,6 @@ class Analytics {
         value: event.value,
         ...event.custom_parameters
       })}
-  }
-}
 
 export const analytics = Analytics.getInstance();
 
@@ -119,7 +112,7 @@ export function useAnalytics() {
     trackFormSubmission: analytics.trackFormSubmission.bind(analytics),
     trackPerformance: analytics.trackPerformance.bind(analytics),
     trackError: analytics.trackError.bind(analytics)
-  }}
+  }
 
 // Higher-order component for automatic page view tracking
 export function withAnalytics<T extends React.ComponentType<unknown>>(WrappedComponent: T): T {

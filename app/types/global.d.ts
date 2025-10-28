@@ -6,7 +6,6 @@ declare global {
       NEXT_PUBLIC_GA_ID?: string;
       NEXT_PUBLIC_GTM_ID?: string;
     }
-  }
 
   interface Window {
     gtag?: (...args: unknown[]) => void;
@@ -44,6 +43,5 @@ declare global {
     getEntriesByType(type: string): PerformanceEntry[];
     getEntriesByName(name: string, type?: string): PerformanceEntry[];
   }
-}
 
 export {};

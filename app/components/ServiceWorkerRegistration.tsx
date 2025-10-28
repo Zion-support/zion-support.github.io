@@ -19,8 +19,7 @@ const ServiceWorkerRegistration: React.FC = memo(() => {
       navigator.serviceWorker.addEventListener('controllerchange', () => {
         window.location.reload();
       });
-    }
-  }, []);
+    }, []);
 
   return null;
 });

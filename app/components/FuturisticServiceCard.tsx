@@ -7,8 +7,7 @@ interface FuturisticServiceCardProps {
 
 const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({ className = '', children }) => {
   return (
-    <div className={`futuristicservicecard-component ${className}`}>
-{children || <h2>FuturisticServiceCard</h2>}
+    <div className={`futuristicservicecard-component ${className}`}>{children || <h2>FuturisticServiceCard</h2>}
     </div>
   );
 };

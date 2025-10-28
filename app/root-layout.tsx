@@ -10,8 +10,7 @@ const RootLayout: React.FC<RootLayoutProps> = ({
   children 
 }) => {
   return (
-    <div className={'root-layout ' + className}>
-      {children || <p>Root-layout component</p>}
+    <div className={'root-layout ' + className}>{children || <p>Root-layout component</p>}
     </div>
   );
 };

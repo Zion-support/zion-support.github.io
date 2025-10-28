@@ -7,8 +7,7 @@ interface InteractiveAIROICalculatorProps {
 
 const InteractiveAIROICalculator: React.FC<InteractiveAIROICalculatorProps> = ({ className = '', children }) => {
   return (
-    <div className={`interactiveairoicalculator-component ${className}`}>
-      {children}
+    <div className={`interactiveairoicalculator-component ${className}`}>{children}
     </div>
   );
 };

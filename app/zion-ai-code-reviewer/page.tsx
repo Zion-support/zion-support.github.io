@@ -1,19 +1,16 @@
 'use client';
-function Pagelyzf4po6r() {
+
+export default function PagePage() {
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">
-            
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Professional  services and solutions.
-          </p>
-        </div>
+    <div className="min-h-screen bg-white">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold text-gray-900 mb-8">
+          Page
+        </h1>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          Professional services and solutions.
+        </p>
       </div>
     </div>
   );
 }
-Pagelyzf4po6r.displayName = '';
-export default Pagelyzf4po6r;

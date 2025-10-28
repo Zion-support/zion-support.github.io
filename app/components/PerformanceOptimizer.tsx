@@ -56,8 +56,7 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
             img.src = img.dataset.src || '';
             img.classList.remove('lazy');
             imageObserver.unobserve(img);
-          }
-        });
+          });
       });
 
       images.forEach((img) => imageObserver.observe(img));
@@ -79,13 +78,11 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
             if (entry.entryType === 'layout-shift') {
               const clsEntry = entry as LayoutShift;
               console.log('CLS:', clsEntry.value);
-            }
-          });
+            });
         });
 
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
-      }
-    };
+      };
 
     // Initialize optimizations
     preloadCriticalResources();

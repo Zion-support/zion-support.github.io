@@ -5,7 +5,6 @@ declare module 'next' {
   interface NextPageWithLayout<P = {}, IP = P> extends NextPage<P, IP> {
     getLayout?: (_page: React.ReactElement) => React.ReactNode;
   }
-}
 
 export interface MetadataRoute {
   url: string;
@@ -25,7 +24,6 @@ export interface MetadataRouteSitemap extends MetadataRoute {
 export interface NextPageProps {
   params: { [key: string]: string }
   searchParams: { [key: string]: string | string[] | undefined }
-}
 
 // API route types
 export interface ApiRouteHandler {
@@ -36,7 +34,6 @@ export interface ApiRouteHandler {
 export interface ServerComponentProps {
   params: { [key: string]: string }
   searchParams: { [key: string]: string | string[] | undefined }
-}
 
 // Performance API types
 interface PerformanceEventTiming extends PerformanceEntry {
@@ -76,7 +73,6 @@ export interface RouteHandler {
 // Dynamic route types
 export interface DynamicRoute {
   params: { [key: string]: string }
-}
 
 // Static generation types
 export interface StaticProps {
@@ -109,7 +105,5 @@ declare module 'next' {
       email: string;
       name?: string;
     }
-  }
-}
 
 export {}

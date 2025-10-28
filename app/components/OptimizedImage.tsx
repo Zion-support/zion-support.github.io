@@ -40,21 +40,18 @@ const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
     return (
       <div 
         className={`bg-gray-200 flex items-center justify-center ${className}`}
-        style={{ width, height }}
-      >
-        <span className="text-gray-500 text-sm">Image failed to load</span>
+        style={{ width, height }
+      > <span className="text-gray-500 text-sm">Image failed to load</span>
       </div>
     );
   }
 
   return (
-    <div className={`relative ${className}`}>
-      {isLoading && (
+    <div className={`relative ${className}`}>{isLoading && (
         <div 
           className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center"
-          style={{ width, height }}
-        >
-          <span className="text-gray-500 text-sm">Loading...</span>
+          style={{ width, height }
+        > <span className="text-gray-500 text-sm">Loading...</span>
         </div>
       )}
       <Image

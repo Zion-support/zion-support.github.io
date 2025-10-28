@@ -12,8 +12,7 @@ export const usePerformanceMonitor = () => {
       console.log(`${name} took ${end - start} milliseconds`);
     } else {
       fn();
-    }
-  }, []);
+    }, []);
 
   const measureAsyncPerformance = useCallback(async (name: string, fn: () => Promise<void>) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -23,8 +22,7 @@ export const usePerformanceMonitor = () => {
       console.log(`${name} took ${end - start} milliseconds`);
     } else {
       await fn();
-    }
-  }, []);
+    }, []);
 
   return { measurePerformance, measureAsyncPerformance };
 };
@@ -47,8 +45,7 @@ export const measurePerformance = (name: string, fn: () => void) => {
     console.log(`${name} took ${end - start} milliseconds`);
   } else {
     fn();
-  }
-};
+  };
 
 export const measureAsyncPerformance = async (name: string, fn: () => Promise<void>) => {
   if (typeof window !== 'undefined' && 'performance' in window) {
@@ -58,5 +55,4 @@ export const measureAsyncPerformance = async (name: string, fn: () => Promise<vo
     console.log(`${name} took ${end - start} milliseconds`);
   } else {
     await fn();
-  }
-};
+  };

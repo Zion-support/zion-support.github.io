@@ -1,4 +1,4 @@
-import { ErrorBoundary } from '@/components/ErrorBoundary';
+import { ErrorBoundary } from '../components/ErrorBoundary';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
@@ -7,122 +7,76 @@ export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
   title: 'About Us - Zion Tech Group',
-  description: 'Learn about Zion Tech Group, a leading technology company specializing in AI solutions, cloud infrastructure, and innovative software development services.',
-  keywords: 'about us, technology company, AI solutions, cloud infrastructure, software development',
+  description: 'Learn about Zion Tech Group and our mission to provide innovative technology solutions.',
+  keywords: 'about, company, technology, solutions, innovation',
   openGraph: {
     title: 'About Us - Zion Tech Group',
-    description: 'Learn about Zion Tech Group, a leading technology company specializing in AI solutions, cloud infrastructure, and innovative software development services.',
+    description: 'Learn about Zion Tech Group and our mission to provide innovative technology solutions.',
     type: 'website',
   },
 };
-function AboutPage() {
-  return (
-    <div className="min-h-screen bg-white">
-      
-      {/* Hero Section */}
 
-export default function Wrapped(props) {
+export default function About() {
   return (
     <ErrorBoundary>
-      < {...props} />
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-black/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              About Us
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Learn about Zion Tech Group and our mission to provide innovative technology solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors">
+                Contact Us
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Content Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Our Story</h2>
+              <p className="text-xl text-gray-300">Building the future of technology</p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <h3 className="text-3xl font-bold text-white mb-6">Our Mission</h3>
+                <p className="text-gray-300 mb-6">
+                  At Zion Tech Group, we are dedicated to providing innovative technology solutions that help businesses thrive in the digital age. Our team of experts works tirelessly to deliver cutting-edge solutions that drive growth and success.
+                </p>
+                <p className="text-gray-300">
+                  We believe in the power of technology to transform businesses and create opportunities for growth. Our commitment to excellence and innovation drives everything we do.
+                </p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+                <h4 className="text-2xl font-bold text-white mb-4">Why Choose Us</h4>
+                <ul className="space-y-4">
+                  <li className="flex items-start">
+                    <ArrowRight className="h-6 w-6 text-blue-400 mr-3 mt-1 flex-shrink-0" />
+                    <span className="text-gray-300">Innovative solutions</span>
+                  </li>
+                  <li className="flex items-start">
+                    <ArrowRight className="h-6 w-6 text-blue-400 mr-3 mt-1 flex-shrink-0" />
+                    <span className="text-gray-300">Expert team</span>
+                  </li>
+                  <li className="flex items-start">
+                    <ArrowRight className="h-6 w-6 text-blue-400 mr-3 mt-1 flex-shrink-0" />
+                    <span className="text-gray-300">Proven track record</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </ErrorBoundary>
   );
 }
-      <section className="pt-20 pb-16 bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              About Zion Tech Group
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We are a leading technology company specializing in AI solutions, 
-              cloud infrastructure, and innovative software development services.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Mission Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Mission</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              To empower businesses with cutting-edge technology solutions that drive growth, 
-              efficiency, and innovation in the digital age.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Values Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Values</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              These core values guide everything we do and shape our company culture.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="flex justify-center mb-4">
-                <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold">I</span>
-                </div>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Innovation</h3>
-              <p className="text-gray-600">We constantly push the boundaries of technology to deliver cutting-edge solutions.</p>
-            </div>
-            <div className="text-center">
-              <div className="flex justify-center mb-4">
-                <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold">C</span>
-                </div>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Collaboration</h3>
-              <p className="text-gray-600">We work closely with our clients to understand their unique needs and challenges.</p>
-            </div>
-            <div className="text-center">
-              <div className="flex justify-center mb-4">
-                <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold">E</span>
-                </div>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Excellence</h3>
-              <p className="text-gray-600">We are committed to delivering the highest quality solutions and services.</p>
-            </div>
-            <div className="text-center">
-              <div className="flex justify-center mb-4">
-                <div className="w-8 h-8 bg-orange-600 rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold">I</span>
-                </div>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Integrity</h3>
-              <p className="text-gray-600">We conduct business with honesty, transparency, and ethical practices.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 bg-blue-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Ready to Work With Us?</h2>
-          <p className="text-xl text-blue-100 mb-8">
-            Let&apos;s discuss how we can help transform your business with our technology solutions.
-          </p>
-          <Link 
-            href="/contact" 
-            className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
-          >
-            Get Started
-            <ArrowRight className="ml-2 w-5 h-5" />
-          </Link>
-        </div>
-      </section>
-
-    </div>
-  );
-}
-

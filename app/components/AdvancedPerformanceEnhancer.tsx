@@ -54,46 +54,38 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
                   ...prev, 
                   cls: (prev.cls || 0) + (entry as LayoutShift).value 
                 }));
-              }
-            } else if (entry.entryType === 'paint') {
+              } else if (entry.entryType === 'paint') {
               if (entry.name === 'first-contentful-paint') {
                 setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
-              }
-            } else if (entry.entryType === 'navigation') {
+              } else if (entry.entryType === 'navigation') {
               const navEntry = entry as PerformanceNavigationTiming;
               setMetrics(prev => ({ ...prev, ttfb: navEntry.responseStart - navEntry.requestStart }));
-            }
-          }
-        });
+            });
 
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint', 'navigation'] });
       }
 
       // Memory usage
       if ('memory' in performance) {
-        const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
+        const memory = (performance as Performance & { memory?: { usedJSHeapSize: number }).memory;
         if (memory) {
           setMetrics(prev => ({ 
             ...prev, 
             memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
           }));
         }
-      }
 
       // Connection speed
       if ('connection' in navigator) {
-        const connection = (navigator as Navigator & { connection?: { effectiveType: string } }).connection;
+        const connection = (navigator as Navigator & { connection?: { effectiveType: string }).connection;
         if (connection) {
           setMetrics(prev => ({ 
             ...prev, 
             connectionSpeed: connection.effectiveType || 'unknown'
           }));
-        }
-      }
-    } catch (error) {
+        } catch (error) {
       console.warn('Performance monitoring error:', error);
-    }
-  }, [enableMonitoring]);
+    }, [enableMonitoring]);
 
   // Performance optimizations
   const applyOptimizations = useCallback(() => {
@@ -125,8 +117,7 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
         }
         if (!img.decoding) {
           img.decoding = 'async';
-        }
-      });
+        });
 
       // Optimize fonts
       const fontLink = document.createElement('link');
@@ -150,8 +141,7 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
       setIsOptimized(true);
     } catch (error) {
       console.warn('Performance optimization error:', error);
-    }
-  }, [enableOptimizations]);
+    }, [enableOptimizations]);
 
   // Apply optimizations on mount
   useEffect(() => {
@@ -162,22 +152,25 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
   useEffect(() => {
     if (enableMonitoring) {
       measurePerformance();
-    }
-  }, [measurePerformance, enableMonitoring]);
+    }, [measurePerformance, enableMonitoring]);
 
   // Log performance metrics for debugging
   useEffect(() => {
     if (enableMonitoring && Object.values(metrics).some(value => value !== null)) {
       console.log('Performance Metrics:', metrics);
-    }
-  }, [metrics, enableMonitoring]);
+    }, [metrics, enableMonitoring]);
 
   return (
-    <div className="performance-enhanced">
-      {children}
+    <div className="min-h-screen bg-white">
+        {children}
       {enableMonitoring && (
-        <div className="performance-monitor" style={{ display: 'none' }}>
-          <div>LCP: {metrics.lcp?.toFixed(2)}ms</div>
+        <div className="container mx-auto px-4">
+          
+        </div>
+      </div></div>
+      </div></div><div>
+          LCP: {metrics.lcp?.toFixed(2)}ms
+        </div></div>
           <div>FID: {metrics.fid?.toFixed(2)}ms</div>
           <div>CLS: {metrics.cls?.toFixed(4)}</div>
           <div>FCP: {metrics.fcp?.toFixed(2)}ms</div>

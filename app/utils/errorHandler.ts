@@ -57,7 +57,6 @@ export class ErrorHandler {
     } catch (err) {
       console.error('Failed to send error to service:', err);
     }
-  }
 
   public getErrors(): ErrorInfo[] {
     return [...this.errors];
@@ -70,7 +69,6 @@ export class ErrorHandler {
   public getErrorCount(): number {
     return this.errors.length;
   }
-}
 
 export const errorHandler = ErrorHandler.getInstance();
 

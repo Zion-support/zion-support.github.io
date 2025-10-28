@@ -63,12 +63,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
           const clsEntry = entry as LayoutShift;
           if (!clsEntry.hadRecentInput) {
             setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + clsEntry.value }));
-          }
-        } else if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
+          } else if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
           setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
-        }
-      }
-    });
+        });
 
     // Observe different performance entry types
     try {
@@ -87,15 +84,19 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
   useEffect(() => {
     if (enableReporting && metrics.lcp && metrics.fid && metrics.cls && metrics.fcp) {
       console.log('Core Web Vitals:', metrics);
-    }
-  }, [metrics, enableReporting]);
+    }, [metrics, enableReporting]);
 
   return (
-    <div className={className}>
-      {children}
+    <div className="min-h-screen bg-white">
+        {children}
       {enableReporting && (
-        <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-2 rounded text-xs">
-          <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'N/A'}</div>
+        <div className="container mx-auto px-4">
+          
+        </div>
+      </div></div>
+      </div></div><div>
+          LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'N/A'}
+        </div></div>
           <div>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'N/A'}</div>
           <div>CLS: {metrics.cls ? metrics.cls.toFixed(4) : 'N/A'}</div>
           <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'N/A'}</div>

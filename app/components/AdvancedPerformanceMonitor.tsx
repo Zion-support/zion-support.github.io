@@ -43,8 +43,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         entries.forEach((entry: PerformanceEntry) => {
           if (entry.name === 'first-contentful-paint') {
             setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
-          }
-        });
+          });
       });
       fcpObserver.observe({ entryTypes: ['paint'] });
       observers.push(fcpObserver);
@@ -60,8 +59,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           const fidEntry = entry as PerformanceEntry & { processingStart: number };
           if (fidEntry.processingStart && entry.startTime) {
             setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - entry.startTime }));
-          }
-        });
+          });
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
       observers.push(fidObserver);
@@ -78,8 +76,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           if (!entry.hadRecentInput) {
             clsValue += entry.value || 0;
             setMetrics(prev => ({ ...prev, cls: clsValue }));
-          }
-        });
+          });
       });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
       observers.push(clsObserver);
@@ -93,20 +90,17 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       if (navigationEntry) {
         const ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
         setMetrics(prev => ({ ...prev, ttfb }));
-      }
-    } catch (error) {
+      } catch (error) {
       console.warn('TTFB measurement failed:', error);
     }
 
     // Measure Memory Usage
     try {
       if ('memory' in performance) {
-        const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
+        const memory = (performance as Performance & { memory?: { usedJSHeapSize: number }).memory;
         if (memory) {
           setMetrics(prev => ({ ...prev, memory: memory.usedJSHeapSize }));
-        }
-      }
-    } catch (error) {
+        } catch (error) {
       console.warn('Memory measurement failed:', error);
     }
 
@@ -134,27 +128,19 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   useEffect(() => {
     if (onMetricsUpdate) {
       onMetricsUpdate(metrics)
-    }
-  }, [metrics, onMetricsUpdate]);
+    }, [metrics, onMetricsUpdate]);
 
   return (
-    <div className="performance-monitor">
-      <div className="metrics-display">
-        <h3>Performance Metrics</h3>
-        <div className="metric">
-          <span>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'N/A'}</span>
+    <div className="performance-monitor"> <div className="metrics-display"> <h3>Performance Metrics</h3>
+        <div className="metric"> <span>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'N/A'}</span>
         </div>
-        <div className="metric">
-          <span>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'N/A'}</span>
+        <div className="metric"> <span>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'N/A'}</span>
         </div>
-        <div className="metric">
-          <span>CLS: {metrics.cls ? metrics.cls.toFixed(4) : 'N/A'}</span>
+        <div className="metric"> <span>CLS: {metrics.cls ? metrics.cls.toFixed(4) : 'N/A'}</span>
         </div>
-        <div className="metric">
-          <span>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'N/A'}</span>
+        <div className="metric"> <span>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'N/A'}</span>
         </div>
-        <div className="metric">
-          <span>Memory: {metrics.memory ? `${(metrics.memory / 1024 / 1024).toFixed(2)}MB` : 'N/A'}</span>
+        <div className="metric"> <span>Memory: {metrics.memory ? `${(metrics.memory / 1024 / 1024).toFixed(2)}MB` : 'N/A'}</span>
         </div>
       </div>
     </div>

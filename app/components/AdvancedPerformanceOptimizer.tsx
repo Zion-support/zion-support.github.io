@@ -33,8 +33,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       if (!img.hasAttribute('decoding')) {
         img.setAttribute('decoding', 'async')
         optimizedCount++
-      }
-    })
+      })
     return optimizedCount
   }, [])
   const optimizeScripts = useCallback((): number => {
@@ -46,8 +45,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       if (!script.hasAttribute('defer') && !script.hasAttribute('async')) {
         script.setAttribute('defer', '')
         optimizedCount++
-      }
-    })
+      })
     return optimizedCount
   }, [])
   const optimizeCSS = useCallback((): number => {
@@ -60,8 +58,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         link.setAttribute('media', 'print')
         link.setAttribute('onload', "this.media='all'")
         optimizedCount++
-      }
-    })
+      })
     return optimizedCount
   }, [])
   const runOptimizations = useCallback(() => {
@@ -92,32 +89,22 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           const navEntry = entry as PerformanceNavigationTiming
           if (navEntry.loadEventEnd - navEntry.loadEventStart > 1000) {
             console.warn('Page load time exceeded 1 second')
-          }
-        }
-      })
+          })
     })
     observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] })
     return () => observer.disconnect()
   }, [])
   return (
-    <div className="performance-optimized" data-optimized={isOptimized}>
-      {children}
+    <div className="min-h-screen bg-white">
+        {children}
       {process.env.NODE_ENV === 'development' && (
-        <div
-          className="optimization-debug"
-          style={{
-            position: 'fixed',
-            bottom: '10px',
-            right: '10px',
-            background: 'rgba(0,0,0,0.8)',
-            color: 'white',
-            padding: '10px',
-            borderRadius: '5px',
-            fontSize: '12px',
-            zIndex: 1000
-          }}
-        >
-          <div>Images: {optimizationMetrics.imagesOptimized}</div>
+        <div className="container mx-auto px-4">
+          
+        </div>
+      </div></div>
+      </div></div><div>
+          Images: {optimizationMetrics.imagesOptimized}
+        </div></div>
           <div>Scripts: {optimizationMetrics.scriptsOptimized}</div>
           <div>CSS: {optimizationMetrics.cssOptimized}</div>
           <div>Total: {optimizationMetrics.totalSavings}</div>

@@ -30,8 +30,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
         if (entry.isIntersecting) {
           setIsInView(true);
           observer.disconnect();
-        }
-      },
+        },
       { threshold: 0.1 }
     );
 
@@ -53,8 +52,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
   };
 
   return (
-    <div className={`relative overflow-hidden ${className}`}>
-      <img
+    <div className={`relative overflow-hidden ${className}`}> <img
         ref={imgRef}
         src={isInView ? src : placeholder}
         alt={alt}
@@ -67,13 +65,12 @@ const LazyImage: React.FC<LazyImageProps> = ({
         decoding="async"
       />
       {!isLoaded && !hasError && (
-        <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
-          <div className="w-8 h-8 border-2 border-gray-300 border-t-blue-500 rounded-full animate-spin"></div>
-        </div>
+        <div className="min-h-screen bg-white">
+        
+      </div></div></div></div>
       )}
       {hasError && (
-        <div className="absolute inset-0 bg-gray-100 flex items-center justify-center">
-          <span className="text-gray-400 text-sm">Failed to load image</span>
+        <div className="absolute inset-0 bg-gray-100 flex items-center justify-center"> <span className="text-gray-400 text-sm">Failed to load image</span>
         </div>
       )}
     </div>

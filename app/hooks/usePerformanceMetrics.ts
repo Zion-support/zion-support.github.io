@@ -29,8 +29,7 @@ export const usePerformanceMetrics = () => {
       const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
       if (fcpEntry) {
         setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
-      }
-    });
+      });
     fcpObserver.observe({ entryTypes: ['paint'] });
 
     // Measure Largest Contentful Paint (LCP)
@@ -59,8 +58,7 @@ export const usePerformanceMetrics = () => {
         const clsEntry = entry as LayoutShift;
         if (!clsEntry.hadRecentInput) {
           clsValue += clsEntry.value || 0;
-        }
-      });
+        });
       setMetrics(prev => ({ ...prev, cls: clsValue }));
     });
     clsObserver.observe({ entryTypes: ['layout-shift'] });

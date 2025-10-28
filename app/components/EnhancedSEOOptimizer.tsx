@@ -7,8 +7,7 @@ interface EnhancedSEOOptimizerProps {
 
 const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({ className = '', children }) => {
   return (
-    <div className={`enhancedseooptimizer-component ${className}`}>
-      {children}
+    <div className={`enhancedseooptimizer-component ${className}`}>{children}
     </div>
   );
 };

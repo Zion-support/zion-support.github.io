@@ -26,7 +26,6 @@ export class CacheManager<T> {
     if (this.options.storage !== 'memory' && typeof window !== 'undefined') {
       this.loadFromStorage();
     }
-  }
 
   public set(key: string, value: T, ttl?: number): void {
     const item: CacheItem<T> = {
@@ -46,7 +45,6 @@ export class CacheManager<T> {
     if (this.options.storage !== 'memory' && typeof window !== 'undefined') {
       this.saveToStorage();
     }
-  }
 
   public get(key: string): T | null {
     const item = this.cache.get(key);
@@ -84,7 +82,6 @@ export class CacheManager<T> {
     if (this.options.storage !== 'memory' && typeof window !== 'undefined') {
       this.saveToStorage();
     }
-  }
 
   public size(): number {
     return this.cache.size;
@@ -100,8 +97,6 @@ export class CacheManager<T> {
       if (now - item.timestamp > item.ttl) {
         this.cache.delete(key);
       }
-    }
-  }
 
   private loadFromStorage(): void {
     try {
@@ -113,11 +108,9 @@ export class CacheManager<T> {
       if (data) {
         const parsed = JSON.parse(data);
         this.cache = new Map(parsed);
-      }
-    } catch (error) {
+      } catch (error) {
       console.warn('Failed to load cache from storage:', error);
     }
-  }
 
   private saveToStorage(): void {
     try {
@@ -130,8 +123,6 @@ export class CacheManager<T> {
     } catch (error) {
       console.warn('Failed to save cache to storage:', error);
     }
-  }
-}
 
 // Create default cache instances
 export const memoryCache = new CacheManager<unknown>({ storage: 'memory' });

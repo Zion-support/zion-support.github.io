@@ -7,8 +7,7 @@ interface SEOHeadWrapperProps {
 
 const SEOHeadWrapper: React.FC<SEOHeadWrapperProps> = ({ className = '', children }) => {
   return (
-    <div className={`seoheadwrapper-component ${className}`}>
-      {children}
+    <div className={`seoheadwrapper-component ${className}`}>{children}
     </div>
   );
 };

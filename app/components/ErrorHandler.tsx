@@ -7,8 +7,7 @@ interface ErrorHandlerProps {
 
 const ErrorHandler: React.FC<ErrorHandlerProps> = ({ className = '', children }) => {
   return (
-<div className={`errorhandler-component ${className}`}>
-      {children}
+<div className={`errorhandler-component ${className}`}>{children}
     </div>
   );
 };

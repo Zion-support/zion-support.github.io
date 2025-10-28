@@ -7,8 +7,7 @@ interface NeonButtonProps {
 
 const NeonButton: React.FC<NeonButtonProps> = ({ className = '', children }) => {
   return (
-<div className={`neonbutton-component ${className}`}>
-      {children}
+<div className={`neonbutton-component ${className}`}>{children}
     </div>
   );
 };

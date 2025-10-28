@@ -69,35 +69,32 @@ const PWAInstaller: React.FC = memo(() => {
   }
 
   return (
-    <div className="fixed bottom-4 left-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50 border border-gray-200">
-      <div className="flex items-start justify-between">
-        <div className="flex-1">
-          <h3 className="text-lg font-semibold text-gray-900 mb-2">
+    <div className="min-h-screen bg-white">
+        
+      </div></div></div><div className="flex-1"> <h3 className="text-lg font-semibold text-gray-900 mb-2">
             Install App
           </h3>
           <p className="text-sm text-gray-600 mb-3">
             Install Zion Tech Group app for a better experience with offline access and faster loading.
           </p>
           <div className="flex space-x-2">
-            <button
+          
+          <button
               onClick={handleInstallClick}
               className="flex items-center space-x-2 bg-purple-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-purple-700 transition-colors"
-             aria-label="Button">
-              <Download className="h-4 w-4" />
+             aria-label="Button" onClick={() => { { } <Download className="h-4 w-4" /> }
               <span>Install</span>
             </button>
             <button
               onClick={handleDismiss}
               className="text-gray-500 hover:text-gray-700 transition-colors"
-             aria-label="Button">
-              <X className="h-4 w-4" />
+             aria-label="Button" onClick={() => { { } <X className="h-4 w-4" /> }
             </button>
           </div>
         </div>
       </div>
     </div>
-  );
-});
+  );});
 
 PWAInstaller.displayName = 'PWAInstaller';
 

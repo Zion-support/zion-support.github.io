@@ -74,16 +74,13 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
               img.src = img.dataset.src;
               img.classList.remove('lazy');
               observer.unobserve(img);
-            }
-          }
-        });
+            });
       });
 
       document.querySelectorAll('img[data-src]').forEach(img => {
         imageObserver.observe(img);
       });
-    }
-  }, []);
+    }, []);
 
   // Optimize scroll performance
   const optimizeScrollPerformance = useCallback(() => {
@@ -96,8 +93,7 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
           ticking = false;
         });
         ticking = true;
-      }
-    };
+      };
 
     window.addEventListener('scroll', updateScrollPosition, { passive: true });
     
@@ -141,18 +137,14 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
           if (entry.entryType === 'paint') {
             if (entry.name === 'first-contentful-paint') {
               setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
-            }
-          }
-        });
+            });
       });
 
       try {
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
       } catch (error) {
         console.warn('Performance Observer not supported:', error);
-      }
-    }
-  }, []);
+      }, []);
 
   // Monitor TTFB
   const monitorTTFB = useCallback(() => {
@@ -162,17 +154,14 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
           if (entry.entryType === 'navigation') {
             const navEntry = entry as PerformanceNavigationTiming;
             setMetrics(prev => ({ ...prev, ttfb: navEntry.responseStart - navEntry.requestStart }));
-          }
-        });
+          });
       });
 
       try {
         observer.observe({ entryTypes: ['navigation'] });
       } catch (error) {
         console.warn('Navigation timing not supported:', error);
-      }
-    }
-  }, []);
+      }, []);
 
   useEffect(() => {
     // Initialize all performance optimizations
@@ -191,12 +180,10 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
   useEffect(() => {
     if (process.env.NODE_ENV === 'development') {
       console.log('Performance Metrics:', metrics);
-    }
-  }, [metrics]);
+    }, [metrics]);
 
   return (
-    <div className={`consolidated-performance ${className}`} style={{ display: 'none' }}>
-      {/* This component doesn't render anything visible */}
+    <div className={`consolidated-performance ${className}`} style={{ display: 'none' }>{/* This component doesn't render anything visible */}
     </div>
   );
 });

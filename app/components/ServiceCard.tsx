@@ -7,8 +7,7 @@ interface ServiceCardProps {
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ className = '', children }) => {
   return (
-<div className={`servicecard-component ${className}`}>
-      {children || <h2>ServiceCard</h2>}
+<div className={`servicecard-component ${className}`}>{children || <h2>ServiceCard</h2>}
     </div>
   );
 };

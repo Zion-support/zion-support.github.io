@@ -7,8 +7,7 @@ interface DynamicContentShowcaseProps {
 
 const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({ className = '', children }) => {
   return (
-    <div className={`dynamiccontentshowcase-component ${className}`}>
-      {children}
+    <div className={`dynamiccontentshowcase-component ${className}`}>{children}
     </div>
   );
 };

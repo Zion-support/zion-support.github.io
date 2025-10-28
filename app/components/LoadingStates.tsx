@@ -7,8 +7,7 @@ interface LoadingStatesProps {
 
 const LoadingStates: React.FC<LoadingStatesProps> = ({ className = '', children }) => {
   return (
-<div className={`loadingstates-component ${className}`}>
-      {children}
+<div className={`loadingstates-component ${className}`}>{children}
     </div>
   );
 };

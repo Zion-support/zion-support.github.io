@@ -49,8 +49,7 @@ const ConsolidatedSEO: React.FC<ConsolidatedSEOProps> = memo(({
         addressRegion: 'CA',
         postalCode: '94105',
         addressCountry: 'US'
-      }
-    };
+      };
 
     const script = document.createElement('script');
     script.type = 'application/ld+json';
@@ -154,8 +153,7 @@ const ConsolidatedSEO: React.FC<ConsolidatedSEOProps> = memo(({
   ]);
 
   return (
-    <div className={`consolidated-seo ${className}`} style={{ display: 'none' }}>
-      {/* This component doesn't render anything visible */}
+    <div className={`consolidated-seo ${className}`} style={{ display: 'none' }>{/* This component doesn't render anything visible */}
     </div>
   );
 });

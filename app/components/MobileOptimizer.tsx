@@ -7,8 +7,7 @@ interface MobileOptimizerProps {
 
 const MobileOptimizer: React.FC<MobileOptimizerProps> = ({ className = '', children }) => {
   return (
-    <div className={`mobileoptimizer-component ${className}`}>
-      {children}
+    <div className={`mobileoptimizer-component ${className}`}>{children}
     </div>
   );
 };

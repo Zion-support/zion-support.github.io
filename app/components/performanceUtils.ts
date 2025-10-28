@@ -12,17 +12,14 @@ export const performanceUtils = {
   // Measure custom performance marks
   mark: (name: string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
-      performance.mark(name)}
-  },
+      performance.mark(name)},
 
   // Measure time between marks
   measure: (name: string, startMark: string, endMark?: string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       if (endMark) {
         performance.measure(name, startMark, endMark)} else {
-        performance.measure(name, startMark)}
-    }
-  },
+        performance.measure(name, startMark)},
 
   // Get performance entries
   getEntries: (type?: string) => {
@@ -38,9 +35,6 @@ export const performanceUtils = {
         performance.clearMarks(type)} else {
         performance.clearMeasures();
         performance.clearMarks()}
-    }
-  }
-}
 // Google Analytics integration for performance tracking
 export const trackPerformanceToGA = (metrics: PerformanceMetrics): void => {
   if (typeof window !== 'undefined' && 'gtag' in window) {
@@ -55,6 +49,4 @@ export const trackPerformanceToGA = (metrics: PerformanceMetrics): void => {
         cumulative_layout_shift: metrics.cumulativeLayoutShift,
         time_to_interactive: metrics.timeToInteractive,
         total_blocking_time: metrics.totalBlockingTime
-      }
-    })}
-};
+      })};

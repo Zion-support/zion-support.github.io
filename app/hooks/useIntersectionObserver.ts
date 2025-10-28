@@ -24,8 +24,7 @@ export const useIntersectionObserver = (options: UseIntersectionObserverOptions 
     return () => {
       if (observer.current) {
         observer.current.disconnect();
-      }
-    };
+      };
   }, [node, options]);
 
   return [setNode, entry] as const;

@@ -14,8 +14,7 @@ export const useWebVitals = (onPerfEntry?: (metric: WebVitalsMetric) => void) =>
       // Use the existing monitoring service instead of web-vitals
       // This avoids API compatibility issues
       console.log('Web Vitals monitoring initialized');
-    }
-  }, [onPerfEntry]);
+    }, [onPerfEntry]);
 };
 
 export const reportWebVitals = (metric: WebVitalsMetric) => {
@@ -32,5 +31,4 @@ export const reportWebVitals = (metric: WebVitalsMetric) => {
       event_label: metric.id,
       non_interaction: true,
     });
-  }
-};
+  };

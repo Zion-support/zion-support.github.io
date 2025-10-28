@@ -38,4 +38,3 @@ declare global {
       jsHeapSizeLimit: number;
     };
   }
-}

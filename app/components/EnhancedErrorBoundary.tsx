@@ -7,8 +7,7 @@ interface EnhancedErrorBoundaryProps {
 
 const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className = '', children }) => {
   return (
-    <div className={`enhancederrorboundary-component ${className}`}>
-      {children}
+    <div className={`enhancederrorboundary-component ${className}`}>{children}
     </div>
   );
 };

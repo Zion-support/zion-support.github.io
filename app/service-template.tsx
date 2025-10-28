@@ -10,8 +10,7 @@ const ServiceTemplate: React.FC<ServiceTemplateProps> = ({
   children 
 }) => {
   return (
-    <div className={'service-template ' + className}>
-      {children || <p>Service-template component</p>}
+    <div className={'service-template ' + className}>{children || <p>Service-template component</p>}
     </div>
   );
 };

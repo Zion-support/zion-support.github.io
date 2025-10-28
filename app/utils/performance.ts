@@ -13,7 +13,6 @@ export class PerformanceMonitor {
   startTiming(label: string): void {
     if (typeof window !== "undefined" && "performance" in window) {
       performance.mark(`${label}-start`)}
-  }
 
   endTiming(label: string): number {
     if (typeof window !== "undefined" && "performance" in window) {
@@ -58,10 +57,8 @@ export class PerformanceMonitor {
       const entries = entryList.getEntries();
       entries.forEach((entry) => {
         if (!(entry as { hadRecentInput?: boolean }).hadRecentInput) {
-          clsValue += (entry as { value?: number }).value || 0}
-      });
+          clsValue += (entry as { value?: number }).value || 0});
       this.metrics.set("CLS", clsValue)}).observe({ entryTypes: ["layout-shift"] })}
-}
 
 // Hook for React components
 export function usePerformanceMonitor() {
@@ -71,7 +68,7 @@ export function usePerformanceMonitor() {
     endTiming: monitor.endTiming.bind(monitor),
     getMetric: monitor.getMetric.bind(monitor),
     getAllMetrics: monitor.getAllMetrics.bind(monitor)
-  }}
+  }
 
 // Utility function to measure component render time
 export function measureComponentRender(componentName: string) {
@@ -81,5 +78,5 @@ export function measureComponentRender(componentName: string) {
       React.useEffect(() => {
         monitor.startTiming(`${componentName}-render`);
         return () => {
-          monitor.endTiming(`${componentName}-render`)}});
-      return React.createElement(WrappedComponent, props)}) as T}}
+          monitor.endTiming(`${componentName}-render`)});
+      return React.createElement(WrappedComponent, props)}) as T}

@@ -71,7 +71,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = memo(({
       if (prefersReducedMotion.matches) {
         setReducedMotion(true);
       }
-    }
 
     // Show controls after a delay
     const timer = setTimeout(() => setIsVisible(true), 2000);
@@ -103,12 +102,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = memo(({
   };
 
   return (
-    <div className={`accessibility-enhancer ${className}`}>
-      {children}
+    <div className={`accessibility-enhancer ${className}`}>{children}
       
       {isVisible && (
-        <div className="fixed bottom-4 right-4 z-50">
-          <AccessibilityControls
+        <div className="fixed bottom-4 right-4 z-50"> <AccessibilityControls
             isHighContrast={isHighContrast}
             fontSize={fontSize}
             reducedMotion={reducedMotion}

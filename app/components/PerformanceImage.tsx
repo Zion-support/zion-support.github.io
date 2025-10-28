@@ -7,8 +7,7 @@ interface PerformanceImageProps {
 
 const PerformanceImage: React.FC<PerformanceImageProps> = ({ className = '', children }) => {
   return (
-    <div className={`performanceimage-component ${className}`}>
-      {children}
+    <div className={`performanceimage-component ${className}`}>{children}
     </div>
   );
 };

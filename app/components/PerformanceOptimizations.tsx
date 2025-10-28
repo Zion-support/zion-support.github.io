@@ -25,7 +25,6 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
         if (rect.top > window.innerHeight) {
           img.setAttribute('loading', 'lazy');
         }
-      }
 
       // Add decoding="async" for better performance
       if (!img.hasAttribute('decoding')) {
@@ -36,8 +35,7 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
       const imgRect = img.getBoundingClientRect();
       if (imgRect.top <= window.innerHeight && !img.hasAttribute('fetchpriority')) {
         img.setAttribute('fetchpriority', 'high');
-      }
-    });
+      });
   }, [enableImageOptimization]);
 
   // Preload critical resources
@@ -64,8 +62,7 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
         preloadLink.href = link.getAttribute('href') || '';
         preloadLink.setAttribute('crossorigin', 'anonymous');
         document.head.appendChild(preloadLink);
-      }
-    });
+      });
   }, [enablePreloading]);
 
   // Add resource hints
@@ -86,8 +83,7 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
         dnsPrefetch.rel = 'dns-prefetch';
         dnsPrefetch.href = `//${domain}`;
         document.head.appendChild(dnsPrefetch);
-      }
-    });
+      });
 
     // Preconnect to critical external resources
     const criticalDomains = [
@@ -102,8 +98,7 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
         preconnect.href = `https://${domain}`;
         preconnect.setAttribute('crossorigin', 'anonymous');
         document.head.appendChild(preconnect);
-      }
-    });
+      });
   }, [enableResourceHints]);
 
   // Optimize scroll performance
@@ -118,8 +113,7 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
           ticking = false;
         });
         ticking = true;
-      }
-    };
+      };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
@@ -138,8 +132,7 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
           ticking = false;
         });
         ticking = true;
-      }
-    };
+      };
 
     window.addEventListener('resize', handleResize, { passive: true });
     return () => window.removeEventListener('resize', handleResize);
@@ -161,10 +154,7 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
               img.src = img.dataset.src;
               img.removeAttribute('data-src');
               observer.unobserve(element);
-            }
-          }
-        }
-      });
+            });
     }, {
       rootMargin: '50px 0px',
       threshold: 0.1

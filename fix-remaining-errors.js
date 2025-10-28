@@ -1,149 +1,165 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
+import path from 'path';
+import { glob } from 'glob';
 
-console.log('🔧 Fixing remaining errors...');
-
-// Fix PerformanceOptimizer.tsx - add PerformanceEventTiming type
-const perfOptimizerPath = 'app/components/PerformanceOptimizer.tsx';
-if (fs.existsSync(perfOptimizerPath)) {
-  let content = fs.readFileSync(perfOptimizerPath, 'utf8');
-  if (!content.includes('interface PerformanceEventTiming')) {
-    content = content.replace(
-      'interface PerformanceMetrics {',
-      'interface PerformanceEventTiming {\n  startTime: number;\n  duration: number;\n  entryType: string;\n}\n\ninterface PerformanceMetrics {'
-    );
-  }
-  fs.writeFileSync(perfOptimizerPath, content);
-  console.log('✅ Fixed PerformanceOptimizer.tsx PerformanceEventTiming');
-}
-
-// Fix SkipLink.tsx - remove jsx property
-const skipLinkPath = 'app/components/SkipLink.tsx';
-if (fs.existsSync(skipLinkPath)) {
-  let content = fs.readFileSync(skipLinkPath, 'utf8');
-  content = content.replace(/jsx={[^}]+}/g, '');
-  fs.writeFileSync(skipLinkPath, content);
-  console.log('✅ Fixed SkipLink.tsx jsx property');
-}
-
-// Fix servicesData.ts - fix FC references
-const servicesDataPath = 'app/data/servicesData.ts';
-if (fs.existsSync(servicesDataPath)) {
-  let content = fs.readFileSync(servicesDataPath, 'utf8');
-  content = content.replace(/FC/g, 'React.FC');
-  content = content.replace(/import.*Search.*from.*react-icons.*;/g, '');
-  content = content.replace(/import.*string.*from.*react-icons.*;/g, '');
-  content = content.replace(/import React[^;]+;/g, 'import React from \'react\';');
-  fs.writeFileSync(servicesDataPath, content);
-  console.log('✅ Fixed servicesData.ts FC references');
-}
-
-// Fix performance.ts - fix parsing error
-const performancePath = 'app/utils/performance.ts';
-if (fs.existsSync(performancePath)) {
-  let content = fs.readFileSync(performancePath, 'utf8');
-  content = content.replace(/performance\.getEntries\(\)/g, 'performance.getEntries()');
-  content = content.replace(/entry\?\./g, 'entry?.');
-  content = content.replace(/_string/g, 'string');
-  content = content.replace(/_unknown/g, 'unknown');
-  content = content.replace(/const \[.*_entryList.*\] = useState/g, 'const [_entryList] = useState');
-  content = content.replace(/_entryList &&/g, '// _entryList &&');
-  content = content.replace(/const \[.*_entry.*\] = useState/g, 'const [_entry] = useState');
-  content = content.replace(/_entry &&/g, '// _entry &&');
-  fs.writeFileSync(performancePath, content);
-  console.log('✅ Fixed performance.ts parsing error');
-}
-
-// Fix OptimizedImage.tsx - fix empty interface
-const optimizedImagePath = 'components/OptimizedImage.tsx';
-if (fs.existsSync(optimizedImagePath)) {
-  let content = fs.readFileSync(optimizedImagePath, 'utf8');
-  content = content.replace(
-    'interface OptimizedImageProps {}',
-    'interface OptimizedImageProps {\n  src: string;\n  alt: string;\n  width?: number;\n  height?: number;\n  className?: string;\n}'
+// Function to fix malformed onClick handlers
+function fixOnClickHandlers(content) {
+  let fixed = content;
+  
+  // Fix patterns like onClick={() => Get Started
+  fixed = fixed.replace(
+    /onClick=\{\(\)\s*=>\s*([^}]+?)(?=\s*<|$)/g,
+    (match, handler) => {
+      // If the handler doesn't end with a closing brace, add it
+      if (!handler.trim().endsWith('}')) {
+        return `onClick={() => { ${handler.trim()} }}`;
+      }
+      return match;
+    }
   );
-  fs.writeFileSync(optimizedImagePath, content);
-  console.log('✅ Fixed OptimizedImage.tsx empty interface');
+  
+  // Fix patterns like aria-label="Button" onClick={() => Get Started
+  fixed = fixed.replace(
+    /aria-label="[^"]*"\s*onClick=\{\(\)\s*=>\s*([^}]+?)(?=\s*<|$)/g,
+    (match, handler) => {
+      return `aria-label="Button" onClick={() => { ${handler.trim()} }}`;
+    }
+  );
+  
+  return fixed;
 }
 
-// Fix NewsletterSignup.tsx - remove unused error
-const newsletterPath = 'app/components/NewsletterSignup.tsx';
-if (fs.existsSync(newsletterPath)) {
-  let content = fs.readFileSync(newsletterPath, 'utf8');
-  content = content.replace(/const \[.*error.*\] = useState/g, 'const [error] = useState');
-  content = content.replace(/error &&/g, '// error &&');
-  fs.writeFileSync(newsletterPath, content);
-  console.log('✅ Fixed NewsletterSignup.tsx unused error');
+// Function to fix broken JSX structure
+function fixJSXStructure(content) {
+  let fixed = content;
+  
+  // Fix patterns where JSX elements are not properly closed
+  fixed = fixed.replace(
+    /<div([^>]*?)>\s*<div([^>]*?)>\s*([^<]+?)(?=<div|<\/div>|$)/gs,
+    (match, outerAttrs, innerAttrs, content) => {
+      return `<div${outerAttrs}>\n        <div${innerAttrs}>\n          ${content.trim()}\n        </div>`;
+    }
+  );
+  
+  // Fix patterns where content is outside of divs
+  fixed = fixed.replace(
+    /<div([^>]*?)>\s*([^<]+?)\s*<div([^>]*?)>\s*([^<]+?)(?=<div|<\/div>|$)/gs,
+    (match, outerAttrs, outerContent, innerAttrs, innerContent) => {
+      return `<div${outerAttrs}>\n        ${outerContent.trim()}\n        <div${innerAttrs}>\n          ${innerContent.trim()}\n        </div>`;
+    }
+  );
+  
+  return fixed;
 }
 
-// Fix useForm.ts - remove unused error
-const useFormPath = 'app/hooks/useForm.ts';
-if (fs.existsSync(useFormPath)) {
-  let content = fs.readFileSync(useFormPath, 'utf8');
-  content = content.replace(/const \[.*_error.*\] = useState/g, 'const [_error] = useState');
-  content = content.replace(/_error &&/g, '// _error &&');
-  fs.writeFileSync(useFormPath, content);
-  console.log('✅ Fixed useForm.ts unused error');
+// Function to fix missing closing tags
+function fixMissingClosingTags(content) {
+  let fixed = content;
+  
+  // Fix patterns where divs are not properly closed
+  const lines = fixed.split('\n');
+  let result = [];
+  let openTags = [];
+  
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    
+    // Count opening and closing div tags
+    const openDivs = (line.match(/<div[^>]*>/g) || []).length;
+    const closeDivs = (line.match(/<\/div>/g) || []).length;
+    
+    // Track open tags
+    for (let j = 0; j < openDivs; j++) {
+      openTags.push('div');
+    }
+    
+    // Remove closed tags
+    for (let j = 0; j < closeDivs; j++) {
+      if (openTags.length > 0) {
+        openTags.pop();
+      }
+    }
+    
+    result.push(line);
+    
+    // If we're at the end of a section and have open tags, close them
+    if (i === lines.length - 1 || lines[i + 1].trim().startsWith('</section>') || lines[i + 1].trim().startsWith('</main>')) {
+      while (openTags.length > 0) {
+        result.push('          </div>');
+        openTags.pop();
+      }
+    }
+  }
+  
+  return result.join('\n');
 }
 
-// Fix monitoring.ts - remove unused variables
-const monitoringPath = 'app/utils/monitoring.ts';
-if (fs.existsSync(monitoringPath)) {
-  let content = fs.readFileSync(monitoringPath, 'utf8');
-  content = content.replace(/const \[.*error.*\] = useState/g, 'const [error] = useState');
-  content = content.replace(/error &&/g, '// error &&');
-  content = content.replace(/const \[.*_error.*\] = useState/g, 'const [_error] = useState');
-  content = content.replace(/_error &&/g, '// _error &&');
-  content = content.replace(/const \[.*entry.*\] = useState/g, 'const [entry] = useState');
-  content = content.replace(/entry &&/g, '// entry &&');
-  fs.writeFileSync(monitoringPath, content);
-  console.log('✅ Fixed monitoring.ts unused variables');
+// Function to fix specific syntax errors
+function fixSyntaxErrors(content) {
+  let fixed = content;
+  
+  // Fix patterns where JSX is broken
+  fixed = fixed.replace(
+    /<button[^>]*>\s*([^<]+?)\s*<ArrowRight[^>]*\/>\s*<\/button>/g,
+    (match, buttonText) => {
+      return `<button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center" aria-label="Button">\n                ${buttonText.trim()}\n                <ArrowRight className="ml-2 h-5 w-5" />\n              </button>`;
+    }
+  );
+  
+  // Fix patterns where content is outside of proper JSX structure
+  fixed = fixed.replace(
+    /<div([^>]*?)>\s*([^<]+?)\s*<button/g,
+    (match, attrs, content) => {
+      return `<div${attrs}>\n          ${content.trim()}\n          <button`;
+    }
+  );
+  
+  return fixed;
 }
 
-// Fix accessibilityUtils.ts - remove unused React import
-const accessibilityUtilsPath = 'app/utils/accessibilityUtils.ts';
-if (fs.existsSync(accessibilityUtilsPath)) {
-  let content = fs.readFileSync(accessibilityUtilsPath, 'utf8');
-  content = content.replace(/import React[^;]+;/g, '');
-  fs.writeFileSync(accessibilityUtilsPath, content);
-  console.log('✅ Fixed accessibilityUtils.ts React import');
+// Main function to process files
+function processFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let originalContent = content;
+    
+    // Apply all fixes
+    content = fixOnClickHandlers(content);
+    content = fixJSXStructure(content);
+    content = fixMissingClosingTags(content);
+    content = fixSyntaxErrors(content);
+    
+    // Only write if content changed
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    
+    return false;
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
+  }
 }
 
-// Fix analytics.ts - remove unused User import
-const analyticsPath = 'app/utils/analytics.ts';
-if (fs.existsSync(analyticsPath)) {
-  let content = fs.readFileSync(analyticsPath, 'utf8');
-  content = content.replace(/import.*User.*from.*@prisma\/client.*;/g, '');
-  fs.writeFileSync(analyticsPath, content);
-  console.log('✅ Fixed analytics.ts User import');
+// Main execution
+async function main() {
+  // Find all TypeScript/TSX files
+  const files = await glob('app/**/*.{ts,tsx}');
+
+  console.log(`Found ${files.length} TypeScript files to process...`);
+
+  let fixedCount = 0;
+  for (const file of files) {
+    if (processFile(file)) {
+      fixedCount++;
+    }
+  }
+
+  console.log(`Fixed ${fixedCount} files`);
 }
 
-// Fix apiClient.ts - remove unused RequestInit import
-const apiClientPath = 'app/utils/apiClient.ts';
-if (fs.existsSync(apiClientPath)) {
-  let content = fs.readFileSync(apiClientPath, 'utf8');
-  content = content.replace(/RequestInit/g, 'RequestInit');
-  fs.writeFileSync(apiClientPath, content);
-  console.log('✅ Fixed apiClient.ts RequestInit');
-}
-
-// Fix enhanced.types.ts - remove unused User import
-const enhancedTypesPath = 'app/types/enhanced.types.ts';
-if (fs.existsSync(enhancedTypesPath)) {
-  let content = fs.readFileSync(enhancedTypesPath, 'utf8');
-  content = content.replace(/import.*User.*from.*@prisma\/client.*;/g, '');
-  fs.writeFileSync(enhancedTypesPath, content);
-  console.log('✅ Fixed enhanced.types.ts User import');
-}
-
-// Fix next.d.ts - remove unused NextPageWithLayout
-const nextTypesPath = 'app/types/next.d.ts';
-if (fs.existsSync(nextTypesPath)) {
-  let content = fs.readFileSync(nextTypesPath, 'utf8');
-  content = content.replace(/type NextPageWithLayout[^;]+;/g, '');
-  fs.writeFileSync(nextTypesPath, content);
-  console.log('✅ Fixed next.d.ts NextPageWithLayout');
-}
-
-console.log('🎉 Remaining errors fixed!');
+main().catch(console.error);

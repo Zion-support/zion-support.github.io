@@ -62,8 +62,7 @@ export const AdvancedSEOEnhancer: React.FC<AdvancedSEOEnhancerProps> = ({
       setOptimizedData(optimized);
     } catch (error) {
       console.warn('SEO optimization error:', error);
-    }
-  }, [seoData, enableAutoOptimization]);
+    }, [seoData, enableAutoOptimization]);
 
   // Generate structured data
   const generateStructuredData = useCallback(() => {
@@ -105,8 +104,7 @@ export const AdvancedSEOEnhancer: React.FC<AdvancedSEOEnhancerProps> = ({
     } catch (error) {
       console.warn('Structured data generation error:', error);
       return null;
-    }
-  }, [optimizedData, enableStructuredData]);
+    }, [optimizedData, enableStructuredData]);
 
   // Initialize SEO optimization
   useEffect(() => {
@@ -152,7 +150,7 @@ export const AdvancedSEOEnhancer: React.FC<AdvancedSEOEnhancerProps> = ({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(structuredData),
-          }}
+          }
         />
       )}
 
