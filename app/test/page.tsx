@@ -1,7 +1,37 @@
 'use client'
+import React from 'react';
+import { Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, Brain, BarChart, Target, TrendingUp, ArrowRight} from 'lucide-react'
+import { CheckCircle, ArrowRight } from 'lucide-react';
+const TestPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: "Testing Solutions",
+      description: "Advanced testing and quality assurance solutions.",
+      benefits: ["Quality", "Testing", "Assurance"]
+    },
+    {
+      icon: BarChart,
+      title: "Analytics",
+      description: "Comprehensive testing analytics and reporting.",
+      benefits: ["Monitoring", "Analysis", "Insights"]
+    },
+    {
+      icon: Target,
+      title: "Precision",
+      description: "Precise testing and quality targeting.",
+      benefits: ["Accuracy", "Precision", "Targeting"]
+    },
+    {
+      icon: TrendingUp,
+      title: "Performance",
+      description: "Optimize testing performance and quality.",
+      benefits: ["Optimization", "Performance", "Efficiency"]
+    }
+  ];
 
   const benefits = [
     'Increase efficiency by up to 50%',
@@ -11,34 +41,6 @@ import { CheckCircle, Brain, BarChart, Target, TrendingUp, ArrowRight} from 'luc
     'Gain competitive advantage with advanced technology'
   ]
 
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Analytics',
-      description: 'Advanced machine learning algorithms for data insights',
-      benefits: ['Real-time analysis', 'Predictive modeling', 'Automated reporting']
-    },
-    {
-      icon: BarChart,
-      title: 'Data Visualization',
-      description: 'Interactive dashboards and charts',
-      benefits: ['Custom dashboards', 'Real-time updates', 'Mobile responsive']
-    },
-    {
-      icon: Target,
-      title: 'Performance Optimization',
-      description: 'Optimize your business processes',
-      benefits: ['Process automation', 'Efficiency gains', 'Cost reduction']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Analytics',
-      description: 'Track and analyze business growth',
-      benefits: ['Growth metrics', 'Trend analysis', 'ROI tracking']
-    }
-  ];
-
-export default function pagePage() {
   return (
     <>
             {/* SEO handled by layout.tsx */}
@@ -136,5 +138,6 @@ export default function pagePage() {
       <Footer />
     </>
   );
-}
+};
 
+export default TestPage;

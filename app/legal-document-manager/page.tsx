@@ -1,9 +1,38 @@
 'use client'
+import React from 'react';
+import { Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, Brain, BarChart, Target, TrendingUp, ArrowRight} from 'lucide-react'
+import { CheckCircle, ArrowRight } from 'lucide-react';
+const LegalDocumentManagerPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: "AI Document Analysis",
+      description: "Automatically analyze and categorize legal documents using advanced AI algorithms.",
+      benefits: ["Intelligent categorization", "Risk assessment", "Compliance checking"]
+    },
+    {
+      icon: BarChart,
+      title: "Document Analytics",
+      description: "Gain insights from your document collection with powerful analytics tools.",
+      benefits: ["Usage patterns", "Performance metrics", "Trend analysis"]
+    },
+    {
+      icon: Target,
+      title: "Smart Search",
+      description: "Find relevant documents instantly with AI-powered search capabilities.",
+      benefits: ["Semantic search", "Context awareness", "Relevance ranking"]
+    },
+    {
+      icon: TrendingUp,
+      title: "Workflow Automation",
+      description: "Automate routine legal processes to improve efficiency and reduce errors.",
+      benefits: ["Process automation", "Task scheduling", "Progress tracking"]
+    }
+  ];
 
-export default function LegalDocumentManagerPage() {
   const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
@@ -22,7 +51,7 @@ export default function LegalDocumentManagerPage() {
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Page
+              Legal Document Manager
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Streamline legal document management with AI-powered tools. Organize, search, and analyze legal documents efficiently.
@@ -109,30 +138,6 @@ export default function LegalDocumentManagerPage() {
       <Footer />
     </>
   );
-}
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Analytics',
-      description: 'Advanced machine learning algorithms for data insights',
-      benefits: ['Real-time analysis', 'Predictive modeling', 'Automated reporting']
-    },
-    {
-      icon: BarChart,
-      title: 'Data Visualization',
-      description: 'Interactive dashboards and charts',
-      benefits: ['Custom dashboards', 'Real-time updates', 'Mobile responsive']
-    },
-    {
-      icon: Target,
-      title: 'Performance Optimization',
-      description: 'Optimize your business processes',
-      benefits: ['Process automation', 'Efficiency gains', 'Cost reduction']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Analytics',
-      description: 'Track and analyze business growth',
-      benefits: ['Growth metrics', 'Trend analysis', 'ROI tracking']
-    }
-  ];
+};
+
+export default LegalDocumentManagerPage;

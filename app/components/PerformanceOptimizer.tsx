@@ -1,21 +1,14 @@
-import React from 'react';
 
-const PerformanceOptimizer: React.FC<{}> = (_props) => {
+
+interface PerformanceOptimizerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className, children }) => {
   return (
-    <div className="p-4">
-      <h2>PerformanceOptimizer</h2>
-      <p>Component implementation coming soon...</p>
-    </div>
-  );
-};
-
-PerformanceOptimizer.displayName = 'PerformanceOptimizer';
-
-const PerformanceOptimizer = () => {
-  return (
-    <div className="p-4">
-      <h2>PerformanceOptimizer</h2>
-      <p>Component implementation coming soon...</p>
+    <div className={className} role="region" aria-label="Performance Optimizer">
+      {children || <p>Performance Optimizer</p>}
     </div>
   );
 };

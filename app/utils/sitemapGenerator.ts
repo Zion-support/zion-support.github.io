@@ -1,13 +1,8 @@
-export interface SitemapEntry {
-  url: string;
-  lastModified: Date;
-  changeFrequency: string;
-  priority: number;
-}
-
-export const generateSitemap = (entries: SitemapEntry[]) => {
-  return entries.map(entry => ({
-    ...entry,
-    generated: true
-  }));
+export const sitemapGenerator = {
+  generateSitemap: (routes: string[]) => {
+    return routes.map(route => ({
+      url: route,
+      lastModified: new Date(),
+    }));
+  },
 };

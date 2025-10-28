@@ -1,21 +1,69 @@
-export class ApiClient {
+interface ApiResponse<T> {
+  data: T;
+  status: number;
+  message?: string;
+}
+
+// Define RequestInit type for compatibility
+interface RequestInit {
+  method?: string;
+  headers?: Record<string, string>;
+  body?: string;
+}
+
+class ApiClient {
   private baseUrl: string;
 
-  constructor(baseUrl: string) {
+  constructor(baseUrl: string = '/api') {
     this.baseUrl = baseUrl;
   }
 
-  async get<T>(endpoint: string): Promise<T> {
-    const response = await fetch(`${this.baseUrl}${endpoint}`);
-    return response.json();
+  private async request<T>(
+    endpoint: string,
+    options: { method?: string; headers?: Record<string, string>; body?: string } = {}
+  ): Promise<ApiResponse<T>> {
+    const url = `${this.baseUrl}${endpoint}`;
+    
+    const response = await fetch(url, {
+      headers: {
+        'Content-Type': 'application/json',
+        ...options.headers,
+      },
+      ...options,
+    });
+
+    const data = await response.json();
+
+    return {
+      data,
+      status: response.status,
+      message: response.statusText,
+    }
   }
 
-  async post<T>(endpoint: string, data: any): Promise<T> {
-    const response = await fetch(`${this.baseUrl}${endpoint}`, {
+  async get<T>(endpoint: string, headers?: Record<string, string>): Promise<ApiResponse<T>> {
+    return this.request<T>(endpoint, { method: 'GET', headers });
+  }
+
+  async post<T>(endpoint: string, data?: unknown, headers?: Record<string, string>): Promise<ApiResponse<T>> {
+    return this.request<T>(endpoint, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
+      body: JSON.stringify(data),
+      headers,
     });
-    return response.json();
+  }
+
+  async put<T>(endpoint: string, data?: unknown, headers?: Record<string, string>): Promise<ApiResponse<T>> {
+    return this.request<T>(endpoint, {
+      method: 'PUT',
+      body: JSON.stringify(data),
+      headers,
+    });
+  }
+
+  async delete<T>(endpoint: string, headers?: Record<string, string>): Promise<ApiResponse<T>> {
+    return this.request<T>(endpoint, { method: 'DELETE', headers });
   }
 }
+
+export default new ApiClient();

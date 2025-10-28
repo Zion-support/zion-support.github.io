@@ -1,9 +1,37 @@
 'use client'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, Brain, BarChart, Target, TrendingUp, ArrowRight} from 'lucide-react'
+import React from 'react';
+import { Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
-export default function EcommerceAnalyticsProPage() {
+// Navigation and Footer components removed as they're not used
+import { CheckCircle, ArrowRight } from 'lucide-react';
+const EcommerceAnalyticsProPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: "AI-Powered Analytics",
+      description: "Advanced analytics powered by artificial intelligence for e-commerce insights.",
+      benefits: ["Predictive analytics", "Customer behavior analysis", "Sales forecasting"]
+    },
+    {
+      icon: BarChart,
+      title: "Real-Time Dashboard",
+      description: "Comprehensive dashboard with real-time e-commerce metrics and KPIs.",
+      benefits: ["Live data updates", "Customizable views", "Performance tracking"]
+    },
+    {
+      icon: Target,
+      title: "Conversion Optimization",
+      description: "Optimize conversion rates with data-driven insights and recommendations.",
+      benefits: ["A/B testing", "Conversion tracking", "Optimization suggestions"]
+    },
+    {
+      icon: TrendingUp,
+      title: "Revenue Analytics",
+      description: "Track and analyze revenue patterns to maximize profitability.",
+      benefits: ["Revenue tracking", "Profit analysis", "Growth metrics"]
+    }
+  ];
+
   const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
@@ -15,15 +43,15 @@ export default function EcommerceAnalyticsProPage() {
   return (
     <>
             {/* SEO handled by layout.tsx */}
-      <Navigation />
+      {/* Navigation removed */}
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Page
-            </h1>
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            E-commerce Analytics Pro
+          </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Transform your e-commerce business with AI-powered analytics. Track sales, optimize inventory, and maximize revenue with our comprehensive analytics platform.
             </p>
@@ -106,33 +134,9 @@ export default function EcommerceAnalyticsProPage() {
           </div>
         </section>
       </div>
-      <Footer />
+      {/* Footer removed */}
     </>
   );
-}
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Analytics',
-      description: 'Advanced machine learning algorithms for data insights',
-      benefits: ['Real-time analysis', 'Predictive modeling', 'Automated reporting']
-    },
-    {
-      icon: BarChart,
-      title: 'Data Visualization',
-      description: 'Interactive dashboards and charts',
-      benefits: ['Custom dashboards', 'Real-time updates', 'Mobile responsive']
-    },
-    {
-      icon: Target,
-      title: 'Performance Optimization',
-      description: 'Optimize your business processes',
-      benefits: ['Process automation', 'Efficiency gains', 'Cost reduction']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Analytics',
-      description: 'Track and analyze business growth',
-      benefits: ['Growth metrics', 'Trend analysis', 'ROI tracking']
-    }
-  ];
+};
+
+export default EcommerceAnalyticsProPage;

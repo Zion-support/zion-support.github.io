@@ -25,14 +25,15 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
   const lastTimeRef = useRef(performance.now());
 
   const measureMemoryUsage = useCallback(() => {
-    if (typeof window !== 'undefined' && 'memory' in performance) {
-      const memory = (performance as any).memory;
-      setMetrics(prev => ({
-        ...prev,
-        memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
-      }));
+    let memoryUsage = 0;
+    if ('memory' in performance) {
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
+      memoryUsage = memory?.usedJSHeapSize ? memory.usedJSHeapSize / 1024 / 1024 : 0; // Convert to MB
     }
+    return memoryUsage;
   }, []);
+
+  // Performance measurement function
 
   const measureFPS = useCallback(() => {
     if (!isMonitoringFPS) return;
@@ -41,7 +42,7 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
     const currentTime = performance.now();
     const deltaTime = currentTime - lastTimeRef.current;
 
-    if (deltaTime >= 1000) { // Update every second
+    if (deltaTime >= 1000) {
       const fps = Math.round((frameCountRef.current * 1000) / deltaTime);
       setMetrics(prev => ({ ...prev, fps }));
       frameCountRef.current = 0;
@@ -51,33 +52,20 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
     requestAnimationFrame(measureFPS);
   }, [isMonitoringFPS]);
 
-  const startMonitoring = useCallback(() => {
-    setIsMonitoringFPS(true);
-    lastTimeRef.current = performance.now();
-    frameCountRef.current = 0;
-    measureFPS();
-  }, [measureFPS]);
-
-  const stopMonitoring = useCallback(() => {
-    setIsMonitoringFPS(false);
-  }, []);
-
   useEffect(() => {
     if (options.enabled) {
-      startMonitoring();
-      if (options.measureMemoryUsage) {
-        const interval = setInterval(measureMemoryUsage, 1000);
-        return () => clearInterval(interval);
-      }
-    } else {
-      stopMonitoring();
+      setIsMonitoringFPS(true);
+      measureFPS();
+      measureMemoryUsage();
     }
-  }, [options.enabled, options.measureMemoryUsage, startMonitoring, stopMonitoring, measureMemoryUsage]);
+
+    return () => {
+      setIsMonitoringFPS(false);
+    }
+  }, [options.enabled, measureFPS, measureMemoryUsage]);
 
   return {
     metrics,
     isMonitoringFPS,
-    startMonitoring,
-    stopMonitoring,
-  };
-};
+  }
+}

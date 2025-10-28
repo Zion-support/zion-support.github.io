@@ -1,21 +1,11 @@
-import React from 'react';
 
-
-interface ServiceWorkerRegistrationProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({ 
-  className = '', 
-  children 
-}) => {
+const ServiceWorkerRegistration = () => {
   return (
-    <div className={'serviceworkerregistration ' + className}>
-      {children || <p>ServiceWorkerRegistration component</p>}
+    <div className="p-4">
+      <h2>ServiceWorkerRegistration</h2>
+      <p>Component implementation coming soon...</p>
     </div>
   );
 };
 
 export default ServiceWorkerRegistration;
-
