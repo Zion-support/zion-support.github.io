@@ -109,11 +109,4 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
             </div>
           </div>
         </>
-      )}
-    </footer>
-  );
-});
-
-Footer.displayName = 'Footer';
-
-export default Footer;
+      )}export default Footer;
