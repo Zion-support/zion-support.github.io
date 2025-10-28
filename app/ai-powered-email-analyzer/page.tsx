@@ -1,74 +1,66 @@
-<<<<<<< HEAD
-  return (
-    <div className="min-h-screen bg-white">
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              AI Powered Email Analyzer
-            </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Professional AI powered email analyzer services powered by advanced AI and technology.
-            </p>
-            <p className="text-lg text-gray-400 mb-12 max-w-4xl mx-auto">
-              Transform your business with our cutting-edge AI powered email analyzer solutions. 
-              We provide comprehensive services to help you achieve your goals.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact" 
-                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
-              >
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link 
-                href="/about" 
-                className="inline-flex items-center px-8 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors"
-              >
-                Learn More
-              </Link>
-            </div>
-          </div>
-        </div>
-    </div>
-  );
-}
-
-  );
-}
-
-export default function Wrapped(props: any) {
-  return (
-    <ErrorBoundary>
-      <AIPoweredEmailAnalyzerPage {...props} />
-    </ErrorBoundary>
-  );
-}
-export default Page;
-=======
-import React from "react";
-import { ErrorBoundary } from '../components/ErrorBoundary';
+import React from 'react';
+import ErrorBoundary from '../components/ErrorBoundary';
 
 export const metadata = {
-  title: "AI-Powered Email Analyzer | Zion Tech Group",
-  description: "Professional AI-powered email analyzer services by Zion Tech Group",
-  keywords: "AI email analyzer, technology, services",
+  title: "Page | Zion Tech Group",
+  description: "Professional page services by Zion Tech Group",
+  keywords: "page, technology, services",
   openGraph: {
-    title: "AI-Powered Email Analyzer | Zion Tech Group",
-    description: "Professional AI-powered email analyzer services by Zion Tech Group",
+    title: "Page | Zion Tech Group",
+    description: "Professional page services by Zion Tech Group",
     type: "website",
   },
 };
 
-export default function AIPoweredEmailAnalyzer() {
+export default function pagePage() {
   return (
     <ErrorBoundary>
-      <div>
-        <h1>AI-Powered Email Analyzer</h1>
-        <p>Professional AI-powered email analyzer services by Zion Tech Group</p>
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              Page
+            </h1>
+            <p className="text-xl text-gray-600 mb-8">
+              Professional page services by Zion Tech Group
+            </p>
+            <div className="bg-white rounded-lg shadow-md p-8">
+              <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+                Our Page Services
+              </h2>
+              <p className="text-gray-600 mb-6">
+                We provide comprehensive page solutions tailored to your business needs.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="bg-blue-50 p-6 rounded-lg">
+                  <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                    Expert Consultation
+                  </h3>
+                  <p className="text-blue-700">
+                    Professional guidance and strategic planning for your page needs.
+                  </p>
+                </div>
+                <div className="bg-green-50 p-6 rounded-lg">
+                  <h3 className="text-lg font-semibold text-green-900 mb-2">
+                    Custom Solutions
+                  </h3>
+                  <p className="text-green-700">
+                    Tailored page solutions designed specifically for your business.
+                  </p>
+                </div>
+                <div className="bg-purple-50 p-6 rounded-lg">
+                  <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                    24/7 Support
+                  </h3>
+                  <p className="text-purple-700">
+                    Round-the-clock support and maintenance for all your page services.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </ErrorBoundary>
   );
 }
->>>>>>> b61118d6144fdc99f32acbc26a83c9d4d1af6611

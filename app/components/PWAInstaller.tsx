@@ -1,105 +1,66 @@
-'use client';
+import React from 'react';
+import ErrorBoundary from '../components/ErrorBoundary';
 
+export const metadata = {
+  title: "PWAInstaller | Zion Tech Group",
+  description: "Professional pwainstaller services by Zion Tech Group",
+  keywords: "pwainstaller, technology, services",
+  openGraph: {
+    title: "PWAInstaller | Zion Tech Group",
+    description: "Professional pwainstaller services by Zion Tech Group",
+    type: "website",
+  },
+};
 
-import React, { memo, useState, useEffect } from 'react';
-import { Download, X } from 'lucide-react';
-import logger from '../utils/logger';
-
-interface BeforeInstallPromptEvent extends Event {
-  prompt(): Promise<void>;
-  userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
-}
-
-const PWAInstaller: React.FC = memo(() => {
-  const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
-  const [showInstallPrompt, setShowInstallPrompt] = useState(false);
-  const [isInstalled, setIsInstalled] = useState(false);
-
-  useEffect(() => {
-    // Check if app is already installed
-    if (window.matchMedia('(display-mode: standalone)').matches) {
-      setIsInstalled(true);
-      return;
-    }
-
-    // Listen for the beforeinstallprompt event
-    const handleBeforeInstallPrompt = (e: Event) => {
-      e.preventDefault();
-      setDeferredPrompt(e as BeforeInstallPromptEvent);
-      setShowInstallPrompt(true);
-    };
-
-    // Listen for the appinstalled event
-    const handleAppInstalled = () => {
-      setIsInstalled(true);
-      setShowInstallPrompt(false);
-      setDeferredPrompt(null);
-    };
-
-    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
-    window.addEventListener('appinstalled', handleAppInstalled);
-
-    return () => {
-      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
-      window.removeEventListener('appinstalled', handleAppInstalled);
-    };
-  }, []);
-
-  const handleInstallClick = async () => {
-    if (!deferredPrompt) return;
-
-    deferredPrompt.prompt();
-    const { outcome } = await deferredPrompt.userChoice;
-    
-    if (outcome === 'accepted') {
-      logger.info('User accepted the install prompt');
-    } else {
-      logger.info('User dismissed the install prompt');
-    }
-    
-    setDeferredPrompt(null);
-    setShowInstallPrompt(false);
-  };
-
-  const handleDismiss = () => {
-    setShowInstallPrompt(false);
-  };
-
-  if (isInstalled || !showInstallPrompt) {
-    return null;
-  }
-
+export default function PWAInstallerPage() {
   return (
-    <div className="fixed bottom-4 left-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50 border border-gray-200">
-      <div className="flex items-start justify-between">
-        <div className="flex-1">
-          <h3 className="text-lg font-semibold text-gray-900 mb-2">
-            Install App
-          </h3>
-          <p className="text-sm text-gray-600 mb-3">
-            Install Zion Tech Group app for a better experience with offline access and faster loading.
-          </p>
-          <div className="flex space-x-2">
-            <button
-              onClick={handleInstallClick}
-              className="flex items-center space-x-2 bg-purple-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-purple-700 transition-colors"
-             aria-label="Action Button">
-              <Download className="h-4 w-4" />
-              <span>Install</span>
-            </button>
-            <button
-              onClick={handleDismiss}
-              className="text-gray-500 hover:text-gray-700 transition-colors"
-             aria-label="Action Button">
-              <X className="h-4 w-4" />
-            </button>
+    <ErrorBoundary>
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              PWAInstaller
+            </h1>
+            <p className="text-xl text-gray-600 mb-8">
+              Professional pwainstaller services by Zion Tech Group
+            </p>
+            <div className="bg-white rounded-lg shadow-md p-8">
+              <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+                Our PWAInstaller Services
+              </h2>
+              <p className="text-gray-600 mb-6">
+                We provide comprehensive pwainstaller solutions tailored to your business needs.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="bg-blue-50 p-6 rounded-lg">
+                  <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                    Expert Consultation
+                  </h3>
+                  <p className="text-blue-700">
+                    Professional guidance and strategic planning for your pwainstaller needs.
+                  </p>
+                </div>
+                <div className="bg-green-50 p-6 rounded-lg">
+                  <h3 className="text-lg font-semibold text-green-900 mb-2">
+                    Custom Solutions
+                  </h3>
+                  <p className="text-green-700">
+                    Tailored pwainstaller solutions designed specifically for your business.
+                  </p>
+                </div>
+                <div className="bg-purple-50 p-6 rounded-lg">
+                  <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                    24/7 Support
+                  </h3>
+                  <p className="text-purple-700">
+                    Round-the-clock support and maintenance for all your pwainstaller services.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </ErrorBoundary>
   );
-});
-
-PWAInstaller.displayName = 'PWAInstaller';
-
-export default PWAInstaller;
+}

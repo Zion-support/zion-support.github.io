@@ -1,119 +1,66 @@
+import React from 'react';
+import ErrorBoundary from '../components/ErrorBoundary';
 
+export const metadata = {
+  title: "Footer | Zion Tech Group",
+  description: "Professional footer services by Zion Tech Group",
+  keywords: "footer, technology, services",
+  openGraph: {
+    title: "Footer | Zion Tech Group",
+    description: "Professional footer services by Zion Tech Group",
+    type: "website",
+  },
+};
 
-import React, { memo } from 'react';
-import Link from 'next/link';
-import { Phone, MapPin, Twitter, Brain, Github, Linkedin, Mail } from 'lucide-react';
-
-interface FooterProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
-  const currentYear = new Date().getFullYear();
-  const aiServices = [
-    { name: 'AI-Powered DevOps', href: '/ai-powered-devops' },
-    { name: 'AI Email Analyzer', href: '/ai-powered-email-analyzer' },
-    { name: 'E-commerce Analytics Pro', href: '/ecommerce-analytics-pro' },
-    { name: 'Legal Document Manager', href: '/legal-document-manager' },
-    { name: 'Medical Records Manager', href: '/medical-records-manager' },
-    { name: 'Online Learning Platform', href: '/online-learning-platform' },
-    { name: 'Property Management AI', href: '/property-management-ai' },
-    { name: 'Supply Chain Optimizer', href: '/supply-chain-optimizer' }
-  ];
-
-  const itServices = [
-    { name: 'Cybersecurity Audit', href: '/it-services/cybersecurity-audit' }
-  ];
-
+export default function FooterPage() {
   return (
-    <footer className={`bg-gray-900 text-white ${className}`}>
-      {children || (
-        <>
-          <div className="max-w-7xl mx-auto px-4 py-12">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {/* Company Info */}
-              <div className="space-y-4">
-                <div className="flex items-center space-x-2">
-                  <Brain className="h-8 w-8 text-blue-400" />
-                  <span className="text-xl font-bold">Zion Tech Group</span>
-                </div>
-                <p className="text-gray-300 text-sm">
-                  Leading provider of AI-powered solutions and IT services for modern businesses.
-                </p>
-                <div className="flex space-x-4">
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                    <Twitter className="h-5 w-5" />
-                  </a>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                    <Github className="h-5 w-5" />
-                  </a>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                    <Linkedin className="h-5 w-5" />
-                  </a>
-                </div>
-              </div>
-
-              {/* AI Services */}
-              <div className="space-y-4">
-                <h3 className="text-lg font-semibold">AI Services</h3>
-                <ul className="space-y-2">
-                  {aiServices.map((service, index) => (
-                    <li key={index}>
-                      <Link href={service.href} className="text-gray-300 hover:text-white transition-colors text-sm">
-                        {service.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* IT Services */}
-              <div className="space-y-4">
-                <h3 className="text-lg font-semibold">IT Services</h3>
-                <ul className="space-y-2">
-                  {itServices.map((service, index) => (
-                    <li key={index}>
-                      <Link href={service.href} className="text-gray-300 hover:text-white transition-colors text-sm">
-                        {service.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Contact Info */}
-              <div className="space-y-4">
-                <h3 className="text-lg font-semibold">Contact</h3>
-                <div className="space-y-2">
-                  <div className="flex items-center space-x-2 text-gray-300 text-sm">
-                    <Phone className="h-4 w-4" />
-                    <span>+1 (555) 123-4567</span>
-                  </div>
-                  <div className="flex items-center space-x-2 text-gray-300 text-sm">
-                    <Mail className="h-4 w-4" />
-                    <span>info@ziontechgroup.com</span>
-                  </div>
-                  <div className="flex items-center space-x-2 text-gray-300 text-sm">
-                    <MapPin className="h-4 w-4" />
-                    <span>123 Tech Street, Silicon Valley, CA</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="border-t border-gray-700 mt-8 pt-8 text-center">
-              <p className="text-gray-400 text-sm">
-                © {currentYear} Zion Tech Group. All rights reserved.
+    <ErrorBoundary>
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              Footer
+            </h1>
+            <p className="text-xl text-gray-600 mb-8">
+              Professional footer services by Zion Tech Group
+            </p>
+            <div className="bg-white rounded-lg shadow-md p-8">
+              <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+                Our Footer Services
+              </h2>
+              <p className="text-gray-600 mb-6">
+                We provide comprehensive footer solutions tailored to your business needs.
               </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="bg-blue-50 p-6 rounded-lg">
+                  <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                    Expert Consultation
+                  </h3>
+                  <p className="text-blue-700">
+                    Professional guidance and strategic planning for your footer needs.
+                  </p>
+                </div>
+                <div className="bg-green-50 p-6 rounded-lg">
+                  <h3 className="text-lg font-semibold text-green-900 mb-2">
+                    Custom Solutions
+                  </h3>
+                  <p className="text-green-700">
+                    Tailored footer solutions designed specifically for your business.
+                  </p>
+                </div>
+                <div className="bg-purple-50 p-6 rounded-lg">
+                  <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                    24/7 Support
+                  </h3>
+                  <p className="text-purple-700">
+                    Round-the-clock support and maintenance for all your footer services.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-        </>
-      )}
-    </footer>
+        </div>
+      </div>
+    </ErrorBoundary>
   );
-});
-
-Footer.displayName = 'Footer';
-
-export default Footer;
+}

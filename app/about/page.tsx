@@ -1,94 +1,65 @@
-<<<<<<< HEAD
 import React from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
-import { Metadata } from 'next';
-import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
-
-export const metadata: Metadata = {
-  title: 'About | Zion Tech Group',
-  description: 'Professional about services by Zion Tech Group. Advanced AI and technology solutions.',
-  keywords: 'about, technology, services, AI, automation',
-  openGraph: {
-    title: 'About | Zion Tech Group',
-    description: 'Professional about services by Zion Tech Group.',
-    type: 'website',
-  },
-};
-
-function AboutPage() {
-  return (
-            </p>
-            <Link 
-              href="/contact" 
-              className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
-            >
-              Get in Touch
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Mission Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Mission</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              To empower businesses with cutting-edge technology solutions that drive growth, 
-              efficiency, and innovation in the digital age.
-    <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              About Zion Tech Group
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Pioneering the future of technology with cutting-edge AI solutions, 
-              cloud infrastructure, and innovative software development services.
-            </p>
-          </div>
-        </div>
-      </section>
-
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 bg-blue-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          </Link>
-        </div>
-      </section>
-    </div>
-  );
-}
-
-=======
-import React from "react";
-import { ErrorBoundary } from '../components/ErrorBoundary';
 
 export const metadata = {
-  title: "About Us | Zion Tech Group",
-  description: "Learn about Zion Tech Group - Leading provider of AI and IT solutions",
-  keywords: "about, company, AI solutions, IT services, technology",
+  title: "Page | Zion Tech Group",
+  description: "Professional page services by Zion Tech Group",
+  keywords: "page, technology, services",
   openGraph: {
-    title: "About Us | Zion Tech Group",
-    description: "Learn about Zion Tech Group - Leading provider of AI and IT solutions",
+    title: "Page | Zion Tech Group",
+    description: "Professional page services by Zion Tech Group",
     type: "website",
   },
 };
 
-export default function About() {
->>>>>>> b61118d6144fdc99f32acbc26a83c9d4d1af6611
+export default function pagePage() {
   return (
     <ErrorBoundary>
-      <div>
-        <h1>About Zion Tech Group</h1>
-        <p>Leading provider of AI and IT solutions</p>
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              Page
+            </h1>
+            <p className="text-xl text-gray-600 mb-8">
+              Professional page services by Zion Tech Group
+            </p>
+            <div className="bg-white rounded-lg shadow-md p-8">
+              <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+                Our Page Services
+              </h2>
+              <p className="text-gray-600 mb-6">
+                We provide comprehensive page solutions tailored to your business needs.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="bg-blue-50 p-6 rounded-lg">
+                  <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                    Expert Consultation
+                  </h3>
+                  <p className="text-blue-700">
+                    Professional guidance and strategic planning for your page needs.
+                  </p>
+                </div>
+                <div className="bg-green-50 p-6 rounded-lg">
+                  <h3 className="text-lg font-semibold text-green-900 mb-2">
+                    Custom Solutions
+                  </h3>
+                  <p className="text-green-700">
+                    Tailored page solutions designed specifically for your business.
+                  </p>
+                </div>
+                <div className="bg-purple-50 p-6 rounded-lg">
+                  <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                    24/7 Support
+                  </h3>
+                  <p className="text-purple-700">
+                    Round-the-clock support and maintenance for all your page services.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </ErrorBoundary>
   );

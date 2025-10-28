@@ -1,197 +1,66 @@
-<<<<<<< HEAD
-import Link from 'next/link';
-import { X, ChevronDown, Menu } from 'lucide-react';
+import React from 'react';
+import ErrorBoundary from '../components/ErrorBoundary';
 
-interface NavigationProps {
-  className?: string;
-  children?: React.ReactNode;
-}
+export const metadata = {
+  title: "Navigation | Zion Tech Group",
+  description: "Professional navigation services by Zion Tech Group",
+  keywords: "navigation, technology, services",
+  openGraph: {
+    title: "Navigation | Zion Tech Group",
+    description: "Professional navigation services by Zion Tech Group",
+    type: "website",
+  },
+};
 
-
+export default function NavigationPage() {
   return (
-    <nav className={`bg-white shadow-lg ${className}`} role="navigation">
-      {children || (
-        <>
-          <div className="max-w-7xl mx-auto px-4">
-            <div className="flex justify-between items-center py-4">
-              <div className="flex items-center">
-                <Link href="/" className="flex items-center space-x-2">
-                  <div className="h-8 w-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">Z</span>
-                  </div>
-                  <span className="text-xl font-bold text-gray-800">Zion Tech Group</span>
-                </Link>
-              </div>
-
-              {/* Desktop Navigation */}
-              <div className="hidden md:flex items-center space-x-8">
-                <Link href="/" className="text-gray-600 hover:text-gray-900 transition-colors">
-                  Home
-                </Link>
-                
-                {/* AI Services Dropdown */}
-                <div className="relative">
-                  <button
-                    onClick={() => toggleDropdown('ai')}
-                    
-                    aria-label="Toggle AI Services Menu"
-                    className="flex items-center space-x-1 text-gray-600 hover:text-gray-900 transition-colors"
-                  >
-                    <span>AI Services</span>
-                    <ChevronDown className="h-4 w-4" />
-                  </button>
-                  {activeDropdown === 'ai' && (
-                    <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
-                      {aiServices.map((service, index) => (
-                        <Link
-                          key={index}
-                          href={service.href}
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
-                        >
-                          {service.name}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
+    <ErrorBoundary>
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              Navigation
+            </h1>
+            <p className="text-xl text-gray-600 mb-8">
+              Professional navigation services by Zion Tech Group
+            </p>
+            <div className="bg-white rounded-lg shadow-md p-8">
+              <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+                Our Navigation Services
+              </h2>
+              <p className="text-gray-600 mb-6">
+                We provide comprehensive navigation solutions tailored to your business needs.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="bg-blue-50 p-6 rounded-lg">
+                  <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                    Expert Consultation
+                  </h3>
+                  <p className="text-blue-700">
+                    Professional guidance and strategic planning for your navigation needs.
+                  </p>
                 </div>
-
-                {/* IT Services Dropdown */}
-                <div className="relative">
-                  <button
-                    onClick={() => toggleDropdown('it')}
-                    
-                    aria-label="Toggle IT Services Menu"
-                    className="flex items-center space-x-1 text-gray-600 hover:text-gray-900 transition-colors"
-                  >
-                    <span>IT Services</span>
-                    <ChevronDown className="h-4 w-4" />
-                  </button>
-                  {activeDropdown === 'it' && (
-                    <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
-                      {itServices.map((service, index) => (
-                        <Link
-                          key={index}
-                          href={service.href}
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
-                        >
-                          {service.name}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
+                <div className="bg-green-50 p-6 rounded-lg">
+                  <h3 className="text-lg font-semibold text-green-900 mb-2">
+                    Custom Solutions
+                  </h3>
+                  <p className="text-green-700">
+                    Tailored navigation solutions designed specifically for your business.
+                  </p>
                 </div>
-
-                <Link href="/about" className="text-gray-600 hover:text-gray-900 transition-colors">
-                  About
-                </Link>
-                <Link href="/contact" className="text-gray-600 hover:text-gray-900 transition-colors">
-                  Contact
-                </Link>
-              </div>
-
-              {/* CTA Button */}
-              <div className="hidden md:flex items-center">
-                <Link
-                  href="/contact"
-                  className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors"
-                >
-                  Get Started
-                </Link>
-              </div>
-
-              {/* Mobile menu button */}
-              <div className="md:hidden">
-                <button
-                  onClick={() => setIsOpen(!isOpen)}
-                  
-                  aria-label="Toggle Mobile Menu"
-                  className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
-                >
-                  {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-                </button>
+                <div className="bg-purple-50 p-6 rounded-lg">
+                  <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                    24/7 Support
+                  </h3>
+                  <p className="text-purple-700">
+                    Round-the-clock support and maintenance for all your navigation services.
+                  </p>
+                </div>
               </div>
             </div>
-
-            {/* Mobile Navigation */}
-            {isOpen && (
-              <div className="md:hidden">
-                <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 rounded-lg mt-2">
-                  <Link href="/" className="block px-3 py-2 text-gray-700 hover:text-gray-900">
-                    Home
-                  </Link>
-                  <div className="px-3 py-2">
-                    <span className="text-gray-700 font-medium">AI Services</span>
-                    <div className="ml-4 mt-2 space-y-1">
-                      {aiServices.map((service, index) => (
-                        <Link
-                          key={index}
-                          href={service.href}
-                          className="block text-sm text-gray-600 hover:text-gray-900"
-                        >
-                          {service.name}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="px-3 py-2">
-                    <span className="text-gray-700 font-medium">IT Services</span>
-                    <div className="ml-4 mt-2 space-y-1">
-                      {itServices.map((service, index) => (
-                        <Link
-                          key={index}
-                          href={service.href}
-                          className="block text-sm text-gray-600 hover:text-gray-900"
-                        >
-                          {service.name}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                  <Link href="/about" className="block px-3 py-2 text-gray-700 hover:text-gray-900">
-                    About
-                  </Link>
-                  <Link href="/contact" className="block px-3 py-2 text-gray-700 hover:text-gray-900">
-                    Contact
-                  </Link>
-                </div>
-              </div>
-            )}
-=======
-import React from "react";
-import Link from "next/link";
-
-export default function Navigation() {
-  return (
-    <nav className="bg-white shadow-lg">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="flex justify-between h-16">
-          <div className="flex items-center">
-            <Link href="/" className="text-xl font-bold text-gray-800">
-              Zion Tech Group
-            </Link>
->>>>>>> b61118d6144fdc99f32acbc26a83c9d4d1af6611
-          </div>
-          <div className="flex items-center space-x-4">
-            <Link href="/about" className="text-gray-700 hover:text-gray-900">
-              About
-            </Link>
-            <Link href="/services" className="text-gray-700 hover:text-gray-900">
-              Services
-            </Link>
-            <Link href="/contact" className="text-gray-700 hover:text-gray-900">
-              Contact
-            </Link>
           </div>
         </div>
       </div>
-    </nav>
+    </ErrorBoundary>
   );
-<<<<<<< HEAD
-});
-
-Navigation.displayName = 'Navigation';
-
-export default Navigation;
-=======
 }
->>>>>>> b61118d6144fdc99f32acbc26a83c9d4d1af6611
