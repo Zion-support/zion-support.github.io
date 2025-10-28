@@ -67,7 +67,7 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
   }, [enableResourceHints]);
 
   // Optimize scroll performance
-  const _optimizeScrollPerformance = useCallback(() => {
+  const optimizeScrollPerformance = useCallback(() => {
     if (typeof window === 'undefined') return;
 
     let __ticking = false;
@@ -86,7 +86,7 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
   }, []);
 
   // Optimize resize performance
-  const _optimizeResizePerformance = useCallback(() => {
+  const optimizeResizePerformance = useCallback(() => {
     if (typeof window === 'undefined') return;
 
     let __ticking = false;
@@ -106,7 +106,7 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
   }, [optimizeImages]);
 
   // Intersection Observer for lazy loading
-  const _setupIntersectionObserver = useCallback(() => {
+  const setupIntersectionObserver = useCallback(() => {
     if (typeof window === 'undefined' || !('IntersectionObserver' in window)) return;
 
     const observer = new IntersectionObserver((entries) => {

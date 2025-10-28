@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, memo, useCallback, useState } from 'react';
+import React, { useEffect, memo, useCallback } from 'react';
 
 interface PerformanceEventTiming extends PerformanceEntry {
   processingStart: number;
@@ -20,7 +20,7 @@ interface PerformanceMonitoringProps {
   enableRealTimeMonitoring?: boolean;
 }
 
-const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ className = '', enableRealTimeMonitoring = true, onMetricsUpdate }) => {
+const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ className: _className = '', enableRealTimeMonitoring = true, onMetricsUpdate }) => {
   const [, setMemoryUsage] = React.useState<{ total: number; limit: number } | null>(null);
   const [fcp, setFCP] = React.useState<number | null>(null);
   const [lcp, setLCP] = React.useState<number | null>(null);

@@ -3,23 +3,23 @@ import { useCallback } from 'react';
 
 // Performance monitoring utilities
 export const usePerformanceMonitor = () => {
-  const measurePerformance = useCallback((_name: string, fn: () => void) => {
+  const measurePerformance = useCallback((name: string, fn: () => void) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const _start = performance.now();
+      const start = performance.now();
       fn();
-      const _end = performance.now();
-
+      const end = performance.now();
+      console.log(`${name} took ${end - start}ms`);
     } else {
       fn();
     }
   }, []);
 
-  const measureAsyncPerformance = useCallback(async (_name: string, fn: () => Promise<void>) => {
+  const measureAsyncPerformance = useCallback(async (name: string, fn: () => Promise<void>) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const _start = performance.now();
+      const start = performance.now();
       await fn();
-      const _end = performance.now();
-
+      const end = performance.now();
+      console.log(`${name} took ${end - start}ms`);
     } else {
       await fn();
     }
@@ -38,23 +38,23 @@ export const createStableMemo = <T>(factory: () => T): T => {
 };
 
 // Simple performance utilities
-export const measurePerformance = (_name: string, fn: () => void) => {
+export const measurePerformance = (name: string, fn: () => void) => {
   if (typeof window !== 'undefined' && 'performance' in window) {
-    const _start = performance.now();
+    const start = performance.now();
     fn();
-    const _end = performance.now();
-
+    const end = performance.now();
+    console.log(`${name} took ${end - start}ms`);
   } else {
     fn();
   }
 };
 
-export const measureAsyncPerformance = async (_name: string, fn: () => Promise<void>) => {
+export const measureAsyncPerformance = async (name: string, fn: () => Promise<void>) => {
   if (typeof window !== 'undefined' && 'performance' in window) {
-    const _start = performance.now();
+    const start = performance.now();
     await fn();
-    const _end = performance.now();
-
+    const end = performance.now();
+    console.log(`${name} took ${end - start}ms`);
   } else {
     await fn();
   }

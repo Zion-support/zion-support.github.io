@@ -6,24 +6,8 @@ import React, { useCallback, useState, useEffect, memo } from 'react';
 interface PerformanceEventTiming extends PerformanceEntry {
   processingStart: number;
   processingEnd: number;
-  target?: Node;
-}
-
-interface LayoutShift extends PerformanceEntry {
-  value: number;
-  hadRecentInput: boolean;
-  target?: Node;
-}
-
-interface ConsolidatedPerformanceProps {
-  className?: string;
-}
-
-// Type definitions for Web Performance APIs
-interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
-  processingEnd: number;
   cancelable: boolean;
+  target?: Node;
 }
 
 interface LayoutShift extends PerformanceEntry {
@@ -31,6 +15,11 @@ interface LayoutShift extends PerformanceEntry {
   hadRecentInput: boolean;
   lastInputTime: number;
   sources: LayoutShiftAttribution[];
+  target?: Node;
+}
+
+interface ConsolidatedPerformanceProps {
+  className?: string;
 }
 
 interface LayoutShiftAttribution {
