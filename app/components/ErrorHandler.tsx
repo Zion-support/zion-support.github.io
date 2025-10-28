@@ -54,19 +54,8 @@ const Page: React.FC = () => {
                   ))}
                 </ul>
               </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            </div>
-          ))}
-=======
->>>>>>> origin/main
->>>>>>> origin/main
             ))}
           </div>
->>>>>>> origin/main
 
           <div className="text-center">
             <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
