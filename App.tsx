@@ -47,6 +47,7 @@ const LoadingFallback = memo(() => (
     <LoadingSpinner />
   </div>
 ));
+LoadingFallback.displayName = 'LoadingFallback';
 
 // Memoized main content component
 const MainContent = memo(() => (

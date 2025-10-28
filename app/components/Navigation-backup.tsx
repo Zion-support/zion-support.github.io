@@ -1,13 +1,28 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { X, Menu } from 'lucide-react';
+
 interface NavigationBackupProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const NavigationBackup: React.FC<NavigationBackupProps> = ({ className = '', children }) => {
+const NavigationBackup: React.FC<NavigationBackupProps> = ({ className: _className = '', children: _children }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
+  const logo = '/logo.png';
+  const logoText = 'Zion Tech Group';
+  const menuItems = [
+    { label: 'Home', href: '/' },
+    { label: 'About', href: '/about' },
+    { label: 'Services', href: '/services' },
+    { label: 'Contact', href: '/contact' }
+  ];
+  const ctaHref = '/contact';
+  const ctaText = 'Get Started';
+  
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   return (<nav className="bg-white shadow-lg" role="navigation">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center py-4">
