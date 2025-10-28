@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 };
 
 export const dynamic = 'force-static';
+
 /* eslint-enable react-refresh/only-export-components */
 
 export default function AboutPage() {
