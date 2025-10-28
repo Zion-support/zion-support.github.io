@@ -1,5 +1,5 @@
 import React from 'react';
-import { _Metadata} from 'next';
+import { Metadata} from 'next';
 
 export default function AboutLayout({
   children,

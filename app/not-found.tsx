@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { _Suspense} from 'react';
+import { Suspense} from 'react';
 import Loading from './components/Loading';
 
 export default function NotFound() {

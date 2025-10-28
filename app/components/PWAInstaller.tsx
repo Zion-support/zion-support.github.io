@@ -1,5 +1,5 @@
 'use client';
-import { _X} from 'lucide-react';
+import { X} from 'lucide-react';
 
 import React, { memo, useState, useEffect } from 'react';
 import logger from '../utils/logger';
@@ -9,12 +9,12 @@ interface BeforeInstallPromptEvent extends Event {
   userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
 }
 
-const PWAInstaller: React.FC = memo_(() => {
+const PWAInstaller: React.FC = memo(() => {
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [showInstallPrompt, setShowInstallPrompt] = useState(false);
   const [isInstalled, setIsInstalled] = useState(false);
 
-  useEffect_(() => {
+  useEffect(() => {
     // Check if app is already installed
     if (window.matchMedia('(display-mode: standalone)').matches) {
       setIsInstalled(true);
@@ -22,14 +22,14 @@ const PWAInstaller: React.FC = memo_(() => {
     }
 
     // Listen for the beforeinstallprompt event
-    const _handleBeforeInstallPrompt = (_e: Event) => {
+    const handleBeforeInstallPrompt = (e: Event) => {
       e.preventDefault();
       setDeferredPrompt(e as BeforeInstallPromptEvent);
       setShowInstallPrompt(true);
     };
 
     // Listen for the appinstalled event
-    const _handleAppInstalled = () => {
+    const handleAppInstalled = () => {
       setIsInstalled(true);
       setShowInstallPrompt(false);
       setDeferredPrompt(null);
@@ -44,12 +44,12 @@ const PWAInstaller: React.FC = memo_(() => {
     };
   }, []);
 
-  const _handleInstallClick = async () => {
+  const handleInstallClick = async () => {
     if (!deferredPrompt) return;
 
     try {
       await deferredPrompt.prompt();
-      const _choiceResult = await deferredPrompt.userChoice;
+      const choiceResult = await deferredPrompt.userChoice;
       
       if (choiceResult.outcome === 'accepted') {
         // // console.log('User accepted the install prompt');
@@ -59,12 +59,12 @@ const PWAInstaller: React.FC = memo_(() => {
       
       setDeferredPrompt(null);
       setShowInstallPrompt(false);
-    } catch (_error) {
+    } catch (error) {
       console.error('Error during installation:', error);
     }
   };
 
-  const _handleDismiss = () => {
+  const handleDismiss = () => {
     setShowInstallPrompt(false);
   };
 
@@ -89,7 +89,7 @@ const PWAInstaller: React.FC = memo_(() => {
 
   return (
     <div className="fixed bottom-4 left-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50 border border-gray-200">
-      <div className="flex items-_start justify-between">
+      <div className="flex items-start justify-between">
         <div className="flex-1">
           <h3 className="text-lg font-semibold text-gray-900 mb-2">
             Install App
