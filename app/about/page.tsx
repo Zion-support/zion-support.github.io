@@ -97,7 +97,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Work With Us?</h2>
           <p className="text-xl text-blue-100 mb-8">
-            Let's discuss how we can help transform your business with our technology solutions.
+            Let&apos;s discuss how we can help transform your business with our technology solutions.
           </p>
           <Link 
             href="/contact" 

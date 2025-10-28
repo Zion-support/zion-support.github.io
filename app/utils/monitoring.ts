@@ -33,7 +33,7 @@ interface PerformanceMetrics {
 
 class MonitoringService {
   private metrics: PerformanceMetrics = {};
-  private errors: ErrorReport[] = [];
+  private _s: ErrorReport[] = [];
   private observer: PerformanceObserver | null = null;
 
   constructor() {
@@ -63,43 +63,43 @@ class MonitoringService {
           this.metrics.lcp = lastEntry.renderTime || lastEntry.loadTime || 0;
           this.reportMetric('lcp', this.metrics.lcp);
         });
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+        lcpObserver.observe({ _Types: ['largest-contentful-paint'] });
 
         // First Input Delay
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: PerformanceEntry) => {
-            this.metrics.fid = (entry as any).processingStart - entry.startTime;
+          entries.forEach((_: PerformanceEntry) => {
+            this.metrics.fid = (_ as any).processingStart - _.startTime;
             this.reportMetric('fid', this.metrics.fid);
           });
         });
-        fidObserver.observe({ entryTypes: ['first-input'] });
+        fidObserver.observe({ _Types: ['first-input'] });
 
         // Cumulative Layout Shift
         let clsValue = 0;
         const clsObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
-          entries.forEach((entry: PerformanceEntry) => {
-            if (!(entry as any).hadRecentInput) {
-              clsValue += entry.value;
+          entries.forEach((_: PerformanceEntry) => {
+            if (!(_ as any).hadRecentInput) {
+              clsValue += _.value;
               this.metrics.cls = clsValue;
               this.reportMetric('cls', clsValue);
             }
           });
         });
-        clsObserver.observe({ entryTypes: ['layout-shift'] });
+        clsObserver.observe({ _Types: ['layout-shift'] });
 
         // First Contentful Paint
         const fcpObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
-          entries.forEach(entry => {
-            this.metrics.fcp = entry.startTime;
-            this.reportMetric('fcp', entry.startTime);
+          entries.forEach(_ => {
+            this.metrics.fcp = _.startTime;
+            this.reportMetric('fcp', _.startTime);
           });
         });
-        fcpObserver.observe({ entryTypes: ['paint'] });
-      } catch (error) {
-        // Handle error silently
+        fcpObserver.observe({ _Types: ['paint'] });
+      } catch (_) {
+        // Handle _ silently
       }
     }
   }
@@ -108,12 +108,12 @@ class MonitoringService {
     if ('PerformanceObserver' in window) {
       try {
         const longTaskObserver = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
+          for (const _ of list.getEntries()) {
             // Handle long tasks
           }
         });
-        longTaskObserver.observe({ entryTypes: ['longtask'] });
-      } catch (error) {
+        longTaskObserver.observe({ _Types: ['longtask'] });
+      } catch (_) {
         // Long task API might not be available
       }
     }
@@ -124,25 +124,25 @@ class MonitoringService {
       try {
         const resourceObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: PerformanceResourceTiming) => {
-            if (entry.duration > 1000) {
+          entries.forEach((_: PerformanceResourceTiming) => {
+            if (_.duration > 1000) {
               // Handle slow resources
             }
           });
         });
-        resourceObserver.observe({ entryTypes: ['resource'] });
-      } catch (_error) {
-        // Handle error silently
+        resourceObserver.observe({ _Types: ['resource'] });
+      } catch (__) {
+        // Handle _ silently
       }
     }
   }
 
   private setupErrorHandling(): void {
-    // Global error handler
-    window.addEventListener('error', (event) => {
+    // Global _ handler
+    window.addEventListener('_', (event) => {
       this.logError({
         message: event.message,
-        stack: event.error?.stack,
+        stack: event._?.stack,
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
         url: window.location.href,
@@ -167,21 +167,21 @@ class MonitoringService {
     }
 
     // Send to analytics (if configured)
-    if (typeof gtag === 'function') {
-      gtag('event', name, {
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',
       });
     }
   }
 
-  public logError(error: ErrorReport): void {
-    this.errors.push(error);
-    // Keep only last 50 errors
-    if (this.errors.length > 50) {
-      this.errors = this.errors.slice(-50);
+  public logError(_: ErrorReport): void {
+    this._s.push(_);
+    // Keep only last 50 _s
+    if (this._s.length > 50) {
+      this._s = this._s.slice(-50);
     }
-    // Send to error tracking service (if configured)
+    // Send to _ tracking service (if configured)
   }
 
   public getMetrics(): PerformanceMetrics {
@@ -189,11 +189,11 @@ class MonitoringService {
   }
 
   public getErrors(): ErrorReport[] {
-    return [...this.errors];
+    return [...this._s];
   }
 
   public clearErrors(): void {
-    this.errors = [];
+    this._s = [];
   }
 
   public measureMemory(): void {

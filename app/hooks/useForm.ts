@@ -62,7 +62,7 @@ export const useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> 
         submitStatus: 'success',
         data: initialData, // Reset form
       }));
-    } catch (_error) {
+    } catch (_) {
       setFormState(prev => ({
         ...prev,
         isSubmitting: false,
