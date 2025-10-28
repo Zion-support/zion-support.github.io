@@ -1,12 +1,9 @@
-import React from 'react';
-import ErrorBoundary from "../../components/ErrorBoundary"
-import Navigation from "../../components/Navigation"
-import Footer from "../../components/Footer"
+import { Metadata } from 'next';
 
-export const metadata = {
-  title: 'Ai Email Assistant | Zion Tech Group',
-  description: 'Professional ai email assistant services by Zion Tech Group. Advanced AI and technology solutions.',
-  keywords: 'ai email assistant, technology, services, AI, automation',
+export const metadata: Metadata = {
+  title: 'Page - Zion Tech Group',
+  description: 'Professional services and solutions by Zion Tech Group.',
+  keywords: 'technology, services, solutions',
   openGraph: {
     title: 'Ai Email Assistant | Zion Tech Group',
     description: 'Professional ai email assistant services by Zion Tech Group.',

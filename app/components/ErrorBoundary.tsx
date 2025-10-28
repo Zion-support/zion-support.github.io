@@ -1,5 +1,4 @@
 'use client';
-
 import React, { Component, ErrorInfo } from 'react';
 
 interface ErrorBoundaryProps {
@@ -13,7 +12,7 @@ interface State {
   errorInfo?: ErrorInfo;
 }
 
-class ErrorBoundary extends Component<ErrorBoundaryProps, State> {
+export class ErrorBoundary extends Component<ErrorBoundaryProps, State> {
   constructor(props: ErrorBoundaryProps) {
     super(props);
     this.state = { hasError: false };

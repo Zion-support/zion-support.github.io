@@ -1,4 +1,4 @@
-import ErrorBoundary from '../components/ErrorBoundary';
+import React from "react";
 
 export const metadata = {
   title: 'Page | Zion Tech Group',
@@ -11,7 +11,11 @@ export const metadata = {
   },
 };
 
+<<<<<<< HEAD
 function Page() {
+=======
+
+export default function FiveGNetworkInfrastructure() {
   return (
     <div>
       
@@ -36,6 +40,7 @@ function Page() {
   );
 }
 
+<<<<<<< HEAD
 export default function Wrapped(props: { [key: string]: unknown }) {
   return (
     <ErrorBoundary>
@@ -43,3 +48,5 @@ export default function Wrapped(props: { [key: string]: unknown }) {
     </ErrorBoundary>
   );
 }
+=======
+

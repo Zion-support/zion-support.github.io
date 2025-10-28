@@ -1,17 +1,16 @@
-import React from 'react';
-import ErrorBoundary from "./components/ErrorBoundary"
-import Link from 'next/link'
+import { Metadata } from 'next';
+import Link from 'next/link';
+import { ArrowRight, Star, Users, Zap } from 'lucide-react';
 
-export const metadata = {
-  title: 'Zion Tech Group - Advanced AI & IT Solutions',
-  description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services. Transform your business with cutting-edge technology.',
-  keywords: 'AI solutions, cybersecurity, cloud computing, digital transformation, technology services',
+export const metadata: Metadata = {
+  title: 'Zion Tech Group - AI Solutions & Technology Services',
+  description: 'Leading technology company specializing in AI solutions, cloud infrastructure, and innovative software development services.',
+  keywords: 'AI solutions, cloud infrastructure, software development, technology services',
   openGraph: {
     title: 'Zion Tech Group - Advanced AI & IT Solutions',
     description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
     type: 'website',
   }};
-
 function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

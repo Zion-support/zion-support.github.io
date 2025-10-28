@@ -1,4 +1,4 @@
-import ErrorBoundary from '../components/ErrorBoundary';
+import React from "react";
 
 export const metadata = {
   title: 'Page | Zion Tech Group',
@@ -10,7 +10,6 @@ export const metadata = {
     type: 'website',
   },
 };
-
 function Page() {
   return (
     <div>

@@ -1,7 +1,4 @@
-import React from 'react';
-import ErrorBoundary from "../components/ErrorBoundary"
-import Navigation from "../components/Navigation"
-import Footer from "../components/Footer"
+
 
 export const metadata = {
   title: 'Micro Saas Services | Zion Tech Group',
@@ -12,7 +9,6 @@ export const metadata = {
     description: 'Professional micro saas services services by Zion Tech Group.',
     type: 'website',
   }};
-
 function MicrosaasservicesPage() {
   return (
     <>
