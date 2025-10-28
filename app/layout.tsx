@@ -18,6 +18,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 // Re-export metadata and viewport for Next.js
 export { metadata, viewport };
+
 export default function RootLayout({
   children,
 }: {
