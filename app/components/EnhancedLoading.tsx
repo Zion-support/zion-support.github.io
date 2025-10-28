@@ -5,7 +5,7 @@ interface EnhancedLoadingProps {
   size?: 'sm' | 'md' | 'lg';
 }
 
-const EnhancedLoading: React.FC<EnhancedLoadingProps> = (_props) => {
+const EnhancedLoading: React.FC<EnhancedLoadingProps> = () => {
   return (
     <div>
       {/* Component content */}

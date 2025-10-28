@@ -9,12 +9,15 @@ import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import SkipLink from './components/SkipLink';
+import { metadata, viewport } from './metadata';
 import SEOOptimization from './components/SEOOptimization';
 import SecurityEnhancement from './components/SecurityEnhancement';
 // import { metadata, viewport } from './layout/metadata';
 
 const inter = Inter({ subsets: ['latin'] });
 
+// Re-export metadata and viewport for Next.js
+export { metadata, viewport };
 export default function RootLayout({
   children,
 }: {
