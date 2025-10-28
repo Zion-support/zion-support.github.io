@@ -1,4 +1,7 @@
 
+import Link from 'next/link';
+import { Metadata } from 'next';
+
 export const metadata: Metadata = {
   title: 'Zion Tech Group - AI Solutions & Technology Services',
   description: 'Leading technology company specializing in AI solutions, cloud infrastructure, and innovative software development services.',
