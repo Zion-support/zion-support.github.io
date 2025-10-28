@@ -139,7 +139,7 @@ class MonitoringService {
           });
         });
         resourceObserver.observe({ entryTypes: ['resource'] });
-      } catch (_error) {
+      } catch {
         // Handle error silently
       }
     }
