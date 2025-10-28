@@ -1,8 +1,13 @@
-const { isValidEmail } = require('./emailUtils.cjs');
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 
-async function handler(req, res) {
+// Simple email validation function
+function isValidEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+export default async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
@@ -15,10 +20,15 @@ async function handler(req, res) {
   if (!email) {
     res.statusCode = 400;
     res.end(JSON.stringify({ error: 'Email is required' }));
+    return;
+  }
 
   try {
     if (!isValidEmail(email)) {
+      res.statusCode = 400;
       res.end(JSON.stringify({ error: 'Invalid email format' }));
+      return;
+    }
 
     // Create subscription record
     const subscription = {
@@ -38,17 +48,26 @@ async function handler(req, res) {
     const dataDir = path.join(process.cwd(), 'data');
     if (!fs.existsSync(dataDir)) {
       fs.mkdirSync(dataDir, { recursive: true });
+    }
 
     const subscribersFile = path.join(dataDir, 'subscribers.json');
     let subscribers = [];
     
     if (fs.existsSync(subscribersFile)) {
+      try {
         const data = fs.readFileSync(subscribersFile, 'utf8');
         subscribers = JSON.parse(data);
       } catch (err) {
         console.error('Error reading subscribers file:', err);
+      }
+    }
 
+    subscribers.push(subscription);
+    fs.writeFileSync(subscribersFile, JSON.stringify(subscribers, null, 2));
 
+    res.statusCode = 200;
+    res.end(JSON.stringify({
+      success: true,
       message: 'Successfully subscribed to newsletter',
       subscription
     }));
@@ -57,5 +76,5 @@ async function handler(req, res) {
     console.error('Subscription error:', error);
     res.statusCode = 500;
     res.end(JSON.stringify({ error: 'Internal server error' }));
-
-module.exports = handler;
+  }
+}
