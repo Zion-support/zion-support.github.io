@@ -4,16 +4,7 @@ interface ApiResponse<T> {
   message?: string;
 }
 
-<<<<<<< HEAD
 // Using built-in Web API types
-=======
-// Define RequestInit type for compatibility
-interface RequestInit {
-  method?: string;
-  headers?: Record<string, string>;
-  body?: string;
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc
 
 class ApiClient {
   private baseUrl: string;
