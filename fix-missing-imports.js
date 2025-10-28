@@ -1,91 +1,93 @@
+#!/usr/bin/env node
+
 import fs from 'fs';
+import { glob } from 'glob';
 
-// Function to add back necessary imports
-function fixMissingImports() {
-  const filesToFix = [
-    'app/ai-powered-email-analyzer/page.tsx',
-    'app/ecommerce-analytics-pro/page.tsx',
-    'app/error.tsx',
-    'app/global-error.tsx',
-    'app/loading.tsx',
-    'app/it-services/cybersecurity-audit/page.tsx',
-    'app/legal-document-manager/page.tsx',
-    'app/medical-records-manager/page.tsx',
-    'app/online-learning-platform/page.tsx',
-    'app/property-management-ai/page.tsx',
-    'app/supply-chain-optimizer/page.tsx',
-    'app/test/page.tsx',
-    'app/page-new.tsx',
-    'app/page-optimized.tsx'
-  ];
+// Find all TypeScript/TSX files in the app directory
+const files = await glob('./app/**/*.{ts,tsx}', { ignore: ['**/node_modules/**'] });
 
-  filesToFix.forEach(filePath => {
-    try {
-      let content = fs.readFileSync(filePath, 'utf8');
-      
-      // Add back the necessary imports after the Footer import
-      if (content.includes("import Footer from '../components/Footer'") && !content.includes("import { CheckCircle")) {
-        content = content.replace(
-          "import Footer from '../components/Footer'",
-          "import Footer from '../components/Footer'\nimport { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'"
-        );
+const iconImports = [
+  'Brain', 'BarChart', 'Target', 'TrendingUp', 'CheckCircle', 'ArrowRight',
+  'Search', 'Menu', 'X', 'ChevronDown', 'ChevronUp', 'ChevronLeft', 'ChevronRight',
+  'Home', 'User', 'Settings', 'Mail', 'Phone', 'MapPin', 'Calendar',
+  'Star', 'Heart', 'Share', 'Download', 'Upload', 'Edit', 'Trash', 'Plus',
+  'Minus', 'Eye', 'EyeOff', 'Lock', 'Unlock', 'Shield', 'AlertCircle',
+  'Info', 'Check', 'XCircle', 'Clock', 'Refresh', 'Play', 'Pause', 'Stop'
+];
+
+function fixMissingImports(filePath) {
+  try {
+    if (!fs.existsSync(filePath)) {
+      return false;
+    }
+
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Skip if it's not a React component file
+    if (!content.includes('React') && !content.includes('tsx')) {
+      return false;
+    }
+
+    // Find all icon names used in the file
+    const usedIcons = [];
+    iconImports.forEach(icon => {
+      const regex = new RegExp(`\\b${icon}\\b`, 'g');
+      if (regex.test(content)) {
+        usedIcons.push(icon);
       }
+    });
+
+    if (usedIcons.length === 0) {
+      return false;
+    }
+
+    // Check if lucide-react is already imported
+    const hasLucideImport = content.includes("from 'lucide-react'");
+    
+    if (hasLucideImport) {
+      // Update existing import
+      const importRegex = /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"]/;
+      const match = content.match(importRegex);
       
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed imports in: ${filePath}`);
-    } catch (error) {
-      console.error(`Error fixing ${filePath}:`, error.message);
+      if (match) {
+        const existingImports = match[1].split(',').map(imp => imp.trim());
+        const allImports = [...new Set([...existingImports, ...usedIcons])].sort();
+        const newImport = `import { ${allImports.join(', ')} } from 'lucide-react';`;
+        content = content.replace(importRegex, newImport);
+      }
+    } else {
+      // Add new import
+      const newImport = `import { ${usedIcons.join(', ')} } from 'lucide-react';\n`;
+      
+      // Find the best place to insert the import
+      if (content.includes("'use client';")) {
+        content = content.replace(/'use client';\n/, `'use client';\n${newImport}`);
+      } else if (content.includes('import React')) {
+        content = content.replace(/import React[^;]+;\n/, `import React[^;]+;\n${newImport}`);
+      } else {
+        content = newImport + content;
+      }
     }
-  });
-}
 
-// Function to fix Navigation component
-function fixNavigationComponent() {
-  try {
-    let content = fs.readFileSync('app/components/Navigation.tsx', 'utf8');
-    
-    // Add back Search import
-    if (content.includes("import { Menu, X, ArrowLeft, RefreshCw } from 'lucide-react'") && !content.includes('Search')) {
-      content = content.replace(
-        "import { Menu, X, ArrowLeft, RefreshCw } from 'lucide-react'",
-        "import { Menu, X, Search, ArrowLeft, RefreshCw } from 'lucide-react'"
-      );
-    }
-    
-    fs.writeFileSync('app/components/Navigation.tsx', content);
-    console.log('Fixed Navigation component');
+    fs.writeFileSync(filePath, content, 'utf8');
+    console.log(`Fixed imports in: ${filePath}`);
+    return true;
   } catch (error) {
-    console.error('Error fixing Navigation component:', error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Function to fix hook files
-function fixHookFiles() {
-  try {
-    let content = fs.readFileSync('app/hooks/useEnhancedPerformance.ts', 'utf8');
-    
-    // Remove the unused destructured elements line
-    content = content.replace(/const \{ [^}]+ \} = useCallback\(\(\) => \{[\s\S]*?\}, \[\]\);\n/g, '');
-    
-    fs.writeFileSync('app/hooks/useEnhancedPerformance.ts', content);
-    console.log('Fixed hook file');
-  } catch (error) {
-    console.error('Error fixing hook file:', error.message);
+// Fix all files
+let successCount = 0;
+let totalCount = files.length;
+
+console.log(`Checking ${totalCount} files for missing icon imports...`);
+
+for (const filePath of files) {
+  if (fixMissingImports(filePath)) {
+    successCount++;
   }
 }
 
-// Main function
-async function main() {
-  console.log('Adding back necessary imports...');
-  fixMissingImports();
-  
-  console.log('Fixing Navigation component...');
-  fixNavigationComponent();
-  
-  console.log('Fixing hook files...');
-  fixHookFiles();
-  
-  console.log('Done!');
-}
-
-main().catch(console.error);
+console.log(`\nCompleted: ${successCount} files updated with missing imports`);
