@@ -1,4 +1,4 @@
-import { ErrorBoundary } from '@/components/ErrorBoundary'
+import ErrorBoundary from '../components/ErrorBoundary'
 
 export const metadata = {
   title: 'Page | Zion Tech Group',
@@ -10,35 +10,10 @@ export const metadata = {
     type: 'website',
   },
 };
-;
-'use client';
 
 import Head from 'next/head'
 
-export const metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group',
-  keywords: 'page, technology, services',
-  openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page services by Zion Tech Group',
-    type: 'website',
-  },
-};
-
 import Footer from '../components/Footer'
-
-export const metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group',
-  keywords: 'page, technology, services',
-  openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page services by Zion Tech Group',
-    type: 'website',
-  },
-};
-
 
 function Page() {
   return (
@@ -68,12 +43,10 @@ function Page() {
   )
 }
 
-export default function Wrapped
-(props) {
+export default function Wrapped(props: Record<string, any>) {
   return (
     <ErrorBoundary>
-      <
- {...props} />
+      <Page {...props} />
     </ErrorBoundary>
   );
 }

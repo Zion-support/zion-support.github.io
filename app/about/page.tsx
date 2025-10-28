@@ -1,11 +1,10 @@
-import { ErrorBoundary } from '@/components/ErrorBoundary';
-import { Metadata } from 'next';
+import ErrorBoundary from '../components/ErrorBoundary';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
 export const dynamic = 'force-static';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'About Us - Zion Tech Group',
   description: 'Learn about Zion Tech Group, a leading technology company specializing in AI solutions, cloud infrastructure, and innovative software development services.',
   keywords: 'about us, technology company, AI solutions, cloud infrastructure, software development',
@@ -18,16 +17,7 @@ export const metadata: Metadata = {
 function AboutPage() {
   return (
     <div className="min-h-screen bg-white">
-      
       {/* Hero Section */}
-
-export default function Wrapped(props) {
-  return (
-    <ErrorBoundary>
-      < {...props} />
-    </ErrorBoundary>
-  );
-}
       <section className="pt-20 pb-16 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -123,6 +113,14 @@ export default function Wrapped(props) {
       </section>
 
     </div>
+  );
+}
+
+export default function Wrapped(props: Record<string, any>) {
+  return (
+    <ErrorBoundary>
+      <AboutPage {...props} />
+    </ErrorBoundary>
   );
 }
 

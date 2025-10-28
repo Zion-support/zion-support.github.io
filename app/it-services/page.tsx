@@ -1,4 +1,3 @@
-'use client';
 function Page78pyr3r72() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">

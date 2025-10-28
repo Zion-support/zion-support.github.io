@@ -1,4 +1,3 @@
-'use client';
 function Pagel9lwvgnek() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
