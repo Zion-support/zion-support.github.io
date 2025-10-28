@@ -1,8 +1,7 @@
-
 import React from 'react';
-import ErrorBoundary from "../components/ErrorBoundary"
-import Navigation from "../components/Navigation"
-import Footer from "../components/Footer"
+import ErrorBoundary from '../components/ErrorBoundary';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 export const metadata = {
   title: 'Legal Document Manager | Zion Tech Group',
@@ -15,8 +14,7 @@ export const metadata = {
   },
 };
 
-function LegaldocumentmanagerPage() {
-
+function LegalDocumentManager() {
   return (
     <>
       <Navigation />
@@ -58,7 +56,7 @@ function LegaldocumentmanagerPage() {
 export default function Wrapped(props: { [key: string]: unknown }) {
   return (
     <ErrorBoundary>
-      <LegaldocumentmanagerPage {...props} />
+      <LegalDocumentManager {...props} />
     </ErrorBoundary>
   );
 }
