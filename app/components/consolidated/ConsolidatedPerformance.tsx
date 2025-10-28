@@ -1,67 +1,45 @@
 'use client';
 
-import React, { useEffect, memo, useCallback } from 'react';
+import React, { useCallback, useState, useEffect, memo } from 'react';
 
 interface ConsolidatedPerformanceProps {
   className?: string;
 }
 
-// Type definitions for Performance API entries
-interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
-  processingEnd: number;
-  target: EventTarget | null;
-}
-
-interface LayoutShift extends PerformanceEntry {
-  value: number;
-  hadRecentInput: boolean;
-  lastInputTime: number;
-  sources: LayoutShiftAttribution[];
-}
-
-interface LayoutShiftAttribution {
-  node?: Node;
-  previousRect: DOMRectReadOnly;
-  currentRect: DOMRectReadOnly;
-}
-
-interface PerformanceMetrics {
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  fcp: number | null;
-  ttfb: number | null;
-}
-
-const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ className = '' }) => {
-  const [metrics, setMetrics] = React.useState<PerformanceMetrics>({
-    lcp: null,
-    fid: null,
-    cls: null,
-    fcp: null,
-    ttfb: null,
+const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({
+  className = ''
+}) => {
+  const [metrics, setMetrics] = useState({
+    fcp: null as number | null,
+    lcp: null as number | null,
+    fid: null as number | null,
+    cls: null as number | null,
+    ttfb: null as number | null
   });
 
-  // Preload critical resources
-  const preloadCriticalResources = useCallback(() => {
-    const criticalResources = [
-      '/fonts/inter.woff2',
-      '/images/hero-bg.jpg',
-      '/icons/sprite.svg'
-    ];
-    
-    criticalResources.forEach(resource => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = resource;
-      link.as = resource.endsWith('.woff2') ? 'font' : 'image';
-      if (resource.endsWith('.woff2')) {
-        link.crossOrigin = 'anonymous';
+  const measurePerformance = useCallback(() => {
+    if (typeof window === 'undefined') return;
+
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
+          setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+        } else if (entry.entryType === 'largest-contentful-paint') {
+          setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
+        } else if (entry.entryType === 'first-input') {
+          const fidEntry = entry as any;
+          setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
+        } else if (entry.entryType === 'layout-shift') {
+          const clsEntry = entry as any;
+          if (!clsEntry.hadRecentInput) {
+            setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + clsEntry.value }));
+          }
+        } else if (entry.entryType === 'navigation') {
+          const navEntry = entry as any;
+          setMetrics(prev => ({ ...prev, ttfb: navEntry.responseStart - navEntry.requestStart }));
+        }
       }
-      document.head.appendChild(link);
     });
-  }, []);
 
   // Implement lazy loading for images
   const implementLazyLoading = useCallback(() => {
@@ -171,15 +149,7 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
   }, []);
 
   useEffect(() => {
-    // Initialize all performance optimizations
-    preloadCriticalResources();
-    implementLazyLoading();
-    addResourceHints();
-    monitorCoreWebVitals();
-    monitorTTFB();
-    
-    const cleanup = optimizeScrollPerformance();
-
+    const cleanup = measurePerformance();
     return cleanup;
   }, [preloadCriticalResources, implementLazyLoading, addResourceHints, monitorCoreWebVitals, monitorTTFB, optimizeScrollPerformance]);
 
@@ -189,8 +159,25 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
   }, [metrics]);
 
   return (
-    <div className={`consolidated-performance ${className}`} style={{ display: 'none' }}>
-      {/* This component doesn't render anything visible */}
+    <div className={`consolidated-performance ${className}`}>
+      <h3>Performance Metrics</h3>
+      <div className="metrics-grid">
+        <div className="metric">
+          <span>FCP: {metrics.fcp?.toFixed(2)}ms</span>
+        </div>
+        <div className="metric">
+          <span>LCP: {metrics.lcp?.toFixed(2)}ms</span>
+        </div>
+        <div className="metric">
+          <span>FID: {metrics.fid?.toFixed(2)}ms</span>
+        </div>
+        <div className="metric">
+          <span>CLS: {metrics.cls?.toFixed(4)}</span>
+        </div>
+        <div className="metric">
+          <span>TTFB: {metrics.ttfb?.toFixed(2)}ms</span>
+        </div>
+      </div>
     </div>
   );
 });

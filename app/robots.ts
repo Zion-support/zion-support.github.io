@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next'
 
-
+export const dynamic = 'force-static'
+export const revalidate = false
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -10,5 +11,5 @@ export default function robots(): MetadataRoute.Robots {
       disallow: '/private/'
     },
     sitemap: 'https://ziontechgroup.com/sitemap.xml'
-  }
+  };
 }

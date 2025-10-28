@@ -1,10 +1,10 @@
 'use client';
+'use client';
+
 
 import React, { memo, useEffect } from 'react';
 
 interface AnalyticsProps {
-  className?: string;
-  children?: React.ReactNode;
   gaId?: string;
   gtmId?: string;
   enabled?: boolean;

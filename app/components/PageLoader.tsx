@@ -1,19 +1,16 @@
 'use client';
-
-import React, { memo, useEffect, useState } from 'react';
-import LoadingSpinner from './LoadingSpinner';
+import React, { useState, useEffect, memo } from 'react';
 
 interface PageLoaderProps {
-  className?: string;
   children: React.ReactNode;
   loading?: boolean;
   fallback?: React.ReactNode;
 }
 
-const PageLoader: React.FC<PageLoaderProps> = memo(({ 
-  children, 
-  loading = false, 
-  fallback 
+const PageLoader: React.FC<PageLoaderProps> = memo(({
+  children,
+  loading = false,
+  fallback
 }) => {
   const [isLoading, setIsLoading] = useState(loading);
 
@@ -22,24 +19,28 @@ const PageLoader: React.FC<PageLoaderProps> = memo(({
   }, [loading]);
 
   useEffect(() => {
-    // Simulate page load time
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
+    // Simulate loading delay
+    if (loading) {
+      const timer = setTimeout(() => {
+        setIsLoading(false);
+      }, 1000);
 
-    return () => clearTimeout(timer);
-  }, []);
+      return () => clearTimeout(timer);
+    }
+  }, [loading]);
 
   if (isLoading) {
     return (
-      fallback || (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="text-center">
-            <LoadingSpinner size="lg" text="Loading..." />
-            <p className="mt-4 text-gray-600">Please wait while we load the page</p>
+      <div className="page-loader">
+        {fallback || (
+          <div className="flex items-center justify-center min-h-screen">
+            <div className="text-center">
+              <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+              <p className="mt-4 text-gray-600">Loading...</p>
+            </div>
           </div>
-        </div>
-      )
+        )}
+      </div>
     );
   }
 

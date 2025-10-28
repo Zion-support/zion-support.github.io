@@ -42,6 +42,7 @@ const PageOriginalPage: React.FC = () => {
 
   return (
     <>
+            {/* SEO handled by layout.tsx */}
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
@@ -70,11 +71,9 @@ const PageOriginalPage: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Powerful Features
-              </h2>
+              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover the advanced capabilities that make OriginalPage the perfect solution for your business.
+                Powerful AI-driven features designed to transform your business operations
               </p>
             </div>
 
@@ -102,13 +101,11 @@ const PageOriginalPage: React.FC = () => {
 
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Why Choose OriginalPage?
-              </h2>
-              <p className="text-xl text-gray-300">
-                Experience the benefits that thousands of businesses trust.
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the benefits of cutting-edge AI technology
               </p>
             </div>
 
@@ -126,11 +123,9 @@ const PageOriginalPage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using OriginalPage to drive growth and success.
+              Join thousands of businesses already using our AI solutions
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" aria-label="Action Button">
