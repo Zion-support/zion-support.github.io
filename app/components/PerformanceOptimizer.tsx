@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 // Performance types are defined inline to avoid unused import warnings
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8bc5
@@ -33,6 +34,8 @@ interface LayoutShiftAttribution {
   currentRect: DOMRectReadOnly;
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cd9
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7056
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode;

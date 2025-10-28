@@ -3,12 +3,15 @@
 import { useEffect, useState, useCallback } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 // Performance types are defined inline to avoid unused import warnings
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8bc5
 =======
 // Performance types are used in the hook logic
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cd9
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7056
 
 interface PerformanceMetrics {
   fcp: number | null;
