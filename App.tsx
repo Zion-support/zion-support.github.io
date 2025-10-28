@@ -62,11 +62,7 @@ const AppLayout = memo(() => (
   </div>
 ));
 
-<<<<<<< HEAD
 const App = memo(() => {
-=======
-function App() {
->>>>>>> b6b8cc8ecbfdd48e7fbf5e12f9e659982a5320bd
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -89,21 +85,9 @@ function App() {
   return (
     <ErrorBoundary>
       <HelmetProvider>
-<<<<<<< HEAD
         <PerformanceOptimizer>
-          <div className="min-h-screen bg-slate-900">
-            <Navigation />
-            <main className="relative z-10" id="main-content" role="main">
-              <HomePage />
-            </main>
-            <Footer />
-            <PerformanceMonitor />
-            <AccessibilityEnhancer />
-          </div>
+          <AppLayout />
         </PerformanceOptimizer>
-=======
-        <AppLayout />
->>>>>>> b6b8cc8ecbfdd48e7fbf5e12f9e659982a5320bd
       </HelmetProvider>
     </ErrorBoundary>
   );
