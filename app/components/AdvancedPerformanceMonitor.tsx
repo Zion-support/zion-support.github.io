@@ -1,18 +1,18 @@
 'use client';
 
-import React, { useEffect }, { useState, useCallback, useEffect } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 
 interface PerformanceMetrics {
-  fcp: number | null
-  lcp: number | null
-  fid: number | null
-  cls: number | null
-  ttfb: number | null
-  memory: number | null
+  fcp: number | null;
+  lcp: number | null;
+  fid: number | null;
+  cls: number | null;
+  ttfb: number | null;
+  memory: number | null;
 }
 
 interface PerformanceMonitorProps {
-  onMetricsUpdate?: () => void;
+  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
   enableRealTimeMonitoring?: boolean;
 }
 
@@ -27,127 +27,147 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     cls: null,
     ttfb: null,
     memory: null,
-  })
+  });
 
-  const measureWebVitals = useCallback(() => {
-    if (typeof window === 'undefined' || !('performance' in window)) return
-    if (typeof PerformanceObserver === 'undefined') return
+  const updateMetrics = useCallback((newMetrics: Partial<PerformanceMetrics>) => {
+    setMetrics(prev => {
+      const updated = { ...prev, ...newMetrics };
+      if (onMetricsUpdate) {
+        onMetricsUpdate(updated);
+      }
+      return updated;
+    });
+  }, [onMetricsUpdate]);
 
-    const observers: PerformanceObserver[] = []
+  useEffect(() => {
+    if (!enableRealTimeMonitoring || typeof window === 'undefined') return;
+
+    const observers: PerformanceObserver[] = [];
 
     // Measure First Contentful Paint (FCP)
     try {
       const fcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry: PerformanceEntry) => {
+        list.getEntries().forEach((entry) => {
           if (entry.name === 'first-contentful-paint') {
-            setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+            updateMetrics({ fcp: entry.startTime });
           }
         });
       });
       fcpObserver.observe({ entryTypes: ['paint'] });
       observers.push(fcpObserver);
-    } catch {
-    // Error handled
-  }
+    } catch (error) {
+      console.warn('FCP measurement failed:', error);
+    }
+
+    // Measure Largest Contentful Paint (LCP)
+    try {
+      const lcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        updateMetrics({ lcp: lastEntry.startTime });
+      });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      observers.push(lcpObserver);
+    } catch (error) {
+      console.warn('LCP measurement failed:', error);
+    }
 
     // Measure First Input Delay (FID)
     try {
-                if (fidEntry.processingStart && entry.startTime) {
-            setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - entry.startTime }));
+      const fidObserver = new PerformanceObserver((list) => {
+        list.getEntries().forEach((entry: any) => {
+          if (entry.processingStart && entry.startTime) {
+            updateMetrics({ fid: entry.processingStart - entry.startTime });
           }
         });
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
       observers.push(fidObserver);
-    } catch {
-    // Error handled
-  }
+    } catch (error) {
+      console.warn('FID measurement failed:', error);
+    }
 
     // Measure Cumulative Layout Shift (CLS)
     try {
-      let clsValue = 0
-       value?: number }) => {
+      let clsValue = 0;
+      const clsObserver = new PerformanceObserver((list) => {
+        list.getEntries().forEach((entry: any) => {
           if (!entry.hadRecentInput) {
             clsValue += entry.value || 0;
-            setMetrics(prev => ({ ...prev, cls: clsValue }));
+            updateMetrics({ cls: clsValue });
           }
         });
       });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
       observers.push(clsObserver);
-    } catch {
-    // Error handled
-  }
+    } catch (error) {
+      console.warn('CLS measurement failed:', error);
+    }
 
     // Measure Time to First Byte (TTFB)
     try {
-      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-      if (navigationEntry) {
-        const ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
-        setMetrics(prev => ({ ...prev, ttfb }));
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigation) {
+        updateMetrics({ ttfb: navigation.responseStart - navigation.requestStart });
       }
-    } catch {
-    // Error handled
-  }
+    } catch (error) {
+      console.warn('TTFB measurement failed:', error);
+    }
 
     // Measure Memory Usage
     try {
       if ('memory' in performance) {
-        const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
-        if (memory) {
-          setMetrics(prev => ({ ...prev, memory: memory.usedJSHeapSize }));
-        }
+        const memory = (performance as any).memory;
+        updateMetrics({ memory: memory.usedJSHeapSize });
       }
-    } catch {
-    // Error handled
-  }
+    } catch (error) {
+      console.warn('Memory measurement failed:', error);
+    }
 
+    // Cleanup observers on unmount
     return () => {
       observers.forEach(observer => observer.disconnect());
     };
-  }, []);
-
-  useEffect(() => {
-    if (!enableRealTimeMonitoring) return
-
-    const cleanup = measureWebVitals()
-
-    // Update metrics every 5 seconds
-    const interval = setInterval(() => {
-      measureWebVitals()
-    }, 5000)
-
-    return () => {
-      if (cleanup) cleanup();
-      clearInterval(interval);
-    };
-  }, [measureWebVitals, enableRealTimeMonitoring]);
-
-  useEffect(() => {
-    if (onMetricsUpdate) {
-      onMetricsUpdate(metrics)
-    }
-  }, [metrics, onMetricsUpdate]);
+  }, [enableRealTimeMonitoring, updateMetrics]);
 
   return (
     <div className="performance-monitor">
-      <div className="metrics-display">
-        <h3>Performance Metrics</h3>
-        <div className="metric">
-          <span>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'N/A'}</span>
+      <div className="metrics-grid grid grid-cols-2 md:grid-cols-3 gap-4 p-4 bg-gray-50 rounded-lg">
+        <div className="metric-item">
+          <span className="text-sm font-medium text-gray-600">FCP</span>
+          <span className="text-lg font-bold text-blue-600">
+            {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'N/A'}
+          </span>
         </div>
-        <div className="metric">
-          <span>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'N/A'}</span>
+        <div className="metric-item">
+          <span className="text-sm font-medium text-gray-600">LCP</span>
+          <span className="text-lg font-bold text-green-600">
+            {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'N/A'}
+          </span>
         </div>
-        <div className="metric">
-          <span>CLS: {metrics.cls ? metrics.cls.toFixed(4) : 'N/A'}</span>
+        <div className="metric-item">
+          <span className="text-sm font-medium text-gray-600">FID</span>
+          <span className="text-lg font-bold text-yellow-600">
+            {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'N/A'}
+          </span>
         </div>
-        <div className="metric">
-          <span>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'N/A'}</span>
+        <div className="metric-item">
+          <span className="text-sm font-medium text-gray-600">CLS</span>
+          <span className="text-lg font-bold text-red-600">
+            {metrics.cls ? metrics.cls.toFixed(4) : 'N/A'}
+          </span>
         </div>
-        <div className="metric">
-          <span>Memory: {metrics.memory ? `${(metrics.memory / 1024 / 1024).toFixed(2)}MB` : 'N/A'}</span>
+        <div className="metric-item">
+          <span className="text-sm font-medium text-gray-600">TTFB</span>
+          <span className="text-lg font-bold text-purple-600">
+            {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'N/A'}
+          </span>
+        </div>
+        <div className="metric-item">
+          <span className="text-sm font-medium text-gray-600">Memory</span>
+          <span className="text-lg font-bold text-indigo-600">
+            {metrics.memory ? `${(metrics.memory / 1024 / 1024).toFixed(2)}MB` : 'N/A'}
+          </span>
         </div>
       </div>
     </div>

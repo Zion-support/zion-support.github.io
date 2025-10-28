@@ -1,7 +1,11 @@
 import React, { useEffect } from 'react';
 
-export     fn();
-          }
+// Utility function to measure function execution time
+export const measureFunction = (fn: () => void, label: string): void => {
+  const start = performance.now();
+  fn();
+  const end = performance.now();
+  console.log(`${label} took ${end - start} milliseconds`);
 };
 
 class PerformanceMonitor {
@@ -51,23 +55,27 @@ class PerformanceMonitor {
 
     // Largest Contentful Paint
     new PerformanceObserver((entryList) => {
-                  this.metrics.set("LCP", lastEntry.startTime);
+      const entries = entryList.getEntries();
+      const lastEntry = entries[entries.length - 1];
+      this.metrics.set("LCP", lastEntry.startTime);
     }).observe({ entryTypes: ["largest-contentful-paint"] });
 
     // First Input Delay
     new PerformanceObserver((entryList) => {
-            entries.forEach((entry) => {
-        // Use processingStart if available, otherwise calculate from startTime
-                this.metrics.set("FID", processingStart - entry.startTime);
+      const entries = entryList.getEntries();
+      entries.forEach((entry: any) => {
+        const processingStart = entry.processingStart || entry.startTime;
+        this.metrics.set("FID", processingStart - entry.startTime);
       });
     }).observe({ entryTypes: ["first-input"] });
 
     // Cumulative Layout Shift
     let clsValue = 0;
     new PerformanceObserver((entryList) => {
-            entries.forEach((entry) => {
-        if (!(entry as { hadRecentInput?: boolean }).hadRecentInput) {
-          clsValue += (entry as { value?: number }).value || 0;
+      const entries = entryList.getEntries();
+      entries.forEach((entry: any) => {
+        if (!entry.hadRecentInput) {
+          clsValue += entry.value || 0;
         }
       });
       this.metrics.set("CLS", clsValue);

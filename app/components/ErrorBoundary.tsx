@@ -23,7 +23,6 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-        
     this.setState({
       error,
       errorInfo,
@@ -31,7 +30,10 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, State> {
 
     // Log error to monitoring service
     if (typeof window !== 'undefined') {
-      .toISOString(),
+      console.error('Error caught by ErrorBoundary:', {
+        error: error.message,
+        errorInfo,
+        timestamp: new Date().toISOString(),
         userAgent: navigator.userAgent,
         url: window.location.href,
       });

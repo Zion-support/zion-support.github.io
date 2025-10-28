@@ -2,10 +2,47 @@
 import React from "react";
 import Footer from '@/components/Footer';
 import Navigation from '@/components/Navigation';
-import { Brain } from "lucide-react";
+import { Brain, ArrowRight, CheckCircle } from "lucide-react";
 
-export 
-const AiPoweredDevopsPage: React.FC = () => {
+export const AiPoweredDevopsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'Automated CI/CD Pipelines',
+      description: 'Streamline your development workflow with intelligent automation.',
+      benefits: ['Faster deployments', 'Reduced errors', 'Improved efficiency']
+    },
+    {
+      icon: Brain,
+      title: 'Intelligent Code Analysis',
+      description: 'AI-powered code analysis to identify issues and suggest improvements.',
+      benefits: ['Code quality', 'Bug detection', 'Best practices']
+    },
+    {
+      icon: Brain,
+      title: 'Predictive Deployment',
+      description: 'Predict deployment success and prevent potential issues.',
+      benefits: ['Risk mitigation', 'Success prediction', 'Proactive monitoring']
+    },
+    {
+      icon: Brain,
+      title: 'Smart Resource Management',
+      description: 'Optimize resource allocation based on usage patterns and demand.',
+      benefits: ['Cost optimization', 'Efficient scaling', 'Resource utilization']
+    },
+    {
+      icon: Brain,
+      title: 'Automated Testing',
+      description: 'Comprehensive automated testing with AI-driven test generation.',
+      benefits: ['Test coverage', 'Quality assurance', 'Faster feedback']
+    },
+    {
+      icon: Brain,
+      title: 'Performance Optimization',
+      description: 'Continuously optimize application performance using AI insights.',
+      benefits: ['Better performance', 'User experience', 'Scalability']
+    }
+  ];
     
   const benefits = [
     'Increase efficiency by up to 50%',

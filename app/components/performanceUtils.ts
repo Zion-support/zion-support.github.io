@@ -5,14 +5,32 @@ interface PerformanceMetrics {
   firstInputDelay: number | null;
   cumulativeLayoutShift: number | null;
   timeToInteractive: number | null;
-  totalBlockingTime: number | null}
+  totalBlockingTime: number | null;
+}
 
 // Global performance monitoring utilities
-export         performance.clearMarks(type)} else {
-        performance.clearMeasures();
-        performance.clearMarks()}
+export const performanceUtils = {
+  clearPerformanceData: (type?: string) => {
+    if (type) {
+      performance.clearMarks(type);
+    } else {
+      performance.clearMeasures();
+      performance.clearMarks();
     }
   }
-}
+};
+
 // Google Analytics integration for performance tracking
-export 
+export const trackPerformance = (metrics: PerformanceMetrics) => {
+  if (typeof window !== 'undefined' && window.gtag) {
+    window.gtag('event', 'performance_metrics', {
+      load_time: metrics.loadTime,
+      fcp: metrics.firstContentfulPaint,
+      lcp: metrics.largestContentfulPaint,
+      fid: metrics.firstInputDelay,
+      cls: metrics.cumulativeLayoutShift,
+      tti: metrics.timeToInteractive,
+      tbt: metrics.totalBlockingTime
+    });
+  }
+};

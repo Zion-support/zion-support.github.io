@@ -3,14 +3,25 @@
 import { useCallback } from 'react';
 
 // Performance monitoring utilities
-export       fn();
-                } else {
+export const usePerformanceUtils = () => {
+  const measurePerformance = useCallback((fn: () => void, label?: string) => {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      const start = performance.now();
+      fn();
+      const end = performance.now();
+      console.log(`${label || 'Function'} took ${end - start} milliseconds`);
+    } else {
       fn();
     }
   }, []);
 
-        await fn();
-                } else {
+  const measureAsyncPerformance = useCallback(async (fn: () => Promise<void>, label?: string) => {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      const start = performance.now();
+      await fn();
+      const end = performance.now();
+      console.log(`${label || 'Async function'} took ${end - start} milliseconds`);
+    } else {
       await fn();
     }
   }, []);
@@ -19,21 +30,33 @@ export       fn();
 };
 
 // Memoization utilities - these are not React hooks, just utility functions
-export };
+export const createMemo = <T>(factory: () => T): T => {
+  return factory();
+};
 
 export const createStableMemo = <T>(factory: () => T): T => {
   return factory();
 };
 
 // Simple performance utilities
-export     fn();
-          } else {
+export const measureFunction = (fn: () => void, label?: string) => {
+  if (typeof window !== 'undefined' && 'performance' in window) {
+    const start = performance.now();
+    fn();
+    const end = performance.now();
+    console.log(`${label || 'Function'} took ${end - start} milliseconds`);
+  } else {
     fn();
   }
 };
 
-export     await fn();
-          } else {
+export const measureAsyncFunction = async (fn: () => Promise<void>, label?: string) => {
+  if (typeof window !== 'undefined' && 'performance' in window) {
+    const start = performance.now();
+    await fn();
+    const end = performance.now();
+    console.log(`${label || 'Async function'} took ${end - start} milliseconds`);
+  } else {
     await fn();
   }
 };

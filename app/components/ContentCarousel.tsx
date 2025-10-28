@@ -1,8 +1,8 @@
 'use client';
 
 
-import React, { useEffect }, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Zap, Shield, Cloud } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { ChevronLeft, ChevronRight, Zap, Shield, Cloud, Brain } from 'lucide-react';
 
 interface Slide {
   id: number;

@@ -1,5 +1,7 @@
 'use client'
-import { ArrowRight, Clock, Shield } from 'lucide-react';;
+import { ArrowRight, Clock, Shield, CheckCircle } from 'lucide-react';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 
   
   const stats = [
@@ -9,6 +11,27 @@ import { ArrowRight, Clock, Shield } from 'lucide-react';;
   ];
 
 export default function PageFixedPage() {
+  const features = [
+    {
+      icon: Shield,
+      title: 'Automated Backup',
+      description: 'Automated backup solutions for all your data.',
+      benefits: ['Daily backups', 'Incremental updates', 'Version control']
+    },
+    {
+      icon: Clock,
+      title: 'Fast Recovery',
+      description: 'Quick recovery times for business continuity.',
+      benefits: ['< 1 minute RTO', 'Point-in-time recovery', 'Disaster recovery']
+    },
+    {
+      icon: CheckCircle,
+      title: 'Compliance Ready',
+      description: 'Meet all compliance requirements with ease.',
+      benefits: ['GDPR compliant', 'SOC 2 certified', 'Audit trails']
+    }
+  ];
+
   return (
     <>
       <Navigation />

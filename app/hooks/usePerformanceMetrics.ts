@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState, useCallback } from 'react';
-import type { PerformanceEventTiming, LayoutShift } from '../types/performance';
 
 interface PerformanceMetrics {
   fcp: number | null;
@@ -11,14 +10,23 @@ interface PerformanceMetrics {
   ttfb: number | null;
 }
 
-export 
+export const usePerformanceMetrics = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    fcp: null,
+    lcp: null,
+    fid: null,
+    cls: null,
+    ttfb: null,
+  });
+
   const measurePerformance = useCallback(() => {
     if (typeof window === 'undefined') return;
 
     // Measure First Contentful Paint (FCP)
     const fcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
-            if (fcpEntry) {
+      const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
+      if (fcpEntry) {
         setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
       }
     });
@@ -27,13 +35,18 @@ export
     // Measure Largest Contentful Paint (LCP)
     const lcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
-            setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+      const lastEntry = entries[entries.length - 1];
+      setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
     });
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
     // Measure First Input Delay (FID)
-          entries.forEach((entry) => {
-                setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
+    const fidObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry: any) => {
+        if (entry.processingStart && entry.startTime) {
+          setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
+        }
       });
     });
     fidObserver.observe({ entryTypes: ['first-input'] });
@@ -42,9 +55,9 @@ export
     let clsValue = 0;
     const clsObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
-      entries.forEach((entry) => {
-                if (!clsEntry.hadRecentInput) {
-          clsValue += clsEntry.value || 0;
+      entries.forEach((entry: any) => {
+        if (!entry.hadRecentInput) {
+          clsValue += entry.value || 0;
         }
       });
       setMetrics(prev => ({ ...prev, cls: clsValue }));
@@ -71,8 +84,12 @@ export
     return cleanup;
   }, [measurePerformance]);
 
-      
-        return Math.round(totalScore);
+  const getPerformanceScore = useCallback(() => {
+    const scores = Object.values(metrics).filter(value => value !== null) as number[];
+    if (scores.length === 0) return 0;
+    
+    const totalScore = scores.reduce((sum, score) => sum + score, 0) / scores.length;
+    return Math.round(totalScore);
   }, [metrics]);
 
   return {

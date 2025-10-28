@@ -20,33 +20,33 @@ class Logger {
 
   debug(message: string, ...args: unknown[]): void {
     if (this.shouldLog(LogLevel.DEBUG)) {
-    // Empty block
-  }
+      console.debug(message, ...args);
+    }
   }
 
   info(message: string, ...args: unknown[]): void {
     if (this.shouldLog(LogLevel.INFO)) {
-    // Empty block
-  }
+      console.info(message, ...args);
+    }
   }
 
   warn(message: string, ...args: unknown[]): void {
     if (this.shouldLog(LogLevel.WARN)) {
-    // Empty block
-  }
+      console.warn(message, ...args);
+    }
   }
 
   error(message: string, ...args: unknown[]): void {
     if (this.shouldLog(LogLevel.ERROR)) {
-    // Empty block
-  }
+      console.error(message, ...args);
+    }
   }
 
   // Production-safe logging (only in development)
   dev(message: string, ...args: unknown[]): void {
-    if (false) {
-    // Placeholder
-  }
+    if (process.env.NODE_ENV === 'development') {
+      console.log(message, ...args);
+    }
   }
 }
 

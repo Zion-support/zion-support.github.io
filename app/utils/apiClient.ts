@@ -1,64 +1,112 @@
-interface ApiResponse<T> {
+// API Client utility for making HTTP requests
+
+export interface ApiResponse<T = any> {
   data: T;
   status: number;
-  message?: string;
+  statusText: string;
+  success: boolean;
+  error?: string;
 }
 
-// RequestInit is available globally in modern environments
+export interface ApiOptions {
+  method?: string;
+  headers?: Record<string, string>;
+  body?: string;
+  timeout?: number;
+  retries?: number;
+}
 
 class ApiClient {
-  private baseUrl: string;
+  private baseURL: string;
+  private defaultOptions: ApiOptions;
 
-  constructor(baseUrl: string = '/api') {
-    this.baseUrl = baseUrl;
-  }
-
-  private async request<T>(
-    endpoint: string,
-    options: { method?: string; headers?: Record<string, string>; body?: string } = {
-    // Empty block
-  }
-  ): Promise<ApiResponse<T>> {
-        
-    const response = await fetch(url, {
+  constructor(baseURL: string = '/api') {
+    this.baseURL = baseURL;
+    this.defaultOptions = {
       headers: {
         'Content-Type': 'application/json',
-        ...options.headers,
       },
-      ...options,
-    });
+      timeout: 10000,
+      retries: 3,
+    };
+  }
 
-    
-    return {
-      data,
-      status: response.status,
-      message: response.statusText,
+  // Generic request method
+  async request<T = any>(
+    endpoint: string,
+    options: ApiOptions = {}
+  ): Promise<ApiResponse<T>> {
+    const url = `${this.baseURL}${endpoint}`;
+    const config = { ...this.defaultOptions, ...options };
+
+    try {
+      const response = await fetch(url, {
+        headers: {
+          'Content-Type': 'application/json',
+          ...config.headers,
+        },
+        ...config,
+      });
+
+      const data = await response.json();
+
+      return {
+        data,
+        status: response.status,
+        statusText: response.statusText,
+        success: response.ok,
+        error: response.ok ? undefined : data.message || 'Request failed',
+      };
+    } catch (error) {
+      return {
+        data: null as any,
+        status: 0,
+        statusText: 'Network Error',
+        success: false,
+        error: error instanceof Error ? error.message : 'Unknown error',
+      };
     }
   }
 
-  async get<T>(endpoint: string, headers?: Record<string, string>): Promise<ApiResponse<T>> {
-    return this.request<T>(endpoint, { method: 'GET', headers });
+  // GET request
+  async get<T = any>(endpoint: string, options?: ApiOptions): Promise<ApiResponse<T>> {
+    return this.request<T>(endpoint, { ...options, method: 'GET' });
   }
 
-  async post<T>(endpoint: string, data?: unknown, headers?: Record<string, string>): Promise<ApiResponse<T>> {
+  // POST request
+  async post<T = any>(endpoint: string, data?: any, options?: ApiOptions): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, {
+      ...options,
       method: 'POST',
-      body: JSON.stringify(data),
-      headers,
+      body: data ? JSON.stringify(data) : undefined,
     });
   }
 
-  async put<T>(endpoint: string, data?: unknown, headers?: Record<string, string>): Promise<ApiResponse<T>> {
+  // PUT request
+  async put<T = any>(endpoint: string, data?: any, options?: ApiOptions): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, {
+      ...options,
       method: 'PUT',
-      body: JSON.stringify(data),
-      headers,
+      body: data ? JSON.stringify(data) : undefined,
     });
   }
 
-  async delete<T>(endpoint: string, headers?: Record<string, string>): Promise<ApiResponse<T>> {
-    return this.request<T>(endpoint, { method: 'DELETE', headers });
+  // DELETE request
+  async delete<T = any>(endpoint: string, options?: ApiOptions): Promise<ApiResponse<T>> {
+    return this.request<T>(endpoint, { ...options, method: 'DELETE' });
+  }
+
+  // PATCH request
+  async patch<T = any>(endpoint: string, data?: any, options?: ApiOptions): Promise<ApiResponse<T>> {
+    return this.request<T>(endpoint, {
+      ...options,
+      method: 'PATCH',
+      body: data ? JSON.stringify(data) : undefined,
+    });
   }
 }
 
-export default new ApiClient();
+// Create API client instance
+const apiClient = new ApiClient();
+
+export default apiClient;

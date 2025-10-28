@@ -1,16 +1,18 @@
 'use client';
 
-
-import React, { useEffect }, { memo, useState, useEffect } from 'react';
+import React, { useEffect, memo, useState } from 'react';
 import { Download, X } from 'lucide-react';
-import logger from '../utils/logger';
 
 interface BeforeInstallPromptEvent extends Event {
   prompt(): Promise<void>;
   userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
 }
 
-const PWAInstaller: React.FC = memo(() => {
+interface PWAInstallerProps {
+  className?: string;
+}
+
+const PWAInstaller: React.FC<PWAInstallerProps> = memo(({ className = '' }) => {
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [showInstallPrompt, setShowInstallPrompt] = useState(false);
   const [isInstalled, setIsInstalled] = useState(false);
@@ -23,7 +25,8 @@ const PWAInstaller: React.FC = memo(() => {
     }
 
     // Listen for the beforeinstallprompt event
-          setDeferredPrompt(e as BeforeInstallPromptEvent);
+    const handleBeforeInstallPrompt = (e: Event) => {
+      setDeferredPrompt(e as BeforeInstallPromptEvent);
       setShowInstallPrompt(true);
     };
 
@@ -43,14 +46,16 @@ const PWAInstaller: React.FC = memo(() => {
     };
   }, []);
 
-  
+  const handleInstall = async () => {
+    if (!deferredPrompt) return;
+    
     deferredPrompt.prompt();
     const { outcome } = await deferredPrompt.userChoice;
     
     if (outcome === 'accepted') {
-      logger.info('User accepted the install prompt');
+      console.log('User accepted the install prompt');
     } else {
-      logger.info('User dismissed the install prompt');
+      console.log('User dismissed the install prompt');
     }
     
     setDeferredPrompt(null);
@@ -66,7 +71,7 @@ const PWAInstaller: React.FC = memo(() => {
   }
 
   return (
-    <div className="fixed bottom-4 left-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50 border border-gray-200">
+    <div className={`fixed bottom-4 left-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50 border border-gray-200 ${className}`}>
       <div className="flex items-start justify-between">
         <div className="flex-1">
           <h3 className="text-lg font-semibold text-gray-900 mb-2">
@@ -77,16 +82,18 @@ const PWAInstaller: React.FC = memo(() => {
           </p>
           <div className="flex space-x-2">
             <button
-              onClick={handleInstallClick}
+              onClick={handleInstall}
               className="flex items-center space-x-2 bg-purple-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-purple-700 transition-colors"
-             aria-label="Action Button">
+              aria-label="Install App"
+            >
               <Download className="h-4 w-4" />
               <span>Install</span>
             </button>
             <button
               onClick={handleDismiss}
               className="text-gray-500 hover:text-gray-700 transition-colors"
-             aria-label="Action Button">
+              aria-label="Dismiss Install Prompt"
+            >
               <X className="h-4 w-4" />
             </button>
           </div>

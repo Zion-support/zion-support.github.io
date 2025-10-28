@@ -15,7 +15,7 @@ export class ErrorHandler {
   private errors: ErrorInfo[] = [];
 
   private constructor() {
-    // Empty block
+    // Private constructor for singleton
   }
 
   public static getInstance(): ErrorHandler {
@@ -39,8 +39,8 @@ export class ErrorHandler {
     this.errors.push(errorData);
     
     // Send to analytics if available
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'exception', {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'exception', {
         description: error.message,
         fatal: false
       });
@@ -54,9 +54,10 @@ export class ErrorHandler {
     try {
       // This would typically send to a service like Sentry, LogRocket, etc.
       // For now, we'll just log it
-          } catch {
-    // Error handled
-  }
+      console.error('Error reported:', errorData);
+    } catch {
+      // Error handled
+    }
   }
 
   public getErrors(): ErrorInfo[] {
@@ -72,7 +73,8 @@ export class ErrorHandler {
   }
 }
 
-export 
+export const errorHandler = ErrorHandler.getInstance();
+
 // Global error handler
 if (typeof window !== 'undefined') {
   window.addEventListener('error', (event) => {

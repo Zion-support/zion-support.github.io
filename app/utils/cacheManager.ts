@@ -1,56 +1,50 @@
-'use client';
+// Cache Manager utility for client-side caching
 
 export interface CacheOptions {
+  maxSize?: number;
   ttl?: number; // Time to live in milliseconds
-  maxSize?: number; // Maximum number of items
-  storage?: 'memory' | 'localStorage' | 'sessionStorage';
+  storage?: 'localStorage' | 'sessionStorage' | 'memory';
 }
 
-export interface CacheItem<T> {
+export interface CacheItem<T = any> {
   value: T;
   timestamp: number;
   ttl: number;
 }
 
-export class CacheManager<T> {
-  private cache: Map<string, CacheItem<T>> = new Map();
+class CacheManager<T = any> {
+  private cache = new Map<string, CacheItem<T>>();
   private options: Required<CacheOptions>;
 
-  constructor(options: CacheOptions = {
-    // Empty block
-  }) {
+  constructor(options: CacheOptions = {}) {
     this.options = {
-      ttl: options.ttl || 5 * 60 * 1000, // 5 minutes default
       maxSize: options.maxSize || 100,
-      storage: options.storage || 'memory'
+      ttl: options.ttl || 5 * 60 * 1000, // 5 minutes default
+      storage: options.storage || 'memory',
     };
 
-    if (this.options.storage !== 'memory' && typeof window !== 'undefined') {
-      this.loadFromStorage();
-    }
+    this.loadFromStorage();
   }
 
-  public set(key: string, value: T, ttl?: number): void {
+  // Set a cache item
+  set(key: string, value: T, ttl?: number): void {
     const item: CacheItem<T> = {
       value,
       timestamp: Date.now(),
-      ttl: ttl || this.options.ttl
+      ttl: ttl || this.options.ttl,
     };
 
-    // Remove oldest items if cache is full
+    // Check if cache is full
     if (this.cache.size >= this.options.maxSize) {
-      const oldestKey = this.cache.keys().next().value;
-      this.cache.delete(oldestKey);
+      this.evictOldest();
     }
 
     this.cache.set(key, item);
-
-    if (this.options.storage !== 'memory' && typeof window !== 'undefined') {
-      this.saveToStorage();
-    }
+    this.saveToStorage();
   }
 
-  public get(key: string): T | null {
+  // Get a cache item
+  get(key: string): T | null {
     const item = this.cache.get(key);
     
     if (!item) {
@@ -58,93 +52,109 @@ export class CacheManager<T> {
     }
 
     // Check if item has expired
-    if (Date.now() - item.timestamp > item.ttl) {
+    if (this.isExpired(item)) {
       this.cache.delete(key);
+      this.saveToStorage();
       return null;
     }
 
     return item.value;
   }
 
-  public has(key: string): boolean {
-    return this.get(key) !== null;
+  // Check if a key exists and is not expired
+  has(key: string): boolean {
+    const item = this.cache.get(key);
+    return item ? !this.isExpired(item) : false;
   }
 
-  public delete(key: string): boolean {
+  // Delete a cache item
+  delete(key: string): boolean {
     const deleted = this.cache.delete(key);
-    
-    if (this.options.storage !== 'memory' && typeof window !== 'undefined') {
+    if (deleted) {
       this.saveToStorage();
     }
-    
     return deleted;
   }
 
-  public clear(): void {
+  // Clear all cache items
+  clear(): void {
     this.cache.clear();
-    
-    if (this.options.storage !== 'memory' && typeof window !== 'undefined') {
-      this.saveToStorage();
-    }
+    this.saveToStorage();
   }
 
-  public size(): number {
+  // Get cache size
+  size(): number {
     return this.cache.size;
   }
 
-  public keys(): string[] {
+  // Get all keys
+  keys(): string[] {
     return Array.from(this.cache.keys());
   }
 
-  public cleanup(): void {
-    const now = Date.now();
+  // Check if item is expired
+  private isExpired(item: CacheItem<T>): boolean {
+    return Date.now() - item.timestamp > item.ttl;
+  }
+
+  // Evict oldest item
+  private evictOldest(): void {
+    let oldestKey = '';
+    let oldestTime = Date.now();
+
     for (const [key, item] of this.cache.entries()) {
-      if (now - item.timestamp > item.ttl) {
-        this.cache.delete(key);
+      if (item.timestamp < oldestTime) {
+        oldestTime = item.timestamp;
+        oldestKey = key;
       }
+    }
+
+    if (oldestKey) {
+      this.cache.delete(oldestKey);
     }
   }
 
+  // Load from storage
   private loadFromStorage(): void {
+    if (this.options.storage === 'memory') {
+      return;
+    }
+
     try {
       const storage = this.options.storage === 'localStorage' 
         ? localStorage 
         : sessionStorage;
       
-            if (data) {
-                this.cache = new Map(parsed);
+      const data = storage.getItem('cache_' + this.constructor.name);
+      if (data) {
+        const parsed = JSON.parse(data);
+        this.cache = new Map(parsed);
       }
     } catch {
-    // Error handled
-  }
+      // Error handled
+    }
   }
 
+  // Save to storage
   private saveToStorage(): void {
+    if (this.options.storage === 'memory') {
+      return;
+    }
+
     try {
       const storage = this.options.storage === 'localStorage' 
         ? localStorage 
         : sessionStorage;
       
-            storage.setItem('cache_' + this.constructor.name, data);
+      const data = JSON.stringify(Array.from(this.cache.entries()));
+      storage.setItem('cache_' + this.constructor.name, data);
     } catch {
-    // Error handled
-  }
+      // Error handled
+    }
   }
 }
 
-// Create default cache instances
-export const memoryCache = new CacheManager<unknown>({ storage: 'memory' });
-export const localStorageCache = new CacheManager<unknown>({ storage: 'localStorage' });
-export const sessionStorageCache = new CacheManager<unknown>({ storage: 'sessionStorage' });
+// Create cache manager instance
+const cacheManager = new CacheManager();
 
-// Utility functions
-export const cache = {
-  set: (key: string, value: unknown, ttl?: number) => memoryCache.set(key, value, ttl),
-  get: (key: string) => memoryCache.get(key),
-  has: (key: string) => memoryCache.has(key),
-  delete: (key: string) => memoryCache.delete(key),
-  clear: () => memoryCache.clear(),
-  size: () => memoryCache.size(),
-  keys: () => memoryCache.keys(),
-  cleanup: () => memoryCache.cleanup()
-};
+export default cacheManager;

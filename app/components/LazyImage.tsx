@@ -1,7 +1,7 @@
 'use client';
 
 
-import React, { useEffect }, { useState, useRef, useEffect } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 
 interface LazyImageProps {
   src: string;
@@ -26,8 +26,14 @@ const LazyImage: React.FC<LazyImageProps> = ({
   const imgRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
-              observer.disconnect();
-        }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsInView(true);
+            observer.disconnect();
+          }
+        });
       },
       { threshold: 0.1 }
     );

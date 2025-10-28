@@ -2,10 +2,47 @@
 import React from "react";
 import Footer from '@/components/Footer';
 import Navigation from '@/components/Navigation';
-import { Brain } from "lucide-react";
+import { Brain, ArrowRight, CheckCircle } from "lucide-react";
 
-export 
-const AiPoweredEmailAnalyzerPage: React.FC = () => {
+export const AiPoweredEmailAnalyzerPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Email Classification',
+      description: 'Automatically categorize emails using advanced machine learning.',
+      benefits: ['Smart categorization', 'Improved organization', 'Time savings']
+    },
+    {
+      icon: Brain,
+      title: 'Sentiment Analysis',
+      description: 'Analyze email sentiment to understand customer emotions and needs.',
+      benefits: ['Customer insights', 'Better responses', 'Emotional intelligence']
+    },
+    {
+      icon: Brain,
+      title: 'Priority Detection',
+      description: 'Automatically detect and prioritize important emails.',
+      benefits: ['Focus on important', 'Reduced noise', 'Better productivity']
+    },
+    {
+      icon: Brain,
+      title: 'Spam Filtering',
+      description: 'Advanced AI-powered spam detection and filtering.',
+      benefits: ['Clean inbox', 'Security', 'Reduced clutter']
+    },
+    {
+      icon: Brain,
+      title: 'Auto-Response Generation',
+      description: 'Generate intelligent auto-responses based on email content.',
+      benefits: ['Faster responses', 'Consistent quality', 'Time efficiency']
+    },
+    {
+      icon: Brain,
+      title: 'Email Analytics Dashboard',
+      description: 'Comprehensive analytics and insights for email management.',
+      benefits: ['Performance metrics', 'Trend analysis', 'Data-driven decisions']
+    }
+  ];
     
   const benefits = [
     'Increase email efficiency by up to 60%',

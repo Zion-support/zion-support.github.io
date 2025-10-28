@@ -42,224 +42,159 @@ class PerformanceOptimizer {
     if (options) {
       this.options = { ...this.options, ...options };
     }
-    this.initializePerformanceMonitoring();
   }
 
-  /**
-   * Initialize performance monitoring
-   */
-  private initializePerformanceMonitoring(): void {
-    if (typeof window === 'undefined') return;
+  // Measure page load performance
+  measureLoadTime(): number {
+    if (typeof window === 'undefined') return 0;
+    
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    return navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
+  }
 
-    // Monitor page load time
-    window.addEventListener('load', () => {
-      this.updateLoadTime();
-      this.updateMemoryUsage();
-      this.generateRecommendations();
+  // Measure render performance
+  measureRenderTime(): number {
+    if (typeof window === 'undefined') return 0;
+    
+    const paintEntries = performance.getEntriesByType('paint');
+    const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
+    return fcp ? fcp.startTime : 0;
+  }
+
+  // Get memory usage
+  getMemoryUsage(): number {
+    if (typeof window === 'undefined' || !(window as any).performance?.memory) return 0;
+    
+    const memory = (window as any).performance.memory;
+    return memory ? memory.usedJSHeapSize : 0;
+  }
+
+  // Optimize images
+  optimizeImages(): void {
+    if (typeof window === 'undefined' || !this.options.enableImageOptimization) return;
+
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+      if (!img.loading) {
+        img.loading = 'lazy';
+      }
+      if (!img.decoding) {
+        img.decoding = 'async';
+      }
+    });
+  }
+
+  // Enable lazy loading
+  enableLazyLoading(): void {
+    if (typeof window === 'undefined' || !this.options.enableLazyLoading) return;
+
+    const images = document.querySelectorAll('img[data-src]');
+    const imageObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target as HTMLImageElement;
+          img.src = img.dataset.src || '';
+          img.classList.remove('lazy');
+          imageObserver.unobserve(img);
+        }
+      });
     });
 
-    // Monitor performance entries
-    if ('PerformanceObserver' in window) {
-    // Empty block
+    images.forEach(img => imageObserver.observe(img));
   }
-      });
 
-      observer.observe({ entryTypes: ['navigation', 'resource', 'paint', 'measure'] });
+  // Preload critical resources
+  preloadCriticalResources(): void {
+    if (typeof window === 'undefined' || !this.options.enablePreloading) return;
+
+    const criticalResources = [
+      '/fonts/inter.woff2',
+      '/css/critical.css',
+    ];
+
+    criticalResources.forEach(resource => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource;
+      link.as = resource.endsWith('.css') ? 'style' : 'font';
+      document.head.appendChild(link);
+    });
+  }
+
+  // Enable caching strategies
+  enableCaching(): void {
+    if (typeof window === 'undefined' || !this.options.enableCaching) return;
+
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then(registration => {
+          console.log('Service Worker registered:', registration);
+        })
+        .catch(error => {
+          console.error('Service Worker registration failed:', error);
+        });
     }
   }
 
-  /**
-   * Update load time metrics
-   */
-  private updateLoadTime(): void {
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    if (navigation) {
-      this.metrics.loadTime = navigation.loadEventEnd - navigation.fetchStart;
+  // Generate performance recommendations
+  generateRecommendations(): string[] {
+    const recommendations: string[] = [];
+    
+    if (this.metrics.loadTime > 3000) {
+      recommendations.push('Consider optimizing images and reducing bundle size');
     }
+    
+    if (this.metrics.memoryUsage > 50 * 1024 * 1024) { // 50MB
+      recommendations.push('High memory usage detected. Consider optimizing components');
+    }
+    
+    if (this.metrics.bundleSize > 500 * 1024) { // 500KB
+      recommendations.push('Bundle size is large. Consider code splitting');
+    }
+
+    return recommendations;
   }
 
-  /**
-   * Update memory usage metrics
-   */
-  private updateMemoryUsage(): void {
-    if ('memory' in performance) {
-      const memory = (performance as unknown as { memory: { usedJSHeapSize: number } }).memory;
-      this.metrics.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
-    }
+  // Run comprehensive optimization
+  async optimize(): Promise<PerformanceMetrics> {
+    this.metrics.loadTime = this.measureLoadTime();
+    this.metrics.renderTime = this.measureRenderTime();
+    this.metrics.memoryUsage = this.getMemoryUsage();
+    this.metrics.bundleSize = this.estimateBundleSize();
+    
+    this.optimizeImages();
+    this.enableLazyLoading();
+    this.preloadCriticalResources();
+    this.enableCaching();
+    
+    this.metrics.recommendations = this.generateRecommendations();
+    this.metrics.isOptimized = this.metrics.recommendations.length === 0;
+    
+    return this.metrics;
   }
 
-  /**
-   * Process performance entries
-   */
-  private processPerformanceEntry(entry: PerformanceEntry): void {
-    if (entry.entryType === 'paint') {
-      if (entry.name === 'first-contentful-paint') {
-        this.metrics.renderTime = entry.startTime;
+  // Estimate bundle size (simplified)
+  private estimateBundleSize(): number {
+    if (typeof window === 'undefined') return 0;
+    
+    const scripts = document.querySelectorAll('script[src]');
+    let totalSize = 0;
+    
+    scripts.forEach(script => {
+      const src = script.getAttribute('src');
+      if (src && src.includes('_next/static')) {
+        // Rough estimation based on Next.js bundle structure
+        totalSize += 100 * 1024; // 100KB per script estimate
       }
-    }
+    });
+    
+    return totalSize;
   }
 
-  /**
-   * Get current performance metrics
-   */
+  // Get current metrics
   getMetrics(): PerformanceMetrics {
     return { ...this.metrics };
   }
-
-  /**
-   * Optimize images
-   */
-  optimizeImages(): void {
-    if (!this.options.enableImageOptimization) return;
-
-    const images = document.querySelectorAll('img');
-    images.forEach((img) => {
-      // Add loading="lazy" if not present
-      if (!img.hasAttribute('loading')) {
-        img.setAttribute('loading', 'lazy');
-      }
-
-      // Add decoding="async" for better performance
-      if (!img.hasAttribute('decoding')) {
-        img.setAttribute('decoding', 'async');
-      }
-
-      // Add fetchpriority="auto" for above-the-fold images
-      if (this.isAboveTheFold(img)) {
-        img.setAttribute('fetchpriority', 'high');
-      }
-    });
-  }
-
-  /**
-   * Check if element is above the fold
-   */
-  private isAboveTheFold(element: Element): boolean {
-    const rect = element.getBoundingClientRect();
-    return rect.top < window.innerHeight;
-  }
-
-  /**
-   * Preload critical resources
-   */
-  preloadCriticalResources(): void {
-    if (!this.options.enablePreloading) return;
-
-    // Preload critical CSS
-    const criticalCSS = document.querySelector('link[rel="stylesheet"]');
-    if (criticalCSS) {
-      criticalCSS.setAttribute('rel', 'preload');
-      criticalCSS.setAttribute('as', 'style');
-      criticalCSS.setAttribute('onload', "this.onload=null;this.rel='stylesheet'");
-    }
-
-    // Preload critical fonts
-    const fontLinks = document.querySelectorAll('link[href*="font"]');
-    fontLinks.forEach((link) => {
-      link.setAttribute('rel', 'preload');
-      link.setAttribute('as', 'font');
-      link.setAttribute('type', 'font/woff2');
-      link.setAttribute('crossorigin', 'anonymous');
-    });
-  }
-
-  /**
-   * Enable caching strategies
-   */
-  enableCaching(): void {
-    if (!this.options.enableCaching) return;
-
-    // Add cache headers for static assets
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js')
-        .then((registration) => {
-    // Empty block
-  })
-        .catch((error) => {
-    // Empty block
-  });
-    }
-  }
-
-  /**
-   * Generate optimization recommendations
-   */
-  private generateRecommendations(): void {
-    const recommendations: string[] = [];
-
-    if (this.metrics.loadTime > 3000) {
-      recommendations.push('Consider optimizing page load time. Current: ' + Math.round(this.metrics.loadTime) + 'ms');
-    }
-
-    if (this.metrics.memoryUsage > 100) {
-      recommendations.push('High memory usage detected: ' + Math.round(this.metrics.memoryUsage) + 'MB');
-    }
-
-    if (this.metrics.renderTime > 1000) {
-      recommendations.push('Consider optimizing render time. Current: ' + Math.round(this.metrics.renderTime) + 'ms');
-    }
-
-    // Check for unoptimized images
-    const images = document.querySelectorAll('img');
-    const unoptimizedImages = Array.from(images).filter(img => 
-      !img.hasAttribute('loading') || !img.hasAttribute('decoding')
-    );
-
-    if (unoptimizedImages.length > 0) {
-      recommendations.push(`${unoptimizedImages.length} images need optimization (lazy loading, async decoding)`);
-    }
-
-    this.metrics.recommendations = recommendations;
-  }
-
-  /**
-   * Apply all optimizations
-   */
-  optimize(): void {
-    this.optimizeImages();
-    this.preloadCriticalResources();
-    this.enableCaching();
-    this.generateRecommendations();
-    
-    this.metrics.isOptimized = true;
-  }
-
-  /**
-   * Reset metrics
-   */
-  reset(): void {
-    this.metrics = {
-      loadTime: 0,
-      renderTime: 0,
-      memoryUsage: 0,
-      bundleSize: 0,
-      isOptimized: false,
-      recommendations: [],
-    };
-  }
-
-  /**
-   * Get bundle size estimate
-   */
-  getBundleSize(): number {
-    if (typeof window === 'undefined') return 0;
-
-    const scripts = document.querySelectorAll('script[src]');
-    let totalSize = 0;
-
-    scripts.forEach((script) => {
-      const src = script.getAttribute('src');
-      if (src && src.includes('assets/')) {
-        // Estimate size based on file name patterns
-        totalSize += 50; // Rough estimate in KB
-      }
-    });
-
-    return totalSize;
-  }
 }
 
-// Create singleton instance
-export const performanceOptimizer = new PerformanceOptimizer();
-
-export default performanceOptimizer;
+export default PerformanceOptimizer;

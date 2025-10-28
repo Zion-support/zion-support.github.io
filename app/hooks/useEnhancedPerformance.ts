@@ -14,12 +14,10 @@ interface PerformanceMetrics {
   networkLatency: number;
 }
 
-export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {
-    // Empty block
-  }) => {
+export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) => {
   // Component name for performance tracking
   const componentName = options.component || 'unknown';
-
+  
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
     renderTime: 0,
@@ -27,102 +25,81 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     networkLatency: 0,
   });
 
-  const [isOptimized, setIsOptimized] = useState(false);
-    const mountTimeRef = useRef<number>(0);
+  const startTimeRef = useRef(performance.now());
+  const renderStartTimeRef = useRef(performance.now());
 
-  useEffect(() => {
-    mountTimeRef.current = performance.now();
-    renderCountRef.current += 1;
-    
-    // Log component performance tracking
-    
-    // Measure load time
-    const measureLoadTime = () => {
-      const loadTime = performance.now();
-      setMetrics(prev => ({ ...prev, loadTime }));
-    };
-
-    // Measure render time
-          requestAnimationFrame(() => {
-                setMetrics(prev => ({ ...prev, renderTime }));
-      });
-    };
-
-    // Measure memory usage
-    const measureMemoryUsage = () => {
-      if ('memory' in performance) {
-        const memory = (performance as unknown as { memory: { usedJSHeapSize: number } }).memory;
-        const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
-        setMetrics(prev => ({ ...prev, memoryUsage }));
-      }
-    };
-
-    // Measure network latency
-          fetch('/api/ping', { method: 'HEAD' })
-        .then(() => {
-                    setMetrics(prev => ({ ...prev, networkLatency: latency }));
-        })
-        .catch(() => {
-          // Fallback if ping endpoint doesn't exist
-          setMetrics(prev => ({ ...prev, networkLatency: 0 }));
-        });
-    };
-
-    // Run measurements
-    measureLoadTime();
-    measureRenderTime();
-    measureMemoryUsage();
-    measureNetworkLatency();
-
-    // Check if performance is optimized
-     // Network latency under 200ms
-      setIsOptimized(isOptimized);
-    };
-
-    // Check optimization after metrics are updated
-    const timeoutId = setTimeout(checkOptimization, 1000);
-
-    return () => clearTimeout(timeoutId);
-  }, [componentName, metrics.loadTime, metrics.renderTime, metrics.memoryUsage, metrics.networkLatency]);
-
-  const optimizePerformance = useCallback(() => {
-    if (typeof document === 'undefined') return;
-
-    // Preload critical resources
-    const criticalResources = [
-      '/fonts/inter.woff2',
-      '/images/hero-bg.jpg',
-      '/images/logo.png',
-    ];
-
-    criticalResources.forEach((resource) => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = resource;
-      link.as = resource.endsWith('.woff2') ? 'font' : 'image';
-      if (resource.endsWith('.woff2')) {
-        link.crossOrigin = 'anonymous';
-      }
-      document.head.appendChild(link);
-    });
-
-    // Optimize images
-                  img.src = img.dataset.src || '';
-          img.classList.remove('lazy');
-          imageObserver.unobserve(img);
-        }
-      });
-    });
-
-    images.forEach((img) => imageObserver.observe(img));
-
-    return () => imageObserver.disconnect();
+  // Measure render time
+  const measureRenderTime = useCallback(() => {
+    const renderTime = performance.now() - renderStartTimeRef.current;
+    setMetrics(prev => ({ ...prev, renderTime }));
   }, []);
+
+  // Measure memory usage
+  const measureMemoryUsage = useCallback(() => {
+    if ('memory' in performance) {
+      const memory = (performance as unknown as { memory: { usedJSHeapSize: number } }).memory;
+      const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
+      setMetrics(prev => ({ ...prev, memoryUsage }));
+    }
+  }, []);
+
+  // Measure network latency
+  const measureNetworkLatency = useCallback(() => {
+    const startTime = performance.now();
+    fetch('/api/ping', { method: 'HEAD' })
+      .then(() => {
+        const latency = performance.now() - startTime;
+        setMetrics(prev => ({ ...prev, networkLatency: latency }));
+      })
+      .catch(() => {
+        // Fallback if ping endpoint doesn't exist
+        setMetrics(prev => ({ ...prev, networkLatency: 0 }));
+      });
+  }, []);
+
+  // Run measurements
+  const runMeasurements = useCallback(() => {
+    if (options.trackPerformance) {
+      measureRenderTime();
+      measureMemoryUsage();
+      measureNetworkLatency();
+    }
+  }, [options.trackPerformance, measureRenderTime, measureMemoryUsage, measureNetworkLatency]);
+
+  // Track errors
+  useEffect(() => {
+    if (!options.trackErrors) return;
+
+    const handleError = (error: ErrorEvent) => {
+      console.error(`Error in ${componentName}:`, error);
+      // You can add error reporting service here
+    };
+
+    window.addEventListener('error', handleError);
+    return () => window.removeEventListener('error', handleError);
+  }, [options.trackErrors, componentName]);
+
+  // Track performance
+  useEffect(() => {
+    if (!options.trackPerformance) return;
+
+    const loadTime = performance.now() - startTimeRef.current;
+    setMetrics(prev => ({ ...prev, loadTime }));
+
+    runMeasurements();
+  }, [options.trackPerformance, runMeasurements]);
+
+  // Track analytics
+  useEffect(() => {
+    if (!options.trackAnalytics) return;
+
+    // You can add analytics tracking here
+    console.log(`Analytics for ${componentName}:`, metrics);
+  }, [options.trackAnalytics, componentName, metrics]);
 
   return {
     metrics,
-    isOptimized,
-    optimizePerformance,
-    renderCount: renderCountRef.current,
+    runMeasurements,
+    componentName,
   };
 };

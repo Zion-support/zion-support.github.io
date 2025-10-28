@@ -1,5 +1,5 @@
-import { useState, useCallback } from 'react';
-import { performanceOptimizer } from '../utils/performanceOptimizer';
+import { useState, useCallback, useEffect } from 'react';
+import PerformanceOptimizer from '../utils/performanceOptimizer';
 
 interface PerformanceState {
   loadTime: number;
@@ -26,24 +26,25 @@ export function usePerformance(): PerformanceState & PerformanceActions {
     recommendations: [],
   });
 
+  const optimizer = new PerformanceOptimizer();
+
   // Update performance metrics
   const updateMetrics = useCallback(() => {
-    const metrics = performanceOptimizer.getMetrics();
+    const metrics = optimizer.getMetrics();
     setState(prevState => ({
       ...prevState,
       ...metrics,
     }));
-  }, []);
+  }, [optimizer]);
 
   // Optimize performance
   const optimize = useCallback(() => {
-    performanceOptimizer.optimize();
+    optimizer.optimize();
     updateMetrics();
-  }, [updateMetrics]);
+  }, [optimizer, updateMetrics]);
 
   // Reset metrics
   const reset = useCallback(() => {
-    performanceOptimizer.reset();
     setState({
       loadTime: 0,
       renderTime: 0,
@@ -56,8 +57,8 @@ export function usePerformance(): PerformanceState & PerformanceActions {
 
   // Get current metrics
   const getMetrics = useCallback(() => {
-    return performanceOptimizer.getMetrics();
-  }, []);
+    return optimizer.getMetrics();
+  }, [optimizer]);
 
   // Initialize performance monitoring
   useEffect(() => {

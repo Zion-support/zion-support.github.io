@@ -69,7 +69,9 @@ class ErrorHandler {
 
   private determineSeverity(error: unknown): 'low' | 'medium' | 'high' | 'critical' {
     if (!error) return 'low';
-        if (message.includes('chunk') || message.includes('loading') || message.includes('network')) {
+    
+    const message = error instanceof Error ? error.message : String(error);
+    if (message.includes('chunk') || message.includes('loading') || message.includes('network')) {
       return 'critical';
     }
     if (message.includes('syntax') || message.includes('reference') || message.includes('type')) {
@@ -92,8 +94,8 @@ class ErrorHandler {
   private reportError(errorInfo: ErrorInfo): void {
     // Implement error reporting logic here
     if (errorInfo.severity === 'critical') {
-    // Empty block
-  }
+      console.error('Critical error:', errorInfo);
+    }
   }
 
   public logError(
@@ -122,7 +124,10 @@ class ErrorHandler {
   }
 
   public getErrorReport(): ErrorReport {
-            return {
+    const criticalErrors = this.errors.filter(e => e.severity === 'critical').length;
+    const lastError = this.errors[this.errors.length - 1];
+    
+    return {
       errors: [...this.errors],
       totalErrors: this.errors.length,
       criticalErrors,
@@ -134,7 +139,8 @@ class ErrorHandler {
 
   private calculateErrorRate(): number {
     const oneHourAgo = Date.now() - (60 * 60 * 1000);
-        return recentErrors.length / 60;
+    const recentErrors = this.errors.filter(e => e.timestamp > oneHourAgo);
+    return recentErrors.length / 60;
   }
 
   public clearErrors(): void {
@@ -147,4 +153,4 @@ class ErrorHandler {
 }
 
 // Export singleton instance
-export 
+export const errorHandler = new ErrorHandler();

@@ -14,6 +14,24 @@ export default function Navigation({ className = '', children }: NavigationProps
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   
+  const aiServices = [
+    { name: 'AI-Powered DevOps', href: '/ai-powered-devops' },
+    { name: 'AI Email Analyzer', href: '/ai-powered-email-analyzer' },
+    { name: 'E-commerce Analytics Pro', href: '/ecommerce-analytics-pro' },
+    { name: 'Legal Document Manager', href: '/legal-document-manager' },
+    { name: 'Medical Records Manager', href: '/medical-records-manager' },
+    { name: 'Online Learning Platform', href: '/online-learning-platform' },
+    { name: 'Property Management AI', href: '/property-management-ai' },
+    { name: 'Supply Chain Optimizer', href: '/supply-chain-optimizer' }
+  ];
+
+  const itServices = [
+    { name: 'Cybersecurity Audit', href: '/it-services/cybersecurity-audit' },
+    { name: 'Cloud Migration', href: '/it-services/cloud-migration' },
+    { name: 'Network Infrastructure', href: '/it-services/network-infrastructure' },
+    { name: 'Data Backup Solutions', href: '/it-services/data-backup' }
+  ];
+  
   const toggleDropdown = (dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };

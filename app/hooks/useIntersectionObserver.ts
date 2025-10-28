@@ -6,7 +6,9 @@ interface UseIntersectionObserverOptions {
   rootMargin?: string;
 }
 
-export   const [node, setNode] = useState<Element | null>(null);
+export const useIntersectionObserver = (options: UseIntersectionObserverOptions = {}) => {
+  const [entry, setEntry] = useState<IntersectionObserverEntry | null>(null);
+  const [node, setNode] = useState<Element | null>(null);
   const observer = useRef<IntersectionObserver | null>(null);
 
   useEffect(() => {
@@ -27,4 +29,4 @@ export   const [node, setNode] = useState<Element | null>(null);
   }, [node, options]);
 
   return [setNode, entry] as const;
-}
+};

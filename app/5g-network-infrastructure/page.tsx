@@ -1,7 +1,45 @@
 import React from "react";
-import { Brain } from 'lucide-react';
+import { Brain, ArrowRight, CheckCircle } from 'lucide-react';
 
 export default function FiveGNetworkInfrastructure() {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Network Optimization',
+      description: 'Leverage artificial intelligence to optimize network performance and resource allocation.',
+      benefits: ['Intelligent routing', 'Dynamic load balancing', 'Predictive analytics']
+    },
+    {
+      icon: Brain,
+      title: 'Real-time Performance Monitoring',
+      description: 'Monitor network performance in real-time with advanced analytics.',
+      benefits: ['Live metrics', 'Alert system', 'Performance insights']
+    },
+    {
+      icon: Brain,
+      title: 'Automated Resource Allocation',
+      description: 'Automatically allocate network resources based on demand and usage patterns.',
+      benefits: ['Smart scaling', 'Cost optimization', 'Efficient utilization']
+    },
+    {
+      icon: Brain,
+      title: 'Predictive Maintenance',
+      description: 'Predict and prevent network issues before they impact performance.',
+      benefits: ['Proactive maintenance', 'Reduced downtime', 'Cost savings']
+    },
+    {
+      icon: Brain,
+      title: 'Edge Computing Integration',
+      description: 'Integrate edge computing capabilities for faster data processing.',
+      benefits: ['Low latency', 'Improved performance', 'Better user experience']
+    },
+    {
+      icon: Brain,
+      title: 'Network Slicing Management',
+      description: 'Manage network slices for different services and applications.',
+      benefits: ['Service isolation', 'Quality assurance', 'Flexible deployment']
+    }
+  ];
   
   const benefits = [
     'Increase network efficiency by up to 50%',

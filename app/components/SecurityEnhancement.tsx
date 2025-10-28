@@ -39,7 +39,8 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
     }
 
     // Add Referrer Policy
-        if (!referrerPolicy) {
+    const referrerPolicy = document.querySelector('meta[name="referrer"]');
+    if (!referrerPolicy) {
       const meta = document.createElement('meta');
       meta.name = 'referrer';
       meta.content = 'strict-origin-when-cross-origin';
