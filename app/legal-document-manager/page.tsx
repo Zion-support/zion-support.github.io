@@ -1,61 +1,7 @@
-<<<<<<< HEAD
-import React from 'react'
-
-;
-import { Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-
-;
-
-import Navigation from '../components/Navigation'
-
-
-import Footer from '../components/Footer'
-
-
-import { CheckCircle, ArrowRight } from 'lucide-react'
-
-;
-const LegalDocumentManagerPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: "AI Document Analysis",
-      description: "Automatically analyze and categorize legal documents using advanced AI algorithms.",
-      benefits: ["Intelligent categorization", "Risk assessment", "Compliance checking"]
-    },
-    {
-      icon: BarChart,
-      title: "Document Analytics",
-      description: "Gain insights from your document collection with powerful analytics tools.",
-      benefits: ["Usage patterns", "Performance metrics", "Trend analysis"]
-    },
-    {
-      icon: Target,
-      title: "Smart Search",
-      description: "Find relevant documents instantly with AI-powered search capabilities.",
-      benefits: ["Semantic search", "Context awareness", "Relevance ranking"]
-    },
-    {
-      icon: TrendingUp,
-      title: "Workflow Automation",
-      description: "Automate routine legal processes to improve efficiency and reduce errors.",
-      benefits: ["Process automation", "Task scheduling", "Progress tracking"]
-    }
-  ];
-
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ]
-
-=======
 import React from 'react';
-import ErrorBoundary from "../components/ErrorBoundary"
-import Navigation from "../components/Navigation"
-import Footer from "../components/Footer"
+import ErrorBoundary from '../components/ErrorBoundary';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 export const metadata = {
   title: 'Legal Document Manager | Zion Tech Group',
@@ -68,8 +14,7 @@ export const metadata = {
   },
 };
 
-function LegaldocumentmanagerPage() {
->>>>>>> cursor/fix-errors-and-merge-to-main-ad1a
+function LegalDocumentManager() {
   return (
     <>
       <Navigation />
@@ -111,7 +56,7 @@ function LegaldocumentmanagerPage() {
 export default function Wrapped(props: { [key: string]: unknown }) {
   return (
     <ErrorBoundary>
-      <LegaldocumentmanagerPage {...props} />
+      <LegalDocumentManager {...props} />
     </ErrorBoundary>
   );
 }

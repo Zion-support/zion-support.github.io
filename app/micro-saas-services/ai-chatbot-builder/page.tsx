@@ -1,41 +1,20 @@
-<<<<<<< HEAD
+import React from 'react';
 import ErrorBoundary from '../../components/ErrorBoundary';
-import React from 'react';
-=======
-import React from 'react';
-import ErrorBoundary from "../../components/ErrorBoundary"
-import Navigation from "../../components/Navigation"
-import Footer from "../../components/Footer"
->>>>>>> cursor/fix-errors-and-merge-to-main-ad1a
+import Navigation from '../../components/Navigation';
+import Footer from '../../components/Footer';
 
 export const metadata = {
-  title: 'Ai Chatbot Builder | Zion Tech Group',
+  title: 'AI Chatbot Builder | Zion Tech Group',
   description: 'Professional ai chatbot builder services by Zion Tech Group. Advanced AI and technology solutions.',
   keywords: 'ai chatbot builder, technology, services, AI, automation',
   openGraph: {
-    title: 'Ai Chatbot Builder | Zion Tech Group',
+    title: 'AI Chatbot Builder | Zion Tech Group',
     description: 'Professional ai chatbot builder services by Zion Tech Group.',
     type: 'website',
   },
 };
 
-<<<<<<< HEAD
-
 function AIChatbotBuilder() {
-  return (
-    <div className="min-h-screen bg-white">
-      <h1>AI Chatbot Builder</h1>
-      <p>This is a placeholder for the AI Chatbot Builder component.</p>
-    </div>
-  );
-}
-
-export default function Wrapped(props: any) {
-  return (
-    <ErrorBoundary>
-      <AIChatbotBuilder {...props} />
-=======
-function AichatbotbuilderPage() {
   return (
     <>
       <Navigation />
@@ -43,7 +22,7 @@ function AichatbotbuilderPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Ai Chatbot Builder
+              AI Chatbot Builder
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Professional ai chatbot builder services powered by advanced AI and technology.
@@ -77,8 +56,7 @@ function AichatbotbuilderPage() {
 export default function Wrapped(props: { [key: string]: unknown }) {
   return (
     <ErrorBoundary>
-      <AichatbotbuilderPage {...props} />
->>>>>>> cursor/fix-errors-and-merge-to-main-ad1a
+      <AIChatbotBuilder {...props} />
     </ErrorBoundary>
   );
 }

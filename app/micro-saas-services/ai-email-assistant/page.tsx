@@ -1,42 +1,20 @@
-<<<<<<< HEAD
+import React from 'react';
 import ErrorBoundary from '../../components/ErrorBoundary';
-import React from 'react';
-=======
-import React from 'react';
-import ErrorBoundary from "../../components/ErrorBoundary"
-import Navigation from "../../components/Navigation"
-import Footer from "../../components/Footer"
->>>>>>> cursor/fix-errors-and-merge-to-main-ad1a
+import Navigation from '../../components/Navigation';
+import Footer from '../../components/Footer';
 
 export const metadata = {
-  title: 'Ai Email Assistant | Zion Tech Group',
+  title: 'AI Email Assistant | Zion Tech Group',
   description: 'Professional ai email assistant services by Zion Tech Group. Advanced AI and technology solutions.',
   keywords: 'ai email assistant, technology, services, AI, automation',
   openGraph: {
-    title: 'Ai Email Assistant | Zion Tech Group',
+    title: 'AI Email Assistant | Zion Tech Group',
     description: 'Professional ai email assistant services by Zion Tech Group.',
     type: 'website',
   },
 };
 
-<<<<<<< HEAD
-
-
 function AIEmailAssistant() {
-  return (
-    <div className="min-h-screen bg-white">
-      <h1>AI Email Assistant</h1>
-      <p>This is a placeholder for the AI Email Assistant component.</p>
-    </div>
-  );
-}
-
-export default function Wrapped(props: any) {
-  return (
-    <ErrorBoundary>
-      <AIEmailAssistant {...props} />
-=======
-function AiemailassistantPage() {
   return (
     <>
       <Navigation />
@@ -44,7 +22,7 @@ function AiemailassistantPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Ai Email Assistant
+              AI Email Assistant
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Professional ai email assistant services powered by advanced AI and technology.
@@ -78,8 +56,7 @@ function AiemailassistantPage() {
 export default function Wrapped(props: { [key: string]: unknown }) {
   return (
     <ErrorBoundary>
-      <AiemailassistantPage {...props} />
->>>>>>> cursor/fix-errors-and-merge-to-main-ad1a
+      <AIEmailAssistant {...props} />
     </ErrorBoundary>
   );
 }
