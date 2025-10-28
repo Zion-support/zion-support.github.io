@@ -85,12 +85,10 @@ class PerformanceOptimizer {
    */
   private updateMemoryUsage(): void {
     if ('memory' in performance) {
-<<<<<<< HEAD
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
-=======
-      const memory = (performance as Record<string, unknown>).memory as Record<string, number>;
->>>>>>> 8b67d98f7ff26be35b136b148dfc7107f3d6b251
-      this.metrics.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
+      if (memory) {
+        this.metrics.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
+      }
     }
   }
 

@@ -71,7 +71,6 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
 
       {/* CTA Section */}
       <div className="py-24">
@@ -90,8 +89,6 @@ export default function HomePage() {
           </Link>
         </div>
       </div>
-=======
->>>>>>> 8b67d98f7ff26be35b136b148dfc7107f3d6b251
     </div>
   );
 }

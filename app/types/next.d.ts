@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 import { NextPage } from 'next';
->>>>>>> 8b67d98f7ff26be35b136b148dfc7107f3d6b251
 import React, { ReactNode } from 'react';
 
 // interface NextPageWithLayout<P = Record<string, unknown>, IP = P> extends NextPage<P, IP> {

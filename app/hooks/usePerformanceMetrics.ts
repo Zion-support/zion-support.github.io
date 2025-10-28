@@ -44,7 +44,7 @@ export const usePerformanceMetrics = () => {
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        const fidEntry = entry as PerformanceEventTiming;
+        const fidEntry = entry as PerformanceEntry & { processingStart: number };
         setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
       });
     });
