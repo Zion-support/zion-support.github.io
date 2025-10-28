@@ -58,10 +58,8 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        const fid = (entry as PerformanceEntry & { processingStart: number }).processingStart - entry.startTime;
         const fidEntry = entry as PerformanceEventTiming;
         const fid = fidEntry.processingStart - entry.startTime;
->>>>>>> 180c76a08813769caa34f6922951c6a2af341d50
         console.log('FID:', fid);
         
         if (window.gtag) {
@@ -80,13 +78,9 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const clsObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput: boolean; value: number };
-        if (!layoutShiftEntry.hadRecentInput) {
-          clsValue += layoutShiftEntry.value;
         const clsEntry = entry as LayoutShift;
         if (!clsEntry.hadRecentInput) {
           clsValue += clsEntry.value;
->>>>>>> 180c76a08813769caa34f6922951c6a2af341d50
           console.log('CLS:', clsValue);
           
           if (window.gtag) {
@@ -148,9 +142,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     if (typeof window === 'undefined' || !('memory' in performance)) return;
 
     const checkMemory = () => {
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
       const memory = (performance as Performance & { memory?: MemoryInfo }).memory;
->>>>>>> 180c76a08813769caa34f6922951c6a2af341d50
       if (memory) {
         const used = memory.usedJSHeapSize / 1024 / 1024; // MB
         const total = memory.totalJSHeapSize / 1024 / 1024; // MB

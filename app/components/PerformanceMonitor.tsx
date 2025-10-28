@@ -3,9 +3,6 @@
 import React, { useEffect, useState, memo } from 'react';
 import type { PerformanceEventTiming } from '../types/performance';
 // Performance types are used in the component logic
-
-import type { PerformanceEventTiming, LayoutShift } from '../types/performance';
->>>>>>> 180c76a08813769caa34f6922951c6a2af341d50
 interface PerformanceMetrics {
   lcp: number | null;
   fid: number | null;

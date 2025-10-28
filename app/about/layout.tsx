@@ -1,8 +1,4 @@
-<<<<<<< HEAD:app/about/layout.tsx
- 
 import React from 'react';
-=======
->>>>>>> 180c76a08813769caa34f6922951c6a2af341d50:app/about/metadata.ts
 import { Metadata } from 'next';
 
 export const aboutMetadata: Metadata = {
