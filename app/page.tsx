@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export default function HomePage() {
+function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -67,3 +67,12 @@ export default function HomePage() {
               <p className="text-gray-300">
                 Scalable cloud infrastructure and migration services for modern applications.
               </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default HomePage;
