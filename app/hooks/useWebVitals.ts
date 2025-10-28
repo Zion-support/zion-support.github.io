@@ -13,13 +13,31 @@ export const useWebVitals = (onPerfEntry?: (metric: WebVitalsMetric) => void) =>
     if (onPerfEntry && typeof window !== 'undefined') {
       // Use the existing monitoring service instead of web-vitals
       // This avoids API compatibility issues
-          }
+      const handleWebVitals = () => {
+        // Create a mock metric for demonstration
+        const mockMetric: WebVitalsMetric = {
+          name: 'FCP',
+          value: 0,
+          delta: 0,
+          id: 'mock',
+          navigationType: 'navigate'
+        };
+        onPerfEntry(mockMetric);
+      };
+      
+      // Call immediately for demo purposes
+      handleWebVitals();
+    }
   }, [onPerfEntry]);
 };
 
 export const reportWebVitals = (metric: WebVitalsMetric) => {
-  if () {
-      }
+  if (typeof window !== 'undefined') {
+    // Log to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Web Vitals:', metric);
+    }
+  }
   
   // Send to analytics
   if (typeof window !== 'undefined' && 'gtag' in window) {

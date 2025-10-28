@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const performance = {
-  measure: (name: string, fn: () => void) => {
+  measure: (_name: string, fn: () => void) => {
     const start = Date.now();
     fn();
     const end = Date.now();
@@ -9,7 +9,7 @@ export const performance = {
 };
 
 class PerformanceMonitor {
-  private static instance: PerformanceMonitor;
+  private static _instance: PerformanceMonitor;
   private metrics = new Map<string, number>();
 
   static getInstance(): PerformanceMonitor {
@@ -54,15 +54,15 @@ class PerformanceMonitor {
     if (typeof window === "undefined") return;
 
     // Largest Contentful Paint
-    new PerformanceObserver((entryList) => {
-      const entries = entryList.getEntries();
+    new PerformanceObserver((list) => {
+      const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
       this.metrics.set("LCP", lastEntry.startTime);
     }).observe({ entryTypes: ["largest-contentful-paint"] });
 
     // First Input Delay
-    new PerformanceObserver((entryList) => {
-      const entries = entryList.getEntries();
+    new PerformanceObserver((list) => {
+      const entries = list.getEntries();
       entries.forEach((entry) => {
         // Use processingStart if available, otherwise calculate from startTime
         const processingStart = (entry as { processingStart?: number }).processingStart || entry.startTime;
@@ -72,8 +72,8 @@ class PerformanceMonitor {
 
     // Cumulative Layout Shift
     let clsValue = 0;
-    new PerformanceObserver((entryList) => {
-      const entries = entryList.getEntries();
+    new PerformanceObserver((list) => {
+      const entries = list.getEntries();
       entries.forEach((entry) => {
         if (!(entry as { hadRecentInput?: boolean }).hadRecentInput) {
           clsValue += (entry as { value?: number }).value || 0;
@@ -88,10 +88,10 @@ class PerformanceMonitor {
 export function usePerformanceMonitor() {
   const monitor = PerformanceMonitor.getInstance();
   return {
-    startTiming: monitor.startTiming.bind(monitor),
-    endTiming: monitor.endTiming.bind(monitor),
-    getMetric: monitor.getMetric.bind(monitor),
-    getAllMetrics: monitor.getAllMetrics.bind(monitor)
+    _startTiming: monitor.startTiming.bind(monitor),
+    _endTiming: monitor.endTiming.bind(monitor),
+    _getMetric: monitor.getMetric.bind(monitor),
+    _getAllMetrics: monitor.getAllMetrics.bind(monitor)
   };
 }
 

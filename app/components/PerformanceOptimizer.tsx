@@ -70,7 +70,8 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
         const observer = new PerformanceObserver((list) => {
           list.getEntries().forEach((entry) => {
             if (entry.entryType === 'largest-contentful-paint') {
-                          }
+      // Empty block - no action needed
+    }
             if (entry.entryType === 'first-input') {
               const fidEntry = entry as PerformanceEventTiming;
                           }

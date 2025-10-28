@@ -61,7 +61,8 @@ export const AdvancedSEOEnhancer: React.FC<AdvancedSEOEnhancerProps> = ({
 
       setOptimizedData(optimized);
     } catch (error) {
-          }
+      console.warn('Error caught:', error);
+    }
   }, [seoData, enableAutoOptimization]);
 
   // Generate structured data
@@ -127,10 +128,22 @@ export const AdvancedSEOEnhancer: React.FC<AdvancedSEOEnhancerProps> = ({
       <link rel="canonical" href={optimizedData.canonicalUrl} />
       
       {/* Open Graph Meta Tags */}
-      {enableSocialMeta && ()}
+      {enableSocialMeta && (
+        <>
+          <meta property="og:title" content={optimizedData.title} />
+          <meta property="og:description" content={optimizedData.description} />
+          <meta property="og:url" content={optimizedData.canonicalUrl} />
+          <meta property="og:type" content="website" />
+          <meta property="og:site_name" content="Zion Tech Group" />
+        </>
+      )}
 
       {/* Structured Data */}
-      {structuredData && (),
+      {structuredData && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData)
           }}
         />
       )}

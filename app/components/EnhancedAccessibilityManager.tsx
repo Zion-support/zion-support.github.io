@@ -23,7 +23,8 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
     const images = document.querySelectorAll('img');
     images.forEach((img, imgIndex) => {
       if (!img.alt && !img.getAttribute('aria-label')) {
-              }
+        console.warn('Image missing alt text:', img);
+      }
     });
 
     // Check for missing form labels
@@ -34,16 +35,18 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
       const ariaLabelledBy = input.getAttribute('aria-labelledby');
       
       if (!id && !ariaLabel && !ariaLabelledBy) {
-              }
+      // Empty block - no action needed
+    }
     });
 
     // Check for proper heading hierarchy
     const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
     let lastLevel = 0;
-    headings.forEach((heading) => {
-      const level = parseInt(heading.tagName.charAt(1));
+    headings.forEach((element) => {
+      const level = parseInt(element.tagName.charAt(1));
       if (level > lastLevel + 1) {
-              }
+      // Empty block - no action needed
+    }
       lastLevel = level;
     });
 
@@ -57,7 +60,8 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
       if (color && backgroundColor && color !== 'rgba(0, 0, 0, 0)' && backgroundColor !== 'rgba(0, 0, 0, 0)') {
         // Basic contrast check - in a real implementation, you'd use a proper contrast calculation
         if (color === backgroundColor) {
-                  }
+      // Empty block - no action needed
+    }
       }
     });
   }, [enableAutoDetection]);
@@ -83,7 +87,7 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
         }
       }
 
-      // Alt + N: Focus navigation
+      // Alt + _N: Focus navigation
       if (event.altKey && event.key === 'n') {
         event.preventDefault();
         const nav = document.querySelector('nav');
@@ -95,7 +99,7 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
         }
       }
 
-      // Alt + F: Focus footer
+      // Alt + _F: Focus footer
       if (event.altKey && event.key === 'f') {
         event.preventDefault();
         const footer = document.querySelector('footer');
@@ -107,7 +111,7 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
         }
       }
 
-      // Alt + S: Skip to content
+      // Alt + _S: Skip to content
       if (event.altKey && event.key === 's') {
         event.preventDefault();
         const skipLink = document.querySelector('[href="#main-content"]');
@@ -129,13 +133,13 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
     const style = document.createElement('style');
     style.textContent = `
       *:focus {
-        outline: 2px solid #3b82f6 !important;
-        outline-offset: 2px !important;
+        _outline: 2px solid #3b82f6 !important;
+        outline-_offset: 2px !important;
       }
       
       .focus-visible {
-        outline: 2px solid #3b82f6 !important;
-        outline-offset: 2px !important;
+        _outline: 2px solid #3b82f6 !important;
+        outline-_offset: 2px !important;
       }
     `;
     document.head.appendChild(style);

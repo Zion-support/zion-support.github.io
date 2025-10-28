@@ -53,7 +53,8 @@ export class ErrorHandler {
       // This would typically send to a service like Sentry, LogRocket, etc.
       // For now, we'll just log it
           } catch (err) {
-          }
+      console.warn('Error caught:', err);
+    }
   }
 
   public getErrors(): ErrorInfo[] {

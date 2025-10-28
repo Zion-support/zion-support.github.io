@@ -8,14 +8,14 @@ declare module 'next' {
 }
 
 export interface MetadataRoute {
-  url: string;
+  _url: string;
   lastModified?: string | Date;
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;
 }
 
 export interface MetadataRouteSitemap extends MetadataRoute {
-  url: string;
+  _url: string;
   lastModified?: string | Date;
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;
@@ -23,8 +23,8 @@ export interface MetadataRouteSitemap extends MetadataRoute {
 
 // Custom Next.js types
 export interface NextPageProps {
-  params: { [key: string]: string }
-  searchParams: { [key: string]: string | string[] | undefined }
+  params: { [_key: string]: string }
+  searchParams: { [_key: string]: string | string[] | undefined }
 }
 
 // API route types
@@ -34,28 +34,28 @@ export interface ApiRouteHandler {
 
 // Server components types
 export interface ServerComponentProps {
-  params: { [key: string]: string }
-  searchParams: { [key: string]: string | string[] | undefined }
+  params: { [_key: string]: string }
+  searchParams: { [_key: string]: string | string[] | undefined }
 }
 
 // Performance API types
 interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
-  processingEnd: number;
+  _processingStart: number;
+  _processingEnd: number;
   target?: Node;
 }
 
 interface LayoutShift extends PerformanceEntry {
-  value: number;
-  hadRecentInput: boolean;
-  lastInputTime: number;
-  sources: LayoutShiftAttribution[];
+  _value: number;
+  _hadRecentInput: boolean;
+  _lastInputTime: number;
+  _sources: LayoutShiftAttribution[];
 }
 
 interface LayoutShiftAttribution {
   node?: Node;
-  previousRect: DOMRectReadOnly;
-  currentRect: DOMRectReadOnly;
+  _previousRect: DOMRectReadOnly;
+  _currentRect: DOMRectReadOnly;
 }
 
 // Client components types
@@ -75,19 +75,19 @@ export interface RouteHandler {
 
 // Dynamic route types
 export interface DynamicRoute {
-  params: { [key: string]: string }
+  params: { [_key: string]: string }
 }
 
 // Static generation types
 export interface StaticProps {
-  props: { [key: string]: unknown }
+  props: { [_key: string]: unknown }
   revalidate?: number;
   notFound?: boolean;
 }
 
 // ISR types
 export interface ISRConfig {
-  revalidate: number;
+  _revalidate: number;
   tags?: string[];
 }
 
@@ -105,8 +105,8 @@ export interface NodeRuntime {
 declare module 'next' {
   interface NextApiRequest {
     user?: {
-      id: string;
-      email: string;
+      _id: string;
+      _email: string;
       name?: string;
     }
   }

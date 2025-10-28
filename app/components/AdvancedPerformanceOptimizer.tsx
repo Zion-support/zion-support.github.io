@@ -91,14 +91,25 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         if (entry.entryType === 'navigation') {
           const navEntry = entry as PerformanceNavigationTiming
           if (navEntry.loadEventEnd - navEntry.loadEventStart > 1000) {
-                      }
+            console.warn('Slow page load detected')
+          }
         }
       })
     })
     observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] })
     return () => observer.disconnect()
   }, [])
-  return ()',
+
+  return (
+    <div>
+      {children}
+      {isOptimized && (
+        <div
+          style={{
+            position: 'fixed',
+            bottom: '10px',
+            right: '10px',
+            backgroundColor: 'rgba(0, 0, 0, 0.8)',
             color: 'white',
             padding: '10px',
             borderRadius: '5px',
@@ -113,7 +124,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         </div>
       )}
     </div>
-  );
+  )
 };
 
 export default AdvancedPerformanceOptimizer;

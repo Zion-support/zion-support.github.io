@@ -12,7 +12,7 @@ interface PerformanceMetrics {
 }
 
 interface PerformanceMonitorProps {
-  onMetricsUpdate?: () => void;
+  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
   enableRealTimeMonitoring?: boolean;
 }
 
@@ -48,7 +48,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       fcpObserver.observe({ entryTypes: ['paint'] });
       observers.push(fcpObserver);
     } catch (error) {
-          }
+      console.warn('Error caught:', error);
+    }
 
     // Measure First Input Delay (FID)
     try {
@@ -64,7 +65,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       fidObserver.observe({ entryTypes: ['first-input'] });
       observers.push(fidObserver);
     } catch (error) {
-          }
+      console.warn('Error caught:', error);
+    }
 
     // Measure Cumulative Layout Shift (CLS)
     try {
@@ -81,7 +83,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       clsObserver.observe({ entryTypes: ['layout-shift'] });
       observers.push(clsObserver);
     } catch (error) {
-          }
+      console.warn('Error caught:', error);
+    }
 
     // Measure Time to First Byte (TTFB)
     try {
@@ -91,7 +94,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         setMetrics(prev => ({ ...prev, ttfb }));
       }
     } catch (error) {
-          }
+      console.warn('Error caught:', error);
+    }
 
     // Measure Memory Usage
     try {
@@ -102,7 +106,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         }
       }
     } catch (error) {
-          }
+      console.warn('Error caught:', error);
+    }
 
     return () => {
       observers.forEach(observer => observer.disconnect());

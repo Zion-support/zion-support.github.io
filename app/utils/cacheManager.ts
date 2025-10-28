@@ -115,7 +115,8 @@ export class CacheManager<T> {
         this.cache = new Map(parsed);
       }
     } catch (error) {
-          }
+      console.warn('Error caught:', error);
+    }
   }
 
   private saveToStorage(): void {
@@ -127,7 +128,8 @@ export class CacheManager<T> {
       const data = JSON.stringify(Array.from(this.cache.entries()));
       storage.setItem('cache_' + this.constructor.name, data);
     } catch (error) {
-          }
+      console.warn('Error caught:', error);
+    }
   }
 }
 

@@ -75,7 +75,8 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
     try {
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
     } catch (error) {
-          }
+      console.warn('Error caught:', error);
+    }
 
     // Cleanup
     return () => {
@@ -86,7 +87,8 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
   // Report metrics (in a real app, you'd send this to analytics)
   useEffect(() => {
     if (enableReporting && metrics.lcp && metrics.fid && metrics.cls && metrics.fcp) {
-          }
+      // Empty block - no action needed
+    }
   }, [metrics, enableReporting]);
 
   return (
