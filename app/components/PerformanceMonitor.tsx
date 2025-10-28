@@ -49,8 +49,15 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
     // Observe different performance entry types
     try {
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
-    } catch (error) {
-      console.warn('Performance Observer not supported:', error);
+    } catch {
+      // Fallback for browsers that don't support all entry types
+      observer.observe({ entryTypes: ['paint'] });
+    }
+
+    // Get TTFB
+    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    if (navigationEntry) {
+      setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
     }
 
     // Cleanup
@@ -67,10 +74,10 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
   }, [metrics, enableReporting]);
 
   return (
-    <div className={className}>
+    <div className={`performance-monitor ${className}`}>
       {children}
       {enableReporting && (
-        <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-2 rounded text-xs">
+        <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-2 text-xs rounded">
           <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'N/A'}</div>
           <div>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'N/A'}</div>
           <div>CLS: {metrics.cls ? metrics.cls.toFixed(4) : 'N/A'}</div>

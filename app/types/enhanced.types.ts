@@ -52,8 +52,9 @@ export interface Service {
   }
   link: string
   category: 'ai' | 'it' | '5g' | 'blockchain' | 'iot'
-  tags: string[]}
-// User interface is defined in app.types.ts
+  tags: string[]
+}
+
 export interface UserPreferences {
   theme: 'light' | 'dark' | 'auto'
   language: string
