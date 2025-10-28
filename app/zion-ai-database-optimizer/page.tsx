@@ -1,28 +1,19 @@
-import React, { memo } from 'react'
-
 export const metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group',
-  keywords: 'page, technology, services',
+  title: 'Zion Ai Database Optimizer - Zion Tech Group',
+  description: 'Professional zion ai database optimizer services and solutions by Zion Tech Group.',
+  keywords: 'zion-ai-database-optimizer, technology, services',
   openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page services by Zion Tech Group',
+    title: 'Zion Ai Database Optimizer - Zion Tech Group',
+    description: 'Professional zion ai database optimizer services and solutions by Zion Tech Group.',
     type: 'website',
   },
 };
+
+import React, { memo } from 'react'
+
 ;
 import SEOHead from '../components/SEOHead'
 
-export const metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group',
-  keywords: 'page, technology, services',
-  openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page services by Zion Tech Group',
-    type: 'website',
-  },
-};
 ;
 
 const ZionAIDatabaseOptimizerPage: React.FC = memo(() => {

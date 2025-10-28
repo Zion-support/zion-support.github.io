@@ -1,69 +1,27 @@
-'use client'
-import React from 'react'
-
 export const metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group',
-  keywords: 'page, technology, services',
+  title: 'Ai Powered Email Analyzer - Zion Tech Group',
+  description: 'Professional ai powered email analyzer services and solutions by Zion Tech Group.',
+  keywords: 'ai-powered-email-analyzer, technology, services',
   openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page services by Zion Tech Group',
+    title: 'Ai Powered Email Analyzer - Zion Tech Group',
+    description: 'Professional ai powered email analyzer services and solutions by Zion Tech Group.',
     type: 'website',
   },
 };
+
+import React from 'react'
+
 ;
 import { Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 
-export const metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group',
-  keywords: 'page, technology, services',
-  openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page services by Zion Tech Group',
-    type: 'website',
-  },
-};
 ;
 
 import Navigation from '../components/Navigation'
 
-export const metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group',
-  keywords: 'page, technology, services',
-  openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page services by Zion Tech Group',
-    type: 'website',
-  },
-};
-
 import Footer from '../components/Footer'
-
-export const metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group',
-  keywords: 'page, technology, services',
-  openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page services by Zion Tech Group',
-    type: 'website',
-  },
-};
 
 import { CheckCircle, ArrowRight } from 'lucide-react'
 
-export const metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group',
-  keywords: 'page, technology, services',
-  openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page services by Zion Tech Group',
-    type: 'website',
-  },
-};
 ;
 const AiPoweredEmailAnalyzerPage: React.FC = () => {
   const features = [

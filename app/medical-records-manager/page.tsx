@@ -1,69 +1,27 @@
-'use client'
-import React from 'react'
-
 export const metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group',
-  keywords: 'page, technology, services',
+  title: 'Medical Records Manager - Zion Tech Group',
+  description: 'Professional medical records manager services and solutions by Zion Tech Group.',
+  keywords: 'medical-records-manager, technology, services',
   openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page services by Zion Tech Group',
+    title: 'Medical Records Manager - Zion Tech Group',
+    description: 'Professional medical records manager services and solutions by Zion Tech Group.',
     type: 'website',
   },
 };
+
+import React from 'react'
+
 ;
 import { Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 
-export const metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group',
-  keywords: 'page, technology, services',
-  openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page services by Zion Tech Group',
-    type: 'website',
-  },
-};
 ;
 
 import Navigation from '../components/Navigation'
 
-export const metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group',
-  keywords: 'page, technology, services',
-  openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page services by Zion Tech Group',
-    type: 'website',
-  },
-};
-
 import Footer from '../components/Footer'
-
-export const metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group',
-  keywords: 'page, technology, services',
-  openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page services by Zion Tech Group',
-    type: 'website',
-  },
-};
 
 import { CheckCircle, ArrowRight } from 'lucide-react'
 
-export const metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group',
-  keywords: 'page, technology, services',
-  openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page services by Zion Tech Group',
-    type: 'website',
-  },
-};
 ;
 const MedicalRecordsManagerPage: React.FC = () => {
   const features = [
