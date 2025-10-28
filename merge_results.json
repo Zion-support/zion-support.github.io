@@ -1,20 +1,18 @@
 {
-  "timestamp": "2025-10-28T06:08:30.774Z",
+  "timestamp": "2025-10-28T06:40:54.935Z",
   "summary": {
     "total": 31,
-    "successful": 0,
-    "failed": 31,
+    "successful": 1,
+    "failed": 30,
     "skipped": 0
   },
-  "successful": [],
-  "failed": [
+  "successful": [
     {
-      "pr": {
-        "number": 34000,
-        "branch": "cursor/fix-errors-and-merge-to-main-fc5f"
-      },
-      "reason": "Failed to fetch branch"
-    },
+      "number": 34000,
+      "branch": "cursor/fix-errors-and-merge-to-main-fc5f"
+    }
+  ],
+  "failed": [
     {
       "pr": {
         "number": 32379,
