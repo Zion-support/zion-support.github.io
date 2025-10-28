@@ -108,6 +108,9 @@ export default function RootLayout({
                   <PerformanceMonitor />
                   <AccessibilityEnhancer />
                   <ServiceWorkerRegistration />
+        <PerformanceMonitoring />
+        <SEOOptimization />
+        <SecurityEnhancement />
                   <PerformanceMonitoring />
                   <SEOOptimization />
                   <SecurityEnhancement />
