@@ -9,9 +9,6 @@ import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import SkipLink from './components/SkipLink';
 import PageLoader from './components/PageLoader';
 import Analytics from './components/Analytics';
-import ConsolidatedPerformance from './components/consolidated/ConsolidatedPerformance';
-import ConsolidatedAccessibility from './components/consolidated/ConsolidatedAccessibility';
-import ConsolidatedSEO from './components/consolidated/ConsolidatedSEO';
 import { metadata, viewport } from './layout/metadata';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -35,7 +32,6 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <Analytics />
-        <ConsolidatedSEO />
         <ErrorBoundary>
           <PageLoader>
             <div className="min-h-screen bg-slate-900">
@@ -45,8 +41,6 @@ export default function RootLayout({
                 {children}
               </main>
               <Footer />
-              <ConsolidatedPerformance />
-              <ConsolidatedAccessibility />
               <ServiceWorkerRegistration />
             </div>
           </PageLoader>
