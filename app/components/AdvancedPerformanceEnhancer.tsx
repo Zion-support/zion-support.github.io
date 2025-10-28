@@ -39,7 +39,7 @@ interface AdvancedPerformanceEnhancerProps {
 }
 
 export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerProps> = ({
-  children, _enableMonitoring = true, _enableOptimizations = true, _}) => {
+  children, enableMonitoring = true, enableOptimizations = true}) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     lcp: null,
     fid: null,
@@ -49,7 +49,7 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
     memoryUsage: null,
     connectionSpeed: null
   });
-  const [_isOptimized, setIsOptimized] = useState(false);
+  const [isOptimized, setIsOptimized] = useState(false);
 
   const measurePerformance = useCallback(() => {
     if (!enableMonitoring || typeof window === 'undefined') return;
@@ -98,7 +98,7 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
     } catch { /* Handle error */ }
   }, [enableMonitoring]);
 
-  useEffect_(() => {
+  useEffect(() => {
     if (enableMonitoring) {
       const cleanup = measurePerformance();
       return cleanup;
@@ -154,14 +154,14 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
     } catch { /* Handle error */ }
   }, [enableOptimizations]);
 
-  useEffect_(() => {
+  useEffect(() => {
     if (enableOptimizations) {
       optimizePerformance();
     }
   }, [measurePerformance, enableMonitoring]);
 
   // Log performance metrics for debugging
-  useEffect_(() => {
+  useEffect(() => {
     if (enableMonitoring && Object.values(metrics).some(value => value !== null)) { /* empty */ }
   }, [metrics, enableMonitoring]);
 

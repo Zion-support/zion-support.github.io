@@ -13,12 +13,15 @@ interface EnhancedAccessibilityManagerProps {
 }
 
 const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> = memo(({ 
-  enableAutoDetection = true, _enableKeyboardShortcuts = true, _enableHighContrastMode = true, _children
+  enableAutoDetection = true, 
+  enableKeyboardShortcuts = true, 
+  enableHighContrastMode = true, 
+  children
 }) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [isScreenReaderActive, setIsScreenReaderActive] = useState(false);
 
-  useEffect_(() => {
+  useEffect(() => {
     if (enableAutoDetection) {
       // Check for missing alt attributes
       const images = document.querySelectorAll('img');
@@ -53,7 +56,7 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
     }
   }, [enableAutoDetection]);
 
-  useEffect_(() => {
+  useEffect(() => {
     if (!enableHighContrastMode) return;
 
     const mediaQuery = window.matchMedia('(prefers-contrast: high)');
@@ -61,10 +64,10 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
 
     const handleChange = (e: MediaQueryListEvent) => setIsHighContrast(e.matches);
     mediaQuery.addEventListener('change', handleChange);
-    return _() => mediaQuery.removeEventListener('change', handleChange);
+    return () => mediaQuery.removeEventListener('change', handleChange);
   }, [enableHighContrastMode]);
 
-  useEffect_(() => {
+  useEffect(() => {
     if (!enableKeyboardShortcuts) return;
 
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -94,10 +97,10 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
     };
 
     document.addEventListener('keydown', handleKeyDown);
-    return _() => document.removeEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
   }, [enableKeyboardShortcuts]);
 
-  useEffect_(() => {
+  useEffect(() => {
     if (isHighContrast) {
       document.body.classList.add('high-contrast');
     } else {
