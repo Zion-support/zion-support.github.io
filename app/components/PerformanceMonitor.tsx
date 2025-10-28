@@ -33,9 +33,12 @@ interface LayoutShiftAttribution {
   previousRect: DOMRectReadOnly;
   currentRect: DOMRectReadOnly;
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cd9
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7056
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-eba3
 
 interface PerformanceMetrics {
   lcp: number | null;
@@ -74,11 +77,17 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
         } else if (entry.entryType === 'first-input') {
           const fidEntry = entry as PerformanceEventTiming;
           setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
+<<<<<<< HEAD
         } else if (entry.entryType === 'layout-shift') {
           const clsEntry = entry as LayoutShift;
           if (!clsEntry.hadRecentInput) {
             setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + clsEntry.value }));
           }
+=======
+        } else if (entry.entryType === 'layout-shift' && !(entry as LayoutShift).hadRecentInput) {
+          const clsEntry = entry as LayoutShift;
+          setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + clsEntry.value }));
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-eba3
         } else if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
           setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
         }
@@ -90,6 +99,15 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
     } catch (error) {
       console.warn('Performance Observer not supported:', error);
+<<<<<<< HEAD
+=======
+    }
+
+    // TTFB measurement
+    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    if (navigationEntry) {
+      setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-eba3
     }
 
     // Cleanup
@@ -108,12 +126,22 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
   return (
     <div className={className}>
       {children}
+<<<<<<< HEAD
       {enableReporting && (
         <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-2 rounded text-xs">
           <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'N/A'}</div>
           <div>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'N/A'}</div>
           <div>CLS: {metrics.cls ? metrics.cls.toFixed(4) : 'N/A'}</div>
           <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'N/A'}</div>
+=======
+      {enableReporting && process.env.NODE_ENV === 'development' && (
+        <div className="fixed bottom-4 right-4 bg-black/80 text-white p-2 rounded text-xs font-mono">
+          <div>LCP: {metrics.lcp?.toFixed(2) || 'N/A'}ms</div>
+          <div>FID: {metrics.fid?.toFixed(2) || 'N/A'}ms</div>
+          <div>CLS: {metrics.cls?.toFixed(4) || 'N/A'}</div>
+          <div>FCP: {metrics.fcp?.toFixed(2) || 'N/A'}ms</div>
+          <div>TTFB: {metrics.ttfb?.toFixed(2) || 'N/A'}ms</div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-eba3
         </div>
       )}
     </div>
