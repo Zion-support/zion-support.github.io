@@ -1,16 +1,3 @@
-'use client';
-import React from 'react';
-  private static instance: PerformanceMonitor;
-  private metrics = new Map<string, number>();
-
-  static getInstance(): PerformanceMonitor {
-    if (!PerformanceMonitor.instance) {
-      PerformanceMonitor.instance = new PerformanceMonitor()}
-    return PerformanceMonitor.instance}
-
-  startTiming(label: string): void {
-    if (typeof window !== "undefined" && "performance" in window) {
-      performance.mark(`${label}-start`)}
 
   endTiming(label: string): number {
     if (typeof window !== "undefined" && "performance" in window) {
@@ -19,8 +6,10 @@ import React from 'react';
       const measure = performance.getEntriesByName(label)[0];
       const duration = measure ? measure.duration : 0;
       this.metrics.set(label, duration);
-      return duration}
-    return 0}
+      return duration;
+    }
+    return 0;
+  }
 
 
   // Web Vitals monitoring
@@ -31,7 +20,8 @@ import React from 'react';
     new PerformanceObserver((entryList) => {
       const entries = entryList.getEntries();
       const lastEntry = entries[entries.length - 1];
-      this.metrics.set("LCP", lastEntry.startTime)}).observe({ entryTypes: ["largest-contentful-paint"] });
+      this.metrics.set("LCP", lastEntry.startTime);
+    }).observe({ entryTypes: ["largest-contentful-paint"] });
 
     // First Input Delay
     new PerformanceObserver((entryList) => {
@@ -39,7 +29,9 @@ import React from 'react';
       entries.forEach((entry) => {
         // Use processingStart if available, otherwise calculate from startTime
         const processingStart = (entry as { processingStart?: number }).processingStart || entry.startTime;
-        this.metrics.set("FID", processingStart - entry.startTime)})}).observe({ entryTypes: ["first-input"] });
+        this.metrics.set("FID", processingStart - entry.startTime);
+      });
+    }).observe({ entryTypes: ["first-input"] });
 
     // Cumulative Layout Shift
     let clsValue = 0;
@@ -47,8 +39,6 @@ import React from 'react';
       const entries = entryList.getEntries();
       entries.forEach((entry) => {
         if (!(entry as { hadRecentInput?: boolean }).hadRecentInput) {
-          clsValue += (entry as { value?: number }).value || 0});
-      this.metrics.set("CLS", clsValue)}).observe({ entryTypes: ["layout-shift"] })}
 
 // Hook for React components
 export function usePerformanceMonitor() {
@@ -58,7 +48,6 @@ export function usePerformanceMonitor() {
     endTiming: monitor.endTiming.bind(monitor),
     getMetric: monitor.getMetric.bind(monitor),
     getAllMetrics: monitor.getAllMetrics.bind(monitor)
-  }
 
 // Utility function to measure component render time
 export function measureComponentRender(componentName: string) {
@@ -68,5 +57,3 @@ export function measureComponentRender(componentName: string) {
       React.useEffect(() => {
         monitor.startTiming(`${componentName}-render`);
         return () => {
-          monitor.endTiming(`${componentName}-render`)});
-      return React.createElement(WrappedComponent, props)}) as T}

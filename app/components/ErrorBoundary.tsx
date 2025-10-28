@@ -1,7 +1,3 @@
-}
-
-interface ErrorBoundaryState {
-  hasError: boolean;
     super(props);
     this.state = { hasError: false, retryCount: 0 };
   }
