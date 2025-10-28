@@ -180,7 +180,7 @@ def main():
     # Process each PR
     for i, pr in enumerate(prs, 1):
         pr_number = pr['number']
-        branch_name = pr['head']['ref']
+        branch_name = pr['headRefName']
         pr_title = pr['title']
         
         print(f"\n[{i}/{len(prs)}] Processing PR #{pr_number}...")
