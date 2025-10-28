@@ -1,6 +1,5 @@
 'use client';
 
-
 import React, { useEffect, useCallback, memo } from 'react';
 
 interface PerformanceOptimizationsProps {
@@ -154,7 +153,7 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const element = entry.target as HTMLElement;
-          
+
           // Load images when they come into view
           if (element.tagName === 'IMG') {
             const img = element as HTMLImageElement;

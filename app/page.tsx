@@ -24,7 +24,7 @@ function HomePage() {
               Advanced AI & IT Solutions for the Future
             </p>
             <p className="text-lg text-gray-400 mb-12 max-w-4xl mx-auto">
-              Leading provider of AI-powered solutions, cybersecurity, and digital transformation services. 
+              Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.
               Transform your business with cutting-edge technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

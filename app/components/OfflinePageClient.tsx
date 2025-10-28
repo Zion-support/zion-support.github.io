@@ -44,7 +44,7 @@ export default function OfflinePageClient() {
           >
             Try Again
           </button>
-          
+
           <Link
             href="/"
             className="block w-full bg-slate-800 hover:bg-slate-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200"

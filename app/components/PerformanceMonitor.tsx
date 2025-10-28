@@ -1,6 +1,5 @@
 'use client';
 
-
 import React, { useEffect, useState, memo } from 'react';
 
 // Performance API types
@@ -38,10 +37,10 @@ interface PerformanceMonitorProps {
   enableReporting?: boolean;
 }
 
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({ 
-  className = '', 
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
+  className = '',
   children,
-  enableReporting = false 
+  enableReporting = false
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     lcp: null,

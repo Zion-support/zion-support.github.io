@@ -1,6 +1,5 @@
 'use client';
 
-
 import React, { useEffect, memo, useCallback } from 'react';
 
 interface ConsolidatedPerformanceProps {
@@ -51,7 +50,7 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
       '/images/hero-bg.jpg',
       '/icons/sprite.svg'
     ];
-    
+
     criticalResources.forEach(resource => {
       const link = document.createElement('link');
       link.rel = 'preload';
@@ -89,7 +88,7 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
   // Optimize scroll performance
   const optimizeScrollPerformance = useCallback(() => {
     let ticking = false;
-    
+
     const updateScrollPosition = () => {
       if (!ticking) {
         requestAnimationFrame(() => {
@@ -101,7 +100,7 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
     };
 
     window.addEventListener('scroll', updateScrollPosition, { passive: true });
-    
+
     return () => {
       window.removeEventListener('scroll', updateScrollPosition);
     };
@@ -182,7 +181,7 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
     addResourceHints();
     monitorCoreWebVitals();
     monitorTTFB();
-    
+
     const cleanup = optimizeScrollPerformance();
 
     return cleanup;

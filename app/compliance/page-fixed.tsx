@@ -1,6 +1,7 @@
-'use client'
+import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+'use client'
 import { ArrowRight, CheckCircle, Clock, Database, Lock, Shield } from 'lucide-react';;
 
   const features = [
@@ -34,7 +35,7 @@ export default function PageFixedPage() {
   return (
     <>
       <Navigation />
-      
+
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
