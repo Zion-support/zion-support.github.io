@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 
-export const SkipLink: React.FC = () => {
+const SkipLink: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -68,50 +68,11 @@ export const SkipLink: React.FC = () => {
       >
         Skip to navigation
       </button>
-      <style jsx>{`
-        .skip-links {
-          position: absolute;
-          top: -40px;
-          left: 6px;
-          z-index: 1000;
-        }
-        
-        .skip-link {
-          position: absolute;
-          top: 0;
-          left: 0;
-          background: #000;
-          color: #fff;
-          padding: 8px 16px;
-          text-decoration: none;
-          border-radius: 0 0 4px 4px;
-          font-size: 14px;
-          font-weight: 600;
-          transition: top 0.3s;
-          border: none;
-          cursor: pointer;
-        }
-        
-        .skip-link:focus {
-          top: 0;
-          outline: 2px solid #fff;
-          outline-offset: 2px;
-        }
-        
-        .skip-link:not(:focus) {
-          top: -40px;
-        }
-        
-        .skip-link + .skip-link {
-          top: 40px;
-        }
-        
-        .skip-link + .skip-link:focus {
-          top: 40px;
-        }
-      `}</style>
     </div>
   );
 };
 
+SkipLink.displayName = 'SkipLink';
+
+export { SkipLink };
 export default SkipLink;

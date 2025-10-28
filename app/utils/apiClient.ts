@@ -4,7 +4,11 @@ interface ApiResponse<T> {
   message?: string;
 }
 
+<<<<<<< HEAD
 // RequestInit is already defined globally
+=======
+// RequestInit is already defined globally in TypeScript
+>>>>>>> main
 
 class ApiClient {
   private baseUrl: string;

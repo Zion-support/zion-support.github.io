@@ -1,5 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
 // Enhanced type definitions for better type safety
 export interface PerformanceMetrics {
   loadTime: number
@@ -53,6 +56,7 @@ export interface Service {
   }
   link: string
   category: 'ai' | 'it' | '5g' | 'blockchain' | 'iot'
+<<<<<<< HEAD
   tags: string[]}
 export interface AppUser {
   id: string
@@ -62,6 +66,9 @@ export interface AppUser {
   preferences?: UserPreferences
   createdAt: string
   lastLogin?: string
+=======
+  tags: string[]
+>>>>>>> main
 }
 export interface UserPreferences {
   theme: 'light' | 'dark' | 'auto'

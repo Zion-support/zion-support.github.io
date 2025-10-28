@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Service data for the application
+=======
+// Service data for AI and IT solutions
+>>>>>>> main
 export interface Service {
   id: string;
   title: string;

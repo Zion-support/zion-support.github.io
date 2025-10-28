@@ -98,6 +98,7 @@ export default [
     'backend/**',
     'blog/**',
     'components/api/**',
+<<<<<<< HEAD
     'components/apps/**',
     '*.js',
     'remove-helmet.js',
@@ -134,11 +135,42 @@ export default [
       '@typescript-eslint': tseslint,
     },
     rules: {
+=======
+    'components/apps/**'
+  ]},
+  js.configs.recommended,
+  {
+    files: ['**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      ecmaVersion: 2022,
+      sourceType: 'module',
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        ...globals.es2022
+      },
+      parser: tsParser,
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true
+        }
+      }
+    },
+    plugins: {
+      '@typescript-eslint': tseslint,
+      'react-hooks': reactHooks,
+      'react-refresh': reactRefresh,
+      'react': react
+    },
+    rules: {
+      ...tseslint.configs.recommended.rules,
+>>>>>>> main
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true },
       ],
+<<<<<<< HEAD
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
       'no-unused-vars': 'off',
@@ -146,4 +178,15 @@ export default [
       '@typescript-eslint/no-explicit-any': 'warn',
     },
   },
+=======
+      'react/jsx-uses-react': 'off',
+      'react/react-in-jsx-scope': 'off',
+      '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+      '@typescript-eslint/no-explicit-any': 'warn',
+      'prefer-const': 'error',
+      'no-var': 'error',
+      'react/prop-types': 'off'
+    }
+  }
+>>>>>>> main
 ];

@@ -10,7 +10,7 @@ import ServiceWorkerRegistration from "./app/components/ServiceWorkerRegistratio
 import SEOHead from "./app/components/SEOHead";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import ErrorBoundary from "./app/components/ErrorBoundary";
-import LoadingSpinner from "./app/components/LoadingSpinner";
+// import LoadingSpinner from "./app/components/LoadingSpinner"; // Removed unused import
 import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
 
 // Note: Page imports removed as they are not used in the main App component
@@ -41,6 +41,7 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; res
     </div>
   </div>
 );
+<<<<<<< HEAD
 // Memoized loading component
 const LoadingFallback = memo(() => (
   <div className="min-h-screen flex items-center justify-center">
@@ -48,6 +49,9 @@ const LoadingFallback = memo(() => (
   </div>
 ));
 LoadingFallback.displayName = 'LoadingFallback';
+=======
+// Memoized loading component - removed as it's not used
+>>>>>>> main
 
 // Memoized main content component
 const MainContent = memo(() => (

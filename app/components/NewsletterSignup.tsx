@@ -20,7 +20,11 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ onSubscribe, classN
       }
       setMessage('Thank you for subscribing!');
       setEmail('');
+<<<<<<< HEAD
     } catch (_error) {
+=======
+    } catch {
+>>>>>>> main
       setMessage('Something went wrong. Please try again.');
     } finally {
       setIsSubmitting(false);
