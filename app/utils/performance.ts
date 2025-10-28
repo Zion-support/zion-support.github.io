@@ -1,11 +1,12 @@
 import React from 'react';
 
+import logger from './logger';
 export const performance = {
   measure: (name: string, fn: () => void) => {
     const start = Date.now();
     fn();
     const end = Date.now();
-    console.log(`${name}: ${end - start}ms`);
+    logger.info(`${name}: ${end - start}ms`);
   }
 };
 

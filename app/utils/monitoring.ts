@@ -1,7 +1,8 @@
 import { useEffect } from 'react';
 
+import logger from './logger';
 export const monitoring = {
   track: (event: string, data?: unknown) => {
-    console.log('Tracking:', event, data);
+    logger.info('Tracking:', event, data);
   }
 };

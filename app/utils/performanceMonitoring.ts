@@ -1,3 +1,4 @@
+import logger from './logger';
 /**
  * Advanced Performance Monitoring Utility
  * Provides comprehensive performance tracking and optimization
@@ -55,7 +56,7 @@ class PerformanceMonitor {
         navObserver.observe({ entryTypes: ['navigation'] });
         this.observers.push(navObserver);
       } catch (error) {
-        console.warn('Performance observer initialization failed:', error);
+        logger.warn('Performance observer initialization failed:', error);
       }
     }
   }

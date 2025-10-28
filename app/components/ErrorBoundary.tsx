@@ -1,6 +1,7 @@
 'use client';
 import React, { Component, ErrorInfo } from 'react';
 
+import logger from '../utils/logger';
 interface ErrorBoundaryProps {
   children: React.ReactNode;
   fallback?: React.ReactNode;
@@ -23,7 +24,7 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    logger.error('ErrorBoundary caught an error:', error, errorInfo);
     
     this.setState({
       error,
@@ -32,7 +33,7 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, State> {
 
     // Log error to monitoring service
     if (typeof window !== 'undefined') {
-      console.error('Error details:', {
+      logger.error('Error details:', {
         error: error.message,
         stack: error.stack,
         componentStack: errorInfo.componentStack,

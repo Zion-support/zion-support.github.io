@@ -4,39 +4,41 @@ const fs = require('fs');
 const path = require('path');
 const { glob } = require('glob');
 
-// Function to fix import paths
-function fixImportPaths(content, filePath) {
+// Function to fix import extensions
+function fixImportExtensions(content, filePath) {
   let modified = content;
   let hasChanges = false;
 
-  // Fix logger import paths
-  const loggerImportRegex = /import\s+{\s*logger\s*}\s+from\s+['"]\.\/utils\/logger['"];?/g;
-  if (loggerImportRegex.test(modified)) {
-    // Determine the correct relative path
-    const relativePath = getRelativePath(filePath, '/workspace/app/utils/logger.ts');
-    modified = modified.replace(loggerImportRegex, `import { logger } from '${relativePath}';`);
+  // Remove .ts extension from imports
+  const tsExtensionRegex = /from\s+['"]([^'"]*)\.ts['"];?/g;
+  if (tsExtensionRegex.test(modified)) {
+    modified = modified.replace(tsExtensionRegex, (match, importPath) => {
+      return `from '${importPath}';`;
+    });
+    hasChanges = true;
+  }
+
+  // Remove .tsx extension from imports
+  const tsxExtensionRegex = /from\s+['"]([^'"]*)\.tsx['"];?/g;
+  if (tsxExtensionRegex.test(modified)) {
+    modified = modified.replace(tsxExtensionRegex, (match, importPath) => {
+      return `from '${importPath}';`;
+    });
     hasChanges = true;
   }
 
   return { content: modified, hasChanges };
 }
 
-// Function to calculate relative path
-function getRelativePath(from, to) {
-  const fromDir = path.dirname(from);
-  const relativePath = path.relative(fromDir, to).replace(/\\/g, '/');
-  return relativePath.startsWith('.') ? relativePath : './' + relativePath;
-}
-
 // Function to process a single file
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    const { content: modified, hasChanges } = fixImportPaths(content, filePath);
+    const { content: modified, hasChanges } = fixImportExtensions(content, filePath);
     
     if (hasChanges) {
       fs.writeFileSync(filePath, modified, 'utf8');
-      console.log(`✅ Fixed import paths in: ${filePath}`);
+      console.log(`✅ Fixed import extensions in: ${filePath}`);
       return true;
     }
     return false;
@@ -48,7 +50,7 @@ function processFile(filePath) {
 
 // Main execution
 async function main() {
-  console.log('🔧 Starting import path fixes...\n');
+  console.log('🔧 Starting import extension fixes...\n');
 
   // Find all TypeScript and JavaScript files in the app directory
   const patterns = [
@@ -70,9 +72,7 @@ async function main() {
       
       // Skip certain files
       if (file.includes('node_modules') || 
-          file.includes('.next') || 
-          file.includes('logger.ts') ||
-          file.includes('logger.js')) {
+          file.includes('.next')) {
         return;
       }
       
@@ -88,9 +88,9 @@ async function main() {
   console.log(`   Files unchanged: ${totalFiles - modifiedFiles}`);
 
   if (modifiedFiles > 0) {
-    console.log('\n✅ Import path fixes completed successfully!');
+    console.log('\n✅ Import extension fixes completed successfully!');
   } else {
-    console.log('\n✨ No import paths found to fix.');
+    console.log('\n✨ No import extensions found to fix.');
   }
 }
 

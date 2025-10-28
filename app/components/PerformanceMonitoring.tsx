@@ -3,6 +3,7 @@
 
 import React, { useEffect, memo, useCallback } from 'react';
 
+import logger from '../utils/logger';
 // Performance API types
 interface PerformanceEventTiming extends PerformanceEntry {
   processingStart: number;
@@ -28,7 +29,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const lcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
-      console.log('LCP:', lastEntry.startTime);
+      logger.info('LCP:', lastEntry.startTime);
       
       // Send to analytics if needed
       if (window.gtag) {
@@ -47,7 +48,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
       entries.forEach((entry) => {
         const fidEntry = entry as PerformanceEventTiming;
         const fid = fidEntry.processingStart - fidEntry.startTime;
-        console.log('FID:', fid);
+        logger.info('FID:', fid);
         
         if (window.gtag) {
           window.gtag('event', 'web_vitals', {
@@ -68,7 +69,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
         const clsEntry = entry as LayoutShiftEntry;
         if (!clsEntry.hadRecentInput) {
           clsValue += clsEntry.value;
-          console.log('CLS:', clsValue);
+          logger.info('CLS:', clsValue);
           
           if (window.gtag) {
             window.gtag('event', 'web_vitals', {
@@ -86,7 +87,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const fcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        console.log('FCP:', entry.startTime);
+        logger.info('FCP:', entry.startTime);
         
         if (window.gtag) {
           window.gtag('event', 'web_vitals', {
@@ -115,7 +116,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.duration > 1000) { // Resources taking more than 1 second
-          console.warn('Slow resource:', entry.name, entry.duration);
+          logger.warn('Slow resource:', entry.name, entry.duration);
         }
       });
     });
@@ -135,14 +136,14 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
         const total = memory.totalJSHeapSize / 1024 / 1024; // MB
         const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB
         
-        console.log('Memory usage:', {
+        logger.info('Memory usage:', {
           used: Math.round(used),
           total: Math.round(total),
           limit: Math.round(limit)
         });
 
         if (used / limit > 0.8) {
-          console.warn('High memory usage detected:', Math.round((used / limit) * 100) + '%');
+          logger.warn('High memory usage detected:', Math.round((used / limit) * 100) + '%');
         }
       }
     };

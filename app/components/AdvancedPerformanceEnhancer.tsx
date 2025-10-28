@@ -3,6 +3,7 @@
 
 import React, { useEffect, useState, useCallback } from 'react';
 
+import logger from '../utils/logger';
 interface PerformanceMetrics {
   lcp: number | null;
   fid: number | null;
@@ -92,7 +93,7 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
         }
       }
     } catch (error) {
-      console.warn('Performance monitoring error:', error);
+      logger.warn('Performance monitoring error:', error);
     }
   }, [enableMonitoring]);
 
@@ -150,7 +151,7 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
 
       setIsOptimized(true);
     } catch (error) {
-      console.warn('Performance optimization error:', error);
+      logger.warn('Performance optimization error:', error);
     }
   }, [enableOptimizations]);
 
@@ -169,7 +170,7 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
   // Log performance metrics for debugging
   useEffect(() => {
     if (enableMonitoring && Object.values(metrics).some(value => value !== null)) {
-      console.log('Performance Metrics:', metrics);
+      logger.info('Performance Metrics:', metrics);
     }
   }, [metrics, enableMonitoring]);
 

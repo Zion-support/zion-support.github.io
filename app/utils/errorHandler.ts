@@ -1,3 +1,4 @@
+import logger from './logger';
 'use client';
 
 export interface ErrorInfo {
@@ -35,7 +36,7 @@ export class ErrorHandler {
     };
 
     this.errors.push(errorData);
-    console.error('Error logged:', errorData);
+    logger.error('Error logged:', errorData);
 
     // Send to analytics if available
     if (typeof window !== 'undefined' && window.gtag) {
@@ -53,9 +54,9 @@ export class ErrorHandler {
     try {
       // This would typically send to a service like Sentry, LogRocket, etc.
       // For now, we'll just log it
-      console.log('Would send to error service:', errorData);
+      logger.info('Would send to error service:', errorData);
     } catch (err) {
-      console.error('Failed to send error to service:', err);
+      logger.error('Failed to send error to service:', err);
     }
   }
 

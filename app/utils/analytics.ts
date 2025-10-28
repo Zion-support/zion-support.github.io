@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import logger from './logger';
 // Analytics utilities for tracking user interactions and performance
 interface AnalyticsEvent {
   category: string;
@@ -28,7 +29,7 @@ class Analytics {
     // In production, you would send this to your analytics service
     if (process.env.NODE_ENV === "production") {
       this.sendToAnalytics(event)} else {
-      console.log("Analytics Event:", event)}
+      logger.info("Analytics Event:", event)}
   }
 
   // Track page views

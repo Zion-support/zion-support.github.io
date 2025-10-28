@@ -4,6 +4,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import Head from 'next/head';
 
+import logger from '../utils/logger';
 interface SEOData {
   title: string;
   description: string;
@@ -62,7 +63,7 @@ export const AdvancedSEOEnhancer: React.FC<AdvancedSEOEnhancerProps> = ({
 
       setOptimizedData(optimized);
     } catch (error) {
-      console.warn('SEO optimization error:', error);
+      logger.warn('SEO optimization error:', error);
     }
   }, [seoData, enableAutoOptimization]);
 
@@ -104,7 +105,7 @@ export const AdvancedSEOEnhancer: React.FC<AdvancedSEOEnhancerProps> = ({
 
       return structuredData;
     } catch (error) {
-      console.warn('Structured data generation error:', error);
+      logger.warn('Structured data generation error:', error);
       return null;
     }
   }, [optimizedData, enableStructuredData]);

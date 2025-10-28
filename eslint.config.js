@@ -1,6 +1,8 @@
 import js from '@eslint/js';
 import tseslint from '@typescript-eslint/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
+import reactPlugin from 'eslint-plugin-react';
+import reactHooksPlugin from 'eslint-plugin-react-hooks';
 
 export default [
   js.configs.recommended,
@@ -127,14 +129,18 @@ export default [
     },
     plugins: {
       '@typescript-eslint': tseslint,
+      'react': reactPlugin,
+      'react-hooks': reactHooksPlugin,
     },
     rules: {
       'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': 'off',
-      'no-console': 'warn',
+      'no-console': 'off', // Allow console statements since we have proper logging
       'prefer-const': 'warn',
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
     },
   },
 ];

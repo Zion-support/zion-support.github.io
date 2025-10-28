@@ -1,3 +1,4 @@
+import logger from './logger';
 /**
  * Advanced Error Handling Utility
  * Provides comprehensive error tracking and recovery
@@ -93,7 +94,7 @@ class ErrorHandler {
   private reportError(errorInfo: ErrorInfo): void {
     // Implement error reporting logic here
     if (errorInfo.severity === 'critical') {
-      console.error('Critical error:', errorInfo);
+      logger.error('Critical error:', errorInfo);
     }
   }
 

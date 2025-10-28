@@ -3,6 +3,7 @@
 
 import React, { memo, useEffect } from 'react';
 
+import logger from '../utils/logger';
 const ServiceWorkerRegistration: React.FC = memo(() => {
   useEffect(() => {
     if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
@@ -10,10 +11,10 @@ const ServiceWorkerRegistration: React.FC = memo(() => {
       navigator.serviceWorker
         .register('/sw.js')
         .then((registration) => {
-          console.log('Service Worker registered successfully:', registration);
+          logger.info('Service Worker registered successfully:', registration);
         })
         .catch((error) => {
-          console.log('Service Worker registration failed:', error);
+          logger.info('Service Worker registration failed:', error);
         });
 
       // Handle service worker updates

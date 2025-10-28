@@ -4,39 +4,36 @@ const fs = require('fs');
 const path = require('path');
 const { glob } = require('glob');
 
-// Function to fix import paths
-function fixImportPaths(content, filePath) {
+// Function to fix logger import statements
+function fixLoggerImports(content, filePath) {
   let modified = content;
   let hasChanges = false;
 
-  // Fix logger import paths
-  const loggerImportRegex = /import\s+{\s*logger\s*}\s+from\s+['"]\.\/utils\/logger['"];?/g;
-  if (loggerImportRegex.test(modified)) {
-    // Determine the correct relative path
-    const relativePath = getRelativePath(filePath, '/workspace/app/utils/logger.ts');
-    modified = modified.replace(loggerImportRegex, `import { logger } from '${relativePath}';`);
+  // Fix named import to default import
+  const namedImportRegex = /import\s+{\s*logger\s*}\s+from\s+['"][^'"]*logger[^'"]*['"];?/g;
+  if (namedImportRegex.test(modified)) {
+    modified = modified.replace(namedImportRegex, (match) => {
+      const pathMatch = match.match(/from\s+['"]([^'"]*)['"]/);
+      if (pathMatch) {
+        return `import logger from '${pathMatch[1]}';`;
+      }
+      return match;
+    });
     hasChanges = true;
   }
 
   return { content: modified, hasChanges };
 }
 
-// Function to calculate relative path
-function getRelativePath(from, to) {
-  const fromDir = path.dirname(from);
-  const relativePath = path.relative(fromDir, to).replace(/\\/g, '/');
-  return relativePath.startsWith('.') ? relativePath : './' + relativePath;
-}
-
 // Function to process a single file
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    const { content: modified, hasChanges } = fixImportPaths(content, filePath);
+    const { content: modified, hasChanges } = fixLoggerImports(content, filePath);
     
     if (hasChanges) {
       fs.writeFileSync(filePath, modified, 'utf8');
-      console.log(`✅ Fixed import paths in: ${filePath}`);
+      console.log(`✅ Fixed logger imports in: ${filePath}`);
       return true;
     }
     return false;
@@ -48,7 +45,7 @@ function processFile(filePath) {
 
 // Main execution
 async function main() {
-  console.log('🔧 Starting import path fixes...\n');
+  console.log('🔧 Starting logger import fixes...\n');
 
   // Find all TypeScript and JavaScript files in the app directory
   const patterns = [
@@ -88,9 +85,9 @@ async function main() {
   console.log(`   Files unchanged: ${totalFiles - modifiedFiles}`);
 
   if (modifiedFiles > 0) {
-    console.log('\n✅ Import path fixes completed successfully!');
+    console.log('\n✅ Logger import fixes completed successfully!');
   } else {
-    console.log('\n✨ No import paths found to fix.');
+    console.log('\n✨ No logger imports found to fix.');
   }
 }
 

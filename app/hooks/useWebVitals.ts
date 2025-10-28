@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 
+import logger from '../utils/logger';
 interface WebVitalsMetric {
   name: string;
   value: number;
@@ -13,14 +14,14 @@ export const useWebVitals = (onPerfEntry?: (metric: WebVitalsMetric) => void) =>
     if (onPerfEntry && typeof window !== 'undefined') {
       // Use the existing monitoring service instead of web-vitals
       // This avoids API compatibility issues
-      console.log('Web Vitals monitoring initialized');
+      logger.info('Web Vitals monitoring initialized');
     }
   }, [onPerfEntry]);
 };
 
 export const reportWebVitals = (metric: WebVitalsMetric) => {
   if (process.env.NODE_ENV === 'development') {
-    console.log('Web Vital:', metric);
+    logger.info('Web Vital:', metric);
   }
   
   // Send to analytics
