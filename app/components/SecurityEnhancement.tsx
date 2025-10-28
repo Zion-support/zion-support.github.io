@@ -53,15 +53,21 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
     if (typeof window === 'undefined') return;
 
     // Monitor for XSS attempts
-    const originalInnerHTML = Element.prototype.innerHTML as any;
-    const elementPrototype = Element.prototype as any;
-    elementPrototype.innerHTML = function(value: string) {
-      if (value && typeof value === 'string' && /<script/i.test(value)) {
-        console.warn('Potential XSS attempt detected:', value);
-        return;
-      }
-      return originalInnerHTML.call(this, value);
-    };
+    const originalInnerHTML = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML');
+    if (originalInnerHTML && originalInnerHTML.set) {
+      const originalSetter = originalInnerHTML.set;
+      Object.defineProperty(Element.prototype, 'innerHTML', {
+        set: function(value: string) {
+          if (value && typeof value === 'string' && /<script/i.test(value)) {
+            console.warn('Potential XSS attempt detected:', value);
+            return;
+          }
+          originalSetter.call(this, value);
+        },
+        get: originalInnerHTML.get,
+        configurable: true
+      });
+    }
 
     // Monitor for suspicious console usage
     const originalConsole = console.log;
