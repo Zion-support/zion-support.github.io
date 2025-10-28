@@ -54,6 +54,14 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
 
     // Monitor for XSS attempts (simplified)
     // Note: Direct innerHTML manipulation is not recommended in production
+    const originalInnerHTML = (Element.prototype as { innerHTML: (value: string) => void }).innerHTML;
+    (Element.prototype as { innerHTML: (value: string) => void }).innerHTML = function(value: string) {
+      if (value && typeof value === 'string' && /<script/i.test(value)) {
+        console.warn('Potential XSS attempt detected:', value);
+        return;
+      }
+      return originalInnerHTML.call(this, value);
+    };
 
     // Monitor for suspicious console usage
     const originalConsole = console.log;
