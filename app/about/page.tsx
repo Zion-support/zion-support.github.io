@@ -1,4 +1,4 @@
-import { ErrorBoundary } from './components/ErrorBoundary'
+import ErrorBoundary from '../components/ErrorBoundary'
 
 export const metadata = {
   title: 'About Us | Zion Tech Group',

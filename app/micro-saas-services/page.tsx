@@ -1,4 +1,4 @@
-import { ErrorBoundary } from './components/ErrorBoundary';
+import ErrorBoundary from '../components/ErrorBoundary';
 import React from 'react';
 import { ArrowRight } from 'lucide-react';;
 ;
@@ -39,7 +39,7 @@ function pagePage() {
 export default function Wrapped(props: any) {
   return (
     <ErrorBoundary>
-      <PageComponent {...props} />
+      <Page {...props} />
     </ErrorBoundary>
   );
 }

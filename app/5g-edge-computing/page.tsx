@@ -8,7 +8,7 @@ export const metadata = {
     type: 'website',
   },
 };
-import { ErrorBoundary } from './components/ErrorBoundary'
+import ErrorBoundary from '../components/ErrorBoundary'
 
 
 ;
@@ -52,7 +52,7 @@ function Page() {
 export default function Wrapped(props: any) {
   return (
     <ErrorBoundary>
-      <PageComponent {...props} />
+      <Page {...props} />
     </ErrorBoundary>
   );
 }

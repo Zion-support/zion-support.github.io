@@ -1,7 +1,7 @@
 'use client'
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
 import { ArrowRight, CheckCircle, Clock, Database, Lock, Shield } from 'lucide-react';;
 
   const features = [
