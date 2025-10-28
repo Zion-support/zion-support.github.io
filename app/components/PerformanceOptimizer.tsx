@@ -50,16 +50,20 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       if (!img.loading) {
         img.loading = 'lazy';
       }
-    };
+      if (!img.decoding) {
+        img.decoding = 'async';
+      }
+    });
 
-<<<<<<< HEAD
-    // Add performance monitoring
+    // Performance monitoring
     const monitorPerformance = () => {
       if (typeof window !== 'undefined' && 'performance' in window) {
         // Monitor Core Web Vitals
         const observer = new PerformanceObserver((list) => {
           list.getEntries().forEach((entry) => {
-            if (entry.entryType === 'largest-contentful-paint') { /* empty */ }
+            if (entry.entryType === 'largest-contentful-paint') {
+              console.log('LCP:', entry.startTime);
+            }
             if (entry.entryType === 'first-input') {
               const firstInput = entry as PerformanceEventTiming;
               console.log('First Input Delay:', firstInput.processingStart - firstInput.startTime);
@@ -75,18 +79,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       }
     };
 
-    // Optimize images
-=======
-    // Optimize all images
->>>>>>> 30c010096b490cf93d91324eaa8e32e8fdb823e1
-    const images = document.querySelectorAll('img');
-    images.forEach((img) => {
-      if (!img.decoding) {
-        img.decoding = 'async';
-      }
-    });
-
-    optimizeImages();
     monitorPerformance();
 
     // Enable service worker
