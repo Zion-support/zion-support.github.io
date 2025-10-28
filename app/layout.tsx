@@ -7,16 +7,17 @@ import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
-import PerformanceOptimizations from './components/PerformanceOptimizations';
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import SkipLink from './components/SkipLink';
-export { metadata, viewport } from './metadata';
 import PerformanceMonitoring from './components/PerformanceMonitoring';
 import SEOOptimization from './components/SEOOptimization';
-import SEOEnhancements from './components/SEOEnhancements';
 import SecurityEnhancement from './components/SecurityEnhancement';
+import AdvancedPerformanceEnhancer from './components/AdvancedPerformanceEnhancer';
 
 const inter = Inter({ subsets: ['latin'] });
+
+// Re-export metadata and viewport for Next.js
+export { metadata, viewport };
 export default function RootLayout({
   children,
 }: {
@@ -29,25 +30,24 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <ErrorBoundary>
-          <PerformanceOptimizer>
-            <PerformanceOptimizations>
-              <div className="min-h-screen bg-slate-900">
-                <SkipLink />
-                <Navigation />
-                <main className="relative z-10" id="main-content" role="main" tabIndex={-1}>
-                  {children}
-                </main>
-                <Footer />
-                <PerformanceMonitor />
-                <AccessibilityEnhancer />
-                <ServiceWorkerRegistration />
-                <PerformanceMonitoring />
-                <SEOOptimization />
-                <SEOEnhancements />
-                <SecurityEnhancement />
-              </div>
-            </PerformanceOptimizations>
-          </PerformanceOptimizer>
+          <AdvancedPerformanceEnhancer enableMonitoring={true} enableOptimizations={true}>
+            <PerformanceOptimizer>
+                <div className="min-h-screen bg-slate-900">
+                  <SkipLink />
+                  <Navigation />
+                  <main className="relative z-10" id="main-content" role="main" tabIndex={-1}>
+                    {children}
+                  </main>
+                  <Footer />
+                  <PerformanceMonitor />
+                  <AccessibilityEnhancer />
+                  <ServiceWorkerRegistration />
+                  <PerformanceMonitoring />
+                  <SEOOptimization />
+                  <SecurityEnhancement />
+                </div>
+              </PerformanceOptimizer>
+          </AdvancedPerformanceEnhancer>
         </ErrorBoundary>
       </body>
     </html>
