@@ -1,67 +1,85 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
-import { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';
+import React, { useEffect, useState, memo } from 'react';
 
+// Performance API type definitions
 interface PerformanceMetrics {
-  cls: number | null;
-  fid: number | null;
-  fcp: number | null;
   lcp: number | null;
+  fid: number | null;
+  cls: number | null;
+  fcp: number | null;
   ttfb: number | null;
 }
 
-const PerformanceMonitor: React.FC = () => {
+interface PerformanceMonitorProps {
+  className?: string;
+  children?: React.ReactNode;
+  enableReporting?: boolean;
+}
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({ 
+  className = '', 
+  children,
+  enableReporting = false 
+}) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    cls: null,
-    fid: null,
-    fcp: null,
     lcp: null,
+    fid: null,
+    cls: null,
+    fcp: null,
     ttfb: null,
   });
 
   useEffect(() => {
-    // Only run in production
-    if (process.env.NODE_ENV !== 'production') return;
+    if (typeof window === 'undefined' || !enableReporting) return;
 
-    const handleMetric = (metric: { name: string; value: number; id: string }) => {
-      setMetrics(prev => ({
-        ...prev,
-        [metric.name]: metric.value,
-      }));
-
-      // Send to analytics service (replace with your analytics endpoint)
-      if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('event', metric.name, {
-          event_category: 'Web Vitals',
-          value: Math.round(metric.value),
-          event_label: metric.id,
-          non_interaction: true,
-        });
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        if (entry.entryType === 'largest-contentful-paint') {
+          setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
+        } else if (entry.entryType === 'first-input') {
+          const fidEntry = entry as PerformanceEntry & { processingStart: number };
+          setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - entry.startTime }));
+        } else if (entry.entryType === 'layout-shift') {
+          const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+          if (!layoutShiftEntry.hadRecentInput) {
+            setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (layoutShiftEntry.value || 0) }));
+          }
+        } else if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
+          setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+        }
       }
+    });
+
+    observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
+
+    // TTFB measurement
+    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    if (navigationEntry) {
+      setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
+    }
+
+    return () => {
+      observer.disconnect();
     };
-
-    onCLS(handleMetric);
-    onFCP(handleMetric);
-    onLCP(handleMetric);
-    onTTFB(handleMetric);
-  }, []);
-
-  // Don't render anything in production
-  if (process.env.NODE_ENV === 'production') return null;
+  }, [enableReporting]);
 
   return (
-    <div className="fixed bottom-4 right-4 bg-slate-800 text-white p-4 rounded-lg shadow-lg text-xs font-mono z-50">
-      <h3 className="font-bold mb-2">Performance Metrics</h3>
-      <div className="space-y-1">
-        <div>CLS: {metrics.cls?.toFixed(3) || 'N/A'}</div>
-        <div>FID: {metrics.fid?.toFixed(2) || 'N/A'}ms</div>
-        <div>FCP: {metrics.fcp?.toFixed(2) || 'N/A'}ms</div>
-        <div>LCP: {metrics.lcp?.toFixed(2) || 'N/A'}ms</div>
-        <div>TTFB: {metrics.ttfb?.toFixed(2) || 'N/A'}ms</div>
-      </div>
+    <div className={className}>
+      {children}
+      {enableReporting && process.env.NODE_ENV === 'development' && (
+        <div className="fixed bottom-4 right-4 bg-black/80 text-white p-2 rounded text-xs font-mono">
+          <div>LCP: {metrics.lcp?.toFixed(2) || 'N/A'}ms</div>
+          <div>FID: {metrics.fid?.toFixed(2) || 'N/A'}ms</div>
+          <div>CLS: {metrics.cls?.toFixed(4) || 'N/A'}</div>
+          <div>FCP: {metrics.fcp?.toFixed(2) || 'N/A'}ms</div>
+          <div>TTFB: {metrics.ttfb?.toFixed(2) || 'N/A'}ms</div>
+        </div>
+      )}
     </div>
   );
-};
+});
+
+PerformanceMonitor.displayName = 'PerformanceMonitor';
 
 export default PerformanceMonitor;

@@ -1,20 +1,18 @@
-'use client';
-
-import React from 'react'
+import React from 'react';
 
 interface EnhancedSEOHeadProps {
-  // Add props here
+  className?: string;
+  children?: React.ReactNode;
+}
 
-
-const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = (_props) => {
+const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({ className = '', children }) => {
   return (
-    <div>
-      {/* Component content */
+    <div className={`enhancedseohead-component ${className}`}>
+      {children}
     </div>
-  )
-}
+  );
+};
 
-}
+EnhancedSEOHead.displayName = 'EnhancedSEOHead';
 
-export default EnhancedSEOHead
-}
+export default EnhancedSEOHead;

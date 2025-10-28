@@ -1,19 +1,18 @@
-'use client';
-import React from 'react'
+import React from 'react';
 
 interface EnhancedPerformanceMonitorProps {
-  // Add props here
+  className?: string;
+  children?: React.ReactNode;
+}
 
-
-const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = (_props) => {
+const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = ({ className = '', children }) => {
   return (
-    <div>
-      {/* Component content */
+    <div className={`enhancedperformancemonitor-component ${className}`}>
+      {children}
     </div>
-  )
-}
+  );
+};
 
-}
+EnhancedPerformanceMonitor.displayName = 'EnhancedPerformanceMonitor';
 
-export default EnhancedPerformanceMonitor
-}
+export default EnhancedPerformanceMonitor;

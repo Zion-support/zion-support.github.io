@@ -1,145 +1,192 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
 
-// Function to fix final issues
-function fixFinalIssues(filePath) {
+// Function to fix remaining React import issues
+function fixReactImports() {
+  const filesToFix = [
+    'app/components/AccessibilityComponents.tsx',
+    'app/components/AdvancedPerformanceMonitor.tsx',
+    'app/components/AdvancedPerformanceOptimizer.tsx',
+    'app/components/ContentNewsletterSignup.tsx',
+    'app/components/ContentStatistics.tsx',
+    'app/components/EnhancedSEO.tsx',
+    'app/components/GlobalErrorBoundary.tsx',
+    'app/components/Header.tsx',
+    'app/components/SEOOptimizer.tsx'
+  ];
+
+  filesToFix.forEach(filePath => {
+    try {
+      let content = fs.readFileSync(filePath, 'utf8');
+      
+      // Remove unused React imports
+      if (content.includes("import React from 'react';") && !content.includes('React.')) {
+        content = content.replace("import React from 'react';\n", '');
+      }
+      
+      // Clean up extra empty lines
+      content = content.replace(/\n\n\n+/g, '\n\n');
+      
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed React import in: ${filePath}`);
+    } catch (error) {
+      console.error(`Error fixing ${filePath}:`, error.message);
+    }
+  });
+}
+
+// Function to fix Navigation Search import
+function fixNavigationSearch() {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-
-    // Fix duplicate imports
-    const lines = content.split('\n');
-    const seenImports = new Set();
-    const cleanedLines = [];
-    let inImportBlock = false;
-
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      
-      // Check if we're starting an import block
-      if (line.trim().startsWith('import ') || line.trim().startsWith('"use client"') || line.trim().startsWith("'use client'")) {
-        inImportBlock = true;
-      }
-      
-      // Check if we're ending the import block
-      if (inImportBlock && !line.trim().startsWith('import ') && !line.trim().startsWith('"use client"') && !line.trim().startsWith("'use client'") && line.trim() !== '') {
-        inImportBlock = false;
-      }
-
-      if (inImportBlock && line.trim().startsWith('import ')) {
-        const importKey = line.trim();
-        if (!seenImports.has(importKey)) {
-          seenImports.add(importKey);
-          cleanedLines.push(line);
-        }
-      } else if (inImportBlock && (line.trim().startsWith('"use client"') || line.trim().startsWith("'use client'"))) {
-        if (!seenImports.has('"use client"')) {
-          seenImports.add('"use client"');
-          cleanedLines.push(line);
-        }
-      } else {
-        cleanedLines.push(line);
-      }
-    }
-
-    if (cleanedLines.length !== lines.length) {
-      content = cleanedLines.join('\n');
-      modified = true;
-    }
-
-    // Fix multiple export default statements
-    const exportMatches = content.match(/export default [^;]+;/g);
-    if (exportMatches && exportMatches.length > 1) {
-      // Keep only the first export default
-      const firstExport = exportMatches[0];
-      content = content.replace(/export default [^;]+;/g, '');
-      content = content.replace(/(\n|^)([^}]*\n)*\s*}\s*$/, `$1${firstExport}`);
-      modified = true;
-    }
-
-    // Fix stray ); characters
-    content = content.replace(/\s*\);\s*import/g, '\nimport');
-    content = content.replace(/\s*\);\s*export/g, '\nexport');
-    content = content.replace(/\s*\);\s*const/g, '\nconst');
-    content = content.replace(/\s*\);\s*function/g, '\nfunction');
-
-    // Fix missing semicolons after import statements
-    content = content.replace(/import[^;]*\n/g, (match) => {
-      if (!match.trim().endsWith(';')) {
-        return match.trim() + ';\n';
-      }
-      return match;
-    });
-
-    // Fix missing semicolons after useState
-    content = content.replace(/useState\([^)]*\)\n/g, (match) => {
-      if (!match.trim().endsWith(';')) {
-        return match.trim() + ';\n';
-      }
-      return match;
-    });
-
-    // Fix missing semicolons after array declarations
-    content = content.replace(/\]\n/g, (match) => {
-      if (!match.trim().endsWith(';')) {
-        return match.trim() + ';\n';
-      }
-      return match;
-    });
-
-    // Fix missing semicolons after export default
-    content = content.replace(/export default [^;]*\n/g, (match) => {
-      if (!match.trim().endsWith(';')) {
-        return match.trim() + ';\n';
-      }
-      return match;
-    });
-
-    if (content !== fs.readFileSync(filePath, 'utf8')) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed final issues: ${filePath}`);
-      return true;
-    }
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-  }
-  return false;
-}
-
-// Function to recursively find all .tsx and .ts files
-function findFiles(dir, extensions = ['.tsx', '.ts']) {
-  const files = [];
-  
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
+    let content = fs.readFileSync('app/components/Navigation.tsx', 'utf8');
     
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
+    // Remove unused Search import
+    content = content.replace(/, Search/g, '');
+    
+    fs.writeFileSync('app/components/Navigation.tsx', content);
+    console.log('Fixed Navigation Search import');
+  } catch (error) {
+    console.error('Error fixing Navigation:', error.message);
+  }
+}
+
+// Function to fix hook files
+function fixHookFiles() {
+  try {
+    let content = fs.readFileSync('app/hooks/useEnhancedPerformance.ts', 'utf8');
+    
+    // Remove the entire unused destructured elements line
+    content = content.replace(/const \{ [^}]+ \} = useCallback\(\(\) => \{[\s\S]*?\}, \[\]\);\n/g, '');
+    
+    fs.writeFileSync('app/hooks/useEnhancedPerformance.ts', content);
+    console.log('Fixed hook file');
+  } catch (error) {
+    console.error('Error fixing hook file:', error.message);
+  }
+}
+
+// Function to fix component files with missing exports
+function fixComponentExports() {
+  const filesToFix = [
+    'app/components/Analytics.tsx',
+    'app/components/AnimatedCounter.tsx',
+    'app/components/ContactForm.tsx',
+    'app/components/ContentPreviewCard.tsx',
+    'app/components/ContentPromotionBanner.tsx',
+    'app/components/DynamicContentShowcase.tsx',
+    'app/components/EnhancedErrorBoundary.tsx',
+    'app/components/EnhancedLoading.tsx',
+    'app/components/EnhancedLoadingStates.tsx',
+    'app/components/EnhancedPerformanceOptimizer.tsx',
+    'app/components/EnhancedSEOHead.tsx',
+    'app/components/EnhancedSkipLink.tsx',
+    'app/components/ErrorHandler.tsx',
+    'app/components/FuturisticBackground.tsx',
+    'app/components/LazyImage.tsx',
+    'app/components/LoadingSpinner.tsx',
+    'app/components/LoadingStates.tsx',
+    'app/components/NeonButton.tsx',
+    'app/components/OptimizedImage.tsx',
+    'app/components/OptimizedLoadingSpinner.tsx',
+    'app/components/PerformanceDashboard.tsx',
+    'app/components/PerformanceOptimizations.tsx',
+    'app/components/PerformanceOptimizer.tsx',
+    'app/components/ResponsiveContainer.tsx',
+    'app/components/SEOEnhancer.tsx',
+    'app/components/SecurityEnhancer.tsx',
+    'app/components/ServiceCard.tsx',
+    'app/components/ServiceCardSkeleton.tsx',
+    'app/components/Sidebar.tsx',
+    'app/components/SkipLink.tsx'
+  ];
+
+  filesToFix.forEach(filePath => {
+    try {
+      let content = fs.readFileSync(filePath, 'utf8');
       
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath);
-      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
-        files.push(fullPath);
+      // Add default export if missing
+      if (!content.includes('export default')) {
+        const componentName = filePath.split('/').pop().replace('.tsx', '');
+        content += `\n\nexport default ${componentName};`;
       }
+      
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed export in: ${filePath}`);
+    } catch (error) {
+      console.error(`Error fixing ${filePath}:`, error.message);
     }
+  });
+}
+
+// Function to fix missing types
+function fixMissingTypes() {
+  try {
+    // Create the missing types file
+    const typesContent = `export interface AccessibilityConfig {
+  enableSkipLinks: boolean;
+  enableFocusManagement: boolean;
+  enableScreenReaderSupport: boolean;
+  enableKeyboardNavigation: boolean;
+  enableHighContrast: boolean;
+  enableReducedMotion: boolean;
+  enableVoiceOver: boolean;
+  enableJAWS: boolean;
+  enableNVDA: boolean;
+  enableChromeVox: boolean;
+}
+
+export interface AccessibilityFeatures {
+  skipLinks: boolean;
+  focusManagement: boolean;
+  screenReaderSupport: boolean;
+  keyboardNavigation: boolean;
+  highContrast: boolean;
+  reducedMotion: boolean;
+  voiceOver: boolean;
+  jaws: boolean;
+  nvda: boolean;
+  chromeVox: boolean;
+}
+
+export interface AccessibilityTestResult {
+  passed: boolean;
+  score: number;
+  issues: string[];
+  recommendations: string[];
+}
+
+export interface AccessibilityAudit {
+  overallScore: number;
+  passedTests: number;
+  totalTests: number;
+  results: AccessibilityTestResult[];
+  timestamp: Date;
+}`;
+
+    fs.writeFileSync('app/types/accessibility.ts', typesContent);
+    console.log('Created missing types file');
+  } catch (error) {
+    console.error('Error creating types file:', error.message);
   }
+}
+
+// Main function
+async function main() {
+  console.log('Fixing React imports...');
+  fixReactImports();
   
-  traverse(dir);
-  return files;
+  console.log('Fixing Navigation Search import...');
+  fixNavigationSearch();
+  
+  console.log('Fixing hook files...');
+  fixHookFiles();
+  
+  console.log('Fixing component exports...');
+  fixComponentExports();
+  
+  console.log('Creating missing types...');
+  fixMissingTypes();
+  
+  console.log('Done!');
 }
 
-// Main execution
-console.log('Fixing final issues...');
-
-const appDir = path.join('/workspace', 'app');
-const files = findFiles(appDir);
-
-let fixedCount = 0;
-for (const file of files) {
-  if (fixFinalIssues(file)) {
-    fixedCount++;
-  }
-}
-
-console.log(`Fixed ${fixedCount} files with final issues.`);
+main().catch(console.error);

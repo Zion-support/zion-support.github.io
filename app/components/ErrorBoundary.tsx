@@ -1,45 +1,56 @@
 'use client';
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { ExclamationTriangleIcon } from '@heroicons/react/24/outline';
 
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-}
-
-interface State {
+interface ErrorBoundaryState {
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
 }
 
-class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
+interface ErrorBoundaryProps {
+  children: ReactNode;
+  fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  className?: string;
+}
+
+class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
     super(props);
     this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
+    return {
+      hasError: true,
+      error,
+    };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
-    
     this.setState({
       error,
       errorInfo,
     });
 
-    // Log error to monitoring service
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'exception', {
-        description: error.message,
-        fatal: false,
-      });
+    // Log error to console in development
+    if (typeof window !== "undefined" && (typeof process !== "undefined" ? process.env.NODE_ENV : 'development') === 'development') {
+      console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
+
+    // Call custom error handler if provided
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
+    }
+
+    // Here you would typically send error to your error reporting service
+    // Example: errorReportingService.captureException(error, { extra: errorInfo });
   }
+
+  handleRetry = () => {
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+  };
 
   render() {
     if (this.state.hasError) {
@@ -48,40 +59,48 @@ class ErrorBoundary extends Component<Props, State> {
       }
 
       return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
-          <div className="max-w-md w-full bg-slate-800/50 backdrop-blur-md rounded-xl p-8 text-center border border-slate-700">
-            <ExclamationTriangleIcon className="h-16 w-16 text-red-400 mx-auto mb-4" />
-            <h1 className="text-2xl font-bold text-white mb-4">
-              Oops! Something went wrong
-            </h1>
-            <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
-            </p>
-            <div className="space-y-3">
-              <button
-                onClick={() => window.location.reload()}
-                className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
-              >
-                Try Again
-              </button>
-              <button
-                onClick={() => window.location.href = '/'}
-                className="w-full border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-semibold py-2 px-4 rounded-lg transition-colors"
-              >
-                Go Home
-              </button>
+        <div className={`error-boundary ${this.props.className || ''}`}>
+          <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
+            <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
+              <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full mb-4">
+                <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.268 19.5c-.77.833.192 2.5 1.732 2.5z" />
+                </svg>
+              </div>
+              <div className="text-center">
+                <h3 className="text-lg font-medium text-gray-900 mb-2">
+                  Something went wrong
+                </h3>
+                <p className="text-sm text-gray-500 mb-4">
+                  We&apos;re sorry, but something unexpected happened. Please try again.
+                </p>
+                {typeof window !== "undefined" && (typeof process !== "undefined" ? process.env.NODE_ENV : 'development') === 'development' && this.state.error && (
+                  <details className="text-left mb-4">
+                    <summary className="cursor-pointer text-sm text-gray-600 hover:text-gray-800">
+                      Error Details
+                    </summary>
+                    <pre className="mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto">
+                      {this.state.error.toString()}
+                      {this.state.errorInfo?.componentStack}
+                    </pre>
+                  </details>
+                )}
+                <div className="flex gap-2 justify-center">
+                  <button
+                    onClick={this.handleRetry}
+                    className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors"
+                  >
+                    Try Again
+                  </button>
+                  <button
+                    onClick={() => window.location.reload()}
+                    className="px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 transition-colors"
+                  >
+                    Reload Page
+                  </button>
+                </div>
+              </div>
             </div>
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mt-6 text-left">
-                <summary className="text-sm text-gray-400 cursor-pointer hover:text-white">
-                  Error Details (Development)
-                </summary>
-                <pre className="mt-2 text-xs text-red-400 bg-slate-900 p-3 rounded overflow-auto">
-                  {this.state.error.toString()}
-                  {this.state.errorInfo?.componentStack}
-                </pre>
-              </details>
-            )}
           </div>
         </div>
       );

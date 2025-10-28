@@ -100,72 +100,52 @@ export default [
     'components/api/**',
     'components/apps/**'
   ]},
+  js.configs.recommended,
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
-      ecmaVersion: 2020,
+      ecmaVersion: 2022,
+      sourceType: 'module',
       globals: {
         ...globals.browser,
         ...globals.node,
+        ...globals.es2022
       },
       parser: tsParser,
       parserOptions: {
         ecmaFeatures: {
-          jsx: true,
-        },
-      },
+          jsx: true
+        }
+      }
     },
     plugins: {
       '@typescript-eslint': tseslint,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
-      'react': react,
+      'react': react
+    },
+    settings: {
+      react: {
+        version: 'detect'
+      }
     },
     rules: {
-      ...js.configs.recommended.rules,
+      ...tseslint.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': [
         'warn',
-        {
-          allowConstantExport: true, 
-          allowExportNames: ['metadata', 'viewport', 'useAnalytics', 'AnalyticsProvider'] 
-        }
+        { 
+          allowConstantExport: true,
+          allowExportNames: ['metadata', 'viewport']
+        },
       ],
-      '@typescript-eslint/no-unused-vars': ['error', { 
-        'argsIgnorePattern': '^_',
-        'varsIgnorePattern': '^_',
-        'caughtErrorsIgnorePattern': '^_'
-      }],
+      'react/jsx-uses-react': 'off',
+      'react/react-in-jsx-scope': 'off',
+      '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
       '@typescript-eslint/no-explicit-any': 'warn',
-      'no-console': 'off',
-      'no-unused-vars': ['error', { 
-        'argsIgnorePattern': '^_',
-        'varsIgnorePattern': '^_',
-        'caughtErrorsIgnorePattern': '^_'
-      }],
       'prefer-const': 'error',
       'no-var': 'error',
-      'react/no-unescaped-entities': 'off',
-      'react/react-in-jsx-scope': 'off',
-    },
-  },
-  {
-    files: ['**/AnalyticsProvider.tsx'],
-    rules: {
-      'react-refresh/only-export-components': 'off'
+      'react/prop-types': 'off'
     }
-  },
-  {
-    files: ['**/*.test.{js,jsx,ts,tsx}', '**/__tests__/**/*.{js,jsx,ts,tsx}', '**/setupTests.{js,ts,jsx,tsx}', '**/jest.setup.js'],
-    languageOptions: {
-      globals: {
-        ...globals.jest,
-      },
-    },
-    rules: {
-      '@typescript-eslint/no-unused-vars': 'off',
-      'no-unused-vars': 'off',
-      '@typescript-eslint/no-explicit-any': 'off',
-    },
-  },
+  }
 ];

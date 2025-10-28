@@ -11,16 +11,14 @@ export const metaTags = {
     description: 'Professional web development services with cutting-edge technology and innovative solutions.',
     type: 'website',
     url: 'https://bolt.new.zion.app',
-    image: 'https://bolt.new.zion.app/og-image.jpg'},
-  twitter: {,
+    image: 'https://bolt.new.zion.app/og-image.jpg'
+  },
+  twitter: {
     card: 'summary_large_image',
     title: 'Bolt.new Zion App - Advanced Web Development Solutions',
     description: 'Professional web development services with cutting-edge technology and innovative solutions.',
-    image: 'https://bolt.new.zion.app/og-image.jpg',
-export const metaTags = {/* TODO: Fix JSX expression */};
-  },
-  twitte,
-  r: {/* TODO: Fix JSX expression */}
-  }}
+    image: 'https://bolt.new.zion.app/og-image.jpg'
+  }
+};
 
-export default metaTags
+export default metaTags;

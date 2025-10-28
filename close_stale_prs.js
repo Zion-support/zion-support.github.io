@@ -1,130 +1,101 @@
 #!/usr/bin/env node
-import https from 'https';
 
-// GitHub API configuration
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
-const REPO_OWNER = 'Zion-Holdings';
-const REPO_NAME = 'zion.app';
+import { execSync } from 'child_process';
 
-// Function to make GitHub API requests
-const makeGitHubRequest = (path, method = 'GET', data = null) => {
-  return new Promise((resolve, reject) => {
-    const options = {
-      hostname: 'api.github.com',
-      path: path,
-      method: method,
-      headers: {
-        'User-Agent': 'Zion-App-Automation',
-        'Accept': 'application/vnd.github.v3+json',
-        'Authorization': GITHUB_TOKEN ? `token ${GITHUB_TOKEN}` : ''
-      }
-    };
+const openPRs = [
+  { number: 34000, branch: 'cursor/fix-errors-and-merge-to-main-fc5f' },
+  { number: 32379, branch: 'cursor/fix-errors-and-merge-to-main-cf2d' },
+  { number: 31846, branch: 'cursor/fix-errors-and-merge-to-main-e5d4' },
+  { number: 31845, branch: 'cursor/fix-errors-and-merge-to-main-0507' },
+  { number: 31843, branch: 'cursor/fix-errors-and-merge-to-main-bd2f' },
+  { number: 31842, branch: 'cursor/fix-errors-and-merge-to-main-a950' },
+  { number: 31841, branch: 'cursor/fix-errors-and-merge-to-main-315c' },
+  { number: 31840, branch: 'cursor/fix-errors-and-merge-to-main-1a47' },
+  { number: 31839, branch: 'cursor/fix-errors-and-merge-to-main-291b' },
+  { number: 31838, branch: 'cursor/fix-errors-and-merge-to-main-0e15' },
+  { number: 31836, branch: 'cursor/fix-errors-and-merge-to-main-6b4a' },
+  { number: 31835, branch: 'cursor/fix-errors-and-merge-to-main-44cf' },
+  { number: 31834, branch: 'cursor/fix-errors-and-merge-to-main-370a' },
+  { number: 31833, branch: 'cursor/fix-errors-and-merge-to-main-5341' },
+  { number: 31832, branch: 'cursor/fix-errors-and-merge-to-main-1dda' },
+  { number: 31831, branch: 'cursor/fix-errors-and-merge-to-main-33cc' },
+  { number: 31830, branch: 'cursor/fix-errors-and-merge-to-main-bcda' },
+  { number: 31829, branch: 'cursor/fix-errors-and-merge-to-main-eb55' },
+  { number: 31828, branch: 'cursor/fix-errors-and-merge-to-main-986f' },
+  { number: 31827, branch: 'cursor/fix-errors-and-merge-to-main-77c0' },
+  { number: 31826, branch: 'cursor/fix-errors-and-merge-to-main-7fe4' },
+  { number: 31825, branch: 'cursor/fix-errors-and-merge-to-main-5994' },
+  { number: 31824, branch: 'cursor/fix-errors-and-merge-to-main-6064' },
+  { number: 31823, branch: 'cursor/fix-errors-and-merge-to-main-b376' },
+  { number: 31822, branch: 'cursor/fix-errors-and-merge-to-main-6f52' },
+  { number: 31820, branch: 'cursor/fix-errors-and-merge-to-main-af51' },
+  { number: 31819, branch: 'cursor/fix-errors-and-merge-to-main-da8e' },
+  { number: 31817, branch: 'cursor/fix-errors-and-merge-to-main-458f' },
+  { number: 31815, branch: 'cursor/fix-errors-and-merge-to-main-1832' },
+  { number: 31814, branch: 'cursor/fix-errors-and-merge-to-main-4271' },
+  { number: 31813, branch: 'cursor/fix-errors-and-merge-to-main-2682' }
+];
 
-    if (data) {
-      options.headers['Content-Type'] = 'application/json';
-    }
-
-    const req = https.request(options, res => {
-      let responseData = '';
-      res.on('data', chunk => {
-        responseData += chunk;
-      });
-      res.on('end', () => {
-        try {
-          const jsonData = JSON.parse(responseData);
-          resolve(jsonData);
-        } catch (error) {
-          reject(new Error(`Failed to parse JSON: ${responseData}`));
-        }
-      });
-    });
-
-    req.on('error', error => reject(error));
-
-    if (data) {
-      req.write(JSON.stringify(data));
-    }
-    req.end();
-  });
-};
-
-// Function to check if a branch exists
-async function checkBranchExists(branchName) {
+function runCommand(command, description) {
   try {
-    await makeGitHubRequest(`/repos/${REPO_OWNER}/${REPO_NAME}/branches/${branchName}`);
-    return true;
+    console.log(`\n🔄 ${description}...`);
+    const output = execSync(command, { 
+      encoding: 'utf8', 
+      stdio: 'pipe',
+      cwd: '/workspace'
+    });
+    console.log(`✅ ${description} completed`);
+    return { success: true, output };
   } catch (error) {
-    return false;
+    console.log(`❌ ${description} failed: ${error.message}`);
+    return { success: false, error: error.message, output: error.stdout || error.stderr };
   }
 }
 
-// Function to close a PR
-async function closePR(pr) {
-  try {
-    await makeGitHubRequest(`/repos/${REPO_OWNER}/${REPO_NAME}/pulls/${pr.number}`, 'PATCH', {
-      state: 'closed'
-    });
-    console.log(`  ✅ Closed PR #${pr.number} (${pr.title})`);
-    return true;
-  } catch (error) {
-    console.log(`  ❌ Failed to close PR #${pr.number}: ${error.message}`);
-    return false;
-  }
-}
-
-// Main function
 async function main() {
-  try {
-    console.log('🔍 Checking for stale PRs...');
+  console.log('🚀 Starting to close stale PRs...');
+  console.log(`📊 Found ${openPRs.length} PRs to close`);
+  
+  const results = {
+    closed: [],
+    failed: []
+  };
+  
+  for (const pr of openPRs) {
+    console.log(`\n📋 Processing PR #${pr.number} (${pr.branch})`);
     
-    // Get all open PRs
-    const prs = await makeGitHubRequest(`/repos/${REPO_OWNER}/${REPO_NAME}/pulls?state=open&per_page=100`);
+    // Try to close the PR
+    const closeResult = runCommand(
+      `gh pr close ${pr.number} --comment "Closing stale PR - branch no longer exists"`,
+      `Close PR #${pr.number}`
+    );
     
-    if (prs.length === 0) {
-      console.log('✅ No open PRs found');
-      return;
+    if (closeResult.success) {
+      console.log(`✅ Successfully closed PR #${pr.number}`);
+      results.closed.push(pr);
+    } else {
+      console.log(`❌ Failed to close PR #${pr.number}: ${closeResult.error}`);
+      results.failed.push({ pr, reason: closeResult.error });
     }
-    
-    console.log(`📊 Found ${prs.length} open PR(s)`);
-    
-    // Filter PRs that target main branch
-    const mainPRs = prs.filter(pr => pr.base.ref === 'main');
-    console.log(`🎯 ${mainPRs.length} PR(s) targeting main branch`);
-    
-    let closedCount = 0;
-    let skippedCount = 0;
-    
-    // Process each PR
-    for (const pr of mainPRs) {
-      console.log(`\n🔍 Checking PR #${pr.number}: ${pr.title}`);
-      console.log(`  Branch: ${pr.head.ref}`);
-      
-      // Check if the branch still exists
-      const branchExists = await checkBranchExists(pr.head.ref);
-      
-      if (!branchExists) {
-        console.log(`  ⚠️  Branch ${pr.head.ref} no longer exists, closing PR...`);
-        const closed = await closePR(pr);
-        if (closed) {
-          closedCount++;
-        }
-      } else {
-        console.log(`  ✅ Branch ${pr.head.ref} still exists, keeping PR open`);
-        skippedCount++;
-      }
-      
-      // Small delay between requests
-      await new Promise(resolve => setTimeout(resolve, 500));
-    }
-    
-    console.log(`\n📊 Close Summary:`);
-    console.log(`  🔒 Closed stale PRs: ${closedCount}`);
-    console.log(`  ⏭️  Skipped active PRs: ${skippedCount}`);
-    console.log(`  📋 Total processed: ${mainPRs.length}`);
-    
-  } catch (error) {
-    console.error('❌ Error in main process:', error.message);
   }
+  
+  // Generate summary report
+  console.log('\n📊 PR CLOSURE SUMMARY REPORT');
+  console.log('=============================');
+  console.log(`✅ Successfully closed: ${results.closed.length}`);
+  console.log(`❌ Failed to close: ${results.failed.length}`);
+  
+  if (results.closed.length > 0) {
+    console.log('\n✅ Successfully closed PRs:');
+    results.closed.forEach(pr => console.log(`  - PR #${pr.number} (${pr.branch})`));
+  }
+  
+  if (results.failed.length > 0) {
+    console.log('\n❌ Failed to close PRs:');
+    results.failed.forEach(({ pr, reason }) => console.log(`  - PR #${pr.number} (${pr.branch}): ${reason}`));
+  }
+  
+  console.log('\n🎉 PR closure process completed!');
 }
 
 main().catch(console.error);
