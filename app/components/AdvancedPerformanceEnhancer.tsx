@@ -45,12 +45,12 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
             if (entry.entryType === 'largest-contentful-paint') {
               setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
             } else if (entry.entryType === 'first-input') {
-              setMetrics(prev => ({ ...prev, fid: (entry as PerformanceEventTiming).processingStart - entry.startTime }));
+              setMetrics(prev => ({ ...prev, fid: (entry as any).processingStart - entry.startTime }));
             } else if (entry.entryType === 'layout-shift') {
-              if (!(entry as LayoutShift).hadRecentInput) {
+              if (!(entry as any).hadRecentInput) {
                 setMetrics(prev => ({ 
                   ...prev, 
-                  cls: (prev.cls || 0) + (entry as LayoutShift).value 
+                  cls: (prev.cls || 0) + (entry as any).value 
                 }));
               }
             } else if (entry.entryType === 'paint') {
