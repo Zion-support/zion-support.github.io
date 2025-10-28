@@ -3,6 +3,9 @@ import { ErrorBoundary } from '../../components/ErrorBoundary';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 
+import React from 'react';
+import Navigation from '../../components/Navigation';
+import Footer from '../../components/Footer';
 export const metadata: Metadata = {
   title: 'Page - Zion Tech Group',
   description: 'Professional services and solutions by Zion Tech Group.',
@@ -52,10 +55,4 @@ function AianalyticsdashboardPage() {
   );
 }
 
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <AianalyticsdashboardPage {...props} />
-    </ErrorBoundary>
-  );
-}
+export default AianalyticsdashboardPage;
