@@ -12,40 +12,37 @@ interface PerformanceEventTiming extends PerformanceEntry {
 interface LayoutShift extends PerformanceEntry {
   value: number;
   hadRecentInput: boolean;
-  lastInputTime: number;
-  sources: LayoutShiftAttribution[];
+  target?: Node;
 }
 
-interface LayoutShiftAttribution {
-  node?: Node;
-  previousRect: DOMRectReadOnly;
-  currentRect: DOMRectReadOnly;
-}
 interface PerformanceOptimizerProps {
-  className?: string;
   children: React.ReactNode;
+  enableOptimizations?: boolean;
 }
 
-export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+  children,
+  enableOptimizations = true
+}) => {
   useEffect(() => {
-    // Preload critical resources
-    const preloadCriticalResources = () => {
-      const criticalResources = [
-        { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' },
-        { href: '/images/hero-bg.jpg', as: 'image' },
-        { href: '/images/logo.png', as: 'image' },
-      ];
+    if (!enableOptimizations || typeof window === 'undefined') return;
 
-      criticalResources.forEach(({ href, as, type, crossOrigin }) => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.href = href;
-        link.as = as;
-        if (type) link.type = type;
-        if (crossOrigin) link.crossOrigin = crossOrigin;
-        document.head.appendChild(link);
-      });
-    };
+    // Preload critical resources
+    const criticalResources = [
+      { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' },
+      { href: '/images/hero-bg.jpg', as: 'image' },
+      { href: '/images/logo.png', as: 'image' }
+    ];
+
+    criticalResources.forEach(resource => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource.href;
+      link.as = resource.as;
+      if (resource.type) link.type = resource.type;
+      if (resource.crossOrigin) link.crossOrigin = resource.crossOrigin;
+      document.head.appendChild(link);
+    });
 
     // Optimize images with lazy loading
     const optimizeImages = () => {
@@ -84,20 +81,24 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
 
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
       }
-    };
+      if (!img.decoding) {
+        img.decoding = 'async';
+      }
+    });
 
-    // Initialize optimizations
-    preloadCriticalResources();
-    optimizeImages();
-    monitorPerformance();
+    // Enable service worker
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').catch(() => {
+        // Service worker registration failed
+      });
+    }
+  }, [enableOptimizations]);
 
-    // Cleanup
-    return () => {
-      // Cleanup observers if needed
-    };
-  }, []);
-
-  return <>{children}</>;
+  return (
+    <div className="performance-optimizer">
+      {children}
+    </div>
+  );
 };
 
 export default PerformanceOptimizer;

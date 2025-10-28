@@ -1,8 +1,7 @@
 'use client';
 
-import React, { useEffect, memo, useCallback } from 'react';
+import React, { useEffect, memo, useCallback, useState } from 'react';
 
-// Performance API types
 interface PerformanceEventTiming extends PerformanceEntry {
   processingStart: number;
   processingEnd: number;
@@ -12,10 +11,12 @@ interface PerformanceEventTiming extends PerformanceEntry {
 interface LayoutShiftEntry extends PerformanceEntry {
   value: number;
   hadRecentInput: boolean;
+  target?: Node;
 }
 
 interface PerformanceMonitoringProps {
-  className?: string;
+  onMetricsUpdate?: (metrics: any) => void;
+  enableRealTimeMonitoring?: boolean;
 }
 
 const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ className = '' }) => {
@@ -136,27 +137,36 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
           // High memory usage detected
         }
       }
-    };
+    });
 
-    const interval = setInterval(checkMemory, 30000); // Check every 30 seconds
-    return () => clearInterval(interval);
+    observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'] });
+
+    return () => observer.disconnect();
   }, []);
 
   useEffect(() => {
-    const cleanup1 = monitorCoreWebVitals();
-    const cleanup2 = monitorResourcePerformance();
-    const cleanup3 = monitorMemoryUsage();
+    if (!enableRealTimeMonitoring) return;
 
-    return () => {
-      cleanup1?.();
-      cleanup2?.();
-      cleanup3?.();
-    };
-  }, [monitorCoreWebVitals, monitorResourcePerformance, monitorMemoryUsage]);
+    const cleanup = measurePerformance();
+    return cleanup;
+  }, [measurePerformance, enableRealTimeMonitoring]);
+
+  useEffect(() => {
+    if (onMetricsUpdate) {
+      onMetricsUpdate(metrics);
+    }
+  }, [metrics, onMetricsUpdate]);
 
   return (
-    <div className={`performance-monitoring ${className}`} style={{ display: 'none' }}>
-      {/* This component doesn't render anything visible */}
+    <div className="performance-monitoring">
+      <h3>Performance Monitoring</h3>
+      <div className="metrics">
+        <div>FCP: {metrics.fcp?.toFixed(2)}ms</div>
+        <div>LCP: {metrics.lcp?.toFixed(2)}ms</div>
+        <div>FID: {metrics.fid?.toFixed(2)}ms</div>
+        <div>CLS: {metrics.cls?.toFixed(4)}</div>
+        <div>TTFB: {metrics.ttfb?.toFixed(2)}ms</div>
+      </div>
     </div>
   );
 });

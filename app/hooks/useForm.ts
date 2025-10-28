@@ -10,8 +10,8 @@ export interface FormState<T = Record<string, unknown>> {
 
 export interface UseFormOptions<T = Record<string, unknown>> {
   initialData?: T;
-  validate?: (_data: T) => Record<string, string>;
-  onSubmit?: (_data: T) => Promise<void> | void;
+  validate?: (data: T) => Record<string, string>;
+  onSubmit?: (data: T) => Promise<void> | void;
 }
 
 export const useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> = { /* empty */ }) => {
@@ -23,11 +23,11 @@ export const useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> 
     submitStatus: 'idle',
     errors: { /* empty */ },});
 
-  const handleChange = useCallback((field: keyof T, value: unknown) => {
+  const setFieldValue = useCallback((field: keyof T, value: T[keyof T]) => {
     setFormState(prev => ({
       ...prev,
       data: { ...prev.data, [field]: value },
-      errors: { ...prev.errors, [field]: '' },
+      errors: { ...prev.errors, [field as string]: '' }
     }));
   }, []);
 
@@ -50,26 +50,38 @@ export const useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> 
       submitStatus: 'idle',
       errors: { /* empty */ },
     }));
+  }, []);
 
+  const validateForm = useCallback(() => {
+    if (!validate) return true;
+    
+    const errors = validate(formState.data);
+    setFormState(prev => ({ ...prev, errors }));
+    
+    return Object.keys(errors).length === 0;
+  }, [validate, formState.data]);
+
+  const handleSubmit = useCallback(async (e?: React.FormEvent) => {
+    if (e) e.preventDefault();
+    
+    if (!validateForm()) return;
+    
+    setFormState(prev => ({ ...prev, isSubmitting: true, submitStatus: 'idle' }));
+    
     try {
       if (onSubmit) {
-        await onSubmit(formState.data);setFormState(prev => ({
-          ...prev,
-          submitStatus: 'success',
-          data: initialData, // Reset form
-        }));
-      }setFormState(prev => ({
-        ...prev,
-        submitStatus: 'success',
-        data: initialData, // Reset form
-      }));
-    } catch {
-      setFormState(prev => ({
-        ...prev,
-        isSubmitting: false,
+        await onSubmit(formState.data);
+      }
+      setFormState(prev => ({ ...prev, isSubmitting: false, submitStatus: 'success' }));
+    } catch (error) {
+      setFormState(prev => ({ 
+        ...prev, 
+        isSubmitting: false, 
+        submitStatus: 'error',
+        errors: { ...prev.errors, submit: 'An error occurred while submitting the form' }
       }));
     }
-  }, [formState.data, onSubmit, validate, initialData]);
+  }, [validateForm, onSubmit, formState.data]);
 
   const resetForm = useCallback(() => {
     setFormState({
@@ -80,10 +92,17 @@ export const useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> 
     });
   }, [initialData]);
 
+  const clearErrors = useCallback(() => {
+    setFormState(prev => ({ ...prev, errors: {} }));
+  }, []);
+
   return {
-    ...formState,
-    handleChange,
+    formState,
+    setFieldValue,
+    setFieldError,
+    validateForm,
     handleSubmit,
     resetForm,
-  }
-}
+    clearErrors
+  };
+};

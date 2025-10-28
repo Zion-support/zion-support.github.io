@@ -1,15 +1,18 @@
 'use client';
-
-import React, { useEffect, memo, useCallback } from 'react';
+import React, { useCallback, useState, useEffect, memo } from 'react';
 
 interface SecurityEnhancementProps {
   className?: string;
 }
 
-const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ className = '' }) => {
-  // Add security headers
-  const addSecurityHeaders = useCallback(() => {
-    if (typeof window === 'undefined') return;
+const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({
+  className = ''
+}) => {
+  const [securityStatus, setSecurityStatus] = useState({
+    cspEnabled: false,
+    httpsEnabled: false,
+    securityHeadersPresent: false
+  });
 
     // Add Content Security Policy
     const csp = document.querySelector('meta[http-equiv="Content-Security-Policy"]');
@@ -68,6 +71,10 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
         },
         configurable: true
       });
+      
+      // // console.log('Security enhancements applied');
+    } catch (error) {
+      // // console.warn('Security enhancement error:', error);
     }
 
     // Monitor for suspicious console usage
@@ -103,14 +110,62 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
   }, []);
 
   useEffect(() => {
-    addSecurityHeaders();
-    monitorSuspiciousActivity();
-    addIntegrityChecks();
-  }, [addSecurityHeaders, monitorSuspiciousActivity, addIntegrityChecks]);
+    checkSecurityHeaders();
+  }, [checkSecurityHeaders]);
+
+  useEffect(() => {
+    const checkSecurityStatus = () => {
+      setSecurityStatus({
+        cspEnabled: !!document.querySelector('meta[http-equiv="Content-Security-Policy"]'),
+        httpsEnabled: window.location.protocol === 'https:',
+        securityHeadersPresent: !!document.querySelector('meta[http-equiv="X-Content-Type-Options"]')
+      });
+    };
+
+    checkSecurityStatus();
+  }, []);
+
+  const enableCSP = useCallback(() => {
+    try {
+      const cspMeta = document.querySelector('meta[http-equiv="Content-Security-Policy"]');
+      if (!cspMeta) {
+        const meta = document.createElement('meta');
+        meta.setAttribute('http-equiv', 'Content-Security-Policy');
+        meta.setAttribute('content', "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';");
+        document.head.appendChild(meta);
+        setSecurityStatus(prev => ({ ...prev, cspEnabled: true }));
+      }
+    } catch (error) {
+      console.error('CSP enablement error:', error);
+    }
+  }, []);
+
+  const enableHTTPS = useCallback(() => {
+    if (window.location.protocol !== 'https:') {
+      const httpsUrl = window.location.href.replace('http:', 'https:');
+      window.location.href = httpsUrl;
+    }
+  }, []);
 
   return (
-    <div className={`security-enhancement ${className}`} style={{ display: 'none' }}>
-      {/* This component doesn't render anything visible */}
+    <div className={`security-enhancement ${className}`}>
+      <div className="security-status">
+        <h3>Security Status</h3>
+        <ul>
+          <li>CSP Enabled: {securityStatus.cspEnabled ? '✅' : '❌'}</li>
+          <li>HTTPS Enabled: {securityStatus.httpsEnabled ? '✅' : '❌'}</li>
+          <li>Security Headers: {securityStatus.securityHeadersPresent ? '✅' : '❌'}</li>
+        </ul>
+      </div>
+      
+      <div className="security-actions">
+        <button onClick={enableCSP} disabled={securityStatus.cspEnabled}>
+          Enable CSP
+        </button>
+        <button onClick={enableHTTPS} disabled={securityStatus.httpsEnabled}>
+          Enable HTTPS
+        </button>
+      </div>
     </div>
   );
 });

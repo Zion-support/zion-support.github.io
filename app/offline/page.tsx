@@ -10,7 +10,7 @@ export const metadata = {
     description: 'You are currently offline',
     type: 'website',
   }};
-function OfflinePage() {
+export default function Page() {
   return (
     <div className="min-h-screen bg-white flex items-center justify-center">
       <div className="text-center">
@@ -22,13 +22,5 @@ function OfflinePage() {
         </p>
       </div>
     </div>
-  );
-}
-
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <OfflinePage {...props} />
-    </ErrorBoundary>
   );
 }

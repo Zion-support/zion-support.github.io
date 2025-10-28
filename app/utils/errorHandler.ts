@@ -36,15 +36,15 @@ export class ErrorHandler {
 
     this.errors.push(errorData);
     // Send to analytics if available
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'exception', {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'exception', {
         description: error.message,
         fatal: false
       });
     }
 
     // Send to error reporting service if configured
-    this.sendToErrorService(errorData);
+    this.sendToErrorService();
   }
 
   private async sendToErrorService(_errorData: ErrorInfo): Promise<void> {
@@ -71,11 +71,11 @@ export const errorHandler = ErrorHandler.getInstance();
 
 // Global error handler
 if (typeof window !== 'undefined') {
-  window.addEventListener('error', (event) => {
+  window.addEventListener('error', (event: ErrorEvent) => {
     errorHandler.logError(event.error);
   });
 
-  window.addEventListener('unhandledrejection', (event) => {
+  window.addEventListener('unhandledrejection', (event: any) => {
     errorHandler.logError(new Error(event.reason));
   });
 }

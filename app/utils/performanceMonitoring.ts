@@ -2,7 +2,6 @@
  * Advanced Performance Monitoring Utility
  * Provides comprehensive performance tracking and optimization
  */
-
 export interface PerformanceMetrics {
   loadTime: number;
   firstContentfulPaint: number;

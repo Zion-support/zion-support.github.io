@@ -42,7 +42,8 @@ export default function AiPoweredEmailAnalyzerPage() {
       benefits: ['Email strategy optimization', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ];
-const benefits = [
+  
+  const benefits = [
     'Increase email efficiency by up to 60%',
     'Reduce email processing time by 40%',
     'Improve email insights with AI analysis',

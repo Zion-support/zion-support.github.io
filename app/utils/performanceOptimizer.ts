@@ -2,7 +2,6 @@
  * Performance Optimizer
  * Comprehensive performance monitoring and optimization utilities
  */
-
 export interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
@@ -65,7 +64,6 @@ class PerformanceOptimizer {
           this.processPerformanceEntry(entry);
         }
       });
-
       observer.observe({ entryTypes: ['navigation', 'resource', 'paint', 'measure'] });
     }
   }
@@ -85,7 +83,7 @@ class PerformanceOptimizer {
    */
   private updateMemoryUsage(): void {
     if ('memory' in performance) {
-      const memory = (performance as unknown as { memory: { usedJSHeapSize: number } }).memory;
+      const memory = (performance as any).memory;
       this.metrics.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
     }
   }
@@ -199,7 +197,7 @@ class PerformanceOptimizer {
 
     // Check for unoptimized images
     const images = document.querySelectorAll('img');
-    const unoptimizedImages = Array.from(images).filter(img => 
+    const unoptimizedImages = Array.from(images).filter(img =>
       !img.hasAttribute('loading') || !img.hasAttribute('decoding')
     );
 
@@ -218,7 +216,6 @@ class PerformanceOptimizer {
     this.preloadCriticalResources();
     this.enableCaching();
     this.generateRecommendations();
-    
     this.metrics.isOptimized = true;
   }
 
@@ -244,7 +241,6 @@ class PerformanceOptimizer {
 
     const scripts = document.querySelectorAll('script[src]');
     let totalSize = 0;
-
     scripts.forEach((script) => {
       const src = script.getAttribute('src');
       if (src && src.includes('assets/')) {
@@ -259,5 +255,4 @@ class PerformanceOptimizer {
 
 // Create singleton instance
 export const performanceOptimizer = new PerformanceOptimizer();
-
 export default performanceOptimizer;

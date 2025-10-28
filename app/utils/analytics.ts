@@ -38,7 +38,7 @@ class Analytics {
   // Track page views
   trackPageView(page: string, title?: string): void {
     this.track({
-      category: "Page View",
+      category: "Page",
       action: "View",
       label: page,
       custom_parameters: {
@@ -48,40 +48,36 @@ class Analytics {
     });
   }
 
-  // Track clicks
-  trackClick(element: string, context?: string): void {
+  // Track user interactions
+  trackClick(element: string, location?: string): void {
     this.track({
-      category: "Click",
+      category: "User Interaction",
       action: "Click",
       label: element,
       custom_parameters: {
-        context: context || "unknown"
+        location
       }
     });
   }
 
   // Track form submissions
-  trackFormSubmission(formName: string, success: boolean = true): void {
+  trackFormSubmission(formName: string, success: boolean): void {
     this.track({
       category: "Form",
       action: success ? "Submit Success" : "Submit Error",
-      label: formName,
-      custom_parameters: {
-        form_name: formName,
-        success: success
-      }
+      label: formName
     });
   }
 
   // Track performance metrics
-  trackPerformance(metric: string, value: number, context?: string): void {
+  trackPerformance(metric: string, value: number, unit: string = "ms"): void {
     this.track({
       category: "Performance",
       action: "Metric",
       label: metric,
-      value: value,
+      value,
       custom_parameters: {
-        context: context || "unknown"
+        unit
       }
     });
   }
@@ -127,7 +123,7 @@ class Analytics {
 export const analytics = Analytics.getInstance();
 
 // React hooks for easy integration
-export const useAnalytics = function useAnalytics() {
+export function useAnalytics() {
   return {
     track: analytics.track.bind(analytics),
     trackPageView: analytics.trackPageView.bind(analytics),
@@ -136,15 +132,15 @@ export const useAnalytics = function useAnalytics() {
     trackPerformance: analytics.trackPerformance.bind(analytics),
     trackError: analytics.trackError.bind(analytics)
   };
-};
+}
 
 // Higher-order component for automatic page view tracking
-export function withAnalytics<T extends React.ComponentType<unknown>>(WrappedComponent: T): T {
+export function withAnalytics<T extends React.ComponentType<unknown>>(PageComponent: T): T {
   return ((props: unknown) => {
     const {trackPageView} = useAnalytics();
     React.useEffect(() => {
       trackPageView(window.location.pathname, document.title);
     }, [trackPageView]);
-    return React.createElement(WrappedComponent, props);
+    return React.createElement(PageComponent, props);
   }) as T;
 }
