@@ -14,7 +14,6 @@ import ConsolidatedSEO from './components/consolidated/ConsolidatedSEO';
 import { metadata, viewport } from './layout/metadata';
 
 const inter = Inter({ subsets: ['latin'] });
-
 // Re-export metadata and viewport for Next.js
 export { metadata, viewport };
 export default function RootLayout({
