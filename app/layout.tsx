@@ -9,44 +9,11 @@ import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import SkipLink from './components/SkipLink';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import PerformanceMonitoring from './components/PerformanceMonitoring';
-import SEOOptimization from './components/SEOOptimization';
-import SecurityEnhancement from './components/SecurityEnhancement';
-=======
-// PageLoader removed as it's not used
-cursor/fix-errors-and-merge-to-main-b486
-cursor/fix-errors-and-merge-to-main-7056
-cursor/fix-errors-and-merge-to-main-bbed
-import Analytics from './components/Analytics';
-import ConsolidatedPerformance from './components/consolidated/ConsolidatedPerformance';
-import ConsolidatedAccessibility from './components/consolidated/ConsolidatedAccessibility';
-import ConsolidatedSEO from './components/consolidated/ConsolidatedSEO';
-import PerformanceMonitoring from './components/PerformanceMonitoring';
-import SEOOptimization from './components/SEOOptimization';
-import SecurityEnhancement from './components/SecurityEnhancement';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Metadata imports removed as they're not used in this layout
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8bc5
-cursor/fix-errors-and-merge-to-main-b486
-=======
 import { metadata, viewport } from './metadata';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-544d
-=======
 // PageLoader removed as it's not used
-import Analytics from './components/Analytics';
+// Analytics removed as it's not used
 // Consolidated components removed as they're not used
 // Metadata import removed as it's not used
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cd9
-cursor/fix-errors-and-merge-to-main-7056
-cursor/fix-errors-and-merge-to-main-bbed
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -60,15 +27,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <ConsolidatedPerformance />
-        <ConsolidatedAccessibility />
-        <ConsolidatedSEO />
-cursor/fix-errors-and-merge-to-main-253c
-=======
-        <Analytics />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cd9
         <ErrorBoundary>
           <PerformanceOptimizer>
             <div className="min-h-screen bg-slate-900">

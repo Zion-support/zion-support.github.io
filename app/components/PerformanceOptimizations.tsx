@@ -6,31 +6,6 @@ interface PerformanceOptimizationsProps {
   className?: string;
 }
 
-<<<<<<< HEAD
-// Using built-in PerformanceEntry types with type assertions for specific properties
-=======
-// Type definitions for Performance API entries
- 
-interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
-  processingEnd: number;
-  startTime: number;
-  target: EventTarget | null;
-}
-
-interface LayoutShift extends PerformanceEntry {
-  value: number;
-  hadRecentInput: boolean;
-  lastInputTime: number;
-  sources: LayoutShiftAttribution[];
-}
-
-interface LayoutShiftAttribution {
-  node?: Node;
-  previousRect: DOMRectReadOnly;
-  currentRect: DOMRectReadOnly;
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-eba3
 
 
 const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo(({ className = '' }) => {

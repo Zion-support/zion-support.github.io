@@ -53,40 +53,14 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
     if (typeof window === 'undefined') return;
 
     // Monitor for XSS attempts
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     const originalDescriptor = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML');
     if (originalDescriptor) {
-=======
-    const originalInnerHTML = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML');
-    if (originalInnerHTML) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b486
-=======
-    const originalInnerHTML = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML')?.set;
-    if (originalInnerHTML) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cd9
-=======
-    const originalDescriptor = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML');
-    if (originalDescriptor) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-da78
-=======
-    const originalDescriptor = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML');
-    if (originalDescriptor) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5f0a
       Object.defineProperty(Element.prototype, 'innerHTML', {
         set: function(value: string) {
           if (value && typeof value === 'string' && /<script/i.test(value)) {
             console.warn('Potential XSS attempt detected:', value);
             return;
           }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-cursor/fix-errors-and-merge-to-main-da78
-cursor/fix-errors-and-merge-to-main-5f0a
           if (originalDescriptor.set) {
             originalDescriptor.set.call(this, value);
           }
@@ -96,38 +70,10 @@ cursor/fix-errors-and-merge-to-main-5f0a
             return originalDescriptor.get.call(this);
           }
           return '';
-<<<<<<< HEAD
-<<<<<<< HEAD
-        }
-      });
-    }
-<<<<<<< HEAD
-=======
-    const originalInnerHTML = Element.prototype.innerHTML;
-    (Element.prototype as unknown as { innerHTML: (value: string) => void }).innerHTML = function(value: string) {
-      if (value && typeof value === 'string' && /<script/i.test(value)) {
-        console.warn('Potential XSS attempt detected:', value);
-        return;
-      }
-      return (originalInnerHTML as unknown as (value: string) => void).call(this, value);
-    };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8bc5
-cursor/fix-errors-and-merge-to-main-b486
-=======
-          originalInnerHTML.call(this, value);
-cursor/fix-errors-and-merge-to-main-da78
         },
         configurable: true
       });
     }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cd9
-cursor/fix-errors-and-merge-to-main-da78
-=======
-        }
-      });
-    }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5f0a
 
     // Monitor for suspicious console usage
     const originalConsole = console.log;

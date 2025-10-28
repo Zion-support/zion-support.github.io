@@ -1,8 +1,5 @@
 import { useState, useEffect } from 'react';
-<<<<<<< HEAD
-=======
-import type { PerformanceEventTiming, LayoutShift, LayoutShiftAttribution } from '../types/performance';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cd9
+import type { PerformanceEventTiming, LayoutShift } from '../types/performance';
 
 export const useMonitoring = () => {
   const [state, setState] = useState(null);
@@ -172,13 +169,9 @@ class MonitoringService {
     }
 
     // Send to analytics (if configured)
-<<<<<<< HEAD
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as Window & { gtag?: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag?.('event', name, {
-=======
-    if (typeof (window as Window & { gtag?: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag === 'function') {
-      (window as Window & { gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag('event', name, {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-da78
+    if (window.gtag) {
+      window.gtag('event', 'web_vitals', {
+        name: name,
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',
       });
