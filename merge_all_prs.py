@@ -1,93 +1,102 @@
 #!/usr/bin/env python3
 """
-Script to automatically merge all available PR branches into main
+Script to merge all open PRs automatically
 """
+
+import json
 import subprocess
 import sys
-import os
+import time
 
-def run_command(cmd, cwd=None):
-    """Run a command and return the result"""
+def run_command(cmd, capture_output=True):
+    """Run a shell command and return the result"""
     try:
-        result = subprocess.run(cmd, shell=True, cwd=cwd, capture_output=True, text=True)
-        return result.returncode == 0, result.stdout, result.stderr
+        result = subprocess.run(
+            cmd,
+            shell=True,
+            capture_output=capture_output,
+            text=True,
+            check=False
+        )
+        return result
     except Exception as e:
-        return False, "", str(e)
+        print(f"Error running command: {e}")
+        return None
 
-def get_available_branches():
-    """Get all available cursor branches"""
-    success, stdout, stderr = run_command("git branch -r | grep 'cursor/fix-errors-and-merge-to-main' | head -20")
-    if not success:
-        print(f"Error getting branches: {stderr}")
-        return []
-    
-    branches = []
-    for line in stdout.strip().split('\n'):
-        if line.strip():
-            branch = line.strip().replace('origin/', '')
-            branches.append(branch)
-    
-    return branches
+def get_open_prs():
+    """Get open PRs using GitHub CLI"""
+    result = run_command("gh pr list --state open --json number,title,headRefName,mergeable,mergeStateStatus")
+    if result and result.returncode == 0:
+        try:
+            return json.loads(result.stdout)
+        except json.JSONDecodeError:
+            return []
+    return []
 
-def merge_branch(branch_name):
-    """Try to merge a branch into main"""
-    print(f"\n=== Attempting to merge {branch_name} ===")
+def merge_pr(pr_number):
+    """Attempt to merge a PR"""
+    print(f"🔄 Attempting to merge PR #{pr_number}...")
     
-    # Create temporary branch
-    temp_branch = f"temp-merge-{branch_name.replace('/', '-')}"
-    success, stdout, stderr = run_command(f"git checkout -b {temp_branch} origin/{branch_name}")
-    if not success:
-        print(f"Failed to checkout branch {branch_name}: {stderr}")
+    # First, try to checkout the PR
+    checkout_result = run_command(f"gh pr checkout {pr_number}")
+    if checkout_result and checkout_result.returncode != 0:
+        print(f"❌ Failed to checkout PR #{pr_number}: {checkout_result.stderr}")
         return False
     
-    # Switch back to main
-    success, stdout, stderr = run_command("git checkout main")
-    if not success:
-        print(f"Failed to switch to main: {stderr}")
-        return False
+    # Update the branch with latest main
+    run_command("git fetch origin main")
+    run_command("git merge origin/main")
+    
+    # Push any updates
+    run_command("git push origin HEAD")
     
     # Try to merge
-    success, stdout, stderr = run_command(f"git merge {temp_branch}")
-    if not success:
-        print(f"Merge conflict in {branch_name}: {stderr}")
-        # Clean up temp branch
-        run_command(f"git branch -D {temp_branch}")
+    merge_result = run_command(f"gh pr merge {pr_number} --merge --auto")
+    if merge_result and merge_result.returncode == 0:
+        print(f"✅ Successfully merged PR #{pr_number}")
+        return True
+    else:
+        print(f"❌ Failed to merge PR #{pr_number}: {merge_result.stderr if merge_result else 'Unknown error'}")
         return False
-    
-    print(f"Successfully merged {branch_name}")
-    
-    # Clean up temp branch
-    run_command(f"git branch -D {temp_branch}")
-    return True
 
 def main():
-    """Main function"""
-    print("Starting automatic PR merge process...")
+    print("🚀 Starting automatic PR merge process...")
     
-    # Get available branches
-    branches = get_available_branches()
-    print(f"Found {len(branches)} branches to process")
+    # Get all open PRs
+    prs = get_open_prs()
+    if not prs:
+        print("❌ No open PRs found")
+        return 1
     
-    merged_count = 0
+    print(f"Found {len(prs)} open PR(s)")
+    
+    # Sort by PR number (oldest first)
+    prs.sort(key=lambda x: x['number'])
+    
+    success_count = 0
     failed_count = 0
     
-    for branch in branches:
-        if merge_branch(branch):
-            merged_count += 1
-            # Push after each successful merge
-            success, stdout, stderr = run_command("git push origin main")
-            if not success:
-                print(f"Failed to push changes: {stderr}")
-                # Pull latest changes and try again
-                run_command("git pull origin main")
-                run_command("git push origin main")
+    for pr in prs:
+        pr_number = pr['number']
+        pr_title = pr['title']
+        pr_branch = pr['headRefName']
+        
+        print(f"\n📋 Processing PR #{pr_number}: {pr_title}")
+        print(f"   Branch: {pr_branch}")
+        
+        if merge_pr(pr_number):
+            success_count += 1
         else:
             failed_count += 1
+        
+        # Small delay between merges
+        time.sleep(2)
     
-    print(f"\n=== Merge Summary ===")
-    print(f"Successfully merged: {merged_count}")
-    print(f"Failed to merge: {failed_count}")
-    print(f"Total processed: {len(branches)}")
+    print(f"\n🎉 Merge process completed!")
+    print(f"   ✅ Successfully merged: {success_count}")
+    print(f"   ❌ Failed to merge: {failed_count}")
+    
+    return 0 if failed_count == 0 else 1
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
