@@ -27,8 +27,8 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
   });
   
   // Refs for tracking
-  const startTimeRef = useRef<number>(0);
-  const renderStartRef = useRef<number>(0);
+  const _startTimeRef = useRef<number>(0);
+  const _renderStartRef = useRef<number>(0);
   const mountTimeRef = useRef<number>(0);
   const renderCountRef = useRef<number>(0);
   
