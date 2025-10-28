@@ -91,8 +91,8 @@ export const STRUCTURED_DATA = {
       '@type': 'SearchAction',
       target: `${SITE_URL}/search?q={search_term_string}`,
       'query-input': 'required name=search_term_string',
-    },
-  },
+    }
+},
   BREADCRUMB_LIST: (breadcrumbs: Array<{ name: string; url: string }>) => ({
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',

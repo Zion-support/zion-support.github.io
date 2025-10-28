@@ -4,7 +4,6 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-import ErrorBoundary from './components/ErrorBoundary';
 import SkipLink from './components/SkipLink';
 import ClientComponents from './components/ClientComponents';
 import Analytics from './components/Analytics';
@@ -67,8 +66,8 @@ export const metadata: Metadata = {
       'max-video-preview': -1,
       'max-image-preview': 'large',
       'max-snippet': -1,
-    },
-  },
+    }
+},
   verification: {
     google: 'your-google-verification-code',
   },
@@ -108,24 +107,22 @@ export default function RootLayout({
         <ConsolidatedPerformance />
         <ConsolidatedAccessibility />
         <ConsolidatedSEO />
-        <ErrorBoundary>
-          <ClientComponents>
-            <div className="min-h-screen bg-slate-900">
-              <SkipLink />
-              <Navigation />
-              <main className="relative z-10" id="main-content" role="main" tabIndex={-1}>
-                {children}
-              </main>
-              <Footer />
-              <PerformanceMonitor />
-              <AccessibilityEnhancer />
-              <ServiceWorkerRegistration />
-              <PerformanceMonitoring />
-              <SEOOptimization />
-              <SecurityEnhancement />
-            </div>
-          </ClientComponents>
-        </ErrorBoundary>
+        <ClientComponents>
+          <div className="min-h-screen bg-slate-900">
+            <SkipLink />
+            <Navigation />
+            <main className="relative z-10" id="main-content" role="main" tabIndex={-1}>
+              {children}
+            </main>
+            <Footer />
+            <PerformanceMonitor />
+            <AccessibilityEnhancer />
+            <ServiceWorkerRegistration />
+            <PerformanceMonitoring />
+            <SEOOptimization />
+            <SecurityEnhancement />
+          </div>
+        </ClientComponents>
       </body>
     </html>
   );
