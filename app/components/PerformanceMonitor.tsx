@@ -2,9 +2,13 @@
 
 import React, { useEffect, useState, memo } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 // Performance types are defined inline to avoid unused import warnings
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8bc5
+=======
+import type { PerformanceEventTiming, LayoutShift } from '../types/performance';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b486
 
 interface PerformanceMetrics {
   lcp: number | null;
