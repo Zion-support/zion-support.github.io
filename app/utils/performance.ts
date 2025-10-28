@@ -42,7 +42,8 @@ export class PerformanceMonitor {
     new PerformanceObserver((entryList) => {
       const entries = entryList.getEntries();
       const lastEntry = entries[entries.length - 1];
-      this.metrics.set("LCP", lastEntry.startTime)}).observe({ entryTypes: ["largest-contentful-paint"] });
+      this.metrics.set("LCP", lastEntry.startTime);
+    }).observe({ entryTypes: ["largest-contentful-paint"] });
 
     // First Input Delay
     new PerformanceObserver((entryList) => {
@@ -50,7 +51,9 @@ export class PerformanceMonitor {
       entries.forEach((entry) => {
         // Use processingStart if available, otherwise calculate from startTime
         const processingStart = (entry as { processingStart?: number }).processingStart || entry.startTime;
-        this.metrics.set("FID", processingStart - entry.startTime)})}).observe({ entryTypes: ["first-input"] });
+        this.metrics.set("FID", processingStart - entry.startTime);
+      });
+    }).observe({ entryTypes: ["first-input"] });
 
     // Cumulative Layout Shift
     let clsValue = 0;
@@ -58,9 +61,11 @@ export class PerformanceMonitor {
       const entries = entryList.getEntries();
       entries.forEach((entry) => {
         if (!(entry as { hadRecentInput?: boolean }).hadRecentInput) {
-          clsValue += (entry as { value?: number }).value || 0}
+          clsValue += (entry as { value?: number }).value || 0;
+        }
       });
-      this.metrics.set("CLS", clsValue)}).observe({ entryTypes: ["layout-shift"] })}
+      this.metrics.set("CLS", clsValue);
+    }).observe({ entryTypes: ["layout-shift"] });}
 }
 
 // Hook for React components
@@ -81,5 +86,10 @@ export function measureComponentRender(componentName: string) {
       React.useEffect(() => {
         monitor.startTiming(`${componentName}-render`);
         return () => {
-          monitor.endTiming(`${componentName}-render`)}});
-      return React.createElement(WrappedComponent, props)}) as T}}
+          monitor.endTiming(`${componentName}-render`);
+        };
+      });
+      return React.createElement(WrappedComponent, props);
+    }) as T;
+  };
+}

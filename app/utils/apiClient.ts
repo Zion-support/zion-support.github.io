@@ -4,12 +4,16 @@ interface ApiResponse<T> {
   message?: string;
 }
 
+<<<<<<< HEAD
 // Define RequestInit type for compatibility
 // interface RequestInit {
 //   method?: string;
 //   headers?: Record<string, string>;
 //   body?: string;
 // }
+=======
+// RequestInit is already defined globally in TypeScript
+>>>>>>> main
 
 class ApiClient {
   private baseUrl: string;

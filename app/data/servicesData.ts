@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // import { Search, string } from 'lucide-react';
+=======
+// Service data for AI and IT solutions
+>>>>>>> main
 export interface Service {
   id: string;
   title: string;

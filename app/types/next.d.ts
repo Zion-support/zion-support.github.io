@@ -1,5 +1,15 @@
+<<<<<<< HEAD
 import { NextPage } from 'next';
 import React from 'react';
+=======
+// Next.js type definitions
+import React from 'react';
+import { NextPage } from 'next';
+
+// interface NextPageWithLayout<P = Record<string, unknown>, IP = P> extends NextPage<P, IP> {
+//   getLayout?: (_page: React.ReactElement) => React.ReactNode;
+// }
+>>>>>>> main
 
 declare module 'next' {
   interface NextPageWithLayout<P = Record<string, unknown>, IP = P> extends NextPage<P, IP> {
