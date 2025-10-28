@@ -1,7 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
-import { aboutMetadata } from './constants';
 
 export const dynamic = 'force-static';
 
