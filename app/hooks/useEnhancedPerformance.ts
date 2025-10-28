@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 
-interface UseEnhancedPerformanceOptions {
+interface PerformanceOptions {
   component?: string;
   trackErrors?: boolean;
   trackPerformance?: boolean;
@@ -120,7 +120,7 @@ export const useEnhancedPerformance = (options: PerformanceOptions = {}) => {
     const timeoutId = setTimeout(checkOptimization, 1000);
 
     return () => clearTimeout(timeoutId);
-  }, [metrics.loadTime, metrics.renderTime, metrics.memoryUsage, metrics.networkLatency]);
+  }, [metrics.loadTime, metrics.renderTime, metrics.memoryUsage, metrics.networkLatency, trackPerformance]);
 
   const optimizePerformance = useCallback(() => {
     if (typeof document === 'undefined') return;
