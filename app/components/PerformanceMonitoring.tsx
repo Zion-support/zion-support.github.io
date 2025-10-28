@@ -1,5 +1,6 @@
 'use client';
 
+
 import React, { useEffect, memo, useCallback } from 'react';
 
 // Performance API types
@@ -14,7 +15,6 @@ interface LayoutShiftEntry extends PerformanceEntry {
   hadRecentInput: boolean;
 }
 
-// FIDEntry interface is used in the code via type assertion
 interface PerformanceMonitoringProps {
   className?: string;
 }
