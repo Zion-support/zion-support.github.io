@@ -75,7 +75,7 @@ export const SkipLink: React.FC = () => {
           left: 6px;
           z-index: 1000;
         }
-        
+
         .skip-link {
           position: absolute;
           top: 0;
@@ -91,21 +91,21 @@ export const SkipLink: React.FC = () => {
           border: none;
           cursor: pointer;
         }
-        
+
         .skip-link:focus {
           top: 0;
           outline: 2px solid #fff;
           outline-offset: 2px;
         }
-        
+
         .skip-link:not(:focus) {
           top: -40px;
         }
-        
+
         .skip-link + .skip-link {
           top: 40px;
         }
-        
+
         .skip-link + .skip-link:focus {
           top: 40px;
         }

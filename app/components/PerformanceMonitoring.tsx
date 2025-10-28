@@ -28,7 +28,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
       console.log('LCP:', lastEntry.startTime);
-      
+
       // Send to analytics if needed
       if (window.gtag) {
         window.gtag('event', 'web_vitals', {
@@ -47,7 +47,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
         const fidEntry = entry as PerformanceEventTiming;
         const fid = fidEntry.processingStart - fidEntry.startTime;
         console.log('FID:', fid);
-        
+
         if (window.gtag) {
           window.gtag('event', 'web_vitals', {
             name: 'FID',
@@ -68,7 +68,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
         if (!clsEntry.hadRecentInput) {
           clsValue += clsEntry.value;
           console.log('CLS:', clsValue);
-          
+
           if (window.gtag) {
             window.gtag('event', 'web_vitals', {
               name: 'CLS',
@@ -86,7 +86,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
       const entries = list.getEntries();
       entries.forEach((entry) => {
         console.log('FCP:', entry.startTime);
-        
+
         if (window.gtag) {
           window.gtag('event', 'web_vitals', {
             name: 'FCP',
@@ -133,7 +133,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
         const used = memory.usedJSHeapSize / 1024 / 1024; // MB
         const total = memory.totalJSHeapSize / 1024 / 1024; // MB
         const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB
-        
+
         console.log('Memory usage:', {
           used: Math.round(used),
           total: Math.round(total),

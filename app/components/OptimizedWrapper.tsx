@@ -1,18 +1,17 @@
-'use client';
+
 
 import React, { memo, Suspense } from 'react';
 
 interface OptimizedWrapperProps {
-  className?: string;
   children: React.ReactNode;
   fallback?: React.ReactNode;
   lazy?: boolean;
 }
 
-const OptimizedWrapper: React.FC<OptimizedWrapperProps> = memo(({ 
-  children, 
+const OptimizedWrapper: React.FC<OptimizedWrapperProps> = memo(({
+  children,
   fallback = <div>Loading...</div>,
-  lazy: isLazy = false 
+  lazy: isLazy = false
 }) => {
   if (isLazy) {
     return (

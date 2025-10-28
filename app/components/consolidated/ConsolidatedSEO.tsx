@@ -3,14 +3,13 @@
 import React, { useEffect, memo, useCallback } from 'react';
 
 interface ConsolidatedSEOProps {
-  className?: string;
-  children?: React.ReactNode;
   title?: string;
   description?: string;
   keywords?: string;
   image?: string;
   url?: string;
   type?: string;
+  className?: string;
 }
 
 const ConsolidatedSEO: React.FC<ConsolidatedSEOProps> = memo(({

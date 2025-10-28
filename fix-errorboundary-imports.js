@@ -1,42 +1,39 @@
 import fs from 'fs';
-import { glob } from 'glob';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Function to fix ErrorBoundary imports in a file
 function fixErrorBoundaryImports(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
+    let content = fs.readFileSync(filePath, 'utf8');
     
-    // Check if file uses ErrorBoundary but doesn't import it
-    if (content.includes('<ErrorBoundary>') && !content.includes('import ErrorBoundary')) {
-      console.log(`Fixing ErrorBoundary import in: ${filePath}`);
-      
-      // Determine the correct import path based on file location
-      let importPath = '../components/ErrorBoundary';
-      if (filePath.includes('/micro-saas-services/')) {
-        importPath = '../../components/ErrorBoundary';
-      } else if (filePath.includes('/it-services/')) {
-        importPath = '../../components/ErrorBoundary';
-      } else if (filePath.includes('/ai-services/')) {
-        importPath = '../../components/ErrorBoundary';
-      }
-      
-      // Add the import at the top after existing imports
+    // Check if file has ErrorBoundary usage but no import
+    if (content.includes('ErrorBoundary') && !content.includes("import.*ErrorBoundary")) {
+      // Add ErrorBoundary import at the top
       const lines = content.split('\n');
-      let insertIndex = 0;
+      let importIndex = -1;
       
       // Find the last import statement
       for (let i = 0; i < lines.length; i++) {
         if (lines[i].startsWith('import ')) {
-          insertIndex = i + 1;
+          importIndex = i;
         }
       }
       
-      // Insert the ErrorBoundary import
-      lines.splice(insertIndex, 0, `import ErrorBoundary from '${importPath}';`);
+      if (importIndex >= 0) {
+        // Add ErrorBoundary import after the last import
+        lines.splice(importIndex + 1, 0, "import { ErrorBoundary } from '../components/ErrorBoundary';");
+      } else {
+        // Add at the beginning if no imports found
+        lines.unshift("import { ErrorBoundary } from '../components/ErrorBoundary';");
+      }
       
-      const fixedContent = lines.join('\n');
-      fs.writeFileSync(filePath, fixedContent, 'utf8');
-      console.log(`✓ Fixed ErrorBoundary import in: ${filePath}`);
+      content = lines.join('\n');
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed ErrorBoundary import in: ${filePath}`);
       return true;
     }
     
@@ -47,36 +44,33 @@ function fixErrorBoundaryImports(filePath) {
   }
 }
 
-// Main function
-async function main() {
-  console.log('Starting ErrorBoundary import fixes...');
+// Function to recursively find and fix all TypeScript files
+function fixAllErrorBoundaryImports(dir) {
+  let fixedCount = 0;
   
-  // Find all TypeScript and TSX files
-  const patterns = [
-    'app/**/*.tsx',
-    'app/**/*.ts'
-  ];
-  
-  let totalFiles = 0;
-  let processedFiles = 0;
-  
-  for (const pattern of patterns) {
-    const files = await glob(pattern, { cwd: process.cwd() });
-    totalFiles += files.length;
+  function processDirectory(currentDir) {
+    const items = fs.readdirSync(currentDir);
     
-    for (const file of files) {
-      if (fixErrorBoundaryImports(file)) {
-        processedFiles++;
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        processDirectory(fullPath);
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+        if (fixErrorBoundaryImports(fullPath)) {
+          fixedCount++;
+        }
       }
     }
   }
   
-  console.log(`\nProcessed ${processedFiles} files with missing ErrorBoundary imports out of ${totalFiles} total files.`);
-  console.log('ErrorBoundary import fixes complete!');
+  processDirectory(dir);
+  return fixedCount;
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
-  main().catch(console.error);
-}
-
-export { fixErrorBoundaryImports };
+// Run the fix
+const appDir = path.join(__dirname, 'app');
+console.log('Fixing ErrorBoundary imports...');
+const fixedCount = fixAllErrorBoundaryImports(appDir);
+console.log(`Fixed ${fixedCount} files with ErrorBoundary import issues.`);

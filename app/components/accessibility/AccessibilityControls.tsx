@@ -1,16 +1,15 @@
-'use client';
+
 
 import React, { memo } from 'react';
 
 interface AccessibilityControlsProps {
+  isHighContrast: boolean;
+  fontSize: string;
+  reducedMotion: boolean;
+  onHighContrastChange: (value: boolean) => void;
+  onFontSizeChange: (value: string) => void;
+  onReducedMotionChange: (value: boolean) => void;
   className?: string;
-  children?: React.ReactNode;
-  isHighContrast?: boolean;
-  fontSize?: string;
-  reducedMotion?: boolean;
-  onHighContrastChange?: (value: boolean) => void;
-  onFontSizeChange?: (value: string) => void;
-  onReducedMotionChange?: (value: boolean) => void;
 }
 
 const AccessibilityControls: React.FC<AccessibilityControlsProps> = memo(({
@@ -29,17 +28,17 @@ const AccessibilityControls: React.FC<AccessibilityControlsProps> = memo(({
           <input
             type="checkbox"
             checked={isHighContrast}
-            onChange={(e) => onHighContrastChange?.(e.target.checked)}
+            onChange={(e) => onHighContrastChange(e.target.checked)}
             className="rounded"
           />
           <span>High Contrast</span>
         </label>
-        
+
         <label className="flex items-center space-x-2 text-white">
           <span>Font Size:</span>
           <select
             value={fontSize}
-            onChange={(e) => onFontSizeChange?.(e.target.value)}
+            onChange={(e) => onFontSizeChange(e.target.value)}
             className="bg-gray-700 text-white rounded px-2 py-1"
           >
             <option value="small">Small</option>
@@ -48,12 +47,12 @@ const AccessibilityControls: React.FC<AccessibilityControlsProps> = memo(({
             <option value="xl">Extra Large</option>
           </select>
         </label>
-        
+
         <label className="flex items-center space-x-2 text-white">
           <input
             type="checkbox"
             checked={reducedMotion}
-            onChange={(e) => onReducedMotionChange?.(e.target.checked)}
+            onChange={(e) => onReducedMotionChange(e.target.checked)}
             className="rounded"
           />
           <span>Reduce Motion</span>

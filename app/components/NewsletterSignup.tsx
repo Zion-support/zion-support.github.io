@@ -1,9 +1,9 @@
+'use client';
 import React, { useState } from 'react';
 
 interface NewsletterSignupProps {
-  className?: string;
-  children?: React.ReactNode;
   onSubscribe?: (email: string) => void;
+  className?: string;
 }
 
 const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ onSubscribe, className = '' }) => {
@@ -14,7 +14,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ onSubscribe, classN
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     try {
       if (onSubscribe) {
         await onSubscribe(email);

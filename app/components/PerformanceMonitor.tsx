@@ -22,6 +22,7 @@ interface LayoutShiftAttribution {
   currentRect: DOMRectReadOnly;
 }
 // Web API type declarations
+
 interface PerformanceMetrics {
   lcp: number | null;
   fid: number | null;
@@ -36,10 +37,10 @@ interface PerformanceMonitorProps {
   enableReporting?: boolean;
 }
 
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({ 
-  className = '', 
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
+  className = '',
   children,
-  enableReporting = false 
+  enableReporting = false
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     lcp: null,

@@ -4,12 +4,11 @@ import React, { memo, useState } from 'react';
 import Image from 'next/image';
 
 interface OptimizedImageProps {
-  className?: string;
-  children?: React.ReactNode;
   src: string;
   alt: string;
   width?: number;
   height?: number;
+  className?: string;
   priority?: boolean;
   placeholder?: 'blur' | 'empty';
   blurDataURL?: string;
@@ -39,7 +38,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
 
   if (hasError) {
     return (
-      <div 
+      <div
         className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={{ width, height }}
       >
@@ -51,7 +50,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
   return (
     <div className={`relative ${className}`}>
       {isLoading && (
-        <div 
+        <div
           className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center"
           style={{ width, height }}
         >

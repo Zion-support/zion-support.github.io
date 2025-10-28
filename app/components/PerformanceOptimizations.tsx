@@ -3,8 +3,6 @@
 import React, { useEffect, useCallback, memo } from 'react';
 
 interface PerformanceOptimizationsProps {
-  className?: string;
-  children?: React.ReactNode;
   enableImageOptimization?: boolean;
   enablePreloading?: boolean;
   enableResourceHints?: boolean;
@@ -155,7 +153,7 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const element = entry.target as HTMLElement;
-          
+
           // Load images when they come into view
           if (element.tagName === 'IMG') {
             const img = element as HTMLImageElement;

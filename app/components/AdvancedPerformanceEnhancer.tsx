@@ -13,7 +13,6 @@ interface PerformanceMetrics {
 }
 
 interface AdvancedPerformanceEnhancerProps {
-  className?: string;
   children: React.ReactNode;
   enableMonitoring?: boolean;
   enableOptimizations?: boolean;
@@ -51,9 +50,9 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
               setMetrics(prev => ({ ...prev, fid: (entry as PerformanceEventTiming).processingStart - entry.startTime }));
             } else if (entry.entryType === 'layout-shift') {
               if (!(entry as LayoutShift).hadRecentInput) {
-                setMetrics(prev => ({ 
-                  ...prev, 
-                  cls: (prev.cls || 0) + (entry as LayoutShift).value 
+                setMetrics(prev => ({
+                  ...prev,
+                  cls: (prev.cls || 0) + (entry as LayoutShift).value
                 }));
               }
             } else if (entry.entryType === 'paint') {
@@ -74,8 +73,8 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
       if ('memory' in performance) {
         const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
         if (memory) {
-          setMetrics(prev => ({ 
-            ...prev, 
+          setMetrics(prev => ({
+            ...prev,
             memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
           }));
         }
@@ -85,8 +84,8 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
       if ('connection' in navigator) {
         const connection = (navigator as Navigator & { connection?: { effectiveType: string } }).connection;
         if (connection) {
-          setMetrics(prev => ({ 
-            ...prev, 
+          setMetrics(prev => ({
+            ...prev,
             connectionSpeed: connection.effectiveType || 'unknown'
           }));
         }

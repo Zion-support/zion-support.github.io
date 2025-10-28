@@ -3,14 +3,14 @@
 import React, { useEffect, memo, useCallback } from 'react';
 
 interface EnhancedAccessibilityManagerProps {
-  className?: string;
-  children?: React.ReactNode;
   enableAutoDetection?: boolean;
   enableKeyboardShortcuts?: boolean;
+  className?: string;
+  children?: React.ReactNode;
 }
 
-const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> = memo(({ 
-  enableAutoDetection = true, 
+const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> = memo(({
+  enableAutoDetection = true,
   enableKeyboardShortcuts = true,
   className = '',
   children
@@ -33,7 +33,7 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
       const id = input.getAttribute('id');
       const ariaLabel = input.getAttribute('aria-label');
       const ariaLabelledBy = input.getAttribute('aria-labelledby');
-      
+
       if (!id && !ariaLabel && !ariaLabelledBy) {
         console.warn(`Form input ${index + 1} missing label:`, input);
       }
@@ -56,7 +56,7 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
       const styles = window.getComputedStyle(element);
       const color = styles.color;
       const backgroundColor = styles.backgroundColor;
-      
+
       if (color && backgroundColor && color !== 'rgba(0, 0, 0, 0)' && backgroundColor !== 'rgba(0, 0, 0, 0)') {
         // Basic contrast check - in a real implementation, you'd use a proper contrast calculation
         if (color === backgroundColor) {
@@ -72,8 +72,8 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
 
     const handleKeyDown = (event: KeyboardEvent) => {
       // Skip if user is typing in an input
-      if (event.target instanceof HTMLInputElement || 
-          event.target instanceof HTMLTextAreaElement || 
+      if (event.target instanceof HTMLInputElement ||
+          event.target instanceof HTMLTextAreaElement ||
           event.target instanceof HTMLSelectElement) {
         return;
       }
@@ -136,7 +136,7 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
         outline: 2px solid #3b82f6 !important;
         outline-offset: 2px !important;
       }
-      
+
       .focus-visible {
         outline: 2px solid #3b82f6 !important;
         outline-offset: 2px !important;

@@ -3,12 +3,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 
 interface LazyImageProps {
-  className?: string;
-  children?: React.ReactNode;
   src: string;
   alt: string;
-  width?: number;
-  height?: number;
+  className?: string;
   placeholder?: string;
   onLoad?: () => void;
   onError?: () => void;

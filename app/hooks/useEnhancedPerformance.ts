@@ -139,5 +139,6 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     metrics,
     isOptimized,
     optimizePerformance,
+    renderCount: renderCountRef.current,
   };
 };

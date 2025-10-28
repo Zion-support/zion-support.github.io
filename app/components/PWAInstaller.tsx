@@ -49,13 +49,13 @@ const PWAInstaller: React.FC = memo(() => {
 
     deferredPrompt.prompt();
     const { outcome } = await deferredPrompt.userChoice;
-    
+
     if (outcome === 'accepted') {
       logger.info('User accepted the install prompt');
     } else {
       logger.info('User dismissed the install prompt');
     }
-    
+
     setDeferredPrompt(null);
     setShowInstallPrompt(false);
   };

@@ -1,18 +1,17 @@
-'use client';
+
 
 import React, { memo } from 'react';
 
 interface LoadingSpinnerProps {
-  className?: string;
-  children?: React.ReactNode;
   size?: 'sm' | 'md' | 'lg';
+  className?: string;
   text?: string;
 }
 
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = memo(({ 
-  size = 'md', 
-  className = '', 
-  text 
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = memo(({
+  size = 'md',
+  className = '',
+  text
 }) => {
   const sizeClasses = {
     sm: 'h-4 w-4',
