@@ -1,51 +1,19 @@
 'use client';
-
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const AiContentStudioPage: React.FC = () => {
+function Pagex4b6b7cw1() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      
-      <main>
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Ai Content Studio</h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Advanced AI solutions for modern businesses.</p>
-          </div>
-        </section>
-
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Features</h2>
-              <p className="text-xl text-gray-300">Advanced AI solutions</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <h3 className="text-xl font-semibold text-white mb-4">AI-Powered</h3>
-                <p className="text-gray-300">Leverage artificial intelligence for enhanced performance and insights.</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <h3 className="text-xl font-semibold text-white mb-4">Scalable</h3>
-                <p className="text-gray-300">Built to scale with your business needs and growth.</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <h3 className="text-xl font-semibold text-white mb-4">Secure</h3>
-                <p className="text-gray-300">Enterprise-grade security and compliance features.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <Footer />
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+            
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Professional  services and solutions.
+          </p>
+        </div>
+      </div>
     </div>
   );
-};
-
-export default AiContentStudioPage;
+}
+Pagex4b6b7cw1.displayName = '';
+export default Pagex4b6b7cw1;

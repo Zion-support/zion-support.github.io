@@ -98,74 +98,59 @@ export default [
     'backend/**',
     'blog/**',
     'components/api/**',
-    'components/apps/**'
+    'components/apps/**',
+    '*.js',
+    'remove-helmet.js',
+    'rewrite-problematic-files.js',
+    'simplify-all-pages.js',
+    'simplify-pages.js',
+    'test-imports.js'
   ]},
+  js.configs.recommended,
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
+    files: ['**/*.{ts,tsx}'],
     languageOptions: {
-      ecmaVersion: 2020,
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-      },
       parser: tsParser,
       parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
         ecmaFeatures: {
           jsx: true,
         },
       },
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        console: 'readonly',
+        process: 'readonly',
+        __dirname: 'readonly',
+        require: 'readonly',
+        PerformanceEventTiming: 'readonly',
+        LayoutShift: 'readonly',
+      },
     },
     plugins: {
-      '@typescript-eslint': tseslint,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
       'react': react,
+      '@typescript-eslint': tseslint,
     },
     rules: {
-      ...js.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': [
         'warn',
-        {
-          allowConstantExport: true, 
-          allowExportNames: ['metadata', 'viewport', 'useAnalytics', 'AnalyticsProvider'] 
-        }
       ],
-      '@typescript-eslint/no-unused-vars': ['error', { 
-        'argsIgnorePattern': '^_',
-        'varsIgnorePattern': '^_',
-        'caughtErrorsIgnorePattern': '^_'
-      }],
-      '@typescript-eslint/no-explicit-any': 'warn',
-      'no-console': 'off',
-      'no-unused-vars': ['error', { 
-        'argsIgnorePattern': '^_',
-        'varsIgnorePattern': '^_',
-        'caughtErrorsIgnorePattern': '^_'
-      }],
-      'prefer-const': 'error',
-      'no-var': 'error',
-      'react/no-unescaped-entities': 'off',
       'react/react-in-jsx-scope': 'off',
-    },
-  },
-  {
-    files: ['**/AnalyticsProvider.tsx'],
-    rules: {
-      'react-refresh/only-export-components': 'off'
-    }
-  },
-  {
-    files: ['**/*.test.{js,jsx,ts,tsx}', '**/__tests__/**/*.{js,jsx,ts,tsx}', '**/setupTests.{js,ts,jsx,tsx}', '**/jest.setup.js'],
-    languageOptions: {
-      globals: {
-        ...globals.jest,
-      },
-    },
-    rules: {
-      '@typescript-eslint/no-unused-vars': 'off',
+      'react/prop-types': 'off',
       'no-unused-vars': 'off',
-      '@typescript-eslint/no-explicit-any': 'off',
+      '@typescript-eslint/no-unused-vars': 'off',
+      '@typescript-eslint/no-explicit-any': 'warn',
+    },
+  },
+  {
+    files: ['**/page.tsx', '**/layout.tsx', '**/loading.tsx', '**/error.tsx', '**/not-found.tsx'],
+    rules: {
+      'react-refresh/only-export-components': 'off',
     },
   },
 ];

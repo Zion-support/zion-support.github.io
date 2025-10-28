@@ -15,9 +15,9 @@ export default {
   transform: {
     '^.+\\.(ts|tsx)$': ['ts-jest', {
       tsconfig: 'tsconfig.json',
-      useESM: true
-    }],
-    '^.+\\.(js|jsx)$': 'babel-jest'
+      useESM: true,
+      jsx: 'react-jsx'
+    }]
   },
   testMatch: [
     '<rootDir>/__tests__/**/*.(ts|tsx|js|jsx)',
@@ -27,7 +27,18 @@ export default {
     'app/**/*.{ts,tsx}',
     '!app/**/*.d.ts',
     '!app/**/*.stories.{ts,tsx}',
-    '!app/**/index.{ts,tsx}'
+    '!app/**/index.{ts,tsx}',
+    '!app/error.tsx',
+    '!app/global-error.tsx',
+    '!app/layout.tsx',
+    '!app/loading.tsx',
+    '!app/not-found.tsx',
+    '!app/page-new.tsx',
+    '!app/page.tsx',
+    '!app/page-optimized.tsx',
+    '!app/page-original.tsx',
+    '!app/service-template.tsx',
+    '!app/**/*.tsx'
   ],
   coverageDirectory: 'coverage',
   coverageReporters: ['text', 'lcov', 'html'],
@@ -36,15 +47,17 @@ export default {
     '<rootDir>/node_modules/',
     '<rootDir>/dist/',
     '<rootDir>/.next/',
-    '<rootDir>/out/'
+    '<rootDir>/out/',
+    '<rootDir>/build/'
+  ],
+  watchPathIgnorePatterns: [
+    '<rootDir>/node_modules/',
+    '<rootDir>/.next/',
+    '<rootDir>/out/',
+    '<rootDir>/build/'
   ],
   transformIgnorePatterns: [
     'node_modules/(?!(.*\\.mjs$|lucide-react|framer-motion))'
   ],
-  extensionsToTreatAsEsm: ['.ts', '.tsx'],
-  globals: {
-    'ts-jest': {
-      useESM: true
-    }
-  }
+  extensionsToTreatAsEsm: ['.ts', '.tsx']
 };

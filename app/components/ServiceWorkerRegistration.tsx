@@ -1,59 +1,30 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React, { memo, useEffect } from 'react';
 
-interface ServiceWorkerRegistrationProps {
-  onUpdateAvailable?: () => void;
-  onUpdateInstalled?: () => void;
-  onError?: (_error: Error) => void;
-}
-
-const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
-  onUpdateAvailable,
-  onUpdateInstalled,
-  onError,
-}) => {
+const ServiceWorkerRegistration: React.FC = memo(() => {
   useEffect(() => {
-    if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {
-      return;
+    if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
+      // Register service worker
+      navigator.serviceWorker
+        .register('/sw.js')
+        .then((registration) => {
+          console.log('Service Worker registered successfully:', registration);
+        })
+        .catch((error) => {
+          console.log('Service Worker registration failed:', error);
+        });
+
+      // Handle service worker updates
+      navigator.serviceWorker.addEventListener('controllerchange', () => {
+        window.location.reload();
+      });
     }
-
-    const registerServiceWorker = async () => {
-      try {
-        const registration = await navigator.serviceWorker.register('/sw.js');
-        
-        // Check for updates
-        registration.addEventListener('updatefound', () => {
-          const newWorker = registration.installing;
-          if (newWorker) {
-            newWorker.addEventListener('statechange', () => {
-              if (newWorker.state === 'installed') {
-                if (navigator.serviceWorker.controller) {
-                  // New content is available
-                  onUpdateAvailable?.();
-                } else {
-                  // Content is cached for the first time
-                  onUpdateInstalled?.();
-                }
-              }
-            });
-          }
-        });
-
-        // Handle controller change
-        navigator.serviceWorker.addEventListener('controllerchange', () => {
-          window.location.reload();
-        });
-
-      } catch (_error) {
-        onError?.(_error as Error);
-      }
-    };
-
-    registerServiceWorker();
-  }, [onUpdateAvailable, onUpdateInstalled, onError]);
+  }, []);
 
   return null;
-};
+});
+
+ServiceWorkerRegistration.displayName = 'ServiceWorkerRegistration';
 
 export default ServiceWorkerRegistration;

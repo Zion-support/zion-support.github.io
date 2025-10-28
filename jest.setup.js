@@ -1,28 +1,3 @@
-// Mock analytics
-jest.mock('./app/utils/analytics.ts', () => ({
-  trackEvent: jest.fn(),
-  trackPageView: jest.fn(),
-  initAnalytics: jest.fn(),
-}));
-
-jest.mock('./app/utils/errorHandler.ts', () => ({
-  handleError: jest.fn(),
-  reportError: jest.fn(),
-  initErrorReporting: jest.fn(),
-}));
-
-jest.mock('./app/utils/performance.ts', () => ({
-  measurePerformance: jest.fn(),
-  getPerformanceMetrics: jest.fn(),
-  initPerformanceMonitoring: jest.fn(),
-}));
-
-jest.mock('./app/utils/seoData.ts', () => ({
-  getSEOData: jest.fn(),
-  generateStructuredData: jest.fn(),
-  initSEO: jest.fn(),
-}));
-
 // Mock Next.js router
 jest.mock('next/router', () => ({
   useRouter() {

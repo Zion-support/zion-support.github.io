@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react'
+import React, { memo } from 'react';
 import Head from 'next/head';
 
 interface SEOHeadProps {
@@ -12,22 +12,22 @@ interface SEOHeadProps {
   ogType?: string;
   twitterCard?: string;
   noindex?: boolean;
-  nofollow?: boolean;
+  structuredData?: Record<string, unknown>;
 }
 
-const SEOHead: React.FC<SEOHeadProps> = ({
-  title = 'Zion Tech Group - Leading AI & Technology Solutions Provider',
-  description = 'Transform your business with cutting-edge AI, cloud architecture, cybersecurity, and innovative development services. Expert technology solutions for modern enterprises.',
-  keywords = 'AI solutions, artificial intelligence, cloud architecture, web development, mobile apps, data analytics, cybersecurity, machine learning, cloud computing, digital transformation',
+const SEOHead: React.FC<SEOHeadProps> = memo(({
+  title = 'Zion Tech Group - Advanced AI & IT Solutions',
+  description = 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services. Transform your business with cutting-edge technology.',
+  keywords = 'AI solutions, cybersecurity, cloud computing, digital transformation, IT services, artificial intelligence, machine learning, data analytics',
   canonical,
-  ogImage = '/og-image.jpg',
+  ogImage = '/images/og-image.jpg',
   ogType = 'website',
   twitterCard = 'summary_large_image',
   noindex = false,
-  nofollow = false,
+  structuredData,
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const currentUrl = canonical || (typeof window !== 'undefined' ? window.location.href : 'https://zion.app');
+  const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
 
   return (
     <Head>
@@ -35,74 +35,77 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      <link rel="canonical" href={currentUrl} />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta charSet="utf-8" />
+      
+      {/* Canonical URL */}
+      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
       
       {/* Robots */}
-      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
+      <meta name="robots" content={noindex ? 'noindex,nofollow' : 'index,follow'} />
       
       {/* Open Graph */}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={currentUrl} />
       <meta property="og:image" content={ogImage} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
+      <meta property="og:url" content={canonicalUrl} />
       <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
       
-      {/* Twitter */}
+      {/* Twitter Card */}
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
       
-      {/* Additional Meta Tags */}
+      {/* Additional SEO */}
       <meta name="author" content="Zion Tech Group" />
-      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+      <meta name="language" content="en" />
+      <meta name="revisit-after" content="7 days" />
+      
+      {/* Theme and App Meta Tags */}
       <meta name="theme-color" content="#7c3aed" />
+      <meta name="msapplication-TileColor" content="#7c3aed" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
       
       {/* Favicon */}
       <link rel="icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="manifest" href="/site.webmanifest" />
+      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+      <link rel="manifest" href="/manifest.json" />
+      
+      {/* Preconnect to external domains */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       
       {/* Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Zion Tech Group",
-            "url": "https://zion.app",
-            "logo": "https://zion.app/logo.png",
-            "description": description,
-            "sameAs": [
-              "https://twitter.com/ziontechgroup",
-              "https://linkedin.com/company/zion-tech-group"
+          __html: JSON.stringify(structuredData || {
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: 'Zion Tech Group',
+            description: description,
+            url: canonicalUrl,
+            logo: '/images/logo.png',
+            sameAs: [
+              'https://linkedin.com/company/zion-tech-group',
+              'https://twitter.com/ziontechgroup',
             ],
-            "contactPoint": {
-              "@type": "ContactPoint",
-              "telephone": "+1-555-0123",
-              "contactType": "customer service",
-              "availableLanguage": "English"
+            contactPoint: {
+              '@type': 'ContactPoint',
+              telephone: '+1-555-0123',
+              contactType: 'customer service',
             },
-            "address": {
-              "@type": "PostalAddress",
-              "addressCountry": "US"
-            }
-          })
+          }),
         }}
       />
     </Head>
   );
-};
+});
+
+SEOHead.displayName = 'SEOHead';
 
 export default SEOHead;

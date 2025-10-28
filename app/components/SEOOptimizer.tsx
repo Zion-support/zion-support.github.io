@@ -1,20 +1,17 @@
-'use client'
-
 import React from 'react';
 
+
 interface SEOOptimizerProps {
-  // Add props here
-
-
-const SEOOptimizer: React.FC<SEOOptimizerProps> = (_props) => {
+  className?: string;
+  children?: React.ReactNode;
+}
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ className = '', children }) => {
   return (
-    <div>
-      {/* Component content */
+    <div className={`seooptimizer-component ${className}`}>
+      {children}
     </div>
-  )
-}
+  );
+};
 
-}
-
-export default SEOOptimizer
-}
+SEOOptimizer.displayName = 'SEOOptimizer';
+export default SEOOptimizer;

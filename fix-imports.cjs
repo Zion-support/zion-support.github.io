@@ -1,43 +1,51 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix import syntax errors
-function fixImportSyntax(filePath) {
+const filesToFix = [
+  'app/ai-3d-model-generator/page.tsx',
+  'app/ai-audio-processor/page.tsx',
+  'app/ai-code-assistant/page.tsx',
+  'app/ai-legal-assistant/page.tsx',
+  'app/ai-translator/page.tsx',
+  'app/edge-computing-solutions/page.tsx',
+  'app/quantum-computing-solutions/page.tsx'
+];
+
+const unusedImports = {
+  'ArrowRightIcon': true,
+  'ShieldCheckIcon': true,
+  'PlayIcon': true,
+  'PauseIcon': true,
+  'StopIcon': true,
+  'ArrowDownTrayIcon': true,
+  'ClockIcon': true,
+  'SpeakerWaveIcon': true,
+  'LanguageIcon': true,
+  'CodeBracketIcon': true,
+  'BoltIcon': true,
+  'DocumentTextIcon': true,
+  'GlobeAltIcon': true
+};
+
+filesToFix.forEach(filePath => {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Fix common import syntax errors
-    content = content.replace(/import \{Helmet\}\}from 'react-helmet-async';/g, "import { Helmet } from 'react-helmet-async';");
-    content = content.replace(/import \{([^}]+)\}\}from 'lucide-react';/g, "import { $1 } from 'lucide-react';");
+    // Remove unused imports
+    Object.keys(unusedImports).forEach(importName => {
+      const regex = new RegExp(`\\s*${importName},?\\s*`, 'g');
+      content = content.replace(regex, '');
+    });
     
-    // Fix other common syntax errors
-    content = content.replace(/const (\w+): React\.FC = \(\) => \{,/g, 'const $1: React.FC = () => {');
-    content = content.replace(/'use client'/g, "'use client';");
+    // Clean up any trailing commas in import statements
+    content = content.replace(/,\s*}/g, '}');
+    content = content.replace(/,\s*]/g, ']');
     
     fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);
+    console.log(`Fixed imports in ${filePath}`);
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
   }
-}
+});
 
-// Function to recursively find and fix all .tsx files
-function fixAllTsxFiles(dir) {
-  const files = fs.readdirSync(dir);
-  
-  for (const file of files) {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory()) {
-      fixAllTsxFiles(filePath);
-    } else if (file.endsWith('.tsx')) {
-      fixImportSyntax(filePath);
-    }
-  }
-}
-
-// Start fixing from the app directory
-console.log('Fixing import syntax errors in all .tsx files...');
-fixAllTsxFiles('./app');
-console.log('Done!');
+console.log('Import fixing completed!');

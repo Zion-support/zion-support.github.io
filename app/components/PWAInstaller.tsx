@@ -1,120 +1,104 @@
-'use client'
+'use client';
 
-import React, { useState, useEffect } from 'react'
-import { Download, X, _CheckCircle } from 'lucide-react'
+import React, { memo, useState, useEffect } from 'react';
+import { Download, X } from 'lucide-react';
+import logger from '../utils/logger';
 
-interface PWAInstallerProps {
-  onInstall?: () => void
-  onDismiss?: () => void
-  showInstallPrompt?: boolean
+interface BeforeInstallPromptEvent extends Event {
+  prompt(): Promise<void>;
+  userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
+}
 
-
-const PWAInstaller: React.FC<PWAInstallerProps> = ({
-  onInstall,
-  onDismiss,
-  showInstallPrompt = true,
-}) => {
-  const [deferredPrompt, setDeferredPrompt] = useState<any>(null)
-  const [isInstalled, setIsInstalled] = useState(false)
-  const [showPrompt, setShowPrompt] = useState(false)
+const PWAInstaller: React.FC = memo(() => {
+  const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
+  const [showInstallPrompt, setShowInstallPrompt] = useState(false);
+  const [isInstalled, setIsInstalled] = useState(false);
 
   useEffect(() => {
     // Check if app is already installed
     if (window.matchMedia('(display-mode: standalone)').matches) {
-      setIsInstalled(true)
-      return
-    
+      setIsInstalled(true);
+      return;
+    }
 
     // Listen for the beforeinstallprompt event
     const handleBeforeInstallPrompt = (e: Event) => {
-      e.preventDefault()
-      setDeferredPrompt(e)
-      setShowPrompt(true)
-    }
+      e.preventDefault();
+      setDeferredPrompt(e as BeforeInstallPromptEvent);
+      setShowInstallPrompt(true);
+    };
 
     // Listen for the appinstalled event
     const handleAppInstalled = () => {
-      setIsInstalled(true)
-      setShowPrompt(false)
-      setDeferredPrompt(null)
-    }
+      setIsInstalled(true);
+      setShowInstallPrompt(false);
+      setDeferredPrompt(null);
+    };
 
-    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt)
-    window.addEventListener('appinstalled', handleAppInstalled)
+    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+    window.addEventListener('appinstalled', handleAppInstalled);
 
     return () => {
-      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt)
-      window.removeEventListener('appinstalled', handleAppInstalled)
-    }
-  }, [])
+      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+      window.removeEventListener('appinstalled', handleAppInstalled);
+    };
+  }, []);
 
-  const handleInstall = async () => {
-    if (!deferredPrompt) return
+  const handleInstallClick = async () => {
+    if (!deferredPrompt) return;
 
-    deferredPrompt.prompt()
-    const { outcome } = await deferredPrompt.userChoice
+    deferredPrompt.prompt();
+    const { outcome } = await deferredPrompt.userChoice;
     
     if (outcome === 'accepted') {
-      onInstall?.()
+      logger.info('User accepted the install prompt');
+    } else {
+      logger.info('User dismissed the install prompt');
+    }
     
-    
-    setDeferredPrompt(null)
-    setShowPrompt(false)
-  }
+    setDeferredPrompt(null);
+    setShowInstallPrompt(false);
+  };
 
   const handleDismiss = () => {
-    setShowPrompt(false)
-    onDismiss?.()
+    setShowInstallPrompt(false);
+  };
+
+  if (isInstalled || !showInstallPrompt) {
+    return null;
   }
 
-  if (isInstalled || !showPrompt || !showInstallPrompt) {
-    return null
-  
-
   return (
-    <div className="fixed bottom-4 left-4 right-4 md:left-auto md:right-4 md:max-w-sm bg-white rounded-lg shadow-lg border border-gray-200 p-4 z-50"></div>
-      <div className="flex items-start justify-between"></div>
-        <div className="flex items-start space-x-3"></div>
-          <div className="flex-shrink-0"></div>
-            <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center"></div>
-              <Download className="w-5 h-5 text-blue-600" />
-            </div>
-          </div>
-          <div className="flex-1"></div>
-            <h3 className="text-sm font-semibold text-gray-900 mb-1">
-              Install App
-            </h3>
-            <p className="text-xs text-gray-600 mb-3">
-              Install this app on your device for a better experience
-            </p>
-            <div className="flex space-x-2"></div>
-              <button
-                onClick={handleInstall
-                className="bg-blue-600 text-white px-3 py-1.5 rounded text-xs font-medium hover:bg-blue-700 transition-colors flex items-center"
-              >
-                <Download className="w-3 h-3 mr-1" />
-                Install
-              </button>
-              <button
-                onClick={handleDismiss
-                className="text-gray-500 hover:text-gray-700 text-xs font-medium"
-              >
-                Not now
-              </button>
-            </div>
+    <div className="fixed bottom-4 left-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50 border border-gray-200">
+      <div className="flex items-start justify-between">
+        <div className="flex-1">
+          <h3 className="text-lg font-semibold text-gray-900 mb-2">
+            Install App
+          </h3>
+          <p className="text-sm text-gray-600 mb-3">
+            Install Zion Tech Group app for a better experience with offline access and faster loading.
+          </p>
+          <div className="flex space-x-2">
+            <button
+              onClick={handleInstallClick}
+              className="flex items-center space-x-2 bg-purple-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-purple-700 transition-colors"
+            >
+              <Download className="h-4 w-4" />
+              <span>Install</span>
+            </button>
+            <button
+              onClick={handleDismiss}
+              className="text-gray-500 hover:text-gray-700 transition-colors"
+            >
+              <X className="h-4 w-4" />
+            </button>
           </div>
         </div>
-        <button
-          onClick={handleDismiss
-          className="flex-shrink-0 text-gray-400 hover:text-gray-600"
-        >
-          <X className="w-4 h-4" />
-        </button>
       </div>
     </div>
-  )
-}
+  );
+});
 
-}
+PWAInstaller.displayName = 'PWAInstaller';
 
-export default PWAInstaller;}
+export default PWAInstaller;
