@@ -67,10 +67,3 @@ export default function HomePage() {
               <p className="text-gray-300">
                 Scalable cloud infrastructure and migration services for modern applications.
               </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}

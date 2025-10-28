@@ -101,6 +101,4 @@ const App = memo(() => {
   );
 });
 
-App.displayName = 'App';
-
-export default App;
+App.displayName = 'App';export default App;
