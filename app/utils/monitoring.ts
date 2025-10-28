@@ -6,10 +6,7 @@ declare global {
   function gtag(...args: unknown[]): void;
 }
 
-interface LayoutShift extends PerformanceEntry {
-  value: number;
-  hadRecentInput: boolean;
-}
+// LayoutShift interface removed as it's not used
 
 export const useMonitoring = () => {
   const [state, setState] = useState(null);
