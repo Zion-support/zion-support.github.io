@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 
@@ -65,7 +64,6 @@ export default function EnhancedLoadingPage() {
     </ErrorBoundary>
   );
 }
-=======
 import React, { ReactNode } from 'react';
 
 interface EnhancedLoadingProps {
@@ -84,4 +82,3 @@ const EnhancedLoading: React.FC<EnhancedLoadingProps> = () => {
 };
 
 export default EnhancedLoading;
->>>>>>> c271e7ba1e2d2951f565c25080f0cec45834b100

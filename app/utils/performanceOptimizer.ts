@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * Performance Optimizer
  * Comprehensive performance monitoring and optimization utilities

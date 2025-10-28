@@ -1,19 +1,3 @@
-import React from 'react';
-import ErrorBoundary from '../components/ErrorBoundary';
-
-<<<<<<< HEAD
-export const metadata = {
-  title: 'Backup Recovery | Zion Tech Group',
-  description: 'Professional backup recovery services by Zion Tech Group',
-  keywords: 'backup recovery, technology, services',
-  openGraph: {
-    title: 'Backup Recovery | Zion Tech Group',
-    description: 'Professional backup recovery services by Zion Tech Group',
-    type: 'website',
-  },
-};
-
-export default function BackupRecoveryPage() {
   return (
     <ErrorBoundary>
       <div className="min-h-screen bg-gray-50">
@@ -59,7 +43,6 @@ export default function BackupRecoveryPage() {
                 </div>
               </div>
             </div>
-=======
 export default function PagePage() {
   return (
     <ErrorBoundary>
@@ -72,7 +55,6 @@ export default function PagePage() {
             <p className="text-lg text-gray-600">
               This page is under development. Content will be added soon.
             </p>
->>>>>>> c271e7ba1e2d2951f565c25080f0cec45834b100
           </div>
         </div>
       </div>

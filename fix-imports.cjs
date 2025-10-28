@@ -1,51 +1,91 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 
-const filesToFix = [
-  'app/ai-3d-model-generator/page.tsx',
-  'app/ai-audio-processor/page.tsx',
-  'app/ai-code-assistant/page.tsx',
-  'app/ai-legal-assistant/page.tsx',
-  'app/ai-translator/page.tsx',
-  'app/edge-computing-solutions/page.tsx',
-  'app/quantum-computing-solutions/page.tsx'
-];
-
-const unusedImports = {
-  'ArrowRightIcon': true,
-  'ShieldCheckIcon': true,
-  'PlayIcon': true,
-  'PauseIcon': true,
-  'StopIcon': true,
-  'ArrowDownTrayIcon': true,
-  'ClockIcon': true,
-  'SpeakerWaveIcon': true,
-  'LanguageIcon': true,
-  'CodeBracketIcon': true,
-  'BoltIcon': true,
-  'DocumentTextIcon': true,
-  'GlobeAltIcon': true
-};
-
-filesToFix.forEach(filePath => {
+// Function to fix import paths based on file location
+function fixImports(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
     
-    // Remove unused imports
-    Object.keys(unusedImports).forEach(importName => {
-      const regex = new RegExp(`\\s*${importName},?\\s*`, 'g');
-      content = content.replace(regex, '');
-    });
+    // Calculate relative path to components directory
+    const relativePath = path.relative(path.dirname(filePath), 'app/components');
+    const importPath = relativePath.replace(/\\/g, '/');
     
-    // Clean up any trailing commas in import statements
-    content = content.replace(/,\s*}/g, '}');
-    content = content.replace(/,\s*]/g, ']');
+    // Fix ErrorBoundary imports
+    if (content.includes("import { ErrorBoundary } from '../components/ErrorBoundary'")) {
+      content = content.replace(
+        "import { ErrorBoundary } from '../components/ErrorBoundary'",
+        `import { ErrorBoundary } from '${importPath}/ErrorBoundary'`
+      );
+      modified = true;
+    }
     
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed imports in ${filePath}`);
+    // Fix Footer imports
+    if (content.includes("import Footer from '../components/Footer'")) {
+      content = content.replace(
+        "import Footer from '../components/Footer'",
+        `import Footer from '${importPath}/Footer'`
+      );
+      modified = true;
+    }
+    
+    if (content.includes("import Footer from '../../components/Footer'")) {
+      content = content.replace(
+        "import Footer from '../../components/Footer'",
+        `import Footer from '${importPath}/Footer'`
+      );
+      modified = true;
+    }
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed imports in ${filePath}`);
+      return true;
+    }
+    
+    return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
-});
+}
 
-console.log('Import fixing completed!');
+// Find all TypeScript files
+function findTsxFiles(dir) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        traverse(fullPath);
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+        files.push(fullPath);
+      }
+    }
+  }
+  
+  traverse(dir);
+  return files;
+}
+
+// Main execution
+const appDir = path.join(__dirname, 'app');
+const files = findTsxFiles(appDir);
+
+console.log(`Found ${files.length} TypeScript files`);
+
+let fixedCount = 0;
+for (const file of files) {
+  if (fixImports(file)) {
+    fixedCount++;
+  }
+}
+
+console.log(`Fixed ${fixedCount} files`);

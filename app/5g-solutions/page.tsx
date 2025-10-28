@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import ErrorBoundary from '../components/ErrorBoundary';
-=======
-import ErrorBoundary from '../components/ErrorBoundary';
-import React from "react";
->>>>>>> c271e7ba1e2d2951f565c25080f0cec45834b100
 
 export const metadata = {
   title: "Page | Zion Tech Group",
@@ -16,9 +9,6 @@ export const metadata = {
     type: "website",
   },
 };
-<<<<<<< HEAD
-
-export default function pagePage() {
   return (
     <ErrorBoundary>
       <div className="min-h-screen bg-gray-50">
@@ -64,7 +54,6 @@ export default function pagePage() {
                 </div>
               </div>
             </div>
-=======
 function Page() {
   return (
     <ErrorBoundary>
@@ -77,7 +66,6 @@ function Page() {
             <p className="text-lg text-gray-600">
               This page is under development. Content will be added soon.
             </p>
->>>>>>> c271e7ba1e2d2951f565c25080f0cec45834b100
           </div>
         </div>
       </div>

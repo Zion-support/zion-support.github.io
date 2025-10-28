@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 
@@ -63,7 +62,6 @@ export default function ContentStatisticsPage() {
         </div>
       </div>
     </ErrorBoundary>
-=======
 interface ContentStatisticsProps {
   className?: string;
   children?: React.ReactNode;
@@ -84,7 +82,6 @@ const ContentStatistics: React.FC<ContentStatisticsProps> = ({ className = '', c
     <div className={`contentstatistics-component ${className}`}>
       {children}
     </div>
->>>>>>> c271e7ba1e2d2951f565c25080f0cec45834b100
   );
 }
 

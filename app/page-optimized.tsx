@@ -1,6 +1,5 @@
-import Navigation from '../components/Navigation';
 'use client'
-import React from 'react'
+import React from 'react';
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 const PageOptimizedPage: React.FC = () => {
   const features = [

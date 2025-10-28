@@ -20,4 +20,3 @@ interface ErrorBoundaryState {
   }
 }
 
-export default ErrorBoundary;
