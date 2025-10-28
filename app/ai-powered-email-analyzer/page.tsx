@@ -1,7 +1,6 @@
 
-
-import React from "react";
-import { Brain, BarChart, Target, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
+import React from 'react';
+import { Brain, BarChart, Target, TrendingUp, ArrowRight, CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -15,8 +14,7 @@ export const metadata = {
     type: 'website',
   },
 };
-
-const AiPoweredEmailAnalyzerPage: React.FC = () => {
+export default function AiPoweredEmailAnalyzerPage() {
   const features = [
     {
       icon: Brain,
@@ -129,6 +127,4 @@ const benefits = [
       <Footer />
     </>
   );
-};
-
-export default AiPoweredEmailAnalyzerPage;
+}

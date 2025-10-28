@@ -1,6 +1,5 @@
 
-
-import React from "react";
+import React from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 
@@ -14,8 +13,7 @@ export const metadata = {
     type: 'website',
   },
 };
-
-function CybersecurityauditPage() {
+export default function CybersecurityauditPage() {
   return (
     <>
       <Navigation />
@@ -54,4 +52,3 @@ function CybersecurityauditPage() {
   );
 }
 
-export default CybersecurityauditPage;
