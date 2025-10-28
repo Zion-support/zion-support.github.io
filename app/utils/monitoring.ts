@@ -11,7 +11,7 @@ declare global {
 export const useMonitoring = _() => {
   const [state, setState] = useState(null);
   
-  useEffect_(() => {
+  useEffect(() => {
     // Hook implementation
   }, []);
   
