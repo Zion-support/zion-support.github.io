@@ -16,6 +16,9 @@ const LazyImage: React.FC<LazyImageProps> = ({
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const [hasError, setHasError] = useState(false);
+  
+  // Use placeholder for future implementation
+  console.log('Placeholder available:', placeholder);
   const imgRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
