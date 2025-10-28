@@ -40,6 +40,8 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
   const mountTimeRef = useRef<number>(0);
 
   useEffect(() => {
+    if (!trackPerformance) return;
+    
     mountTimeRef.current = performance.now();
     renderCountRef.current += 1;
 
@@ -141,6 +143,22 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
 
     return () => imageObserver.disconnect();
   }, []);
+
+  // Error tracking
+  useEffect(() => {
+    if (!trackErrors) return;
+
+    const handleError = (error: ErrorEvent) => {
+      console.error(`Error in ${component}:`, error);
+      if (trackAnalytics) {
+        // Send error to analytics service
+        console.log('Sending error to analytics:', error);
+      }
+    };
+
+    window.addEventListener('error', handleError);
+    return () => window.removeEventListener('error', handleError);
+  }, [component, trackErrors, trackAnalytics]);
 
   return {
     metrics,

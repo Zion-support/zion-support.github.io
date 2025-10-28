@@ -12,7 +12,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   children 
 }) => {
   return (
-    <div className={'seoenhancer ' + className}>
+    <div className={`seo-enhancer ${className}`}>
       {children || <p>SEOEnhancer component</p>}
     </div>
   );
