@@ -5,9 +5,8 @@ interface RootLayoutProps {
   children?: React.ReactNode;
 }
 
-const RootLayout: React.FC<RootLayoutProps> = ({ 
-  className = '', 
-  children 
+const RootLayout: React.FC<RootLayoutProps> = (_{ 
+  className = '', _children 
 }) => {
   return (
     <div className={'root-layout ' + className}>

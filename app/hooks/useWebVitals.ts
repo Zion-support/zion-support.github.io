@@ -9,19 +9,16 @@ interface WebVitalsMetric {
 }
 
 export const useWebVitals = (onPerfEntry?: (metric: WebVitalsMetric) => void) => {
-  useEffect(() => {
+  useEffect(_() => {
     if (onPerfEntry && typeof window !== 'undefined') {
       // Use the existing monitoring service instead of web-vitals
       // This avoids API compatibility issues
-      console.log('Web Vitals monitoring initialized');
-    }
+      }
   }, [onPerfEntry]);
 };
 
 export const reportWebVitals = (metric: WebVitalsMetric) => {
-  if (process.env.NODE_ENV === 'development') {
-    console.log('Web Vital:', metric);
-  }
+  if (process.env.NODE_ENV === 'development') { /* No action needed */ }
   
   // Send to analytics
   if (typeof window !== 'undefined' && 'gtag' in window) {

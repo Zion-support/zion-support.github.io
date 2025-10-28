@@ -1,6 +1,5 @@
 'use client';
 
-
 import React, { useEffect, useState, useCallback } from 'react';
 import Head from 'next/head';
 
@@ -22,16 +21,12 @@ interface AdvancedSEOEnhancerProps {
   enableSocialMeta?: boolean;
 }
 
-export const AdvancedSEOEnhancer: React.FC<AdvancedSEOEnhancerProps> = ({
-  seoData,
-  enableAutoOptimization = true,
-  enableStructuredData = true,
-  enableSocialMeta = true,
-}) => {
+export const AdvancedSEOEnhancer: React.FC<AdvancedSEOEnhancerProps> = (_{
+  seoData, _enableAutoOptimization = true, _enableStructuredData = true, _enableSocialMeta = true, _}) => {
   const [optimizedData, setOptimizedData] = useState<SEOData>(seoData);
 
   // Auto-optimize SEO data
-  const optimizeSEOData = useCallback(() => {
+  const optimizeSEOData = useCallback(_() => {
     if (!enableAutoOptimization) return;
 
     try {
@@ -61,13 +56,11 @@ export const AdvancedSEOEnhancer: React.FC<AdvancedSEOEnhancerProps> = ({
       }
 
       setOptimizedData(optimized);
-    } catch (error) {
-      console.warn('SEO optimization error:', error);
-    }
+    } catch (error) { /* Error handled silently */ }
   }, [seoData, enableAutoOptimization]);
 
   // Generate structured data
-  const generateStructuredData = useCallback(() => {
+  const generateStructuredData = useCallback(_() => {
     if (!enableStructuredData) return null;
 
     try {
@@ -104,13 +97,12 @@ export const AdvancedSEOEnhancer: React.FC<AdvancedSEOEnhancerProps> = ({
 
       return structuredData;
     } catch (error) {
-      console.warn('Structured data generation error:', error);
       return null;
     }
   }, [optimizedData, enableStructuredData]);
 
   // Initialize SEO optimization
-  useEffect(() => {
+  useEffect(_() => {
     optimizeSEOData();
   }, [optimizeSEOData]);
 

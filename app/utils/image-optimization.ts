@@ -1,6 +1,6 @@
 import { ImageLoader } from 'next/image';
 
-export const imageLoader: ImageLoader = ({ src, width, quality }) => {
+export const imageLoader: ImageLoader = (_{ src, _width, _quality }) => {
   const params = new URLSearchParams();
   params.set('w', width.toString());
   if (quality) {

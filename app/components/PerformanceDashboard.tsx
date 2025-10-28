@@ -3,7 +3,7 @@
 import React, { memo } from 'react';
 import { usePerformanceMetrics } from '../hooks/usePerformanceMetrics';
 
-const PerformanceDashboard: React.FC = memo(() => {
+const PerformanceDashboard: React.FC = memo(_() => {
   const { metrics, getPerformanceScore } = usePerformanceMetrics();
   const score = getPerformanceScore();
 

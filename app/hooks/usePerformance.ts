@@ -27,7 +27,7 @@ export function usePerformance(): PerformanceState & PerformanceActions {
   });
 
   // Update performance metrics
-  const updateMetrics = useCallback(() => {
+  const updateMetrics = useCallback(_() => {
     const metrics = performanceOptimizer.getMetrics();
     setState(prevState => ({
       ...prevState,
@@ -36,13 +36,13 @@ export function usePerformance(): PerformanceState & PerformanceActions {
   }, []);
 
   // Optimize performance
-  const optimize = useCallback(() => {
+  const optimize = useCallback(_() => {
     performanceOptimizer.optimize();
     updateMetrics();
   }, [updateMetrics]);
 
   // Reset metrics
-  const reset = useCallback(() => {
+  const reset = useCallback(_() => {
     performanceOptimizer.reset();
     setState({
       loadTime: 0,
@@ -55,12 +55,12 @@ export function usePerformance(): PerformanceState & PerformanceActions {
   }, []);
 
   // Get current metrics
-  const getMetrics = useCallback(() => {
+  const getMetrics = useCallback(_() => {
     return performanceOptimizer.getMetrics();
   }, []);
 
   // Initialize performance monitoring
-  useEffect(() => {
+  useEffect(_() => {
     // Initial metrics update
     updateMetrics();
 

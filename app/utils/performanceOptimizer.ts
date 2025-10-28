@@ -52,7 +52,7 @@ class PerformanceOptimizer {
     if (typeof window === 'undefined') return;
 
     // Monitor page load time
-    window.addEventListener('load', () => {
+    window.addEventListener(_'load', _() => {
       this.updateLoadTime();
       this.updateMemoryUsage();
       this.generateRecommendations();
@@ -60,7 +60,7 @@ class PerformanceOptimizer {
 
     // Monitor performance entries
     if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
+      const observer = new PerformanceObserver(_(list) => {
         for (const entry of list.getEntries()) {
           this.processPerformanceEntry(entry);
         }
@@ -115,7 +115,7 @@ class PerformanceOptimizer {
     if (!this.options.enableImageOptimization) return;
 
     const images = document.querySelectorAll('img');
-    images.forEach((img) => {
+    images.forEach(_(img) => {
       // Add loading="lazy" if not present
       if (!img.hasAttribute('loading')) {
         img.setAttribute('loading', 'lazy');
@@ -157,7 +157,7 @@ class PerformanceOptimizer {
 
     // Preload critical fonts
     const fontLinks = document.querySelectorAll('link[href*="font"]');
-    fontLinks.forEach((link) => {
+    fontLinks.forEach(_(link) => {
       link.setAttribute('rel', 'preload');
       link.setAttribute('as', 'font');
       link.setAttribute('type', 'font/woff2');
@@ -174,10 +174,8 @@ class PerformanceOptimizer {
     // Add cache headers for static assets
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js')
-        .then((registration) => {
-          console.log('Service Worker registered:', registration);
-        })
-        .catch((error) => {
+        .then(_(registration) => { /* Empty function */ })
+        .catch(_(error) => {
           console.error('Service Worker registration failed:', error);
         });
     }
@@ -249,7 +247,7 @@ class PerformanceOptimizer {
     const scripts = document.querySelectorAll('script[src]');
     let totalSize = 0;
 
-    scripts.forEach((script) => {
+    scripts.forEach(_(script) => {
       const src = script.getAttribute('src');
       if (src && src.includes('assets/')) {
         // Estimate size based on file name patterns

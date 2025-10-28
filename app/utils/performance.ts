@@ -5,8 +5,7 @@ export const performance = {
     const start = Date.now();
     fn();
     const end = Date.now();
-    console.log(`${name}: ${end - start}ms`);
-  }
+    }
 };
 
 class PerformanceMonitor {
@@ -55,16 +54,16 @@ class PerformanceMonitor {
     if (typeof window === "undefined") return;
 
     // Largest Contentful Paint
-    new PerformanceObserver((entryList) => {
+    new PerformanceObserver(_(entryList) => {
       const entries = entryList.getEntries();
       const lastEntry = entries[entries.length - 1];
       this.metrics.set("LCP", lastEntry.startTime);
     }).observe({ entryTypes: ["largest-contentful-paint"] });
 
     // First Input Delay
-    new PerformanceObserver((entryList) => {
+    new PerformanceObserver(_(entryList) => {
       const entries = entryList.getEntries();
-      entries.forEach((entry) => {
+      entries.forEach(_(entry) => {
         // Use processingStart if available, otherwise calculate from startTime
         const processingStart = (entry as { processingStart?: number }).processingStart || entry.startTime;
         this.metrics.set("FID", processingStart - entry.startTime);
@@ -73,9 +72,9 @@ class PerformanceMonitor {
 
     // Cumulative Layout Shift
     let clsValue = 0;
-    new PerformanceObserver((entryList) => {
+    new PerformanceObserver(_(entryList) => {
       const entries = entryList.getEntries();
-      entries.forEach((entry) => {
+      entries.forEach(_(entry) => {
         if (!(entry as { hadRecentInput?: boolean }).hadRecentInput) {
           clsValue += (entry as { value?: number }).value || 0;
         }
@@ -101,7 +100,7 @@ export function measureComponentRender(componentName: string) {
   return function <T extends React.ComponentType<unknown>>(PageComponent: T): T {
     return ((props: unknown) => {
       const monitor = PerformanceMonitor.getInstance();
-      React.useEffect(() => {
+      React.useEffect(_() => {
         monitor.startTiming(`${componentName}-render`);
         return () => {
           monitor.endTiming(`${componentName}-render`);

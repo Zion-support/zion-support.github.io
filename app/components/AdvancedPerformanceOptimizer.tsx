@@ -1,6 +1,5 @@
 'use client';
 
-
 import React, { useEffect, useState, useCallback } from 'react';
 
 interface PerformanceOptimizerProps {
@@ -8,9 +7,8 @@ interface PerformanceOptimizerProps {
   enableOptimizations?: boolean
 }
 
-const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  children,
-  enableOptimizations = true
+const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = (_{
+  children, _enableOptimizations = true
 }) => {
   const [isOptimized, setIsOptimized] = useState(false)
   const [optimizationMetrics, setOptimizationMetrics] = useState({
@@ -23,7 +21,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     if (typeof window === 'undefined') return 0
     const images = document.querySelectorAll('img')
     let optimizedCount = 0
-    images.forEach((img) => {
+    images.forEach(_(img) => {
       // Add lazy loading if not already present
       if (!img.hasAttribute('loading')) {
         img.setAttribute('loading', 'lazy')
@@ -42,7 +40,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     if (typeof window === 'undefined') return 0
     const scripts = document.querySelectorAll('script[src]')
     let optimizedCount = 0
-    scripts.forEach((script) => {
+    scripts.forEach(_(script) => {
       // Add defer attribute if not already present
       if (!script.hasAttribute('defer') && !script.hasAttribute('async')) {
         script.setAttribute('defer', '')
@@ -55,7 +53,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     if (typeof window === 'undefined') return 0
     const stylesheets = document.querySelectorAll('link[rel="stylesheet"]')
     let optimizedCount = 0
-    stylesheets.forEach((link) => {
+    stylesheets.forEach(_(link) => {
       // Add media attribute for non-critical CSS
       if (!link.hasAttribute('media') && !link.hasAttribute('data-critical')) {
         link.setAttribute('media', 'print')
@@ -65,7 +63,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     })
     return optimizedCount
   }, [])
-  const runOptimizations = useCallback(() => {
+  const runOptimizations = useCallback(_() => {
     if (!enableOptimizations) return
     const imagesOptimized = optimizeImages() || 0
     const scriptsOptimized = optimizeScripts() || 0
@@ -78,22 +76,20 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     });
     setIsOptimized(true)
   }, [enableOptimizations, optimizeImages, optimizeScripts, optimizeCSS])
-  useEffect(() => {
+  useEffect(_() => {
     // Run optimizations after component mount
     const timer = setTimeout(runOptimizations, 100)
     return () => clearTimeout(timer)
   }, [runOptimizations])
   // Add performance monitoring
-  useEffect(() => {
+  useEffect(_() => {
     if (typeof window === 'undefined') return
-    const observer = new PerformanceObserver((list) => {
+    const observer = new PerformanceObserver(_(list) => {
       const entries = list.getEntries()
-      entries.forEach((entry) => {
+      entries.forEach(_(entry) => {
         if (entry.entryType === 'navigation') {
           const navEntry = entry as PerformanceNavigationTiming
-          if (navEntry.loadEventEnd - navEntry.loadEventStart > 1000) {
-            console.warn('Page load time exceeded 1 second')
-          }
+          if (navEntry.loadEventEnd - navEntry.loadEventStart > 1000) { /* No action needed */ }
         }
       })
     })

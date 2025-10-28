@@ -1,79 +1,92 @@
 'use client';
 
-
-import React, { memo, useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import Image from 'next/image';
+import LoadingSpinner from './LoadingSpinner';
 
 interface OptimizedImageProps {
   src: string;
   alt: string;
-  width?: number;
-  height?: number;
-  className?: string;
+  width: number;
+  height: number;
   priority?: boolean;
+  quality?: number;
   placeholder?: 'blur' | 'empty';
   blurDataURL?: string;
+  className?: string;
+  sizes?: string;
+  fill?: boolean;
+  style?: React.CSSProperties;
+  onLoad?: () => void;
+  onError?: () => void;
 }
 
-const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
-  src,
-  alt,
-  width = 400,
-  height = 300,
-  className = '',
-  priority = false,
-  placeholder = 'empty',
-  blurDataURL
-}) => {
+export const OptimizedImage: React.FC<OptimizedImageProps> = (_{
+  src, _alt, _width, _height, _priority = false, _quality = 75, _placeholder = 'blur', _blurDataURL, _className = '', _sizes, _fill = false, _style, _onLoad, _onError, _}) => {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
 
-  const handleLoad = () => {
+  const handleLoad = useCallback(_() => {
     setIsLoading(false);
-  };
+    onLoad?.();
+  }, [onLoad]);
 
-  const handleError = () => {
-    setHasError(true);
+  const handleError = useCallback(_() => {
     setIsLoading(false);
-  };
+    setHasError(true);
+    onError?.();
+  }, [onError]);
+
+  // Generate blur data URL if not provided
+  const defaultBlurDataURL = blurDataURL || `data:image/svg+xml;base64,${Buffer.from(
+    `<svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100%" height="100%" fill="#f3f4f6"/>
+      <text x="50%" y="50%" text-anchor="middle" dy=".3em" fill="#9ca3af" font-family="system-ui, sans-serif" font-size="14">
+        Loading...
+      </text>
+    </svg>`
+  ).toString('base64')}`;
 
   if (hasError) {
     return (
       <div 
-        className={`bg-gray-200 flex items-center justify-center ${className}`}
-        style={{ width, height }}
+        className={`flex items-center justify-center bg-gray-100 text-gray-500 ${className}`}
+        style={{ width: fill ? '100%' : width, height: fill ? '100%' : height, ...style }}
       >
-        <span className="text-gray-500 text-sm">Image failed to load</span>
+        <span>Failed to load image</span>
       </div>
     );
   }
 
   return (
-    <div className={`relative ${className}`}>
+    <div className={`relative ${className}`} style={style}>
       {isLoading && (
-        <div 
-          className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center"
-          style={{ width, height }}
-        >
-          <span className="text-gray-500 text-sm">Loading...</span>
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
+          <LoadingSpinner />
         </div>
       )}
+      
       <Image
         src={src}
         alt={alt}
-        width={width}
-        height={height}
+        width={fill ? undefined : width}
+        height={fill ? undefined : height}
+        fill={fill}
         priority={priority}
+        quality={quality}
         placeholder={placeholder}
-        blurDataURL={blurDataURL}
+        blurDataURL={placeholder === 'blur' ? defaultBlurDataURL : undefined}
+        sizes={sizes || `(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw`}
+        className={`transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
         onLoad={handleLoad}
         onError={handleError}
-        className={`transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
+        style={{
+          objectFit: 'cover',
+          ...style,
+        }}
       />
     </div>
   );
-});
-
-OptimizedImage.displayName = 'OptimizedImage';
+};
 
 export default OptimizedImage;

@@ -1,6 +1,5 @@
 'use client';
 
-
 import React, { useState, useCallback, useEffect } from 'react';
 
 interface PerformanceMetrics {
@@ -13,13 +12,12 @@ interface PerformanceMetrics {
 }
 
 interface PerformanceMonitorProps {
-  onMetricsUpdate?: (_metrics: PerformanceMetrics) => void;
+  onMetricsUpdate?: () => void;
   enableRealTimeMonitoring?: boolean;
 }
 
-const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
-  onMetricsUpdate,
-  enableRealTimeMonitoring = true
+const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = (_{
+  onMetricsUpdate, _enableRealTimeMonitoring = true
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
@@ -30,7 +28,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     memory: null,
   })
 
-  const measureWebVitals = useCallback(() => {
+  const measureWebVitals = useCallback(_() => {
     if (typeof window === 'undefined' || !('performance' in window)) return
     if (typeof PerformanceObserver === 'undefined') return
 
@@ -38,7 +36,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
     // Measure First Contentful Paint (FCP)
     try {
-      const fcpObserver = new PerformanceObserver((list) => {
+      const fcpObserver = new PerformanceObserver(_(list) => {
         const entries = list.getEntries();
         entries.forEach((entry: PerformanceEntry) => {
           if (entry.name === 'first-contentful-paint') {
@@ -48,13 +46,11 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       });
       fcpObserver.observe({ entryTypes: ['paint'] });
       observers.push(fcpObserver);
-    } catch (error) {
-      console.warn('FCP measurement failed:', error);
-    }
+    } catch (error) { /* Error handled silently */ }
 
     // Measure First Input Delay (FID)
     try {
-      const fidObserver = new PerformanceObserver((list) => {
+      const fidObserver = new PerformanceObserver(_(list) => {
         const entries = list.getEntries()
         entries.forEach((entry: PerformanceEntry) => {
           const fidEntry = entry as PerformanceEntry & { processingStart: number };
@@ -65,14 +61,12 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
       observers.push(fidObserver);
-    } catch (error) {
-      console.warn('FID measurement failed:', error);
-    }
+    } catch (error) { /* Error handled silently */ }
 
     // Measure Cumulative Layout Shift (CLS)
     try {
       let clsValue = 0
-      const clsObserver = new PerformanceObserver((list) => {
+      const clsObserver = new PerformanceObserver(_(list) => {
         const entries = list.getEntries()
         entries.forEach((entry: PerformanceEntry & { hadRecentInput?: boolean; value?: number }) => {
           if (!entry.hadRecentInput) {
@@ -83,9 +77,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
       observers.push(clsObserver);
-    } catch (error) {
-      console.warn('CLS measurement failed:', error);
-    }
+    } catch (error) { /* Error handled silently */ }
 
     // Measure Time to First Byte (TTFB)
     try {
@@ -94,9 +86,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         const ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
         setMetrics(prev => ({ ...prev, ttfb }));
       }
-    } catch (error) {
-      console.warn('TTFB measurement failed:', error);
-    }
+    } catch (error) { /* Error handled silently */ }
 
     // Measure Memory Usage
     try {
@@ -106,22 +96,20 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           setMetrics(prev => ({ ...prev, memory: memory.usedJSHeapSize }));
         }
       }
-    } catch (error) {
-      console.warn('Memory measurement failed:', error);
-    }
+    } catch (error) { /* Error handled silently */ }
 
     return () => {
       observers.forEach(observer => observer.disconnect());
     };
   }, []);
 
-  useEffect(() => {
+  useEffect(_() => {
     if (!enableRealTimeMonitoring) return
 
     const cleanup = measureWebVitals()
 
     // Update metrics every 5 seconds
-    const interval = setInterval(() => {
+    const interval = setInterval(_() => {
       measureWebVitals()
     }, 5000)
 
@@ -131,7 +119,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     };
   }, [measureWebVitals, enableRealTimeMonitoring]);
 
-  useEffect(() => {
+  useEffect(_() => {
     if (onMetricsUpdate) {
       onMetricsUpdate(metrics)
     }

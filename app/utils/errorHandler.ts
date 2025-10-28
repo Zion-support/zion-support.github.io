@@ -53,8 +53,7 @@ export class ErrorHandler {
     try {
       // This would typically send to a service like Sentry, LogRocket, etc.
       // For now, we'll just log it
-      console.log('Would send to error service:', errorData);
-    } catch (err) {
+      } catch (err) {
       console.error('Failed to send error to service:', err);
     }
   }
@@ -76,11 +75,11 @@ export const errorHandler = ErrorHandler.getInstance();
 
 // Global error handler
 if (typeof window !== 'undefined') {
-  window.addEventListener('error', (event) => {
+  window.addEventListener(_'error', _(event) => {
     errorHandler.logError(event.error);
   });
 
-  window.addEventListener('unhandledrejection', (event) => {
+  window.addEventListener(_'unhandledrejection', _(event) => {
     errorHandler.logError(new Error(event.reason));
   });
 }

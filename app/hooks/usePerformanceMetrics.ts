@@ -20,11 +20,11 @@ export const usePerformanceMetrics = () => {
     ttfb: null,
   });
 
-  const measurePerformance = useCallback(() => {
+  const measurePerformance = useCallback(_() => {
     if (typeof window === 'undefined') return;
 
     // Measure First Contentful Paint (FCP)
-    const fcpObserver = new PerformanceObserver((list) => {
+    const fcpObserver = new PerformanceObserver(_(list) => {
       const entries = list.getEntries();
       const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
       if (fcpEntry) {
@@ -34,7 +34,7 @@ export const usePerformanceMetrics = () => {
     fcpObserver.observe({ entryTypes: ['paint'] });
 
     // Measure Largest Contentful Paint (LCP)
-    const lcpObserver = new PerformanceObserver((list) => {
+    const lcpObserver = new PerformanceObserver(_(list) => {
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
       setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
@@ -42,9 +42,9 @@ export const usePerformanceMetrics = () => {
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
     // Measure First Input Delay (FID)
-    const fidObserver = new PerformanceObserver((list) => {
+    const fidObserver = new PerformanceObserver(_(list) => {
       const entries = list.getEntries();
-      entries.forEach((entry) => {
+      entries.forEach(_(entry) => {
         const fidEntry = entry as PerformanceEventTiming;
         setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
       });
@@ -53,9 +53,9 @@ export const usePerformanceMetrics = () => {
 
     // Measure Cumulative Layout Shift (CLS)
     let clsValue = 0;
-    const clsObserver = new PerformanceObserver((list) => {
+    const clsObserver = new PerformanceObserver(_(list) => {
       const entries = list.getEntries();
-      entries.forEach((entry) => {
+      entries.forEach(_(entry) => {
         const clsEntry = entry as LayoutShift;
         if (!clsEntry.hadRecentInput) {
           clsValue += clsEntry.value || 0;
@@ -80,12 +80,12 @@ export const usePerformanceMetrics = () => {
     };
   }, []);
 
-  useEffect(() => {
+  useEffect(_() => {
     const cleanup = measurePerformance();
     return cleanup;
   }, [measurePerformance]);
 
-  const getPerformanceScore = useCallback(() => {
+  const getPerformanceScore = useCallback(_() => {
     const scores = {
       fcp: metrics.fcp ? (metrics.fcp < 1800 ? 100 : metrics.fcp < 3000 ? 75 : 50) : 0,
       lcp: metrics.lcp ? (metrics.lcp < 2500 ? 100 : metrics.lcp < 4000 ? 75 : 50) : 0,

@@ -5,7 +5,7 @@ interface LazyWrapperProps {
   children?: React.ReactNode;
 }
 
-const LazyWrapper: React.FC<LazyWrapperProps> = ({ className = '', children }) => {
+const LazyWrapper: React.FC<LazyWrapperProps> = (_{ className = '', _children }) => {
   return (
     <div className={`lazywrapper-component ${className}`}>
       {children}

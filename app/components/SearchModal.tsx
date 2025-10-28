@@ -5,7 +5,7 @@ interface SearchModalProps {
   children?: React.ReactNode;
 }
 
-const SearchModal: React.FC<SearchModalProps> = ({ className = '', children }) => {
+const SearchModal: React.FC<SearchModalProps> = (_{ className = '', _children }) => {
   return (
     <div className={`searchmodal-component ${className}`}>
 {children || <h2>SearchModal</h2>}

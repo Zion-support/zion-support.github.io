@@ -5,7 +5,7 @@ interface SEOEnhancerProps {
   children?: React.ReactNode;
 }
 
-const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '', children }) => {
+const SEOEnhancer: React.FC<SEOEnhancerProps> = (_{ className = '', _children }) => {
   return (
     <div className={`seoenhancer-component ${className}`}>
 {children || <h2>SEOEnhancer</h2>}

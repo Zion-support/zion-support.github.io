@@ -12,15 +12,8 @@ interface AccessibilityControlsProps {
   className?: string;
 }
 
-const AccessibilityControls: React.FC<AccessibilityControlsProps> = memo(({
-  isHighContrast,
-  fontSize,
-  reducedMotion,
-  onHighContrastChange,
-  onFontSizeChange,
-  onReducedMotionChange,
-  className = ''
-}) => {
+const AccessibilityControls: React.FC<AccessibilityControlsProps> = memo(({ isHighContrast, _fontSize, _reducedMotion, _onHighContrastChange, _onFontSizeChange, _onReducedMotionChange, _className = ''
+  }) => {
   return (
     <div className={`accessibility-controls ${className}`}>
       <div className="flex flex-wrap gap-4 p-4 bg-gray-800 rounded-lg">

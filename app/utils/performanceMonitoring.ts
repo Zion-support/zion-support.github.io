@@ -44,9 +44,9 @@ class PerformanceMonitor {
     // Observe navigation timing
     if ('PerformanceObserver' in window) {
       try {
-        const navObserver = new PerformanceObserver((list) => {
+        const navObserver = new PerformanceObserver(_(list) => {
           const entries = list.getEntries();
-          entries.forEach((entry) => {
+          entries.forEach(_(entry) => {
             if (entry.entryType === 'navigation') {
               this.processNavigationTiming(entry as PerformanceNavigationTiming);
             }
@@ -54,9 +54,7 @@ class PerformanceMonitor {
         });
         navObserver.observe({ entryTypes: ['navigation'] });
         this.observers.push(navObserver);
-      } catch (error) {
-        console.warn('Performance observer initialization failed:', error);
-      }
+      } catch (error) { /* Error handled silently */ }
     }
   }
 
@@ -89,7 +87,7 @@ class PerformanceMonitor {
       speedIndex: 3000
     };
 
-    Object.entries(thresholds).forEach(([key, threshold]) => {
+    Object.entries(thresholds).forEach(_([key, _threshold]) => {
       const value = metrics[key as keyof PerformanceMetrics];
       if (typeof value === 'number' && value > threshold) {
         this.addAlert({

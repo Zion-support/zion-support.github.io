@@ -5,7 +5,7 @@ interface ResponsiveContainerProps {
   children?: React.ReactNode;
 }
 
-const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ className = '', children }) => {
+const ResponsiveContainer: React.FC<ResponsiveContainerProps> = (_{ className = '', _children }) => {
   return (
 <div className={`responsive-container ${className}`}>
       {children || <h2>ResponsiveContainer</h2>}

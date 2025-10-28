@@ -6,7 +6,7 @@ interface NewsletterSignupProps {
   className?: string;
 }
 
-const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ onSubscribe, className = '' }) => {
+const NewsletterSignup: React.FC<NewsletterSignupProps> = (_{ onSubscribe, _className = '' }) => {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState('');

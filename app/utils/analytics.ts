@@ -28,7 +28,7 @@ class Analytics {
     // In production, you would send this to your analytics service
     if (process.env.NODE_ENV === "production") {
       this.sendToAnalytics(event)} else {
-      console.log("Analytics Event:", event)}
+      }
   }
 
   // Track page views
@@ -125,6 +125,6 @@ export function useAnalytics() {
 export function withAnalytics<T extends React.ComponentType<unknown>>(PageComponent: T): T {
   return ((props: unknown) => {
     const { trackPageView } = useAnalytics();
-    React.useEffect(() => {
+    React.useEffect(_() => {
       trackPageView(window.location.pathname, document.title)}, [trackPageView]);
     return React.createElement(PageComponent, props)}) as T}

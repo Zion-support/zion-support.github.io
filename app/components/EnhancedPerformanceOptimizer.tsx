@@ -5,7 +5,7 @@ interface EnhancedPerformanceOptimizerProps {
   children?: React.ReactNode;
 }
 
-const EnhancedPerformanceOptimizer: React.FC<EnhancedPerformanceOptimizerProps> = ({ className = '', children }) => {
+const EnhancedPerformanceOptimizer: React.FC<EnhancedPerformanceOptimizerProps> = (_{ className = '', _children }) => {
   return (
     <div className={`enhancedperformanceoptimizer-component ${className}`}>
 {children || <h2>EnhancedPerformanceOptimizer</h2>}

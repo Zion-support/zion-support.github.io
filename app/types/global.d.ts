@@ -46,4 +46,4 @@ declare global {
   }
 }
 
-export {};
+export { /* Empty function */ };

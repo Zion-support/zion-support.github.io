@@ -4,7 +4,7 @@ interface HeaderProps {
   // Add props here
 }
 
-export default function Header(_props: HeaderProps) {
+export default function Header() {
   return (
     <header>
       <h1>Header</h1>

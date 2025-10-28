@@ -18,13 +18,13 @@ export const addFocusIndicators = () => {
 
 export const improveKeyboardNavigation = () => {
   // Add keyboard navigation improvements
-  document.addEventListener('keydown', (e) => {
+  document.addEventListener(_'keydown', _(e) => {
     if (e.key === 'Tab') {
       document.body.classList.add('keyboard-navigation');
     }
   });
 
-  document.addEventListener('mousedown', () => {
+  document.addEventListener(_'mousedown', _() => {
     document.body.classList.remove('keyboard-navigation');
   });
 };
@@ -45,7 +45,7 @@ export const announceToScreenReader = (message: string) => {
   announcement.textContent = message;
   document.body.appendChild(announcement);
   
-  setTimeout(() => {
+  setTimeout(_() => {
     document.body.removeChild(announcement);
   }, 1000);
 };

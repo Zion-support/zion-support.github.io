@@ -4,7 +4,7 @@ interface ContentNewsletterSignupProps {
   // Add props here
 }
 
-export default function ContentNewsletterSignup(_props: ContentNewsletterSignupProps) {
+export default function ContentNewsletterSignup() {
   return (
     <div>
       <h1>Newsletter Signup</h1>

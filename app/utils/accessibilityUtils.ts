@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 export const useAccessibilityUtils = () => {
   const [state, setState] = useState(null);
   
-  useEffect(() => {
+  useEffect(_() => {
     // Hook implementation
   }, []);
   

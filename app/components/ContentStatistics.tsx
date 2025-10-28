@@ -4,7 +4,7 @@ interface ContentStatisticsProps {
   // Add props here
 }
 
-export default function ContentStatistics(_props: ContentStatisticsProps) {
+export default function ContentStatistics() {
   return (
     <div>
       <h1>Content Statistics</h1>

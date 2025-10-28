@@ -12,14 +12,8 @@ interface SEOEnhancementsProps {
   structuredData?: object;
 }
 
-const SEOEnhancements: React.FC<SEOEnhancementsProps> = memo(({
-  title = 'Zion Tech Group - Advanced Technology Solutions',
-  description = 'Leading provider of cutting-edge technology solutions, software development, and digital transformation services.',
-  keywords = 'technology, software development, digital transformation, AI solutions, cybersecurity',
-  canonical,
-  ogImage = '/og-image.webp',
-  structuredData
-}) => {
+const SEOEnhancements: React.FC<SEOEnhancementsProps> = memo(({ title = 'Zion Tech Group - Advanced Technology Solutions', _description = 'Leading provider of cutting-edge technology solutions, _software development, _and digital transformation services.', _keywords = 'technology, _software development, _digital transformation, _AI solutions, _cybersecurity', _canonical, _ogImage = '/og-image.webp', _structuredData
+  }) => {
   useEffect(() => {
     // Update page title
     if (title) {

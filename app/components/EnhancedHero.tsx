@@ -5,7 +5,7 @@ interface EnhancedHeroProps {
   children?: React.ReactNode;
 }
 
-const EnhancedHero: React.FC<EnhancedHeroProps> = ({ className = '', children }) => {
+const EnhancedHero: React.FC<EnhancedHeroProps> = (_{ className = '', _children }) => {
   return (
     <div className={`enhancedhero-component ${className}`}>
       {children}

@@ -7,7 +7,7 @@ interface SEOOptimizationProps {
   className?: string;
 }
 
-const SEOOptimization: React.FC<SEOOptimizationProps> = memo(({ className = '' }) => {
+const SEOOptimization: React.FC<SEOOptimizationProps> = memo(({ className = ''   }) => {
   // Add structured data
   const addStructuredData = useCallback(() => {
     if (typeof window === 'undefined') return;

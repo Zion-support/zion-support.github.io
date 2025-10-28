@@ -5,7 +5,7 @@ interface FuturisticBackgroundProps {
   children?: React.ReactNode;
 }
 
-const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ className = '', children }) => {
+const FuturisticBackground: React.FC<FuturisticBackgroundProps> = (_{ className = '', _children }) => {
   return (
 <div className={`futuristicbackground-component ${className}`}>
       {children}

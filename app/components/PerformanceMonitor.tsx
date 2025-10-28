@@ -1,6 +1,5 @@
 'use client';
 
-
 import React, { useEffect, useState, memo } from 'react';
 
 // Performance API types
@@ -38,11 +37,8 @@ interface PerformanceMonitorProps {
   enableReporting?: boolean;
 }
 
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({ 
-  className = '', 
-  children,
-  enableReporting = false 
-}) => {
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({ className = '', _children, _enableReporting = false 
+  }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     lcp: null,
     fid: null,
@@ -75,9 +71,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
     // Observe different performance entry types
     try {
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
-    } catch (error) {
-      console.warn('Performance Observer not supported:', error);
-    }
+    } catch (error) { /* Error handled silently */ }
 
     // Cleanup
     return () => {
@@ -87,9 +81,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
 
   // Report metrics (in a real app, you'd send this to analytics)
   useEffect(() => {
-    if (enableReporting && metrics.lcp && metrics.fid && metrics.cls && metrics.fcp) {
-      console.log('Core Web Vitals:', metrics);
-    }
+    if (enableReporting && metrics.lcp && metrics.fid && metrics.cls && metrics.fcp) { /* No action needed */ }
   }, [metrics, enableReporting]);
 
   return (

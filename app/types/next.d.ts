@@ -2,8 +2,8 @@
 import React, { ReactNode } from 'react';
 import { NextPage } from 'next';
 declare module 'next' {
-  interface NextPageWithLayout<P = {}, IP = P> extends NextPage<P, IP> {
-    getLayout?: (_page: React.ReactElement) => React.ReactNode;
+  interface NextPageWithLayout<P = { /* Empty function */ }, IP = P> extends NextPage<P, IP> {
+    getLayout?: () => React.ReactNode;
   }
 }
 
@@ -29,7 +29,7 @@ export interface NextPageProps {
 
 // API route types
 export interface ApiRouteHandler {
-  (_req: Request): Promise<Response>;
+  (): Promise<Response>;
 }
 
 // Server components types
@@ -66,11 +66,11 @@ export interface ClientComponentProps {
 
 // Route handlers
 export interface RouteHandler {
-  GET?: (_req: Request) => Promise<Response>;
-  POST?: (_req: Request) => Promise<Response>;
-  PUT?: (_req: Request) => Promise<Response>;
-  DELETE?: (_req: Request) => Promise<Response>;
-  PATCH?: (_req: Request) => Promise<Response>;
+  GET?: () => Promise<Response>;
+  POST?: () => Promise<Response>;
+  PUT?: () => Promise<Response>;
+  DELETE?: () => Promise<Response>;
+  PATCH?: () => Promise<Response>;
 }
 
 // Dynamic route types

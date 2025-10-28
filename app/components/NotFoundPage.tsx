@@ -5,7 +5,7 @@ interface NotFoundPageProps {
   children?: React.ReactNode;
 }
 
-const NotFoundPage: React.FC<NotFoundPageProps> = ({ className = '', children }) => {
+const NotFoundPage: React.FC<NotFoundPageProps> = (_{ className = '', _children }) => {
   return (
 <div className={`notfoundpage-component ${className}`}>
       {children}

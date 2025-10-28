@@ -15,17 +15,7 @@ interface SEOHeadProps {
   structuredData?: Record<string, unknown>;
 }
 
-const SEOHead: React.FC<SEOHeadProps> = memo(({
-  title = 'Zion Tech Group - Advanced AI & IT Solutions',
-  description = 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services. Transform your business with cutting-edge technology.',
-  keywords = 'AI solutions, cybersecurity, cloud computing, digital transformation, IT services, artificial intelligence, machine learning, data analytics',
-  canonical,
-  ogImage = '/images/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  noindex = false,
-  structuredData,
-}) => {
+const SEOHead: React.FC<SEOHeadProps> = memo(({ title = 'Zion Tech Group - Advanced AI & IT Solutions', _description = 'Leading provider of AI-powered solutions, _cybersecurity, _and digital transformation services. Transform your business with cutting-edge technology.', _keywords = 'AI solutions, _cybersecurity, _cloud computing, _digital transformation, _IT services, _artificial intelligence, _machine learning, _data analytics', _canonical, _ogImage = '/images/og-image.jpg', _ogType = 'website', _twitterCard = 'summary_large_image', _noindex = false, _structuredData, _  }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
 

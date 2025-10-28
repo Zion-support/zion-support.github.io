@@ -14,7 +14,7 @@ interface PerformanceMetrics {
   networkLatency: number;
 }
 
-export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) => {
+export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = { /* Empty function */ }) => {
   // Component name for performance tracking
   const componentName = options.component || 'unknown';
 
@@ -29,13 +29,11 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
   const renderCountRef = useRef<number>(0);
   const mountTimeRef = useRef<number>(0);
 
-  useEffect(() => {
+  useEffect(_() => {
     mountTimeRef.current = performance.now();
     renderCountRef.current += 1;
     
     // Log component performance tracking
-    console.log(`Performance tracking enabled for component: ${componentName}`);
-
     // Measure load time
     const measureLoadTime = () => {
       const loadTime = performance.now();
@@ -45,7 +43,7 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     // Measure render time
     const measureRenderTime = () => {
       const renderStart = performance.now();
-      requestAnimationFrame(() => {
+      requestAnimationFrame(_() => {
         const renderTime = performance.now() - renderStart;
         setMetrics(prev => ({ ...prev, renderTime }));
       });
@@ -64,11 +62,11 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     const measureNetworkLatency = () => {
       const start = performance.now();
       fetch('/api/ping', { method: 'HEAD' })
-        .then(() => {
+        .then(_() => {
           const latency = performance.now() - start;
           setMetrics(prev => ({ ...prev, networkLatency: latency }));
         })
-        .catch(() => {
+        .catch(_() => {
           // Fallback if ping endpoint doesn't exist
           setMetrics(prev => ({ ...prev, networkLatency: 0 }));
         });
@@ -96,7 +94,7 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     return () => clearTimeout(timeoutId);
   }, [componentName, metrics.loadTime, metrics.renderTime, metrics.memoryUsage, metrics.networkLatency]);
 
-  const optimizePerformance = useCallback(() => {
+  const optimizePerformance = useCallback(_() => {
     if (typeof document === 'undefined') return;
 
     // Preload critical resources
@@ -106,7 +104,7 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
       '/images/logo.png',
     ];
 
-    criticalResources.forEach((resource) => {
+    criticalResources.forEach(_(resource) => {
       const link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource;
@@ -119,8 +117,8 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
 
     // Optimize images
     const images = document.querySelectorAll('img[data-src]');
-    const imageObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
+    const imageObserver = new IntersectionObserver(_(entries) => {
+      entries.forEach(_(entry) => {
         if (entry.isIntersecting) {
           const img = entry.target as HTMLImageElement;
           img.src = img.dataset.src || '';

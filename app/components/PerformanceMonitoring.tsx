@@ -1,6 +1,5 @@
 'use client';
 
-
 import React, { useEffect, memo, useCallback } from 'react';
 
 // Performance API types
@@ -19,7 +18,15 @@ interface PerformanceMonitoringProps {
   className?: string;
 }
 
-const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ className = '' }) => {
+interface MemoryUsage {
+  used: number;
+  total: number;
+  limit: number;
+}
+
+const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ className = ''   }) => {
+  const [memoryUsage, setMemoryUsage] = React.useState<MemoryUsage>({ used: 0, total: 0, limit: 0 });
+  
   // Monitor Core Web Vitals
   const monitorCoreWebVitals = useCallback(() => {
     if (typeof window === 'undefined') return;
@@ -28,8 +35,6 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const lcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
-      console.log('LCP:', lastEntry.startTime);
-      
       // Send to analytics if needed
       if (window.gtag) {
         window.gtag('event', 'web_vitals', {
@@ -47,8 +52,6 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
       entries.forEach((entry) => {
         const fidEntry = entry as PerformanceEventTiming;
         const fid = fidEntry.processingStart - fidEntry.startTime;
-        console.log('FID:', fid);
-        
         if (window.gtag) {
           window.gtag('event', 'web_vitals', {
             name: 'FID',
@@ -68,8 +71,6 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
         const clsEntry = entry as LayoutShiftEntry;
         if (!clsEntry.hadRecentInput) {
           clsValue += clsEntry.value;
-          console.log('CLS:', clsValue);
-          
           if (window.gtag) {
             window.gtag('event', 'web_vitals', {
               name: 'CLS',
@@ -86,8 +87,6 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const fcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        console.log('FCP:', entry.startTime);
-        
         if (window.gtag) {
           window.gtag('event', 'web_vitals', {
             name: 'FCP',
@@ -115,8 +114,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.duration > 1000) { // Resources taking more than 1 second
-          console.warn('Slow resource:', entry.name, entry.duration);
-        }
+          }
       });
     });
     resourceObserver.observe({ entryTypes: ['resource'] });
@@ -135,14 +133,14 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
         const total = memory.totalJSHeapSize / 1024 / 1024; // MB
         const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB
         
-        console.log('Memory usage:', {
+        setMemoryUsage({
           used: Math.round(used),
           total: Math.round(total),
           limit: Math.round(limit)
         });
 
         if (used / limit > 0.8) {
-          console.warn('High memory usage detected:', Math.round((used / limit) * 100) + '%');
+          console.warn('High memory usage: ' + Math.round((used / limit) * 100) + '%');
         }
       }
     };

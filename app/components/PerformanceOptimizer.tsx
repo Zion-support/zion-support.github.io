@@ -1,6 +1,5 @@
 'use client';
 
-
 import React, { useEffect } from 'react';
 
 // Performance API types
@@ -36,7 +35,7 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
         { href: '/images/logo.png', as: 'image' },
       ];
 
-      criticalResources.forEach(({ href, as, type, crossOrigin }) => {
+      criticalResources.forEach(({ href, _as, _type, _crossOrigin  }) => {
         const link = document.createElement('link');
         link.rel = 'preload';
         link.href = href;
@@ -70,17 +69,13 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
         // Monitor Core Web Vitals
         const observer = new PerformanceObserver((list) => {
           list.getEntries().forEach((entry) => {
-            if (entry.entryType === 'largest-contentful-paint') {
-              console.log('LCP:', entry.startTime);
-            }
+            if (entry.entryType === 'largest-contentful-paint') { /* No action needed */ }
             if (entry.entryType === 'first-input') {
               const fidEntry = entry as PerformanceEventTiming;
-              console.log('FID:', fidEntry.processingStart - fidEntry.startTime);
-            }
+              }
             if (entry.entryType === 'layout-shift') {
               const clsEntry = entry as LayoutShift;
-              console.log('CLS:', clsEntry.value);
-            }
+              }
           });
         });
 

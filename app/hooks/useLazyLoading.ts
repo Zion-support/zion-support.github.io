@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 export const useLazyLoading = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
-  useEffect(() => {
+  useEffect(_() => {
     setIsLoaded(true);
   }, []);
 

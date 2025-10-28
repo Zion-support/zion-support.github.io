@@ -13,7 +13,7 @@ interface PerformanceData {
   renderTime: number;
 }
 
-export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}) => {
+export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = { /* Empty function */ }) => {
   const [metrics, setMetrics] = useState<PerformanceData>({
     fps: 0,
     memoryUsage: 0,
@@ -24,7 +24,7 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
   const frameCountRef = useRef(0);
   const lastTimeRef = useRef(performance.now());
 
-const measureMemoryUsage = useCallback(() => {
+const measureMemoryUsage = useCallback(_() => {
     // Measure memory usage
     let memoryUsage = 0;
     if ('memory' in performance) {
@@ -36,7 +36,7 @@ const measureMemoryUsage = useCallback(() => {
     return memoryUsage;
 }, []);
 
-  const measurePerformance = useCallback(() => {
+  const measurePerformance = useCallback(_() => {
     // Measure performance metrics
     const startTime = performance.now();
     const memoryUsage = measureMemoryUsage();
@@ -55,7 +55,7 @@ const measureMemoryUsage = useCallback(() => {
     }));
   }, [measureMemoryUsage]);
 
-  const measureFPS = useCallback(() => {
+  const measureFPS = useCallback(_() => {
     if (!isMonitoringFPS) return;
 
     frameCountRef.current++;
@@ -72,7 +72,7 @@ const measureMemoryUsage = useCallback(() => {
     requestAnimationFrame(measureFPS);
   }, [isMonitoringFPS]);
 
-  useEffect(() => {
+  useEffect(_() => {
     if (options.enabled) {
       setIsMonitoringFPS(true);
       measureFPS();
