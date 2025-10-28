@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState, memo } from 'react';
 import type { PerformanceEventTiming, LayoutShift } from '../types/performance';
+
 interface PerformanceMetrics {
   lcp: number | null;
   fid: number | null;
@@ -9,8 +10,6 @@ interface PerformanceMetrics {
   fcp: number | null;
   ttfb: number | null;
 }
-
-
 interface PerformanceMonitorProps {
   className?: string;
   children?: React.ReactNode;
