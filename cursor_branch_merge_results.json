@@ -1,5 +1,7 @@
 {
-  "successful": [],
+  "successful": [
+    "cursor/fix-errors-and-merge-to-main-0065"
+  ],
   "failed": [],
   "already_merged": [
     "cursor/fix-errors-and-merge-to-main-0000",
@@ -10,7 +12,6 @@
     "cursor/fix-errors-and-merge-to-main-0032",
     "cursor/fix-errors-and-merge-to-main-004e",
     "cursor/fix-errors-and-merge-to-main-0059",
-    "cursor/fix-errors-and-merge-to-main-0065",
     "cursor/fix-errors-and-merge-to-main-007a",
     "cursor/fix-errors-and-merge-to-main-0094",
     "cursor/fix-errors-and-merge-to-main-00a6",
