@@ -3,6 +3,13 @@
 import React, { useEffect, useState, memo } from 'react';
 
 // Performance API type definitions
+interface PerformanceEventTiming extends PerformanceEntry {
+  processingStart: number;
+  processingEnd: number;
+  cancelable: boolean;
+  target?: EventTarget;
+}
+
 interface PerformanceMetrics {
   lcp: number | null;
   fid: number | null;
