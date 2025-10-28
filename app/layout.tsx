@@ -14,7 +14,6 @@ import SEOOptimization from './components/SEOOptimization';
 import SecurityEnhancement from './components/SecurityEnhancement';
 import AdvancedPerformanceEnhancer from './components/AdvancedPerformanceEnhancer';
 import EnhancedAccessibilityManager from './components/EnhancedAccessibilityManager';
-
 const inter = Inter({ subsets: ['latin'] });
 
 // Define metadata and viewport for Next.js
