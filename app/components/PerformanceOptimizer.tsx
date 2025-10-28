@@ -91,6 +91,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       }
     });
 
+    // Call the optimization functions
+    optimizeImages();
+    monitorPerformance();
+
     // Enable service worker
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js').catch(() => {

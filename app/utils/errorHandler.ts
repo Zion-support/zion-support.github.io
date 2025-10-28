@@ -45,13 +45,14 @@ export class ErrorHandler {
     }
 
     // Send to error reporting service if configured
-    this.sendToErrorService();
+    this.sendToErrorService(errorData);
   }
 
-  private async sendToErrorService(_errorData: ErrorInfo): Promise<void> {
+  private async sendToErrorService(errorData: ErrorInfo): Promise<void> {
     try {
       // This would typically send to a service like Sentry, LogRocket, etc.
       // For now, we'll just log it
+      console.log('Error reported:', errorData);
       } catch { /* Handle error */ }
   }
 
@@ -72,11 +73,11 @@ export const _errorHandler = ErrorHandler.getInstance();
 
 // Global error handler
 if (typeof window !== 'undefined') {
-  window.addEventListener(_'error', _(event: ErrorEvent) => {
-    errorHandler.logError(event.error);
+  window.addEventListener('error', (event: ErrorEvent) => {
+    _errorHandler.logError(event.error);
   });
 
-  window.addEventListener(_'unhandledrejection', _(event: unknown) => {
-    errorHandler.logError(new Error(event.reason));
+  window.addEventListener('unhandledrejection', (event: unknown) => {
+    _errorHandler.logError(new Error((event as any).reason));
   });
 }
