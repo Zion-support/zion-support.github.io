@@ -8,6 +8,7 @@ import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
+import PerformanceOptimizations from './components/PerformanceOptimizations';
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import SkipLink from './components/SkipLink';
 import { metadata } from './constants/metadata';
@@ -37,6 +38,7 @@ export default function RootLayout({
               <Footer />
               <PerformanceMonitor />
               <AccessibilityEnhancer />
+              <PerformanceOptimizations />
               <ServiceWorkerRegistration />
             </div>
           </PerformanceOptimizer>
