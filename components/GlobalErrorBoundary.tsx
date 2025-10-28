@@ -23,6 +23,7 @@ class GlobalErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBound
   }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    // eslint-disable-next-line no-console
     console.error('GlobalErrorBoundary caught an error:', error, errorInfo);
   }
 
