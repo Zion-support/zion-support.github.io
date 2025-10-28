@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useEffect, useState, memo } from 'react';
+import type { PerformanceEventTiming, LayoutShift } from '../types/performance';
 
-// Performance API type definitions
 interface PerformanceMetrics {
   lcp: number | null;
   fid: number | null;
@@ -41,9 +41,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
           const fidEntry = entry as PerformanceEntry & { processingStart: number };
           setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - entry.startTime }));
         } else if (entry.entryType === 'layout-shift') {
-          const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
-          if (!layoutShiftEntry.hadRecentInput) {
-            setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (layoutShiftEntry.value || 0) }));
+          const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+          if (!clsEntry.hadRecentInput) {
+            setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (clsEntry.value || 0) }));
           }
         } else if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
           setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
@@ -51,29 +51,35 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
       }
     });
 
-    observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
-
-    // TTFB measurement
-    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    if (navigationEntry) {
-      setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
+    // Observe different performance entry types
+    try {
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
+    } catch (error) {
+      console.warn('Performance Observer not supported:', error);
     }
 
+    // Cleanup
     return () => {
       observer.disconnect();
     };
   }, [enableReporting]);
 
+  // Report metrics (in a real app, you'd send this to analytics)
+  useEffect(() => {
+    if (enableReporting && metrics.lcp && metrics.fid && metrics.cls && metrics.fcp) {
+      console.log('Core Web Vitals:', metrics);
+    }
+  }, [metrics, enableReporting]);
+
   return (
     <div className={className}>
       {children}
-      {enableReporting && process.env.NODE_ENV === 'development' && (
-        <div className="fixed bottom-4 right-4 bg-black/80 text-white p-2 rounded text-xs font-mono">
-          <div>LCP: {metrics.lcp?.toFixed(2) || 'N/A'}ms</div>
-          <div>FID: {metrics.fid?.toFixed(2) || 'N/A'}ms</div>
-          <div>CLS: {metrics.cls?.toFixed(4) || 'N/A'}</div>
-          <div>FCP: {metrics.fcp?.toFixed(2) || 'N/A'}ms</div>
-          <div>TTFB: {metrics.ttfb?.toFixed(2) || 'N/A'}ms</div>
+      {enableReporting && (
+        <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-2 rounded text-xs">
+          <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'N/A'}</div>
+          <div>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'N/A'}</div>
+          <div>CLS: {metrics.cls ? metrics.cls.toFixed(4) : 'N/A'}</div>
+          <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'N/A'}</div>
         </div>
       )}
     </div>

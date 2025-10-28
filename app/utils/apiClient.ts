@@ -4,7 +4,7 @@ interface ApiResponse<T> {
   message?: string;
 }
 
-// API client for making HTTP requests
+// RequestInit is available globally in modern environments
 
 class ApiClient {
   private baseUrl: string;
