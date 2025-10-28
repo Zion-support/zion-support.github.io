@@ -108,15 +108,16 @@ export default [
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: 'module',
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        ...globals.es2022
+      },
       parser: tsParser,
       parserOptions: {
         ecmaFeatures: {
           jsx: true
         }
-      },
-      globals: {
-        ...globals.browser,
-        ...globals.node
       }
     },
     plugins: {
@@ -135,15 +136,8 @@ export default [
       ],
       '@typescript-eslint/no-unused-vars': 'warn',
       '@typescript-eslint/no-explicit-any': 'warn',
-      'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off',
-      'react/display-name': 'off',
-      'react/no-unescaped-entities': 'off',
-      'react/no-unknown-property': 'off',
-      '@typescript-eslint/no-empty-object-type': 'off',
-      '@typescript-eslint/no-require-imports': 'off',
-      'no-undef': 'off',
-      'no-redeclare': 'off'
+      'react/prop-types': 'off'
     }
   }
 ];

@@ -54,7 +54,6 @@ export interface Service {
   category: 'ai' | 'it' | '5g' | 'blockchain' | 'iot'
   tags: string[]
 }
-
 export interface UserPreferences {
   theme: 'light' | 'dark' | 'auto'
   language: string
