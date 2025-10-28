@@ -47,7 +47,7 @@ ${pages.map(page => `  <url>
   </url>`).join('\n')}
 </urlset>`;
 
-  const distDir = path.join(__dirname, '..', 'dist');
+  const distDir = path.join(process.cwd(), 'dist');
   if (!fs.existsSync(distDir)) {
     fs.mkdirSync(distDir, { recursive: true });
   }

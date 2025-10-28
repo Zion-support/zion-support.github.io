@@ -33,7 +33,8 @@ export default [
       globals: {
         ...globals.browser,
         ...globals.node,
-        ...globals.es2020
+        ...globals.es2020,
+        ...globals.jest
       }
     },
     plugins: {
@@ -53,6 +54,21 @@ export default [
       react: {
         version: 'detect'
       }
+    }
+  },
+  {
+    files: ['**/*.cjs', '**/scripts/**/*.js'],
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'commonjs',
+      globals: {
+        ...globals.node,
+        ...globals.es2020
+      }
+    },
+    rules: {
+      'no-unused-vars': 'warn',
+      'no-console': 'off'
     }
   }
 ];

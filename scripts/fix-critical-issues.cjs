@@ -2,7 +2,6 @@
 
 const fs = require("fs");
 const path = require("path");
-const { glob } = require("glob");
 
 // Fix unused imports in specific files
 const filesToFix = [
@@ -25,26 +24,26 @@ function removeUnusedImports(filePath) {
     let modified = false;
 
     // Common unused imports to remove
-    const unusedImports = [
-      "SparklesIcon",
-      "ClockIcon",
-      "ChatBubbleLeftRightIcon",
-      "UserGroupIcon",
-      "EyeIcon",
-      "ChartBarIcon",
-      "TruckIcon",
-      "CurrencyDollarIcon",
-      "ShieldCheckIcon",
-      "CogIcon",
-      "GlobeAltIcon",
-      "DocumentTextIcon",
-      "CodeBracketIcon",
-      "DevicePhoneMobileIcon",
-      "CloudIcon",
-      "SignalIcon",
-      "BoltIcon",
-      "StarIcon",
-    ];
+    // const unusedImports = [
+    //   "SparklesIcon",
+    //   "ClockIcon",
+    //   "ChatBubbleLeftRightIcon",
+    //   "UserGroupIcon",
+    //   "EyeIcon",
+    //   "ChartBarIcon",
+    //   "TruckIcon",
+    //   "CurrencyDollarIcon",
+    //   "ShieldCheckIcon",
+    //   "CogIcon",
+    //   "GlobeAltIcon",
+    //   "DocumentTextIcon",
+    //   "CodeBracketIcon",
+    //   "DevicePhoneMobileIcon",
+    //   "CloudIcon",
+    //   "SignalIcon",
+    //   "BoltIcon",
+    //   "StarIcon",
+    // ];
 
     // Check if any of these imports are actually used
     const lines = content.split("\n");
@@ -105,7 +104,7 @@ function removeUnusedImports(filePath) {
 
 // Process files
 filesToFix.forEach((file) => {
-  const fullPath = path.join(__dirname, "..", file);
+  const fullPath = path.join(process.cwd(), file);
   if (fs.existsSync(fullPath)) {
     removeUnusedImports(fullPath);
   }
