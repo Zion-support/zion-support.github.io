@@ -1,8 +1,7 @@
 'use client';
 
 import React, { useEffect } from 'react';
-
-// Web API type declarations
+import type { PerformanceEventTiming, LayoutShift } from '../types/performance';
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }
