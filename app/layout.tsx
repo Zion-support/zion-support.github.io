@@ -4,17 +4,9 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-import PerformanceMonitor from './components/PerformanceMonitor';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import ErrorBoundary from './components/ErrorBoundary';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import SkipLink from './components/SkipLink';
-import PerformanceMonitoring from './components/PerformanceMonitoring';
-import SEOOptimization from './components/SEOOptimization';
-import SecurityEnhancement from './components/SecurityEnhancement';
-import AdvancedPerformanceEnhancer from './components/AdvancedPerformanceEnhancer';
-import EnhancedAccessibilityManager from './components/EnhancedAccessibilityManager';
+import ClientComponents from './components/ClientComponents';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -92,29 +84,27 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#3b82f6" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+        <link rel="apple-touch-icon" href="/icon-192x192.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/icon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/icon-16x16.png" />
       </head>
       <body className={inter.className}>
         <ErrorBoundary>
-          <AdvancedPerformanceEnhancer enableMonitoring={true} enableOptimizations={true}>
-            <EnhancedAccessibilityManager enableAutoDetection={true} enableKeyboardShortcuts={true}>
-              <PerformanceOptimizer>
-                <div className="min-h-screen bg-slate-900">
-                  <SkipLink />
-                  <Navigation />
-                  <main className="relative z-10" id="main-content" role="main" tabIndex={-1}>
-                    {children}
-                  </main>
-                  <Footer />
-                  <PerformanceMonitor />
-                  <AccessibilityEnhancer />
-                  <ServiceWorkerRegistration />
-                  <PerformanceMonitoring />
-                  <SEOOptimization />
-                  <SecurityEnhancement />
-                </div>
-              </PerformanceOptimizer>
-            </EnhancedAccessibilityManager>
-          </AdvancedPerformanceEnhancer>
+          <ClientComponents>
+            <div className="min-h-screen bg-slate-900">
+              <SkipLink />
+              <Navigation />
+              <main className="relative z-10" id="main-content" role="main" tabIndex={-1}>
+                {children}
+              </main>
+              <Footer />
+            </div>
+          </ClientComponents>
         </ErrorBoundary>
       </body>
     </html>
