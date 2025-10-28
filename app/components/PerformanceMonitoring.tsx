@@ -2,21 +2,9 @@
 
 import React, { useEffect, memo, useCallback } from 'react';
 
-// Type declaration for MemoryInfo
-interface MemoryInfo {
-  usedJSHeapSize: number;
-  totalJSHeapSize: number;
-  jsHeapSizeLimit: number;
-}
-
 interface LayoutShiftEntry extends PerformanceEntry {
   value: number;
   hadRecentInput: boolean;
-}
-
-interface FIDEntry extends PerformanceEntry {
-  processingStart: number;
-  startTime: number;
 }
 
 
