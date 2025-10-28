@@ -28,16 +28,9 @@ const toggleDropdown = (dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
 
-<<<<<<< HEAD
-=======
   const toggleMobileMenu = useCallback(() => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   }, [isMobileMenuOpen]);
-
-  // Service arrays
-  const aiServices = [
-    { name: 'AI Analytics', href: '/ai-analytics' },
-    { name: 'AI Automation', href: '/ai-automation' },
     { name: 'AI Chatbot', href: '/ai-chatbot-builder' },
     { name: 'AI Content Generation', href: '/ai-content-generation' },
     { name: 'AI Data Analytics', href: '/ai-data-analytics' },

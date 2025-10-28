@@ -1,3 +1,4 @@
+import ErrorBoundary from '../components/ErrorBoundary';
 'use client';
 import React, { Component, ErrorInfo } from 'react';
 
@@ -17,13 +18,11 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, State> {
   }
 
   static getDerivedStateFromError(error: Error): ErrorBoundaryState {
-    console.error('ErrorBoundary caught an error:', error);
     return { hasError: true };
   }
 
   componentDidCatch(_error: Error, errorInfo: React.ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', _error, errorInfo);
-  }
+    }
 
   render() {
     if (this.state.hasError) {

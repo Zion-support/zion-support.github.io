@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 interface ServicePageTemplateProps {
   className?: string;

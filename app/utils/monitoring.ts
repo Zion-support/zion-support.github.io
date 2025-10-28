@@ -122,8 +122,7 @@ class MonitoringService {
           const entries = list.getEntries();
           entries.forEach((entry) => {
             // Process entry if needed
-            console.log('Long task detected:', entry.duration);
-          });
+            });
         });
         longTaskObserver.observe({ entryTypes: ['longtask'] });
       } catch {
@@ -227,8 +226,7 @@ class MonitoringService {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigation) {
          
-        console.log('Performance metrics: ', {
-          'DNS Lookup': `${Math.round(navigation.domainLookupEnd - navigation.domainLookupStart)}ms`,
+        }ms`,
           'TCP Connect': `${Math.round(navigation.connectEnd - navigation.connectStart)}ms`,
           'TTFB': `${Math.round(navigation.responseStart - navigation.requestStart)}ms`,
           'Download': `${Math.round(navigation.responseEnd - navigation.responseStart)}ms`,

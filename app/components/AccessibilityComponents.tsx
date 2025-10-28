@@ -3,7 +3,7 @@ interface AccessibilityComponentsProps {
   children?: React.ReactNode;
 }
 
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 
 

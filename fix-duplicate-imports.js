@@ -8,7 +8,7 @@ async function fixDuplicateImports() {
     
     for (const file of files) {
       const filePath = path.join('/workspace/app', file);
-      let content = fs.readFileSync(filePath, 'utf8');
+      const content = fs.readFileSync(filePath, 'utf8');
       
       // Check if file has duplicate React imports
       const lines = content.split('\n');

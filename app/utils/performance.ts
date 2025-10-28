@@ -3,10 +3,7 @@ import React from 'react';
 // Performance monitoring utilities
 export class PerformanceMonitor {
   private static instance: PerformanceMonitor;
-<<<<<<< HEAD
   private metrics = new Map<string, number>();
-=======
->>>>>>> 77bcf452960a (Complete error fixes and code optimization)
 
   static getInstance(): PerformanceMonitor {
     if (!PerformanceMonitor.instance) {
@@ -28,18 +25,7 @@ export class PerformanceMonitor {
       return duration}
     return 0}
 
-<<<<<<< HEAD
-  getMetric(label: string): number | undefined {
-    return this.metrics.get(label)}
 
-  getAllMetrics(): Record<string, number> {
-    return Object.fromEntries(this.metrics)}
-
-  clearMetrics(): void {
-    this.metrics.clear()}
-
-=======
->>>>>>> 77bcf452960a (Complete error fixes and code optimization)
   // Web Vitals monitoring
   measureWebVitals(): void {
     if (typeof window === "undefined") return;
@@ -93,8 +79,4 @@ export function measureComponentRender(componentName: string) {
       return React.createElement(PageComponent, props);
     }) as T;
   };
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> 77bcf452960a (Complete error fixes and code optimization)
+

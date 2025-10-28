@@ -15,7 +15,7 @@ async function fixSyntaxErrors() {
     for (const file of files) {
       if (fs.existsSync(file)) {
         console.log(`Fixing ${file}`);
-        let content = fs.readFileSync(file, 'utf8');
+        const content = fs.readFileSync(file, 'utf8');
         
         // Remove duplicate imports and fix structure
         const lines = content.split('\n');

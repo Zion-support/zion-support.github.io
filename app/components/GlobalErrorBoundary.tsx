@@ -3,7 +3,7 @@ interface GlobalErrorBoundaryProps {
   children?: React.ReactNode;
 }
 
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 
 

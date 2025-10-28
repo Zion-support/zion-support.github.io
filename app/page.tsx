@@ -1,7 +1,5 @@
+import Navigation from '../components/Navigation';
 import { Metadata } from 'next';
-import Link from 'next/link';
-import { ArrowRight, Star, Users, Zap } from 'lucide-react';
-
 export const metadata: Metadata = {
   title: 'Zion Tech Group - AI Solutions & Technology Services',
   description: 'Leading technology company specializing in AI solutions, cloud infrastructure, and innovative software development services.',

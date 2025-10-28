@@ -1,3 +1,4 @@
+import ErrorBoundary from '../components/ErrorBoundary';
 import React from "react";
 
 export const metadata = {
@@ -10,10 +11,6 @@ export const metadata = {
     type: 'website',
   },
 };
-
-<<<<<<< HEAD
-function Page() {
-=======
 
 export default function FiveGNetworkInfrastructure() {
   return (

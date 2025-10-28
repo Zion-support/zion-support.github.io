@@ -1,3 +1,5 @@
+import Navigation from '../components/Navigation';
+import ErrorBoundary from '../components/ErrorBoundary';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -39,4 +41,4 @@ export default function Wrapped(props: { [key: string]: unknown }) {
       <AiemailassistantPage {...props} />
     </ErrorBoundary>
   );
-}
+}</div>

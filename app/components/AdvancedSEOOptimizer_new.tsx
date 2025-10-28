@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 interface AdvancedSEOOptimizer_newProps {
   className?: string;

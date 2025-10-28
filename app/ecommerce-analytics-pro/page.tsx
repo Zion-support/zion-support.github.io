@@ -1,3 +1,4 @@
+import Navigation from '../components/Navigation';
 
 
 export const metadata = {
@@ -32,13 +33,4 @@ function EcommerceanalyticsproPage() {
   );
 }
 
-<<<<<<< HEAD
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <EcommerceanalyticsproPage {...props} />
-    </ErrorBoundary>
-  );
-}
-=======
-
+export default EcommerceanalyticsproPage;

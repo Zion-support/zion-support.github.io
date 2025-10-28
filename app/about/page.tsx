@@ -2,9 +2,6 @@ import React from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
-
 export default function PagePage() {
   return (
     <>
@@ -24,6 +21,14 @@ export default function PagePage() {
       </div>
       <Footer />
     </>
+  );
+}
+
+function AboutPage() {
+  return (
+    <div>
+      <h1>About Page</h1>
+    </div>
   );
 }
 

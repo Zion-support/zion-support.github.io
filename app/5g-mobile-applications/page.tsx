@@ -15,9 +15,8 @@ function Page() {
             </p>
           </div>
         </div>
-        
-      </main>
-    </div>
+      </div>
+    </ErrorBoundary>
   );
 }
 

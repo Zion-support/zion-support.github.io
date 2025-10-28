@@ -1,3 +1,6 @@
+import React from 'react';
+import Navigation from '../components/Navigation';
+import ErrorBoundary from '../components/ErrorBoundary';
 
 
 export const metadata = {
@@ -78,11 +81,10 @@ export default function Home() {
               </a>
             </div>
           </div>
-        </section>
+        </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
 };
 export default function Wrapped(props: { [key: string]: unknown }) {
   return (

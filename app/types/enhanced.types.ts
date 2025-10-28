@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 // Enhanced type definitions for better type safety
 export interface PerformanceMetrics {
