@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-export const siteMetadata: Metadata = {
+export const metadata: Metadata = {
   title: 'Zion Tech Group - Advanced AI & IT Solutions',
   description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
   keywords: 'AI solutions, IT services, cybersecurity, cloud computing, digital transformation',
@@ -19,7 +19,7 @@ export const siteMetadata: Metadata = {
   },
 };
 
-export const siteViewport = {
+export const viewport = {
   width: 'device-width',
   initialScale: 1,
   maximumScale: 1,
