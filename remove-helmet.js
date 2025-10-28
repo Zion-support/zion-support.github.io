@@ -2,7 +2,7 @@
 
 import fs from 'fs';
 import path from 'path';
-import { execSync as _execSync } from 'child_process';
+// import { execSync as _execSync } from 'child_process';
 
 // Function to recursively find all .tsx files
 function findTsxFiles(dir) {
