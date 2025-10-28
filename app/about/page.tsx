@@ -1,11 +1,18 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
 export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
   title: 'About Us - Zion Tech Group',
-  description: 'Learn about Zion Tech Group, a leading provider of AI and IT solutions.',
+  description: 'Learn about Zion Tech Group, a leading technology company specializing in AI solutions, cloud infrastructure, and innovative software development services.',
+  keywords: 'about us, technology company, AI solutions, cloud infrastructure, software development',
+  openGraph: {
+    title: 'About Us - Zion Tech Group',
+    description: 'Learn about Zion Tech Group, a leading technology company specializing in AI solutions, cloud infrastructure, and innovative software development services.',
+    type: 'website',
+  },
 };
 export default function AboutPage() {
   return (
@@ -101,7 +108,7 @@ export default function AboutPage() {
             className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
           >
             Get Started
-            <span className="ml-2">→</span>
+            <ArrowRight className="ml-2 w-5 h-5" />
           </Link>
         </div>
       </section>

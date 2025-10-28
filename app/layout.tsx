@@ -11,8 +11,10 @@ import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import SkipLink from './components/SkipLink';
+import PerformanceMonitoring from './components/PerformanceMonitoring';
 import SEOOptimization from './components/SEOOptimization';
 import SecurityEnhancement from './components/SecurityEnhancement';
+import AdvancedPerformanceEnhancer from './components/AdvancedPerformanceEnhancer';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -48,23 +50,29 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
+      </head>
       <body className={inter.className}>
         <ErrorBoundary>
-          <PerformanceOptimizer>
-            <div className="min-h-screen bg-slate-900">
-              <SkipLink />
-              <Navigation />
-              <main className="relative z-10" id="main-content" role="main" tabIndex={-1}>
-                {children}
-              </main>
-              <Footer />
-              <PerformanceMonitor />
-              <AccessibilityEnhancer />
-              <ServiceWorkerRegistration />
-              <SEOOptimization />
-              <SecurityEnhancement />
-            </div>
-          </PerformanceOptimizer>
+          <AdvancedPerformanceEnhancer enableMonitoring={true} enableOptimizations={true}>
+            <PerformanceOptimizer>
+                <div className="min-h-screen bg-slate-900">
+                  <SkipLink />
+                  <Navigation />
+                  <main className="relative z-10" id="main-content" role="main" tabIndex={-1}>
+                    {children}
+                  </main>
+                  <Footer />
+                  <PerformanceMonitor />
+                  <AccessibilityEnhancer />
+                  <ServiceWorkerRegistration />
+                  <PerformanceMonitoring />
+                  <SEOOptimization />
+                  <SecurityEnhancement />
+                </div>
+              </PerformanceOptimizer>
+          </AdvancedPerformanceEnhancer>
         </ErrorBoundary>
       </body>
     </html>

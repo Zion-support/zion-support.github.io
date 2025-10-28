@@ -1,47 +1,17 @@
 {
-  "timestamp": "2025-10-28T08:40:55.974Z",
-  "bundleSize": {
-    "static": 1516924,
-    "pages": 58976
-  },
-  "performance": {
-    "dependencies": {
-      "next": "^15.5.4",
-      "react": "^18.3.1",
-      "react-dom": "^18.3.1",
-      "tailwindcss": "^4.1.16",
-      "lucide-react": "^0.544.0"
-    },
-    "optimizations": [
-      "useCallback usage: 50 hooks",
-      "Lazy loading: 19 components",
-      "Dynamic imports: 12 modules"
-    ]
+  "timestamp": "2025-10-28T10:17:28.848Z",
+  "bundleSize": "See build output above",
+  "dependencies": "See dependency check above",
+  "configurations": {
+    "typescript": true,
+    "nextjs": true,
+    "eslint": true
   },
   "recommendations": [
-    {
-      "type": "bundle-size",
-      "priority": "high",
-      "message": "Static bundle size is large. Consider code splitting and lazy loading.",
-      "action": "Implement dynamic imports and route-based code splitting"
-    },
-    {
-      "type": "dependencies",
-      "priority": "low",
-      "message": "Consider using tree-shaking with lucide-react to reduce bundle size.",
-      "action": "Import only needed icons: import { IconName } from \"lucide-react\""
-    },
-    {
-      "type": "nextjs",
-      "priority": "medium",
-      "message": "Enable Next.js Image Optimization for better performance.",
-      "action": "Use next/image component for all images"
-    },
-    {
-      "type": "nextjs",
-      "priority": "high",
-      "message": "Consider enabling Next.js experimental features for better performance.",
-      "action": "Add experimental features to next.config.js"
-    }
+    "Consider using dynamic imports for large components",
+    "Optimize images with next/image",
+    "Use React.memo for expensive components",
+    "Implement code splitting for better performance",
+    "Consider using a CDN for static assets"
   ]
 }

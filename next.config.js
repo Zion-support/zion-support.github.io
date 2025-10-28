@@ -1,79 +1,83 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Disable static generation completely
-  output: 'export',
-  trailingSlash: true,
-  images: {
-    unoptimized: true
-  },
-  
-  // Enable new JSX transform
-  compiler: {
-    reactRemoveProperties: true,
-  },
-  
-  // Disable static generation to avoid serialization issues
+  // Enable experimental features for better performance
   experimental: {
-    optimizePackageImports: ['lucide-react', 'framer-motion'],
-    webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB'],
+    optimizePackageImports: ['lucide-react'],
+    webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB', 'INP'],
   },
   
-  // Generate build ID for better caching
-  generateBuildId: async () => {
-    return 'build-' + Date.now();
+  // Compiler optimizations
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
   },
   
-  // Note: Headers are not supported with static export
-  // Headers should be configured at the server/CDN level for static sites
-  
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: false,
+  // Image optimization
+  images: {
+    formats: ['image/webp', 'image/avif'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
   
-  // Webpack optimizations
-  webpack: (config, { isServer, dev }) => {
-    // Optimize for production
-    if (!dev) {
-      config.optimization.splitChunks = {
-        chunks: 'all',
-        minSize: 20000,
-        maxSize: 244000,
-        cacheGroups: {
-          vendor: {
-            test: /[\\/]node_modules[\\/]/,
-            name: 'vendors',
-            chunks: 'all',
-            priority: 10,
+  // Headers for better security and performance
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
           },
-          common: {
-            name: 'common',
-            minChunks: 2,
-            chunks: 'all',
-            priority: 5,
-            reuseExistingChunk: true,
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
           },
-        },
-      };
-      
-      // Enable tree shaking
-      config.optimization.usedExports = true;
-      config.optimization.sideEffects = false;
-    }
-    
-    if (!isServer) {
-      config.resolve.fallback = {
-        ...config.resolve.fallback,
-        fs: false,
-        net: false,
-        tls: false,
-      };
-    }
-    
-    return config;
+          {
+            key: 'Referrer-Policy',
+            value: 'origin-when-cross-origin',
+          },
+          {
+            key: 'X-DNS-Prefetch-Control',
+            value: 'on',
+          },
+        ],
+      },
+      {
+        source: '/static/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+    ];
   },
-}
+  
+  // Redirects for better SEO
+  async redirects() {
+    return [
+      {
+        source: '/home',
+        destination: '/',
+        permanent: true,
+      },
+    ];
+  },
+  
+  // Output configuration
+  output: 'standalone',
+  
+  // Enable compression
+  compress: true,
+  
+  // Power by header
+  poweredByHeader: false,
+  
+  // React strict mode
+  reactStrictMode: true,
+  
+  // SWC minification is enabled by default in Next.js 13+
+};
 
 export default nextConfig;

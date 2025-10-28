@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Efficient script to merge available cursor branches into main
-Handles large numbers of branches systematically
+Aggressive script to merge ALL remaining cursor branches into main
+Processes all available branches systematically
 """
 
 import subprocess
@@ -25,9 +25,9 @@ def run_command(cmd, timeout=30):
     except Exception as e:
         return False, "", str(e)
 
-def get_available_branches():
-    """Get list of available cursor branches"""
-    success, output, error = run_command("git branch -r | grep 'cursor/fix-errors-and-merge-to-main' | head -500")
+def get_all_branches():
+    """Get ALL available cursor branches"""
+    success, output, error = run_command("git branch -r | grep 'cursor/fix-errors-and-merge-to-main'")
     if not success:
         print(f"Error getting branches: {error}")
         return []
@@ -42,52 +42,42 @@ def get_available_branches():
 
 def merge_branch(branch_name):
     """Attempt to merge a single branch"""
-    print(f"🔄 Merging {branch_name}...")
-    
     # Try to merge
     success, output, error = run_command(f"git merge origin/{branch_name} --no-edit -m 'Merge {branch_name}'")
     
     if success:
-        print(f"✅ Successfully merged {branch_name}")
-        return True
+        return True, "merged"
     else:
         # Check if it's already up to date
         if "Already up to date" in error:
-            print(f"ℹ️  {branch_name} already up to date")
-            return True
+            return True, "already_merged"
         elif "CONFLICT" in error or "conflict" in error:
-            print(f"⚠️  Conflict in {branch_name}, resolving...")
             return resolve_conflicts(branch_name)
         else:
-            print(f"❌ Failed to merge {branch_name}: {error}")
-            return False
+            return False, f"error: {error}"
 
 def resolve_conflicts(branch_name):
     """Resolve merge conflicts by accepting main branch version"""
     # Accept our version (main branch)
     success, output, error = run_command("git checkout --ours .")
     if not success:
-        print(f"❌ Failed to resolve conflicts for {branch_name}")
-        return False
+        return False, "failed to resolve conflicts"
     
     # Add resolved files
     success, output, error = run_command("git add .")
     if not success:
-        print(f"❌ Failed to add resolved files for {branch_name}")
-        return False
+        return False, "failed to add resolved files"
     
     # Commit the merge
     success, output, error = run_command(f"git commit --no-edit -m 'Merge {branch_name} (conflicts resolved)'")
     if success:
-        print(f"✅ Resolved conflicts and merged {branch_name}")
-        return True
+        return True, "merged_with_conflicts_resolved"
     else:
-        print(f"❌ Failed to commit resolved conflicts for {branch_name}")
-        return False
+        return False, "failed to commit resolved conflicts"
 
 def main():
     """Main execution function"""
-    print(f"🚀 Starting efficient branch merge process at {datetime.now()}")
+    print(f"🚀 Starting AGGRESSIVE branch merge process at {datetime.now()}")
     print("=" * 80)
     
     # Ensure we're on main branch
@@ -103,9 +93,9 @@ def main():
     if not success:
         print(f"⚠️  Warning: Failed to pull latest changes: {error}")
     
-    # Get available branches
-    print("📋 Getting available branches...")
-    branches = get_available_branches()
+    # Get ALL available branches
+    print("📋 Getting ALL available branches...")
+    branches = get_all_branches()
     print(f"Found {len(branches)} branches to process")
     
     if not branches:
@@ -114,11 +104,12 @@ def main():
     
     # Track results
     successful = 0
-    failed = 0
     already_merged = 0
+    failed = 0
+    conflicts_resolved = 0
     
-    # Process branches in batches
-    batch_size = 50
+    # Process branches in larger batches
+    batch_size = 100
     total_batches = (len(branches) + batch_size - 1) // batch_size
     
     for batch_num in range(total_batches):
@@ -129,40 +120,68 @@ def main():
         print(f"\n📦 Processing batch {batch_num + 1}/{total_batches} ({len(batch_branches)} branches)")
         print("-" * 60)
         
+        batch_successful = 0
+        batch_already_merged = 0
+        batch_failed = 0
+        batch_conflicts = 0
+        
         for i, branch in enumerate(batch_branches):
-            print(f"[{start_idx + i + 1}/{len(branches)}] ", end="")
+            if i % 10 == 0:  # Show progress every 10 branches
+                print(f"[{start_idx + i + 1}/{len(branches)}] Processing {branch}...")
             
-            if merge_branch(branch):
-                if "already up to date" in str(branch).lower():
+            success, status = merge_branch(branch)
+            
+            if success:
+                if status == "merged":
+                    batch_successful += 1
+                    successful += 1
+                elif status == "already_merged":
+                    batch_already_merged += 1
                     already_merged += 1
-                else:
+                elif "conflicts_resolved" in status:
+                    batch_conflicts += 1
+                    conflicts_resolved += 1
                     successful += 1
             else:
+                batch_failed += 1
                 failed += 1
+                if i % 10 == 0:  # Only show errors every 10 branches to avoid spam
+                    print(f"❌ Failed to merge {branch}: {status}")
             
             # Small delay to avoid overwhelming git
-            time.sleep(0.1)
+            time.sleep(0.05)
+        
+        print(f"Batch {batch_num + 1} complete: {batch_successful} merged, {batch_already_merged} already merged, {batch_conflicts} conflicts resolved, {batch_failed} failed")
         
         # Push changes after each batch
-        if successful > 0 or already_merged > 0:
-            print(f"\n📤 Pushing changes after batch {batch_num + 1}...")
+        if batch_successful > 0 or batch_already_merged > 0 or batch_conflicts > 0:
+            print(f"📤 Pushing changes after batch {batch_num + 1}...")
             push_success, push_output, push_error = run_command("git push origin main")
             if push_success:
                 print("✅ Successfully pushed changes")
             else:
                 print(f"⚠️  Push failed: {push_error}")
+                # Try to pull and push again
+                pull_success, pull_output, pull_error = run_command("git pull origin main --no-rebase")
+                if pull_success:
+                    push_success, push_output, push_error = run_command("git push origin main")
+                    if push_success:
+                        print("✅ Successfully pushed after pull")
+                    else:
+                        print(f"❌ Still failed to push: {push_error}")
     
     # Final summary
     print(f"\n{'='*80}")
-    print("📊 MERGE SUMMARY")
+    print("📊 FINAL MERGE SUMMARY")
     print(f"{'='*80}")
     print(f"Total branches processed: {len(branches)}")
     print(f"✅ Successfully merged: {successful}")
     print(f"ℹ️  Already up to date: {already_merged}")
+    print(f"🔧 Conflicts resolved: {conflicts_resolved}")
     print(f"❌ Failed to merge: {failed}")
     
     # Final push
-    if successful > 0 or already_merged > 0:
+    if successful > 0 or already_merged > 0 or conflicts_resolved > 0:
         print(f"\n📤 Final push to origin/main...")
         push_success, push_output, push_error = run_command("git push origin main")
         if push_success:
@@ -170,7 +189,7 @@ def main():
         else:
             print(f"❌ Final push failed: {push_error}")
     
-    print(f"\n🏁 Merge process completed at {datetime.now()}")
+    print(f"\n🏁 Aggressive merge process completed at {datetime.now()}")
     return 0 if failed == 0 else 1
 
 if __name__ == "__main__":

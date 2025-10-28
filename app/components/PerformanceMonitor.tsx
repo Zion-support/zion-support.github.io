@@ -1,7 +1,8 @@
 'use client';
 
 import React, { useEffect, useState, memo } from 'react';
-import type { PerformanceEventTiming, LayoutShift } from '../types/performance';
+
+// Web API type declarations
 interface PerformanceMetrics {
   lcp: number | null;
   fid: number | null;
@@ -9,7 +10,6 @@ interface PerformanceMetrics {
   fcp: number | null;
   ttfb: number | null;
 }
-
 
 interface PerformanceMonitorProps {
   className?: string;
@@ -74,6 +74,14 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
   return (
     <div className={className}>
       {children}
+      {enableReporting && (
+        <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-2 rounded text-xs">
+          <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'N/A'}</div>
+          <div>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'N/A'}</div>
+          <div>CLS: {metrics.cls ? metrics.cls.toFixed(4) : 'N/A'}</div>
+          <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'N/A'}</div>
+        </div>
+      )}
     </div>
   );
 });
