@@ -1,19 +1,20 @@
 
+import React from 'react';
+
 interface ServiceTemplateProps {
-  title: string;
-  description: string;
   className?: string;
+  children?: React.ReactNode;
 }
 
-export default function ServiceTemplate({ 
-  title, 
-  description, 
-  className = '' 
-}: ServiceTemplateProps) {
+const ServiceTemplate: React.FC<ServiceTemplateProps> = ({ 
+  className = '', 
+  children 
+}) => {
   return (
-    <div className={`service-template ${className}`}>
-      <h1>{title}</h1>
-      <p>{description}</p>
+    <div className={'service-template ' + className}>
+      {children || <p>ServiceTemplate component</p>}
     </div>
   );
-}
+};
+
+export default ServiceTemplate;

@@ -1,14 +1,17 @@
+'use client';
+import React from 'react';
 
 interface RootLayoutProps {
-  children: React.ReactNode;
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export default function RootLayout({ children }: RootLayoutProps) {
+const RootLayout: React.FC<RootLayoutProps> = ({ className = '', children }) => {
   return (
-    <html lang="en">
-      <body>
-        {children}
-      </body>
-    </html>
+    <div className={className}>
+      {children}
+    </div>
   );
-}
+};
+
+export default RootLayout;

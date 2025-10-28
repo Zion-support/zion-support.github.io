@@ -1,4 +1,3 @@
-'use client'
 import React from 'react';
 
 interface AccessibilityEnhancerProps {
@@ -7,10 +6,14 @@ interface AccessibilityEnhancerProps {
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ 
-  className: _className = '', 
-  children: _children 
+  className = '', 
+  children 
 }) => {
-  return null; // Hidden component for accessibility enhancements
+  return (
+    <div className={'accessibilityenhancer ' + className}>
+      {children || <p>AccessibilityEnhancer component</p>}
+    </div>
+  );
 };
 
 export default AccessibilityEnhancer;
