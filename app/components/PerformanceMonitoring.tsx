@@ -2,21 +2,9 @@
 
 import React, { useEffect, memo, useCallback } from 'react';
 
-// Type declaration for MemoryInfo
-interface MemoryInfo {
-  usedJSHeapSize: number;
-  totalJSHeapSize: number;
-  jsHeapSizeLimit: number;
-}
-
 interface LayoutShiftEntry extends PerformanceEntry {
   value: number;
   hadRecentInput: boolean;
-}
-
-interface FIDEntry extends PerformanceEntry {
-  processingStart: number;
-  startTime: number;
 }
 
 interface PerformanceMonitoringProps {
@@ -49,7 +37,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        const fidEntry = entry as PerformanceEntry & { processingStart: number; startTime: number }; // Type assertion for FID-specific properties
+        const fidEntry = entry as PerformanceEventTiming; // Type assertion for FID-specific properties
         const fid = fidEntry.processingStart - fidEntry.startTime;
         console.log('FID:', fid);
         
