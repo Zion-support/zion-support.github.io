@@ -1,5 +1,5 @@
-import React from 'react';
-import ErrorBoundary from '../../components/GlobalErrorBoundary';
+
+import ErrorBoundary from '../components/GlobalErrorBoundary';
 
 export const metadata = {
   title: 'Offline | Zion Tech Group',
@@ -10,6 +10,7 @@ export const metadata = {
     description: 'You are currently offline',
     type: 'website',
   }};
+
 function OfflinePage() {
   return (
     <div className="min-h-screen bg-white flex items-center justify-center">

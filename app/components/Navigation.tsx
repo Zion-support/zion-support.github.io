@@ -3,11 +3,6 @@ import React, { useState, useCallback } from 'react';
 import Link from 'next/link';
 import { X, ChevronDown, Menu } from 'lucide-react';
 
-interface NavigationProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
 const aiServices = [
   { name: 'AI-Powered DevOps', href: '/ai-powered-devops' },
   { name: 'AI Email Analyzer', href: '/ai-powered-email-analyzer' },
@@ -28,7 +23,12 @@ const itServices = [
   { name: '5G IoT Solutions', href: '/5g-iot-solutions' },
 ];
 
-function Navigation()
+interface NavigationProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+function Navigation({ className = '', children }: NavigationProps = {}) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
@@ -210,3 +210,5 @@ function Navigation()
     </nav>
   );
 }
+
+export default Navigation;

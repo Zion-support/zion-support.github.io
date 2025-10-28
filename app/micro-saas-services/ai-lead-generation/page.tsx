@@ -1,6 +1,6 @@
-import React from 'react';
-import ErrorBoundary from '../../components/ErrorBoundary';
+
 import { Metadata } from 'next';
+import ErrorBoundary from '../../components/GlobalErrorBoundary';
 import Footer from '../../components/Footer';
 import Navigation from '../../components/Navigation';
 

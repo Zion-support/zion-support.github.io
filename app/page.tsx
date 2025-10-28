@@ -1,6 +1,6 @@
-import React from 'react';
-import ErrorBoundary from './components/ErrorBoundary';
+
 import { Metadata } from 'next';
+import ErrorBoundary from 'components/GlobalErrorBoundary';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
