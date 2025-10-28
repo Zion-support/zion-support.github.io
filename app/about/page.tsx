@@ -1,9 +1,16 @@
+<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import ErrorBoundary from '../../components/GlobalErrorBoundary';
 
+=======
+import React from 'react';
+import ErrorBoundary from '../components/ErrorBoundary';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+>>>>>>> e1f7e63051adb7a27d114fa0d8fe1584b924fa94
 
 export const metadata = {
   title: 'About | Zion Tech Group',
@@ -27,28 +34,9 @@ function AboutPage() {
               About Zion Tech Group
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Leading the future of technology with innovative AI solutions, 
+              Leading the future of technology with innovative AI solutions,
               cloud infrastructure, and cutting-edge software development.
             </p>
-            <p className="text-lg text-gray-400 mb-12 max-w-4xl mx-auto">
-              Transform your business with our cutting-edge technology solutions. 
-              We provide comprehensive services to help you achieve your goals.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-colors"
-              >
-                Get in Touch
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link
-                href="/services"
-                className="inline-flex items-center px-8 py-3 border border-white text-base font-medium rounded-md text-white bg-transparent hover:bg-white hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-colors"
-              >
-                Our Services
-              </Link>
-            </div>
           </div>
         </div>
       </div>

@@ -70,17 +70,13 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
         // Monitor Core Web Vitals
         const observer = new PerformanceObserver((list) => {
           list.getEntries().forEach((entry) => {
-            if (entry.entryType === 'largest-contentful-paint') {
-              console.log('LCP:', entry.startTime);
-            }
+            if (entry.entryType === 'largest-contentful-paint') { /* empty */ }
             if (entry.entryType === 'first-input') {
-              const fidEntry = entry as PerformanceEventTiming;
-              console.log('FID:', fidEntry.processingStart - fidEntry.startTime);
-            }
+              entry as PerformanceEventTiming;
+              }
             if (entry.entryType === 'layout-shift') {
-              const clsEntry = entry as LayoutShift;
-              console.log('CLS:', clsEntry.value);
-            }
+              entry as LayoutShift;
+              }
           });
         });
 

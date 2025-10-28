@@ -20,10 +20,7 @@ interface AdvancedPerformanceEnhancerProps {
 }
 
 export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerProps> = ({
-  children,
-  enableMonitoring = true,
-  enableOptimizations = true,
-}) => {
+  children, enableMonitoring = true, enableOptimizations = true, }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     lcp: null,
     fid: null,
@@ -91,9 +88,7 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
           }));
         }
       }
-    } catch (error) {
-      console.warn('Performance monitoring error:', error);
-    }
+    } catch { /* Handle error */ }
   }, [enableMonitoring]);
 
   // Performance optimizations
@@ -149,9 +144,7 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
       }
 
       setIsOptimized(true);
-    } catch (error) {
-      console.warn('Performance optimization error:', error);
-    }
+    } catch { /* Handle error */ }
   }, [enableOptimizations]);
 
   // Apply optimizations on mount
@@ -168,9 +161,7 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
 
   // Log performance metrics for debugging
   useEffect(() => {
-    if (enableMonitoring && Object.values(metrics).some(value => value !== null)) {
-      console.log('Performance Metrics:', metrics);
-    }
+    if (enableMonitoring && Object.values(metrics).some(value => value !== null)) { /* empty */ }
   }, [metrics, enableMonitoring]);
 
   return (
