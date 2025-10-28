@@ -5,7 +5,17 @@ import globals from 'globals';
 
 export default [
   {
-    ignores: ['next-env.d.ts', '**/*.d.ts', '.next/**/*'],
+    ignores: [
+      'next-env.d.ts', 
+      '**/*.d.ts', 
+      '.next/**/*',
+      '**/*.cjs',
+      '**/*.js',
+      '!jest.config.*',
+      '!jest.setup.*',
+      '!**/*.test.*',
+      '!**/*.spec.*'
+    ],
   },
   {
     files: ['**/*.ts', '**/*.tsx'],

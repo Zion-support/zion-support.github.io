@@ -53,6 +53,17 @@ global.ResizeObserver = class ResizeObserver {
 global.TextEncoder = TextEncoder
 global.TextDecoder = TextDecoder as typeof TextDecoder
 
+// Type declarations for PerformanceObserver
+interface PerformanceObserverCallback {
+  (list: PerformanceObserverEntryList, observer: PerformanceObserver): void;
+}
+
+interface PerformanceObserverInit {
+  entryTypes?: string[];
+  type?: string;
+  buffered?: boolean;
+}
+
 // Mock PerformanceObserver
 global.PerformanceObserver = class PerformanceObserver {
   constructor(_callback: PerformanceObserverCallback) {}
