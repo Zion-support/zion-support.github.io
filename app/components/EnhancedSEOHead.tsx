@@ -1,18 +1,11 @@
 
-
-interface SEOHeadProps {
-  title?: string;
-  description?: string;
-  className?: string;
-}
-
-const SEOHead: React.FC<SEOHeadProps> = ({ title, description, className }) => {
+const EnhancedSEOHead = () => {
   return (
-    <div className={className}>
-      {title && <h1>{title}</h1>}
-      {description && <p>{description}</p>}
+    <div className="p-4">
+      <h2>EnhancedSEOHead</h2>
+      <p>Component implementation coming soon...</p>
     </div>
   );
 };
 
-export default SEOHead;
+export default EnhancedSEOHead;

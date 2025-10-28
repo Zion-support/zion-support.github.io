@@ -1,14 +1,21 @@
+import React from 'react';
 
-
-interface FuturisticBackgroundProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ className, children }) => {
+const FuturisticBackground: React.FC<{}> = (_props) => {
   return (
-    <div className={`futuristic-background ${className}`} role="region" aria-label="Futuristic Background">
-      {children || <p>Futuristic Background</p>}
+    <div className="p-4">
+      <h2>FuturisticBackground</h2>
+      <p>Component implementation coming soon...</p>
+    </div>
+  );
+};
+
+FuturisticBackground.displayName = 'FuturisticBackground';
+
+const FuturisticBackground = () => {
+  return (
+    <div className="p-4">
+      <h2>FuturisticBackground</h2>
+      <p>Component implementation coming soon...</p>
     </div>
   );
 };

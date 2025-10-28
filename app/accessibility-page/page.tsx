@@ -1,6 +1,6 @@
-'use client'
-import Head from 'next/head'
+'use client';
 
+import Head from 'next/head'
 import Footer from '../components/Footer'
 
 export default function Page() {
@@ -28,5 +28,5 @@ export default function Page() {
         <Footer />
       </main>
     </div>
-  );
-};
+  )
+}

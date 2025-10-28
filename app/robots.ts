@@ -11,5 +11,5 @@ export default function robots(): MetadataRoute.Robots {
       disallow: '/private/'
     },
     sitemap: 'https://ziontechgroup.com/sitemap.xml'
-  };
+  }
 }

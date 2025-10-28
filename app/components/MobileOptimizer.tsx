@@ -1,4 +1,4 @@
-
+import React from 'react';
 interface MobileOptimizerProps {
   className?: string;
   children?: React.ReactNode;

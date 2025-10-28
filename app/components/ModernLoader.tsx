@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 
 interface ModernLoaderProps {
   isLoading: boolean;
+  className?: string;
   children?: React.ReactNode;
 }
 
@@ -22,7 +23,7 @@ export default function ModernLoader({ isLoading, children }: ModernLoaderProps)
   }, [isLoading]);
 
   if (!showLoader) {
-    return <>{children}</>;
+    return <>{children}</>
   }
 
   return (

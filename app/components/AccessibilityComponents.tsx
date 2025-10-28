@@ -1,6 +1,5 @@
 <<<<<<< HEAD
 
-
 interface AccessibilityComponentsProps {
   className?: string;
   children?: React.ReactNode;
@@ -8,12 +7,10 @@ interface AccessibilityComponentsProps {
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc
 
-const AccessibilityComponents: React.FC<AccessibilityComponentsProps> = ({ className, children }) => {
+export default function AccessibilityComponents({ className, children }: AccessibilityComponentsProps) {
   return (
-    <div className={className} role="main" aria-label="Accessibility Components">
-      {children || <p>Accessibility Components</p>}
+    <div className={`accessibilitycomponents-component ${className || ''}`}>
+      {children}
     </div>
   );
-};
-
-export default AccessibilityComponents;
+}

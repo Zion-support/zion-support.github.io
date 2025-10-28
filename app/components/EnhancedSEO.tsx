@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 
-
+import React from 'react';
 interface EnhancedSEOProps {
   className?: string;
   children?: React.ReactNode;
@@ -8,12 +8,14 @@ interface EnhancedSEOProps {
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc
 
-const EnhancedSEO: React.FC<EnhancedSEOProps> = ({ className, children }) => {
+const EnhancedSEO: React.FC<EnhancedSEOProps> = ({ className = '', children }) => {
   return (
-    <div className={className} role="region" aria-label="Enhanced SEO">
-      {children || <p>Enhanced SEO</p>}
+    <div className={`enhanced-seo ${className}`}>
+      {children}
     </div>
   );
 };
+
+EnhancedSEO.displayName = 'EnhancedSEO';
 
 export default EnhancedSEO;

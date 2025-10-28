@@ -1,11 +1,8 @@
 
+'use client'
+
 const PerformanceMonitor = () => {
-  return (
-    <div className="p-4">
-      <h2>PerformanceMonitor</h2>
-      <p>Component implementation coming soon...</p>
-    </div>
-  );
+  return null; // Hidden component for performance monitoring
 };
 
 export default PerformanceMonitor;

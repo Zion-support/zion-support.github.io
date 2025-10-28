@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 
-
+import React from 'react';
 interface SEOOptimizerProps {
   className?: string;
   children?: React.ReactNode;
@@ -8,10 +8,14 @@ interface SEOOptimizerProps {
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc
 
-export default function SEOOptimizer({ className, children }: SEOOptimizerProps) {
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ className = '', children }) => {
   return (
-    <div className={`seo-optimizer ${className || ''}`}>
+    <div className={`seo-optimizer ${className}`}>
       {children}
     </div>
   );
-}
+};
+
+SEOOptimizer.displayName = 'SEOOptimizer';
+
+export default SEOOptimizer;
