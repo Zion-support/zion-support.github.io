@@ -1,4 +1,5 @@
 
+
 interface PerformanceOptimizerProps {
   className?: string;
   children?: React.ReactNode;

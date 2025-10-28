@@ -1,4 +1,5 @@
 
+
 interface EnhancedPerformanceOptimizerProps {
   className?: string;
   children?: React.ReactNode;

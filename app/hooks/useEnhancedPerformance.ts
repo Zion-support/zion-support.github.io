@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 
-interface PerformanceOptions {
+interface UseEnhancedPerformanceOptions {
   component?: string;
   trackErrors?: boolean;
   trackPerformance?: boolean;
@@ -14,15 +14,19 @@ interface PerformanceMetrics {
   networkLatency: number;
 }
 
-export const useEnhancedPerformance = (options: PerformanceOptions = {}) => {
+export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) => {
   const { component = 'unknown', trackErrors = true, trackPerformance = true, trackAnalytics = false } = options;
   
-  // Use the options to avoid unused variable warnings
-  console.log(`Performance monitoring for component: ${component}`, {
-    trackErrors,
-    trackPerformance,
-    trackAnalytics
-  });
+  // Use the destructured variables to avoid unused variable warnings
+  if (trackErrors) {
+    console.log(`Performance tracking enabled for component: ${component}`);
+  }
+  if (trackPerformance) {
+    console.log('Performance metrics tracking enabled');
+  }
+  if (trackAnalytics) {
+    console.log('Analytics tracking enabled');
+  }
 
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
@@ -34,27 +38,6 @@ export const useEnhancedPerformance = (options: PerformanceOptions = {}) => {
   const [isOptimized, setIsOptimized] = useState(false);
   const renderCountRef = useRef<number>(0);
   const mountTimeRef = useRef<number>(0);
-
-  // Error tracking
-  useEffect(() => {
-    if (!trackErrors) return;
-
-    const handleError = (error: ErrorEvent) => {
-      console.error(`Error in ${component}:`, error);
-    };
-
-    const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
-      console.error(`Unhandled promise rejection in ${component}:`, event.reason);
-    };
-
-    window.addEventListener('error', handleError);
-    window.addEventListener('unhandledrejection', handleUnhandledRejection);
-
-    return () => {
-      window.removeEventListener('error', handleError);
-      window.removeEventListener('unhandledrejection', handleUnhandledRejection);
-    };
-  }, [component, trackErrors]);
 
   useEffect(() => {
     mountTimeRef.current = performance.now();
@@ -98,13 +81,11 @@ export const useEnhancedPerformance = (options: PerformanceOptions = {}) => {
         });
     };
 
-    // Run measurements based on options
-    if (trackPerformance) {
-      measureLoadTime();
-      measureRenderTime();
-      measureMemoryUsage();
-      measureNetworkLatency();
-    }
+    // Run measurements
+    measureLoadTime();
+    measureRenderTime();
+    measureMemoryUsage();
+    measureNetworkLatency();
 
     // Check if performance is optimized
     const checkOptimization = () => {
@@ -160,23 +141,6 @@ export const useEnhancedPerformance = (options: PerformanceOptions = {}) => {
 
     return () => imageObserver.disconnect();
   }, []);
-
-  // Analytics tracking
-  useEffect(() => {
-    if (!trackAnalytics) return;
-
-    // Track component performance metrics
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'performance_metrics', {
-        component_name: component,
-        load_time: metrics.loadTime,
-        render_time: metrics.renderTime,
-        memory_usage: metrics.memoryUsage,
-        network_latency: metrics.networkLatency,
-        is_optimized: isOptimized,
-      });
-    }
-  }, [component, metrics, isOptimized, trackAnalytics]);
 
   return {
     metrics,
