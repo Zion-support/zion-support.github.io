@@ -7,7 +7,7 @@ const __dirname = path.dirname(__filename);
 
 function fixDuplicateImports(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    const content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
     // Split content into lines

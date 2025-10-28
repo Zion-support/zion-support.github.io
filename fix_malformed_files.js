@@ -39,7 +39,7 @@ const isMalformed = (content) => {
 // Fix malformed file structure
 const fixMalformedFile = (filePath) => {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    const content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
     
     // Split content into lines

@@ -7,6 +7,7 @@ export const performance = {
     const end = Date.now();
     console.log(`${name}: ${end - start}ms`);
   },
+};
 
 class PerformanceMonitor {
   private static instance: PerformanceMonitor;
@@ -24,3 +25,4 @@ class PerformanceMonitor {
       performance.mark(`${label}-start`);
     }
   }
+}

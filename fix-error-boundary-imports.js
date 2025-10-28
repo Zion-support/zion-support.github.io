@@ -12,7 +12,7 @@ async function fixErrorBoundaryImports() {
 
   for (const filePath of pageFiles) {
     try {
-      let content = fs.readFileSync(filePath, 'utf8');
+      const content = fs.readFileSync(filePath, 'utf8');
       
       // Check if the file uses ErrorBoundary but doesn't import it
       if (content.includes('ErrorBoundary') && !content.includes("import { ErrorBoundary }")) {

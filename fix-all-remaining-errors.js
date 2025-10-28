@@ -18,7 +18,7 @@ function fixFile(filePath) {
       const cleanLines = [];
       let metadataCount = 0;
       let inMetadata = false;
-      let imports = new Set();
+      const imports = new Set();
       let hasUseClient = false;
       
       for (let i = 0; i < lines.length; i++) {

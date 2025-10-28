@@ -12,7 +12,7 @@ let fixedCount = 0;
 files.forEach(file => {
   try {
     const filePath = path.join(process.cwd(), file);
-    let content = fs.readFileSync(filePath, 'utf8');
+    const content = fs.readFileSync(filePath, 'utf8');
     
     // Check if the file has unused React import
     const lines = content.split('\n');

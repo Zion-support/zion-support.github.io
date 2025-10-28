@@ -13,8 +13,8 @@ for (const file of files) {
   const filePath = path.join('/workspace', file);
   
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+    const content = fs.readFileSync(filePath, 'utf8');
+    const modified = false;
     
     // Skip if it's already a clean file
     if (!content.includes('Cannot find module') && 

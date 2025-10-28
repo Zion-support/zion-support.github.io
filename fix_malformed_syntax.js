@@ -16,7 +16,7 @@ const getFilesWithBuildErrors = () => {
 // Fix malformed syntax
 const fixMalformedSyntax = (filePath) => {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    const content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
     
     // Remove orphaned return statements and malformed code
