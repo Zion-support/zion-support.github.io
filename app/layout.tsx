@@ -7,13 +7,6 @@ import Footer from './components/Footer';
 import ErrorBoundary from './components/ErrorBoundary';
 import SkipLink from './components/SkipLink';
 import ClientComponents from './components/ClientComponents';
-import PerformanceMonitoring from './components/PerformanceMonitoring';
-import Analytics from './components/Analytics';
-import ConsolidatedPerformance from './components/consolidated/ConsolidatedPerformance';
-import ConsolidatedAccessibility from './components/consolidated/ConsolidatedAccessibility';
-import ConsolidatedSEO from './components/consolidated/ConsolidatedSEO';
-import SEOOptimization from './components/SEOOptimization';
-import SecurityEnhancement from './components/SecurityEnhancement';
 
 const inter = Inter({ subsets: ['latin'] });
 
