@@ -1,21 +1,21 @@
 // Next.js type definitions
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { NextPage } from 'next';
 declare module 'next' {
-  interface NextPageWithLayout<P = Record<string, unknown>, IP = P> extends NextPage<P, IP> {
+  interface NextPageWithLayout<P = {}, IP = P> extends NextPage<P, IP> {
     getLayout?: (_page: React.ReactElement) => React.ReactNode;
   }
 }
 
 export interface MetadataRoute {
-  url: string;
+  _url: string;
   lastModified?: string | Date;
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;
 }
 
 export interface MetadataRouteSitemap extends MetadataRoute {
-  url: string;
+  _url: string;
   lastModified?: string | Date;
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;
@@ -23,8 +23,8 @@ export interface MetadataRouteSitemap extends MetadataRoute {
 
 // Custom Next.js types
 export interface NextPageProps {
-  params: Record<string, string>
-  searchParams: Record<string, string | string[] | undefined>
+  params: { [_key: string]: string }
+  searchParams: { [_key: string]: string | string[] | undefined }
 }
 
 // API route types
@@ -34,11 +34,29 @@ export interface ApiRouteHandler {
 
 // Server components types
 export interface ServerComponentProps {
-  params: { [key: string]: string }
-  searchParams: { [key: string]: string | string[] | undefined }
+  params: { [_key: string]: string }
+  searchParams: { [_key: string]: string | string[] | undefined }
 }
 
-// Performance API types - removed unused interface
+// Performance API types
+interface PerformanceEventTiming extends PerformanceEntry {
+  _processingStart: number;
+  _processingEnd: number;
+  target?: Node;
+}
+
+interface LayoutShift extends PerformanceEntry {
+  _value: number;
+  _hadRecentInput: boolean;
+  _lastInputTime: number;
+  _sources: LayoutShiftAttribution[];
+}
+
+interface LayoutShiftAttribution {
+  node?: Node;
+  _previousRect: DOMRectReadOnly;
+  _currentRect: DOMRectReadOnly;
+}
 
 // Client components types
 export interface ClientComponentProps {
@@ -57,19 +75,19 @@ export interface RouteHandler {
 
 // Dynamic route types
 export interface DynamicRoute {
-  params: { [key: string]: string }
+  params: { [_key: string]: string }
 }
 
 // Static generation types
 export interface StaticProps {
-  props: { [key: string]: unknown }
+  props: { [_key: string]: unknown }
   revalidate?: number;
   notFound?: boolean;
 }
 
 // ISR types
 export interface ISRConfig {
-  revalidate: number;
+  _revalidate: number;
   tags?: string[];
 }
 
@@ -87,11 +105,11 @@ export interface NodeRuntime {
 declare module 'next' {
   interface NextApiRequest {
     user?: {
-      id: string;
-      email: string;
+      _id: string;
+      _email: string;
       name?: string;
     }
   }
 }
 
-export {}
+export { /* empty */ }

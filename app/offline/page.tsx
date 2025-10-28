@@ -26,10 +26,4 @@ function OfflinePage() {
   );
 }
 
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <OfflinePage {...props} />
-    </ErrorBoundary>
-  );
-}
+export default OfflinePage;

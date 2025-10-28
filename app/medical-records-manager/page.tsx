@@ -6,16 +6,16 @@ import ErrorBoundary from '../components/ErrorBoundary';
 
 export const metadata = {
   title: 'Medical Records Manager | Zion Tech Group',
-  description: 'Professional medical records manager services by Zion Tech Group. Advanced AI and technology solutions.',
-  keywords: 'medical records manager, technology, services, AI, automation',
+  description: 'AI-powered medical records management solutions',
+  keywords: 'medical records, AI, healthcare, document management',
   openGraph: {
     title: 'Medical Records Manager | Zion Tech Group',
-    description: 'Professional medical records manager services by Zion Tech Group.',
+    description: 'AI-powered medical records management solutions',
     type: 'website',
   }};
-export default function Page() {
+function MedicalrecordsmanagerPage() {
   return (
-    <ErrorBoundary>
+    <>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -48,6 +48,8 @@ export default function Page() {
         </div>
       </div>
       <Footer />
-    </ErrorBoundary>
+    </>
   );
 }
+
+

@@ -5,7 +5,7 @@ export const performance = {
     const start = Date.now();
     fn();
     const end = Date.now();
-    console.log(`${name}: ${end - start}ms`);
+
   }
 };
 
@@ -97,7 +97,7 @@ export function usePerformanceMonitor() {
 }
 
 // Utility function to measure component render time
-export function measureComponentRender(componentName: string) {
+export function withPerformanceMonitoring(componentName: string) {
   return function <T extends React.ComponentType<unknown>>(PageComponent: T): T {
     return ((props: unknown) => {
       const monitor = PerformanceMonitor.getInstance();

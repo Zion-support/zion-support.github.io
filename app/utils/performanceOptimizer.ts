@@ -12,7 +12,7 @@ export interface PerformanceMetrics {
   recommendations: string[];
 }
 
-export interface OptimizationOptions {
+export interface OptimizationConfig {
   enableImageOptimization?: boolean;
   enableLazyLoading?: boolean;
   enablePreloading?: boolean;
@@ -30,7 +30,7 @@ class PerformanceOptimizer {
     recommendations: [],
   };
 
-  private options: OptimizationOptions = {
+  private options: OptimizationConfig = {
     enableImageOptimization: true,
     enableLazyLoading: true,
     enablePreloading: true,
@@ -38,7 +38,7 @@ class PerformanceOptimizer {
     enableCompression: true,
   };
 
-  constructor(options?: OptimizationOptions) {
+  constructor(options?: OptimizationConfig) {
     if (options) {
       this.options = { ...this.options, ...options };
     }
@@ -174,11 +174,11 @@ class PerformanceOptimizer {
     // Add cache headers for static assets
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js')
-        .then((registration) => {
-          console.log('Service Worker registered:', registration);
+        .then(() => {
+          // Service worker registered successfully
         })
-        .catch((error) => {
-          console.error('Service Worker registration failed:', error);
+        .catch(() => {
+          // Service worker registration failed
         });
     }
   }

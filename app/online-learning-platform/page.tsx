@@ -6,16 +6,16 @@ import ErrorBoundary from '../components/ErrorBoundary';
 
 export const metadata = {
   title: 'Online Learning Platform | Zion Tech Group',
-  description: 'Professional online learning platform services by Zion Tech Group. Advanced AI and technology solutions.',
-  keywords: 'online learning platform, technology, services, AI, automation',
+  description: 'AI-powered online learning platform solutions',
+  keywords: 'online learning, AI, education, e-learning',
   openGraph: {
     title: 'Online Learning Platform | Zion Tech Group',
-    description: 'Professional online learning platform services by Zion Tech Group.',
+    description: 'AI-powered online learning platform solutions',
     type: 'website',
   }};
-export default function Page() {
+function OnlinelearningplatformPage() {
   return (
-    <ErrorBoundary>
+    <>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -48,7 +48,8 @@ export default function Page() {
         </div>
       </div>
       <Footer />
-    </ErrorBoundary>
+    </>
   );
 }
+
 

@@ -17,6 +17,15 @@ export interface ErrorInfo {
   category: 'javascript' | 'network' | 'resource' | 'promise' | 'react' | 'unknown';
 }
 
+export interface ErrorState {
+  errors: ErrorInfo[];
+  totalErrors: number;
+  criticalErrors: number;
+  lastError?: ErrorInfo;
+  errorRate: number;
+  timestamp: number;
+}
+
 export interface ErrorReport {
   errors: ErrorInfo[];
   totalErrors: number;
@@ -93,7 +102,7 @@ class ErrorHandler {
   private reportError(errorInfo: ErrorInfo): void {
     // Implement error reporting logic here
     if (errorInfo.severity === 'critical') {
-      console.error('Critical error:', errorInfo);
+      console.error('Critical error reported:', errorInfo);
     }
   }
 

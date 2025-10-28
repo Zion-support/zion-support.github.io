@@ -1,61 +1,84 @@
 import fs from 'fs';
-import path from 'path';
 import { glob } from 'glob';
 
-// Function to fix all duplicate properties
-function fixAllDuplicates(filePath) {
+// Function to fix duplicate imports and exports in a file
+function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
-
-    // Fix duplicate children properties
-    const duplicateChildrenPattern = /children\?\s*:\s*React\.ReactNode;\s*[^}]*children\s*:\s*React\.ReactNode/g;
-    if (duplicateChildrenPattern.test(content)) {
-      content = content.replace(duplicateChildrenPattern, 'children: React.ReactNode');
-      modified = true;
+    
+    // Split content into lines
+    const lines = content.split('\n');
+    const newLines = [];
+    const seenImports = new Set();
+    let inImportBlock = true;
+    let foundExportDefault = false;
+    
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      const trimmedLine = line.trim();
+      
+      // Check if this is an import line
+      if (trimmedLine.startsWith('import ')) {
+        if (seenImports.has(trimmedLine)) {
+          // Skip duplicate import
+          modified = true;
+          continue;
+        }
+        seenImports.add(trimmedLine);
+        newLines.push(line);
+      }
+      // Check if this is an export default line
+      else if (trimmedLine.startsWith('export default ')) {
+        if (foundExportDefault) {
+          // Skip duplicate export default
+          modified = true;
+          continue;
+        }
+        foundExportDefault = true;
+        newLines.push(line);
+      }
+      // Check if we're leaving the import block (empty line or non-import)
+      else if (trimmedLine === '' && inImportBlock) {
+        newLines.push(line);
+      }
+      else if (trimmedLine !== '' && !trimmedLine.startsWith('import ') && !trimmedLine.startsWith('export ')) {
+        inImportBlock = false;
+        newLines.push(line);
+      }
+      else {
+        newLines.push(line);
+      }
     }
-
-    // Fix duplicate className properties
-    const duplicateClassNamePattern = /className\?\s*:\s*string;\s*[^}]*className\?\s*:\s*string/g;
-    if (duplicateClassNamePattern.test(content)) {
-      content = content.replace(duplicateClassNamePattern, 'className?: string');
-      modified = true;
-    }
-
-    // Fix missing semicolons in interfaces
-    const missingSemicolonPattern = /(\w+)\s*:\s*(\w+)\s*\n\s*(\w+)\s*:\s*(\w+)/g;
-    if (missingSemicolonPattern.test(content)) {
-      content = content.replace(missingSemicolonPattern, '$1: $2;\n  $3: $4');
-      modified = true;
-    }
-
+    
     if (modified) {
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed duplicates in: ${filePath}`);
+      fs.writeFileSync(filePath, newLines.join('\n'));
+      console.log(`Fixed: ${filePath}`);
       return true;
     }
+    
+    return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
   }
-  return false;
 }
 
-// Main function to fix all duplicate issues
-async function fixAllDuplicateIssues() {
-  const pattern = 'app/components/**/*.tsx';
-  const files = await glob(pattern, { cwd: process.cwd() });
-  
-  console.log(`Found ${files.length} component files to check for duplicates...`);
-  
+// Main function to process files
+async function main() {
+  // Find all TypeScript/JavaScript files in the app directory
+  const files = await glob('app/**/*.{ts,tsx,js,jsx}');
+
+  console.log(`Found ${files.length} files to process...`);
+
   let fixedCount = 0;
   files.forEach(file => {
-    if (fixAllDuplicates(file)) {
+    if (fixFile(file)) {
       fixedCount++;
     }
   });
-  
+
   console.log(`Fixed ${fixedCount} files`);
 }
 
-// Run the fix
-fixAllDuplicateIssues().catch(console.error);
+main().catch(console.error);

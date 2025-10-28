@@ -64,7 +64,7 @@ async function main() {
   const pageFiles = await glob('app/**/page.tsx', { cwd: process.cwd() });
 
   let fixedCount = 0;
-  let totalCount = pageFiles.length;
+  const totalCount = pageFiles.length;
 
   console.log(`Found ${totalCount} page files to process...`);
 

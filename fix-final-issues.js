@@ -1,88 +1,203 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
-import { glob } from 'glob';
 
-// Function to fix final issues in a file
-function fixFile(filePath) {
+// Function to fix remaining React import issues
+function fixReactImports() {
+  const filesToFix = [
+    'app/components/AccessibilityComponents.tsx',
+    'app/components/AdvancedPerformanceMonitor.tsx',
+    'app/components/AdvancedPerformanceOptimizer.tsx',
+    'app/components/ContentNewsletterSignup.tsx',
+    'app/components/ContentStatistics.tsx',
+    'app/components/EnhancedSEO.tsx',
+    'app/components/GlobalErrorBoundary.tsx',
+    'app/components/Header.tsx',
+    'app/components/SEOOptimizer.tsx'
+  ];
+
+  filesToFix.forEach(filePath => {
+    try {
+      let content = fs.readFileSync(filePath, 'utf8');
+      
+      // Remove unused React imports
+      if (content.includes("import React from 'react';") && !content.includes('React.')) {
+        content = content.replace("import React from 'react';\n", '');
+      }
+      
+      // Clean up extra empty lines
+      content = content.replace(/\n\n\n+/g, '\n\n');
+      
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed React import in: ${filePath}`);
+    } catch (error) {
+      console.error(`Error fixing ${filePath}:`, error.message);
+    }
+  });
+}
+
+// Function to fix Navigation Search import
+function fixNavigationSearch() {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-
-    // Fix 1: Ensure Head and Footer imports are present
-    if (content.includes('<Head>') || content.includes('<Footer')) {
-      if (!content.includes("import Head from 'next/head'")) {
-        content = "import Head from 'next/head';\n" + content;
-        modified = true;
-      }
-      if (!content.includes("import Footer from '../components/Footer'")) {
-        content = content.replace(/import Head from 'next\/head';\n/, "import Head from 'next/head';\nimport Footer from '../components/Footer';\n");
-        modified = true;
-      }
-    }
-
-    // Fix 2: Remove unused props parameter
-    if (content.includes('props: any') && !content.includes('{...props}')) {
-      content = content.replace(/\(props: any\)/g, '()');
-      modified = true;
-    }
-
-    // Fix 3: Remove unused Page variable declarations
-    if (content.includes("function Page() {")) {
-      content = content.replace(/function Page\(\) \{\s*return \([\s\S]*?\)\s*\}/g, '');
-      modified = true;
-    }
-
-    // Fix 4: Remove unused Page variable declarations (alternative pattern)
-    if (content.includes("const Page = () => {")) {
-      content = content.replace(/const Page = \(\) => \{\s*return \([\s\S]*?\)\s*\};?\n?/g, '');
-      modified = true;
-    }
-
-    // Fix 5: Remove any other unused function declarations that match the pattern
-    const unusedFunctionPattern = /function \w+Page\(\) \{\s*return \([\s\S]*?\)\s*\}/g;
-    if (unusedFunctionPattern.test(content)) {
-      content = content.replace(unusedFunctionPattern, '');
-      modified = true;
-    }
-
-    // Fix 6: Clean up any empty lines and ensure proper structure
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    content = content.replace(/^;\s*\n/gm, '');
-
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
+    let content = fs.readFileSync('app/components/Navigation.tsx', 'utf8');
     
-    return false;
+    // Remove unused Search import
+    content = content.replace(/, Search/g, '');
+    
+    fs.writeFileSync('app/components/Navigation.tsx', content);
+    console.log('Fixed Navigation Search import');
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
+    console.error('Error fixing Navigation:', error.message);
   }
 }
 
-// Main execution
-async function main() {
-  console.log('Starting final issues fixes...');
+// Function to fix hook files
+function fixHookFiles() {
+  try {
+    let content = fs.readFileSync('app/hooks/useEnhancedPerformance.ts', 'utf8');
+    
+    // Remove the entire unused destructured elements line
+    content = content.replace(/const \{ [^}]+ \} = useCallback\(\(\) => \{[\s\S]*?\}, \[\]\);\n/g, '');
+    
+    fs.writeFileSync('app/hooks/useEnhancedPerformance.ts', content);
+    console.log('Fixed hook file');
+  } catch (error) {
+    console.error('Error fixing hook file:', error.message);
+  }
+}
 
-  // Find all page.tsx files
-  const pageFiles = await glob('app/**/page.tsx', { cwd: process.cwd() });
+// Function to fix component files with missing exports
+function fixComponentExports() {
+  const filesToFix = [
+    'app/components/Analytics.tsx',
+    'app/components/AnimatedCounter.tsx',
+    'app/components/ContactForm.tsx',
+    'app/components/ContentPreviewCard.tsx',
+    'app/components/ContentPromotionBanner.tsx',
+    'app/components/DynamicContentShowcase.tsx',
+    'app/components/EnhancedErrorBoundary.tsx',
+    'app/components/EnhancedLoading.tsx',
+    'app/components/EnhancedLoadingStates.tsx',
+    'app/components/EnhancedPerformanceOptimizer.tsx',
+    'app/components/EnhancedSEOHead.tsx',
+    'app/components/EnhancedSkipLink.tsx',
+    'app/components/ErrorHandler.tsx',
+    'app/components/FuturisticBackground.tsx',
+    'app/components/LazyImage.tsx',
+    'app/components/LoadingSpinner.tsx',
+    'app/components/LoadingStates.tsx',
+    'app/components/NeonButton.tsx',
+    'app/components/OptimizedImage.tsx',
+    'app/components/OptimizedLoadingSpinner.tsx',
+    'app/components/PerformanceDashboard.tsx',
+    'app/components/PerformanceOptimizations.tsx',
+    'app/components/PerformanceOptimizer.tsx',
+    'app/components/ResponsiveContainer.tsx',
+    'app/components/SEOEnhancer.tsx',
+    'app/components/SecurityEnhancer.tsx',
+    'app/components/ServiceCard.tsx',
+    'app/components/ServiceCardSkeleton.tsx',
+    'app/components/Sidebar.tsx',
+    'app/components/SkipLink.tsx'
+  ];
 
+<<<<<<< HEAD
   let fixedCount = 0;
-  let totalCount = pageFiles.length;
+  const totalCount = pageFiles.length;
 
   console.log(`Found ${totalCount} page files to process...`);
 
   pageFiles.forEach(file => {
     if (fixFile(file)) {
       fixedCount++;
+=======
+  filesToFix.forEach(filePath => {
+    try {
+      let content = fs.readFileSync(filePath, 'utf8');
+      
+      // Add default export if missing
+      if (!content.includes('export default')) {
+        const componentName = filePath.split('/').pop().replace('.tsx', '');
+        content += `\n\nexport default ${componentName};`;
+      }
+      
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed export in: ${filePath}`);
+    } catch (error) {
+      console.error(`Error fixing ${filePath}:`, error.message);
+>>>>>>> cursor/fix-errors-and-merge-to-main-c408
     }
   });
+}
 
-  console.log(`\nFixed ${fixedCount} out of ${totalCount} files.`);
-  console.log('Final issues fixes completed!');
+// Function to fix missing types
+function fixMissingTypes() {
+  try {
+    // Create the missing types file
+    const typesContent = `export interface AccessibilityConfig {
+  enableSkipLinks: boolean;
+  enableFocusManagement: boolean;
+  enableScreenReaderSupport: boolean;
+  enableKeyboardNavigation: boolean;
+  enableHighContrast: boolean;
+  enableReducedMotion: boolean;
+  enableVoiceOver: boolean;
+  enableJAWS: boolean;
+  enableNVDA: boolean;
+  enableChromeVox: boolean;
+}
+
+export interface AccessibilityFeatures {
+  skipLinks: boolean;
+  focusManagement: boolean;
+  screenReaderSupport: boolean;
+  keyboardNavigation: boolean;
+  highContrast: boolean;
+  reducedMotion: boolean;
+  voiceOver: boolean;
+  jaws: boolean;
+  nvda: boolean;
+  chromeVox: boolean;
+}
+
+export interface AccessibilityTestResult {
+  passed: boolean;
+  score: number;
+  issues: string[];
+  recommendations: string[];
+}
+
+export interface AccessibilityAudit {
+  overallScore: number;
+  passedTests: number;
+  totalTests: number;
+  results: AccessibilityTestResult[];
+  timestamp: Date;
+}`;
+
+    fs.writeFileSync('app/types/accessibility.ts', typesContent);
+    console.log('Created missing types file');
+  } catch (error) {
+    console.error('Error creating types file:', error.message);
+  }
+}
+
+// Main function
+async function main() {
+  console.log('Fixing React imports...');
+  fixReactImports();
+  
+  console.log('Fixing Navigation Search import...');
+  fixNavigationSearch();
+  
+  console.log('Fixing hook files...');
+  fixHookFiles();
+  
+  console.log('Fixing component exports...');
+  fixComponentExports();
+  
+  console.log('Creating missing types...');
+  fixMissingTypes();
+  
+  console.log('Done!');
 }
 
 main().catch(console.error);

@@ -40,7 +40,8 @@ export default function AiPoweredDevopsPage() {
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ];
-const benefits = [
+  
+  const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
@@ -70,7 +71,6 @@ const benefits = [
                 className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-colors"
               >
                 Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
               </a>
               <a
                 href="/about"

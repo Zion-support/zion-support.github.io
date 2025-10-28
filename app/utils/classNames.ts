@@ -19,7 +19,7 @@ export function classNames(...classes: (string | undefined | null | false)[]): s
 /**
  * Utility for creating responsive class strings
  */
-export function responsive(classes: {
+export function responsiveClasses(classes: {
   base?: string;
   sm?: string;
   md?: string;

@@ -5,17 +5,17 @@ import ErrorBoundary from '../components/ErrorBoundary';
 
 
 export const metadata = {
-  title: 'Property Management Ai | Zion Tech Group',
-  description: 'Professional property management ai services by Zion Tech Group. Advanced AI and technology solutions.',
-  keywords: 'property management ai, technology, services, AI, automation',
+  title: 'Property Management AI | Zion Tech Group',
+  description: 'AI-powered property management solutions',
+  keywords: 'property management, AI, real estate, automation',
   openGraph: {
-    title: 'Property Management Ai | Zion Tech Group',
-    description: 'Professional property management ai services by Zion Tech Group.',
+    title: 'Property Management AI | Zion Tech Group',
+    description: 'AI-powered property management solutions',
     type: 'website',
   }};
-export default function Page() {
+function PropertymanagementaiPage() {
   return (
-    <ErrorBoundary>
+    <>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -48,7 +48,8 @@ export default function Page() {
         </div>
       </div>
       <Footer />
-    </ErrorBoundary>
+    </>
   );
 }
+
 

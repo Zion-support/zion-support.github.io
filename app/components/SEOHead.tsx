@@ -1,11 +1,10 @@
-'use client';
-import Head from 'next/head';
+
+
 
 import React, { memo } from 'react';
+import Head from 'next/head';
 
 interface SEOHeadProps {
-  className?: string;
-  children?: React.ReactNode;
   title?: string;
   description?: string;
   keywords?: string;
@@ -93,7 +92,7 @@ const SEOHead: React.FC<SEOHeadProps> = memo(({
             url: canonicalUrl,
             logo: '/images/logo.png',
             sameAs: [
-              'https://linkedin.com/company/zion-tech-group',
+              'https://linkedin.com/compunknown/zion-tech-group',
               'https://twitter.com/ziontechgroup',
             ],
             contactPoint: {

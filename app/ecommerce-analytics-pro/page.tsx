@@ -14,7 +14,9 @@ export const metadata = {
     type: 'website',
   },
 };
-export default function EcommerceanalyticsproPage() {
+
+function EcommerceanalyticsproPage() {
+
   return (
     <ErrorBoundary>
       <Navigation />

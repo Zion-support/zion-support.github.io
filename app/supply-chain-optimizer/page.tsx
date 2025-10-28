@@ -6,16 +6,16 @@ import ErrorBoundary from '../components/ErrorBoundary';
 
 export const metadata = {
   title: 'Supply Chain Optimizer | Zion Tech Group',
-  description: 'Professional supply chain optimizer services by Zion Tech Group. Advanced AI and technology solutions.',
-  keywords: 'supply chain optimizer, technology, services, AI, automation',
+  description: 'AI-powered supply chain optimization solutions',
+  keywords: 'supply chain, AI, optimization, logistics',
   openGraph: {
     title: 'Supply Chain Optimizer | Zion Tech Group',
-    description: 'Professional supply chain optimizer services by Zion Tech Group.',
+    description: 'AI-powered supply chain optimization solutions',
     type: 'website',
   }};
-export default function Page() {
+function SupplychainoptimizerPage() {
   return (
-    <ErrorBoundary>
+    <>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -48,7 +48,8 @@ export default function Page() {
         </div>
       </div>
       <Footer />
-    </ErrorBoundary>
+    </>
   );
 }
+
 

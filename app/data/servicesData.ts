@@ -87,7 +87,7 @@ export const aiServices: Service[] = [
   }
 ];
 
-export const itServices: Service[] = [
+export const services = [
   {
     id: 'web-development',
     title: 'Web Development',
@@ -186,22 +186,26 @@ export const itServices: Service[] = [
 ];
 
 // Add itSolutions as alias for itServices
-export const itSolutions = itServices;
-
+export const itServices: Service[] = [];
+export const itSolutions = itServices; // Alias
 export const allServices: Service[] = [...aiServices, ...itServices];
+
 // Export as servicesData for backward compatibility
 export const servicesData = {
   aiServices,
   itServices,
   itSolutions,
   allServices
-}
-export const getServiceById = (id: string): Service | undefined => {
+};
+
+export function getServiceById(id: string) {
   return allServices.find(service => service.id === id);
 }
-export const getServicesByCategory = (category: Service['category']): Service[] => {
+
+export function getServicesByCategory(category: string) {
   return allServices.filter(service => service.category === category);
 }
-export const getPopularServices = (): Service[] => {
+
+export function getPopularServices() {
   return allServices.filter(service => service.popular);
 }
