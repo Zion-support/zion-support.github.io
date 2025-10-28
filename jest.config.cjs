@@ -14,18 +14,20 @@ const customJestConfig = {
     '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
   },
   transformIgnorePatterns: [
-    'node_modules/(?!(.*\\.mjs$|@testing-library|@jest))',
+    '/node_modules/(?!(.*\\.mjs$|@testing-library|@jest|jest-axe))',
   ],
   testMatch: [
-    '**/__tests__/**/*.(js|jsx|ts|tsx)',
-    '**/*.(test|spec).(js|jsx|ts|tsx)',
+    '**/__tests__/**/*.(ts|tsx|js)',
+    '**/*.(test|spec).(ts|tsx|js)',
   ],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
   collectCoverageFrom: [
     'app/**/*.{js,jsx,ts,tsx}',
     'components/**/*.{js,jsx,ts,tsx}',
     '!**/*.d.ts',
     '!**/node_modules/**',
   ],
+  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
 }
 
 module.exports = createJestConfig(customJestConfig)

@@ -105,7 +105,7 @@ jest.mock('next/navigation', () => ({
   },
 }))
 
-// Note: framer-motion is not installed, so no mocking needed
+// Framer-motion is not used in this project
 
 // Mock react-helmet-async
 jest.mock('react-helmet-async', () => ({
@@ -113,4 +113,4 @@ jest.mock('react-helmet-async', () => ({
   HelmetProvider: ({ children }: { children: React.ReactNode }) => children,
 }))
 
-// Note: web-vitals is not installed, so no mocking needed
+// Web-vitals is not used in this project
