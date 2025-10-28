@@ -1,5 +1,7 @@
 'use client'
-import { ArrowRight, CheckCircle, Clock, Database, Lock, Shield } from 'lucide-react';;
+import { ArrowRight, CheckCircle, Clock, Database, Lock, Shield } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
   const features = [
     {

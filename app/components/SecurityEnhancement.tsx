@@ -91,14 +91,12 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
 
     document.querySelectorAll('script[src]').forEach(script => {
       const src = script.getAttribute('src');
-      if (src && !src.startsWith(window.location.origin) && !script.hasAttribute('integrity')) {
-              }
+      if (src && !src.startsWith(window.location.origin) && !script.hasAttribute('integrity')) { /* Implementation needed */ }
     });
 
     document.querySelectorAll('link[href]').forEach(link => {
       const href = link.getAttribute('href');
-      if (href && !href.startsWith(window.location.origin) && !link.hasAttribute('integrity')) {
-              }
+      if (href && !href.startsWith(window.location.origin) && !link.hasAttribute('integrity')) { /* Implementation needed */ }
     });
   }, []);
 

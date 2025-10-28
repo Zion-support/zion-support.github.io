@@ -174,8 +174,7 @@ class PerformanceOptimizer {
     // Add cache headers for static assets
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js')
-        .then((registration) => {
-                  })
+        .then((registration) => { /* Implementation needed */ })
         .catch((error) => {
                   });
     }

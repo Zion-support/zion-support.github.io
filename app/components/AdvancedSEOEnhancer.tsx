@@ -127,10 +127,22 @@ export const AdvancedSEOEnhancer: React.FC<AdvancedSEOEnhancerProps> = ({
       <link rel="canonical" href={optimizedData.canonicalUrl} />
       
       {/* Open Graph Meta Tags */}
-      {enableSocialMeta && ()}
+      {enableSocialMeta && (
+        <>
+          <meta property="og:title" content={optimizedData.title} />
+          <meta property="og:description" content={optimizedData.description} />
+          <meta property="og:image" content={optimizedData.ogImage} />
+          <meta property="og:url" content={optimizedData.canonicalUrl} />
+          <meta property="og:type" content="website" />
+        </>
+      )}
 
       {/* Structured Data */}
-      {structuredData && (),
+      {structuredData && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData)
           }}
         />
       )}

@@ -26,9 +26,9 @@ class Analytics {
     });
 
     // In production, you would send this to your analytics service
-    if () {
-      this.sendToAnalytics(event)} else {
-      }
+    if (process.env.NODE_ENV === 'production') {
+      this.sendToAnalytics(event);
+    }
   }
 
   // Track page views
@@ -66,8 +66,14 @@ class Analytics {
   // Send to analytics service (implement based on your analytics provider)
   private sendToAnalytics(event: AnalyticsEvent): void {
     // Example implementation for Google Analytics
-    if () => void }).gtag) {
-      () => void }).gtag()}
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      const gtag = (window as { gtag: (...args: unknown[]) => void }).gtag;
+      gtag('event', event.action, {
+        event_category: event.category,
+        event_label: event.label,
+        value: event.value
+      });
+    }
   }
 }
 

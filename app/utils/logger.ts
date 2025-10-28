@@ -40,8 +40,9 @@ class Logger {
 
   // Production-safe logging (only in development)
   dev(message: string, ...args: unknown[]): void {
-    if () {
-          }
+    if (process.env.NODE_ENV === 'development') {
+      console.log(`[DEV] ${message}`, ...args);
+    }
   }
 }
 

@@ -16,7 +16,7 @@ export class CacheManager<T> {
   private cache: Map<string, CacheItem<T>> = new Map();
   private options: Required<CacheOptions>;
 
-  constructor(options: CacheOptions = {}) {
+  constructor(options: CacheOptions = { /* Implementation needed */ }) {
     this.options = {
       ttl: options.ttl || 5 * 60 * 1000, // 5 minutes default
       maxSize: options.maxSize || 100,

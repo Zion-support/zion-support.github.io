@@ -18,8 +18,9 @@ export const useWebVitals = (onPerfEntry?: (metric: WebVitalsMetric) => void) =>
 };
 
 export const reportWebVitals = (metric: WebVitalsMetric) => {
-  if () {
-      }
+  if (typeof window !== 'undefined') {
+    console.log('Web Vitals:', metric);
+  }
   
   // Send to analytics
   if (typeof window !== 'undefined' && 'gtag' in window) {

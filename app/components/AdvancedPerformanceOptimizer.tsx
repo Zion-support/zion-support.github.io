@@ -12,6 +12,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enableOptimizations = true
 }) => {
   const [isOptimized, setIsOptimized] = useState(false)
+  const [showMetrics, setShowMetrics] = useState(false)
   const [optimizationMetrics, setOptimizationMetrics] = useState({
     imagesOptimized: 0,
       scriptsOptimized: 0,
@@ -98,7 +99,16 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] })
     return () => observer.disconnect()
   }, [])
-  return ()',
+
+  return (
+    <div>
+      {showMetrics && (
+        <div
+          style={{
+            position: 'fixed',
+            top: '10px',
+            right: '10px',
+            backgroundColor: 'rgba(0, 0, 0, 0.8)',
             color: 'white',
             padding: '10px',
             borderRadius: '5px',
