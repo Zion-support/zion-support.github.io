@@ -1,6 +1,26 @@
 'use client';
 import React, { useState, useEffect, useCallback, memo } from 'react';
 
+// Type definitions for performance APIs
+interface PerformanceEventTiming extends PerformanceEntry {
+  processingStart: number;
+  processingEnd: number;
+  target: EventTarget | null;
+}
+
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+  lastInputTime: number;
+  sources: LayoutShiftAttribution[];
+}
+
+interface LayoutShiftAttribution {
+  node?: Node;
+  previousRect: DOMRectReadOnly;
+  currentRect: DOMRectReadOnly;
+}
+
 interface PerformanceMetrics {
   lcp: number | null;
   fid: number | null;
