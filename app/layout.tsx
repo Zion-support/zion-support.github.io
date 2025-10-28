@@ -13,6 +13,7 @@ import PerformanceMonitoring from './components/PerformanceMonitoring';
 import SEOOptimization from './components/SEOOptimization';
 import SecurityEnhancement from './components/SecurityEnhancement';
 import AdvancedPerformanceEnhancer from './components/AdvancedPerformanceEnhancer';
+import EnhancedAccessibilityManager from './components/EnhancedAccessibilityManager';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -44,7 +45,8 @@ export default function RootLayout({
       <body className={inter.className}>
         <ErrorBoundary>
           <AdvancedPerformanceEnhancer enableMonitoring={true} enableOptimizations={true}>
-            <PerformanceOptimizer>
+            <EnhancedAccessibilityManager enableAutoDetection={true} enableKeyboardShortcuts={true}>
+              <PerformanceOptimizer>
                 <div className="min-h-screen bg-slate-900">
                   <SkipLink />
                   <Navigation />
@@ -60,6 +62,7 @@ export default function RootLayout({
                   <SecurityEnhancement />
                 </div>
               </PerformanceOptimizer>
+            </EnhancedAccessibilityManager>
           </AdvancedPerformanceEnhancer>
         </ErrorBoundary>
       </body>
