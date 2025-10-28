@@ -32,23 +32,21 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
       const inputs = document.querySelectorAll('input, textarea, select');
       inputs.forEach((input) => {
         const id = input.getAttribute('id');
-        const ariaLabel = input.getAttribute('aria-label');
-        const ariaLabelledBy = input.getAttribute('aria-labelledby');
-        
-        if (!id && !ariaLabel && !ariaLabelledBy) {
+        const label = document.querySelector(`label[for="${id}"]`);
+        if (!label && !input.getAttribute('aria-label')) {
           // Log missing form labels
         }
       });
 
       // Check for proper heading hierarchy
       const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-      let lastLevel = 0;
+      let previousLevel = 0;
       headings.forEach((heading) => {
         const level = parseInt(heading.tagName.charAt(1));
-        if (level > lastLevel + 1) {
+        if (level > previousLevel + 1) {
           // Log heading hierarchy issues
         }
-        lastLevel = level;
+        previousLevel = level;
       });
     }
   }, [enableAutoDetection]);
@@ -71,23 +69,24 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
       if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
 
       switch (e.key) {
-        case 'h':
-          if (e.ctrlKey || e.metaKey) {
-            e.preventDefault();
-            // Focus on main heading
-            const mainHeading = document.querySelector('h1');
-            if (mainHeading) mainHeading.focus();
+        case 'Tab':
+          // Ensure focus is visible
+          document.body.classList.add('keyboard-navigation');
+          break;
+        case 'Escape': {
+          // Close any open modals or dropdowns
+          const activeElement = document.activeElement as HTMLElement;
+          if (activeElement && activeElement.blur) {
+            activeElement.blur();
           }
           break;
-        case 'n':
-          if (e.ctrlKey || e.metaKey) {
+        }
+        case 'Enter':
+        case ' ':
+          // Handle custom keyboard interactions
+          if (e.target instanceof HTMLElement && e.target.getAttribute('role') === 'button') {
             e.preventDefault();
-            // Focus on next heading
-            const headings = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6'));
-            const currentIndex = headings.indexOf(document.activeElement as Element);
-            if (currentIndex < headings.length - 1) {
-              (headings[currentIndex + 1] as HTMLElement).focus();
-            }
+            e.target.click();
           }
           break;
       }

@@ -1,9 +1,5 @@
 import React from 'react';
 
-// interface HeaderProps {
-//   children?: React.ReactNode;
-// }
-
 export default function Header() {
   return (
     <header>

@@ -82,6 +82,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       }
     };
 
+    // Call the functions
+    optimizeImages();
+    monitorPerformance();
+
     // Optimize images
     const images = document.querySelectorAll('img');
     images.forEach((img) => {

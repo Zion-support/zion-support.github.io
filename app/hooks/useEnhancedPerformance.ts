@@ -14,10 +14,14 @@ interface PerformanceMetrics {
   networkLatency: number;
 }
 
-export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = { /* empty */ }) => {
-  // Component name for performance tracking
-  const componentName = options.component || 'Unknown';
-  
+export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) => {
+  const {
+    component: componentName = 'Unknown',
+    trackErrors = true,
+    trackPerformance = true,
+    trackAnalytics = false
+  } = options;
+
   // Performance metrics state
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
@@ -56,11 +60,11 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     // Call the functions
     _measureLoadTime();
     _measureRenderTime();
-  }, [options.trackPerformance]);
+  }, [trackPerformance]);
   
   // Track memory usage
   useEffect(() => {
-    if (options.trackPerformance && 'memory' in performance) {
+    if (trackPerformance && 'memory' in performance) {
       const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
       if (memory) {
         setMetrics(prev => ({
@@ -69,11 +73,11 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
         }));
       }
     }
-  }, [options.trackPerformance]);
+  }, [trackPerformance]);
   
   // Track network latency
   useEffect(() => {
-    if (options.trackPerformance) {
+    if (trackPerformance) {
       const startTime = performance.now();
       
       fetch('/api/ping')
@@ -85,11 +89,11 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
           // Ignore network errors
         });
     }
-  }, [options.trackPerformance]);
+  }, [trackPerformance]);
   
   // Track errors
   useEffect(() => {
-    if (options.trackErrors) {
+    if (trackErrors) {
       const handleError = (error: ErrorEvent) => {
         console.error(`Error in ${componentName}:`, error);
       };
@@ -106,11 +110,11 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
         window.removeEventListener('unhandledrejection', handleUnhandledRejection);
       };
     }
-  }, [options.trackErrors, componentName]);
+  }, [trackErrors, componentName]);
   
   // Track analytics
   useEffect(() => {
-    if (options.trackAnalytics) {
+    if (trackAnalytics) {
       // Track component mount
       // console.log(`Component ${componentName} mounted`);
       
@@ -119,32 +123,33 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
         // console.log(`Component ${componentName} unmounted`);
       };
     }
-  }, [options.trackAnalytics, componentName]);
+  }, [trackAnalytics, componentName]);
   
   // Performance optimization callback
   const optimizePerformance = useCallback(() => {
-    if (options.trackPerformance) {
-      // Preload critical resources
-      const criticalResources = [
-        '/fonts/inter.woff2',
-        '/images/hero-bg.jpg'
-      ];
-      
-      criticalResources.forEach(resource => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.href = resource;
-        link.as = resource.endsWith('.woff2') ? 'font' : 'image';
-        if (resource.endsWith('.woff2')) {
-          link.crossOrigin = 'anonymous';
+    // Implement performance optimizations
+    if (typeof window !== 'undefined') {
+      // Optimize images
+      const images = document.querySelectorAll('img');
+      images.forEach(img => {
+        if (!img.hasAttribute('loading')) {
+          img.setAttribute('loading', 'lazy');
         }
-        document.head.appendChild(link);
+      });
+      
+      // Optimize fonts
+      const fontLinks = document.querySelectorAll('link[rel="preload"][as="font"]');
+      fontLinks.forEach(link => {
+        link.setAttribute('crossorigin', 'anonymous');
       });
     }
-  }, [options.trackPerformance]);
+  }, []);
   
   return {
     metrics,
-    optimizePerformance
+    optimizePerformance,
+    componentName,
+    mountTime: mountTimeRef.current,
+    renderCount: renderCountRef.current
   };
 };

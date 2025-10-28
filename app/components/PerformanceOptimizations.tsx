@@ -16,14 +16,14 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
 
     const images = document.querySelectorAll('img');
     images.forEach(img => {
-      if (!img.loading) {
-        img.loading = 'lazy';
+      // Add loading="lazy" if not already present
+      if (!img.hasAttribute('loading')) {
+        img.setAttribute('loading', 'lazy');
       }
-      if (!img.decoding) {
-        img.decoding = 'async';
-      }
-      if (img.getBoundingClientRect().top <= window.innerHeight && !img.hasAttribute('fetchpriority')) {
-        img.setAttribute('fetchpriority', 'high');
+      
+      // Add decoding="async" for better performance
+      if (!img.hasAttribute('decoding')) {
+        img.setAttribute('decoding', 'async');
       }
     });
   }, [enableImageOptimization]);
@@ -112,22 +112,18 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          const element = entry.target as HTMLElement;
-          
-          // Load images when they come into view
-          if (element.tagName === 'IMG') {
-            const img = element as HTMLImageElement;
-            if (img.dataset.src) {
-              img.src = img.dataset.src;
-              img.removeAttribute('data-src');
-              observer.unobserve(element);
-            }
+          const img = entry.target as HTMLImageElement;
+          const src = img.dataset.src;
+          if (src) {
+            img.src = src;
+            img.removeAttribute('data-src');
+            observer.unobserve(img);
           }
         }
       });
     }, {
       rootMargin: '50px 0px',
-      threshold: 0.1
+      threshold: 0.01
     });
 
     // Observe all images with data-src
@@ -144,7 +140,7 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
     const scrollCleanup = optimizeScrollPerformance();
     const resizeCleanup = optimizeResizePerformance();
     const observerCleanup = setupIntersectionObserver();
-    
+
     return () => {
       scrollCleanup?.();
       resizeCleanup?.();
