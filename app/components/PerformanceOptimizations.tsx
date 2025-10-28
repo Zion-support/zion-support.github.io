@@ -107,7 +107,7 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
               console.log('FID:', fidEntry.processingStart - fidEntry.startTime);
             }
             if (entry.entryType === 'layout-shift') {
-              const clsEntry = entry as LayoutShift;
+              const clsEntry = entry as PerformanceEntry & { value: number };
               console.log('CLS:', clsEntry.value);
             }
           });
