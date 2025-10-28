@@ -2,7 +2,6 @@ import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 export const dynamic = 'force-static';
-
 export default function AboutPage() {
 
   return (
