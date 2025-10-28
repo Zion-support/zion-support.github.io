@@ -1,7 +1,8 @@
 'use client';
 
 import React, { useEffect, useState, memo } from 'react';
-import type { PerformanceEventTiming, LayoutShift } from '../types/performance';
+
+// Web API type declarations
 interface PerformanceMetrics {
   lcp: number | null;
   fid: number | null;

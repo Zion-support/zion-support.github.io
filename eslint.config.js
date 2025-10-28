@@ -125,6 +125,8 @@ export default [
         process: 'readonly',
         __dirname: 'readonly',
         require: 'readonly',
+        PerformanceEventTiming: 'readonly',
+        LayoutShift: 'readonly',
       },
     },
     plugins: {
@@ -137,13 +139,18 @@ export default [
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': [
         'warn',
-        { allowConstantExport: true, allowExportNames: ['metadata'] },
       ],
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
       'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': 'off',
       '@typescript-eslint/no-explicit-any': 'warn',
+    },
+  },
+  {
+    files: ['**/page.tsx', '**/layout.tsx', '**/loading.tsx', '**/error.tsx', '**/not-found.tsx'],
+    rules: {
+      'react-refresh/only-export-components': 'off',
     },
   },
 ];
