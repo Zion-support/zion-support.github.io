@@ -1,5 +1,13 @@
 import { useState, useEffect } from 'react';
 
+// Performance API type definitions
+interface PerformanceEventTiming extends PerformanceEntry {
+  processingStart: number;
+  processingEnd: number;
+  cancelable: boolean;
+  target?: EventTarget;
+}
+
 // Declare gtag function for Google Analytics
 declare global {
   function gtag(...args: unknown[]): void;
@@ -182,13 +190,13 @@ class MonitoringService {
     }
   }
 
-  public logError(_error: ErrorReport): void {
-    this._errors.push(_error);
-    // Keep only last 50 _errors
-    if (this._errors.length > 50) {
-      this._errors = this._errors.slice(-50);
+  public logError(error: ErrorReport): void {
+    this.errors.push(error);
+    // Keep only last 50 errors
+    if (this.errors.length > 50) {
+      this.errors = this.errors.slice(-50);
     }
-    // Send to _error tracking service (if configured)
+    // Send to error tracking service (if configured)
   }
 
   public getMetrics(): PerformanceMetrics {
@@ -196,11 +204,11 @@ class MonitoringService {
   }
 
   public getErrors(): ErrorReport[] {
-    return [...this._errors];
+    return [...this.errors];
   }
 
   public clearErrors(): void {
-    this._errors = [];
+    this.errors = [];
   }
 
   public measureMemory(): void {
