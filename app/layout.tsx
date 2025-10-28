@@ -1,5 +1,6 @@
+import React, { ReactNode } from 'react';
+import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
-import { ReactNode } from 'react';
 import './globals.css';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
@@ -18,7 +19,7 @@ import EnhancedAccessibilityManager from './components/EnhancedAccessibilityMana
 const inter = Inter({ subsets: ['latin'] });
 
 // Define metadata and viewport for Next.js
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Zion Tech Group - Advanced Technology Solutions',
   description: 'Leading provider of cutting-edge technology solutions, software development, and digital transformation services.',
   keywords: 'technology, software development, digital transformation, tech solutions',
@@ -72,7 +73,7 @@ export const metadata = {
   },
 };
 
-export const viewport = {
+export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
