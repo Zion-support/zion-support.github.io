@@ -1,17 +1,16 @@
 import React from 'react';
 
 interface SEOOptimizerProps {
-  // Add props here
+  className?: string;
+  children?: React.ReactNode;
 }
-<<<<<<< HEAD
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ className = '', children }) => {
-=======
 
-export default function SEOOptimizer(_props: SEOOptimizerProps) {
->>>>>>> cursor/fix-errors-and-merge-to-main-c408
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ className = '', children }) => {
   return (
-    <div>
-      <h1>SEO Optimizer</h1>
+    <div className={className}>
+      {children || <h1>SEO Optimizer</h1>}
     </div>
   );
-}
+};
+
+export default SEOOptimizer;

@@ -1,12 +1,9 @@
 import React, { ReactNode } from 'react';
-<<<<<<< HEAD
-=======
 import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
->>>>>>> cursor/fix-errors-and-merge-to-main-c408
 import './globals.css';
-import Navigation from 'components/Navigation';
-import Footer from 'components/Footer';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
 import SkipLink from './components/SkipLink';
 import ClientComponents from './components/ClientComponents';
 import Analytics from './components/Analytics';

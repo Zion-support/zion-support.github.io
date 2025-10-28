@@ -1,15 +1,7 @@
-<<<<<<< HEAD
 import Navigation from '../../components/Navigation';
 import ErrorBoundary from '../SimpleErrorBoundary';
 import Footer from '../../components/Footer';
 import { Metadata } from 'next';
-=======
-import React from 'react';
-import ErrorBoundary from '../components/ErrorBoundary';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
->>>>>>> cursor/fix-errors-and-merge-to-main-c408
-
 export const metadata: Metadata = {
   title: 'Micro SaaS Services | Zion Tech Group',
   description: 'Comprehensive micro SaaS solutions for modern businesses',
@@ -21,7 +13,6 @@ export const metadata: Metadata = {
   },
 };
 
-<<<<<<< HEAD
 export default function Page() {
   return (
     <ErrorBoundary>
@@ -44,5 +35,3 @@ export default function Page() {
     </ErrorBoundary>
   );
 }
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-c408
