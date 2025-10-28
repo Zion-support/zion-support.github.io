@@ -83,14 +83,14 @@ const PWAInstaller: React.FC = memo(() => {
             <button
               onClick={handleInstallClick}
               className="flex items-center space-x-2 bg-purple-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-purple-700 transition-colors"
-             aria-label="Button">
+             aria-label="Action Button">
               <Download className="h-4 w-4" />
               <span>Install</span>
             </button>
             <button
               onClick={handleDismiss}
               className="text-gray-500 hover:text-gray-700 transition-colors"
-             aria-label="Button">
+             aria-label="Action Button">
               <X className="h-4 w-4" />
             </button>
           </div>
