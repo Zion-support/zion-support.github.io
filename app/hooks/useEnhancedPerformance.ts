@@ -14,7 +14,7 @@ interface PerformanceMetrics {
   networkLatency: number;
 }
 
-export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = { /* empty */ }) => {
+export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) => {
   // Component name for performance tracking
   const componentName = options.component || 'Unknown';
   
@@ -25,11 +25,13 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     memoryUsage: 0,
     networkLatency: 0
   });
-  
+
   // Refs for tracking
   const mountTimeRef = useRef<number>(0);
   const renderCountRef = useRef<number>(0);
-  
+  const lastRenderTimeRef = useRef<number>(0);
+  const performanceObserverRef = useRef<PerformanceObserver | null>(null);
+
   // Track component load time
   useEffect(() => {
     mountTimeRef.current = performance.now();
@@ -37,17 +39,6 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     
     // Log component performance tracking
     // Measure load time
-<<<<<<< HEAD
-    const loadTime = performance.now();
-    setMetrics(prev => ({ ...prev, loadTime }));
-
-    // Measure render time
-    const renderStart = performance.now();
-    requestAnimationFrame(() => {
-      const renderTime = performance.now() - renderStart;
-      setMetrics(prev => ({ ...prev, renderTime }));
-    });
-=======
     const measureLoadTime = () => {
       const loadTime = performance.now();
       setMetrics(prev => ({ ...prev, loadTime }));
@@ -61,19 +52,16 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
         setMetrics(prev => ({ ...prev, renderTime }));
       });
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-0a51
   }, [options.trackPerformance]);
   
   // Track memory usage
   useEffect(() => {
     if (options.trackPerformance && 'memory' in performance) {
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
-      if (memory) {
-        setMetrics(prev => ({
-          ...prev,
-          memoryUsage: memory.usedJSHeapSize / 1024 / 1024
-        }));
-      }
+      const memory = (performance as any).memory;
+      setMetrics(prev => ({ 
+        ...prev, 
+        memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
+      }));
     }
   }, [options.trackPerformance]);
   
@@ -140,17 +128,15 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
         const link = document.createElement('link');
         link.rel = 'preload';
         link.href = resource;
-        link.as = resource.endsWith('.woff2') ? 'font' : 'image';
-        if (resource.endsWith('.woff2')) {
-          link.crossOrigin = 'anonymous';
-        }
         document.head.appendChild(link);
       });
     }
   }, [options.trackPerformance]);
-  
+
   return {
     metrics,
-    optimizePerformance
+    optimizePerformance,
+    componentName,
+    renderCount: renderCountRef.current
   };
 };
