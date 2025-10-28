@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect } from 'react';
+import type { PerformanceEventTiming, LayoutShift } from '../types/performance';
 
 // Performance API types
 interface PerformanceEventTiming extends PerformanceEntry {
