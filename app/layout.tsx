@@ -17,8 +17,24 @@ import { metadata, viewport } from './metadata';
 
 const inter = Inter({ subsets: ['latin'] });
 
-// Re-export metadata and viewport for Next.js
-export { metadata, viewport };
+// Metadata and viewport configuration
+export const metadata = {
+  title: 'Zion Tech Group - AI Solutions & Technology Services',
+  description: 'Leading technology company specializing in AI solutions, cloud infrastructure, and innovative software development services.',
+  keywords: ['AI solutions', 'cloud infrastructure', 'software development', 'technology services'],
+  openGraph: {
+    title: 'Zion Tech Group - AI Solutions & Technology Services',
+    description: 'Leading technology company specializing in AI solutions, cloud infrastructure, and innovative software development services.',
+    type: 'website',
+  },
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+};
 export default function RootLayout({
   children,
 }: {
@@ -33,21 +49,21 @@ export default function RootLayout({
         <ErrorBoundary>
           <AdvancedPerformanceEnhancer enableMonitoring={true} enableOptimizations={true}>
             <PerformanceOptimizer>
-                <div className="min-h-screen bg-slate-900">
-                  <SkipLink />
-                  <Navigation />
-                  <main className="relative z-10" id="main-content" role="main" tabIndex={-1}>
-                    {children}
-                  </main>
-                  <Footer />
-                  <PerformanceMonitor />
-                  <AccessibilityEnhancer />
-                  <ServiceWorkerRegistration />
-                  <PerformanceMonitoring />
-                  <SEOOptimization />
-                  <SecurityEnhancement />
-                </div>
-              </PerformanceOptimizer>
+              <div className="min-h-screen bg-slate-900">
+                <SkipLink />
+                <Navigation />
+                <main className="relative z-10" id="main-content" role="main" tabIndex={-1}>
+                  {children}
+                </main>
+                <Footer />
+                <PerformanceMonitor />
+                <AccessibilityEnhancer />
+                <ServiceWorkerRegistration />
+                <PerformanceMonitoring />
+                <SEOOptimization />
+                <SecurityEnhancement />
+              </div>
+            </PerformanceOptimizer>
           </AdvancedPerformanceEnhancer>
         </ErrorBoundary>
       </body>
