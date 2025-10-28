@@ -125,6 +125,8 @@ export default [
         process: 'readonly',
         __dirname: 'readonly',
         require: 'readonly',
+        PerformanceEventTiming: 'readonly',
+        LayoutShift: 'readonly',
       },
     },
     plugins: {
