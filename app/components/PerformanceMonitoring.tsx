@@ -70,7 +70,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
       entries.forEach((entry) => {
         const clsEntry = entry as LayoutShiftEntry;
         if (!clsEntry.hadRecentInput) {
-          clsValue += clsEntry.value;
+          clsValue += clsEntry.value || 0;
           console.log('CLS:', clsValue);
           
           if (window.gtag) {
