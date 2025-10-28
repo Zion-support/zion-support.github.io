@@ -1,4 +1,3 @@
-import React from 'react';
 export interface Service {
   id: string;
   title: string;
@@ -196,12 +195,12 @@ export const servicesData = {
   itSolutions,
   allServices
 }
-export const getServiceById: React.FC = (id: string): Service | undefined => {
+export const getServiceById = (id: string): Service | undefined => {
   return allServices.find(service => service.id === id);
 }
-export const getServicesByCategory: React.FC = (category: Service['category']): Service[] => {
+export const getServicesByCategory = (category: Service['category']): Service[] => {
   return allServices.filter(service => service.category === category);
 }
-export const getPopularServices: React.FC = (): Service[] => {
+export const getPopularServices = (): Service[] => {
   return allServices.filter(service => service.popular);
 }

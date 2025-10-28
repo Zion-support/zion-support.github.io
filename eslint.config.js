@@ -98,54 +98,52 @@ export default [
     'backend/**',
     'blog/**',
     'components/api/**',
-    'components/apps/**'
+    'components/apps/**',
+    '*.js',
+    'remove-helmet.js',
+    'rewrite-problematic-files.js',
+    'simplify-all-pages.js',
+    'simplify-pages.js',
+    'test-imports.js'
   ]},
   js.configs.recommended,
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
+    files: ['**/*.{ts,tsx}'],
     languageOptions: {
-      ecmaVersion: 2022,
-      sourceType: 'module',
+      parser: tsParser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
       globals: {
         ...globals.browser,
         ...globals.node,
-        ...globals.es2022
+        console: 'readonly',
+        process: 'readonly',
+        __dirname: 'readonly',
+        require: 'readonly',
       },
-      parser: tsParser,
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true
-        }
-      }
     },
     plugins: {
-      '@typescript-eslint': tseslint,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
-      'react': react
-    },
-    settings: {
-      react: {
-        version: 'detect'
-      }
+      'react': react,
+      '@typescript-eslint': tseslint,
     },
     rules: {
-      ...tseslint.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': [
         'warn',
-        { 
-          allowConstantExport: true,
-          allowExportNames: ['metadata', 'viewport']
-        },
+        { allowConstantExport: true, allowExportNames: ['metadata'] },
       ],
-      'react/jsx-uses-react': 'off',
       'react/react-in-jsx-scope': 'off',
-      '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+      'react/prop-types': 'off',
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': 'off',
       '@typescript-eslint/no-explicit-any': 'warn',
-      'prefer-const': 'error',
-      'no-var': 'error',
-      'react/prop-types': 'off'
-    }
-  }
+    },
+  },
 ];

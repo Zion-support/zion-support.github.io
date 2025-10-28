@@ -1,10 +1,10 @@
 import { NextPage } from 'next';
+import React from 'react';
 
-import React, { ReactNode } from 'react';
-
+// NextPageWithLayout interface removed as it's not being used
 
 declare module 'next' {
-  interface NextPageWithLayout<P = Record<string, unknown>, IP = P> extends NextPage<P, IP> {
+  interface NextPageWithLayout<P = {}, IP = P> extends NextPage<P, IP> {
     getLayout?: (_page: React.ReactElement) => React.ReactNode;
   }
 }
@@ -40,9 +40,31 @@ export interface ServerComponentProps {
   searchParams: { [key: string]: string | string[] | undefined }
 }
 
+import { ReactNode } from 'react';
+
+// Performance API types
+interface PerformanceEventTiming extends PerformanceEntry {
+  processingStart: number;
+  processingEnd: number;
+  target?: Node;
+}
+
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+  lastInputTime: number;
+  sources: LayoutShiftAttribution[];
+}
+
+interface LayoutShiftAttribution {
+  node?: Node;
+  previousRect: DOMRectReadOnly;
+  currentRect: DOMRectReadOnly;
+}
+
 // Client components types
 export interface ClientComponentProps {
-  children?: ReactNode;
+  children?: React.ReactNode;
   className?: string;
 }
 
