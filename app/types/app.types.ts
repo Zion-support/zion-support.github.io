@@ -24,6 +24,6 @@ export interface Service {
     phone: string;
     email: string;
     website: string;
-  };
+  }
   link: string;
 }
