@@ -17,6 +17,15 @@ const Navigation: React.FC<NavigationProps> = memo(({ className = '', children }
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   }, [activeDropdown]);
 
+  const handleKeyDown = useCallback((e: React.KeyboardEvent, dropdown: string) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggleDropdown(dropdown);
+    } else if (e.key === 'Escape') {
+      setActiveDropdown(null);
+    }
+  }, [toggleDropdown]);
+
   const aiServices = [
     { name: 'AI-Powered DevOps', href: '/ai-powered-devops' },
     { name: 'AI Email Analyzer', href: '/ai-powered-email-analyzer' },
@@ -57,20 +66,30 @@ const Navigation: React.FC<NavigationProps> = memo(({ className = '', children }
                 <div className="relative">
                   <button
                     onClick={() => toggleDropdown('ai')}
+                    onKeyDown={(e) => handleKeyDown(e, 'ai')}
                     className="flex items-center space-x-1 text-gray-600 hover:text-gray-900 transition-colors"
                     aria-label="Toggle AI Services dropdown"
+                    aria-expanded={activeDropdown === 'ai'}
+                    aria-haspopup="true"
+                    aria-controls="ai-services-menu"
                   >
                     <span>AI Services</span>
                     <ChevronDown className="h-4 w-4" />
                   </button>
                   {activeDropdown === 'ai' && (
-                    <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-md shadow-lg z-50">
+                    <div 
+                      id="ai-services-menu"
+                      className="absolute top-full left-0 mt-2 w-64 bg-white rounded-md shadow-lg z-50"
+                      role="menu"
+                      aria-labelledby="ai-services-button"
+                    >
                       <div className="py-2">
                         {aiServices.map((service) => (
                           <Link
                             key={service.href}
                             href={service.href}
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
+                            role="menuitem"
                           >
                             {service.name}
                           </Link>
@@ -84,20 +103,30 @@ const Navigation: React.FC<NavigationProps> = memo(({ className = '', children }
                 <div className="relative">
                   <button
                     onClick={() => toggleDropdown('it')}
+                    onKeyDown={(e) => handleKeyDown(e, 'it')}
                     className="flex items-center space-x-1 text-gray-600 hover:text-gray-900 transition-colors"
                     aria-label="Toggle IT Services dropdown"
+                    aria-expanded={activeDropdown === 'it'}
+                    aria-haspopup="true"
+                    aria-controls="it-services-menu"
                   >
                     <span>IT Services</span>
                     <ChevronDown className="h-4 w-4" />
                   </button>
                   {activeDropdown === 'it' && (
-                    <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-md shadow-lg z-50">
+                    <div 
+                      id="it-services-menu"
+                      className="absolute top-full left-0 mt-2 w-64 bg-white rounded-md shadow-lg z-50"
+                      role="menu"
+                      aria-labelledby="it-services-button"
+                    >
                       <div className="py-2">
                         {itServices.map((service) => (
                           <Link
                             key={service.href}
                             href={service.href}
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
+                            role="menuitem"
                           >
                             {service.name}
                           </Link>

@@ -11,15 +11,16 @@ interface State {
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
+  retryCount: number;
 }
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false, retryCount: 0 };
   }
 
-  static getDerivedStateFromError(error: Error): State {
+  static getDerivedStateFromError(error: Error): Partial<State> {
     return { hasError: true, error };
   }
 
@@ -33,17 +34,96 @@ class ErrorBoundary extends Component<Props, State> {
 
     // Log error to monitoring service
     if (typeof window !== 'undefined') {
-      // You can integrate with error monitoring services like Sentry here
-      console.error('Error details:', {
+      // Enhanced error reporting
+      const errorReport = {
         error: error.message,
         stack: error.stack,
         componentStack: errorInfo.componentStack,
         timestamp: new Date().toISOString(),
         userAgent: navigator.userAgent,
         url: window.location.href,
-      });
+        userId: this.getUserId(),
+        sessionId: this.getSessionId(),
+        errorBoundary: 'ErrorBoundary',
+        severity: this.getErrorSeverity(error),
+      };
+
+      console.error('Error details:', errorReport);
+      
+      // Send to error monitoring service (e.g., Sentry, LogRocket, etc.)
+      this.reportError(errorReport);
     }
   }
+
+  private getUserId(): string | null {
+    // Get user ID from localStorage, session, or context
+    try {
+      return localStorage.getItem('userId') || null;
+    } catch {
+      return null;
+    }
+  }
+
+  private getSessionId(): string {
+    // Generate or retrieve session ID
+    try {
+      let sessionId = sessionStorage.getItem('sessionId');
+      if (!sessionId) {
+        sessionId = Math.random().toString(36).substring(2) + Date.now().toString(36);
+        sessionStorage.setItem('sessionId', sessionId);
+      }
+      return sessionId;
+    } catch {
+      return Math.random().toString(36).substring(2) + Date.now().toString(36);
+    }
+  }
+
+  private getErrorSeverity(error: Error): 'low' | 'medium' | 'high' | 'critical' {
+    // Determine error severity based on error type and message
+    if (error.name === 'ChunkLoadError' || error.message.includes('Loading chunk')) {
+      return 'medium';
+    }
+    if (error.name === 'TypeError' && error.message.includes('Cannot read property')) {
+      return 'high';
+    }
+    if (error.name === 'ReferenceError') {
+      return 'high';
+    }
+    if (error.message.includes('Network') || error.message.includes('fetch')) {
+      return 'medium';
+    }
+    return 'high';
+  }
+
+  private reportError(errorReport: Record<string, unknown>) {
+    // Send error to monitoring service
+    try {
+      // Example: Send to your error reporting endpoint
+      if (process.env.NODE_ENV === 'production') {
+        fetch('/api/errors', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(errorReport),
+        }).catch(() => {
+          // Silently fail if error reporting fails
+        });
+      }
+    } catch {
+      // Silently fail if error reporting fails
+    }
+  }
+
+  private retry = () => {
+    this.setState({
+      hasError: false,
+      error: undefined,
+      errorInfo: undefined,
+      retryCount: this.state.retryCount + 1,
+    });
+  };
+
 
   render() {
     if (this.state.hasError) {
@@ -77,8 +157,16 @@ class ErrorBoundary extends Component<Props, State> {
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <button
-                onClick={() => window.location.reload()}
+                onClick={this.retry}
                 className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
+                aria-label="Try again"
+                disabled={this.state.retryCount >= 3}
+              >
+                {this.state.retryCount >= 3 ? 'Max Retries Reached' : 'Try Again'}
+              </button>
+              <button
+                onClick={() => window.location.reload()}
+                className="flex-1 bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition-colors"
                 aria-label="Refresh page"
               >
                 Refresh Page
@@ -91,6 +179,11 @@ class ErrorBoundary extends Component<Props, State> {
                 Go Back
               </button>
             </div>
+            {this.state.retryCount > 0 && (
+              <p className="text-sm text-gray-500 text-center mt-2">
+                Retry attempt: {this.state.retryCount}/3
+              </p>
+            )}
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mt-4 p-4 bg-gray-100 rounded-md">
                 <summary className="cursor-pointer font-medium text-gray-700">
