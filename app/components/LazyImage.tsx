@@ -1,17 +1,6 @@
 import React from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 
-<<<<<<< HEAD
-export const metadata = {
-  title: "LazyImage | Zion Tech Group",
-  description: "Professional lazyimage services by Zion Tech Group",
-  keywords: "lazyimage, technology, services",
-  openGraph: {
-    title: "LazyImage | Zion Tech Group",
-    description: "Professional lazyimage services by Zion Tech Group",
-    type: "website",
-  },
-=======
 import React, { useState, useRef, useEffect } from 'react';
 
 interface LazyImageProps {
@@ -90,7 +79,6 @@ const LazyImage: React.FC<LazyImageProps> = ({
       )}
     </div>
   );
->>>>>>> c271e7ba1e2d2951f565c25080f0cec45834b100
 };
 
 export default function LazyImagePage() {

@@ -64,6 +64,7 @@ export default function AccessibilityControlsPage() {
 =======
 'use client';
 
+
 import React, { memo } from 'react';
 
 interface AccessibilityControlsProps {

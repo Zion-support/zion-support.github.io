@@ -1,5 +1,6 @@
 'use client';
 
+
 import React, { memo, useEffect } from 'react';
 
 const ServiceWorkerRegistration: React.FC = memo(() => {

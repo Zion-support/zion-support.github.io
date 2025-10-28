@@ -68,6 +68,7 @@ export default function AnalyticsPage() {
 =======
 'use client';
 
+
 import React, { memo, useEffect } from 'react';
 
 interface AnalyticsProps {

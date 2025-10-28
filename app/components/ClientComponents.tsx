@@ -1,17 +1,6 @@
 import React from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 
-<<<<<<< HEAD
-export const metadata = {
-  title: "ClientComponents | Zion Tech Group",
-  description: "Professional clientcomponents services by Zion Tech Group",
-  keywords: "clientcomponents, technology, services",
-  openGraph: {
-    title: "ClientComponents | Zion Tech Group",
-    description: "Professional clientcomponents services by Zion Tech Group",
-    type: "website",
-  },
-=======
 import React, { Suspense } from 'react';
 import dynamic from 'next/dynamic';
 
@@ -35,7 +24,6 @@ const ClientComponents: React.FC<ClientComponentsProps> = ({ children }) => {
       </Suspense>
     </>
   );
->>>>>>> c271e7ba1e2d2951f565c25080f0cec45834b100
 };
 
 export default function ClientComponentsPage() {
