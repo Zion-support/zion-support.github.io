@@ -38,10 +38,10 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
         if (entry.entryType === 'largest-contentful-paint') {
           setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
         } else if (entry.entryType === 'first-input') {
-          const fidEntry = entry as PerformanceEntry & { processingStart: number };
-          setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - entry.startTime }));
+          const fidEntry = entry as any;
+          setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
         } else if (entry.entryType === 'layout-shift') {
-          const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+          const clsEntry = entry as any;
           if (!clsEntry.hadRecentInput) {
             setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (clsEntry.value || 0) }));
           }

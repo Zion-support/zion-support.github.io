@@ -32,7 +32,8 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        const fid = (entry as any).processingStart - entry.startTime;
+        const fidEntry = entry as any;
+        const fid = fidEntry.processingStart - fidEntry.startTime;
         console.log('FID:', fid);
         
         if (window.gtag) {
@@ -51,8 +52,9 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const clsObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        if (!(entry as any).hadRecentInput) {
-          clsValue += (entry as any).value;
+        const clsEntry = entry as any;
+        if (!clsEntry.hadRecentInput) {
+          clsValue += clsEntry.value;
           console.log('CLS:', clsValue);
           
           if (window.gtag) {
