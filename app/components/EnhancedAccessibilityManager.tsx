@@ -21,20 +21,22 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
 
     // Check for missing alt attributes
     const images = document.querySelectorAll('img');
-    images.forEach((img, imgIndex) => {
+    images.forEach((img) => {
       if (!img.alt && !img.getAttribute('aria-label')) {
-        }
+        // Missing alt attribute - could log or handle
+      }
     });
 
     // Check for missing form labels
     const inputs = document.querySelectorAll('input, textarea, select');
-    inputs.forEach((input, index) => {
+    inputs.forEach((input) => {
       const id = input.getAttribute('id');
       const ariaLabel = input.getAttribute('aria-label');
       const ariaLabelledBy = input.getAttribute('aria-labelledby');
       
       if (!id && !ariaLabel && !ariaLabelledBy) {
-        }
+        // Missing form label - could log or handle
+      }
     });
 
     // Check for proper heading hierarchy
@@ -43,7 +45,8 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
     headings.forEach((heading) => {
       const level = parseInt(heading.tagName.charAt(1));
       if (level > lastLevel + 1) {
-        }
+        // Heading hierarchy issue - could log or handle
+      }
       lastLevel = level;
     });
 
@@ -57,7 +60,8 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
       if (color && backgroundColor && color !== 'rgba(0, 0, 0, 0)' && backgroundColor !== 'rgba(0, 0, 0, 0)') {
         // Basic contrast check - in a real implementation, you'd use a proper contrast calculation
         if (color === backgroundColor) {
-          }
+          // Color contrast issue - could log or handle
+        }
       }
     });
   }, [enableAutoDetection]);

@@ -91,7 +91,9 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
           }));
         }
       }
-    } catch (error) { /* Handle error */ }
+    } catch {
+      // Error handling - silently continue
+    }
   }, [enableMonitoring]);
 
   // Performance optimizations
@@ -147,7 +149,9 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
       }
 
       setIsOptimized(true);
-    } catch (error) { /* Handle error */ }
+    } catch {
+      // Error handling - silently continue
+    }
   }, [enableOptimizations]);
 
   // Apply optimizations on mount
@@ -165,7 +169,8 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
   // Log performance metrics for debugging
   useEffect(() => {
     if (enableMonitoring && Object.values(metrics).some(value => value !== null)) {
-      }
+      // Metrics are available for monitoring
+    }
   }, [metrics, enableMonitoring]);
 
   return (
