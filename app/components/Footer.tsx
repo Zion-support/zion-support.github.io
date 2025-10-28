@@ -9,7 +9,7 @@ interface FooterProps {
   children?: React.ReactNode;
 }
 
-const Footer: React.FC<FooterProps> = memo(function Footer({ className = '', children }) {
+const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
   const currentYear = new Date().getFullYear();
   const aiServices = [
     { name: 'AI-Powered DevOps', href: '/ai-powered-devops' },
@@ -28,7 +28,7 @@ const Footer: React.FC<FooterProps> = memo(function Footer({ className = '', chi
 
   return (
     <footer className={`bg-gray-900 text-white ${className}`}>
-      {children || (
+      {children ? children : (
         <>
           <div className="max-w-7xl mx-auto px-4 py-12">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -58,12 +58,9 @@ const Footer: React.FC<FooterProps> = memo(function Footer({ className = '', chi
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold">AI Services</h3>
                 <ul className="space-y-2">
-                  {aiServices.map((service) => (
-                    <li key={service.name}>
-                      <Link 
-                        href={service.href}
-                        className="text-gray-300 hover:text-white transition-colors text-sm"
-                      >
+                  {aiServices.map((service, index) => (
+                    <li key={index}>
+                      <Link href={service.href} className="text-gray-300 hover:text-white transition-colors text-sm">
                         {service.name}
                       </Link>
                     </li>
@@ -75,12 +72,9 @@ const Footer: React.FC<FooterProps> = memo(function Footer({ className = '', chi
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold">IT Services</h3>
                 <ul className="space-y-2">
-                  {itServices.map((service) => (
-                    <li key={service.name}>
-                      <Link 
-                        href={service.href}
-                        className="text-gray-300 hover:text-white transition-colors text-sm"
-                      >
+                  {itServices.map((service, index) => (
+                    <li key={index}>
+                      <Link href={service.href} className="text-gray-300 hover:text-white transition-colors text-sm">
                         {service.name}
                       </Link>
                     </li>
@@ -119,7 +113,5 @@ const Footer: React.FC<FooterProps> = memo(function Footer({ className = '', chi
     </footer>
   );
 });
-
-Footer.displayName = 'Footer';
 
 export default Footer;
