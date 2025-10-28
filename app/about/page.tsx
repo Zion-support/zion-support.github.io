@@ -74,4 +74,4 @@ function AboutPage() {
   );
 }
 
-export default Page;
+export default AboutPage;

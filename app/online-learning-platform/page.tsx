@@ -48,4 +48,4 @@ function OnlinelearningplatformPage() {
   );
 }
 
-export default Page;
+export default OnlinelearningplatformPage;

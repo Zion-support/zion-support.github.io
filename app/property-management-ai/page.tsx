@@ -48,4 +48,4 @@ function PropertymanagementaiPage() {
   );
 }
 
-export default Page;
+export default PropertymanagementaiPage;

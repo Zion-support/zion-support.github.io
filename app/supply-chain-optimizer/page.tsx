@@ -48,4 +48,4 @@ function SupplychainoptimizerPage() {
   );
 }
 
-export default Page;
+export default SupplychainoptimizerPage;

@@ -53,4 +53,4 @@ function Page5giotsolutionsPage() {
   );
 }
 
-export default Page;
+export default Page5giotsolutionsPage;

@@ -53,4 +53,4 @@ function AccessibilitypagePage() {
   );
 }
 
-export default Page;
+export default AccessibilitypagePage;

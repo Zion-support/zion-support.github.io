@@ -53,4 +53,4 @@ function Page5gedgecomputingPage() {
   );
 }
 
-export default Page;
+export default Page5gedgecomputingPage;

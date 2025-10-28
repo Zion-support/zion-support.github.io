@@ -53,4 +53,4 @@ function Page5gdataanalyticsPage() {
   );
 }
 
-export default Page;
+export default Page5gdataanalyticsPage;

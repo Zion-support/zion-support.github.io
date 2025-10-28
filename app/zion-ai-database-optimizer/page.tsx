@@ -48,4 +48,4 @@ function ZionaidatabaseoptimizerPage() {
   );
 }
 
-export default Page;
+export default ZionaidatabaseoptimizerPage;

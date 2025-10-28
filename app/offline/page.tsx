@@ -30,4 +30,4 @@ function OfflinePage() {
   );
 }
 
-export default Page;
+export default OfflinePage;

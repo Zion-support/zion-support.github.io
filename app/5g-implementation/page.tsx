@@ -53,4 +53,4 @@ function Page5gimplementationPage() {
   );
 }
 
-export default Page;
+export default Page5gimplementationPage;

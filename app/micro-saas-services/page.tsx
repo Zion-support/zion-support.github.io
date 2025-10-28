@@ -48,4 +48,4 @@ function MicrosaasservicesPage() {
   );
 }
 
-export default Page;
+export default MicrosaasservicesPage;

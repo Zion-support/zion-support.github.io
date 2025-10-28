@@ -48,4 +48,4 @@ function MedicalrecordsmanagerPage() {
   );
 }
 
-export default Page;
+export default MedicalrecordsmanagerPage;

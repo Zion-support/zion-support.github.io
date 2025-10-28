@@ -12,7 +12,6 @@ export const metadata: Metadata = {
 };
 
 function EcommerceanalyticsproPage() {
->>>>>>> cursor/fix-errors-and-merge-to-main-ad1a
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <main className="pt-20 pb-16">
@@ -49,4 +48,4 @@ function EcommerceanalyticsproPage() {
   );
 }
 
-export default Page;
+export default EcommerceanalyticsproPage;

@@ -48,4 +48,4 @@ function TestPage() {
   );
 }
 
-export default Page;
+export default TestPage;

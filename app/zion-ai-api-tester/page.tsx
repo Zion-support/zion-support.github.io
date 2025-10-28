@@ -10,12 +10,6 @@ export const metadata: Metadata = {
     type: 'website',
   },
 };
-<<<<<<< HEAD
-;
-
-const ZionAIAPITesterPage: React.FC = memo(() => {
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ad1a
 
 function ZionaiapitesterPage() {
   return (
@@ -54,4 +48,4 @@ function ZionaiapitesterPage() {
   );
 }
 
-export default Page;
+export default ZionaiapitesterPage;
