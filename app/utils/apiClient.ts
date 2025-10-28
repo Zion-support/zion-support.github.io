@@ -4,7 +4,12 @@ interface ApiResponse<T> {
   message?: string;
 }
 
-// API client for making HTTP requests
+// Define RequestInit type for compatibility
+// interface RequestInit {
+//   method?: string;
+//   headers?: Record<string, string>;
+//   body?: string;
+// }
 
 class ApiClient {
   private baseUrl: string;

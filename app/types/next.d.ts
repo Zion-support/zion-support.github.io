@@ -1,7 +1,5 @@
 import { NextPage } from 'next';
-
-import React, { ReactNode } from 'react';
-
+import React from 'react';
 
 declare module 'next' {
   interface NextPageWithLayout<P = Record<string, unknown>, IP = P> extends NextPage<P, IP> {
@@ -42,7 +40,7 @@ export interface ServerComponentProps {
 
 // Client components types
 export interface ClientComponentProps {
-  children?: ReactNode;
+  children?: React.ReactNode;
   className?: string;
 }
 
