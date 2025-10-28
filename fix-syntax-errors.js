@@ -1,111 +1,135 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
+import { glob } from 'glob';
 
-function fixSyntaxErrors(filePath) {
+// Function to fix malformed export statements
+function fixExportStatement(content) {
+  // Fix malformed export statements like "export default function Wrapped\n(props) {"
+  content = content.replace(
+    /export default function Wrapped\s*\n\s*\(props\)\s*\{/g,
+    'export default function Wrapped(props: any) {'
+  );
+  
+  // Fix malformed JSX like "<\n {...props} />"
+  content = content.replace(
+    /<\s*\n\s*\{\.\.\.props\}\s*\/>/g,
+    '<Page {...props} />'
+  );
+  
+  // Fix malformed onClick handlers like "onClick={() = aria-label="Button"> function()}"
+  content = content.replace(
+    /onClick=\{\(\)\s*=\s*aria-label="[^"]*">\s*([^}]+)\}/g,
+    (match, functionBody) => {
+      const ariaLabel = match.match(/aria-label="([^"]*)"/);
+      return `onClick={() => ${functionBody.trim()}}\n                aria-label="${ariaLabel ? ariaLabel[1] : 'Button'}"`;
+    }
+  );
+  
+  return content;
+}
+
+// Function to fix duplicate metadata exports
+function fixDuplicateMetadata(content) {
+  const lines = content.split('\n');
+  const metadataLines = [];
+  let inMetadata = false;
+  let metadataCount = 0;
+  const result = [];
+  
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    
+    if (line.includes('export const metadata')) {
+      if (metadataCount === 0) {
+        inMetadata = true;
+        metadataLines.push(line);
+        metadataCount++;
+      } else {
+        // Skip duplicate metadata
+        continue;
+      }
+    } else if (inMetadata && line.includes('};')) {
+      metadataLines.push(line);
+      inMetadata = false;
+      result.push(metadataLines.join('\n'));
+      metadataLines.length = 0;
+    } else if (inMetadata) {
+      metadataLines.push(line);
+    } else {
+      result.push(line);
+    }
+  }
+  
+  return result.join('\n');
+}
+
+// Function to fix semicolon issues
+function fixSemicolons(content) {
+  // Remove standalone semicolons
+  content = content.replace(/;\s*\n\s*;/g, ';\n');
+  content = content.replace(/;\s*$/gm, '');
+  
+  // Fix missing semicolons after imports
+  content = content.replace(/import\s+[^;]+$/gm, (match) => {
+    if (!match.endsWith(';')) {
+      return match + ';';
+    }
+    return match;
+  });
+  
+  return content;
+}
+
+// Function to fix component names in export statements
+function fixComponentNames(content, fileName) {
+  // Extract component name from file path
+  const componentName = path.basename(fileName, '.tsx');
+  const capitalizedName = componentName.charAt(0).toUpperCase() + componentName.slice(1);
+  
+  // Replace generic Page with specific component name
+  content = content.replace(/<Page \{\.\.\.props\} \/>/g, `<${capitalizedName} {...props} />`);
+  
+  return content;
+}
+
+// Main function to fix a file
+function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
     
-    // Fix missing closing braces and parentheses
-    const openBraces = (content.match(/\{/g) || []).length;
-    const closeBraces = (content.match(/\}/g) || []).length;
-    const openParens = (content.match(/\(/g) || []).length;
-    const closeParens = (content.match(/\)/g) || []).length;
+    // Apply fixes
+    content = fixDuplicateMetadata(content);
+    content = fixSemicolons(content);
+    content = fixExportStatement(content);
+    content = fixComponentNames(content, filePath);
     
-    // Add missing closing braces
-    if (openBraces > closeBraces) {
-      const missingBraces = openBraces - closeBraces;
-      content += '\n' + '}'.repeat(missingBraces);
-      modified = true;
-    }
+    // Write back the fixed content
+    fs.writeFileSync(filePath, content, 'utf8');
+    console.log(`Fixed: ${filePath}`);
     
-    // Add missing closing parentheses
-    if (openParens > closeParens) {
-      const missingParens = openParens - closeParens;
-      content += ')'.repeat(missingParens);
-      modified = true;
-    }
-    
-    // Fix "use client" directive placement
-    if (content.includes("'use client'") && !content.startsWith("'use client'")) {
-      const useClientMatch = content.match(/'use client'[\s\S]*?\n/);
-      if (useClientMatch) {
-        content = content.replace(/'use client'[\s\S]*?\n/, '');
-        content = "'use client'\n" + content;
-        modified = true;
-      }
-    }
-    
-    // Fix malformed function declarations
-    content = content.replace(
-      /function\s+(\w+)\s*\(\s*\)\s*\{[\s\S]*?\}\s*$/gm,
-      (match) => {
-        if (!match.includes('return')) {
-          return match.replace(/\}\s*$/, '\n  return null;\n}');
-        }
-        return match;
-      }
-    );
-    
-    // Fix incomplete JSX
-    content = content.replace(
-      /<(\w+)[^>]*>\s*$/gm,
-      (match) => {
-        const tagName = match.match(/<(\w+)/)[1];
-        return match + `</${tagName}>`;
-      }
-    );
-    
-    // Fix missing semicolons
-    content = content.replace(
-      /(\w+)\s*$/gm,
-      (match) => {
-        if (match.trim() && !match.includes(';') && !match.includes('}') && !match.includes(')')) {
-          return match + ';';
-        }
-        return match;
-      }
-    );
-    
-    // Clean up extra whitespace
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    content = content.trim() + '\n';
-    
-    if (modified) {
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed syntax errors in: ${filePath}`);
-      return true;
-    }
-    
-    return false;
+    return true;
   } catch (error) {
-    console.error(`Error fixing syntax in ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-function processDirectory(dirPath) {
-  const files = fs.readdirSync(dirPath);
+// Main execution
+async function main() {
+  // Get all page.tsx files
+  const files = await glob('app/**/page.tsx', { cwd: '/workspace' });
+
+  console.log(`Found ${files.length} page files to fix`);
+
   let fixedCount = 0;
-  
-  for (const file of files) {
-    const filePath = path.join(dirPath, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-      fixedCount += processDirectory(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
-      if (fixSyntaxErrors(filePath)) {
-        fixedCount++;
-      }
+  files.forEach(file => {
+    const fullPath = path.join('/workspace', file);
+    if (fixFile(fullPath)) {
+      fixedCount++;
     }
-  }
-  
-  return fixedCount;
+  });
+
+  console.log(`Fixed ${fixedCount} out of ${files.length} files`);
 }
 
-console.log('🔧 Fixing syntax errors...');
-const fixedCount = processDirectory('./app');
-console.log(`✅ Fixed syntax errors in ${fixedCount} files`);
+main().catch(console.error);
