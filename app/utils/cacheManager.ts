@@ -135,8 +135,6 @@ export class CacheManager<T> {
 
 // Create default cache instances
 export const memoryCache = new CacheManager<unknown>({ storage: 'memory' });
-export const localStorageCache = new CacheManager<unknown>({ storage: 'localStorage' });
-export const sessionStorageCache = new CacheManager<unknown>({ storage: 'sessionStorage' });
 
 // Utility functions
 export const cache = {

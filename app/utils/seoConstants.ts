@@ -5,17 +5,16 @@
 
 // Site Information
 export const SITE_NAME = 'Zion Tech Group';
+export const SITE_DESCRIPTION = 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.';
 export const SITE_URL = 'https://ziontechgroup.com';
-export const SITE_DESCRIPTION = 'Leading provider of AI solutions, cybersecurity, cloud infrastructure, and digital transformation services';
-export const SITE_KEYWORDS = 'AI solutions, cybersecurity, cloud infrastructure, digital transformation, technology consulting, software development';
+export const DEFAULT_TITLE = 'Zion Tech Group - Advanced AI & IT Solutions';
+export const DEFAULT_DESCRIPTION = 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.';
+export const DEFAULT_KEYWORDS = 'AI solutions, IT services, cybersecurity, cloud computing, digital transformation';
 
 // Default Meta Tags
-export const DEFAULT_TITLE = 'Zion Tech Group - AI Solutions & Digital Transformation';
-export const DEFAULT_DESCRIPTION = 'Leading provider of AI solutions, cybersecurity, cloud infrastructure, and digital transformation services. Transform your business with cutting-edge technology.';
-export const DEFAULT_KEYWORDS = 'AI solutions, cybersecurity, cloud infrastructure, digital transformation, technology consulting, software development, machine learning, artificial intelligence';
 
 // Contact Information
-export const CONTACT_INFO = {
+export const contactInfo = {
   phone: '+1-302-464-0950',
   email: 'kleber@ziontechgroup.com',
   address: {
@@ -28,7 +27,7 @@ export const CONTACT_INFO = {
 };
 
 // Social Media Links
-export const SOCIAL_LINKS = {
+export const socialLinks = {
   twitter: 'https://twitter.com/ziontechgroup',
   linkedin: 'https://linkedin.com/company/ziontechgroup',
   github: 'https://github.com/ziontechgroup',
@@ -37,7 +36,7 @@ export const SOCIAL_LINKS = {
 };
 
 // Performance Goals
-export const PERFORMANCE_GOALS = {
+export const performanceGoals = {
   LCP: 2500, // Largest Contentful Paint (ms)
   FCP: 1800, // First Contentful Paint (ms)
   CLS: 0.1,  // Cumulative Layout Shift
@@ -47,7 +46,7 @@ export const PERFORMANCE_GOALS = {
 };
 
 // Accessibility Goals
-export const ACCESSIBILITY_GOALS = {
+export const accessibilityGoals = {
   WCAG_LEVEL: 'AA',
   COLOR_CONTRAST_RATIO: 4.5,
   FONT_SIZE_MIN: 16,
@@ -57,7 +56,7 @@ export const ACCESSIBILITY_GOALS = {
 };
 
 // Structured Data Schemas
-export const STRUCTURED_DATA = {
+export const structuredDataSchemas = {
   ORGANIZATION: {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -67,19 +66,19 @@ export const STRUCTURED_DATA = {
     logo: `${SITE_URL}/logo.png`,
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: CONTACT_INFO.phone,
+      telephone: contactInfo.phone,
       contactType: 'customer service',
-      email: CONTACT_INFO.email,
+      email: contactInfo.email,
     },
     address: {
       '@type': 'PostalAddress',
-      streetAddress: CONTACT_INFO.address.street,
-      addressLocality: CONTACT_INFO.address.city,
-      addressRegion: CONTACT_INFO.address.state,
-      postalCode: CONTACT_INFO.address.zipCode,
-      addressCountry: CONTACT_INFO.address.country,
+      streetAddress: contactInfo.address.street,
+      addressLocality: contactInfo.address.city,
+      addressRegion: contactInfo.address.state,
+      postalCode: contactInfo.address.zipCode,
+      addressCountry: contactInfo.address.country,
     },
-    sameAs: Object.values(SOCIAL_LINKS),
+    sameAs: Object.values(socialLinks),
   },
   WEBSITE: {
     '@context': 'https://schema.org',
@@ -106,7 +105,7 @@ export const STRUCTURED_DATA = {
 };
 
 // Meta Tags Configuration
-export const META_TAGS = {
+export const metaTags = {
   ROBOTS: 'index, follow',
   AUTHOR: SITE_NAME,
   THEME_COLOR: '#1e293b',
@@ -116,7 +115,7 @@ export const META_TAGS = {
 };
 
 // Open Graph Tags
-export const OPEN_GRAPH_TAGS = {
+export const openGraphTags = {
   SITE_NAME: SITE_NAME,
   TYPE: 'website',
   LOCALE: 'en_US',
@@ -126,7 +125,7 @@ export const OPEN_GRAPH_TAGS = {
 };
 
 // Twitter Card Tags
-export const TWITTER_TAGS = {
+export const twitterCardTags = {
   CARD: 'summary_large_image',
   SITE: '@ziontechgroup',
   CREATOR: '@ziontechgroup',
@@ -134,20 +133,20 @@ export const TWITTER_TAGS = {
 };
 
 // SEO Constants
-export const SEO_CONSTANTS = {
+export const seoConstants = {
   SITE_NAME,
   SITE_URL,
   DEFAULT_TITLE,
   DEFAULT_DESCRIPTION,
   DEFAULT_KEYWORDS,
-  CONTACT_INFO,
-  SOCIAL_LINKS,
-  PERFORMANCE_GOALS,
-  ACCESSIBILITY_GOALS,
-  META_TAGS,
-  OPEN_GRAPH_TAGS,
-  TWITTER_TAGS,
-  STRUCTURED_DATA,
+  contactInfo,
+  socialLinks,
+  performanceGoals,
+  accessibilityGoals,
+  metaTags,
+  openGraphTags,
+  twitterCardTags,
+  structuredDataSchemas,
 };
 
-export default SEO_CONSTANTS;
+export default seoConstants;

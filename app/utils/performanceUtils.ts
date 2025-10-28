@@ -30,11 +30,11 @@ export const usePerformanceMonitor = () => {
 };
 
 // Memoization utilities - these are not React hooks, just utility functions
-export const createStableCallback = <T extends (...args: unknown[]) => unknown>(callback: T): T => {
+export const memoize = <T extends (...args: any[]) => any>(callback: T): T => {
   return callback;
 };
 
-export const createStableMemo = <T>(factory: () => T): T => {
+export const lazy = <T>(factory: () => T): T => {
   return factory();
 };
 

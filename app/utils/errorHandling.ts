@@ -17,6 +17,15 @@ export interface ErrorInfo {
   category: 'javascript' | 'network' | 'resource' | 'promise' | 'react' | 'unknown';
 }
 
+export interface ErrorState {
+  errors: ErrorInfo[];
+  totalErrors: number;
+  criticalErrors: number;
+  lastError?: ErrorInfo;
+  errorRate: number;
+  timestamp: number;
+}
+
 export interface ErrorReport {
   errors: ErrorInfo[];
   totalErrors: number;
