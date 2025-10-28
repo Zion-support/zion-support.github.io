@@ -62,7 +62,7 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
             console.warn('Potential XSS attempt detected:', value);
             return;
           }
-          return originalSetter.call(this, value);
+          originalSetter.call(this, value);
         },
         get: originalInnerHTML.get,
         configurable: true
