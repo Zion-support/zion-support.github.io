@@ -6,8 +6,6 @@ const inter = Inter({ subsets: ['latin'] });
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 
-const inter = Inter({ subsets: ['latin'] });
-
 import ClientComponents from './components/ClientComponents';
 
 import Analytics from './components/Analytics';
