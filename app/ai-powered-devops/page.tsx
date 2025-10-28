@@ -11,7 +11,6 @@ export const metadata = {
     type: 'website',
   },
 };
-;
 import { Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 
 export const metadata = {
@@ -24,8 +23,6 @@ export const metadata = {
     type: 'website',
   },
 };
-;
-
 import Navigation from '../components/Navigation'
 
 export const metadata = {
@@ -117,11 +114,11 @@ const AiPoweredDevopsPage: React.FC = () => {
               Advanced Page solution for modern businesses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center" aria-label="Button">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center" aria-label="Action Button">
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" aria-label="Button">
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" aria-label="Action Button">
                 Learn More
               </button>
             </div>
@@ -185,10 +182,10 @@ const AiPoweredDevopsPage: React.FC = () => {
               Join thousands of businesses already using our AI solutions
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" aria-label="Button">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" aria-label="Action Button">
                 Start Free Trial
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" aria-label="Button">
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" aria-label="Action Button">
                 Contact Sales
               </button>
             </div>

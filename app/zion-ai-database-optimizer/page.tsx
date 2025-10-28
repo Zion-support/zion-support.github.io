@@ -10,7 +10,6 @@ export const metadata = {
     type: 'website',
   },
 };
-;
 import SEOHead from '../components/SEOHead'
 
 export const metadata = {
@@ -46,10 +45,10 @@ const ZionAIDatabaseOptimizerPage: React.FC = memo(() => {
               AI-powered database optimization tool that analyzes performance, suggests improvements, and automates database tuning. Boost your database performance with intelligent automation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition-colors" aria-label="Button">
+              <button className="bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition-colors" aria-label="Action Button">
                 Start Free Trial
               </button>
-              <button className="border border-purple-600 text-purple-600 px-8 py-3 rounded-lg hover:bg-purple-50 transition-colors" aria-label="Button">
+              <button className="border border-purple-600 text-purple-600 px-8 py-3 rounded-lg hover:bg-purple-50 transition-colors" aria-label="Action Button">
                 View Demo
               </button>
             </div>
@@ -148,7 +147,7 @@ const ZionAIDatabaseOptimizerPage: React.FC = memo(() => {
                     Email support
                   </li>
                 </ul>
-                <button className="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors" aria-label="Button">
+                <button className="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors" aria-label="Action Button">
                   Start Free Trial
                 </button>
               </div>
@@ -185,7 +184,7 @@ const ZionAIDatabaseOptimizerPage: React.FC = memo(() => {
                     Priority support
                   </li>
                 </ul>
-                <button className="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors" aria-label="Button">
+                <button className="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors" aria-label="Action Button">
                   Start Free Trial
                 </button>
               </div>
@@ -219,7 +218,7 @@ const ZionAIDatabaseOptimizerPage: React.FC = memo(() => {
                     24/7 dedicated support
                   </li>
                 </ul>
-                <button className="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors" aria-label="Button">
+                <button className="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors" aria-label="Action Button">
                   Contact Sales
                 </button>
               </div>
@@ -231,10 +230,10 @@ const ZionAIDatabaseOptimizerPage: React.FC = memo(() => {
             <h2 className="text-3xl font-bold mb-4">Ready to Optimize Your Database Performance?</h2>
             <p className="text-xl mb-6">Start your free trial today and experience the power of AI-driven database optimization.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors" aria-label="Button">
+              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors" aria-label="Action Button">
                 Start Free Trial
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition-colors" aria-label="Button">
+              <button className="border border-white text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition-colors" aria-label="Action Button">
                 Schedule Demo
               </button>
             </div>
