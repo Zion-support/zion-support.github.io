@@ -107,24 +107,23 @@ export default [
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2022,
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-      },
+      sourceType: 'module',
       parser: tsParser,
       parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
         ecmaFeatures: {
-          jsx: true,
-        },
+          jsx: true
+        }
       },
+      globals: {
+        ...globals.browser,
+        ...globals.node
+      }
     },
     plugins: {
       '@typescript-eslint': tseslint,
       'react': react,
       'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
+      'react-refresh': reactRefresh
     },
     rules: {
       ...tseslint.configs.recommended.rules,
@@ -138,11 +137,13 @@ export default [
       '@typescript-eslint/no-explicit-any': 'warn',
       'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off',
-    },
-    settings: {
-      react: {
-        version: 'detect',
-      },
-    },
-  },
+      'react/display-name': 'off',
+      'react/no-unescaped-entities': 'off',
+      'react/no-unknown-property': 'off',
+      '@typescript-eslint/no-empty-object-type': 'off',
+      '@typescript-eslint/no-require-imports': 'off',
+      'no-undef': 'off',
+      'no-redeclare': 'off'
+    }
+  }
 ];

@@ -8,13 +8,7 @@ interface OptimizedImageProps {
   className?: string;
 }
 
-const OptimizedImage: React.FC<OptimizedImageProps> = ({ 
-  src, 
-  alt, 
-  width, 
-  height, 
-  className 
-}) => {
+const OptimizedImage: React.FC<OptimizedImageProps> = ({ src, alt, width, height, className }) => {
   return (
     <img
       src={src}
