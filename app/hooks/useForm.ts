@@ -1,4 +1,5 @@
-import React, { useState, useCallback } from 'react';
+
+import { useState, useCallback } from 'react';
 
 export interface FormState<T = Record<string, unknown>> {
   data: T;

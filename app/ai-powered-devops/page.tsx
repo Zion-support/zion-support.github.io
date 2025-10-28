@@ -1,11 +1,5 @@
 import React from 'react';
-import Footer from '../components/Footer';
-import Navigation from '../components/Navigation';
 import { ArrowRight, CheckCircle, Target, BarChart, Brain, TrendingUp } from 'lucide-react';
-import ErrorBoundary from '../components/GlobalErrorBoundary';
-
-import React from 'react';
-import { Brain, BarChart, Target, TrendingUp, ArrowRight, CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -134,10 +128,3 @@ const benefits = [
   );
 };
 
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <AiPoweredDevopsPage {...props} />
-    </ErrorBoundary>
-  );
-}

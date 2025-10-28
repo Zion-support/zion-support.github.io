@@ -1,7 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import ErrorBoundary from './components/GlobalErrorBoundary';
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - AI Solutions & Technology Services',

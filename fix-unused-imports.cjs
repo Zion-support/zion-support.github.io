@@ -1,112 +1,117 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
+const glob = require('glob');
 
-// Function to fix unused imports in a file
-function fixUnusedImports(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+// Find all TypeScript/TSX files in the app directory
+const files = glob.sync('app/**/*.{ts,tsx}', { cwd: __dirname });
+
+console.log(`Found ${files.length} TypeScript files to check...`);
+
+let fixedFiles = 0;
+
+files.forEach(file => {
+  const filePath = path.join(__dirname, file);
+  const content = fs.readFileSync(filePath, 'utf8');
+  
+  // Split content into lines
+  const lines = content.split('\n');
+  const newLines = [];
+  const imports = [];
+  let inImportBlock = true;
+  
+  // First pass: collect all imports
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
     
-    // Split content into lines
-    const lines = content.split('\n');
-    const newLines = [];
+    if (line.trim().startsWith('import ')) {
+      // Extract import names
+      const importMatch = line.match(/import\s+(?:{[^}]+}|\w+)\s+from/);
+      if (importMatch) {
+        const importPart = line.match(/import\s+([^from]+)\s+from/);
+        if (importPart) {
+          const importContent = importPart[1].trim();
+          if (importContent.startsWith('{')) {
+            // Named imports
+            const namedImports = importContent.slice(1, -1).split(',').map(imp => imp.trim().split(' as ')[0].trim());
+            imports.push(...namedImports);
+          } else if (importContent !== 'React') {
+            // Default import
+            imports.push(importContent);
+          }
+        }
+      }
+    } else if (line.trim() === '' && inImportBlock) {
+      // Empty line in import block - keep it
+    } else {
+      // Not an import line - we're out of the import block
+      inImportBlock = false;
+    }
+  }
+  
+  // Second pass: check which imports are actually used
+  const usedImports = new Set();
+  const contentWithoutImports = content.replace(/import\s+[^;]+;/g, '');
+  
+  imports.forEach(imp => {
+    if (contentWithoutImports.includes(imp)) {
+      usedImports.add(imp);
+    }
+  });
+  
+  // Third pass: rebuild the file with only used imports
+  inImportBlock = true;
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
     
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      
-      // Check for import statements
-      if (line.startsWith('import ')) {
-        // Extract the imported names
-        const match = line.match(/import\s*\{([^}]+)\}\s*from\s*['"][^'"]+['"]/);
-        if (match) {
-          const imports = match[1].split(',').map(imp => imp.trim());
-          const usedImports = [];
-          
-          // Check if each import is used in the file
-          for (const imp of imports) {
-            if (content.includes(`<${imp}`) || content.includes(`${imp}(`) || content.includes(`${imp}.`) || content.includes(`${imp} `)) {
-              usedImports.push(imp);
-            }
+    if (line.trim().startsWith('import ')) {
+      // Check if this import is used
+      const importMatch = line.match(/import\s+([^from]+)\s+from/);
+      if (importMatch) {
+        const importContent = importMatch[1].trim();
+        let shouldKeep = false;
+        
+        if (importContent.startsWith('{')) {
+          // Named imports - check if any are used
+          const namedImports = importContent.slice(1, -1).split(',').map(imp => imp.trim().split(' as ')[0].trim());
+          const usedNamedImports = namedImports.filter(imp => usedImports.has(imp));
+          if (usedNamedImports.length > 0) {
+            shouldKeep = true;
+            // Update the import to only include used ones
+            const newImport = line.replace(importContent, `{ ${usedNamedImports.join(', ')} }`);
+            newLines.push(newImport);
+            continue;
           }
-          
-          if (usedImports.length > 0) {
-            const importPath = line.match(/from\s*['"]([^'"]+)['"]/)[1];
-            newLines.push(`import { ${usedImports.join(', ')} } from '${importPath}';`);
-            if (usedImports.length !== imports.length) {
-              modified = true;
-            }
-          } else {
-            modified = true;
-          }
+        } else if (importContent === 'React' || usedImports.has(importContent)) {
+          shouldKeep = true;
+        }
+        
+        if (shouldKeep) {
+          newLines.push(line);
         } else {
-          // Check for default imports
-          const defaultMatch = line.match(/import\s+(\w+)\s+from\s*['"]([^'"]+)['"]/);
-          if (defaultMatch) {
-            const importName = defaultMatch[1];
-            const importPath = defaultMatch[2];
-            
-            // Check if the import is used
-            if (content.includes(`<${importName}`) || content.includes(`${importName}(`) || content.includes(`${importName}.`) || content.includes(`${importName} `)) {
-              newLines.push(line);
-            } else {
-              modified = true;
-            }
-          } else {
-            newLines.push(line);
-          }
+          console.log(`Removing unused import in ${file}: ${line.trim()}`);
         }
       } else {
         newLines.push(line);
       }
-    }
-    
-    if (modified) {
-      content = newLines.join('\n');
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed unused imports in: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-// Function to recursively find all .tsx files
-function findTsxFiles(dir) {
-  const files = [];
-  
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        traverse(fullPath);
-      } else if (item.endsWith('.tsx') && !item.includes('node_modules')) {
-        files.push(fullPath);
-      }
+    } else if (line.trim() === '' && inImportBlock) {
+      // Empty line in import block - keep it
+      newLines.push(line);
+    } else {
+      // Not an import line - we're out of the import block
+      inImportBlock = false;
+      newLines.push(line);
     }
   }
   
-  traverse(dir);
-  return files;
-}
-
-// Main execution
-const appDir = path.join(__dirname, 'app');
-const tsxFiles = findTsxFiles(appDir);
-
-console.log(`Found ${tsxFiles.length} .tsx files to check`);
-
-let fixedCount = 0;
-for (const file of tsxFiles) {
-  if (fixUnusedImports(file)) {
-    fixedCount++;
+  const newContent = newLines.join('\n');
+  
+  if (newContent !== content) {
+    fs.writeFileSync(filePath, newContent);
+    fixedFiles++;
+    console.log(`Fixed unused imports in: ${file}`);
   }
-}
+});
 
-console.log(`Fixed unused imports in ${fixedCount} files`);
+console.log(`\nFixed unused imports in ${fixedFiles} files.`);

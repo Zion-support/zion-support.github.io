@@ -1,11 +1,8 @@
 import React from 'react';
 import Footer from '../../components/Footer';
 import Navigation from '../../components/Navigation';
-import ErrorBoundary from '../../components/GlobalErrorBoundary';
+import ErrorBoundary from '../../components/ErrorBoundary';
 
-import React from 'react';
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
 
 
 export const metadata = {
@@ -20,7 +17,7 @@ export const metadata = {
 };
 export default function CybersecurityauditPage() {
   return (
-    <>
+    <ErrorBoundary>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -53,14 +50,6 @@ export default function CybersecurityauditPage() {
         </div>
       </div>
       <Footer />
-    </>
-  );
-}
-
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <CybersecurityauditPage {...props} />
     </ErrorBoundary>
   );
 }

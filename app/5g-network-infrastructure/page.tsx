@@ -1,5 +1,6 @@
 import React from "react";
-import ErrorBoundary from "../components/GlobalErrorBoundary";
+import { ArrowRight, CheckCircle } from "lucide-react";
+import ErrorBoundary from "../components/ErrorBoundary";
 
 export const metadata = {
   title: '5G Network Infrastructure | Zion Tech Group',
@@ -13,6 +14,42 @@ export const metadata = {
 };
 
 function FiveGNetworkInfrastructure() {
+  const features = [
+    {
+      icon: ArrowRight,
+      title: 'Ultra-Fast Connectivity',
+      description: 'Lightning-fast 5G network infrastructure with ultra-low latency.',
+      benefits: ['Sub-millisecond latency', 'Gigabit speeds', 'Massive device capacity', 'Real-time communication']
+    },
+    {
+      icon: CheckCircle,
+      title: 'Advanced Security',
+      description: 'Enterprise-grade security protocols for mission-critical applications.',
+      benefits: ['End-to-end encryption', 'Network slicing', 'Zero-trust architecture', 'Compliance ready']
+    },
+    {
+      icon: ArrowRight,
+      title: 'Scalable Infrastructure',
+      description: 'Flexible and scalable 5G infrastructure that grows with your business.',
+      benefits: ['Auto-scaling', 'Edge computing', 'Cloud integration', 'Future-proof design']
+    },
+    {
+      icon: CheckCircle,
+      title: 'AI-Powered Optimization',
+      description: 'Intelligent network optimization using advanced AI algorithms.',
+      benefits: ['Predictive maintenance', 'Traffic optimization', 'Resource allocation', 'Performance monitoring']
+    }
+  ];
+
+  const benefits = [
+    'Cutting-edge 5G technology implementation',
+    'Enterprise-grade security and compliance',
+    '24/7 monitoring and support',
+    'Scalable infrastructure for future growth',
+    'AI-powered network optimization',
+    'Dedicated technical support team'
+  ];
+
   return (
     <div>
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
