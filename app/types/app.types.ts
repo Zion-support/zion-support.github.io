@@ -78,7 +78,11 @@ export interface AnalyticsEvent {
   action: string;
   label?: string;
   value?: number;
-}export interface ErrorInfo {
+
+}
+
+export interface ErrorInfo {
+
   componentStack: string;
 }
 

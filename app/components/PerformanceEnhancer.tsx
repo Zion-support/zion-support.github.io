@@ -8,7 +8,11 @@ interface PerformanceEnhancerProps {
 const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({ className = '', children }) => {
   return (
     <div className={`performanceenhancer-component ${className}`}>
-{children || <h2>PerformanceEnhancer</h2>}</div>
+
+{children || <h2>PerformanceEnhancer</h2>}
+
+    </div>
+
   );
 };
 

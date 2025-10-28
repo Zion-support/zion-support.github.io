@@ -8,7 +8,11 @@ interface PerformanceOptimizerProps {
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className = '', children }) => {
   return (
     <div className={`performanceoptimizer-component ${className}`}>
-{children || <h2>PerformanceOptimizer</h2>}</div>
+
+{children || <h2>PerformanceOptimizer</h2>}
+
+    </div>
+
   );
 };
 

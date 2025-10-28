@@ -8,4 +8,6 @@ const AnimatedCounter: React.FC = () => {
   );
 };
 
+
 export default AnimatedCounter;
+
