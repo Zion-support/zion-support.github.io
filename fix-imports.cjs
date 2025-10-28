@@ -12,7 +12,6 @@ function fixFile(filePath) {
     let fixedLines = [];
     let seenImports = new Set();
     let seenExports = new Set();
-    let inFunction = false;
     let functionName = '';
     
     for (let i = 0; i < lines.length; i++) {
