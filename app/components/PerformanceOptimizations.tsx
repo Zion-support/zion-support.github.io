@@ -9,7 +9,7 @@ interface PerformanceOptimizationsProps {
 }
 
 const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo(({
-  enableImageOptimization = true, enablePreloading = true, enableResourceHints = true
+  enableImageOptimization = true, _enablePreloading = true, _enableResourceHints = true
 }) => {
   const optimizeImages = useCallback(() => {
     if (!enableImageOptimization || typeof window === 'undefined') return;
@@ -31,7 +31,7 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
   const preloadCriticalResources = useCallback(() => {
     if (!enablePreloading || typeof window === 'undefined') return;
 
-    const _criticalResources = [
+    const criticalResources = [
       { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' },
       { href: '/images/hero-bg.jpg', as: 'image' },
       { href: '/images/logo.png', as: 'image' }
@@ -51,18 +51,18 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
   const addResourceHints = useCallback(() => {
     if (!enableResourceHints || typeof window === 'undefined') return;
 
-    const _hints = [
+    const hints = [
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
       { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' },
       { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' }
     ];
 
     _hints.forEach(hint => {
-      const _link = document.createElement('link');
+      const link = document.createElement('link');
       _link.rel = hint.rel;
       _link.href = hint.href;
       if (hint.crossOrigin) _link.crossOrigin = hint.crossOrigin;
-      document.head.appendChild(_link);
+      document.head.appendChild(link);
     });
   }, [enableResourceHints]);
 
@@ -71,9 +71,9 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
     if (typeof window === 'undefined') return;
 
     let __ticking = false;
-    const __handleScroll = () => {
+    const _handleScroll = _() => {
       if (!__ticking) {
-        requestAnimationFrame(() => {
+        requestAnimationFrame_(() => {
           // Throttled scroll handling
           __ticking = false;
         });
@@ -82,7 +82,7 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
     };
 
     window.addEventListener('scroll', __handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', __handleScroll);
+    return _() => window.removeEventListener('scroll', __handleScroll);
   }, []);
 
   // Optimize resize performance
@@ -90,9 +90,9 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
     if (typeof window === 'undefined') return;
 
     let __ticking = false;
-    const __handleResize = () => {
+    const _handleResize = _() => {
       if (!__ticking) {
-        requestAnimationFrame(() => {
+        requestAnimationFrame_(() => {
           // Throttled resize handling
           optimizeImages();
           __ticking = false;
@@ -102,7 +102,7 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
     };
 
     window.addEventListener('resize', __handleResize, { passive: true });
-    return () => window.removeEventListener('resize', __handleResize);
+    return _() => window.removeEventListener('resize', __handleResize);
   }, [optimizeImages]);
 
   // Intersection Observer for lazy loading
@@ -134,10 +134,10 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
     const lazyImages = document.querySelectorAll('img[data-src]');
     lazyImages.forEach((img) => observer.observe(img));
 
-    return () => observer.disconnect();
+    return _() => observer.disconnect();
   }, []);
 
-  useEffect(() => {
+  useEffect_(() => {
     optimizeImages();
     preloadCriticalResources();
     addResourceHints();

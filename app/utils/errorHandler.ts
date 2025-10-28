@@ -48,7 +48,7 @@ export class ErrorHandler {
     this.sendToErrorService();
   }
 
-  private async sendToErrorService(_errorData: ErrorInfo): Promise<void> {
+  private async sendToErrorService(): Promise<void> {
     try {
       // This would typically send to a service like Sentry, LogRocket, etc.
       // For now, we'll just log it

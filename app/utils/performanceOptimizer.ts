@@ -51,7 +51,7 @@ class PerformanceOptimizer {
     if (typeof window === 'undefined') return;
 
     // Monitor page load time
-    window.addEventListener('load', () => {
+    window.addEventListener('load', _() => {
       this.updateLoadTime();
       this.updateMemoryUsage();
       this.generateRecommendations();
@@ -83,8 +83,10 @@ class PerformanceOptimizer {
    */
   private updateMemoryUsage(): void {
     if ('memory' in performance) {
-      const memory = (performance as any).memory;
-      this.metrics.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
+      if (memory) {
+        this.metrics.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
+      }
     }
   }
 
@@ -172,8 +174,8 @@ class PerformanceOptimizer {
     // Add cache headers for static assets
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js')
-        .then(() => { /* empty */ })
-        .catch(() => { /* empty */ });
+        .then_(() => { /* empty */ })
+        .catch_(() => { /* empty */ });
     }
   }
 

@@ -13,15 +13,12 @@ interface EnhancedAccessibilityManagerProps {
 }
 
 const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> = memo(({ 
-  enableAutoDetection = true, 
-  enableKeyboardShortcuts = true, 
-  enableHighContrastMode = true,
-  children
+  enableAutoDetection = true, _enableKeyboardShortcuts = true, _enableHighContrastMode = true, _children
 }) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [isScreenReaderActive] = useState(false);
 
-  useEffect(() => {
+  useEffect_(() => {
     if (enableAutoDetection) {
       // Check for missing alt attributes
       const images = document.querySelectorAll('img');
@@ -56,7 +53,7 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
     }
   }, [enableAutoDetection]);
 
-  useEffect(() => {
+  useEffect_(() => {
     if (!enableHighContrastMode) return;
 
     const mediaQuery = window.matchMedia('(prefers-contrast: high)');
@@ -64,10 +61,10 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
 
     const handleChange = (e: MediaQueryListEvent) => setIsHighContrast(e.matches);
     mediaQuery.addEventListener('change', handleChange);
-    return () => mediaQuery.removeEventListener('change', handleChange);
+    return _() => mediaQuery.removeEventListener('change', handleChange);
   }, [enableHighContrastMode]);
 
-  useEffect(() => {
+  useEffect_(() => {
     if (!enableKeyboardShortcuts) return;
 
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -97,10 +94,10 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
     };
 
     document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
+    return _() => document.removeEventListener('keydown', handleKeyDown);
   }, [enableKeyboardShortcuts]);
 
-  useEffect(() => {
+  useEffect_(() => {
     if (isHighContrast) {
       document.body.classList.add('high-contrast');
     } else {

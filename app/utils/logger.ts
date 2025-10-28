@@ -50,8 +50,8 @@ class Logger {
 }
 
 // Create logger instance
-const logger = new Logger(
+const _logger = new Logger(
   process.env.NODE_ENV === 'development' ? LogLevel.DEBUG : LogLevel.WARN
 );
 
-export default logger;
+export default _logger;
