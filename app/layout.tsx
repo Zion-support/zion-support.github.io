@@ -9,10 +9,6 @@ import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import SkipLink from './components/SkipLink';
-import Analytics from './components/Analytics';
-import ConsolidatedPerformance from './components/consolidated/ConsolidatedPerformance';
-import ConsolidatedAccessibility from './components/consolidated/ConsolidatedAccessibility';
-import ConsolidatedSEO from './components/consolidated/ConsolidatedSEO';
 import SEOOptimization from './components/SEOOptimization';
 import SecurityEnhancement from './components/SecurityEnhancement';
 // import { metadata, viewport } from './layout/metadata';
@@ -39,7 +35,6 @@ export default function RootLayout({
               <PerformanceMonitor />
               <AccessibilityEnhancer />
               <ServiceWorkerRegistration />
-              <PerformanceMonitoring />
               <SEOOptimization />
               <SecurityEnhancement />
             </div>
