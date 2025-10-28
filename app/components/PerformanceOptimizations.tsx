@@ -16,14 +16,14 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
 
     const images = document.querySelectorAll('img');
     images.forEach(img => {
-      // Add loading="lazy" if not already present
-      if (!img.hasAttribute('loading')) {
-        img.setAttribute('loading', 'lazy');
+      if (!img.loading) {
+        img.loading = 'lazy';
       }
-      
-      // Add decoding="async" for better performance
-      if (!img.hasAttribute('decoding')) {
-        img.setAttribute('decoding', 'async');
+      if (!img.decoding) {
+        img.decoding = 'async';
+      }
+      if (img.getBoundingClientRect().top <= window.innerHeight && !img.hasAttribute('fetchpriority')) {
+        img.setAttribute('fetchpriority', 'high');
       }
     });
   }, [enableImageOptimization]);
@@ -126,7 +126,7 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
       });
     }, {
       rootMargin: '50px 0px',
-      threshold: 0.01
+      threshold: 0.1
     });
 
     // Observe all images with data-src
