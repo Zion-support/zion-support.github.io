@@ -17,24 +17,8 @@ import { metadata, viewport } from './metadata';
 
 const inter = Inter({ subsets: ['latin'] });
 
-// Metadata and viewport configuration
-export const metadata = {
-  title: 'Zion Tech Group - AI Solutions & Technology Services',
-  description: 'Leading technology company specializing in AI solutions, cloud infrastructure, and innovative software development services.',
-  keywords: ['AI solutions', 'cloud infrastructure', 'software development', 'technology services'],
-  openGraph: {
-    title: 'Zion Tech Group - AI Solutions & Technology Services',
-    description: 'Leading technology company specializing in AI solutions, cloud infrastructure, and innovative software development services.',
-    type: 'website',
-  },
-};
-
-export const viewport = {
-  width: 'device-width',
-  initialScale: 1,
-  maximumScale: 5,
-  userScalable: true,
-};
+// Re-export metadata and viewport for Next.js
+export { metadata, viewport };
 export default function RootLayout({
   children,
 }: {
