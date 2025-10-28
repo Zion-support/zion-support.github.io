@@ -14,6 +14,11 @@ import { metadata, viewport } from './metadata';
 // Analytics removed as it's not used
 // Consolidated components removed as they're not used
 // Metadata import removed as it's not used
+import PerformanceMonitoring from './components/PerformanceMonitoring';
+import SEOOptimization from './components/SEOOptimization';
+import SecurityEnhancement from './components/SecurityEnhancement';
+// import { metadata, viewport } from './layout/metadata';
+>>>>>>> 180c76a08813769caa34f6922951c6a2af341d50
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -27,6 +32,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <Analytics />
+        <ConsolidatedPerformance />
+        <ConsolidatedAccessibility />
+        <ConsolidatedSEO />
         <ErrorBoundary>
           <PerformanceOptimizer>
             <div className="min-h-screen bg-slate-900">
@@ -39,6 +48,9 @@ export default function RootLayout({
               <PerformanceMonitor />
               <AccessibilityEnhancer />
               <ServiceWorkerRegistration />
+              <SEOOptimization />
+              <SecurityEnhancement />
+>>>>>>> 180c76a08813769caa34f6922951c6a2af341d50
             </div>
           </PerformanceOptimizer>
         </ErrorBoundary>
