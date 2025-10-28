@@ -37,12 +37,21 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
         if (entry.entryType === 'largest-contentful-paint') {
           setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
         } else if (entry.entryType === 'first-input') {
+<<<<<<< HEAD
+          const eventEntry = entry as PerformanceEntry & { processingStart: number; processingEnd: number };
+          setMetrics(prev => ({ ...prev, fid: eventEntry.processingStart - entry.startTime }));
+        } else if (entry.entryType === 'layout-shift') {
+          const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+          if (!layoutShiftEntry.hadRecentInput) {
+            setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (layoutShiftEntry.value || 0) }));
+=======
           const fidEntry = entry as PerformanceEntry & { processingStart: number };
           setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - entry.startTime }));
         } else if (entry.entryType === 'layout-shift') {
           const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
           if (!clsEntry.hadRecentInput) {
             setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (clsEntry.value || 0) }));
+>>>>>>> main
           }
         } else if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
           setMetrics(prev => ({ ...prev, fcp: entry.startTime }));

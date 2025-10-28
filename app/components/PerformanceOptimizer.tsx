@@ -54,12 +54,20 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
               console.log('LCP:', entry.startTime);
             }
             if (entry.entryType === 'first-input') {
+<<<<<<< HEAD
+              const fidEntry = entry as PerformanceEntry & { processingStart: number; processingEnd: number };
+=======
               const fidEntry = entry as PerformanceEntry & { processingStart: number };
+>>>>>>> main
               console.log('FID:', fidEntry.processingStart - fidEntry.startTime);
             }
             if (entry.entryType === 'layout-shift') {
               const clsEntry = entry as PerformanceEntry & { value?: number };
+<<<<<<< HEAD
+              console.log('CLS:', clsEntry.value);
+=======
               console.log('CLS:', clsEntry.value || 0);
+>>>>>>> main
             }
           });
         });
