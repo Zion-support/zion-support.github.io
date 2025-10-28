@@ -9,10 +9,6 @@ import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import SkipLink from './components/SkipLink';
-import Analytics from './components/Analytics';
-import ConsolidatedPerformance from './components/consolidated/ConsolidatedPerformance';
-import ConsolidatedAccessibility from './components/consolidated/ConsolidatedAccessibility';
-import ConsolidatedSEO from './components/consolidated/ConsolidatedSEO';
 import PerformanceMonitoring from './components/PerformanceMonitoring';
 import SEOOptimization from './components/SEOOptimization';
 import SecurityEnhancement from './components/SecurityEnhancement';
@@ -27,9 +23,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+<<<<<<< HEAD
         <ConsolidatedPerformance />
         <ConsolidatedAccessibility />
         <ConsolidatedSEO />
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-253c
         <ErrorBoundary>
           <PerformanceOptimizer>
             <div className="min-h-screen bg-slate-900">

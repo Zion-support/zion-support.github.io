@@ -1,26 +1,6 @@
 import { useState, useEffect } from 'react';
 import type { PerformanceEventTiming, LayoutShift } from '../types/performance';
 
-// Performance API types
-interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
-  processingEnd: number;
-  target?: Node;
-}
-
-interface LayoutShift extends PerformanceEntry {
-  value: number;
-  hadRecentInput: boolean;
-  lastInputTime: number;
-  sources: LayoutShiftAttribution[];
-}
-
-interface LayoutShiftAttribution {
-  node?: Node;
-  previousRect: DOMRectReadOnly;
-  currentRect: DOMRectReadOnly;
-}
-
 export const useMonitoring = () => {
   const [state, setState] = useState(null);
   
@@ -104,7 +84,7 @@ class MonitoringService {
           entries.forEach((entry: PerformanceEntry) => {
             const clsEntry = entry as LayoutShift;
             if (!clsEntry.hadRecentInput) {
-              clsValue += entry.value;
+              clsValue += clsEntry.value;
               this.metrics.cls = clsValue;
               this.reportMetric('cls', clsValue);
             }
@@ -189,8 +169,8 @@ class MonitoringService {
     }
 
     // Send to analytics (if configured)
-    if (typeof window !== 'undefined' && typeof (window as unknown as { gtag?: Function }).gtag === 'function') {
-      (window as unknown as { gtag: Function }).gtag('event', name, {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as Window & { gtag?: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag?.('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',
       });

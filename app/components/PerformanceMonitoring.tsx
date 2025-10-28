@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, memo, useCallback } from 'react';
+import logger from '../utils/logger';
 
 interface PerformanceMonitoringProps {
   className?: string;
@@ -15,7 +16,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const lcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
-      console.log('LCP:', lastEntry.startTime);
+      logger.debug('LCP:', lastEntry.startTime);
       
       // Send to analytics if needed
       if (window.gtag) {
@@ -51,14 +52,9 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const clsObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-<<<<<<< HEAD
         const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput: boolean; value: number };
         if (!layoutShiftEntry.hadRecentInput) {
           clsValue += layoutShiftEntry.value;
-=======
-        if (!(entry as PerformanceEntry & { hadRecentInput: boolean }).hadRecentInput) {
-          clsValue += (entry as PerformanceEntry & { value: number }).value;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e856
           console.log('CLS:', clsValue);
           
           if (window.gtag) {
@@ -77,7 +73,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const fcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        console.log('FCP:', entry.startTime);
+        logger.debug('FCP:', entry.startTime);
         
         if (window.gtag) {
           window.gtag('event', 'web_vitals', {
@@ -106,7 +102,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.duration > 1000) { // Resources taking more than 1 second
-          console.warn('Slow resource:', entry.name, entry.duration);
+          logger.warn('Slow resource:', entry.name, entry.duration);
         }
       });
     });
@@ -126,14 +122,14 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
         const total = memory.totalJSHeapSize / 1024 / 1024; // MB
         const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB
         
-        console.log('Memory usage:', {
+        logger.debug('Memory usage:', {
           used: Math.round(used),
           total: Math.round(total),
           limit: Math.round(limit)
         });
 
         if (used / limit > 0.8) {
-          console.warn('High memory usage detected:', Math.round((used / limit) * 100) + '%');
+          logger.warn('High memory usage detected:', Math.round((used / limit) * 100) + '%');
         }
       }
     };
