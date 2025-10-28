@@ -24,6 +24,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <Analytics />
+        <ConsolidatedPerformance />
+        <ConsolidatedAccessibility />
+        <ConsolidatedSEO />
         <ErrorBoundary>
           <PerformanceOptimizer>
             <div className="min-h-screen bg-slate-900">
@@ -36,7 +40,6 @@ export default function RootLayout({
               <PerformanceMonitor />
               <AccessibilityEnhancer />
               <ServiceWorkerRegistration />
-              <PerformanceMonitoring />
               <SEOOptimization />
               <SecurityEnhancement />
             </div>
