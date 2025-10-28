@@ -31,15 +31,12 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
   const renderStartRef = useRef<number>(0);
   const mountTimeRef = useRef<number>(0);
   const renderCountRef = useRef<number>(0);
-<<<<<<< HEAD
   
   // Handle render completion
   const handleRender = useCallback(() => {
     const renderTime = performance.now() - renderStartRef.current;
     setMetrics(prev => ({ ...prev, renderTime }));
   }, []);
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-650f
   
   // Track component load time
   useEffect(() => {
@@ -47,7 +44,6 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
       mountTimeRef.current = performance.now();
       renderCountRef.current += 1;
       
-<<<<<<< HEAD
       // Measure load time
       const measureLoadTime = () => {
         const loadTime = performance.now() - mountTimeRef.current;
@@ -65,11 +61,6 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
 
       measureLoadTime();
       measureRenderTime();
-=======
-      // Use requestAnimationFrame to track render completion
-      // requestAnimationFrame(handleRender);
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-650f
     }
   }, [options.trackPerformance]);
   

@@ -42,7 +42,6 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ onSubscribe, classN
         <p className="text-gray-600 mb-6">
           Get the latest news and updates delivered to your inbox.
         </p>
-<<<<<<< HEAD
         <form onSubmit={handleSubmit} className="flex flex-col gap-3">
           <label htmlFor="newsletter-email" className="sr-only">
             Email address
@@ -71,9 +70,6 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ onSubscribe, classN
           </p>
         )}
       </div>
-=======
-      )}
->>>>>>> cursor/fix-errors-and-merge-to-main-650f
     </div>
   );
 };
