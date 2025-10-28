@@ -51,9 +51,14 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const clsObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
+<<<<<<< HEAD
         const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput: boolean; value: number };
         if (!layoutShiftEntry.hadRecentInput) {
           clsValue += layoutShiftEntry.value;
+=======
+        if (!(entry as PerformanceEntry & { hadRecentInput: boolean }).hadRecentInput) {
+          clsValue += (entry as PerformanceEntry & { value: number }).value;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e856
           console.log('CLS:', clsValue);
           
           if (window.gtag) {

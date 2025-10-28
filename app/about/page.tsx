@@ -1,4 +1,3 @@
-import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { Metadata } from 'next';
 
@@ -103,7 +102,7 @@ export default function AboutPage() {
             className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
           >
             Get Started
-            <ArrowRight className="ml-2 w-5 h-5" />
+            <span className="ml-2">→</span>
           </Link>
         </div>
       </section>
