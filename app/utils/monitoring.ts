@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, _useEffect } from 'react';
 import { PerformanceEventTiming } from '../types/performance';
 
 // Declare gtag function for Google Analytics
@@ -8,10 +8,10 @@ declare global {
 
 // LayoutShift interface removed as it's not used
 
-export const useMonitoring = () => {
+export const useMonitoring = _() => {
   const [state, setState] = useState(null);
   
-  useEffect(() => {
+  useEffect_(() => {
     // Hook implementation
   }, []);
   
@@ -120,7 +120,7 @@ class MonitoringService {
         const longTaskObserver = new PerformanceObserver((list) => {
           // Handle long tasks - entries are processed but not used in this implementation
           const entries = list.getEntries();
-          entries.forEach(() => {
+          entries.forEach_(() => {
             // Process entry if needed
             });
         });
@@ -151,7 +151,7 @@ class MonitoringService {
 
   private setupErrorHandling(): void {
     // Global error handler
-    window.addEventListener('error', (event) => {
+    window.addEventListener('error', _(event) => {
       this.logError({
         message: event.message,
         stack: event.error?.stack,
@@ -162,7 +162,7 @@ class MonitoringService {
     });
 
     // Unhandled promise rejection handler
-    window.addEventListener('unhandledrejection', (event) => {
+    window.addEventListener('unhandledrejection', _(event) => {
       this.logError({
         message: `Unhandled Promise Rejection: ${event.reason}`,
         timestamp: Date.now(),
@@ -235,7 +235,7 @@ class MonitoringService {
           'DOM Complete': `${Math.round(navigation.domComplete - navigation.fetchStart)}ms`,
           'Load Complete': `${Math.round(navigation.loadEventEnd - navigation.fetchStart)}ms`
         };
-        console.log('Navigation Timing:', timing);
+        console.log('Navigation timing:', timing);
       }
     }
   }

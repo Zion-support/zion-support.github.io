@@ -13,13 +13,10 @@ interface EnhancedAccessibilityManagerProps {
 }
 
 const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> = memo(({ 
-  enableAutoDetection = true, 
-  enableKeyboardShortcuts = true, 
-  enableHighContrastMode = true, 
-  children
+  enableAutoDetection = true, enableKeyboardShortcuts = true, enableHighContrastMode = true, children
 }) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
-  const [isScreenReaderActive] = useState(false);
+  const [isScreenReaderActive, _setIsScreenReaderActive] = useState(false);
 
   useEffect(() => {
     if (enableAutoDetection) {

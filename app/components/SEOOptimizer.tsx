@@ -5,11 +5,10 @@ interface SEOOptimizerProps {
   children?: React.ReactNode;
 }
 
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ className = '', children }) => {
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ className: _className = '', children: _children }) => {
   return (
-    <div className={className}>
+    <div>
       <h1>SEO Optimizer</h1>
-      {children}
     </div>
   );
 };

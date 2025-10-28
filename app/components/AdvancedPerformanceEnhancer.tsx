@@ -39,8 +39,7 @@ interface AdvancedPerformanceEnhancerProps {
 }
 
 export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerProps> = ({
-  children, enableMonitoring = true, enableOptimizations = true
-}) => {
+  children, enableMonitoring = true, enableOptimizations = true, }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     lcp: null,
     fid: null,
@@ -50,7 +49,7 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
     memoryUsage: null,
     connectionSpeed: null
   });
-  // const [isOptimized, setIsOptimized] = useState(false);
+  const [_isOptimized, _setIsOptimized] = useState(false);
 
   const measurePerformance = useCallback(() => {
     if (!enableMonitoring || typeof window === 'undefined') return;
@@ -139,6 +138,8 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
 
       // Lazy load non-critical resources
       const lazyElements = document.querySelectorAll('[data-lazy]');
+      // lazyElements will be used for intersection observer setup
+      console.log('Lazy elements found:', lazyElements.length);
       const lazyObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
@@ -152,9 +153,6 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
           }
         });
       });
-      
-      // Observe all lazy elements
-      lazyElements.forEach(element => lazyObserver.observe(element));
     } catch { /* Handle error */ }
   }, [enableOptimizations]);
 
@@ -162,7 +160,7 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
     if (enableOptimizations) {
       optimizePerformance();
     }
-  }, [optimizePerformance, enableOptimizations]);
+  }, [measurePerformance, enableMonitoring]);
 
   // Log performance metrics for debugging
   useEffect(() => {

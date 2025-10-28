@@ -14,18 +14,13 @@ interface LayoutShiftEntry extends PerformanceEntry {
   target?: Node;
 }
 
-interface PerformanceNavigationTiming extends PerformanceEntry {
-  responseStart: number;
-  requestStart: number;
-}
-
 interface PerformanceMonitoringProps {
   className?: string;
-  onMetricsUpdate?: (metrics: Record<string, number | null>) => void;
+  onMetricsUpdate?: (metrics: Record<string, unknown>) => void;
   enableRealTimeMonitoring?: boolean;
 }
 
-const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ enableRealTimeMonitoring = true, onMetricsUpdate }) => {
+const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ className: _className = '', enableRealTimeMonitoring = true, onMetricsUpdate }) => {
   const [, setMemoryUsage] = React.useState<{ total: number; limit: number } | null>(null);
   const [fcp, setFCP] = React.useState<number | null>(null);
   const [lcp, setLCP] = React.useState<number | null>(null);

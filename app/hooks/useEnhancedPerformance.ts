@@ -25,7 +25,7 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     memoryUsage: 0,
     networkLatency: 0
   });
-
+  
   // Refs for tracking
   const mountTimeRef = useRef<number>(0);
   const renderCountRef = useRef<number>(0);
@@ -51,11 +51,13 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
   // Track memory usage
   useEffect(() => {
     if (options.trackPerformance && 'memory' in performance) {
-      const memory = (performance as { memory: { usedJSHeapSize: number } }).memory;
-      setMetrics(prev => ({ 
-        ...prev, 
-        memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
-      }));
+      const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
+      if (memory) {
+        setMetrics(prev => ({
+          ...prev,
+          memoryUsage: memory.usedJSHeapSize / 1024 / 1024
+        }));
+      }
     }
   }, [options.trackPerformance]);
   
@@ -82,7 +84,7 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
         console.error(`Error in ${componentName}:`, error);
       };
       
-      const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
+      const handleUnhandledRejection = (event: { reason: unknown }) => {
         console.error(`Unhandled promise rejection in ${componentName}:`, event.reason);
       };
       
@@ -122,11 +124,15 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
         const link = document.createElement('link');
         link.rel = 'preload';
         link.href = resource;
+        link.as = resource.endsWith('.woff2') ? 'font' : 'image';
+        if (resource.endsWith('.woff2')) {
+          link.crossOrigin = 'anonymous';
+        }
         document.head.appendChild(link);
       });
     }
   }, [options.trackPerformance]);
-
+  
   return {
     metrics,
     optimizePerformance,

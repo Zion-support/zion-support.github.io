@@ -59,7 +59,7 @@ export const _useForm = <T = Record<string, unknown>>(options: UseFormOptions<T>
         await onSubmit(formState.data);
       }
       setFormState(prev => ({ ...prev, isSubmitting: false, submitStatus: 'success' }));
-    } catch {
+    } catch (_error) { // eslint-disable-line @typescript-eslint/no-unused-vars, no-unused-vars
       setFormState(prev => ({ 
         ...prev, 
         isSubmitting: false, 

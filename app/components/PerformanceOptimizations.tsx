@@ -6,12 +6,10 @@ interface PerformanceOptimizationsProps {
   enableImageOptimization?: boolean;
   enablePreloading?: boolean;
   enableResourceHints?: boolean;
-  _enablePreloading?: boolean;
-  _enableResourceHints?: boolean;
 }
 
 const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo(({
-  enableImageOptimization = true, _enablePreloading = true, _enableResourceHints = true
+  enableImageOptimization = true, enablePreloading = true, enableResourceHints = true
 }) => {
   const optimizeImages = useCallback(() => {
     if (!enableImageOptimization || typeof window === 'undefined') return;
@@ -21,24 +19,25 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
       if (!img.loading) {
         img.loading = 'lazy';
       }
-      
-      // Add fetchpriority for above-the-fold images
-      if (img.getBoundingClientRect().top < window.innerHeight) {
+      if (!img.decoding) {
+        img.decoding = 'async';
+      }
+      if (img.getBoundingClientRect().top <= window.innerHeight && !img.hasAttribute('fetchpriority')) {
         img.setAttribute('fetchpriority', 'high');
       }
     });
   }, [enableImageOptimization]);
 
   const preloadCriticalResources = useCallback(() => {
-    if (!_enablePreloading || typeof window === 'undefined') return;
+    if (!enablePreloading || typeof window === 'undefined') return;
 
-    const criticalResources = [
+    const _criticalResources = [
       { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' },
       { href: '/images/hero-bg.jpg', as: 'image' },
       { href: '/images/logo.png', as: 'image' }
     ];
 
-    criticalResources.forEach(resource => {
+    _criticalResources.forEach(resource => {
       const link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource.href;
@@ -47,63 +46,63 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
       if (resource.crossOrigin) link.crossOrigin = resource.crossOrigin;
       document.head.appendChild(link);
     });
-  }, [_enablePreloading]);
+  }, [enablePreloading]);
 
   const addResourceHints = useCallback(() => {
-    if (!_enableResourceHints || typeof window === 'undefined') return;
+    if (!enableResourceHints || typeof window === 'undefined') return;
 
-    const hints = [
+    const _hints = [
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
       { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' },
       { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' }
     ];
 
-    hints.forEach(hint => {
-      const link = document.createElement('link');
-      link.rel = hint.rel;
-      link.href = hint.href;
-      if (hint.crossOrigin) link.crossOrigin = hint.crossOrigin;
-      document.head.appendChild(link);
+    _hints.forEach(hint => {
+      const _link = document.createElement('link');
+      _link.rel = hint.rel;
+      _link.href = hint.href;
+      if (hint.crossOrigin) _link.crossOrigin = hint.crossOrigin;
+      document.head.appendChild(_link);
     });
-  }, [_enableResourceHints]);
+  }, [enableResourceHints]);
 
   // Optimize scroll performance
   const optimizeScrollPerformance = useCallback(() => {
     if (typeof window === 'undefined') return;
 
-    let __ticking = false;
-    const _handleScroll = () => {
-      if (!__ticking) {
+    let ticking = false;
+    const handleScroll = () => {
+      if (!ticking) {
         requestAnimationFrame(() => {
           // Throttled scroll handling
-          __ticking = false;
+          ticking = false;
         });
-        __ticking = true;
+        ticking = true;
       }
     };
 
-    window.addEventListener('scroll', _handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', _handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   // Optimize resize performance
   const optimizeResizePerformance = useCallback(() => {
     if (typeof window === 'undefined') return;
 
-    let __ticking = false;
-    const _handleResize = () => {
-      if (!__ticking) {
+    let ticking = false;
+    const handleResize = () => {
+      if (!ticking) {
         requestAnimationFrame(() => {
           // Throttled resize handling
           optimizeImages();
-          __ticking = false;
+          ticking = false;
         });
-        __ticking = true;
+        ticking = true;
       }
     };
 
-    window.addEventListener('resize', _handleResize, { passive: true });
-    return () => window.removeEventListener('resize', _handleResize);
+    window.addEventListener('resize', handleResize, { passive: true });
+    return () => window.removeEventListener('resize', handleResize);
   }, [optimizeImages]);
 
   // Intersection Observer for lazy loading
@@ -120,14 +119,14 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
             const img = element as HTMLImageElement;
             if (img.dataset.src) {
               img.src = img.dataset.src;
-              img.classList.remove('lazy');
-              observer.unobserve(img);
+              img.removeAttribute('data-src');
+              observer.unobserve(element);
             }
           }
         }
       });
     }, {
-      rootMargin: '50px',
+      rootMargin: '50px 0px',
       threshold: 0.1
     });
 
@@ -142,16 +141,14 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
     optimizeImages();
     preloadCriticalResources();
     addResourceHints();
-    
-    // Set up performance optimizations
     const scrollCleanup = optimizeScrollPerformance();
     const resizeCleanup = optimizeResizePerformance();
     const observerCleanup = setupIntersectionObserver();
     
     return () => {
-      if (scrollCleanup) scrollCleanup();
-      if (resizeCleanup) resizeCleanup();
-      if (observerCleanup) observerCleanup();
+      scrollCleanup?.();
+      resizeCleanup?.();
+      observerCleanup?.();
     };
   }, [optimizeImages, preloadCriticalResources, addResourceHints, optimizeScrollPerformance, optimizeResizePerformance, setupIntersectionObserver]);
 
