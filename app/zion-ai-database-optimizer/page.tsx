@@ -9,7 +9,7 @@ export const metadata = {
     type: 'website',
   },
 };
-import React, { memo } from 'react'
+import React from 'react'
 
 
 import SEOHead from '../components/SEOHead'
@@ -17,7 +17,7 @@ import SEOHead from '../components/SEOHead'
 
 ;
 
-const ZionAIDatabaseOptimizerPage: React.FC = memo(() => {
+function Page() {
   return (
     <>
       <SEOHead
@@ -235,7 +235,7 @@ const ZionAIDatabaseOptimizerPage: React.FC = memo(() => {
       </div>
     </>
   );
-});
+}
 
 export default function Wrapped(props: Record<string, unknown>) {
   return (
