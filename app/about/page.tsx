@@ -1,5 +1,4 @@
 import React from 'react';
-import { ErrorBoundary } from '../components/ErrorBoundary';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import Link from 'next/link';
@@ -57,10 +56,4 @@ function AboutPage() {
   );
 }
 
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <AboutPage {...props} />
-    </ErrorBoundary>
-  );
-}
+export default AboutPage;

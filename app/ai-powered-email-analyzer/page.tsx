@@ -1,6 +1,6 @@
 
 
-import React from "react";
+import React from 'react';
 import { Brain, BarChart, Target, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -130,5 +130,7 @@ const benefits = [
     </>
   );
 };
+
+export default AiPoweredEmailAnalyzerPage;
 
 export default AiPoweredEmailAnalyzerPage;

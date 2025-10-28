@@ -1,17 +1,6 @@
 import React from 'react';
-import { ErrorBoundary } from '../components/ErrorBoundary';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-export const metadata = {
-  title: 'Accessibility Page | Zion Tech Group',
-  description: 'Professional accessibility page services by Zion Tech Group. Advanced AI and technology solutions.',
-  keywords: 'accessibility page, technology, services, AI, automation',
-  openGraph: {
-    title: 'Accessibility Page | Zion Tech Group',
-    description: 'Professional accessibility page services by Zion Tech Group.',
-    type: 'website',
-  }};
 
 function AccessibilitypagePage() {
   return (
@@ -52,10 +41,4 @@ function AccessibilitypagePage() {
   );
 }
 
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <AccessibilitypagePage {...props} />
-    </ErrorBoundary>
-  );
-}
+export default AccessibilitypagePage;
