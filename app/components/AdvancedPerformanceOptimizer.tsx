@@ -86,18 +86,19 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   useEffect(() => {
     if (typeof window === 'undefined') return
     const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries()
+      const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.entryType === 'navigation') {
-          const navEntry = entry as PerformanceNavigationTiming
+          const navEntry = entry as PerformanceNavigationTiming;
           if (navEntry.loadEventEnd - navEntry.loadEventStart > 1000) {
-            // console.warn('Page load time exceeded 1 second')          }
+            // console.warn('Page load time exceeded 1 second');
+          }
         }
-      })
-    })
-    observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] })
-    return () => observer.disconnect()
-  }, [])
+      });
+    });
+    observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] });
+    return () => observer.disconnect();
+  }, []);
   return (
     <div className="performance-optimized" data-optimized={isOptimized}>
       {children}

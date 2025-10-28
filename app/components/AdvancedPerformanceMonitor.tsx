@@ -102,7 +102,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         }
       }
     } catch (error) {
-      // console.warn('Memory measurement failed:', error);    }
+      // console.warn('Memory measurement failed:', error);
+    }
 
     return () => {
       observers.forEach(observer => observer.disconnect());
@@ -110,14 +111,14 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   }, []);
 
   useEffect(() => {
-    if (!enableRealTimeMonitoring) return
+    if (!enableRealTimeMonitoring) return;
 
-    const cleanup = measureWebVitals()
+    const cleanup = measureWebVitals();
 
     // Update metrics every 5 seconds
     const interval = setInterval(() => {
-      measureWebVitals()
-    }, 5000)
+      measureWebVitals();
+    }, 5000);
 
     return () => {
       if (cleanup) cleanup();

@@ -61,7 +61,8 @@ export const AdvancedSEOEnhancer: React.FC<AdvancedSEOEnhancerProps> = ({
 
       setOptimizedData(optimized);
     } catch (error) {
-      // console.warn('SEO optimization error:', error);    }
+      // console.warn('SEO optimization error:', error);
+    }
   }, [seoData, enableAutoOptimization]);
 
   // Generate structured data
