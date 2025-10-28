@@ -122,9 +122,9 @@ export function useAnalytics() {
   }}
 
 // Higher-order component for automatic page view tracking
-export function withAnalytics<T extends React.ComponentType<unknown>>(Analytics.tsPage: T): T {
+export function withAnalytics<T extends React.ComponentType<unknown>>(Page: T): T {
   return ((props: unknown) => {
     const { trackPageView } = useAnalytics();
     React.useEffect(() => {
       trackPageView(window.location.pathname, document.title)}, [trackPageView]);
-    return React.createElement(Analytics.tsPage, props)}) as T}
+    return React.createElement(Page, props)}) as T}

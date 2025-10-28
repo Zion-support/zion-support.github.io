@@ -30,7 +30,7 @@ function AboutPage() {
   );
 }
 
-export default function Wrapped(props: any) {
+export default function Wrapped(props: Record<string, unknown>) {
   return (
     <AboutPage {...props} />
   );

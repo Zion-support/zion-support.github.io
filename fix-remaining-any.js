@@ -12,7 +12,7 @@ files.forEach(file => {
   let content = fs.readFileSync(filePath, 'utf8');
   let modified = false;
 
-  // Fix any types in function parameters
+  // Fix any types in function parameters - more comprehensive patterns
   if (content.includes('props: any')) {
     content = content.replace(/props: any/g, 'props: Record<string, unknown>');
     modified = true;
@@ -24,16 +24,22 @@ files.forEach(file => {
     modified = true;
   }
 
-  // Fix any types in other contexts
+  // Fix any types in other contexts - more comprehensive
   if (content.includes(': any')) {
     content = content.replace(/: any/g, ': unknown');
     modified = true;
   }
 
+  // Fix any types in function parameters with different patterns
+  if (content.includes('(props: any)')) {
+    content = content.replace(/\(props: any\)/g, '(props: Record<string, unknown>)');
+    modified = true;
+  }
+
   if (modified) {
     fs.writeFileSync(filePath, content);
-    console.log(`Fixed any types: ${file}`);
+    console.log(`Fixed remaining any types: ${file}`);
   }
 });
 
-console.log('Any type fixes completed');
+console.log('Remaining any type fixes completed');

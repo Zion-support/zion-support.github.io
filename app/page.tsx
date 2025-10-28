@@ -49,7 +49,7 @@ function HomePage() {
   );
 }
 
-export default function Wrapped(props: any) {
+export default function Wrapped(props: Record<string, unknown>) {
   return (
     <HomePage {...props} />
   );
