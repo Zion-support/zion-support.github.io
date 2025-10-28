@@ -1,9 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-=======
 import Footer from '../components/Footer';
->>>>>>> cursor/fix-errors-and-merge-to-main-c408
+
 
 function Page5gdataanalyticsPage() {
   return (

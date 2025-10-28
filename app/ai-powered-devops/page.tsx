@@ -1,10 +1,7 @@
 
 import React from 'react';
-<<<<<<< HEAD
-import { Brain, BarChart, Target, TrendingUp, CheckCircle } from 'lucide-react';
-=======
 import { Brain, BarChart, Target, TrendingUp, ArrowRight, CheckCircle } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-c408
+
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -131,10 +128,5 @@ export default function AiPoweredDevopsPage() {
       <Footer />
     </>
   );
-<<<<<<< HEAD
 }
-=======
-};
 
-export default AiPoweredDevopsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-c408

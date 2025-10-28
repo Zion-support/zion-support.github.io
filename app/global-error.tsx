@@ -10,14 +10,11 @@ export default function GlobalError({
   error: Error & { digest?: string };
   reset: () => void;
 }) {
-<<<<<<< HEAD
-  useEffect(() => { /* empty */ }, [error]);
-=======
   useEffect(() => {
     // Log the error to an error reporting service
     console.error('Global application error:', error);
   }, [error]);
->>>>>>> cursor/fix-errors-and-merge-to-main-c408
+
 
   return (
     <html>

@@ -1,14 +1,9 @@
 
-<<<<<<< HEAD
-import React from 'react';
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
-=======
 import React from "react";
 import Navigation from "../../components/Navigation";
 import Footer from "../../components/Footer";
 
->>>>>>> cursor/fix-errors-and-merge-to-main-c408
+
 
 
 export const metadata = {
@@ -58,11 +53,7 @@ export default function CybersecurityauditPage() {
       <Footer />
     </>
   );
-};
-
-<<<<<<< HEAD
-=======
-export default CybersecurityauditPage;
+}
 
 
->>>>>>> cursor/fix-errors-and-merge-to-main-c408
+

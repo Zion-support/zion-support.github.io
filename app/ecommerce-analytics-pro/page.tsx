@@ -1,14 +1,9 @@
-<<<<<<< HEAD
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-=======
 
 import React from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 
->>>>>>> cursor/fix-errors-and-merge-to-main-c408
+
 
 import ErrorBoundary from '../components/ErrorBoundary';
 
@@ -22,12 +17,9 @@ export const metadata = {
     type: 'website',
   },
 };
-<<<<<<< HEAD
-export default function EcommerceanalyticsproPage() {
-=======
 
 function EcommerceanalyticsproPage() {
->>>>>>> cursor/fix-errors-and-merge-to-main-c408
+
   return (
     <ErrorBoundary>
       <Navigation />

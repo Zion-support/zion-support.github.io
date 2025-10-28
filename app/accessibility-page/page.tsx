@@ -1,9 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
->>>>>>> cursor/fix-errors-and-merge-to-main-c408
+
 
 function AccessibilitypagePage() {
   return (

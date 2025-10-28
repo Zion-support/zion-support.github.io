@@ -27,13 +27,9 @@ class Analytics {
 
     // In production, you would send this to your analytics service
     if (process.env.NODE_ENV === "production") {
-<<<<<<< HEAD
-      this.sendToAnalytics(event);
-    } else { /* empty */ }
-=======
       this.sendToAnalytics(event)} else {
       console.log("Analytics Event:", event)}
->>>>>>> cursor/fix-errors-and-merge-to-main-c408
+
   }
 
   // Track page views
