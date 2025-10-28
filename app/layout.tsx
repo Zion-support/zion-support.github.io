@@ -1,6 +1,5 @@
 import React from 'react';
 import { Inter } from 'next/font/google';
-import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
