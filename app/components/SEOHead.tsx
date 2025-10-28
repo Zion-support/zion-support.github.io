@@ -1,5 +1,6 @@
 'use client';
 import React, { memo } from 'react';
+import Head from 'next/head';
 
 interface SEOHeadProps {
   title?: string;
