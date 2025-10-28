@@ -76,8 +76,8 @@ files.forEach(file => {
   const seenImports = new Set();
   const seenFunctions = new Set();
   const newLines = [];
-  let inFunction = false;
-  let functionName = '';
+  // let inFunction = false;
+  // let functionName = '';
 
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];

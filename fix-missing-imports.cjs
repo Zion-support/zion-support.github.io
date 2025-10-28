@@ -6,6 +6,7 @@ function fixMissingImports(filePath) {
   try {
     const fullPath = path.join(__dirname, filePath);
     let content = fs.readFileSync(fullPath, 'utf8');
+    let modified = false;
     
     // Check if the file uses ErrorBoundary but doesn't import it
     if (content.includes('ErrorBoundary') && !content.includes('import ErrorBoundary')) {

@@ -46,7 +46,7 @@ function fixAllUnused(filePath) {
           const defaultMatch = line.match(/import\s+(\w+)\s+from\s*['"]([^'"]+)['"]/);
           if (defaultMatch) {
             const importName = defaultMatch[1];
-            const importPath = defaultMatch[2];
+            // const importPath = defaultMatch[2];
             
             // Check if the import is used
             if (content.includes(`<${importName}`) || content.includes(`${importName}(`) || content.includes(`${importName}.`) || content.includes(`${importName} `)) {
