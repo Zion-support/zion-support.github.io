@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-
 export const metadata: Metadata = {
   title: {
     default: 'Zion Tech Group - Leading Technology Solutions Provider',

@@ -3,7 +3,6 @@
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
-import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -63,82 +62,93 @@ function fixSpecificFiles() {
           console.log(`✅ Fixed: ${filePath}`);
           fixedCount++;
         }
-      } catch (error) {
-        console.error(`❌ Error processing ${filePath}:`, error.message);
+        // Skip the ======= line
+        i++;
+        // Skip the conflicting content until >>>>>>> 
+        while (i < lines.length && !lines[i].trim().startsWith('>>>>>>>')) {
+          i++;
+        }
+        // Skip the         i++;
+      } else {
+        resolvedLines.push(line);
+        i++;
       }
     }
+    
+    const resolvedContent = resolvedLines.join('\n');
+    fs.writeFileSync(filePath, resolvedContent, 'utf8');
+    return true;
+  } catch (error) {
+    console.error(`Error resolving conflicts in ${filePath}:`, error.message);
+    return false;
   }
-  
-  return fixedCount;
 }
 
-// Function to fix merge conflict files
-function fixMergeConflictFiles() {
-  const mergeConflictFiles = [
-    '/workspace/app/hooks/useEnhancedPerformance.ts',
-    '/workspace/app/hooks/useForm.ts',
-    '/workspace/app/hooks/useIntersectionObserver.ts',
-    '/workspace/app/hooks/useLazyLoading.ts',
-    '/workspace/app/hooks/usePerformanceMonitor.ts',
-    '/workspace/app/types/app.types.ts',
-    '/workspace/app/types/global.d.ts',
-    '/workspace/app/types/next.d.ts',
-    '/workspace/app/utils/accessibilityUtils.ts',
-    '/workspace/app/utils/apiClient.ts',
-    '/workspace/app/utils/monitoring.ts',
-    '/workspace/app/utils/performanceEnhancer.ts',
-    '/workspace/app/utils/performanceMetrics.ts',
-    '/workspace/app/utils/performanceMonitoring.ts',
-    '/workspace/app/utils/performanceOptimizations.ts',
-    '/workspace/app/utils/performanceUtils.ts',
-    '/workspace/app/utils/securityHeaders.ts',
-    '/workspace/app/utils/seoEnhancer.ts',
-    '/workspace/app/utils/sitemapGenerator.ts',
-    '/workspace/app/utils/testUtils.ts'
-  ];
+// Function to find all TypeScript/JavaScript files
+function findSourceFiles(dir) {
+  const files = [];
   
-  let fixedCount = 0;
-  
-  for (const filePath of mergeConflictFiles) {
-    if (fs.existsSync(filePath)) {
-      try {
-        let content = fs.readFileSync(filePath, 'utf8');
-        const originalContent = content;
-        
-        content = fixMergeConflicts(content);
-        
-        if (content !== originalContent) {
-          fs.writeFileSync(filePath, content);
-          console.log(`✅ Fixed merge conflicts: ${filePath}`);
-          fixedCount++;
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        // Skip node_modules and other irrelevant directories
+        if (!['node_modules', '.git', '.next', 'dist', 'build'].includes(item)) {
+          traverse(fullPath);
         }
-      } catch (error) {
-        console.error(`❌ Error processing ${filePath}:`, error.message);
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx')) {
+        files.push(fullPath);
       }
     }
   }
   
-  return fixedCount;
+  traverse(dir);
+  return files;
 }
 
 // Main execution
-async function main() {
-  console.log('🔧 Fixing specific problematic files...');
-  const specificFixed = fixSpecificFiles();
-  
-  console.log('🔧 Fixing merge conflict files...');
-  const mergeFixed = fixMergeConflictFiles();
-  
-  console.log(`\n🎉 Fixed ${specificFixed + mergeFixed} files!`);
-  
-  // Run linter again to check results
-  console.log('\n🔍 Running linter to check results...');
+console.log('Starting merge conflict resolution...');
+
+const sourceFiles = findSourceFiles(process.cwd());
+let resolvedCount = 0;
+let totalConflicts = 0;
+
+for (const file of sourceFiles) {
   try {
-    execSync('npm run lint', { stdio: 'inherit' });
-    console.log('✅ Linting passed!');
+    const content = fs.readFileSync(file, 'utf8');
+    if (content.includes('<<<<<<< HEAD')) {
+      totalConflicts++;
+      if (resolveMergeConflicts(file)) {
+        resolvedCount++;
+      }
+    }
   } catch (error) {
-    console.log('⚠️  Some linting issues may remain. Check the output above.');
+    console.error(`Error processing ${file}:`, error.message);
   }
 }
 
-main().catch(console.error);
+console.log(`\nMerge conflict resolution complete!`);
+console.log(`Files with conflicts: ${totalConflicts}`);
+console.log(`Files resolved: ${resolvedCount}`);
+
+// Run linting to check for any remaining issues
+console.log('\nRunning linting to check for remaining issues...');
+try {
+  execSync('npm run lint', { stdio: 'inherit' });
+  console.log('Linting passed!');
+} catch (error) {
+  console.log('Linting found issues, but merge conflicts should be resolved.');
+}
+
+// Run type checking
+console.log('\nRunning type checking...');
+try {
+  execSync('npm run type-check', { stdio: 'inherit' });
+  console.log('Type checking passed!');
+} catch (error) {
+  console.log('Type checking found issues, but merge conflicts should be resolved.');
+}

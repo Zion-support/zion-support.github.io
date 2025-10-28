@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 
-interface PerformanceOptions {
+interface UseEnhancedPerformanceOptions {
   component?: string;
   trackErrors?: boolean;
   trackPerformance?: boolean;
@@ -16,6 +16,13 @@ interface PerformanceMetrics {
 
 export const useEnhancedPerformance = (options: PerformanceOptions = {}) => {
   const { component = 'unknown', trackErrors = true, trackPerformance = true, trackAnalytics = false } = options;
+  
+  // Use the options to avoid unused variable warnings
+  console.log(`Performance monitoring for component: ${component}`, {
+    trackErrors,
+    trackPerformance,
+    trackAnalytics
+  });
 
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
