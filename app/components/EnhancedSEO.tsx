@@ -20,3 +20,6 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({ className = '', children }) =
     </div>
   );
 }
+
+
+export default EnhancedSEO;

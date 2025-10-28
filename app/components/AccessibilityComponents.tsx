@@ -15,4 +15,6 @@ const AccessibilityComponents: React.FC<AccessibilityComponentsProps> = ({ class
       {children}
     </div>
   );
-}
+};
+
+export default AccessibilityComponents;

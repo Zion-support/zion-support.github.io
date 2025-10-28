@@ -21,8 +21,8 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
     return { hasError: true };
   }
 
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
+  componentDidCatch(_error: Error, errorInfo: React.ErrorInfo) {
+    console.error('ErrorBoundary caught an error:', _error, errorInfo);
   }
 
   render() {
@@ -34,7 +34,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
               Something went wrong
             </h1>
             <p className="text-gray-600 mb-4">
-              We're sorry, but something unexpected happened.
+              We&apos;re sorry, but something unexpected happened.
             </p>
             <button
               onClick={() => window.location.reload()}

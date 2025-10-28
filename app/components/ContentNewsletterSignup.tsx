@@ -15,4 +15,6 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ class
       {children}
     </div>
   );
-}
+};
+
+export default ContentNewsletterSignup;

@@ -22,7 +22,7 @@ export default function GlobalError({
               Something went wrong!
             </h1>
             <p className="text-gray-600 mb-4">
-              We're sorry, but something unexpected happened.
+              We&apos;re sorry, but something unexpected happened.
             </p>
             <button
               onClick={() => reset()}

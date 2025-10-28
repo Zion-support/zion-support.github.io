@@ -20,3 +20,6 @@ const ContentStatistics: React.FC<ContentStatisticsProps> = ({ className = '', c
     </div>
   );
 }
+
+
+export default ContentStatistics;

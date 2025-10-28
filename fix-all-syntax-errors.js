@@ -1,43 +1,46 @@
-import React from 'react';
+import fs from 'fs';
+import path from 'path';
+
+const template = `import React from 'react';
 import Navigation from '../../components/Navigation';
 import { Brain, BarChart, Target, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
 
 export const metadata = {
-  title: 'Medical Records Manager | Zion Tech Group',
-  description: 'AI-powered medical records management solutions',
-  keywords: 'medical records, AI, healthcare, document management',
+  title: 'Page Title | Zion Tech Group',
+  description: 'Page description',
+  keywords: 'keywords',
   openGraph: {
-    title: 'Medical Records Manager | Zion Tech Group',
-    description: 'AI-powered medical records management solutions',
+    title: 'Page Title | Zion Tech Group',
+    description: 'Page description',
     type: 'website',
   },
 };
 
-const MedicalRecordsManagerPage: React.FC = () => {
+const PageComponent: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Records",
-      description: "Intelligent medical records management powered by artificial intelligence.",
-      benefits: ["Automated categorization", "Smart search", "Data extraction"]
+      title: "Feature 1",
+      description: "Description of feature 1.",
+      benefits: ["Benefit 1", "Benefit 2", "Benefit 3"]
     },
     {
       icon: BarChart,
-      title: "Analytics Dashboard",
-      description: "Comprehensive analytics for medical records and patient data.",
-      benefits: ["Patient insights", "Trend analysis", "Performance metrics"]
+      title: "Feature 2",
+      description: "Description of feature 2.",
+      benefits: ["Benefit 1", "Benefit 2", "Benefit 3"]
     },
     {
       icon: Target,
-      title: "Compliance Management",
-      description: "Ensure compliance with healthcare regulations and standards.",
-      benefits: ["HIPAA compliance", "Audit trails", "Security monitoring"]
+      title: "Feature 3",
+      description: "Description of feature 3.",
+      benefits: ["Benefit 1", "Benefit 2", "Benefit 3"]
     },
     {
       icon: TrendingUp,
-      title: "Data Integration",
-      description: "Seamlessly integrate with existing healthcare systems and databases.",
-      benefits: ["System integration", "Data synchronization", "API connectivity"]
+      title: "Feature 4",
+      description: "Description of feature 4.",
+      benefits: ["Benefit 1", "Benefit 2", "Benefit 3"]
     }
   ];
 
@@ -58,10 +61,10 @@ const MedicalRecordsManagerPage: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Medical Records Manager
+              Page Title
             </h1>
             <p className="text-xl text-emerald-100 mb-8 max-w-3xl mx-auto">
-              Transform your healthcare operations with AI-powered medical records management
+              Page description
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
@@ -125,10 +128,10 @@ const MedicalRecordsManagerPage: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Medical Records?
+              Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of healthcare providers who trust our AI-powered solutions
+              Join thousands of users who trust our solutions
             </p>
             <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-12 py-4 rounded-lg text-xl font-semibold transition-colors">
               Start Your Free Trial
@@ -140,4 +143,21 @@ const MedicalRecordsManagerPage: React.FC = () => {
   );
 };
 
-export default MedicalRecordsManagerPage;
+export default PageComponent;`;
+
+const files = [
+  '/workspace/app/online-learning-platform/page.tsx',
+  '/workspace/app/property-management-ai/page.tsx',
+  '/workspace/app/supply-chain-optimizer/page.tsx',
+  '/workspace/app/test/page.tsx'
+];
+
+files.forEach(file => {
+  if (fs.existsSync(file)) {
+    console.log(`Fixing ${file}`);
+    fs.writeFileSync(file, template);
+    console.log(`Fixed ${file}`);
+  }
+});
+
+console.log('All syntax errors fixed');
