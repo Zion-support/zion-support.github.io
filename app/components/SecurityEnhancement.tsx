@@ -77,13 +77,15 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
         // Blocked suspicious console usage
         return;
       }
+      // eslint-disable-next-line no-console
       return originalConsole.apply(console, args);
     };
 
     // Monitor for eval usage
     const originalEval = window.eval;
     window.eval = function(code) {
-
+      // eslint-disable-next-line no-console
+      console.log('Eval usage detected:', code);
       return originalEval.call(window, code);
     };
   }, []);
