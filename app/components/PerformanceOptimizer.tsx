@@ -44,6 +44,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       document.head.appendChild(link);
     });
 
+<<<<<<< HEAD
     // Optimize images
     const images = document.querySelectorAll('img');
     images.forEach(img => {
@@ -51,6 +52,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         img.loading = 'lazy';
       }
     });
+=======
+>>>>>>> c34c6d8b179c4216163a71fc845474c555a66123
 
     // Add performance monitoring
     const monitorPerformance = () => {
@@ -74,29 +77,20 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       }
     };
 
-    // Optimize images - set decoding attribute
-    const allImages = document.querySelectorAll('img');
-    allImages.forEach((img) => {
-      if (!img.decoding) {
-        img.decoding = 'async';
-      }
-    });
-
-    // Optimize images function
+    // Optimize images
     const optimizeImages = () => {
       const images = document.querySelectorAll('img');
       images.forEach((img) => {
-        if (!img.loading) {
-          img.loading = 'lazy';
-        }
         if (!img.decoding) {
           img.decoding = 'async';
         }
+        if (!img.loading) {
+          img.loading = 'lazy';
+        }
       });
     };
-
-    optimizeImages();
     monitorPerformance();
+    optimizeImages();
 
     // Enable service worker
     if ('serviceWorker' in navigator) {
