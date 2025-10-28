@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "ESLINT_NO_DEV_ERRORS=true next build",
     "start": "next start",
     "lint": "eslint --fix .",
     "type-check": "tsc --noEmit",

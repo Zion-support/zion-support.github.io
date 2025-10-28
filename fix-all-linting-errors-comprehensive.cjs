@@ -1,3 +1,4 @@
+/* global console, __dirname, process */
 #!/usr/bin/env node
 
 const fs = require('fs');
