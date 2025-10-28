@@ -1,35 +1,34 @@
 'use client';
 
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-
-const PageNew: React.FC = () => {
+const PageOriginal: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: "New Solutions",
-      description: "Cutting-edge solutions for modern businesses.",
-      benefits: ["Innovation", "Technology", "Advancement"]
+      title: "AI-Powered Solutions",
+      description: "Advanced AI solutions for modern businesses.",
+      benefits: ["Automation", "Intelligence", "Efficiency"]
     },
     {
       icon: BarChart,
-      title: "Analytics",
-      description: "Advanced analytics and reporting capabilities.",
-      benefits: ["Data", "Insights", "Reporting"]
+      title: "Analytics Dashboard",
+      description: "Comprehensive analytics and reporting.",
+      benefits: ["Real-time data", "Insights", "Performance"]
     },
     {
       icon: Target,
-      title: "Targeting",
-      description: "Precise targeting and optimization.",
-      benefits: ["Accuracy", "Precision", "Targeting"]
+      title: "Goal Achievement",
+      description: "Achieve your business goals with our solutions.",
+      benefits: ["Targeting", "Success", "Growth"]
     },
     {
       icon: TrendingUp,
-      title: "Growth",
-      description: "Sustainable growth and optimization.",
-      benefits: ["Growth", "Optimization", "Success"]
+      title: "Growth Optimization",
+      description: "Optimize your business for sustainable growth.",
+      benefits: ["Optimization", "Growth", "Success"]
     }
   ];
 
@@ -51,10 +50,10 @@ const PageNew: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              NewPage
+              OriginalPage
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced NewPage solution for modern businesses.
+              Advanced OriginalPage solution for modern businesses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
@@ -140,4 +139,4 @@ const PageNew: React.FC = () => {
   );
 };
 
-export default PageNew;
+export default PageOriginal;

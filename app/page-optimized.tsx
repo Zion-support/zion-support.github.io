@@ -1,35 +1,35 @@
 'use client';
 
 import React from 'react';
-// import Navigation from '../components/Navigation';
-// import Footer from '../components/Footer';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 
 const PageOptimized: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+      title: "Optimized Solutions",
+      description: "Highly optimized solutions for maximum performance.",
+      benefits: ["Performance", "Efficiency", "Speed"]
     },
     {
       icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+      title: "Analytics",
+      description: "Advanced analytics and reporting capabilities.",
+      benefits: ["Data", "Insights", "Reporting"]
     },
     {
       icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+      title: "Precision",
+      description: "Precise targeting and optimization.",
+      benefits: ["Accuracy", "Precision", "Targeting"]
     },
     {
       icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+      title: "Growth",
+      description: "Sustainable growth and optimization.",
+      benefits: ["Growth", "Optimization", "Success"]
     }
   ];
 
@@ -44,7 +44,7 @@ const PageOptimized: React.FC = () => {
   return (
     <>
             {/* SEO handled by layout.tsx */}
-      {/* <Navigation /> */}
+      <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
@@ -135,7 +135,7 @@ const PageOptimized: React.FC = () => {
           </div>
         </section>
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };
