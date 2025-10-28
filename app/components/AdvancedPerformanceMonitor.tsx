@@ -56,10 +56,16 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     try {
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries()
+<<<<<<< HEAD
         entries.forEach((entry: PerformanceEntry) => {
           const fidEntry = entry as PerformanceEntry & { processingStart?: number };
           if (fidEntry.processingStart && entry.startTime) {
             setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart! - entry.startTime }));
+=======
+        entries.forEach((entry: PerformanceEntry & { processingStart?: number }) => {
+          if (entry.processingStart && entry.startTime) {
+            setMetrics(prev => ({ ...prev, fid: entry.processingStart! - entry.startTime }));
+>>>>>>> 340a4d13198cc97970ed1335128f0176cd30b885
           }
         });
       });
@@ -101,10 +107,15 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     // Measure Memory Usage
     try {
       if ('memory' in performance) {
+<<<<<<< HEAD
         const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
         if (memory) {
           setMetrics(prev => ({ ...prev, memory: memory.usedJSHeapSize }));
         }
+=======
+        const memory = (performance as { memory: { usedJSHeapSize: number } }).memory;
+        setMetrics(prev => ({ ...prev, memory: memory.usedJSHeapSize }));
+>>>>>>> 340a4d13198cc97970ed1335128f0176cd30b885
       }
     } catch (error) {
       console.warn('Memory measurement failed:', error);
