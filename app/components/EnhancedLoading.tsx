@@ -1,18 +1,16 @@
 import React from 'react';
 
 interface EnhancedLoadingProps {
-  className?: string;
-  children?: React.ReactNode;
+  message?: string;
+  size?: 'sm' | 'md' | 'lg';
 }
 
-const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({ className = '', children }) => {
+const EnhancedLoading: React.FC<EnhancedLoadingProps> = (_props) => {
   return (
-    <div className={`enhancedloading-component ${className}`}>
-      {children}
+    <div>
+      {/* Component content */}
     </div>
   );
 };
-
-EnhancedLoading.displayName = 'EnhancedLoading';
 
 export default EnhancedLoading;
