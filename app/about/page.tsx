@@ -2,12 +2,11 @@ import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { metadata } from '../constants/about-metadata';
 
-export const dynamic = 'force-static';
-
 export { metadata };
 
-export default function AboutPage() {
+export const dynamic = 'force-static';
 
+export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white">
       
@@ -109,4 +108,3 @@ export default function AboutPage() {
     </div>
   );
 }
-
