@@ -1,6 +1,5 @@
 'use client';
 
-
 import React, { useEffect, useState, useCallback } from 'react';
 import Head from 'next/head';
 
@@ -62,7 +61,7 @@ export const AdvancedSEOEnhancer: React.FC<AdvancedSEOEnhancerProps> = ({
 
       setOptimizedData(optimized);
     } catch (error) {
-      console.warn('SEO optimization error:', error);
+      console.warn('Error caught:', error);
     }
   }, [seoData, enableAutoOptimization]);
 
@@ -104,8 +103,7 @@ export const AdvancedSEOEnhancer: React.FC<AdvancedSEOEnhancerProps> = ({
 
       return structuredData;
     } catch (error) {
-      console.warn('Structured data generation error:', error);
-      return null;
+            return null;
     }
   }, [optimizedData, enableStructuredData]);
 
@@ -134,16 +132,9 @@ export const AdvancedSEOEnhancer: React.FC<AdvancedSEOEnhancerProps> = ({
         <>
           <meta property="og:title" content={optimizedData.title} />
           <meta property="og:description" content={optimizedData.description} />
-          <meta property="og:image" content={optimizedData.ogImage} />
           <meta property="og:url" content={optimizedData.canonicalUrl} />
-          <meta property="og:type" content={optimizedData.ogType || 'website'} />
+          <meta property="og:type" content="website" />
           <meta property="og:site_name" content="Zion Tech Group" />
-          
-          {/* Twitter Card Meta Tags */}
-          <meta name="twitter:card" content={optimizedData.twitterCard || 'summary_large_image'} />
-          <meta name="twitter:title" content={optimizedData.title} />
-          <meta name="twitter:description" content={optimizedData.description} />
-          <meta name="twitter:image" content={optimizedData.ogImage} />
         </>
       )}
 
@@ -152,7 +143,7 @@ export const AdvancedSEOEnhancer: React.FC<AdvancedSEOEnhancerProps> = ({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData),
+            __html: JSON.stringify(structuredData)
           }}
         />
       )}

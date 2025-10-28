@@ -135,6 +135,7 @@ export default [
       'prefer-const': 'warn',
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
+      'no-empty': 'off',
     },
   },
 ];

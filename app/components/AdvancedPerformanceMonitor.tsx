@@ -1,6 +1,5 @@
 'use client';
 
-
 import React, { useState, useCallback, useEffect } from 'react';
 
 interface PerformanceMetrics {
@@ -13,7 +12,7 @@ interface PerformanceMetrics {
 }
 
 interface PerformanceMonitorProps {
-  onMetricsUpdate?: (_metrics: PerformanceMetrics) => void;
+  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
   enableRealTimeMonitoring?: boolean;
 }
 
@@ -49,7 +48,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       fcpObserver.observe({ entryTypes: ['paint'] });
       observers.push(fcpObserver);
     } catch (error) {
-      console.warn('FCP measurement failed:', error);
+      console.warn('Error caught:', error);
     }
 
     // Measure First Input Delay (FID)
@@ -66,7 +65,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       fidObserver.observe({ entryTypes: ['first-input'] });
       observers.push(fidObserver);
     } catch (error) {
-      console.warn('FID measurement failed:', error);
+      console.warn('Error caught:', error);
     }
 
     // Measure Cumulative Layout Shift (CLS)
@@ -84,7 +83,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       clsObserver.observe({ entryTypes: ['layout-shift'] });
       observers.push(clsObserver);
     } catch (error) {
-      console.warn('CLS measurement failed:', error);
+      console.warn('Error caught:', error);
     }
 
     // Measure Time to First Byte (TTFB)
@@ -95,7 +94,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         setMetrics(prev => ({ ...prev, ttfb }));
       }
     } catch (error) {
-      console.warn('TTFB measurement failed:', error);
+      console.warn('Error caught:', error);
     }
 
     // Measure Memory Usage
@@ -107,7 +106,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         }
       }
     } catch (error) {
-      console.warn('Memory measurement failed:', error);
+      console.warn('Error caught:', error);
     }
 
     return () => {
