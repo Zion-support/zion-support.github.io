@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-import Navigation from '../components/Navigation';
-
-=======
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
->>>>>>> 87c6cd40b012dd3702d84b18085574d3b52981fb
 
 export const metadata = {
   title: 'Ecommerce Analytics Pro | Zion Tech Group',

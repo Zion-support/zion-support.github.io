@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import Navigation from '../../components/Navigation';
-import ErrorBoundary from '../../components/ErrorBoundary';
-import Footer from '../../components/Footer';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'AI Email Assistant | Zion Tech Group',
-  description: 'AI-powered email assistant for better communication',
-  keywords: 'AI email assistant, email automation, communication, productivity',
-  openGraph: {
-    title: 'AI Email Assistant | Zion Tech Group',
-    description: 'AI-powered email assistant for better communication',
-    type: 'website',
-  },
-};
-
-=======
 import React from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
@@ -32,7 +14,6 @@ export const metadata: Metadata = {
     type: 'website',
   },
 };
->>>>>>> 87c6cd40b012dd3702d84b18085574d3b52981fb
 function AiemailassistantPage() {
   return (
     <>
@@ -43,13 +24,8 @@ function AiemailassistantPage() {
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Ai Email Assistant
             </h1>
-<<<<<<< HEAD
-            <p className="text-xl text-emerald-100 mb-8 max-w-3xl mx-auto">
-              AI-powered email assistant for better communication and productivity
-=======
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Professional ai email assistant services powered by advanced AI and technology.
->>>>>>> 87c6cd40b012dd3702d84b18085574d3b52981fb
             </p>
             <p className="text-lg text-gray-400 mb-12 max-w-4xl mx-auto">
               Transform your business with our cutting-edge ai email assistant solutions. 
@@ -83,8 +59,4 @@ export default function Wrapped(props: { [key: string]: unknown }) {
       <AiemailassistantPage {...props} />
     </ErrorBoundary>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 87c6cd40b012dd3702d84b18085574d3b52981fb

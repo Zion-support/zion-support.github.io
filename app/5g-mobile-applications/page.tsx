@@ -1,28 +1,6 @@
 'use client';
 import ErrorBoundary from '../components/ErrorBoundary';
 
-<<<<<<< HEAD
-function Page() {
-  return (
-    <ErrorBoundary>
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-6">
-            Page
-          </h1>
-          <div className="prose max-w-none">
-            <p className="text-lg text-gray-600">
-              This page is under development. Content will be added soon.
-            </p>
-          </div>
-        </div>
-      </div>
-    </ErrorBoundary>
-  );
-}
-
-=======
->>>>>>> 87c6cd40b012dd3702d84b18085574d3b52981fb
 export default function FiveGMobileApplications() {
   return (
     <ErrorBoundary>

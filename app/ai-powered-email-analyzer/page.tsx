@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-import React from 'react';
-import Navigation from '../components/Navigation';
-import ErrorBoundary from '../components/ErrorBoundary';
-=======
 
 import React from 'react';
 import { Brain, BarChart, Target, TrendingUp, ArrowRight, CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
->>>>>>> 87c6cd40b012dd3702d84b18085574d3b52981fb
 
 export const metadata = {
   title: 'AI-Powered Email Analyzer | Zion Tech Group',
@@ -20,10 +14,6 @@ export const metadata = {
     type: 'website',
   },
 };
-<<<<<<< HEAD
-
-function AiPoweredEmailAnalyzerPage() {
-=======
 export default function AiPoweredEmailAnalyzerPage() {
   const features = [
     {
@@ -59,7 +49,6 @@ const benefits = [
     'Gain competitive advantage with advanced email technology'
   ];
 
->>>>>>> 87c6cd40b012dd3702d84b18085574d3b52981fb
   return (
     <>
       <Navigation />
@@ -91,21 +80,6 @@ const benefits = [
               </a>
             </div>
           </div>
-<<<<<<< HEAD
-        </div>
-      </div>
-    </div>
-  );
-}
-
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <AiPoweredEmailAnalyzerPage {...props} />
-    </ErrorBoundary>
-  );
-}
-=======
 
           {/* Features Section */}
           <div className="mt-24">
@@ -153,4 +127,3 @@ export default function Wrapped(props: { [key: string]: unknown }) {
     </>
   );
 }
->>>>>>> 87c6cd40b012dd3702d84b18085574d3b52981fb

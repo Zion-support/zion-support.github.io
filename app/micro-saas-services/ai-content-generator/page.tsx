@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import Navigation from '../../components/Navigation';
-import ErrorBoundary from '../../components/ErrorBoundary';
-import Footer from '../../components/Footer';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'AI Content Generator | Zion Tech Group',
-  description: 'Generate high-quality content with AI-powered solutions',
-  keywords: 'AI content generator, content creation, marketing, automation',
-=======
 import React from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
@@ -19,17 +8,12 @@ export const metadata: Metadata = {
   title: 'Page - Zion Tech Group',
   description: 'Professional services and solutions by Zion Tech Group.',
   keywords: 'technology, services, solutions',
->>>>>>> 87c6cd40b012dd3702d84b18085574d3b52981fb
   openGraph: {
     title: 'Ai Content Generator | Zion Tech Group',
     description: 'Professional ai content generator services by Zion Tech Group.',
     type: 'website',
   },
 };
-<<<<<<< HEAD
-
-=======
->>>>>>> 87c6cd40b012dd3702d84b18085574d3b52981fb
 function AicontentgeneratorPage() {
   return (
     <>
@@ -75,8 +59,4 @@ export default function Wrapped(props: { [key: string]: unknown }) {
       <AicontentgeneratorPage {...props} />
     </ErrorBoundary>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 87c6cd40b012dd3702d84b18085574d3b52981fb

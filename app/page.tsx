@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-import Navigation from '../components/Navigation';
-import { Metadata } from 'next';
-=======
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 
->>>>>>> 87c6cd40b012dd3702d84b18085574d3b52981fb
 export const metadata: Metadata = {
   title: 'Zion Tech Group - AI Solutions & Technology Services',
   description: 'Leading technology company specializing in AI solutions, cloud infrastructure, and innovative software development services.',

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import ErrorBoundary from '../components/ErrorBoundary';
-=======
->>>>>>> 87c6cd40b012dd3702d84b18085574d3b52981fb
 import React from "react";
 import { ErrorBoundary } from '../components/ErrorBoundary';
 

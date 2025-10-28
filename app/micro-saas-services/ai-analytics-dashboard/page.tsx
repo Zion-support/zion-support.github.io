@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-import Navigation from '../../components/Navigation';
-import ErrorBoundary from '../../components/ErrorBoundary';
-import Footer from '../../components/Footer';
-=======
 import React from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 import ErrorBoundary from '../../components/ErrorBoundary';
->>>>>>> 87c6cd40b012dd3702d84b18085574d3b52981fb
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {

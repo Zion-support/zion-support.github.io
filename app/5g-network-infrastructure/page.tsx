@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import ErrorBoundary from '../components/ErrorBoundary';
-=======
->>>>>>> 87c6cd40b012dd3702d84b18085574d3b52981fb
 import React from "react";
 import { Brain, BarChart, Target, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -9,36 +5,16 @@ import Footer from '../components/Footer';
 
 export const metadata = {
   title: '5G Network Infrastructure | Zion Tech Group',
-<<<<<<< HEAD
-  description: 'Advanced 5G network infrastructure solutions for modern connectivity.',
-  keywords: '5G, network infrastructure, connectivity, telecommunications',
-  openGraph: {
-    title: '5G Network Infrastructure | Zion Tech Group',
-    description: 'Advanced 5G network infrastructure solutions for modern connectivity.',
-=======
   description: 'Professional 5G network infrastructure services by Zion Tech Group. Advanced 5G technology solutions.',
   keywords: '5G, network infrastructure, technology, services, AI, automation',
   openGraph: {
     title: '5G Network Infrastructure | Zion Tech Group',
     description: 'Professional 5G network infrastructure services by Zion Tech Group.',
->>>>>>> 87c6cd40b012dd3702d84b18085574d3b52981fb
     type: 'website',
   },
 };
 
 export default function FiveGNetworkInfrastructure() {
-<<<<<<< HEAD
-  return (
-    <ErrorBoundary>
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-6">
-            5G Network Infrastructure
-          </h1>
-          <div className="prose max-w-none">
-            <p className="text-lg text-gray-600">
-              Advanced 5G network infrastructure solutions for modern connectivity.
-=======
   const features = [
     {
       icon: Brain,
@@ -85,7 +61,6 @@ export default function FiveGNetworkInfrastructure() {
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Professional 5G network infrastructure services powered by advanced AI and technology.
->>>>>>> 87c6cd40b012dd3702d84b18085574d3b52981fb
             </p>
             <p className="text-lg text-gray-400 mb-12 max-w-4xl mx-auto">
               Transform your network operations with our cutting-edge 5G infrastructure solutions. 
@@ -150,14 +125,8 @@ export default function FiveGNetworkInfrastructure() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </ErrorBoundary>
-  );
-}
-=======
       <Footer />
     </>
   );
 }
 
->>>>>>> 87c6cd40b012dd3702d84b18085574d3b52981fb

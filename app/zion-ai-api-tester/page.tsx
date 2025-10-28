@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-import Navigation from '../components/Navigation';
-=======
 import React from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
->>>>>>> 87c6cd40b012dd3702d84b18085574d3b52981fb
 
 
 export const metadata = {
@@ -26,11 +22,7 @@ function ZionaiapitesterPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-<<<<<<< HEAD
-              Zion AI API Tester
-=======
               Zion Ai Api Tester
->>>>>>> 87c6cd40b012dd3702d84b18085574d3b52981fb
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Professional zion ai api tester services powered by advanced AI and technology.
@@ -56,10 +48,7 @@ function ZionaiapitesterPage() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-=======
       <Footer />
->>>>>>> 87c6cd40b012dd3702d84b18085574d3b52981fb
     </>
   );
 }
