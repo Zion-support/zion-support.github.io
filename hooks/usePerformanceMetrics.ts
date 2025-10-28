@@ -41,10 +41,11 @@ export function usePerformanceMetrics() {
     new PerformanceObserver(list => {
       const entries = list.getEntries();
       entries.forEach(entry => {
-        if ((entry as any).processingStart && entry.startTime) {
+        const fidEntry = entry as PerformanceEventTiming;
+        if (fidEntry.processingStart && entry.startTime) {
           setMetrics(prev => ({ 
             ...prev, 
-            fid: (entry as any).processingStart - entry.startTime 
+            fid: fidEntry.processingStart - entry.startTime 
           }));
         }
       });
@@ -55,8 +56,9 @@ export function usePerformanceMetrics() {
     new PerformanceObserver(list => {
       const entries = list.getEntries();
       entries.forEach(entry => {
-        if (!(entry as any).hadRecentInput) {
-          clsValue += (entry as any).value;
+        const clsEntry = entry as LayoutShift;
+        if (!clsEntry.hadRecentInput) {
+          clsValue += clsEntry.value;
         }
       });
       setMetrics(prev => ({ ...prev, cls: clsValue }));
@@ -66,10 +68,11 @@ export function usePerformanceMetrics() {
     new PerformanceObserver(list => {
       const entries = list.getEntries();
       entries.forEach(entry => {
-        if ((entry as any).responseStart && (entry as any).requestStart) {
+        const ttfbEntry = entry as PerformanceNavigationTiming;
+        if (ttfbEntry.responseStart && ttfbEntry.requestStart) {
           setMetrics(prev => ({ 
             ...prev, 
-            ttfb: (entry as any).responseStart - (entry as any).requestStart 
+            ttfb: ttfbEntry.responseStart - ttfbEntry.requestStart 
           }));
         }
       });

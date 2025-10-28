@@ -67,15 +67,15 @@ export class ErrorHandler {
   }
 }
 
-export const errorHandler = ErrorHandler.getInstance();
+export const _errorHandler = ErrorHandler.getInstance();
 
 // Global error handler
 if (typeof window !== 'undefined') {
-  window.addEventListener('error', (event: ErrorEvent) => {
+  window.addEventListener(_'error', _(event: ErrorEvent) => {
     errorHandler.logError(event.error);
   });
 
-  window.addEventListener('unhandledrejection', (event: any) => {
+  window.addEventListener(_'unhandledrejection', _(event: unknown) => {
     errorHandler.logError(new Error(event.reason));
   });
 }

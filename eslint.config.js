@@ -7,15 +7,35 @@ export default [
     ignores: ['next-env.d.ts', '**/*.d.ts', '.next/**/*'],
   },
   {
-    files: ['**/*.test.*', '**/*.spec.*', 'jest.setup.*', 'jest.config.*'],
+    files: ['**/*.ts', '**/*.tsx'],
     languageOptions: {
       parser: typescriptParser,
       parserOptions: {
-        ecmaVersion: 2022,
+        ecmaVersion: 'latest',
         sourceType: 'module',
         ecmaFeatures: {
           jsx: true,
         },
+      },
+    },
+    plugins: {
+      '@typescript-eslint': typescript,
+    },
+    rules: {
+      ...typescript.configs.recommended.rules,
+      '@typescript-eslint/triple-slash-reference': 'off',
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/no-empty-object-type': 'warn',
+    },
+  },
+  {
+    files: ['**/*.test.*', '**/*.spec.*', 'jest.setup.*', 'jest.config.*'],
+    languageOptions: {
+      parser: typescriptParser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
       },
       globals: {
         jest: 'readonly',
@@ -29,26 +49,52 @@ export default [
     plugins: {
       '@typescript-eslint': typescript,
     },
+    rules: {
+      ...typescript.configs.recommended.rules,
+      '@typescript-eslint/triple-slash-reference': 'off',
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/no-empty-object-type': 'warn',
+    },
   },
   {
-    files: ['**/*.ts', '**/*.tsx'],
+    files: ['**/*.js', '**/*.jsx', '**/*.cjs'],
+    ...js.configs.recommended,
     languageOptions: {
-      parser: typescriptParser,
-      parserOptions: {
-        ecmaVersion: 2022,
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true,
-        },
+      globals: {
+        console: 'readonly',
+        process: 'readonly',
+        require: 'readonly',
+        module: 'readonly',
+        global: 'readonly',
+        self: 'readonly',
+        caches: 'readonly',
+        fetch: 'readonly',
+        Response: 'readonly',
+        URL: 'readonly',
+        URLSearchParams: 'readonly',
       },
     },
-    plugins: {
-      '@typescript-eslint': typescript,
+    rules: {
+      '@typescript-eslint/no-require-imports': 'off',
     },
   },
   {
-    rules: {
-      '@typescript-eslint/triple-slash-reference': 'off',
+    files: ['**/api/**/*.js', '**/scripts/**/*.js', '**/public/**/*.js'],
+    languageOptions: {
+      globals: {
+        console: 'readonly',
+        process: 'readonly',
+        require: 'readonly',
+        module: 'readonly',
+        global: 'readonly',
+        self: 'readonly',
+        caches: 'readonly',
+        fetch: 'readonly',
+        Response: 'readonly',
+        URL: 'readonly',
+        URLSearchParams: 'readonly',
+      },
     },
   },
 ];
