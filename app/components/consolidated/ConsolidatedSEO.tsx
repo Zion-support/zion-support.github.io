@@ -13,7 +13,7 @@ interface ConsolidatedSEOProps {
   className?: string;
 }
 
-const ConsolidatedSEO: React.FC<ConsolidatedSEOProps> = memo(({ title = 'Zion Tech Group - Advanced AI & IT Solutions', _description = 'Leading provider of AI-powered solutions, _cybersecurity, _and digital transformation services.', _keywords = 'AI solutions, _IT services, _cybersecurity, _cloud computing, _digital transformation', _image = '/og-image.jpg', url = 'https://ziontechgroup.com', _type = 'website', _className = ''
+const ConsolidatedSEO: React.FC<ConsolidatedSEOProps> = memo(({ title = 'Zion Tech Group - Advanced AI & IT Solutions', description = 'Leading provider of AI-powered solutions, _cybersecurity, _and digital transformation services.', keywords = 'AI solutions, _IT services, _cybersecurity, _cloud computing, _digital transformation', image = '/og-image.jpg', url = 'https://ziontechgroup.com', type = 'website', className = ''
   }) => {
   // Add structured data
   const addStructuredData = useCallback(() => {
@@ -75,7 +75,7 @@ const ConsolidatedSEO: React.FC<ConsolidatedSEOProps> = memo(({ title = 'Zion Te
 
     metaTags.forEach(tag => {
       const meta = document.createElement('meta');
-      Object.entries(tag).forEach(([key, _value]) => {
+      Object.entries(tag).forEach(([key, value]) => {
         meta.setAttribute(key, value);
       });
       document.head.appendChild(meta);
@@ -122,7 +122,7 @@ const ConsolidatedSEO: React.FC<ConsolidatedSEOProps> = memo(({ title = 'Zion Te
 
     hreflangTags.forEach(tag => {
       const link = document.createElement('link');
-      Object.entries(tag).forEach(([key, _value]) => {
+      Object.entries(tag).forEach(([key, value]) => {
         link.setAttribute(key, value);
       });
       document.head.appendChild(link);

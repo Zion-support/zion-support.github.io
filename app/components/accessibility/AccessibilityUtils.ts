@@ -37,7 +37,7 @@ export const addSkipLinks = () => {
   document.body.insertBefore(skipLink, document.body.firstChild);
 };
 
-export const announceToScreenReader = (message: string) => {
+export const announceToScreenReader = (message:, string) => {
   const announcement = document.createElement('div');
   announcement.setAttribute('aria-live', 'polite');
   announcement.setAttribute('aria-atomic', 'true');
@@ -45,14 +45,14 @@ export const announceToScreenReader = (message: string) => {
   announcement.textContent = message;
   document.body.appendChild(announcement);
   
-  setTimeout(_() => {
+  setTimeout(() => {
     document.body.removeChild(announcement);
   }, 1000);
 };
 
 export const checkColorContrast = (foreground: string, background: string): boolean => {
   // Simple contrast ratio check (simplified version)
-  const getLuminance = (color: string) => {
+  const getLuminance = (color:, string) => {
     const rgb = color.match(/\d+/g);
     if (!rgb) return 0;
     const [r, g, b] = rgb.map(Number);

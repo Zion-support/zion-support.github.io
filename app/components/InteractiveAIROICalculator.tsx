@@ -5,7 +5,7 @@ interface InteractiveAIROICalculatorProps {
   children?: React.ReactNode;
 }
 
-const InteractiveAIROICalculator: React.FC<InteractiveAIROICalculatorProps> = (_{ className = '', _children }) => {
+const InteractiveAIROICalculator: React.FC<InteractiveAIROICalculatorProps> = (_{ className = '', children }) => {
   return (
     <div className={`interactiveairoicalculator-component ${className}`}>
       {children}

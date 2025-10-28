@@ -9,7 +9,7 @@ interface WebVitalsMetric {
 }
 
 export const useWebVitals = (onPerfEntry?: (metric: WebVitalsMetric) => void) => {
-  useEffect(_() => {
+  useEffect(() => {
     if (onPerfEntry && typeof window !== 'undefined') {
       // Use the existing monitoring service instead of web-vitals
       // This avoids API compatibility issues
@@ -17,17 +17,17 @@ export const useWebVitals = (onPerfEntry?: (metric: WebVitalsMetric) => void) =>
   }, [onPerfEntry]);
 };
 
-export const reportWebVitals = (metric: WebVitalsMetric) => {
-  if (process.env.NODE_ENV === 'development') { /* No action needed */ }
+export const reportWebVitals = (metric:, WebVitalsMetric) => {
+  if (process.env.NODEENV === 'development') { /* No action needed */ }
   
   // Send to analytics
   if (typeof window !== 'undefined' && 'gtag' in window) {
     const gtag = (window as { gtag: (...args: unknown[]) => void }).gtag;
     gtag('event', metric.name, {
       value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-      event_category: 'Web Vitals',
-      event_label: metric.id,
-      non_interaction: true,
+      eventcategory: 'Web Vitals',
+      eventlabel: metric.id,
+      noninteraction: true,
     });
   }
 };

@@ -5,7 +5,7 @@ interface SecurityEnhancerProps {
   children?: React.ReactNode;
 }
 
-const SecurityEnhancer: React.FC<SecurityEnhancerProps> = (_{ className = '', _children }) => {
+const SecurityEnhancer: React.FC<SecurityEnhancerProps> = (_{ className = '', children }) => {
   return (
 <div className={`security-enhancer ${className}`}>
       {children || <h2>SecurityEnhancer</h2>}

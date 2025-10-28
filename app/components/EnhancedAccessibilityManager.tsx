@@ -9,7 +9,7 @@ interface EnhancedAccessibilityManagerProps {
   children?: React.ReactNode;
 }
 
-const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> = memo(({ enableAutoDetection = true, _enableKeyboardShortcuts = true, _className = '', _children
+const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> = memo(({ enableAutoDetection = true, enableKeyboardShortcuts = true, className = '', children
   }) => {
   // Auto-detect accessibility issues
   const detectAccessibilityIssues = useCallback(() => {
@@ -17,14 +17,14 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
 
     // Check for missing alt attributes
     const images = document.querySelectorAll('img');
-    images.forEach((img, _imgIndex) => {
+    images.forEach((img, imgIndex) => {
       if (!img.alt && !img.getAttribute('aria-label')) {
         }
     });
 
     // Check for missing form labels
     const inputs = document.querySelectorAll('input, textarea, select');
-    inputs.forEach((input, _index) => {
+    inputs.forEach((input, index) => {
       const id = input.getAttribute('id');
       const ariaLabel = input.getAttribute('aria-label');
       const ariaLabelledBy = input.getAttribute('aria-labelledby');

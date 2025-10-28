@@ -44,9 +44,9 @@ class PerformanceMonitor {
     // Observe navigation timing
     if ('PerformanceObserver' in window) {
       try {
-        const navObserver = new PerformanceObserver(_(list) => {
+        const navObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach(_(entry) => {
+          entries.forEach((entry) => {
             if (entry.entryType === 'navigation') {
               this.processNavigationTiming(entry as PerformanceNavigationTiming);
             }
@@ -87,7 +87,7 @@ class PerformanceMonitor {
       speedIndex: 3000
     };
 
-    Object.entries(thresholds).forEach(_([key, _threshold]) => {
+    Object.entries(thresholds).forEach(_([key, threshold]) => {
       const value = metrics[key as keyof PerformanceMetrics];
       if (typeof value === 'number' && value > threshold) {
         this.addAlert({

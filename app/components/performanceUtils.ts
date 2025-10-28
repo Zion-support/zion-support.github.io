@@ -10,7 +10,7 @@ interface PerformanceMetrics {
 // Global performance monitoring utilities
 export const performanceUtils = {
   // Measure custom performance marks
-  mark: (name: string) => {
+  mark: (name:, string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       performance.mark(name)}
   },
@@ -25,13 +25,13 @@ export const performanceUtils = {
   },
 
   // Get performance entries
-  getEntries: (type?: string) => {
+  getEntries: (type?:, string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       return type ? performance.getEntriesByType(type) : performance.getEntries()}
     return []},
 
   // Clear performance entries
-  clearEntries: (type?: string) => {
+  clearEntries: (type?:, string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       if (type) {
         performance.clearMeasures(type);
@@ -44,17 +44,17 @@ export const performanceUtils = {
 // Google Analytics integration for performance tracking
 export const trackPerformanceToGA = (metrics: PerformanceMetrics): void => {
   if (typeof window !== 'undefined' && 'gtag' in window) {
-    (window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('event', 'performance_metrics', {
-      event_category: 'Performance',
-      event_label: 'Core Web Vitals',
-      custom_map: {
-        load_time: metrics.loadTime,
-        first_contentful_paint: metrics.firstContentfulPaint,
-        largest_contentful_paint: metrics.largestContentfulPaint,
-        first_input_delay: metrics.firstInputDelay,
-        cumulative_layout_shift: metrics.cumulativeLayoutShift,
-        time_to_interactive: metrics.timeToInteractive,
-        total_blocking_time: metrics.totalBlockingTime
+    (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event', 'performance_metrics', {
+      eventcategory: 'Performance',
+      eventlabel: 'Core Web Vitals',
+      custommap: {
+        loadtime: metrics.loadTime,
+        firstcontentful_paint: metrics.firstContentfulPaint,
+        largestcontentful_paint: metrics.largestContentfulPaint,
+        firstinput_delay: metrics.firstInputDelay,
+        cumulativelayout_shift: metrics.cumulativeLayoutShift,
+        timeto_interactive: metrics.timeToInteractive,
+        totalblocking_time: metrics.totalBlockingTime
       }
     })}
 };

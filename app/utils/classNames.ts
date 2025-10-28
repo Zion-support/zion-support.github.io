@@ -28,7 +28,7 @@ export function responsive(classes: {
   '2xl'?: string;
 }): string {
   const responsiveClasses = Object.entries(classes)
-    .map(_([breakpoint, _className]) => {
+    .map(_([breakpoint, className]) => {
       if (!className) return '';
       return breakpoint === 'base' ? className : `${breakpoint}:${className}`;
     })

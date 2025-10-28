@@ -37,7 +37,7 @@ interface PerformanceMonitorProps {
   enableReporting?: boolean;
 }
 
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({ className = '', _children, _enableReporting = false 
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({ className = '', children, enableReporting = false 
   }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     lcp: null,

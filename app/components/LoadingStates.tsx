@@ -5,7 +5,7 @@ interface LoadingStatesProps {
   children?: React.ReactNode;
 }
 
-const LoadingStates: React.FC<LoadingStatesProps> = (_{ className = '', _children }) => {
+const LoadingStates: React.FC<LoadingStatesProps> = (_{ className = '', children }) => {
   return (
 <div className={`loadingstates-component ${className}`}>
       {children}

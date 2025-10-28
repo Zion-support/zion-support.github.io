@@ -6,7 +6,7 @@ interface SecurityEnhancementProps {
   className?: string;
 }
 
-const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ className = ''   }) => {
+const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ className = '' }) => {
   // Add security headers
   const addSecurityHeaders = useCallback(() => {
     if (typeof window === 'undefined') return;

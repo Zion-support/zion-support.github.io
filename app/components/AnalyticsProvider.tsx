@@ -5,7 +5,7 @@ interface AnalyticsProviderProps {
   children?: React.ReactNode;
 }
 
-const AnalyticsProvider: React.FC<AnalyticsProviderProps> = (_{ className = '', _children }) => {
+const AnalyticsProvider: React.FC<AnalyticsProviderProps> = (_{ className = '', children }) => {
   return (
     <div className={`analyticsprovider-component ${className}`}>
       {children}

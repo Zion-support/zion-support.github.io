@@ -6,7 +6,7 @@ interface ServiceTemplateProps {
 }
 
 const ServiceTemplate: React.FC<ServiceTemplateProps> = (_{ 
-  className = '', _children 
+  className = '', children 
 }) => {
   return (
     <div className={'service-template ' + className}>

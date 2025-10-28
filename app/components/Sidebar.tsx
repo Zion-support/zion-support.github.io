@@ -5,7 +5,7 @@ interface SidebarProps {
   children?: React.ReactNode;
 }
 
-const Sidebar: React.FC<SidebarProps> = (_{ className = '', _children }) => {
+const Sidebar: React.FC<SidebarProps> = (_{ className = '', children }) => {
   return (
 <div className={`sidebar-component ${className}`}>
       {children || <h2>Sidebar</h2>}

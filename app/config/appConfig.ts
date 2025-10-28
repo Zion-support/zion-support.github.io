@@ -41,7 +41,7 @@ const config: AppConfig = {
     environment: (typeof process !== "undefined" ? process.env['NODE_ENV'] : 'development') as 'development' | 'production' | 'test' || 'development',
   },
   api: {
-    baseUrl: (typeof process !== "undefined" ? process.env.NEXT_PUBLIC_API_URL : undefined) || 'https://api.zion.app',
+    baseUrl: (typeof process !== "undefined" ? process.env.NEXTPUBLIC_API_URL : undefined) || 'https://api.zion.app',
     timeout: 30000,
     retryAttempts: 3,
   },

@@ -35,7 +35,7 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
         { href: '/images/logo.png', as: 'image' },
       ];
 
-      criticalResources.forEach(({ href, _as, _type, _crossOrigin  }) => {
+      criticalResources.forEach(({ href, as, type, crossOrigin  }) => {
         const link = document.createElement('link');
         link.rel = 'preload';
         link.href = href;

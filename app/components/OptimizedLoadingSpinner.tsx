@@ -5,7 +5,7 @@ interface OptimizedLoadingSpinnerProps {
   children?: React.ReactNode;
 }
 
-const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = (_{ className = '', _children }) => {
+const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = (_{ className = '', children }) => {
   return (
 <div className={`optimizedloadingspinner-component ${className}`}>
       {children}

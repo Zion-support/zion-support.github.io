@@ -6,12 +6,12 @@ interface NewsletterSignupProps {
   className?: string;
 }
 
-const NewsletterSignup: React.FC<NewsletterSignupProps> = (_{ onSubscribe, _className = '' }) => {
+const NewsletterSignup: React.FC<NewsletterSignupProps> = (_{ onSubscribe, className = '' }) => {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState('');
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e:, React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     

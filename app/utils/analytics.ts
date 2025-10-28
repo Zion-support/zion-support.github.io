@@ -7,7 +7,7 @@ interface AnalyticsEvent {
   label?: string;
   value?: number;
   timestamp?: number;
-  custom_parameters?: Record<string, unknown>}
+  customparameters?: Record<string, unknown>}
 
 class Analytics {
   private static instance: Analytics;
@@ -26,7 +26,7 @@ class Analytics {
     });
 
     // In production, you would send this to your analytics service
-    if (process.env.NODE_ENV === "production") {
+    if (process.env.NODEENV === "production") {
       this.sendToAnalytics(event)} else {
       }
   }
@@ -37,9 +37,9 @@ class Analytics {
       category: "Page",
       action: "View",
       label: page,
-      custom_parameters: {
-        page_title: title || document.title,
-        page_url: window.location.href
+      customparameters: {
+        pagetitle: title || document.title,
+        pageurl: window.location.href
       }
     })}
 
@@ -49,7 +49,7 @@ class Analytics {
       category: "User Interaction",
       action: "Click",
       label: element,
-      custom_parameters: {
+      customparameters: {
         location
       }
     })}
@@ -69,7 +69,7 @@ class Analytics {
       action: "Metric",
       label: metric,
       value,
-      custom_parameters: {
+      customparameters: {
         unit
       }
     })}
@@ -80,9 +80,9 @@ class Analytics {
       category: "Error",
       action: "Occurred",
       label: error.message,
-      custom_parameters: {
-        error_name: error.name,
-        error_stack: error.stack,
+      customparameters: {
+        errorname: error.name,
+        errorstack: error.stack,
         context
       }
     })}
@@ -98,12 +98,12 @@ class Analytics {
   // Send to analytics service (implement based on your analytics provider)
   private sendToAnalytics(event: AnalyticsEvent): void {
     // Example implementation for Google Analytics
-    if (typeof window !== "undefined" && (window as unknown as { gtag: (..._args: unknown[]) => void }).gtag) {
-      (window as unknown as { gtag: (..._args: unknown[]) => void }).gtag("event", event.action, {
-        event_category: event.category,
-        event_label: event.label,
+    if (typeof window !== "undefined" && (window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {
+      (window as unknown as { gtag: (...args: unknown[]) => void }).gtag("event", event.action, {
+        eventcategory: event.category,
+        eventlabel: event.label,
         value: event.value,
-        ...event.custom_parameters
+        ...event.customparameters
       })}
   }
 }
@@ -123,8 +123,8 @@ export function useAnalytics() {
 
 // Higher-order component for automatic page view tracking
 export function withAnalytics<T extends React.ComponentType<unknown>>(PageComponent: T): T {
-  return ((props: unknown) => {
+  return ((props:, unknown) => {
     const { trackPageView } = useAnalytics();
-    React.useEffect(_() => {
+    React.useEffect(() => {
       trackPageView(window.location.pathname, document.title)}, [trackPageView]);
     return React.createElement(PageComponent, props)}) as T}

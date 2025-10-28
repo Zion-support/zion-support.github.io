@@ -13,7 +13,7 @@ export interface UseFormOptions<T = Record<string, unknown>> {
   onSubmit?: () => Promise<void> | void;
 }
 
-export const useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> = { /* Empty function */ }) => {
+export const useForm = <T = Record<string, unknown>>(options:, UseFormOptions<T>, =, {, /*, Empty, function, */, }) => {
   const { initialData = {} as T, validate, onSubmit } = options;
 
   const [formState, setFormState] = useState<FormState<T>>({
@@ -30,7 +30,7 @@ export const useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> 
     }));
   }, []);
 
-  const handleSubmit = useCallback(async (e: React.FormEvent) => {
+  const handleSubmit = useCallback(async, (e:, React.FormEvent) => {
     e.preventDefault();
     
     // Validate form
@@ -70,7 +70,7 @@ export const useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> 
     }
   }, [formState.data, onSubmit, validate, initialData]);
 
-  const resetForm = useCallback(_() => {
+  const resetForm = useCallback(() => {
     setFormState({
       data: initialData,
       isSubmitting: false,

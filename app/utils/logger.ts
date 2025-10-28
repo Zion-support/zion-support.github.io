@@ -41,13 +41,13 @@ class Logger {
 
   // Production-safe logging (only in development)
   dev(message: string, ...args: unknown[]): void {
-    if (process.env.NODE_ENV === 'development') { /* No action needed */ }
+    if (process.env.NODEENV === 'development') { /* No action needed */ }
   }
 }
 
 // Create logger instance
 const logger = new Logger(
-  process.env.NODE_ENV === 'development' ? LogLevel.DEBUG : LogLevel.WARN
+  process.env.NODEENV === 'development' ? LogLevel.DEBUG : LogLevel.WARN
 );
 
 export default logger;

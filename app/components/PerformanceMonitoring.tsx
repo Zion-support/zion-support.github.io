@@ -24,7 +24,7 @@ interface MemoryUsage {
   limit: number;
 }
 
-const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ className = ''   }) => {
+const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ className = '' }) => {
   const [memoryUsage, setMemoryUsage] = React.useState<MemoryUsage>({ used: 0, total: 0, limit: 0 });
   
   // Monitor Core Web Vitals
@@ -40,7 +40,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
         window.gtag('event', 'web_vitals', {
           name: 'LCP',
           value: Math.round(lastEntry.startTime),
-          event_category: 'Web Vitals'
+          eventcategory: 'Web Vitals'
         });
       }
     });
@@ -56,7 +56,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
           window.gtag('event', 'web_vitals', {
             name: 'FID',
             value: Math.round(fid),
-            event_category: 'Web Vitals'
+            eventcategory: 'Web Vitals'
           });
         }
       });
@@ -75,7 +75,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
             window.gtag('event', 'web_vitals', {
               name: 'CLS',
               value: Math.round(clsValue * 1000),
-              event_category: 'Web Vitals'
+              eventcategory: 'Web Vitals'
             });
           }
         }
@@ -91,7 +91,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
           window.gtag('event', 'web_vitals', {
             name: 'FCP',
             value: Math.round(entry.startTime),
-            event_category: 'Web Vitals'
+            eventcategory: 'Web Vitals'
           });
         }
       });

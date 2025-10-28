@@ -24,8 +24,8 @@ interface PerformanceLayoutProps {
 }
 
 export const PerformanceLayout: React.FC<PerformanceLayoutProps> = (_{
-  children, _enablePerformanceMonitoring = true, _enablePerformanceOptimizations = true, _}) => {
-  useEffect(_() => {
+  children, enablePerformanceMonitoring = true, enablePerformanceOptimizations = true, _}) => {
+  useEffect(() => {
     if (enablePerformanceOptimizations) {
       initializePerformanceOptimizations();
     }

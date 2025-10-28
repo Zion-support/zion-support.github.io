@@ -5,7 +5,7 @@ interface AdvancedSEOOptimizerProps {
   children?: React.ReactNode;
 }
 
-const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = (_{ className = '', _children }) => {
+const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = (_{ className = '', children }) => {
   return (
     <div className={`advancedseooptimizer-component ${className}`}>
       {children}

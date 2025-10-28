@@ -4,18 +4,18 @@
  */
 
 // Site Information
-export const SITE_NAME = 'Zion Tech Group';
-export const SITE_URL = 'https://ziontechgroup.com';
-export const SITE_DESCRIPTION = 'Leading provider of AI solutions, cybersecurity, cloud infrastructure, and digital transformation services';
-export const SITE_KEYWORDS = 'AI solutions, cybersecurity, cloud infrastructure, digital transformation, technology consulting, software development';
+export const SITENAME = 'Zion Tech Group';
+export const SITEURL = 'https://ziontechgroup.com';
+export const SITEDESCRIPTION = 'Leading provider of AI solutions, cybersecurity, cloud infrastructure, and digital transformation services';
+export const SITEKEYWORDS = 'AI solutions, cybersecurity, cloud infrastructure, digital transformation, technology consulting, software development';
 
 // Default Meta Tags
-export const DEFAULT_TITLE = 'Zion Tech Group - AI Solutions & Digital Transformation';
-export const DEFAULT_DESCRIPTION = 'Leading provider of AI solutions, cybersecurity, cloud infrastructure, and digital transformation services. Transform your business with cutting-edge technology.';
-export const DEFAULT_KEYWORDS = 'AI solutions, cybersecurity, cloud infrastructure, digital transformation, technology consulting, software development, machine learning, artificial intelligence';
+export const DEFAULTTITLE = 'Zion Tech Group - AI Solutions & Digital Transformation';
+export const DEFAULTDESCRIPTION = 'Leading provider of AI solutions, cybersecurity, cloud infrastructure, and digital transformation services. Transform your business with cutting-edge technology.';
+export const DEFAULTKEYWORDS = 'AI solutions, cybersecurity, cloud infrastructure, digital transformation, technology consulting, software development, machine learning, artificial intelligence';
 
 // Contact Information
-export const CONTACT_INFO = {
+export const CONTACTINFO = {
   phone: '+1-302-464-0950',
   email: 'kleber@ziontechgroup.com',
   address: {
@@ -28,7 +28,7 @@ export const CONTACT_INFO = {
 };
 
 // Social Media Links
-export const SOCIAL_LINKS = {
+export const SOCIALLINKS = {
   twitter: 'https://twitter.com/ziontechgroup',
   linkedin: 'https://linkedin.com/company/ziontechgroup',
   github: 'https://github.com/ziontechgroup',
@@ -37,7 +37,7 @@ export const SOCIAL_LINKS = {
 };
 
 // Performance Goals
-export const PERFORMANCE_GOALS = {
+export const PERFORMANCEGOALS = {
   LCP: 2500, // Largest Contentful Paint (ms)
   FCP: 1800, // First Contentful Paint (ms)
   CLS: 0.1,  // Cumulative Layout Shift
@@ -47,53 +47,53 @@ export const PERFORMANCE_GOALS = {
 };
 
 // Accessibility Goals
-export const ACCESSIBILITY_GOALS = {
-  WCAG_LEVEL: 'AA',
-  COLOR_CONTRAST_RATIO: 4.5,
-  FONT_SIZE_MIN: 16,
-  FOCUS_INDICATOR: true,
-  KEYBOARD_NAVIGATION: true,
-  SCREEN_READER_SUPPORT: true,
+export const ACCESSIBILITYGOALS = {
+  WCAGLEVEL: 'AA',
+  COLORCONTRAST_RATIO: 4.5,
+  FONTSIZE_MIN: 16,
+  FOCUSINDICATOR: true,
+  KEYBOARDNAVIGATION: true,
+  SCREENREADER_SUPPORT: true,
 };
 
 // Structured Data Schemas
-export const STRUCTURED_DATA = {
+export const STRUCTUREDDATA = {
   ORGANIZATION: {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: SITE_NAME,
-    description: SITE_DESCRIPTION,
-    url: SITE_URL,
-    logo: `${SITE_URL}/logo.png`,
+    name: SITENAME,
+    description: SITEDESCRIPTION,
+    url: SITEURL,
+    logo: `${SITEURL}/logo.png`,
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: CONTACT_INFO.phone,
+      telephone: CONTACTINFO.phone,
       contactType: 'customer service',
-      email: CONTACT_INFO.email,
+      email: CONTACTINFO.email,
     },
     address: {
       '@type': 'PostalAddress',
-      streetAddress: CONTACT_INFO.address.street,
-      addressLocality: CONTACT_INFO.address.city,
-      addressRegion: CONTACT_INFO.address.state,
-      postalCode: CONTACT_INFO.address.zipCode,
-      addressCountry: CONTACT_INFO.address.country,
+      streetAddress: CONTACTINFO.address.street,
+      addressLocality: CONTACTINFO.address.city,
+      addressRegion: CONTACTINFO.address.state,
+      postalCode: CONTACTINFO.address.zipCode,
+      addressCountry: CONTACTINFO.address.country,
     },
-    sameAs: Object.values(SOCIAL_LINKS),
+    sameAs: Object.values(SOCIALLINKS),
   },
   WEBSITE: {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: SITE_NAME,
-    url: SITE_URL,
-    description: SITE_DESCRIPTION,
+    name: SITENAME,
+    url: SITEURL,
+    description: SITEDESCRIPTION,
     potentialAction: {
       '@type': 'SearchAction',
-      target: `${SITE_URL}/search?q={search_term_string}`,
-      'query-input': 'required name=search_term_string',
+      target: `${SITEURL}/search?q={searchterm_string}`,
+      'query-input': 'required name=searchterm_string',
     }
 },
-  BREADCRUMB_LIST: (breadcrumbs: Array<{ name: string; url: string }>) => ({
+  BREADCRUMBLIST: (breadcrumbs: Array<{ name: string; url: string }>) => ({
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: breadcrumbs.map((crumb, index) => ({
@@ -106,48 +106,48 @@ export const STRUCTURED_DATA = {
 };
 
 // Meta Tags Configuration
-export const META_TAGS = {
+export const METATAGS = {
   ROBOTS: 'index, follow',
-  AUTHOR: SITE_NAME,
-  THEME_COLOR: '#1e293b',
-  MSAPPLICATION_TILECOLOR: '#1e293b',
+  AUTHOR: SITENAME,
+  THEMECOLOR: '#1e293b',
+  MSAPPLICATIONTILECOLOR: '#1e293b',
   VIEWPORT: 'width=device-width, initial-scale=1',
   CHARSET: 'utf-8',
 };
 
 // Open Graph Tags
-export const OPEN_GRAPH_TAGS = {
-  SITE_NAME: SITE_NAME,
+export const OPENGRAPH_TAGS = {
+  SITENAME: SITENAME,
   TYPE: 'website',
   LOCALE: 'en_US',
-  IMAGE_WIDTH: '1200',
-  IMAGE_HEIGHT: '630',
-  IMAGE_TYPE: 'image/png',
+  IMAGEWIDTH: '1200',
+  IMAGEHEIGHT: '630',
+  IMAGETYPE: 'image/png',
 };
 
 // Twitter Card Tags
-export const TWITTER_TAGS = {
+export const TWITTERTAGS = {
   CARD: 'summary_large_image',
   SITE: '@ziontechgroup',
   CREATOR: '@ziontechgroup',
-  IMAGE_ALT: `${SITE_NAME} - ${SITE_DESCRIPTION}`,
+  IMAGEALT: `${SITENAME} - ${SITEDESCRIPTION}`,
 };
 
 // SEO Constants
-export const SEO_CONSTANTS = {
-  SITE_NAME,
-  SITE_URL,
-  DEFAULT_TITLE,
-  DEFAULT_DESCRIPTION,
-  DEFAULT_KEYWORDS,
-  CONTACT_INFO,
-  SOCIAL_LINKS,
-  PERFORMANCE_GOALS,
-  ACCESSIBILITY_GOALS,
-  META_TAGS,
-  OPEN_GRAPH_TAGS,
-  TWITTER_TAGS,
-  STRUCTURED_DATA,
+export const SEOCONSTANTS = {
+  SITENAME,
+  SITEURL,
+  DEFAULTTITLE,
+  DEFAULTDESCRIPTION,
+  DEFAULTKEYWORDS,
+  CONTACTINFO,
+  SOCIALLINKS,
+  PERFORMANCEGOALS,
+  ACCESSIBILITYGOALS,
+  METATAGS,
+  OPENGRAPH_TAGS,
+  TWITTERTAGS,
+  STRUCTUREDDATA,
 };
 
-export default SEO_CONSTANTS;
+export default SEOCONSTANTS;

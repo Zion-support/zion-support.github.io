@@ -15,7 +15,7 @@ interface SEOHeadProps {
   structuredData?: Record<string, unknown>;
 }
 
-const SEOHead: React.FC<SEOHeadProps> = memo(({ title = 'Zion Tech Group - Advanced AI & IT Solutions', _description = 'Leading provider of AI-powered solutions, _cybersecurity, _and digital transformation services. Transform your business with cutting-edge technology.', _keywords = 'AI solutions, _cybersecurity, _cloud computing, _digital transformation, _IT services, _artificial intelligence, _machine learning, _data analytics', _canonical, _ogImage = '/images/og-image.jpg', _ogType = 'website', _twitterCard = 'summary_large_image', _noindex = false, _structuredData, _  }) => {
+const SEOHead: React.FC<SEOHeadProps> = memo(({ title = 'Zion Tech Group - Advanced AI & IT Solutions', description = 'Leading provider of AI-powered solutions, _cybersecurity, _and digital transformation services. Transform your business with cutting-edge technology.', keywords = 'AI solutions, _cybersecurity, _cloud computing, _digital transformation, _IT services, _artificial intelligence, _machine learning, _data analytics', canonical, ogImage = '/images/og-image.jpg', ogType = 'website', twitterCard = 'summary_large_image', noindex = false, structuredData, _  }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
 
@@ -73,7 +73,7 @@ const SEOHead: React.FC<SEOHeadProps> = memo(({ title = 'Zion Tech Group - Advan
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData || {
+          _html: JSON.stringify(structuredData || {
             '@context': 'https://schema.org',
             '@type': 'Organization',
             name: 'Zion Tech Group',

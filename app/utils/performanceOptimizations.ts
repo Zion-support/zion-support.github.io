@@ -6,7 +6,7 @@ export function debounce<T extends (...args: any[]) => any>(
   wait: number
 ): (...args: Parameters<T>) => void {
   let timeout: ReturnType<typeof setTimeout>;
-  return (...args: Parameters<T>) => {
+  return (...args:, Parameters<T>) => {
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);
   };
@@ -18,7 +18,7 @@ export function throttle<T extends (...args: any[]) => any>(
   limit: number
 ): (...args: Parameters<T>) => void {
   let inThrottle: boolean;
-  return (...args: Parameters<T>) => {
+  return (...args:, Parameters<T>) => {
     if (!inThrottle) {
       func(...args);
       inThrottle = true;
@@ -50,8 +50,8 @@ export function createIntersectionObserver(
 // Image lazy loading utility
 export function lazyLoadImage(img: HTMLImageElement, src: string): void {
   if ('IntersectionObserver' in window) {
-    const observer = createIntersectionObserver(_(entries) => {
-      entries.forEach(_(entry) => {
+    const observer = createIntersectionObserver((entries) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           img.src = src;
           img.classList.remove('lazy');
@@ -102,7 +102,7 @@ export function preloadCriticalResources() {
     '/css/critical.css',
   ];
   
-  criticalResources.forEach(_(resource) => {
+  criticalResources.forEach((resource) => {
     const link = document.createElement('link');
     link.rel = 'preload';
     link.href = resource;
@@ -122,8 +122,8 @@ export function registerServiceWorker() {
   
   window.addEventListener(_'load', _() => {
     navigator.serviceWorker.register('/sw.js')
-      .then(_(registration) => { /* Empty function */ })
-      .catch(_(registrationError) => { /* Empty function */ });
+      .then((registration) => { /* Empty function */ })
+      .catch((registrationError) => { /* Empty function */ });
   });
 }
 
@@ -153,7 +153,7 @@ export function addResourceHints() {
     { rel: 'preconnect', href: 'https://api.example.com' },
   ];
   
-  hints.forEach(_(hint) => {
+  hints.forEach((hint) => {
     const link = document.createElement('link');
     Object.assign(link, hint);
     document.head.appendChild(link);
@@ -166,7 +166,7 @@ export function startPerformanceMonitoring() {
   
   // Monitor Core Web Vitals
   if ('PerformanceObserver' in window) {
-    const observer = new PerformanceObserver(_(list) => {
+    const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         if (entry.entryType === 'largest-contentful-paint') {
           } else if (entry.entryType === 'first-input') {

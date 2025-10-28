@@ -5,7 +5,7 @@ interface ContentPromotionBannerProps {
   children?: React.ReactNode;
 }
 
-const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = (_{ className = '', _children }) => {
+const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = (_{ className = '', children }) => {
   return (
     <div className={`contentpromotionbanner-component ${className}`}>
       {children}

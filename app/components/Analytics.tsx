@@ -18,7 +18,7 @@ declare global {
   }
 }
 
-const Analytics: React.FC<AnalyticsProps> = memo(({ gaId = process.env.NEXT_PUBLIC_GA_ID, _gtmId = process.env.NEXT_PUBLIC_GTM_ID, _enabled = process.env.NODE_ENV === 'production'
+const Analytics: React.FC<AnalyticsProps> = memo(({ gaId = process.env.NEXTPUBLIC_GA_ID, gtmId = process.env.NEXTPUBLIC_GTM_ID, enabled = process.env.NODEENV === 'production'
   }) => {
   useEffect(() => {
     if (!enabled || typeof window === 'undefined') return;
@@ -36,8 +36,8 @@ const Analytics: React.FC<AnalyticsProps> = memo(({ gaId = process.env.NEXT_PUBL
       }
       gtag('js', new Date());
       gtag('config', gaId, {
-        page_title: document.title,
-        page_location: window.location.href,
+        pagetitle: document.title,
+        pagelocation: window.location.href,
       });
 
       window.gtag = gtag;

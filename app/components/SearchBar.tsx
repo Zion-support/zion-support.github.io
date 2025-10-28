@@ -5,7 +5,7 @@ interface SearchBarProps {
   children?: React.ReactNode;
 }
 
-const SearchBar: React.FC<SearchBarProps> = (_{ className = '', _children }) => {
+const SearchBar: React.FC<SearchBarProps> = (_{ className = '', children }) => {
   return (
     <div className={`searchbar-component ${className}`}>
 {children || <h2>SearchBar</h2>}

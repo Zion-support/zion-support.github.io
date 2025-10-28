@@ -5,7 +5,7 @@ interface EnhancedLoadingSkeletonProps {
   children?: React.ReactNode;
 }
 
-const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = (_{ className = '', _children }) => {
+const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = (_{ className = '', children }) => {
   return (
     <div className={`enhancedloadingskeleton-component ${className}`}>
       {children}

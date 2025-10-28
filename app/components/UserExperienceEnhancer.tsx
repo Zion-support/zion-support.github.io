@@ -5,7 +5,7 @@ interface UserExperienceEnhancerProps {
   children?: React.ReactNode;
 }
 
-const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = (_{ className = '', _children }) => {
+const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = (_{ className = '', children }) => {
   return (
     <div className={`userexperienceenhancer-component ${className}`}>
       {children}

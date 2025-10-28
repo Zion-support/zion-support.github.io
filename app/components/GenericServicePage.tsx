@@ -5,7 +5,7 @@ interface GenericServicePageProps {
   children?: React.ReactNode;
 }
 
-const GenericServicePage: React.FC<GenericServicePageProps> = (_{ className = '', _children }) => {
+const GenericServicePage: React.FC<GenericServicePageProps> = (_{ className = '', children }) => {
   return (
     <div className={`genericservicepage-component ${className}`}>
       {children}

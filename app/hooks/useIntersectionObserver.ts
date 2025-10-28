@@ -6,12 +6,12 @@ interface UseIntersectionObserverOptions {
   rootMargin?: string;
 }
 
-export const useIntersectionObserver = (options: UseIntersectionObserverOptions = { /* Empty function */ }) => {
+export const useIntersectionObserver = (options:, UseIntersectionObserverOptions, =, {, /*, Empty, function, */, }) => {
   const [entry, setEntry] = useState<IntersectionObserverEntry | null>(null);
   const [node, setNode] = useState<Element | null>(null);
   const observer = useRef<IntersectionObserver | null>(null);
 
-  useEffect(_() => {
+  useEffect(() => {
     if (!node) return;
 
     observer.current = new IntersectionObserver(

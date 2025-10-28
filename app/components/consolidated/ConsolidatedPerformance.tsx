@@ -34,7 +34,7 @@ interface PerformanceMetrics {
   ttfb: number | null;
 }
 
-const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ className = ''   }) => {
+const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ className = '' }) => {
   const [metrics, setMetrics] = React.useState<PerformanceMetrics>({
     lcp: null,
     fid: null,
@@ -66,7 +66,7 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
   // Implement lazy loading for images
   const implementLazyLoading = useCallback(() => {
     if ('IntersectionObserver' in window) {
-      const imageObserver = new IntersectionObserver((entries, _observer) => {
+      const imageObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             const img = entry.target as HTMLImageElement;
@@ -185,7 +185,7 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({ 
 
   // Log metrics for debugging (remove in production)
   useEffect(() => {
-    if (process.env.NODE_ENV === 'development') { /* No action needed */ }
+    if (process.env.NODEENV === 'development') { /* No action needed */ }
   }, [metrics]);
 
   return (

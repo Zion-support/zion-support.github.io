@@ -22,11 +22,11 @@ interface AdvancedSEOEnhancerProps {
 }
 
 export const AdvancedSEOEnhancer: React.FC<AdvancedSEOEnhancerProps> = (_{
-  seoData, _enableAutoOptimization = true, _enableStructuredData = true, _enableSocialMeta = true, _}) => {
+  seoData, enableAutoOptimization = true, enableStructuredData = true, enableSocialMeta = true, _}) => {
   const [optimizedData, setOptimizedData] = useState<SEOData>(seoData);
 
   // Auto-optimize SEO data
-  const optimizeSEOData = useCallback(_() => {
+  const optimizeSEOData = useCallback(() => {
     if (!enableAutoOptimization) return;
 
     try {
@@ -60,7 +60,7 @@ export const AdvancedSEOEnhancer: React.FC<AdvancedSEOEnhancerProps> = (_{
   }, [seoData, enableAutoOptimization]);
 
   // Generate structured data
-  const generateStructuredData = useCallback(_() => {
+  const generateStructuredData = useCallback(() => {
     if (!enableStructuredData) return null;
 
     try {
@@ -102,7 +102,7 @@ export const AdvancedSEOEnhancer: React.FC<AdvancedSEOEnhancerProps> = (_{
   }, [optimizedData, enableStructuredData]);
 
   // Initialize SEO optimization
-  useEffect(_() => {
+  useEffect(() => {
     optimizeSEOData();
   }, [optimizeSEOData]);
 
@@ -144,7 +144,7 @@ export const AdvancedSEOEnhancer: React.FC<AdvancedSEOEnhancerProps> = (_{
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData),
+            _html: JSON.stringify(structuredData),
           }}
         />
       )}

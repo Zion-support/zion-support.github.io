@@ -5,7 +5,7 @@ interface SimpleFooterProps {
   children?: React.ReactNode;
 }
 
-const SimpleFooter: React.FC<SimpleFooterProps> = (_{ className = '', _children }) => {
+const SimpleFooter: React.FC<SimpleFooterProps> = (_{ className = '', children }) => {
   return (
     <div className={`simplefooter-component ${className}`}>
       {children}

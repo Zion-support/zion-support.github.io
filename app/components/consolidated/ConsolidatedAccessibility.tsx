@@ -7,7 +7,7 @@ interface ConsolidatedAccessibilityProps {
   className?: string;
 }
 
-const ConsolidatedAccessibility: React.FC<ConsolidatedAccessibilityProps> = memo(({ className = ''   }) => {
+const ConsolidatedAccessibility: React.FC<ConsolidatedAccessibilityProps> = memo(({ className = '' }) => {
   // Add skip links
   const addSkipLinks = useCallback(() => {
     const skipLink = document.createElement('a');

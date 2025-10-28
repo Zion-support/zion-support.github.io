@@ -17,7 +17,7 @@ interface PerformanceMonitorProps {
 }
 
 const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = (_{
-  onMetricsUpdate, _enableRealTimeMonitoring = true
+  onMetricsUpdate, enableRealTimeMonitoring = true
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
@@ -28,7 +28,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = (_{
     memory: null,
   })
 
-  const measureWebVitals = useCallback(_() => {
+  const measureWebVitals = useCallback(() => {
     if (typeof window === 'undefined' || !('performance' in window)) return
     if (typeof PerformanceObserver === 'undefined') return
 
@@ -36,9 +36,9 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = (_{
 
     // Measure First Contentful Paint (FCP)
     try {
-      const fcpObserver = new PerformanceObserver(_(list) => {
+      const fcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: PerformanceEntry) => {
+        entries.forEach((entry:, PerformanceEntry) => {
           if (entry.name === 'first-contentful-paint') {
             setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
           }
@@ -50,9 +50,9 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = (_{
 
     // Measure First Input Delay (FID)
     try {
-      const fidObserver = new PerformanceObserver(_(list) => {
+      const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries()
-        entries.forEach((entry: PerformanceEntry) => {
+        entries.forEach((entry:, PerformanceEntry) => {
           const fidEntry = entry as PerformanceEntry & { processingStart: number };
           if (fidEntry.processingStart && entry.startTime) {
             setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - entry.startTime }));
@@ -66,9 +66,9 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = (_{
     // Measure Cumulative Layout Shift (CLS)
     try {
       let clsValue = 0
-      const clsObserver = new PerformanceObserver(_(list) => {
+      const clsObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries()
-        entries.forEach((entry: PerformanceEntry & { hadRecentInput?: boolean; value?: number }) => {
+        entries.forEach((entry:, PerformanceEntry, &, {, hadRecentInput?:, boolean;, value?:, number, }) => {
           if (!entry.hadRecentInput) {
             clsValue += entry.value || 0;
             setMetrics(prev => ({ ...prev, cls: clsValue }));
@@ -103,13 +103,13 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = (_{
     };
   }, []);
 
-  useEffect(_() => {
+  useEffect(() => {
     if (!enableRealTimeMonitoring) return
 
     const cleanup = measureWebVitals()
 
     // Update metrics every 5 seconds
-    const interval = setInterval(_() => {
+    const interval = setInterval(() => {
       measureWebVitals()
     }, 5000)
 
@@ -119,7 +119,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = (_{
     };
   }, [measureWebVitals, enableRealTimeMonitoring]);
 
-  useEffect(_() => {
+  useEffect(() => {
     if (onMetricsUpdate) {
       onMetricsUpdate(metrics)
     }

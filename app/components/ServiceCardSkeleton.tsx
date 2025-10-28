@@ -5,7 +5,7 @@ interface ServiceCardSkeletonProps {
   children?: React.ReactNode;
 }
 
-const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = (_{ className = '', _children }) => {
+const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = (_{ className = '', children }) => {
   return (
 <div className={`servicecardskeleton-component ${className}`}>
       {children || <h2>ServiceCardSkeleton</h2>}

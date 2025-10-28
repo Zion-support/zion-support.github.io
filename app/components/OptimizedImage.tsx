@@ -22,16 +22,16 @@ interface OptimizedImageProps {
 }
 
 export const OptimizedImage: React.FC<OptimizedImageProps> = (_{
-  src, _alt, _width, _height, _priority = false, _quality = 75, _placeholder = 'blur', _blurDataURL, _className = '', _sizes, _fill = false, _style, _onLoad, _onError, _}) => {
+  src, alt, width, height, priority = false, quality = 75, placeholder = 'blur', blurDataURL, className = '', sizes, fill = false, style, onLoad, onError, _}) => {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
 
-  const handleLoad = useCallback(_() => {
+  const handleLoad = useCallback(() => {
     setIsLoading(false);
     onLoad?.();
   }, [onLoad]);
 
-  const handleError = useCallback(_() => {
+  const handleError = useCallback(() => {
     setIsLoading(false);
     setHasError(true);
     onError?.();

@@ -3,17 +3,17 @@
 import React, { memo } from 'react';
 import { usePerformanceMetrics } from '../hooks/usePerformanceMetrics';
 
-const PerformanceDashboard: React.FC = memo(_() => {
+const PerformanceDashboard: React.FC = memo(() => {
   const { metrics, getPerformanceScore } = usePerformanceMetrics();
   const score = getPerformanceScore();
 
-  const getScoreColor = (score: number) => {
+  const getScoreColor = (score:, number) => {
     if (score >= 90) return 'text-green-600';
     if (score >= 70) return 'text-yellow-600';
     return 'text-red-600';
   };
 
-  const getScoreBgColor = (score: number) => {
+  const getScoreBgColor = (score:, number) => {
     if (score >= 90) return 'bg-green-100';
     if (score >= 70) return 'bg-yellow-100';
     return 'bg-red-100';

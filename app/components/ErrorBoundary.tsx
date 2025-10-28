@@ -89,7 +89,7 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, State> {
                 Try Again
               </button>
             </div>
-            {process.env.NODE_ENV === 'development' && this.state.error && (
+            {process.env.NODEENV === 'development' && this.state.error && (
               <details className="mt-4 p-4 bg-gray-100 rounded-md">
                 <summary className="cursor-pointer font-medium text-gray-700">
                   Error Details (Development)

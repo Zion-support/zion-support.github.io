@@ -5,7 +5,7 @@ interface OptimizedLoadingProps {
   children?: React.ReactNode;
 }
 
-const OptimizedLoading: React.FC<OptimizedLoadingProps> = (_{ className = '', _children }) => {
+const OptimizedLoading: React.FC<OptimizedLoadingProps> = (_{ className = '', children }) => {
   return (
     <div className={`optimizedloading-component ${className}`}>
       {children}

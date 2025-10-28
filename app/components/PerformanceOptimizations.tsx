@@ -9,7 +9,7 @@ interface PerformanceOptimizationsProps {
   enableResourceHints?: boolean;
 }
 
-const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo(({ enableImageOptimization = true, _enablePreloading = true, _enableResourceHints = true
+const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo(({ enableImageOptimization = true, enablePreloading = true, enableResourceHints = true
   }) => {
   // Optimize images
   const optimizeImages = useCallback(() => {
