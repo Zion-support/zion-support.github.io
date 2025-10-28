@@ -1,6 +1,5 @@
 'use client';
 
-
 import React, { useEffect, useState, useCallback } from 'react';
 import Head from 'next/head';
 
@@ -72,7 +71,7 @@ export const AdvancedSEOEnhancer: React.FC<AdvancedSEOEnhancerProps> = ({
 
     try {
       const baseUrl = typeof window !== 'undefined' ? window.location.origin : '';
-      
+
       const structuredData = {
         '@context': 'https://schema.org',
         '@type': 'Organization',
@@ -125,10 +124,10 @@ export const AdvancedSEOEnhancer: React.FC<AdvancedSEOEnhancerProps> = ({
       <meta name="robots" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      
+
       {/* Canonical URL */}
       <link rel="canonical" href={optimizedData.canonicalUrl} />
-      
+
       {/* Open Graph Meta Tags */}
       {enableSocialMeta && (
         <>
@@ -138,7 +137,7 @@ export const AdvancedSEOEnhancer: React.FC<AdvancedSEOEnhancerProps> = ({
           <meta property="og:url" content={optimizedData.canonicalUrl} />
           <meta property="og:type" content={optimizedData.ogType || 'website'} />
           <meta property="og:site_name" content="Zion Tech Group" />
-          
+
           {/* Twitter Card Meta Tags */}
           <meta name="twitter:card" content={optimizedData.twitterCard || 'summary_large_image'} />
           <meta name="twitter:title" content={optimizedData.title} />
@@ -162,11 +161,11 @@ export const AdvancedSEOEnhancer: React.FC<AdvancedSEOEnhancerProps> = ({
       <meta name="msapplication-TileColor" content="#7c3aed" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      
+
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      
+
       {/* DNS Prefetch */}
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
       <link rel="dns-prefetch" href="//www.googletagmanager.com" />

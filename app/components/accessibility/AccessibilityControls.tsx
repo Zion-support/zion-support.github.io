@@ -33,7 +33,7 @@ const AccessibilityControls: React.FC<AccessibilityControlsProps> = memo(({
           />
           <span>High Contrast</span>
         </label>
-        
+
         <label className="flex items-center space-x-2 text-white">
           <span>Font Size:</span>
           <select
@@ -47,7 +47,7 @@ const AccessibilityControls: React.FC<AccessibilityControlsProps> = memo(({
             <option value="xl">Extra Large</option>
           </select>
         </label>
-        
+
         <label className="flex items-center space-x-2 text-white">
           <input
             type="checkbox"

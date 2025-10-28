@@ -1,8 +1,8 @@
 
 import React from 'react';
-import { Brain, BarChart, Target, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import { Brain, BarChart, Target, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
 
 export const metadata = {
   title: 'AI-Powered DevOps | Zion Tech Group',
@@ -63,7 +63,7 @@ const benefits = [
               Professional AI-powered DevOps services powered by advanced AI and technology.
             </p>
             <p className="text-lg text-gray-400 mb-12 max-w-4xl mx-auto">
-              Transform your operations with our cutting-edge AI-powered DevOps solutions. 
+              Transform your operations with our cutting-edge AI-powered DevOps solutions.
               We provide comprehensive services to help you achieve your goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -129,7 +129,5 @@ const benefits = [
     </>
   );
 };
-
-export default AiPoweredDevopsPage;
 
 export default AiPoweredDevopsPage;

@@ -1,6 +1,5 @@
 'use client';
 
-
 import React, { useEffect, memo, useCallback } from 'react';
 
 interface ConsolidatedAccessibilityProps {
@@ -107,7 +106,7 @@ const ConsolidatedAccessibility: React.FC<ConsolidatedAccessibilityProps> = memo
     // Add keyboard support for custom components
     document.addEventListener('keydown', (e) => {
       // Enter and Space key support for custom buttons
-      if ((e.key === 'Enter' || e.key === ' ') && 
+      if ((e.key === 'Enter' || e.key === ' ') &&
           (e.target as HTMLElement).getAttribute('role') === 'button') {
         e.preventDefault();
         (e.target as HTMLElement).click();
@@ -120,7 +119,7 @@ const ConsolidatedAccessibility: React.FC<ConsolidatedAccessibilityProps> = memo
           e.preventDefault();
           const items = Array.from(menu.querySelectorAll('[role="menuitem"]'));
           const currentIndex = items.indexOf(e.target as HTMLElement);
-          const nextIndex = e.key === 'ArrowDown' 
+          const nextIndex = e.key === 'ArrowDown'
             ? (currentIndex + 1) % items.length
             : (currentIndex - 1 + items.length) % items.length;
           (items[nextIndex] as HTMLElement).focus();
@@ -132,7 +131,7 @@ const ConsolidatedAccessibility: React.FC<ConsolidatedAccessibilityProps> = memo
   // Add high contrast mode support
   const addHighContrastSupport = useCallback(() => {
     const mediaQuery = window.matchMedia('(prefers-contrast: high)');
-    
+
     const handleContrastChange = (e: MediaQueryListEvent) => {
       if (e.matches) {
         document.body.classList.add('high-contrast');
@@ -160,7 +159,7 @@ const ConsolidatedAccessibility: React.FC<ConsolidatedAccessibilityProps> = memo
   // Add reduced motion support
   const addReducedMotionSupport = useCallback(() => {
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    
+
     const handleMotionChange = (e: MediaQueryListEvent) => {
       if (e.matches) {
         document.body.classList.add('reduced-motion');

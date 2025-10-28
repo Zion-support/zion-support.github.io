@@ -1,6 +1,5 @@
 'use client';
 
-
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Zap, Shield, Brain, Cloud } from 'lucide-react';
 
@@ -137,7 +136,7 @@ const ContentCarousel: React.FC = () => {
           ))}
         </div>
       </div>
-      
+
       {/* Navigation buttons */}
       <button
         onClick={prevSlide}

@@ -16,7 +16,7 @@ function Page5gedgecomputingPage() {
               Professional 5g edge computing services powered by advanced AI and technology.
             </p>
             <p className="text-lg text-gray-400 mb-12 max-w-4xl mx-auto">
-              Transform your business with our cutting-edge 5g edge computing solutions. 
+              Transform your business with our cutting-edge 5g edge computing solutions.
               We provide comprehensive services to help you achieve your goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

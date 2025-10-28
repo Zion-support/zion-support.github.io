@@ -8,10 +8,10 @@ interface LoadingSpinnerProps {
   text?: string;
 }
 
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = memo(({ 
-  size = 'md', 
-  className = '', 
-  text 
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = memo(({
+  size = 'md',
+  className = '',
+  text
 }) => {
   const sizeClasses = {
     sm: 'h-4 w-4',

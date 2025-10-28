@@ -16,7 +16,7 @@ function Page5giotsolutionsPage() {
               Professional 5g iot solutions services powered by advanced AI and technology.
             </p>
             <p className="text-lg text-gray-400 mb-12 max-w-4xl mx-auto">
-              Transform your business with our cutting-edge 5g iot solutions solutions. 
+              Transform your business with our cutting-edge 5g iot solutions solutions.
               We provide comprehensive services to help you achieve your goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

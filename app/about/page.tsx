@@ -26,11 +26,11 @@ function AboutPage() {
               About Zion Tech Group
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Leading the future of technology with innovative AI solutions, 
+              Leading the future of technology with innovative AI solutions,
               cloud infrastructure, and cutting-edge software development.
             </p>
             <p className="text-lg text-gray-400 mb-12 max-w-4xl mx-auto">
-              Transform your business with our cutting-edge technology solutions. 
+              Transform your business with our cutting-edge technology solutions.
               We provide comprehensive services to help you achieve your goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

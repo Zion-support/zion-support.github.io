@@ -1,6 +1,5 @@
 'use client';
 
-
 import React, { useEffect } from 'react';
 
 // Performance API types

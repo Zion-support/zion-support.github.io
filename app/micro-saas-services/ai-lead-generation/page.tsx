@@ -1,11 +1,8 @@
 import { Metadata } from 'next';
-import { ErrorBoundary } from '../../components/ErrorBoundary';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 
 import React from 'react';
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
 export const metadata: Metadata = {
   title: 'Page - Zion Tech Group',
   description: 'Professional services and solutions by Zion Tech Group.',
@@ -30,7 +27,7 @@ function AileadgenerationPage() {
               Professional ai lead generation services powered by advanced AI and technology.
             </p>
             <p className="text-lg text-gray-400 mb-12 max-w-4xl mx-auto">
-              Transform your business with our cutting-edge ai lead generation solutions. 
+              Transform your business with our cutting-edge ai lead generation solutions.
               We provide comprehensive services to help you achieve your goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

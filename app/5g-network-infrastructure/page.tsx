@@ -1,7 +1,5 @@
 import React from "react";
 import { Brain, BarChart, Target, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 
 export const metadata = {
   title: '5G Network Infrastructure | Zion Tech Group',
@@ -66,7 +64,7 @@ export default function FiveGNetworkInfrastructure() {
               This service is currently under development. Contact us to learn more about our upcoming 5G services.
             </p>
             <p className="text-lg text-gray-400 mb-12 max-w-4xl mx-auto">
-              Transform your network operations with our cutting-edge 5G infrastructure solutions. 
+              Transform your network operations with our cutting-edge 5G infrastructure solutions.
               We provide comprehensive services to help you achieve your goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

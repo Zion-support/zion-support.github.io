@@ -31,7 +31,7 @@ const itServices = [
 export default function Navigation({ className = '', children }: NavigationProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  
+
   const toggleDropdown = (dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
@@ -137,7 +137,7 @@ export default function Navigation({ className = '', children }: NavigationProps
                 <Link href="/" className="block px-3 py-2 text-gray-700 hover:text-gray-900">
                   Home
                 </Link>
-                
+
                 <div className="px-3 py-2">
                   <span className="text-gray-700 font-medium">AI Services</span>
                   <div className="ml-4 mt-2 space-y-1">
