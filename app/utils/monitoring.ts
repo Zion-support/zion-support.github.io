@@ -173,8 +173,8 @@ class MonitoringService {
     }
 
     // Send to analytics (if configured)
-    if (typeof window !== 'undefined' && typeof (window as Window & { gtag?: (...args: unknown[]) => void }).gtag === 'function') {
-      (window as Window & { gtag: (...args: unknown[]) => void }).gtag('event', name, {
+    if (typeof window !== 'undefined' && 'gtag' in window && typeof (window as unknown as { gtag: unknown }).gtag === 'function') {
+      (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',
       });
