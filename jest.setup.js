@@ -64,6 +64,14 @@ global.IntersectionObserver = class IntersectionObserver {
   unobserve() {}
 };
 
+// Mock PerformanceObserver
+global.PerformanceObserver = class PerformanceObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
   constructor() {}
@@ -101,3 +109,6 @@ const sessionStorageMock = {
   clear: jest.fn(),
 };
 global.sessionStorage = sessionStorageMock;
+
+// Setup testing library
+require('@testing-library/jest-dom');
