@@ -1,13 +1,10 @@
 import { NextPage } from 'next';
-import { AppProps } from 'next/app';
-import React, { ReactNode } from 'react';
+import React from 'react';
 
-interface NextPageWithLayout<P = Record<string, unknown>, IP = P> extends NextPage<P, IP> {
-  getLayout?: (_page: React.ReactElement) => React.ReactNode;
-}
+// NextPageWithLayout interface moved to module declaration below
 
 declare module 'next' {
-  interface NextPageWithLayout<P = Record<string, unknown>, IP = P> extends NextPage<P, IP> {
+  interface NextPageWithLayout<P = {}, IP = P> extends NextPage<P, IP> {
     getLayout?: (_page: React.ReactElement) => React.ReactNode;
   }
 }
