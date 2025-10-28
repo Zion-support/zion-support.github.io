@@ -1,4 +1,9 @@
-// Performance API types for better type safety
+// Performance monitoring types
+export interface PerformanceEventTiming extends PerformanceEntry {
+  processingStart: number;
+  processingEnd: number;
+  cancelable: boolean;
+}
 
 export interface LayoutShift extends PerformanceEntry {
   value: number;
@@ -11,11 +16,4 @@ export interface LayoutShiftAttribution {
   node?: Node;
   previousRect: DOMRectReadOnly;
   currentRect: DOMRectReadOnly;
-}
-
-export interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
-  processingEnd: number;
-  cancelable: boolean;
-  target?: Node;
 }
