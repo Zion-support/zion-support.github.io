@@ -13,7 +13,7 @@ interface EnhancedAccessibilityManagerProps {
 }
 
 const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> = memo(({ 
-  enableAutoDetection = true, enableKeyboardShortcuts: _enableKeyboardShortcuts = true, enableHighContrastMode: _enableHighContrastMode = true, children
+  enableAutoDetection = true, enableKeyboardShortcuts = true, enableHighContrastMode = true, children
 }) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [isScreenReaderActive, _setIsScreenReaderActive] = useState(false);
@@ -52,7 +52,7 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
   }, [enableAutoDetection]);
 
   useEffect(() => {
-    if (!_enableHighContrastMode) return;
+    if (!enableHighContrastMode) return;
 
     const mediaQuery = window.matchMedia('(prefers-contrast: high)');
     setIsHighContrast(mediaQuery.matches);
@@ -60,10 +60,10 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
     const handleChange = (e: MediaQueryListEvent) => setIsHighContrast(e.matches);
     mediaQuery.addEventListener('change', handleChange);
     return () => mediaQuery.removeEventListener('change', handleChange);
-  }, [_enableHighContrastMode]);
+  }, [enableHighContrastMode]);
 
   useEffect(() => {
-    if (!_enableKeyboardShortcuts) return;
+    if (!enableKeyboardShortcuts) return;
 
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
@@ -94,7 +94,7 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [_enableKeyboardShortcuts]);
+  }, [enableKeyboardShortcuts]);
 
   useEffect(() => {
     if (isHighContrast) {
