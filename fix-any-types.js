@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-import fs from 'fs';
-import path from 'path';
-
-<<<<<<< HEAD
-// Function to fix any types
-function fixAnyTypes(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-
-    // Replace Record<string, any> with Record<string, unknown>
-    const recordAnyRegex = /Record<string, any>/g;
-    if (recordAnyRegex.test(content)) {
-      content = content.replace(recordAnyRegex, 'Record<string, unknown>');
-      modified = true;
-    }
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
@@ -64,7 +47,6 @@ for (const file of pageFiles) {
 }
 
 console.log(`Fixed any types in ${fixedCount} files`);
-=======
 #!/usr/bin/env node
 
 import fs from "fs";
@@ -123,8 +105,6 @@ async function fixAnyTypes() {
 }
 
 fixAnyTypes().catch(console.error);
->>>>>>> b61118d6144fdc99f32acbc26a83c9d4d1af6611
-=======
 // Find all TypeScript/TSX files in the app directory
 const files = glob.sync('app/**/*.{ts,tsx}', { cwd: '/workspace' });
 
@@ -160,4 +140,3 @@ files.forEach(file => {
 });
 
 console.log('Any type fixes completed');
->>>>>>> c271e7ba1e2d2951f565c25080f0cec45834b100
