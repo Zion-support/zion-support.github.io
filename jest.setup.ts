@@ -49,17 +49,17 @@ global.ResizeObserver = class ResizeObserver {
   unobserve() {}
 }
 
-// Mock PerformanceObserver
-global.PerformanceObserver = class PerformanceObserver {
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
-} as any
-
 // Mock TextEncoder and TextDecoder
 global.TextEncoder = TextEncoder
 global.TextDecoder = TextDecoder as any
+
+// Mock PerformanceObserver
+global.PerformanceObserver = class PerformanceObserver {
+  constructor(callback: PerformanceObserverCallback) {}
+  observe(options?: PerformanceObserverInit) {}
+  disconnect() {}
+  takeRecords() { return []; }
+} as any
 
 // Mock Next.js router
 jest.mock('next/router', () => ({
@@ -105,9 +105,16 @@ jest.mock('next/navigation', () => ({
   },
 }))
 
+// Note: framer-motion is not installed, so no mocking needed
 
 // Mock react-helmet-async
 jest.mock('react-helmet-async', () => ({
   Helmet: ({ children }: { children: React.ReactNode }) => children,
   HelmetProvider: ({ children }: { children: React.ReactNode }) => children,
 }))
+
+<<<<<<< HEAD
+// Web-vitals is not used in this project
+=======
+// Note: web-vitals is not installed, so no mocking needed
+>>>>>>> af0c97ac1675 (Fix linting errors and Jest configuration)

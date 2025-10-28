@@ -2,8 +2,8 @@ const fs = require('fs');
 const path = require('path');
 
 // CommonJS setup
-const __filename = require.resolve('./fix-imports.cjs');
-const __dirname = path.dirname(__filename);
+// const __filename = require.resolve('./fix-imports.cjs'); // Unused variable
+// const __dirname = path.dirname(__filename); // Unused variable
 
 function fixFile(filePath) {
   try {
@@ -12,6 +12,7 @@ function fixFile(filePath) {
     let fixedLines = [];
     let seenImports = new Set();
     let seenExports = new Set();
+    // let inFunction = false; // Unused variable
     let functionName = '';
     
     for (let i = 0; i < lines.length; i++) {

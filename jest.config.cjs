@@ -10,13 +10,21 @@ const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   testEnvironment: 'jsdom',
   moduleNameMapper: {
+    // Handle module aliases (this will be automatically configured for you based on your tsconfig.json paths)
     '^@/(.*)$': '<rootDir>/$1',
   },
-  transformIgnorePatterns: [
-    'node_modules/(?!(.*\\.mjs$|@testing-library|@jest))',
-  ],
   testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
+  transform: {
+    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
+  },
+  transformIgnorePatterns: [
+    '/node_modules/(?!(.*\\.mjs$|@testing-library|@jest|jest-axe))',
+  ],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
+  testMatch: [
+    '<rootDir>/__tests__/**/*.(test|spec).(js|jsx|ts|tsx)',
+    '<rootDir>/**/*.(test|spec).(js|jsx|ts|tsx)',
+  ],
   collectCoverageFrom: [
     'app/**/*.{js,jsx,ts,tsx}',
     'components/**/*.{js,jsx,ts,tsx}',
