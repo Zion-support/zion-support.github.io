@@ -24,7 +24,7 @@ const ZionAIAPITesterPage: React.FC = memo(() => {
         title="Zion AI API Tester - Intelligent API Testing & Validation Tool"
         description="AI-powered API testing tool that automatically generates test cases, validates responses, and ensures API reliability. Streamline your API testing workflow with intelligent automation."
         keywords="API testing, automated testing, API validation, test case generation, API reliability, developer tools"
-        canonicalUrl="https://ziontechgroup.com/zion-ai-api-tester"
+        canonical="https://ziontechgroup.com/zion-ai-api-tester"
         structuredData={structuredData}
       />
       

@@ -42,3 +42,46 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
           setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (entry as any).value }));
         } else if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
           setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+        }
+      }
+    });
+
+    // Observe Core Web Vitals
+    try {
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
+    } catch (error) {
+      console.warn('Performance Observer not supported:', error);
+    }
+
+    // TTFB measurement
+    if (performance.timing) {
+      const ttfb = performance.timing.responseStart - performance.timing.navigationStart;
+      setMetrics(prev => ({ ...prev, ttfb }));
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [enableReporting]);
+
+  if (!enableReporting) {
+    return <>{children}</>;
+  }
+
+  return (
+    <div className={`performance-monitor ${className}`}>
+      {children}
+      <div className="performance-metrics" style={{ display: 'none' }}>
+        {Object.entries(metrics).map(([key, value]) => (
+          <div key={key} data-metric={key} data-value={value || 0}>
+            {key}: {value?.toFixed(2) || 'N/A'}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+});
+
+PerformanceMonitor.displayName = 'PerformanceMonitor';
+
+export default PerformanceMonitor;
