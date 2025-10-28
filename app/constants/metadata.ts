@@ -5,7 +5,6 @@ export const metadata: Metadata = {
   description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
   keywords: 'AI solutions, IT services, cybersecurity, cloud computing, digital transformation',
   authors: [{ name: 'Zion Tech Group' }],
-  robots: 'index, follow',
   openGraph: {
     title: 'Zion Tech Group - AI-Powered Business Solutions',
     description: 'Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services.',
