@@ -168,8 +168,8 @@ class MonitoringService {
     }
 
     // Send to analytics (if configured)
-    if (typeof (window as any).gtag === 'function') {
-      (window as any).gtag('event', name, {
+    if (typeof (window as Window & { gtag?: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag === 'function') {
+      (window as Window & { gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',
       });
