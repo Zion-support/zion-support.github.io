@@ -89,6 +89,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         img.decoding = 'async';
       }
     });
+    
+    // Call the functions
+    optimizeImages();
+    monitorPerformance();
 
     // Enable service worker
     if ('serviceWorker' in navigator) {

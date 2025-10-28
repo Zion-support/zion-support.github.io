@@ -235,6 +235,8 @@ class MonitoringService {
           'DOM Complete': `${Math.round(navigation.domComplete - navigation.fetchStart)}ms`,
           'Load Complete': `${Math.round(navigation.loadEventEnd - navigation.fetchStart)}ms`
         };
+        // Use timing variable to avoid unused variable warning
+        console.log('Navigation timing:', timing);
       }
     }
   }

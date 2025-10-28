@@ -16,7 +16,7 @@ const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> 
   enableAutoDetection = true, _enableKeyboardShortcuts = true, _enableHighContrastMode = true, _children
 }) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
-  const [isScreenReaderActive, setIsScreenReaderActive] = useState(false);
+  const [isScreenReaderActive] = useState(false);
 
   useEffect_(() => {
     if (enableAutoDetection) {
