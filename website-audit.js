@@ -107,49 +107,50 @@ const routes = [
   '/iot-platform',
   '/5 g-implementation'
 ]
-const baseUrl = 'https: //ziontechgroup.com',
+const baseUrl = 'https://ziontechgroup.com';
 const results = {
-  working: []
+  working: [],
   broken: [],
   missing: [],
-  errors: []}
-;
+  errors: []
+};
 function checkUrl(url) {
   return new Promise((resolve) => {
     const parsedUrl = new URL(url)
     const client = parsedUrl.protocol === 'https: ' ? https : http
     const options = {
-      hostname: parsedUrl.hostname
-      port: parsedUrl.port || (parsedUrl.protocol === 'https:' ? 443 : 80)
-      path: parsedUrl.pathname + parsedUrl.search
+      hostname: parsedUrl.hostname,
+      port: parsedUrl.port || (parsedUrl.protocol === 'https:' ? 443 : 80),
+      path: parsedUrl.pathname + parsedUrl.search,
       method: 'HEAD',
       timeout: 10000,
-      headers: {,
-        'User-Agent': 'Mozilla/5.0 (compatible; WebsiteAudit/1.0)'};
-    }
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (compatible; WebsiteAudit/1.0)'
+      }
+    };
 
     const req = client.request(options, (res) => {
-    resolve({)
-        url)
-        status: res.statusCode),
-        statusText: res.statusMessage),
+      resolve({
+        url,
+        status: res.statusCode,
+        statusText: res.statusMessage,
         headers: res.headers
-  })
-    })
+      });
+    });
     req.on('error', (error) => {
-    resolve({)
-        url)
-        error: error.message),
+      resolve({
+        url,
+        error: error.message,
         status: 0
   })
     })
     req.on('timeout', () => {
-    req.destroy()
-      resolve({)
-        url)
-        error: 'Request timeout'),
+      req.destroy()
+      resolve({
+        url,
+        error: 'Request timeout',
         status: 0
-  })
+      })
     })
     req.end()
   })
@@ -185,19 +186,19 @@ async function auditWebsite() {
   console.log('📊 AUDIT RESULTS SUMMARY')
   console.log('='.repeat(60))
   console.log(`\n✅ Working URLs: ${results.working.length}`)
-  results.working.forEach(item => {)
+  results.working.forEach(item => {
     console.log(`   ${item.url} (${item.status})`)
   })
   console.log(`\n❌ Broken URLs: ${results.broken.length}`)
-  results.broken.forEach(item => {)
+  results.broken.forEach(item => {
     console.log(`   ${item.url} (${item.status} - ${item.statusText})`)
   })
   console.log(`\n🚫 Missing URLs (404): ${results.missing.length}`)
-  results.missing.forEach(item => {)
+  results.missing.forEach(item => {
     console.log(`   ${item.url}`)
   })
   console.log(`\n⚠️  Errors: ${results.errors.length}`)
-  results.errors.forEach(item => {)
+  results.errors.forEach(item => {
     console.log(`   ${item.url} - ${item.error}`)
   })
   console.log('\n' + '='.repeat(60))
@@ -205,7 +206,7 @@ async function auditWebsite() {
   console.log('='.repeat(60))
   if (results.missing.length > 0) {
     console.log('\n🔧 Missing pages that need to be created: '),
-    results.missing.forEach(item => {),
+    results.missing.forEach(item => {
       const route = item.url.replace(baseUrl, '')
       console.log(`   - Create page component for: ${route}`)
     })
@@ -213,14 +214,14 @@ async function auditWebsite() {
 
   if (results.broken.length > 0) {
     console.log('\n🔧 Broken pages that need to be fixed: '),
-    results.broken.forEach(item => {),
+    results.broken.forEach(item => {
       console.log(`   - Fix: ${item.url} (${item.status})`)
     })
   }
 
   if (results.errors.length > 0) {
     console.log('\n🔧 Pages with connection errors: '),
-    results.errors.forEach(item => {),
+    results.errors.forEach(item => {
       console.log(`   - Check: ${item.url} - ${item.error}`)
     })
   }

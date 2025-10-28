@@ -1,0 +1,457 @@
+{
+  "working": [],
+  "broken": [
+    {
+      "url": "https://ziontechgroup.com/",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/about",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/contact",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/pricing",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/services",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/blog",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/case-studies",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/team",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/careers",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/privacy",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/terms",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/cookies",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/docs",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/api-docs",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/support",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/status",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/demo",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/consultation",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/health",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/security",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/compliance",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/gdpr",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-services",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/it-services",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/micro-saas",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-3d-generation",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-agricultural-intelligence-pro",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-analytics-dashboard",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-api-management",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-autonomous-systems",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-blockchain-solutions",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-climate-solutions-pro",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-computer-vision",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-content-generation",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-content-studio",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-content-writer",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-crm-assistant",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-customer-support",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-customer-support-bot",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-data-analytics",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-drug-discovery-pro",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-email-marketing",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-energy",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-energy-grid-management-pro",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-fashion-design",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-financial-advisor",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-financial-crime-detection-pro",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-fintech",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-healthcare",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-holographic-workspace",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-infrastructure-monitoring",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-logo-designer",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-ml-platform",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-mobile-app-builder",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-music-composition",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-neural-memory-assistant",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-ops",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-project-manager",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-quantum-computing",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-quantum-financial-oracle",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-smart-calendar",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-social-media-manager",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-space-technology-pro",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-supply-chain-optimization-pro",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-video-generator",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-workflow-automation",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/cloud-migration",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/cybersecurity",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/it-infrastructure",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/it-support",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/custom-development",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/devops-cicd",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/database-management",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/network-design",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/blockchain-integration-services",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/smart-contract-security-audit",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/autonomous-systems",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/blockchain-web3",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/iot-edge-computing",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/ar-vr-solutions",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/smart-cities",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/digital-transformation",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/innovation-labs",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/business-intelligence",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/robotics",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/edge-computing",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/financial-it",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/healthcare-it",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/iot-platform",
+      "status": 400,
+      "statusText": "Bad Request"
+    },
+    {
+      "url": "https://ziontechgroup.com/5 g-implementation",
+      "status": 400,
+      "statusText": "Bad Request"
+    }
+  ],
+  "missing": [],
+  "errors": []
+}

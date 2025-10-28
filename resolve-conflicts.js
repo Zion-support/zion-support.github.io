@@ -25,13 +25,15 @@ function resolveConflicts() {
                 findConflictFiles(filePath);
             } else if (stat.isFile() && (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.json'))) {
                 try {
-                    const content = fs.readFileSync(filePath, 'utf8');
-            content = content.replace(/            
+                    let content = fs.readFileSync(filePath, 'utf8');
+            content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');            
             fs.writeFileSync(filePath, content);
             console.log(`Resolved conflicts in: ${filePath}`);
         } catch (err) {
             console.error(`Error resolving conflicts in ${filePath}:`, err.message);
         }
+    }
+}
     }
     
     console.log('Conflict resolution completed!');

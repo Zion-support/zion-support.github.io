@@ -1,9 +1,9 @@
 import fs from 'fs';
 
-// Read existing pages;
+// Read existing pages
 const existingPages = fs.readFileSync('/workspace/existing_pages.txt', 'utf8').split('\n').filter(Boolean);
 
-// Navigation links from Navigation.tsx;
+// Navigation links from Navigation.tsx
 const navigationLinks = ['/ai-services',
   '/ai-content-generator',
   '/ai-chatbot-enterprise',
@@ -142,22 +142,23 @@ const appRoutes = ['/',
 // Combine all links and remove duplicates;
 const allLinks = [...new Set([...navigationLinks, ...footerLinks, ...appRoutes])];
 
-// Find missing pages;
+// Find missing pages
+const missingPages = navigationLinks.filter(link => {
   const path = link.replace('/', '');
   return !existingPages.includes(path);
 });
 
 // Find broken links (pages that exist but have no route)
 const brokenLinks = existingPages.filter(page => {
-  const link={`/${page}`};
+  const link = `/${page}`;
   return !allLinks.includes(link) && page !== 'page.tsx';
 });
 
 console.log('=== MISSING PAGES ===');
- console.log(page));
+missingPages.forEach(page => console.log(page));
 
-console.log('\n=== BROKEN LINKS (Pages exist but, no, route) ===');
- console.log(page));
+console.log('\n=== BROKEN LINKS (Pages exist but no route) ===');
+brokenLinks.forEach(page => console.log(page));
 
 console.log('\n=== SUMMARY ===');
 console.log(`Total links referenced: ${allLinks.length}`);

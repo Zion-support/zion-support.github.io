@@ -61,7 +61,7 @@ export default [
     ],
   },
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
+    files: ['**/*.{js,jsx,ts,tsx,cjs}'],
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
