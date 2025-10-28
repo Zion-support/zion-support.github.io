@@ -8,7 +8,7 @@ interface AnalyticsProps {
   enabled?: boolean;
 }
 
-// Extend Window interface for analytics
+// Extend Window interface for Google Analytics
 declare global {
   interface Window {
     dataLayer?: unknown[];
