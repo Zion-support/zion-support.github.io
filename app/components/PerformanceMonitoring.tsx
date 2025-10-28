@@ -2,13 +2,10 @@
 
 import React, { useEffect, memo, useCallback } from 'react';
 
-
 interface LayoutShiftEntry extends PerformanceEntry {
   value: number;
   hadRecentInput: boolean;
 }
-
-
 
 interface PerformanceMonitoringProps {
   className?: string;
