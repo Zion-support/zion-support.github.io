@@ -47,12 +47,14 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
             if (entry.entryType === 'largest-contentful-paint') {
               setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
             } else if (entry.entryType === 'first-input') {
-              setMetrics(prev => ({ ...prev, fid: (entry as any).processingStart - entry.startTime }));
+              const fidEntry = entry as PerformanceEventTiming;
+              setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
             } else if (entry.entryType === 'layout-shift') {
-              if (!(entry as any).hadRecentInput) {
+              const clsEntry = entry as LayoutShift;
+              if (!clsEntry.hadRecentInput) {
                 setMetrics(prev => ({ 
                   ...prev, 
-                  cls: (prev.cls || 0) + (entry as any).value 
+                  cls: (prev.cls || 0) + clsEntry.value 
                 }));
               }
             } else if (entry.entryType === 'paint') {
@@ -71,20 +73,24 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
 
       // Memory usage
       if ('memory' in performance) {
-        const memory = (performance as any).memory;
-        setMetrics(prev => ({ 
-          ...prev, 
-          memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
-        }));
+        const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
+        if (memory) {
+          setMetrics(prev => ({ 
+            ...prev, 
+            memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
+          }));
+        }
       }
 
       // Connection speed
       if ('connection' in navigator) {
-        const connection = (navigator as any).connection;
-        setMetrics(prev => ({ 
-          ...prev, 
-          connectionSpeed: connection.effectiveType || 'unknown'
-        }));
+        const connection = (navigator as Navigator & { connection?: { effectiveType?: string } }).connection;
+        if (connection) {
+          setMetrics(prev => ({ 
+            ...prev, 
+            connectionSpeed: connection.effectiveType || 'unknown'
+          }));
+        }
       }
     } catch (error) {
       console.warn('Performance monitoring error:', error);
