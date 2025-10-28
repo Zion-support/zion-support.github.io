@@ -66,7 +66,6 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
         configurable: true
       });
     }
-
     // Monitor for suspicious console usage
     const originalConsole = console.log;
     console.log = function(...args) {
