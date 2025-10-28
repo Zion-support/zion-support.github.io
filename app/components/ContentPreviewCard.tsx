@@ -1,18 +1,12 @@
+'use client';
+
 import React from 'react';
 
-interface ContentPreviewCardProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({ className = '', children }) => {
+export default function ContentPreviewCard() {
   return (
-    <div className={`contentpreviewcard-component ${className}`}>
-      {children}
+    <div>
+      <h1>ContentPreviewCard</h1>
+      <p>This component is under construction.</p>
     </div>
   );
-};
-
-ContentPreviewCard.displayName = 'ContentPreviewCard';
-
-export default ContentPreviewCard;
+}

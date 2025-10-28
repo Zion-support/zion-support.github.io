@@ -1,9 +1,12 @@
-import ErrorBoundary from '../components/ErrorBoundary';
+'use client';
 
-export default function TestErrorBoundary() {
+import React from 'react';
+
+export default function page() {
   return (
-    <ErrorBoundary>
-      <div>Test</div>
-    </ErrorBoundary>
+    <div>
+      <h1>page</h1>
+      <p>This component is under construction.</p>
+    </div>
   );
 }

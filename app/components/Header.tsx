@@ -1,13 +1,12 @@
+'use client';
+
 import React from 'react';
 
-interface HeaderProps {
-  // Add props here
-}
-
-export default function Header(_props: HeaderProps) {
+export default function Header() {
   return (
-    <header>
+    <div>
       <h1>Header</h1>
-    </header>
+      <p>This component is under construction.</p>
+    </div>
   );
 }

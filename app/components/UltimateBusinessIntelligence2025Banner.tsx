@@ -1,18 +1,12 @@
+'use client';
+
 import React from 'react';
 
-interface UltimateBusinessIntelligence2025BannerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const UltimateBusinessIntelligence2025Banner: React.FC<UltimateBusinessIntelligence2025BannerProps> = ({ className = '', children }) => {
+export default function UltimateBusinessIntelligence2025Banner() {
   return (
-    <div className={`ultimatebusinessintelligence2025banner-component ${className}`}>
-      {children}
+    <div>
+      <h1>UltimateBusinessIntelligence2025Banner</h1>
+      <p>This component is under construction.</p>
     </div>
   );
-};
-
-UltimateBusinessIntelligence2025Banner.displayName = 'UltimateBusinessIntelligence2025Banner';
-
-export default UltimateBusinessIntelligence2025Banner;
+}

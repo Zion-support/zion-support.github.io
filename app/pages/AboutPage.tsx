@@ -1,12 +1,12 @@
+'use client';
+
 import React from 'react';
 
-const AboutPage: React.FC = () => {
+export default function AboutPage() {
   return (
-    <div className="about-page">
-      <h1>About Us</h1>
-      <p>Learn more about Zion Tech Group and our mission.</p>
+    <div>
+      <h1>AboutPage</h1>
+      <p>This component is under construction.</p>
     </div>
   );
-};
-
-export default AboutPage;
+}

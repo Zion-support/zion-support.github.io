@@ -1,18 +1,12 @@
+'use client';
+
 import React from 'react';
 
-interface FuturisticHeroProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const FuturisticHero: React.FC<FuturisticHeroProps> = ({ className = '', children }) => {
+export default function FuturisticHero() {
   return (
-    <div className={`futuristichero-component ${className}`}>
-      {children}
+    <div>
+      <h1>FuturisticHero</h1>
+      <p>This component is under construction.</p>
     </div>
   );
-};
-
-FuturisticHero.displayName = 'FuturisticHero';
-
-export default FuturisticHero;
+}

@@ -1,18 +1,12 @@
+'use client';
+
 import React from 'react';
 
-interface MobileOptimizerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const MobileOptimizer: React.FC<MobileOptimizerProps> = ({ className = '', children }) => {
+export default function MobileOptimizer() {
   return (
-    <div className={`mobileoptimizer-component ${className}`}>
-      {children}
+    <div>
+      <h1>MobileOptimizer</h1>
+      <p>This component is under construction.</p>
     </div>
   );
-};
-
-MobileOptimizer.displayName = 'MobileOptimizer';
-
-export default MobileOptimizer;
+}

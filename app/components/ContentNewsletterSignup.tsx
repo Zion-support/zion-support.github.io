@@ -1,13 +1,12 @@
+'use client';
+
 import React from 'react';
 
-interface ContentNewsletterSignupProps {
-  // Add props here
-}
-
-export default function ContentNewsletterSignup(_props: ContentNewsletterSignupProps) {
+export default function ContentNewsletterSignup() {
   return (
     <div>
-      <h1>Newsletter Signup</h1>
+      <h1>ContentNewsletterSignup</h1>
+      <p>This component is under construction.</p>
     </div>
   );
 }

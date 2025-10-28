@@ -1,11 +1,12 @@
+'use client';
+
 import React from 'react';
 
-const ContactForm: React.FC = () => {
+export default function ContactForm() {
   return (
-    <div className="contactform-component">
-      {/* ContactForm component implementation */}
+    <div>
+      <h1>ContactForm</h1>
+      <p>This component is under construction.</p>
     </div>
   );
-};
-
-export default ContactForm;
+}

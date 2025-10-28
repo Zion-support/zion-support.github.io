@@ -1,6 +1,6 @@
-import type { Metadata } from 'next';
+// about-metadata utility
 
-export const metadata: Metadata = {
-  title: 'About Us - Zion Tech Group',
-  description: 'Learn about Zion Tech Group, a leading provider of AI and IT solutions.',
-};
+export function aboutMetadata() {
+  // Implementation coming soon
+  return null;
+}

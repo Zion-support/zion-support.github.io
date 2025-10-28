@@ -1,18 +1,12 @@
+'use client';
+
 import React from 'react';
 
-interface AdvancedAccessibilityEnhancerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({ className = '', children }) => {
+export default function AdvancedAccessibilityEnhancer() {
   return (
-    <div className={`advancedaccessibilityenhancer-component ${className}`}>
-      {children}
+    <div>
+      <h1>AdvancedAccessibilityEnhancer</h1>
+      <p>This component is under construction.</p>
     </div>
   );
-};
-
-AdvancedAccessibilityEnhancer.displayName = 'AdvancedAccessibilityEnhancer';
-
-export default AdvancedAccessibilityEnhancer;
+}

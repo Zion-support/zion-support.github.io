@@ -1,18 +1,12 @@
+'use client';
+
 import React from 'react';
 
-interface UserExperienceEnhancerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ className = '', children }) => {
+export default function UserExperienceEnhancer() {
   return (
-    <div className={`userexperienceenhancer-component ${className}`}>
-      {children}
+    <div>
+      <h1>UserExperienceEnhancer</h1>
+      <p>This component is under construction.</p>
     </div>
   );
-};
-
-UserExperienceEnhancer.displayName = 'UserExperienceEnhancer';
-
-export default UserExperienceEnhancer;
+}

@@ -1,4 +1,6 @@
-import type { Metadata } from 'next';
-import { metadata as siteMetadata, viewport as siteViewport } from './metadata';
+// layout-exports utility
 
-export const metadata: Metadata = siteMetadata;
+export function layoutExports() {
+  // Implementation coming soon
+  return null;
+}

@@ -1,6 +1,6 @@
-export const viewport = {
-  width: 'device-width',
-  initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
-};
+// viewport utility
+
+export function viewport() {
+  // Implementation coming soon
+  return null;
+}

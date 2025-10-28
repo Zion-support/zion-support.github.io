@@ -1,29 +1,6 @@
-export interface User {
-  id: string;
-  email: string;
-  name: string;
-  role: 'admin' | 'user' | 'guest';
-}
+// app.types utility
 
-export interface Service {
-  id: string;
-  title: string;
-  description: string;
-  shortDescription: string;
-  icon: string;
-  features: string[];
-  pricing: {
-    basic: number;
-    pro: number;
-    enterprise: number;
-  }
-  benefits: string[];
-  useCases: string[];
-  marketPrice: string;
-  contactInfo: {
-    phone: string;
-    email: string;
-    website: string;
-  };
-  link: string;
+export function appTypes() {
+  // Implementation coming soon
+  return null;
 }

@@ -1,18 +1,12 @@
+'use client';
+
 import React from 'react';
 
-interface AnimatedTextProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const AnimatedText: React.FC<AnimatedTextProps> = ({ className = '', children }) => {
+export default function AnimatedText() {
   return (
-    <div className={`animatedtext-component ${className}`}>
-      {children}
+    <div>
+      <h1>AnimatedText</h1>
+      <p>This component is under construction.</p>
     </div>
   );
-};
-
-AnimatedText.displayName = 'AnimatedText';
-
-export default AnimatedText;
+}

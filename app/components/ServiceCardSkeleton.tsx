@@ -1,16 +1,12 @@
+'use client';
+
 import React from 'react';
 
-interface ServiceCardSkeletonProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ className = '', children }) => {
+export default function ServiceCardSkeleton() {
   return (
-<div className={`servicecardskeleton-component ${className}`}>
-      {children || <h2>ServiceCardSkeleton</h2>}
+    <div>
+      <h1>ServiceCardSkeleton</h1>
+      <p>This component is under construction.</p>
     </div>
   );
-};
-
-ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';export default ServiceCardSkeleton;
+}

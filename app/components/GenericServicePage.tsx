@@ -1,18 +1,12 @@
+'use client';
+
 import React from 'react';
 
-interface GenericServicePageProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const GenericServicePage: React.FC<GenericServicePageProps> = ({ className = '', children }) => {
+export default function GenericServicePage() {
   return (
-    <div className={`genericservicepage-component ${className}`}>
-      {children}
+    <div>
+      <h1>GenericServicePage</h1>
+      <p>This component is under construction.</p>
     </div>
   );
-};
-
-GenericServicePage.displayName = 'GenericServicePage';
-
-export default GenericServicePage;
+}

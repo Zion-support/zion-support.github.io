@@ -1,18 +1,12 @@
+'use client';
+
 import React from 'react';
 
-interface EnhancedAnalyticsProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({ className = '', children }) => {
+export default function EnhancedAnalytics() {
   return (
-    <div className={`enhancedanalytics-component ${className}`}>
-      {children}
+    <div>
+      <h1>EnhancedAnalytics</h1>
+      <p>This component is under construction.</p>
     </div>
   );
-};
-
-EnhancedAnalytics.displayName = 'EnhancedAnalytics';
-
-export default EnhancedAnalytics;
+}

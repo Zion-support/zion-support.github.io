@@ -1,18 +1,12 @@
+'use client';
+
 import React from 'react';
 
-interface EnhancedHeroProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const EnhancedHero: React.FC<EnhancedHeroProps> = ({ className = '', children }) => {
+export default function EnhancedHero() {
   return (
-    <div className={`enhancedhero-component ${className}`}>
-      {children}
+    <div>
+      <h1>EnhancedHero</h1>
+      <p>This component is under construction.</p>
     </div>
   );
-};
-
-EnhancedHero.displayName = 'EnhancedHero';
-
-export default EnhancedHero;
+}

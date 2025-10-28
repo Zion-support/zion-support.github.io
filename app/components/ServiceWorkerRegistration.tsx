@@ -1,27 +1,12 @@
 'use client';
 
+import React from 'react';
 
-import React, { memo, useEffect } from 'react';
-
-const ServiceWorkerRegistration: React.FC = memo(() => {
-  useEffect(() => {
-    if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
-      // Register service worker
-      navigator.serviceWorker
-        .register('/sw.js')
-        .then((registration) => { /* empty */ })
-        .catch((error) => { /* empty */ });
-
-      // Handle service worker updates
-      navigator.serviceWorker.addEventListener('controllerchange', () => {
-        window.location.reload();
-      });
-    }
-  }, []);
-
-  return null;
-});
-
-ServiceWorkerRegistration.displayName = 'ServiceWorkerRegistration';
-
-export default ServiceWorkerRegistration;
+export default function ServiceWorkerRegistration() {
+  return (
+    <div>
+      <h1>ServiceWorkerRegistration</h1>
+      <p>This component is under construction.</p>
+    </div>
+  );
+}

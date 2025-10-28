@@ -1,11 +1,12 @@
+'use client';
+
 import React from 'react';
 
-const AnimatedCounter: React.FC = () => {
+export default function AnimatedCounter() {
   return (
-    <div className="animatedcounter-component">
-      {/* AnimatedCounter component implementation */}
+    <div>
+      <h1>AnimatedCounter</h1>
+      <p>This component is under construction.</p>
     </div>
   );
-};
-
-export default AnimatedCounter;
+}

@@ -1,18 +1,12 @@
+'use client';
+
 import React from 'react';
 
-interface InteractiveAIROICalculatorProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const InteractiveAIROICalculator: React.FC<InteractiveAIROICalculatorProps> = ({ className = '', children }) => {
+export default function InteractiveAIROICalculator() {
   return (
-    <div className={`interactiveairoicalculator-component ${className}`}>
-      {children}
+    <div>
+      <h1>InteractiveAIROICalculator</h1>
+      <p>This component is under construction.</p>
     </div>
   );
-};
-
-InteractiveAIROICalculator.displayName = 'InteractiveAIROICalculator';
-
-export default InteractiveAIROICalculator;
+}

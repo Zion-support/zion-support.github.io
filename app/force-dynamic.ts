@@ -1,1 +1,6 @@
-export const dynamic = 'force-dynamic';
+// force-dynamic utility
+
+export function forceDynamic() {
+  // Implementation coming soon
+  return null;
+}

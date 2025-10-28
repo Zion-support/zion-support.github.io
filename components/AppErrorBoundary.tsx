@@ -2,19 +2,11 @@
 
 import React from 'react';
 
-interface AppErrorBoundaryProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const AppErrorBoundary: React.FC<AppErrorBoundaryProps> = ({ className = '', children }) => {
+export default function AppErrorBoundary() {
   return (
-    <div className={`app-error-boundary ${className}`}>
-      {children}
+    <div>
+      <h1>AppErrorBoundary</h1>
+      <p>This component is under construction.</p>
     </div>
   );
-};
-
-AppErrorBoundary.displayName = 'AppErrorBoundary';
-
-export default AppErrorBoundary;
+}

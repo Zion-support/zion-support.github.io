@@ -1,16 +1,12 @@
+'use client';
+
 import React from 'react';
 
-interface SecurityEnhancerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ className = '', children }) => {
+export default function SecurityEnhancer() {
   return (
-<div className={`security-enhancer ${className}`}>
-      {children || <h2>SecurityEnhancer</h2>}
+    <div>
+      <h1>SecurityEnhancer</h1>
+      <p>This component is under construction.</p>
     </div>
   );
-};SecurityEnhancer.displayName = 'SecurityEnhancer';
-
-export default SecurityEnhancer;
+}

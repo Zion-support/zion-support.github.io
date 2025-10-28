@@ -1,6 +1,12 @@
-import { createContext } from 'react';
-import {AccessibilityContextType} from '../types/accessibility';
+'use client';
 
-const AccessibilityContext = createContext<AccessibilityContextType | null>(null);
+import React from 'react';
 
-export { AccessibilityContext };
+export default function AccessibilityContext() {
+  return (
+    <div>
+      <h1>AccessibilityContext</h1>
+      <p>This component is under construction.</p>
+    </div>
+  );
+}

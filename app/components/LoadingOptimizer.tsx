@@ -1,18 +1,12 @@
+'use client';
+
 import React from 'react';
 
-interface LoadingOptimizerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const LoadingOptimizer: React.FC<LoadingOptimizerProps> = ({ className = '', children }) => {
+export default function LoadingOptimizer() {
   return (
-    <div className={`loadingoptimizer-component ${className}`}>
-      {children}
+    <div>
+      <h1>LoadingOptimizer</h1>
+      <p>This component is under construction.</p>
     </div>
   );
-};
-
-LoadingOptimizer.displayName = 'LoadingOptimizer';
-
-export default LoadingOptimizer;
+}

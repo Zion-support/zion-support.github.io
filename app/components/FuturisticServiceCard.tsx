@@ -1,17 +1,12 @@
+'use client';
+
 import React from 'react';
 
-interface FuturisticServiceCardProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({ className = '', children }) => {
+export default function FuturisticServiceCard() {
   return (
-    <div className={`futuristicservicecard-component ${className}`}>
-{children || <h2>FuturisticServiceCard</h2>}
+    <div>
+      <h1>FuturisticServiceCard</h1>
+      <p>This component is under construction.</p>
     </div>
   );
-};
-
-FuturisticServiceCard.displayName = 'FuturisticServiceCard';
-export default FuturisticServiceCard;
+}

@@ -1,18 +1,12 @@
+'use client';
+
 import React from 'react';
 
-interface SimpleFooterProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const SimpleFooter: React.FC<SimpleFooterProps> = ({ className = '', children }) => {
+export default function SimpleFooter() {
   return (
-    <div className={`simplefooter-component ${className}`}>
-      {children}
+    <div>
+      <h1>SimpleFooter</h1>
+      <p>This component is under construction.</p>
     </div>
   );
-};
-
-SimpleFooter.displayName = 'SimpleFooter';
-
-export default SimpleFooter;
+}

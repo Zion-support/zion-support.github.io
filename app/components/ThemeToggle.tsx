@@ -1,18 +1,12 @@
+'use client';
+
 import React from 'react';
 
-interface ThemeToggleProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '', children }) => {
+export default function ThemeToggle() {
   return (
-    <div className={`themetoggle-component ${className}`}>
-{children || <h2>ThemeToggle</h2>}
+    <div>
+      <h1>ThemeToggle</h1>
+      <p>This component is under construction.</p>
     </div>
   );
-};
-
-ThemeToggle.displayName = 'ThemeToggle';
-
-export default ThemeToggle;
+}

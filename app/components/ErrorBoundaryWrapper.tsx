@@ -1,22 +1,12 @@
-<<<<<<< HEAD
-import React from 'react'
-=======
+'use client';
+
 import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-c408
 
-interface ErrorBoundaryWrapperProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const ErrorBoundaryWrapper: React.FC<ErrorBoundaryWrapperProps> = ({ className = '', children }) => {
+export default function ErrorBoundaryWrapper() {
   return (
-    <div className={`errorboundarywrapper-component ${className}`}>
-      {children}
+    <div>
+      <h1>ErrorBoundaryWrapper</h1>
+      <p>This component is under construction.</p>
     </div>
   );
-};
-
-ErrorBoundaryWrapper.displayName = 'ErrorBoundaryWrapper';
-
-export default ErrorBoundaryWrapper;
+}

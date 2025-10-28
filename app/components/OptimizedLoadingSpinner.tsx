@@ -1,16 +1,12 @@
+'use client';
+
 import React from 'react';
 
-interface OptimizedLoadingSpinnerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = ({ className = '', children }) => {
+export default function OptimizedLoadingSpinner() {
   return (
-<div className={`optimizedloadingspinner-component ${className}`}>
-      {children}
+    <div>
+      <h1>OptimizedLoadingSpinner</h1>
+      <p>This component is under construction.</p>
     </div>
   );
-};
-
-OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';export default OptimizedLoadingSpinner;
+}

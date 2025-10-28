@@ -1,42 +1,12 @@
+'use client';
+
 import React from 'react';
-<<<<<<< HEAD
-import ErrorBoundary from '../components/ErrorBoundary';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-c408
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 
-export const metadata = {
-  title: 'About | Zion Tech Group',
-  description: 'Professional about services by Zion Tech Group. Advanced AI and technology solutions.',
-  keywords: 'about, technology, services, AI, automation',
-  openGraph: {
-    title: 'About | Zion Tech Group',
-    description: 'Professional about services by Zion Tech Group.',
-    type: 'website',
-  },
-};
-
-function AboutPage() {
+export default function page() {
   return (
-    <>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              About Zion Tech Group
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Leading the future of technology with innovative AI solutions,
-              cloud infrastructure, and cutting-edge software development.
-            </p>
-          </div>
-        </div>
-      </div>
-      <Footer />
-    </>
+    <div>
+      <h1>page</h1>
+      <p>This component is under construction.</p>
+    </div>
   );
 }
-
-export default AboutPage;
