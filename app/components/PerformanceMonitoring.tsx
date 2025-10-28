@@ -2,15 +2,19 @@
 
 import React, { useEffect, memo, useCallback } from 'react';
 
+// Performance API types
+interface PerformanceEventTiming extends PerformanceEntry {
+  processingStart: number;
+  processingEnd: number;
+  target?: Node;
+}
+
 interface LayoutShiftEntry extends PerformanceEntry {
   value: number;
   hadRecentInput: boolean;
 }
 
-<<<<<<< HEAD
-=======
 // FIDEntry interface is used in the code via type assertion
->>>>>>> origin/main
 interface PerformanceMonitoringProps {
   className?: string;
 }
@@ -63,7 +67,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
       entries.forEach((entry) => {
         const clsEntry = entry as LayoutShiftEntry;
         if (!clsEntry.hadRecentInput) {
-          clsValue += clsEntry.value || 0;
+          clsValue += clsEntry.value;
           console.log('CLS:', clsValue);
           
           if (window.gtag) {
