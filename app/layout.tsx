@@ -17,8 +17,36 @@ import EnhancedAccessibilityManager from './components/EnhancedAccessibilityMana
 
 const inter = Inter({ subsets: ['latin'] });
 
-// Re-export metadata and viewport for Next.js
-export { metadata, viewport };
+// Define metadata and viewport for Next.js
+export const metadata = {
+  title: 'Zion Tech Group - AI-Powered Technology Solutions',
+  description: 'Leading provider of AI-powered technology solutions, enterprise software, and digital transformation services.',
+  keywords: 'AI, artificial intelligence, technology solutions, enterprise software, digital transformation',
+  authors: [{ name: 'Zion Tech Group' }],
+  creator: 'Zion Tech Group',
+  publisher: 'Zion Tech Group',
+  robots: 'index, follow',
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://zion.app',
+    title: 'Zion Tech Group - AI-Powered Technology Solutions',
+    description: 'Leading provider of AI-powered technology solutions, enterprise software, and digital transformation services.',
+    siteName: 'Zion Tech Group',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Zion Tech Group - AI-Powered Technology Solutions',
+    description: 'Leading provider of AI-powered technology solutions, enterprise software, and digital transformation services.',
+  },
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+};
 export default function RootLayout({
   children,
 }: {
