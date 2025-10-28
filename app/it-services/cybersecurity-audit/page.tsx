@@ -1,4 +1,7 @@
 
+import React from 'react';
+import Navigation from '../../components/Navigation';
+import Footer from '../../components/Footer';
 
 export const metadata = {
   title: 'Cybersecurity Audit | Zion Tech Group',
@@ -10,7 +13,7 @@ export const metadata = {
     type: 'website',
   },
 };
-function CybersecurityauditPage() {
+export default function CybersecurityauditPage() {
   return (
     <>
       <Navigation />
