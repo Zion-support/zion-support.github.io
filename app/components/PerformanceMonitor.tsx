@@ -14,21 +14,16 @@ interface LayoutShift extends PerformanceEntry {
   target?: Node;
 }
 
-interface PerformanceNavigationTiming extends PerformanceEntry {
-  responseStart: number;
-  requestStart: number;
-}
-
 interface PerformanceMonitorProps {
   className?: string;
   children?: React.ReactNode;
-  onMetricsUpdate?: (metrics: Record<string, number | null>) => void;
+  onMetricsUpdate?: (metrics: Record<string, unknown>) => void;
   enableRealTimeMonitoring?: boolean;
   enableReporting?: boolean;
 }
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({ 
-  enableReporting = false, enableRealTimeMonitoring = true 
+  className = '', children, enableReporting = false, enableRealTimeMonitoring = true 
 }) => {
   const [metrics, setMetrics] = useState({
     fcp: null as number | null,
@@ -75,8 +70,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
   }, [metrics, enableReporting]);
 
   return (
-    <div className="performance-monitor">
+    <div className={`performance-monitor ${className || ''}`}>
       <h3>Performance Metrics</h3>
+      {children}
       <div className="metrics">
         <div>FCP: {metrics.fcp?.toFixed(2)}ms</div>
         <div>LCP: {metrics.lcp?.toFixed(2)}ms</div>

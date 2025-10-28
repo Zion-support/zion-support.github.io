@@ -11,7 +11,7 @@ interface LazyImageProps {
 }
 
 const LazyImage: React.FC<LazyImageProps> = ({
-  src, alt, className = '', onLoad, onError
+  src, alt, className = '', placeholder, onLoad, onError
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
@@ -19,8 +19,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
   const imgRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
+    const observer = new IntersectionObserver(([entry]) => {
         if (entry.isIntersecting) {
           setIsInView(true);
           observer.disconnect();
