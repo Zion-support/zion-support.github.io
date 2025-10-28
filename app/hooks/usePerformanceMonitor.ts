@@ -35,15 +35,20 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
   }, []);
 
   const measurePerformance = useCallback(() => {
-    // Measure load time and render time
-    const loadTime = performance.timing ? performance.timing.loadEventEnd - performance.timing.navigationStart : 0;
-    const renderTime = performance.now();
+    // Measure performance metrics
+    const startTime = performance.now();
+    const memoryUsage = measureMemoryUsage();
+    
+    // Try to get navigation timing if available, otherwise use performance.now()
+    const loadTime = performance.timing ? 
+      performance.timing.loadEventEnd - performance.timing.navigationStart : 
+      performance.now();
     
     setMetrics(prev => ({
       ...prev,
-      memoryUsage: measureMemoryUsage(),
       loadTime,
-      renderTime
+      memoryUsage,
+      renderTime: performance.now() - startTime
     }));
   }, [measureMemoryUsage]);
 
@@ -80,5 +85,6 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
   return {
     metrics,
     isMonitoringFPS,
+    triggerPerformanceMeasurement: measurePerformance,
   }
 }
