@@ -107,15 +107,10 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     // Measure Memory Usage
     try {
       if ('memory' in performance) {
-<<<<<<< HEAD
         const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
-        if (memory) {
+        if (memory && typeof memory.usedJSHeapSize === 'number') {
           setMetrics(prev => ({ ...prev, memory: memory.usedJSHeapSize }));
         }
-=======
-        const memory = (performance as { memory: { usedJSHeapSize: number } }).memory;
-        setMetrics(prev => ({ ...prev, memory: memory.usedJSHeapSize }));
->>>>>>> 340a4d13198cc97970ed1335128f0176cd30b885
       }
     } catch (error) {
       console.warn('Memory measurement failed:', error);
