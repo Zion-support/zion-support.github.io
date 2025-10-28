@@ -2,6 +2,7 @@
 import Link from 'next/link';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Metadata } from 'next';
 
 export const dynamic = 'force-static';
@@ -10,10 +11,17 @@ export const dynamic = 'force-static';
 =======
  
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-544d
+=======
+import { Metadata } from 'next';
+
+export const dynamic = 'force-static';
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5f0a
 export const metadata: Metadata = {
   title: 'About Us - Zion Tech Group',
   description: 'Learn about Zion Tech Group, a leading provider of AI and IT solutions.',
 };
+<<<<<<< HEAD
 cursor/fix-errors-and-merge-to-main-8bc5
 =======
 import { aboutMetadata } from './constants';
@@ -29,6 +37,7 @@ import { metadata } from './metadata';
 export const dynamic = 'force-static';
 export { metadata };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cd9
+cursor/fix-errors-and-merge-to-main-5f0a
 
 export default function AboutPage() {
   return (

@@ -57,6 +57,7 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     const originalDescriptor = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML');
     if (originalDescriptor) {
 =======
@@ -71,6 +72,10 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
     const originalDescriptor = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML');
     if (originalDescriptor) {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-da78
+=======
+    const originalDescriptor = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML');
+    if (originalDescriptor) {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5f0a
       Object.defineProperty(Element.prototype, 'innerHTML', {
         set: function(value: string) {
           if (value && typeof value === 'string' && /<script/i.test(value)) {
@@ -79,7 +84,9 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
           }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 cursor/fix-errors-and-merge-to-main-da78
+cursor/fix-errors-and-merge-to-main-5f0a
           if (originalDescriptor.set) {
             originalDescriptor.set.call(this, value);
           }
@@ -89,6 +96,7 @@ cursor/fix-errors-and-merge-to-main-da78
             return originalDescriptor.get.call(this);
           }
           return '';
+<<<<<<< HEAD
 <<<<<<< HEAD
         }
       });
@@ -115,6 +123,11 @@ cursor/fix-errors-and-merge-to-main-da78
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cd9
 cursor/fix-errors-and-merge-to-main-da78
+=======
+        }
+      });
+    }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5f0a
 
     // Monitor for suspicious console usage
     const originalConsole = console.log;

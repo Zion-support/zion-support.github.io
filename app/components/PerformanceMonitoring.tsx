@@ -36,6 +36,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         const fid = (entry as PerformanceEntry & { processingStart: number }).processingStart - entry.startTime;
 =======
         const fidEntry = entry as PerformanceEventTiming;
@@ -47,6 +48,9 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
 =======
         const fid = (entry as PerformanceEntry & { processingStart: number }).processingStart - entry.startTime;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-da78
+=======
+        const fid = (entry as PerformanceEntry & { processingStart: number }).processingStart - entry.startTime;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5f0a
         console.log('FID:', fid);
         
         if (window.gtag) {
@@ -65,6 +69,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const clsObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -91,6 +96,11 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
         if (!(entry as PerformanceEntry & { hadRecentInput: boolean }).hadRecentInput) {
           clsValue += (entry as PerformanceEntry & { value: number }).value;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-da78
+=======
+        const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput: boolean; value: number };
+        if (!layoutShiftEntry.hadRecentInput) {
+          clsValue += layoutShiftEntry.value;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5f0a
           console.log('CLS:', clsValue);
           
           if (window.gtag) {
