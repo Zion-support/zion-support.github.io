@@ -146,4 +146,10 @@ export default [
       '@typescript-eslint/no-explicit-any': 'warn',
     },
   },
+  {
+    files: ['**/page.tsx', '**/layout.tsx', '**/loading.tsx', '**/error.tsx', '**/not-found.tsx'],
+    rules: {
+      'react-refresh/only-export-components': 'off',
+    },
+  },
 ];
