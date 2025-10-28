@@ -3,7 +3,7 @@ import React from 'react';
 
 interface AccessibilityComponentsProps {
   className?: string;
-  children?: React.ReactNode;
+  children: React.ReactNode;
 }
 
 export default function AccessibilityComponents({ className, children }: AccessibilityComponentsProps) {

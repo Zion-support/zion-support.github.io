@@ -26,29 +26,6 @@ function resolveConflicts() {
             } else if (stat.isFile() && (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.json'))) {
                 try {
                     const content = fs.readFileSync(filePath, 'utf8');
-                    if (content.includes('') || content.includes('>>>>>>>')) {
-                        conflictFiles.push(filePath);
-                    }
-                } catch (err) {
-                    // Skip files that can't be read
-                }
-            }
-        }
-    }
-    
-    findConflictFiles('.');
-    
-    console.log(`Found ${conflictFiles.length} files with conflicts`);
-    
-    // Resolve conflicts by accepting the remote version (theirs)
-    for (const filePath of conflictFiles) {
-        try {
-            let content = fs.readFileSync(filePath, 'utf8');
-            
-            // Remove conflict markers and keep the remote version (after =======)
-            content = content.replace(/\n([\s\S]*?)            
-            // Clean up any remaining conflict markers
-            content = content.replace(/\n/g, '');
             content = content.replace(/            
             fs.writeFileSync(filePath, content);
             console.log(`Resolved conflicts in: ${filePath}`);

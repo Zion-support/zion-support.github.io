@@ -7,69 +7,24 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Function to fix unused imports
 function fixUnusedImports(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
-    // Get all import lines
-    const lines = content.split('\n');
-    const importLines = [];
-    const otherLines = [];
-    
-    for (let i = 0; i < lines.length; i++) {
-      if (lines[i].trim().startsWith('import ')) {
-        importLines.push({ line: lines[i], index: i });
-      } else {
-        otherLines.push(lines[i]);
+    // Check if file has commented out Navigation or Footer
+    if (content.includes('{/* <Navigation /> */}') || content.includes('{/* <Footer /> */}')) {
+      // Remove Navigation import if it's commented out
+      if (content.includes('{/* <Navigation /> */}') && content.includes("import Navigation from")) {
+        content = content.replace(/import Navigation from ['"][^'"]*['"];\n?/g, '');
+        modified = true;
       }
-    }
-    
-    // Check which imports are actually used
-    const usedImports = new Set();
-    
-    for (const importLine of importLines) {
-      const importMatch = importLine.line.match(/import\s+(?:{[^}]+}|\w+)\s+from\s+['"][^'"]+['"]/);
-      if (importMatch) {
-        const importStatement = importMatch[0];
-        
-        // Extract imported names
-        const nameMatch = importStatement.match(/import\s+{([^}]+)}/);
-        if (nameMatch) {
-          // Named imports
-          const names = nameMatch[1].split(',').map(name => name.trim().split(' as ')[0].trim());
-          for (const name of names) {
-            if (content.includes(name) && !importLine.line.includes(name)) {
-              usedImports.add(importLine.line);
-              break;
-            }
-          }
-        } else {
-          // Default import
-          const defaultMatch = importStatement.match(/import\s+(\w+)\s+from/);
-          if (defaultMatch) {
-            const name = defaultMatch[1];
-            if (content.includes(name) && !importLine.line.includes(name)) {
-              usedImports.add(importLine.line);
-            }
-          }
-        }
+      
+      // Remove Footer import if it's commented out
+      if (content.includes('{/* <Footer /> */}') && content.includes("import Footer from")) {
+        content = content.replace(/import Footer from ['"][^'"]*['"];\n?/g, '');
+        modified = true;
       }
-    }
-    
-    // Remove unused imports
-    const newLines = lines.filter((line, index) => {
-      if (line.trim().startsWith('import ')) {
-        const importLine = importLines.find(imp => imp.index === index);
-        return importLine && usedImports.has(importLine.line);
-      }
-      return true;
-    });
-    
-    if (newLines.length !== lines.length) {
-      content = newLines.join('\n');
-      modified = true;
     }
     
     if (modified) {
@@ -80,13 +35,12 @@ function fixUnusedImports(filePath) {
     
     return false;
   } catch (error) {
-    console.error(`Error fixing unused imports in ${filePath}:`, error.message);
+    console.error(`Error fixing imports in ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Function to find all TypeScript files
-function findTSFiles(dir) {
+function findTsxFiles(dir) {
   const files = [];
   
   function traverse(currentDir) {
@@ -98,7 +52,7 @@ function findTSFiles(dir) {
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
         traverse(fullPath);
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts'))) {
+      } else if (stat.isFile() && item.endsWith('.tsx')) {
         files.push(fullPath);
       }
     }
@@ -109,13 +63,13 @@ function findTSFiles(dir) {
 }
 
 // Main execution
-const workspaceDir = '/workspace';
-const tsFiles = findTSFiles(workspaceDir);
+const workspaceDir = '/workspace/app';
+const tsxFiles = findTsxFiles(workspaceDir);
 
-console.log(`Found ${tsFiles.length} TypeScript files`);
+console.log(`Found ${tsxFiles.length} TSX files to check`);
 
 let fixedCount = 0;
-for (const file of tsFiles) {
+for (const file of tsxFiles) {
   if (fixUnusedImports(file)) {
     fixedCount++;
   }

@@ -8,9 +8,11 @@ interface ServiceCardSkeletonProps {
 const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ className = '', children }) => {
   return (
     <div className={`servicecardskeleton-component ${className}`}>
-      {children || <p>ServiceCardSkeleton component</p>}
+      {children || <h2>ServiceCardSkeleton</h2>}
     </div>
   );
 };
+
+ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 
 export default ServiceCardSkeleton;

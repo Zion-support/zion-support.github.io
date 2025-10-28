@@ -7,32 +7,56 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Function to fix unused imports in a file
 function fixUnusedImports(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
-    // Check if file has React imports but doesn't use them properly
-    const hasReactImport = content.includes("import React");
-    const hasUnusedImports = content.includes("import {") && !content.includes("React.");
+    // Remove duplicate React imports
+    const reactImportRegex = /import\s+React\s+from\s+['"]react['"];?\s*\n/g;
+    const reactImports = content.match(reactImportRegex);
     
-    if (hasUnusedImports) {
-      // Replace specific unused import patterns
-      content = content.replace(/import\s*{\s*Component\s*,\s*ErrorInfo\s*,\s*ReactNode\s*}\s*from\s*['"]react['"];?\s*/g, 'import React from \'react\';\n');
-      content = content.replace(/import\s*{\s*Component\s*,\s*ErrorInfo\s*}\s*from\s*['"]react['"];?\s*/g, 'import React from \'react\';\n');
-      content = content.replace(/import\s*{\s*ReactNode\s*}\s*from\s*['"]react['"];?\s*/g, 'import React from \'react\';\n');
-      
-      // Check if we made changes
-      const newContent = fs.readFileSync(filePath, 'utf8');
-      if (newContent !== content) {
-        modified = true;
+    if (reactImports && reactImports.length > 1) {
+      // Keep only the first React import
+      content = content.replace(reactImportRegex, '');
+      content = "import React from 'react';\n" + content;
+      modified = true;
+    }
+    
+    // Remove unused named imports from React
+    const namedImportRegex = /import\s*{\s*([^}]+)\s*}\s*from\s*['"]react['"];?\s*\n/g;
+    const namedImports = content.match(namedImportRegex);
+    
+    if (namedImports) {
+      for (const importLine of namedImports) {
+        const imports = importLine.match(/\{\s*([^}]+)\s*\}/)?.[1];
+        if (imports) {
+          const importList = imports.split(',').map(imp => imp.trim());
+          const usedImports = [];
+          
+          for (const imp of importList) {
+            if (content.includes(imp) && !content.includes(`import ${imp}`)) {
+              usedImports.push(imp);
+            }
+          }
+          
+          if (usedImports.length === 0) {
+            // Remove the entire import line
+            content = content.replace(importLine, '');
+            modified = true;
+          } else if (usedImports.length < importList.length) {
+            // Replace with only used imports
+            const newImport = `import { ${usedImports.join(', ')} } from 'react';\n`;
+            content = content.replace(importLine, newImport);
+            modified = true;
+          }
+        }
       }
     }
     
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed unused imports in: ${filePath}`);
+      console.log(`Fixed imports in: ${filePath}`);
       return true;
     }
     
@@ -43,8 +67,7 @@ function fixUnusedImports(filePath) {
   }
 }
 
-// Function to find all TypeScript files
-function findTSFiles(dir) {
+function findTsxFiles(dir) {
   const files = [];
   
   function traverse(currentDir) {
@@ -56,7 +79,7 @@ function findTSFiles(dir) {
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
         traverse(fullPath);
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts'))) {
+      } else if (stat.isFile() && item.endsWith('.tsx')) {
         files.push(fullPath);
       }
     }
@@ -67,16 +90,16 @@ function findTSFiles(dir) {
 }
 
 // Main execution
-const workspaceDir = '/workspace';
-const tsFiles = findTSFiles(workspaceDir);
+const workspaceDir = '/workspace/app';
+const tsxFiles = findTsxFiles(workspaceDir);
 
-console.log(`Found ${tsFiles.length} TypeScript files`);
+console.log(`Found ${tsxFiles.length} TSX files to check`);
 
 let fixedCount = 0;
-for (const file of tsFiles) {
+for (const file of tsxFiles) {
   if (fixUnusedImports(file)) {
     fixedCount++;
   }
 }
 
-console.log(`Fixed unused imports in ${fixedCount} files`);
+console.log(`Fixed imports in ${fixedCount} files`);

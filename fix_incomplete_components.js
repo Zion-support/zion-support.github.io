@@ -7,51 +7,41 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Function to fix incomplete component files
 function fixIncompleteComponent(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Check if file is incomplete (just exports a non-existent component)
-    const exportPattern = /^export default (\w+);?\s*$/;
-    const match = content.match(exportPattern);
-    
-    if (match) {
-      const componentName = match[1];
-      
-      // Create a complete component
-      const newContent = `import React from 'react';
+    // Check if file is incomplete (just exports a name without definition)
+    const lines = content.trim().split('\n');
+    if (lines.length <= 2 && content.includes('export default') && !content.includes('import') && !content.includes('function') && !content.includes('const')) {
+      const componentName = content.match(/export default (\w+);/)?.[1];
+      if (componentName) {
+        const fixedContent = `import React from 'react';
 
-interface ${componentName}Props {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const ${componentName}: React.FC<${componentName}Props> = ({ className = '', children }) => {
+const ${componentName}: React.FC = () => {
   return (
-    <div className={\`${componentName.toLowerCase()}-component \${className}\`}>
-      {children || <p>${componentName} component</p>}
+    <div className="${componentName.toLowerCase()}-component">
+      {/* ${componentName} component implementation */}
     </div>
   );
 };
 
-export default ${componentName};
-`;
-      
-      fs.writeFileSync(filePath, newContent, 'utf8');
-      console.log(`Fixed incomplete component: ${filePath}`);
-      return true;
+export default ${componentName};`;
+        
+        fs.writeFileSync(filePath, fixedContent, 'utf8');
+        console.log(`Fixed incomplete component: ${filePath}`);
+        return true;
+      }
     }
     
     return false;
   } catch (error) {
-    console.error(`Error fixing component ${filePath}:`, error.message);
+    console.error(`Error fixing component in ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Function to find all TypeScript component files
-function findComponentFiles(dir) {
+function findTsxFiles(dir) {
   const files = [];
   
   function traverse(currentDir) {
@@ -74,13 +64,13 @@ function findComponentFiles(dir) {
 }
 
 // Main execution
-const workspaceDir = '/workspace';
-const componentFiles = findComponentFiles(workspaceDir);
+const workspaceDir = '/workspace/app';
+const tsxFiles = findTsxFiles(workspaceDir);
 
-console.log(`Found ${componentFiles.length} component files`);
+console.log(`Found ${tsxFiles.length} TSX files to check`);
 
 let fixedCount = 0;
-for (const file of componentFiles) {
+for (const file of tsxFiles) {
   if (fixIncompleteComponent(file)) {
     fixedCount++;
   }

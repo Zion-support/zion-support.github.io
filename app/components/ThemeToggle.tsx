@@ -1,12 +1,18 @@
+import React from 'react';
 
-interface Props {
-  // Add props here
+interface ThemeToggleProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export default function ThemeToggle(_props: Props) {
+const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '', children }) => {
   return (
-    <div>
-      {/* ThemeToggle component content */}
+    <div className={`themetoggle-component ${className}`}>
+      {children || <h2>ThemeToggle</h2>}
     </div>
   );
-}
+};
+
+ThemeToggle.displayName = 'ThemeToggle';
+
+export default ThemeToggle;

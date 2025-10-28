@@ -1,23 +1,23 @@
 import React from 'react';
 
-const OptimizedLoadingSpinner: React.FC<{}> = (_props) => {
+interface OptimizedLoadingSpinnerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = ({ className = '', children }) => {
   return (
-    <div className="p-4">
-      <h2>OptimizedLoadingSpinner</h2>
-      <p>Component implementation coming soon...</p>
+    <div className={`optimized-loading-spinner ${className}`}>
+      {children || (
+        <div className="p-4">
+          <h2>OptimizedLoadingSpinner</h2>
+          <p>Component implementation coming soon...</p>
+        </div>
+      )}
     </div>
   );
 };
 
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
-
-const OptimizedLoadingSpinner = () => {
-  return (
-    <div className="p-4">
-      <h2>OptimizedLoadingSpinner</h2>
-      <p>Component implementation coming soon...</p>
-    </div>
-  );
-};
 
 export default OptimizedLoadingSpinner;

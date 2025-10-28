@@ -1,14 +1,9 @@
 import React from 'react';
 
-interface AnalyticsProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const Analytics: React.FC<AnalyticsProps> = ({ className = '', children }) => {
+const Analytics: React.FC = () => {
   return (
-    <div className={`analytics-component ${className}`}>
-      {children || <p>Analytics component</p>}
+    <div className="analytics-component">
+      {/* Analytics component implementation */}
     </div>
   );
 };

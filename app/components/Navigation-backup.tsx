@@ -39,7 +39,8 @@ const NavigationBackup: React.FC<NavigationBackupProps> = ({
               </a>
             ))}
           </div>
-{/* CTA Button */}
+
+          {/* CTA Button */}
           <div className="hidden md:flex items-center">
             <a
               href={ctaHref}

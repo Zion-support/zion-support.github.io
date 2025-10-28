@@ -8,12 +8,7 @@ interface ResponsiveContainerProps {
 const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ className = '', children }) => {
   return (
     <div className={`responsive-container ${className}`}>
-      {children || (
-        <div className="p-4">
-          <h2>ResponsiveContainer</h2>
-          <p>Component implementation coming soon...</p>
-        </div>
-      )}
+      {children || <h2>ResponsiveContainer</h2>}
     </div>
   );
 };

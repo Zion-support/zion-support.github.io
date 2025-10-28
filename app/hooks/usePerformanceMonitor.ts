@@ -24,10 +24,7 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
   const frameCountRef = useRef(0);
   const lastTimeRef = useRef(performance.now());
 
-const measurePerformance = useCallback(() => {
-    // Measure load time
-    const loadTime = performance.now();
-    
+  const measureMemoryUsage = useCallback(() => {
     // Measure memory usage
     let memoryUsage = 0;
     if ('memory' in performance) {
@@ -36,15 +33,27 @@ const measurePerformance = useCallback(() => {
         memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
       }
     }
-    
-    setMetrics(prev => ({ ...prev, loadTime, memoryUsage }));
+    return memoryUsage;
   }, []);
 
-  const measureMemoryUsage = useCallback(() => {
-    if (options.measureMemoryUsage) {
-      measurePerformance();
-    }
-  }, [options.measureMemoryUsage, measurePerformance]);
+  const measurePerformance = useCallback(() => {
+    // Measure performance metrics
+    const startTime = performance.now();
+    const memoryUsage = measureMemoryUsage();
+    
+    // Try to get navigation timing if available, otherwise use performance.now()
+    const loadTime = performance.timing ? 
+      performance.timing.loadEventEnd - performance.timing.navigationStart : 
+      performance.now();
+    
+    // Update metrics with performance data
+    setMetrics(prev => ({
+      ...prev,
+      loadTime,
+      memoryUsage,
+      renderTime: performance.now() - startTime
+    }));
+  }, [measureMemoryUsage]);
 
   const measureFPS = useCallback(() => {
     if (!isMonitoringFPS) return;
@@ -67,16 +76,17 @@ const measurePerformance = useCallback(() => {
     if (options.enabled) {
       setIsMonitoringFPS(true);
       measureFPS();
-      measureMemoryUsage();
+      measurePerformance();
     }
 
     return () => {
       setIsMonitoringFPS(false);
     }
-  }, [options.enabled, measureFPS, measureMemoryUsage]);
+  }, [options.enabled, measureFPS, measurePerformance]);
 
   return {
     metrics,
     isMonitoringFPS,
+    measurePerformance,
   }
 }

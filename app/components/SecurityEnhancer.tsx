@@ -7,10 +7,12 @@ interface SecurityEnhancerProps {
 
 const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ className = '', children }) => {
   return (
-    <div className={`securityenhancer-component ${className}`}>
-      {children || <p>SecurityEnhancer component</p>}
+    <div className={`security-enhancer ${className}`}>
+      {children || <h2>SecurityEnhancer</h2>}
     </div>
   );
 };
+
+SecurityEnhancer.displayName = 'SecurityEnhancer';
 
 export default SecurityEnhancer;

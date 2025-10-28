@@ -1,23 +1,23 @@
 import React from 'react';
 
-const PerformanceOptimizations: React.FC<{}> = (_props) => {
+interface PerformanceOptimizationsProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = ({ className = '', children }) => {
   return (
-    <div className="p-4">
-      <h2>PerformanceOptimizations</h2>
-      <p>Component implementation coming soon...</p>
+    <div className={`performance-optimizations ${className}`}>
+      {children || (
+        <div className="p-4">
+          <h2>PerformanceOptimizations</h2>
+          <p>Component implementation coming soon...</p>
+        </div>
+      )}
     </div>
   );
 };
 
 PerformanceOptimizations.displayName = 'PerformanceOptimizations';
-
-const PerformanceOptimizations = () => {
-  return (
-    <div className="p-4">
-      <h2>PerformanceOptimizations</h2>
-      <p>Component implementation coming soon...</p>
-    </div>
-  );
-};
 
 export default PerformanceOptimizations;

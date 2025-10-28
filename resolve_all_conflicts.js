@@ -7,27 +7,51 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Function to resolve merge conflicts by choosing the origin branch version
 function resolveMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Pattern to match merge conflict markers
-    const conflictPattern = /([\s\S]*?)>>>>>>> origin\/[^\n]+/g;
+        separatorFound = true;
+        continue;
+      }
+      
+        endMarkerFound = true;
+        inConflict = false;
+        
+        // If no separator found, use HEAD content
+        if (separatorFound && headContent.length > 0) {
+          resolvedLines.push(...headContent);
+        }
+    // Check if file has merge conflict markers
+        conflictType = 'separator';
+        continue;
+        inConflict = false;
+        conflictType = null;
+        continue;
+      }
+      
+      if (inConflict) {
+        continue;
+      }
+      
+      resolvedLines.push(line);
+    }
     
-    // Replace conflicts with the origin branch content (after =======)
-    content = content.replace(conflictPattern, (match, originContent) => {
-      return originContent.trim();
-    });
+    // Write resolved content back to file
+    const resolvedContent = resolvedLines.join('\n');
+    fs.writeFileSync(filePath, resolvedContent, 'utf8');
     
-    // Clean up any remaining conflict markers
-    content = content.replace(/[\s\S]*?>>>>>>> origin\/[^\n]+/g, '');
-    content = content.replace(//g, '');
-    content = content.replace(/>>>>>>> origin\/[^\n]+/g, '');
+    return true; // Conflicts were resolved
+        if (conflictType === 'separator') {
+          resolvedLines.push(line);
+        }
+      } else {
+        resolvedLines.push(line);
+      }
+    }
     
-    // Write the resolved content back
-    fs.writeFileSync(filePath, content, 'utf8');
-    console.log(`Resolved conflicts in: ${filePath}`);
+    const resolvedContent = resolvedLines.join('\n');
+    fs.writeFileSync(filePath, resolvedContent, 'utf8');
     return true;
   } catch (error) {
     console.error(`Error resolving conflicts in ${filePath}:`, error.message);
@@ -35,7 +59,6 @@ function resolveMergeConflicts(filePath) {
   }
 }
 
-// Function to find all files with merge conflicts
 function findFilesWithConflicts(dir) {
   const files = [];
   
@@ -50,28 +73,3 @@ function findFilesWithConflicts(dir) {
         traverse(fullPath);
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js'))) {
         const content = fs.readFileSync(fullPath, 'utf8');
-        if (content.includes('') || content.includes('>>>>>>> origin')) {
-          files.push(fullPath);
-        }
-      }
-    }
-  }
-  
-  traverse(dir);
-  return files;
-}
-
-// Main execution
-const workspaceDir = '/workspace';
-const conflictedFiles = findFilesWithConflicts(workspaceDir);
-
-console.log(`Found ${conflictedFiles.length} files with merge conflicts`);
-
-let resolvedCount = 0;
-for (const file of conflictedFiles) {
-  if (resolveMergeConflicts(file)) {
-    resolvedCount++;
-  }
-}
-
-console.log(`Successfully resolved conflicts in ${resolvedCount} files`);

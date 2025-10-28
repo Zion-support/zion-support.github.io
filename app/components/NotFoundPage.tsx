@@ -18,6 +18,8 @@ const NotFoundPage: React.FC<NotFoundPageProps> = ({ className = '', children })
   );
 };
 
+NotFoundPage.displayName = 'NotFoundPage';
+
 export default NotFoundPage;
 
 

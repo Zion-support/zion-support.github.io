@@ -1,7 +1,8 @@
-import React, { Component, ReactNode } from 'react';
+
+import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface GlobalErrorBoundaryProps {
-  children?: ReactNode;
+  children: ReactNode;
   fallback?: ReactNode;
 }
 
@@ -19,7 +20,7 @@ class GlobalErrorBoundary extends Component<GlobalErrorBoundaryProps, State> {
     return { hasError: true };
   }
 
-  componentDidCatch(error: Error, errorInfo: any) {
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('Global error caught by boundary:', error, errorInfo);
   }
 

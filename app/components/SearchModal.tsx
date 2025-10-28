@@ -1,12 +1,18 @@
+import React from 'react';
 
-interface Props {
-  // Add props here
+interface SearchModalProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export default function SearchModal(_props: Props) {
+const SearchModal: React.FC<SearchModalProps> = ({ className = '', children }) => {
   return (
-    <div>
-      {/* SearchModal component content */}
+    <div className={`searchmodal-component ${className}`}>
+      {children || <h2>SearchModal</h2>}
     </div>
   );
-}
+};
+
+SearchModal.displayName = 'SearchModal';
+
+export default SearchModal;

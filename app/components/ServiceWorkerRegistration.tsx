@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 interface ServiceWorkerRegistrationProps {
@@ -8,8 +7,8 @@ interface ServiceWorkerRegistrationProps {
 
 const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({ className = '', children }) => {
   return (
-    <div className={`service-worker-registration ${className}`}>
-      {children || <p>ServiceWorkerRegistration component</p>}
+    <div className={`serviceworkerregistration-component ${className}`}>
+      {children || <h2>ServiceWorkerRegistration</h2>}
     </div>
   );
 };

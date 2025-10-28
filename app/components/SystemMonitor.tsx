@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 interface SystemMonitorProps {
@@ -8,8 +7,8 @@ interface SystemMonitorProps {
 
 const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '', children }) => {
   return (
-    <div className={`system-monitor ${className}`}>
-      {children || <p>SystemMonitor component</p>}
+    <div className={`systemmonitor-component ${className}`}>
+      {children || <h2>SystemMonitor</h2>}
     </div>
   );
 };

@@ -7,53 +7,36 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Function to fix duplicate imports in a file
 function fixDuplicateImports(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
-    // Check for duplicate React imports
-    const reactImportPattern = /import\s+React\s+from\s+['"]react['"];?\s*\n\s*import\s+React\s*,\s*{([^}]+)}\s+from\s+['"]react['"];?/g;
-    const match = content.match(reactImportPattern);
-    
-    if (match) {
-      // Replace duplicate React imports with single import
-      content = content.replace(reactImportPattern, (match, hooks) => {
-        return `import React, {${hooks}} from 'react';`;
-      });
-      modified = true;
-    }
-    
-    // Check for other duplicate imports
+    // Fix duplicate React imports
     const lines = content.split('\n');
-    const importLines = lines.filter(line => line.trim().startsWith('import'));
-    const uniqueImports = new Set();
-    const duplicateLines = [];
+    const newLines = [];
+    let hasReactImport = false;
+    let reactImportLine = '';
     
-    for (let i = 0; i < importLines.length; i++) {
-      const line = importLines[i];
-      const normalizedLine = line.replace(/\s+/g, ' ').trim();
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
       
-      if (uniqueImports.has(normalizedLine)) {
-        duplicateLines.push(i);
+      if (line.includes("import React") && line.includes("from 'react'")) {
+        if (!hasReactImport) {
+          hasReactImport = true;
+          reactImportLine = line;
+          newLines.push(line);
+        } else {
+          // Skip duplicate React import
+          modified = true;
+        }
       } else {
-        uniqueImports.add(normalizedLine);
+        newLines.push(line);
       }
     }
     
-    if (duplicateLines.length > 0) {
-      // Remove duplicate lines
-      const newLines = lines.filter((line, index) => {
-        const lineIndex = importLines.indexOf(line);
-        return lineIndex === -1 || !duplicateLines.includes(lineIndex);
-      });
-      
-      content = newLines.join('\n');
-      modified = true;
-    }
-    
     if (modified) {
+      content = newLines.join('\n');
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed duplicate imports in: ${filePath}`);
       return true;
@@ -66,8 +49,7 @@ function fixDuplicateImports(filePath) {
   }
 }
 
-// Function to find all TypeScript files
-function findTSFiles(dir) {
+function findTsxFiles(dir) {
   const files = [];
   
   function traverse(currentDir) {
@@ -79,7 +61,7 @@ function findTSFiles(dir) {
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
         traverse(fullPath);
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts'))) {
+      } else if (stat.isFile() && item.endsWith('.tsx')) {
         files.push(fullPath);
       }
     }
@@ -90,13 +72,13 @@ function findTSFiles(dir) {
 }
 
 // Main execution
-const workspaceDir = '/workspace';
-const tsFiles = findTSFiles(workspaceDir);
+const workspaceDir = '/workspace/app';
+const tsxFiles = findTsxFiles(workspaceDir);
 
-console.log(`Found ${tsFiles.length} TypeScript files`);
+console.log(`Found ${tsxFiles.length} TSX files to check`);
 
 let fixedCount = 0;
-for (const file of tsFiles) {
+for (const file of tsxFiles) {
   if (fixDuplicateImports(file)) {
     fixedCount++;
   }

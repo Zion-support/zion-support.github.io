@@ -7,53 +7,45 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Function to fix missing type definitions in a file
 function fixMissingTypes(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
-    // Check if file has React imports
-    const hasReactImport = content.includes("import React") || content.includes("import {");
-    const hasReactFC = content.includes("React.FC");
+    // Check if file has TypeScript errors related to missing types
+    if (!content.includes('.tsx') && !content.includes('.ts')) {
+      return false;
+    }
     
-    // Add React import if missing and file uses React
-    if (!hasReactImport && (hasReactFC || content.includes("React."))) {
-      content = "import React from 'react';\n" + content;
+    // Common patterns for missing types
+    const patterns = [
+      {
+        // Pattern: React.FC<SomeProps> without SomeProps defined
+        regex: /const\s+(\w+):\s+React\.FC<(\w+)>\s*=/,
+        replacement: (match, componentName, propsName) => {
+          return `interface ${propsName} {\n  className?: string;\n  children?: React.ReactNode;\n}\n\nconst ${componentName}: React.FC<${propsName}> =`;
+        }
+      },
+      {
+        // Pattern: function with props type but no interface
+        regex: /export\s+default\s+function\s+(\w+)\s*\(\s*\{\s*([^}]+)\s*\}\s*:\s*(\w+)\s*\)/,
+        replacement: (match, funcName, params, typeName) => {
+          return `interface ${typeName} {\n  className?: string;\n  children?: React.ReactNode;\n}\n\nexport default function ${funcName}({ ${params} }: ${typeName})`;
+        }
+      }
+    ];
+    
+    // Add React import if missing
+    if (content.includes('React.') && !content.includes("import React")) {
+      content = "import React from 'react';\n\n" + content;
       modified = true;
     }
     
-    // Find all missing type definitions
-    const typePattern = /(\w+Props)/g;
-    const matches = content.match(typePattern);
-    
-    if (matches) {
-      const uniqueTypes = [...new Set(matches)];
-      
-      for (const typeName of uniqueTypes) {
-        // Check if interface already exists
-        if (!content.includes(`interface ${typeName}`)) {
-          // Find the component that uses this type
-          const componentPattern = new RegExp(`(const|function|export default function)\\s+(\\w+).*?:\\s*React\\.FC<${typeName}>`, 'g');
-          const componentMatch = componentPattern.exec(content);
-          
-          if (componentMatch) {
-            const componentName = componentMatch[2];
-            
-            // Add interface before the component
-            const interfaceDef = `interface ${typeName} {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-`;
-            
-            // Insert interface before the component
-            const insertIndex = content.indexOf(componentMatch[0]);
-            content = content.slice(0, insertIndex) + interfaceDef + content.slice(insertIndex);
-            modified = true;
-          }
-        }
+    // Apply patterns
+    for (const pattern of patterns) {
+      if (pattern.regex.test(content)) {
+        content = content.replace(pattern.regex, pattern.replacement);
+        modified = true;
       }
     }
     
@@ -70,8 +62,7 @@ function fixMissingTypes(filePath) {
   }
 }
 
-// Function to find all TypeScript files
-function findTSFiles(dir) {
+function findTsxFiles(dir) {
   const files = [];
   
   function traverse(currentDir) {
@@ -94,13 +85,13 @@ function findTSFiles(dir) {
 }
 
 // Main execution
-const workspaceDir = '/workspace';
-const tsFiles = findTSFiles(workspaceDir);
+const workspaceDir = '/workspace/app';
+const tsxFiles = findTsxFiles(workspaceDir);
 
-console.log(`Found ${tsFiles.length} TypeScript files`);
+console.log(`Found ${tsxFiles.length} TypeScript files to check`);
 
 let fixedCount = 0;
-for (const file of tsFiles) {
+for (const file of tsxFiles) {
   if (fixMissingTypes(file)) {
     fixedCount++;
   }
