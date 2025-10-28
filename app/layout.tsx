@@ -7,15 +7,33 @@ import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
-import PerformanceOptimizations from './components/PerformanceOptimizations';
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import SkipLink from './components/SkipLink';
 import PerformanceMonitoring from './components/PerformanceMonitoring';
 import SEOOptimization from './components/SEOOptimization';
-import SEOEnhancements from './components/SEOEnhancements';
 import SecurityEnhancement from './components/SecurityEnhancement';
+import AdvancedPerformanceEnhancer from './components/AdvancedPerformanceEnhancer';
 
 const inter = Inter({ subsets: ['latin'] });
+
+// Metadata and viewport configuration
+export const metadata = {
+  title: 'Zion Tech Group - AI Solutions & Technology Services',
+  description: 'Leading technology company specializing in AI solutions, cloud infrastructure, and innovative software development services.',
+  keywords: ['AI solutions', 'cloud infrastructure', 'software development', 'technology services'],
+  openGraph: {
+    title: 'Zion Tech Group - AI Solutions & Technology Services',
+    description: 'Leading technology company specializing in AI solutions, cloud infrastructure, and innovative software development services.',
+    type: 'website',
+  },
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+};
 export default function RootLayout({
   children,
 }: {
@@ -28,8 +46,8 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <ErrorBoundary>
-          <PerformanceOptimizer>
-            <PerformanceOptimizations>
+          <AdvancedPerformanceEnhancer enableMonitoring={true} enableOptimizations={true}>
+            <PerformanceOptimizer>
               <div className="min-h-screen bg-slate-900">
                 <SkipLink />
                 <Navigation />
@@ -42,11 +60,10 @@ export default function RootLayout({
                 <ServiceWorkerRegistration />
                 <PerformanceMonitoring />
                 <SEOOptimization />
-                <SEOEnhancements />
                 <SecurityEnhancement />
               </div>
-            </PerformanceOptimizations>
-          </PerformanceOptimizer>
+            </PerformanceOptimizer>
+          </AdvancedPerformanceEnhancer>
         </ErrorBoundary>
       </body>
     </html>

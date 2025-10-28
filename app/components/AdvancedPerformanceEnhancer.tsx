@@ -47,14 +47,12 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
             if (entry.entryType === 'largest-contentful-paint') {
               setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
             } else if (entry.entryType === 'first-input') {
-              const firstInputEntry = entry as PerformanceEventTiming;
-              setMetrics(prev => ({ ...prev, fid: firstInputEntry.processingStart - entry.startTime }));
+              setMetrics(prev => ({ ...prev, fid: (entry as PerformanceEventTiming).processingStart - entry.startTime }));
             } else if (entry.entryType === 'layout-shift') {
-              const layoutShiftEntry = entry as LayoutShift;
-              if (!layoutShiftEntry.hadRecentInput) {
+              if (!(entry as LayoutShift).hadRecentInput) {
                 setMetrics(prev => ({ 
                   ...prev, 
-                  cls: (prev.cls || 0) + layoutShiftEntry.value 
+                  cls: (prev.cls || 0) + (entry as LayoutShift).value 
                 }));
               }
             } else if (entry.entryType === 'paint') {
