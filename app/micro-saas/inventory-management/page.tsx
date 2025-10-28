@@ -13,7 +13,7 @@ export const metadata = {
   },
 };
 
-function Page() {
+function PageComponent() {
   return (
     <div>
       <Head>
@@ -41,10 +41,10 @@ function Page() {
   );
 }
 
-export default function Wrapped(props: any) {
+export default function Wrapped(props: Record<string, unknown>) {
   return (
     <ErrorBoundary>
-      <Page {...props} />
+      <PageComponent {...props} />
     </ErrorBoundary>
   );
 }
