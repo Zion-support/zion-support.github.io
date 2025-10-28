@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useState, memo } from 'react';
-import type { PerformanceEventTiming, LayoutShift } from '../types/performance';
+// Performance types are used in the component logic
 
 interface PerformanceMetrics {
   lcp: number | null;
