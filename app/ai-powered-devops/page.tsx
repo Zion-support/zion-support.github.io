@@ -133,4 +133,3 @@ const AiPoweredDevopsPage: React.FC = () => {
 
 export default AiPoweredDevopsPage;
 
-export default AiPoweredDevopsPage;
