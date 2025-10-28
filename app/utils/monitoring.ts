@@ -82,7 +82,10 @@ class MonitoringService {
             this.metrics.fid = (entry as unknown).processingStart - entry.startTime;
             const fidEntry = entry as PerformanceEntry & { processingStart: number };
             this.metrics.fid = fidEntry.processingStart - entry.startTime;
+<<<<<<< HEAD
 cursor/fix-errors-and-merge-to-main-9c0e
+>>>>>>> origin/main
+=======
 >>>>>>> origin/main
             this.reportMetric('fid', this.metrics.fid);
           });
@@ -186,9 +189,12 @@ cursor/fix-errors-and-merge-to-main-9c0e
 =======
     if (typeof window !== 'undefined' && 'gtag' in window && typeof (window as unknown as { gtag: unknown }).gtag === 'function') {
       (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event', name, {
+<<<<<<< HEAD
     if (typeof (window as Window & { gtag?: (...args: unknown[]) => void }).gtag === 'function') {
       (window as Window & { gtag: (...args: unknown[]) => void }).gtag('event', name, {
 cursor/fix-errors-and-merge-to-main-9c0e
+>>>>>>> origin/main
+=======
 >>>>>>> origin/main
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',
