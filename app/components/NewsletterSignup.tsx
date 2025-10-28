@@ -31,12 +31,17 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ onSubscribe, classN
     <div className={`newsletter-signup ${className}`}>
       <h3 className="text-lg font-semibold mb-4">Stay Updated</h3>
       <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+        <label htmlFor="newsletter-email" className="sr-only">
+          Email address
+        </label>
         <input
+          id="newsletter-email"
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Enter your email"
           required
+          aria-label="Email address for newsletter subscription"
           className="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
         <button

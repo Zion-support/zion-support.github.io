@@ -10,7 +10,6 @@
     "Error boundaries added",
     "Performance monitoring enabled"
   ],
-  "timestamp": "2025-10-13T11:08:44.372Z",
   "buildStats": {
     "totalFiles": 86,
     "totalSize": 646864,
@@ -21,14 +20,6 @@
     "imageFiles": 0,
     "imageSize": 0
   },
-  "recommendations": [
-    "Consider implementing image optimization pipeline",
-    "Add more granular code splitting for large pages",
-    "Implement preloading for critical resources",
-    "Add more comprehensive caching strategies",
-    "Consider implementing CDN for static assets"
-  ]
-=======
   "bundleSize": 572000,
   "assetCount": 11,
   "cssSize": 15566,
@@ -36,8 +27,12 @@
   "imageSize": 0,
   "fontSize": 0,
   "otherSize": 101239,
-  "timestamp": "2025-10-15T00:48:15.639Z",
-  "recommendations": [],
+  "recommendations": [
+    "Consider implementing image optimization pipeline",
+    "Add more granular code splitting for large pages",
+    "Implement preloading for critical resources",
+    "Add more comprehensive caching strategies",
+    "Consider implementing CDN for static assets"
+  ],
   "performance": 90
->>>>>>> cursor/analyze-improve-and-deploy-application-a84d
 }
