@@ -29,7 +29,12 @@
     "lint:check": "eslint . --max-warnings 0",
     "type-check:strict": "tsc --noEmit --strict",
     "precommit": "npm run type-check && npm run lint && npm run test:ci",
-    "postinstall": "npm run type-check"
+    "postinstall": "npm run type-check",
+    "improve": "node comprehensive-improvements.js",
+    "security-audit": "npm audit --audit-level moderate && npm run lint:check",
+    "performance-audit": "npm run build && npm run perf",
+    "accessibility-audit": "npm run build && npx @axe-core/cli http://localhost:3000",
+    "full-audit": "npm run security-audit && npm run performance-audit && npm run accessibility-audit"
   },
   "dependencies": {
     "@storybook/react-vite": "^9.1.15",
