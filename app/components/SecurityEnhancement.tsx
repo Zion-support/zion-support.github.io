@@ -55,7 +55,11 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({ classNam
     if (typeof window === 'undefined') return;
 
     // Monitor for XSS attempts
+<<<<<<< HEAD
+    const originalInnerHTML = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML');
+=======
     const originalInnerHTML = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML')?.set;
+>>>>>>> origin/main
     if (originalInnerHTML) {
       Object.defineProperty(Element.prototype, 'innerHTML', {
         set: function(value) {
