@@ -2,13 +2,6 @@
 
 import React, { useEffect, memo, useCallback } from 'react';
 
-interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
-  processingEnd: number;
-  cancelable: boolean;
-  target?: EventTarget;
-}
-
 interface LayoutShiftEntry extends PerformanceEntry {
   value: number;
   hadRecentInput: boolean;
