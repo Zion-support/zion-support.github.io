@@ -7,7 +7,20 @@ interface NavigationBackupProps {
   children?: React.ReactNode;
 }
 
-const NavigationBackup: React.FC<NavigationBackupProps> = ({ className = '', children }) => {
+const NavigationBackup: React.FC<NavigationBackupProps> = () => {
+  const logo = '/logo.png';
+  const logoText = 'Zion Tech Group';
+  const menuItems = [
+    { href: '/', label: 'Home' },
+    { href: '/about', label: 'About' },
+    { href: '/services', label: 'Services' },
+    { href: '/contact', label: 'Contact' }
+  ];
+  const ctaHref = '/contact';
+  const ctaText = 'Get Started';
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
   return (<nav className="bg-white shadow-lg" role="navigation">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center py-4">
