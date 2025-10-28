@@ -1,10 +1,19 @@
-const SimpleNavigation = () => {
+'use client'
+import React from 'react';
+
+interface SimpleNavigationProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const SimpleNavigation: React.FC<SimpleNavigationProps> = ({ className = '', children }) => {
   return (
-    <div className="p-4">
-      <h2>SimpleNavigation</h2>
-      <p>Component implementation coming soon...</p>
-    </div>
+    <nav className={`simple-navigation ${className}`}>
+      {children}
+    </nav>
   );
 };
+
+SimpleNavigation.displayName = 'SimpleNavigation';
 
 export default SimpleNavigation;

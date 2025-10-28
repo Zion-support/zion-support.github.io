@@ -1,13 +1,18 @@
+import React from 'react';
 
-interface Footer_brokenProps {
+interface FooterBrokenProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-export default function Footer_broken({ className, children }: Footer_brokenProps) {
+const FooterBroken: React.FC<FooterBrokenProps> = ({ className = '', children }) => {
   return (
-    <div className={`footer_broken-component ${className || ''}`}>
+    <footer className={`footer-broken ${className}`}>
       {children}
-    </div>
+    </footer>
   );
-}
+};
+
+FooterBroken.displayName = 'FooterBroken';
+
+export default FooterBroken;

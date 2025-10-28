@@ -1,9 +1,11 @@
-'use client';
+'use client'
+import React from 'react';
+
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Lock, Shield, Database, CheckCircle, Clock, ArrowRight } from 'lucide-react';
+import { Shield, Database, CheckCircle, Clock, ArrowRight, Lock } from 'lucide-react';
 
-export default function CompliancePageFixed() {
+const CompliancePage: React.FC = () => {
   const features = [
     {
       icon: Shield,
@@ -90,7 +92,7 @@ export default function CompliancePageFixed() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 _hover:bg-white/20 transition-all duration-300">
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full mb-6">
                     <feature.icon className="h-8 w-8 text-white" />
                   </div>
@@ -131,4 +133,4 @@ export default function CompliancePageFixed() {
   );
 }
 
-export default CompliancePageFixed;
+export default CompliancePage;
