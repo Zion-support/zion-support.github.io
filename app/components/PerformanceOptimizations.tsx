@@ -7,11 +7,6 @@ interface PerformanceOptimizationsProps {
 }
 
 // Type definitions for Performance API entries
-interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
-  processingEnd: number;
-  target: EventTarget | null;
-}
 
 interface LayoutShift extends PerformanceEntry {
   value: number;
