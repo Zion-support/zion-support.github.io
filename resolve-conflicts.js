@@ -26,7 +26,7 @@ function resolveConflicts() {
             } else if (stat.isFile() && (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.json'))) {
                 try {
                     const content = fs.readFileSync(filePath, 'utf8');
-                    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
+                    if (content.includes('') || content.includes('>>>>>>>')) {
                         conflictFiles.push(filePath);
                     }
                 } catch (err) {
@@ -46,10 +46,9 @@ function resolveConflicts() {
             let content = fs.readFileSync(filePath, 'utf8');
             
             // Remove conflict markers and keep the remote version (after =======)
-            content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)            
+            content = content.replace(/\n([\s\S]*?)            
             // Clean up any remaining conflict markers
-            content = content.replace(/<<<<<<< HEAD\n/g, '');
-            content = content.replace(/=======\n/g, '');
+            content = content.replace(/\n/g, '');
             content = content.replace(/            
             fs.writeFileSync(filePath, content);
             console.log(`Resolved conflicts in: ${filePath}`);

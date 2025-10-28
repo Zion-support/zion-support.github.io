@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
-import { Component, ErrorInfo, ReactNode } from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc
+import React from 'react';
 
 interface ErrorBoundaryProps {
   className?: string;

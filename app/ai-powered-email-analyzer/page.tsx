@@ -1,15 +1,11 @@
-<<<<<<< HEAD
-'use client';
-=======
 'use client'
 import React from 'react';
 import { Brain, BarChart, Target, TrendingUp } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc
 
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight } from 'lucide-react';
-const PagePage: React.FC = () => {
+const AiPoweredEmailAnalyzerPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -144,4 +140,4 @@ const PagePage: React.FC = () => {
   );
 };
 
-export default PagePage;
+export default AiPoweredEmailAnalyzerPage;
