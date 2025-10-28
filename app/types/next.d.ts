@@ -1,5 +1,5 @@
 import { NextPage } from 'next';
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 // NextPageWithLayout interface removed as it's not being used
 
