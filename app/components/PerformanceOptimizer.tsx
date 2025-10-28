@@ -1,7 +1,8 @@
 'use client';
 
 import React, { useEffect } from 'react';
-import type { PerformanceEventTiming, LayoutShift } from '../types/performance';
+
+// Web API type declarations
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
@@ -55,11 +56,11 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
               console.log('LCP:', entry.startTime);
             }
             if (entry.entryType === 'first-input') {
-              const fidEntry = entry as PerformanceEventTiming;
+              const fidEntry = entry as any;
               console.log('FID:', fidEntry.processingStart - fidEntry.startTime);
             }
             if (entry.entryType === 'layout-shift') {
-              const clsEntry = entry as LayoutShift;
+              const clsEntry = entry as any;
               console.log('CLS:', clsEntry.value);
             }
           });
