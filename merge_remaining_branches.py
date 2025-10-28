@@ -15,7 +15,7 @@ def run_command(cmd, check=True):
 
 def get_available_branches():
     """Get list of available remote branches"""
-    stdout, stderr, returncode = run_command("git branch -r | grep 'cursor/fix-errors-and-merge-to-main' | head -20")
+    stdout, stderr, returncode = run_command("git branch -r | grep 'cursor/fix-errors-and-merge-to-main' | head -40 | tail -20")
     if returncode != 0:
         return []
     

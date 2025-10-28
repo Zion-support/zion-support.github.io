@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useEffect } from 'react';
-// Performance types are used in the component logic
 
 // Performance API types
 interface PerformanceEventTiming extends PerformanceEntry {
