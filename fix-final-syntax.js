@@ -8,7 +8,7 @@ function fixFile(filePath) {
 
     // Fix missing semicolons after return statements
     if (content.includes('  )\n}') && !content.includes('  );\n}')) {
-      content = content.replace(/  \)\n}/g, '  );\n}');
+      content = content.replace(/ {2}\)\n}/g, '  );\n}');
       modified = true;
     }
 
@@ -60,7 +60,7 @@ function fixFile(filePath) {
 
     // Fix missing commas in object literals
     if (content.includes('  },\n  }')) {
-      content = content.replace(/  \},\n  \}/g, '  }\n}');
+      content = content.replace(/ {2}\},\n {2}\}/g, '  }\n}');
       modified = true;
     }
 

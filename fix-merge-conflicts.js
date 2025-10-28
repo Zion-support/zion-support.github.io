@@ -5,7 +5,7 @@ import { glob } from 'glob';
 // Function to resolve merge conflicts by choosing the HEAD version
 function resolveMergeConflicts(content) {
   // Remove merge conflict markers and keep HEAD version
-  let resolved = content
+  const resolved = content
     // Remove <<<<<<< HEAD lines
     .replace(/^<<<<<<< HEAD\n/gm, '')
     // Remove ======= lines

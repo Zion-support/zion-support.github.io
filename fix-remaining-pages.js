@@ -48,7 +48,7 @@ function fixFile(filePath) {
       const cleanLines = [];
       let inMetadata = false;
       let metadataCount = 0;
-      let imports = new Set();
+      const imports = new Set();
       
       for (let i = 0; i < lines.length; i++) {
         const line = lines[i];

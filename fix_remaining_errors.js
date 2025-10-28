@@ -16,7 +16,7 @@ const getFilesWithErrors = () => {
 // Clean up malformed files
 const cleanFile = (filePath) => {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    const content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
     
     // Remove orphaned code fragments

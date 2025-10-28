@@ -39,7 +39,7 @@ function rewriteProblematicFile(filePath) {
   const isMicroSaas = filePath.includes('micro-saas-services');
   const isZionApi = filePath.includes('zion-ai-api-tester');
   
-  let content = `import React from 'react';
+  const content = `import React from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 import { Metadata } from 'next';
 import Link from 'next/link';
