@@ -1,7 +1,7 @@
-import { ErrorBoundary } from './components/ErrorBoundary';
+import ErrorBoundary from '../../components/ErrorBoundary';
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';;
+import { ArrowRight } from 'lucide-react';
 import Footer from '../../components/Footer';
 
 export const metadata = {
@@ -9,7 +9,7 @@ export const metadata = {
   description: 'Professional services by Zion Tech Group.',
 }
 
-function pagePage() {
+function Page() {
   return (
     <div>
       
@@ -35,10 +35,10 @@ function pagePage() {
   );
 }
 
-export default function Wrapped(props: any) {
+export default function Wrapped(props: Record<string, unknown>) {
   return (
     <ErrorBoundary>
-      <PageComponent {...props} />
+      <Page {...props} />
     </ErrorBoundary>
   );
 }

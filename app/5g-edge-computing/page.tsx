@@ -8,20 +8,14 @@ export const metadata = {
     type: 'website',
   },
 };
-import { ErrorBoundary } from './components/ErrorBoundary'
-
+import ErrorBoundary from '../components/ErrorBoundary'
 
 ;
 import Head from 'next/head'
 
-
-
 import Footer from '../components/Footer'
 
-
-
-
-function Page() {
+function PageComponent() {
   return (
     <div>
       <Head>
@@ -49,7 +43,7 @@ function Page() {
   )
 }
 
-export default function Wrapped(props: any) {
+export default function Wrapped(props: Record<string, unknown>) {
   return (
     <ErrorBoundary>
       <PageComponent {...props} />
