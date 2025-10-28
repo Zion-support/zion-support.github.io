@@ -7,6 +7,16 @@ interface LayoutShiftEntry extends PerformanceEntry {
   hadRecentInput: boolean;
 }
 
+interface FIDEntry extends PerformanceEntry {
+  processingStart: number;
+}
+
+interface MemoryInfo {
+  usedJSHeapSize: number;
+  totalJSHeapSize: number;
+  jsHeapSizeLimit: number;
+}
+
 
 interface PerformanceMonitoringProps {
   className?: string;
