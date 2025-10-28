@@ -8,9 +8,7 @@ interface SEOEnhancerProps {
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '', children }) => {
   return (
     <div className={`seoenhancer-component ${className}`}>
-{children || <h2>SEOEnhancer</h2>}
-334a97c43c32bf9e815481016c5bf31caa46a580
-    </div>
+{children || <h2>SEOEnhancer</h2>}</div>
   );
 };
 

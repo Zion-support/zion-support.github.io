@@ -8,9 +8,7 @@ interface SearchModalProps {
 const SearchModal: React.FC<SearchModalProps> = ({ className = '', children }) => {
   return (
     <div className={`searchmodal-component ${className}`}>
-{children || <h2>SearchModal</h2>}
-334a97c43c32bf9e815481016c5bf31caa46a580
-    </div>
+{children || <h2>SearchModal</h2>}</div>
   );
 };
 

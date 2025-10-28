@@ -51,9 +51,7 @@ const measureMemoryUsage = useCallback(() => {
       ...prev,
       loadTime,
       memoryUsage,
-      renderTime: performance.now() - startTime
-334a97c43c32bf9e815481016c5bf31caa46a580
-    }));
+      renderTime: performance.now() - startTime}));
   }, [measureMemoryUsage]);
 
   const measureFPS = useCallback(() => {
@@ -87,7 +85,5 @@ const measureMemoryUsage = useCallback(() => {
 
   return {
     metrics,
-    isMonitoringFPS,triggerPerformanceMeasurement: measurePerformance,
-334a97c43c32bf9e815481016c5bf31caa46a580
-  }
+    isMonitoringFPS,triggerPerformanceMeasurement: measurePerformance,}
 }

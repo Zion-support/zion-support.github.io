@@ -1,9 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { X, Menu } from 'lucide-react';
-334a97c43c32bf9e815481016c5bf31caa46a580
-interface NavigationBackupProps {
+import { X, Menu } from 'lucide-react';interface NavigationBackupProps {
   className?: string;
   children?: React.ReactNode;
 }
@@ -45,9 +43,7 @@ const NavigationBackup: React.FC<NavigationBackupProps> = ({ className = '', chi
           </div>
         </div>
       </div>
-    </nav>
-334a97c43c32bf9e815481016c5bf31caa46a580
-  );
+    </nav>);
 };
 
 NavigationBackup.displayName = 'NavigationBackup';
