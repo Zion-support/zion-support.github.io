@@ -11,7 +11,10 @@ export const performance = {
 
 class PerformanceMonitor {
   private static instance: PerformanceMonitor;
+<<<<<<< HEAD
   private metrics = new Map<string, number>();
+=======
+>>>>>>> 77bcf452960a (Complete error fixes and code optimization)
 
   static getInstance(): PerformanceMonitor {
     if (!PerformanceMonitor.instance) {
@@ -38,6 +41,7 @@ class PerformanceMonitor {
     return 0;
   }
 
+<<<<<<< HEAD
   getMetric(label: string): number | undefined {
     return this.metrics.get(label);
   }
@@ -50,6 +54,8 @@ class PerformanceMonitor {
     this.metrics.clear();
   }
 
+=======
+>>>>>>> 77bcf452960a (Complete error fixes and code optimization)
   // Web Vitals monitoring
   measureWebVitals(): void {
     if (typeof window === "undefined") return;
@@ -110,4 +116,8 @@ export function measureComponentRender(componentName: string) {
       return React.createElement(PageComponent, props);
     }) as T;
   };
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 77bcf452960a (Complete error fixes and code optimization)

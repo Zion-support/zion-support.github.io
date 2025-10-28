@@ -1,7 +1,4 @@
-import React from 'react';
-import ErrorBoundary from "../components/ErrorBoundary";
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+
 
 export const metadata = {
   title: 'Ecommerce Analytics Pro | Zion Tech Group',
@@ -52,6 +49,7 @@ function EcommerceanalyticsproPage() {
   );
 }
 
+<<<<<<< HEAD
 export default function Wrapped(props: { [key: string]: unknown }) {
   return (
     <ErrorBoundary>
@@ -59,3 +57,5 @@ export default function Wrapped(props: { [key: string]: unknown }) {
     </ErrorBoundary>
   );
 }
+=======
+
