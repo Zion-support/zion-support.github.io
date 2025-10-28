@@ -239,7 +239,6 @@ const ZionAIDatabaseOptimizerPage: React.FC = memo(() => {
             </div>
           </div>
         </div>
-      </div>
-    </>
+
   );
 }
