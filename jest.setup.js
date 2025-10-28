@@ -111,4 +111,4 @@ const sessionStorageMock = {
 global.sessionStorage = sessionStorageMock;
 
 // Setup testing library
-require('@testing-library/jest-dom');
+import '@testing-library/jest-dom';
