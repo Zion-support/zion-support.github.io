@@ -1,22 +1,47 @@
-import React from 'react';
+'use client';
+
+import React, { memo } from 'react';
 
 interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  color?: 'primary' | 'secondary' | 'white' | 'gray';
   className?: string;
-  children?: React.ReactNode;
+  text?: string;
 }
 
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ className = '', children }) => {
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = memo(({
+  size = 'md',
+  color = 'primary',
+  className = '',
+  text
+}) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12',
+    xl: 'w-16 h-16'
+  };
+
+  const colorClasses = {
+    primary: 'text-purple-600',
+    secondary: 'text-blue-600',
+    white: 'text-white',
+    gray: 'text-gray-600'
+  };
+
   return (
-    <div className={`loading-spinner ${className}`}>
-      {children || (
-        <div className="p-4">
-          <h2>LoadingSpinner</h2>
-          <p>Component implementation coming soon...</p>
-        </div>
+    <div className={`flex flex-col items-center justify-center ${className}`}>
+      <div className={`animate-spin rounded-full border-2 border-gray-300 border-t-current ${sizeClasses[size]} ${colorClasses[color]}`}>
+        <span className="sr-only">Loading...</span>
+      </div>
+      {text && (
+        <p className={`mt-2 text-sm ${colorClasses[color]}`}>
+          {text}
+        </p>
       )}
     </div>
   );
-};
+});
 
 LoadingSpinner.displayName = 'LoadingSpinner';
 

@@ -5,12 +5,14 @@ interface AIToolCardProps {
   children?: React.ReactNode;
 }
 
-export default function AIToolCard({ className, children }: AIToolCardProps) {
+const AIToolCard: React.FC<AIToolCardProps> = ({ className = '', children }) => {
   return (
-    <div className={`bg-white rounded-lg shadow-md p-6 ${className || ''}`}>
+    <div className={`aitoolcard-component ${className}`}>
       {children}
     </div>
   );
-}
+};
 
 AIToolCard.displayName = 'AIToolCard';
+
+export default AIToolCard;

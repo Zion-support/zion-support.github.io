@@ -1,33 +1,14 @@
-
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { X, Menu } from 'lucide-react';
-
 interface NavigationBackupProps {
-  logo?: string;
-  logoText?: string;
-  menuItems?: Array<{
-    label: string;
-    href: string;
-    submenu?: Array<{
-      label: string;
-      href: string;
-    }>;
-  }>;
-  ctaText?: string;
-  ctaHref?: string;
+  className?: string;
+  children?: React.ReactNode;
 }
 
-const NavigationBackup: React.FC<NavigationBackupProps> = ({ 
-  logo, 
-  logoText = 'Zion Tech Group', 
-  menuItems = [], 
-  ctaText = 'Get Started', 
-  ctaHref = '#' 
-}) => {
-  return (
-    <nav className="bg-white shadow-lg" role="navigation">
+const NavigationBackup: React.FC<NavigationBackupProps> = ({ className = '', children }) => {
+  return (<nav className="bg-white shadow-lg" role="navigation">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
@@ -61,11 +42,12 @@ const NavigationBackup: React.FC<NavigationBackupProps> = ({
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
-
         </div>
       </div>
     </nav>
   );
 };
+
+NavigationBackup.displayName = 'NavigationBackup';
 
 export default NavigationBackup;

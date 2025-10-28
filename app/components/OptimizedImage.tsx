@@ -7,17 +7,10 @@ interface OptimizedImageProps {
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '', children }) => {
   return (
-    <div className={`optimized-image ${className}`}>
-      {children || (
-        <div className="p-4">
-          <h2>OptimizedImage</h2>
-          <p>Component implementation coming soon...</p>
-        </div>
-      )}
+<div className={`optimizedimage-component ${className}`}>
+      {children}
     </div>
   );
 };
 
-OptimizedImage.displayName = 'OptimizedImage';
-
-export default OptimizedImage;
+OptimizedImage.displayName = 'OptimizedImage';export default OptimizedImage;

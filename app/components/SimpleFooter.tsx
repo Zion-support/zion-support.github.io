@@ -7,9 +7,9 @@ interface SimpleFooterProps {
 
 const SimpleFooter: React.FC<SimpleFooterProps> = ({ className = '', children }) => {
   return (
-    <footer className={`simple-footer ${className}`}>
+    <div className={`simplefooter-component ${className}`}>
       {children}
-    </footer>
+    </div>
   );
 };
 

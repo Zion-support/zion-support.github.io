@@ -7,7 +7,7 @@ interface PageLoaderProps {
 
 const PageLoader: React.FC<PageLoaderProps> = ({ className = '', children }) => {
   return (
-    <div className={`page-loader ${className}`}>
+    <div className={`pageloader-component ${className}`}>
       {children}
     </div>
   );

@@ -1,4 +1,3 @@
-
 export interface AccessibilityConfig {
   enableScreenReader: boolean;
   enableKeyboardNavigation: boolean;
@@ -36,5 +35,4 @@ export interface AccessibilityContextType {
   runAudit: () => Promise<AccessibilityAudit>;
   isAccessible: boolean;
   score: number;
-
 }

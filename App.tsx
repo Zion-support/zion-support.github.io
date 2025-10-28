@@ -1,189 +1,19 @@
-import React, { useEffect, useState, useCallback, Suspense, lazy } from "react";
+import React, { useEffect, useState, memo } from "react";
 import { HelmetProvider } from "react-helmet-async";
 import Navigation from "./app/components/Navigation";
-import Sidebar from "./app/components/Sidebar";
 import Footer from "./app/components/Footer";
-import LoadingPage from "./app/components/Loading";
 import HomePage from "./app/page";
-import AnalyticsProvider from "./app/components/AnalyticsProvider";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
-import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
-import CoreWebVitals from "./app/components/CoreWebVitals";
-import FuturisticBackground from "./app/components/FuturisticBackground";
 import ErrorBoundary from "./app/components/ErrorBoundary";
-import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
-import Breadcrumb from "./app/components/Breadcrumb";
-import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
-import EnhancedAnalytics from "./app/components/EnhancedAnalytics";
 import LoadingSpinner from "./app/components/LoadingSpinner";
+import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
 
-// Pages
-import AboutPage from './app/about/page';
-import ServicesPage from './app/services/page';
-import ContactPage from './app/contact/page';
-import PrivacyPage from './app/privacy/page';
-import TermsPage from './app/terms/page';
-import BlogPage from './app/blog/page';
-import CareersPage from './app/careers/page';
+// Note: Page imports removed as they are not used in the main App component
+// Individual pages are handled by Next.js routing
 
-// Service Pages
-import AiAnalyticsDashboardProPage from './app/ai-analytics-dashboard-pro/page';
-import AiContentGenerationProPage from './app/ai-content-generation-pro/page';
-import AiAutomationSuitePage from './app/ai-automation-suite/page';
-import AiBusinessIntelligenceProPage from './app/ai-business-intelligence-pro/page';
-import AiCodeAssistantProPage from './app/ai-code-assistant-pro/page';
-import AiChatbotEnterprisePage from './app/ai-chatbot-enterprise/page';
-import AiCloudInfrastructurePage from './app/ai-cloud-infrastructure/page';
-import AiApiManagementPage from './app/ai-api-management/page';
-import DatabaseSolutionsPage from './app/database-solutions/page';
-import AdvancedSecuritySuitePage from './app/advanced-security-suite/page';
-import PerformanceMonitoringPage from './app/performance-monitoring/page';
-import DevOpsSolutionsPage from './app/devops-solutions/page';
-import FiveGImplementationPage from './app/5g-implementation/page';
-import FiveGNetworkInfrastructurePage from './app/5g-network-infrastructure/page';
-import FiveGIotSolutionsPage from './app/5g-iot-solutions/page';
-import FiveGSmartCitySolutionsPage from './app/5g-smart-city-solutions/page';
-import FiveGEdgeComputingPage from './app/5g-edge-computing/page';
-import FiveGPrivateNetworksPage from './app/5g-private-networks/page';
-import AiAccountingAssistantPage from './app/ai-accounting-assistant/page';
-import AiContentModerationProPage from './app/ai-content-moderation-pro/page';
-import AiClimateSolutionsProPage from './app/ai-climate-solutions-pro/page';
-import AiAgriculturalIntelligenceProPage from './app/ai-agricultural-intelligence-pro/page';
-import Ai3DGenerationPage from './app/ai-3d-generation/page';
-import AiBlockchainSolutionsPage from './app/ai-blockchain-solutions/page';
-import AiCustomerInsightsProPage from './app/ai-customer-insights-pro/page';
-import AiProjectManagementProPage from './app/ai-project-management-pro/page';
-import AiSocialMediaManagerProPage from './app/ai-social-media-manager-pro/page';
-import AiEmailMarketingProPage from './app/ai-email-marketing-pro/page';
-import AiInventoryManagementProPage from './app/ai-inventory-management-pro/page';
-import AiHrAssistantProPage from './app/ai-hr-assistant-pro/page';
-import AiSalesOptimizerProPage from './app/ai-sales-optimizer-pro/page';
-import MicroSaasPage from './app/micro-saas/page';
-
-// IT Services Pages
-const ITServicesPage = lazy(() => import('./app/it-services/page'));
-const CloudInfrastructurePage = lazy(() => import('./app/cloud-infrastructure/page'));
-const DigitalTransformationPage = lazy(() => import('./app/digital-transformation/page'));
-
-// 5G Solutions Pages
-const FiveGSolutionsPage = lazy(() => import('./app/5g-solutions/page'));
-
-// Additional AI Services
-const AIChatbotBuilderPage = lazy(() => import('./app/ai-chatbot-builder/page'));
-const AIDocumentProcessorPage = lazy(() => import('./app/ai-document-processor/page'));
-const AIFormBuilderPage = lazy(() => import('./app/ai-form-builder/page'));
-const AIVoiceAssistantPage = lazy(() => import('./app/ai-voice-assistant/page'));
-const AIFraudDetectionPage = lazy(() => import('./app/ai-fraud-detection/page'));
-const AIImageRecognitionPage = lazy(() => import('./app/ai-image-recognition/page'));
-const AILeadScoringPage = lazy(() => import('./app/ai-lead-scoring/page'));
-const AIPredictiveMaintenancePage = lazy(() => import('./app/ai-predictive-maintenance/page'));
-const AIPriceOptimizerPage = lazy(() => import('./app/ai-price-optimizer/page'));
-const AISchedulingAssistantPage = lazy(() => import('./app/ai-scheduling-assistant/page'));
-const AICRMOptimizerPage = lazy(() => import('./app/ai-crm-optimizer/page'));
-const AIDataVisualizerPage = lazy(() => import('./app/ai-data-visualizer/page'));
-const AIEmailOptimizerPage = lazy(() => import('./app/ai-email-optimizer/page'));
-const SocialMediaSchedulerPage = lazy(() => import('./app/social-media-scheduler/page'));
-const ExpenseTrackerProPage = lazy(() => import('./app/expense-tracker-pro/page'));
-const BlockchainSolutionsPage = lazy(() => import('./app/blockchain-solutions/page'));
-const IOTSolutionsPage = lazy(() => import('./app/iot-solutions/page'));
-const DevOpsAutomationPage = lazy(() => import('./app/devops-automation/page'));
-const DataEngineeringPage = lazy(() => import('./app/data-engineering/page'));
-const APIDevelopmentPage = lazy(() => import('./app/api-development/page'));
-const SecurityAuditPage = lazy(() => import('./app/security-audit/page'));
-const MicroSAASSolutionsPage = lazy(() => import('./app/micro-saas-solutions/page'));
-const AIContentGeneratorPage = lazy(() => import('./app/ai-content-generator/page'));
-const DataAnalyticsPage = lazy(() => import('./app/data-analytics/page'));
-const WebDevelopmentPage = lazy(() => import('./app/web-development/page'));
-const MobileDevelopmentPage = lazy(() => import('./app/mobile-development/page'));
-const DatabaseManagementPage = lazy(() => import('./app/database-management/page'));
-const NetworkInfrastructurePage = lazy(() => import('./app/network-infrastructure/page'));
-const HelpPage = lazy(() => import('./app/help/page'));
-const AccessibilityPage = lazy(() => import('./app/accessibility/page'));
-const APIDocsPage = lazy(() => import('./app/api-docs/page'));
-const PartnershipsPage = lazy(() => import('./app/partnerships/page'));
-const TutorialsPage = lazy(() => import('./app/tutorials/page'));
-const DocsPage = lazy(() => import('./app/docs/page'));
-const SupportPage = lazy(() => import('./app/support/page'));
-const DemoPage = lazy(() => import('./app/demo/page'));
-const CybersecurityPage = lazy(() => import('./app/cybersecurity/page'));
-const CloudSolutionsPage = lazy(() => import('./app/cloud-solutions/page'));
-
-// Micro SaaS pages
-const TaskManagerProPage = lazy(() => import('./app/task-manager-pro/page'));
-const AnalyticsDashboardPage = lazy(() => import('./app/analytics-dashboard/page'));
-const CustomerSupportHubPage = lazy(() => import('./app/customer-support-hub/page'));
-const InventoryManagerPage = lazy(() => import('./app/inventory-manager/page'));
-
-// Missing pages
-const ITSolutionsPage = lazy(() => import('./app/it-solutions/page'));
-const AISolutionsPage = lazy(() => import('./app/ai-solutions/page'));
-const PricingPage = lazy(() => import('./app/pricing/page'));
-const SolutionsPage = lazy(() => import('./app/solutions/page'));
-const AIServicesPage = lazy(() => import('./app/ai-services/page'));
-const CaseStudiesPage = lazy(() => import('./app/case-studies/page'));
-
-// Additional missing pages
-const AccessibilityPagePage = lazy(() => import('./app/accessibility-page/page'));
-const AIFraudDetectionProPage = lazy(() => import('./app/ai-fraud-detection-pro/page'));
-const AIImageRecognitionProPage = lazy(() => import('./app/ai-image-recognition-pro/page'));
-const AILeadScoringProPage = lazy(() => import('./app/ai-lead-scoring-pro/page'));
-const AIPredictiveMaintenanceProPage = lazy(() => import('./app/ai-predictive-maintenance-pro/page'));
-const AIPriceOptimizerProPage = lazy(() => import('./app/ai-price-optimizer-pro/page'));
-const AISocialMediaManagerPage = lazy(() => import('./app/ai-social-media-manager/page'));
-const AIVoiceAssistantProPage = lazy(() => import('./app/ai-voice-assistant-pro/page'));
-const AIWebsiteAnalyzerPage = lazy(() => import('./app/ai-website-analyzer/page'));
-const BlockchainSolutionsProPage = lazy(() => import('./app/blockchain-solutions-pro/page'));
-const DevOpsAutomationProPage = lazy(() => import('./app/devops-automation-pro/page'));
-const IOTSolutionsProPage = lazy(() => import('./app/iot-solutions-pro/page'));
-
-// Zion AI Services
-const ZionAIChatbotBuilderPage = lazy(() => import('./app/zion-ai-chatbot-builder/page'));
-const ZionAICodeAssistantPage = lazy(() => import('./app/zion-ai-code-assistant/page'));
-const ZionAIContentModeratorPage = lazy(() => import('./app/zion-ai-content-moderator/page'));
-const ZionAICRMOptimizerPage = lazy(() => import('./app/zion-ai-crm-optimizer/page'));
-const ZionAICustomerChurnPredictorPage = lazy(() => import('./app/zion-ai-customer-churn-predictor/page'));
-const ZionAICustomerChurnPredictorProPage = lazy(() => import('./app/zion-ai-customer-churn-predictor-pro/page'));
-const ZionAICustomerSentimentTrackerPage = lazy(() => import('./app/zion-ai-customer-sentiment-tracker/page'));
-const ZionAICustomerSupportProPage = lazy(() => import('./app/zion-ai-customer-support-pro/page'));
-const ZionAIDataVisualizerPage = lazy(() => import('./app/zion-ai-data-visualizer/page'));
-const ZionAIDocumentAnalyzerPage = lazy(() => import('./app/zion-ai-document-analyzer/page'));
-const ZionAIDocumentProcessorPage = lazy(() => import('./app/zion-ai-document-processor/page'));
-const ZionAIEmailMarketingProPage = lazy(() => import('./app/zion-ai-email-marketing-pro/page'));
-const ZionAIEmailOptimizerPage = lazy(() => import('./app/zion-ai-email-optimizer/page'));
-const ZionAIFinancialForecasterPage = lazy(() => import('./app/zion-ai-financial-forecaster/page'));
-const ZionAIFormBuilderPage = lazy(() => import('./app/zion-ai-form-builder/page'));
-const ZionAIFraudDetectionPage = lazy(() => import('./app/zion-ai-fraud-detection/page'));
-const ZionAIImageGeneratorPage = lazy(() => import('./app/zion-ai-image-generator/page'));
-const ZionAIImageRecognitionPage = lazy(() => import('./app/zion-ai-image-recognition/page'));
-const ZionAIInventoryOptimizerProPage = lazy(() => import('./app/zion-ai-inventory-optimizer-pro/page'));
-const ZionAILeadScoringPage = lazy(() => import('./app/zion-ai-lead-scoring/page'));
-const ZionAIMeetingTranscriberPage = lazy(() => import('./app/zion-ai-meeting-transcriber/page'));
-const ZionAIPredictiveAnalyticsPage = lazy(() => import('./app/zion-ai-predictive-analytics/page'));
-const ZionAIPredictiveMaintenancePage = lazy(() => import('./app/zion-ai-predictive-maintenance/page'));
-const ZionAIPriceOptimizerPage = lazy(() => import('./app/zion-ai-price-optimizer/page'));
-const ZionAISalesPredictorPage = lazy(() => import('./app/zion-ai-sales-predictor/page'));
-const ZionAISchedulingAssistantPage = lazy(() => import('./app/zion-ai-scheduling-assistant/page'));
-const ZionAISocialMediaManagerPage = lazy(() => import('./app/zion-ai-social-media-manager/page'));
-const ZionAISocialSchedulerProPage = lazy(() => import('./app/zion-ai-social-scheduler-pro/page'));
-const ZionAITaskSchedulerPage = lazy(() => import('./app/zion-ai-task-scheduler/page'));
-const ZionAITranslationServicePage = lazy(() => import('./app/zion-ai-translation-service/page'));
-const ZionAIVideoGeneratorPage = lazy(() => import('./app/zion-ai-video-generator/page'));
-const ZionAIVoiceAssistantPage = lazy(() => import('./app/zion-ai-voice-assistant/page'));
-const ZionAIVoiceSynthesisPage = lazy(() => import('./app/zion-ai-voice-synthesis/page'));
-const ZionAIWebsiteAnalyzerPage = lazy(() => import('./app/zion-ai-website-analyzer/page'));
-const ZionAIWorkflowAutomatorPage = lazy(() => import('./app/zion-ai-workflow-automator/page'));
-const ZionAIWorkflowAutomatorProPage = lazy(() => import('./app/zion-ai-workflow-automator-pro/page'));
-const ZionAPIDevelopmentPage = lazy(() => import('./app/zion-api-development/page'));
-const ZionBlockchainSolutionsPage = lazy(() => import('./app/zion-blockchain-solutions/page'));
-const ZionCustomerSatisfactionMonitorPage = lazy(() => import('./app/zion-customer-satisfaction-monitor/page'));
-const ZionCybersecurityAuditPage = lazy(() => import('./app/zion-cybersecurity-audit/page'));
-const ZionDevOpsAutomationPage = lazy(() => import('./app/zion-devops-automation/page'));
-const ZionIOTSolutionsPage = lazy(() => import('./app/zion-iot-solutions/page'));
-const ZionSmartAnalyticsDashboardPage = lazy(() => import('./app/zion-smart-analytics-dashboard/page'));
-const ZionSmartCRMAutomationPage = lazy(() => import('./app/zion-smart-crm-automation/page'));
-const ZionSmartExpenseTrackerPage = lazy(() => import('./app/zion-smart-expense-tracker/page'));
-const ZionSmartInventoryManagerPage = lazy(() => import('./app/zion-smart-inventory-manager/page'));
+// Note: Lazy imports removed as they are not used in the main App component
+// Individual pages are handled by Next.js routing
 
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -207,16 +37,33 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; res
     </div>
   </div>
 );
-// Loading component
-const LoadingFallback = () => (
+// Memoized loading component
+const LoadingFallback = memo(() => (
   <div className="min-h-screen flex items-center justify-center">
     <LoadingSpinner />
   </div>
-);
+));
 
-function App() {
-  const [sidebarOpen, setSidebarOpen] = React.useState(false);
-  const [isLoading, setIsLoading] = React.useState(true);
+// Memoized main content component
+const MainContent = memo(() => (
+  <main className="relative z-10" id="main-content" role="main">
+    <HomePage />
+  </main>
+));
+
+// Memoized app layout component
+const AppLayout = memo(() => (
+  <div className="min-h-screen bg-slate-900">
+    <Navigation />
+    <MainContent />
+    <Footer />
+    <PerformanceMonitor />
+    <AccessibilityEnhancer />
+  </div>
+));
+
+const App = memo(() => {
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     // Simulate loading time
@@ -238,18 +85,14 @@ function App() {
   return (
     <ErrorBoundary>
       <HelmetProvider>
-        <div className="min-h-screen bg-slate-900">
-          <Navigation />
-          <main className="relative z-10" id="main-content" role="main">
-            <HomePage />
-          </main>
-          <Footer />
-          <PerformanceMonitor />
-          <AccessibilityEnhancer />
-        </div>
+        <PerformanceOptimizer>
+          <AppLayout />
+        </PerformanceOptimizer>
       </HelmetProvider>
     </ErrorBoundary>
   );
-}
+});
 
-export default App
+App.displayName = 'App';
+
+export default App;

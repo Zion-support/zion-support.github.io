@@ -24,26 +24,34 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
   const frameCountRef = useRef(0);
   const lastTimeRef = useRef(performance.now());
 
-  const measureMemoryUsage = useCallback(() => {
+const measureMemoryUsage = useCallback(() => {
     // Measure memory usage
     let memoryUsage = 0;
     if ('memory' in performance) {
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
-      memoryUsage = memory?.usedJSHeapSize ? memory.usedJSHeapSize / 1024 / 1024 : 0; // Convert to MB
+      if (memory) {
+        memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
+      }
     }
     return memoryUsage;
-  }, []);
+}, []);
 
   const measurePerformance = useCallback(() => {
-    // Measure load time and render time
-    const loadTime = performance.timing ? performance.timing.loadEventEnd - performance.timing.navigationStart : 0;
-    const renderTime = performance.now();
+    // Measure performance metrics
+    const startTime = performance.now();
+    const memoryUsage = measureMemoryUsage();
     
+    // Try to get navigation timing if available, otherwise use performance.now()
+    const loadTime = performance.timing ? 
+      performance.timing.loadEventEnd - performance.timing.navigationStart : 
+      performance.now();
+    
+    // Update metrics with performance data
     setMetrics(prev => ({
       ...prev,
-      memoryUsage: measureMemoryUsage(),
       loadTime,
-      renderTime
+      memoryUsage,
+      renderTime: performance.now() - startTime
     }));
   }, [measureMemoryUsage]);
 
@@ -78,6 +86,6 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
 
   return {
     metrics,
-    isMonitoringFPS,
+    isMonitoringFPS,triggerPerformanceMeasurement: measurePerformance,
   }
 }

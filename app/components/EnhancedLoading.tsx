@@ -1,22 +1,18 @@
-'use client';
-
 import React from 'react';
 
 interface EnhancedLoadingProps {
-  message?: string;
   className?: string;
+  children?: React.ReactNode;
 }
 
-const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({
-  message = 'Loading...',
-  className = ''
-}) => {
+const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({ className = '', children }) => {
   return (
-    <div className={`flex items-center justify-center p-8 ${className}`}>
-      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-      <span className="ml-3 text-gray-600">{message}</span>
+    <div className={`enhancedloading-component ${className}`}>
+      {children}
     </div>
   );
 };
+
+EnhancedLoading.displayName = 'EnhancedLoading';
 
 export default EnhancedLoading;
