@@ -4,7 +4,10 @@ import { ArrowRight } from 'lucide-react';
 
 export const dynamic = 'force-static';
 
-export const metadata: Metadata = aboutMetadata;
+export const metadata: Metadata = {
+  title: 'About Us - Zion Tech Group',
+  description: 'Learn about Zion Tech Group, a leading provider of AI and IT solutions.',
+};
 
 export default function AboutPage() {
   return (
