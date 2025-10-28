@@ -1,93 +1,45 @@
+import ErrorBoundary from '../components/ErrorBoundary';
+import Head from 'next/head';
+import Footer from '../components/Footer';
+
 export const metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group',
-  keywords: 'page, technology, services',
+  title: 'Online Learning Platform | Zion Tech Group',
+  description: 'Advanced online learning platform solutions by Zion Tech Group.',
+  keywords: 'online, learning, platform, education, technology, services',
   openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page services by Zion Tech Group',
+    title: 'Online Learning Platform | Zion Tech Group',
+    description: 'Advanced online learning platform solutions by Zion Tech Group.',
     type: 'website',
   },
 };
-import React from 'react'
 
-
-import { Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-
-
-import Navigation from '../components/Navigation'
-
-
-
-import Footer from '../components/Footer'
-
-
-
-import { CheckCircle, ArrowRight } from 'lucide-react'
-
-
-;
-const OnlineLearningPlatformPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: "AI-Powered Learning",
-      description: "Personalized learning experiences powered by artificial intelligence.",
-      benefits: ["Adaptive content", "Smart recommendations", "Progress tracking"]
-    },
-    {
-      icon: BarChart,
-      title: "Analytics Dashboard",
-      description: "Comprehensive analytics to track learning progress and performance.",
-      benefits: ["Real-time insights", "Performance metrics", "Learning analytics"]
-    },
-    {
-      icon: Target,
-      title: "Skill Assessment",
-      description: "Advanced assessment tools to evaluate and validate skills.",
-      benefits: ["Automated testing", "Skill validation", "Certification"]
-    },
-    {
-      icon: TrendingUp,
-      title: "Progress Tracking",
-      description: "Track learning progress and identify areas for improvement.",
-      benefits: ["Progress monitoring", "Goal setting", "Achievement tracking"]
-    }
-  ];
-
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ]
-
+function Page() {
   return (
-    <>
-            {/* SEO handled by layout.tsx */}
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+    <div>
+      <Head>
+        <title>Online Learning Platform - Zion Tech Group</title>
+        <meta name="description" content="Advanced online learning platform solutions by Zion Tech Group." />
+      </Head>
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">
             Online Learning Platform
           </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Create engaging online learning experiences with AI-powered education platform. Course management, student analytics, and personalized learning.
+          <p className="text-xl text-gray-300 mb-8">
+            Advanced online learning platform solutions.
+          </p>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
+            <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
+            <p className="text-gray-300">
+              This service is currently under development. Contact us to learn more about our upcoming online learning platform solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center" aria-label="Action Button">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" aria-label="Action Button">
-                Learn More
-              </button>
-            </div>
           </div>
-        </section>
+        </div>
+        <Footer />
+      </main>
+    </div>
+  );
+}
 
 export default function Wrapped(props: Record<string, unknown>) {
   return (
@@ -95,6 +47,4 @@ export default function Wrapped(props: Record<string, unknown>) {
       <Page {...props} />
     </ErrorBoundary>
   );
-};
-
-export default OnlineLearningPlatformPage;
+}

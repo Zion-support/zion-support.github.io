@@ -1,3 +1,4 @@
+import ErrorBoundary from '../components/ErrorBoundary';
 export const metadata = {
   title: 'Page | Zion Tech Group',
   description: 'Professional page services by Zion Tech Group',
@@ -63,8 +64,8 @@ const AiPoweredDevopsPage: React.FC = () => {
   ]
 
   return (
-    <>
-            {/* SEO handled by layout.tsx */}
+    <div>
+      {/* SEO handled by layout.tsx */}
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
@@ -88,6 +89,10 @@ const AiPoweredDevopsPage: React.FC = () => {
             </div>
           </div>
         </section>
+      </div>
+    </div>
+  );
+}
 
 export default function Wrapped(props: Record<string, unknown>) {
   return (
@@ -95,6 +100,4 @@ export default function Wrapped(props: Record<string, unknown>) {
       <Page {...props} />
     </ErrorBoundary>
   );
-};
-
-export default AiPoweredDevopsPage;
+}

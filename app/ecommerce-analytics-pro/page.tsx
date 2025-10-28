@@ -1,3 +1,4 @@
+import ErrorBoundary from '../components/ErrorBoundary';
 export const metadata = {
   title: 'Page | Zion Tech Group',
   description: 'Professional page services by Zion Tech Group',
@@ -96,5 +97,3 @@ export default function Wrapped(props: Record<string, unknown>) {
     </ErrorBoundary>
   );
 };
-
-export default EcommerceAnalyticsProPage;

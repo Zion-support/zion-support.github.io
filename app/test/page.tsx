@@ -1,93 +1,45 @@
+import ErrorBoundary from '../components/ErrorBoundary';
+import Head from 'next/head';
+import Footer from '../components/Footer';
+
 export const metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group',
-  keywords: 'page, technology, services',
+  title: 'Test Page | Zion Tech Group',
+  description: 'Test page for development purposes by Zion Tech Group.',
+  keywords: 'test, development, technology, services',
   openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page services by Zion Tech Group',
+    title: 'Test Page | Zion Tech Group',
+    description: 'Test page for development purposes by Zion Tech Group.',
     type: 'website',
   },
 };
-import React from 'react'
 
-
-import { Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-
-
-import Navigation from '../components/Navigation'
-
-
-
-import Footer from '../components/Footer'
-
-
-
-import { CheckCircle, ArrowRight } from 'lucide-react'
-
-
-;
-const TestPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: "Testing Solutions",
-      description: "Advanced testing and quality assurance solutions.",
-      benefits: ["Quality", "Testing", "Assurance"]
-    },
-    {
-      icon: BarChart,
-      title: "Analytics",
-      description: "Comprehensive testing analytics and reporting.",
-      benefits: ["Monitoring", "Analysis", "Insights"]
-    },
-    {
-      icon: Target,
-      title: "Precision",
-      description: "Precise testing and quality targeting.",
-      benefits: ["Accuracy", "Precision", "Targeting"]
-    },
-    {
-      icon: TrendingUp,
-      title: "Performance",
-      description: "Optimize testing performance and quality.",
-      benefits: ["Optimization", "Performance", "Efficiency"]
-    }
-  ];
-
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ]
-
+function Page() {
   return (
-    <>
-            {/* SEO handled by layout.tsx */}
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Page
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced Page solution for modern businesses.
+    <div>
+      <Head>
+        <title>Test Page - Zion Tech Group</title>
+        <meta name="description" content="Test page for development purposes by Zion Tech Group." />
+      </Head>
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">
+            Test Page
+          </h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Test page for development purposes.
+          </p>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
+            <h2 className="text-2xl font-semibold text-white mb-4">Development Test</h2>
+            <p className="text-gray-300">
+              This is a test page for development and testing purposes.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center" aria-label="Action Button">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" aria-label="Action Button">
-                Learn More
-              </button>
-            </div>
           </div>
-        </section>
+        </div>
+        <Footer />
+      </main>
+    </div>
+  );
+}
 
 export default function Wrapped(props: Record<string, unknown>) {
   return (
@@ -95,6 +47,4 @@ export default function Wrapped(props: Record<string, unknown>) {
       <Page {...props} />
     </ErrorBoundary>
   );
-};
-
-export default TestPage;
+}
