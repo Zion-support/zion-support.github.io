@@ -8,7 +8,6 @@ export const metadata: Metadata = {
 };
 
 export const dynamic = 'force-static';
-cursor/fix-errors-and-merge-to-main-9c0e
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white">
