@@ -1,5 +1,12 @@
 import { useState, useEffect } from 'react';
 
+// Type definitions for performance entries
+interface PerformanceEventTiming extends PerformanceEntry {
+  processingStart: number;
+  processingEnd: number;
+  cancelable: boolean;
+}
+
 // Declare gtag function for Google Analytics
 declare global {
   function gtag(...args: unknown[]): void;
@@ -74,7 +81,8 @@ class MonitoringService {
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((_entry: PerformanceEntry) => {
-            this.metrics.fid = (_entry as Record<string, Record<string, any>>).processingStart - _entry.startTime;
+            const fidEntry = _entry as PerformanceEventTiming;
+            this.metrics.fid = fidEntry.processingStart - _entry.startTime;
             this.reportMetric('fid', this.metrics.fid);
           });
         });
@@ -85,8 +93,9 @@ class MonitoringService {
         const clsObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
           entries.forEach((_entry: PerformanceEntry) => {
-            if (!(_entry as any).hadRecentInput) {
-              clsValue += _entry.value;
+            const clsEntry = _entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+            if (!clsEntry.hadRecentInput) {
+              clsValue += clsEntry.value || 0;
               this.metrics.cls = clsValue;
               this.reportMetric('cls', clsValue);
             }
@@ -174,8 +183,8 @@ class MonitoringService {
     }
 
     // Send to analytics (if configured)
-    if (typeof (window as any).gtag === 'function') {
-      (window as any).gtag('event', name, {
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',
       });

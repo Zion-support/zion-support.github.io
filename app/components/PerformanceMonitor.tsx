@@ -2,6 +2,13 @@
 
 import React, { useEffect, useState, memo } from 'react';
 
+// Type definitions for performance entries
+interface PerformanceEventTiming extends PerformanceEntry {
+  processingStart: number;
+  processingEnd: number;
+  cancelable: boolean;
+}
+
 interface PerformanceMetrics {
   lcp: number | null;
   fid: number | null;
@@ -37,9 +44,13 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
         if (entry.entryType === 'largest-contentful-paint') {
           setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
         } else if (entry.entryType === 'first-input') {
-          setMetrics(prev => ({ ...prev, fid: (entry as any).processingStart - entry.startTime }));
-        } else if (entry.entryType === 'layout-shift' && !(entry as any).hadRecentInput) {
-          setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (entry as any).value }));
+          const fidEntry = entry as PerformanceEventTiming;
+          setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - entry.startTime }));
+        } else if (entry.entryType === 'layout-shift') {
+          const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+          if (!clsEntry.hadRecentInput) {
+            setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (clsEntry.value || 0) }));
+          }
         } else if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
           setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
         }
