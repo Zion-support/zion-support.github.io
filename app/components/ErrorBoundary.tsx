@@ -1,5 +1,3 @@
-import ErrorBoundary from '../components/ErrorBoundary';
-'use client';
 }
 
 interface ErrorBoundaryState {
