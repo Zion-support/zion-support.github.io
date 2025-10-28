@@ -1,145 +1,93 @@
-// Bundle analysis utilities
-export interface BundleAnalysis {
+interface BundleAnalysis {
   totalSize: number;
   gzipSize: number;
-  chunks: ChunkInfo[];
-  recommendations: string[];
+  files: Array<{
+    name: string;
+    size: number;
+    gzipSize: number;
+  }>;
 }
 
-export interface ChunkInfo {
-  name: string;
-  size: number;
-  gzipSize: number;
-  modules: ModuleInfo[];
-}
+class BundleAnalyzer {
+  private analysis: BundleAnalysis = {
+    totalSize: 0,
+    gzipSize: 0,
+    files: []
+  };
 
-export interface ModuleInfo {
-  name: string;
-  size: number;
-  gzipSize: number;
-  type: 'js' | 'css' | 'image' | 'font' | 'other';
-}
-
-export class BundleAnalyzer {
-  private static instance: BundleAnalyzer;
-  private analysis: BundleAnalysis | null = null;
-
-  static getInstance(): BundleAnalyzer {
-    if (!BundleAnalyzer.instance) {
-      BundleAnalyzer.instance = new BundleAnalyzer();
-    }
-    return BundleAnalyzer.instance;
-  }
-
-  // Analyze current bundle
   analyzeBundle(): BundleAnalysis {
-    if (this.analysis) {
+    if (typeof window === 'undefined') {
       return this.analysis;
     }
 
-    const chunks = this.analyzeChunks();
-    const totalSize = chunks.reduce((sum, chunk) => sum + chunk.size, 0);
-    const gzipSize = chunks.reduce((sum, chunk) => sum + chunk.gzipSize, 0);
-    const recommendations = this.generateRecommendations(chunks);
+    // Analyze script tags
+    const scripts = document.querySelectorAll('script[src]');
+    let totalSize = 0;
+    let gzipSize = 0;
+    const files: Array<{ name: string; size: number; gzipSize: number }> = [];
+
+    scripts.forEach(script => {
+      const src = script.getAttribute('src');
+      if (src) {
+        // Estimate sizes (in real implementation, you'd fetch and measure)
+        const estimatedSize = this.estimateFileSize(src);
+        const estimatedGzipSize = estimatedSize * 0.3; // Assume 70% compression
+        
+        files.push({
+          name: src,
+          size: estimatedSize,
+          gzipSize: estimatedGzipSize
+        });
+        
+        totalSize += estimatedSize;
+        gzipSize += estimatedGzipSize;
+      }
+    });
 
     this.analysis = {
       totalSize,
       gzipSize,
-      chunks,
-      recommendations
+      files
     };
 
     return this.analysis;
   }
 
-  private analyzeChunks(): ChunkInfo[] {
-    // This would typically analyze webpack stats or vite build output
-    // For now, we'll return mock data based on common patterns
-    return [
-      {
-        name: 'vendor',
-        size: 500000, // 500KB
-        gzipSize: 150000, // 150KB
-        modules: [
-          { name: 'react', size: 100000, gzipSize: 30000, type: 'js' },
-          { name: 'react-dom', size: 120000, gzipSize: 35000, type: 'js' },
-          { name: 'lodash', size: 80000, gzipSize: 25000, type: 'js' }
-        ]
-      },
-      {
-        name: 'app',
-        size: 200000, // 200KB
-        gzipSize: 60000, // 60KB
-        modules: [
-          { name: 'App.tsx', size: 50000, gzipSize: 15000, type: 'js' },
-          { name: 'components', size: 80000, gzipSize: 25000, type: 'js' },
-          { name: 'styles.css', size: 30000, gzipSize: 10000, type: 'css' }
-        ]
-      }
-    ];
+  private estimateFileSize(src: string): number {
+    // Simple estimation based on common patterns
+    if (src.includes('vendor') || src.includes('chunk')) {
+      return 50000; // 50KB
+    }
+    if (src.includes('main') || src.includes('app')) {
+      return 25000; // 25KB
+    }
+    return 10000; // 10KB default
   }
 
-  private generateRecommendations(chunks: ChunkInfo[]): string[] {
-    const recommendations: string[] = [];
-
-    // Check for large chunks
-    const largeChunks = chunks.filter(chunk => chunk.size > 300000);
-    if (largeChunks.length > 0) {
-      recommendations.push(`Consider code splitting for large chunks: ${largeChunks.map(c => c.name).join(', ')}`);
-    }
-
-    // Check for unused modules
-    const lodashChunk = chunks.find(chunk => 
-      chunk.modules.some(module => module.name === 'lodash')
-    );
-    if (lodashChunk) {
-      recommendations.push('Consider using lodash-es or individual lodash functions to reduce bundle size');
-    }
-
-    // Check for duplicate dependencies
-    const reactModules = chunks.flatMap(chunk => 
-      chunk.modules.filter(module => module.name.includes('react'))
-    );
-    if (reactModules.length > 2) {
-      recommendations.push('Check for duplicate React dependencies');
-    }
-
-    // Check for large images
-    const imageModules = chunks.flatMap(chunk => 
-      chunk.modules.filter(module => module.type === 'image')
-    );
-    const largeImages = imageModules.filter(module => module.size > 100000);
-    if (largeImages.length > 0) {
-      recommendations.push('Optimize large images or use WebP format');
-    }
-
-    return recommendations;
-  }
-
-  // Get optimization suggestions
   getOptimizationSuggestions(): string[] {
-    const analysis = this.analyzeBundle();
     const suggestions: string[] = [];
+    const analysis = this.analysis;
 
-    if (analysis.totalSize > 1000000) { // 1MB
-      suggestions.push('Bundle size is large. Consider implementing code splitting.');
+    if (analysis.totalSize > 500000) { // 500KB
+      suggestions.push('Consider code splitting to reduce bundle size');
     }
 
-    if (analysis.gzipSize / analysis.totalSize > 0.7) {
-      suggestions.push('Gzip compression ratio is low. Check for already compressed assets.');
+    if (analysis.gzipSize / analysis.totalSize > 0.4) {
+      suggestions.push('Enable gzip compression for better performance');
     }
 
-    const jsChunks = analysis.chunks.filter(chunk => 
-      chunk.modules.some(module => module.type === 'js')
-    );
-    if (jsChunks.length > 10) {
-      suggestions.push('Too many JS chunks. Consider consolidating smaller chunks.');
+    if (analysis.files.length > 10) {
+      suggestions.push('Consider bundling multiple small files together');
+    }
+
+    const largeFiles = analysis.files.filter(file => file.size > 100000);
+    if (largeFiles.length > 0) {
+      suggestions.push(`Large files detected: ${largeFiles.map(f => f.name).join(', ')}`);
     }
 
     return suggestions;
   }
 
-  // Generate bundle report
   generateReport(): string {
     const analysis = this.analyzeBundle();
     const suggestions = this.getOptimizationSuggestions();
@@ -150,24 +98,25 @@ export class BundleAnalyzer {
     report += `Gzip Size: ${(analysis.gzipSize / 1024).toFixed(2)} KB\n`;
     report += `Compression Ratio: ${((1 - analysis.gzipSize / analysis.totalSize) * 100).toFixed(1)}%\n\n`;
 
-    report += 'Chunks:\n';
-    analysis.chunks.forEach(chunk => {
-      report += `- ${chunk.name}: ${(chunk.size / 1024).toFixed(2)} KB (${(chunk.gzipSize / 1024).toFixed(2)} KB gzipped)\n`;
+    report += 'Files:\n';
+    analysis.files.forEach(file => {
+      report += `  ${file.name}: ${(file.size / 1024).toFixed(2)} KB (${(file.gzipSize / 1024).toFixed(2)} KB gzipped)\n`;
     });
 
-    report += '\nRecommendations:\n';
-    analysis.recommendations.forEach(rec => {
-      report += `- ${rec}\n`;
-    });
-
-    report += '\nOptimization Suggestions:\n';
-    suggestions.forEach(suggestion => {
-      report += `- ${suggestion}\n`;
-    });
+    if (suggestions.length > 0) {
+      report += '\nSuggestions:\n';
+      suggestions.forEach(suggestion => {
+        report += `  - ${suggestion}\n`;
+      });
+    }
 
     return report;
   }
+
+  exportAnalysis(): BundleAnalysis {
+    return this.analyzeBundle();
+  }
 }
 
-// Export singleton instance
-export const bundleAnalyzer = BundleAnalyzer.getInstance();
+export default BundleAnalyzer;
+export { BundleAnalysis };
