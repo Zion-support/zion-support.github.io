@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-
 import React from 'react';
 interface AdvancedPerformanceMonitorProps {
   className?: string;
   children?: React.ReactNode;
 }
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc
 
 const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({ className = '', children }) => {
   return (

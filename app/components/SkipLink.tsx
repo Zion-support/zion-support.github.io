@@ -11,7 +11,6 @@ const SkipLink: React.FC<{}> = (_props) => {
 
 SkipLink.displayName = 'SkipLink';
 
-<<<<<<< HEAD
 const SkipLink = () => {
   return (
     <div className="p-4">
@@ -22,16 +21,3 @@ const SkipLink = () => {
 };
 
 export default SkipLink;
-=======
-interface Props {
-  // Add props here
-}
-
-export default function SkipLink(_props: Props) {
-  return (
-    <div>
-      {/* SkipLink component content */}
-    </div>
-  );
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc

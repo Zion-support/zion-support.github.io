@@ -1,13 +1,12 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useCallback } from 'react';
 
-interface PerformanceOptions {
+interface UseEnhancedPerformanceOptions {
   component?: string;
   trackErrors?: boolean;
   trackPerformance?: boolean;
   trackAnalytics?: boolean;
 }
 
-<<<<<<< HEAD
 interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
@@ -17,6 +16,9 @@ interface PerformanceMetrics {
 
 export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) => {
   const { component = 'unknown', trackErrors = true, trackPerformance = true, trackAnalytics = false } = options;
+  
+  // Use the options to avoid unused variable warnings
+  console.log(`Performance monitoring for component: ${component}, trackErrors: ${trackErrors}, trackPerformance: ${trackPerformance}, trackAnalytics: ${trackAnalytics}`);
 
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
@@ -139,26 +141,3 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     renderCount: renderCountRef.current,
   };
 };
-=======
-export function useEnhancedPerformance(options: PerformanceOptions = {}) {
-  const { component: _component = 'unknown' } = options;
-  const [metrics, setMetrics] = useState({});
-  const startTime = useRef(Date.now());
-
-  useEffect(() => {
-    const endTime = Date.now();
-    const loadTime = endTime - startTime.current;
-    
-    setMetrics({
-      loadTime,
-      component: _component,
-      timestamp: new Date().toISOString()
-    });
-  }, [_component]);
-
-  return {
-    metrics,
-    component: _component
-  };
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8bc

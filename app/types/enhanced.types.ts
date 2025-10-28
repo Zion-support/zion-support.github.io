@@ -1,4 +1,5 @@
 import React from 'react';
+import { User } from 'lucide-react';
 // Enhanced type definitions for better type safety
 export interface PerformanceMetrics {
   loadTime: number
