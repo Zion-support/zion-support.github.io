@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 
+// Performance API type definitions
+
 // Declare gtag function for Google Analytics
 declare global {
   function gtag(...args: unknown[]): void;
@@ -117,7 +119,7 @@ class MonitoringService {
         const longTaskObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
             // Handle long tasks
-            console.log('Long task detected:', entry);
+            console.log('Long task detected:', entry.duration);
           }
         });
         longTaskObserver.observe({ entryTypes: ['longtask'] });
@@ -146,11 +148,11 @@ class MonitoringService {
   }
 
   private setupErrorHandling(): void {
-    // Global _error handler
-    window.addEventListener('_error', (event) => {
+    // Global error handler
+    window.addEventListener('error', (event) => {
       this.logError({
         message: event.message,
-        stack: event._error?.stack,
+        stack: event.error?.stack,
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
         url: window.location.href,
@@ -175,8 +177,8 @@ class MonitoringService {
     }
 
     // Send to analytics (if configured)
-    if (typeof window !== 'undefined' && 'gtag' in window && typeof window.gtag === 'function') {
-      window.gtag('event', name, {
+    if (typeof window !== 'undefined' && 'gtag' in window && typeof (window as unknown as { gtag: unknown }).gtag === 'function') {
+      (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',
       });

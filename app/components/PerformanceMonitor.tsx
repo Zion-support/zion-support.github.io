@@ -2,6 +2,8 @@
 
 import React, { useEffect, useState, memo } from 'react';
 
+// Performance API type definitions
+
 interface PerformanceMetrics {
   lcp: number | null;
   fid: number | null;
