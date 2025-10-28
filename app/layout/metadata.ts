@@ -19,9 +19,7 @@ export const metadata: Metadata = {
   },
 };
 
-export const siteMetadata: Metadata = metadata;
-
-export const siteViewport = {
+export const viewport = {
   width: 'device-width',
   initialScale: 1,
   maximumScale: 1,
