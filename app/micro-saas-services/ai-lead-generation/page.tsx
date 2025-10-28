@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+
+export const metadata = {
+  title: 'Ai Lead Generation | Zion Tech Group',
+  description: 'Professional ai lead generation services by Zion Tech Group. Advanced AI and technology solutions.',
+  keywords: 'ai lead generation, technology, services, AI, automation',
+  openGraph: {
+    title: 'Ai Lead Generation | Zion Tech Group',
+    description: 'Professional ai lead generation services by Zion Tech Group.',
+=======
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -7,10 +17,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Page - Zion Tech Group',
     description: 'Professional services and solutions by Zion Tech Group.',
+>>>>>>> 9d27805b410bab1ceb410b64b65ce66c1275b73a
     type: 'website',
   },
 };
 
+<<<<<<< HEAD
+=======
 function Page() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -26,8 +39,18 @@ function Page() {
           </div>
         </div>
       </main>
+>>>>>>> 9d27805b410bab1ceb410b64b65ce66c1275b73a
     </div>
   );
 }
 
+<<<<<<< HEAD
+export default function Wrapped(props: Record<string, unknown>) {
+  return (
+    <ErrorBoundary>
+    </ErrorBoundary>
+  );
+}
+=======
 export default Page;
+>>>>>>> 9d27805b410bab1ceb410b64b65ce66c1275b73a

@@ -35,4 +35,13 @@ function Page() {
   );
 }
 
+<<<<<<< HEAD
+  return (
+    <ErrorBoundary>
+      <Page {...props} />
+    </ErrorBoundary>
+  );
+}
+=======
 export default Page;
+>>>>>>> 9d27805b410bab1ceb410b64b65ce66c1275b73a

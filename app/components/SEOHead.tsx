@@ -91,7 +91,7 @@ const SEOHead: React.FC<SEOHeadProps> = memo(({
             url: canonicalUrl,
             logo: '/images/logo.png',
             sameAs: [
-              'https://linkedin.com/company/zion-tech-group',
+              'https://linkedin.com/compunknown/zion-tech-group',
               'https://twitter.com/ziontechgroup',
             ],
             contactPoint: {

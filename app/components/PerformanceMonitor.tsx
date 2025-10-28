@@ -23,6 +23,8 @@ interface LayoutShiftAttribution {
   currentRect: DOMRectReadOnly;
 }
 // Web API type declarations
+
+
 interface PerformanceMetrics {
   lcp: number | null;
   fid: number | null;
