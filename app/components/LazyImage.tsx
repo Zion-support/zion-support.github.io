@@ -6,12 +6,12 @@ interface LazyImageProps {
   alt: string;
   className?: string;
   placeholder?: string;
-  onLoad?: _() => void;
-  onError?: _() => void;
+  onLoad?: () => void;
+  onError?: () => void;
 }
 
 const LazyImage: React.FC<LazyImageProps> = ({
-  src, alt, className = '', onLoad, onError
+  src, alt, className = '', placeholder, onLoad, onError
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
@@ -21,7 +21,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
   console.log('Placeholder available:', placeholder);
   const imgRef = useRef<HTMLImageElement>(null);
 
-  useEffect_(() => {
+  useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
         if (entry.isIntersecting) {
           setIsInView(true);
@@ -35,15 +35,15 @@ const LazyImage: React.FC<LazyImageProps> = ({
       observer.observe(imgRef.current);
     }
 
-    return _() => observer.disconnect();
+    return () => observer.disconnect();
   }, []);
 
-  const handleLoad = _() => {
+  const handleLoad = () => {
     setIsLoaded(true);
     onLoad?.();
   };
 
-  const handleError = _() => {
+  const handleError = () => {
     setHasError(true);
     onError?.();
   };

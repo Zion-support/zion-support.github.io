@@ -1,4 +1,4 @@
-import { useEffect, _useRef, _useState, _useCallback } from 'react';
+import { useEffect, useRef, useState, useCallback } from 'react';
 
 interface UseEnhancedPerformanceOptions {
   component?: string;
@@ -33,21 +33,21 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
   const renderCountRef = useRef<number>(0);
   
   // Track component load time
-  useEffect_(() => {
+  useEffect(() => {
     mountTimeRef.current = performance.now();
     renderCountRef.current += 1;
     
     // Log component performance tracking
     // Measure load time
-    const _measureLoadTime = () => {
+    const measureLoadTime = () => {
       const loadTime = performance.now();
       setMetrics(prev => ({ ...prev, loadTime }));
     };
 
     // Measure render time
-    const _measureRenderTime = () => {
+    const measureRenderTime = () => {
       const renderStart = performance.now();
-      requestAnimationFrame_(() => {
+      requestAnimationFrame(() => {
         const renderTime = performance.now() - renderStart;
         setMetrics(prev => ({ ...prev, renderTime }));
       });
@@ -59,7 +59,7 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
   }, [options.trackPerformance]);
   
   // Track memory usage
-  useEffect_(() => {
+  useEffect(() => {
     if (options.trackPerformance && 'memory' in performance) {
       const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
       if (memory) {
@@ -72,23 +72,23 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
   }, [options.trackPerformance]);
   
   // Track network latency
-  useEffect_(() => {
+  useEffect(() => {
     if (options.trackPerformance) {
       const startTime = performance.now();
       
       fetch('/api/ping')
-        .then_(() => {
+        .then(() => {
           const latency = performance.now() - startTime;
           setMetrics(prev => ({ ...prev, networkLatency: latency }));
         })
-        .catch_(() => {
+        .catch(() => {
           // Ignore network errors
         });
     }
   }, [options.trackPerformance]);
   
   // Track errors
-  useEffect_(() => {
+  useEffect(() => {
     if (options.trackErrors) {
       const handleError = (error: ErrorEvent) => {
         console.error(`Error in ${componentName}:`, error);
@@ -101,7 +101,7 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
       window.addEventListener('error', handleError);
       window.addEventListener('unhandledrejection', handleUnhandledRejection);
       
-      return _() => {
+      return () => {
         window.removeEventListener('error', handleError);
         window.removeEventListener('unhandledrejection', handleUnhandledRejection);
       };
@@ -109,12 +109,12 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
   }, [options.trackErrors, componentName]);
   
   // Track analytics
-  useEffect_(() => {
+  useEffect(() => {
     if (options.trackAnalytics) {
       // Track component mount
       // console.log(`Component ${componentName} mounted`);
       
-      return _() => {
+      return () => {
         // Track component unmount
         // console.log(`Component ${componentName} unmounted`);
       };
