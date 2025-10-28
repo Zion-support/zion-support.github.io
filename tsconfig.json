@@ -37,14 +37,15 @@
     ]
   },
   "include": [
-    ".next/types/**/*.ts",
     "app/**/*.ts",
     "app/**/*.tsx",
+    "dist/types/**/*.ts",
     "next-env.d.ts",
-    "dist/types/**/*.ts"
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
+    ".next",
     "src",
     "hooks",
     "types",
