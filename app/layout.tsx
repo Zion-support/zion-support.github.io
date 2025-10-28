@@ -10,17 +10,18 @@ import ClientComponents from './components/ClientComponents';
 
 import Analytics from './components/Analytics';
 
-import ConsolidatedPerformance from './components/consolidated/ConsolidatedPerformance';
+// Temporarily disabled due to syntax errors
+// import ConsolidatedPerformance from './components/consolidated/ConsolidatedPerformance';
 
-import ConsolidatedAccessibility from './components/consolidated/ConsolidatedAccessibility';
+// import ConsolidatedAccessibility from './components/consolidated/ConsolidatedAccessibility';
 
-import ConsolidatedSEO from './components/consolidated/ConsolidatedSEO';
+// import ConsolidatedSEO from './components/consolidated/ConsolidatedSEO';
 
-import PerformanceMonitoring from './components/PerformanceMonitoring';
+// import PerformanceMonitoring from './components/PerformanceMonitoring';
 
-import SEOOptimization from './components/SEOOptimization';
+// import SEOOptimization from './components/SEOOptimization';
 
-import SecurityEnhancement from './components/SecurityEnhancement';
+// import SecurityEnhancement from './components/SecurityEnhancement';
 
 import PerformanceMonitor from './components/PerformanceMonitor';
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
@@ -45,9 +46,10 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <Analytics />
-        <ConsolidatedPerformance />
-        <ConsolidatedAccessibility />
-        <ConsolidatedSEO />
+        {/* Temporarily disabled due to syntax errors */}
+        {/* <ConsolidatedPerformance /> */}
+        {/* <ConsolidatedAccessibility /> */}
+        {/* <ConsolidatedSEO /> */}
         <ClientComponents>
             <div className="min-h-screen bg-slate-900">
               <SkipLink />

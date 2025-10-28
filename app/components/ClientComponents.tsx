@@ -21,30 +21,31 @@ const ServiceWorkerRegistration = dynamic(() => import('./ServiceWorkerRegistrat
   loading: () => null
 });
 
-const PerformanceMonitoring = dynamic(() => import('./PerformanceMonitoring'), {
-  ssr: false,
-  loading: () => null
-});
+// Temporarily disabled due to syntax errors
+// const PerformanceMonitoring = dynamic(() => import('./PerformanceMonitoring'), {
+//   ssr: false,
+//   loading: () => null
+// });
 
-const SEOOptimization = dynamic(() => import('./SEOOptimization'), {
-  ssr: false,
-  loading: () => null
-});
+// const SEOOptimization = dynamic(() => import('./SEOOptimization'), {
+//   ssr: false,
+//   loading: () => null
+// });
 
-const SecurityEnhancement = dynamic(() => import('./SecurityEnhancement'), {
-  ssr: false,
-  loading: () => null
-});
+// const SecurityEnhancement = dynamic(() => import('./SecurityEnhancement'), {
+//   ssr: false,
+//   loading: () => null
+// });
 
-const AdvancedPerformanceEnhancer = dynamic(() => import('./AdvancedPerformanceEnhancer'), {
-  ssr: false,
-  loading: () => null
-});
+// const AdvancedPerformanceEnhancer = dynamic(() => import('./AdvancedPerformanceEnhancer'), {
+//   ssr: false,
+//   loading: () => null
+// });
 
-const EnhancedAccessibilityManager = dynamic(() => import('./EnhancedAccessibilityManager'), {
-  ssr: false,
-  loading: () => null
-});
+// const EnhancedAccessibilityManager = dynamic(() => import('./EnhancedAccessibilityManager'), {
+//   ssr: false,
+//   loading: () => null
+// });
 
 const PerformanceOptimizations = dynamic(() => import('./PerformanceOptimizations'), {
   ssr: false,
@@ -57,21 +58,14 @@ interface ClientComponentsProps {
 
 const ClientComponents: React.FC<ClientComponentsProps> = ({ children }) => {
   return (
-    <AdvancedPerformanceEnhancer enableMonitoring={true} enableOptimizations={true}>
-      <EnhancedAccessibilityManager enableAutoDetection={true} enableKeyboardShortcuts={true}>
-        <PerformanceOptimizer>
-          {children}
-          <Suspense fallback={null}>
-            <PerformanceMonitor />
-            <ServiceWorkerRegistration />
-            <PerformanceMonitoring />
-            <SEOOptimization />
-            <SecurityEnhancement />
-            <PerformanceOptimizations />
-          </Suspense>
-        </PerformanceOptimizer>
-      </EnhancedAccessibilityManager>
-    </AdvancedPerformanceEnhancer>
+    <PerformanceOptimizer>
+      {children}
+      <Suspense fallback={null}>
+        <PerformanceMonitor />
+        <ServiceWorkerRegistration />
+        <PerformanceOptimizations />
+      </Suspense>
+    </PerformanceOptimizer>
   );
 };
 
