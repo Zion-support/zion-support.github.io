@@ -9,9 +9,7 @@ export default async function handler(req, res) {
   try {
     const { 
       destination, 
-      weight, 
-      dimensions, 
-      serviceType = 'standard' 
+      weight
     } = req.body || {};
 
     if (!destination || !weight) {

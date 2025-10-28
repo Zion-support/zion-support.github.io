@@ -1,9 +1,15 @@
-import Fastify from 'fastify';
+import Fastify, { FastifyRequest, FastifyReply } from 'fastify';
 import cors from '@fastify/cors';
 import rateLimit from '@fastify/rate-limit';
 import { createOpenAIClient, generateJobPost } from './openai';
 import { withUser } from './pg';
 import dotenv from 'dotenv';
+
+interface RequestWithHeaders extends FastifyRequest {
+  headers: Record<string, string>;
+  query: Record<string, string>;
+  body: Record<string, unknown>;
+}
 
 dotenv.config();
 
@@ -30,13 +36,13 @@ await app.register(rateLimit, {
 
 const openai = createOpenAIClient(process.env.OPENAI_API_KEY || '');
 
-function getUserId(req: any): string | null {
-  return (req.headers['x-user-id'] as string) || (req.query as any)['user_id'] || null;
+function getUserId(req: RequestWithHeaders): string | null {
+  return (req.headers['x-user-id'] as string) || (req.query as Record<string, string>)['user_id'] || null;
 }
 
 // AI Ask endpoint
-app.post('/ai/ask', async (req: any, reply: any) => {
-  const body = (req.body as any) || {};
+app.post('/ai/ask', async (req: RequestWithHeaders, reply: FastifyReply) => {
+  const body = (req.body as Record<string, unknown>) || {};
   const prompt = body.prompt as string;
   if (!prompt) return reply.code(400).send({ error: 'prompt required' });
   const completion = await openai.responses.create({ model: 'gpt-4o-mini', input: prompt });
@@ -44,8 +50,8 @@ app.post('/ai/ask', async (req: any, reply: any) => {
 });
 
 // Job generation endpoint
-app.post('/jobs/generate', async (req: any, reply: any) => {
-  const body = (req.body as any) || {};
+app.post('/jobs/generate', async (req: RequestWithHeaders, _reply: FastifyReply) => {
+  const body = (req.body as Record<string, unknown>) || {};
   const role = (body.role as string) || 'Engineer';
   const userId = getUserId(req);
   const description = await generateJobPost(openai, role, body);
@@ -64,9 +70,9 @@ app.post('/jobs/generate', async (req: any, reply: any) => {
 });
 
 // Talent search endpoint
-app.get('/talent/search', async (req: any, reply: any) => {
-  const q = (req.query as any).q as string;
-  const country = (req.query as any).country as string | undefined;
+app.get('/talent/search', async (req: RequestWithHeaders, reply: FastifyReply) => {
+  const q = (req.query as Record<string, string>).q as string;
+  const country = (req.query as Record<string, string>).country as string | undefined;
   const userId = getUserId(req);
   
   if (!userId) return reply.code(401).send({ error: 'unauthorized' });
@@ -89,8 +95,8 @@ app.get('/talent/search', async (req: any, reply: any) => {
 });
 
 // Project tracking endpoint
-app.get('/projects/:name/track', async (req: any, reply: any) => {
-  const name = (req.params as any).name as string;
+app.get('/projects/:name/track', async (req: RequestWithHeaders, reply: FastifyReply) => {
+  const name = (req.params as Record<string, string>).name as string;
   const userId = getUserId(req);
   
   if (!userId) return reply.code(401).send({ error: 'unauthorized' });
@@ -106,7 +112,7 @@ app.get('/projects/:name/track', async (req: any, reply: any) => {
 });
 
 // Notifications endpoint
-app.get('/notifications', async (req: any, reply: any) => {
+app.get('/notifications', async (req: RequestWithHeaders, reply: FastifyReply) => {
   const userId = getUserId(req);
   
   if (!userId) return reply.code(401).send({ error: 'unauthorized' });
@@ -124,7 +130,7 @@ app.get('/notifications', async (req: any, reply: any) => {
 
 const port = Number(process.env.API_PORT || 4000);
 
-app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
+app.listen({ port, host: '0.0.0.0' }).catch((err: Error) => {
   app.log.error(err);
-  (process as any).exit(1);
+  process.exit(1);
 });
