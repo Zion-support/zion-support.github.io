@@ -408,7 +408,6 @@ async function main() {
   }
   
   console.log('\n📊 FIX SUMMARY');
-  console.log('===============');
   console.log(`✅ Files fixed successfully: ${successCount}`);
   console.log(`❌ Files failed to fix: ${failCount}`);
   

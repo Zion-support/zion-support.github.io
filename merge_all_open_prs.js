@@ -177,7 +177,6 @@ async function main() {
   
   // Generate summary report
   console.log('\n📊 MERGE SUMMARY REPORT');
-  console.log('========================');
   console.log(`✅ Successful merges: ${results.successful.length}`);
   console.log(`❌ Failed merges: ${results.failed.length}`);
   console.log(`⏭️  Skipped: ${results.skipped.length}`);
