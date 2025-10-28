@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """
-Merge all available cursor branches into main
+Script to merge all available cursor branches into main
 """
 
 import json
 import subprocess
 import sys
+import time
 from datetime import datetime
 import time
 
@@ -24,7 +25,7 @@ def run_command(cmd, capture_output=True, check=False, timeout=60):
         if result.stdout and capture_output:
             print(result.stdout)
         if result.stderr and result.returncode != 0:
-            print(f"Error: {result.stderr}")
+            print(result.stderr)
         return result
     except subprocess.TimeoutExpired:
         print(f"⚠ Command timed out after {timeout}s")
@@ -36,7 +37,7 @@ def run_command(cmd, capture_output=True, check=False, timeout=60):
         print(f"⚠ Exception: {e}")
         return None
 
-def get_available_branches():
+def get_available_cursor_branches():
     """Get all available cursor branches"""
     result = run_command("git branch -r | grep 'cursor/fix-errors-and-merge-to-main' | head -50")
     if not result or result.returncode != 0:
@@ -45,17 +46,10 @@ def get_available_branches():
     branches = []
     for line in result.stdout.strip().split('\n'):
         if line.strip():
-            branch_name = line.strip().replace('origin/', '')
-            branches.append(branch_name)
+            branch = line.strip().replace('origin/', '')
+            branches.append(branch)
     
     return branches
-
-def check_merge_conflicts():
-    """Check if there are any merge conflicts"""
-    result = run_command("git status --porcelain")
-    if result and result.returncode == 0:
-        return "Unmerged paths" in result.stdout or "both modified" in result.stdout
-    return False
 
 def resolve_conflicts():
     """Resolve merge conflicts by accepting main branch version"""
@@ -116,28 +110,34 @@ def merge_branch(branch_name):
         return True
     
     # Check if there are conflicts
-    if check_merge_conflicts():
-        print(f"⚠️  Merge conflicts detected for {branch_name}")
-        
-        # Resolve conflicts
-        if resolve_conflicts():
-            # Complete the merge
-            commit_msg = f"Merge branch {branch_name} (conflicts resolved)"
-            result = run_command(f"git commit --no-edit -m '{commit_msg}'")
+    result = run_command("git status --porcelain")
+    if result and result.returncode == 0:
+        if "Unmerged paths" in result.stdout or "both modified" in result.stdout:
+            print(f"⚠️  Merge conflicts detected for {branch_name}")
             
-            if result and result.returncode == 0:
-                print(f"✅ Merged {branch_name} with conflict resolution")
-                return True
+            # Resolve conflicts
+            if resolve_conflicts():
+                # Complete the merge
+                commit_msg = f"Merge branch {branch_name} (conflicts resolved)"
+                result = run_command(f"git commit --no-edit -m '{commit_msg}'")
+                
+                if result and result.returncode == 0:
+                    print(f"✅ Merged {branch_name} with conflict resolution")
+                    return True
+                else:
+                    print(f"❌ Failed to complete merge for {branch_name}")
+                    run_command("git merge --abort")
+                    return False
             else:
-                print(f"❌ Failed to complete merge for {branch_name}")
+                print(f"❌ Failed to resolve conflicts for {branch_name}")
                 run_command("git merge --abort")
                 return False
         else:
-            print(f"❌ Failed to resolve conflicts for {branch_name}")
+            print(f"❌ Failed to merge {branch_name} (unknown error)")
             run_command("git merge --abort")
             return False
     else:
-        print(f"❌ Failed to merge {branch_name} (unknown error)")
+        print(f"❌ Failed to check merge status for {branch_name}")
         run_command("git merge --abort")
         return False
 
@@ -160,13 +160,13 @@ def main():
         print("⚠️  Warning: Failed to pull latest changes, continuing anyway...")
     
     # Get available branches
-    print("\n📋 Getting available branches...")
-    branches = get_available_branches()
+    print("\n📋 Getting available cursor branches...")
+    branches = get_available_cursor_branches()
     if not branches:
-        print("❌ No branches found")
+        print("❌ No cursor branches found")
         return 1
     
-    print(f"Found {len(branches)} branch(es) to merge\n")
+    print(f"Found {len(branches)} cursor branch(es)\n")
     
     # Track results
     successful_merges = []
