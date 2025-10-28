@@ -1,13 +1,5 @@
 import { useState, useEffect } from 'react';
 
-// Performance API type definitions
-interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
-  processingEnd: number;
-  cancelable: boolean;
-  target?: EventTarget;
-}
-
 // Declare gtag function for Google Analytics
 declare global {
   function gtag(...args: unknown[]): void;
