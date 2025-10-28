@@ -6,10 +6,12 @@ interface PerformanceOptimizationsProps {
   enableImageOptimization?: boolean;
   enablePreloading?: boolean;
   enableResourceHints?: boolean;
+  _enablePreloading?: boolean;
+  _enableResourceHints?: boolean;
 }
 
 const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo(({
-  enableImageOptimization = true, enablePreloading = true, enableResourceHints = true
+  enableImageOptimization = true, _enablePreloading = true, _enableResourceHints = true
 }) => {
   const optimizeImages = useCallback(() => {
     if (!enableImageOptimization || typeof window === 'undefined') return;
@@ -28,7 +30,7 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
   }, [enableImageOptimization]);
 
   const preloadCriticalResources = useCallback(() => {
-    if (!enablePreloading || typeof window === 'undefined') return;
+    if (!_enablePreloading || typeof window === 'undefined') return;
 
     const criticalResources = [
       { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' },
@@ -45,10 +47,10 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
       if (resource.crossOrigin) link.crossOrigin = resource.crossOrigin;
       document.head.appendChild(link);
     });
-  }, [enablePreloading]);
+  }, [_enablePreloading]);
 
   const addResourceHints = useCallback(() => {
-    if (!enableResourceHints || typeof window === 'undefined') return;
+    if (!_enableResourceHints || typeof window === 'undefined') return;
 
     const hints = [
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
@@ -63,7 +65,7 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo((
       if (hint.crossOrigin) link.crossOrigin = hint.crossOrigin;
       document.head.appendChild(link);
     });
-  }, [enableResourceHints]);
+  }, [_enableResourceHints]);
 
   // Optimize scroll performance
   const optimizeScrollPerformance = useCallback(() => {
