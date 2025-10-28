@@ -9,7 +9,6 @@ interface PerformanceEventTiming extends PerformanceEntry {
   cancelable: boolean;
   target?: EventTarget;
 }
-}
 
 interface PerformanceMetrics {
   lcp: number | null;
