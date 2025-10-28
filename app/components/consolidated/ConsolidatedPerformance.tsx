@@ -2,6 +2,19 @@
 
 import React, { useCallback, useState, useEffect, memo } from 'react';
 
+// Performance API types
+interface PerformanceEventTiming extends PerformanceEntry {
+  processingStart: number;
+  processingEnd: number;
+  target?: Node;
+}
+
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+  target?: Node;
+}
+
 interface ConsolidatedPerformanceProps {
   className?: string;
 }

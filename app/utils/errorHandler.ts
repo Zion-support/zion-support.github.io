@@ -23,7 +23,7 @@ export class ErrorHandler {
     return ErrorHandler.instance;
   }
 
-  public logError(error: _Error, errorInfo?: { componentStack?: string; errorBoundary?: string }): void {
+  public logError(error: Error, errorInfo?: { componentStack?: string; errorBoundary?: string }): void {
     const errorData: ErrorInfo = {
       message: error.message,
       stack: error.stack,
