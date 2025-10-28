@@ -1,95 +1,66 @@
-<<<<<<< HEAD
-  return (
-    <div className="min-h-screen bg-white">
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Ecommerce Analytics Pro
-            </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Professional ecommerce analytics pro services powered by advanced AI and technology.
-import { Metadata } from 'next';
-=======
-import React from "react";
-import { ErrorBoundary } from '../components/ErrorBoundary';
->>>>>>> b61118d6144fdc99f32acbc26a83c9d4d1af6611
+import React from 'react';
+import ErrorBoundary from '../components/ErrorBoundary';
 
 export const metadata = {
-  title: "E-commerce Analytics Pro | Zion Tech Group",
-  description: "Professional e-commerce analytics pro services by Zion Tech Group",
-  keywords: "e-commerce analytics, technology, services",
+  title: 'Ecommerce Analytics Pro | Zion Tech Group',
+  description: 'Professional ecommerce analytics pro services by Zion Tech Group',
+  keywords: 'ecommerce analytics pro, technology, services',
   openGraph: {
-<<<<<<< HEAD
-    title: 'E-commerce Analytics Pro - Zion Tech Group',
-    description: 'Advanced e-commerce analytics and insights platform for data-driven business growth.',
+    title: 'Ecommerce Analytics Pro | Zion Tech Group',
+    description: 'Professional ecommerce analytics pro services by Zion Tech Group',
     type: 'website',
   },
 };
 
-function Page() {
+export default function EcommerceAnalyticsProPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <main className="pt-20 pb-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <ErrorBoundary>
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              E-commerce Analytics Pro
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              Ecommerce Analytics Pro
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Advanced analytics and insights platform for data-driven e-commerce growth.
+            <p className="text-xl text-gray-600 mb-8">
+              Professional ecommerce analytics pro services by Zion Tech Group
             </p>
-            <p className="text-lg text-gray-400 mb-12 max-w-4xl mx-auto">
-              Transform your business with our cutting-edge ecommerce analytics pro solutions. 
-              We provide comprehensive services to help you achieve your goals.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact" 
-                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
-              >
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link 
-                href="/about" 
-                className="inline-flex items-center px-8 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors"
-              >
-                Learn More
-              </Link>
+            <div className="bg-white rounded-lg shadow-md p-8">
+              <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+                Our Ecommerce Analytics Pro Services
+              </h2>
+              <p className="text-gray-600 mb-6">
+                We provide comprehensive ecommerce analytics pro solutions tailored to your business needs.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="bg-blue-50 p-6 rounded-lg">
+                  <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                    Expert Consultation
+                  </h3>
+                  <p className="text-blue-700">
+                    Professional guidance and strategic planning for your ecommerce analytics pro needs.
+                  </p>
+                </div>
+                <div className="bg-green-50 p-6 rounded-lg">
+                  <h3 className="text-lg font-semibold text-green-900 mb-2">
+                    Custom Solutions
+                  </h3>
+                  <p className="text-green-700">
+                    Tailored ecommerce analytics pro solutions designed specifically for your business.
+                  </p>
+                </div>
+                <div className="bg-purple-50 p-6 rounded-lg">
+                  <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                    24/7 Support
+                  </h3>
+                  <p className="text-purple-700">
+                    Round-the-clock support and maintenance for all your ecommerce analytics pro services.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-    </div>
-  );
-}
-
-  );
-}
-
-export default function Wrapped(props: any) {
-  return (
-    <ErrorBoundary>
-      <EcommerceAnalyticsProPage {...props} />
-    </ErrorBoundary>
-  );
-}
-export default Page;
-=======
-    title: "E-commerce Analytics Pro | Zion Tech Group",
-    description: "Professional e-commerce analytics pro services by Zion Tech Group",
-    type: "website",
-  },
-};
-
-export default function EcommerceAnalyticsPro() {
-  return (
-    <ErrorBoundary>
-      <div>
-        <h1>E-commerce Analytics Pro</h1>
-        <p>Professional e-commerce analytics pro services by Zion Tech Group</p>
       </div>
     </ErrorBoundary>
   );
 }
->>>>>>> b61118d6144fdc99f32acbc26a83c9d4d1af6611
