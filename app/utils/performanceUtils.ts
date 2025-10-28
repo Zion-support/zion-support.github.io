@@ -31,11 +31,12 @@ export const usePerformanceMonitor = () => {
 
 // Memoization utilities
 export const useStableCallback = <T extends (...args: unknown[]) => unknown>(callback: T): T => {
-  return useCallback(callback, []);
+  return useCallback(callback, [callback]);
 };
 
 export const useStableMemo = <T>(factory: () => T, deps: React.DependencyList): T => {
-  return useMemo(factory, deps);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  return useMemo(() => factory(), deps);
 };
 
 // Simple performance utilities
