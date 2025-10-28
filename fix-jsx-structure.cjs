@@ -34,7 +34,7 @@ function fixFile(filePath) {
     
     // Fix the closing structure
     content = content.replace(
-      /      <Footer \/>\s*<\/ErrorBoundary>\s*\);\s*}/g,
+      / {6}<Footer \/>\s*<\/ErrorBoundary>\s*\);\s*}/g,
       '      <Footer />\n    </ErrorBoundary>\n  );\n}'
     );
     

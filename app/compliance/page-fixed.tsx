@@ -127,4 +127,4 @@ export default function PageFixedPage() {
       <Footer />
     </>
   );
-}</div></div>
+}

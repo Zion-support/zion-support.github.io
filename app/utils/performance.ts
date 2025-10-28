@@ -1,8 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-// Performance monitoring utilities
-export class PerformanceMonitor {
-=======
 
 export const performance = {
   measure: (name: string, fn: () => void) => {
@@ -14,18 +10,20 @@ export const performance = {
 };
 
 class PerformanceMonitor {
->>>>>>> 87c6cd40b012dd3702d84b18085574d3b52981fb
   private static instance: PerformanceMonitor;
   private metrics = new Map<string, number>();
 
   static getInstance(): PerformanceMonitor {
     if (!PerformanceMonitor.instance) {
-      PerformanceMonitor.instance = new PerformanceMonitor()}
-    return PerformanceMonitor.instance}
+      PerformanceMonitor.instance = new PerformanceMonitor();
+    }
+    return PerformanceMonitor.instance;
+  }
 
   startTiming(label: string): void {
     if (typeof window !== "undefined" && "performance" in window) {
-      performance.mark(`${label}-start`)}
+      performance.mark(`${label}-start`);
+    }
   }
 
   endTiming(label: string): number {
@@ -35,12 +33,11 @@ class PerformanceMonitor {
       const measure = performance.getEntriesByName(label)[0];
       const duration = measure ? measure.duration : 0;
       this.metrics.set(label, duration);
-      return duration}
-    return 0}
+      return duration;
+    }
+    return 0;
+  }
 
-<<<<<<< HEAD
-
-=======
   getMetric(label: string): number | undefined {
     return this.metrics.get(label);
   }
@@ -52,7 +49,7 @@ class PerformanceMonitor {
   clearMetrics(): void {
     this.metrics.clear();
   }
->>>>>>> 87c6cd40b012dd3702d84b18085574d3b52981fb
+
   // Web Vitals monitoring
   measureWebVitals(): void {
     if (typeof window === "undefined") return;
@@ -61,7 +58,8 @@ class PerformanceMonitor {
     new PerformanceObserver((entryList) => {
       const entries = entryList.getEntries();
       const lastEntry = entries[entries.length - 1];
-      this.metrics.set("LCP", lastEntry.startTime)}).observe({ entryTypes: ["largest-contentful-paint"] });
+      this.metrics.set("LCP", lastEntry.startTime);
+    }).observe({ entryTypes: ["largest-contentful-paint"] });
 
     // First Input Delay
     new PerformanceObserver((entryList) => {
@@ -69,7 +67,9 @@ class PerformanceMonitor {
       entries.forEach((entry) => {
         // Use processingStart if available, otherwise calculate from startTime
         const processingStart = (entry as { processingStart?: number }).processingStart || entry.startTime;
-        this.metrics.set("FID", processingStart - entry.startTime)})}).observe({ entryTypes: ["first-input"] });
+        this.metrics.set("FID", processingStart - entry.startTime);
+      });
+    }).observe({ entryTypes: ["first-input"] });
 
     // Cumulative Layout Shift
     let clsValue = 0;
@@ -77,9 +77,12 @@ class PerformanceMonitor {
       const entries = entryList.getEntries();
       entries.forEach((entry) => {
         if (!(entry as { hadRecentInput?: boolean }).hadRecentInput) {
-          clsValue += (entry as { value?: number }).value || 0}
+          clsValue += (entry as { value?: number }).value || 0;
+        }
       });
-      this.metrics.set("CLS", clsValue)}).observe({ entryTypes: ["layout-shift"] })}
+      this.metrics.set("CLS", clsValue);
+    }).observe({ entryTypes: ["layout-shift"] });
+  }
 }
 
 // Hook for React components
@@ -90,20 +93,12 @@ export function usePerformanceMonitor() {
     endTiming: monitor.endTiming.bind(monitor),
     getMetric: monitor.getMetric.bind(monitor),
     getAllMetrics: monitor.getAllMetrics.bind(monitor)
-<<<<<<< HEAD
-  }}
-
-// Utility function to measure component render time
-export function measureComponentRender(componentName: string) {
-  return function <T extends React.ComponentType<unknown>>(Page: T): T {
-=======
   };
 }
 
 // Utility function to measure component render time
 export function measureComponentRender(componentName: string) {
   return function <T extends React.ComponentType<unknown>>(PageComponent: T): T {
->>>>>>> 87c6cd40b012dd3702d84b18085574d3b52981fb
     return ((props: unknown) => {
       const monitor = PerformanceMonitor.getInstance();
       React.useEffect(() => {
@@ -115,8 +110,4 @@ export function measureComponentRender(componentName: string) {
       return React.createElement(PageComponent, props);
     }) as T;
   };
-<<<<<<< HEAD
-
-=======
 }
->>>>>>> 87c6cd40b012dd3702d84b18085574d3b52981fb
