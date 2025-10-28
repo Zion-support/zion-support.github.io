@@ -1,10 +1,6 @@
-import React from 'react';
-import ErrorBoundary from '../components/ErrorBoundary';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
 
 export const metadata = {
   title: 'Zion Ai Database Optimizer | Zion Tech Group',

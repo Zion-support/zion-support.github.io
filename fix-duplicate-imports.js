@@ -1,44 +1,78 @@
+#!/usr/bin/env node
+
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
+import { glob } from 'glob';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Function to fix duplicate imports in a file
-function fixDuplicateImports(filePath) {
+// Function to fix duplicate imports and exports in a file
+function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
-    
+
+    // Split content into lines
     const lines = content.split('\n');
     const newLines = [];
     const seenImports = new Set();
-    
+    const seenExports = new Set();
+    let inImportBlock = false;
+    let inExportBlock = false;
+
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
-      
-      if (line.startsWith('import ')) {
-        // Check if this import has been seen before
-        const importKey = line.trim();
-        if (seenImports.has(importKey)) {
-          // Skip duplicate import
+      const trimmedLine = line.trim();
+
+      // Check if we're starting an import block
+      if (trimmedLine.startsWith('import ')) {
+        inImportBlock = true;
+        inExportBlock = false;
+        
+        // Check for duplicate imports
+        if (seenImports.has(trimmedLine)) {
           modified = true;
-          continue;
+          continue; // Skip duplicate import
         }
-        seenImports.add(importKey);
+        seenImports.add(trimmedLine);
+        newLines.push(line);
       }
-      
-      newLines.push(line);
+      // Check if we're starting an export block
+      else if (trimmedLine.startsWith('export ')) {
+        inImportBlock = false;
+        inExportBlock = true;
+        
+        // Check for duplicate exports
+        if (seenExports.has(trimmedLine)) {
+          modified = true;
+          continue; // Skip duplicate export
+        }
+        seenExports.add(trimmedLine);
+        newLines.push(line);
+      }
+      // Check if we're ending import/export blocks
+      else if (trimmedLine === '' || (!trimmedLine.startsWith('import ') && !trimmedLine.startsWith('export '))) {
+        inImportBlock = false;
+        inExportBlock = false;
+        newLines.push(line);
+      }
+      else {
+        newLines.push(line);
+      }
     }
-    
-    if (modified) {
-      content = newLines.join('\n');
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed duplicate imports in: ${filePath}`);
+
+    // Additional cleanup: remove duplicate default exports
+    const finalContent = newLines.join('\n');
+    const exportDefaultRegex = /export default [^;]+;?\s*\n\s*export default [^;]+;?/g;
+    const cleanedContent = finalContent.replace(exportDefaultRegex, (match) => {
+      const exports = match.split('\n').filter(line => line.trim().startsWith('export default'));
+      return exports[0] + '\n'; // Keep only the first export default
+    });
+
+    if (modified || cleanedContent !== content) {
+      fs.writeFileSync(filePath, cleanedContent);
+      console.log(`Fixed: ${filePath}`);
       return true;
     }
-    
+
     return false;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
@@ -46,33 +80,22 @@ function fixDuplicateImports(filePath) {
   }
 }
 
-// Function to fix specific files with known issues
-function fixSpecificFiles() {
-  const filesToFix = [
-    'app/5g-data-analytics/page.tsx',
-    'app/5g-edge-computing/page.tsx',
-    'app/5g-implementation/page.tsx',
-    'app/5g-iot-solutions/page.tsx',
-    'app/5g-mobile-applications/page.tsx',
-    'app/about/page.tsx',
-    'app/accessibility-page/page.tsx'
-  ];
-  
+// Main function to process files
+async function main() {
+  // Find all TypeScript/JavaScript files in the app directory
+  const pattern = 'app/**/*.{ts,tsx,js,jsx}';
+  const files = await glob(pattern, { cwd: process.cwd() });
+
+  console.log(`Found ${files.length} files to process...`);
+
   let fixedCount = 0;
-  
-  for (const file of filesToFix) {
-    const filePath = path.join(__dirname, file);
-    if (fs.existsSync(filePath)) {
-      if (fixDuplicateImports(filePath)) {
-        fixedCount++;
-      }
+  for (const file of files) {
+    if (fixFile(file)) {
+      fixedCount++;
     }
   }
-  
-  return fixedCount;
+
+  console.log(`Fixed ${fixedCount} files`);
 }
 
-// Run the fix
-console.log('Fixing duplicate imports...');
-const fixedCount = fixSpecificFiles();
-console.log(`Fixed ${fixedCount} files with duplicate import issues.`);
+main().catch(console.error);
