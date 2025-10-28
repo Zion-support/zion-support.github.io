@@ -28,26 +28,44 @@ const features = [
 
 const AdvancedAccessibilityEnhancer: React.FC = () => {
   return (
-    <>
-<<<<<<< HEAD
-      <Helmet>
-        <title>Advanced Accessibility Enhancer | Zion Tech Group</title>
-        <meta name="description" content="Professional Advanced Accessibility Enhancer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="Advanced Accessibility Enhancer, AI solutions, IT services, Zion Tech Group, accessibility" />
-      </Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            Advanced Accessibility Solutions
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Transform your digital presence with our comprehensive accessibility solutions. 
+            We ensure your applications are inclusive, compliant, and accessible to all users.
+          </p>
+        </div>
 
-      {/* Hero Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Advanced Accessibility Enhancer
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your digital experience with our cutting-edge accessibility solutions powered by advanced AI technology.
+        {/* Features Section */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 text-center">
+                  <feature.icon className="w-12 h-12 text-emerald-400 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl font-bold text-white mb-6">
+              Ready to Enhance Your Accessibility?
+            </h2>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              Get started with our advanced accessibility solutions and make your digital presence inclusive for everyone.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center">
+              <button className="bg-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-emerald-700 transition-colors flex items-center justify-center">
                 Get Started
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
@@ -56,52 +74,9 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
               </button>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-=======
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
->>>>>>> origin/main
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Advanced Accessibility Solutions
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Making your applications accessible to everyone with cutting-edge technology and best practices
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {features.map((feature, index) => {
-              const IconComponent = feature.icon;
-              return (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg flex items-center justify-center mr-4">
-                      <IconComponent className="w-6 h-6 text-white" />
-                    </div>
-                    <h3 className="text-xl font-bold text-white">{feature.title}</h3>
-                  </div>
-                  <p className="text-gray-300">{feature.description}</p>
-                </div>
-              );
-            })}
-          </div>
-
-          <div className="text-center">
-            <button className="bg-gradient-to-r from-emerald-500 to-blue-500 hover:from-emerald-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center mx-auto">
-              Get Started
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </button>
-          </div>
-        </div>
+        </section>
       </div>
-    </>
+    </div>
   );
 };
 
