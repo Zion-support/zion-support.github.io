@@ -1,6 +1,5 @@
 'use client';
 import React, { Component, ErrorInfo } from 'react';
-import ErrorBoundary from '../components/ErrorBoundary';
 
 interface ErrorBoundaryProps {
   children: React.ReactNode;
@@ -72,7 +71,7 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, State> {
               Something went wrong
             </h1>
             <p className="text-gray-600 text-center mb-6">
-              We're sorry, but something unexpected happened. Please try refreshing the page.
+              We&apos;re sorry, but something unexpected happened. Please try refreshing the page.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <button
