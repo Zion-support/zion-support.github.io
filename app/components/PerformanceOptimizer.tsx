@@ -61,12 +61,12 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
               console.log('LCP:', entry.startTime);
             }
             if (entry.entryType === 'first-input') {
-              const fidEntry = entry as unknown as PerformanceEventTiming;
+              const fidEntry = entry as PerformanceEntry & { processingStart: number };
               console.log('FID:', fidEntry.processingStart - fidEntry.startTime);
             }
             if (entry.entryType === 'layout-shift') {
-              const layoutShiftEntry = entry as unknown as { value?: number };
-              console.log('CLS:', layoutShiftEntry.value);
+              const clsEntry = entry as PerformanceEntry & { value?: number };
+              console.log('CLS:', clsEntry.value || 0);
             }
           });
         });

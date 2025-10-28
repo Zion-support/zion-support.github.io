@@ -3,6 +3,19 @@
 import React, { useEffect, useState, memo } from 'react';
 
 // Performance API type definitions
+
+// interface LayoutShift extends PerformanceEntry {
+//   value: number;
+//   hadRecentInput: boolean;
+//   lastInputTime: number;
+//   sources: LayoutShiftAttribution[];
+// }
+
+// interface LayoutShiftAttribution {
+//   node?: Node;
+//   previousRect: DOMRectReadOnly;
+//   currentRect: DOMRectReadOnly;
+// }
 interface PerformanceMetrics {
   lcp: number | null;
   fid: number | null;
@@ -41,7 +54,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = memo(({
           const fidEntry = entry as PerformanceEntry & { processingStart: number };
           setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - entry.startTime }));
         } else if (entry.entryType === 'layout-shift') {
-          const layoutShiftEntry = entry as unknown as { hadRecentInput?: boolean; value?: number };
+          const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
           if (!layoutShiftEntry.hadRecentInput) {
             setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (layoutShiftEntry.value || 0) }));
           }
