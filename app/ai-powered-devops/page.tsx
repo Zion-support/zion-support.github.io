@@ -1,4 +1,7 @@
 
+import { Brain, BarChart, Target, TrendingUp, CheckCircle, ArrowRight } from "lucide-react";
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
 
 export const metadata = {
   title: 'AI-Powered DevOps | Zion Tech Group',
@@ -10,7 +13,8 @@ export const metadata = {
     type: 'website',
   },
 };
-const AiPoweredDevopsPage: React.FC = () => {
+
+export default function AiPoweredDevops() {
   const features = [
     {
       icon: Brain,
@@ -37,14 +41,14 @@ const AiPoweredDevopsPage: React.FC = () => {
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ];
-const benefits = [
+  
+  const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ];
-
   return (
     <>
       <Navigation />
@@ -123,16 +127,5 @@ const benefits = [
       <Footer />
     </>
   );
-<<<<<<< HEAD
-};
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <AiPoweredDevopsPage {...props} />
-    </ErrorBoundary>
-  );
 }
-=======
-}
-
 

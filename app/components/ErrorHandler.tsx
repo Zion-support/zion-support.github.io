@@ -1,16 +1,23 @@
-import React from 'react';
+'use client';
+
+import React, { memo } from 'react';
 
 interface ErrorHandlerProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const ErrorHandler: React.FC<ErrorHandlerProps> = ({ className = '', children }) => {
+const ErrorHandler: React.FC<ErrorHandlerProps> = memo(({ 
+  className = '',
+  children 
+}) => {
   return (
-<div className={`errorhandler-component ${className}`}>
+    <div className={`error-handler ${className}`}>
       {children}
     </div>
   );
-};
+});
 
-ErrorHandler.displayName = 'ErrorHandler';export default ErrorHandler;
+ErrorHandler.displayName = 'ErrorHandler';
+
+export default ErrorHandler;

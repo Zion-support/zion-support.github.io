@@ -1,17 +1,22 @@
-import React from 'react';
+'use client';
+
+import React, { memo } from 'react';
 
 interface SimpleNavigationProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const SimpleNavigation: React.FC<SimpleNavigationProps> = ({ className = '', children }) => {
+const SimpleNavigation: React.FC<SimpleNavigationProps> = memo(({ 
+  className = '',
+  children 
+}) => {
   return (
-    <div className={`simplenavigation-component ${className}`}>
+    <nav className={`simple-navigation ${className}`}>
       {children}
-    </div>
+    </nav>
   );
-};
+});
 
 SimpleNavigation.displayName = 'SimpleNavigation';
 

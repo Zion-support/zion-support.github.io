@@ -1,17 +1,22 @@
-import React from 'react';
+'use client';
+
+import React, { memo } from 'react';
 
 interface ModernLoaderProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const ModernLoader: React.FC<ModernLoaderProps> = ({ className = '', children }) => {
+const ModernLoader: React.FC<ModernLoaderProps> = memo(({ 
+  className = '',
+  children 
+}) => {
   return (
-    <div className={`modernloader-component ${className}`}>
+    <div className={`modern-loader ${className}`}>
       {children}
     </div>
   );
-};
+});
 
 ModernLoader.displayName = 'ModernLoader';
 

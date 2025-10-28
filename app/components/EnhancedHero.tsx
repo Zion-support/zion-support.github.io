@@ -1,17 +1,22 @@
-import React from 'react';
+'use client';
+
+import React, { memo } from 'react';
 
 interface EnhancedHeroProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const EnhancedHero: React.FC<EnhancedHeroProps> = ({ className = '', children }) => {
+const EnhancedHero: React.FC<EnhancedHeroProps> = memo(({ 
+  className = '',
+  children 
+}) => {
   return (
-    <div className={`enhancedhero-component ${className}`}>
+    <div className={`enhanced-hero ${className}`}>
       {children}
     </div>
   );
-};
+});
 
 EnhancedHero.displayName = 'EnhancedHero';
 

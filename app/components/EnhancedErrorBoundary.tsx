@@ -1,18 +1,22 @@
-import React from 'react'
+'use client';
 
+import React, { memo } from 'react';
 
 interface EnhancedErrorBoundaryProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className = '', children }) => {
+const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = memo(({ 
+  className = '',
+  children 
+}) => {
   return (
-    <div className={`enhancederrorboundary-component ${className}`}>
+    <div className={`enhanced-error-boundary ${className}`}>
       {children}
     </div>
   );
-};
+});
 
 EnhancedErrorBoundary.displayName = 'EnhancedErrorBoundary';
 

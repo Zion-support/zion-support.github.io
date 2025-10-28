@@ -1,7 +1,5 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowRight, Star, Users, Zap } from 'lucide-react';
-
 export const metadata: Metadata = {
   title: 'Zion Tech Group - AI Solutions & Technology Services',
   description: 'Leading technology company specializing in AI solutions, cloud infrastructure, and innovative software development services.',
@@ -11,7 +9,7 @@ export const metadata: Metadata = {
     description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
     type: 'website',
   }};
-function HomePage() {
+export default function Page() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -46,13 +44,5 @@ function HomePage() {
         </div>
       </div>
     </div>
-  );
-}
-
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <HomePage {...props} />
-    </ErrorBoundary>
   );
 }

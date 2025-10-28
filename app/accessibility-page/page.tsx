@@ -1,8 +1,5 @@
-import React from 'react';
-import ErrorBoundary from "../components/ErrorBoundary"
-import Navigation from "../components/Navigation"
-import Footer from "../components/Footer"
-
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
 export const metadata = {
   title: 'Accessibility Page | Zion Tech Group',
   description: 'Professional accessibility page services by Zion Tech Group. Advanced AI and technology solutions.',
@@ -12,8 +9,7 @@ export const metadata = {
     description: 'Professional accessibility page services by Zion Tech Group.',
     type: 'website',
   }};
-
-function AccessibilitypagePage() {
+export default function Page() {
   return (
     <>
       <Navigation />
@@ -49,13 +45,5 @@ function AccessibilitypagePage() {
       </div>
       <Footer />
     </>
-  );
-}
-
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <AccessibilitypagePage {...props} />
-    </ErrorBoundary>
   );
 }

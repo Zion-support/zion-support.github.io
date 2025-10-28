@@ -1,32 +1,22 @@
-import { useEffect, useState, useRef } from 'react';
+'use client';
 
-interface UseIntersectionObserverOptions {
-  threshold?: number;
-  root?: Element | null;
-  rootMargin?: string;
-}
+import { useState, useEffect, useRef } from 'react';
 
-export const useIntersectionObserver = (options: UseIntersectionObserverOptions = {}) => {
-  const [entry, setEntry] = useState<IntersectionObserverEntry | null>(null);
-  const [node, setNode] = useState<Element | null>(null);
-  const observer = useRef<IntersectionObserver | null>(null);
+export const useIntersectionObserver = (options = {}) => {
+  const [isIntersecting, setIsIntersecting] = useState(false);
+  const ref = useRef(null);
 
   useEffect(() => {
-    if (!node) return;
+    const observer = new IntersectionObserver(([entry]) => {
+      setIsIntersecting(entry.isIntersecting);
+    }, options);
 
-    observer.current = new IntersectionObserver(
-      ([entry]) => setEntry(entry),
-      options
-    );
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
 
-    observer.current.observe(node);
+    return () => observer.disconnect();
+  }, [options]);
 
-    return () => {
-      if (observer.current) {
-        observer.current.disconnect();
-      }
-    };
-  }, [node, options]);
-
-  return [setNode, entry] as const;
-}
+  return [ref, isIntersecting];
+};

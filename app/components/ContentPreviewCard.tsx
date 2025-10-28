@@ -1,17 +1,22 @@
-import React from 'react';
+'use client';
+
+import React, { memo } from 'react';
 
 interface ContentPreviewCardProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({ className = '', children }) => {
+const ContentPreviewCard: React.FC<ContentPreviewCardProps> = memo(({ 
+  className = '',
+  children 
+}) => {
   return (
-    <div className={`contentpreviewcard-component ${className}`}>
+    <div className={`content-preview-card ${className}`}>
       {children}
     </div>
   );
-};
+});
 
 ContentPreviewCard.displayName = 'ContentPreviewCard';
 

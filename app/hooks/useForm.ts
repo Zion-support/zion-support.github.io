@@ -84,5 +84,5 @@ export const useForm = <T = Record<string, unknown>>(options: UseFormOptions<T> 
     handleChange,
     handleSubmit,
     resetForm,
-  }
+}
 }

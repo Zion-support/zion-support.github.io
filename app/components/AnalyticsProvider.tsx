@@ -1,17 +1,22 @@
-import React from 'react';
+'use client';
+
+import React, { memo } from 'react';
 
 interface AnalyticsProviderProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ className = '', children }) => {
+const AnalyticsProvider: React.FC<AnalyticsProviderProps> = memo(({ 
+  className = '',
+  children 
+}) => {
   return (
-    <div className={`analyticsprovider-component ${className}`}>
+    <div className={`analytics-provider ${className}`}>
       {children}
     </div>
   );
-};
+});
 
 AnalyticsProvider.displayName = 'AnalyticsProvider';
 

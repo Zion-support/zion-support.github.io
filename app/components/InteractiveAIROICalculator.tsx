@@ -1,17 +1,22 @@
-import React from 'react';
+'use client';
+
+import React, { memo } from 'react';
 
 interface InteractiveAIROICalculatorProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const InteractiveAIROICalculator: React.FC<InteractiveAIROICalculatorProps> = ({ className = '', children }) => {
+const InteractiveAIROICalculator: React.FC<InteractiveAIROICalculatorProps> = memo(({ 
+  className = '',
+  children 
+}) => {
   return (
-    <div className={`interactiveairoicalculator-component ${className}`}>
+    <div className={`interactive-ai-roi-calculator ${className}`}>
       {children}
     </div>
   );
-};
+});
 
 InteractiveAIROICalculator.displayName = 'InteractiveAIROICalculator';
 

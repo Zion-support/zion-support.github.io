@@ -1,17 +1,22 @@
-import React from 'react';
+'use client';
+
+import React, { memo } from 'react';
 
 interface EnhancedSkipLinkProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const EnhancedSkipLink: React.FC<EnhancedSkipLinkProps> = ({ className = '', children }) => {
+const EnhancedSkipLink: React.FC<EnhancedSkipLinkProps> = memo(({ 
+  className = '',
+  children 
+}) => {
   return (
-    <div className={`enhancedskiplink-component ${className}`}>
-{children || <h2>EnhancedSkipLink</h2>}
+    <div className={`enhanced-skip-link ${className}`}>
+      {children}
     </div>
   );
-};
+});
 
 EnhancedSkipLink.displayName = 'EnhancedSkipLink';
 

@@ -1,16 +1,26 @@
-import React from 'react';
+'use client';
+
+import React, { memo } from 'react';
 
 interface ServicePageTemplateProps {
+  title: string;
+  description: string;
   className?: string;
-  children?: React.ReactNode;
 }
 
-const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({ className = '', children }) => {
+const ServicePageTemplate: React.FC<ServicePageTemplateProps> = memo(({ 
+  title, 
+  description, 
+  className = '' 
+}) => {
   return (
-<div className={`service-page-template ${className}`}>
-      {children || <h2>ServicePageTemplate</h2>}
+    <div className={`service-page-template ${className}`}>
+      <h1>{title}</h1>
+      <p>{description}</p>
     </div>
   );
-};
+});
+
+ServicePageTemplate.displayName = 'ServicePageTemplate';
 
 export default ServicePageTemplate;

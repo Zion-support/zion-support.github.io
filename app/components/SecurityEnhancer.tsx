@@ -1,16 +1,23 @@
-import React from 'react';
+'use client';
+
+import React, { memo } from 'react';
 
 interface SecurityEnhancerProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ className = '', children }) => {
+const SecurityEnhancer: React.FC<SecurityEnhancerProps> = memo(({ 
+  className = '',
+  children 
+}) => {
   return (
-<div className={`security-enhancer ${className}`}>
-      {children || <h2>SecurityEnhancer</h2>}
+    <div className={`security-enhancer ${className}`}>
+      {children}
     </div>
   );
-};SecurityEnhancer.displayName = 'SecurityEnhancer';
+});
+
+SecurityEnhancer.displayName = 'SecurityEnhancer';
 
 export default SecurityEnhancer;

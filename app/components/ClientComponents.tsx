@@ -1,6 +1,5 @@
 'use client';
 
-
 import React, { Suspense } from 'react';
 import dynamic from 'next/dynamic';
 
@@ -63,21 +62,23 @@ const ClientComponents: React.FC<ClientComponentsProps> = ({ children }) => {
   return (
     <AdvancedPerformanceEnhancer enableMonitoring={true} enableOptimizations={true}>
       <EnhancedAccessibilityManager enableAutoDetection={true} enableKeyboardShortcuts={true}>
-        <PerformanceOptimizer>
-          {children}
-          <Suspense fallback={null}>
-            <PerformanceMonitor />
-            <AccessibilityEnhancer />
-            <ServiceWorkerRegistration />
-            <PerformanceMonitoring />
-            <SEOOptimization />
-            <SecurityEnhancement />
-            <PerformanceOptimizations />
+        <PerformanceMonitor />
+        <AccessibilityEnhancer>
+          <PerformanceOptimizer />
+          <ServiceWorkerRegistration />
+          <PerformanceMonitoring />
+          <SEOOptimization />
+          <SecurityEnhancement />
+          <PerformanceOptimizations />
+          <Suspense fallback={<div>Loading...</div>}>
+            {children}
           </Suspense>
-        </PerformanceOptimizer>
+        </AccessibilityEnhancer>
       </EnhancedAccessibilityManager>
     </AdvancedPerformanceEnhancer>
   );
 };
+
+ClientComponents.displayName = 'ClientComponents';
 
 export default ClientComponents;

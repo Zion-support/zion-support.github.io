@@ -1,17 +1,22 @@
-import React from 'react';
+'use client';
+
+import React, { memo } from 'react';
 
 interface AdvancedErrorBoundaryProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const AdvancedErrorBoundary: React.FC<AdvancedErrorBoundaryProps> = ({ className = '', children }) => {
+const AdvancedErrorBoundary: React.FC<AdvancedErrorBoundaryProps> = memo(({ 
+  className = '',
+  children 
+}) => {
   return (
-    <div className={`advancederrorboundary-component ${className}`}>
-{children || <h2>AdvancedErrorBoundary</h2>}
+    <div className={`advanced-error-boundary ${className}`}>
+      {children}
     </div>
   );
-};
+});
 
 AdvancedErrorBoundary.displayName = 'AdvancedErrorBoundary';
 

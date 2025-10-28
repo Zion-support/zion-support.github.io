@@ -1,17 +1,22 @@
-import React from 'react';
+'use client';
+
+import React, { memo } from 'react';
 
 interface PerformanceEnhancerProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({ className = '', children }) => {
+const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = memo(({ 
+  className = '',
+  children 
+}) => {
   return (
-    <div className={`performanceenhancer-component ${className}`}>
-{children || <h2>PerformanceEnhancer</h2>}
+    <div className={`performance-enhancer ${className}`}>
+      {children}
     </div>
   );
-};
+});
 
 PerformanceEnhancer.displayName = 'PerformanceEnhancer';
 

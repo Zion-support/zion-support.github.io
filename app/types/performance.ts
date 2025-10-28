@@ -37,5 +37,5 @@ declare global {
       totalJSHeapSize: number;
       jsHeapSizeLimit: number;
     };
-  }
+}
 }

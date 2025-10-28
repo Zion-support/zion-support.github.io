@@ -1,18 +1,26 @@
-import React from 'react';
+'use client';
 
-interface SEOHeadWrapperProps {
+import React, { memo } from 'react';
+
+interface SEOHeadProps {
+  title?: string;
+  description?: string;
   className?: string;
-  children?: React.ReactNode;
 }
 
-const SEOHeadWrapper: React.FC<SEOHeadWrapperProps> = ({ className = '', children }) => {
+const SEOHead: React.FC<SEOHeadProps> = memo(({ 
+  title = 'Zion Tech Group',
+  description = 'Professional technology services',
+  className = '' 
+}) => {
   return (
-    <div className={`seoheadwrapper-component ${className}`}>
-      {children}
+    <div className={`seo-head ${className}`}>
+      <title>{title}</title>
+      <meta name="description" content={description} />
     </div>
   );
-};
+});
 
-SEOHeadWrapper.displayName = 'SEOHeadWrapper';
+SEOHead.displayName = 'SEOHead';
 
-export default SEOHeadWrapper;
+export default SEOHead;

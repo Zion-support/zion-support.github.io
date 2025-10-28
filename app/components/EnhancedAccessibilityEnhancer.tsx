@@ -1,18 +1,23 @@
-import React from 'react';
+'use client';
 
-interface EnhancedAccessibilityEnhancerProps {
+import React, { memo } from 'react';
+
+interface EnhancedAccessibilityProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps> = ({ className = '', children }) => {
+const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = memo(({ 
+  className = '',
+  children 
+}) => {
   return (
-    <div className={`enhancedaccessibilityenhancer-component ${className}`}>
+    <div className={`enhanced-accessibility ${className}`}>
       {children}
     </div>
   );
-};
+});
 
-EnhancedAccessibilityEnhancer.displayName = 'EnhancedAccessibilityEnhancer';
+EnhancedAccessibility.displayName = 'EnhancedAccessibility';
 
-export default EnhancedAccessibilityEnhancer;
+export default EnhancedAccessibility;

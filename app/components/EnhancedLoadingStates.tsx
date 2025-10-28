@@ -1,16 +1,15 @@
-import React from 'react';
+'use client';
 
-interface EnhancedLoadingStatesProps {
-  className?: string;
-  children?: React.ReactNode;
-}
+import React, { memo } from 'react';
 
-const EnhancedLoadingStates: React.FC<EnhancedLoadingStatesProps> = ({ className = '', children }) => {
+const EnhancedLoading: React.FC = memo(() => {
   return (
-<div className={`enhancedloadingstates-component ${className}`}>
-      {children}
+    <div className="enhanced-loading">
+      Loading...
     </div>
   );
-};
+});
 
-EnhancedLoadingStates.displayName = 'EnhancedLoadingStates';export default EnhancedLoadingStates;
+EnhancedLoading.displayName = 'EnhancedLoading';
+
+export default EnhancedLoading;

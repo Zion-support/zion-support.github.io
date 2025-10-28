@@ -1,16 +1,23 @@
-import React from 'react';
+'use client';
+
+import React, { memo } from 'react';
 
 interface SidebarProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ className = '', children }) => {
+const Sidebar: React.FC<SidebarProps> = memo(({ 
+  className = '',
+  children 
+}) => {
   return (
-<div className={`sidebar-component ${className}`}>
-      {children || <h2>Sidebar</h2>}
+    <div className={`sidebar ${className}`}>
+      {children}
     </div>
   );
-};
+});
 
-Sidebar.displayName = 'Sidebar';export default Sidebar;
+Sidebar.displayName = 'Sidebar';
+
+export default Sidebar;

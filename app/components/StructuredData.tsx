@@ -1,17 +1,22 @@
-import React from 'react';
+'use client';
+
+import React, { memo } from 'react';
 
 interface StructuredDataProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const StructuredData: React.FC<StructuredDataProps> = ({ className = '', children }) => {
+const StructuredData: React.FC<StructuredDataProps> = memo(({ 
+  className = '',
+  children 
+}) => {
   return (
-    <div className={`structureddata-component ${className}`}>
+    <div className={`structured-data ${className}`}>
       {children}
     </div>
   );
-};
+});
 
 StructuredData.displayName = 'StructuredData';
 

@@ -1,18 +1,23 @@
-import React from 'react';
+'use client';
 
-interface Footer_brokenProps {
+import React, { memo } from 'react';
+
+interface FooterBrokenProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const Footer_broken: React.FC<Footer_brokenProps> = ({ className = '', children }) => {
+const FooterBroken: React.FC<FooterBrokenProps> = memo(({ 
+  className = '',
+  children 
+}) => {
   return (
-    <div className={`footer_broken-component ${className}`}>
+    <div className={`footer-broken ${className}`}>
       {children}
     </div>
   );
-};
+});
 
-Footer_broken.displayName = 'Footer_broken';
+FooterBroken.displayName = 'FooterBroken';
 
-export default Footer_broken;
+export default FooterBroken;

@@ -1,105 +1,57 @@
 'use client';
 
+import React, { memo, useCallback, useEffect } from 'react';
 
-import React, { useEffect } from 'react';
-
-// Performance API types
-interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
-  processingEnd: number;
-  target?: Node;
-}
-
-interface LayoutShift extends PerformanceEntry {
-  value: number;
-  hadRecentInput: boolean;
-  lastInputTime: number;
-  sources: LayoutShiftAttribution[];
-}
-
-interface LayoutShiftAttribution {
-  node?: Node;
-  previousRect: DOMRectReadOnly;
-  currentRect: DOMRectReadOnly;
-}
 interface PerformanceOptimizerProps {
-  children: React.ReactNode;
+  enableImageOptimization?: boolean;
+  enableLazyLoading?: boolean;
 }
 
-export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
-  useEffect(() => {
-    // Preload critical resources
-    const preloadCriticalResources = () => {
-      const criticalResources = [
-        { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' },
-        { href: '/images/hero-bg.jpg', as: 'image' },
-        { href: '/images/logo.png', as: 'image' },
-      ];
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ 
+  enableImageOptimization = true,
+  enableLazyLoading = true
+}) => {
+  const optimizeImages = useCallback(() => {
+    if (typeof window === 'undefined' || !enableImageOptimization) return;
 
-      criticalResources.forEach(({ href, as, type, crossOrigin }) => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.href = href;
-        link.as = as;
-        if (type) link.type = type;
-        if (crossOrigin) link.crossOrigin = crossOrigin;
-        document.head.appendChild(link);
-      });
-    };
-
-    // Optimize images with lazy loading
-    const optimizeImages = () => {
-      const images = document.querySelectorAll('img[data-src]');
-      const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
-            img.src = img.dataset.src || '';
-            img.classList.remove('lazy');
-            imageObserver.unobserve(img);
-          }
-        });
-      });
-
-      images.forEach((img) => imageObserver.observe(img));
-    };
-
-    // Add performance monitoring
-    const monitorPerformance = () => {
-      if (typeof window !== 'undefined' && 'performance' in window) {
-        // Monitor Core Web Vitals
-        const observer = new PerformanceObserver((list) => {
-          list.getEntries().forEach((entry) => {
-            if (entry.entryType === 'largest-contentful-paint') {
-              console.log('LCP:', entry.startTime);
-            }
-            if (entry.entryType === 'first-input') {
-              const fidEntry = entry as PerformanceEventTiming;
-              console.log('FID:', fidEntry.processingStart - fidEntry.startTime);
-            }
-            if (entry.entryType === 'layout-shift') {
-              const clsEntry = entry as LayoutShift;
-              console.log('CLS:', clsEntry.value);
-            }
-          });
-        });
-
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+    const images = document.querySelectorAll('img');
+    images.forEach((img) => {
+      if (!img.hasAttribute('loading')) {
+        img.setAttribute('loading', 'lazy');
       }
-    };
+      if (!img.hasAttribute('decoding')) {
+        img.setAttribute('decoding', 'async');
+      }
+    });
+  }, [enableImageOptimization]);
 
-    // Initialize optimizations
-    preloadCriticalResources();
+  const setupLazyLoading = useCallback(() => {
+    if (typeof window === 'undefined' || !enableLazyLoading) return;
+
+    const imageObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const img = entry.target as HTMLImageElement;
+          img.classList.remove('lazy');
+          imageObserver.unobserve(img);
+        }
+      });
+    });
+
+    const lazyImages = document.querySelectorAll('img[data-src]');
+    lazyImages.forEach((img) => {
+      imageObserver.observe(img);
+    });
+  }, [enableLazyLoading]);
+
+  useEffect(() => {
     optimizeImages();
-    monitorPerformance();
+    setupLazyLoading();
+  }, [optimizeImages, setupLazyLoading]);
 
-    // Cleanup
-    return () => {
-      // Cleanup observers if needed
-    };
-  }, []);
+  return null;
+});
 
-  return <>{children}</>;
-};
+PerformanceOptimizer.displayName = 'PerformanceOptimizer';
 
 export default PerformanceOptimizer;

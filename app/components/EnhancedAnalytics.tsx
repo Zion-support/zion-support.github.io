@@ -1,17 +1,22 @@
-import React from 'react';
+'use client';
+
+import React, { memo } from 'react';
 
 interface EnhancedAnalyticsProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({ className = '', children }) => {
+const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = memo(({ 
+  className = '',
+  children 
+}) => {
   return (
-    <div className={`enhancedanalytics-component ${className}`}>
+    <div className={`enhanced-analytics ${className}`}>
       {children}
     </div>
   );
-};
+});
 
 EnhancedAnalytics.displayName = 'EnhancedAnalytics';
 

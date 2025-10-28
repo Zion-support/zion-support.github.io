@@ -1,84 +1,67 @@
 import { useState, useEffect, useCallback } from 'react';
-import { performanceOptimizer } from '../utils/performanceOptimizer';
+import { optimizePerformance } from '../utils/performanceOptimizer';
 
 interface PerformanceState {
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
-  bundleSize: number;
-  isOptimized: boolean;
-  recommendations: string[];
 }
 
-interface PerformanceActions {
-  optimize: () => void;
-  reset: () => void;
-  getMetrics: () => PerformanceState;
-}
-
-export function usePerformance(): PerformanceState & PerformanceActions {
-  const [state, setState] = useState<PerformanceState>({
+export const usePerformance = () => {
+  const [performanceState, setPerformanceState] = useState<PerformanceState>({
     loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
-    bundleSize: 0,
-    isOptimized: false,
-    recommendations: [],
   });
 
-  // Update performance metrics
-  const updateMetrics = useCallback(() => {
-    const metrics = performanceOptimizer.getMetrics();
-    setState(prevState => ({
-      ...prevState,
-      ...metrics,
-    }));
-  }, []);
+  const measurePerformance = useCallback(() => {
+    if (typeof window === 'undefined') return;
 
-  // Optimize performance
-  const optimize = useCallback(() => {
-    performanceOptimizer.optimize();
-    updateMetrics();
-  }, [updateMetrics]);
+    const startTime = performance.now();
+    
+    // Measure load time
+    const loadTime = performance.timing ? 
+      performance.timing.loadEventEnd - performance.timing.navigationStart : 0;
 
-  // Reset metrics
-  const reset = useCallback(() => {
-    performanceOptimizer.reset();
-    setState({
-      loadTime: 0,
-      renderTime: 0,
-      memoryUsage: 0,
-      bundleSize: 0,
-      isOptimized: false,
-      recommendations: [],
+    // Measure render time
+    const renderTime = performance.now() - startTime;
+
+    // Measure memory usage (if available)
+    const memoryUsage = (performance as any).memory ? 
+      (performance as any).memory.usedJSHeapSize : 0;
+
+    setPerformanceState({
+      loadTime,
+      renderTime,
+      memoryUsage,
     });
   }, []);
 
-  // Get current metrics
-  const getMetrics = useCallback(() => {
-    return performanceOptimizer.getMetrics();
+  const optimize = useCallback(() => {
+    optimizePerformance();
   }, []);
 
-  // Initialize performance monitoring
+  const reset = useCallback(() => {
+    setPerformanceState({
+      loadTime: 0,
+      renderTime: 0,
+      memoryUsage: 0,
+    });
+  }, []);
+
   useEffect(() => {
-    // Initial metrics update
-    updateMetrics();
+    measurePerformance();
+  }, [measurePerformance]);
 
-    // Update metrics periodically
-    const interval = setInterval(updateMetrics, 5000);
-
-    // Cleanup
-    return () => {
-      clearInterval(interval);
-    };
-  }, [updateMetrics]);
+  const getMetrics = useCallback(() => {
+    return performanceState;
+  }, [performanceState]);
 
   return {
-    ...state,
+    ...performanceState,
+    measurePerformance,
     optimize,
     reset,
     getMetrics,
   };
-}
-
-export default usePerformance;
+};

@@ -1,17 +1,22 @@
-import React from 'react';
+'use client';
+
+import React, { memo } from 'react';
 
 interface BreadcrumbProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const Breadcrumb: React.FC<BreadcrumbProps> = ({ className = '', children }) => {
+const Breadcrumb: React.FC<BreadcrumbProps> = memo(({ 
+  className = '',
+  children 
+}) => {
   return (
-    <div className={`breadcrumb-component ${className}`}>
-{children || <h2>Breadcrumb</h2>}
-    </div>
+    <nav className={`breadcrumb ${className}`}>
+      {children}
+    </nav>
   );
-};
+});
 
 Breadcrumb.displayName = 'Breadcrumb';
 

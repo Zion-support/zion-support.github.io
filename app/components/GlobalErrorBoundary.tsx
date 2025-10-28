@@ -1,14 +1,23 @@
-import React from 'react'
+'use client';
 
+import React, { memo } from 'react';
 
-interface GlobalErrorBoundaryProps {
-  children: React.ReactNode;
+interface ErrorBoundaryProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export default function GlobalErrorBoundary({ children }: GlobalErrorBoundaryProps) {
+const ErrorBoundary: React.FC<ErrorBoundaryProps> = memo(({ 
+  className = '',
+  children 
+}) => {
   return (
-    <div>
+    <div className={`error-boundary ${className}`}>
       {children}
     </div>
   );
-}
+});
+
+ErrorBoundary.displayName = 'ErrorBoundary';
+
+export default ErrorBoundary;

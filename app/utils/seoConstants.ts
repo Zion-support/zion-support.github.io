@@ -148,6 +148,8 @@ export const SEO_CONSTANTS = {
   OPEN_GRAPH_TAGS,
   TWITTER_TAGS,
   STRUCTURED_DATA,
-};
+}
 
-export default SEO_CONSTANTS;
+export default function Component() {
+  return null;
+}

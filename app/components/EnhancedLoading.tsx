@@ -1,16 +1,15 @@
-import React from 'react';
+'use client';
 
-interface EnhancedLoadingProps {
-  message?: string;
-  size?: 'sm' | 'md' | 'lg';
-}
+import React, { memo } from 'react';
 
-const EnhancedLoading: React.FC<EnhancedLoadingProps> = () => {
+const EnhancedLoading: React.FC = memo(() => {
   return (
-    <div>
-      {/* Component content */}
+    <div className="enhanced-loading">
+      Loading...
     </div>
   );
-};
+});
+
+EnhancedLoading.displayName = 'EnhancedLoading';
 
 export default EnhancedLoading;

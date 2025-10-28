@@ -1,12 +1,11 @@
+'use client';
+
 import React from 'react';
 
-interface AdminPageProps {
-  className?: string;
-  children?: React.ReactNode;
+export default function AdminPage() {
+  return (
+    <div>
+      <h1>Admin Page</h1>
+    </div>
+  );
 }
-
-const AdminPage: React.FC<AdminPageProps> = ({ className = '', children }) => {
-  return <div className={`admin-page ${className}`}>{children}</div>;
-};
-
-export default AdminPage;

@@ -1,10 +1,8 @@
 'use client';
-'use client';
-
 
 import React, { useEffect, useState, memo } from 'react';
 import dynamic from 'next/dynamic';
-import { addFocusIndicators, improveKeyboardNavigation, addSkipLinks, announceToScreenReader } from './accessibility/AccessibilityUtils';
+import { addFocusIndicators, improveKeyboardNavigation, addSkipLinks } from './accessibility/AccessibilityUtils';
 
 // Dynamically import the controls component
 const AccessibilityControls = dynamic(() => import('./accessibility/AccessibilityControls'), {
@@ -77,48 +75,43 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = memo(({
 
     // Show controls after a delay
     const timer = setTimeout(() => setIsVisible(true), 2000);
+
     return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
     applyAccessibilityFeatures();
-    
-    // Save preferences
-    localStorage.setItem('high-contrast', isHighContrast.toString());
-    localStorage.setItem('font-size', fontSize);
-    localStorage.setItem('reduced-motion', reducedMotion.toString());
-  }, [applyAccessibilityFeatures, isHighContrast, fontSize, reducedMotion]);
+  }, [applyAccessibilityFeatures]);
 
-  const handleHighContrastChange = (value: boolean) => {
-    setIsHighContrast(value);
-    announceToScreenReader(value ? 'High contrast enabled' : 'High contrast disabled');
+  const handleHighContrastToggle = () => {
+    const newValue = !isHighContrast;
+    setIsHighContrast(newValue);
+    localStorage.setItem('high-contrast', newValue.toString());
   };
 
-  const handleFontSizeChange = (value: string) => {
-    setFontSize(value);
-    announceToScreenReader(`Font size changed to ${value}`);
+  const handleFontSizeChange = (newSize: string) => {
+    setFontSize(newSize);
+    localStorage.setItem('font-size', newSize);
   };
 
-  const handleReducedMotionChange = (value: boolean) => {
-    setReducedMotion(value);
-    announceToScreenReader(value ? 'Reduced motion enabled' : 'Reduced motion disabled');
+  const handleReducedMotionToggle = () => {
+    const newValue = !reducedMotion;
+    setReducedMotion(newValue);
+    localStorage.setItem('reduced-motion', newValue.toString());
   };
 
   return (
     <div className={`accessibility-enhancer ${className}`}>
       {children}
-      
       {isVisible && (
-        <div className="fixed bottom-4 right-4 z-50">
-          <AccessibilityControls
-            isHighContrast={isHighContrast}
-            fontSize={fontSize}
-            reducedMotion={reducedMotion}
-            onHighContrastChange={handleHighContrastChange}
-            onFontSizeChange={handleFontSizeChange}
-            onReducedMotionChange={handleReducedMotionChange}
-          />
-        </div>
+        <AccessibilityControls
+          isHighContrast={isHighContrast}
+          fontSize={fontSize}
+          reducedMotion={reducedMotion}
+          onHighContrastToggle={handleHighContrastToggle}
+          onFontSizeChange={handleFontSizeChange}
+          onReducedMotionToggle={handleReducedMotionToggle}
+        />
       )}
     </div>
   );

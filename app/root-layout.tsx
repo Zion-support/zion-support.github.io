@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 
 interface RootLayoutProps {
@@ -6,12 +8,12 @@ interface RootLayoutProps {
 }
 
 const RootLayout: React.FC<RootLayoutProps> = ({ 
-  className = '', 
+  className = '',
   children 
 }) => {
   return (
-    <div className={'root-layout ' + className}>
-      {children || <p>Root-layout component</p>}
+    <div className={`root-layout ${className}`}>
+      {children}
     </div>
   );
 };

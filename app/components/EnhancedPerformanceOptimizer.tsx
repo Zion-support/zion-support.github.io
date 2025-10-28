@@ -1,17 +1,22 @@
-import React from 'react';
+'use client';
+
+import React, { memo } from 'react';
 
 interface EnhancedPerformanceOptimizerProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const EnhancedPerformanceOptimizer: React.FC<EnhancedPerformanceOptimizerProps> = ({ className = '', children }) => {
+const EnhancedPerformanceOptimizer: React.FC<EnhancedPerformanceOptimizerProps> = memo(({ 
+  className = '',
+  children 
+}) => {
   return (
-    <div className={`enhancedperformanceoptimizer-component ${className}`}>
-{children || <h2>EnhancedPerformanceOptimizer</h2>}
+    <div className={`enhanced-performance-optimizer ${className}`}>
+      {children}
     </div>
   );
-};
+});
 
 EnhancedPerformanceOptimizer.displayName = 'EnhancedPerformanceOptimizer';
 

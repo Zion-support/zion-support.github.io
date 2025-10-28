@@ -1,12 +1,11 @@
+'use client';
+
 import React from 'react';
 
-interface ContactPageProps {
-  className?: string;
-  children?: React.ReactNode;
+export default function ContactPage() {
+  return (
+    <div>
+      <h1>Contact Page</h1>
+    </div>
+  );
 }
-
-const ContactPage: React.FC<ContactPageProps> = ({ className = '', children }) => {
-  return <div className={`contact-page ${className}`}>{children}</div>;
-};
-
-export default ContactPage;

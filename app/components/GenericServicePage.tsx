@@ -1,17 +1,25 @@
-import React from 'react';
+'use client';
+
+import React, { memo } from 'react';
 
 interface GenericServicePageProps {
+  title: string;
+  description: string;
   className?: string;
-  children?: React.ReactNode;
 }
 
-const GenericServicePage: React.FC<GenericServicePageProps> = ({ className = '', children }) => {
+const GenericServicePage: React.FC<GenericServicePageProps> = memo(({ 
+  title, 
+  description, 
+  className = '' 
+}) => {
   return (
-    <div className={`genericservicepage-component ${className}`}>
-      {children}
+    <div className={`generic-service-page ${className}`}>
+      <h1>{title}</h1>
+      <p>{description}</p>
     </div>
   );
-};
+});
 
 GenericServicePage.displayName = 'GenericServicePage';
 

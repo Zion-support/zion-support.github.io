@@ -1,16 +1,23 @@
-import React from 'react';
+'use client';
+
+import React, { memo } from 'react';
 
 interface SystemMonitorProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '', children }) => {
+const SystemMonitor: React.FC<SystemMonitorProps> = memo(({ 
+  className = '',
+  children 
+}) => {
   return (
-    <div className={`systemmonitor-component ${className}`}>
-{children || <h2>SystemMonitor</h2>}
+    <div className={`system-monitor ${className}`}>
+      {children}
     </div>
   );
-};
+});
+
+SystemMonitor.displayName = 'SystemMonitor';
 
 export default SystemMonitor;

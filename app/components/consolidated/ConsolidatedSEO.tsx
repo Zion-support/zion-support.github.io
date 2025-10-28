@@ -1,7 +1,6 @@
 'use client';
 
-
-import React, { useEffect, memo, useCallback } from 'react';
+import React, { memo, useCallback, useEffect } from 'react';
 
 interface ConsolidatedSEOProps {
   title?: string;
@@ -10,155 +9,78 @@ interface ConsolidatedSEOProps {
   image?: string;
   url?: string;
   type?: string;
-  className?: string;
 }
 
-const ConsolidatedSEO: React.FC<ConsolidatedSEOProps> = memo(({
-  title = 'Zion Tech Group - Advanced AI & IT Solutions',
-  description = 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
-  keywords = 'AI solutions, IT services, cybersecurity, cloud computing, digital transformation',
+const ConsolidatedSEO: React.FC<ConsolidatedSEOProps> = memo(({ 
+  title = 'Zion Tech Group',
+  description = 'Professional technology services by Zion Tech Group',
+  keywords = 'technology, services, AI, automation',
   image = '/og-image.jpg',
   url = 'https://ziontechgroup.com',
-  type = 'website',
-  className = ''
+  type = 'website'
 }) => {
-  // Add structured data
-  const addStructuredData = useCallback(() => {
-    const structuredData = {
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      name: 'Zion Tech Group',
-      description: description,
-      url: url,
-      logo: image,
-      sameAs: [
-        'https://twitter.com/ziontechgroup',
-        'https://linkedin.com/company/ziontechgroup',
-        'https://github.com/ziontechgroup'
-      ],
-      contactPoint: {
-        '@type': 'ContactPoint',
-        telephone: '+1-555-0123',
-        contactType: 'customer service',
-        areaServed: 'US',
-        availableLanguage: 'English'
-      },
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: '123 Tech Street',
-        addressLocality: 'San Francisco',
-        addressRegion: 'CA',
-        postalCode: '94105',
-        addressCountry: 'US'
-      }
-    };
+  const updateMetaTags = useCallback(() => {
+    if (typeof window === 'undefined') return;
 
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(structuredData);
-    document.head.appendChild(script);
-  }, [description, url, image]);
+    // Update title
+    document.title = title;
 
-  // Add meta tags
-  const addMetaTags = useCallback(() => {
-    const metaTags = [
-      { name: 'description', content: description },
-      { name: 'keywords', content: keywords },
-      { name: 'author', content: 'Zion Tech Group' },
-      { name: 'robots', content: 'index, follow' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
-      { name: 'theme-color', content: '#3b82f6' },
+    // Update meta description
+    let metaDescription = document.querySelector('meta[name="description"]');
+    if (!metaDescription) {
+      metaDescription = document.createElement('meta');
+      metaDescription.setAttribute('name', 'description');
+      document.head.appendChild(metaDescription);
+    }
+    metaDescription.setAttribute('content', description);
+
+    // Update meta keywords
+    let metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (!metaKeywords) {
+      metaKeywords = document.createElement('meta');
+      metaKeywords.setAttribute('name', 'keywords');
+      document.head.appendChild(metaKeywords);
+    }
+    metaKeywords.setAttribute('content', keywords);
+
+    // Update Open Graph tags
+    const ogTags = [
       { property: 'og:title', content: title },
       { property: 'og:description', content: description },
       { property: 'og:image', content: image },
       { property: 'og:url', content: url },
-      { property: 'og:type', content: type },
-      { property: 'og:site_name', content: 'Zion Tech Group' },
-      { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:title', content: title },
-      { name: 'twitter:description', content: description },
-      { name: 'twitter:image', content: image }
+      { property: 'og:type', content: type }
     ];
 
-    metaTags.forEach(tag => {
-      const meta = document.createElement('meta');
-      Object.entries(tag).forEach(([key, value]) => {
-        meta.setAttribute(key, value);
-      });
-      document.head.appendChild(meta);
+    ogTags.forEach(({ property, content }) => {
+      let tag = document.querySelector(`meta[property="${property}"]`);
+      if (!tag) {
+        tag = document.createElement('meta');
+        tag.setAttribute('property', property);
+        document.head.appendChild(tag);
+      }
+      tag.setAttribute('content', content);
     });
   }, [title, description, keywords, image, url, type]);
 
-  // Add canonical URL
   const addCanonicalURL = useCallback(() => {
-    const canonical = document.createElement('link');
-    canonical.rel = 'canonical';
-    canonical.href = url;
-    document.head.appendChild(canonical);
-  }, [url]);
+    if (typeof window === 'undefined') return;
 
-  // Add language attributes
-  const addLanguageAttributes = useCallback(() => {
-    document.documentElement.lang = 'en';
-    document.documentElement.setAttribute('xml:lang', 'en');
-  }, []);
-
-  // Add sitemap reference
-  const addSitemapReference = useCallback(() => {
-    const sitemap = document.createElement('link');
-    sitemap.rel = 'sitemap';
-    sitemap.type = 'application/xml';
-    sitemap.href = '/sitemap.xml';
-    document.head.appendChild(sitemap);
-  }, []);
-
-  // Add robots.txt reference
-  const addRobotsReference = useCallback(() => {
-    const robots = document.createElement('link');
-    robots.rel = 'robots';
-    robots.href = '/robots.txt';
-    document.head.appendChild(robots);
-  }, []);
-
-  // Add hreflang for internationalization
-  const addHreflang = useCallback(() => {
-    const hreflangTags = [
-      { rel: 'alternate', hreflang: 'en', href: url },
-      { rel: 'alternate', hreflang: 'x-default', href: url }
-    ];
-
-    hreflangTags.forEach(tag => {
-      const link = document.createElement('link');
-      Object.entries(tag).forEach(([key, value]) => {
-        link.setAttribute(key, value);
-      });
-      document.head.appendChild(link);
-    });
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonical);
+    }
+    canonical.setAttribute('href', url);
   }, [url]);
 
   useEffect(() => {
-    addStructuredData();
-    addMetaTags();
+    updateMetaTags();
     addCanonicalURL();
-    addLanguageAttributes();
-    addSitemapReference();
-    addRobotsReference();
-    addHreflang();
-  }, [
-    addStructuredData,
-    addMetaTags,
-    addCanonicalURL,
-    addLanguageAttributes,
-    addSitemapReference,
-    addRobotsReference,
-    addHreflang
-  ]);
+  }, [updateMetaTags, addCanonicalURL]);
 
-  return (
-    <div className={`consolidated-seo ${className}`} style={{ display: 'none' }}>
-      {/* This component doesn't render anything visible */}
-    </div>
-  );
+  return null;
 });
 
 ConsolidatedSEO.displayName = 'ConsolidatedSEO';

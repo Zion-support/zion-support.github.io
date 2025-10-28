@@ -1,17 +1,22 @@
-import React from 'react';
+'use client';
+
+import React, { memo } from 'react';
 
 interface AdvancedAccessibilityEnhancerProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({ className = '', children }) => {
+const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = memo(({ 
+  className = '',
+  children 
+}) => {
   return (
-    <div className={`advancedaccessibilityenhancer-component ${className}`}>
+    <div className={`advanced-accessibility-enhancer ${className}`}>
       {children}
     </div>
   );
-};
+});
 
 AdvancedAccessibilityEnhancer.displayName = 'AdvancedAccessibilityEnhancer';
 

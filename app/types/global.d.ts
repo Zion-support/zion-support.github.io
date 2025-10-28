@@ -5,7 +5,6 @@ declare global {
       NEXT_PUBLIC_ANALYTICS_ID?: string;
       NEXT_PUBLIC_GA_ID?: string;
       NEXT_PUBLIC_GTM_ID?: string;
-    }
   }
 
   interface Window {
@@ -43,7 +42,7 @@ declare global {
     getEntries(): PerformanceEntry[];
     getEntriesByType(type: string): PerformanceEntry[];
     getEntriesByName(name: string, type?: string): PerformanceEntry[];
-  }
 }
 
 export {};
+}}

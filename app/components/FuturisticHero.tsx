@@ -1,17 +1,22 @@
-import React from 'react';
+'use client';
+
+import React, { memo } from 'react';
 
 interface FuturisticHeroProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const FuturisticHero: React.FC<FuturisticHeroProps> = ({ className = '', children }) => {
+const FuturisticHero: React.FC<FuturisticHeroProps> = memo(({ 
+  className = '',
+  children 
+}) => {
   return (
-    <div className={`futuristichero-component ${className}`}>
+    <div className={`futuristic-hero ${className}`}>
       {children}
     </div>
   );
-};
+});
 
 FuturisticHero.displayName = 'FuturisticHero';
 

@@ -1,27 +1,21 @@
+'use client';
 
-
-import React, { memo, Suspense } from 'react';
+import React, { memo } from 'react';
 
 interface OptimizedWrapperProps {
-  children: React.ReactNode;
-  fallback?: React.ReactNode;
-  lazy?: boolean;
+  className?: string;
+  children?: React.ReactNode;
 }
 
 const OptimizedWrapper: React.FC<OptimizedWrapperProps> = memo(({ 
-  children, 
-  fallback = <div>Loading...</div>,
-  lazy: isLazy = false 
+  className = '',
+  children 
 }) => {
-  if (isLazy) {
-    return (
-      <Suspense fallback={fallback}>
-        {children}
-      </Suspense>
-    );
-  }
-
-  return <>{children}</>;
+  return (
+    <div className={`optimized-wrapper ${className}`}>
+      {children}
+    </div>
+  );
 });
 
 OptimizedWrapper.displayName = 'OptimizedWrapper';

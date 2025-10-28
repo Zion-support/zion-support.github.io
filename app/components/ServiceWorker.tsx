@@ -1,16 +1,23 @@
-import React from 'react';
+'use client';
+
+import React, { memo } from 'react';
 
 interface ServiceWorkerProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const ServiceWorker: React.FC<ServiceWorkerProps> = ({ className = '', children }) => {
+const ServiceWorker: React.FC<ServiceWorkerProps> = memo(({ 
+  className = '',
+  children 
+}) => {
   return (
-<div className={`serviceworker-component ${className}`}>
+    <div className={`service-worker ${className}`}>
       {children}
     </div>
   );
-};
+});
 
-ServiceWorker.displayName = 'ServiceWorker';export default ServiceWorker;
+ServiceWorker.displayName = 'ServiceWorker';
+
+export default ServiceWorker;

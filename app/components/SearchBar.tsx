@@ -1,17 +1,22 @@
-import React from 'react';
+'use client';
+
+import React, { memo } from 'react';
 
 interface SearchBarProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const SearchBar: React.FC<SearchBarProps> = ({ className = '', children }) => {
+const SearchBar: React.FC<SearchBarProps> = memo(({ 
+  className = '',
+  children 
+}) => {
   return (
-    <div className={`searchbar-component ${className}`}>
-{children || <h2>SearchBar</h2>}
+    <div className={`search-bar ${className}`}>
+      {children}
     </div>
   );
-};
+});
 
 SearchBar.displayName = 'SearchBar';
 

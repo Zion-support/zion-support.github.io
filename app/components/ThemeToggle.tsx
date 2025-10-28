@@ -1,17 +1,22 @@
-import React from 'react';
+'use client';
+
+import React, { memo } from 'react';
 
 interface ThemeToggleProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '', children }) => {
+const ThemeToggle: React.FC<ThemeToggleProps> = memo(({ 
+  className = '',
+  children 
+}) => {
   return (
-    <div className={`themetoggle-component ${className}`}>
-{children || <h2>ThemeToggle</h2>}
-    </div>
+    <button className={`theme-toggle ${className}`}>
+      {children}
+    </button>
   );
-};
+});
 
 ThemeToggle.displayName = 'ThemeToggle';
 

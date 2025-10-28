@@ -1,4 +1,5 @@
-
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
 
 export const metadata = {
   title: 'Ecommerce Analytics Pro | Zion Tech Group',
@@ -10,7 +11,8 @@ export const metadata = {
     type: 'website',
   },
 };
-function EcommerceanalyticsproPage() {
+
+export default function EcommerceAnalyticsPro() {
   return (
     <>
       <Navigation />
@@ -48,14 +50,3 @@ function EcommerceanalyticsproPage() {
     </>
   );
 }
-
-<<<<<<< HEAD
-export default function Wrapped(props: { [key: string]: unknown }) {
-  return (
-    <ErrorBoundary>
-      <EcommerceanalyticsproPage {...props} />
-    </ErrorBoundary>
-  );
-}
-=======
-

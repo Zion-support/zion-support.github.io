@@ -1,17 +1,22 @@
-import React from 'react';
+'use client';
+
+import React, { memo } from 'react';
 
 interface FuturisticButtonProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const FuturisticButton: React.FC<FuturisticButtonProps> = ({ className = '', children }) => {
+const FuturisticButton: React.FC<FuturisticButtonProps> = memo(({ 
+  className = '',
+  children 
+}) => {
   return (
-    <div className={`futuristicbutton-component ${className}`}>
+    <button className={`futuristic-button ${className}`}>
       {children}
-    </div>
+    </button>
   );
-};
+});
 
 FuturisticButton.displayName = 'FuturisticButton';
 

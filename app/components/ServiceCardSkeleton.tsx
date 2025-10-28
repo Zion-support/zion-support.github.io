@@ -1,16 +1,23 @@
-import React from 'react';
+'use client';
 
-interface ServiceCardSkeletonProps {
+import React, { memo } from 'react';
+
+interface ServiceCardProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ className = '', children }) => {
+const ServiceCard: React.FC<ServiceCardProps> = memo(({ 
+  className = '',
+  children 
+}) => {
   return (
-<div className={`servicecardskeleton-component ${className}`}>
-      {children || <h2>ServiceCardSkeleton</h2>}
+    <div className={`service-card ${className}`}>
+      {children}
     </div>
   );
-};
+});
 
-ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';export default ServiceCardSkeleton;
+ServiceCard.displayName = 'ServiceCard';
+
+export default ServiceCard;

@@ -1,17 +1,22 @@
-import React from 'react';
+'use client';
+
+import React, { memo } from 'react';
 
 interface SearchModalProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const SearchModal: React.FC<SearchModalProps> = ({ className = '', children }) => {
+const SearchModal: React.FC<SearchModalProps> = memo(({ 
+  className = '',
+  children 
+}) => {
   return (
-    <div className={`searchmodal-component ${className}`}>
-{children || <h2>SearchModal</h2>}
+    <div className={`search-modal ${className}`}>
+      {children}
     </div>
   );
-};
+});
 
 SearchModal.displayName = 'SearchModal';
 

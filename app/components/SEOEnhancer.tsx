@@ -1,17 +1,22 @@
-import React from 'react';
+'use client';
+
+import React, { memo } from 'react';
 
 interface SEOEnhancerProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '', children }) => {
+const SEOEnhancer: React.FC<SEOEnhancerProps> = memo(({ 
+  className = '',
+  children 
+}) => {
   return (
-    <div className={`seoenhancer-component ${className}`}>
-{children || <h2>SEOEnhancer</h2>}
+    <div className={`seo-enhancer ${className}`}>
+      {children}
     </div>
   );
-};
+});
 
 SEOEnhancer.displayName = 'SEOEnhancer';
 

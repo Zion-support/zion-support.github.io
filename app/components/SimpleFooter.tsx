@@ -1,17 +1,22 @@
-import React from 'react';
+'use client';
+
+import React, { memo } from 'react';
 
 interface SimpleFooterProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const SimpleFooter: React.FC<SimpleFooterProps> = ({ className = '', children }) => {
+const SimpleFooter: React.FC<SimpleFooterProps> = memo(({ 
+  className = '',
+  children 
+}) => {
   return (
-    <div className={`simplefooter-component ${className}`}>
+    <div className={`simple-footer ${className}`}>
       {children}
     </div>
   );
-};
+});
 
 SimpleFooter.displayName = 'SimpleFooter';
 

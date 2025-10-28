@@ -1,16 +1,23 @@
-import React from 'react';
+'use client';
+
+import React, { memo } from 'react';
 
 interface LoadingStatesProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const LoadingStates: React.FC<LoadingStatesProps> = ({ className = '', children }) => {
+const LoadingStates: React.FC<LoadingStatesProps> = memo(({ 
+  className = '',
+  children 
+}) => {
   return (
-<div className={`loadingstates-component ${className}`}>
+    <div className={`loading-states ${className}`}>
       {children}
     </div>
   );
-};
+});
 
-LoadingStates.displayName = 'LoadingStates';export default LoadingStates;
+LoadingStates.displayName = 'LoadingStates';
+
+export default LoadingStates;

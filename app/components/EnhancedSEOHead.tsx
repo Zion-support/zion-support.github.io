@@ -1,17 +1,22 @@
-import React from 'react';
+'use client';
+
+import React, { memo } from 'react';
 
 interface EnhancedSEOHeadProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({ className = '', children }) => {
+const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = memo(({ 
+  className = '',
+  children 
+}) => {
   return (
-    <div className={`enhancedseohead-component ${className}`}>
+    <div className={`enhanced-seo-head ${className}`}>
       {children}
     </div>
   );
-};
+});
 
 EnhancedSEOHead.displayName = 'EnhancedSEOHead';
 

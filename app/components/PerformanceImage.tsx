@@ -1,17 +1,22 @@
-import React from 'react';
+'use client';
+
+import React, { memo } from 'react';
 
 interface PerformanceImageProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const PerformanceImage: React.FC<PerformanceImageProps> = ({ className = '', children }) => {
+const PerformanceImage: React.FC<PerformanceImageProps> = memo(({ 
+  className = '',
+  children 
+}) => {
   return (
-    <div className={`performanceimage-component ${className}`}>
+    <div className={`performance-image ${className}`}>
       {children}
     </div>
   );
-};
+});
 
 PerformanceImage.displayName = 'PerformanceImage';
 

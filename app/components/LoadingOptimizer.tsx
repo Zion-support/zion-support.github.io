@@ -1,17 +1,22 @@
-import React from 'react';
+'use client';
+
+import React, { memo } from 'react';
 
 interface LoadingOptimizerProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const LoadingOptimizer: React.FC<LoadingOptimizerProps> = ({ className = '', children }) => {
+const LoadingOptimizer: React.FC<LoadingOptimizerProps> = memo(({ 
+  className = '',
+  children 
+}) => {
   return (
-    <div className={`loadingoptimizer-component ${className}`}>
+    <div className={`loading-optimizer ${className}`}>
       {children}
     </div>
   );
-};
+});
 
 LoadingOptimizer.displayName = 'LoadingOptimizer';
 

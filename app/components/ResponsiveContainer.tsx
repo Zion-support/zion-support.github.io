@@ -1,17 +1,22 @@
-import React from 'react';
+'use client';
+
+import React, { memo } from 'react';
 
 interface ResponsiveContainerProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ className = '', children }) => {
+const ResponsiveContainer: React.FC<ResponsiveContainerProps> = memo(({ 
+  className = '',
+  children 
+}) => {
   return (
-<div className={`responsive-container ${className}`}>
-      {children || <h2>ResponsiveContainer</h2>}
+    <div className={`responsive-container ${className}`}>
+      {children}
     </div>
   );
-};
+});
 
 ResponsiveContainer.displayName = 'ResponsiveContainer';
 
