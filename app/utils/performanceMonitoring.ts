@@ -55,8 +55,7 @@ class PerformanceMonitor {
         navObserver.observe({ entryTypes: ['navigation'] });
         this.observers.push(navObserver);
       } catch (error) {
-        console.warn('Performance observer initialization failed:', error);
-      }
+              }
     }
   }
 

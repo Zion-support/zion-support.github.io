@@ -1,8 +1,8 @@
 
 import React from "react";
+import Footer from '@/components/Footer';
+import Navigation from '@/components/Navigation';
 import { Brain, BarChart, Target, TrendingUp, CheckCircle, ArrowRight } from "lucide-react";
-import Navigation from "../components/Navigation";
-import Footer from "../components/Footer";
 
 export const metadata = {
   title: 'AI-Powered Email Analyzer | Zion Tech Group',

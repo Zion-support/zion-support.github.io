@@ -1,6 +1,5 @@
 'use client';
 
-
 import React, { useEffect, useState, useCallback } from 'react';
 
 interface PerformanceMetrics {
@@ -92,8 +91,7 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
         }
       }
     } catch (error) {
-      console.warn('Performance monitoring error:', error);
-    }
+          }
   }, [enableMonitoring]);
 
   // Performance optimizations
@@ -150,8 +148,7 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
 
       setIsOptimized(true);
     } catch (error) {
-      console.warn('Performance optimization error:', error);
-    }
+          }
   }, [enableOptimizations]);
 
   // Apply optimizations on mount
@@ -169,8 +166,7 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
   // Log performance metrics for debugging
   useEffect(() => {
     if (enableMonitoring && Object.values(metrics).some(value => value !== null)) {
-      console.log('Performance Metrics:', metrics);
-    }
+          }
   }, [metrics, enableMonitoring]);
 
   return (

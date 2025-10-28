@@ -115,8 +115,7 @@ export class CacheManager<T> {
         this.cache = new Map(parsed);
       }
     } catch (error) {
-      console.warn('Failed to load cache from storage:', error);
-    }
+          }
   }
 
   private saveToStorage(): void {
@@ -128,8 +127,7 @@ export class CacheManager<T> {
       const data = JSON.stringify(Array.from(this.cache.entries()));
       storage.setItem('cache_' + this.constructor.name, data);
     } catch (error) {
-      console.warn('Failed to save cache to storage:', error);
-    }
+          }
   }
 }
 

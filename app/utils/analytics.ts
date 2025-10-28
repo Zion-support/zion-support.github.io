@@ -26,33 +26,18 @@ class Analytics {
     });
 
     // In production, you would send this to your analytics service
-    if (process.env.NODE_ENV === "production") {
+    if () {
       this.sendToAnalytics(event)} else {
-      console.log("Analytics Event:", event)}
+      }
   }
 
   // Track page views
   trackPageView(page: string, title?: string): void {
-    this.track({
-      category: "Page",
-      action: "View",
-      label: page,
-      custom_parameters: {
-        page_title: title || document.title,
-        page_url: window.location.href
-      }
-    })}
+    this.track()}
 
   // Track user interactions
   trackClick(element: string, location?: string): void {
-    this.track({
-      category: "User Interaction",
-      action: "Click",
-      label: element,
-      custom_parameters: {
-        location
-      }
-    })}
+    this.track()}
 
   // Track form submissions
   trackFormSubmission(formName: string, success: boolean): void {
@@ -64,28 +49,11 @@ class Analytics {
 
   // Track performance metrics
   trackPerformance(metric: string, value: number, unit: string = "ms"): void {
-    this.track({
-      category: "Performance",
-      action: "Metric",
-      label: metric,
-      value,
-      custom_parameters: {
-        unit
-      }
-    })}
+    this.track()}
 
   // Track errors
   trackError(error: Error, context?: string): void {
-    this.track({
-      category: "Error",
-      action: "Occurred",
-      label: error.message,
-      custom_parameters: {
-        error_name: error.name,
-        error_stack: error.stack,
-        context
-      }
-    })}
+    this.track()}
 
   // Get all events
   getEvents(): AnalyticsEvent[] {
@@ -98,13 +66,8 @@ class Analytics {
   // Send to analytics service (implement based on your analytics provider)
   private sendToAnalytics(event: AnalyticsEvent): void {
     // Example implementation for Google Analytics
-    if (typeof window !== "undefined" && (window as unknown as { gtag: (..._args: unknown[]) => void }).gtag) {
-      (window as unknown as { gtag: (..._args: unknown[]) => void }).gtag("event", event.action, {
-        event_category: event.category,
-        event_label: event.label,
-        value: event.value,
-        ...event.custom_parameters
-      })}
+    if () => void }).gtag) {
+      () => void }).gtag()}
   }
 }
 

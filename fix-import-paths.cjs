@@ -1,67 +1,47 @@
 const fs = require('fs');
 const path = require('path');
+const glob = require('glob');
 
-// Function to fix import paths in a file
-function fixImportPaths(filePath) {
+// Find all TypeScript/TSX files in the app directory
+const files = glob.sync('app/**/*.{ts,tsx}', { cwd: '/workspace' });
+
+console.log(`Found ${files.length} files to process`);
+
+let fixedCount = 0;
+
+files.forEach(filePath => {
+  const fullPath = path.join('/workspace', filePath);
+  
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content = fs.readFileSync(fullPath, 'utf8');
     let modified = false;
     
-    // Calculate the correct relative path to components
-    const relativePath = path.relative(path.dirname(filePath), path.join(__dirname, 'app', 'components'));
-    const correctPath = relativePath.replace(/\\/g, '/');
-    
-    // Fix Navigation imports
-    if (content.includes('from "../components/Navigation"')) {
-      content = content.replace(/from "\.\.\/components\/Navigation"/g, `from "${correctPath}/Navigation"`);
+    // Fix Navigation import paths
+    if (content.includes("import Navigation from '../components/Navigation'")) {
+      content = content.replace(/import Navigation from '\.\.\/components\/Navigation'/g, "import Navigation from '@/components/Navigation'");
       modified = true;
     }
     
-    if (content.includes('from "../components/Footer"')) {
-      content = content.replace(/from "\.\.\/components\/Footer"/g, `from "${correctPath}/Footer"`);
+    // Fix Footer import paths
+    if (content.includes("import Footer from '../components/Footer'")) {
+      content = content.replace(/import Footer from '\.\.\/components\/Footer'/g, "import Footer from '@/components/Footer'");
+      modified = true;
+    }
+    
+    // Fix ErrorBoundary import paths
+    if (content.includes("import { ErrorBoundary } from '../components/ErrorBoundary'")) {
+      content = content.replace(/import { ErrorBoundary } from '\.\.\/components\/ErrorBoundary'/g, "import { ErrorBoundary } from '@/components/ErrorBoundary'");
       modified = true;
     }
     
     if (modified) {
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed import paths: ${filePath}`);
-      return true;
+      fs.writeFileSync(fullPath, content);
+      console.log(`Fixed: ${filePath}`);
+      fixedCount++;
     }
-    return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
+    console.error(`Error processing ${filePath}:`, error.message);
   }
-}
+});
 
-// Find all .tsx files in the app directory
-function findTsxFiles(dir) {
-  const files = [];
-  const items = fs.readdirSync(dir);
-  
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-    
-    if (stat.isDirectory()) {
-      files.push(...findTsxFiles(fullPath));
-    } else if (item.endsWith('.tsx')) {
-      files.push(fullPath);
-    }
-  }
-  
-  return files;
-}
-
-// Main execution
-const appDir = path.join(__dirname, 'app');
-const tsxFiles = findTsxFiles(appDir);
-
-let fixedCount = 0;
-for (const file of tsxFiles) {
-  if (fixImportPaths(file)) {
-    fixedCount++;
-  }
-}
-
-console.log(`Fixed ${fixedCount} files with import path issues`);
+console.log(`Fixed ${fixedCount} files`);

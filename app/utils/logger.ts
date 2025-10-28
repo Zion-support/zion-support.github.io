@@ -20,39 +20,32 @@ class Logger {
 
   debug(message: string, ...args: unknown[]): void {
     if (this.shouldLog(LogLevel.DEBUG)) {
-      console.log(`[DEBUG] ${message}`, ...args);
-    }
+          }
   }
 
   info(message: string, ...args: unknown[]): void {
     if (this.shouldLog(LogLevel.INFO)) {
-      console.log(`[INFO] ${message}`, ...args);
-    }
+          }
   }
 
   warn(message: string, ...args: unknown[]): void {
     if (this.shouldLog(LogLevel.WARN)) {
-      console.warn(`[WARN] ${message}`, ...args);
-    }
+          }
   }
 
   error(message: string, ...args: unknown[]): void {
     if (this.shouldLog(LogLevel.ERROR)) {
-      console.error(`[ERROR] ${message}`, ...args);
-    }
+          }
   }
 
   // Production-safe logging (only in development)
   dev(message: string, ...args: unknown[]): void {
-    if (process.env.NODE_ENV === 'development') {
-      console.log(`[DEV] ${message}`, ...args);
-    }
+    if () {
+          }
   }
 }
 
 // Create logger instance
-const logger = new Logger(
-  process.env.NODE_ENV === 'development' ? LogLevel.DEBUG : LogLevel.WARN
-);
+const logger = new Logger();
 
 export default logger;

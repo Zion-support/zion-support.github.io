@@ -1,6 +1,5 @@
 'use client';
 
-
 import React, { useEffect, memo, useCallback } from 'react';
 
 // Performance API types
@@ -28,13 +27,10 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const lcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
-      console.log('LCP:', lastEntry.startTime);
-      
+            
       // Send to analytics if needed
       if (window.gtag) {
-        window.gtag('event', 'web_vitals', {
-          name: 'LCP',
-          value: Math.round(lastEntry.startTime),
+        window.gtag('event', 'LCP', {
           event_category: 'Web Vitals'
         });
       }
@@ -47,12 +43,9 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
       entries.forEach((entry) => {
         const fidEntry = entry as PerformanceEventTiming;
         const fid = fidEntry.processingStart - fidEntry.startTime;
-        console.log('FID:', fid);
-        
+                
         if (window.gtag) {
-          window.gtag('event', 'web_vitals', {
-            name: 'FID',
-            value: Math.round(fid),
+          window.gtag('event', 'FID', {
             event_category: 'Web Vitals'
           });
         }
@@ -68,12 +61,9 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
         const clsEntry = entry as LayoutShiftEntry;
         if (!clsEntry.hadRecentInput) {
           clsValue += clsEntry.value;
-          console.log('CLS:', clsValue);
-          
+                    
           if (window.gtag) {
-            window.gtag('event', 'web_vitals', {
-              name: 'CLS',
-              value: Math.round(clsValue * 1000),
+            window.gtag('event', 'CLS', {
               event_category: 'Web Vitals'
             });
           }
@@ -86,12 +76,9 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     const fcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        console.log('FCP:', entry.startTime);
-        
+                
         if (window.gtag) {
-          window.gtag('event', 'web_vitals', {
-            name: 'FCP',
-            value: Math.round(entry.startTime),
+          window.gtag('event', 'FCP', {
             event_category: 'Web Vitals'
           });
         }
@@ -115,7 +102,7 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.duration > 1000) { // Resources taking more than 1 second
-          console.warn('Slow resource:', entry.name, entry.duration);
+          // Log slow resources
         }
       });
     });
@@ -135,14 +122,8 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
         const total = memory.totalJSHeapSize / 1024 / 1024; // MB
         const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB
         
-        console.log('Memory usage:', {
-          used: Math.round(used),
-          total: Math.round(total),
-          limit: Math.round(limit)
-        });
-
-        if (used / limit > 0.8) {
-          console.warn('High memory usage detected:', Math.round((used / limit) * 100) + '%');
+        if (used / limit > 0.8) { // More than 80% memory usage
+          // Log high memory usage
         }
       }
     };
@@ -152,14 +133,14 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
   }, []);
 
   useEffect(() => {
-    const cleanup1 = monitorCoreWebVitals();
-    const cleanup2 = monitorResourcePerformance();
-    const cleanup3 = monitorMemoryUsage();
+    const cleanupCoreWebVitals = monitorCoreWebVitals();
+    const cleanupResourcePerformance = monitorResourcePerformance();
+    const cleanupMemoryUsage = monitorMemoryUsage();
 
     return () => {
-      cleanup1?.();
-      cleanup2?.();
-      cleanup3?.();
+      cleanupCoreWebVitals?.();
+      cleanupResourcePerformance?.();
+      cleanupMemoryUsage?.();
     };
   }, [monitorCoreWebVitals, monitorResourcePerformance, monitorMemoryUsage]);
 

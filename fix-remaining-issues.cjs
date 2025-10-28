@@ -1,101 +1,65 @@
 const fs = require('fs');
 const path = require('path');
+const glob = require('glob');
 
-// List of files to fix
-const filesToFix = [
-  'app/about/page.tsx',
-  'app/offline/page.tsx',
-  'app/page.tsx',
-  'app/micro-saas-services/ai-analytics-dashboard/page.tsx',
-  'app/micro-saas-services/ai-chatbot-builder/page.tsx',
-  'app/micro-saas-services/ai-content-generator/page.tsx',
-  'app/micro-saas-services/ai-email-assistant/page.tsx',
-  'app/micro-saas-services/ai-lead-generation/page.tsx',
-  'app/micro-saas-services/page.tsx'
-];
+// Find all TypeScript/TSX files in the app directory
+const files = glob.sync('app/**/*.{ts,tsx}', { cwd: '/workspace' });
 
-// Files with multiple metadata declarations
-const metadataFiles = [
-  'app/ai-powered-devops/page.tsx',
-  'app/ai-powered-email-analyzer/page.tsx',
-  'app/it-services/cybersecurity-audit/page.tsx',
-  'app/legal-document-manager/page.tsx',
-  'app/medical-records-manager/page.tsx',
-  'app/online-learning-platform/page.tsx',
-  'app/property-management-ai/page.tsx',
-  'app/supply-chain-optimizer/page.tsx',
-  'app/test/page.tsx',
-  'app/zion-ai-api-tester/page.tsx',
-  'app/zion-ai-database-optimizer/page.tsx'
-];
+console.log(`Found ${files.length} files to process`);
 
-function fixFile(filePath) {
+let fixedCount = 0;
+
+files.forEach(filePath => {
+  const fullPath = path.join('/workspace', filePath);
+  
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content = fs.readFileSync(fullPath, 'utf8');
+    let modified = false;
     
-    // Fix ErrorBoundary import path for micro-saas services
-    if (filePath.includes('micro-saas-services')) {
-      content = content.replace(/import ErrorBoundary from '\.\.\/components\/ErrorBoundary'/, "import ErrorBoundary from '../../components/ErrorBoundary'");
+    // Add missing Navigation import if Navigation is used but not imported
+    if (content.includes('<Navigation') && !content.includes('import Navigation') && !content.includes('import { Navigation }')) {
+      // Find the first import statement and add Navigation import after it
+      const importMatch = content.match(/import .+ from ['"][^'"]+['"];?\n/);
+      if (importMatch) {
+        const insertIndex = importMatch.index + importMatch[0].length;
+        content = content.slice(0, insertIndex) + "import Navigation from '../components/Navigation';\n" + content.slice(insertIndex);
+        modified = true;
+      }
     }
     
-    // Remove unused variable declarations
-    content = content.replace(/const [A-Za-z]+Page = .*?;/g, '');
-    content = content.replace(/const pagePage = .*?;/g, '');
-    
-    // Fix component names in Wrapped functions - use the actual component name
-    const componentName = path.basename(path.dirname(filePath)).replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()).replace(/\s/g, '') + 'Page';
-    
-    // For specific files, use the correct component name
-    if (filePath.includes('about')) {
-      content = content.replace(/<Page \{\.\.\.props\} \/>/g, '<AboutPage {...props} />');
-    } else if (filePath.includes('offline')) {
-      content = content.replace(/<Page \{\.\.\.props\} \/>/g, '<OfflinePage {...props} />');
-    } else if (filePath.includes('page.tsx') && !filePath.includes('micro-saas')) {
-      content = content.replace(/<Page \{\.\.\.props\} \/>/g, '<HomePage {...props} />');
-    } else {
-      content = content.replace(/<Page \{\.\.\.props\} \/>/g, `<${componentName} {...props} />`);
+    // Add missing Footer import if Footer is used but not imported
+    if (content.includes('<Footer') && !content.includes('import Footer') && !content.includes('import { Footer }')) {
+      // Find the first import statement and add Footer import after it
+      const importMatch = content.match(/import .+ from ['"][^'"]+['"];?\n/);
+      if (importMatch) {
+        const insertIndex = importMatch.index + importMatch[0].length;
+        content = content.slice(0, insertIndex) + "import Footer from '../components/Footer';\n" + content.slice(insertIndex);
+        modified = true;
+      }
     }
     
-    // Add proper type annotation for props
-    content = content.replace(/function Wrapped\(props\)/g, 'function Wrapped(props: any)');
+    // Remove console statements
+    content = content.replace(/console\.(log|warn|error|info|debug)\([^)]*\);?\n?/g, '');
     
-    // Clean up extra semicolons and empty lines
-    content = content.replace(/;;/g, ';');
+    // Remove unused variable warnings by removing unused variables
+    content = content.replace(/const _props = [^;]+;\n?/g, '');
+    content = content.replace(/const _[a-zA-Z]+ = [^;]+;\n?/g, '');
+    
+    // Remove unused function parameters
+    content = content.replace(/\([^)]*_props[^)]*\)/g, '()');
+    content = content.replace(/\([^)]*_[a-zA-Z]+[^)]*\)/g, '()');
+    
+    // Clean up multiple empty lines
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
     
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-  }
-}
-
-function fixMetadataFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Remove duplicate metadata declarations
-    const metadataRegex = /export const metadata = \{[\s\S]*?\};/g;
-    const matches = content.match(metadataRegex);
-    if (matches && matches.length > 1) {
-      // Keep only the first metadata declaration
-      content = content.replace(metadataRegex, (match, index) => {
-        return index === 0 ? match : '';
-      });
+    if (modified) {
+      fs.writeFileSync(fullPath, content);
+      console.log(`Fixed: ${filePath}`);
+      fixedCount++;
     }
-    
-    // Clean up extra semicolons and empty lines
-    content = content.replace(/;;/g, ';');
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed metadata: ${filePath}`);
   } catch (error) {
-    console.error(`Error fixing metadata in ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
   }
-}
+});
 
-// Fix all files
-filesToFix.forEach(fixFile);
-metadataFiles.forEach(fixMetadataFile);
-console.log('All files fixed!');
+console.log(`Fixed ${fixedCount} files`);

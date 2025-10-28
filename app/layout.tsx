@@ -1,9 +1,9 @@
 import React, { ReactNode } from 'react';
+import Footer from '@/components/Footer';
+import Navigation from '@/components/Navigation';
 import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import Navigation from 'components/Navigation';
-import Footer from 'components/Footer';
 import SkipLink from './components/SkipLink';
 import ClientComponents from './components/ClientComponents';
 import Analytics from './components/Analytics';
