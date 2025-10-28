@@ -14,7 +14,7 @@ interface PerformanceMetrics {
   networkLatency: number;
 }
 
-export const useEnhancedPerformance = (options: PerformanceOptions = {}) => {
+export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) => {
   const { component = 'unknown', trackErrors = true, trackPerformance = true, trackAnalytics = false } = options;
   
   // Use the options to avoid unused variable warnings
@@ -120,7 +120,7 @@ export const useEnhancedPerformance = (options: PerformanceOptions = {}) => {
     const timeoutId = setTimeout(checkOptimization, 1000);
 
     return () => clearTimeout(timeoutId);
-  }, [metrics.loadTime, metrics.renderTime, metrics.memoryUsage, metrics.networkLatency]);
+  }, [metrics.loadTime, metrics.renderTime, metrics.memoryUsage, metrics.networkLatency, trackPerformance]);
 
   const optimizePerformance = useCallback(() => {
     if (typeof document === 'undefined') return;
