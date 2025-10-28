@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface ContentStatisticsProps {
-  // Add props here
+  children?: React.ReactNode;
 }
 
 export default function ContentStatistics(_props: ContentStatisticsProps) {
