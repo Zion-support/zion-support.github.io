@@ -3,6 +3,16 @@
 import React, { useEffect, useState, memo } from 'react';
 // import type { PerformanceEventTiming, LayoutShift } from '../types/performance';
 
+interface PerformanceEventTiming extends PerformanceEntry {
+  processingStart: number;
+  processingEnd: number;
+}
+
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+}
+
 interface PerformanceMetrics {
   lcp: number | null;
   fid: number | null;
