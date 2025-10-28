@@ -1,6 +1,6 @@
 import React from 'react';
 import { Inter } from 'next/font/google';
-import type { Metadata, Viewport } from 'next';
+// Metadata and Viewport are exported from the metadata file
 import './globals.css';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
