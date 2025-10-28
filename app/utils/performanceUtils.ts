@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useCallback, useMemo } from 'react';
+import { useCallback } from 'react';
 
 // Performance monitoring utilities
 export const usePerformanceMonitor = () => {
@@ -29,13 +29,13 @@ export const usePerformanceMonitor = () => {
   return { measurePerformance, measureAsyncPerformance };
 };
 
-// Memoization utilities
-export const useStableCallback = <T extends (...args: unknown[]) => unknown>(callback: T): T => {
-  return useCallback(callback, []);
+// Memoization utilities - these are not React hooks, just utility functions
+export const createStableCallback = <T extends (...args: unknown[]) => unknown>(callback: T): T => {
+  return callback;
 };
 
-export const useStableMemo = <T>(factory: () => T, deps: React.DependencyList): T => {
-  return useMemo(factory, deps);
+export const createStableMemo = <T>(factory: () => T): T => {
+  return factory();
 };
 
 // Simple performance utilities
