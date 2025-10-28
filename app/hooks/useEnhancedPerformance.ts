@@ -26,6 +26,8 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     networkLatency: 0
   });
   
+  const mountTimeRef = useRef<number>(0);
+  const renderCountRef = useRef<number>(0);
   // Refs for tracking
   const startTimeRef = useRef<number>(0);
   const renderStartRef = useRef<number>(0);
@@ -48,10 +50,9 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
       requestAnimationFrame(() => {
         const renderTime = performance.now() - renderStart;
         setMetrics(prev => ({ ...prev, renderTime }));
-      };
+      });
       
       // Use requestAnimationFrame to track render completion
-      requestAnimationFrame(handleRender);
     }
   }, [options.trackPerformance]);
   

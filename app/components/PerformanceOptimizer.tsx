@@ -81,6 +81,15 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
       }
+    };
+
+    // Call the functions
+    optimizeImages();
+    monitorPerformance();
+
+    // Optimize all images
+    const images = document.querySelectorAll('img');
+    images.forEach((img) => {
       if (!img.decoding) {
         img.decoding = 'async';
       }

@@ -1,4 +1,7 @@
 import React, { ReactNode } from 'react';
+import { Inter } from 'next/font/google';
+
+const inter = Inter({ subsets: ['latin'] });
 import SkipLink from './components/SkipLink';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';

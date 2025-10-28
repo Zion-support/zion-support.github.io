@@ -20,143 +20,40 @@ const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({
   const measurePerformance = useCallback(() => {
     if (typeof window === 'undefined') return;
 
-    const observer = new PerformanceObserver((list) => {
-      for (const entry of list.getEntries()) {
-        if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
-          setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
-        } else if (entry.entryType === 'largest-contentful-paint') {
-          setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
-        } else if (entry.entryType === 'first-input') {
-          const fidEntry = entry as any;
-          setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
-        } else if (entry.entryType === 'layout-shift') {
-          const clsEntry = entry as any;
-          if (!clsEntry.hadRecentInput) {
-            setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + clsEntry.value }));
-          }
-        } else if (entry.entryType === 'navigation') {
-          const navEntry = entry as any;
-          setMetrics(prev => ({ ...prev, ttfb: navEntry.responseStart - navEntry.requestStart }));
-        }
-      }
-    });
-
-  // Implement lazy loading for images
-  const implementLazyLoading = useCallback(() => {
-    if ('IntersectionObserver' in window) {
-      const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
-            if (img.dataset.src) {
-              img.src = img.dataset.src;
-              img.classList.remove('lazy');
-              observer.unobserve(img);
-            }
-          }
-        });
-      });
-
-      document.querySelectorAll('img[data-src]').forEach(img => {
-        imageObserver.observe(img);
-      });
+    // Measure FCP
+    const fcpEntry = performance.getEntriesByName('first-contentful-paint')[0];
+    if (fcpEntry) {
+      setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
     }
-  }, []);
 
-  // Optimize scroll performance
-  const optimizeScrollPerformance = useCallback(() => {
-    let ticking = false;
-    
-    const updateScrollPosition = () => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          // Update scroll position
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
-
-    window.addEventListener('scroll', updateScrollPosition, { passive: true });
-    
-    return () => {
-      window.removeEventListener('scroll', updateScrollPosition);
-    };
-  }, []);
-
-  // Add resource hints
-  const addResourceHints = useCallback(() => {
-    const hints = [
-      { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },
-      { rel: 'dns-prefetch', href: '//cdnjs.cloudflare.com' },
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
-    ];
-
-    hints.forEach(hint => {
-      const link = document.createElement('link');
-      Object.assign(link, hint);
-      document.head.appendChild(link);
-    });
-  }, []);
-
-  // Monitor Core Web Vitals
-  const monitorCoreWebVitals = useCallback(() => {
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
-        list.getEntries().forEach((entry) => {
-          if (entry.entryType === 'largest-contentful-paint') {
-            setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
-          }
-          if (entry.entryType === 'first-input') {
-            const fidEntry = entry as PerformanceEventTiming;
-            const fid = fidEntry.processingStart - fidEntry.startTime;
-            setMetrics(prev => ({ ...prev, fid }));
-          }
-          if (entry.entryType === 'layout-shift') {
-            const clsEntry = entry as LayoutShift;
-            setMetrics(prev => ({ ...prev, cls: clsEntry.value }));
-          }
-          if (entry.entryType === 'paint') {
-            if (entry.name === 'first-contentful-paint') {
-              setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
-            }
-          }
-        });
-      });
-
-      try {
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
-      } catch { /* Handle error */ }
+    // Measure LCP
+    const lcpEntry = performance.getEntriesByName('largest-contentful-paint')[0];
+    if (lcpEntry) {
+      setMetrics(prev => ({ ...prev, lcp: lcpEntry.startTime }));
     }
-  }, []);
 
-  // Monitor TTFB
-  const monitorTTFB = useCallback(() => {
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
-        list.getEntries().forEach((entry) => {
-          if (entry.entryType === 'navigation') {
-            const navEntry = entry as PerformanceNavigationTiming;
-            setMetrics(prev => ({ ...prev, ttfb: navEntry.responseStart - navEntry.requestStart }));
-          }
-        });
-      });
+    // Measure FID
+    const fidEntry = performance.getEntriesByName('first-input')[0];
+    if (fidEntry) {
+      setMetrics(prev => ({ ...prev, fid: (fidEntry as any).processingStart - fidEntry.startTime }));
+    }
 
-      try {
-        observer.observe({ entryTypes: ['navigation'] });
-      } catch { /* Handle error */ }
+    // Measure CLS
+    const clsEntry = performance.getEntriesByName('layout-shift')[0];
+    if (clsEntry) {
+      setMetrics(prev => ({ ...prev, cls: (clsEntry as any).value }));
+    }
+
+    // Measure TTFB
+    const ttfbEntry = performance.getEntriesByName('navigation')[0];
+    if (ttfbEntry) {
+      setMetrics(prev => ({ ...prev, ttfb: (ttfbEntry as any).responseStart - (ttfbEntry as any).requestStart }));
     }
   }, []);
 
   useEffect(() => {
-    const cleanup = measurePerformance();
-    return cleanup;
-  }, [preloadCriticalResources, implementLazyLoading, addResourceHints, monitorCoreWebVitals, monitorTTFB, optimizeScrollPerformance]);
-
-  // Log metrics for debugging (remove in production)
-  useEffect(() => {
-    if (process.env.NODE_ENV === 'development') { /* empty */ }
-  }, [metrics]);
+    measurePerformance();
+  }, [measurePerformance]);
 
   return (
     <div className={`consolidated-performance ${className}`}>
