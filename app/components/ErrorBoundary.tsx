@@ -1,3 +1,4 @@
+import React from 'react';
     super(props);
     this.state = { hasError: false, retryCount: 0 };
   }

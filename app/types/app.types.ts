@@ -1,12 +1,10 @@
-export interface User {
-  id: string;
+export interface User{id: string;
   email: string;
-  name: string;
-  role: 'admin' | 'user' | 'guest';
+  name: string;}
+  role: 'admin' | 'user' | 'guest';}
 }
 
-export interface Service {
-  id: string;
+export interface Service{id: string;
   title: string;
   description: string;
   shortDescription: string;
@@ -14,16 +12,15 @@ export interface Service {
   features: string[];
   pricing: {
     basic: number;
-    pro: number;
-    enterprise: number;
+    pro: number;}
+    enterprise: number;}
   }
   benefits: string[];
   useCases: string[];
   marketPrice: string;
-  contactInfo: {
-    phone: string;
+  contactInfo: {phone: string;
     email: string;
-    website: string;
+    website: string;}
   };
   link: string;
 }

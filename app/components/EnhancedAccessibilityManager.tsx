@@ -4,8 +4,7 @@ import ErrorBoundary from '../components/ErrorBoundary';
 
     // Check for missing form labels
     const inputs = document.querySelectorAll('input, textarea, select');
-    inputs.forEach((input, index) => {
-      const id = input.getAttribute('id');
+    inputs.forEach((input, index) => {const id = input.getAttribute('id');
       const ariaLabel = input.getAttribute('aria-label');
       const ariaLabelledBy = input.getAttribute('aria-labelledby');
       
@@ -16,69 +15,65 @@ import ErrorBoundary from '../components/ErrorBoundary';
     let lastLevel = 0;
     headings.forEach((heading) => {
       const level = parseInt(heading.tagName.charAt(1));
-      if (level > lastLevel + 1) {
+      if (level > lastLevel + 1) {}
         }
       lastLevel = level;
     });
 
     // Check for sufficient color contrast (basic check)
     const elements = document.querySelectorAll('*');
-    elements.forEach((element) => {
-      const styles = window.getComputedStyle(element);
+    elements.forEach((element) => {const styles = window.getComputedStyle(element);
       const color = styles.color;
       const backgroundColor = styles.backgroundColor;
       
       if (color && backgroundColor && color !== 'rgba(0, 0, 0, 0)' && backgroundColor !== 'rgba(0, 0, 0, 0)') {
         // Basic contrast check - in a real implementation, you'd use a proper contrast calculation
-        if (color === backgroundColor) {
+        if (color === backgroundColor) {}
   }, [enableAutoDetection]);
 
   // Add keyboard shortcuts
-  const addKeyboardShortcuts = useCallback(() => {
-    if (typeof window === 'undefined' || !enableKeyboardShortcuts) return;
+  const addKeyboardShortcuts = useCallback(() => {if (typeof window === 'undefined' || !enableKeyboardShortcuts) return;
 
     const handleKeyDown = (event: KeyboardEvent) => {
+  
       // Skip if user is typing in an input
-      if (event.target instanceof HTMLInputElement || 
-          event.target instanceof HTMLTextAreaElement || 
+      if(event.target instanceof HTMLInputElement || )
+          event.target instanceof HTMLTextAreaElement || )
           event.target instanceof HTMLSelectElement) {
-        return;
+}
+        return;}
       }
 
       // Alt + M: Focus main content
-      if (event.altKey && event.key === 'm') {
-        event.preventDefault();
+      if (event.altKey && event.key === 'm') {event.preventDefault();
         const main = document.querySelector('main');
         if (main) {
-          main.focus();
+          main.focus();}
         }
 
       // Alt + N: Focus navigation
-      if (event.altKey && event.key === 'n') {
-        event.preventDefault();
+      if (event.altKey && event.key === 'n') {event.preventDefault();
         const nav = document.querySelector('nav');
         if (nav) {
           const firstLink = nav.querySelector('a');
           if (firstLink) {
-            firstLink.focus();
+            firstLink.focus();}
           }
 
       // Alt + F: Focus footer
-      if (event.altKey && event.key === 'f') {
-        event.preventDefault();
+      if (event.altKey && event.key === 'f') {event.preventDefault();
         const footer = document.querySelector('footer');
         if (footer) {
           const firstLink = footer.querySelector('a');
           if (firstLink) {
-            firstLink.focus();
+            firstLink.focus();}
           }
 
       // Alt + S: Skip to content
-      if (event.altKey && event.key === 's') {
-        event.preventDefault();
+      if (event.altKey && event.key === 's') {event.preventDefault();
         const skipLink = document.querySelector('[href="#main-content"]');
         if (skipLink instanceof HTMLElement) {
-          skipLink.click();
+          skipLink.click();}
         };
 
     document.addEventListener('keydown', handleKeyDown);
@@ -86,28 +81,23 @@ import ErrorBoundary from '../components/ErrorBoundary';
   }, [enableKeyboardShortcuts]);
 
   // Enhance focus management
-  const enhanceFocusManagement = useCallback(() => {
-    if (typeof window === 'undefined') return;
+  const enhanceFocusManagement = useCallback(() => {if (typeof window === 'undefined') return;
 
     // Add focus indicators
     const style = document.createElement('style');
     style.textContent = `
-      *:focus {
-        outline: 2px solid #3b82f6 !important;
-        outline-offset: 2px !important;
+      *:focus{outline: 2px solid #3b82f6 !important;}
+        outline-offset: 2px !important;}
       }
       
-      .focus-visible {
-        outline: 2px solid #3b82f6 !important;
-        outline-offset: 2px !important;
+      .focus-visible{outline: 2px solid #3b82f6 !important;}
+        outline-offset: 2px !important;}
       }
     `;
     document.head.appendChild(style);
 
     // Trap focus in modals
-    const trapFocus = (element: HTMLElement) => {
-      const focusableElements = element.querySelectorAll(
-        'a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select'
+    const trapFocus = (element: HTMLElement) => {const focusableElements = element.querySelectorAll('a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select')
       );
       const firstElement = focusableElements[0] as HTMLElement;
       const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
@@ -117,11 +107,11 @@ import ErrorBoundary from '../components/ErrorBoundary';
           if (e.shiftKey) {
             if (document.activeElement === firstElement) {
               lastElement.focus();
-              e.preventDefault();
-            } else {
-            if (document.activeElement === lastElement) {
-              firstElement.focus();
-              e.preventDefault();
+}
+              e.preventDefault();}
+            } else{if (document.activeElement === lastElement) {
+              firstElement.focus();}
+              e.preventDefault();}
             };
 
       element.addEventListener('keydown', handleTabKey);
@@ -129,13 +119,12 @@ import ErrorBoundary from '../components/ErrorBoundary';
     };
 
     // Apply focus trap to modals
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
+    const observer = new MutationObserver((mutations) => {mutations.forEach((mutation) => {
         mutation.addedNodes.forEach((node) => {
           if (node instanceof HTMLElement) {
             const modal = node.querySelector('[role="dialog"]');
             if (modal instanceof HTMLElement) {
-              trapFocus(modal);
+              trapFocus(modal);}
             });
       });
     });
@@ -145,8 +134,7 @@ import ErrorBoundary from '../components/ErrorBoundary';
   }, []);
 
   // Add ARIA live regions for announcements
-  const addLiveRegions = useCallback(() => {
-    if (typeof window === 'undefined') return;
+  const addLiveRegions = useCallback(() => {if (typeof window === 'undefined') return;
 
     // Create live region for announcements
     const liveRegion = document.createElement('div');
@@ -162,18 +150,17 @@ import ErrorBoundary from '../components/ErrorBoundary';
     alertRegion.setAttribute('aria-atomic', 'true');
     alertRegion.className = 'sr-only';
     alertRegion.id = 'alert-region';
-    document.body.appendChild(alertRegion);
+    document.body.appendChild(alertRegion);}
   }, []);
 
-  useEffect(() => {
-    detectAccessibilityIssues();
+  useEffect(() => {detectAccessibilityIssues();
     const cleanup = addKeyboardShortcuts();
     enhanceFocusManagement();
     addLiveRegions();
 
-    return cleanup;
+    return cleanup;}
   }, [detectAccessibilityIssues, addKeyboardShortcuts, enhanceFocusManagement, addLiveRegions]);
 
-  return (
+  return()
   );
 }

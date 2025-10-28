@@ -1,6 +1,5 @@
-export const viewport = {
-  width: 'device-width',
+export const viewport = {width: 'device-width',
   initialScale: 1,
   maximumScale: 1,
-  userScalable: false,
+  userScalable: false,}
 };

@@ -2,10 +2,9 @@
 
 import React from 'react';
 
-const AnimatedCounter: React.FC = () => {
-  return (
-    <div className="animatedcounter-component">{/* AnimatedCounter component implementation */}
-    </div>
+const AnimatedCounter: React.FC = () => {}
+  return(<div className="animatedcounter-component">{/* AnimatedCounter component implementation */})</div>
+    </div>)
   );
 };
 

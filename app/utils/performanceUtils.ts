@@ -1,58 +1,50 @@
+import React from 'react';
 'use client';
 
 import { useCallback } from 'react';
 
 // Performance monitoring utilities
-export const usePerformanceMonitor = () => {
-  const measurePerformance = useCallback((name: string, fn: () => void) => {
+export const usePerformanceMonitor = () => {const measurePerformance = useCallback((name: string, fn: () => void) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       const start = performance.now();
       fn();
-      const end = performance.now();
+}
+      const end = performance.now();}
       console.log(`${name} took ${end - start} milliseconds`);
-    } else {
-      fn();
+    } else{fn();}
     }, []);
 
-  const measureAsyncPerformance = useCallback(async (name: string, fn: () => Promise<void>) => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
+  const measureAsyncPerformance = useCallback(async (name: string, fn: () => Promise<void>) => {if (typeof window !== 'undefined' && 'performance' in window) {
       const start = performance.now();
       await fn();
-      const end = performance.now();
+      const end = performance.now();}
       console.log(`${name} took ${end - start} milliseconds`);
-    } else {
-      await fn();
+    } else{await fn();}
     }, []);
 
   return { measurePerformance, measureAsyncPerformance };
 };
 
-// Memoization utilities - these are not React hooks, just utility functions
-export const createStableCallback = <T extends (...args: unknown[]) => unknown>(callback: T): T => {
-  return callback;
+// Memoization utilities - these are not React hooks, just utility functions</void>
+export const createStableCallback = <T extends (...args: unknown[]) =>unknown>(callback: T): T => {return callback;}
 };
-
-export const createStableMemo = <T>(factory: () => T): T => {
-  return factory();
+</T>
+export const createStableMemo = <T>(factory: () => T): T => {return factory();}
 };
 
 // Simple performance utilities
-export const measurePerformance = (name: string, fn: () => void) => {
-  if (typeof window !== 'undefined' && 'performance' in window) {
+export const measurePerformance = (name: string, fn: () => void) => {if (typeof window !== 'undefined' && 'performance' in window) {
     const start = performance.now();
     fn();
-    const end = performance.now();
+    const end = performance.now();}
     console.log(`${name} took ${end - start} milliseconds`);
-  } else {
-    fn();
+  } else{fn();}
   };
-
-export const measureAsyncPerformance = async (name: string, fn: () => Promise<void>) => {
-  if (typeof window !== 'undefined' && 'performance' in window) {
+</T>
+export const measureAsyncPerformance = async (name: string, fn: () => Promise<void>) => {if (typeof window !== 'undefined' && 'performance' in window) {
     const start = performance.now();
     await fn();
-    const end = performance.now();
+    const end = performance.now();}
     console.log(`${name} took ${end - start} milliseconds`);
-  } else {
-    await fn();
-  };
+  } else{await fn();}
+  };</void>

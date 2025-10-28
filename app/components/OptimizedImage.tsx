@@ -1,7 +1,7 @@
+import React from 'react';
 
-  return (
-        </div>
-      </div>
-    </ErrorBoundary>
+  return (</div>)
+      </div>)
+    </ErrorBoundary>)
   );
 }

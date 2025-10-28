@@ -4,169 +4,150 @@ import React from 'react';
 import Link from 'next/link';
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react';
 
-const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear();
+const Footer: React.FC = () => {const currentYear = new Date().getFullYear();
 
-  return (
-    <footer className="bg-slate-900 border-t border-slate-700">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Company Info */}
-          <div className="space-y-4">
+  return (<footer className="bg-slate-900 border-t border-slate-700" />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">}
+          {/* Company Info */}</div>
+          <div className="space-y-4" />
             <h3 className="text-2xl font-bold text-emerald-400">Zion Tech Group</h3>
-            <p className="text-gray-300 text-sm leading-relaxed">
-              Leading provider of AI, blockchain, and 5G solutions for modern businesses.
-              We help companies transform their operations with cutting-edge technology.
+            <p className="text-gray-300 text-sm leading-relaxed" />Leading provider of AI, blockchain, and 5G solutions for modern businesses.
+              We help companies transform their operations with cutting-edge technology.</p>
             </p>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4" />
               <a
-                href="https://linkedin.com/company/zion-tech-group"
-                className="text-gray-400 hover:text-emerald-400 transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Linkedin className="h-5 w-5" />
+                href="https://linkedin.com/company/zion-tech-group" / />className="text-gray-400 hover:text-emerald-400 transition-colors" />
+                target="_blank">
+                rel="noopener noreferrer">
+              ></a>
+                <Linkedin className="h-5 w-5" / />
               </a>
               <a
-                href="https://twitter.com/ziontechgroup"
-                className="text-gray-400 hover:text-emerald-400 transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Twitter className="h-5 w-5" />
+                href="https://twitter.com/ziontechgroup" / />className="text-gray-400 hover:text-emerald-400 transition-colors" />
+                target="_blank">
+                rel="noopener noreferrer">
+              ></a>
+                <Twitter className="h-5 w-5" / />
               </a>
               <a
-                href="https://github.com/zion-tech-group"
-                className="text-gray-400 hover:text-emerald-400 transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Github className="h-5 w-5" />
+                href="https://github.com/zion-tech-group" / />className="text-gray-400 hover:text-emerald-400 transition-colors" />
+                target="_blank">
+                rel="noopener noreferrer">
+              ></a>
+                <Github className="h-5 w-5" / />
               </a>
             </div>
           </div>
 
           {/* Services */}
-          <div className="space-y-4">
+          <div className="space-y-4" />
             <h4 className="text-lg font-semibold text-white">Services</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="/ai-services"
-                  className="text-gray-300 hover:text-emerald-400 text-sm transition-colors"
+            <ul className="space-y-2" />
+              <li />
+                <Link />href="/ai-services">
+                  className="text-gray-300 hover:text-emerald-400 text-sm transition-colors" />
                 >
-                  AI Services
+                  AI Services</Link>
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/blockchain-solutions"
-                  className="text-gray-300 hover:text-emerald-400 text-sm transition-colors"
+              <li />
+                <Link />href="/blockchain-solutions">
+                  className="text-gray-300 hover:text-emerald-400 text-sm transition-colors" />
                 >
-                  Blockchain Solutions
+                  Blockchain Solutions</Link>
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/5g-solutions"
-                  className="text-gray-300 hover:text-emerald-400 text-sm transition-colors"
+              <li />
+                <Link />href="/5g-solutions">
+                  className="text-gray-300 hover:text-emerald-400 text-sm transition-colors" />
                 >
-                  5G Solutions
+                  5G Solutions</Link>
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/api-development"
-                  className="text-gray-300 hover:text-emerald-400 text-sm transition-colors"
+              <li />
+                <Link />href="/api-development">
+                  className="text-gray-300 hover:text-emerald-400 text-sm transition-colors" />
                 >
-                  API Development
+                  API Development</Link>
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/analytics"
-                  className="text-gray-300 hover:text-emerald-400 text-sm transition-colors"
+              <li />
+                <Link />href="/analytics">
+                  className="text-gray-300 hover:text-emerald-400 text-sm transition-colors" />
                 >
-                  Analytics
+                  Analytics</Link>
                 </Link>
               </li>
             </ul>
           </div>
 
           {/* Company */}
-          <div className="space-y-4">
+          <div className="space-y-4" />
             <h4 className="text-lg font-semibold text-white">Company</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="/about"
-                  className="text-gray-300 hover:text-emerald-400 text-sm transition-colors"
+            <ul className="space-y-2" />
+              <li />
+                <Link />href="/about">
+                  className="text-gray-300 hover:text-emerald-400 text-sm transition-colors" />
                 >
-                  About Us
+                  About Us</Link>
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/careers"
-                  className="text-gray-300 hover:text-emerald-400 text-sm transition-colors"
+              <li />
+                <Link />href="/careers">
+                  className="text-gray-300 hover:text-emerald-400 text-sm transition-colors" />
                 >
-                  Careers
+                  Careers</Link>
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/blog"
-                  className="text-gray-300 hover:text-emerald-400 text-sm transition-colors"
+              <li />
+                <Link />href="/blog">
+                  className="text-gray-300 hover:text-emerald-400 text-sm transition-colors" />
                 >
-                  Blog
+                  Blog</Link>
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/press"
-                  className="text-gray-300 hover:text-emerald-400 text-sm transition-colors"
+              <li />
+                <Link />href="/press">
+                  className="text-gray-300 hover:text-emerald-400 text-sm transition-colors" />
                 >
-                  Press
+                  Press</Link>
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/partners"
-                  className="text-gray-300 hover:text-emerald-400 text-sm transition-colors"
+              <li />
+                <Link />href="/partners">
+                  className="text-gray-300 hover:text-emerald-400 text-sm transition-colors" />
                 >
-                  Partners
+                  Partners</Link>
                 </Link>
               </li>
             </ul>
           </div>
 
           {/* Contact */}
-          <div className="space-y-4">
+          <div className="space-y-4" />
             <h4 className="text-lg font-semibold text-white">Contact</h4>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <Mail className="h-4 w-4 text-emerald-400 flex-shrink-0" />
-                <a
-                  href="mailto:info@ziontechgroup.com"
-                  className="text-gray-300 hover:text-emerald-400 text-sm transition-colors"
+            <div className="space-y-3" />
+              <div className="flex items-center space-x-3" />
+                <Mail className="h-4 w-4 text-emerald-400 flex-shrink-0" / />
+                <a />href="mailto:info@ziontechgroup.com">
+                  className="text-gray-300 hover:text-emerald-400 text-sm transition-colors" />
                 >
-                  info@ziontechgroup.com
+                  info@ziontechgroup.com</a>
                 </a>
               </div>
-              <div className="flex items-center space-x-3">
-                <Phone className="h-4 w-4 text-emerald-400 flex-shrink-0" />
-                <a
-                  href="tel:+1-555-0123"
-                  className="text-gray-300 hover:text-emerald-400 text-sm transition-colors"
-                >
-                  +1 (555) 012-3456
+              <div className="flex items-center space-x-3" />
+                <Phone className="h-4 w-4 text-emerald-400 flex-shrink-0" / />
+                <a />href="tel:+1-555-0123">)
+                  className="text-gray-300 hover:text-emerald-400 text-sm transition-colors">)
+                >)
+                  +1 (555) 012-3456</a>
                 </a>
               </div>
-              <div className="flex items-start space-x-3">
-                <MapPin className="h-4 w-4 text-emerald-400 flex-shrink-0 mt-0.5" />
-                <span className="text-gray-300 text-sm">
-                  123 Tech Street<br />
-                  Innovation City, IC 12345
+              <div className="flex items-start space-x-3" />
+                <MapPin className="h-4 w-4 text-emerald-400 flex-shrink-0 mt-0.5" / />
+                <span className="text-gray-300 text-sm" />
+                  123 Tech Street<br / />Innovation City, IC 12345</br>
                 </span>
               </div>
             </div>
@@ -174,29 +155,25 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-slate-700 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-gray-400 text-sm">
-              © {currentYear} Zion Tech Group. All rights reserved.
+        <div className="border-t border-slate-700 mt-8 pt-8" />
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0" />
+            <p className="text-gray-400 text-sm" />© {currentYear} Zion Tech Group. All rights reserved.</p>
             </p>
-            <div className="flex space-x-6">
-              <Link
-                href="/privacy"
-                className="text-gray-400 hover:text-emerald-400 text-sm transition-colors"
+            <div className="flex space-x-6" />
+              <Link />href="/privacy">
+                className="text-gray-400 hover:text-emerald-400 text-sm transition-colors" />
               >
-                Privacy Policy
+                Privacy Policy</Link>
               </Link>
-              <Link
-                href="/terms"
-                className="text-gray-400 hover:text-emerald-400 text-sm transition-colors"
+              <Link />href="/terms">
+                className="text-gray-400 hover:text-emerald-400 text-sm transition-colors" />
               >
-                Terms of Service
+                Terms of Service</Link>
               </Link>
-              <Link
-                href="/cookies"
-                className="text-gray-400 hover:text-emerald-400 text-sm transition-colors"
+              <Link />href="/cookies">
+                className="text-gray-400 hover:text-emerald-400 text-sm transition-colors" />
               >
-                Cookie Policy
+                Cookie Policy</Link>
               </Link>
             </div>
           </div>

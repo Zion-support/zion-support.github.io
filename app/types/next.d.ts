@@ -1,89 +1,75 @@
 // Next.js type definitions
 import React, { ReactNode } from 'react';
 import { NextPage } from 'next';
-declare module 'next' {
-  interface NextPageWithLayout<P = Record<string, unknown>, IP = P> extends NextPage<P, IP> {
-    getLayout?: (_page: React.ReactElement) => React.ReactNode;
+declare module 'next' {interface NextPageWithLayout<P = Record<string, unknown>, IP = P> extends NextPage<P, IP>{
+    getLayout?: (_page: React.ReactElement) => React.ReactNode;}
   }
 
-export interface MetadataRoute {
-  url: string;
+export interface MetadataRoute{url: string;
   lastModified?: string | Date;
-  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
-  priority?: number;
+  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';}
+  priority?: number;}
 }
 
-export interface MetadataRouteSitemap extends MetadataRoute {
-  url: string;
+export interface MetadataRouteSitemap extends MetadataRoute{url: string;
   lastModified?: string | Date;
-  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
-  priority?: number;
+  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';}
+  priority?: number;}
 }
 
 // Custom Next.js types
-export interface NextPageProps {
-
-// API route types
-export interface ApiRouteHandler {
-  (_req: Request): Promise<Response>;
+export interface NextPageProps{// API route types
+export interface ApiRouteHandler {}</P>
+  (_req: Request): Promise<Response>;}
 }
 
 // Server components types
-export interface ServerComponentProps {
-  params: { [key: string]: string }
-  searchParams: { [key: string]: string | string[] | undefined }
-
+export interface ServerComponentProps{}
+  params: {[key: string]: string }
+  searchParams: {[key: string]: string | string[] | undefined }
 // Performance API types - removed unused interface
 
 // Client components types
-export interface ClientComponentProps {
-  children?: React.ReactNode;
-  className?: string;
+export interface ClientComponentProps{children?: React.ReactNode;}
+  className?: string;}
 }
 
-// Route handlers
-export interface RouteHandler {
-  GET?: (_req: Request) => Promise<Response>;
-  POST?: (_req: Request) => Promise<Response>;
-  PUT?: (_req: Request) => Promise<Response>;
-  DELETE?: (_req: Request) => Promise<Response>;
-  PATCH?: (_req: Request) => Promise<Response>;
+// Route handlers</Response>
+export interface RouteHandler{GET?: (_req: Request) => Promise<Response>;</Response>
+  POST?: (_req: Request) => Promise<Response>;</Response>
+  PUT?: (_req: Request) => Promise<Response>;</Response>
+  DELETE?: (_req: Request) => Promise<Response>;}</Response>
+  PATCH?: (_req: Request) => Promise<Response>;}
 }
 
 // Dynamic route types
-export interface DynamicRoute {
-  params: { [key: string]: string }
-
+export interface DynamicRoute{}
+  params: {[key: string]: string }
 // Static generation types
-export interface StaticProps {
-  props: { [key: string]: unknown }
+export interface StaticProps{}
+  props: {[key: string]: unknown }
   revalidate?: number;
   notFound?: boolean;
 }
 
 // ISR types
-export interface ISRConfig {
-  revalidate: number;
-  tags?: string[];
+export interface ISRConfig{revalidate: number;}
+  tags?: string[];}
 }
 
 // Edge runtime types
-export interface EdgeRuntime {
-  runtime: 'edge';
+export interface EdgeRuntime{runtime: 'edge';}
 }
 
 // Node.js runtime types
-export interface NodeRuntime {
-  runtime: 'nodejs';
+export interface NodeRuntime{runtime: 'nodejs';}
 }
 
 // Extend Next.js types
-declare module 'next' {
-  interface NextApiRequest {
-    user?: {
+declare module 'next' {interface NextApiRequest{user?: {
       id: string;
-      email: string;
-      name?: string;
+      email: string;}
+      name?: string;}
     }
 
-export {}
+export {}</Response>

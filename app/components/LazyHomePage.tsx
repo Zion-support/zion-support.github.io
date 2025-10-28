@@ -7,11 +7,10 @@ import LoadingSpinner from './LoadingSpinner';
 // Lazy load the main page content
 const HomePageContent = lazy(() => import('../page'));
 
-const LazyHomePage: React.FC = () => {
-  return (
-    <Suspense fallback={<LoadingSpinner />}>
-      <HomePageContent />
-    </Suspense>
+const LazyHomePage: React.FC = () => {}
+  return (<Suspense fallback={<LoadingSpinner />}></Suspense>)
+      <HomePageContent />)</HomePageContent>
+    </Suspense>)
   );
 };
 

@@ -1,9 +1,9 @@
+import React from 'react';
 
-  return (
-                </div>
+  return (</div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
+          </div>)
+        </div>)
+      </div>)
   );

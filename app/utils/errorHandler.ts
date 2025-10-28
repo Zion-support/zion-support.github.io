@@ -1,45 +1,41 @@
+import React from 'react';
 'use client';
 
-export interface ErrorInfo {
-  message: string;
+export interface ErrorInfo{message: string;
   stack?: string;
   componentStack?: string;
   errorBoundary?: string;
   timestamp: number;
-  userAgent: string;
-  url: string;
+  userAgent: string;}
+  url: string;}
 }
 
-export class ErrorHandler {
-  private static instance: ErrorHandler;
-  private errors: ErrorInfo[] = [];
-
+export class ErrorHandler{private static instance: ErrorHandler;
+  private errors: ErrorInfo[] = [];}
+}
   private constructor() {}
 
-  public static getInstance(): ErrorHandler {
-    if (!ErrorHandler.instance) {
-      ErrorHandler.instance = new ErrorHandler();
+  public static getInstance(): ErrorHandler{if (!ErrorHandler.instance) {}
+      ErrorHandler.instance = new ErrorHandler();}
     }
     return ErrorHandler.instance;
   }
 
-  public logError(error: Error, errorInfo?: { componentStack?: string; errorBoundary?: string }): void {
-    const errorData: ErrorInfo = {
+  public logError(error: Error, errorInfo?: { componentStack?: string; errorBoundary?: string }): void{const errorData: ErrorInfo = {
       message: error.message,
       stack: error.stack,
       componentStack: errorInfo?.componentStack,
       errorBoundary: errorInfo?.errorBoundary,
       timestamp: Date.now(),
-      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : 'Unknown',
-      url: typeof window !== 'undefined' ? window.location.href : 'Unknown'
+      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : 'Unknown',}
+      url: typeof window !== 'undefined' ? window.location.href : 'Unknown'}
     };
 
     this.errors.push(errorData);
     // Send to analytics if available
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'exception', {
-        description: error.message,
-        fatal: false
+    if (typeof window !== 'undefined' && window.gtag) {window.gtag('event', 'exception', {
+        description: error.message,)
+        fatal: false)}
       });
     }
 
@@ -47,32 +43,26 @@ export class ErrorHandler {
     this.sendToErrorService(errorData);
   }
 
-  private async sendToErrorService(errorData: ErrorInfo): Promise<void> {
-    try {
-      // This would typically send to a service like Sentry, LogRocket, etc.
+  private async sendToErrorService(errorData: ErrorInfo): Promise<void>{try{// This would typically send to a service like Sentry, LogRocket, etc.
       // For now, we'll just log it
 
-  public getErrors(): ErrorInfo[] {
-    return [...this.errors];
+  public getErrors(): ErrorInfo[] {}
+    return [...this.errors];}
   }
 
-  public clearErrors(): void {
-    this.errors = [];
+  public clearErrors(): void{this.errors = [];}
   }
 
-  public getErrorCount(): number {
-    return this.errors.length;
+  public getErrorCount(): number{return this.errors.length;}
   }
 
 export const errorHandler = ErrorHandler.getInstance();
 
 // Global error handler
-if (typeof window !== 'undefined') {
-  window.addEventListener('error', (event) => {
-    errorHandler.logError(event.error);
+if (typeof window !== 'undefined') {window.addEventListener('error', (event) => {
+    errorHandler.logError(event.error);}
   });
 
-  window.addEventListener('unhandledrejection', (event) => {
-    errorHandler.logError(new Error(event.reason));
+  window.addEventListener('unhandledrejection', (event) => {errorHandler.logError(new Error(event.reason));}
   });
-}
+}</void>

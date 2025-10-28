@@ -1,14 +1,12 @@
 import React from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 
-interface SEOOptimizerProps {
-  className?: string;
-  children?: React.ReactNode;
+interface SEOOptimizerProps{className?: string;}
+  children?: React.ReactNode;}
 }
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ className = '', children }) => {
-  return (
-    <div className={`seooptimizer-component ${className}`}>{children}
-    </div>
+const SEOOptimizer: React.FC<SEOOptimizerProps>= ({ className = '', children }) => {}</SEOOptimizerProps>
+  return(<div className={`seooptimizer-component ${className}`}>{children})</div>
+    </div>)
   );
 };
 

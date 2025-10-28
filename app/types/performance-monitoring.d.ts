@@ -1,34 +1,29 @@
 // Performance monitoring type definitions
 
-declare global {
-  interface PerformanceEventTiming extends PerformanceEntry {
+declare global{interface PerformanceEventTiming extends PerformanceEntry {
     processingStart: number;
     processingEnd: number;
-    cancelable: boolean;
-    target?: EventTarget;
+    cancelable: boolean;}
+    target?: EventTarget;}
   }
 
-  interface LayoutShift extends PerformanceEntry {
-    value: number;
+  interface LayoutShift extends PerformanceEntry{value: number;
     hadRecentInput: boolean;
-    lastInputTime: number;
-    sources: LayoutShiftAttribution[];
+    lastInputTime: number;}
+    sources: LayoutShiftAttribution[];}
   }
 
-  interface LayoutShiftAttribution {
-    node?: Node;
-    previousRect: DOMRectReadOnly;
-    currentRect: DOMRectReadOnly;
+  interface LayoutShiftAttribution{node?: Node;
+    previousRect: DOMRectReadOnly;}
+    currentRect: DOMRectReadOnly;}
   }
 
-  interface MemoryInfo {
-    usedJSHeapSize: number;
-    totalJSHeapSize: number;
-    jsHeapSizeLimit: number;
+  interface MemoryInfo{usedJSHeapSize: number;
+    totalJSHeapSize: number;}
+    jsHeapSizeLimit: number;}
   }
 
-  interface Performance {
-    memory?: MemoryInfo;
+  interface Performance{memory?: MemoryInfo;}
   }
 
 export {};

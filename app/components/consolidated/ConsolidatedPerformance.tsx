@@ -3,21 +3,19 @@ import ErrorBoundary from '../ErrorBoundary';
 
 
   // Monitor TTFB
-  const monitorTTFB = useCallback(() => {
-    if ('PerformanceObserver' in window) {
+  const monitorTTFB = useCallback(() => {if ('PerformanceObserver' in window) {
       const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
           if (entry.entryType === 'navigation') {
-            const navEntry = entry as PerformanceNavigationTiming;
+            const navEntry = entry as PerformanceNavigationTiming;}
             setMetrics(prev => ({ ...prev, ttfb: navEntry.responseStart - navEntry.requestStart }));
           });
       });
 
-      try {
+      try{}
         observer.observe({ entryTypes: ['navigation'] });
 
-  useEffect(() => {
-    // Initialize all performance optimizations
+  useEffect(() => {// Initialize all performance optimizations
     preloadCriticalResources();
     implementLazyLoading();
     addResourceHints();
@@ -26,12 +24,12 @@ import ErrorBoundary from '../ErrorBoundary';
     
     const cleanup = optimizeScrollPerformance();
 
-    return cleanup;
+    return cleanup;}
   }, [preloadCriticalResources, implementLazyLoading, addResourceHints, monitorCoreWebVitals, monitorTTFB, optimizeScrollPerformance]);
 
   // Log metrics for debugging (remove in production)
-  useEffect(() => {
-    if (process.env.NODE_ENV === 'development') {
+  useEffect(() => {if (process.env.NODE_ENV === 'development') {
 
-  return (
+  return()
   );
+}

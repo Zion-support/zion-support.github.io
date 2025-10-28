@@ -1,40 +1,35 @@
 // Performance API type definitions for better TypeScript support
 
-export interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
+export interface PerformanceEventTiming extends PerformanceEntry{processingStart: number;
   processingEnd: number;
-  target?: Node;
-  interactionId?: number;
+  target?: Node;}
+  interactionId?: number;}
 }
 
-export interface LayoutShift extends PerformanceEntry {
-  value: number;
+export interface LayoutShift extends PerformanceEntry{value: number;
   hadRecentInput: boolean;
-  lastInputTime: number;
-  sources: LayoutShiftAttribution[];
+  lastInputTime: number;}
+  sources: LayoutShiftAttribution[];}
 }
 
-export interface LayoutShiftAttribution {
-  node?: Node;
-  previousRect: DOMRectReadOnly;
-  currentRect: DOMRectReadOnly;
+export interface LayoutShiftAttribution{node?: Node;
+  previousRect: DOMRectReadOnly;}
+  currentRect: DOMRectReadOnly;}
 }
 
-export interface LargestContentfulPaint extends PerformanceEntry {
-  renderTime: number;
+export interface LargestContentfulPaint extends PerformanceEntry{renderTime: number;
   loadTime: number;
   size: number;
   id: string;
-  url: string;
-  element?: Element;
+  url: string;}
+  element?: Element;}
 }
 
 // Extend the global Performance interface
-declare global {
-  interface Performance {
+declare global{interface Performance {
     memory?: {
       usedJSHeapSize: number;
-      totalJSHeapSize: number;
-      jsHeapSizeLimit: number;
+      totalJSHeapSize: number;}
+      jsHeapSizeLimit: number;}
     };
   }

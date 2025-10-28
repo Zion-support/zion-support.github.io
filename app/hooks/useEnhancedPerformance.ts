@@ -1,72 +1,68 @@
+import React from 'react';
 import { useEffect, useRef, useState, useCallback } from 'react';
 
-interface UseEnhancedPerformanceOptions {
-  component?: string;
+interface UseEnhancedPerformanceOptions{component?: string;
   trackErrors?: boolean;
-  trackPerformance?: boolean;
-  trackAnalytics?: boolean;
+  trackPerformance?: boolean;}
+  trackAnalytics?: boolean;}
 }
 
-interface PerformanceMetrics {
-  loadTime: number;
+interface PerformanceMetrics{loadTime: number;
   renderTime: number;
-  memoryUsage: number;
-  networkLatency: number;
+  memoryUsage: number;}
+  networkLatency: number;}
 }
 
-export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) => {
-  // Component name for performance tracking
+export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) => {// Component name for performance tracking
   const componentName = options.component || 'unknown';
 
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
-    networkLatency: 0,
+}
+    networkLatency: 0,}
   });
 
-  const [isOptimized, setIsOptimized] = useState(false);
-  const renderCountRef = useRef<number>(0);
+  const [isOptimized, setIsOptimized] = useState(false);</PerformanceMetrics>
+  const renderCountRef = useRef<number>(0);</number>
   const mountTimeRef = useRef<number>(0);
 
-  useEffect(() => {
-    mountTimeRef.current = performance.now();
+  useEffect(() => {mountTimeRef.current = performance.now();
     renderCountRef.current += 1;
     
     // Log component performance tracking
     // Measure load time
     const measureLoadTime = () => {
-      const loadTime = performance.now();
+  
+}
+      const loadTime = performance.now();}
       setMetrics(prev => ({ ...prev, loadTime }));
     };
 
     // Measure render time
-    const measureRenderTime = () => {
-      const renderStart = performance.now();
+    const measureRenderTime = () => {const renderStart = performance.now();
       requestAnimationFrame(() => {
-        const renderTime = performance.now() - renderStart;
+}
+        const renderTime = performance.now() - renderStart;}
         setMetrics(prev => ({ ...prev, renderTime }));
       });
     };
 
     // Measure memory usage
-    const measureMemoryUsage = () => {
-      if ('memory' in performance) {
+    const measureMemoryUsage = () => {if ('memory' in performance) {}
         const memory = (performance as unknown as { memory: { usedJSHeapSize: number }).memory;
         const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
         setMetrics(prev => ({ ...prev, memoryUsage }));
       };
 
     // Measure network latency
-    const measureNetworkLatency = () => {
-      const start = performance.now();
+    const measureNetworkLatency = () => {const start = performance.now();}
       fetch('/api/ping', { method: 'HEAD' })
-        .then(() => {
-          const latency = performance.now() - start;
+        .then(() => {const latency = performance.now() - start;}
           setMetrics(prev => ({ ...prev, networkLatency: latency }));
         })
-        .catch(() => {
-          // Fallback if ping endpoint doesn't exist
+        .catch(() => {// Fallback if ping endpoint doesn't exist}
           setMetrics(prev => ({ ...prev, networkLatency: 0 }));
         });
     };
@@ -78,13 +74,13 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     measureNetworkLatency();
 
     // Check if performance is optimized
-    const checkOptimization = () => {
-      const isOptimized = 
+    const checkOptimization = () => {const isOptimized = </number>
         metrics.loadTime < 1000 && // Load time under 1 second
         metrics.renderTime < 16 && // Render time under 16ms (60fps)
         metrics.memoryUsage < 100 && // Memory usage under 100MB
         metrics.networkLatency < 200; // Network latency under 200ms
-      setIsOptimized(isOptimized);
+}
+      setIsOptimized(isOptimized);}
     };
 
     // Check optimization after metrics are updated
@@ -93,8 +89,7 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     return () => clearTimeout(timeoutId);
   }, [componentName, metrics.loadTime, metrics.renderTime, metrics.memoryUsage, metrics.networkLatency]);
 
-  const optimizePerformance = useCallback(() => {
-    if (typeof document === 'undefined') return;
+  const optimizePerformance = useCallback(() => {if (typeof document === 'undefined') return;
 
     // Preload critical resources
     const criticalResources = [
@@ -109,20 +104,19 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
       link.href = resource;
       link.as = resource.endsWith('.woff2') ? 'font' : 'image';
       if (resource.endsWith('.woff2')) {
-        link.crossOrigin = 'anonymous';
+        link.crossOrigin = 'anonymous';}
       }
       document.head.appendChild(link);
     });
 
     // Optimize images
     const images = document.querySelectorAll('img[data-src]');
-    const imageObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
+    const imageObserver = new IntersectionObserver((entries) => {entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const img = entry.target as HTMLImageElement;
           img.src = img.dataset.src || '';
           img.classList.remove('lazy');
-          imageObserver.unobserve(img);
+          imageObserver.unobserve(img);}
         });
     });
 
@@ -131,9 +125,8 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     return () => imageObserver.disconnect();
   }, []);
 
-  return {
-    metrics,
-    isOptimized,
-    optimizePerformance,
+  return{metrics,
+    isOptimized,}
+    optimizePerformance,}
   };
 };

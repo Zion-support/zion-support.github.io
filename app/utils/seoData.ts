@@ -1,15 +1,13 @@
 import React from 'react';
-export interface StructuredData {
-  '@context': string;
+export interface StructuredData{'@context': string;
   '@type': string;
   name: string;
   description: string;
-  url: string;
-  logo?: string;
+  url: string;}
+  logo?: string;}
   sameAs?: string[]}
 
-export interface SEOData {
-  title: string;
+export interface SEOData{title: string;
   description: string;
   keywords: string[];
   canonical?: string;
@@ -19,12 +17,11 @@ export interface SEOData {
   ogUrl?: string;
   twitterCard?: string;
   twitterTitle?: string;
-  twitterDescription?: string;
-  twitterImage?: string;
+  twitterDescription?: string;}
+  twitterImage?: string;}
   structuredData?: StructuredData}
 
-export const defaultSEOData: SEOData = {
-  title: 'Zion Tech Group - AI & Technology Solutions',
+export const defaultSEOData: SEOData = {title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Leading provider of AI-powered solutions, 5G technology, and innovative software development services.',
   keywords: ['AI', 'Artificial Intelligence', '5G', 'Technology', 'Software Development', 'Machine Learning'],
   canonical: 'https://ziontechgroup.com',
@@ -46,13 +43,11 @@ export const defaultSEOData: SEOData = {
     sameAs: [
       'https://twitter.com/ziontechgroup',
       'https://linkedin.com/company/ziontechgroup'
-    ]
+    ]}
   }
-export const generateSEOData: React.FC = (customData: Partial<SEOData> = {}): SEOData => {
-  return {
-    ...defaultSEOData,
+export const generateSEOData: React.FC = (customData: Partial<SEOData>= {}): SEOData => {return{...defaultSEOData,
     ...customData,
     structuredData: {
-      ...defaultSEOData.structuredData,
-      ...customData.structuredData
-    }
+      ...defaultSEOData.structuredData,}
+      ...customData.structuredData}
+    }</SEOData>

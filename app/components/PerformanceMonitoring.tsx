@@ -1,21 +1,17 @@
 import React from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 
-interface LayoutShiftEntry extends PerformanceEntry {
-  value: number;
-  hadRecentInput: boolean;
+interface LayoutShiftEntry extends PerformanceEntry{value: number;}
+  hadRecentInput: boolean;}
 }
 
-<<<<<<< HEAD
 =======
 // FIDEntry interface is used in the code via type assertion
 >>>>>>> origin/main
-interface PerformanceMonitoringProps {
-  className?: string;
+interface PerformanceMonitoringProps{className?: string;}
 }
 
-const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ className = '' }) => {
-  // Monitor Core Web Vitals
+const PerformanceMonitoring: React.FC<PerformanceMonitoringProps>= memo(({ className = '' }) => {// Monitor Core Web Vitals
   const monitorCoreWebVitals = useCallback(() => {
     if (typeof window === 'undefined') return;
 
@@ -27,32 +23,27 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
       
       // Send to analytics if needed
       if (window.gtag) {
-        window.gtag('event', 'web_vitals', {
-          name: 'LCP',
+        window.gtag('event', 'web_vitals', {)
+          name: 'LCP',)
           value: Math.round(lastEntry.startTime),
-          event_category: 'Web Vitals'
+          event_category: 'Web Vitals'}
         });
       }
     });
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
     // FID (First Input Delay)
-    const fidObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
+    const fidObserver = new PerformanceObserver((list) => {const entries = list.getEntries();
+      entries.forEach((entry) => {</PerformanceMonitoringProps>
 <<<<<<< HEAD
-        const fidEntry = entry as PerformanceEventTiming; // Type assertion for FID-specific properties
-=======
-        const fidEntry = entry as PerformanceEventTiming;
->>>>>>> origin/main
-        const fid = fidEntry.processingStart - fidEntry.startTime;
+        const fidEntry = entry as PerformanceEventTiming; // Type assertion for FID-specific properties        const fid = fidEntry.processingStart - fidEntry.startTime;
         console.log('FID:', fid);
         
         if (window.gtag) {
-          window.gtag('event', 'web_vitals', {
-            name: 'FID',
+          window.gtag('event', 'web_vitals', {)
+            name: 'FID',)
             value: Math.round(fid),
-            event_category: 'Web Vitals'
+            event_category: 'Web Vitals'}
           });
         }
       });
@@ -61,25 +52,17 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
 
     // CLS (Cumulative Layout Shift)
     let clsValue = 0;
-    const clsObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
+    const clsObserver = new PerformanceObserver((list) => {const entries = list.getEntries();
       entries.forEach((entry) => {
-<<<<<<< HEAD
         const layoutShiftEntry = entry as LayoutShiftEntry;
         if (!layoutShiftEntry.hadRecentInput) {
-          clsValue += layoutShiftEntry.value;
-=======
-        const clsEntry = entry as LayoutShiftEntry;
-        if (!clsEntry.hadRecentInput) {
-          clsValue += clsEntry.value || 0;
->>>>>>> origin/main
-          console.log('CLS:', clsValue);
+          clsValue += layoutShiftEntry.value;          console.log('CLS:', clsValue);
           
           if (window.gtag) {
-            window.gtag('event', 'web_vitals', {
-              name: 'CLS',
+            window.gtag('event', 'web_vitals', {)
+              name: 'CLS',)
               value: Math.round(clsValue * 1000),
-              event_category: 'Web Vitals'
+              event_category: 'Web Vitals'}
             });
           }
         }
@@ -88,39 +71,36 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
     clsObserver.observe({ entryTypes: ['layout-shift'] });
 
     // FCP (First Contentful Paint)
-    const fcpObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
+    const fcpObserver = new PerformanceObserver((list) => {const entries = list.getEntries();
       entries.forEach((entry) => {
         console.log('FCP:', entry.startTime);
         
         if (window.gtag) {
-          window.gtag('event', 'web_vitals', {
-            name: 'FCP',
+          window.gtag('event', 'web_vitals', {)
+            name: 'FCP',)
             value: Math.round(entry.startTime),
-            event_category: 'Web Vitals'
+            event_category: 'Web Vitals'}
           });
         }
       });
     });
     fcpObserver.observe({ entryTypes: ['paint'] });
 
-    return () => {
-      lcpObserver.disconnect();
+    return () => {lcpObserver.disconnect();
       fidObserver.disconnect();
       clsObserver.disconnect();
-      fcpObserver.disconnect();
+      fcpObserver.disconnect();}
     };
   }, []);
 
   // Monitor resource loading performance
-  const monitorResourcePerformance = useCallback(() => {
-    if (typeof window === 'undefined') return;
+  const monitorResourcePerformance = useCallback(() => {if (typeof window === 'undefined') return;
 
     const resourceObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.duration > 1000) { // Resources taking more than 1 second
-          console.warn('Slow resource:', entry.name, entry.duration);
+          console.warn('Slow resource:', entry.name, entry.duration);}
         }
       });
     });
@@ -130,39 +110,34 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ clas
   }, []);
 
   // Monitor memory usage
-  const monitorMemoryUsage = useCallback(() => {
-    if (typeof window === 'undefined' || !('memory' in performance)) return;
+  const monitorMemoryUsage = useCallback(() => {if (typeof window === 'undefined' || !('memory' in performance)) return;
 
-    const checkMemory = () => {
+    const checkMemory = () => {}
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number }).memory;
-      if (memory) {
-        const used = memory.usedJSHeapSize / 1024 / 1024; // MB
+      if (memory) {const used = memory.usedJSHeapSize / 1024 / 1024; // MB
         const total = memory.totalJSHeapSize / 1024 / 1024; // MB
         const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB
         
         ,
           total: Math.round(total),
-          limit: Math.round(limit)
+          limit: Math.round(limit)}
         });
 
-        if (used / limit > 0.8) {
-
-    const interval = setInterval(checkMemory, 30000); // Check every 30 seconds
-    return () => clearInterval(interval);
+        if (used / limit > 0.8) {const interval = setInterval(checkMemory, 30000); // Check every 30 seconds
+    return () => clearInterval(interval);}
   }, []);
 
-  useEffect(() => {
-    const cleanup1 = monitorCoreWebVitals();
+  useEffect(() => {const cleanup1 = monitorCoreWebVitals();
     const cleanup2 = monitorResourcePerformance();
     const cleanup3 = monitorMemoryUsage();
 
     return () => {
       cleanup1?.();
       cleanup2?.();
-      cleanup3?.();
+      cleanup3?.();}
     };
   }, [monitorCoreWebVitals, monitorResourcePerformance, monitorMemoryUsage]);
 
-  return (
+  return()
   );
 }
