@@ -1,9 +1,6 @@
 import React from 'react';
 import Footer from '../../components/Footer';
 import Navigation from '../../components/Navigation';
-import ErrorBoundary from '../../components/ErrorBoundary';
-
-
 
 export const metadata = {
   title: 'Cybersecurity Audit | Zion Tech Group',
@@ -50,6 +47,6 @@ export default function CybersecurityauditPage() {
         </div>
       </div>
       <Footer />
-    </ErrorBoundary>
+    </>
   );
 }

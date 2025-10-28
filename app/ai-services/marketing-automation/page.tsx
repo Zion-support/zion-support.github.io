@@ -1,10 +1,8 @@
 import React from 'react';
-import ErrorBoundary from '../../components/ErrorBoundary';
 
 export default function PagePage() {
   return (
-    <ErrorBoundary>
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         <div className="container mx-auto px-4 py-8">
           <h1 className="text-3xl font-bold text-gray-900 mb-6">
             Page
@@ -16,6 +14,5 @@ export default function PagePage() {
           </div>
         </div>
       </div>
-    </ErrorBoundary>
   );
 }

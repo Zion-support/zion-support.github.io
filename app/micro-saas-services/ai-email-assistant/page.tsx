@@ -1,8 +1,8 @@
 import React from 'react';
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
-import ErrorBoundary from '../../components/ErrorBoundary';
+
 import { Metadata } from 'next';
+import Footer from '../../components/Footer';
+import Navigation from '../../components/Navigation';
 
 export const metadata: Metadata = {
   title: 'Page - Zion Tech Group',
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
 };
-export default function Page() {
+export default function AiemailassistantPage() {
   return (
     <ErrorBoundary>
       <Navigation />
@@ -52,4 +52,3 @@ export default function Page() {
     </ErrorBoundary>
   );
 }
-

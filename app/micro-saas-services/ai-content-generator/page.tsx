@@ -1,7 +1,6 @@
 import React from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
-import ErrorBoundary from '../../components/ErrorBoundary';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -14,7 +13,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
 };
-export default function Page() {
+export default function AicontentgeneratorPage() {
   return (
     <ErrorBoundary>
       <Navigation />
@@ -52,4 +51,3 @@ export default function Page() {
     </ErrorBoundary>
   );
 }
-

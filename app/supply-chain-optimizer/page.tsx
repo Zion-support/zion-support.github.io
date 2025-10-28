@@ -1,8 +1,6 @@
 import React from 'react';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
-import ErrorBoundary from '../components/ErrorBoundary';
-
 
 export const metadata = {
   title: 'Supply Chain Optimizer | Zion Tech Group',
@@ -13,7 +11,7 @@ export const metadata = {
     description: 'Professional supply chain optimizer services by Zion Tech Group.',
     type: 'website',
   }};
-export default function Page() {
+export default function SupplychainoptimizerPage() {
   return (
     <ErrorBoundary>
       <Navigation />
@@ -51,4 +49,3 @@ export default function Page() {
     </ErrorBoundary>
   );
 }
-

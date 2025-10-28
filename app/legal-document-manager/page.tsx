@@ -1,8 +1,6 @@
 import React from 'react';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
-import ErrorBoundary from '../components/ErrorBoundary';
-
 
 export const metadata = {
   title: 'Legal Document Manager | Zion Tech Group',
@@ -14,8 +12,7 @@ export const metadata = {
     type: 'website',
   },
 };
-
-export default function Page() {
+export default function LegaldocumentmanagerPage() {
   return (
     <ErrorBoundary>
       <Navigation />
@@ -50,7 +47,6 @@ export default function Page() {
         </div>
       </div>
       <Footer />
-    </ErrorBoundary>
+    </>
   );
 }
-
