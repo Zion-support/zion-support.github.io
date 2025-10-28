@@ -116,7 +116,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         if (entry.entryType === 'navigation') {
           const navEntry = entry as PerformanceNavigationTiming;
           if (navEntry.loadEventEnd - navEntry.loadEventStart > 1000) {
-            // // // console.warn('Page load time exceeded 1 second');
+            // // // // console.warn('Page load time exceeded 1 second');
 ;
 ;
       });

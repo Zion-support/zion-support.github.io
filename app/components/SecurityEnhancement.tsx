@@ -52,7 +52,7 @@ const SecurityEnhancement: React.FC<SecurityEnhancementProps> = memo(({
         }
       });
 
-      // console.log('Security enhancements applied');
+      // // console.log('Security enhancements applied');
     } catch (error) {
       // console.warn('Security enhancement error:', error);
     }

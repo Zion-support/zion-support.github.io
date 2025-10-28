@@ -155,7 +155,7 @@ export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerPr
 
   useEffect(() => {
     if (enableMonitoring && Object.values(metrics).some(value => value !== null)) {
-      // console.log('Performance Metrics:', metrics);
+      // // console.log('Performance Metrics:', metrics);
     }
   }, [metrics, enableMonitoring]);
 

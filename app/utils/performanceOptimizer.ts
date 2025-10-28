@@ -153,7 +153,7 @@ class PerformanceOptimizer {
 ;
 )
         .then(() => {
-          // // // console.log('Service Worker registered:', registration);
+          // // // // console.log('Service Worker registered:', registration);
         })
         .catch(() => {
           console.error('Service Worker registration failed:', error);

@@ -44,8 +44,8 @@ export class ErrorHandler {
     try {
       // This would typically send to a service like Sentry, LogRocket, etc.
       // For now, we'll just log it
-      // // // console.log('Would send to error service:', errorData);
-    } catch (err) {
+      // // // // console.log('Would send to error service:', errorData);
+    } catch () {
       console.error('Failed to send error to service:', err);
 ;
 ;

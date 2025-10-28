@@ -42,7 +42,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       fcpObserver.observe({ entryTypes: ['paint'] });
       observers.push(fcpObserver);
     } catch () {
-      // // // console.warn('FCP measurement failed:', error); ;
+      // // // // console.warn('FCP measurement failed:', error); ;
     // Measure First Input Delay (FID;
 ;
 )
@@ -61,7 +61,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       fidObserver.observe({ entryTypes: ['first-input'] });
       observers.push(fidObserver);
     } catch () {
-      // // // console.warn('FID measurement failed:', error); ;
+      // // // // console.warn('FID measurement failed:', error); ;
     // Measure Cumulative Layout Shift (CLS;
 ;
 )
@@ -81,7 +81,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       clsObserver.observe({ entryTypes: ['layout-shift'] });
       observers.push(clsObserver);
     } catch () {
-      // // // console.warn('CLS measurement failed:', error); ;
+      // // // // console.warn('CLS measurement failed:', error); ;
     // Measure Time to First Byte (TTFB;
 ;
 )
@@ -92,7 +92,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         setMetrics(prev => ({ ...prev, ttfb }));
 ;
     } catch () {
-      // // // console.warn('TTFB measurement failed:', error); ;
+      // // // // console.warn('TTFB measurement failed:', error); ;
     // Measure Memory Usage
     try {
       if ('memory' in performance) {
@@ -102,7 +102,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 ;
 ;
     } catch () {
-      // // // console.warn('Memory measurement failed:', error);
+      // // // // console.warn('Memory measurement failed:', error);
 ;
     return () => {
       observers.forEach(observer => observer.disconnect());

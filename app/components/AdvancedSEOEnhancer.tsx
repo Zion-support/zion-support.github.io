@@ -53,7 +53,7 @@ export const AdvancedSEOEnhancer: React.FC<AdvancedSEOEnhancerProps> = ({
 ;
       setOptimizedData(optimized);
     } catch () {
-      // // // console.warn('SEO optimization error:', error);
+      // // // // console.warn('SEO optimization error:', error);
 ;
   }, [seoData, enableAutoOptimization]);
   // Generate structured data
@@ -91,7 +91,7 @@ export const AdvancedSEOEnhancer: React.FC<AdvancedSEOEnhancerProps> = ({
       };
       return structuredData;
     } catch () {
-      // // // console.warn('Structured data generation error:', error);      return null;
+      // // // // console.warn('Structured data generation error:', error);      return null;
 ;
   }, [optimizedData, enableStructuredData]);
   // Initialize SEO optimization

@@ -6,7 +6,7 @@ export const usePerformanceMonitor = () => {
       const start = performance.now();
       fn();
       const end = performance.now();
-      // // // console.log(`${name} took ${end - start} milliseconds`);    } else {
+      // // // // console.log(`${name} took ${end - start} milliseconds`);    } else {
       fn();
 ;
   }, []);
@@ -15,7 +15,7 @@ export const usePerformanceMonitor = () => {
       const start = performance.now();
       await fn();
       const end = performance.now();
-      // // // console.log(`${name} took ${end - start} milliseconds`);    } else {
+      // // // // console.log(`${name} took ${end - start} milliseconds`);    } else {
       await fn();
 ;
   }, []);
@@ -31,7 +31,7 @@ export const measurePerformance = (name: string, fn: () => void) => {
     const start = performance.now();
     fn();
     const end = performance.now();
-    // // // console.log(`${name} took ${end - start} milliseconds`);  } else {
+    // // // // console.log(`${name} took ${end - start} milliseconds`);  } else {
     fn();
 ;;
 export const measureAsyncPerformance = async (name: string, fn: () => Promise<void>) => {
@@ -39,6 +39,6 @@ export const measureAsyncPerformance = async (name: string, fn: () => Promise<vo
     const start = performance.now();
     await fn();
     const end = performance.now();
-    // // // console.log(`${name} took ${end - start} milliseconds`);  } else {
+    // // // // console.log(`${name} took ${end - start} milliseconds`);  } else {
     await fn();
 ;;

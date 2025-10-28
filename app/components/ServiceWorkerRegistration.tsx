@@ -7,10 +7,10 @@ const ServiceWorkerRegistration: React.FC = memo(() => {
     if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js')
         .then(() => {
-          // console.log('Service Worker registered successfully');
+          // // console.log('Service Worker registered successfully');
         })
         .catch(() => {
-          // console.warn('Service Worker registration failed');
+          // // console.warn('Service Worker registration failed');
         });
     }
   }, []);
