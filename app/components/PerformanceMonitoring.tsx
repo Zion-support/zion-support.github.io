@@ -20,6 +20,7 @@ interface PerformanceMonitoringProps {
   className?: string;
 }
 
+<<<<<<< HEAD
 declare global {
   interface Window {
     gtag?: (...args: unknown[]) => void;
@@ -31,6 +32,20 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({
   enableRealTimeMonitoring = false, 
   className = '' 
 }) => {
+=======
+const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ 
+  onMetricsUpdate, 
+  enableRealTimeMonitoring = true, 
+  className = '' 
+}) => {
+  const [metrics, setMetrics] = useState({
+    fcp: null as number | null,
+    lcp: null as number | null,
+    fid: null as number | null,
+    cls: null as number | null,
+    ttfb: null as number | null
+  });
+>>>>>>> cursor/fix-errors-and-merge-to-main-650f
   const [, setMemoryUsage] = React.useState<{ total: number; limit: number } | null>(null);
   const [metrics, setMetrics] = React.useState({
     fcp: 0,
@@ -156,15 +171,56 @@ const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({
         }
       }
     };
+<<<<<<< HEAD
+=======
+
+    const observer = new PerformanceObserver((list) => {
+      list.getEntries().forEach((entry) => {
+        if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
+          setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+        } else if (entry.entryType === 'largest-contentful-paint') {
+          setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
+        } else if (entry.entryType === 'first-input') {
+          const fidEntry = entry as PerformanceEventTiming;
+          setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
+        } else if (entry.entryType === 'layout-shift') {
+          const clsEntry = entry as LayoutShiftEntry;
+          if (!clsEntry.hadRecentInput) {
+            setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + clsEntry.value }));
+          }
+        } else if (entry.entryType === 'navigation') {
+          const navEntry = entry as PerformanceNavigationTiming;
+          setMetrics(prev => ({ ...prev, ttfb: navEntry.responseStart - navEntry.requestStart }));
+        }
+      });
+    });
+>>>>>>> cursor/fix-errors-and-merge-to-main-650f
 
     checkMemory();
     const interval = setInterval(checkMemory, 5000);
     return () => clearInterval(interval);
   }, []);
 
+<<<<<<< HEAD
   // Measure performance metrics
   const measurePerformance = useCallback(() => {
     if (typeof window === 'undefined') return () => {};
+=======
+  const measurePerformance = useCallback(() => {
+    const cleanup1 = monitorCoreWebVitals();
+    const cleanup2 = monitorResourcePerformance();
+    const cleanup3 = monitorMemoryUsage();
+    
+    return () => {
+      cleanup1?.();
+      cleanup2?.();
+      cleanup3?.();
+    };
+  }, [monitorCoreWebVitals, monitorResourcePerformance, monitorMemoryUsage]);
+
+  useEffect(() => {
+    if (!enableRealTimeMonitoring) return;
+>>>>>>> cursor/fix-errors-and-merge-to-main-650f
 
     const cleanup = monitorCoreWebVitals();
     const resourceCleanup = monitorResourcePerformance();
